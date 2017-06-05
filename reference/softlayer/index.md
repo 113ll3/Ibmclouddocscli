@@ -25,7 +25,8 @@ To get started, install the IBM {{site.data.keyword.Bluemix_notm:}} CLI. See
 For a complete list of {{site.data.keyword.Bluemix_notm:}} commands, see: [{{site.data.keyword.Bluemix_notm:}} (bx) commands](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
-## List of {{site.data.keyword.BluSoftlayer_notm}} commands
+## General {{site.data.keyword.BluSoftlayer_notm}} commands
+
 The following commands are supported. Use the `bluemix sl` command to see the list of available commands:
 
 <table summary="Alphabetically ordered general commands that have links that bring you to more info for the command">
@@ -39,6 +40,9 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <td>[bluemix sl help](/docs/cli/reference/softlayer/index.html#sl_help)</td>
    </tbody>
  </table>
+
+
+## {{site.data.keyword.BluSoftlayer_notm}} Block stoarge commands
 
  <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 2. Softlayer Block storage</caption>
@@ -75,6 +79,8 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  </tr>
    </tbody>
  </table>
+
+## {{site.data.keyword.BluSoftlayer_notm}} dns commands
 
 <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 3. Softlayer dns commands</caption>
@@ -114,7 +120,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
    </tbody>
  </table>
 
-
+## {{site.data.keyword.BluSoftlayer_notm}} image commands
 
  <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
 <caption>Table 5. Softlayer image commands</caption>
@@ -132,6 +138,8 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  </tr>
    </tbody>
  </table>
+ 
+## {{site.data.keyword.BluSoftlayer_notm}} Legacy ISCSI storage commands
 
   <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
 <caption>Table 6. Softlayer Legacy ISCSI strorage commands</caption>
@@ -155,6 +163,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
    </tbody>
  </table>
 
+## {{site.data.keyword.BluSoftlayer_notm}} Legacy security commands
 
  <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 7. Softlayer security commands</caption>
@@ -178,7 +187,8 @@ The following commands are supported. Use the `bluemix sl` command to see the li
    </tbody>
  </table>
 
-
+## {{site.data.keyword.BluSoftlayer_notm}} subnet commands
+ 
  <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
 <caption>Table 8. Softlayer subnet commands</caption>
  <thead>
@@ -194,6 +204,8 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  </tr>
    </tbody>
  </table>
+ 
+## {{site.data.keyword.BluSoftlayer_notm}} virtual server commands
 
  <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
 <caption>Table 9. Softlayer virtual server commands</caption>
@@ -225,6 +237,8 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  </tr>
    </tbody>
  </table>
+ 
+## {{site.data.keyword.BluSoftlayer_notm}} VLAN commands
 
   <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
 <caption>Table 10. Softlayer VLAN commands</caption>
