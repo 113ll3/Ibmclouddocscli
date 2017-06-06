@@ -29,7 +29,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
 <!-- audience blue staging only begin comment -->
 
 **Draft comment: Link below is Staging-only content, do not add to production until Registry GAs.**
-To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [Setting up a private images registry](../../../services/Registry/registry_setup.html#registry_setup.html).
+To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [Setting up a private images registry](../../../services/Registry/index.html).
 
 <!-- audience blue staging only end comment -->
 
@@ -129,7 +129,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 <!-- audience blue staging only begin comment -->
 
-For more information, see [Viewing information about images](../../../services/Registry/registry_cli_listing.html).
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 **Draft comment: Link above is Staging-only content, do not add to production until Registry GAs.**
 
 <!-- audience blue staging only end comment -->
@@ -163,7 +163,7 @@ Displays all images in your {{site.data.keyword.Bluemix_short}} account.
 
 <!-- audience blue staging only begin comment -->
 
-For more information, see [Viewing information about images](../../../services/Registry/registry_cli_listing.html).
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 **Draft comment: Link above is Staging-only content, do not add to production until Registry GAs.**
 
 <!-- audience blue staging only end comment -->
@@ -386,7 +386,7 @@ bx cr token-list --format FORMAT
 
 <!-- audience blue staging only begin comment -->
 
-For more information, see [Viewing information about images](../../../services/Registry/registry_cli_listing.html).
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 **Draft comment: Link above is Staging-only content, do not add to production until Registry GAs.**
 
 <!-- audience blue staging only end comment -->
@@ -437,7 +437,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-For more information, see [Reviewing image security](../../../services/Registry/registry_security_checking.html).
+For more information, see [Reviewing image security](../../../services/Registry/registry_images_.html#registry_security_checking).
 
 </dd>
 
