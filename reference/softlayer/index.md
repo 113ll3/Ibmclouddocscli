@@ -360,12 +360,10 @@ bluemix sl block access-authorize VOLUME_ID [OPTIONS]
     </dl>
 
 **Examples**:
-Authorize virtual server with ID `87654321` to access volume with ID `12345678`.
 ```
-   bluemix sl block access-authorize 12345678 --virtual-id 87654321
-
+bluemix sl block access-authorize 12345678 --virtual-id 87654321
 ```
-
+This command authorizes virtual server with ID `87654321` to access volume with ID `12345678`.
 
 ### bluemix sl block access-list
 {: #sl_block_access_list}
@@ -383,11 +381,10 @@ bluemix sl block access-list VOLUME_ID [OPTIONS]
 </dl>
 
 **Examples**:
-
-List all hosts that are authorized to access volume with ID `12345678` and sorts them by ID.
 ```
 bluemix sl block access-list 12345678 --sortby id
 ```
+This command lists all hosts that are authorized to access volume with ID `12345678` and sorts them by ID.
 
 ### bluemix sl block access-revoke
 {: #sl_block_access_revoke}
@@ -409,11 +406,10 @@ Revoke authorization for hosts accessing a given volume.
     </dl>
 
 **Examples**:
-Revoke access of virtual server with ID `87654321` to volume with ID `12345678`.
 ```
 bluemix sl block access-revoke 12345678 --virtual-id 87654321
 ```
-
+This command revokes access of virtual server with ID `87654321` to volume with ID `12345678`.
 
 ### bluemix sl block replica-failback
 {: #sl_block_replica_failback}
@@ -423,11 +419,10 @@ Failback a block volume from replica.
  bluemix sl block replica-failback VOLUME_ID
 ```
 **Examples**:
-Perform failback operation for volume with ID `12345678`.
 ```
  bluemix sl block replica-failback 12345678
 ```
-
+This command performs failback operation for volume with ID `12345678`.
 
 ### bluemix sl block replica-failover
 {: #sl_block_replica_failover}
@@ -436,11 +431,12 @@ Failover a block volume to the given replica volume.
 ```
 bluemix sl block replica-failover VOLUME_ID REPLICA_ID
 ```
+
 **Examples**:
-Perform failover operation for volume with ID `12345678` to replica volume with ID `87654321`.
 ```
  bluemix sl block replica-failover 12345678 87654321
 ```
+This command performs failover operation for volume with ID `12345678` to replica volume with ID `87654321`.
 
 ### bluemix sl block replica-order
 {: #sl_block_replica_order}
@@ -464,10 +460,10 @@ Order a block storage replica volume.
     </dl>
 
 **Examples**:
-Order a replica for volume with ID `12345678`, which performs DAILY replication, is located at dal09 with tier level `4` and OS type `Linux`.
 ```
 bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LINUX
 ```
+This command orders a replica for volume with ID `12345678`, which performs DAILY replication, is located at dal09 with tier level `4` and OS type `Linux`.
 
 ### bluemix sl block snapshot-cancel
 {: #sl_block_snapshot_cancel}
@@ -488,11 +484,10 @@ Cancel existing snapshot space for a given volume.
 	</dl>
 
 **Examples**:
-Cancel the snapshot with ID 12345678 immediately without asking for confirmation.
 ```
  bluemix sl block snapshot-cancel 12345678 --immediate -f
 ```
-
+This command cancels the snapshot with ID 12345678 immediately without asking for confirmation.
 
 ### bluemix sl block snapshot-create
 {: #sl_block_snapshot_create}
@@ -508,10 +503,10 @@ Create a snapshot on a given volume.
 	</dl>
 
 **Examples**:
-Create a snapshot for volume with ID `12345678` and with addition note as `snapshotforbluemix`.
 ```
 bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
+This command creates a snapshot for volume with ID `12345678` and with addition note as `snapshotforbluemix`.
 
 ### bluemix sl block snapshot-disable
 {: #sl_block_snapshot_disable}
@@ -527,10 +522,10 @@ Disable snapshots on the specified schedule for a given volume.
 	</dl>
 
 **Examples**:
-Disable daily snapshot for volume with ID `12345678`.
 ```
  bluemix sl block snapshot-disable 12345678 -s DAILY
 ```
+This command disables daily snapshot for volume with ID `12345678`.
 
 ### bluemix sl block snapshot-enable
 {: #sl_block_snapshot_enable}
@@ -556,10 +551,10 @@ Enable snapshots for a given volume on the specified schedule.
 	</dl>
 
 **Examples**:
-Enable snapshot for volume with ID `12345678`. The snapshot is taken at 2:00 every Sunday, and up to 5 snapshots are retained.
 ```
  bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
+This command enables snapshot for volume with ID `12345678`. The snapshot is taken at 2:00 every Sunday, and up to 5 snapshots are retained.
 
 ### bluemix sl block snapshot-delete
 {: #sl_block_snapshot_delete}
@@ -570,11 +565,10 @@ Delete a snapshot on a given volume.
 ```
 
 **Examples**:
-Delete snapshots with ID `12345678`.
 ```
  bluemix sl block snapshot-delete 12345678
 ```
-
+This command deletes snapshots with ID `12345678`.
 
 ### bluemix sl block snapshot-list
 {: #sl_block_snapshot_list}
@@ -592,10 +586,10 @@ List block storage snapshots
 	</dl>
 
 **Examples**:
-list all snapshots of volume with ID `12345678` and sorts them by ID.
 ```
  bluemix sl block snapshot-list 12345678 --sortby id
 ```
+This command lists all snapshots of volume with ID `12345678` and sorts them by ID.
 
 ### bluemix sl block snapshot-order
 {: #sl_block_snapshot_order}
@@ -618,10 +612,10 @@ Order snapshot space for a block storage volume.
 	</dl>
 
 **Examples**:
-Order snapshot space for volume with ID `12345678`, the size is 1000GB, the tier level is 4 IOPS per GB.
 ```
    bluemix sl block snapshot-order 12345678 -s 1000 -t 4
 ```
+This command orders snapshot space for volume with ID `12345678`, the size is 1000GB, the tier level is 4 IOPS per GB.
 
 
 ### bluemix sl block snapshot-restore
@@ -633,11 +627,10 @@ Restore block volume using a given snapshot
 ```
 
 **Examples**:
-Restore volume with ID `12345678` from snapshot with ID `87654321`.
-
 ```
  bluemix sl block snapshot-restore 12345678 87654321
 ```
+This command restores volume with ID `12345678` from snapshot with ID `87654321`.
 
 ### bluemix sl block volume-cancel
 {: #sl_block_volume_cancel}
@@ -658,11 +651,10 @@ Cancel an existing block storage volume
 	</dl>
 
 **Examples**:
-Cancel volume with ID `12345678` immediately and without asking for confirmation.
 ```
  bluemix sl block volume-cancel 12345678 --immediate -f
 ```
-
+This command cancels volume with ID `12345678` immediately and without asking for confirmation.
 
 ### bluemix sl block volume-detail
 {: #sl_block_volume_detail}
@@ -673,10 +665,10 @@ Display details for a specified volume
 ```
 
 **Examples**:
-Show details of volume with ID `12345678`.
 ```
  bluemix sl block volume-detail 12345678
 ```
+This command shows details of volume with ID `12345678`.
 
 ### bluemix sl block volume-list
 {: #sl_block_volume_list}
@@ -703,10 +695,10 @@ List block storage.
    </dl>
 
 **Examples**:
-List all endurance volumes on current account that are located at dal09, and sorts them by capacity.
 ```
  bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
+This command lists all endurance volumes on current account that are located at dal09, and sorts them by capacity.
 
 
 ### bluemix sl block volume-order
@@ -739,14 +731,17 @@ Order a block storage volume
 
 
 **Examples**:
-Order a performance volume with size is 1000GB, IOPS is 4000, OS type is LINUX, located at dal09.
+
 ```
  bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
 ```
-Order a endurance volume with size is 500GB, tier level is 4 IOPS per GB, OS type is XEN, located at dal09, and additional snapshot space size is 500GB.
+This command orders a performance volume with size is 1000GB, IOPS is 4000, OS type is LINUX, located at dal09.
+
 ```
  bluemix sl block volume-order --storage-type endurance --size 500 --tier 4 --os-type XEN -d dal09 --snapshot-size 500
 ```
+This command orders a endurance volume with size is 500GB, tier level is 4 IOPS per GB, OS type is XEN, located at dal09, and additional snapshot space size is 500GB.
+
 
 ### bluemix sl block volume-options
 {: #sl_block_volume_options}
@@ -757,10 +752,11 @@ List all options for ordering a block storage
 ```
 
 **Examples**:
-List all options for creating a block storage volume, including storage type, volume size, OS type, IOPS, tier level, datacenter, and snapshot size.
 ```
  bluemix sl block volume-options
 ```
+This command lists all options for creating a block storage volume, including storage type, volume size, OS type, IOPS, tier level, datacenter, and snapshot size.
+
 
 ### bluemix sl dns import
 {: #sl_dns_import}
@@ -776,10 +772,10 @@ bluemix sl dns-import [OPTIONS] ZONEFILE
     </dl>
 
 **Examples**:
-Import zone and its resource records from file: `~/blumix.net.txt`.
 ```
  bluemix sl dns import ~/blumix.net.txt
 ```
+This command imports zone and its resource records from file: `~/blumix.net.txt`.
 
 ### bluemix sl dns record-add
 {: #sl_dns_record_add}
@@ -795,10 +791,10 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
     </dl>
 
 **Examples**:
-Add an A record to zone: bluemix.net, its host is `ftp`, data is `127.0.0.1` and ttl is 86400 seconds.
 ```
  bluemix sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
 ```
+This command adds an A record to zone: bluemix.net, its host is `ftp`, data is `127.0.0.1` and ttl is 86400 seconds.
 
 ### bluemix sl dns record-edit
 {: #sl_dns_record_edit}
@@ -807,7 +803,6 @@ Update resource records in a zone
 ```
    bluemix sl dns record-edit ZONE [OPTIONS]
 ```
-
 
 <strong>Command options</strong>:
    <dl>
@@ -822,15 +817,15 @@ Update resource records in a zone
    </dl>
 
 **Examples**:
-Edit records under the zone `bluemix.net` with `12345678`, and set its data to `127.0.0.2` and ttl to 3600.
-
 ```
  bluemix sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
-Edit records under the zone `bluemix.net` with host name `kibana`, and set their ttl all to 3600.
+This command edits records under the zone `bluemix.net` with `12345678`, and set its data to `127.0.0.2` and ttl to 3600.
+
 ```
  bluemix sl dns record-edit bluemix.net --by-record kibana --ttl 3600
 ```
+This command edits records under the zone `bluemix.net` with host name `kibana`, and set their ttl all to 3600.
 
 
 ### bluemix sl dns record-list
@@ -854,12 +849,10 @@ List all the resource records in a zone
    </dl>
 
 **Examples**:
-list all A records under the zone `bluemix.net`,filtered by host is `elasticsearch` and ttl is 900 seconds.
 ```
  bluemix sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
 ```
-
-
+This command lists all A records under the zone `bluemix.net`,filtered by host is `elasticsearch` and ttl is 900 seconds.
 
 
 ### bluemix sl dns record-remove
@@ -1067,7 +1060,7 @@ Edit details of an image
 ```  
 bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
-   This command edits image with ID `12345678` and set its name to `ubuntu16`, note to `testing`, and tag to `staging`.
+This command edits image with ID `12345678` and set its name to `ubuntu16`, note to `testing`, and tag to `staging`.
 
 
 ### bluemix sl image edit
@@ -1224,11 +1217,11 @@ Add a new SSH key
 
 <strong>Command options</strong>:
    <dl>
-   <dt>-f value, --in-file value</dt>
+   <dt>-f, --in-file</dt>
    <dd>The id_rsa.pub file to import for this key</dd>
-   <dt>-k value, --key value</dt>
+   <dt>-k, --key</dt>
    <dd>The actual SSH key</dd>
-   <dt>--note value</dt>
+   <dt>--note</dt>
    <dd>Extra note that will be associated with key</dd>
    </dl>
 
@@ -1250,9 +1243,9 @@ Edit an SSH key
 
 <strong>Command options</strong>:
    <dl>
-   <dt>--label value</dt>
+   <dt>--label</dt>
    <dd>The new label for the key</dd>
-   <dt>--note value</dt>
+   <dt>--note</dt>
    <dd>New notes for the key</dd>
    </dl>
 
@@ -1273,7 +1266,7 @@ List SSH keys on your account
 
 <strong>Command options</strong>:
    <dl>
-   <dt>--sortby value</dt>
+   <dt>--sortby</dt>
    <dd>Column to sort by, options are: `id`, `label`, `fingerprint`, `notes`.</dd>
    </dl>
 
@@ -1294,7 +1287,7 @@ Prints out an SSH key to the screen
 
 <strong>Command options</strong>:
    <dl>
-   <dt>-f value, --out-file value</dt>
+   <dt>-f, --out-file</dt>
    <dd>The public SSH key will be written to this file.</dd>
    </dl>
 
@@ -1303,7 +1296,7 @@ Prints out an SSH key to the screen
 ```
  bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
- This command shows the ID, label and notes of SSH key with ID 12345678 and write the public key to file: ~/mykey.pub.
+ This command shows the ID, label and notes of SSH key with ID 12345678 and writes the public key to file: ~/mykey.pub.
 
 ### bluemix sl security sshkey-remove
 {: #sl_security_sshkey_remove}
@@ -1336,15 +1329,15 @@ Add and upload SSL certificate details
 
 <strong>Command options</strong>:
    <dl>
-   <dt>--crt value</dt>
+   <dt>--crt</dt>
    <dd>Certificate file</dd>
-   <dt>--csr value</dt>
+   <dt>--csr</dt>
    <dd>Certificate Signing Request file</dd>
-   <dt>--icc value</dt>
+   <dt>--icc</dt>
    <dd>Intermediate Certificate file</dd>
-   <dt>--key value</dt>
+   <dt>--key</dt>
    <dd>Private Key file</dd>
-   <dt>--notes value</dt>
+   <dt>--notes</dt>
    <dd>Additional notes</dd>
    </dl>
 
@@ -1365,15 +1358,15 @@ Edit SSL certificate
 
 <strong>Command options</strong>:
    <dl>
-   <dt>--crt value</dt>
+   <dt>--crt</dt>
    <dd>Certificate file</dd>
-   <dt>--csr value</dt>
+   <dt>--csr</dt>
    <dd>Certificate Signing Request file</dd>
-   <dt>--icc value</dt>
+   <dt>--icc</dt>
    <dd>Intermediate Certificate file</dd>
-   <dt>--key value</dt>
+   <dt>--key</dt>
    <dd>Private Key file</dd>
-   <dt>--notes value</dt>
+   <dt>--notes</dt>
    <dd>Additional notes</dd>
    </dl>
 
@@ -1408,9 +1401,9 @@ List SSL certificates on your account
 
 <strong>Command options</strong>:
    <dl>
-   <dt>--status value</dt>
+   <dt>--status</dt>
    <dd>Show certificates with this status, default is: all, options are: `all`, `valid`, `expired`</dd>
-   <dt>--sortby value</dt>
+   <dt>--sortby</dt>
    <dd>Column to sort by, options are: `id`, `common_name`, `days_until_expire`, `notes`</dd>
    </dl>
 
@@ -2023,13 +2016,13 @@ Reboot a virtual server instance into a rescue image
    <dl>
    <dt>-f, --force</dt>
    <dd>Force operation without confirmation</dd>
-    </dl>
+   </dl>
+   
 **Examples**:
 ```
  bluemix sl vs rescue 12345678
 ```
 This command reboots virtual server instance with ID 12345678 into a rescue image.
-
 
 
 ### bluemix sl vs resume
