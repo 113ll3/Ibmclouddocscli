@@ -24,15 +24,13 @@ With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such
 
 There are two ways to get started with the Bluemix CLIs and plugins. On macOS, the easiest way to get started is by installing IBM Cloud Application Tools. Alternatively, you can follow the instructions and documentation below to install the CLIs and plugins manually.
 
-## IBM Cloud Application Tools
+## IBM Cloud Application Tools 2 (Beta)
 {: #icat}
 
-IBM Cloud Application Tools 2.0 is a menubar application streamlined for local environment setup and management. Users can easily install and update {{site.data.keyword.Bluemix_notm}} tools and CLIs, change CLI deployment targets, and quickly access common {{site.data.keyword.Bluemix_notm}} links.
+IBM Cloud Application Tools 2 is a menubar application streamlined for local environment setup and management. Users can easily install and update {{site.data.keyword.Bluemix_notm}} tools and CLIs, change CLI deployment targets, and quickly access common {{site.data.keyword.Bluemix_notm}} links.
 
-(Internal IBM release only)
-
-[Download IBM Cloud Application Tools 2.0 for macOS ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/icat-2-download ){: new_window} <br>
-[Please Provide Feedback ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/icat-2-feedback){: new_window}
+[Download IBM Cloud Application Tools 2 Beta for macOS ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/icat-2-download ){: new_window} <br>
+[Please Provide Feedback![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/icat-2-feedback){: new_window}
 
 ## ![](./images/CLI.svg) Manual command line interface installation
 {: #downloads notoc}
