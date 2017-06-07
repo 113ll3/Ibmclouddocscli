@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-05-24"
+lastupdated: "2017-06-07"
 
 ---
 
@@ -36,7 +36,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl config](/docs/cli/reference/softlayer/index.html#sl_config)</td>
+ <td>[bluemix sl init](/docs/cli/reference/softlayer/index.html#sl_init)</td>
  <td>[bluemix sl help](/docs/cli/reference/softlayer/index.html#sl_help)</td>
    </tbody>
  </table>
@@ -122,7 +122,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
 
 ## {{site.data.keyword.BluSoftlayer_notm}} image commands
 
- <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
+ <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 5. Softlayer image commands</caption>
  <thead>
  <th colspan="6">Softlayer image commands</th>
@@ -132,8 +132,6 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <td>[bluemix sl image delete](/docs/cli/reference/softlayer/index.html#sl_image_delete)</td>
  <td>[bluemix sl image detail](/docs/cli/reference/softlayer/index.html#sl_image_detail)</td>
  <td>[bluemix sl image edit](/docs/cli/reference/softlayer/index.html#sl_image_edit)</td>
- <td>[bluemix sl image export](/docs/cli/reference/softlayer/index.html#sl_image_export)</td>
-<td>[bluemix sl image import](/docs/cli/reference/softlayer/index.html#sl_image_import)</td>
  <td>[bluemix sl image list](/docs/cli/reference/softlayer/index.html#sl_image_list)</td>
  </tr>
    </tbody>
@@ -141,7 +139,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  
 ## {{site.data.keyword.BluSoftlayer_notm}} Legacy ISCSI storage commands
 
-  <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
+  <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 6. Softlayer Legacy ISCSI strorage commands</caption>
  <thead>
  <th colspan="6">Softlayer Legacy ISCSI strorage commands</th>
@@ -163,7 +161,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} Legacy security commands
+## {{site.data.keyword.BluSoftlayer_notm}} security commands
 
  <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 7. Softlayer security commands</caption>
@@ -175,7 +173,8 @@ The following commands are supported. Use the `bluemix sl` command to see the li
   <td>[bluemix sl security sshkey-add](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_add)</td>
   <td>[bluemix sl security sshkey-edit](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_edit)</td>
   <td>[bluemix sl security sshkey-list](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_list)</td>
-  <td>[bluemix sl security sshkey-print](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_print)</td>   <td>[bluemix sl security sshkey-remove](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_remove)</td>
+  <td>[bluemix sl security sshkey-print](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_print)</td>   
+  <td>[bluemix sl security sshkey-remove](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_remove)</td>
  </tr>
  <tr>
   <td>[bluemix sl security cert-add](/docs/cli/reference/softlayer/index.html#sl_security_cert_add)</td>
@@ -189,7 +188,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
 
 ## {{site.data.keyword.BluSoftlayer_notm}} subnet commands
  
- <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
+ <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 8. Softlayer subnet commands</caption>
  <thead>
  <th colspan="5">Softlayer subnet commands</th>
@@ -207,7 +206,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  
 ## {{site.data.keyword.BluSoftlayer_notm}} virtual server commands
 
- <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
+ <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 9. Softlayer virtual server commands</caption>
  <thead>
  <th colspan="6">Softlayer virtual server commands</th>
@@ -218,7 +217,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <td>[bluemix sl vs capture](/docs/cli/reference/softlayer/index.html#sl_vs_capture)</td>
  <td>[bluemix sl vs create](/docs/cli/reference/softlayer/index.html#sl_vs_create)</td>
  <td>[bluemix sl vs options](/docs/cli/reference/softlayer/index.html#sl_vs_options)</td>
- <td>[bluemix sl vs-credentials](/docs/cli/reference/softlayer/index.html#sl_vs_credentials)</td>
+ <td>[bluemix sl vs credentials](/docs/cli/reference/softlayer/index.html#sl_vs_credentials)</td>
  <td>[bluemix sl vs detail](/docs/cli/reference/softlayer/index.html#sl_vs_detail)</td>
  </tr><tr>
  <td>[bluemix sl vs dns-sync](/docs/cli/reference/softlayer/index.html#sl_vs_dns_sync)</td>
@@ -240,7 +239,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  
 ## {{site.data.keyword.BluSoftlayer_notm}} VLAN commands
 
-  <table summary="Alphabetically ordered general Openwhisk commands that have links that bring you to more info for the command">
+  <table summary="Alphabetically ordered general Softlayer commands that have links that bring you to more info for the command">
 <caption>Table 10. Softlayer VLAN commands</caption>
  <thead>
  <th colspan="6">Softlayer VLAN commands</th>
@@ -260,29 +259,75 @@ The following commands are supported. Use the `bluemix sl` command to see the li
 ### Command usage
 To view help information for the commands, run: `bluemix sl [command] -h`.
 
-### bluemix sl config
-{: #sl_config}
+### bluemix sl init
+{: #sl_init}
 
-Edit or show the configuration that is used to connect to the SoftLayer environment. The configuration includes user name, API key or password, and endpoint.
+Initialize the configuration settings that are used to connect to the SoftLayer environment. The configuration includes user name, API key or password, account and endpoint.
 ```
-bluemix sl config [OPTIONS]
+bluemix sl init [OPTIONS]
 ```
 
 <strong>Command options</strong>:
    <dl>
-   <dt>--list</dt>
-   <dd>Show the configuration.</dd>
-    </dl>
+   <dt>-a,--api-endpoint</dt>
+   <dd>Softlayer API endpoint URL, default is: https://api.softlayer.com/rest/v3.1</dd>
+   <dt>-u,--sl-user</dt>
+   <dd>Softlayer user name</dd>
+   <dt>-p,--sl-password</dt>
+   <dd>Softlayer password or API key</dd>
+   <dt>-c,--account-id</dt>
+   <dd>Softlayer account ID</dd>
+   </dl>
 
-For example,
+For example, login with Softlayer user name and password/API key
 ```
- runhc$ bluemix sl config
+$ bluemix sl config
+Choose how to configure Softlayer authentication: 
+1. Login with Softlayer user name and password/API key
+2. Use Bluemix Single-Sign-On
+Enter a number>1
+Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
+Username: []> wangjunl@cn.ibm.com
+API key or password: []> abcd
 
-Username []> johndoe@us.ibm.com
+Softlayer API endpoint:    https://api.softlayer.com/rest/v3.1   
+Account ID:                278444   
+User ID:                   wangjunl@cn.ibm.com   
+API Key:                   xxxxxxxxxx
+```
+For example, use Bluemix Single-Sign-On to login Softlayer
+```
+$ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
+API endpoint: api.ng.bluemix.net
+Authenticating...
+OK
 
-API Key or password []> myPwd4sl   
+Targeted account Wilma's Account (65ce8074c6c62b5)
 
-Endpoint (public|private|custom) [public]> public
+Targeted org wangjunl@cn.ibm.com
+
+Targeted space Wilma
+                  
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)   
+Region:         us-south   
+User:           wangjunl@cn.ibm.com   
+Account:        Wilma's Account (65ce8074c6c62b5)   
+Org:            wangjunl@cn.ibm.com   
+Space:          Wilma 
+
+$ bx sl init
+Choose how to configure Softlayer authentication: 
+1. Login with Softlayer user name and password/API key
+2. Use Bluemix Single-Sign-On
+Enter a number> 2
+Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]> 
+Setting account to: 278444
+OK
+                              
+Softlayer API endpoint:    https://api.softlayer.com/mobile/v3.1   
+Account ID:                278444   
+User ID:                   12345678   
+IMS token:                 xxxxxxxxxx
 ```
 
 ### bluemix sl help
@@ -290,7 +335,7 @@ Endpoint (public|private|custom) [public]> public
 
 View help information for all commands to operate Softlayer environment.
 ```
-bluemix wsk help
+bluemix sl help
 
 ```
 
@@ -332,9 +377,9 @@ bluemix sl block access-list VOLUME_ID [OPTIONS]
 <strong>Command options</strong>:
    <dl>
    <dt>--sortby</dt>
-   <dd>Column to sort by, options are: `id`, `name`,  `type`, `private_ip_address`, `host_iqn,username`, or `password`.</dd>
+   <dd>Column to sort by, options are: `id`, `name`,  `type`, `private_ip_address`, `host_iqn`, `username`, or `password`.</dd>
    <dt>--columns</dt>
-   <dd>  Columns to display, options are:  `id`, `name`, `type`, `private_ip_address`, `host_iqn,username`, or `password`.</dd>
+   <dd>  Columns to display, options are:  `id`, `name`, `type`, `private_ip_address`, `host_iqn`, `username`, or `password`.</dd>
 </dl>
 
 **Examples**:
@@ -1025,39 +1070,6 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
    This command edits image with ID `12345678` and set its name to `ubuntu16`, note to `testing`, and tag to `staging`.
 
 
-### bluemix sl image export
-{: #sl_dns_image_export}
-
-Export an image to an object storage
-```
-   bluemix sl image export [OPTIONS] IDENTIFIER URI
-```
-
-The URI for an object storage object (.vhd/.iso file) in the format:
-`swift://<objectStorageAccount>@<cluster>/<container>/<objectPath>`.
-
-
-### bluemix sl image import
-{: #sl_dns_image_import}
-
-Import an image from an object storage
-```
-   bluemix sl image import [OPTIONS] NAME URI  
-```
-
-The URI for an object storage object (.vhd/.iso file) in the format:
-`swift://<objectStorageAccount>@<cluster>/<container>/<objectPath>`.
-
-<strong>Command options</strong>:
-   <dl>
-   <dt> --note</dt>
-   <dd>The note to be applied to the imported template.</dd>
-   <dt>--os-code</dt>
-   <dd>The referenceCode of the operating system software description for the imported VHD.</dd>
-    </dl>
-
-
-
 ### bluemix sl image edit
 {: #sl_dns_image_edit}
 
@@ -1231,28 +1243,204 @@ This command adds a SSH key from file: ~/.ssh/id_rsa.pub with a note "mykey".
 ### bluemix sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
-Add a new SSH key
+Edit an SSH key
 ```
- bluemix sl security sshkey-add LABEL [OPTIONS]
+ bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>Command options</strong>:
    <dl>
-   <dt>-f value, --in-file value</dt>
-   <dd>The id_rsa.pub file to import for this key</dd>
-   <dt>-k value, --key value</dt>
-   <dd>The actual SSH key</dd>
+   <dt>--label value</dt>
+   <dd>The new label for the key</dd>
    <dt>--note value</dt>
-   <dd>Extra note that will be associated with key</dd>
+   <dd>New notes for the key</dd>
    </dl>
 
 
 **Examples**:
 ```
- bluemix sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
+ bluemix sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
-This command adds a SSH key from file: ~/.ssh/id_rsa.pub with a note "mykey".
+This command updates the SSH key with ID 12345678 and sets label to "Bluemix" and note to "testing".
 
+### bluemix sl security sshkey-list
+{: #sl_security_sshkey_list}
+
+List SSH keys on your account
+```
+ bluemix sl security sshkey-list [OPTIONS]
+```
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>--sortby value</dt>
+   <dd>Column to sort by, options are: `id`, `label`, `fingerprint`, `notes`.</dd>
+   </dl>
+
+
+**Examples**:
+```
+ bluemix sl security sshkey-list --sortby label
+```
+ This command lists all SSH keys on current account and sorts them by label.
+
+### bluemix sl security sshkey-print
+{: #sl_security_sshkey_print}
+
+Prints out an SSH key to the screen
+```
+ bluemix sl security sshkey-print IDENTIFIER [OPTIONS]
+```
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>-f value, --out-file value</dt>
+   <dd>The public SSH key will be written to this file.</dd>
+   </dl>
+
+
+**Examples**:
+```
+ bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
+```
+ This command shows the ID, label and notes of SSH key with ID 12345678 and write the public key to file: ~/mykey.pub.
+
+### bluemix sl security sshkey-remove
+{: #sl_security_sshkey_remove}
+
+Permanently removes an SSH key
+```
+ bluemix sl security sshkey-remove IDENTIFIER [OPTIONS]
+```
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>-f, --force</dt>
+   <dd>Force operation without confirmation</dd>
+   </dl>
+
+
+**Examples**:
+```
+ bluemix sl security sshkey-remove 12345678 -f
+```
+ This command removes the SSH key with ID 12345678 without asking for confirmation.
+
+### bluemix sl security cert-add
+{: #sl_security_cert_add}
+
+Add and upload SSL certificate details
+```
+ bluemix sl security cert-add [OPTIONS]
+```
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>--crt value</dt>
+   <dd>Certificate file</dd>
+   <dt>--csr value</dt>
+   <dd>Certificate Signing Request file</dd>
+   <dt>--icc value</dt>
+   <dd>Intermediate Certificate file</dd>
+   <dt>--key value</dt>
+   <dd>Private Key file</dd>
+   <dt>--notes value</dt>
+   <dd>Additional notes</dd>
+   </dl>
+
+
+**Examples**:
+```
+ bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key 
+```
+ This command adds certificate file: ~/bluemix.net.cert and private key file ~/bluemix.net.key for domain bluemix.net.
+
+### bluemix sl security cert-edit
+{: #sl_security_cert_edit}
+
+Edit SSL certificate
+```
+ bluemix sl security cert-edit IDENTIFIER [OPTIONS]
+```
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>--crt value</dt>
+   <dd>Certificate file</dd>
+   <dt>--csr value</dt>
+   <dd>Certificate Signing Request file</dd>
+   <dt>--icc value</dt>
+   <dd>Intermediate Certificate file</dd>
+   <dt>--key value</dt>
+   <dd>Private Key file</dd>
+   <dt>--notes value</dt>
+   <dd>Additional notes</dd>
+   </dl>
+
+
+**Examples**:
+```
+ bluemix sl security cert-edit 12345678 --key ~/bluemix.net.key
+```
+ This command edits certificate with ID 12345678 and updates its private key with file: ~/bluemix.net.key.
+
+### bluemix sl security cert-download
+{: #sl_security_cert_download}
+
+Download SSL certificate and key files
+```
+ bluemix sl security cert-download IDENTIFIER
+```
+
+**Examples**:
+```
+ bluemix sl security cert-download 12345678
+```
+  This command downloads 4 files to current directory for certificate with ID 12345678. The 4 files are: certificate file, certificate signing request file, intermediate certificate file and private key file.
+
+### bluemix sl security cert-list
+{: #sl_security_cert_list}
+
+List SSL certificates on your account
+```
+ bluemix sl security cert-list [OPTIONS]
+```
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>--status value</dt>
+   <dd>Show certificates with this status, default is: all, options are: `all`, `valid`, `expired`</dd>
+   <dt>--sortby value</dt>
+   <dd>Column to sort by, options are: `id`, `common_name`, `days_until_expire`, `notes`</dd>
+   </dl>
+
+
+**Examples**:
+```
+ bluemix sl security cert-list --status valid --sortby days_until_expire
+```
+ This command lists all valid certificates on current account and sort them by validity days.
+
+### bluemix sl security cert-remove
+{: #sl_security_cert_remove}
+
+Remove SSL certificate
+```
+ bluemix sl security cert-remove IDENTIFIER [OPTIONS]
+```
+
+<strong>Command options</strong>:
+   <dl>
+   <dt> -f, --force</dt>
+   <dd>Force operation without confirmation</dd>
+   </dl>
+
+
+**Examples**:
+```
+ bluemix sl security cert-remove 12345678
+```
+ This command removes certificate with ID 12345678.
 
 ### bluemix sl subnet cancel
 {: #sl_subnet_cancel}
@@ -1959,13 +2147,13 @@ This command cancels vlan with ID 12345678 without asking for confirmation.
 
 Get details about a VLAN.
 ```
- bluemix sl vlan detail IDENTIFIER [OPTIONS]
-```			
+   bluemix sl vlan detail IDENTIFIER [OPTIONS]
+```
 
 <strong>Command options</strong>:
    <dl>
    <dt>--no-vs</dt>
-   <dd>Hide virtual server listing.</dd>
+   <dd>Hide virtual server listing</dd>
    <dt>--no-hardware</dt>
    <dd>Hide hardware listing</dd>
    </dl>
@@ -1974,8 +2162,7 @@ Get details about a VLAN.
 ```
  bluemix sl vlan detail 12345678  --no-vs --no-hardware
 ```
-   This command shows details of vlan with ID 12345678, and not list virtual server or hardware server.
-
+This command shows details of vlan with ID 12345678, and not list virtual server or hardware server.
 
 
 ### bluemix sl vlan edit
@@ -1996,7 +2183,6 @@ Edit the details about a VLAN
  bluemix sl vlan edit 12345678 -n myvlan-rename
 ```
 This command updates vlan with ID 12345678 and gives it a new name "myvlan-rename".
-
 
 
 ### bluemix sl vlan list
