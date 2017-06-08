@@ -25,7 +25,7 @@ With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such
 There are two ways to get started with the Bluemix CLIs and plugins. On macOS, the easiest way to get started is by installing IBM Cloud Application Tools. Alternatively, you can follow the instructions and documentation below to install the CLIs and plugins manually.
 
 ## IBM Cloud Application Tools 2 (Beta)
-{: #icat}
+{: #icat notoc}
 
 IBM Cloud Application Tools 2 is a menubar application streamlined for local environment setup and management. Users can easily install and update {{site.data.keyword.Bluemix_notm}} tools and CLIs, change CLI deployment targets, and quickly access common {{site.data.keyword.Bluemix_notm}} links.
 
