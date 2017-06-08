@@ -24,7 +24,7 @@ With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such
 
 There are two ways to get started with the Bluemix CLIs and plugins. On macOS, the easiest way to get started is by installing IBM Cloud Application Tools. Alternatively, you can follow the instructions and documentation below to install the CLIs and plugins manually.
 
-## IBM Cloud Application Tools 2 (Beta)
+## Enhancing your {{site.data.keyword.Bluemix_short}} CLI management with IBM Cloud Application Tools 2 (Beta) for MacOS
 {: #icat}
 
 IBM Cloud Application Tools 2 is a menubar application streamlined for local environment setup and management. Users can easily install and update {{site.data.keyword.Bluemix_notm}} tools and CLIs, change CLI deployment targets, and quickly access common {{site.data.keyword.Bluemix_notm}} links.
@@ -37,11 +37,11 @@ IBM Cloud Application Tools 2 is a menubar application streamlined for local env
 
 Download and install the command line tool to support your {{site.data.keyword.Bluemix_notm}} experience.
 
-{{site.data.keyword.Bluemix_notm}} CLI provides a command line experience to manage your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command line interface, cf, in its installation, for managing Cloud Foundry applications and services. 
+{{site.data.keyword.Bluemix_notm}} CLI provides a command line experience to manage your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command line interface, cf, in its installation, for managing Cloud Foundry applications and services.
 
 Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI tools and {{site.data.keyword.Bluemix_notm}} environment, you must configure the `HTTP_PROXY` environment variable with the actual HTTP proxy url and port if there is any. See [Using the CLI with an HTTP Proxy Server ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} for more details.
 
-[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.stage1.ng.bluemix.net/){: new_window} <br> 
+[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.stage1.ng.bluemix.net/){: new_window} <br>
 [View Docs](/docs/cli/reference/bluemix_cli/index.html)
 
 ## ![](./images/CLI_Plugin.svg) Command line interface plug-ins
