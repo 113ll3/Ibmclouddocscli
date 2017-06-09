@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-05-19"
+lastupdated: "2017-06-09"
 
 
 ---
@@ -65,16 +65,16 @@ To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [Se
  <!-- audience blue staging only begin comment -->
  
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
  
  <!-- audience blue staging only end comment -->
  
  <td>[bx cr token-add](#bx_cr_token_add)</td>
- <td>[bx cr token-get](#bx_cr_token_get)</td>
-
  </tr>
   <tr>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  
@@ -282,6 +282,30 @@ bx cr plan-upgrade PLAN
 <li>Free</li>
 <li>Standard</li>
 </ul>
+</dl>
+
+<!-- audience blue staging only end comment -->
+
+<!-- audience blue staging only begin comment -->
+
+## bx cr pricing
+{: #bx_cr_pricing}
+
+**Draft comment: bx cr pricing is Staging-only content, do not add doc to production until GA.**
+
+Calculates the estimated cost of your usage in US Dollars based on a 30 day month. The calculator displays the estimated total cost taking into account your free storage and pull traffic allowances. The calculator multiplies your anticipated storage by the number of hours in a month to show a total in gigabyte-hours.
+
+```
+bx cr pricing --traffic VALUE --storage VALUE
+```
+{: codeblock}
+
+**Parameters**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>Specify your anticipated monthly pull traffic in megabytes. Traffic must be specified as an integer.</dd>
+<dt>--storage VALUE</dt>
+<dd>Specify your anticipated total storage in megabytes. Storage must be specified as an integer.</dd>
 </dl>
 
 <!-- audience blue staging only end comment -->
