@@ -4,9 +4,9 @@
 
 copyright:
 
-  2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-24"
+lastupdated: "2011-01-12"
 
 
 ---
@@ -18,16 +18,11 @@ lastupdated: "2016-02-24"
 # Interface de ligne de commande Auto-Scaling
 {: #autoscalingcli}
 
-Dernière mise à jour : 25 février 2016
-{: .last-updated}
-
 
 Vous pouvez configurer le service {{site.data.keyword.autoscaling}} à l'aide de l'interface de ligne de commande {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}. L'interface de ligne de commande {{site.data.keyword.autoscaling}} prend en charge Linux64, Win64 et OSX, et fournit des fonctionnalités semblables à celles de l'API RESTful de mise à l'échelle automatique.
 {: shortdesc}
 
-Avant de commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir
-[Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://plugins.ng.bluemix.net/ui/home.html){: new_window} pour des
-instructions.
+Avant de commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir [Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} pour des instructions.
 
 ## Ajout du plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
@@ -45,7 +40,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Association d'une règle de mise à l'échelle automatique
 
-Vous pouvez associer une règle de mise à l'échelle automatique à une application spécifique. Exécutez la commande suivante : 
+Vous pouvez associer une règle de mise à l'échelle automatique (Auto-Scaling policy) à une application spécifique. Exécutez la commande suivante :
 
 ```
 bx as policy-attach <NOM_APP> -p <fichier_règles>
@@ -72,7 +67,7 @@ bx as policy-create
 
 ## Affichage d'une règle de mise à l'échelle automatique
 
-Vous pouvez afficher la règle de mise à l'échelle automatique d'une application. Le contenu de la règle est affiché directement sur la ligne de commande. Exécutez la commande suivante :
+Vous pouvez afficher la règle de mise à l'échelle automatique d'une application. Le contenu de la règle s'imprime directement sur la ligne de commande. Exécutez la commande suivante :
 
 ```
 bx as policy-show <NOM_APP> [--json]
@@ -89,7 +84,7 @@ bx as policy-show <NOM_APP> [--json]
 
 ## Dissociation d'une règle de mise à l'échelle automatique
 
-Vous pouvez retirer une règle de mise à l'échelle automatique d'une application. Exécutez la commande suivante : 
+Vous pouvez retirer une règle de mise à l'échelle automatique d'une application. Exécutez la commande suivante :
 
 ```
 bx as policy-detach <NOM_APP>
@@ -104,7 +99,7 @@ bx as policy-detach <NOM_APP>
 
 ## Activation ou désactivation d'une règle de mise à l'échelle automatique
 
-Vous pouvez activer ou désactiver la règle de mise à l'échelle automatique d'une application spécifique. Exécutez la commande suivante : 
+Vous pouvez activer ou désactiver la règle de mise à l'échelle automatique d'une application spécifique. Exécutez la commande suivante :
 
 ```
 bx as policy-enable|policy-disable <NOM_APP>
@@ -144,5 +139,5 @@ bx as history-show <NOM_APP>  [--start-date=<horodatage_début>]  [--end-date=<h
 ## general
 {: general}
 * [{{site.data.keyword.autoscaling}} service](/docs/services/Auto-Scaling/index.html)
-* [Interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [W3C Date and Time Formats](https://www.w3.org/TR/NOTE-datetime){: new_window}
+* [Interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [W3C Date and Time Formats standard ![icône de lien externe](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

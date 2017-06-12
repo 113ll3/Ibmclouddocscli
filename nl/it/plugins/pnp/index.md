@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-ultimo aggiornamento: "14-10-2016"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -18,7 +18,7 @@ Utilizza la CLI (command line interface) per configurare e gestire il peering de
 
 Il plug-in della CLI peering della rete privata è disponibile per i sistemi operativi Windows, MAC e Linux. Assicurati di utilizzare il plug-in adatto a te.
 
-Prima di iniziare, crea gli spazi Bluemix. Assicurati che ogni contenitore all'interno di uno spazio abbia un indirizzo IP da una rete diversa. Per i dettagli, vedi [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)
+Prima di iniziare, crea gli spazi Bluemix. Assicurati che ogni contenitore all'interno di uno spazio abbia un indirizzo IP da una rete diversa. Per i dettagli, vedi [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
 
 **Nota:** dopo aver utilizzato il peering della rete privata con uno spazio Bluemix, se devi eliminare lo spazio, elimina prima le connessioni peering della rete privata in tale spazio.
 
@@ -39,25 +39,25 @@ Installa il plug-in peering della rete privata utilizzando il seguente comando:
 
 **Nota**: puoi passare alla posizione del plug-in o specificarne il percorso.
 
-* Per sistemi operativi Microsoft Windows:  
+* Per sistemi operativi Microsoft Windows:
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* Per sistemi operativi Apple MAC:  
+* Per sistemi operativi Apple MAC:
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* Per sistemi operativi Linux:  
+* Per sistemi operativi Linux:
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**Nota**: durante l'installazione del plug-in per il sistema operativo Linux, se visualizzi un messaggio di errore che indica un'autorizzazione negata, immetti il seguente comando per modificare le autorizzazioni:  
+**Nota**: durante l'installazione del plug-in per il sistema operativo Linux, se visualizzi un messaggio di errore che indica un'autorizzazione negata, immetti il seguente comando per modificare le autorizzazioni:
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -67,19 +67,19 @@ chmod a+x ./private-network-peering-linux-amd64
 
 Completa questa procedura per installare il plug-in dal repository Bluemix:
 
-1. Aggiungi l'endpoint del registro di plug-in Bluemix:  
+1. Aggiungi l'endpoint del registro di plug-in Bluemix:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. Immetti il seguente comando:
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## Elenco di comandi per il peering della rete privata
-Sono supportati i seguenti quattro comandi. Utilizza il comando `bluemix network` per visualizzare l'elenco di comandi disponibili:
+Sono supportati i seguenti comandi. Utilizza il comando `bluemix network` per visualizzare l'elenco di comandi disponibili:
 
 | Comando     | Descrizione                                    |
 |-------------|------------------------------------------------|
@@ -87,6 +87,8 @@ Sono supportati i seguenti quattro comandi. Utilizza il comando `bluemix network
 | pnp-create  | Crea una connessione peering della rete privata   |
 | pnp-delete  | Elimina una connessione peering della rete privata   |
 | pnp-show    | Elenca tutte le connessioni peering della rete privata  |
+{: caption="Tabella 1. Comandi per il peering della rete privata" caption-side="top"}
+
 
 ### Utilizzo dei comandi
 Per visualizzare le informazioni di guida per i comandi, esegui: `bluemix network [command] -h`.
@@ -104,7 +106,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 ######Esempio di comando
 {: #ex1}
 
-Per visualizzare le informazioni di rete per tutti i router:  
+Per visualizzare le informazioni di rete per tutti i router:
 
 	$ bluemix network pnp-routers
 	Listing available routers ...
@@ -116,7 +118,7 @@ Per visualizzare le informazioni di rete per tutti i router:
 	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 
-Per visualizzare informazioni di rete dettagliate per tutti i router:  
+Per visualizzare informazioni di rete dettagliate per tutti i router:
 
 
 	$ bluemix network pnp-routers -v
@@ -214,7 +216,7 @@ bluemix network pnp-show [--verbose (or -v)]
 ######Esempio di comando
 {: #ex4}
 
-Visualizza informazioni di base:  
+Visualizza informazioni di base:
 
 	$ bluemix network pnp-show
 	Listing private network peering connections ...

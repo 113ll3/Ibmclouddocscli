@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015，2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2011-01-12"
 
 
 ---
@@ -31,7 +31,7 @@ After the {{site.data.keyword.Bluemix_notm}} CLI is installed, you can add the {
 Complete the following steps to add the repository and install the plug-in:
 1. To add the {{site.data.keyword.Bluemix_notm}} CLI plugin repository, run the following command:
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.stage1.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. To install the {{site.data.keyword.autoscaling}} CLI plugin, run the following command:
 ```
@@ -51,7 +51,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">The name of the app to which you want to attach an auto-scaling policy.</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
-<dd class="pd">The name of the JSON file that describes the auto-scaling policy. See the <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">{{site.data.keyword.autoscaling}} RESTful API doc</a><img src="../../../icons/launch-glyph.svg" alt="External link icon"> for more details.</dd>
+<dd class="pd">The name of the JSON file that describes the auto-scaling policy. See the <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">{{site.data.keyword.autoscaling}} RESTful API doc</a> for more details.</dd>
 </dl>
 
 
@@ -125,9 +125,9 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">The name of the app for which you want to show the history of the auto-scaling policy.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">The time stamp of the beginning of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to 50 hours ahead of the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a><img src="../../../icons/launch-glyph.svg" alt="External link icon"> for details about the time stamp format.
+<dd class="pd">The time stamp of the beginning of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to 50 hours ahead of the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a> for details about the time stamp format.
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">The time stamp of the ending of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a> <img src="../../../icons/launch-glyph.svg" alt="External link icon">for details about the time stamp format.
+<dd class="pd">The time stamp of the ending of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a> for details about the time stamp format.
 </dl>
 
 
@@ -140,4 +140,4 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 {: general}
 * [{{site.data.keyword.autoscaling}} service](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [W3C Date and Time Formats standard ![External link icon](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window} 
+* [W3C Date and Time Formats standard ![External link icon](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

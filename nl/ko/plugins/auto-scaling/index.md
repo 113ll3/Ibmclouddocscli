@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-24"
+lastupdated: "2011-01-12"
 
 
 ---
@@ -18,14 +18,11 @@ lastupdated: "2016-02-24"
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-마지막 업데이트 날짜: 2016년 2월 25일
-{: .last-updated}
-
 
 {{site.data.keyword.Bluemix_notm}}용 {{site.data.keyword.autoscaling}} CLI를 사용하여 {{site.data.keyword.autoscaling}} 서비스를 구성할 수 있습니다. {{site.data.keyword.autoscaling}} CLI는 Linux64, Win64 및 OSX를 지원하며, Auto Scaling RESTful API와 비슷한 기능을 제공합니다.
 {: shortdesc}
 
-시작하기 전에 {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 지시사항은 [{{site.data.keyword.Bluemix_notm}} CLI 다운로드](http://plugins.ng.bluemix.net/ui/home.html){: new_window}를 참조하십시오.
+시작하기 전에 {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 지시사항은 [{{site.data.keyword.Bluemix_notm}} CLI 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}를 참조하십시오. 
 
 ## {{site.data.keyword.Bluemix_notm}} CLI 플러그인 추가
 
@@ -43,7 +40,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Auto-Scaling 정책 연결
 
-Auto-Scaling 정책을 특정 앱에 연결할 수 있습니다. 다음 명령을 실행하십시오.
+특정 앱에 Auto-Scaling 정책을 연결할 수 있습니다. 다음 명령을 실행하십시오.
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -102,7 +99,7 @@ bx as policy-detach <APP_NAME>
 
 ## Auto-Scaling 정책의 사용 여부 설정
 
-특정 앱에 대한 Auto-Scaling 정책의 사용 여부를 설정할 수 있습니다. 다음 명령을 실행하십시오.
+특정 앱의 Auto-Scaling 정책을 사용하거나 사용하지 않게 설정할 수 있습니다. 다음 명령을 실행하십시오.
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>
@@ -137,10 +134,10 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 
 **팁:** **--json** 옵션을 사용하면 원본 JSON 응답이 출력됩니다.
 
-# 관련 링크
+# rellinks
 {: rellinks}
-## 일반
+## general
 {: general}
 * [{{site.data.keyword.autoscaling}} 서비스](/docs/services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [W3C 날짜 및 시간 형식 표준](https://www.w3.org/TR/NOTE-datetime){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [W3C 날짜 및 시간 형식 표준 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

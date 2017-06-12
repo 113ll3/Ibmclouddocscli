@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-23"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -28,9 +28,7 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 <dd>An API endpoint must be set through the <code>bluemix api</code> before using the command.</dd>
 <dt>Login</dt>
 <dd>Login by using the <code>bluemix login</code> command is required before using this command.
-<!-- begin STAGING ONLY -->
-If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key. Go to {{site.data.keyword.Bluemix_notm}} console “Manage” -> “Security” -> “Bluemix API keys” to create API keys.
-<!-- end STAGING ONLY -->
+If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key. Go to {{site.data.keyword.Bluemix_notm}} console **Manage** &gt; **Security** &gt; **Bluemix API keys** to create API keys.
 </dd>
 <dt>Target</dt>
 <dd>The <code>bluemix target</code> command must be used to set an org and space before using this command.</dd>
@@ -38,12 +36,14 @@ If logging in with federated ID, use '--sso' option to authenticate with one tim
 <dd>The Docker CLI (docker) must be installed to run this command.</dd>
 </dl>
 
-**Note:** You can use the short format of bluemix commands; for example, `bx api` is short for `bluemix api`.
+## bluemix commands index
+{: #bx_commands_index}
 
 Use the indexes in the following tables to refer to the frequently used bluemix commands.
 
-## General bluemix commands 
-{: #bx_commands_index}
+**Note:** You can use the short format of bluemix commands; for example, `bx api` is short for `bluemix api`.
+
+
 
 <table summary="General bluemix commands.">
 <caption>Table 1. General bluemix commands</caption>
@@ -54,27 +54,19 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  <tr>
  <td>[bluemix help](bx_cli.html#bluemix_help)</td>
  <td>[bluemix api](bx_cli.html#bluemix_api)</td>
- <td>[bluemix config](bx_cli.html#bluemix_config)</td>
- <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
- <td>[bluemix info](bx_cli.html#bluemix_info)</td>
+ <td>[bluemix login](bx_cli.html#bluemix_login)</td>
+ <td>[bluemix logout](bx_cli.html#bluemix_logout)</td>
+ <td>[bluemix target](bx_cli.html#bluemix_target)</td>
  </tr>
  <tr>
- <td>[bluemix login](bx_cli.html#bluemix_login) </td>
- <td>[bluemix logout](bx_cli.html#bluemix_logout) </td>
- <td>[bluemix regions](bx_cli.html#bluemix_regions)</td>
- <td>[bluemix target](bx_cli.html#bluemix_target)</td>
+ <td>[bluemix info](bx_cli.html#bluemix_info) </td>
+ <td>[bluemix regions](bx_cli.html#bluemix_regions) </td>
+ <td>[bluemix config](bx_cli.html#bluemix_config)</td>
+ <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
  <td>[bluemix update](bx_cli.html#bluemix_update)</td>
  </tr>
  </tbody>
  </table>
- 
- ## Commands for managing and configuring {{site.data.keyword.BluSoftlayer_notm}} services
-  {: #bx_commands_softlayer}
-  
-The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been merged into the Bluemix CLI. For more information on using the Bluemix CLI to configure and manage {{site.data.keyword.BluSoftlayer_notm}} services, see: [Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) commands](/docs/cli/reference/softlayer/index.md#softlayer_cli).
- 
- ## Commands for managing accounts, orgs, and roles
- {: #bx_commands_acctorg}
 
 <table summary="bluemix commands that you can use to manage accounts, orgs, spaces, roles and API keys.">
 <caption>Table 2. Commands for managing accounts, orgs, spaces, roles and API keys</caption>
@@ -133,9 +125,6 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
  </tr>
  </tbody>
  </table>
- 
- ## Commands for managing cf apps and app related domains, routes, and certificates
- {: #bx_commands_apps}
 
 <table summary="bluemix commands that you can use to manage cf apps and app related domains, routes and certificates.">
 <caption>Table 3. Commands for managing cf apps and app related domains, routes and certificates</caption>
@@ -194,9 +183,6 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
  </tr>
   </tbody>
  </table>
- 
- ## Commands for managing Bluemix services
- {: #bx_commands_services}
 
 <table summary="bluemix commands that you can use to manage Bluemix services.">
 <caption>Table 4. Commands for managing Bluemix services</caption>
@@ -227,14 +213,11 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
  </tr>
   </tbody>
  </table>
- 
- ## Commands for managing catalog, plug-ins, and billing settings
- {: #bx_commands_settings}
 
-<table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, and billing settings.">
-<caption>Table 5. Commands for managing Bluemix catalog, plug-ins, and billing settings</caption>
+<table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, billing, and security settings.">
+<caption>Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings</caption>
  <thead>
- <th colspan="5">Commands for managing Bluemix catalog, plug-ins, and billing settings</th>
+ <th colspan="5">Commands for managing Bluemix catalog, plug-ins, billing, and security settings</th>
  </thead>
  <tbody>
  <tr>
@@ -261,7 +244,7 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
  </tbody>
  </table>
  
-  ### bluemix help
+## bluemix help
 {: #bluemix_help}
 Display the general help for first-level built-in commands and supported namespaces of {{site.data.keyword.Bluemix_notm}} CLI, or the help for a specific built-in command or namespace.
 
@@ -296,7 +279,7 @@ bluemix help info
 
 
 
-### bluemix api
+## bluemix api
 {: #bluemix_api}
 Set or view the {{site.data.keyword.Bluemix_notm}} API endpoint.
 
@@ -339,7 +322,156 @@ Unset the API endpoint:
 bluemix api --unset
 ```
 
-### bluemix config
+
+## bluemix login
+{: #bluemix_login}
+
+Log in user. 
+
+```
+bluemix login [OPTIONS...]
+```
+
+<strong>Prerequisites</strong>:  None
+
+<strong>Command options</strong>:
+<dl>
+  <dt>-a <i>API_ENDPOINT</i> (optional)</dt>
+  <dd> API endpoint (For example: api.ng.bluemix.net)</dd>
+  <dt> --apikey <i>API_KEY or @API_KEY_FILE_PATH</i>
+  <dd> API key content or the path of an API key file indicated by @</dd>
+  <dt> --sso (optional) </dt>
+  <dd> use one time passcode to login </dd>
+  <dt> -u <i>USERNAME</i> (optional)</dt>
+  <dd> Username</dd>
+  <dt> -p <i>PASSWORD</i> (optional)</dt>
+  <dd> Password</dd>
+  <dt> -c <i>ACCOUNT_ID</i> (optional) </dt>
+  <dd> ID of the target account</dd>
+  <dt> -o <i>ORG_NAME</i> (optional) </dt>
+  <dd> Name of the target organization </dd>
+  <dt> -s <i>SPACE_NAME</i> (optional) </dt>
+  <dd> Name of the target space</dd>
+  <dt> --skip-ssl-validation (optional) </dt>
+  <dd> Bypass SSL validation of HTTP requests. This option is not recommended.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Interactive login:
+
+```
+bluemix login
+```
+
+Login with username and password, and set target account, org and space:
+
+```
+bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+```
+
+Login with one time passcode and set target account, org and space
+
+```
+bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
+```
+
+Login with API key and set targets:
+
+* API key has account associated
+
+```
+bluemix login --apikey api-key-string -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @filename -o MyOrg -s MySpace
+```
+
+* API key has no account associated
+
+```
+bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+```
+
+<strong>Note:</strong> If the API Key has account associated, switch to another account is not allowed.
+
+
+## bluemix logout
+{: #bluemix_logout}
+
+Log out user.
+
+```
+bluemix logout
+```
+
+<strong>Prerequisites</strong>:  None
+
+
+## bluemix target
+{: #bluemix_target}
+
+
+Set or view the target account, region, organization or space.
+
+```
+bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>-c <i>ACCOUNT_ID</i> (optional)</dt>
+   <dd>The ID of the account to be targeted.</dd>
+   <dt>-r <i>REGION</i> (optional)</dt>
+   <dd>The region to be switched to.</dd>
+   <dt>-o <i>ORG_NAME</i> (optional)</dt>
+   <dd>The name of the organization to be targeted.</dd>
+   <dt>-s <i>SPACE_NAME</i> (optional)</dt>
+   <dd>The name of the space to be targeted.</dd>
+   </dl>
+If none of the options are specified, the current account, region, org and space are displayed.
+
+<strong>Examples</strong>:
+
+Set the current account, organization and space
+
+```
+bluemix target -c MyAccountID -o MyOrg -s MySpace
+```
+
+Switch to a new region
+
+```
+bluemix target -r eu-gb
+```
+
+View the current account, region, org and space:
+
+```
+bluemix target
+```
+
+
+## bluemix info
+{: #bluemix_info}
+
+View the basic {{site.data.keyword.Bluemix_notm}} information, including the current region, the cloud controller version, and some useful endpoints, such as endpoints for login and exchanging access token.
+
+```
+bluemix info
+```
+
+<strong>Prerequisites</strong>:  Endpoint
+
+
+## bluemix config
 {: #bluemix_config}
 
 
@@ -360,9 +492,9 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--color true|false</dt>
    <dd>Enable or disable color output. Color output is enabled by default.</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>Set a default locale. If LOCALE is <i>CLEAR</i>, the previous locale is deleted.</dd>
+   <dd>Set a default locale. If LOCALE is <i>CLEAR</i>, previous locale is deleted.</dd>
    <dt>--check-version true|false</dt>
-   <dd>Enable or disable CLI version check.</dd>
+   <dd>Enable or disable CLI version check</dd>
    </dl>
 
 Only one of these options can be specified at a time.
@@ -406,7 +538,7 @@ bluemix config --locale CLEAR
 ```
 
 
-### bluemix curl
+## bluemix curl
 {: #bluemix_curl}
 
 Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends the request to {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. For supported paths, refer to the API path definitions in the [CloudFoundry API document](http://apidocs.cloudfoundry.org/){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
@@ -419,7 +551,7 @@ bluemix curl PATH [OPTIONS...]
 
 <strong>Command options</strong>:
    <dl>
-   <dt><i>PATH</i> </dt>
+   <dt><i>PATH</i> (required)</dt>
    <dd>The URL path of the resource. For example, /v2/apps.</dd>
    <dt><i>OPTIONS</i> (optional)</dt>
    <dd>The options that are supported by the `bluemix curl` command are the same as those for the `cf curl` command.</dd>
@@ -433,109 +565,18 @@ View the information for all organizations of the current account:
 bluemix curl /v2/organizations
 ```
 
-### bluemix info
-{: #bluemix_info}
+## bluemix update
+{: #bluemix_update}
 
-View the basic {{site.data.keyword.Bluemix_notm}} information, including the current region, the cloud controller version, and some useful endpoints, such as endpoints for login and exchanging access token.
-
-```
-bluemix info
-```
-
-<strong>Prerequisites</strong>:  Endpoint
-
-### bluemix login
-{: #bluemix_login}
-
-Log in user. 
+Update CLI to the latest version
 
 ```
-bluemix login [OPTIONS...]
+bluemix update
 ```
 
 <strong>Prerequisites</strong>:  None
 
-<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
-
-<strong>Command options</strong>:
-<dl>
-  <dt>-a <i>API_ENDPOINT</i> (optional)</dt>
-  <dd> API endpoint (For example: api.ng.bluemix.net)</dd>
-  <dt> --apikey <i>API_KEY or @API_KEY_FILE_PATH</i>
-  <dd> API key content or the path of an API key file indicated by @</dd>
-  <dt> --sso (optional) </dt>
-  <dd> use one time passcode to login </dd>
-  <dt> -u <i>USERNAME</i> (optional)</dt>
-  <dd> Username</dd>
-  <dt> -p <i>PASSWORD</i> (optional)</dt>
-  <dd> Password</dd>
-  <dt> -c <i>ACCOUNT_ID</i> (optional) </dt>
-  <dd> ID of the target account</dd>
-  <dt> -o <i>ORG_NAME</i> (optional) </dt>
-  <dd> Name of the target organization </dd>
-  <dt> -s <i>SPACE_NAME</i> (optional) </dt>
-  <dd> Name of the target space</dd>
-  <dt> --skip-ssl-validation (optional) </dt>
-  <dd> Bypass SSL validation of HTTP requests. This option is not recommended.</dd>
-</dl>
-
-<strong>Examples</strong>:
-
-Interactive login:
-
-```
-bluemix login
-```
-
-Log in with user name and password, and set target account, org and space:
-
-```
-bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
-```
-
-Log in with one time passcode and set target account, org and space
-
-```
-bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
-```
-
-Log in with API key and set targets:
-
-* API key has account associated
-
-```
-bluemix login --apikey api-key-string -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @filename -o MyOrg -s MySpace
-```
-
-* API key has no account associated
-
-```
-bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
-```
-
-<strong>Note:</strong> If the API Key has an associated account, switching to another account is not allowed.
-
-
-### bluemix logout
-{: #bluemix_logout}
-
-Log out user.
-
-```
-bluemix logout
-```
-
-<strong>Prerequisites</strong>:  None
-
-### bluemix regions
+## bluemix regions
 {: #bluemix_regions}
 
 View the information for all regions on {{site.data.keyword.Bluemix_notm}}.
@@ -547,63 +588,7 @@ bluemix regions
 <strong>Prerequisites</strong>:  Endpoint
 
 
-### bluemix target
-{: #bluemix_target}
-
-
-Set or view the target account, region, organization or space.
-
-```
-bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
-```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
-
-<strong>Command options</strong>:
-   <dl>
-   <dt>-c <i>ACCOUNT_ID</i> (optional)</dt>
-   <dd>The ID of the account to be targeted.</dd>
-   <dt>-r <i>REGION</i> (optional)</dt>
-   <dd>The region to be switched to.</dd>
-   <dt>-o <i>ORG_NAME</i> (optional)</dt>
-   <dd>The name of the organization to be targeted.</dd>
-   <dt>-s <i>SPACE_NAME</i> (optional)</dt>
-   <dd>The name of the space to be targeted.</dd>
-   </dl>
-If none of the options are specified, the current account, region, org and space are displayed.
-
-<strong>Examples</strong>:
-
-Set the current account, organization and space:
-
-```
-bluemix target -c MyAccountID -o MyOrg -s MySpace
-```
-
-Switch to a new region:
-
-```
-bluemix target -r eu-gb
-```
-
-View the current account, region, org and space:
-
-```
-bluemix target
-```
-
-### bluemix update
-{: #bluemix_update}
-
-Update the CLI to the latest version.
-
-```
-bluemix update
-```
-
-<strong>Prerequisites</strong>:  None
-
-### bluemix iam orgs
+## bluemix iam orgs
 {: #bluemix_iam_orgs}
 
 List all organizations
@@ -630,7 +615,7 @@ List all the organizations in region: `us-south` with the GUID displayed
 bluemix iam orgs -r us-south --guid
 ```
 
-### bluemix iam org
+## bluemix iam org
 {: #bluemix_iam_org}
 
 Show the information for the specified organization.
@@ -658,7 +643,7 @@ bluemix iam org IBM --guid
 ```
 
 
-### bluemix iam org-create
+## bluemix iam org-create
 {: #bluemix_iam_org_create}
 
 Create a new organization. This operation can only be performed by account owner.
@@ -683,7 +668,7 @@ Create an organization named `IBM`.
 bluemix iam org-create IBM
 ```
 
-### bluemix iam org-replicate
+## bluemix iam org-replicate
 {: #bluemix_iam_org_replicate}
 
 Replicate an org from the current region to another region.
@@ -711,7 +696,7 @@ bluemix iam org-replicate myorg eu-gb
 ```
 
 
-### bluemix iam org-rename
+## bluemix iam org-rename
 {: #bluemix_iam_org_rename}
 
 Rename an organization. This operation can be done only by an org manager.
@@ -730,7 +715,7 @@ bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dd>The new name of the org that it is renamed to.</dd>
    </dl>
 
-### bluemix iam org-delete
+## bluemix iam org-delete
 {: #bluemix_iam_org_delete}
 
 Delete the specified organization in current region.
@@ -752,38 +737,38 @@ bluemix iam org-delete ORG_NAME [-f --all]
    </dl>
 
 
-### bluemix iam spaces
+## bluemix iam spaces
 {: #bluemix_iam_spaces}
 
 This command has the same function and options as the `cf spaces` command.
 
 
-### bluemix iam space
+## bluemix iam space
 {: #bluemix_iam_space}
 
 This command has the same function and options as the `cf space` command.
 
 
-### bluemix iam space-create
+## bluemix iam space-create
 {: #bluemix_iam_space_create}
 
 This command has the same function and options as the `cf create-space` command.
 
 
-### bluemix iam space-rename
+## bluemix iam space-rename
 {: #bluemix_iam_space_rename}
 
 
 This command has the same function and options as the `cf rename-space` command.
 
 
-### bluemix iam space-delete
+## bluemix iam space-delete
 {: #bluemix_iam_space_delete}
 
 
 This command has the same function and options as the `cf delete-space` command.
 
-### bluemix iam org-users
+## bluemix iam org-users
 {: #bluemix_iam_org_users}
 
 Display users in the specified organization by role.
@@ -802,7 +787,7 @@ bluemix iam org-users ORG_NAME [-a]
 <dd>List all the users in the specified organization, not grouped by role.</dd>
 </dl>
 
-### bluemix iam org-user-add
+## bluemix iam org-user-add
 {: #bluemix_iam_org_user_add}
 
 Add a user into org (org manager required).
@@ -811,7 +796,7 @@ Add a user into org (org manager required).
  bluemix iam org-user-add USER_NAME ORG
 ```
 
-### bluemix iam org-user-remove
+## bluemix iam org-user-remove
 {: #bluemix_iam_org_user_remove}
 
 Remove a user from org (org manager or user him/herself only)
@@ -826,7 +811,7 @@ Remove a user from org (org manager or user him/herself only)
 <dd>Force deletion without confirmation.</dd>
 </dl>
 
-### bluemix iam org-roles
+## bluemix iam org-roles
 {: #bluemix_iam_org_roles}
 
 Get all organization roles of the current user
@@ -837,7 +822,7 @@ bluemix iam org-roles
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
-### bluemix iam org-role-set
+## bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
 
 Assign an organization role to a user. This operation can be performed only by an organization manager.
@@ -872,10 +857,10 @@ Assign user `Mary` to the organization `IBM` as `OrgManager` role:
 bluemix iam org-role-set Mary IBM OrgManager
 ```
 
-**Note**: You can set org/space roles using the CLI, but if you want to set the other permissions, you have to use the UI. For further details, see [Assigning user access](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess).
+**Note**: You can set org/space roles using the CLI, but if you want to set the other permissions, you have to use the UI. For further details, see [Assigning user access](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess).
 
 
-### bluemix iam org-role-unset
+## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
 
 Remove an organization role from a user. This operation can be performed only by an organization manager.
@@ -910,7 +895,7 @@ Remove user `Mary` from the organization `IBM` as `OrgManager` role:
 bluemix iam org-role-unset Mary IBM OrgManager
 ```
 
-### bluemix iam space-users
+## bluemix iam space-users
 {: #bluemix_iam_space_users}
 
 Display users in the specified space by role.
@@ -930,7 +915,7 @@ bluemix iam space-users ORG_NAME SPACE_NAME
    </dl>
 
 
-### bluemix iam space-role-set
+## bluemix iam space-role-set
 {: #bluemix_iam_space_role_set}
 
 Assign a space role to a user. This operation can be performed only by a space manager.
@@ -967,7 +952,7 @@ Assign user `Mary` to the organization `IBM` and space `Cloud` as `SpaceManager`
 bluemix iam space-role-set Mary IBM Cloud SpaceManager
 ```
 
-### bluemix iam space-role-unset
+## bluemix iam space-role-unset
 {: #bluemix_iam_space_role_unset}
 
 Remove a space role from a user. This operation can be performed only by a space manager.
@@ -1005,7 +990,7 @@ Remove user `Mary` from the organization `IBM` and space `Cloud` as `SpaceManage
 bluemix iam space-role-unset Mary IBM Cloud SpaceManager
 ```
 
-### bluemix iam accounts
+## bluemix iam accounts
 {: #bluemix_iam_accounts}
 
 List all accounts of the current user
@@ -1017,7 +1002,7 @@ bluemix iam accounts
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 
-### bluemix iam org-account
+## bluemix iam org-account
 {: #bluemix_iam_org_account}
 
 Display the account of specified organization(org user required)
@@ -1035,7 +1020,7 @@ bluemix iam org-account ORG_NAME [--guid]
 </dl>
 
 
-### bluemix iam account-users
+## bluemix iam account-users
 {: #bluemix_iam_account_users}
 
 Displays users associated with the account. This operation can be performed only by the account owner.
@@ -1044,7 +1029,7 @@ Displays users associated with the account. This operation can be performed only
 bluemix iam account-users
 ```
 
-### bluemix iam account-user-delete
+## bluemix iam account-user-delete
 {: #bluemix_iam_account_user_delete}
 
 Delete a user from the current account(account owner only)
@@ -1063,7 +1048,7 @@ bluemix iam account-user-delete USERNAME [-f]
 <dd>Force deletion without confirmation.</dd>
 </dl>
 
-### bluemix iam account-user-invite
+## bluemix iam account-user-invite
 {: #bluemix_iam_account_user_invite}
 
 Invites a user to the account with an organization and space role already set. This operation can be performed only by the account owner.
@@ -1107,9 +1092,9 @@ Invite user `Mary` to the organization `IBM` as `OrgManager` role and the space 
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 
-**Note**: You can set org/space roles during the invite using the CLI, but if you want to set the other permissions, you have to use the UI. For further details, see [Assigning user access](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess).
+**Note**: You can set org/space roles during the invite using the CLI, but if you want to set the other permissions, you have to use the UI. For further details, see [Assigning user access](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess).
 
-### bluemix iam account-user-reinvite
+## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}
 
 Resend invitation to a user(org manager or account owner is required)
@@ -1118,7 +1103,7 @@ Resend invitation to a user(org manager or account owner is required)
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
 
-### bluemix iam api-keys
+## bluemix iam api-keys
 {: #bluemix_iam api_keys}
 
 List all Bluemix platform API keys
@@ -1129,7 +1114,7 @@ bluemix iam api-keys
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
-### bluemix iam api-key-create
+## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
 Create a new Bluemix platform API key
@@ -1158,7 +1143,7 @@ Create an API key and save to a file
 bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ```
 
-### bluemix iam api-key-update
+## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
 Update a Bluemix platform API key
@@ -1187,7 +1172,7 @@ Update the description of an API key:
 bluemix iam api-key-update MyKey -d "the new description of my key"
 ```
 
-### bluemix api-key-delete
+## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
 Delete a Bluemix platform API key
@@ -1207,122 +1192,122 @@ bluemix iam api-key-delete NAME [-f]
 </dl>
 
 
-### bluemix app push
+## bluemix app push
 {: #bluemix_app_push}
 
 This command has the same function and options as the `cf push` command.
 
 
-### bluemix app list
+## bluemix app list
 {: #bluemix_app_list}
 
 This command has the same function and options as the `cf apps` command.
 
 
-### bluemix app show
+## bluemix app show
 {: #bluemix_app_show}
 
 This command has the same function and options as the `cf app` command.
 
 
-### bluemix app delete
+## bluemix app delete
 {: #bluemix_app_delete}
 
 This command has the same function and options as the `cf delete` command.
 
 
-### bluemix app rename
+## bluemix app rename
 {: #bluemix_app_rename}
 
 This command has the same function and options as the `cf rename` command.
 
 
-### bluemix app start
+## bluemix app start
 {: #bluemix_app_start}
 
 This command has the same function and options as the `cf start` command.
 
 
-### bluemix app stop
+## bluemix app stop
 {: #bluemix_app_stop}
 
 This command has the same function and options as the `cf stop` command.
 
 
-### bluemix app restart
+## bluemix app restart
 {: #bluemix_app_restart}
 
 This command has the same function and options as the `cf restart` command.
 
 
-### bluemix app restage
+## bluemix app restage
 {: #bluemix_app_restage}
 
 
 This command has the same function and options as the `cf restage` command.
 
 
-### bluemix app instance-restart
+## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
 This command has the same function and options as the `cf restart-app-instance` command.
 
 
-### bluemix app events
+## bluemix app events
 {: #bluemix_app_events}
 
 This command has the same function and options as the `cf events` command.
 
 
-### bluemix app files
+## bluemix app files
 {: #bluemix_app_files}
 
 This command has the same function and options as the `cf files` command.
 
 
-### bluemix app logs
+## bluemix app logs
 {: #bluemix_app_logs}
 
 This command has the same function and options as the `cf logs` command.
 
 
-### bluemix app env
+## bluemix app env
 {: #bluemix_app_env}
 
 This command has the same function and options as the `cf env` command.
 
 
-### bluemix app env-set
+## bluemix app env-set
 {: #bluemix_app_env_set}
 
 This command has the same function and options as the `cf set-env` command.
 
 
-### bluemix app env-unset
+## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
 This command has the same function and options as the `cf unset-env` command.
 
 
-### bluemix app stacks
+## bluemix app stacks
 {: #bluemix_app_stacks}
 
 This command has the same function and options as the `cf stacks` command.
 
 
-### bluemix app stack-show
+## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
 This command has the same function and options as the `cf stack` command.
 
 
-### bluemix app manifest-create
+## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
 This command has the same function and options as the `cf create-app-manifest` command.
 
-### bluemix app domain-cert 
+## bluemix app domain-cert 
 {: #bluemix_app_domain_cert}
 
 List the certificate information of a domain.
@@ -1348,7 +1333,7 @@ View the certificate information of the domain `ibmcxo-eventconnect.com`:
 bluemix app domain-cert ibmcxo-eventconnect.com
 ```
 
-### bluemix app domain-cert-add
+## bluemix app domain-cert-add
 {: #bluemix_app_domain_cert_add}
 
 Add a certificate to the specified domain in the current org.
@@ -1384,7 +1369,7 @@ Add a certificate to the domain `ibmcxo-eventconnect.com`:
 bluemix app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-### bluemix app domain-cert-remove
+## bluemix app domain-cert-remove
 {: #bluemix_app_domain_cert_remove}
 
 Remove a certificate from the specified domain in current org.
@@ -1404,48 +1389,48 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>Force deletion without confirmation.</dd>
    </dl>
 
-### bluemix app domains
+## bluemix app domains
 {: #bluemix_app_domains}
 
 This command has the same function and options as the `cf domains` command.
 
 
-### bluemix app domain-create
+## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
 This command has the same function and options as the `cf create-domain` command.
 
 
-### bluemix app domain-delete
+## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
 This command has the same function and options as the `cf delete-domain` command.
 
 
-### bluemix app shared-domain-create
+## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
 This command has the same function and options as the `cf create-shared-domain` command.
 
 
-### bluemix app shared-domain-delete
+## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
 This command has the same function and options as the `cf delete-shared-domain` command.
 
-### bluemix app routes
+## bluemix app routes
 {: #bluemix_app_routes}
 
 This command has the same function and options as the `cf routes` command.
 
 
-### bluemix app route-check
+## bluemix app route-check
 {: #bluemix_app_route_check}
 
 This command has the same function and options as the `cf check-route` command.
 
 
-### bluemix app route-map
+## bluemix app route-map
 {: #bluemix_app_route_map}
 
 Map a route to an existing cf application or container group that has the specified domain and host name.
@@ -1482,7 +1467,7 @@ bluemix app route-map my-container-group chinabluemix.net -n abc
 ```
 
 
-### bluemix app route-unmap
+## bluemix app route-unmap
 {: #bluemix_app_route_unmap}
 
 Unmap the specified route from an existing cf application or container group.
@@ -1519,146 +1504,146 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ```
 
 
-### bluemix app route-create
+## bluemix app route-create
 {: #bluemix_app_route_create}
 
 This command has the same function and options as the `cf create-route` command.
 
 
-### bluemix app route-delete
+## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
 This command has the same function and options as the `cf delete-route` command.
 
 
-### bluemix app orphaned-routes-delete
+## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
 This command has the same function and options as the `cf delete-orphaned-routes` command.
 
 
-### bluemix app domains
+## bluemix app domains
 {: #bluemix_app_domains}
 
 This command has the same function and options as the `cf domains` command.
 
 
-### bluemix app domain-create
+## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
 This command has the same function and options as the `cf create-domain` command.
 
 
-### bluemix app domain-delete
+## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
 This command has the same function and options as the `cf delete-domain` command.
 
 
-### bluemix app shared-domain-create
+## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
 This command has the same function and options as the `cf create-shared-domain` command.
 
 
-### bluemix app shared-domain-delete
+## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
 This command has the same function and options as the `cf delete-shared-domain` command.
 
 
-### bluemix service offerings
+## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
 This command has the same function and options as the `cf marketplace` command.
 
 
-### bluemix service list
+## bluemix service list
 {: #bluemix_service_list}
 
 This command has the same function and options as the `cf services` command.
 
 
-### bluemix service show
+## bluemix service show
 {: #bluemix_service_show}
 
 This command has the same function and options as the `cf service` command.
 
 
-### bluemix service create
+## bluemix service create
 {: #bluemix_service_create}
 
 This command has the same function and options as the `cf create-service` command.
 
 
-### bluemix service update
+## bluemix service update
 {: #bluemix_service_update}
 
 This command has the same function and options as the `cf update-service` command.
 
 
-### bluemix service delete
+## bluemix service delete
 {: #bluemix_service_delete}
 
 This command has the same function and options as the `cf delete-service` command.
 
 
-### bluemix service rename
+## bluemix service rename
 {: #bluemix_service_rename}
 
 This command has the same function and options as the `cf rename-service` command.
 
 
-### bluemix service bind
+## bluemix service bind
 {: #bluemix_service_bind}
 
 This command has the same function and options as the `cf bind-service` command.
 
 
-### bluemix service unbind
+## bluemix service unbind
 {: #bluemix_service_unbind}
 
 This command has the same function and options as the `cf unbind-service` command.
 
 
-### bluemix service key-create
+## bluemix service key-create
 {: #bluemix_service_key_create}
 
 This command has the same function and options as the `cf create-service-key` command.
 
 
-### bluemix service key-delete
+## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
 This command has the same function and options as the `cf delete-service-key` command.
 
 
-### bluemix service keys
+## bluemix service keys
 {: #bluemix_service_keys}
 
 This command has the same function and options as the `cf service-keys` command.
 
 
-### bluemix service key-show
+## bluemix service key-show
 {: #bluemix_service_key_show}
 
 This command has the same function and options as the `cf service-key` command.
 
 
-### bluemix service user-provided-create
+## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
 This command has the same function and options as the `cf create-user-provided-service` command.
 
 
-### bluemix service user-provided-update
+## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
 This command has the same function and options as the `cf update-user-provided-service` command.
 
 
-### bluemix catalog templates
+## bluemix catalog templates
 {: #bluemix_catalog_templates}
 
 View the boilerplate templates on Bluemix.
@@ -1677,7 +1662,7 @@ bluemix catalog templates [-d]
    </dl>
 
 
-### bluemix catalog template
+## bluemix catalog template
 {: #bluemix_catalog_template}
 
 View the detailed information of a specified boilerplate template.
@@ -1704,7 +1689,7 @@ bluemix catalog template mobileBackendStarter
 ```
 
 
-### bluemix catalog template-run
+## bluemix catalog template-run
 {: #bluemix_catalog_template_run}
 
 Create a cf application that is based on the specified template with the specified URL and description. By default, the new app is started automatically.
@@ -1750,7 +1735,7 @@ Create an application `my-python-app` based on `pythonHelloWorld` template witho
 bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-### bluemix billing account-usage
+## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
 Show monthly usage and costs of your account.
@@ -1778,7 +1763,7 @@ Show my account's usage and cost report in 2016-06:
 bluemix billing account-usage -d 2016-06
 ```
 
-### bluemix billing org-usage
+## bluemix billing org-usage
 {: #bluemix_billing_org_usage}
 
 Show monthly usage details of an org. This operation can be done only by a billing manager of the org.
@@ -1804,7 +1789,7 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
 
 
 
-### bluemix billing orgs-usage-summary
+## bluemix billing orgs-usage-summary
 {: #bluemix_billing_orgs_usage_summary}
 
 Show monthly usage summary for orgs in my account.
@@ -1827,7 +1812,7 @@ bluemix billing orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 </dl>
 
 
-### bluemix plugin repos
+## bluemix plugin repos
 {: #bluemix_plugin_repos}
 
 List all plugin repositories that are registered in {{site.data.keyword.Bluemix_notm}} CLI.
@@ -1839,7 +1824,7 @@ bluemix plugin repos
 <strong>Prerequisites</strong>:  None
 
 
-### bluemix plugin repo-add
+## bluemix plugin repo-add
 {: #bluemix_plugin_repo_add}
 
 Add a new plugin repository to {{site.data.keyword.Bluemix_notm}} CLI.
@@ -1869,7 +1854,7 @@ bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
 
-### bluemix plugin repo-remove
+## bluemix plugin repo-remove
 {: #bluemix_plugin_repo_remove}
 
 Remove a plugin repository from {{site.data.keyword.Bluemix_notm}} CLI.
@@ -1895,7 +1880,7 @@ bluemix plugin repo-remove bluemix-repo
 ```
 
 
-### bluemix plugin repo-plugins
+## bluemix plugin repo-plugins
 {: #bluemix_plugin_repo_plugins}
 
 List all available plugins in all added repositories or a specific repository.
@@ -1928,7 +1913,7 @@ bluemix plugin repo-plugins -r bluemix-repo
 ```
 
 
-### bluemix plugin list
+## bluemix plugin list
 {: #bluemix_plugin_list}
 
 List all installed plugins in {{site.data.keyword.Bluemix_notm}} CLI.
@@ -1940,7 +1925,7 @@ bluemix plugin list
 <strong>Prerequisites</strong>:  None
 
 
-### bluemix plugin install
+## bluemix plugin install
 {: #bluemix_plugin_install}
 
 Install the specific version of plugin to {{site.data.keyword.Bluemix_notm}} CLI from the specified path or repository.
@@ -1987,7 +1972,7 @@ Install the `IBM-Containers` plugin with the  version `0.5.800` from the `bluemi
 bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
-### bluemix plugin update
+## bluemix plugin update
 {: #bluemix_plugin_update}
 
 Upgrade the plug-in from a repository
@@ -2028,7 +2013,7 @@ Update plugin "plugin-echo" in repository "My-Repo" to version "1.0.1":
 bluemix plugin update -r My-Repo plugin-echo -v 1.0.1
 ```
 
-### bluemix plugin uninstall
+## bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
 Uninstall the specified plugin from {{site.data.keyword.Bluemix_notm}} CLI.

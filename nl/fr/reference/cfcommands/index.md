@@ -4,9 +4,10 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-11-14"
+lastupdated: "2017-05-04"
+
 
 ---
 
@@ -19,16 +20,10 @@ lastupdated: "2016-11-14"
 # Commandes Cloud Foundry (cf)
 {: #cf}
 
-L'interface de ligne de commande Cloud Foundry (cf) fournit un ensemble de commandes permettant de gérer vos applications. Les informations ci-après
-répertorient les commandes cf le plus souvent utilisées pour gérer les applications avec leurs noms, leurs options, leur syntaxe, les éléments
-prérequis, leur description et des exemples. Pour afficher toutes les commandes cf et les informations d'aide associées, entrez `cf
-help`. Entrez `cf nom_commande -h` afin d'afficher des informations d'aide
-détaillées pour une commande particulière.
+L'interface de ligne de commande Cloud Foundry (cf) fournit un ensemble de commandes permettant de gérer vos applications. Les informations ci-après répertorient les commandes cf le plus souvent utilisées pour gérer les applications avec leurs noms, leurs options, leur syntaxe, les éléments prérequis, leur description et des exemples. Pour afficher toutes les commandes cf et les informations d'aide associées, entrez `cf help`. Entrez `cf nom_commande -h` afin d'afficher des informations d'aide détaillées pour une commande particulière.
 {: shortdesc}
 
-**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final
-d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement
-`HTTP_PROXY`. Pour plus de détails, voir [Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html).
+**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement `HTTP_PROXY`. Pour plus d'informations, voir [Using the cf CLI with an HTTP Proxy Server ![](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
 
 ## Index des commandes de l'interface de ligne de commande Cloud Foundry
@@ -37,53 +32,52 @@ d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du ser
 Utilisez l'index du tableau suivant pour consulter les commandes Cloud Foundry fréquemment utilisées :
 
 <table summary="Commandes Cloud Foundry générales classées par ordre alphabétique avec des liens vers des informations supplémentaires">
+<caption>Tableau 1. Commandes générales Cloud Foundry</caption>
  <thead>
  <th colspan="6">Commandes Cloud Foundry générales</th>
  </thead>
  <tbody>
  <tr>
- <td>[api](index.html#cf_api)</td>
- <td>[help](index.html#cf_help)</td>
- <td>[login](index.html#cf_login)</td>
- <td>[stacks](index.html#cf_stacks)</td>
- <td>[target](index.html#cf_target)</td>
- <td>[-v ](index.html#cf_v)</td>
+ <td>[api](/docs/cli/reference/cfcommands/index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/cfcommands/index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
+ <td>[-v ](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
-*Tableau 1. Commandes Cloud Foundry générales*
 
 
 <table summary="Commandes classées par ordre alphabétique pour la gestion des applications, des espaces et des services, avec un lien vers des informations supplémentaires.">
+<caption>Tableau 2. Commandes pour la gestion des applications, des espaces et des services</caption>
  <thead>
  <th colspan="5">Commandes pour la gestion des applications, des espaces et des services</th>
  </thead>
  <tbody>
  <tr>
- <td>[apps](index.html#cf_apps)</td>
- <td>[bind-service](index.html#cf_bind-service)</td>
- <td>[create-service](index.html#cf_create-service)</td>
- <td>[create-space](index.html#cf_create-space)</td>
- <td>[delete](index.html#cf_delete)</td>
+ <td>[apps](/docs/cli/reference/cfcommands/index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/cfcommands/index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/cfcommands/index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/cfcommands/index.html#cf_create-space)</td>
+ <td>[delete](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](index.html#cf_delete-space)</td>
- <td>[events](index.html#cf_events)</td>
- <td>[logs](index.html#cf_logs)</td>
- <td>[marketplace](index.html#cf_marketplace)</td>
- <td>[push](index.html#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/cfcommands/index.html#cf_delete-space)</td>
+ <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
+ <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
+ <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
+ <td>[push](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](index.html#cf_scale)</td>
- <td>[services](index.html#cf_services)
- <td>[set-env](index.html#cf_set-env)</td>
+ <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
- <td>[stop](index.html#cf_stop)</td>
+ <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-*Tableau 2. Commandes pour la gestion des applications, des espaces et des services*
-
 
 ## cf api
 {: #cf_api}
@@ -96,14 +90,12 @@ cf api [URL_serveur_Bluemix] [--skip-ssl-validation] [--unset]
 
 <strong>Prérequis</strong> : aucun.
 
-<strong>Options de commande</strong> :  
+<strong>Options de commande</strong> :
 
    <dl>
    <dt>URL_serveur_Bluemix (facultatif)</dt>
-   <dd>Adresse URL du noeud final d'API Bluemix que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En
-général, il s'agit de `https://api.{NomDomaine}`.
-   Si vous voulez afficher l'adresse URL du noeud final de l'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la
-commande cf api.</dd>
+   <dd>Adresse URL du noeud final d'API Bluemix que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En général, il s'agit de `https://api.{NomDomaine}`.
+   Si vous voulez afficher l'adresse URL du noeud final de l'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la commande cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Désactive le processus de validation SSL. L'utilisation de ce paramètre peut entraîner des problèmes de sécurité.</dd>
    <dt>* --unset</dt>
@@ -161,7 +153,7 @@ cf bind-service nom_app instance_service
 
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
 
-<strong>Options de commande</strong> :  
+<strong>Options de commande</strong> :
 
    <dl>
    <dt>nom_app (requis)</dt>
@@ -190,7 +182,7 @@ cf create-service nom_service plan_service instance_service
 
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
 
-<strong>Options de commande</strong> :  
+<strong>Options de commande</strong> :
 
    <dl>
    <dt>nom_service (requis)</dt>
@@ -221,7 +213,7 @@ cf create-space nom_espace [-o] [-q]
 
 <strong>Prérequis</strong> : `cf api`, `cf login`
 
-<strong>Options de commande</strong> :  
+<strong>Options de commande</strong> :
 
    <dl>
    <dt>nom_espace (requis)</dt>
@@ -252,7 +244,7 @@ cf delete nom_app [-f] [-r]
 
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
 
-<strong>Options de commande</strong> :  
+<strong>Options de commande</strong> :
 
    <dl>
    <dt>nom_app (requis)</dt>
@@ -301,7 +293,7 @@ cf delete-space nom_espace [-f]
 
 <strong>Prérequis</strong> : `cf api`, `cf login`
 
-<strong>Options de commande</strong> :  
+<strong>Options de commande</strong> :
 
    <dl>
    <dt>nom_espace (requis)</dt>
@@ -349,7 +341,7 @@ cf events [nom_app]
 
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
 
-<strong>Options de commande</strong> :  
+<strong>Options de commande</strong> :
 
    <dl>
    <dt>nom_app</dt>
@@ -376,7 +368,7 @@ cf help [nom_commande]
 
 <strong>Prérequis</strong> : aucun.
 
-<strong>Options de commande</strong> :  
+<strong>Options de commande</strong> :
 
    <dl>
    <dt>nom_commande (facultatif)</dt>
@@ -401,9 +393,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Vous connecte à {{site.data.keyword.Bluemix_notm}}.
+Vous connecte à {{site.data.keyword.Bluemix_notm}}. Si vous êtes connecté à l'aide d'un [ID fédéré](/docs/admin/account.html#signup), vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter. 
 
-**Remarque** : si vous êtes connecté à l'aide d'un ID fédéré, vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter.
+**Remarque** : vous pouvez aussi utiliser une clé d'API de plateforme {{site.data.keyword.Bluemix_notm}} pour vous connecter. Servez-vous du nom d'utilisateur `apikey` et de la valeur de votre clé d'API comme mot de passe. Pour plus d'informations sur la création d'une clé d'API, voir [Gestion des clés d'API](/docs/iam/apikeys.html).
 
 ```
 cf login [-a url] [-u nom_utilisateur] [-p mot_de_passe] [-sso] [-o nom_organisation] [-s nom_espace] [--skip-ssl-validation]
@@ -464,6 +456,12 @@ d'utilisateur `nom_utilisateur`, sans spécifier de mot de passe pour des raison
 `nom_org` et le nom d'espace `nom_espace`.
 ```
 cf login -a https://api.ng.bluemix.net -u nom_utilisateur -o nom_org -s nom_espace
+```
+{: codeblock}
+
+Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net` à l'aide d'une clé d'API. Utilisez `apikey` comme nom d'utilisateur et la clé d'API réelle comme mot de passe. 
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p CetteValeurEstVotreCléD'API
 ```
 {: codeblock}
 
@@ -544,8 +542,10 @@ nom_hôte] [-p chemin_app] [-s nom_pile] [-t délai] [--no-hostname] [--no-manif
 <dt>nom_app (requis)</dt>
 <dd>Nom de l'application.</dd>
 <dt>*-b* nom_pack_construction (facultatif)</dt>
-<dd>Nom du pack de construction. nom_pack_construction peut être le nom d'un pack de construction personnalisé ou une adresse URL Git, par exemple
-`mon_pack_construction` ou `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
+<dd>Nom du pack de construction. nom_pack_construction peut être le nom d'un
+pack de construction personnalisé (par exemple, liberty-for-java), une
+adresse URL Git (par exemple, https://github.com/cloudfoundry/java-buildpack.git), ou une adresse URL Git
+avec une branche ou une balise (par exemple, https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 pour la balise v3.3.0).</dd>
 <dt>*-c* commande_démarrage (facultatif)</dt>
 <dd>Commande de démarrage de votre application. Pour utiliser la commande de démarrage par défaut, spécifiez la valeur null pour cette option. </dd>
 <dt>*-f* chemin_manifeste (facultatif)</dt>
@@ -627,8 +627,7 @@ cf scale mon_app
 ```
 {: codeblock}
 
-Modifiez le nombre d'instances en spécifiant `1234`, la limite d'espace disque en spécifiant `1G` et la limite de
-mémoire en spécifiant `1G` pour une application appelée `mon_app`.
+Modifiez le nombre d'instances en spécifiant `1234`, la limite d'espace disque en spécifiant `1G` et la limite de mémoire en spécifiant `1G` pour une application appelée `mon_app`.
 ```
 cf scale nom_app -i 1234 -k 1G -m 1G
 ```
@@ -679,8 +678,7 @@ cf set-env nom_app nom_var valeur_var
 
 <strong>Exemples</strong> :
 
-Définissez une variable d'environnement appelée `variable_a` avec la valeur `123` pour l'application appelée
-`mon_app`.
+Définissez une variable d'environnement appelée `variable_a` avec la valeur `123` pour l'application appelée `mon_app`.
 ```
 cf set-env mon_app variable_a 123
 ```
@@ -690,22 +688,24 @@ cf set-env mon_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-Vous connecte de manière sécurisée à un conteneur d'applications. Par défaut, SSH accède au conteneur en exécutant la première instance de l'application, qui est l'instance dotée de l'index 0.
+Accédez au conteneur d'applications de manière sécurisée. La commande `cf ssh` permet de configurer une session SSH interactive, d'exécuter des commandes à distance, de transférer des fichiers et de configurer l'acheminement de port avec une instance de conteneur d'applications spécifique.
 
 ```
 cf ssh
 ```
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
 
-Vous devez également configurer votre déploiement Cloud Foundry afin d'autoriser SSH à accéder aux instances d'application. Pour plus de détails, voir [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}.
+Par défaut, l'accès SSH est activé pour les applications Diego. Vous pouvez utiliser la commande `cf ssh-enabled` pour vérifier si l'accès SSH est activé ou la commande `cf enable-ssh` pour activer l'accès s'il a été désactivé. 
 
 <strong>Options de commande</strong> :
 
 <dl>
 <dt>nom_app</dt>
-<dd>Nom de l'application. Si SSH est autorisé, vous pouvez employer cette option pour démarrer une session SSH interactive avec une machine virtuelle hébergeant l'application.</dd>
+<dd>Nom de l'application.</dd>
+<dt>-c</dt>
+<dd>Indique une commande distante à exécuter.</dd>
 <dt>-i</dt>
-<dd>Cible une instance spécifique d'une application.</dd>
+<dd>Cible une instance spécifique d'une application. Si cette option n'est pas spécifiée, la première instance de l'application est utilisée (instance dotée de l'index 0).</dd>
 <dt>-L</dt>
 <dd>Active l'acheminement de port local, ce qui lie un port de sortie de votre machine à un port d'entrée sur la machine virtuelle de l'application.</dd>
 <dt>-N</dt>
@@ -716,18 +716,33 @@ Vous devez également configurer votre déploiement Cloud Foundry afin d'autoris
 
 <strong>Exemples</strong> :
 
-Démarrez une session SSH interactive avec une machine virtuelle hébergeant une application nommée `mon_app`.
+Démarrez une session SSH interactive avec l'instance de conteneur exécutant l'application `mon_app`.
 ```
 $ cf ssh mon_app
 ```
 {: codeblock}
 
+Exécutez une seule commande sur l'instance de conteneur d'applications
+`mon_app`.
+```
+$ cf ssh mon_app -c "ls -l"
+```
+
+Transférez un seul fichier à partir de l'instance de conteneur d'applications `mon_app`.
+```
+$ cf ssh mon_app -c "/bin/cat logs/messages.log" > messages.log
+```
+
+Configurez l'acheminement du port 7777 de la machine locale vers le port 8888 de l'instance de conteneur d'applications `mon_app`.
+```
+$ cf ssh -N -T -L 7777:hôtelocal:8888 mon_app
+
+```
 
 ## cf stacks
 {: #cf_stacks}
 
-Répertorie toutes les piles. Une pile est un système de fichiers préconfiguré incluant un système
-d'exploitation pouvant exécuter des applications.
+Répertorie toutes les piles. Une pile est un système de fichiers préconfiguré incluant un système d'exploitation pouvant exécuter des applications.
 
 ```
 cf stacks
@@ -827,7 +842,7 @@ cf -v
 ## Liens connexes
 {: #general}
 
-* [Télécharger l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases)
-{:new_window}
-* [Fiche de référence rapide - Commandes cf](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{:new_window}
+* [Télécharger l'interface de ligne de commande Cloud Foundry ![](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+{: new_window}
+* [Quick Reference Card - cf commands ![](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{: new_window}

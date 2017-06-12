@@ -18,12 +18,12 @@ Use the private network peering command line interface (CLI) to configure and ma
 
 The private network peering CLI plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the plug-in that is applicable to you.
 
-Before you begin, create Bluemix spaces. Ensure that each container in a space has an IP address from a different network. For details, see [Using your own private IP address ![External link icon](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
+Before you begin, create Bluemix spaces. Ensure that each container in a space has an IP address from a different network. For details, see [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
 
 **Note:** After you use the private network peering with a Bluemix space, if you need to delete the space, first delete the private network peering connections in that space.
 
 To get started, install the IBM Bluemix CLI. See
-[Bluemix CLI ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} for details.
+[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html) for details.
 
 ## Install the private network peering CLI plug-in
 
@@ -33,7 +33,7 @@ To get started, install the IBM Bluemix CLI. See
 bluemix plugin uninstall private-network-peering
 ```
 ### Install locally
-Download the private network peering plug-in for your platform from [IBM Bluemix CLI plug-in repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
+Download the private network peering plug-in for your platform from [IBM Bluemix CLI plug-in repository](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins).
 
 Install the private network peering plug-in by using the following command:
 
@@ -88,6 +88,7 @@ The following commands are supported. Use the `bluemix network` command to see t
 | pnp-delete  | Deletes a private network peering connection   |
 | pnp-show    | Lists all private network peering connections  |
 {: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### Command usage
 To view help information for the commands, run: `bluemix network [command] -h`.

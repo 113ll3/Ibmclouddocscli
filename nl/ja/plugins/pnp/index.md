@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-10-14"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2016-10-14"
 
 プライベート・ネットワーク・ピアリング CLI プラグインは、Windows、MAC、および Linux オペレーティング・システムで使用可能です。環境に適したプラグインを使用してください。
 
-開始する前に、Bluemix スペースを作成します。スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。詳しくは、『[独自のプライベート IP アドレスを使う](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)』を参照してください。
+開始する前に、Bluemix スペースを作成します。スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。詳しくは、『[独自のプライベート IP アドレスを使う](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)』を参照してください。
 
 **注:** Bluemix スペースでプライベート・ネットワーク・ピアリングを使用した後に、スペースを削除する必要が生じた場合、まず、当該スペースのプライベート・ネットワーク・ピアリング接続を削除してください。
 
@@ -38,25 +38,25 @@ bluemix plugin uninstall private-network-peering
 
 **注**: プラグインの場所に切り替えるか、プラグインの場所のパスを指定してください。
 
-* Microsoft Windows OS の場合:  
+* Microsoft Windows OS の場合:
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* Apple MAC OS の場合:  
+* Apple MAC OS の場合:
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* Linux OS の場合:  
+* Linux OS の場合:
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**注**: Linux OS 用のプラグインをインストールしているときに、許可が拒否されたことを示すエラー・メッセージが表示された場合、以下のコマンドを実行し、許可を変更してください。  
+**注**: Linux OS 用のプラグインをインストールしているときに、許可が拒否されたことを示すエラー・メッセージが表示された場合、以下のコマンドを実行し、許可を変更してください。
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -66,19 +66,19 @@ chmod a+x ./private-network-peering-linux-amd64
 
 以下のステップに従って、Bluemix リポジトリーからプラグインをインストールします。
 
-1. 以下のように、Bluemix プラグイン・レジストリー・エンドポイントを追加します。  
+1. 以下のように、Bluemix プラグイン・レジストリー・エンドポイントを追加します。
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. 次のコマンドを実行します。
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## プライベート・ネットワーク・ピアリング・コマンドのリスト
-以下の 4 つのコマンドがサポートされます。使用可能なコマンドのリストを表示するには、`bluemix network` コマンドを使用します。
+以下のコマンドがサポートされます。使用可能なコマンドのリストを表示するには、`bluemix network` コマンドを使用します。
 
 | コマンド     | 説明                                    |
 |-------------|------------------------------------------------|
@@ -86,6 +86,8 @@ chmod a+x ./private-network-peering-linux-amd64
 | pnp-create  | プライベート・ネットワーク・ピアリング接続を作成します   |
 | pnp-delete  | プライベート・ネットワーク・ピアリング接続を削除します   |
 | pnp-show    | すべてのプライベート・ネットワーク・ピアリング接続をリストします  |
+{: caption="表 1. プライベート・ネットワーク・ピアリング・コマンド" caption-side="top"}
+
 
 ### コマンドの使用法
 コマンドのヘルプ情報を表示するには、`bluemix network [command] -h` を実行します。
@@ -103,7 +105,7 @@ bluemix network pnp-routers [--verbose (または -v)]
 ######コマンドの例
 {: #ex1}
 
-すべてのルーターに関するネットワーク情報を表示するには、以下のようにします。  
+すべてのルーターに関するネットワーク情報を表示するには、以下のようにします。
 
 	$ bluemix network pnp-routers
 	Listing available routers ...
@@ -115,7 +117,7 @@ bluemix network pnp-routers [--verbose (または -v)]
 	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 
-すべてのルーターに関する詳細ネットワーク情報を表示するには、以下のようにします。  
+すべてのルーターに関する詳細ネットワーク情報を表示するには、以下のようにします。
 
 
 	$ bluemix network pnp-routers -v
@@ -213,7 +215,7 @@ bluemix network pnp-show [--verbose (または -v)]
 ######コマンドの例
 {: #ex4}
 
-基本情報を表示するには、以下のようにします。  
+基本情報を表示するには、以下のようにします。
 
 	$ bluemix network pnp-show
 	Listing private network peering connections ...

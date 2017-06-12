@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-10-14"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -18,7 +18,7 @@ Utilice la interfaz de línea de mandatos (CLI) de igualdad de red privada para 
 
 El plug-in de la CLI de igualdad de red privada está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el plug-in aplicable a su caso.
 
-Antes de empezar, cree los espacios de Bluemix. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. Para obtener detalles, consulte [Utilización de su propia dirección IP privada](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)
+Antes de empezar, cree los espacios de Bluemix. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. Para obtener detalles, consulte [Utilización de su propia dirección IP privada](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
 
 **Nota:** después de utilizar la igualdad de red privada con un espacio de Bluemix, si necesita suprimir el espacio, suprima en primer lugar las conexiones de la igualdad de red privada en dicho espacio.
 
@@ -39,25 +39,25 @@ Instale el plug-in de igualdad de red privada utilizando el mandato siguiente:
 
 **Nota**: pase a la ubicación del plug-in o especifique la vía de acceso a la ubicación del plug-in.
 
-* Para Microsoft Windows OS:  
+* Para Microsoft Windows OS:
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* Para Apple MAC OS:  
+* Para Apple MAC OS:
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* Para Linux OS:  
+* Para Linux OS:
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**Nota**: mientras esté instalando el plug-in para Linux OS, si ve un mensaje de error que muestra que el permiso está denegado, ejecute el siguiente mandato y cambie los permisos:  
+**Nota**: mientras esté instalando el plug-in para Linux OS, si ve un mensaje de error que muestra que el permiso está denegado, ejecute el siguiente mandato y cambie los permisos:
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -67,19 +67,19 @@ chmod a+x ./private-network-peering-linux-amd64
 
 Siga estos pasos para instalar el plug-in desde el repositorio de Bluemix:
 
-1. Añada el punto final de registro del plug-in de Bluemix:  
+1. Añada el punto final de registro del plug-in de Bluemix:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. Ejecute el mandato siguiente:
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## Lista de mandatos de igualdad de red privada
-Se da soporte a los siguientes cuatro mandatos. Utilice el mandato `bluemix network` para ver la lista de mandatos disponibles:
+Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix network` para ver la lista de mandatos disponibles:
 
 | Mandato     | Descripción                                    |
 |-------------|------------------------------------------------|
@@ -87,6 +87,8 @@ Se da soporte a los siguientes cuatro mandatos. Utilice el mandato `bluemix netw
 | pnp-create  | Crea una conexión de igualdad de red privada   |
 | pnp-delete  | Suprime una conexión de igualdad de red privada   |
 | pnp-show    | Lista todas las conexiones de igualdad de red privada  |
+{: caption="Tabla 1. Mandatos de conexión de igualdad de red" caption-side="top"}
+
 
 ### Utilización del mandato
 Para ver la información de ayuda para los mandatos, ejecute: `bluemix network [command] -h`.
@@ -104,7 +106,7 @@ bluemix network pnp-routers [--verbose (o -v)]
 ######Ejemplo de mandato
 {: #ex1}
 
-Para ver la información de red sobre todos los direccionadores:  
+Para ver la información de red sobre todos los direccionadores:
 
 	$ bluemix network pnp-routers
 	Listando direccionadores disponibles...
@@ -116,7 +118,7 @@ Para ver la información de red sobre todos los direccionadores:
 	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 
-Para ver la información de red detallada sobre todos los direccionadores:  
+Para ver la información de red detallada sobre todos los direccionadores:
 
 
 	$ bluemix network pnp-routers -v
@@ -214,7 +216,7 @@ bluemix network pnp-show [--verbose (o -v)]
 ######Ejemplo de mandato
 {: #ex4}
 
-Ver información básica:  
+Ver información básica:
 
 	$ bluemix network pnp-show
 	Listando conexiones de igualdad de red privada...

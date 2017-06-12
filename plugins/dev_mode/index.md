@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015，2017
 
-lastupdated: "2016-05-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -18,7 +18,6 @@ lastupdated: "2016-05-12"
 
 # (Deprecated) Development mode CLI
 {: #devmodecli}
-
 
 **This CLI has been deprecated:** Instead of using the Development mode (dev_mode) CLI, use IBM Eclipse Tools for Bluemix or DevOps Web IDE. You can continue to use the dev_mode CLI until 30 June 2016.
 
@@ -32,12 +31,12 @@ You can do the following tasks with the dev_mode CLI:
 - Start, stop, or restart your app in the existing container.
 
 ## Installing the dev_mode plug-in
-**Prerequisite:** Before you begin, install the Cloud Foundry CLI. See [Start coding with Cloud Foundry command line interface ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli){: new_window} for details.
+**Prerequisite:** Before you begin, install the Cloud Foundry CLI. See [Start coding with Cloud Foundry command line interface](https://github.com/cloudfoundry/cli) for details.
 
 
 Use one of the following methods to install the dev_mode command line tool:
 - Install locally.
-  1. Download the dev_mode plug-in for your platform from [IBM Bluemix CLI Plugin Repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+  1. Download the dev_mode plug-in for your platform from [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net).
   2. Go to the folder that the dev_mode plug-in is saved, and install the dev_mode plug-in by using the cf install-plugin command. For example:
 
         ```
@@ -210,5 +209,5 @@ cf restart-inplace <appName>
 
 ## Related Links
 {: #general}
-* [Development mode CLI ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}
-* [DevOps Web IDE ![External link icon](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){: new_window}
+* [Development mode CLI ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [DevOps Web IDE ![External link icon](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

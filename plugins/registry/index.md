@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-06-09"
+lastupdated: "2017-05-12"
 
 
 ---
@@ -25,13 +25,8 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
 * Before running the registry commands, log in to {{site.data.keyword.Bluemix_short}}
  with the `bx login` command to generate a {{site.data.keyword.Bluemix_short}}
  access token and authenticate your session.
- 
-<!-- audience blue staging only begin comment -->
 
-**Draft comment: Link below is Staging-only content, do not add to production until Registry GAs.**
 To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [Setting up a private images registry](../../../services/Registry/index.html).
-
-<!-- audience blue staging only end comment -->
 
 <table summary="Manage your Containers Registry">
 <caption>Table 1. Commands for managing {{site.data.keyword.registryshort}} on {{site.data.keyword.Bluemix_short}}
@@ -52,38 +47,20 @@ To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [Se
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- 
-<!-- audience blue staging only begin comment -->
-
- <td>[bx cr plan](#bx_cr_plan)</td>
- 
- <!-- audience blue staging only end comment -->
- 
+ <td>[bx cr plan](#bx_cr_plan)</td> 
  </tr>
- <tr>
- 
- <!-- audience blue staging only begin comment -->
- 
+ <tr> 
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
- <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- 
- <!-- audience blue staging only end comment -->
- 
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
  <td>[bx cr token-add](#bx_cr_token_add)</td>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
+
  </tr>
   <tr>
- <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
- <td>[bx cr token-rm](#bx_cr_token_rm)</td>
- 
-   <!-- audience blue staging only begin comment -->
-   
- <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
- 
-  <!-- audience blue staging only end comment -->
-  
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
  </tr>
  </tbody></table>
 
@@ -102,7 +79,6 @@ bx cr api
 
 ## bx cr info
 {: #bx_cr_info}
-
 Displays the name and the account of the registry that you are logged in to.
 
 ```
@@ -113,36 +89,30 @@ bx cr info
 
 ## bx cr image-inspect
 {: #bx_cr_image_inspect}
-
 Displays details about a specific image.
 
 ```
-bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
+bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 ```
 {: codeblock}
 
 **Parameters**
 
+
 <dl>
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
-<!-- audience blue staging only begin comment -->
-
 For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
-**Draft comment: Link above is Staging-only content, do not add to production until Registry GAs.**
-
-<!-- audience blue staging only end comment -->
 
 </dd>
 <dt>IMAGE</dt>
-<dd>The full {{site.data.keyword.Bluemix_short}} registry path to the image that you want to inspect,  which is in the format `namespace/image:tag`. If a tag is not specified in the image path, the image tagged `latest` is inspected. You can inspect multiple images by listing each private {{site.data.keyword.Bluemix_short}} registry path in the command with a space between each path.</dd>
+<dd>The full {{site.data.keyword.Bluemix_short}} registry path to the image that you want to inspect, which is in the format `namespace/image:tag`. If a tag is not specified in the image path, the image tagged `latest` is inspected. You can inspect multiple images by listing each private {{site.data.keyword.Bluemix_short}} registry path in the command with a space between each path.</dd>
 </dl>
 
 
 ## bx cr image-list (bx cr images)
 {: #bx_cr_image_list}
-
 Displays all images in your {{site.data.keyword.Bluemix_short}} account.
 
 ```
@@ -161,24 +131,18 @@ Displays all images in your {{site.data.keyword.Bluemix_short}} account.
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
-<!-- audience blue staging only begin comment -->
-
 For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
-**Draft comment: Link above is Staging-only content, do not add to production until Registry GAs.**
-
-<!-- audience blue staging only end comment -->
-
 </dd>
+
 </dl>
 
 
 ## bx cr image-rm
 {: #bx_cr_image_rm}
-
 Deletes one or more specified images from your registry.
 
 ```
-bx cr image-rm IMAGE [IMAGE...]
+bx cr image-rm IMAGE [IMAGE]
 ```
 {: codeblock}
 
@@ -191,7 +155,6 @@ bx cr image-rm IMAGE [IMAGE...]
 
 ## bx cr login
 {: #bx_cr_login}
-
 This command runs the `docker login` command against the registry. The `docker login` command is required to be able to run the `docker push` or `docker pull` commands for the registry. This command is not required to run other `bx cr` commands. If Docker is not installed, this command returns an error message.
 
 ```
@@ -202,7 +165,6 @@ bx cr login
 
 ## bx cr namespace-add
 {: #bx_cr_namespace_add}
-
 Adds a namespace to your {{site.data.keyword.Bluemix_short}} account.
 
 ```
@@ -219,7 +181,6 @@ bx cr namespace-add NAMESPACE
 
 ## bx cr namespace-list (bx cr namespaces)
 {: #bx_cr_namespace_list}
-
 Displays all namespaces that are owned by your {{site.data.keyword.Bluemix_short}} account.
 
 ```
@@ -230,7 +191,6 @@ bx cr namespace-list
 
 ## bx cr namespace-rm
 {: #bx_cr_namespace_rm}
-
 Removes a namespace from your {{site.data.keyword.Bluemix_short}} account. Images in this namespace are deleted when the namespace is removed.
 
 ```
@@ -249,8 +209,6 @@ bx cr namespace-rm NAMESPACE
 ## bx cr plan
 {: #bx_cr_plan}
 
-**Draft comment: bx cr plan is Staging-only content but does not work in staging at the moment, do not add doc to production until GA.**
-
 Displays your pricing plan.
 
 ```
@@ -258,16 +216,12 @@ bx cr plan
 ```
 {: codeblock}
 
-<!-- audience blue staging only end comment -->
-
-<!-- audience blue staging only begin comment -->
-
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-**Draft comment: bx cr plan-upgrade is Staging-only content but does not work in staging at the moment, do not add doc to production until GA.**
+Change the IBM Bluemix Container Registry service plan.
 
-Modify the specified quota.
+For more information about available service plans, see [Registry plans](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
 bx cr plan-upgrade PLAN
@@ -284,38 +238,8 @@ bx cr plan-upgrade PLAN
 </ul>
 </dl>
 
-<!-- audience blue staging only end comment -->
-
-<!-- audience blue staging only begin comment -->
-
-## bx cr pricing
-{: #bx_cr_pricing}
-
-**Draft comment: bx cr pricing is Staging-only content, do not add doc to production until GA.**
-
-Calculates the estimated cost of your usage in US Dollars based on a 30 day month. The calculator displays the estimated total cost taking into account your free storage and pull traffic allowances. The calculator multiplies your anticipated storage by the number of hours in a month to show a total in gigabyte-hours.
-
-```
-bx cr pricing --traffic VALUE --storage VALUE
-```
-{: codeblock}
-
-**Parameters**
-<dl>
-<dt>--traffic VALUE</dt>
-<dd>Specify your anticipated monthly pull traffic in megabytes. Traffic must be specified as an integer.</dd>
-<dt>--storage VALUE</dt>
-<dd>Specify your anticipated total storage in megabytes. Storage must be specified as an integer.</dd>
-</dl>
-
-<!-- audience blue staging only end comment -->
-
-<!-- audience blue staging only begin comment -->
-
 ## bx cr quota
 {: #bx_cr_quota}
-
-**Draft comment: bx cr plan is Staging-only content but does not work in staging at the moment, do not add doc to production until GA.**
 
 Displays your current quotas for traffic and storage, and usage information against those quotas.
 
@@ -324,14 +248,8 @@ bx cr quota
 ```
 {: codeblock}
 
-<!-- audience blue staging only end comment -->
-
-<!-- audience blue staging only begin comment -->
-
 ## bx cr quota-set
 {: #bx_cr_quota_set}
-
-**Draft comment: bx cr quota-set is Staging-only content but does not work in staging at the moment, do not add doc to production until GA.**
 
 Modify the specified quota.
 
@@ -352,7 +270,6 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 
 ## bx cr token-add
 {: #bx_cr_token_add}
-
 Adds a token that you can use to control access to a registry.
 
 ```
@@ -376,8 +293,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 
 ## bx cr token-get
-{: (#bx_cr_token_get}
-
+{: #bx_cr_token_get}
 Retrieve the specified token from the registry.
 
 ```
@@ -395,7 +311,6 @@ bx cr token-get TOKEN
 
 ## bx cr token-list (bx cr tokens)
 {: #bx_cr_token_list}
-
 Displays all tokens that exist for your {{site.data.keyword.Bluemix_short}} account.
 
 ```
@@ -408,23 +323,17 @@ bx cr token-list --format FORMAT
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
-<!-- audience blue staging only begin comment -->
-
 For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
-**Draft comment: Link above is Staging-only content, do not add to production until Registry GAs.**
-
-<!-- audience blue staging only end comment -->
-
 </dd>
 </dl>
 
+
 ## bx cr token-rm
 {: #bx_cr_token_rm}
-
 Remove one or more specified tokens.
 
 ```
-bx cr token-rm TOKEN [TOKEN...]
+bx cr token-rm TOKEN [TOKEN]
 ```
 {: codeblock}
 
@@ -434,13 +343,8 @@ bx cr token-rm TOKEN [TOKEN...]
 <dd>(Optional) TOKEN can be either the token itself, or the unique identifier of the token, as shown in `bx cr token-list`. Multiple tokens can be specified and they must be separated by a space.</dd>
 </dl>
 
-<!-- audience blue staging only begin comment -->
-
-
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
-
-**Draft comment: bx cr vulnerability-assessment (bx cr va) is Staging-only content, do not add to production until GA.**
 
 View a vulnerability assessment report for an image.
 
@@ -462,21 +366,9 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 </ul>
 
 For more information, see [Reviewing image security](../../../services/Registry/registry_images_.html#registry_security_checking).
-
 </dd>
 
-<!-- audience blue staging only end comment -->
-
+</dd>
 </dl>
 
-<!-- audience blue staging only begin comment -->
 
-**Draft comment: Staging-only content below. Remove before production push.**
-
-`bx cr image-build`: `cf ic build`
-`bx cr image-cp`: `cf ic cpi`
-`bx cr image-search`: Search your visible repo(s) for images.
-`bx cr namespace-acl`: Access control list to set per-namespace permissions.
-token option for bx cr login, TBC.
-
-<!-- audience blue staging only end comment -->
