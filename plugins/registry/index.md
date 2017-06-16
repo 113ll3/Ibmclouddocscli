@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-05-12"
+lastupdated: "2017-06-16"
 
 
 ---
@@ -132,6 +132,7 @@ Displays all images in your {{site.data.keyword.Bluemix_short}} account.
 <dd>(Optional) Format the output elements by using a Go template. 
 
 For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+
 </dd>
 
 </dl>
@@ -204,7 +205,6 @@ bx cr namespace-rm NAMESPACE
 <dd>The namespace that you want to remove.</dd>
 </dl>
 
-<!-- audience blue staging only begin comment -->
 
 ## bx cr plan
 {: #bx_cr_plan}
@@ -266,7 +266,6 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>(Optional) Changes your storage quota to the specified value. The operation fails if you are not authorized to set storage quotas, or if you set a value that exceeds your current pricing plan.</dd>
 </dl>
 
-<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
 {: #bx_cr_token_add}
@@ -366,6 +365,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 </ul>
 
 For more information, see [Reviewing image security](../../../services/Registry/registry_images_.html#registry_security_checking).
+
 </dd>
 
 </dd>
