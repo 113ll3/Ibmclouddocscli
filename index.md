@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-16"
 
 
 ---
@@ -16,23 +16,16 @@ lastupdated: "2017-05-15"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Downloads
+# Manual CLI installation
 {: #cli}
 
-With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such as a unified command line interface and CLI plug-ins. Each of these CLI downloads are all available to support your {{site.data.keyword.Bluemix_notm}} experience.
-{:shortdesc}
+{{site.data.keyword.Bluemix}} CLI provides a command line experience to manage your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command line interface, cf, in its installation, for managing Cloud Foundry applications and services.
 
-## ![](./images/CLI.svg) Command line interface
-{: #downloads notoc}
+Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI tools and {{site.data.keyword.Bluemix_notm}} environment, you must configure the `HTTP_PROXY` environment variable with the actual HTTP proxy URL and port if there is one. See [Using the CLI with an HTTP Proxy Server ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} for more details.
 
-Download and install the command line tool to support your {{site.data.keyword.Bluemix_notm}} experience.
+[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.stage1.ng.bluemix.net/){: new_window} 
 
-{{site.data.keyword.Bluemix_notm}} CLI provides a command line experience to manage your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command line interface, cf, in its installation, for managing Cloud Foundry applications and services. 
-
-Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI tools and {{site.data.keyword.Bluemix_notm}} environment, you must configure the `HTTP_PROXY` environment variable with the actual HTTP proxy url and port if there is any. See [Using the CLI with an HTTP Proxy Server ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} for more details.
-
-[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/){: new_window} <br> 
-[View Docs](/docs/cli/reference/bluemix_cli/index.html)
+If you're on macOS, the easiest way to get started with IBM Cloud tools is by using [IBM Cloud Application Tools 2](/docs/cli/icat.html).
 
 ## ![](./images/CLI_Plugin.svg) Command line interface plug-ins
 {: #cliplugins notoc}

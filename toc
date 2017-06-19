@@ -5,7 +5,11 @@
 CLI and Dev Tools
 
 	{: .navgroup id="learn"}
-	index.md
+	{: .topicgroup}
+	Downloads
+	    index.md
+	    icat.md
+	    
 	[Getting started with CF CLI](https://github.com/cloudfoundry/cli#getting-started)
 	reference/bluemix_cli/index.md
 	
@@ -16,6 +20,7 @@ CLI and Dev Tools
 	
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
+	reference/softlayer/index.md
 	reference/cfcommands/index.md
 	reference/cloudcli/index.md
 	
@@ -29,7 +34,6 @@ CLI and Dev Tools
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
 		[Schematics](../services/schematics/schematics_reference.html)
-		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	
 	{: .topicgroup}

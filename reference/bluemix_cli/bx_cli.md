@@ -36,14 +36,12 @@ If logging in with federated ID, use '--sso' option to authenticate with one tim
 <dd>The Docker CLI (docker) must be installed to run this command.</dd>
 </dl>
 
-## bluemix commands index
-{: #bx_commands_index}
+**Note:** You can use the short format of bluemix commands; for example, `bx api` is short for `bluemix api`.
 
 Use the indexes in the following tables to refer to the frequently used bluemix commands.
 
-**Note:** You can use the short format of bluemix commands; for example, `bx api` is short for `bluemix api`.
-
-
+## General bluemix commands 
+{: #bx_commands_index}
 
 <table summary="General bluemix commands.">
 <caption>Table 1. General bluemix commands</caption>
@@ -67,6 +65,14 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
  </tbody>
  </table>
+ 
+ ## Commands for managing and configuring {{site.data.keyword.BluSoftlayer_notm}} services
+  {: #bx_commands_softlayer}
+  
+The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been merged into the Bluemix CLI. For more information on using the Bluemix CLI to configure and manage {{site.data.keyword.BluSoftlayer_notm}} services, see: [Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) commands](/docs/cli/reference/softlayer/index.md#softlayer_cli).
+ 
+ ## Commands for managing accounts, orgs, and roles
+ {: #bx_commands_acctorg}
 
 <table summary="bluemix commands that you can use to manage accounts, orgs, spaces, roles and API keys.">
 <caption>Table 2. Commands for managing accounts, orgs, spaces, roles and API keys</caption>
@@ -125,6 +131,9 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
  </tbody>
  </table>
+ 
+ ## Commands for managing cf apps and app related domains, routes, and certificates
+ {: #bx_commands_apps}
 
 <table summary="bluemix commands that you can use to manage cf apps and app related domains, routes and certificates.">
 <caption>Table 3. Commands for managing cf apps and app related domains, routes and certificates</caption>
@@ -183,6 +192,9 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
+ 
+ ## Commands for managing Bluemix services
+ {: #bx_commands_services}
 
 <table summary="bluemix commands that you can use to manage Bluemix services.">
 <caption>Table 4. Commands for managing Bluemix services</caption>
@@ -213,6 +225,9 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
+ 
+ ## Commands for managing catalog, plug-ins, and billing settings
+ {: #bx_commands_settings}
 
 <table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, billing, and security settings.">
 <caption>Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings</caption>
