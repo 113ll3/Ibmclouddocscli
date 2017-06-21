@@ -54,9 +54,9 @@ bluemix plugin install nom_plug-in -r Bluemix
 | Nom du plug-in : auto-scaling <br> [Afficher la documentation](/docs/cli/plugins/auto-scaling/index.html) |  Nom du plug-in : container-service  <br> [Afficher la documentation](/docs/containers/cs_cli_devtools.html) |
 {: caption="Tableau 2. Plug-in" caption-side="top"}
 
-|  *Appairage de réseaux privés* | *réseau privé virtuel (VPN)*  |
-|-----|-----|
-| Nom du plug-in : private-network-peering  <br> [Afficher la documentation](/docs/cli/plugins/pnp/index.html) | Nom du plug-in : VPN  <br> [Afficher la documentation](/docs/cli/plugins/bx_vpn/index.html) |
+|  *Appairage de réseaux privés* | *Schémas * | *réseau privé virtuel (VPN)*  |
+|-----|-----|-----|
+| Nom du plug-in : private-network-peering  <br> [Afficher la documentation](/docs/cli/plugins/pnp/index.html) | Nom du plug-in : Schematics  <br> [Afficher la documentation](/docs/services/schematics/schematics_reference.html) | Nom du plug-in : VPN  <br> [Afficher la documentation](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="Tableau 3. Plug-in" caption-side="top"}
 
 Vous pouvez également ajouter des plug-in à partir d'autres référentiels conformes à l'architecture d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.

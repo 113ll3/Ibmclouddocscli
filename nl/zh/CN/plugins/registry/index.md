@@ -24,6 +24,8 @@ lastupdated: "2017-05-12"
 **先决条件**
 * 运行注册表命令之前，请先使用 `bx login` 命令登录到 {{site.data.keyword.Bluemix_short}}，以生成 {{site.data.keyword.Bluemix_short}} 访问令牌并对会话进行认证。
 
+要了解如何使用 {{site.data.keyword.registrylong}} CLI，请参阅 [IBM Bluemix Container Registry 概述](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup)。
+
 <table summary="管理容器注册表">
 <caption>表 1. 用于在 {{site.data.keyword.Bluemix_short}} 上管理 {{site.data.keyword.registryshort}} 的命令</caption>
  <thead>
@@ -32,22 +34,30 @@ lastupdated: "2017-05-12"
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
- <td>[bx cr info](#bx-cr-info)</td>
- <td>[bx cr image-inspect](#bx-cr-image-inspect)</td>
- <td>[bx cr image-list (bx cr images)](#bx-cr-image-list)</td>
- <td>[bx cr image-rm](#bx-cr-image-rm)</td>
+ <td>[bx cr info](#bx_cr_info)</td>
+ <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
+ <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
- <td>[bx cr login](#bx-cr-login)</td>
- <td>[bx cr namespace-add](#bx-cr-namespace-add)</td>
- <td>[bx cr namespace-list (bx cr namespaces)](#bx-cr-namespace-list)</td>
- <td>[bx cr namespace-rm](#bx-cr-namespace-rm)</td>
- <td>[bx cr token-add](#bx-cr-token-add)</td>
+ <td>[bx cr login](#bx_cr_login)</td>
+ <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
+ <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
+ <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
+ <td>[bx cr plan](#bx_cr_plan)</td> 
  </tr>
- <tr>
- <td>[bx cr token-get](#bx-cr-token-get)</td>
- <td>[bx cr token-list (bx cr tokens)](#bx-cr-token-list)</td>
- <td>[bx cr token-rm](#bx-cr-token-rm)</td>
+ <tr> 
+ <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr quota](#bx_cr_quota)</td>
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
+
+ </tr>
+  <tr>
+ <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
  </tr>
  </tbody></table>
 
@@ -176,6 +186,67 @@ bx cr namespace-rm NAMESPACE
 <dd>要除去的名称空间。</dd>
 </dl>
 
+<!-- audience blue staging only begin comment -->
+
+## bx cr plan
+{: #bx_cr_plan}
+
+显示定价套餐。
+
+```
+bx cr plan
+```
+{: codeblock}
+
+## bx cr plan-upgrade
+{: #bx_cr_plan_upgrade}
+
+修改指定配额。
+
+```
+bx cr plan-upgrade PLAN
+```
+{: codeblock}
+
+**参数**
+<dl>
+<dt>套餐</dt>
+<dd> 升级到指定套餐。以下套餐可用：
+<ul>
+<li>免费</li>
+<li>标准</li>
+</ul>
+</dl>
+
+## bx cr quota
+{: #bx_cr_quota}
+
+显示流量和存储的当前配额，以及那些配额的使用情况信息。
+
+```
+bx cr quota
+```
+{: codeblock}
+
+## bx cr quota-set
+{: #bx_cr_quota_set}
+
+修改指定配额。
+
+```
+bx cr quota-set [--traffic VALUE] [--storage VALUE]
+```
+{: codeblock}
+
+**参数**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>（可选）将流量配额更改为指定的值。如果您无权设置流量或者您设置的值超出当前定价套餐，那么操作将失败。</dd>
+<dt>--storage VALUE</dt>
+<dd>（可选）将存储配额更改为指定的值。如果您无权设置存储配额或者您设置的值超出当前定价套餐，那么操作将失败。</dd>
+</dl>
+
+<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
 添加可用于控制对注册表的访问权的令牌。
@@ -245,6 +316,29 @@ bx cr token-rm TOKEN [TOKEN]
 <dd>（可选）TOKEN 可以是令牌本身，也可以是令牌的唯一标识，如 `bx cr token-list` 中所示。可以指定多个令牌，令牌之间必须用一个空格分隔。</dd>
 </dl>
 
+## bx cr vulnerability-assessment (bx cr va)
+{: #bx_cr_va}
+
+查看映像的漏洞评估报告。
+
+```
+bx cr vulnerability-assessment IMAGE [IMAGE...]
+```
+{: codeblock}
+
+**参数**
+<dl>
+<dt>IMAGE</dt>
+<dd>您要获取报告的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 `namespace/image:tag`。报告将告知您映像是否具有任何已知的包漏洞。支持以下操作系统：
+
+<ul>
+<li>CentOS</li>
+<li>Debian</li>
+<li>Red Hat Enterprise Linux (RHEL)</li>
+<li>Ubuntu</li>
+</ul>
+
+</dd>
 
 </dd>
 </dl>

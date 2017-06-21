@@ -24,6 +24,8 @@ L'interface de ligne de commande {{site.data.keyword.registrylong}} est un plug-
 **Prérequis**
 * Avant d'exécuter des commandes de registre, connectez-vous à {{site.data.keyword.Bluemix_short}} avec la commande `bx login` pour générer un jeton d'accès {{site.data.keyword.Bluemix_short}} et authentifier votre session.
 
+Pour vous familiariser avec l'utilisation de l'interface CLI d'{{site.data.keyword.registrylong}} CLI, consultez la [Présentation d'IBM Bluemix Container Registry](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
+
 <table summary="Gestion de votre registre Containers Registry">
 <caption>Tableau 1. Commandes de gestion de {{site.data.keyword.registryshort}} sur {{site.data.keyword.Bluemix_short}}
 </caption>
@@ -33,22 +35,30 @@ L'interface de ligne de commande {{site.data.keyword.registrylong}} est un plug-
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
- <td>[bx cr info](#bx-cr-info)</td>
- <td>[bx cr image-inspect](#bx-cr-image-inspect)</td>
- <td>[bx cr image-list (bx cr images)](#bx-cr-image-list)</td>
- <td>[bx cr image-rm](#bx-cr-image-rm)</td>
+ <td>[bx cr info](#bx_cr_info)</td>
+ <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
+ <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
- <td>[bx cr login](#bx-cr-login)</td>
- <td>[bx cr namespace-add](#bx-cr-namespace-add)</td>
- <td>[bx cr namespace-list (bx cr namespaces)](#bx-cr-namespace-list)</td>
- <td>[bx cr namespace-rm](#bx-cr-namespace-rm)</td>
- <td>[bx cr token-add](#bx-cr-token-add)</td>
+ <td>[bx cr login](#bx_cr_login)</td>
+ <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
+ <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
+ <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
+ <td>[bx cr plan](#bx_cr_plan)</td> 
  </tr>
- <tr>
- <td>[bx cr token-get](#bx-cr-token-get)</td>
- <td>[bx cr token-list (bx cr tokens)](#bx-cr-token-list)</td>
- <td>[bx cr token-rm](#bx-cr-token-rm)</td>
+ <tr> 
+ <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr quota](#bx_cr_quota)</td>
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
+
+ </tr>
+  <tr>
+ <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
  </tr>
  </tbody></table>
 
@@ -66,7 +76,7 @@ bx cr api
 
 
 ## bx cr info
-Affiche le nom et le compte du registre auquel vous êtes connecté. 
+Affiche le nom et le compte du registre auquel vous êtes connecté.
 
 ```
 bx cr info
@@ -75,7 +85,7 @@ bx cr info
 
 
 ## bx cr image-inspect
-Affiche les détails d'une image spécifique. 
+Affiche les détails d'une image spécifique.
 
 ```
 bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
@@ -97,7 +107,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 
 
 ## bx cr image-list (bx cr images)
-Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_short}}. 
+Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_short}}.
 
 ```
  bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
@@ -107,11 +117,11 @@ Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_short}}.
 **Paramètres**
 <dl>
 <dt>--no-trunc</dt>
-<dd>(Facultatif) Permet de ne pas tronquer l'historique des images. </dd>
+<dd>(Facultatif) Permet de ne pas tronquer l'historique des images.</dd>
 <dt>-q, --quiet</dt>
 <dd>(Facultatif) Chaque image est répertoriée au format `référentiel:balise`.</dd>
 <dt>--include-ibm</dt>
-<dd>(Facultatif) Inclut dans la sortie les images publiques fournies par IBM. Sans cette option, seules les images privées sont répertoriées par défaut. </dd>
+<dd>(Facultatif) Inclut dans la sortie les images publiques fournies par IBM. Sans cette option, seules les images privées sont répertoriées par défaut.</dd>
 <dt>--format FORMAT</dt>
 <dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
 
@@ -122,7 +132,7 @@ Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_short}}.
 
 
 ## bx cr image-rm
-Supprime une ou plusieurs images spécifiées de votre registre. 
+Supprime une ou plusieurs images spécifiées de votre registre.
 
 ```
 bx cr image-rm IMAGE [IMAGE]
@@ -147,7 +157,7 @@ bx cr login
 
 
 ## bx cr namespace-add
-Ajoute un espace de nom à votre compte {{site.data.keyword.Bluemix_short}}. 
+Ajoute un espace de nom à votre compte {{site.data.keyword.Bluemix_short}}.
 
 ```
 bx cr namespace-add ESPACE DE NOM
@@ -157,12 +167,12 @@ bx cr namespace-add ESPACE DE NOM
 **Paramètres**
 <dl>
 <dt>ESPACE DE NOM</dt>
-<dd>Espace de nom à ajouter. Il doit être unique sur tous les comptes {{site.data.keyword.Bluemix_short}} d'une même région. </dd>
+<dd>Espace de nom à ajouter. Il doit être unique sur tous les comptes {{site.data.keyword.Bluemix_short}} d'une même région.</dd>
 </dl>
 
 
 ## bx cr namespace-list (bx cr namespaces)
-Affiche tous les espaces de nom détenus par votre compte {{site.data.keyword.Bluemix_short}}. 
+Affiche tous les espaces de nom détenus par votre compte {{site.data.keyword.Bluemix_short}}.
 
 ```
 bx cr namespace-list
@@ -171,7 +181,7 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
-Retire un espace de nom de votre compte {{site.data.keyword.Bluemix_short}}. Les images dans cet espace de nom sont supprimées lorsque l'espace de nom est retiré. 
+Retire un espace de nom de votre compte {{site.data.keyword.Bluemix_short}}. Les images dans cet espace de nom sont supprimées lorsque l'espace de nom est retiré.
 
 ```
 bx cr namespace-rm ESPACE DE NOM
@@ -184,9 +194,70 @@ bx cr namespace-rm ESPACE DE NOM
 <dd>Espace de nom que vous désirez supprimer.</dd>
 </dl>
 
+<!-- audience blue staging only begin comment -->
+
+## bx cr plan
+{: #bx_cr_plan}
+
+Affiche votre plan de tarification.
+
+```
+bx cr plan
+```
+{: codeblock}
+
+## bx cr plan-upgrade
+{: #bx_cr_plan_upgrade}
+
+Modifie le quota spécifié.
+
+```
+bx cr plan-upgrade PLAN
+```
+{: codeblock}
+
+**Paramètres**
+<dl>
+<dt>PLAN</dt>
+<dd> Effectue une mise à niveau vers le plan spécifié. Les plans disponibles sont les suivants :
+<ul>
+<li>Gratuit</li>
+<li>Standard</li>
+</ul>
+</dl>
+
+## bx cr quota
+{: #bx_cr_quota}
+
+Affiche vos quotas actuels de trafic et de stockage, ainsi que les informations d'utilisation de ces quotas.
+
+```
+bx cr quota
+```
+{: codeblock}
+
+## bx cr quota-set
+{: #bx_cr_quota_set}
+
+Modifie le quota spécifié.
+
+```
+bx cr quota-set [--traffic VALEUR] [--storage VALEUR]
+```
+{: codeblock}
+
+**Paramètres**
+<dl>
+<dt>--traffic VALEUR</dt>
+<dd>(Facultatif) Remplace votre quota de trafic par celui spécifié. L'opération échoue si vous n'êtes pas habilité à définir le trafic ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
+<dt>--storage VALEUR</dt>
+<dd>(Facultatif) Remplace votre quota de stockage par celui spécifié. L'opération échoue si vous n'êtes pas habilité à définir les quotas de stockage ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
+</dl>
+
+<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
-Ajoute un jeton que vous pouvez utiliser pour contrôler l'accès à un registre. 
+Ajoute un jeton que vous pouvez utiliser pour contrôler l'accès à un registre.
 
 ```
 bx cr token-add [--description VALEUR] [-q, --quiet] [--non-expiring] [--readwrite]
@@ -197,19 +268,19 @@ bx cr token-add [--description VALEUR] [-q, --quiet] [--non-expiring] [--readwri
 
 **Paramètres**
 <dl>
-<dt>--description VALEUR </dt>
-<dd>(Facultatif) Permet de spécifier la description du jeton qui s'affiche lorsque vous exécutez `bx cr token-list`. Si votre jeton est créé automatiquement par IBM Bluemix Container Service, la description est le nom de votre cluster Kubernetes. Dans ce cas, le jeton est retiré automatiquement lorsque votre cluster est retiré. </dd>
+<dt>--description VALEUR</dt>
+<dd>(Facultatif) Permet de spécifier la description du jeton qui s'affiche lorsque vous exécutez `bx cr token-list`. Si votre jeton est créé automatiquement par IBM Bluemix Container Service, la description est le nom de votre cluster Kubernetes. Dans ce cas, le jeton est retiré automatiquement lorsque votre cluster est retiré.</dd>
 <dt>-q, --quiet</dt>
-<dd>(Facultatif) Affiche le jeton uniquement, sans aucun autre texte. </dd>
+<dd>(Facultatif) Affiche le jeton uniquement, sans aucun autre texte.</dd>
 <dt>--non-expiring</dt>
-<dd>(Facultatif) Crée un jeton dont l'accès n'expire jamais. Si ce paramètre n'est pas défini, l'accès à l'aide d'un jeton expire au bout de 24 heures par défaut. </dd>
+<dd>(Facultatif) Crée un jeton dont l'accès n'expire jamais. Si ce paramètre n'est pas défini, l'accès à l'aide d'un jeton expire au bout de 24 heures par défaut.</dd>
 <dt>--readwrite</dt>
-<dd>(Facultatif) Crée un jeton qui accorde l'accès en lecture et en écriture. Sans cette option, l'accès est en lecture seule par défaut. </dd>
+<dd>(Facultatif) Crée un jeton qui accorde l'accès en lecture et en écriture. Sans cette option, l'accès est en lecture seule par défaut.</dd>
 </dl>
 
 
 ## bx cr token-get
-Extrait le jeton spécifié du registre. 
+Extrait le jeton spécifié du registre.
 
 ```
 bx cr token-get JETON
@@ -219,13 +290,13 @@ bx cr token-get JETON
 
 **Paramètres**
 <dl>
-<dt>JETON </dt>
-<dd>(Facultatif) Identificateur unique du jeton à extraire. </dd>
+<dt>JETON</dt>
+<dd>(Facultatif) Identificateur unique du jeton à extraire.</dd>
 </dl>
 
 
 ## bx cr token-list (bx cr tokens)
-Affiche tous les jetons qui existent pour votre compte {{site.data.keyword.Bluemix_short}}. 
+Affiche tous les jetons qui existent pour votre compte {{site.data.keyword.Bluemix_short}}.
 
 ```
 bx cr token-list --format FORMAT
@@ -243,7 +314,7 @@ bx cr token-list --format FORMAT
 
 
 ## bx cr token-rm
-Retire un ou plusieurs jetons spécifiés. 
+Retire un ou plusieurs jetons spécifiés.
 
 ```
 bx cr token-rm JETON [JETON]
@@ -252,10 +323,32 @@ bx cr token-rm JETON [JETON]
 
 **Paramètres**
 <dl>
-<dt>JETON </dt>
-<dd>(Facultatif) JETON peut correspondre au jeton lui-même ou à l'identificateur unique du jeton, comme indiqué dans `bx cr token-list`. Vous pouvez spécifier plusieurs jetons en les séparant par un espace. </dd>
+<dt>JETON</dt>
+<dd>(Facultatif) JETON peut correspondre au jeton lui-même ou à l'identificateur unique du jeton, comme indiqué dans `bx cr token-list`. Vous pouvez spécifier plusieurs jetons en les séparant par un espace.</dd>
 </dl>
 
+## bx cr vulnerability-assessment (bx cr va)
+{: #bx_cr_va}
+
+Affiche un rapport d'évaluation des vulnérabilités pour une image.
+
+```
+bx cr vulnerability-assessment IMAGE [IMAGE...]
+```
+{: codeblock}
+
+**Paramètres**
+<dl>
+<dt>IMAGE</dt>
+<dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet au format `espace_nom/image:balise`, de l'image pour laquelle vous désirez obtenir un rapport. Le rapport vous signale si l'image comporte des vulnérabilités de package connues. Les systèmes d'exploitation suivants sont pris en charge :
+<ul>
+<li>CentOS</li>
+<li>Debian</li>
+<li>Red Hat Enterprise Linux (RHEL)</li>
+<li>Ubuntu</li>
+</ul>
+
+</dd>
 
 </dd>
 </dl>

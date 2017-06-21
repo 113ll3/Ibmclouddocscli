@@ -24,10 +24,11 @@ CLI と開発ツール
 	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service (クラスター)](../containers/cs_cli_devtools.html)
-		[Container Service (単一の拡張が容易なグループ)](../containers/container_cli_cfic.html)
+		[Container Service (単一およびスケーラブル・グループ)](../containers/container_cli_cfic.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	

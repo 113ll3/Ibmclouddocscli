@@ -23,11 +23,12 @@ Ferramentas CLI e de desenvolvimento
 	Plug-ins da CLI do Bluemix
 	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Serviço de contêiner (Clusters)](../containers/cs_cli_devtools.html)
-		[Serviço de contêiner (Grupos únicos e escaláveis)](../containers/container_cli_cfic.html)
+		[Container Service (clusters)](../containers/cs_cli_devtools.html)
+		[Container Service (grupos únicos e escaláveis)](../containers/container_cli_cfic.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-03"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -855,6 +855,8 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 bluemix iam org-role-set Mary IBM OrgManager
 ```
 
+**注**：您可以使用 CLI 设置组织/空间角色，但是如果您想要设置其他许可权，那么必须使用 UI。有关进一步的详细信息，请参阅[分配用户访问权](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess)。
+
 
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
@@ -1087,6 +1089,8 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 ```
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
+
+**注**：您可以在邀请期间使用 CLI 设置组织/空间角色，但是如果您想要设置其他许可权，那么必须使用 UI。有关进一步的详细信息，请参阅[分配用户访问权](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess)。
 
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}

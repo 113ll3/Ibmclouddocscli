@@ -54,9 +54,9 @@ bluemix plugin install plugin_name -r Bluemix
 | 外掛程式名稱：auto-scaling <br> [檢視文件](/docs/cli/plugins/auto-scaling/index.html) |  外掛程式名稱：container-service  <br> [檢視文件](/docs/containers/cs_cli_devtools.html) |
 {: caption="表 2. 外掛程式" caption-side="top"}
 
-|  *專用網路對等作業* | *VPN*  |
-|-----|-----|
-| 外掛程式名稱：private-network-peering  <br> [檢視文件](/docs/cli/plugins/pnp/index.html) | 外掛程式名稱：VPN <br> [檢視文件](/docs/cli/plugins/bx_vpn/index.html) |
+|  *專用網路對等作業* | *Schematics* | *VPN*  |
+|-----|-----|-----|
+| 外掛程式名稱：private-network-peering  <br> [檢視文件](/docs/cli/plugins/pnp/index.html) | 外掛程式名稱：Schematics  <br> [檢視文件](/docs/services/schematics/schematics_reference.html) | 外掛程式名稱：VPN <br> [檢視文件](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="表 3. 外掛程式" caption-side="top"}
 
 您也可以從符合 {{site.data.keyword.Bluemix_notm}} CLI 架構的其他儲存庫新增外掛程式。

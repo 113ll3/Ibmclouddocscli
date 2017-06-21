@@ -54,9 +54,9 @@ bluemix plugin install plugin_name -r Bluemix
 | プラグイン名: auto-scaling <br> [資料の表示](/docs/cli/plugins/auto-scaling/index.html) |  プラグイン名: container-service  <br> [資料の表示](/docs/containers/cs_cli_devtools.html) |
 {: caption="表 2. プラグイン" caption-side="top"}
 
-|  *プライベート・ネットワーク・ピアリング* | *VPN*  |
-|-----|-----|
-| プラグイン名: private-network-peering  <br> [資料の表示](/docs/cli/plugins/pnp/index.html) | プラグイン名: VPN <br> [資料の表示](/docs/cli/plugins/bx_vpn/index.html) |
+|  *プライベート・ネットワーク・ピアリング* | *Schematics* | *VPN*  |
+|-----|-----|-----|
+| プラグイン名: private-network-peering  <br> [資料の表示](/docs/cli/plugins/pnp/index.html) | プラグイン名: Schematics  <br> [資料の表示](/docs/services/schematics/schematics_reference.html) | プラグイン名: VPN <br> [資料の表示](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="表 3. プラグイン" caption-side="top"}
 
 また、{{site.data.keyword.Bluemix_notm}} cli アーキテクチャーに準拠した他のリポジトリーからプラグインを追加することもできます。

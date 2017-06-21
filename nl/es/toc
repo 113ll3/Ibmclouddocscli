@@ -23,10 +23,12 @@ Herramientas CLI y Dev
 	Plugins de CLI de Bluemix CLI
 	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Servicio de contenedor (clústeres)](../containers/cs_cli_devtools.html)
-		[Servicio de contenedor (grupos escalables e individual)](../containers/container_cli_cfic.html)
-		[IBM Developer](../cloudnative/dev_cli.html)		plugins/pnp/index.md
+		[Container Service (clústeres)](../containers/cs_cli_devtools.html)
+		[Container Service (grupos escalables e individua)](../containers/container_cli_cfic.html)
+		[IBM Developer](../cloudnative/dev_cli.html)
+		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	
@@ -46,6 +48,6 @@ Herramientas CLI y Dev
 	
 	{: .navgroup id="howto"}
 	[Desarrollo con Eclipse Tools](../starters/deploy_eclipsetools.html)
-	[Despliegue de aplicaciones con la interfaz de línea de mandatos](../starters/install_cli.html)
+	[Despliegue de la app con CLI](../starters/install_cli.html)
 	[Carga de una app](../starters/upload_app.html)
 	{: .navgroup-end}

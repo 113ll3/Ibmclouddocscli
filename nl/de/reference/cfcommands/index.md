@@ -446,7 +446,7 @@ cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
 ```
 {: codeblock}
 
-Anmeldung bei {{site.data.keyword.Bluemix_notm}} mit dem definierten Endpunkt `https://api.ng.bluemix.net` unter Verwendung eines API-Schlüssels. Verwenden Sie `apikey` als Benutzernamen und den tatsächlichen API-Schlüssel als Kennwort. 
+Anmeldung bei {{site.data.keyword.Bluemix_notm}} mit dem definierten Endpunkt `https://api.ng.bluemix.net` unter Verwendung eines API-Schlüssels. Verwenden Sie `apikey` als Benutzernamen und den tatsächlichen API-Schlüssel als Kennwort.
 ```
 cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```

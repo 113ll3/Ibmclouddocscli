@@ -54,9 +54,9 @@ bluemix plugin install plugin_name -r Bluemix
 | 플러그인 이름: auto-scaling <br> [문서 보기](/docs/cli/plugins/auto-scaling/index.html) |  플러그인 이름: container-service  <br> [문서 보기](/docs/containers/cs_cli_devtools.html) |
 {: caption="표 2. 플러그인" caption-side="top"}
 
-|  *사설 네트워크 피어링* | *VPN*  |
-|-----|-----|
-| 플러그인 이름: private-network-peering  <br> [문서 보기](/docs/cli/plugins/pnp/index.html) | 플러그인 이름: VPN <br> [문서 보기](/docs/cli/plugins/bx_vpn/index.html) |
+|  *사설 네트워크 피어링* | *Schematics* | *VPN*  |
+|-----|-----|-----|
+| 플러그인 이름: private-network-peering  <br> [문서 보기](/docs/cli/plugins/pnp/index.html) | 플러그인 이름: Schematics  <br> [문서 보기](/docs/services/schematics/schematics_reference.html) | 플러그인 이름: VPN <br> [문서 보기](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="표 3. 플러그인" caption-side="top"}
 
 또한 {{site.data.keyword.Bluemix_notm}} cli 아키텍처를 준수하는 기타 저장소에서 플러그인을 추가할 수 있습니다.

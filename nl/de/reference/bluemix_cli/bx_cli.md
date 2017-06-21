@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-03"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -857,6 +857,8 @@ Die Benutzerin `Mary` der Organisation `IBM` mit der Rolle `OrgManager` zuweisen
 bluemix iam org-role-set Mary IBM OrgManager
 ```
 
+**Hinweis**: Sie können die Organisations-/Bereichsrolle mithilfe der CLI festlegen; zum Festlegen der übrigen Berechtigungen müssen Sie jedoch die Benutzerschnittstelle verwenden. Weitere Informationen finden Sie in [Benutzerzugriff zuordnen](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess).
+
 
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
@@ -1089,6 +1091,8 @@ Die Benutzerin `Mary` zur Organisation `IBM` einladen und die Rolle `OrgManager`
 ```
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
+
+**Hinweis**: Sie können die Organisations-/Bereichsrolle während der Einladung mithilfe der CLI festlegen; zum Festlegen der übrigen Berechtigungen müssen Sie jedoch die Benutzerschnittstelle verwenden. Weitere Informationen finden Sie in [Benutzerzugriff zuordnen](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess).
 
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}

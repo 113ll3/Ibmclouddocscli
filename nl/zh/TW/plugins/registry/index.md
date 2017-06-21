@@ -24,6 +24,8 @@ lastupdated: "2017-05-12"
 **必要條件**
 * 在執行登錄指令之前，請先使用 `bx login` 指令來登入 {{site.data.keyword.Bluemix_short}}，以產生 {{site.data.keyword.Bluemix_short}} 存取記號，並鑑別您的階段作業。
 
+若要瞭解如何使用 {{site.data.keyword.registrylong}} CLI，請參閱 [IBM Bluemix Container 登錄概觀](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup)。
+
 <table summary="管理容器登錄">
 <caption>表 1. 用來在 {{site.data.keyword.Bluemix_short}} 上管理 {{site.data.keyword.registryshort}} 的指令</caption>
  <thead>
@@ -32,22 +34,30 @@ lastupdated: "2017-05-12"
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
- <td>[bx cr info](#bx-cr-info)</td>
- <td>[bx cr image-inspect](#bx-cr-image-inspect)</td>
- <td>[bx cr image-list (bx cr images)](#bx-cr-image-list)</td>
- <td>[bx cr image-rm](#bx-cr-image-rm)</td>
+ <td>[bx cr info](#bx_cr_info)</td>
+ <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
+ <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
- <td>[bx cr login](#bx-cr-login)</td>
- <td>[bx cr namespace-add](#bx-cr-namespace-add)</td>
- <td>[bx cr namespace-list (bx cr namespaces)](#bx-cr-namespace-list)</td>
- <td>[bx cr namespace-rm](#bx-cr-namespace-rm)</td>
- <td>[bx cr token-add](#bx-cr-token-add)</td>
+ <td>[bx cr login](#bx_cr_login)</td>
+ <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
+ <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
+ <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
+ <td>[bx cr plan](#bx_cr_plan)</td> 
  </tr>
- <tr>
- <td>[bx cr token-get](#bx-cr-token-get)</td>
- <td>[bx cr token-list (bx cr tokens)](#bx-cr-token-list)</td>
- <td>[bx cr token-rm](#bx-cr-token-rm)</td>
+ <tr> 
+ <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr quota](#bx_cr_quota)</td>
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
+
+ </tr>
+  <tr>
+ <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
  </tr>
  </tbody></table>
 
@@ -176,6 +186,67 @@ bx cr namespace-rm NAMESPACE
 <dd>您要移除的名稱空間。</dd>
 </dl>
 
+<!-- audience blue staging only begin comment -->
+
+## bx cr plan
+{: #bx_cr_plan}
+
+顯示定價方案。
+
+```
+bx cr plan
+```
+{: codeblock}
+
+## bx cr plan-upgrade
+{: #bx_cr_plan_upgrade}
+
+修改指定的配額。
+
+```
+bx cr plan-upgrade PLAN
+```
+{: codeblock}
+
+**參數**
+<dl>
+<dt>方案</dt>
+<dd> 升級至指定的方案。可用的方案如下：
+<ul>
+<li>免費</li>
+<li>標準</li>
+</ul>
+</dl>
+
+## bx cr quota
+{: #bx_cr_quota}
+
+顯示資料流量及儲存空間的現行配額，以及這些配額的使用資訊。
+
+```
+bx cr quota
+```
+{: codeblock}
+
+## bx cr quota-set
+{: #bx_cr_quota_set}
+
+修改指定的配額。
+
+```
+bx cr quota-set [--traffic VALUE] [--storage VALUE]
+```
+{: codeblock}
+
+**參數**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>（選用）將資料流量配額變更為指定的值。如果您未獲授權設定資料流量，或設定超出現行定價方案的值，則作業會失敗。</dd>
+<dt>--storage VALUE</dt>
+<dd>（選用）將儲存空間配額變更為指定的值。如果您未獲授權設定儲存空間配額，或設定超出現行定價方案的值，則作業會失敗。</dd>
+</dl>
+
+<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
 新增可用來控制登錄存取權的記號。
@@ -245,6 +316,29 @@ bx cr token-rm TOKEN [TOKEN]
 <dd>（選用）TOKEN 可以是記號本身，或記號的唯一 ID（如 `bx cr token-list` 中所示）。您可以指定多個記號，而且必須以空格予以區隔。</dd>
 </dl>
 
+## bx cr vulnerability-assessment (bx cr va)
+{: #bx_cr_va}
+
+檢視映像檔的漏洞評量報告。
+
+```
+bx cr vulnerability-assessment IMAGE [IMAGE...]
+```
+{: codeblock}
+
+**參數**
+<dl>
+<dt>IMAGE</dt>
+<dd>您要取得報告的映像檔的完整 {{site.data.keyword.Bluemix_short}} 登錄路徑，格式為 `namespace/image:tag`。報告會告訴您映像檔是否有任何已知的套件漏洞。支援下列作業系統：
+
+<ul>
+<li>CentOS</li>
+<li>Debian</li>
+<li>Red Hat Enterprise Linux (RHEL)</li>
+<li>Ubuntu</li>
+</ul>
+
+</dd>
 
 </dd>
 </dl>

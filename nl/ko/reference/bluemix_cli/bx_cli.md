@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-03"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -863,6 +863,8 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 bluemix iam org-role-set Mary IBM OrgManager
 ```
 
+**참고**: CLI를 사용하여 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess)을 참조하십시오. 
+
 
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
@@ -1095,6 +1097,8 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 ```
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
+
+**참고**: CLI를 사용하여 초대 중에 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess)을 참조하십시오. 
 
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}

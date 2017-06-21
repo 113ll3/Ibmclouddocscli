@@ -20,14 +20,15 @@ Interface de ligne de commande et outils de développement
 	reference/cloudcli/index.md
 	
 	{: .topicgroup}
-	Plug-in de l'interface de ligne de commande Bluemix
+	Plug-ins d'interface CLI Bluemix
 	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Service de conteneur (clusters)](../containers/cs_cli_devtools.html)
-		[Service de conteneur (groupes uniques et évolutifs)](../containers/container_cli_cfic.html)
+		[Container Service (clusters)](../containers/cs_cli_devtools.html)
+		[Container Service (groupes uniques et évolutifs)](../containers/container_cli_cfic.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	

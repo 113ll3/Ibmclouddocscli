@@ -459,7 +459,7 @@ cf login -a https://api.ng.bluemix.net -u nom_utilisateur -o nom_org -s nom_espa
 ```
 {: codeblock}
 
-Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net` à l'aide d'une clé d'API. Utilisez `apikey` comme nom d'utilisateur et la clé d'API réelle comme mot de passe. 
+Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net` à l'aide d'une clé d'API. Utilisez `apikey` comme nom d'utilisateur et la clé d'API réelle comme mot de passe.
 ```
 cf login -a https://api.ng.bluemix.net -u apikey -p CetteValeurEstVotreCléD'API
 ```

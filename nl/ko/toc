@@ -28,6 +28,7 @@ CLI 및 개발 도구
 		[IBM 개발자](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK 생성기](../cloudnative/sdk_cli.html)
+		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	

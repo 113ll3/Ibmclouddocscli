@@ -24,6 +24,8 @@ lastupdated: "2017-05-12"
 **Requisitos previos**
 * Antes de ejecutar mandatos de registro, inicie una sesión en {{site.data.keyword.Bluemix_short}} con el mandato `bs login` para generar una señal de acceso de {{site.data.keyword.Bluemix_short}} y autenticar la sesión.
 
+Para obtener información sobre la utilización de la interfaz de línea de mandatos de {{site.data.keyword.registrylong}}, consulte [Visión general de IBM Bluemix Container Registry](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
+
 <table summary="Gestión del registro de contenedores">
 <caption>Tabla 1. Mandatos para gestionar {{site.data.keyword.registryshort}} en {{site.data.keyword.Bluemix_short}}
 </caption>
@@ -33,22 +35,30 @@ lastupdated: "2017-05-12"
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
- <td>[bx cr info](#bx-cr-info)</td>
- <td>[bx cr image-inspect](#bx-cr-image-inspect)</td>
- <td>[bx cr image-list (bx cr images)](#bx-cr-image-list)</td>
- <td>[bx cr image-rm](#bx-cr-image-rm)</td>
+ <td>[bx cr info](#bx_cr_info)</td>
+ <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
+ <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
- <td>[bx cr login](#bx-cr-login)</td>
- <td>[bx cr namespace-add](#bx-cr-namespace-add)</td>
- <td>[bx cr namespace-list (bx cr namespaces)](#bx-cr-namespace-list)</td>
- <td>[bx cr namespace-rm](#bx-cr-namespace-rm)</td>
- <td>[bx cr token-add](#bx-cr-token-add)</td>
+ <td>[bx cr login](#bx_cr_login)</td>
+ <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
+ <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
+ <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
+ <td>[bx cr plan](#bx_cr_plan)</td> 
  </tr>
- <tr>
- <td>[bx cr token-get](#bx-cr-token-get)</td>
- <td>[bx cr token-list (bx cr tokens)](#bx-cr-token-list)</td>
- <td>[bx cr token-rm](#bx-cr-token-rm)</td>
+ <tr> 
+ <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr quota](#bx_cr_quota)</td>
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
+
+ </tr>
+  <tr>
+ <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
  </tr>
  </tbody></table>
 
@@ -66,7 +76,7 @@ bx cr api
 
 
 ## bx cr info
-Visualiza el nombre y la cuenta del registro en el que ha iniciado una sesión. 
+Visualiza el nombre y la cuenta del registro en el que ha iniciado una sesión.
 
 ```
 bx cr info
@@ -75,7 +85,7 @@ bx cr info
 
 
 ## bx cr image-inspect
-Visualiza detalles sobre una imagen específica. 
+Visualiza detalles sobre una imagen específica.
 
 ```
 bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
@@ -97,7 +107,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 
 
 ## bx cr image-list (bx cr images)
-Visualiza todas las imágenes de su cuenta de {{site.data.keyword.Bluemix_short}}. 
+Visualiza todas las imágenes de su cuenta de {{site.data.keyword.Bluemix_short}}.
 
 ```
  bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
@@ -122,7 +132,7 @@ Visualiza todas las imágenes de su cuenta de {{site.data.keyword.Bluemix_short}
 
 
 ## bx cr image-rm
-Suprime de su registro una o varias de las imágenes especificadas. 
+Suprime de su registro una o varias de las imágenes especificadas.
 
 ```
 bx cr image-rm IMAGE [IMAGE]
@@ -146,7 +156,7 @@ bx cr login
 
 
 ## bx cr namespace-add
-Añade un espacio de nombres a su cuenta {{site.data.keyword.Bluemix_short}}. 
+Añade un espacio de nombres a su cuenta {{site.data.keyword.Bluemix_short}}.
 
 ```
 bx cr namespace-add NAMESPACE
@@ -156,12 +166,12 @@ bx cr namespace-add NAMESPACE
 **Parámetros**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>El espacio de nombres que desea añadir. El espacio de nombres debe ser exclusivo entre todas las cuentas de {{site.data.keyword.Bluemix_short}} en la misma región. </dd>
+<dd>El espacio de nombres que desea añadir. El espacio de nombres debe ser exclusivo entre todas las cuentas de {{site.data.keyword.Bluemix_short}} en la misma región.</dd>
 </dl>
 
 
 ## bx cr namespace-list (bx cr namespaces)
-Visualiza todos los espacios de nombres cuyo propietario es su cuenta de {{site.data.keyword.Bluemix_short}}. 
+Visualiza todos los espacios de nombres cuyo propietario es su cuenta de {{site.data.keyword.Bluemix_short}}.
 
 ```
 bx cr namespace-list
@@ -170,7 +180,7 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
-Elimina un espacio de nombres de su cuenta de {{site.data.keyword.Bluemix_short}}. Las imágenes en este espacio de nombres se suprimen cuando se elimina el espacio de nombres. 
+Elimina un espacio de nombres de su cuenta de {{site.data.keyword.Bluemix_short}}. Las imágenes en este espacio de nombres se suprimen cuando se elimina el espacio de nombres.
 
 ```
 bx cr namespace-rm NAMESPACE
@@ -183,9 +193,69 @@ bx cr namespace-rm NAMESPACE
 <dd>El espacio de nombres que desea eliminar.</dd>
 </dl>
 
+<!-- audience blue staging only begin comment -->
+
+## bx cr plan
+{: #bx_cr_plan}
+
+Visualiza su plan de precios. 
+
+```
+bx cr plan
+```
+{: codeblock}
+
+## bx cr plan-upgrade
+{: #bx_cr_plan_upgrade}
+
+Modifica la cuota especificada. 
+
+```
+bx cr plan-upgrade PLAN
+```
+{: codeblock}
+
+**Parámetros**
+<dl>
+<dt>PLAN</dt>
+<dd> Actualiza al plan especificado. Están disponibles los planes siguientes:<ul>
+<li>Gratuito</li>
+<li>Estándar</li>
+</ul>
+</dl>
+
+## bx cr quota
+{: #bx_cr_quota}
+
+Visualiza sus cuotas actuales de tráfico y almacenamiento, así como información de utilización relacionada con las mismas. 
+
+```
+bx cr quota
+```
+{: codeblock}
+
+## bx cr quota-set
+{: #bx_cr_quota_set}
+
+Modifica la cuota especificada. 
+
+```
+bx cr quota-set [--traffic VALUE] [--storage VALUE]
+```
+{: codeblock}
+
+**Parámetros**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>(Opcional) Cambia su cuota de tráfico al valor que especifique. La operación falla si no está autorizado a establecer cuotas de tráfico, o si establece un valor por encima del que permite su plan de precios actual. </dd>
+<dt>--storage VALUE</dt>
+<dd>(Opcional) Cambia su cuota de almacenamiento al valor que especifique. La operación falla si no está autorizado a establecer cuotas de almacenamiento, o si establece un valor por encima del que permite su plan de precios actual. </dd>
+</dl>
+
+<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
-Añade una señal que sirve para controlar el acceso a un registro. 
+Añade una señal que sirve para controlar el acceso a un registro.
 
 ```
 bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrite]
@@ -197,18 +267,18 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 **Parámetros**
 <dl>
 <dt>--description VALUE</dt>
-<dd>(Opcional) Especifica el valor como una descripción para la señal, que se visualiza al ejecutar `bx cr token-list`. Si IBM Bluemix Container Service ha creado su señal de forma automática, la descripción se establece en su nombre clúster Kubernetes. En este caso, la señal se elimina de forma automática al eliminar su clúster. </dd>
+<dd>(Opcional) Especifica el valor como una descripción para la señal, que se visualiza al ejecutar `bx cr token-list`. Si IBM Bluemix Container Service ha creado su señal de forma automática, la descripción se establece en su nombre clúster Kubernetes. En este caso, la señal se elimina de forma automática al eliminar su clúster.</dd>
 <dt>-q, --quiet</dt>
-<dd>(Opcional) Visualiza únicamente la señal, sin ningún texto a su alrededor. </dd>
+<dd>(Opcional) Visualiza únicamente la señal, sin ningún texto a su alrededor.</dd>
 <dt>--non-expiring</dt>
-<dd>(Opcional) Crea una señal con un acceso que no caduca. Si no se establece este parámetro, de forma predeterminada el acceso con la señal caduca después de 24 horas. </dd>
+<dd>(Opcional) Crea una señal con un acceso que no caduca. Si no se establece este parámetro, de forma predeterminada el acceso con la señal caduca después de 24 horas.</dd>
 <dt>--readwrite</dt>
-<dd>(Opcional) Crea una señal que otorga acceso de lectura y escritura. Sin esta opción, de forma predeterminada el acceso es de solo lectura. </dd>
+<dd>(Opcional) Crea una señal que otorga acceso de lectura y escritura. Sin esta opción, de forma predeterminada el acceso es de solo lectura.</dd>
 </dl>
 
 
 ## bx cr token-get
-Recupera la señal especificada desde el registro. 
+Recupera la señal especificada desde el registro.
 
 ```
 bx cr token-get TOKEN
@@ -219,12 +289,12 @@ bx cr token-get TOKEN
 **Parámetros**
 <dl>
 <dt>TOKEN</dt>
-<dd>(Opcional) Identificador exclusivo de la señal que desea recuperar. </dd>
+<dd>(Opcional) Identificador exclusivo de la señal que desea recuperar.</dd>
 </dl>
 
 
 ## bx cr token-list (bx cr tokens)
-Visualiza todas las señales que existen para su cuenta de {{site.data.keyword.Bluemix_short}}. 
+Visualiza todas las señales que existen para su cuenta de {{site.data.keyword.Bluemix_short}}.
 
 ```
 bx cr token-list --format FORMAT
@@ -242,7 +312,7 @@ bx cr token-list --format FORMAT
 
 
 ## bx cr token-rm
-Elimina una o varias de las señales especificadas. 
+Elimina una o varias de las señales especificadas.
 
 ```
 bx cr token-rm TOKEN [TOKEN]
@@ -252,10 +322,31 @@ bx cr token-rm TOKEN [TOKEN]
 **Parámetros**
 <dl>
 <dt>TOKEN</dt>
-<dd>(Opcional) TOKEN puede ser la propia señal, o el identificador exclusivo de la señal, tal como se muestra en `bx cr token-list`. 
-Es posible especificar varias señales separándolas con espacios en blanco. </dd>
+<dd>(Opcional) TOKEN puede ser la propia señal, o el identificador exclusivo de la señal, tal como se muestra en `bx cr token-list`. Es posible especificar varias señales separándolas con espacios en blanco.</dd>
 </dl>
 
+## bx cr vulnerability-assessment (bx cr va)
+{: #bx_cr_va}
+
+Visualiza un informe de valoración de vulnerabilidad para una imagen. 
+
+```
+bx cr vulnerability-assessment IMAGE [IMAGE...]
+```
+{: codeblock}
+
+**Parámetros**
+<dl>
+<dt>IMAGE</dt>
+<dd>Vía de acceso de registro de {{site.data.keyword.Bluemix_short}}, en el formato `namespace/image:tag`, a la imagen de la que desea informar. El informe indica si la imagen tiene vulnerabilidades de empaquetamiento conocidas. Se da soporte a los sistemas operativos siguientes:
+<ul>
+<li>CentOS</li>
+<li>Debian</li>
+<li>Red Hat Enterprise Linux (RHEL)</li>
+<li>Ubuntu</li>
+</ul>
+
+</dd>
 
 </dd>
 </dl>

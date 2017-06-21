@@ -24,6 +24,8 @@ lastupdated: "2017-05-12"
 ** の前提条件**
 * レジストリー・コマンドを実行する前に、`bx login` コマンドを使用して {{site.data.keyword.Bluemix_short}} にログインし、{{site.data.keyword.Bluemix_short}} アクセス・トークンを生成して、セッションを認証します。
 
+{{site.data.keyword.registrylong}} CLI の使用方法については、『[IBM Bluemix Container Registry の概要](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup)』を参照してください。
+
 <table summary="コンテナー・レジストリーの管理">
 <caption>表 1. {{site.data.keyword.Bluemix_short}} 上の {{site.data.keyword.registryshort}} を管理するためのコマンド
 </caption>
@@ -33,23 +35,31 @@ lastupdated: "2017-05-12"
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
- <td>[bx cr info](#bx-cr-info)</td>
- <td>[bx cr image-inspect](#bx-cr-image-inspect)</td>
- <td>[bx cr image-list (bx cr images)](#bx-cr-image-list)</td>
- <td>[bx cr image-rm](#bx-cr-image-rm)</td>
+ <td>[bx cr info](#bx_cr_info)</td>
+ <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
+ <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
  <td>[bx cr login
-](#bx-cr-login)</td>
- <td>[bx cr namespace-add](#bx-cr-namespace-add)</td>
- <td>[bx cr namespace-list (bx cr namespaces)](#bx-cr-namespace-list)</td>
- <td>[bx cr namespace-rm](#bx-cr-namespace-rm)</td>
- <td>[bx cr token-add](#bx-cr-token-add)</td>
+](#bx_cr_login)</td>
+ <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
+ <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
+ <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
+ <td>[bx cr plan](#bx_cr_plan)</td> 
  </tr>
- <tr>
- <td>[bx cr token-get](#bx-cr-token-get)</td>
- <td>[bx cr token-list (bx cr tokens)](#bx-cr-token-list)</td>
- <td>[bx cr token-rm](#bx-cr-token-rm)</td>
+ <tr> 
+ <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr quota](#bx_cr_quota)</td>
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
+
+ </tr>
+  <tr>
+ <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
  </tr>
  </tbody></table>
 
@@ -179,6 +189,67 @@ bx cr namespace-rm NAMESPACE
 <dd>削除する名前空間。</dd>
 </dl>
 
+<!-- audience blue staging only begin comment -->
+
+## bx cr plan
+{: #bx_cr_plan}
+
+価格プランを表示します。
+
+```
+bx cr plan
+```
+{: codeblock}
+
+## bx cr plan-upgrade
+{: #bx_cr_plan_upgrade}
+
+指定された割り当て量を変更します。
+
+```
+bx cr plan-upgrade PLAN
+```
+{: codeblock}
+
+**パラメーター**
+<dl>
+<dt>PLAN</dt>
+<dd> 指定されたプランにアップグレードします。利用可能なプランは以下のとおりです。
+<ul>
+<li>Free</li>
+<li>Standard</li>
+</ul>
+</dl>
+
+## bx cr quota
+{: #bx_cr_quota}
+
+トラフィックおよびストレージの現在の割り当て量、およびそれらの割り当て量に対する使用量情報を表示します。
+
+```
+bx cr quota
+```
+{: codeblock}
+
+## bx cr quota-set
+{: #bx_cr_quota_set}
+
+指定された割り当て量を変更します。
+
+```
+bx cr quota-set [--traffic VALUE] [--storage VALUE]
+```
+{: codeblock}
+
+**パラメーター**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>(オプション) トラフィック割り当て量を、指定された値に変更します。トラフィックを設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
+<dt>--storage VALUE</dt>
+<dd>(オプション) ストレージ割り当て量を、指定された値に変更します。ストレージ割り当て量を設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
+</dl>
+
+<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
 レジストリーへのアクセスを制御するために使用できるトークンを追加します。
@@ -248,6 +319,29 @@ bx cr token-rm TOKEN [TOKEN]
 <dd>(オプション) TOKEN には、トークン自体またはトークンの固有 ID (`bx cr token-list` で表示される) のいずれかを指定できます。複数のトークンを、スペースで区切って指定できます。</dd>
 </dl>
 
+## bx cr vulnerability-assessment (bx cr va)
+{: #bx_cr_va}
+
+イメージの脆弱性評価レポートを表示します。
+
+```
+bx cr vulnerability-assessment IMAGE [IMAGE...]
+```
+{: codeblock}
+
+**パラメーター**
+<dl>
+<dt>IMAGE</dt>
+<dd>レポートを取得するイメージへの絶対 {{site.data.keyword.Bluemix_short}} レジストリー・パス (フォーマットは `namespace/image:tag`)。このレポートは、イメージに、既知のパッケージ脆弱性があるかどうかを報告します。以下のオペレーティング・システムがサポートされています。
+
+<ul>
+<li>CentOS</li>
+<li>Debian</li>
+<li>Red Hat Enterprise Linux (RHEL)</li>
+<li>Ubuntu</li>
+</ul>
+
+</dd>
 
 </dd>
 </dl>

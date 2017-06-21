@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-03"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -862,6 +862,8 @@ Affectation de l'utilisateur `Mary` à l'organisation `IBM` sous le rôle `OrgMa
 bluemix iam org-role-set Mary IBM OrgManager
 ```
 
+**Remarque **: vous pouvez définir des rôles d'organisation ou d'espace via l'interface CLI, mais pour les autres autorisations, il vous utiliser l'interface utilisateur. Pour plus d'informations, voir [Octroi d'un accès utilisateur](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess).
+
 
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
@@ -1051,7 +1053,7 @@ bluemix iam account-user-delete USERNAME [-f]
 <dt>USERNAME (obligatoire)</dt>
 <dd>Nom d'utilisateur</dd>
 <dt>--force, -f (facultatif)</dt>
-<dd>Imposer la suppression sans demander de confirmation.</dd>
+<dd>Force une suppression sans demander de confirmation.</dd>
 </dl>
 
 ## bluemix iam account-user-invite
@@ -1099,6 +1101,8 @@ Invitation de l'utilisateur `Mary` dans l'organisation `IBM` sous le rôle `OrgM
 ```
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
+
+**Remarque **: vous pouvez définir des rôles d'organisation ou d'espace lors de l'invitation par le biais de l'interface CLI, mais pour les autres autorisations, il vous faut utiliser l'interface utilisateur. Pour plus d'informations, voir [Octroi d'un accès utilisateur](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess).
 
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}
@@ -1194,7 +1198,7 @@ bluemix iam api-key-delete NAME [-f]
 <dt>NAME (obligatoire)</dt>
 <dd>Nom de la clé d'API à supprimer.</dd>
 <dt>-f (facultatif)</dt>
-<dd>Imposer la suppression sans demander de confirmation.</dd>
+<dd>Force une suppression sans demander de confirmation.</dd>
 </dl>
 
 
@@ -1392,7 +1396,7 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dt>DOMAIN (obligatoire)</dt>
    <dd>Domaine duquel supprimer le certificat.</dd>
    <dt>-f (facultatif)</dt>
-   <dd>Imposer la suppression sans demander de confirmation.</dd>
+   <dd>Force une suppression sans demander de confirmation.</dd>
    </dl>
 
 ## bluemix app domains
