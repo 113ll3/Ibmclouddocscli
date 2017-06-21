@@ -35,7 +35,7 @@ bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. To install the {{site.data.keyword.autoscaling}} CLI plugin, run the following command:
 ```
-bluemix plugin install auto-scaling -r bluemix-plugin-repo
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## Attaching an auto-scaling policy
