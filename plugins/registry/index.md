@@ -322,7 +322,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 
 ## bx cr token-get
-{: (#bx_cr_token_get}
+{: #bx_cr_token_get}
 
 Retrieve the specified token from the registry.
 
