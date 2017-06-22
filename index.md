@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-16"
+lastupdated: "2017-06-22"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2017-06-16"
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:tip: .tip}
 {:new_window: target="_blank"}
 
 # Manual CLI installation
@@ -26,6 +27,7 @@ Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI t
 [Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.stage1.ng.bluemix.net/){: new_window} 
 
 If you're on macOS, the easiest way to get started with IBM Cloud tools is by using [IBM Cloud Application Tools 2](/docs/cli/icat.html).
+{: tip}
 
 ## ![](./images/CLI_Plugin.svg) Command line interface plug-ins
 {: #cliplugins notoc}
