@@ -20,11 +20,11 @@ lastupdated: "2017-06-22"
 # Manual CLI installation
 {: #cli}
 
-{{site.data.keyword.Bluemix}} CLI provides a command line experience to manage your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command line interface, cf, in its installation, for managing Cloud Foundry applications and services.
+{{site.data.keyword.Bluemix}} CLI provides a command line experience to manage your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command-line interface, cf, in its installation, for managing Cloud Foundry applications and services.
 
 Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI tools and {{site.data.keyword.Bluemix_notm}} environment, you must configure the `HTTP_PROXY` environment variable with the actual HTTP proxy URL and port if there is one. See [Using the CLI with an HTTP Proxy Server ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} for more details.
 
-[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.stage1.ng.bluemix.net/){: new_window} 
+[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/){: new_window} 
 
 If you're on macOS, the easiest way to get started with IBM Cloud tools is by using [IBM Cloud Application Tools 2](/docs/cli/icat.html).
 {: tip}
@@ -34,7 +34,7 @@ If you're on macOS, the easiest way to get started with IBM Cloud tools is by us
 
 Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface with more commands. To access the {{site.data.keyword.Bluemix_notm}} command line interface plug-ins, see the [CLI Plug-in Repository ![External link icon](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/){: new_window}.
 
-### Extend your {{site.data.keyword.Bluemix_notm}} command line interface: bx
+### Extend your {{site.data.keyword.Bluemix_notm}} command-line interface: bx
 {: #cli_bluemix_ext notoc}
 
 
@@ -67,10 +67,10 @@ bluemix plugin install plugin_name -r bluemix-other-repo
 ```
 
 
-### Extend Cloud Foundry command line interface: bx cf
+### Extend Cloud Foundry command-line interface: bx cf
 {: #cli_cf_ext notoc}
 
-After you install the {{site.data.keyword.Bluemix_notm}} command line tool, a Cloud Foundry command line interface is also installed inside the Bluemix CLI directory. Run the Cloud Foundry CLI commands using `bluemix cf`.
+After you install the {{site.data.keyword.Bluemix_notm}} command line tool, a Cloud Foundry command-line interface is also installed inside the Bluemix CLI directory. Run the Cloud Foundry CLI commands using `bluemix cf`.
 
 * To install cf CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 
