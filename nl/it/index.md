@@ -29,7 +29,7 @@ Scarica e installa lo strumento di riga di comando per supportare la tua esperie
 
 La CLI {{site.data.keyword.Bluemix_notm}} offre un'esperienza della riga di comando per gestire il tuo ambiente {{site.data.keyword.Bluemix_notm}}. Con la sua installazione è inclusa inoltre un'interfaccia riga di comando Cloud Foundry, denominata cf, per la gestione delle applicazioni e dei servizi Cloud Foundry. 
 
-Questi strumenti CLI utilizzano entrambi la porta 443 per impostazione predefinita. Se è presente un proxy HTTP tra gli strumenti CLI e l'ambiente {{site.data.keyword.Bluemix_notm}}, devi configurare la variabile di ambiente `HTTP_PROXY` con la porta e l'url del proxy HTTP effettivi laddove disponibili. Per ulteriori dettagli, consulta [Utilizzo della CLI con un server proxy HTTP ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}s.
+Questi strumenti CLI utilizzano entrambi la porta 443 per impostazione predefinita. Se è presente un proxy HTTP tra gli strumenti CLI e l'ambiente {{site.data.keyword.Bluemix_notm}}, devi configurare la variabile di ambiente `HTTP_PROXY` con la porta e l'url del proxy HTTP effettivi laddove disponibili. Per ulteriori dettagli, vedi [Utilizzo della CLI con un server proxy HTTP ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}s.
 
 [Scarica la CLI {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/){: new_window} <br> 
 [Visualizza documenti](/docs/cli/reference/bluemix_cli/index.html)
@@ -38,7 +38,7 @@ Questi strumenti CLI utilizzano entrambi la porta 443 per impostazione predefini
 {: #cliplugins notoc}
 
 Estendi facilmente la tua interfaccia riga di comando {{site.data.keyword.Bluemix_notm}} con più comandi. Per accedere ai plug-in di interfaccia riga di comando
-{{site.data.keyword.Bluemix_notm}}, consulta il [Repository di plug-in CLI![Icona link esterno](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/){: new_window}.
+{{site.data.keyword.Bluemix_notm}}, vedi il [Repository di plug-in CLI![Icona link esterno](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/){: new_window}.
 
 ### Estendi la tua interfaccia riga di comando {{site.data.keyword.Bluemix_notm}}: bx
 {: #cli_bluemix_ext notoc}
@@ -55,9 +55,9 @@ bluemix plugin install plugin_name -r Bluemix
 | Nome del plug-in: auto-scaling <br> [Visualizza documenti](/docs/cli/plugins/auto-scaling/index.html) |  Nome del plug-in: container-service  <br> [Visualizza documenti](/docs/containers/cs_cli_devtools.html) |
 {: caption="Tabella 2. Plug-in" caption-side="top"}
 
-|  *Peering della rete privata* | *VPN*  |
-|-----|-----|
-| Nome del plug-in: private-network-peering  <br> [Visualizza documenti](/docs/cli/plugins/pnp/index.html) | Nome del plug-in: VPN  <br> [Visualizza documenti](/docs/cli/plugins/bx_vpn/index.html) |
+|  *Peering della rete privata* | *Schematics* | *VPN*  |
+|-----|-----|-----|
+| Nome del plug-in: private-network-peering  <br> [Visualizza documenti](/docs/cli/plugins/pnp/index.html) | Nome del plug-in: Schematics  <br> [Visualizza documenti](/docs/services/schematics/schematics_reference.html) | Nome del plug-in: VPN  <br> [Visualizza documenti](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="Tabella 3. Plug-in" caption-side="top"}
 
 Puoi anche aggiungere i plug-in da altri repository conformi all'architettura della CLI {{site.data.keyword.Bluemix_notm}}.

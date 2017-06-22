@@ -24,7 +24,7 @@ Puoi utilizzare la CLI (command line interface) per configurare e gestire il tuo
 
 Il plug-in VPN è disponibile per i sistemi operativi Windows, MAC e Linux. Assicurati di utilizzare il plug-in adatto a te.
 
-Le seguenti istruzioni servono a gestire il plug-in della CLI {{site.data.keyword.Bluemix_notm}}. Per utilizzare il plug-in con il plug-in della CLI Cloud Foundry (cf), consulta [VPN CLI plug-in for cf CLI](../vpn/index.html).
+Le seguenti istruzioni servono a gestire il plug-in della CLI {{site.data.keyword.Bluemix_notm}}. Per utilizzare il plug-in con il plug-in della CLI Cloud Foundry (cf), vedi [VPN CLI plug-in for cf CLI](../vpn/index.html).
 
 
 Le informazioni che seguono elencano tutti i comandi supportati dal plug-in VPN per la CLI Bluemix CLI e comprendono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi. Consulta [Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext) su come installare il plug-in vpn.

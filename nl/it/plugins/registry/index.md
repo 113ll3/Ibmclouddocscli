@@ -26,6 +26,8 @@ La CLI {{site.data.keyword.registrylong}} è un plug-in per la gestione del tuo 
  con il comando `bx login` per generare un token di accesso {{site.data.keyword.Bluemix_short}}
  e autenticare la tua sessione.
 
+Per informazioni su come utilizzare la CLI {{site.data.keyword.registrylong}}, vedi [Panoramica di IBM Bluemix Container Registry](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
+
 <table summary="Gestione del tuo registro dei contenitori">
 <caption>Tabella 1. Comandi per la gestione di {{site.data.keyword.registryshort}} su {{site.data.keyword.Bluemix_short}}
 </caption>
@@ -35,22 +37,30 @@ La CLI {{site.data.keyword.registrylong}} è un plug-in per la gestione del tuo 
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
- <td>[bx cr info](#bx-cr-info)</td>
- <td>[bx cr image-inspect](#bx-cr-image-inspect)</td>
- <td>[bx cr image-list (bx cr images)](#bx-cr-image-list)</td>
- <td>[bx cr image-rm](#bx-cr-image-rm)</td>
+ <td>[bx cr info](#bx_cr_info)</td>
+ <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
+ <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
- <td>[bx cr login](#bx-cr-login)</td>
- <td>[bx cr namespace-add](#bx-cr-namespace-add)</td>
- <td>[bx cr namespace-list (bx cr namespaces)](#bx-cr-namespace-list)</td>
- <td>[bx cr namespace-rm](#bx-cr-namespace-rm)</td>
- <td>[bx cr token-add](#bx-cr-token-add)</td>
+ <td>[bx cr login](#bx_cr_login)</td>
+ <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
+ <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
+ <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
+ <td>[bx cr plan](#bx_cr_plan)</td> 
  </tr>
- <tr>
- <td>[bx cr token-get](#bx-cr-token-get)</td>
- <td>[bx cr token-list (bx cr tokens)](#bx-cr-token-list)</td>
- <td>[bx cr token-rm](#bx-cr-token-rm)</td>
+ <tr> 
+ <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr quota](#bx_cr_quota)</td>
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
+
+ </tr>
+  <tr>
+ <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
  </tr>
  </tbody></table>
 
@@ -185,6 +195,67 @@ bx cr namespace-rm NAMESPACE
 <dd>Lo spazio dei nomi che desideri rimuovere.</dd>
 </dl>
 
+<!-- audience blue staging only begin comment -->
+
+## bx cr plan
+{: #bx_cr_plan}
+
+Visualizza il piano dei prezzi.
+
+```
+bx cr plan
+```
+{: codeblock}
+
+## bx cr plan-upgrade
+{: #bx_cr_plan_upgrade}
+
+Modifica la quota specificata.
+
+```
+bx cr plan-upgrade PLAN
+```
+{: codeblock}
+
+**Parametri**
+<dl>
+<dt>PIANO</dt>
+<dd> Esegue il tuo upgrade al piano specificato. Sono disponibili i seguenti piani:
+<ul>
+<li>Gratuito</li>
+<li>Standard</li>
+</ul>
+</dl>
+
+## bx cr quota
+{: #bx_cr_quota}
+
+Visualizza le tue quote correnti per traffico e archiviazione e le informazioni di utilizzo rispetto a tali quote.
+
+```
+bx cr quota
+```
+{: codeblock}
+
+## bx cr quota-set
+{: #bx_cr_quota_set}
+
+Modifica la quota specificata.
+
+```
+bx cr quota-set [--traffic VALUE] [--storage VALUE]
+```
+{: codeblock}
+
+**Parametri**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>(Facoltativo) Modifica la tua quota di traffico al valore specificato. L'operazione non riesce se non sei autorizzato a impostare il traffico o se imposti un valore che supera il tuo piano dei prezzi corrente.</dd>
+<dt>--storage VALUE</dt>
+<dd>(Facoltativo) Modifica la tua quota di archiviazione al valore specificato. L'operazione non riesce se non sei autorizzato a impostare le quote di archiviazione o se imposti un valore che supera il tuo piano dei prezzi corrente.</dd>
+</dl>
+
+<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
 Aggiunge un token che puoi utilizzare per controllare l'accesso a un registro.
@@ -257,6 +328,29 @@ bx cr token-rm TOKEN [TOKEN]
 <dd>(Facoltativo) TOKEN può essere il token stesso o l'identificativo univoco del token, come mostrato in `bx cr token-list`. È possibile specificare più token e devono essere separati da uno spazio.</dd>
 </dl>
 
+## bx cr vulnerability-assessment (bx cr va)
+{: #bx_cr_va}
+
+Visualizza un report di valutazione delle vulnerabilità per un'immagine.
+
+```
+bx cr vulnerability-assessment IMAGE [IMAGE...]
+```
+{: codeblock}
+
+**Parametri**
+<dl>
+<dt>IMAGE</dt>
+<dd>Il percorso di registro {{site.data.keyword.Bluemix_short}} completo, nel formato `spaziodeinomi/immagine:tag`, all'immagine per cui vuoi ottenere un report. Il report ti informa se l'immagine ha delle vulnerabilità di pacchetto note. Sono supportati i seguenti sistemi operativi:
+
+<ul>
+<li>CentOS</li>
+<li>Debian</li>
+<li>RHEL (Red Hat Enterprise Linux)</li>
+<li>Ubuntu</li>
+</ul>
+
+</dd>
 
 </dd>
 </dl>
