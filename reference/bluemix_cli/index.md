@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-06-21"
+lastupdated: "2017-06-22"
 
 ---
 
@@ -154,6 +154,6 @@ You're now ready to use {{site.data.keyword.Bluemix_notm}} commmand lines. Run `
 
 ## Get in touch
 
-Use the following options to find release information, provide feedback, and ask questions by using the following options:
+Use the following options to find release information, provide feedback, and ask questions:
  * For details about the latest releases and to report issues: [{{site.data.keyword.Bluemix_notm}} CLI SDK](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
  * To ask questions and share knowledge with the community: [bluemix-cli Slack channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
