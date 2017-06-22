@@ -229,7 +229,7 @@ bx cr plan
 
 Upgrades you to the specified plan.
 
-For information about service plans, see [Registry plans](../../../services/Registry/registry_overview.html#registry_plans).
+For information about plans, see [Registry plans](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
 bx cr plan-upgrade PLAN
