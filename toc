@@ -20,6 +20,7 @@ CLI and Dev Tools
 	
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
+	reference/bluemix_cli/all_versions.md
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
 	reference/cloudcli/index.md
@@ -44,6 +45,7 @@ CLI and Dev Tools
 	
 	{: .topicgroup}
 	Integrated development tools
+		ibm-dev-tools-for-vscode.md
 		[API Connect developer toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
 		[Deploying apps with IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
@@ -51,6 +53,7 @@ CLI and Dev Tools
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
+	login_federated_id.md
 	[Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
 	[Deploying your app with CLI](../starters/install_cli.html)
 	[Uploading your app](../starters/upload_app.html)

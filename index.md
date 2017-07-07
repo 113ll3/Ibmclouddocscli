@@ -6,8 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-22"
-
+lastupdated: "2017-06-30"
 
 ---
 
@@ -25,7 +24,7 @@ lastupdated: "2017-06-22"
 
 Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI tools and {{site.data.keyword.Bluemix_notm}} environment, you must configure the `HTTP_PROXY` environment variable with the actual HTTP proxy URL and port if there is one. See [Using the CLI with an HTTP Proxy Server ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} for more details.
 
-[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/){: new_window} 
+[Download {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/bluemix_cli/all_versions.html){: new_window} 
 
 If you're on macOS, the easiest way to get started with IBM Cloud tools is by using [IBM Cloud Application Tools 2](/docs/cli/icat.html).
 {: tip}
@@ -66,7 +65,6 @@ where `repo_url` is the https url of the plugin repository.
 ```
 bluemix plugin install plugin_name -r bluemix-other-repo
 ```
-
 
 ### Extend Cloud Foundry command-line interface: bx cf
 {: #cli_cf_ext notoc}
