@@ -44,6 +44,7 @@ Because a one-time passcode retrieves code from the {{site.data.keyword.Bluemix_
   OK
       
   ```
+  
 ### From the Cloud Foundry CLI
 1. Specify the `--sso` option with the `cf login` command. 
 2. Follow the URL in the prompt to get the one-time passcode. 
