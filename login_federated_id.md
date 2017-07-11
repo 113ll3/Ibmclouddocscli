@@ -6,93 +6,102 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-06-30"
-
+lastupdated: "2017-07-11"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:tip: .tip}
+{:new_window: target="_blank"}
 
-# Log in to Bluemix with a Federated ID using the Command-Line Interface
+# Logging in with a federated ID
 {: #federated_id}
 
-An initial attempt to log in to Bluemix with a federated ID and password from the command-line interface will be rejected. To successfully log in, you will need to use a one-time passcode or Bluemix API key. Because a One-time passcode retrieves code from the Bluemix Console, it will cause the use of a federated ID in your automation script, to fail; you must use the  Bluemix API key with an automated script.
+As a federated user, you can log in to {{site.data.keyword.Bluemix}} from the command-line interface (CLI) by using either a one-time passcode or an API key. 
+{: shortdesc}
 
-**Note**: The required API key is Bluemix API key for authentication with Bluemix platform, not the Softlayer API key or Bluemix service API key.
-
-## Log in with a one-time passcode
+## Using a one-time passcode
 {:onetime_passcode}
 
+When you use the one-time passcode option to log in with a federated ID, you specify the single-sign on (SSO) parameter to get a one-time passcode, which you then enter at login. 
 
-From the Bluemix CLI, log in with `--sso`. Follow the url in the prompt to get the one-time passcode, copy the value, and paste it into the CLI as your input:
+Because a one-time passcode retrieves code from the {{site.data.keyword.Bluemix_notm}} console, it causes the use of a federated ID in your automation script to fail. Avoid trouble by using the API key option with an automated script. 
+{: tip}
 
-```
-bluemix login --sso
-API endpoint: https://api.ng.bluemix.net
+### From the {{site.data.keyword.Bluemix_notm}} CLI
+1. Specify the `--sso` option with the `bluemix login` command.
+2. Follow the URL in the prompt to get the one-time passcode.
+3. Copy and paste the passcode value in the CLI as your input.
+    
+  ``` 
+  bluemix login --sso
+  API endpoint: https://api.ng.bluemix.net
+      
+  One Time Code (Get one at https://iam.ng.bluemix.net/oidc/passcode)> 
+  Authenticating...
+  OK
+      
+  ```
+### From the Cloud Foundry CLI
+1. Specify the `--sso` option with the `cf login` command. 
+2. Follow the URL in the prompt to get the one-time passcode. 
+3. Copy and paste the passcode value in the CLI as your input. 
+    
+  ```
+  cf login --sso
+  API endpoint: https://api.ng.bluemix.net
+      
+  One Time Code (Get one at https://login.ng.bluemix.net/UAALoginServerWAR/passcode)>
+  Authenticating...
+  OK
+      
+  ```
 
-One Time Code (Get one at https://iam.ng.bluemix.net/oidc/passcode)> 
-Authenticating...
-OK
-
-```
-
-
-If you are using CF CLI, use use the `--sso` option:
-
-```
-cf login --sso
-API endpoint: https://api.ng.bluemix.net
-
-One Time Code (Get one at https://login.ng.bluemix.net/UAALoginServerWAR/passcode)> 
-Authenticating...
-OK
-
-```
-
-
-## Log in with a Bluemix API key
+## Using an API key
 {:api_key}
 
-### Create a Bluemix API key
+The required API key is the {{site.data.keyword.Bluemix_notm}} API key that's used to authenticate with the {{site.data.keyword.Bluemix_notm}} platform, not the Softlayer API key or {{site.data.keyword.Bluemix_notm}} service API key.
 
-For more info on creating an API key from the Bluemix Console, see: [Managing API keys](/docs/iam/apikeys.html#manapikey).
+1. Create an API key with the [`bluemix iam api-key-create` command](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_api_key_create). Use the `-f` option to generate an API key file instead of showing the key in the command window:
 
-You can also use the {{site.data.keyword.Bluemix_notm}} CLI to manage your API keys by listing your keys, creating keys, updating keys, or deleting keys. See the [`bluemix iam api-keys`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam) command section for more information. Use the `-f` option to generate an API key file instead of showing the key in the command window:
+   ```
+   bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
+  
+   ```
 
-```
-bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
-```
+2. Log in with the API key. 
 
-### log in with an API key using the Bluemix CLI
+  You can use the API key with the {{site.data.keyword.Bluemix_notm}} CLI in any of the following ways:
+    
+    * Call the API key directly:
+  
+      ```
+      bluemix login --apikey <api_key_string>
+    
+      ```
+    
+    * Call the API key with the key file: 
+  
+      ```
+      bluemix login --apikey @key_file_name
+    
+      ```
+    
+    * Set an environment variable. Additionally, you can also set an environment variable on your system. For example, BLUEMIX_API_KEY=<api_key_string>, where `api_key_string` is the custom value of the API key. After the environment variable is set, you can simply specify `bluemix login` from the CLI. 
+  
+  To log in by using the Cloud Foundry CLI, specify `apikey` as the user name and the API key string as the password:
 
-After you generate the API key, there are a few ways you can use the key with the Bluemix CLI:
+    ```
+    cf login
+    API endpoint: https://api.ng.bluemix.net
+  
+    Email> apikey
+  
+    Password>
+    Authenticating...
+    OK
+  
+    ```
 
-1. Call the API key directly:
-
-  ```
-  bluemix login --apikey <api_key_string>
-  ```
-
-2. Call the API key with the key file. Alternatively, you can call the generated key file using the `-f` option when you create the API key:
-
-  ```
-  bluemix login --apikey @key_file_name
-  ```
-
-3. Set an environment variable. Additionally, you can also set an environment variable on your system. For example: BLUEMIX_API_KEY=<api_key_string>, where `api_key_string` is the custom value of the API key. After the environment variavle is set, you can simply specify `bluemix login` from the CLI. 
-
-
-### login with API key using CF CLI
-
-If you want to log in using the CF CLI instead of the Bluemix CLI, just use `apikey` as the username and the API key string as the password:
-
-```
-cf login     
-API endpoint: https://api.ng.bluemix.net
-
-Email> apikey    
-
-Password>
-Authenticating...
-OK
-```
