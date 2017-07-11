@@ -28,6 +28,7 @@ lastupdated: "2017-06-29"
 {: #install_bluemix_cli}
 
 <!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->
+
 ### Online installation
 
 With access to an internet connection, copy and paste the following command into a terminal console and execute it.
@@ -50,6 +51,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 ```
 
 ### Offline installation
+
 <!-- End of online installation -->
 
 For Mac OS and Windows, download the [{{site.data.keyword.Bluemix_notm}} CLI package](/docs/cli/index.html#downloads), and run the installer.
