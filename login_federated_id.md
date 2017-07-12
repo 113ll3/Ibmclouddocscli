@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-07-11"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -90,7 +90,7 @@ The required API key is the {{site.data.keyword.Bluemix_notm}} API key that's us
     
       ```
     
-    * Set an environment variable. Additionally, you can also set an environment variable on your system. For example, BLUEMIX_API_KEY=<api_key_string>, where `api_key_string` is the custom value of the API key. After the environment variable is set, you can simply specify `bluemix login` from the CLI. 
+    * Set an environment variable. Additionally, you can also set an environment variable on your system. For example, BLUEMIX_API_KEY=api_key_string, where `api_key_string` is the custom value of the API key. After the environment variable is set, you can simply specify `bluemix login` from the CLI. 
   
   To log in by using the Cloud Foundry CLI, specify `apikey` as the user name and the API key string as the password:
 
