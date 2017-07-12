@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-06-29"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -35,12 +35,12 @@ With access to an internet connection, copy and paste the following command into
 
 **macOS**
 ```
-sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
 ```
 
 **Linux**
 ```
-sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
 ```
 
 **Windows PowerShell**
