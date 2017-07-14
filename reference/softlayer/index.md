@@ -2197,7 +2197,7 @@ List all the VLANs on your account
    <dd>Filter by VLAN name</dd>
    <dt>--order</dt>
    <dd>Filter by ID of the order that purchased the VLAN</dd>
-   </dl >
+   </dl>
 
 **Examples**:
 ```
