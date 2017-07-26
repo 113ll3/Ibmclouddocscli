@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -1958,7 +1958,7 @@ Reboot an active virtual server instance
    <dt>--hard</dt>
    <dd>Perform a hard reboot</dd>
    <dt>--soft</dt>
-   <dd>Perform a hard reboot</dd>
+   <dd>Perform a soft reboot</dd>
    <dt>-f, --force</dt>
    <dd>Force operation without confirmation.</dd>
     </dl>
