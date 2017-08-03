@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-06-22"
+lastupdated: "2017-07-27"
 
 
 ---
@@ -227,24 +227,14 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Upgrades you to the specified plan.
+Upgrades you from the free to the standard plan.
 
 For information about plans, see [Registry plans](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
-bx cr plan-upgrade PLAN
+bx cr plan-upgrade standard
 ```
 {: codeblock}
-
-**Parameters**
-<dl>
-<dt>PLAN</dt>
-<dd> Upgrades you to the specified plan. The following plans are available: 
-<ul>
-<li>Free</li>
-<li>Standard</li>
-</ul>
-</dl>
 
 
 ## bx cr pricing
