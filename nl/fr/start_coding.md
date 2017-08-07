@@ -14,7 +14,7 @@ lastupdated: "2015-12-07"
 {:shortdesc: .shortdesc}
 
 # Commencer à coder
-
+{: #start_coding}
 
 Dans {{site.data.keyword.Bluemix_notm}}, vous pouvez commencer à coder rapidement en suivant les étapes
 indiquées après la création d'une application.

@@ -22,7 +22,7 @@ lastupdated: "2011-01-12"
 É possível configurar o serviço {{site.data.keyword.autoscaling}} usando o {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. O {{site.data.keyword.autoscaling}} CLI suporta Linux64, Win64 e OSX e fornece funcionalidade semelhante ao ajuste automático de escala que a API RESTful fornece.
 {: shortdesc}
 
-Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Veja [Fazer download do {{site.data.keyword.Bluemix_notm}} CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obter instruções.
+Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Veja [Fazer download da CLI do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obter instruções.
 
 ## Incluindo o plug-in do {{site.data.keyword.Bluemix_notm}} CLI
 
@@ -36,7 +36,7 @@ bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Para instalar o plug-in {{site.data.keyword.autoscaling}} CLI, execute o comando a seguir:
 ```
-bluemix plugin install auto-scaling -r bluemix-plugin-repo
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## Anexando uma política de ajuste automático de escala

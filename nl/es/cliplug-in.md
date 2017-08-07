@@ -16,6 +16,7 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 
 # Plugins de la interfaz de línea de mandatos de Cloud Foundry
+{: #cf_cli_plugins}
 
 Puede instalar y usar los plugins de la interfaz de línea de mandatos de Cloud Foundry (cf cli) disponibles en
 [CLI Plug-in Repository ![icono de enlace externo](../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/){: new_window}. Cada plugin se identifica mediante su nombre de

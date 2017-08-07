@@ -14,7 +14,7 @@ lastupdated: "2015-12-07"
 {:shortdesc: .shortdesc}
 
 # Inizia a codificare
-
+{: #start_coding}
 
 In {{site.data.keyword.Bluemix_notm}} puoi iniziare a codificare rapidamente attenendoti alla procedura fornita dopo la creazione di un'applicazione.
 {:shortdesc}

@@ -879,7 +879,7 @@ conjuntos de grupos do Cloud Foundry e depois ligar o grupo de segurança a um e
 específico. Para obter mais informações, veja [Ligando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
 **Nota**: Os comandos a seguir que permitem trabalhar com
-grupos de segurança são baseadas na versão do Cloud Foundry 1.6. Para obter mais informações, incluindo campos necessários e opcionais, veja as informações do Cloud Foundry sobre [Criando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+grupos de segurança são baseadas na versão do Cloud Foundry 1.6. Para obter mais informações, incluindo campos obrigatórios e opcionais, veja as informações do Cloud Foundry sobre [Como criar Grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 ### Listando grupos de segurança
 {: #clilissecgro}
@@ -914,7 +914,7 @@ com o parâmetro `security-group`.
 ### Criando um Grupo de Segurança
 {: #clicreasecgro}
 
-Para obter mais informações sobre a criação de grupos de segurança e as regras que definem o tráfego de saída, veja [Criando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+Para obter mais informações sobre como criar grupos de segurança e as regras que definem o tráfego de saída, veja [Criando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 Para criar um grupo de segurança, use o comando a seguir:
 
@@ -981,7 +981,7 @@ como alias para o nome de comando maior
 ### Ligando grupos de segurança
 {: #clibindsecgro}
 
-Para obter mais informações sobre a ligação de grupos de segurança, veja [Ligando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+Para obter mais informações sobre como ligar grupos de segurança, veja [Ligando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
 * Para ligar ao conjunto de grupos de segurança de Preparação padrão, use o comando a seguir:
 
@@ -1037,7 +1037,7 @@ como alias para o nome de comando mais longo **ba bind-security-group**.
 ### Desvinculando grupos de segurança
 {: #cliunbindsecgro}
 
-Para obter mais informações sobre a desvinculação de grupos de segurança, veja [Desvinculando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
+Para obter mais informações sobre como desvincular grupos de segurança, veja [Desvinculando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
 * Para desvincular de um conjunto de grupos de segurança de Preparação padrão, use o comando a seguir:
 

@@ -5,7 +5,11 @@
 CLI- und Dev-Tools
 
 	{: .navgroup id="learn"}
-	index.md
+	{: .topicgroup}
+	Downloads
+	    index.md
+	    icat.md
+	    
 	[Einführung in die CF-Befehlszeilenschnittstelle (CLI)](https://github.com/cloudfoundry/cli#getting-started)
 	reference/bluemix_cli/index.md
 	
@@ -16,20 +20,21 @@ CLI- und Dev-Tools
 	
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
+	reference/bluemix_cli/all_versions.md
+	reference/softlayer/index.md
 	reference/cfcommands/index.md
 	reference/cloudcli/index.md
 	
 	{: .topicgroup}
-	Plug-ins für Bluemix-CLIs
+	Bluemix CLI-Plug-ins
 	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Containerservice (Cluster)](../containers/cs_cli_devtools.html)
+		[Container Service (Cluster)](../containers/cs_cli_devtools.html)
 		[Containerservice (einzelne und skalierbare Gruppen)](../containers/container_cli_cfic.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
 		[Schematics](../services/schematics/schematics_reference.html)
-		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	
 	{: .topicgroup}
@@ -40,14 +45,16 @@ CLI- und Dev-Tools
 	
 	{: .topicgroup}
 	Integrierte Entwicklungstools
-		[API Connect-Entwicklertoolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		ibm-dev-tools-for-vscode.md
+		[API Connect Developer Toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
-		[Apps mit IBM Eclipse-Tools für Bluemix bereitstellen](../manageapps/eclipsetools/eclipsetools.html)
-		[Liberty- und Node.js-Apps verwalten](../manageapps/app_mng.html#app_management)
+		[Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
+		[Liberty und Node.js Apps verwalten](../manageapps/app_mng.html#app_management)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
-	[Entwicklung mit Eclipse-Tools](../starters/deploy_eclipsetools.html)
+	login_federated_id.md
+	[Entwicklung mit Eclipse Tools](../starters/deploy_eclipsetools.html)
 	[App mit CLI bereitstellen](../starters/install_cli.html)
 	[App hochladen](../starters/upload_app.html)
 	{: .navgroup-end}

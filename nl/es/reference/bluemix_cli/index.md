@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -27,6 +27,32 @@ La interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} of
 ## Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
 
+<!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->
+
+### Instalación en línea
+
+Con acceso a una conexión a internet, copie y pegue el siguiente mandato en un terminal consola y ejecútelo.
+
+**macOS**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
+```
+
+**Linux**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+```
+
+**Windows PowerShell**
+
+Copie y pegue el mandato siguiente en una consola de terminal de [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell) y ejecútelo.
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+
+### Instalación fuera de línea
+
+<!-- End of online installation -->
 
 Para Mac OS y Windows, descargue el [paquete de CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) y ejecute el instalador.
 
@@ -69,7 +95,7 @@ La interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} admite u
 
 Puede instalar un plugin desde el repositorio, de forma local o desde un servidor remoto. {{site.data.keyword.Bluemix_notm}} tiene repositorios que contienen plugins de la CLI de {{site.data.keyword.Bluemix_notm}} y plugins de la CLI de Cloud Foundry:
 
-   * [Repositorio de plugins de la CLI de {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![icono de enlace externo](../../../icons/launch-glyph.svg), que contiene plugins de la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}.
+   * [Repositorio de plugins de la CLI de {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg), que contiene plugins de la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}.
 
 Para instalar desde el repositorio, siga estos pasos:
 
@@ -151,3 +177,9 @@ Para instalar desde un servidor remoto, siga estos pasos:
 
 
 Ahora estará listo para utilizar las líneas de mandatos de {{site.data.keyword.Bluemix_notm}}. Ejecute `bluemix help` para ver una lista de mandatos y sus descripciones. 
+
+## Póngase en contacto
+
+Utilice las opciones siguientes para encontrar información de la versión, proporcionar comentarios y formular preguntas:
+ * Para obtener detalles sobre los releases más recientes y que nos notifiquen los problemas: [{{site.data.keyword.Bluemix_notm}} CLI SDK](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg)
+ * Para formular preguntas y compartir conocimientos con la comunidad: [Canal Slack de la CLI de Bluemix](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg)

@@ -14,6 +14,7 @@ lastupdated: "2015-11-10"
 {:shortdesc: .shortdesc}
 
 # Outils de développement intégrés
+{: #Integrated_Dev_Tools}
 
 
 Les outils de développement intégrés tels que {{site.data.keyword.Bluemix}} vous permettent de mettre rapidement à jour l'instance

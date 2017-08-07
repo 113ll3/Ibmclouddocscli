@@ -820,7 +820,7 @@ cf -v
 ## Links Relacionados
 {: #general}
 
-* [Fazer download do Cloud Foundry CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+* [Fazer download da CLI do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
 * [Cartão de referência rápida - comandos cf ![Ícone de link externo](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}

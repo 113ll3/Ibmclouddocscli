@@ -37,7 +37,7 @@ bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 2. 若要安裝 {{site.data.keyword.autoscaling}} CLI 外掛程式，請執行下列指令：
 
 ```
-bluemix plugin install auto-scaling -r bluemix-plugin-repo
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## 附加自動擴充原則
@@ -59,10 +59,9 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 
 ## 產生自動擴充原則
 
-您可以透過回答指令行介面上的問題來產生自動擴充原則。視您的輸入而定，包含自動擴充原則之定義的 JSON 檔案會以您輸入的名稱儲存。如果您未輸入檔名，原則內容會直接列印至指令行，而不會將它儲存至檔案。請執行下列指令：
+您可以透過在指令行介面上回答問題來產生自動擴充原則。視您的輸入而定，會以您輸入的名稱儲存一個包含自動擴充原則定義的 JSON 檔案。如果您未輸入檔名，原則內容會直接列印至指令行，而不會將它儲存至檔案。請執行下列指令：
 
 ```
-
 bx as policy-create
 ```
 {: codeblock}
@@ -86,7 +85,7 @@ bx as policy-show <APP_NAME> [--json]
 **提示：**您也可以使用 **--json** 選項，來進行原始 JSON 回應的細緻列印。
 
 
-## 分割自動擴充原則
+## 分離自動擴充原則
 
 您可以從應用程式移除自動擴充原則。請執行下列指令：
 
@@ -97,7 +96,7 @@ bx as policy-detach <APP_NAME>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
-<dd class="pd">您要分割其自動擴充原則的應用程式名稱。</dd>
+<dd class="pd">您要分離其自動擴充原則的應用程式名稱。</dd>
 </dl>
 
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-05-12"
+lastupdated: "2017-06-22"
 
 
 ---
@@ -15,8 +15,7 @@ lastupdated: "2017-05-12"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.registrylong_notm}} CLI
-{: #containerregcli}
+# {{site.data.keyword.registrylong_notm}} CLI {: #containerregcli}
 
 {{site.data.keyword.registrylong}} CLI は、レジストリーと、アカウント用のレジストリー・リソースを管理するためのプラグインです。
 {: shortdesc}
@@ -24,7 +23,7 @@ lastupdated: "2017-05-12"
 ** の前提条件**
 * レジストリー・コマンドを実行する前に、`bx login` コマンドを使用して {{site.data.keyword.Bluemix_short}} にログインし、{{site.data.keyword.Bluemix_short}} アクセス・トークンを生成して、セッションを認証します。
 
-{{site.data.keyword.registrylong}} CLI の使用方法については、『[IBM Bluemix Container Registry の概要](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup)』を参照してください。
+{{site.data.keyword.registrylong}} CLI の使用方法については、[プライベート・イメージ・レジストリーのセットアップ (Setting up a private images registry)](../../../services/Registry/index.html) を参照してください。
 
 <table summary="コンテナー・レジストリーの管理">
 <caption>表 1. {{site.data.keyword.Bluemix_short}} 上の {{site.data.keyword.registryshort}} を管理するためのコマンド
@@ -46,20 +45,20 @@ lastupdated: "2017-05-12"
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td> 
+ <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
- <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
- <td>[bx cr token-get](#bx_cr_token_get)</td>
-
  </tr>
-  <tr>
+ <tr>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
- <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
- <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
 
@@ -77,6 +76,8 @@ bx cr api
 
 
 ## bx cr info
+{: #bx_cr_info}
+
 ログイン先のレジストリーの名前とアカウントを表示します。
 
 ```
@@ -86,25 +87,30 @@ bx cr info
 
 
 ## bx cr image-inspect
+{: #bx_cr_image_inspect}
+
 特定のイメージに関する詳細を表示します。
 
 ```
-bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
+bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 ```
 {: codeblock}
 
 **パラメーター**
 
-
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。</dd>
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。詳しくは、[イメージに関する情報の表示 (Viewing information about images)](../../../services/Registry/registry_cli_reference.html#registry_cli_listing) を参照してください。
+
+</dd>
 <dt>IMAGE</dt>
 <dd>検査するイメージへの絶対 {{site.data.keyword.Bluemix_short}} レジストリー・パス (`namespace/image:tag` 形式)。イメージ・パスにタグが指定されていない場合、`latest` というタグが付いたイメージが検査されます。このコマンドでは、各パスの間をスペースで区切って、それぞれの専用 {{site.data.keyword.Bluemix_short}} レジストリー・パスをリストすることにより、複数のイメージを検査できます。</dd>
 </dl>
 
 
 ## bx cr image-list (bx cr images)
+{: #bx_cr_image_list}
+
 {{site.data.keyword.Bluemix_short}} アカウント内のすべてのイメージを表示します。
 
 ```
@@ -121,16 +127,19 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--include-ibm</dt>
 <dd>(オプション) 出力に IBM 提供のパブリック・イメージを含めます。このオプションを指定しない場合、デフォルトではプライベート・イメージのみがリストされます。</dd>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。</dd>
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。詳しくは、[イメージに関する情報の表示 (Viewing information about images)](../../../services/Registry/registry_cli_reference.html#registry_cli_listing) を参照してください。
 
+</dd>
 </dl>
 
 
 ## bx cr image-rm
+{: #bx_cr_image_rm}
+
 指定された 1 つ以上のイメージをレジストリーから削除します。
 
 ```
-bx cr image-rm IMAGE [IMAGE]
+bx cr image-rm IMAGE [IMAGE...]
 ```
 {: codeblock}
 
@@ -143,6 +152,8 @@ bx cr image-rm IMAGE [IMAGE]
 
 ## bx cr login
 
+{: #bx_cr_login}
+
 このコマンドはレジストリーに対して `docker login` コマンドを実行します。`docker login` コマンドは、レジストリーに対して `docker push` または `docker pull` のコマンドを実行できるようにするために必要です。このコマンドは、その他の `bx cr` コマンドを実行するためには必要ではありません。Docker がインストールされていない場合、このコマンドはエラー・メッセージを返します。
 
 ```
@@ -152,6 +163,8 @@ bx cr login
 
 
 ## bx cr namespace-add
+{: #bx_cr_namespace_add}
+
 {{site.data.keyword.Bluemix_short}} アカウントに名前空間を追加します。
 
 ```
@@ -167,6 +180,8 @@ bx cr namespace-add NAMESPACE
 
 
 ## bx cr namespace-list (bx cr namespaces)
+{: #bx_cr_namespace_list}
+
 {{site.data.keyword.Bluemix_short}} アカウントが所有するすべての名前空間を表示します。
 
 ```
@@ -176,6 +191,8 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
+{: #bx_cr_namespace_rm}
+
 {{site.data.keyword.Bluemix_short}} アカウントから名前空間を削除します。名前空間を削除すると、この名前空間内のイメージが削除されます。
 
 ```
@@ -189,7 +206,7 @@ bx cr namespace-rm NAMESPACE
 <dd>削除する名前空間。</dd>
 </dl>
 
-<!-- audience blue staging only begin comment -->
+
 
 ## bx cr plan
 {: #bx_cr_plan}
@@ -201,10 +218,13 @@ bx cr plan
 ```
 {: codeblock}
 
+
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-指定された割り当て量を変更します。
+指定されたプランにアップグレードします。
+
+プランについて詳しくは、[レジストリー・プラン (Registry plans)](../../../services/Registry/registry_overview.html#registry_plans) を参照してください。
 
 ```
 bx cr plan-upgrade PLAN
@@ -221,6 +241,26 @@ bx cr plan-upgrade PLAN
 </ul>
 </dl>
 
+
+## bx cr pricing
+{: #bx_cr_pricing}
+
+ユーザーの無料ストレージとプル・トラフィックの許可量を考慮して、使用量の推定コストを米ドルで計算します。
+
+```
+bx cr pricing --traffic VALUE --storage VALUE
+```
+{: codeblock}
+
+**パラメーター**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>予想される毎月のプル・トラフィックをメガバイトで指定します。トラフィックは整数で指定する必要があります。</dd>
+<dt>--storage VALUE</dt>
+<dd>予想される平均合計ストレージをメガバイトで指定します。ストレージは整数で指定する必要があります。</dd>
+</dl>
+
+
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -230,6 +270,7 @@ bx cr plan-upgrade PLAN
 bx cr quota
 ```
 {: codeblock}
+
 
 ## bx cr quota-set
 {: #bx_cr_quota_set}
@@ -249,9 +290,10 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>(オプション) ストレージ割り当て量を、指定された値に変更します。ストレージ割り当て量を設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
 </dl>
 
-<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
+{: #bx_cr_token_add}
+
 レジストリーへのアクセスを制御するために使用できるトークンを追加します。
 
 ```
@@ -275,6 +317,8 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 
 ## bx cr token-get
+{: #bx_cr_token_get}
+
 指定されたトークンをレジストリーから取得します。
 
 ```
@@ -291,6 +335,8 @@ bx cr token-get TOKEN
 
 
 ## bx cr token-list (bx cr tokens)
+{: #bx_cr_token_list}
+
 {{site.data.keyword.Bluemix_short}} アカウント用に存在するすべてのトークンを表示します。
 
 ```
@@ -301,15 +347,18 @@ bx cr token-list --format FORMAT
 **パラメーター**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。</dd>
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。詳しくは、[イメージに関する情報の表示 (Viewing information about images)](../../../services/Registry/registry_cli_reference.html#registry_cli_listing) を参照してください。
+
+</dd>
 </dl>
 
-
 ## bx cr token-rm
+{: #bx_cr_token_rm}
+
 指定された 1 つ以上のトークンを削除します。
 
 ```
-bx cr token-rm TOKEN [TOKEN]
+bx cr token-rm TOKEN [TOKEN...]
 ```
 {: codeblock}
 
@@ -318,6 +367,7 @@ bx cr token-rm TOKEN [TOKEN]
 <dt>TOKEN</dt>
 <dd>(オプション) TOKEN には、トークン自体またはトークンの固有 ID (`bx cr token-list` で表示される) のいずれかを指定できます。複数のトークンを、スペースで区切って指定できます。</dd>
 </dl>
+
 
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
@@ -335,15 +385,17 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <dd>レポートを取得するイメージへの絶対 {{site.data.keyword.Bluemix_short}} レジストリー・パス (フォーマットは `namespace/image:tag`)。このレポートは、イメージに、既知のパッケージ脆弱性があるかどうかを報告します。以下のオペレーティング・システムがサポートされています。
 
 <ul>
+
+<li>Alpine</li>
 <li>CentOS</li>
 <li>Debian</li>
 <li>Red Hat Enterprise Linux (RHEL)</li>
 <li>Ubuntu</li>
 </ul>
 
-</dd>
+詳しくは、[イメージ・セキュリティーの検討](../../../services/Registry/registry_images_.html#registry_security_checking)を参照してください。
 
 </dd>
+
 </dl>
-
 

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -24,9 +24,35 @@ La CLI {{site.data.keyword.Bluemix_notm}} ti offre una modalità unificata per i
 
 **Nota:** lo strumento CLI {{site.data.keyword.Bluemix_notm}} include un'interfaccia riga di comando Cloud Foundry nella sua installazione. Tuttavia, non è consentito utilizzare in combinazione i comandi della CLI {{site.data.keyword.Bluemix_notm}} `bx xxx` e quelli della CLI Cloud Foundry `cf xxx` se disponi della tua propria installazione della cli cf. Usa invece `bluemix cf` se intendi utilizzare la cli cf per gestire le risorse Cloud Foundry. Nel backend, questo esegue i comandi della CLI Cloud Foundry integrata in un contesto condiviso con la CLI {{site.data.keyword.Bluemix_notm}}.  Inoltre,  `bluemix cf api/login/logout/target` non è consentito e devi utilizzare invece `bluemix api/login/logout/target`.
 
-## Installazione della CLI {{site.data.keyword.Bluemix_notm}}
+## Installazine della CLI {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
 
+<!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->
+
+### Installazione online
+
+Con l'accesso a una connessione Internet, copia e incolla il seguente comando in una console del terminale ed eseguilo.
+
+**macOS**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
+```
+
+**Linux**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+```
+
+**Windows PowerShell**
+
+Copia e incolla il seguente comando in una console del terminale [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell) ed eseguilo.
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+
+### Installazione offline
+
+<!-- End of online installation -->
 
 Per Mac OS e Windows, scarica il [pacchetto CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) ed esegui il programma di installazione.
 
@@ -159,3 +185,9 @@ esempio:
 
 
 Sei ora pronto a utilizzare le righe di comando {{site.data.keyword.Bluemix_notm}}. Esegui `bluemix help` per visualizzare l'elenco dei comandi e le descrizioni. 
+
+## Contattaci
+
+Utilizza le seguenti opzioni per trovare informazioni sulle release, fornire un feedback e fare delle domande:
+ * Per i dettagli sulle ultime release e per segnalare problemi: [SDK CLI {{site.data.keyword.Bluemix_notm}} ](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg)
+ * Per fare domande e condividere informazioni con la community: [Canale Slack bluemix-cli](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg)

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-05-12"
+lastupdated: "2017-06-22"
 
 
 ---
@@ -24,7 +24,7 @@ lastupdated: "2017-05-12"
 **先决条件**
 * 运行注册表命令之前，请先使用 `bx login` 命令登录到 {{site.data.keyword.Bluemix_short}}，以生成 {{site.data.keyword.Bluemix_short}} 访问令牌并对会话进行认证。
 
-要了解如何使用 {{site.data.keyword.registrylong}} CLI，请参阅 [IBM Bluemix Container Registry 概述](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup)。
+要了解如何使用 {{site.data.keyword.registrylong}} CLI，请参阅[设置专用映像注册表](../../../services/Registry/index.html)。
 
 <table summary="管理容器注册表">
 <caption>表 1. 用于在 {{site.data.keyword.Bluemix_short}} 上管理 {{site.data.keyword.registryshort}} 的命令</caption>
@@ -44,20 +44,20 @@ lastupdated: "2017-05-12"
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td> 
+ <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
- <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
- <td>[bx cr token-get](#bx_cr_token_get)</td>
-
  </tr>
-  <tr>
+ <tr>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
- <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
- <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
 
@@ -75,6 +75,8 @@ bx cr api
 
 
 ## bx cr info
+{: #bx_cr_info}
+
 显示您登录到的注册表的名称和帐户。
 
 ```
@@ -84,25 +86,30 @@ bx cr info
 
 
 ## bx cr image-inspect
+{: #bx_cr_image_inspect}
+
 显示有关特定映像的详细信息。
 
 ```
-bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
+bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 ```
 {: codeblock}
 
 **参数**
 
-
 <dl>
 <dt>--format FORMAT</dt>
-<dd>（可选）使用 Go 模板设置输出元素的格式。</dd>
+<dd>（可选）使用 Go 模板设置输出元素的格式。有关更多信息，请参阅[查看有关映像的信息](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+
+</dd>
 <dt>IMAGE</dt>
 <dd>要检查的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 `namespace/image:tag`。如果未在映像路径中指定标记，那么会检查标记为 `latest` 的映像。可以通过在命令中列出每个专用 {{site.data.keyword.Bluemix_short}} 注册表路径（各路径之间用空格分隔）来检查多个映像。</dd>
 </dl>
 
 
 ## bx cr image-list (bx cr images)
+{: #bx_cr_image_list}
+
 显示 {{site.data.keyword.Bluemix_short}} 帐户中的所有映像。
 
 ```
@@ -119,16 +126,19 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--include-ibm</dt>
 <dd>（可选）在输出中包含 IBM 提供的公共映像。不使用此选项时，缺省情况下仅列出专用映像。</dd>
 <dt>--format FORMAT</dt>
-<dd>（可选）使用 Go 模板设置输出元素的格式。</dd>
+<dd>（可选）使用 Go 模板设置输出元素的格式。有关更多信息，请参阅[查看有关映像的信息](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
+</dd>
 </dl>
 
 
 ## bx cr image-rm
+{: #bx_cr_image_rm}
+
 从注册表中删除指定的一个或多个映像。
 
 ```
-bx cr image-rm IMAGE [IMAGE]
+bx cr image-rm IMAGE [IMAGE...]
 ```
 {: codeblock}
 
@@ -140,6 +150,8 @@ bx cr image-rm IMAGE [IMAGE]
 
 
 ## bx cr login
+{: #bx_cr_login}
+
 此命令将对注册表运行 `docker login` 命令。必须运行 `docker login` 后，才能对注册表运行 `docker push` 或 `docker pull` 命令。无须运行此命令，即可运行其他 `bx cr` 命令。如果未安装 Docker，那么此命令会返回错误消息。
 
 ```
@@ -149,6 +161,8 @@ bx cr login
 
 
 ## bx cr namespace-add
+{: #bx_cr_namespace_add}
+
 向 {{site.data.keyword.Bluemix_short}} 帐户添加名称空间。
 
 ```
@@ -164,6 +178,8 @@ bx cr namespace-add NAMESPACE
 
 
 ## bx cr namespace-list (bx cr namespaces)
+{: #bx_cr_namespace_list}
+
 显示 {{site.data.keyword.Bluemix_short}} 帐户拥有的所有名称空间。
 
 ```
@@ -173,6 +189,8 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
+{: #bx_cr_namespace_rm}
+
 从 {{site.data.keyword.Bluemix_short}} 帐户中除去名称空间。除去名称空间时，会删除此名称空间中的映像。
 
 ```
@@ -186,7 +204,7 @@ bx cr namespace-rm NAMESPACE
 <dd>要除去的名称空间。</dd>
 </dl>
 
-<!-- audience blue staging only begin comment -->
+
 
 ## bx cr plan
 {: #bx_cr_plan}
@@ -198,10 +216,13 @@ bx cr plan
 ```
 {: codeblock}
 
+
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-修改指定配额。
+升级到指定套餐。
+
+有关套餐的信息，请参阅[注册表套餐](../../../services/Registry/registry_overview.html#registry_plans)。
 
 ```
 bx cr plan-upgrade PLAN
@@ -211,12 +232,32 @@ bx cr plan-upgrade PLAN
 **参数**
 <dl>
 <dt>套餐</dt>
-<dd> 升级到指定套餐。以下套餐可用：
+<dd> 升级到指定套餐。以下是可用的套餐：
 <ul>
 <li>免费</li>
 <li>标准</li>
 </ul>
 </dl>
+
+
+## bx cr pricing
+{: #bx_cr_pricing}
+
+计算使用量的估算成本（美元），将免费存储量和拉出流量限额考虑在内。
+
+```
+bx cr pricing --traffic VALUE --storage VALUE
+```
+{: codeblock}
+
+**参数**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>指定预期的每月拉出流量（兆字节）。流量必须指定为整数。</dd>
+<dt>--storage VALUE</dt>
+<dd>指定预期的平均总存储量（兆字节）。存储量必须指定为整数。</dd>
+</dl>
+
 
 ## bx cr quota
 {: #bx_cr_quota}
@@ -227,6 +268,7 @@ bx cr plan-upgrade PLAN
 bx cr quota
 ```
 {: codeblock}
+
 
 ## bx cr quota-set
 {: #bx_cr_quota_set}
@@ -246,9 +288,10 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>（可选）将存储配额更改为指定的值。如果您无权设置存储配额或者您设置的值超出当前定价套餐，那么操作将失败。</dd>
 </dl>
 
-<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
+{: #bx_cr_token_add}
+
 添加可用于控制对注册表的访问权的令牌。
 
 ```
@@ -272,6 +315,8 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 
 ## bx cr token-get
+{: #bx_cr_token_get}
+
 在注册表中检索指定的令牌。
 
 ```
@@ -288,6 +333,8 @@ bx cr token-get TOKEN
 
 
 ## bx cr token-list (bx cr tokens)
+{: #bx_cr_token_list}
+
 显示针对您的 {{site.data.keyword.Bluemix_short}} 帐户存在的所有令牌。
 
 ```
@@ -298,15 +345,18 @@ bx cr token-list --format FORMAT
 **参数**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>（可选）使用 Go 模板设置输出元素的格式。</dd>
+<dd>（可选）使用 Go 模板设置输出元素的格式。有关更多信息，请参阅[查看有关映像的信息](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+
+</dd>
 </dl>
 
-
 ## bx cr token-rm
+{: #bx_cr_token_rm}
+
 除去指定的一个或多个令牌。
 
 ```
-bx cr token-rm TOKEN [TOKEN]
+bx cr token-rm TOKEN [TOKEN...]
 ```
 {: codeblock}
 
@@ -315,6 +365,7 @@ bx cr token-rm TOKEN [TOKEN]
 <dt>TOKEN</dt>
 <dd>（可选）TOKEN 可以是令牌本身，也可以是令牌的唯一标识，如 `bx cr token-list` 中所示。可以指定多个令牌，令牌之间必须用一个空格分隔。</dd>
 </dl>
+
 
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
@@ -329,18 +380,20 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 **参数**
 <dl>
 <dt>IMAGE</dt>
-<dd>您要获取报告的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 `namespace/image:tag`。报告将告知您映像是否具有任何已知的包漏洞。支持以下操作系统：
+<dd>您要获取其报告的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 `namespace/image:tag`。报告将告知您映像是否具有任何已知的包漏洞。以下是支持的操作系统：
 
 <ul>
+
+<li>Alpine</li>
 <li>CentOS</li>
 <li>Debian</li>
 <li>Red Hat Enterprise Linux (RHEL)</li>
 <li>Ubuntu</li>
 </ul>
 
-</dd>
+有关更多信息，请参阅[查看映像安全性](../../../services/Registry/registry_images_.html#registry_security_checking)。
 
 </dd>
+
 </dl>
-
 

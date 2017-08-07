@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -27,6 +27,32 @@ lastupdated: "2017-03-08"
 ## {{site.data.keyword.Bluemix_notm}} CLI 설치
 {: #install_bluemix_cli}
 
+<!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->
+
+### 온라인 설치
+
+인터넷 연결에 액세스한 상태에서 다음 명령을 터미널 콘솔에 복사해서 붙여넣고 실행하십시오.
+
+**macOS**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
+```
+
+**Linux**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+```
+
+**Windows PowerShell**
+
+다음 명령을 [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell) 터미널 콘솔에 복사해서 붙여넣고 실행하십시오.
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+
+### 오프라인 설치
+
+<!-- End of online installation -->
 
 Mac OS 및 Windows의 경우, [{{site.data.keyword.Bluemix_notm}} CLI 패키지](/docs/cli/index.html#downloads)를 다운로드하고 설치 프로그램을 실행하십시오. 
 
@@ -151,3 +177,9 @@ Linux의 경우, 다음 단계를 수행하십시오.
 
 
 {{site.data.keyword.Bluemix_notm}} 명령행을 사용할 준비가 되었습니다. `bluemix help`를 실행하여 명령 및 설명 목록을 확인하십시오. 
+
+## 연락하기
+
+릴리스 정보 찾기, 피드백 제공, 질문하기에는 다음 옵션을 사용하십시오. 
+ * 최신 릴리스에 대한 세부사항의 경우 및 문제 보고하기: [{{site.data.keyword.Bluemix_notm}} CLI SDK](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)
+ * 질문하기 및 커뮤니티와 지식 공유하기: [bluemix-cli Slack channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)

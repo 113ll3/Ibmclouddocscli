@@ -22,7 +22,7 @@ lastupdated: "2011-01-12"
 Vous pouvez configurer le service {{site.data.keyword.autoscaling}} à l'aide de l'interface de ligne de commande {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}. L'interface de ligne de commande {{site.data.keyword.autoscaling}} prend en charge Linux64, Win64 et OSX, et fournit des fonctionnalités semblables à celles de l'API RESTful de mise à l'échelle automatique.
 {: shortdesc}
 
-Avant de commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir [Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} pour des instructions.
+Avant de commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir le site [Interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} pour obtenir des instructions.
 
 ## Ajout du plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
@@ -35,7 +35,7 @@ bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Pour installer le plug-in de l'interface de ligne de commande {{site.data.keyword.autoscaling}}, exécutez la commande suivante :
 ```
-bluemix plugin install auto-scaling -r bluemix-plugin-repo
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## Association d'une règle de mise à l'échelle automatique
@@ -139,5 +139,5 @@ bx as history-show <NOM_APP>  [--start-date=<horodatage_début>]  [--end-date=<h
 ## general
 {: general}
 * [{{site.data.keyword.autoscaling}} service](/docs/services/Auto-Scaling/index.html)
-* [Interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [Interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard ![icône de lien externe](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

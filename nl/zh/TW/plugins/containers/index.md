@@ -8,7 +8,6 @@ copyright:
 
 lastupdated: "2017-01-12"
 
-
 ---
 
 {:codeblock: .codeblock}
@@ -217,18 +216,18 @@ bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
    <dt><i>SOURCE_IMAGE</i>（必要）</dt>
    <dd>來源儲存庫及映像檔名稱。</dd>
    <dt><i>DESTINATION_IMAGE</i>（必要）</dt>
-   <dd>專用 {{site.data.keyword.Bluemix_notm}} 儲存庫 URL（包含名稱空間及目的地映像檔名稱）。映像檔的標記是選用性的。</dd>
+   <dd>專用 {{site.data.keyword.Bluemix_notm}} 儲存庫 URL（包含名稱空間及目的地映像檔名稱）。映像檔的標籤是選用性的。</dd>
    </dl>
 
 <strong>範例</strong>：
 
-將映像檔從來源儲存庫複製到專用儲存庫，並新增映像檔的標記：
+將映像檔從來源儲存庫複製到專用儲存庫，並新增映像檔的標籤：
 
 ```
 bluemix ic cpi source_repository/source_image_name private_registry_URL/destination_image_name:tag
 ```
 
-將 `sinatra` 映像檔從 `training` 儲存庫複製到專用儲存庫 `registry.ng.bluemix.net/mynamespace`，並將映像檔命名為 `mysinatra`。請新增映像檔 `mysinatra` 的標記 `v1`。
+將 `sinatra` 映像檔從 `training` 儲存庫複製到專用儲存庫 `registry.ng.bluemix.net/mynamespace`，並將映像檔命名為 `mysinatra`。請新增映像檔 `mysinatra` 的標籤 `v1`。
 
 ```
 bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
@@ -307,11 +306,12 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
     </dl>
 
 
-|  環境變數                              |     說明                            |
+|  環境變數|     說明
+|
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們包含為相同環境變數的一部分。 |
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。請包含 `LOG_LOCATIONS` 環境變數與日誌檔路徑。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。|
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們包含為相同環境變數的一部分。|
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。請包含 `LOG_LOCATIONS` 環境變數與日誌檔路徑。|
 {: caption="表 2. 常用環境變數" caption-side="top"}
 
  <dl>
@@ -343,9 +343,9 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>建立容器群組並啟用自動回復後，IBM Containers 會對所指派的埠提出 HTTP 要求，以檢查每個實例的性能。<br>
 如果您未在兩個後續 90 秒間隔內收到來自容器實例的回應，則會移除實例，並將其取代為新的實例。如果容器回應，則不需要採取任何動作。此處理程序會不斷地重複。在 30 分鐘時間範圍期間，如果本身為群組成員的不同容器總數等於或超出觀察到的群組大小上限的 3 倍，則會永久停用容器群組的自動回復。若要重新啟用自動回復，您必須重建容器群組。</dd>
   <dt>--anti（選用）</dt>
-  <dd> 使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而損毀的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 Bluemix 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
+  <dd> 使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而當機的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 Bluemix 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
    <dt><i>CMD</i>（選用）</dt>
-   <dd>傳遞給容器群組執行的指令及引數。這個指令必須是長時間執行的指令。請不要使用不會執行很久的短期指令（例如，<i>/bin/date</i>），因為短期指令可能會導致容器損毀。<br> <strong>附註：</strong> <ul>
+   <dd>傳遞給容器群組執行的指令及引數。這個指令必須是長時間執行的指令。請不要使用不會執行很久的短期指令（例如，<i>/bin/date</i>），因為短期指令可能會導致容器當機。<br> <strong>附註：</strong> <ul>
    <li>指令及其引數必須在 <i>bluemix ic run</i> 指令行的結尾。</li>
    <li>如果指令引數包含連字號 -（如前一個範例指令中的 <i>-c</i>），則指令前面必須有兩個連字號 --。</li>
    </ul></dd>
@@ -466,14 +466,14 @@ bluemix ic group-remove my_group
 bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=ENV_VAL] GROUP_NAME
 ```
 
-**提示：**若要更新容器群組的主機名稱或網域，請使用 `bluemix ic route-map [-n HOST][-d DOMAIN] CONTAINER_GROUP`。
+**提示：**若要更新容器群組的主機名稱或網域，請使用 `bluemix ic route-map [-n HOST] [-d DOMAIN] CONTAINER_GROUP`。
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
  <dl>
    <dt>--anti（選用）</dt>
-   <dd>使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而損毀的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 Bluemix 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
+   <dd>使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而當機的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 Bluemix 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>（選用）</dt>
    <dd>您需要的實例數。預設值為 <i>2</i>。</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>（選用）</dt>
@@ -699,7 +699,7 @@ bluemix ic ip-unbind IP_ADDRESS CONTAINER
 
 <strong>範例</strong>：
 
-下列範例顯示取消 IP 位址 `192.123.12.12` 與容器 `proxy` 的連結的要求：
+下列範例顯示取消 IP 位址 `192.123.12.12` 與容器 `proxy` 之連結的要求：
 
 ```
 bluemix ic ip-unbind 192.123.12.12 proxy
@@ -915,7 +915,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
    <dt>--force|-f（選用）</dt>
    <dd>強制在 Bluemix 空間中重建 IBM Containers 服務。</dd>
    <dt><i>AVAILABILITY_ZONE</i>（選用）</dt>
-   <dd>在其中部署容器的 IBM Containers 可用性區域的名稱。如果未指定任何可用性區域，則會使用針對地區所設定的預設可用性區域。</dd>
+   <dd>容器部署所在之 IBM Containers 可用性區域的名稱。如果未指定任何可用性區域，則會使用針對地區所設定的預設可用性區域。</dd>
    </dl>
 
 
@@ -1019,7 +1019,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
    <dt>-R <i>REGISTRY</i>|--registry <i>REGISTRY</i>（選用）</dt>
    <dd>變更登錄主機。預設值為使用您在 <i>bluemix ic init</i> 指令中指定的登錄。</dd>
    <dt><i>IMAGE</i>（必要）</dt>
-   <dd>您要移除之映像檔的名稱。如果映像檔名稱中未指定標籤，則依預設會刪除標記為 <i>latest</i> 的映像檔。</dd>
+   <dd>您要移除之映像檔的名稱。如果映像檔名稱中未指定標籤，則依預設會刪除以 <i>latest</i> 標記的映像檔。</dd>
    </dl>
 
 <strong>回應</strong>：
@@ -1134,11 +1134,12 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    </dl>
 
 
-|      環境變數                          |   說明                              |
+|      環境變數|   說明
+|
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們包含為相同環境變數的一部分。 |
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。請包含 `LOG_LOCATIONS` 環境變數與日誌檔路徑。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。|
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們包含為相同環境變數的一部分。|
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。請包含 `LOG_LOCATIONS` 環境變數與日誌檔路徑。|
 {: caption="表 3. 常用環境變數" caption-side="top"}
 
 
@@ -1159,7 +1160,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    <dt><i>IMAGE</i>（必要）</dt>
    <dd>要包含在容器中的映像檔。您可以在映像檔之後列出指令，但不能在映像檔之後放置任何選項。請在指定映像檔之前包含所有選項。請在指定映像檔之前包含所有選項。<br><br>如果您使用組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果您使用 IBM Containers 所提供的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
    <dt><i>CMD</i>（選用）</dt>
-   <dd>傳遞給容器群組執行的指令及引數。這個指令必須是長時間執行的指令。請不要使用不會執行很久的短期指令（例如，<i>/bin/date</i>），因為短期指令可能會導致容器損毀。</dd>
+   <dd>傳遞給容器群組執行的指令及引數。這個指令必須是長時間執行的指令。請不要使用不會執行很久的短期指令（例如，<i>/bin/date</i>），因為短期指令可能會導致容器當機。</dd>
    </dl>
 
 

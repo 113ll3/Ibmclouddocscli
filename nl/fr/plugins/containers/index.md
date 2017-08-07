@@ -289,8 +289,7 @@ FICHIER_VARIABLE_ENVIRONNEMENT] [-P false|true] [--volume] [--min NOMBRE_MIN_INS
    <dd>Image à inclure dans chaque instance de conteneur dans le groupe de conteneurs. Vous pouvez spécifier des commandes après l'image, mais n'indiquez pas d'options. Incluez toutes les options avant de spécifier une image. <br><br>Si vous utilisez une image qui se trouve dans le référentiel {{site.data.keyword.Bluemix_notm}} privé de votre organisation, spécifiez l'image au format <i>registry.ng.bluemix.net/ESPACE_NOM/IMAGE</i>. <br><br>Si vous utilisez une image fournie par IBM Containers, n'incluez pas l'espace de nom de votre organisation. Spécifiez l'image au format <i>registry.ng.bluemix.net/IMAGE</i>. </dd>
    <dt>--name <i>NOM_GROUPE</i> (requis)</dt>
    <dd>Attribue un nom au groupe. <i>-n</i> est obsolète.<br>
-   <strong>Astuce :</strong> le nom de conteneur doit commencer par une lettre. Il peut inclure des lettres majuscules, des
-lettres minuscules, des chiffres, des points, des traits de soulignement (_) ou des traits d'union (-).</dd>
+   <strong>Astuce :</strong> le nom de conteneur doit commencer par une lettre. Il peut inclure des lettres majuscules, des lettres minuscules, des chiffres, des points, des traits de soulignement (_) ou des traits d'union (-).</dd>
    <dt>-m <i>TAILLE_MEMOIRE</i>|--memory <i>TAILLE_MEMOIRE</i> (facultatif)</dt>
    <dd>Affecte une limite de mémoire, en Mo, au groupe. Lorsque vous créez un groupe de conteneurs depuis l'interface de ligne de commande, la valeur par défaut pour chaque instance de conteneur est <i>64</i> Mo. Lorsque vous créez un groupe de conteneurs depuis le tableau de bord {{site.data.keyword.Bluemix_notm}}, la valeur par défaut pour chaque instance de conteneur est <i>256</i> Mo. Les valeurs admises sont <i>64</i>, <i>256</i>, <i>512</i>, <i>1024</i> et <i>2048</i>. Une fois que vous avez affecté une limite de mémoire, vous ne pouvez plus la modifier.</dd>
    <dt>-n <i>NOM_HOTE</i>|--hostname <i>NOM_HOTE</i> (facultatif)</dt>
@@ -304,12 +303,8 @@ lettres minuscules, des chiffres, des points, des traits de soulignement (_) ou 
 
 |  Variable d'environnement                              |     Description                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;nom_app&gt;*       | Liez un service à un conteneur. Utilisez la variable d'environnement `CCS_BIND_APP` pour lier
-une application au conteneur. L'application est liée au service cible et sert de pont qui permet à {{site.data.keyword.Bluemix_notm}} de fournir les informations contenues dans la variable `VCAP_SERVICES` de votre application pont à votre instance de conteneur en cours d'exécution. Pour plus d'informations sur la création d'une application pont, voir
-[Liaison d'un service à un conteneur](../../../containers/container_integrations_binding.html){: new_window}. |
-| CCS_BIND_SRV=*&lt;nom_instance_service1&gt;*,*&lt;nom_instance_service2&gt;* | Pour lier un service Bluemix directement à un
-conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans
-l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
+| CCS_BIND_APP=*&lt;nom_app&gt;*       | Liez un service à un conteneur. Utilisez la variable d'environnement `CCS_BIND_APP` pour lier une application au conteneur. L'application est liée au service cible et sert de pont qui permet à {{site.data.keyword.Bluemix_notm}} de fournir les informations contenues dans la variable `VCAP_SERVICES` de votre application pont à votre instance de conteneur en cours d'exécution. Pour plus d'informations sur la création d'une application pont, voir [Liaison d'un service à un conteneur](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_SRV=*&lt;nom_instance_service1&gt;*,*&lt;nom_instance_service2&gt;* | Pour lier un service Bluemix directement à un conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
 | LOG_LOCATIONS=*&lt;chemin_fichier&gt;* | Ajoutez un fichier journal à surveiller dans le conteneur. Incluez la variable d'environnement `LOG_LOCATIONS` avec un chemin d'accès au fichier journal. |
 {: caption="Tableau 2. Variables d'environnement couramment utilisées" caption-side="top"}
 
@@ -462,7 +457,7 @@ Mettez à jour un groupe de conteneurs.
 bluemix ic group-update [--anti] [--desired NOMBRE_INSTANCES_SOUHAITE] [-e ENV_KEY=VAL_ENV] NOM_GROUPE
 ```
 
-**Astuce :** afin de mettre à jour le nom d'hôte ou le domaine pour un groupe de conteneurs, utilisez `bluemix ic route-map [-n HOTE][-d DOMAIN] GROUPE_CONTENEURS`.
+**Astuce :** afin de mettre à jour le nom d'hôte ou le domaine pour un groupe de conteneurs, utilisez `bluemix ic route-map [-n HOTE] [-d DOMAIN] GROUPE_CONTENEURS`.
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
 
@@ -1133,12 +1128,8 @@ d'une connexion à l'aide de `bluemix login` et de `bluemix ic init` génère le
 
 |      Variable d'environnement                          |   Description                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;nom_app&gt;*       | Liez un service à un conteneur. Utilisez la variable d'environnement `CCS_BIND_APP` pour lier
-une application au conteneur. L'application est liée au service cible et sert de pont qui permet à {{site.data.keyword.Bluemix_notm}} de fournir les informations contenues dans la variable `VCAP_SERVICES` de votre application pont dans votre instance de conteneur en cours d'exécution. Pour plus d'informations sur la création d'une application pont, voir
-[Liaison d'un service à un conteneur](../../../containers/container_integrations_binding.html){: new_window}. |
-| CCS_BIND_SRV=*&lt;nom_instance_service1&gt;*,*&lt;nom_instance_service2&gt;* | Pour lier un service Bluemix directement à un
-conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans
-l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
+| CCS_BIND_APP=*&lt;nom_app&gt;*       | Liez un service à un conteneur. Utilisez la variable d'environnement `CCS_BIND_APP` pour lier une application au conteneur. L'application est liée au service cible et sert de pont qui permet à {{site.data.keyword.Bluemix_notm}} de fournir les informations contenues dans la variable `VCAP_SERVICES` de votre application pont dans votre instance de conteneur en cours d'exécution. Pour plus d'informations sur la création d'une application pont, voir [Liaison d'un service à un conteneur](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_SRV=*&lt;nom_instance_service1&gt;*,*&lt;nom_instance_service2&gt;* | Pour lier un service Bluemix directement à un conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
 | LOG_LOCATIONS=*&lt;chemin_fichier&gt;* | Ajoutez un fichier journal à surveiller dans le conteneur. Incluez la variable d'environnement `LOG_LOCATIONS` avec un chemin d'accès au fichier journal. |
 {: caption="Tableau 3. Variables d'environnement couramment utilisées" caption-side="top"}
 
@@ -1424,7 +1415,7 @@ bluemix ic version
 
 <strong>Prérequis</strong> : Docker
 
-Pour identifier la version d'IBM Containers, exécutez la commande `bluemix ic info`. Pour plus d'informations, reportez-vous à la commande [version ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} dans l'aide de Docker.
+Pour identifier la version d'IBM Containers, exécutez la commande `bluemix ic info`. Pour plus d'informations, reportez-vous à la commande [version ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} dans l'aide de Docker.
 
 
 ## bluemix ic volume-create

@@ -14,6 +14,7 @@ lastupdated: "2015-11-10"
 {:shortdesc: .shortdesc}
 
 # Integrierte Entwicklungstools
+{: #Integrated_Dev_Tools}
 
 
 Integrierte Entwicklungstools wie {{site.data.keyword.Bluemix}} ermöglichen es, die Anwendungsinstanz ohne großen Zeitaufwand in Bluemix zu aktualisieren und Entwicklungsprozesse wie auf dem Desktop durchzuführen, ohne dass eine erneute Bereitstellung erforderlich ist.

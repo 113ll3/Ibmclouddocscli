@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-06-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-24"
 # {{site.data.keyword.Bluemix_notm}} (bx) コマンド
 {: #bluemix_cli}
 
-バージョン: 0.5.2
+バージョン: 0.5.5
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 {{site.data.keyword.Bluemix_notm}} コマンドには、既存の cf コ
@@ -41,15 +41,13 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
 <dd>このコマンドを実行するためには、Docker CLI (docker) がインストールされている必要があります。</dd>
 </dl>
 
-## bluemix コマンドの索引
-{: #bx_commands_index}
+**注:** 短形式の Bluemix コマンドを使用できます。例えば、`bx api` は `bluemix api` の短形式です。
 
 以下の表の索引を使用して、使用頻度の高い bluemix コマンドを
 参照してください。
 
-**注:** 短形式の Bluemix コマンドを使用できます。例えば、`bx api` は `bluemix api` の短形式です。
-
-
+## 汎用 Bluemix コマンド 
+{: #bx_commands_index}
 
 <table summary="汎用 Bluemix コマンド。">
  <caption>表 1. 汎用 bluemix コマンド</caption>
@@ -60,19 +58,27 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  <tr>
  <td>[bluemix help](bx_cli.html#bluemix_help)</td>
  <td>[bluemix api](bx_cli.html#bluemix_api)</td>
- <td>[bluemix login](bx_cli.html#bluemix_login)</td>
- <td>[bluemix logout](bx_cli.html#bluemix_logout)</td>
- <td>[bluemix target](bx_cli.html#bluemix_target)</td>
+ <td>[bluemix config](bx_cli.html#bluemix_config)</td>
+ <td>[bluemix info
+](bx_cli.html#bluemix_info)</td>
  </tr>
  <tr>
- <td>[bluemix info](bx_cli.html#bluemix_info) </td>
- <td>[bluemix regions](bx_cli.html#bluemix_regions) </td>
- <td>[bluemix config](bx_cli.html#bluemix_config)</td>
- <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
+ <td>[bluemix login](bx_cli.html#bluemix_login) </td>
+ <td>[bluemix logout](bx_cli.html#bluemix_logout) </td>
+ <td>[bluemix regions](bx_cli.html#bluemix_regions)</td>
+ <td>[bluemix target](bx_cli.html#bluemix_target)</td>
  <td>[bluemix update](bx_cli.html#bluemix_update)</td>
  </tr>
  </tbody>
  </table>
+ 
+ ## {{site.data.keyword.BluSoftlayer_notm}} サービスを管理および構成するためのコマンド
+  {: #bx_commands_softlayer}
+  
+{{site.data.keyword.BluSoftlayer_notm}} を管理するためのコマンドは Bluemix CLI にマージされました。Bluemix CLI を使用した {{site.data.keyword.BluSoftlayer_notm}} サービスの構成および管理について詳しくは、[Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) コマンド](/docs/cli/reference/softlayer/index.md#softlayer_cli)を参照してください。
+ 
+ ## アカウント、組織、および役割を管理するためのコマンド
+ {: #bx_commands_acctorg}
 
 <table summary="アカウント、組織、スペース、役割、および API キーを管理するために使用できる bluemix コマンド。">
 <caption>表 2. アカウント、組織、スペース、役割、および API キーを管理するためのコマンド</caption>
@@ -131,6 +137,9 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
  </tbody>
  </table>
+ 
+ ## CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド
+ {: #bx_commands_apps}
 
 <table summary="CF アプリとアプリ関連ドメイン、経路、および証明書を管理するために使用できる bluemix コマンド。">
 <caption>表 3. CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド</caption>
@@ -189,6 +198,9 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
   </tbody>
  </table>
+ 
+ ## Bluemix サービスを管理するためのコマンド
+ {: #bx_commands_services}
 
 <table summary="Bluemix サービスの管理に使用することができる Bluemix コマンド。">
  <caption>表 4. Bluemix サービスを管理するためのコマンド</caption>
@@ -219,6 +231,9 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
   </tbody>
  </table>
+ 
+ ## カタログ、プラグイン、および請求処理の設定を管理するためのコマンド
+ {: #bx_commands_settings}
 
 <table summary="Bluemix カタログ、プラグイン、請求、およびセキュリティー設定の管理に使用できる Bluemix コマンド。">
  <caption>表 5. Bluemix カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</caption>
@@ -328,154 +343,6 @@ API エンドポイントを設定解除します。
 bluemix api --unset
 ```
 
-
-## bluemix login
-{: #bluemix_login}
-
-ユーザーをログインします。 
-
-```
-bluemix login [OPTIONS...]
-```
-
-<strong>前提条件</strong>: なし
-
-<strong>コマンド・オプション</strong>:
-<dl>
-  <dt>-a <i>API_ENDPOINT</i> (オプション)</dt>
-  <dd> API エンドポイント (例: api.ng.bluemix.net)</dd>
-  <dt> --apikey <i>API_KEY または @API_KEY_FILE_PATH</i>
-  <dd> API キーの内容、または @ で示された API キー・ファイルのパス</dd>
-  <dt> --sso (オプション) </dt>
-  <dd> ワンタイム・パスコードを使用してログインします </dd>
-  <dt> -u <i>USERNAME</i> (オプション)</dt>
-  <dd> ユーザー名</dd>
-  <dt> -p <i>PASSWORD</i> (オプション)</dt>
-  <dd> パスワード</dd>
-  <dt> -c <i>ACCOUNT_ID</i> (オプション) </dt>
-  <dd> ターゲット・アカウントの ID</dd>
-  <dt> -o <i>ORG_NAME</i> (オプション)</dt>
-  <dd> ターゲット組織の名前 </dd>
-  <dt> -s <i>SPACE_NAME</i> (オプション)</dt>
-  <dd> ターゲット・スペースの名前</dd>
-  <dt> --skip-ssl-validation (オプション) </dt>
-  <dd> HTTP 要求の SSL 検証をバイパスします。このオプションは推奨されません。</dd>
-</dl>
-
-<strong>例</strong>:
-
-対話式ログイン:
-
-```
-bluemix login```
-
-ユーザー名とパスワードを使用してログインし、ターゲット・アカウント、組織、およびスペースを設定します。
-
-```
-bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
-```
-
-ワンタイム・パスコードを使用してログインし、ターゲット・アカウント、組織、およびスペースを設定します
-
-```
-bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
-```
-
-API キーを使用してログインし、ターゲットを設定します。
-
-* API キーにアカウントが関連付けられている
-
-```
-bluemix login --apikey api-key-string -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @filename -o MyOrg -s MySpace
-```
-
-* API キーにアカウントが関連付けられていない
-
-```
-bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
-```
-
-<strong>注:</strong> API キーにアカウントが関連付けられている場合、別のアカウントへの切り替えは許可されません。
-
-
-## bluemix logout
-{: #bluemix_logout}
-
-ユーザーをログアウトします。
-
-```
-bluemix logout
-```
-
-<strong>前提条件</strong>: なし
-
-
-## bluemix target
-{: #bluemix_target}
-
-
-ターゲット・アカウント、地域、組織、またはスペースを設定するか表示します。
-
-```
-bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン
-
-<strong>コマンド・オプション</strong>:
-   <dl>
-   <dt>-c <i>ACCOUNT_ID</i> (オプション)</dt>
-   <dd>ターゲットとなるアカウントの ID。</dd>
-   <dt>-r <i>REGION</i> (オプション)</dt>
-   <dd>切り替える先の地域。</dd>
-   <dt>-o <i>ORG_NAME</i> (オプション)</dt>
-   <dd>ターゲットとなる組織の名前。</dd>
-   <dt>-s <i>SPACE_NAME</i> (オプション)</dt>
-   <dd>ターゲットとなるスペースの名前。</dd>
-   </dl>
-どのオプションも指定されていない場合、現行のアカウント、地域、組織、およびスペースが表示されます。
-
-<strong>例</strong>:
-
-現行のアカウント、組織、およびスペースを設定します
-
-```
-bluemix target -c MyAccountID -o MyOrg -s MySpace
-```
-
-新しい地域に切り替えます
-
-```
-bluemix target -r eu-gb
-```
-
-現行のアカウント、地域、組織、およびスペースを表示します。
-
-```
-bluemix target
-```
-
-
-## bluemix info
-{: #bluemix_info}
-
-基本的な {{site.data.keyword.Bluemix_notm}} 情報を表示します。これには、現行領域、クラウド・コントローラーのバージョン、および、いくつかの有用なエンドポイント (例えば、ログイン用のエンドポイントや、アクセス・トークン交換用のエンドポイントなど) が含まれます。
-
-```
-bluemix info
-```
-
-<strong>前提条件</strong>: エンドポイント
-
-
 ## bluemix config
 {: #bluemix_config}
 
@@ -497,7 +364,7 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--color true|false</dt>
    <dd>カラー出力を使用可能または使用不可にします。カラー出力はデフォルトで使用可能に設定されています。</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>デフォルト・ロケールを設定します。LOCALE が <i>CLEAR</i> の場合は、前のロケールが削除されます。</dd>
+   <dd>デフォルト・ロケールを設定します。LOCALE  が <i>CLEAR</i> の場合は、前のロケールが削除されます。</dd>
    <dt>--check-version true|false</dt>
    <dd>CLI バージョン・チェックを使用可能または使用不可にします。</dd>
    </dl>
@@ -543,40 +410,116 @@ bluemix config --locale CLEAR
 ```
 
 
-## bluemix curl
-{: #bluemix_curl}
 
-{{site.data.keyword.Bluemix_notm}} への未加工 HTTP 要求を実行します。*Content-Type* はデフォルトで *application/json* に設定されます。このコマンドは、要求を {{site.data.keyword.Bluemix_notm}} マルチクラウド制御プロキシーに送信します。サポートされるパスについては、[CloudFoundry API 資料 ](http://apidocs.cloudfoundry.org/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) 内の API パス定義を参照してください。
+## bluemix info
+{: #bluemix_info}
+
+基本的な {{site.data.keyword.Bluemix_notm}} 情報を表示します。これには、現行領域、クラウド・コントローラーのバージョン、および、いくつかの有用なエンドポイント (例えば、ログイン用のエンドポイントや、アクセス・トークン交換用のエンドポイントなど) が含まれます。
 
 ```
-bluemix curl PATH [OPTIONS...]
+bluemix info
 ```
 
-<strong>前提条件</strong>: エンドポイント、ログイン
+<strong>前提条件</strong>: エンドポイント
+
+## bluemix login
+{: #bluemix_login}
+
+ユーザーをログインします。 
+
+```
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+```
+
+<strong>前提条件</strong>: なし
+
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
 <strong>コマンド・オプション</strong>:
-   <dl>
-   <dt><i>PATH</i> (必須)</dt>
-   <dd>リソースの URL パス。例えば、/v2/apps です。</dd>
-   <dt><i>OPTIONS</i> (オプション)</dt>
-   <dd>`bluemix curl` コマンドでサポートされるオプションは、`cf curl` コマンドのオプションと同じです。</dd>
-   </dl>
+<dl>
+  <dt> -a <i>API_ENDPOINT</i> (オプション)</dt>
+  <dd> API エンドポイント (例: api.ng.bluemix.net)</dd>
+  <dt> --apikey <i>API_KEY または @API_KEY_FILE_PATH</i>
+  <dd> API キーの内容、または @ で示された API キー・ファイルのパス</dd>
+  <dt> --sso (オプション) </dt>
+  <dd> ワンタイム・パスコードを使用してログインします</dd>
+  <dt> -u <i>USERNAME</i> (オプション)</dt>
+  <dd> ユーザー名</dd>
+  <dt> -p <i>PASSWORD</i> (オプション)</dt>
+  <dd> パスワード</dd>
+  <dt> -c <i>ACCOUNT_ID</i> (オプション) </dt>
+  <dd> ターゲット・アカウントの ID</dd>
+  <dt> -o <i>ORG_NAME</i> (オプション)</dt>
+  <dd> ターゲット組織の名前 </dd>
+  <dt> -s <i>SPACE_NAME</i> (オプション)</dt>
+  <dd> ターゲット・スペースの名前</dd>
+  <dt> --skip-ssl-validation (オプション) </dt>
+  <dd> HTTP 要求の SSL 検証をバイパスします。このオプションは推奨されません。</dd>
+</dl>
 
 <strong>例</strong>:
 
-現行アカウントのすべての組織に関する情報を表示するには、次のように指定します。
+#### 対話式ログイン
 
 ```
-bluemix curl /v2/organizations
-```
+bluemix login```
 
-## bluemix update
-{: #bluemix_update}
-
-CLI を最新バージョンに更新します
+以下のように、ユーザー名とパスワードを使用してログインし、ターゲットのアカウント、組織、およびスペースを設定します。
 
 ```
-bluemix update
+bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+```
+
+ワンタイム・パスコードを使用してログインし、ターゲット・アカウント、組織、およびスペースを設定します
+
+```
+bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
+```
+
+API キーを使用してログインし、ターゲットを設定します。
+
+#### API キーにアカウントが関連付けられている
+
+```
+bluemix login --apikey api-key-string -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @filename -o MyOrg -s MySpace
+```
+
+#### API キーにアカウントが関連付けられていない
+
+```
+bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+```
+
+<strong>注:</strong> API キーに、関連付けられたアカウントがある場合、別のアカウントへの切り替えは許可されません。
+
+#### ワンタイム・パスコードを使用する
+
+```
+bluemix login -u UserID --sso
+```
+
+すると、CLI は以下のように URL リンクを提供し、パスコードの入力を要求します。
+```
+One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
+```
+
+ブラウザーでこのリンクを開くと、パスコードを取得するための案内が表示されます。提供されたパスコードをコンソールに入力するとログインできます。
+
+## bluemix logout
+{: #bluemix_logout}
+
+ユーザーをログアウトします。
+
+```
+bluemix logout
 ```
 
 <strong>前提条件</strong>: なし
@@ -593,7 +536,63 @@ bluemix regions
 <strong>前提条件</strong>: エンドポイント
 
 
-## bluemix iam orgs
+## bluemix target
+{: #bluemix_target}
+
+
+ターゲット・アカウント、地域、組織、またはスペースを設定するか表示します。
+
+```
+bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+   <dl>
+   <dt>-c <i>ACCOUNT_ID</i> (オプション)</dt>
+   <dd>ターゲットとなるアカウントの ID。</dd>
+   <dt>-r <i>REGION</i> (オプション)</dt>
+   <dd>切り替える先の地域。</dd>
+   <dt>-o <i>ORG_NAME</i> (オプション)</dt>
+   <dd>ターゲットとなる組織の名前。</dd>
+   <dt>-s <i>SPACE_NAME</i> (オプション)</dt>
+   <dd>ターゲットとなるスペースの名前。</dd>
+   </dl>
+どのオプションも指定されていない場合、現行のアカウント、地域、組織、およびスペースが表示されます。
+
+<strong>例</strong>:
+
+現行のアカウント、組織、およびスペースを設定します。
+
+```
+bluemix target -c MyAccountID -o MyOrg -s MySpace
+```
+
+新しい地域に切り替えます。
+
+```
+bluemix target -r eu-gb
+```
+
+現行のアカウント、地域、組織、およびスペースを表示します。
+
+```
+bluemix target
+```
+
+### bluemix update
+{: #bluemix_update}
+
+CLI を最新バージョンに更新します。
+
+```
+bluemix update
+```
+
+<strong>前提条件</strong>: なし
+
+### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
 すべての組織をリストします。
@@ -1043,7 +1042,7 @@ bluemix iam account-users
 現行アカウントからユーザーを削除します (アカウント所有者のみ)
 
 ```
-bluemix iam account-user-delete USERNAME [-f]
+bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1052,6 +1051,8 @@ bluemix iam account-user-delete USERNAME [-f]
 <dl>
 <dt>USERNAME (必須)</dt>
 <dd>ユーザー名</dd>
+<dt>-c ACCOUNT_ID</dt>
+<dd>アカウント ID。指定しない場合、現行アカウントがデフォルトで使用されます。</dd>
 <dt>--force、-f (オプション)</dt>
 <dd>確認なしで削除を強制します。</dd>
 </dl>
@@ -1935,6 +1936,17 @@ bluemix plugin list
 
 <strong>前提条件</strong>: なし
 
+## bluemix plugin show
+{: #bluemix_plugin_show}
+
+インストールされたプラグインの詳細を表示します
+
+```
+bluemix plugin show PLUGIN-NAME
+```
+
+<strong>前提条件</strong>: なし
+
 
 ## bluemix plugin install
 {: #bluemix_plugin_install}
@@ -1990,19 +2002,21 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 リポジトリーからプラグインをアップグレードします
 
 ```
-bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
+bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
 <strong>前提条件</strong>: なし
 
 <strong>コマンド・オプション</strong>:
 <dl>
- <dt>-r REPO_NAME (必須)</dt>
- <dd>プラグインのバイナリーが配置されているリポジトリーの名前。</dd>
- <dt><i>PLUGIN_NAME</i> (オプション)</dt>
- <dd>指定されていない場合、特定のリポジトリーで更新可能なすべてのプラグインが、選択できるようにリストされます。</dd>
+ <dt>PLUGIN NAME</dt>
+ <dd>更新するプラグインの名前。指定されない場合、コマンドは、インストールされているすべてのプラグインのアップグレードを確認します。</dd>
+ <dt>-r REPO_NAME</dt>
+ <dd>プラグインのバイナリーが配置されているリポジトリーの名前。指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します。</dd>
  <dt>-v <i>VERSION</i> (オプション)</dt>
  <dd>更新するプラグインのバージョン。表示されない場合、プラグインを入手可能な最新バージョンに更新してください。</dd>
+ <dt>--all</dt>
+ <dd>利用可能なすべてのプラグインを更新します</dd>
 </dl>
 
 <strong>例</strong>:

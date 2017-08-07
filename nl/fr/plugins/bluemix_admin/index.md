@@ -274,8 +274,7 @@ cf ba set-org <nom_utilisateur> <organisation> [<rôle>]
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;organisation&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
-à laquelle affecter l'utilisateur.</dd>
+<dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}} à laquelle affecter l'utilisateur.</dd>
 <dt class="pt dlterm">&lt;rôle&gt;</dt>
 <dd class="pd">Voir [Rôles](/docs/admin/users_roles.html) pour prendre connaissance des rôles utilisateur
 {{site.data.keyword.Bluemix_notm}} et pour des descriptions.</dd>
@@ -525,7 +524,8 @@ cf ba enable-service-plan <identificateur_plan>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
+parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba esp** comme alias pour le nom de commande plus long **ba enable-service-plan**.

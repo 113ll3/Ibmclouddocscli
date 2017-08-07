@@ -14,6 +14,7 @@ lastupdated: "2016-03-15"
 {:shortdesc: .shortdesc}
 
 # Servizi VCAP
+{: #vcap_services}
 
 
 La variabile di ambiente VCAP_SERVICES è un oggetto JSON che contiene le informazioni che puoi utilizzare per interagire con un'istanza del servizio in {{site.data.keyword.Bluemix_notm}}.

@@ -214,5 +214,5 @@ cf restart-inplace <appName>
 
 ## Links Relacionados
 {: #general}
-* [CLI do Modo de desenvolvimento ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [CLI do modo de desenvolvimento ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
 * [DevOps Web IDE ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

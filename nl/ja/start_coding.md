@@ -14,7 +14,7 @@ lastupdated: "2015-12-07"
 {:shortdesc: .shortdesc}
 
 # コーディングの開始
-
+{: #start_coding}
 
 {{site.data.keyword.Bluemix_notm}} では、アプリの作成後、指定されたステップを実行することで素早くコーディングを開始することができます。
 {:shortdesc}

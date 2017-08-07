@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-05-12"
+lastupdated: "2017-06-22"
 
 
 ---
@@ -24,7 +24,7 @@ Die {{site.data.keyword.registrylong}}-Befehlszeilenschnittstelle (CLI) ist ein 
 **Voraussetzungen**
 * Melden Sie sich vor der Ausführung von Registry-Befehlen bei {{site.data.keyword.Bluemix_short}} mit dem Befehl `bx login` an, um ein {{site.data.keyword.Bluemix_short}}-Zugriffstoken zu generieren und Ihre Sitzung zu authentifizieren.
 
-Informationen zur Verwendung der {{site.data.keyword.registrylong}}-CLI finden Sie unter [IBM Bluemix Container Registry - Übersicht](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
+Informationen zur Verwendung der {{site.data.keyword.registrylong}}-CLI finden Sie unter [Private Image-Registry einrichten](../../../services/Registry/index.html). 
 
 <table summary="Container-Registry verwalten">
 <caption>Tabelle 1. Befehle zur Verwaltung der {{site.data.keyword.registryshort}} in {{site.data.keyword.Bluemix_short}}
@@ -45,20 +45,20 @@ Informationen zur Verwendung der {{site.data.keyword.registrylong}}-CLI finden S
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td> 
+ <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
- <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
- <td>[bx cr token-get](#bx_cr_token_get)</td>
-
  </tr>
-  <tr>
+ <tr>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
- <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
- <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
 
@@ -76,6 +76,8 @@ bx cr api
 
 
 ## bx cr info
+{: #bx_cr_info}
+
 Zeigt den Namen und das Konto der Registry an, bei der Sie angemeldet sind.
 
 ```
@@ -85,20 +87,22 @@ bx cr info
 
 
 ## bx cr image-inspect
+{: #bx_cr_image_inspect}
+
 Zeigt Details zu einem bestimmten Image an.
 
 ```
-bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
+bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 ```
 {: codeblock}
 
 **Parameter**
 
-
 <dl>
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
+Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
 
 </dd>
 <dt>IMAGE</dt>
@@ -107,6 +111,8 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 
 
 ## bx cr image-list (bx cr images)
+{: #bx_cr_image_list}
+
 Zeigt alle Images in Ihrem {{site.data.keyword.Bluemix_short}}-Konto an.
 
 ```
@@ -125,17 +131,19 @@ Zeigt alle Images in Ihrem {{site.data.keyword.Bluemix_short}}-Konto an.
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
+Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
 
 </dd>
-
 </dl>
 
 
 ## bx cr image-rm
+{: #bx_cr_image_rm}
+
 Löscht ein oder mehrere angegebene Images aus Ihrer Registry.
 
 ```
-bx cr image-rm IMAGE [IMAGE]
+bx cr image-rm IMAGE [IMAGE...]
 ```
 {: codeblock}
 
@@ -147,6 +155,8 @@ bx cr image-rm IMAGE [IMAGE]
 
 
 ## bx cr login
+{: #bx_cr_login}
+
 Führt den Befehl `docker login` für die Registry aus. Der Befehl `docker login` ist erforderlich, um die Befehle `docker push` und `docker pull` für die Registry ausführen zu können. Dieser Befehl ist nicht erforderlich, um andere `bx cr`-Befehle auszuführen. Wenn Docker nicht installiert ist, gibt dieser Befehl eine Fehlernachricht zurück.
 
 ```
@@ -156,6 +166,8 @@ bx cr login
 
 
 ## bx cr namespace-add
+{: #bx_cr_namespace_add}
+
 Fügt einen Namensbereich zu Ihrem {{site.data.keyword.Bluemix_short}}-Konto hinzu.
 
 ```
@@ -171,6 +183,8 @@ bx cr namespace-add NAMESPACE
 
 
 ## bx cr namespace-list (bx cr namespaces)
+{: #bx_cr_namespace_list}
+
 Zeigt alle Namensbereiche an, die Ihrem {{site.data.keyword.Bluemix_short}}-Konto angehören.
 
 ```
@@ -180,6 +194,8 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
+{: #bx_cr_namespace_rm}
+
 Entfernt einen Namensbereich aus Ihrem {{site.data.keyword.Bluemix_short}}-Konto. Images in dieser Namensbereich werden gelöscht, wenn der Namensbereich entfernt wird.
 
 ```
@@ -193,7 +209,7 @@ bx cr namespace-rm NAMESPACE
 <dd>Der Namensbereich, den Sie entfernen wollen.</dd>
 </dl>
 
-<!-- audience blue staging only begin comment -->
+
 
 ## bx cr plan
 {: #bx_cr_plan}
@@ -205,10 +221,13 @@ bx cr plan
 ```
 {: codeblock}
 
+
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Ändert das angegebene Kontingent.
+Führt ein Upgrade auf den angegebenen Plan durch.
+
+Weitere Informationen über Pläne finden Sie unter [Registry-Pläne](../../../services/Registry/registry_overview.html#registry_plans). 
 
 ```
 bx cr plan-upgrade PLAN
@@ -218,11 +237,32 @@ bx cr plan-upgrade PLAN
 **Parameter**
 <dl>
 <dt>PLAN</dt>
-<dd> Führt ein Upgrade auf den angegebenen Plan durch. Die folgenden Pläne sind verfügbar:<ul>
+<dd> Führt ein Upgrade auf den angegebenen Plan durch. Die folgenden Pläne sind verfügbar: 
+<ul>
 <li>Kostenlos</li>
 <li>Standard</li>
 </ul>
 </dl>
+
+
+## bx cr pricing
+{: #bx_cr_pricing}
+
+Berechnet die geschätzten Nutzungskosten in US-Dollar unter Berücksichtigung Ihres Anspruchs auf kostenlosen Speicher und Gratisleistungen beim Pull-Datenverkehr. 
+
+```
+bx cr pricing --traffic VALUE --storage VALUE
+```
+{: codeblock}
+
+**Parameter**
+<dl>
+<dt>--traffic VALUE</dt>
+<dd>Geben Sie das voraussichtliche monatliche Pull-Datenverkehrsvolumen in Megabyte an. Der Datenverkehr muss als ganze Zahl angegeben werden. </dd>
+<dt>--storage VALUE</dt>
+<dd>Geben Sie den voraussichtlichen durchschnittlichen Gesamtspeicherbedarf in Megabyte an. Der Speicher muss als ganze Zahl angegeben werden. </dd>
+</dl>
+
 
 ## bx cr quota
 {: #bx_cr_quota}
@@ -233,6 +273,7 @@ Zeigt die aktuellen Kontingente für den Datenverkehr und die Speicherung sowie 
 bx cr quota
 ```
 {: codeblock}
+
 
 ## bx cr quota-set
 {: #bx_cr_quota_set}
@@ -252,9 +293,10 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>(Optional) Ändert Ihr Speicherkontingent auf den angegebenen Wert. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Speicherkontingente festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
 </dl>
 
-<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
+{: #bx_cr_token_add}
+
 Fügt ein Token hinzu, das Sie verwenden können, um den Zugriff auf eine Registry zu steuern.
 
 ```
@@ -278,6 +320,8 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 
 ## bx cr token-get
+{: #bx_cr_token_get}
+
 Ruft das angegebene Token aus der Registry ab.
 
 ```
@@ -294,6 +338,8 @@ bx cr token-get TOKEN
 
 
 ## bx cr token-list (bx cr tokens)
+{: #bx_cr_token_list}
+
 Zeigt alle Token für Ihr {{site.data.keyword.Bluemix_short}}-Konto an.
 
 ```
@@ -306,16 +352,18 @@ bx cr token-list --format FORMAT
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
+Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
 
 </dd>
 </dl>
 
-
 ## bx cr token-rm
+{: #bx_cr_token_rm}
+
 Entfernt einen oder mehrere angegebene Token.
 
 ```
-bx cr token-rm TOKEN [TOKEN]
+bx cr token-rm TOKEN [TOKEN...]
 ```
 {: codeblock}
 
@@ -324,6 +372,7 @@ bx cr token-rm TOKEN [TOKEN]
 <dt>TOKEN</dt>
 <dd>(Optional) TOKEN kann entweder das Token selbst sein oder die eindeutige ID des Tokens, wie in `bx cr token-list` dargestellt. Es können mehrere Token angegeben sein und sie müssen durch ein Leerzeichen getrennt werden.</dd>
 </dl>
+
 
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
@@ -338,18 +387,20 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 **Parameter**
 <dl>
 <dt>IMAGE</dt>
-<dd>Der vollständige {{site.data.keyword.Bluemix_short}}-Registry-Pfad zu dem Image, für das ein Bericht abgerufen werden soll, im Format `namespace/image:tag`. Der Bericht informiert Sie darüber, ob das Image bekannte Paketschwachstellen aufweist. Folende Betriebssysteme werden unterstützt:
+<dd>Der vollständige {{site.data.keyword.Bluemix_short}}-Registry-Pfad zu dem Image, für das ein Bericht abgerufen werden soll, im Format `namespace/image:tag`. Der Bericht informiert Sie darüber, ob das Image bekannte Paketschwachstellen aufweist. Folgende Betriebssysteme werden unterstützt:
 
 <ul>
+
+<li>Alpine</li>
 <li>CentOS</li>
 <li>Debian</li>
 <li>Red Hat Enterprise Linux (RHEL)</li>
 <li>Ubuntu</li>
 </ul>
 
-</dd>
+Weitere Informationen finden Sie unter [Imagesicherheit prüfen](../../../services/Registry/registry_images_.html#registry_security_checking). 
 
 </dd>
+
 </dl>
-
 

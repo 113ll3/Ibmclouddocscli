@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -27,6 +27,33 @@ A CLI do {{site.data.keyword.Bluemix_notm}} fornece uma maneira unificada para v
 ## Instalando o {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
+<!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->
+
+### Instalação online
+
+Com acesso a uma conexão de Internet, copie e cole o comando a seguir em um console de terminal e execute-o.
+
+**macOS
+**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
+```
+
+**Linux**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+```
+
+**Windows PowerShell**
+
+Copie e cole o comando a seguir em um console de terminal do [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell) e execute-o.
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+
+### Instalação offline
+
+<!-- End of online installation -->
 
 Para Mac OS e Windows, faça download do
 [pacote de CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) e execute o instalador.
@@ -72,7 +99,7 @@ A CLI do {{site.data.keyword.Bluemix_notm}} suporta uma estrutura de extensão d
 
 É possível instalar um plug-in do repositório, localmente ou por meio de um servidor remoto. O {{site.data.keyword.Bluemix_notm}} possui repositórios que hospedam os plug-ins do {{site.data.keyword.Bluemix_notm}} CLI e os plug-ins do Cloud Foundry CLI:
 
-   * [Repositório de plug-ins da CLI do {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg), que hospeda plug-ins para a CLI do {{site.data.keyword.Bluemix_notm}}.
+   * [Repositório de plug-in da CLI do {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg), que hospeda plug-ins da CLI do {{site.data.keyword.Bluemix_notm}}.
 
 Para instalar por meio do repositório, execute as etapas a seguir:
 
@@ -160,3 +187,9 @@ exemplo:
 
 
 Agora você está pronto para usar as linhas de comandos do {{site.data.keyword.Bluemix_notm}}. Execute `bluemix help` para ver a lista de comandos e descrições. 
+
+## Entre em contato
+
+Use as opções a seguir para localizar informações sobre a liberação, fornecer feedback e fazer perguntas:
+ * Para obter detalhes sobre as liberações mais recentes e para relatar problemas: [SDK da CLI do {{site.data.keyword.Bluemix_notm}}](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg)
+ * Para fazer perguntas e compartilhar conhecimento com a comunidade: [Canal Slack bluemix-cli](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg)

@@ -14,6 +14,7 @@ lastupdated: "2016-03-15"
 {:shortdesc: .shortdesc}
 
 # VCAP サービス
+{: #vcap_services}
 
 
 VCAP_SERVICES 環境変数は、{{site.data.keyword.Bluemix_notm}} でサービス・インスタンスと対話するために使用できる情報が格納された JSON オブジェクトです。

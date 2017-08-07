@@ -14,6 +14,7 @@ lastupdated: "2016-03-15"
 {:shortdesc: .shortdesc}
 
 # VCAP 服務
+{: #vcap_services}
 
 
 VCAP_SERVICES 環境變數是含有資訊的 JSON 物件，而您可以使用這項資訊來與 {{site.data.keyword.Bluemix_notm}} 中的服務實例互動。

@@ -5,7 +5,11 @@
 CLI 及開發工具
 
 	{: .navgroup id="learn"}
-	index.md
+	{: .topicgroup}
+	下載
+	    index.md
+	    icat.md
+	    
 	[開始使用 CF CLI](https://github.com/cloudfoundry/cli#getting-started)
 	reference/bluemix_cli/index.md
 	
@@ -16,6 +20,8 @@ CLI 及開發工具
 	
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
+	reference/bluemix_cli/all_versions.md
+	reference/softlayer/index.md
 	reference/cfcommands/index.md
 	reference/cloudcli/index.md
 	
@@ -29,7 +35,6 @@ CLI 及開發工具
 		plugins/pnp/index.md
 		[IBM SDK 產生器](../cloudnative/sdk_cli.html)
 		[Schematics](../services/schematics/schematics_reference.html)
-		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	
 	{: .topicgroup}
@@ -40,6 +45,7 @@ CLI 及開發工具
 	
 	{: .topicgroup}
 	整合式開發工具
+		ibm-dev-tools-for-vscode.md
 		[API Connect 開發人員工具箱](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
 		[使用 IBM Eclipse Tools for Bluemix 部署應用程式](../manageapps/eclipsetools/eclipsetools.html)
@@ -47,6 +53,7 @@ CLI 及開發工具
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
+	login_federated_id.md
 	[使用 Eclipse Tools 進行開發](../starters/deploy_eclipsetools.html)
 	[使用 CLI 部署應用程式](../starters/install_cli.html)
 	[上傳應用程式](../starters/upload_app.html)

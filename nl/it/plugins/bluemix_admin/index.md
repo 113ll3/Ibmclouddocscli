@@ -172,7 +172,7 @@ cf ba set-permissions <nome_utente> <autorizzazione> <accesso>
 **Nota**: puoi impostare una sola autorizzazione alla volta.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nome_utente&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Il nome dell'utente in {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;autorizzazione&gt;</dt>
 <dd class="pd">Imposta le autorizzazioni per l'utente: Ammin (in alternativa Superuser), Accesso (in alternativa Di base), Catalogo (accesso in lettura o scrittura), Report (accesso in lettura o scrittura) o Utenti (accesso in lettura o scrittura).</dd>
@@ -498,7 +498,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione a cui aggiungere l'utente.</dd>
 <dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Il nome dello spazio a cui aggiungere l'utente.</dd>

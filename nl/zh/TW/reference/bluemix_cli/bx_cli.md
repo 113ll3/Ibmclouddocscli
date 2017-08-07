@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-06-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-24"
 # {{site.data.keyword.Bluemix_notm}} (bx) 指令
 {: #bluemix_cli}
 
-版本：0.5.2
+版本：0.5.5
 
 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 提供一組依名稱空間分組的指令，讓使用者與 {{site.data.keyword.Bluemix_notm}} 互動。有些 {{site.data.keyword.Bluemix_notm}} 指令是現有 cf 指令的封套，有些則提供延伸功能供 {{site.data.keyword.Bluemix_notm}} 使用者使用。下列資訊列出 {{site.data.keyword.Bluemix_notm}} CLI 支援的指令，並包含其名稱、選項、用法、必要條件、說明及範例。
 {:shortdesc}
@@ -32,17 +32,15 @@ lastupdated: "2017-05-24"
 <dt>目標</dt>
 <dd>必須使用 <code>bluemix target</code> 指令來設定組織及空間後，才能使用此指令。</dd>
 <dt>Docker</dt>
-<dd>必須先安裝 Docker CLI (Docker)，才能執行此指令。</dd>
+<dd>必須先安裝 Docker CLI (docker)，才能執行此指令。</dd>
 </dl>
-
-## bluemix 指令索引
-{: #bx_commands_index}
-
-請使用下表中的索引來參照常用的 bluemix 指令。
 
 **附註：**您可以使用短格式的 bluemix 指令；例如，`bx api` 為 `bluemix api` 的短格式。
 
+請使用下表中的索引來參照常用的 bluemix 指令。
 
+## 一般 bluemix 指令 
+{: #bx_commands_index}
 
 <table summary="一般 bluemix 指令。">
  <caption>表 1. 一般 bluemix 指令</caption>
@@ -53,19 +51,26 @@ lastupdated: "2017-05-24"
  <tr>
  <td>[bluemix help](bx_cli.html#bluemix_help)</td>
  <td>[bluemix api](bx_cli.html#bluemix_api)</td>
- <td>[bluemix login](bx_cli.html#bluemix_login)</td>
- <td>[bluemix logout](bx_cli.html#bluemix_logout)</td>
- <td>[bluemix target](bx_cli.html#bluemix_target)</td>
+ <td>[bluemix config](bx_cli.html#bluemix_config)</td>
+ <td>[bluemix info](bx_cli.html#bluemix_info)</td>
  </tr>
  <tr>
- <td>[bluemix info](bx_cli.html#bluemix_info) </td>
- <td>[bluemix regions](bx_cli.html#bluemix_regions) </td>
- <td>[bluemix config](bx_cli.html#bluemix_config)</td>
- <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
+ <td>[bluemix login](bx_cli.html#bluemix_login) </td>
+ <td>[bluemix logout](bx_cli.html#bluemix_logout) </td>
+ <td>[bluemix regions](bx_cli.html#bluemix_regions)</td>
+ <td>[bluemix target](bx_cli.html#bluemix_target)</td>
  <td>[bluemix update](bx_cli.html#bluemix_update)</td>
  </tr>
  </tbody>
  </table>
+ 
+ ## 用來管理及配置 {{site.data.keyword.BluSoftlayer_notm}} 服務的指令
+  {: #bx_commands_softlayer}
+  
+用來管理 {{site.data.keyword.BluSoftlayer_notm}} 的指令已合併至 Bluemix CLI。如需使用 Bluemix CLI 配置及管理 {{site.data.keyword.BluSoftlayer_notm}} 服務的相關資訊，請參閱：[Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 指令](/docs/cli/reference/softlayer/index.md#softlayer_cli)。
+ 
+ ## 用來管理帳戶、組織及角色的指令
+ {: #bx_commands_acctorg}
 
 <table summary="您可以用來管理帳戶、組織、空間、角色及 API 金鑰的 bluemix 指令。">
 <caption>表 2. 用來管理帳戶、組織、空間、角色及 API 金鑰的指令</caption>
@@ -125,6 +130,9 @@ lastupdated: "2017-05-24"
  </tr>
  </tbody>
  </table>
+ 
+ ## 用來管理 cf 應用程式及應用程式相關網域、路徑和憑證的指令
+ {: #bx_commands_apps}
 
 <table summary="您可以用來管理 cf 應用程式及應用程式相關網域、路徑和憑證的 bluemix 指令。">
 <caption>表 3. 用來管理 cf 應用程式及應用程式相關網域、路徑和憑證的指令</caption>
@@ -183,6 +191,9 @@ lastupdated: "2017-05-24"
  </tr>
   </tbody>
  </table>
+ 
+ ## 用來管理 Bluemix 服務的指令
+ {: #bx_commands_services}
 
 <table summary="您可以用來管理 Bluemix 服務的 bluemix 指令。">
  <caption>表 4. 用來管理 Bluemix 服務的指令</caption>
@@ -213,6 +224,9 @@ lastupdated: "2017-05-24"
  </tr>
   </tbody>
  </table>
+ 
+ ## 用來管理型錄、外掛程式及帳單設定的指令
+ {: #bx_commands_settings}
 
 <table summary="您可以用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的 bluemix 指令。">
  <caption>表 5. 用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的指令</caption>
@@ -320,155 +334,6 @@ bluemix api
 bluemix api --unset
 ```
 
-
-## bluemix login
-{: #bluemix_login}
-
-登入使用者。 
-
-```
-bluemix login [OPTIONS...]
-```
-
-<strong>必要條件</strong>：無
-
-<strong>指令選項</strong>：
-<dl>
-  <dt>-a <i>API_ENDPOINT</i>（選用）</dt>
-  <dd> API 端點（例如：api.ng.bluemix.net）</dd>
-  <dt> --apikey <i>API_KEY 或 @API_KEY_FILE_PATH</i>
-  <dd> API 金鑰內容，或透過 @ 指出的 API 金鑰檔案的路徑</dd>
-  <dt> --sso（選用）</dt>
-  <dd> 使用一次性密碼進行登入</dd>
-  <dt> -u <i>USERNAME</i>（選用）</dt>
-  <dd> 使用者名稱</dd>
-  <dt> -p <i>PASSWORD</i>（選用）</dt>
-  <dd> 密碼</dd>
-  <dt> -c <i>ACCOUNT_ID</i>（選用）</dt>
-  <dd> 目標帳戶的 ID</dd>
-  <dt> -o <i>ORG_NAME</i>（選用）</dt>
-  <dd> 目標組織的名稱</dd>
-  <dt> -s <i>SPACE_NAME</i>（選用）</dt>
-  <dd> 目標空間的名稱</dd>
-  <dt> --skip-ssl-validation（選用）</dt>
-  <dd> 略過 HTTP 要求的 SSL 驗證。不建議使用這個選項。</dd>
-</dl>
-
-<strong>範例</strong>：
-
-互動式登入：
-
-```
-bluemix login
-```
-
-以使用者名稱及密碼登入，並設定目標帳戶、組織及空間：
-
-```
-bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
-```
-
-以一次性密碼登入，並設定目標帳戶、組織及空間：
-
-```
-bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
-```
-
-以 API 金鑰登入，並設定目標：
-
-* API 金鑰具有關聯的帳戶
-
-```
-bluemix login --apikey api-key-string -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @filename -o MyOrg -s MySpace
-```
-
-* API 金鑰沒有關聯的帳戶
-
-```
-bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
-```
-
-<strong>附註：</strong>如果 API 金鑰具有關聯的帳戶，則不容許切換至另一個帳戶。
-
-
-## bluemix logout
-{: #bluemix_logout}
-
-登出使用者。
-
-```
-bluemix logout
-```
-
-<strong>必要條件</strong>：無
-
-
-## bluemix target
-{: #bluemix_target}
-
-
-設定或檢視目標帳戶、地區、組織或空間。
-
-```
-bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
-```
-
-<strong>必要條件</strong>：端點、登入
-
-<strong>指令選項</strong>：
-   <dl>
-   <dt>-c <i>ACCOUNT_ID</i>（選用）</dt>
-   <dd>要設為目標的帳戶 ID。</dd>
-   <dt>-r <i>REGION</i>（選用）</dt>
-   <dd>要切換至的目標地區。</dd>
-   <dt>-o <i>ORG_NAME</i>（選用）</dt>
-   <dd>要設為目標的組織名稱。</dd>
-   <dt>-s <i>SPACE_NAME</i>（選用）</dt>
-   <dd>要設為目標的空間名稱。</dd>
-   </dl>
-如果未指定選項，則會顯示現行帳戶、地區、組織及空間。
-
-<strong>範例</strong>：
-
-設定現行帳戶、組織及空間
-
-```
-bluemix target -c MyAccountID -o MyOrg -s MySpace
-```
-
-切換至新的地區
-
-```
-bluemix target -r eu-gb
-```
-
-檢視現行帳戶、地區、組織及空間：
-
-```
-bluemix target
-```
-
-
-## bluemix info
-{: #bluemix_info}
-
-檢視基本 {{site.data.keyword.Bluemix_notm}} 資訊，包括現行地區、雲端控制器版本以及部分有用端點（例如用於登入及交換存取記號的端點）。
-
-```
-bluemix info
-```
-
-<strong>必要條件</strong>：端點
-
-
 ## bluemix config
 {: #bluemix_config}
 
@@ -492,7 +357,7 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
    <dd>設定預設語言環境。如果 LOCALE 為 <i>CLEAR</i>，則會刪除先前的語言環境。</dd>
    <dt>--check-version true|false</dt>
-   <dd>啟用或停用 CLI 版本檢查</dd>
+   <dd>啟用或停用 CLI 版本檢查。</dd>
    </dl>
 
 一次只能指定其中一個選項。
@@ -536,40 +401,117 @@ bluemix config --locale CLEAR
 ```
 
 
-## bluemix curl
-{: #bluemix_curl}
 
-對 {{site.data.keyword.Bluemix_notm}} 執行原始 HTTP 要求。依預設，*Content-Type* 會設為 *application/json*。此指令會將要求傳送至「{{site.data.keyword.Bluemix_notm}} 多雲端控制 Proxy」。如需支援的路徑，請參閱 [CloudFoundry API 文件 ](http://apidocs.cloudfoundry.org/){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 中的 API 路徑定義。
+## bluemix info
+{: #bluemix_info}
+
+檢視基本 {{site.data.keyword.Bluemix_notm}} 資訊，包括現行地區、雲端控制器版本以及部分有用端點（例如用於登入及交換存取記號的端點）。
 
 ```
-bluemix curl PATH [OPTIONS...]
+bluemix info
 ```
 
-<strong>必要條件</strong>：端點、登入
+<strong>必要條件</strong>：端點
+
+## bluemix login
+{: #bluemix_login}
+
+登入使用者。 
+
+```
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+```
+
+<strong>必要條件</strong>：無
+
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
 <strong>指令選項</strong>：
-   <dl>
-   <dt><i>PATH</i>（必要）</dt>
-   <dd>資源的 URL 路徑。例如，/v2/apps。</dd>
-   <dt><i>OPTIONS</i>（選用）</dt>
-   <dd>`bluemix curl` 指令所支援的選項與 `cf curl` 指令的選項相同。</dd>
-   </dl>
+<dl>
+  <dt> -a <i>API_ENDPOINT</i>（選用）</dt>
+  <dd> API 端點（例如：api.ng.bluemix.net）</dd>
+  <dt> --apikey <i>API_KEY 或 @API_KEY_FILE_PATH</i>
+  <dd> API 金鑰內容，或透過 @ 指出的 API 金鑰檔案的路徑</dd>
+  <dt> --sso（選用）</dt>
+  <dd> 使用一次性密碼進行登入</dd>
+  <dt> -u <i>USERNAME</i>（選用）</dt>
+  <dd> 使用者名稱</dd>
+  <dt> -p <i>PASSWORD</i>（選用）</dt>
+  <dd> 密碼</dd>
+  <dt> -c <i>ACCOUNT_ID</i>（選用）</dt>
+  <dd> 目標帳戶的 ID</dd>
+  <dt> -o <i>ORG_NAME</i>（選用）</dt>
+  <dd> 目標組織的名稱</dd>
+  <dt> -s <i>SPACE_NAME</i>（選用）</dt>
+  <dd> 目標空間的名稱</dd>
+  <dt> --skip-ssl-validation（選用）</dt>
+  <dd> 略過 HTTP 要求的 SSL 驗證。不建議使用這個選項。</dd>
+</dl>
 
 <strong>範例</strong>：
 
-檢視現行帳戶的所有組織的資訊：
+#### 互動式登入
 
 ```
-bluemix curl /v2/organizations
+bluemix login
 ```
 
-## bluemix update
-{: #bluemix_update}
-
-將 CLI 更新至最新版本
+以使用者名稱及密碼登入，並設定目標帳戶、組織及空間：
 
 ```
-bluemix update
+bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+```
+
+以一次性密碼登入，並設定目標帳戶、組織及空間：
+
+```
+bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
+```
+
+以 API 金鑰登入，並設定目標：
+
+#### API 金鑰具有關聯的帳戶
+
+```
+bluemix login --apikey api-key-string -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @filename -o MyOrg -s MySpace
+```
+
+#### API 金鑰沒有關聯的帳戶
+
+```
+bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+```
+
+<strong>附註：</strong>如果 API 金鑰具有關聯的帳戶，則不容許切換至另一個帳戶。
+
+#### 使用一次性密碼
+
+```
+bluemix login -u UserID --sso
+```
+
+CLI 接著會提供 URL 鏈結，並要求密碼：
+```
+一次性密碼（從 https://URL_Link_To_Obtain_Passcode 取得）：
+```
+
+在瀏覽器中開啟鏈結，以引導您取得密碼。在主控台中鍵入給定的密碼，您應該就可以登入。
+
+## bluemix logout
+{: #bluemix_logout}
+
+登出使用者。
+
+```
+bluemix logout
 ```
 
 <strong>必要條件</strong>：無
@@ -586,7 +528,63 @@ bluemix regions
 <strong>必要條件</strong>：端點
 
 
-## bluemix iam orgs
+## bluemix target
+{: #bluemix_target}
+
+
+設定或檢視目標帳戶、地區、組織或空間。
+
+```
+bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+   <dl>
+   <dt>-c <i>ACCOUNT_ID</i>（選用）</dt>
+   <dd>要設為目標的帳戶 ID。</dd>
+   <dt>-r <i>REGION</i>（選用）</dt>
+   <dd>要切換至的目標地區。</dd>
+   <dt>-o <i>ORG_NAME</i>（選用）</dt>
+   <dd>要設為目標的組織名稱。</dd>
+   <dt>-s <i>SPACE_NAME</i>（選用）</dt>
+   <dd>要設為目標的空間名稱。</dd>
+   </dl>
+如果未指定選項，則會顯示現行帳戶、地區、組織及空間。
+
+<strong>範例</strong>：
+
+設定現行帳戶、組織及空間：
+
+```
+bluemix target -c MyAccountID -o MyOrg -s MySpace
+```
+
+切換至新的地區：
+
+```
+bluemix target -r eu-gb
+```
+
+檢視現行帳戶、地區、組織及空間：
+
+```
+bluemix target
+```
+
+### bluemix update
+{: #bluemix_update}
+
+將 CLI 更新為最新版本。
+
+```
+bluemix update
+```
+
+<strong>必要條件</strong>：無
+
+### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
 列出所有組織
@@ -855,7 +853,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 bluemix iam org-role-set Mary IBM OrgManager
 ```
 
-**附註**：您可以使用 CLI 設定組織/空間角色，但如果您要設定其他許可權，則必須使用使用者介面。如需進一步詳細資料，請參閱[指派使用者存取權](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess)。
+**附註**：您可以使用 CLI 設定組織/空間角色，但如果您要設定其他許可權，則必須利用使用者介面。如需進一步詳細資料，請參閱[指派使用者存取權](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess)。
 
 
 ## bluemix iam org-role-unset
@@ -1033,7 +1031,7 @@ bluemix iam account-users
 從現行帳戶刪除使用者（僅限帳戶擁有者）
 
 ```
-bluemix iam account-user-delete USERNAME [-f]
+bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -1042,6 +1040,8 @@ bluemix iam account-user-delete USERNAME [-f]
 <dl>
 <dt>USERNAME（必要）</dt>
 <dd>使用者名稱</dd>
+<dt>-c ACCOUNT_ID</dt>
+<dd>帳戶 ID。如果未指定，則預設為現行帳戶。</dd>
 <dt>--force、-f（選用）</dt>
 <dd>強制刪除，而不確認。</dd>
 </dl>
@@ -1090,7 +1090,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 
-**附註**：您可以使用 CLI 在邀請期間設定組織/空間角色，但如果您要設定其他許可權，則必須使用使用者介面。如需進一步詳細資料，請參閱[指派使用者存取權](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess)。
+**附註**：您可以使用 CLI 在邀請期間設定組織/空間角色，但如果您要設定其他許可權，則必須利用使用者介面。如需進一步詳細資料，請參閱[指派使用者存取權](https://console.ng.bluemix.net/docs/iam/assignaccess.html#assignaccess)。
 
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}
@@ -1922,6 +1922,17 @@ bluemix plugin list
 
 <strong>必要條件</strong>：無
 
+## bluemix plugin show
+{: #bluemix_plugin_show}
+
+顯示已安裝外掛程式的詳細資料
+
+```
+bluemix plugin show PLUGIN-NAME
+```
+
+<strong>必要條件</strong>：無
+
 
 ## bluemix plugin install
 {: #bluemix_plugin_install}
@@ -1975,19 +1986,21 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 從儲存庫升級外掛程式
 
 ```
-bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
+bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
 <strong>必要條件</strong>：無
 
 <strong>指令選項</strong>：
 <dl>
- <dt>-r REPO_NAME（必要）</dt>
- <dd>外掛程式二進位檔所在儲存庫的名稱。</dd>
- <dt><i>PLUGIN_NAME</i>（選用）</dt>
- <dd>如果未指定，則會列出給定儲存庫中可用於更新的所有外掛程式，以供選取。</dd>
+ <dt>PLUGIN NAME</dt>
+ <dd>要更新之外掛程式的名稱。如果未指定，則此指令會檢查所有已安裝外掛程式的升級。</dd>
+ <dt>-r REPO_NAME</dt>
+ <dd>外掛程式二進位檔所在儲存庫的名稱。如果未指定，則此指令會使用預設外掛程式儲存庫。</dd>
  <dt>-v <i>VERSION</i>（選用）</dt>
  <dd>要更新至之目標外掛程式的版本。如果未提供，請將外掛程式更新至最新的可用版本。</dd>
+ <dt>--all</dt>
+ <dd>更新所有可用的外掛程式</dd>
 </dl>
 
 <strong>範例</strong>：

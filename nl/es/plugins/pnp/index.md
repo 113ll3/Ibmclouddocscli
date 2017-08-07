@@ -39,7 +39,7 @@ Instale el plug-in de igualdad de red privada utilizando el mandato siguiente:
 
 **Nota**: pase a la ubicación del plug-in o especifique la vía de acceso a la ubicación del plug-in.
 
-* Para Microsoft Windows OS:
+* Para sistemas operativos Microsoft Windows:
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
@@ -51,7 +51,7 @@ bluemix plugin install private-network-peering-windows-amd64.exe
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* Para Linux OS:
+* Para sistemas operativos Linux:
 
 ```
 bluemix plugin install private-network-peering-linux-amd64

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -27,6 +27,32 @@ L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} vous permet 
 ## Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
 
+<!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->
+
+### Installation en ligne
+
+A l'aide d'un accès à une connexion à Internet, copiez et collez la commande suivante dans une console de terminal et exécutez-la.
+
+**macOS**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
+```
+
+**Linux**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+```
+
+**Windows PowerShell**
+
+Copiez et collez la commande suivante dans une console de terminal [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell) et exécutez-la.
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+
+### Installation hors ligne
+
+<!-- End of online installation -->
 
 Pour Mac OS et Windows, téléchargez le [package de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) et exécutez le programme d'installation.
 
@@ -72,7 +98,7 @@ possède des référentiels qui hébergent les plug-in de l'interface de ligne d
 commande {{site.data.keyword.Bluemix_notm}} et les plug-in de
 l'interface de ligne de commande Cloud Foundry :
 
-   * Le [référentiel des plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg), qui héberge les plug-in pour  l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
+   * [Référentiel de plug-ins d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg), qui héberge des plug-ins pour l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 Pour procéder à l'installation depuis les référentiels, procédez comme
 suit :
@@ -161,3 +187,9 @@ distante à l'aide de la commande `bluemix plugin install`. Par exemple :
 
 
 Vous êtes désormais prêt à utiliser les lignes de commande {{site.data.keyword.Bluemix_notm}}. Exécutez `bluemix help` pour afficher la liste de commandes et de descriptions. 
+
+## Contactez-nous
+
+Utilisez les options suivantes pour rechercher des informations sur les éditions, fournir des commentaires et poser des questions :
+ * Pour plus d'informations sur les dernières éditions et pour signaler des problèmes : [{{site.data.keyword.Bluemix_notm}} CLI SDK](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
+ * Pour poser des questions et partager vos connaissances avec la communauté : [bluemix-cli Slack channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![External link icon](../../../icons/launch-glyph.svg)

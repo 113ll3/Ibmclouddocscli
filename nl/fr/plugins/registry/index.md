@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-05-12"
+lastupdated: "2017-06-22"
 
 
 ---
@@ -24,7 +24,7 @@ L'interface de ligne de commande {{site.data.keyword.registrylong}} est un plug-
 **Prérequis**
 * Avant d'exécuter des commandes de registre, connectez-vous à {{site.data.keyword.Bluemix_short}} avec la commande `bx login` pour générer un jeton d'accès {{site.data.keyword.Bluemix_short}} et authentifier votre session.
 
-Pour vous familiariser avec l'utilisation de l'interface CLI d'{{site.data.keyword.registrylong}} CLI, consultez la [Présentation d'IBM Bluemix Container Registry](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
+Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{site.data.keyword.registrylong}}, voir [Configuration d'un registre d'images privé](../../../services/Registry/index.html).
 
 <table summary="Gestion de votre registre Containers Registry">
 <caption>Tableau 1. Commandes de gestion de {{site.data.keyword.registryshort}} sur {{site.data.keyword.Bluemix_short}}
@@ -45,20 +45,20 @@ Pour vous familiariser avec l'utilisation de l'interface CLI d'{{site.data.keywo
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td> 
+ <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
- <td>[bx cr quota-set](#bx_cr_quota_set)</td> 
+ <td>[bx cr quota-set](#bx_cr_quota_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
- <td>[bx cr token-get](#bx_cr_token_get)</td>
-
  </tr>
-  <tr>
+ <tr>
+ <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
- <td>[bx cr token-rm](#bx_cr_token_rm)</td>   
- <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>  
+ <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
 
@@ -76,6 +76,8 @@ bx cr api
 
 
 ## bx cr info
+{: #bx_cr_info}
+
 Affiche le nom et le compte du registre auquel vous êtes connecté.
 
 ```
@@ -85,20 +87,22 @@ bx cr info
 
 
 ## bx cr image-inspect
+{: #bx_cr_image_inspect}
+
 Affiche les détails d'une image spécifique.
 
 ```
-bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
+bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 ```
 {: codeblock}
 
 **Paramètres**
 
-
 <dl>
 <dt>--format FORMAT</dt>
 <dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
 
+Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
@@ -107,6 +111,8 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 
 
 ## bx cr image-list (bx cr images)
+{: #bx_cr_image_list}
+
 Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_short}}.
 
 ```
@@ -125,17 +131,19 @@ Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_short}}.
 <dt>--format FORMAT</dt>
 <dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
 
+Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
-
 </dl>
 
 
 ## bx cr image-rm
+{: #bx_cr_image_rm}
+
 Supprime une ou plusieurs images spécifiées de votre registre.
 
 ```
-bx cr image-rm IMAGE [IMAGE]
+bx cr image-rm IMAGE [IMAGE...]
 ```
 {: codeblock}
 
@@ -148,6 +156,8 @@ celle associée à la balise `latest` (dernière) est supprimée par défaut. Vo
 
 
 ## bx cr login
+{: #bx_cr_login}
+
 Cette commande exécute la commande `docker login` sur le registre. La commande `docker login` est requise pour pouvoir exécuter les commandes `docker push` ou `docker pull` pour le registre. Cette commande n'est pas requise pour exécuter d'autres commandes `bx cr`. Si Docker n'est pas installé, cette commande renvoie un message d'erreur.
 
 ```
@@ -157,6 +167,8 @@ bx cr login
 
 
 ## bx cr namespace-add
+{: #bx_cr_namespace_add}
+
 Ajoute un espace de nom à votre compte {{site.data.keyword.Bluemix_short}}.
 
 ```
@@ -172,6 +184,8 @@ bx cr namespace-add ESPACE DE NOM
 
 
 ## bx cr namespace-list (bx cr namespaces)
+{: #bx_cr_namespace_list}
+
 Affiche tous les espaces de nom détenus par votre compte {{site.data.keyword.Bluemix_short}}.
 
 ```
@@ -181,6 +195,8 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
+{: #bx_cr_namespace_rm}
+
 Retire un espace de nom de votre compte {{site.data.keyword.Bluemix_short}}. Les images dans cet espace de nom sont supprimées lorsque l'espace de nom est retiré.
 
 ```
@@ -194,7 +210,7 @@ bx cr namespace-rm ESPACE DE NOM
 <dd>Espace de nom que vous désirez supprimer.</dd>
 </dl>
 
-<!-- audience blue staging only begin comment -->
+
 
 ## bx cr plan
 {: #bx_cr_plan}
@@ -206,10 +222,13 @@ bx cr plan
 ```
 {: codeblock}
 
+
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Modifie le quota spécifié.
+Effectue une mise à niveau vers le plan spécifié.
+
+Pour plus d'information sur les plans, voir [Plans de registre](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
 bx cr plan-upgrade PLAN
@@ -219,12 +238,32 @@ bx cr plan-upgrade PLAN
 **Paramètres**
 <dl>
 <dt>PLAN</dt>
-<dd> Effectue une mise à niveau vers le plan spécifié. Les plans disponibles sont les suivants :
+<dd> Effectue une mise à niveau vers le plan spécifié. Les plans disponibles sont les suivants : 
 <ul>
 <li>Gratuit</li>
 <li>Standard</li>
 </ul>
 </dl>
+
+
+## bx cr pricing
+{: #bx_cr_pricing}
+
+Calcule le coût estimé de votre utilisation en dollar des États-Unis en tenant compte de votre mémoire libre et de vos franchises en matière de trafic pull.
+
+```
+bx cr pricing --traffic VALUE --storage VALUE
+```
+{: codeblock}
+
+**Paramètres**
+<dl>
+<dt>--traffic VALEUR</dt>
+<dd>Spécifiez votre trafic pull mensuel anticipé en mégaoctets. Le trafic doit être spécifié sous forme d'entier.</dd>
+<dt>--storage VALEUR</dt>
+<dd>Spécifiez votre mémoire totale moyenne anticipée en mégaoctets. La mémoire doit être spécifiée sous forme d'entier.</dd>
+</dl>
+
 
 ## bx cr quota
 {: #bx_cr_quota}
@@ -235,6 +274,7 @@ Affiche vos quotas actuels de trafic et de stockage, ainsi que les informations 
 bx cr quota
 ```
 {: codeblock}
+
 
 ## bx cr quota-set
 {: #bx_cr_quota_set}
@@ -254,9 +294,10 @@ bx cr quota-set [--traffic VALEUR] [--storage VALEUR]
 <dd>(Facultatif) Remplace votre quota de stockage par celui spécifié. L'opération échoue si vous n'êtes pas habilité à définir les quotas de stockage ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
 </dl>
 
-<!-- audience blue staging only end comment -->
 
 ## bx cr token-add
+{: #bx_cr_token_add}
+
 Ajoute un jeton que vous pouvez utiliser pour contrôler l'accès à un registre.
 
 ```
@@ -280,6 +321,8 @@ bx cr token-add [--description VALEUR] [-q, --quiet] [--non-expiring] [--readwri
 
 
 ## bx cr token-get
+{: #bx_cr_token_get}
+
 Extrait le jeton spécifié du registre.
 
 ```
@@ -296,6 +339,8 @@ bx cr token-get JETON
 
 
 ## bx cr token-list (bx cr tokens)
+{: #bx_cr_token_list}
+
 Affiche tous les jetons qui existent pour votre compte {{site.data.keyword.Bluemix_short}}.
 
 ```
@@ -308,16 +353,18 @@ bx cr token-list --format FORMAT
 <dt>--format FORMAT</dt>
 <dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
 
+Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 </dl>
 
-
 ## bx cr token-rm
+{: #bx_cr_token_rm}
+
 Retire un ou plusieurs jetons spécifiés.
 
 ```
-bx cr token-rm JETON [JETON]
+bx cr token-rm TOKEN [TOKEN...]
 ```
 {: codeblock}
 
@@ -326,6 +373,7 @@ bx cr token-rm JETON [JETON]
 <dt>JETON</dt>
 <dd>(Facultatif) JETON peut correspondre au jeton lui-même ou à l'identificateur unique du jeton, comme indiqué dans `bx cr token-list`. Vous pouvez spécifier plusieurs jetons en les séparant par un espace.</dd>
 </dl>
+
 
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
@@ -341,16 +389,19 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <dl>
 <dt>IMAGE</dt>
 <dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet au format `espace_nom/image:balise`, de l'image pour laquelle vous désirez obtenir un rapport. Le rapport vous signale si l'image comporte des vulnérabilités de package connues. Les systèmes d'exploitation suivants sont pris en charge :
+
 <ul>
+
+<li>Alpine</li>
 <li>CentOS</li>
 <li>Debian</li>
 <li>Red Hat Enterprise Linux (RHEL)</li>
 <li>Ubuntu</li>
 </ul>
 
-</dd>
+Pour plus d'informations, voir [Examen de la sécurité d'une image](../../../services/Registry/registry_images_.html#registry_security_checking).
 
 </dd>
+
 </dl>
-
 

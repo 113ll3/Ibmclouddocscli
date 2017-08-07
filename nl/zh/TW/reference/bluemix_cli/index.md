@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -27,6 +27,32 @@ lastupdated: "2017-03-08"
 ## 安裝 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
+<!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->
+
+### 線上安裝
+
+在存取網際網路連線的情況下，複製下列指令，並將其貼入終端機主控台，然後執行它。
+
+**macOS**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
+```
+
+**Linux**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+```
+
+**Windows PowerShell**
+
+複製下列指令，並將其貼入 [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell) 終端機主控台，然後執行它。
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+
+### 離線安裝
+
+<!-- End of online installation -->
 
 若為 Mac OS 及 Windows，請下載 [{{site.data.keyword.Bluemix_notm}} CLI 套件](/docs/cli/index.html#downloads)，然後執行安裝程式。
 
@@ -151,3 +177,9 @@ lastupdated: "2017-03-08"
 
 
 您現在已準備好使用 {{site.data.keyword.Bluemix_notm}} 指令行。執行 `bluemix help`，以查看指令及說明的清單。 
+
+## 聯繫
+
+請使用下列選項來尋找版本資訊、提供意見，以及提問：
+ * 如需最新版本以及回報問題的詳細資料：[{{site.data.keyword.Bluemix_notm}} CLI SDK](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg)
+ * 若要提問，並與社群分享知識：[bluemix-cli Slack 頻道](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg)

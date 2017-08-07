@@ -6,33 +6,28 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-15"
-
+lastupdated: "2017-06-30"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:tip: .tip}
 {:new_window: target="_blank"}
 
-# Downloads
+# Manuelle Installation der Befehlszeilenschnittstelle
 {: #cli}
 
-Mit {{site.data.keyword.Bluemix_short}} haben Sie Zugriff auf leistungsfähige Tools wie zum Beispiel eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins. Alle diese CLI-Downloads werden zur Unterstützung Ihrer Arbeit mit {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt.
+Die {{site.data.keyword.Bluemix}}-CLI stellt eine Befehlszeilenbedienung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit. Sie enthält außerdem eine Cloud Foundry-Befehlszeilenschnittstelle (cf) in ihrer Installation, die zur Verwaltung von Cloud Foundry-Anwendungen und -Services verwendet werden kann.
 {:shortdesc}
-
-## ![](./images/CLI.svg) Befehlszeilenschnittstelle (CLI)
-{: #downloads notoc}
-
-Laden Sie das Befehlszeilentool herunter und installieren Sie es, um Ihre Arbeit in {{site.data.keyword.Bluemix_notm}} zu unterstützen.
-
-Die {{site.data.keyword.Bluemix_notm}}-CLI stellt eine Befehlszeilenbedienung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit. Sie enthält außerdem eine Cloud Foundry-Befehlszeilenschnittstelle (cf) in ihrer Installation, die zur Verwaltung von Cloud Foundry-Anwendungen und -Services verwendet werden kann. 
 
 Beide CLI-Tools verwenden standardmäßig den Port 443. Wenn sich ein HTTP-Proxy zwischen den CLI-Tools und der {{site.data.keyword.Bluemix_notm}}-Umgebung befindet, müssen Sie die Umgebungsvariable `HTTP_PROXY` mit der tatsächlichen URL und dem Port (falls vorhanden) des HTTP-Proxys konfigurieren. Details hierzu finden Sie in den Informationen zur [Verwendung der CLI mit einem HTTP-Proxy-Server ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}.
 
-[{{site.data.keyword.Bluemix_notm}}-CLI herunterladen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/){: new_window} <br> 
-[Dokumentation anzeigen](/docs/cli/reference/bluemix_cli/index.html)
+[Download der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle](/docs/cli/reference/bluemix_cli/all_versions.html){: new_window} 
+
+Wenn Sie unter macOS arbeiten, verwenden Sie am besten [IBM Cloud Application Tools 2](/docs/cli/icat.html) für Ihren Einstieg in die Verwendung der IBM Cloud-Tools.
+{: tip}
 
 ## ![](./images/CLI_Plugin.svg) Befehlszeilenschnittstelle-Plug-ins
 {: #cliplugins notoc}
@@ -71,11 +66,10 @@ Dabei ist `repo_url` die HTTPS-URL des Plug-in-Repositorys.
 bluemix plugin install Plug-in-Name -r bluemix-other-repo
 ```
 
-
 ### Erweitern Sie die Cloud Foundry-Befehlszeilenschnittstelle: bx cf
 {: #cli_cf_ext notoc}
 
-Nach der Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilentools ist auch eine Cloud Foundry-Befehlszeilenschnittstelle im Bluemix-CLI-Verzeichnis installiert. Führen Sie die Cloud Foundry-CLI-Befehle mit `bluemix cf` aus.
+Nach der Installation der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle ist auch eine Cloud Foundry-Befehlszeilenschnittstelle im {{site.data.keyword.Bluemix_notm}}-CLI-Verzeichnis installiert. Führen Sie die Cloud Foundry-CLI-Befehle mit `bluemix cf` aus.
 
 * Zum Installieren von CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
 
@@ -108,5 +102,5 @@ Sie können Plug-ins herunterladen und installieren, um Ihre bevorzugten {{site.
 
 | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
 |----------|----------|----------|----------|----------|
-| [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [ Developer Toolkit ](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
+| [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
 {: caption="Tabelle 6. Plug-ins" caption-side="top"}

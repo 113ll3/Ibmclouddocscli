@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-06-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-24"
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
 
-버전: 0.5.2
+버전: 0.5.5
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다. 일부 {{site.data.keyword.Bluemix_notm}} 명령은 기존 cf 명령의 랩퍼이며, 나머지는 {{site.data.keyword.Bluemix_notm}} 사용자에 대해 확장 기능을 제공합니다. 다음 정보에서는 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다.
 {:shortdesc}
@@ -35,14 +35,12 @@ lastupdated: "2017-05-24"
 <dd>이 명령을 실행하려면 Docker CLI(docker)가 설치되어 있어야 합니다.</dd>
 </dl>
 
-## Bluemix 명령 색인
-{: #bx_commands_index}
+**참고:** Bluemix 명령의 short 형식을 사용할 수 있습니다. 예를 들어, `bx api`는 `bluemix api`의 단축형입니다. 
 
 자주 사용되는 Bluemix 명령을 참조하려면 다음 표의 색인을 사용하십시오.
 
-**참고:** Bluemix 명령의 short 형식을 사용할 수 있습니다. 예를 들어, `bx api`는 `bluemix api`의 단축형입니다. 
-
-
+## 일반 Bluemix 명령 
+{: #bx_commands_index}
 
 <table summary="일반 Bluemix 명령.">
  <caption>표 1. 일반 Bluemix 명령</caption>
@@ -55,21 +53,27 @@ lastupdated: "2017-05-24"
 ](bx_cli.html#bluemix_help)</td>
  <td>[bluemix api
 ](bx_cli.html#bluemix_api)</td>
- <td>[bluemix login](bx_cli.html#bluemix_login)</td>
- <td>[bluemix logout
-](bx_cli.html#bluemix_logout)</td>
- <td>[bluemix target
-](bx_cli.html#bluemix_target)</td>
+ <td>[bluemix config](bx_cli.html#bluemix_config)</td>
+ <td>[bluemix info](bx_cli.html#bluemix_info)</td>
  </tr>
  <tr>
- <td>[bluemix info](bx_cli.html#bluemix_info) </td>
- <td>[bluemix regions](bx_cli.html#bluemix_regions) </td>
- <td>[bluemix config](bx_cli.html#bluemix_config)</td>
- <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
+ <td>[bluemix login](bx_cli.html#bluemix_login) </td>
+ <td>[bluemix logout](bx_cli.html#bluemix_logout) </td>
+ <td>[bluemix regions](bx_cli.html#bluemix_regions)</td>
+ <td>[bluemix target
+](bx_cli.html#bluemix_target)</td>
  <td>[bluemix update](bx_cli.html#bluemix_update)</td>
  </tr>
  </tbody>
  </table>
+ 
+ ## {{site.data.keyword.BluSoftlayer_notm}} 서비스 관리 및 구성을 위한 명령
+  {: #bx_commands_softlayer}
+  
+{{site.data.keyword.BluSoftlayer_notm}}} 관리를 위한 명령이 Bluemix CLI에 병합되었습니다. {{site.data.keyword.BluSoftlayer_notm}} 서비스 구성 및 관리를 위해 Bluemix CLI 사용하기에 대한 자세한 정보는 [Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 명령](/docs/cli/reference/softlayer/index.md#softlayer_cli)을 참조하십시오.
+ 
+ ## 계정, 조직 및 역할 관리를 위한 명령
+ {: #bx_commands_acctorg}
 
 <table summary="계정, 조직, 영역, 역할 및 API 키를 관리하는 데 사용할 수 있는 bluemix 명령입니다.">
 <caption>표 2. 계정, 조직, 영역, 역할 및 API 키 관리를 위한 명령</caption>
@@ -129,6 +133,9 @@ lastupdated: "2017-05-24"
  </tr>
  </tbody>
  </table>
+ 
+ ## cf 앱 및 앱 관련 도메인, 라우트 및 인증서 관리를 위한 명령
+ {: #bx_commands_apps}
 
 <table summary="cf 앱 및 앱 관련 도메인, 라우트와 인증서를 관리하는 데 사용할 수 있는 bluemix 명령입니다.">
 <caption>표 3. cf 앱 및 앱 관련 도메인, 라우트 및 인증서 관리를 위한 명령</caption>
@@ -187,6 +194,9 @@ lastupdated: "2017-05-24"
  </tr>
   </tbody>
  </table>
+ 
+ ## Bluemix 서비스 관리를 위한 명령
+ {: #bx_commands_services}
 
 <table summary="Bluemix 서비스 관리에 사용 가능한 Bluemix 명령">
  <caption>표 4. Bluemix 서비스 관리를 위한 명령</caption>
@@ -217,6 +227,9 @@ lastupdated: "2017-05-24"
  </tr>
   </tbody>
  </table>
+ 
+ ## 카탈로그, 플러그인 및 청구 설정 관리를 위한 명령
+ {: #bx_commands_settings}
 
 <table summary="Bluemix 카탈로그, 플러그인, 청구 및 보안 설정을 관리하는 데 사용할 수 있는 Bluemix 명령.">
  <caption>표 5. Bluemix 카탈로그, 플러그인, 청구 및 보안 설정 관리를 위한 명령</caption>
@@ -328,155 +341,6 @@ API 엔드포인트를 설정 해제합니다.
 bluemix api --unset
 ```
 
-
-## bluemix login
-{: #bluemix_login}
-
-사용자가 로그인됩니다.  
-
-```
-bluemix login [OPTIONS...]
-```
-
-<strong>전제조건</strong>: 없음
-
-<strong>명령 옵션</strong>:
-<dl>
-  <dt>-a <i>API_ENDPOINT</i>(선택사항)</dt>
-  <dd> API 엔드포인트(예: api.ng.bluemix.net)</dd>
-  <dt> --apikey <i>API_KEY 또는 @API_KEY_FILE_PATH</i>
-  <dd> API 키 컨텐츠 또는 @로 표시되는 API 키 파일의 경로</dd>
-  <dt> --sso(선택사항) </dt>
-  <dd> 로그인에 일회성 패스코드 사용</dd>
-  <dt> -u <i>USERNAME</i>(선택사항)</dt>
-  <dd> Username</dd>
-  <dt> -p <i>PASSWORD</i>(선택사항)</dt>
-  <dd> 비밀번호</dd>
-  <dt> -c <i>ACCOUNT_ID</i>(선택사항) </dt>
-  <dd> 대상 계정의 ID</dd>
-  <dt> -o <i>ORG_NAME</i>(선택사항)</dt>
-  <dd> 대상 조직의 이름</dd>
-  <dt> -s <i>SPACE_NAME</i>(선택사항)</dt>
-  <dd> 대상 영역의 이름</dd>
-  <dt> --skip-ssl-validation(선택사항)</dt>
-  <dd> HTTP 요청의 SSL 유효성 검증을 무시합니다. 이 옵션은 권장되지 않습니다.</dd>
-</dl>
-
-<strong>예제</strong>:
-
-대화식 로그인:
-
-```
-bluemix login
-```
-
-사용자 이름과 비밀번호로 로그인하고 대상 계정, 조직 및 영역을 설정하십시오.
-
-```
-bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
-```
-
-일회성 패스코드로 로그인하고 대상 계정, 조직 및 영역을 설정하십시오.
-
-```
-bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
-```
-
-API 키로 로그인하고 대상을 설정하십시오.
-
-* API 키에 계정이 연관되어 있음
-
-```
-bluemix login --apikey api-key-string -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @filename -o MyOrg -s MySpace
-```
-
-* API에 계정이 연관되어 있지 않음
-
-```
-bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
-```
-
-<strong>참고:</strong> API 키에 계정이 연관되어 있는 경우 다른 계정으로 전환이 허용되지 않습니다.
-
-
-## bluemix logout
-{: #bluemix_logout}
-
-사용자가 로그아웃됩니다. 
-
-```
-bluemix logout
-```
-
-<strong>전제조건</strong>: 없음
-
-
-## bluemix target
-{: #bluemix_target}
-
-
-대상 계정, 지역, 조직 또는 영역을 설정하거나 보십시오.
-
-```
-bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
-```
-
-<strong>전제조건</strong>: 엔드포인트, 로그인
-
-<strong>명령 옵션</strong>:
-   <dl>
-   <dt>-c <i>ACCOUNT_ID</i>(선택사항) </dt>
-   <dd>대상으로 지정된 계정의 ID입니다.</dd>
-   <dt>-r <i>REGION</i>(선택사항)</dt>
-   <dd>전환할 지역입니다.</dd>
-   <dt>-o <i>ORG_NAME</i>(선택사항)</dt>
-   <dd>대상으로 지정된 조직의 이름입니다. </dd>
-   <dt>-s <i>SPACE_NAME</i>(선택사항)</dt>
-   <dd>대상으로 지정된 영역의 이름입니다. </dd>
-   </dl>
-옵션이 지정되지 않은 경우, 현재 계정, 영역, 조직 및 영역이 표시됩니다.
-
-<strong>예제</strong>:
-
-현재 계정, 조직 및 영역 설정
-
-```
-bluemix target -c MyAccountID -o MyOrg -s MySpace
-```
-
-새 지역으로 전환
-
-```
-bluemix target -r eu-gb
-```
-
-현재 계정, 지역, 조직 및 영역 보기:
-
-```
-bluemix target
-```
-
-
-## bluemix info
-{: #bluemix_info}
-
-현재 지역, 클라우드 제어기 버전, 로그인과 교환 액세스 토큰의 엔드포인트 같은 유용한 엔드포인트 등 기본 {{site.data.keyword.Bluemix_notm}} 정보를 확인합니다.
-
-```
-bluemix info
-```
-
-<strong>전제조건</strong>:  엔드포인트
-
-
 ## bluemix config
 {: #bluemix_config}
 
@@ -498,9 +362,9 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--color true|false</dt>
    <dd>색상 출력을 사용하거나 사용하지 않습니다. 색상 출력은 기본적으로 사용됩니다. </dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>기본 로케일을 설정합니다. LOCALE이 <i>CLEAR</i>이면 이전 로케일이 삭제됩니다. </dd>
+   <dd>기본 로케일을 설정합니다. LOCALE이 <i>CLEAR</i>인 경우 이전 로케일이 삭제됩니다. </dd>
    <dt>--check-version true|false</dt>
-   <dd>CLI 버전 확인을 사용하거나 사용하지 않습니다. </dd>
+   <dd>CLI 버전 확인을 사용하거나 사용하지 않습니다.</dd>
    </dl>
 
 이들 옵션 중에서 한 번에 하나만 지정할 수 있습니다. 
@@ -544,40 +408,117 @@ bluemix config --locale CLEAR
 ```
 
 
-## bluemix curl
-{: #bluemix_curl}
 
-원시 HTTP 요청을 {{site.data.keyword.Bluemix_notm}}에 실행합니다. *Content-Type*은 기본적으로 *application/json*으로 설정됩니다. 이 명령은 {{site.data.keyword.Bluemix_notm}} 다중 클라우드 제어 프록시에 요청을 전송합니다. 지원되는 경로는 [CloudFoundry API 문서 ](http://apidocs.cloudfoundry.org/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)의 API 경로 정의를 참조하십시오. 
+## bluemix info
+{: #bluemix_info}
+
+현재 지역, 클라우드 제어기 버전, 로그인과 교환 액세스 토큰의 엔드포인트 같은 유용한 엔드포인트 등 기본 {{site.data.keyword.Bluemix_notm}} 정보를 확인합니다.
 
 ```
-bluemix curl PATH [OPTIONS...]
+bluemix info
 ```
 
-<strong>전제조건</strong>: 엔드포인트, 로그인
+<strong>전제조건</strong>:  엔드포인트
+
+## bluemix login
+{: #bluemix_login}
+
+사용자가 로그인됩니다.  
+
+```
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+```
+
+<strong>전제조건</strong>: 없음
+
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
 <strong>명령 옵션</strong>:
-   <dl>
-   <dt><i>PATH</i>(필수)</dt>
-   <dd>리소스의 URL 경로입니다. 예: /v2/apps.</dd>
-   <dt><i>OPTIONS</i>(선택사항)</dt>
-   <dd>`bluemix curl` 명령에서 지원하는 옵션은 `cf curl` 명령에 대한 옵션과 동일합니다. </dd>
-   </dl>
+<dl>
+  <dt> -a <i>API_ENDPOINT</i>(선택사항)</dt>
+  <dd> API 엔드포인트(예: api.ng.bluemix.net)</dd>
+  <dt> --apikey <i>API_KEY 또는 @API_KEY_FILE_PATH</i>
+  <dd> API 키 컨텐츠 또는 @로 표시되는 API 키 파일의 경로</dd>
+  <dt> --sso(선택사항) </dt>
+  <dd> 일회성 패스코드를 사용하여 로그인</dd>
+  <dt> -u <i>USERNAME</i>(선택사항)</dt>
+  <dd> 사용자 이름</dd>
+  <dt> -p <i>PASSWORD</i>(선택사항)</dt>
+  <dd> 비밀번호</dd>
+  <dt> -c <i>ACCOUNT_ID</i>(선택사항) </dt>
+  <dd> 대상 계정의 ID</dd>
+  <dt> -o <i>ORG_NAME</i>(선택사항)</dt>
+  <dd> 대상 조직의 이름</dd>
+  <dt> -s <i>SPACE_NAME</i>(선택사항)</dt>
+  <dd> 대상 영역의 이름</dd>
+  <dt> --skip-ssl-validation(선택사항)</dt>
+  <dd> HTTP 요청의 SSL 유효성 검증을 무시합니다. 이 옵션은 권장되지 않습니다.</dd>
+</dl>
 
 <strong>예제</strong>:
 
-현재 계정의 모든 조직에 대한 정보를 봅니다.
+#### 대화식 로그인
 
 ```
-bluemix curl /v2/organizations
+bluemix login
 ```
 
-## bluemix update
-{: #bluemix_update}
-
-최신 버전으로 CLI 업데이트
+사용자 이름과 비밀번호로 로그인하고 대상 계정, 조직 및 영역을 설정하십시오.
 
 ```
-bluemix update
+bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+```
+
+일회성 패스코드로 로그인하고 대상 계정, 조직 및 영역을 설정하십시오.
+
+```
+bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
+```
+
+API 키로 로그인하고 대상을 설정하십시오.
+
+#### API 키에 계정이 연관되어 있음
+
+```
+bluemix login --apikey api-key-string -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @filename -o MyOrg -s MySpace
+```
+
+#### API에 계정이 연관되어 있지 않음
+
+```
+bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+```
+
+<strong>참고:</strong> API 키에 연관된 계정이 있는 경우, 다른 계정으로 전환이 허용되지 않습니다.
+
+#### 일회성 패스코드 사용
+
+```
+bluemix login -u UserID --sso
+```
+
+그러면 CLI에서 URL 링크를 제공하고 패스코드를 요청합니다. 
+```
+One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
+```
+
+브라우저에서 링크를 열면 패스코드를 가져오도록 안내를 받게 됩니다. 콘솔에서 제공된 패스코드를 입력하면 로그인할 수 있어야 합니다.
+
+## bluemix logout
+{: #bluemix_logout}
+
+사용자가 로그아웃됩니다. 
+
+```
+bluemix logout
 ```
 
 <strong>전제조건</strong>: 없음
@@ -594,7 +535,63 @@ bluemix regions
 <strong>전제조건</strong>:  엔드포인트
 
 
-## bluemix iam orgs
+## bluemix target
+{: #bluemix_target}
+
+
+대상 계정, 지역, 조직 또는 영역을 설정하거나 보십시오.
+
+```
+bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+   <dl>
+   <dt>-c <i>ACCOUNT_ID</i>(선택사항) </dt>
+   <dd>대상으로 지정된 계정의 ID입니다.</dd>
+   <dt>-r <i>REGION</i>(선택사항)</dt>
+   <dd>전환할 지역입니다.</dd>
+   <dt>-o <i>ORG_NAME</i>(선택사항)</dt>
+   <dd>대상으로 지정된 조직의 이름입니다. </dd>
+   <dt>-s <i>SPACE_NAME</i>(선택사항)</dt>
+   <dd>대상으로 지정된 영역의 이름입니다. </dd>
+   </dl>
+옵션이 지정되지 않은 경우, 현재 계정, 영역, 조직 및 영역이 표시됩니다.
+
+<strong>예제</strong>:
+
+현재 계정, 조직 및 영역 설정하기:
+
+```
+bluemix target -c MyAccountID -o MyOrg -s MySpace
+```
+
+새 지역으로 전환하기:
+
+```
+bluemix target -r eu-gb
+```
+
+현재 계정, 지역, 조직 및 영역 보기:
+
+```
+bluemix target
+```
+
+### bluemix update
+{: #bluemix_update}
+
+최신 버전으로 CLI 업데이트.
+
+```
+bluemix update
+```
+
+<strong>전제조건</strong>: 없음
+
+### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
 모든 조직 나열
@@ -1041,7 +1038,7 @@ bluemix iam account-users
 현재 계정에서 사용자 삭제(계정 소유자만)
 
 ```
-bluemix iam account-user-delete USERNAME [-f]
+bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1050,6 +1047,8 @@ bluemix iam account-user-delete USERNAME [-f]
 <dl>
 <dt>USERNAME(필수)</dt>
 <dd>사용자 이름</dd>
+<dt>-c ACCOUNT_ID</dt>
+<dd>계정 ID. 지정되지 않은 경우 기본값은 현재 계정입니다. </dd>
 <dt>--force, -f(선택사항)</dt>
 <dd>확인 없이 강제 삭제합니다. </dd>
 </dl>
@@ -1930,6 +1929,17 @@ bluemix plugin list
 
 <strong>전제조건</strong>: 없음
 
+## bluemix plugin show
+{: #bluemix_plugin_show}
+
+설치된 플러그인의 세부사항 표시
+
+```
+bluemix plugin show PLUGIN-NAME
+```
+
+<strong>전제조건</strong>: 없음
+
 
 ## bluemix plugin install
 {: #bluemix_plugin_install}
@@ -1984,19 +1994,21 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 저장소에서 플러그인 업그레이드
 
 ```
-bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
+bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
 <strong>전제조건</strong>: 없음
 
 <strong>명령 옵션</strong>:
 <dl>
- <dt>-r REPO_NAME(필수)</dt>
- <dd>플러그인 바이너리가 있는 저장소의 이름입니다. </dd>
- <dt><i>PLUGIN_NAME</i>(선택사항)</dt>
- <dd>지정하지 않으면 지정된 저장소에서 업데이트에 사용 가능한 모든 플러그인이 선택을 위해 나열됩니다.</dd>
+ <dt>PLUGIN NAME</dt>
+ <dd>업데이트할 플러그인의 이름입니다. 지정되지 않은 경우, 이 명령은 설치된 모든 플러그인의 업그레이드를 확인합니다.</dd>
+ <dt>-r REPO_NAME</dt>
+ <dd>플러그인 바이너리가 있는 저장소의 이름입니다. 지정되지 않은 경우, 이 명령은 기본 플러그인 저장소를 사용합니다.</dd>
  <dt>-v <i>VERSION</i>(선택사항)</dt>
  <dd>업데이트할 플러그인의 버전입니다. 제공하지 않은 경우, 최신 사용 가능 버전으로 플러그인을 업데이트하십시오.</dd>
+ <dt>--all</dt>
+ <dd>사용 가능한 플러그인 모두 업데이트</dd>
 </dl>
 
 <strong>예제</strong>:

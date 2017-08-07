@@ -297,11 +297,12 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
     </dl>
 
 
-|  환경 변수                              |     설명                            |
+|  환경 변수|     설명 
+|
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오. |
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오. |
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오. |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오.|
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오.|
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오.|
 {: caption="표 2. 공통으로 사용되는 환경 변수" caption-side="top"}
 
  <dl>
@@ -309,7 +310,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd> 파일에서 환경 변수를 가져오며 여기서 ENVFILE은 로컬 디렉토리에 있는 파일의 경로입니다. 파일의 모든 행은 하나의 키=값 쌍을 나타냅니다. </dd>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro] (선택사항)</dt>
    <dd><i>VolumeId:ContainerPath[:ro]</i> 형식의 세부사항을 지정하여 컨테이너에 볼륨을 첨부합니다.
-   <ul>
+<ul>
    <li><i>VOLUME</i>: 볼륨 ID 또는 이름입니다.</li>
    <li><i>CONTAINER_PATH</i>: 컨테이너의 볼륨에 대한 절대 경로입니다. </li>
    <li>ro: 선택사항입니다. <i>ro</i>를 지정하면 기본값 "읽기/쓰기"가 아닌 "읽기 전용"으로 볼륨이 설정됩니다. </li></ul>
@@ -331,7 +332,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>필요한 인스턴스 수입니다. 기본값은 2입니다.</dd>
    <dt>--auto(선택사항)</dt>
    <dd>컨테이너 그룹이 작성되고 자동 복구가 사용되는 경우, IBM Containers는 지정된 포트에 대한 HTTP 요청으로 각 인스턴스의 상태를 확인합니다. <br>
-   두 개의 후속 90초 간격에서 컨테이너 인스턴스로부터 응답이 수신되지 않으면 해당 인스턴스가 제거되고 새 인스턴스로 바뀝니다. 컨테이너가 응답하면 아무 조치도 수행되지 않습니다. 이 프로세스는 계속해서 반복됩니다. 30분 창 동안 그룹의 멤버인 서로 다른 컨테이너의 총 수가 해당 그룹의 관찰된 최대 크기의 3배보다 크거나 같으면 해당 컨테이너 그룹에 대해 자동 복구가 영구적으로 사용되지 않습니다. 자동 복구를 다시 사용하려면 컨테이너 그룹을 다시 작성해야 합니다.</dd>
+두 개의 후속 90초 간격에서 컨테이너 인스턴스로부터 응답이 수신되지 않으면 해당 인스턴스가 제거되고 새 인스턴스로 바뀝니다. 컨테이너가 응답하면 아무 조치도 수행되지 않습니다. 이 프로세스는 계속해서 반복됩니다. 30분 창 동안 그룹의 멤버인 서로 다른 컨테이너의 총 수가 해당 그룹의 관찰된 최대 크기의 3배보다 크거나 같으면 해당 컨테이너 그룹에 대해 자동 복구가 영구적으로 사용되지 않습니다. 자동 복구를 다시 사용하려면 컨테이너 그룹을 다시 작성해야 합니다.</dd>
   <dt>--anti(선택사항)</dt>
   <dd> 컨테이너 그룹의 가용성을 높이려면 anti-affinity를 사용하십시오. --anti 옵션은 사용자 그룹의 모든 컨테이너 인스턴스를 별도의 실제 컴퓨팅 노드에 배치하여 하드웨어 장애로 인해 그룹의 모든 컨테이너가 충돌하는 경우가 줄어들도록 강제 실행합니다. 각 Bluemix 지역과 조직에서 배치에 사용할 수 있는 컴퓨팅 노드의 세트는 제한되어 있으므로 그룹 크기가 큰 경우 이 옵션을 사용하지 못할 수 있습니다. 배치에 성공하지 못한 경우에는 그룹의 컨테이너 인스턴스 수를 줄이거나 --anti 옵션을 제거하십시오. </dd>
    <dt><i>CMD</i>(선택사항)</dt>
@@ -356,7 +357,8 @@ IBM Containers에서 제공하는 `registry.ng.bluemix.net/ibmnode` 이미지를
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
 ```
 
-`registry.ng.bluemix.net/ibmliberty` 이미지를 사용하여 자동 복구가 사용되는 확장 가능한 그룹 `mygroup`을 작성합니다. 포트는 `9080`이고 호스트 이름은 `mycontainerhost`이며 도메인 이름은 `mybluemix.net`입니다. 
+`registry.ng.bluemix.net/ibmliberty` 이미지를 사용하여 자동 복구가 사용되는 확장 가능한 그룹 `mygroup`을 작성합니다. 포트는 `9080`이고 호스트 이름은 `mycontainerhost`이며 도메인 이름은 `mybluemix.net`입니다.
+
 ```
 bluemix ic group-create -p 9080 --auto -n mycontainerhost -d mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
 ```
@@ -382,7 +384,8 @@ bluemix ic group-inspect CONTAINER_GROUP
 
 <strong>예제</strong>:
 
-다음 예제는 `my_group` 컨테이너 그룹을 검사하기 위한 요청을 보여줍니다. 
+다음 예제는 `my_group` 컨테이너 그룹을 검사하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic group-inspect my_group
 ```
@@ -408,7 +411,8 @@ bluemix ic group-instances CONTAINER_GROUP
 
 <strong>예제</strong>:
 
-`my_group` 컨테이너 그룹의 모든 인스턴스를 나열합니다. 
+`my_group` 컨테이너 그룹의 모든 인스턴스를 나열합니다.
+
 ```
 bluemix ic group-instances my_group
 ```
@@ -437,7 +441,8 @@ bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
 
 <strong>예제</strong>:
 
-다음 예제는 컨테이너 그룹을 제거하기 위한 요청을 보여줍니다. 여기서 `my_group`은 컨테이너 그룹의 이름입니다. 
+다음 예제는 컨테이너 그룹을 제거하기 위한 요청을 보여줍니다. 여기서 `my_group`은 컨테이너 그룹의 이름입니다.
+
 ```
 bluemix ic group-remove my_group
 ```
@@ -453,7 +458,7 @@ bluemix ic group-remove my_group
 bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=ENV_VAL] GROUP_NAME
 ```
 
-**팁:** 컨테이너 그룹의 호스트 이름 또는 도메인을 업데이트하려면 `bluemix ic route-map [-n HOST][-d DOMAIN] CONTAINER_GROUP`을 사용하십시오.
+**팁:** 컨테이너 그룹의 호스트 이름 또는 도메인을 업데이트하려면 `bluemix ic route-map [-n HOST] [-d DOMAIN] CONTAINER_GROUP`을 사용하십시오.
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
 
@@ -471,7 +476,8 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 
 <strong>예제</strong>:
 
-다음 예제는 `my_group` 컨테이너 그룹을 업데이트하기 위한 요청을 보여줍니다. 
+다음 예제는 `my_group` 컨테이너 그룹을 업데이트하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic group-update --desired 5 my_group
 ```
@@ -521,7 +527,8 @@ bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
 
 <strong>예제</strong>:
 
-다음 예제는 조직의 사용 가능한 이미지 목록을 수신하기 위한 요청을 보여줍니다. 
+다음 예제는 조직의 사용 가능한 이미지 목록을 수신하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic images
 ```
@@ -587,7 +594,8 @@ bluemix ic inspect [IMAGE|images|CONTAINER]
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 검사하기 위한 요청을 보여줍니다. 
+다음 예제는 `proxy`라는 컨테이너를 검사하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic inspect proxy
 ```
@@ -615,7 +623,8 @@ bluemix ic ip-bind IP_ADDRESS CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너로 바인드하기 위한 요청을 보여줍니다. 
+다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너로 바인드하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic ip-bind 192.123.12.12 proxy
 ```
@@ -682,7 +691,8 @@ bluemix ic ip-unbind IP_ADDRESS CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너에서 바인드 해제하기 위한 요청을 보여줍니다. 
+다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너에서 바인드 해제하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic ip-unbind 192.123.12.12 proxy
 ```
@@ -738,7 +748,8 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너의 프로세스를 강제 종료하기 위한 요청을 보여줍니다. 
+다음 예제는 `proxy`라는 컨테이너의 프로세스를 강제 종료하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic kill proxy
 ```
@@ -817,7 +828,8 @@ bluemix ic pause CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 일시정지하기 위한 요청을 보여줍니다. 
+다음 예제는 `proxy`라는 컨테이너를 일시정지하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic pause proxy
 ```
@@ -857,7 +869,8 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
 
 <strong>예제</strong>:
 
-다음 예제는 실행 중인 컨테이너와 중지된 컨테이너를 모두 표시하기 위한 요청을 보여줍니다. 
+다음 예제는 실행 중인 컨테이너와 중지된 컨테이너를 모두 표시하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic ps -a
 ```
@@ -870,9 +883,7 @@ bluemix ic ps -a
 ```
 bluemix ic rename OLD_NAME NEW_NAME
 ```
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
-
-<strong>명령 옵션</strong>:
+<strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker<strong>명령 옵션</strong>:
 
 <dl>
    <dt><i>OLD_NAME</i>(필수)</dt>
@@ -892,9 +903,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
-<strong>명령 옵션</strong>:
-
-   <dl>
+<strong>명령 옵션</strong>:<dl>
    <dt>--force|-f(선택사항)</dt>
    <dd>Bluemix 영역에서 IBM Containers 서비스를 다시 작성하도록 강제 실행합니다. </dd>
    <dt><i>AVAILABILITY_ZONE</i>(선택사항)</dt>
@@ -937,7 +946,8 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 다시 시작하기 위한 요청을 보여줍니다. 
+다음 예제는 `proxy`라는 컨테이너를 다시 시작하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic restart proxy
 ```
@@ -977,7 +987,8 @@ bluemix ic rm [-f|--force] CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 제거하기 위한 요청을 보여줍니다. 
+다음 예제는 `proxy`라는 컨테이너를 제거하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic rm proxy
 ```
@@ -1021,7 +1032,8 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 
 <strong>예제</strong>:
 
-다음 예제는 `mynamespace/myimage:latest` 이미지를 제거하기 위한 요청을 보여줍니다. 
+다음 예제는 `mynamespace/myimage:latest` 이미지를 제거하기 위한 요청을 보여줍니다.
+
 ```
 bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ```
@@ -1044,7 +1056,8 @@ bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTA
    <dt>-n <i>HOST</i>|--hostname <i>HOST</i>(선택사항)</dt>
    <dd>라우트의 호스트 이름입니다. 호스트 이름은 전체 공용 라우트 URL의 첫 번째 파트입니다(예: URL <i>mycontainerhost.mybluemix.net</i>의 <i>mycontainerhost</i>).</dd>
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>(선택사항)</dt>
-   <dd>라우트의 도메인 이름이며, 이는 전체 공용 라우트 URL의 두 번째 파트입니다. 대부분의 경우, 도메인은 <i>mybluemix.net</i>입니다. 이 매개변수를 사용하여 개인용 도메인을 지정할 수도 있습니다. </dd>
+   <dd>라우트의 도메인 이름이며, 이는 전체 공용 라우트 URL의 두 번째 파트입니다. 대부분의 경우, 도메인은 <i>mybluemix.net</i>입니다. 이 매개변수를 사용하여 개인용 도메인을
+지정할 수도 있습니다. </dd>
    <dt><i>CONTAINER_GROUP</i>(필수)</dt>
    <dd>컨테이너 그룹 ID 또는 이름입니다. </dd>
    </dl>
@@ -1115,11 +1128,12 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    </dl>
 
 
-|      환경 변수                          |   설명                              |
+|      환경 변수|   설명 
+|
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오. |
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오. |
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오. |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오.|
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오.|
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오.|
 {: caption="표 3. 공통으로 사용되는 환경 변수" caption-side="top"}
 
 

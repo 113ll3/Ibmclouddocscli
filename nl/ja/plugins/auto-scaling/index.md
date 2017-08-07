@@ -22,7 +22,7 @@ lastupdated: "2011-01-12"
 {{site.data.keyword.autoscaling}} サービスは、{{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} を使用して構成することができます。{{site.data.keyword.autoscaling}} CLI は Linux64、Win64、および OSX をサポートしており、Auto-Scaling RESTful API が提供する機能と同様の機能を提供します。
 {: shortdesc}
 
-始めに、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。手順については、[{{site.data.keyword.Bluemix_notm}} CLI のダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} を参照してください。
+始めに、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。手順については、[{{site.data.keyword.Bluemix_notm}} CLI のダウンロード ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} CLI プラグインの追加
 
@@ -35,7 +35,7 @@ bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. {{site.data.keyword.autoscaling}} CLI プラグインをインストールするため、以下のコマンドを実行します。
 ```
-bluemix plugin install auto-scaling -r bluemix-plugin-repo
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## Auto-Scaling ポリシーの添付

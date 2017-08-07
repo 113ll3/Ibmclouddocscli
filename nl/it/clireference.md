@@ -18,6 +18,7 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 
 # Riferimenti dell'interfaccia riga di comando
+{: #cli_reference}
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} utilizza
 l'interfaccia riga di comando Cloud Foundry, cf, per

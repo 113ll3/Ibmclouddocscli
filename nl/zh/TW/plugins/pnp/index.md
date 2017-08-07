@@ -26,7 +26,7 @@ lastupdated: "2017-01-12"
 
 ## 安裝專用網路對等作業 CLI 外掛程式
 
-**附註**：如果您有舊版的已安裝外掛程式，則需要將它解除安裝。使用下列指令，以解除安裝外掛程式：
+**附註**：如果您已安裝舊版的外掛程式，則需要將它解除安裝。請使用下列指令，以解除安裝外掛程式：
 
 ```
 bluemix plugin uninstall private-network-peering
@@ -80,12 +80,13 @@ chmod a+x ./private-network-peering-linux-amd64
 ## 專用網路對等作業指令清單
 支援下列指令。使用 `bluemix network` 指令，以查看可用的指令清單：
 
-| 指令     | 說明                                    |
+| 指令| 說明
+|
 |-------------|------------------------------------------------|
-| pnp-routers | 列出對等作業的所有可用路由器        |
-| pnp-create  | 建立專用網路對等作業連線   |
-| pnp-delete  | 刪除專用網路對等作業連線   |
-| pnp-show    | 列出所有專用網路對等作業連線  |
+| pnp-routers| 列出對等作業的所有可用路由器|
+| pnp-create| 建立專用網路對等作業連線|
+| pnp-delete| 刪除專用網路對等作業連線|
+| pnp-show| 列出所有專用網路對等作業連線|
 {: caption="表 1. 專用網路對等作業指令" caption-side="top"}
 
 
@@ -94,7 +95,7 @@ chmod a+x ./private-network-peering-linux-amd64
 
 #### 列出對等作業的所有可用路由器
 ```
-bluemix network pnp-routers [--verbose (or -v)]
+bluemix network pnp-routers [--verbose（或 -v）]
 ```
 
 #####選用參數
@@ -204,7 +205,7 @@ bluemix network pnp-create -i <name>
 
 #### 列出所有專用網路對等作業連線
 ```
-bluemix network pnp-show [--verbose (or -v)]
+bluemix network pnp-show [--verbose（或 -v）]
 ```
 
 #####選用參數
@@ -244,7 +245,7 @@ bluemix network pnp-show [--verbose (or -v)]
 
 #### 刪除專用網路對等作業連線
 ```
-bluemix network pnp-delete [--force (or -f)] <connection_id>
+bluemix network pnp-delete [--force（或 -f）] <connection_id>
 ```
 #####參數
 {: #p3}

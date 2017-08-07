@@ -18,6 +18,7 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 
 # Referencia de la Interfaz de línea de mandatos
+{: #cli_reference}
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} utiliza la interfaz de línea de mandatos de
 Cloud Foundry, cf, para modificar apps, instancias de servicio y enlaces de servicio. También puede utilizar la

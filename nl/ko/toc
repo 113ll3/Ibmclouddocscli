@@ -5,7 +5,11 @@
 CLI 및 개발 도구
 
 	{: .navgroup id="learn"}
-	index.md
+	{: .topicgroup}
+	다운로드
+	    index.md
+	    icat.md
+	    
 	[CF CLI 시작하기](https://github.com/cloudfoundry/cli#getting-started)
 	reference/bluemix_cli/index.md
 	
@@ -16,6 +20,8 @@ CLI 및 개발 도구
 	
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
+	reference/bluemix_cli/all_versions.md
+	reference/softlayer/index.md
 	reference/cfcommands/index.md
 	reference/cloudcli/index.md
 	
@@ -25,11 +31,10 @@ CLI 및 개발 도구
 		plugins/registry/index.md
 		[컨테이너 서비스(클러스터)](../containers/cs_cli_devtools.html)
 		[컨테이너 서비스(단일 및 확장 가능 그룹)](../containers/container_cli_cfic.html)
-		[IBM 개발자](../cloudnative/dev_cli.html)
+		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
-		[IBM SDK 생성기](../cloudnative/sdk_cli.html)
+		[IBM SDK Generator](../cloudnative/sdk_cli.html)
 		[Schematics](../services/schematics/schematics_reference.html)
-		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	
 	{: .topicgroup}
@@ -40,14 +45,16 @@ CLI 및 개발 도구
 	
 	{: .topicgroup}
 	통합 개발 도구
+		ibm-dev-tools-for-vscode.md
 		[API Connect 개발자 툴킷](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
-		[IBM Eclipse Tools for Bluemix를 사용한 앱 배치](../manageapps/eclipsetools/eclipsetools.html)
+		[Bluemix용 IBM Eclipse 도구로 앱 배치](../manageapps/eclipsetools/eclipsetools.html)
 		[Liberty 및 Node.js 앱 관리](../manageapps/app_mng.html#app_management)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
-	[Eclipse 도구를 사용한 개발](../starters/deploy_eclipsetools.html)
-	[CLI를 사용한 앱 배치](../starters/install_cli.html)
+	login_federated_id.md
+	[Eclipse 도구로 개발](../starters/deploy_eclipsetools.html)
+	[CLI로 앱 배치](../starters/install_cli.html)
 	[앱 업로드](../starters/upload_app.html)
 	{: .navgroup-end}

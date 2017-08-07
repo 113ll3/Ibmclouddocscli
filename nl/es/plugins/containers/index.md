@@ -455,8 +455,7 @@ Actualizar un grupo de contenedores.
 bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=ENV_VAL] GROUP_NAME
 ```
 
-**Sugerencia:** para actualizar el nombre de host o dominio de un grupo de contenedores, utilice
-`bluemix ic route-map [-n HOST][-d DOMAIN] CONTAINER_GROUP`.
+**Sugerencia:** para actualizar el nombre de host o dominio de un grupo de contenedores, utilice `bluemix ic route-map [-n HOST] [-d DOMAIN] CONTAINER_GROUP`.
 
 <strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
 

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-07-12"
 
 ---
 
@@ -27,6 +27,32 @@ lastupdated: "2017-03-08"
 ## {{site.data.keyword.Bluemix_notm}} CLI のインストール
 {: #install_bluemix_cli}
 
+<!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->
+
+### オンライン・インストール
+
+インターネット接続へのアクセスにより、以下のコマンドを端末コンソールにコピー・アンド・ペーストし、実行します。
+
+**macOS**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/osx)
+```
+
+**Linux**
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+```
+
+**Windows PowerShell**
+
+以下のコマンドを [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell) 端末コンソールにコピー・アンド・ペーストし、実行します。
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+
+### オフライン・インストール
+
+<!-- End of online installation -->
 
 Mac OS および Windows の場合は、[{{site.data.keyword.Bluemix_notm}} CLI パッケージ](/docs/cli/index.html#downloads)をダウンロードし、インストーラーを実行してください。
 
@@ -151,3 +177,9 @@ Linux の場合は、以下のステップを実行してください。
 
 
 これで、{{site.data.keyword.Bluemix_notm}} コマンド・ラインを使用する準備ができました。コマンドと説明のリストを確認するには、`bluemix help` を実行します。 
+
+## 連絡
+
+リリース情報を見つけたり、フィードバックを提供したり、質問をしたりするには、以下のオプションを使用します。
+ * 最新リリースに関する詳細情報、および問題の報告については、[{{site.data.keyword.Bluemix_notm}} CLI SDK](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) を参照してください。
+ * コミュニティーに質問したり、コミュニティーと知識を共有したりするには、[bluemix-cli Slack チャネル](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg)を参照してください。

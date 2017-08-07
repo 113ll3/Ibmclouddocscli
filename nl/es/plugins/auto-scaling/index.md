@@ -35,7 +35,7 @@ bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Para instalar el plugin de la CLI {{site.data.keyword.autoscaling}}, ejecute el siguiente mandato:
 ```
-bluemix plugin install auto-scaling -r bluemix-plugin-repo
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## Adjunción de una política de escalado automático
@@ -139,5 +139,5 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 ## general
 {: general}
 * [{{site.data.keyword.autoscaling}} servicio](/docs/services/Auto-Scaling/index.html)
-* [CLI de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [Formatos estándar de fecha y hora W3C ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

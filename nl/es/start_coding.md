@@ -14,7 +14,7 @@ lastupdated: "2015-12-07"
 {:shortdesc: .shortdesc}
 
 # Empezar a crear código
-
+{: #start_coding}
 
 En {{site.data.keyword.Bluemix_notm}} puede
 empezar rápidamente a crear código siguiendo los pasos proporcionados tras la creación de una app.

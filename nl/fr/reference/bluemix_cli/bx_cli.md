@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-06-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-24"
 # Commandes {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Version : 0.5.2
+Version : 0.5.5
 
 L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit un ensemble de commandes qui sont regroupées par espace de nom pour que les utilisateurs puissent interagir avec {{site.data.keyword.Bluemix_notm}}. Certaines commandes {{site.data.keyword.Bluemix_notm}} sont des encapsuleurs de commandes cf existantes, tandis que d'autres fournissent des capacités étendues aux utilisateurs {{site.data.keyword.Bluemix_notm}}. La liste ci-dessous répertorie les commandes prises en charge par l'interface de ligne de commande de {{site.data.keyword.Bluemix_notm}}, en indiquant leurs noms, leurs options, leur syntaxe, leurs prérequis, leurs descriptions, et des exemples.
 {:shortdesc}
@@ -36,16 +36,14 @@ Si vous vous connectez avec un ID fédéré, utilisez l'option '--sso' pour vous
 <dd>L'interface de ligne de commande Docker (docker) doit être installée pour que vous puissiez exécuter cette commande.</dd>
 </dl>
 
-## Index des commandes Bluemix
-{: #bx_commands_index}
-
-Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fréquemment utilisées.
-
 **Remarque :** vous pouvez utiliser le format abrégé
 des commandes Bluemix. Par exemple, `bx api` est la forme
 abrégée de `bluemix api`.
 
+Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fréquemment utilisées.
 
+## Commandes générales Bluemix 
+{: #bx_commands_index}
 
 <table summary="Commandes générales Bluemix.">
 <caption>Tableau 1. Commandes générales Bluemix</caption>
@@ -56,19 +54,26 @@ abrégée de `bluemix api`.
  <tr>
  <td>[bluemix help](bx_cli.html#bluemix_help)</td>
  <td>[bluemix api](bx_cli.html#bluemix_api)</td>
- <td>[bluemix login](bx_cli.html#bluemix_login)</td>
- <td>[bluemix logout](bx_cli.html#bluemix_logout)</td>
- <td>[bluemix target](bx_cli.html#bluemix_target)</td>
+ <td>[bluemix config](bx_cli.html#bluemix_config)</td>
+ <td>[bluemix info](bx_cli.html#bluemix_info)</td>
  </tr>
  <tr>
- <td>[bluemix info](bx_cli.html#bluemix_info) </td>
- <td>[bluemix regions](bx_cli.html#bluemix_regions) </td>
- <td>[bluemix config](bx_cli.html#bluemix_config)</td>
- <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
+ <td>[bluemix login](bx_cli.html#bluemix_login) </td>
+ <td>[bluemix logout](bx_cli.html#bluemix_logout) </td>
+ <td>[bluemix regions](bx_cli.html#bluemix_regions)</td>
+ <td>[bluemix target](bx_cli.html#bluemix_target)</td>
  <td>[bluemix update](bx_cli.html#bluemix_update)</td>
  </tr>
  </tbody>
  </table>
+ 
+ ## Commandes de gestion et de configuration des services {{site.data.keyword.BluSoftlayer_notm}}
+  {: #bx_commands_softlayer}
+  
+Les commandes de gestion de {{site.data.keyword.BluSoftlayer_notm}}} ont été fusionnées dans l'interface de ligne de commande Bluemix. Pour plus d'informations sur l'utilisation de l'interface de ligne de commande Bluemix dans le but de configurer et gérer des services {{site.data.keyword.BluSoftlayer_notm}}, voir :  [Commandes {{site.data.keyword.BluSoftlayer_notm}} de l'interface de ligne de commande Bluemix (bluemix sl)](/docs/cli/reference/softlayer/index.md#softlayer_cli).
+ 
+ ## Commandes de gestion des comptes, des organisations et des rôles
+ {: #bx_commands_acctorg}
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer des comptes, des organisations, des espaces, des rôles et des clés d'API.">
 <caption>Tableau 2. Commandes pour la gestion de comptes, d'organisations, d'espaces, de rôles et de clés d'API</caption>
@@ -127,6 +132,9 @@ abrégée de `bluemix api`.
  </tr>
  </tbody>
  </table>
+ 
+ ## Commandes de gestion des applications CF et des domaines, routes et certificats liés aux applications
+ {: #bx_commands_apps}
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer des applications CF et des domaines, des routes et des certificats liés aux applications.">
 <caption>Tableau 3. Commandes pour la gestion d'applications CF et de domaines, de routes et de certificats liés aux applications</caption>
@@ -185,6 +193,9 @@ abrégée de `bluemix api`.
  </tr>
   </tbody>
  </table>
+ 
+ ## Commandes pour la gestion de services Bluemix
+ {: #bx_commands_services}
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer des services Bluemix.">
 <caption>Tableau 4. Commandes pour la gestion de services Bluemix</caption>
@@ -215,6 +226,9 @@ abrégée de `bluemix api`.
  </tr>
   </tbody>
  </table>
+ 
+ ## Commandes de gestion des catalogues, des plug-ins et des paramètres de facturation
+ {: #bx_commands_settings}
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer un catalogue, des plug-in, la facturation et les paramètres de sécurité Bluemix.">
 <caption>Tableau 5. Commandes pour la gestion du catalogue, des plug-in, de la facturation et des paramètres de sécurité Bluemix</caption>
@@ -324,155 +338,6 @@ Annulez la définition du noeud final d'API :
 bluemix api --unset
 ```
 
-
-## bluemix login
-{: #bluemix_login}
-
-Connectez l'utilisateur. 
-
-```
-bluemix login [OPTIONS...]
-```
-
-<strong>Prérequis</strong> : Aucun
-
-<strong>Options de commande</strong> :
-<dl>
-  <dt>-a <i>API_ENDPOINT</i> (facultatif)</dt>
-  <dd> Noeud final de l'API (par exemple : api.ng.bluemix.net)</dd>
-  <dt> --apikey <i>API_KEY ou @API_KEY_FILE_PATH</i>
-  <dd> Contenu de clé d'API ou chemin d'un fichier de clés d'API indiqué par @</dd>
-  <dt> --sso (facultatif) </dt>
-  <dd> Utiliser un code d'accès unique pour se connecter </dd>
-  <dt> -u <i>USERNAME</i> (facultatif)</dt>
-  <dd> Nom d'utilisateur</dd>
-  <dt> -p <i>PASSWORD</i> (facultatif)</dt>
-  <dd> Mot de passe</dd>
-  <dt> -c <i>ACCOUNT_ID</i> (facultatif) </dt>
-  <dd> ID du compte cible</dd>
-  <dt> -o <i>ORG_NAME</i> (facultatif) </dt>
-  <dd> Nom de l'organisation cible </dd>
-  <dt> -s <i>SPACE_NAME</i> (facultatif) </dt>
-  <dd> Nom de l'espace cible</dd>
-  <dt> --skip-ssl-validation (facultatif) </dt>
-  <dd> Ignorer la validation SSL des demandes HTTP. Cette option n'est pas recommandée.</dd>
-</dl>
-
-<strong>Exemples</strong> :
-
-Connexion en mode interactif :
-
-```
-bluemix login
-```
-
-Connectez-vous avec un nom d'utilisateur et un mot de passe, puis définissez un compte, une organisation et un espace cible :
-
-```
-bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
-```
-
-Connectez-vous avec un code d'accès unique et définissez un compte, une organisation et un espace cible :
-
-```
-bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
-```
-
-Connectez-vous avec une clé d'API et définissez des cibles :
-
-* Un compte est associé à une clé d'API
-
-```
-bluemix login --apikey api-key-string -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @filename -o MyOrg -s MySpace
-```
-
-* Aucun compte n'est associé à une clé d'API
-
-```
-bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
-```
-
-<strong>Remarque :</strong> si un compte est associé à la clé d'API, le passage à un autre compte n'est pas autorisé.
-
-
-## bluemix logout
-{: #bluemix_logout}
-
-Déconnectez l'utilisateur.
-
-```
-bluemix logout
-```
-
-<strong>Prérequis</strong> : Aucun
-
-
-## bluemix target
-{: #bluemix_target}
-
-
-Définissez ou affichez le compte, la région, l'organisation ou l'espace cible :
-
-```
-bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
-```
-
-<strong>Prérequis</strong> : Noeud final, Connexion
-
-<strong>Options de commande</strong> :
-   <dl>
-   <dt>-c <i>ACCOUNT_ID</i> (facultatif)</dt>
-   <dd>ID du compte à cibler.</dd>
-   <dt>-r <i>REGION</i> (facultatif)</dt>
-   <dd>Région vers laquelle basculer.</dd>
-   <dt>-o <i>ORG_NAME</i> (facultatif)</dt>
-   <dd>Nom de l'organisation à cibler.</dd>
-   <dt>-s <i>SPACE_NAME</i> (facultatif)</dt>
-   <dd>Nom de l'espace à cibler.</dd>
-   </dl>
-Si aucune de ces options n'est spécifiée, le compte, la région, l'organisation et l'espace en cours s'affichent.
-
-<strong>Exemples</strong> :
-
-Définissez le compte, l'organisation et l'espace en cours.
-
-```
-bluemix target -c MyAccountID -o MyOrg -s MySpace
-```
-
-Basculez vers une nouvelle région
-
-```
-bluemix target -r eu-gb
-```
-
-Affichez le compte, la région, l'organisation et l'espace en cours :
-
-```
-bluemix target
-```
-
-
-## bluemix info
-{: #bluemix_info}
-
-Affichez les informations {{site.data.keyword.Bluemix_notm}} de base, notamment la région en cours, la version du contrôleur de cloud et certains noeuds finaux utiles tels que les noeuds finaux pour la connexion et l'échange de jeton d'accès.
-
-```
-bluemix info
-```
-
-<strong>Prérequis</strong> : Noeud final
-
-
 ## bluemix config
 {: #bluemix_config}
 
@@ -494,9 +359,9 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--color true|false</dt>
    <dd>Active ou désactive la sortie en couleurs. Elle est activée par défaut.</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>Définit un environnement local par défaut. Si ENV_LOCAL spécifie <i>CLEAR</i>, l'environnement local précédent est supprimé.</dd>
+   <dd>Définit un environnement local par défaut. Si LOCALE a pour valeur <i>CLEAR</i>, l'environnement local précédent est supprimé.</dd>
    <dt>--check-version true|false</dt>
-   <dd>Active ou désactive la vérification de la version de l'interface de ligne de commande</dd>
+   <dd>Active ou désactive la vérification de la version de l'interface de ligne de commande.</dd>
    </dl>
 
 Une seule de ces options peut être indiquée à la fois.
@@ -540,42 +405,117 @@ bluemix config --locale CLEAR
 ```
 
 
-## bluemix curl
-{: #bluemix_curl}
 
-Exécutez une demande HTTP brute dans {{site.data.keyword.Bluemix_notm}}. *Content-Type* a pour valeur *application/json* par défaut. Cette
-commande envoie la demande au proxy de contrôle multi-clouds {{site.data.keyword.Bluemix_notm}}. Pour les chemins pris en charge, reportez-vous aux définitions de chemin d'API dans le document [CloudFoundry API ](http://apidocs.cloudfoundry.org/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg).
+## bluemix info
+{: #bluemix_info}
+
+Affichez les informations {{site.data.keyword.Bluemix_notm}} de base, notamment la région en cours, la version du contrôleur de cloud et certains noeuds finaux utiles tels que les noeuds finaux pour la connexion et l'échange de jeton d'accès.
 
 ```
-bluemix curl CHEMIN [OPTIONS...]
+bluemix info
 ```
 
-<strong>Prérequis</strong> : Noeud final, Connexion
+<strong>Prérequis</strong> : Noeud final
+
+## bluemix login
+{: #bluemix_login}
+
+Connectez l'utilisateur. 
+
+```
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+```
+
+<strong>Prérequis</strong> : Aucun
+
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
 <strong>Options de commande</strong> :
-   <dl>
-   <dt><i>PATH</i> (obligatoire)</dt>
-   <dd>Chemin d'URL de la ressource. Par exemple, /v2/apps.</dd>
-   <dt><i>OPTIONS</i> (facultatif)</dt>
-   <dd>Les options prises en charge par la commande `bluemix curl` sont les mêmes que pour la commande
-`cf curl`.</dd>
-   </dl>
+<dl>
+  <dt> -a <i>API_ENDPOINT</i> (facultatif)</dt>
+  <dd> Noeud final de l'API (par exemple : api.ng.bluemix.net)</dd>
+  <dt> --apikey <i>API_KEY ou @API_KEY_FILE_PATH</i>
+  <dd> Contenu de clé d'API ou chemin d'un fichier de clés d'API indiqué par @</dd>
+  <dt> --sso (facultatif) </dt>
+  <dd> Utiliser un code d'accès unique pour se connecter </dd>
+  <dt> -u <i>USERNAME</i> (facultatif)</dt>
+  <dd> Nom d'utilisateur</dd>
+  <dt> -p <i>PASSWORD</i> (facultatif)</dt>
+  <dd> Mot de passe</dd>
+  <dt> -c <i>ACCOUNT_ID</i> (facultatif) </dt>
+  <dd> ID du compte cible</dd>
+  <dt> -o <i>ORG_NAME</i> (facultatif) </dt>
+  <dd> Nom de l'organisation cible </dd>
+  <dt> -s <i>SPACE_NAME</i> (facultatif) </dt>
+  <dd> Nom de l'espace cible</dd>
+  <dt> --skip-ssl-validation (facultatif) </dt>
+  <dd> Ignorer la validation SSL des demandes HTTP. Cette option n'est pas recommandée.</dd>
+</dl>
 
 <strong>Exemples</strong> :
 
-Affichage des informations de toutes les organisations du compte en cours :
+#### Connexion en mode interactif
 
 ```
-bluemix curl /v2/organizations
+bluemix login
 ```
 
-## bluemix update
-{: #bluemix_update}
-
-Mettez à jour l'interface de ligne de commande vers la version la plus récente
+Connectez-vous avec un nom d'utilisateur et un mot de passe, puis définissez un compte, une organisation et un espace cible :
 
 ```
-bluemix update
+bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+```
+
+Connectez-vous avec un code d'accès unique et définissez un compte, une organisation et un espace cible
+
+```
+bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
+```
+
+Connectez-vous avec une clé d'API et définissez des cibles :
+
+#### Un compte est associé à une clé d'API
+
+```
+bluemix login --apikey api-key-string -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @filename -o MyOrg -s MySpace
+```
+
+#### Aucun compte n'est associé à une clé d'API
+
+```
+bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+```
+
+<strong>Remarque :</strong> si un compte est associé à la clé d'API, le passage à un autre compte n'est pas autorisé.
+
+#### Utiliser un code d'accès unique
+
+```
+bluemix login -u UserID --sso
+```
+
+L'interface de ligne de commande fournira ensuite un lien d'URL et demandera un code d'accès :
+```
+One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
+```
+
+Ouvrez le lien dans un navigateur et laissez-vous guider pour obtenir le code secret. Entrez le code d'accès qui vous a été fourni dans la console. Vous devriez pouvoir vous connecter.
+
+## bluemix logout
+{: #bluemix_logout}
+
+Déconnectez l'utilisateur.
+
+```
+bluemix logout
 ```
 
 <strong>Prérequis</strong> : Aucun
@@ -592,7 +532,63 @@ bluemix regions
 <strong>Prérequis</strong> : Noeud final
 
 
-## bluemix iam orgs
+## bluemix target
+{: #bluemix_target}
+
+
+Définissez ou affichez le compte, la région, l'organisation ou l'espace cible :
+
+```
+bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
+```
+
+<strong>Prérequis</strong> : Noeud final, Connexion
+
+<strong>Options de commande</strong> :
+   <dl>
+   <dt>-c <i>ACCOUNT_ID</i> (facultatif)</dt>
+   <dd>ID du compte à cibler.</dd>
+   <dt>-r <i>REGION</i> (facultatif)</dt>
+   <dd>Région vers laquelle basculer.</dd>
+   <dt>-o <i>ORG_NAME</i> (facultatif)</dt>
+   <dd>Nom de l'organisation à cibler.</dd>
+   <dt>-s <i>SPACE_NAME</i> (facultatif)</dt>
+   <dd>Nom de l'espace à cibler.</dd>
+   </dl>
+Si aucune de ces options n'est spécifiée, le compte, la région, l'organisation et l'espace en cours s'affichent.
+
+<strong>Exemples</strong> :
+
+Définissez le compte, l'organisation et l'espace en cours :
+
+```
+bluemix target -c MyAccountID -o MyOrg -s MySpace
+```
+
+Basculez vers une nouvelle région :
+
+```
+bluemix target -r eu-gb
+```
+
+Affichez le compte, la région, l'organisation et l'espace en cours :
+
+```
+bluemix target
+```
+
+### bluemix update
+{: #bluemix_update}
+
+Mettez à jour l'interface de ligne de commande vers la version la plus récente.
+
+```
+bluemix update
+```
+
+<strong>Prérequis</strong> : Aucun
+
+### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
 Recensement de toutes les organisations
@@ -736,7 +732,7 @@ bluemix iam org-delete ORG_NAME [-f --all]
    <dt>ORG_NAME (obligatoire)</dt>
    <dd>Nom de l'organisation existante à supprimer.</dd>
    <dt>-f (facultatif)</dt>
-   <dd>Impose la suppression sans demander de confirmation.</dd>
+   <dd>Force une suppression sans demander de confirmation.</dd>
    <dt>--all (facultatif)</dt>
    <dd>Supprime l'organisation dans toutes les régions.</dd>
    </dl>
@@ -813,7 +809,7 @@ Supprimer un utilisateur de l'organisation (gestionnaire d'organisation ou utili
 <strong>Options de commande</strong> :
 <dl>
 <dt>--force, -f</dt>
-<dd>Impose la suppression sans demander de confirmation.</dd>
+<dd>Force une suppression sans demander de confirmation.</dd>
 </dl>
 
 ## bluemix iam org-roles
@@ -1043,7 +1039,7 @@ bluemix iam account-users
 Supprimez un utilisateur du compte en cours (propriétaire de compte seulement)
 
 ```
-bluemix iam account-user-delete USERNAME [-f]
+bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion
@@ -1052,6 +1048,8 @@ bluemix iam account-user-delete USERNAME [-f]
 <dl>
 <dt>USERNAME (obligatoire)</dt>
 <dd>Nom d'utilisateur</dd>
+<dt>-c ACCOUNT_ID</dt>
+<dd>ID compte. Si ce paramètre n'est pas spécifié, le compte en cours est pris par défaut.</dd>
 <dt>--force, -f (facultatif)</dt>
 <dd>Force une suppression sans demander de confirmation.</dd>
 </dl>
@@ -1935,6 +1933,17 @@ bluemix plugin list
 
 <strong>Prérequis</strong> : Aucun
 
+## bluemix plugin show
+{: #bluemix_plugin_show}
+
+Afficher les détails d'un plug-in installé
+
+```
+bluemix plugin show PLUGIN-NAME
+```
+
+<strong>Prérequis</strong> : Aucun
+
 
 ## bluemix plugin install
 {: #bluemix_plugin_install}
@@ -1989,19 +1998,21 @@ bluemix plugin install IBM-Containers -r référentiel-bluemix -v 0.5.800
 Mettez à niveau le plug-in à partir d'un référentiel
 
 ```
-bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
+bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
 <strong>Prérequis</strong> : Aucun
 
 <strong>Options de commande</strong> :
 <dl>
- <dt>-r REPO_NAME (obligatoire)</dt>
- <dd>Nom du référentiel hébergeant le fichier binaire du plug-in.</dd>
- <dt><i>PLUGIN_NAME</i> (facultatif)</dt>
- <dd>Si cette option n'est pas spécifiée, tous les plug-ins disponibles pour la mise à jour dans le référentiel indiqué sont répertoriés pour être sélectionnés.</dd>
+ <dt>PLUGIN NAME</dt>
+ <dd>Nom du plug-in à mettre à jour. Si ce paramètre n'est pas spécifié, la commande recherche des mises à niveau pour tous les plug-ins installés.</dd>
+ <dt>-r REPO_NAME</dt>
+ <dd>Nom du référentiel hébergeant le fichier binaire du plug-in. Si ce paramètre n'est pas spécifié, la commande utilise le référentiel de plug-in par défaut.</dd>
  <dt>-v <i>VERSION</i> (facultatif)</dt>
  <dd>Version cible du plug-in pour la mise à jour. Si cette option n'est pas spécifiée, mettez à jour le plugin vers la dernière version disponible.</dd>
+ <dt>--all</dt>
+ <dd>Mettre à jour tous les plug-in disponibles</dd>
 </dl>
 
 <strong>Exemples</strong> :

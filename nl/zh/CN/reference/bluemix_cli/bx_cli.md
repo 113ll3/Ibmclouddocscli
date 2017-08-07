@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-06-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-24"
 # {{site.data.keyword.Bluemix_notm}} (bx) 命令
 {: #bluemix_cli}
 
-版本：0.5.2
+版本：0.5.5
 
 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 提供了一组按名称空间分组的命令，供用户用于与 {{site.data.keyword.Bluemix_notm}} 进行交互。一些 {{site.data.keyword.Bluemix_notm}} 命令是现有 cf 命令的包装程序，而另一些为 {{site.data.keyword.Bluemix_notm}} 用户提供了扩展功能。以下信息列出了 {{site.data.keyword.Bluemix_notm}} CLI 支持的命令，并包含命令名称、选项、用法、先决条件、描述和示例。
 {:shortdesc}
@@ -35,14 +35,12 @@ lastupdated: "2017-05-24"
 <dd>必须安装 Docker CLI (docker) 才能运行此命令。</dd>
 </dl>
 
-## bluemix 命令索引
-{: #bx_commands_index}
+**注：**可以使用 Bluemix 命令的短格式；例如，`bx api` 是 `bluemix api` 的短格式。
 
 使用下表中的索引可查看常用 bluemix 命令：
 
-**注：**可以使用 Bluemix 命令的短格式；例如，`bx api` 是 `bluemix api` 的短格式。
-
-
+## 常规 bluemix 命令 
+{: #bx_commands_index}
 
 <table summary="常规 bluemix 命令。">
  <caption>表 1. 常规 bluemix 命令</caption>
@@ -53,19 +51,26 @@ lastupdated: "2017-05-24"
  <tr>
  <td>[bluemix help](bx_cli.html#bluemix_help)</td>
  <td>[bluemix api](bx_cli.html#bluemix_api)</td>
- <td>[bluemix login](bx_cli.html#bluemix_login)</td>
- <td>[bluemix logout](bx_cli.html#bluemix_logout)</td>
- <td>[bluemix target](bx_cli.html#bluemix_target)</td>
+ <td>[bluemix config](bx_cli.html#bluemix_config)</td>
+ <td>[bluemix info](bx_cli.html#bluemix_info)</td>
  </tr>
  <tr>
- <td>[bluemix info](bx_cli.html#bluemix_info) </td>
- <td>[bluemix regions](bx_cli.html#bluemix_regions) </td>
- <td>[bluemix config](bx_cli.html#bluemix_config)</td>
- <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
+ <td>[bluemix login](bx_cli.html#bluemix_login) </td>
+ <td>[bluemix logout](bx_cli.html#bluemix_logout) </td>
+ <td>[bluemix regions](bx_cli.html#bluemix_regions)</td>
+ <td>[bluemix target](bx_cli.html#bluemix_target)</td>
  <td>[bluemix update](bx_cli.html#bluemix_update)</td>
  </tr>
  </tbody>
  </table>
+ 
+ ## 用于管理和配置 {{site.data.keyword.BluSoftlayer_notm}} 服务的命令
+  {: #bx_commands_softlayer}
+  
+用于管理 {{site.data.keyword.BluSoftlayer_notm}} 的命令已合并到 Bluemix CLI 中。有关使用 Bluemix CLI 来配置和管理 {{site.data.keyword.BluSoftlayer_notm}} 服务的更多信息，请参阅：[Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 命令](/docs/cli/reference/softlayer/index.md#softlayer_cli)。
+ 
+ ## 用于管理帐户、组织和角色的命令
+ {: #bx_commands_acctorg}
 
 <table summary="可用于管理帐户、组织、空间、角色和 API 密钥的 Bluemix 命令。">
 <caption>表 2. 用于管理帐户、组织、空间、角色和 API 密钥的命令</caption>
@@ -124,6 +129,9 @@ lastupdated: "2017-05-24"
  </tr>
  </tbody>
  </table>
+ 
+ ## 用于管理 CF 应用程序及与应用程序相关的域、路径和证书的命令
+ {: #bx_commands_apps}
 
 <table summary="可用于管理 CF 应用程序及与应用程序相关的域、路径和证书的 Bluemix 命令。">
 <caption>表 3. 用于管理 CF 应用程序及与应用程序相关的域、路径和证书的命令</caption>
@@ -134,27 +142,27 @@ lastupdated: "2017-05-24"
  <tr>
  <td>[bluemix app push](bx_cli.html#bluemix_app_push)</td>
  <td>[bluemix app list](bx_cli.html#bluemix_app_list)</td>
-<td>[bluemix app show](bx_cli.html#bluemix_app_show)</td>
+ <td>[bluemix app show](bx_cli.html#bluemix_app_show)</td>
  <td>[bluemix app delete](bx_cli.html#bluemix_app_delete)</td>
  <td>[bluemix app rename](bx_cli.html#bluemix_app_rename)</td>
  </tr>
  <tr>
  <td>[bluemix app start](bx_cli.html#bluemix_app_start)</td>
-<td>[bluemix app stop](bx_cli.html#bluemix_app_stop)</td>
+ <td>[bluemix app stop](bx_cli.html#bluemix_app_stop)</td>
  <td>[bluemix app restart](bx_cli.html#bluemix_app_restart)</td>
  <td>[bluemix app restage](bx_cli.html#bluemix_app_restage)</td>
  <td>[bluemix app instance-restart](bx_cli.html#bluemix_app_instance_restart)</td>
  </tr>
  <tr>
  <td>[bluemix app events](bx_cli.html#bluemix_app_events)</td>
-<td>[bluemix app files](bx_cli.html#bluemix_app_files)</td>
+ <td>[bluemix app files](bx_cli.html#bluemix_app_files)</td>
  <td>[bluemix app logs](bx_cli.html#bluemix_app_logs)</td>
  <td>[bluemix app env](bx_cli.html#bluemix_app_env)</td>
  <td>[bluemix app env-set](bx_cli.html#bluemix_app_env_set)</td>
  </tr>
  <tr>
  <td>[bluemix app env-unset](bx_cli.html#bluemix_app_env_unset)</td>
-<td>[bluemix app stacks](bx_cli.html#bluemix_app_stacks)</td>
+ <td>[bluemix app stacks](bx_cli.html#bluemix_app_stacks)</td>
  <td>[bluemix app stack-show](bx_cli.html#bluemix_app_stack_show)</td>
  <td>[bluemix app manifest-create](bx_cli.html#bluemix_app_manifest_create)</td>
  <td>[bluemix app domain-cert](bx_cli.html#bluemix_app_domain_cert)</td>
@@ -182,6 +190,9 @@ lastupdated: "2017-05-24"
  </tr>
   </tbody>
  </table>
+ 
+ ## 用于管理 Bluemix 服务的命令
+ {: #bx_commands_services}
 
 <table summary="可用于管理 Bluemix 服务的 bluemix 命令">
  <caption>表 4. 用于管理 Bluemix 服务的命令</caption>
@@ -212,6 +223,9 @@ lastupdated: "2017-05-24"
  </tr>
   </tbody>
  </table>
+ 
+ ## 用于管理目录、插件和帐单设置的命令
+ {: #bx_commands_settings}
 
 <table summary="可用于管理 Bluemix 目录、插件、帐单和安全设置的 bluemix 命令">
 <caption>表 5. 用于管理 Bluemix 目录、插件、帐单和安全设置的命令</caption>
@@ -222,7 +236,7 @@ lastupdated: "2017-05-24"
  <tr>
  <td>[bluemix catalog templates](bx_cli.html#bluemix_catalog_templates)</td>
  <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
-<td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
+ <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
  <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
  <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
  </tr>
@@ -321,154 +335,6 @@ bluemix api
 bluemix api --unset
 ```
 
-
-## bluemix login
-{: #bluemix_login}
-
-用户登录。 
-
-```
-bluemix login [OPTIONS...]
-```
-
-<strong>先决条件</strong>：无
-
-<strong>命令选项</strong>：
-<dl>
-  <dt>-a <i>API_ENDPOINT</i>（可选）</dt>
-  <dd> API 端点（例如：api.ng.bluemix.net）</dd>
-  <dt> --apikey <i>API_KEY 或 @API_KEY_FILE_PATH</i>
-  <dd> API 密钥内容或用 @ 指示的 API 密钥文件路径</dd>
-  <dt> --sso（可选）</dt>
-  <dd> 使用一次性密码登录</dd>
-  <dt> -u <i>USERNAME</i>（可选）</dt>
-  <dd> 用户名</dd>
-  <dt> -p <i>PASSWORD</i>（可选）</dt>
-  <dd> 密码</dd>
-  <dt> -c <i>ACCOUNT_ID</i>（可选）</dt>
-  <dd> 目标帐户的标识</dd>
-  <dt> -o <i>ORG_NAME</i>（可选）</dt>
-  <dd> 目标组织的名称</dd>
-  <dt> -s <i>SPACE_NAME</i>（可选）</dt>
-  <dd> 目标空间的名称</dd>
-  <dt> --skip-ssl-validation（可选）</dt>
-  <dd> 绕过 HTTP 请求的 SSL 验证。建议不要使用此选项。</dd>
-</dl>
-
-<strong>示例</strong>：
-
-交互式登录：
-
-```
-bluemix login
-```
-
-使用用户名和密码登录，并设置目标帐户、组织和空间：
-
-```
-bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
-```
-
-使用一次性密码登录，并设置目标帐户、组织和空间
-
-```
-bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
-```
-
-使用 API 密钥登录并设置目标：
-
-* API 密钥具有关联的帐户
-
-```
-bluemix login --apikey api-key-string -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @filename -o MyOrg -s MySpace
-```
-
-* API 密钥没有关联的帐户
-
-```
-bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
-```
-
-<strong>注：</strong>如果 API 密钥具有关联的帐户，那么不允许切换到其他帐户。
-
-
-## bluemix logout
-{: #bluemix_logout}
-
-注销用户。
-
-```
-bluemix logout
-```
-
-<strong>先决条件</strong>：无
-
-
-## bluemix target
-{: #bluemix_target}
-
-
-设置或查看目标帐户、区域、组织或空间。
-
-```
-bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
-```
-
-<strong>先决条件</strong>：端点和登录
-
-<strong>命令选项</strong>：
-   <dl>
-   <dt>-c <i>ACCOUNT_ID</i>（可选）</dt>
-   <dd>要作为目标的帐户的标识。</dd>
-   <dt>-r <i>REGION</i>（可选）</dt>
-   <dd>要切换到的目标区域。</dd>
-   <dt>-o <i>ORG_NAME</i>（可选）</dt>
-   <dd>要作为目标的组织的名称。</dd>
-   <dt>-s <i>SPACE_NAME</i>（可选）</dt>
-   <dd>要作为目标的空间的名称。</dd>
-   </dl>
-如果未指定任何选项，那么将显示当前帐户、区域、组织和空间。
-<strong>示例</strong>：
-
-设置当前帐户、组织和空间
-
-```
-bluemix target -c MyAccountID -o MyOrg -s MySpace
-```
-
-切换到新区域
-
-```
-bluemix target -r eu-gb
-```
-
-查看当前帐户、区域、组织和空间：
-
-```
-bluemix target
-```
-
-
-## bluemix info
-{: #bluemix_info}
-
-查看基本 {{site.data.keyword.Bluemix_notm}} 信息，包括当前区域、云控制器版本以及一些有用的端点，例如用于登录和交换访问令牌的端点。
-
-```
-bluemix info
-```
-
-<strong>先决条件</strong>：端点
-
-
 ## bluemix config
 {: #bluemix_config}
 
@@ -536,40 +402,117 @@ bluemix config --locale CLEAR
 ```
 
 
-## bluemix curl
-{: #bluemix_curl}
 
-执行针对 {{site.data.keyword.Bluemix_notm}} 的原始 HTTP 请求。缺省情况下，*Content-Type* 设置为 *application/json*。此命令会向 {{site.data.keyword.Bluemix_notm}} 多云控制代理发送请求。有关受支持的路径，请参阅 [Cloud Foundry API 文档 ](http://apidocs.cloudfoundry.org/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 中的 API 路径定义。
+## bluemix info
+{: #bluemix_info}
+
+查看基本 {{site.data.keyword.Bluemix_notm}} 信息，包括当前区域、云控制器版本以及一些有用的端点，例如用于登录和交换访问令牌的端点。
 
 ```
-bluemix curl PATH [OPTIONS...]
+bluemix info
 ```
 
-<strong>先决条件</strong>：端点和登录
+<strong>先决条件</strong>：端点
+
+## bluemix login
+{: #bluemix_login}
+
+用户登录。 
+
+```
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+```
+
+<strong>先决条件</strong>：无
+
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
 <strong>命令选项</strong>：
-   <dl>
-   <dt><i>PATH</i>（必需）</dt>
-   <dd>资源的 URL 路径。例如，/v2/apps。</dd>
-   <dt><i>OPTIONS</i>（可选）</dt>
-   <dd>`bluemix curl` 命令支持的选项与 `cf curl` 命令支持的那些选项相同。</dd>
-   </dl>
+<dl>
+  <dt> -a <i>API_ENDPOINT</i>（可选）</dt>
+  <dd> API 端点（例如：api.ng.bluemix.net）</dd>
+  <dt> --apikey <i>API_KEY 或 @API_KEY_FILE_PATH</i>
+  <dd> API 密钥内容或用 @ 指示的 API 密钥文件路径</dd>
+  <dt> --sso（可选）</dt>
+  <dd> 使用一次性密码登录</dd>
+  <dt> -u <i>USERNAME</i>（可选）</dt>
+  <dd> 用户名</dd>
+  <dt> -p <i>PASSWORD</i>（可选）</dt>
+  <dd> 密码</dd>
+  <dt> -c <i>ACCOUNT_ID</i>（可选）</dt>
+  <dd> 目标帐户的标识</dd>
+  <dt> -o <i>ORG_NAME</i>（可选）</dt>
+  <dd> 目标组织的名称</dd>
+  <dt> -s <i>SPACE_NAME</i>（可选）</dt>
+  <dd> 目标空间的名称</dd>
+  <dt> --skip-ssl-validation（可选）</dt>
+  <dd> 绕过 HTTP 请求的 SSL 验证。建议不要使用此选项。</dd>
+</dl>
 
 <strong>示例</strong>：
 
-查看当前帐户的所有组织的信息：
+#### 交互式登录
 
 ```
-bluemix curl /v2/organizations
+bluemix login
 ```
 
-## bluemix update
-{: #bluemix_update}
-
-将 CLI 更新到最新版本
+使用用户名和密码登录，并设置目标帐户、组织和空间：
 
 ```
-bluemix update
+bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+```
+
+使用一次性密码登录，并设置目标帐户、组织和空间
+
+```
+bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
+```
+
+使用 API 密钥登录并设置目标：
+
+#### API 密钥具有关联的帐户
+
+```
+bluemix login --apikey api-key-string -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @filename -o MyOrg -s MySpace
+```
+
+#### API 密钥没有关联的帐户
+
+```
+bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+```
+
+<strong>注：</strong>如果 API 密钥具有关联的帐户，那么不允许切换到其他帐户。
+
+#### 使用一次性密码
+
+```
+bluemix login -u UserID --sso
+```
+
+然后，CLI 将提供一个 URL 链接并要求输入密码：
+```
+One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
+```
+
+在浏览器中打开链接，该链接将引导您获取密码。在控制台中输入提供的密码，然后您应该能够登录。
+
+## bluemix logout
+{: #bluemix_logout}
+
+注销用户。
+
+```
+bluemix logout
 ```
 
 <strong>先决条件</strong>：无
@@ -586,7 +529,62 @@ bluemix regions
 <strong>先决条件</strong>：端点
 
 
-## bluemix iam orgs
+## bluemix target
+{: #bluemix_target}
+
+
+设置或查看目标帐户、区域、组织或空间。
+
+```
+bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+   <dl>
+   <dt>-c <i>ACCOUNT_ID</i>（可选）</dt>
+   <dd>要作为目标的帐户的标识。</dd>
+   <dt>-r <i>REGION</i>（可选）</dt>
+   <dd>要切换到的目标区域。</dd>
+   <dt>-o <i>ORG_NAME</i>（可选）</dt>
+   <dd>要作为目标的组织的名称。</dd>
+   <dt>-s <i>SPACE_NAME</i>（可选）</dt>
+   <dd>要作为目标的空间的名称。</dd>
+   </dl>
+如果未指定任何选项，那么将显示当前帐户、区域、组织和空间。
+<strong>示例</strong>：
+
+设置当前帐户、组织和空间：
+
+```
+bluemix target -c MyAccountID -o MyOrg -s MySpace
+```
+
+切换到新区域：
+
+```
+bluemix target -r eu-gb
+```
+
+查看当前帐户、区域、组织和空间：
+
+```
+bluemix target
+```
+
+### bluemix update
+{: #bluemix_update}
+
+将 CLI 更新到最新版本。
+
+```
+bluemix update
+```
+
+<strong>先决条件</strong>：无
+
+### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
 列出所有组织
@@ -1033,7 +1031,7 @@ bluemix iam account-users
 从当前帐户中删除用户（仅帐户所有者）
 
 ```
-bluemix iam account-user-delete USERNAME [-f]
+bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -1042,6 +1040,8 @@ bluemix iam account-user-delete USERNAME [-f]
 <dl>
 <dt>USERNAME（必需）</dt>
 <dd>用户名</dd>
+<dt>-c ACCOUNT_ID</dt>
+<dd>帐户标识。如果未指定，缺省值为当前帐户。</dd>
 <dt>--force, -f（可选）</dt>
 <dd>强制删除而不确认。</dd>
 </dl>
@@ -1922,6 +1922,17 @@ bluemix plugin list
 
 <strong>先决条件</strong>：无
 
+## bluemix plugin show
+{: #bluemix_plugin_show}
+
+显示已安装插件的详细信息
+
+```
+bluemix plugin show PLUGIN-NAME
+```
+
+<strong>先决条件</strong>：无
+
 
 ## bluemix plugin install
 {: #bluemix_plugin_install}
@@ -1976,19 +1987,21 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 升级存储库中的插件
 
 ```
-bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
+bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
 <strong>先决条件</strong>：无
 
 <strong>命令选项</strong>：
 <dl>
- <dt>-r REPO_NAME（必需）</dt>
- <dd>插件二进制文件所在的存储库的名称。</dd>
- <dt><i>PLUGIN_NAME</i>（可选）</dt>
- <dd>如果未指定，将列出给定存储库中可供更新的所有插件以供选择。</dd>
+ <dt>PLUGIN NAME</dt>
+ <dd>要更新的插件的名称。如果未指定，此命令将检查安装的所有插件的升级。</dd>
+ <dt>-r REPO_NAME</dt>
+ <dd>插件二进制文件所在的存储库的名称。如果未指定，此命令将使用缺省插件存储库。</dd>
  <dt>-v <i>VERSION</i>（可选）</dt>
  <dd>要更新到的插件版本。如果未提供，那么将插件更新到最新可用版本。</dd>
+ <dt>--all</dt>
+ <dd>更新所有可用的插件</dd>
 </dl>
 
 <strong>示例</strong>：

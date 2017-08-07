@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-06-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-24"
 # Comandi {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Versione: 0.5.2
+Versione: 0.5.5
 
 L'interfaccia di riga comando (CLI) {{site.data.keyword.Bluemix_notm}} fornisce una serie di comandi che vengono raggruppati in base allo spazio dei nomi per consentire agli utenti di interagire con {{site.data.keyword.Bluemix_notm}}. Alcuni comandi {{site.data.keyword.Bluemix_notm}} incapsulano comandi cf esistenti, mentre altri forniscono funzionalità estese agli utenti {{site.data.keyword.Bluemix_notm}}. Le seguenti informazioni elencano i comandi supportati dalla CLI {{site.data.keyword.Bluemix_notm}} e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi.
 {:shortdesc}
@@ -28,7 +28,7 @@ L'interfaccia di riga comando (CLI) {{site.data.keyword.Bluemix_notm}} fornisce 
 <dd>Un endpoint API deve essere impostato mediante <code>bluemix api</code> prima di utilizzare il comando.</dd>
 <dt>Accesso</dt>
 <dd>L'accesso utilizzando il comando <code>bluemix login</code> è richiesto prima di utilizzare questo comando.
-Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per autenticarti con la passcode monouso o utilizza '--apikey' per autenticarti con la chiave API. Vai alla console {{site.data.keyword.Bluemix_notm}} **Gestisci** &gt; **Sicurezza** &gt; **Chiavi API Bluemix** per creare le chiavi API.
+Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per autenticarti con il passcode monouso o utilizza '--apikey' per autenticarti con la chiave API. Vai alla console {{site.data.keyword.Bluemix_notm}} **Gestisci** &gt; **Sicurezza** &gt; **Chiavi API Bluemix** per creare le chiavi API.
 </dd>
 <dt>Destinazione</dt>
 <dd>Il comando <code>bluemix target</code> deve essere utilizzato per impostare un'organizzazione e uno spazio prima di utilizzare questo comando.</dd>
@@ -36,14 +36,12 @@ Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per au
 <dd>Per poter eseguire questo comando, è necessario che la CLI Docker (docker) sia installata.</dd>
 </dl>
 
-## indice comandi bluemix
-{: #bx_commands_index}
+**Nota:** puoi utilizzare il formato breve dei comandi bluemix; ad esempio `bx api` è l'abbreviazione di `bluemix api`.
 
 Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluemix più utilizzati.
 
-**Nota:** puoi utilizzare il formato breve dei comandi bluemix; ad esempio `bx api` è l'abbreviazione di `bluemix api`.
-
-
+## Comandi bluemix generali 
+{: #bx_commands_index}
 
 <table summary="Comandi bluemix generali.">
 <caption>Tabella 1. Comandi bluemix generali</caption>
@@ -54,19 +52,26 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  <tr>
  <td>[bluemix help](bx_cli.html#bluemix_help)</td>
  <td>[bluemix api](bx_cli.html#bluemix_api)</td>
- <td>[bluemix login](bx_cli.html#bluemix_login)</td>
- <td>[bluemix logout](bx_cli.html#bluemix_logout)</td>
- <td>[bluemix target](bx_cli.html#bluemix_target)</td>
+ <td>[bluemix config](bx_cli.html#bluemix_config)</td>
+ <td>[bluemix info](bx_cli.html#bluemix_info)</td>
  </tr>
  <tr>
- <td>[bluemix info](bx_cli.html#bluemix_info) </td>
- <td>[bluemix regions](bx_cli.html#bluemix_regions) </td>
- <td>[bluemix config](bx_cli.html#bluemix_config)</td>
- <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
+ <td>[bluemix login](bx_cli.html#bluemix_login) </td>
+ <td>[bluemix logout](bx_cli.html#bluemix_logout) </td>
+ <td>[bluemix regions](bx_cli.html#bluemix_regions)</td>
+ <td>[bluemix target](bx_cli.html#bluemix_target)</td>
  <td>[bluemix update](bx_cli.html#bluemix_update)</td>
  </tr>
  </tbody>
  </table>
+ 
+ ## Comandi per la gestione e configurazione dei servizi {{site.data.keyword.BluSoftlayer_notm}}
+  {: #bx_commands_softlayer}
+  
+I comandi per la gestione di {{site.data.keyword.BluSoftlayer_notm}}} sono stati inglobati nella CLI Bluemix. Per ulteriori informazioni sull'utilizzo della CLI Bluemix per configurare e gestire i servizi {{site.data.keyword.BluSoftlayer_notm}}, vedi: [Comandi della CLI Bluemix {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl)](/docs/cli/reference/softlayer/index.md#softlayer_cli).
+ 
+ ## Comandi per la gestione di account, organizzazioni e ruoli
+ {: #bx_commands_acctorg}
 
 <table summary="comandi bluemix che puoi utilizzare per gestire account, organizzazioni, spazi, ruoli e chiavi API.">
 <caption>Tabella 2. Comandi per la gestione di account, organizzazioni, spazi, ruoli e chiavi API</caption>
@@ -125,6 +130,9 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
  </tbody>
  </table>
+ 
+ ## Comandi per la gestione di applicazioni cf e di domini, rotte e certificati relativi all'applicazione
+ {: #bx_commands_apps}
 
 <table summary="comandi bluemix che puoi utilizzare per gestire le applicazioni cf e i domini, le rotte e i certificati relativi all'applicazione.">
 <caption>Tabella 3. Comandi per la gestione di applicazioni cf e di domini, rotte e certificati relativi all'applicazione</caption>
@@ -183,6 +191,9 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
   </tbody>
  </table>
+ 
+ ## Comandi per la gestione dei servizi Bluemix
+ {: #bx_commands_services}
 
 <table summary="Comandi bluemix che puoi utilizzare per la gestione dei servizi Bluemix.">
 <caption>Tabella 4. Comandi per la gestione dei servizi Bluemix</caption>
@@ -213,6 +224,9 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
   </tbody>
  </table>
+ 
+ ## Comandi per la gestione delle impostazioni di fatturazione, plug-in e catalogo
+ {: #bx_commands_settings}
 
 <table summary="comandi bluemix che puoi utilizzare per gestire il catalogo, i plug-in, la fatturazione e le impostazioni di sicurezza Bluemix.">
 <caption>Tabella 5. Comandi per la gestione delle impostazioni di sicurezza, dei plug-in, della fatturazione e del catalogo Bluemix</caption>
@@ -322,155 +336,6 @@ Annullare l'impostazione dell'endpoint API:
 bluemix api --unset
 ```
 
-
-## bluemix login
-{: #bluemix_login}
-
-Eseguire l'accesso dell'utente. 
-
-```
-bluemix login [OPZIONI...]
-```
-
-<strong>Prerequisiti</strong>:  Nessuno
-
-<strong>Opzioni del comando</strong>:
-<dl>
-  <dt>-a <i>API_ENDPOINT</i> (facoltativo)</dt>
-  <dd> Endpoint API (ad esempio: api.ng.bluemix.net)</dd>
-  <dt> --apikey <i>API_KEY or @API_KEY_FILE_PATH</i>
-  <dd> Contenuto della chiave API o percorso del file della chiave API indicato da @</dd>
-  <dt> --sso (facoltativo) </dt>
-  <dd> utilizza passcode monouso per effettuare l'accesso </dd>
-  <dt> -u <i>USERNAME</i> (facoltativo)</dt>
-  <dd> Nome utente</dd>
-  <dt> -p <i>PASSWORD</i> (facoltativo)</dt>
-  <dd> Password</dd>
-  <dt> -c <i>ID_ACCOUNT</i> (facoltativo) </dt>
-  <dd> ID dell'account di destinazione</dd>
-  <dt> -o <i>NOME_ORGANIZZAZIONE</i> (facoltativo) </dt>
-  <dd> Nome dell'organizzazione di destinazione </dd>
-  <dt> -s <i>NOME_SPAZIO</i> (facoltativo) </dt>
-  <dd> Nome dello spazio di destinazione</dd>
-  <dt> --skip-ssl-validation (facoltativo) </dt>
-  <dd> Tralascia la convalida SSL delle richieste HTTP. Questa opzione non è consigliata.</dd>
-</dl>
-
-<strong>Esempi</strong>:
-
-Accesso interattivo:
-
-```
-bluemix login
-```
-
-Accedere con nome utente e password e impostare l'account, l'organizzazione e lo spazio di destinazione:
-
-```
-bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
-```
-
-Accedere con il passcode monouso e impostare l'account, l'organizzazione e lo spazio di destinazione
-
-```
-bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
-```
-
-Accedere con la chiave API e impostare le destinazioni:
-
-* La chiave API ha un account associato
-
-```
-bluemix login --apikey api-key-string -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @filename -o MyOrg -s MySpace
-```
-
-* La chiave API non ha un account associato
-
-```
-bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
-```
-
-```
-bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
-```
-
-<strong>Nota:</strong> se la chiave API ha un account associato, il passaggio a un altro account non è consentito.
-
-
-## bluemix logout
-{: #bluemix_logout}
-
-Disconnettere l'utente.
-
-```
-bluemix logout
-```
-
-<strong>Prerequisiti</strong>:  Nessuno
-
-
-## bluemix target
-{: #bluemix_target}
-
-
-Impostare o visualizzare l'account, la regione, l'organizzazione o lo spazio di destinazione.
-
-```
-bluemix target [-c ID_ACCOUNT] [-r REGIONE] [-o NOME_ORGANIZZAZIONE] [-s NOME_SPAZIO]
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso
-
-<strong>Opzioni del comando</strong>:
-   <dl>
-   <dt>-c <i>ID_ACCOUNT</i> (facoltativo)</dt>
-   <dd>L'ID dell'account di destinazione.</dd>
-   <dt>-r <i>REGIONE</i> (facoltativo)</dt>
-   <dd>La regione a cui passare.</dd>
-   <dt>-o <i>NOME_ORGANIZZAZIONE</i> (facoltativo)</dt>
-   <dd>Il nome dell'organizzazione di destinazione.</dd>
-   <dt>-s <i>NOME_SPAZIO</i> (facoltativo)</dt>
-   <dd>Il nome dello spazio di destinazione.</dd>
-   </dl>
-Se nessuna delle opzioni viene specificata, vengono visualizzati l'account, la regione, l'organizzazione e lo spazio correnti.
-
-<strong>Esempi</strong>:
-
-Impostare l'account, l'organizzazione e lo spazio correnti
-
-```
-bluemix target -c MyAccountID -o MyOrg -s MySpace
-```
-
-Passare a una nuova regione
-
-```
-bluemix target -r eu-gb
-```
-
-Visualizzare l'account, la regione, l'organizzazione e lo spazio correnti:
-
-```
-bluemix target
-```
-
-
-## bluemix info
-{: #bluemix_info}
-
-Visualizzare le informazioni su {{site.data.keyword.Bluemix_notm}} di base, compresi la regione corrente, la versione controller cloud e alcuni utili endpoint, quali gli endpoint per l'accesso e per lo scambio di token di accesso.
-
-```
-bluemix info
-```
-
-<strong>Prerequisiti</strong>:  Endpoint
-
-
 ## bluemix config
 {: #bluemix_config}
 
@@ -492,9 +357,9 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--color true|false</dt>
    <dd>Abilita o disabilita l'output a colori. L'output a colori è abilitato per impostazione predefinita.</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>Imposta una locale predefinita. Se la LOCALE è <i>CLEAR</i>, la locale precedente viene eliminata.</dd>
+   <dd>Imposta una locale predefinita. Se LOCALE è <i>CLEAR</i>, la locale precedente viene eliminata.</dd>
    <dt>--check-version true|false</dt>
-   <dd>Abilita o disabilita il controllo della versione della CLI</dd>
+   <dd>Abilita o disabilita il controllo della versione della CLI.</dd>
    </dl>
 
 È possibile specificare solo una di queste opzioni alla volta.
@@ -538,40 +403,117 @@ bluemix config --locale CLEAR
 ```
 
 
-## bluemix curl
-{: #bluemix_curl}
 
-Eseguire una richiesta HTTP raw per {{site.data.keyword.Bluemix_notm}}. *Content-Type* è impostato su *application/json* come valore predefinito. Questo comando invia la richiesta al MCCP (Multi Cloud Control Proxy) {{site.data.keyword.Bluemix_notm}}. Per i percorsi supportati, fai riferimento alle definizioni del percorso API nella [Documentazione API CloudFoundry ](http://apidocs.cloudfoundry.org/){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg).
+## bluemix info
+{: #bluemix_info}
+
+Visualizzare le informazioni su {{site.data.keyword.Bluemix_notm}} di base, compresi la regione corrente, la versione controller cloud e alcuni utili endpoint, quali gli endpoint per l'accesso e per lo scambio di token di accesso.
 
 ```
-bluemix curl PERCORSO [OPZIONI...]
+bluemix info
 ```
 
-<strong>Prerequisiti</strong>:  Endpoint, Accesso
+<strong>Prerequisiti</strong>:  Endpoint
+
+## bluemix login
+{: #bluemix_login}
+
+Eseguire l'accesso dell'utente. 
+
+```
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+```
+
+<strong>Prerequisiti</strong>:  Nessuno
+
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
 <strong>Opzioni del comando</strong>:
-   <dl>
-   <dt><i>PERCORSO</i> (obbligatorio)</dt>
-   <dd>Il percorso URL della risorsa. Ad esempio, /v2/apps.</dd>
-   <dt><i>OPZIONI</i> (facoltativo)</dt>
-   <dd>Le opzioni supportate dal comando `bluemix curl` sono le stesse del comando `cf curl`.</dd>
-   </dl>
+<dl>
+  <dt> -a <i>API_ENDPOINT</i> (facoltativo)</dt>
+  <dd> Endpoint API (ad esempio: api.ng.bluemix.net)</dd>
+  <dt> --apikey <i>API_KEY or @API_KEY_FILE_PATH</i>
+  <dd> Contenuto della chiave API o percorso del file della chiave API indicato da @</dd>
+  <dt> --sso (facoltativo) </dt>
+  <dd> Utilizza un passcode monouso per effettuare l'accesso </dd>
+  <dt> -u <i>USERNAME</i> (facoltativo)</dt>
+  <dd> Nome utente</dd>
+  <dt> -p <i>PASSWORD</i> (facoltativo)</dt>
+  <dd> Password</dd>
+  <dt> -c <i>ID_ACCOUNT</i> (facoltativo) </dt>
+  <dd> ID dell'account di destinazione</dd>
+  <dt> -o <i>NOME_ORGANIZZAZIONE</i> (facoltativo) </dt>
+  <dd> Nome dell'organizzazione di destinazione </dd>
+  <dt> -s <i>NOME_SPAZIO</i> (facoltativo) </dt>
+  <dd> Nome dello spazio di destinazione</dd>
+  <dt> --skip-ssl-validation (facoltativo) </dt>
+  <dd> Tralascia la convalida SSL delle richieste HTTP. Questa opzione non è consigliata.</dd>
+</dl>
 
 <strong>Esempi</strong>:
 
-Visualizzare le informazioni per tutte le organizzazioni dell'account corrente:
+#### Accesso interattivo
 
 ```
-bluemix curl /v2/organizations
+bluemix login
 ```
 
-## bluemix update
-{: #bluemix_update}
-
-Aggiorna CLI alla versione più recente
+Accedi con nome utente e password e imposta l'account, l'organizzazione e lo spazio di destinazione:
 
 ```
-bluemix update
+bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+```
+
+Accedi con il passcode monouso e imposta l'account, l'organizzazione e lo spazio di destinazione
+
+```
+bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
+```
+
+Accedi con la chiave API e imposta le destinazioni:
+
+#### La chiave API ha un account associato
+
+```
+bluemix login --apikey api-key-string -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @filename -o MyOrg -s MySpace
+```
+
+#### La chiave API non ha un account associato
+
+```
+bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+```
+
+```
+bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+```
+
+<strong>Nota:</strong> se la chiave API ha un account associato, il passaggio a un altro account non è consentito.
+
+#### Utilizza un passcode monouso
+
+```
+bluemix login -u UserID --sso
+```
+
+La CLI fornirà un link all'URL e richiederà il passcode:
+```
+Codice monouso (Ottienine uno in https://URL_Link_To_Obtain_Passcode):
+```
+
+Apri il link in un browser per ottenere il passcode. Digita il passcode fornito nella console e dovresti essere in grado di accedere.
+
+## bluemix logout
+{: #bluemix_logout}
+
+Disconnettere l'utente.
+
+```
+bluemix logout
 ```
 
 <strong>Prerequisiti</strong>:  Nessuno
@@ -588,7 +530,63 @@ bluemix regions
 <strong>Prerequisiti</strong>:  Endpoint
 
 
-## bluemix iam orgs
+## bluemix target
+{: #bluemix_target}
+
+
+Impostare o visualizzare l'account, la regione, l'organizzazione o lo spazio di destinazione.
+
+```
+bluemix target [-c ID_ACCOUNT] [-r REGIONE] [-o NOME_ORGANIZZAZIONE] [-s NOME_SPAZIO]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso
+
+<strong>Opzioni del comando</strong>:
+   <dl>
+   <dt>-c <i>ID_ACCOUNT</i> (facoltativo)</dt>
+   <dd>L'ID dell'account di destinazione.</dd>
+   <dt>-r <i>REGIONE</i> (facoltativo)</dt>
+   <dd>La regione a cui passare.</dd>
+   <dt>-o <i>NOME_ORGANIZZAZIONE</i> (facoltativo)</dt>
+   <dd>Il nome dell'organizzazione di destinazione.</dd>
+   <dt>-s <i>NOME_SPAZIO</i> (facoltativo)</dt>
+   <dd>Il nome dello spazio di destinazione.</dd>
+   </dl>
+Se nessuna delle opzioni viene specificata, vengono visualizzati l'account, la regione, l'organizzazione e lo spazio correnti.
+
+<strong>Esempi</strong>:
+
+Impostare l'account, l'organizzazione e lo spazio correnti:
+
+```
+bluemix target -c MyAccountID -o MyOrg -s MySpace
+```
+
+Passare a una nuova regione:
+
+```
+bluemix target -r eu-gb
+```
+
+Visualizzare l'account, la regione, l'organizzazione e lo spazio correnti:
+
+```
+bluemix target
+```
+
+### bluemix update
+{: #bluemix_update}
+
+Aggiornare la CLI alla versione più recente.
+
+```
+bluemix update
+```
+
+<strong>Prerequisiti</strong>:  Nessuno
+
+### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
 Elencare tutte le organizzazioni
@@ -840,7 +838,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>NOME_ORGANIZZAZIONE (obbligatorio)</dt>
    <dd>Il nome dell'organizzazione a cui viene assegnato l'utente.</dd>
    <dt>RUOLO_ORGANIZZAZIONE (obbligatorio)</dt>
-   <dd>Il nome del ruolo organizzazione a cui viene assegnato l'utente. Per esempio:
+   <dd>Il nome del ruolo organizzazione a cui viene assegnato l'utente. Ad esempio:
    <ul>
    <li>OrgManager: questo ruolo può invitare e gestire utenti, selezionare e modificare piani e impostare limiti di spesa.</li>
    <li>BillingManager: questo ruolo può creare e gestire l'account di fatturazione e le informazioni sul pagamento.</li>
@@ -878,7 +876,7 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>NOME_ORGANIZZAZIONE (obbligatorio)</dt>
    <dd>Il nome dell'organizzazione da cui viene eliminato l'utente.</dd>
    <dt>RUOLO_ORGANIZZAZIONE (obbligatorio)</dt>
-   <dd>Il nome del ruolo organizzazione da cui viene eliminato l'utente. Per esempio:
+   <dd>Il nome del ruolo organizzazione da cui viene eliminato l'utente. Ad esempio:
    <ul>
    <li>OrgManager: questo ruolo può invitare e gestire utenti, selezionare e modificare piani e impostare limiti di spesa.</li>
    <li>BillingManager: questo ruolo può creare e gestire l'account di fatturazione e le informazioni sul pagamento.</li>
@@ -936,7 +934,7 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>NOME_SPAZIO (obbligatorio)</dt>
    <dd>Il nome dello spazio a cui è assegnato l'utente.</dd>
    <dt>RUOLO_SPAZIO (obbligatorio)</dt>
-   <dd>Il nome del ruolo spazio a cui è assegnato l'utente. Per esempio:
+   <dd>Il nome del ruolo spazio a cui è assegnato l'utente. Ad esempio:
    <ul>
    <li>SpaceManager: questo ruolo può invitare e gestire utenti e attivare funzioni per un dato spazio.</li>
    <li>SpaceDeveloper: questo ruolo può creare e gestire applicazioni e servizi e visualizzare log e report.</li>
@@ -973,7 +971,7 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>NOME_SPAZIO (obbligatorio)</dt>
    <dd>Il nome dello spazio da cui viene eliminato l'utente.</dd>
    <dt>RUOLO_SPAZIO (obbligatorio)</dt>
-   <dd>Il nome del ruolo spazio da cui viene eliminato l'utente. Per esempio:
+   <dd>Il nome del ruolo spazio da cui viene eliminato l'utente. Ad esempio:
    <ul>
    <li>SpaceManager: questo ruolo può invitare e gestire utenti e attivare funzioni per un dato spazio.</li>
    <li>SpaceDeveloper: questo ruolo può creare e gestire applicazioni e servizi e visualizzare log e report.</li>
@@ -1035,7 +1033,7 @@ bluemix iam account-users
 Elimina un utente dall'account corrente (solo il proprietario dell'account)
 
 ```
-bluemix iam account-user-delete USERNAME [-f]
+bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
@@ -1044,6 +1042,8 @@ bluemix iam account-user-delete USERNAME [-f]
 <dl>
 <dt>USERNAME (obbligatorio)</dt>
 <dd>Nome utente</dd>
+<dt>-c ACCOUNT_ID</dt>
+<dd>ID account. Se non specificato, il valore predefinito è l'account corrente.</dd>
 <dt>--force, -f (facoltativo)</dt>
 <dd>Forzare l'eliminazione senza conferma.</dd>
 </dl>
@@ -1066,7 +1066,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dt>NOME_ORGANIZZAZIONE (obbligatorio)</dt>
    <dd>Il nome dell'organizzazione in cui viene invitato l'utente.</dd>
    <dt>RUOLO_ORGANIZZAZIONE (obbligatorio)</dt>
-   <dd>Il nome del ruolo organizzazione in cui viene invitato l'utente. Per esempio:
+   <dd>Il nome del ruolo organizzazione in cui viene invitato l'utente. Ad esempio:
    <ul>
   <li>OrgManager: questo ruolo può invitare e gestire utenti, selezionare e modificare piani e impostare limiti di spesa.</li>
   <li>BillingManager: questo ruolo può creare e gestire l'account di fatturazione e le informazioni sul pagamento.</li>
@@ -1075,7 +1075,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dt>NOME_SPAZIO (obbligatorio)</dt>
    <dd>Il nome dello spazio in cui viene invitato l'utente.</dd>
    <dt>RUOLO_SPAZIO (obbligatorio)</dt>
-   <dd>Il nome dello spazio in cui viene invitato l'utente. Il nome del ruolo spazio in cui viene invitato l'utente. Per esempio:
+   <dd>Il nome dello spazio in cui viene invitato l'utente. Il nome del ruolo spazio in cui viene invitato l'utente. Ad esempio:
    <ul>
 <li>SpaceManager: questo ruolo può invitare e gestire utenti e attivare funzioni per un dato spazio.</li>
 <li>SpaceDeveloper: questo ruolo può creare e gestire applicazioni e servizi e visualizzare log e report.</li>
@@ -1339,7 +1339,7 @@ bluemix app domain-cert ibmcxo-eventconnect.com
 Aggiungere un certificato al dominio specificato nell'organizzazione corrente.
 
 ```
-bluemix app domain-cert-add DOMIMIO -k FILE_CHIAVE PRIVATA -c FILE_CERTIFICATO [-p PASSWORD] [-i FILE_CERTIFICATO_INTERMEDIO] [-t FILE_TRUSTSTORE]
+bluemix app domain-cert-add DOMINIO -k FILE_CHIAVE PRIVATA -c FILE_CERTIFICATO [-p PASSWORD] [-i FILE_CERTIFICATO_INTERMEDIO] [-t FILE_TRUSTSTORE]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
@@ -1924,6 +1924,17 @@ bluemix plugin list
 
 <strong>Prerequisiti</strong>:  Nessuno
 
+## bluemix plugin show
+{: #bluemix_plugin_show}
+
+Visualizzare i dettagli di un plugin installato
+
+```
+bluemix plugin show PLUGIN-NAME
+```
+
+<strong>Prerequisiti</strong>:  Nessuno
+
 
 ## bluemix plugin install
 {: #bluemix_plugin_install}
@@ -1978,19 +1989,21 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 Aggiorna il plug-in da un repository
 
 ```
-bluemix plugin update -r NOME_REPOSITORY [NOME PLUGIN [-v VERSIONE]]
+bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
 <strong>Prerequisiti</strong>:  Nessuno
 
 <strong>Opzioni del comando</strong>:
 <dl>
- <dt>-r NOME_REPOSITORY (obbligatorio)</dt>
- <dd>Il nome del repository in cui si trova il file binario del plugin.</dd>
- <dt><i>NOME_PLUGIN</i> (facoltativo)</dt>
- <dd>Se non specificato, tutti i plugin disponibili per l'aggiornamento nel repository fornito vengono elencati per la selezione.</dd>
+ <dt>PLUGIN NAME</dt>
+ <dd>Nome del plugin da aggiornare. Se non specificato, il comando ricerca gli aggiornamenti per tutti i plugin installati.</dd>
+ <dt>-r REPO_NAME</dt>
+ <dd>Il nome del repository in cui si trova il file binario del plugin. Se non specificato, il comando utilizza il repository di plugin predefinito.</dd>
  <dt>-v <i>VERSIONE</i> (facoltativo)</dt>
  <dd>La versione a cui aggiornare il plugin. Se non viene fornita, aggiorna il plugin all'ultima versione disponibile.</dd>
+ <dt>--all</dt>
+ <dd>Aggiorna tutti i plugin disponibili.</dd>
 </dl>
 
 <strong>Esempi</strong>:

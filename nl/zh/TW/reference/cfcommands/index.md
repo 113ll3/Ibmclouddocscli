@@ -128,7 +128,7 @@ cf api api.ng.bluemix.network --skip-ssl-validation
 
 列出您已部署在現行空間的所有應用程式。也會顯示每個應用程式的狀態。
 
-假設您對某個應用程式有一個實例，則如果您的應用程式已啟動，則會在 cf apps 指令回應的實例直欄中看到 1/1，如果您的應用程式已關閉，則會看到 0/1。如果您看到指出應用程式實例狀態不明的 ?/1，則可以將應用程式 URL 複製到瀏覽器，以檢查應用程式是否有回應，也可以透過 `cf logs appname` 指令來讀取日誌尾端的內容，以查看應用程式是否正在產生日誌內容。
+假設您有一個某應用程式的實例，如果您的應用程式已啟動，則會在 cf apps 指令回應的實例直欄中看到 1/1，如果您的應用程式已關閉，則會看到 0/1。如果您看到指出應用程式實例狀態不明的 ?/1，則可以將應用程式 URL 複製到瀏覽器，以檢查應用程式是否有回應，也可以透過 `cf logs appname` 指令來讀取日誌尾端的內容，以查看應用程式是否正在產生日誌內容。
 
 ```
 cf apps
@@ -395,7 +395,7 @@ cf help events
 讓您登入 {{site.data.keyword.Bluemix_notm}}。
 如果您是使用[聯合 ID](/docs/admin/account.html#signup) 登入，則必須使用單一登入 (SSO) 參數來登入。 
 
-**附註**：您也可以使用「{{site.data.keyword.Bluemix_notm}} 平台」API 金鑰來登入。使用使用者名稱 `apikey` 及 API 金鑰值作為密碼。如需建立 API 金鑰的相關資訊，請參閱[管理 API 金鑰](/docs/iam/apikeys.html)。
+**附註**：您也可以使用「{{site.data.keyword.Bluemix_notm}} 平台」API 金鑰來登入。以使用者名稱 `apikey` 及 API 金鑰值作為密碼。如需建立 API 金鑰的相關資訊，請參閱[管理 API 金鑰](/docs/iam/apikeys.html)。
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -532,7 +532,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname（必要）</dt>
 <dd>應用程式的名稱。</dd>
 <dt>*-b* buildpack_name（選用）</dt>
-<dd>建置套件的名稱。buildpack_name 可以是依名稱（例如 liberty-for-java）、Git URL（例如 https://github.com/cloudfoundry/java-buildpack.git）或含分支或標記之 Git URL（例如，https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 適用於 3.3.0 版標記）的自訂建置套件。</dd>
+<dd>建置套件的名稱。buildpack_name 可以是依名稱（例如 liberty-for-java）、Git URL（例如 https://github.com/cloudfoundry/java-buildpack.git）或含分支或標籤之 Git URL（例如，https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 適用於 3.3.0 版標籤）的自訂建置套件。</dd>
 <dt>*-c* start_command（選用）</dt>
 <dd>應用程式的啟動指令。若要使用預設的啟動指令，請針對這個選項指定空值。</dd>
 <dt>*-f* manifest_path（選用）</dt>
