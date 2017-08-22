@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -959,7 +959,7 @@ bluemix sl globalip-create [OPTIONS]
 ```
      bluemix sl globalip create --v6
 ```
-Esse comando cria um endereço IP V6.
+ Esse comando cria um endereço IP V6.
 
 ### bluemix sl globalip-cancel
 {: #sl_globalip_cancel}
@@ -1275,7 +1275,7 @@ Listar chaves SSH em sua conta
 ```
  bluemix sl security sshkey-list --sortby label
 ```
-Esse comando lista todas as chaves SSH na conta atual e as classifica pela etiqueta.
+ Esse comando lista todas as chaves SSH na conta atual e as classifica pela etiqueta.
 
 ### bluemix sl security sshkey-print
 {: #sl_security_sshkey_print}
@@ -1296,7 +1296,7 @@ Imprime uma chave SSH na tela
 ```
  bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
-Esse comando mostra o ID, a etiqueta e as notas da chave SSH com ID 12345678 e grava a chave pública no arquivo: ~/mykey.pub.
+ Esse comando mostra o ID, a etiqueta e as notas da chave SSH com ID 12345678 e grava a chave pública no arquivo: ~/mykey.pub.
 
 ### bluemix sl security sshkey-remove
 {: #sl_security_sshkey_remove}
@@ -1317,7 +1317,7 @@ Remove permanentemente uma chave SSH
 ```
  bluemix sl security sshkey-remove 12345678 -f
 ```
-Esse comando remove a chave SSH com ID 12345678 sem solicitar confirmação.
+ Esse comando remove a chave SSH com ID 12345678 sem solicitar confirmação.
 
 ### bluemix sl security cert-add
 {: #sl_security_cert_add}
@@ -1346,7 +1346,7 @@ Incluir e fazer upload de detalhes do certificado SSL
 ```
  bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key 
 ```
-Esse comando inclui o arquivo de certificado: ~/bluemix.net.cert e o arquivo de chave privado ~/bluemix.net.key para o domínio bluemix.net.
+ Esse comando inclui o arquivo de certificado: ~/bluemix.net.cert e o arquivo de chave privado ~/bluemix.net.key para o domínio bluemix.net.
 
 ### bluemix sl security cert-edit
 {: #sl_security_cert_edit}
@@ -1375,7 +1375,7 @@ Editar certificado SSL
 ```
  bluemix sl security cert-edit 12345678 --key ~/bluemix.net.key
 ```
-Esse comando edita o certificado com ID 12345678 e atualiza sua chave privada com o arquivo: ~/bluemix.net.key.
+ Esse comando edita o certificado com ID 12345678 e atualiza sua chave privada com o arquivo: ~/bluemix.net.key.
 
 ### bluemix sl security cert-download
 {: #sl_security_cert_download}
@@ -1389,7 +1389,7 @@ Fazer download do certificado SSL e dos arquivos-chave
 ```
  bluemix sl security cert-download 12345678
 ```
-Esse comando faz download de 4 arquivos no diretório atual para o certificado com ID 12345678. Os 4 arquivos são: arquivo de certificado, arquivo de solicitação de assinatura de certificado, arquivo de certificado intermediário e arquivo de chave privado.
+  Esse comando faz download de 4 arquivos no diretório atual para o certificado com ID 12345678. Os 4 arquivos são: arquivo de certificado, arquivo de solicitação de assinatura de certificado, arquivo de certificado intermediário e arquivo de chave privado.
 
 ### bluemix sl security cert-list
 {: #sl_security_cert_list}
@@ -1412,7 +1412,7 @@ Listar certificados SSL em sua conta
 ```
  bluemix sl security cert-list --status valid --sortby days_until_expire
 ```
-Esse comando lista todos os certificados válidos na conta atual e os classifica pelos dias de validade.
+ Esse comando lista todos os certificados válidos na conta atual e os classifica pelos dias de validade.
 
 ### bluemix sl security cert-remove
 {: #sl_security_cert_remove}
@@ -1433,7 +1433,7 @@ Remover certificado SSL
 ```
  bluemix sl security cert-remove 12345678
 ```
-Esse comando remove o certificado com ID 12345678.
+ Esse comando remove o certificado com ID 12345678.
 
 ### bluemix sl subnet cancel
 {: #sl_subnet_cancel}
@@ -1875,7 +1875,7 @@ Pausar uma instância de servidor virtual ativa
 ```
  bluemix sl vs pause 12345678 -f
 ```
-Esse comando pausa a instância de servidor virtual com ID 12345678 sem solicitar confirmação.
+   Esse comando pausa a instância de servidor virtual com ID 12345678 sem solicitar confirmação.
 
 
 
@@ -1958,7 +1958,7 @@ Reinicializar uma instância de servidor virtual ativa
    <dt>--hard</dt>
    <dd>Executar uma reinicialização manual</dd>
    <dt>--soft</dt>
-   <dd>Executar uma reinicialização manual</dd>
+   <dd>Executar uma reinicialização normal</dd>
    <dt>-f, --force</dt>
    <dd>Forçar a operação sem confirmação.</dd>
     </dl>

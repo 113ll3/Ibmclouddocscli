@@ -51,8 +51,7 @@ bluemix plugin install plugin_name -r Bluemix
 
 |  *Peer de rede privada* | *Esquemático* | *VPN*  |
 |-----|-----|-----|
-| Nome do plug-in:
-private-network-peering  <br> [Visualizar docs](/docs/cli/plugins/pnp/index.html) | Nome do Plug-in: Esquema  <br> [Visualizar docs](/docs/services/schematics/schematics_reference.html) | Plug-in name: VPN  <br> [Visualizar docs](/docs/cli/plugins/bx_vpn/index.html) |
+| Nome do plug-in: private-network-peering  <br> [Visualizar docs](/docs/cli/plugins/pnp/index.html) | Nome do Plug-in: Esquema  <br> [Visualizar docs](/docs/services/schematics/schematics_reference.html) | Plug-in name: VPN  <br> [Visualizar docs](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="Tabela 3. Plug-ins" caption-side="top"}
 
 Também é possível incluir plug-ins de outros repositórios que obedeçam à arquitetura de cli do {{site.data.keyword.Bluemix_notm}}.
@@ -62,8 +61,7 @@ bluemix plugin repo-add bluemix-other-repo [repo_url]
 ```
 em que `repo_url` é a URL de HTTPS do repositório de plug-in.
 
-2. Execute o comando a seguir para instalar um
-plug-in:
+2. Execute o comando a seguir para instalar um plug-in:
 ```
 bluemix plugin install plugin_name -r bluemix-other-repo
 ```

@@ -71,8 +71,7 @@ Cloud Foundry(cf) 명령행 인터페이스(CLI)는 앱 관리를 위한 명령 
   </tr>
  <tr>
  <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
- <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
- <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)	<td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>

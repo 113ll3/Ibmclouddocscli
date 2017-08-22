@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-06-22"
+lastupdated: "2017-07-27"
 
 
 ---
@@ -220,24 +220,14 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-升级到指定套餐。
+从免费套餐升级到标准套餐。
 
 有关套餐的信息，请参阅[注册表套餐](../../../services/Registry/registry_overview.html#registry_plans)。
 
 ```
-bx cr plan-upgrade PLAN
+bx cr plan-upgrade standard
 ```
 {: codeblock}
-
-**参数**
-<dl>
-<dt>套餐</dt>
-<dd> 升级到指定套餐。以下是可用的套餐：
-<ul>
-<li>免费</li>
-<li>标准</li>
-</ul>
-</dl>
 
 
 ## bx cr pricing

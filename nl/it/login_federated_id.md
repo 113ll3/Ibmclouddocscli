@@ -19,7 +19,7 @@ lastupdated: "2017-07-12"
 # Accesso con un ID federato
 {: #federated_id}
 
-Come utente federato, puoi accedere a {{site.data.keyword.Bluemix}} dalla CLI (command-line interface) utilizzando un passcode monouso o una chiave API.
+Come utente federato, puoi accedere a {{site.data.keyword.Bluemix}} dalla CLI (command-line interface) utilizzando un passcode monouso o una chiave API. 
 {: shortdesc}
 
 ## Utilizzo di un passcode monouso
@@ -27,7 +27,7 @@ Come utente federato, puoi accedere a {{site.data.keyword.Bluemix}} dalla CLI (c
 
 Se utilizzi l'opzione di passcode monouso per accedere con un ID federato, devi specificare il parametro SSO (single-sign on) per ottenere un passcode monouso da immettere durante la fase di accesso. 
 
-Poiché un passcode monouso richiama il codice della console {{site.data.keyword.Bluemix_notm}}, l'utilizzo di un ID federato nello script di automazione provoca un errore. Evita il problema utilizzando l'opzione di chiave API con lo script automatizzato.
+Poiché un passcode monouso richiama il codice della console {{site.data.keyword.Bluemix_notm}}, l'utilizzo di un ID federato nello script di automazione provoca un errore. Evita il problema utilizzando l'opzione di chiave API con lo script automatizzato. 
 {: tip}
 
 ### Dalla CLI {{site.data.keyword.Bluemix_notm}}
@@ -39,10 +39,10 @@ Poiché un passcode monouso richiama il codice della console {{site.data.keyword
   bluemix login --sso
   API endpoint: https://api.ng.bluemix.net
       
-  Codice monouso (Ottienine uno in  https://iam.ng.bluemix.net/oidc/passcode)>
+  Codice monouso (Ottienine uno in  https://iam.ng.bluemix.net/oidc/passcode)> 
   Autenticazione in corso...
   OK
-
+      
   ```
   
 ### Dalla CLI Cloud Foundry
@@ -57,7 +57,7 @@ Poiché un passcode monouso richiama il codice della console {{site.data.keyword
   Codice monouso (Ottienine uno in https://login.ng.bluemix.net/UAALoginServerWAR/passcode)>
   Autenticazione in corso...
   OK
-
+      
   ```
 
 ## Utilizzo di una chiave API

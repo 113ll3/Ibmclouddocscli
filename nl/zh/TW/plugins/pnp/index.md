@@ -98,7 +98,7 @@ chmod a+x ./private-network-peering-linux-amd64
 bluemix network pnp-routers [--verbose（或 -v）]
 ```
 
-#####選用參數
+#####選用性參數
 {: #op1}
 
 * **--verbose（或 -v）**（旗標）：檢視每一個路由器的詳細網路資訊。
@@ -208,7 +208,7 @@ bluemix network pnp-create -i <name>
 bluemix network pnp-show [--verbose（或 -v）]
 ```
 
-#####選用參數
+#####選用性參數
 {: #op2}
 
 * **--verbose（或 -v）**（旗標）：檢視每一個路由器的詳細網路資訊。
@@ -251,7 +251,7 @@ bluemix network pnp-delete [--force（或 -f）] <connection_id>
 {: #p3}
 * **connection_id**：一個以上的連線 ID（以逗點隔開）。
 
-#####選用參數
+#####選用性參數
 {: #op3}
 
 * **--force（或 -f）**（旗標）：刪除連線，而不提示進行確認。

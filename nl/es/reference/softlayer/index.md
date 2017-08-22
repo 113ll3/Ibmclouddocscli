@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -1957,7 +1957,7 @@ Rearrancar una instancia de servidor virtual activa
    <dt>--hard</dt>
    <dd>Realizar un rearranque (hard reboot)</dd>
    <dt>--soft</dt>
-   <dd>Realizar un rearranque (hard reboot)</dd>
+   <dd>Realizar un rearranque (soft reboot)</dd>
    <dt>-f, --force</dt>
    <dd>Forzar la operación sin confirmación.</dd>
     </dl>

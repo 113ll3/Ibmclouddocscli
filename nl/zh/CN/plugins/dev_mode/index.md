@@ -50,7 +50,7 @@ cf install-plugin dev_mode-linux64
 cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
-  2. 键入 cf repo-plugins。dev_mode 插件会显示在 bluemix-repo 存储库中。
+  2. 输入 cf repo-plugins。dev_mode 插件会显示在 bluemix-repo 存储库中。
 
 		```
 cf repo-plugins

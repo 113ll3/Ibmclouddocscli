@@ -23,7 +23,7 @@ Um mit der Arbeit beginnen zu können, [laden Sie IBM Cloud Application Tools 2 
 
 [Möchten Sie Feedback geben? ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/icat-2-feedback){: new_window}
 
-Unter [Manuelle Installation der Befehlszeilenschnittstelle](/docs/cli/index.html) finden Sie Informationen dazu, wie Sie die Befehlszeilentools für andere Betriebssysteme herunterladen und installieren können. 
+Unter [Manuelle Installation der Befehlszeilenschnittstelle](/docs/cli/index.html) finden Sie Informationen dazu, wie Sie die Befehlszeilentools für andere Betriebssysteme herunterladen und installieren können.
 
 ## Features und Einstellungen
 
@@ -41,7 +41,7 @@ Unter [Manuelle Installation der Befehlszeilenschnittstelle](/docs/cli/index.htm
 
 ### Profil
 
-Über die Registerkarte **Profil** können Sie Benutzerkontovorgaben und Bereitstellungsziele verwalten. Beispiel: Durch Angabe einer anderen Region, einer anderen Organisation oder eines anderen Bereichs können Sie `bx target` für alle installierten Benutzerschnittstellen und Plug-ins ändern. Es gibt außerdem eine Option, mit der Sie von dieser Registerkarte aus Feedback geben können.  
+Über die Registerkarte **Profil** können Sie Benutzerkontovorgaben und Bereitstellungsziele verwalten. Beispiel: Durch Angabe einer anderen Region, einer anderen Organisation oder eines anderen Bereichs können Sie `bx target` für alle installierten Benutzerschnittstellen und Plug-ins ändern. Es gibt außerdem eine Option, mit der Sie von dieser Registerkarte aus Feedback geben können. 
 
 ![Screenshot der Registerkarte **Profil**.](icat_profile.png "Registerkarte 'Profil' für Benutzerprofileinstellungen") <br> Abbildung 3. Registerkarte **Profil** für die Verwaltung von Benutzerkontovorgaben und CLI-Bereitstellungszielen
 

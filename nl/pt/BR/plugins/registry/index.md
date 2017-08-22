@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-06-22"
+lastupdated: "2017-07-27"
 
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2017-06-22"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.registrylong_notm}}CLI
+# {{site.data.keyword.registrylong_notm}} CLI
 {: #containerregcli}
 
 O {{site.data.keyword.registrylong}} CLI é um plug-in para gerenciar seu registro e seus recursos para sua conta.
@@ -228,24 +228,14 @@ Cr bx plano
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Upgrades para você o plano especificado.
+Faz seu upgrade do plano grátis para o padrão.
 
 Para obter informações sobre planos, veja [Planos de registro](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
-PLANO bx cr plano de upgrade
+bx cr plan-upgrade standard
 ```
 {: codeblock}
-
-**Parâmetros**
-<dl>
-<dt>PLANO</dt>
-<dd> Upgrades para você o plano especificado. Os seguintes planos estão disponíveis: 
-<ul>
-<li>Grátis</li>
-<li>Padrão</li>
-</ul>
-</dl>
 
 
 ## bx cr pricing

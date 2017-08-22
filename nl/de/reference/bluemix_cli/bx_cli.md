@@ -68,8 +68,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  ## Befehle zur Verwaltung und Konfiguration von {{site.data.keyword.BluSoftlayer_notm}}-Services
   {: #bx_commands_softlayer}
   
-Die Befehle für die Verwaltung von {{site.data.keyword.BluSoftlayer_notm}}} wurden in die Bluemix-Befehlszeilenschnittstelle integriert.
-Weitere Informationen zur Verwendung der Bluemix-Befehlszeilenschnittstelle zum Konfigurieren und Verwalten von  {{site.data.keyword.BluSoftlayer_notm}}-Services finden Sie unter
+Die Befehle für die Verwaltung von {{site.data.keyword.BluSoftlayer_notm}}} wurden in die Bluemix-Befehlszeilenschnittstelle integriert. Weitere Informationen zur Verwendung der Bluemix-Befehlszeilenschnittstelle zum Konfigurieren und Verwalten von  {{site.data.keyword.BluSoftlayer_notm}}-Services finden Sie unter
 [Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) - Befehle](/docs/cli/reference/softlayer/index.md#softlayer_cli).
  
  ## Befehle zur Verwaltung von Konten, Organisationen und Rollen
@@ -359,9 +358,9 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--color true|false</dt>
    <dd>Farbausgabe aktivieren oder inaktivieren. Die Farbausgabe ist standardmäßig aktiviert.</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>Eine Standardländereinstellung festlegen. Wenn LOCALE den Wert <i>CLEAR</i> hat, wird die vorherige Ländereinstellung gelöscht. </dd>
+   <dd>Eine Standardländereinstellung festlegen. Wenn LOCALE den Wert <i>CLEAR</i> hat, wird die vorherige Ländereinstellung gelöscht.</dd>
    <dt>--check-version true|false</dt>
-   <dd>CLI-Versionsprüfung aktivieren oder inaktivieren. </dd>
+   <dd>CLI-Versionsprüfung aktivieren oder inaktivieren.</dd>
    </dl>
 
 Es kann jeweils nur eine dieser Optionen gleichzeitig angegeben werden.
@@ -460,19 +459,19 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
 bluemix login
 ```
 
-Anmeldung mit einem Benutzernamen und einem Kennwort und Festlegen des Kontos, der Organisation und des Bereichs: 
+Anmeldung mit einem Benutzernamen und einem Kennwort und Festlegen des Kontos, der Organisation und des Bereichs:
 
 ```
 bluemix login -u Benutzername -p Kennwort -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Anmeldung mit einmaligem Kenncode und Festlegen eines Zielkontos, einer Organisation und eines Bereichs: 
+Anmeldung mit einmaligem Kenncode und Festlegen eines Zielkontos, einer Organisation und eines Bereichs:
 
 ```
 bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Anmeldung mit API-Schlüssel und Festlegen von Zielen: 
+Anmeldung mit API-Schlüssel und Festlegen von Zielen:
 
 #### API-Schlüssel hat zugeordnetes Konto.
 
@@ -494,7 +493,7 @@ bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 bluemix login --apikey @Dateiname -c MyAccountID -o MyOrg -s MySpace
 ```
 
-<strong>Hinweis:</strong> Wenn der API-Schlüssel ein zugeordnetes Konto hat, ist ein Wechsel zu einem anderen Konto nicht zulässig. 
+<strong>Hinweis:</strong> Wenn der API-Schlüssel ein zugeordnetes Konto hat, ist ein Wechsel zu einem anderen Konto nicht zulässig.
 
 #### Einmaligen Kenncode verwenden
 
@@ -502,12 +501,12 @@ bluemix login --apikey @Dateiname -c MyAccountID -o MyOrg -s MySpace
 bluemix login -u UserID --sso
 ```
 
-Anschließend stellt die Befehlszeilenschnittstelle einen URL-Link bereit und fordert zur Eingabe eines Kenncodes auf: 
+Anschließend stellt die Befehlszeilenschnittstelle einen URL-Link bereit und fordert zur Eingabe eines Kenncodes auf:
 ```
 One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
 
-Öffnen Sie im Browser den Link, der Sie zu dem Kenncode führt. Wenn Sie an der Konsole den angegebenen Kenncode eingeben, sollten Sie in der Lage sein, sich anmelden. 
+Öffnen Sie im Browser den Link, der Sie zu dem Kenncode führt. Wenn Sie an der Konsole den angegebenen Kenncode eingeben, sollten Sie in der Lage sein, sich anmelden.
 
 ## bluemix logout
 {: #bluemix_logout}
@@ -559,19 +558,19 @@ Wenn keine der Optionen angegeben wird, werden das aktuelle Konto, die aktuelle 
 
 <strong>Beispiele</strong>:
 
-Aktuelles Konto, aktuelle Organisation und aktuellen Bereich festlegen: 
+Aktuelles Konto, aktuelle Organisation und aktuellen Bereich festlegen:
 
 ```
 bluemix target -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Zu einer neuen Region wechseln: 
+Zu einer neuen Region wechseln:
 
 ```
 bluemix target -r eu-gb
 ```
 
-Aktuelles Konto, aktuelle Region, aktuelle Organisation und aktuellen Bereich anzeigen: 
+Aktuelles Konto, aktuelle Region, aktuelle Organisation und aktuellen Bereich anzeigen:
 
 ```
 bluemix target
@@ -580,7 +579,7 @@ bluemix target
 ### bluemix update
 {: #bluemix_update}
 
-Die Befehlszeilenschnittstelle auf die neueste Version aktualisieren. 
+Die Befehlszeilenschnittstelle auf die neueste Version aktualisieren.
 
 ```
 bluemix update
@@ -1045,7 +1044,7 @@ bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 <dt>USERNAME (erforderlich)</dt>
 <dd>Der Benutzername.</dd>
 <dt>-c ACCOUNT_ID</dt>
-<dd>Konto-ID. Wenn keine Angabe erfolgt, wird standardmäßig das aktuelle Konto verwendet. </dd>
+<dd>Konto-ID. Wenn keine Angabe erfolgt, wird standardmäßig das aktuelle Konto verwendet.</dd>
 <dt>--force, -f (optional)</dt>
 <dd>Löschung ohne Bestätigung erzwingen.</dd>
 </dl>
@@ -1999,9 +1998,9 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 <strong>Befehlsoptionen:</strong>
 <dl>
  <dt>PLUGIN NAME</dt>
- <dd>Der Name des zu aktualisierenden Plug-ins. Wenn keine Angabe erfolgt, prüft der Befehl Upgrades für alle installierten Befehle. </dd>
+ <dd>Der Name des zu aktualisierenden Plug-ins. Wenn keine Angabe erfolgt, prüft der Befehl Upgrades für alle installierten Befehle.</dd>
  <dt>-r REPO_NAME</dt>
- <dd>Der Name des Repositorys, in dem sich die Binärdatei des Plug-ins befindet. Wenn keine Angabe erfolgt, verwendet der Befehl das Standard-Plug-in-Repository. </dd>
+ <dd>Der Name des Repositorys, in dem sich die Binärdatei des Plug-ins befindet. Wenn keine Angabe erfolgt, verwendet der Befehl das Standard-Plug-in-Repository.</dd>
  <dt>-v <i>VERSION</i> (optional)</dt>
  <dd>Die Version des Plug-ins, auf die aktualisiert werden soll. Wenn nicht angegeben, wird das Plug-in auf die neueste verfügbare Version aktualisiert.</dd>
  <dt>--all</dt>

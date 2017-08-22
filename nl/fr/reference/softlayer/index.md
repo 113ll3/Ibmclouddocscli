@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -1955,7 +1955,7 @@ Réamorcer une instance de serveur virtuel active
    <dt>--hard</dt>
    <dd>Effectuer un réamorçage immédiat</dd>
    <dt>--soft</dt>
-   <dd>Effectuer un réamorçage immédiat</dd>
+   <dd>Effectuez un réamorçage ordonné</dd>
    <dt>-f, --force</dt>
    <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
     </dl>

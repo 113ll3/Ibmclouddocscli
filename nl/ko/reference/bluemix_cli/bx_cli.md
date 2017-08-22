@@ -583,7 +583,7 @@ bluemix target
 ### bluemix update
 {: #bluemix_update}
 
-최신 버전으로 CLI 업데이트.
+최신 버전으로 CLI를 업데이트합니다.
 
 ```
 bluemix update

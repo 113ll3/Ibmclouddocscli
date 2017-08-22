@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-06-22"
+lastupdated: "2017-07-27"
 
 
 ---
@@ -222,24 +222,14 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-指定されたプランにアップグレードします。
+無料プランから標準プランにアップグレードします。
 
 プランについて詳しくは、[レジストリー・プラン (Registry plans)](../../../services/Registry/registry_overview.html#registry_plans) を参照してください。
 
 ```
-bx cr plan-upgrade PLAN
+bx cr plan-upgrade standard
 ```
 {: codeblock}
-
-**パラメーター**
-<dl>
-<dt>PLAN</dt>
-<dd> 指定されたプランにアップグレードします。利用可能なプランは以下のとおりです。
-<ul>
-<li>Free</li>
-<li>Standard</li>
-</ul>
-</dl>
 
 
 ## bx cr pricing

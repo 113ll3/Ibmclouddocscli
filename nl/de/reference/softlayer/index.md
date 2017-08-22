@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -14,20 +14,20 @@ lastupdated: "2017-06-07"
 # {{site.data.keyword.BluSoftlayer_notm}}-Befehle (bluemix sl)
 {: #softlayer_cli}
 
-Das {{site.data.keyword.BluSoftlayer}}-Plug-in wurde in die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle integriert. Sie müssen das Plug-in nicht mehr installieren. 
+Das {{site.data.keyword.BluSoftlayer}}-Plug-in wurde in die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle integriert. Sie müssen das Plug-in nicht mehr installieren.
 
-Verwenden Sie die {{site.data.keyword.BluSoftlayer_notm}}-Befehle in der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI), um SoftLayer-Services zu konfigurieren und zu verwalten. 
+Verwenden Sie die {{site.data.keyword.BluSoftlayer_notm}}-Befehle in der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI), um SoftLayer-Services zu konfigurieren und zu verwalten.
 
 
 Zu Beginn installieren Sie die IBM {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle. Details hierzu finden Sie unter
-[Bluemix-Befehlszeilenschnittstelle ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}. 
+[Bluemix-Befehlszeilenschnittstelle ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}.
 
 Eine vollständige Liste der {{site.data.keyword.Bluemix_notm}}-Befehle finden Sie unter [{{site.data.keyword.Bluemix_notm}}-Befehle (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli).
 
 
 ## Allgemeine {{site.data.keyword.BluSoftlayer_notm}}-Befehle
 
-Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um die Liste der verfügbaren Befehle anzuzeigen: 
+Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um die Liste der verfügbaren Befehle anzuzeigen:
 
 <table summary="Allgemeine Befehle mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 1. Allgemeine SoftLayer-Befehle</caption>
@@ -257,12 +257,12 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  </table>
 
 ### Verwendung der Befehle
-Zur Anzeige der Hilfeinformationen für die Befehle führen Sie folgenden Befehl aus: `bluemix sl [Befehl] -h`. 
+Zur Anzeige der Hilfeinformationen für die Befehle führen Sie folgenden Befehl aus: `bluemix sl [Befehl] -h`.
 
 ### bluemix sl init
 {: #sl_init}
 
-Konfigurationseinstellungen initialisieren, die für die Verbindung zur SoftLayer-Umgebung verwendet werden. Die Konfiguration enthält den Benutzernamen, den API-Schlüssel oder das Kennwort, das Konto und den Endpunkt. 
+Konfigurationseinstellungen initialisieren, die für die Verbindung zur SoftLayer-Umgebung verwendet werden. Die Konfiguration enthält den Benutzernamen, den API-Schlüssel oder das Kennwort, das Konto und den Endpunkt.
 ```
 bluemix sl init [OPTIONEN]
 ```
@@ -307,23 +307,23 @@ Als Ziel ausgewähltes Konto Wilmas Konto (65ce8074c6c62b5)
 Zielorganisation wangjunl@cn.ibm.com
 
 Zielbereich Wilma
-
-API-Endpunkt:   https://api.ng.bluemix.net (API version: 2.54.0)
+                  
+API-Endpunkt:   https://api.ng.bluemix.net (API version: 2.54.0)   
 Region:         us-south
 Benutzer:       wangjunl@cn.ibm.com
-Konto:          Wilma's Account (65ce8074c6c62b5)
+Konto:          Wilma's Account (65ce8074c6c62b5)   
 Organisation:   wangjunl@cn.ibm.com
-Bereich:        Wilma
+Bereich:        Wilma 
 
 $ bx sl init
 Konfiguration der Softlayer-Authentifizierung auswählen:
 1. Mit dem Softlayer-Benutzernamen und dem Kennwort/API-Schlüssel anmelden
 2. Bluemix Single Sign-on verwenden
 Geben Sie eine Zahl > 2 ein.
-Softlayer-API-Endpunkt-URL: [https://api.softlayer.com/mobile/v3.1]>
+Softlayer-API-Endpunkt-URL: [https://api.softlayer.com/mobile/v3.1]> 
 Für Konto festlegen: 278444
 OK
-
+                              
 Softlayer-API-Endpunkt:    https://api.softlayer.com/mobile/v3.1
 Konto-ID:                  278444
 Benutzer-ID:               12345678
@@ -350,13 +350,13 @@ bluemix sl block access-authorize VOLUME_ID [OPTIONEN]
 <strong>Befehlsoptionen</strong>:
    <dl>
    <dt>--hardware-id</dt>
-   <dd>Die ID eines Hardware-Servers, der autorisiert werden soll. </dd>
+   <dd>Die ID eines Hardware-Servers, der autorisiert werden soll.</dd>
    <dt>--virtual-id</dt>
-   <dd>Die ID eines virtuellen Servers, der autorisiert werden soll. </dd>
+   <dd>Die ID eines virtuellen Servers, der autorisiert werden soll.</dd>
    <dt>--ip-address-id</dt>
-   <dd>Die ID einer IP-Adresse, die autorisiert werden soll. </dd>
+   <dd>Die ID einer IP-Adresse, die autorisiert werden soll.</dd>
    <dt>--ip-address</dt>
-   <dd>Eine IP-Adresse, die autorisiert werden soll. </dd>
+   <dd>Eine IP-Adresse, die autorisiert werden soll.</dd>
     </dl>
 
 **Beispiele**:
@@ -375,9 +375,9 @@ bluemix sl block access-list VOLUME_ID [OPTIONEN]
 <strong>Befehlsoptionen</strong>:
    <dl>
    <dt>--sortby</dt>
-   <dd>Spalte, nach der sortiert werden soll. Optionen: `id`, `name`, `type`, `private_ip_address`, `host_iqn`, `username` oder `password`. </dd>
+   <dd>Spalte, nach der sortiert werden soll. Optionen: `id`, `name`, `type`, `private_ip_address`, `host_iqn`, `username` oder `password`.</dd>
    <dt>--columns</dt>
-   <dd>  Spalten für die Anzeige, Optionen: `id`, `name`, `type`, `private_ip_address`, `host_iqn`, `username` oder `password`. </dd>
+   <dd>  Spalten für die Anzeige, Optionen: `id`, `name`, `type`, `private_ip_address`, `host_iqn`, `username` oder `password`.</dd>
 </dl>
 
 **Beispiele**:
@@ -389,20 +389,20 @@ Dieser Befehl listet alle Hosts auf, die für den Zugriff auf den Datenträger m
 ### bluemix sl block access-revoke
 {: #sl_block_access_revoke}
 
-Autorisierung für Hosts widerrufen, die auf einen bestimmten Datenträger zugreifen. 
+Autorisierung für Hosts widerrufen, die auf einen bestimmten Datenträger zugreifen.
 ```
-bluemix sl block access-revoke VOLUME_ID [OPTIONEN]
+ bluemix sl block access-revoke VOLUME_ID [OPTIONEN]
 ```
 <strong>Befehlsoptionen</strong>:
    <dl>
    <dt>--hardware-id</dt>
-   <dd>Die ID eines Hardware-Servers, der autorisiert werden soll. </dd>
+   <dd>Die ID eines Hardware-Servers, der autorisiert werden soll.</dd>
    <dt>--virtual-id</dt>
-   <dd>Die ID eines virtuellen Servers, der autorisiert werden soll. </dd>
+   <dd>Die ID eines virtuellen Servers, der autorisiert werden soll.</dd>
    <dt>--ip-address-id</dt>
-   <dd>Die ID einer IP-Adresse, die autorisiert werden soll. </dd>
+   <dd>Die ID einer IP-Adresse, die autorisiert werden soll.</dd>
    <dt>--ip-address</dt>
-   <dd>Eine IP-Adresse, die autorisiert werden soll. </dd>
+   <dd>Eine IP-Adresse, die autorisiert werden soll.</dd>
     </dl>
 
 **Beispiele**:
@@ -443,12 +443,12 @@ Dieser Befehl führt eine Failover-Operation für den Datenträger mit der ID `1
 
 Blockspeicher-Replikatdatenträger bestellen
 ```
-bluemix sl block replica-order VOLUME_ID [OPTIONEN]
+ bluemix sl block replica-order VOLUME_ID [OPTIONEN]
 ```
 <strong>Befehlsoptionen</strong>:
    <dl>
    <dt>-s, --snapshot-schedule</dt>
-   <dd>Erforderlich. Für die Replikation zu verwendender Snapshotplan. Optionen: `HOURLY`,`DAILY` oder `WEEKLY`. </dd>
+   <dd>Erforderlich. Für die Replikation zu verwendender Snapshotplan. Optionen: `HOURLY`,`DAILY` oder `WEEKLY`.</dd>
    <dt>-d, --datacenter</dt>
    <dd>Erforderlich. Kurzname für Rechenzentrum des Replikats. Beispiel: `dal09`.</dd>
    <dt>--tier</dt>
@@ -494,7 +494,7 @@ Dieser Befehl bricht den Snapshot mit der ID 12345678 sofort ab, ohne zu einer B
 
 Snapshot für einen bestimmten Datenträger erstellen.
 ```
-bluemix sl block snapshot-create VOLUME_ID [OPTIONEN]
+ bluemix sl block snapshot-create VOLUME_ID [OPTIONEN]
 ```
 <strong>Befehlsoptionen</strong>:
    <dl>
@@ -513,7 +513,7 @@ Dieser Befehl erstellt einen Snapshot für den Datenträger mit der ID `12345678
 
 Snapshots für den angegebenen Plan für einen bestimmten Datenträger inaktivieren.
 ```
-bluemix sl block snapshot-disable VOLUME_ID [OPTIONEN]
+ bluemix sl block snapshot-disable VOLUME_ID [OPTIONEN]
 ```
 <strong>Befehlsoptionen</strong>:
    <dl>
@@ -532,7 +532,7 @@ Dieser Befehl inaktiviert den täglichen Snapshot für den Datenträger mit der 
 
 Snapshots für einen bestimmten Datenträger zum angegebenen Plan bearbeiten.
 ```
-bluemix sl block snapshot-enable VOLUME_ID [OPTIONEN]
+ bluemix sl block snapshot-enable VOLUME_ID [OPTIONEN]
 ```
 
 <strong>Befehlsoptionen</strong>:
@@ -575,7 +575,7 @@ Dieser Befehl löscht Snapshots mit der ID `12345678`.
 
 Blockspeicher-Snapshots auflisten
 ```
-bluemix sl block snapshot-list VOLUME_ID [OPTIONEN]
+ bluemix sl block snapshot-list VOLUME_ID [OPTIONEN]
 
 ```
 
@@ -596,7 +596,7 @@ Dieser Befehl listet alle Snapshots des Datenträgers mit ID `12345678` und sort
 
 Snapshotbereich für einen Blockspeicherdatenträger bestellen.
 ```
-bluemix sl block snapshot-order VOLUME_ID [OPTIONEN]
+ bluemix sl block snapshot-order VOLUME_ID [OPTIONEN]
 ```
 
 <strong>Befehlsoptionen</strong>:
@@ -617,6 +617,7 @@ bluemix sl block snapshot-order VOLUME_ID [OPTIONEN]
 ```
 Dieser Befehl bestellt Snapshotbereich für den Datenträger mit der ID `12345678`, Größe 1000 GB, Tier-Ebene 4 E/A-Operationen pro Sekunde pro GB.
 
+
 ### bluemix sl block snapshot-restore
 {: #sl_block_snapshot_restore}
 
@@ -636,7 +637,7 @@ Dieser Befehl stellt den Datenträger mit der ID `12345678` aus dem Snapshot mit
 
 Abbruch für vorhandenen Blockspeicherdatenträger
 ```
-bluemix sl block volume-cancel VOLUME_ID [OPTIONEN]
+ bluemix sl block volume-cancel VOLUME_ID [OPTIONEN]
 ```
 
 <strong>Befehlsoptionen</strong>:
@@ -705,7 +706,7 @@ Dieser Befehl listet alle Endurance-Datenträger für das aktuelle Konto mit dem
 
 Blockspeicherdatenträger bestellen
 ```
- bluemix sl block volume-order [OPTIONEN]
+   bluemix sl block volume-order [OPTIONEN]
 ```
 
 <strong>Befehlsoptionen</strong>:
@@ -778,7 +779,7 @@ Dieser Befehl importiert die Zone und ihre Ressourcendatensätze aus der Datei `
 
 ### bluemix sl dns record-add
 {: #sl_dns_record_add}
-Ressourcendatensatz hinzufügen. 
+Ressourcendatensatz hinzufügen.
 
 ```
 bluemix sl dns-record-add [OPTIONEN] ZONE RECORD TYPE DATA
@@ -825,6 +826,7 @@ Dieser Befehl bearbeitet Datensätze unter der Zone `bluemix.net`, deren ID `123
  bluemix sl dns record-edit bluemix.net --by-record kibana --ttl 3600
 ```
 Dieser Befehl bearbeitet Datensätze unter der Zone `bluemix.net`, deren Hostname `kibana` ist, und legt ihre TTL alle auf 3600 fest.
+
 
 ### bluemix sl dns record-list
 {: #sl_dns_record_list}
@@ -957,7 +959,7 @@ bluemix sl globalip-create [OPTIONEN]
 ```
      bluemix sl globalip create --v6
 ```
-Dieser Befehl erstellt eine IPv6-Adresse.
+ Dieser Befehl erstellt eine IPv6-Adresse.
 
 ### bluemix sl globalip-cancel
 {: #sl_globalip_cancel}
@@ -1150,7 +1152,7 @@ Details zu einem iSCSI-Datenträger abrufen
 
 iSCSI-Datenträger auflisten
 ```
-   bluemix sl iscsi list [OPTIONEN]
+ bluemix sl iscsi list [OPTIONEN]
 ```
 <strong>Befehlsoptionen</strong>:
    <dl>
@@ -1273,7 +1275,7 @@ Alle SSH-Schlüssel für eigenes Konto auflisten
 ```
  bluemix sl security sshkey-list --sortby label
 ```
-  Dieser Befehl listet alle SSH-Schlüssel für das aktuelle Konto auf und sortiert sie nach Bezeichnung.
+ Dieser Befehl listet alle SSH-Schlüssel für das aktuelle Konto auf und sortiert sie nach Bezeichnung.
 
 ### bluemix sl security sshkey-print
 {: #sl_security_sshkey_print}
@@ -1488,7 +1490,6 @@ Dieser Befehl erstellt ein öffentliches Teilnetz mit 16 IPv4-Adressen und ordne
 
 
 
-
 ### bluemix sl subnet detail
 {: #sl_subnet_detail}
 
@@ -1588,7 +1589,7 @@ Dieser Befehl bricht die virtuelle Serverinstanz mit der ID of 12345678 ab.
 ### bluemix sl vs capture
 {: #sl_vs_capture}
 
-Virtuelle Serverinstanz in einem Image erfassen 
+Virtuelle Serverinstanz in einem Image erfassen
 ```
  bluemix sl vs capture IDENTIFIER [OPTIONEN]
 ```
@@ -1634,7 +1635,7 @@ Virtuelle Serverinstanz erstellen
    <dt>-o, --os</dt>
    <dd>Betriebssystem-Installationscode. Tipp: Sie können <OS>_LATEST angeben.</dd>
    <dt>--image</dt>
-   <dd>Image-ID. Siehe [bluemix sl image list](#bluemix_sl_image_list). </dd>
+   <dd>Image-ID. Siehe [bluemix sl image list](#bluemix_sl_image_list).</dd>
    <dt>--billing</dt>
    <dd>Verrechnungssatz. Standardwert: hourly. Optionen: hourly, monthly</dd>
    <dt>--dedicated</dt>
@@ -1876,6 +1877,7 @@ Aktive virtuelle Serverinstanz anhalten
    Dieser Befehl hält die virtuelle Serverinstanz mit der ID 12345678 an, ohne zu einer Bestätigung aufzufordern.
 
 
+
 ### bluemix sl vs power-off
 {: #sl_vs_power_off}
 
@@ -1967,6 +1969,7 @@ Warmstart für aktive virtuelle Serverinstanz durchführen
 Dieser Befehl führt einen Kaltstart für die virtuelle Serverinstanz mit der ID 12345678 durch.
 
 
+
 ### bluemix sl vs reload
 {: #sl_vs_reload}
 
@@ -1981,7 +1984,7 @@ Betriebssystem auf virtueller Serverinstanz neu laden
    <dd>Nachinstallationsscript herunterladen</dd>
    <dt>--image</dt>
    <dd>Image-ID. Standardeinstellung ist die Verwendung des aktuellen Betriebssystems.
-Siehe 'bluemix sl image list'. </dd>
+Siehe 'bluemix sl image list'.</dd>
    <dt>-k, --key</dt>
    <dd>Die IDs der SSH-Schlüssel, die dem Rootbenutzer hinzugefügt werden sollen (Mehrfachvorkommen zulässig)</dd>
    <dt>-f, --force</dt>
@@ -1997,6 +2000,8 @@ Dieser Befehl lädt das aktuelle Betriebssystem für die virtuelle Serverinstanz
  bluemix sl vs reload 12345678 --image 1234
 ```
 Dieser Befehl lädt das Betriebssystem aus dem Image mit der ID 1234 für die virtuelle Serverinstanz mit der ID 12345678 neu.
+
+
 
 ### bluemix sl vs rescure
 {: #sl_vs_rescure}
@@ -2018,6 +2023,7 @@ Warmstart für virtuelle Serverinstanz in ein Wiederherstellungsimage durchführ
 ```
 Dieser Befehl startet die virtuelle Serverinstanz mit der ID 12345678 neu in ein Wiederherstellungsimage.
 
+
 ### bluemix sl vs resume
 {: #sl_vs_resume}
 
@@ -2037,6 +2043,7 @@ Angehaltene virtuelle Serverinstanz wieder aufnehmen
  bluemix sl vs resume 12345678
 ```
 Dieser Befehl nimmt die virtuelle Serverinstanz mit der ID 12345678 wieder auf.
+
 
 ### bluemix sl vs upgrade
 {: #sl_vs_upgrade}
@@ -2066,6 +2073,8 @@ Hinweis: SoftLayer startet die Instanz automatisch neu, nachdem eine Upgrade-Anf
  bluemix sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
 Dieser Befehl führt ein Upgrade für die virtuelle Serverinstanz mit der ID 12345678 durch und legt die Anzahl der CPU-Cores auf 8, den Speicher auf 8192 M und die Übertragungsgeschwindigkeit des Netzports auf 1000 MT/s fest.
+
+
 
 ### bluemix sl vlan create
 {: #sl_vlan_create}
@@ -2102,6 +2111,7 @@ Dieser Befehl erstellt ein öffentliches VLAN in Rechenzentrum dal09 mit 16 IP-A
 Dieser Befehl erstellt ein VLAN auf Router bcr01a.dal09 mit 16 IP-Adressen und dem Namen myvlan.
 
 
+
 ### bluemix sl vlan cancel
 {: #sl_vlan_cancel}
 
@@ -2121,6 +2131,7 @@ Abbruch für VLAN
    bluemix sl vlan cancel 12345678 -f
 ```
 Dieser Befehl bricht das VLAN mit der ID 12345678 ab, ohne zu einer Bestätigung aufzufordern.
+
 
 
 ### bluemix sl vlan detail
@@ -2144,6 +2155,7 @@ Details zu einem VLAN abrufen
  bluemix sl vlan detail 12345678  --no-vs --no-hardware
 ```
 Dieser Befehl zeigt Details zum VLAN mit der ID 12345678 an, ohne virtuelle Server oder Hardware-Server aufzulisten.
+
 
 ### bluemix sl vlan edit
 {: #sl_vlan_edite}
@@ -2191,6 +2203,7 @@ Alle VLANs für eigenes Konto auflisten
  bluemix sl vlan list -d dal09 --sortby number
 ```
 Dieser Befehl listet alle VLANs für das aktuelle Konto, gefiltert nach Rechenzentrum gleich dal09, und sortiert sie nach VLAN-Nummer.
+
 
 
 

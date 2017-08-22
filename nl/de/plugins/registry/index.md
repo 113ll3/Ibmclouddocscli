@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-06-22"
+lastupdated: "2017-07-27"
 
 
 ---
@@ -24,7 +24,7 @@ Die {{site.data.keyword.registrylong}}-Befehlszeilenschnittstelle (CLI) ist ein 
 **Voraussetzungen**
 * Melden Sie sich vor der Ausführung von Registry-Befehlen bei {{site.data.keyword.Bluemix_short}} mit dem Befehl `bx login` an, um ein {{site.data.keyword.Bluemix_short}}-Zugriffstoken zu generieren und Ihre Sitzung zu authentifizieren.
 
-Informationen zur Verwendung der {{site.data.keyword.registrylong}}-CLI finden Sie unter [Private Image-Registry einrichten](../../../services/Registry/index.html). 
+Informationen zur Verwendung der {{site.data.keyword.registrylong}}-CLI finden Sie unter [Private Image-Registry einrichten](../../../services/Registry/index.html).
 
 <table summary="Container-Registry verwalten">
 <caption>Tabelle 1. Befehle zur Verwaltung der {{site.data.keyword.registryshort}} in {{site.data.keyword.Bluemix_short}}
@@ -102,7 +102,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
+Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
@@ -131,7 +131,7 @@ Zeigt alle Images in Ihrem {{site.data.keyword.Bluemix_short}}-Konto an.
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
+Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 </dl>
@@ -225,30 +225,20 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Führt ein Upgrade auf den angegebenen Plan durch.
+Führt ein Upgrade vom kostenfreien Plan auf den Standardplan durch.
 
-Weitere Informationen über Pläne finden Sie unter [Registry-Pläne](../../../services/Registry/registry_overview.html#registry_plans). 
+Weitere Informationen über Pläne finden Sie unter [Registry-Pläne](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
-bx cr plan-upgrade PLAN
+bx cr plan-upgrade standard
 ```
 {: codeblock}
-
-**Parameter**
-<dl>
-<dt>PLAN</dt>
-<dd> Führt ein Upgrade auf den angegebenen Plan durch. Die folgenden Pläne sind verfügbar: 
-<ul>
-<li>Kostenlos</li>
-<li>Standard</li>
-</ul>
-</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-Berechnet die geschätzten Nutzungskosten in US-Dollar unter Berücksichtigung Ihres Anspruchs auf kostenlosen Speicher und Gratisleistungen beim Pull-Datenverkehr. 
+Berechnet die geschätzten Nutzungskosten in US-Dollar unter Berücksichtigung Ihres Anspruchs auf kostenlosen Speicher und Gratisleistungen beim Pull-Datenverkehr.
 
 ```
 bx cr pricing --traffic VALUE --storage VALUE
@@ -258,9 +248,9 @@ bx cr pricing --traffic VALUE --storage VALUE
 **Parameter**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>Geben Sie das voraussichtliche monatliche Pull-Datenverkehrsvolumen in Megabyte an. Der Datenverkehr muss als ganze Zahl angegeben werden. </dd>
+<dd>Geben Sie das voraussichtliche monatliche Pull-Datenverkehrsvolumen in Megabyte an. Der Datenverkehr muss als ganze Zahl angegeben werden.</dd>
 <dt>--storage VALUE</dt>
-<dd>Geben Sie den voraussichtlichen durchschnittlichen Gesamtspeicherbedarf in Megabyte an. Der Speicher muss als ganze Zahl angegeben werden. </dd>
+<dd>Geben Sie den voraussichtlichen durchschnittlichen Gesamtspeicherbedarf in Megabyte an. Der Speicher muss als ganze Zahl angegeben werden.</dd>
 </dl>
 
 
@@ -352,7 +342,7 @@ bx cr token-list --format FORMAT
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
+Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 </dl>
@@ -398,7 +388,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-Weitere Informationen finden Sie unter [Imagesicherheit prüfen](../../../services/Registry/registry_images_.html#registry_security_checking). 
+Weitere Informationen finden Sie unter [Imagesicherheit prüfen](../../../services/Registry/registry_images_.html#registry_security_checking).
 
 </dd>
 

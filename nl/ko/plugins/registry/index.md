@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-06-22"
+lastupdated: "2017-07-27"
 
 
 ---
@@ -223,24 +223,14 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-사용자를 지정된 플랜으로 업그레이드합니다. 
+무료 사용제에서 표준 플랜으로 업그레이드합니다.
 
 플랜에 대한 정보는 [레지스트리 플랜](../../../services/Registry/registry_overview.html#registry_plans)을 참조하십시오.
 
 ```
-bx cr plan-upgrade PLAN
+bx cr plan-upgrade standard
 ```
 {: codeblock}
-
-**매개변수**
-<dl>
-<dt>플랜</dt>
-<dd> 사용자를 지정된 플랜으로 업그레이드합니다. 다음 플랜이 사용 가능합니다.
-<ul>
-<li>무료</li>
-<li>표준</li>
-</ul>
-</dl>
 
 
 ## bx cr pricing

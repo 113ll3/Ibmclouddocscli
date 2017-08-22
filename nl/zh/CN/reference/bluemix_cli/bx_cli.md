@@ -795,7 +795,7 @@ bluemix iam org-users ORG_NAME [-a]
 ## bluemix iam org-user-remove
 {: #bluemix_iam_org_user_remove}
 
-从组织移除用户（仅限组织管理员或用户自己）
+从组织除去用户（仅限组织管理员或用户自己）
 
 ```
    bluemix iam org-user-remove USER_NAME ORG [-f, --force]

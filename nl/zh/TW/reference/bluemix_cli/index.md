@@ -22,7 +22,7 @@ lastupdated: "2017-07-12"
 
 **附註**：如果您的網路在執行 CLI 的主機與 {{site.data.keyword.Bluemix_notm}} 之間包含 HTTP Proxy 伺服器，則必須在 HTTP_PROXY 環境變數指定 Proxy 伺服器的主機名稱或 IP 位址。
 
-**附註：**{{site.data.keyword.Bluemix_notm}} CLI 工具已將 Cloud Foundry 指令行介面組合在其安裝中。不過，如果您有自己的 cf cli 安裝，則不容許混合使用 {{site.data.keyword.Bluemix_notm}} CLI 指令 `bx xxx` 與 Cloud Foundry CLI 指令 `cf xxx`。如果您要使用 cf cli 來管理 Cloud Foundry 資源，請改為使用 `bluemix cf`。在後端中，它會使用 {{site.data.keyword.Bluemix_notm}} CLI 在共用環境定義中執行組合 Cloud Foundry CLI 的指令。此外，不容許 `bluemix cf api/login/logout/target`，請改為使用 `bluemix api/login/logout/target`。
+**附註：**{{site.data.keyword.Bluemix_notm}} CLI 工具已將 Cloud Foundry 指令行介面搭載在其安裝中。不過，如果您有自己的 cf cli 安裝，則不容許混合使用 {{site.data.keyword.Bluemix_notm}} CLI 指令 `bx xxx` 與 Cloud Foundry CLI 指令 `cf xxx`。如果您要使用 cf cli 來管理 Cloud Foundry 資源，請改為使用 `bluemix cf`。在後端，它會在與 {{site.data.keyword.Bluemix_notm}} CLI 共用的環境定義中，執行搭載之 Cloud Foundry CLI 的指令。此外，不容許 `bluemix cf api/login/logout/target`，請改為使用 `bluemix api/login/logout/target`。
 
 ## 安裝 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
@@ -73,7 +73,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
   ~$
   ```
 
-  2. 移至 `Bluemix_CLI` 目錄，然後使用 root 許可權來執行 `./install_bluemix_cli` 指令。您可以使用 root 使用者身分執行此指令，或使用 `sudo` 指令來取得 root 許可權。例如：
+  2. 移至 `Bluemix_CLI` 目錄，然後使用 root 許可權來執行 `./install_bluemix_cli` 指令。您可以使用 root 使用者身分執行這個指令，或使用 `sudo` 指令來取得 root 許可權。例如：
 
   ```
   ~# cd Bluemix_CLI

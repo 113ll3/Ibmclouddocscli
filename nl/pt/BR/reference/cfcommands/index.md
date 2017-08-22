@@ -71,7 +71,7 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
   </tr>
  <tr>
  <td>[escalar](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
- <td>[serviços](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
  <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>

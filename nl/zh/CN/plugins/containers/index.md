@@ -336,7 +336,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>创建容器组并启用自动恢复后，IBM Containers 会通过向所分配的端口发送 HTTP 请求来检查每个实例的运行状况。<br>
 在接下来的两个 90 秒的时间间隔内，如果没有收到来自某个容器实例的响应，那么会除去该实例并替换为新实例。如果该容器有响应，那么不会执行任何操作。此过程会持续重复。在 30 分钟的时段内，如果容器组中不同容器的总数等于或超过该容器组最大大小的 3 倍，那么会对该容器组永久禁用自动恢复。要重新启用自动恢复，必须重新创建容器组。</dd>
   <dt>--anti（可选）</dt>
-  <dd> 使用反亲缘关系，可使您的容器组具有更高的可用性。--anti 选项强制将组中的每一个容器实例置于独立的物理计算节点上，这可降低因硬件故障而导致组中所有容器崩溃的几率。您可能无法对较大的组大小使用此选项，因为每一个 Bluemix 区域和组织在可用于部署的计算节点集方面存在限制。如果部署不成功，请减少组中的容器实例数或移除 --anti 选项。</dd>
+  <dd> 使用反亲缘关系，可使您的容器组具有更高的可用性。--anti 选项强制将组中的每一个容器实例置于独立的物理计算节点上，这可降低因硬件故障而导致组中所有容器崩溃的几率。您可能无法对较大的组大小使用此选项，因为每一个 Bluemix 区域和组织在可用于部署的计算节点集方面存在限制。如果部署不成功，请减少组中的容器实例数或除去 --anti 选项。</dd>
    <dt><i>CMD</i>（可选）</dt>
    <dd>该命令和自变量会传递到容器组以便执行。此命令必须是长时间运行命令。不要使用不会运行很长时间的短时间运行命令（例如 <i>/bin/date</i>），因为短时间运行命令可能会导致容器崩溃。<br> <strong>注：</strong> <ul>
    <li>命令及其自变量必须位于 <i>bluemix ic run</i> 命令行的末尾。</li>
@@ -466,7 +466,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 <strong>命令选项</strong>：
  <dl>
    <dt>--anti（可选）</dt>
-   <dd>使用反亲缘关系，可使您的容器组具有更高的可用性。--anti 选项强制将组中的每一个容器实例置于独立的物理计算节点上，这可降低因硬件故障而导致组中所有容器崩溃的几率。您可能无法对较大的组大小使用此选项，因为每一个 Bluemix 区域和组织在可用于部署的计算节点集方面存在限制。如果部署不成功，请减少组中的容器实例数或移除 --anti 选项。</dd>
+   <dd>使用反亲缘关系，可使您的容器组具有更高的可用性。--anti 选项强制将组中的每一个容器实例置于独立的物理计算节点上，这可降低因硬件故障而导致组中所有容器崩溃的几率。您可能无法对较大的组大小使用此选项，因为每一个 Bluemix 区域和组织在可用于部署的计算节点集方面存在限制。如果部署不成功，请减少组中的容器实例数或除去 --anti 选项。</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>（可选）</dt>
    <dd>需要的实例数。缺省值为 <i>2</i>。</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>（可选）</dt>
@@ -1122,7 +1122,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
    <dl>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i>（可选）</dt>
-   <dd>公开用于 HTTP 流量的端口。包含在 Dockerfile 中为要使用的映像指定的任何端口。可以使用多个 <i>-p</i> 选项包含多个端口。如果公共 IP 地址可用，那么公开端口会自动将公共 IP 地址绑定到容器。<br><br>如果空间中有要绑定到容器的现有 IP 地址，那么可以指定该 IP 地址，而不是以后绑定。IP 地址必须使用以下格式指定：&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br>。<br>有关请求空间的 IP 地址的更多信息，请参阅 <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> 命令。<br><br>指定端口时，您将使应用程序可用于相同 {{site.data.keyword.Bluemix_notm}} 空间中正尝试联系主机的 {{site.data.keyword.Bluemix_notm}} 负载均衡器或容器。如果在 Dockerfile 中为要使用的映像指定了端口，请包含该端口。<br><br><strong>提示：</strong><ul><li>对于 IBM 认证的 Liberty Server 映像或此映像的修改版本，请输入端口 9080。</li><li>对于 IBM 认证的 Node.js 映像或此映像的修改版本，请输入端口 8000。</li></ul></dd>
+   <dd>公开用于 HTTP 流量的端口。包含在 Dockerfile 中为要使用的映像指定的任何端口。可以使用多个 <i>-p</i> 选项包含多个端口。如果公共 IP 地址可用，那么公开端口会自动将公共 IP 地址绑定到容器。<br><br>如果空间中有要绑定到容器的现有 IP 地址，那么可以指定该 IP 地址，而不是以后绑定。IP 地址必须使用以下格式指定：&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt;<br><br>有关请求空间的 IP 地址的更多信息，请参阅 <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> 命令。<br><br>指定端口时，您将使应用程序可用于相同 {{site.data.keyword.Bluemix_notm}} 空间中正尝试联系主机的 {{site.data.keyword.Bluemix_notm}} 负载均衡器或容器。如果在 Dockerfile 中为要使用的映像指定了端口，请包含该端口。<br><br><strong>提示：</strong><ul><li>对于 IBM 认证的 Liberty Server 映像或此映像的修改版本，请输入端口 9080。</li><li>对于 IBM 认证的 Node.js 映像或此映像的修改版本，请输入端口 8000。</li></ul></dd>
    <dt>-P（可选）</dt>
    <dd>自动公开在映像的 Dockerfile 中为 HTTP 流量指定的端口。</dd>
    <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i>（可选）</dt>

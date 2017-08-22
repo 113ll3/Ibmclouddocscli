@@ -25,11 +25,11 @@ IBM Containers CLI 是一種 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式
 **附註：***必要條件* 列出使用指令之前需要哪些動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
 <dl>
 <dt>端點</dt>
-<dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能使用此指令。</dd>
+<dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能使用這個指令。</dd>
 <dt>登入</dt>
-<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用此指令。如果是使用聯合 ID 登入，請使用 '--sso' 選項以一次性密碼進行鑑別。</dd>
+<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用這個指令。如果是使用聯合 ID 登入，請使用 '--sso' 選項以一次性密碼進行鑑別。</dd>
 <dt>目標</dt>
-<dd>必須使用 <code>bluemix target</code> 指令來設定組織及空間後，才能使用此指令。</dd>
+<dd>必須使用 <code>bluemix target</code> 指令來設定組織及空間後，才能使用這個指令。</dd>
 <dt>Docker</dt>
 <dd>需要有 Docker CLI (docker)，才能在 IBM Containers CLI 外掛程式中執行指令。</dd>
 </dl>
@@ -132,7 +132,7 @@ IBM Containers CLI 是一種 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-控制執行中容器，或檢視其輸出。使用 `CTRL+C` 以結束並停止容器。此指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 [attach ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} 指令。
+控制執行中容器，或檢視其輸出。使用 `CTRL+C` 以結束並停止容器。這個指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 [attach ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} 指令。
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -164,7 +164,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-呼叫 IBM Containers 建置服務，以在本端或專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中建置 Docker 映像檔。此指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 [build ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} 指令。
+呼叫 IBM Containers 建置服務，以在本端或專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中建置 Docker 映像檔。這個指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 [build ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} 指令。
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -197,7 +197,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-在容器與本端檔案系統之間複製檔案或資料夾。此指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 [cp ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} 指令。
+在容器與本端檔案系統之間複製檔案或資料夾。這個指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 [cp ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} 指令。
 
 
 ## bluemix ic cpi
@@ -846,12 +846,12 @@ bluemix ic pause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-列出容器的埠對映或特定對映。此指令會覆蓋 `docker port` 指令。如需相關資訊，請參閱 Docker 說明中的 [port ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} 指令。
+列出容器的埠對映或特定對映。這個指令會覆蓋 `docker port` 指令。如需相關資訊，請參閱 Docker 說明中的 [port ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} 指令。
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-檢視已登入使用者之名稱空間中的執行中容器清單。依預設，此指令只會顯示執行中容器。如需相關資訊，請參閱 Docker 說明中的 [ps ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 指令。
+檢視已登入使用者之名稱空間中的執行中容器清單。依預設，這個指令只會顯示執行中容器。如需相關資訊，請參閱 Docker 說明中的 [ps ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 指令。
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -906,7 +906,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 在您已登入的 Bluemix 空間中，重建 IBM Containers 服務。會維護空間的原始配額。
 
-<strong>重要事項</strong>：當您執行此指令時，此空間中您的單一容器及群組都不會移轉至重新佈建的空間，而且將會在移轉處理程序期間予以移除。
+<strong>重要事項</strong>：當您執行這個指令時，此空間中您的單一容器及群組都不會移轉至重新佈建的空間，而且將會在移轉處理程序期間予以移除。
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
@@ -1050,7 +1050,7 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ## bluemix ic route-map
 {: #bluemix_ic_route_map}
 
-建立用來存取容器群組之網際網路資料流量的路徑。您可以使用此指令，建立新路徑或更新現有路徑。
+建立用來存取容器群組之網際網路資料流量的路徑。您可以使用這個指令，建立新路徑或更新現有路徑。
 
 ```
 bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
@@ -1080,7 +1080,7 @@ bluemix ic route-map -n my_host -d mybluemix.net GROUP1
 ## bluemix ic route-unmap
 {: #bluemix_ic_route_unmap}
 
-建立用來存取容器群組之網際網路資料流量的路徑。您可以使用此指令，建立新路徑或更新現有路徑。
+建立用來存取容器群組之網際網路資料流量的路徑。您可以使用這個指令，建立新路徑或更新現有路徑。
 
 ```
 bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
@@ -1124,7 +1124,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
    <dl>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i>（選用）</dt>
-   <dd>公開 HTTP 資料流量的埠。包括 Dockerfile 中針對您要使用之映像檔所指定的任何埠。您可以利用多個 <i>-p</i> 選項來包含多個埠。如果公用 IP 位址可供使用，則公開一個埠會自動將公用 IP 位址連結至容器。<br><br>如果空間中具有您要連結至容器的現有 IP 位址，您可以指定 IP 位址，而不用稍後再連結它。必須以下列格式指定 IP 位址：&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br><br>如需要求空間之 IP 位址的相關資訊，請參閱 <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> 指令。<br><br>在您指定埠時，即將應用程式設為可供「{{site.data.keyword.Bluemix_notm}} 負載平衡器」或相同 {{site.data.keyword.Bluemix_notm}} 空間中嘗試連接主機的容器使用。如果在 Dockerfile 中針對您要使用的映像檔指定了埠，請包含該埠。<br><br><strong>提示：</strong><ul><li>對於 IBM 認證的 Liberty Server 映像檔或此映像檔的已修改版本，請輸入埠 9080。</li><li>對於 IBM 認證的 Node.js 映像檔或此映像檔的已修改版本，請輸入埠 8000。</li></ul></dd>
+   <dd>公開 HTTP 資料流量的埠。包括 Dockerfile 中針對您要使用之映像檔所指定的任何埠。您可以利用多個 <i>-p</i> 選項來包含多個埠。如果公用 IP 位址可供使用，則公開一個埠會自動將公用 IP 位址連結至容器。<br><br>如果空間中具有您要連結至容器的現有 IP 位址，您可以指定 IP 位址，而不用之後再連結它。必須以下列格式指定 IP 位址：&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br><br>如需要求空間之 IP 位址的相關資訊，請參閱 <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> 指令。<br><br>在您指定埠時，即將應用程式設為可供「{{site.data.keyword.Bluemix_notm}} 負載平衡器」或相同 {{site.data.keyword.Bluemix_notm}} 空間中嘗試連接主機的容器使用。如果在 Dockerfile 中針對您要使用的映像檔指定了埠，請包含該埠。<br><br><strong>提示：</strong><ul><li>對於 IBM 認證的 Liberty Server 映像檔或此映像檔的已修改版本，請輸入埠 9080。</li><li>對於 IBM 認證的 Node.js 映像檔或此映像檔的已修改版本，請輸入埠 8000。</li></ul></dd>
    <dt>-P（選用）</dt>
    <dd>自動公開映像檔的 Dockerfile 中針對 HTTP 資料流量所指定的埠。</dd>
    <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i>（選用）</dt>
@@ -1195,7 +1195,7 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ## bluemix ic service-bind
 {: #bluemix_ic_service-bind}
 
-將服務新增至執行中的容器群組。此指令僅適用於容器群組。單一容器必須在執行 bluemix ic run 指令時連結服務。
+將服務新增至執行中的容器群組。這個指令僅適用於容器群組。單一容器必須在執行 bluemix ic run 指令時連結服務。
 
 ```
 bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
@@ -1211,7 +1211,7 @@ bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
 ## bluemix ic service-unbind
 {: #bluemix_ic_service-unbind}
 
-從執行中的容器群組移除服務。此指令僅適用於容器群組。單一容器必須移除容器，並在沒有服務的情況下建立新的容器。
+從執行中的容器群組移除服務。這個指令僅適用於容器群組。單一容器必須移除容器，並在沒有服務的情況下建立新的容器。
 
 ```
 bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
@@ -1403,7 +1403,7 @@ bluemix ic unpause proxy
 
 從您已登入的 Bluemix 空間刪除 IBM Containers 服務。
 
-<strong>注意</strong>：當您執行此指令時，會遺失您的所有單一容器及容器群組。您的空間仍可在 Bluemix 中使用。若要重新開始使用 IBM Containers，您必須執行 `bluemix ic reprovision` 來重新佈建 IBM Containers 服務。
+<strong>注意</strong>：當您執行這個指令時，會遺失您的所有單一容器及容器群組。您的空間仍可在 Bluemix 中使用。若要重新開始使用 IBM Containers，您必須執行 `bluemix ic reprovision` 來重新佈建 IBM Containers 服務。
 
 ```
 bluemix ic reprovision [--force|-f] 

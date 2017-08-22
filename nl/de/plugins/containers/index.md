@@ -453,7 +453,7 @@ Aktualisiert eine Containergruppe.
 bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=ENV_VAL] GROUP_NAME
 ```
 
-**Tipp:** Verwenden Sie zum Aktualisieren des Hostnamens oder der Domäne für eine Containergruppe den Befehl `bluemix ic route-map [-n HOST] [-d DOMAIN] CONTAINER_GROUP`. 
+**Tipp:** Verwenden Sie zum Aktualisieren des Hostnamens oder der Domäne für eine Containergruppe den Befehl `bluemix ic route-map [-n HOST] [-d DOMAIN] CONTAINER_GROUP`.
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 

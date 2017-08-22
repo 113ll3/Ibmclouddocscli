@@ -71,8 +71,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
   </tr>
  <tr>
  <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
- <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
- <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)	<td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
@@ -82,7 +81,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
 ## cf api
 {: #cf_api}
 
-您可以使用此指令來顯示或指定 {{site.data.keyword.Bluemix_notm}} API 端點的 URL。
+您可以使用這個指令來顯示或指定 {{site.data.keyword.Bluemix_notm}} API 端點的 URL。
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
@@ -423,7 +422,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
 </dl>
 
-*附註：*如果您在此指令的 *-p* 參數中提供密碼，您的密碼可能會記錄在 Shell 指令歷程檔案，且可能被本端作業系統的其他使用者看到。
+*附註：*如果您在這個指令的 *-p* 參數中提供密碼，您的密碼可能會記錄在 Shell 指令歷程檔案，且可能被本端作業系統的其他使用者看到。
 
 <strong>範例</strong>：
 
@@ -556,7 +555,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*--no-manifest*（選用）</dt>
 <dd>忽略預設資訊清單檔。</dd>
 <dt>*--no-route*（選用）</dt>
-<dd>不要對映路徑至此應用程式。</dd>
+<dd>不要將路徑對映到此應用程式。</dd>
 <dt>*--no-start*（選用）</dt>
 <dd>部署應用程式之後不要啟動應用程式。</dd>
 <dt>*--random-route*（選用）</dt>

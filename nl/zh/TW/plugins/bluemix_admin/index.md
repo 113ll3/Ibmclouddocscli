@@ -122,7 +122,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ### 搜尋使用者
 {: #admin_search_user}
 
-若要搜尋使用者，請搭配使用下列指令與選用搜尋過濾器參數（name、permission、organization 及 role）：
+若要搜尋使用者，請搭配使用下列指令與選用性的搜尋過濾器參數（name、permission、organization 及 role）：
 
 ```
 cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
@@ -387,7 +387,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 <dd class="pd"><strong>il</strong></dd>
 </dl>
 
-您可以選擇性地提供一個檔案，其中包含有效 JSON 物件中的特定配置參數。如果使用 **-file** 選項，則會優先處理此選項，並忽略其他選項。若要提供檔案而非設定選項，請使用下列指令：
+您可以選擇提供一個檔案，其中包含有效 JSON 物件中的特定配置參數。如果使用 **-file** 選項，則會優先處理此選項，並忽略其他選項。若要提供檔案而非設定選項，請使用下列指令：
 
 ```
 cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
@@ -582,7 +582,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 ```
 {: codeblock}
 
-**附註：**此指令會將所指定組織的現有可見服務取代為您在指令中指定的服務。
+**附註：**這個指令會將所指定組織的現有可見服務取代為您在指令中指定的服務。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
@@ -774,7 +774,7 @@ ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱 [Binding Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
-**附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。如需相關資訊（包括必要及選用欄位），請參閱有關 [Creating Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 資訊。
+**附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。如需相關資訊（包括必要及選用性欄位），請參閱有關 [Creating Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 資訊。
 
 ### 列出安全群組
 {: #clilissecgro}
@@ -980,7 +980,7 @@ cf ba buildpacks <buildpack_name>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
-<dd class="pd">選用參數，可指定要檢視的特定建置套件。</dd>
+<dd class="pd">選用性參數，可指定要檢視的特定建置套件。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba lb** 作為 **ba buildpacks** 這個較長指令名稱的別名。

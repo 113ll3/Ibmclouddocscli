@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -765,7 +765,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 导入基于 BIND 区域文件的区域。
 ```
-bluemix sl dns-import [OPTIONS] ZONEFILE
+bluemix sl dns import [OPTIONS] ZONEFILE
 ```
 <strong>命令选项</strong>：
 
@@ -785,7 +785,7 @@ bluemix sl dns-import [OPTIONS] ZONEFILE
 添加资源记录。
 
 ```
-bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
+bluemix sl dns record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
 <strong>命令选项</strong>：
 

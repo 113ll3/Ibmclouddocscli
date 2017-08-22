@@ -147,7 +147,6 @@ bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
 <strong>例</strong>:
 
 次の例は、コンテナー `my_container` にアタッチする要求です。
-
 ```
 bluemix ic attach my_container
 ```
@@ -185,7 +184,6 @@ bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFI
 次の例は、
 *myimage* という名前のイメージをビルドする要求です。
 ビルドで使用される Dockerfile および他の成果物は、コマンドが実行されるディレクトリーと同じディレクトリー内にあります。レジストリーおよび名前空間がイメージ名と共に含まれているため、イメージは組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドされます。
-
 ```
 bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage
 ```
@@ -307,8 +305,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
     </dl>
 
 
-|  環境変数|     説明
-|
+|  環境変数|     説明 |
 | :----------------------------- | :------------------------------ |
 | CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。|
@@ -334,11 +331,9 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dt>-P (オプション)</dt>
    <dd>すべてのポートを公開します。</dd>
    <dt>--min <i>MIN_INSTANCE_COUNT</i> (オプション)</dt>
-   <dd>インスタンスの最小数。デフォルトは 1 です。インスタンスの最小数を設定した
-場合、その値をコンテナー・グループ作成後に変更することはできません。</dd>
+   <dd>インスタンスの最小数。デフォルトは 1 です。インスタンスの最小数を設定した場合、その値をコンテナー・グループ作成後に変更することはできません。</dd>
    <dt>--max <i>MAX_INSTANCE_COUNT</i> (オプション)</dt>
-   <dd>インスタンスの最大数。デフォルトは 2 です。インスタンスの最大数を設定した
-場合、その値をコンテナー・グループ作成後に変更することはできません。</dd>
+   <dd>インスタンスの最大数。デフォルトは 2 です。インスタンスの最大数を設定した場合、その値をコンテナー・グループ作成後に変更することはできません。</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (オプション)</dt>
    <dd>必要なインスタンス数。デフォルトは 2 です。</dd>
    <dt>--auto (オプション)</dt>
@@ -351,9 +346,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>コンテナー・グループに渡されて実行されるコマンドと引数。このコマンドは長時間実行コマンドでなければなりません。実行時間があまり長くない一時的なコマンド (例えば、<i>/bin/date</i> など) は、コンテナーがクラッシュする原因となる可能性があるため、使用しないでください。<br> 
 <strong>注:</strong> <ul>
    <li>コマンドおよびその引数は、<i>bluemix ic run</i> コマンド・ラインの末尾に指定する必要があります。</li>
-   <li>コマンド引数にハイフン (-) が含まれる場合 (前のコマンド例の
-<i>-c</i> のような場合)、コマンドの前にはハイフンを 2 つ (--) 付ける
-必要があります。</li>
+   <li>コマンド引数にハイフン (-) が含まれる場合 (前のコマンド例の <i>-c</i> のような場合)、コマンドの前にはハイフンを 2 つ (--) 付ける必要があります。</li>
    </ul></dd>
    </dl>
 
@@ -399,7 +392,6 @@ bluemix ic group-inspect CONTAINER_GROUP
 <strong>例</strong>:
 
 次の例は、コンテナー・グループ `my_group` を検査する要求を示しています。
-
 ```
 bluemix ic group-inspect my_group
 ```
@@ -426,7 +418,6 @@ bluemix ic group-instances CONTAINER_GROUP
 <strong>例</strong>:
 
 コンテナー・グループ `my_group` のすべてのインスタンスをリストします。
-
 ```
 bluemix ic group-instances my_group
 ```
@@ -447,8 +438,7 @@ bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
 
    <dl>
    <dt>-f|--force (オプション)</dt>
-   <dd>実行中のコンテナーまたは障害が起こったコンテナーを強制的に削除
-します。</dd>
+   <dd>実行中のコンテナーまたは障害が起こったコンテナーを強制的に削除します。</dd>
    <dt><i>GROUP_NAME</i> (必須)</dt>
    <dd>コンテナー・グループ ID または名前。</dd>
    </dl>
@@ -457,7 +447,6 @@ bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
 <strong>例</strong>:
 
 次の例は、コンテナー・グループを削除する要求です。ここで、`my_group` はコンテナー・グループの名前です。
-
 ```
 bluemix ic group-remove my_group
 ```
@@ -485,8 +474,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
    <dd>必要なインスタンス数。デフォルトは <i>2</i> です。</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>(オプション)</dt>
    <dd>環境変数を設定します。複数のキーは別々にリストしてください。引用符を含める場合、環境変数名と値の両方を囲むように指定します。
-例えば、`-e "key1=value1" -e "key2=value2" -e
-"key3=value3"` のようにします。</dd>
+例えば、`-e "key1=value1" -e "key2=value2" -e "key3=value3"` のようにします。</dd>
    <dt><i>GROUP_NAME</i> (必須)</dt>
    <dd>コンテナー・グループ ID または名前。</dd>
    </dl>
@@ -533,8 +521,7 @@ bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
 
    <dl>
    <dt>-a|--all (オプション)</dt>
-   <dd>組織のリポジトリー内の各イメージについて、最新のイメージ層のみ
-ではなく、すべてのイメージ層を含めます。</dd>
+   <dd>組織のリポジトリー内の各イメージについて、最新のイメージ層のみではなく、すべてのイメージ層を含めます。</dd>
    <dt>-f (オプション)</dt>
    <dd>指定した条件でイメージのリストをフィルターに掛けます。</dd>
    <dt>--no-trunc (オプション)</dt>
@@ -546,7 +533,6 @@ bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
 <strong>例</strong>:
 
 次の例は、組織の使用可能なイメージのリストを受け取る要求です。
-
 ```
 bluemix ic images
 ```
@@ -601,13 +587,11 @@ bluemix ic inspect [IMAGE|images|CONTAINER]
 
    <dl>
    <dt><i>IMAGE</i> (必須)</dt>
-   <dd>イメージの名前または ID を指定することによって、特定のイメージ
-についての詳細情報を表示します。</dd>
+   <dd>イメージの名前または ID を指定することによって、特定のイメージについての詳細情報を表示します。</dd>
    <dt>images (必須)</dt>
    <dd>リポジトリー内のすべてのイメージについての詳細情報を表示します。</dd>
    <dt><i>CONTAINER</i> (必須)</dt>
-   <dd>コンテナーの名前または ID を指定することによって、特定のコンテ
-ナーについての詳細情報を表示します。</dd>
+   <dd>コンテナーの名前または ID を指定することによって、特定のコンテナーについての詳細情報を表示します。</dd>
    </dl>
 
 **ヒント:** 一度に指定できるのは、
@@ -617,7 +601,6 @@ bluemix ic inspect [IMAGE|images|CONTAINER]
 <strong>例</strong>:
 
 次の例は、`proxy` という名前のコンテナーを検査する要求です。
-
 ```
 bluemix ic inspect proxy
 ```
@@ -646,7 +629,6 @@ bluemix ic ip-bind IP_ADDRESS CONTAINER
 <strong>例</strong>:
 
 次の例は、IP アドレス `192.123.12.12` をコンテナー `proxy` にバインドする要求です。
-
 ```
 bluemix ic ip-bind 192.123.12.12 proxy
 ```
@@ -714,7 +696,6 @@ bluemix ic ip-unbind IP_ADDRESS CONTAINER
 <strong>例</strong>:
 
 次の例は、IP アドレス `192.123.12.12` をコンテナー `proxy` からアンバインドする要求です。
-
 ```
 bluemix ic ip-unbind 192.123.12.12 proxy
 ```
@@ -771,7 +752,6 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
 <strong>例</strong>:
 
 次の例は、`proxy` という名前のコンテナー内のプロセスを停止する要求です。
-
 ```
 bluemix ic kill proxy
 ```
@@ -847,13 +827,11 @@ bluemix ic pause CONTAINER
 
  ここで、`{message}` は関連するエラーです。
 
-
 - コマンド失敗 - コンテナー・クラウド・サービスに接続できませんでした。
 
 <strong>例</strong>:
 
 次の例は、`proxy` という名前のコンテナーを休止する要求です。
-
 ```
 bluemix ic pause proxy
 ```
@@ -885,11 +863,7 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
    <dt>-s|--size (オプション)</dt>
    <dd>コンテナーのサイズをリストします。</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i> (オプション)</dt>
-   <dd>最近作成されたコンテナーをリストします。ここで <i>NUM</i> は、
-最近作成されたコンテナーのうちのいくつのコンテナーを返したいかを指定する数です。
-<br><br> 例えば、<i>node1</i> から <i>node5</i> までのコンテ
-ナーを順次作成した場合、コマンド <i>bluemix ic ps --limit 2</i> は、
-作成されたコンテナーのうちの最新の 2 つである node4 と node5 を返します。</dd>
+   <dd>最近作成されたコンテナーをリストします。ここで <i>NUM</i> は、最近作成されたコンテナーのうちのいくつのコンテナーを返したいかを指定する数です。<br><br> 例えば、<i>node1</i> から <i>node5</i> までのコンテナーを順次作成した場合、コマンド <i>bluemix ic ps --limit 2</i> は、作成されたコンテナーのうちの最新の 2 つである node4 と node5 を返します。</dd>
    <dt>-q|--quiet (オプション)</dt>
    <dd>コンテナー ID のみを表示します。</dd>
    </dl>
@@ -898,7 +872,6 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
 <strong>例</strong>:
 
 次の例は、実行中と停止状態のすべてのコンテナーを表示する要求です。
-
 ```
 bluemix ic ps -a
 ```
@@ -911,7 +884,9 @@ bluemix ic ps -a
 ```
 bluemix ic rename OLD_NAME NEW_NAME
 ```
-<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker<strong>コマンド・オプション</strong>:
+<strong>前提条件</strong>:  エンドポイント、ログイン、ターゲット、Docker
+
+<strong>コマンド・オプション</strong>:
 
 <dl>
    <dt><i>OLD_NAME</i> (必須)</dt>
@@ -970,13 +945,11 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 
  ここで、`{message}` は関連するエラーです。
 
-
 - コマンド失敗 - コンテナー・クラウド・サービスに接続できませんでした。
 
 <strong>例</strong>:
 
 次の例は、`proxy` という名前のコンテナーを再始動する要求です。
-
 ```
 bluemix ic restart proxy
 ```
@@ -997,8 +970,7 @@ bluemix ic rm [-f|--force] CONTAINER
 
    <dl>
    <dt>-f|--force (オプション)</dt>
-   <dd>実行中のコンテナーまたは障害が起こったコンテナーを強制的に削除
-します。</dd>
+   <dd>実行中のコンテナーまたは障害が起こったコンテナーを強制的に削除します。</dd>
    <dt><i>CONTAINER</i> (必須)</dt>
    <dd>コンテナーの名前または ID。</dd>
    </dl>
@@ -1013,13 +985,11 @@ bluemix ic rm [-f|--force] CONTAINER
 
  ここで、`{message}` は関連するエラーです。
 
-
 - コマンド失敗 - コンテナー・クラウド・サービスに接続できませんでした。
 
 <strong>例</strong>:
 
 次の例は、`proxy` という名前のコンテナーを削除する要求です。
-
 ```
 bluemix ic rm proxy
 ```
@@ -1043,9 +1013,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
    <dd>レジストリー・ホストを変更します。
 デフォルトでは、<i>bluemix ic init</i> コマンドに指定したレジストリーが使用されます。</dd>
    <dt><i>IMAGE</i> (必須)</dt>
-   <dd>削除するイメージの名前。イメージ名にタグが指定されていない場合、
-<i>latest</i> とタグ付けされたイメージはデフォルトで削除されます。
-</dd>
+   <dd>削除するイメージの名前。イメージ名にタグが指定されていない場合、<i>latest</i> とタグ付けされたイメージはデフォルトで削除されます。</dd>
    </dl>
 
 <strong>応答</strong>:
@@ -1064,11 +1032,9 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 
  ここで、`{message}` は関連するエラーです。
 
-
 <strong>例</strong>:
 
 次の例は、イメージ `mynamespace/myimage:latest` を削除する要求です。
-
 ```
 bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ```
@@ -1091,8 +1057,7 @@ bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTA
    <dt>-n <i>HOST</i>|--hostname <i>HOST</i> (オプション)</dt>
    <dd>経路のホスト名。ホスト名は、完全なパブリック経路 URL の最初の部分です。例えば、URL <i>mycontainerhost.mybluemix.net</i> 中の <i>mycontainerhost</i> です。</dd>
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (オプション)</dt>
-   <dd>完全なパブリック経路 URL の 2 番目の部分である、経路のドメイン名。
-ほとんどの場合、ドメインは <i>mybluemix.net</i> です。このパラメーターを使用してプライベート・ドメインを指定することもできます。</dd>
+   <dd>完全なパブリック経路 URL の 2 番目の部分である、経路のドメイン名。ほとんどの場合、ドメインは <i>mybluemix.net</i> です。このパラメーターを使用してプライベート・ドメインを指定することもできます。</dd>
    <dt><i>CONTAINER_GROUP</i> (必須)</dt>
    <dd>コンテナー・グループ ID または名前。</dd>
    </dl>
@@ -1129,8 +1094,7 @@ bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CON
 
 <strong>例</strong>:
 
-次の例は、`GROUP1` と呼ばれるグループ
-の経路をマップ解除する要求です。ここで、`my_host` は
+次の例は、`GROUP1` と呼ばれるグループの経路をマップ解除する要求です。ここで、`my_host` は
 ホスト名、`organization.com` はドメインです。
 ```
 bluemix ic route-unmap -n my_host -d organization.com GROUP1
@@ -1140,18 +1104,16 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-イメージ名を使用して、コンテナー・クラウド・サービスで新しいコンテナーを開始します。
-詳細については、Docker ヘルプで [run ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} コマンドを参照してください。
+イメージ名を使用して、コンテナー・クラウド・サービスで新しいコンテナーを開始します。詳細については、Docker ヘルプで [run ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} コマンドを参照してください。
 
 
 ```
 bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [--volume VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS] [-it] IMAGE [CMD [CMD ...]]
 ```
-**注:** Cloud Foundry コマンド・ツールがインストー
-ルされていること、および Cloud Foundry トークンがあることを確認してください。
-`bluemix login` および `bluemix ic
-init` を使用した正常なログインによって、必要なトークンおよび
-証明書が生成されます。
+**注:** Cloud Foundry コマンド・ツールがインストールされていること、および Cloud Foundry トークンがあることを確認してください。
+`bluemix login` および `bluemix ic init` を使用した正常なログインによって、必要なトークンおよび証明書が生成されます。
+
+
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
 <strong>コマンド・オプション</strong>:
@@ -1161,15 +1123,10 @@ init` を使用した正常なログインによって、必要なトークン�
    <dd>HTTP トラフィックのポートを公開します。使用するイメージの Dockerfile 内に指定されているポートがあれば、それらのポートを含めます。複数の <i>-p</i> オプションを使用して、複数のポートを含めることができます。ポートを公開すると、パブリック IP アドレスが使用可能な場合、パブリック IP アドレスがコンテナーに自動的にバインドされます。<br><br>コンテナーにバインドしたい IP アドレスがスペース内に既に存在する場合、後でバインドするのでなく、その IP アドレスを指定できます。IP アドレスは、&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br> 形式で指定する必要があります。<br>スペース用の IP アドレスの要求について詳しくは、<a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> コマンドを参照してください。<br><br>ポートを指定したら、同じ {{site.data.keyword.Bluemix_notm}} スペース内でホストにアクセスしようとする {{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーがアプリを使用できるように設定します。使用するイメージの Dockerfile 内にポートが指定されている場合、そのポートを含めてください。<br><br>
 <strong>ヒント:</strong><ul><li>IBM 認定 Liberty Server イメージ、またはこのイメージの変更版の場合、ポート 9080 を入力します。</li><li>IBM 認定 Node.js イメージ、またはこのイメージの変更版の場合、ポート 8000 を入力します。</li></ul></dd>
    <dt>-P (オプション)</dt>
-   <dd>イメージの Dockerfile 内に指定されたポートを HTTP トラフィック
-用に自動的に公開します。</dd>
-   <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i> (オプ
-ション)</dt>
-   <dd>グループにメモリー制限を MB 単位で割り当てます。CLI からコンテナー・グループを作成す
-る場合、各コンテナー・インスタンスのデフォルト値は 64 MB です。
-{{site.data.keyword.Bluemix_notm}} ダッシュボードからコンテナ
-ー・グループを作成する場合、各インスタンスのデフォルト値は 256 MB で
-す。受け入れられる値は 64、256、512、1024、および 2048 です。メモリー限度が割り当てられた後、その値を変更することはできません。</dd>
+   <dd>イメージの Dockerfile 内に指定されたポートを HTTP トラフィック用に自動的に公開します。</dd>
+   <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i> (オプション)</dt>
+   <dd>グループにメモリー制限を MB 単位で割り当てます。CLI からコンテナー・グループを作成する場合、各コンテナー・インスタンスのデフォルト値は 64 MB です。
+{{site.data.keyword.Bluemix_notm}} ダッシュボードからコンテナー・グループを作成する場合、各インスタンスのデフォルト値は 256 MB です。受け入れられる値は 64、256、512、1024、および 2048 です。メモリー限度が割り当てられた後、その値を変更することはできません。</dd>
    <dt>-e <i>ENV</i>|--env <i>ENV</i> (オプション)</dt>
    <dd>環境変数を設定します。ここで、<i>ENV</i> は key=value ぺアです。
 複数のキーは別々にリストしてください。引用符を含める場合、環境変数名と値の両方を囲むように指定します。例えば、-e
@@ -1177,8 +1134,7 @@ init` を使用した正常なログインによって、必要なトークン�
    </dl>
 
 
-|      環境変数|   説明
-|
+|      環境変数|   説明 |
 | :----------------------------- | :------------------------------ |
 | CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。|
@@ -1218,19 +1174,16 @@ bluemix ic run --name my_container registry.ng.bluemix.net/ibmnode -- sh -c "whi
 
 
 `my_namespace/nginx` イメージを使用して、メモリー限度が `1024` MB のコンテナー `proxy` を作成し、開始します。ここで、`my_namespace` は、ログイン・ユーザーと関連付けられた名前空間です。
-
 ```
 bluemix ic run -n proxy -m 1024 registry.ng.bluemix.net/my_namespace/nginx
 ```
 
 `my_namespace/blog` イメージを使用してコンテナーを作成して開始し、資格情報を環境変数として渡します。`my_namespace` は、ログイン・ユーザーと関連付けられた名前空間です。
-
 ```
 bluemix ic run -n my_container -e USER=johnsmith -e PASS=password registry.ng.bluemix.net/my_namespace/blog
 ```
 
 `my_namespace/blog` イメージを使用してボリュームをコンテナーに追加します。ここで、`my_namespace` は、ログイン・ユーザーに関連付けられた名前空間です。
-
 ```
 bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path registry.ng.bluemix.net/my_namespace/blog
 ```
@@ -1244,7 +1197,9 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ```
 bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
 ```
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+
+   <dl>
    <dt><i>GROUP_NAME</i> (必須)</dt>
    <dd>グループ ID または名前。</dd>
    <dt><i>SERVICE_INSTANCE</i> (必須)</dt>
@@ -1260,7 +1215,9 @@ bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
 ```
 bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
 ```
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+
+   <dl>
    <dt><i>GROUP_NAME</i> (必須)</dt>
    <dd>グループ ID または名前。</dd>
    <dt><i>SERVICE_INSTANCE</i> (必須)</dt>
@@ -1296,13 +1253,11 @@ bluemix ic start CONTAINER
 
  ここで、`{message}` は関連するエラーです。
 
-
 - コマンド失敗 - コンテナー・クラウド・サービスに接続できませんでした。
 
 <strong>例</strong>:
 
 次の例は、`proxy` という名前のコンテナーを開始する要求です。
-
 ```
 bluemix ic start proxy
 ```
@@ -1331,7 +1286,6 @@ bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
 <strong>例</strong>:
 
 次の例は、1 つのコンテナーについての最新の統計情報を表示する要求です。
-
 ```
 bluemix ic stats --no-stream my_container
 ```
@@ -1366,13 +1320,11 @@ bluemix ic stop CONTAINER [-t SECS|--time SECS]
 
  ここで、`{message}` は関連するエラーです。
 
-
 - コマンド失敗 - コンテナー・クラウド・サービスに接続できませんでした。
 
 <strong>例</strong>:
 
 次の例は、`proxy` という名前のコンテナーを停止する要求です。
-
 ```
 bluemix ic stop proxy
 ```
@@ -1399,7 +1351,6 @@ bluemix ic top CONTAINER [CONTAINER]
 <strong>例</strong>:
 
 次の例は、`my_container` という名前のコンテナー内のプロセスを表示する要求です。
-
 ```
 bluemix ic top my_container
 ```
@@ -1433,13 +1384,11 @@ bluemix ic unpause CONTAINER
 
  ここで、`{message}` は関連するエラーです。
 
-
 - コマンド失敗 - コンテナー・クラウド・サービスに接続できませんでした。
 
 <strong>例</strong>:
 
 次の例は、`proxy` という名前のコンテナーを休止解除する要求です。
-
 ```
 bluemix ic unpause proxy
 ```
@@ -1500,7 +1449,6 @@ bluemix ic volume-create VOLUME_NAME FS_NAME
 <strong>例</strong>:
 
 次の例は、ボリュームを作成する要求です。
-
 ```
 bluemix ic volume-create volume_name fileshare_name
 ```
@@ -1545,7 +1493,6 @@ bluemix ic volume-fs-create my_file_share
 
 
 ## bluemix ic volume-fs-flavors
-
 {: #bluemix_ic_volume_fs_flavors}
 
 すべてのファイル共有のフレーバーをリストします。
@@ -1631,7 +1578,6 @@ bluemix ic volume-inspect VOLUME_NAME
 <strong>例</strong>:
 
 次の例は、ボリュームを検査する要求です。ここで、`volume_name` はボリュームの名前です。
-
 ```
 bluemix ic volume-inspect volume_name
 ```
@@ -1658,7 +1604,6 @@ bluemix ic volume-remove VOLUME_NAME
 <strong>例</strong>:
 
 次の例は、ボリュームを削除する要求です。ここで、`volume_name` はボリュームの名前です。
-
 ```
 bluemix ic volume-remove volume_name
 ```
@@ -1697,7 +1642,6 @@ bluemix ic wait CONTAINER [CONTAINER]
 <strong>例</strong>:
 
 次の例は、`my_container` という名前のコンテナーを終了する要求です。
-
 ```
 bluemix ic wait my_container
 ```
@@ -1724,7 +1668,6 @@ bluemix ic wait-status CONTAINER
 <strong>例</strong>:
 
 次の例は、`my_container` という名前のコンテナーを終了する要求です。
-
 ```
 bluemix ic wait my_container
 ```

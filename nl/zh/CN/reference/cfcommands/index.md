@@ -71,8 +71,7 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
   </tr>
  <tr>
  <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
- <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
- <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)<td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>

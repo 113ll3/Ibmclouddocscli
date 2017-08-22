@@ -19,21 +19,21 @@ lastupdated: "2017-07-12"
 # Mit eingebundener ID anmelden
 {: #federated_id}
 
-Als eingebundener Benutzer können Sie sich bei {{site.data.keyword.Bluemix}} über die Befehlszeilenschnittstelle (CLI) anmelden, indem Sie entweder einen einmaligen Kenncode oder einen API-Schlüssel verwenden.
+Als eingebundener Benutzer können Sie sich bei {{site.data.keyword.Bluemix}} über die Befehlszeilenschnittstelle (CLI) anmelden, indem Sie entweder einen einmaligen Kenncode oder einen API-Schlüssel verwenden. 
 {: shortdesc}
 
 ## Einmaligen Kenncode verwenden
 {:onetime_passcode}
 
-Wenn Sie die Option für den einmaligen Kenncode verwenden, um sich mit einer eingebundenen ID anzumelden, geben Sie den Single-Sign-on-Parameter (SSO) an, um einen einmaligen Kenncode anzufordern, den Sie dann bei der Anmeldung eingeben.  
+Wenn Sie die Option für den einmaligen Kenncode verwenden, um sich mit einer eingebundenen ID anzumelden, geben Sie den Single-Sign-on-Parameter (SSO) an, um einen einmaligen Kenncode anzufordern, den Sie dann bei der Anmeldung eingeben. 
 
-Ein einmaliger Kenncode ruft Code über die {{site.data.keyword.Bluemix_notm}}-Konsole ab. Dies hat zur Folge, dass die Verwendung einer eingebundenen ID in Ihrem Automationsscript fehlschlägt. Sie können dieses Problem vermeiden, indem Sie die API-Schlüssel-Option mit einem automatisierten Script verwenden.
+Ein einmaliger Kenncode ruft Code über die {{site.data.keyword.Bluemix_notm}}-Konsole ab. Dies hat zur Folge, dass die Verwendung einer eingebundenen ID in Ihrem Automationsscript fehlschlägt. Sie können dieses Problem vermeiden, indem Sie die API-Schlüssel-Option mit einem automatisierten Script verwenden. 
 {: tip}
 
 ### Über die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle
-1. Geben sie die Option `--sso` mit dem Befehl `bluemix login` an. 
-2. Folgen Sie der URL in der Eingabeaufforderung, um den einmaligen Kenncode abzurufen. 
-3. Verwenden den Kenncodewert in der Befehlszeilenschnittstelle per Cut-and-paste als Ihre Eingabe. 
+1. Geben sie die Option `--sso` mit dem Befehl `bluemix login` an.
+2. Folgen Sie der URL in der Eingabeaufforderung, um den einmaligen Kenncode abzurufen.
+3. Verwenden den Kenncodewert in der Befehlszeilenschnittstelle per Cut-and-paste als Ihre Eingabe.
     
   ``` 
   bluemix login --sso
@@ -46,9 +46,9 @@ Ein einmaliger Kenncode ruft Code über die {{site.data.keyword.Bluemix_notm}}-K
   ```
   
 ### Über die Cloud Foundry-Befehlszeilenschnittstelle
-1. Geben sie die Option `--sso` mit dem Befehl `cf login` an.  
-2. Folgen Sie der URL in der Eingabeaufforderung, um den einmaligen Kenncode abzurufen.  
-3. Verwenden den Kenncodewert in der Befehlszeilenschnittstelle per Cut-and-paste als Ihre Eingabe.  
+1. Geben sie die Option `--sso` mit dem Befehl `cf login` an. 
+2. Folgen Sie der URL in der Eingabeaufforderung, um den einmaligen Kenncode abzurufen. 
+3. Verwenden den Kenncodewert in der Befehlszeilenschnittstelle per Cut-and-paste als Ihre Eingabe. 
     
   ```
   cf login --sso
@@ -69,7 +69,7 @@ Der erforderliche API-Schlüssel ist der {{site.data.keyword.Bluemix_notm}}-API-
 
    ```
    bluemix iam api-key-create NAME [-d BESCHREIBUNG] [-f, --file DATEI]
-
+  
    ```
 
 2. Melden Sie sich mit dem API-Schlüssel an. 
@@ -80,19 +80,19 @@ Der erforderliche API-Schlüssel ist der {{site.data.keyword.Bluemix_notm}}-API-
   
       ```
       bluemix login --apikey <api-schlüsselzeichenfolge>
-
+    
       ```
     
     * API-Schlüssel mit der Schlüsseldatei aufrufen: 
   
       ```
       bluemix login --apikey @schlüsseldateiname
-
+    
       ```
     
-    * Legen Sie eine Umgebungsvariable fest. Darüber hinaus können Sie auf Ihrem System auch eine Umgebungsvariable definieren. Beispiel: BLUEMIX_API_KEY=api-schlüsselzeichenfolge, wobei `api-schlüsselzeichenfolge` der angepasste Wert des API-Schlüssels ist. Wenn die Umgebungsvariable definiert wurde, können Sie einfach `bluemix login` in der Befehlszeilenschnittstelle angeben.  
+    * Legen Sie eine Umgebungsvariable fest. Darüber hinaus können Sie auf Ihrem System auch eine Umgebungsvariable definieren. Beispiel: BLUEMIX_API_KEY=api-schlüsselzeichenfolge, wobei `api-schlüsselzeichenfolge` der angepasste Wert des API-Schlüssels ist. Wenn die Umgebungsvariable definiert wurde, können Sie einfach `bluemix login` in der Befehlszeilenschnittstelle angeben. 
   
-  Um sich über die Cloud Foundry-Befehlszeilenschnittstelle anzumelden, geben Sie `apikey` als Benutzernamen und die API-Schlüsselzeichenfolge als Kennwort an: 
+  Um sich über die Cloud Foundry-Befehlszeilenschnittstelle anzumelden, geben Sie `apikey` als Benutzernamen und die API-Schlüsselzeichenfolge als Kennwort an:
 
     ```
     cf login

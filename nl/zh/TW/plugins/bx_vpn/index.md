@@ -32,11 +32,11 @@ VPN 外掛程式適用於 Windows、MAC 及 Linux 作業系統。請確定您是
 **附註：***必要條件* 列出使用指令之前需要哪些動作。必要條件可能包括下列一個以上的動作：
 <dl>
 <dt>**端點**</dt>
-<dd>必須透過 `bluemix api` 設定 API 端點後，才能使用此指令。</dd>
+<dd>必須透過 `bluemix api` 設定 API 端點後，才能使用這個指令。</dd>
 <dt>**登入**</dt>
-<dd>需要使用 `bluemix login` 指令進行登入後，才能使用此指令。</dd>
+<dd>需要使用 `bluemix login` 指令進行登入後，才能使用這個指令。</dd>
 <dt>**目標**</dt>
-<dd>必須使用 `bluemix target` 指令來設定組織及空間後，才能使用此指令。</dd>
+<dd>必須使用 `bluemix target` 指令來設定組織及空間後，才能使用這個指令。</dd>
 </dl>
 
 

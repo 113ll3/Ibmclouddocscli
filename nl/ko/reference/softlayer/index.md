@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -1971,7 +1971,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
    <dt>--hard</dt>
    <dd>하드 재부팅 수행</dd>
    <dt>--soft</dt>
-   <dd>하드 재부팅 수행</dd>
+   <dd>소프트 재부팅 수행</dd>
    <dt>-f, --force</dt>
    <dd>확인 없이 조작 강제 실행.</dd>
     </dl>

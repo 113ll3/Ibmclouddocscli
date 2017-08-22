@@ -19,7 +19,7 @@ lastupdated: "2017-07-12"
 # Efetuando login com um ID federado
 {: #federated_id}
 
-Como um usuário federado, é possível efetuar login no {{site.data.keyword.Bluemix}} por meio da interface da linha de comandos (CLI) usando uma senha única ou uma chave API.
+Como um usuário federado, é possível efetuar login no {{site.data.keyword.Bluemix}} por meio da interface da linha de comandos (CLI) usando uma senha única ou uma chave API. 
 {: shortdesc}
 
 ## Usando uma senha única
@@ -27,7 +27,7 @@ Como um usuário federado, é possível efetuar login no {{site.data.keyword.Blu
 
 Ao usar a opção de senha única para efetuar login com um ID federado, você especifica o parâmetro single-sign on (SSO) para obter uma senha única, que será então inserida no login. 
 
-Como uma senha única recupera código do console do {{site.data.keyword.Bluemix_notm}}, ela faz com que o uso de um ID federado em seu script de automação falhe. Evite problemas usando a opção de chave API com um script automatizado.
+Como uma senha única recupera código do console do {{site.data.keyword.Bluemix_notm}}, ela faz com que o uso de um ID federado em seu script de automação falhe. Evite problemas usando a opção de chave API com um script automatizado. 
 {: tip}
 
 ### No {{site.data.keyword.Bluemix_notm}} CLI

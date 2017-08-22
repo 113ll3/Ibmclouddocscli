@@ -16,7 +16,7 @@ lastupdated: "2017-06-29"
 # IBM Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-O IBM Developer Extension for Visual Studio Code é uma extensão do editor que fornece acesso a recursos da CLI do desenvolvedor da IBM diretamente na paleta de comandos do editor do Visual Studio Code. Ele permite o acesso rápido a um subconjunto de comandos `bx dev` para os fluxos de trabalho Docker e CloudFoundry, incluindo implementação do app, início/parada/reinicialização de apps no Bluemix, visualização de logs de app remoto e mais – tudo sem a necessidade de sair do contexto do editor.
+O IBM Developer Extension for Visual Studio Code é uma extensão do editor que fornece acesso a recursos da CLI do desenvolvedor da IBM diretamente na paleta de comandos do editor do Visual Studio Code.  Ele permite o acesso rápido a um subconjunto de comandos `bx dev` para os fluxos de trabalho Docker e CloudFoundry, incluindo implementação do app, início/parada/reinicialização de apps no Bluemix, visualização de logs de app remoto e mais – tudo sem a necessidade de sair do contexto do editor.
 {:shortdesc}
 
 ![Captura de tela da tela de download da extensão IBM Developer Tools.](ibm-dev-tools-for-vscode.png "Tela de download da extensão dentro do Visual Studio Code")
@@ -40,7 +40,7 @@ A maneira mais simples de instalar a extensão IBM Developers Tools é usar o co
 
 Como alternativa, é possível instalar a extensão IBM Developer Tools por meio do painel de gerenciamento "Extensões":
 
-1. Abra a barra lateral **Extensões** dentro do editor do Visual Studio Code e, em seguida, procure usando a sequência `publisher:IBM Developer`. A extensão IBM Developer Tools será exibida nos resultados da procura.  
+1. Abra a barra lateral **Extensões** dentro do editor do Visual Studio Code e, em seguida, procure usando a sequência `publisher:IBM Developer`.  A extensão IBM Developer Tools será exibida nos resultados da procura.  
 2. Clique no botão **Instalar** para começar a instalação.
 
 Também é possível acessar a [extensão IBM Developer Tools diretamente do Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).

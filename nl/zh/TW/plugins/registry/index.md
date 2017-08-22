@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-06-22"
+lastupdated: "2017-07-27"
 
 
 ---
@@ -152,7 +152,7 @@ bx cr image-rm IMAGE [IMAGE...]
 ## bx cr login
 {: #bx_cr_login}
 
-此指令會對登錄執行 `docker login` 指令。必須執行 `docker login` 指令，才能針對登錄執行 `docker push` 或 `docker pull` 指令。若要執行其他 `bx cr` 指令，則不需要執行此指令。如果未安裝 Docker，則此指令會傳回錯誤訊息。
+這個指令會對登錄執行 `docker login` 指令。必須執行 `docker login` 指令，才能針對登錄執行 `docker push` 或 `docker pull` 指令。若要執行其他 `bx cr` 指令，則不需要執行這個指令。如果未安裝 Docker，則這個指令會傳回錯誤訊息。
 
 ```
 bx cr login
@@ -220,24 +220,14 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-升級至指定的方案。
+讓您從免費方案升級至標準方案。
 
 如需方案的相關資訊，請參閱[登錄方案](../../../services/Registry/registry_overview.html#registry_plans)。
 
 ```
-bx cr plan-upgrade PLAN
+bx cr plan-upgrade standard
 ```
 {: codeblock}
-
-**參數**
-<dl>
-<dt>方案</dt>
-<dd> 升級至指定的方案。可用的方案如下：
-<ul>
-<li>免費</li>
-<li>標準</li>
-</ul>
-</dl>
 
 
 ## bx cr pricing

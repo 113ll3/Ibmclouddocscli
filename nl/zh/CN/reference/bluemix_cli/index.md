@@ -22,7 +22,7 @@ lastupdated: "2017-07-12"
 
 **注**：如果您的网络中有 HTTP 代理服务器位于运行 CLI 的主机和 {{site.data.keyword.Bluemix_notm}} 之间，那么必须在 HTTP_PROXY 环境变量中指定该代理服务器的主机名或 IP 地址。
 
-**注：**{{site.data.keyword.Bluemix_notm}} CLI 工具在其安装中捆绑了 Cloud Foundry 命令行界面。但是，如果您有自己的 cf CLI 安装，那么不允许混合使用 {{site.data.keyword.Bluemix_notm}} CLI 命令 `bx xxx` 和 Cloud Foundry CLI 命令 `cf xxx`。如果要使用 cf CLI 来管理 Cloud Foundry 资源，请改为使用 `bluemix cf`。它会在与 {{site.data.keyword.Bluemix_notm}} CLI 共享的上下文中，在后端运行捆绑的 Cloud Foundry CLI 的命令。此外，也不允许使用 `bluemix cf api/login/logout/target`，请改为使用 `bluemix api/login/logout/target`。
+**注：**{{site.data.keyword.Bluemix_notm}} CLI 工具在其安装包中捆绑了 Cloud Foundry 命令行界面。但是，如果您已安装 cf CLI，那么不允许混合使用 {{site.data.keyword.Bluemix_notm}} CLI 命令 `bx xxx` 和 Cloud Foundry CLI 命令 `cf xxx`。如果要使用 cf CLI 来管理 Cloud Foundry 资源，请改为使用 `bluemix cf`。它会在与 {{site.data.keyword.Bluemix_notm}} CLI 共享的上下文中，在后端运行捆绑的 Cloud Foundry CLI 的命令。此外，也不允许使用 `bluemix cf api/login/logout/target`，请改为使用 `bluemix api/login/logout/target`。
 
 ## 安装 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
@@ -93,13 +93,13 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 除了内置命令外，{{site.data.keyword.Bluemix_notm}} CLI 还支持通过插件扩展框架来集成其他命令。
 
 
-您可以在本地或从远程服务器通过存储库安装插件。{{site.data.keyword.Bluemix_notm}} 具有用于托管 {{site.data.keyword.Bluemix_notm}} CLI 插件和 Cloud Foundry CLI 插件的存储库：
+您可以从存储库、本地服务器或远程服务器安装插件。{{site.data.keyword.Bluemix_notm}} 具有用于托管 {{site.data.keyword.Bluemix_notm}} CLI 插件和 Cloud Foundry CLI 插件的存储库：
 
    * [{{site.data.keyword.Bluemix_notm}} CLI 插件存储库](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg)，用于托管 {{site.data.keyword.Bluemix_notm}} CLI 的插件。
 
-要从存储库进行安装，请执行以下步骤：
+要从存储库安装插件，请执行以下步骤：
 
-  1. 在存储库中找到插件。安装了 {{site.data.keyword.Bluemix_notm}} CLI 后，缺省情况下将添加官方存储库 `Bluemix`。可以使用 `bluemix plugin repo-plugins` 命令列出 `Bluemix` 存储库中的插件。例如：
+  1. 在存储库中找到插件。安装了 {{site.data.keyword.Bluemix_notm}} CLI 后，缺省情况下会添加官方存储库 `Bluemix`。可以使用 `bluemix plugin repo-plugins` 命令列出 `Bluemix` 存储库中的插件。例如：
 
   ```
   ~$ bluemix plugin repo-plugins -r Bluemix
@@ -143,7 +143,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
   2016-02-18 14:02:34 (443 KB/s) - `auto-scaling-darwin-amd64-0.2.2' saved [9857792/9857792]
   ```
 
-  2. 对于类 UNIX 系统，必须使用 `chmod` 命令使下载的文件成为可执行文件。例如：
+  2. 对于类似 UNIX 的系统，必须通过 `chmod` 命令使下载的文件可执行。例如：
 
   ```
   ~$ sudo chmod 755 auto-scaling-darwin-amd64-0.2.2
@@ -161,7 +161,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
   ~$
   ```
 
-要从远程服务器进行安装，请执行以下步骤：
+要从远程服务器安装插件，请执行以下步骤：
 
   1. 使用 `bluemix plugin install` 命令直接通过远程 URL 安装插件。例如：
 

@@ -25,14 +25,14 @@ lastupdated: "2017-06-22"
 
 <dl>
 <dt>端點</dt>
-<dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能使用此指令。</dd>
+<dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能使用這個指令。</dd>
 <dt>登入</dt>
-<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用此指令。如果是使用聯合 ID 登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。移至 {{site.data.keyword.Bluemix_notm}} 主控台**管理** &gt; **安全** &gt; **Bluemix API 金鑰**，以建立 API 金鑰。
+<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用這個指令。如果是使用聯合 ID 登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。移至 {{site.data.keyword.Bluemix_notm}} 主控台**管理** &gt; **安全** &gt; **Bluemix API 金鑰**，以建立 API 金鑰。
 </dd>
 <dt>目標</dt>
-<dd>必須使用 <code>bluemix target</code> 指令來設定組織及空間後，才能使用此指令。</dd>
+<dd>必須使用 <code>bluemix target</code> 指令來設定組織及空間後，才能使用這個指令。</dd>
 <dt>Docker</dt>
-<dd>必須先安裝 Docker CLI (docker)，才能執行此指令。</dd>
+<dd>必須先安裝 Docker CLI (docker)，才能執行這個指令。</dd>
 </dl>
 
 **附註：**您可以使用短格式的 bluemix 指令；例如，`bx api` 為 `bluemix api` 的短格式。
@@ -353,7 +353,7 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--trace true|false|<i>path-to-file</i></dt>
    <dd>追蹤對終端機或指定檔案的 HTTP 要求。</dd>
    <dt>--color true|false</dt>
-   <dd>啟用或停用顏色輸出。依預設，會啟用顏色輸出。</dd>
+   <dd>啟用或停用彩色輸出。依預設，會啟用彩色輸出。</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
    <dd>設定預設語言環境。如果 LOCALE 為 <i>CLEAR</i>，則會刪除先前的語言環境。</dd>
    <dt>--check-version true|false</dt>
@@ -382,7 +382,7 @@ bluemix config --trace true
 bluemix config --trace /home/usera/my_trace
 ```
 
-停用顏色輸出：
+停用彩色輸出：
 
 ```
 bluemix config --color false
@@ -503,7 +503,7 @@ CLI 接著會提供 URL 鏈結，並要求密碼：
 一次性密碼（從 https://URL_Link_To_Obtain_Passcode 取得）：
 ```
 
-在瀏覽器中開啟鏈結，以引導您取得密碼。在主控台中鍵入給定的密碼，您應該就可以登入。
+在瀏覽器中開啟鏈結，這會引導您取得密碼。在主控台中鍵入給定的密碼，您應該就可以登入。
 
 ## bluemix logout
 {: #bluemix_logout}
@@ -736,33 +736,33 @@ bluemix iam org-delete ORG_NAME [-f --all]
 ## bluemix iam spaces
 {: #bluemix_iam_spaces}
 
-此指令的函數及選項與 `cf spaces` 指令相同。
+這個指令的功能及選項與 `cf spaces` 指令相同。
 
 
 ## bluemix iam space
 {: #bluemix_iam_space}
 
-此指令的函數及選項與 `cf space` 指令相同。
+這個指令的功能及選項與 `cf space` 指令相同。
 
 
 ## bluemix iam space-create
 {: #bluemix_iam_space_create}
 
-此指令的函數及選項與 `cf create-space` 指令相同。
+這個指令的功能及選項與 `cf create-space` 指令相同。
 
 
 ## bluemix iam space-rename
 {: #bluemix_iam_space_rename}
 
 
-此指令的函數及選項與 `cf rename-space` 指令相同。
+這個指令的功能及選項與 `cf rename-space` 指令相同。
 
 
 ## bluemix iam space-delete
 {: #bluemix_iam_space_delete}
 
 
-此指令的函數及選項與 `cf delete-space` 指令相同。
+這個指令的功能及選項與 `cf delete-space` 指令相同。
 
 ## bluemix iam org-users
 {: #bluemix_iam_org_users}
@@ -1193,117 +1193,117 @@ bluemix iam api-key-delete NAME [-f]
 ## bluemix app push
 {: #bluemix_app_push}
 
-此指令的函數及選項與 `cf push` 指令相同。
+這個指令的功能及選項與 `cf push` 指令相同。
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-此指令的函數及選項與 `cf apps` 指令相同。
+這個指令的功能及選項與 `cf apps` 指令相同。
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-此指令的函數及選項與 `cf app` 指令相同。
+這個指令的功能及選項與 `cf app` 指令相同。
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-此指令的函數及選項與 `cf delete` 指令相同。
+這個指令的功能及選項與 `cf delete` 指令相同。
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-此指令的函數及選項與 `cf rename` 指令相同。
+這個指令的功能及選項與 `cf rename` 指令相同。
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-此指令的函數及選項與 `cf start` 指令相同。
+這個指令的功能及選項與 `cf start` 指令相同。
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-此指令的函數及選項與 `cf stop` 指令相同。
+這個指令的功能及選項與 `cf stop` 指令相同。
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-此指令的函數及選項與 `cf restart` 指令相同。
+這個指令的功能及選項與 `cf restart` 指令相同。
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-此指令的函數及選項與 `cf restage` 指令相同。
+這個指令的功能及選項與 `cf restage` 指令相同。
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-此指令的函數及選項與 `cf restart-app-instance` 指令相同。
+這個指令的功能及選項與 `cf restart-app-instance` 指令相同。
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-此指令的函數及選項與 `cf events` 指令相同。
+這個指令的功能及選項與 `cf events` 指令相同。
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-此指令的函數及選項與 `cf files` 指令相同。
+這個指令的功能及選項與 `cf files` 指令相同。
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-此指令的函數及選項與 `cf logs` 指令相同。
+這個指令的功能及選項與 `cf logs` 指令相同。
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-此指令的函數及選項與 `cf env` 指令相同。
+這個指令的功能及選項與 `cf env` 指令相同。
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-此指令的函數及選項與 `cf set-env` 指令相同。
+這個指令的功能及選項與 `cf set-env` 指令相同。
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-此指令的函數及選項與 `cf unset-env` 指令相同。
+這個指令的功能及選項與 `cf unset-env` 指令相同。
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-此指令的函數及選項與 `cf stacks` 指令相同。
+這個指令的功能及選項與 `cf stacks` 指令相同。
 
 
 ## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
-此指令的函數及選項與 `cf stack` 指令相同。
+這個指令的功能及選項與 `cf stack` 指令相同。
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-此指令的函數及選項與 `cf create-app-manifest` 指令相同。
+這個指令的功能及選項與 `cf create-app-manifest` 指令相同。
 
 ## bluemix app domain-cert 
 {: #bluemix_app_domain_cert}
@@ -1390,48 +1390,48 @@ bluemix app domain-cert-remove DOMAIN [-f]
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-此指令的函數及選項與 `cf domains` 指令相同。
+這個指令的功能及選項與 `cf domains` 指令相同。
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-此指令的函數及選項與 `cf create-domain` 指令相同。
+這個指令的功能及選項與 `cf create-domain` 指令相同。
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-此指令的函數及選項與 `cf delete-domain` 指令相同。
+這個指令的功能及選項與 `cf delete-domain` 指令相同。
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-此指令的函數及選項與 `cf create-shared-domain` 指令相同。
+這個指令的功能及選項與 `cf create-shared-domain` 指令相同。
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-此指令的函數及選項與 `cf delete-shared-domain` 指令相同。
+這個指令的功能及選項與 `cf delete-shared-domain` 指令相同。
 
 ## bluemix app routes
 {: #bluemix_app_routes}
 
-此指令的函數及選項與 `cf routes` 指令相同。
+這個指令的功能及選項與 `cf routes` 指令相同。
 
 
 ## bluemix app route-check
 {: #bluemix_app_route_check}
 
-此指令的函數及選項與 `cf check-route` 指令相同。
+這個指令的功能及選項與 `cf check-route` 指令相同。
 
 
 ## bluemix app route-map
 {: #bluemix_app_route_map}
 
-將路徑對映至具有所指定網域及主機名稱的現有 cf 應用程式或容器群組。
+將路徑對映到具有所指定網域及主機名稱的現有 cf 應用程式或容器群組。
 
 ```
 bluemix app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
@@ -1452,13 +1452,13 @@ bluemix app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 
 <strong>範例</strong>：
 
-使用指定的網域將路徑對映到 `my-app`：
+將路徑對映到具有指定網域的 `my-app`：
 
 ```
 bluemix app route-map my-app mychinabluemix.net
 ```
 
-以指定的網域及主機名稱對映將路徑對映至 'my-container-group'：
+將路徑對映到具有指定網域及主機名稱的 'my-container-group'：
 
 ```
 bluemix app route-map my-container-group chinabluemix.net -n abc
@@ -1505,140 +1505,140 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ## bluemix app route-create
 {: #bluemix_app_route_create}
 
-此指令的函數及選項與 `cf create-route` 指令相同。
+這個指令的功能及選項與 `cf create-route` 指令相同。
 
 
 ## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
-此指令的函數及選項與 `cf delete-route` 指令相同。
+這個指令的功能及選項與 `cf delete-route` 指令相同。
 
 
 ## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
-此指令的函數及選項與 `cf delete-orphaned-routes` 指令相同。
+這個指令的功能及選項與 `cf delete-orphaned-routes` 指令相同。
 
 
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-此指令的函數及選項與 `cf domains` 指令相同。
+這個指令的功能及選項與 `cf domains` 指令相同。
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-此指令的函數及選項與 `cf create-domain` 指令相同。
+這個指令的功能及選項與 `cf create-domain` 指令相同。
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-此指令的函數及選項與 `cf delete-domain` 指令相同。
+這個指令的功能及選項與 `cf delete-domain` 指令相同。
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-此指令的函數及選項與 `cf create-shared-domain` 指令相同。
+這個指令的功能及選項與 `cf create-shared-domain` 指令相同。
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-此指令的函數及選項與 `cf delete-shared-domain` 指令相同。
+這個指令的功能及選項與 `cf delete-shared-domain` 指令相同。
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-此指令的函數及選項與 `cf marketplace` 指令相同。
+這個指令的功能及選項與 `cf marketplace` 指令相同。
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-此指令的函數及選項與 `cf services` 指令相同。
+這個指令的功能及選項與 `cf services` 指令相同。
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-此指令的函數及選項與 `cf service` 指令相同。
+這個指令的功能及選項與 `cf service` 指令相同。
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-此指令的函數及選項與 `cf create-service` 指令相同。
+這個指令的功能及選項與 `cf create-service` 指令相同。
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-此指令的函數及選項與 `cf update-service` 指令相同。
+這個指令的功能及選項與 `cf update-service` 指令相同。
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-此指令的函數及選項與 `cf delete-service` 指令相同。
+這個指令的功能及選項與 `cf delete-service` 指令相同。
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-此指令的函數及選項與 `cf rename-service` 指令相同。
+這個指令的功能及選項與 `cf rename-service` 指令相同。
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-此指令的函數及選項與 `cf bind-service` 指令相同。
+這個指令的功能及選項與 `cf bind-service` 指令相同。
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-此指令的函數及選項與 `cf unbind-service` 指令相同。
+這個指令的功能及選項與 `cf unbind-service` 指令相同。
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-此指令的函數及選項與 `cf create-service-key` 指令相同。
+這個指令的功能及選項與 `cf create-service-key` 指令相同。
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-此指令的函數及選項與 `cf delete-service-key` 指令相同。
+這個指令的功能及選項與 `cf delete-service-key` 指令相同。
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-此指令的函數及選項與 `cf service-keys` 指令相同。
+這個指令的功能及選項與 `cf service-keys` 指令相同。
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-此指令的函數及選項與 `cf service-key` 指令相同。
+這個指令的功能及選項與 `cf service-key` 指令相同。
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-此指令的函數及選項與 `cf create-user-provided-service` 指令相同。
+這個指令的功能及選項與 `cf create-user-provided-service` 指令相同。
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-此指令的函數及選項與 `cf update-user-provided-service` 指令相同。
+這個指令的功能及選項與 `cf update-user-provided-service` 指令相同。
 
 
 ## bluemix catalog templates
@@ -1994,11 +1994,11 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 <strong>指令選項</strong>：
 <dl>
  <dt>PLUGIN NAME</dt>
- <dd>要更新之外掛程式的名稱。如果未指定，則此指令會檢查所有已安裝外掛程式的升級。</dd>
+ <dd>要更新之外掛程式的名稱。如果未指定，則這個指令會檢查所有已安裝外掛程式的升級。</dd>
  <dt>-r REPO_NAME</dt>
- <dd>外掛程式二進位檔所在儲存庫的名稱。如果未指定，則此指令會使用預設外掛程式儲存庫。</dd>
+ <dd>外掛程式二進位檔所在儲存庫的名稱。如果未指定，則這個指令會使用預設外掛程式儲存庫。</dd>
  <dt>-v <i>VERSION</i>（選用）</dt>
- <dd>要更新至之目標外掛程式的版本。如果未提供，請將外掛程式更新至最新的可用版本。</dd>
+ <dd>外掛程式要更新到的目標版本。如果未提供，便將外掛程式更新至最新的可用版本。</dd>
  <dt>--all</dt>
  <dd>更新所有可用的外掛程式</dd>
 </dl>

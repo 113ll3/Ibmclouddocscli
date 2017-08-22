@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -136,12 +136,12 @@ lastupdated: "2017-06-07"
    </tbody>
  </table>
  
-## {{site.data.keyword.BluSoftlayer_notm}} 舊式 ISCSI Storage 指令
+## {{site.data.keyword.BluSoftlayer_notm}} 舊式 iSCSI 儲存空間指令
 
   <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 6. Softlayer 舊式 ISCSI Storage 指令</caption>
+<caption>表 6. Softlayer 舊式 iSCSI 儲存空間指令</caption>
  <thead>
- <th colspan="6">Softlayer 舊式 ISCSI Storage 指令</th>
+ <th colspan="6">Softlayer 舊式 iSCSI 儲存空間指令</th>
  </thead>
  <tbody>
  <tr>
@@ -332,7 +332,7 @@ IMS token:                 xxxxxxxxxx
 ### bluemix sl help
 {: #sl_help}
 
-檢視所有指令在 Softlayer 環境中運作的說明資訊。
+檢視運作 Softlayer 環境的所有指令說明資訊。
 ```
 bluemix sl help
 
@@ -362,7 +362,7 @@ bluemix sl block access-authorize VOLUME_ID [OPTIONS]
 ```
 bluemix sl block access-authorize 12345678 --virtual-id 87654321
 ```
-此指令會授權 ID 為 `87654321` 的虛擬伺服器存取 ID 為 `12345678` 的磁區。
+這個指令會授權 ID 為 `87654321` 的虛擬伺服器存取 ID 為 `12345678` 的磁區。
 
 ### bluemix sl block access-list
 {: #sl_block_access_list}
@@ -383,7 +383,7 @@ bluemix sl block access-list VOLUME_ID [OPTIONS]
 ```
 bluemix sl block access-list 12345678 --sortby id
 ```
-此指令會列出獲授權存取 ID 為 `12345678` 的磁區的所有主機，並依 ID 排序。
+這個指令會列出獲授權存取 ID 為 `12345678` 的磁區的所有主機，並依 ID 排序。
 
 ### bluemix sl block access-revoke
 {: #sl_block_access_revoke}
@@ -408,7 +408,7 @@ bluemix sl block access-list 12345678 --sortby id
 ```
 bluemix sl block access-revoke 12345678 --virtual-id 87654321
 ```
-此指令會撤銷 ID 為 `87654321` 的虛擬伺服器對 ID 為 `12345678` 的磁區的存取權。
+這個指令會撤銷 ID 為 `87654321` 的虛擬伺服器對 ID 為 `12345678` 的磁區的存取權。
 
 ### bluemix sl block replica-failback
 {: #sl_block_replica_failback}
@@ -421,7 +421,7 @@ bluemix sl block access-revoke 12345678 --virtual-id 87654321
 ```
  bluemix sl block replica-failback 12345678
 ```
-此指令會針對 ID 為 `12345678` 的磁區執行失效回復作業。
+這個指令會針對 ID 為 `12345678` 的磁區執行失效回復作業。
 
 ### bluemix sl block replica-failover
 {: #sl_block_replica_failover}
@@ -435,7 +435,7 @@ bluemix sl block replica-failover VOLUME_ID REPLICA_ID
 ```
  bluemix sl block replica-failover 12345678 87654321
 ```
-此指令會執行將 ID 為 `12345678` 的磁區失效接手至 ID 為 `87654321` 的抄本磁區的作業。
+這個指令會執行將 ID 為 `12345678` 的磁區失效接手至 ID 為 `87654321` 的抄本磁區的作業。
 
 ### bluemix sl block replica-order
 {: #sl_block_replica_order}
@@ -462,7 +462,7 @@ bluemix sl block replica-failover VOLUME_ID REPLICA_ID
 ```
 bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LINUX
 ```
-此指令會訂購 ID 為 `12345678` 的磁區的抄本，此抄本會執行 DAILY（每日）抄寫、位於 dal09、層級層次為 `4`、OS 類型為 `Linux`。
+這個指令會訂購 ID 為 `12345678` 的磁區的抄本，此抄本會執行 DAILY（每日）抄寫、位於 dal09、層級層次為 `4`、OS 類型為 `Linux`。
 
 ### bluemix sl block snapshot-cancel
 {: #sl_block_snapshot_cancel}
@@ -475,7 +475,7 @@ bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LIN
 <strong>指令選項</strong>：
    <dl>
    <dt>--reason</dt>
-   <dd>選用的取消原因。</dd>
+   <dd>選用性的取消原因。</dd>
    <dt>--immediate</dt>
    <dd>立即取消 Snapshot 空間，而不是在計費週年日取消。</dd>
    <dt>-f、--force</dt>
@@ -486,7 +486,7 @@ bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LIN
 ```
  bluemix sl block snapshot-cancel 12345678 --immediate -f
 ```
-此指令會立即取消 ID 為 12345678 的 Snapshot，而不要求確認。
+這個指令會立即取消 ID 為 12345678 的 Snapshot，而不要求確認。
 
 ### bluemix sl block snapshot-create
 {: #sl_block_snapshot_create}
@@ -505,7 +505,7 @@ bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LIN
 ```
 bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
-此指令會為 ID 為 `12345678` 的磁區建立 Snapshot，並新增附註 `snapshotforbluemix`。
+這個指令會為 ID 為 `12345678` 的磁區建立 Snapshot，並新增附註 `snapshotforbluemix`。
 
 ### bluemix sl block snapshot-disable
 {: #sl_block_snapshot_disable}
@@ -524,7 +524,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block snapshot-disable 12345678 -s DAILY
 ```
-此指令會針對 ID 為 `12345678` 的磁區停用每日 Snapshot。
+這個指令會針對 ID 為 `12345678` 的磁區停用每日 Snapshot。
 
 ### bluemix sl block snapshot-enable
 {: #sl_block_snapshot_enable}
@@ -552,7 +552,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
-此指令會針對 ID 為 `12345678` 的磁區啟用 Snapshot。在每個星期日 2:00 擷取 Snapshot，且最多保留 5 個 Snapshot。
+這個指令會針對 ID 為 `12345678` 的磁區啟用 Snapshot。在每個星期日 2:00 擷取 Snapshot，且最多保留 5 個 Snapshot。
 
 ### bluemix sl block snapshot-delete
 {: #sl_block_snapshot_delete}
@@ -566,7 +566,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block snapshot-delete 12345678
 ```
-此指令會刪除 ID 為 `12345678` 的 Snapshot。
+這個指令會刪除 ID 為 `12345678` 的 Snapshot。
 
 ### bluemix sl block snapshot-list
 {: #sl_block_snapshot_list}
@@ -587,7 +587,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block snapshot-list 12345678 --sortby id
 ```
-此指令會列出 ID 為 `12345678` 的磁區的所有 Snapshot，並依 ID 排序。
+這個指令會列出 ID 為 `12345678` 的磁區的所有 Snapshot，並依 ID 排序。
 
 ### bluemix sl block snapshot-order
 {: #sl_block_snapshot_order}
@@ -613,7 +613,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
    bluemix sl block snapshot-order 12345678 -s 1000 -t 4
 ```
-此指令會針對 ID 為 `12345678` 的磁區訂購 Snapshot 空間，大小為 1000GB，層級層次為每 GB 4 個 IOPS。
+這個指令會針對 ID 為 `12345678` 的磁區訂購 Snapshot 空間，大小為 1000GB，層級層次為每 GB 4 個 IOPS。
 
 
 ### bluemix sl block snapshot-restore
@@ -628,7 +628,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block snapshot-restore 12345678 87654321
 ```
-此指令會從 ID 為 `87654321` 的 Snapshot 還原 ID 為 `12345678` 的磁區。
+這個指令會從 ID 為 `87654321` 的 Snapshot 還原 ID 為 `12345678` 的磁區。
 
 ### bluemix sl block volume-cancel
 {: #sl_block_volume_cancel}
@@ -641,7 +641,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 <strong>指令選項</strong>：
    <dl>
    <dt>--reason</dt>
-   <dd>選用的取消原因。</dd>
+   <dd>選用性的取消原因。</dd>
    <dt>--immediate</dt>
    <dd>立即取消 Snapshot 空間，而不是在計費週年日取消。</dd>
    <dt>-f、--force</dt>
@@ -652,7 +652,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block volume-cancel 12345678 --immediate -f
 ```
-此指令會立即取消 ID 為 `12345678` 的磁區，而不要求確認。
+這個指令會立即取消 ID 為 `12345678` 的磁區，而不要求確認。
 
 ### bluemix sl block volume-detail
 {: #sl_block_volume_detail}
@@ -666,7 +666,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block volume-detail 12345678
 ```
-此指令會顯示 ID 為 `12345678` 的磁區的詳細資料。
+這個指令會顯示 ID 為 `12345678` 的磁區的詳細資料。
 
 ### bluemix sl block volume-list
 {: #sl_block_volume_list}
@@ -696,7 +696,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
-此指令會列出現行帳戶中位於 dal09 的所有耐久性磁區，並依容量排序。
+這個指令會列出現行帳戶中位於 dal09 的所有耐久性磁區，並依容量排序。
 
 
 ### bluemix sl block volume-order
@@ -722,7 +722,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
    <dt>-d、--datacenter</dt>
    <dd>資料中心簡稱 [必要]</dd>
    <dt>--snapshot-size</dt>
-   <dd>隨耐久性區塊儲存空間訂購 Snapshot 空間的選用參數；指定要訂購的 Snapshot 空間大小（以 GB 為單位）</dd>
+   <dd>隨耐久性區塊儲存空間訂購 Snapshot 空間的選用性參數；指定要訂購的 Snapshot 空間大小（以 GB 為單位）</dd>
    <dt>-f、--force</dt>
    <dd>強制執行作業，而不進行確認</dd>
    </dl>
@@ -733,12 +733,12 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
 ```
-此指令會訂購效能磁區：大小為 1000GB、IOPS 為 4000、OS 類型為 LINUX、位於 dal09。
+這個指令會訂購效能磁區：大小為 1000GB、IOPS 為 4000、OS 類型為 LINUX、位於 dal09。
 
 ```
  bluemix sl block volume-order --storage-type endurance --size 500 --tier 4 --os-type XEN -d dal09 --snapshot-size 500
 ```
-此指令會訂購耐久性磁區：大小為 500GB、層級層次為每 GB 4 個 IOPS、OS 類型為 XEN、位於 dal09，且額外的 Snapshot 空間大小為 500GB。
+這個指令會訂購耐久性磁區：大小為 500GB、層級層次為每 GB 4 個 IOPS、OS 類型為 XEN、位於 dal09，且額外的 Snapshot 空間大小為 500GB。
 
 
 ### bluemix sl block volume-options
@@ -753,15 +753,15 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
  bluemix sl block volume-options
 ```
-此指令會列出用來建立區塊儲存空間磁區的所有選項，包括儲存空間類型、磁區大小、OS 類型、IOPS、層級層次、資料中心和 Snapshot 大小。
+這個指令會列出用來建立區塊儲存空間磁區的所有選項，包括儲存空間類型、磁區大小、OS 類型、IOPS、層級層次、資料中心和 Snapshot 大小。
 
 
 ### bluemix sl dns import
 {: #sl_dns_import}
 
-匯入不是以 BIND 區域檔案為基礎的區域。
+以 BIND 區域檔案為基礎匯入區域。
 ```
-bluemix sl dns-import [OPTIONS] ZONEFILE
+bluemix sl dns import [OPTIONS] ZONEFILE
 ```
 <strong>指令選項</strong>：
    <dl>
@@ -773,14 +773,14 @@ bluemix sl dns-import [OPTIONS] ZONEFILE
 ```
  bluemix sl dns import ~/blumix.net.txt
 ```
-此指令會從 `~/blumix.net.txt` 檔案匯入區域及其資源記錄。
+這個指令會從 `~/blumix.net.txt` 檔案匯入區域及其資源記錄。
 
 ### bluemix sl dns record-add
 {: #sl_dns_record_add}
 新增資源記錄。
 
 ```
-bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
+bluemix sl dns record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
 <strong>指令選項</strong>：
    <dl>
@@ -792,7 +792,7 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
  bluemix sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
 ```
-此指令會將 A 記錄新增至 bluemix.net 區域，其主機為 `ftp`、資料為 `127.0.0.1`，而 ttl 為 86400 秒。
+這個指令會將 A 記錄新增至 bluemix.net 區域，其主機為 `ftp`、資料為 `127.0.0.1`，而 ttl 為 86400 秒。
 
 ### bluemix sl dns record-edit
 {: #sl_dns_record_edit}
@@ -818,12 +818,12 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
  bluemix sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
-此指令會編輯具有 `12345678` 的 `bluemix.net` 區域下的記錄、將其資料設為 `127.0.0.2`，並將 ttl 設為 3600。
+這個指令會編輯具有 `12345678` 的 `bluemix.net` 區域下的記錄、將其資料設為 `127.0.0.2`，並將 ttl 設為 3600。
 
 ```
  bluemix sl dns record-edit bluemix.net --by-record kibana --ttl 3600
 ```
-此指令會編輯主機名稱為 `kibana` 的 `bluemix.net` 區域下的記錄，並將其 ttl 全部設為 3600。
+這個指令會編輯主機名稱為 `kibana` 的 `bluemix.net` 區域下的記錄，並將其 ttl 全部設為 3600。
 
 
 ### bluemix sl dns record-list
@@ -850,7 +850,7 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
  bluemix sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
 ```
-此指令會列出 `bluemix.net` 區域下的所有 A 記錄、用來過濾的主機為 `elasticsearch`，而 ttl 為 900 秒。
+這個指令會列出 `bluemix.net` 區域下的所有 A 記錄、用來過濾的主機為 `elasticsearch`，而 ttl 為 900 秒。
 
 
 ### bluemix sl dns record-remove
@@ -865,7 +865,7 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```   
  bluemix sl dns record-remove 12345678
 ```
-此指令會移除 ID 為 `12345678` 的資源記錄。
+這個指令會移除 ID 為 `12345678` 的資源記錄。
 
 ### bluemix sl dns zone-create
 {: #sl_dns_zone_create}
@@ -878,7 +878,7 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
  bluemix sl dns zone-create bluemix.net
 ```
-此指令會建立名為 `bluemix.net` 的區域。
+這個指令會建立名為 `bluemix.net` 的區域。
 
 ### bluemix sl dns zone-delete
 {: #sl_dns_zone_delete}
@@ -891,7 +891,7 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
  bluemix sl dns zone-delete bluemix.net
 ```
-此指令會刪除名為 `bluemix.net` 的區域。
+這個指令會刪除名為 `bluemix.net` 的區域。
 
 ### bluemix sl dns zone-list
 {: #sl_dns_zone_list}
@@ -904,7 +904,7 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
    bluemix sl dns zone-list
 ```
-此指令會列出現行帳戶下的所有區域。
+這個指令會列出現行帳戶下的所有區域。
 
 ### bluemix sl dns zone-print
 {: #sl_dns_zone_print}
@@ -918,7 +918,7 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
  bluemix sl dns zone-print bluemix.net
 ```
-此指令會以 BIND 格式列印名為 bluemix.net 的區域。
+這個指令會以 BIND 格式列印名為 bluemix.net 的區域。
 
 
 ### bluemix sl globalip assign
@@ -932,7 +932,7 @@ bluemix sl dns-record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
  bluemix sl globalip assign 12345678 9.111.123.456
 ```
-此指令會將 ID 為 12345678 的 IP 位址指派給 IP 位址為 9.111.123.456 的目標裝置。
+這個指令會將 ID 為 12345678 的 IP 位址指派給 IP 位址為 9.111.123.456 的目標裝置。
 
 
 ### bluemix sl globalip-create
@@ -948,7 +948,7 @@ bluemix sl globalip-create [OPTIONS]
    <dt>--v6</dt>
    <dd>訂購 IPv6 IP。</dd>
    <dt>--test</dt>
-   <dd>測試順序。</dd>
+   <dd>測試訂購。</dd>
     <dt>-f、--force</dt>
    <dd>建立廣域 IP，而不進行確認。</dd>
     </dl>
@@ -957,7 +957,7 @@ bluemix sl globalip-create [OPTIONS]
 ```
      bluemix sl globalip create --v6
 ```
- 此指令會建立 IP V6 位址。
+ 這個指令會建立 IP V6 位址。
 
 ### bluemix sl globalip-cancel
 {: #sl_globalip_cancel}
@@ -976,7 +976,7 @@ bluemix sl globalip-cancel [OPTIONS] IDENTIFIER
 ```
  bluemix sl globalip cancel 12345678
 ```
-此指令會取消 ID 為 `12345678` 的 IP 位址。
+這個指令會取消 ID 為 `12345678` 的 IP 位址。
 
 ### bluemix sl globalip-list
 {: #sl_globalip_list}
@@ -1005,7 +1005,7 @@ bluemix sl globalip-list [OPTIONS]
 ```
  bluemix sl globalip unassign 12345678
 ```
-此指令會取消指派目標裝置中 ID 為 `12345678` 的 IP 位址。
+這個指令會取消指派目標裝置中 ID 為 `12345678` 的 IP 位址。
 
 
 ### bluemix sl image delete
@@ -1019,7 +1019,7 @@ bluemix sl globalip-list [OPTIONS]
 ```
    bluemix sl image delete 12345678
 ```
-此指令會刪除 ID 為 `12345678` 的映像檔。
+這個指令會刪除 ID 為 `12345678` 的映像檔。
 
 
 ### bluemix sl image detail
@@ -1033,7 +1033,7 @@ bluemix sl globalip-list [OPTIONS]
 ```
  bluemix sl image detail 12345678
 ```
-此指令會取得 ID 為 12345678 的映像檔的詳細資料。
+這個指令會取得 ID 為 12345678 的映像檔的詳細資料。
 
 ### bluemix sl image edit
 {: #sl_dns_image_edit}
@@ -1058,7 +1058,7 @@ bluemix sl globalip-list [OPTIONS]
 ```  
 bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
-此指令會編輯 ID 為 `12345678` 的映像檔，並將名稱設為 `ubuntu16`、將附註設為 `testing`，以及將標籤設為 `staging`。
+這個指令會編輯 ID 為 `12345678` 的映像檔、將名稱設為 `ubuntu16`、將附註設為 `testing`，並將標籤設為 `staging`。
 
 
 ### bluemix sl image edit
@@ -1108,7 +1108,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 <strong>指令選項</strong>：
    <dl>
    <dt>--reason</dt>
-   <dd>選用的取消原因。</dd>
+   <dd>選用性的取消原因。</dd>
    <dt>--immediate</dt>
    <dd>立即取消 iSCSI，而不是在計費週年日取消。</dd>
    <dt>-f、--force</dt>
@@ -1179,7 +1179,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 <strong>指令選項</strong>：
    <dl>
    <dt>--notes</dt>
-   <dd>選用的 Snapshot 附註。</dd>
+   <dd>選用性的 Snapshot 附註。</dd>
    </dl>
 
 
@@ -1228,7 +1228,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
-此指令會從檔案 ~/.ssh/id_rsa.pub 新增 SSH 金鑰及附註 "mykey"。
+這個指令會從檔案 ~/.ssh/id_rsa.pub 新增 SSH 金鑰及附註 "mykey"。
 
 
 ### bluemix sl security sshkey-edit
@@ -1252,7 +1252,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
-此指令會更新 ID 為 12345678 的 SSH 金鑰、將標籤設為 "Bluemix"，並將附註設為 "testing"。
+這個指令會更新 ID 為 12345678 的 SSH 金鑰、將標籤設為 "Bluemix"，並將附註設為 "testing"。
 
 ### bluemix sl security sshkey-list
 {: #sl_security_sshkey_list}
@@ -1273,7 +1273,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security sshkey-list --sortby label
 ```
- 此指令會列出現行帳戶上的所有 SSH 金鑰，並依標籤排序。
+ 這個指令會列出現行帳戶上的所有 SSH 金鑰，並依標籤排序。
 
 ### bluemix sl security sshkey-print
 {: #sl_security_sshkey_print}
@@ -1294,7 +1294,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
- 此指令會顯示 ID 為 12345678 的 SSH 金鑰 ID、標籤和附註，並將公開金鑰寫入檔案 ~/mykey.pub。
+ 這個指令會顯示 ID 為 12345678 的 SSH 金鑰 ID、標籤和附註，並將公開金鑰寫入檔案 ~/mykey.pub。
 
 ### bluemix sl security sshkey-remove
 {: #sl_security_sshkey_remove}
@@ -1315,7 +1315,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security sshkey-remove 12345678 -f
 ```
- 此指令會移除 ID 為 12345678 的 SSH 金鑰，而不要求確認。
+ 這個指令會移除 ID 為 12345678 的 SSH 金鑰，而不要求確認。
 
 ### bluemix sl security cert-add
 {: #sl_security_cert_add}
@@ -1344,7 +1344,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key 
 ```
- 此指令會新增網域 bluemix.net 的憑證檔 ~/bluemix.net.cert 及私密金鑰檔 ~/bluemix.net.key。
+ 這個指令會新增網域 bluemix.net 的憑證檔 ~/bluemix.net.cert 及私密金鑰檔 ~/bluemix.net.key。
 
 ### bluemix sl security cert-edit
 {: #sl_security_cert_edit}
@@ -1373,7 +1373,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security cert-edit 12345678 --key ~/bluemix.net.key
 ```
- 此指令會編輯 ID 為 12345678 的憑證，並以檔案 ~/bluemix.net.key 來更新其私密金鑰。
+ 這個指令會編輯 ID 為 12345678 的憑證，並以檔案 ~/bluemix.net.key 來更新其私密金鑰。
 
 ### bluemix sl security cert-download
 {: #sl_security_cert_download}
@@ -1387,7 +1387,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security cert-download 12345678
 ```
-  此指令會將 4 個檔案下載至 ID 為 12345678 的憑證的現行目錄。這 4 個檔案分別為：憑證檔、憑證簽署要求檔、中繼憑證檔及私密金鑰檔。
+  這個指令會將 4 個檔案下載至 ID 為 12345678 的憑證的現行目錄。這 4 個檔案分別為：憑證檔、憑證簽署要求檔、中繼憑證檔及私密金鑰檔。
 
 ### bluemix sl security cert-list
 {: #sl_security_cert_list}
@@ -1410,7 +1410,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security cert-list --status valid --sortby days_until_expire
 ```
- 此指令會列出現行帳戶上的所有有效憑證，並依有效天數排序。
+ 這個指令會列出現行帳戶上的所有有效憑證，並依有效天數排序。
 
 ### bluemix sl security cert-remove
 {: #sl_security_cert_remove}
@@ -1431,7 +1431,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl security cert-remove 12345678
 ```
- 此指令會移除 ID 為 12345678 的憑證。
+ 這個指令會移除 ID 為 12345678 的憑證。
 
 ### bluemix sl subnet cancel
 {: #sl_subnet_cancel}
@@ -1452,7 +1452,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl subnet cancel 12345678 -f
 ```
-此指令會取消 ID 為 12345678 的子網路，而不要求確認。
+這個指令會取消 ID 為 12345678 的子網路，而不要求確認。
 
 ### bluemix sl subnet create
 {: #sl_subnet_create}
@@ -1484,7 +1484,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl subnet create public 16 567
 ```
-此指令會建立含有 16 個 IP V4 位址的公用子網路，並將其放在 ID 為 567 的 VLAN 上。
+這個指令會建立含有 16 個 IP V4 位址的公用子網路，並將其放在 ID 為 567 的 VLAN 上。
 
 
 
@@ -1509,7 +1509,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl subnet detail 12345678
 ```
-此指令會顯示 ID 為 12345678 的子網路的詳細資訊，包括虛擬伺服器及硬體伺服器資訊。
+這個指令會顯示 ID 為 12345678 的子網路的詳細資訊，包括虛擬伺服器及硬體伺服器資訊。
 
 
 ### bluemix sl subnet-list
@@ -1545,7 +1545,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
-此指令會列出現行帳戶上的 IP V4 子網路，用來過濾的資料中心為 dal09、子網路類型為 PRIMARY，而網路空間為 PUBLIC。
+這個指令會列出現行帳戶上的 IP V4 子網路，用來過濾的資料中心為 dal09、子網路類型為 PRIMARY，而網路空間為 PUBLIC。
 
 
 
@@ -1561,7 +1561,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl subnet lookup 9.125.235.255
 ```
-此指令會尋找位址為 9.125.235.255 的 IP 位址記錄，並顯示其子網路及裝置資訊。
+這個指令會尋找位址為 9.125.235.255 的 IP 位址記錄，並顯示其子網路及裝置資訊。
 
 
 ### bluemix sl vs cancel
@@ -1581,7 +1581,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl vs cancel 12345678
 ```
-此指令會取消 ID 為 12345678 的虛擬伺服器實例。
+這個指令會取消 ID 為 12345678 的虛擬伺服器實例。
 
 
 ### bluemix sl vs capture
@@ -1606,7 +1606,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
  bluemix sl vs capture 12345678 -n mybluemix --all --note testing
 ```
-此指令會將 ID 為 12345678 的虛擬伺服器實例及其所有磁碟都擷取至名為 "mybluemix" 且附註為 "testing" 的映像檔。
+這個指令會將 ID 為 12345678 的虛擬伺服器實例及其所有磁碟都擷取至名為 "mybluemix" 且附註為 "testing" 的映像檔。
 
 
 
@@ -1669,7 +1669,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
    <dt>--vlan-private</dt>
    <dd>要放置虛擬伺服器的專用 VLAN 的 ID</dd>
    <dt>--wait</dt>
-   <dd>等待虛擬伺服器完成佈建，最多 X 秒即返回</dd>
+   <dd>等待虛擬伺服器完成佈建，最多 X 秒後才返回</dd>
    <dt>-f、--force</dt>
    <dd>強制執行作業，而不進行確認</dd>
 	</dl>
@@ -1678,16 +1678,16 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
   bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
-此指令會訂購虛擬伺服器實例，其主機名稱為 myvsi、網域為 bluemix.net、有 4 個 CPU 核心及 4096M 的記憶體，位於資料中心 dal10，而作業系統為 UBUNTU 16 64 位元、有 2 個磁碟（一個 100G，另一個 1000G）並放在 ID 為 413 的公用 VLAN 上。
+這個指令會訂購虛擬伺服器實例，其主機名稱為 myvsi、網域為 bluemix.net、有 4 個 CPU 核心及 4096M 的記憶體，位於資料中心 dal10，而作業系統為 UBUNTU 16 64 位元、有 2 個磁碟（一個 100G，另一個 1000G）並放在 ID 為 413 的公用 VLAN 上。
 ```
   bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413 --test
 ```
-此指令會先使用上述選項來測試訂單是否有效，然後才實際開出訂單。
+這個指令會先使用上述選項來測試訂單是否有效，然後才實際開出訂單。
 ```
 bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413 --export ~/myvis.txt
 ```
 
-此指令會將上述選項匯出至使用者起始目錄下的 myvsi.txt 檔案，以供稍後使用。
+這個指令會將上述選項匯出至使用者起始目錄下的 myvsi.txt 檔案，以供之後使用。
 
 
 ### bluemix sl vs options
@@ -1702,7 +1702,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs options
 ```
-此指令會列出用來建立虛擬伺服器實例的所有選項，例如資料中心、CPU、記憶體、OS、磁碟、網路速度等等。
+這個指令會列出用來建立虛擬伺服器實例的所有選項，例如資料中心、CPU、記憶體、OS、磁碟、網路速度等等。
 
 
 
@@ -1717,7 +1717,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs credentials 12345678
 ```
-此指令會列出 ID 為 12345678 的虛擬伺服器實例的所有使用者名稱及密碼配對。
+這個指令會列出 ID 為 12345678 的虛擬伺服器實例的所有使用者名稱及密碼配對。
 
 ### bluemix sl vs detail
 {: #sl_vs_detail}
@@ -1740,7 +1740,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
    bluemix sl vs details 12345678
 ```
-此指令會列出 ID 為 12345678 的虛擬伺服器實例的詳細資訊。
+這個指令會列出 ID 為 12345678 的虛擬伺服器實例的詳細資訊。
 
 
 ### bluemix sl vs dns-sync
@@ -1771,11 +1771,11 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
-此指令會將 ID 為 12345678 的虛擬伺服器實例的 A 記錄（IP V4 位址）同步至 DNS 伺服器，並將這個 A 記錄的 ttl 設為 3600。
+這個指令會將 ID 為 12345678 的虛擬伺服器實例的 A 記錄（IP V4 位址）同步至 DNS 伺服器，並將這個 A 記錄的 ttl 設為 3600。
 ```
  bluemix sl vs dns-sync 12345678 --aaaa-record --ptr
 ```
-此指令會將 ID 為 12345678 的虛擬伺服器實例的 AAAA 記錄（IP V6 位址）及 PTR 記錄都同步至 DNS 伺服器。
+這個指令會將 ID 為 12345678 的虛擬伺服器實例的 AAAA 記錄（IP V6 位址）及 PTR 記錄都同步至 DNS 伺服器。
 
 
 ### bluemix sl vs edit
@@ -1792,7 +1792,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
    <dt>-H、--hostname</dt>
    <dd>FQDN 的主機部分。範例：server</dd>
    <dt>--tag</dt>
-   <dd>要設定的標籤或要全部移除的空字串</dd>
+   <dd>要設定的標籤，或使用空字串以便全部移除</dd>
    <dt>-u、--userdata</dt>
    <dd>使用者定義的 meta 資料字串</dd>
    <dt>-F、--userfile</dt>
@@ -1807,7 +1807,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
 ```
-此指令會更新 ID 為 `12345678` 的虛擬伺服器實例，並將其網域設為 `bluemix.net`、將主機名稱設為 `myapp`、將標籤設為 `testcli`，並將公用網路埠速度設為 1000 Mbps。
+這個指令會更新 ID 為 `12345678` 的虛擬伺服器實例，並將其網域設為 `bluemix.net`、將主機名稱設為 `myapp`、將標籤設為 `testcli`，並將公用網路埠速度設為 1000 Mbps。
 
 
 
@@ -1849,7 +1849,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs list --domain bluemix.net --hourly --sortby memory
 ```
-此指令會列出現行帳戶上所有依時數計費的虛擬伺服器實例，用來過濾的網域為 "bluemix.net"，並依記憶體排序。
+這個指令會列出現行帳戶上所有依時數計費的虛擬伺服器實例，用來過濾的網域為 "bluemix.net"，並依記憶體排序。
 
 
 
@@ -1870,7 +1870,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs pause 12345678 -f
 ```
-   此指令會暫停 ID 為 12345678 的虛擬伺服器實例，而不要求確認。
+   這個指令會暫停 ID 為 12345678 的虛擬伺服器實例，而不要求確認。
 
 
 
@@ -1886,7 +1886,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
    bluemix sl vs power-off 12345678 --soft
 ```
-此指令會針對 ID 為 12345678 的虛擬伺服器實例執行正常關機。
+這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行正常關機。
 
 <strong>指令選項</strong>：
    <dl>
@@ -1917,7 +1917,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs power-on 12345678
 ```
-此指令會針對 ID 為 12345678 的虛擬伺服器實例執行開機作業。
+這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行開機作業。
 
 
 ### bluemix sl vs ready
@@ -1932,12 +1932,12 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs ready 12345678 --wait 30
 ```
-此指令會檢查 ID 為 12345678 的虛擬伺服器實例狀態，以查看它是否準備好可繼續使用，最多等待 30 秒。
+這個指令會檢查 ID 為 12345678 的虛擬伺服器實例狀態，以查看它是否準備好可繼續使用，最多等待 30 秒。
 
 <strong>指令選項</strong>：
    <dl>
    <dt>--wait</dt>
-   <dd>等待虛擬伺服器完成佈建，最多 X 秒即返回</dd>
+   <dd>等待虛擬伺服器完成佈建，最多 X 秒後才返回</dd>
     </dl>
 
 ### bluemix sl vs reboot
@@ -1962,7 +1962,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs reboot 12345678 --hard
 ```
-此指令會針對 ID 為 12345678 的虛擬伺服器實例執行強迫重新開機。
+這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行強迫重新開機。
 
 
 
@@ -1991,11 +1991,11 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
    bluemix sl vs reload 12345678
 ```
-此指令會針對 ID 為 12345678 的虛擬伺服器實例重新載入現行作業系統。
+這個指令會針對 ID 為 12345678 的虛擬伺服器實例重新載入現行作業系統。
 ```
  bluemix sl vs reload 12345678 --image 1234
 ```
-此指令會從 ID 為 1234 的映像檔針對 ID 為 12345678 的虛擬伺服器實例重新載入作業系統。
+這個指令會從 ID 為 1234 的映像檔針對 ID 為 12345678 的虛擬伺服器實例重新載入作業系統。
 
 
 
@@ -2017,7 +2017,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs rescue 12345678
 ```
-此指令會將 ID 為 12345678 的虛擬伺服器實例重新開機至救援映像檔。
+這個指令會將 ID 為 12345678 的虛擬伺服器實例重新開機至救援映像檔。
 
 
 ### bluemix sl vs resume
@@ -2038,7 +2038,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs resume 12345678
 ```
-此指令會繼續 ID 為 12345678 的虛擬伺服器實例。
+這個指令會繼續 ID 為 12345678 的虛擬伺服器實例。
 
 
 ### bluemix sl vs upgrade
@@ -2068,7 +2068,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
-此指令會升級 ID 為 12345678 的虛擬伺服器實例，並將 CPU 核心數目設為 8、將記憶體設為 8192M、將網路埠速度設為 1000 Mbps。
+這個指令會升級 ID 為 12345678 的虛擬伺服器實例，並將 CPU 核心數目設為 8、將記憶體設為 8192M、將網路埠速度設為 1000 Mbps。
 
 
 
@@ -2100,11 +2100,11 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
-此指令會建立一個公用 VLAN：位於資料中心 dal09、包含 16 個 IP 位址，且名稱為 myvlan。
+這個指令會建立一個公用 VLAN：位於資料中心 dal09、包含 16 個 IP 位址，且名稱為 myvlan。
 ```
  bluemix sl vlan create -r bcr01a.dal09 -s 16 -n myvlan
 ```
-此指令會建立一個 VLAN：位於路由器 bcr01a.dal09、包含 16 個 IP 位址，且名稱為 myvlan。
+這個指令會建立一個 VLAN：位於路由器 bcr01a.dal09、包含 16 個 IP 位址，且名稱為 myvlan。
 
 
 
@@ -2126,7 +2126,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
    bluemix sl vlan cancel 12345678 -f
 ```
-此指令會取消 ID 為 12345678 的 VLAN，而不要求確認。
+這個指令會取消 ID 為 12345678 的 VLAN，而不要求確認。
 
 
 
@@ -2150,7 +2150,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vlan detail 12345678  --no-vs --no-hardware
 ```
-此指令會顯示 ID 為 12345678 的 VLAN 詳細資料，而不會列出虛擬伺服器或硬體伺服器。
+這個指令會顯示 ID 為 12345678 的 VLAN 詳細資料，而不會列出虛擬伺服器或硬體伺服器。
 
 
 ### bluemix sl vlan edit
@@ -2170,7 +2170,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vlan edit 12345678 -n myvlan-rename
 ```
-此指令會更新 ID 為 12345678 的 VLAN，並為其指定新名稱 "myvlan-rename"。
+這個指令會更新 ID 為 12345678 的 VLAN，並為其指定新名稱 "myvlan-rename"。
 
 
 ### bluemix sl vlan list
@@ -2198,7 +2198,7 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vlan list -d dal09 --sortby number
 ```
-此指令會列出現行帳戶上的所有 VLAN，用來過濾的資料中心為 dal09，並依 VLAN 號碼排序。
+這個指令會列出現行帳戶上的所有 VLAN，用來過濾的資料中心為 dal09，並依 VLAN 號碼排序。
 
 
 
@@ -2214,4 +2214,4 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
  bluemix sl vlan options
 ```
-此指令會列出用來建立 VLAN 的所有選項，例如 VLAN 類型、資料中心、子網路大小、路由器等等。
+這個指令會列出用來建立 VLAN 的所有選項，例如 VLAN 類型、資料中心、子網路大小、路由器等等。

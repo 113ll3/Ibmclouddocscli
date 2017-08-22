@@ -31,7 +31,7 @@ Die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) stellt e
 
 ### Online-Installation
 
-Kopieren Sie den folgenden Befehl bei bestehender Internetverbindung, fügen Sie ihn in eine Terminalkonsole ein und führen Sie ihn aus. 
+Kopieren Sie den folgenden Befehl bei bestehender Internetverbindung, fügen Sie ihn in eine Terminalkonsole ein und führen Sie ihn aus.
 
 **macOS**
 ```
@@ -45,7 +45,7 @@ sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
 
 **Windows PowerShell**
 
-Kopieren Sie den folgenden Befehl in eine [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell)-Terminalkonsole und führen Sie ihn aus. 
+Kopieren Sie den folgenden Befehl in eine [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell)-Terminalkonsole und führen Sie ihn aus.
 ```
 iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
 ```
@@ -180,6 +180,6 @@ Sie können nun die {{site.data.keyword.Bluemix_notm}}-Befehlszeilen verwenden. 
 
 ## Kontaktaufnahme
 
-Verwenden Sie die folgenden Optionen, um Releaseinformationen zu suchen, Feedback zu geben und Fragen zu stellen: 
+Verwenden Sie die folgenden Optionen, um Releaseinformationen zu suchen, Feedback zu geben und Fragen zu stellen:
  * Für die Suche nach den neuesten Releases und das Melden von Problemen: [{{site.data.keyword.Bluemix_notm}} CLI SDK](https://github.com/IBM-Bluemix/bluemix-cli-sdk){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg)
  * Für Fragen und den Wissensaustausch mit der Community: [bluemix-cli Slack Channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg)

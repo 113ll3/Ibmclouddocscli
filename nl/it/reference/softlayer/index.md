@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-27"
 
 ---
 
@@ -307,23 +307,23 @@ Account di destinazione account di Wilma (65ce8074c6c62b5)
 Organizzazione di destinazione: wangjunl@cn.ibm.com
 
 Spazio di destinazione Wilma
-
-Endpoint API:   https://api.ng.bluemix.net (API version: 2.54.0)
+                  
+Endpoint API:   https://api.ng.bluemix.net (API version: 2.54.0)   
 Regione:         us-south
 Utente:           wangjunl@cn.ibm.com
-Account:        Account di Wilma (65ce8074c6c62b5)
+Account:        Account di Wilma (65ce8074c6c62b5)   
 Organizzazione:            wangjunl@cn.ibm.com
-Spazio:          Wilma
+Spazio:          Wilma 
 
 $ bx sl init
 Scegli come configurare l'autenticazione Softlayer:
 1. Accedi con nome utente e password/chiave API Softlayer
 2. Utilizza SSO (Single-Sign-On) Bluemix
 Immetti un numero> 2
-URL endpoint API Softlayer: [https://api.softlayer.com/mobile/v3.1]>
+URL endpoint API Softlayer: [https://api.softlayer.com/mobile/v3.1]> 
 Impostazione dell'account su: 278444
 OK
-
+                              
 Endpoint API Softlayer:    https://api.softlayer.com/mobile/v3.1
 ID account:                278444
 ID utente:                   12345678
@@ -1793,7 +1793,7 @@ Modifica i dettagli di un'istanza del server virtuale
 <strong>Opzioni del comando</strong>:
    <dl>
    <dt>-D, --domain</dt>
-   <dd>Porzione dominio del FQDN </dd>
+   <dd>Porzione dominio del FQDN</dd>
    <dt>-H, --hostname</dt>
    <dd>Porzione host del FQDN. Ad esempio: server</dd>
    <dt>--tag</dt>
@@ -1829,7 +1829,7 @@ Elenca le istanze del server virtuale nel tuo account
    <dt>-c, --cpu</dt>
    <dd>Numero di core CPU</dd>
    <dt>-D, --domain</dt>
-   <dd>Porzione dominio del FQDN </dd>
+   <dd>Porzione dominio del FQDN</dd>
    <dt>-d, --datacenter</dt>
    <dd>Nome breve del datacenter</dd>
    <dt>-H, --hostname</dt>
@@ -1958,7 +1958,7 @@ Riavvia un'istanza del server virtuale attiva
    <dt>--hard</dt>
    <dd>Esegui un riavvio forzato</dd>
    <dt>--soft</dt>
-   <dd>Esegui un riavvio forzato</dd>
+   <dd>Esegui un riavvio non forzato</dd>
    <dt>-f, --force</dt>
    <dd>Forza l'operazione senza conferma.</dd>
     </dl>
