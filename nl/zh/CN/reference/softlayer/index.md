@@ -914,7 +914,7 @@ bluemix sl dns record-add [OPTIONS] ZONE RECORD TYPE DATA
 ### bluemix sl dns zone-print
 {: #sl_dns_zone_print}
 
-以 BIND 格式打印区域和资源记录
+以 BIND 格式显示区域和资源记录
 ```
  bluemix sl dns zone-print ZONE
 ```
@@ -923,7 +923,7 @@ bluemix sl dns record-add [OPTIONS] ZONE RECORD TYPE DATA
 ```
  bluemix sl dns zone-print bluemix.net
 ```
-此命令以 BIND 格式打印名为 bluemix.net 的区域。
+此命令以 BIND 格式显示名为 bluemix.net 的区域。
 
 
 ### bluemix sl globalip assign
