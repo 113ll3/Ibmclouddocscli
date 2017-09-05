@@ -724,23 +724,55 @@ name.</dd>
 ## Viewing resource metric information
 {: #cliresourceusage}
 
-You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource metric information, use the following command:
+You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data. To view the resource metric information, use the following command:
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
 ```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">View the historical data for memory and disk space a month at a time.</dd>
-<dt class="pt dlterm">&lt;weekly&gt;</dt>
-<dd class="pd">View the historical data for memory and disk space a week at a time. This is the default value.</dd>
-</dl>
 
 **Tip:** You can also use **ba rsm** as an alias for the longer
 **ba resource-metrics** command name.
 
+## Viewing resource metric history 
+{: #cliresourceusagehistory}
+
+You can retrieve resource metric history for memory and disk usage. The metrics returned include the amount of resources used out of the total available, for both physical and reserved resources. Historical data for memory and disk usage can be displayed hourly, daily, or monthly.  You can specify start and end dates to retrieve data within a specific date range. The default historical data, when no dates are specified, are hourly memory data for the latest 48 hours. Data are displayed in descending order, with more recent dates shown first.   To view the resource metric history information, use the following command:
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">View the historical data for the last 48 hours. This is the default value.</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">View the historical data daily average for the last 30 days.</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">View the historical data monthly average for the last 6 months. </dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">View the used and total Reserved and Physical memory. </dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">View the used and total Reserved and Physical disk.</dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">Specify a start date for daily or monthly (format must be mm-dd-yyyy), or start date a time for hourly (format must be mm-dd-yyyy hh:mm:ss timezone) </dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">Specify an end date for daily or monthly (format must be mm-dd-yyyy), or end date and time for hourly (format must be mm-dd-yyyy hh:mm:ss timezone) </dd>
+</dl>
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Examples&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+You can view the above list of command parameters and examples using the following command: 
+**Tip:** You can also use **ba rsmh** as an alias for the longer
+**ba resource-metrics-history** command name.
 
 ## Administering service brokers
 {: #admin_servbro}
