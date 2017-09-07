@@ -1042,6 +1042,8 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">Name of your security group</dd>
 </dl>
 
+**Warning**: Unbinding the  **Default Staging** group set from the two IBM-created  security groups, `public_networks` and `dns` will disable global access to the outside network and must be used with caution and understanding of the ramifications it has on all staging applications in your environment.
+
 **Tip:** You can also use **ba ussg** as an alias for the longer
 **ba unbind-staging-security-group** command name.
 
@@ -1057,8 +1059,10 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">Name of your security group</dd>
 </dl>
 
+**Warning**: Unbinding the **Default Running** group set from the two IBM-created  security groups, `public_networks` and `dns` will disable global access to the outside network and must be used with caution and understanding of the ramifications it has on all running applications in your environment.
+
 **Tip:** You can also use **ba brsg** as an alias for the longer
-**ba bind-running-security-group** command name.
+**ba unbind-running-security-group** command name.
 
 * To unbind a security group to a space, use the following command:
 
