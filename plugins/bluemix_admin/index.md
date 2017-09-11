@@ -771,6 +771,11 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 </dl>
 
 You can view the above list of command parameters and examples using the following command: 
+
+```
+cf ba resource-metrics-history -help
+```
+
 **Tip:** You can also use **ba rsmh** as an alias for the longer
 **ba resource-metrics-history** command name.
 
