@@ -267,9 +267,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **Parameters**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>(Optional) Changes your traffic quota to the specified value. The operation fails if you are not authorized to set traffic, or if you set a value that exceeds your current pricing plan.</dd>
+<dd>(Optional) Changes your traffic quota to the specified value in megabytes. The operation fails if you are not authorized to set traffic, or if you set a value that exceeds your current pricing plan.</dd>
 <dt>--storage VALUE</dt>
-<dd>(Optional) Changes your storage quota to the specified value. The operation fails if you are not authorized to set storage quotas, or if you set a value that exceeds your current pricing plan.</dd>
+<dd>(Optional) Changes your storage quota to the specified value in megabytes. The operation fails if you are not authorized to set storage quotas, or if you set a value that exceeds your current pricing plan.</dd>
 </dl>
 
 
