@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-07-27"
+lastupdated: "2017-08-30"
 
 
 ---
@@ -235,20 +235,7 @@ bx cr plan-upgrade standard
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-ユーザーの無料ストレージとプル・トラフィックの許可量を考慮して、使用量の推定コストを米ドルで計算します。
-
-```
-bx cr pricing --traffic VALUE --storage VALUE
-```
-{: codeblock}
-
-**パラメーター**
-<dl>
-<dt>--traffic VALUE</dt>
-<dd>予想される毎月のプル・トラフィックをメガバイトで指定します。トラフィックは整数で指定する必要があります。</dd>
-<dt>--storage VALUE</dt>
-<dd>予想される平均合計ストレージをメガバイトで指定します。ストレージは整数で指定する必要があります。</dd>
-</dl>
+このコマンドは削除されました。料金計算機を使用して、推定コストを計算できます。[IBM Bluemix Container Registry のコストの見積もり](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02)を参照してください。
 
 
 ## bx cr quota

@@ -45,7 +45,7 @@ bluemix plugin install plugin_name -r Bluemix
 ```
 
 | *{{site.data.keyword.autoscaling}} CLI*|  *IBM Bluemix Container Service*  |
-|-----|-----|-----|
+|-----|-----|
 | 插件名称：auto-scaling<br> [查看文档](/docs/cli/plugins/auto-scaling/index.html)|  插件名称：container-service<br> [查看文档](/docs/containers/cs_cli_devtools.html)|
 {: caption="表 2. 插件" caption-side="top"}
 
@@ -85,15 +85,11 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-| *管理控制台* |
------------------|
-|  插件名称：bluemix-admin<br> [查看文档](/docs/cli/plugins/bluemix_admin/index.html)|
+| *管理控制台* | *VPN*|
+|-----------------|-----------------|
+|  插件名称：bluemix-admin<br> [查看文档](/docs/cli/plugins/bluemix_admin/index.html)| 插件名称：VPN<br> [查看文档](/docs/cli/plugins/vpn/index.html)|
 {: caption="表 4. 插件" caption-side="top"}
 
-| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}*| *VPN*|
-|-----------------|-----------------|
-| 插件名称：ibm-containers<br> [查看文档 ![外部链接图标](../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic){: new_window}| 插件名称：VPN<br> [查看文档](/docs/cli/plugins/vpn/index.html)|
-{: caption="表 5. 插件" caption-side="top"}
 
 ## ![](./images/Integrated_Dev_Tools.svg) 集成开发工具
 {: #ide notoc}
@@ -103,4 +99,4 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 | *Liberty for Java*| *MobileFirst*| *{{site.data.keyword.rules_short}}* | *API Connect*| *Eclipse Tools for Bluemix*|
 |----------|----------|----------|----------|----------|
 | [Liberty Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window}| [Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window}| [Rules Designer Eclipse 插件](../services/rules/index.html#rulov002)| [开发者工具箱](/docs/services/apiconnect/apic_003.html#apic_001 )| [Bluemix Eclipse 插件](/docs/manageapps/eclipsetools/eclipsetools.html)|
-{: caption="表 6. 插件" caption-side="top"}
+{: caption="表 5. 插件" caption-side="top"}

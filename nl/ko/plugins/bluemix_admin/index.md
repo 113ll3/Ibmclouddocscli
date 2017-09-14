@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -724,23 +724,55 @@ cf ba retrieve-report <search>
 ## 리소스 메트릭 정보 보기
 {: #cliresourceusage}
 
-메모리, 디스크 및 CPU 사용량을 포함하여 리소스 메트릭 정보를 확인할 수 있습니다. 실제 및 예약 리소스의 사용량을 포함하여 사용 가능한 실제 및 예약 리소스의 요약을 볼 수 있습니다. 또한 DEA(Droplet Execution Agent) 및 셀(Diego 아키텍처) 사용량 데이터와 히스토리 메모리 및 디스크 사용량도 볼 수 있습니다. 기본적으로 매주 및 내림차순으로 메모리 및 디스크 사용량의 데이터 히스토리가 표시됩니다. 리소스 메트릭 정보를 보려면 다음 명령을 사용하십시오.
+메모리, 디스크 및 CPU 사용량을 포함하여 리소스 메트릭 정보를 확인할 수 있습니다. 실제 및 예약 리소스의 사용량을 포함하여 사용 가능한 실제 및 예약 리소스의 요약을 볼 수 있습니다. 또한 DEA(Droplet Execution Agent) 및 셀(Diego 아키텍처) 사용량 데이터도 볼 수 있습니다. 리소스 메트릭 정보를 보려면 다음 명령을 사용하십시오.
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
 ```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">한 달에 한 번 메모리 및 디스크 공간의 히스토리 데이터가 표시됩니다.</dd>
-<dt class="pt dlterm">&lt;weekly&gt;</dt>
-<dd class="pd">한 주에 한 번 메모리 및 디스크 용량의 히스토리 데이터가 표시됩니다. 이는 기본값입니다.</dd>
-</dl>
 
 **팁:** 긴 **ba resource-metrics** 명령어의 별명으로
 **ba rsm**을 사용할 수도 있습니다. 
 
+## 리소스 메트릭 히스토리 보기 
+{: #cliresourceusagehistory}
+
+메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다. 시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다. 리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">지난 48시간 동안의 히스토리 데이터를 봅니다. 이는 기본값입니다.</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">지난 30일 동안의 히스토리 데이터 일별 평균을 봅니다.</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">지난 6개월 동안의 히스토리 데이터 월별 평균을 봅니다.</dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">사용된 메모리 및 예약된 메모리와 실제 메모리의 총계를 봅니다.</dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">사용된 디스크 및 예약된 디스크와 실제 디스크의 총계를 봅니다.</dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">일별 또는 월별 시작 날짜를 지정하거나(mm-dd-yyyy 형식이어야 함) 시간별 시작 날짜와 시간을 지정하십시오(mm-dd-yyyy hh:mm:ss 시간대 형식이어야 함).</dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">일별 또는 월별 종료 날짜를 지정하거나(mm-dd-yyyy 형식이어야 함) 시간별 종료 날짜와 시간을 지정하십시오(mm-dd-yyyy hh:mm:ss 시간대 형식이어야 함).</dd>
+</dl>
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;예제&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+다음 명령을 사용하여 위의 명령 매개변수와 예제 목록을 볼 수 있습니다.
+**팁:** 긴 **ba resource-metrics-history**
+명령어의 별명으로 **ba rsmh**를 사용할 수도 있습니다.
 
 ## 서비스 브로커 관리
 {: #admin_servbro}
@@ -842,6 +874,8 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ASG는 {{site.data.keyword.Bluemix_notm}} 환경에서 애플리케이션의 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다. 각 ASG는 네트워크 안팎으로 특정 트래픽과 통신을 허용하는 규칙의 목록으로 구성됩니다. 하나 이상의 ASG를 특정 보안 그룹 세트(예: 글로벌 액세스를 적용하는 데 사용되는 그룹 세트)에 바인딩하거나 {{site.data.keyword.Bluemix_notm}} 환경에서 조직 내의 영역에 바인딩할 수 있습니다. 
 
 {{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}을 참조하십시오. 
+
+**경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 스테이징** 또는 **기본 실행** 그룹 세트의 바인딩을 해제하면, `public_networks` 및 `dns`에서 외부 네트워크에 대한 글로벌 액세스를 사용 안함으로 설정합니다. 바인딩 해제를 사용할 때는 환경에 있는 모든 실행 및 스테이징 애플리케이션의 결과를 이해하고 주의를 기울이십시오. 
 
 **참고**: 보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 필수 필드 및 선택 필드를 포함하여 자세한 정보는 [애플리케이션 보안 그룹 작성 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}에 대한 Cloud Foundry 정보를 참조하십시오. 
 
@@ -1008,6 +1042,8 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">보안 그룹의 이름</dd>
 </dl>
 
+**경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 스테이징** 그룹 세트의 바인딩을 해제하면, `public_networks` 및 `dns`에서 네트워크 외부에 대한 글로벌 액세스를 사용 안함으로 설정하므로, 환경에 있는 모든 스테이징 애플리케이션에 미치는 영향을 이해하고 주의하여 사용해야 합니다.
+
 **팁:** 긴 **ba unbind-staging-security-group** 명령어의
 별명으로 **ba ussg**를 사용할 수도 있습니다. 
 
@@ -1023,8 +1059,9 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">보안 그룹의 이름</dd>
 </dl>
 
-**팁:** 긴 **ba bind-running-security-group** 명령어의
-별명으로 **ba brsg**를 사용할 수도 있습니다. 
+**경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 실행** 그룹 세트의 바인딩을 해제하면, `public_networks` 및 `dns`에서 네트워크 외부에 대한 글로벌 액세스를 사용 안함으로 설정하므로, 환경에 있는 모든 실행 애플리케이션에 미치는 영향을 이해하고 주의하여 사용해야 합니다.
+
+**팁:** 긴 **ba unbind-running-security-group** 명령어의 별명으로 **ba brsg**를 사용할 수도 있습니다.
 
 * 보안 그룹을 영역에서 바인드 해제하려면 다음 명령을 사용하십시오. 
 

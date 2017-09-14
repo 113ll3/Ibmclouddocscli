@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-07-27"
+lastupdated: "2017-08-30"
 
 
 ---
@@ -233,20 +233,7 @@ bx cr plan-upgrade standard
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-计算使用量的估算成本（美元），将免费存储量和拉出流量限额考虑在内。
-
-```
-bx cr pricing --traffic VALUE --storage VALUE
-```
-{: codeblock}
-
-**参数**
-<dl>
-<dt>--traffic VALUE</dt>
-<dd>指定预期的每月拉出流量（兆字节）。流量必须指定为整数。</dd>
-<dt>--storage VALUE</dt>
-<dd>指定预期的平均总存储量（兆字节）。存储量必须指定为整数。</dd>
-</dl>
+已除去此命令。您可以使用定价计算器来计算估算成本。请参阅[估算 IBM Bluemix Container Registry 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02)。
 
 
 ## bx cr quota

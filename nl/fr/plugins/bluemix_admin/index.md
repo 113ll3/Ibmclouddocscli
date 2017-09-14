@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -708,22 +708,53 @@ cf ba retrieve-report <search>
 
 Vous pouvez afficher des informations sur les mesures des ressources,
 notamment sur l'utilisation de la mémoire, du disque et de l'unité centrale. Vous
-pouvez consulter un récapitulatif des ressources physiques et réservées disponibles, ainsi que l'utilisation des ressources physiques et réservées. Vous pouvez également afficher les données d'utilisation et l'utilisation historique de la mémoire et du disque des agents DEA (Droplet Execution Agent) et des cellules (architecture Diego). Les données d'historique pour l'utilisation de la mémoire et du disque sont affichées par défaut par semaine et par ordre décroissant. Pour afficher les informations sur les mesures des ressources, entrez la commande suivante :
+pouvez consulter un récapitulatif des ressources physiques et réservées disponibles, ainsi que l'utilisation des ressources physiques et réservées. Vous pouvez également afficher les données d'utilisation des agents DEA (Droplet Execution Agent) et des cellules (architecture Diego). Pour afficher les informations sur les mesures des ressources, entrez la commande suivante :
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
+```
+
+**Astuce :** vous pouvez aussi utiliser **ba rsm** comme alias pour le nom de commande plus long **ba resource-metrics**.
+
+## Affichage de l'historique relatif aux mesures des ressources 
+{: #cliresourceusagehistory}
+
+Vous pouvez obtenir l'historique des mesures de ressources à des fins d'utilisation de la mémoire et du disque. Les valeurs renvoyées incluent la quantité de ressources utilisées par rapport à la quantité totale disponible, à la fois pour les ressources physiques et les ressources réservées. Les données d'historique relatives à l'utilisation de la mémoire et du disque peuvent être affichées sur une base horaire, quotidienne ou mensuelle. Indiquez une date de début et une date de fin pour extraire les données d'une période donnée. Lorsque aucune date n'est psécifiée, les données d'historique par défaut sont les données mémoire horaires des dernières 48 heures. Les données sont affichées par ordre décroissant, les dates les plus récentes en premier. Pour afficher les informations d'historique relatives aux mesures des ressources, entrez la commande suivante :
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque un mois à la fois.</dd>
-<dt class="pt dlterm">&lt;weekly&gt;</dt>
-<dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque une semaine à la fois. Il s'agit de la valeur par défaut.</dd>
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">Affiche les données d'historique des dernières 48 heures. Il s'agit de la valeur par défaut.</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">Affiche les données d'historique de la moyenne des 30 derniers jours.</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">Affiche les données d'historique de la moyenne des 6 derniers mois. </dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">Affiche la valeur utilisée et la valeur totale de la mémoire physique et réservée. </dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">Affiche la valeur utilisée et la valeur totale du disque physique et réservé.</dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">Indique une date de début pour une base quotidienne ou mensuelle (format mm-jj-aaaa), ou pour une base horaire (format mm-jj-aaaa hh:mm:ss avec fuseau horaire) </dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">Indique une date de fin pour une base quotidienne ou mensuelle (format mm-jj-aaaa), ou pour une base horaire (format mm-jj-aaaa hh:mm:ss avec fuseau horaire) </dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba rsm** comme alias pour le nom de commande plus long **ba resource-metrics**.
+{: codeblock}
 
+<dl class="parml">
+<dt class="pt dlterm">&lt;Exemples&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+Vous pouvez afficher la liste des paramètres et exemples ci-dessus à l'aide de la commande suivante :
+**Astuce :** vous pouvez aussi utiliser **ba rsmh** comme alias pour le nom de commande plus long **ba resource-metrics-history**.
 
 ## Administration des courtiers de services
 {: #admin_servbro}
@@ -821,6 +852,8 @@ Pour utiliser des groupes de sécurité d'application, vous devez être un admin
 Les groupes de sécurité d'application fonctionnent comme des pare-feux virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.Bluemix_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}.
 
 A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+
+**Avertissement** : le fait de supprimer la liaison entre les ensembles de groupes **Default Staging** ou **Default Running** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe. Tenez compte des répercussions possibles sur l'ensemble des applications en cours d'exécution ou de transfert dans votre environnement lorsque vous supprimez une liaison.
 
 **Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour plus d'informations, y compris sur les zones obligatoires et facultatives, reportez-vous aux informations relatives à Cloud Foundry concernant la [création de groupes de sécurité d'application ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
@@ -979,6 +1012,8 @@ cf ba unbind-staging-security-group <groupe-sécurité>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
+**Avertissement**: la suppression de la liaison entre l'ensemble de groupes **Default Staging** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe et doit être utilisé avec prudence en tenant compte des répercussions possibles sur l'ensemble des applications en cours de transfert dans votre environnement.
+
 **Astuce :** vous pouvez aussi utiliser **ba ussg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
 * Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
@@ -993,7 +1028,9 @@ cf ba unbind-running-security-group <groupe-sécurité>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba brsg** comme alias pour le nom de commande plus long **ba bind-running-security-group**.
+**Avertissement** : la suppression de la liaison entre l'ensemble de groupes **Default Running** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe et doit être utilisé avec prudence en tenant compte des répercussions possibles sur l'ensemble des applications en cours d'exécution dans votre environnement.
+
+**Astuce :** vous pouvez aussi utiliser **ba brsg** comme alias pour le nom de commande plus long **ba unbind-running-security-group**.
 
 * Pour annuler la liaison d'un groupe de sécurité à un espace, utilisez la commande suivante :
 

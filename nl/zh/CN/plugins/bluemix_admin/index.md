@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -660,22 +660,53 @@ cf ba retrieve-report <search>
 ## 查看资源度量值信息
 {: #cliresourceusage}
 
-您可以查看资源度量值信息，包括内存、磁盘和 CPU 使用情况。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 和单元（Diego 体系结构）使用情况数据以及内存和磁盘的历史使用情况。缺省情况下，将按降序显示每周内存和磁盘使用情况的历史数据。要查看资源度量值信息，请使用以下命令：
+您可以查看资源度量值信息，包括内存、磁盘和 CPU 使用情况。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 和单元（Diego 体系结构）使用情况数据。要查看资源度量值信息，请使用以下命令：
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
+```
+
+**提示：****ba resource-metrics** 命令名较长，您还可以使用 **ba rsm** 作为其别名。
+
+## 查看资源度量值历史记录 
+{: #cliresourceusagehistory}
+
+您可以检索内存和磁盘使用情况的资源度量值历史记录。返回的度量值包括使用的资源量占可用总量的比例，包括物理资源和预留资源。内存和磁盘使用情况的历史记录数据可以按小时、按天或按月显示。您可以指定开始和结束日期，以便在某个特定的日期范围内检索数据。在未指定日期的情况下，缺省的历史记录数据是最近 48 小时内的每小时内存数据。数据按降序排列，较新的日期显示在前边。要查看资源度量值历史记录信息，请使用以下命令：
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">一次查看一个月的内存和磁盘空间历史数据。</dd>
-<dt class="pt dlterm">&lt;weekly&gt;</dt>
-<dd class="pd">一次查看一周的内存和磁盘空间历史数据。这是缺省值。</dd>
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">查看最近 48 小时的历史记录数据。这是缺省值。</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">查看最近 30 天的历史记录数据每天平均值。</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">查看最近 6 个月的历史记录数据每月平均值。</dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">查看预留内存和物理内存的已使用量和总量。</dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">查看预留磁盘和物理磁盘的已使用量和总量。</dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">指定按天或按月的开始日期（格式必须为 mm-dd-yyyy），或者按小时的开始日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss 时区）</dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">指定按天或按月的结束日期（格式必须为 mm-dd-yyyy），或者按小时的结束日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss 时区）</dd>
 </dl>
 
-**提示：****ba resource-metrics** 命令名较长，您还可以使用 **ba rsm** 作为其别名。
+{: codeblock}
 
+<dl class="parml">
+<dt class="pt dlterm">&lt;示例&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+您可以使用下列命令来查看上面的命令参数和示例列表：
+**提示：****ba resource-metrics-history** 命令名较长，也可以使用 **ba rsmh** 作为其别名。
 
 ## 管理服务代理程序
 {: #admin_servbro}
@@ -771,6 +802,8 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.Bluemix_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集（例如，用于应用全局访问的组集），或者绑定到 {{site.data.keyword.Bluemix_notm}} 环境中某个组织内的空间。
 
 {{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+
+**警告**：如果取消**缺省编译打包**或**缺省运行**组集与两个 IBM 创建的安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问。请慎用取消绑定，还要了解环境中所有运行和编译打包的应用程序上的分支。
 
 **注**：以下可使您使用安全组的命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 信息。
 
@@ -929,6 +962,8 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
+**警告**：如果取消**缺省编译打包**组集与两个 IBM 创建的安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解环境中所有编译打包的应用程序上的分支。
+
 **提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba ussg** 作为其别名。
 
 * 要取消绑定 Default Running 安全组集，请使用以下命令：
@@ -943,7 +978,9 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**提示：****ba bind-running-security-group** 命令名较长，您还可以使用 **ba brsg** 作为其别名。
+**警告**：如果取消**缺省运行**组集与两个 IBM 创建的安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解环境中所有运行的应用程序上的分支。
+
+**提示：****ba unbind-running-security-group** 命令名较长，也可以使用 **ba brsg** 作为其别名。
 
 * 要将安全组取消绑定到空间，请使用以下命令：
 

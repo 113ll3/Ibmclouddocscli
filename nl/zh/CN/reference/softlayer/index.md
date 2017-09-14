@@ -397,13 +397,13 @@ bluemix sl block access-list 12345678 --sortby id
 
    <dl>
    <dt>--hardware-id</dt>
-   <dd>要撤销其授权的一个硬件服务器的标识。</dd>
+   <dd>要授权的一个硬件服务器的标识。</dd>
    <dt>--virtual-id</dt>
-   <dd>要撤销其授权的一个虚拟服务器的标识。</dd>
+   <dd>要授权的一个虚拟服务器的标识。</dd>
    <dt>--ip-address-id</dt>
-   <dd>要撤销其授权的一个 IP 地址的标识。</dd>
+   <dd>要授权的一个 IP 地址的标识。</dd>
    <dt>--ip-address</dt>
-   <dd>要撤销其授权的 IP 地址。</dd>
+   <dd>要授权的 IP 地址。</dd>
     </dl>
 
 **示例**：
@@ -975,7 +975,7 @@ bluemix sl globalip-cancel [OPTIONS] IDENTIFIER
 
    <dl>
     <dt>-f, --force</dt>
-   <dd>取消全局 IP 而不确认。</dd>
+   <dd>创建全局 IP 而不确认。</dd>
     </dl>
 
 **示例**：

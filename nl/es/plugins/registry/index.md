@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-07-27"
+lastupdated: "2017-08-30"
 
 
 ---
@@ -238,20 +238,7 @@ bx cr plan-upgrade standard
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-Calcula el coste estimado de su uso en dólares americanos teniendo en cuenta su almacenamiento gratuito y las bonificaciones del tráfico de extracción.
-
-```
-bx cr pricing --traffic VALUE --storage VALUE
-```
-{: codeblock}
-
-**Parámetros**
-<dl>
-<dt>--traffic VALUE</dt>
-<dd>Especifique el tráfico de extracción mensual anticipado en megabytes. El tráfico debe estar especificado como un número entero.</dd>
-<dt>--storage VALUE</dt>
-<dd>Especifique el promedio del almacenamiento total anticipado en megabytes. El almacenamiento debe estar especificado como un número entero.</dd>
-</dl>
+Este mandato se ha eliminado. Puede utilizar la calculadora de tarifas para calcular su coste estimado, consulte [Estimación de costes para IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02).
 
 
 ## bx cr quota

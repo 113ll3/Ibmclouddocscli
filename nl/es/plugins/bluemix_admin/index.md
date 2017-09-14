@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -121,8 +121,8 @@ cf ba add-user <nombre_usuario> <organización> <nombre> <apellido>
 <dd class="pd">El apellido del usuario que se añadirá a la organización.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba au** como alias para un nombre de mandato
-de **ba add-user** más largo.
+**Sugerencia:** También puede usar **ba au** como alias para el nombre de mandato
+**ba add-user** más largo.
 
 <!-- staging-only commands start. Live for interconnect -->
 
@@ -150,8 +150,8 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 
 </dl>
 
-**Sugerencia:** También puede usar **ba su** como alias para un nombre de mandato
-de **ba search-users** más largo.
+**Sugerencia:** También puede usar **ba su** como alias para el nombre de mandato
+**ba search-users** más largo.
 
 ### Establecimiento de permisos para un usuario
 {: #admin_setperm_user}
@@ -197,8 +197,8 @@ cf ba remove-user <nombre_usuario>
 
 </dl>
 
-**Sugerencia:** También puede usar **ba ru** como alias para un nombre de mandato
-de **ba remove-user** más largo.
+**Sugerencia:** También puede usar **ba ru** como alias para el nombre de mandato
+**ba remove-user** más largo.
 
 ### Permitir a los gestores agregar usuarios
 {: #clius_emau}
@@ -210,7 +210,7 @@ cf ba enable-managers-add-users
 ```
 {: codeblock}
 
-**Sugerencia:** también puede usar **ba emau** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba emau** como alias para el nombre de mandato
 **ba enable-managers-add-users** más largo.
 
 ### No permitir a los gestores agregar usuarios
@@ -223,7 +223,7 @@ cf ba disable-managers-add-users
 ```
 {: codeblock}
 
-**Sugerencia:** también puede usar **ba dmau** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba dmau** como alias para el nombre de mandato
 **ba disable-managers-add-users** más largo.
 
 ## Administración de organizaciones
@@ -246,7 +246,7 @@ cf ba create-org <organización> <gestor>
 <dd class="pd">El nombre de usuario del gestor de la organización.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba co** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba co** como alias para el nombre de mandato
 **ba create-org** más largo.
 
 ### Supresión de una organización
@@ -264,7 +264,7 @@ cf ba delete-org <organización>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a suprimir.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba do** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba do** como alias para el nombre de mandato
 **ba delete-org** más largo.
 
 ### Asignación de un usuario a una organización
@@ -311,8 +311,8 @@ cf ba unset-org <nombre_usuario> <organización> [<rol>]
 roles y descripciones de usuarios de {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba uo** como alias para un nombre de mandato
-de **ba unset-org** más largo.
+**Sugerencia:** También puede usar **ba uo** como alias para el nombre de mandato
+**ba unset-org** más largo.
 
 #### Asignación de roles
 
@@ -368,7 +368,7 @@ cf bluemix-admin containers-quota <organization>
 parámetro es obligatorio.</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba cq** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba cq** como alias para el nombre de mandato
 **bluemix-admin containers-quota** más largo.
 
 ### Configuración de cuotas de contenedor para una organización
@@ -433,7 +433,7 @@ El archivo JSON debe tener el formato que se muestra en el ejemplo siguiente:
 ```
 {: codeblock}
 
-**Sugerencia:** también puede usar **ba scq** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba scq** como alias para el nombre de mandato
 **bluemix-admin set-containers-quota** más largo.
 
 ## Administración de espacios
@@ -456,7 +456,7 @@ cf bluemix-admin create-space <organización> <nombre_espacio>
 <dd class="pd">El nombre del espacio que se creará en la organización.</dd>
 </dl>
 
-**Sugerencia:** También puede utilizar **ba cs** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba cs** como alias para el nombre de mandato
 **ba create-space** más largo.
 
 ### Suprimir un espacio de la organización
@@ -476,7 +476,7 @@ cf bluemix-admin delete-space <organización> <nombre_espacio>
 <dd class="pd">El nombre del espacio que se eliminará de la organización.</dd>
 </dl>
 
-**Sugerencia:** También puede utilizar **ba cs** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba cs** como alias para el nombre de mandato
 **ba delete-space** más largo.
 
 ### Añadir un usuario a un espacio con un rol
@@ -502,7 +502,7 @@ roles de usuario y descripciones de {{site.data.keyword.Bluemix_notm}}
 en un espacio.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba ss** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba ss** como alias para el nombre de mandato
 **ba set-space** más largo.
 
 
@@ -529,7 +529,7 @@ roles de usuario y descripciones de {{site.data.keyword.Bluemix_notm}}
 en un espacio.</dd>
 </dl>
 
-**Sugerencia:** También puede utilizar **ba us** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba us** como alias para el nombre de mandato
 **ba unset-space** más largo.
 
 ## Administrar el catálogo
@@ -571,8 +571,8 @@ cf ba disable-service-plan <identificador_plan>
 <dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que elegir. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba dsp** como alias para un nombre de mandato
-de **ba disable-service-plan** más largo.
+**Sugerencia:** También puede usar **ba dsp** como alias para el nombre de mandato
+**ba disable-service-plan** más largo.
 
 ### Adición de la visibilidad de los servicios de las organizaciones
 {: #admin_addvis_service_org}
@@ -615,8 +615,8 @@ cf ba remove-service-plan-visibility <identificador_plan> <organización>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a eliminar de la lista de visibilidad del servicio.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba rspv** como alias para un nombre de mandato
-de **ba remove-service-plan-visibility** más largo.
+**Sugerencia:** También puede usar **ba rspv** como alias para el nombre de mandato
+**ba remove-service-plan-visibility** más largo.
 
 ### Edición de la visibilidad de los servicios de las organizaciones
 {: #admin_editvis_service_org}
@@ -666,8 +666,8 @@ cf ba add-report <categoría> <fecha> <PDF|TXT|LOG> <RTF>
 <dd class="pd">Opción para incluir una versión de formato de texto enriquecido (RTF) del PDF. Esta opción solo se aplica si ha incluido una vía de acceso al PDF del informe. La versión RTF se utiliza para indexar y buscar.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba ar** como alias para un nombre de mandato
-de **ba add-report** más largo.
+**Sugerencia:** También puede usar **ba ar** como alias para el nombre de mandato
+**ba add-report** más largo.
 
 ### Supresión de informes
 {: #admin_del_report}
@@ -706,29 +706,61 @@ cf ba retrieve-report <buscar>
 <dd class="pd">El nombre de archivo del informe. Utilice las comillas si hay un espacio en el nombre.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba rr** como alias para un nombre de mandato
-de **ba retrieve-report** más largo.
+**Sugerencia:** También puede usar **ba rr** como alias para el nombre de mandato
+**ba retrieve-report** más largo.
 
 ## Visualización de información de métricas de recursos
 {: #cliresourceusage}
 
-Puede ver información sobre métricas de recursos, incluidos el uso de memoria, de disco y de CPU. Puede ver un resumen de los recursos reservados y físicos disponibles, así como el uso de los recursos reservados y físicos. También puede ver los datos de uso de DEA (Droplet Execution Agent) y de las células (arquitectura de Diego) y el uso del disco y de la memoria histórica. Se mostrarán los datos históricos para el uso de la memoria y del disco, de forma predeterminada, de forma semanal y en orden descendente. Para ver la información de métricas de recursos, utilice el mandato siguiente:
+Puede ver información sobre métricas de recursos, incluidos el uso de memoria, de disco y de CPU. Puede ver un resumen de los recursos reservados y físicos disponibles, así como el uso de los recursos reservados y físicos. También puede ver los datos de uso de DEA (Droplet Execution Agent) y de las células (arquitectura de Diego). Para ver la información de métricas de recursos, utilice el mandato siguiente:
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
+```
+
+**Sugerencia:** También puede usar **ba rsm** como alias para el nombre de mandato
+**ba resource-metrics** más largo.
+
+## Visualización del historial de métricas de recursos 
+{: #cliresourceusagehistory}
+
+Puede recuperar el historial de métricas de recursos para el uso de disco y de memoria. Las métricas devueltas incluyen la cantidad de recursos utilizados del total disponible, para recursos tanto físicos como reservados. Los datos históricos del uso de memoria y de disco pueden mostrarse por hora, por día o por mes. Puede especificar las fechas de inicio y de finalización para recuperar datos dentro de un intervalo de fechas específico. Si no se especifica ninguna fecha, los datos históricos predeterminados son los datos de memoria por hora de las últimas 48 horas. Los datos se muestran en orden descendente, mostrando primero las fechas más recientes. Para ver la información de historial de métricas de recursos, utilice el mandato siguiente:
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;mensualmente&gt;</dt>
-<dd class="pd">Ver los datos históricos para el espacio de disco y de memoria al mes a la vez.</dd>
-<dt class="pt dlterm">&lt;semanalmente&gt;</dt>
-<dd class="pd">Ver los datos históricos para el espacio de disco y de memoria a la semana a la vez. Este es el valor predeterminado.</dd>
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">Ver los datos históricos de las últimas 48 horas. Este es el valor predeterminado.</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">Ver el promedio diario de los datos históricos de los últimos 30 días.</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">Ver el promedio mensual de los datos históricos de los últimos 6 meses.</dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">Ver la memoria física y reservada utilizada y total. </dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">Ver el disco físico y reservado utilizado y total. </dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">Especifique una fecha de inicio para daily o monthly (el formato debe ser mm-dd-aaaa), o una fecha y hora de inicio para hourly (el formato debe ser mm-dd-aaaa hh:mm:ss huso_horario) </dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">Especifique una fecha de finalización para daily o monthly (el formato debe ser mm-dd-aaaa), o una fecha y hora de finalización para hourly (el formato debe ser mm-dd-aaaa hh:mm:ss huso_horario) </dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba rsm** como alias para el nombre de mandato
-**ba resource-metrics** más largo.
+{: codeblock}
 
+<dl class="parml">
+<dt class="pt dlterm">&lt;Ejemplos&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+Puede ver la lista anterior de parámetros del mandato utilizando el siguiente mandato:
+**Sugerencia:** También puede usar **ba rsmh** como alias para el nombre de mandato
+**ba resource-metrics-history** más largo.
 
 ## Administración de intermediarios de servicio
 {: #admin_servbro}
@@ -752,8 +784,8 @@ cf ba service-brokers <nombre_intermediario>
 para un intermediario de servicio específico.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba sb** como alias para un nombre de mandato
-de **ba service-brokers** más largo.
+**Sugerencia:** También puede usar **ba sb** como alias para el nombre de mandato
+**ba service-brokers** más largo.
 
 ### Adición de un intermediario de servicio
 {: #cliaddservbro}
@@ -796,8 +828,8 @@ cf ba delete-service-broker <intermediario_servicio>
 <dd class="pd">El nombre o GUID del intermediario de servicio personalizado.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba dsb** como alias para un nombre de mandato
-de **ba delete-service-broker** más largo.
+**Sugerencia:** También puede usar **ba dsb** como alias para el nombre de mandato
+**ba delete-service-broker** más largo.
 
 ### Actualización de un intermediario de servicio
 {: #cliupdservbro}
@@ -835,6 +867,8 @@ Los ASG funcionan como cortafuegos virtuales que controlan el tráfico de salida
 
 {{site.data.keyword.Bluemix_notm}} se configura inicialmente con todo el acceso a la red externa restringido. Dos grupos de seguridad creados por IBM, `public_networks` y `dns`, permiten el acceso global a la red externa al enlazar dichos grupos con los conjuntos de grupos de seguridad de Cloud Foundry predeterminados. Los dos conjuntos de grupos de seguridad de Cloud Foundry que se utilizan para aplicar el acceso global son los conjuntos de grupos **Default Staging** y **Default Running**. Estos conjuntos de grupos aplican las reglas para permitir tráfico hacia todas las apps en ejecución o todas las apps en transferencia. Si no desea enlazar estos dos conjuntos de grupos de seguridad, puede desenlazarlos de los conjuntos de grupos de Cloud Foundry y, a continuación, enlazar el grupo de seguridad con un espacio específico. Para obtener más información, consulte [Enlace de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
+**Aviso**: Al desenlazar los conjuntos de grupos **Default Staging** o **Default Running** de los dos grupos de seguridad creados por IBM, `public_networks` y `dns` inhabilitarán el acceso global a la red externa. Utilice la acción de desenlazar con precaución y conocimiento de las ramificaciones en todas las aplicaciones en ejecución y en transferencia de su entorno.
+
 **Nota**: los mandatos siguientes que le permiten trabajar con grupos de seguridad se basan en la versión 1.6 de Cloud Foundry. Para obtener más información, incluidos los campos obligatorios y opcionales, consulte la información de Cloud Foundry sobre [Creación de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 ### Listado de grupos de seguridad
@@ -847,7 +881,7 @@ cf ba security-groups
 ```
 {: codeblock}
 
-**Sugerencia:** también puede usar **ba sgs** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba sgs** como alias para el nombre de mandato
 **ba security-groups** más largo.
 
 * Para mostrar detalles para un grupo de seguridad específico, utilice el mandato siguiente:
@@ -862,7 +896,7 @@ cf ba security-groups <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba sg** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba sg** como alias para el nombre de mandato
 **ba security-groups** más largo con el parámetro `security-group`.
 
 
@@ -889,8 +923,8 @@ Cada grupo de seguridad que cree tiene el prefijo
 <dd class="pd">Vía de acceso absoluta o relativa al archivo de reglas</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba csg** como alias para un nombre de mandato
-de **ba create-security-group** más largo.
+**Sugerencia:** También puede usar **ba csg** como alias para el nombre de mandato
+**ba create-security-group** más largo.
 
 ### Actualización de un grupo de seguridad
 {: #cliupdsecgro}
@@ -909,7 +943,7 @@ cf ba update-security-group <grupo-seguridad> <vía-acceso-archivo-reglas>
 <dd class="pd">Vía de acceso absoluta o relativa al archivo de reglas</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba usg** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba usg** como alias para el nombre de mandato
 **ba update-security-group** más largo.
 
 ### Supresión de un grupo de seguridad
@@ -927,8 +961,8 @@ cf ba delete-security-group <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba dsg** como alias para un nombre de mandato
-de **ba delete-security-group** más largo.
+**Sugerencia:** También puede usar **ba dsg** como alias para el nombre de mandato
+**ba delete-security-group** más largo.
 
 
 ### Enlace de grupos de seguridad
@@ -948,7 +982,7 @@ cf ba bind-staging-security-group <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba bssg** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba bssg** como alias para el nombre de mandato
 **ba bind-staging-security-group** más largo.
 
 * Para enlazar con el conjunto de grupos de seguridad Default Running, utilice el siguiente mandato:
@@ -963,8 +997,8 @@ cf ba bind-running-security-group <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba brsg** como alias para un nombre de mandato
-de **ba bind-running-security-group** más largo.
+**Sugerencia:** También puede usar **ba brsg** como alias para el nombre de mandato
+**ba bind-running-security-group** más largo.
 
 * Para enlazar un grupo de seguridad con un espacio, utilice el siguiente mandato:
 
@@ -982,8 +1016,8 @@ cf ba bind-security-group <grupo-seguridad> <org> <espacio>
 <dd class="pd">Nombre del espacio dentro de la organización con el que enlazar el grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba bsg** como alias para un nombre de mandato
-de **ba bind-security-group** más largo.
+**Sugerencia:** También puede usar **ba bsg** como alias para el nombre de mandato
+**ba bind-security-group** más largo.
 
 ### Anulación de enlace de grupos de seguridad
 {: #cliunbindsecgro}
@@ -1002,7 +1036,9 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba ussg** como alias para el nombre de mandato
+**Aviso**: Al desenlazar el conjunto de grupos **Default Staging** de los dos grupos de seguridad creados por IBM, `public_networks` y `dns` inhabilitarán el acceso global a la red externa y deben utilizarse con precaución y conocimiento de las ramificaciones en todas las aplicaciones en transferencia de su entorno.
+
+**Sugerencia:** También puede usar **ba ussg** como alias para el nombre de mandato
 **ba unbind-staging-security-group** más largo.
 
 * Para anular el enlace desde un conjunto de grupos de seguridad Default Running, utilice el siguiente mandato:
@@ -1017,8 +1053,10 @@ cf ba unbind-running-security-group <grupo-seguridad>
 <dd class="pd">Nombre del grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba brsg** como alias para un nombre de mandato
-de **ba bind-running-security-group** más largo.
+**Aviso**: Al desenlazar el conjunto de grupos **Default Running** de los dos grupos de seguridad creados por IBM, `public_networks` y `dns` inhabilitarán el acceso global a la red externa y deben utilizarse con precaución y conocimiento de las ramificaciones en todas las aplicaciones en ejecución de su entorno.
+
+**Sugerencia:** También puede usar **ba brsg** como alias para el nombre de mandato
+**ba unbind-running-security-group** más largo.
 
 * Para anular el enlace de un grupo de seguridad con un espacio, utilice el siguiente mandato:
 
@@ -1036,7 +1074,7 @@ cf ba unbind-security-group <grupo-seguridad> <org> <espacio>
 <dd class="pd">Nombre del espacio dentro de la organización con el que enlazar el grupo de seguridad</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba usg** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba usg** como alias para el nombre de mandato
 **ba unbind-staging-security-group** más largo.
 
 ## Administración de paquetes de compilación
@@ -1057,7 +1095,7 @@ cf ba buildpacks <nombre_paquete_compilación>
 <dd class="pd">Un parámetro opcional para especificar un paquete de compilación concreto para ver.</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba lb** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba lb** como alias para el nombre de mandato
 **ba buildpacks** más largo.
 
 ### Creación y carga de un paquete de compilación
@@ -1079,7 +1117,7 @@ cf ba create-buildpack <nombre_paquete_compilación> <vía_acceso_archivo> <posi
 <dd class="pd">Orden en el que se comprueban los paquetes de compilación durante la detección automática del paquete de compilación.</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba cb** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba cb** como alias para el nombre de mandato
 **ba create-buildpack** más largo.
 
 ### Actualización de un paquete de compilación
@@ -1103,7 +1141,7 @@ cf ba update-buildpack <nombre_paquete_compilación> <posición> <habilitado> <b
 <dd class="pd">Indica si el paquete de compilación está bloqueado para impedir actualizaciones.</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba ub** como alias para un nombre de mandato
+**Sugerencia:** También puede usar **ba ub** como alias para el nombre de mandato
 **ba update-buildpack** más largo.
 
 ### Supresión de un paquete de compilación
@@ -1121,5 +1159,5 @@ cf ba delete-buildpack <nombre_paquete_compilación>
 <dd class="pd">Nombre del paquete de compilación que se suprimirá.</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba db** como alias para el nombre de mandato
+**Sugerencia:** También puede usar **ba db** como alias para el nombre de mandato
 **ba delete-buildpack** más largo.

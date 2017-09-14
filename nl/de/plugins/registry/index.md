@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-07-27"
+lastupdated: "2017-08-30"
 
 
 ---
@@ -238,20 +238,7 @@ bx cr plan-upgrade standard
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-Berechnet die geschätzten Nutzungskosten in US-Dollar unter Berücksichtigung Ihres Anspruchs auf kostenlosen Speicher und Gratisleistungen beim Pull-Datenverkehr.
-
-```
-bx cr pricing --traffic VALUE --storage VALUE
-```
-{: codeblock}
-
-**Parameter**
-<dl>
-<dt>--traffic VALUE</dt>
-<dd>Geben Sie das voraussichtliche monatliche Pull-Datenverkehrsvolumen in Megabyte an. Der Datenverkehr muss als ganze Zahl angegeben werden.</dd>
-<dt>--storage VALUE</dt>
-<dd>Geben Sie den voraussichtlichen durchschnittlichen Gesamtspeicherbedarf in Megabyte an. Der Speicher muss als ganze Zahl angegeben werden.</dd>
-</dl>
+Dieser Befehl wurde entfernt. Zur Berechnung der geschätzten Kosten können Sie den Preisrechner verwenden; weitere Informationen hierzu finden Sie in [Kosten für IBM Bluemix Container Registry schätzen](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02).
 
 
 ## bx cr quota

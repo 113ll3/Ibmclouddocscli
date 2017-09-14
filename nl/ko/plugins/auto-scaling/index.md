@@ -99,7 +99,7 @@ bx as policy-detach <APP_NAME>
 
 ## Auto-Scaling 정책의 사용 여부 설정
 
-특정 앱의 Auto-Scaling 정책을 사용하거나 사용하지 않게 설정할 수 있습니다. 다음 명령을 실행하십시오.
+특정 앱의 Auto-Scaling 정책을 사용 또는 사용 안함으로 설정할 수 있습니다. 다음 명령을 실행하십시오.
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>

@@ -24,7 +24,7 @@ La CLI {{site.data.keyword.Bluemix_notm}} ti offre una modalità unificata per i
 
 **Nota:** lo strumento CLI {{site.data.keyword.Bluemix_notm}} include un'interfaccia riga di comando Cloud Foundry nella sua installazione. Tuttavia, non è consentito utilizzare in combinazione i comandi della CLI {{site.data.keyword.Bluemix_notm}} `bx xxx` e quelli della CLI Cloud Foundry `cf xxx` se disponi della tua propria installazione della cli cf. Usa invece `bluemix cf` se intendi utilizzare la cli cf per gestire le risorse Cloud Foundry. Nel backend, questo esegue i comandi della CLI Cloud Foundry integrata in un contesto condiviso con la CLI {{site.data.keyword.Bluemix_notm}}.  Inoltre,  `bluemix cf api/login/logout/target` non è consentito e devi utilizzare invece `bluemix api/login/logout/target`.
 
-## Installazine della CLI {{site.data.keyword.Bluemix_notm}}
+## Installazione della CLI {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
 
 <!-- Online installation Currently Production Only! Please don't forget to replace the domain name-->

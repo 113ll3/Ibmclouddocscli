@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -742,24 +742,56 @@ cf ba retrieve-report <search>
 ## Visualizando informações de métrica de recurso
 {: #cliresourceusage}
 
-É possível visualizar informações de métrica de recurso, incluindo memória, disco e uso de CPU. É possível ver um resumo dos recursos físicos e reservados disponíveis, bem como o uso de recursos físicos e reservados. Também é possível ver dados de uso de Droplet Execution Agents (DEAs) e células e uso histórico de memória e disco. Os dados históricos para uso de memória e disco são exibidos semanalmente e em ordem decrescente, por padrão. Para visualizar as informações de métrica de recurso, use o comando a seguir:
+É possível visualizar informações de métrica de recurso, incluindo memória, disco e uso de CPU. É possível ver um resumo dos recursos físicos e reservados disponíveis, bem como o uso de recursos físicos e reservados. Também é possível ver dados de uso de Droplet Execution Agents (DEAs) e células (arquitetura Diego). Para visualizar as informações de métrica de recurso, use o comando a seguir:
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
 ```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">Visualize os dados históricos de espaço em memória e em disco um mês de cada vez.</dd>
-<dt class="pt dlterm">&lt;weekly&gt;</dt>
-<dd class="pd">Visualize os dados históricos de espaço em memória e em disco uma semana de cada vez. Este é o valor
-padrão.</dd>
-</dl>
 
 **Dica:** também é possível usar **ba rsm** como um alias para o nome mais longo
 do comando **ba resource-metrics**.
 
+## Visualizando o histórico de métrica de recurso 
+{: #cliresourceusagehistory}
+
+É possível recuperar o histórico de métrica de recurso para uso de memória e disco. As métricas retornadas incluem a quantia de recursos usados do total disponível para ambos os recursos, físico e reservado. Os dados históricos para uso de memória e disco podem ser exibidos por hora, diariamente ou mensalmente. É possível especificar datas de início e de encerramento para recuperar dados dentro de um intervalo de data específico. Os dados históricos padrão, quando nenhuma data é especificada, são dados de memória por hora para as últimas 48 horas. Os dados são exibidos em ordem decrescente, com datas mais recentes mostradas primeiro. Para visualizar as informações de histórico de métrica de recurso, use o comando a seguir:
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">Visualize os dados históricos para as últimas 48 horas. Este é o valor
+padrão.</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">Visualize a média diária de dados históricos para os últimos 30 dias.</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">Visualize a média mensal os dados históricos para os últimos 6 meses. </dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">Visualize a memória Reservada e Física usada e total. </dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">Visualize o disco Reservado e Físico usado e total. </dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">Especifique uma data de início para diário ou mensal (o formato deve ser mm-dd-aaaa) ou uma data e hora de início para por hora (o formato deve ser o fuso horário mm-dd-aaaa hh:mm:ss) </dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">Especifique uma data de encerramento para diário ou mensal (o formato deve ser mm-dd-aaaa) ou uma data e hora de encerramento para por hora (o formato deve ser o fuso horário mm-dd-aaaa hh:mm:ss) </dd>
+</dl>
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Exemplos&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+É possível visualizar a lista acima de parâmetros de comando e exemplos usando o comando a seguir:
+**Dica:** também é possível usar **ba rsmh** como um alias para o
+nome de comando mais longo **ba resource-metrics-history**.
 
 ## Administrando brokers de serviço
 {: #admin_servbro}
@@ -877,6 +909,8 @@ permitir o tráfego para todos os apps em execução ou todos os apps de prepara
 não desejar ligar a esses dois conjuntos grupos de segurança, poderá desvincular dos
 conjuntos de grupos do Cloud Foundry e depois ligar o grupo de segurança a um espaço
 específico. Para obter mais informações, veja [Ligando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+
+**Aviso**: a desvinculação dos conjuntos de grupos **Preparação padrão** ou **Execução padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns`, desativará o acesso global à rede externa. Use a desvinculação com cuidado e reconhecimento das ramificações em todos os aplicativos em execução e de preparação em seu ambiente.
 
 **Nota**: Os comandos a seguir que permitem trabalhar com
 grupos de segurança são baseadas na versão do Cloud Foundry 1.6. Para obter mais informações, incluindo campos obrigatórios e opcionais, veja as informações do Cloud Foundry sobre [Como criar Grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
@@ -1051,6 +1085,8 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">Nome do grupo de segurança</dd>
 </dl>
 
+**Aviso**: a desvinculação do conjunto de grupos **Preparação padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns`, desativará o acesso global à rede externa e deve ser usada com cuidado e entendimento das ramificações que ele tem em todos os aplicativos de preparação em seu ambiente.
+
 **Dica:** também é possível usar **ba ussg**
 como alias para o nome de comando mais longo **ba
 unbind-staging-security-group**.
@@ -1067,9 +1103,10 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">Nome do grupo de segurança</dd>
 </dl>
 
-**Dica:** também é possível usar **ba brsg**
-como alias para o nome de comando mais longo **ba
-bind-running-security-group**.
+**Aviso**: a desvinculação do conjunto de grupos **Execução padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns`, desativará o acesso global à rede externa e deve ser usada com cuidado e entendimento das ramificações que ele tem em todos os aplicativos de execução em seu ambiente.
+
+**Dica:** também é possível usar **ba brsg** como alias para o
+nome do comando mais longo **ba unbind-running-security-group**.
 
 * Para desvincular um grupo de segurança de um espaço, use o comando a seguir:
 

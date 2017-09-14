@@ -45,7 +45,7 @@ bluemix plugin install plugin_name -r Bluemix
 ```
 
 | *{{site.data.keyword.autoscaling}} CLI* |  *IBM Bluemix Container Service*  |
-|-----|-----|-----|
+|-----|-----|
 | プラグイン名: auto-scaling <br> [資料の表示](/docs/cli/plugins/auto-scaling/index.html) |  プラグイン名: container-service  <br> [資料の表示](/docs/containers/cs_cli_devtools.html) |
 {: caption="表 2. プラグイン" caption-side="top"}
 
@@ -85,15 +85,11 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-| *管理コンソール* |
------------------|
-|  プラグイン名: bluemix-admin<br> [資料の表示](/docs/cli/plugins/bluemix_admin/index.html) |
+| *管理コンソール* | *VPN* |
+|-----------------|-----------------|
+|  プラグイン名: bluemix-admin<br> [資料の表示](/docs/cli/plugins/bluemix_admin/index.html) | プラグイン名: VPN <br> [資料の表示](/docs/cli/plugins/vpn/index.html) |
 {: caption="表 4. プラグイン" caption-side="top"}
 
-| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}*| *VPN* |
-|-----------------|-----------------|
-| プラグイン名: ibm-containers<br> [資料の表示 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic){: new_window} | プラグイン名: VPN <br> [資料の表示](/docs/cli/plugins/vpn/index.html) |
-{: caption="表 5. プラグイン" caption-side="top"}
 
 ## ![](./images/Integrated_Dev_Tools.svg) 統合開発ツール
 {: #ide notoc}
@@ -103,4 +99,4 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
 |----------|----------|----------|----------|----------|
 | [Liberty Eclipse プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse プラグイン](../services/rules/index.html#rulov002) | [デベロッパーズ・ツールキット](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse プラグイン](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="表 6. プラグイン" caption-side="top"}
+{: caption="表 5. プラグイン" caption-side="top"}

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -694,21 +694,54 @@ cf ba retrieve-report <search>
 ## Metrikinformationen zu Ressourcen anzeigen
 {: #cliresourceusage}
 
-Sie können Metrikinformationen zu Ressourcen anzeigen, beispielsweise Hauptspeicher- und Plattenbelegung oder CPU-Auslastung. Es wird eine Zusammenfassung der verfügbaren physischen und reservierten Ressourcen sowie der Nutzung dieser Ressourcen angezeigt. Zudem werden Nutzungsdaten, die vergangene Speichernutzung und die Plattenbelegung zu Droplet Execution Agents (DEAs) und Diego-Zellen (Diego-Architektur) angezeigt. Die Daten zur vergangenen Speichernutzung und Plattenbelegung werden standardmäßig nach Wochen und in absteigender Reihenfolge angezeigt. Verwenden Sie den folgenden Befehl, um die Metrikinformationen zu Ressourcen anzuzeigen:
+Sie können Metrikinformationen zu Ressourcen anzeigen, beispielsweise Hauptspeicher- und Plattenbelegung oder CPU-Auslastung. Es wird eine Zusammenfassung der verfügbaren physischen und reservierten Ressourcen sowie der Nutzung dieser Ressourcen angezeigt. Zudem werden Nutzungsdaten zu Droplet Execution Agents (DEAs) und Diego-Zellen (Diego-Architektur) angezeigt. Verwenden Sie den folgenden Befehl, um die Metrikinformationen zu Ressourcen anzuzeigen:
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
+```
+
+**Tipp:** Sie können auch **ba rsm** als Alias für den längeren Befehlsnamen **ba resource-metrics** verwenden.
+
+## Verlaufsprotokoll für Ressourcenmetriken anzeigen 
+{: #cliresourceusagehistory}
+
+Sie können das Verlaufsprotokoll für Ressourcenmetriken für die Hauptspeicher- und Plattenspeichernutzung abrufen. Die zurückgegebenen Metriken umfassen die Menge der genutzten Ressourcen gegenüber der Gesamtmenge der verfügbaren Ressourcen sowohl für die physischen als auch für die reservierten Ressourcen. Protokolldaten für die Hauptspeicher- und Plattenspeichernutzung können in stündlichen, täglichen oder monatlichen Intervallen angezeigt werden. Zum Abrufen von Daten innerhalb eines bestimmten Datumsbereichs können Sie Anfangs- und Enddatumsangaben machen. Die Standardeinstellung für die Protokolldaten, wenn kein Datum angegeben wird, lautet: Hauptspeicherdaten in stündlichen Intervallen für die letzten 48 Stunden. Die Daten werden in absteigender Reihenfolge angezeigt, wobei die neuesten Datumsangaben am Anfang stehen. Verwenden Sie den folgenden Befehl, um die Verlaufsprotokolldaten zu Ressourcenmetriken anzuzeigen:
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">Anzeige der vergangenen Nutzungsdaten für Speicher und Plattenbelegung jeweils für einen Monat.</dd>
-<dt class="pt dlterm">&lt;weekly&gt;</dt>
-<dd class="pd">Anzeige der vergangenen Nutzungsdaten für Speicher und Plattenbelegung jeweils für eine Woche. Dies ist der Standardwert.</dd>
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">Protokolldaten für die letzten 48 Stunden anzeigen. Dies ist der Standardwert.</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">Tagesdurchschnitt der Protokolldaten für die letzten 30 Tage anzeigen.</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">Monatsdurchschnitt der Protokolldaten für die letzten 6 Monate anzeigen.</dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">Genutzten und gesamten reservierten und physischen Hauptspeicher anzeigen.</dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">Genutzten und gesamten reservierten und physischen Plattenspeicher anzeigen.</dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">Anfangsdatum für tägliche oder monatliche Daten (Format mm-tt-jjjj) oder Anfangsdatum und -uhrzeit für stündliche Daten (Format mm-tt-jjjj hh:mm:ss timezone)</dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">Enddatum für tägliche oder monatliche Daten (Format mm-tt-jjjj) oder Enddatum und -uhrzeit für stündliche Daten (Format mm-tt-jjjj hh:mm:ss timezone)</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba rsm** als Alias für den längeren Befehlsnamen **ba resource-metrics** verwenden.
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Beispiele&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+Sie können die oben angeführte Liste mit Befehlsparametern und Beispielen mit dem folgenden Befehl anzeigen.
+**Tipp:** Sie können auch **ba rsmh** als Alias für den längeren
+Befehlsnamen **ba resource-metrics-history** verwenden.
 
 
 ## Service-Broker verwalten
@@ -809,6 +842,8 @@ Zum Arbeiten mit Anwendungssicherheitsgruppen (Application Security Groups, ASGs
 ASGs fungieren als virtuelle Firewalls, die den abgehenden Datenverkehr aus der Anwendung in die {{site.data.keyword.Bluemix_notm}}-Umgebung steuern. Jede ASG besteht aus einer Liste mit Regeln, die den Datenverkehr und die Kommunikation in das externe Netz oder aus diesem Netz definieren. Sie können eine oder mehrere ASGs an einen bestimmten Sicherheitsgruppensatz (z. B. an einen Gruppensatz, der für die Anwendung des globalen Zugriffs verwendet wird) oder an Bereiche innerhalb einer Organisation in der {{site.data.keyword.Bluemix_notm}}-Umgebung binden.
 
 Bei der Erstinstallation von {{site.data.keyword.Bluemix_notm}} wird der gesamte Zugriff auf das externe Netz eingeschränkt. Zwei von IBM erstellte Sicherheitsgruppen (`public_networks` und `dns`) ermöglichen den globalen Zugriff auf das externe Netz, wenn Sie diese Gruppen an die Cloud Foundry-Standardsicherheitsgruppensätze binden. Die beiden Sicherheitsgruppensätze in Cloud Foundry zur Anwendung des globalen Zugriffs sind die Gruppensätze **Default Staging** und **Default Running**. Von diesen Gruppensätzen werden die Regeln für den Datenverkehr auf alle aktiven Apps bzw. alle Staging-Apps angewendet. Wenn Sie keine Bindung an diese beiden Sicherheitsgruppensätze herstellen möchten, können Sie die Bindung an die Cloud Foundry-Gruppensätze aufheben und die Sicherheitsgruppe anschließend an einen bestimmten Bereich binden. Weitere Informationen finden Sie in [Binding Application Security Groups ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+
+**Warnung**: Durch das Aufheben der Bindung der Gruppensätze **Default Staging** oder **Default Running** zu den beiden von IBM erstellen Sicherheitsgruppen `public_networks` und `dns` wird der globale Zugriff auf das externe Netz inaktiviert. Verwenden Sie das Aufheben der Bindung mit Vorsicht und ziehen Sie die Auswirkungen auf alle Anwendungen in Ihrer Umgebung in Betracht, die ausgeführt werden oder für die Staging durchgeführt wird.
 
 **Hinweis:** Die folgenden Befehle, die Ihnen die Arbeit mit Sicherheitsgruppen ermöglichen, basieren auf Cloud Foundry Version 1.6. Weitere Informationen einschließlich der Angaben zu erforderlichen und optionalen Feldern finden Sie in den Cloud Foundry-Informationen zum Thema [Anwendungssicherheitsgruppen erstellen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
@@ -967,6 +1002,8 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">Der Name der Sicherheitsgruppe.</dd>
 </dl>
 
+**Warnung**: Durch das Aufheben der Bindung des Gruppensatzes **Default Staging** zu den beiden von IBM erstellen Sicherheitsgruppen `public_networks` und `dns` wird der globale Zugriff auf das externe Netz inaktiviert. Verwenden Sie das Aufheben der Bindung mit Vorsicht und ziehen Sie die Auswirkungen auf alle Anwendungen in Ihrer Umgebung in Betracht, für die Staging ausgeführt wird. 
+
 **Tipp:** Sie können auch **ba ussg** als Alias für den längeren Befehlsnamen **ba unbind-staging-security-group** verwenden.
 
 * Verwenden Sie den folgenden Befehl, um die Bindung zu einem Sicherheitsgruppensatz 'Default Running' aufzuheben:
@@ -981,7 +1018,9 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">Der Name der Sicherheitsgruppe.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba brsg** als Alias für den längeren Befehlsnamen **ba bind-running-security-group** verwenden.
+**Warnung**: Durch das Aufheben der Bindung des Gruppensatzes **Default Running** zu den beiden von IBM erstellen Sicherheitsgruppen `public_networks` und `dns` wird der globale Zugriff auf das externe Netz inaktiviert. Verwenden Sie das Aufheben der Bindung mit Vorsicht und ziehen Sie die Auswirkungen auf alle Anwendungen in Ihrer Umgebung in Betracht, die ausgeführt werden.
+
+**Tipp:** Sie können auch **ba brsg** als Alias für den längeren Befehlsnamen **ba unbind-running-security-group** verwenden.
 
 * Verwenden Sie den folgenden Befehl, um die Bindung einer Sicherheitsgruppe zu einem Bereich aufzuheben:
 

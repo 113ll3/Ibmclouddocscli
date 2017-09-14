@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -662,22 +662,53 @@ cf ba retrieve-report <search>
 ## 檢視資源度量值資訊
 {: #cliresourceusage}
 
-您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 用量）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 及 Cell（Diego 架構）用量資料以及歷程記憶體和磁碟用量。依預設，會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源度量值資訊，請使用下列指令：
+您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 用量）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 及 Cell（Diego 架構）用量資料。若要檢視資源度量值資訊，請使用下列指令：
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
+```
+
+**提示：**您也可以使用 **ba rsm** 作為 **ba resource-metrics** 這個較長指令名稱的別名。
+
+## 檢視資源度量值歷程 
+{: #cliresourceusagehistory}
+
+您可以擷取記憶體及磁碟用量的資源度量值歷程。傳回的度量值包括已使用的資源量佔可用總計的比例（針對實體以及保留資源）。記憶體及磁碟用量歷程資料可以每小時、每日或每月顯示。您可以指定開始及結束日期，以在特定日期範圍內擷取資料。未指定任何日期時，預設歷程資料是最新 48 小時的每小時記憶體資料。資料以遞減順序顯示，最近的日期最先顯示。若要檢視資源度量值歷程資訊，請使用下列指令：
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">一次檢視一個月的記憶體及磁碟空間歷程資料。</dd>
-<dt class="pt dlterm">&lt;weekly&gt;</dt>
-<dd class="pd">一次檢視一週的記憶體及磁碟空間歷程資料。這是預設值。</dd>
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">檢視過去 48 小時的歷程資料。這是預設值。</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">檢視過去 30 天的歷程資料每日平均值。</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">檢視過去 6 個月的歷程資料每月平均值。</dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">檢視已使用及總計的保留和實體記憶體。</dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">檢視已使用及總計的保留和實體磁碟。</dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">指定每日或每月的開始日期（格式必須為 mm-dd-yyyy），或是每小時的開始日期及時間（格式必須為 mm-dd-yyyy hh:mm:ss timezone）</dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">指定每日或每月的結束日期（格式必須為 mm-dd-yyyy），或是每小時的結束日期及時間（格式必須為 mm-dd-yyyy hh:mm:ss timezone）</dd>
 </dl>
 
-**提示：**您也可以使用 **ba rsm** 作為 **ba resource-metrics** 這個較長指令名稱的別名。
+{: codeblock}
 
+<dl class="parml">
+<dt class="pt dlterm">&lt;Examples&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+您可以使用下列指令檢視以上指令參數和範例的清單：
+**提示：**您也可以使用 **ba rsmh** 作為 **ba resource-metrics-history** 這個較長指令名稱的別名。
 
 ## 管理服務分配管理系統
 {: #admin_servbro}
@@ -773,6 +804,9 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}} 環境中應用程式的出埠資料流量。每一個 ASG 都包含一份規則清單，可容許與外部網路之間的特定資料流量和通訊。您可以將一個以上的 ASG 連結至特定安全群組集（例如，用於套用廣域存取權的群組集），也可以連結至 {{site.data.keyword.Bluemix_notm}} 環境中組織內的空間。
 
 {{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱 [Binding Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+
+**警告**：取消連結 **Default Staging** 或 **Default Running** 群組集與兩個 IBM 建立的安全群組
+`public_networks` 及 `dns`，將會停用對外部網路的廣域存取。請小心使用取消連結，並了解它對您環境中所有執行中與編譯打包中的應用程式造成的結果。
 
 **附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。如需相關資訊（包括必要及選用性欄位），請參閱有關 [Creating Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 資訊。
 
@@ -907,9 +941,9 @@ cf ba bind-security-group <security-group> <org> <space>
 <dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">您的安全群組名稱</dd>
 <dt class="pt dlterm">&lt;Org&gt;</dt>
-<dd class="pd">要連結安全群組的組織名稱</dd>
+<dd class="pd">要與安全群組取消連結的組織名稱</dd>
 <dt class="pt dlterm">&lt;Space&gt;</dt>
-<dd class="pd">組織內要連結安全群組的空間名稱</dd>
+<dd class="pd">組織內要與安全群組取消連結的空間名稱</dd>
 </dl>
 
 **提示：**您也可以使用 **ba bsg** 作為 **ba bind-security-group** 這個較長指令名稱的別名。
@@ -931,6 +965,9 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">您的安全群組名稱</dd>
 </dl>
 
+**警告**：取消連結 **Default Staging** 群組集與兩個 IBM 建立的安全群組
+`public_networks` 及 `dns`，將會停用對外部網路的廣域存取，必須小心使用取消連結，並了解它對您環境中所有編譯打包中的應用程式造成的結果。
+
 **提示：**您也可以使用 **ba ussg** 作為 **ba unbind-staging-security-group** 這個較長指令名稱的別名。
 
 * 若要從 Default Running 安全群組集取消連結，請使用下列指令：
@@ -945,7 +982,10 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">您的安全群組名稱</dd>
 </dl>
 
-**提示：**您也可以使用 **ba brsg** 作為 **ba bind-running-security-group** 這個較長指令名稱的別名。
+**警告**：取消連結 **Default Running** 群組集與兩個 IBM 建立的安全群組
+`public_networks` 及 `dns`，將會停用對外部網路的廣域存取，必須小心使用取消連結，並了解它對您環境中所有執行中的應用程式造成的結果。
+
+**提示：**您也可以使用 **ba brsg** 作為 **ba unbind-running-security-group** 這個較長指令名稱的別名。
 
 * 若要取消安全群組與空間的連結，請使用下列指令：
 

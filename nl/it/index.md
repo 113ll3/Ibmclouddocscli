@@ -46,7 +46,7 @@ bluemix plugin install plugin_name -r Bluemix
 ```
 
 | *CLI {{site.data.keyword.autoscaling}} * |  *Servizio IBM Bluemix Container*  |
-|-----|-----|-----|
+|-----|-----|
 | Nome del plug-in: auto-scaling <br> [Visualizza documenti](/docs/cli/plugins/auto-scaling/index.html) |  Nome del plug-in: container-service  <br> [Visualizza documenti](/docs/containers/cs_cli_devtools.html) |
 {: caption="Tabella 2. Plug-in" caption-side="top"}
 
@@ -86,15 +86,11 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-| *Console di gestione* |
------------------|
-|  Nome del plug-in: bluemix-admin <br> [Visualizza documenti](/docs/cli/plugins/bluemix_admin/index.html) |
+| *Console di gestione* | *VPN* |
+|-----------------|-----------------|
+|  Nome del plug-in: bluemix-admin <br> [Visualizza documenti](/docs/cli/plugins/bluemix_admin/index.html) | Nome del plug-in: VPN <br> [Visualizza documenti](/docs/cli/plugins/vpn/index.html) |
 {: caption="Tabella 4. Plug-in" caption-side="top"}
 
-| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
-|-----------------|-----------------|
-| Nome del plug-in: ibm-containers <br> [Visualizza documenti![Icona link esterno](../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic){: new_window} | Nome del plug-in: VPN <br> [Visualizza documenti](/docs/cli/plugins/vpn/index.html) |
-{: caption="Tabella 5. Plug-in" caption-side="top"}
 
 ## ![](./images/Integrated_Dev_Tools.svg) Strumenti di sviluppo integrati
 {: #ide notoc}
@@ -104,4 +100,4 @@ Scarica e installa i plug-in per integrare i tuoi servizi {{site.data.keyword.Bl
 | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
 |----------|----------|----------|----------|----------|
 | [Plug-in Eclipse Liberty ![Icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in Eclipse ![Icona link esterno](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Eclipse Rules Designer](../services/rules/index.html#rulov002) | [Toolkit sviluppatori](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Plug-in Eclipse Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="Tabella 6. Plug-in" caption-side="top"}
+{: caption="Tabella 5. Plug-in" caption-side="top"}

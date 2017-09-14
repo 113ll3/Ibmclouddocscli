@@ -45,7 +45,7 @@ bluemix plugin install plugin_name -r Bluemix
 ```
 
 | *{{site.data.keyword.autoscaling}} CLI* |  *IBM Bluemix 컨테이너 서비스*  |
-|-----|-----|-----|
+|-----|-----|
 | 플러그인 이름: auto-scaling <br> [문서 보기](/docs/cli/plugins/auto-scaling/index.html) |  플러그인 이름: container-service  <br> [문서 보기](/docs/containers/cs_cli_devtools.html) |
 {: caption="표 2. 플러그인" caption-side="top"}
 
@@ -85,15 +85,11 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-| *관리 콘솔* |
------------------|
-|  플러그인 이름: bluemix-admin<br> [문서 보기](/docs/cli/plugins/bluemix_admin/index.html) |
+| *관리자 콘솔* | *VPN* |
+|-----------------|-----------------|
+|  플러그인 이름: bluemix-admin<br> [문서 보기](/docs/cli/plugins/bluemix_admin/index.html) | 플러그인 이름: VPN <br> [문서 보기](/docs/cli/plugins/vpn/index.html) |
 {: caption="표 4. 플러그인" caption-side="top"}
 
-| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}*| *VPN* |
-|-----------------|-----------------|
-| 플러그인 이름: ibm-containers<br> [문서 보기 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic){: new_window} | 플러그인 이름: VPN <br> [문서 보기](/docs/cli/plugins/vpn/index.html) |
-{: caption="표 5. 플러그인" caption-side="top"}
 
 ## ![](./images/Integrated_Dev_Tools.svg) 통합 개발 도구
 {: #ide notoc}
@@ -103,4 +99,4 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Bluemix용 Eclipse 도구* |
 |----------|----------|----------|----------|----------|
 | [Liberty Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 플러그인](../services/rules/index.html#rulov002) | [개발자 툴킷](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse 플러그인](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="표 6. 플러그인" caption-side="top"}
+{: caption="표 5. 플러그인" caption-side="top"}

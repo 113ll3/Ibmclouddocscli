@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-07-27"
+lastupdated: "2017-08-30"
 
 
 ---
@@ -236,20 +236,7 @@ bx cr plan-upgrade standard
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-무료 스토리지 및 가져오기 트래픽 허용량을 고려하여 사용량의 예상 비용을 미국 달러로 계산합니다.
-
-```
-bx cr pricing --traffic VALUE --storage VALUE
-```
-{: codeblock}
-
-**매개변수**
-<dl>
-<dt>--traffic VALUE</dt>
-<dd>예상되는 월별 가져오기 트래픽을 메가바이트 단위로 지정하십시오. 트래픽은 정수로 지정해야 합니다.</dd>
-<dt>--storage VALUE</dt>
-<dd>예상되는 평균 총 스토리지를 메가바이트 단위로 지정하십시오. 스토리지는 정수로 지정해야 합니다.</dd>
-</dl>
+이 명령은 제거되었습니다. 가격 책정 계산기를 사용하여 예상 비용을 계산할 수 있습니다. [IBM Bluemix Container Registry의 비용 추정](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02)을 참조하십시오.
 
 
 ## bx cr quota

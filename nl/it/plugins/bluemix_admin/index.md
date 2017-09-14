@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -724,23 +724,55 @@ tra virgolette.</dd>
 ## Visualizzazione delle informazioni sulle metriche della risorsa
 {: #cliresourceusage}
 
-Puoi visualizzare le informazioni sulle metriche della risorsa, tra cui l'utilizzo di memoria, disco e CPU. Oltre all'utilizzo di tali risorse, puoi vedere un riepilogo delle risorse fisiche e riservate disponibili. Puoi anche visualizzare i dati di utilizzo dei DEA (droplet execution agent) e delle celle (architettura Diego) e i dati cronologici per l'utilizzo di memoria e disco. Per impostazione predefinita, i dati cronologici per l'utilizzo di memoria e disco vengono visualizzati settimanalmente e in ordine decrescente. Per visualizzare le informazioni sulle metriche della risorsa, utilizza il seguente comando:
+Puoi visualizzare le informazioni sulle metriche della risorsa, tra cui l'utilizzo di memoria, disco e CPU. Oltre all'utilizzo di tali risorse, puoi vedere un riepilogo delle risorse fisiche e riservate disponibili. Inoltre, puoi visualizzare i dati di utilizzo dei DEA (droplet execution agent) e delle celle (architettura Diego). Per visualizzare le informazioni sulle metriche della risorsa, utilizza il seguente comando:
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
 ```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;mensile&gt;</dt>
-<dd class="pd">Visualizzare i dati cronologici per la memoria e lo spazio su disco un mese alla volta.</dd>
-<dt class="pt dlterm">&lt;settimanale&gt;</dt>
-<dd class="pd">Visualizzare i dati cronologici per la memoria e lo spazio su disco una settimana alla volta. Questo è il valore predefinito.</dd>
-</dl>
 
 **Suggerimento:** puoi anche utilizzare **ba rsm** come alias per il più lungo
 nome comando **ba resource-metrics**.
 
+## Visualizzazione della cronologia delle metriche di risorse 
+{: #cliresourceusagehistory}
+
+Puoi richiamare la cronologia delle metriche di risorse relativa all'utilizzo di memoria e disco. Le metriche restituite includono la quantità di risorse utilizzate rispetto al totale disponibile, sia per le risorse fisiche che riservate. I dati cronologici per l'utilizzo di memoria e disco possono essere visualizzati su base oraria, giornaliera o mensile. Puoi specificare le date di inizio e di fine per richiamare i dati in un intervallo di date specifico. Se non si specificano delle date, i dati cronologici predefiniti sono i dati della memoria su base oraria per le ultime 48 ore. I dati vengono visualizzati in ordine decrescente, con le date più recenti mostrate per prima.   Per visualizzare le informazioni sulla cronologia delle metriche di risorse, utilizza il seguente comando:
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">Visualizza i dati cronologici per le ultime 48 ore. Questo è il valore predefinito.</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">Visualizza la media giornaliera dei dati cronologici per gli ultimi 30 giorni.</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">Visualizza la media mensile dei dati cronologici per gli ultimi 6 mesi.</dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">Visualizza la quantità totale e utilizzata per la memoria riservata e fisica. </dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">Visualizza la quantità totale e utilizzata per il disco riservato e fisico. </dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">Specifica una data di inizio per la base giornaliera o mensile (il formato deve essere mm-gg-aaaa) o una data e ora di inizio per la base oraria (il formato deve essere con fuso orario mm-gg-aaaa hh:mm:ss) </dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">Specifica una data di fine per la base giornaliera o mensile (il formato deve essere mm-gg-aaaa) o una data e ora di fine per la base oraria (il formato deve essere con fuso orario mm-gg-aaaa hh:mm:ss) </dd>
+</dl>
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Esempi&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+Puoi visualizzare il precedente elenco di parametri di comando ed esempi utilizzando il seguente comando:
+**Suggerimento:** puoi anche utilizzare **ba rsmh** come alias per il più
+lungo nome comando **ba resource-metrics-history**.
 
 ## Gestione dei broker di servizi
 {: #admin_servbro}
@@ -842,6 +874,8 @@ Per gestire i gruppi di sicurezza dell'applicazione (ASG), devi essere un ammini
 I gruppi ASG funzionano come firewall virtuali che controllano il traffico dall'applicazione presente nel tuo ambiente {{site.data.keyword.Bluemix_notm}}. Ogni ASG è costituito da un elenco di regole che consentono un traffico specifico e la comunicazione da e verso la rete esterna. Puoi associare uno o più ASG a una specifica serie di gruppi di sicurezza, ad esempio a una serie di gruppi utilizzata per applicare l'accesso globale, oppure associarli agli spazi all'interno di un'organizzazione nel tuo ambiente {{site.data.keyword.Bluemix_notm}}.
 
 {{site.data.keyword.Bluemix_notm}} è inizialmente impostato con limitazioni a tutti gli accessi alla rete esterna. Due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, abilitano l'accesso globale alla rete esterna quando esegui il bind di tali gruppi alla serie di gruppi di sicurezza Cloud Foundry predefinita. Le due serie di gruppi di sicurezza in Cloud Foundry utilizzate per applicare l'accesso globale sono **Preparazione predefinita** ed **Esecuzione predefinita**. Queste serie di gruppi applicano le regole per consentire il traffico a tutte le applicazioni in esecuzione o a tutte le applicazioni in fase di preparazione. Se non vuoi eseguire il bind a queste due serie di gruppi di sicurezza, puoi annullare il bind alle serie di gruppi Cloud Foundry e quindi associare il gruppo a uno specifico spazio. Per ulteriori informazioni, vedi [Binding Application Security Groups ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+
+**Avvertenza**: l'annullamento del bind delle serie di gruppi **Preparazione predefinita** o **Esecuzione predefinita** dai due gruppi di sicurezza creati da IBM, `public_networks` e `dns` disabiliterà l'accesso globale alla rete esterna. Utilizza l'annullamento del bind con cautela e consapevolezza delle conseguenze su tutte le applicazioni in esecuzione e in fase di preparazione nel tuo ambiente.
 
 **Nota**: i seguenti comandi che consentono di gestire i gruppi di sicurezza, si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, inclusi i campi obbligatori e facoltativi, vedi la sezione Cloud Foundry relativa a [Creating Application Security Groups ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
@@ -1008,6 +1042,8 @@ cf ba unbind-staging-security-group <gruppo-di-sicurezza>
 <dd class="pd">Nome del tuo gruppo di sicurezza</dd>
 </dl>
 
+**Avvertenza**: l'annullamento del bind della serie di gruppi  **Preparazione predefinita** dai due gruppi di sicurezza creati da IBM, `public_networks` e `dns` disabiliterà l'accesso globale alla rete esterna e deve essere utilizzato con cautela e comprensione delle conseguenze che ha su tutte le applicazioni in fase di preparazione nel tuo ambiente.
+
 **Suggerimento:** puoi anche utilizzare **ba ussg** come alias per il più lungo nome comando
 **ba unbind-staging-security-group**.
 
@@ -1023,8 +1059,10 @@ cf ba unbind-running-security-group <gruppo-di-sicurezza>
 <dd class="pd">Nome del tuo gruppo di sicurezza</dd>
 </dl>
 
-**Suggerimento:** puoi anche utilizzare **ba brsg** come alias per il più lungo nome comando
-**ba bind-running-security-group**.
+**Avvertenza**: l'annullamento del bind della serie di gruppi  **Esecuzione predefinita** dai due gruppi di sicurezza creati da IBM, `public_networks` e `dns` disabiliterà l'accesso globale alla rete esterna e deve essere utilizzato con cautela e comprensione delle conseguenze che ha su tutte le applicazioni in esecuzione nel tuo ambiente.
+
+**Suggerimento:** puoi anche utilizzare **ba brsg** come alias per il più lungo
+nome comando **ba unbind-running-security-group**.
 
 * Per annullare il bind di un gruppo di sicurezza a uno spazio, utilizza il seguente comando:
 

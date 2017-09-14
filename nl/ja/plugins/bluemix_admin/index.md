@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-20"
+lastupdated: "2017-09-04"
 
 ---
 
@@ -672,22 +672,52 @@ cf ba retrieve-report <search>
 ## リソース・メトリック情報の表示
 {: #cliresourceusage}
 
-メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) およびセル (Diego アーキテクチャー) の使用データおよび履歴のメモリーとディスク使用量を確認することもできます。デフォルトでは、メモリーおよびディスク使用量の履歴データは、週次で降順に表示されます。リソース・メトリック情報を表示するには、以下のコマンドを使用します。
+メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) およびセル (Diego アーキテクチャー) の使用データも確認できます。リソース・メトリック情報を表示するには、以下のコマンドを使用します。
 
 ```
-cf ba resource-metrics <monthly> <weekly>
+cf ba resource-metrics
+```
+
+**ヒント:** **ba resource-metrics** という長いコマンド名の別名として **ba rsm** を使用することもできます。
+
+## リソース・メトリック履歴の表示 
+{: #cliresourceusagehistory}
+
+メモリーおよびディスクの使用量に関するリソース・メトリック履歴を取得できます。返されるメトリックは、物理リソースと予約済みリソースの両方について、使用可能な合計量のうちの使用済みリソースの量を示します。メモリーおよびディスクの使用量の履歴データは、毎時、日次、または月次で表示できます。特定の日付範囲内のデータを取得するには、開始日と終了日を指定します。日付が指定されていない場合、デフォルトの履歴データは、過去 48 時間の毎時のメモリー・データです。データは、最新の日付を先頭にして、降順に表示されます。リソース・メトリック履歴情報を表示するには、以下のコマンドを使用します。
+
+```
+cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">一度に 1 カ月分ずつ、メモリーおよびディスク・スペースの履歴データを表示します。</dd>
-<dt class="pt dlterm">&lt;weekly&gt;</dt>
-<dd class="pd">一度に 1 週間分ずつ、メモリーおよびディスク・スペースの履歴データを表示します。これはデフォルト値です。</dd>
+<dt class="pt dlterm">&lt;--hourly&gt;</dt>
+<dd class="pd">過去 48 時間の履歴データを表示します。これはデフォルト値です。</dd>
+<dt class="pt dlterm">&lt;--daily&gt;</dt>
+<dd class="pd">過去 30 日間の履歴データの日次平均を表示します。</dd>
+<dt class="pt dlterm">&lt;--monthly&gt;</dt>
+<dd class="pd">過去 6 カ月間の履歴データの月次平均を表示します。</dd>
+<dt class="pt dlterm">&lt;--memory&gt;</dt>
+<dd class="pd">予約済みメモリーと物理メモリーの使用量と合計を表示します。</dd>
+<dt class="pt dlterm">&lt;--disk&gt;</dt>
+<dd class="pd">予約済みディスクと物理ディスクの使用量と合計を表示します。</dd>
+<dt class="pt dlterm">&lt;--start&gt;</dt>
+<dd class="pd">日次または月次の開始日 (形式 mm-dd-yyyy)、または毎時の開始日時 (形式 mm-dd-yyyy hh:mm:ss timezone) を指定します </dd>
+<dt class="pt dlterm">&lt;--end&gt;</dt>
+<dd class="pd">日次または月次の終了日 (形式 mm-dd-yyyy)、または毎時の終了日時 (形式 mm-dd-yyyy hh:mm:ss timezone) を指定します</dd>
 </dl>
 
-**ヒント:** **ba resource-metrics** という長いコマンド名の別名として **ba rsm** を使用することもできます。
+{: codeblock}
 
+<dl class="parml">
+<dt class="pt dlterm">&lt;Examples&gt;</dt>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+</dl>
+
+以下のコマンドを使用して、上記のコマンド・パラメーターおよび例のリストを表示できます。**ヒント:** **ba resource-metrics-history** という長いコマンド名の別名として **ba rsmh** を使用することもできます。
 
 ## サービス・ブローカーの管理
 {: #admin_servbro}
@@ -783,6 +813,8 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ASG は、{{site.data.keyword.Bluemix_notm}} 環境内のアプリケーションからのアウトバウンド・トラフィックを制御する仮想ファイアウォールとして機能します。各 ASG は、外部ネットワークに対する特定のトラフィックおよび通信を許可するルールのリストから構成されます。1 つ以上の ASG を特定のセキュリティー・グループ・セット (例えば、グローバル・アクセスの適用に使用されるグループ・セットなど) にバインドすることや、{{site.data.keyword.Bluemix_notm}} 環境の組織内のスペースにバインドすることができます。
 
 {{site.data.keyword.Bluemix_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。詳しくは、[アプリケーション・セキュリティー・グループのバインド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} を参照してください。
+
+**警告**: IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` から**デフォルト・ステージング**または**デフォルト実行**のグループ・セットをアンバインドすると、外部ネットワークへのグローバル・アクセスが無効になります。アンバインドは、環境内で実行中およびステージング中のすべてのアプリケーションへの悪影響を認識して、十分注意して使用してください。
 
 **注**: セキュリティー・グループに関する作業を可能にする以下のコマンドは、Cloud Foundry 1.6 バージョンをベースとしています。必須フィールドやオプション・フィールドなどの詳細については、[アプリケーション・セキュリティー・グループの作成 ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} に関する Cloud Foundry 資料を参照してください。
 
@@ -941,6 +973,8 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">セキュリティー・グループの名前</dd>
 </dl>
 
+**警告**: IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` から**デフォルト・ステージング**のグループ・セットをアンバインドすると、外部ネットワークへのグローバル・アクセスが無効になります。アンバインドは、環境内でステージング中のすべてのアプリケーションに与える悪影響を理解し、十分注意して使用する必要があります。
+
 **ヒント:** **ba unbind-staging-security-group** という長いコマンド名の別名として **ba ussg** を使用することもできます。
 
 * デフォルト実行のセキュリティー・グループ・セットからアンバインドするには、以下のコマンドを使用します。
@@ -955,7 +989,9 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">セキュリティー・グループの名前</dd>
 </dl>
 
-**ヒント:** **ba bind-running-security-group** という長いコマンド名の別名として **ba brsg**を使用することもできます。
+**警告**: IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` から**デフォルト実行**のグループ・セットをアンバインドすると、外部ネットワークへのグローバル・アクセスが無効になります。アンバインドは、環境内で実行中のすべてのアプリケーションに与える悪影響を理解し、十分注意して使用する必要があります。
+
+**ヒント:** **ba unbind-running-security-group** という長いコマンド名の別名として **ba brsg** を使用することもできます。
 
 * スペースに対してセキュリティー・グループをアンバインドするには、以下のコマンドを使用します。
 
