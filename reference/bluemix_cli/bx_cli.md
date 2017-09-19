@@ -697,7 +697,7 @@ bluemix iam org-replicate myorg eu-gb
 ## bluemix iam org-rename
 {: #bluemix_iam_org_rename}
 
-Rename an organization. This operation can be done only by an org manager.
+Rename an organization. This operation can only be done by an org manager.
 
 ```
 bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
@@ -797,7 +797,7 @@ Add a user into the org (org manager required).
 ## bluemix iam org-user-remove
 {: #bluemix_iam_org_user_remove}
 
-Remove a user from the org (org manager or user him/herself only)
+Remove a user from the org (org manager or user him/herself only).
 
 ```
    bluemix iam org-user-remove USER_NAME ORG [-f, --force]
@@ -823,7 +823,7 @@ bluemix iam org-roles
 ## bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
 
-Assign an organization role to a user. This operation can be performed only by an organization manager.
+Assign an organization role to a user. This operation can only be performed by an organization manager.
 
 ```
 bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
@@ -953,7 +953,7 @@ bluemix iam space-role-set Mary IBM Cloud SpaceManager
 ## bluemix iam space-role-unset
 {: #bluemix_iam_space_role_unset}
 
-Remove a space role from a user. This operation can be performed only by a space manager.
+Remove a space role from a user. This operation can only be performed by a space manager.
 
 ```
 bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
