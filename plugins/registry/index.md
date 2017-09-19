@@ -240,7 +240,7 @@ bx cr plan-upgrade standard
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-This command has been removed. You can use the pricing calculator to calculate your estimated cost, see [Estimating costs for IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02).
+This command has been removed. You can use the pricing calculator to calculate your estimated cost, see [Estimating costs for IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## bx cr quota
@@ -377,7 +377,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-For more information, see [Reviewing image security](../../../services/Registry/registry_images_.html#registry_security_checking).
+For more information, see [Managing container and image security with Vulnerability Advisor](../../../services/Registry/va/va_index.html#va_index).
 
 </dd>
 
