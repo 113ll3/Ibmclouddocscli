@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-06-22"
+lastupdated: "2017-09-19"
 
 ---
 
@@ -589,7 +589,7 @@ bluemix update
 ### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
-List all organizations
+List all organizations.
 
 ```
 bluemix iam orgs [-r REGION] [--guid]
@@ -607,7 +607,7 @@ bluemix iam orgs [-r REGION] [--guid]
 
 <strong>Examples</strong>:
 
-List all the organizations in region: `us-south` with the GUID displayed
+List all the organizations in region: `us-south` with the GUID displayed.
 
 ```
 bluemix iam orgs -r us-south --guid
@@ -634,7 +634,7 @@ bluemix iam org ORG_NAME [--guid]
 
 <strong>Examples</strong>:
 
-Show the information of organization `IBM` with the GUID displayed
+Show the information for the organization `IBM` with the GUID displayed.
 
 ```
 bluemix iam org IBM --guid
@@ -644,7 +644,7 @@ bluemix iam org IBM --guid
 ## bluemix iam org-create
 {: #bluemix_iam_org_create}
 
-Create a new organization. This operation can only be performed by account owner.
+Create a new organization. This operation can only be performed by the account owner.
 
 ```
 bluemix iam org-create ORG_NAME
@@ -716,7 +716,7 @@ bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
 ## bluemix iam org-delete
 {: #bluemix_iam_org_delete}
 
-Delete the specified organization in current region.
+Delete the specified organization in the current region.
 
 ```
 bluemix iam org-delete ORG_NAME [-f --all]
@@ -788,7 +788,7 @@ bluemix iam org-users ORG_NAME [-a]
 ## bluemix iam org-user-add
 {: #bluemix_iam_org_user_add}
 
-Add a user into org (org manager required).
+Add a user into the org (org manager required).
 
 ```
  bluemix iam org-user-add USER_NAME ORG
@@ -797,7 +797,7 @@ Add a user into org (org manager required).
 ## bluemix iam org-user-remove
 {: #bluemix_iam_org_user_remove}
 
-Remove a user from org (org manager or user him/herself only)
+Remove a user from the org (org manager or user him/herself only)
 
 ```
    bluemix iam org-user-remove USER_NAME ORG [-f, --force]
@@ -812,7 +812,7 @@ Remove a user from org (org manager or user him/herself only)
 ## bluemix iam org-roles
 {: #bluemix_iam_org_roles}
 
-Get all organization roles of the current user
+Get all organization roles of the current user.
 
 ```
 bluemix iam org-roles
@@ -836,9 +836,9 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>USER_NAME (required)</dt>
    <dd>The name of the user being assigned.</dd>
    <dt>ORG_NAME (required)</dt>
-   <dd>The name of the organization this user is assigned to.</dd>
+   <dd>The name of the organization the user is assigned to.</dd>
    <dt>ORG_ROLE (required)</dt>
-   <dd>The name of the organization role this user is assigned to. For example:
+   <dd>The name of the organization role the user is assigned to. For example:
    <ul>
    <li>OrgManager: This role can invite and manage users, select and change plans, and set spending limits.</li>
    <li>BillingManager: This role can create and manage the billing account and payment information.</li>
@@ -849,7 +849,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 
 <strong>Examples</strong>:
 
-Assign user `Mary` to the organization `IBM` as `OrgManager` role:
+Assign user `Mary` to the organization `IBM` as the `OrgManager` role:
 
 ```
 bluemix iam org-role-set Mary IBM OrgManager
@@ -861,7 +861,7 @@ bluemix iam org-role-set Mary IBM OrgManager
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
 
-Remove an organization role from a user. This operation can be performed only by an organization manager.
+Remove an organization role from a user. This operation can only be performed by an organization manager.
 
 ```
 bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
@@ -874,9 +874,9 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>USER_NAME (required)</dt>
    <dd>The name of the user being removed.</dd>
    <dt>ORG_NAME (required)</dt>
-   <dd>The name of the organization this user is removed from.</dd>
+   <dd>The name of the organization the user is removed from.</dd>
    <dt>ORG_ROLE (required)</dt>
-   <dd>The name of the organization role this user is removed from. For example:
+   <dd>The name of the organization role the user is removed from. For example:
    <ul>
    <li>OrgManager: This role can invite and manage users, select and change plans, and set spending limits.</li>
    <li>BillingManager: This role can create and manage the billing account and payment information.</li>
@@ -887,7 +887,7 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
 
 <strong>Examples</strong>:
 
-Remove user `Mary` from the organization `IBM` as `OrgManager` role:
+Remove user `Mary` from the organization `IBM` as the `OrgManager` role:
 
 ```
 bluemix iam org-role-unset Mary IBM OrgManager
@@ -916,7 +916,7 @@ bluemix iam space-users ORG_NAME SPACE_NAME
 ## bluemix iam space-role-set
 {: #bluemix_iam_space_role_set}
 
-Assign a space role to a user. This operation can be performed only by a space manager.
+Assign a space role to a user. This operation can only be performed by a space manager.
 
 ```
 bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -930,11 +930,11 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>USER_NAME (required)</dt>
    <dd>The name of the user being assigned.</dd>
    <dt>ORG_NAME (required)</dt>
-   <dd>The name of the organization this user is assigned to.</dd>
+   <dd>The name of the organization the user is assigned to.</dd>
    <dt>SPACE_NAME (required)</dt>
-   <dd>The name of the space this user is assigned to.</dd>
+   <dd>The name of the space the user is assigned to.</dd>
    <dt>SPACE_ROLE (required)</dt>
-   <dd>The name of the space role this user is assigned to. For example:
+   <dd>The name of the space role the user is assigned to. For example:
    <ul>
    <li>SpaceManager: This role can invite and manage users, and enable features for a given space.</li>
    <li>SpaceDeveloper: This role can create and manage apps and services, and see logs and reports.</li>
@@ -944,7 +944,7 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
 <strong>Examples</strong>:
 
-Assign user `Mary` to the organization `IBM` and space `Cloud` as `SpaceManager` role:
+Assign user `Mary` to the organization `IBM` and the space `Cloud` as the `SpaceManager` role:
 
 ```
 bluemix iam space-role-set Mary IBM Cloud SpaceManager
@@ -967,11 +967,11 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>USER_NAME (required)</dt>
    <dd>The name of the user being removed.</dd>
    <dt>ORG_NAME (required)</dt>
-   <dd>The name of the organization this user is removed from.</dd>
+   <dd>The name of the organization the user is removed from.</dd>
    <dt>SPACE_NAME (required)</dt>
-   <dd>The name of the space this user is removed from.</dd>
+   <dd>The name of the space the user is removed from.</dd>
    <dt>SPACE_ROLE (required)</dt>
-   <dd>The name of the space role this user is removed from. For example:
+   <dd>The name of the space role the user is removed from. For example:
    <ul>
    <li>SpaceManager: This role can invite and manage users, and enable features for a given space.</li>
    <li>SpaceDeveloper: This role can create and manage apps and services, and see logs and reports.</li>
@@ -982,7 +982,7 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
 <strong>Examples</strong>:
 
-Remove user `Mary` from the organization `IBM` and space `Cloud` as `SpaceManager` role:
+Remove user `Mary` from the organization `IBM` and the space `Cloud` as the `SpaceManager` role:
 
 ```
 bluemix iam space-role-unset Mary IBM Cloud SpaceManager
@@ -991,7 +991,7 @@ bluemix iam space-role-unset Mary IBM Cloud SpaceManager
 ## bluemix iam accounts
 {: #bluemix_iam_accounts}
 
-List all accounts of the current user
+List all accounts of the current user.
 
 ```
 bluemix iam accounts
@@ -1003,7 +1003,7 @@ bluemix iam accounts
 ## bluemix iam org-account
 {: #bluemix_iam_org_account}
 
-Display the account of specified organization(org user required)
+Display the account of the specified organization (org user required).
 
 ```
 bluemix iam org-account ORG_NAME [--guid]
@@ -1014,14 +1014,14 @@ bluemix iam org-account ORG_NAME [--guid]
 <strong>Command options</strong>:
 <dl>
   <dt>--guid (optional)</dt>
-  <dd>Display account ID only</dd>
+  <dd>Display account ID only.</dd>
 </dl>
 
 
 ## bluemix iam account-users
 {: #bluemix_iam_account_users}
 
-Displays users associated with the account. This operation can be performed only by the account owner.
+Displays users associated with the account. This operation can only be performed by the account owner.
 
 ```
 bluemix iam account-users
@@ -1030,7 +1030,7 @@ bluemix iam account-users
 ## bluemix iam account-user-delete
 {: #bluemix_iam_account_user_delete}
 
-Delete a user from the current account(account owner only)
+Delete a user from the current account (account owner only).
 
 ```
 bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
@@ -1043,7 +1043,7 @@ bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 <dt>USERNAME (required)</dt>
 <dd>Username</dd>
 <dt>-c ACCOUNT_ID</dt>
-<dd>Account ID. If not specified, default to current account.</dd>
+<dd>Account ID. If not specified, default to the current account.</dd>
 <dt>--force, -f (optional)</dt>
 <dd>Force deletion without confirmation.</dd>
 </dl>
@@ -1051,7 +1051,7 @@ bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix iam account-user-invite
 {: #bluemix_iam_account_user_invite}
 
-Invites a user to the account with an organization and space role already set. This operation can be performed only by the account owner.
+Invites a user to the account with an organization and space role already set. This operation can only be performed by the account owner.
 
 ```
 bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
@@ -1064,18 +1064,18 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dt>USER_NAME (required)</dt>
    <dd>The name of the user being invited.</dd>
    <dt>ORG_NAME (required)</dt>
-   <dd>The name of the organization this user is invited to.</dd>
+   <dd>The name of the organization the user is invited to.</dd>
    <dt>ORG_ROLE (required)</dt>
-   <dd>The name of the organization role this user is invited to. For example:
+   <dd>The name of the organization role the user is invited to. For example:
    <ul>
   <li>OrgManager: This role can invite and manage users, select and change plans, and set spending limits.</li>
   <li>BillingManager: This role can create and manage the billing account and payment information.</li>
   <li>OrgAuditor: This role has read-only access to org information and reports.</li>
   </ul> </dd>
    <dt>SPACE_NAME (required)</dt>
-   <dd>The name of the space this user is invited to.</dd>
+   <dd>The name of the space the user is invited to.</dd>
    <dt>SPACE_ROLE (required)</dt>
-   <dd>The name of the space this user is invited to. The name of the space role this user is invited to. For example:
+   <dd>The name of the space the user is invited to. The name of the space role the user is invited to. For example:
    <ul>
 <li>SpaceManager: This role can invite and manage users, and enable features for a given space.</li>
 <li>SpaceDeveloper: This role can create and manage apps and services, and see logs and reports.</li>
@@ -1086,7 +1086,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 
 <strong>Examples</strong>:
 
-Invite user `Mary` to the organization `IBM` as `OrgManager` role and the space `Cloud` as `SpaceAuditor` role:
+Invite user `Mary` to the organization `IBM` as the `OrgManager` role and the space `Cloud` as the `SpaceAuditor` role:
 
 ```
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
@@ -1097,7 +1097,7 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}
 
-Resend invitation to a user(org manager or account owner is required)
+Resend an invitation to a user (org manager or account owner is required).
 
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
@@ -1106,7 +1106,7 @@ Resend invitation to a user(org manager or account owner is required)
 ## bluemix iam api-keys
 {: #bluemix_iam api_keys}
 
-List all Bluemix platform API keys
+List all Bluemix platform API keys.
 
 ```
 bluemix iam api-keys
@@ -1117,7 +1117,7 @@ bluemix iam api-keys
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-Create a new Bluemix platform API key
+Create a new Bluemix platform API key.
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1130,14 +1130,14 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dt>NAME (required)</dt>
 <dd>Name of the API key to be created.</dd>
 <dt>-d <i>DESCRIPTION</i> (optional)</dt>
-<dd>Description of the API key</dd>
+<dd>Description of the API key.</dd>
 <dt>-f, -- file <i>FILE</i></dt>
-<dd>Save API key information to specified file. If not set, the JSON content will be displayed.</dd>
+<dd>Save API key information to a specified file. If not set, the JSON content will be displayed.</dd>
 </dl>
 
 <strong>Examples</strong>:
 
-Create an API key and save to a file
+Create an API key and save to a file.
 
 ```
 bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
@@ -1146,7 +1146,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-Update a Bluemix platform API key
+Update a Bluemix platform API key.
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1159,9 +1159,9 @@ bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 <dt>NAME (required)</dt>
 <dd>The old name of the API key to be updated.</dd>
 <dt>-n <i>NAME</i> (optional)</dt>
-<dd>The new name of the API key</dd>
+<dd>The new name of the API key.</dd>
 <dt>-d <i>DESCRIPTION</i> (optional)</dt>
-<dd>The new description of the API key</dd>
+<dd>The new description of the API key.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1175,7 +1175,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-Delete a Bluemix platform API key
+Delete a Bluemix platform API key.
 
 ```
 bluemix iam api-key-delete NAME [-f]
