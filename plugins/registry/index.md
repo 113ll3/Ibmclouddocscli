@@ -377,7 +377,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-For more information, see [Managing container and image security with Vulnerability Advisor](../../../services/Registry/va/va_index.html#va_index).
+For more information, see [Managing image security with Vulnerability Advisor](../../../services/Registry/va/va_index.html#va_index).
 
 </dd>
 
