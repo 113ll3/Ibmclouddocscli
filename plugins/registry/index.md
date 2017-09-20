@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-19"
+lastupdated: "2017-09-20"
 
 
 ---
@@ -377,7 +377,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-For more information, see [Managing image security with Vulnerability Advisor](../../../services/containers/va/va_index.html#va_index).
+For more information, see [Managing image security with Vulnerability Advisor](../../../containers/va/va_index.html#va_index).
 
 </dd>
 
