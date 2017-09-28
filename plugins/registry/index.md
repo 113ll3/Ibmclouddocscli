@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-21"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -37,33 +37,33 @@ To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [Se
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -75,6 +75,33 @@ Returns the details about the registry API endpoint that the commands are run ag
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+Builds a Docker image in {{site.data.keyword.registrylong}}.
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**Parameters**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>The location of your build context, which contains your Dockerfile and prerequisite files.</dd>
+<dt>--no-cache</dt>
+<dd>(Optional)  If specified, cached image layers from previous builds are not used in this build.</dd>
+<dt>--pull</dt>
+<dd>(Optional)  If specified, the base image is pulled even if an image with a matching tag already exists on the build host.</dd>
+<dt>--quiet, -q</dt>
+<dd>(Optional) If specified, build output is suppressed unless an error occurs.</dd>
+<dt> --build-arg value</dt>
+<dd>(Optional) Specify an additional build argument in the format 'KEY=VALUE'. Multiple build arguments can be specified by including this parameter multiple times. The value of build arguments are available as environment variables when you specify an ARG line that matches the key in your Dockerfile.</dd>
+<dt>--tag value, -t value</dt>
+<dd>The full name for the image that you want to build, which includes the registry URL and namespace.</dd>
+</dl>
 
 
 ## bx cr info
@@ -239,7 +266,7 @@ bx cr plan-upgrade [PLAN]
 **Parameters**
 <dl>
 <dt>PLAN</dt>
-<dd>The name of the pricing plan that you want to upgrade to. If PLAN is not specified, the default is `Standard`.</dd>
+<dd>The name of the pricing plan that you want to upgrade to. If PLAN is not specified, the default is `standard`.</dd>
 </dl>
 
 
