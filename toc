@@ -5,17 +5,9 @@
 CLI and Dev Tools
 
 	{: .navgroup id="learn"}
-	{: .topicgroup}
-	Downloads
-	    index.md
-	    icat.md
-	    
+	index.md
+	reference/bluemix_cli/get_started.md
 	[Getting started with CF CLI](https://github.com/cloudfoundry/cli#getting-started)
-	reference/bluemix_cli/index.md
-	
-	{: .topicgroup}
-	Related links
-	    [bx tool](http://clis.ng.bluemix.net/ui/home.html)
 	{: .navgroup-end}
 	
 	{: .navgroup id="reference"}
@@ -23,8 +15,7 @@ CLI and Dev Tools
 	reference/bluemix_cli/all_versions.md
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
-	reference/cloudcli/index.md
-	
+
 	{: .topicgroup}
 	Bluemix CLI plug-ins
 	        plugins/auto-scaling/index.md
@@ -53,7 +44,10 @@ CLI and Dev Tools
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
+	reference/bluemix_cli/download_cli.md
 	login_federated_id.md
+	reference/bluemix_cli/extend_cli.md
+	[Developing with toolchains](../services/ContinuousDelivery/dev_use_toolchains.html)
 	[Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
 	[Deploying your app with CLI](../starters/install_cli.html)
 	[Uploading your app](../starters/upload_app.html)
