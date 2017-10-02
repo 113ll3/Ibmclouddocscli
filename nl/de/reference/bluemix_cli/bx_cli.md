@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-06-22"
+lastupdated: "2017-09-19"
 
 ---
 
@@ -353,11 +353,11 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dl>
    <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
    <dd>Der Zeitlimitwert für HTTP-Anforderungen. Der Standardwert ist 60 Sekunden.</dd>
-   <dt>--trace true|false|<i>path-to-file</i></dt>
+   <dt>--trace true|false|<i>Dateipfad</i></dt>
    <dd>Trace für HTTP-Anforderungen mit Ausgabe auf Terminal oder in angegebener Datei aktivieren.</dd>
    <dt>--color true|false</dt>
    <dd>Farbausgabe aktivieren oder inaktivieren. Die Farbausgabe ist standardmäßig aktiviert.</dd>
-   <dt>--locale <i>LOCALE|CLEAR</i></dt>
+   <dt>--locale <i>LOCALE|CLEAR</i></dt>
    <dd>Eine Standardländereinstellung festlegen. Wenn LOCALE den Wert <i>CLEAR</i> hat, wird die vorherige Ländereinstellung gelöscht.</dd>
    <dt>--check-version true|false</dt>
    <dd>CLI-Versionsprüfung aktivieren oder inaktivieren.</dd>
@@ -590,7 +590,7 @@ bluemix update
 ### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
-Alle Organisationen auflisten
+Alle Organisationen auflisten.
 
 ```
 bluemix iam orgs [-r REGION] [--guid]
@@ -608,7 +608,7 @@ bluemix iam orgs [-r REGION] [--guid]
 
 <strong>Beispiele</strong>:
 
-Alle Organisationen in der angegebenen Region `us-south` auflisten und die GUID anzeigen
+Alle Organisationen in der angegebenen Region `us-south` auflisten und die GUID anzeigen.
 
 ```
 bluemix iam orgs -r us-south --guid
@@ -635,7 +635,7 @@ bluemix iam org ORG_NAME [--guid]
 
 <strong>Beispiele</strong>:
 
-Informationen für die Organisation `IBM` mit der GUID anzeigen
+Informationen für die Organisation `IBM` mit der GUID anzeigen.
 
 ```
 bluemix iam org IBM --guid
@@ -798,7 +798,7 @@ Benutzer zur Organisation hinzufügen (Organisationsmanager erforderlich).
 ## bluemix iam org-user-remove
 {: #bluemix_iam_org_user_remove}
 
-Benutzer aus Organisation entfernen (Organisationsmanager oder nur Benutzer selbst)
+Benutzer aus der Organisation entfernen (Organisationsmanager oder nur Benutzer selbst).
 
 ```
    bluemix iam org-user-remove USER_NAME ORG [-f, --force]
@@ -837,9 +837,9 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>USER_NAME (erforderlich)</dt>
    <dd>Der Name des Benutzers, der zugeordnet wird.</dd>
    <dt>ORG_NAME (erforderlich)</dt>
-   <dd>Der Name der Organisation, der dieser Benutzer zugeordnet wird.</dd>
+   <dd>Der Name der Organisation, der der Benutzer zugeordnet wird.</dd>
    <dt>ORG_ROLE (erforderlich)</dt>
-   <dd>Der Name der Organisationsrolle, der dieser Benutzer zugeordnet wird. Beispiel:
+   <dd>Der Name der Organisationsrolle, der der Benutzer zugeordnet wird. Beispiel:
    <ul>
    <li>OrgManager: Diese Rolle kann Benutzer einladen und verwalten, Pläne auswählen und ändern sowie Ausgabenlimits festlegen.</li>
    <li>BillingManager: Diese Rolle kann die Abrechnungskonto- und Zahlungsinformationen erstellen und verwalten.</li>
@@ -875,9 +875,9 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>USER_NAME (erforderlich)</dt>
    <dd>Der Name des Benutzers, der entfernt wird.</dd>
    <dt>ORG_NAME (erforderlich)</dt>
-   <dd>Der Name der Organisation, aus der dieser Benutzer entfernt wird.</dd>
+   <dd>Der Name der Organisation, aus der der Benutzer entfernt wird.</dd>
    <dt>ORG_ROLE (erforderlich)</dt>
-   <dd>Der Name der Organisationsrolle, aus der dieser Benutzer entfernt wird. Beispiel:
+   <dd>Der Name der Organisationsrolle, aus der der Benutzer entfernt wird. Beispiel:
    <ul>
    <li>OrgManager: Diese Rolle kann Benutzer einladen und verwalten, Pläne auswählen und ändern sowie Ausgabenlimits festlegen.</li>
    <li>BillingManager: Diese Rolle kann die Abrechnungskonto- und Zahlungsinformationen erstellen und verwalten.</li>
@@ -931,11 +931,11 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>USER_NAME (erforderlich)</dt>
    <dd>Der Name des Benutzers, der zugeordnet wird.</dd>
    <dt>ORG_NAME (erforderlich)</dt>
-   <dd>Der Name der Organisation, der dieser Benutzer zugeordnet wird.</dd>
+   <dd>Der Name der Organisation, der der Benutzer zugeordnet wird.</dd>
    <dt>SPACE_NAME (erforderlich)</dt>
-   <dd>Der Name des Bereichs, dem dieser Benutzer zugeordnet wird.</dd>
+   <dd>Der Name des Bereichs, dem der Benutzer zugeordnet wird.</dd>
    <dt>SPACE_ROLE (erforderlich)</dt>
-   <dd>Der Name der Bereichsrolle, die diesem Benutzer zugeordnet wird. Beispiel:
+   <dd>Der Name der Bereichsrolle, der der Benutzer zugeordnet wird. Beispiel:
    <ul>
    <li>SpaceManager: Diese Rolle kann Benutzer einladen und verwalten sowie Funktionen für einen angegebenen Bereich aktivieren.</li>
    <li>SpaceDeveloper: Diese Rolle kann Apps und Services erstellen und verwalten sowie Protokolle und Berichte anzeigen.</li>
@@ -968,11 +968,11 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>USER_NAME (erforderlich)</dt>
    <dd>Der Name des Benutzers, der entfernt wird.</dd>
    <dt>ORG_NAME (erforderlich)</dt>
-   <dd>Der Name der Organisation, aus der dieser Benutzer entfernt wird.</dd>
+   <dd>Der Name der Organisation, aus der der Benutzer entfernt wird.</dd>
    <dt>SPACE_NAME (erforderlich)</dt>
-   <dd>Der Name des Bereichs, aus dem dieser Benutzer entfernt wird.</dd>
+   <dd>Der Name des Bereichs, aus dem der Benutzer entfernt wird.</dd>
    <dt>SPACE_ROLE (erforderlich)</dt>
-   <dd>Der Name der Bereichsrolle, aus der dieser Benutzer entfernt wird. Beispiel:
+   <dd>Der Name der Bereichsrolle, aus der der Benutzer entfernt wird. Beispiel:
    <ul>
    <li>SpaceManager: Diese Rolle kann Benutzer einladen und verwalten sowie Funktionen für einen angegebenen Bereich aktivieren.</li>
    <li>SpaceDeveloper: Diese Rolle kann Apps und Services erstellen und verwalten sowie Protokolle und Berichte anzeigen.</li>
@@ -1065,18 +1065,18 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dt>USER_NAME (erforderlich)</dt>
    <dd>Der Name des Benutzers, der eingeladen wird.</dd>
    <dt>ORG_NAME (erforderlich)</dt>
-   <dd>Der Name der Organisation, zu der dieser Benutzer eingeladen wird.</dd>
+   <dd>Der Name der Organisation, zu der der Benutzer eingeladen wird.</dd>
    <dt>ORG_ROLE (erforderlich)</dt>
-   <dd>Der Name der Organisationsrolle, zu der dieser Benutzer eingeladen wird. Beispiel:
+   <dd>Der Name der Organisationsrolle, zu der der Benutzer eingeladen wird. Beispiel:
    <ul>
   <li>OrgManager: Diese Rolle kann Benutzer einladen und verwalten, Pläne auswählen und ändern sowie Ausgabenlimits festlegen.</li>
   <li>BillingManager: Diese Rolle kann die Abrechnungskonto- und Zahlungsinformationen erstellen und verwalten.</li>
   <li>OrgAuditor: Diese Rolle verfügt über Lesezugriff auf die Organisationsinformationen und -berichte.</li>
   </ul> </dd>
    <dt>SPACE_NAME (erforderlich)</dt>
-   <dd>Der Name des Bereichs, zu dem dieser Benutzer eingeladen wird.</dd>
+   <dd>Der Name des Bereichs, zu dem der Benutzer eingeladen wird.</dd>
    <dt>SPACE_ROLE (erforderlich)</dt>
-   <dd>Der Name des Bereichs, zu dem dieser Benutzer eingeladen wird. Der Name der Bereichsrolle, zu der dieser Benutzer eingeladen wird. Beispiel:
+   <dd>Der Name des Bereichs, zu dem der Benutzer eingeladen wird.Der Name der Bereichsrolle, zu der der Benutzer eingeladen wird. Beispiel:
    <ul>
 <li>SpaceManager: Diese Rolle kann Benutzer einladen und verwalten sowie Funktionen für einen angegebenen Bereich aktivieren.</li>
 <li>SpaceDeveloper: Diese Rolle kann Apps und Services erstellen und verwalten sowie Protokolle und Berichte anzeigen.</li>
@@ -1098,7 +1098,7 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}
 
-Einladung erneut an einen Benutzer senden (Organisationsmanager oder Kontoeigner erforderlich)
+Eine Einladung erneut an einen Benutzer senden (Organisationsmanager oder Kontoeigner erforderlich).
 
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
@@ -1133,12 +1133,12 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dt>-d <i>DESCRIPTION</i> (optional)</dt>
 <dd>Die Beschreibung des API-Schlüssels.</dd>
 <dt>-f, -- file <i>FILE</i></dt>
-<dd>Informationen zu API-Schlüssel in angegebener Datei speichern. Wenn nicht festgelegt, wird der JSON-Inhalt angezeigt.</dd>
+<dd>Informationen zu API-Schlüssel in einer angegebenen Datei speichern. Wenn nicht festgelegt, wird der JSON-Inhalt angezeigt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-API-Schlüssel erstellen und in einer Datei speichern:
+API-Schlüssel erstellen und in einer Datei speichern.
 
 ```
 bluemix iam api-key-create MyKey -d "this is my API key" -f key_file

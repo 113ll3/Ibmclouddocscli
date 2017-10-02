@@ -87,6 +87,50 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 您現在可以開始使用 {{site.data.keyword.Bluemix_notm}} CLI，或安裝其他外掛程式。
 
+## 使用 {{site.data.keyword.Bluemix_notm}} CLI 的首要步驟
+
+若要設定 {{site.data.keyword.Bluemix_notm}} CLI 工具，您將需要指定要使用的 API。這取決於您將使用的地區；若要取得清單，請使用：
+
+```
+ ~ $ bluemix regions
+Listing Bluemix regions...
+
+Name       Geolocation      Customer   Deployment   Domain               CF API Endpoint                  Type
+eu-de      Germany          IBM        Production   eu-de.bluemix.net    https://api.eu-de.bluemix.net    public
+au-syd     Sydney           IBM        Production   au-syd.bluemix.net   https://api.au-syd.bluemix.net   public
+us-south   US South         IBM        Production   ng.bluemix.net       https://api.ng.bluemix.net       public
+eu-gb      United Kingdom   IBM        Production   eu-gb.bluemix.net    https://api.eu-gb.bluemix.net    public
+```
+
+對於您要存取的地區，取得 `CF API Endpoint` 然後用它來指定 API 端點，例如：
+
+```
+~ $ bluemix api https://api.eu-gb.bluemix.net
+Setting api endpoint to https://api.eu-gb.bluemix.net...
+OK
+
+API endpoint: https://api.eu-gb.bluemix.net (CF API version: 2.75.0)
+Not logged in. Use 'bx login' to log in.
+```
+
+然後遵循提示登入：
+
+```
+ ~ $ bluemix login
+API endpoint: https://api.eu-gb.bluemix.net
+
+Email> user@example.com
+
+Password>
+Authenticating...
+OK
+
+```
+
+可以使用 `-o` 和 `-s` 參數來指定要使用的組織及空間，否則如果您有多個組織及空間時 login 指令將提示您選擇。
+
+{{site.data.keyword.Bluemix_notm}} CLI 現在已設定好，可以使用。
+
 ## 安裝外掛程式
 {: #install_plug-in}
 

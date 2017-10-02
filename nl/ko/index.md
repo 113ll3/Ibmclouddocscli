@@ -98,5 +98,5 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 
 | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Bluemix용 Eclipse 도구* |
 |----------|----------|----------|----------|----------|
-| [Liberty Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 플러그인](../services/rules/index.html#rulov002) | [개발자 툴킷](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse 플러그인](/docs/manageapps/eclipsetools/eclipsetools.html) |
+| [Liberty Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 플러그인](../services/rules/index.html#rulov002) | [개발자 툴킷](/docs/services/apiconnect/creating_apis.html#install_dev_tk ) | [Bluemix Eclipse 플러그인](/docs/manageapps/eclipsetools/eclipsetools.html) |
 {: caption="표 5. 플러그인" caption-side="top"}

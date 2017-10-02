@@ -89,6 +89,50 @@ esempio:
 
 Puoi ora iniziare a utilizzare la CLI {{site.data.keyword.Bluemix_notm}} o installare ulteriori plug-in.
 
+## Primi passi con la CLI {{site.data.keyword.Bluemix_notm}}
+
+Per configurare lo strumento della CLI {{site.data.keyword.Bluemix_notm}}, dovrai specificare l'API da utilizzare.  Questa dipende dalla regione con cui lavorerai; per ottenere un elenco, utilizza:
+
+```
+ ~ $ bluemix regions
+Listing Bluemix regions...
+
+Name       Geolocation      Customer   Deployment   Domain               CF API Endpoint                  Type
+eu-de      Germany          IBM        Production   eu-de.bluemix.net    https://api.eu-de.bluemix.net    public
+au-syd     Sydney           IBM        Production   au-syd.bluemix.net   https://api.au-syd.bluemix.net   public
+us-south   US South         IBM        Production   ng.bluemix.net       https://api.ng.bluemix.net       public
+eu-gb      United Kingdom   IBM        Production   eu-gb.bluemix.net    https://api.eu-gb.bluemix.net    public
+```
+
+Per la regione a cui vuoi accedere, prendi `CF API Endpoint` e utilizzalo per specificare l'endpoint API come nel seguente esempio:
+
+```
+~ $ bluemix api https://api.eu-gb.bluemix.net
+Setting api endpoint to https://api.eu-gb.bluemix.net...
+OK
+
+API endpoint: https://api.eu-gb.bluemix.net (CF API version: 2.75.0)
+Not logged in. Use 'bx login' to log in.
+```
+
+Segui quindi il prompt per accedere:
+
+```
+ ~ $ bluemix login
+API endpoint: https://api.eu-gb.bluemix.net
+
+Email> user@example.com
+
+Password>
+Authenticating...
+OK
+
+```
+
+È possibile specificare l'organizzazione e lo spazio da utilizzare con gli switch `-o` e `-s`, altrimenti il comando di accesso ti chiederà di scegliere se ne hai più di uno.
+
+La CLI {{site.data.keyword.Bluemix_notm}} è ora configurata e pronta per l'uso.
+
 ## Installazione di un plugin
 {: #install_plug-in}
 

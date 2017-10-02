@@ -46,7 +46,7 @@ CLI- und Dev-Tools
 	{: .topicgroup}
 	Integrierte Entwicklungstools
 		ibm-dev-tools-for-vscode.md
-		[API Connect Developer Toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[API Connect Developer Toolkit](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
 		[Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
 		[Liberty und Node.js Apps verwalten](../manageapps/app_mng.html#app_management)

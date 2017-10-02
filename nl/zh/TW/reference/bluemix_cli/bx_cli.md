@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-06-22"
+lastupdated: "2017-09-19"
 
 ---
 
@@ -350,11 +350,11 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dl>
    <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
    <dd>用於 HTTP 要求的逾時值。預設值為 60 秒。</dd>
-   <dt>--trace true|false|<i>path-to-file</i></dt>
+   <dt>--trace true|false|<i>path-to-file</i></dt>
    <dd>追蹤對終端機或指定檔案的 HTTP 要求。</dd>
    <dt>--color true|false</dt>
    <dd>啟用或停用彩色輸出。依預設，會啟用彩色輸出。</dd>
-   <dt>--locale <i>LOCALE|CLEAR</i></dt>
+   <dt>--locale <i>LOCALE|CLEAR</i></dt>
    <dd>設定預設語言環境。如果 LOCALE 為 <i>CLEAR</i>，則會刪除先前的語言環境。</dd>
    <dt>--check-version true|false</dt>
    <dd>啟用或停用 CLI 版本檢查。</dd>
@@ -587,7 +587,7 @@ bluemix update
 ### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
-列出所有組織
+列出所有組織。
 
 ```
 bluemix iam orgs [-r REGION] [--guid]
@@ -605,7 +605,7 @@ bluemix iam orgs [-r REGION] [--guid]
 
 <strong>範例</strong>：
 
-列出 `us-south` 地區中的所有組織，並顯示 GUID
+列出 `us-south` 地區中的所有組織，並顯示 GUID。
 
 ```
 bluemix iam orgs -r us-south --guid
@@ -632,7 +632,7 @@ bluemix iam org ORG_NAME [--guid]
 
 <strong>範例</strong>：
 
-顯示 `IBM` 組織的資訊，並顯示 GUID
+顯示 `IBM` 組織的資訊，並顯示 GUID。
 
 ```
 bluemix iam org IBM --guid
@@ -795,7 +795,7 @@ bluemix iam org-users ORG_NAME [-a]
 ## bluemix iam org-user-remove
 {: #bluemix_iam_org_user_remove}
 
-從組織移除使用者（僅限組織管理員或使用者自己）
+從組織移除使用者（僅限組織管理員或使用者自己）。
 
 ```
    bluemix iam org-user-remove USER_NAME ORG [-f, --force]
@@ -810,7 +810,7 @@ bluemix iam org-users ORG_NAME [-a]
 ## bluemix iam org-roles
 {: #bluemix_iam_org_roles}
 
-取得現行使用者的所有組織角色
+取得現行使用者的所有組織角色。
 
 ```
 bluemix iam org-roles
@@ -834,9 +834,9 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>USER_NAME（必要）</dt>
    <dd>所指派之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
-   <dd>獲指派此使用者之組織的名稱。</dd>
+   <dd>獲指派使用者之組織的名稱。</dd>
    <dt>ORG_ROLE（必要）</dt>
-   <dd>獲指派此使用者之組織角色的名稱。例如：
+   <dd>獲指派使用者之組織角色的名稱。例如：
    <ul>
    <li>OrgManager：此角色可以邀請和管理使用者、選取和變更方案，以及設定消費限制。</li>
    <li>BillingManager：此角色可以建立和管理計費帳戶及付款資訊。</li>
@@ -872,9 +872,9 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>USER_NAME（必要）</dt>
    <dd>所要移除之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
-   <dd>從中移除此使用者之組織的名稱。</dd>
+   <dd>從中移除使用者之組織的名稱。</dd>
    <dt>ORG_ROLE（必要）</dt>
-   <dd>從中移除此使用者之組織角色的名稱。例如：
+   <dd>從中移除使用者之組織角色的名稱。例如：
    <ul>
    <li>OrgManager：此角色可以邀請和管理使用者、選取和變更方案，以及設定消費限制。</li>
    <li>BillingManager：此角色可以建立和管理計費帳戶及付款資訊。</li>
@@ -928,11 +928,11 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>USER_NAME（必要）</dt>
    <dd>所指派之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
-   <dd>獲指派此使用者之組織的名稱。</dd>
+   <dd>獲指派使用者之組織的名稱。</dd>
    <dt>SPACE_NAME（必要）</dt>
-   <dd>獲指派此使用者之空間的名稱。</dd>
+   <dd>獲指派使用者之空間的名稱。</dd>
    <dt>SPACE_ROLE（必要）</dt>
-   <dd>獲指派此使用者之空間角色的名稱。例如：
+   <dd>獲指派使用者之空間角色的名稱。例如：
    <ul>
    <li>SpaceManager：此角色可以邀請和管理使用者，以及啟用給定空間的特性。</li>
    <li>SpaceDeveloper：此角色可以建立和管理應用程式及服務，以及查看日誌和報告。</li>
@@ -965,11 +965,11 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>USER_NAME（必要）</dt>
    <dd>所要移除之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
-   <dd>從中移除此使用者之組織的名稱。</dd>
+   <dd>從中移除使用者之組織的名稱。</dd>
    <dt>SPACE_NAME（必要）</dt>
-   <dd>從中移除此使用者之空間的名稱。</dd>
+   <dd>從中移除使用者之空間的名稱。</dd>
    <dt>SPACE_ROLE（必要）</dt>
-   <dd>從中移除此使用者之空間角色的名稱。例如：
+   <dd>從中移除使用者之空間角色的名稱。例如：
    <ul>
    <li>SpaceManager：此角色可以邀請和管理使用者，以及啟用給定空間的特性。</li>
    <li>SpaceDeveloper：此角色可以建立和管理應用程式及服務，以及查看日誌和報告。</li>
@@ -989,7 +989,7 @@ bluemix iam space-role-unset Mary IBM Cloud SpaceManager
 ## bluemix iam accounts
 {: #bluemix_iam_accounts}
 
-列出現行使用者的所有帳戶
+列出現行使用者的所有帳戶。
 
 ```
 bluemix iam accounts
@@ -1001,7 +1001,7 @@ bluemix iam accounts
 ## bluemix iam org-account
 {: #bluemix_iam_org_account}
 
-顯示所指定組織的帳戶（需要組織使用者）
+顯示所指定組織的帳戶（需要組織使用者）。
 
 ```
 bluemix iam org-account ORG_NAME [--guid]
@@ -1012,7 +1012,7 @@ bluemix iam org-account ORG_NAME [--guid]
 <strong>指令選項</strong>：
 <dl>
   <dt>--guid（選用）</dt>
-  <dd>僅顯示帳戶 ID</dd>
+  <dd>僅顯示帳戶 ID。</dd>
 </dl>
 
 
@@ -1028,7 +1028,7 @@ bluemix iam account-users
 ## bluemix iam account-user-delete
 {: #bluemix_iam_account_user_delete}
 
-從現行帳戶刪除使用者（僅限帳戶擁有者）
+從現行帳戶刪除使用者（僅限帳戶擁有者）。
 
 ```
 bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
@@ -1062,18 +1062,18 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dt>USER_NAME（必要）</dt>
    <dd>所邀請之使用者的名稱。</dd>
    <dt>ORG_NAME（必要）</dt>
-   <dd>邀請此使用者加入之組織的名稱。</dd>
+   <dd>邀請使用者加入之組織的名稱。</dd>
    <dt>ORG_ROLE（必要）</dt>
-   <dd>邀請此使用者加入之組織角色的名稱。例如：
+   <dd>邀請使用者加入之組織角色的名稱。例如：
    <ul>
   <li>OrgManager：此角色可以邀請和管理使用者、選取和變更方案，以及設定消費限制。</li>
   <li>BillingManager：此角色可以建立和管理計費帳戶及付款資訊。</li>
   <li>OrgAuditor：此角色具有組織資訊和報告的唯讀權。</li>
   </ul> </dd>
    <dt>SPACE_NAME（必要）</dt>
-   <dd>邀請此使用者加入之空間的名稱。</dd>
+   <dd>邀請使用者加入之空間的名稱。</dd>
    <dt>SPACE_ROLE（必要）</dt>
-   <dd>邀請此使用者加入之空間的名稱。邀請此使用者加入之空間角色的名稱。例如：
+   <dd>邀請使用者加入之空間角色的名稱。例如：
    <ul>
 <li>SpaceManager：此角色可以邀請和管理使用者，以及啟用給定空間的特性。</li>
 <li>SpaceDeveloper：此角色可以建立和管理應用程式及服務，以及查看日誌和報告。</li>
@@ -1095,7 +1095,7 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}
 
-重新傳送邀請給使用者（需要組織管理員或帳戶擁有者）
+重新傳送邀請給使用者（需要組織管理員或帳戶擁有者）。
 
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
@@ -1104,7 +1104,7 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ## bluemix iam api-keys
 {: #bluemix_iam api_keys}
 
-列出所有 Bluemix 平台 API 金鑰
+列出所有 Bluemix 平台 API 金鑰。
 
 ```
 bluemix iam api-keys
@@ -1115,7 +1115,7 @@ bluemix iam api-keys
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-建立新的 Bluemix 平台 API 金鑰
+建立新的 Bluemix 平台 API 金鑰。
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1128,14 +1128,14 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dt>NAME（必要）</dt>
 <dd>要建立之 API 金鑰的名稱。</dd>
 <dt>-d <i>DESCRIPTION</i>（選用）</dt>
-<dd>API 金鑰的說明</dd>
+<dd>API 金鑰的說明。</dd>
 <dt>-f、-- file <i>FILE</i></dt>
 <dd>將 API 金鑰資訊儲存至指定的檔案。如果未設定，則會顯示 JSON 內容。</dd>
 </dl>
 
 <strong>範例</strong>：
 
-建立 API 金鑰，並儲存至檔案
+建立 API 金鑰，並儲存至檔案。
 
 ```
 bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
@@ -1144,7 +1144,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-更新 Bluemix 平台 API 金鑰
+更新 Bluemix 平台 API 金鑰。
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1157,9 +1157,9 @@ bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 <dt>NAME（必要）</dt>
 <dd>要更新之 API 金鑰的舊名稱。</dd>
 <dt>-n <i>NAME</i>（選用）</dt>
-<dd>API 金鑰的新名稱</dd>
+<dd>API 金鑰的新名稱。</dd>
 <dt>-d <i>DESCRIPTION</i>（選用）</dt>
-<dd>API 金鑰的新說明</dd>
+<dd>API 金鑰的新說明。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -1173,7 +1173,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-刪除 Bluemix 平台 API 金鑰
+刪除 Bluemix 平台 API 金鑰。
 
 ```
 bluemix iam api-key-delete NAME [-f]

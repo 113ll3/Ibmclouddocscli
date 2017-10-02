@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-21"
 
 
 ---
@@ -226,20 +226,26 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Effectue une mise à niveau depuis le plan gratuit vers le plan Standard.
+Effectue une mise à niveau vers le plan standard.
 
 Pour plus d'information sur les plans, voir [Plans de registre](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**Paramètres**
+<dl>
+<dt>PLAN</dt>
+<dd>Nom du plan de tarification vers lequel que vous voulez effectuer une mise à niveau. Si PLAN n'est pas spécifié, la valeur par défaut est `Standard`.</dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-Cette commande a été supprimée. Vous pouvez utiliser la calculatrice de prix pour calculer votre coût estimé, voir [Estimation des coûts pour IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02).
+Cette commande a été supprimée. Vous pouvez utiliser la calculatrice de prix pour calculer votre coût estimé, voir [Estimation des coûts pour IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## bx cr quota
@@ -266,9 +272,9 @@ bx cr quota-set [--traffic VALEUR] [--storage VALEUR]
 **Paramètres**
 <dl>
 <dt>--traffic VALEUR</dt>
-<dd>(Facultatif) Remplace votre quota de trafic par celui spécifié. L'opération échoue si vous n'êtes pas habilité à définir le trafic ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
+<dd>(Facultatif) Remplace votre quota de trafic par la valeur spécifiée en mégaoctets. L'opération échoue si vous n'êtes pas habilité à définir le trafic ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
 <dt>--storage VALEUR</dt>
-<dd>(Facultatif) Remplace votre quota de stockage par celui spécifié. L'opération échoue si vous n'êtes pas habilité à définir les quotas de stockage ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
+<dd>(Facultatif) Remplace votre quota de stockage par la valeur spécifiée en mégaoctets. L'opération échoue si vous n'êtes pas habilité à définir les quotas de stockage ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
 </dl>
 
 
@@ -376,7 +382,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-Pour plus d'informations, voir [Examen de la sécurité d'une image](../../../services/Registry/registry_images_.html#registry_security_checking).
+Pour plus d'informations, voir la rubrique relative à la [gestion de la sécurité des images avec l'assistant de détection des vulnérabilités](../../../services/Registry/va/va_index.html#va_index).
 
 </dd>
 

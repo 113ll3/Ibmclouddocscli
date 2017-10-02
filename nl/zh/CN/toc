@@ -46,7 +46,7 @@ CLI 和开发工具
 	{: .topicgroup}
 	集成开发工具
 		ibm-dev-tools-for-vscode.md
-		[API Connect 开发者工具](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[API Connect 开发者工具](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
 		[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html)
 		[管理 Liberty 和 Node.js 应用程序](../manageapps/app_mng.html#app_management)

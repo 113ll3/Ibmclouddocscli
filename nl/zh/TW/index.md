@@ -98,5 +98,5 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 
 | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
 |----------|----------|----------|----------|----------|
-| [Liberty Eclipse 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 外掛程式](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse 外掛程式](/docs/manageapps/eclipsetools/eclipsetools.html) |
+| [Liberty Eclipse 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 外掛程式](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/creating_apis.html#install_dev_tk ) | [Bluemix Eclipse 外掛程式](/docs/manageapps/eclipsetools/eclipsetools.html) |
 {: caption="表 5. 外掛程式" caption-side="top"}

@@ -46,10 +46,10 @@ Ferramentas CLI e de desenvolvimento
 	{: .topicgroup}
 	Ferramentas de desenvolvimento integradas
 		ibm-dev-tools-for-vscode.md
-		[Kit de ferramentas do desenvolvedor do API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[Kit de ferramentas do desenvolvedor da API Connect](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
-		[Implementando apps com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
-		[Gerenciando apps Liberty e Node.js](../manageapps/app_mng.html#app_management)
+		[Implementando aplicativos com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
+		[Gerenciando aplicativos Liberty e Node.js](../manageapps/app_mng.html#app_management)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-04"
+lastupdated: "2017-09-11"
 
 ---
 
@@ -254,14 +254,6 @@ cf ba create-org <organization> <manager>
 **Suggerimento:** puoi anche utilizzare **ba co** come alias per
 il più lungo nome comando **ba create-org**.
 
-### Eliminazione di un'organizzazione
-{: #admin_delete_org}
-
-Per eliminare un'organizzazione, utilizza il seguente comando:
-
-```
-cf ba delete-org <organization>
-```
 {: codeblock}
 
 <dl class="parml">
@@ -736,7 +728,7 @@ nome comando **ba resource-metrics**.
 ## Visualizzazione della cronologia delle metriche di risorse 
 {: #cliresourceusagehistory}
 
-Puoi richiamare la cronologia delle metriche di risorse relativa all'utilizzo di memoria e disco. Le metriche restituite includono la quantità di risorse utilizzate rispetto al totale disponibile, sia per le risorse fisiche che riservate. I dati cronologici per l'utilizzo di memoria e disco possono essere visualizzati su base oraria, giornaliera o mensile. Puoi specificare le date di inizio e di fine per richiamare i dati in un intervallo di date specifico. Se non si specificano delle date, i dati cronologici predefiniti sono i dati della memoria su base oraria per le ultime 48 ore. I dati vengono visualizzati in ordine decrescente, con le date più recenti mostrate per prima.   Per visualizzare le informazioni sulla cronologia delle metriche di risorse, utilizza il seguente comando:
+Puoi richiamare la cronologia delle metriche di risorse relativa all'utilizzo di memoria e disco. Le metriche restituite includono la quantità di risorse utilizzate rispetto al totale disponibile, sia per le risorse fisiche che riservate. I dati cronologici per l'utilizzo di memoria e disco possono essere visualizzati su base oraria, giornaliera o mensile.  Puoi specificare le date di inizio e di fine per richiamare i dati in un intervallo di date specifico. Se non si specificano delle date, i dati cronologici predefiniti sono i dati della memoria su base oraria per le ultime 48 ore. I dati vengono visualizzati in ordine decrescente, con le date più recenti mostrate per prima.   Per visualizzare le informazioni sulla cronologia delle metriche di risorse, utilizza il seguente comando:
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -749,11 +741,11 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--daily&gt;</dt>
 <dd class="pd">Visualizza la media giornaliera dei dati cronologici per gli ultimi 30 giorni.</dd>
 <dt class="pt dlterm">&lt;--monthly&gt;</dt>
-<dd class="pd">Visualizza la media mensile dei dati cronologici per gli ultimi 6 mesi.</dd>
+<dd class="pd">Visualizza la media mensile dei dati cronologici per gli ultimi 6 mesi. </dd>
 <dt class="pt dlterm">&lt;--memory&gt;</dt>
 <dd class="pd">Visualizza la quantità totale e utilizzata per la memoria riservata e fisica. </dd>
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
-<dd class="pd">Visualizza la quantità totale e utilizzata per il disco riservato e fisico. </dd>
+<dd class="pd">Visualizza la quantità totale e utilizzata per il disco riservato e fisico.</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
 <dd class="pd">Specifica una data di inizio per la base giornaliera o mensile (il formato deve essere mm-gg-aaaa) o una data e ora di inizio per la base oraria (il formato deve essere con fuso orario mm-gg-aaaa hh:mm:ss) </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
@@ -770,9 +762,14 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-Puoi visualizzare il precedente elenco di parametri di comando ed esempi utilizzando il seguente comando:
-**Suggerimento:** puoi anche utilizzare **ba rsmh** come alias per il più
-lungo nome comando **ba resource-metrics-history**.
+Puoi visualizzare il precedente elenco di parametri di comando ed esempi utilizzando il seguente comando: 
+
+```
+cf ba resource-metrics-history -help
+```
+
+**Suggerimento:** puoi anche utilizzare **ba rsmh** come alias per il più lungo
+nome comando **ba resource-metrics-history**.
 
 ## Gestione dei broker di servizi
 {: #admin_servbro}

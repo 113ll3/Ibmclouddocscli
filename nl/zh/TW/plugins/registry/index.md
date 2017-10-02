@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-21"
 
 
 ---
@@ -220,20 +220,26 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-讓您從免費方案升級至標準方案。
+讓您升級至標準方案。
 
 如需方案的相關資訊，請參閱[登錄方案](../../../services/Registry/registry_overview.html#registry_plans)。
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**參數**
+<dl>
+<dt>PLAN</dt>
+<dd>您要升級到的定價方案名稱。如果未指定 PLAN，預設值是 `Standard`。</dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-這個指令已移除。您可以使用定價計算機來計算預估成本，請參閱[預估 IBM Bluemix Container Registry 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02)。
+這個指令已移除。您可以使用定價計算機來計算預估成本，請參閱[預估 IBM Bluemix Container Registry 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing)。
 
 
 ## bx cr quota
@@ -260,9 +266,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **參數**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>（選用）將資料流量配額變更為指定的值。如果您未獲授權，無法設定資料流量，或是設定了超出現行定價方案的值，則作業會失敗。</dd>
+<dd>（選用）將資料流量配額變更為指定的值 (MB)。如果您未獲授權，無法設定資料流量，或是設定了超出現行定價方案的值，則作業會失敗。</dd>
 <dt>--storage VALUE</dt>
-<dd>（選用）將儲存空間配額變更為指定的值。如果您未獲授權，無法設定儲存空間配額，或設定了超出現行定價方案的值，則作業會失敗。</dd>
+<dd>（選用）將儲存空間配額變更為指定的值 (MB)。如果您未獲授權，無法設定儲存空間配額，或設定了超出現行定價方案的值，則作業會失敗。</dd>
 </dl>
 
 
@@ -368,7 +374,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-如需相關資訊，請參閱[檢閱映像檔安全](../../../services/Registry/registry_images_.html#registry_security_checking)。
+如需相關資訊，請參閱[使用漏洞警告器管理映像檔安全](../../../services/Registry/va/va_index.html#va_index)。
 
 </dd>
 

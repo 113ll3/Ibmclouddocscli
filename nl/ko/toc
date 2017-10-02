@@ -46,7 +46,7 @@ CLI 및 개발 도구
 	{: .topicgroup}
 	통합 개발 도구
 		ibm-dev-tools-for-vscode.md
-		[API Connect 개발자 툴킷](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[API Connect 개발자 툴킷](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
 		[Bluemix용 IBM Eclipse 도구로 앱 배치](../manageapps/eclipsetools/eclipsetools.html)
 		[Liberty 및 Node.js 앱 관리](../manageapps/app_mng.html#app_management)

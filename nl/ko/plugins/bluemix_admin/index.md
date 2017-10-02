@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-04"
+lastupdated: "2017-09-11"
 
 ---
 
@@ -251,14 +251,6 @@ cf ba create-org <organization> <manager>
 **팁:** 긴 **ba create-org** 명령어에 대한
 별명으로 **ba co**를 사용할 수도 있습니다.
 
-### 조직 삭제
-{: #admin_delete_org}
-
-조직을 삭제하려면 다음 명령을 사용하십시오. 
-
-```
-cf ba delete-org <organization>
-```
 {: codeblock}
 
 <dl class="parml">
@@ -770,9 +762,13 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-다음 명령을 사용하여 위의 명령 매개변수와 예제 목록을 볼 수 있습니다.
-**팁:** 긴 **ba resource-metrics-history**
-명령어의 별명으로 **ba rsmh**를 사용할 수도 있습니다.
+다음 명령을 사용하여 위의 명령 매개변수 및 예제의 목록을 볼 수 있습니다.  
+
+```
+cf ba resource-metrics-history -help
+```
+
+**팁:** 더 긴 **ba resource-metrics-history** 명령어의 별명으로 **ba rsmh**를 사용할 수도 있습니다.
 
 ## 서비스 브로커 관리
 {: #admin_servbro}

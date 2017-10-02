@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-04"
+lastupdated: "2017-09-11"
 
 ---
 
@@ -233,14 +233,6 @@ cf ba create-org <organization> <manager>
 
 **提示：****ba create-org** 命令名较长，您还可以使用 **ba co** 作为其别名。
 
-### 删除组织
-{: #admin_delete_org}
-
-要删除组织，请使用以下命令：
-
-```
-cf ba delete-org <organization>
-```
 {: codeblock}
 
 <dl class="parml">
@@ -705,8 +697,13 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-您可以使用下列命令来查看上面的命令参数和示例列表：
-**提示：****ba resource-metrics-history** 命令名较长，也可以使用 **ba rsmh** 作为其别名。
+您可以使用以下命令来查看上面的命令参数和示例列表： 
+
+```
+cf ba resource-metrics-history -help
+```
+
+**提示：****ba resource-metrics-history** 命令名较长，您还可以使用 **ba rsmh** 作为其别名。
 
 ## 管理服务代理程序
 {: #admin_servbro}

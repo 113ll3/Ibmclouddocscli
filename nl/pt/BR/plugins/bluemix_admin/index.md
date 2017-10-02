@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-04"
+lastupdated: "2017-09-11"
 
 ---
 
@@ -258,14 +258,6 @@ cf ba create-org <organization> <manager>
 **Dica:** também é possível usar **ba co** como um alias para o nome
 do comando mais longo **ba create-org**.
 
-### Excluindo uma Organização
-{: #admin_delete_org}
-
-Para excluir uma organização, use o comando a seguir:
-
-```
-cf ba delete-org <organization>
-```
 {: codeblock}
 
 <dl class="parml">
@@ -754,7 +746,7 @@ do comando **ba resource-metrics**.
 ## Visualizando o histórico de métrica de recurso 
 {: #cliresourceusagehistory}
 
-É possível recuperar o histórico de métrica de recurso para uso de memória e disco. As métricas retornadas incluem a quantia de recursos usados do total disponível para ambos os recursos, físico e reservado. Os dados históricos para uso de memória e disco podem ser exibidos por hora, diariamente ou mensalmente. É possível especificar datas de início e de encerramento para recuperar dados dentro de um intervalo de data específico. Os dados históricos padrão, quando nenhuma data é especificada, são dados de memória por hora para as últimas 48 horas. Os dados são exibidos em ordem decrescente, com datas mais recentes mostradas primeiro. Para visualizar as informações de histórico de métrica de recurso, use o comando a seguir:
+É possível recuperar o histórico de métrica de recurso para uso de memória e disco. As métricas retornadas incluem a quantia de recursos usados do total disponível para ambos os recursos, físico e reservado. Os dados históricos para uso de memória e disco podem ser exibidos por hora, diariamente ou mensalmente.  É possível especificar datas de início e de encerramento para recuperar dados dentro de um intervalo de data específico. Os dados históricos padrão, quando nenhuma data é especificada, são dados de memória por hora para as últimas 48 horas. Os dados são exibidos em ordem decrescente, com datas mais recentes mostradas primeiro.   Para visualizar as informações de histórico de métrica de recurso, use o comando a seguir:
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -772,7 +764,7 @@ padrão.</dd>
 <dt class="pt dlterm">&lt;--memory&gt;</dt>
 <dd class="pd">Visualize a memória Reservada e Física usada e total. </dd>
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
-<dd class="pd">Visualize o disco Reservado e Físico usado e total. </dd>
+<dd class="pd">Visualize o disco Reservado e Físico usado e total.</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
 <dd class="pd">Especifique uma data de início para diário ou mensal (o formato deve ser mm-dd-aaaa) ou uma data e hora de início para por hora (o formato deve ser o fuso horário mm-dd-aaaa hh:mm:ss) </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
@@ -789,9 +781,14 @@ padrão.</dd>
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-É possível visualizar a lista acima de parâmetros de comando e exemplos usando o comando a seguir:
-**Dica:** também é possível usar **ba rsmh** como um alias para o
-nome de comando mais longo **ba resource-metrics-history**.
+É possível visualizar a lista de parâmetros de comando e exemplos acima usando o comando a seguir: 
+
+```
+cf ba resource-metrics-history -help
+```
+
+**Dica:** também é possível usar **ba rsmh** como um alias para
+o nome do comando **ba resource-metrics-history** maior.
 
 ## Administrando brokers de serviço
 {: #admin_servbro}

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-21"
 
 
 ---
@@ -227,20 +227,26 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Esegue l'upgrade dal piano gratuito al piano standard.
+Esegue il tuo upgrade al piano standard. 
 
 Per informazioni sui piani, vedi [Piani del registro](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**Parametri**
+<dl>
+<dt>PLAN</dt>
+<dd>Il nome del piano di prezzi che si desidera aggiornare. Se PLAN non viene specificato, il valore predefinito è `Standard`.</dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-Questo comando è stato rimosso. Puoi utilizzare il calcolatore dei prezzi per calcolare il tuo costo stimato, consulta [Stima dei costi per IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02).
+Questo comando è stato rimosso. Puoi utilizzare il calcolatore dei prezzi per calcolare il tuo costo stimato, consulta [Stima dei costi per IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## bx cr quota
@@ -267,9 +273,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **Parametri**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>(Facoltativo) Modifica la tua quota di traffico al valore specificato. L'operazione non riesce se non sei autorizzato a impostare il traffico o se imposti un valore che supera il tuo piano dei prezzi corrente.</dd>
+<dd>(Facoltativo) Modifica la tua quota di traffico al valore specificato, in megabyte. L'operazione non riesce se non sei autorizzato a impostare il traffico o se imposti un valore che supera il tuo piano dei prezzi corrente.</dd>
 <dt>--storage VALUE</dt>
-<dd>(Facoltativo) Modifica la tua quota di archiviazione al valore specificato. L'operazione non riesce se non sei autorizzato a impostare le quote di archiviazione o se imposti un valore che supera il tuo piano dei prezzi corrente.</dd>
+<dd>(Facoltativo) Modifica la tua quota di archiviazione al valore specificato, in megabyte. L'operazione non riesce se non sei autorizzato a impostare le quote di archiviazione o se imposti un valore che supera il tuo piano dei prezzi corrente.</dd>
 </dl>
 
 
@@ -377,7 +383,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-Per ulteriori informazioni, vedi [Riesame della sicurezza delle immagini](../../../services/Registry/registry_images_.html#registry_security_checking).
+Per ulteriori informazioni, vedi [Gestione della sicurezza delle immagini con il Controllo vulnerabilità](../../../services/Registry/va/va_index.html#va_index).
 
 </dd>
 

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-06-22"
+lastupdated: "2017-09-19"
 
 ---
 
@@ -357,11 +357,11 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dl>
    <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
    <dd>HTTP 요청의 제한시간 값입니다. 기본값은 60초입니다.</dd>
-   <dt>--trace true|false|<i>path-to-file</i></dt>
+   <dt>--trace true|false|<i>path-to-file</i></dt>
    <dd>터미널 또는 지정된 파일에 대한 HTTP 요청을 추적합니다. </dd>
    <dt>--color true|false</dt>
    <dd>색상 출력을 사용하거나 사용하지 않습니다. 색상 출력은 기본적으로 사용됩니다. </dd>
-   <dt>--locale <i>LOCALE|CLEAR</i></dt>
+   <dt>--locale <i>LOCALE|CLEAR</i></dt>
    <dd>기본 로케일을 설정합니다. LOCALE이 <i>CLEAR</i>인 경우 이전 로케일이 삭제됩니다. </dd>
    <dt>--check-version true|false</dt>
    <dd>CLI 버전 확인을 사용하거나 사용하지 않습니다.</dd>
@@ -594,7 +594,7 @@ bluemix update
 ### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
-모든 조직 나열
+모든 조직을 나열합니다. 
 
 ```
 bluemix iam orgs [-r REGION] [--guid]
@@ -612,7 +612,7 @@ bluemix iam orgs [-r REGION] [--guid]
 
 <strong>예제</strong>:
 
-지역: `us-south`의 모든 조직을 GUID를 표시하여 나열합니다. 
+GUID를 표시하여 `us-south` 지역의 모든 조직을 나열합니다. 
 
 ```
 bluemix iam orgs -r us-south --guid
@@ -639,7 +639,7 @@ bluemix iam org ORG_NAME [--guid]
 
 <strong>예제</strong>:
 
-조직 `IBM`의 정보를 GUID를 표시하여 보여줍니다. 
+GUID를 표시하여 `IBM` 조직에 대한 정보를 표시합니다. 
 
 ```
 bluemix iam org IBM --guid
@@ -817,7 +817,7 @@ bluemix iam org-users ORG_NAME [-a]
 ## bluemix iam org-roles
 {: #bluemix_iam_org_roles}
 
-현재 사용자의 모든 조직 역할 가져오기
+현재 사용자의 모든 조직 역할을 가져옵니다. 
 
 ```
 bluemix iam org-roles
@@ -841,9 +841,9 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>USER_NAME(필수)</dt>
    <dd>지정되는 사용자의 이름입니다. </dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 지정되는 조직의 이름입니다. </dd>
+   <dd>사용자가 지정된 조직의 이름입니다. </dd>
    <dt>ORG_ROLE(필수)</dt>
-   <dd>이 사용자가 지정되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
+   <dd>사용자가 지정된 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
    <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
    <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
@@ -854,7 +854,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 
 <strong>예제</strong>:
 
-사용자 `Mary`를 `IBM` 조직에 `OrgManager` 역할로 지정합니다.
+`OrgManager` 역할로서 `IBM` 조직에 사용자 `Mary`를 지정합니다. 
 
 ```
 bluemix iam org-role-set Mary IBM OrgManager
@@ -879,9 +879,9 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>USER_NAME(필수)</dt>
    <dd>제거되는 사용자의 이름입니다. </dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 제거되는 조직의 이름입니다. </dd>
+   <dd>사용자가 제거되는 조직의 이름입니다. </dd>
    <dt>ORG_ROLE(필수)</dt>
-   <dd>이 사용자가 제거되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
+   <dd>사용자가 제거되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
    <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
    <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
@@ -892,7 +892,7 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
 
 <strong>예제</strong>:
 
-사용자 `Mary`를 `IBM` 조직에서 `OrgManager` 역할로 제거합니다.
+`OrgManager` 역할로서 `IBM` 조직에서 사용자 `Mary`를 제거합니다.
 
 ```
 bluemix iam org-role-unset Mary IBM OrgManager
@@ -935,11 +935,11 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>USER_NAME(필수)</dt>
    <dd>지정되는 사용자의 이름입니다. </dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 지정되는 조직의 이름입니다. </dd>
+   <dd>사용자가 지정된 조직의 이름입니다. </dd>
    <dt>SPACE_NAME(필수)</dt>
-   <dd>이 사용자가 지정되는 영역의 이름입니다. </dd>
+   <dd>사용자가 지정된 영역의 이름입니다. </dd>
    <dt>SPACE_ROLE(필수)</dt>
-   <dd>이 사용자가 지정되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
+   <dd>사용자가 지정된 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
    <li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다. </li>
    <li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다. </li>
@@ -949,7 +949,7 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
 <strong>예제</strong>:
 
-사용자 `Mary`를 `IBM` 조직 및 `Cloud` 영역에 `SpaceManager` 역할로 지정합니다.
+`SpaceManager` 역할로서 `IBM` 조직과 `Cloud` 영역에 사용자 `Mary`를 지정합니다. 
 
 ```
 bluemix iam space-role-set Mary IBM Cloud SpaceManager
@@ -972,11 +972,11 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>USER_NAME(필수)</dt>
    <dd>제거되는 사용자의 이름입니다. </dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 제거되는 조직의 이름입니다. </dd>
+   <dd>사용자가 제거되는 조직의 이름입니다. </dd>
    <dt>SPACE_NAME(필수)</dt>
-   <dd>이 사용자가 제거되는 영역의 이름입니다. </dd>
+   <dd>사용자가 제거되는 영역의 이름입니다. </dd>
    <dt>SPACE_ROLE(필수)</dt>
-   <dd>이 사용자가 제거되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
+   <dd>사용자가 제거되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
    <li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다. </li>
    <li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다. </li>
@@ -987,7 +987,7 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
 <strong>예제</strong>:
 
-사용자 `Mary`를 `IBM` 조직 및 `Cloud` 영역에서 `SpaceManager` 역할로 제거합니다.
+`SpaceManager` 역할로서 `IBM` 조직과 `Cloud` 영역에서 사용자 `Mary`를 제거합니다. 
 
 ```
 bluemix iam space-role-unset Mary IBM Cloud SpaceManager
@@ -996,7 +996,7 @@ bluemix iam space-role-unset Mary IBM Cloud SpaceManager
 ## bluemix iam accounts
 {: #bluemix_iam_accounts}
 
-현재 사용자의 모든 계정 나열
+현재 사용자의 모든 계정을 나열합니다. 
 
 ```
 bluemix iam accounts
@@ -1008,7 +1008,7 @@ bluemix iam accounts
 ## bluemix iam org-account
 {: #bluemix_iam_org_account}
 
-지정된 조직의 계정 표시(조직 사용자 필요)
+지정된 조직의 계정을 표시합니다(조직 사용자 필요). 
 
 ```
 bluemix iam org-account ORG_NAME [--guid]
@@ -1019,7 +1019,7 @@ bluemix iam org-account ORG_NAME [--guid]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>--guid(선택사항)</dt>
-  <dd>계정 ID만 표시</dd>
+  <dd>계정 ID만 표시합니다. </dd>
 </dl>
 
 
@@ -1035,7 +1035,7 @@ bluemix iam account-users
 ## bluemix iam account-user-delete
 {: #bluemix_iam_account_user_delete}
 
-현재 계정에서 사용자 삭제(계정 소유자만)
+현재 계정에서 사용자를 삭제합니다(계정 소유자만). 
 
 ```
 bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
@@ -1048,7 +1048,7 @@ bluemix iam account-user-delete USERNAME [-c ACCOUNT_ID] [-f]
 <dt>USERNAME(필수)</dt>
 <dd>사용자 이름</dd>
 <dt>-c ACCOUNT_ID</dt>
-<dd>계정 ID. 지정되지 않은 경우 기본값은 현재 계정입니다. </dd>
+<dd>계정 ID. 지정되지 않으면 기본값은 현재 계정입니다. </dd>
 <dt>--force, -f(선택사항)</dt>
 <dd>확인 없이 강제 삭제합니다. </dd>
 </dl>
@@ -1069,18 +1069,18 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dt>USER_NAME(필수)</dt>
    <dd>초대되는 사용자의 이름입니다. </dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 초대되는 조직의 이름입니다. </dd>
+   <dd>사용자가 초대되는 조직의 이름입니다. </dd>
    <dt>ORG_ROLE(필수)</dt>
-   <dd>이 사용자가 초대되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
+   <dd>사용자가 초대되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
   <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
   <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
   <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다. </li>
   </ul> </dd>
    <dt>SPACE_NAME(필수)</dt>
-   <dd>이 사용자가 초대되는 영역의 이름입니다. </dd>
+   <dd>사용자가 초대되는 영역의 이름입니다. </dd>
    <dt>SPACE_ROLE(필수)</dt>
-   <dd>이 사용자가 초대되는 영역의 이름입니다. 이 사용자가 초대되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
+   <dd>사용자가 초대되는 영역의 이름입니다. 사용자가 초대되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
 <li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다. </li>
 <li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다. </li>
@@ -1091,7 +1091,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 
 <strong>예제</strong>:
 
-사용자 `Mary`를 `IBM` 조직에 `OrgManager` 역할로 초대하고 `Cloud` 영역에 `SpaceAuditor` 역할로 초대합니다.
+`OrgManager` 역할로서 `IBM` 조직에, 그리고 `SpaceAuditor` 역할로서 `Cloud` 영역에 사용자 `Mary`를 초대합니다. 
 
 ```
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
@@ -1102,7 +1102,7 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ## bluemix iam account-user-reinvite
 {: #bluemix_iam_account_user_reinvite}
 
-사용자에게 초대를 다시 보냅니다(조직 관리자 또는 계정 소유자 필요).
+사용자에게 초대를 재전송합니다(조직 관리자 또는 계정 소유자 필요). 
 
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
@@ -1111,7 +1111,7 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ## bluemix iam api-keys
 {: #bluemix_iam api_keys}
 
-모든 Bluemix 플랫폼 API 키 나열
+모든 Bluemix 플랫폼 API 키를 나열합니다. 
 
 ```
 bluemix iam api-keys
@@ -1122,7 +1122,7 @@ bluemix iam api-keys
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-새 Bluemix 플랫폼 API 키 작성
+새 Bluemix 플랫폼 API 키를 작성합니다. 
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1135,14 +1135,14 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dt>NAME(필수)</dt>
 <dd>작성할 API 키의 이름입니다.</dd>
 <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
-<dd>API 키에 대한 설명</dd>
+<dd>API 키에 대한 설명입니다. </dd>
 <dt>-f, -- file <i>FILE</i></dt>
 <dd>지정된 파일에 API 키 정보를 저장합니다. 설정하지 않으면 JSON 컨텐츠가 표시됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
-API 키 작성 및 파일에 저장
+API 키를 작성하고 파일에 저장합니다. 
 
 ```
 bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
@@ -1151,7 +1151,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-Bluemix 플랫폼 API 키 업데이트
+Bluemix 플랫폼 API 키를 업데이트합니다. 
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1164,9 +1164,9 @@ bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 <dt>NAME(필수)</dt>
 <dd>업데이트할 API 키의 이전 이름.</dd>
 <dt>-n <i>NAME</i>(선택사항)</dt>
-<dd>API 키의 새 이름</dd>
+<dd>API 키의 새 이름입니다. </dd>
 <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
-<dd>API 키의 새 설명</dd>
+<dd>API 키의 새 설명입니다. </dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1180,7 +1180,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-Bluemix 플랫폼 API 키 삭제
+Bluemix 플랫폼 API 키를 삭제합니다. 
 
 ```
 bluemix iam api-key-delete NAME [-f]

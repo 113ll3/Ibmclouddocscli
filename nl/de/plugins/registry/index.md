@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-21"
 
 
 ---
@@ -225,20 +225,26 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Führt ein Upgrade vom kostenfreien Plan auf den Standardplan durch.
+Führt ein Upgrade auf den Standardplan durch.
 
 Weitere Informationen über Pläne finden Sie unter [Registry-Pläne](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**Parameter**
+<dl>
+<dt>PLAN</dt>
+<dd>Der Name des Preistarifs, auf den das Upgrade durchgeführt werden soll. Wird für PLAN keine Angabe gemacht, wird standardmäßig der `Standardplan` verwendet.</dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-Dieser Befehl wurde entfernt. Zur Berechnung der geschätzten Kosten können Sie den Preisrechner verwenden; weitere Informationen hierzu finden Sie in [Kosten für IBM Bluemix Container Registry schätzen](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02).
+Dieser Befehl wurde entfernt. Zur Berechnung der geschätzten Kosten können Sie den Preisrechner verwenden; weitere Informationen hierzu finden Sie in [Kosten für IBM Bluemix Container Registry schätzen](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## bx cr quota
@@ -265,9 +271,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **Parameter**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>(Optional) Ändert Ihr Datenverkehrskontingent auf den angegebenen Wert. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Datenverkehr festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
+<dd>(Optional) Ändert Ihr Datenverkehrskontingent auf den angegebenen Wert in Megabyte. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Datenverkehr festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
 <dt>--storage VALUE</dt>
-<dd>(Optional) Ändert Ihr Speicherkontingent auf den angegebenen Wert. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Speicherkontingente festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
+<dd>(Optional) Ändert Ihr Speicherkontingent auf den angegebenen Wert in Megabyte. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Speicherkontingente festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
 </dl>
 
 
@@ -375,7 +381,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-Weitere Informationen finden Sie unter [Imagesicherheit prüfen](../../../services/Registry/registry_images_.html#registry_security_checking).
+Weitere Informationen finden Sie in [Imagesicherheit mit Vulnerability Advisor verwalten](../../../services/Registry/va/va_index.html#va_index).
 
 </dd>
 

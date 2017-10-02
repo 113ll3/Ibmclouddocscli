@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-04"
+lastupdated: "2017-09-11"
 
 ---
 
@@ -249,14 +249,6 @@ cf ba create-org <organización> <gestor>
 **Sugerencia:** También puede usar **ba co** como alias para el nombre de mandato
 **ba create-org** más largo.
 
-### Supresión de una organización
-{: #admin_delete_org}
-
-Para suprimir una organización, utilice el siguiente mandato:
-
-```
-cf ba delete-org <organización>
-```
 {: codeblock}
 
 <dl class="parml">
@@ -724,7 +716,7 @@ cf ba resource-metrics
 ## Visualización del historial de métricas de recursos 
 {: #cliresourceusagehistory}
 
-Puede recuperar el historial de métricas de recursos para el uso de disco y de memoria. Las métricas devueltas incluyen la cantidad de recursos utilizados del total disponible, para recursos tanto físicos como reservados. Los datos históricos del uso de memoria y de disco pueden mostrarse por hora, por día o por mes. Puede especificar las fechas de inicio y de finalización para recuperar datos dentro de un intervalo de fechas específico. Si no se especifica ninguna fecha, los datos históricos predeterminados son los datos de memoria por hora de las últimas 48 horas. Los datos se muestran en orden descendente, mostrando primero las fechas más recientes. Para ver la información de historial de métricas de recursos, utilice el mandato siguiente:
+Puede recuperar el historial de métricas de recursos para el uso de disco y de memoria. Las métricas devueltas incluyen la cantidad de recursos utilizados del total disponible, para recursos tanto físicos como reservados. Los datos históricos del uso de memoria y de disco pueden mostrarse por hora, por día o por mes.  Puede especificar las fechas de inicio y de finalización para recuperar datos dentro de un intervalo de fechas específico. Si no se especifica ninguna fecha, los datos históricos predeterminados son los datos de memoria por hora de las últimas 48 horas. Los datos se muestran en orden descendente, mostrando primero las fechas más recientes.   Para ver la información de historial de métricas de recursos, utilice el mandato siguiente:
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -737,11 +729,11 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--daily&gt;</dt>
 <dd class="pd">Ver el promedio diario de los datos históricos de los últimos 30 días.</dd>
 <dt class="pt dlterm">&lt;--monthly&gt;</dt>
-<dd class="pd">Ver el promedio mensual de los datos históricos de los últimos 6 meses.</dd>
+<dd class="pd">Ver el promedio mensual de los datos históricos de los últimos 6 meses. </dd>
 <dt class="pt dlterm">&lt;--memory&gt;</dt>
 <dd class="pd">Ver la memoria física y reservada utilizada y total. </dd>
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
-<dd class="pd">Ver el disco físico y reservado utilizado y total. </dd>
+<dd class="pd">Ver el disco físico y reservado utilizado y total.</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
 <dd class="pd">Especifique una fecha de inicio para daily o monthly (el formato debe ser mm-dd-aaaa), o una fecha y hora de inicio para hourly (el formato debe ser mm-dd-aaaa hh:mm:ss huso_horario) </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
@@ -758,7 +750,12 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-Puede ver la lista anterior de parámetros del mandato utilizando el siguiente mandato:
+Puede visualizar la lista anterior de parámetros de mandatos y ejemplos utilizando el mandato siguiente: 
+
+```
+cf ba resource-metrics-history -help
+```
+
 **Sugerencia:** También puede usar **ba rsmh** como alias para el nombre de mandato
 **ba resource-metrics-history** más largo.
 

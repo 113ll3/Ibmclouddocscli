@@ -87,6 +87,50 @@ Linux의 경우, 다음 단계를 수행하십시오.
 
 이제 {{site.data.keyword.Bluemix_notm}} CLI 사용을 시작하거나 추가 플러그인을 설치할 수 있습니다.
 
+## {{site.data.keyword.Bluemix_notm}} CLI의 첫 번째 단계
+
+{{site.data.keyword.Bluemix_notm}} CLI 도구를 설정하려면 사용할 API를 지정해야 합니다. 이는 사용자가 작업할 지역에 따라 달라집니다. 목록을 가져오려면 다음을 사용하십시오. 
+
+```
+ ~ $ bluemix regions
+Listing Bluemix regions...
+
+Name       Geolocation      Customer   Deployment   Domain               CF API Endpoint                  Type
+eu-de      Germany          IBM        Production   eu-de.bluemix.net    https://api.eu-de.bluemix.net    public
+au-syd     Sydney           IBM        Production   au-syd.bluemix.net   https://api.au-syd.bluemix.net   public
+us-south   US South         IBM        Production   ng.bluemix.net       https://api.ng.bluemix.net       public
+eu-gb      United Kingdom   IBM        Production   eu-gb.bluemix.net    https://api.eu-gb.bluemix.net    public
+```
+
+액세스하려는 지역에 대한 해당 `CF API Endpoint`를 찾아서 이를 사용하여 다음과 같이 API 엔드포인트를 지정하십시오. 
+
+```
+~ $ bluemix api https://api.eu-gb.bluemix.net
+Setting api endpoint to https://api.eu-gb.bluemix.net...
+OK
+
+API endpoint: https://api.eu-gb.bluemix.net (CF API version: 2.75.0)
+Not logged in. Use 'bx login' to log in.
+```
+
+그런 다음 프롬프트를 따라 로그인하십시오. 
+
+```
+ ~ $ bluemix login
+API endpoint: https://api.eu-gb.bluemix.net
+
+Email> user@example.com
+
+Password>
+    Authenticating...
+    OK
+  
+    ```
+
+`-o` 및 `-s` 스위치와 함께 사용할 조직과 영역을 지정할 수 있습니다. 그렇지 않으면 로그인 명령에서 둘 이상이 있는 곳을 선택하도록 사용자에게 프롬프트를 표시합니다. 
+
+이제 {{site.data.keyword.Bluemix_notm}} CLI가 설정되었으며 사용할 준비가 되었습니다. 
+
 ## 플러그인 설치
 {: #install_plug-in}
 

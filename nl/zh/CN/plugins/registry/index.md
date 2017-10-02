@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-21"
 
 
 ---
@@ -209,7 +209,7 @@ bx cr namespace-rm NAMESPACE
 ## bx cr plan
 {: #bx_cr_plan}
 
-显示定价套餐。
+显示价格套餐。
 
 ```
 bx cr plan
@@ -220,20 +220,26 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-从免费套餐升级到标准套餐。
+升级到标准套餐。
 
 有关套餐的信息，请参阅[注册表套餐](../../../services/Registry/registry_overview.html#registry_plans)。
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**参数**
+<dl>
+<dt>套餐</dt>
+<dd>要升级到的价格套餐的名称。如果未指定套餐，那么缺省值为`标准`。</dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-已除去此命令。您可以使用定价计算器来计算估算成本。请参阅[估算 IBM Bluemix Container Registry 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02)。
+已除去此命令。您可以使用定价计算器来计算估算成本。请参阅[估算 IBM Bluemix Container Registry 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing)。
 
 
 ## bx cr quota
@@ -260,9 +266,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **参数**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>（可选）将流量配额更改为指定的值。如果您无权设置流量或者您设置的值超出当前定价套餐，那么操作将失败。</dd>
+<dd>（可选）将流量配额更改为指定的值（以兆字节为单位）。如果您无权设置流量或者您设置的值超出当前价格套餐，那么操作将失败。</dd>
 <dt>--storage VALUE</dt>
-<dd>（可选）将存储配额更改为指定的值。如果您无权设置存储配额或者您设置的值超出当前定价套餐，那么操作将失败。</dd>
+<dd>（可选）将存储配额更改为指定的值（以兆字节为单位）。如果您无权设置存储配额或者您设置的值超出当前价格套餐，那么操作将失败。</dd>
 </dl>
 
 
@@ -368,7 +374,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-有关更多信息，请参阅[查看映像安全性](../../../services/Registry/registry_images_.html#registry_security_checking)。
+有关更多信息，请参阅[使用漏洞顾问程序管理映像安全性](../../../services/Registry/va/va_index.html#va_index)。
 
 </dd>
 

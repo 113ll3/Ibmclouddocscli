@@ -247,7 +247,7 @@ bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
    <dd>Eseguire il comando specificato in background.</dd>
    <dt>-it (facoltativo)</dt>
    <dd>Modalità interattiva. L'input standard rimane visualizzato. Immetti <i>exit</i> per uscire.</dd>
-   <dt>-u <i>UTENTE</i>|--user <i>UTENTE</i> (facoltativo)</dt>
+   <dt>-u <i>USER</i>|--user <i>USER</i> (facoltativo)</dt>
    <dd>Il nome utente.</dd>
    <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
@@ -294,7 +294,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>Assegnare un limite di memoria al gruppo in MB. Quando crei un gruppo di contenitori dalla CLI, il valore predefinito per ogni istanza del contenitore è <i>64</i> MB. Quando crei un gruppo di contenitori dal Dashboard {{site.data.keyword.Bluemix_notm}}, il valore predefinito per ogni istanza del contenitore è <i>256</i> MB. I valori accettati sono <i>64</i>, <i>256</i>, <i>512</i>, <i>1024</i> e <i>2048</i>. Una volta assegnato, il limite di memoria non può essere modificato.</dd>
    <dt>-n <i>HOSTNAME</i>|--hostname <i>HOSTNAME</i> (facoltativo)</dt>
    <dd>Il nome host, quale ad esempio <i>mycontainerhost</i>. L'host e il dominio si combinano per formare l'URL completo della rotta pubblica, quale ad esempio <i>http://mycontainerhost.mybluemix.net</i>. Quando esamini i dettagli di un gruppo di contenitori con il comando <i>bluemix ic group-inspect</i>, l'host e il dominio vengono elencati insieme come rotta.</dd>
-   <dt>-d <i>DOMINIO</i>|--domain <i>DOMINIO</i> (facoltativo)</dt>
+   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (facoltativo)</dt>
    <dd>Di solito, il dominio è <i>.mybluemix.net</i>. L'host e il dominio vengono combinati per formare l'URL completo della rotta pubblica, quale ad esempio <i>http://mycontainerhost.mybluemix.net</i>. Quando esamini i dettagli di un gruppo di contenitori con il comando <i>bluemix ic group-inspect</i>, l'host e il dominio vengono elencati insieme come rotta.</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i> (facoltativo)</dt>
    <dd>Imposta la variabile di ambiente. In caso di più chiavi, elencale separatamente. Se sono incluse virgolette, includile racchiudendo sia il valore che il nome della variabile di ambiente. Ad esempio: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  La seguente tabella mostra alcune variabili di ambiente comunemente utilizzate che puoi specificare:</dd>
@@ -318,7 +318,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <li><i>PERCORSO_CONTENITORE</i>: il percorso assoluto per il volume del contenitore.</li>
    <li>ro: facoltativo. La specifica di <i>ro</i> rende il volume di sola lettura invece della lettura/scrittura predefinita.</li></ul>
    </dd>
-   <dt>-p <i>PORTA</i>|--publish <i>PORTA</i> (facoltativo)</dt>
+   <dt>-p <i>PORT</i>|--publish <i>PORT</i> (facoltativo)</dt>
    <dd>Esporre la porta per il traffico HTTP. I contenitori del tuo gruppo devono essere in ascolto sulla porta HTTP. Non possono essere effettuate richieste HTTPS. Per i gruppi di contenitori, non puoi includere più porte. <br><br>Quando specifichi una porta, stai rendendo l'applicazione disponibile al programma di bilanciamento del carico {{site.data.keyword.Bluemix_notm}} o ai contenitori che stanno provando a raggiungere l'host nello stesso spazio {{site.data.keyword.Bluemix_notm}}. Quindi i contenitori o il bilanciamento del carico {{site.data.keyword.Bluemix_notm}} possono utilizzare la porta per raggiungere l'host e l'applicazione nello stesso spazio {{site.data.keyword.Bluemix_notm}}. Se nel Dockerfile è specificata una porta per l'immagine che stai utilizzando, includila. <br>
    <strong>Suggerimenti</strong>: <ul>
    <li>Per l'immagine Liberty Server certificata da IBM o una versione modificata di questa immagine, immetti la porta 9080.</li>
@@ -923,7 +923,7 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
    <dl>
    <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
-   <dt>-t <i>SECONDI</i>|--time <i>SECONDI</i> (facoltativo)</dt>
+   <dt>-t <i>SECS</i>|--time <i>SECS</i> (facoltativo)</dt>
    <dd>Il numero di secondi di attesa prima che il contenitore venga riavviato.</dd>
    </dl>
 
@@ -1004,7 +1004,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>-R <i>REGISTRO</i>|--registry <i>REGISTRO</i> (facoltativo)</dt>
+   <dt>-R <i>REGISTRY</i>|--registry <i>REGISTRY</i> (facoltativo)</dt>
    <dd>Modificare l'host del registro. Per impostazione predefinita verrà utilizzato il registro che hai specificato nel comando <i>bluemix ic init</i>.</dd>
    <dt><i>IMAGE</i> (obbligatorio)</dt>
    <dd>Il nome dell'immagine che desideri rimuovere. Se non viene specificata
@@ -1054,7 +1054,7 @@ bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTA
    <dl>
    <dt>-n <i>HOST</i>|--hostname <i>HOST</i> (facoltativo)</dt>
    <dd>Il nome host della rotta. Il nome host costituisce la prima parte dell'URL completo della rotta pubblica, quale ad esempio <i>mycontainerhost</i> nell'URL <i>mycontainerhost.mybluemix.net</i>.</dd>
-   <dt>-d <i>DOMINIO</i>|--domain <i>DOMINIO</i> (facoltativo)</dt>
+   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (facoltativo)</dt>
    <dd>Il nome dominio della rotta, che costituisce la seconda parte dell'URL completo della rotta pubblica. Nella maggior parte dei casi, il dominio è <i>mybluemix.net</i>. Puoi anche utilizzare questo parametro per specificare un dominio privato.</dd>
    <dt><i>GRUPPO_CONTENITORI</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del gruppo di contenitori.</dd>
@@ -1084,7 +1084,7 @@ bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CON
    <dl>
    <dt>-n <i>HOST</i>|--hostname <i>HOST</i> (facoltativo)</dt>
    <dd>Il nome host della rotta.</dd>
-   <dt>-d <i>DOMINIO</i>|--domain <i>DOMINIO</i> (facoltativo)</dt>
+   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (facoltativo)</dt>
    <dd>Il nome dominio della rotta.</dd>
    <dt><i>GRUPPO_CONTENITORI</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del gruppo di contenitori.</dd>
@@ -1116,13 +1116,13 @@ bluemix ic run [-p PORT|--publish PORTA] [-P] [-m MEMORIA|--memory MEMORIA] [-e 
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>-p <i>PORTA</i>|--publish <i>PORTA</i> (facoltativo)</dt>
+   <dt>-p <i>PORT</i>|--publish <i>PORT</i> (facoltativo)</dt>
    <dd>Esporre la porta per il traffico HTTP. Includi le eventuali porte specificate nel Dockerfile per l'immagine che stai utilizzando. Puoi includere più porte con più opzioni <i>-p</i>. L'esposizione di una porta comporta automaticamente il bind di un indirizzo IP pubblico, se disponibile, al contenitore. <br><br>Se disponi già di un indirizzo IP nello spazio che desideri associare mediante bind al contenitore, puoi specificare l'indirizzo IP invece di eseguirne il bind successivamente. L'indirizzo IP deve essere specificato nel seguente formato: &lt;indirizzo_IP&gt;:&lt;porta_contenitore&gt;:&lt;porta_contenitore&gt; <br><br>Per ulteriori informazioni sulla richiesta di indirizzi IP per uno spazio, vedi il comando <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a>. <br><br>Quando specifichi una porta, stai rendendo l'applicazione disponibile al programma di bilanciamento del carico {{site.data.keyword.Bluemix_notm}} o ai contenitori dello stesso spazio {{site.data.keyword.Bluemix_notm}} che stanno provando a raggiungere l'host. Se nel Dockerfile è specificata una porta per l'immagine che stai utilizzando, includila. <br><br><strong>Suggerimenti:</strong><ul><li>Per l'immagine Liberty Server certificata da IBM o una versione modificata di questa immagine, immetti la porta 9080.</li><li>Per l'immagine Node.js certificata da IBM o una versione modificata di questa immagine, immetti la porta 8000.</li></ul></dd>
    <dt>-P (facoltativo)</dt>
    <dd>Esporre automaticamente le porte specificate nel Dockerfile dell'immagine per il traffico HTTP.</dd>
-   <dt>-m <i>MEMORIA</i>|--memory <i>MEMORIA</i> (facoltativo)</dt>
+   <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i> (facoltativo)</dt>
    <dd>Assegnare un limite di memoria al gruppo in MB. Quando crei un gruppo di contenitori dalla CLI, il valore predefinito per ogni istanza del contenitore è 64 MB.  Quando crei un gruppo di contenitori dal Dashboard {{site.data.keyword.Bluemix_notm}}, il valore predefinito per ciascuna istanza è 256 MB. I valori accettati sono 64, 256, 512, 1024 e 2048. Una volta assegnato, il limite di memoria non può essere modificato.</dd>
-   <dt>-e <i>AMB</i>|--env <i>AMB</i> (facoltativo)</dt>
+   <dt>-e <i>ENV</i>|--env <i>ENV</i> (facoltativo)</dt>
    <dd>Impostare la variabile di ambiente, dove <i>AMB</i> è una coppia chiave=valore. In caso di più chiavi, elencale separatamente. Se includi virgolette, fallo racchiudendo sia il valore che il nome della variabile di ambiente. Ad esempio: -e "key1=value1" -e "key2=value2" -e "key3=value3". La seguente tabella mostra alcune variabili di ambiente comunemente utilizzate che puoi specificare:</dd>
    </dl>
 
@@ -1143,7 +1143,7 @@ bluemix ic run [-p PORT|--publish PORTA] [-P] [-m MEMORIA|--memory MEMORIA] [-e 
    <li><i>PERCORSO_CONTENITORE</i>: il percorso assoluto per il volume del contenitore.</li>
    <li>ro: facoltativo. La specifica di <i>ro</i> rende il volume di sola lettura invece della lettura/scrittura predefinita.</li></ul>
    </dd>
-   <dt>-n <i>NOME</i>|--name <i>NOME</i> (facoltativo)</dt>
+   <dt>-n <i>NAME</i>|--name <i>NAME</i> (obbligatorio)</dt>
    <dd>Assegnare un nome al contenitore. <br> <strong>Suggerimento:</strong> il nome del contenitore deve iniziare con una lettera. Il nome può includere lettere maiuscole, lettere minuscole, numeri, punti., caratteri di sottolineatura _, o trattini -.</dd>
    <dt>--link <i>NOME</i>:<i>ALIAS</i> (facoltativo)</dt>
    <dd>Ogni volta che desideri che un contenitore comunichi con un altro contenitore in esecuzione, puoi farvi riferimento utilizzando un alias del nome host.</dd>
@@ -1298,7 +1298,7 @@ bluemix ic stop CONTAINER [-t SECS|--time SECS]
    <dl>
    <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
-   <dt>-t <i>SECONDI</i>|--time <i>SECONDI</i> (facoltativo)</dt>
+   <dt>-t <i>SECS</i>|--time <i>SECS</i> (facoltativo)</dt>
    <dd>Il numero di secondi di attesa prima che il contenitore venga arrestato.</dd>
    </dl>
 

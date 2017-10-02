@@ -87,6 +87,50 @@ Führen Sie unter Linux die folgenden Schritte aus:
 
 Sie können nun mit der Verwendung der {{site.data.keyword.Bluemix_notm}}-CLI beginnen oder weitere Plug-ins installieren.
 
+## Erste Schritte mit der {{site.data.keyword.Bluemix_notm}}-CLI
+
+Um das Tool für die {{site.data.keyword.Bluemix_notm}}-CLI einzurichten, müssen Sie die zu verwendende API angeben.  Diese hängt von der Region ab, mit der Sie arbeiten werden. Verwenden Sie den folgenden Befehl, um eine Liste abzurufen:
+
+```
+ ~ $ bluemix regions
+Bluemix-Regionen auflisten...
+
+Name       Geoortung                    Genehmigung   Bereitstellung   Domäne               CF-API-Endpunkt                  Typ
+eu-de      Deutschland                  IBM           Produktion       eu-de.bluemix.net    https://api.eu-de.bluemix.net    Öffentlich
+au-syd     Sydney                       IBM           Produktion       au-syd.bluemix.net   https://api.au-syd.bluemix.net   Öffentlich
+us-south   Vereinigte Staaten (Süden)   IBM           Produktion       ng.bluemix.net       https://api.ng.bluemix.net       Öffentlich
+eu-gb      Vereintes Königreich         IBM           Produktion       eu-gb.bluemix.net    https://api.eu-gb.bluemix.net    Öffentlich
+```
+
+Verwenden Sie dann für die Region, auf die Sie zugreifen möchten, den `CF-API-Endpunkt`, um den API-Endpunkt anzugeben. Beispiel:
+
+```
+~ $ bluemix api https://api.eu-gb.bluemix.net
+Festlegen von API-Endpunkt auf https://api.eu-gb.bluemix.net...
+OK
+
+API-Endpunkt: https://api.eu-gb.bluemix.net (CF-API-Version: 2.75.0)
+Nicht angemeldet. Verwenden Sie 'bx login' für die Anmeldung.
+```
+
+Folgen Sie dann der Eingabeaufforderung, um sich anzumelden:
+
+```
+ ~ $ bluemix login
+API-Endpunkt: https://api.eu-gb.bluemix.net
+
+E-Mail> user@example.com
+
+Kennwort>
+    Authentifizieren...
+    OK
+
+```
+
+Es ist möglich, die zu verwendende Organisation und den zu verwendenden Bereich mit den Switches `-o` und `-s` anzugeben. Andernfalls werden Sie vom Anmeldebefehl dazu aufgefordert, eine Auswahl zu treffen, wenn mehrere Möglichkeiten vorhanden sind.
+
+Die {{site.data.keyword.Bluemix_notm}}-CLI ist nun eingerichtet und kann verwendet werden.
+
 ## Plug-ins installieren
 {: #install_plug-in}
 

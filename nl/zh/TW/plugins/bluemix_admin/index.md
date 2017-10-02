@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-04"
+lastupdated: "2017-09-11"
 
 ---
 
@@ -234,14 +234,6 @@ cf ba create-org <organization> <manager>
 
 **提示：**您也可以使用 **ba co** 作為 **ba create-org** 這個較長指令名稱的別名。
 
-### 刪除組織
-{: #admin_delete_org}
-
-若要刪除組織，請使用下列指令：
-
-```
-cf ba delete-org <organization>
-```
 {: codeblock}
 
 <dl class="parml">
@@ -707,7 +699,12 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-您可以使用下列指令檢視以上指令參數和範例的清單：
+您可以使用下列指令來檢視應用程式環境變數： 
+
+```
+cf ba resource-metrics-history -help
+```
+
 **提示：**您也可以使用 **ba rsmh** 作為 **ba resource-metrics-history** 這個較長指令名稱的別名。
 
 ## 管理服務分配管理系統

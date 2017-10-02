@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-21"
 
 
 ---
@@ -228,20 +228,26 @@ Cr bx plano
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Faz seu upgrade do plano grátis para o padrão.
+Faz upgrade para o plano padrão.
 
 Para obter informações sobre planos, veja [Planos de registro](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**Parâmetros**
+<dl>
+<dt>PLAN</dt>
+<dd>O nome do plano de precificação para o qual você deseja fazer upgrade. Se PLAN não for especificado, o padrão será `Standard`.</dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-O comando foi removido. É possível usar a calculadora de precificação para calcular o custo estimado. Consulte [Estimando custos para o IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02).
+O comando foi removido. É possível usar a calculadora de precificação para calcular o custo estimado. Consulte [Estimando custos para o IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## Cota cr bx
@@ -268,9 +274,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **Parâmetros**
 <dl>
 <dt>-- tráfego VALUE</dt>
-<dd>(Opcional) Muda sua cota de tráfego para o valor especificado. A operação falhará se você não estiver autorizado a configurar o tráfego ou se configurar um valor que exceda o seu plano de precificação atual.</dd>
+<dd>(Opcional) Muda sua cota de tráfego para o valor especificado em megabytes. A operação falhará se você não estiver autorizado a configurar o tráfego ou se configurar um valor que exceda o seu plano de precificação atual.</dd>
 <dt>-- armazenamento VALUE</dt>
-<dd>(Opcional) Muda sua cota de armazenamento para o valor especificado. A operação falhará se você não estiver autorizado a configurar cotas de armazenamento ou se configurar um valor que exceda o seu plano de precificação atual.</dd>
+<dd>(Opcional) Muda sua cota de armazenamento para o valor especificado em megabytes. A operação falhará se você não estiver autorizado a configurar cotas de armazenamento ou se configurar um valor que exceda o seu plano de precificação atual.</dd>
 </dl>
 
 
@@ -378,7 +384,7 @@ Bx cr vulnerabilidade de avaliação IMAGEM [ IMAGEM ... ]
 <li>Ubuntu</li>
 </ul>
 
-Para obter mais informações, veja [Revisando a segurança da imagem](../../../services/Registry/registry_images_.html#registry_security_checking).
+Para obter mais informações, consulte [Gerenciando a segurança de imagens com o Vulnerability Advisor](../../../services/Registry/va/va_index.html#va_index).
 
 </dd>
 

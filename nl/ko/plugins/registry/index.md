@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-21"
 
 
 ---
@@ -223,20 +223,26 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-무료 사용제에서 표준 플랜으로 업그레이드합니다.
+표준 플랜으로 업그레이드됩니다.
 
 플랜에 대한 정보는 [레지스트리 플랜](../../../services/Registry/registry_overview.html#registry_plans)을 참조하십시오.
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**매개변수**
+<dl>
+<dt>PLAN</dt>
+<dd>업그레이드될 대상 가격 책정 플랜의 이름입니다. PLAN이 지정되지 않으면 기본값은 `Standard`입니다. </dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-이 명령은 제거되었습니다. 가격 책정 계산기를 사용하여 예상 비용을 계산할 수 있습니다. [IBM Bluemix Container Registry의 비용 추정](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02)을 참조하십시오.
+이 명령은 제거되었습니다. 가격 책정 계산기를 사용하여 예상 비용을 계산할 수 있습니다. [IBM Bluemix Container Registry의 비용 추정](../../../services/Registry/registry_overview.html#registry_plan_billing)을 참조하십시오.
 
 
 ## bx cr quota
@@ -263,9 +269,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **매개변수**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>(선택사항) 트래픽 할당량을 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 트래픽을 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
+<dd>(선택사항) 트래픽 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 트래픽을 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
 <dt>--storage VALUE</dt>
-<dd>(선택사항) 스토리지 할당량을 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 스토리지를 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
+<dd>(선택사항) 스토리지 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 스토리지를 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
 </dl>
 
 
@@ -371,7 +377,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-자세한 정보는 [이미지 보안 검토](../../../services/Registry/registry_images_.html#registry_security_checking)를 참조하십시오.
+자세한 정보는 [취약성 관리자로 이미지 보안 관리](../../../services/Registry/va/va_index.html#va_index)를 참조하십시오. 
 
 </dd>
 

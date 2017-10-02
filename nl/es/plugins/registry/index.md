@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-21"
 
 
 ---
@@ -225,20 +225,26 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Actualiza desde el plan gratuito al estándar.
+Actualiza al plan estándar.
 
 Para obtener más información sobre los planes, consulte [Planes de registro](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**Parámetros**
+<dl>
+<dt>PLAN</dt>
+<dd>El nombre del plan de precios al que desea actualizar. Si PLAN no se especifica, el valor predeterminado es `Standard`.</dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-Este mandato se ha eliminado. Puede utilizar la calculadora de tarifas para calcular su coste estimado, consulte [Estimación de costes para IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02).
+Este mandato se ha eliminado. Puede utilizar la calculadora de tarifas para calcular su coste estimado, consulte [Estimación de costes para IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## bx cr quota
@@ -265,9 +271,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **Parámetros**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>(Opcional) Cambia su cuota de tráfico al valor que especifique. La operación falla si no está autorizado a establecer cuotas de tráfico, o si establece un valor por encima del que permite su plan de precios actual.</dd>
+<dd>(Opcional) Cambia su cuota de tráfico al valor que especifique en megabytes. La operación falla si no está autorizado a establecer cuotas de tráfico, o si establece un valor por encima del que permite su plan de precios actual.</dd>
 <dt>--storage VALUE</dt>
-<dd>(Opcional) Cambia su cuota de almacenamiento al valor que especifique. La operación falla si no está autorizado a establecer cuotas de almacenamiento, o si establece un valor por encima del que permite su plan de precios actual.</dd>
+<dd>(Opcional) Cambia su cuota de almacenamiento al valor que especifique en megabytes. La operación falla si no está autorizado a establecer cuotas de almacenamiento, o si establece un valor por encima del que permite su plan de precios actual.</dd>
 </dl>
 
 
@@ -375,7 +381,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-Para obtener más información, consulte [Revisión la seguridad de imágenes](../../../services/Registry/registry_images_.html#registry_security_checking).
+Para obtener más información, consulte [Gestión de imágenes de seguridad con Vulnerability Advisor](../../../services/Registry/va/va_index.html#va_index).
 
 </dd>
 

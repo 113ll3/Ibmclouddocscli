@@ -46,7 +46,7 @@ Interface de ligne de commande et outils de développement
 	{: .topicgroup}
 	Outils de développement intégrés
 		ibm-dev-tools-for-vscode.md
-		[Kit d'outils de développement API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[Kit d'outils de développement API Connect](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
 		[Bluemix Live Sync](../develop/bluemixlive.html)
 		[Déploiement d'applications à l'aide d'IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
 		[Gestion des applications Liberty et Node.js](../manageapps/app_mng.html#app_management)

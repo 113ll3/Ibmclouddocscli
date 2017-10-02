@@ -87,6 +87,50 @@ Pour Linux, procédez comme suit :
 
 Vous pouvez maintenant commencer à utiliser l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ou installer des plug-in supplémentaires.
 
+## Premières étapes avec l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
+
+Pour configurer l'outil d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, vous devez spécifier l'API à utiliser, qui dépend de la région avec laquelle vous allez travailler (voir ci-dessous la liste des différentes régions) :
+
+```
+ ~ $ bluemix regions
+Listing Bluemix regions...
+
+Name       Geolocation      Customer   Deployment   Domain               CF API Endpoint                  Type
+eu-de      Germany          IBM        Production   eu-de.bluemix.net    https://api.eu-de.bluemix.net    public
+au-syd     Sydney           IBM        Production   au-syd.bluemix.net   https://api.au-syd.bluemix.net   public
+us-south   US South         IBM        Production   ng.bluemix.net       https://api.ng.bluemix.net       public
+eu-gb      United Kingdom   IBM        Production   eu-gb.bluemix.net    https://api.eu-gb.bluemix.net    public
+```
+
+Pour la région à laquelle vous voulez accéder, consultez la colonne `CF API Endpoint` et utilisez son contenu pour spécifier le noeud final d'API, comme ci-après :
+
+```
+~ $ bluemix api https://api.eu-gb.bluemix.net
+Setting api endpoint to https://api.eu-gb.bluemix.net...
+OK
+
+API endpoint: https://api.eu-gb.bluemix.net (CF API version: 2.75.0)
+Not logged in. Use 'bx login' to log in.
+```
+
+Suivez ensuite l'invite pour vous connecter :
+
+```
+ ~ $ bluemix login
+API endpoint: https://api.eu-gb.bluemix.net
+
+Email> user@example.com
+
+Password>
+    Authenticating...
+    OK
+
+```
+
+Il est possible de spécifier l'organisation et l'espace à utiliser en vous servant des commutateurs `-o` et `-s`, sinon, la commande login vous invitera à choisir quand plusieurs organisations/espaces seront disponibles.
+
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} est maintenant configurée et prête à être utilisée.
+
 ## Installation d'un plug-in
 {: #install_plug-in}
 
