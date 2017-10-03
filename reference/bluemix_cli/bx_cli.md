@@ -180,31 +180,31 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
   </thead>
   <tbody>
   <tr>
-   <td>[bluemix iam service-id](bx_cli.html#bluemix_iam_service-id)</td>
-   <td>[bluemix iam service-id-create](bx_cli.html#bluemix_iam_service-id-create)</td>
-   <td>[bluemix iam service-id-update](bx_cli.html#bluemix_iam_service-id-update)</td>
-   <td>[bluemix iam service-id-delete](bx_cli.html#bluemix_iam_service-id-delete)</td>
-   <td>[bluemix iam service-ids](bx_cli.html#bluemix_iam_service-ids)</td>
+   <td>[bluemix iam service-id](bx_cli.html#bluemix_iam_service_id)</td>
+   <td>[bluemix iam service-id-create](bx_cli.html#bluemix_iam_service_id_create)</td>
+   <td>[bluemix iam service-id-update](bx_cli.html#bluemix_iam_service_id_update)</td>
+   <td>[bluemix iam service-id-delete](bx_cli.html#bluemix_iam_service_id_delete)</td>
+   <td>[bluemix iam service-ids](bx_cli.html#bluemix_iam_service_ids)</td>
   </tr>
   <tr>
    <td>[bluemix iam api-keys](bx_cli.html#bluemix_iam_api_keys)</td>
    <td>[bluemix iam api-key-create](bx_cli.html#bluemix_iam_api_key_create)</td>
    <td>[bluemix iam api-key-delete](bx_cli.html#bluemix_iam_api_key_delete)</td>
    <td>[bluemix iam api-key-update](bx_cli.html#bluemix_iam_api_key_update)</td>
-   <td>[bluemix iam service-api-keys](bx_cli.html#bluemix_iam_service-api-keys)</td>
+   <td>[bluemix iam service-api-keys](bx_cli.html#bluemix_iam_service_api_keys)</td>
   </tr>
   <tr>
-   <td>[bluemix iam service-api-key](bx_cli.html#bluemix_iam_service-api-key)</td>
-   <td>[bluemix iam service-api-key-create](bx_cli.html#bluemix_iam_service-api-key-create)</td>
-   <td>[bluemix iam service-api-key-update](bx_cli.html#bluemix_iam_service-api-key-update)</td>
-   <td>[bluemix iam service-api-key-delete](bx_cli.html#bluemix_iam_service-api-key-delete)</td>
-   <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service-policies)</td>
+   <td>[bluemix iam service-api-key](bx_cli.html#bluemix_iam_service_api_key)</td>
+   <td>[bluemix iam service-api-key-create](bx_cli.html#bluemix_iam_service_api_key_create)</td>
+   <td>[bluemix iam service-api-key-update](bx_cli.html#bluemix_iam_service_api_key_update)</td>
+   <td>[bluemix iam service-api-key-delete](bx_cli.html#bluemix_iam_service_api_key_delete)</td>
+   <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service_policies)</td>
   </tr>
   <tr>
-    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service-policy)</td>
-    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service-policy-create)</td>
-    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service-policy-update)</td>
-    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service-policy-delete)</td>
+    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
+    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
+    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
+    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
     <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
   </tr>
   <tr>
