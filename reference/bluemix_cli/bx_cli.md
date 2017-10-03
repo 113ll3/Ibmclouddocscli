@@ -1215,8 +1215,11 @@ Resend invitation to a user(org manager or account owner is required)
 bluemix account user-reinvite USER_EMAIL ORG_NAME
 ```
 
+
+
 ## bluemix iam service-ids
 {: #bluemix_iam_service_ids}
+
 List all service IDs
 
 ```
@@ -1241,6 +1244,7 @@ bluemix iam service-ids --uuid
 
 ## bluemix iam service-id
 {: #bluemix_iam_service_id}
+
 Display details of a service ID
 
 ```
@@ -1268,6 +1272,7 @@ bluemix iam service-id sample-test
 
 ## bluemix iam service-id-create
 {: #bluemix_iam_service_id_create}
+
 Create a service ID
 
 ```
@@ -1294,6 +1299,7 @@ bluemix iam service-id-create sample-test -d 'hello, world!'
 
 
 ## bluemix iam service-id-update
+
 {: #bluemix_iam_service_id_update}
 Update a service ID
 
@@ -1334,6 +1340,7 @@ bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 
 ## bluemix iam service-id-delete
 {: #bluemix_iam_service_id_delete}
+
 Delete a service ID
 
 ```
@@ -1449,6 +1456,7 @@ bluemix iam api-key-delete NAME [-f]
 
 ## bluemix iam service-api-keys
 {: #bluemix_iam_service_api_keys}
+
 List all service API keys
 
 ```
@@ -1471,6 +1479,7 @@ bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04
 
 ## bluemix iam service-api-key
 {: #bluemix_iam_service_api_key}
+
 List details of a service API key
 
 ```
@@ -1495,6 +1504,7 @@ bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab
 
 ## bluemix iam service-api-key-create
 {: #bluemix_iam_service_api_key_create}
+
 Create a service API key
 
 ```
@@ -1521,6 +1531,7 @@ bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-sout
 
 ## bluemix iam service-api-key-update
 {: #bluemix_iam_service_api_key_update}
+
 Update a service API key
 
 ```
@@ -1551,6 +1562,7 @@ bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-sout
 
 ## bluemix iam service-api-key-delete
 {: #bluemix_iam_service_api_key_delete}
+
 Delete a service API key
 
 ```
@@ -1780,6 +1792,7 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Viewer --
 
 ## bluemix iam service-policies
 {: #bluemix_iam_service_policies}
+
 List all service policies of specified service
 
 ```
@@ -1809,6 +1822,7 @@ bluemix iam service-policies test
 
 ## bluemix iam service-policy
 {: #bluemix_iam_service_policy}
+
 Display details of a service policy
 
 ```
@@ -1840,6 +1854,7 @@ bluemix iam service-policies test 140798e2-8ea7db3
 
 ## bluemix iam service-policy-create
 {: #bluemix_iam_service_policy_create}
+
 Create a service policy
 
 ```
@@ -1881,6 +1896,7 @@ bluemix iam service-policy-create test -f @policy.json
 
 ## bluemix iam service-policy-update
 {: #bluemix_iam_service_policy_update}
+
 Update a service policy
 
 ```
@@ -1925,6 +1941,7 @@ bluemix iam service-policy-update test 140798e2-8ea7db3 -f @policy.json
 
 ## bluemix iam service-policy-delete
 {: #bluemix_iam_service_policy_delete}
+
 Delete a service policy
 
 ```
@@ -1954,6 +1971,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
+
 List resource groups
 
 ```
@@ -1995,6 +2013,7 @@ bluemix resource groups -r d0ef0e-12n3632z9f-ef3w54n -o CF_ORG
 
 ## bluemix resource group
 {: #bluemix_resource_group}
+
 Show details of a resource group
 
 ```
@@ -2028,6 +2047,7 @@ bluemix resourxce group example-group --id
 
 ## bluemix resource group-update
 {: #bluemix_resource_group_update}
+
 Update an existing resource group
 
 ```
@@ -2064,6 +2084,7 @@ bluemix resource group-update example-group -q free
 
 ## bluemix resource quotas
 {: #bluemix_resource_quotas}
+
 List all quota definitions
 
 ```
@@ -2086,6 +2107,7 @@ bluemix resource quotas
 
 ## bluemix resource quota
 {: #bluemix_resource_quota}
+
 Show details of a quota definition
 
 ```
@@ -2561,6 +2583,7 @@ This command has the same function and options as the `cf update-user-provided-s
 
 ## bluemix resource instances
 {: #bluemix_resource_instances}
+
 List resource instances
 
 ```
@@ -2589,6 +2612,7 @@ bluemix resource instances --resource-name test-resource
 
 ## bluemix resource instance
 {: #bluemix_resource_instance}
+
 Show details of a resource instance
 
 ```
@@ -2616,6 +2640,7 @@ bluemix resource instance my-resource-instance
 
 ## bluemix resource instance-create
 {: #bluemix_resource_instance_create}
+
 Create a resource instance
 
 ```
@@ -2649,6 +2674,7 @@ bluemix resource instance-create my-resource-instance test-resource test-resourc
 
 ## bluemix resource instance-update
 {: #bluemix_resource_instance_update}
+
 Update resource instance
 
 ```
@@ -2682,6 +2708,7 @@ bluemix resource instance-update my-resource-instance -n new-resource-instance
 
 ## bluemix resource instance-delete
 {: #bluemix_resource_instance_delete}
+
 Delete resource instance
 
 ```
@@ -2705,6 +2732,7 @@ bluemix resource instance-delete my-resource-instance
 
 ## bluemix resource bindings
 {: #bluemix_resource_bindings}
+
 Show bindings to the resource alias
 
 ```
@@ -2727,6 +2755,7 @@ bluemix resource bindings my-resource-alias
 ```
 ## bluemix resource binding
 {: #bluemix_resource_binding}
+
 Show details of a resource binding
 
 ```
@@ -2754,6 +2783,7 @@ bluemix resource bindings my-resource-alias my-app
 
 ## bluemix resource binding-create
 {: #bluemix_resource_binding_create}
+
 Create a resource binding
 
 ```
@@ -2784,6 +2814,7 @@ bluemix resource binding-create my-resource-alias my-app Administrator
 ```
 ## bluemix resource binding-delete
 {: #bluemix_resource_binding_delete}
+
 Delete a resource binding
 
 ```
@@ -2811,6 +2842,7 @@ bluemix resource binding-delete my-resource-alias my-app
 
 ## bluemix resource keys
 {: #bluemix_resource_keys}
+
 List resource keys of resource instance or resource alias
 
 ```
@@ -2840,6 +2872,7 @@ bluemix resource keys --instance-name my-resource-instance
 
 ## bluemix resource key
 {: #bluemix_resource_key}
+
 Show details of a resource key
 
 ```
@@ -2865,6 +2898,7 @@ bluemix resource key my-resource-key
 
 ## bluemix resource key-create
 {: #bluemix_resource_key_create}
+
 Create a resource key
 
 ```
@@ -2902,6 +2936,7 @@ bluemix resource key-create my-resource-key Administrator --instance-name my-res
 
 ## bluemix resource key-delete
 {: #bluemix_resource_key_delete}
+
 Delete a resource key
 
 ```
@@ -2927,6 +2962,7 @@ bluemix resource key-delete my-resource-key
 
 ## bluemix resource aliases
 {: #bluemix_resource_aliases}
+
 List aliases for a resource instance
 
 ```
@@ -2951,6 +2987,7 @@ bluemix resource aliases my-resource-instance
 
 ## bluemix resource alias
 {: #bluemix_resource_alias}
+
 Show details of a resource alias
 
 ```
@@ -2975,6 +3012,7 @@ bluemix resource aliase  my-resource-alias
 
 ## bluemix resource alias-create
 {: #bluemix_resource_alias_create}
+
 Create an alias of a resource instance
 
 ```
@@ -3007,6 +3045,7 @@ bluemix resource aliase-create my-resource-alias --instance-name my-resource-ins
 
 ## bluemix resource alias-update
 {: #bluemix_resource_alias_update}
+
 Update an resource alias
 
 ```
@@ -3038,6 +3077,7 @@ bluemix resource alias-update my-resource-alias -n new-resource-alias
 
 ## bluemix resource alias-delete
 {: #bluemix_resource_alias_delete}
+
 Delete a resource alias
 
 ```
@@ -3063,6 +3103,7 @@ bluemix resource alias-delete my-resource-alias
 
 ## bluemix catalog search
 {: #bluemix_catalog_search}
+
 Search catalog entries
 
 ```
@@ -3104,6 +3145,7 @@ bluemix catalog search -k service -q 'Automation test'
 
 ## bluemix catalog entry
 {: #bluemix_catalog_entry}
+
 Get a catalog entry
 
 ```
