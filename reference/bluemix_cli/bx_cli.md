@@ -1367,7 +1367,7 @@ bluemix iam service-id-delete sample-teset -f
 
 
 ## bluemix iam api-keys
-{: #bluemix_iam api_keys}
+{: #bluemix_iam_api_keys}
 
 List all Bluemix platform API keys
 
