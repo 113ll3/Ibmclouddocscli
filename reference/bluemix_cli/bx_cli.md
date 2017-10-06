@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-06"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-09-28"
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-Version: 0.6.0
+Version: 0.6.1
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. 
 
@@ -3758,3 +3758,4 @@ Uninstall the `IBM-Containers` plugin that was previously installed:
 ```
 bluemix plugin uninstall IBM-Containers
 ```
+
