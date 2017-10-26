@@ -250,8 +250,6 @@ bx cr plan
 ```
 {: codeblock}
 
-<!-- audience=blue not ready to push to prod yet - issue 963-->
-
 
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
@@ -270,8 +268,6 @@ bx cr plan-upgrade [PLAN]
 <dt>PLAN</dt>
 <dd>The name of the pricing plan that you want to upgrade to. If PLAN is not specified, the default is `standard`.</dd>
 </dl>
-
-<!-- audience=blue -->
 
 
 ## bx cr pricing
