@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-21"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -21,7 +21,7 @@ lastupdated: "2017-09-21"
 {{site.data.keyword.registrylong}} CLI는 계정의 레지스트리 및 관련 리소스를 관리하기 위한 플러그인입니다.
 {: shortdesc}
 
-** 필수 소프트웨어**
+**전제조건**
 * 레지스트리 명령을 실행하기 전에 `bx login` 명령으로
  {{site.data.keyword.Bluemix_short}}에 로그인하여 {{site.data.keyword.Bluemix_short}}
  액세스 토큰을 생성하고 세션을 인증하십시오.
@@ -37,33 +37,33 @@ lastupdated: "2017-09-21"
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -75,6 +75,33 @@ lastupdated: "2017-09-21"
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+{{site.data.keyword.registrylong}}에 Docker 이미지를 빌드합니다.
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**매개변수**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>빌드 컨텍스트의 위치이며, Dockerfile 및 전제조건 파일이 포함되어 있습니다. </dd>
+<dt>--no-cache</dt>
+<dd>(선택사항) 지정된 경우, 이전 빌드에서 캐시된 이미지 계층은 이 빌드에 사용되지 않습니다.</dd>
+<dt>--pull</dt>
+<dd>(선택사항) 지정된 경우, 일치하는 태그가 있는 이미지가 이미 빌드 호스트에 있더라도 기본 이미지를 가져옵니다.</dd>
+<dt>--quiet, -q</dt>
+<dd>(선택사항) 지정된 경우, 오류가 발생하지 않는 한 빌드 출력이 억제됩니다.</dd>
+<dt> --build-arg value</dt>
+<dd>(선택사항) 추가 빌드 인수를 'KEY=VALUE' 형식으로 지정하십시오. 이 매개변수를 여러 번 포함하여 복수의 빌드 인수를 지정할 수 있습니다. Dockerfile에서 키와 일치하는 ARG 행을 지정하는 경우 빌드 인수의 값은 환경 변수로 사용 가능합니다.</dd>
+<dt>--tag value, -t value</dt>
+<dd>빌드할 이미지의 전체 이름이며, 레지스트리 URL 및 네임스페이스가 포함됩니다.</dd>
+</dl>
 
 
 ## bx cr info
@@ -223,7 +250,7 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-표준 플랜으로 업그레이드됩니다.
+표준 플랜으로 업그레이드합니다.
 
 플랜에 대한 정보는 [레지스트리 플랜](../../../services/Registry/registry_overview.html#registry_plans)을 참조하십시오.
 
@@ -235,7 +262,7 @@ bx cr plan-upgrade [PLAN]
 **매개변수**
 <dl>
 <dt>PLAN</dt>
-<dd>업그레이드될 대상 가격 책정 플랜의 이름입니다. PLAN이 지정되지 않으면 기본값은 `Standard`입니다. </dd>
+<dd>업그레이드될 대상 가격 책정 플랜의 이름입니다. PLAN이 지정되지 않는 경우 기본값은 `standard`입니다.</dd>
 </dl>
 
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-21"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -35,33 +35,33 @@ Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -73,6 +73,33 @@ Renvoie les informations sur le noeud final de l'API de registre face auquel les
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+Génère une image Docker dans {{site.data.keyword.registrylong}}.
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**Paramètres**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>Emplacement de votre contexte de génération, qui contient votre fichier Dockerfile et les fichiers prérequis. </dd>
+<dt>--no-cache</dt>
+<dd>(Facultatif) Lorsque ce paramètre est spécifié, les couches d'image mises en cache à partir de générations précédentes ne sont pas utilisées dans cette génération. </dd>
+<dt>--pull</dt>
+<dd>(Facultatif) Lorsque ce paramètre est spécifié, l'image de base est extraite même si une image dotée d'une étiquette correspondante existe déjà sur l'hôte de génération. </dd>
+<dt>--quiet, -q</dt>
+<dd>(Facultatif) Lorsque ce paramètre est spécifié, la sortie de génération est supprimée sauf en cas d'erreur. </dd>
+<dt> --build-arg value</dt>
+<dd>(Facultatif) Spécifiez un argument de génération supplémentaire au format 'KEY=VALUE'. Vous avez la possibilité d'indiquer plusieurs arguments de génération en ajoutant ce paramètre plusieurs fois. Les valeurs d'arguments de génération sont disponibles en tant que variables d'environnement lorsque vous spécifiez une ligne ARG qui correspond à la clé définie dans votre fichier Dockerfile.</dd>
+<dt>--tag value, -t value</dt>
+<dd>Nom complet de l'image à générer, qui inclut l'URL et l'espace de nom de registre.</dd>
+</dl>
 
 
 ## bx cr info
@@ -238,7 +265,7 @@ bx cr plan-upgrade [PLAN]
 **Paramètres**
 <dl>
 <dt>PLAN</dt>
-<dd>Nom du plan de tarification vers lequel que vous voulez effectuer une mise à niveau. Si PLAN n'est pas spécifié, la valeur par défaut est `Standard`.</dd>
+<dd>Nom du plan de tarification vers lequel que vous voulez effectuer une mise à niveau. Si PLAN n'est pas spécifié, la valeur par défaut est `standard`.</dd>
 </dl>
 
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-21"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -35,33 +35,33 @@ Para obtener información sobre la utilización de la interfaz de línea de mand
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -73,6 +73,33 @@ Devuelve los detalles sobre el punto final de la API de registro sobre el que se
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+Crea una imagen de Docker en {{site.data.keyword.registrylong}}.
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**Parámetros**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>La ubicación de su contexto de construcción, que contiene los archivos Dockerfile y de requisito previo.</dd>
+<dt>--no-cache</dt>
+<dd>(Opcional) Si se especifica, las capas de imágenes almacenadas en memoria caché de compilaciones anteriores no se utilizan en esta compilación.</dd>
+<dt>--pull</dt>
+<dd>(Opcional) Si se especifica, la imagen base se extraerá aunque ya exista una imagen con una etiqueta coincidente en el host de compilación.</dd>
+<dt>--quiet, -q</dt>
+<dd>(Opcional) Si se especifica, la salida de compilación se suprimirá a menos que se produzca un error.</dd>
+<dt> --build-arg value</dt>
+<dd>(Opcional) Especifica un argumento de compilación adicional en el formato 'KEY=VALUE'. Se pueden especificar varios argumentos de compilación incluyendo este parámetro varias veces. El valor de los argumentos de compilación está disponible como variables de entorno al especificar una línea ARG que coincida con la clave del Dockerfile.</dd>
+<dt>--tag value, -t value</dt>
+<dd>El nombre completo de la imagen que desea crear, que incluye el URL de registro y el espacio de nombres.</dd>
+</dl>
 
 
 ## bx cr info
@@ -237,7 +264,7 @@ bx cr plan-upgrade [PLAN]
 **Parámetros**
 <dl>
 <dt>PLAN</dt>
-<dd>El nombre del plan de precios al que desea actualizar. Si PLAN no se especifica, el valor predeterminado es `Standard`.</dd>
+<dd>El nombre del plan de precios al que desea actualizar. Si no se especifica PLAN, el valor predeterminado será `standard`.</dd>
 </dl>
 
 

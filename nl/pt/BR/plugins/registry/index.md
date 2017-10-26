@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-21"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2017-09-21"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.registrylong_notm}} CLI
+# CLI do {{site.data.keyword.registrylong_notm}}
 {: #containerregcli}
 
 O {{site.data.keyword.registrylong}} CLI é um plug-in para gerenciar seu registro e seus recursos para sua conta.
@@ -37,34 +37,34 @@ Para descobrir sobre como usar a CLI do {{site.data.keyword.registrylong}}, veja
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (imagens bx cr)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login
 ](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (namespaces bx cr)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plano](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plano](#bx_cr_plan)</td>
  <td>[bx cr plano de upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr cota](#bx_cr_quota)</td>
  <td>[bx cr de cota configurado](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (tokens bx cr)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[Bx cr vulnerabilidade de avaliação (que va bx)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -76,6 +76,33 @@ Retorna os detalhes sobre o terminal de API de registro com relação ao qual os
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+Constrói uma imagem do Docker no {{site.data.keyword.registrylong}}.
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**Parâmetros**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>O local de seu contexto de compilação, que contém o Dockerfile e os arquivos de pré-requisito.</dd>
+<dt>--no-cache</dt>
+<dd>(Opcional) Se especificado, camadas de imagem em cache de construções anteriores não serão usadas nesta compilação.</dd>
+<dt>--pull</dt>
+<dd>(Opcional) Se especificado, a imagem base será puxada mesmo se uma imagem com uma tag de correspondência já existir no host de construção.</dd>
+<dt>--quiet, -q</dt>
+<dd>(Opcional) Se especificado, a saída de construção será suprimida, a menos que ocorra um erro.</dd>
+<dt> --build-arg value</dt>
+<dd>(Opcional) Especifique um argumento de construção adicional no formato 'KEY=VALUE'. Múltiplos argumentos de compilação podem ser especificados, incluindo este parâmetro, múltiplas vezes. O valor de argumentos de compilação fica disponível como variáveis de ambiente quando você especifica uma linha ARG que corresponde à chave em seu Dockerfile.</dd>
+<dt>--tag value, -t value</dt>
+<dd>O nome completo da imagem que você deseja construir, que inclui a URL do registro e o namespace.</dd>
+</dl>
 
 
 ## bx cr info
@@ -240,7 +267,7 @@ bx cr plan-upgrade [PLAN]
 **Parâmetros**
 <dl>
 <dt>PLAN</dt>
-<dd>O nome do plano de precificação para o qual você deseja fazer upgrade. Se PLAN não for especificado, o padrão será `Standard`.</dd>
+<dd>O nome do plano de precificação para o qual você deseja fazer upgrade. Se PLAN não for especificado, o padrão será `standard`.</dd>
 </dl>
 
 

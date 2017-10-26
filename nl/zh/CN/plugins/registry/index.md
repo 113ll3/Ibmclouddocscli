@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-21"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -34,33 +34,33 @@ lastupdated: "2017-09-21"
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -72,6 +72,33 @@ lastupdated: "2017-09-21"
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+在 {{site.data.keyword.registrylong}} 中构建 Docker 映像。
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**参数**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>构建上下文的位置，其中包含 Dockerfile 和必备文件。</dd>
+<dt>--no-cache</dt>
+<dd>（可选）如果指定此项，那么不会在此构建中使用从先前构建中高速缓存的映像层。</dd>
+<dt>--pull</dt>
+<dd>（可选）如果指定此项，那么即使构建主机上已存在具有匹配标记的映像，也会拉取基本映像。</dd>
+<dt>--quiet, -q</dt>
+<dd>（可选）如果指定此项，那么除非发生错误，否则将禁止构建输出。</dd>
+<dt> --build-arg value</dt>
+<dd>（可选）以“KEY=VALUE”格式指定其他构建自变量。可以通过多次包含此参数来指定多个构建自变量。指定与 Dockerfile 中的键相匹配的 ARG 行时，构建自变量的值可用作环境变量。</dd>
+<dt>--tag value, -t value</dt>
+<dd>要构建的映像的全名，包括注册表 URL 和名称空间。</dd>
+</dl>
 
 
 ## bx cr info
@@ -232,7 +259,7 @@ bx cr plan-upgrade [PLAN]
 **参数**
 <dl>
 <dt>套餐</dt>
-<dd>要升级到的价格套餐的名称。如果未指定套餐，那么缺省值为`标准`。</dd>
+<dd>要升级到的价格套餐的名称。如果未指定 PLAN，那么缺省值为 `standard`。</dd>
 </dl>
 
 

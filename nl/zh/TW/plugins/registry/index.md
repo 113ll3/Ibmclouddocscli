@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-21"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -34,33 +34,33 @@ lastupdated: "2017-09-21"
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -72,6 +72,33 @@ lastupdated: "2017-09-21"
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+在 {{site.data.keyword.registrylong}} 中建置 Docker 映像檔。
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**參數**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>建置環境定義的位置，其包含您的 Dockerfile 及必要檔案。</dd>
+<dt>--no-cache</dt>
+<dd>（選用）如果指定，則不會在此建置中使用先前建置的已快取映像檔層。</dd>
+<dt>--pull</dt>
+<dd>（選用）如果指定，則即使建置主機上已有具有相符標籤的映像檔，也會取回基礎映像檔。</dd>
+<dt>--quiet, -q</dt>
+<dd>（選用）如果指定，則除非發生錯誤，否則會抑制建置輸出。</dd>
+<dt> --build-arg value</dt>
+<dd>（選用）以 'KEY=VALUE' 格式指定其他建置引數。包括此參數多次，即可指定多個建置引數。當您指定符合 Dockerfile 中索引鍵的 ARG 行時，建置引數的值可以作為環境變數。</dd>
+<dt>--tag value, -t value</dt>
+<dd>您要建置之映像檔的完整名稱，其包含登錄 URL 及名稱空間。</dd>
+</dl>
 
 
 ## bx cr info
@@ -121,7 +148,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dl>
 <dt>--no-trunc</dt>
 <dd>（選用）不要截斷映像檔摘要。</dd>
-<dt>-q、--quiet</dt>
+<dt>-q, --quiet</dt>
 <dd>（選用）以下列格式列出每一個映像檔：`repository:tag`。</dd>
 <dt>--include-ibm</dt>
 <dd>（選用）將 IBM 提供的公用映像檔包含在輸出中。若不使用此選項，依預設只會列出專用映像檔。</dd>
@@ -232,7 +259,7 @@ bx cr plan-upgrade [PLAN]
 **參數**
 <dl>
 <dt>PLAN</dt>
-<dd>您要升級到的定價方案名稱。如果未指定 PLAN，預設值是 `Standard`。</dd>
+<dd>您要升級到的定價方案名稱。如果未指定 PLAN，則預設值為 `standard`。</dd>
 </dl>
 
 
@@ -288,7 +315,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 <dl>
 <dt>--description VALUE</dt>
 <dd>（選用）指定值作為記號說明，在您執行 `bx cr token-list` 時顯示。如果 IBM Bluemix Container Service 自動建立您的記號，則會將說明設為「Kubernetes 叢集」名稱。在此情況下，移除您的叢集時，會自動移除此記號。</dd>
-<dt>-q、--quiet</dt>
+<dt>-q, --quiet</dt>
 <dd>（選用）僅顯示記號，不含任何周圍文字。</dd>
 <dt>--non-expiring</dt>
 <dd>（選用）建立具有不會到期之存取權的記號。若未設定此參數，記號的存取權依預設會在 24 個小時之後到期。</dd>

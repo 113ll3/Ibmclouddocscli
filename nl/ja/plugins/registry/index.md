@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -34,34 +34,34 @@ lastupdated: "2017-08-30"
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login
 ](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -73,6 +73,33 @@ lastupdated: "2017-08-30"
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+{{site.data.keyword.registrylong}} 内で Docker イメージをビルドします。
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**パラメーター**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>Dockerfile と前提条件ファイルが含まれている、ビルド・コンテキストの場所。</dd>
+<dt>--no-cache</dt>
+<dd>(オプション)  指定されている場合、前のビルドからのキャッシュされたイメージ層はこのビルドで使用されません。</dd>
+<dt>--pull</dt>
+<dd>(オプション)  指定されている場合、一致するタグを持つイメージがビルド・ホスト上に既に存在していても、基本イメージがプルされます。</dd>
+<dt>--quiet、-q</dt>
+<dd>(オプション) 指定されている場合、エラーが発生しない限り、ビルド出力は抑止されます。</dd>
+<dt> --build-arg value</dt>
+<dd>(オプション) 「KEY=VALUE」のフォーマットで追加のビルド引数を指定します。このパラメーターを複数回含めることにより、複数のビルド引数を指定できます。Dockerfile 内のキーに一致する ARG 行を指定する時、ビルド引数の値は環境変数として使用できます。</dd>
+<dt>--tag value, -t value</dt>
+<dd>ビルドするイメージのフルネーム。これには、レジストリーの URL と名前空間が含まれます。</dd>
+</dl>
 
 
 ## bx cr info
@@ -222,20 +249,26 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-無料プランから標準プランにアップグレードします。
+標準プランにアップグレードします。
 
 プランについて詳しくは、[レジストリー・プラン (Registry plans)](../../../services/Registry/registry_overview.html#registry_plans) を参照してください。
 
 ```
-bx cr plan-upgrade standard
+bx cr plan-upgrade [PLAN]
 ```
 {: codeblock}
+
+**パラメーター**
+<dl>
+<dt>プラン</dt>
+<dd>アップグレード先の価格プランの名前。PLAN を指定しない場合、デフォルトは `standard` です。</dd>
+</dl>
 
 
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-このコマンドは削除されました。料金計算機を使用して、推定コストを計算できます。[IBM Bluemix Container Registry のコストの見積もり](../../../services/Registry/registry_overview.html#registry_plan_billing#task_02)を参照してください。
+このコマンドは削除されました。料金計算機を使用して、推定コストを計算できます。[IBM Bluemix Container Registry のコストの見積もり](../../../services/Registry/registry_overview.html#registry_plan_billing)を参照してください。
 
 
 ## bx cr quota
@@ -262,9 +295,9 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 **パラメーター**
 <dl>
 <dt>--traffic VALUE</dt>
-<dd>(オプション) トラフィック割り当て量を、指定された値に変更します。トラフィックを設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
+<dd>(オプション) トラフィック割り当て量を、指定された値 (M バイト単位) に変更します。トラフィックを設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
 <dt>--storage VALUE</dt>
-<dd>(オプション) ストレージ割り当て量を、指定された値に変更します。ストレージ割り当て量を設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
+<dd>(オプション) ストレージ割り当て量を、指定された値 (M バイト単位) に変更します。ストレージ割り当て量を設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
 </dl>
 
 
@@ -370,7 +403,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-詳しくは、[イメージ・セキュリティーの検討](../../../services/Registry/registry_images_.html#registry_security_checking)を参照してください。
+詳しくは、[Managing image security with Vulnerability Advisor](../../../services/Registry/va/va_index.html#va_index) を参照してください。
 
 </dd>
 

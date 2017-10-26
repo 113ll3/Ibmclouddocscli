@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-04"
+lastupdated: "2017-09-11"
 
 ---
 
@@ -239,14 +239,6 @@ cf ba create-org <organization> <manager>
 
 **ヒント:** **ba create-org** という長いコマンド名の別名として **ba co** を使用することもできます。
 
-### 組織の削除
-{: #admin_delete_org}
-
-組織を削除するには、以下のコマンドを使用します。
-
-```
-cf ba delete-org <organization>
-```
 {: codeblock}
 
 <dl class="parml">
@@ -717,7 +709,13 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-以下のコマンドを使用して、上記のコマンド・パラメーターおよび例のリストを表示できます。**ヒント:** **ba resource-metrics-history** という長いコマンド名の別名として **ba rsmh** を使用することもできます。
+以下のコマンドを使用して、上記のコマンド・パラメーターおよび例のリストを表示できます。 
+
+```
+cf ba resource-metrics-history -help
+```
+
+**ヒント:** **ba resource-metrics-history** という長いコマンド名の別名として **ba rsmh** を使用することもできます。
 
 ## サービス・ブローカーの管理
 {: #admin_servbro}

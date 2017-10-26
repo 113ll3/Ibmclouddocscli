@@ -595,7 +595,7 @@ bluemix ic inspect [IMAGE|images|CONTAINER]
    <dl>
    <dt><i>IMAGE</i> (obrigatório)</dt>
    <dd>Visualize informações detalhadas sobre uma imagem específica especificando o nome ou o ID da imagem.</dd>
-   <dt>images (obrigatório)</dt>
+   <dt>images (necessário)</dt>
    <dd>Visualize informações detalhadas sobre todas as imagens em seu repositório.</dd>
    <dt><i>CONTAINER</i> (obrigatório)</dt>
    <dd>Visualize informações detalhadas sobre um contêiner específico especificando o nome ou o ID do contêiner.</dd>

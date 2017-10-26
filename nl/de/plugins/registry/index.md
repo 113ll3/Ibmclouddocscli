@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-21"
+lastupdated: "2017-09-28"
 
 
 ---
@@ -35,33 +35,33 @@ Informationen zur Verwendung der {{site.data.keyword.registrylong}}-CLI finden S
  <tbody>
  <tr>
  <td>[bx cr api](#bx_cr_api)</td>
+ <td>[bx cr build](#bx_cr_build)</td>
  <td>[bx cr info](#bx_cr_info)</td>
  <td>[bx cr image-inspect](#bx_cr_image_inspect)</td>
  <td>[bx cr image-list (bx cr images)](#bx_cr_image_list)</td>
- <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  </tr>
  <tr>
+ <td>[bx cr image-rm](#bx_cr_image_rm)</td>
  <td>[bx cr login](#bx_cr_login)</td>
  <td>[bx cr namespace-add](#bx_cr_namespace_add)</td>
  <td>[bx cr namespace-list (bx cr namespaces)](#bx_cr_namespace_list)</td>
  <td>[bx cr namespace-rm](#bx_cr_namespace_rm)</td>
- <td>[bx cr plan](#bx_cr_plan)</td>
  </tr>
  <tr>
+ <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
  <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr token-add](#bx_cr_token_add)</td>
  </tr>
  <tr>
+ <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
-
 
 
 ## bx cr api
@@ -73,6 +73,33 @@ Gibt die Details zu dem Registry-API-Endpunkt zurück, an dem die Befehle ausgef
 bx cr api
 ```
 {: codeblock}
+
+
+## bx cr build
+{: #bx_cr_build}
+
+Erstellt ein Docker-Image in {{site.data.keyword.registrylong}}.
+
+```
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+```
+{: codeblock}
+
+**Parameter**
+<dl>
+<dt>DIRECTORY</dt>
+<dd>Die Position Ihres Buildkontextes, der Ihre Dockerfile und die vorausgesetzten Dateien enthält.</dd>
+<dt>--no-cache</dt>
+<dd>(Optional) Bei Angabe werden im Cache zwischengespeicherte Image-Layer aus vorherigen Builds in diesem Build nicht verwendet.</dd>
+<dt>--pull</dt>
+<dd>(Optional) Bei Angabe wird das Basisimage auch dann extrahiert, wenn ein Image mit einem übereinstimmenden Tag bereits auf dem Build-Host existiert.</dd>
+<dt>--quiet, -q</dt>
+<dd>(Optional) Bei Angabe wird die Buildausgabe unterdrückt, es sei denn, es tritt ein Fehler auf.</dd>
+<dt> --build-arg value</dt>
+<dd>(Optional) Geben Sie ein zusätzliches Buildargument im Format 'KEY=VALUE' an. Mehrere Buildargumente können angegeben werden, indem Sie diesen Parameter mehrmals einschließen. Der Wert von Buildargumenten steht in Form von Umgebungsvariablen zur Verfügung, wenn Sie eine ARG-Zeile angeben, die mit dem Schlüssel in Ihrer Dockerfile übereinstimmt.</dd>
+<dt>--tag value, -t value</dt>
+<dd>Der vollständige Name für das Image, das erstellt werden soll. Dieser Name umfasst die Registry-URL und den Namensbereich.</dd>
+</dl>
 
 
 ## bx cr info
