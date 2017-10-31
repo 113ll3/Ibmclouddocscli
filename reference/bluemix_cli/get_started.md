@@ -17,7 +17,7 @@ lastupdated: "2017-08-20"
 # Getting started with {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI provides the command line interface to manage applications, containers, infrastructures, services and other resources in Bluemix. To get started with {{site.data.keyword.Bluemix_notm}} CLI, following the next steps
+{{site.data.keyword.Bluemix_notm}} CLI provides the command line interface to manage applications, containers, infrastructures, services and other resources in Bluemix. To get started with {{site.data.keyword.Bluemix_notm}} CLI, follow these steps.
 
 1. Select the installer of your OS to download
    
@@ -31,12 +31,16 @@ lastupdated: "2017-08-20"
    * For macOS and windows, just run the installer.
    * For Linux, exact the package and run `install_bluemix_cli` script
 
-1. Target an API endpoint and login Bluemix
+1. Target the API endpoint for your region and log in
+
+    ```
+    bx login
+    ```
 
   ![Example](example.gif)
 
 
-Then you are good to go with the CLI to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `bluemix help` or `bx help` to see the command descriptions. 
+Then you are good to go with the CLI to manage {{site.data.keyword.Bluemix_notm}} resources. Type `bluemix help` or `bx help` to see the command descriptions. 
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
 
