@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-10-31"
 
 
 ---
@@ -57,9 +57,12 @@ To find out about how to use the {{site.data.keyword.registrylong_notm}} CLI, se
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
  </tr>
  <tr>
+ <td>[bx cr region](#bx_cr_region)</td>
+ <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
+ </tr><tr>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
@@ -274,6 +277,34 @@ bx cr plan-upgrade [PLAN]
 {: #bx_cr_pricing}
 
 This command has been removed. You can use the pricing calculator to calculate your estimated cost, see [Estimating costs for {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_overview.html#registry_plan_billing).
+
+
+## bx cr region
+{: #bx_cr_region}
+
+Displays the targeted region and the registry.
+
+```
+bx cr region
+```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+Set a target region for the {{site.data.keyword.registrylong_notm}} commands. To list the available regions, run the command with no parameters.
+
+```
+bx cr region-set [REGION]
+```
+{: codeblock}
+
+**Parameters**
+<dl>
+<dt>REGION</dt>
+<dd>(Optional) The name of your target region, for example, `us-south`.</dd>
+</dl>
 
 
 ## bx cr quota
