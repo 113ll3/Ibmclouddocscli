@@ -52,18 +52,17 @@ To find out about how to use the {{site.data.keyword.registrylong_notm}} CLI, se
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
+ <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
- <td>[bx cr region](#bx_cr_region)</td>
  <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
- </tr><tr>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -271,12 +270,6 @@ bx cr plan-upgrade [PLAN]
 <dt>PLAN</dt>
 <dd>The name of the pricing plan that you want to upgrade to. If PLAN is not specified, the default is `standard`.</dd>
 </dl>
-
-
-## bx cr pricing
-{: #bx_cr_pricing}
-
-This command has been removed. You can use the pricing calculator to calculate your estimated cost, see [Estimating costs for {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## bx cr region
