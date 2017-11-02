@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-31"
+lastupdated: "2017-11-02"
 
 
 ---
@@ -272,34 +272,6 @@ bx cr plan-upgrade [PLAN]
 </dl>
 
 
-## bx cr region
-{: #bx_cr_region}
-
-Displays the targeted region and the registry.
-
-```
-bx cr region
-```
-{: codeblock}
-
-
-## bx cr region-set
-{: #bx_cr_region_set}
-
-Set a target region for the {{site.data.keyword.registrylong_notm}} commands. To list the available regions, run the command with no parameters.
-
-```
-bx cr region-set [REGION]
-```
-{: codeblock}
-
-**Parameters**
-<dl>
-<dt>REGION</dt>
-<dd>(Optional) The name of your target region, for example, `us-south`.</dd>
-</dl>
-
-
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -327,6 +299,34 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>(Optional) Changes your traffic quota to the specified value in megabytes. The operation fails if you are not authorized to set traffic, or if you set a value that exceeds your current pricing plan.</dd>
 <dt>--storage VALUE</dt>
 <dd>(Optional) Changes your storage quota to the specified value in megabytes. The operation fails if you are not authorized to set storage quotas, or if you set a value that exceeds your current pricing plan.</dd>
+</dl>
+
+
+## bx cr region
+{: #bx_cr_region}
+
+Displays the targeted region and the registry.
+
+```
+bx cr region
+```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+Set a target region for the {{site.data.keyword.registrylong_notm}} commands. To list the available regions, run the command with no parameters.
+
+```
+bx cr region-set [REGION]
+```
+{: codeblock}
+
+**Parameters**
+<dl>
+<dt>REGION</dt>
+<dd>(Optional) The name of your target region, for example, `us-south`.</dd>
 </dl>
 
 
