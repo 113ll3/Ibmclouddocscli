@@ -17,7 +17,9 @@ lastupdated: "2017-08-20"
 # Getting started with {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI provides the command line interface to manage applications, containers, infrastructures, services and other resources in Bluemix. To get started with {{site.data.keyword.Bluemix_notm}} CLI, follow these steps.
+{{site.data.keyword.Bluemix_notm}} CLI provides the command line interface to manage applications, containers, infrastructures, services and other resources in {{site.data.keyword.Bluemix_notm}}. 
+
+To get started with {{site.data.keyword.Bluemix_notm}} CLI:
 
 1. Select the installer of your OS to download
    
@@ -31,16 +33,11 @@ lastupdated: "2017-08-20"
    * For macOS and windows, just run the installer.
    * For Linux, exact the package and run `install_bluemix_cli` script
 
-1. Target the API endpoint for your region and log in
-
-    ```
-    bx login
-    ```
+1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}}
 
   ![Example](example.gif)
 
-
-Then you are good to go with the CLI to manage {{site.data.keyword.Bluemix_notm}} resources. Type `bluemix help` or `bx help` to see the command descriptions. 
+Now you are ready to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `bluemix help` or `bx help` to see the command descriptions. 
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
 
@@ -56,6 +53,4 @@ Then you are good to go with the CLI to manage {{site.data.keyword.Bluemix_notm}
 Use the following options to report issues or submit new feature requests:
  * Create issues in [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
  * leave messages in [Slack channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
-
-
 

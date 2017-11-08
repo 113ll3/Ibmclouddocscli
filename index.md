@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-30"
+lastupdated: "2017-11-08"
 
 ---
 
@@ -28,6 +28,8 @@ lastupdated: "2017-06-30"
 
 
 ## IBM Cloud Application Tools 2 (Beta)
+{: #icat notoc}
+
 IBM Cloud Application Tools 2 is a menu bar application that's streamlined for local environment setup and management on macOS. By using IBM Cloud Application Tools 2, you can easily install and update Bluemix tools and CLIs, change CLI deployment targets, and quickly access common Bluemix links.
 
 [Download](http://ibm.biz/icat-2-download){: new_window} <br>
@@ -39,7 +41,7 @@ IBM Cloud Application Tools 2 is a menu bar application that's streamlined for l
 
 Download and install plug-ins to integrate your favorite {{site.data.keyword.Bluemix_notm}} services.
 
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
 |----------|----------|----------|----------|----------|
-| [Liberty Eclipse Plug-in ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse Plug-in ![External link icon](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="Table 5. Plug-ins" caption-side="top"}
+| [Liberty Eclipse Plug-in ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse Plug-in ![External link icon](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [{{site.data.keyword.Bluemix_notm}} Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
+{: caption="Table 6. Plug-ins" caption-side="top"}

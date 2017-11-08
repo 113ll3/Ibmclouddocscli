@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-10-06"
+lastupdated: "2017-11-06"
 
 ---
 
@@ -18,11 +18,11 @@ lastupdated: "2017-10-06"
 
 Version: 0.6.1
 
-The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. 
+The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}.
 
-Starting from version 0.5.0, {{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, do not use both {{site.data.keyword.Bluemix_notm}} CLI commands `bx [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `bluemix cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context.  Besides,  `bluemix cf api/login/logout/target` is not allowed, use `bluemix api/login/logout/target` instead.
+Starting from version 0.5.0, {{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, do not use both {{site.data.keyword.Bluemix_notm}} CLI commands `bx [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `bluemix cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context.  Note that `bluemix cf api/login/logout/target` is not allowed, and you must use `bluemix api/login/logout/target` instead.
 
-The following lists detailed commands usage that are supported by {{site.data.keyword.Bluemix_notm}} CLI, including their names, arguments, options, prerequisites, descriptions, and examples.
+The following lists detailed commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, including their names, arguments, options, prerequisites, descriptions, and examples.
 {:shortdesc}
 
 **Note:** *Prerequisites* list which actions are required before using the command. Commands that have no prerequisite actions list **None**. Otherwise, prerequisites might include one or more of the following actions:
@@ -32,7 +32,7 @@ The following lists detailed commands usage that are supported by {{site.data.ke
 <dd>An API endpoint must be set through the <code>bluemix api</code> before using the command.</dd>
 <dt>Login</dt>
 <dd>Login by using the <code>bluemix login</code> command is required before using this command.
-If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key. Go to {{site.data.keyword.Bluemix_notm}} console **Manage** &gt; **Security** &gt; **Bluemix API keys** to create API keys.
+If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key. Go to {{site.data.keyword.Bluemix_notm}} console **Manage** &gt; **Security** &gt; **Platform API keys** to create API keys.
 </dd>
 <dt>Target</dt>
 <dd>The <code>bluemix target</code> command must be used to set an org and space before using this command.</dd>
@@ -69,12 +69,12 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
  </tbody>
  </table>
- 
- ## Commands for managing and configuring {{site.data.keyword.BluSoftlayer_notm}} services
+
+ ## Commands for managing and configuring {{site.data.keyword.BluSoftlayer_notm}} infrastructure services (bluemix sl)
   {: #bx_commands_softlayer}
-  
-The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been merged into the Bluemix CLI. For more information on using the Bluemix CLI to configure and manage {{site.data.keyword.BluSoftlayer_notm}} services, see: [Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) commands](/docs/cli/reference/softlayer/index.md#softlayer_cli).
- 
+
+The commands for managing {{site.data.keyword.BluSoftlayer_notm}} infrastructure have been merged into the {{site.data.keyword.Bluemix_notm}} CLI. For more information on using the {{site.data.keyword.Bluemix_notm}} CLI to configure and manage {{site.data.keyword.BluSoftlayer_notm}} infrastructure services, see: [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} infrastructure (bluemix sl) commands](/docs/cli/reference/softlayer/index.md#softlayer_cli).
+
  ## Commands for managing accounts, orgs, and roles
  {: #bx_commands_account}
 
@@ -215,7 +215,7 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
   </tr>
   </tbody>
   </table>
- 
+
  ## Commands for managing cf apps and app related domains, routes, and certificates
  {: #bx_commands_apps}
 
@@ -276,14 +276,14 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
  </tr>
   </tbody>
  </table>
- 
- ## Commands for managing Bluemix services
+
+ ## Commands for managing {{site.data.keyword.Bluemix_notm}} services
  {: #bx_commands_services}
 
-<table summary="bluemix commands that you can use to manage Bluemix services.">
-<caption>Table 5. Commands for managing Bluemix services</caption>
+<table summary="bluemix commands that you can use to manage {{site.data.keyword.Bluemix_notm}} services.">
+<caption>Table 5. Commands for managing {{site.data.keyword.Bluemix_notm}} services</caption>
  <thead>
- <th colspan="5">Commands for managing Bluemix services</th>
+ <th colspan="5">Commands for managing {{site.data.keyword.Bluemix_notm}} services</th>
  </thead>
  <tbody>
  <tr>
@@ -310,26 +310,26 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
   </tbody>
  </table>
 
- 
+
  ## Commands for managing catalog, plug-ins, and billing settings
  {: #bx_commands_settings}
 
-<table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, billing, and security settings.">
-<caption>Table 6. Commands for managing Bluemix catalog, plug-ins, billing, and security settings</caption>
+<table summary="bluemix commands that you can use to manage the {{site.data.keyword.Bluemix_notm}} catalog, plug-ins, billing, and security settings.">
+<caption>Table 6. Commands for managing the {{site.data.keyword.Bluemix_notm}} catalog, plug-ins, billing, and security settings</caption>
  <thead>
- <th colspan="5">Commands for managing Bluemix catalog, plug-ins, billing, and security settings</th>
+ <th colspan="5">Commands for managing {{site.data.keyword.Bluemix_notm}} catalog, plug-ins, billing, and security settings</th>
  </thead>
  <tbody>
  <tr>
   <td>[bluemix catalog search](bx_cli.html#bluemix_catalog_search)</td>
   <td>[bluemix catalog entry](bx_cli.html#bluemix_catalog_entry)</td>
-  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry-create)</td>
-  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry-update)</td>
-  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry-visibility)</td>
+  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry_create)</td>
+  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry_update)</td>
+  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry_visibility)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service-marketplace)</td>
-  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry-visibility-set)</td>
+  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service_marketplace)</td>
+  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry_visibility_set)</td>
   <td>[bluemix catalog templates](bx_cli.html#bluemix_catalog_templates)</td>
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
   <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
@@ -354,7 +354,7 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}}} have been mer
  </tr>
  </tbody>
  </table>
- 
+
 ## bluemix help
 {: #bluemix_help}
 Display the general help for first-level built-in commands and supported namespaces of {{site.data.keyword.Bluemix_notm}} CLI, or the help for a specific built-in command or namespace.
@@ -548,7 +548,7 @@ bluemix -q cf services
 ## bluemix login
 {: #bluemix_login}
 
-Log in user. 
+Log in user.
 
 ```
 bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
@@ -926,10 +926,16 @@ Remove a user from org (org manager or user him/herself only)
 Get all organization roles of the current user
 
 ```
-bluemix account org-roles
+bluemix account org-roles [-u USER_ID]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>-u</dt>
+   <dd>User ID. If not specified, default to current user.</dd>
+  </dl>
 
 ## bluemix account org-role-set
 {: #bluemix_account_org_role_set}
@@ -1369,7 +1375,7 @@ bluemix iam service-id-delete sample-teset -f
 ## bluemix iam api-keys
 {: #bluemix_iam_api_keys}
 
-List all Bluemix platform API keys
+List all {{site.data.keyword.Bluemix_notm}} platform API keys
 
 ```
 bluemix iam api-keys
@@ -1380,7 +1386,7 @@ bluemix iam api-keys
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-Create a new Bluemix platform API key
+Create a new {{site.data.keyword.Bluemix_notm}} platform API key
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1409,7 +1415,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-Update a Bluemix platform API key
+Update a {{site.data.keyword.Bluemix_notm}} platform API key
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1438,7 +1444,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-Delete a Bluemix platform API key
+Delete a {{site.data.keyword.Bluemix_notm}} platform API key
 
 ```
 bluemix iam api-key-delete NAME [-f]
@@ -2245,7 +2251,7 @@ This command has the same function and options as the `cf stack` command.
 
 This command has the same function and options as the `cf create-app-manifest` command.
 
-## bluemix app domain-cert 
+## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
 
 List the certificate information of a domain.
@@ -3382,7 +3388,7 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [
    <dt>CF_APP_NAME (required)</dt>
    <dd>The name of the cf application to be created.</dd>
    <dt>-u <i>URL</i> (optional)</dt>
-   <dd>The route of the application. If not specified, the route is set by Bluemix automatically based on your app name and default domain.</dd>
+   <dd>The route of the application. If not specified, the route is set by {{site.data.keyword.Bluemix_notm}} automatically based on your app name and default domain.</dd>
    <dt>-d <i>DESCRIPTION</i> (optional)</dt>
    <dd>Description of the application.</dd>
    <dt>--no-start (optional)</dt>
@@ -3516,13 +3522,13 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (required)</dt>
    <dd>The name of the repository to be added. You can define your own name for each repository.</dd>
    <dt>REPO_URL (required)</dt>
-   <dd>The URL of the repository to be added. The repository URL must contain the protocol (for example, http://plugins.ng.bluemix.net instead of plugins.ng.bluemix.net). http://plugins.ng.bluemix.net is the official plugin repository of Bluemix CLI.</dd>
+   <dd>The URL of the repository to be added. The repository URL must contain the protocol (for example, http://plugins.ng.bluemix.net instead of plugins.ng.bluemix.net). http://plugins.ng.bluemix.net is the official plugin repository of {{site.data.keyword.Bluemix_notm}} CLI.</dd>
     </dl>
 
 
 <strong>Examples</strong>:
 
-Add the official plugin repository of Bluemix CLI as `bluemix-repo`:
+Add the official plugin repository of {{site.data.keyword.Bluemix_notm}} CLI as `bluemix-repo`:
 
 ```
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
@@ -3758,4 +3764,3 @@ Uninstall the `IBM-Containers` plugin that was previously installed:
 ```
 bluemix plugin uninstall IBM-Containers
 ```
-

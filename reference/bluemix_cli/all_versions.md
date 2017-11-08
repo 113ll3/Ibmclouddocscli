@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-10-06"
+lastupdated: "2017-10-13"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-10-06"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Bluemix CLI Installer all versions
+# {{site.data.keyword.Bluemix_notm}} CLI Installer all versions
 
 
 | Version |  Updated  | Downloads | 

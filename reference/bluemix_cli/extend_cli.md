@@ -3,43 +3,49 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-08-20"
+lastupdated: "2017-10-20"
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Extending {{site.data.keyword.Bluemix_notm}} CLI with plug-ins
 {: #plug-ins}
 
 {{site.data.keyword.Bluemix_notm}} CLI supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally. 
 
-[{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg)is the official repository to host the plugins.
+[{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg) is the official repository where plug-ins are hosted.
 
-## Install a plugin from repository
+For more commands to manage plug-ins, run `bluemix plugin` to see the help messages.
+{: tip}
 
-* Look for the plug-in
+## Install a plug-in from the {site.data.keyword.Bluemix_notm}} CLI repository
 
-  Use command 'bluemix plugin repo-plugins -r REPO_NAME' to look for a plugins in the repository.
+### Step 1: Search for the plug-in
+
+1. Use the command `bluemix plugin repo-plugins -r REPO_NAME` to look for a plugin in the repository.
+2. The {{site.data.keyword.Bluemix_notm}} CLI uses the name `Bluemix` by default. You can list the plug-ins in the official `Bluemix` repository. For example:
   
-  {{site.data.keyword.Bluemix_notm}} CLI has the official repository with name `Bluemix` configured by default. You can list the plug-ins in the official `Bluemix` repository as below.
-
   ```
   $ bluemix plugin repo-plugins -r Bluemix
   Getting plug-ins from repository 'Bluemix'...
 
   Repository: Bluemix
   Name           Description                                    Versions
-  auto-scaling   Bluemix CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
-  nsg            Bluemix Network Security Group plugin          0.1.1
+  auto-scaling   IBM Cloud CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
+  nsg            IBM Cloud Network Security Group plugin          0.1.1
 
   ```
 
-* Install the plug-in
+### Step 2: Install the plug-in
 
-  Use 'bx plugin install PLUGIN_NAME -r REPO_NAME' to install the plugin, for example:
+Use the `bx plugin install PLUGIN_NAME -r REPO_NAME` command to install the plugin. For example:
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix
@@ -52,7 +58,7 @@ lastupdated: "2017-08-20"
 
 ## Install a plug-in locally
 
-  Use command `bluemix plugin install LOCAL_FILE_NAME` to install a plugin-in binary in your local machine, for example
+Use the `bluemix plugin install LOCAL_FILE_NAME` command to install a plugin-in binary on your local machine. For example:
 
   ```
   $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2
@@ -62,9 +68,9 @@ lastupdated: "2017-08-20"
   $
   ```
 
-## Install from a web URL
+## Install a plug-in from a web URL
 
-  Use command `bluemix plugin install URL` to install a plugin directly from a web URL, for example
+Use the `bluemix plugin install URL` command to install a plugin directly from a web URL. For example
 
   ```
   ~$ bluemix plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
@@ -75,6 +81,3 @@ lastupdated: "2017-08-20"
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$
   ```
-
-
-For more commands to manage plug-ins, run `bluemix plugin` to see the help messages.
