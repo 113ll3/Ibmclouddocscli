@@ -24,7 +24,7 @@ Sie können das [Installationsprogramm](#installers) oder die [Shell](#shell_ins
 
 Rufen Sie die Seite [Alle Versionen](all_versions.html){: new_window} auf, um das aktuellste Installationsprogramm für Ihr Betriebssystem herunterzuladen.
 
-Führen Sie unter Mac OS und Windows einfach das Installationsprogramm aus.
+Führen Sie unter Mac OS und Windows einfach das Installationsprogramm aus. 
 Für Linux müssen Sie nach dem Herunterladen des Pakets mit dem Installationsprogramm die Dateien aus diesem Paket extrahieren und das Installationsscript mit Rootberechtigung ausführen.
 
   ```
@@ -58,6 +58,6 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 Kopieren Sie den folgenden Befehl und fügen Sie ihn in eine [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window}-Terminalkonsole ein und führen Sie ihn aus.
 
 ```
-iex(New-Object Net.WebClient).DownloadString('https://clis.stage1.ng.bluemix.net/install/powershell')
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
 ```
 

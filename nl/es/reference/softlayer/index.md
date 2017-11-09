@@ -599,6 +599,7 @@ bluemix sl block replica-order VOLUME_ID [OPTIONS]
 bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LINUX
 ```
 Este mandato solicita una réplica para el volumen con el ID 12345678, que realiza una réplica DIARIA, está ubicado en dal09, el nivel de grados es 4, el tipo de SO es Linux.
+
 ### bluemix sl block replica-partners
 {: #sl_block_replica_partners}
 
@@ -768,6 +769,7 @@ bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 bluemix sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 Este mandato solicita espacio de instantáneas para el volumen con el ID 12345678, el tamaño es de 1000 GB, el nivel de grados es de 4 IOPS por GB.
+
 ### bluemix sl block snapshot-restore
 {: #sl_block_snapshot_restore}
 

@@ -57,6 +57,6 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 以下のコマンドを [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} 端末コンソールにコピー・アンド・ペーストし、実行します。
 
 ```
-iex(New-Object Net.WebClient).DownloadString('https://clis.stage1.ng.bluemix.net/install/powershell')
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
 ```
 

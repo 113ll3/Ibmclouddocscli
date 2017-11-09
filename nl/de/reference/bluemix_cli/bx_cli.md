@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-06"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2017-09-28"
 # {{site.data.keyword.Bluemix_notm}}-Befehle (bx)
 {: #bluemix_cli}
 
-Version: 0.6.0
+Version: 0.6.1
 
 Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werden Befehle bereitgestellt, die nach Namensbereich für Benutzer zur Interaktion mit {{site.data.keyword.Bluemix_notm}} zusammengefasst sind. 
 
-Ab Version 0.5.0 enthält die Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilenclients einen Cloud Foundry-Befehlszeilenclient. Wenn Sie eine eigene Cloud Foundry-Befehlszeilenschnittstelle installiert haben, dann verwenden Sie die {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bx [command]` und die Cloud Foundry-CLI-Befehle `cf [command]` Ihrer eigenen Installation nicht in demselben Kontext. Verwenden Sie stattdessen `bluemix cf [command]`, wenn Sie Cloud Foundry-Ressourcen mit der Coud Foundry-Befehlszeilenschnittstelle (CF-CLI) im {{site.data.keyword.Bluemix_notm}}-CLI-Kontext verwalten wollen. Darüber hinaus ist der Befehl `bluemix cf api/login/logout/target` nicht zulässig. Verwenden Sie stattdessen den Befehl `bluemix api/login/logout/target`.
+Ab Version 0.5.0 enthält die Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilenclients einen Cloud Foundry-Befehlszeilenclient. Wenn Sie eine eigene Cloud Foundry-Befehlszeilenschnittstelle installiert haben, dann verwenden Sie die {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bx [command]` und die Cloud Foundry-CLI-Befehle `cf [command]` Ihrer eigenen Installation nicht in demselben Kontext. Verwenden Sie stattdessen `bluemix cf [command]`, wenn Sie Cloud Foundry-Ressourcen mit der Coud Foundry-Befehlszeilenschnittstelle (CF-CLI) im {{site.data.keyword.Bluemix_notm}}-CLI-Kontext verwalten wollen.  Darüber hinaus ist der Befehl `bluemix cf api/login/logout/target` nicht zulässig. Verwenden Sie stattdessen den Befehl `bluemix api/login/logout/target`.
 
 In der nachfolgenden Liste finden Sie detaillierte Angaben zur Befehlssyntax der von der {{site.data.keyword.Bluemix_notm}}-CLI unterstützten Befehle mit zugehörigen Namen, Argumenten, Optionen, Voraussetzungen, Beschreibungen und Beispielen.
 {:shortdesc}
@@ -3759,3 +3759,4 @@ Plug-in `IBM-Containers` deinstallieren, das zuvor installiert wurde:
 ```
 bluemix plugin uninstall IBM-Containers
 ```
+

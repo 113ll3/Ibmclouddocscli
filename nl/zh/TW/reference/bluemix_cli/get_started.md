@@ -51,7 +51,7 @@ lastupdated: "2017-08-20"
 
 使用下列選項，以報告問題或提交新的特性要求：
  * 在 [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 中建立問題
- * 在 [Slack 頻道](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 中保留訊息
+ * 在 [Slack 頻道](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 中留言
 
 
 

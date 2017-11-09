@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-06"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2017-09-28"
 # Comandos do {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Versão: 0.6.0
+Versão: 0.6.1
 
 A interface de linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} fornece um conjunto de comandos que são agrupados por namespace para que os usuários interajam com o {{site.data.keyword.Bluemix_notm}}. 
 
-A partir da versão 0.5.0, o cliente da linha de comandos do {{site.data.keyword.Bluemix_notm}} empacota um cliente da linha de comandos Cloud Foundry em sua instalação. Se você tiver seu próprio cf cli instalado, não use os comandos da CLI do {{site.data.keyword.Bluemix_notm}} `bx [command]` e os comandos da CLI do Cloud Foundry `cf [command]` de sua própria instalação no mesmo contexto. Em vez disso, use `bluemix cf [command]` se desejar usar cf cli para gerenciar os recursos do Cloud Foundry no contexto da CLI do {{site.data.keyword.Bluemix_notm}}. Além disso, `bluemix cf api/login/logout/target` não é permitido, use `bluemix api/login/logout/target`.
+A partir da versão 0.5.0, o cliente da linha de comandos do {{site.data.keyword.Bluemix_notm}} empacota um cliente da linha de comandos Cloud Foundry em sua instalação. Se você tiver seu próprio cf cli instalado, não use os comandos da CLI do {{site.data.keyword.Bluemix_notm}} `bx [command]` e os comandos da CLI do Cloud Foundry `cf [command]` de sua própria instalação no mesmo contexto. Em vez disso, use `bluemix cf [command]` se desejar usar cf cli para gerenciar os recursos do Cloud Foundry no contexto da CLI do {{site.data.keyword.Bluemix_notm}}.  Além disso, `bluemix cf api/login/logout/target` não é permitido, use `bluemix api/login/logout/target`.
 
 O seguinte lista os comandos de uso detalhadas que são suportados pela CLI do {{site.data.keyword.Bluemix_notm}}, incluindo seus nomes, argumentos, opções, pré-requisitos, descrições e exemplos.
 {:shortdesc}
@@ -3771,3 +3771,4 @@ Desinstale o plug-in `IBM-Containers` que foi instalado anteriormente:
 ```
 bluemix plugin uninstall IBM-Containers
 ```
+

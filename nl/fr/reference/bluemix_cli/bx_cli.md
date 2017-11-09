@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-06"
 
 ---
 
@@ -16,12 +16,11 @@ lastupdated: "2017-09-28"
 # Commandes {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Version : 0.6.0
+Version : 0.6.1
 
 L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit un ensemble de commandes qui sont regroupées par espace de nom pour que les utilisateurs puissent interagir avec {{site.data.keyword.Bluemix_notm}}. 
 
-A compter de la version 0.5.0, le client de ligne de commande {{site.data.keyword.Bluemix_notm}} inclut un client de ligne de commande Cloud Foundry dans son installation.
-Si vous disposez de votre propre installation d'interface CLI cf, n'utilisez pas en même temps les commandes CLI {{site.data.keyword.Bluemix_notm}} `bx [command]` et les commandes CLI Cloud Foundry `cf [command]` de votre installation dans le même contexte. A la place, exécutez `bluemix cf [command]` si vous souhaitez utiliser l'interface CLI cf pour gérer des ressources Cloud Foundry dans le contexte CLI {{site.data.keyword.Bluemix_notm}}. De plus, `bluemix cf api/login/logout/target` n'est pas admis, utilisez `bluemix api/login/logout/target` à la place.
+A compter de la version 0.5.0, le client de ligne de commande {{site.data.keyword.Bluemix_notm}} inclut un client de ligne de commande Cloud Foundry dans son installation. Si vous disposez de votre propre installation d'interface CLI cf, n'utilisez pas en même temps les commandes CLI {{site.data.keyword.Bluemix_notm}} `bx [command]` et les commandes CLI Cloud Foundry `cf [command]` de votre installation dans le même contexte. A la place, exécutez `bluemix cf [command]` si vous souhaitez utiliser l'interface CLI cf pour gérer des ressources Cloud Foundry dans le contexte CLI {{site.data.keyword.Bluemix_notm}}.  De plus, `bluemix cf api/login/logout/target` n'est pas admis, utilisez `bluemix api/login/logout/target` à la place.
 
 Les listes ci-dessous répertorient la syntaxe des commandes prises en charge par l'interface CLI {{site.data.keyword.Bluemix_notm}}, en indiquant leurs noms, leurs arguments, leurs options, leurs prérequis, leurs descriptions, et des exemples.
 {:shortdesc}
@@ -132,7 +131,7 @@ Les commandes de gestion de {{site.data.keyword.BluSoftlayer_notm}}} ont été f
 {: #bx_commands_resource}
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer des groupes de ressources et des ressources.">
-<caption>Tableau 3. Commandes de gestion des groupes de ressources et des ressources</caption>
+  <caption>Tableau 3. Commandes de gestion des groupes de ressources et des ressources</caption>
   <thead>
     <th colspan="5">Commandes de gestion des groupes de ressources et des ressources</th>
   </thead>
@@ -177,7 +176,7 @@ Les commandes de gestion de {{site.data.keyword.BluSoftlayer_notm}}} ont été f
  ## Commandes de gestion des clés d'API et des règles
  {: #bx_commands_iam}
  <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer des clés d'API et des règles.">
-<caption>Tableau 3. Commandes de gestion des clés d'API et des règles</caption>
+ <caption>Tableau 3. Commandes de gestion des clés d'API et des règles</caption>
   <thead>
   <th colspan="5">Commandes de gestion des clés d'API et des règles</th>
   </thead>
@@ -724,7 +723,7 @@ bluemix update
 ### bluemix account orgs
 {: #bluemix_account_orgs}
 
-Répertorier toutes les organisations 
+Répertorier toutes les organisations
 
 ```
 bluemix account orgs [-r REGION] [--guid]
@@ -1031,7 +1030,7 @@ bluemix account space-users ORG_NAME SPACE_NAME
 ## bluemix account space-role-set
 {: #bluemix_account_space_role_set}
 
-Affecte un rôle d'espace à un utilisateur. Cette opération ne peut être réalisée que par un gestionnaire d'espace. 
+Affecte un rôle d'espace à un utilisateur. Cette opération ne peut être réalisée que par un gestionnaire d'espace.
 
 ```
 bluemix account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -1059,7 +1058,7 @@ bluemix account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
 <strong>Exemples</strong> :
 
-Affecter l'utilisatrice `Mary` à l'organisation `IBM` et à l'espace `Cloud` sous le rôle `SpaceManager` : 
+Affecter l'utilisatrice `Mary` à l'organisation `IBM` et à l'espace `Cloud` sous le rôle `SpaceManager` :
 
 ```
 bluemix account space-role-set Mary IBM Cloud SpaceManager
@@ -1068,7 +1067,7 @@ bluemix account space-role-set Mary IBM Cloud SpaceManager
 ## bluemix account space-role-unset
 {: #bluemix_account_space_role_unset}
 
-Suppression de l'affectation d'un rôle d'espace à un utilisateur. Cette opération ne peut être réalisée que par un gestionnaire d'espace. 
+Suppression de l'affectation d'un rôle d'espace à un utilisateur. Cette opération ne peut être réalisée que par un gestionnaire d'espace.
 
 ```
 bluemix account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -1158,7 +1157,7 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 <dt>USERNAME (obligatoire)</dt>
 <dd>Nom d'utilisateur</dd>
 <dt>-c ACCOUNT_ID</dt>
-<dd>ID compte. Si ce paramètre n'est pas spécifié, le compte en cours est pris par défaut. </dd>
+<dd>ID compte. Si ce paramètre n'est pas spécifié, le compte en cours est pris par défaut.</dd>
 <dt>--force, -f (facultatif)</dt>
 <dd>Force une suppression sans demander de confirmation.</dd>
 </dl>
@@ -1188,7 +1187,7 @@ bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
   <li>OrgAuditor : ce rôle dispose d'un accès en lecture seule aux informations de l'organisation et aux rapports.</li>
   </ul> </dd>
    <dt>SPACE_NAME (obligatoire)</dt>
-   <dd>Nom de l'espace pour lequel cet utilisateur est invité. </dd>
+   <dd>Nom de l'espace pour lequel cet utilisateur est invité.</dd>
    <dt>SPACE_ROLE (obligatoire)</dt>
    <dd>Nom de l'espace pour lequel cet utilisateur est invité. Nom du rôle d'espace pour lequel cet utilisateur est invité. Par exemple :
    <ul>
@@ -1201,7 +1200,7 @@ bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
 
 <strong>Exemples</strong> :
 
-Inviter l'utilisatrice `Mary` dans l'organisation `IBM` sous le rôle `OrgManager` et dans l'espace   `Cloud` sous le rôle `SpaceAuditor` : 
+Inviter l'utilisatrice `Mary` dans l'organisation `IBM` sous le rôle `OrgManager` et dans l'espace   `Cloud` sous le rôle `SpaceAuditor` :
 
 ```
 bluemix account user-invite Mary IBM OrgManager Cloud SpaceAuditor
@@ -1426,7 +1425,7 @@ bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 <dt>NAME (obligatoire)</dt>
 <dd>Ancien nom de la clé d'API qui doit être mise à jour</dd>
 <dt>-n <i>NAME</i> (facultatif)</dt>
-<dd>Nouveau nom de la clé d'API </dd>
+<dd>Nouveau nom de la clé d'API</dd>
 <dt>-d <i>DESCRIPTION</i> (facultatif)</dt>
 <dd>Nouvelle description de la clé d'API</dd>
 </dl>
@@ -1660,19 +1659,19 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dd>Fichier JSON de définition de police</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (facultatif)</dt>
 <dt>--service-name <i>SERVICE_NAME</i> (facultatif)</dt>
-<dd>Nom de service de la définition de règles. Exclusif avec l'indicateur '-f, --file'. </dd>
+<dd>Nom de service de la définition de règles. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--service-instance <i>SERVICE_INSTANCE</i> (facultatif)</dt>
-<dd>Instance de service de la définition de règles. Exclusif avec l'indicateur '-f, --file'. </dd>
+<dd>Instance de service de la définition de règles. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--region <i>REGION</i> (facultatif)</dt>
-<dd>Région de la définition de règles. Exclusif avec l'indicateur '-f, --file'. </dd>
+<dd>Région de la définition de règles. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (facultatif)</dt>
-<dd>Type de ressource de la définition de règles. Exclusif avec l'indicateur '-f, --file'. </dd>
+<dd>Type de ressource de la définition de règles. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--resource <i>RESOURCE</i> (facultatif)</dt>
 <dd>Ressource de la définition de règles. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (facultatif)</dt>
-<dd>Nom du groupe de ressources. Exclusif avec les indicateurs '-f, --file', '--resource' et '--resource-group-id'. </dd>
+<dd>Nom du groupe de ressources. Exclusif avec les indicateurs '-f, --file', '--resource' et '--resource-group-id'.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (facultatif)</dt>
-<dd>ID du groupe de ressources. Exclusif avec les indicateurs '-f, --file', '--resource' et '--resource-group-name'. </dd>
+<dd>ID du groupe de ressources. Exclusif avec les indicateurs '-f, --file', '--resource' et '--resource-group-name'.</dd>
   <dd>Noms de rôle de la définition de règle. Pour les rôles pris en charge d'un service spécifique, exécutez 'bluemix iam roles --service SERVICE_NAME'. Cette option exclut '-f, --file'.</dd>
 </dl>
 
@@ -1738,25 +1737,25 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>Fichier JSON de définition de règle</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (facultatif)</dt>
 <dt>--service-name <i>SERVICE_NAME</i> (facultatif)</dt>
-<dd>Nom de service de la définition de règle. Exclusif avec l'indicateur '-f, --file'. </dd>
+<dd>Nom de service de la définition de règle. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--service-instance <i>SERVICE_INSTANCE</i> (facultatif)</dt>
-<dd>Instance de service de la définition de règle. Exclusif avec l'indicateur '-f, --file'. </dd>
+<dd>Instance de service de la définition de règle. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--region <i>REGION</i> (facultatif)</dt>
-<dd>Région de la définition de règle. Exclusif avec l'indicateur '-f, --file'. </dd>
+<dd>Région de la définition de règle. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (facultatif)</dt>
-<dd>Type de ressource de la définition de règle. Exclusif avec l'indicateur '-f, --file'. </dd>
+<dd>Type de ressource de la définition de règle. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--resource <i>RESOURCE</i> (facultatif)</dt>
 <dd>Ressource de la définition de règle. Exclusif avec l'indicateur '-f, --file'.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (facultatif)</dt>
-<dd>Nom du groupe de ressources. Exclusif avec les indicateurs '-f, --file', '--resource' et '--resource-group-id'. </dd>
+<dd>Nom du groupe de ressources. Exclusif avec les indicateurs '-f, --file', '--resource' et '--resource-group-id'.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (facultatif)</dt>
-<dd>ID du groupe de ressources. Exclusif avec les indicateurs '-f, --file', '--resource' et '--resource-group-name'. </dd>
+<dd>ID du groupe de ressources. Exclusif avec les indicateurs '-f, --file', '--resource' et '--resource-group-name'.</dd>
   <dd>Noms de rôle de la définition de règle. Pour les rôles pris en charge d'un service spécifique, exécutez 'bluemix iam roles --service SERVICE_NAME'. Cette option exclut '-f, --file'.</dd>
 </dl>
 
 <strong>Exemples</strong> :
 
-Mettre à jour une règle utilisateur avec celle définie dans le fichier JSON 
+Mettre à jour une règle utilisateur avec celle définie dans le fichier JSON
 
 ```
 bluemix iam user-policy-update name@example.com 0bb730daa -f @policy.json
@@ -3121,13 +3120,13 @@ bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind
   <dt>-q, --query</dt>
   <dd>Rechercher le mot clé</dd>
   <dt>-r, --region</dt>
-  <dd>Spécifier la région géographique dans laquelle effectuer la recherche. Actuellement, seules les régions "us-south" et "united-kingdom" sont prises en charge. </dd>
+  <dd>Spécifier la région géographique dans laquelle effectuer la recherche. Actuellement, seules les régions "us-south" et "united-kingdom" sont prises en charge.</dd>
   <dt>-k, --kind</dt>
-  <dd>Filtrer par type de ressource. Actuellement, seules les options "service-cf", "iaas", "runtime", "template" et "dashboard" sont prises en charge. </dd>
+  <dd>Filtrer par type de ressource. Actuellement, seules les options "service-cf", "iaas", "runtime", "template" et "dashboard" sont prises en charge.</dd>
   <dt>-p, --price</dt>
-  <dd>Filtrer par prix. Actuellement, seuls les options "free", "paygo", "bluemix-subscription" sont prises en charge. </dd>
+  <dd>Filtrer par prix. Actuellement, seuls les options "free", "paygo", "bluemix-subscription" sont prises en charge.</dd>
   <dt>-t, --tag</dt>
-  <dd>Filtrer par étiquette. </dd>
+  <dd>Filtrer par étiquette.</dd>
   <dt>-sort-by</dt>
   <dd>Propriétés de tri</dd>
   <dt>-reverse</dt>
@@ -3194,7 +3193,7 @@ bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--gl
   <dt>-p, --parent</dt>
   <dd>ID parent de l'objet</dd>
   <dt>-c</dt>
-  <dd>Objet JSON valide contenant des paramètres de configuration spécifiques au catalogue, fournis en ligne ou dans un fichier. Pour obtenir la liste des paramètres de configuration pris en charge, voir la documentation de l'entrée de catalogue concernée. </dd>
+  <dd>Objet JSON valide contenant des paramètres de configuration spécifiques au catalogue, fournis en ligne ou dans un fichier. Pour obtenir la liste des paramètres de configuration pris en charge, voir la documentation de l'entrée de catalogue concernée.</dd>
   <dt>-global</dt>
   <dd>Exploiter dans une portée globale</dd>
 </dl>
@@ -3221,9 +3220,9 @@ bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 <strong>Options de commande</strong> :
 <dl>
   <dt>-i, --id</dt>
-  <dd>ID de l'entrée de catalogue qui fait l'objet d'une mise à jour. </dd>
+  <dd>ID de l'entrée de catalogue qui fait l'objet d'une mise à jour.</dd>
   <dt>-c</dt>
-  <dd>Objet JSON valide contenant des paramètres de configuration spécifiques au catalogue, fournis en ligne ou dans un fichier. Pour obtenir la liste des paramètres de configuration pris en charge, voir la documentation de l'entrée de catalogue concernée. </dd>
+  <dd>Objet JSON valide contenant des paramètres de configuration spécifiques au catalogue, fournis en ligne ou dans un fichier. Pour obtenir la liste des paramètres de configuration pris en charge, voir la documentation de l'entrée de catalogue concernée.</dd>
   <dt>-global</dt>
   <dd>Exploiter dans une portée globale</dd>
 </dl>
@@ -3278,9 +3277,9 @@ bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 <strong>Options de commande</strong> :
 <dl>
   <dt>-i, --id</dt>
-  <dd>ID de l'entrée de catalogue qui fait l'objet d'une mise à jour. </dd>
+  <dd>ID de l'entrée de catalogue qui fait l'objet d'une mise à jour.</dd>
   <dt>-c</dt>
-  <dd>Objet JSON valide contenant des paramètres de configuration spécifiques au catalogue, fournis en ligne ou dans un fichier. Pour obtenir la liste des paramètres de configuration pris en charge, voir la documentation de l'entrée de catalogue concernée. </dd>
+  <dd>Objet JSON valide contenant des paramètres de configuration spécifiques au catalogue, fournis en ligne ou dans un fichier. Pour obtenir la liste des paramètres de configuration pris en charge, voir la documentation de l'entrée de catalogue concernée.</dd>
   <dt>-global</dt>
   <dd>Exploiter dans une portée globale</dd>
 </dl>
@@ -3763,3 +3762,4 @@ Désinstallez le plug-in `IBM-Containers` installé précédemment :
 ```
 bluemix plugin uninstall IBM-Containers
 ```
+

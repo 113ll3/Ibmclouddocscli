@@ -6,30 +6,30 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-26"
 
 
 ---
 
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.registrylong_notm}} CLI
 {: #containerregcli}
 
-{{site.data.keyword.registrylong}} CLI는 계정의 레지스트리 및 관련 리소스를 관리하기 위한 플러그인입니다.
+{{site.data.keyword.registrylong}} CLI는 {{site.data.keyword.Bluemix_notm}} 계정의 레지스트리 및 관련 리소스를 관리하기 위한 플러그인입니다.
 {: shortdesc}
 
 **전제조건**
-* 레지스트리 명령을 실행하기 전에 `bx login` 명령으로
- {{site.data.keyword.Bluemix_short}}에 로그인하여 {{site.data.keyword.Bluemix_short}}
- 액세스 토큰을 생성하고 세션을 인증하십시오.
+* 레지스트리 명령을 실행하기 전에 `bx login` 명령으로 {{site.data.keyword.Bluemix_notm}}에 로그인하여
+액세스 토큰을 생성하고 세션을 인증하십시오.
 
-{{site.data.keyword.registrylong}} CLI 사용 방법에 대해 알아보려면 [개인용 이미지 레지스트리 설정](../../../services/Registry/index.html)을 참조하십시오.
+{{site.data.keyword.registrylong_notm}} CLI 사용 방법에 대해 알아보려면 [개인용 이미지 레지스트리 설정](../../../services/Registry/index.html)을 참조하십시오.
 
-<table summary="컨테이너 레지스트리 관리">
-<caption>표 1. {{site.data.keyword.Bluemix_short}}의 {{site.data.keyword.registryshort}}를 관리하기 위한 명령
+<table summary="{{site.data.keyword.registrylong_notm}} 관리">
+<caption>표 1. {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.registrylong_notm}}를 관리하기 위한 명령
 </caption>
  <thead>
  <th colspan="5">레지스트리 관리 명령</th>
@@ -66,6 +66,7 @@ lastupdated: "2017-09-28"
  </tbody></table>
 
 
+
 ## bx cr api
 {: #bx_cr_api}
 
@@ -80,7 +81,7 @@ bx cr api
 ## bx cr build
 {: #bx_cr_build}
 
-{{site.data.keyword.registrylong}}에 Docker 이미지를 빌드합니다.
+{{site.data.keyword.registrylong_notm}}에 Docker 이미지를 빌드합니다.
 
 ```
 bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
@@ -133,14 +134,14 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 </dd>
 <dt>IMAGE</dt>
-<dd>검사할 이미지에 대한 전체 {{site.data.keyword.Bluemix_short}}  레지스트리 경로이며, 형식은 `namespace/image:tag`입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지를 검사합니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 {{site.data.keyword.Bluemix_short}} 레지스트리 경로를 나열하여 여러 이미지를 검사할 수 있습니다. </dd>
+<dd>검사할 이미지에 대한 전체 레지스트리 경로이며, 형식은 `namespace/image:tag`입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지를 검사합니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 레지스트리 경로를 나열하여 여러 이미지를 검사할 수 있습니다.</dd>
 </dl>
 
 
 ## bx cr image-list (bx cr images)
 {: #bx_cr_image_list}
 
-{{site.data.keyword.Bluemix_short}} 계정의 모든 이미지를 표시합니다. 
+{{site.data.keyword.Bluemix_notm}} 계정의 모든 이미지를 표시합니다. 
 
 ```
  bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
@@ -154,7 +155,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>-q, --quiet</dt>
 <dd>(선택사항) 각 이미지가 `repository:tag` 형식으로 나열됩니다. </dd>
 <dt>--include-ibm</dt>
-<dd>(선택사항) 출력에 IBM 제공 공용 이미지를 포함합니다. 이 옵션이 없으면 기본적으로 개인용 이미지만 나열됩니다. </dd>
+<dd>(선택사항) 출력에 {{site.data.keyword.IBM_notm}} 제공 공용 이미지를 포함합니다. 이 옵션이 없으면 기본적으로 개인용 이미지만 나열됩니다. </dd>
 <dt>--format FORMAT</dt>
 <dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [이미지에 대한 정보 보기](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)를 참조하십시오.
 
@@ -175,7 +176,7 @@ bx cr image-rm IMAGE [IMAGE...]
 **매개변수**
 <dl>
 <dt>IMAGE</dt>
-<dd>제거할 이미지에 대한 전체 {{site.data.keyword.Bluemix_short}} 레지스트리 경로이며, 형식은 `namespace/image:tag`입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지가 기본적으로 삭제됩니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 {{site.data.keyword.Bluemix_short}} 레지스트리 경로를 나열하여 여러 이미지를 삭제할 수 있습니다. </dd>
+<dd>제거할 이미지에 대한 전체 레지스트리 경로이며, 형식은 `namespace/image:tag`입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지가 기본적으로 삭제됩니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 레지스트리 경로를 나열하여 여러 이미지를 삭제할 수 있습니다.</dd>
 </dl>
 
 
@@ -193,7 +194,7 @@ bx cr login
 ## bx cr namespace-add
 {: #bx_cr_namespace_add}
 
-{{site.data.keyword.Bluemix_short}} 계정에 네임스페이스를 추가합니다. 
+{{site.data.keyword.Bluemix_notm}} 계정에 네임스페이스를 추가합니다. 
 
 ```
 bx cr namespace-add NAMESPACE
@@ -203,14 +204,14 @@ bx cr namespace-add NAMESPACE
 **매개변수**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>추가하려는 네임스페이스입니다. 네임스페이스는 동일 지역의 모든 {{site.data.keyword.Bluemix_short}} 계정에서 고유해야 합니다. </dd>
+<dd>추가하려는 네임스페이스입니다. 네임스페이스는 동일 지역의 모든 {{site.data.keyword.Bluemix_notm}} 계정에서 고유해야 합니다. </dd>
 </dl>
 
 
 ## bx cr namespace-list (bx cr namespaces)
 {: #bx_cr_namespace_list}
 
-{{site.data.keyword.Bluemix_short}} 계정이 소유하는 모든 네임스페이스를 표시합니다. 
+{{site.data.keyword.Bluemix_notm}} 계정이 소유하는 모든 네임스페이스를 표시합니다. 
 
 ```
 bx cr namespace-list
@@ -221,7 +222,7 @@ bx cr namespace-list
 ## bx cr namespace-rm
 {: #bx_cr_namespace_rm}
 
-{{site.data.keyword.Bluemix_short}} 계정에서 네임스페이스를 제거합니다. 이 네임스페이스의 이미지는 네임스페이스가 제거될 때 삭제됩니다. 
+{{site.data.keyword.Bluemix_notm}} 계정에서 네임스페이스를 제거합니다. 이 네임스페이스의 이미지는 네임스페이스가 제거될 때 삭제됩니다. 
 
 ```
 bx cr namespace-rm NAMESPACE
@@ -233,7 +234,6 @@ bx cr namespace-rm NAMESPACE
 <dt>NAMESPACE</dt>
 <dd>제거하려는 네임스페이스입니다. </dd>
 </dl>
-
 
 
 ## bx cr plan
@@ -269,7 +269,7 @@ bx cr plan-upgrade [PLAN]
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-이 명령은 제거되었습니다. 가격 책정 계산기를 사용하여 예상 비용을 계산할 수 있습니다. [IBM Bluemix Container Registry의 비용 추정](../../../services/Registry/registry_overview.html#registry_plan_billing)을 참조하십시오.
+이 명령은 제거되었습니다. 가격 책정 계산기를 사용하여 예상 비용을 계산할 수 있습니다. [{{site.data.keyword.registrylong_notm}}의 비용 추정](../../../services/Registry/registry_overview.html#registry_plan_billing)을 참조하십시오.
 
 
 ## bx cr quota
@@ -317,7 +317,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 **매개변수**
 <dl>
 <dt>--description VALUE</dt>
-<dd>(선택사항) `bx cr token-list`를 실행할 때 표시되는 토큰에 대한 설명으로서 값을 지정합니다. 토큰이 IBM Bluemix Container Service에 의해 자동으로 작성되는 경우에는 설명이 Kubernetes 클러스터 이름으로 설정됩니다. 이 경우에 토큰은 클러스터가 제거될 때 자동으로 제거됩니다. </dd>
+<dd>(선택사항) `bx cr token-list`를 실행할 때 표시되는 토큰에 대한 설명으로서 값을 지정합니다. 토큰이 {{site.data.keyword.containerlong_notm}}에 의해 자동으로 작성되는 경우에는 설명이 Kubernetes 클러스터 이름으로 설정됩니다. 이 경우에 토큰은 클러스터가 제거될 때 자동으로 제거됩니다. </dd>
 <dt>-q, --quiet</dt>
 <dd>(선택사항) 주변 텍스트 없이 토큰만 표시합니다. </dd>
 <dt>--non-expiring</dt>
@@ -348,7 +348,7 @@ bx cr token-get TOKEN
 ## bx cr token-list (bx cr tokens)
 {: #bx_cr_token_list}
 
-{{site.data.keyword.Bluemix_short}} 계정에 대해 존재하는 모든 토큰을 표시합니다. 
+{{site.data.keyword.Bluemix_notm}} 계정에 대해 존재하는 모든 토큰을 표시합니다. 
 
 ```
 bx cr token-list --format FORMAT
@@ -393,7 +393,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 **매개변수**
 <dl>
 <dt>IMAGE</dt>
-<dd>보고서를 획득할 이미지에 대한, `namespace/image:tag` 형식의 전체 {{site.data.keyword.Bluemix_short}} 레지스트리 경로입니다. 이 보고서는 이미지에 알려진 패키지 취약점이 있는지 알려줍니다. 다음 운영 체제가 지원됩니다.
+<dd>보고서를 가져오려는 이미지에 대한 `namespace/image:tag` 형식의 전체 레지스트리 경로입니다. 이 보고서는 이미지에 알려진 패키지 취약점이 있는지 알려줍니다. 다음 운영 체제가 지원됩니다.
 
 <ul>
 
@@ -404,9 +404,8 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-자세한 정보는 [취약성 관리자로 이미지 보안 관리](../../../services/Registry/va/va_index.html#va_index)를 참조하십시오. 
+자세한 정보는 [취약성 관리자로 이미지 보안 관리](../../../services/va/va_index.html)를 참조하십시오. 
 
 </dd>
 
 </dl>
-

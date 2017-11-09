@@ -6,30 +6,29 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-26"
 
 
 ---
 
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 
-# CLI do {{site.data.keyword.registrylong_notm}}
+# {{site.data.keyword.registrylong_notm}} CLI
 {: #containerregcli}
 
-O {{site.data.keyword.registrylong}} CLI é um plug-in para gerenciar seu registro e seus recursos para sua conta.
+A CLI do {{site.data.keyword.registrylong}} é um plug-in para gerenciar seu registro e seus recursos para sua conta. {{site.data.keyword.Bluemix_notm}}
 {: shortdesc}
 
 **Pré-requisitos**
-* Antes de executar os comandos de registro, efetue login no {{site.data.keyword.Bluemix_short}}
- com o comando `bx login` para gerar um token de acesso do {{site.data.keyword.Bluemix_short}}
- e autenticar sua sessão.
+* Antes de executar os comandos de registro, efetue login no {{site.data.keyword.Bluemix_notm}} com o comando `bx login` para gerar um token de acesso e autenticar sua sessão.
 
-Para descobrir sobre como usar a CLI do {{site.data.keyword.registrylong}}, veja [Configurando um registro de imagens privado](../../../services/Registry/index.html).
+Para descobrir sobre como usar a CLI do {{site.data.keyword.registrylong_notm}}, veja [Configurando um registro de imagens privado](../../../services/Registry/index.html).
 
-<table summary="Gerenciar seu registro de contêineres">
-<caption>Tabela 1. Comandos para gerenciar o {{site.data.keyword.registryshort}} no {{site.data.keyword.Bluemix_short}}
+<table summary="Gerenciar {{site.data.keyword.registrylong_notm}}y">
+<caption>Tabela 1. Comandos para gerenciar o {{site.data.keyword.registrylong_notm}} no {{site.data.keyword.Bluemix_notm}}
 </caption>
  <thead>
  <th colspan="5">Comandos para gerenciar o registro</th>
@@ -67,6 +66,7 @@ Para descobrir sobre como usar a CLI do {{site.data.keyword.registrylong}}, veja
  </tbody></table>
 
 
+
 ## bx cr api
 {: #bx_cr_api}
 
@@ -81,7 +81,7 @@ bx cr api
 ## bx cr build
 {: #bx_cr_build}
 
-Constrói uma imagem do Docker no {{site.data.keyword.registrylong}}.
+Constrói uma imagem do Docker no {{site.data.keyword.registrylong_notm}}.
 
 ```
 bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
@@ -130,20 +130,20 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Opcional) Formata os elementos de saída usando um modelo Go. 
+<dd>(Opcional) Formata os elementos de saída usando um modelo Go.
 
 Para obter mais informações, veja [Visualizando informações sobre as imagens](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
-<dd>O caminho de registro completo do {{site.data.keyword.Bluemix_short}} para a imagem que você deseja inspecionar, que está no formato `namespace/image:tag`. Se uma tag não for especificada no caminho da imagem, a imagem identificada como `latest` será inspecionada. É possível inspecionar múltiplas imagens listando cada caminho de registro privado do {{site.data.keyword.Bluemix_short}} no comando com um espaço entre cada caminho.</dd>
+<dd>O caminho de registro completo para a imagem que você deseja inspecionar, que está no formato `namespace/image:tag`. Se uma tag não for especificada no caminho da imagem, a imagem identificada como `latest` será inspecionada. É possível inspecionar múltiplas imagens listando cada caminho de registro privado no comando com um espaço entre cada caminho.</dd>
 </dl>
 
 
 ## bx cr image-list (imagens bx cr)
 {: #bx_cr_image_list}
 
-Exibe todas as imagens na conta do {{site.data.keyword.Bluemix_short}}.
+Exibe todas as imagens na conta do {{site.data.keyword.Bluemix_notm}}.
 
 ```
  bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
@@ -157,9 +157,9 @@ Exibe todas as imagens na conta do {{site.data.keyword.Bluemix_short}}.
 <dt>-q, --quiet</dt>
 <dd>(Opcional) Cada imagem é listada no formato: `repository:tag`.</dd>
 <dt>--include-ibm</dt>
-<dd>(Opcional) Inclui imagens públicas fornecidas pela IBM na saída. Sem essa opção, somente imagens privadas serão listadas, por padrão.</dd>
+<dd>(Opcional) Inclui imagens públicas fornecidas pelo {{site.data.keyword.IBM_notm}} na saída. Sem essa opção, somente imagens privadas serão listadas, por padrão.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Opcional) Formata os elementos de saída usando um modelo Go. 
+<dd>(Opcional) Formata os elementos de saída usando um modelo Go.
 
 Para obter mais informações, veja [Visualizando informações sobre as imagens](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
@@ -180,7 +180,7 @@ bx cr image-rm IMAGE [IMAGE...]
 **Parâmetros**
 <dl>
 <dt>IMAGE</dt>
-<dd>O caminho de registro completo do {{site.data.keyword.Bluemix_short}} para a imagem que você deseja remover, no formato `namespace/image:tag`. Se uma tag não for especificada no caminho da imagem, a imagem identificada como `latest` será excluída por padrão. É possível excluir múltiplas imagens listando cada caminho de registro privado do {{site.data.keyword.Bluemix_short}} no comando com um espaço entre cada caminho.</dd>
+<dd>O caminho de registro completo para a imagem que você deseja remover, no formato `namespace/image:tag`. Se uma tag não for especificada no caminho da imagem, a imagem identificada como `latest` será excluída por padrão. É possível excluir múltiplas imagens listando cada caminho de registro privado no comando com um espaço entre cada caminho.</dd>
 </dl>
 
 
@@ -198,7 +198,7 @@ bx cr login
 ## bx cr namespace-add
 {: #bx_cr_namespace_add}
 
-Inclui um namespace em sua conta do {{site.data.keyword.Bluemix_short}}.
+Inclui um namespace em sua conta do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bx cr namespace-add NAMESPACE
@@ -208,14 +208,14 @@ bx cr namespace-add NAMESPACE
 **Parâmetros**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>O namespace que deseja incluir. O namespace deve ser exclusivo em todas as contas do {{site.data.keyword.Bluemix_short}} na mesma região.</dd>
+<dd>O namespace que deseja incluir. O namespace deve ser exclusivo em todas as contas do {{site.data.keyword.Bluemix_notm}} na mesma região.</dd>
 </dl>
 
 
 ## bx cr namespace-list (namespaces bx cr)
 {: #bx_cr_namespace_list}
 
-Exibe todos os namespaces pertencentes à sua conta do {{site.data.keyword.Bluemix_short}}.
+Exibe todos os namespaces pertencentes à sua conta do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bx cr namespace-list
@@ -226,7 +226,7 @@ bx cr namespace-list
 ## bx cr namespace-rm
 {: #bx_cr_namespace_rm}
 
-Remove um namespace de sua conta do {{site.data.keyword.Bluemix_short}}. As imagens nesse namespace são excluídas quando o namespace é removido.
+Remove um namespace de sua conta do {{site.data.keyword.Bluemix_notm}}. As imagens nesse namespace são excluídas quando o namespace é removido.
 
 ```
 bx cr namespace-rm NAMESPACE
@@ -238,7 +238,6 @@ bx cr namespace-rm NAMESPACE
 <dt>NAMESPACE</dt>
 <dd>O namespace que deseja remover.</dd>
 </dl>
-
 
 
 ## Cr bx plano
@@ -266,7 +265,7 @@ bx cr plan-upgrade [PLAN]
 
 **Parâmetros**
 <dl>
-<dt>PLAN</dt>
+<dt>PLANO</dt>
 <dd>O nome do plano de precificação para o qual você deseja fazer upgrade. Se PLAN não for especificado, o padrão será `standard`.</dd>
 </dl>
 
@@ -274,7 +273,7 @@ bx cr plan-upgrade [PLAN]
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-O comando foi removido. É possível usar a calculadora de precificação para calcular o custo estimado. Consulte [Estimando custos para o IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing).
+O comando foi removido. É possível usar a calculadora de precificação para calcular o custo estimado, consulte [Estimando custos para o {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## Cota cr bx
@@ -322,7 +321,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 **Parâmetros**
 <dl>
 <dt>--description VALUE</dt>
-<dd>(Opcional) Especifica o valor como uma descrição para o token, que é exibida quando você executa `bx cr token-list`. Se o seu token for criado automaticamente pelo IBM Bluemix Container Service, a descrição será configurada para seu nome do Cluster do Kubernetes. Nesse caso, o token é removido automaticamente quando o cluster é removido.</dd>
+<dd>(Opcional) Especifica o valor como uma descrição para o token, que é exibida quando você executa `bx cr token-list`. Se o seu token for criado automaticamente pelo {{site.data.keyword.containerlong_notm}}, a descrição será configurada para o nome do Cluster do Kubernetes. Nesse caso, o token é removido automaticamente quando o cluster é removido.</dd>
 <dt>-q, --quiet</dt>
 <dd>(Opcional) Exibe o token somente, sem nenhum texto circundante.</dd>
 <dt>--non-expiring</dt>
@@ -353,7 +352,7 @@ bx cr token-get TOKEN
 ## bx cr token-list (tokens bx cr)
 {: #bx_cr_token_list}
 
-Exibe todos os tokens que existem para sua conta do {{site.data.keyword.Bluemix_short}}.
+Exibe todos os tokens que existem para sua conta do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bx cr token-list --format FORMAT
@@ -363,7 +362,7 @@ bx cr token-list --format FORMAT
 **Parâmetros**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Opcional) Formata os elementos de saída usando um modelo Go. 
+<dd>(Opcional) Formata os elementos de saída usando um modelo Go.
 
 Para obter mais informações, veja [Visualizando informações sobre as imagens](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
@@ -400,7 +399,7 @@ Bx cr vulnerabilidade de avaliação IMAGEM [ IMAGEM ... ]
 **Parâmetros**
 <dl>
 <dt>IMAGE</dt>
-<dd>O caminho de registro integral do {{site.data.keyword.Bluemix_short}}, no formato `namespace/image:tag`, para a imagem para a qual você deseja obter um relatório. O relatório indica se a imagem em quaisquer vulnerabilidades de pacote conhecidas. Os seguintes sistemas operacionais são suportados:
+<dd>O caminho de registro completo, no formato `namespace/image:tag`, para a imagem da qual você deseja obter um relatório. O relatório indica se a imagem em quaisquer vulnerabilidades de pacote conhecidas. Os seguintes sistemas operacionais são suportados:
 
 <ul>
 
@@ -411,9 +410,8 @@ Bx cr vulnerabilidade de avaliação IMAGEM [ IMAGEM ... ]
 <li>Ubuntu</li>
 </ul>
 
-Para obter mais informações, consulte [Gerenciando a segurança de imagens com o Vulnerability Advisor](../../../services/Registry/va/va_index.html#va_index).
+Para obter mais informações, consulte [Gerenciando a segurança de imagens com o Vulnerability Advisor](../../../services/va/va_index.html).
 
 </dd>
 
 </dl>
-

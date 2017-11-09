@@ -374,7 +374,7 @@ bluemix sl init [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>URL de noeud final d'API Softlayer. La valeur par défaut est https://api.softlayer.com/rest/v3.1 pour l'authentification par clé d'API Softlayer et  https://api.softlayer.com/mobile/v3.1 pour l'authentification par IBMid </dd>
+<dd>URL de noeud final d'API Softlayer. La valeur par défaut est https://api.softlayer.com/rest/v3.1 pour l'authentification par clé d'API Softlayer et  https://api.softlayer.com/mobile/v3.1 pour l'authentification par IBMid</dd>
 <dt>-u, --sl-user</dt>
 <dd>Nom d'utilisateur Softlayer</dd>
 <dt>-p, --sl-password</dt>
@@ -382,15 +382,15 @@ bluemix sl init [OPTIONS]
 <dt>-c, --account-id</dt>
 <dd>ID de compte Softlayer</dd>
 <dt>-q, --security-question-id</dt>
-<dd>ID de question de sécurité utilisé pour l'authentification. Adressez-vous à votre propriétaire de compte si vous ne connaissez pas cet ID. </dd>
+<dd>ID de question de sécurité utilisé pour l'authentification. Adressez-vous à votre propriétaire de compte si vous ne connaissez pas cet ID.</dd>
 <dt>-w, --security-question-answer</dt>
-<dd>Réponse à la question de sécurité utilisée pour l'authentification. Adressez-vous à votre propriétaire de compte si vous connaissez pas cette réponse. </dd>
+<dd>Réponse à la question de sécurité utilisée pour l'authentification. Adressez-vous à votre propriétaire de compte si vous connaissez pas cette réponse.</dd>
 <dt>-s, --security-code</dt>
-<dd>Code de sécurité généré par le fournisseur de sécurité lorsque l'authentification à deux facteurs est activée. </dd>
+<dd>Code de sécurité généré par le fournisseur de sécurité lorsque l'authentification à deux facteurs est activée.</dd>
 <dt>-v, --security-vendor</dt>
 <dd>Fournisseur de sécurité qu fournit le code de sécurité pour l'authentification. Les options possibles sont : VERISIGN,TOTP,PHONE_FACTOR.</dd>
 <dt>-t, --auth-token</dt>
-<dd>Jeton d'authentification lorsque l'authentification par téléphone est activée. </dd>
+<dd>Jeton d'authentification lorsque l'authentification par téléphone est activée.</dd>
 </dl>
 
 Par exemple, connectez-vous à l'aide du nom d'utilisateur et du mot de passe ou de la clé d'API Softlayer.
@@ -432,7 +432,7 @@ Choisissez le mode de configuration de l'authentification Softlayer :
 1. Connexion avec le nom d'utilisateur et le mot de passe/la clé d'API Softlayer
 2. Utilisation de la fonction Bluemix Single-Sign-On
 Entrez un nombre> 2
-URL de point d'extrémité d'API Softlayer : [https://api.softlayer.com/mobile/v3.1]>
+URL de point d'extrémité d'API Softlayer : [https://api.softlayer.com/mobile/v3.1]> 
 Compte : 278444
 OK
                               
@@ -510,13 +510,13 @@ bluemix sl block access-revoke VOLUME_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-d, --hardware-id</dt>
-<dd>ID d'un serveur matériel à révoquer. </dd>
+<dd>ID d'un serveur matériel à révoquer.</dd>
 <dt>-v, --virtual-id</dt>
-<dd>ID d'un serveur virtuel à révoquer. </dd>
+<dd>ID d'un serveur virtuel à révoquer.</dd>
 <dt>-i, --ip-address-id</dt>
-<dd>ID d'une adresse IP à révoquer. </dd>
+<dd>ID d'une adresse IP à révoquer.</dd>
 <dt>-p, --ip-address</dt>
-<dd>Adresse IP à révoquer. </dd>
+<dd>Adresse IP à révoquer.</dd>
 </dl>
 
 **Exemples** :
@@ -583,11 +583,11 @@ bluemix sl block replica-order VOLUME_ID [OPTIONS]
 <dt>-s, --snapshot-schedule</dt>
 <dd>Obligatoire. Planning d'instantané à utiliser pour la réplication. Les options possibles sont : HOURLY,DAILY,WEEKLY.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Obligatoire. Nom abrégé du centre de données pour la réplique, par exemple, dal09. </dd>
+<dd>Obligatoire. Nom abrégé du centre de données pour la réplique, par exemple, dal09.</dd>
 <dt>-t, --tier</dt>
-<dd>Facultatif. Niveau de stockage d'endurance (IOPS par Go) du volume principal pour lequel une réplique est commandée. Les options possibles sont : 0.25,2,4,10. Si aucun niveau n'est spécifié, le niveau du volume d'origine sera utilisé. </dd>
+<dd>Facultatif. Niveau de stockage d'endurance (IOPS par Go) du volume principal pour lequel une réplique est commandée. Les options possibles sont : 0.25,2,4,10. Si aucun niveau n'est spécifié, le niveau du volume d'origine sera utilisé.</dd>
 <dt>-i, --iops</dt>
-<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. Si aucune opération d'E-S n'est spécifiée, les opérations d'E-S du volume d'origine seront  utilisées. </dd>
+<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. Si aucune opération d'E-S n'est spécifiée, les opérations d'E-S du volume d'origine seront  utilisées.</dd>
 <dt>-o, --os-type</dt>
 <dd>Facultatif. Type de système d'exploitation (par exemple, LINUX) du volume principal pour lequel une réplique est commandée. Les options possibles sont : HYPER_V,LINUX,VMWARE,WINDOWS_2008,WINDOWS_GPT,WINDOWS,XEN.</dd>
 <dt>-f, --force</dt>
@@ -650,7 +650,7 @@ bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-n, --note</dt>
-<dd>Notes à définir sur la nouvelle image instantanée. </dd>
+<dd>Notes à définir sur la nouvelle image instantanée.</dd>
 </dl>
 
 **Exemples** :
@@ -755,9 +755,9 @@ bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 <dt>-s, --size</dt>
 <dd>Obligatoire. Taille, en Go, de l'espace d'image instantanée à créer.</dd>
 <dt>-t, --tier</dt>
-<dd>Facultatif. Niveau de stockage d'endurance (IOPS par Go) du volume de stockage par blocs pour lequel de l'espace est commandé. Les options possibles sont : 0.25,2,4,10. </dd>
+<dd>Facultatif. Niveau de stockage d'endurance (IOPS par Go) du volume de stockage par blocs pour lequel de l'espace est commandé. Les options possibles sont : 0.25,2,4,10.</dd>
 <dt>-i, --iops</dt>
-<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. </dd>
+<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100.</dd>
 <dt>-u, --upgrade</dt>
 <dd>Indicateur permettant de signaler que la commande est une mise à niveau.</dd>
 <dt>-f, --force</dt>
@@ -769,7 +769,6 @@ bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 bluemix sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 Cette commande permet de commander de l'espace d'image instantanée pour le volume portant l'ID 12345678. La taille est de 1000 Go et le niveau est de 4 IOPS par Go.
-
 
 ### bluemix sl block snapshot-restore
 {: #sl_block_snapshot_restore}
@@ -866,15 +865,15 @@ bluemix sl block volume-duplicate VOLUME_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-o, --origin-snapshot-id</dt>
-<dd>ID d'une image instantanée de volume d'origine à utiliser pour duplication. </dd>
+<dd>ID d'une image instantanée de volume d'origine à utiliser pour duplication.</dd>
 <dt>-s, --duplicate-size</dt>
-<dd>Taille de volume de blocs en double, en Go. Si aucune taille n'est spécifiée, la taille du volume d'origine est utilisée. </dd>
+<dd>Taille de volume de blocs en double, en Go. Si aucune taille n'est spécifiée, la taille du volume d'origine est utilisée.</dd>
 <dt>-i, --duplicate-iops</dt>
-<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. Si aucune opération d'E-S n'est spécifiée, les opérations d'E-S du volume d'origine seront utilisées. </dd>
+<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. Si aucune opération d'E-S n'est spécifiée, les opérations d'E-S du volume d'origine seront utilisées.</dd>
 <dt>-t, --duplicate-tier</dt>
-<dd>Niveau de stockage d'endurance. Si aucun niveau n'est spécifié, le niveau du volume d'origine sera utilisé. </dd>
+<dd>Niveau de stockage d'endurance. Si aucun niveau n'est spécifié, le niveau du volume d'origine sera utilisé.</dd>
 <dt>-n, --duplicate-snapshot-size</dt>
-<dd>Taille d'espace d'image instantanée à commander pour le doublon. Si aucune taille n'est spécifiée, la taille de l'espace d'image instantanée du volume d'origine est utilisée. </dd>
+<dd>Taille d'espace d'image instantanée à commander pour le doublon. Si aucune taille n'est spécifiée, la taille de l'espace d'image instantanée du volume d'origine est utilisée.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -898,15 +897,15 @@ bluemix sl block volume-order [OPTIONS]
 <dt>-t, --storage-type</dt>
 <dd>Obligatoire. Type de volume de stockage. Les options possibles sont les suivantes : performance,endurance.</dd>
 <dt>-s, --size</dt>
-<dd>Obligatoire. Taille du volume de stockage, en Go. </dd>
+<dd>Obligatoire. Taille du volume de stockage, en Go.</dd>
 <dt>-i, --iops</dt>
-<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100 [obligatoires pour les performances de type stockage]. </dd>
+<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100 [obligatoires pour les performances de type stockage].</dd>
 <dt>-e, --tier</dt>
-<dd>Niveau de stockage d'endurance (IOP par Go) [obligatoire pour l'endurance de type stockage]. Les options possibles sont : 0.25,2,4,10. </dd>
+<dd>Niveau de stockage d'endurance (IOP par Go) [obligatoire pour l'endurance de type stockage]. Les options possibles sont : 0.25,2,4,10.</dd>
 <dt>-o, --os-type</dt>
 <dd>Obligatoire. Système d'exploitation. Les options possibles sont les suivantes : HYPER_V,LINUX,VMWARE,WINDOWS_2008,WINDOWS_GPT,WINDOWS,XEN.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Obligatoire. Nom abrégé de centre de données. </dd>
+<dd>Obligatoire. Nom abrégé de centre de données.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Paramètre facultatif pour la commande d'espace d'image instantanée avec un stockage par blocs de type endurance ; indique la taille (en Go) de l'espace d'image instantanée à commander.</dd>
 <dt>-f, --force</dt>
@@ -968,7 +967,7 @@ bluemix sl cdn list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Options de tri des colonnes : id, name, type, created.</dd>
 <dt>--order</dt>
-<dd>Filtrer par ID de commande. </dd>
+<dd>Filtrer par ID de commande.</dd>
 </dl>
 ### bluemix sl cdn load
 {: #sl_cdn_load}
@@ -989,9 +988,9 @@ bluemix sl cdn order [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-b, --bandwidth</dt>
-<dd>Bande passante CDN. 'Pay as You Go' sera utilisé si cette option n'est pas spécifiée. </dd>
+<dd>Bande passante CDN. 'Pay as You Go' sera utilisé si cette option n'est pas spécifiée.</dd>
 <dt>-s, --storage</dt>
-<dd>Stockage CDN. 'Pay as You Go' sera utilisé si cette option n'est pas spécifiée. </dd>
+<dd>Stockage CDN. 'Pay as You Go' sera utilisé si cette option n'est pas spécifiée.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -1016,8 +1015,7 @@ bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dt>-t, --type</dt>
 <dd>Type de support pour ce mappage (http, flash, wm, ...). La valeur par défaut est : http.</dd>
 <dt>-c, --cname</dt>
-<dd>Type d'enregistrement CNAME facultatif à joindre au mappage.
-</dd>
+<dd>Type d'enregistrement CNAME facultatif à joindre au mappage.</dd>
 </dl>
 ### bluemix sl cdn origin-list
 {: #sl_cdn_origin_list}
@@ -1072,7 +1070,7 @@ bluemix sl file access-authorize VOLUME_ID [OPTIONS]
 <dt>-p, --ip-address</dt>
 <dd>Adresse IP à autoriser.</dd>
 <dt>-s, --subnet-id</dt>
-<dd>ID d'un sous-réseau à autoriser. </dd>
+<dd>ID d'un sous-réseau à autoriser.</dd>
 </dl>
 
 **Exemples** :
@@ -1114,13 +1112,13 @@ bluemix sl file access-revoke VOLUME_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-d, --hardware-id</dt>
-<dd>ID d'un serveur matériel à révoquer. </dd>
+<dd>ID d'un serveur matériel à révoquer.</dd>
 <dt>-v, --virtual-id</dt>
-<dd>ID d'un serveur virtuel à révoquer. </dd>
+<dd>ID d'un serveur virtuel à révoquer.</dd>
 <dt>-i, --ip-address-id</dt>
-<dd>ID d'une adresse IP à révoquer. </dd>
+<dd>ID d'une adresse IP à révoquer.</dd>
 <dt>-p, --ip-address</dt>
-<dd>Adresse IP à révoquer. </dd>
+<dd>Adresse IP à révoquer.</dd>
 <dt>-s, --subnet-id</dt>
 <dd>ID d'un sous-réseau à révoquer.</dd>
 </dl>
@@ -1189,11 +1187,11 @@ bluemix sl file replica-order VOLUME_ID [OPTIONS]
 <dt>-s, --snapshot-schedule</dt>
 <dd>Obligatoire. Planning d'image instantanée à utiliser pour la réplication. Les options possibles sont : HOURLY,DAILY,WEEKLY.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Obligatoire. Nom abrégé du centre de données pour la réplique, par exemple, dal09. </dd>
+<dd>Obligatoire. Nom abrégé du centre de données pour la réplique, par exemple, dal09.</dd>
 <dt>-t, --tier</dt>
-<dd>Facultatif. Niveau de stockage d'endurance (IOPS par Go) du volume principal pour lequel une réplique est commandée. Les options possibles sont : 0.25,2,4,10. Si aucun niveau n'est spécifié, le niveau du volume d'origine sera utilisé. </dd>
+<dd>Facultatif. Niveau de stockage d'endurance (IOPS par Go) du volume principal pour lequel une réplique est commandée. Les options possibles sont : 0.25,2,4,10. Si aucun niveau n'est spécifié, le niveau du volume d'origine sera utilisé.</dd>
 <dt>-i, --iops</dt>
-<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. Si aucune opération d'E-S n'est spécifiée, les opérations d'E-S du volume d'origine seront  utilisées. </dd>
+<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. Si aucune opération d'E-S n'est spécifiée, les opérations d'E-S du volume d'origine seront  utilisées.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -1254,7 +1252,7 @@ bluemix sl file snapshot-create VOLUME_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-n, --note</dt>
-<dd>Notes à définir sur la nouvelle image instantanée. </dd>
+<dd>Notes à définir sur la nouvelle image instantanée.</dd>
 </dl>
 
 **Exemples** :
@@ -1359,9 +1357,9 @@ bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 <dt>-s, --size</dt>
 <dd>Obligatoire. Taille, en Go, de l'espace d'image instantanée à créer.</dd>
 <dt>-t, --tier</dt>
-<dd>Facultatif. Niveau de stockage d'endurance (IOPS par Go) du volume de fichier pour lequel de l'espace est commandé. Les options possibles sont : 0.25,2,4,10. </dd>
+<dd>Facultatif. Niveau de stockage d'endurance (IOPS par Go) du volume de fichier pour lequel de l'espace est commandé. Les options possibles sont : 0.25,2,4,10.</dd>
 <dt>-i, --iops</dt>
-<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. </dd>
+<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100.</dd>
 <dt>-u, --upgrade</dt>
 <dd>Indicateur permettant de signaler que la commande est une mise à niveau.</dd>
 <dt>-f, --force</dt>
@@ -1373,7 +1371,6 @@ bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 bluemix sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 Cette commande permet de commander de l'espace d'image instantanée pour le volume portant l'ID 12345678. La taille est de 1000 Go et le niveau est de 4 IOPS par Go.
-
 
 ### bluemix sl file snapshot-restore
 {: #sl_file_snapshot_restore}
@@ -1431,7 +1428,7 @@ bluemix sl file volume-list [OPTIONS]
 <dt>-t, --storage-type</dt>
 <dd>Filtrer par type de volume de stockage. Les options possibles sont les suivantes : performance et endurance.</dd>
 <dt>-o, --order</dt>
-<dd>Filtrer par ID de commande utilisé pour acheter le stockage de fichiers. </dd>
+<dd>Filtrer par ID de commande utilisé pour acheter le stockage de fichiers.</dd>
 <dt>--sortby</dt>
 <dd>Options de tri des colonnes : id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,mount_addr.</dd>
 <dt>--columns</dt>
@@ -1470,15 +1467,15 @@ bluemix sl file volume-duplicate VOLUME_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-o, --origin-snapshot-id</dt>
-<dd>ID d'une image instantanée de volume d'origine à utiliser pour duplication. </dd>
+<dd>ID d'une image instantanée de volume d'origine à utiliser pour duplication.</dd>
 <dt>-s, --duplicate-size</dt>
-<dd>Taille de volume de fichier en double, en Go. Si aucune taille n'est spécifiée, la taille du volume d'origine est utilisée. </dd>
+<dd>Taille de volume de fichier en double, en Go. Si aucune taille n'est spécifiée, la taille du volume d'origine est utilisée.</dd>
 <dt>-i, --duplicate-iops</dt>
-<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. Si aucune opération d'E-S n'est spécifiée, les opérations d'E-S du volume d'origine seront utilisées. </dd>
+<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100. Si aucune opération d'E-S n'est spécifiée, les opérations d'E-S du volume d'origine seront utilisées.</dd>
 <dt>-t, --duplicate-tier</dt>
-<dd>Niveau de stockage d'endurance. Si aucun niveau n'est spécifié, le niveau du volume d'origine sera utilisé. </dd>
+<dd>Niveau de stockage d'endurance. Si aucun niveau n'est spécifié, le niveau du volume d'origine sera utilisé.</dd>
 <dt>-n, --duplicate-snapshot-size</dt>
-<dd>Taille d'espace d'image instantanée à commander pour le doublon. Si aucune taille n'est spécifiée, la taille de l'espace d'image instantanée du volume d'origine est utilisée. </dd>
+<dd>Taille d'espace d'image instantanée à commander pour le doublon. Si aucune taille n'est spécifiée, la taille de l'espace d'image instantanée du volume d'origine est utilisée.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -1502,15 +1499,15 @@ bluemix sl file volume-order [OPTIONS]
 <dt>-t, --storage-type</dt>
 <dd>Obligatoire. Type de volume de stockage. Les options possibles sont les suivantes : performance,endurance.</dd>
 <dt>-s, --size</dt>
-<dd>Obligatoire. Taille du volume de stockage, en Go. </dd>
+<dd>Obligatoire. Taille du volume de stockage, en Go.</dd>
 <dt>-i, --iops</dt>
-<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100 [obligatoires pour les performances de type stockage]. </dd>
+<dd>Opérations d'E-S du stockage de type performance, comprises entre 100 et 6000 en multiples de 100 [obligatoires pour les performances de type stockage].</dd>
 <dt>-e, --tier</dt>
-<dd>Niveau de stockage d'endurance (IOP par Go) [obligatoire pour l'endurance de type stockage]. Les options possibles sont : 0.25,2,4,10. </dd>
+<dd>Niveau de stockage d'endurance (IOP par Go) [obligatoire pour l'endurance de type stockage]. Les options possibles sont : 0.25,2,4,10.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Obligatoire. Nom abrégé de centre de données. </dd>
+<dd>Obligatoire. Nom abrégé de centre de données.</dd>
 <dt>-n, --snapshot-size</dt>
-<dd>Paramètre facultatif pour la commande d'espace d'image instantanée avec le volume. </dd>
+<dd>Paramètre facultatif pour la commande d'espace d'image instantanée avec le volume.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -1567,7 +1564,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--ttl</dt>
-<dd>Valeur de durée de vie, exprimée en secondes, par exemple : 86400. La valeur par défaut est 7200. </dd>
+<dd>Valeur de durée de vie, exprimée en secondes, par exemple : 86400. La valeur par défaut est 7200.</dd>
 </dl>
 
 **Exemples** :
@@ -1601,6 +1598,7 @@ bluemix sl dns record-edit ZONE [OPTIONS]
 bluemix sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 Cette commande édite des enregistrements sous la zone bluemix.net dont l'ID est 12345678, et affecte la valeur "127.0.0.2" au paramètre de données et la valeur 3600 au paramètre de durée de vie.
+
 ### bluemix sl dns record-list
 {: #sl_dns_record_list}
 
@@ -1626,6 +1624,7 @@ bluemix sl dns record-list ZONE [OPTIONS]
 bluemix sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
 ```
 Cette commande répertorie tous les enregistrements A sous la zone bluemix.net. La valeur du paramètre de filtrage par hôte est elasticsearch et la valeur du paramètre de durée de vie est 900 secondes.
+
 ### bluemix sl dns record-remove
 {: #sl_dns_record_remove}
 
@@ -1712,7 +1711,7 @@ bluemix sl globalip create [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--v6</dt>
-<dd>Commandez une adresse IP IPv6. </dd>
+<dd>Commandez une adresse IP IPv6.</dd>
 <dt>--test</dt>
 <dd>Indique qu'une commande doit être testée.</dd>
 <dt>-f, --force</dt>
@@ -1775,7 +1774,7 @@ bluemix sl globalip list [OPTIONS]
 <dt>--v6</dt>
 <dd>Afficher uniquement les adresses IPv6.</dd>
 <dt>--order</dt>
-<dd>Filtrer par ID de commande utilisé pour acheter cette adresse IP. </dd>
+<dd>Filtrer par ID de commande utilisé pour acheter cette adresse IP.</dd>
 </dl>
 
 **Exemples** :
@@ -1798,7 +1797,6 @@ bluemix sl globalip unassign IDENTIFIER
 bluemix sl globalip unassign 12345678
 ```
 Cette commande annule l'affectation d'une adresse IP portant l'ID 12345678 à partir de l'unité cible.
-
 
 ### bluemix sl image delete
 {: #sl_image_delete}
@@ -1841,7 +1839,7 @@ bluemix sl image edit IDENTIFIER [OPTIONS]
 <dt>--note</dt>
 <dd>Note supplémentaire au sujet de l'image.</dd>
 <dt>--tag</dt>
-<dd>Etiquettes de l'image. </dd>
+<dd>Etiquettes de l'image.</dd>
 </dl>
 
 *Exemples** :
@@ -1918,7 +1916,7 @@ bluemix sl ipsec list [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--order</dt>
-<dd>Filtrer par ID de commande utilisé pour acheter le contexte IPSec. </dd>
+<dd>Filtrer par ID de commande utilisé pour acheter le contexte IPSec.</dd>
 </dl>
 ### bluemix sl ipsec order
 {: #sl_ipsec_order}
@@ -1931,7 +1929,7 @@ bluemix sl ipsec order [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-d, --datacenter</dt>
-<dd>Obligatoire. Nom abrégé du centre de données pour IPSec, par exemple, dal09. </dd>
+<dd>Obligatoire. Nom abrégé du centre de données pour IPSec, par exemple, dal09.</dd>
 </dl>
 
 ### bluemix sl ipsec subnet-add
@@ -1945,7 +1943,7 @@ bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-s, --subnet-id</dt>
-<dd>Identificateur de sous-réseau à ajouter (obligatoire). </dd>
+<dd>Identificateur de sous-réseau à ajouter (obligatoire).</dd>
 <dt>-t, --subnet-type</dt>
 <dd>Type de sous-réseau à ajouter (obligatoire). Les options possibles sont les suivantes : internal,remote,service.</dd>
 <dt>-n, --network</dt>
@@ -1971,9 +1969,9 @@ bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-s, --static-ip</dt>
-<dd>Adresse IP statique (obligatoire). </dd>
+<dd>Adresse IP statique (obligatoire).</dd>
 <dt>-r, --remote-ip</dt>
-<dd>Adresse IP distante (obligatoire). </dd>
+<dd>Adresse IP distante (obligatoire).</dd>
 <dt>-n, --note</dt>
 <dd>Remarque.</dd>
 </dl>
@@ -1996,9 +1994,9 @@ bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-s, --static-ip</dt>
-<dd>Adresse IP statique (obligatoire). </dd>
+<dd>Adresse IP statique (obligatoire).</dd>
 <dt>-r, --remote-ip</dt>
-<dd>Adresse IP distante (obligatoire). </dd>
+<dd>Adresse IP distante (obligatoire).</dd>
 <dt>-n, --note</dt>
 <dd>Remarque.</dd>
 </dl>
@@ -2017,7 +2015,7 @@ bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 <dt>-r, --remote-peer</dt>
 <dd>Adresse IP de l'homologue distant.</dd>
 <dt>-k, --preshared-key</dt>
-<dd>Clé pré-partagée. </dd>
+<dd>Clé pré-partagée.</dd>
 <dt>-a, --phase1-auth</dt>
 <dd>Athentification phase 1. Les options possibles sont les suivantes : MD5,SHA1,SHA256.</dd>
 <dt>-c, --phase1-crypto</dt>
@@ -2033,7 +2031,7 @@ bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 <dt>-e, --phase2-dh</dt>
 <dd>Groupe diffie hellman phase 2. Les options possibles sont les suivantes : 0,1,2,5.</dd>
 <dt>-f, --phase2-forward-secrecy</dt>
-<dd>Confidentialité de transmission parfaite phase 2. Les valeurs possibles sont comprises entre 0 et 1. </dd>
+<dd>Confidentialité de transmission parfaite phase 2. Les valeurs possibles sont comprises entre 0 et 1.</dd>
 <dt>-l, --phase2-key-ttl</dt>
 <dd>Durée de vie de la clé phase 2. Les valeurs possibles sont comprises entre 120 et 172800.</dd>
 </dl>
@@ -2093,13 +2091,13 @@ bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-a, --allocation</dt>
-<dd>Obligatoire. Pourcentage de connexions alloué. </dd>
+<dd>Obligatoire. Pourcentage de connexions alloué.</dd>
 <dt>-p, --port</dt>
-<dd>Obligatoire. Numéro de port. </dd>
+<dd>Obligatoire. Numéro de port.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Obligatoire. ID du type de routage. Exécutez 'bluemix sl loadbal routing-types' pour rechercher un ID. </dd>
+<dd>Obligatoire. ID du type de routage. Exécutez 'bluemix sl loadbal routing-types' pour rechercher un ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Obligatoire. ID de la méthode de routage. Exécutez 'bluemix sl loadbal routing-methods' pour rechercher un ID. </dd>
+<dd>Obligatoire. ID de la méthode de routage. Exécutez 'bluemix sl loadbal routing-methods' pour rechercher un ID.</dd>
 </dl>
 
 ### bluemix sl loadbal group-delete
@@ -2127,13 +2125,13 @@ bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-a, --allocation</dt>
-<dd>Modifiez le pourcentage de connexions alloué. </dd>
+<dd>Modifiez le pourcentage de connexions alloué.</dd>
 <dt>-p, --port</dt>
-<dd>Modifiez le numéro de port. </dd>
+<dd>Modifiez le numéro de port.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Modifiez l'ID du type de routage. Exécutez 'bluemix sl loadbal routing-types' pour rechercher un ID. </dd>
+<dd>Modifiez l'ID du type de routage. Exécutez 'bluemix sl loadbal routing-types' pour rechercher un ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Modifiez l'ID de la méthode de routage. Exécutez 'bluemix sl loadbal routing-methods' pour rechercher un ID. </dd>
+<dd>Modifiez l'ID de la méthode de routage. Exécutez 'bluemix sl loadbal routing-methods' pour rechercher un ID.</dd>
 </dl>
 
 ### bluemix sl loadbal group-reset
@@ -2165,9 +2163,9 @@ bluemix sl loadbal list
 <dt>-d, --datacenter</dt>
 <dd>Filtrer par nom abrégé de centre de données.</dd>
 <dt>-o, --order</dt>
-<dd>Filtrer par ID de commande utilisé pour acheter l'équilibreur de charge. </dd>
+<dd>Filtrer par ID de commande utilisé pour acheter l'équilibreur de charge.</dd>
 <dt>-p, --ip-address</dt>
-<dd>Filtrer par adresse IP. </dd>
+<dd>Filtrer par adresse IP.</dd>
 </dl>
 ### bluemix sl loadbal routing-methods
 {: #sl_loadbal_routing_methods}
@@ -2196,16 +2194,15 @@ bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--disabled</dt>
-<dd>Facultatif. Créer le service comme désactivé, il est activé par défaut si cette option n'est pas sélectionnée.
-</dd>
+<dd>Facultatif. Créer le service comme désactivé, il est activé par défaut si cette option n'est pas sélectionnée.</dd>
 <dt>-p, --port</dt>
-<dd>Obligatoire. Numéro de port du service. </dd>
+<dd>Obligatoire. Numéro de port du service.</dd>
 <dt>-w, --weight</dt>
-<dd>Obligatoire. Poids du service. </dd>
+<dd>Obligatoire. Poids du service.</dd>
 <dt>-t, --healthcheck-type</dt>
-<dd>Obligatoire. Type de diagnostic d'intégrité. </dd>
+<dd>Obligatoire. Type de diagnostic d'intégrité.</dd>
 <dt>-i, --ip-address</dt>
-<dd>Obligatoire. Adresse IP du service. </dd>
+<dd>Obligatoire. Adresse IP du service.</dd>
 </dl>
 
 ### bluemix sl loadbal service-delete
@@ -2233,15 +2230,15 @@ bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--disabled</dt>
-<dd>Désactivez le service. </dd>
+<dd>Désactivez le service.</dd>
 <dt>--enabled</dt>
 <dd>Activez le service.</dd>
 <dt>-p, --port</dt>
-<dd>Modifiez le numéro de port du service. </dd>
+<dd>Modifiez le numéro de port du service.</dd>
 <dt>-w, --weight</dt>
-<dd>Modifiez le poids du service. </dd>
+<dd>Modifiez le poids du service.</dd>
 <dt>-t, --healthcheck-type</dt>
-<dd>Modifiez le type de diagnostic d'intégrité. </dd>
+<dd>Modifiez le type de diagnostic d'intégrité.</dd>
 <dt>-i, --ip-address</dt>
 <dd>Modifiez l'adresse IP du service.</dd>
 </dl>
@@ -2271,11 +2268,11 @@ bluemix sl security sshkey-add LABEL [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-f, --in-file</dt>
-<dd>Fichier id_rsa.pub à importer pour cette clé. </dd>
+<dd>Fichier id_rsa.pub à importer pour cette clé.</dd>
 <dt>-k, --key</dt>
-<dd>Clé SSH réelle. </dd>
+<dd>Clé SSH réelle.</dd>
 <dt>--note</dt>
-<dd>Note supplémentaire qui sera associée à la clé. </dd>
+<dd>Note supplémentaire qui sera associée à la clé.</dd>
 </dl>
 
 **Exemples** :
@@ -2295,9 +2292,9 @@ bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--label</dt>
-<dd>Nouveau libellé de la clé. </dd>
+<dd>Nouveau libellé de la clé.</dd>
 <dt>--note</dt>
-<dd>Nouvelles notes pour la clé. </dd>
+<dd>Nouvelles notes pour la clé.</dd>
 </dl>
 
 **Exemples** :
@@ -2344,7 +2341,7 @@ bluemix sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
- Cette commande affiche l'ID, le libellé et les notes de la clé SSH portant l'ID 12345678 et écrit la clé publique dans le fichier : ~/mykey.pub.
+Cette commande affiche l'ID, le libellé et les notes de la clé SSH portant l'ID 12345678 et écrit la clé publique dans le fichier : ~/mykey.pub.
 
 ### bluemix sl security sshkey-remove
 {: #sl_security_sshkey_remove}
@@ -2377,15 +2374,15 @@ bluemix sl security cert-add [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--crt</dt>
-<dd>Fichier de certificat. </dd>
+<dd>Fichier de certificat.</dd>
 <dt>--csr</dt>
-<dd>Fichier de demande de signature de certificat. </dd>
+<dd>Fichier de demande de signature de certificat.</dd>
 <dt>--icc</dt>
-<dd>Fichier de certificat intermédiaire. </dd>
+<dd>Fichier de certificat intermédiaire.</dd>
 <dt>--key</dt>
-<dd>Fichier de clé privée. </dd>
+<dd>Fichier de clé privée.</dd>
 <dt>--notes</dt>
-<dd>Notes supplémentaires. </dd>
+<dd>Notes supplémentaires.</dd>
 </dl>
 
 **Exemples** :
@@ -2405,15 +2402,15 @@ bluemix sl security cert-edit IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--crt</dt>
-<dd>Fichier de certificat. </dd>
+<dd>Fichier de certificat.</dd>
 <dt>--csr</dt>
-<dd>Fichier de demande de signature de certificat. </dd>
+<dd>Fichier de demande de signature de certificat.</dd>
 <dt>--icc</dt>
-<dd>Fichier de certificat intermédiaire. </dd>
+<dd>Fichier de certificat intermédiaire.</dd>
 <dt>--key</dt>
-<dd>Fichier de clé privée. </dd>
+<dd>Fichier de clé privée.</dd>
 <dt>--notes</dt>
-<dd>Notes supplémentaires. </dd>
+<dd>Notes supplémentaires.</dd>
 </dl>
 
 **Exemples** :
@@ -2448,7 +2445,7 @@ bluemix sl security cert-list [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--status</dt>
-<dd>Afficher les certificats avec ce statut. La valeur par défaut est all, les options possibles sont les suivantes : all,valid,expired. </dd>
+<dd>Afficher les certificats avec ce statut. La valeur par défaut est all, les options possibles sont les suivantes : all,valid,expired.</dd>
 <dt>--sortby</dt>
 <dd>Options de tri des colonnes : id,common_name,days_until_expire,notes.</dd>
 </dl>
@@ -2605,15 +2602,15 @@ bluemix sl vlan create [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-t, --vlan-type</dt>
-<dd>Type de VLAN, public ou privé. </dd>
+<dd>Type de VLAN, public ou privé.</dd>
 <dt>-r, --router</dt>
-<dd>Nom d'hôte du routeur. </dd>
+<dd>Nom d'hôte du routeur.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Nom abrégé du centre de données. </dd>
+<dd>Nom abrégé du centre de données.</dd>
 <dt>-s, --size</dt>
-<dd>Taille des sous-réseaux. Options possibles : 8 (5 adresses IP utilisables) ou 16 (13 adresses IP utilisables) ou 32 (29 adresses IP utilisables). </dd>
+<dd>Taille des sous-réseaux. Options possibles : 8 (5 adresses IP utilisables) ou 16 (13 adresses IP utilisables) ou 32 (29 adresses IP utilisables).</dd>
 <dt>-n, --name</dt>
-<dd>Nom du réseau local virtuel. </dd>
+<dd>Nom du réseau local virtuel.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -2677,7 +2674,7 @@ bluemix sl vlan edit IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-n, --name</dt>
-<dd>Nom du réseau local virtuel. </dd>
+<dd>Nom du réseau local virtuel.</dd>
 </dl>
 
 **Exemples** :
@@ -2701,11 +2698,11 @@ bluemix sl vlan list [OPTIONS]
 <dt>-d, --datacenter</dt>
 <dd>Filtrer par nom abrégé de centre de données.</dd>
 <dt>-n, --number</dt>
-<dd>Filtrer par numéro de réseau local virtuel. </dd>
+<dd>Filtrer par numéro de réseau local virtuel.</dd>
 <dt>--name</dt>
-<dd>Filtrer par nom de réseau local virtuel. </dd>
+<dd>Filtrer par nom de réseau local virtuel.</dd>
 <dt>--order</dt>
-<dd>Filtrer par ID de commande utilisé pour acheter le réseau local virtuel. </dd>
+<dd>Filtrer par ID de commande utilisé pour acheter le réseau local virtuel.</dd>
 </dl>
 
 **Exemples** :
@@ -2786,53 +2783,53 @@ bluemix sl vs create [OPTIONS]
 <dt>-H, --hostname</dt>
 <dd>Obligatoire. Partie hôte du nom de domaine complet.</dd>
 <dt>-D, --domain</dt>
-<dd>Obligatoire. Partie domaine du nom de domaine complet. </dd>
+<dd>Obligatoire. Partie domaine du nom de domaine complet.</dd>
 <dt>-c, --cpu</dt>
-<dd>Obligatoire. Nombre de coeurs d'UC. </dd>
+<dd>Obligatoire. Nombre de coeurs d'UC.</dd>
 <dt>-m, --memory</dt>
 <dd>Obligatoire. Mémoire, exprimée en mégaoctets.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Obligatoire. Nom abrégé du centre de données. </dd>
+<dd>Obligatoire. Nom abrégé du centre de données.</dd>
 <dt>-o, --os</dt>
-<dd>Code d'installation du système d'exploitation. Astuce : vous pouvez spécifier <OS>_LATEST. </dd>
+<dd>Code d'installation du système d'exploitation. Astuce : vous pouvez spécifier <OS>_LATEST.</dd>
 <dt>--image</dt>
-<dd>ID image. Voir : 'bluemix sl image list' pour référence. </dd>
+<dd>ID image. Voir : 'bluemix sl image list' pour référence.</dd>
 <dt>--billing</dt>
-<dd>Taux de facturation. Par défaut : hourly. Options : hourly, monthly. </dd>
+<dd>Taux de facturation. Par défaut : hourly. Options : hourly, monthly.</dd>
 <dt>--dedicated</dt>
-<dd>Créer un serveur virtuel dédié (noeud privé). </dd>
+<dd>Créer un serveur virtuel dédié (noeud privé).</dd>
 <dt>--san</dt>
-<dd>Utiliser le stockage SAN à la place d'un disque local. </dd>
+<dd>Utiliser le stockage SAN à la place d'un disque local.</dd>
 <dt>--test</dt>
-<dd>Ne pas créer le serveur virtuel. </dd>
+<dd>Ne pas créer le serveur virtuel.</dd>
 <dt>--export</dt>
-<dd>Exporte les options vers un fichier modèle. </dd>
+<dd>Exporte les options vers un fichier modèle.</dd>
 <dt>-i, --postinstall</dt>
-<dd>Script de post-installation à télécharger. </dd>
+<dd>Script de post-installation à télécharger.</dd>
 <dt>-k, --key</dt>
-<dd>ID des clés SSH à ajouter à l'utilisateur root (plusieurs occurrences autorisées). </dd>
+<dd>ID des clés SSH à ajouter à l'utilisateur root (plusieurs occurrences autorisées).</dd>
 <dt>--disk</dt>
-<dd>Tailles de disque (plusieurs occurrences autorisées). </dd>
+<dd>Tailles de disque (plusieurs occurrences autorisées).</dd>
 <dt>--private</dt>
-<dd>Force le serveur virtuel à n'avoir accès qu'au réseau privé. </dd>
+<dd>Force le serveur virtuel à n'avoir accès qu'au réseau privé.</dd>
 <dt>--like</dt>
-<dd>Utiliser la configuration d'un serveur virtuel existant. </dd>
+<dd>Utiliser la configuration d'un serveur virtuel existant.</dd>
 <dt>-n, --network</dt>
 <dd>Vitesse du port réseau, exprimée en Mbit/s.</dd>
 <dt>--tag</dt>
-<dd>Etiquettes à ajouter à l'instance (plusieurs occurrences autorisées). </dd>
+<dd>Etiquettes à ajouter à l'instance (plusieurs occurrences autorisées).</dd>
 <dt>-t, --template</dt>
 <dd>Fichier modèle qui indique les options de ligne de commande par défaut.</dd>
 <dt>-u, --userdata</dt>
-<dd>Chaîne de métadonnées définie par l'utilisateur. </dd>
+<dd>Chaîne de métadonnées définie par l'utilisateur.</dd>
 <dt>-F, --userfile</dt>
-<dd>Lire les données utilisateur à partir du fichier. </dd>
+<dd>Lire les données utilisateur à partir du fichier.</dd>
 <dt>--vlan-public</dt>
-<dd>ID du VLAN public sur lequel vous voulez placer le serveur virtuel. </dd>
+<dd>ID du VLAN public sur lequel vous voulez placer le serveur virtuel.</dd>
 <dt>--vlan-private</dt>
-<dd>ID du VLAN privé sur lequel vous voulez placer le serveur virtuel. </dd>
+<dd>ID du VLAN privé sur lequel vous voulez placer le serveur virtuel.</dd>
 <dt>--wait</dt>
-<dd>Attendre pendant X secondes au maximum que le serveur virtuel soit mis à disposition avant de revenir. </dd>
+<dd>Attendre pendant X secondes au maximum que le serveur virtuel soit mis à disposition avant de revenir.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -2906,11 +2903,11 @@ bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-a, --a-record</dt>
-<dd>Synchroniser l'enregistrement A pour l'hôte. </dd>
+<dd>Synchroniser l'enregistrement A pour l'hôte.</dd>
 <dt>--aaaa-record</dt>
-<dd>Synchroniser l'enregistrement AAAA pour l'hôte. </dd>
+<dd>Synchroniser l'enregistrement AAAA pour l'hôte.</dd>
 <dt>--ptr</dt>
-<dd>Synchroniser l'enregistrement PTR pour l'hôte. </dd>
+<dd>Synchroniser l'enregistrement PTR pour l'hôte.</dd>
 <dt>--ttl</dt>
 <dd>Définit la durée de vie des enregistrements A et/ou PTR. Valeur par défaut : 7200</dd>
 <dt>-f, --force</dt>
@@ -2934,15 +2931,15 @@ bluemix sl vs edit IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-D, --domain</dt>
-<dd>Partie domaine du nom de domaine complet. </dd>
+<dd>Partie domaine du nom de domaine complet.</dd>
 <dt>-H, --hostname</dt>
 <dd>Portion hôte du nom de domaine complet. Exemple : server</dd>
 <dt>--tag</dt>
-<dd>Etiquettes à définir ou chaîne vide pour tout retirer. </dd>
+<dd>Etiquettes à définir ou chaîne vide pour tout retirer.</dd>
 <dt>-u, --userdata</dt>
-<dd>Chaîne de métadonnées définie par l'utilisateur. </dd>
+<dd>Chaîne de métadonnées définie par l'utilisateur.</dd>
 <dt>-F, --userfile</dt>
-<dd>Lire les données utilisateur à partir du fichier. </dd>
+<dd>Lire les données utilisateur à partir du fichier.</dd>
 <dt>--public-speed</dt>
 <dd>Vitesse de port public. Les options possibles sont les suivantes : 0,10,100,1000,10000.</dd>
 <dt>--private-speed</dt>
@@ -2954,6 +2951,7 @@ bluemix sl vs edit IDENTIFIER [OPTIONS]
 bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
 ```
 Cette commande met à jour l'instance de serveur virtuel portant l'ID 12345678 et lui affecte la valeur "bluemix.net" comme domaine, la valeur "myapp" comme nom d'hôte et la valeur "testcli" comme étiquette
+
 ### bluemix sl vs list
 {: #sl_vs_list}
 
@@ -2965,11 +2963,11 @@ bluemix sl vs list [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-c, --cpu</dt>
-<dd>Nombre de coeurs d'UC. </dd>
+<dd>Nombre de coeurs d'UC.</dd>
 <dt>-D, --domain</dt>
-<dd>Partie domaine du nom de domaine complet. </dd>
+<dd>Partie domaine du nom de domaine complet.</dd>
 <dt>-d, --datacenter</dt>
-<dd>Nom abrégé du centre de données. </dd>
+<dd>Nom abrégé du centre de données.</dd>
 <dt>-H, --hostname</dt>
 <dd>Portion hôte du nom de domaine complet.</dd>
 <dt>-m, --memory</dt>
@@ -2977,13 +2975,13 @@ bluemix sl vs list [OPTIONS]
 <dt>-n, --network</dt>
 <dd>Vitesse du port réseau, exprimée en Mbit/s.</dd>
 <dt>--hourly</dt>
-<dd>Afficher uniquement les instances horaires. </dd>
+<dd>Afficher uniquement les instances horaires.</dd>
 <dt>--monthly</dt>
-<dd>Afficher uniquement les instances mensuelles. </dd>
+<dd>Afficher uniquement les instances mensuelles.</dd>
 <dt>--tag</dt>
-<dd>Filtrer par étiquettes (plusieurs occurrences autorisées). </dd>
+<dd>Filtrer par étiquettes (plusieurs occurrences autorisées).</dd>
 <dt>--sortby</dt>
-<dd>Les options de tri des colonnes sont les suivantes : id, hostname, domain, datacenter, cpu, memory, primary_ip, backend_ip. Valeur par défaut : hostname. </dd>
+<dd>Les options de tri des colonnes sont les suivantes : id, hostname, domain, datacenter, cpu, memory, primary_ip, backend_ip. Valeur par défaut : hostname.</dd>
 <dt>--columns</dt>
 <dd>Les options d'affichage des colonnes sont les suivantes : guid, primary_ip, backend_ip, datacenter, action, power_state, created_by, tags. Valeur par défaut : id,hostname,primary_ip,backend_ip,datacenter,action.</dd>
 </dl>
@@ -3025,9 +3023,9 @@ bluemix sl vs power-off IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--hard</dt>
-<dd>Effectuer un arrêt immédiat. </dd>
+<dd>Effectuer un arrêt immédiat.</dd>
 <dt>--soft</dt>
-<dd>Effectuer un arrêt graduel. </dd>
+<dd>Effectuer un arrêt graduel.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -3069,7 +3067,7 @@ bluemix sl vs ready IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--wait</dt>
-<dd>Attendre pendant X secondes au maximum que le serveur virtuel soit mis à disposition avant de revenir. </dd>
+<dd>Attendre pendant X secondes au maximum que le serveur virtuel soit mis à disposition avant de revenir.</dd>
 </dl>
 
 **Exemples** :
@@ -3091,7 +3089,7 @@ bluemix sl vs reboot IDENTIFIER [OPTIONS]
 <dt>--hard</dt>
 <dd>Effectuer un réamorçage immédiat.</dd>
 <dt>--soft</dt>
-<dd>Effectuer un réamorçage graduel. </dd>
+<dd>Effectuer un réamorçage graduel.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -3113,13 +3111,13 @@ bluemix sl vs reload IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-i, --postinstall</dt>
-<dd>Script de post-installation à télécharger. </dd>
+<dd>Script de post-installation à télécharger.</dd>
 <dt>--image</dt>
 <dd>ID image. Par défaut, il convient d'utiliser le système d'exploitation en cours.</dd>
-<dt>Voir : </dt>
-<dd>'bluemix sl image list' pour référence. </dd>
+<dt>Voir :</dt>
+<dd>'bluemix sl image list' pour référence.</dd>
 <dt>-k, --key</dt>
-<dd>ID des clés SSH à ajouter à l'utilisateur root (plusieurs occurrences autorisées). </dd>
+<dd>ID des clés SSH à ajouter à l'utilisateur root (plusieurs occurrences autorisées).</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -3181,7 +3179,7 @@ bluemix sl vs upgrade IDENTIFIER [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>-c, --cpu</dt>
-<dd>Nombre de coeurs d'UC. </dd>
+<dd>Nombre de coeurs d'UC.</dd>
 <dt>--private</dt>
 <dd>Le coeur d'UC sera sur un serveur hôte dédié.</dd>
 <dt>-m, --memory</dt>

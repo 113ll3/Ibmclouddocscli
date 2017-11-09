@@ -6,28 +6,29 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-26"
 
 
 ---
 
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 
 # Interface de ligne de commande d'{{site.data.keyword.registrylong_notm}}
 {: #containerregcli}
 
-L'interface de ligne de commande {{site.data.keyword.registrylong}} est un plug-in qui vous permet de gérer votre registre et ses ressources pour votre compte.
+L'interface de ligne de commande {{site.data.keyword.registrylong}} est un plug-in qui vous permet de gérer votre registre et ses ressources pour votre compte {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 **Prérequis**
-* Avant d'exécuter des commandes de registre, connectez-vous à {{site.data.keyword.Bluemix_short}} avec la commande `bx login` pour générer un jeton d'accès {{site.data.keyword.Bluemix_short}} et authentifier votre session.
+* Avant d'exécuter des commandes de registre, connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bx login` pour générer un jeton d'accès et authentifier votre session. 
 
-Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{site.data.keyword.registrylong}}, voir [Configuration d'un registre d'images privé](../../../services/Registry/index.html).
+Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{site.data.keyword.registrylong_notm}}, voir [Configuration d'un registre d'images privé](../../../services/Registry/index.html).
 
-<table summary="Gestion de votre registre Containers Registry">
-<caption>Tableau 1. Commandes de gestion de {{site.data.keyword.registryshort}} sur {{site.data.keyword.Bluemix_short}}
+<table summary="Manage {{site.data.keyword.registrylong_notm}}y">
+<caption>Tableau 1. Commandes de gestion de {{site.data.keyword.registrylong_notm}} sur {{site.data.keyword.Bluemix_notm}}
 </caption>
  <thead>
  <th colspan="5">Commandes de gestion du registre</th>
@@ -64,6 +65,7 @@ Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{
  </tbody></table>
 
 
+
 ## bx cr api
 {: #bx_cr_api}
 
@@ -78,7 +80,7 @@ bx cr api
 ## bx cr build
 {: #bx_cr_build}
 
-Génère une image Docker dans {{site.data.keyword.registrylong}}.
+Génère une image Docker dans {{site.data.keyword.registrylong_notm}}.
 
 ```
 bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
@@ -88,13 +90,13 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag v
 **Paramètres**
 <dl>
 <dt>DIRECTORY</dt>
-<dd>Emplacement de votre contexte de génération, qui contient votre fichier Dockerfile et les fichiers prérequis. </dd>
+<dd>Emplacement de votre contexte de génération, qui contient votre fichier Dockerfile et les fichiers prérequis.</dd>
 <dt>--no-cache</dt>
-<dd>(Facultatif) Lorsque ce paramètre est spécifié, les couches d'image mises en cache à partir de générations précédentes ne sont pas utilisées dans cette génération. </dd>
+<dd>(Facultatif) Lorsque ce paramètre est spécifié, les couches d'image mises en cache à partir de générations précédentes ne sont pas utilisées dans cette génération.</dd>
 <dt>--pull</dt>
-<dd>(Facultatif) Lorsque ce paramètre est spécifié, l'image de base est extraite même si une image dotée d'une étiquette correspondante existe déjà sur l'hôte de génération. </dd>
+<dd>(Facultatif) Lorsque ce paramètre est spécifié, l'image de base est extraite même si une image dotée d'une étiquette correspondante existe déjà sur l'hôte de génération.</dd>
 <dt>--quiet, -q</dt>
-<dd>(Facultatif) Lorsque ce paramètre est spécifié, la sortie de génération est supprimée sauf en cas d'erreur. </dd>
+<dd>(Facultatif) Lorsque ce paramètre est spécifié, la sortie de génération est supprimée sauf en cas d'erreur.</dd>
 <dt> --build-arg value</dt>
 <dd>(Facultatif) Spécifiez un argument de génération supplémentaire au format 'KEY=VALUE'. Vous avez la possibilité d'indiquer plusieurs arguments de génération en ajoutant ce paramètre plusieurs fois. Les valeurs d'arguments de génération sont disponibles en tant que variables d'environnement lorsque vous spécifiez une ligne ARG qui correspond à la clé définie dans votre fichier Dockerfile.</dd>
 <dt>--tag value, -t value</dt>
@@ -127,20 +129,20 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
+<dd>(Facultatif) Formate la sortie en utilisant un modèle Go.
 
 Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
-<dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet vers l'image à inspecter, au format `espace_de_nom/image:balise`. Si aucune balise n'est spécifiée dans le chemin de l'image, celle portant la balise `latest` (dernière) est inspectée. Vous pouvez inspecter plusieurs images en listant dans la commande chaque chemin de registre {{site.data.keyword.Bluemix_short}} privé et en les séparant par un espace.</dd>
+<dd>Chemin de registre complet vers l'image à inspecter, au format `namespace/image:tag`. Si aucune balise n'est spécifiée dans le chemin de l'image, celle portant la balise `latest` (dernière) est inspectée. Vous pouvez inspecter plusieurs images en listant dans la commande chaque chemin de registre privé et en les séparant par un espace.</dd>
 </dl>
 
 
 ## bx cr image-list (bx cr images)
 {: #bx_cr_image_list}
 
-Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_short}}.
+Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_notm}}.
 
 ```
  bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
@@ -154,9 +156,9 @@ Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_short}}.
 <dt>-q, --quiet</dt>
 <dd>(Facultatif) Chaque image est répertoriée au format `référentiel:balise`.</dd>
 <dt>--include-ibm</dt>
-<dd>(Facultatif) Inclut dans la sortie les images publiques fournies par IBM. Sans cette option, seules les images privées sont répertoriées par défaut.</dd>
+<dd>(Facultatif) Inclut dans la sortie les images publiques fournies par {{site.data.keyword.IBM_notm}}. Sans cette option, seules les images privées sont répertoriées par défaut.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
+<dd>(Facultatif) Formate la sortie en utilisant un modèle Go.
 
 Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
@@ -177,8 +179,8 @@ bx cr image-rm IMAGE [IMAGE...]
 **Paramètres**
 <dl>
 <dt>IMAGE</dt>
-<dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet vers l'image à retirer, au format `espace_de_nom/image:balise`. Si une balise n'est pas spécifiée dans le chemin de l'image,
-celle associée à la balise `latest` (dernière) est supprimée par défaut. Vous pouvez supprimer plusieurs images en listant dans la commande chaque chemin de registre {{site.data.keyword.Bluemix_short}} privé et en les séparant par un espace.</dd>
+<dd>Chemin de registre complet vers l'image à retirer, au format `namespace/image:tag`. Si une balise n'est pas spécifiée dans le chemin de l'image,
+celle associée à la balise `latest` (dernière) est supprimée par défaut. Vous pouvez supprimer plusieurs images en listant dans la commande chaque chemin de registre privé et en les séparant par un espace.</dd>
 </dl>
 
 
@@ -196,7 +198,7 @@ bx cr login
 ## bx cr namespace-add
 {: #bx_cr_namespace_add}
 
-Ajoute un espace de nom à votre compte {{site.data.keyword.Bluemix_short}}.
+Ajoute un espace de nom à votre compte {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bx cr namespace-add ESPACE DE NOM
@@ -206,14 +208,14 @@ bx cr namespace-add ESPACE DE NOM
 **Paramètres**
 <dl>
 <dt>ESPACE DE NOM</dt>
-<dd>Espace de nom à ajouter. Il doit être unique sur tous les comptes {{site.data.keyword.Bluemix_short}} d'une même région.</dd>
+<dd>Espace de nom à ajouter. Il doit être unique sur tous les comptes {{site.data.keyword.Bluemix_notm}} d'une même région.</dd>
 </dl>
 
 
 ## bx cr namespace-list (bx cr namespaces)
 {: #bx_cr_namespace_list}
 
-Affiche tous les espaces de nom détenus par votre compte {{site.data.keyword.Bluemix_short}}.
+Affiche tous les espaces de nom détenus par votre compte {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bx cr namespace-list
@@ -224,7 +226,7 @@ bx cr namespace-list
 ## bx cr namespace-rm
 {: #bx_cr_namespace_rm}
 
-Retire un espace de nom de votre compte {{site.data.keyword.Bluemix_short}}. Les images dans cet espace de nom sont supprimées lorsque l'espace de nom est retiré.
+Retire un espace de nom de votre compte {{site.data.keyword.Bluemix_notm}}. Les images dans cet espace de nom sont supprimées lorsque l'espace de nom est retiré.
 
 ```
 bx cr namespace-rm ESPACE DE NOM
@@ -236,7 +238,6 @@ bx cr namespace-rm ESPACE DE NOM
 <dt>ESPACE DE NOM</dt>
 <dd>Espace de nom que vous désirez supprimer.</dd>
 </dl>
-
 
 
 ## bx cr plan
@@ -272,7 +273,7 @@ bx cr plan-upgrade [PLAN]
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-Cette commande a été supprimée. Vous pouvez utiliser la calculatrice de prix pour calculer votre coût estimé, voir [Estimation des coûts pour IBM Bluemix Container Registry](../../../services/Registry/registry_overview.html#registry_plan_billing).
+Cette commande a été supprimée. Vous pouvez utiliser la calculatrice de prix pour calculer votre coût estimé. Voir [Estimation des coûts pour {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_overview.html#registry_plan_billing).
 
 
 ## bx cr quota
@@ -320,7 +321,7 @@ bx cr token-add [--description VALEUR] [-q, --quiet] [--non-expiring] [--readwri
 **Paramètres**
 <dl>
 <dt>--description VALEUR</dt>
-<dd>(Facultatif) Permet de spécifier la description du jeton qui s'affiche lorsque vous exécutez `bx cr token-list`. Si votre jeton est créé automatiquement par IBM Bluemix Container Service, la description est le nom de votre cluster Kubernetes. Dans ce cas, le jeton est retiré automatiquement lorsque votre cluster est retiré.</dd>
+<dd>(Facultatif) Permet de spécifier la description du jeton qui s'affiche lorsque vous exécutez `bx cr token-list`. Si votre jeton est créé automatiquement par {{site.data.keyword.containerlong_notm}}, la description est le nom de votre cluster Kubernetes. Dans ce cas, le jeton est retiré automatiquement lorsque votre cluster est retiré.</dd>
 <dt>-q, --quiet</dt>
 <dd>(Facultatif) Affiche le jeton uniquement, sans aucun autre texte.</dd>
 <dt>--non-expiring</dt>
@@ -351,7 +352,7 @@ bx cr token-get JETON
 ## bx cr token-list (bx cr tokens)
 {: #bx_cr_token_list}
 
-Affiche tous les jetons qui existent pour votre compte {{site.data.keyword.Bluemix_short}}.
+Affiche tous les jetons qui existent pour votre compte {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bx cr token-list --format FORMAT
@@ -361,7 +362,7 @@ bx cr token-list --format FORMAT
 **Paramètres**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
+<dd>(Facultatif) Formate la sortie en utilisant un modèle Go.
 
 Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
@@ -398,7 +399,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 **Paramètres**
 <dl>
 <dt>IMAGE</dt>
-<dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet au format `espace_nom/image:balise`, de l'image pour laquelle vous désirez obtenir un rapport. Le rapport vous signale si l'image comporte des vulnérabilités de package connues. Les systèmes d'exploitation suivants sont pris en charge :
+<dd>Chemin de registre complet, au format `namespace/image:tag`, vers l'image pour laquelle vous désirez obtenir un rapport. Le rapport vous signale si l'image comporte des vulnérabilités de package connues. Les systèmes d'exploitation suivants sont pris en charge :
 
 <ul>
 
@@ -409,9 +410,8 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-Pour plus d'informations, voir la rubrique relative à la [gestion de la sécurité des images avec l'assistant de détection des vulnérabilités](../../../services/Registry/va/va_index.html#va_index).
+Pour plus d'informations, voir la rubrique relative à la [gestion de la sécurité des images avec l'assistant de détection des vulnérabilités](../../../services/va/va_index.html).
 
 </dd>
 
 </dl>
-

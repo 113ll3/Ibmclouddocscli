@@ -30,7 +30,6 @@ L'interface CLI {{site.data.keyword.Bluemix}} fournit une expérience de ligne d
 ## IBM Cloud Application Tools 2 (version bêta)
 IBM Cloud Application Tools 2 est une application de barre de menus rationalisée pour la configuration et la gestion d'environnement local sur macOS. IBM Cloud Application Tools 2 vous permet de facilement installer et mettre à jour des outils et des interfaces de ligne de commande Bluemix, modifier les cibles de déploiement d'interface de ligne de commande et d'accéder rapidement aux liens Bluemix courants.
 
-
 [Téléchargement](http://ibm.biz/icat-2-download){: new_window} <br>
 [Affichage de la documentation](/docs/cli/icat.html){: new_window} <br>
 

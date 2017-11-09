@@ -134,11 +134,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">指派給使用者的許可權。例如，超級使用者、基本、型錄、使用者及報告。如需所指派使用者許可權的相關資訊，請參閱[許可權](/docs/admin/index.html#permissions)。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dd class="pd">指派給使用者的許可權。例如，admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。如需所指派使用者許可權的相關資訊，請參閱[許可權](/docs/admin/index.html#permissions)。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">使用者所屬的組織名稱。您不能在相同的查詢中搭配使用此參數與 permission 參數。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">指派給使用者的組織角色。例如，組織的管理員、帳單管理員或審核員。您必須使用此參數來指定組織。如需角色的相關資訊，請參閱[使用者角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
+<dd class="pd">指派給使用者的組織角色。例如，auditor、manager 或 billing_manager。您必須使用此參數來指定組織。如需角色的相關資訊，請參閱[使用者角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
 
 </dl>
 

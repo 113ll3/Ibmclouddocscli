@@ -133,11 +133,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">分配给用户的许可权。例如，superuser、basic、catalog、user 和 reports。有关分配的用户许可权的更多信息，请参阅[许可权](/docs/admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dd class="pd">分配给用户的许可权。例如，admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。有关分配的用户许可权的更多信息，请参阅[许可权](/docs/admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">用户所属的组织名称。不能将此参数与 permission 参数用于同一查询中。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">分配给用户的组织角色。例如，组织的管理员、记帐管理员或审计员。使用此参数时必须指定组织。有关角色的更多信息，请参阅[用户角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
+<dd class="pd">分配给用户的组织角色。例如，auditor、manager 或 billing_manager。使用此参数时必须指定组织。有关角色的更多信息，请参阅[用户角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
 
 </dl>
 

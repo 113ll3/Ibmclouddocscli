@@ -24,7 +24,7 @@ Puede utilizar [instalador](#installers) o [shell](#shell_install) para instalar
 
 Vaya a la página [todas las versiones](all_versions.html){: new_window} para descargar el instalador más reciente de su SO.
 
-Para macOS y Windows, simplemente ejecute el instalador.
+Para macOS y Windows, simplemente ejecute el instalador. 
 Para Linux, tras descargar el paquete instalador, extráigalo y ejecute el script de instalación con permiso de root.
 
   ```
@@ -58,6 +58,6 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 Copie y pegue el mandato siguiente en una consola de terminal de [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} y ejecútelo.
 
 ```
-iex(New-Object Net.WebClient).DownloadString('https://clis.stage1.ng.bluemix.net/install/powershell')
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
 ```
 

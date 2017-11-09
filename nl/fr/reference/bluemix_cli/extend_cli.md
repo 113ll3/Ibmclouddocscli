@@ -14,19 +14,18 @@ lastupdated: "2017-08-20"
 # Extension de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des plug-ins
 {: #plug-ins}
 
-L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} prend en charge une structure de plug-in destinée à étendre ses fonctionnalités. Vous pouvez installer un plug-in depuis un référentiel, une URL WEB, ou installer localement un fichier binaire de plug-in.  
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} prend en charge une structure de plug-in destinée à étendre ses fonctionnalités. Vous pouvez installer un plug-in depuis un référentiel, une URL WEB, ou installer localement un fichier binaire de plug-in. 
 
-Le [référentiel de plug-ins d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg) est le référentiel officiel d'hébergement des plug-ins. 
+Le [référentiel de plug-ins d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg) est le référentiel officiel d'hébergement des plug-ins.
 
 ## Installation d'un plug-in à partir d'un référentiel
 
 * Recherche du plug-in
 
-  Utilisez la commande 'bluemix plugin repo-plugins -r REPO_NAME' pour rechercher un plug-in dans le référentiel. 
+  Utilisez la commande 'bluemix plugin repo-plugins -r REPO_NAME' pour rechercher un plug-in dans le référentiel.
   
   L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} comporte le référentiel officiel `Bluemix` configuré par défaut. Vous
 pouvez afficher la liste des plug-ins du référentiel `Bluemix` officiel en procédant comme suit :
-
 
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -54,7 +53,7 @@ pouvez afficher la liste des plug-ins du référentiel `Bluemix` officiel en pro
 
 ## Installation locale d'un plug-in
 
-  Utilisez la commande `bluemix plugin install LOCAL_FILE_NAME` pour installer un fichier binaire de plugin dans votre machine locale. Par exemple : 
+  Utilisez la commande `bluemix plugin install LOCAL_FILE_NAME` pour installer un fichier binaire de plugin dans votre machine locale. Par exemple :
 
   ```
   $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2
@@ -79,4 +78,4 @@ pouvez afficher la liste des plug-ins du référentiel `Bluemix` officiel en pro
   ```
 
 
-Pour découvrir d'autres commandes de gestion de plug-ins, exécutez `bluemix plugin` afin d'afficher les messages d'aide. 
+Pour découvrir d'autres commandes de gestion de plug-ins, exécutez `bluemix plugin` afin d'afficher les messages d'aide.

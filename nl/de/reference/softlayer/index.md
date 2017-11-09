@@ -706,6 +706,7 @@ bluemix sl block snapshot-enable VOLUME_ID [OPTIONEN]
 bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Dieser Befehl aktiviert den Snapshot für den Datenträger mit der ID 12345678; der Snapshot wird wöchentlich jeden Sonntag um 2:00 ausgeführt und bis zu 5 Snapshots werden beibehalten.
+
 ### bluemix sl block snapshot-delete
 {: #sl_block_snapshot_delete}
 

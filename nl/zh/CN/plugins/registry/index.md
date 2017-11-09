@@ -6,28 +6,29 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-26"
 
 
 ---
 
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.registrylong_notm}} CLI
 {: #containerregcli}
 
-{{site.data.keyword.registrylong}} CLI 是一个插件，用于为您的帐户管理您的注册表及其资源。
+{{site.data.keyword.registrylong}} CLI 是一个插件，用于为您的 {{site.data.keyword.Bluemix_notm}} 帐户管理您的注册表及其资源。
 {: shortdesc}
 
 **先决条件**
-* 运行注册表命令之前，请先使用 `bx login` 命令登录到 {{site.data.keyword.Bluemix_short}}，以生成 {{site.data.keyword.Bluemix_short}} 访问令牌并对会话进行认证。
+* 运行注册表命令之前，请先使用 `bx login` 命令登录到 {{site.data.keyword.Bluemix_notm}}，以生成访问令牌并对会话进行认证。
 
-要了解如何使用 {{site.data.keyword.registrylong}} CLI，请参阅[设置专用映像注册表](../../../services/Registry/index.html)。
+要了解如何使用 {{site.data.keyword.registrylong_notm}} CLI，请参阅[设置专用映像注册表](../../../services/Registry/index.html)。
 
-<table summary="管理容器注册表">
-<caption>表 1. 用于在 {{site.data.keyword.Bluemix_short}} 上管理 {{site.data.keyword.registryshort}} 的命令</caption>
+<table summary="管理 {{site.data.keyword.registrylong_notm}}">
+<caption>表 1. 用于在 {{site.data.keyword.Bluemix_notm}} 上管理 {{site.data.keyword.registrylong_notm}} 的命令</caption>
  <thead>
  <th colspan="5">用于管理注册表的命令</th>
  </thead>
@@ -63,6 +64,7 @@ lastupdated: "2017-09-28"
  </tbody></table>
 
 
+
 ## bx cr api
 {: #bx_cr_api}
 
@@ -77,7 +79,7 @@ bx cr api
 ## bx cr build
 {: #bx_cr_build}
 
-在 {{site.data.keyword.registrylong}} 中构建 Docker 映像。
+在 {{site.data.keyword.registrylong_notm}} 中构建 Docker 映像。
 
 ```
 bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
@@ -130,14 +132,14 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 </dd>
 <dt>IMAGE</dt>
-<dd>要检查的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 `namespace/image:tag`。如果未在映像路径中指定标记，那么会检查标记为 `latest` 的映像。可以通过在命令中列出每个专用 {{site.data.keyword.Bluemix_short}} 注册表路径（各路径之间用空格分隔）来检查多个映像。</dd>
+<dd>要检查的映像的完整注册表路径，格式为 `namespace/image:tag`。如果未在映像路径中指定标记，那么会检查标记为 `latest` 的映像。可以通过在命令中列出每个专用注册表路径（各路径之间用空格分隔）来检查多个映像。</dd>
 </dl>
 
 
 ## bx cr image-list (bx cr images)
 {: #bx_cr_image_list}
 
-显示 {{site.data.keyword.Bluemix_short}} 帐户中的所有映像。
+显示 {{site.data.keyword.Bluemix_notm}} 帐户中的所有映像。
 
 ```
  bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
@@ -151,7 +153,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>-q, --quiet</dt>
 <dd>（可选）列出每个映像，格式为：`repository:tag`。</dd>
 <dt>--include-ibm</dt>
-<dd>（可选）在输出中包含 IBM 提供的公共映像。不使用此选项时，缺省情况下仅列出专用映像。</dd>
+<dd>（可选）在输出中包含 {{site.data.keyword.IBM_notm}} 提供的公共映像。不使用此选项时，缺省情况下仅列出专用映像。</dd>
 <dt>--format FORMAT</dt>
 <dd>（可选）使用 Go 模板设置输出元素的格式。有关更多信息，请参阅[查看有关映像的信息](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
@@ -172,7 +174,7 @@ bx cr image-rm IMAGE [IMAGE...]
 **参数**
 <dl>
 <dt>IMAGE</dt>
-<dd>要除去的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 `namespace/image:tag`。如果未在映像路径中指定标记，那么缺省情况下会删除标记为 `latest` 的映像。可以通过在命令中列出每个专用 {{site.data.keyword.Bluemix_short}} 注册表路径（各路径之间用空格分隔）来删除多个映像。</dd>
+<dd>要除去的映像的完整注册表路径，格式为 `namespace/image:tag`。如果未在映像路径中指定标记，那么缺省情况下会删除标记为 `latest` 的映像。可以通过在命令中列出每个专用注册表路径（各路径之间用空格分隔）来删除多个映像。</dd>
 </dl>
 
 
@@ -190,7 +192,7 @@ bx cr login
 ## bx cr namespace-add
 {: #bx_cr_namespace_add}
 
-向 {{site.data.keyword.Bluemix_short}} 帐户添加名称空间。
+向 {{site.data.keyword.Bluemix_notm}} 帐户添加名称空间。
 
 ```
 bx cr namespace-add NAMESPACE
@@ -200,14 +202,14 @@ bx cr namespace-add NAMESPACE
 **参数**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>要添加的名称空间。名称空间在同一区域中的所有 {{site.data.keyword.Bluemix_short}} 帐户之间必须唯一。</dd>
+<dd>要添加的名称空间。名称空间在同一区域中的所有 {{site.data.keyword.Bluemix_notm}} 帐户之间必须唯一。</dd>
 </dl>
 
 
 ## bx cr namespace-list (bx cr namespaces)
 {: #bx_cr_namespace_list}
 
-显示 {{site.data.keyword.Bluemix_short}} 帐户拥有的所有名称空间。
+显示 {{site.data.keyword.Bluemix_notm}} 帐户拥有的所有名称空间。
 
 ```
 bx cr namespace-list
@@ -218,7 +220,7 @@ bx cr namespace-list
 ## bx cr namespace-rm
 {: #bx_cr_namespace_rm}
 
-从 {{site.data.keyword.Bluemix_short}} 帐户中除去名称空间。除去名称空间时，会删除此名称空间中的映像。
+从 {{site.data.keyword.Bluemix_notm}} 帐户中除去名称空间。除去名称空间时，会删除此名称空间中的映像。
 
 ```
 bx cr namespace-rm NAMESPACE
@@ -230,7 +232,6 @@ bx cr namespace-rm NAMESPACE
 <dt>NAMESPACE</dt>
 <dd>要除去的名称空间。</dd>
 </dl>
-
 
 
 ## bx cr plan
@@ -266,7 +267,7 @@ bx cr plan-upgrade [PLAN]
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-已除去此命令。您可以使用定价计算器来计算估算成本。请参阅[估算 IBM Bluemix Container Registry 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing)。
+已除去此命令。您可以使用定价计算器来计算估算成本。请参阅[估算 {{site.data.keyword.registrylong_notm}} 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing)。
 
 
 ## bx cr quota
@@ -314,7 +315,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 **参数**
 <dl>
 <dt>--description VALUE</dt>
-<dd>（可选）指定作为令牌描述的值，在运行 `bx cr token-list` 时会显示此值。如果令牌是由 IBM Bluemix Container Service 自动创建的，那么描述会设置为 Kubernetes 集群名称。在这种情况下，除去集群时，会自动除去令牌。</dd>
+<dd>（可选）指定作为令牌描述的值，在运行 `bx cr token-list` 时会显示此值。如果令牌是由 {{site.data.keyword.containerlong_notm}} 自动创建的，那么描述会设置为 Kubernetes 集群名称。在这种情况下，除去集群时，会自动除去令牌。</dd>
 <dt>-q, --quiet</dt>
 <dd>（可选）仅显示令牌，不包括任何周围的文本。</dd>
 <dt>--non-expiring</dt>
@@ -345,7 +346,7 @@ bx cr token-get TOKEN
 ## bx cr token-list (bx cr tokens)
 {: #bx_cr_token_list}
 
-显示针对您的 {{site.data.keyword.Bluemix_short}} 帐户存在的所有令牌。
+显示针对您的 {{site.data.keyword.Bluemix_notm}} 帐户存在的所有令牌。
 
 ```
 bx cr token-list --format FORMAT
@@ -390,7 +391,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 **参数**
 <dl>
 <dt>IMAGE</dt>
-<dd>您要获取其报告的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 `namespace/image:tag`。报告将告知您映像是否具有任何已知的包漏洞。以下是支持的操作系统：
+<dd>您要获取其报告的映像的完整注册表路径，格式为 `namespace/image:tag`。报告将告知您映像是否具有任何已知的包漏洞。以下是支持的操作系统：
 
 <ul>
 
@@ -401,9 +402,8 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-有关更多信息，请参阅[使用漏洞顾问程序管理映像安全性](../../../services/Registry/va/va_index.html#va_index)。
+有关更多信息，请参阅[使用漏洞顾问程序管理映像安全性](../../../services/va/va_index.html)。
 
 </dd>
 
 </dl>
-

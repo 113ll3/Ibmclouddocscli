@@ -385,7 +385,7 @@ bluemix sl init [OPTIONS]
 <dt>-w, --security-question-answer</dt>
 <dd>用來鑑別的安全問題回答，如果您不知道，請詢問帳戶擁有者。</dd>
 <dt>-s, --security-code</dt>
-<dd>啟用雙重鑑別時，安全供應商所產生的安全程式碼。</dd>
+<dd>啟用雙因子鑑別時，安全供應商所產生的安全程式碼。</dd>
 <dt>-v, --security-vendor</dt>
 <dd>提供安全程式碼以進行鑑別的安全供應商，選項包含：VERISIGN、TOTP、PHONE_FACTOR。</dd>
 <dt>-t, --auth-token</dt>
@@ -408,9 +408,7 @@ Account ID:                278444
 User ID:                   wangjunl@cn.ibm.com   
 API Key:                   xxxxxxxxxx
 ```
-
 例如，使用 Bluemix Single-Sign-On 登入 Softlayer
-
 ```
 $ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
@@ -425,10 +423,9 @@ User:           wangjunl@cn.ibm.com
 Account:        Wilma's Account (65ce8074c6c62b5)   
 No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 ```
-
 提示：使用 'bx cf <command>'，以搭配 Bluemix CLI 環境定義執行 Cloud Foundry CLI 。
-
 ```
+
 $ bx sl init
 Choose how to configure Softlayer authentication: 
 1. Login with Softlayer user name and password/API key

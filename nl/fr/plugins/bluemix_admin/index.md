@@ -141,11 +141,11 @@ cf ba search-users -name=<valeur_nom_utilisateur> -permission=<valeur_droit> -or
 <dt class="pt dlterm">&lt;valeur_nom_utilisateur&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;valeur_droit&gt;</dt>
-<dd class="pd">Droit accordé à l'utilisateur. Exemple : Superutilisateur, Accès de base, Catalogue, Utilisateur et Rapports. Pour plus d'informations sur les droits pouvant être affectés aux utilisateurs, voir [Droits](/docs/admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans une même requête. </dd>
+<dd class="pd">Droit accordé à l'utilisateur. Par exemple, admin (ou superuser), login (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Pour plus d'informations sur les droits pouvant être affectés aux utilisateurs, voir [Droits](/docs/admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans une même requête. </dd>
 <dt class="pt dlterm">&lt;valeur_organisation&gt;</dt>
 <dd class="pd">Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre permission dans une même requête.</dd>
 <dt class="pt dlterm">&lt;valeur_rôle&gt;</dt>
-<dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Exemple : responsable, responsable de la facturation ou auditeur de l'organisation. Vous devez spécifier l'organisation avec ce paramètre. Pour plus d'informations sur les rôles, voir [Rôles utilisateur](/docs/admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Par exemple, auditor, manager ou billing_manager. Vous devez spécifier l'organisation avec ce paramètre. Pour plus d'informations sur les rôles, voir [Rôles utilisateur](/docs/admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 

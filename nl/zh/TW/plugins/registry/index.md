@@ -6,28 +6,29 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-26"
 
 
 ---
 
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.registrylong_notm}} CLI
 {: #containerregcli}
 
-{{site.data.keyword.registrylong}} CLI 是一種外掛程式，可管理您帳戶的登錄及其資源。
+{{site.data.keyword.registrylong}} CLI 是一種外掛程式，可管理您 {{site.data.keyword.Bluemix_notm}} 帳戶的登錄及其資源。
 {: shortdesc}
 
 **必要條件**
-* 在執行登錄指令之前，請先使用 `bx login` 指令來登入 {{site.data.keyword.Bluemix_short}}，以產生 {{site.data.keyword.Bluemix_short}} 存取記號，並鑑別您的階段作業。
+* 在執行登錄指令之前，請先使用 `bx login` 指令來登入 {{site.data.keyword.Bluemix_notm}}，以產生存取記號，並鑑別您的階段作業。
 
-若要瞭解如何使用 {{site.data.keyword.registrylong}} CLI，請參閱[設定專用映像檔登錄](../../../services/Registry/index.html)。
+若要瞭解如何使用 {{site.data.keyword.registrylong_notm}} CLI，請參閱[設定專用映像檔登錄](../../../services/Registry/index.html)。
 
-<table summary="管理容器登錄">
-<caption>表 1. 用來在 {{site.data.keyword.Bluemix_short}} 上管理 {{site.data.keyword.registryshort}} 的指令</caption>
+<table summary="管理 {{site.data.keyword.registrylong_notm}}">
+<caption>表 1. 用來在 {{site.data.keyword.Bluemix_notm}} 上管理 {{site.data.keyword.registrylong_notm}} 的指令</caption>
  <thead>
  <th colspan="5">用來管理登錄的指令</th>
  </thead>
@@ -63,6 +64,7 @@ lastupdated: "2017-09-28"
  </tbody></table>
 
 
+
 ## bx cr api
 {: #bx_cr_api}
 
@@ -77,7 +79,7 @@ bx cr api
 ## bx cr build
 {: #bx_cr_build}
 
-在 {{site.data.keyword.registrylong}} 中建置 Docker 映像檔。
+在 {{site.data.keyword.registrylong_notm}} 中建置 Docker 映像檔。
 
 ```
 bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
@@ -130,14 +132,14 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 </dd>
 <dt>IMAGE</dt>
-<dd>您要檢查之映像檔的完整 {{site.data.keyword.Bluemix_short}} 登錄路徑，格式為 `namespace/image:tag`。如果映像檔路徑中未指定標籤，則會檢查以 `latest` 標記的映像檔。若要檢查多個映像檔，您可以在指令中列出每一個專用 {{site.data.keyword.Bluemix_short}} 登錄路徑，每一個路徑之間以空格隔開。</dd>
+<dd>您要檢查之映像檔的完整登錄路徑，格式為 `namespace/image:tag`。如果映像檔路徑中未指定標籤，則會檢查以 `latest` 標記的映像檔。若要檢查多個映像檔，您可以在指令中列出每一個專用登錄路徑，每一個路徑之間以空格隔開。</dd>
 </dl>
 
 
 ## bx cr image-list (bx cr images)
 {: #bx_cr_image_list}
 
-顯示 {{site.data.keyword.Bluemix_short}} 帳戶中的所有映像檔。
+顯示 {{site.data.keyword.Bluemix_notm}} 帳戶中的所有映像檔。
 
 ```
  bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
@@ -151,7 +153,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>-q, --quiet</dt>
 <dd>（選用）以下列格式列出每一個映像檔：`repository:tag`。</dd>
 <dt>--include-ibm</dt>
-<dd>（選用）將 IBM 提供的公用映像檔包含在輸出中。若不使用此選項，依預設只會列出專用映像檔。</dd>
+<dd>（選用）將 {{site.data.keyword.IBM_notm}} 提供的公用映像檔包含在輸出中。若不使用此選項，依預設只會列出專用映像檔。</dd>
 <dt>--format FORMAT</dt>
 <dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[檢視映像檔的相關資訊](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
@@ -172,7 +174,7 @@ bx cr image-rm IMAGE [IMAGE...]
 **參數**
 <dl>
 <dt>IMAGE</dt>
-<dd>您要移除之映像檔的完整 {{site.data.keyword.Bluemix_short}} 登錄路徑，格式為 `namespace/image:tag`。如果映像檔路徑中未指定標籤，則依預設會刪除以 `latest` 標記的映像檔。若要刪除多個映像檔，您可以在指令中列出每一個專用 {{site.data.keyword.Bluemix_short}} 登錄路徑，每一個路徑之間以空格隔開。</dd>
+<dd>您要移除之映像檔的完整登錄路徑，格式為 `namespace/image:tag`。如果映像檔路徑中未指定標籤，則依預設會刪除以 `latest` 標記的映像檔。若要刪除多個映像檔，您可以在指令中列出每一個專用登錄路徑，每一個路徑之間以空格隔開。</dd>
 </dl>
 
 
@@ -190,7 +192,7 @@ bx cr login
 ## bx cr namespace-add
 {: #bx_cr_namespace_add}
 
-將名稱空間新增至 {{site.data.keyword.Bluemix_short}} 帳戶。
+將名稱空間新增至 {{site.data.keyword.Bluemix_notm}} 帳戶。
 
 ```
 bx cr namespace-add NAMESPACE
@@ -200,14 +202,14 @@ bx cr namespace-add NAMESPACE
 **參數**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>您要新增的名稱空間。此名稱空間在相同地區的所有 {{site.data.keyword.Bluemix_short}} 帳戶中必須是唯一的。</dd>
+<dd>您要新增的名稱空間。此名稱空間在相同地區的所有 {{site.data.keyword.Bluemix_notm}} 帳戶中必須是唯一的。</dd>
 </dl>
 
 
 ## bx cr namespace-list (bx cr namespaces)
 {: #bx_cr_namespace_list}
 
-顯示 {{site.data.keyword.Bluemix_short}} 帳戶所擁有的所有名稱空間。
+顯示 {{site.data.keyword.Bluemix_notm}} 帳戶所擁有的所有名稱空間。
 
 ```
 bx cr namespace-list
@@ -218,7 +220,7 @@ bx cr namespace-list
 ## bx cr namespace-rm
 {: #bx_cr_namespace_rm}
 
-從 {{site.data.keyword.Bluemix_short}} 帳戶中移除名稱空間。移除名稱空間時，也會刪除此名稱空間中的映像檔。
+從 {{site.data.keyword.Bluemix_notm}} 帳戶中移除名稱空間。移除名稱空間時，也會刪除此名稱空間中的映像檔。
 
 ```
 bx cr namespace-rm NAMESPACE
@@ -230,7 +232,6 @@ bx cr namespace-rm NAMESPACE
 <dt>NAMESPACE</dt>
 <dd>您要移除的名稱空間。</dd>
 </dl>
-
 
 
 ## bx cr plan
@@ -266,7 +267,7 @@ bx cr plan-upgrade [PLAN]
 ## bx cr pricing
 {: #bx_cr_pricing}
 
-這個指令已移除。您可以使用定價計算機來計算預估成本，請參閱[預估 IBM Bluemix Container Registry 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing)。
+這個指令已移除。您可以使用定價計算機來計算預估成本，請參閱[預估 {{site.data.keyword.registrylong_notm}} 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing)。
 
 
 ## bx cr quota
@@ -314,7 +315,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 **參數**
 <dl>
 <dt>--description VALUE</dt>
-<dd>（選用）指定值作為記號說明，在您執行 `bx cr token-list` 時顯示。如果 IBM Bluemix Container Service 自動建立您的記號，則會將說明設為「Kubernetes 叢集」名稱。在此情況下，移除您的叢集時，會自動移除此記號。</dd>
+<dd>（選用）指定值作為記號說明，在您執行 `bx cr token-list` 時顯示。如果 {{site.data.keyword.containerlong_notm}} 自動建立您的記號，則會將說明設為「Kubernetes 叢集」名稱。在此情況下，移除您的叢集時，會自動移除此記號。</dd>
 <dt>-q, --quiet</dt>
 <dd>（選用）僅顯示記號，不含任何周圍文字。</dd>
 <dt>--non-expiring</dt>
@@ -345,7 +346,7 @@ bx cr token-get TOKEN
 ## bx cr token-list (bx cr tokens)
 {: #bx_cr_token_list}
 
-顯示 {{site.data.keyword.Bluemix_short}} 帳戶的所有現有記號。
+顯示 {{site.data.keyword.Bluemix_notm}} 帳戶的所有現有記號。
 
 ```
 bx cr token-list --format FORMAT
@@ -390,7 +391,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 **參數**
 <dl>
 <dt>IMAGE</dt>
-<dd>您要取得報告之映像檔的完整 {{site.data.keyword.Bluemix_short}} 登錄路徑，格式為 `namespace/image:tag`。報告會告訴您映像檔是否有任何已知的套件漏洞。支援下列作業系統：
+<dd>您要取得報告之映像檔的完整登錄路徑，格式為 `namespace/image:tag`。報告會告訴您映像檔是否有任何已知的套件漏洞。支援下列作業系統：
 
 <ul>
 
@@ -401,9 +402,8 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
-如需相關資訊，請參閱[使用漏洞警告器管理映像檔安全](../../../services/Registry/va/va_index.html#va_index)。
+如需相關資訊，請參閱[使用漏洞警告器管理映像檔安全](../../../services/va/va_index.html)。
 
 </dd>
 
 </dl>
-

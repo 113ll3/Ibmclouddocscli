@@ -145,11 +145,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">사용자에게 지정된 권한입니다. 예를 들어, 수퍼유저, 카탈로그, 사용자 및 보고서입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](/docs/admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
+<dd class="pd">사용자에게 지정된 권한입니다. 예를 들어, admin(또는 superuser), login(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](/docs/admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">사용자가 속한 조직 이름입니다. 동일한 조회에 권한 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">사용자에게 지정된 조직 역할입니다. 예를 들어, 조직의 관리자, 청구 관리자 또는 감사자입니다. 이 매개변수와 함께 조직을 지정해야 합니다. 역할에 대한 자세한 정보는 [사용자 역할](/docs/admin/users_roles.html#userrolesinfo)을 참조하십시오. </dd>
+<dd class="pd">사용자에게 지정된 조직 역할입니다. 예를 들어, auditor, manager 또는 billing_manager입니다. 이 매개변수와 함께 조직을 지정해야 합니다. 역할에 대한 자세한 정보는 [사용자 역할](/docs/admin/users_roles.html#userrolesinfo)을 참조하십시오. </dd>
 
 </dl>
 
