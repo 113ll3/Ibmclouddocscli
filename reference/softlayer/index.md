@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-10-20"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -42,7 +42,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  </table>
 
 
-## {{site.data.keyword.BluSoftlayer_notm}} infrastructure Block stoarge commands
+## {{site.data.keyword.BluSoftlayer_notm}} infrastructure Block storage commands
 
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 2. {{site.data.keyword.BluSoftlayer_notm}} infrastructure Block storage</caption>
