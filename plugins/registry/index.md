@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-11-02"
+lastupdated: "2017-11-10"
 
 
 ---
@@ -86,7 +86,7 @@ bx cr api
 Builds a Docker image in {{site.data.keyword.registrylong_notm}}.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -97,11 +97,13 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag v
 <dt>--no-cache</dt>
 <dd>(Optional)  If specified, cached image layers from previous builds are not used in this build.</dd>
 <dt>--pull</dt>
-<dd>(Optional)  If specified, the base image is pulled even if an image with a matching tag already exists on the build host.</dd>
+<dd>(Optional) If specified, the base image is pulled even if an image with a matching tag already exists on the build host.</dd>
 <dt>--quiet, -q</dt>
 <dd>(Optional) If specified, build output is suppressed unless an error occurs.</dd>
 <dt> --build-arg value</dt>
 <dd>(Optional) Specify an additional build argument in the format 'KEY=VALUE'. Multiple build arguments can be specified by including this parameter multiple times. The value of build arguments are available as environment variables when you specify an ARG line that matches the key in your Dockerfile.</dd>
+<dt>--file, -f</dt>
+<dd>(Optional)  If you use the same files for multiple builds, you can choose a path to a different Dockerfile. Specify the location of the Dockerfile relative to the build context. If not specified, the default is `PATH/Dockerfile`, where PATH is the root of the build context.</dd>
 <dt>--tag value, -t value</dt>
 <dd>The full name for the image that you want to build, which includes the registry URL and namespace.</dd>
 </dl>
