@@ -62,6 +62,6 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 Copy and paste the following command into a [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} terminal console and execute it:
 
 ```
-iex(New-Object Net.WebClient).DownloadString('https://clis.stage1.ng.bluemix.net/install/powershell')
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
 ```
 {: codeblock}
