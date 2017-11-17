@@ -27,7 +27,7 @@ To get started with {{site.data.keyword.Bluemix_notm}} CLI:
    Windows 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [checksum](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
    Linux 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [checksum](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
   
-   **32 bit releases can be found [here](all_versions.html)
+   **32 bit releases and previous versions can be found [here](all_versions.html)
 
 1. Run the installer
    * For macOS and windows, just run the installer.
