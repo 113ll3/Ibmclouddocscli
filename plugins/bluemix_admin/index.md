@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-11-30"
 
 ---
 
@@ -149,7 +149,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">The organization name that the user belongs to. You cannot use this parameter with the permission parameter in the same query.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">The organization role assigned to the user. The available roles are: 'user_roles', 'auditors', 'managers', and 'billing_managers'. You must specify the organization with this parameter.</dd>
+<dd class="pd">The organization role assigned to the user. The available roles are: 'auditors', 'managers', and 'billing_managers'. You must specify the organization with this parameter.</dd>
 
 </dl>
 
