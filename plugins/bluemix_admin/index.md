@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-11-30"
 
 ---
 
@@ -145,11 +145,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">The permission assigned to the user. For example, admin (or superuser), login (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. For more information about assigned user permissions, see [Permissions](/docs/admin/index.html#permissions). You cannot use this parameter with the organization parameter in the same query. </dd>
+<dd class="pd">The permission assigned to the user. The available permissions are:  admin (or superuser), login (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. For more information about assigned user permissions, see [Permissions](/docs/admin/index.html#permissions). You cannot use this parameter with the organization parameter in the same query. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">The organization name that the user belongs to. You cannot use this parameter with the permission parameter in the same query.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">The organization role assigned to the user. For example, auditor, manager, or billing_manager. You must specify the organization with this parameter. For more information about roles, see [User roles](/docs/admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">The organization role assigned to the user. The available roles are: 'auditors', 'managers', and 'billing_managers'. You must specify the organization with this parameter.</dd>
 
 </dl>
 
