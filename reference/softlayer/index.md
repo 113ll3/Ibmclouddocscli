@@ -22,7 +22,7 @@ Use {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands in the {{sit
 To get started, install the IBM {{site.data.keyword.Bluemix_notm}} CLI. See
 [Bluemix CLI ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} for details.
 
-For a complete list of {{site.data.keyword.Bluemix_notm}} commands, see: [{{site.data.keyword.Bluemix_notm:}} (bx) commands](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
+For a complete list of {{site.data.keyword.Bluemix_notm}} commands, see: [{{site.data.keyword.Bluemix_notm}} (bx) commands](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
 ## General {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands
