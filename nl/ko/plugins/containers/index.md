@@ -20,7 +20,8 @@ lastupdated: "2017-01-12"
 
 *버전:* 1.0.0
 
-IBM Containers CLI는 Bluemix에서 컨테이너와 컨테이너 그룹을 관리할 수 있는 {{site.data.keyword.Bluemix_notm}} CLI 플러그인입니다.
+IBM Containers CLI는 {{site.data.keyword.Bluemix_notm}}에서 컨테이너 및 컨테이너 그룹을 관리하기 위한 {{site.data.keyword.Bluemix_notm}} CLI 플러그인입니다.
+  
 {: shortdesc}
 
 **참고:** *전제조건*에는 명령을 사용하기 전에 필요한 조치가 설명되어 있습니다. 전제조건 조치가 없는 명령은 **없음**으로 표시됩니다. 그 밖의 경우에는 전제조건으로 다음과 같은 조치 중 하나 이상을 수행해야 할 수 있습니다.
@@ -334,7 +335,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>컨테이너 그룹이 작성되고 자동 복구가 사용되는 경우, IBM Containers는 지정된 포트에 대한 HTTP 요청으로 각 인스턴스의 상태를 확인합니다. <br>
 두 개의 후속 90초 간격에서 컨테이너 인스턴스로부터 응답이 수신되지 않으면 해당 인스턴스가 제거되고 새 인스턴스로 바뀝니다. 컨테이너가 응답하면 아무 조치도 수행되지 않습니다. 이 프로세스는 계속해서 반복됩니다. 30분 창 동안 그룹의 멤버인 서로 다른 컨테이너의 총 수가 해당 그룹의 관찰된 최대 크기의 3배보다 크거나 같으면 해당 컨테이너 그룹에 대해 자동 복구가 영구적으로 사용되지 않습니다. 자동 복구를 다시 사용하려면 컨테이너 그룹을 다시 작성해야 합니다.</dd>
   <dt>--anti(선택사항)</dt>
-  <dd> 컨테이너 그룹의 가용성을 높이려면 anti-affinity를 사용하십시오. --anti 옵션은 사용자 그룹의 모든 컨테이너 인스턴스를 별도의 실제 컴퓨팅 노드에 배치하여 하드웨어 장애로 인해 그룹의 모든 컨테이너가 충돌하는 경우가 줄어들도록 강제 실행합니다. 각 Bluemix 지역과 조직에서 배치에 사용할 수 있는 컴퓨팅 노드의 세트는 제한되어 있으므로 그룹 크기가 큰 경우 이 옵션을 사용하지 못할 수 있습니다. 배치에 성공하지 못한 경우에는 그룹의 컨테이너 인스턴스 수를 줄이거나 --anti 옵션을 제거하십시오. </dd>
+  <dd> 컨테이너 그룹의 가용성을 높이려면 anti-affinity를 사용하십시오. --anti 옵션은 사용자 그룹의 모든 컨테이너 인스턴스를 별도의 실제 컴퓨팅 노드에 배치하여 하드웨어 장애로 인해 그룹의 모든 컨테이너가 충돌하는 경우가 줄어들도록 강제 실행합니다. 각각의 {{site.data.keyword.Bluemix_notm}} 지역 및 조직에는 배치에 사용할 수 있는 컴퓨팅 노드 세트가 제한되어 있으므로, 보다 큰 그룹 크기에서는 이 옵션을 사용하지 못할 수 있습니다. 배치에 성공하지 못한 경우에는 그룹의 컨테이너 인스턴스 수를 줄이거나 --anti 옵션을 제거하십시오. </dd>
    <dt><i>CMD</i>(선택사항)</dt>
    <dd>실행할 컨테이너 그룹에 전달되는 명령 및 인수입니다. 이 명령은 장시간 실행되는 명령이어야 합니다. 단시간 실행되는 명령(예: <i>/bin/date</i>)은 컨테이너 충돌을 유발할 수 있으므로 사용하지 마십시오.<br> <strong>참고:</strong> <ul>
    <li>명령 및 해당 인수는 <i>bluemix ic run</i> 명령행의 끝에 와야 합니다.</li>
@@ -465,7 +466,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 <strong>명령 옵션</strong>:
  <dl>
    <dt>--anti(선택사항)</dt>
-   <dd>컨테이너 그룹의 가용성을 높이려면 anti-affinity를 사용하십시오. --anti 옵션은 사용자 그룹의 모든 컨테이너 인스턴스를 별도의 실제 컴퓨팅 노드에 배치하여 하드웨어 장애로 인해 그룹의 모든 컨테이너가 충돌하는 가능성이 줄어들도록 강제 실행합니다. 각 Bluemix 지역과 조직에서 배치에 사용할 수 있는 컴퓨팅 노드의 세트는 제한되어 있으므로 그룹 크기가 큰 경우 이 옵션을 사용하지 못할 수 있습니다. 배치에 성공하지 못한 경우에는 그룹의 컨테이너 인스턴스 수를 줄이거나 --anti 옵션을 제거하십시오. </dd>
+   <dd>컨테이너 그룹의 가용성을 높이려면 anti-affinity를 사용하십시오. --anti 옵션은 사용자 그룹의 모든 컨테이너 인스턴스를 별도의 실제 컴퓨팅 노드에 배치하여 하드웨어 장애로 인해 그룹의 모든 컨테이너가 충돌하는 가능성이 줄어들도록 강제 실행합니다. 각각의 {{site.data.keyword.Bluemix_notm}} 지역과 조직에서 배치에 사용할 수 있는 컴퓨팅 노드의 세트가 제한되어 있으므로, 보다 큰 그룹 크기로 이 옵션을 사용하지 못할 수 있습니다. 배치에 성공하지 못한 경우에는 그룹의 컨테이너 인스턴스 수를 줄이거나 --anti 옵션을 제거하십시오. </dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>(선택사항)</dt>
    <dd>필요한 인스턴스 수입니다. 기본값은 <i>2</i>입니다. </dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>(선택사항)</dt>
@@ -896,7 +897,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
-로그인한 Bluemix 영역에서 IBM Containers 서비스를 다시 작성합니다. 영역의 원래 할당량은 유지보수됩니다. 
+로그인되어 있는 {{site.data.keyword.Bluemix_notm}} 영역에서 IBM Containers 서비스를 다시 작성합니다. 영역의 원래 할당량은 유지보수됩니다. 
 
 <strong>중요</strong>: 이 명령을 실행할 때 이 영역에 있는 단일 컨테이너와 그룹은 다시 프로비저닝된 영역으로 마이그레이션되지 않고 마이그레이션 프로세스 중에 제거됩니다. 
 
@@ -905,7 +906,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
 <strong>명령 옵션</strong>:<dl>
    <dt>--force|-f(선택사항)</dt>
-   <dd>Bluemix 영역에서 IBM Containers 서비스를 다시 작성하도록 강제 실행합니다. </dd>
+   <dd>{{site.data.keyword.Bluemix_notm}} 영역에서 IBM Containers 서비스의 재작성을 강제 실행합니다. </dd>
    <dt><i>AVAILABILITY_ZONE</i>(선택사항)</dt>
    <dd>컨테이너가 배치된 IBM Containers 가용성 구역의 이름입니다. 가용성 구역이 지정되지 않으면 지역에 설정된 기본 가용성 구역이 사용됩니다. </dd>
    </dl>
@@ -1390,7 +1391,7 @@ bluemix ic unpause proxy
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-사용자가 로그인한 Bluemix 영역에서 IBM Containers 서비스를 삭제합니다. 
+로그인되어 있는 {{site.data.keyword.Bluemix_notm}} 영역에서 IBM Containers 서비스를 삭제합니다. 
 
 <strong>주의</strong>: 이 명령을 실행하면 모든 단일 컨테이너와 컨테이너 그룹이 유실됩니다. 사용자의 영역은 여전히 Bluemix에서 사용할 수 있습니다. IBM Containers를 다시 사용하려면 `bluemix ic reprovision`을 실행하여 IBM Containers 서비스를 다시 프로비저닝해야 합니다. 
 
@@ -1401,7 +1402,7 @@ bluemix ic reprovision [--force|-f]
 
    <dl>
    <dt>--force|-f(선택사항)</dt>
-   <dd>Bluemix 영역에서 Bluemix의 삭제를 강제 실행합니다. </dd>
+   <dd>{{site.data.keyword.Bluemix_notm}} 영역에서 {{site.data.keyword.Bluemix_notm}}의 삭제를 강제 실행합니다. </dd>
  </dl>
 
 

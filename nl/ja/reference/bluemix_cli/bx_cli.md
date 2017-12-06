@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-10-06"
+lastupdated: "2017-11-06"
 
 ---
 
@@ -16,13 +16,13 @@ lastupdated: "2017-10-06"
 # {{site.data.keyword.Bluemix_notm}} (bx) コマンド
 {: #bluemix_cli}
 
-バージョン: 0.6.1
+バージョン: 0.6.2
 
-{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。 
+{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 
-バージョン 0.5.0 以降、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・クライアントは、Cloud Foundry コマンド・ライン・クライアントをインストール済み環境にバンドルしています。独自の cf cli がインストールされている場合は、{{site.data.keyword.Bluemix_notm}} CLI コマンド `bx [command]` と、独自のインストール済み環境の Cloud Foundry CLI コマンド `cf [command]` の両方を同じコンテキストで使用しないでください。cf cli を使用して {{site.data.keyword.Bluemix_notm}} CLI コンテキストで Cloud Foundry リソースを管理したい場合は、代わりに `bluemix cf [command]` を使用してください。さらに、`bluemix cf api/login/logout/target` は許可されていません。代わりに `bluemix api/login/logout/target` を使用してください。
+バージョン 0.5.0 以降、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・クライアントは、Cloud Foundry コマンド・ライン・クライアントをインストール済み環境にバンドルしています。独自の cf cli がインストールされている場合は、{{site.data.keyword.Bluemix_notm}} CLI コマンド `bx [command]` と、独自のインストール済み環境の Cloud Foundry CLI コマンド `cf [command]` の両方を同じコンテキストで使用しないでください。cf cli を使用して {{site.data.keyword.Bluemix_notm}} CLI コンテキストで Cloud Foundry リソースを管理したい場合は、代わりに `bluemix cf [command]` を使用してください。`bluemix cf api/login/logout/target` は使用できないので注意してください。代わりに、`bluemix api/login/logout/target` を使用してください。
 
-名前、引数、オプション、前提条件、説明、および例を含め、{{site.data.keyword.Bluemix_notm}} CLI でサポートされている詳細なコマンド使用法を以下にリストします。
+名前、引数、オプション、前提条件、説明、および例を含め、{{site.data.keyword.Bluemix_notm}} CLI でサポートされている詳細なコマンドを以下にリストします。
 {:shortdesc}
 
 **注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。前提条件となるアクションのないコマンドでは、**なし**とリストされています。それ以外の場合、前提条件には以下のアクションのうちの 1 つ以上が含まれます。
@@ -31,7 +31,7 @@ lastupdated: "2017-10-06"
 <dt>エンドポイント</dt>
 <dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
 <dt>ログイン</dt>
-<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します。{{site.data.keyword.Bluemix_notm}} コンソールで**「管理」** &gt; **「セキュリティー」** &gt; **「Bluemix API キー」**に移動して、API キーを作成します。
+<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します。{{site.data.keyword.Bluemix_notm}} コンソールで**「管理」** &gt; **「セキュリティー」** &gt; **「プラットフォーム API キー」**に移動して、API キーを作成します。
 </dd>
 <dt>ターゲット</dt>
 <dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
@@ -44,7 +44,7 @@ lastupdated: "2017-10-06"
 以下の表の索引を使用して、使用頻度の高い bluemix コマンドを
 参照してください。
 
-## 汎用 Bluemix コマンド 
+## 汎用 Bluemix コマンド
 {: #bx_commands_index}
 
 <table summary="汎用 Bluemix コマンド。">
@@ -70,12 +70,12 @@ lastupdated: "2017-10-06"
  </tr>
  </tbody>
  </table>
- 
- ## {{site.data.keyword.BluSoftlayer_notm}} サービスを管理および構成するためのコマンド
+
+ ## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サービスを管理および構成するためのコマンド (bluemix sl)
   {: #bx_commands_softlayer}
-  
-{{site.data.keyword.BluSoftlayer_notm}} を管理するためのコマンドは Bluemix CLI にマージされました。Bluemix CLI を使用した {{site.data.keyword.BluSoftlayer_notm}} サービスの構成および管理について詳しくは、[Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) コマンド](/docs/cli/reference/softlayer/index.md#softlayer_cli)を参照してください。
- 
+
+{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーを管理するためのコマンドは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。{{site.data.keyword.Bluemix_notm}} CLI を使用した {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サービスの構成および管理について詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー (bluemix sl) コマンド](/docs/cli/reference/softlayer/index.md#softlayer_cli)を参照してください。
+
  ## アカウント、組織、および役割を管理するためのコマンド
  {: #bx_commands_account}
 
@@ -143,35 +143,35 @@ lastupdated: "2017-10-06"
       <td>[bluemix resource quota](bx_cli.html#bluemix_resource_quota)</td>
     </tr>
     <tr>
-      <td>[bluemix resource instances](bx_cli.html#bluemix_resource_instances)</td>
-      <td>[bluemix resource instance](bx_cli.html#bluemix_resource_instance)</td>
-      <td>[bluemix resource instance-create](bx_cli.html#bluemix_resource_instance-create)</td>
-      <td>[bluemix resource instance-update](bx_cli.html#bluemix_resource_instance-update)</td>
-      <td>[bluemix resource instance-delete](bx_cli.html#bluemix_resource_instance-delete)</td>
+      <td>[bluemix resource service-instances](bx_cli.html#bluemix_resource_service_instances)</td>
+      <td>[bluemix resource service-instance](bx_cli.html#bluemix_resource_service_instance)</td>
+      <td>[bluemix resource service-instance-create](bx_cli.html#bluemix_resource_service_instance_create)</td>
+      <td>[bluemix resource service-instance-update](bx_cli.html#bluemix_resource_service_instance_update)</td>
+      <td>[bluemix resource service-instance-delete](bx_cli.html#bluemix_resource_service_instance_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource bindings](bx_cli.html#bluemix_resource_bindings)</td>
-      <td>[bluemix resource binding](bx_cli.html#bluemix_resource_binding)</td>
-      <td>[bluemix resource binding-create](bx_cli.html#bluemix_resource_binding-create)</td>
-      <td>[bluemix resource binding-delete](bx_cli.html#bluemix_resource_binding-delete)</td>
+      <td>[bluemix resource service-bindings](bx_cli.html#bluemix_resource_service_bindings)</td>
+      <td>[bluemix resource service-binding](bx_cli.html#bluemix_resource_service_binding)</td>
+      <td>[bluemix resource service-binding-create](bx_cli.html#bluemix_resource_service_binding_create)</td>
+      <td>[bluemix resource service-binding-delete](bx_cli.html#bluemix_resource_service_binding_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource keys](bx_cli.html#bluemix_resource_keys)</td>
-      <td>[bluemix resource key](bx_cli.html#bluemix_resource_key)</td>
-      <td>[bluemix resource key-create](bx_cli.html#bluemix_resource_key-create)</td>
-      <td>[bluemix resource key-delete](bx_cli.html#bluemix_resource_key-delete)</td>
+      <td>[bluemix resource service-keys](bx_cli.html#bluemix_resource_service_keys)</td>
+      <td>[bluemix resource service-key](bx_cli.html#bluemix_resource_service_key)</td>
+      <td>[bluemix resource service-key-create](bx_cli.html#bluemix_resource_service_key_create)</td>
+      <td>[bluemix resource service-key-delete](bx_cli.html#bluemix_resource_service_key_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource aliases](bx_cli.html#bluemix_resource_aliases)</td>
-      <td>[bluemix resource alias](bx_cli.html#bluemix_resource_alias)</td>
-      <td>[bluemix resource alias-create](bx_cli.html#bluemix_resource_alias-create)</td>
-      <td>[bluemix resource alias-update](bx_cli.html#bluemix_resource_alias-update)</td>
-      <td>[bluemix resource alias-delete](bx_cli.html#bluemix_resource_alias-delete)</td>
+      <td>[bluemix resource service-aliases](bx_cli.html#bluemix_resource_service_aliases)</td>
+      <td>[bluemix resource service-alias](bx_cli.html#bluemix_resource_service_alias)</td>
+      <td>[bluemix resource service-alias-create](bx_cli.html#bluemix_resource_service_alias_create)</td>
+      <td>[bluemix resource service-alias-update](bx_cli.html#bluemix_resource_service_alias_update)</td>
+      <td>[bluemix resource service-alias-delete](bx_cli.html#bluemix_resource_service_alias_delete)</td>
     </tr>
   </tbody>
 </table>
 
- 
+
  ## API キーとポリシーを管理するためのコマンド
  {: #bx_commands_iam}
  <table summary="API キーとポリシーを管理するために使用できる bluemix コマンド。">
@@ -216,7 +216,7 @@ lastupdated: "2017-10-06"
   </tr>
   </tbody>
   </table>
- 
+
  ## CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド
  {: #bx_commands_apps}
 
@@ -277,14 +277,14 @@ lastupdated: "2017-10-06"
  </tr>
   </tbody>
  </table>
- 
- ## Bluemix サービスを管理するためのコマンド
+
+ ## {{site.data.keyword.Bluemix_notm}} サービスを管理するためのコマンド
  {: #bx_commands_services}
 
-<table summary="Bluemix サービスの管理に使用することができる Bluemix コマンド。">
- <caption>表 5. Bluemix サービスを管理するためのコマンド</caption>
+<table summary="{{site.data.keyword.Bluemix_notm}} サービスを管理するために使用できる bluemix コマンド">
+<caption>表 5. {{site.data.keyword.Bluemix_notm}} サービスを管理するためのコマンド</caption>
  <thead>
- <th colspan="5">Bluemix サービスを管理するためのコマンド</th>
+ <th colspan="5">{{site.data.keyword.Bluemix_notm}} サービスを管理するためのコマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -311,51 +311,51 @@ lastupdated: "2017-10-06"
   </tbody>
  </table>
 
- 
+
  ## カタログ、プラグイン、および請求処理の設定を管理するためのコマンド
  {: #bx_commands_settings}
 
-<table summary="Bluemix カタログ、プラグイン、請求、およびセキュリティー設定の管理に使用できる Bluemix コマンド。">
- <caption>表 6. Bluemix カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</caption>
+<table summary="{{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するために使用できる bluemix コマンド">
+<caption>表 6. {{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</caption>
  <thead>
- <th colspan="5">Bluemix カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</th>
+ <th colspan="5">{{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</th>
  </thead>
  <tbody>
  <tr>
   <td>[bluemix catalog search](bx_cli.html#bluemix_catalog_search)</td>
   <td>[bluemix catalog entry](bx_cli.html#bluemix_catalog_entry)</td>
-  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry-create)</td>
-  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry-update)</td>
-  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry-visibility)</td>
+  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry_create)</td>
+  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry_update)</td>
+  <td>[bluemix catalog entry-delete](bx_cli.html#bluemix_catalog_entry_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service-marketplace)</td>
-  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry-visibility-set)</td>
+  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry_visibility)</td>
+  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service_marketplace)</td>
+  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry_visibility_set)</td>
   <td>[bluemix catalog templates](bx_cli.html#bluemix_catalog_templates)</td>
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
  </tr>
  <tr>
   <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
   <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
-  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
  </tr>
  <tr>
+  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
   <td>[bluemix plugin list](bx_cli.html#bluemix_plugin_list)</td>
   <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
   <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
   <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
-  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
  </tr>
  <tr>
+  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
   <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  </tr>
  </tbody>
  </table>
- 
+
 ## bluemix help
 {: #bluemix_help}
 {{site.data.keyword.Bluemix_notm}} CLI の第 1 レベルの組み込みコマンドおよびサポートされる名前空間に関する一般ヘルプを表示するか、または、特定の組み込みコマンドまたは名前空間に関するヘルプを表示します。
@@ -549,7 +549,7 @@ bluemix -q cf services
 ## bluemix login
 {: #bluemix_login}
 
-ユーザーをログインします。 
+ユーザーをログインします。
 
 ```
 bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
@@ -781,7 +781,7 @@ bluemix account org IBM --guid
 新しい組織を作成します。この操作は、アカウントの所有者のみが実行できます。  
 
 ```
-bluemix account org-create ORG_NAME
+bluemix account org-create ORG_NAME [-f]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -790,6 +790,8 @@ bluemix account org-create ORG_NAME
    <dl>
    <dt>ORG_NAME (必須)</dt>
    <dd>作成される組織の名前。</dd>
+   <dt>-f</dt>
+   <dd>確認を求めずに作成を強制します。</dd>
    </dl>
 
 <strong>例</strong>:
@@ -851,7 +853,20 @@ bluemix account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ## bluemix account spaces
 {: #bluemix_account_spaces}
 
-このコマンドの機能とオプションは `cf spaces` コマンドと同じです。
+すべてのスペースをリストします
+
+```
+bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
+```
+
+<strong>コマンド・オプション</strong>:
+   <dl>
+   <dt>-o</dt>
+   <dd>組織名。指定された組織の下のスペースをリストします。未指定の場合、デフォルトは現行組織です。</dd>
+   <dt>-r</dt>
+   <dd>地域名。 指定した地域の下のスペースをリストします。未指定の場合、デフォルトは現行地域です。</dd>
+   </dl>
+
 
 
 ## bluemix account space
@@ -928,9 +943,16 @@ bluemix account org-users ORG_NAME [-a]
 現行ユーザーのすべての組織の役割を取得します
 
 ```
-bluemix account org-roles```
+bluemix account org-roles [-u USER_ID]
+```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+   <dt>-u</dt>
+   <dd>ユーザー ID。指定しない場合、現行ユーザーがデフォルトで使用されます。</dd>
+  </dl>
 
 ## bluemix account org-role-set
 {: #bluemix_account_org_role_set}
@@ -967,7 +989,7 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
 bluemix account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**注**: 組織/スペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。詳細については、[ユーザー・アクセスの割り当て](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)を参照してください。<!-- Begin Staging URL vs Prod URL -->
+**注**: 組織/スペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。詳細については、[ユーザー・アクセスの割り当て](/docs/iam/assignaccess.html#assignaccess)を参照してください。<!-- Begin Staging URL vs Prod URL -->
 
 ## bluemix account org-role-unset
 {: #bluemix_account_org_role_unset}
@@ -1367,7 +1389,7 @@ bluemix iam service-id-delete sample-teset -f
 ## bluemix iam api-keys
 {: #bluemix_iam_api_keys}
 
-すべての Bluemix プラットフォーム API キーをリストします
+すべての {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーをリストします
 
 ```
 bluemix iam api-keys```
@@ -1377,7 +1399,7 @@ bluemix iam api-keys```
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-新しい Bluemix プラットフォーム API キーを作成します
+新しい {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを作成します
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1406,7 +1428,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-Bluemix プラットフォーム API キーを更新します
+{{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを更新します
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1435,7 +1457,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-Bluemix プラットフォーム API キーを削除します
+{{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを削除します
 
 ```
 bluemix iam api-key-delete NAME [-f]
@@ -1454,10 +1476,10 @@ bluemix iam api-key-delete NAME [-f]
 ## bluemix iam service-api-keys
 {: #bluemix_iam_service_api_keys}
 
-すべてのサービス API キーをリストします
+サービスのすべての API キーをリストします
 
 ```
-bluemix iam service-api-keys BOUND_TO 
+bluemix iam service-api-keys SERVICE_ID
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1468,10 +1490,10 @@ bluemix iam service-api-keys BOUND_TO
 
 <strong>例</strong>:
 
-サービス CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` にバインドされたサービス API キーをリストします。
+サービス `sample-service` のすべての API キーをリストします
 
 ```
-bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-keys sample-service
 ```
 
 ## bluemix iam service-api-key
@@ -1480,7 +1502,7 @@ bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04
 サービス API キーの詳細をリストします
 
 ```
-bluemix iam service-api-key NAME BOUND_TO [--uuid]
+bluemix iam service-api-key NAME SERVICE_ID [--uuid]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1493,10 +1515,10 @@ bluemix iam service-api-key NAME BOUND_TO [--uuid]
 
 <strong>例</strong>:
 
-サービス CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` にバインドされたサービス API キー `sample-key` の詳細を表示します。
+サービス `sample-service` のサービス API キー `sample-key` の詳細を表示します
 
 ```
-bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key sample-key sample-service
 ```
 
 ## bluemix iam service-api-key-create
@@ -1505,7 +1527,7 @@ bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab
 サービス API キーを作成します
 
 ```
-bluemix iam service-api-key-create NAME BOUND_TO [-d, --description DESCRIPTION] [-f, --file FILE]
+bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [-f, --file FILE]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1520,10 +1542,10 @@ bluemix iam service-api-key-create NAME BOUND_TO [-d, --description DESCRIPTION]
 
 <strong>例</strong>:
 
-サービス CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` にバインドされたサービス API キー `sample-key` を作成します。
+サービス `sample-service` のサービス API キー `sample-key` を作成します。
 
 ```
-bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key-create sample-key sample-service
 ```
 
 ## bluemix iam service-api-key-update
@@ -1532,7 +1554,7 @@ bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-sout
 サービス API キーを更新します
 
 ```
-bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1554,7 +1576,7 @@ bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --
 サービス API キー `sample-key` を `new-sample-key` に名前変更します
 
 ```
-bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da" -n new-sample-key
+bluemix iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
 
 ## bluemix iam service-api-key-delete
@@ -1563,7 +1585,7 @@ bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-sout
 サービス API キーを削除します
 
 ```
-bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
+bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1579,7 +1601,7 @@ bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
 サービス API キー `sample-key` を削除します
 
 ```
-bluemix iam service-api-key-delete sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key-delete sample-key sample-service
 ```
 
 ## bluemix iam user-policies
@@ -1640,7 +1662,7 @@ bluemix iam user-policy name@example.com 0bb730daa
 ユーザー・ポリシーを作成します
 
 ```
-bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resouce-group-id RESOURCE_GROUP_ID]}
+bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -1666,7 +1688,7 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dd>リソース・グループの名前。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (オプション)</dt>
 <dd>リソース・グループの ID。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
-  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義の役割名。特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。このオプションは、「-f, --file」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1865,7 +1887,7 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>SERVICE_ID_NAME (必須)</dt>
   <dd>サービス ID の名前</dd>
   <dt>-f, --file</dt>
-  <dd>ポリシー定義の JSON ファイル。 これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、および「--resource」の各フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義の JSON ファイル。これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、および「--resource」の各フラグと同時に指定することはできません。</dd>
   <dt>-r, --roles</dt>
   <dd>ポリシー定義の役割名。特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。このオプションは、「-f, --file」と同時に指定することはできません。</dd>
   <dt>-service-name</dt>
@@ -1877,7 +1899,7 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>-resource-type</dt>
   <dd>ポリシー定義のリソース・タイプ。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
   <dt>-resource</dt>
-  <dd>ポリシー定義のリソース。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
   <dt>-F, --force</dt>
   <dd>確認を求めずにサービス・ポリシーを作成します</dd>
 </dl>
@@ -1972,7 +1994,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 リソース・グループをリストします
 
 ```
-bluemix resource groups [--default | (-r, --resource RESOURCE_ID -o, --resource-origin RESOURCE_ORIGIN)]
+bluemix resource groups [--default]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1981,10 +2003,6 @@ bluemix resource groups [--default | (-r, --resource RESOURCE_ID -o, --resource-
 <dl>
   <dt>--default</dt>
   <dd>現行アカウントのデフォルト・グループを取得します</dd>
-  <dt>-r, --resource</dt>
-  <dd>従属リソースの ID</dd>
-  <dt>-o, --resource-origin</dt>
-  <dd>従属リソースの起点。 指定できる値: 「CF_ORG」、「IMS_ACCOUNT」。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -2000,13 +2018,6 @@ bluemix resource groups
 ```
 bluemix resource groups --default
 ```
-
-CloudFoundry 組織のマッピングであるリソース・グループをリストします
-
-```
-bluemix resource groups -r d0ef0e-12n3632z9f-ef3w54n -o CF_ORG
-```
-
 
 ## bluemix resource group
 {: #bluemix_resource_group}
@@ -2240,7 +2251,7 @@ bluemix resource quota free
 
 このコマンドの機能とオプションは `cf create-app-manifest` コマンドと同じです。
 
-## bluemix app domain-cert 
+## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
 
 ドメインの証明書情報をリストします。
@@ -2577,42 +2588,42 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 このコマンドの機能とオプションは `cf update-user-provided-service` コマンドと同じです。
 
 
-## bluemix resource instances
-{: #bluemix_resource_instances}
+## bluemix resource service-instances
+{: #bluemix_resource_service_instances}
 
-リソース・インスタンスをリストします
+サービス・インスタンスをリストします
 
 ```
-bluemix resource instances [--resource-name RESOURCE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>--resource-name</dt>
-  <dd>従属リソースの名前</dd>
+  <dt>--service-name</dt>
+  <dd>従属サービスの名前</dd>
   <dt>-r, --region</dt>
-  <dd>地域 ID を基準にフィルター操作します。未指定の場合、デフォルトは現行地域です。「-r, --region all」はすべての地域のリソース・インスタンスを表示します</dd>
+  <dd>地域 ID を基準にフィルター操作します。未指定の場合、デフォルトは現行地域です。「-r, --region all」はすべての地域のサービス・インスタンスを表示します</dd>
   <dt>--long</dt>
   <dd>出力に追加フィールドを表示します</dd>
 </dl>
 
 <strong>例</strong>:
 
-リソース `test-resource` のリソース・インスタンスをリストします。
+サービス `test-service` のサービス・インスタンスをリストします。
 
 ```
-bluemix resource instances --resource-name test-resource
+bluemix resource service-instances --service-name test-service
 ```
 
-## bluemix resource instance
-{: #bluemix_resource_instance}
+## bluemix resource service-instance
+{: #bluemix_resource_service_instance}
 
-リソース・インスタンスの詳細を表示します
+サービス・インスタンスの詳細を表示します
 
 ```
-bluemix resource instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [-r, --region REGION] [--id]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2620,27 +2631,27 @@ bluemix resource instance NAME [-r, --region REGION] [--id]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>NAME (必須)</dt>
-  <dd>リソース・インスタンスの名前</dd>
+  <dd>サービス・インスタンスの名前</dd>
   <dt>-r, --region</dt>
-  <dd>地域 ID を基準にフィルター操作します。未指定の場合、デフォルトは現行地域です。「-r, --region all」はすべての地域のリソース・インスタンスを表示します</dd>
+  <dd>地域 ID を基準にフィルター操作します。未指定の場合、デフォルトは現行地域です。「-r, --region all」はすべての地域のサービス・インスタンスを表示します</dd>
   <dt>--id</dt>
-  <dd>リソース・インスタンスの ID を表示します</dd>
+  <dd>サービス・インスタンスの ID を表示します</dd>
 </dl>
 
 <strong>例</strong>:
-リソース・インスタンス `my-resource-instance` の詳細を表示します
+サービス・インスタンス `my-service-instance` の詳細を表示します
 
 ```
-bluemix resource instance my-resource-instance
+bluemix resource service-instance my-service-instance
 ```
 
-## bluemix resource instance-create
-{: #bluemix_resource_instance_create}
+## bluemix resource service-instance-create
+{: #bluemix_resource_service_instance_create}
 
-リソース・インスタンスを作成します
+サービス・インスタンスの作成
 
 ```
-bluemix resource instance-create NAME RESOURCE_NAME|RESOURCE_ID RESOURCE_PLAN_NAME|RESOURCE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2648,47 +2659,47 @@ bluemix resource instance-create NAME RESOURCE_NAME|RESOURCE_ID RESOURCE_PLAN_NA
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>NAME (必須)</dt>
-  <dd>リソース・インスタンスの名前</dd>
-  <dt>RESOURCE_NAME または RESOURCE_ID (必須)</dt>
-  <dd>リソースの名前または ID</dd>
-  <dt>RESOURCE_PLAN_NAME または RESOURCE_PLAN_ID (必須)</dt>
-  <dd>リソース・プランの名前または ID</dd>
+  <dd>サービス・インスタンスの名前</dd>
+  <dt>SERVICE_NAME または SERVICE_ID (必須)</dt>
+  <dd>サービスの名前または ID</dd>
+  <dt>SERVICE_PLAN_NAME または SERVICE_PLAN_ID (必須)</dt>
+  <dd>サービス・プランの名前または ID</dd>
   <dt>-r, --region</dt>
-  <dd>リソース・インスタンスを作成する地域。未指定の場合、デフォルトは現行地域です。</dd>
+  <dd>サービス・インスタンスを作成する地域。未指定の場合、デフォルトは現行地域です。</dd>
   <dt>-t, --tags</dt>
   <dd>タグ</dd>
   <dt>-p, --parameters</dt>
-  <dd>リソース・インスタンスを作成するパラメーターの JSON ファイルまたは JSON 文字列</dd>
+  <dd>サービス・インスタンスを作成するパラメーターの JSON ファイルまたは JSON 文字列</dd>
 </dl>
 
 <strong>例</strong>:
-リソース `test-resource` のリソース・プラン `test-resource-plan` を使用して、`my-resource-instance` という名前のリソース・インスタンスを作成します
+サービス `test-service` のサービス・プラン `test-service-plan` を使用してサービス・インスタンス `my-service-instance` を作成します。
 
 ```
-bluemix resource instance-create my-resource-instance test-resource test-resource-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan
 ```
 
-## bluemix resource instance-update
-{: #bluemix_resource_instance_update}
+## bluemix resource service-instance-update
+{: #bluemix_resource_service_instance_update}
 
-リソース・インスタンスを更新します
+サービス・インスタンスを更新します
 
 ```
-bluemix resource instance-update RESOURCE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--resource-plan-id RESOURCE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
+bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>RESOURCE_INSTANCE_NAME (必須)</dt>
-  <dd>リソース・インスタンスの名前</dd>
+  <dt>SERVICE_INSTANCE_NAME (必須)</dt>
+  <dd>サービス・インスタンスの名前</dd>
   <dt>-n, --name</dt>
-  <dd>新規リソース・インスタンス名</dd>
+  <dd>新規サービス・インスタンス名</dd>
   <dt>-t, --tags</dt>
   <dd>新規タグ</dd>
-  <dt>--resource-plan-id</dt>
-  <dd>新規リソース・プラン ID</dd>
+  <dt>--service-plan-id</dt>
+  <dd>新規サービス・プラン ID</dd>
   <dt>--update-time</dt>
   <dd>有料の記録が有効になってからの時間 (秒)</dd>
   <dt>-f, --force</dt>
@@ -2696,19 +2707,19 @@ bluemix resource instance-update RESOURCE_INSTANCE_NAME [-n, --name NEW_NAME] [-
 </dl>
 
 <strong>例</strong>:
-リソース・インスタンス `my-resource-instance` を更新し、その名前を `new-resource-instance` に変更します
+サービス・インスタンス `my-service-instance` を更新し、その名前を `new-service-instance` に変更します
 
 ```
-bluemix resource instance-update my-resource-instance -n new-resource-instance
+bluemix resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-## bluemix resource instance-delete
-{: #bluemix_resource_instance_delete}
+## bluemix resource service-instance-delete
+{: #bluemix_resource_service_instance_delete}
 
-リソース・インスタンスを削除します
+サービス・インスタンスを削除します
 
 ```
-bluemix resource instance-delete NAME [-f, --force]
+bluemix resource service-instance-delete NAME [-f, --force] [--recursive]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2717,45 +2728,47 @@ bluemix resource instance-delete NAME [-f, --force]
 <dl>
   <dt>-f, --force</dt>
   <dd>確認なしで削除を強制します</dd>
+  <dt>--recursive</dt>
+  <dd>従属リソースをすべて削除します</dd>
 </dl>
 
 <strong>例</strong>:
-リソース・インスタンス `my-resource-instance` を削除します
+リソース・サービス・インスタンス `my-service-instance` を削除します
 
 ```
-bluemix resource instance-delete my-resource-instance
+bluemix resource service-instance-delete my-service-instance
 ```
 
-## bluemix resource bindings
-{: #bluemix_resource_bindings}
+## bluemix resource service-bindings
+{: #bluemix_resource_service_bindings}
 
-リソース別名へのバインディングを表示します
+サービス別名へのバインディングを表示します
 
 ```
-bluemix resource bindings RESOURCE_ALIAS
+bluemix resource bindings SERVICE_ALIAS
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS (必須)</dt>
-  <dd>リソース別名</dd>
+  <dt>SERVICE_ALIAS (必須)</dt>
+  <dd>サービス別名</dd>
 </dl>
 
 <strong>例</strong>:
-リソース別名 `my-resource-alias` へのリソース・バインディングを表示します
+サービス別名 `my-service-alias` へのリソース・バインディングを表示します
 
 ```
-bluemix resource bindings my-resource-alias
+bluemix resource bindings my-service-alias
 ```
-## bluemix resource binding
-{: #bluemix_resource_binding}
+## bluemix resource service-binding
+{: #bluemix_resource_service_binding}
 
-リソース・バインディングの詳細を表示します
+サービス・バインディングの詳細を表示します
 
 ```
-bluemix resource binding ALIAS_NAME APP_NAME [--id]
+bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2763,35 +2776,35 @@ bluemix resource binding ALIAS_NAME APP_NAME [--id]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>ALIAS_NAME (必須)</dt>
-  <dd>リソース別名</dd>
+  <dd>サービス別名</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry アプリケーション名</dd>
   <dt>--id</dt>
-  <dd>ID のみを表示します。このリソース・バインディングの他の出力はすべて抑制されます。</dd>
+  <dd>ID のみを表示します。このサービス・バインディングの他の出力はすべて抑制されます。</dd>
 </dl>
 
 <strong>例</strong>:
-リソース別名 `my-resource-alias` とアプリ `my-app` の間のリソース・バインディングの詳細を表示します
+サービス別名 `my-service-alias` とアプリ `my-app` の間のサービス・バインディングの詳細を表示します
 
 ```
-bluemix resource bindings my-resource-alias my-app
+bluemix resource bindings my-service-alias my-app
 ```
 
-## bluemix resource binding-create
-{: #bluemix_resource_binding_create}
+## bluemix resource service-binding-create
+{: #bluemix_resource_service_binding_create}
 
-リソース・バインディングを作成します
+サービス・バインディングの作成
 
 ```
-bluemix resource binding-create RESOURCE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS_NAME (必須)</dt>
-  <dd>リソース別名</dd>
+  <dt>SERVICE_ALIAS_NAME (必須)</dt>
+  <dd>サービス別名</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry アプリケーション名</dd>
   <dt>ROLE_NAME</dt>
@@ -2803,26 +2816,26 @@ bluemix resource binding-create RESOURCE_ALIAS_NAME APP_NAME ROLE_NAME [--servic
 </dl>
 
 <strong>例</strong>:
-`Administrator` の役割によってリソース別名 `my-resource-alias` とアプリ `my-app` の間のリソース・バインディングを作成します
+`Administrator` の役割によってサービス別名 `my-service-alias` とアプリ `my-app` の間のサービス・バインディングを作成します
 
 ```
-bluemix resource binding-create my-resource-alias my-app Administrator
+bluemix resource service-binding-create my-service-alias my-app Administrator
 ```
-## bluemix resource binding-delete
-{: #bluemix_resource_binding_delete}
+## bluemix resource service-binding-delete
+{: #bluemix_resource_service_binding_delete}
 
-リソース・バインディングを削除します
+サービス・バインディングの削除
 
 ```
-bluemix resource binding-delete RESOURCE_ALIAS APP_NAME [-f, --force]
+bluemix resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
 
 <strong>前提条件</strong>: なし
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS_NAME (必須)</dt>
-  <dd>リソース別名</dd>
+  <dt>SERVICE_ALIAS_NAME (必須)</dt>
+  <dd>サービス別名</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry アプリケーション名</dd>
   <dt>-f, --force</dt>
@@ -2830,19 +2843,19 @@ bluemix resource binding-delete RESOURCE_ALIAS APP_NAME [-f, --force]
 </dl>
 
 <strong>例</strong>:
-リソース別名 `my-resource-alias` とアプリ `my-app` の間のリソース・バインディングを削除します
+サービス別名 `my-service-alias` とアプリ `my-app` の間のサービス・バインディングを削除します
 
 ```
-bluemix resource binding-delete my-resource-alias my-app
+bluemix resource service-binding-delete my-service-alias my-app
 ```
 
-## bluemix resource keys
-{: #bluemix_resource_keys}
+## bluemix resource service-keys
+{: #bluemix_resource_service_keys}
 
-リソース・インスタンスまたはリソース別名のリソース・キーをリストします
+サービス・インスタンスまたはサービス別名のサービス・キーをリストします
 
 ```
-bluemix resource keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+bluemix resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2850,29 +2863,29 @@ bluemix resource keys [ --instance-id ID | --instance-name NAME | --alias-id ID 
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>--instance-id</dt>
-  <dd>リソース・インスタンス ID</dd>
+  <dd>サービス・インスタンス ID</dd>
   <dt>--instance-name</dt>
-  <dd>リソース・インスタンス名</dd>
+  <dd>サービス・インスタンス名</dd>
   <dt>--alias-id</dt>
-  <dd>リソース別名 ID</dd>
+  <dd>サービス別名 ID</dd>
   <dt>--alias-name</dt>
-  <dd>リソース別名</dd>
+  <dd>サービス別名</dd>
 </dl>
 
 <strong>例</strong>:
-リソース・インスタンス `my-resource-instance` のリソース・キーをリストします
+サービス・インスタンス `my-service-instance` のサービス・キーをリストします
 
 ```
-bluemix resource keys --instance-name my-resource-instance
+bluemix resource service-keys --instance-name my-service-instance
 ```
 
-## bluemix resource key
-{: #bluemix_resource_key}
+## bluemix resource service-key
+{: #bluemix_resource_service_key}
 
-リソース・キーの詳細を表示します
+サービス・キーの詳細を表示します
 
 ```
-bluemix resource key KEY_NAME [--id]
+bluemix resource service-key KEY_NAME [--id]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2882,23 +2895,23 @@ bluemix resource key KEY_NAME [--id]
   <dt>KEY_NAME</dt>
   <dd>キーの名前</dd>
   <dt>--id</dt>
-  <dd>リソース・キーの ID を表示します</dd>
+  <dd>サービス・キーの ID を表示します</dd>
 </dl>
 
 <strong>例</strong>:
-リソース・キー `my-resource-key` の詳細を表示します
+サービス・キー `my-service-key` の詳細を表示します
 
 ```
-bluemix resource key my-resource-key
+bluemix resource service-key my-service-key
 ```
 
-## bluemix resource key-create
-{: #bluemix_resource_key_create}
+## bluemix resource service-key-create
+{: #bluemix_resource_service_key_create}
 
-リソース・キーを作成します
+サービス・キーを作成します
 
 ```
-bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID | --instance-name RESOURCE_INSTANCE_NAME | --alias-id RESOURCE_ALIAS_ID | --alias-name RESOURCE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2910,13 +2923,13 @@ bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID 
   <dt>ROLE_NAME</dt>
   <dd>ユーザー役割の名前</dd>
   <dt>--instance-id</dt>
-  <dd>リソース・インスタンス ID</dd>
+  <dd>サービス・インスタンス ID</dd>
   <dt>--instance-name</dt>
-  <dd>リソース・インスタンス名</dd>
+  <dd>サービス・インスタンス名</dd>
   <dt>--alias-id</dt>
-  <dd>リソース別名 ID</dd>
+  <dd>サービス別名 ID</dd>
   <dt>--alias-name</dt>
-  <dd>リソース別名</dd>
+  <dd>サービス別名</dd>
   <dt>-service-id-name</dt>
   <dd>役割が属しているサービス ID の名前</dd>
   <dt>-f, --force</dt>
@@ -2924,19 +2937,19 @@ bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID 
 </dl>
 
 <strong>例</strong>:
-役割 `Administrator` を使用して、リソース・インスタンス `my-resource-instance` に対して `my-resource-key` という名前のリソース・キーを作成します。
+役割 `Administrator` を使用して、サービス・インスタンス `my-service-instance` に対して `my-service-key` という名前のサービス・キーを作成します。
 
 ```
-bluemix resource key-create my-resource-key Administrator --instance-name my-resource-instance
+bluemix resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
 
-## bluemix resource key-delete
-{: #bluemix_resource_key_delete}
+## bluemix resource service-key-delete
+{: #bluemix_resource_service_key_delete}
 
-リソース・キーを削除します
+サービス・キーを削除します
 
 ```
-bluemix resource key-delete KEY_NAME [-f, --forece]
+bluemix resource service-key-delete KEY_NAME [-f, --forece]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2950,19 +2963,19 @@ bluemix resource key-delete KEY_NAME [-f, --forece]
 </dl>
 
 <strong>例</strong>:
-リソース・キー `my-resource-key` を削除します
+サービス・キー `my-service-key` を削除します
 
 ```
-bluemix resource key-delete my-resource-key
+bluemix resource service-key-delete my-service-key
 ```
 
-## bluemix resource aliases
-{: #bluemix_resource_aliases}
+## bluemix resource service-aliases
+{: #bluemix_resource_service_aliases}
 
-リソース・インスタンスの別名をリストします
+サービス・インスタンスの別名をリストします
 
 ```
-bluemix resource aliases [ --instance-id ID | --instance-name NAME ]
+bluemix resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2970,24 +2983,24 @@ bluemix resource aliases [ --instance-id ID | --instance-name NAME ]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>--instance-id</dt>
-  <dd>従属リソース・インスタンスの ID</dd>
+  <dd>従属サービス・インスタンスの ID</dd>
   <dt>--instance-name</dt>
-  <dd>従属リソース・インスタンスの名前</dd>
+  <dd>従属サービス・インスタンスの名前</dd>
 </dl>
 
 <strong>例</strong>:
-リソース・インスタンス `my-resource-instance` のリソース別名をリストします
+サービス・インスタンス `my-service-instance` のサービス別名をリストします
 ```
-bluemix resource aliases my-resource-instance
+bluemix resource service-aliases my-service-instance
 ```
 
-## bluemix resource alias
-{: #bluemix_resource_alias}
+## bluemix resource service-alias
+{: #bluemix_resource_service_alias}
 
-リソース別名の詳細を表示します
+サービス別名の詳細を表示します
 
 ```
-bluemix resource alias ALIAS_NAME [--id]
+bluemix resource service-alias ALIAS_NAME [--id]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2995,24 +3008,24 @@ bluemix resource alias ALIAS_NAME [--id]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>ALIAS_NAME (必須)</dt>
-  <dd>リソース別名の名前</dd>
+  <dd>サービス別名の名前</dd>
   <dt>--id</dt>
-  <dd>指定されたリソース別名の ID のみを表示してください。 この別名の他の出力はすべて抑制されます。</dd>
+  <dd>指定されたサービス別名の ID のみを表示してください。この別名の他の出力はすべて抑制されます。</dd>
 </dl>
 
 <strong>例</strong>:
-リソース別名 `my-resource-alias` の詳細を表示します
+サービス別名 `my-service-alias` の詳細を表示します
 ```
-bluemix resource aliase  my-resource-alias
+bluemix resource service-aliase  my-service-alias
 ```
 
-## bluemix resource alias-create
-{: #bluemix_resource_alias_create}
+## bluemix resource service-alias-create
+{: #bluemix_resource_service_alias_create}
 
-リソース・インスタンスの別名を作成します
+サービス・インスタンスの別名を作成します
 
 ```
-bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
+bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -3020,11 +3033,11 @@ bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NA
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>ALIAS_NAME (必須)</dt>
-  <dd>リソース別名の名前</dd>
+  <dd>サービス別名の名前</dd>
   <dt>--instance-id</dt>
-  <dd>従属リソース・インスタンスの ID</dd>
+  <dd>従属サービス・インスタンスの ID</dd>
   <dt>--instance-name</dt>
-  <dd>従属リソース・インスタンスの名前</dd>
+  <dd>従属サービス・インスタンスの名前</dd>
   <dt>-s</dt>
   <dd>別名が作成されるスペースの名前。 デフォルトは現行のスペースです。</dd>
   <dt>-t, --tags</dt>
@@ -3034,18 +3047,18 @@ bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NA
 </dl>
 
 <strong>例</strong>:
-リソース・インスタンス `my-resource-instance` の、`my-resource-alias` という名前のリソース別名を作成します
+サービス・インスタンス `my-service-instance` のサービス別名 `my-service-alias` を作成します。
 ```
-bluemix resource aliase-create my-resource-alias --instance-name my-resource-instance
+bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
 ```
 
-## bluemix resource alias-update
-{: #bluemix_resource_alias_update}
+## bluemix resource service-alias-update
+{: #bluemix_resource_service_alias_update}
 
-リソース別名を更新します
+サービス別名を更新します
 
 ```
-bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
+bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -3053,9 +3066,9 @@ bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>ALIAS_NAME (必須)</dt>
-  <dd>リソース別名の名前</dd>
+  <dd>サービス別名の名前</dd>
   <dt>-n, --name</dt>
-  <dd>リソース別名の新しい名前。</dd>
+  <dd>サービス別名の新しい名前。</dd>
   <dt>-t, --tags</dt>
   <dd>タグのリスト。</dd>
   <dt>-p, --parameters</dt>
@@ -3065,19 +3078,19 @@ bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS]
 </dl>
 
 <strong>例</strong>:
-リソース別名 `my-resource-alias` を更新し、その名前を `new-resource-alias` に変更します
+サービス別名 `my-service-alias` を更新し、その名前を `new-service-alias` に変更します
 
 ```
-bluemix resource alias-update my-resource-alias -n new-resource-alias
+bluemix resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-## bluemix resource alias-delete
-{: #bluemix_resource_alias_delete}
+## bluemix resource service-alias-delete
+{: #bluemix_resource_service_alias_delete}
 
-リソースの別名を削除します
+サービス別名を削除します
 
 ```
-bluemix resource alias-delete ALIAS_NAME [-f, --force]
+bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -3085,16 +3098,16 @@ bluemix resource alias-delete ALIAS_NAME [-f, --force]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>ALIAS_NAME (必須)</dt>
-  <dd>リソース別名の名前</dd>
+  <dd>サービス別名の名前</dd>
   <dt>-f, --force</dt>
   <dd>確認なしで削除を強制します</dd>
 </dl>
 
 <strong>例</strong>:
-リソース別名 `my-resource-alias` を削除します
+サービス別名 `my-service-alias` を削除します
 
 ```
-bluemix resource alias-delete my-resource-alias
+bluemix resource service-alias-delete my-service-alias
 ```
 
 ## bluemix catalog search
@@ -3103,15 +3116,13 @@ bluemix resource alias-delete my-resource-alias
 カタログ項目を検索します
 
 ```
-bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--reverse] [--json] [--global]
+bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-q, --query</dt>
-  <dd>キーワードを検索します</dd>
   <dt>-r, --region</dt>
   <dd>検索範囲の地理的地域を指定します。現在は、「us-south」と「united-kingdom」のみがサポートされています。</dd>
   <dt>-k, --kind</dt>
@@ -3120,13 +3131,17 @@ bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind
   <dd>価格を基準にしてフィルター操作します。現在は、「free」、「paygo」、「bluemix-subscription」のみがサポートされています。</dd>
   <dt>-t, --tag</dt>
   <dd>タグを基準にしてフィルター操作します。</dd>
-  <dt>-sort-by</dt>
+  <dt>--sort-by</dt>
   <dd>ソート基準のプロパティー</dd>
-  <dt>-reverse</dt>
+  <dt>--col</dt>
+  <dd>表の追加列を指定します。現在は、「group」、「provider」、および「 tags」です。</dd>
+  <dt>--reverse</dt>
   <dd>ソート順序を反転するかどうか</dd>
-  <dt>-json</dt>
+  <dt>--json</dt>
   <dd>元の JSON 応答を出力します</dd>
-  <dt>-global</dt>
+  <dt>--csv</dt>
+  <dd>CSV ファイルを出力します</dd>
+  <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
 
@@ -3145,20 +3160,18 @@ bluemix catalog search -k service -q 'Automation test'
 カタログ項目を取得します
 
 ```
-bluemix catalog entry [-i ID] [--global]
+bluemix catalog entry ID [--global]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>カタログ項目の ID。</dd>
-  <dt>-children</dt>
+  <dt>--children</dt>
   <dd>カタログ項目のすべての子を取得します</dd>
-  <dt>-json</dt>
+  <dt>--json</dt>
   <dd>元の JSON 応答を出力します</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
 
@@ -3187,7 +3200,7 @@ bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--gl
   <dd>オブジェクトの親 ID</dd>
   <dt>-c</dt>
   <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
 
@@ -3205,18 +3218,16 @@ bluemix catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 既存のカタログ項目を更新します (アカウントのカタログ管理者またはエディターのみ)
 
 ```
-bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
+bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>更新するカタログ項目の ID。</dd>
   <dt>-c</dt>
   <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
 
@@ -3225,23 +3236,45 @@ bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 JSON ファイルからリソース `j402-dnf1i` を更新します
 
 ```
-bluemix entry-update -i 'j402-dnf1i' -c @update.json
+bluemix update 'j402-dnf1i' -c @update.json
 ```
 
-## bluemix catalog entry-visibility
-{: #bluemix_catalog_entry_visibility}
-カタログ項目の可視性を取得します (アカウントのカタログ管理者のみ)
-
+## bluemix catalog entry-delete
+{: #bluemix_catalog_entry_delete}
+カタログ項目を削除します (アカウントのカタログ管理者のみ)
 ```
-bluemix catalog entry-visibility [-i ID] [--global]
+bluemix catalog entry-delete ID [--global]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>カタログ項目の ID。</dd>
+  <dt>--global</dt>
+  <dd>グローバル・スコープで操作します</dd>
+</dl>
+
+<strong>例</strong>:
+
+リソース `j402-dnf1i` を削除します
+
+```
+bluemix catalog delete 'j402-dnf1i'
+```
+
+
+## bluemix catalog entry-visibility
+{: #bluemix_catalog_entry_visibility}
+カタログ項目の可視性を取得します (アカウントのカタログ管理者のみ)
+
+```
+bluemix catalog entry-visibility ID [--global]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
   <dt>-json</dt>
   <dd>元の JSON 応答を出力します</dd>
   <dt>-global</dt>
@@ -3262,18 +3295,31 @@ bluemix catalog entry-visibility 'j402-dnf1i' --global
 既存のカタログ項目の可視性を更新します (アカウントのカタログ管理者のみ)
 
 ```
-bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
+bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>更新するカタログ項目の ID。</dd>
+
+  <dt>--includes-add</dt>
+  <dd>アカウント (またはコンマ区切りの一連のアカウント) を組み込みリストに追加し、項目の可視性を付与します。E メールまたはアカウント GUID を指定可能です</dd>
+  <dt>--includes-remove</dt>
+  <dd>アカウント (またはコンマ区切りの一連のアカウント) を組み込みリストから削除し、項目の可視性を取り消します。E メールまたはアカウント GUID を指定可能です</dd>  
+  <dt>--excludes-add</dt>
+  <dd>アカウント (またはコンマ区切りの一連のアカウント) を除外リストに追加します。E メールまたはアカウント GUID を指定可能です</dd>
+  <dt>--excludes-remove</dt>
+  <dd>アカウント (またはコンマ区切りの一連のアカウント) を除外リストから削除し、項目の可視性を取り消します。アカウントがグローバル管理者によって設定されていた場合は、アカウント管理者がそのアカウントを削除することはできません。E メールまたはアカウント GUID を指定可能です</dd>
+  <dt>--owner</dt>
+  <dd>オブジェクトの所有者を変更します。E メールまたはアカウント GUID を指定可能です。</dd>
+  <dt>--restrict</dt>
+  <dd>表示可能オブジェクトの制限を「プライベート」に変更します</dd>
+  <dt>--unrestrict</dt>
+  <dd>表示可能オブジェクトの制限を「パブリック」に変更します</dd>  
   <dt>-c</dt>
   <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
 
@@ -3282,7 +3328,7 @@ bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 JSON ファイルからリソース `j402-dnf1i` の可視性を設定します
 
 ```
-bluemix catalog entry-visibility-set -i 'j402-dnf1i' -c @visibility.json
+bluemix catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
 
@@ -3298,11 +3344,11 @@ bluemix catalog service-marketplace [--cf] [--rc] [--global]
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-cf</dt>
+  <dt>--cf</dt>
   <dd>Cloud Foundry サービスのみを表示します</dd>
-  <dt>-rc</dt>
+  <dt>--rc</dt>
   <dd>RC と互換性のあるサービスのみを表示します</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
 
@@ -3380,7 +3426,7 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTIO
    <dt>CF_APP_NAME (必須)</dt>
    <dd>作成される cf アプリケーションの名前。</dd>
    <dt>-u <i>URL</i> (オプション)</dt>
-   <dd>アプリケーションの経路。指定しない場合、経路はアプリ名とデフォルト・ドメインに基づき、Bluemix が自動的に設定します。</dd>
+   <dd>アプリケーションの経路。指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.Bluemix_notm}} によって自動的に設定されます。</dd>
    <dt>-d <i>DESCRIPTION</i> (オプション)</dt>
    <dd>アプリケーションの説明。</dd>
    <dt>--no-start (オプション)</dt>
@@ -3515,13 +3561,13 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (必須)</dt>
    <dd>追加するリポジトリーの名前。各リポジトリーに対して任意の名前を定義できます。</dd>
    <dt>REPO_URL (必須)</dt>
-   <dd>追加するリポジトリーの URL。リポジトリー URL にはプロトコルが含まれている必要があります (例えば、plugins.ng.bluemix.net ではなく、http://plugins.ng.bluemix.net)。http://plugins.ng.bluemix.net は、Bluemix CLI の公式プラグイン・リポジトリーです。</dd>
+   <dd>追加するリポジトリーの URL。リポジトリー URL にはプロトコルが含まれている必要があります (例えば、plugins.ng.bluemix.net ではなく、http://plugins.ng.bluemix.net)。{{site.data.keyword.Bluemix_notm}} CLI の公式プラグイン・リポジトリーは http://plugins.ng.bluemix.net です。</dd>
     </dl>
 
 
 <strong>例</strong>:
 
-Bluemix CLI の公式プラグイン・リポジトリーを `bluemix-repo` として追加します。
+{{site.data.keyword.Bluemix_notm}} CLI の公式プラグイン・リポジトリーを `bluemix-repo` として追加します。
 
 ```
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
@@ -3758,4 +3804,3 @@ bluemix plugin uninstall PLUGIN_NAME
 ```
 bluemix plugin uninstall IBM-Containers
 ```
-

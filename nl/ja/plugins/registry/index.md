@@ -6,8 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-26"
-
+lastupdated: "2017-11-10"
 
 ---
 
@@ -51,15 +50,17 @@ lastupdated: "2017-10-26"
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
+ <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
+ <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -83,7 +84,7 @@ bx cr api
 {{site.data.keyword.registrylong_notm}} 内で Docker イメージをビルドします。
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -99,6 +100,8 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag v
 <dd>(オプション) 指定されている場合、エラーが発生しない限り、ビルド出力は抑止されます。</dd>
 <dt> --build-arg value</dt>
 <dd>(オプション) 「KEY=VALUE」のフォーマットで追加のビルド引数を指定します。このパラメーターを複数回含めることにより、複数のビルド引数を指定できます。Dockerfile 内のキーに一致する ARG 行を指定する時、ビルド引数の値は環境変数として使用できます。</dd>
+<dt>--file value, -f value</dt>
+<dd>(オプション) 複数ビルドに対して同じファイルを使用する場合は、異なる Dockerfile のパスを選択できます。ビルド・コンテキストに対する Dockerfile の相対位置を指定します。指定がない場合、デフォルトは `PATH/Dockerfile` です。ここで、PATH はビルド・コンテキストのルートです。</dd>
 <dt>--tag value, -t value</dt>
 <dd>ビルドするイメージのフルネーム。これには、レジストリーの URL と名前空間が含まれます。</dd>
 </dl>
@@ -266,12 +269,6 @@ bx cr plan-upgrade [PLAN]
 </dl>
 
 
-## bx cr pricing
-{: #bx_cr_pricing}
-
-このコマンドは削除されました。料金カリキュレーターを使用して、推定コストを計算できます。[{{site.data.keyword.registrylong_notm}} のコストの見積もり](../../../services/Registry/registry_overview.html#registry_plan_billing)を参照してください。
-
-
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -299,6 +296,33 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>(オプション) トラフィック割り当て量を、指定された値 (M バイト単位) に変更します。トラフィックを設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
 <dt>--storage VALUE</dt>
 <dd>(オプション) ストレージ割り当て量を、指定された値 (M バイト単位) に変更します。ストレージ割り当て量を設定する権限がない場合や現在の価格プランを超える値を設定した場合、操作は失敗します。</dd>
+</dl>
+
+
+## bx cr region
+{: #bx_cr_region}
+
+ターゲットの地域とレジストリーを表示します。
+
+```
+bx cr region```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+{{site.data.keyword.registrylong_notm}} コマンドのターゲット地域を設定します。使用可能な地域をリストするには、パラメーターなしでコマンドを実行します。
+
+```
+bx cr region-set [REGION]
+```
+{: codeblock}
+
+**パラメーター**
+<dl>
+<dt>REGION</dt>
+<dd>(オプション) ターゲット地域の名前。例えば、`us-south` などです。</dd>
 </dl>
 
 

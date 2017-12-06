@@ -16,7 +16,7 @@ lastupdated: "2017-06-29"
 # Visual Studio Code용 IBM Developer Tools
 {: #ibm-dev-tools-for-vscode}
 
-Visual Studio Code용 IBM Developer Extension은 Visual Studio Code 편집기의 명령 팔레트 내의 IBM Developer CLI에서 직접 기능에 액세스를 제공하는 편집기용 확장입니다. 이는 편집기의 컨텍스트를 떠날 필요 없이 Docker 및 CloudFoundry 워크플로우 모두(앱 배치, Bluemix에서 앱 시작/중지/다시 시작하기, 원격 앱 로그 보기 등 포함)에 대해 `bx dev` 명령의 서브세트에 신속하게 액세스할 수 있도록 해줍니다.
+Visual Studio Code용 IBM Developer Extension은 Visual Studio Code 편집기의 명령 팔레트 내의 IBM Developer CLI에서 직접 기능에 액세스를 제공하는 편집기용 확장입니다. 이를 사용하면 앱 배치, {{site.data.keyword.Bluemix_notm}}에서 앱 시작/중지/재시작, 원격 앱 로그 보기 등을 포함하여 Docker 및 CloudFoundry 워크플로우 모두에 대한 `bx dev` 명령의 서브세트에 신속하게 액세스할 수 있으며, 이 모두의 경우 편집기의 컨텍스트에서 나가지 않아도 됩니다.
 {:shortdesc}
 
 ![IBM Developer Tools 확장 다운로드 화면의 화면 캡처.](ibm-dev-tools-for-vscode.png "Visual Studio Code 내의 확장 다운로드 화면")
@@ -24,7 +24,7 @@ Visual Studio Code용 IBM Developer Extension은 Visual Studio Code 편집기의
 ## 종속 항목
 {: #dependencies}
 
-Visual Studio Code용 IBM Developer Tools 확장을 사용하려면 [Bluemix CLI](https://plugins.ng.bluemix.net/ui/home.html) 및 [IBM Developer CLI](/docs/cloudnative/dev_cli.html) 플러그인이 시스템에 설치되어 있어야 합니다. 
+Visual Studio Code용 IBM Developer Tools 확장을 활용하려면 [{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) 및 [IBM Developer CLI](/docs/cloudnative/dev_cli.html) 플러그인이 시스템에 설치되어 있어야 합니다. 
 
 ## 설치
 {: #installation}
@@ -63,20 +63,20 @@ Visual Studio Code의 명령 팔레트를 사용하여 확장 명령을 호출�
 
 다음과 같은 몇 가지 단계로 bx dev 워크플로우를 시작할 수 있습니다.
 * 아래 두 가지 방법 중 하나를 사용하여 프로젝트 작성: 
-  * [Bluemix 웹 콘솔](https://console.ng.bluemix.net/developer/getting-started/) 사용 및 생성된 코드 다운로드
-  * [Bluemix Developer CLI](/docs/cloudnative/dev_cli.html) 사용 및 `bx dev create` 명령을 사용하여 프로젝트 생성
+  * [{{site.data.keyword.Bluemix_notm}} 웹 콘솔](https://console.ng.bluemix.net/developer/getting-started/) 사용 및 생성된 코드 다운로드
+  * [{{site.data.keyword.Bluemix_notm}} Developer CLI](/docs/cloudnative/dev_cli.html) 사용 및 `bx dev create` 명령을 사용하여 프로젝트 생성
 * Visual Studio Code 편집기에서 프로젝트의 폴더를 로컬로 열기
 * `bx dev build` 명령을 사용하여 앱을 Docker 이미지에 빌드
 * `bx dev debug` 명령을 사용하여 개발을 위해 로컬 Docker에서 앱 실행
 > 참고: 로컬 Docker 컨테이너 내부에서 실행 중인 Node.js 애플리케이션을 디버그하려면 [로컬 컨테이너에 대한 디버그 구성 추가](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container)를 해야 합니다.
 
 * `bx dev run` 명령을 사용하여 릴리스 모드로 로컬 Docker에서 앱 실행
-* `bx dev deploy` 명령을 사용하여 Bluemix에서 Cloud Foundry 런타임에 애플리케이션을 배치*(IBM 컨테이너 지원 예정).*
+* `bx dev deploy` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에서 Cloud Foundry 런타임에 애플리케이션을 배치*(곧 IBM 컨테이너 지원 예정).*
 
 ### Cloud Foundry 워크플로우용 IBM Developer Extension 사용
 {: #usage-cloud-foundry}
 
-IBM Bluemix에서 Cloud Foundry 런타임에 현재 앱을 배치하고 있는 사용자를 위해 `cf` 세트의 오퍼레이션에 대한 지원도 제공합니다.
+IBM {{site.data.keyword.Bluemix_notm}}에서 Cloud Foundry 런타임에 현재 앱을 배치 중인 사용자를 위해 `cf` 오퍼레이션 세트에 대한 지원도 제공 중입니다. 
 
 다음과 같은 몇 가지 단계로 CloudFoundry 워크플로우를 시작할 수 있습니다.
 * 새 CloudFoundry 애플리케이션 작성

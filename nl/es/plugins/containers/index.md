@@ -20,7 +20,7 @@ lastupdated: "2017-01-12"
 
 *Versión:* 1.0.0
 
-CLI de IBM Containers es un plug-in de CLI de {{site.data.keyword.Bluemix_notm}} para gestionar contenedores y grupos de contenedores en Bluemix.
+CLI de IBM Containers es un plug-in de CLI de {{site.data.keyword.Bluemix_notm}} para gestionar contenedores y grupos de contenedores en {{site.data.keyword.Bluemix_notm}}.  
 {: shortdesc}
 
 **Nota:** *Requisitos previos* lista las acciones que son necesarias antes de utilizar el mandato. Los mandatos que no tienen acciones de requisito previo listan **Ninguno**. De lo contrario, los requisitos previos pueden incluir una o varias de las acciones siguientes:
@@ -282,8 +282,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
 <strong>Opciones de mandato</strong>:
    <dl>
     <dt><i>IMAGE_NAME</i> (necesario)</dt>
-   <dd>Imagen que se debe incluir en cada instancia de contenedor en el grupo de contenedores. Puede listar mandatos tras la imagen, pero no opciones. Todas las opciones deben ir antes de especificar una imagen. <br><br>Si utiliza una imagen en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización, especifique la imagen en el formato: <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>. <br><br>Si usa una imagen proporcionada por IBM Containers, no incluya el espacio de nombres de la organización. Especifique la imagen en el formato:
-<i>registry.ng.bluemix.net/IMAGE</i>. </dd>
+   <dd>Imagen que se debe incluir en cada instancia de contenedor en el grupo de contenedores. Puede listar mandatos tras la imagen, pero no opciones. Todas las opciones deben ir antes de especificar una imagen. <br><br>Si utiliza una imagen en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización, especifique la imagen en el formato: <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>. <br><br>Si usa una imagen proporcionada por IBM Containers, no incluya el espacio de nombres de la organización. Especifique la imagen en el formato: <i>registry.ng.bluemix.net/IMAGE</i>. </dd>
    <dt>--name <i>GROUP_NAME</i> (necesario)</dt>
    <dd>Asigne un nombre al grupo. <i>-n</i> está en desuso.<br>
    <strong>Sugerencia:</strong> el nombre de contenedor debe empezar por una letra. El nombre puede incluir letras en mayúsculas y minúscula, números, puntos (.), caracteres de subrayado (_) o guiones (-).</dd>
@@ -334,7 +333,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>Cuando el grupo de contenedores se crea y se habilita la recuperación automática, IBM Containers comprueba el estado de cada instancia con una solicitud HTTP para el puerto que se asigna.<br>
    Si no se recibe respuesta desde una instancia de contenedor en 2 intervalos subsecuentes de 90 segundos, la instancia se elimina y se sustituye por una instancia nueva. Si el contenedor no responde, no debe llevarse a cabo ninguna acción. Este proceso se repite continuamente. En un espacio de tiempo de 30 minutos, si el número total de contenedores distintos que son miembros del grupo es igual a (o supera) 3 veces el tamaño máximo observado del grupo, la recuperación automática se inhabilita de forma permanente para el grupo de contenedores. Para habilitar de nuevo la recuperación automática, debe volver a crear el grupo de contenedores.</dd>
   <dt>--anti (opcional)</dt>
-  <dd> Utilice anti-affinity para mejorar la alta disponibilidad del grupo de contenedores. La opción --anti obliga a que cada instancia de contenedor del grupo se coloque en un nodo de cálculo físico independiente, lo que reduce las posibilidades de que todos los contenedores de un grupo dejen de funcionar debido a un fallo de hardware. Es posible que no pueda utilizar esta opción con tamaños de grupo mayores debido a que cada región y organización de Bluemix tiene un conjunto limitado de nodos de cálculo disponibles para el despliegue. Si el despliegue no se realiza con éxito, reduzca el número de instancias de contenedor del grupo o elimine la opción --anti. </dd>
+  <dd> Utilice anti-affinity para mejorar la alta disponibilidad del grupo de contenedores. La opción --anti obliga a que cada instancia de contenedor del grupo se coloque en un nodo de cálculo físico independiente, lo que reduce las posibilidades de que todos los contenedores de un grupo dejen de funcionar debido a un fallo de hardware. Es posible que no pueda utilizar esta opción con tamaños de grupo mayores debido a que cada región y organización de {{site.data.keyword.Bluemix_notm}} tiene un conjunto limitado de nodos de cálculo disponibles para el despliegue. Si el despliegue no se realiza con éxito, reduzca el número de instancias de contenedor del grupo o elimine la opción --anti. </dd>
    <dt><i>CMD</i> (opcional)</dt>
    <dd>Mandato y argumentos que se pasan al grupo de contenedores para su ejecución. Este mandato debe ser un mandato de larga ejecución. No utilice un mandato breve que no se ejecute durante mucho tiempo, como por ejemplo <i>/bin/date</i>, porque los mandatos de vida breve podrían hacer que el contenedor se bloqueara.  <br> <strong>Notas:</strong> <ul>
    <li>El mandato y sus argumentos deben finalizar en la línea de mandatos de <i>bluemix ic run</i>.</li>
@@ -462,7 +461,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 <strong>Opciones de mandato</strong>:
  <dl>
    <dt>--anti (opcional)</dt>
-   <dd>Utilice anti-affinity para mejorar la alta disponibilidad del grupo de contenedores. La opción --anti obliga a que cada instancia de contenedor del grupo se coloque en un nodo de cálculo físico independiente, lo que reduce las posibilidades de que todos los contenedores de un grupo dejen de funcionar debido a un fallo de hardware. Es posible que no pueda utilizar esta opción con tamaños de grupo mayores debido a que cada región y organización de Bluemix tiene un conjunto limitado de nodos de cálculo disponibles para el despliegue. Si el despliegue no se realiza con éxito, reduzca el número de instancias de contenedor del grupo o elimine la opción --anti.</dd>
+   <dd>Utilice anti-affinity para mejorar la alta disponibilidad del grupo de contenedores. La opción --anti obliga a que cada instancia de contenedor del grupo se coloque en un nodo de cálculo físico independiente, lo que reduce las posibilidades de que todos los contenedores de un grupo dejen de funcionar debido a un fallo de hardware. Es posible que no pueda utilizar esta opción con tamaños de grupo mayores debido a que cada región y organización de {{site.data.keyword.Bluemix_notm}} tiene un conjunto limitado de nodos de cálculo disponibles para el despliegue. Si el despliegue no se realiza con éxito, reduzca el número de instancias de contenedor del grupo o elimine la opción --anti.</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (opcional)</dt>
    <dd>El número de instancias que necesita. El valor predeterminado es <i>2</i>.</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i> (opcional)</dt>
@@ -891,7 +890,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
-Volver a crear el servicio IBM Containers en el espacio de Bluemix en el que ha iniciado la sesión. La cuota original del espacio se mantiene.
+Volver a crear el servicio IBM Containers en el espacio de {{site.data.keyword.Bluemix_notm}} en el que ha iniciado la sesión. La cuota original del espacio se mantiene.
 
 <strong>Importante</strong>: al ejecutar este mandato, no se migrará ninguno de los contenedores individuales y grupos de este espacio al espacio que se ha vuelto a aprovisionar y se eliminarán durante el proceso de migración.
 
@@ -902,7 +901,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 
 <dl>
    <dt>--force|-f (opcional)</dt>
-   <dd>Fuerza que se cree nuevamente el servicio IBM Containers en el espacio de Bluemix.</dd>
+   <dd>Fuerza que se cree nuevamente el servicio IBM Containers en el espacio de {{site.data.keyword.Bluemix_notm}}.</dd>
    <dt><i>AVAILABILITY_ZONE</i> (opcional)</dt>
    <dd>El nombre de la zona de disponibilidad de IBM Containers donde están desplegados los contenedores. Si no se especifica ninguna zona de disponibilidad, se utilizará la zona de disponibilidad predeterminada establecida para la región.</dd>
    </dl>
@@ -1383,7 +1382,7 @@ bluemix ic unpause proxy
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-Suprimir el servicio IBM Containers del espacio de Bluemix en el que ha iniciado la sesión.
+Suprimir el servicio IBM Containers del espacio de {{site.data.keyword.Bluemix_notm}} en el que ha iniciado la sesión.
 
 <strong>Atención</strong>: al ejecutar este mandato, se perderán todos los contenedores individuales y grupos de contenedores. El espacio seguirá estando disponible en Bluemix. Para volver a empezar a utilizar IBM Containers, debe ejecutar `bluemix ic reprovision` para volver a suministrar el servicio IBM Containers.
 
@@ -1394,7 +1393,7 @@ bluemix ic reprovision [--force|-f]
 
 <dl>
    <dt>--force|-f (opcional)</dt>
-   <dd>Fuerza la supresión del servicio del espacio de Bluemix.</dd>
+   <dd>Fuerza la supresión del servicio del espacio de {{site.data.keyword.Bluemix_notm}}.</dd>
  </dl>
 
 

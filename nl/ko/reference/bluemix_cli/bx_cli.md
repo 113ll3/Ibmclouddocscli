@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-10-06"
+lastupdated: "2017-11-06"
 
 ---
 
@@ -16,13 +16,13 @@ lastupdated: "2017-10-06"
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
 
-버전: 0.6.1
+버전: 0.6.2
 
-{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다.  
+{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다. 
 
-버전 0.5.0부터는 {{site.data.keyword.Bluemix_notm}} 명령행 클라이언트가 Cloud Foundry 명령행 클라이언트를 해당 설치에서 번들화합니다. 고유 cf cli가 설치되어 있는 경우 동일한 컨텍스트에서 고유 설치의 {{site.data.keyword.Bluemix_notm}} CLI 명령 `bx [command]`와 Cloud Foundry CLI 명령 `cf [command]`를 함께 사용하지 마십시오. 대신 cf cli를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry 리소스를 관리하려면 `bluemix cf [command]`를 사용하십시오. 또한 `bluemix cf api/login/logout/target`이 허용되지 않으므로 대신 `bluemix api/login/logout/target`을 사용하십시오.
+버전 0.5.0부터 {{site.data.keyword.Bluemix_notm}} 명령행 클라이언트는 Cloud Foundry 명령행 클라이언트를 해당 설치에서 번들화합니다. 고유 cf cli가 설치되어 있는 경우 동일한 컨텍스트에서 고유 설치의 {{site.data.keyword.Bluemix_notm}} CLI 명령 `bx [command]`와 Cloud Foundry CLI 명령 `cf [command]`를 함께 사용하지 마십시오. 대신 cf cli를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry 리소스를 관리하려면 `bluemix cf [command]`를 사용하십시오. 참고로, `bluemix cf api/login/logout/target`은 허용되지 않으며 그 대신에 `bluemix api/login/logout/target`을 사용해야 합니다. 
 
-다음 정보에서는 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 자세한 명령 사용법을 나열하며, 해당 이름, 인수, 옵션, 전제조건, 설명 및 예제를 포함합니다.
+다음에는 해당 이름, 인수, 옵션, 필수 소프트웨어, 설명 및 예제를 포함하여 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 자세한 명령이 나열되어 있습니다.
 {:shortdesc}
 
 **참고:** *전제조건*에는 명령을 사용하기 전에 필요한 조치가 설명되어 있습니다. 전제조건 조치가 없는 명령은 **없음**으로 표시됩니다. 그 밖의 경우에는 전제조건으로 다음과 같은 조치 중 하나 이상을 수행해야 할 수 있습니다.
@@ -31,7 +31,7 @@ lastupdated: "2017-10-06"
 <dt>엔드포인트</dt>
 <dd>명령을 사용하기 전에 <code>bluemix api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
 <dt>로그인</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다. 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여  API 키로 인증하십시오. {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **Bluemix API 키**로 이동하여 API 키를 작성하십시오.
+<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다. 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여  API 키로 인증하십시오. API 키를 작성하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **플랫폼 API 키**로 이동하십시오.
 </dd>
 <dt>대상</dt>
 <dd>이 명령을 사용하기 전에 <code>bluemix target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
@@ -43,7 +43,7 @@ lastupdated: "2017-10-06"
 
 자주 사용되는 Bluemix 명령을 참조하려면 다음 표의 색인을 사용하십시오.
 
-## 일반 Bluemix 명령 
+## 일반 Bluemix 명령
 {: #bx_commands_index}
 
 <table summary="일반 Bluemix 명령.">
@@ -71,12 +71,12 @@ lastupdated: "2017-10-06"
  </tr>
  </tbody>
  </table>
- 
- ## {{site.data.keyword.BluSoftlayer_notm}} 서비스 관리 및 구성을 위한 명령
+
+ ## {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 관리 및 구성을 위한 명령(bluemix sl)
   {: #bx_commands_softlayer}
-  
-{{site.data.keyword.BluSoftlayer_notm}}} 관리를 위한 명령이 Bluemix CLI에 병합되었습니다. {{site.data.keyword.BluSoftlayer_notm}} 서비스 구성 및 관리를 위해 Bluemix CLI 사용하기에 대한 자세한 정보는 [Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 명령](/docs/cli/reference/softlayer/index.md#softlayer_cli)을 참조하십시오.
- 
+
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 관리를 위한 명령은 {{site.data.keyword.Bluemix_notm}} CLI에 병합되었습니다. {{site.data.keyword.Bluemix_notm}} CLI를 사용한 {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 구성 및 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} 인프라 (bluemix sl) 명령](/docs/cli/reference/softlayer/index.md#softlayer_cli)을 참조하십시오. 
+
  ## 계정, 조직 및 역할 관리를 위한 명령
  {: #bx_commands_account}
 
@@ -144,35 +144,35 @@ lastupdated: "2017-10-06"
       <td>[bluemix resource quota](bx_cli.html#bluemix_resource_quota)</td>
     </tr>
     <tr>
-      <td>[bluemix resource instances](bx_cli.html#bluemix_resource_instances)</td>
-      <td>[bluemix resource instance](bx_cli.html#bluemix_resource_instance)</td>
-      <td>[bluemix resource instance-create](bx_cli.html#bluemix_resource_instance-create)</td>
-      <td>[bluemix resource instance-update](bx_cli.html#bluemix_resource_instance-update)</td>
-      <td>[bluemix resource instance-delete](bx_cli.html#bluemix_resource_instance-delete)</td>
+      <td>[bluemix resource service-instances](bx_cli.html#bluemix_resource_service_instances)</td>
+      <td>[bluemix resource service-instance](bx_cli.html#bluemix_resource_service_instance)</td>
+      <td>[bluemix resource service-instance-create](bx_cli.html#bluemix_resource_service_instance_create)</td>
+      <td>[bluemix resource service-instance-update](bx_cli.html#bluemix_resource_service_instance_update)</td>
+      <td>[bluemix resource service-instance-delete](bx_cli.html#bluemix_resource_service_instance_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource bindings](bx_cli.html#bluemix_resource_bindings)</td>
-      <td>[bluemix resource binding](bx_cli.html#bluemix_resource_binding)</td>
-      <td>[bluemix resource binding-create](bx_cli.html#bluemix_resource_binding-create)</td>
-      <td>[bluemix resource binding-delete](bx_cli.html#bluemix_resource_binding-delete)</td>
+      <td>[bluemix resource service-bindings](bx_cli.html#bluemix_resource_service_bindings)</td>
+      <td>[bluemix resource service-binding](bx_cli.html#bluemix_resource_service_binding)</td>
+      <td>[bluemix resource service-binding-create](bx_cli.html#bluemix_resource_service_binding_create)</td>
+      <td>[bluemix resource service-binding-delete](bx_cli.html#bluemix_resource_service_binding_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource keys](bx_cli.html#bluemix_resource_keys)</td>
-      <td>[bluemix resource key](bx_cli.html#bluemix_resource_key)</td>
-      <td>[bluemix resource key-create](bx_cli.html#bluemix_resource_key-create)</td>
-      <td>[bluemix resource key-delete](bx_cli.html#bluemix_resource_key-delete)</td>
+      <td>[bluemix resource service-keys](bx_cli.html#bluemix_resource_service_keys)</td>
+      <td>[bluemix resource service-key](bx_cli.html#bluemix_resource_service_key)</td>
+      <td>[bluemix resource service-key-create](bx_cli.html#bluemix_resource_service_key_create)</td>
+      <td>[bluemix resource service-key-delete](bx_cli.html#bluemix_resource_service_key_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource aliases](bx_cli.html#bluemix_resource_aliases)</td>
-      <td>[bluemix resource alias](bx_cli.html#bluemix_resource_alias)</td>
-      <td>[bluemix resource alias-create](bx_cli.html#bluemix_resource_alias-create)</td>
-      <td>[bluemix resource alias-update](bx_cli.html#bluemix_resource_alias-update)</td>
-      <td>[bluemix resource alias-delete](bx_cli.html#bluemix_resource_alias-delete)</td>
+      <td>[bluemix resource service-aliases](bx_cli.html#bluemix_resource_service_aliases)</td>
+      <td>[bluemix resource service-alias](bx_cli.html#bluemix_resource_service_alias)</td>
+      <td>[bluemix resource service-alias-create](bx_cli.html#bluemix_resource_service_alias_create)</td>
+      <td>[bluemix resource service-alias-update](bx_cli.html#bluemix_resource_service_alias_update)</td>
+      <td>[bluemix resource service-alias-delete](bx_cli.html#bluemix_resource_service_alias_delete)</td>
     </tr>
   </tbody>
 </table>
 
- 
+
  ## API 키 및 정책 관리를 위한 명령
  {: #bx_commands_iam}
  <table summary="API 키 및 정책 관리에 사용할 수 있는 bluemix 명령.">
@@ -217,7 +217,7 @@ lastupdated: "2017-10-06"
   </tr>
   </tbody>
   </table>
- 
+
  ## cf 앱 및 앱 관련 도메인, 라우트 및 인증서 관리를 위한 명령
  {: #bx_commands_apps}
 
@@ -278,14 +278,14 @@ lastupdated: "2017-10-06"
  </tr>
   </tbody>
  </table>
- 
- ## Bluemix 서비스 관리를 위한 명령
+
+ ## {{site.data.keyword.Bluemix_notm}} 서비스 관리를 위한 명령
  {: #bx_commands_services}
 
-<table summary="Bluemix 서비스 관리에 사용 가능한 Bluemix 명령">
- <caption>표 5. Bluemix 서비스 관리를 위한 명령</caption>
+<table summary="{{site.data.keyword.Bluemix_notm}} 서비스 관리에 사용할 수 있는 bluemix 명령입니다.">
+<caption>표 5. {{site.data.keyword.Bluemix_notm}} 서비스 관리를 위한 명령</caption>
  <thead>
- <th colspan="5">Bluemix 서비스 관리를 위한 명령</th>
+ <th colspan="5">{{site.data.keyword.Bluemix_notm}} 서비스 관리를 위한 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -312,29 +312,29 @@ lastupdated: "2017-10-06"
   </tbody>
  </table>
 
- 
+
  ## 카탈로그, 플러그인 및 청구 설정 관리를 위한 명령
  {: #bx_commands_settings}
 
-<table summary="Bluemix 카탈로그, 플러그인, 청구 및 보안 설정을 관리하는 데 사용할 수 있는 Bluemix 명령.">
- <caption>표 6. Bluemix 카탈로그, 플러그인, 청구 및 보안 설정 관리를 위한 명령</caption>
+<table summary=" {{site.data.keyword.Bluemix_notm}} 카탈로그, 플러그인, 청구 및 보안 설정의 관리에 사용할 수 있는 bluemix 명령입니다. ">
+<caption>표 6. {{site.data.keyword.Bluemix_notm}} 카탈로그, 플러그인, 청구 및 보안 설정의 관리를 위한 명령</caption>
  <thead>
- <th colspan="5">Bluemix 카탈로그, 플러그인, 청구 및 보안 설정 관리를 위한 명령</th>
+ <th colspan="5">{{site.data.keyword.Bluemix_notm}} 카탈로그, 플러그인, 청구 및 보안 설정의 관리를 위한 명령</th>
  </thead>
  <tbody>
  <tr>
   <td>[bluemix catalog search](bx_cli.html#bluemix_catalog_search)</td>
   <td>[bluemix catalog entry](bx_cli.html#bluemix_catalog_entry)</td>
-  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry-create)</td>
-  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry-update)</td>
-  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry-visibility)</td>
+  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry_create)</td>
+  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry_update)</td>
+  <td>[bluemix catalog entry-delete](bx_cli.html#bluemix_catalog_entry_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service-marketplace)</td>
-  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry-visibility-set)</td>
+  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry_visibility)</td>
+  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service_marketplace)</td>
+  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry_visibility_set)</td>
   <td>[bluemix catalog templates](bx_cli.html#bluemix_catalog_templates)</td>
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
  </tr>
  <tr>
   <td>[bluemix plugin repos
@@ -342,23 +342,23 @@ lastupdated: "2017-10-06"
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
   <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
-  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
  </tr>
  <tr>
+  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
   <td>[bluemix plugin list
 ](bx_cli.html#bluemix_plugin_list)</td>
   <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
   <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
   <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
-  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
  </tr>
  <tr>
+  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
   <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  </tr>
  </tbody>
  </table>
- 
+
 ## bluemix help
 {: #bluemix_help}
 첫 번째 레벨 기본 제공 명령 및 지원되는 {{site.data.keyword.Bluemix_notm}} CLI 네임스페이스에 대한 일반 도움말 또는 특정 기본 제공 명령 또는 네임스페이스의 도움말을 표시합니다. 
@@ -552,7 +552,7 @@ bluemix -q cf services
 ## bluemix login
 {: #bluemix_login}
 
-사용자가 로그인됩니다.  
+사용자가 로그인됩니다. 
 
 ```
 bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
@@ -783,7 +783,7 @@ bluemix account org IBM --guid
 새 조직을 작성합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
 
 ```
-bluemix account org-create ORG_NAME
+bluemix account org-create ORG_NAME [-f]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -792,6 +792,8 @@ bluemix account org-create ORG_NAME
    <dl>
    <dt>ORG_NAME(필수)</dt>
    <dd>작성 중인 조직의 이름입니다. </dd>
+   <dt>-f</dt>
+   <dd>확인 없이 작성을 강제 실행합니다. </dd>
    </dl>
 
 <strong>예제</strong>:
@@ -853,7 +855,20 @@ bluemix account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ## bluemix account spaces
 {: #bluemix_account_spaces}
 
-이 명령은 `cf spaces` 명령과 기능 및 옵션이 동일합니다.
+모든 영역 나열
+
+```
+bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
+```
+
+<strong>명령 옵션</strong>:
+   <dl>
+   <dt>-o</dt>
+   <dd>조직 이름입니다. 지정된 조직 아래의 영역을 나열합니다. 지정되지 않은 경우, 기본값은 현재 조직입니다. </dd>
+   <dt>-r</dt>
+   <dd>지역 이름입니다. 지정된 지역 아래의 영역을 나열합니다. 지정되지 않은 경우, 기본값은 현재 지역입니다. </dd>
+   </dl>
+
 
 
 ## bluemix account space
@@ -930,10 +945,16 @@ bluemix account org-users ORG_NAME [-a]
 현재 사용자의 모든 조직 역할 가져오기
 
 ```
-bluemix account org-roles
+bluemix account org-roles [-u USER_ID]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+  <dl>
+   <dt>-u</dt>
+   <dd>사용자 ID입니다. 지정되지 않은 경우, 기본값은 현재 사용자입니다. </dd>
+  </dl>
 
 ## bluemix account org-role-set
 {: #bluemix_account_org_role_set}
@@ -970,7 +991,7 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
 bluemix account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**참고**: CLI를 사용하여 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)을 참조하십시오. <!-- Begin Staging URL vs Prod URL -->
+**참고**: CLI를 사용하여 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](/docs/iam/assignaccess.html#assignaccess)을 참조하십시오. <!-- Begin Staging URL vs Prod URL -->
 
 ## bluemix account org-role-unset
 {: #bluemix_account_org_role_unset}
@@ -1371,7 +1392,7 @@ bluemix iam service-id-delete sample-teset -f
 ## bluemix iam api-keys
 {: #bluemix_iam_api_keys}
 
-모든 Bluemix 플랫폼 API 키 나열
+{{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 나열
 
 ```
 bluemix iam api-keys
@@ -1382,7 +1403,7 @@ bluemix iam api-keys
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-새 Bluemix 플랫폼 API 키 작성
+새 {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 작성
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1395,7 +1416,7 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dt>NAME(필수)</dt>
 <dd>작성할 API 키의 이름입니다.</dd>
 <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
-<dd>API 키에 대한 설명입니다.</dd>
+<dd>API 키의 설명</dd>
 <dt>-f, -- file <i>FILE</i></dt>
 <dd>지정된 파일에 API 키 정보를 저장합니다. 설정하지 않으면 JSON 컨텐츠가 표시됩니다.</dd>
 </dl>
@@ -1411,7 +1432,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-Bluemix 플랫폼 API 키 업데이트
+{{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 업데이트
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1440,7 +1461,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-Bluemix 플랫폼 API 키 삭제
+{{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 삭제
 
 ```
 bluemix iam api-key-delete NAME [-f]
@@ -1459,10 +1480,10 @@ bluemix iam api-key-delete NAME [-f]
 ## bluemix iam service-api-keys
 {: #bluemix_iam_service_api_keys}
 
-모든 서비스 API 키 나열
+서비스의 모든 API 키 나열
 
 ```
-bluemix iam service-api-keys BOUND_TO 
+bluemix iam service-api-keys SERVICE_ID
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -1473,10 +1494,10 @@ bluemix iam service-api-keys BOUND_TO
 
 <strong>예제</strong>:
 
-서비스 CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da`에 바인딩된 서비스 API 키 나열:
+서비스 `sample-service`의 모든 API 키 나열: 
 
 ```
-bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-keys sample-service
 ```
 
 ## bluemix iam service-api-key
@@ -1485,7 +1506,7 @@ bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04
 서비스 API 키의 세부사항 나열
 
 ```
-bluemix iam service-api-key NAME BOUND_TO [--uuid]
+bluemix iam service-api-key NAME SERVICE_ID [--uuid]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -1498,10 +1519,10 @@ bluemix iam service-api-key NAME BOUND_TO [--uuid]
 
 <strong>예제</strong>:
 
-서비스 CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da`에 바인딩된 서비스 API 키 `sample-key`의 세부사항 표시:
+서비스 `sample-service`의 서비스 API 키 `sample-key`의 세부사항 표시: 
 
 ```
-bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key sample-key sample-service
 ```
 
 ## bluemix iam service-api-key-create
@@ -1510,7 +1531,7 @@ bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab
 서비스 API 키 작성
 
 ```
-bluemix iam service-api-key-create NAME BOUND_TO [-d, --description DESCRIPTION] [-f, --file FILE]
+bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [-f, --file FILE]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -1525,10 +1546,10 @@ bluemix iam service-api-key-create NAME BOUND_TO [-d, --description DESCRIPTION]
 
 <strong>예제</strong>:
 
-서비스 CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da`에 바인딩된 서비스 API 키 `sample-key` 작성:
+서비스 `sample-service`의 서비스 API 키 `sample-key` 작성: 
 
 ```
-bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key-create sample-key sample-service
 ```
 
 ## bluemix iam service-api-key-update
@@ -1537,7 +1558,7 @@ bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-sout
 서비스 API 키 업데이트
 
 ```
-bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -1559,7 +1580,7 @@ bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --
 서비스 API 키 이름 `sample-key`를 `new-sample-key`로 바꾸기:
 
 ```
-bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da" -n new-sample-key
+bluemix iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
 
 ## bluemix iam service-api-key-delete
@@ -1568,7 +1589,7 @@ bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-sout
 서비스 API 키 삭제
 
 ```
-bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
+bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -1584,7 +1605,7 @@ bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
 서비스 API 키 `sample-key` 삭제:
 
 ```
-bluemix iam service-api-key-delete sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key-delete sample-key sample-service
 ```
 
 ## bluemix iam user-policies
@@ -1645,7 +1666,7 @@ bluemix iam user-policy name@example.com 0bb730daa
 사용자 정책 작성
 
 ```
-bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resouce-group-id RESOURCE_GROUP_ID]}
+bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 계정을 대상으로 지정
@@ -1977,7 +1998,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 리소스 그룹 나열
 
 ```
-bluemix resource groups [--default | (-r, --resource RESOURCE_ID -o, --resource-origin RESOURCE_ORIGIN)]
+bluemix resource groups [--default]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -1986,10 +2007,6 @@ bluemix resource groups [--default | (-r, --resource RESOURCE_ID -o, --resource-
 <dl>
   <dt>--default</dt>
   <dd>현재 계정의 기본 그룹 가져오기</dd>
-  <dt>-r, --resource</dt>
-  <dd>속해 있는 리소스의 ID</dd>
-  <dt>-o, --resource-origin</dt>
-  <dd>속해 있는 리소스의 원본. 허용된 값: 'CF_ORG', 'IMS_ACCOUNT'.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -2005,13 +2022,6 @@ bluemix resource groups
 ```
 bluemix resource groups --default
 ```
-
-CloudFoundry 조직의 맵핑인 리소스 그룹 나열
-
-```
-bluemix resource groups -r d0ef0e-12n3632z9f-ef3w54n -o CF_ORG
-```
-
 
 ## bluemix resource group
 {: #bluemix_resource_group}
@@ -2247,7 +2257,7 @@ bluemix resource quota free
 
 이 명령은 `cf create-app-manifest` 명령과 기능 및 옵션이 동일합니다.
 
-## bluemix app domain-cert 
+## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
 
 도메인의 인증서 정보를 나열합니다.
@@ -2583,42 +2593,42 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 이 명령은 `cf update-user-provided-service` 명령과 기능 및 옵션이 동일합니다.
 
 
-## bluemix resource instances
-{: #bluemix_resource_instances}
+## bluemix resource service-instances
+{: #bluemix_resource_service_instances}
 
-리소스 인스턴스 나열
+서비스 인스턴스 나열
 
 ```
-bluemix resource instances [--resource-name RESOURCE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>--resource-name</dt>
-  <dd>속해 있는 리소스의 이름</dd>
+  <dt>--service-name</dt>
+  <dd>속해 있는 서비스의 이름</dd>
   <dt>-r, --region</dt>
-  <dd>지역 ID별 필터링. 지정되지 않은 경우 현재 지역을 기본값으로 설정. 모든 지역에 대해 리소스 인스턴스를 표시하려면 '-r, --region all' 사용</dd>
+  <dd>지역 ID별로 필터링합니다. 지정되지 않은 경우, 기본값은 현재 지역입니다. 모든 지역 아래의 서비스 인스턴스를 표시하려면 '-r, --region all'을 사용하십시오. </dd>
   <dt>--long</dt>
   <dd>출력에 추가 필드 표시</dd>
 </dl>
 
 <strong>예제</strong>:
 
-리소스 `test-resource`의 리소스 인스턴스 나열:
+서비스 `test-service`의 서비스 인스턴스 나열: 
 
 ```
-bluemix resource instances --resource-name test-resource
+bluemix resource service-instances --service-name test-service
 ```
 
-## bluemix resource instance
-{: #bluemix_resource_instance}
+## bluemix resource service-instance
+{: #bluemix_resource_service_instance}
 
-리소스 인스턴스의 세부사항 표시
+서비스 인스턴스의 세부사항 표시
 
 ```
-bluemix resource instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [-r, --region REGION] [--id]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2626,27 +2636,27 @@ bluemix resource instance NAME [-r, --region REGION] [--id]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>NAME(필수)</dt>
-  <dd>리소스 인스턴스의 이름</dd>
+  <dd>서비스 인스턴스의 이름</dd>
   <dt>-r, --region</dt>
-  <dd>지역 ID별 필터링. 지정되지 않은 경우 현재 지역을 기본값으로 설정. 모든 지역에 대해 리소스 인스턴스를 표시하려면 '-r, --region all' 사용</dd>
+  <dd>지역 ID별로 필터링합니다. 지정되지 않은 경우, 기본값은 현재 지역입니다. 모든 지역 아래의 서비스 인스턴스를 표시하려면 '-r, --region all'을 사용하십시오. </dd>
   <dt>--id</dt>
-  <dd>리소스 인스턴스의 ID 표시</dd>
+  <dd>서비스 인스턴스의 ID 표시</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 인스턴스 `my-resource-instance`의 세부사항 표시:
+<strong>예</strong>:
+서비스 인스턴스 `my-service-instance`의 세부사항 표시: 
 
 ```
-bluemix resource instance my-resource-instance
+bluemix resource service-instance my-service-instance
 ```
 
-## bluemix resource instance-create
-{: #bluemix_resource_instance_create}
+## bluemix resource service-instance-create
+{: #bluemix_resource_service_instance_create}
 
-리소스 인스턴스 작성
+서비스 인스턴스 작성
 
 ```
-bluemix resource instance-create NAME RESOURCE_NAME|RESOURCE_ID RESOURCE_PLAN_NAME|RESOURCE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2654,67 +2664,67 @@ bluemix resource instance-create NAME RESOURCE_NAME|RESOURCE_ID RESOURCE_PLAN_NA
 <strong>명령 옵션</strong>:
 <dl>
   <dt>NAME(필수)</dt>
-  <dd>리소스 인스턴스의 이름</dd>
-  <dt>RESOURCE_NAME 또는 RESOURCE_ID(필수)</dt>
-  <dd>리소스의 ID 또는 이름</dd>
-  <dt>RESOURCE_PLAN_NAME 또는 RESOURCE_PLAN_ID(필수)</dt>
-  <dd>리소스 플랜의 ID 또는 이름</dd>
+  <dd>서비스 인스턴스의 이름</dd>
+  <dt>SERVICE_NAME 또는 SERVICE_ID(필수)</dt>
+  <dd>서비스의 이름 또는 ID</dd>
+  <dt>SERVICE_PLAN_NAME 또는 SERVICE_PLAN_ID(필수)</dt>
+  <dd>서비스 플랜의 이름 또는 ID</dd>
   <dt>-r, --region</dt>
-  <dd>리소스 인스턴스를 작성할 지역. 지정되지 않은 경우 현재 지역을 기본값으로 설정</dd>
+  <dd>서비스 인스턴스를 작성하기 위한 지역입니다. 지정되지 않은 경우, 기본값은 현재 지역입니다. </dd>
   <dt>-t, --tags</dt>
   <dd>태그</dd>
   <dt>-p, --parameters</dt>
-  <dd>리소스 인스턴스를 작성할 매개변수의 JOSN 문자열 또는 JSON 파일</dd>
+  <dd>서비스 인스턴스를 작성하기 위한 매개변수의 JOSN 문자열 또는 JSON 파일</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 `test-resource`의 리소스 플랜 `test-resource-plan`을 사용하여 리소스 인스턴스 `my-resource-instance` 작성:
+<strong>예</strong>:
+서비스 `test-service`의 서비스 플랜 `test-service-plan`을 사용하여 `my-service-instance`로 이름 지정된 서비스 인스턴스 작성: 
 
 ```
-bluemix resource instance-create my-resource-instance test-resource test-resource-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan
 ```
 
-## bluemix resource instance-update
-{: #bluemix_resource_instance_update}
+## bluemix resource service-instance-update
+{: #bluemix_resource_service_instance_update}
 
-리소스 인스턴스 업데이트
+서비스 인스턴스 업데이트
 
 ```
-bluemix resource instance-update RESOURCE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--resource-plan-id RESOURCE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
+bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>RESOURCE_INSTANCE_NAME(필수)</dt>
-  <dd>리소스 인스턴스의 이름</dd>
+  <dt>SERVICE_INSTANCE_NAME(필수)</dt>
+  <dd>서비스 인스턴스의 이름</dd>
   <dt>-n, --name</dt>
-  <dd>새 리소스 인스턴스 이름</dd>
+  <dd>새 서비스 인스턴스 이름</dd>
   <dt>-t, --tags</dt>
   <dd>새 태그</dd>
-  <dt>--resource-plan-id</dt>
-  <dd>새 리소스 플랜 ID</dd>
+  <dt>--service-plan-id</dt>
+  <dd>새 서비스 플랜 ID</dd>
   <dt>--update-time</dt>
   <dd>청구 레코드가 적용되는 epoch 이후 시간(초)</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 업데이트</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 인스턴스 `my-resource-instance` 업데이트 및 해당 이름을 `new-resource-instance`로 변경:
+<strong>예</strong>:
+서비스 인스턴스 `my-service-instance` 업데이트, 해당 이름을 `new-service-instance`로 변경:
 
 ```
-bluemix resource instance-update my-resource-instance -n new-resource-instance
+bluemix resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-## bluemix resource instance-delete
-{: #bluemix_resource_instance_delete}
+## bluemix resource service-instance-delete
+{: #bluemix_resource_service_instance_delete}
 
-리소스 인스턴스 삭제
+서비스 인스턴스 삭제
 
 ```
-bluemix resource instance-delete NAME [-f, --force]
+bluemix resource service-instance-delete NAME [-f, --force] [--recursive]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2723,45 +2733,47 @@ bluemix resource instance-delete NAME [-f, --force]
 <dl>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 삭제</dd>
+  <dt>--recursive</dt>
+  <dd>속해 있는 모든 리소스 삭제</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 인스턴스 `my-resource-instance` 삭제:
+<strong>예</strong>:
+리소스 서비스 인스턴스 `my-service-instance` 삭제:
 
 ```
-bluemix resource instance-delete my-resource-instance
+bluemix resource service-instance-delete my-service-instance
 ```
 
-## bluemix resource bindings
-{: #bluemix_resource_bindings}
+## bluemix resource service-bindings
+{: #bluemix_resource_service_bindings}
 
-리소스 별명에 대한 바인딩 표시
+서비스 별명에 대한 바인딩 표시
 
 ```
-bluemix resource bindings RESOURCE_ALIAS
+bluemix resource bindings SERVICE_ALIAS
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS(필수)</dt>
-  <dd>리소스 별명 이름</dd>
+  <dt>SERVICE_ALIAS(필수)</dt>
+  <dd>서비스 별명 이름</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 별명 `my-resource-alias`에 대한 리소스 바인딩 표시:
+<strong>예</strong>:
+서비스 별명 `my-service-alias`에 대한 리소스 바인딩 표시: 
 
 ```
-bluemix resource bindings my-resource-alias
+bluemix resource bindings my-service-alias
 ```
-## bluemix resource binding
-{: #bluemix_resource_binding}
+## bluemix resource service-binding
+{: #bluemix_resource_service_binding}
 
-리소스 바인딩의 세부사항 표시
+서비스 바인딩의 세부사항 표시
 
 ```
-bluemix resource binding ALIAS_NAME APP_NAME [--id]
+bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2769,35 +2781,35 @@ bluemix resource binding ALIAS_NAME APP_NAME [--id]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>ALIAS_NAME(필수)</dt>
-  <dd>리소스 별명 이름</dd>
+  <dd>서비스 별명 이름</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 애플리케이션 이름</dd>
   <dt>--id</dt>
-  <dd>ID만 표시합니다. 리소스 바인딩에 대한 다른 모든 출력은 무시됩니다.</dd>
+  <dd>ID만 표시합니다. 서비스 바인딩의 기타 모든 출력을 숨깁니다. </dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 별명 `my-resource-alias`와 앱 `my-app` 간 리소스 바인딩의 세부사항 표시:
+<strong>예</strong>:
+서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩의 세부사항 표시: 
 
 ```
-bluemix resource bindings my-resource-alias my-app
+bluemix resource bindings my-service-alias my-app
 ```
 
-## bluemix resource binding-create
-{: #bluemix_resource_binding_create}
+## bluemix resource service-binding-create
+{: #bluemix_resource_service_binding_create}
 
-리소스 바인딩 작성
+서비스 바인딩 작성
 
 ```
-bluemix resource binding-create RESOURCE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS_NAME(필수)</dt>
-  <dd>리소스 별명 이름</dd>
+  <dt>SERVICE_ALIAS_NAME(필수)</dt>
+  <dd>서비스 별명 이름</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 애플리케이션 이름</dd>
   <dt>ROLE_NAME</dt>
@@ -2808,47 +2820,47 @@ bluemix resource binding-create RESOURCE_ALIAS_NAME APP_NAME ROLE_NAME [--servic
   <dd>확인 없이 강제 작성</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 별명 `my-resource-alias`와 `my-app` 앱 간의 리소스 바인딩을 `관리자` 역할을 사용하여 작성:
+<strong>예</strong>:
+`관리자` 역할로 서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 작성: 
 
 ```
-bluemix resource binding-create my-resource-alias my-app Administrator
+bluemix resource service-binding-create my-service-alias my-app Administrator
 ```
-## bluemix resource binding-delete
-{: #bluemix_resource_binding_delete}
+## bluemix resource service-binding-delete
+{: #bluemix_resource_service_binding_delete}
 
-리소스 바인딩 삭제
+서비스 바인딩 삭제
 
 ```
-bluemix resource binding-delete RESOURCE_ALIAS APP_NAME [-f, --force]
+bluemix resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
 
 <strong>전제조건</strong>: 없음
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS_NAME(필수)</dt>
-  <dd>리소스 별명 이름</dd>
+  <dt>SERVICE_ALIAS_NAME(필수)</dt>
+  <dd>서비스 별명 이름</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 애플리케이션 이름</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 삭제</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 별명 `my-resource-alias`와 앱 `my-app` 간 리소스 바인딩 삭제:
+<strong>예</strong>:
+서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 삭제: 
 
 ```
-bluemix resource binding-delete my-resource-alias my-app
+bluemix resource service-binding-delete my-service-alias my-app
 ```
 
-## bluemix resource keys
-{: #bluemix_resource_keys}
+## bluemix resource service-keys
+{: #bluemix_resource_service_keys}
 
-리소스 인스턴스 또는 리소스 별명의 리소스 키 나열
+서비스 별명 또는 서비스 인스턴스의 서비스 키 나열
 
 ```
-bluemix resource keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+bluemix resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2856,29 +2868,29 @@ bluemix resource keys [ --instance-id ID | --instance-name NAME | --alias-id ID 
 <strong>명령 옵션</strong>:
 <dl>
   <dt>--instance-id</dt>
-  <dd>리소스 인스턴스 ID</dd>
+  <dd>서비스 인스턴스 ID</dd>
   <dt>--instance-name</dt>
-  <dd>리소스 인스턴스 이름</dd>
+  <dd>서비스 인스턴스 이름</dd>
   <dt>--alias-id</dt>
-  <dd>리소스 별명 ID</dd>
+  <dd>서비스 별명 ID</dd>
   <dt>--alias-name</dt>
-  <dd>리소스 별명 이름</dd>
+  <dd>서비스 별명 이름</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 인스턴스 `my-resource-instance`의 리소스 키 나열:
+<strong>예</strong>:
+서비스 인스턴스 `my-service-instance`의 서비스 키 나열: 
 
 ```
-bluemix resource keys --instance-name my-resource-instance
+bluemix resource service-keys --instance-name my-service-instance
 ```
 
-## bluemix resource key
-{: #bluemix_resource_key}
+## bluemix resource service-key
+{: #bluemix_resource_service_key}
 
-리소스 키의 세부사항 표시
+서비스 키의 세부사항 표시
 
 ```
-bluemix resource key KEY_NAME [--id]
+bluemix resource service-key KEY_NAME [--id]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2888,23 +2900,23 @@ bluemix resource key KEY_NAME [--id]
   <dt>KEY_NAME</dt>
   <dd>키의 이름</dd>
   <dt>--id</dt>
-  <dd>리소스 키의 ID 표시</dd>
+  <dd>서비스 키의 ID 표시</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 키 `my-resource-key`의 세부사항 표시:
+<strong>예</strong>:
+서비스 키 `my-service-key`의 세부사항 표시: 
 
 ```
-bluemix resource key my-resource-key
+bluemix resource service-key my-service-key
 ```
 
-## bluemix resource key-create
-{: #bluemix_resource_key_create}
+## bluemix resource service-key-create
+{: #bluemix_resource_service_key_create}
 
-리소스 키 작성
+서비스 키 작성
 
 ```
-bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID | --instance-name RESOURCE_INSTANCE_NAME | --alias-id RESOURCE_ALIAS_ID | --alias-name RESOURCE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2916,33 +2928,33 @@ bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID 
   <dt>ROLE_NAME</dt>
   <dd>사용자 역할의 이름</dd>
   <dt>--instance-id</dt>
-  <dd>리소스 인스턴스 ID</dd>
+  <dd>서비스 인스턴스 ID</dd>
   <dt>--instance-name</dt>
-  <dd>리소스 인스턴스 이름</dd>
+  <dd>서비스 인스턴스 이름</dd>
   <dt>--alias-id</dt>
-  <dd>리소스 별명 ID</dd>
+  <dd>서비스 별명 ID</dd>
   <dt>--alias-name</dt>
-  <dd>리소스 별명 이름</dd>
+  <dd>서비스 별명 이름</dd>
   <dt>-service-id-name</dt>
   <dd>역할이 속한 서비스 ID의 이름</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 작성</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 인스턴스 `my-resource-instance`에 대해 `관리자` 역할의 리소스 키 `my-resource-key` 작성:
+<strong>예</strong>:
+서비스 인스턴스 `my-service-instance`에 대해 `관리자` 역할로 `my-service-key`로 이름 지정된 서비스 키 작성: 
 
 ```
-bluemix resource key-create my-resource-key Administrator --instance-name my-resource-instance
+bluemix resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
 
-## bluemix resource key-delete
-{: #bluemix_resource_key_delete}
+## bluemix resource service-key-delete
+{: #bluemix_resource_service_key_delete}
 
-리소스 키 삭제
+서비스 키 삭제
 
 ```
-bluemix resource key-delete KEY_NAME [-f, --forece]
+bluemix resource service-key-delete KEY_NAME [-f, --forece]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2955,20 +2967,20 @@ bluemix resource key-delete KEY_NAME [-f, --forece]
   <dd>확인 없이 강제 삭제</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 키 `my-resource-key` 삭제:
+<strong>예</strong>:
+서비스 키 `my-service-key` 삭제:
 
 ```
-bluemix resource key-delete my-resource-key
+bluemix resource service-key-delete my-service-key
 ```
 
-## bluemix resource aliases
-{: #bluemix_resource_aliases}
+## bluemix resource service-aliases
+{: #bluemix_resource_service_aliases}
 
-리소스 인스턴스의 별명 나열
+서비스 인스턴스의 별명 나열
 
 ```
-bluemix resource aliases [ --instance-id ID | --instance-name NAME ]
+bluemix resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2976,24 +2988,24 @@ bluemix resource aliases [ --instance-id ID | --instance-name NAME ]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>--instance-id</dt>
-  <dd>속해 있는 리소스 인스턴스의 ID.</dd>
+  <dd>속해 있는 서비스 인스턴스의 ID입니다. </dd>
   <dt>--instance-name</dt>
-  <dd>속해 있는 리소스 인스턴스의 이름.</dd>
+  <dd>속해 있는 서비스 인스턴스의 이름입니다. </dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 인스턴스 `my-resource-instance`의 리소스 별명 나열:
+<strong>예</strong>:
+서비스 인스턴스 `my-service-instance`의 서비스 별명 나열: 
 ```
-bluemix resource aliases my-resource-instance
+bluemix resource service-aliases my-service-instance
 ```
 
-## bluemix resource alias
-{: #bluemix_resource_alias}
+## bluemix resource service-alias
+{: #bluemix_resource_service_alias}
 
-리소스 별명의 세부사항 표시
+서비스 별명의 세부사항 표시
 
 ```
-bluemix resource alias ALIAS_NAME [--id]
+bluemix resource service-alias ALIAS_NAME [--id]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -3001,24 +3013,24 @@ bluemix resource alias ALIAS_NAME [--id]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>ALIAS_NAME(필수)</dt>
-  <dd>리소스 별명의 이름</dd>
+  <dd>서비스 별명의 이름</dd>
   <dt>--id</dt>
-  <dd>지정된 리소스 별명의 ID만 표시합니다. 별명에 대한 다른 모든 출력은 무시됩니다.</dd>
+  <dd>제공된 서비스 별명의 ID만 표시합니다. 별명에 대한 다른 모든 출력은 무시됩니다.</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 별명 `my-resource-alias`의 세부사항 표시:
+<strong>예</strong>:
+서비스 별명 `my-service-alias`의 세부사항 표시: 
 ```
-bluemix resource aliase  my-resource-alias
+bluemix resource service-aliase  my-service-alias
 ```
 
-## bluemix resource alias-create
-{: #bluemix_resource_alias_create}
+## bluemix resource service-alias-create
+{: #bluemix_resource_service_alias_create}
 
-리소스 인스턴스의 별명 작성
+서비스 인스턴스의 별명 작성
 
 ```
-bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
+bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -3026,32 +3038,32 @@ bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NA
 <strong>명령 옵션</strong>:
 <dl>
   <dt>ALIAS_NAME(필수)</dt>
-  <dd>리소스 별명의 이름</dd>
+  <dd>서비스 별명의 이름</dd>
   <dt>--instance-id</dt>
-  <dd>속해 있는 리소스 인스턴스의 ID.</dd>
+  <dd>속해 있는 서비스 인스턴스의 ID입니다. </dd>
   <dt>--instance-name</dt>
-  <dd>속해 있는 리소스 인스턴스의 이름.</dd>
+  <dd>속해 있는 서비스 인스턴스의 이름입니다. </dd>
   <dt>-s</dt>
   <dd>별명이 작성되는 영역의 이름. 기본값은 현재 영역입니다.</dd>
   <dt>-t, --tags</dt>
-  <dd>태그 목록.</dd>
+  <dd>태그 목록</dd>
   <dt>-p, --parameters</dt>
-  <dd>매개변수 JSON 파일 또는 JSON 문자열.</dd>
+  <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 인스턴스 `my-resource-instance`의 리소스 별명 `my-resource-alias` 작성:
+<strong>예</strong>:
+서비스 인스턴스 `my-service-instance`의 `my-service-alias`로 이름 지정된 서비스 별명 작성: 
 ```
-bluemix resource aliase-create my-resource-alias --instance-name my-resource-instance
+bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
 ```
 
-## bluemix resource alias-update
-{: #bluemix_resource_alias_update}
+## bluemix resource service-alias-update
+{: #bluemix_resource_service_alias_update}
 
-리소스 별명 업데이트
+서비스 별명 업데이트
 
 ```
-bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
+bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -3059,9 +3071,9 @@ bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>ALIAS_NAME(필수)</dt>
-  <dd>리소스 별명의 이름</dd>
+  <dd>서비스 별명의 이름</dd>
   <dt>-n, --name</dt>
-  <dd>리소스 별명의 새 이름</dd>
+  <dd>서비스 별명의 새 이름</dd>
   <dt>-t, --tags</dt>
   <dd>태그 목록</dd>
   <dt>-p, --parameters</dt>
@@ -3070,20 +3082,20 @@ bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS]
   <dd>사용자 확인 없이 강제 업데이트</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 별명 `my-resource-alias` 업데이트 및 해당 이름을 `new-resource-alias`로 변경:
+<strong>예</strong>:
+서비스 별명 `my-service-alias` 업데이트, 해당 이름을 `new-service-alias`로 변경: 
 
 ```
-bluemix resource alias-update my-resource-alias -n new-resource-alias
+bluemix resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-## bluemix resource alias-delete
-{: #bluemix_resource_alias_delete}
+## bluemix resource service-alias-delete
+{: #bluemix_resource_service_alias_delete}
 
-리소스 별명 삭제
+서비스 별명 삭제
 
 ```
-bluemix resource alias-delete ALIAS_NAME [-f, --force]
+bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -3091,16 +3103,16 @@ bluemix resource alias-delete ALIAS_NAME [-f, --force]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>ALIAS_NAME(필수)</dt>
-  <dd>리소스 별명의 이름</dd>
+  <dd>서비스 별명의 이름</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 삭제</dd>
 </dl>
 
-<strong>예제</strong>:
-리소스 별명 `my-resource-alias` 삭제:
+<strong>예</strong>:
+서비스 별명 `my-service-alias` 삭제: 
 
 ```
-bluemix resource alias-delete my-resource-alias
+bluemix resource service-alias-delete my-service-alias
 ```
 
 ## bluemix catalog search
@@ -3109,15 +3121,13 @@ bluemix resource alias-delete my-resource-alias
 카탈로그 항목 검색
 
 ```
-bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--reverse] [--json] [--global]
+bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-q, --query</dt>
-  <dd>키워드 검색</dd>
   <dt>-r, --region</dt>
   <dd>검색할 범위의 지리적 지역 지정. 현재 "us-south" 및 "united-kingdom"만 지원됨</dd>
   <dt>-k, --kind</dt>
@@ -3126,13 +3136,17 @@ bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind
   <dd>가격별 필터링. 현재 "free", "paygo", "bluemix-subscription"만 지원됨</dd>
   <dt>-t, --tag</dt>
   <dd>태그별 필터링.</dd>
-  <dt>-sort-by</dt>
+  <dt>--sort-by</dt>
   <dd>정렬 기준 특성</dd>
-  <dt>-reverse</dt>
+  <dt>--col</dt>
+  <dd>테이블의 추가 컬럼을 지정합니다. 현재 "group", "provider" 및 "tags"</dd>
+  <dt>--reverse</dt>
   <dd>정렬 순서를 반대로 할지 여부</dd>
-  <dt>-json</dt>
+  <dt>--json</dt>
   <dd>원래 JSON 응답 출력</dd>
-  <dt>-global</dt>
+  <dt>--csv</dt>
+  <dd>출력 CSV 파일</dd>
+  <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
 
@@ -3151,20 +3165,18 @@ bluemix catalog search -k service -q 'Automation test'
 카탈로그 항목 가져오기
 
 ```
-bluemix catalog entry [-i ID] [--global]
+bluemix catalog entry ID [--global]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>카탈로그 항목 ID.</dd>
-  <dt>-children</dt>
+  <dt>--children</dt>
   <dd>카탈로그 항목의 모든 하위 가져오기</dd>
-  <dt>-json</dt>
+  <dt>--json</dt>
   <dd>원래 JSON 응답 출력</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
 
@@ -3193,7 +3205,7 @@ bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--gl
   <dd>오브젝트의 상위 ID</dd>
   <dt>-c</dt>
   <dd>카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트(인라인 또는 파일로 제공됨). 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
 
@@ -3211,18 +3223,16 @@ bluemix catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 기존 카탈로그 항목 업데이트(계정의 카탈로그 관리자 또는 편집자만)
 
 ```
-bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
+bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>업데이트되는 카탈로그 항목의 ID.</dd>
   <dt>-c</dt>
   <dd>카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트(인라인 또는 파일로 제공됨). 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
 
@@ -3231,23 +3241,45 @@ bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 JSON 파일에서 리소스 `j402-dnf1i` 업데이트:
 
 ```
-bluemix entry-update -i 'j402-dnf1i' -c @update.json
+bluemix update 'j402-dnf1i' -c @update.json
 ```
 
-## bluemix catalog entry-visibility
-{: #bluemix_catalog_entry_visibility}
-카탈로그 항목의 가시성 가져오기(계정의 카탈로그 관리자만)
-
+## bluemix catalog entry-delete
+{: #bluemix_catalog_entry_delete}
+카탈로그 항목 삭제(계정의 카탈로그 관리자만)
 ```
-bluemix catalog entry-visibility [-i ID] [--global]
+bluemix catalog entry-delete ID [--global]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>카탈로그 항목 ID.</dd>
+  <dt>--global</dt>
+  <dd>글로벌 범위에서 작동</dd>
+</dl>
+
+<strong>예제</strong>:
+
+리소스 `j402-dnf1i` 삭제:
+
+```
+bluemix catalog delete 'j402-dnf1i'
+```
+
+
+## bluemix catalog entry-visibility
+{: #bluemix_catalog_entry_visibility}
+카탈로그 항목의 가시성 가져오기(계정의 카탈로그 관리자만)
+
+```
+bluemix catalog entry-visibility ID [--global]
+```
+
+<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+
+<strong>명령 옵션</strong>:
+<dl>
   <dt>-json</dt>
   <dd>원래 JSON 응답 출력</dd>
   <dt>-global</dt>
@@ -3268,18 +3300,31 @@ bluemix catalog entry-visibility 'j402-dnf1i' --global
 기존 카탈로그 항목의 가시성 업데이트(계정의 카탈로그 관리자만)
 
 ```
-bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
+bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>업데이트되는 카탈로그 항목의 ID.</dd>
+
+  <dt>--includes-add</dt>
+  <dd>계정(또는 쉼표로 구분된 계정의 목록)을 포함 목록에 추가하고 항목에 대한 가시성을 부여합니다. 이메일 또는 계정 GUID 허용</dd>
+  <dt>--includes-remove</dt>
+  <dd>계정(또는 쉼표로 구분된 계정의 목록)을 포함 목록에서 제거하고 항목에 대한 가시성을 취소합니다. 이메일 또는 계정 GUID 허용</dd>  
+  <dt>--excludes-add</dt>
+  <dd>계정(또는 쉼표로 구분된 계정의 목록)을 제외 목록에 추가합니다. 이메일 또는 계정 GUID 허용</dd>
+  <dt>--excludes-remove</dt>
+  <dd>계정(또는 쉼표로 구분된 계정의 목록)을 제외 목록에서 제거하고 항목에 대한 가시성을 취소합니다. 글로벌 관리자가 계정을 설정한 경우, 계정 관리자는 계정을 제거할 수 없습니다. 이메일 또는 계정 GUID 허용</dd>
+  <dt>--owner</dt>
+  <dd>오브젝트의 소유자를 변경합니다. 이메일 또는 계정 GUID 허용 </dd>
+  <dt>--restrict</dt>
+  <dd>가시성 오브젝트의 제한을 '개인용'으로 변경</dd>
+  <dt>--unrestrict</dt>
+  <dd>가시성 오브젝트의 제한을 '공용'으로 변경</dd>  
   <dt>-c</dt>
   <dd>카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트(인라인 또는 파일로 제공됨). 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
 
@@ -3288,7 +3333,7 @@ bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 JSON 파일에서 리소스 `j402-dnf1i`의 가시성 설정:
 
 ```
-bluemix catalog entry-visibility-set -i 'j402-dnf1i' -c @visibility.json
+bluemix catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
 
@@ -3304,11 +3349,11 @@ bluemix catalog service-marketplace [--cf] [--rc] [--global]
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-cf</dt>
+  <dt>--cf</dt>
   <dd>Cloud Foundry 서비스만 표시</dd>
-  <dt>-rc</dt>
+  <dt>--rc</dt>
   <dd>RC 호환 가능 서비스만 표시</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
 
@@ -3384,7 +3429,7 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [
    <dt>CF_APP_NAME(필수)</dt>
    <dd>작성되는 cf 애플리케이션의 이름입니다. </dd>
    <dt>-u <i>URL</i>(선택사항)</dt>
-   <dd>애플리케이션의 라우트입니다. 지정하지 않으면, 앱 이름과 기본 도메인에 따라 Bluemix가 자동으로 라우트를 설정합니다. </dd>
+   <dd>애플리케이션의 라우트입니다. 지정되지 않은 경우, 앱 이름과 기본 도메인을 기반으로 {{site.data.keyword.Bluemix_notm}}에 의해 자동으로 라우트가 설정됩니다. </dd>
    <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
    <dd>애플리케이션에 대한 설명입니다. </dd>
    <dt>--no-start(선택사항)</dt>
@@ -3518,13 +3563,13 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME(필수)</dt>
    <dd>추가되는 저장소의 이름입니다. 각 저장소의 고유 이름을 정의할 수 있습니다.</dd>
    <dt>REPO_URL(필수)</dt>
-   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net 이것이 Bluemix CLI의 공식 플러그인 저장소입니다. </dd>
+   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net은 {{site.data.keyword.Bluemix_notm}} CLI공식 플러그인 저장소입니다. </dd>
     </dl>
 
 
 <strong>예제</strong>:
 
-Bluemix CLI의 공식 플러그인 저장소를 `bluemix-repo`로 추가합니다.
+{{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소를 `bluemix-repo`로 추가:
 
 ```
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
@@ -3760,4 +3805,3 @@ bluemix plugin uninstall PLUGIN_NAME
 ```
 bluemix plugin uninstall IBM-Containers
 ```
-

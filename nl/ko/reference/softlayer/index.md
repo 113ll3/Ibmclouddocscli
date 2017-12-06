@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-09-22"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-09-22"
 
 {{site.data.keyword.BluSoftlayer}} 플러그인은 {{site.data.keyword.Bluemix_notm}} CLI에 병합되었습니다. 더 이상 플러그인을 설치할 필요가 없습니다.
 
-{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 {{site.data.keyword.BluSoftlayer_notm}} 명령을 사용하여 SoftLayer 서비스를 구성하고 관리하십시오.
+SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령을 사용하십시오. 
 
 
 시작하려면 IBM {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 세부사항은
@@ -25,14 +25,14 @@ lastupdated: "2017-09-22"
 {{site.data.keyword.Bluemix_notm}} 명령의 전체 목록은 [{{site.data.keyword.Bluemix_notm:}} (bx) 명령](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)을 참조하십시오.
 
 
-## 일반 {{site.data.keyword.BluSoftlayer_notm}} 명령
+## 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령
 
 다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 보려면 `bluemix sl` 명령을 사용하십시오.
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 명령">
-<caption>표 1. 일반 Softlayer 명령</caption>
+<caption>표 1. 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령</caption>
  <thead>
- <th colspan="6">일반 Softlayer 명령</th>
+ <th colspan="6">일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -42,10 +42,10 @@ lastupdated: "2017-09-22"
  </table>
 
 
-## {{site.data.keyword.BluSoftlayer_notm}} 블록 스토리지 명령
+## {{site.data.keyword.BluSoftlayer_notm}} 인프라 블록 스토리지 명령
 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 2. Softlayer 블록 스토리지</caption>
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 2. {{site.data.keyword.BluSoftlayer_notm}} 인프라 블록 스토리지</caption>
  <thead>
  <th colspan="6">Softlayer 블록 스토리지</th>
  </thead>
@@ -83,10 +83,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} CDN 명령
+ ## {{site.data.keyword.BluSoftlayer_notm}} 인프라 CDN 명령
 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 3. Softlayer CDN</caption>
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 3. {{site.data.keyword.BluSoftlayer_notm}} 인프라 CDN</caption>
  <thead>
  <th colspan="6">Softlayer CDN</th>
  </thead>
@@ -108,10 +108,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} 파일 스토리지 명령
+## {{site.data.keyword.BluSoftlayer_notm}} 인프라 파일 스토리지 명령
 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 4. Softlayer 파일 스토리지</caption>
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 4. {{site.data.keyword.BluSoftlayer_notm}} 인프라 파일 스토리지 </caption>
  <thead>
  <th colspan="6">Softlayer 파일 스토리지</th>
  </thead>
@@ -149,10 +149,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} DNS 명령
+## {{site.data.keyword.BluSoftlayer_notm}} 인프라 DNS 명령
 
-<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 5. Softlayer DNS 명령</caption>
+<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 5. {{site.data.keyword.BluSoftlayer_notm}} 인프라 DNS 명령</caption>
  <thead>
  <th colspan="6">Softlayer DNS 명령</th>
  </thead>
@@ -173,8 +173,8 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 6. Softlayer 글로벌 IP 명령</caption>
+<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 6. {{site.data.keyword.BluSoftlayer_notm}} 인프라 글로벌 IP 명령</caption>
  <thead>
  <th colspan="6">Softlayer 글로벌 IP 명령</th>
  </thead>
@@ -189,10 +189,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} 이미지 명령
+## {{site.data.keyword.BluSoftlayer_notm}} 인프라 이미지 명령
 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 7. Softlayer 이미지 명령</caption>
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 7. {{site.data.keyword.BluSoftlayer_notm}} 인프라 이미지 명령</caption>
  <thead>
  <th colspan="6">Softlayer 이미지 명령</th>
  </thead>
@@ -205,11 +205,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
- ## {{site.data.keyword.BluSoftlayer_notm}} IPSec VPN 명령
 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 7. Softlayer IPSec VPN 명령</caption>
+ ## {{site.data.keyword.BluSoftlayer_notm}} 인프라 IPSec VPN 명령
+
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 7. {{site.data.keyword.BluSoftlayer_notm}} 인프라 IPSec VPN 명령</caption>
  <thead>
  <th colspan="6">Softlayer IPSec VPN 명령</th>
  </thead>
@@ -232,10 +232,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} 로드 밸런서 명령
+ ## {{site.data.keyword.BluSoftlayer_notm}} 인프라 로드 밸런서 명령
 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 8. Softlayer 로드 밸런서 명령</caption>
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 8. {{site.data.keyword.BluSoftlayer_notm}} 인프라 로드 밸런서 명령</caption>
  <thead>
  <th colspan="6">Softlayer 로드 밸런서 명령</th>
  </thead>
@@ -265,10 +265,10 @@ lastupdated: "2017-09-22"
 </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} 보안 명령
+## {{site.data.keyword.BluSoftlayer_notm}} 인프라 보안 명령
 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 9. Softlayer 보안 명령</caption>
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 9. {{site.data.keyword.BluSoftlayer_notm}} 인프라 보안 명령</caption>
  <thead>
  <th colspan="5">Softlayer 보안 명령</th>
  </thead>
@@ -290,10 +290,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} 서브넷 명령
- 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 10. Softlayer 서브넷 명령</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 인프라 서브넷 명령
+
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 10. {{site.data.keyword.BluSoftlayer_notm}} 인프라 서브넷 명령</caption>
  <thead>
  <th colspan="5">Softlayer 서브넷 명령</th>
  </thead>
@@ -307,11 +307,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
-## {{site.data.keyword.BluSoftlayer_notm}} 가상 서버 명령
 
- <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 11. Softlayer 가상 서버 명령</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 인프라 가상 서버 명령
+
+ <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 11. {{site.data.keyword.BluSoftlayer_notm}} 인프라 가상 서버 명령</caption>
  <thead>
  <th colspan="6">Softlayer 가상 서버 명령</th>
  </thead>
@@ -340,11 +340,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
-## {{site.data.keyword.BluSoftlayer_notm}} VLAN 명령
 
-  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 Softlayer 명령">
-<caption>표 12. Softlayer VLAN 명령</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 인프라 VLAN 명령
+
+  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 12. {{site.data.keyword.BluSoftlayer_notm}} 인프라 VLAN 명령</caption>
  <thead>
  <th colspan="6">Softlayer VLAN 명령</th>
  </thead>
@@ -374,7 +374,7 @@ bluemix sl init [OPTIONS]
 <strong>명령 옵션</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API 엔드포인트 URL. 기본값: https://api.softlayer.com/rest/v3.1(Softlayer API 키 인증의 경우), https://api.softlayer.com/mobile/v3.1(IBM ID 인증의 경우)</dd>
+<dd>Softlayer API 엔드포인트 URL. 기본값: https://api.softlayer.com/rest/v3.1({{site.data.keyword.BluSoftlayer_notm}} 인프라 API 키 인증의 경우), https://api.softlayer.com/mobile/v3.1(IBM ID 인증의 경우).</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer 사용자 이름.</dd>
 <dt>-p, --sl-password</dt>
@@ -393,14 +393,14 @@ bluemix sl init [OPTIONS]
 <dd>전화 인증이 사용되는 경우 인증 토큰.</dd>
 </dl>
 
-예를 들면, Softlayer 사용자 이름 및 비밀번호/API 키로 로그인
+예: {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
 ```
 $ bluemix sl config
-Choose how to configure Softlayer authentication: 
-1. Login with Softlayer user name and password/API key
-2. Use Bluemix Single-Sign-On
-Enter a number>1
-Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 인증을 구성하는 방법 선택:
+1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
+2. {{site.data.keyword.Bluemix_notm}} Single-Sign-On 사용
+번호 입력>1
+Softlayer API 엔드포인트 URL: [https://api.softlayer.com/rest/v3.1]>
 Username: []> wangjunl@cn.ibm.com
 API key or password: []> abcd
 
@@ -409,7 +409,7 @@ Account ID:                278444
 User ID:                   wangjunl@cn.ibm.com   
 API Key:                   xxxxxxxxxx
 ```
-예를 들면, Bluemix Single-Sign-On을 사용하여 Softlayer 로그인
+예: {{site.data.keyword.Bluemix_notm}} Single-Sign-On을 사용하여 Softlayer에 로그인
 ```
 $ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
@@ -424,15 +424,15 @@ User:           wangjunl@cn.ibm.com
 Account:        Wilma's Account (65ce8074c6c62b5)   
 No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 
-팁: Bluemix CLI 컨텍스트와 함께 Cloud Foundry CLI를 실행하려면 'bx cf <command>'를 사용하십시오.
+팁: 'bx cf <command>'를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry CLI를 실행할 수 있습니다.
 ```
 
 $ bx sl init
-Softlayer 인증을 구성하는 방법을 선택하십시오. 
-1. Softlayer 사용자 이름 및 비밀번호/API 키로 로그인
-2. Use Bluemix Single-Sign-On
-Enter a number> 2
-Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]> 
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 인증을 구성하는 방법 선택: 
+1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
+2. {{site.data.keyword.Bluemix_notm}} Single-Sign-On 사용
+번호 입력> 2
+Softlayer API 엔드포인트 URL: [https://api.softlayer.com/mobile/v3.1]>
 Setting account to: 278444
 OK
                               
@@ -447,7 +447,7 @@ IMS 토큰:                 xxxxxxxxxx
 ### bluemix sl help
 {: #sl_help}
 
-Softlayer 환경을 조작하기 위한 모든 명령에 대한 도움말 정보를 봅니다.
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 환경을 운영하기 위한 모든 명령에 대한 도움말 정보를 봅니다.
 ```
 bluemix sl help
 

@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-09-22"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-09-22"
 
 {{site.data.keyword.BluSoftlayer}} プラグインは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。このプラグインのインストールは必要なくなりました。
 
-{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) で {{site.data.keyword.BluSoftlayer_notm}} コマンドを使用して、SoftLayer のサービスを管理および構成します。
+{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) で {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンドを使用して、SoftLayer のサービスを管理および構成します。
 
 
 まず、IBM {{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[Bluemix CLI ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}』を参照してください。
@@ -24,14 +24,14 @@ lastupdated: "2017-09-22"
 {{site.data.keyword.Bluemix_notm}} コマンドの完全リストについては、[{{site.data.keyword.Bluemix_notm:}} (bx) コマンド](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)を参照してください。
 
 
-## {{site.data.keyword.BluSoftlayer_notm}} の汎用コマンド
+## 汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド
 
 以下のコマンドがサポートされます。使用可能なコマンドのリストを表示するには、`bluemix sl` コマンドを使用します。
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用コマンド">
-<caption>表 1. 汎用 Softlayer コマンド</caption>
+<caption>表 1. 汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド</caption>
  <thead>
- <th colspan="6">汎用 Softlayer コマンド</th>
+ <th colspan="6">汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -41,10 +41,10 @@ lastupdated: "2017-09-22"
  </table>
 
 
-## {{site.data.keyword.BluSoftlayer_notm}} ブロック・ストレージ・コマンド
+## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ブロック・ストレージ・コマンド
 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 2. Softlayer ブロック・ストレージ</caption>
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 2. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ブロック・ストレージ</caption>
  <thead>
  <th colspan="6">Softlayer ブロック・ストレージ</th>
  </thead>
@@ -82,10 +82,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} CDN コマンド
+ ## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー CDN コマンド
 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 3. Softlayer CDN</caption>
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 3. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー CDN</caption>
  <thead>
  <th colspan="6">Softlayer CDN</th>
  </thead>
@@ -108,10 +108,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} ファイル・ストレージ・コマンド
+## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ファイル・ストレージ・コマンド
 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 4. Softlayer ファイル・ストレージ</caption>
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 4. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ファイル・ストレージ</caption>
  <thead>
  <th colspan="6">Softlayer ファイル・ストレージ</th>
  </thead>
@@ -150,10 +150,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} DNS コマンド
+## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー DNS コマンド
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 5. Softlayer DNS コマンド</caption>
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 5. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー DNS コマンド</caption>
  <thead>
  <th colspan="6">Softlayer DNS コマンド</th>
  </thead>
@@ -174,8 +174,8 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 6. Softlayer グローバル IP コマンド</caption>
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 6. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・グローバル IP コマンド</caption>
  <thead>
  <th colspan="6">Softlayer グローバル IP コマンド</th>
  </thead>
@@ -190,10 +190,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} イメージ・コマンド
+## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・イメージ・コマンド
 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 7. Softlayer イメージ・コマンド</caption>
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・イメージ・コマンド</caption>
  <thead>
  <th colspan="6">Softlayer イメージ・コマンド</th>
  </thead>
@@ -206,11 +206,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
- ## {{site.data.keyword.BluSoftlayer_notm}} IPSec VPN コマンド
 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 7. Softlayer IPSec VPN コマンド</caption>
+ ## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー IPSec VPN コマンド
+
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー IPSec VPN コマンド</caption>
  <thead>
  <th colspan="6">Softlayer IPSec VPN コマンド</th>
  </thead>
@@ -233,10 +233,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} ロード・バランサー・コマンド
+ ## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ロード・バランサー・コマンド
 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 8. Softlayer ロード・バランサー・コマンド</caption>
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 8. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ロード・バランサー・コマンド</caption>
  <thead>
  <th colspan="6">Softlayer ロード・バランサー・コマンド</th>
  </thead>
@@ -271,10 +271,10 @@ lastupdated: "2017-09-22"
 </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} セキュリティー・コマンド
+## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・セキュリティー・コマンド
 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 9. Softlayer セキュリティー・コマンド</caption>
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 9. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・セキュリティー・コマンド</caption>
  <thead>
  <th colspan="5">Softlayer セキュリティー・コマンド</th>
  </thead>
@@ -296,10 +296,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} サブネット・コマンド
- 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 10. Softlayer サブネット・コマンド</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サブネット・コマンド
+
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 10. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サブネット・コマンド</caption>
  <thead>
  <th colspan="5">Softlayer サブネット・コマンド</th>
  </thead>
@@ -313,11 +313,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
-## {{site.data.keyword.BluSoftlayer_notm}} 仮想サーバー・コマンド
 
- <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 11. Softlayer 仮想サーバー・コマンド</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー仮想サーバー・コマンド
+
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 11. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー仮想サーバー・コマンド</caption>
  <thead>
  <th colspan="6">Softlayer 仮想サーバー・コマンド</th>
  </thead>
@@ -346,11 +346,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
-## {{site.data.keyword.BluSoftlayer_notm}} VLAN コマンド
 
-  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 Softlayer コマンド">
-<caption>表 12. Softlayer VLAN コマンド</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー VLAN コマンド
+
+  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 12. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー VLAN コマンド</caption>
  <thead>
  <th colspan="6">Softlayer VLAN コマンド</th>
  </thead>
@@ -380,7 +380,7 @@ bluemix sl init [OPTIONS]
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API エンドポイント URL (デフォルト: Softlayer API キー認証は https://api.softlayer.com/rest/v3.1、IBMid 認証は https://api.softlayer.com/mobile/v3.1)。</dd>
+<dd>Softlayer API エンドポイント URL (デフォルト: {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー API キー認証は https://api.softlayer.com/rest/v3.1、IBMid 認証は https://api.softlayer.com/mobile/v3.1)。</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer ユーザー名。</dd>
 <dt>-p, --sl-password</dt>
@@ -399,12 +399,12 @@ bluemix sl init [OPTIONS]
 <dd>電話認証が有効な場合の認証トークン。</dd>
 </dl>
 
-例えば、Softlayer のユーザー名とパスワード/API キーを使用してログインします
+例えば、{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーのユーザー名とパスワード/API キーを使用してログインします
 ```
 $ bluemix sl config
-Choose how to configure Softlayer authentication: 
-1. Login with Softlayer user name and password/API key
-2. Use Bluemix Single-Sign-On
+Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 Enter a number>1
 Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
 Username: []> wangjunl@cn.ibm.com
@@ -415,7 +415,7 @@ Account ID:                278444
 User ID:                   wangjunl@cn.ibm.com   
 API Key:                   xxxxxxxxxx
 ```
-例えば、Bluemix の Single-Sign-On を使用して Softlayer にログインします
+例えば、{{site.data.keyword.Bluemix_notm}} の Single-Sign-On を使用して Softlayer にログインします
 ```
 $ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
@@ -430,13 +430,13 @@ User:           wangjunl@cn.ibm.com
 Account:        Wilma's Account (65ce8074c6c62b5)   
 No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 
-Tip: use 'bx cf <command>' to run the Cloud Foundry CLI with Bluemix CLI context.
+Tip: use 'bx cf <command>' to run the Cloud Foundry CLI with {{site.data.keyword.Bluemix_notm}} CLI context.
 ```
 
 $ bx sl init
-Softlayer 認証の構成方法を以下から選択します。 
-1. Softlayer のユーザー名とパスワード/API キーを使用してログインする
-2. Bluemix のシングル・サインオンを使用する
+{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー認証の構成方法を以下から選択します。
+1. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーのユーザー名とパスワード/API キーを使用してログインする
+2. {{site.data.keyword.Bluemix_notm}} のシングル・サインオンを使用する
 数値を入力してください> 2
 Softlayer API エンドポイント URL: [https://api.softlayer.com/mobile/v3.1]>
 Setting account to: 278444
@@ -453,7 +453,7 @@ IMS token:                 xxxxxxxxxx
 ### bluemix sl help
 {: #sl_help}
 
-Softlayer 環境で作動するすべてのコマンドのヘルプ情報を表示します。
+{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー環境で作動するすべてのコマンドのヘルプ情報を表示します。
 ```
 bluemix sl help
 
