@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-12-06"
 
 
 ---
@@ -26,10 +26,10 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
 * Before running the registry commands, log in to {{site.data.keyword.Bluemix_notm}}
  with the `bx login` command to generate an access token and authenticate your session.
 
-To find out about how to use the {{site.data.keyword.registrylong_notm}} CLI, see [Setting up a private images registry](../../../services/Registry/index.html).
+To find out about how to use the {{site.data.keyword.registrylong_notm}} CLI, see [Getting started with {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html).
 
-<table summary="Manage {{site.data.keyword.registrylong_notm}}y">
-<caption>Table 1. Commands for managing {{site.data.keyword.registrylong_notm}} on {{site.data.keyword.Bluemix_notm}}
+<table summary="Manage {{site.data.keyword.registrylong_notm}}">
+<caption>Table 1. Commands for managing {{site.data.keyword.registrylong_notm}}
 </caption>
  <thead>
  <th colspan="5">Commands for managing the registry</th>
@@ -86,7 +86,7 @@ bx cr api
 Builds a Docker image in {{site.data.keyword.registrylong_notm}}.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--file FILE | -f FILE] --tag TAG DIRECTORY
 ```
 {: codeblock}
 
@@ -97,14 +97,14 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file
 <dt>--no-cache</dt>
 <dd>(Optional)  If specified, cached image layers from previous builds are not used in this build.</dd>
 <dt>--pull</dt>
-<dd>(Optional) If specified, the base image is pulled even if an image with a matching tag already exists on the build host.</dd>
+<dd>(Optional) If specified, the base images are pulled even if an image with a matching tag already exists on the build host.</dd>
 <dt>--quiet, -q</dt>
-<dd>(Optional) If specified, build output is suppressed unless an error occurs.</dd>
-<dt> --build-arg value</dt>
-<dd>(Optional) Specify an additional build argument in the format 'KEY=VALUE'. Multiple build arguments can be specified by including this parameter multiple times. The value of build arguments are available as environment variables when you specify an ARG line that matches the key in your Dockerfile.</dd>
-<dt>--file value, -f value</dt>
+<dd>(Optional) If specified, the build output is suppressed unless an error occurs.</dd>
+<dt> --build-arg KEY=VALUE</dt>
+<dd>(Optional) Specify an additional build argument in the format 'KEY=VALUE'. Multiple build arguments can be specified by including this parameter multiple times. The value of each build argument is available as an environment variable when you specify an ARG line that matches the key in your Dockerfile.</dd>
+<dt>--file FILE, -f FILE</dt>
 <dd>(Optional)  If you use the same files for multiple builds, you can choose a path to a different Dockerfile. Specify the location of the Dockerfile relative to the build context. If not specified, the default is `PATH/Dockerfile`, where PATH is the root of the build context.</dd>
-<dt>--tag value, -t value</dt>
+<dt>--tag TAG, -t TAG</dt>
 <dd>The full name for the image that you want to build, which includes the registry URL and namespace.</dd>
 </dl>
 
@@ -131,12 +131,11 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 {: codeblock}
 
 **Parameters**
-
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Format the output elements by using a Go template.
+<dd>(Optional) Format the output elements by using a Go template. 
 
-For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+For more information, see [Formatting and filtering the CLI output for {{site.data.keyword.registrylong_notm}} commands](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
@@ -150,7 +149,7 @@ For more information, see [Viewing information about images](../../../services/R
 Displays all images in your {{site.data.keyword.Bluemix_notm}} account.
 
 ```
- bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
+ bx cr image-list [--no-trunc] [--format FORMAT] [-q, --quiet] [--restrict RESTRICTION] [--include-ibm] 
 ```
 {: codeblock}
 
@@ -158,17 +157,20 @@ Displays all images in your {{site.data.keyword.Bluemix_notm}} account.
 <dl>
 <dt>--no-trunc</dt>
 <dd>(Optional) Do not truncate the image digests.</dd>
-<dt>-q, --quiet</dt>
-<dd>(Optional) Each image is listed in the format: `repository:tag`.</dd>
-<dt>--include-ibm</dt>
-<dd>(Optional) Includes {{site.data.keyword.IBM_notm}}-provided public images in the output. Without this option, by default private images only are listed.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Format the output elements by using a Go template.
+<dd>(Optional) Format the output elements by using a Go template. 
 
-For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+For more information, see [Formatting and filtering the CLI output for {{site.data.keyword.registrylong_notm}} commands](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
+<dt>-q, --quiet</dt>
+<dd>(Optional) Each image is listed in the format: `repository:tag`</dd>
+<dt>--restrict RESTRICTION</dt>
+<dd>(Optional) Limit the output to display only images in the specified namespace or namespace and repository. </dd>
+<dt>--include-ibm</dt>
+<dd>(Optional) Includes {{site.data.keyword.IBM_notm}}-provided public images in the output. Without this option, by default private images only are listed.</dd>
 </dl>
+
 
 
 ## bx cr image-rm
@@ -291,15 +293,15 @@ bx cr quota
 Modify the specified quota.
 
 ```
-bx cr quota-set [--traffic VALUE] [--storage VALUE]
+bx cr quota-set [--traffic TRAFFIC] [--storage STORAGE]
 ```
 {: codeblock}
 
 **Parameters**
 <dl>
-<dt>--traffic VALUE</dt>
+<dt>--traffic TRAFFIC</dt>
 <dd>(Optional) Changes your traffic quota to the specified value in megabytes. The operation fails if you are not authorized to set traffic, or if you set a value that exceeds your current pricing plan.</dd>
-<dt>--storage VALUE</dt>
+<dt>--storage STORAGE</dt>
 <dd>(Optional) Changes your storage quota to the specified value in megabytes. The operation fails if you are not authorized to set storage quotas, or if you set a value that exceeds your current pricing plan.</dd>
 </dl>
 
@@ -338,7 +340,7 @@ bx cr region-set [REGION]
 Adds a token that you can use to control access to a registry.
 
 ```
-bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrite]
+bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--readwrite]
 ```
 
 {: codeblock}
@@ -346,7 +348,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 **Parameters**
 <dl>
-<dt>--description VALUE</dt>
+<dt>--description DESCRIPTION</dt>
 <dd>(Optional) Specifies the value as a description for the token, which is displayed when you run `bx cr token-list`. If your token is created automatically by {{site.data.keyword.containerlong_notm}}, the description is set to your Kubernetes Cluster name. In this case, the token is removed automatically when your cluster is removed.</dd>
 <dt>-q, --quiet</dt>
 <dd>(Optional) Displays the token only, without any surrounding text.</dd>
@@ -388,9 +390,9 @@ bx cr token-list --format FORMAT
 **Parameters**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Format the output elements by using a Go template.
+<dd>(Optional) Format the output elements by using a Go template. 
 
-For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+For more information, see [Formatting and filtering the CLI output for {{site.data.keyword.registrylong_notm}} commands](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 </dl>
