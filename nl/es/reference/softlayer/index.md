@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-09-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-11-10"
 
 El plugin de {{site.data.keyword.BluSoftlayer}} se ha fusionado en la CLI de {{site.data.keyword.Bluemix_notm}}. Ya no necesita instalar el plugin.
 
-Utilice los mandatos de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}} en la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} para configurar y gestionar los servicios de SoftLayer.
+Utilice los mandatos de {{site.data.keyword.BluSoftlayer_notm}} en la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} para configurar y gestionar los servicios de SoftLayer.
 
 
 Para empezar, instale IBM {{site.data.keyword.Bluemix_notm}} CLI. Consulte
@@ -25,14 +25,14 @@ Para empezar, instale IBM {{site.data.keyword.Bluemix_notm}} CLI. Consulte
 Para obtener una lista completa de los mandatos de {{site.data.keyword.Bluemix_notm}}, consulte: [Mandatos de {{site.data.keyword.Bluemix_notm:}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
-## Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}}
+## Mandatos de {{site.data.keyword.BluSoftlayer_notm}} generales
 
 Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ver la lista de mandatos disponibles:
 
 <table summary="Mandatos ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 1. Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<caption>Tabla 1. Mandatos generales de Softlayer</caption>
  <thead>
- <th colspan="6">Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Mandatos generales Softlayer</th>
  </thead>
  <tbody>
  <tr>
@@ -42,10 +42,10 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
  </table>
 
 
-## Mandatos de almacenamiento en bloque de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
+## Mandatos de almacenamiento en bloque de {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 2. Almacenamiento en bloque de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 2. Almacenamiento en bloque de Softlayer</caption>
  <thead>
  <th colspan="6">Almacenamiento en bloque de Softlayer</th>
  </thead>
@@ -83,10 +83,10 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
    </tbody>
  </table>
 
- ## Mandatos CDN de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
+ ## Mandatos CDN de {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 3. CDN de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 3. CDN de Softlayer</caption>
  <thead>
  <th colspan="6">CDN de Softlayer</th>
  </thead>
@@ -108,10 +108,10 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
    </tbody>
  </table>
 
-## Mandatos de almacenamiento de archivos de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
+## Mandatos de almacenamiento de archivos de {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 4. Almacenamiento de archivos de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 4. Almacenamiento de archivos de Softlayer</caption>
  <thead>
  <th colspan="6">Almacenamiento de archivos de Softlayer</th>
  </thead>
@@ -149,10 +149,10 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
    </tbody>
  </table>
 
-## Mandatos DNS de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
+## Mandatos DNS de {{site.data.keyword.BluSoftlayer_notm}}
 
-<table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 5. Mandatos DNS de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 5. Mandatos DNS de Softlayer</caption>
  <thead>
  <th colspan="6">Mandatos DNS de Softlayer</th>
  </thead>
@@ -173,8 +173,8 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
    </tbody>
  </table>
 
-<table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 6. Mandatos de IP de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}} global</caption>
+<table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 6. Mandatos de IP de Softlayer Global</caption>
  <thead>
  <th colspan="6">Mandatos de IP de Softlayer Global</th>
  </thead>
@@ -189,10 +189,10 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
    </tbody>
  </table>
 
-## Mandatos image de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
+## Mandatos image de {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 7. Mandatos image de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 7. Mandatos image de Softlayer</caption>
  <thead>
  <th colspan="6">Mandatos image de Softlayer</th>
  </thead>
@@ -205,11 +205,11 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
  </tr>
    </tbody>
  </table>
+ 
+ ## Mandatos VPN de IPSec de {{site.data.keyword.BluSoftlayer_notm}}
 
- ## Mandatos VPN de IPSec de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
-
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 7. Mandatos VPN de IPSec de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 7. Mandatos VPN de IPSec de Softlayer</caption>
  <thead>
  <th colspan="6">Mandatos VPN de IPSec de Softlayer</th>
  </thead>
@@ -232,10 +232,10 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
    </tbody>
  </table>
 
- ## Mandatos Load Balancer de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
+ ## Mandatos Load Balancer de {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 8. Mandatos Load Balancer de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 8. Mandatos Load Balancer de Softlayer</caption>
  <thead>
  <th colspan="6">Mandatos Load Balancer de Softlayer</th>
  </thead>
@@ -265,10 +265,10 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
 </tbody>
  </table>
 
-## Mandatos security de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
+## Mandatos security de {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 9. Mandatos security de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 9. Mandatos security de Softlayer</caption>
  <thead>
  <th colspan="5">Mandatos security de Softlayer</th>
  </thead>
@@ -290,10 +290,10 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
    </tbody>
  </table>
 
-## Mandatos subnet de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
-
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 10. Mandatos subnet de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+## Mandatos subnet de {{site.data.keyword.BluSoftlayer_notm}}
+ 
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 10. Mandatos subnet de Softlayer</caption>
  <thead>
  <th colspan="5">Mandatos subnet de Softlayer</th>
  </thead>
@@ -307,11 +307,11 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
  </tr>
    </tbody>
  </table>
+ 
+## Mandatos de servidor virtual de {{site.data.keyword.BluSoftlayer_notm}}
 
-## Mandatos de servidor virtual de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
-
- <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 11. Mandatos de servidor virtual de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 11. Mandatos de servidor virtual de Softlayer</caption>
  <thead>
  <th colspan="6">Mandatos de servidor virtual de Softlayer</th>
  </thead>
@@ -340,11 +340,11 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix sl` para ve
  </tr>
    </tbody>
  </table>
+ 
+## Mandatos VLAN de {{site.data.keyword.BluSoftlayer_notm}}
 
-## Mandatos VLAN de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}
-
-  <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 12. Mandatos VLAN de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+  <table summary="Mandatos de Softlayer generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 12. Mandatos VLAN de Softlayer</caption>
  <thead>
  <th colspan="6">Mandatos VLAN de Softlayer</th>
  </thead>
@@ -374,7 +374,7 @@ bluemix sl init [OPTIONS]
 <strong>Opciones de mandato</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>URL de punto final de la API de Softlayer, el valor predeterminado es: https://api.softlayer.com/rest/v3.1 para la autenticación de claves de API de ka infraestructura de {{site.data.keyword.BluSoftlayer_notm}}, https://api.softlayer.com/mobile/v3.1 para la autenticación del ID de IBM.</dd>
+<dd>URL de punto final de la API de Softlayer, el valor predeterminado es: https://api.softlayer.com/rest/v3.1 para la autenticación de claves de API de Softlayer, https://api.softlayer.com/mobile/v3.1 para la autenticación del ID de IBM.</dd>
 <dt>-u, --sl-user</dt>
 <dd>Nombre de usuario de Softlayer.</dd>
 <dt>-p, --sl-password</dt>
@@ -393,12 +393,12 @@ bluemix sl init [OPTIONS]
 <dd>Señal de autenticación cuando se habilita la autenticación telefónica.</dd>
 </dl>
 
-Por ejemplo, inicie la sesión con nombre de usuario y contraseña/clave de API de {{site.data.keyword.BluSoftlayer_notm}}
+Por ejemplo, inicie la sesión con nombre de usuario y contraseña/clave de API de Softlayer
 ```
 $ bluemix sl config
-Elija cómo configurar la autenticación de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}:
-1. Iniciar sesión con nombre de usuario y contraseña/clave de API de {{site.data.keyword.BluSoftlayer_notm}}
-2. Utilizar inicio de sesión único de {{site.data.keyword.Bluemix_notm}}
+Elija cómo configurar la autenticación de Softlayer:
+1. Iniciar sesión con nombre de usuario y contraseña/clave de API de Softlayer
+2. Utilizar inicio de sesión único de Bluemix
 Escriba un número>1
 URL de punto final de API de Softlayer: [https://api.softlayer.com/rest/v3.1]>
 Nombre de usuario: []> wangjunl@cn.ibm.com
@@ -409,7 +409,7 @@ ID de cuenta:                    278444
 ID de usuario:                   wangjunl@cn.ibm.com
 Clave de API:                    xxxxxxxxxx
 ```
-Por ejemplo, utilice el inicio de sesión único de {{site.data.keyword.Bluemix_notm}} para iniciar la sesión en Softlayer
+Por ejemplo, utilice el inicio de sesión único de Bluemix para iniciar la sesión en Softlayer
 ```
 $ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 Punto final de la API: api.ng.bluemix.net
@@ -417,20 +417,20 @@ Autenticando...
 Correcto
 
 Cuenta de destino Wilma's Account (65ce8074c6c62b5)
-
+                  
 Punto final de la API:   https://api.ng.bluemix.net (Versión de la API: 2.54.0)   
 Región:                  us-south
 Usuario:                 wangjunl@cn.ibm.com
 Cuenta:                  Wilma's Account (65ce8074c6c62b5)   
 Ninguna organización ni espacio de destino. Utilice 'bx target --cf or bx target -o ORG -s SPACE'
 
-Sugerencia: Utilice 'bx cf <command>' para ejecutar la CLI de Cloud Foundry con el contexto de CLI de {{site.data.keyword.Bluemix_notm}}.
+Sugerencia: Utilice 'bx cf <command>' para ejecutar la CLI de Cloud Foundry con el contexto de CLI de Bluemix.
 ```
 
 $ bx sl init
-Elija cómo configurar la autenticación {{site.data.keyword.BluSoftlayer_notm}}:
-1. Iniciar sesión con nombre de usuario y contraseña/clave de API de {{site.data.keyword.BluSoftlayer_notm}}
-2. Utilizar inicio de sesión único de {{site.data.keyword.Bluemix_notm}}
+Elija cómo configurar la autenticación Softlayer: 
+1. Iniciar sesión con nombre de usuario y contraseña/clave de API de Softlayer
+2. Utilizar inicio de sesión único de Bluemix
 Escriba un número>2
 URL de punto final de API de Softlayer: [https://api.softlayer.com/mobile/v3.1]> 
 Estableciendo la cuenta en: 278444
@@ -445,7 +445,7 @@ Señal de IMS:                 xxxxxxxxxx
 ### bluemix sl help
 {: #sl_help}
 
-Vea la información de ayuda para que todos los mandatos operen en el entorno de {{site.data.keyword.BluSoftlayer_notm}}.
+Vea la información de ayuda para que todos los mandatos operen en el entorno de Softlayer.
 ```
 bluemix sl help
 

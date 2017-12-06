@@ -16,7 +16,7 @@ lastupdated: "2017-06-29"
 # IBM Developer Tools para Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension para Visual Studio Code es una extensión para el editor que proporciona acceso a las funciones de la CLI de desarrollador de IBM directamente dentro de la paleta de mandatos del editor de Visual Studio Code.  Le permite acceder rápidamente a un subconjunto de mandatos de `bx dev` para ambos flujos de trabajo de Docker y CloudFoundry, incluyendo despliegue de apps, iniciar/detener/reiniciar apps en {{site.data.keyword.Bluemix_notm}}, visualización de los registros de app remoto, etc., todos sin la necesidad de dejar el contexto del editor.
+IBM Developer Extension para Visual Studio Code es una extensión para el editor que proporciona acceso a las funciones de la CLI de desarrollador de IBM directamente dentro de la paleta de mandatos del editor de Visual Studio Code.  Le permite acceder rápidamente a un subconjunto de mandatos de `bx dev` para ambos flujos de trabajo de Docker y CloudFoundry, incluyendo despliegue de apps, iniciar/detener/reiniciar apps en Bluemix, visualización de los registros de app remoto, etc., todos sin la necesidad de dejar el contexto del editor.
 {:shortdesc}
 
 ![Captura de pantalla de la pantalla de descarga de la extensión de IBM Developer Tools.](ibm-dev-tools-for-vscode.png "Pantalla de descarga de la extensión en Visual Studio Code")
@@ -24,7 +24,7 @@ IBM Developer Extension para Visual Studio Code es una extensión para el editor
 ## Dependencias
 {: #dependencies}
 
-Para utilizar la extensión de IBM Developer Tools para Visual Studio Code, también necesitará la [CLI de {{site.data.keyword.Bluemix_notm}}](https://plugins.ng.bluemix.net/ui/home.html) y el plugin de la [CLI de desarrollador de IBM](/docs/cloudnative/dev_cli.html) instalados en el sistema.
+Para utilizar la extensión de IBM Developer Tools para Visual Studio Code, también necesitará la [CLI de Bluemix](https://plugins.ng.bluemix.net/ui/home.html) y el plugin de la [CLI de IBM Developer ](/docs/cloudnative/dev_cli.html) instalado en el sistema.
 
 ## Instalación
 {: #installation}
@@ -63,19 +63,19 @@ A continuación, escriba o seleccione el mandato que desea invocar. Puede escrib
 
 Puede empezar con flujos de trabajo de bx dev, en unos cuantos pasos:
 * Cree un proyecto mediante uno de los dos métodos siguientes:
-  * Utilice la [consola web de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/developer/getting-started/) y descargue el código generado
-  * Utilice la [CLI de desarrollador de {{site.data.keyword.Bluemix_notm}}](/docs/cloudnative/dev_cli.html) y genere un proyecto utilizando el mandato `bx dev create`
+  * Utilice la [consola web de Bluemix](https://console.ng.bluemix.net/developer/getting-started/) y descargue el código generado
+  * Utilice la [CLI de desarrollador de Bluemix](/docs/cloudnative/dev_cli.html) y genere un proyecto utilizando el mandato `bx dev create`
 * Abra la carpeta del proyecto localmente en la ventana del editor de Visual Studio Code
 * Utilice el mandato `bx dev build` para crear la app en una imagen de Docker
 * Utilice el mandato `bx dev debug` para ejecutar la app en el Docker local para desarrollo
 > Nota: Para depurar una aplicación Node.js que se ejecuta dentro del contenedor local de Docker, deberá [añadir una configuración de depuración para el contenedor local](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
 * Utilice el mandato `bx dev run` para ejecutar la app en el Docker local en modo de publicación
-* Utilice el mandato `bx dev deploy` para desplegar la aplicación a un tiempo de ejecución de Cloud Foundry en {{site.data.keyword.Bluemix_notm}}*(Próximamente IBM Container Support).*
+* Utilice el mandato `bx dev deploy` para desplegar la aplicación a un tiempo de ejecución de Cloud Foundry en Bluemix *(Próximamente IBM Container Support).*
 
 ### Utilice IBM Developer Extension para flujos de trabajo de Cloud Foundry
 {: #usage-cloud-foundry}
 
-Para los usuarios que están actualmente desplegando apps en tiempos de ejecución de Cloud Foundry en IBM {{site.data.keyword.Bluemix_notm}}, también proporcionaremos soporte para el conjunto de operaciones `cf`.
+Para los usuarios que están actualmente desplegando apps en tiempos de ejecución de Cloud Foundry en IBM Bluemix, también proporcionaremos soporte para el conjunto de operaciones `cf`.
 
 Puede empezar con flujos de trabajo de CloudFoundry en unos cuantos pasos:
 * Cree una nueva aplicación de CloudFoundry

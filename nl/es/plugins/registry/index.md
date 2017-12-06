@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-10-26"
 
 
 ---
@@ -52,17 +52,15 @@ Para obtener información sobre la utilización de la interfaz de línea de mand
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
+ <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
- <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
- <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
- </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -86,7 +84,7 @@ bx cr api
 Crea una imagen de Docker en {{site.data.keyword.registrylong_notm}}.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -102,8 +100,6 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file
 <dd>(Opcional) Si se especifica, la salida de compilación se suprimirá a menos que se produzca un error.</dd>
 <dt> --build-arg value</dt>
 <dd>(Opcional) Especifica un argumento de compilación adicional en el formato 'KEY=VALUE'. Se pueden especificar varios argumentos de compilación incluyendo este parámetro varias veces. El valor de los argumentos de compilación está disponible como variables de entorno al especificar una línea ARG que coincida con la clave del Dockerfile.</dd>
-<dt>--file value, -f value</dt>
-<dd>(Opcional) Si utiliza los mismos archivos para varias compilaciones, puede elegir una vía de acceso hasta un Dockerfile diferente. Especifique la ubicación del Dockerfile relativo al contexto de compilación. Si no se especifica, el valor predeterminado es `PATH/Dockerfile`, donde PATH es la raíz del contexto de compilación.</dd>
 <dt>--tag value, -t value</dt>
 <dd>El nombre completo de la imagen que desea crear, que incluye el URL de registro y el espacio de nombres.</dd>
 </dl>
@@ -274,6 +270,12 @@ bx cr plan-upgrade [PLAN]
 </dl>
 
 
+## bx cr pricing
+{: #bx_cr_pricing}
+
+Este mandato se ha eliminado. Puede utilizar la calculadora de tarifas para calcular su coste estimado, consulte [Estimación de costes para {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_overview.html#registry_plan_billing).
+
+
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -301,34 +303,6 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>(Opcional) Cambia su cuota de tráfico al valor que especifique en megabytes. La operación falla si no está autorizado a establecer cuotas de tráfico, o si establece un valor por encima del que permite su plan de precios actual.</dd>
 <dt>--storage VALUE</dt>
 <dd>(Opcional) Cambia su cuota de almacenamiento al valor que especifique en megabytes. La operación falla si no está autorizado a establecer cuotas de almacenamiento, o si establece un valor por encima del que permite su plan de precios actual.</dd>
-</dl>
-
-
-## bx cr region
-{: #bx_cr_region}
-
-Visualiza la región de destino y el registro.
-
-```
-bx cr region
-```
-{: codeblock}
-
-
-## bx cr region-set
-{: #bx_cr_region_set}
-
-Establezca una región de destino para los mandatos de {{site.data.keyword.registrylong_notm}}. Para enumerar las regiones disponibles, ejecute el mandato sin parámetros.
-
-```
-bx cr region-set [REGION]
-```
-{: codeblock}
-
-**Parámetros**
-<dl>
-<dt>REGION</dt>
-<dd>(Opcional) El nombre de su región de destino, por ejemplo, `us-south`.</dd>
 </dl>
 
 

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-11-08"
+lastupdated: "2017-06-30"
 
 ---
 
@@ -28,8 +28,6 @@ La interfaz de línea de mandatos de {{site.data.keyword.Bluemix}} proporciona u
 
 
 ## IBM Cloud Application Tools 2 (Beta)
-{: #icat notoc}
-
 IBM Cloud Application Tools 2 es una aplicación de la barra de menús que se ha simplificado para la configuración del entorno local y la gestión en macOS. Mediante IBM Cloud Application Tools 2, puede instalar y actualizar fácilmente las herramientas y las interfaces de línea de mandatos de Bluemix, cambiar los destinos de despliegue de las interfaces de línea de mandatos, y acceder rápidamente a enlaces habituales de Bluemix.
 
 [Descargar](http://ibm.biz/icat-2-download){: new_window} <br>
@@ -41,7 +39,7 @@ IBM Cloud Application Tools 2 es una aplicación de la barra de menús que se ha
 
 Descargue e instale plugins para integrar sus servicios favoritos de {{site.data.keyword.Bluemix_notm}}.
 
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools para {{site.data.keyword.Bluemix_notm}}* |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
 |----------|----------|----------|----------|----------|
-| [Plugin de Liberty Eclipse ![Icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plugin de Eclipse ![Icono de enlace externo](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plugin de Rules Designer Eclipse](../services/rules/index.html#rulov002) | [Kit de utilidades del desarrollador](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Plug-in de Eclipse de {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="Tabla 6. Plugins" caption-side="top"}
+| [Plugin de Liberty Eclipse ![Icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plugin de Eclipse ![Icono de enlace externo](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plugin de Rules Designer Eclipse](../services/rules/index.html#rulov002) | [Kit de utilidades del desarrollador](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Plugin de Bluemix Eclipse](/docs/manageapps/eclipsetools/eclipsetools.html) |
+{: caption="Tabla 5. Plugins" caption-side="top"}

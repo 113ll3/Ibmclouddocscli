@@ -1,0 +1,67 @@
+[
+  {
+    "id": "WhatsNewRGandSearch",
+    "tourCriteria": {
+      "urlRegex": ".*",
+      "newUser": "false"
+    },
+    "tourPanels": [
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/introducing_cloud_brand.gif",
+        "title": "새로운 기능",
+        "body": "Bluemix는 이제 IBM Cloud입니다. 새 이름 외에도 향상된 제어와 유연성을 제공하는 강력한 개선사항이 포함되었습니다. 최신 업데이트를 확인하려면 지원 > 새로운 기능으로 이동하십시오."
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/global_dashboard.gif",
+        "title": "리소스 그룹 도입",
+        "body": "사용자 정의할 수 있는 그룹을 사용하여 리소스를 구성하고 보안할 수 있습니다.",
+        "ctaText": "자세히 보기",
+        "ctaURL": "/docs/admin/resourcegroups.html"
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/global_search.gif",
+        "title": "원하는 항목 찾기",
+        "body": "이제 모든 조직, 지역 및 리소스 그룹을 검색할 수 있습니다.",
+        "ctaText": "자세히 보기.",
+        "ctaURL": "/docs/overview/ui.html"
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/filters.gif",
+        "title": "한 곳에서 모두 보기",
+        "body": "모든 리소스에 대한 글로벌 보기를 원하십니까? 이제 대시보드로 이동하여 중요한 항목별로 필터링할 수 있습니다.",
+        "ctaText": "자세히 보기.",
+        "ctaURL": "/docs/overview/ui.html"
+      }
+    ]
+  },
+  {
+    "id": "NewUserIntro",
+    "tourCriteria": {
+      "urlRegex": ".*",
+      "newUser": "true",
+      "suppressTours": [
+        "WhatsNewRGandSearch"
+      ]
+    },
+    "tourPanels": [
+      {
+        "image": "/docs/api/content/guided-tours/images/welcome1.png",
+        "title": "IBM Cloud 시작",
+        "body": "여러분을 환영합니다! 이미 여러분을 위해 구축해 놓은 리소스 그룹, 조직 및 영역을 통해 계정이 설정되어 있으며 이제 프로젝트에 대한 작업을 시작할 수 있습니다. "
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/welcome1.png",
+        "title": "빌드하려는 것이 무엇입니까? ",
+        "body": "IBM은 여러분이 앱을 실행하기 위해 블록을 빌드할 때 사용할 수 있는 다양한 서비스 세트를 제공합니다. 메뉴 아이콘을 사용하여 탐색을 열고 IBM Cloud에 대해 살펴보십시오. "
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/all-resources-wide.png",
+        "title": "한 곳에서 모두 보기",
+        "body": "모든 리소스에 대한 글로벌 보기를 원하십니까? 빌드를 시작하고 나면 대시보드로 이동하여 중요한 항목별로 필터링할 수 있습니다. ",
+        "ctaText": "자세히 보기.",
+        "ctaURL": "/docs/overview/ui.html"
+      }
+    ]
+  }
+]
+

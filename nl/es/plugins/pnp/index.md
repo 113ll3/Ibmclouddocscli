@@ -11,18 +11,18 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Plug-in de igualdad de red privada para la CLI de {{site.data.keyword.Bluemix_notm}}
+# Plug-in de igualdad de red privada para el Bluemix CLI
 {: #private_network_cli}
 
-Utilice la interfaz de línea de mandatos (CLI) de igualdad de red privada para configurar y gestionar la igualdad de red privada entre dos espacios de {{site.data.keyword.Bluemix}}. La igualdad de red privada está soportada para IBM Containers (contenedores de Docker). Los espacios de {{site.data.keyword.Bluemix_notm}} se pueden localizar en distintas zonas de disponibilidad en la misma región o se pueden localizar en las distintas regiones. El plug-in de la CLI de igualdad de red privada está disponible para su uso con el plug-in de la CLI de {{site.data.keyword.Bluemix_notm}}.
+Utilice la interfaz de línea de mandatos (CLI) de igualdad de red privada para configurar y gestionar la igualdad de red privada entre dos espacios de {{site.data.keyword.Bluemix}}. La igualdad de red privada está soportada para IBM Containers (contenedores de Docker). Los espacios de Bluemix se pueden localizar en distintas zonas de disponibilidad en la misma región o se pueden localizar en las distintas regiones. El plug-in de la CLI de igualdad de red privada está disponible para su uso con el plug-in del Bluemix CLI.
 
 El plug-in de la CLI de igualdad de red privada está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el plug-in aplicable a su caso.
 
-Antes de empezar, cree los espacios de {{site.data.keyword.Bluemix_notm}}. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. Para obtener detalles, consulte [Uso de direcciones IP privadas ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
+Antes de empezar, cree los espacios de Bluemix. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. Para obtener detalles, consulte [Utilización de su propia dirección IP privada](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
 
-**Nota:** después de utilizar la igualdad de red privada con un espacio de {{site.data.keyword.Bluemix_notm}}, si necesita suprimir el espacio, suprima en primer lugar las conexiones de la igualdad de red privada en dicho espacio.
+**Nota:** después de utilizar la igualdad de red privada con un espacio de Bluemix, si necesita suprimir el espacio, suprima en primer lugar las conexiones de la igualdad de red privada en dicho espacio.
 
-Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte
+Para empezar, instale el IBM Bluemix CLI. Consulte
 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html) para obtener más información.
 
 ## Instale el plug-in de la CLI de igualdad de red privada
@@ -33,7 +33,7 @@ Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte
 bluemix plugin uninstall private-network-peering
 ```
 ### Instalar localmente
-Descargue el plug-in de igualdad de red privada para la plataforma desde [Repositorio de plug-ins de la CLI de {{site.data.keyword.Bluemix_notm}}![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
+Descargue el plug-in de igualdad de red privada para la plataforma desde [Repositorio de plug-ins de IBM Bluemix CLI](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins).
 
 Instale el plug-in de igualdad de red privada utilizando el mandato siguiente:
 
@@ -63,11 +63,11 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Instalar desde el repositorio de {{site.data.keyword.Bluemix_notm}}
+### Instalar desde el repositorio de Bluemix
 
-Siga estos pasos para instalar el plug-in desde el repositorio de {{site.data.keyword.Bluemix_notm}}:
+Siga estos pasos para instalar el plug-in desde el repositorio de Bluemix:
 
-1. Añada el punto final de registro del plug-in de {{site.data.keyword.Bluemix_notm}}:
+1. Añada el punto final de registro del plug-in de Bluemix:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```

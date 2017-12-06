@@ -19,10 +19,9 @@ lastupdated: "2017-01-12"
 # (En desuso) CLI en modalidad de desarrollo
 {: #devmodecli}
 
+**Esta CLI ha quedado en desuso:** En lugar de utilizar la CLI del modo de desarrollo (dev_mode), utilice IBM Eclipse Tools for Bluemix o DevOps Web IDE. Puede seguir utilizando la CLI dev_mode hasta el 30 de junio 2016.
 
-**Esta CLI ha quedado en desuso:** En lugar de utilizar la CLI del modo de desarrollo (dev_mode), utilice IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} o DevOps Web IDE. Puede seguir utilizando la CLI dev_mode hasta el 30 de junio 2016.
-
-Con la interfaz de línea de mandatos de modalidad de desarrollo de {{site.data.keyword.Bluemix_notm}} (CLI de dev_mode), puede actualizar las apps mientras las apps se están ejecutando en la nube. La CLI de dev_mode está creada como un plug-in de CLI cf y soporta tanto apps Liberty como IBM Node.js.
+Con la interfaz de línea de mandatos de modalidad de desarrollo de Bluemix (CLI de dev_mode), puede actualizar las apps mientras las apps se están ejecutando en la nube. La CLI de dev_mode está creada como un plug-in de CLI cf y soporta tanto apps Liberty como IBM Node.js.
 {: shortdesc}
 
 
@@ -37,14 +36,14 @@ Puede llevar a cabo las siguientes tareas con la CLI de dev_mode:
 
 Utilice uno de los siguientes métodos para instalar la herramienta de línea de mandatos dev_mode:
 - Instale localmente.
-  1. Descargue el plug-in de dev_mode para su plataforma desde el [Repositorio de plug-ins de CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+  1. Descargue el plug-in de dev_mode para su plataforma desde el [Repositorio de plug-ins de CLI de IBM Bluemix](http://plugins.ng.bluemix.net).
   2. Vaya a la carpeta en la que se ha guardado el complemento dev_mode e instale dicho complemento utilizando el mandato cf install-plugin. Por ejemplo:
 
         ```
         cf install-plugin dev_mode-linux64
         ```
 
-- Instale desde el repositorio de CLI de {{site.data.keyword.Bluemix_notm}}.
+- Instale desde el repositorio de CLI de Bluemix.
   1. Añada el repositorio bluemix-repo en los repositorios de la CLI de Cloud Foundry utilizando el siguiente mandato:
 
         ```
@@ -63,7 +62,7 @@ Utilice uno de los siguientes métodos para instalar la herramienta de línea de
         cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## Visualización de dev_mo de {{site.data.keyword.Bluemix_notm}}  
+## Visualización de mandatos dev_mode
 
 Para visualizar todos los mandatos de CLI dev_mode, utilice el siguiente mandato:
 
