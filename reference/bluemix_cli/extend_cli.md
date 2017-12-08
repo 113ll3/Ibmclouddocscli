@@ -25,7 +25,7 @@ lastupdated: "2017-10-20"
 For more commands to manage plug-ins, run `bluemix plugin` to see the help messages.
 {: tip}
 
-## Install a plug-in from the {site.data.keyword.Bluemix_notm}} CLI repository
+## Install a plug-in from the {{site.data.keyword.Bluemix_notm}} CLI repository
 
 ### Step 1: Search for the plug-in
 
