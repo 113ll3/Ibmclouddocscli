@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-12-06"
+lastupdated: "2017-12-08"
 
 
 ---
@@ -139,7 +139,11 @@ For more information, see [Formatting and filtering the CLI output for {{site.da
 
 </dd>
 <dt>IMAGE</dt>
-<dd>The full registry path to the image that you want to inspect, which is in the format `namespace/image:tag`. If a tag is not specified in the image path, the image tagged `latest` is inspected. You can inspect multiple images by listing each private registry path in the command with a space between each path.</dd>
+<dd>The name of the image for which you want to get a report. You can inspect multiple images by listing each image in the command with a space between each name.
+
+<p>To find the names of your images, run `bx cr image-list`. Combine the content of the Repository and Tag columns to create the image name in the format `repository:tag`. If a tag is not specified in the image name, the image that is tagged `latest` is inspected. </p> 
+
+</dd>
 </dl>
 
 
@@ -147,6 +151,8 @@ For more information, see [Formatting and filtering the CLI output for {{site.da
 {: #bx_cr_image_list}
 
 Displays all images in your {{site.data.keyword.Bluemix_notm}} account.
+
+<p>**Note:** The image name is the combination of the content of the Repository and Tag columns in the format `repository:tag`. </p> 
 
 ```
  bx cr image-list [--no-trunc] [--format FORMAT] [-q, --quiet] [--restrict RESTRICTION] [--include-ibm] 
@@ -186,7 +192,11 @@ bx cr image-rm IMAGE [IMAGE...]
 **Parameters**
 <dl>
 <dt>IMAGE</dt>
-<dd>The full registry path to the image that you want to remove, in the format `namespace/image:tag`. If a tag is not specified in the image path, the image tagged `latest` is deleted by default. You can delete multiple images by listing each private registry path in the command with a space between each path.</dd>
+<dd>The name of the image for which you want to get a report. You can delete multiple images at the same time by listing each image in the command with a space between each name.
+
+<p>To find the names of your images, run `bx cr image-list`. Combine the content of the Repository and Tag columns to create the image name in the format `repository:tag`. If a tag is not specified in the image name, the image that is tagged `latest` is deleted by default.</p> 
+
+</dd>
 </dl>
 
 
@@ -316,6 +326,8 @@ bx cr region
 ```
 {: codeblock}
 
+For more information, see [Regions](../../../services/Registry/registry_overview.html#registry_regions).
+
 
 ## bx cr region-set
 {: #bx_cr_region_set}
@@ -330,7 +342,11 @@ bx cr region-set [REGION]
 **Parameters**
 <dl>
 <dt>REGION</dt>
-<dd>(Optional) The name of your target region, for example, `us-south`.</dd>
+<dd>(Optional) The name of your target region, for example, `us-south`. 
+
+For more information, see [Regions](../../../services/Registry/registry_overview.html#registry_regions).
+
+</dd>
 </dl>
 
 
@@ -397,6 +413,7 @@ For more information, see [Formatting and filtering the CLI output for {{site.da
 </dd>
 </dl>
 
+
 ## bx cr token-rm
 {: #bx_cr_token_rm}
 
@@ -417,17 +434,21 @@ bx cr token-rm TOKEN [TOKEN...]
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
 
-View a vulnerability assessment report for an image.
+View a vulnerability assessment report for your images.
 
 ```
-bx cr vulnerability-assessment IMAGE [IMAGE...]
+bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--configuration-issues | -c] [--output FORMAT | -o FORMAT] IMAGE [IMAGE...] 
 ```
 {: codeblock}
 
 **Parameters**
 <dl>
 <dt>IMAGE</dt>
-<dd>The full registry path, in the format `namespace/image:tag`, to the image for which you want to get a report. The report tells you whether the image has any known package vulnerabilities. The following operating systems are supported:
+<dd>The name of the image for which you want to get a report. The report tells you whether the image has any known package vulnerabilities. You can request reports for multiple images at the same time by listing each image in the command with a space between each name.
+
+<p>To find the names of your images, run `bx cr image-list`. Combine the content of the Repository and Tag columns to create the image name in the format `repository:tag`. If a tag is not specified in the image name, the report assesses the image that is tagged `latest`. </p> 
+
+<p>The following operating systems are supported:
 
 <ul>
 
@@ -438,8 +459,27 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
+</p>
+
 For more information, see [Managing image security with Vulnerability Advisor](../../../services/va/va_index.html).
 
 </dd>
+<dt>--output FORMAT, -o FORMAT</dt>
+<dd>(Optional) The command output is returned in the chosen format. The default format is `text`. The following formats are supported:
+
+<ul>
+
+<li>`text`</li>
+<li>`json`</li>
+</ul>
+
+</dd>
+<dt>--vulnerabilities, -v</dt>
+<dd>(Optional) The command output is restricted to show vulnerabilities only.</dd>
+<dt>--configuration-issues, -c</dt>
+<dd>(Optional) The command output is restricted to show configuration issues only.</dd>
+<dt>--extended, -e </dt>
+<dd>(Optional) The command output shows additional information about fixes for vulnerable packages.</dd>
 
 </dl>
+
