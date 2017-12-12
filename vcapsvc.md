@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2016-03-15"
+lastupdated: "2017-12-11"
 
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2016-03-15"
 {: #vcap_services}
 
 
-The VCAP_SERVICES environment variable is a JSON object that contains information that you can use to interact with a service instance in {{site.data.keyword.Bluemix_notm}}.
+The VCAP_SERVICES (VMware Cloud Application Platform) environment variable is a JSON object that contains information that you can use to interact with a service instance in {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 
