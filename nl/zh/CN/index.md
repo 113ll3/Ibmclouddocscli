@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-30"
+lastupdated: "2017-11-08"
 
 ---
 
@@ -28,6 +28,8 @@ lastupdated: "2017-06-30"
 
 
 ## IBM Cloud Application Tools 2 (Beta)
+{: #icat notoc}
+
 IBM Cloud Application Tools 2 是一个经过简化的菜单栏应用程序，用于在 macOS 上执行本地环境设置和管理。通过使用 IBM Cloud Application Tools 2，可以轻松安装和更新 Bluemix 工具和 CLI，更改 CLI 部署目标，快速访问常用 Bluemix 链接。
 
 
@@ -40,7 +42,7 @@ IBM Cloud Application Tools 2 是一个经过简化的菜单栏应用程序，�
 
 下载并安装插件，以集成首选的 {{site.data.keyword.Bluemix_notm}} 服务。
 
-| *Liberty for Java*| *MobileFirst*| *{{site.data.keyword.rules_short}}* | *API Connect*| *Eclipse Tools for Bluemix*|
+| *Liberty for Java*| *MobileFirst*| *{{site.data.keyword.rules_short}}* | *API Connect*| *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
 |----------|----------|----------|----------|----------|
-| [Liberty Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window}| [Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window}| [Rules Designer Eclipse 插件](../services/rules/index.html#rulov002)| [开发者工具箱](/docs/services/apiconnect/apic_003.html#apic_001 )| [Bluemix Eclipse 插件](/docs/manageapps/eclipsetools/eclipsetools.html)|
-{: caption="表 5. 插件" caption-side="top"}
+| [Liberty Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window}| [Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window}| [Rules Designer Eclipse 插件](../services/rules/index.html#rulov002)| [开发者工具箱](/docs/services/apiconnect/apic_003.html#apic_001 )| [{{site.data.keyword.Bluemix_notm}} Eclipse 插件](/docs/manageapps/eclipsetools/eclipsetools.html)|
+{: caption="表 6. 插件" caption-side="top"}

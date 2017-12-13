@@ -3,13 +3,17 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-08-20"
+lastupdated: "2017-10-20"
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 使用外掛程式延伸 {{site.data.keyword.Bluemix_notm}} CLI
 {: #plug-ins}
@@ -18,28 +22,30 @@ lastupdated: "2017-08-20"
 
 [{{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 是管理外掛程式的正式儲存庫。
 
-## 從儲存庫安裝外掛程式
+如需其他可管理外掛程式的指令，請執行 `bluemix plugin` 以查看說明訊息。
+{: tip}
 
-* 尋找外掛程式
+## 從 {site.data.keyword.Bluemix_notm}} CLI 儲存庫安裝外掛程式
 
-  使用指令 'bluemix plugin repo-plugins -r REPO_NAME'，以尋找儲存庫中的外掛程式。
+### 步驟 1：搜尋外掛程式
+
+1. 使用指令 `bluemix plugin repo-plugins -r REPO_NAME`，以尋找儲存庫中的外掛程式。
+2. 依預設，{{site.data.keyword.Bluemix_notm}} CLI 會使用名稱 `Bluemix`。您可以列出正式 `Bluemix` 儲存庫中的外掛程式。例如：
   
-  依預設，{{site.data.keyword.Bluemix_notm}} CLI 會配置名稱為 `Bluemix` 的正式儲存庫。您可以列出正式 `Bluemix` 儲存庫中的外掛程式，如下所示。
-
   ```
   $ bluemix plugin repo-plugins -r Bluemix
   Getting plug-ins from repository 'Bluemix'...
 
   Repository: Bluemix
   Name           Description                                    Versions
-  auto-scaling   Bluemix CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
-  nsg            Bluemix Network Security Group plugin          0.1.1
+  auto-scaling   IBM Cloud CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
+  nsg            IBM Cloud Network Security Group plugin          0.1.1
 
   ```
 
-* 安裝外掛程式
+### 步驟 2：安裝外掛程式
 
-  使用 'bx plugin install PLUGIN_NAME -r REPO_NAME' 來安裝外掛程式，例如：
+使用 `bx plugin install PLUGIN_NAME -r REPO_NAME` 指令來安裝外掛程式。例如：
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix
@@ -52,7 +58,7 @@ lastupdated: "2017-08-20"
 
 ## 在本端安裝外掛程式
 
-  使用指令 `bluemix plugin install LOCAL_FILE_NAME`，將外掛程式二進位檔安裝到本端機器，例如：
+使用 `bluemix plugin install LOCAL_FILE_NAME` 指令，將外掛程式二進位檔安裝至本端機器。例如：
 
   ```
   $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2
@@ -62,9 +68,9 @@ lastupdated: "2017-08-20"
   $
   ```
 
-## 從 Web URL 安裝
+## 從 Web URL 安裝外掛程式
 
-  使用指令 `bluemix plugin install URL`，直接從 Web URL 安裝外掛程式，例如：
+使用 `bluemix plugin install URL` 指令，直接從 Web URL 安裝外掛程式。例如：
 
   ```
   ~$ bluemix plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
@@ -75,6 +81,3 @@ lastupdated: "2017-08-20"
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$
   ```
-
-
-如需其他可管理外掛程式的指令，請執行 `bluemix plugin` 以查看說明訊息。

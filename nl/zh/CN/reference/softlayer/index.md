@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-09-22"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-09-22"
 
 {{site.data.keyword.BluSoftlayer}} 插件已合并到 {{site.data.keyword.Bluemix_notm}} CLI 中。您不再需要安装该插件。
 
-使用 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 中的 {{site.data.keyword.BluSoftlayer_notm}} 命令来配置和管理 SoftLayer 服务。
+使用 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 中的 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令来配置和管理 SoftLayer 服务。
 
 
 首先，请安装 IBM {{site.data.keyword.Bluemix_notm}} CLI。有关详细信息，请参阅 [Bluemix CLI ![外部链接图标](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}。
@@ -24,14 +24,14 @@ lastupdated: "2017-09-22"
 要获取 {{site.data.keyword.Bluemix_notm}} 命令的完整列表，请参阅：[{{site.data.keyword.Bluemix_notm:}} (bx) 命令](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
-## 常规 {{site.data.keyword.BluSoftlayer_notm}} 命令
+## 常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令
 
 支持以下命令。使用 `bluemix sl` 命令可查看可用命令的列表：
 
-<table summary="按字母顺序列出的常规命令（命令具有可获取命令更多信息的链接）">
-<caption>表 1. 常规 Softlayer 命令</caption>
+<table summary="按字母顺序排序的常规命令（命令带有可获取命令更多信息的链接）">
+<caption>表 1. 常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令</caption>
  <thead>
- <th colspan="6">常规 Softlayer 命令</th>
+ <th colspan="6">常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令</th>
  </thead>
  <tbody>
  <tr>
@@ -41,10 +41,10 @@ lastupdated: "2017-09-22"
  </table>
 
 
-## {{site.data.keyword.BluSoftlayer_notm}} 块存储器命令
+## {{site.data.keyword.BluSoftlayer_notm}} 基础架构块存储器命令
 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 2. Softlayer 块存储器</caption>
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 2. {{site.data.keyword.BluSoftlayer_notm}} 基础架构块存储器</caption>
  <thead>
  <th colspan="6">Softlayer 块存储器</th>
  </thead>
@@ -82,10 +82,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} CDN 命令
+ ## {{site.data.keyword.BluSoftlayer_notm}} 基础架构 CDN 命令
 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 3. Softlayer CDN</caption>
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 3. {{site.data.keyword.BluSoftlayer_notm}} 基础架构 CDN</caption>
  <thead>
  <th colspan="6">Softlayer CDN</th>
  </thead>
@@ -107,10 +107,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} 文件存储器命令
+## {{site.data.keyword.BluSoftlayer_notm}} 基础架构文件存储器命令
 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 4. Softlayer 文件存储器</caption>
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 4. {{site.data.keyword.BluSoftlayer_notm}} 基础架构文件存储器</caption>
  <thead>
  <th colspan="6">Softlayer 文件存储器</th>
  </thead>
@@ -148,10 +148,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} DNS 命令
+## {{site.data.keyword.BluSoftlayer_notm}} 基础架构 DNS 命令
 
-<table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 5. Softlayer DNS 命令</caption>
+<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 5. {{site.data.keyword.BluSoftlayer_notm}} 基础架构 DNS 命令</caption>
  <thead>
  <th colspan="6">Softlayer DNS 命令</th>
  </thead>
@@ -172,8 +172,8 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-<table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 6. Softlayer 全局 IP 命令</caption>
+<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 6. {{site.data.keyword.BluSoftlayer_notm}} 基础架构全局 IP 命令</caption>
  <thead>
  <th colspan="6">Softlayer 全局 IP 命令</th>
  </thead>
@@ -188,10 +188,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} 映像命令
+## {{site.data.keyword.BluSoftlayer_notm}} 基础架构映像命令
 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 7. Softlayer 映像命令</caption>
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} 基础架构映像命令</caption>
  <thead>
  <th colspan="6">Softlayer 映像命令</th>
  </thead>
@@ -204,11 +204,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
- ## {{site.data.keyword.BluSoftlayer_notm}} IPSec VPN 命令
 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 7. Softlayer IPSec VPN 命令</caption>
+ ## {{site.data.keyword.BluSoftlayer_notm}} 基础架构 IPSec VPN 命令
+
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} 基础架构 IPSec VPN 命令</caption>
  <thead>
  <th colspan="6">Softlayer IPSec VPN 命令</th>
  </thead>
@@ -231,10 +231,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} 负载均衡器命令
+ ## {{site.data.keyword.BluSoftlayer_notm}} 基础架构负载均衡器命令
 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 8. Softlayer 负载均衡器命令</caption>
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 8. {{site.data.keyword.BluSoftlayer_notm}} 基础架构负载均衡器命令</caption>
  <thead>
  <th colspan="6">Softlayer 负载均衡器命令</th>
  </thead>
@@ -264,10 +264,10 @@ lastupdated: "2017-09-22"
 </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} 安全命令
+## {{site.data.keyword.BluSoftlayer_notm}} 基础架构安全命令
 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 9. Softlayer 安全性命令</caption>
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 9. {{site.data.keyword.BluSoftlayer_notm}} 基础架构安全命令</caption>
  <thead>
  <th colspan="5">Softlayer 安全命令</th>
  </thead>
@@ -289,10 +289,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} 子网命令
- 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 10. Softlayer 子网命令</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 基础架构子网命令
+
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 10. {{site.data.keyword.BluSoftlayer_notm}} 基础架构子网命令</caption>
  <thead>
  <th colspan="5">Softlayer 子网命令</th>
  </thead>
@@ -306,11 +306,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
-## {{site.data.keyword.BluSoftlayer_notm}} 虚拟服务器命令
 
- <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 11. Softlayer 虚拟服务器命令</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 基础架构虚拟服务器命令
+
+ <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 11. {{site.data.keyword.BluSoftlayer_notm}} 基础架构虚拟服务器命令</caption>
  <thead>
  <th colspan="6">Softlayer 虚拟服务器命令</th>
  </thead>
@@ -339,11 +339,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
-## {{site.data.keyword.BluSoftlayer_notm}} VLAN 命令
 
-  <table summary="按字母顺序列出的常规 Softlayer 命令（命令具有可获取命令更多信息的链接）">
-<caption>表 12. Softlayer VLAN 命令</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 基础架构 VLAN 命令
+
+  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 12. {{site.data.keyword.BluSoftlayer_notm}} 基础架构 VLAN 命令</caption>
  <thead>
  <th colspan="6">Softlayer VLAN 命令</th>
  </thead>
@@ -373,7 +373,7 @@ bluemix sl init [OPTIONS]
 <strong>命令选项</strong>：
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API 端点 URL，缺省值为 https://api.softlayer.com/rest/v3.1（对于 Softlayer API 密钥认证）或 https://api.softlayer.com/mobile/v3.1（对于 IBM 标识认证）。</dd>
+<dd>Softlayer API 端点 URL，缺省值为 https://api.softlayer.com/rest/v3.1（对于 {{site.data.keyword.BluSoftlayer_notm}} 基础架构 API 密钥认证）或 https://api.softlayer.com/mobile/v3.1（对于 IBM 标识认证）。</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer 用户名。</dd>
 <dt>-p, --sl-password</dt>
@@ -392,13 +392,13 @@ bluemix sl init [OPTIONS]
 <dd>启用电话认证时的认证令牌。</dd>
 </dl>
 
-例如，使用 Softlayer 用户名和密码/API 密钥登录
+例如，使用 {{site.data.keyword.BluSoftlayer_notm}} 基础架构用户名和密码/API 密钥登录
 ```
 $ bluemix sl config
-选择如何配置 Softlayer 认证：
-1. 使用 Softlayer 用户名和密码/API 密钥登录
-2. 使用 Bluemix 单点登录
-输入大于 >1 的数字
+选择如何配置 {{site.data.keyword.BluSoftlayer_notm}} 基础架构认证：
+1. 使用 {{site.data.keyword.BluSoftlayer_notm}} 基础架构用户名和密码/API 密钥登录
+2. 使用 {{site.data.keyword.Bluemix_notm}} Single-Sign-On
+输入数字> 1
 Softlayer API 端点 URL：[https://api.softlayer.com/rest/v3.1]>
 用户名：[]> wangjunl@cn.ibm.com
 API 密钥或密码：[]> abcd
@@ -408,7 +408,7 @@ Softlayer API 端点：    https://api.softlayer.com/rest/v3.1
 用户标识：              wangjunl@cn.ibm.com
 API 密钥：              xxxxxxxxxx
 ```
-例如，使用 Bluemix Single-Sign-On 登录 Softlayer
+例如，使用 {{site.data.keyword.Bluemix_notm}} Single-Sign-On 登录 Softlayer
 ```
 $ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 API 端点：api.ng.bluemix.net
@@ -423,14 +423,14 @@ API 端点：   https://api.ng.bluemix.net (API version: 2.54.0)
 帐户：       Wilma's Account (65ce8074c6c62b5)
 没有目标组织或空间，请使用“bx target --cf or bx target -o ORG -s SPACE”
 
-提示：在 Bluemix CLI 上下文中，使用“bx cf <command>”来运行 Cloud Foundry CLI。
+提示：在 {{site.data.keyword.Bluemix_notm}} CLI 上下文中，使用“bx cf <command>”来运行 Cloud Foundry CLI。
 ```
 
 $ bx sl init
-选择如何配置 Softlayer 认证： 
-1. 使用 Softlayer 用户名和密码/API 密钥登录
-2. 使用 Bluemix 单点登录
-输入大于 >2 的数字
+选择如何配置 {{site.data.keyword.BluSoftlayer_notm}} 基础架构认证：
+1. 使用 {{site.data.keyword.BluSoftlayer_notm}} 基础架构用户名和密码/API 密钥登录
+2. 使用 {{site.data.keyword.Bluemix_notm}} Single-Sign-On
+输入数字> 2
 Softlayer API 端点 URL：[https://api.softlayer.com/mobile/v3.1]>
 将帐户设置为：278444
 确定
@@ -446,7 +446,7 @@ IMS 令牌：                xxxxxxxxxx
 ### bluemix sl help
 {: #sl_help}
 
-查看所有命令的帮助信息以操作 Softlayer 环境。
+查看用于操作 {{site.data.keyword.BluSoftlayer_notm}} 基础架构环境的所有命令的帮助信息。
 ```
 bluemix sl help
 

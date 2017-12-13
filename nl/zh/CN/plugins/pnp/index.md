@@ -11,18 +11,18 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Bluemix CLI 的专用网络对等连接插件
+# {{site.data.keyword.Bluemix_notm}} CLI 的专用网络对等连接插件
 {: #private_network_cli}
 
-使用专用网络对等连接命令行界面 (CLI) 可配置和管理两个 {{site.data.keyword.Bluemix}} 空间之间的专用网络对等连接。IBM Containers（Docker 容器）支持专用网络对等连接。Bluemix 空间可以位于同一区域中的不同可用性区域中，也可以位于不同区域中。专用网络对等连接 CLI 插件可与 Bluemix CLI 插件一起使用。
+使用专用网络对等连接命令行界面 (CLI) 可配置和管理两个 {{site.data.keyword.Bluemix}} 空间之间的专用网络对等连接。IBM Containers（Docker 容器）支持专用网络对等连接。{{site.data.keyword.Bluemix_notm}} 空间可以位于同一区域中的不同可用性区域中，也可以位于不同区域中。专用网络对等连接 CLI 插件可与 {{site.data.keyword.Bluemix_notm}} CLI 插件一起使用。
 
 专用网络对等连接 CLI 插件可用于 Windows、MAC 和 Linux 操作系统。请确保使用适合于您的插件。
 
-开始之前，请先创建 Bluemix 空间。确保空间中的每个容器都具有来自不同网络的 IP 地址。有关详细信息，请参阅[使用自己的专用 IP 地址](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)。
+开始之前，请先创建 {{site.data.keyword.Bluemix_notm}} 空间。确保空间中的每个容器都具有来自不同网络的 IP 地址。有关详细信息，请参阅[使用自己的专用 IP 地址 ![外部链接图标](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}。
 
-**注：**将专用网络对等连接用于 Bluemix 空间后，如果需要删除空间，请首先删除该空间内的专用网络对等连接。
+**注：**将专用网络对等连接用于 {{site.data.keyword.Bluemix_notm}} 空间后，如果需要删除该空间，请首先删除该空间内的专用网络对等连接。
 
-首先，请安装 IBM Bluemix CLI。有关详细信息，请参阅 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)。
+首先，请安装 {{site.data.keyword.Bluemix_notm}} CLI。有关详细信息，请参阅 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)。
 
 ## 安装专用网络对等连接 CLI 插件
 
@@ -32,7 +32,7 @@ lastupdated: "2017-01-12"
 bluemix plugin uninstall private-network-peering
 ```
 ### 本地安装
-从 [IBM Bluemix CLI 插件存储库](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins)下载适用于您平台的专用网络对等连接插件。
+从 [{{site.data.keyword.Bluemix_notm}} CLI Plugin Repository ![外部链接图标](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} 下载适用于您的平台的专用网络对等连接插件。
 
 使用以下命令来安装专用网络对等连接插件：
 
@@ -62,11 +62,11 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### 从 Bluemix 存储库进行安装
+### 从 {{site.data.keyword.Bluemix_notm}} 存储库进行安装
 
-执行以下步骤以从 Bluemix 存储库安装插件：
+执行以下步骤以从 {{site.data.keyword.Bluemix_notm}} 存储库安装插件：
 
-1. 添加 Bluemix 插件注册表端点：
+1. 添加 {{site.data.keyword.Bluemix_notm}} 插件注册表端点：
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```

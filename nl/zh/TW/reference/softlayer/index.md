@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-09-22"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-09-22"
 
 {{site.data.keyword.BluSoftlayer}} 外掛程式已合併至 {{site.data.keyword.Bluemix_notm}} CLI。您不再需要安裝外掛程式。
 
-在 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 中使用 {{site.data.keyword.BluSoftlayer_notm}} 指令，以配置及管理 SoftLayer 服務。
+在 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 中使用 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，以配置及管理 SoftLayer 服務。
 
 
 若要開始使用，請安裝 IBM {{site.data.keyword.Bluemix_notm}} CLI。如需詳細資料，請參閱 [Bluemix CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}。
@@ -24,14 +24,14 @@ lastupdated: "2017-09-22"
 如需完整 {{site.data.keyword.Bluemix_notm}} 指令清單，請參閱：[{{site.data.keyword.Bluemix_notm:}} (bx) 指令](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
-## 一般 {{site.data.keyword.BluSoftlayer_notm}} 指令
+## 一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令
 
 支援下列指令。使用 `bluemix sl` 指令，以查看可用的指令清單：
 
 <table summary="按字母順序排序的一般指令，其鏈結提供指令的相關資訊">
-<caption>表 1. 一般 Softlayer 指令</caption>
+<caption>表 1. 一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令</caption>
  <thead>
- <th colspan="6">一般 Softlayer 指令</th>
+ <th colspan="6">一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令</th>
  </thead>
  <tbody>
  <tr>
@@ -41,10 +41,10 @@ lastupdated: "2017-09-22"
  </table>
 
 
-## {{site.data.keyword.BluSoftlayer_notm}} Block Storage 指令
+## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 Block Storage 指令
 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 2. Softlayer Block Storage</caption>
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 2. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 Block Storage</caption>
  <thead>
  <th colspan="6">Softlayer Block Storage</th>
  </thead>
@@ -82,10 +82,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} CDN 指令
+ ## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 CDN 指令
 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 3. Softlayer CDN</caption>
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 3. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 CDN</caption>
  <thead>
  <th colspan="6">Softlayer CDN</th>
  </thead>
@@ -107,10 +107,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} File Stoarge 指令
+## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 File Stoarge 指令
 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 4. Softlayer File Storage</caption>
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 4. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 File Storage</caption>
  <thead>
  <th colspan="6">Softlayer File Storage</th>
  </thead>
@@ -148,10 +148,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} DNS 指令
+## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 DNS 指令
 
-<table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 5. Softlayer DNS 指令</caption>
+<table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 5. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 DNS 指令</caption>
  <thead>
  <th colspan="6">Softlayer DNS 指令</th>
  </thead>
@@ -172,8 +172,8 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-<table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 6. Softlayer 廣域 IP 指令</caption>
+<table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 6. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構廣域 IP 指令</caption>
  <thead>
  <th colspan="6">Softlayer 廣域 IP 指令</th>
  </thead>
@@ -188,10 +188,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} image 指令
+## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 image 指令
 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 7. Softlayer image 指令</caption>
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 image 指令</caption>
  <thead>
  <th colspan="6">Softlayer image 指令</th>
  </thead>
@@ -204,11 +204,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
- ## {{site.data.keyword.BluSoftlayer_notm}} IPSec VPN 指令
 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 7. Softlayer IPSec VPN 指令</caption>
+ ## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 IPSec VPN 指令
+
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 IPSec VPN 指令</caption>
  <thead>
  <th colspan="6">Softlayer IPSec VPN 指令</th>
  </thead>
@@ -231,10 +231,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} 負載平衡器指令
+ ## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構負載平衡器指令
 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 8. Softlayer 負載平衡器指令</caption>
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 8. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構負載平衡器指令</caption>
  <thead>
  <th colspan="6">Softlayer 負載平衡器指令</th>
  </thead>
@@ -264,10 +264,10 @@ lastupdated: "2017-09-22"
 </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} security 指令
+## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 security 指令
 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 9. Softlayer security 指令</caption>
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 9. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 security 指令</caption>
  <thead>
  <th colspan="5">Softlayer security 指令</th>
  </thead>
@@ -289,10 +289,10 @@ lastupdated: "2017-09-22"
    </tbody>
  </table>
 
-## {{site.data.keyword.BluSoftlayer_notm}} subnet 指令
- 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 10. Softlayer subnet 指令</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 subnet 指令
+
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 10. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 subnet 指令</caption>
  <thead>
  <th colspan="5">Softlayer subnet 指令</th>
  </thead>
@@ -306,11 +306,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
-## {{site.data.keyword.BluSoftlayer_notm}} 虛擬伺服器指令
 
- <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 11. Softlayer 虛擬伺服器指令</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構虛擬伺服器指令
+
+ <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 11. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構虛擬伺服器指令</caption>
  <thead>
  <th colspan="6">Softlayer 虛擬伺服器指令</th>
  </thead>
@@ -339,11 +339,11 @@ lastupdated: "2017-09-22"
  </tr>
    </tbody>
  </table>
- 
-## {{site.data.keyword.BluSoftlayer_notm}} VLAN 指令
 
-  <table summary="按字母順序排序的一般 Softlayer 指令，其鏈結提供指令的相關資訊">
-<caption>表 12. Softlayer VLAN 指令</caption>
+## {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 VLAN 指令
+
+  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 12. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 VLAN 指令</caption>
  <thead>
  <th colspan="6">Softlayer VLAN 指令</th>
  </thead>
@@ -373,7 +373,7 @@ bluemix sl init [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API 端點 URL，預設值為：https://api.softlayer.com/rest/v3.1（適用於 Softlayer API 金鑰鑑別）、https://api.softlayer.com/mobile/v3.1（適用於 IBM ID 鑑別）。</dd>
+<dd>Softlayer API 端點 URL，預設值為：https://api.softlayer.com/rest/v3.1（適用於 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 API 金鑰鑑別）、https://api.softlayer.com/mobile/v3.1（適用於 IBM ID 鑑別）。</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer 使用者名稱。</dd>
 <dt>-p, --sl-password</dt>
@@ -392,12 +392,12 @@ bluemix sl init [OPTIONS]
 <dd>啟用電話鑑別時的鑑別記號。</dd>
 </dl>
 
-例如，使用 Softlayer 使用者名稱及密碼/API 金鑰登入
+例如，使用 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構使用者名稱及密碼/API 金鑰登入
 ```
 $ bluemix sl config
-Choose how to configure Softlayer authentication: 
-1. Login with Softlayer user name and password/API key
-2. Use Bluemix Single-Sign-On
+Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 Enter a number>1
 Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
 Username: []> wangjunl@cn.ibm.com
@@ -408,7 +408,7 @@ Account ID:                278444
 User ID:                   wangjunl@cn.ibm.com   
 API Key:                   xxxxxxxxxx
 ```
-例如，使用 Bluemix Single-Sign-On 登入 Softlayer
+例如，使用 {{site.data.keyword.Bluemix_notm}} Single-Sign-On 登入 Softlayer
 ```
 $ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
@@ -423,13 +423,13 @@ User:           wangjunl@cn.ibm.com
 Account:        Wilma's Account (65ce8074c6c62b5)   
 No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 ```
-提示：使用 'bx cf <command>'，以搭配 Bluemix CLI 環境定義執行 Cloud Foundry CLI 。
+提示：使用 'bx cf <command>'，以搭配 {{site.data.keyword.Bluemix_notm}} CLI 環境定義執行 Cloud Foundry CLI 。
 ```
 
 $ bx sl init
-Choose how to configure Softlayer authentication: 
-1. Login with Softlayer user name and password/API key
-2. Use Bluemix Single-Sign-On
+Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 Enter a number> 2
 Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]> 
 Setting account to: 278444
@@ -444,7 +444,7 @@ IMS token:                 xxxxxxxxxx
 ### bluemix sl help
 {: #sl_help}
 
-檢視運作 Softlayer 環境的所有指令說明資訊。
+檢視運作 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構環境的所有指令說明資訊。
 ```
 bluemix sl help
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-10"
 
 
 ---
@@ -23,7 +23,7 @@ L'interface de ligne de commande {{site.data.keyword.registrylong}} est un plug-
 {: shortdesc}
 
 **Prérequis**
-* Avant d'exécuter des commandes de registre, connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bx login` pour générer un jeton d'accès et authentifier votre session. 
+* Avant d'exécuter des commandes de registre, connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bx login` pour générer un jeton d'accès et authentifier votre session.
 
 Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{site.data.keyword.registrylong_notm}}, voir [Configuration d'un registre d'images privé](../../../services/Registry/index.html).
 
@@ -51,15 +51,17 @@ Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
+ <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
+ <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -83,7 +85,7 @@ bx cr api
 Génère une image Docker dans {{site.data.keyword.registrylong_notm}}.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -99,6 +101,8 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag v
 <dd>(Facultatif) Lorsque ce paramètre est spécifié, la sortie de génération est supprimée sauf en cas d'erreur.</dd>
 <dt> --build-arg value</dt>
 <dd>(Facultatif) Spécifiez un argument de génération supplémentaire au format 'KEY=VALUE'. Vous avez la possibilité d'indiquer plusieurs arguments de génération en ajoutant ce paramètre plusieurs fois. Les valeurs d'arguments de génération sont disponibles en tant que variables d'environnement lorsque vous spécifiez une ligne ARG qui correspond à la clé définie dans votre fichier Dockerfile.</dd>
+<dt>--file value, -f value</dt>
+<dd>(Facultatif) Si vous utilisez les mêmes fichiers pour plusieurs générations, vous pouvez sélectionner un chemin vers un fichier Dockerfile différent. Indiquez l'emplacement du fichier Dockerfile par rapport au contexte de génération. Si vous ne l'indiquez pas, la valeur par défaut est `PATH/Dockerfile`, où PATH correspond à la racine du contexte de génération.</dd>
 <dt>--tag value, -t value</dt>
 <dd>Nom complet de l'image à générer, qui inclut l'URL et l'espace de nom de registre.</dd>
 </dl>
@@ -270,12 +274,6 @@ bx cr plan-upgrade [PLAN]
 </dl>
 
 
-## bx cr pricing
-{: #bx_cr_pricing}
-
-Cette commande a été supprimée. Vous pouvez utiliser la calculatrice de prix pour calculer votre coût estimé. Voir [Estimation des coûts pour {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_overview.html#registry_plan_billing).
-
-
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -303,6 +301,34 @@ bx cr quota-set [--traffic VALEUR] [--storage VALEUR]
 <dd>(Facultatif) Remplace votre quota de trafic par la valeur spécifiée en mégaoctets. L'opération échoue si vous n'êtes pas habilité à définir le trafic ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
 <dt>--storage VALEUR</dt>
 <dd>(Facultatif) Remplace votre quota de stockage par la valeur spécifiée en mégaoctets. L'opération échoue si vous n'êtes pas habilité à définir les quotas de stockage ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
+</dl>
+
+
+## bx cr region
+{: #bx_cr_region}
+
+Affiche les régions cible et le registre.
+
+```
+bx cr region
+```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+Définit une région cible pour les commandes {{site.data.keyword.registrylong_notm}}. Pour répertorier les régions disponibles, exécutez la commande sans paramètres.
+
+```
+bx cr region-set [REGION]
+```
+{: codeblock}
+
+**Paramètres**
+<dl>
+<dt>REGION</dt>
+<dd>(Facultatif) Le nom de votre région cible, par exemple, `us-south`.</dd>
 </dl>
 
 

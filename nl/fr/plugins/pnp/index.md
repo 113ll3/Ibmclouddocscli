@@ -11,18 +11,18 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Plug-in d'appairage de réseau privé pour l'interface de ligne de commande Bluemix
+# Plug-in d'appairage de réseau privé pour l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #private_network_cli}
 
-Utilisez l'interface de ligne de commande d'appairage de réseau privé pour configurer et gérer l'appairage de réseau privé entre deux espaces {{site.data.keyword.Bluemix}}. L'appairage de réseau privé est pris en charge pour IBM Containers (conteneurs Docker). Les espaces Bluemix peuvent se trouver dans des zones de disponibilité différentes dans une même région ou dans différentes régions. Le plug-in d'interface de ligne de commande d'appairage de réseau privé peut être utilisé avec le plug-in d'interface de ligne de commande Bluemix.
+Utilisez l'interface de ligne de commande d'appairage de réseau privé pour configurer et gérer l'appairage de réseau privé entre deux espaces {{site.data.keyword.Bluemix}}. L'appairage de réseau privé est pris en charge pour IBM Containers (conteneurs Docker). Les espaces {{site.data.keyword.Bluemix_notm}} peuvent se trouver dans des zones de disponibilité différentes dans une même région ou dans différentes régions. Le plug-in d'interface de ligne de commande d'appairage de réseau privé peut être utilisé avec le plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 Le plug-in d'interface de ligne de commande d'appairage de réseau privé est disponible pour les systèmes d'exploitation Windows, MAC et Linux. Assurez-vous d'utiliser le plug-in qui vous convient.
 
-Avant de commencer, créez des espaces Bluemix. Assurez-vous que chaque conteneur dans un espace dispose d'une adresse IP provenant d'un réseau différent. Pour des détails, voir [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip).
+Avant de commencer, créez des espaces {{site.data.keyword.Bluemix_notm}}. Assurez-vous que chaque conteneur dans un espace dispose d'une adresse IP provenant d'un réseau différent. Pour plus d'informations, voir [Using your own private IP address ![External link icon](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
 
-**Remarque :** si vous avez utilisé l'appairage de réseau privé avec un espace Bluemix et devez supprimer l'espace, supprimez d'abord les connexions d'appairage de réseau privé dans cet espace.
+**Remarque :** si vous avez utilisé l'appairage de réseau privé avec un espace {{site.data.keyword.Bluemix_notm}} et que vous devez supprimer l'espace, supprimez d'abord les connexions d'appairage de réseau privé dans cet espace.
 
-Pour commencer, installez l'interface de ligne de commande IBM Bluemix. Voir [Interface de ligne de commande Bluemix](http://clis.ng.bluemix.net/ui/home.html) pour des détails.
+Pour commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir [Interface de ligne de commande Bluemix](http://clis.ng.bluemix.net/ui/home.html) pour des détails.
 
 ## Installation du plug-in d'interface de ligne de commande d'appairage de réseau privé
 
@@ -32,8 +32,7 @@ Pour commencer, installez l'interface de ligne de commande IBM Bluemix. Voir [In
 bluemix plugin uninstall private-network-peering
 ```
 ### Installation locale
-Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le
-[référentiel de plug-in d'interface de ligne de commande Bluemix IBM](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins).
+Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
 
 Installez le plug-in d'appairage de réseau privé avec la commande suivante :
 
@@ -63,11 +62,11 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Installation depuis le référentiel Bluemix
+### Installation depuis le référentiel {{site.data.keyword.Bluemix_notm}}
 
-Procédez comme suit pour installer le plug-in depuis le référentiel Bluemix :
+Pour installer le plug-in depuis le référentiel {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 
-1. Ajoutez le noeud final de registre de plug-in Bluemix :
+1. Ajoutez le noeud final de registre de plug-in {{site.data.keyword.Bluemix_notm}} :
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```

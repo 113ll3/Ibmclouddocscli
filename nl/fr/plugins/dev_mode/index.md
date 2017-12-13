@@ -19,12 +19,11 @@ lastupdated: "2017-01-12"
 # (Obsolète) Interface de ligne de commande en mode développement
 {: #devmodecli}
 
-**Cette interface de ligne de commande est obsolète :** au lieu d'utiliser l'interface de ligne de commande en mode développement
-(dev_mode), utilisez IBM Eclipse Tools for Bluemix ou l'interface IDE Web DevOps. Vous pouvez continuer à utiliser l'interface de ligne de commande dev_mode
+
+**Cette interface de ligne de commande est obsolète :** au lieu d'utiliser l'interface de ligne de commande en mode développement (dev_mode), utilisez IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ou l'interface IDE Web DevOps. Vous pouvez continuer à utiliser l'interface de ligne de commande dev_mode
 jusqu'au 30 juin 2016.
 
-Via l'interface de ligne de commande en mode développement (CLI dev_mode), vous pouvez mettre à jour vos applications alors qu'elles s'exécutent dans le
-cloud. Celle-ci est construite comme un plug-in d'interface de ligne de commande cf et prend en
+Via l'interface de ligne de commande en mode développement (CLI dev_mode) {{site.data.keyword.Bluemix_notm}}, vous pouvez mettre à jour vos applications alors qu'elles s'exécutent dans le cloud. Celle-ci est construite comme un plug-in d'interface de ligne de commande cf et prend en
 charge les
 applications Liberty et IBM Node.js.
 {: shortdesc}
@@ -42,14 +41,14 @@ Vous pouvez effectuer les tâches suivantes à l'aide de l'interface de ligne de
 Utilisez l'une des méthodes suivantes pour installer l'outil de ligne de commande dev_mode :
 - Installation locale
   1. Téléchargez le plug-in dev_mode correspondant à votre plateforme depuis le [référentiel de plug-in
-de l'interface de ligne de commande IBM Bluemix](http://plugins.ng.bluemix.net).
+de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
   2. Accédez au dossier dans lequel le plug-in dev_mode est enregistré et installez ce plug-in via la commande cf install-plugin. Par exemple :
 
         ```
         cf install-plugin dev_mode-linux64
         ```
 
-- Installez le plug-in depuis le référentiel CLI de Bluemix
+- Installez le plug-in depuis le référentiel de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
   1. Ajoutez le référentiel bluemix-repo aux référentiels d'interface de ligne de commande Cloud Foundry avec la commande suivante :
 
         ```
@@ -68,7 +67,7 @@ de l'interface de ligne de commande IBM Bluemix](http://plugins.ng.bluemix.net).
         cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## Affichage des commandes dev_mode
+## Affichage de dev_mo {{site.data.keyword.Bluemix_notm}}  
 
 Pour afficher toutes les commandes CLI dev_mode, utilisez la commande suivante :
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-10"
 
 
 ---
@@ -50,15 +50,17 @@ lastupdated: "2017-10-26"
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
+ <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
+ <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -82,7 +84,7 @@ bx cr api
 在 {{site.data.keyword.registrylong_notm}} 中建置 Docker 映像檔。
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -98,6 +100,8 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag v
 <dd>（選用）如果指定，則除非發生錯誤，否則會抑制建置輸出。</dd>
 <dt> --build-arg value</dt>
 <dd>（選用）以 'KEY=VALUE' 格式指定其他建置引數。包括此參數多次，即可指定多個建置引數。當您指定符合 Dockerfile 中索引鍵的 ARG 行時，建置引數的值可以作為環境變數。</dd>
+<dt>--file value, -f value</dt>
+<dd>（選用）如果您對多個建置使用相同的檔案，則可以選擇不同 Dockerfile 的路徑。請指定與建置環境定義相關的 Dockerfile 位置。如果未指定，則預設值為 `PATH/Dockerfile`，其中 PATH 是建置環境定義的根目錄。</dd>
 <dt>--tag value, -t value</dt>
 <dd>您要建置之映像檔的完整名稱，其包含登錄 URL 及名稱空間。</dd>
 </dl>
@@ -264,12 +268,6 @@ bx cr plan-upgrade [PLAN]
 </dl>
 
 
-## bx cr pricing
-{: #bx_cr_pricing}
-
-這個指令已移除。您可以使用定價計算機來計算預估成本，請參閱[預估 {{site.data.keyword.registrylong_notm}} 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing)。
-
-
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -297,6 +295,34 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>（選用）將資料流量配額變更為指定的值 (MB)。如果您未獲授權，無法設定資料流量，或是設定了超出現行定價方案的值，則作業會失敗。</dd>
 <dt>--storage VALUE</dt>
 <dd>（選用）將儲存空間配額變更為指定的值 (MB)。如果您未獲授權，無法設定儲存空間配額，或設定了超出現行定價方案的值，則作業會失敗。</dd>
+</dl>
+
+
+## bx cr region
+{: #bx_cr_region}
+
+顯示目標地區及登錄。
+
+```
+bx cr region
+```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+設定 {{site.data.keyword.registrylong_notm}} 指令的目標地區。若要列出可用的地區，請執行沒有參數的指令。
+
+```
+bx cr region-set [REGION]
+```
+{: codeblock}
+
+**參數**
+<dl>
+<dt>REGION</dt>
+<dd>（選用）目標地區的名稱（例如，`us-south`）。</dd>
 </dl>
 
 

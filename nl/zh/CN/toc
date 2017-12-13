@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="bluemix-cli" audience="platform" href="/docs/cli/index.html"}
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
 CLI 和开发工具
 
 	{: .navgroup id="learn"}
@@ -17,8 +17,8 @@ CLI 和开发工具
 	reference/cfcommands/index.md
 
 	{: .topicgroup}
-	Bluemix CLI 插件
-	        plugins/auto-scaling/index.md
+	IBM Cloud CLI 插件
+		plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service（集群）](../containers/cs_cli_devtools.html)
 		[Container Service（单个组和可扩展组）](../containers/container_cli_cfic.html)
@@ -37,16 +37,16 @@ CLI 和开发工具
 	{: .topicgroup}
 	集成开发工具
 		ibm-dev-tools-for-vscode.md
-		[API Connect 开发者工具](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
-		[Bluemix Live Sync](../develop/bluemixlive.html)
-		[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html)
+		[API Connect 开发者工具箱](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
+		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
+		[使用 IBM Eclipse Tools for IBM Cloud 部署应用程序](../manageapps/eclipsetools/eclipsetools.html)
 		[管理 Liberty 和 Node.js 应用程序](../manageapps/app_mng.html#app_management)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
-	login_federated_id.md
 	reference/bluemix_cli/extend_cli.md
+	login_federated_id.md
 	[使用工具链进行开发](../services/ContinuousDelivery/dev_use_toolchains.html)
 	[使用 Eclipse Tools 进行开发](../starters/deploy_eclipsetools.html)
 	[使用 CLI 部署应用程序](../starters/install_cli.html)

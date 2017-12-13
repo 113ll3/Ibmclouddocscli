@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-10"
 
 
 ---
@@ -50,15 +50,17 @@ lastupdated: "2017-10-26"
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
+ <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
+ <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -82,7 +84,7 @@ bx cr api
 在 {{site.data.keyword.registrylong_notm}} 中构建 Docker 映像。
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -98,6 +100,8 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag v
 <dd>（可选）如果指定此项，那么除非发生错误，否则将禁止构建输出。</dd>
 <dt> --build-arg value</dt>
 <dd>（可选）以“KEY=VALUE”格式指定其他构建自变量。可以通过多次包含此参数来指定多个构建自变量。指定与 Dockerfile 中的键相匹配的 ARG 行时，构建自变量的值可用作环境变量。</dd>
+<dt>--file value, -f value</dt>
+<dd>（可选）如果对多个构建使用相同的文件，那么可以选择其他 Dockerfile 的路径。指定 Dockerfile 相对于构建上下文的位置。如果未指定，那么缺省值为 `PATH/Dockerfile`，其中 PATH 是构建上下文的根目录。</dd>
 <dt>--tag value, -t value</dt>
 <dd>要构建的映像的全名，包括注册表 URL 和名称空间。</dd>
 </dl>
@@ -264,12 +268,6 @@ bx cr plan-upgrade [PLAN]
 </dl>
 
 
-## bx cr pricing
-{: #bx_cr_pricing}
-
-已除去此命令。您可以使用定价计算器来计算估算成本。请参阅[估算 {{site.data.keyword.registrylong_notm}} 的成本](../../../services/Registry/registry_overview.html#registry_plan_billing)。
-
-
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -297,6 +295,34 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>（可选）将流量配额更改为指定的值（以兆字节为单位）。如果您无权设置流量或者您设置的值超出当前价格套餐，那么操作将失败。</dd>
 <dt>--storage VALUE</dt>
 <dd>（可选）将存储配额更改为指定的值（以兆字节为单位）。如果您无权设置存储配额或者您设置的值超出当前价格套餐，那么操作将失败。</dd>
+</dl>
+
+
+## bx cr region
+{: #bx_cr_region}
+
+显示目标区域和注册表。
+
+```
+bx cr region
+```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+设置 {{site.data.keyword.registrylong_notm}} 命令的目标区域。要列出可用区域，请不带参数运行该命令。
+
+```
+bx cr region-set [REGION]
+```
+{: codeblock}
+
+**参数**
+<dl>
+<dt>REGION</dt>
+<dd>（可选）目标区域的名称，例如 `us-south`。</dd>
 </dl>
 
 

@@ -2,43 +2,52 @@
 
 copyright:
 
-  years: 2015, 2017 lastupdated: "2017-08-20"
+  years: 2015, 2017
+lastupdated: "2017-10-20"
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Ampliando a CLI do {{site.data.keyword.Bluemix_notm}} com plug-ins
 {: #plug-ins}
 
 A CLI do {{site.data.keyword.Bluemix_notm}} suporta uma estrutura de plug-in para ampliar sua capacidade. É possível instalar um plug-in de um repositório, uma URL da web ou instalar um binário de plug-in localmente. 
 
-[Repositório de plug-ins da CLI do {{site.data.keyword.Bluemix_notm}}](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg)é o repositório oficial para hospedar os plug-ins.
+[Repositório de plug-ins do {{site.data.keyword.Bluemix_notm}} CLI](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg) é o repositório oficial no qual os plug-ins estão hospedados.
 
-## Instalar um plug-in do repositório
+Para obter mais comandos para gerenciar plug-ins, execute `bluemix plugin` para ver as mensagens de ajuda.
+{: tip}
 
-* Procure o plug-in
+## Instalar um plug-in por meio do repositório do {site.data.keyword.Bluemix_notm}} CLI
 
-  Use o comando 'bluemix plugin repo-plugins -r REPO_NAME' para procurar um plug-in no repositório.
+### Etapa 1: procurar o plug-in
+
+1. Use o comando `bluemix plugin repo-plugins -r REPO_NAME` para procurar um plug-in no repositório.
+2. O {{site.data.keyword.Bluemix_notm}} CLI usa o nome `Bluemix` por padrão. É possível listar os plug-ins no repositório oficial do `Bluemix`. Por
+exemplo:
   
-  A CLI do {{site.data.keyword.Bluemix_notm}} possui o repositório oficial com o nome `Bluemix` configurado por padrão. É possível listar os plug-ins no repositório oficial do `Bluemix`, como abaixo.
-
   ```
   $ bluemix plugin repo-plugins -r Bluemix
   Getting plug-ins from repository 'Bluemix'...
 
   Repository: Bluemix
   Name           Description                                    Versions
-  auto-scaling   Bluemix CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
-  nsg            Bluemix Network Security Group plugin          0.1.1
+  auto-scaling   IBM Cloud CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
+  nsg            IBM Cloud Network Security Group plugin          0.1.1
 
   ```
 
-* Instale o plug-in
+### Etapa 2: instalar o plug-in
 
-  Use 'bx plugin install PLUGIN_NAME -r REPO_NAME' para instalar o plug-in, por exemplo:
+Use o comando `bx plugin install PLUGIN_NAME -r REPO_NAME` para instalar o plug-in. Por
+exemplo:
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix
@@ -51,7 +60,8 @@ A CLI do {{site.data.keyword.Bluemix_notm}} suporta uma estrutura de plug-in par
 
 ## Instalar um plug-in localmente
 
-  Use o comando `bluemix plugin install LOCAL_FILE_NAME` para instalar um binário de plug-in em sua máquina local, por exemplo
+Use o comando `bluemix plugin install LOCAL_FILE_NAME` para instalar um binário de plug-in em sua máquina local. Por
+exemplo:
 
   ```
   $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2
@@ -61,9 +71,9 @@ A CLI do {{site.data.keyword.Bluemix_notm}} suporta uma estrutura de plug-in par
   $
   ```
 
-## Instalar de uma URL da web
+## Instalar um plug-in por meio de uma URL da web
 
-  Use o comando `bluemix plugin install URL` para instalar um plug-in diretamente de uma URL da web, por exemplo
+Use o comando `bluemix plugin install URL` para instalar um plug-in diretamente de uma URL da web. Por exemplo
 
   ```
   ~$ bluemix plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
@@ -74,6 +84,3 @@ A CLI do {{site.data.keyword.Bluemix_notm}} suporta uma estrutura de plug-in par
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$
   ```
-
-
-Para obter mais comandos para gerenciar plug-ins, execute `bluemix plugin` para ver as mensagens de ajuda.

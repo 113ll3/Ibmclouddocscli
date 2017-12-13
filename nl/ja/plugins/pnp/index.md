@@ -11,18 +11,18 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Bluemix CLI 用のプライベート・ネットワーク・ピアリング・プラグイン
+# {{site.data.keyword.Bluemix_notm}} CLI 用のプライベート・ネットワーク・ピアリング・プラグイン
 {: #private_network_cli}
 
-プライベート・ネットワーク・ピアリング・コマンド・ライン・インターフェース (CLI) を使用して、2 つの {{site.data.keyword.Bluemix}} スペース間のプライベート・ネットワーク・ピアリングを構成および管理します。プライベート・ネットワーク・ピアリングは、IBM Containers (Docker コンテナー) でサポートされます。Bluemix スペースは、同じ地域内の異なるアベイラビリティー・ゾーンに配置でき、また異なる地域に配置することもできます。プライベート・ネットワーク・ピアリング CLI プラグインは、Bluemix CLI プラグインで使用できます。
+プライベート・ネットワーク・ピアリング・コマンド・ライン・インターフェース (CLI) を使用して、2 つの {{site.data.keyword.Bluemix}} スペース間のプライベート・ネットワーク・ピアリングを構成および管理します。プライベート・ネットワーク・ピアリングは、IBM Containers (Docker コンテナー) でサポートされます。{{site.data.keyword.Bluemix_notm}} スペースは、同じ地域内の異なるアベイラビリティー・ゾーンに配置でき、また異なる地域に配置することもできます。プライベート・ネットワーク・ピアリング CLI プラグインは、{{site.data.keyword.Bluemix_notm}} CLI プラグインで使用できます。
 
 プライベート・ネットワーク・ピアリング CLI プラグインは、Windows、MAC、および Linux オペレーティング・システムで使用可能です。環境に適したプラグインを使用してください。
 
-開始する前に、Bluemix スペースを作成します。スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。詳しくは、『[独自のプライベート IP アドレスを使う](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)』を参照してください。
+開始する前に、{{site.data.keyword.Bluemix_notm}} スペースを作成します。スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。詳しくは、『[独自のプライベート IP アドレスを使う![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}』を参照してください。
 
-**注:** Bluemix スペースでプライベート・ネットワーク・ピアリングを使用した後に、スペースを削除する必要が生じた場合、まず、当該スペースのプライベート・ネットワーク・ピアリング接続を削除してください。
+**注:** {{site.data.keyword.Bluemix_notm}} スペースでプライベート・ネットワーク・ピアリングを使用した後に、スペースを削除する必要が生じた場合、まず、当該スペースのプライベート・ネットワーク・ピアリング接続を削除してください。
 
-まず、IBM Bluemix CLI をインストールします。詳しくは、『[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)』を参照してください。
+まず、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。詳しくは、『[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)』を参照してください。
 
 ## プライベート・ネットワーク・ピアリング CLI プラグインをインストールします。
 
@@ -32,7 +32,7 @@ lastupdated: "2017-01-12"
 bluemix plugin uninstall private-network-peering
 ```
 ### ローカル・インストール
-ご使用のプラットフォーム用のプライベート・ネットワーク・ピアリング・プラグインを [IBM Bluemix CLI プラグイン・リポジトリー](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins)からダウンロードします。
+ご使用のプラットフォーム用のプライベート・ネットワーク・ピアリング・プラグインを [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}からダウンロードします。
 
 以下のコマンドを使用して、プライベート・ネットワーク・ピアリング・プラグインをインストールします。
 
@@ -62,11 +62,11 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Bluemix リポジトリーからのインストール
+### {{site.data.keyword.Bluemix_notm}} リポジトリーからのインストール
 
-以下のステップに従って、Bluemix リポジトリーからプラグインをインストールします。
+以下のステップに従って、{{site.data.keyword.Bluemix_notm}} リポジトリーからプラグインをインストールします。
 
-1. 以下のように、Bluemix プラグイン・レジストリー・エンドポイントを追加します。
+1. 以下のように、{{site.data.keyword.Bluemix_notm}} プラグイン・レジストリー・エンドポイントを追加します。
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-10-06"
+lastupdated: "2017-11-06"
 
 ---
 
@@ -16,13 +16,13 @@ lastupdated: "2017-10-06"
 # {{site.data.keyword.Bluemix_notm}} (bx) 指令
 {: #bluemix_cli}
 
-版本：0.6.1
+版本：0.6.2
 
-{{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 提供一組依名稱空間分組的指令，讓使用者與 {{site.data.keyword.Bluemix_notm}} 互動。 
+{{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 提供一組依名稱空間分組的指令，讓使用者與 {{site.data.keyword.Bluemix_notm}} 互動。
 
-從 0.5.0 版開始，{{site.data.keyword.Bluemix_notm}} 指令行用戶端已將 Cloud Foundry 指令行用戶端搭載在其安裝中。如果您已安裝自己的 cf cli，請不要在相同環境定義中使用自己的安裝的 {{site.data.keyword.Bluemix_notm}} CLI 指令 `bx [command]` 及 Cloud Foundry CLI 指令 `cf [command]`。如果您要使用 cf cli 來管理 {{site.data.keyword.Bluemix_notm}} CLI 環境定義中的 Cloud Foundry 資源，請改為使用 `bluemix cf [command]`。此外，不容許 `bluemix cf api/login/logout/target`，請改為使用 `bluemix api/login/logout/target`。
+從 0.5.0 版開始，{{site.data.keyword.Bluemix_notm}} 指令行用戶端已將 Cloud Foundry 指令行用戶端搭載在其安裝中。如果您已安裝自己的 cf cli，請不要在相同環境定義中使用自己的安裝的 {{site.data.keyword.Bluemix_notm}} CLI 指令 `bx [command]` 及 Cloud Foundry CLI 指令 `cf [command]`。如果您要使用 cf cli 來管理 {{site.data.keyword.Bluemix_notm}} CLI 環境定義中的 Cloud Foundry 資源，請改為使用 `bluemix cf [command]`。請注意，不容許 `bluemix cf api/login/logout/target`，必須改為使用 `bluemix api/login/logout/target`。
 
-以下列出 {{site.data.keyword.Bluemix_notm}} CLI 所支援的詳細指令用法，包括其名稱、引數、選項、必要條件、說明及範例。
+以下列出 {{site.data.keyword.Bluemix_notm}} CLI 所支援的詳細指令，包括其名稱、引數、選項、必要條件、說明及範例。
 {:shortdesc}
 
 **附註：***必要條件* 列出使用指令之前需要哪些動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
@@ -31,7 +31,7 @@ lastupdated: "2017-10-06"
 <dt>端點</dt>
 <dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能使用這個指令。</dd>
 <dt>登入</dt>
-<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用這個指令。如果是使用聯合 ID 登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。移至 {{site.data.keyword.Bluemix_notm}} 主控台**管理** &gt; **安全** &gt; **Bluemix API 金鑰**，以建立 API 金鑰。
+<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用這個指令。如果是使用聯合 ID 登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。移至 {{site.data.keyword.Bluemix_notm}} 主控台**管理** &gt; **安全** &gt; **平台 API 金鑰**，以建立 API 金鑰。
 </dd>
 <dt>目標</dt>
 <dd>必須使用 <code>bluemix target</code> 指令來設定組織及空間後，才能使用這個指令。</dd>
@@ -43,7 +43,7 @@ lastupdated: "2017-10-06"
 
 請使用下表中的索引來參照常用的 bluemix 指令。
 
-## 一般 bluemix 指令 
+## 一般 bluemix 指令
 {: #bx_commands_index}
 
 <table summary="一般 bluemix 指令。">
@@ -68,12 +68,12 @@ lastupdated: "2017-10-06"
  </tr>
  </tbody>
  </table>
- 
- ## 用來管理及配置 {{site.data.keyword.BluSoftlayer_notm}} 服務的指令
+
+ ## 用來管理及配置 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構服務的指令 (bluemix sl)
   {: #bx_commands_softlayer}
-  
-用來管理 {{site.data.keyword.BluSoftlayer_notm}} 的指令已合併至 Bluemix CLI。如需使用 Bluemix CLI 配置及管理 {{site.data.keyword.BluSoftlayer_notm}} 服務的相關資訊，請參閱：[Bluemix CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 指令](/docs/cli/reference/softlayer/index.md#softlayer_cli)。
- 
+
+用來管理 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構的指令已合併至 {{site.data.keyword.Bluemix_notm}} CLI。如需使用 {{site.data.keyword.Bluemix_notm}} CLI 配置及管理 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構服務的相關資訊，請參閱：[{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 (bluemix sl) 指令](/docs/cli/reference/softlayer/index.md#softlayer_cli)。
+
  ## 用來管理帳戶、組織及角色的指令
  {: #bx_commands_account}
 
@@ -141,35 +141,35 @@ lastupdated: "2017-10-06"
       <td>[bluemix resource quota](bx_cli.html#bluemix_resource_quota)</td>
     </tr>
     <tr>
-      <td>[bluemix resource instances](bx_cli.html#bluemix_resource_instances)</td>
-      <td>[bluemix resource instance](bx_cli.html#bluemix_resource_instance)</td>
-      <td>[bluemix resource instance-create](bx_cli.html#bluemix_resource_instance-create)</td>
-      <td>[bluemix resource instance-update](bx_cli.html#bluemix_resource_instance-update)</td>
-      <td>[bluemix resource instance-delete](bx_cli.html#bluemix_resource_instance-delete)</td>
+      <td>[bluemix resource service-instances](bx_cli.html#bluemix_resource_service_instances)</td>
+      <td>[bluemix resource service-instance](bx_cli.html#bluemix_resource_service_instance)</td>
+      <td>[bluemix resource service-instance-create](bx_cli.html#bluemix_resource_service_instance_create)</td>
+      <td>[bluemix resource service-instance-update](bx_cli.html#bluemix_resource_service_instance_update)</td>
+      <td>[bluemix resource service-instance-delete](bx_cli.html#bluemix_resource_service_instance_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource bindings](bx_cli.html#bluemix_resource_bindings)</td>
-      <td>[bluemix resource binding](bx_cli.html#bluemix_resource_binding)</td>
-      <td>[bluemix resource binding-create](bx_cli.html#bluemix_resource_binding-create)</td>
-      <td>[bluemix resource binding-delete](bx_cli.html#bluemix_resource_binding-delete)</td>
+      <td>[bluemix resource service-bindings](bx_cli.html#bluemix_resource_service_bindings)</td>
+      <td>[bluemix resource service-binding](bx_cli.html#bluemix_resource_service_binding)</td>
+      <td>[bluemix resource service-binding-create](bx_cli.html#bluemix_resource_service_binding_create)</td>
+      <td>[bluemix resource service-binding-delete](bx_cli.html#bluemix_resource_service_binding_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource keys](bx_cli.html#bluemix_resource_keys)</td>
-      <td>[bluemix resource key](bx_cli.html#bluemix_resource_key)</td>
-      <td>[bluemix resource key-create](bx_cli.html#bluemix_resource_key-create)</td>
-      <td>[bluemix resource key-delete](bx_cli.html#bluemix_resource_key-delete)</td>
+      <td>[bluemix resource service-keys](bx_cli.html#bluemix_resource_service_keys)</td>
+      <td>[bluemix resource service-key](bx_cli.html#bluemix_resource_service_key)</td>
+      <td>[bluemix resource service-key-create](bx_cli.html#bluemix_resource_service_key_create)</td>
+      <td>[bluemix resource service-key-delete](bx_cli.html#bluemix_resource_service_key_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource aliases](bx_cli.html#bluemix_resource_aliases)</td>
-      <td>[bluemix resource alias](bx_cli.html#bluemix_resource_alias)</td>
-      <td>[bluemix resource alias-create](bx_cli.html#bluemix_resource_alias-create)</td>
-      <td>[bluemix resource alias-update](bx_cli.html#bluemix_resource_alias-update)</td>
-      <td>[bluemix resource alias-delete](bx_cli.html#bluemix_resource_alias-delete)</td>
+      <td>[bluemix resource service-aliases](bx_cli.html#bluemix_resource_service_aliases)</td>
+      <td>[bluemix resource service-alias](bx_cli.html#bluemix_resource_service_alias)</td>
+      <td>[bluemix resource service-alias-create](bx_cli.html#bluemix_resource_service_alias_create)</td>
+      <td>[bluemix resource service-alias-update](bx_cli.html#bluemix_resource_service_alias_update)</td>
+      <td>[bluemix resource service-alias-delete](bx_cli.html#bluemix_resource_service_alias_delete)</td>
     </tr>
   </tbody>
 </table>
 
- 
+
  ## 用來管理 API 金鑰及原則的指令
  {: #bx_commands_iam}
  <table summary="您可以用來管理 API 金鑰及原則的 bluemix 指令。">
@@ -214,7 +214,7 @@ lastupdated: "2017-10-06"
   </tr>
   </tbody>
   </table>
- 
+
  ## 用來管理 cf 應用程式及應用程式相關網域、路徑和憑證的指令
  {: #bx_commands_apps}
 
@@ -275,14 +275,14 @@ lastupdated: "2017-10-06"
  </tr>
   </tbody>
  </table>
- 
- ## 用來管理 Bluemix 服務的指令
+
+ ## 用來管理 {{site.data.keyword.Bluemix_notm}} 服務的指令
  {: #bx_commands_services}
 
-<table summary="您可以用來管理 Bluemix 服務的 bluemix 指令。">
- <caption>表 5. 用來管理 Bluemix 服務的指令</caption>
+<table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} 服務的 bluemix 指令。">
+<caption>表 5. 用來管理 {{site.data.keyword.Bluemix_notm}} 服務的指令</caption>
  <thead>
- <th colspan="5">用來管理 Bluemix 服務的指令</th>
+ <th colspan="5">用來管理 {{site.data.keyword.Bluemix_notm}} 服務的指令</th>
  </thead>
  <tbody>
  <tr>
@@ -309,51 +309,51 @@ lastupdated: "2017-10-06"
   </tbody>
  </table>
 
- 
+
  ## 用來管理型錄、外掛程式及帳單設定的指令
  {: #bx_commands_settings}
 
-<table summary="您可以用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的 bluemix 指令。">
- <caption>表 6. 用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的指令</caption>
+<table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} 型錄、外掛程式、帳單及安全設定的 bluemix 指令。">
+<caption>表 6. 用來管理 {{site.data.keyword.Bluemix_notm}} 型錄、外掛程式、帳單及安全設定的指令</caption>
  <thead>
- <th colspan="5">用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的指令</th>
+ <th colspan="5">用來管理 {{site.data.keyword.Bluemix_notm}} 型錄、外掛程式、帳單及安全設定的指令</th>
  </thead>
  <tbody>
  <tr>
   <td>[bluemix catalog search](bx_cli.html#bluemix_catalog_search)</td>
   <td>[bluemix catalog entry](bx_cli.html#bluemix_catalog_entry)</td>
-  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry-create)</td>
-  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry-update)</td>
-  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry-visibility)</td>
+  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry_create)</td>
+  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry_update)</td>
+  <td>[bluemix catalog entry-delete](bx_cli.html#bluemix_catalog_entry_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service-marketplace)</td>
-  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry-visibility-set)</td>
+  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry_visibility)</td>
+  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service_marketplace)</td>
+  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry_visibility_set)</td>
   <td>[bluemix catalog templates](bx_cli.html#bluemix_catalog_templates)</td>
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
  </tr>
  <tr>
   <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
   <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
-  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
  </tr>
  <tr>
+  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
   <td>[bluemix plugin list](bx_cli.html#bluemix_plugin_list)</td>
   <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
   <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
   <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
-  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
  </tr>
  <tr>
+  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
   <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  </tr>
  </tbody>
  </table>
- 
+
 ## bluemix help
 {: #bluemix_help}
 顯示 {{site.data.keyword.Bluemix_notm}} CLI 之第一層內建指令及所支援名稱空間的一般說明，或特定內建指令或名稱空間的說明。
@@ -545,7 +545,7 @@ bluemix -q cf services
 ## bluemix login
 {: #bluemix_login}
 
-登入使用者。 
+登入使用者。
 
 ```
 bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
@@ -776,7 +776,7 @@ bluemix account org IBM --guid
 建立新的組織。只有帳戶擁有者才能執行此作業。
 
 ```
-bluemix account org-create ORG_NAME
+bluemix account org-create ORG_NAME [-f]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -785,6 +785,8 @@ bluemix account org-create ORG_NAME
    <dl>
    <dt>ORG_NAME（必要）</dt>
    <dd>所要建立之組織的名稱。</dd>
+   <dt>-f</dt>
+   <dd>強制建立，而不進行確認。</dd>
    </dl>
 
 <strong>範例</strong>：
@@ -846,7 +848,20 @@ bluemix account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ## bluemix account spaces
 {: #bluemix_account_spaces}
 
-這個指令的功能及選項與 `cf spaces` 指令相同。
+列出所有空間
+
+```
+bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
+```
+
+<strong>指令選項</strong>：
+   <dl>
+   <dt>-o</dt>
+   <dd>組織名稱。列出所指定組織下的空間。如果未指定，則預設為現行組織。</dd>
+   <dt>-r</dt>
+   <dd>地區名稱。列出所指定地區下的空間。如果未指定，則預設為現行地區。</dd>
+   </dl>
+
 
 
 ## bluemix account space
@@ -923,10 +938,16 @@ bluemix account org-users ORG_NAME [-a]
 取得現行使用者的所有組織角色
 
 ```
-bluemix account org-roles
+bluemix account org-roles [-u USER_ID]
 ```
 
 <strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+  <dl>
+   <dt>-u</dt>
+   <dd>使用者 ID。如果未指定，則預設為現行使用者。</dd>
+  </dl>
 
 ## bluemix account org-role-set
 {: #bluemix_account_org_role_set}
@@ -963,7 +984,7 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
 bluemix account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**附註**：您可以使用 CLI 設定組織/空間角色，但如果您要設定其他許可權，則必須利用使用者介面。如需進一步詳細資料，請參閱[指派使用者存取權](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)。<!-- Begin Staging URL vs Prod URL -->
+**附註**：您可以使用 CLI 設定組織/空間角色，但如果您要設定其他許可權，則必須利用使用者介面。如需進一步詳細資料，請參閱[指派使用者存取權](/docs/iam/assignaccess.html#assignaccess)。<!-- Begin Staging URL vs Prod URL -->
 
 ## bluemix account org-role-unset
 {: #bluemix_account_org_role_unset}
@@ -1363,7 +1384,7 @@ bluemix iam service-id-delete sample-teset -f
 ## bluemix iam api-keys
 {: #bluemix_iam_api_keys}
 
-列出所有 Bluemix 平台 API 金鑰
+列出所有 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰
 
 ```
 bluemix iam api-keys
@@ -1374,7 +1395,7 @@ bluemix iam api-keys
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-建立新的 Bluemix 平台 API 金鑰
+建立新的 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1403,7 +1424,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-更新 Bluemix 平台 API 金鑰
+更新 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1432,7 +1453,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-刪除 Bluemix 平台 API 金鑰
+刪除 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰
 
 ```
 bluemix iam api-key-delete NAME [-f]
@@ -1451,10 +1472,10 @@ bluemix iam api-key-delete NAME [-f]
 ## bluemix iam service-api-keys
 {: #bluemix_iam_service_api_keys}
 
-列出所有服務 API 金鑰
+列出服務的所有 API 金鑰
 
 ```
-bluemix iam service-api-keys BOUND_TO 
+bluemix iam service-api-keys SERVICE_ID
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1465,10 +1486,10 @@ bluemix iam service-api-keys BOUND_TO
 
 <strong>範例</strong>：
 
-列出連結至服務 CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` 的服務 API 金鑰：
+列出服務 `sample-service` 的所有 API 金鑰：
 
 ```
-bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-keys sample-service
 ```
 
 ## bluemix iam service-api-key
@@ -1477,7 +1498,7 @@ bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04
 列出服務 API 金鑰的詳細資料
 
 ```
-bluemix iam service-api-key NAME BOUND_TO [--uuid]
+bluemix iam service-api-key NAME SERVICE_ID [--uuid]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1490,10 +1511,10 @@ bluemix iam service-api-key NAME BOUND_TO [--uuid]
 
 <strong>範例</strong>：
 
-顯示連結至服務 CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` 之服務 API 金鑰 `sample-key` 的詳細資料：
+顯示服務 `sample-service` 的服務 API 金鑰 `sample-key` 的詳細資料：
 
 ```
-bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key sample-key sample-service
 ```
 
 ## bluemix iam service-api-key-create
@@ -1502,7 +1523,7 @@ bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab
 建立服務 API 金鑰
 
 ```
-bluemix iam service-api-key-create NAME BOUND_TO [-d, --description DESCRIPTION] [-f, --file FILE]
+bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [-f, --file FILE]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1517,10 +1538,10 @@ bluemix iam service-api-key-create NAME BOUND_TO [-d, --description DESCRIPTION]
 
 <strong>範例</strong>：
 
-建立連結至服務 CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` 的服務 API 金鑰 `sample-key`：
+建立服務 `sample-service` 的服務 API 金鑰 `sample-key`：
 
 ```
-bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key-create sample-key sample-service
 ```
 
 ## bluemix iam service-api-key-update
@@ -1529,7 +1550,7 @@ bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-sout
 更新服務 API 金鑰
 
 ```
-bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1551,7 +1572,7 @@ bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --
 將服務 API 金鑰 `sample-key` 重新命名為 `new-sample-key`：
 
 ```
-bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da" -n new-sample-key
+bluemix iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
 
 ## bluemix iam service-api-key-delete
@@ -1560,7 +1581,7 @@ bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-sout
 刪除服務 API 金鑰
 
 ```
-bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
+bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1576,7 +1597,7 @@ bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
 刪除服務 API 金鑰 `sample-key`：
 
 ```
-bluemix iam service-api-key-delete sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key-delete sample-key sample-service
 ```
 
 ## bluemix iam user-policies
@@ -1637,7 +1658,7 @@ bluemix iam user-policy name@example.com 0bb730daa
 建立使用者原則
 
 ```
-bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resouce-group-id RESOURCE_GROUP_ID]}
+bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>必要條件</strong>：端點、登入、設為目標的帳戶
@@ -1969,7 +1990,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 列出資源群組
 
 ```
-bluemix resource groups [--default | (-r, --resource RESOURCE_ID -o, --resource-origin RESOURCE_ORIGIN)]
+bluemix resource groups [--default]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1978,10 +1999,6 @@ bluemix resource groups [--default | (-r, --resource RESOURCE_ID -o, --resource-
 <dl>
   <dt>--default</dt>
   <dd>取得現行帳戶的預設群組</dd>
-  <dt>-r, --resource</dt>
-  <dd>隸屬資源的 ID</dd>
-  <dt>-o, --resource-origin</dt>
-  <dd>隸屬資源的出處。接受值：'CF_ORG'、'IMS_ACCOUNT'。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -1997,13 +2014,6 @@ bluemix resource groups
 ```
 bluemix resource groups --default
 ```
-
-列出其為 CloudFoundry 組織之對映的資源群組
-
-```
-bluemix resource groups -r d0ef0e-12n3632z9f-ef3w54n -o CF_ORG
-```
-
 
 ## bluemix resource group
 {: #bluemix_resource_group}
@@ -2238,7 +2248,7 @@ bluemix resource quota free
 
 這個指令的功能及選項與 `cf create-app-manifest` 指令相同。
 
-## bluemix app domain-cert 
+## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
 
 列出網域的憑證資訊。
@@ -2574,42 +2584,42 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 這個指令的功能及選項與 `cf update-user-provided-service` 指令相同。
 
 
-## bluemix resource instances
-{: #bluemix_resource_instances}
+## bluemix resource service-instances
+{: #bluemix_resource_service_instances}
 
-列出資源實例
+列出服務實例
 
 ```
-bluemix resource instances [--resource-name RESOURCE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>--resource-name</dt>
-  <dd>隸屬資源的名稱</dd>
+  <dt>--service-name</dt>
+  <dd>隸屬服務的名稱</dd>
   <dt>-r, --region</dt>
-  <dd>依「地區 ID」進行過濾，如果未指定，預設為現行地區，'-r, --region all' 則顯示所有地區下的資源實例</dd>
+  <dd>依「地區 ID」進行過濾，如果未指定，則預設為現行地區，'-r, --region all' 會顯示所有地區下的服務實例</dd>
   <dt>--long</dt>
   <dd>顯示輸出中的其他欄位</dd>
 </dl>
 
 <strong>範例</strong>：
 
-列出資源 `test-resource` 的資源實例：
+列出服務 `test-service` 的服務實例：
 
 ```
-bluemix resource instances --resource-name test-resource
+bluemix resource service-instances --service-name test-service
 ```
 
-## bluemix resource instance
-{: #bluemix_resource_instance}
+## bluemix resource service-instance
+{: #bluemix_resource_service_instance}
 
-顯示資源實例的詳細資料
+顯示服務實例的詳細資料
 
 ```
-bluemix resource instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [-r, --region REGION] [--id]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2617,26 +2627,26 @@ bluemix resource instance NAME [-r, --region REGION] [--id]
 <strong>指令選項</strong>：
 <dl>
   <dt>NAME（必要）</dt>
-  <dd>資源實例的名稱</dd>
+  <dd>服務實例的名稱</dd>
   <dt>-r, --region</dt>
-  <dd>依「地區 ID」進行過濾，如果未指定，預設為現行地區，'-r, --region all' 則顯示所有地區下的資源實例</dd>
+  <dd>依「地區 ID」進行過濾，如果未指定，則預設為現行地區，'-r, --region all' 會顯示所有地區下的服務實例</dd>
   <dt>--id</dt>
-  <dd>顯示資源實例的 ID</dd>
+  <dd>顯示服務實例的 ID</dd>
 </dl>
 
-<strong>範例</strong>：顯示資源實例 `my-resource-instance` 的詳細資料：
+<strong>範例</strong>：顯示服務實例 `my-service-instance` 的詳細資料：
 
 ```
-bluemix resource instance my-resource-instance
+bluemix resource service-instance my-service-instance
 ```
 
-## bluemix resource instance-create
-{: #bluemix_resource_instance_create}
+## bluemix resource service-instance-create
+{: #bluemix_resource_service_instance_create}
 
-建立資源實例
+建立服務實例
 
 ```
-bluemix resource instance-create NAME RESOURCE_NAME|RESOURCE_ID RESOURCE_PLAN_NAME|RESOURCE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2644,65 +2654,65 @@ bluemix resource instance-create NAME RESOURCE_NAME|RESOURCE_ID RESOURCE_PLAN_NA
 <strong>指令選項</strong>：
 <dl>
   <dt>NAME（必要）</dt>
-  <dd>資源實例的名稱</dd>
-  <dt>RESOURCE_NAME 或 RESOURCE_ID（必要）</dt>
-  <dd>資源的名稱或 ID</dd>
-  <dt>RESOURCE_PLAN_NAME 或 RESOURCE_PLAN_ID（必要）</dt>
-  <dd>資源方案的名稱或 ID</dd>
+  <dd>服務實例的名稱</dd>
+  <dt>SERVICE_NAME 或 SERVICE_ID（必要）</dt>
+  <dd>服務的名稱或 ID</dd>
+  <dt>SERVICE_PLAN_NAME 或 SERVICE_PLAN_ID（必要）</dt>
+  <dd>服務方案的名稱或 ID</dd>
   <dt>-r, --region</dt>
-  <dd>要建立資源實例的地區，如果未指定，則預設為現行地區</dd>
+  <dd>要建立服務實例的地區，如果未指定，則預設為現行地區</dd>
   <dt>-t, --tags</dt>
   <dd>標籤</dd>
   <dt>-p, --parameters</dt>
-  <dd>要建立資源實例之參數的 JSON 檔案或 JSON 字串</dd>
+  <dd>要建立服務實例之參數的 JSON 檔案或 JSON 字串</dd>
 </dl>
 
-<strong>範例</strong>：使用資源 `test-resource` 的資源方案 `test-resource-plan`，建立名為 `my-resource-instance` 的資源實例：
+<strong>範例</strong>：使用服務 `test-service` 的服務方案 `test-service-plan`，建立名為 `my-service-instance` 的服務實例：
 
 ```
-bluemix resource instance-create my-resource-instance test-resource test-resource-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan
 ```
 
-## bluemix resource instance-update
-{: #bluemix_resource_instance_update}
+## bluemix resource service-instance-update
+{: #bluemix_resource_service_instance_update}
 
-更新資源實例
+更新服務實例
 
 ```
-bluemix resource instance-update RESOURCE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--resource-plan-id RESOURCE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
+bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>RESOURCE_INSTANCE_NAME（必要）</dt>
-  <dd>資源實例的名稱</dd>
+  <dt>SERVICE_INSTANCE_NAME（必要）</dt>
+  <dd>服務實例的名稱</dd>
   <dt>-n, --name</dt>
-  <dd>新的資源實例名稱</dd>
+  <dd>新的服務實例名稱</dd>
   <dt>-t, --tags</dt>
   <dd>新標籤</dd>
-  <dt>--resource-plan-id</dt>
-  <dd>新的資源方案 ID</dd>
+  <dt>--service-plan-id</dt>
+  <dd>新的服務方案 ID</dd>
   <dt>--update-time</dt>
   <dd>自新紀元後付費記錄應該生效的時間（以秒為單位）</dd>
   <dt>-f, --force</dt>
   <dd>強制更新，而不進行確認</dd>
 </dl>
 
-<strong>範例</strong>：更新資源實例 `my-resource-instance`，並將其名稱變更為 `new-resource-instance`：
+<strong>範例</strong>：更新服務實例 `my-service-instance`，並將其名稱變更為 `new-service-instance`：
 
 ```
-bluemix resource instance-update my-resource-instance -n new-resource-instance
+bluemix resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-## bluemix resource instance-delete
-{: #bluemix_resource_instance_delete}
+## bluemix resource service-instance-delete
+{: #bluemix_resource_service_instance_delete}
 
-刪除資源實例
+刪除服務實例
 
 ```
-bluemix resource instance-delete NAME [-f, --force]
+bluemix resource service-instance-delete NAME [-f, --force] [--recursive]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2711,43 +2721,45 @@ bluemix resource instance-delete NAME [-f, --force]
 <dl>
   <dt>-f, --force</dt>
   <dd>強制刪除，而不進行確認</dd>
+  <dt>--recursive</dt>
+  <dd>刪除所有隸屬資源</dd>
 </dl>
 
-<strong>範例</strong>：刪除資源實例 `my-resource-instance`：
+<strong>範例</strong>：刪除資源服務實例 `my-service-instance`：
 
 ```
-bluemix resource instance-delete my-resource-instance
+bluemix resource service-instance-delete my-service-instance
 ```
 
-## bluemix resource bindings
-{: #bluemix_resource_bindings}
+## bluemix resource service-bindings
+{: #bluemix_resource_service_bindings}
 
-顯示與資源別名的連結
+顯示與服務別名的連結
 
 ```
-bluemix resource bindings RESOURCE_ALIAS
+bluemix resource bindings SERVICE_ALIAS
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>RESOURCE_ALIAS（必要）</dt>
-  <dd>資源別名</dd>
+  <dt>SERVICE_ALIAS（必要）</dt>
+  <dd>服務別名</dd>
 </dl>
 
-<strong>範例</strong>：顯示與資源別名 `my-resource-alias` 的資源連結：
+<strong>範例</strong>：顯示與服務別名 `my-service-alias` 的資源連結：
 
 ```
-bluemix resource bindings my-resource-alias
+bluemix resource bindings my-service-alias
 ```
-## bluemix resource binding
-{: #bluemix_resource_binding}
+## bluemix resource service-binding
+{: #bluemix_resource_service_binding}
 
-顯示資源連結的詳細資料
+顯示服務連結的詳細資料
 
 ```
-bluemix resource binding ALIAS_NAME APP_NAME [--id]
+bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2755,34 +2767,34 @@ bluemix resource binding ALIAS_NAME APP_NAME [--id]
 <strong>指令選項</strong>：
 <dl>
   <dt>ALIAS_NAME（必要）</dt>
-  <dd>資源別名</dd>
+  <dd>服務別名</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 應用程式名稱</dd>
   <dt>--id</dt>
-  <dd>僅顯示 ID。會抑制資源連結的所有其他輸出。</dd>
+  <dd>僅顯示 ID。會抑制服務連結的所有其他輸出。</dd>
 </dl>
 
-<strong>範例</strong>：顯示資源別名 `my-resource-alias` 與應用程式 `my-app` 之間資源連結的詳細資料：
+<strong>範例</strong>：顯示服務別名 `my-service-alias` 與應用程式 `my-app` 之間服務連結的詳細資料：
 
 ```
-bluemix resource bindings my-resource-alias my-app
+bluemix resource bindings my-service-alias my-app
 ```
 
-## bluemix resource binding-create
-{: #bluemix_resource_binding_create}
+## bluemix resource service-binding-create
+{: #bluemix_resource_service_binding_create}
 
-建立資源連結
+建立服務連結
 
 ```
-bluemix resource binding-create RESOURCE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>RESOURCE_ALIAS_NAME（必要）</dt>
-  <dd>資源別名</dd>
+  <dt>SERVICE_ALIAS_NAME（必要）</dt>
+  <dd>服務別名</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 應用程式名稱</dd>
   <dt>ROLE_NAME</dt>
@@ -2793,45 +2805,45 @@ bluemix resource binding-create RESOURCE_ALIAS_NAME APP_NAME ROLE_NAME [--servic
   <dd>強制建立，而不進行確認</dd>
 </dl>
 
-<strong>範例</strong>：以 `Administrator` 角色，建立資源別名 `my-resource-alias` 與應用程式 `my-app` 之間的資源連結：
+<strong>範例</strong>：以 `Administrator` 角色，建立服務別名 `my-service-alias` 與應用程式 `my-app` 之間的服務連結：
 
 ```
-bluemix resource binding-create my-resource-alias my-app Administrator
+bluemix resource service-binding-create my-service-alias my-app Administrator
 ```
-## bluemix resource binding-delete
-{: #bluemix_resource_binding_delete}
+## bluemix resource service-binding-delete
+{: #bluemix_resource_service_binding_delete}
 
-刪除資源連結
+刪除服務連結
 
 ```
-bluemix resource binding-delete RESOURCE_ALIAS APP_NAME [-f, --force]
+bluemix resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
 
 <strong>必要條件</strong>：無
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>RESOURCE_ALIAS_NAME（必要）</dt>
-  <dd>資源別名</dd>
+  <dt>SERVICE_ALIAS_NAME（必要）</dt>
+  <dd>服務別名</dd>
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 應用程式名稱</dd>
   <dt>-f, --force</dt>
   <dd>強制刪除，而不進行確認</dd>
 </dl>
 
-<strong>範例</strong>：刪除資源別名 `my-resource-alias` 與應用程式 `my-app` 之間的資源連結：
+<strong>範例</strong>：刪除服務別名 `my-service-alias` 與應用程式 `my-app` 之間的服務連結：
 
 ```
-bluemix resource binding-delete my-resource-alias my-app
+bluemix resource service-binding-delete my-service-alias my-app
 ```
 
-## bluemix resource keys
-{: #bluemix_resource_keys}
+## bluemix resource service-keys
+{: #bluemix_resource_service_keys}
 
-列出資源實例或資源別名的資源索引鍵
+列出服務實例或服務別名的服務金鑰
 
 ```
-bluemix resource keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+bluemix resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2839,28 +2851,28 @@ bluemix resource keys [ --instance-id ID | --instance-name NAME | --alias-id ID 
 <strong>指令選項</strong>：
 <dl>
   <dt>--instance-id</dt>
-  <dd>資源實例 ID</dd>
+  <dd>服務實例 ID</dd>
   <dt>--instance-name</dt>
-  <dd>資源實例名稱</dd>
+  <dd>服務實例名稱</dd>
   <dt>--alias-id</dt>
-  <dd>資源別名 ID</dd>
+  <dd>服務別名 ID</dd>
   <dt>--alias-name</dt>
-  <dd>資源別名</dd>
+  <dd>服務別名</dd>
 </dl>
 
-<strong>範例</strong>：列出資源實例 `my-resource-instance` 的資源索引鍵：
+<strong>範例</strong>：列出服務實例 `my-service-instance` 的服務金鑰：
 
 ```
-bluemix resource keys --instance-name my-resource-instance
+bluemix resource service-keys --instance-name my-service-instance
 ```
 
-## bluemix resource key
-{: #bluemix_resource_key}
+## bluemix resource service-key
+{: #bluemix_resource_service_key}
 
-顯示資源索引鍵的詳細資料
+顯示服務金鑰的詳細資料
 
 ```
-bluemix resource key KEY_NAME [--id]
+bluemix resource service-key KEY_NAME [--id]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2870,22 +2882,22 @@ bluemix resource key KEY_NAME [--id]
   <dt>KEY_NAME</dt>
   <dd>索引鍵的名稱</dd>
   <dt>--id</dt>
-  <dd>顯示資源索引鍵的 ID</dd>
+  <dd>顯示服務金鑰的 ID</dd>
 </dl>
 
-<strong>範例</strong>：顯示資源索引鍵 `my-resource-key` 的詳細資料：
+<strong>範例</strong>：顯示服務金鑰 `my-service-key` 的詳細資料：
 
 ```
-bluemix resource key my-resource-key
+bluemix resource service-key my-service-key
 ```
 
-## bluemix resource key-create
-{: #bluemix_resource_key_create}
+## bluemix resource service-key-create
+{: #bluemix_resource_service_key_create}
 
-建立資源索引鍵
+建立服務金鑰
 
 ```
-bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID | --instance-name RESOURCE_INSTANCE_NAME | --alias-id RESOURCE_ALIAS_ID | --alias-name RESOURCE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2897,32 +2909,32 @@ bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID 
   <dt>ROLE_NAME</dt>
   <dd>使用者角色的名稱</dd>
   <dt>--instance-id</dt>
-  <dd>資源實例 ID</dd>
+  <dd>服務實例 ID</dd>
   <dt>--instance-name</dt>
-  <dd>資源實例名稱</dd>
+  <dd>服務實例名稱</dd>
   <dt>--alias-id</dt>
-  <dd>資源別名 ID</dd>
+  <dd>服務別名 ID</dd>
   <dt>--alias-name</dt>
-  <dd>資源別名</dd>
+  <dd>服務別名</dd>
   <dt>-service-id-name</dt>
   <dd>角色所屬服務 ID 的名稱</dd>
   <dt>-f, --force</dt>
   <dd>強制建立，而不進行確認</dd>
 </dl>
 
-<strong>範例</strong>：以 `Administrator` 角色，為資源實例 `my-resource-instance` 建立名為 `my-resource-key` 的資源索引鍵：
+<strong>範例</strong>：以 `Administrator` 角色，為服務實例 `my-service-instance` 建立名為 `my-service-key` 的服務金鑰：
 
 ```
-bluemix resource key-create my-resource-key Administrator --instance-name my-resource-instance
+bluemix resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
 
-## bluemix resource key-delete
-{: #bluemix_resource_key_delete}
+## bluemix resource service-key-delete
+{: #bluemix_resource_service_key_delete}
 
-刪除資源索引鍵
+刪除服務金鑰
 
 ```
-bluemix resource key-delete KEY_NAME [-f, --forece]
+bluemix resource service-key-delete KEY_NAME [-f, --forece]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2935,19 +2947,19 @@ bluemix resource key-delete KEY_NAME [-f, --forece]
   <dd>強制刪除，而不進行確認</dd>
 </dl>
 
-<strong>範例</strong>：刪除資源索引鍵 `my-resource-key`：
+<strong>範例</strong>：刪除服務金鑰 `my-service-key`：
 
 ```
-bluemix resource key-delete my-resource-key
+bluemix resource service-key-delete my-service-key
 ```
 
-## bluemix resource aliases
-{: #bluemix_resource_aliases}
+## bluemix resource service-aliases
+{: #bluemix_resource_service_aliases}
 
-列出資源實例的別名
+列出服務實例的別名
 
 ```
-bluemix resource aliases [ --instance-id ID | --instance-name NAME ]
+bluemix resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2955,23 +2967,23 @@ bluemix resource aliases [ --instance-id ID | --instance-name NAME ]
 <strong>指令選項</strong>：
 <dl>
   <dt>--instance-id</dt>
-  <dd>隸屬資源實例的 ID。</dd>
+  <dd>隸屬服務實例的 ID。</dd>
   <dt>--instance-name</dt>
-  <dd>隸屬資源實例的名稱。</dd>
+  <dd>隸屬服務實例的名稱。</dd>
 </dl>
 
-<strong>範例</strong>：列出資源實例 `my-resource-instance` 的資源別名：
+<strong>範例</strong>：列出服務實例 `my-service-instance` 的服務別名：
 ```
-bluemix resource aliases my-resource-instance
+bluemix resource service-aliases my-service-instance
 ```
 
-## bluemix resource alias
-{: #bluemix_resource_alias}
+## bluemix resource service-alias
+{: #bluemix_resource_service_alias}
 
-顯示資源別名的詳細資料
+顯示服務別名的詳細資料
 
 ```
-bluemix resource alias ALIAS_NAME [--id]
+bluemix resource service-alias ALIAS_NAME [--id]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -2979,23 +2991,23 @@ bluemix resource alias ALIAS_NAME [--id]
 <strong>指令選項</strong>：
 <dl>
   <dt>ALIAS_NAME（必要）</dt>
-  <dd>資源別名的名稱</dd>
+  <dd>服務別名的名稱</dd>
   <dt>--id</dt>
-  <dd>僅顯示給定資源別名的 ID。會抑制別名的所有其他輸出。</dd>
+  <dd>僅顯示給定服務別名的 ID。會抑制別名的所有其他輸出。</dd>
 </dl>
 
-<strong>範例</strong>：顯示資源別名 `my-resource-alias` 的詳細資料：
+<strong>範例</strong>：顯示服務別名 `my-service-alias` 的詳細資料：
 ```
-bluemix resource aliase  my-resource-alias
+bluemix resource service-aliase  my-service-alias
 ```
 
-## bluemix resource alias-create
-{: #bluemix_resource_alias_create}
+## bluemix resource service-alias-create
+{: #bluemix_resource_service_alias_create}
 
-建立資源實例的別名
+建立服務實例的別名
 
 ```
-bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
+bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -3003,11 +3015,11 @@ bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NA
 <strong>指令選項</strong>：
 <dl>
   <dt>ALIAS_NAME（必要）</dt>
-  <dd>資源別名的名稱</dd>
+  <dd>服務別名的名稱</dd>
   <dt>--instance-id</dt>
-  <dd>隸屬資源實例的 ID。</dd>
+  <dd>隸屬服務實例的 ID。</dd>
   <dt>--instance-name</dt>
-  <dd>隸屬資源實例的名稱。</dd>
+  <dd>隸屬服務實例的名稱。</dd>
   <dt>-s</dt>
   <dd>在其中建立別名的空間名稱。預設為現行空間。</dd>
   <dt>-t, --tags</dt>
@@ -3016,18 +3028,18 @@ bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NA
   <dd>參數 JSON 檔案或 JSON 字串。</dd>
 </dl>
 
-<strong>範例</strong>：為資源實例 `my-resource-instance` 建立名為 `my-resource-alias` 的資源別名：
+<strong>範例</strong>：為服務實例 `my-service-instance`，建立名為 `my-service-alias` 的服務別名：
 ```
-bluemix resource aliase-create my-resource-alias --instance-name my-resource-instance
+bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
 ```
 
-## bluemix resource alias-update
-{: #bluemix_resource_alias_update}
+## bluemix resource service-alias-update
+{: #bluemix_resource_service_alias_update}
 
-更新資源別名
+更新服務別名
 
 ```
-bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
+bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -3035,9 +3047,9 @@ bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS]
 <strong>指令選項</strong>：
 <dl>
   <dt>ALIAS_NAME（必要）</dt>
-  <dd>資源別名的名稱</dd>
+  <dd>服務別名的名稱</dd>
   <dt>-n, --name</dt>
-  <dd>資源別名的新名稱。</dd>
+  <dd>服務別名的新名稱。</dd>
   <dt>-t, --tags</dt>
   <dd>標籤清單。</dd>
   <dt>-p, --parameters</dt>
@@ -3046,19 +3058,19 @@ bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS]
   <dd>強制更新，而不進行使用者確認。</dd>
 </dl>
 
-<strong>範例</strong>：更新資源別名 `my-resource-alias`，並將其名稱變更為 `new-resource-alias`：
+<strong>範例</strong>：更新服務別名 `my-service-alias`，並將其名稱變更為 `new-service-alias`：
 
 ```
-bluemix resource alias-update my-resource-alias -n new-resource-alias
+bluemix resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-## bluemix resource alias-delete
-{: #bluemix_resource_alias_delete}
+## bluemix resource service-alias-delete
+{: #bluemix_resource_service_alias_delete}
 
-刪除資源別名
+刪除服務別名
 
 ```
-bluemix resource alias-delete ALIAS_NAME [-f, --force]
+bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -3066,15 +3078,15 @@ bluemix resource alias-delete ALIAS_NAME [-f, --force]
 <strong>指令選項</strong>：
 <dl>
   <dt>ALIAS_NAME（必要）</dt>
-  <dd>資源別名的名稱</dd>
+  <dd>服務別名的名稱</dd>
   <dt>-f, --force</dt>
   <dd>強制刪除，而不進行確認</dd>
 </dl>
 
-<strong>範例</strong>：刪除資源別名 `my-resource-alias`：
+<strong>範例</strong>：刪除服務別名 `my-service-alias`：
 
 ```
-bluemix resource alias-delete my-resource-alias
+bluemix resource service-alias-delete my-service-alias
 ```
 
 ## bluemix catalog search
@@ -3083,15 +3095,13 @@ bluemix resource alias-delete my-resource-alias
 搜尋型錄項目
 
 ```
-bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--reverse] [--json] [--global]
+bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>-q, --query</dt>
-  <dd>搜尋關鍵字</dd>
   <dt>-r, --region</dt>
   <dd>指定要在其中搜尋的地理區域。目前僅支援 "us-south" 及 "united-kingdom"</dd>
   <dt>-k, --kind</dt>
@@ -3100,13 +3110,17 @@ bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind
   <dd>依價格過濾。目前僅支援 "free"、"paygo" 及 "bluemix-subscription"</dd>
   <dt>-t, --tag</dt>
   <dd>依標籤過濾。</dd>
-  <dt>-sort-by</dt>
+  <dt>--sort-by</dt>
   <dd>內容排序方式</dd>
-  <dt>-reverse</dt>
+  <dt>--col</dt>
+  <dd>指定表格的其他直欄。目前為 "group"、"provider" 及 "tags"</dd>
+  <dt>--reverse</dt>
   <dd>是否反轉排序順序</dd>
-  <dt>-json</dt>
+  <dt>--json</dt>
   <dd>輸出原始 JSON 回應</dd>
-  <dt>-global</dt>
+  <dt>--csv</dt>
+  <dd>輸出 CSV 檔案</dd>
+  <dt>--global</dt>
   <dd>在廣域範圍中操作</dd>
 </dl>
 
@@ -3125,20 +3139,18 @@ bluemix catalog search -k service -q 'Automation test'
 取得型錄項目
 
 ```
-bluemix catalog entry [-i ID] [--global]
+bluemix catalog entry ID [--global]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>-i, --id</dt>
-  <dd>型錄項目的 ID。</dd>
-  <dt>-children</dt>
+  <dt>--children</dt>
   <dd>取得型錄項目的所有子項</dd>
-  <dt>-json</dt>
+  <dt>--json</dt>
   <dd>輸出原始 JSON 回應</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>在廣域範圍中操作</dd>
 </dl>
 
@@ -3167,7 +3179,7 @@ bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--gl
   <dd>物件的母項 ID</dd>
   <dt>-c</dt>
   <dd>包含型錄特定配置參數的有效 JSON 物件（透過行內或檔案所提供）。如需所支援配置參數的清單，請參閱特定型錄項目的文件。</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>在廣域範圍中操作</dd>
 </dl>
 
@@ -3185,18 +3197,16 @@ bluemix catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 更新現有型錄項目（僅限帳戶的型錄管理者或編輯者）
 
 ```
-bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
+bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>-i, --id</dt>
-  <dd>所更新型錄項目的 ID。</dd>
   <dt>-c</dt>
   <dd>包含型錄特定配置參數的有效 JSON 物件（透過行內或檔案所提供）。如需所支援配置參數的清單，請參閱特定型錄項目的文件。</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>在廣域範圍中操作</dd>
 </dl>
 
@@ -3205,23 +3215,45 @@ bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 從 JSON 檔案，更新資源 `j402-dnf1i`：
 
 ```
-bluemix entry-update -i 'j402-dnf1i' -c @update.json
+bluemix update 'j402-dnf1i' -c @update.json
 ```
 
-## bluemix catalog entry-visibility
-{: #bluemix_catalog_entry_visibility}
-取得型錄項目的可見性（僅限帳戶的型錄管理者）
-
+## bluemix catalog entry-delete
+{: #bluemix_catalog_entry_delete}
+刪除型錄項目（僅限帳戶的型錄管理者）
 ```
-bluemix catalog entry-visibility [-i ID] [--global]
+bluemix catalog entry-delete ID [--global]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>-i, --id</dt>
-  <dd>型錄項目的 ID。</dd>
+  <dt>--global</dt>
+  <dd>在廣域範圍中操作</dd>
+</dl>
+
+<strong>範例</strong>：
+
+刪除資源 `j402-dnf1i`：
+
+```
+bluemix catalog delete 'j402-dnf1i'
+```
+
+
+## bluemix catalog entry-visibility
+{: #bluemix_catalog_entry_visibility}
+取得型錄項目的可見性（僅限帳戶的型錄管理者）
+
+```
+bluemix catalog entry-visibility ID [--global]
+```
+
+<strong>必要條件</strong>：端點、登入、目標
+
+<strong>指令選項</strong>：
+<dl>
   <dt>-json</dt>
   <dd>輸出原始 JSON 回應</dd>
   <dt>-global</dt>
@@ -3242,18 +3274,31 @@ bluemix catalog entry-visibility 'j402-dnf1i' --global
 更新現有型錄項目的可見性（僅限帳戶的型錄管理者）
 
 ```
-bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
+bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>-i, --id</dt>
-  <dd>所更新型錄項目的 ID。</dd>
+
+  <dt>--includes-add</dt>
+  <dd>將帳戶（或逗點區隔的帳戶清單）新增至 includes 清單，並授與項目的可見性。可接受電子郵件或帳戶 GUID</dd>
+  <dt>--includes-remove</dt>
+  <dd>從 includes 清單中移除帳戶（或逗點區隔的帳戶清單），並撤銷項目的可見性。可接受電子郵件或帳戶 GUID</dd>  
+  <dt>--excludes-add</dt>
+  <dd>將帳戶（或逗點區隔的帳戶清單）新增至 excludes 清單。可接受電子郵件或帳戶 GUID</dd>
+  <dt>--excludes-remove</dt>
+  <dd>從 excludes 清單中移除帳戶（或逗點區隔的帳戶清單），並撤銷項目的可見性。如果帳戶是由廣域管理者所設定，則帳戶管理者無法移除該帳戶。可接受電子郵件或帳戶 GUID</dd>
+  <dt>--owner</dt>
+  <dd>變更物件的擁有者。可接受電子郵件或帳戶 GUID。</dd>
+  <dt>--restrict</dt>
+  <dd>將可見性物件的限制變更為「專用」</dd>
+  <dt>--unrestrict</dt>
+  <dd>將可見性物件的限制變更為「公用」</dd>  
   <dt>-c</dt>
   <dd>包含型錄特定配置參數的有效 JSON 物件（透過行內或檔案所提供）。如需所支援配置參數的清單，請參閱特定型錄項目的文件。</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>在廣域範圍中操作</dd>
 </dl>
 
@@ -3262,7 +3307,7 @@ bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 從 JSON 檔案，設定資源 `j402-dnf1i` 的可見性：
 
 ```
-bluemix catalog entry-visibility-set -i 'j402-dnf1i' -c @visibility.json
+bluemix catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
 
@@ -3278,11 +3323,11 @@ bluemix catalog service-marketplace [--cf] [--rc] [--global]
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>-cf</dt>
+  <dt>--cf</dt>
   <dd>僅顯示 Cloud Foundry 服務</dd>
-  <dt>-rc</dt>
+  <dt>--rc</dt>
   <dd>僅顯示 RC 相容服務</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>在廣域範圍中操作</dd>
 </dl>
 
@@ -3358,7 +3403,7 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [
    <dt>CF_APP_NAME（必要）</dt>
    <dd>要建立之 cf 應用程式的名稱。</dd>
    <dt>-u <i>URL</i>（選用）</dt>
-   <dd>應用程式的路徑。如果未指定，Bluemix 會自動根據應用程式名稱及預設網域來設定路徑。</dd>
+   <dd>應用程式的路徑。如果未指定，{{site.data.keyword.Bluemix_notm}} 會自動根據應用程式名稱及預設網域來設定路徑。</dd>
    <dt>-d <i>DESCRIPTION</i>（選用）</dt>
    <dd>應用程式的說明。</dd>
    <dt>--no-start（選用）</dt>
@@ -3492,13 +3537,13 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME（必要）</dt>
    <dd>要新增之儲存庫的名稱。您可以自行為每一個儲存庫定義名稱。</dd>
    <dt>REPO_URL（必要）</dt>
-   <dd>要新增之儲存庫的 URL。儲存庫 URL 必須包含通訊協定（例如，http://plugins.ng.bluemix.net 而非 plugins.ng.bluemix.net）。http://plugins.ng.bluemix.net 是 Bluemix CLI 的正式外掛程式儲存庫。</dd>
+   <dd>要新增之儲存庫的 URL。儲存庫 URL 必須包含通訊協定（例如，http://plugins.ng.bluemix.net 而非 plugins.ng.bluemix.net）。http://plugins.ng.bluemix.net 是 {{site.data.keyword.Bluemix_notm}} CLI 的正式外掛程式儲存庫。</dd>
     </dl>
 
 
 <strong>範例</strong>：
 
-將 Bluemix CLI 的官方外掛程式儲存庫新增為 `bluemix-repo`：
+將 {{site.data.keyword.Bluemix_notm}} CLI 的正式外掛程式儲存庫新增為 `bluemix-repo`：
 
 ```
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
@@ -3733,4 +3778,3 @@ bluemix plugin uninstall PLUGIN_NAME
 ```
 bluemix plugin uninstall IBM-Containers
 ```
-

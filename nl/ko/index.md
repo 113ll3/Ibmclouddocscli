@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-30"
+lastupdated: "2017-11-08"
 
 ---
 
@@ -28,6 +28,8 @@ lastupdated: "2017-06-30"
 
 
 ## IBM Cloud Application Tools 2(베타)
+{: #icat notoc}
+
 IBM Cloud Application Tools 2는 macOS에서 관리 및 로컬 환경 설정을 위해 간소화된 메뉴 표시줄 애플리케이션입니다. IBM Cloud Application Tools 2를 사용하여 Bluemix 도구 및 CLI를 쉽게 설치하고 업데이트하며, CLI 배치 대상을 변경하고, 공통 Bluemix 링크에 신속하게 액세스할 수 있습니다.
 
 [다운로드](http://ibm.biz/icat-2-download){: new_window} <br>
@@ -39,7 +41,7 @@ IBM Cloud Application Tools 2는 macOS에서 관리 및 로컬 환경 설정을 
 
 즐겨찾기 {{site.data.keyword.Bluemix_notm}} 서비스를 통합하기 위해 플러그인을 다운로드하고 설치합니다.
 
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Bluemix용 Eclipse 도구* |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
 |----------|----------|----------|----------|----------|
-| [Liberty Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 플러그인](../services/rules/index.html#rulov002) | [개발자 툴킷](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse 플러그인](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="표 5. 플러그인" caption-side="top"}
+| [Liberty Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 플러그인](../services/rules/index.html#rulov002) | [개발자 툴킷](/docs/services/apiconnect/apic_003.html#apic_001 ) | [{{site.data.keyword.Bluemix_notm}} Eclipse 플러그인](/docs/manageapps/eclipsetools/eclipsetools.html) |
+{: caption="표 6. 플러그인" caption-side="top"}

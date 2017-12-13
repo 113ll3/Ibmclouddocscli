@@ -16,7 +16,7 @@ lastupdated: "2017-06-29"
 # IBM Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension for Visual Studio Code 是一个编辑器扩展，可用于直接在 Visual Studio Code 编辑器的命令选用板内访问 IBM 开发者 CLI 中的功能。它支持快速访问适用于 Docker 和 CloudFoundry 工作流的 `bx dev` 命令子集，包括应用程序部署、在 Bluemix 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需退出编辑器的上下文。
+IBM Developer Extension for Visual Studio Code 是一个编辑器扩展，可用于直接在 Visual Studio Code 编辑器的命令选用板内访问 IBM 开发者 CLI 中的功能。它支持快速访问适用于 Docker 和 CloudFoundry 工作流的 `bx dev` 命令子集，包括应用程序部署、在 {{site.data.keyword.Bluemix_notm}} 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需离开编辑器的上下文。
 {:shortdesc}
 
 ![IBM Developer Tools 扩展下载屏幕的截屏。](ibm-dev-tools-for-vscode.png "Visual Studio Code 中的扩展下载屏幕")
@@ -24,7 +24,7 @@ IBM Developer Extension for Visual Studio Code 是一个编辑器扩展，可用
 ## 依赖项
 {: #dependencies}
 
-要利用 IBM Developer Tools 用于 Visual Studio Code 的扩展，您还需要在系统上安装 [Bluemix CLI](https://plugins.ng.bluemix.net/ui/home.html) 和 [IBM Developer CLI](/docs/cloudnative/dev_cli.html) 插件。
+要利用 IBM Developer Tools 用于 Visual Studio Code 的扩展，您还需要在系统上安装 [{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) 和 [IBM Developer CLI](/docs/cloudnative/dev_cli.html) 插件。
 
 ## 安装
 {: #installation}
@@ -63,20 +63,20 @@ IBM Developer Extension for Visual Studio Code 是一个编辑器扩展，可用
 
 只需几个步骤即可开始使用 bx dev 工作流：
 * 使用以下两种方法中的一种来创建项目：
-  * 使用 [Bluemix Web 控制台](https://console.ng.bluemix.net/developer/getting-started/)并下载生成的代码
-  * 使用 [Bluemix Developer CLI](/docs/cloudnative/dev_cli.html) 并使用 `bx dev create` 命令生成项目
+  * 使用 [{{site.data.keyword.Bluemix_notm}} Web 控制台](https://console.ng.bluemix.net/developer/getting-started/)并下载生成的代码
+  * 使用 [{{site.data.keyword.Bluemix_notm}} Developer CLI](/docs/cloudnative/dev_cli.html) 并使用 `bx dev create` 命令生成项目
 * 在 Visual Studio Code 编辑器本地打开项目的文件夹
 * 使用 `bx dev build` 命令将应用程序构建到 Docker 映像中
 * 使用 `bx dev debug` 命令在本地 Docker 中运行应用程序以进行开发
 > 注：要调试在本地 Docker 容器内运行的 Node.js 应用程序，需要[为本地容器添加调试配置](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container)。
 
 * 使用 `bx dev run` 命令在本地 Docker 中以发布方式运行应用程序
-* 使用 `bx dev deploy` 命令将应用程序部署到 Bluemix 上的 Cloud Foundry 运行时*（IBM Container 支持即将推出）*。
+* 使用 `bx dev deploy` 命令将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 上的 Cloud Foundry 运行时*（IBM Container 支持即将推出）。*
 
 ### 使用 IBM Developer Extension for Cloud Foundry 工作流
 {: #usage-cloud-foundry}
 
-对于当前正在将应用程序部署到 IBM Bluemix 上的 Cloud Foundry 运行时的用户，我们还提供了对 `cf` 操作集的支持。
+对于当前正在将应用程序部署到 IBM {{site.data.keyword.Bluemix_notm}} 上的 Cloud Foundry 运行时的用户，我们还提供了对 `cf` 操作集的支持。
 
 只需几个步骤即可开始使用 CloudFoundry 工作流：
 * 创建新的 CloudFoundry 应用程序

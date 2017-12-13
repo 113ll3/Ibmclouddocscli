@@ -25,7 +25,8 @@ Antes de iniciar, instale a interface de linha de comandos do cf. O plug-in da C
 requer o cf versão 6.11.2 ou posterior. [Fazer download da interface da linha de comandos do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restrição:** A interface de linha de
-comandos do Cloud Foundry não é suportada por Cygwin. Use a interface de linha de comandos do Cloud Foundry
+comandos do Cloud Foundry não é suportada por
+Cygwin. Use a interface de linha de comandos do Cloud Foundry
 em uma janela de linha de comandos diferente da janela de linha de comandos do Cygwin.
 
 **Observação**: a CLI do administrador do {{site.data.keyword.Bluemix_notm}} é usada somente para o ambiente {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated. Ele não é suportado pelo {{site.data.keyword.Bluemix_notm}} Public.
@@ -35,9 +36,12 @@ em uma janela de linha de comandos diferente da janela de linha de comandos do C
 Após a interface de linha de comandos do cf ser instalada, é possível
 incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
 
-**Nota**: se você tiver instalado anteriormente o plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
+**Nota**: se você tiver instalado
+anteriormente o plug-in Administrador do
+{{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
 
-Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar
+o plug-in:
 
 <ol>
 <li>Para incluir o repositório do plug-in de administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>

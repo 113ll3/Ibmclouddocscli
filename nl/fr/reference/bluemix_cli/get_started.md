@@ -17,7 +17,9 @@ lastupdated: "2017-08-20"
 # Initiation à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans Bluemix. Pour vous initier à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, procédez comme indiqué ci-après.
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}.  
+
+Pour vous initier à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} :
 
 1. Sélectionnez le programme d'installation de votre système d'exploitation afin de le télécharger
    
@@ -25,18 +27,17 @@ L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'in
    Windows 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [checksum](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
    Linux 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [checksum](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
   
-   **Les éditions 32 bits sont disponibles [ici](all_versions.html).
+   **Les éditions 32 bits et les versions antérieures sont disponibles [ici](all_versions.html).
 
 1. Exécutez le programme d'installation
    * Pour Mac OS et Windows, exécutez simplement le programme d'installation.
    * Pour Linux, procédez à l'extraction du contenu du package et exécutez le script `install_bluemix_cli`.
 
-1. Ciblez un point d'extrémité d'API et connectez-vous à Bluemix.
+1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}}
 
   ![Exemple](example.gif)
 
-
-Vous êtes prêt à utiliser l'interface de ligne de commande pour gérer vos ressources {{site.data.keyword.Bluemix_notm}}. Tapez `bluemix help` ou `bx help` pour voir les descriptions de commande. 
+Vous êtes maintenant prêt à gérer des ressources {{site.data.keyword.Bluemix_notm}}. Tapez `bluemix help` ou `bx help` pour voir les descriptions de commande. 
 
 ## Autres liens permettant d'explorer davantage l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
@@ -52,6 +53,4 @@ Vous êtes prêt à utiliser l'interface de ligne de commande pour gérer vos re
 Utilisez les options suivantes pour signaler des problèmes ou soumettre des demandes de nouvelle fonction :
  * Signalez des problèmes dans [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg)
  * Laissez des messages sur le [canal Slack](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg)
-
-
 

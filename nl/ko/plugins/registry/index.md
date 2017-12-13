@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-10"
 
 
 ---
@@ -52,15 +52,17 @@ lastupdated: "2017-10-26"
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
+ <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
+ <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -84,7 +86,7 @@ bx cr api
 {{site.data.keyword.registrylong_notm}}에 Docker 이미지를 빌드합니다.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -100,6 +102,8 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag v
 <dd>(선택사항) 지정된 경우, 오류가 발생하지 않는 한 빌드 출력이 억제됩니다.</dd>
 <dt> --build-arg value</dt>
 <dd>(선택사항) 추가 빌드 인수를 'KEY=VALUE' 형식으로 지정하십시오. 이 매개변수를 여러 번 포함하여 복수의 빌드 인수를 지정할 수 있습니다. Dockerfile에서 키와 일치하는 ARG 행을 지정하는 경우 빌드 인수의 값은 환경 변수로 사용 가능합니다.</dd>
+<dt>--file value, -f value</dt>
+<dd>(선택사항) 다중 빌드에 동일한 파일을 사용 중인 경우에는 다른 Dockerfile에 대한 경로를 선택할 수 있습니다. 빌드 컨텍스트에 상대적인 Dockerfile의 위치를 지정하십시오. 지정되지 않은 경우, 기본값은 `PATH/Dockerfile`입니다. 여기서 PATH는 빌드 컨텍스트의 루트입니다. </dd>
 <dt>--tag value, -t value</dt>
 <dd>빌드할 이미지의 전체 이름이며, 레지스트리 URL 및 네임스페이스가 포함됩니다.</dd>
 </dl>
@@ -266,12 +270,6 @@ bx cr plan-upgrade [PLAN]
 </dl>
 
 
-## bx cr pricing
-{: #bx_cr_pricing}
-
-이 명령은 제거되었습니다. 가격 책정 계산기를 사용하여 예상 비용을 계산할 수 있습니다. [{{site.data.keyword.registrylong_notm}}의 비용 추정](../../../services/Registry/registry_overview.html#registry_plan_billing)을 참조하십시오.
-
-
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -299,6 +297,34 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>(선택사항) 트래픽 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 트래픽을 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
 <dt>--storage VALUE</dt>
 <dd>(선택사항) 스토리지 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 스토리지를 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
+</dl>
+
+
+## bx cr region
+{: #bx_cr_region}
+
+대상 지역 및 레지스트리를 표시합니다. 
+
+```
+bx cr region
+```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+{{site.data.keyword.registrylong_notm}} 명령에 대한 대상 지역을 설정합니다. 사용 가능한 지역을 나열하려면 매개변수 없이 명령을 실행하십시오. 
+
+```
+bx cr region-set [REGION]
+```
+{: codeblock}
+
+**매개변수**
+<dl>
+<dt>REGION</dt>
+<dd>(선택사항) 대상 지역의 이름입니다(예: `us-south`).</dd>
 </dl>
 
 

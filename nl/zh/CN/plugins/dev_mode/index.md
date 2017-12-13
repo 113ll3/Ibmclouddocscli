@@ -19,9 +19,10 @@ lastupdated: "2017-01-12"
 # （不推荐）开发方式 CLI
 {: #devmodecli}
 
-**不推荐使用此 CLI：**请使用 IBM Eclipse Tools for Bluemix 或 DevOps Web IDE，而不使用开发方式 (dev_mode) CLI。您可以继续使用 dev_mode CLI 直到 2016 年 6 月 30 日。
 
-通过 Bluemix 开发方式命令行界面 (dev_mode CLI)，您可以更新正在云中运行的应用程序。dev_mode CLI 构建为 cf CLI 插件并同时支持 Liberty 和 IBM Node.js 应用程序。
+**不推荐使用此 CLI：**请使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 或 DevOps Web IDE，而不使用开发方式 (dev_mode) CLI。您可以继续使用 dev_mode CLI 直到 2016 年 6 月 30 日。
+
+通过 {{site.data.keyword.Bluemix_notm}} 开发方式命令行界面 (dev_mode CLI)，您可以更新正在云中运行的应用程序。dev_mode CLI 构建为 cf CLI 插件并同时支持 Liberty 和 IBM Node.js 应用程序。
 {: shortdesc}
 
 
@@ -36,14 +37,14 @@ lastupdated: "2017-01-12"
 
 使用以下其中一种方法来安装 dev_mode 命令行工具：
 - 本地安装。
-  1. 从 [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net) 下载适用于您的平台的 dev_mode 插件。
+  1. 从 [{{site.data.keyword.Bluemix_notm}} CLI Plugin Repository ![外部链接图标](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} 下载适用于您的平台的 dev_mode 插件。
   2. 转至保存 dev_mode 插件的文件夹，并使用 cf install-plugin 命令安装 dev_mode 插件。例如：
 
         ```
 cf install-plugin dev_mode-linux64
         ```
 
-- 从 Bluemix CLI 存储库进行安装。
+- 从 {{site.data.keyword.Bluemix_notm}} CLI 存储库进行安装。
   1. 通过使用以下命令将 bluemix-repo 存储库添加到 Cloud Foundry CLI 存储库：
 
         ```
@@ -62,7 +63,7 @@ cf repo-plugins
 cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## 查看 dev_mode 命令
+## 查看 dev_mo {{site.data.keyword.Bluemix_notm}}  
 
 要显示所有 dev_mode CLI 命令，请使用以下命令：
 

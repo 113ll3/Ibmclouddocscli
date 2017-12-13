@@ -20,7 +20,7 @@ lastupdated: "2017-01-12"
 
 *Versão:* 1.0.0
 
-A CLI do IBM Containers é um plug-in da CLI do {{site.data.keyword.Bluemix_notm}} para gerenciar contêineres e grupos de contêineres no Bluemix.
+O IBM Containers CLI é um plugin do {{site.data.keyword.Bluemix_notm}} CLI para gerenciar contêineres e grupos de contêineres no {{site.data.keyword.Bluemix_notm}}  
 {: shortdesc}
 
 **Nota:** *Pré-requisitos* listam quais ações são necessárias antes de usar o comando. Os comandos que não têm ações de pré-requisito listam **Nenhum**. Caso contrário, os pré-requisitos podem incluir uma ou mais das ações a seguir:
@@ -296,8 +296,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (opcional)</dt>
    <dd>Geralmente, o domínio é <i>.mybluemix.net</i>. O host e o domínio são combinados para formar a URL da rota pública completa, como <i>http://mycontainerhost.mybluemix.net</i>. Ao revisar os detalhes de um grupo de contêiner com o comando <i>bluemix ic group-inspect</i>, o host e o domínio são listados juntos como a rota.</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i> (opcional)</dt>
-   <dd>Configure a variável de ambiente. Liste diversas chaves separadamente. Se aspas forem incluídas, inclua-as em torno do nome da variável de ambiente e do valor. Por
-exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  A tabela a seguir mostra algumas variáveis de ambiente comumente usadas que podem ser especificadas:</dd>
+   <dd>Configure a variável de ambiente. Liste diversas chaves separadamente. Se aspas forem incluídas, inclua-as em torno do nome da variável de ambiente e do valor. Por exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  A tabela a seguir mostra algumas variáveis de ambiente comumente usadas que podem ser especificadas:</dd>
     </dl>
 
 
@@ -310,8 +309,7 @@ exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  A tabela a segui
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (opcional)</dt>
-   <dd> Importe variáveis de ambiente de um arquivo em que ENVFILE é o caminho para seu
-arquivo no diretório local. Cada linha do arquivo representa um par key=value. </dd>
+   <dd> Importe variáveis de ambiente de um arquivo em que ENVFILE é o caminho para seu arquivo no diretório local. Cada linha do arquivo representa um par key=value. </dd>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro] (opcional)</dt>
    <dd>Anexe um volume a um contêiner especificando os detalhes no formato <i>VolumeId:ContainerPath[:ro]</i>.
    <ul>
@@ -338,14 +336,7 @@ arquivo no diretório local. Cada linha do arquivo representa um par key=value. 
    <dd>Quando o grupo de contêiner é criado e a recuperação automática é ativada, o IBM Containers verifica o funcionamento de cada instância com uma solicitação de HTTP para a porta designada.<br>
    Se nenhuma resposta for recebida de uma instância do contêiner em dois intervalos subsequentes de 90 segundos, a instância será removida e substituída por uma nova instância. Nenhuma ação será executada se o contêiner for responsivo. Esse processo é repetido continuamente. Durante uma janela de 30 minutos, se o número total de contêineres diferentes que são membros do grupo for igual ou exceder três vezes o tamanho máximo observado do grupo, a recuperação automática será desativada permanentemente para o grupo de contêiner. Para ativar a recuperação automática novamente, deve-se recriar o grupo de contêiner.</dd>
   <dt>--anti (opcional)</dt>
-  <dd> Use antiafinidade para tornar seu grupo de contêiner mais altamente
-disponível. A opção --anti força cada instância de contêiner em seu grupo a ser
-colocada em um nó de cálculo físico separado, o que reduz as chances de impacto de todos os
-contêineres em um grupo devido a uma falha no hardware. Você pode não ser capaz de usar
-essa opção com tamanhos de grupo maiores porque cada região e organização do Bluemix tem
-um conjunto limitado de nós de cálculo disponíveis para implementação. Se sua
-implementação não for bem-sucedida, reduza o número de instâncias de contêiner no grupo
-ou remova a opção --anti. </dd>
+  <dd> Use antiafinidade para tornar seu grupo de contêiner mais altamente disponível. A opção --anti força cada instância de contêiner em seu grupo a ser colocada em um nó de cálculo físico separado, o que reduz as chances de impacto de todos os contêineres em um grupo devido a uma falha no hardware. Talvez você não consiga usar essa opção com tamanhos de grupo maiores, porque cada região e organização {{site.data.keyword.Bluemix_notm}} têm um conjunto limitado de nós de cálculo. Se sua implementação não for bem-sucedida, reduza o número de instâncias de contêiner no grupo ou remova a opção --anti. </dd>
    <dt><i>CMD</i> (opcional)</dt>
    <dd>O comando e os argumentos são passados para o grupo de contêiner executar. Esse comando deve ser um comando de longa execução. Não use um comando de curta duração que não é executado por muito tempo, por exemplo, <i>/bin/date</i>, pois o comando de curta duração pode fazer o contêiner travar.  <br> <strong>Notas:</strong> <ul>
    <li>O comando e seus argumentos devem vir no final da linha de comandos <i>bluemix ic run</i>.</li>
@@ -473,9 +464,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
  <dl>
    <dt>--anti (opcional)</dt>
    <dd>Use antiafinidade para tornar seu grupo de contêiner mais altamente
-disponível. A opção --anti força cada instância de contêiner em seu grupo a ser colocada em um nó de cálculo físico separado, reduzindo as chances de todos os contêineres em um grupo sofrerem um impacto devido a uma falha no hardware. Você pode não ser capaz de usar
-essa opção com tamanhos de grupo maiores porque cada região e organização do Bluemix tem
-um conjunto limitado de nós de cálculo disponíveis para implementação. Se sua
+disponível. A opção --anti força cada instância de contêiner em seu grupo a ser colocada em um nó de cálculo físico separado, reduzindo as chances de todos os contêineres em um grupo sofrerem um impacto devido a uma falha no hardware. Talvez você não consiga usar essa opção com tamanhos de grupo maiores, porque cada região e organização {{site.data.keyword.Bluemix_notm}} têm um conjunto limitado de nós de cálculo. Se sua
 implementação não for bem-sucedida, reduza o número de instâncias de contêiner no grupo
 ou remova a opção --anti.</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (opcional)</dt>
@@ -907,7 +896,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
-Recrie o serviço IBM Containers no espaço do Bluemix em que você efetuou login. A
+Recrie o serviço IBM Containers no espaço do {{site.data.keyword.Bluemix_notm}} no qual você efetuou login. A
 cota original para o espaço é mantida.
 
 <strong>Importante</strong>: quando você executa esse comando, nenhum dos seus contêineres únicos e grupos nesse espaço será migrado para o espaço reprovisionado e eles serão removidos durante o processo de migração.
@@ -919,7 +908,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 
 <dl>
    <dt>--force|-f (opcional)</dt>
-   <dd>Força a recriação do serviço IBM Containers no espaço do Bluemix.</dd>
+   <dd>Força a recriação do serviço IBM Containers no espaço do {{site.data.keyword.Bluemix_notm}}.</dd>
    <dt><i>AVAILABILITY_ZONE</i> (opcional)</dt>
    <dd>O nome da zona de disponibilidade do IBM Containers em que seus contêineres são implementados. Se nenhuma zona de disponibilidade estiver especificada, a zona de disponibilidade padrão que está configurada para a região será usada.</dd>
    </dl>
@@ -1133,16 +1122,13 @@ login` e `bluemix ic init` gera o token e os certificados necessários.
 
    <dl>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i>  (opcional)</dt>
-   <dd>Exponha a porta para o tráfego HTTP. Inclua quaisquer portas especificadas no Dockerfile para a imagem que você está usando. É possível incluir várias portas com várias
-opções <i>-p</i>. Expor uma porta irá automaticamente ligar um endereço IP público ao contêiner se um endereço IP público estiver disponível. <br><br>Se você tiver um endereço IP existente no espaço que deseja ligar ao contêiner, será possível especificar o endereço IP em vez de ligá-lo posteriormente. O endereço IP deve ser especificado no formato: &lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br><br>Para obter mais informações sobre como solicitar endereços IP para um espaço, consulte o comando <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a>. <br><br>Ao especificar uma porta, você está tornando o app disponível para o {{site.data.keyword.Bluemix_notm}} Load Balancer ou para os contêineres no mesmo espaço do {{site.data.keyword.Bluemix_notm}} que estão tentando atingir o host. Se uma porta for especificada no Dockerfile para a imagem que você está usando, inclua essa porta. <br><br><strong>Dicas:</strong><ul><li>Para a imagem do servidor Liberty certificada pela IBM ou uma versão modificada dessa imagem, insira a porta 9080.</li><li>Para a imagem do Node.js certificada pela IBM ou uma versão modificada dessa imagem, insira a porta 8000.</li></ul></dd>
+   <dd>Exponha a porta para o tráfego HTTP. Inclua quaisquer portas especificadas no Dockerfile para a imagem que você está usando. É possível incluir várias portas com várias opções <i>-p</i>. Expor uma porta irá automaticamente ligar um endereço IP público ao contêiner se um endereço IP público estiver disponível. <br><br>Se você tiver um endereço IP existente no espaço que deseja ligar ao contêiner, será possível especificar o endereço IP em vez de ligá-lo posteriormente. O endereço IP deve ser especificado no formato: &lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br><br>Para obter mais informações sobre como solicitar endereços IP para um espaço, consulte o comando <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a>. <br><br>Ao especificar uma porta, você está tornando o app disponível para o {{site.data.keyword.Bluemix_notm}} Load Balancer ou para os contêineres no mesmo espaço do {{site.data.keyword.Bluemix_notm}} que estão tentando atingir o host. Se uma porta for especificada no Dockerfile para a imagem que você está usando, inclua essa porta. <br><br><strong>Dicas:</strong><ul><li>Para a imagem do servidor Liberty certificada pela IBM ou uma versão modificada dessa imagem, insira a porta 9080.</li><li>Para a imagem do Node.js certificada pela IBM ou uma versão modificada dessa imagem, insira a porta 8000.</li></ul></dd>
    <dt>-P (opcional)</dt>
    <dd>Exponha automaticamente as portas que estão especificadas no Dockerfile da imagem para o tráfego HTTP.</dd>
    <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i> (opcional)</dt>
-   <dd>Designe um limite de memória ao grupo em MB. Ao criar um grupo de contêiner a partir da CLI, o valor padrão para cada instância de contêiner é 64 MB.  Ao criar um grupo de contêiner a partir do Painel
-do {{site.data.keyword.Bluemix_notm}}, o valor padrão para cada instância é 256 MB. Os valores aceitos são 64, 256, 512, 1024 e 2048. Após um limite de memória ser designado, o valor não poderá ser mudado.</dd>
+   <dd>Designe um limite de memória ao grupo em MB. Ao criar um grupo de contêiner a partir da CLI, o valor padrão para cada instância de contêiner é 64 MB.  Ao criar um grupo de contêiner a partir do Painel do {{site.data.keyword.Bluemix_notm}}, o valor padrão para cada instância é 256 MB. Os valores aceitos são 64, 256, 512, 1024 e 2048. Após um limite de memória ser designado, o valor não poderá ser mudado.</dd>
    <dt>-e <i>ENV</i>|--env <i>ENV</i> (opcional)</dt>
-   <dd>Configure a variável de ambiente, em que <i>ENV</i> é um par de key=value. Liste diversas chaves separadamente. Se aspas forem incluídas, inclua-as em torno do nome da variável de ambiente e do valor. Por
-exemplo: -e "key1=value1" -e "key2=value2" -e "key3=value3". A tabela a seguir mostra algumas variáveis de ambiente comumente usadas que podem ser especificadas:</dd>
+   <dd>Configure a variável de ambiente, em que <i>ENV</i> é um par de key=value. Liste diversas chaves separadamente. Se aspas forem incluídas, inclua-as em torno do nome da variável de ambiente e do valor. Por exemplo: -e "key1=value1" -e "key2=value2" -e "key3=value3". A tabela a seguir mostra algumas variáveis de ambiente comumente usadas que podem ser especificadas:</dd>
    </dl>
 
 
@@ -1414,7 +1400,7 @@ bluemix ic unpause proxy
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-Exclua o serviço IBM Containers do espaço do Bluemix em que você efetuou login.
+Exclua o serviço IBM Containers do espaço do {{site.data.keyword.Bluemix_notm}} no qual você efetuou login.
 
 <strong>Atenção</strong>: Quando você executar esse comando, todos os contêineres
 únicos e grupos de contêineres serão perdidos. Seu espaço ainda estará disponível no
@@ -1427,7 +1413,7 @@ bluemix ic reprovision [--force|-f]
 
 <dl>
    <dt>--force|-f (opcional)</dt>
-   <dd>Força a exclusão do Bluemix do espaço do Bluemix.</dd>
+   <dd>Força a exclusão do {{site.data.keyword.Bluemix_notm}} do espaço do {{site.data.keyword.Bluemix_notm}}.</dd>
  </dl>
 
 

@@ -11,18 +11,18 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Bluemix CLI 的專用網路對等作業外掛程式
+# {{site.data.keyword.Bluemix_notm}} CLI 的專用網路對等作業外掛程式
 {: #private_network_cli}
 
-使用專用網路對等作業指令行介面 (CLI)，以配置及管理兩個 {{site.data.keyword.Bluemix}} 空間之間的專用網路對等作業。IBM Containers（Docker 容器）支援專用網路對等作業。Bluemix 空間可以位在相同地區的不同可用性區域中，也可以位在不同地區中。專用網路對等作業 CLI 外掛程式可以與 Bluemix CLI 外掛程式搭配使用。
+使用專用網路對等作業指令行介面 (CLI)，以配置及管理兩個 {{site.data.keyword.Bluemix}} 空間之間的專用網路對等作業。IBM Containers（Docker 容器）支援專用網路對等作業。{{site.data.keyword.Bluemix_notm}} 空間可以位在相同地區的不同可用性區域中，也可以位在不同地區中。專用網路對等作業 CLI 外掛程式可以與 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式搭配使用。
 
 專用網路對等作業 CLI 外掛程式適用於 Windows、MAC 及 Linux 作業系統。請確定您是使用適用的外掛程式。
 
-開始之前，請建立 Bluemix 空間。請確定空間中的每一個容器都有不同網路的 IP 位址。如需詳細資料，請參閱[使用您自己的專用 IP 位址](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
+開始之前，請建立 {{site.data.keyword.Bluemix_notm}} 空間。請確定空間中的每一個容器都有不同網路的 IP 位址。如需詳細資料，請參閱[使用您自己的專用 IP 位址 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}。
 
-**附註：**在您對 Bluemix 空間使用專用網路對等作業之後，如果需要刪除該空間，請先刪除該空間中的專用網路對等作業連線。
+**附註：**在您對 {{site.data.keyword.Bluemix_notm}} 空間使用專用網路對等作業之後，如果需要刪除該空間，請先刪除該空間中的專用網路對等作業連線。
 
-若要開始使用，請安裝 IBM Bluemix CLI。如需詳細資料，請參閱 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)。
+若要開始使用，請安裝 {{site.data.keyword.Bluemix_notm}} CLI。如需詳細資料，請參閱 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)。
 
 ## 安裝專用網路對等作業 CLI 外掛程式
 
@@ -32,7 +32,7 @@ lastupdated: "2017-01-12"
 bluemix plugin uninstall private-network-peering
 ```
 ### 在本端安裝
-從 [IBM Bluemix CLI 外掛程式儲存庫](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins)，下載您平台的專用網路對等作業外掛程式。
+從 [{{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} 中，下載您平台的專用網路對等作業外掛程式。
 
 使用下列指令，以安裝專用網路對等作業外掛程式：
 
@@ -62,11 +62,11 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### 從 Bluemix 儲存庫安裝
+### 從 {{site.data.keyword.Bluemix_notm}} 儲存庫安裝
 
-遵循下列步驟，以從 Bluemix 儲存庫安裝外掛程式：
+遵循下列步驟，以從 {{site.data.keyword.Bluemix_notm}} 儲存庫安裝外掛程式：
 
-1. 新增 Bluemix 外掛程式登錄端點：
+1. 新增 {{site.data.keyword.Bluemix_notm}} 外掛程式登錄端點：
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```

@@ -19,7 +19,7 @@ lastupdated: "2017-01-12"
 
 *版本：*1.0.0
 
-IBM Containers CLI 是一種 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式，可管理 Bluemix 上的容器及容器群組。
+IBM Containers CLI 是一種 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式，可管理 {{site.data.keyword.Bluemix_notm}} 上的容器及容器群組  
 {: shortdesc}
 
 **附註：***必要條件* 列出使用指令之前需要哪些動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
@@ -306,8 +306,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
     </dl>
 
 
-|  環境變數|     說明
-|
+|  環境變數|     說明|
 | :----------------------------- | :------------------------------ |
 | CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們包含為相同環境變數的一部分。|
@@ -343,7 +342,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>建立容器群組並啟用自動回復後，IBM Containers 會對所指派的埠提出 HTTP 要求，以檢查每個實例的性能。<br>
 如果您未在兩個後續 90 秒間隔內收到來自容器實例的回應，則會移除實例，並將其取代為新的實例。如果容器回應，則不需要採取任何動作。此處理程序會不斷地重複。在 30 分鐘時間範圍期間，如果本身為群組成員的不同容器總數等於或超出觀察到的群組大小上限的 3 倍，則會永久停用容器群組的自動回復。若要重新啟用自動回復，您必須重建容器群組。</dd>
   <dt>--anti（選用）</dt>
-  <dd> 使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而當機的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 Bluemix 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
+  <dd> 使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而當機的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 {{site.data.keyword.Bluemix_notm}} 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
    <dt><i>CMD</i>（選用）</dt>
    <dd>傳遞給容器群組執行的指令及引數。這個指令必須是長時間執行的指令。請不要使用不會執行很久的短期指令（例如，<i>/bin/date</i>），因為短期指令可能會導致容器當機。<br> <strong>附註：</strong> <ul>
    <li>指令及其引數必須在 <i>bluemix ic run</i> 指令行的結尾。</li>
@@ -473,7 +472,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 <strong>指令選項</strong>：
  <dl>
    <dt>--anti（選用）</dt>
-   <dd>使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而當機的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 Bluemix 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
+   <dd>使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而當機的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 {{site.data.keyword.Bluemix_notm}} 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>（選用）</dt>
    <dd>您需要的實例數。預設值為 <i>2</i>。</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>（選用）</dt>
@@ -904,7 +903,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
-在您已登入的 Bluemix 空間中，重建 IBM Containers 服務。會維護空間的原始配額。
+在您已登入的 {{site.data.keyword.Bluemix_notm}} 空間中，重建 IBM Containers 服務。會維護空間的原始配額。
 
 <strong>重要事項</strong>：當您執行這個指令時，此空間中您的單一容器及群組都不會移轉至重新佈建的空間，而且將會在移轉處理程序期間予以移除。
 
@@ -913,7 +912,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
 <strong>指令選項</strong>：<dl>
    <dt>--force|-f（選用）</dt>
-   <dd>強制在 Bluemix 空間中重建 IBM Containers 服務。</dd>
+   <dd>強制在 {{site.data.keyword.Bluemix_notm}} 空間中重建 IBM Containers 服務。</dd>
    <dt><i>AVAILABILITY_ZONE</i>（選用）</dt>
    <dd>容器部署所在之 IBM Containers 可用性區域的名稱。如果未指定任何可用性區域，則會使用針對地區所設定的預設可用性區域。</dd>
    </dl>
@@ -1401,7 +1400,7 @@ bluemix ic unpause proxy
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-從您已登入的 Bluemix 空間刪除 IBM Containers 服務。
+從您已登入的 {{site.data.keyword.Bluemix_notm}} 空間刪除 IBM Containers 服務。
 
 <strong>注意</strong>：當您執行這個指令時，會遺失您的所有單一容器及容器群組。您的空間仍可在 Bluemix 中使用。若要重新開始使用 IBM Containers，您必須執行 `bluemix ic reprovision` 來重新佈建 IBM Containers 服務。
 
@@ -1410,7 +1409,7 @@ bluemix ic reprovision [--force|-f]
 ```
 <strong>指令選項</strong>：<dl>
    <dt>--force|-f（選用）</dt>
-   <dd>強制從 Bluemix 空間刪除 IBM Containers 服務。</dd>
+   <dd>強制從 {{site.data.keyword.Bluemix_notm}} 空間刪除 {{site.data.keyword.Bluemix_notm}} 服務。</dd>
  </dl>
 
 

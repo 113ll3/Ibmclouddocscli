@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-30"
+lastupdated: "2017-11-08"
 
 ---
 
@@ -28,6 +28,8 @@ lastupdated: "2017-06-30"
 
 
 ## IBM Cloud Application Tools 2（測試版）
+{: #icat notoc}
+
 IBM Cloud Application Tools 2 是一個功能表列應用程式，簡化 macOS 上的本端環境設定及管理。使用 IBM Cloud Application Tools 2，即可輕鬆地安裝及更新 Bluemix 工具和 CLI、變更 CLI 部署目標，以及快速存取共用 Bluemix 鏈結。
 
 [下載](http://ibm.biz/icat-2-download){: new_window} <br>
@@ -39,7 +41,7 @@ IBM Cloud Application Tools 2 是一個功能表列應用程式，簡化 macOS �
 
 下載並安裝外掛程式以整合您最愛的 {{site.data.keyword.Bluemix_notm}} 服務。
 
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
 |----------|----------|----------|----------|----------|
-| [Liberty Eclipse 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 外掛程式](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse 外掛程式](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="表 5. 外掛程式" caption-side="top"}
+| [Liberty Eclipse 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 外掛程式](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [{{site.data.keyword.Bluemix_notm}} Eclipse 外掛程式](/docs/manageapps/eclipsetools/eclipsetools.html) |
+{: caption="表 6. 外掛程式" caption-side="top"}

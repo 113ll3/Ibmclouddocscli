@@ -19,9 +19,10 @@ lastupdated: "2017-01-12"
 # (非推奨) 開発モード CLI
 {: #devmodecli}
 
-**この CLI は非推奨になっています:** 開発モード (dev_mode) CLI を使用する代わりに、IBM Eclipse Tools for Bluemix または DevOps Web IDE を使用してください。dev_mode CLI は、2016 年 6 月 30 日まで引き続き使用できます。
 
-Bluemix 開発モード・コマンド・ライン・インターフェース (dev_mode CLI) を使用すると、クラウドでアプリを実行中にそのアプリを更新できます。dev_mode CLI は cf CLI プラグインとしてビルドされており、Liberty のアプリと IBM Node.js のアプリを両方サポートしています。
+**この CLI は非推奨になっています:** 開発モード (dev_mode) CLI を使用する代わりに、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} または DevOps Web IDE を使用してください。dev_mode CLI は、2016 年 6 月 30 日まで引き続き使用できます。
+
+{{site.data.keyword.Bluemix_notm}} 開発モード・コマンド・ライン・インターフェース (dev_mode CLI) を使用すると、クラウドでアプリを実行中にそのアプリを更新できます。dev_mode CLI は cf CLI プラグインとしてビルドされており、Liberty のアプリと IBM Node.js のアプリを両方サポートしています。
 {: shortdesc}
 
 
@@ -36,14 +37,14 @@ Bluemix 開発モード・コマンド・ライン・インターフェース (d
 
 dev_mode コマンド・ライン・ツールのインストールには、以下の方法のいずれかを使用します。
 - ローカルでインストールする。
-  1. [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net)から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
+  1. [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
   2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。例えば次のようにします。
 
         ```
 cf install-plugin dev_mode-linux64
         ```
 
-- Bluemix CLI リポジトリーからインストールする。
+- {{site.data.keyword.Bluemix_notm}} CLI リポジトリーからインストールする。
   1. 以下のコマンドを使用して、Cloud Foundry CLI リポジトリー群に bluemix-repo リポジトリーを追加します。
 
         ```
@@ -62,7 +63,7 @@ cf repo-plugins
 cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## dev_mode コマンドの表示
+## dev_mo {{site.data.keyword.Bluemix_notm}} の表示  
 
 dev_mode CLI に含まれているコマンドをすべて表示するには、以下のコマンドを使用します。
 

@@ -11,18 +11,18 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Plug-in de peering de rede privada para a CLI do Bluemix
+# Plug-in de peering de rede privada para o {{site.data.keyword.Bluemix_notm}} CLI
 {: #private_network_cli}
 
-Use a interface da linha de comandos (CLI) de peering de rede privada para configurar e gerenciar o peering de rede privada entre dois espaços do {{site.data.keyword.Bluemix}}. O peerring de rede privada é suportado para o IBM Containers (contêineres de docker). Os espaços do Bluemix podem ser localizados em diferentes zonas de disponibilidade na mesma região ou podem ser localizados nas regiões diferentes. O plug-in da CLI do peering de rede privada está disponível para uso com o plug-in da CLI do Bluemix.
+Use a interface da linha de comandos (CLI) de peering de rede privada para configurar e gerenciar o peering de rede privada entre dois espaços do {{site.data.keyword.Bluemix}}. O peerring de rede privada é suportado para o IBM Containers (contêineres de docker). Os espaços do {{site.data.keyword.Bluemix_notm}} podem ser localizados em diferentes zonas de disponibilidade na mesma região ou podem ser localizados nas diferentes regiões. O plug-in da CLI do peering de rede privada está disponível para uso com o plug-in do {{site.data.keyword.Bluemix_notm}} CLI.
 
 O plug-in da CLI de peering de rede privada está disponível para os sistemas operacionais Windows, MAC e Linux. Assegure-se de usar o plug-in aplicável a você.
 
-Antes de iniciar, crie espaços do Bluemix. Assegure-se de que cada contêiner em um espaço tenha um endereço IP de uma rede diferente. Para obter detalhes, consulte [Usando seu próprio endereço IP privado](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
+Antes de iniciar, crie espaços do {{site.data.keyword.Bluemix_notm}}. Assegure-se de que cada contêiner em um espaço tenha um endereço IP de uma rede diferente. Para obter detalhes, veja [Usando seu próprio endereço IP privado ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
 
-**Observação:** depois que você usar o peering de rede privada com um espaço do Bluemix, se for necessário excluir o espaço, primeiro exclua as conexões de peering de rede privada nesse espaço.
+**Nota:** depois de usar o peering de rede privada com um espaço do {{site.data.keyword.Bluemix_notm}}, se você precisar excluir o espaço, primeiro exclua as conexões de peering de rede privada nesse espaço.
 
-Para iniciar, instale a CLI do IBM Bluemix. Consulte [CLI do Bluemix](http://clis.ng.bluemix.net/ui/home.html) para obter detalhes.
+Para iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Consulte [CLI do Bluemix](http://clis.ng.bluemix.net/ui/home.html) para obter detalhes.
 
 ## Instale o plug-in da CLI de peering de rede privada
 
@@ -32,7 +32,7 @@ Para iniciar, instale a CLI do IBM Bluemix. Consulte [CLI do Bluemix](http://cli
 bluemix plugin uninstall private-network-peering
 ```
 ### Instalar localmente
-Faça download do plug-in de peering de rede privada para sua plataforma a partir do [Repositório de plug-in da CLI do IBM Bluemix](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins).
+Faça download do plug-in de peering de rede privada para sua plataforma por meio do repositório de plug-ins do [{{site.data.keyword.Bluemix_notm}} CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
 
 Instale o plug-in de peering de rede privada usando o comando a seguir:
 
@@ -62,11 +62,11 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Instale a partir do repositório do Bluemix
+### Instale por meio do repositório do {{site.data.keyword.Bluemix_notm}}
 
-Siga estas etapas para instalar o plug-in a partir do repositório do Bluemix:
+Siga estas etapas para instalar o plug-in por meio do repositório do {{site.data.keyword.Bluemix_notm}}:
 
-1. Inclua o terminal de registro de plug-in do Bluemix:
+1. Inclua o terminal de registro do plug-in do {{site.data.keyword.Bluemix_notm}}:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
