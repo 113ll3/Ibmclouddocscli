@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-30"
+lastupdated: "2017-11-08"
 
 ---
 
@@ -28,6 +28,8 @@ Die {{site.data.keyword.Bluemix}}-CLI stellt eine Befehlszeilenbedienung zur Ver
 
 
 ## IBM Cloud Application Tools 2 (Beta)
+{: #icat notoc}
+
 IBM Cloud Application Tools 2 ist eine Menüleistenanwendung, die für das Einrichten und Verwalten einer lokalen Umgebung unter Mac OS optimiert ist. IBM Cloud Application Tools 2 bietet komfortable Verfahren, um Bluemix-Tools und -Befehlszeilenschnittstellen zu installieren und zu aktualisieren, um CLI-Bereitstellungsziele zu ändern und schnell auf allgemeine Bluemix-Links zuzugreifen.
 
 [Download](http://ibm.biz/icat-2-download){: new_window} <br>
@@ -39,7 +41,7 @@ IBM Cloud Application Tools 2 ist eine Menüleistenanwendung, die für das Einri
 
 Sie können Plug-ins herunterladen und installieren, um Ihre bevorzugten {{site.data.keyword.Bluemix_notm}}-Services zu integrieren.
 
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
 |----------|----------|----------|----------|----------|
-| [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="Tabelle 5. Plug-ins" caption-side="top"}
+| [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [{{site.data.keyword.Bluemix_notm}} Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
+{: caption="Tabelle 6. Plug-ins" caption-side="top"}

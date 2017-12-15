@@ -20,7 +20,8 @@ lastupdated: "2017-01-12"
 
 *Version:* 1.0.0
 
-IBM Containers CLI ist ein {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in zur Verwaltung von Containern und Containergruppen unter Bluemix.
+IBM Containers CLI ist ein {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in zur Verwaltung von Containern und Containergruppen unter {{site.data.keyword.Bluemix_notm}}.
+  
 {: shortdesc}
 
 **Hinweis:** Unter *Voraussetzungen* wird aufgelistet, welche Aktionen vor der Verwendung des Befehls ausgeführt werden müssen. Für Befehle, für die keine Voraussetzungen erfüllt sein müssen, ist **Keine** angegeben. Andernfalls kann mindestens eine der folgenden Aktionen eine Voraussetzung sein:
@@ -333,7 +334,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>Wenn die Containergruppe erstellt wurde und die automatische Wiederherstellung aktiviert ist, überprüft IBM Containers den Status jeder Instanz mit einer HTTP-Anforderung an den Port, der zugewiesen wurde.<br>
    Wenn in zwei aufeinander folgenden Intervallen von 90 Sekunden keine Antwort von einer Containerinstanz empfangen wird, wird die Instanz entfernt und durch eine neue Instanz ersetzt. Wenn der Container antwortet, wird keine Aktion ausgeführt. Dieser Prozess wird kontinuierlich wiederholt. Wenn die Gesamtzahl verschiedener Container, die Mitglieder der Gruppe sind, während eines 30-Minuten-Fensters drei Mal oder mehrmals die maximale Größe der Gruppe überschreitet, wird die automatische Wiederherstellung für die Containergruppe permanent inaktiviert. Zur erneuten Aktivierung der automatischen Wiederherstellung müssen Sie die Containergruppe neu erstellen.</dd>
   <dt>--anti (optional)</dt>
-  <dd> Mit anti-affinity kann die Hochverfügbarkeit der Containergruppe optimiert werden. Bei Verwendung der Option --anti werden die einzelnen Containerinstanzen in einer Gruppe auf separate physische Rechenknoten gestellt, was die Wahrscheinlichkeit minimiert, dass alle Container in der Gruppe aufgrund eines Hardwarefehlers ausfallen. Diese Option kann bei größeren Gruppen möglicherweise nicht verwendet werden, da für jede Bluemix-Region und -Organisation nur eine begrenzte Anzahl von Rechenknoten bereitgestellt werden kann. Wenn die Bereitstellung nicht erfolgreich ist, müssen Sie die Anzahl der Containerinstanzen in der Gruppe entweder reduzieren oder die Option --anti entfernen. </dd>
+  <dd> Mit anti-affinity kann die Hochverfügbarkeit der Containergruppe optimiert werden. Bei Verwendung der Option --anti werden die einzelnen Containerinstanzen in einer Gruppe auf separate physische Rechenknoten gestellt, was die Wahrscheinlichkeit minimiert, dass alle Container in der Gruppe aufgrund eines Hardwarefehlers ausfallen. Diese Option kann bei größeren Gruppen möglicherweise nicht verwendet werden, da für jede {{site.data.keyword.Bluemix_notm}}-Region und -Organisation nur eine begrenzte Anzahl von Rechenknoten bereitgestellt werden kann. Wenn die Bereitstellung nicht erfolgreich ist, müssen Sie die Anzahl der Containerinstanzen in der Gruppe entweder reduzieren oder die Option --anti entfernen. </dd>
    <dt><i>CMD</i> (optional)</dt>
    <dd>Der Befehl und die Argumente, die an die Containergruppe zur Ausführung übergeben werden. Dieser Befehl muss ein Befehl mit langer Laufzeit sein. Verwenden Sie keinen Befehl mit kurzer Laufzeit, beispielsweise <i>/bin/date</i>, da ein Befehl mit kurzer Laufzeit dazu führen kann, dass der Container abstürzt.  <br> <strong>Hinweise:</strong> <ul>
    <li>Der Befehl und seine Argumente müssen am Ende der Befehlszeile von <i>bluemix ic run</i> kommen.</li>
@@ -460,7 +461,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 <strong>Befehlsoptionen</strong>:
  <dl>
    <dt>--anti (optional)</dt>
-   <dd>Mit anti-affinity kann die Hochverfügbarkeit der Containergruppe optimiert werden. Bei Verwendung der Option --anti werden die einzelnen Containerinstanzen in Ihrer Gruppe auf separate physische Rechenknoten gestellt, was die Wahrscheinlichkeit minimiert, dass bei einem Hardwarefehler alle Container in der Gruppe ausfallen. Diese Option kann bei größeren Gruppen möglicherweise nicht verwendet werden, da für jede Bluemix-Region und -Organisation nur eine begrenzte Anzahl von Rechenknoten bereitgestellt werden kann. Wenn die Bereitstellung nicht erfolgreich ist, müssen Sie die Anzahl der Containerinstanzen in der Gruppe entweder reduzieren oder die Option --anti entfernen.</dd>
+   <dd>Mit anti-affinity kann die Hochverfügbarkeit der Containergruppe optimiert werden. Bei Verwendung der Option --anti werden die einzelnen Containerinstanzen in Ihrer Gruppe auf separate physische Rechenknoten gestellt, was die Wahrscheinlichkeit minimiert, dass bei einem Hardwarefehler alle Container in der Gruppe ausfallen. Diese Option kann bei größeren Gruppen möglicherweise nicht verwendet werden, da für jede {{site.data.keyword.Bluemix_notm}}-Region und -Organisation nur eine begrenzte Anzahl von Rechenknoten bereitgestellt werden kann. Wenn die Bereitstellung nicht erfolgreich ist, müssen Sie die Anzahl der Containerinstanzen in der Gruppe entweder reduzieren oder die Option --anti entfernen.</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (optional)</dt>
    <dd>Die Anzahl der von Ihnen benötigten Instanzen. Der Standardwert ist <i>2</i>.</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>(optional)</dt>
@@ -885,7 +886,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
-Erstellt den IBM Containers-Service erneut in dem Bluemix-Bereich, an dem Sie angemeldet sind. Das ursprüngliche Kontingent für den Bereich wird beibehalten.
+Erstellt den IBM Containers-Service erneut in dem {{site.data.keyword.Bluemix_notm}}-Bereich, an dem Sie angemeldet sind. Das ursprüngliche Kontingent für den Bereich wird beibehalten.
 
 <strong>Wichtig</strong>: Bei Ausführung dieses Befehls wird keine(r) Ihrer einzelnen Container und Gruppen in diesem Bereich auf den neu bereitgestellten Bereich migriert, sondern während des Migrationsprozesses entfernt.
 
@@ -896,7 +897,7 @@ bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 
 <dl>
    <dt>--force|-f (optional)</dt>
-   <dd>Erzwingt die erneute Erstellung des IBM Containers-Service im Bluemix-Bereich.</dd>
+   <dd>Erzwingt die erneute Erstellung des IBM Containers-Service im {{site.data.keyword.Bluemix_notm}}-Bereich.</dd>
    <dt><i>AVAILABILITY_ZONE</i> (optional)</dt>
    <dd>Der Name der IBM Containers-Verfügbarkeitszone, in der Ihre Container bereitgestellt werden. Wenn keine Verfügbarkeitszone angegeben ist, wird die für die Region definierte Standard-Verfügbarkeitszone verwendet.</dd>
    </dl>
@@ -1376,7 +1377,7 @@ bluemix ic unpause proxy
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-Löscht den IBM Containers-Service aus dem Bluemix-Bereich, an dem Sie angemeldet sind.
+Löscht den IBM Containers-Service aus dem {{site.data.keyword.Bluemix_notm}}-Bereich, an dem Sie angemeldet sind.
 
 <strong>Achtung</strong>: Bei Ausführung dieses Befehls gehen alle einzelnen Container und Containergruppen verloren. Ihr Bereich steht in Bluemix weiterhin zur Verfügung. Zur erneuten Verwendung von IBM Containers müssen Sie `bluemix ic reprovision` ausführen, um den IBM Containers-Service erneut bereitzustellen.
 
@@ -1387,7 +1388,7 @@ bluemix ic reprovision [--force|-f]
 
 <dl>
    <dt>--force|-f (optional)</dt>
-   <dd>Erzwingt die Löschung von Bluemix aus dem Bluemix-Bereich.</dd>
+   <dd>Erzwingt die Löschung von {{site.data.keyword.Bluemix_notm}} aus dem {{site.data.keyword.Bluemix_notm}}-Bereich.</dd>
  </dl>
 
 

@@ -19,9 +19,10 @@ lastupdated: "2017-01-12"
 # (Veraltet) Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus
 {: #devmodecli}
 
-**Diese Befehlszeilenschnittstelle wird nicht mehr verwendet.** Verwenden Sie anstelle der Befehlszeilenschnittstelle für den Entwicklungsmodus (dev_mode) IBM Eclipse Tools for Bluemix oder die DevOps-Web-IDE. Die dev_mode-CLI kann bis 30. Juni 2016 verwendet werden.
 
-Die Bluemix-Befehlszeile für den Entwicklungsmodus (CLI 'dev_mode') ermöglicht das Aktualisieren Ihrer Apps, während sie in der Cloud ausgeführt werden. Die CLI 'dev_mode' wurde als cf-CLI-Plug-in aufgebaut und unterstützt sowohl Liberty- als auch IBM Node.js-Apps.
+**Diese Befehlszeilenschnittstelle wird nicht mehr verwendet.** Verwenden Sie anstelle der Befehlszeilenschnittstelle für den Entwicklungsmodus (dev_mode) IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} oder die DevOps-Web-IDE. Die dev_mode-CLI kann bis 30. Juni 2016 verwendet werden.
+
+Die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle für den Entwicklungsmodus (CLI 'dev_mode') ermöglicht das Aktualisieren Ihrer Apps, während sie in der Cloud ausgeführt werden. Die CLI 'dev_mode' wurde als cf-CLI-Plug-in aufgebaut und unterstützt sowohl Liberty- als auch IBM Node.js-Apps.
 {: shortdesc}
 
 
@@ -36,14 +37,14 @@ Mit der CLI 'dev_mode' können Sie die folgenden Tasks ausführen:
 
 Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Methoden:
 - Lokale Installation.
-  1. Laden Sie das dev_mode-Plug-in für Ihre Plattform aus dem [IBM Bluemix-CLI-Plug-in-Repository](http://plugins.ng.bluemix.net) herunter.
+  1. Laden Sie das dev_mode-Plug-in für Ihre Plattform aus dem [{{site.data.keyword.Bluemix_notm}} CLI-Plug-in-Repository![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} herunter.
   2. Wechseln Sie zu dem Ordner mit dem dev_mode-Plug-in und installieren Sie das Plug-in mithilfe des Befehls 'cf install-plugin'. Beispiel:
 
         ```
         cf install-plugin dev_mode-linux64
         ```
 
-- Installation aus dem Bluemix-CLI-Repository
+- Installation aus dem {{site.data.keyword.Bluemix_notm}}-CLI-Repository
   1. Fügen Sie das Repository 'bluemix-repo' zu den Cloud Foundry-CLI-Repositorys hinzu, indem Sie den folgenden Befehl verwenden:
 
         ```
@@ -62,7 +63,7 @@ Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Metho
         cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## Befehle der CLI 'dev_mode' anzeigen
+## CLI 'dev_mode' anzeigen - {{site.data.keyword.Bluemix_notm}}  
 
 Verwenden Sie den folgenden Befehl, um alle Befehle der CLI 'dev_mode' anzuzeigen:
 

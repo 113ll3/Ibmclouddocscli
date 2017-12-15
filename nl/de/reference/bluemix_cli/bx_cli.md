@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-10-06"
+lastupdated: "2017-11-06"
 
 ---
 
@@ -16,13 +16,13 @@ lastupdated: "2017-10-06"
 # {{site.data.keyword.Bluemix_notm}}-Befehle (bx)
 {: #bluemix_cli}
 
-Version: 0.6.1
+Version: 0.6.2
 
-Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werden Befehle bereitgestellt, die nach Namensbereich für Benutzer zur Interaktion mit {{site.data.keyword.Bluemix_notm}} zusammengefasst sind. 
+Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werden Befehle bereitgestellt, die nach Namensbereich für Benutzer zur Interaktion mit {{site.data.keyword.Bluemix_notm}} zusammengefasst sind.
 
-Ab Version 0.5.0 enthält die Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilenclients einen Cloud Foundry-Befehlszeilenclient. Wenn Sie eine eigene Cloud Foundry-Befehlszeilenschnittstelle installiert haben, dann verwenden Sie die {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bx [command]` und die Cloud Foundry-CLI-Befehle `cf [command]` Ihrer eigenen Installation nicht in demselben Kontext. Verwenden Sie stattdessen `bluemix cf [command]`, wenn Sie Cloud Foundry-Ressourcen mit der Coud Foundry-Befehlszeilenschnittstelle (CF-CLI) im {{site.data.keyword.Bluemix_notm}}-CLI-Kontext verwalten wollen.  Darüber hinaus ist der Befehl `bluemix cf api/login/logout/target` nicht zulässig. Verwenden Sie stattdessen den Befehl `bluemix api/login/logout/target`.
+Ab Version 0.5.0 enthält die Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilenclients einen Cloud Foundry-Befehlszeilenclient. Wenn Sie eine eigene Cloud Foundry-Befehlszeilenschnittstelle installiert haben, dann verwenden Sie die {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bx [command]` und die Cloud Foundry-CLI-Befehle `cf [command]` Ihrer eigenen Installation nicht in demselben Kontext. Verwenden Sie stattdessen `bluemix cf [command]`, wenn Sie Cloud Foundry-Ressourcen mit der Coud Foundry-Befehlszeilenschnittstelle (CF-CLI) im {{site.data.keyword.Bluemix_notm}}-CLI-Kontext verwalten wollen.  Beachten Sie, dass `bluemix cf api/login/logout/target` nicht zulässig ist und dass Sie stattdessen `bluemix api/login/logout/target` verwenden müssen.
 
-In der nachfolgenden Liste finden Sie detaillierte Angaben zur Befehlssyntax der von der {{site.data.keyword.Bluemix_notm}}-CLI unterstützten Befehle mit zugehörigen Namen, Argumenten, Optionen, Voraussetzungen, Beschreibungen und Beispielen.
+In der nachfolgenden Liste finden Sie detaillierte Angaben zu den von der {{site.data.keyword.Bluemix_notm}}-CLI unterstützten Befehlen mit zugehörigen Namen, Argumenten, Optionen, Voraussetzungen, Beschreibungen und Beispielen.
 {:shortdesc}
 
 **Hinweis:** Unter *Voraussetzungen* wird aufgelistet, welche Aktionen vor der Verwendung des Befehls ausgeführt werden müssen. Für Befehle, für die keine Voraussetzungen erfüllt sein müssen, ist **Keine** angegeben. Andernfalls kann mindestens eine der folgenden Aktionen eine Voraussetzung sein:
@@ -32,7 +32,7 @@ In der nachfolgenden Liste finden Sie detaillierte Angaben zur Befehlssyntax der
 <dd>Vor dem Verwenden des Befehls muss ein API-Endpunkt durch Absetzen des Befehls <code>bluemix api</code> definiert werden.</dd>
 <dt>Anmeldung</dt>
 <dd>Vor der Verwendung des Befehls ist die Anmeldung über den Befehl <code>bluemix login</code> erforderlich.
-Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode oder verwenden Sie die Option '--apikey' für die Authentifizierung mit einem API-Schlüssel. Wechseln Sie in der {{site.data.keyword.Bluemix_notm}}-Konsole zum Erstellen von API-Schlüsseln zu **Verwalten** &gt; **Sicherheit** &gt; **Bluemix-API-Schlüssel**.
+Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode oder verwenden Sie die Option '--apikey' für die Authentifizierung mit einem API-Schlüssel. Wechseln Sie in der {{site.data.keyword.Bluemix_notm}}-Konsole zum Erstellen von API-Schlüsseln zu **Verwalten** &gt; **Sicherheit** &gt; **Plattform-API-Schlüssel**.
 </dd>
 <dt>Ziel</dt>
 <dd>Vor dem Verwenden des Befehls muss der Befehl <code>bluemix target</code> zum Definieren einer Organisation und eines Bereichs ausgeführt werden.</dd>
@@ -44,7 +44,7 @@ Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für d
 
 Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufig verwendeten Bluemix-Befehle.
 
-## Allgemeine Bluemix-Befehle 
+## Allgemeine Bluemix-Befehle
 {: #bx_commands_index}
 
 <table summary="Allgemeine Bluemix-Befehle">
@@ -69,13 +69,13 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </tr>
  </tbody>
  </table>
- 
- ## Befehle zur Verwaltung und Konfiguration von Services für {{site.data.keyword.BluSoftlayer_notm}}
+
+ ## Befehle zur Verwaltung und Konfiguration von Infrastrukturservices für {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl)
   {: #bx_commands_softlayer}
-  
-Die Befehle für die Verwaltung von {{site.data.keyword.BluSoftlayer_notm}} wurden in die Bluemix-Befehlszeilenschnittstelle integriert. Weitere Informationen zur Verwendung der Bluemix-Befehlszeilenschnittstelle zum Konfigurieren und Verwalten der Services für {{site.data.keyword.BluSoftlayer_notm}} finden Sie unter
-[Bluemix-CLI {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) - Befehle](/docs/cli/reference/softlayer/index.md#softlayer_cli).
- 
+
+Die Befehle zur Verwaltung der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} wurden in die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle integriert. Weitere Informationen zur Verwendung der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle zum Konfigurieren und Verwalten der Infrastrukturservices für {{site.data.keyword.BluSoftlayer_notm}} finden Sie im Abschnitt zu
+[{{site.data.keyword.Bluemix_notm}}-CLI - Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl)](/docs/cli/reference/softlayer/index.md#softlayer_cli).
+
  ## Befehle zur Verwaltung von Konten, Organisationen und Rollen
  {: #bx_commands_account}
 
@@ -143,35 +143,35 @@ Die Befehle für die Verwaltung von {{site.data.keyword.BluSoftlayer_notm}} wurd
       <td>[bluemix resource quota](bx_cli.html#bluemix_resource_quota)</td>
     </tr>
     <tr>
-      <td>[bluemix resource instances](bx_cli.html#bluemix_resource_instances)</td>
-      <td>[bluemix resource instance](bx_cli.html#bluemix_resource_instance)</td>
-      <td>[bluemix resource instance-create](bx_cli.html#bluemix_resource_instance-create)</td>
-      <td>[bluemix resource instance-update](bx_cli.html#bluemix_resource_instance-update)</td>
-      <td>[bluemix resource instance-delete](bx_cli.html#bluemix_resource_instance-delete)</td>
+      <td>[bluemix resource service-instances](bx_cli.html#bluemix_resource_service_instances)</td>
+      <td>[bluemix resource service-instance](bx_cli.html#bluemix_resource_service_instance)</td>
+      <td>[bluemix resource service-instance-create](bx_cli.html#bluemix_resource_service_instance_create)</td>
+      <td>[bluemix resource service-instance-update](bx_cli.html#bluemix_resource_service_instance_update)</td>
+      <td>[bluemix resource service-instance-delete](bx_cli.html#bluemix_resource_service_instance_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource bindings](bx_cli.html#bluemix_resource_bindings)</td>
-      <td>[bluemix resource binding](bx_cli.html#bluemix_resource_binding)</td>
-      <td>[bluemix resource binding-create](bx_cli.html#bluemix_resource_binding-create)</td>
-      <td>[bluemix resource binding-delete](bx_cli.html#bluemix_resource_binding-delete)</td>
+      <td>[bluemix resource service-bindings](bx_cli.html#bluemix_resource_service_bindings)</td>
+      <td>[bluemix resource service-binding](bx_cli.html#bluemix_resource_service_binding)</td>
+      <td>[bluemix resource service-binding-create](bx_cli.html#bluemix_resource_service_binding_create)</td>
+      <td>[bluemix resource service-binding-delete](bx_cli.html#bluemix_resource_service_binding_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource keys](bx_cli.html#bluemix_resource_keys)</td>
-      <td>[bluemix resource key](bx_cli.html#bluemix_resource_key)</td>
-      <td>[bluemix resource key-create](bx_cli.html#bluemix_resource_key-create)</td>
-      <td>[bluemix resource key-delete](bx_cli.html#bluemix_resource_key-delete)</td>
+      <td>[bluemix resource service-keys](bx_cli.html#bluemix_resource_service_keys)</td>
+      <td>[bluemix resource service-key](bx_cli.html#bluemix_resource_service_key)</td>
+      <td>[bluemix resource service-key-create](bx_cli.html#bluemix_resource_service_key_create)</td>
+      <td>[bluemix resource service-key-delete](bx_cli.html#bluemix_resource_service_key_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource aliases](bx_cli.html#bluemix_resource_aliases)</td>
-      <td>[bluemix resource alias](bx_cli.html#bluemix_resource_alias)</td>
-      <td>[bluemix resource alias-create](bx_cli.html#bluemix_resource_alias-create)</td>
-      <td>[bluemix resource alias-update](bx_cli.html#bluemix_resource_alias-update)</td>
-      <td>[bluemix resource alias-delete](bx_cli.html#bluemix_resource_alias-delete)</td>
+      <td>[bluemix resource service-aliases](bx_cli.html#bluemix_resource_service_aliases)</td>
+      <td>[bluemix resource service-alias](bx_cli.html#bluemix_resource_service_alias)</td>
+      <td>[bluemix resource service-alias-create](bx_cli.html#bluemix_resource_service_alias_create)</td>
+      <td>[bluemix resource service-alias-update](bx_cli.html#bluemix_resource_service_alias_update)</td>
+      <td>[bluemix resource service-alias-delete](bx_cli.html#bluemix_resource_service_alias_delete)</td>
     </tr>
   </tbody>
 </table>
 
- 
+
  ## Befehle zur Verwaltung von API-Schlüsseln und Richtlinien
  {: #bx_commands_iam}
  <table summary="Bluemix-Befehle zur Verwaltung von API-Schlüsseln und Richtlinien.">
@@ -216,7 +216,7 @@ Die Befehle für die Verwaltung von {{site.data.keyword.BluSoftlayer_notm}} wurd
   </tr>
   </tbody>
   </table>
- 
+
  ## Befehle zur Verwaltung von CF-Apps und von Domänen, Routen und Zertifikaten für Apps
  {: #bx_commands_apps}
 
@@ -277,14 +277,14 @@ Die Befehle für die Verwaltung von {{site.data.keyword.BluSoftlayer_notm}} wurd
  </tr>
   </tbody>
  </table>
- 
- ## Befehle zur Verwaltung von Bluemix-Services
+
+ ## Befehle zur Verwaltung von {{site.data.keyword.Bluemix_notm}}-Services
  {: #bx_commands_services}
 
-<table summary="Bluemix-Befehle zur Verwaltung von Bluemix-Services">
-<caption>Tabelle 5. Befehle zur Verwaltung von Bluemix-Services</caption>
+<table summary="Bluemix-Befehle zur Verwaltung der {{site.data.keyword.Bluemix_notm}}-Services.">
+<caption>Tabelle 5. Befehle zur Verwaltung von {{site.data.keyword.Bluemix_notm}}-Services</caption>
  <thead>
- <th colspan="5">Befehle zur Verwaltung von Bluemix-Services</th>
+ <th colspan="5">Befehle zur Verwaltung von {{site.data.keyword.Bluemix_notm}}-Services</th>
  </thead>
  <tbody>
  <tr>
@@ -311,51 +311,51 @@ Die Befehle für die Verwaltung von {{site.data.keyword.BluSoftlayer_notm}} wurd
   </tbody>
  </table>
 
- 
+
  ## Befehle zur Verwaltung von Katalogen, Plug-ins und Einstellungen für die Abrechnung
  {: #bx_commands_settings}
 
-<table summary="Bluemix-Befehle zur Verwaltung der Bluemix-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit.">
-<caption>Tabelle 6. Befehle zur Verwaltung der Bluemix-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit</caption>
+<table summary="Bluemix-Befehle zur Verwaltung der {{site.data.keyword.Bluemix_notm}}-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit.">
+<caption>Tabelle 6. Befehle zur Verwaltung der {{site.data.keyword.Bluemix_notm}}-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit</caption>
  <thead>
- <th colspan="5">Befehle zur Verwaltung der Bluemix-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit</th>
+ <th colspan="5">Befehle zur Verwaltung der {{site.data.keyword.Bluemix_notm}}-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit</th>
  </thead>
  <tbody>
  <tr>
   <td>[bluemix catalog search](bx_cli.html#bluemix_catalog_search)</td>
   <td>[bluemix catalog entry](bx_cli.html#bluemix_catalog_entry)</td>
-  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry-create)</td>
-  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry-update)</td>
-  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry-visibility)</td>
+  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry_create)</td>
+  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry_update)</td>
+  <td>[bluemix catalog entry-delete](bx_cli.html#bluemix_catalog_entry_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service-marketplace)</td>
-  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry-visibility-set)</td>
+  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry_visibility)</td>
+  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service_marketplace)</td>
+  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry_visibility_set)</td>
   <td>[bluemix catalog templates](bx_cli.html#bluemix_catalog_templates)</td>
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
  </tr>
  <tr>
   <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
   <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
-  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
  </tr>
  <tr>
+  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
   <td>[bluemix plugin list](bx_cli.html#bluemix_plugin_list)</td>
   <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
   <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
   <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
-  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
  </tr>
  <tr>
+  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
   <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  </tr>
  </tbody>
  </table>
- 
+
 ## bluemix help
 {: #bluemix_help}
 Zeigt die erweiterte Hilfe für integrierte Befehle und unterstützte Namensbereiche der obersten Ebene in der {{site.data.keyword.Bluemix_notm}}-CLI oder die Hilfe für einen bestimmten integrierten Befehl oder Namensbereich an.
@@ -549,7 +549,7 @@ bluemix -q cf services
 ## bluemix login
 {: #bluemix_login}
 
-Benutzer anmelden. 
+Benutzer anmelden.
 
 ```
 bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
@@ -780,7 +780,7 @@ bluemix account org IBM --guid
 Eine neue Organisation erstellen. Diese Operation kann nur vom Kontoeigner ausgeführt werden.
 
 ```
-bluemix account org-create ORG_NAME
+bluemix account org-create ORG_NAME [-f]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -789,6 +789,8 @@ bluemix account org-create ORG_NAME
    <dl>
    <dt>ORG_NAME (erforderlich)</dt>
    <dd>Der Name der Organisation, die erstellt wird.</dd>
+   <dt>-f</dt>
+   <dd>Erstellung ohne Bestätigung erzwingen.</dd>
    </dl>
 
 <strong>Beispiele</strong>:
@@ -850,7 +852,20 @@ bluemix account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ## bluemix account spaces
 {: #bluemix_account_spaces}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf spaces`.
+Alle Bereiche auflisten
+
+```
+bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
+```
+
+<strong>Befehlsoptionen:</strong>
+   <dl>
+   <dt>-o</dt>
+   <dd>Organisationsname. Die Bereiche unter der angegebenen Organisation auflisten. Standardmäßig wird die aktuelle Organisation verwendet, wenn keine Angabe gemacht wurde. </dd>
+   <dt>-r</dt>
+   <dd>Regionsname. Die Bereiche unter der angegebenen Region auflisten. Standardmäßig wird die aktuelle Region verwendet, wenn keine Angabe gemacht wurde. </dd>
+   </dl>
+
 
 
 ## bluemix account space
@@ -927,10 +942,16 @@ Benutzer aus der Organisation entfernen (Organisationsmanager oder nur Benutzer 
 Alle Organisationsrollen des aktuellen Benutzers abrufen
 
 ```
-bluemix account org-roles
+bluemix account org-roles [-u USER_ID]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
+
+<strong>Befehlsoptionen:</strong>
+  <dl>
+   <dt>-u</dt>
+   <dd>Benutzer-ID. Wenn keine Angabe erfolgt, wird standardmäßig der aktuelle Benutzer verwendet.</dd>
+  </dl>
 
 ## bluemix account org-role-set
 {: #bluemix_account_org_role_set}
@@ -967,7 +988,7 @@ Die Benutzerin `Mary` der Organisation `IBM` mit der Rolle `OrgManager` zuweisen
 bluemix account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**Hinweis:** Sie können die Organisations-/Bereichsrolle mithilfe der CLI festlegen; zum Festlegen der übrigen Berechtigungen müssen Sie jedoch die Benutzerschnittstelle verwenden. Weitere Informationen finden Sie in [Benutzerzugriff zuweisen](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess).
+**Hinweis:** Sie können die Organisations-/Bereichsrolle mithilfe der CLI festlegen; zum Festlegen der übrigen Berechtigungen müssen Sie jedoch die Benutzerschnittstelle verwenden. Weitere Informationen finden Sie in [Benutzerzugriff zuweisen](/docs/iam/assignaccess.html#assignaccess).
 <!-- Begin Staging URL vs Prod URL -->
 
 ## bluemix account org-role-unset
@@ -1370,7 +1391,7 @@ bluemix iam service-id-delete sample-teset -f
 ## bluemix iam api-keys
 {: #bluemix_iam_api_keys}
 
-Alle API-Schlüssel der Bluemix-Plattform auflisten
+Alle API-Schlüssel der {{site.data.keyword.Bluemix_notm}}-Plattform auflisten
 
 ```
 bluemix iam api-keys
@@ -1381,7 +1402,7 @@ bluemix iam api-keys
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-Neuen API-Schlüssel für Bluemix-Plattform erstellen
+Neuen API-Schlüssel für {{site.data.keyword.Bluemix_notm}}-Plattform erstellen
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1410,7 +1431,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-API-Schlüssel der Bluemix-Plattform aktualisieren
+API-Schlüssel der {{site.data.keyword.Bluemix_notm}}-Plattform aktualisieren
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1439,7 +1460,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-API-Schlüssel der Bluemix-Plattform löschen
+API-Schlüssel der {{site.data.keyword.Bluemix_notm}}-Plattform löschen
 
 ```
 bluemix iam api-key-delete NAME [-f]
@@ -1458,10 +1479,10 @@ bluemix iam api-key-delete NAME [-f]
 ## bluemix iam service-api-keys
 {: #bluemix_iam_service_api_keys}
 
-Alle API-Schlüssel des Service auflisten
+Alle API-Schlüssel eines Service auflisten
 
 ```
-bluemix iam service-api-keys BOUND_TO 
+bluemix iam service-api-keys SERVICE_ID
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1472,10 +1493,10 @@ bluemix iam service-api-keys BOUND_TO
 
 <strong>Beispiele</strong>:
 
-API-Schlüssel des Service auflisten, die an den Service-CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` gebunden sind:
+Alle API-Schlüssel des Service `sample-service` auflisten
 
 ```
-bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-keys sample-service
 ```
 
 ## bluemix iam service-api-key
@@ -1484,7 +1505,7 @@ bluemix iam service-api-keys "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04
 Details eines Service-API-Schlüssels auflisten
 
 ```
-bluemix iam service-api-key NAME BOUND_TO [--uuid]
+bluemix iam service-api-key NAME SERVICE_ID [--uuid]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1497,10 +1518,10 @@ bluemix iam service-api-key NAME BOUND_TO [--uuid]
 
 <strong>Beispiele</strong>:
 
-Details des Service-API-Schlüssels `sample-key` anzeigen, der an den Service-CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` gebunden ist:
+Details des Service-API-Schlüssels `sample-key` des Service `sample-service` anzeigen:
 
 ```
-bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key sample-key sample-service
 ```
 
 ## bluemix iam service-api-key-create
@@ -1509,7 +1530,7 @@ bluemix iam service-api-key sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab
 Service-API-Schlüssel erstellen
 
 ```
-bluemix iam service-api-key-create NAME BOUND_TO [-d, --description DESCRIPTION] [-f, --file FILE]
+bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [-f, --file FILE]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1524,10 +1545,10 @@ bluemix iam service-api-key-create NAME BOUND_TO [-d, --description DESCRIPTION]
 
 <strong>Beispiele</strong>:
 
-Service-API-Schlüssel `sample-key` erstellen, der an den Service-CRN `crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da` gebunden ist:
+Service-API-Schlüssel `sample-key` für Service `sample-service` erstellen:
 
 ```
-bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key-create sample-key sample-service
 ```
 
 ## bluemix iam service-api-key-update
@@ -1536,7 +1557,7 @@ bluemix iam service-api-key-create sample-key "crn:v1:bluemix:public:iam:us-sout
 Service-API-Schlüssel aktualisieren
 
 ```
-bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1550,7 +1571,7 @@ bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --
   <dt>-v, --version</dt>
   <dd>Die Version des Service-API-Schlüssels</dd>
   <dt>-f, --force</dt>
-  <dd>Ohne Bestätigung aktualisieren</dd>
+  <dd>Aktualisierung ohne Bestätigung</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -1558,7 +1579,7 @@ bluemix iam service-api-key-update NAME BOUND_TO  [-n, --name NEW_sNAME] [-d, --
 Service-API-Schlüssel `sample-key` in `new-sample-key` umbenennen:
 
 ```
-bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da" -n new-sample-key
+bluemix iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
 
 ## bluemix iam service-api-key-delete
@@ -1567,7 +1588,7 @@ bluemix iam service-api-key-update sample-key "crn:v1:bluemix:public:iam:us-sout
 Service-API-Schlüssel löschen
 
 ```
-bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
+bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1575,7 +1596,7 @@ bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>Ohne Bestätigung löschen</dd>
+  <dd>Löschen ohne Bestätigung</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -1583,7 +1604,7 @@ bluemix iam service-api-key-delete NAME BOUND_TO [-f, --force]
 Service-API-Schlüssel `sample-key` löschen:
 
 ```
-bluemix iam service-api-key-delete sample-key "crn:v1:bluemix:public:iam:us-south:o/0ab7e8fe-0f04-4af8-b7d5-30af12125de6::serviceid:ServiceId-ec238b6a-8e18-45da-9a0f-d41c35ce04da"
+bluemix iam service-api-key-delete sample-key sample-service
 ```
 
 ## bluemix iam user-policies
@@ -1644,7 +1665,7 @@ bluemix iam user-policy name@example.com 0bb730daa
 Benutzerrichtlinie erstellen
 
 ```
-bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resouce-group-id RESOURCE_GROUP_ID]}
+bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Zielkonto
@@ -1652,9 +1673,9 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <strong>Befehlsoptionen:</strong>
 <dl>
 <dt>USER_NAME (erforderlich)</dt>
-<dd>Benutzername, zu dem die Richtlinie gehört</dd>
+<dd>Der Benutzername, zu dem die Richtlinie gehört</dd>
 <dt>-f, --file <i>FILE</i> (optional)</dt>
-<dd>JSON-Datei der Richtliniendefinition</dd>
+<dd>Die JSON-Datei der Richtliniendefinition</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (optional)</dt>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
 <dd>Der Servicename der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
@@ -1958,7 +1979,7 @@ bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
   <dt>POLICY_ID (erforderlich)</dt>
   <dd>Die ID der Servicerichtlinie<dd>
   <dt>-f, --force</dt>
-  <dd>Ohne Bestätigung löschen</dd>
+  <dd>Löschen ohne Bestätigung</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -1976,7 +1997,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 Ressourcengruppen auflisten
 
 ```
-bluemix resource groups [--default | (-r, --resource RESOURCE_ID -o, --resource-origin RESOURCE_ORIGIN)]
+bluemix resource groups [--default]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1985,10 +2006,6 @@ bluemix resource groups [--default | (-r, --resource RESOURCE_ID -o, --resource-
 <dl>
   <dt>--default</dt>
   <dd>Standardgruppe des aktuellen Kontos abrufen</dd>
-  <dt>-r, --resource</dt>
-  <dd>ID der zugehörigen Ressource</dd>
-  <dt>-o, --resource-origin</dt>
-  <dd>Herkunft der zugehörigen Ressource. Gültige Werte: 'CF_ORG', 'IMS_ACCOUNT'.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -2004,13 +2021,6 @@ Standardgruppe unter aktuellem Zielkonto auflisten:
 ```
 bluemix resource groups --default
 ```
-
-Ressourcengruppen auflisten, die einer Cloud Foundry-Organisation zugeordnet sind
-
-```
-bluemix resource groups -r d0ef0e-12n3632z9f-ef3w54n -o CF_ORG
-```
-
 
 ## bluemix resource group
 {: #bluemix_resource_group}
@@ -2246,7 +2256,7 @@ Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `c
 
 Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-app-manifest`.
 
-## bluemix app domain-cert 
+## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
 
 Die Zertifikatsinformationen für eine Domäne auflisten
@@ -2582,42 +2592,42 @@ Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `c
 Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf update-user-provided-service`.
 
 
-## bluemix resource instances
-{: #bluemix_resource_instances}
+## bluemix resource service-instances
+{: #bluemix_resource_service_instances}
 
-Ressourceninstanzen auflisten
+Serviceinstanzen auflisten
 
 ```
-bluemix resource instances [--resource-name RESOURCE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>--resource-name</dt>
-  <dd>Name der zugehörigen Ressource</dd>
+  <dt>--service-name</dt>
+  <dd>Der Name des zugehörigen Service</dd>
   <dt>-r, --region</dt>
-  <dd>Filtern nach Regions-ID, aktuelle Region als Standardwert festlegen, wenn nicht angegeben, '-r, --region all' zum Anzeigen von Ressourceninstanzen unter allen Regionen</dd>
+  <dd>Filtern nach Regions-ID, aktuelle Region als Standardwert festlegen, wenn nicht angegeben, '-r, --region all' zum Anzeigen von Serviceinstanzen unter allen Regionen</dd>
   <dt>--long</dt>
   <dd>Weitere Felder in Ausgabe anzeigen</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-Ressourceninstanzen der Ressource `test-resource` auflisten:
+Serviceinstanzen des Service `test-service` auflisten:
 
 ```
-bluemix resource instances --resource-name test-resource
+bluemix resource service-instances --service-name test-service
 ```
 
-## bluemix resource instance
-{: #bluemix_resource_instance}
+## bluemix resource service-instance
+{: #bluemix_resource_service_instance}
 
-Details einer Ressourceninstanz anzeigen
+Details einer Serviceinstanz anzeigen
 
 ```
-bluemix resource instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [-r, --region REGION] [--id]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2625,27 +2635,27 @@ bluemix resource instance NAME [-r, --region REGION] [--id]
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>NAME (erforderlich)</dt>
-  <dd>Der Name der Ressourceninstanz</dd>
+  <dd>Der Name der Serviceinstanz</dd>
   <dt>-r, --region</dt>
-  <dd>Filtern nach Regions-ID, aktuelle Region als Standardwert festlegen, wenn nicht angegeben, '-r, --region all' zum Anzeigen von Ressourceninstanzen unter allen Regionen</dd>
+  <dd>Filtern nach Regions-ID, aktuelle Region als Standardwert festlegen, wenn nicht angegeben, '-r, --region all' zum Anzeigen von Serviceinstanzen unter allen Regionen</dd>
   <dt>--id</dt>
-  <dd>ID der Ressourceninstanz anzeigen</dd>
+  <dd>ID der Serviceinstanz anzeigen</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Details der Ressourceninstanz `my-resource-instance` anzeigen:
+Details der Serviceinstanz `my-service-instance` anzeigen:
 
 ```
-bluemix resource instance my-resource-instance
+bluemix resource service-instance my-service-instance
 ```
 
-## bluemix resource instance-create
-{: #bluemix_resource_instance_create}
+## bluemix resource service-instance-create
+{: #bluemix_resource_service_instance_create}
 
-Ressourceninstanz erstellen
+Serviceinstanz erstellen
 
 ```
-bluemix resource instance-create NAME RESOURCE_NAME|RESOURCE_ID RESOURCE_PLAN_NAME|RESOURCE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2653,47 +2663,47 @@ bluemix resource instance-create NAME RESOURCE_NAME|RESOURCE_ID RESOURCE_PLAN_NA
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>NAME (erforderlich)</dt>
-  <dd>Der Name der Ressourceninstanz</dd>
-  <dt>RESOURCE_NAME oder RESOURCE_ID (erforderlich)</dt>
-  <dd>Der Name oder die ID der Ressource</dd>
-  <dt>RESOURCE_PLAN_NAME oder RESOURCE_PLAN_ID (erforderlich)</dt>
-  <dd>Der Name oder die ID des Ressourcenplans</dd>
+  <dd>Der Name der Serviceinstanz</dd>
+  <dt>SERVICE_NAME oder SERVICE_ID (erforderlich)</dt>
+  <dd>Der Name oder die ID des Service</dd>
+  <dt>SERVICE_PLAN_NAME oder SERVICE_PLAN_ID (erforderlich)</dt>
+  <dd>Der Name oder die ID des Serviceplans</dd>
   <dt>-r, --region</dt>
-  <dd>Die Region zum Erstellen der Ressourceninstanz, standardmäßig wird aktuelle Region verwendet, wenn nicht angegeben</dd>
+  <dd>Die Region zum Erstellen der Serviceinstanz, standardmäßig wird aktuelle Region verwendet, wenn nicht angegeben</dd>
   <dt>-t, --tags</dt>
   <dd>Tags</dd>
   <dt>-p, --parameters</dt>
-  <dd>Die JSON-Datei oder JSON-Zeichenfolge von Parametern zum Erstellen einer Ressourceninstanz</dd>
+  <dd>Die JSON-Datei oder JSON-Zeichenfolge von Parametern zum Erstellen einer Serviceinstanz</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourceninstanz mit dem Namen `my-resource-instance` mit dem Ressourcenplan `test-resource-plan` der Ressource `test-resource` erstellen:
+Eine Serviceinstanz mit dem Namen `my-service-instance` mithilfe des Serviceplans `test-service-plan` des Service `test-service` erstellen:
 
 ```
-bluemix resource instance-create my-resource-instance test-resource test-resource-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan
 ```
 
-## bluemix resource instance-update
-{: #bluemix_resource_instance_update}
+## bluemix resource service-instance-update
+{: #bluemix_resource_service_instance_update}
 
-Ressourceninstanz aktualisieren
+Serviceinstanz aktualisieren
 
 ```
-bluemix resource instance-update RESOURCE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--resource-plan-id RESOURCE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
+bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>RESOURCE_INSTANCE_NAME (erforderlich)</dt>
-  <dd>Der Name der Ressourceninstanz</dd>
+  <dt>SERVICE_INSTANCE_NAME (erforderlich)</dt>
+  <dd>Der Name der Serviceinstanz</dd>
   <dt>-n, --name</dt>
-  <dd>Der neue Name der Ressourceninstanz</dd>
+  <dd>Der neue Name der Serviceinstanz</dd>
   <dt>-t, --tags</dt>
   <dd>Neue Tags</dd>
-  <dt>--resource-plan-id</dt>
-  <dd>Die neue ID des Ressourcenplans</dd>
+  <dt>--service-plan-id</dt>
+  <dd>Die neue ID des Serviceplans</dd>
   <dt>--update-time</dt>
   <dd>Die Zeit in Sekunden seit der Epoche, in der der gebührenpflichtige Datensatz wirksam werden soll</dd>
   <dt>-f, --force</dt>
@@ -2701,19 +2711,19 @@ bluemix resource instance-update RESOURCE_INSTANCE_NAME [-n, --name NEW_NAME] [-
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourceninstanz `my-resource-instance` aktualisieren und ihren Namen in `new-resource-instance` ändern:
+Serviceinstanz `my-service-instance` aktualisieren und ihren Namen in `new-service-instance` ändern:
 
 ```
-bluemix resource instance-update my-resource-instance -n new-resource-instance
+bluemix resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-## bluemix resource instance-delete
-{: #bluemix_resource_instance_delete}
+## bluemix resource service-instance-delete
+{: #bluemix_resource_service_instance_delete}
 
-Ressourceninstanz löschen
+Serviceinstanz löschen
 
 ```
-bluemix resource instance-delete NAME [-f, --force]
+bluemix resource service-instance-delete NAME [-f, --force] [--recursive]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2722,45 +2732,47 @@ bluemix resource instance-delete NAME [-f, --force]
 <dl>
   <dt>-f, --force</dt>
   <dd>Löschen ohne Bestätigung erzwingen</dd>
+  <dt>--recursive</dt>
+  <dd>Alle zugehörigen Ressourcen löschen</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourceninstanz `my-resource-instance` löschen:
+Serviceinstanz `my-service-instance` der Ressource löschen:
 
 ```
-bluemix resource instance-delete my-resource-instance
+bluemix resource service-instance-delete my-service-instance
 ```
 
-## bluemix resource bindings
-{: #bluemix_resource_bindings}
+## bluemix resource service-bindings
+{: #bluemix_resource_service_bindings}
 
-Bindungen an Ressourcenalias anzeigen
+Bindungen an Servicealias anzeigen
 
 ```
-bluemix resource bindings RESOURCE_ALIAS
+bluemix resource bindings SERVICE_ALIAS
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS (erforderlich)</dt>
-  <dd>Der Ressourcenaliasname</dd>
+  <dt>SERVICE_ALIAS (erforderlich)</dt>
+  <dd>Der Servicealiasname</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenbindungen an Ressourcenaliasnamen `my-resource-alias` anzeigen:
+Ressourcenbindungen an Servicealiasnamen `my-service-alias` anzeigen:
 
 ```
-bluemix resource bindings my-resource-alias
+bluemix resource bindings my-service-alias
 ```
-## bluemix resource binding
-{: #bluemix_resource_binding}
+## bluemix resource service-binding
+{: #bluemix_resource_service_binding}
 
-Details einer Ressourcenbindung anzeigen
+Details einer Servicebindung anzeigen
 
 ```
-bluemix resource binding ALIAS_NAME APP_NAME [--id]
+bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2768,35 +2780,35 @@ bluemix resource binding ALIAS_NAME APP_NAME [--id]
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>ALIAS_NAME (erforderlich)</dt>
-  <dd>Der Ressourcenaliasname</dd>
+  <dd>Der Servicealiasname</dd>
   <dt>APP_NAME</dt>
   <dd>Der Cloud Foundry-Anwendungsname</dd>
   <dt>--id</dt>
-  <dd>Nur die ID anzeigen. Alle anderen Ausgaben für diese Ressourcenbindung werden unterdrückt.</dd>
+  <dd>Nur die ID anzeigen. Alle anderen Ausgaben für diese Servicebindung werden unterdrückt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Details der Ressourcenbindung zwischen dem Ressourcenaliasnamen `my-resource-alias` und der App `my-app` anzeigen:
+Details der Servicebindung zwischen dem Servicealiasnamen `my-service-alias` und der App `my-app` anzeigen:
 
 ```
-bluemix resource bindings my-resource-alias my-app
+bluemix resource bindings my-service-alias my-app
 ```
 
-## bluemix resource binding-create
-{: #bluemix_resource_binding_create}
+## bluemix resource service-binding-create
+{: #bluemix_resource_service_binding_create}
 
-Ressourcenbindung erstellen
+Servicebindung erstellen
 
 ```
-bluemix resource binding-create RESOURCE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS_NAME (erforderlich)</dt>
-  <dd>Der Ressourcenaliasname</dd>
+  <dt>SERVICE_ALIAS_NAME (erforderlich)</dt>
+  <dd>Der Servicealiasname</dd>
   <dt>APP_NAME</dt>
   <dd>Der Cloud Foundry-Anwendungsname</dd>
   <dt>ROLE_NAME</dt>
@@ -2808,26 +2820,26 @@ bluemix resource binding-create RESOURCE_ALIAS_NAME APP_NAME ROLE_NAME [--servic
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenbindungen zwischen dem Ressourcenaliasnamen `my-resource-alias` und der App `my-app` mit der Rolle `Administrator` erstellen:
+Servicebindungen zwischen dem Servicealiasnamen `my-service-alias` und der App `my-app` mit der Rolle `Administrator` erstellen:
 
 ```
-bluemix resource binding-create my-resource-alias my-app Administrator
+bluemix resource service-binding-create my-service-alias my-app Administrator
 ```
-## bluemix resource binding-delete
-{: #bluemix_resource_binding_delete}
+## bluemix resource service-binding-delete
+{: #bluemix_resource_service_binding_delete}
 
-Ressourcenbindung löschen
+Servicebindung löschen
 
 ```
-bluemix resource binding-delete RESOURCE_ALIAS APP_NAME [-f, --force]
+bluemix resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Keine
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>RESOURCE_ALIAS_NAME (erforderlich)</dt>
-  <dd>Der Ressourcenaliasname</dd>
+  <dt>SERVICE_ALIAS_NAME (erforderlich)</dt>
+  <dd>Der Servicealiasname</dd>
   <dt>APP_NAME</dt>
   <dd>Der Cloud Foundry-Anwendungsname</dd>
   <dt>-f, --force</dt>
@@ -2835,19 +2847,19 @@ bluemix resource binding-delete RESOURCE_ALIAS APP_NAME [-f, --force]
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenbindung zwischen dem Ressourcenaliasnamen `my-resource-alias` und der App `my-app` löschen:
+Servicebindung zwischen dem Servicealiasnamen `my-service-alias` und der App `my-app` löschen:
 
 ```
-bluemix resource binding-delete my-resource-alias my-app
+bluemix resource service-binding-delete my-service-alias my-app
 ```
 
-## bluemix resource keys
-{: #bluemix_resource_keys}
+## bluemix resource service-keys
+{: #bluemix_resource_service_keys}
 
-Ressourcenschlüssel von Ressourceninstanz oder Ressourcenaliasname auflisten
+Serviceschlüssel der Serviceinstanz oder des Servicealias auflisten
 
 ```
-bluemix resource keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+bluemix resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2855,29 +2867,29 @@ bluemix resource keys [ --instance-id ID | --instance-name NAME | --alias-id ID 
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>--instance-id</dt>
-  <dd>Die Ressourceninstanz-ID</dd>
+  <dd>Die Serviceinstanz-ID</dd>
   <dt>--instance-name</dt>
-  <dd>Der Ressourceninstanzname</dd>
+  <dd>Der Serviceinstanzname</dd>
   <dt>--alias-id</dt>
-  <dd>Die Ressourcenalias-ID</dd>
+  <dd>Die Servicealias-ID</dd>
   <dt>--alias-name</dt>
-  <dd>Der Ressourcenaliasname</dd>
+  <dd>Der Servicealiasname</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenschlüssel der Ressourceninstanz `my-resource-instance` auflisten:
+Serviceschlüssel der Serviceinstanz `my-service-instance` auflisten:
 
 ```
-bluemix resource keys --instance-name my-resource-instance
+bluemix resource service-keys --instance-name my-service-instance
 ```
 
-## bluemix resource key
-{: #bluemix_resource_key}
+## bluemix resource service-key
+{: #bluemix_resource_service_key}
 
-Details eines Ressourcenschlüssels anzeigen
+Details eines Serviceschlüssels anzeigen
 
 ```
-bluemix resource key KEY_NAME [--id]
+bluemix resource service-key KEY_NAME [--id]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2887,23 +2899,23 @@ bluemix resource key KEY_NAME [--id]
   <dt>KEY_NAME</dt>
   <dd>Der Name des Schlüssels</dd>
   <dt>--id</dt>
-  <dd>ID des Ressourcenschlüssels anzeigen</dd>
+  <dd>ID des Serviceschlüssels anzeigen</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Details der Ressourcenschlüssel `my-resource-key` anzeigen:
+Details der Serviceschlüssel `my-service-key` anzeigen:
 
 ```
-bluemix resource key my-resource-key
+bluemix resource service-key my-service-key
 ```
 
-## bluemix resource key-create
-{: #bluemix_resource_key_create}
+## bluemix resource service-key-create
+{: #bluemix_resource_service_key_create}
 
-Ressourcenschlüssel erstellen
+Serviceschlüssel erstellen
 
 ```
-bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID | --instance-name RESOURCE_INSTANCE_NAME | --alias-id RESOURCE_ALIAS_ID | --alias-name RESOURCE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2915,13 +2927,13 @@ bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID 
   <dt>ROLE_NAME</dt>
   <dd>Der Name der Benutzerrolle</dd>
   <dt>--instance-id</dt>
-  <dd>Die Ressourceninstanz-ID</dd>
+  <dd>Die Serviceinstanz-ID</dd>
   <dt>--instance-name</dt>
-  <dd>Der Ressourceninstanzname</dd>
+  <dd>Der Serviceinstanzname</dd>
   <dt>--alias-id</dt>
-  <dd>Die Ressourcenalias-ID</dd>
+  <dd>Die Servicealias-ID</dd>
   <dt>--alias-name</dt>
-  <dd>Der Ressourcenaliasname</dd>
+  <dd>Der Servicealiasname</dd>
   <dt>-service-id-name</dt>
   <dd>Der Name der Service-ID, zu der die Rolle gehört</dd>
   <dt>-f, --force</dt>
@@ -2929,19 +2941,19 @@ bluemix resource key-create NAME ROLE_NAME ( --instance-id RESOURCE_INSTANCE_ID 
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenschlüssel mit dem Namen `my-resource-key` mit der Rolle `Administrator` für die Ressourceninstanz `my-resource-instance` erstellen:
+Serviceschlüssel mit dem Namen `my-service-key` mit der Rolle `Administrator` für die Serviceinstanz `my-service-instance` erstellen:
 
 ```
-bluemix resource key-create my-resource-key Administrator --instance-name my-resource-instance
+bluemix resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
 
-## bluemix resource key-delete
-{: #bluemix_resource_key_delete}
+## bluemix resource service-key-delete
+{: #bluemix_resource_service_key_delete}
 
-Ressourcenschlüssel löschen
+Serviceschlüssel löschen
 
 ```
-bluemix resource key-delete KEY_NAME [-f, --forece]
+bluemix resource service-key-delete KEY_NAME [-f, --forece]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2955,19 +2967,19 @@ bluemix resource key-delete KEY_NAME [-f, --forece]
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenschlüssel `my-resource-key` löschen:
+Serviceschlüssel `my-service-key` löschen:
 
 ```
-bluemix resource key-delete my-resource-key
+bluemix resource service-key-delete my-service-key
 ```
 
-## bluemix resource aliases
-{: #bluemix_resource_aliases}
+## bluemix resource service-aliases
+{: #bluemix_resource_service_aliases}
 
-Aliasnamen für eine Ressourceninstanz auflisten
+Aliasnamen für eine Serviceinstanz auflisten
 
 ```
-bluemix resource aliases [ --instance-id ID | --instance-name NAME ]
+bluemix resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2975,24 +2987,24 @@ bluemix resource aliases [ --instance-id ID | --instance-name NAME ]
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>--instance-id</dt>
-  <dd>Die ID der zugehörigen Ressourceninstanz.</dd>
+  <dd>Die ID der zugehörigen Serviceinstanz.</dd>
   <dt>--instance-name</dt>
-  <dd>Der Name der zugehörigen Ressourceninstanz.</dd>
+  <dd>Der Name der zugehörigen Serviceinstanz.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenaliasnamen für Ressourceninstanz `my-resource-instance` auflisten:
+Servicealiasnamen für Serviceinstanz `my-service-instance` auflisten:
 ```
-bluemix resource aliases my-resource-instance
+bluemix resource service-aliases my-service-instance
 ```
 
-## bluemix resource alias
-{: #bluemix_resource_alias}
+## bluemix resource service-alias
+{: #bluemix_resource_service_alias}
 
-Details eines Ressourcenaliasnamens anzeigen
+Details eines Servicealias anzeigen
 
 ```
-bluemix resource alias ALIAS_NAME [--id]
+bluemix resource service-alias ALIAS_NAME [--id]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -3000,24 +3012,24 @@ bluemix resource alias ALIAS_NAME [--id]
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>ALIAS_NAME (erforderlich)</dt>
-  <dd>Der Name des Ressourcenalias</dd>
+  <dd>Der Name des Servicealias</dd>
   <dt>--id</dt>
-  <dd>Nur die ID des angegebenen Ressourcenalias anzeigen. Alle anderen Ausgaben für diesen Alias werden unterdrückt.</dd>
+  <dd>Nur die ID des angegebenen Servicealias anzeigen. Alle anderen Ausgaben für diesen Alias werden unterdrückt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Details des Ressourcenalias `my-resource-alias` anzeigen:
+Details des Servicealias `my-service-alias` anzeigen:
 ```
-bluemix resource aliase  my-resource-alias
+bluemix resource service-aliase  my-service-alias
 ```
 
-## bluemix resource alias-create
-{: #bluemix_resource_alias_create}
+## bluemix resource service-alias-create
+{: #bluemix_resource_service_alias_create}
 
-Alias einer Ressourceninstanz erstellen
+Alias einer Serviceinstanz erstellen
 
 ```
-bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
+bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -3025,11 +3037,11 @@ bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NA
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>ALIAS_NAME (erforderlich)</dt>
-  <dd>Der Name des Ressourcenalias</dd>
+  <dd>Der Name des Servicealias</dd>
   <dt>--instance-id</dt>
-  <dd>Die ID der zugehörigen Ressourceninstanz.</dd>
+  <dd>Die ID der zugehörigen Serviceinstanz.</dd>
   <dt>--instance-name</dt>
-  <dd>Der Name der zugehörigen Ressourceninstanz.</dd>
+  <dd>Der Name der zugehörigen Serviceinstanz.</dd>
   <dt>-s</dt>
   <dd>Der Name des Bereichs, in dem der Alias erstellt wird. Der Standardwert ist der aktuelle Bereich.</dd>
   <dt>-t, --tags</dt>
@@ -3039,18 +3051,18 @@ bluemix resource alias-create ALIAS_NAME ( --instance-id ID | --instance-name NA
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenalias mit dem Namen `my-resource-alias` der Ressourceninstanz `my-resource-instance` erstellen:
+Servicealias mit dem Namen `my-service-alias` der Serviceinstanz `my-service-instance` erstellen:
 ```
-bluemix resource aliase-create my-resource-alias --instance-name my-resource-instance
+bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
 ```
 
-## bluemix resource alias-update
-{: #bluemix_resource_alias_update}
+## bluemix resource service-alias-update
+{: #bluemix_resource_service_alias_update}
 
-Ressourcenalias aktualisieren
+Servicealias aktualisieren
 
 ```
-bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
+bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -3058,31 +3070,31 @@ bluemix resource alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS]
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>ALIAS_NAME (erforderlich)</dt>
-  <dd>Der Name des Ressourcenalias</dd>
+  <dd>Der Name des Servicealias</dd>
   <dt>-n, --name</dt>
-  <dd>Der neue Name des Ressourcenalias.</dd>
+  <dd>Der neue Name des Servicealias</dd>
   <dt>-t, --tags</dt>
-  <dd>Tagliste.</dd>
+  <dd>Tagliste</dd>
   <dt>-p, --parameters</dt>
-  <dd>Parameter JSON-Datei oder JSON-Zeichenfolge.</dd>
+  <dd>Parameter JSON-Datei oder JSON-Zeichenfolge</dd>
   <dt>-f, --force</dt>
-  <dd>Aktualisierung ohne Bestätigung durch Benutzer erzwingen.</dd>
+  <dd>Aktualisierung ohne Bestätigung durch Benutzer erzwingen</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenalias `my-resource-alias` aktualisieren und seinen Namen in `new-resource-alias` ändern:
+Servicealias `my-service-alias` aktualisieren und seinen Namen in `new-service-alias` ändern:
 
 ```
-bluemix resource alias-update my-resource-alias -n new-resource-alias
+bluemix resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-## bluemix resource alias-delete
-{: #bluemix_resource_alias_delete}
+## bluemix resource service-alias-delete
+{: #bluemix_resource_service_alias_delete}
 
-Ressourcenalias löschen
+Servicealias löschen
 
 ```
-bluemix resource alias-delete ALIAS_NAME [-f, --force]
+bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -3090,16 +3102,16 @@ bluemix resource alias-delete ALIAS_NAME [-f, --force]
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>ALIAS_NAME (erforderlich)</dt>
-  <dd>Der Name des Ressourcenalias</dd>
+  <dd>Der Name des Servicealias</dd>
   <dt>-f, --force</dt>
   <dd>Löschen ohne Bestätigung erzwingen</dd>
 </dl>
 
 <strong>Beispiele</strong>:
-Ressourcenalias `my-resource-alias` löschen:
+Servicealias `my-service-alias` löschen:
 
 ```
-bluemix resource alias-delete my-resource-alias
+bluemix resource service-alias-delete my-service-alias
 ```
 
 ## bluemix catalog search
@@ -3108,15 +3120,13 @@ bluemix resource alias-delete my-resource-alias
 Katalogeinträge durchsuchen
 
 ```
-bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--reverse] [--json] [--global]
+bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>-q, --query</dt>
-  <dd>Schlüsselwort suchen</dd>
   <dt>-r, --region</dt>
   <dd>Die geografische Region angeben, in der gesucht werden soll. Momentan werden nur "us-south" und "united-kingdom" unterstützt</dd>
   <dt>-k, --kind</dt>
@@ -3125,13 +3135,17 @@ bluemix catalog search [-q, --query KEY_WORDS] [-r, --region REGION] [-k, --kind
   <dd>Nach Preis filtern. Momentan werden nur "free", "paygo" und "bluemix-subscription" unterstützt</dd>
   <dt>-t, --tag</dt>
   <dd>Nach Tag filtern.</dd>
-  <dt>-sort-by</dt>
+  <dt>--sort-by</dt>
   <dd>Für Sortierung zu verwendende Eigenschaft</dd>
-  <dt>-reverse</dt>
+  <dt>--col</dt>
+  <dd>Zusätzliche Spalten für die Tabelle angeben. Momentan "group", "provider" und "tags".</dd>
+  <dt>--reverse</dt>
   <dd>Gibt an, ob die Sortierreihenfolge umgekehrt werden soll</dd>
-  <dt>-json</dt>
+  <dt>--json</dt>
   <dd>Ursprüngliche JSON-Antwort ausgeben</dd>
-  <dt>-global</dt>
+  <dt>--csv</dt>
+  <dd>CSV-Ausgabedatei</dd>
+  <dt>--global</dt>
   <dd>Im globalen Bereich arbeiten</dd>
 </dl>
 
@@ -3150,20 +3164,18 @@ bluemix catalog search -k service -q 'Automation test'
 Katalogeintrag abrufen
 
 ```
-bluemix catalog entry [-i ID] [--global]
+bluemix catalog entry ID [--global]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>Die ID des Katalogeintrags.</dd>
-  <dt>-children</dt>
+  <dt>--children</dt>
   <dd>Alle untergeordneten Elemente für Katalogeintrag abrufen</dd>
-  <dt>-json</dt>
+  <dt>--json</dt>
   <dd>Ursprüngliche JSON-Antwort ausgeben</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>Im globalen Bereich arbeiten</dd>
 </dl>
 
@@ -3192,7 +3204,7 @@ bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--gl
   <dd>Die übergeordnete ID des Objekts</dd>
   <dt>-c</dt>
   <dd>Das gültige JSON-Objekt, das die katalogspezifischen Konfigurationsparameter enthält, die entweder zeilenintern (inline) oder in einer Datei angegeben werden. Eine Liste der unterstützten Konfigurationsparameter finden Sie in der Dokumentation für den jeweiligen Katalogeintrag.</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>Im globalen Bereich arbeiten</dd>
 </dl>
 
@@ -3210,18 +3222,16 @@ bluemix catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 Vorhandenen Katalogeintrag aktualisieren (nur Katalogadministrator oder Editor eines Kontos)
 
 ```
-bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
+bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>Die ID des momentan aktualisierten Katalogeintrags.</dd>
   <dt>-c</dt>
   <dd>Das gültige JSON-Objekt, das die katalogspezifischen Konfigurationsparameter enthält, die entweder zeilenintern (inline) oder in einer Datei angegeben werden. Eine Liste der unterstützten Konfigurationsparameter finden Sie in der Dokumentation für den jeweiligen Katalogeintrag.</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>Im globalen Bereich arbeiten</dd>
 </dl>
 
@@ -3230,23 +3240,45 @@ bluemix catalog entry-update [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 Ressource `j402-dnf1i` aus JSON-Datei aktualisieren:
 
 ```
-bluemix entry-update -i 'j402-dnf1i' -c @update.json
+bluemix update 'j402-dnf1i' -c @update.json
 ```
 
-## bluemix catalog entry-visibility
-{: #bluemix_catalog_entry_visibility}
-Sichtbarkeit eines Katalogeintrags abrufen (nur Katalogadministrator eines Kontos)
-
+## bluemix catalog entry-delete
+{: #bluemix_catalog_entry_delete}
+Katalogeintrag löschen (nur Katalogadministrator eines Kontos)
 ```
-bluemix catalog entry-visibility [-i ID] [--global]
+bluemix catalog entry-delete ID [--global]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>Die ID des Katalogeintrags.</dd>
+  <dt>--global</dt>
+  <dd>Im globalen Bereich arbeiten</dd>
+</dl>
+
+<strong>Beispiele</strong>:
+
+Ressource `j402-dnf1i` löschen:
+
+```
+bluemix catalog delete 'j402-dnf1i'
+```
+
+
+## bluemix catalog entry-visibility
+{: #bluemix_catalog_entry_visibility}
+Sichtbarkeit eines Katalogeintrags abrufen (nur Katalogadministrator eines Kontos)
+
+```
+bluemix catalog entry-visibility ID [--global]
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+<dl>
   <dt>-json</dt>
   <dd>Ursprüngliche JSON-Antwort ausgeben</dd>
   <dt>-global</dt>
@@ -3267,18 +3299,31 @@ bluemix catalog entry-visibility 'j402-dnf1i' --global
 Sichtbarkeit eines vorhandenen Katalogeintrags aktualisieren (nur Katalogadministrator eines Kontos)
 
 ```
-bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
+bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>-i, --id</dt>
-  <dd>Die ID des momentan aktualisierten Katalogeintrags.</dd>
+
+  <dt>--includes-add</dt>
+  <dd>Ein Konto (oder eine Liste mit durch Kommas getrennten Konten) zur Einschlussliste hinzufügen und für den Eintrag Sichtbarkeit erteilen. E-Mail- oder Konto-GUIDs sind zulässig.</dd>
+  <dt>--includes-remove</dt>
+  <dd>Ein Konto (oder eine Liste mit durch Kommas getrennten Konten) aus der Einschlussliste entfernen und für den Eintrag die Sichtbarkeit widerrufen. E-Mail- oder Konto-GUIDs sind zulässig.</dd>  
+  <dt>--excludes-add</dt>
+  <dd>Ein Konto (oder eine Liste mit durch Kommas getrennten Konten) zur Ausschlussliste hinzufügen. E-Mail- oder Konto-GUIDs sind zulässig.</dd>
+  <dt>--excludes-remove</dt>
+  <dd>Ein Konto (oder eine Liste mit durch Kommas getrennten Konten) aus der Ausschlussliste entfernen und für den Eintrag die Sichtbarkeit widerrufen. Wenn das Konto von globalen Administratoren eingerichtet wurde, dann können die Kontoadministratoren das Konto nicht löschen. E-Mail- oder Konto-GUIDs sind zulässig.</dd>
+  <dt>--owner</dt>
+  <dd>Den Eigner eines Objekts ändern. E-Mail- oder Konto-GUIDs sind zulässig.</dd>
+  <dt>--restrict</dt>
+  <dd>Die Einschränkung des Sichtbarkeitsobjekts in 'Privat' ändern.</dd>
+  <dt>--unrestrict</dt>
+  <dd>Die Einschränkung des Sichtbarkeitsobjekts in 'Öffentlich' ändern.</dd>  
   <dt>-c</dt>
   <dd>Das gültige JSON-Objekt, das die katalogspezifischen Konfigurationsparameter enthält, die entweder zeilenintern (inline) oder in einer Datei angegeben werden. Eine Liste der unterstützten Konfigurationsparameter finden Sie in der Dokumentation für den jeweiligen Katalogeintrag.</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>Im globalen Bereich arbeiten</dd>
 </dl>
 
@@ -3287,7 +3332,7 @@ bluemix catalog entry-visibility-set [-i ID] [-c PARAMETERS_AS_JSON] [--global]
 Sichtbarkeit der Ressource `j402-dnf1i` aus JSON-Datei festlegen:
 
 ```
-bluemix catalog entry-visibility-set -i 'j402-dnf1i' -c @visibility.json
+bluemix catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
 
@@ -3303,11 +3348,11 @@ bluemix catalog service-marketplace [--cf] [--rc] [--global]
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>-cf</dt>
+  <dt>--cf</dt>
   <dd>Nur Cloud Foundry-Services anzeigen</dd>
-  <dt>-rc</dt>
+  <dt>--rc</dt>
   <dd>Nur RC-kompatible Services anzeigen</dd>
-  <dt>-global</dt>
+  <dt>--global</dt>
   <dd>Im globalen Bereich arbeiten</dd>
 </dl>
 
@@ -3383,7 +3428,7 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTIO
    <dt>CF_APP_NAME (erforderlich)</dt>
    <dd>Der Name der cf-Anwendung, die erstellt werden soll.</dd>
    <dt>-u <i>URL</i> (optional)</dt>
-   <dd>Die Route der Anwendung. Wenn sie nicht angegeben ist, wird die Route von Bluemix automatisch auf der Grundlage des Anwendungsnamens und der Standarddomäne festgelegt.</dd>
+   <dd>Die Route der Anwendung. Wenn sie nicht angegeben ist, wird die Route von {{site.data.keyword.Bluemix_notm}} automatisch auf der Grundlage des App-Namens und der Standarddomäne festgelegt.</dd>
    <dt>-d <i>DESCRIPTION</i> (optional)</dt>
    <dd>Die Beschreibung für die Anwendung.</dd>
    <dt>--no-start (optional)</dt>
@@ -3517,13 +3562,13 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (erforderlich)</dt>
    <dd>Der Name des Repositorys, das hinzugefügt werden soll. Sie können einen eigenen Namen für jedes Repository definieren.</dd>
    <dt>REPO_URL (erforderlich)</dt>
-   <dd>Die URL des Repositorys, das hinzugefügt werden soll. Die URL des Repositorys muss das Protokoll (zum Beispiel 'http://plugins.ng.bluemix.net' anstatt 'plugins.ng.bluemix.net') enthalten. 'http://plugins.ng.bluemix.net' ist das offizielle Plug-in-Repository der Bluemix-CLI.</dd>
+   <dd>Die URL des Repositorys, das hinzugefügt werden soll. Die URL des Repositorys muss das Protokoll (zum Beispiel 'http://plugins.ng.bluemix.net' anstatt 'plugins.ng.bluemix.net') enthalten. 'http://plugins.ng.bluemix.net' ist das offizielle Plug-in-Repository der {{site.data.keyword.Bluemix_notm}}-CLI.</dd>
     </dl>
 
 
 <strong>Beispiele</strong>:
 
-Offizielles Plug-in-Repository der Bluemix-Befehlszeilenschnittstelle als `bluemix-repo` hinzufügen:
+Offizielles Plug-in-Repository der {{site.data.keyword.Bluemix_notm}}-CLI als `bluemix-repo` hinzufügen:
 
 ```
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
@@ -3759,4 +3804,3 @@ Plug-in `IBM-Containers` deinstallieren, das zuvor installiert wurde:
 ```
 bluemix plugin uninstall IBM-Containers
 ```
-

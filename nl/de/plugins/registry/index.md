@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-10"
 
 
 ---
@@ -51,15 +51,17 @@ Informationen zur Verwendung der {{site.data.keyword.registrylong_notm}}-CLI fin
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
+ <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
+ <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -83,7 +85,7 @@ bx cr api
 Erstellt ein Docker-Image in {{site.data.keyword.registrylong_notm}}.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -99,6 +101,8 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] --tag v
 <dd>(Optional) Bei Angabe wird die Buildausgabe unterdrückt, es sei denn, es tritt ein Fehler auf.</dd>
 <dt> --build-arg value</dt>
 <dd>(Optional) Geben Sie ein zusätzliches Buildargument im Format 'KEY=VALUE' an. Mehrere Buildargumente können angegeben werden, indem Sie diesen Parameter mehrmals einschließen. Der Wert von Buildargumenten steht in Form von Umgebungsvariablen zur Verfügung, wenn Sie eine ARG-Zeile angeben, die mit dem Schlüssel in Ihrer Dockerfile übereinstimmt.</dd>
+<dt>--file value, -f value</dt>
+<dd>(Optional) Wenn Sie die gleichen Dateien für mehrere Builds verwenden, können Sie einen Pfad zu einer anderen Dockerfile auswählen. Geben Sie die Position der Dockerfile relativ zum Buildkontext an. Wenn keine Angabe gemacht wird, lautet der Standardwert `PATH/Dockerfile`, wobei PATH das Stammverzeichnis des Buildkontextes ist.</dd>
 <dt>--tag value, -t value</dt>
 <dd>Der vollständige Name für das Image, das erstellt werden soll. Dieser Name umfasst die Registry-URL und den Namensbereich.</dd>
 </dl>
@@ -269,12 +273,6 @@ bx cr plan-upgrade [PLAN]
 </dl>
 
 
-## bx cr pricing
-{: #bx_cr_pricing}
-
-Dieser Befehl wurde entfernt. Zur Berechnung der geschätzten Kosten können Sie den Preisrechner verwenden; weitere Informationen hierzu finden Sie in [Kosten für {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_overview.html#registry_plan_billing) schätzen.
-
-
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -302,6 +300,34 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <dd>(Optional) Ändert Ihr Datenverkehrskontingent auf den angegebenen Wert in Megabyte. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Datenverkehr festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
 <dt>--storage VALUE</dt>
 <dd>(Optional) Ändert Ihr Speicherkontingent auf den angegebenen Wert in Megabyte. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Speicherkontingente festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
+</dl>
+
+
+## bx cr region
+{: #bx_cr_region}
+
+Zeigt die Zielregion und die Registry an.
+
+```
+bx cr region
+```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+Legen Sie eine Zielregion für die {{site.data.keyword.registrylong_notm}}-Befehle fest. Um die verfügbaren Regionen aufzulisten, führen Sie den Befehl ohne Parameter aus.
+
+```
+bx cr region-set [REGION]
+```
+{: codeblock}
+
+**Parameter**
+<dl>
+<dt>REGION</dt>
+<dd>(Optional) Der Name Ihrer Zielregion, z. B. `us-south`.</dd>
 </dl>
 
 

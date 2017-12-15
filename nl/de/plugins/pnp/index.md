@@ -11,18 +11,18 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Plug-in für privates Netzpeering für Bluemix CLI
+# Plug-in für privates Netzpeering für {{site.data.keyword.Bluemix_notm}}-CLI
 {: #private_network_cli}
 
-Sie können die Befehlszeilenschnittstelle (CLI) für privates Netzpeering zum Konfigurieren und Verwalten von privatem Netzpeering zwischen zwei {{site.data.keyword.Bluemix}}-Bereichen verwenden. Privates Netzpeering wird für IBM Containers (Docker-Containers) unterstützt. Die Bluemix-Bereiche können sich in unterschiedlichen Verfügbarkeitszonen derselben Region oder in verschiedenen Regionen befinden. Das CLI-Plug-in für privates Netzpeering steht für die Verwendung mit dem Bluemix CLI-Plug-in zur Verfügung.
+Sie können die Befehlszeilenschnittstelle (CLI) für privates Netzpeering zum Konfigurieren und Verwalten von privatem Netzpeering zwischen zwei {{site.data.keyword.Bluemix}}-Bereichen verwenden. Privates Netzpeering wird für IBM Containers (Docker-Containers) unterstützt. Die {{site.data.keyword.Bluemix_notm}}-Bereiche können sich in unterschiedlichen Verfügbarkeitszonen derselben Region oder in verschiedenen Regionen befinden. Das CLI-Plug-in für privates Netzpeering steht für die Verwendung mit dem {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in zur Verfügung.
 
 Das CLI-Plug-in für privates Netzpeering steht für die Betriebssysteme Windows, MAC und Linux zur Verfügung. Stellen Sie sicher, dass Sie das für Sie geeignete Plug-in verwenden.
 
-Bevor Sie beginnen, erstellen Sie Bluemix-Bereiche. Stellen Sie sicher, dass jeder Container eines Bereichs eine IP-Adresse aus einem anderen Netzwerk besitzt. Details hierzu finden Sie unter [Eigene private IP-Adresse verwenden](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip).
+Bevor Sie beginnen, erstellen Sie {{site.data.keyword.Bluemix_notm}}-Bereiche. Stellen Sie sicher, dass jeder Container eines Bereichs eine IP-Adresse aus einem anderen Netzwerk besitzt. Details hierzu finden Sie unter [Eigene private IP-Adresse verwenden ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}. 
 
-**Hinweis:** Wenn Sie das private Netzpeering mit einem Bluemix-Bereich verwendet haben und den Bereich löschen müssen, dann löschen Sie zuerst die Verbindungen für das private Netzpeering in diesem Bereich.
+**Hinweis:** Wenn Sie das private Netzpeering mit einem {{site.data.keyword.Bluemix_notm}}-Bereich verwendet haben und den Bereich löschen müssen, dann löschen Sie zuerst die Verbindungen für das private Netzpeering in diesem Bereich.
 
-Zu Beginn installieren Sie IBM Bluemix CLI. Details hierzu finden Sie unter [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html).
+Zu Beginn installieren Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle. Details hierzu finden Sie unter [Bluemix-CLI](http://clis.ng.bluemix.net/ui/home.html).
 
 ## CLI-Plug-in für privates Netzpeering installieren
 
@@ -32,7 +32,7 @@ Zu Beginn installieren Sie IBM Bluemix CLI. Details hierzu finden Sie unter [Blu
 bluemix plugin uninstall private-network-peering
 ```
 ### Lokal installieren
-Laden Sie das Plug-in für privates Netzpeering für Ihre Plattform aus dem [Plug-in-Repository für die IBM Bluemix CLI](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins) herunter.
+Laden Sie das Plug-in für privates Netzpeering für Ihre Plattform aus dem [{{site.data.keyword.Bluemix_notm}}-CLI-Plug-in-Repository ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} herunter.
 
 Installieren Sie das Plug-in für privates Netzpeering mit dem folgenden Befehl:
 
@@ -62,11 +62,11 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Installation aus dem Bluemix-Repository
+### Aus dem {{site.data.keyword.Bluemix_notm}}-Repository installieren
 
-Befolgen Sie diese Schritte, um das Plug-in aus dem Bluemix-Repository zu installieren:
+Befolgen Sie diese Schritte, um das Plug-in aus dem {{site.data.keyword.Bluemix_notm}}-Repository zu installieren:
 
-1. Fügen Sie den Registry-Endpunkt für das Bluemix-Plug-in hinzu:
+1. Fügen Sie den Registry-Endpunkt für das {{site.data.keyword.Bluemix_notm}}-Plug-in hinzu:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
