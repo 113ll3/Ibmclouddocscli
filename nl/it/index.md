@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-30"
+lastupdated: "2017-11-08"
 
 ---
 
@@ -28,6 +28,8 @@ La CLI {{site.data.keyword.Bluemix}} offre un'esperienza della riga di comando p
 
 
 ## IBM Cloud Application Tools 2 (Beta)
+{: #icat notoc}
+
 IBM Cloud Application Tools 2 è un'applicazione della barra dei menu ottimizzata per la configurazione e la gestione dell'ambiente locale su macOS. Utilizzando IBM Cloud Application Tools 2, puoi facilmente installare e aggiornare strumenti e CLI Bluemix, modificare le destinazioni di distribuzione della CLI e accedere rapidamente ai link comuni di Bluemix.
 
 [Scarica](http://ibm.biz/icat-2-download){: new_window} <br>
@@ -39,7 +41,7 @@ IBM Cloud Application Tools 2 è un'applicazione della barra dei menu ottimizzat
 
 Scarica e installa i plug-in per integrare i tuoi servizi {{site.data.keyword.Bluemix_notm}} preferiti.
 
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
 |----------|----------|----------|----------|----------|
-| [Plug-in Eclipse Liberty ![Icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in Eclipse ![Icona link esterno](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Eclipse Rules Designer](../services/rules/index.html#rulov002) | [Toolkit sviluppatori](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Plug-in Eclipse Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="Tabella 5. Plug-in" caption-side="top"}
+| [Plug-in Eclipse Liberty ![Icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in Eclipse ![Icona link esterno](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Eclipse Rules Designer](../services/rules/index.html#rulov002) | [Toolkit sviluppatori](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Plug-in {{site.data.keyword.Bluemix_notm}} Eclipse](/docs/manageapps/eclipsetools/eclipsetools.html) |
+{: caption="Tabella 6. Plug-in" caption-side="top"}

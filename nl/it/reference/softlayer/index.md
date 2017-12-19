@@ -4,7 +4,7 @@ copyright:
 
   years: 2016,2017
 
-lastupdated: "2017-09-22"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-09-22"
 
 Il plug-in {{site.data.keyword.BluSoftlayer}} è stato inglobato nella CLI {{site.data.keyword.Bluemix_notm}} e non devi più installarlo.
 
-Utilizza i comandi {{site.data.keyword.BluSoftlayer_notm}} nella CLI (command line interface) {{site.data.keyword.Bluemix_notm}} per configurare e gestire i servizi SoftLayer.
+Utilizza i comandi dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} nella CLI (command line interface) {{site.data.keyword.Bluemix_notm}} per configurare e gestire i servizi SoftLayer.
 
 
 Per iniziare, installa la CLI di IBM {{site.data.keyword.Bluemix_notm}}. Per i dettagli, vedi
@@ -25,14 +25,14 @@ Per iniziare, installa la CLI di IBM {{site.data.keyword.Bluemix_notm}}. Per i d
 Per un elenco completo dei comandi {{site.data.keyword.Bluemix_notm}}, vedi: [Comandi {{site.data.keyword.Bluemix_notm:}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
-## Comandi {{site.data.keyword.BluSoftlayer_notm}} generali
+## Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
 Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visualizzare l'elenco di comandi disponibili:
 
 <table summary="Comandi generali riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Comandi Softlayer generali</caption>
+<caption>Tabella 1. Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Comandi Softlayer generali</th>
+ <th colspan="6">Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -42,10 +42,10 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
  </table>
 
 
-## Comandi di archiviazione blocchi {{site.data.keyword.BluSoftlayer_notm}}
+## Comandi di archiviazione blocchi dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 2. Archiviazione blocchi Softlayer</caption>
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 2. Archiviazione blocchi dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Archiviazione blocchi Softlayer</th>
  </thead>
@@ -83,10 +83,10 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
    </tbody>
  </table>
 
- ## Comandi CDN {{site.data.keyword.BluSoftlayer_notm}}
+ ## Comandi CDN dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 3. CDN Softlayer</caption>
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 3. CDN dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">CDN Softlayer</th>
  </thead>
@@ -108,10 +108,10 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
    </tbody>
  </table>
 
-## Comandi di archiviazione di file {{site.data.keyword.BluSoftlayer_notm}}
+## Comandi di archiviazione file dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 4. Archiviazione file Softlayer</caption>
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 4. Archiviazione file dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Archiviazione file Softlayer</th>
  </thead>
@@ -149,10 +149,10 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
    </tbody>
  </table>
 
-## Comandi DNS {{site.data.keyword.BluSoftlayer_notm}}
+## Comandi DNS dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
-<table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 5. Comandi DNS Softlayer</caption>
+<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 5. Comandi DNS dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Comandi DNS Softlayer</th>
  </thead>
@@ -173,8 +173,8 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
    </tbody>
  </table>
 
-<table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 6. Comandi IP globali Softlayer</caption>
+<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 6. Comandi IP globali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Comandi IP globali Softlayer</th>
  </thead>
@@ -189,10 +189,10 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
    </tbody>
  </table>
 
-## Comandi di immagine {{site.data.keyword.BluSoftlayer_notm}}
+## Comandi di immagine dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 7. Comandi immagine Softlayer</caption>
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 7. Comandi di immagine dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Comandi di immagine Softlayer</th>
  </thead>
@@ -205,11 +205,11 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
  </tr>
    </tbody>
  </table>
- 
- ## Comandi VPN IPSec {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 7. Comandi VPN IPSec Softlayer</caption>
+ ## Comandi VPN IPSec dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
+
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 7. Comandi VPN IPSec dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Comandi VPN IPSec Softlayer</th>
  </thead>
@@ -232,10 +232,10 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
    </tbody>
  </table>
 
- ## Comandi Load Balancer {{site.data.keyword.BluSoftlayer_notm}}
+ ## Comandi del programma di bilanciamento del carico dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 8. Comandi del programma di bilanciamento del carico Softlayer</caption>
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 8. Comandi del programma di bilanciamento del carico dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Comandi del programma di bilanciamento del carico Softlayer</th>
  </thead>
@@ -265,10 +265,10 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
 </tbody>
  </table>
 
-## Comandi di sicurezza {{site.data.keyword.BluSoftlayer_notm}}
+## Comandi di sicurezza dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 9. Comandi di sicurezza Softlayer</caption>
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 9. Comandi di sicurezza dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="5">Comandi di sicurezza Softlayer</th>
  </thead>
@@ -290,10 +290,10 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
    </tbody>
  </table>
 
-## Comandi di sottorete {{site.data.keyword.BluSoftlayer_notm}}
- 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 10. Comandi di sottorete Softlayer</caption>
+## Comandi di sottorete dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
+
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 10. Comandi di sottorete dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="5">Comandi di sottorete Softlayer</th>
  </thead>
@@ -307,11 +307,11 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
  </tr>
    </tbody>
  </table>
- 
-## Comandi di server virtuale {{site.data.keyword.BluSoftlayer_notm}}
 
- <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 11. Comandi di server virtuale Softlayer</caption>
+## Comandi di server virtuale dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
+
+ <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 11. Comandi di server virtuale dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Comandi di server virtuale Softlayer</th>
  </thead>
@@ -340,11 +340,11 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
  </tr>
    </tbody>
  </table>
- 
-## Comandi VLAN {{site.data.keyword.BluSoftlayer_notm}}
 
-  <table summary="Comandi generali di Softlayer riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 12. Comandi VLAN Softlayer</caption>
+## Comandi VLAN dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
+
+  <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 12. Comandi VLAN dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
  <th colspan="6">Comandi VLAN Softlayer</th>
  </thead>
@@ -374,7 +374,7 @@ bluemix sl init [OPZIONI]
 <strong>Opzioni comando</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>URL dell'endpoint API Softlayer; il valore predefinito è:  https://api.softlayer.com/rest/v3.1 per l'autenticazione di chiave API Softlayer, https://api.softlayer.com/mobile/v3.1 per l'autenticazione di ID IBM.</dd>
+<dd>URL dell'endpoint API Softlayer; il valore predefinito è: https://api.softlayer.com/rest/v3.1 per l'autenticazione della chiave API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}, https://api.softlayer.com/mobile/v3.1 per l'autenticazione dell'ID IBM.</dd>
 <dt>-u, --sl-user</dt>
 <dd>Nome utente Softlayer.</dd>
 <dt>-p, --sl-password</dt>
@@ -393,12 +393,12 @@ bluemix sl init [OPZIONI]
 <dd>Token di autenticazione quando è abilitata l'autenticazione tramite telefono.</dd>
 </dl>
 
-Ad esempio, accedi con nome utente e password o chiave API Softlayer
+Ad esempio, accedi con nome utente e password o chiave API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 ```
 $ bluemix sl config
-Scegli come configurare l'autenticazione Softlayer:
-1. Accedi con nome utente e password/chiave API Softlayer
-2. Utilizza SSO (Single-Sign-On) Bluemix
+Scegli come configurare l'autenticazione dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}:
+1. Accedi con nome utente e password/chiave API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
+2. Utilizza SSO (Single-Sign-On) {{site.data.keyword.Bluemix_notm}}
 Immetti un numero>1
 URL endpoint API Softlayer: [https://api.softlayer.com/rest/v3.1]>
 Nome utente: []> wangjunl@cn.ibm.com
@@ -409,7 +409,7 @@ ID account:                278444
 ID utente:                   wangjunl@cn.ibm.com
 Chiave API:                   xxxxxxxxxx
 ```
-Ad esempio, utilizza SSO (Single-Sign-On) Bluemix per accedere a Softlayer
+Ad esempio, utilizza SSO (Single-Sign-On) {{site.data.keyword.Bluemix_notm}} per accedere a Softlayer
 ```
 $ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 Endpoint API: api.ng.bluemix.net
@@ -417,22 +417,22 @@ Autenticazione in corso...
 OK
 
 Account di destinazione account di Wilma (65ce8074c6c62b5)
-                  
+
 Endpoint API:   https://api.ng.bluemix.net (API version: 2.54.0)   
 Regione:         us-south
 Utente:           wangjunl@cn.ibm.com
 Account:        Account di Wilma (65ce8074c6c62b5)   
 Nessuna organizzazione o nessuno spazio di destinazione; usa 'bx target --cf oppure bx target -o ORGANIZZAZIONE -s SPAZIO'
 
-Suggerimento: usa 'bx cf <command>' per eseguire la CLI Cloud Foundry con il contesto di CLI Bluemix.
+Suggerimento: usa 'bx cf <command>' per eseguire la CLI Cloud Foundry con il contesto della CLI {{site.data.keyword.Bluemix_notm}}.
 ```
 
 $ bx sl init
-Scegli come configurare l'autenticazione Softlayer: 
-1. Esegui l'accesso con il nome utente e la password/chiave API Softlayer
-2. Utilizza SSO (Single-Sign-On) Bluemix
+Scegli come configurare l'autenticazione dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}:
+1. Accedi con nome utente e password/chiave API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
+2. Utilizza SSO (Single-Sign-On) {{site.data.keyword.Bluemix_notm}}
 Immetti un numero> 2
-URL endpoint API Softlayer: [https://api.softlayer.com/mobile/v3.1]> 
+URL endpoint API Softlayer: [https://api.softlayer.com/mobile/v3.1]>
 Impostazione dell'account su: 278444
 OK
                               
@@ -445,7 +445,7 @@ Token IMS:                 xxxxxxxxxx
 ### bluemix sl help
 {: #sl_help}
 
-Visualizza le informazioni della guida per tutti i comandi per gestire l'ambiente Softlayer.
+Visualizza le informazioni della guida per tutti i comandi per operare con l'ambiente dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}.
 ```
 bluemix sl help
 

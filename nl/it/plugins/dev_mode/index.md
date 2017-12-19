@@ -19,9 +19,10 @@ lastupdated: "2017-01-12"
 # (Obsoleto) CLI modalità di sviluppo
 {: #devmodecli}
 
-**Questa CLI è obsoleta:** invece di utilizzare la CLI modalità di sviluppo (dev_mode), utilizza IBM Eclipse Tools for Bluemix o DevOps Web IDE. Puoi continuare a utilizzare la CLI dev_mode fino al 30 giugno 2016.
 
-Con l'interfaccia riga di comando in modalità di sviluppo di Bluemix (CLI dev_mode), puoi aggiornare le tue applicazioni mentre sono in esecuzione nel cloud. La CLI dev_mode è stata messa a punto come un plug-in CLI cf e supporta sia applicazioni Node.js IBM sia Liberty.
+**Questa CLI è obsoleta:** invece di utilizzare la CLI in modalità di sviluppo (dev_mode), utilizza IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}  o DevOps Web IDE. Puoi continuare a utilizzare la CLI dev_mode fino al 30 giugno 2016.
+
+Con l'interfaccia della riga di comando in modalità di sviluppo di {{site.data.keyword.Bluemix_notm}} (dev_mode CLI), puoi aggiornare le tue applicazioni mentre sono in esecuzione nel cloud. La CLI dev_mode è stata messa a punto come un plug-in CLI cf e supporta sia applicazioni Node.js IBM sia Liberty.
 {: shortdesc}
 
 
@@ -36,14 +37,14 @@ Puoi eseguire le seguenti attività con la CLI dev_mode:
 
 Utilizza uno dei seguenti metodi per installare lo strumento riga di comando dev_mode:
 - Installa in locale.
-  1. Scarica il plug-in dev_mode per la tua piattaforma da [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net).
+  1. Scarica il plug-in dev_mode per la tua piattaforma dal [Repository di plug-in CLI {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
   2. Passa alla cartella di salvataggio del plug-in dev_mode e installalo utilizzando il comando cf install-plugin. Ad esempio:
 
         ```
         cf install-plugin dev_mode-linux64
         ```
 
-- Installa dal repository CLI Bluemix.
+- Installa dal repository CLI {{site.data.keyword.Bluemix_notm}}.
   1. Aggiungi il repository bluemix-repo nel repository CLI Cloud Foundry utilizzando il seguente comando:
 
         ```
@@ -62,7 +63,7 @@ Utilizza uno dei seguenti metodi per installare lo strumento riga di comando dev
         cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## Visualizzazione dei comandi dev_mode
+## Visualizzazione di {{site.data.keyword.Bluemix_notm}} dev_mo  
 
 Per visualizzare tutti i comandi della CLI dev_mode, utilizza il seguente comando:
 

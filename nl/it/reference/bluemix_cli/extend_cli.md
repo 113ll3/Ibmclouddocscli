@@ -3,43 +3,51 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-08-20"
+lastupdated: "2017-10-20"
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Ampliamento della CLI {{site.data.keyword.Bluemix_notm}} con i plug-in
 {: #plug-ins}
 
 La CLI {{site.data.keyword.Bluemix_notm}} supporta un framework di plug-in per ampliarne la funzionalità. Puoi installare un plug-in da un repository, un URL web o installare un file binario del plug-in localmente. 
 
-[Il repository di plug-in della CLI {{site.data.keyword.Bluemix_notm}} ](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg)è il repository ufficiale per ospitare i plug-in.
+Il [repository di plug-in della CLI {{site.data.keyword.Bluemix_notm}} ](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg) è il repository ufficiale in cui sono ospitati i plug-in.
 
-## Installa un plug-in dal repository
+Per ulteriori comandi per gestire i plug-in, esegui `bluemix plugin` per visualizzare i messaggi della guida.
+{: tip}
 
-* Cerca il plug-in
+## Installa un plug-in dal repository CLI {site.data.keyword.Bluemix_notm}} 
 
-  Utilizza il comando 'bluemix plugin repo-plugins -r NOME_REPOSITORY' per cercare i plug-in nel repository.
+### Passo 1: cerca il plug-in
+
+1. Utilizza il comando `bluemix plugin repo-plugins -r REPO_NAME` per cercare un plug-in nel repository.
+2. La CLI {{site.data.keyword.Bluemix_notm}} utilizza il nome `Bluemix` per impostazione predefinita. Puoi elencare i plug-in nel repository `Bluemix` ufficiale. Ad
+esempio:
   
-  La CLI {{site.data.keyword.Bluemix_notm}} ha il repository ufficiale con il nome `Bluemix` configurato per impostazione predefinita. Puoi elencare i plug-in nel repository `Bluemix` ufficiale come di seguito.
-
   ```
   $ bluemix plugin repo-plugins -r Bluemix
   Acquisizione dei plugin dal repository 'Bluemix' in corso...
 
   Repository: Bluemix
-  Nome           Descrizione                                        Versioni
-  auto-scaling   Plug-in CLI Bluemix per il servizio Auto-Scaling   0.2.1, 0.2.2
-  nsg            Plug-in Bluemix Network Security Group             0.1.1
+  Nome           Descrizione                                           Versioni
+  auto-scaling   Plug-in CLI IBM Cloud per il servizio Auto-Scaling    0.2.1, 0.2.2
+  nsg            Plug-in IBM Cloud Network Security Group              0.1.1
 
   ```
 
-* Installa il plug-in
+### Passo 2: installa il plug-in
 
-  Utilizza 'bx plugin install NOME_PLUGIN -r NOME_REPOSITORY' per installare il plug-in; ad esempio:
+Utilizza il comando `bx plugin install PLUGIN_NAME -r REPO_NAME` per installare il plug-in. Ad
+esempio:
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix
@@ -52,7 +60,8 @@ La CLI {{site.data.keyword.Bluemix_notm}} supporta un framework di plug-in per a
 
 ## Installa un plug-in localmente
 
-  Utilizza il comando `bluemix plugin install NOME_FILE_LOCALE` per installare un file binario del plug-in nella macchina locale; ad esempio:
+Utilizza il comando `bluemix plugin install LOCAL_FILE_NAME` per installare un file binario del plug-in sulla macchina locale. Ad
+esempio:
 
   ```
   $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2
@@ -62,9 +71,9 @@ La CLI {{site.data.keyword.Bluemix_notm}} supporta un framework di plug-in per a
   $
   ```
 
-## Installa da un URL web
+## Installa un plug-in da un URL web
 
-  Utilizza il comando `bluemix plugin install URL` per installare un plug-in direttamente da un URL web; ad esempio
+Utilizza il comando `bluemix plugin install URL` per installare un plug-in direttamente da un URL web. Ad esempio
 
   ```
   ~$ bluemix plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
@@ -75,6 +84,3 @@ La CLI {{site.data.keyword.Bluemix_notm}} supporta un framework di plug-in per a
   Il plug-in 'auto-scaling 0.2.2' è stato installato correttamente.
   ~$
   ```
-
-
-Per ulteriori comandi per gestire i plug-in, esegui `bluemix plugin` per visualizzare i messaggi della guida.

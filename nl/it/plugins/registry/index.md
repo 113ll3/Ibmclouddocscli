@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-10"
 
 
 ---
@@ -52,15 +52,17 @@ Per scoprire come utilizzare la CLI {{site.data.keyword.registrylong_notm}}, ved
  <tr>
  <td>[bx cr plan](#bx_cr_plan)</td>
  <td>[bx cr plan-upgrade](#bx_cr_plan_upgrade)</td>
- <td>[bx cr pricing](#bx_cr_pricing)</td>
  <td>[bx cr quota](#bx_cr_quota)</td>
  <td>[bx cr quota-set](#bx_cr_quota_set)</td>
+ <td>[bx cr region](#bx_cr_region)</td>
  </tr>
  <tr>
+ <td>[bx cr region-set](#bx_cr_region_set)</td>
  <td>[bx cr token-add](#bx_cr_token_add)</td>
  <td>[bx cr token-get](#bx_cr_token_get)</td>
  <td>[bx cr token-list (bx cr tokens)](#bx_cr_token_list)</td>
  <td>[bx cr token-rm](#bx_cr_token_rm)</td>
+ </tr><tr>
  <td>[bx cr vulnerability-assessment (bx cr va)](#bx_cr_va)</td>
  </tr>
  </tbody></table>
@@ -84,7 +86,7 @@ bx cr api
 Crea un'immagine Docker in {{site.data.keyword.registrylong_notm}}.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg valore ...] --tag valore DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
 ```
 {: codeblock}
 
@@ -100,6 +102,8 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg valore ...] --tag 
 <dd>(Facoltativo) Se specificato, l'output di build viene eliminato a meno che non si verifichi un errore.</dd>
 <dt> --build-arg valore</dt>
 <dd>(Facoltativo) Specificare un argomento di build aggiuntivo nel formato 'CHIAVE=VALORE'. È possibile specificare più argomenti di build includendo questo parametro più volte. I valori degli argomenti di build sono disponibili come variabili di ambiente quando specifichi una riga ARG che corrisponde alla chiave nel tuo Dockerfile.</dd>
+<dt>--file value, -f value</dt>
+<dd>(Facoltativo)  Se utilizzi gli stessi file per più build, puoi scegliere un percorso di un Dockerfile diverso. Specifica la posizione del Dockerfile in relazione al contesto di build. Se non specificato, il valore predefinito è `PATH/Dockerfile`, dove PATH è la root del contesto di build.</dd>
 <dt>--tag valore, -t valore</dt>
 <dd>Il nome completo dell'immagine di cui vuoi eseguire la build, che include l'URL del registro e lo spazio dei nomi.</dd>
 </dl>
@@ -135,7 +139,7 @@ bx cr image-inspect [--format FORMATO] IMMAGINE [IMMAGINE...]
 Per ulteriori informazioni, vedi [Visualizzazione di informazioni sulle immagini](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
-<dt>IMMAGINE</dt>
+<dt>IMAGE</dt>
 <dd>Il percorso di registro completo dell'immagine che desideri analizzare, in formato `namespace/image:tag`. Se nel percorso dell'immagine non è specificata alcuna tag, viene analizzata l'immagine contrassegnata con `latest`. Puoi analizzare più immagini elencando ogni percorso del registro privato nel comando con uno spazio tra ciascun percorso.</dd>
 </dl>
 
@@ -270,12 +274,6 @@ bx cr plan-upgrade [PIANO]
 </dl>
 
 
-## bx cr pricing
-{: #bx_cr_pricing}
-
-Questo comando è stato rimosso. Puoi utilizzare il calcolatore dei prezzi per calcolare il tuo costo stimato, consulta [Stima dei costi per {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_overview.html#registry_plan_billing).
-
-
 ## bx cr quota
 {: #bx_cr_quota}
 
@@ -303,6 +301,34 @@ bx cr quota-set [--traffic VALORE] [--storage VALORE]
 <dd>(Facoltativo) Modifica la tua quota di traffico al valore specificato, in megabyte. L'operazione non riesce se non sei autorizzato a impostare il traffico o se imposti un valore che supera il tuo piano dei prezzi corrente.</dd>
 <dt>--storage VALORE</dt>
 <dd>(Facoltativo) Modifica la tua quota di archiviazione al valore specificato, in megabyte. L'operazione non riesce se non sei autorizzato a impostare le quote di archiviazione o se imposti un valore che supera il tuo piano dei prezzi corrente.</dd>
+</dl>
+
+
+## bx cr region
+{: #bx_cr_region}
+
+Visualizza la regione di destinazione e il registro.
+
+```
+bx cr region
+```
+{: codeblock}
+
+
+## bx cr region-set
+{: #bx_cr_region_set}
+
+Imposta una regione di destinazione per i comandi {{site.data.keyword.registrylong_notm}}. Per elencare le regioni disponibili, esegui il comando senza parametri.
+
+```
+bx cr region-set [REGIONE]
+```
+{: codeblock}
+
+**Parametri**
+<dl>
+<dt>REGIONE</dt>
+<dd>(Facoltativo) Il nome della tua regione di destinazione, ad esempio, `us-south`.</dd>
 </dl>
 
 

@@ -11,18 +11,18 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Plug-in peering della rete privata per la CLI Bluemix
+# Plug-in peering della rete privata per la CLI {{site.data.keyword.Bluemix_notm}}
 {: #private_network_cli}
 
-Utilizza la CLI (command line interface) per configurare e gestire il peering della rete privata tra gli spazi {{site.data.keyword.Bluemix}}. Il peering della rete privata è supportato per IBM Containers (contenitori docker). Gli spazi Bluemix possono trovarsi in varie zone di disponibilità all'interno della stessa regione oppure in regioni differenti. Il plug-in della CLI peering della rete privata è disponibile per l'utilizzo con il plug-in della CLI Bluemix.
+Utilizza la CLI (command line interface) per configurare e gestire il peering della rete privata tra gli spazi {{site.data.keyword.Bluemix}}. Il peering della rete privata è supportato per IBM Containers (contenitori docker). Gli spazi {{site.data.keyword.Bluemix_notm}} possono trovarsi in varie zone di disponibilità all'interno della stessa regione oppure in regioni differenti. Il plug-in della CLI peering della rete privata è disponibile per l'utilizzo con il plug-in della CLI {{site.data.keyword.Bluemix_notm}}.
 
 Il plug-in della CLI peering della rete privata è disponibile per i sistemi operativi Windows, MAC e Linux. Assicurati di utilizzare il plug-in adatto a te.
 
-Prima di iniziare, crea gli spazi Bluemix. Assicurati che ogni contenitore all'interno di uno spazio abbia un indirizzo IP da una rete diversa. Per i dettagli, vedi [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
+Prima di iniziare, crea gli spazi {{site.data.keyword.Bluemix_notm}}. Assicurati che ogni contenitore all'interno di uno spazio abbia un indirizzo IP da una rete diversa. Per i dettagli, vedi [Utilizzo del tuo indirizzo IP privato ![Icona link esterno](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
 
-**Nota:** dopo aver utilizzato il peering della rete privata con uno spazio Bluemix, se devi eliminare lo spazio, elimina prima le connessioni peering della rete privata in tale spazio.
+**Note:** dopo aver utilizzato il peering della rete privata con uno spazio {{site.data.keyword.Bluemix_notm}}, se devi eliminare lo spazio, elimina prima le connessioni peering della rete privata in tale spazio.
 
-Per iniziare, installa la CLI di IBM Bluemix. Per i dettagli, vedi
+Per iniziare, installa la CLI {{site.data.keyword.Bluemix_notm}}. Per i dettagli, vedi
 [CLI Bluemix](http://clis.ng.bluemix.net/ui/home.html).
 
 ## Installa il plug-in della CLI peering della rete privata
@@ -33,7 +33,7 @@ Per iniziare, installa la CLI di IBM Bluemix. Per i dettagli, vedi
 bluemix plugin uninstall private-network-peering
 ```
 ### Installa in locale
-Scarica il plug-in peering della rete privata per la tua piattaforma dal [Repository di plug-in CLI IBM Bluemix](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins).
+Scarica il plug-in peering della rete privata per la tua piattaforma dal [repository di plug-in CLI {{site.data.keyword.Bluemix_notm}}![Icona link esterno](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
 
 Installa il plug-in peering della rete privata utilizzando il seguente comando:
 
@@ -63,11 +63,11 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Installa dal repository Bluemix
+### Installa dal repository {{site.data.keyword.Bluemix_notm}}
 
-Completa questa procedura per installare il plug-in dal repository Bluemix:
+Completa questa procedura per installare il plug-in dal repository {{site.data.keyword.Bluemix_notm}}:
 
-1. Aggiungi l'endpoint del registro di plug-in Bluemix:
+1. Aggiungi l'endpoint del registro di plug-in {{site.data.keyword.Bluemix_notm}}:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
