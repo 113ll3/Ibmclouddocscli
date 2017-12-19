@@ -20,7 +20,7 @@ CLI and Dev Tools
 	IBM Cloud CLI plug-ins
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Container Service (Clusters)](../containers/cs_cli_devtools.html)
+		[Container Service](../containers/cs_cli_devtools.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
