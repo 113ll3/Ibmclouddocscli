@@ -21,7 +21,6 @@ CLI and Dev Tools
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service (Clusters)](../containers/cs_cli_devtools.html)
-		[Container Service (Single and scalable groups)](../containers/container_cli_cfic.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
