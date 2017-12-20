@@ -22,6 +22,7 @@ CLI and Dev Tools
 		plugins/registry/index.md
 		[Container Service](../containers/cs_cli_devtools.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
+		[Docker EE for IBM Cloud](../services/docker-for-ibm-cloud/cli-ref.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
 		[Schematics](../services/schematics/schematics_reference.html)
