@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-11-06"
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-11-06"
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-Version: 0.6.2
+Version: 0.6.4
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}.
 
@@ -712,7 +712,7 @@ View the current account, region, org and space:
 bluemix target
 ```
 
-### bluemix update
+## bluemix update
 {: #bluemix_update}
 
 Update the CLI to the latest version.
@@ -722,6 +722,12 @@ bluemix update
 ```
 
 <strong>Prerequisites</strong>:  None
+
+<strong>Command options</strong>:
+<dl>
+  <dt>-f</dt>
+  <dd>Force update without confirmation</dd>
+<dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
@@ -2851,7 +2857,7 @@ bluemix resource bindings my-service-alias my-app
 Create a service binding
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -2866,6 +2872,8 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>Name of the user role</dd>
   <dt>--service-id-name</dt>
   <dd>Name of the service ID which the role belongs to</dd>
+  <dt>-p, --parameter</dt>
+  <dd>Parameters JSON file or JSON string</dd>
   <dt>-f, --force</dt>
   <dd>Force creation without confirmation</dd>
 </dl>
