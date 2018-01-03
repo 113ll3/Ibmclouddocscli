@@ -2073,7 +2073,7 @@ List all resource groups under currently targeted account:
 bluemix resource groups
 ```
 
-List default group of currentluy targeted account:
+List default group of currently targeted account:
 
 ```
 bluemix resource groups --default
