@@ -685,7 +685,7 @@ one organization by entering additional organization names or GUIDs in the comma
 {: #admin_add_report}
 
 ### Adding reports
-{: #admin_add_report}
+{: #admin_adding_report}
 
 To add a security report, use the following command:
 
