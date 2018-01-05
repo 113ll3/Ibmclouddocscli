@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-12-21"
 
 ---
@@ -2395,34 +2395,6 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>Force deletion without confirmation.</dd>
    </dl>
 
-## bluemix app domains
-{: #bluemix_app_domains}
-
-This command has the same function and options as the `cf domains` command.
-
-
-## bluemix app domain-create
-{: #bluemix_app_domain_create}
-
-This command has the same function and options as the `cf create-domain` command.
-
-
-## bluemix app domain-delete
-{: #bluemix_app_domain_delete}
-
-This command has the same function and options as the `cf delete-domain` command.
-
-
-## bluemix app shared-domain-create
-{: #bluemix_app_shared_domain_create}
-
-This command has the same function and options as the `cf create-shared-domain` command.
-
-
-## bluemix app shared-domain-delete
-{: #bluemix_app_shared_domain_delete}
-
-This command has the same function and options as the `cf delete-shared-domain` command.
 
 ## bluemix app routes
 {: #bluemix_app_routes}
