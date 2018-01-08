@@ -2,7 +2,7 @@
 
 copyright:
 
-  years: 2017
+  years: 2017, 2018
 
 lastupdated: "2017-06-29"
 
@@ -62,7 +62,7 @@ Next, enter or select the command you want to invoke. You can type ‘bx’ with
 {: #usage-docker}
 
 You can get started with bx dev workflows in just a few steps:
-* Create a project using one of the two methods below:
+* Create a project using one of the following two methods:
   * Use the [{{site.data.keyword.Bluemix_notm}} web console](https://console.ng.bluemix.net/developer/getting-started/) and download the generated code
   * Use the [{{site.data.keyword.Bluemix_notm}} Developer CLI](/docs/cloudnative/dev_cli.html) and generate a project using the `bx dev create` command
 * Open the project’s folder locally in the Visual Studio Code editor
