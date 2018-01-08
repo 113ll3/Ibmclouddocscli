@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-12-07"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -803,7 +803,7 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 </dl>
 
 
-You can view the above list of command parameters and examples using the following command:
+You can view the previous list of command parameters and examples using the following command:
 
 ```
 cf ba resource-metrics-history -help
