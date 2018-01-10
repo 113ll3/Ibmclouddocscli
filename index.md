@@ -16,7 +16,7 @@ lastupdated: "2017-11-08"
 
 # Downloads 
 
-## Bluemix CLI
+## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
 
 {{site.data.keyword.Bluemix}} CLI provides a command line experience to manage the resources in your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command-line interface, cf, in its installation, for managing Cloud Foundry applications and services.
