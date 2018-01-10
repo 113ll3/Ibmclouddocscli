@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2016-03-15"
+lastupdated: "2017-12-11"
 
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2016-03-15"
 {: #vcap_services}
 
 
-VCAP_SERVICES 환경 변수는 {{site.data.keyword.Bluemix_notm}}의 서비스 인스턴스와 상호작용하는 데 사용할 수 있는 정보가 포함된 JSON 오브젝트입니다.
+VCAP_SERVICES(VMware 클라우드 애플리케이션 플랫폼) 환경 변수는 {{site.data.keyword.Bluemix_notm}}의 서비스 인스턴스와 상호작용하는 데 사용할 수 있는 정보가 포함된 JSON 오브젝트입니다.
 {:shortdesc}
 
 

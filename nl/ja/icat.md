@@ -16,7 +16,7 @@ lastupdated: "2017-06-19"
 # IBM Cloud Application Tools 2 (ベータ)
 {: #icat}
 
-IBM Cloud Application Tools 2 は、macOS でのローカル環境のセットアップと管理を目的として合理化されたメニュー・バー・アプリケーションです。IBM Cloud Application Tools 2 を使用することにより、{{site.data.keyword.Bluemix_notm}} のツールおよび CLI を容易にインストールおよび更新し、CLI のデプロイメント・ターゲットを変更し、共通の {{site.data.keyword.Bluemix_notm}} リンクに素早くアクセスすることができます。
+IBM Cloud Application Tools 2 は、macOS でのローカル環境のセットアップと管理を目的として合理化されたメニュー・バー・アプリケーションです。 IBM Cloud Application Tools 2 を使用することにより、{{site.data.keyword.Bluemix_notm}} のツールおよび CLI を容易にインストールおよび更新し、CLI のデプロイメント・ターゲットを変更し、共通の {{site.data.keyword.Bluemix_notm}} リンクに素早くアクセスすることができます。
 {:shortdesc}
 
 このツールを稼働させるには、[IBM Cloud Application Tools 2 Beta for macOS ![外部リンク・アイコン](../icons/launch-glyph.svg) をダウンロード](http://ibm.biz/icat-2-download){: new_window}します。 
@@ -40,7 +40,7 @@ IBM Cloud Application Tools 2 は、macOS でのローカル環境のセット�
 
 ### プロファイル
 
-**「プロファイル」**タブから、ユーザー・アカウント設定およびデプロイメント・ターゲットを管理することができます。例えば、異なる地域、組織、またはスペースを指定することにより、インストールされているすべての CLI およびプラグインの `bx target` を変更できます。さらに、このタブからフィードバックを提供するためのオプションもあります。 
+**「プロファイル」**タブから、ユーザー・アカウント設定およびデプロイメント・ターゲットを管理することができます。 例えば、異なる地域、組織、またはスペースを指定することにより、インストールされているすべての CLI およびプラグインの `bx target` を変更できます。 さらに、このタブからフィードバックを提供するためのオプションもあります。 
 
 ![**プロファイル**・タブの画面キャプチャー。](icat_profile.png "ユーザー・プロファイル設定用のプロファイル・タブ") <br> 図 3. ユーザー・アカウント設定および CLI のデプロイメント・ターゲットを管理するための**「プロファイル」**タブ
 

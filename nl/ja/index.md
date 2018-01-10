@@ -19,7 +19,7 @@ lastupdated: "2017-11-08"
 ## Bluemix CLI
 {: #cli}
 
-{{site.data.keyword.Bluemix}} CLI は、{{site.data.keyword.Bluemix_notm}} 環境内のリソースを管理するためのコマンド・ライン・エクスペリエンスを提供します。また、Cloud Foundry アプリケーションとサービスを管理するための Cloud Foundry コマンド・ライン・インターフェースである cf が、そのインストール済み環境に組み込まれています。
+{{site.data.keyword.Bluemix}} CLI は、{{site.data.keyword.Bluemix_notm}} 環境内のリソースを管理するためのコマンド・ライン・エクスペリエンスを提供します。 また、Cloud Foundry アプリケーションとサービスを管理するための Cloud Foundry コマンド・ライン・インターフェースである cf が、そのインストール済み環境に組み込まれています。
 {:shortdesc}
 
 [ダウンロード](/docs/cli/reference/bluemix_cli/all_versions.html){: new_window} <br>
@@ -30,7 +30,7 @@ lastupdated: "2017-11-08"
 ## IBM Cloud Application Tools 2 (ベータ)
 {: #icat notoc}
 
-IBM Cloud Application Tools 2 は、macOS でのローカル環境のセットアップと管理を目的として合理化されたメニュー・バー・アプリケーションです。IBM Cloud Application Tools 2 を使用することにより、Bluemix のツールと CLI のインストールや更新を容易に行ったり、CLI のデプロイメント・ターゲットを変更したり、共通の Bluemix リンクに素早くアクセスしたりすることができます。
+IBM Cloud Application Tools 2 は、macOS でのローカル環境のセットアップと管理を目的として合理化されたメニュー・バー・アプリケーションです。 IBM Cloud Application Tools 2 を使用することにより、Bluemix のツールと CLI のインストールや更新を容易に行ったり、CLI のデプロイメント・ターゲットを変更したり、共通の Bluemix リンクに素早くアクセスしたりすることができます。
 
 [ダウンロード](http://ibm.biz/icat-2-download){: new_window} <br>
 [資料の表示](/docs/cli/icat.html){: new_window} <br>
@@ -43,5 +43,5 @@ IBM Cloud Application Tools 2 は、macOS でのローカル環境のセット�
 
 | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
 |----------|----------|----------|----------|----------|
-| [Liberty Eclipse プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse プラグイン](../services/rules/index.html#rulov002) | [デベロッパーズ・ツールキット](/docs/services/apiconnect/apic_003.html#apic_001 ) | [{{site.data.keyword.Bluemix_notm}} Eclipse プラグイン](/docs/manageapps/eclipsetools/eclipsetools.html) |
+| [Liberty Eclipse プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse プラグイン](/docs/services/rules/index-gentopic1.html#genTopProcId2) | [デベロッパーズ・ツールキット![外部リンク・アイコン](../icons/launch-glyph.svg)](/docs/services/apiconnect/creating_apis.html){: new_window} | [{{site.data.keyword.Bluemix_notm}} Eclipse プラグイン](/docs/manageapps/eclipsetools/eclipsetools.html) |
 {: caption="表 6. プラグイン" caption-side="top"}

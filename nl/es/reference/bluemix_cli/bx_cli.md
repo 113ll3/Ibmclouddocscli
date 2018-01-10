@@ -212,6 +212,9 @@ Los mandatos para gestionar la infraestructura de {{site.data.keyword.BluSoftlay
    <td>[bluemix iam user-policy-create](bx_cli.html#bluemix_iam_user_policy_create)</td>
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
+   <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
+   <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
+
   </tr>
   </tbody>
   </table>
@@ -551,7 +554,7 @@ bluemix -q cf services
 Inicio de sesión de usuario.
 
 ```
-bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
 ```
 
 <strong>Requisitos previos</strong>:  Ninguno
@@ -576,6 +579,8 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dd> Nombre de la organización de destino </dd>
   <dt> -s <i>SPACE_NAME</i> (opcional) </dt>
   <dd> Nombre del espacio de destino</dd>
+  <dt> --no-iam </dt>
+  <dd> Forzar la autenticación con el servidor de inicio de sesión en lugar del IAM público</dd>
   <dt> --skip-ssl-validation (opcional) </dt>
   <dd> Omite la validación SSL de solicitudes HTTP. No se recomienda esta opción.</dd>
 </dl>
@@ -1676,6 +1681,7 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dt>-f, --file <i>FILE</i> (opcional)</dt>
 <dd>Archivo JSON de definición de política</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (opcional)</dt>
+<dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'bluemix iam roles --service SERVICE_NAME'. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (opcional)</dt>
 <dd>Nombre de servicio de la definición de política. Es exclusivo con el distintivo '-f, --file'.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (opcional)</dt>
@@ -1690,7 +1696,6 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dd>Nombre del grupo de recursos. Es exclusivo con los distintivos '-f, --file', '--resource' y '--resource-group-id'.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (opcional)</dt>
 <dd>ID del grupo de recursos. Es exclusivo con los distintivos '-f, --file', '--resource' y '--resource-group-name'.</dd>
-  <dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'bluemix iam roles --service SERVICE_NAME'. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -1716,7 +1721,7 @@ bluemix iam user-policy-create name@example.com --roles Editor --service-name sa
 Proporcione a `name@example.com` el rol de `Operador` para el grupo de recursos con el ID `dda27e49d2a1efca58083a01dfde18f6`:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 Proporcione a `name@example.com` el rol de `Visor` para los miembros del grupo de recursos `sample-resource-group`:
@@ -1754,6 +1759,7 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dt>-f, --file <i>FILE</i> (opcional)</dt>
 <dd>Archivo JSON de definición de política</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (opcional)</dt>
+<dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'bluemix iam roles --service SERVICE_NAME'. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (opcional)</dt>
 <dd>Nombre de servicio de la definición de política. Es exclusivo con el distintivo '-f, --file'.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (opcional)</dt>
@@ -1768,7 +1774,6 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>Nombre del grupo de recursos. Es exclusivo con los distintivos '-f, --file', '--resource' y '--resource-group-id'.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (opcional)</dt>
 <dd>ID del grupo de recursos. Es exclusivo con los distintivos '-f, --file', '--resource' y '--resource-group-name'.</dd>
-  <dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'bluemix iam roles --service SERVICE_NAME'. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -1788,13 +1793,13 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Administr
  Actualizar la política de usuario para dar a `name@example.com` el rol de `Editor` para el recurso `key123` de la instancia de servicio de ejemplo `ServiceId-ade78e9f` en la región `us-south`:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+bluemix iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
 ```
 
 Actualizar la política de usuario para dar a `name@example.com` el rol de `Operador` para el grupo de recursos con el ID `dda27e49d2a1efca58083a01dfde18f6`:
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 Actualizar la política de usuario para dar a `name@example.com` el rol de `Visor` para los miembros del grupo de recursos `sample-resource-group`:
@@ -1879,7 +1884,7 @@ bluemix iam service-policies test 140798e2-8ea7db3
 Crear una política de servicio
 
 ```
-bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
@@ -1889,19 +1894,23 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>SERVICE_ID_NAME (necesario)</dt>
   <dd>Nombre del ID de servicio</dd>
   <dt>-f, --file</dt>
-  <dd>Archivo JSON de definición de política. Con los distintivos '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type' y '--resource' son excluyentes.</dd>
+  <dd>Archivo JSON de definición de política. Esta opción y los distintivos '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' y '--resource-group-id' son excluyentes.</dd>
   <dt>-r, --roles</dt>
   <dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'bluemix iam roles --service SERVICE_NAME'. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
-  <dt>-service-name</dt>
+  <dt>--service-name</dt>
   <dd>Nombre de servicio de la definición de política. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
-  <dt>-service-instance</dt>
+  <dt>--service-instance</dt>
   <dd>Instancia de servicio de la definición de política. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
   <dt>-region</dt>
   <dd>Región de la definición de política. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
-  <dt>-resource-type</dt>
+  <dt>--resource-type</dt>
   <dd>Tipo de recurso de la definición de política. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
-  <dt>-resource</dt>
+  <dt>--resource</dt>
   <dd>Recurso de la definición de política. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
+  <dt>--resource-group-name</dt>
+  <dd>Nombre del grupo de recursos. Esta opción y '-f, --file' y '--resource-group-id' son mutuamente excluyentes.</dd>
+  <dt>--resource-group-id </dt>
+  <dd>ID del grupo de recursos. Esta opción y '-f, --file' y '--resource-group-name' son mutuamente excluyentes.</dd>
   <dt>-F, --force</dt>
   <dd>Crear la política de servicios sin confirmación</dd>
 </dl>
@@ -1921,7 +1930,7 @@ bluemix iam service-policy-create test -f @policy.json
 Actualizar una política de servicio
 
 ```
-bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
@@ -1935,7 +1944,7 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-v, --version</dt>
   <dd>Versión de la política de servicio</dd>
   <dt>-f, --file</dt>
-  <dd>Archivo JSON de definición de política. Con los distintivos '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type' y '--resource' son excluyentes.</dd>
+  <dd>Archivo JSON de definición de política. Esta opción y los distintivos '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' y 'resource-group-id' son excluyentes.</dd>
   <dt>-r, --roles</dt>
   <dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'bluemix iam roles --service SERVICE_NAME'. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
   <dt>-service-name</dt>
@@ -1948,6 +1957,10 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dd>Tipo de recurso de la definición de política. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
   <dt>-resource</dt>
   <dd>Recurso de la definición de política. Esta opción y el distintivo '-f, --file' son mutuamente excluyentes.</dd>
+  <dt>--resource-group-name</dt>
+  <dd>Nombre del grupo de recursos. Esta opción y '-f, --file' y '--resource-group-id' son mutuamente excluyentes.</dd>
+  <dt>--resource-group-id </dt>
+  <dd>ID del grupo de recursos. Esta opción y '-f, --file' y '--resource-group-name' son mutuamente excluyentes.</dd>
   <dt>-F, --force</dt>
   <dd>Actualizar la política de servicios sin confirmación</dd>
 </dl>
@@ -1989,6 +2002,45 @@ Suprimir la política `140798e2-8ea7db3` del servicio `test`
 bluemix iam service-policy-delete test 140798e2-8ea7db3
 ```
 
+## bluemix iam oauth-tokens
+{: #bluemix_iam_oauth_tokens}
+
+Recuperar y visualizar las señales OAuth para la sesión actual
+
+```
+bluemix iam oauth-tokens
+```
+
+<strong>Requisitos previos</strong>: Inicio de sesión, destino
+
+<strong>Opciones de mandato</strong>:
+<dl>
+</dl>
+
+<strong>Ejemplos</strong>:
+
+Renovar y visualizar señales OAuth
+
+```
+bluemix iam oauth-tokens
+```
+
+## bluemix iam dedicated-id-disconnect
+{: #bluemix_iam_dedicated_id_disconnect}
+
+Desconectar el ID de IBM público con un ID no de IBM dedicado
+
+```
+bluemix iam dedicated-id-disconnect [-f, --force]
+```
+
+<strong>Requisitos previos</strong>: Inicio de sesión, destino
+
+<strong>Opciones de mandato</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>Forzar la desconexión sin confirmación</dd>
+</dl>
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
@@ -2597,7 +2649,7 @@ Este mandato tiene la misma función y opciones que el mandato `cf update-user-p
 Listar instancias de servicio
 
 ```
-bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
 <strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
@@ -2606,8 +2658,8 @@ bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region R
 <dl>
   <dt>--service-name</dt>
   <dd>Nombre del servicio de pertenencia</dd>
-  <dt>-r, --region</dt>
-  <dd>Filtrar por ID de región, si no se especifica, el valor predeterminado es la región actual, '-r, --region all' para mostrar instancias de servicio de todas las regiones</dd>
+  <dt>--location</dt>
+  <dd>Filtrar por ubicación</dd>
   <dt>--long</dt>
   <dd>Mostrar campos adicionales en la salida</dd>
 </dl>
@@ -2626,7 +2678,7 @@ bluemix resource service-instances --service-name test-service
 Mostrar los detalles de una instancia de servicio
 
 ```
-bluemix resource service-instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [--location LOCATION] [--id]
 ```
 
 <strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
@@ -2635,8 +2687,8 @@ bluemix resource service-instance NAME [-r, --region REGION] [--id]
 <dl>
   <dt>NAME (necesario)</dt>
   <dd>Nombre de la instancia de servicio</dd>
-  <dt>-r, --region</dt>
-  <dd>Filtrar por ID de región, si no se especifica, el valor predeterminado es la región actual, '-r, --region all' para mostrar instancias de servicio de todas las regiones</dd>
+  <dt>--location</dt>
+  <dd>Filtrar por ubicación</dd>
   <dt>--id</dt>
   <dd>Mostrar el ID de la instancia de servicio</dd>
 </dl>
@@ -2654,7 +2706,7 @@ bluemix resource service-instance my-service-instance
 Crear una instancia de servicio
 
 ```
-bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
@@ -2667,8 +2719,8 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
   <dd>Nombre o ID del servicio</dd>
   <dt>SERVICE_PLAN_NAME o SERVICE_PLAN_ID (necesario)</dt>
   <dd>Nombre o ID del plan de servicio</dd>
-  <dt>-r, --region</dt>
-  <dd>Región para crear la instancia de servicio. Si no se especifica el valor predeterminado es la región actual.</dd>
+  <dt>LOCATION</dt>
+  <dd>Ubicación o entorno de destino para crear la instancia de servicio</dd>
   <dt>-t, --tags</dt>
   <dd>Etiquetas</dd>
   <dt>-p, --parameters</dt>
@@ -2676,10 +2728,10 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
 </dl>
 
 <strong>Ejemplos</strong>:
-Crear una instancia de servicio llamada `my-service-instance` utilizando el plan de servicio `test-service-plan` del servicio `test-service`:
+Crear una instancia de servicio llamada `my-service-instance` utilizando el plan de servicio `test-service-plan` del servicio `test-service` en la ubicación `eu-gb`:
 
 ```
-bluemix resource service-instance-create my-service-instance test-service test-service-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
 
 ## bluemix resource service-instance-update

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -17,13 +17,13 @@ lastupdated: "2017-09-11"
 {: #bluemixadmincli}
 
 
-Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境を管理できます。例えば、LDAP レジストリーからユーザーを追加できます。{{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報を探している場合は、『[管理](/docs/admin/adminpublic.html#administer)』を参照してください。
+Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境を管理できます。 例えば、LDAP レジストリーからユーザーを追加できます。 {{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報を探している場合は、『[管理](/docs/admin/adminpublic.html#administer)』を参照してください。
 
-最初に、CF コマンド・ライン・インターフェースをインストールします。{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。[Cloud Foundry コマンド・ライン・インターフェースのダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} を行ってください。
+最初に、CF コマンド・ライン・インターフェースをインストールします。 {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。 [Cloud Foundry コマンド・ライン・インターフェースのダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} を行ってください。
 
-**制限:** Cloud Foundry コマンド・ライン・インターフェースは、Cygwin ではサポートされていません。Cloud Foundry コマンド・ライン・インターフェースは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
+**制限:** Cloud Foundry コマンド・ライン・インターフェースは、Cygwin ではサポートされていません。 Cloud Foundry コマンド・ライン・インターフェースは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
 
-**注**: {{site.data.keyword.Bluemix_notm}} 管理 CLI は、{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated 環境でのみ使用されます。{{site.data.keyword.Bluemix_notm}} Public ではサポートされません。
+**注**: {{site.data.keyword.Bluemix_notm}} 管理 CLI は、{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated 環境でのみ使用されます。 {{site.data.keyword.Bluemix_notm}} Public ではサポートされません。
 
 ## {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインの追加
 
@@ -33,10 +33,8 @@ CF コマンド・ライン・インターフェースをインストール後�
 
 以下のステップを実行して、リポジトリーを追加し、プラグインをインストールします。
 
-
 <ol>
-<li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。
-<br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。<br/><br/>
 <code>
 cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
@@ -62,7 +60,6 @@ CLI プラグインの使用
 
 コマンドのリストを表示するには、次のコマンドを実行します。
 
-
 ```
 cf plugins
 ```
@@ -84,10 +81,9 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 <dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。<br />
 </dd>
 </dl>
-<p>正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。</p>
+<p>正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。 URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。</p>
 </li>
-<li>次のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} にログインします。
-<br/><br/>
+<li>次のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} にログインします。<br/><br/>
 <code>
 cf login
 </code>
@@ -107,7 +103,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**注**: ユーザーを特定の組織に追加するには、**users.write** (または **Superuser**) 許可を備えた**管理者**でなければなりません。組織管理者の場合、**enable-managers-add-users** コマンドを実行する Superuser から、組織にユーザーを追加する権限を付与してもらうこともできます。詳しくは、『[管理者へのユーザー追加権限の付与](index.html#clius_emau)』を参照してください。
+**注**: ユーザーを特定の組織に追加するには、**users.write** (または **Superuser**) 許可を備えた**管理者**でなければなりません。 組織管理者の場合、**enable-managers-add-users** コマンドを実行する Superuser から、組織にユーザーを追加する権限を付与してもらうこともできます。  詳しくは、『[管理者へのユーザー追加権限の付与](index.html#clius_emau)』を参照してください。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -121,6 +117,46 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 </dl>
 
 **ヒント:** **ba add-user** という長いコマンド名の別名として **ba au** を使用することもできます。
+
+### {{site.data.keyword.Bluemix_dedicated_notm}} からのユーザーの招待
+{: #admin_dedicated_invite_public}
+
+それぞれの {{site.data.keyword.Bluemix_dedicated_notm}} 環境には、{{site.data.keyword.Bluemix_notm}} にパブリックの、クライアント所有の、企業アカウントがあります。Dedicated 環境のユーザーが {{site.data.keyword.containershort}} を使用してクラスターを作成するためには、管理者はユーザーをこのパブリック企業アカウントに追加する必要があります。ユーザーがパブリック企業アカウントに追加されると、ユーザーの Dedicated アカウントとパブリック・アカウントがリンクされます。そしてユーザーは IBM ID を使用して Dedicated とパブリックの両方に同時にログインでき、Dedicated のインターフェースからパブリック・アカウントにリソースを作成できます。詳しくは、『[Dedicated での IBM Cloud Container Service のセットアップ](/docs/containers/cs_dedicated.html#dedicated_setup)』を参照してください。Dedicated のユーザーをパブリック・アカウントに招待するには以下のようにします。
+
+```
+cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
+```
+{: pre}
+
+**注**: Dedicated 環境のユーザーを {{site.data.keyword.Bluemix_notm}} パブリック・アカウントに追加するには、Dedicated アカウントの**管理者**であることが必要です。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">単一のユーザーを招待する場合、ユーザーの E メール。</dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">Dedicated アカウント組織に現在いるすべてのユーザーを招待する場合、Dedicated アカウント組織 ID。</dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">ユーザーをパブリック・アカウントに招待するための API キー。これはパブリック・アカウントの<b>管理者</b>が生成する必要があります。</dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">ユーザーを招待するパブリック・アカウント組織の ID。</dd>
+</dl>
+
+### {{site.data.keyword.Bluemix_dedicated_notm}} から招待したユーザーのリスト表示
+{: #admin_dedicated_list}
+
+Dedicated 環境のユーザーを {{site.data.keyword.Bluemix_notm}} アカウントに [`invite-users-to-public` コマンド](#admin_dedicated_invite_public)を使用して招待した場合、招待の状況を確認するためにアカウントのユーザーをリスト表示することができます。既存の IBM ID を持つ招待されたユーザーは、`ACTIVE` の状況になります。既存の IBM ID を持たない招待されたユーザーは、アカウントへの招待を受け入れたかどうかによって、`PENDING` または `ACTIVE` のいずれかの状況になります。{{site.data.keyword.Bluemix_notm}} アカウントのユーザーをリストするには、以下のようにします。
+
+```
+cf ba invite-users-status -apikey=<public_api_key>
+```
+{: pre}
+
+**注**: Dedicated 環境のユーザーを {{site.data.keyword.Bluemix_notm}} パブリック・アカウントに追加するには、Dedicated アカウントの**管理者**であることが必要です。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">ユーザーをアカウントに招待するのに使用された API キー。これはパブリック・アカウントの<b>管理者</b>が生成する必要があります。</dd>
+</dl>
 
 <!-- staging-only commands start. Live for interconnect -->
 
@@ -137,13 +173,13 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dl class="parml">
 
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 内のユーザーの名前。</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 内のユーザーの名前。 </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">ユーザーに割り当てられた許可。例えば、admin (または superuser)、login (または basic)、catalog.read、catalog.write、reports.read、reports.write、users.read、または users.write など。割り当てられたユーザー許可について詳しくは、『[許可](/docs/admin/index.html#permissions)』を参照してください。同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
+<dd class="pd">ユーザーに割り当てられた許可。 使用可能な許可は、admin (または superuser)、login (または basic)、catalog.read、catalog.write、reports.read 、reports.write、users.read、または users.write です。割り当てられたユーザー許可について詳しくは、『[許可](/docs/admin/index.html#permissions)』を参照してください。 同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。 </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">ユーザーが所属する組織の名前。同じ照会内でこのパラメーターを permission パラメーターと一緒に使用することはできません。</dd>
+<dd class="pd">ユーザーが所属する組織の名前。 同じ照会内でこのパラメーターを permission パラメーターと一緒に使用することはできません。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">ユーザーに割り当てられた、組織の役割。例えば、auditor、manager、または billing_manager など。このパラメーターと一緒に組織を指定する必要があります。役割について詳しくは、『[ユーザー役割](/docs/admin/users_roles.html#userrolesinfo)』を参照してください。</dd>
+<dd class="pd">ユーザーに割り当てられた、組織の役割。 使用可能な役割は、「auditors」、「managers」、および「billing_managers」です。このパラメーターと一緒に組織を指定する必要があります。</dd>
 
 </dl>
 
@@ -196,7 +232,7 @@ cf ba remove-user <user_name>
 ### 管理者へのユーザー追加権限の付与
 {: #clius_emau}
 
-{{site.data.keyword.Bluemix_notm}} 環境で **Superuser** 許可がある場合、組織管理者が、自分が管理している組織にユーザーを追加できるようにすることが可能です。管理者がユーザーを追加できるようにするには、以下のコマンドを使用します。
+{{site.data.keyword.Bluemix_notm}} 環境で **Superuser** 許可がある場合、組織管理者が、自分が管理している組織にユーザーを追加できるようにすることが可能です。 管理者がユーザーを追加できるようにするには、以下のコマンドを使用します。
 
 ```
 cf ba enable-managers-add-users
@@ -208,7 +244,7 @@ cf ba enable-managers-add-users
 ### 管理者のユーザー追加権限の無効化
 {: #clius_dmau}
 
-**enable-managers-add-users** によって組織管理者が {{site.data.keyword.Bluemix_notm}} 環境で管理している組織にユーザーを追加できるようになっている場合、**Superuser** 許可を備えていれば、この設定を削除できます。管理者によるユーザーの追加を不可にするには、以下のコマンドを使用します。
+**enable-managers-add-users** によって組織管理者が {{site.data.keyword.Bluemix_notm}} 環境で管理している組織にユーザーを追加できるようになっている場合、**Superuser** 許可を備えていれば、この設定を削除できます。  管理者によるユーザーの追加を不可にするには、以下のコマンドを使用します。
 
 ```
 cf ba disable-managers-add-users
@@ -264,8 +300,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの割り当て先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](/docs/admin/users_roles.html)を参照してください。
-</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](/docs/admin/users_roles.html)を参照してください。</dd>
 </dl>
 
 **ヒント:** **ba set-org** という長いコマンド名の別名として **ba so** を使用することもできます。
@@ -274,7 +309,6 @@ cf ba set-org <user_name> <organization> [<role>]
 {: #admin_unass_user_org}
 
 {{site.data.keyword.Bluemix_notm}} 環境内のユーザーを特定の組織から割り当て解除するには、以下のコマンドを使用します。
-
 
 ```
 cf ba unset-org <user_name> <organization> [<role>]
@@ -287,8 +321,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの割り当て先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割の割り当て](/docs/admin/users_roles.html)を参照してください。
-</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割の割り当て](/docs/admin/users_roles.html)を参照してください。</dd>
 </dl>
 
 **ヒント:** **ba unset-org** という長いコマンド名の別名として **ba uo** を使用することもできます。
@@ -297,18 +330,17 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
-<dd class="pd">組織管理者。組織管理者には、次のアクションを行う権限があります。<ul>
+<dd class="pd">組織管理者。 組織管理者には、次のアクションを行う権限があります。
+<ul>
 <li>組織内のスペースの作成、削除。</li>
 <li>組織へのユーザーの招待とユーザーの管理。</li>
 <li>組織のドメインの管理。</li>
 </ul>
 </dd>
 <dt class="pt dlterm">BillingManager</dt>
-<dd class="pd">請求管理者。請求管理者は、組織におけるランタイムおよびサービスの使用率情報を表示できます。
-</dd>
+<dd class="pd">請求管理者。 請求管理者は、組織におけるランタイムおよびサービスの使用率情報を表示できます。</dd>
 <dt class="pt dlterm">OrgAuditor</dt>
-<dd class="pd">組織監査員。組織監査員は、スペース内のアプリケーションとサービスの内容を表示できます。
-</dd>
+<dd class="pd">組織監査員。 組織監査員は、スペース内のアプリケーションとサービスの内容を表示できます。</dd>
 </dl>
 
 ### 組織の割り当て量の設定
@@ -343,7 +375,7 @@ cf bluemix-admin containers-quota <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 内の組織の名前または ID。このパラメーターは必須です。</dd>
+<dd class="pd">Bluemix 内の組織の名前または ID。 このパラメーターは必須です。</dd>
 </dl>
 
 **ヒント:** **bluemix-admin containers-quota** という長いコマンド名の別名として **ba cq** を使用することもできます。
@@ -362,7 +394,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 内の組織の名前または ID。このパラメーターは必須です。</dd>
+<dd class="pd">Bluemix 内の組織の名前または ID。 このパラメーターは必須です。</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">以下のオプションを 1 つ以上含めます。値は整数でなければなりません。
 <ul>
@@ -389,7 +421,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 <dd class="pd"><strong>il</strong></dd>
 </dl>
 
-オプションで、有効な JSON オブジェクトに固有の構成パラメーターを含むファイルを指定できます。**-file** オプションを使用すると、それが優先され、他のオプションは無視されます。オプションを設定する代わりにファイルを指定する場合は、以下のコマンドを使用します。
+オプションで、有効な JSON オブジェクトに固有の構成パラメーターを含むファイルを指定できます。 **-file** オプションを使用すると、それが優先され、他のオプションは無視されます。 オプションを設定する代わりにファイルを指定する場合は、以下のコマンドを使用します。
 
 ```
 cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
@@ -470,13 +502,13 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 <dt class="pt dlterm">&lt;user_anme&gt;</dt>
 <dd class="pd">追加するユーザーの名前。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">割り当てるユーザーの役割。この値には、Manager、Developer、または Auditor が可能です。スペース内での {{site.data.keyword.Bluemix_notm}} ユーザーの役割と説明については、[役割の割り当て](/docs/admin/users_roles.html)を参照してください。</dd>
+<dd class="pd">割り当てるユーザーの役割。 この値には、Manager、Developer、または Auditor が可能です。 スペース内での {{site.data.keyword.Bluemix_notm}} ユーザーの役割と説明については、[役割の割り当て](/docs/admin/users_roles.html)を参照してください。</dd>
 </dl>
 
 **ヒント:** **ba set-space** という長いコマンド名の別名として **ba ss** を使用することもできます。
 
 
-### スペース内のユーザーの役割の削除 
+### スペース内のユーザーの役割の削除
 
 スペース内のユーザーの役割を削除するには、以下のコマンドを使用します。
 
@@ -494,7 +526,7 @@ cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 <dt class="pt dlterm">&lt;user_anme&gt;</dt>
 <dd class="pd">追加するユーザーの名前。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">割り当てるユーザーの役割。この値には、Manager、Developer、または Auditor が可能です。スペース内での {{site.data.keyword.Bluemix_notm}} ユーザーの役割と説明については、[役割の割り当て](/docs/admin/users_roles.html)を参照してください。</dd>
+<dd class="pd">割り当てるユーザーの役割。 この値には、Manager、Developer、または Auditor が可能です。 スペース内での {{site.data.keyword.Bluemix_notm}} ユーザーの役割と説明については、[役割の割り当て](/docs/admin/users_roles.html)を参照してください。</dd>
 </dl>
 
 **ヒント:** **ba unset-space** という長いコマンド名の別名として **ba us** を使用することもできます。
@@ -514,7 +546,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。 </dd>
 </dl>
 
 **ヒント:** **ba enable-service-plan** という長いコマンド名の別名として **ba esp** を使用することもできます。
@@ -531,7 +563,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 </dl>
 
 **ヒント:** **ba disable-service-plan<retrieve-report** という長いコマンド名の別名として **ba dsp**を使用することもできます。
@@ -539,7 +571,7 @@ cf ba disable-service-plan <plan_identifier>
 ### 組織に対するサービスの表示可能性の追加
 {: #admin_addvis_service_org}
 
-{{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できる組織のリストで、組織を追加できます。組織が {{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できるようにするには、以下のコマンドを使用します。
+{{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できる組織のリストで、組織を追加できます。 組織が {{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できるようにするには、以下のコマンドを使用します。
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
@@ -548,7 +580,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストに追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -558,7 +590,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 ### 組織に対するサービスの表示可能性の削除
 {: #admin_remvis_service_org}
 
-{{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できる組織のリストで、組織を削除できます。組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示可能性を削除するには、以下のコマンドを使用します。
+{{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できる組織のリストで、組織を削除できます。 組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示可能性を削除するには、以下のコマンドを使用します。
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -567,7 +599,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効にするサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効にするサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストから削除する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -577,7 +609,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 ### 組織に対するサービスの表示可能性の編集
 {: #admin_editvis_service_org}
 
-特定の組織が {{site.data.keyword.Bluemix_notm}} カタログで表示できるサービスのリストを編集および置換することができます。単一または複数の組織に対して既存のすべての表示されるサービスを置換するには、以下のコマンドを使用します。
+特定の組織が {{site.data.keyword.Bluemix_notm}} カタログで表示できるサービスのリストを編集および置換することができます。 単一または複数の組織に対して既存のすべての表示されるサービスを置換するには、以下のコマンドを使用します。
 
 ```
 cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
@@ -588,9 +620,9 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">表示可能性を追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。コマンドに追加の組織名または GUID を入力することで、複数の組織に対してサービスの表示可能性を有効化できます。</dd>
+<dd class="pd">表示可能性を追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。 コマンドに追加の組織名または GUID を入力することで、複数の組織に対してサービスの表示可能性を有効化できます。</dd>
 </dl>
 
 **ヒント:** **ba edit-service-plan-visibility** という長いコマンド名の別名として **ba espv** を使用することもできます。
@@ -608,17 +640,17 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-**注**: レポートの書き込みアクセス許可がある場合は、新規カテゴリーを作成し、ユーザー用に受け入れられるフォーマットのいずれかでレポートを追加できます。`category` パラメーターに新規カテゴリー名を入力するか、既存のカテゴリーに新規レポートを追加します。
+**注**: レポートの書き込みアクセス許可がある場合は、新規カテゴリーを作成し、ユーザー用に受け入れられるフォーマットのいずれかでレポートを追加できます。 `category` パラメーターに新規カテゴリー名を入力するか、既存のカテゴリーに新規レポートを追加します。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">レポートのカテゴリー。名前にスペースが含まれている場合は、引用符を使用して名前を囲んでください。</dd>
+<dd class="pd">レポートのカテゴリー。 名前にスペースが含まれている場合は、引用符を使用して名前を囲んでください。</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd"><samp class="ph codeph">YYYYMMDD</samp> という形式のレポート日付。</dd>
 <dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
 <dd class="pd">アップロードするレポート PDF、テキスト・ファイル、またはログ・ファイルのパス。</dd>
 <dt class="pt dlterm">&lt;RTF&gt;</dt>
-<dd class="pd">PDF の RTF (リッチ・テキスト・フォーマット) バージョンを含めるためのオプション。このオプションが適用されるのは、レポート PDF のパスを含めた場合のみです。RTF バージョンは、索引付けおよび検索に使用されます。</dd>
+<dd class="pd">PDF の RTF (リッチ・テキスト・フォーマット) バージョンを含めるためのオプション。 このオプションが適用されるのは、レポート PDF のパスを含めた場合のみです。 RTF バージョンは、索引付けおよび検索に使用されます。</dd>
 </dl>
 
 **ヒント:** **ba add-report** という長いコマンド名の別名として **ba ar** を使用することもできます。
@@ -635,7 +667,7 @@ cf ba delete-report <category> <date> <name>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">レポートのカテゴリー。名前にスペースが含まれている場合は、引用符を使用して名前を囲んでください。</dd>
+<dd class="pd">レポートのカテゴリー。 名前にスペースが含まれている場合は、引用符を使用して名前を囲んでください。</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd"><samp class="ph codeph">YYYYMMDD</samp> という形式のレポート日付。</dd>
 <dt class="pt dlterm">&lt;name&gt;</dt>
@@ -656,7 +688,7 @@ cf ba retrieve-report <search>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;search&gt;</dt>
-<dd class="pd">レポートのファイル名。名前にスペースが含まれている場合は、引用符を使用して名前を囲んでください。</dd>
+<dd class="pd">レポートのファイル名。 名前にスペースが含まれている場合は、引用符を使用して名前を囲んでください。</dd>
 </dl>
 
 **ヒント:** **ba retrieve-report** という長いコマンド名の別名として **ba rr**を使用することもできます。
@@ -664,7 +696,7 @@ cf ba retrieve-report <search>
 ## リソース・メトリック情報の表示
 {: #cliresourceusage}
 
-メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) およびセル (Diego アーキテクチャー) の使用データも確認できます。リソース・メトリック情報を表示するには、以下のコマンドを使用します。
+メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。 使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。 Droplet Execution Agent (DEA) およびセル (Diego アーキテクチャー) の使用データも確認できます。 リソース・メトリック情報を表示するには、以下のコマンドを使用します。
 
 ```
 cf ba resource-metrics
@@ -672,10 +704,10 @@ cf ba resource-metrics
 
 **ヒント:** **ba resource-metrics** という長いコマンド名の別名として **ba rsm** を使用することもできます。
 
-## リソース・メトリック履歴の表示 
+## リソース・メトリック履歴の表示
 {: #cliresourceusagehistory}
 
-メモリーおよびディスクの使用量に関するリソース・メトリック履歴を取得できます。返されるメトリックは、物理リソースと予約済みリソースの両方について、使用可能な合計量のうちの使用済みリソースの量を示します。メモリーおよびディスクの使用量の履歴データは、毎時、日次、または月次で表示できます。特定の日付範囲内のデータを取得するには、開始日と終了日を指定します。日付が指定されていない場合、デフォルトの履歴データは、過去 48 時間の毎時のメモリー・データです。データは、最新の日付を先頭にして、降順に表示されます。リソース・メトリック履歴情報を表示するには、以下のコマンドを使用します。
+メモリーおよびディスクの使用量に関するリソース・メトリック履歴を取得できます。 返されるメトリックは、物理リソースと予約済みリソースの両方について、使用可能な合計量のうちの使用済みリソースの量を示します。 メモリーおよびディスクの使用量の履歴データは、毎時、日次、または月次で表示できます。  特定の日付範囲内のデータを取得するには、開始日と終了日を指定します。 日付が指定されていない場合、デフォルトの履歴データは、過去 48 時間の毎時のメモリー・データです。 データは、最新の日付を先頭にして、降順に表示されます。   リソース・メトリック履歴情報を表示するには、以下のコマンドを使用します。
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -684,19 +716,19 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;--hourly&gt;</dt>
-<dd class="pd">過去 48 時間の履歴データを表示します。これはデフォルト値です。</dd>
+<dd class="pd">過去 48 時間の履歴データを表示します。 これはデフォルト値です。</dd>
 <dt class="pt dlterm">&lt;--daily&gt;</dt>
 <dd class="pd">過去 30 日間の履歴データの日次平均を表示します。</dd>
 <dt class="pt dlterm">&lt;--monthly&gt;</dt>
-<dd class="pd">過去 6 カ月間の履歴データの月次平均を表示します。</dd>
+<dd class="pd">過去 6 カ月間の履歴データの月次平均を表示します。 </dd>
 <dt class="pt dlterm">&lt;--memory&gt;</dt>
-<dd class="pd">予約済みメモリーと物理メモリーの使用量と合計を表示します。</dd>
+<dd class="pd">予約済みメモリーと物理メモリーの使用量と合計を表示します。 </dd>
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">予約済みディスクと物理ディスクの使用量と合計を表示します。</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
 <dd class="pd">日次または月次の開始日 (形式 mm-dd-yyyy)、または毎時の開始日時 (形式 mm-dd-yyyy hh:mm:ss timezone) を指定します </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">日次または月次の終了日 (形式 mm-dd-yyyy)、または毎時の終了日時 (形式 mm-dd-yyyy hh:mm:ss timezone) を指定します</dd>
+<dd class="pd">日次または月次の終了日 (形式 mm-dd-yyyy)、または毎時の終了日時 (形式 mm-dd-yyyy hh:mm:ss timezone) を指定します </dd>
 </dl>
 
 {: codeblock}
@@ -709,7 +741,8 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-以下のコマンドを使用して、上記のコマンド・パラメーターおよび例のリストを表示できます。 
+
+以下のコマンドを使用して、上記のコマンド・パラメーターおよび例のリストを表示できます。
 
 ```
 cf ba resource-metrics-history -help
@@ -734,7 +767,7 @@ cf ba service-brokers <broker_name>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>
-<dd class="pd">オプション: カスタム・サービス・ブローカーの名前。特定のサービス・ブローカーの情報を入手したい場合は、このパラメーターを使用します。</dd>
+<dd class="pd">オプション: カスタム・サービス・ブローカーの名前。 特定のサービス・ブローカーの情報を入手したい場合は、このパラメーターを使用します。</dd>
 </dl>
 
 **ヒント:** **ba service-brokers** という長いコマンド名の別名として **ba sb**を使用することもできます。
@@ -806,15 +839,16 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ## アプリケーション・セキュリティー・グループの管理
 {: #admin_secgro}
 
-アプリケーション・セキュリティー・グループ (ASG) に関して作業するには、ローカル環境または専用環境の全アクセス権限を持つ管理者でなければなりません。コマンドでターゲットとする組織に有効な ASG のリスト表示は、環境のすべてのユーザーが行えます。それに対し、ASG の作成、更新、バインドを行うには、{{site.data.keyword.Bluemix_notm}} 環境の管理者である必要があります。
+アプリケーション・セキュリティー・グループ (ASG) に関して作業するには、ローカル環境または専用環境の全アクセス権限を持つ管理者でなければなりません。 コマンドでターゲットとする組織に有効な ASG のリスト表示は、環境のすべてのユーザーが行えます。 それに対し、ASG の作成、更新、バインドを行うには、{{site.data.keyword.Bluemix_notm}} 環境の管理者である必要があります。
 
-ASG は、{{site.data.keyword.Bluemix_notm}} 環境内のアプリケーションからのアウトバウンド・トラフィックを制御する仮想ファイアウォールとして機能します。各 ASG は、外部ネットワークに対する特定のトラフィックおよび通信を許可するルールのリストから構成されます。1 つ以上の ASG を特定のセキュリティー・グループ・セット (例えば、グローバル・アクセスの適用に使用されるグループ・セットなど) にバインドすることや、{{site.data.keyword.Bluemix_notm}} 環境の組織内のスペースにバインドすることができます。
+ASG は、{{site.data.keyword.Bluemix_notm}} 環境内のアプリケーションからのアウトバウンド・トラフィックを制御する仮想ファイアウォールとして機能します。 各 ASG は、外部ネットワークに対する特定のトラフィックおよび通信を許可するルールのリストから構成されます。 1 つ以上の ASG を特定のセキュリティー・グループ・セット (例えば、グローバル・アクセスの適用に使用されるグループ・セットなど) にバインドすることや、{{site.data.keyword.Bluemix_notm}} 環境の組織内のスペースにバインドすることができます。
 
-{{site.data.keyword.Bluemix_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。詳しくは、[アプリケーション・セキュリティー・グループのバインド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} を参照してください。
+{{site.data.keyword.Bluemix_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。 IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。 グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。 これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。 これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。 詳しくは、[アプリケーション・セキュリティー・グループのバインド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} を参照してください。
 
-**警告**: IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` から**デフォルト・ステージング**または**デフォルト実行**のグループ・セットをアンバインドすると、外部ネットワークへのグローバル・アクセスが無効になります。アンバインドは、環境内で実行中およびステージング中のすべてのアプリケーションへの悪影響を認識して、十分注意して使用してください。
+**警告**: IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` から**デフォルト・ステージング**または**デフォルト実行**のグループ・セットをアンバインドすると、外部ネットワークへのグローバル・アクセスが無効になります。 アンバインドは、環境内で実行中およびステージング中のアプリケーションへの影響の可能性を認識して、十分注意して使用してください。
 
-**注**: セキュリティー・グループに関する作業を可能にする以下のコマンドは、Cloud Foundry 1.6 バージョンをベースとしています。必須フィールドやオプション・フィールドなどの詳細については、[アプリケーション・セキュリティー・グループの作成 ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} に関する Cloud Foundry 資料を参照してください。
+
+**注**: セキュリティー・グループに関する作業を可能にする以下のコマンドは、Cloud Foundry 1.6 バージョンをベースとしています。 必須フィールドやオプション・フィールドなどの詳細については、[アプリケーション・セキュリティー・グループの作成 ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} に関する Cloud Foundry 資料を参照してください。
 
 ### セキュリティー・グループのリスト
 {: #clilissecgro}
@@ -1015,7 +1049,7 @@ cf ba unbind-security-group <security-group> <org> <space>
 ### ビルドパックのリスト
 {: #clilistbuildpack}
 
-アプリ・カタログ書き込み許可がある場合、ビルドパックをリストできます。すべてのビルドパックをリストするか、または特定のビルドパックを表示するには、以下のコマンドを使用します。
+アプリ・カタログ書き込み許可がある場合、ビルドパックをリストできます。 すべてのビルドパックをリストするか、または特定のビルドパックを表示するには、以下のコマンドを使用します。
 
 ```
 cf ba buildpacks <buildpack_name>
@@ -1032,7 +1066,7 @@ cf ba buildpacks <buildpack_name>
 ### ビルドパックの作成およびアップロード
 {: #clicreupbuildpack}
 
-アプリ・カタログ書き込み許可がある場合、ビルドパックを作成およびアップロードできます。.zip ファイル・タイプの任意の圧縮ファイルをアップロードできます。ビルドパックをアップロードするには、以下のコマンドを使用します。
+アプリ・カタログ書き込み許可がある場合、ビルドパックを作成およびアップロードできます。 .zip ファイル・タイプの任意の圧縮ファイルをアップロードできます。 ビルドパックをアップロードするには、以下のコマンドを使用します。
 
 ```
 cf ba create-buildpack <buildpack_name> <file_path> <position>
@@ -1053,7 +1087,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 ### ビルドパックの更新
 {: #cliupdabuildpack}
 
-アプリ・カタログ書き込み許可がある場合、既存のビルドパックを更新できます。ビルドパックを更新するには、以下のコマンドを使用します。
+アプリ・カタログ書き込み許可がある場合、既存のビルドパックを更新できます。  ビルドパックを更新するには、以下のコマンドを使用します。
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -1076,7 +1110,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ### ビルドパックの削除
 {: #clidelbuildpack}
 
-アプリ・カタログ書き込み許可がある場合、既存のビルドパックを削除できます。ビルドパックを削除するには、以下のコマンドを使用します。
+アプリ・カタログ書き込み許可がある場合、既存のビルドパックを削除できます。  ビルドパックを削除するには、以下のコマンドを使用します。
 
 ```
 cf ba delete-buildpack <buildpack_name>

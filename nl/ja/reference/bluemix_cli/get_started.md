@@ -37,7 +37,7 @@ lastupdated: "2017-08-20"
 
   ![例](example.gif)
 
-これで、{{site.data.keyword.Bluemix_notm}} リソースを管理する準備ができました。コマンド説明を表示するには、`bluemix help` または `bx help` と入力します。 
+これで、{{site.data.keyword.Bluemix_notm}} リソースを管理する準備ができました。 コマンド説明を表示するには、`bluemix help` または `bx help` と入力します。 
 
 ## {{site.data.keyword.Bluemix_notm}} CLI をさらに探索するためのその他のリンク
 

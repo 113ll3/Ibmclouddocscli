@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-12-08"
 
 
 ---
@@ -25,10 +25,10 @@ L'interface de ligne de commande {{site.data.keyword.registrylong}} est un plug-
 **Prérequis**
 * Avant d'exécuter des commandes de registre, connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bx login` pour générer un jeton d'accès et authentifier votre session.
 
-Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{site.data.keyword.registrylong_notm}}, voir [Configuration d'un registre d'images privé](../../../services/Registry/index.html).
+Pour vous familiariser avec l'utilisation de l'interface de ligne de commande {{site.data.keyword.registrylong_notm}}, voir [Initiation à {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html).
 
-<table summary="Manage {{site.data.keyword.registrylong_notm}}y">
-<caption>Tableau 1. Commandes de gestion de {{site.data.keyword.registrylong_notm}} sur {{site.data.keyword.Bluemix_notm}}
+<table summary="Gérer {{site.data.keyword.registrylong_notm}}">
+<caption>Tableau 1. Commandes de gestion de {{site.data.keyword.registrylong_notm}}
 </caption>
  <thead>
  <th colspan="5">Commandes de gestion du registre</th>
@@ -85,7 +85,7 @@ bx cr api
 Génère une image Docker dans {{site.data.keyword.registrylong_notm}}.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--file FILE | -f FILE] --tag TAG DIRECTORY
 ```
 {: codeblock}
 
@@ -96,14 +96,14 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file
 <dt>--no-cache</dt>
 <dd>(Facultatif) Lorsque ce paramètre est spécifié, les couches d'image mises en cache à partir de générations précédentes ne sont pas utilisées dans cette génération.</dd>
 <dt>--pull</dt>
-<dd>(Facultatif) Lorsque ce paramètre est spécifié, l'image de base est extraite même si une image dotée d'une étiquette correspondante existe déjà sur l'hôte de génération.</dd>
+<dd>(Facultatif) Si ce paramètre est spécifié, les images de base sont extraites même si une image dotée d'une étiquette correspondante existe déjà sur l'hôte de génération. </dd>
 <dt>--quiet, -q</dt>
-<dd>(Facultatif) Lorsque ce paramètre est spécifié, la sortie de génération est supprimée sauf en cas d'erreur.</dd>
-<dt> --build-arg value</dt>
-<dd>(Facultatif) Spécifiez un argument de génération supplémentaire au format 'KEY=VALUE'. Vous avez la possibilité d'indiquer plusieurs arguments de génération en ajoutant ce paramètre plusieurs fois. Les valeurs d'arguments de génération sont disponibles en tant que variables d'environnement lorsque vous spécifiez une ligne ARG qui correspond à la clé définie dans votre fichier Dockerfile.</dd>
-<dt>--file value, -f value</dt>
+<dd>(Facultatif) Si ce paramètre est spécifié, la sortie de génération est supprimée sauf en cas d'erreur.</dd>
+<dt> --build-arg KEY=VALUE</dt>
+<dd>(Facultatif) Spécifiez un argument de génération supplémentaire au format 'KEY=VALUE'. Vous avez la possibilité d'indiquer plusieurs arguments de génération en ajoutant ce paramètre plusieurs fois. La valeur de chaque argument de génération est disponible en tant que variable d'environnement quand vous spécifiez une ligne ARG qui correspond à la clé dans votre Dockerfile. </dd>
+<dt>--file FILE, -f FILE</dt>
 <dd>(Facultatif) Si vous utilisez les mêmes fichiers pour plusieurs générations, vous pouvez sélectionner un chemin vers un fichier Dockerfile différent. Indiquez l'emplacement du fichier Dockerfile par rapport au contexte de génération. Si vous ne l'indiquez pas, la valeur par défaut est `PATH/Dockerfile`, où PATH correspond à la racine du contexte de génération.</dd>
-<dt>--tag value, -t value</dt>
+<dt>--tag TAG, -t TAG</dt>
 <dd>Nom complet de l'image à générer, qui inclut l'URL et l'espace de nom de registre.</dd>
 </dl>
 
@@ -130,16 +130,18 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 {: codeblock}
 
 **Paramètres**
-
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Facultatif) Formate la sortie en utilisant un modèle Go.
+<dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
 
-Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+Pour plus d'informations, voir [Formatage et filtrage de la sortie de l'interface de ligne de commande pour les commandes {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
-<dd>Chemin de registre complet vers l'image à inspecter, au format `namespace/image:tag`. Si aucune balise n'est spécifiée dans le chemin de l'image, celle portant la balise `latest` (dernière) est inspectée. Vous pouvez inspecter plusieurs images en listant dans la commande chaque chemin de registre privé et en les séparant par un espace.</dd>
+<dd>Nom de l'image pour laquelle vous voulez obtenir un rapport. Vous pouvez inspecter plusieurs images en les répertoriant dans la commande, séparées les unes des autres par un espace.
+<p>Pour trouver les noms de vos images, exécutez `bx cr image-list`. Associez le contenu des colonnes Repository et Tag pour créer le nom de l'image au format `repository:tag`. Si aucune étiquette n'est spécifiée dans le nom de l'image, l'image associée à l'étiquette `latest` est inspectée. </p> 
+
+</dd>
 </dl>
 
 
@@ -148,8 +150,10 @@ Pour plus d'informations, voir [Affichage d'informations sur les images](../../.
 
 Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_notm}}.
 
+<p>**Remarque :** le nom de l'image est la combinaison du contenu des colonnes Repository et Tag au format `repository:tag`. </p> 
+
 ```
- bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
+ bx cr image-list [--no-trunc] [--format FORMAT] [-q, --quiet] [--restrict RESTRICTION] [--include-ibm] 
 ```
 {: codeblock}
 
@@ -157,17 +161,20 @@ Affiche toutes les images de votre compte {{site.data.keyword.Bluemix_notm}}.
 <dl>
 <dt>--no-trunc</dt>
 <dd>(Facultatif) Permet de ne pas tronquer l'historique des images.</dd>
-<dt>-q, --quiet</dt>
-<dd>(Facultatif) Chaque image est répertoriée au format `référentiel:balise`.</dd>
-<dt>--include-ibm</dt>
-<dd>(Facultatif) Inclut dans la sortie les images publiques fournies par {{site.data.keyword.IBM_notm}}. Sans cette option, seules les images privées sont répertoriées par défaut.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Facultatif) Formate la sortie en utilisant un modèle Go.
+<dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
 
-Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+Pour plus d'informations, voir [Formatage et filtrage de la sortie de l'interface de ligne de commande pour les commandes {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
+<dt>-q, --quiet</dt>
+<dd>(Facultatif) Chaque image est répertoriée au format `repository:tag`</dd>
+<dt>--restrict RESTRICTION</dt>
+<dd>(Facultatif) Limite la sortie pour n'afficher que les images dans l'espace de nom spécifié ou dans l'espace de nom et le référentiel. </dd>
+<dt>--include-ibm</dt>
+<dd>(Facultatif) Inclut dans la sortie les images publiques fournies par {{site.data.keyword.IBM_notm}}. Sans cette option, seules les images privées sont répertoriées par défaut.</dd>
 </dl>
+
 
 
 ## bx cr image-rm
@@ -183,8 +190,10 @@ bx cr image-rm IMAGE [IMAGE...]
 **Paramètres**
 <dl>
 <dt>IMAGE</dt>
-<dd>Chemin de registre complet vers l'image à retirer, au format `namespace/image:tag`. Si une balise n'est pas spécifiée dans le chemin de l'image,
-celle associée à la balise `latest` (dernière) est supprimée par défaut. Vous pouvez supprimer plusieurs images en listant dans la commande chaque chemin de registre privé et en les séparant par un espace.</dd>
+<dd>Nom de l'image pour laquelle vous voulez obtenir un rapport. Vous pouvez supprimer plusieurs images en même temps en les répertoriant dans la commande, séparées les unes des autres par un espace.
+<p>Pour trouver les noms de vos images, exécutez `bx cr image-list`. Associez le contenu des colonnes Repository et Tag pour créer le nom de l'image au format `repository:tag`. Si aucune étiquette n'est spécifiée dans le nom de l'image, l'image associée à l'étiquette `latest` est supprimée par défaut.</p> 
+
+</dd>
 </dl>
 
 
@@ -291,15 +300,15 @@ bx cr quota
 Modifie le quota spécifié.
 
 ```
-bx cr quota-set [--traffic VALEUR] [--storage VALEUR]
+bx cr quota-set [--traffic TRAFFIC] [--storage STORAGE]
 ```
 {: codeblock}
 
 **Paramètres**
 <dl>
-<dt>--traffic VALEUR</dt>
+<dt>--traffic TRAFFIC</dt>
 <dd>(Facultatif) Remplace votre quota de trafic par la valeur spécifiée en mégaoctets. L'opération échoue si vous n'êtes pas habilité à définir le trafic ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
-<dt>--storage VALEUR</dt>
+<dt>--storage STORAGE</dt>
 <dd>(Facultatif) Remplace votre quota de stockage par la valeur spécifiée en mégaoctets. L'opération échoue si vous n'êtes pas habilité à définir les quotas de stockage ou si vous définissez une valeur au-delà de votre plan de tarification.</dd>
 </dl>
 
@@ -313,6 +322,8 @@ Affiche les régions cible et le registre.
 bx cr region
 ```
 {: codeblock}
+
+Pour plus d'informations, voir [Régions](../../../services/Registry/registry_overview.html#registry_regions).
 
 
 ## bx cr region-set
@@ -328,7 +339,11 @@ bx cr region-set [REGION]
 **Paramètres**
 <dl>
 <dt>REGION</dt>
-<dd>(Facultatif) Le nom de votre région cible, par exemple, `us-south`.</dd>
+<dd>(Facultatif) Le nom de votre région cible, par exemple, `us-south`. 
+
+Pour plus d'informations, voir [Régions](../../../services/Registry/registry_overview.html#registry_regions).
+
+</dd>
 </dl>
 
 
@@ -338,7 +353,7 @@ bx cr region-set [REGION]
 Ajoute un jeton que vous pouvez utiliser pour contrôler l'accès à un registre.
 
 ```
-bx cr token-add [--description VALEUR] [-q, --quiet] [--non-expiring] [--readwrite]
+bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--readwrite]
 ```
 
 {: codeblock}
@@ -346,7 +361,7 @@ bx cr token-add [--description VALEUR] [-q, --quiet] [--non-expiring] [--readwri
 
 **Paramètres**
 <dl>
-<dt>--description VALEUR</dt>
+<dt>--description DESCRIPTION</dt>
 <dd>(Facultatif) Permet de spécifier la description du jeton qui s'affiche lorsque vous exécutez `bx cr token-list`. Si votre jeton est créé automatiquement par {{site.data.keyword.containerlong_notm}}, la description est le nom de votre cluster Kubernetes. Dans ce cas, le jeton est retiré automatiquement lorsque votre cluster est retiré.</dd>
 <dt>-q, --quiet</dt>
 <dd>(Facultatif) Affiche le jeton uniquement, sans aucun autre texte.</dd>
@@ -388,12 +403,13 @@ bx cr token-list --format FORMAT
 **Paramètres**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Facultatif) Formate la sortie en utilisant un modèle Go.
+<dd>(Facultatif) Formate la sortie en utilisant un modèle Go. 
 
-Pour plus d'informations, voir [Affichage d'informations sur les images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+Pour plus d'informations, voir [Formatage et filtrage de la sortie de l'interface de ligne de commande pour les commandes {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 </dl>
+
 
 ## bx cr token-rm
 {: #bx_cr_token_rm}
@@ -415,17 +431,20 @@ bx cr token-rm TOKEN [TOKEN...]
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
 
-Affiche un rapport d'évaluation des vulnérabilités pour une image.
+Affiche un rapport d'évaluation des vulnérabilités pour vos images.
 
 ```
-bx cr vulnerability-assessment IMAGE [IMAGE...]
+bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--configuration-issues | -c] [--output FORMAT | -o FORMAT] IMAGE [IMAGE...] 
 ```
 {: codeblock}
 
 **Paramètres**
 <dl>
 <dt>IMAGE</dt>
-<dd>Chemin de registre complet, au format `namespace/image:tag`, vers l'image pour laquelle vous désirez obtenir un rapport. Le rapport vous signale si l'image comporte des vulnérabilités de package connues. Les systèmes d'exploitation suivants sont pris en charge :
+<dd>Nom de l'image pour laquelle vous voulez obtenir un rapport. Le rapport vous signale si l'image comporte des vulnérabilités de package connues. Vous pouvez demander des rapports pour plusieurs images en même temps en les répertoriant dans la commande, séparées les unes des autres par un espace.
+<p>Pour trouver les noms de vos images, exécutez `bx cr image-list`. Associez le contenu des colonnes Repository et Tag pour créer le nom de l'image au format `repository:tag`. Si aucune étiquette n'est spécifiée dans le nom de l'image, le rapport évalue l'image associée à l'étiquette `latest`. </p> 
+
+<p>Les systèmes d'exploitation suivants sont pris en charge :
 
 <ul>
 
@@ -436,8 +455,28 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
+</p>
+
 Pour plus d'informations, voir la rubrique relative à la [gestion de la sécurité des images avec l'assistant de détection des vulnérabilités](../../../services/va/va_index.html).
 
 </dd>
+<dt>--output FORMAT, -o FORMAT</dt>
+<dd>(Facultatif) La sortie de la commande est retournée dans le format choisi. Le format par défaut est `text`. Les formats suivants sont pris en charge :
+<ul>
+
+<li>`text`</li>
+<li>`json
+
+`</li>
+</ul>
+
+</dd>
+<dt>--vulnerabilities, -v</dt>
+<dd>(Facultatif) La sortie de la commande est restreinte pour n'afficher que les vulnérabilités.</dd>
+<dt>--configuration-issues, -c</dt>
+<dd>(Facultatif) La sortie de la commande est restreinte pour n'afficher que les problèmes de configuration.</dd>
+<dt>--extended, -e </dt>
+<dd>(Facultatif) La sortie de la commande affiche des informations supplémentaires sur les correctifs pour les packages vulnérables.</dd>
 
 </dl>
+

@@ -25,7 +25,7 @@ lastupdated: "2017-10-20"
 플러그인 관리에 대한 자세한 명령을 보려면 `bluemix plugin`을 실행하여 도움말 메시지를 확인하십시오.
 {: tip}
 
-## {site.data.keyword.Bluemix_notm}} CLI 저장소에서 플러그인 설치
+## {{site.data.keyword.Bluemix_notm}} CLI 저장소에서 플러그인 설치
 
 ### 1단계: 플러그인 검색
 

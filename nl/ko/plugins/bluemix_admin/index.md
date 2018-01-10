@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -127,6 +127,46 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 **팁:** 긴 **ba add-user** 명령어에 대한
 별명으로 **ba au**를 사용할 수도 있습니다.
 
+### {{site.data.keyword.Bluemix_dedicated_notm}}에서 사용자 초대
+{: #admin_dedicated_invite_public}
+
+각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.Bluemix_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [데디케이티드에 IBM Cloud Container Service 설정](/docs/containers/cs_dedicated.html#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
+
+```
+cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
+```
+{: pre}
+
+**참고**: {{site.data.keyword.Bluemix_notm}} 공용 계정에 데디케이티드 환경 사용자를 추가하려면 데디케이티드 계정의 **관리자**여야 합니다.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">단일 사용자를 초대하는 경우 사용자의 이메일입니다.</dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">현재 데디케이티드 계정 조직의 모든 사용자를 초대하는 경우 데디케이티드 계정 조직 ID입니다.</dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">공용 계정에 사용자를 초대하는 데 필요한 API 키입니다. 이는 공용 계정의 <b>관리자</b>가 생성해야 합니다.</dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">사용자를 초대하는 공용 계정 조직의 ID입니다.</dd>
+</dl>
+
+### {{site.data.keyword.Bluemix_dedicated_notm}}에서 초대된 사용자 나열
+{: #admin_dedicated_list}
+
+[`invite-users-to-public` 명령](#admin_dedicated_invite_public)으로 {{site.data.keyword.Bluemix_notm}} 계정에 데디케이티드 환경 사용자를 초대한 경우, 계정의 사용자를 나열하여 초대 상태를 볼 수 있습니다. 기존 IBM ID가 있는 초대된 사용자의 상태는 `ACTIVE`입니다. 기존 IBM ID가 없는 초대된 사용자의 상태는 계정에 대한 초대 수락 여부에 따라 `PENDING` 또는 `ACTIVE`입니다. {{site.data.keyword.Bluemix_notm}} 계정에 사용자를 나열하려면 다음을 수행하십시오.
+
+```
+cf ba invite-users-status -apikey=<public_api_key>
+```
+{: pre}
+
+**참고**: {{site.data.keyword.Bluemix_notm}} 공용 계정에 데디케이티드 환경 사용자를 추가하려면 데디케이티드 계정의 **관리자**여야 합니다.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">계정에 사용자를 초대하는 데 사용된 API 키입니다. 이는 공용 계정의 <b>관리자</b>가 생성해야 합니다.</dd>
+</dl>
+
 <!-- staging-only commands start. Live for interconnect -->
 
 ### 사용자 검색
@@ -145,11 +185,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">사용자에게 지정된 권한입니다. 예를 들어, admin(또는 superuser), login(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](/docs/admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
+<dd class="pd">사용자에게 지정된 권한입니다. 사용 가능한 권한은 admin(또는 superuser), login(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](/docs/admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">사용자가 속한 조직 이름입니다. 동일한 조회에 권한 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">사용자에게 지정된 조직 역할입니다. 예를 들어, auditor, manager 또는 billing_manager입니다. 이 매개변수와 함께 조직을 지정해야 합니다. 역할에 대한 자세한 정보는 [사용자 역할](/docs/admin/users_roles.html#userrolesinfo)을 참조하십시오. </dd>
+<dd class="pd">사용자에게 지정된 조직 역할입니다. 사용 가능한 역할은 'auditors', 'managers' 및 'billing_managers'입니다. 이 매개변수와 함께 조직을 지정해야 합니다. </dd>
 
 </dl>
 
@@ -504,7 +544,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 별명으로 **ba ss**를 사용할 수도 있습니다.
 
 
-### 영역에서 사용자의 역할 제거 
+### 영역에서 사용자의 역할 제거
 
 영역에서 사용자 역할을 제거하려면 다음 명령을 사용하십시오.
 
@@ -725,7 +765,7 @@ cf ba resource-metrics
 **팁:** 긴 **ba resource-metrics** 명령어의 별명으로
 **ba rsm**을 사용할 수도 있습니다. 
 
-## 리소스 메트릭 히스토리 보기 
+## 리소스 메트릭 히스토리 보기
 {: #cliresourceusagehistory}
 
 메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다. 시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다. 리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
@@ -762,7 +802,8 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-다음 명령을 사용하여 위의 명령 매개변수 및 예제의 목록을 볼 수 있습니다.  
+
+다음 명령을 사용하여 위의 명령 매개변수 및 예제의 목록을 볼 수 있습니다. 
 
 ```
 cf ba resource-metrics-history -help
@@ -871,7 +912,8 @@ ASG는 {{site.data.keyword.Bluemix_notm}} 환경에서 애플리케이션의 아
 
 {{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}을 참조하십시오. 
 
-**경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 스테이징** 또는 **기본 실행** 그룹 세트의 바인딩을 해제하면, `public_networks` 및 `dns`에서 외부 네트워크에 대한 글로벌 액세스를 사용 안함으로 설정합니다. 바인딩 해제를 사용할 때는 환경에 있는 모든 실행 및 스테이징 애플리케이션의 결과를 이해하고 주의를 기울이십시오. 
+**경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 스테이징** 또는 **기본 실행** 그룹 세트의 바인드를 해제하면, `public_networks` 및 `dns`에서 외부 네트워크에 대한 글로벌 액세스를 사용 안함으로 설정합니다. 바인드 해제를 사용할 때는 환경에 있는 실행 및 스테이징 애플리케이션에 대한 잠재적 영향을 이해하고 주의를 기울이십시오.
+
 
 **참고**: 보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 필수 필드 및 선택 필드를 포함하여 자세한 정보는 [애플리케이션 보안 그룹 작성 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}에 대한 Cloud Foundry 정보를 참조하십시오. 
 

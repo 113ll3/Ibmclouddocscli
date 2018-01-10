@@ -20,10 +20,10 @@ lastupdated: "2017-05-03"
 # Cloud Foundry (cf) コマンド
 {: #cf}
 
-Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は、アプリを管理するための一連のコマンドを提供します。以下の情報では、アプリを管理するために最もよく使用される cf コマンドをリストし、コマンドの名前、オプション、使用法、前提条件、説明、および例を示します。すべての cf コマンドと関連ヘルプ情報をリストするには、`cf help` を使用します。特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
+Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は、アプリを管理するための一連のコマンドを提供します。 以下の情報では、アプリを管理するために最もよく使用される cf コマンドをリストし、コマンドの名前、オプション、使用法、前提条件、説明、および例を示します。 すべての cf コマンドと関連ヘルプ情報をリストするには、`cf help` を使用します。 特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
 {: shortdesc}
 
-**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。詳しくは、[Using the cf CLI with an HTTP Proxy Server ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} を参照してください。
+**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、[Using the cf CLI with an HTTP Proxy Server ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} を参照してください。
 
 
 ## Cloud Foundry CLI コマンドの索引
@@ -71,7 +71,8 @@ Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は
   </tr>
  <tr>
  <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
- <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)	<td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
@@ -93,10 +94,11 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (オプション)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。通常、この URL は `https://api.{DomainName}` です。現在使用している API エンドポイントの URL を表示したい場合、cf api
+   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
+   現在使用している API エンドポイントの URL を表示したい場合、cf api
 コマンドにこのパラメーターを指定する必要はありません。</dd>
    <dt>* --skip-ssl-validation</dt>
-   <dd>SSL 検証プロセスを使用不可にします。このパラメーターを使用すると、セキュリティーの問題が起きる可能性があります。</dd>
+   <dd>SSL 検証プロセスを使用不可にします。 このパラメーターを使用すると、セキュリティーの問題が起きる可能性があります。</dd>
    <dt>* --unset</dt>
    <dd>すべての API エンドポイントの接続情報を削除します。</dd>
     </dl>
@@ -125,9 +127,9 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 ## cf apps
 {: #cf_apps}
 
-現在のスペースにデプロイしたすべてのアプリケーションをリストします。各アプリケーションの状況も表示されます。
+現在のスペースにデプロイしたすべてのアプリケーションをリストします。 各アプリケーションの状況も表示されます。
 
-あるアプリのインスタンスが 1 つあるとすると、cf apps コマンドからの応答のインスタンス欄には、アプリが稼働している場合は 1/1、アプリがダウンしている場合は 0/1 が表示されます。アプリのインスタンスの状態が不明であることを示す ?/1 が表示される場合は、アプリの URL をブラウザーにコピーしてアプリが応答するかどうかをチェックできます。あるいは、`cf logs appname` コマンドを使用してログを追尾すれば、アプリがログ内容を生成しているかどうかが分かります。
+あるアプリのインスタンスが 1 つあるとすると、cf apps コマンドからの応答のインスタンス欄には、アプリが稼働している場合は 1/1、アプリがダウンしている場合は 0/1 が表示されます。 アプリのインスタンスの状態が不明であることを示す ?/1 が表示される場合は、アプリの URL をブラウザーにコピーしてアプリが応答するかどうかをチェックできます。あるいは、`cf logs appname` コマンドを使用してログを追尾すれば、アプリがログ内容を生成しているかどうかが分かります。
 
 ```
 cf apps
@@ -201,7 +203,6 @@ cf create-service DataWorks free my_dataworks
 
 スペースを作成します。
 
-
 ```
 cf create-space space_name [-o] [-q]
 ```
@@ -216,7 +217,7 @@ cf create-space space_name [-o] [-q]
    <dt>*-o* (オプション)</dt>
    <dd>その中にスペースを作成する組織の名前。</dd>
    <dt>*-q* (オプション)</dt>
-   <dd>新しく作成されるスペースに割り当てる割り当て量。指定されない場合、デフォルト割り当て量が自動的に割り当てられます。</dd>
+   <dd>新しく作成されるスペースに割り当てる割り当て量。 指定されない場合、デフォルト割り当て量が自動的に割り当てられます。</dd>
     </dl>
 
 <strong>例</strong>:
@@ -247,8 +248,7 @@ cf delete appname [-f] [-r]
    <dt>*-f* (オプション)</dt>
    <dd>確認を行わずに、アプリケーションを強制的に削除します。</dd>
    <dt>*-r* (オプション)</dt>
-   <dd>アプリケーションに関連付けられたすべてのドメイン・ネームを削除します。
-</dd>
+   <dd>アプリケーションに関連付けられたすべてのドメイン・ネームを削除します。 </dd>
     </dl>
 
 <strong>例</strong>:
@@ -283,7 +283,6 @@ cf delete my_app -f -r
 
 スペースを削除します。
 
-
 ```
 cf delete-space space_name [-f]
 ```
@@ -298,7 +297,7 @@ cf delete-space space_name [-f]
    <dt>*-f* (オプション)</dt>
    <dd>確認を行わずに、スペースを強制的に削除します。</dd>
    *注:* スペースの削除は、元に戻すことのできない操作です。
-</dl>
+    </dl>
 
 <strong>例</strong>:
 
@@ -390,10 +389,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
+{{site.data.keyword.Bluemix_notm}} にログインします。 [フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。 
 
-{{site.data.keyword.Bluemix_notm}} にログインします。[フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。 
-
-**注**: {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを使用してログインすることもできます。ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。API キーの作成について詳しくは、『[API キーの管理](/docs/iam/apikeys.html)』を参照してください。
+**注**: {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを使用してログインすることもできます。 ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。 API キーの作成について詳しくは、『[API キーの管理](/docs/iam/apikeys.html)』を参照してください。
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -410,15 +408,15 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>自分のユーザー名。</dd>
 <dt>*-p* password (オプション)</dt>
 <dd>自分のパスワード。</dd>
-<dd>*重要:* コマンド・ライン・インターフェースで *-p* パラメーターを使用してパスワードを指定すると、パスワードがコマンド・ライン履歴に記録される可能性があります。セキュリティー上の理由から、パスワードの指定には -p パラメーターを使用しないようにしてください。代わりに、コマンド・ライン・インターフェースでプロンプトが出された場合にパスワードを入力します。</dd>
+<dd>*重要:* コマンド・ライン・インターフェースで *-p* パラメーターを使用してパスワードを指定すると、パスワードがコマンド・ライン履歴に記録される可能性があります。 セキュリティー上の理由から、パスワードの指定には -p パラメーターを使用しないようにしてください。 代わりに、コマンド・ライン・インターフェースでプロンプトが出された場合にパスワードを入力します。</dd>
 <dt>*-sso*</dt>
-<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。IBM ID でログインする場合は、その必要はありません。フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
+<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。 IBM ID でログインする場合は、その必要はありません。 フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。 SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
 <dt>*-o*organization_name</dt>
 <dd>ログイン先の組織の名前。</dd>
 <dt>*-s*space_name</dt>
 <dd>ログイン先のスペースの名前。</dd>
 <dt>*--skip-ssl-validation* (オプション)</dt>
-<dd>SSL 検証プロセスを使用不可にします。このパラメーターを使用すると、セキュリティーの問題が起きる可能性があります。</dd>
+<dd>SSL 検証プロセスを使用不可にします。 このパラメーターを使用すると、セキュリティーの問題が起きる可能性があります。</dd>
 </dl>
 
 *注:* このコマンドの *-p* パラメーターでパスワードを指定すると、パスワードがシェル・コマンドのヒストリー・ファイルに記録される可能性があり、ローカル・オペレーティング・システムの他のユーザーに見られる可能性もあります。
@@ -449,7 +447,7 @@ cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
 ```
 {: codeblock}
 
-定義されているエンドポイント `https://api.ng.bluemix.net` を使用し、API キーを使用して {{site.data.keyword.Bluemix_notm}} にログインします。`apikey` をユーザー名として使用し、実際の API キーをパスワードとして使用します。
+定義されているエンドポイント `https://api.ng.bluemix.net` を使用し、API キーを使用して {{site.data.keyword.Bluemix_notm}} にログインします。 `apikey` をユーザー名として使用し、実際の API キーをパスワードとして使用します。
 ```
 cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
@@ -494,8 +492,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-マーケットプレイスで提供されているすべてのサービスをリストします。このコマンドによってリストされるサービスは、{{site.data.keyword.Bluemix_notm}} カタログにも表示されます。
-
+マーケットプレイスで提供されているすべてのサービスをリストします。 このコマンドによってリストされるサービスは、{{site.data.keyword.Bluemix_notm}} カタログにも表示されます。
 
 ```
 cf marketplace
@@ -530,25 +527,25 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname (必須)</dt>
 <dd>アプリケーションの名前。</dd>
 <dt>*-b* buildpack_name (オプション)</dt>
-<dd>ビルドパックの名前。buildpack_name には、カスタム・ビルドパックを、名前 (例: liberty-for-java) または Git URL (例: https://github.com/cloudfoundry/java-buildpack.git) で指定するか、または、ブランチまたはタグを伴う Git URL (例えば、v3.3.0 タグの場合は https://github.com/cloudfoundry/java-buildpack.git#v3.3.0) で指定できます。</dd>
+<dd>ビルドパックの名前。 buildpack_name には、カスタム・ビルドパックを、名前 (例: liberty-for-java) または Git URL (例: https://github.com/cloudfoundry/java-buildpack.git) で指定するか、または、ブランチまたはタグを伴う Git URL (例えば、v3.3.0 タグの場合は https://github.com/cloudfoundry/java-buildpack.git#v3.3.0) で指定できます。</dd>
 <dt>*-c* start_command (オプション)</dt>
-<dd>アプリケーションの開始コマンド。デフォルトの開始コマンドを使用するには、このオプションに値 null を指定します。</dd>
+<dd>アプリケーションの開始コマンド。 デフォルトの開始コマンドを使用するには、このオプションに値 null を指定します。 </dd>
 <dt>*-f* manifest_path (オプション)</dt>
-<dd>マニフェスト・ファイルへのパス。デフォルトのマニフェスト・ファイルは、アプリケーションのルート・ディレクトリーの下にある manifest.yml です。</dd>
+<dd>マニフェスト・ファイルへのパス。 デフォルトのマニフェスト・ファイルは、アプリケーションのルート・ディレクトリーの下にある manifest.yml です。</dd>
 <dt>*-i* instance_number (オプション)</dt>
 <dd>インスタンスの番号。</dd>
 <dt>*-k* disk_limit (オプション)</dt>
-<dd>アプリケーションのディスク制限。可能な値は、*256M*、*1024M*、または *1G* です。</dd>
+<dd>アプリケーションのディスク制限。 可能な値は、*256M*、*1024M*、または *1G* です。</dd>
 <dt>*-m* memory_limit (オプション)</dt>
-<dd>アプリケーションのメモリー制限。可能な値は、*256M*、*1024M*、または *1G* です。</dd>
+<dd>アプリケーションのメモリー制限。 可能な値は、*256M*、*1024M*、または *1G* です。</dd>
 <dt>*-n* host_name (オプション)</dt>
 <dd>アプリケーションのホスト名。例えば、*my-subdomain* とします。</dd>
 <dt>*-p* app_path (オプション)</dt>
 <dd>アプリケーション・ディレクトリーまたはアプリケーション・アーカイブ・ファイルへのパス。</dd>
 <dt>*-s* stack_name (オプション)</dt>
-<dd>アプリケーションを実行するためのスタック。スタックは、オペレーション・システムを含む、事前ビルド済みのファイル・システムです。{{site.data.keyword.Bluemix_notm}} 内の使用可能なスタックを表示するには、`cf stacks` を使用します。</dd>
+<dd>アプリケーションを実行するためのスタック。 スタックは、オペレーション・システムを含む、事前ビルド済みのファイル・システムです。 {{site.data.keyword.Bluemix_notm}} 内の使用可能なスタックを表示するには、`cf stacks` を使用します。</dd>
 <dt>*-t* timeout (オプション)</dt>
-<dd>アプリケーションが開始するための最大時間 (秒単位)。他のサーバー・サイドのタイムアウトがこの値をオーバーライドする場合があります。</dd>
+<dd>アプリケーションが開始するための最大時間 (秒単位)。 他のサーバー・サイドのタイムアウトがこの値をオーバーライドする場合があります。</dd>
 <dt>*--no-hostname* (オプション)</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} システム・ドメインをこのアプリケーションにマップします。</dd>
 <dt>*--no-manifest* (オプション)</dt>
@@ -672,14 +669,14 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-アプリケーション・コンテナーに安全にアクセスします。`cf ssh` コマンドを使用して、特定のアプリケーション・コンテナー・インスタンスでの、対話式 SSH セッションのセットアップ、リモート・コマンドの実行、ファイルの転送、およびポート転送のセットアップを行うことができます。
+アプリケーション・コンテナーに安全にアクセスします。 `cf ssh` コマンドを使用して、特定のアプリケーション・コンテナー・インスタンスでの、対話式 SSH セッションのセットアップ、リモート・コマンドの実行、ファイルの転送、およびポート転送のセットアップを行うことができます。
 
 ```
 cf ssh
 ```
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
-デフォルトでは、Diego アプリケーションには SSH アクセスが有効になります。`cf ssh-enabled` コマンドを使用して SSH アクセスが有効かどうかを検証することができ、アクセスが無効であった場合は `cf enable-ssh` コマンドを使用して有効にすることができます。 
+デフォルトでは、Diego アプリケーションには SSH アクセスが有効になります。 `cf ssh-enabled` コマンドを使用して SSH アクセスが有効かどうかを検証することができ、アクセスが無効であった場合は `cf enable-ssh` コマンドを使用して有効にすることができます。 
 
 <strong>コマンド・オプション</strong>:
 
@@ -689,7 +686,7 @@ cf ssh
 <dt>-c</dt>
 <dd>実行するリモート・コマンドを指定します。</dd>
 <dt>-i</dt>
-<dd>アプリケーションの特定インスタンスを対象にします。指定されないと、アプリケーションの最初のインスタンス (索引 0 のインスタンス) が使用されます。</dd>
+<dd>アプリケーションの特定インスタンスを対象にします。 指定されないと、アプリケーションの最初のインスタンス (索引 0 のインスタンス) が使用されます。</dd>
 <dt>-L</dt>
 <dd>マシン上の出力ポートをアプリケーション VM 上の入力ポートにバインドするローカル・ポート転送を有効にします。</dd>
 <dt>-N</dt>
@@ -725,7 +722,7 @@ $ cf ssh -N -T -L 7777:localhost:8888 my_app
 ## cf stacks
 {: #cf_stacks}
 
-すべてのスタックがリストされます。スタックは、アプリを実行できるオペレーティング・システムを含む、ビルド前のファイル・システムです。
+すべてのスタックがリストされます。 スタックは、アプリを実行できるオペレーティング・システムを含む、ビルド前のファイル・システムです。
 
 ```
 cf stacks
@@ -805,7 +802,9 @@ cf コマンド・ライン・インターフェースのバージョンを表�
 ```
 cf -v
 ```
-<strong>前提条件</strong>: なし。<strong>コマンド・オプション</strong>: なし。
+<strong>前提条件</strong>: なし。
+
+<strong>コマンド・オプション</strong>: なし。
 
 <strong>例</strong>:
 

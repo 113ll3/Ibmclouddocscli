@@ -23,12 +23,12 @@ lastupdated: "2017-01-12"
 IBM Containers CLI は、{{site.data.keyword.Bluemix_notm}} でコンテナーおよびコンテナー・グループを管理するための {{site.data.keyword.Bluemix_notm}} CLI プラグインです。  
 {: shortdesc}
 
-**注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。前提条件となるアクションのないコマンドでは、**なし**とリストされています。それ以外の場合、前提条件には以下のアクションのうちの 1 つ以上が含まれます。
+**注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。 前提条件となるアクションのないコマンドでは、**なし**とリストされています。 それ以外の場合、前提条件には以下のアクションのうちの 1 つ以上が含まれます。
 <dl>
 <dt>エンドポイント</dt>
 <dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
 <dt>ログイン</dt>
-<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。フェデレーテッド ID でログインする場合は、「--sso」オプションを使用し、ワンタイム・パスコードを使って認証します。</dd>
+<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。 フェデレーテッド ID でログインする場合は、「--sso」オプションを使用し、ワンタイム・パスコードを使って認証します。</dd>
 <dt>ターゲット</dt>
 <dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
 <dt>Docker</dt>
@@ -36,7 +36,7 @@ IBM Containers CLI は、{{site.data.keyword.Bluemix_notm}} でコンテナー�
 </dl>
 
 <table summary="Bluemix 上のコンテナーの管理に使用することができる bluemix コマンド。">
- <caption>表 1. Bluemix 上のコンテナーを管理するためのコマンド</caption>
+<caption>表 1. Bluemix 上のコンテナーを管理するためのコマンド</caption>
  <thead>
  <th colspan="5">Bluemix 上のコンテナーを管理するためのコマンド</th>
  </thead>
@@ -125,7 +125,7 @@ IBM Containers CLI は、{{site.data.keyword.Bluemix_notm}} でコンテナー�
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-実行中のコンテナーを制御するか、その出力を表示します。終了してコンテナーを停止するには `CTRL+C` を使用します。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [attach ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} コマンドを参照してください。
+実行中のコンテナーを制御するか、その出力を表示します。 終了してコンテナーを停止するには `CTRL+C` を使用します。 このコマンドは Docker CLI を呼び出します。 詳細については、Docker ヘルプで [attach ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -139,7 +139,7 @@ bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
    <dt>--no-stdin (オプション)</dt>
    <dd>標準入力を含めません。</dd>
    <dt>--sig-proxy (オプション)</dt>
-   <dd>受信したすべてのシグナルをプロセスに伝達します。デフォルト値は <i>true</i> です。</dd>
+   <dd>受信したすべてのシグナルをプロセスに伝達します。 デフォルト値は <i>true</i> です。</dd>
    <dt><i>CONTAINER</i> (必須)</dt>
    <dd>コンテナーの名前または ID。</dd>
     </dl>
@@ -156,7 +156,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-IBM Containers ビルド・サービスを呼び出して、Docker イメージをローカルにビルドするか、またはプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [build ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} コマンドを参照してください。
+IBM Containers ビルド・サービスを呼び出して、Docker イメージをローカルにビルドするか、またはプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドします。 このコマンドは Docker CLI を呼び出します。 詳細については、Docker ヘルプで [build ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -169,12 +169,12 @@ bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFI
    <dt>-t <i>TAG</i>|--tag <i>TAG</i> (必須)</dt>
    <dd>作成されたイメージに適用するリポジトリー名。</dd>
    <dt>--no-cache (オプション)</dt>
-   <dd>イメージをビルドするときにキャッシュを使用しません。デフォルトは、<i>false</i> です。</dd>
+   <dd>イメージをビルドするときにキャッシュを使用しません。 デフォルトは、<i>false</i> です。</dd>
    <dt>--pull (オプション)</dt>
    <dd>レジストリーからベース・イメージを (それがキャッシュさ
 れている場合でも) プルしようとします。</dd>
    <dt>-q|--quiet (オプション)</dt>
-   <dd>コンテナーが生成する詳細出力を抑止します。デフォルトは、<i>false</i> です。</dd>
+   <dd>コンテナーが生成する詳細出力を抑止します。 デフォルトは、<i>false</i> です。</dd>
    <dt><i>DOCKERFILE_LOCATION</i> (必須)</dt>
    <dd>ローカル・ホスト上の Dockerfile およびコンテキストのパス。</dd>
     </dl>
@@ -182,8 +182,7 @@ bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFI
 <strong>例</strong>:
 
 次の例は、
-*myimage* という名前のイメージをビルドする要求です。
-ビルドで使用される Dockerfile および他の成果物は、コマンドが実行されるディレクトリーと同じディレクトリー内にあります。レジストリーおよび名前空間がイメージ名と共に含まれているため、イメージは組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドされます。
+*myimage* という名前のイメージをビルドする要求です。 ビルドで使用される Dockerfile および他の成果物は、コマンドが実行されるディレクトリーと同じディレクトリー内にあります。 レジストリーおよび名前空間がイメージ名と共に含まれているため、イメージは組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドされます。
 ```
 bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage
 ```
@@ -191,7 +190,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-コンテナーとローカル・ファイル・システムの間でファイルまたはフォルダーをコピーします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [cp ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} コマンドを参照してください。
+コンテナーとローカル・ファイル・システムの間でファイルまたはフォルダーをコピーします。 このコマンドは Docker CLI を呼び出します。 詳細については、Docker ヘルプで [cp ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} コマンドを参照してください。
 
 
 ## bluemix ic cpi
@@ -210,7 +209,7 @@ bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
    <dt><i>SOURCE_IMAGE</i> (必須)</dt>
    <dd>ソース・リポジトリーおよびイメージの名前。</dd>
    <dt><i>DESTINATION_IMAGE</i> (必須)</dt>
-   <dd>プライベート {{site.data.keyword.Bluemix_notm}} リポジトリー URL (名前空間と宛先イメージ名を含む)。イメージのタグはオプションです。</dd>
+   <dd>プライベート {{site.data.keyword.Bluemix_notm}} リポジトリー URL (名前空間と宛先イメージ名を含む)。 イメージのタグはオプションです。</dd>
    </dl>
 
 <strong>例</strong>:
@@ -221,7 +220,7 @@ bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
 bluemix ic cpi source_repository/source_image_name private_registry_URL/destination_image_name:tag
 ```
 
-`sinatra` イメージを `training` リポジトリーからプライベート・リポジトリー `registry.ng.bluemix.net/mynamespace` にコピーし、そのイメージの名前を `mysinatra` にします。イメージ `mysinatra` 用にタグ `v1` を追加します。
+`sinatra` イメージを `training` リポジトリーからプライベート・リポジトリー `registry.ng.bluemix.net/mynamespace` にコピーし、そのイメージの名前を `mysinatra` にします。 イメージ `mysinatra` 用にタグ `v1` を追加します。
 
 ```
 bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
@@ -231,7 +230,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ## bluemix ic exec
 {: #bluemix_ic_exec}
 
-コンテナー内でコマンドを実行します。詳細については、Docker ヘルプで [exec ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} コマンドを参照してください。
+コンテナー内でコマンドを実行します。 詳細については、Docker ヘルプで [exec ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -245,7 +244,7 @@ bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
    <dt>-d|--detach (オプション)</dt>
    <dd>バックグラウンドで指定されたコマンドを実行します。</dd>
    <dt>-it (オプション)</dt>
-   <dd>対話モード。標準入力が表示されている状態を維持します。終了するには <i>exit</i> と入力します。</dd>
+   <dd>対話モード。 標準入力が表示されている状態を維持します。 終了するには <i>exit</i> と入力します。</dd>
    <dt>-u <i>USER</i>|--user <i>USER</i> (オプション)</dt>
    <dd>ユーザー名。</dd>
    <dt><i>CONTAINER</i> (必須)</dt>
@@ -286,42 +285,42 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dl>
     <dt><i>IMAGE_NAME</i> (必須)</dt>
    <dd>コンテナー・グループ内の各コンテナー・インスタンスに含まれるイ
-メージ。イメージの後にコマンドをリストできますが、イメージの後にオプションを置かないでください。イメージを指定する前に、すべてのオプションを含めてください。<br><br>組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内のイメージを使用する場合、形式 <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i> でイメージを指定します。<br><br>IBM Containers によって提供されるイメージを使用する場合、組織の名前空間を含めないでください。形式 <i>registry.ng.bluemix.net/IMAGE</i> でイメージを指定してください。</dd>
+メージ。 イメージの後にコマンドをリストできますが、イメージの後にオプションを置かないでください。 イメージを指定する前に、すべてのオプションを含めてください。 <br><br>組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内のイメージを使用する場合、形式 <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i> でイメージを指定します。 <br><br>IBM Containers によって提供されるイメージを使用する場合、組織の名前空間を含めないでください。 形式 <i>registry.ng.bluemix.net/IMAGE</i> でイメージを指定してください。 </dd>
    <dt>--name <i>GROUP_NAME</i> (required)</dt>
-   <dd>グループに名前を割り当てます。<i>-n</i> は推奨されません。<br>
-   <strong>ヒント:</strong> コンテナー名の先頭は文字でなければなりません。名前には、大文字、小文字、数字、ピリオド (.)、下線 (_)、およびハイフン (-) を使用できます。</dd>
+   <dd>グループに名前を割り当てます。 <i>-n</i> は推奨されません。<br>
+   <strong>ヒント:</strong> コンテナー名の先頭は文字でなければなりません。 名前には、大文字、小文字、数字、ピリオド (.)、下線 (_)、およびハイフン (-) を使用できます。</dd>
    <dt>-m <i>MEMORY_SIZE</i>|--memory <i>MEMORY_SIZE</i> (オプション)</dt>
-   <dd>グループにメモリー制限を MB 単位で割り当てます。CLI からコンテナー・グループを作成する場合、各コンテナー・インスタンスのデフォルト値は <i>64</i> MB です。{{site.data.keyword.Bluemix_notm}} ダッシュボードからコンテナー・グループを作成する場合、各コンテナー・インスタンスのデフォルト値は <i>256</i> MB です。受け入れられる値は、<i>64</i>、<i>256</i>、<i>512</i>、<i>1024</i>、および <i>2048</i> です。メモリー限度が割り当てられた後、その値を変更することはできません。</dd>
+   <dd>グループにメモリー制限を MB 単位で割り当てます。 CLI からコンテナー・グループを作成する場合、各コンテナー・インスタンスのデフォルト値は <i>64</i> MB です。 {{site.data.keyword.Bluemix_notm}} ダッシュボードからコンテナー・グループを作成する場合、各コンテナー・インスタンスのデフォルト値は <i>256</i> MB です。 受け入れられる値は、<i>64</i>、<i>256</i>、<i>512</i>、<i>1024</i>、および <i>2048</i> です。 メモリー限度が割り当てられた後、その値を変更することはできません。</dd>
    <dt>-n <i>HOSTNAME</i>|--hostname <i>HOSTNAME</i> (オプション)</dt>
-   <dd>ホスト名 (<i>mycontainerhost</i> など)。ホストとドメインが結合して、完全なパブリック経路 URL (例えば
-<i>http://mycontainerhost.mybluemix.net</i>) を形成します。<i>bluemix ic group-inspect</i> コマンドを使用してコンテナーの詳細をレビューすると、ホストとドメインが経路として一緒にリストされます。</dd>
+   <dd>ホスト名 (<i>mycontainerhost</i> など)。 ホストとドメインが結合して、完全なパブリック経路 URL (例えば
+<i>http://mycontainerhost.mybluemix.net</i>) を形成します。 <i>bluemix ic group-inspect</i> コマンドを使用してコンテナーの詳細をレビューすると、ホストとドメインが経路として一緒にリストされます。</dd>
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (オプション)</dt>
-   <dd>通常は、このドメインは <i>.mybluemix.net</i> です。ホストとドメインが結合して、完全なパブリック経路 URL (例えば <i>http://mycontainerhost.mybluemix.net</i>) を形成します。<i>bluemix ic group-inspect</i> コマンドを使用してコンテナーの詳細をレビューすると、ホストとドメインが経路として一緒にリストされます。</dd>
+   <dd>通常は、このドメインは <i>.mybluemix.net</i> です。 ホストとドメインが結合して、完全なパブリック経路 URL (例えば <i>http://mycontainerhost.mybluemix.net</i>) を形成します。 <i>bluemix ic group-inspect</i> コマンドを使用してコンテナーの詳細をレビューすると、ホストとドメインが経路として一緒にリストされます。</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i> (オプション)</dt>
-   <dd>環境変数を設定します。複数のキーは別々にリストしてください。引用符を含める場合、環境変数名と値の両方を囲むように指定します。
-例えば、`-e "key1=value1" -e "key2=value2" -e
-"key3=value3"` のようにします。指定可能な環境変数のうち、一般的に使用されるものを次の表に示します。</dd>
+   <dd>環境変数を設定します。 複数のキーは別々にリストしてください。 引用符を含める場合、環境変数名と値の両方を囲むように指定します。 例えば、`-e "key1=value1" -e "key2=value2" -e
+"key3=value3"` のようにします。  指定可能な環境変数のうち、一般的に使用されるものを次の表に示します。</dd>
     </dl>
 
 
-|  環境変数|     説明 |
+|  環境変数                              |     説明                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。|
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。|
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | コンテナー内でモニターされるログ・ファイルを追加します。`LOG_LOCATIONS` 環境変数をログ・ファイルへのパスと共に組み込んでください。|
+| CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。 `CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。 このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。 ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。 |
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。 このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。 複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。 |
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | コンテナー内でモニターされるログ・ファイルを追加します。 `LOG_LOCATIONS` 環境変数をログ・ファイルへのパスと共に組み込んでください。 |
 {: caption="表 2. よく使用される環境変数" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (オプション)</dt>
-   <dd> ファイルから環境変数をインポートします。ここで、ENVFILE はローカル・ディレクトリー上のファイルのパスです。ファイル内の各行が、1 つの key=value ペアを表します。</dd>
+   <dd> ファイルから環境変数をインポートします。ここで、ENVFILE はローカル・ディレクトリー上のファイルのパスです。 ファイル内の各行が、1 つの key=value ペアを表します。 </dd>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro] (オプション)</dt>
-   <dd><i>VolumeId:ContainerPath[:ro]</i> 形式で詳細を指定して、コンテナーにボリュームを接続します。<ul>
+   <dd><i>VolumeId:ContainerPath[:ro]</i> 形式で詳細を指定して、コンテナーにボリュームを接続します。
+   <ul>
    <li><i>VOLUME</i>: ボリュームの ID または名前。</li>
    <li><i>CONTAINER_PATH</i>: コンテナー内でのボリュームへの絶対パス。</li>
-   <li>ro (オプション):<i>ro</i> を指定すると、ボリュームはデフォルトの読み取り/書き込みではなく読み取り専用になります。</li></ul>
+   <li>ro (オプション): <i>ro</i> を指定すると、ボリュームはデフォルトの読み取り/書き込みではなく読み取り専用になります。</li></ul>
    </dd>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i> (オプション)</dt>
-   <dd>HTTP トラフィックのポートを公開します。グループ内のコンテナーは、この HTTP ポートを listen する必要があります。HTTPS 要求を行うことはできません。コンテナー・グループに対して複数のポートを含めることはできません。<br><br>ポートを指定したら、同じ {{site.data.keyword.Bluemix_notm}} スペース内でホストにアクセスしようとする {{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーがアプリを使用できるように設定します。これにより、{{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーは、そのポートを使用して、同じ {{site.data.keyword.Bluemix_notm}} スペース内のホストおよびアプリにアクセスできるようになります。使用するイメージの Dockerfile 内にポートが指定されている場合、そのポートを含めてください。<br>
+   <dd>HTTP トラフィックのポートを公開します。 グループ内のコンテナーは、この HTTP ポートを listen する必要があります。 HTTPS 要求を行うことはできません。 コンテナー・グループに対して複数のポートを含めることはできません。 <br><br>ポートを指定したら、同じ {{site.data.keyword.Bluemix_notm}} スペース内でホストにアクセスしようとする {{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーがアプリを使用できるように設定します。 これにより、{{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーは、そのポートを使用して、同じ {{site.data.keyword.Bluemix_notm}} スペース内のホストおよびアプリにアクセスできるようになります。 使用するイメージの Dockerfile 内にポートが指定されている場合、そのポートを含めてください。 <br>
    <strong>ヒント</strong>: <ul>
    <li>IBM 認定 Liberty Server イメージ、またはこのイメージの変更版の場合、ポート 9080 を入力します。</li>
    <li>IBM 認定 Node.js イメージ、またはこのイメージの変更版の場合、ポート 8000 を入力します。</li>
@@ -330,20 +329,19 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dt>-P (オプション)</dt>
    <dd>すべてのポートを公開します。</dd>
    <dt>--min <i>MIN_INSTANCE_COUNT</i> (オプション)</dt>
-   <dd>インスタンスの最小数。デフォルトは 1 です。インスタンスの最小数を設定した場合、その値をコンテナー・グループ作成後に変更することはできません。</dd>
+   <dd>インスタンスの最小数。 デフォルトは 1 です。インスタンスの最小数を設定した場合、その値をコンテナー・グループ作成後に変更することはできません。</dd>
    <dt>--max <i>MAX_INSTANCE_COUNT</i> (オプション)</dt>
-   <dd>インスタンスの最大数。デフォルトは 2 です。インスタンスの最大数を設定した場合、その値をコンテナー・グループ作成後に変更することはできません。</dd>
+   <dd>インスタンスの最大数。 デフォルトは 2 です。インスタンスの最大数を設定した場合、その値をコンテナー・グループ作成後に変更することはできません。</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (オプション)</dt>
-   <dd>必要なインスタンス数。デフォルトは 2 です。</dd>
+   <dd>必要なインスタンス数。 デフォルトは 2 です。</dd>
    <dt>--auto (オプション)</dt>
    <dd>コンテナー・グループが作成され、自動リカバリーが有効にされてい
 る場合、IBM Containers は、割り当てられたポートへの HTTP 要求を使用して各インスタンスの正常性を検査します。<br>
-その後 2 回の 90 秒間隔のうちにコンテナー・インスタンスから応答を受け取らなければ、そのインスタンスは削除され、新しいインスタンスに置き換えられます。コンテナーが応答すればアクションは行われません。このプロセスは連続して繰り返されます。30 分の時間枠の間に、グループ・メンバーとなった異なるコンテナーの総数が、最大グループ・サイズの 3 倍以上になった場合、そのコンテナー・グループに対する自動リカバリーは永続的に無効になります。自動リカバリーを再度有効にするには、コンテナー・グループを再作成する必要があります。</dd>
+   その後 2 回の 90 秒間隔のうちにコンテナー・インスタンスから応答を受け取らなければ、そのインスタンスは削除され、新しいインスタンスに置き換えられます。 コンテナーが応答すればアクションは行われません。 このプロセスは連続して繰り返されます。 30 分の時間枠の間に、グループ・メンバーとなった異なるコンテナーの総数が、最大グループ・サイズの 3 倍以上になった場合、そのコンテナー・グループに対する自動リカバリーは永続的に無効になります。 自動リカバリーを再度有効にするには、コンテナー・グループを再作成する必要があります。</dd>
   <dt>--anti (オプション)</dt>
-  <dd> アンチアフィニティーを使用して、コンテナー・グループの高可用性を高めます。--anti オプションを指定すると、グループ内の各コンテナー・インスタンスが、強制的に別個の物理計算ノードに配置されます。これにより、ハードウェア障害でグループ内の全コンテナーがクラッシュする可能性が低下します。各 {{site.data.keyword.Bluemix_notm}} 地域および組織でデプロイメントに使用可能な計算ノードのセットは限られているため、グループ・サイズが大きい場合、このオプションを使用できないことがあります。デプロイメントが成功しない場合は、グループ内のコンテナー・インスタンスの数を減らすか、--anti オプションを削除してください。</dd>
+  <dd> アンチアフィニティーを使用して、コンテナー・グループの高可用性を高めます。 --anti オプションを指定すると、グループ内の各コンテナー・インスタンスが、強制的に別個の物理計算ノードに配置されます。これにより、ハードウェア障害でグループ内の全コンテナーがクラッシュする可能性が低下します。 各 {{site.data.keyword.Bluemix_notm}} 地域および組織でデプロイメントに使用可能な計算ノードのセットは限られているため、グループ・サイズが大きい場合、このオプションを使用できないことがあります。 デプロイメントが成功しない場合は、グループ内のコンテナー・インスタンスの数を減らすか、--anti オプションを削除してください。 </dd>
    <dt><i>CMD</i> (必須)</dt>
-   <dd>コンテナー・グループに渡されて実行されるコマンドと引数。このコマンドは長時間実行コマンドでなければなりません。実行時間があまり長くない一時的なコマンド (例えば、<i>/bin/date</i> など) は、コンテナーがクラッシュする原因となる可能性があるため、使用しないでください。<br> 
-<strong>注:</strong> <ul>
+   <dd>コンテナー・グループに渡されて実行されるコマンドと引数。 このコマンドは長時間実行コマンドでなければなりません。 実行時間があまり長くない一時的なコマンド (例えば、<i>/bin/date</i> など) は、コンテナーがクラッシュする原因となる可能性があるため、使用しないでください。  <br> <strong>注:</strong> <ul>
    <li>コマンドおよびその引数は、<i>bluemix ic run</i> コマンド・ラインの末尾に指定する必要があります。</li>
    <li>コマンド引数にハイフン (-) が含まれる場合 (前のコマンド例の <i>-c</i> のような場合)、コマンドの前にはハイフンを 2 つ (--) 付ける必要があります。</li>
    </ul></dd>
@@ -364,7 +362,7 @@ IBM Containers によって提供される `registry.ng.bluemix.net/ibmnode` イ
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
 ```
 
-`registry.ng.bluemix.net/ibmliberty` イメージを使用して、スケーラブル・グループ `mygroup` を自動リカバリーを有効にして作成します。ポートは `9080`、ホスト名は `mycontainerhost`、ドメイン名は `mybluemix.net` です。
+`registry.ng.bluemix.net/ibmliberty` イメージを使用して、スケーラブル・グループ `mygroup` を自動リカバリーを有効にして作成します。 ポートは `9080`、ホスト名は `mycontainerhost`、ドメイン名は `mybluemix.net` です。
 ```
 bluemix ic group-create -p 9080 --auto -n mycontainerhost -d mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
 ```
@@ -468,12 +466,11 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 <strong>コマンド・オプション</strong>:
  <dl>
    <dt>--anti (オプション)</dt>
-   <dd>アンチアフィニティーを使用して、コンテナー・グループの高可用性を高めます。--anti オプションを指定すると、グループ内の各コンテナー・インスタンスが、強制的に別個の物理計算ノードに配置されます。これにより、ハードウェア障害でグループ内の全コンテナーがクラッシュする可能性が低下します。各 {{site.data.keyword.Bluemix_notm}} 地域および組織でデプロイメントに使用可能な計算ノードのセットは限られているため、グループ・サイズが大きい場合、このオプションを使用できないことがあります。デプロイメントが成功しない場合は、グループ内のコンテナー・インスタンスの数を減らすか、--anti オプションを削除してください。</dd>
+   <dd>アンチアフィニティーを使用して、コンテナー・グループの高可用性を高めます。 --anti オプションを指定すると、グループ内の各コンテナー・インスタンスが、強制的に別個の物理計算ノードに配置されます。これにより、ハードウェア障害でグループ内の全コンテナーがクラッシュする可能性が低下します。 各 {{site.data.keyword.Bluemix_notm}} 地域および組織でデプロイメントに使用可能な計算ノードのセットは限られているため、グループ・サイズが大きい場合、このオプションを使用できないことがあります。 デプロイメントが成功しない場合は、グループ内のコンテナー・インスタンスの数を減らすか、--anti オプションを削除してください。</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (オプション)</dt>
-   <dd>必要なインスタンス数。デフォルトは <i>2</i> です。</dd>
+   <dd>必要なインスタンス数。 デフォルトは <i>2</i> です。</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>(オプション)</dt>
-   <dd>環境変数を設定します。複数のキーは別々にリストしてください。引用符を含める場合、環境変数名と値の両方を囲むように指定します。
-例えば、`-e "key1=value1" -e "key2=value2" -e "key3=value3"` のようにします。</dd>
+   <dd>環境変数を設定します。 複数のキーは別々にリストしてください。 引用符を含める場合、環境変数名と値の両方を囲むように指定します。 例えば、`-e "key1=value1" -e "key2=value2" -e "key3=value3"` のようにします。</dd>
    <dt><i>GROUP_NAME</i> (必須)</dt>
    <dd>コンテナー・グループ ID または名前。</dd>
    </dl>
@@ -481,7 +478,6 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 <strong>例</strong>:
 
 次の例は、コンテナー・グループ `my_group` を更新する要求です。
-
 ```
 bluemix ic group-update --desired 5 my_group
 ```
@@ -508,7 +504,7 @@ bluemix ic groups [-q]
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内の使用可能なすべてのイメージのリストを表示します。詳細については、Docker ヘルプで [images ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} コマンドを参照してください。リストには、イメージ ID、作成日、およびイメージ名が含まれます。
+組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内の使用可能なすべてのイメージのリストを表示します。 詳細については、Docker ヘルプで [images ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} コマンドを参照してください。 リストには、イメージ ID、作成日、およびイメージ名が含まれます。
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -540,7 +536,7 @@ bluemix ic images
 ## bluemix ic info
 {: #bluemix_ic_info}
 
-コンテナー・クラウド・サービス・インスタンスの状態を説明する情報を表示します。この情報に含まれるのは、コンテナーの限度、コンテナーの使用状況、実行中のコンテナー、メモリーの限度、メモリーの使用状況、浮動 IP アドレスの限度、浮動 IP アドレスの使用状況、CCS ホスト URL、レジストリー・ホスト URL、およびデバッグ・モード状況です。
+コンテナー・クラウド・サービス・インスタンスの状態を説明する情報を表示します。 この情報に含まれるのは、コンテナーの限度、コンテナーの使用状況、実行中のコンテナー、メモリーの限度、メモリーの使用状況、浮動 IP アドレスの限度、浮動 IP アドレスの使用状況、CCS ホスト URL、レジストリー・ホスト URL、およびデバッグ・モード状況です。
 
 ```
 bluemix ic info
@@ -560,7 +556,7 @@ bluemix ic init
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
-**注:** 初期化を行う前に、Docker CLI (docker) がインストールされ、PATH 環境変数内に構成されていることを確認してください。別の地域に切り替えるには、`bluemix region-set` コマンドを使用します。
+**注:** 初期化を行う前に、Docker CLI (docker) がインストールされ、PATH 環境変数内に構成されていることを確認してください。 別の地域に切り替えるには、`bluemix region-set` コマンドを使用します。
 
 <strong>例</strong>:
 
@@ -574,7 +570,7 @@ bluemix region-set us-south
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-コンテナーに関する情報を表示します。詳細については、Docker ヘルプで [inspect ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} コマンドを参照してください。
+コンテナーに関する情報を表示します。 詳細については、Docker ヘルプで [inspect ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -675,7 +671,7 @@ bluemix ic ip-request [-q]
 
 浮動 IP アドレスをそのコンテナーからアンバインドします。
 
-パブリック IP アドレスは、IBM Containers の制限付きリソースです。したがって、スペースに割り当てられていてコンテナーにバインドされていないパブリック IP アドレスは、およそ週 1 回の頻度で無料試用ユーザーから定期的に再要求されます。アンバインドされたパブリック IP アドレスは、従量制課金カスタマーまたはサブスクリプション・カスタマーから再要求されることはありません。
+パブリック IP アドレスは、IBM Containers の制限付きリソースです。 したがって、スペースに割り当てられていてコンテナーにバインドされていないパブリック IP アドレスは、およそ週 1 回の頻度で無料試用ユーザーから定期的に再要求されます。 アンバインドされたパブリック IP アドレスは、従量制課金カスタマーまたはサブスクリプション・カスタマーから再要求されることはありません。
 
 ```
 bluemix ic ip-unbind IP_ADDRESS CONTAINER
@@ -703,7 +699,7 @@ bluemix ic ip-unbind 192.123.12.12 proxy
 ## bluemix ic ips
 {: #bluemix_ic_ips}
 
-ログインしているユーザーが使用可能な浮動 IP アドレスをリストします。このリストには、IP アドレスと、IP アドレスがリンクされている先のコンテナー ID が含まれます。IP アドレスが未使用の場合、コンテナー ID は示されません。
+ログインしているユーザーが使用可能な浮動 IP アドレスをリストします。 このリストには、IP アドレスと、IP アドレスがリンクされている先のコンテナー ID が含まれます。 IP アドレスが未使用の場合、コンテナー ID は示されません。
 
 ```
 bluemix ic ips [-q]
@@ -730,7 +726,7 @@ bluemix ic ips -q
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-コンテナーを停止せずにコンテナー内の実行中のプロセスを停止します。詳細については、Docker ヘルプで [kill ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} コマンドを参照してください。
+コンテナーを停止せずにコンテナー内の実行中のプロセスを停止します。 詳細については、Docker ヘルプで [kill ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -759,7 +755,7 @@ bluemix ic kill proxy
 ## bluemix ic logs
 {: #bluemix_ic_logs}
 
-実行中のコンテナーの出力ログまたはエラー・ログを表示します。詳細については、Docker ヘルプで [logs ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} コマンドを参照してください。
+実行中のコンテナーの出力ログまたはエラー・ログを表示します。 詳細については、Docker ヘルプで [logs ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} コマンドを参照してください。
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -795,14 +791,14 @@ bluemix ic namespace-set NAME
    <dl>
    <dt><i>NAME</i> (必須)</dt>
    <dd>組織のリポジトリー名前空間を (まだ設定されていない場合に) 設定
-する 1 回限りの機能です。名前空間を設定した後、続行する前に、`bluemix ic init` コマンドを使用して IBM Containers を再初期化してください。</dd>
+する 1 回限りの機能です。 名前空間を設定した後、続行する前に、`bluemix ic init` コマンドを使用して IBM Containers を再初期化してください。</dd>
    </dl>
 
 
 ## bluemix ic pause
 {: #pause}
 
-実行中のコンテナー内のすべてのプロセスを休止します。詳細については、Docker ヘルプで [pause ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic unpause](#unpause) コマンドを参照してください。
+実行中のコンテナー内のすべてのプロセスを休止します。 詳細については、Docker ヘルプで [pause ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} コマンドを参照してください。 コンテナーを停止する場合は、[bluemix ic unpause](#unpause) コマンドを参照してください。
 
 ```
 bluemix ic pause CONTAINER
@@ -839,12 +835,12 @@ bluemix ic pause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-コンテナーのポート・マッピングまたは特定のマッピングをリストします。このコマンドは `docker port` コマンドをラップします。詳細については、Docker ヘルプで [port ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} コマンドを参照してください。
+コンテナーのポート・マッピングまたは特定のマッピングをリストします。 このコマンドは `docker port` コマンドをラップします。 詳細については、Docker ヘルプで [port ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} コマンドを参照してください。
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-ログインしているユーザーの名前空間で実行中のコンテナーのリストを表示します。デフォルトでは、このコマンドは実行中のコンテナーのみを表示します。詳細については、Docker ヘルプで [ps ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} コマンドを参照してください。
+ログインしているユーザーの名前空間で実行中のコンテナーのリストを表示します。 デフォルトでは、このコマンドは実行中のコンテナーのみを表示します。 詳細については、Docker ヘルプで [ps ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -858,11 +854,11 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
    <dt>-a|--all (オプション)</dt>
    <dd>実行中のコンテナーも停止状態のコンテナーも、どちらもすべて表示します。</dd>
    <dt>--filter env=<i>SEARCH_CRITERIA</i> (オプション)</dt>
-   <dd>特定の環境変数値を持つコンテナーを検索します。コンテナーの検査時に CLI 応答の「Env」セクションにリストされている任意の環境変数キーまたは値によって、コンテナーをフィルターに掛けることができます。SEARCH_CRITERIA は、検索するキーまたは値に置き換えてください。検索基準は、完全一致突き合わせである必要はありません。</dd>
+   <dd>特定の環境変数値を持つコンテナーを検索します。 コンテナーの検査時に CLI 応答の「Env」セクションにリストされている任意の環境変数キーまたは値によって、コンテナーをフィルターに掛けることができます。 SEARCH_CRITERIA は、検索するキーまたは値に置き換えてください。 検索基準は、完全一致突き合わせである必要はありません。 </dd>
    <dt>-s|--size (オプション)</dt>
    <dd>コンテナーのサイズをリストします。</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i> (オプション)</dt>
-   <dd>最近作成されたコンテナーをリストします。ここで <i>NUM</i> は、最近作成されたコンテナーのうちのいくつのコンテナーを返したいかを指定する数です。<br><br> 例えば、<i>node1</i> から <i>node5</i> までのコンテナーを順次作成した場合、コマンド <i>bluemix ic ps --limit 2</i> は、作成されたコンテナーのうちの最新の 2 つである node4 と node5 を返します。</dd>
+   <dd>最近作成されたコンテナーをリストします。ここで <i>NUM</i> は、最近作成されたコンテナーのうちのいくつのコンテナーを返したいかを指定する数です。 <br><br> 例えば、<i>node1</i> から <i>node5</i> までのコンテナーを順次作成した場合、コマンド <i>bluemix ic ps --limit 2</i> は、作成されたコンテナーのうちの最新の 2 つである node4 と node5 を返します。 </dd>
    <dt>-q|--quiet (オプション)</dt>
    <dd>コンテナー ID のみを表示します。</dd>
    </dl>
@@ -878,7 +874,7 @@ bluemix ic ps -a
 
 ## bluemix ic rename
 {: #bluemix_ic_rename}
-コンテナーの名前を変更します。詳細については、Docker ヘルプで [rename ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} コマンドを参照してください。
+コンテナーの名前を変更します。 詳細については、Docker ヘルプで [rename ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -898,25 +894,27 @@ bluemix ic rename OLD_NAME NEW_NAME
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
-ログインしている {{site.data.keyword.Bluemix_notm}} スペースで IBM Containers サービスを再作成します。スペースの元の割り当て量は維持されます。
+ログインしている {{site.data.keyword.Bluemix_notm}} スペースで IBM Containers サービスを再作成します。 スペースの元の割り当て量は維持されます。
 
 <strong>重要</strong>: このコマンドを実行した場合、このスペース内の単一コンテナーおよびグループはどれも、再プロビジョンされたスペースにマイグレーションされず、マイグレーション・プロセス中に削除されます。
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+
+<dl>
    <dt>--force|-f (オプション)</dt>
    <dd>{{site.data.keyword.Bluemix_notm}} スペースで IBM Containers サービスを強制的に再作成します。</dd>
    <dt><i>AVAILABILITY_ZONE</i> (必須)</dt>
-   <dd>コンテナーがデプロイされた IBM Containers アベイラビリティー・ゾーンの名前。アベイラビリティー・ゾーンが指定されない場合は、地域に設定されたデフォルト・アベイラビリティー・ゾーンが使用されます。</dd>
+   <dd>コンテナーがデプロイされた IBM Containers アベイラビリティー・ゾーンの名前。 アベイラビリティー・ゾーンが指定されない場合は、地域に設定されたデフォルト・アベイラビリティー・ゾーンが使用されます。</dd>
    </dl>
 
 
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-コンテナーを再始動します。詳細については、Docker ヘルプで [restart ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} コマンドを参照してください。
+コンテナーを再始動します。 詳細については、Docker ヘルプで [restart ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -957,7 +955,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-コンテナーを削除します。詳細については、Docker ヘルプで [rm ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} コマンドを参照してください。
+コンテナーを削除します。 詳細については、Docker ヘルプで [rm ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -997,7 +995,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-ログインしているユーザーの名前空間からイメージを削除します。詳細については、Docker ヘルプで [rmi ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} コマンドを参照してください。
+ログインしているユーザーの名前空間からイメージを削除します。 詳細については、Docker ヘルプで [rmi ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -1009,10 +1007,9 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 
    <dl>
    <dt>-R <i>REGISTRY</i>|--registry <i>REGISTRY</i> (オプション)</dt>
-   <dd>レジストリー・ホストを変更します。
-デフォルトでは、<i>bluemix ic init</i> コマンドに指定したレジストリーが使用されます。</dd>
+   <dd>レジストリー・ホストを変更します。 デフォルトでは、<i>bluemix ic init</i> コマンドに指定したレジストリーが使用されます。</dd>
    <dt><i>IMAGE</i> (必須)</dt>
-   <dd>削除するイメージの名前。イメージ名にタグが指定されていない場合、<i>latest</i> とタグ付けされたイメージはデフォルトで削除されます。</dd>
+   <dd>削除するイメージの名前。 イメージ名にタグが指定されていない場合、<i>latest</i> とタグ付けされたイメージはデフォルトで削除されます。</dd>
    </dl>
 
 <strong>応答</strong>:
@@ -1042,7 +1039,7 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ## bluemix ic route-map
 {: #bluemix_ic_route_map}
 
-コンテナー・グループへのアクセスに使用するインターネット・トラフィックの経路を設定します。このコマンドを使用して、新規経路を設定するか、既存の経路を更新できます。
+コンテナー・グループへのアクセスに使用するインターネット・トラフィックの経路を設定します。 このコマンドを使用して、新規経路を設定するか、既存の経路を更新できます。
 
 ```
 bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
@@ -1054,9 +1051,9 @@ bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTA
 
    <dl>
    <dt>-n <i>HOST</i>|--hostname <i>HOST</i> (オプション)</dt>
-   <dd>経路のホスト名。ホスト名は、完全なパブリック経路 URL の最初の部分です。例えば、URL <i>mycontainerhost.mybluemix.net</i> 中の <i>mycontainerhost</i> です。</dd>
+   <dd>経路のホスト名。 ホスト名は、完全なパブリック経路 URL の最初の部分です。例えば、URL <i>mycontainerhost.mybluemix.net</i> 中の <i>mycontainerhost</i> です。</dd>
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (オプション)</dt>
-   <dd>完全なパブリック経路 URL の 2 番目の部分である、経路のドメイン名。ほとんどの場合、ドメインは <i>mybluemix.net</i> です。このパラメーターを使用してプライベート・ドメインを指定することもできます。</dd>
+   <dd>完全なパブリック経路 URL の 2 番目の部分である、経路のドメイン名。 ほとんどの場合、ドメインは <i>mybluemix.net</i> です。 このパラメーターを使用してプライベート・ドメインを指定することもできます。</dd>
    <dt><i>CONTAINER_GROUP</i> (必須)</dt>
    <dd>コンテナー・グループ ID または名前。</dd>
    </dl>
@@ -1072,7 +1069,7 @@ bluemix ic route-map -n my_host -d mybluemix.net GROUP1
 ## bluemix ic route-unmap
 {: #bluemix_ic_route_unmap}
 
-コンテナー・グループへのアクセスに使用するインターネット・トラフィックの経路を設定します。このコマンドを使用して、新規経路を設定するか、既存の経路を更新できます。
+コンテナー・グループへのアクセスに使用するインターネット・トラフィックの経路を設定します。 このコマンドを使用して、新規経路を設定するか、既存の経路を更新できます。
 
 ```
 bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
@@ -1103,14 +1100,13 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-イメージ名を使用して、コンテナー・クラウド・サービスで新しいコンテナーを開始します。詳細については、Docker ヘルプで [run ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} コマンドを参照してください。
+イメージ名を使用して、コンテナー・クラウド・サービスで新しいコンテナーを開始します。 詳細については、Docker ヘルプで [run ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} コマンドを参照してください。
 
 
 ```
 bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [--volume VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS] [-it] IMAGE [CMD [CMD ...]]
 ```
-**注:** Cloud Foundry コマンド・ツールがインストールされていること、および Cloud Foundry トークンがあることを確認してください。
-`bluemix login` および `bluemix ic init` を使用した正常なログインによって、必要なトークンおよび証明書が生成されます。
+**注:** Cloud Foundry コマンド・ツールがインストールされていること、および Cloud Foundry トークンがあることを確認してください。 `bluemix login` および `bluemix ic init` を使用した正常なログインによって、必要なトークンおよび証明書が生成されます。
 
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
@@ -1119,54 +1115,50 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
    <dl>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i>  (オプション)</dt>
-   <dd>HTTP トラフィックのポートを公開します。使用するイメージの Dockerfile 内に指定されているポートがあれば、それらのポートを含めます。複数の <i>-p</i> オプションを使用して、複数のポートを含めることができます。ポートを公開すると、パブリック IP アドレスが使用可能な場合、パブリック IP アドレスがコンテナーに自動的にバインドされます。<br><br>コンテナーにバインドしたい IP アドレスがスペース内に既に存在する場合、後でバインドするのでなく、その IP アドレスを指定できます。IP アドレスは、&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br> 形式で指定する必要があります。<br>スペース用の IP アドレスの要求について詳しくは、<a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> コマンドを参照してください。<br><br>ポートを指定したら、同じ {{site.data.keyword.Bluemix_notm}} スペース内でホストにアクセスしようとする {{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーがアプリを使用できるように設定します。使用するイメージの Dockerfile 内にポートが指定されている場合、そのポートを含めてください。<br><br>
-<strong>ヒント:</strong><ul><li>IBM 認定 Liberty Server イメージ、またはこのイメージの変更版の場合、ポート 9080 を入力します。</li><li>IBM 認定 Node.js イメージ、またはこのイメージの変更版の場合、ポート 8000 を入力します。</li></ul></dd>
+   <dd>HTTP トラフィックのポートを公開します。 使用するイメージの Dockerfile 内に指定されているポートがあれば、それらのポートを含めます。 複数の <i>-p</i> オプションを使用して、複数のポートを含めることができます。 ポートを公開すると、パブリック IP アドレスが使用可能な場合、パブリック IP アドレスがコンテナーに自動的にバインドされます。 <br><br>コンテナーにバインドしたい IP アドレスがスペース内に既に存在する場合、後でバインドするのでなく、その IP アドレスを指定できます。 IP アドレスは、&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br> 形式で指定する必要があります。<br>スペース用の IP アドレスの要求について詳しくは、<a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> コマンドを参照してください。 <br><br>ポートを指定したら、同じ {{site.data.keyword.Bluemix_notm}} スペース内でホストにアクセスしようとする {{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーがアプリを使用できるように設定します。 使用するイメージの Dockerfile 内にポートが指定されている場合、そのポートを含めてください。 <br><br><strong>ヒント:</strong><ul><li>IBM 認定 Liberty Server イメージ、またはこのイメージの変更版の場合、ポート 9080 を入力します。</li><li>IBM 認定 Node.js イメージ、またはこのイメージの変更版の場合、ポート 8000 を入力します。</li></ul></dd>
    <dt>-P (オプション)</dt>
    <dd>イメージの Dockerfile 内に指定されたポートを HTTP トラフィック用に自動的に公開します。</dd>
    <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i> (オプション)</dt>
-   <dd>グループにメモリー制限を MB 単位で割り当てます。CLI からコンテナー・グループを作成する場合、各コンテナー・インスタンスのデフォルト値は 64 MB です。
-{{site.data.keyword.Bluemix_notm}} ダッシュボードからコンテナー・グループを作成する場合、各インスタンスのデフォルト値は 256 MB です。受け入れられる値は 64、256、512、1024、および 2048 です。メモリー限度が割り当てられた後、その値を変更することはできません。</dd>
+   <dd>グループにメモリー制限を MB 単位で割り当てます。 CLI からコンテナー・グループを作成する場合、各コンテナー・インスタンスのデフォルト値は 64 MB です。  {{site.data.keyword.Bluemix_notm}} ダッシュボードからコンテナー・グループを作成する場合、各インスタンスのデフォルト値は 256 MB です。 受け入れられる値は 64、256、512、1024、および 2048 です。 メモリー限度が割り当てられた後、その値を変更することはできません。</dd>
    <dt>-e <i>ENV</i>|--env <i>ENV</i> (オプション)</dt>
-   <dd>環境変数を設定します。ここで、<i>ENV</i> は key=value ぺアです。
-複数のキーは別々にリストしてください。引用符を含める場合、環境変数名と値の両方を囲むように指定します。例えば、-e
-"key1=value1" -e "key2=value2" -e "key3=value3"のようにします。指定可能な環境変数のうち、一般的に使用されるものを次の表に示します。</dd>
+   <dd>環境変数を設定します。ここで、<i>ENV</i> は key=value ぺアです。 複数のキーは別々にリストしてください。 引用符を含める場合、環境変数名と値の両方を囲むように指定します。 例えば、-e
+"key1=value1" -e "key2=value2" -e "key3=value3"のようにします。 指定可能な環境変数のうち、一般的に使用されるものを次の表に示します。</dd>
    </dl>
 
 
-|      環境変数|   説明 |
+|      環境変数                          |   説明                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。|
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。|
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | コンテナー内でモニターされるログ・ファイルを追加します。`LOG_LOCATIONS` 環境変数をログ・ファイルへのパスと共に組み込んでください。|
+| CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。 `CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。 このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。 ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。 |
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。 このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。 複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。 |
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | コンテナー内でモニターされるログ・ファイルを追加します。 `LOG_LOCATIONS` 環境変数をログ・ファイルへのパスと共に組み込んでください。 |
 {: caption="表 3. よく使用される環境変数" caption-side="top"}
 
 
    <dl>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro] (オプション)</dt>
-   <dd><i>VolumeId:ContainerPath[:ro]</i> 形式で詳細を指定して、コンテナーにボリュームを接続します。<ul>
+   <dd><i>VolumeId:ContainerPath[:ro]</i> 形式で詳細を指定して、コンテナーにボリュームを接続します。
+   <ul>
    <li><i>VOLUME</i>: ボリュームの ID または名前。</li>
    <li><i>CONTAINER_PATH</i>: コンテナー内でのボリュームへの絶対パス。</li>
-   <li>ro (オプション):<i>ro</i> を指定すると、ボリュームはデフォルトの読み取り/書き込みではなく読み取り専用になります。</li></ul>
+   <li>ro (オプション): <i>ro</i> を指定すると、ボリュームはデフォルトの読み取り/書き込みではなく読み取り専用になります。</li></ul>
    </dd>
    <dt>-n <i>NAME</i>|--name <i>NAME</i> (必須)</dt>
-   <dd>コンテナーに名前を割り当てます。<br> <strong>ヒント:</strong> コンテナー名の先頭は文字でなければなりません。名前には、大文字、小文字、数字、ピリオド (.)、下線 (_)、およびハイフン (-) を使用できます。</dd>
+   <dd>コンテナーに名前を割り当てます。 <br> <strong>ヒント:</strong> コンテナー名の先頭は文字でなければなりません。 名前には、大文字、小文字、数字、ピリオド (.)、下線 (_)、およびハイフン (-) を使用できます。</dd>
    <dt>--link <i>NAME</i>:<i>ALIAS</i> (オプション)</dt>
    <dd>あるコンテナーが実行中の別のコンテナーと通信するようにしたい場合は、ホスト名の別名を使用してそのコンテナーを指定できます。</dd>
    <dt>-it (オプション)</dt>
-   <dd>コンテナーを対話モードで実行します。コンテナーが作成された後、標準入力が表示されている状態を維持します。終了するには <i>exit</i> と入力します。</dd>
+   <dd>コンテナーを対話モードで実行します。 コンテナーが作成された後、標準入力が表示されている状態を維持します。 終了するには <i>exit</i> と入力します。</dd>
    <dt><i>IMAGE</i> (必須)</dt>
-   <dd>コンテナーに含まれるイメージ。イメージの後にコマンドをリストできますが、イメージの後にオプションを置かないでください。イメージを指定する前に、すべてのオプションを含めてください。イメージを指定する前に、すべてのオプションを含めてください。<br><br>組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内のイメージを使用する場合、形式 <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i> でイメージを指定します。<br><br>
-IBM Containers によって提供されるイメージを使用する場合は、形式
-<i>registry.ng.bluemix.net/IMAGE</i> でイメージを指定します。</dd>
+   <dd>コンテナーに含まれるイメージ。 イメージの後にコマンドをリストできますが、イメージの後にオプションを置かないでください。 イメージを指定する前に、すべてのオプションを含めてください。 イメージを指定する前に、すべてのオプションを含めてください。 <br><br>組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内のイメージを使用する場合、形式 <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i> でイメージを指定します。 <br><br>IBM Containers によって提供されるイメージを使用する場合は、形式
+<i>registry.ng.bluemix.net/IMAGE</i> でイメージを指定します。 </dd>
    <dt><i>CMD</i> (必須)</dt>
-   <dd>コンテナー・グループに渡されて実行されるコマンドと引数。このコマンドは長時間実行コマンドでなければなりません。実行時間があまり長くない一時的なコマンド (例えば、<i>/bin/date</i> など) は、コンテナーがクラッシュする原因となる可能性があるため、使用しないでください。</dd>
+   <dd>コンテナー・グループに渡されて実行されるコマンドと引数。 このコマンドは長時間実行コマンドでなければなりません。 実行時間があまり長くない一時的なコマンド (例えば、<i>/bin/date</i> など) は、コンテナーがクラッシュする原因となる可能性があるため、使用しないでください。</dd>
    </dl>
 
 
 <strong>例</strong>:
 
 `registry.ng.bluemix.net/ibmnode` イメージに基づいて作成された `my_container` コンテナーで、長時間実行コマンド `sh -c "while true; do date; sleep 20; done"` を実行します。
-
 ```
 bluemix ic run --name my_container registry.ng.bluemix.net/ibmnode -- sh -c "while true; do date; sleep 20; done"
 ```
@@ -1177,7 +1169,7 @@ bluemix ic run --name my_container registry.ng.bluemix.net/ibmnode -- sh -c "whi
 bluemix ic run -n proxy -m 1024 registry.ng.bluemix.net/my_namespace/nginx
 ```
 
-`my_namespace/blog` イメージを使用してコンテナーを作成して開始し、資格情報を環境変数として渡します。`my_namespace` は、ログイン・ユーザーと関連付けられた名前空間です。
+`my_namespace/blog` イメージを使用してコンテナーを作成して開始し、資格情報を環境変数として渡します。 `my_namespace` は、ログイン・ユーザーと関連付けられた名前空間です。
 ```
 bluemix ic run -n my_container -e USER=johnsmith -e PASS=password registry.ng.bluemix.net/my_namespace/blog
 ```
@@ -1191,10 +1183,10 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ## bluemix ic service-bind
 {: #bluemix_ic_service-bind}
 
-実行中のコンテナー・グループにサービスを追加します。このコマンドは、コンテナー・グループにのみ使用可能です。単一コンテナーは、bluemix ic run コマンドの中でサービスをバインドする必要があります。
+実行中のコンテナー・グループにサービスを追加します。 このコマンドは、コンテナー・グループにのみ使用可能です。 単一コンテナーは、bluemix ic run コマンドの中でサービスをバインドする必要があります。
 
 ```
-bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
+bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
 ```
 <strong>コマンド・オプション</strong>:
 
@@ -1209,10 +1201,10 @@ bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
 ## bluemix ic service-unbind
 {: #bluemix_ic_service-unbind}
 
-実行中のコンテナー・グループからサービスを削除します。このコマンドは、コンテナー・グループにのみ使用可能です。単一コンテナーは、コンテナーを削除し、サービスが含まれない新しいコンテナーを作成する必要があります。
+実行中のコンテナー・グループからサービスを削除します。 このコマンドは、コンテナー・グループにのみ使用可能です。 単一コンテナーは、コンテナーを削除し、サービスが含まれない新しいコンテナーを作成する必要があります。
 
 ```
-bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
+bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 ```
 <strong>コマンド・オプション</strong>:
 
@@ -1226,7 +1218,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ## bluemix ic start
 {: #ic_start}
-停止しているコンテナーを開始します。詳細については、Docker ヘルプで [start ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic stop](#ic_stop) コマンドを参照してください。
+停止しているコンテナーを開始します。 詳細については、Docker ヘルプで [start ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} コマンドを参照してください。 コンテナーを停止する場合は、[bluemix ic stop](#ic_stop) コマンドを参照してください。
 
 ```
 bluemix ic start CONTAINER
@@ -1265,7 +1257,7 @@ bluemix ic start proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-1 つ以上のコンテナーについて、使用状況統計をライブで表示します。終了するには `CTRL+C` を使用します。詳細については、Docker ヘルプで [stats ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} コマンドを参照してください。
+1 つ以上のコンテナーについて、使用状況統計をライブで表示します。 終了するには `CTRL+C` を使用します。 詳細については、Docker ヘルプで [stats ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -1292,7 +1284,7 @@ bluemix ic stats --no-stream my_container
 
 ## bluemix ic stop
 {: #ic_stop}
-実行中のコンテナーを停止します。詳細については、Docker ヘルプで [stop ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} コマンドを参照してください。コンテナーを開始する場合は、[bluemix ic start](#ic_start) コマンドを参照してください。
+実行中のコンテナーを停止します。 詳細については、Docker ヘルプで [stop ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} コマンドを参照してください。 コンテナーを開始する場合は、[bluemix ic start](#ic_start) コマンドを参照してください。
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -1332,7 +1324,7 @@ bluemix ic stop proxy
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-コンテナーで実行されているプロセスを表示します。詳細については、Docker ヘルプで [top ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} コマンドを参照してください。
+コンテナーで実行されているプロセスを表示します。 詳細については、Docker ヘルプで [top ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -1358,7 +1350,7 @@ bluemix ic top my_container
 ## bluemix ic unpause
 {: #unpause}
 
-実行中のコンテナー内のすべてのプロセスを休止解除します。詳細については、Docker ヘルプで [unpause ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} コマンドを参照してください。コンテナーを休止する場合は、[bluemix ic pause](#pause) コマンドを参照してください。
+実行中のコンテナー内のすべてのプロセスを休止解除します。 詳細については、Docker ヘルプで [unpause ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} コマンドを参照してください。 コンテナーを休止する場合は、[bluemix ic pause](#pause) コマンドを参照してください。
 
 ```
 bluemix ic unpause CONTAINER
@@ -1398,12 +1390,14 @@ bluemix ic unpause proxy
 
 ログインしている {{site.data.keyword.Bluemix_notm}} スペースから IBM Containers サービスを削除します。
 
-<strong>注意</strong>: このコマンドを実行すると、単一コンテナーとコンテナー・グループがすべて失われます。Bluemix では、まだスペースを使用可能です。IBM Containers の使用を再び開始するには、`bluemix ic reprovision` を実行して IBM Containers サービスを再度プロビジョンする必要があります。
+<strong>注意</strong>: このコマンドを実行すると、単一コンテナーとコンテナー・グループがすべて失われます。 Bluemix では、まだスペースを使用可能です。 IBM Containers の使用を再び開始するには、`bluemix ic reprovision` を実行して IBM Containers サービスを再度プロビジョンする必要があります。
 
 ```
-bluemix ic reprovision [--force|-f] 
+bluemix ic reprovision [--force|-f]
 ```
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+
+<dl>
    <dt>--force|-f (オプション)</dt>
    <dd>{{site.data.keyword.Bluemix_notm}} スペースから {{site.data.keyword.Bluemix_notm}} を強制的に削除します。</dd>
  </dl>
@@ -1438,9 +1432,9 @@ bluemix ic volume-create VOLUME_NAME FS_NAME
 
    <dl>
    <dt><i>FS_NAME</i> (オプション)</dt>
-   <dd>ファイル共有名ファイル共有が使用可能でないか指定されていない場合、ボリュームは、スペースのデフォルトのファイル共有上に作成されます。</dd>
+   <dd>ファイル共有名 ファイル共有が使用可能でないか指定されていない場合、ボリュームは、スペースのデフォルトのファイル共有上に作成されます。</dd>
    <dt><i>VOLUME_NAME</i> (必須)</dt>
-   <dd>ボリューム名。名前には、小文字、数字、下線 (_)、およびハイフン
+   <dd>ボリューム名。 名前には、小文字、数字、下線 (_)、およびハイフン
 (-) を 使用できます。</dd>
    </dl>
 
@@ -1454,7 +1448,6 @@ bluemix ic volume-create volume_name fileshare_name
 
 
 ## bluemix ic volume-fs
-
 {: #bluemix_ic_volume_fs}
 
 ファイル共有をリストします。
@@ -1479,7 +1472,7 @@ bluemix ic volume-fs-create FILE_SHARE_NAME
 
    <dl>
    <dt><i>FILE_SHARE_NAME</i> (必須)</dt>
-   <dd>ファイル共有名名前には、小文字、数字、下線 (_)、およびハイフン
+   <dd>ファイル共有名 名前には、小文字、数字、下線 (_)、およびハイフン
 (-) を 使用できます。</dd>
    </dl>
 
@@ -1560,7 +1553,6 @@ bluemix ic volume-fs-remove my_file_share
 
 ボリュームを検査します。
 
-
 ```
 bluemix ic volume-inspect VOLUME_NAME
 ```
@@ -1623,7 +1615,7 @@ bluemix ic volumes
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-コンテナーを終了し、確認のために終了コードを表示します。詳細については、Docker ヘルプで [wait ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} コマンドを参照してください。
+コンテナーを終了し、確認のために終了コードを表示します。 詳細については、Docker ヘルプで [wait ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -1649,7 +1641,7 @@ bluemix ic wait my_container
 ## bluemix ic wait-status
 {: #bluemix_ic_wait_status}
 
-単一コンテナーまたはコンテナー・グループが非過渡的な状態になるまで待機します。この待機時間中は、コマンド・ラインが戻らないため、コマンドを入力できません。コンテナーが非過渡的な状態になると、すぐに OK メッセージが表示されます。単一コンテナーの場合、非過渡的な状態には Running、Shutdown、Crashed、Paused、Suspended があります。コンテナー・グループの場合、非過渡的な状態には CREATE_COMPLETE、UPDATE_COMPLETE、FAILED があります。
+単一コンテナーまたはコンテナー・グループが非過渡的な状態になるまで待機します。 この待機時間中は、コマンド・ラインが戻らないため、コマンドを入力できません。 コンテナーが非過渡的な状態になると、すぐに OK メッセージが表示されます。 単一コンテナーの場合、非過渡的な状態には Running、Shutdown、Crashed、Paused、Suspended があります。 コンテナー・グループの場合、非過渡的な状態には CREATE_COMPLETE、UPDATE_COMPLETE、FAILED があります。
 
 ```
 bluemix ic wait-status CONTAINER

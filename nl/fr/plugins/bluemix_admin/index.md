@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -79,7 +79,7 @@ Pour pouvoir utiliser le plug-in d'interface de ligne de commande d'administrati
 cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </code>
 <dl class="parml">
-<dt class="pt dlterm">&lt;sous-domaine&gt;</dt>
+<dt class="pt dlterm">&lt;subdomain&gt;</dt>
 <dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}.<br />
 </dd>
 </dl>
@@ -103,25 +103,65 @@ Pour ajouter un utilisateur à votre environnement {{site.data.keyword.Bluemix_n
 de votre environnement, utilisez la commande suivante :
 
 ```
-cf ba add-user <nom_utilisateur> <organisation> <prénom> <nom>
+cf ba add-user <user_name> <organisation> <prénom> <nom>
 ```
 {: codeblock}
 
-**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur** disposant du droit **users.write** (ou **Superutilisateur**). Si vous êtes un responsable de l'organisation, vous pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande **enable-managers-add-users**.  Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour plus d'informations.
+**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur** disposant du droit **users.write** (ou **Superuser**). Si vous êtes un responsable de l'organisation, vous pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande **enable-managers-add-users**.  Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour plus d'informations.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans le registre LDAP.</dd>
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à laquelle ajouter l'utilisateur.</dd>
-<dt class="pt dlterm">&lt;prénom&gt;</dt>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
 <dd class="pd">Prénom de l'utilisateur à ajouter à l'organisation.</dd>
-<dt class="pt dlterm">&lt;nom&gt;</dt>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
 <dd class="pd">Nom de l'utilisateur à ajouter à l'organisation.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba au** comme alias pour le nom de commande plus long **ba add-user**.
+
+### Invitation d'un utilisateur depuis {{site.data.keyword.Bluemix_dedicated_notm}}
+{: #admin_dedicated_invite_public}
+
+Chaque environnement {{site.data.keyword.Bluemix_dedicated_notm}} dispose d'un compte d'entreprise, public et appartenant au client, dans {{site.data.keyword.Bluemix_notm}}. Pour que les utilisateurs de l'environnement dédié puissent créer des clusters dans{{site.data.keyword.containershort}}, l'administrateur doit ajouter ces utilisateurs à ce compte public d'entreprise. Une fois les utilisateurs ajoutés au compte public d'entreprise, leurs comptes publics et dédiés sont liés les uns aux autres. L'utilisateur peut se servir de son IBMid pour se connecter simultanément au compte public et au compte dédié et peut créer des ressources dans le compte public depuis l'interface dédiée. Pour plus d'informations, voir la rubrique relative à la [configuration d'IBM Cloud Container Service en environnement dédié](/docs/containers/cs_dedicated.html#dedicated_setup). Pour inviter des utilisateurs dédiés dans le compte public :
+
+```
+cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
+```
+{: pre}
+
+**Remarque** : pour ajouter des utilisateurs d'un environnement dédié à votre compte {{site.data.keyword.Bluemix_notm}} public, vous devez être **Admin** du compte dédié.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">Si vous invitez un utilisateur unique, cette entrée contient l'e-mail de cet utilisateur.</dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">Si vous invitez tous les utilisateurs qui se trouvent actuellement dans une organisation de compte dédié, cette entrée contient l'ID de cette organisation.</dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">Clé d'API pour inviter des utilisateurs dans le compte public. Doit être générée par l'utilisateur <b>Admin</b> du compte public.</dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">ID de l'organisation de compte public dans laquelle vous invitez des utilisateurs.</dd>
+</dl>
+
+### Etablissement de la liste des utilisateurs invités depuis {{site.data.keyword.Bluemix_dedicated_notm}}
+{: #admin_dedicated_list}
+
+Si vous avez invité des utilisateurs d'un environnement dédié dans votre compte {{site.data.keyword.Bluemix_notm}} avec la [commande `invite-users-to-public`](#admin_dedicated_invite_public), vous pouvez répertorier les utilisateurs de votre compte pour voir leur statut d'invitation. Les utilisateurs invités qui ont un IBMid existant ont un statut `ACTIF`. Les utilisateurs invités ne disposant pas d'un IBMid existant ont un statut de `EN ATTENTE` ou `ACTIF` selon qu'ils aient ou non déjà accepté l'invitation au compte. Pour répertorier les utilisateurs de votre compte {{site.data.keyword.Bluemix_notm}} :
+
+```
+cf ba invite-users-status -apikey=<public_api_key>
+```
+{: pre}
+
+**Remarque** : pour ajouter des utilisateurs d'un environnement dédié à votre compte {{site.data.keyword.Bluemix_notm}} public, vous devez être **Admin** du compte dédié.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">Clé d'API qui a été utilisée pour inviter les utilisateurs dans le compte. Doit être générée par l'utilisateur <b>Admin</b> du compte public.</dd>
+</dl>
 
 <!-- staging-only commands start. Live for interconnect -->
 
@@ -131,21 +171,20 @@ cf ba add-user <nom_utilisateur> <organisation> <prénom> <nom>
 Pour rechercher un utilisateur, entrez la commande suivante en conjonction avec les paramètres de filtre de recherche facultatifs (name, permission, organization et role) :
 
 ```
-cf ba search-users -name=<valeur_nom_utilisateur> -permission=<valeur_droit> -organization=<valeur_organisation>
--role=<valeur_rôle>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;valeur_nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}. </dd>
-<dt class="pt dlterm">&lt;valeur_droit&gt;</dt>
-<dd class="pd">Droit accordé à l'utilisateur. Par exemple, admin (ou superuser), login (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Pour plus d'informations sur les droits pouvant être affectés aux utilisateurs, voir [Droits](/docs/admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans une même requête. </dd>
-<dt class="pt dlterm">&lt;valeur_organisation&gt;</dt>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">Droit accordé à l'utilisateur. Les droits d'accès disponibles sont :  admin (ou superuser), login (ou basic), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Pour plus d'informations sur les droits pouvant être affectés aux utilisateurs, voir [Droits](/docs/admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans une même requête. </dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre permission dans une même requête.</dd>
-<dt class="pt dlterm">&lt;valeur_rôle&gt;</dt>
-<dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Par exemple, auditor, manager ou billing_manager. Vous devez spécifier l'organisation avec ce paramètre. Pour plus d'informations sur les rôles, voir [Rôles utilisateur](/docs/admin/users_roles.html#userrolesinfo).</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Les rôles disponibles sont : auditors, managers et billing_managers. Vous devez spécifier l'organisation avec ce paramètre.</dd>
 
 </dl>
 
@@ -157,18 +196,18 @@ cf ba search-users -name=<valeur_nom_utilisateur> -permission=<valeur_droit> -or
 Pour définir les droits d'un utilisateur indiqué, entrez la commande suivante :
 
 ```
-cf ba set-permissions <nom_utilisateur> <droit> <accès>
+cf ba set-permissions <user_name> <droit> <accès>
 ```
 {: codeblock}
 
 **Remarque** : vous ne pouvez définir qu'un droit à la fois.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt class="pt dlterm">&lt;droit&gt;</dt>
-<dd class="pd">Définissez les droits pour l'utilisateur : Admin (l'alternative disponible est Superutilisateur), Connexion (l'alternative disponible est De base), Catalogue (accès en lecture ou en écriture), Rapports (accès en lecture ou en écriture) ou Utilisateurs (accès en lecture ou en écriture).</dd>
-<dt class="pt dlterm">&lt;accès&gt;</dt>
+<dt class="pt dlterm">&lt;permission&gt;</dt>
+<dd class="pd">Définissez les droits pour l'utilisateur : Admin (l'alternative disponible est Superuser), Connexion (l'alternative disponible est De base), Catalogue (accès en lecture ou en écriture), Rapports (accès en lecture ou en écriture) ou Utilisateurs (accès en lecture ou en écriture).</dd>
+<dt class="pt dlterm">&lt;access&gt;</dt>
 <dd class="pd">Pour les droits Catalogue, Rapports ou Utilisateurs, vous devez aussi définir le niveau d'accès <code>read</code> (lecture) ou <code>write</code> (écriture).</dd>
 </dl>
 
@@ -182,13 +221,13 @@ cf ba set-permissions <nom_utilisateur> <droit> <accès>
 Pour retirer un utilisateur de votre environnement {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
 
 ```
-cf ba remove-user <nom_utilisateur>
+cf ba remove-user <user_name>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
 
 </dl>
@@ -198,7 +237,7 @@ cf ba remove-user <nom_utilisateur>
 ### Permettre aux responsables d'ajouter des utilisateurs
 {: #clius_emau}
 
-Si vous disposez du droit **Superutilisateur** dans votre environnement {{site.data.keyword.Bluemix_notm}}, vous pouvez permettre aux responsables de l'organisation d'ajouter des utilisateurs aux organisations qu'ils gèrent. Pour permettre aux responsables d'ajouter des utilisateurs, entrez la commande suivante :
+Si vous disposez du droit **Superuser** dans votre environnement {{site.data.keyword.Bluemix_notm}}, vous pouvez permettre aux responsables de l'organisation d'ajouter des utilisateurs aux organisations qu'ils gèrent. Pour permettre aux responsables d'ajouter des utilisateurs, entrez la commande suivante :
 
 ```
 cf ba enable-managers-add-users
@@ -210,7 +249,7 @@ cf ba enable-managers-add-users
 ### Empêcher les responsables d'ajouter des utilisateurs
 {: #clius_dmau}
 
-Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit **Superutilisateur**, vous pouvez supprimer cette capacité.  Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
+Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit **Superuser**, vous pouvez supprimer cette capacité.  Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
 
 ```
 cf ba disable-managers-add-users
@@ -233,10 +272,10 @@ cf ba create-org <organisation> <responsable>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à ajouter.</dd>
-<dt class="pt dlterm">&lt;responsable&gt;</dt>
+<dt class="pt dlterm">&lt;manager&gt;</dt>
 <dd class="pd">Nom d'utilisateur du responsable de l'organisation.</dd>
 </dl>
 
@@ -245,7 +284,7 @@ cf ba create-org <organisation> <responsable>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à supprimer.</dd>
 </dl>
@@ -258,16 +297,16 @@ cf ba create-org <organisation> <responsable>
 Pour affecter un utilisateur de votre environnement {{site.data.keyword.Bluemix_notm}} à une organisation particulière, utilisez la commande suivante :
 
 ```
-cf ba set-org <nom_utilisateur> <organisation> [<rôle>]
+cf ba set-org <user_name> <organisation> [<rôle>]
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}} à laquelle affecter l'utilisateur.</dd>
-<dt class="pt dlterm">&lt;rôle&gt;</dt>
+<dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Voir [Rôles](/docs/admin/users_roles.html) pour prendre connaissance des rôles utilisateur
 {{site.data.keyword.Bluemix_notm}} et pour des descriptions.</dd>
 </dl>
@@ -280,16 +319,16 @@ cf ba set-org <nom_utilisateur> <organisation> [<rôle>]
 Pour annuler l'affectation d'un utilisateur de votre environnement {{site.data.keyword.Bluemix_notm}} à une organisation particulière, entrez la commande suivante :
 
 ```
-cf ba unset-org <nom_utilisateur> <organisation> [<rôle>]
+cf ba unset-org <user_name> <organisation> [<rôle>]
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}} à laquelle affecter l'utilisateur.</dd>
-<dt class="pt dlterm">&lt;rôle&gt;</dt>
+<dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Pour connaître les rôles utilisateur {{site.data.keyword.Bluemix_notm}} ainsi que leur description, voir [Affectation de rôles](/docs/admin/users_roles.html).</dd>
 </dl>
 
@@ -323,7 +362,7 @@ cf ba set-quota <organisation> <plan>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 pour laquelle définir le quota.</dd>
 <dt class="pt dlterm">&lt;plan&gt;</dt>
@@ -344,7 +383,7 @@ cf bluemix-admin containers-quota <organisation>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou ID de l'organisation dans Bluemix. Ce paramètre est obligatoire.</dd>
 </dl>
 
@@ -363,7 +402,7 @@ cf bluemix-admin set-containers-quota <organisation> <options>
 **Remarque** : Vous pouvez inclure plusieurs options, mais vous devez en indiquer au moins une.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou ID de l'organisation dans Bluemix. Ce paramètre est obligatoire.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">Incluez au moins l'une des options suivantes, dont la valeur doit être un entier :
@@ -394,7 +433,7 @@ cf bluemix-admin set-containers-quota <organisation> <options>
 Vous pouvez, si vous le souhaitez, fournir un fichier contenant des paramètres de configuration spécifiques dans un objet JSON valide. Si vous utilisez l'option **-file**, elle prévaut sur les autres options qui sont ignorées. Pour indiquer un fichier au lieu des options, entrez la commande suivante :
 
 ```
-cf bluemix-admin set-containers-quota <organisation> <-file chemin_fichier_JSON>
+cf bluemix-admin set-containers-quota <organisation> <-file file_path_JSON>
 ```
 {: codeblock}
 
@@ -427,9 +466,9 @@ cf bluemix-admin create-space <organisation> <nom_espace>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'espace doit être ajouté.</dd>
-<dt class="pt dlterm">&lt;nom_espace&gt;</dt>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Nom de l'espace qui doit être créé dans l'organisation.</dd>
 </dl>
 
@@ -446,9 +485,9 @@ cf bluemix-admin delete-space <organisation> <nom_espace>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation dont l'espace doit être retiré.</dd>
-<dt class="pt dlterm">&lt;nom_espace&gt;</dt>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Nom de l'espace qui doit être retiré de l'organisation.</dd>
 </dl>
 
@@ -459,43 +498,43 @@ cf bluemix-admin delete-space <organisation> <nom_espace>
 Pour créer un utilisateur dans un espace en le dotant d'un rôle spécifié, utilisez le commande suivante :
 
 ```
-cf bluemix-admin set-space <organisation> <nom_espace> <nom_utilisateur> <rôle>
+cf bluemix-admin set-space <organisation> <nom_espace> <user_name> <rôle>
 ```
 
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur doit être ajouté.</dd>
-<dt class="pt dlterm">&lt;nom_espace&gt;</dt>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Nom de l'espace auquel l'utilisateur doit être ajouté.</dd>
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom de l'utilisateur qui doit être ajouté.</dd>
-<dt class="pt dlterm">&lt;rôle&gt;</dt>
+<dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Rôle de l'utilisateur qui doit être affecté. La valeur peut être Responsable, Développeur ou Auditeur. Pour connaître les rôles utilisateur et les descriptions {{site.data.keyword.Bluemix_notm}} dans un espace, voir [Affectation de rôles](/docs/admin/users_roles.html).</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba ss** comme alias pour le nom de commande plus long **ba set-space**.
 
 
-### Retrait du rôle d'un utilisateur dans un espace 
+### Retrait du rôle d'un utilisateur dans un espace
 
 Pour retirer le rôle d'un utilisateur dans un espace, utilisez la commande suivante :
 
 ```
-cf bluemix-admin unset-space <organisation> <nom_espace> <nom_utilisateur> <rôle>
+cf bluemix-admin unset-space <organisation> <nom_espace> <user_name> <rôle>
 ```
 
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur doit être ajouté.</dd>
-<dt class="pt dlterm">&lt;nom_espace&gt;</dt>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Nom de l'espace auquel l'utilisateur doit être ajouté.</dd>
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom de l'utilisateur qui doit être ajouté.</dd>
-<dt class="pt dlterm">&lt;rôle&gt;</dt>
+<dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Rôle de l'utilisateur qui doit être affecté. La valeur peut être Responsable, Développeur ou Auditeur. Pour connaître les rôles utilisateur et les descriptions {{site.data.keyword.Bluemix_notm}} dans un espace, voir [Affectation de rôles](/docs/admin/users_roles.html).</dd>
 </dl>
 
@@ -510,12 +549,12 @@ cf bluemix-admin unset-space <organisation> <nom_espace> <nom_utilisateur> <rôl
 Pour activer l'affichage d'un service dans le catalogue {{site.data.keyword.Bluemix_notm}} pour toutes les organisations, entrez la commande suivante :
 
 ```
-cf ba enable-service-plan <identificateur_plan>
+cf ba enable-service-plan <plan_identifier>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 </dl>
@@ -528,12 +567,12 @@ parmi plusieurs plans de service. Pour identifier un nom de plan de service, sé
 Pour désactiver l'affichage d'un service dans le catalogue {{site.data.keyword.Bluemix_notm}} pour toutes les organisations, utilisez la commande suivante :
 
 ```
-cf ba disable-service-plan <identificateur_plan>
+cf ba disable-service-plan <plan_identifier>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
 **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
@@ -551,16 +590,16 @@ d'afficher un service spécifique dans le catalogue
 {{site.data.keyword.Bluemix_notm}}, entrez la commande suivante :
 
 ```
-cf ba add-service-plan-visibility <identificateur_plan> <organisation>
+cf ba add-service-plan-visibility <plan_identifier> <organisation>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
 **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à ajouter à la liste de visibilité du service.</dd>
 </dl>
@@ -578,16 +617,16 @@ d'un service dans le catalogue {{site.data.keyword.Bluemix_notm}} pour
 une organisation, entrez la commande suivante :
 
 ```
-cf ba remove-service-plan-visibility <identificateur_plan> <organisation>
+cf ba remove-service-plan-visibility <plan_identifier> <organisation>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
 **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à retirer de la liste de visibilité du service.</dd>
 </dl>
@@ -603,7 +642,7 @@ organisations spécifiques peuvent afficher dans le catalogue
 {{site.data.keyword.Bluemix_notm}}. Afin de remplacer tous les services visibles existants pour une organisation ou plusieurs organisations, entrez la commande suivante :
 
 ```
-cf ba edit-service-plan-visibilities <identificateur_plan> <organisation_1> <organisation_2_facultative>
+cf ba edit-service-plan-visibilities <plan_identifier> <organisation_1> <organisation_2_facultative>
 ```
 {: codeblock}
 
@@ -611,11 +650,11 @@ cf ba edit-service-plan-visibilities <identificateur_plan> <organisation_1> <org
 indiquez dans la commande.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
 **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 pour laquelle ajouter la visibilité. Vous pouvez activer la visibilité du service pour plusieurs organisations en entrant des noms ou des identificateurs
 globaux uniques supplémentaires dans la commande.</dd>
@@ -642,7 +681,7 @@ rapport sous l'un des formats admis pour vos utilisateurs. Entrez le nom de la n
 `catégorie` ou ajoutez votre nouveau rapport à une catégorie existante.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;catégorie&gt;</dt>
+<dt class="pt dlterm">&lt;category&gt;</dt>
 <dd class="pd">Catégorie du rapport. Si le nom comporte un espace, placez-le entre guillemets.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd">Date du rapport au format <samp class="ph codeph">AAAAMMJJ</samp>.</dd>
@@ -667,11 +706,11 @@ cf ba delete-report <catégorie> <date> <nom>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;catégorie&gt;</dt>
+<dt class="pt dlterm">&lt;category&gt;</dt>
 <dd class="pd">Catégorie du rapport. Si le nom comporte un espace, placez-le entre guillemets.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd">Date du rapport au format <samp class="ph codeph">AAAAMMJJ</samp>.</dd>
-<dt class="pt dlterm">&lt;nom&gt;</dt>
+<dt class="pt dlterm">&lt;name&gt;</dt>
 <dd class="pd">Nom du rapport.</dd>
 </dl>
 
@@ -708,10 +747,10 @@ cf ba resource-metrics
 
 **Astuce :** vous pouvez aussi utiliser **ba rsm** comme alias pour le nom de commande plus long **ba resource-metrics**.
 
-## Affichage de l'historique relatif aux mesures des ressources 
+## Affichage de l'historique relatif aux mesures des ressources
 {: #cliresourceusagehistory}
 
-Vous pouvez obtenir l'historique des mesures de ressources à des fins d'utilisation de la mémoire et du disque. Les valeurs renvoyées incluent la quantité de ressources utilisées par rapport à la quantité totale disponible, à la fois pour les ressources physiques et les ressources réservées. Les données d'historique relatives à l'utilisation de la mémoire et du disque peuvent être affichées sur une base horaire, quotidienne ou mensuelle.  Indiquez une date de début et une date de fin pour extraire les données d'une période donnée. Lorsque aucune date n'est psécifiée, les données d'historique par défaut sont les données mémoire horaires des dernières 48 heures. Les données sont affichées par ordre décroissant, les dates les plus récentes en premier.   Pour afficher les informations d'historique relatives aux mesures des ressources, entrez la commande suivante :
+Vous pouvez obtenir l'historique des mesures de ressources à des fins d'utilisation de la mémoire et du disque. Les valeurs renvoyées incluent la quantité de ressources utilisées par rapport à la quantité totale disponible, à la fois pour les ressources physiques et les ressources réservées. Les données d'historique relatives à l'utilisation de la mémoire et du disque peuvent être affichées sur une base horaire, quotidienne ou mensuelle.  Indiquez une date de début et une date de fin pour extraire les données d'une période donnée. Lorsque aucune date n'est spécifiée, les données d'historique par défaut sont les données mémoire horaires des dernières 48 heures. Les données sont affichées par ordre décroissant, les dates les plus récentes en premier.   Pour afficher les informations d'historique relatives aux mesures des ressources, entrez la commande suivante :
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -738,14 +777,15 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;Exemples&gt;</dt>
+<dt class="pt dlterm">&lt;Examples&gt;</dt>
 <dd class="pd">cf bluemix-admin resource-metrics-history</dd>
 <dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
 <dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-Vous pouvez afficher la liste des paramètres et exemples ci-dessus en utilisant la commande suivante : 
+
+Vous pouvez afficher la liste des paramètres et exemples ci-dessus en utilisant la commande suivante :
 
 ```
 cf ba resource-metrics-history -help
@@ -763,15 +803,15 @@ Pour dresser la liste de tous les courtiers de services, utilisez la
 commande suivante :
 
 ```
-cf ba service-brokers <nom_courtier>
+cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
 **Remarque** : pour répertorier tous les courtiers de services, entrez la commande sans le paramètre
-`nom_courtier`.
+`broker_name`.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_courtier&gt;</dt>
+<dt class="pt dlterm">&lt;broker_name&gt;</dt>
 <dd class="pd">Facultatif : nom du courtier de services personnalisé. Utilisez ce paramètre pour obtenir des informations sur un courtier de services spécifique.</dd>
 </dl>
 
@@ -783,18 +823,18 @@ cf ba service-brokers <nom_courtier>
 Pour ajouter un courtier de services afin de pouvoir ajouter un service personnalisé à votre catalogue {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
 
 ```
-cf ba add-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_courtier>
+cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_courtier&gt;</dt>
+<dt class="pt dlterm">&lt;broker_name&gt;</dt>
 <dd class="pd">Nom du courtier de services personnalisé.</dd>
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom d'utilisateur du compte ayant accès au courtier de services.</dd>
-<dt class="pt dlterm">&lt;mot_de_passe&gt;</dt>
+<dt class="pt dlterm">&lt;password&gt;</dt>
 <dd class="pd">Mot de passe du compte ayant accès au courtier de services.</dd>
-<dt class="pt dlterm">&lt;url_courtier&gt;</dt>
+<dt class="pt dlterm">&lt;broker_url&gt;</dt>
 <dd class="pd">Adresse URL du courtier de services.</dd>
 </dl>
 
@@ -806,12 +846,12 @@ cf ba add-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_co
 Pour supprimer un courtier de services afin de retirer un service personnalisé de votre catalogue {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
 
 ```
-cf ba delete-service-broker <courtier_services>
+cf ba delete-service-broker <service_broker>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;courtier_services&gt;</dt>
+<dt class="pt dlterm">&lt;service_broker&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique du courtier de services personnalisé.</dd>
 </dl>
 
@@ -823,18 +863,18 @@ cf ba delete-service-broker <courtier_services>
 Pour mettre à jour un courtier de services, utilisez la commande suivante :
 
 ```
-cf ba update-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_courtier>
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_courtier&gt;</dt>
+<dt class="pt dlterm">&lt;broker_name&gt;</dt>
 <dd class="pd">Nom du courtier de services personnalisé.</dd>
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nom d'utilisateur du compte ayant accès au courtier de services.</dd>
-<dt class="pt dlterm">&lt;mot_de_passe&gt;</dt>
+<dt class="pt dlterm">&lt;password&gt;</dt>
 <dd class="pd">Mot de passe du compte ayant accès au courtier de services.</dd>
-<dt class="pt dlterm">&lt;url_courtier&gt;</dt>
+<dt class="pt dlterm">&lt;broker_url&gt;</dt>
 <dd class="pd">Adresse URL du courtier de services.</dd>
 </dl>
 
@@ -850,7 +890,8 @@ Les groupes de sécurité d'application fonctionnent comme des pare-feux virtuel
 
 A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Avertissement** : le fait de supprimer la liaison entre les ensembles de groupes **Default Staging** ou **Default Running** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe. Tenez compte des répercussions possibles sur l'ensemble des applications en cours d'exécution ou de transfert dans votre environnement lorsque vous supprimez une liaison.
+**AVERTISSEMENT** : le fait de supprimer la liaison entre les ensembles de groupes **Default Staging** ou **Default Running** et les deux groupes de sécurité créés par IBM, `public_networks` et `dns`, désactive l'accès global au réseau externe. Tenez compte des répercussions possibles sur l'ensemble des applications en cours d'exécution ou de transfert dans votre environnement quand vous supprimez une liaison.
+
 
 **Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour plus d'informations, y compris sur les zones obligatoires et facultatives, reportez-vous aux informations relatives à Cloud Foundry concernant la [création de groupes de sécurité d'application ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
@@ -869,12 +910,12 @@ cf ba security-groups
 * Pour afficher les détails d'un groupe de sécurité donné, utilisez la commande suivante :
 
 ```
-cf ba security-groups <groupe-sécurité>
+cf ba security-groups <security-group>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom du groupe de sécurité</dd>
 </dl>
 
@@ -889,16 +930,16 @@ Pour plus d'informations sur la création de groupes de sécurité et des règle
 Pour créer un groupe de sécurité, utilisez la commande suivante :
 
 ```
-cf ba create-security-group <groupe-sécurité> <chemin-vers-fichier-règles>
+cf ba create-security-group <security-group> <Path to rules file>
 ```
 {: codeblock}
 
 Le préfixe `adminconsole_` est ajouté au nom de chaque groupe de sécurité que vous créez afin de le distinguer des groupes de sécurité créés par IBM.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
-<dt class="pt dlterm">&lt;Chemin vers fichier de règles&gt;</dt>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
 <dd class="pd">Chemin d'accès relatif ou absolu à un fichier de règles</dd>
 </dl>
 
@@ -910,14 +951,14 @@ Le préfixe `adminconsole_` est ajouté au nom de chaque groupe de sécurité qu
 Pour mettre à jour un groupe de sécurité, utilisez la commande suivante :
 
 ```
-cf ba update-security-group <groupe-sécurité> <chemin-vers-fichier-règles>
+cf ba update-security-group <security-group> <Path to rules file>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
-<dt class="pt dlterm">&lt;Chemin vers fichier de règles&gt;</dt>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
 <dd class="pd">Chemin d'accès relatif ou absolu à un fichier de règles</dd>
 </dl>
 
@@ -929,12 +970,12 @@ cf ba update-security-group <groupe-sécurité> <chemin-vers-fichier-règles>
 Pour supprimer un groupe de sécurité, utilisez la commande suivante :
 
 ```
-cf ba delete-security-group <groupe-sécurité>
+cf ba delete-security-group <security-group>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
@@ -949,12 +990,12 @@ Pour plus d'informations sur la liaison des groupes de sécurité, voir [Binding
 * Pour établir une liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
 
 ```
-cf ba bind-staging-security-group <groupe-sécurité>
+cf ba bind-staging-security-group <security-group>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
@@ -963,12 +1004,12 @@ cf ba bind-staging-security-group <groupe-sécurité>
 * Pour établir une liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
 
 ```
-cf ba bind-running-security-group <groupe-sécurité>
+cf ba bind-running-security-group <security-group>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
@@ -977,16 +1018,16 @@ cf ba bind-running-security-group <groupe-sécurité>
 * Pour lier un groupe de sécurité à un espace, utilisez la commande suivante :
 
 ```
-cf ba bind-security-group <groupe-sécurité> <org> <espace>
+cf ba bind-security-group <security-group> <org> <espace>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
-<dt class="pt dlterm">&lt;org&gt;</dt>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
 <dd class="pd">Nom de l'organisation à laquelle associer le groupe de sécurité</dd>
-<dt class="pt dlterm">&lt;espace&gt;</dt>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
 <dd class="pd">Nom de l'espace dans l'organisation à laquelle associer le groupe de sécurité</dd>
 </dl>
 
@@ -1000,12 +1041,12 @@ Pour plus d'informations sur l'annulation de la liaison de groupes de sécurité
 * Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
 
 ```
-cf ba unbind-staging-security-group <groupe-sécurité>
+cf ba unbind-staging-security-group <security-group>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
@@ -1016,12 +1057,12 @@ cf ba unbind-staging-security-group <groupe-sécurité>
 * Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
 
 ```
-cf ba unbind-running-security-group <groupe-sécurité>
+cf ba unbind-running-security-group <security-group>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
 </dl>
 
@@ -1032,16 +1073,16 @@ cf ba unbind-running-security-group <groupe-sécurité>
 * Pour annuler la liaison d'un groupe de sécurité à un espace, utilisez la commande suivante :
 
 ```
-cf ba unbind-security-group <groupe-sécurité> <org> <espace>
+cf ba unbind-security-group <security-group> <org> <espace>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;groupe de sécurité&gt;</dt>
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
 <dd class="pd">Nom de votre groupe de sécurité</dd>
-<dt class="pt dlterm">&lt;org&gt;</dt>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
 <dd class="pd">Nom de l'organisation à laquelle associer le groupe de sécurité</dd>
-<dt class="pt dlterm">&lt;espace&gt;</dt>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
 <dd class="pd">Nom de l'espace dans l'organisation à laquelle associer le groupe de sécurité</dd>
 </dl>
 
@@ -1056,12 +1097,12 @@ cf ba unbind-security-group <groupe-sécurité> <org> <espace>
 Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez répertorier les packs de construction. Pour répertorier tous les packs de construction ou visualiser un pack de construction spécifique, utilisez la commande suivante :
 
 ```
-cf ba buildpacks <nom_pack_construction>
+cf ba buildpacks <buildpack_name>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
 <dd class="pd">Paramètre facultatif permettant de spécifier un pack de construction particulier à afficher.</dd>
 </dl>
 
@@ -1073,14 +1114,14 @@ cf ba buildpacks <nom_pack_construction>
 Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez créer et télécharger un pack de construction. Vous pouvez télécharger tout fichier compressé dont le type est .zip. Pour télécharger un pack de construction, utilisez la commande suivante :
 
 ```
-cf ba create-buildpack <nom_pack_construction> <chemin_fichier> <position>
+cf ba create-buildpack <buildpack_name> <file_path> <position>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
 <dd class="pd">Nom du pack de construction à télécharger.</dd>
-<dt class="pt dlterm">&lt;chemin_fichier&gt;</dt>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
 <dd class="pd">Chemin du fichier compressé du pack de construction.</dd>
 <dt class="pt dlterm">&lt;position&gt;</dt>
 <dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.</dd>
@@ -1094,18 +1135,18 @@ cf ba create-buildpack <nom_pack_construction> <chemin_fichier> <position>
 Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez mettre à jour un pack de construction existant.  Pour mettre à jour un pack de construction, utilisez la commande suivante :
 
 ```
-cf ba update-buildpack <nom_pack_construction> <position> <activé> <verrouillé>
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
 <dd class="pd">Nom du pack de construction à mettre à jour.</dd>
 <dt class="pt dlterm">&lt;position&gt;</dt>
 <dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.</dd>
-<dt class="pt dlterm">&lt;activé&gt;</dt>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
 <dd class="pd">Indique si le pack de construction est utilisé pour la constitution.</dd>
-<dt class="pt dlterm">&lt;verrouillé&gt;</dt>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
 <dd class="pd">Indique si le pack de construction est verrouillé pour empêcher les mises à jour.</dd>
 </dl>
 
@@ -1117,12 +1158,12 @@ cf ba update-buildpack <nom_pack_construction> <position> <activé> <verrouillé
 Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez supprimer un pack de construction existant.  Pour supprimer un pack de construction, utilisez la commande suivante :
 
 ```
-cf ba delete-buildpack <nom_pack_construction>
+cf ba delete-buildpack <buildpack_name>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
 <dd class="pd">Nom du pack de construction à supprimer.</dd>
 </dl>
 

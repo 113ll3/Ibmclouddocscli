@@ -14,19 +14,19 @@ lastupdated: "2017-11-10"
 # {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) コマンド
 {: #softlayer_cli}
 
-{{site.data.keyword.BluSoftlayer}} プラグインは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。このプラグインのインストールは必要なくなりました。
+{{site.data.keyword.BluSoftlayer}} プラグインは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。 このプラグインのインストールは必要なくなりました。
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) で {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンドを使用して、SoftLayer のサービスを管理および構成します。
 
 
 まず、IBM {{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[Bluemix CLI ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}』を参照してください。
 
-{{site.data.keyword.Bluemix_notm}} コマンドの完全リストについては、[{{site.data.keyword.Bluemix_notm:}} (bx) コマンド](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)を参照してください。
+{{site.data.keyword.Bluemix_notm}} コマンドの完全リストについては、[{{site.data.keyword.Bluemix_notm}} (bx) コマンド](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)を参照してください。
 
 
 ## 汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド
 
-以下のコマンドがサポートされます。使用可能なコマンドのリストを表示するには、`bluemix sl` コマンドを使用します。
+以下のコマンドがサポートされます。 使用可能なコマンドのリストを表示するには、`bluemix sl` コマンドを使用します。
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用コマンド">
 <caption>表 1. 汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド</caption>
@@ -372,7 +372,7 @@ lastupdated: "2017-11-10"
 ### bluemix sl init
 {: #sl_init}
 
-SoftLayer 環境への接続に使用される構成設定を初期化します。この構成には、ユーザー名、API キーまたはパスワード、アカウント、およびエンドポイントが含まれます。
+SoftLayer 環境への接続に使用される構成設定を初期化します。 この構成には、ユーザー名、API キーまたはパスワード、アカウント、およびエンドポイントが含まれます。
 ```
 bluemix sl init [OPTIONS]
 ```
@@ -438,11 +438,9 @@ $ bx sl init
 1. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーのユーザー名とパスワード/API キーを使用してログインする
 2. {{site.data.keyword.Bluemix_notm}} のシングル・サインオンを使用する
 数値を入力してください> 2
-Softlayer API エンドポイント URL: [https://api.softlayer.com/mobile/v3.1]>
+Softlayer API エンドポイント URL: [https://api.softlayer.com/mobile/v3.1]> 
 Setting account to: 278444
 OK
-                              
-
                               
 Softlayer API エンドポイント:    https://api.softlayer.com/mobile/v3.1   
 Account ID:                278444   
@@ -467,7 +465,8 @@ bluemix sl help
 bluemix sl block access-authorize VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-d, --hardware-id</dt>
 <dd>許可する 1 つのハードウェア・サーバーの ID。</dd>
 <dt>-v, --virtual-id</dt>
@@ -478,7 +477,8 @@ bluemix sl block access-authorize VOLUME_ID [OPTIONS]
 <dd>許可する IP アドレス。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl block access-authorize 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーが、ID 12345678 のボリュームにアクセスすることを許可します。
@@ -491,14 +491,16 @@ ACL をリストします。
 bluemix sl block access-list VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
 <dt>--columns</dt>
 <dd>表示する列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl block access-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームへのアクセスを許可されているすべてのホストをリストし、それらを ID によってソートします。
@@ -508,10 +510,11 @@ bluemix sl block access-list 12345678 --sortby id
 
 指定されたボリュームにアクセスするホストの許可を取り消します。
 ```
- bluemix sl block access-revoke VOLUME_ID [OPTIONS]
+bluemix sl block access-revoke VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-d, --hardware-id</dt>
 <dd>取り消す 1 つのハードウェア・サーバーの ID。</dd>
 <dt>-v, --virtual-id</dt>
@@ -522,7 +525,8 @@ bluemix sl block access-list 12345678 --sortby id
 <dd>取り消す IP アドレス。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl block access-revoke 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーの、ID 12345678 のボリュームへのアクセスを取り消します。
@@ -532,12 +536,13 @@ bluemix sl block access-revoke 12345678 --virtual-id 87654321
 
 レプリカからブロック・ボリュームをフェイルバックします。
 ```
- bluemix sl block replica-failback VOLUME_ID
+bluemix sl block replica-failback VOLUME_ID
 ```
 
 
-**例**:```
- bluemix sl block replica-failback 12345678
+**例**:
+```
+bluemix sl block replica-failback 12345678
 ```
 このコマンドは、ID 12345678 のボリュームのフェイルバック操作を実行します。
 
@@ -550,8 +555,9 @@ bluemix sl block replica-failover VOLUME_ID REPLICA_ID
 ```
 
 
-**例**:```
- bluemix sl block replica-failover 12345678 87654321
+**例**:
+```
+bluemix sl block replica-failover 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームの、ID 87654321 のレプリカ・ボリュームへのフェイルオーバー操作を実行します。
 
@@ -564,7 +570,8 @@ bluemix sl block replica-locations VOLUME_ID
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl block replica-locations 12345678
 ```
 このコマンドは、ID 12345678 のブロック・ボリュームの適切な複製データ・センターをリストします。
@@ -574,25 +581,27 @@ bluemix sl block replica-locations 12345678
 
 ブロック・ストレージ・レプリカ・ボリュームを注文します。
 ```
- bluemix sl block replica-order VOLUME_ID [OPTIONS]
+bluemix sl block replica-order VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --snapshot-schedule</dt>
-<dd>必須。複製に使用するスナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
+<dd>必須。 複製に使用するスナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
 <dt>-d, --datacenter</dt>
-<dd>必須。複製用のデータ・センターの短縮名。例えば、dal09 など。</dd>
+<dd>必須。 複製用のデータ・センターの短縮名。例えば、dal09 など。</dd>
 <dt>-t, --tier</dt>
-<dd>オプション。レプリカを注文する 1 次ボリュームのエンデュランス・ストレージ層 (GB 当たりの IOPS)。オプション: 0.25、2、4、10。層が指定されない場合、元のボリュームの層が使用されます。</dd>
+<dd>オプション。 レプリカを注文する 1 次ボリュームのエンデュランス・ストレージ層 (GB 当たりの IOPS)。オプション: 0.25、2、4、10。層が指定されない場合、元のボリュームの層が使用されます。</dd>
 <dt>-i, --iops</dt>
 <dd>パフォーマンス・ストレージ IOPS (100 から 6000 までの範囲内の 100 の倍数)。IOPS が指定されない場合、元のボリュームの IOPS が使用されます。</dd>
 <dt>-o, --os-type</dt>
-<dd>オプション。レプリカを注文する 1 次ボリュームのオペレーティング・システム・タイプ (例: LINUX)。オプション: HYPER_V、LINUX、VMWARE、WINDOWS_2008、WINDOWS_GPT、WINDOWS、XEN。</dd>
+<dd>オプション。 レプリカを注文する 1 次ボリュームのオペレーティング・システム・タイプ (例: LINUX)。オプション: HYPER_V、LINUX、VMWARE、WINDOWS_2008、WINDOWS_GPT、WINDOWS、XEN。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LINUX
 ```
 このコマンドは、ID 12345678 のボリュームのレプリカを注文します。このレプリカは、毎日の複製を実行し、dal09 にあり、層レベルは 4、OS タイプは Linux です。
@@ -606,7 +615,8 @@ bluemix sl block replica-partners VOLUME_ID [OPTIONS]
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl block replica-partners 12345678
 ```
 このコマンドは、ID 12345678 のブロック・ボリュームの既存のレプリカ・ボリュームをリストします。
@@ -616,10 +626,11 @@ bluemix sl block replica-partners 12345678
 
 指定されたボリュームの既存のスナップショット・スペースを取り消します。
 ```
- bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
+bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--reason</dt>
 <dd>取り消しの理由 (オプション)。</dd>
 <dt>--immediate</dt>
@@ -628,8 +639,9 @@ bluemix sl block replica-partners 12345678
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl block snapshot-cancel 12345678 --immediate -f
+**例**:
+```
+bluemix sl block snapshot-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のスナップショットを、確認を要求せず、即時に取り消します。
 
@@ -638,15 +650,17 @@ bluemix sl block replica-partners 12345678
 
 指定されたボリュームにスナップショットを作成します。
 ```
- bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-n, --note</dt>
 <dd>新規スナップショットに設定するメモ。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを、snapshotforbluemix の追加メモと共に作成します。
@@ -656,16 +670,18 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 指定されたスケジュールでの指定されたボリュームのスナップショットを無効にします。
 ```
- bluemix sl block snapshot-disable VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --schedule-type</dt>
-<dd>必須。スナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
+<dd>必須。 スナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
 </dl>
 
-**例**:```
- bluemix sl block snapshot-disable 12345678 -s DAILY
+**例**:
+```
+bluemix sl block snapshot-disable 12345678 -s DAILY
 ```
 このコマンドは、ID 12345678 のボリュームの毎日のスナップショットを無効にします。
 
@@ -674,37 +690,41 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 指定されたスケジュールで指定されたボリュームのスナップショットを有効にします。
 ```
- bluemix sl block snapshot-enable VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --schedule-type</dt>
-<dd>必須。スナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
+<dd>必須。 スナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
 <dt>-c, --retention-count</dt>
-<dd>必須。保持するスナップショットの数。</dd>
+<dd>必須。 保持するスナップショットの数。</dd>
 <dt>-m, --minute</dt>
 <dd>スナップショットを作成する時刻の分の部分。0 から 59 までの整数。</dd>
 <dt>-r, --hour</dt>
 <dd>スナップショットを作成する時刻の時の部分。0 から 23 までの整数。</dd>
 <dt>-d, --day-of-week</dt>
-<dd>スナップショットを作成する曜日。0 から 6 までの整数。0 は日曜、1 は月曜、2 は火曜、3 は水曜、4 は木曜、5 は金曜、6 は土曜を表します。</dd>
+<dd>スナップショットを作成する曜日。0 から 6 までの整数。 0 は日曜、1 は月曜、2 は火曜、3 は水曜、4 は木曜、5 は金曜、6 は土曜を表します。</dd>
 </dl>
 
-**例**:```
- bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
+**例**:
+```
+bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを有効にします。スナップショットは、毎週日曜日の 2:00 に取られ、最高 5 個のスナップショットが保持されます。
+
 ### bluemix sl block snapshot-delete
 {: #sl_block_snapshot_delete}
 
 指定されたボリュームのスナップショットを削除します。
 ```
-  bluemix sl block snapshot-delete SNAPSHOT_ID
+bluemix sl block snapshot-delete SNAPSHOT_ID
 ```
 
 
-**例**:```
- bluemix sl block snapshot-delete 12345678
+**例**:
+```
+bluemix sl block snapshot-delete 12345678
 ```
 このコマンドは、ID 12345678 のスナップショットを削除します。
 
@@ -713,17 +733,18 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 ブロック・ストレージ・スナップショットをリストします。
 ```
- bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
-
+bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、name、created、size_bytes。</dd>
 </dl>
 
-**例**:```
- bluemix sl block snapshot-list 12345678 --sortby id
+**例**:
+```
+bluemix sl block snapshot-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームのすべてのスナップショットをリストし、それらを ID によってソートします。
 
@@ -732,14 +753,15 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 ブロック・ストレージ・ボリュームのスナップショット・スペースを注文します。
 ```
- bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --size</dt>
-<dd>必須。作成するスナップショット・スペースのサイズ (GB 単位)。</dd>
+<dd>必須。 作成するスナップショット・スペースのサイズ (GB 単位)。</dd>
 <dt>-t, --tier</dt>
-<dd>オプション。スペースを注文するブロック・ボリュームのエンデュランス・ストレージ層 (GB 当たりの IOPS)。オプション: 0.25、2、4、10。</dd>
+<dd>オプション。 スペースを注文するブロック・ボリュームのエンデュランス・ストレージ層 (GB 当たりの IOPS)。オプション: 0.25、2、4、10。</dd>
 <dt>-i, --iops</dt>
 <dd>パフォーマンス・ストレージ IOPS (100 から 6000 までの範囲内の 100 の倍数)。</dd>
 <dt>-u, --upgrade</dt>
@@ -748,8 +770,9 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
-   bluemix sl block snapshot-order 12345678 -s 1000 -t 4
+**例**:
+```
+bluemix sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショット・スペースを注文します。サイズは 1000 GB、階層レベルは 1 GB 当たり 4 IOPS です。
 
@@ -758,12 +781,13 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 指定されたスナップショットを使用してブロック・ボリュームをリストアします。
 ```
- bluemix sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
+bluemix sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
-**例**:```
- bluemix sl block snapshot-restore 12345678 87654321
+**例**:
+```
+bluemix sl block snapshot-restore 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームを、ID 87654321 のスナップショットからリストアします。
 
@@ -772,10 +796,11 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 既存のブロック・ストレージ・ボリュームを取り消します。
 ```
- bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
+bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--reason</dt>
 <dd>取り消しの理由 (オプション)。</dd>
 <dt>--immediate</dt>
@@ -784,8 +809,9 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl block volume-cancel 12345678 --immediate -f
+**例**:
+```
+bluemix sl block volume-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のボリュームを、確認を要求せず、即時に取り消します。
 
@@ -794,10 +820,11 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 ブロック・ストレージをリストします。
 ```
- bluemix sl block volume-list [OPTIONS]
+bluemix sl block volume-list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-u, --username</dt>
 <dd>ボリュームのユーザー名を基準にフィルター操作します。</dd>
 <dt>-d, --datacenter</dt>
@@ -812,23 +839,24 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 <dd>表示する列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by。</dd>
 </dl>
 
-**例**:```
- bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
+**例**:
+```
+bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 このコマンドは、dal09 にある、現行アカウントのすべてのエンデュランス・ボリュームをリストし、それらを容量によってソートします。
-
 
 ### bluemix sl block volume-detail
 {: #sl_block_volume_detail}
 
 指定されたボリュームの詳細を表示します。
 ```
- bluemix sl block volume-detail VOLUME_ID
+bluemix sl block volume-detail VOLUME_ID
 ```
 
 
-**例**:```
- bluemix sl block volume-detail 12345678
+**例**:
+```
+bluemix sl block volume-detail 12345678
 ```
 このコマンドは、ID 12345678 のボリュームの詳細を表示します。
 
@@ -840,7 +868,8 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 bluemix sl block volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-o, --origin-snapshot-id</dt>
 <dd>重複に使用する元のボリュームのスナップショットの ID。</dd>
 <dt>-s, --duplicate-size</dt>
@@ -855,7 +884,8 @@ bluemix sl block volume-duplicate VOLUME_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl block volume-duplicate 12345678
 ```
 このコマンドは、ID 12345678 のボリュームを複写して新規ボリュームを注文します。
@@ -865,30 +895,32 @@ bluemix sl block volume-duplicate 12345678
 
 ブロック・ストレージ・ボリュームを注文します。
 ```
-   bluemix sl block volume-order [OPTIONS]
+bluemix sl block volume-order [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-t, --storage-type</dt>
-<dd>必須。ストレージ・ボリュームのタイプ。オプション: performance、endurance。</dd>
+<dd>必須。 ストレージ・ボリュームのタイプ。オプション: performance、endurance。</dd>
 <dt>-s, --size</dt>
-<dd>必須。ストレージ・ボリュームのサイズ (GB)。</dd>
+<dd>必須。 ストレージ・ボリュームのサイズ (GB)。</dd>
 <dt>-i, --iops</dt>
 <dd>パフォーマンス・ストレージの IOP (100 から 6000 までの範囲内の 100 の倍数) [storage-type が performance の場合は必須]。</dd>
 <dt>-e, --tier</dt>
 <dd>エンデュランス・ストレージ層 (GB 当たりの IOP) [storage-type が endurance の場合は必須]。オプションは、0.25、2、4、10 です。</dd>
 <dt>-o, --os-type</dt>
-<dd>必須。オペレーティング・システム。オプション: HYPER_V、LINUX、VMWARE、WINDOWS_2008、WINDOWS_GPT、WINDOWS、XEN。</dd>
+<dd>必須。 オペレーティング・システム。オプション: HYPER_V、LINUX、VMWARE、WINDOWS_2008、WINDOWS_GPT、WINDOWS、XEN。</dd>
 <dt>-d, --datacenter</dt>
-<dd>必須。データ・センターの短縮名。</dd>
+<dd>必須。 データ・センターの短縮名。</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>エンデュランス・ブロック・ストレージと共にスナップショット・スペースを注文するためのオプション・パラメーター。注文するスナップショット・スペースのサイズ (GB) を指定します。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
+**例**:
+```
+bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
 ```
 このコマンドは、サイズが 1000 GB、IOPS が 4000、OS タイプが LINUX、ロケーションが dal09 のパフォーマンス・ボリュームを注文します。
 
@@ -897,15 +929,15 @@ bluemix sl block volume-duplicate 12345678
 
 ブロック・ストレージの注文に関するすべてのオプションをリストします。
 ```
- bluemix sl block volume-options
+bluemix sl block volume-options
 ```
 
 
-**例**:```
- bluemix sl block volume-options
+**例**:
+```
+bluemix sl block volume-options
 ```
 このコマンドは、ブロック・ストレージ・ボリュームの作成に関するすべてのオプション (ストレージ・タイプ、ボリューム・サイズ、OS タイプ、IOPS、階層レベル、データ・センター、およびスナップショット・サイズ) をリストします。
-
 
 ### bluemix sl cdn cancel
 {: #sl_cdn_cancel}
@@ -915,7 +947,8 @@ CDN アカウントを取り消します。
 bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -935,7 +968,8 @@ bluemix sl cdn detail ACCOUNT_ID
 bluemix sl cdn list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、name、type、created。</dd>
 <dt>--order</dt>
@@ -957,7 +991,8 @@ CDN アカウントを注文します。
 bluemix sl cdn order [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-b, --bandwidth</dt>
 <dd>CDN 処理能力。指定されていなければ、「従量課金 (PAYG)」価格が使用されます。</dd>
 <dt>-s, --storage</dt>
@@ -981,7 +1016,8 @@ Origin Pull マッピングを作成します。
 bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-t, --type</dt>
 <dd>このマッピングのメディア・タイプ (http、flash、wm、...)。デフォルト: http。</dd>
 <dt>-c, --cname</dt>
@@ -1003,7 +1039,8 @@ Origin Pull マッピングを削除します。
 bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -1015,7 +1052,8 @@ bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...][OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -1027,7 +1065,8 @@ bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...][OPTIONS]
 bluemix sl file access-authorize VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-d, --hardware-id</dt>
 <dd>許可する 1 つのハードウェア・サーバーの ID。</dd>
 <dt>-v, --virtual-id</dt>
@@ -1040,7 +1079,8 @@ bluemix sl file access-authorize VOLUME_ID [OPTIONS]
 <dd>許可する 1 つのサブネットの ID。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file access-authorize 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーが、ID 12345678 のボリュームにアクセスすることを許可します。
@@ -1053,14 +1093,16 @@ ACL をリストします。
 bluemix sl file access-list VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
 <dt>--columns</dt>
 <dd>表示する列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file access-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームへのアクセスを許可されているすべてのホストをリストし、それらを ID によってソートします。
@@ -1073,7 +1115,8 @@ bluemix sl file access-list 12345678 --sortby id
 bluemix sl file access-revoke VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-d, --hardware-id</dt>
 <dd>取り消す 1 つのハードウェア・サーバーの ID。</dd>
 <dt>-v, --virtual-id</dt>
@@ -1086,7 +1129,8 @@ bluemix sl file access-revoke VOLUME_ID [OPTIONS]
 <dd>取り消す 1 つのサブネットの ID。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file access-revoke 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーの、ID 12345678 のボリュームへのアクセスを取り消します。
@@ -1100,7 +1144,8 @@ bluemix sl file replica-failback VOLUME_ID
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl file replica-failback 12345678
 ```
 このコマンドは、ID 12345678 のボリュームのフェイルバック操作を実行します。
@@ -1114,7 +1159,8 @@ bluemix sl file replica-failover VOLUME_ID REPLICA_ID
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl file replica-failover 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームの、ID 87654321 のレプリカ・ボリュームへのフェイルオーバー操作を実行します。
@@ -1128,7 +1174,8 @@ bluemix sl file replica-locations VOLUME_ID
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl file replica-locations 12345678
 ```
 このコマンドは、ID 12345678 のファイル・ボリュームの適切な複製データ・センターをリストします。
@@ -1141,20 +1188,22 @@ bluemix sl file replica-locations 12345678
 bluemix sl file replica-order VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --snapshot-schedule</dt>
-<dd>必須。複製に使用するスナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
+<dd>必須。 複製に使用するスナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
 <dt>-d, --datacenter</dt>
-<dd>必須。複製用のデータ・センターの短縮名。例えば、dal09 など。</dd>
+<dd>必須。 複製用のデータ・センターの短縮名。例えば、dal09 など。</dd>
 <dt>-t, --tier</dt>
-<dd>オプション。レプリカを注文する 1 次ボリュームのエンデュランス・ストレージ層 (GB 当たりの IOPS)。オプション: 0.25、2、4、10。層が指定されない場合、元のボリュームの層が使用されます。</dd>
+<dd>オプション。 レプリカを注文する 1 次ボリュームのエンデュランス・ストレージ層 (GB 当たりの IOPS)。オプション: 0.25、2、4、10。層が指定されない場合、元のボリュームの層が使用されます。</dd>
 <dt>-i, --iops</dt>
 <dd>パフォーマンス・ストレージ IOPS (100 から 6000 までの範囲内の 100 の倍数)。IOPS が指定されない場合、元のボリュームの IOPS が使用されます。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 このコマンドは、ID 12345678 のボリュームのレプリカを注文します。このレプリカは、毎日の複製を実行し、dal09 にあり、層レベルは 4 です。
@@ -1168,7 +1217,8 @@ bluemix sl file replica-partners VOLUME_ID [OPTIONS]
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl file replica-partners 12345678
 ```
 このコマンドは、ID 12345678 のファイル・ボリュームの既存のレプリカ・ボリュームをリストします。
@@ -1181,7 +1231,8 @@ bluemix sl file replica-partners 12345678
 bluemix sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--reason</dt>
 <dd>取り消しの理由 (オプション)。</dd>
 <dt>--immediate</dt>
@@ -1190,7 +1241,8 @@ bluemix sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file snapshot-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のスナップショットを、確認を要求せず、即時に取り消します。
@@ -1203,12 +1255,14 @@ bluemix sl file snapshot-cancel 12345678 --immediate -f
 bluemix sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-n, --note</dt>
 <dd>新規スナップショットに設定するメモ。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file snapshot-create 12345678 --note snapshotforbluemix
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを、snapshotforbluemix の追加メモと共に作成します。
@@ -1221,12 +1275,14 @@ bluemix sl file snapshot-create 12345678 --note snapshotforbluemix
 bluemix sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --schedule-type</dt>
-<dd>必須。スナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
+<dd>必須。 スナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file snapshot-disable 12345678 -s DAILY
 ```
 このコマンドは、ID 12345678 のボリュームの毎日のスナップショットを無効にします。
@@ -1239,23 +1295,26 @@ bluemix sl file snapshot-disable 12345678 -s DAILY
 bluemix sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --schedule-type</dt>
-<dd>必須。スナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
+<dd>必須。 スナップショット・スケジュール。オプション: HOURLY、DAILY、WEEKLY。</dd>
 <dt>-c, --retention-count</dt>
-<dd>必須。保持するスナップショットの数。</dd>
+<dd>必須。 保持するスナップショットの数。</dd>
 <dt>-m, --minute</dt>
 <dd>スナップショットを作成する時刻の分の部分。0 から 59 までの整数。</dd>
 <dt>-r, --hour</dt>
 <dd>スナップショットを作成する時刻の時の部分。0 から 23 までの整数。</dd>
 <dt>-d, --day-of-week</dt>
-<dd>スナップショットを作成する曜日。0 から 6 までの整数。0 は日曜、1 は月曜、2 は火曜、3 は水曜、4 は木曜、5 は金曜、6 は土曜を表します。</dd>
+<dd>スナップショットを作成する曜日。0 から 6 までの整数。 0 は日曜、1 は月曜、2 は火曜、3 は水曜、4 は木曜、5 は金曜、6 は土曜を表します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを有効にします。スナップショットは、毎週日曜日の 2:00 に取られ、最高 5 個のスナップショットが保持されます。
+
 ### bluemix sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
@@ -1265,7 +1324,8 @@ bluemix sl file snapshot-delete SNAPSHOT_ID
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl file snapshot-delete 12345678
 ```
 このコマンドは、ID 12345678 のスナップショットを削除します。
@@ -1278,12 +1338,14 @@ bluemix sl file snapshot-delete 12345678
 bluemix sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、name、created、size_bytes。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file snapshot-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームのすべてのスナップショットをリストし、それらを ID によってソートします。
@@ -1296,11 +1358,12 @@ bluemix sl file snapshot-list 12345678 --sortby id
 bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --size</dt>
-<dd>必須。作成するスナップショット・スペースのサイズ (GB 単位)。</dd>
+<dd>必須。 作成するスナップショット・スペースのサイズ (GB 単位)。</dd>
 <dt>-t, --tier</dt>
-<dd>オプション。スペースの注文対象であるファイル・ボリュームのエンデュランス・ストレージ層 (GB 当たりの IOPS)。オプション: 0.25、2、4、10。</dd>
+<dd>オプション。 スペースの注文対象であるファイル・ボリュームのエンデュランス・ストレージ層 (GB 当たりの IOPS)。オプション: 0.25、2、4、10。</dd>
 <dt>-i, --iops</dt>
 <dd>パフォーマンス・ストレージ IOPS (100 から 6000 までの範囲内の 100 の倍数)。</dd>
 <dt>-u, --upgrade</dt>
@@ -1309,7 +1372,8 @@ bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショット・スペースを注文します。サイズは 1000 GB、階層レベルは 1 GB 当たり 4 IOPS です。
@@ -1323,7 +1387,8 @@ bluemix sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl file snapshot-restore 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームを、ID 87654321 のスナップショットからリストアします。
@@ -1336,7 +1401,8 @@ bluemix sl file snapshot-restore 12345678 87654321
 bluemix sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--reason</dt>
 <dd>取り消しの理由 (オプション)。</dd>
 <dt>--immediate</dt>
@@ -1345,7 +1411,8 @@ bluemix sl file volume-cancel VOLUME_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file volume-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のボリュームを、確認を要求せず、即時に取り消します。
@@ -1358,7 +1425,8 @@ bluemix sl file volume-cancel 12345678 --immediate -f
 bluemix sl file volume-list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-u, --username</dt>
 <dd>ボリュームのユーザー名を基準にフィルター操作します。</dd>
 <dt>-d, --datacenter</dt>
@@ -1373,11 +1441,11 @@ bluemix sl file volume-list [OPTIONS]
 <dd>表示する列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 このコマンドは、dal09 にある、現行アカウントのすべてのエンデュランス・ボリュームをリストし、それらを容量によってソートします。
-
 
 ### bluemix sl file volume-detail
 {: #sl_file_volume_detail}
@@ -1388,7 +1456,8 @@ bluemix sl file volume-detail VOLUME_ID
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl file volume-detail 12345678
 ```
 このコマンドは、ID 12345678 のボリュームの詳細を表示します。
@@ -1401,7 +1470,8 @@ bluemix sl file volume-detail 12345678
 bluemix sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-o, --origin-snapshot-id</dt>
 <dd>重複に使用する元のボリュームのスナップショットの ID。</dd>
 <dt>-s, --duplicate-size</dt>
@@ -1416,7 +1486,8 @@ bluemix sl file volume-duplicate VOLUME_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file volume-duplicate 12345678
 ```
 このコマンドは、ID 12345678 のボリュームを複写して新規ボリュームを注文します。
@@ -1429,24 +1500,26 @@ bluemix sl file volume-duplicate 12345678
 bluemix sl file volume-order [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-t, --storage-type</dt>
-<dd>必須。ストレージ・ボリュームのタイプ。オプション: performance、endurance。</dd>
+<dd>必須。 ストレージ・ボリュームのタイプ。オプション: performance、endurance。</dd>
 <dt>-s, --size</dt>
-<dd>必須。ストレージ・ボリュームのサイズ (GB)。</dd>
+<dd>必須。 ストレージ・ボリュームのサイズ (GB)。</dd>
 <dt>-i, --iops</dt>
 <dd>パフォーマンス・ストレージの IOP (100 から 6000 までの範囲内の 100 の倍数) [storage-type が performance の場合は必須]。</dd>
 <dt>-e, --tier</dt>
 <dd>エンデュランス・ストレージ層 (GB 当たりの IOP) [storage-type が endurance の場合は必須]。オプションは、0.25、2、4、10 です。</dd>
 <dt>-d, --datacenter</dt>
-<dd>必須。データ・センターの短縮名。</dd>
+<dd>必須。 データ・センターの短縮名。</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>ボリュームと共にスナップショット・スペースを注文するためのオプション・パラメーター。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
 このコマンドは、サイズが 1000 GB、IOPS が 4000、ロケーションが dal09 のパフォーマンス・ボリュームを注文します。
@@ -1460,7 +1533,8 @@ bluemix sl file volume-options
 ```
 
 
-**例**:```
+**例**:
+```
 bluemix sl file volume-options
 ```
 このコマンドは、ファイル・ストレージ・ボリュームの作成に関するすべてのオプション (ストレージ・タイプ、ボリューム・サイズ、IOPS、層レベル、データ・センター、およびスナップショット・サイズ) をリストします。
@@ -1473,13 +1547,15 @@ BIND ゾーン・ファイルに基づいてゾーンをインポートします
 bluemix sl dns import ZONEFILE [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--dry-run</dt>
 <dd>実際にはレコードを作成しません。</dd>
 </dl>
 
-**例**:```
- bluemix sl dns import ~/blumix.net.txt
+**例**:
+```
+bluemix sl dns import ~/blumix.net.txt
 ```
 このコマンドは、ファイル ~/blumix.net.txt からゾーンとそのリソース・レコードをインポートします。
 
@@ -1491,13 +1567,15 @@ bluemix sl dns import ZONEFILE [OPTIONS]
 bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--ttl</dt>
 <dd>TTL(Time-To-Live (存続時間)) (秒)。例えば、86400 など。デフォルト: 7200。</dd>
 </dl>
 
-**例**:```
- bluemix sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
+**例**:
+```
+bluemix sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
 ```
 このコマンドは、A レコードをゾーン bluemix.net に追加します。ホストは「ftp」、データは「127.0.0.1」、および ttl は 86400 秒です。
 
@@ -1506,10 +1584,11 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 ゾーン内のリソース・レコードを更新します
 ```
-   bluemix sl dns record-edit ZONE [OPTIONS]
+bluemix sl dns record-edit ZONE [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--by-record</dt>
 <dd>ホスト・レコード (www など) で編集します。</dd>
 <dt>--by-id</dt>
@@ -1520,8 +1599,9 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 <dd>TTL 値 (秒) (例: 86400)。</dd>
 </dl>
 
-**例**:```
- bluemix sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
+**例**:
+```
+bluemix sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 このコマンドは、ゾーン bluemix.net のレコードを編集します。ID は 12345678 です。データを「127.0.0.2」に設定し、ttl を 3600 に設定します。
 
@@ -1530,10 +1610,11 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 ゾーン内のすべてのリソース・レコードをリストします。
 ```
-   bluemix sl dns record-list ZONE [OPTIONS]
+bluemix sl dns record-list ZONE [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--data</dt>
 <dd>レコード・データ (IP アドレスなど) を基準にフィルター操作します。</dd>
 <dt>--record</dt>
@@ -1544,8 +1625,9 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 <dd>レコード・タイプ (A または CNAME など) を基準にフィルター操作します。</dd>
 </dl>
 
-**例**:```
- bluemix sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
+**例**:
+```
+bluemix sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
 ```
 このコマンドは、ゾーン bluemix.net のすべての A レコードをリストします。フィルター基準ホストは elasticsearch で TTL は 900 秒です。
 
@@ -1554,12 +1636,13 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 ゾーンからリソース・レコードを削除します。
 ```
- bluemix sl dns record-remove RECORD_ID
+bluemix sl dns record-remove RECORD_ID
 ```
 
 
-**例**:```
- bluemix sl dns record-remove 12345678
+**例**:
+```
+bluemix sl dns record-remove 12345678
 ```
 このコマンドは、ID 12345678 のリソース・レコードを削除します。
 
@@ -1568,12 +1651,13 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 ゾーンを作成します。
 ```
- bluemix sl dns zone-create ZONE
+bluemix sl dns zone-create ZONE
 ```
 
 
-**例**:```
- bluemix sl dns zone-create bluemix.net
+**例**:
+```
+bluemix sl dns zone-create bluemix.net
 ```
 このコマンドは、bluemix.net という名前のゾーンを作成します。
 
@@ -1582,12 +1666,13 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 ゾーンを削除します。
 ```
- bluemix sl dns zone-delete ZONE
+bluemix sl dns zone-delete ZONE
 ```
 
 
-**例**:```
- bluemix sl dns zone-delete bluemix.net
+**例**:
+```
+bluemix sl dns zone-delete bluemix.net
 ```
 このコマンドは、bluemix.net という名前のゾーンを削除します。
 
@@ -1596,12 +1681,13 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 ユーザーのアカウントのすべてのゾーンをリストします。
 ```
-   bluemix sl dns zone-list
+bluemix sl dns zone-list
 ```
 
 
-**例**:```
-   bluemix sl dns zone-list
+**例**:
+```
+bluemix sl dns zone-list
 ```
 このコマンドは、現行アカウントにあるすべてのゾーンをリストします。
 
@@ -1610,15 +1696,15 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 ゾーンおよびリソース・レコードを BIND フォーマットで出力します。
 ```
- bluemix sl dns zone-print ZONE
+bluemix sl dns zone-print ZONE
 ```
 
 
-**例**:```
- bluemix sl dns zone-print bluemix.net
+**例**:
+```
+bluemix sl dns zone-print bluemix.net
 ```
 このコマンドは、bluemix.net という名前のゾーンを BIND フォーマットで出力します。
-
 
 ### bluemix sl globalip create
 {: #sl_globalip_create}
@@ -1628,7 +1714,8 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 bluemix sl globalip create [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--v6</dt>
 <dd>IPv6 IP アドレスを注文します。</dd>
 <dt>--test</dt>
@@ -1637,8 +1724,9 @@ bluemix sl globalip create [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
-     bluemix sl globalip create --v6
+**例**:
+```
+bluemix sl globalip create --v6
 ```
 このコマンドは、IP V6 アドレスを作成します。
 
@@ -1651,11 +1739,11 @@ bluemix sl globalip assign IDENTIFIER TARGET
 ```
 
 
-**例**:```
- bluemix sl globalip assign 12345678 9.111.123.456
+**例**:
+```
+bluemix sl globalip assign 12345678 9.111.123.456
 ```
 このコマンドは、ID 12345678 の IP アドレスを、IP アドレス 9.111.123.456 のターゲット・デバイスに割り当てます。
-
 
 ### bluemix sl globalip cancel
 {: #sl_globalip_cancel}
@@ -1665,13 +1753,15 @@ bluemix sl globalip assign IDENTIFIER TARGET
 bluemix sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl globalip cancel 12345678
+**例**:
+```
+bluemix sl globalip cancel 12345678
 ```
 このコマンドは、ID 12345678 の IP アドレスを取り消します。
 
@@ -1683,7 +1773,8 @@ bluemix sl globalip cancel IDENTIFIER [OPTIONS]
 bluemix sl globalip list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--v4</dt>
 <dd>IPv4 IP のみを表示します。</dd>
 <dt>--v6</dt>
@@ -1692,7 +1783,8 @@ bluemix sl globalip list [OPTIONS]
 <dd>この IP アドレスを購入した注文の ID を基準にしてフィルター操作します。</dd>
 </dl>
 
-**例**:```
+**例**:
+```
 bluemix sl globalip list --v4
 ```
 このコマンドは、現行アカウントのすべての IP V4 アドレスをリストします。
@@ -1702,12 +1794,13 @@ bluemix sl globalip list --v4
 
 ターゲットのルーターまたはデバイスからグローバル IP を割り当て解除します。
 ```
- bluemix sl globalip unassign IDENTIFIER
+bluemix sl globalip unassign IDENTIFIER
 ```
 
 
-**例**:```
- bluemix sl globalip unassign 12345678
+**例**:
+```
+bluemix sl globalip unassign 12345678
 ```
 このコマンドは、ID 12345678 の IP アドレスをターゲット・デバイスから割り当て解除します。
 
@@ -1716,9 +1809,10 @@ bluemix sl globalip list --v4
 
 イメージを削除します。
 ```
-   bluemix sl image delete IDENTIFIER
+bluemix sl image delete IDENTIFIER
 ```
-**例**:```
+**例**:
+```
    bluemix sl image delete 12345678
 ```
 このコマンドは、ID「12345678」のイメージを削除します。
@@ -1728,9 +1822,10 @@ bluemix sl globalip list --v4
 
 イメージの詳細を取得します。
 ```
- bluemix sl image detail IDENTIFIER
+bluemix sl image detail IDENTIFIER
 ```
-**例**:```
+**例**:
+```
  bluemix sl image detail 12345678
 ```
 このコマンドは、ID 12345678 のイメージの詳細を取得します。
@@ -1740,10 +1835,11 @@ bluemix sl globalip list --v4
 
 イメージの詳細を編集します。
 ```
-   bluemix sl image edit IDENTIFIER [OPTIONS]
+bluemix sl image edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--name</dt>
 <dd>イメージの名前。</dd>
 <dt>--note</dt>
@@ -1763,10 +1859,11 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 
 ご使用のアカウントのすべてのイメージをリストします。
 ```
-   bluemix sl image list [OPTIONS]
+bluemix sl image list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--name</dt>
 <dd>イメージ名を基準にフィルター操作します。</dd>
 <dt>--public</dt>
@@ -1783,7 +1880,8 @@ IPSec VPN トンネル・コンテキストを取り消します。
 bluemix sl ipsec cancel CONTEXT_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--immediate</dt>
 <dd>請求応答日ではなく即時に、IPSec を取り消します。</dd>
 <dt>--reason</dt>
@@ -1808,7 +1906,8 @@ IPSec VPN トンネル・コンテキストの詳細をリストします。
 bluemix sl ipsec detail CONTEXT_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-i, --include</dt>
 <dd>追加リソースを組み込みます。オプション: at、is、rs、sr、ss。</dd>
 </dl>
@@ -1820,7 +1919,8 @@ IPSec VPN トンネル・コンテキストをリストします。
 bluemix sl ipsec list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--order</dt>
 <dd>IPSEC を購入した注文の ID を基準にフィルター操作します。</dd>
 </dl>
@@ -1832,9 +1932,10 @@ IPSec VPN トンネルを注文します。
 bluemix sl ipsec order [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-d, --datacenter</dt>
-<dd>必須。IPSEC 用のデータ・センターの短縮名。例えば、dal09 など。</dd>
+<dd>必須。 IPSEC 用のデータ・センターの短縮名。例えば、dal09 など。</dd>
 </dl>
 
 ### bluemix sl ipsec subnet-add
@@ -1845,7 +1946,8 @@ IPSec トンネル・コンテキストにサブネットを追加します。
 bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --subnet-id</dt>
 <dd>追加するサブネット ID (必須)。</dd>
 <dt>-t, --subnet-type</dt>
@@ -1870,7 +1972,8 @@ IPSec トンネルにアドレス変換を追加します。
 bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --static-ip</dt>
 <dd>静的 IP アドレス (必須)。</dd>
 <dt>-r, --remote-ip</dt>
@@ -1894,7 +1997,8 @@ IPSec のアドレス変換を更新します。
 bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-s, --static-ip</dt>
 <dd>静的 IP アドレス (必須)。</dd>
 <dt>-r, --remote-ip</dt>
@@ -1910,7 +2014,8 @@ bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-n, --name</dt>
 <dd>分かりやすい名前。</dd>
 <dt>-r, --remote-peer</dt>
@@ -1945,7 +2050,8 @@ bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -1958,7 +2064,8 @@ create-options から返された ID を指定してロード・バランサー�
 bluemix sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -1987,15 +2094,16 @@ bluemix sl loadbal detail LOADBAL_ID
 bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-a, --allocation</dt>
-<dd>必須。接続の割り振り済みパーセント。</dd>
+<dd>必須。 接続の割り振り済みパーセント。</dd>
 <dt>-p, --port</dt>
-<dd>必須。ポート番号。</dd>
+<dd>必須。 ポート番号。</dd>
 <dt>-t, --routing-type</dt>
-<dd>必須。ルーティング・タイプの ID。ID を検出するには、「bluemix sl loadbal routing-types」を実行します。</dd>
+<dd>必須。 ルーティング・タイプの ID。 ID を検出するには、「bluemix sl loadbal routing-types」を実行します。</dd>
 <dt>-m, --routing-method</dt>
-<dd>必須。ルーティング・メソッドの ID。ID を検出するには、「bluemix sl loadbal routing-methods」を実行します。</dd>
+<dd>必須。 ルーティング・メソッドの ID。 ID を検出するには、「bluemix sl loadbal routing-methods」を実行します。</dd>
 </dl>
 
 ### bluemix sl loadbal group-delete
@@ -2006,7 +2114,8 @@ bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -2019,7 +2128,8 @@ bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-a, --allocation</dt>
 <dd>接続の割り振り済みパーセントを変更します。</dd>
 <dt>-p, --port</dt>
@@ -2054,7 +2164,8 @@ bluemix sl loadbal health-checks
 bluemix sl loadbal list
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-d, --datacenter</dt>
 <dd>データ・センターの短縮名を基準にフィルター操作します。</dd>
 <dt>-o, --order</dt>
@@ -2086,17 +2197,18 @@ bluemix sl loadbal routing-types
 bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--disabled</dt>
-<dd>オプション。disabled としてサービスを作成します。指定されていない場合、デフォルトは enabled です。</dd>
+<dd>オプション。 disabled としてサービスを作成します。指定されていない場合、デフォルトは enabled です。</dd>
 <dt>-p, --port</dt>
-<dd>必須。サービスのポート番号。</dd>
+<dd>必須。 サービスのポート番号。</dd>
 <dt>-w, --weight</dt>
-<dd>必須。サービスの重み。</dd>
+<dd>必須。 サービスの重み。</dd>
 <dt>-t, --healthcheck-type</dt>
-<dd>必須。ヘルス・チェック・タイプ。</dd>
+<dd>必須。 ヘルス・チェック・タイプ。</dd>
 <dt>-i, --ip-address</dt>
-<dd>必須。サービスの IP アドレス。</dd>
+<dd>必須。 サービスの IP アドレス。</dd>
 </dl>
 
 ### bluemix sl loadbal service-delete
@@ -2107,7 +2219,8 @@ bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -2120,7 +2233,8 @@ bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--disabled</dt>
 <dd>サービスを無効にします。</dd>
 <dt>--enabled</dt>
@@ -2143,7 +2257,8 @@ bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 bluemix sl loadbal service-toggle SERVICE_ID
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
@@ -2153,10 +2268,11 @@ bluemix sl loadbal service-toggle SERVICE_ID
 
 新規の SSH 鍵を追加します。
 ```
- bluemix sl security sshkey-add LABEL [OPTIONS]
+bluemix sl security sshkey-add LABEL [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --in-file</dt>
 <dd>この鍵のためにインポートする id_rsa.pub ファイル。</dd>
 <dt>-k, --key</dt>
@@ -2165,29 +2281,31 @@ bluemix sl loadbal service-toggle SERVICE_ID
 <dd>鍵に関連付けられる追加のメモ。</dd>
 </dl>
 
-**例**:```
- bluemix sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
+**例**:
+```
+bluemix sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 このコマンドは、ファイル ~/.ssh/id_rsa.pub から SSH 鍵を、メモ「mykey」を付けて追加します。
-
 
 ### bluemix sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
 SSH 鍵を編集します。
 ```
- bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
+bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--label</dt>
 <dd>鍵の新しいラベル。</dd>
 <dt>--note</dt>
 <dd>鍵についての新しいメモ。</dd>
 </dl>
 
-**例**:```
- bluemix sl security sshkey-edit 12345678 --label Bluemix --note testing
+**例**:
+```
+bluemix sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
 このコマンドは、ID 12345678 の SSH 鍵を更新し、ラベルを「Bluemix」に設定し、メモを「testing」に設定します。
 
@@ -2196,16 +2314,18 @@ SSH 鍵を編集します。
 
 ご使用のアカウントの SSH 鍵をリストします。
 ```
- bluemix sl security sshkey-list [OPTIONS]
+bluemix sl security sshkey-list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、label、fingerprint、notes。</dd>
 </dl>
 
-**例**:```
- bluemix sl security sshkey-list --sortby label
+**例**:
+```
+bluemix sl security sshkey-list --sortby label
 ```
 このコマンドは、現行アカウントのすべての SSH 鍵をリストし、それらをラベルによってソートします。
 
@@ -2214,16 +2334,18 @@ SSH 鍵を編集します。
 
 SSH 鍵を画面に出力します。
 ```
- bluemix sl security sshkey-print IDENTIFIER [OPTIONS]
+bluemix sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --out-file</dt>
 <dd>SSH 公開鍵は、このファイルに書き込まれます。</dd>
 </dl>
 
-**例**:```
- bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
+**例**:
+```
+bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 このコマンドは、ID 12345678 の SSH 鍵の ID、ラベル、およびメモを表示し、公開鍵をファイル ~/mykey.pub に書き込みます。
 
@@ -2232,16 +2354,18 @@ SSH 鍵を画面に出力します。
 
 SSH 鍵を永久に削除します。
 ```
- bluemix sl security sshkey-remove IDENTIFIER [OPTIONS]
+bluemix sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl security sshkey-remove 12345678 -f
+**例**:
+```
+bluemix sl security sshkey-remove 12345678 -f
 ```
 このコマンドは、ID 12345678 の SSH 鍵を、確認を求めずに削除します。
 
@@ -2250,10 +2374,11 @@ SSH 鍵を永久に削除します。
 
 SSL 証明書の詳細を追加してアップロードします。
 ```
- bluemix sl security cert-add [OPTIONS]
+bluemix sl security cert-add [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--crt</dt>
 <dd>証明書ファイル。</dd>
 <dt>--csr</dt>
@@ -2266,8 +2391,9 @@ SSL 証明書の詳細を追加してアップロードします。
 <dd>追加のメモ。</dd>
 </dl>
 
-**例**:```
- bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key 
+**例**:
+```
+bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key
 ```
 このコマンドは、ドメイン bluemix.net の証明書ファイル ~/bluemix.net.cert と秘密鍵ファイル ~/bluemix.net.key を追加します。
 
@@ -2276,10 +2402,11 @@ SSL 証明書の詳細を追加してアップロードします。
 
 SSL 証明書を編集します。
 ```
- bluemix sl security cert-edit IDENTIFIER [OPTIONS]
+bluemix sl security cert-edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--crt</dt>
 <dd>証明書ファイル。</dd>
 <dt>--csr</dt>
@@ -2292,8 +2419,9 @@ SSL 証明書を編集します。
 <dd>追加のメモ。</dd>
 </dl>
 
-**例**:```
- bluemix sl security cert-edit 12345678 --key ~/bluemix.net.key
+**例**:
+```
+bluemix sl security cert-edit 12345678 --key ~/bluemix.net.key
 ```
 このコマンドは、ID 12345678 の証明書を編集し、ファイル ~/bluemix.net.key でその秘密鍵を更新します。
 
@@ -2302,32 +2430,35 @@ SSL 証明書を編集します。
 
 SSL 証明書および鍵ファイルをダウンロードします。
 ```
- bluemix sl security cert-download IDENTIFIER
+bluemix sl security cert-download IDENTIFIER
 ```
 
 
-**例**:```
- bluemix sl security cert-download 12345678
+**例**:
 ```
-このコマンドは、現行ディレクトリーに ID 12345678 の証明書に関する 4 つのファイルをダウンロードします。4 つのファイルというのは、証明書ファイル、証明書署名要求ファイル、中間証明書ファイル、および秘密鍵ファイルです。
+bluemix sl security cert-download 12345678
+```
+このコマンドは、現行ディレクトリーに ID 12345678 の証明書に関する 4 つのファイルをダウンロードします。 4 つのファイルというのは、証明書ファイル、証明書署名要求ファイル、中間証明書ファイル、および秘密鍵ファイルです。
 
 ### bluemix sl security cert-list
 {: #sl_security_cert_list}
 
 ご使用のアカウントの SSL 証明書をリストします。
 ```
- bluemix sl security cert-list [OPTIONS]
+bluemix sl security cert-list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--status</dt>
 <dd>指定の状況の証明書を表示します。デフォルトは all です。オプション: all、valid、expired。</dd>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、common_name、days_until_expire、notes。</dd>
 </dl>
 
-**例**:```
- bluemix sl security cert-list --status valid --sortby days_until_expire
+**例**:
+```
+bluemix sl security cert-list --status valid --sortby days_until_expire
 ```
 このコマンドは、現行アカウントのすべての有効な証明書をリストし、それらを有効期限日によってソートします。
 
@@ -2336,16 +2467,18 @@ SSL 証明書および鍵ファイルをダウンロードします。
 
 SSL 証明書を削除します。
 ```
- bluemix sl security cert-remove IDENTIFIER [OPTIONS]
+bluemix sl security cert-remove IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl security cert-remove 12345678
+**例**:
+```
+bluemix sl security cert-remove 12345678
 ```
 このコマンドは、ID 12345678 の証明書を削除します。
 
@@ -2357,13 +2490,15 @@ SSL 証明書を削除します。
 bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl subnet cancel 12345678 -f
+**例**:
+```
+bluemix sl subnet cancel 12345678 -f
 ```
 このコマンドは、ID 12345678 のサブネットを、確認を求めずに取り消します。
 
@@ -2372,10 +2507,11 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 ご使用のアカウントに新規サブネットを追加します。
 ```
-   bluemix sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
+bluemix sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--v6, --ipv6</dt>
 <dd>IPv6 アドレスを注文します。</dd>
 <dt>--test</dt>
@@ -2384,45 +2520,46 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl subnet create public 16 567
+**例**:
+```
+bluemix sl subnet create public 16 567
 ```
 このコマンドは、16 個の IPv4 アドレスを持つパブリック・サブネットを作成し、ID 567 の VLAN に配置します。
-
-
 
 ### bluemix sl subnet detail
 {: #sl_subnet_detail}
 
 サブネットの詳細を取得します。
 ```
-   bluemix sl subnet detail IDENTIFIER [OPTIONS]
+bluemix sl subnet detail IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--no-vs</dt>
 <dd>仮想サーバー・リストを非表示にします。</dd>
 <dt>--no-hardware</dt>
 <dd>ハードウェア・リストを非表示にします。</dd>
 </dl>
 
-**例**:```
- bluemix sl subnet detail 12345678
+**例**:
+```
+bluemix sl subnet detail 12345678
 ```
 このコマンドは、仮想サーバーおよびハードウェア・サーバーの情報を含め、ID 12345678 のサブネットに関する詳細情報を表示します。
-
 
 ### bluemix sl subnet list
 {: #sl_subnet_list}
 
 ご使用のアカウントのすべてのサブネットをリストします。
 ```
-   bluemix sl subnet list [OPTIONS]
+bluemix sl subnet list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--sortby</dt>
-<dd>ソートの基準にする列。オプション: id、identifier、type、network_space、datacenter、vlan_id、IPs、hardware、vs。</dd>
+<dd>ソートの基準にする列。 オプション: id、identifier、type、network_space、datacenter、vlan_id、IPs、hardware、vs。</dd>
 <dt>-d, --datacenter</dt>
 <dd>データ・センターの短縮名を基準にフィルター操作します。</dd>
 <dt>--identifier</dt>
@@ -2439,37 +2576,37 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 <dd>サブネットを購入した注文の ID を基準にフィルター操作します。</dd>
 </dl>
 
-**例**:```
- bluemix sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
+**例**:
+```
+bluemix sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 このコマンドは、現行アカウントの IP V4 サブネットをリストします。フィルター基準のデータ・センターは dal09、サブネット・タイプは PRIMARY、およびネットワーク・スペースは PUBLIC です。
-
-
 
 ### bluemix sl subnet lookup
 {: #sl_subnet_lookup}
 
 IP アドレスを検出し、そのサブネットとデバイスの情報を表示します。
 ```
-   bluemix sl subnet lookup IP_ADDRESS
+bluemix sl subnet lookup IP_ADDRESS
 ```
 
 
-**例**:```
- bluemix sl subnet lookup 9.125.235.255
+**例**:
+```
+bluemix sl subnet lookup 9.125.235.255
 ```
 このコマンドは、アドレス 9.125.235.255 の IP アドレス・レコードを検出し、そのサブネットとデバイスの情報を表示します。
-
 
 ### bluemix sl vlan create
 {: #sl_vlan_create}
 
 新規 VLAN を作成します。
 ```
-   bluemix sl vlan create [OPTIONS]
+bluemix sl vlan create [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-t, --vlan-type</dt>
 <dd>VLAN のタイプ。public または private のいずれか。</dd>
 <dt>-r, --router</dt>
@@ -2484,47 +2621,51 @@ IP アドレスを検出し、そのサブネットとデバイスの情報を�
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vlan create -t public -d dal09 -s 16 -n myvlan
+**例**:
+```
+bluemix sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 このコマンドは、データ・センター dal09 に、16 個の IP アドレスを持ち、myvlan という名前のパブリック VLAN を作成します。
+
 ### bluemix sl vlan cancel
 {: #sl_vlan_cancel}
 
 VLAN を取り消します。
 ```
-   bluemix sl vlan cancel IDENTIFIER [OPTIONS]
+bluemix sl vlan cancel IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
-   bluemix sl vlan cancel 12345678 -f
+**例**:
+```
+bluemix sl vlan cancel 12345678 -f
 ```
 このコマンドは、ID 12345678 の VLAN を、確認を求めずに取り消します。
-
-
 
 ### bluemix sl vlan detail
 {: #sl_vlan_detail}
 
 VLAN についての詳細を取得します。
 ```
-   bluemix sl vlan detail IDENTIFIER [OPTIONS]
+bluemix sl vlan detail IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--no-vs</dt>
 <dd>仮想サーバー・リストを非表示にします。</dd>
 <dt>--no-hardware</dt>
 <dd>ハードウェア・リストを非表示にします。</dd>
 </dl>
 
-**例**:```
- bluemix sl vlan detail 12345678  --no-vs --no-hardware
+**例**:
+```
+bluemix sl vlan detail 12345678  --no-vs --no-hardware
 ```
 このコマンドは、ID 12345678 の VLAN の詳細を表示し、仮想サーバーおよびハードウェア・サーバーをリストしません。
 
@@ -2533,29 +2674,31 @@ VLAN についての詳細を取得します。
 
 VLAN についての詳細を編集します。
 ```
-   bluemix sl vlan edit IDENTIFIER [OPTIONS]
+bluemix sl vlan edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-n, --name</dt>
 <dd>VLAN の名前。</dd>
 </dl>
 
-**例**:```
- bluemix sl vlan edit 12345678 -n myvlan-rename
+**例**:
+```
+bluemix sl vlan edit 12345678 -n myvlan-rename
 ```
 このコマンドは、ID 12345678 の VLAN を更新し、それに新しい名前「myvlan-rename」を付けます。
-
 
 ### bluemix sl vlan list
 {: #sl_vlan_list}
 
 ご使用のアカウントのすべての VLAN をリストします。
 ```
- bluemix sl vlan list [OPTIONS]
+bluemix sl vlan list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--sortby</dt>
 <dd>ソートの基準にする列。オプション: id、number、name、firewall、datacenter、hardware、virtual_servers、public_ips。</dd>
 <dt>-d, --datacenter</dt>
@@ -2568,23 +2711,24 @@ VLAN についての詳細を編集します。
 <dd>VLAN を購入した注文の ID を基準にフィルター操作します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vlan list -d dal09 --sortby number
+**例**:
+```
+bluemix sl vlan list -d dal09 --sortby number
 ```
 このコマンドは、現行アカウントのすべての VLAN をリストします。フィルター基準のデータ・センターは dal09 で、VLAN 番号によってソートします。
-
 
 ### bluemix sl vlan options
 {: #sl_vlan_options}
 
 VLAN の作成に関するすべてのオプションをリストします。
 ```
- bluemix sl vlan options
+bluemix sl vlan options
 ```
 
 
-**例**:```
- bluemix sl vlan options
+**例**:
+```
+bluemix sl vlan options
 ```
 このコマンドは、VLAN を作成するためのすべてのオプション (例えば、VLAN タイプ、データ・センター、サブネット・サイズ、ルーターなど) をリストします。
 
@@ -2593,69 +2737,71 @@ VLAN の作成に関するすべてのオプションをリストします。
 
 仮想サーバー・インスタンスを取り消します。
 ```
-   bluemix sl vs cancel IDENTIFIER [OPTIONS]
+bluemix sl vs cancel IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs cancel 12345678
+**例**:
+```
+bluemix sl vs cancel 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスを取り消します。
-
 
 ### bluemix sl vs capture
 {: #sl_vs_capture}
 
 仮想サーバー・インスタンスをイメージに取り込みます。
 ```
- bluemix sl vs capture IDENTIFIER [OPTIONS]
+bluemix sl vs capture IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-n, --name</dt>
-<dd>必須。イメージの名前。</dd>
+<dd>必須。 イメージの名前。</dd>
 <dt>--all</dt>
 <dd>この VS に属しているすべてのディスクを取り込みます。</dd>
 <dt>--note</dt>
 <dd>このイメージに関連付けるメモを追加します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs capture 12345678 -n mybluemix --all --note testing
+**例**:
+```
+bluemix sl vs capture 12345678 -n mybluemix --all --note testing
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスをすべてのディスクと共に、「mybluemix」という名前のイメージに、「testing」というメモを付けて取り込みます。
-
-
 
 ### bluemix sl vs create
 {: #sl_vs_create}
 
 仮想サーバー・インスタンスを作成します。
 ```
-   bluemix sl vs create [OPTIONS]
+bluemix sl vs create [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-H, --hostname</dt>
-<dd>必須。FQDN のホスト部分。</dd>
+<dd>必須。 FQDN のホスト部分。</dd>
 <dt>-D, --domain</dt>
-<dd>必須。FQDN のドメイン部分。</dd>
+<dd>必須。 FQDN のドメイン部分。</dd>
 <dt>-c, --cpu</dt>
-<dd>必須。CPU コアの数。</dd>
+<dd>必須。 CPU コアの数。</dd>
 <dt>-m, --memory</dt>
-<dd>必須。メモリー (M バイト)。</dd>
+<dd>必須。 メモリー (M バイト)。</dd>
 <dt>-d, --datacenter</dt>
-<dd>必須。データ・センターの短縮名。</dd>
+<dd>必須。 データ・センターの短縮名。</dd>
 <dt>-o, --os</dt>
-<dd>OS インストール・コード。ヒント: <OS>_LATEST を指定できます。</dd>
+<dd>OS インストール・コード。 ヒント: <OS>_LATEST を指定できます。</dd>
 <dt>--image</dt>
-<dd>イメージ ID。「bluemix sl image list」を参照してください。</dd>
+<dd>イメージ ID。 「bluemix sl image list」を参照してください。</dd>
 <dt>--billing</dt>
-<dd>請求レート。デフォルトは hourly です。 オプション: hourly、monthly。</dd>
+<dd>請求レート。 デフォルトは hourly です。 オプション: hourly、monthly。</dd>
 <dt>--dedicated</dt>
 <dd>専用仮想サーバー (プライベート・ノード) を作成します。</dd>
 <dt>--san</dt>
@@ -2694,8 +2840,9 @@ VLAN の作成に関するすべてのオプションをリストします。
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
-  bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
+**例**:
+```
+bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
 このコマンドは、ホスト名 myvsi、ドメイン bluemix.net、cpu コア x 4、4096M メモリー、データ・センター dal10 で仮想サーバー・インスタンスを注文します。
 
@@ -2704,12 +2851,13 @@ VLAN の作成に関するすべてのオプションをリストします。
 
 仮想サーバー・インスタンスの作成に関するオプションをリストします。
 ```
-   bluemix sl vs options [OPTIONS]
+bluemix sl vs options [OPTIONS]
 ```
 
 
-**例**:```
- bluemix sl vs options
+**例**:
+```
+bluemix sl vs options
 ```
 This command lists all the options for creating a virtual server instance, eg.datacenters, cpu, memory, os, disk, network speed, etc.
 
@@ -2718,12 +2866,13 @@ This command lists all the options for creating a virtual server instance, eg.da
 
 仮想サーバー・インスタンスの資格情報をリストします。
 ```
-   bluemix sl vs credentials IDENTIFIER [OPTIONS]
+bluemix sl vs credentials IDENTIFIER [OPTIONS]
 ```
 
 
-**例**:```
- bluemix sl vs credentials 12345678
+**例**:
+```
+bluemix sl vs credentials 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスのユーザー名とパスワードのすべてのペアをリストします。
 
@@ -2732,31 +2881,33 @@ This command lists all the options for creating a virtual server instance, eg.da
 
 仮想サーバー・インスタンスの詳細を取得します。
 ```
-   bluemix sl vs detail IDENTIFIER [OPTIONS]
+bluemix sl vs detail IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--passwords</dt>
 <dd>パスワードを表示します (他人に見られないように注意してください)。</dd>
 <dt>--price</dt>
 <dd>関連付けられた価格を表示します。</dd>
 </dl>
 
-**例**:```
-   bluemix sl vs details 12345678
+**例**:
+```
+bluemix sl vs details 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスに関する詳細情報をリストします。
-
 
 ### bluemix sl vs dns-sync
 {: #sl_vs_dns_sync}
 
 仮想サーバー・インスタンスの DNS レコードを同期します。
 ```
-   bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
+bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-a, --a-record</dt>
 <dd>ホストの A レコードを同期します。</dd>
 <dt>--aaaa-record</dt>
@@ -2769,23 +2920,26 @@ This command lists all the options for creating a virtual server instance, eg.da
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
+**例**:
+```
+bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスの A レコード (IP V4 アドレス) を DNS サーバーに同期し、この A レコードの TTL を 3600 に設定します。
+
 ### bluemix sl vs edit
 {: #sl_vs_edit}
 
 仮想サーバー・インスタンスの詳細を編集します。
 ```
-   bluemix sl vs edit IDENTIFIER [OPTIONS]
+bluemix sl vs edit IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-D, --domain</dt>
 <dd>FQDN のドメイン部分。</dd>
 <dt>-H, --hostname</dt>
-<dd>FQDN のホスト部分。例: server。</dd>
+<dd>FQDN のホスト部分。 例: server。</dd>
 <dt>--tag</dt>
 <dd>設定するタグ、または、すべて削除する場合は空ストリング。</dd>
 <dt>-u, --userdata</dt>
@@ -2798,8 +2952,9 @@ This command lists all the options for creating a virtual server instance, eg.da
 <dd>プライベート・ポート速度。オプション: 0、10、100、1000、10000。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
+**例**:
+```
+bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスを更新し、ドメインを「bluemix.net」、ホスト名を「myapp」、タグを 「testcli」に設定します。
 
@@ -2808,10 +2963,11 @@ This command lists all the options for creating a virtual server instance, eg.da
 
 ご使用のアカウントの仮想サーバー・インスタンスをリストします。
 ```
-   bluemix sl vs list [OPTIONS]
+bluemix sl vs list [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-c, --cpu</dt>
 <dd>CPU コアの数。</dd>
 <dt>-D, --domain</dt>
@@ -2831,47 +2987,47 @@ This command lists all the options for creating a virtual server instance, eg.da
 <dt>--tag</dt>
 <dd>タグを基準にフィルター操作します (複数のオカレンスが許可されます)。</dd>
 <dt>--sortby</dt>
-<dd>ソートの基準にする列。オプション: id、hostname、domain、datacenter、cpu、memory、primary_ip、backend_ip。デフォルト: hostname。</dd>
+<dd>ソートの基準にする列。オプション: id、hostname、domain、datacenter、cpu、memory、primary_ip、backend_ip。 デフォルト: hostname。</dd>
 <dt>--columns</dt>
-<dd>表示する列。オプション: guid、primary_ip、backend_ip、datacenter、action、power_state、created_by、tags。デフォルト: id、hostname、primary_ip、backend_ip、datacenter、action。</dd>
+<dd>表示する列。オプション: guid、primary_ip、backend_ip、datacenter、action、power_state、created_by、tags。 デフォルト: id、hostname、primary_ip、backend_ip、datacenter、action。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs list --domain bluemix.net --hourly --sortby memory
+**例**:
+```
+bluemix sl vs list --domain bluemix.net --hourly --sortby memory
 ```
 このコマンドは、現行アカウントの、時間ごとに請求されるすべての仮想サーバー・インスタンスをリストします。フィルター基準のドメインは「bluemix.net」で、それらをメモリーによってソートします。
-
-
 
 ### bluemix sl vs pause
 {: #sl_vs_pause}
 
 アクティブな仮想サーバー・インスタンスを一時停止します。
 ```
-   bluemix sl vs pause IDENTIFIER [OPTIONS]
+bluemix sl vs pause IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs pause 12345678 -f
+**例**:
+```
+bluemix sl vs pause 12345678 -f
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスを、確認を求めずに一時停止します。
-
-
 
 ### bluemix sl vs power-off
 {: #sl_vs_power_off}
 
 アクティブな仮想サーバー・インスタンスをパワーオフします。
 ```
-   bluemix sl vs power-off IDENTIFIER [OPTIONS]
+bluemix sl vs power-off IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--hard</dt>
 <dd>ハード・シャットダウンを実行します。</dd>
 <dt>--soft</dt>
@@ -2880,8 +3036,9 @@ This command lists all the options for creating a virtual server instance, eg.da
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
-   bluemix sl vs power-off 12345678 --soft
+**例**:
+```
+bluemix sl vs power-off 12345678 --soft
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスのソフト・パワーオフを実行します。
 
@@ -2890,35 +3047,38 @@ This command lists all the options for creating a virtual server instance, eg.da
 
 仮想サーバー・インスタンスをパワーオンします。
 ```
- bluemix sl vs power-on IDENTIFIER [OPTIONS]
+bluemix sl vs power-on IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs power-on 12345678
+**例**:
+```
+bluemix sl vs power-on 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバーのパワーオンを実行します。
-
 
 ### bluemix sl vs ready
 {: #sl_vs_ready}
 
 仮想サーバー・インスタンスの使用準備ができているかどうかをチェックします。
 ```
- bluemix sl vs ready IDENTIFIER [OPTIONS]
+bluemix sl vs ready IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--wait</dt>
 <dd>仮想サーバーでのプロビジョニング終了を最大 X 秒待ってから戻ります。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs ready 12345678 --wait 30
+**例**:
+```
+bluemix sl vs ready 12345678 --wait 30
 ```
 このコマンドは、ID 12345678 の仮想サーバーの状況をチェックして、そのインスタンスが、連続して使用する準備ができているかどうか確認し、最大 30 秒待機します。
 
@@ -2927,10 +3087,11 @@ This command lists all the options for creating a virtual server instance, eg.da
 
 アクティブな仮想サーバー・インスタンスをリブートします。
 ```
- bluemix sl vs reboot IDENTIFIER [OPTIONS]
+bluemix sl vs reboot IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>--hard</dt>
 <dd>ハード・リブートを実行します。</dd>
 <dt>--soft</dt>
@@ -2939,26 +3100,26 @@ This command lists all the options for creating a virtual server instance, eg.da
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs reboot 12345678 --hard
+**例**:
+```
+bluemix sl vs reboot 12345678 --hard
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスのハード・リブートを実行します。
-
-
 
 ### bluemix sl vs reload
 {: #sl_vs_reload}
 
 仮想サーバー・インスタンス上でオペレーティング・システムを再ロードします。
 ```
- bluemix sl vs reload IDENTIFIER [OPTIONS]
+bluemix sl vs reload IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-i, --postinstall</dt>
 <dd>ダウンロードするインストール後スクリプト。</dd>
 <dt>--image</dt>
-<dd>イメージ ID。デフォルトは、現行オペレーティング・システムを使用することです。</dd>
+<dd>イメージ ID。 デフォルトは、現行オペレーティング・システムを使用することです。</dd>
 <dt>以下を参照してください。</dt>
 <dd>「bluemix sl image list」。</dd>
 <dt>-k, --key</dt>
@@ -2967,57 +3128,62 @@ This command lists all the options for creating a virtual server instance, eg.da
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
-   bluemix sl vs reload 12345678
+**例**:
+```
+bluemix sl vs reload 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスの現行オペレーティング・システムを再ロードします。
+
 ### bluemix sl vs rescue
 {: #sl_vs_rescue}
 
 仮想サーバー・インスタンスをレスキュー・イメージでリブートします。
 ```
- bluemix sl vs rescue IDENTIFIER [OPTIONS]
+bluemix sl vs rescue IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs rescue 12345678
+**例**:
+```
+bluemix sl vs rescue 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバーをレスキュー・イメージでリブートします。
-
 
 ### bluemix sl vs resume
 {: #sl_vs_resume}
 
 一時停止された仮想サーバー・インスタンスを再開します。
 ```
-   bluemix sl vs resume IDENTIFIER [OPTIONS]
+bluemix sl vs resume IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs resume 12345678
+**例**:
+```
+bluemix sl vs resume 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスを再開します。
-
 
 ### bluemix sl vs upgrade
 {: #sl_vs_upgrade}
 
 仮想サーバー・インスタンスを更新します。
 ```
-   bluemix sl vs upgrade IDENTIFIER [OPTIONS]
+bluemix sl vs upgrade IDENTIFIER [OPTIONS]
 ```
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+<dl>
 <dt>-c, --cpu</dt>
 <dd>CPU コアの数。</dd>
 <dt>--private</dt>
@@ -3030,8 +3196,9 @@ This command lists all the options for creating a virtual server instance, eg.da
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-**例**:```
- bluemix sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
+**例**:
+```
+bluemix sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスをアップグレードし、CPU コア数を 8、メモリーを 8192 M、ネットワーク・ポート速度を 1000 Mbps に設定します。
 

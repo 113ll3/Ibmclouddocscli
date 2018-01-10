@@ -16,7 +16,7 @@ lastupdated: "2017-06-29"
 # Visual Studio Code 用 IBM Developer Tools
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension for Visual Studio Code は、Visual Studio Code エディターのコマンド・パレット内から直接、IBM Developer CLI の機能へのアクセスを提供する、エディターの拡張機能です。これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを離れることなく、`bx dev` コマンドのサブセットに素早くアクセスすることができます。
+IBM Developer Extension for Visual Studio Code は、Visual Studio Code エディターのコマンド・パレット内から直接、IBM Developer CLI の機能へのアクセスを提供する、エディターの拡張機能です。  これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを離れることなく、`bx dev` コマンドのサブセットに素早くアクセスすることができます。
 {:shortdesc}
 
 ![IBM Developer Tools の拡張機能ダウンロード画面の画面キャプチャー。](ibm-dev-tools-for-vscode.png "Visual Studio Code 内の拡張機能ダウンロード画面")
@@ -40,7 +40,7 @@ IBM Developers Tools のこの拡張機能をインストールするための�
 
 あるいは、以下に示すように、「拡張機能」管理パネルを介してこの IBM Developer Tools 拡張機能をインストールすることもできます。
 
-1. Visual Studio Code エディターの**「拡張機能」**サイドバーを開き、次に、ストリング `publisher:IBM Developer` を使用して検索します。IBM Developer Tools 拡張機能が検索結果に表示されます。  
+1. Visual Studio Code エディターの**「拡張機能」**サイドバーを開き、次に、ストリング `publisher:IBM Developer` を使用して検索します。  IBM Developer Tools 拡張機能が検索結果に表示されます。  
 2. **「インストール」**ボタンをクリックしてインストールを開始します。
 
 また、[Visual Studio Code Marketplace 内から直接、IBM Developer Tools 拡張機能](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer)にアクセスすることもできます。
@@ -56,7 +56,7 @@ Visual Studio Code のコマンド・パレットを使用して extension の�
 * **Mac:** `cmd + shift + p`
 * **Windows / Linux:** `ctrl + shift + p`
 
-次に、呼び出すコマンドを入力または選択します。コマンド・パレット内に「bx」と入力すると、すべての使用可能コマンドのリストを表示できます。 
+次に、呼び出すコマンドを入力または選択します。 コマンド・パレット内に「bx」と入力すると、すべての使用可能コマンドのリストを表示できます。 
 
 ### Docker ワークフロー (Docker コンテナー) での IBM Developer Extension の使用
 {: #usage-docker}
@@ -69,7 +69,6 @@ Visual Studio Code のコマンド・パレットを使用して extension の�
 * `bx dev build` コマンドを使用して、アプリをビルドして Docker イメージを作成します
 * `bx dev debug` コマンドを使用して、開発用のローカル Docker でアプリを実行します
 > 注: ローカル Docker コンテナー内で実行されている Node.js アプリケーションをデバッグするには、[ローカル・コンテナー用のデバッグ構成を追加](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container)する必要があります。
-
 * `bx dev run` コマンドを使用して、アプリをローカル Docker 内でリリース・モードで実行します
 * `bx dev deploy` コマンドを使用して、アプリケーションを {{site.data.keyword.Bluemix_notm}} 上の Cloud Foundry ランタイムにデプロイします *(IBM Container サポートは間もなく利用可能になります)。*
 

@@ -22,7 +22,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
 시작하려면 IBM {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 세부사항은
 [Bluemix CLI ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}를 참조하십시오.
 
-{{site.data.keyword.Bluemix_notm}} 명령의 전체 목록은 [{{site.data.keyword.Bluemix_notm:}} (bx) 명령](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 명령의 전체 목록은 [{{site.data.keyword.Bluemix_notm}} (bx) 명령](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)을 참조하십시오.
 
 
 ## 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령

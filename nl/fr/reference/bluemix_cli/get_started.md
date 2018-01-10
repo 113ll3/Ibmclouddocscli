@@ -17,7 +17,7 @@ lastupdated: "2017-08-20"
 # Initiation à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}.  
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}. 
 
 Pour vous initier à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} :
 

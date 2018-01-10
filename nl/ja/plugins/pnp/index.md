@@ -14,19 +14,19 @@ lastupdated: "2017-01-12"
 # {{site.data.keyword.Bluemix_notm}} CLI 用のプライベート・ネットワーク・ピアリング・プラグイン
 {: #private_network_cli}
 
-プライベート・ネットワーク・ピアリング・コマンド・ライン・インターフェース (CLI) を使用して、2 つの {{site.data.keyword.Bluemix}} スペース間のプライベート・ネットワーク・ピアリングを構成および管理します。プライベート・ネットワーク・ピアリングは、IBM Containers (Docker コンテナー) でサポートされます。{{site.data.keyword.Bluemix_notm}} スペースは、同じ地域内の異なるアベイラビリティー・ゾーンに配置でき、また異なる地域に配置することもできます。プライベート・ネットワーク・ピアリング CLI プラグインは、{{site.data.keyword.Bluemix_notm}} CLI プラグインで使用できます。
+プライベート・ネットワーク・ピアリング・コマンド・ライン・インターフェース (CLI) を使用して、2 つの {{site.data.keyword.Bluemix}} スペース間のプライベート・ネットワーク・ピアリングを構成および管理します。 プライベート・ネットワーク・ピアリングは、IBM Containers (Docker コンテナー) でサポートされます。 {{site.data.keyword.Bluemix_notm}} スペースは、同じ地域内の異なるアベイラビリティー・ゾーンに配置でき、また異なる地域に配置することもできます。 プライベート・ネットワーク・ピアリング CLI プラグインは、{{site.data.keyword.Bluemix_notm}} CLI プラグインで使用できます。
 
-プライベート・ネットワーク・ピアリング CLI プラグインは、Windows、MAC、および Linux オペレーティング・システムで使用可能です。環境に適したプラグインを使用してください。
+プライベート・ネットワーク・ピアリング CLI プラグインは、Windows、MAC、および Linux オペレーティング・システムで使用可能です。 環境に適したプラグインを使用してください。
 
-開始する前に、{{site.data.keyword.Bluemix_notm}} スペースを作成します。スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。詳しくは、『[独自のプライベート IP アドレスを使う![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}』を参照してください。
+開始する前に、{{site.data.keyword.Bluemix_notm}} スペースを作成します。 スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。 詳しくは、『[独自のプライベート IP アドレスを使う![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}』を参照してください。
 
 **注:** {{site.data.keyword.Bluemix_notm}} スペースでプライベート・ネットワーク・ピアリングを使用した後に、スペースを削除する必要が生じた場合、まず、当該スペースのプライベート・ネットワーク・ピアリング接続を削除してください。
 
-まず、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。詳しくは、『[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)』を参照してください。
+まず、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)』を参照してください。
 
 ## プライベート・ネットワーク・ピアリング CLI プラグインをインストールします。
 
-**注**: 前のバージョンのプラグインがインストールされている場合、それをアンインストールする必要があります。以下のコマンドを使用して、プラグインをアンインストールします。
+**注**: 前のバージョンのプラグインがインストールされている場合、それをアンインストールする必要があります。 以下のコマンドを使用して、プラグインをアンインストールします。
 
 ```
 bluemix plugin uninstall private-network-peering
@@ -78,14 +78,14 @@ chmod a+x ./private-network-peering-linux-amd64
 	```
 
 ## プライベート・ネットワーク・ピアリング・コマンドのリスト
-以下のコマンドがサポートされます。使用可能なコマンドのリストを表示するには、`bluemix network` コマンドを使用します。
+以下のコマンドがサポートされます。 使用可能なコマンドのリストを表示するには、`bluemix network` コマンドを使用します。
 
-| コマンド| 説明 |
+| コマンド     | 説明                                    |
 |-------------|------------------------------------------------|
-| pnp-routers| ピアリングで使用可能なすべてのルーターをリストします|
-| pnp-create| プライベート・ネットワーク・ピアリング接続を作成します|
-| pnp-delete| プライベート・ネットワーク・ピアリング接続を削除します|
-| pnp-show| すべてのプライベート・ネットワーク・ピアリング接続をリストします|
+| pnp-routers | ピアリングで使用可能なすべてのルーターをリストします        |
+| pnp-create  | プライベート・ネットワーク・ピアリング接続を作成します   |
+| pnp-delete  | プライベート・ネットワーク・ピアリング接続を削除します   |
+| pnp-show    | すべてのプライベート・ネットワーク・ピアリング接続をリストします  |
 {: caption="表 1. プライベート・ネットワーク・ピアリング・コマンド" caption-side="top"}
 
 
@@ -155,7 +155,7 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 #####パラメーター
 {: #p1}
 
-* **router_ip**: 接続する 2 つのルーターの IP アドレス。IP アドレスを確認するには、`bluemix network pnp-routers` コマンドを使用します。
+* **router_ip**: 接続する 2 つのルーターの IP アドレス。 IP アドレスを確認するには、`bluemix network pnp-routers` コマンドを使用します。
 * **name**: プライベート・ネットワーク・ピアリング接続の名前。
 
 ######コマンドの例

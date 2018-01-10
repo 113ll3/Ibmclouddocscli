@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-12-08"
 
 
 ---
@@ -26,10 +26,10 @@ lastupdated: "2017-11-10"
 * 레지스트리 명령을 실행하기 전에 `bx login` 명령으로 {{site.data.keyword.Bluemix_notm}}에 로그인하여
 액세스 토큰을 생성하고 세션을 인증하십시오.
 
-{{site.data.keyword.registrylong_notm}} CLI 사용 방법에 대해 알아보려면 [개인용 이미지 레지스트리 설정](../../../services/Registry/index.html)을 참조하십시오.
+{{site.data.keyword.registrylong_notm}} CLI 사용 방법을 알아보려면 [{{site.data.keyword.registrylong_notm}} 시작하기](../../../services/Registry/index.html)를 참조하십시오.
 
 <table summary="{{site.data.keyword.registrylong_notm}} 관리">
-<caption>표 1. {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.registrylong_notm}}를 관리하기 위한 명령
+<caption>표 1. {{site.data.keyword.registrylong_notm}} 관리를 위한 명령
 </caption>
  <thead>
  <th colspan="5">레지스트리 관리 명령</th>
@@ -86,7 +86,7 @@ bx cr api
 {{site.data.keyword.registrylong_notm}}에 Docker 이미지를 빌드합니다.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--file FILE | -f FILE] --tag TAG DIRECTORY
 ```
 {: codeblock}
 
@@ -100,11 +100,11 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file
 <dd>(선택사항) 지정된 경우, 일치하는 태그가 있는 이미지가 이미 빌드 호스트에 있더라도 기본 이미지를 가져옵니다.</dd>
 <dt>--quiet, -q</dt>
 <dd>(선택사항) 지정된 경우, 오류가 발생하지 않는 한 빌드 출력이 억제됩니다.</dd>
-<dt> --build-arg value</dt>
-<dd>(선택사항) 추가 빌드 인수를 'KEY=VALUE' 형식으로 지정하십시오. 이 매개변수를 여러 번 포함하여 복수의 빌드 인수를 지정할 수 있습니다. Dockerfile에서 키와 일치하는 ARG 행을 지정하는 경우 빌드 인수의 값은 환경 변수로 사용 가능합니다.</dd>
-<dt>--file value, -f value</dt>
+<dt> --build-arg KEY=VALUE</dt>
+<dd>(선택사항) 추가 빌드 인수를 'KEY=VALUE' 형식으로 지정하십시오. 이 매개변수를 여러 번 포함하여 복수의 빌드 인수를 지정할 수 있습니다. Dockerfile에서 키와 일치하는 ARG 행을 지정하는 경우 각 빌드 인수의 값은 환경 변수로 사용 가능합니다.</dd>
+<dt>--file FILE, -f FILE</dt>
 <dd>(선택사항) 다중 빌드에 동일한 파일을 사용 중인 경우에는 다른 Dockerfile에 대한 경로를 선택할 수 있습니다. 빌드 컨텍스트에 상대적인 Dockerfile의 위치를 지정하십시오. 지정되지 않은 경우, 기본값은 `PATH/Dockerfile`입니다. 여기서 PATH는 빌드 컨텍스트의 루트입니다. </dd>
-<dt>--tag value, -t value</dt>
+<dt>--tag TAG, -t TAG</dt>
 <dd>빌드할 이미지의 전체 이름이며, 레지스트리 URL 및 네임스페이스가 포함됩니다.</dd>
 </dl>
 
@@ -131,14 +131,17 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 {: codeblock}
 
 **매개변수**
-
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [이미지에 대한 정보 보기](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)를 참조하십시오.
+<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
 
 </dd>
 <dt>IMAGE</dt>
-<dd>검사할 이미지에 대한 전체 레지스트리 경로이며, 형식은 `namespace/image:tag`입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지를 검사합니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 레지스트리 경로를 나열하여 여러 이미지를 검사할 수 있습니다.</dd>
+<dd>보고서를 가져올 이미지의 이름입니다. 각 이름 사이에 공백을 두고 명령에 각 이미지를 나열하여 여러 이미지를 검사할 수 있습니다.
+
+<p>이미지 이름을 찾으려면 `bx cr image-list`를 실행하십시오. 저장소 열과 태그 열의 컨텐츠를 결합하여 `repository:tag` 형식으로 이미지 이름을 작성하십시오. 이미지 이름에 태그가 지정되지 않은 경우 `latest`라는 태그가 지정된 이미지가 검사됩니다. </p> 
+
+</dd>
 </dl>
 
 
@@ -147,8 +150,10 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 {{site.data.keyword.Bluemix_notm}} 계정의 모든 이미지를 표시합니다. 
 
+<p>**참고:** 이미지 이름은 `repository:tag` 형식으로 이루어진, 저장소 열과 태그 열의 컨텐츠 조합입니다. </p> 
+
 ```
- bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
+ bx cr image-list [--no-trunc] [--format FORMAT] [-q, --quiet] [--restrict RESTRICTION] [--include-ibm] 
 ```
 {: codeblock}
 
@@ -156,15 +161,18 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dl>
 <dt>--no-trunc</dt>
 <dd>(선택사항) 이미지 다이제스트를 자르지 않습니다. </dd>
-<dt>-q, --quiet</dt>
-<dd>(선택사항) 각 이미지가 `repository:tag` 형식으로 나열됩니다. </dd>
-<dt>--include-ibm</dt>
-<dd>(선택사항) 출력에 {{site.data.keyword.IBM_notm}} 제공 공용 이미지를 포함합니다. 이 옵션이 없으면 기본적으로 개인용 이미지만 나열됩니다. </dd>
 <dt>--format FORMAT</dt>
-<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [이미지에 대한 정보 보기](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)를 참조하십시오.
+<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
 
 </dd>
+<dt>-q, --quiet</dt>
+<dd>(선택사항) 각 이미지가 `repository:tag` 형식으로 나열됩니다.</dd>
+<dt>--restrict RESTRICTION</dt>
+<dd>(선택사항) 지정된 네임스페이스 또는 네임스페이스와 저장소에 이미지만 표시하도록 출력을 제한합니다.</dd>
+<dt>--include-ibm</dt>
+<dd>(선택사항) 출력에 {{site.data.keyword.IBM_notm}} 제공 공용 이미지를 포함합니다. 이 옵션이 없으면 기본적으로 개인용 이미지만 나열됩니다. </dd>
 </dl>
+
 
 
 ## bx cr image-rm
@@ -180,7 +188,11 @@ bx cr image-rm IMAGE [IMAGE...]
 **매개변수**
 <dl>
 <dt>IMAGE</dt>
-<dd>제거할 이미지에 대한 전체 레지스트리 경로이며, 형식은 `namespace/image:tag`입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지가 기본적으로 삭제됩니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 레지스트리 경로를 나열하여 여러 이미지를 삭제할 수 있습니다.</dd>
+<dd>보고서를 가져올 이미지의 이름입니다. 각 이름 사이에 공백을 두고 명령에 각 이미지를 나열하여 동시에 여러 이미지를 삭제할 수 있습니다.
+
+<p>이미지 이름을 찾으려면 `bx cr image-list`를 실행하십시오. 저장소 열과 태그 열의 컨텐츠를 결합하여 `repository:tag` 형식으로 이미지 이름을 작성하십시오. 이미지 이름에 태그가 지정되지 않은 경우 `latest`라는 태그가 지정된 이미지가 기본적으로 삭제됩니다.</p> 
+
+</dd>
 </dl>
 
 
@@ -287,15 +299,15 @@ bx cr quota
 지정된 할당량을 수정합니다. 
 
 ```
-bx cr quota-set [--traffic VALUE] [--storage VALUE]
+bx cr quota-set [--traffic TRAFFIC] [--storage STORAGE]
 ```
 {: codeblock}
 
 **매개변수**
 <dl>
-<dt>--traffic VALUE</dt>
+<dt>--traffic TRAFFIC</dt>
 <dd>(선택사항) 트래픽 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 트래픽을 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
-<dt>--storage VALUE</dt>
+<dt>--storage STORAGE</dt>
 <dd>(선택사항) 스토리지 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 스토리지를 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
 </dl>
 
@@ -309,6 +321,8 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 bx cr region
 ```
 {: codeblock}
+
+자세한 정보는 [지역](../../../services/Registry/registry_overview.html#registry_regions)을 참조하십시오.
 
 
 ## bx cr region-set
@@ -324,7 +338,9 @@ bx cr region-set [REGION]
 **매개변수**
 <dl>
 <dt>REGION</dt>
-<dd>(선택사항) 대상 지역의 이름입니다(예: `us-south`).</dd>
+<dd>(선택사항) 대상 지역의 이름입니다(예: `us-south`).자세한 정보는 [지역](../../../services/Registry/registry_overview.html#registry_regions)을 참조하십시오.
+
+</dd>
 </dl>
 
 
@@ -334,7 +350,7 @@ bx cr region-set [REGION]
 레지스트리에 대한 액세스를 제어하는 데 사용할 수 있는 토큰을 추가합니다. 
 
 ```
-bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrite]
+bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--readwrite]
 ```
 
 {: codeblock}
@@ -342,7 +358,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 **매개변수**
 <dl>
-<dt>--description VALUE</dt>
+<dt>--description DESCRIPTION</dt>
 <dd>(선택사항) `bx cr token-list`를 실행할 때 표시되는 토큰에 대한 설명으로서 값을 지정합니다. 토큰이 {{site.data.keyword.containerlong_notm}}에 의해 자동으로 작성되는 경우에는 설명이 Kubernetes 클러스터 이름으로 설정됩니다. 이 경우에 토큰은 클러스터가 제거될 때 자동으로 제거됩니다. </dd>
 <dt>-q, --quiet</dt>
 <dd>(선택사항) 주변 텍스트 없이 토큰만 표시합니다. </dd>
@@ -384,10 +400,11 @@ bx cr token-list --format FORMAT
 **매개변수**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [이미지에 대한 정보 보기](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)를 참조하십시오.
+<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
 
 </dd>
 </dl>
+
 
 ## bx cr token-rm
 {: #bx_cr_token_rm}
@@ -409,17 +426,21 @@ bx cr token-rm TOKEN [TOKEN...]
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
 
-이미지에 대한 취약성 평가 보고서를 봅니다. 
+이미지에 대한 취약성 평가 보고서를 봅니다.
 
 ```
-bx cr vulnerability-assessment IMAGE [IMAGE...]
+bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--configuration-issues | -c] [--output FORMAT | -o FORMAT] IMAGE [IMAGE...] 
 ```
 {: codeblock}
 
 **매개변수**
 <dl>
 <dt>IMAGE</dt>
-<dd>보고서를 가져오려는 이미지에 대한 `namespace/image:tag` 형식의 전체 레지스트리 경로입니다. 이 보고서는 이미지에 알려진 패키지 취약점이 있는지 알려줍니다. 다음 운영 체제가 지원됩니다.
+<dd>보고서를 가져올 이미지의 이름입니다. 이 보고서는 이미지에 알려진 패키지 취약점이 있는지 알려줍니다. 각 이름 사이에 공백을 두고 명령에 각 이미지를 나열하여 동시에 여러 이미지에 대한 보고서를 요청할 수 있습니다.
+
+<p>이미지 이름을 찾으려면 `bx cr image-list`를 실행하십시오. 저장소 열과 태그 열의 컨텐츠를 결합하여 `repository:tag` 형식으로 이미지 이름을 작성하십시오. 이미지 이름에 태그가 지정되지 않은 경우 보고서는 `latest`라는 태그가 지정된 이미지를 평가합니다. </p> 
+
+<p>다음 운영 체제가 지원됩니다.
 
 <ul>
 
@@ -430,8 +451,27 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
+</p>
+
 자세한 정보는 [취약성 관리자로 이미지 보안 관리](../../../services/va/va_index.html)를 참조하십시오. 
 
 </dd>
+<dt>--output FORMAT, -o FORMAT</dt>
+<dd>(선택사항) 명령 출력이 선택한 형식으로 리턴됩니다. 기본 형식은 `text`입니다. 다음 형식이 지원됩니다.
+
+<ul>
+
+<li>`text`</li>
+<li>`json`</li>
+</ul>
+
+</dd>
+<dt>--vulnerabilities, -v</dt>
+<dd>(선택사항) 명령 출력이 취약점만 표시하도록 제한됩니다.</dd>
+<dt>--configuration-issues, -c</dt>
+<dd>(선택사항) 명령 출력이 구성 문제만 표시하도록 제한됩니다.</dd>
+<dt>--extended, -e </dt>
+<dd>(선택사항) 명령 출력이 취약한 패키지의 수정사항에 대한 추가 정보를 표시합니다.</dd>
 
 </dl>
+

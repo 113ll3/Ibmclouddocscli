@@ -20,8 +20,7 @@ lastupdated: "2017-01-12"
 
 *버전:* 1.0.0
 
-IBM Containers CLI는 {{site.data.keyword.Bluemix_notm}}에서 컨테이너 및 컨테이너 그룹을 관리하기 위한 {{site.data.keyword.Bluemix_notm}} CLI 플러그인입니다.
-  
+IBM Containers CLI는 {{site.data.keyword.Bluemix_notm}}에서 컨테이너 및 컨테이너 그룹을 관리하기 위한 {{site.data.keyword.Bluemix_notm}} CLI 플러그인입니다.   
 {: shortdesc}
 
 **참고:** *전제조건*에는 명령을 사용하기 전에 필요한 조치가 설명되어 있습니다. 전제조건 조치가 없는 명령은 **없음**으로 표시됩니다. 그 밖의 경우에는 전제조건으로 다음과 같은 조치 중 하나 이상을 수행해야 할 수 있습니다.
@@ -298,8 +297,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
     </dl>
 
 
-|  환경 변수|     설명 
-|
+|  환경 변수|     설명                            |
 | :----------------------------- | :------------------------------ |
 | CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오.|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오.|
@@ -358,8 +356,7 @@ IBM Containers에서 제공하는 `registry.ng.bluemix.net/ibmnode` 이미지를
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
 ```
 
-`registry.ng.bluemix.net/ibmliberty` 이미지를 사용하여 자동 복구가 사용되는 확장 가능한 그룹 `mygroup`을 작성합니다. 포트는 `9080`이고 호스트 이름은 `mycontainerhost`이며 도메인 이름은 `mybluemix.net`입니다.
-
+`registry.ng.bluemix.net/ibmliberty` 이미지를 사용하여 자동 복구가 사용되는 확장 가능한 그룹 `mygroup`을 작성합니다. 포트는 `9080`이고 호스트 이름은 `mycontainerhost`이며 도메인 이름은 `mybluemix.net`입니다. 
 ```
 bluemix ic group-create -p 9080 --auto -n mycontainerhost -d mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
 ```
@@ -385,8 +382,7 @@ bluemix ic group-inspect CONTAINER_GROUP
 
 <strong>예제</strong>:
 
-다음 예제는 `my_group` 컨테이너 그룹을 검사하기 위한 요청을 보여줍니다.
-
+다음 예제는 `my_group` 컨테이너 그룹을 검사하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic group-inspect my_group
 ```
@@ -412,8 +408,7 @@ bluemix ic group-instances CONTAINER_GROUP
 
 <strong>예제</strong>:
 
-`my_group` 컨테이너 그룹의 모든 인스턴스를 나열합니다.
-
+`my_group` 컨테이너 그룹의 모든 인스턴스를 나열합니다. 
 ```
 bluemix ic group-instances my_group
 ```
@@ -442,8 +437,7 @@ bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
 
 <strong>예제</strong>:
 
-다음 예제는 컨테이너 그룹을 제거하기 위한 요청을 보여줍니다. 여기서 `my_group`은 컨테이너 그룹의 이름입니다.
-
+다음 예제는 컨테이너 그룹을 제거하기 위한 요청을 보여줍니다. 여기서 `my_group`은 컨테이너 그룹의 이름입니다. 
 ```
 bluemix ic group-remove my_group
 ```
@@ -477,8 +471,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 
 <strong>예제</strong>:
 
-다음 예제는 `my_group` 컨테이너 그룹을 업데이트하기 위한 요청을 보여줍니다.
-
+다음 예제는 `my_group` 컨테이너 그룹을 업데이트하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic group-update --desired 5 my_group
 ```
@@ -528,8 +521,7 @@ bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
 
 <strong>예제</strong>:
 
-다음 예제는 조직의 사용 가능한 이미지 목록을 수신하기 위한 요청을 보여줍니다.
-
+다음 예제는 조직의 사용 가능한 이미지 목록을 수신하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic images
 ```
@@ -595,8 +587,7 @@ bluemix ic inspect [IMAGE|images|CONTAINER]
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 검사하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 검사하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic inspect proxy
 ```
@@ -624,8 +615,7 @@ bluemix ic ip-bind IP_ADDRESS CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너로 바인드하기 위한 요청을 보여줍니다.
-
+다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너로 바인드하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic ip-bind 192.123.12.12 proxy
 ```
@@ -692,8 +682,7 @@ bluemix ic ip-unbind IP_ADDRESS CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너에서 바인드 해제하기 위한 요청을 보여줍니다.
-
+다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너에서 바인드 해제하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic ip-unbind 192.123.12.12 proxy
 ```
@@ -749,8 +738,7 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너의 프로세스를 강제 종료하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너의 프로세스를 강제 종료하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic kill proxy
 ```
@@ -829,8 +817,7 @@ bluemix ic pause CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 일시정지하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 일시정지하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic pause proxy
 ```
@@ -870,8 +857,7 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
 
 <strong>예제</strong>:
 
-다음 예제는 실행 중인 컨테이너와 중지된 컨테이너를 모두 표시하기 위한 요청을 보여줍니다.
-
+다음 예제는 실행 중인 컨테이너와 중지된 컨테이너를 모두 표시하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic ps -a
 ```
@@ -884,7 +870,9 @@ bluemix ic ps -a
 ```
 bluemix ic rename OLD_NAME NEW_NAME
 ```
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker<strong>명령 옵션</strong>:
+<strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
+
+<strong>명령 옵션</strong>:
 
 <dl>
    <dt><i>OLD_NAME</i>(필수)</dt>
@@ -904,7 +892,9 @@ bluemix ic rename OLD_NAME NEW_NAME
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
-<strong>명령 옵션</strong>:<dl>
+<strong>명령 옵션</strong>:
+
+<dl>
    <dt>--force|-f(선택사항)</dt>
    <dd>{{site.data.keyword.Bluemix_notm}} 영역에서 IBM Containers 서비스의 재작성을 강제 실행합니다. </dd>
    <dt><i>AVAILABILITY_ZONE</i>(선택사항)</dt>
@@ -947,8 +937,7 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 다시 시작하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 다시 시작하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic restart proxy
 ```
@@ -988,8 +977,7 @@ bluemix ic rm [-f|--force] CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 제거하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 제거하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic rm proxy
 ```
@@ -1033,8 +1021,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 
 <strong>예제</strong>:
 
-다음 예제는 `mynamespace/myimage:latest` 이미지를 제거하기 위한 요청을 보여줍니다.
-
+다음 예제는 `mynamespace/myimage:latest` 이미지를 제거하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ```
@@ -1129,8 +1116,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    </dl>
 
 
-|      환경 변수|   설명 
-|
+|      환경 변수|   설명                              |
 | :----------------------------- | :------------------------------ |
 | CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오.|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오.|

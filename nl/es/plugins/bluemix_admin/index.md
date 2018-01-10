@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -124,6 +124,46 @@ cf ba add-user <nombre_usuario> <organización> <nombre> <apellido>
 **Sugerencia:** También puede usar **ba au** como alias para el nombre de mandato
 **ba add-user** más largo.
 
+### Invitación a un usuario de {{site.data.keyword.Bluemix_dedicated_notm}}
+{: #admin_dedicated_invite_public}
+
+Cada entorno de {{site.data.keyword.Bluemix_dedicated_notm}} tiene una cuenta corporativa pública, propiedad del cliente, en {{site.data.keyword.Bluemix_notm}}. Para que los usuarios del entorno Dedicado creen clústeres con {{site.data.keyword.containershort}}, el administrador debe añadir a los usuarios a esta cuenta corporativa pública. Una vez que se añaden los usuarios a la cuenta corporativa pública, sus cuentas públicas y dedicadas quedan enlazadas. Los usuarios pueden utilizar su IBMid para iniciar sesión en ambas simultáneamente, y pueden crear recursos en la cuenta pública de la interfaz dedicada. Para obtener más información, consulte [Configuración de IBM Cloud Container Service en Dedicado](/docs/containers/cs_dedicated.html#dedicated_setup). Para invitar a los usuarios dedicados a la cuenta pública:
+
+```
+cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
+```
+{: pre}
+
+**Nota**: para añadir usuarios del entorno Dedicado a su cuenta pública de {{site.data.keyword.Bluemix_notm}}, debe ser un **Administrador** de la cuenta Dedicada.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">Si va a invitar a un único usuario, el correo electrónico del usuario.</dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">Si va a invitar invitando a todos los usuarios actuales de una organización de cuenta Dedicada, el ID de organización de cuenta Dedicada.</dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">Una clave de API para invitar a usuarios a la cuenta pública. Debe generarla el <b>Administrador</b> de la cuenta pública.</dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">El ID de la organización de cuenta pública a la que va a invitar a los usuarios.</dd>
+</dl>
+
+### Listado de usuarios invitados de {{site.data.keyword.Bluemix_dedicated_notm}}
+{: #admin_dedicated_list}
+
+Si ha invitado a los usuarios del entorno Dedicado a su cuenta de {{site.data.keyword.Bluemix_notm}} con el mandato [`invite-users-to-public`](#admin_dedicated_invite_public), puede listar a los usuarios en su cuenta para ver el estado de su invitación. Los usuarios invitados que tengan un IBMid existente tendrán el estado `ACTIVO`. Los usuarios invitados que no tengan un IBMid existente tendrán el estado `PENDIENTE` o `ACTIVO`, en función de si ya han aceptado o no la invitación a la cuenta. Para listar los usuarios de su cuenta de {{site.data.keyword.Bluemix_notm}}:
+
+```
+cf ba invite-users-status -apikey=<public_api_key>
+```
+{: pre}
+
+**Nota**: para añadir usuarios del entorno Dedicado a su cuenta pública de {{site.data.keyword.Bluemix_notm}}, debe ser un **Administrador** de la cuenta Dedicada.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">La clave de API que se ha utilizado para invitar a los usuarios a la cuenta. Debe generarla el <b>Administrador</b> de la cuenta pública.</dd>
+</dl>
+
 <!-- staging-only commands start. Live for interconnect -->
 
 ### Búsqueda de un usuario
@@ -142,11 +182,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">El permiso asignado al usuario. Por ejemplo, admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. Para obtener más información sobre los permisos de usuario asignados, consulte [Permisos](/docs/admin/index.html#permissions). No se puede utilizar este parámetro con el parámetro de organización en la misma consulta. </dd>
+<dd class="pd">El permiso asignado al usuario. Los permisos disponibles son: admin (o superuser), login (o basic), catalog.read, catalog.write, reports.read, reports.write, users.read o users.write. Para obtener más información sobre los permisos de usuario asignados, consulte [Permisos](/docs/admin/index.html#permissions). No se puede utilizar este parámetro con el parámetro de organización en la misma consulta. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">El nombre de la organización a la que pertenece el usuario. No se puede utilizar este parámetro con el parámetro de permiso en la misma consulta.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">El rol de organización asignado al usuario. Por ejemplo, auditor, manager o billing_manager. Especifique la organización con este parámetro. Para obtener más información acerca de los roles, consulte [Roles de usuario](/docs/admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">El rol de organización asignado al usuario. Los roles disponibles son: 'auditors', 'managers' y 'billing_managers'. Especifique la organización con este parámetro.</dd>
 
 </dl>
 
@@ -498,7 +538,7 @@ en un espacio.</dd>
 **ba set-space** más largo.
 
 
-### Eliminar el rol de un usuario en un espacio 
+### Eliminar el rol de un usuario en un espacio
 
 Para eliminar el rol de un usuario en un espacio, utilice el mandato siguiente:
 
@@ -713,7 +753,7 @@ cf ba resource-metrics
 **Sugerencia:** También puede usar **ba rsm** como alias para el nombre de mandato
 **ba resource-metrics** más largo.
 
-## Visualización del historial de métricas de recursos 
+## Visualización del historial de métricas de recursos
 {: #cliresourceusagehistory}
 
 Puede recuperar el historial de métricas de recursos para el uso de disco y de memoria. Las métricas devueltas incluyen la cantidad de recursos utilizados del total disponible, para recursos tanto físicos como reservados. Los datos históricos del uso de memoria y de disco pueden mostrarse por hora, por día o por mes.  Puede especificar las fechas de inicio y de finalización para recuperar datos dentro de un intervalo de fechas específico. Si no se especifica ninguna fecha, los datos históricos predeterminados son los datos de memoria por hora de las últimas 48 horas. Los datos se muestran en orden descendente, mostrando primero las fechas más recientes.   Para ver la información de historial de métricas de recursos, utilice el mandato siguiente:
@@ -750,7 +790,8 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-Puede visualizar la lista anterior de parámetros de mandatos y ejemplos utilizando el mandato siguiente: 
+
+Puede visualizar la lista anterior de parámetros de mandatos y ejemplos utilizando el mandato siguiente:
 
 ```
 cf ba resource-metrics-history -help
@@ -864,7 +905,8 @@ Los ASG funcionan como cortafuegos virtuales que controlan el tráfico de salida
 
 {{site.data.keyword.Bluemix_notm}} se configura inicialmente con todo el acceso a la red externa restringido. Dos grupos de seguridad creados por IBM, `public_networks` y `dns`, permiten el acceso global a la red externa al enlazar dichos grupos con los conjuntos de grupos de seguridad de Cloud Foundry predeterminados. Los dos conjuntos de grupos de seguridad de Cloud Foundry que se utilizan para aplicar el acceso global son los conjuntos de grupos **Default Staging** y **Default Running**. Estos conjuntos de grupos aplican las reglas para permitir tráfico hacia todas las apps en ejecución o todas las apps en transferencia. Si no desea enlazar estos dos conjuntos de grupos de seguridad, puede desenlazarlos de los conjuntos de grupos de Cloud Foundry y, a continuación, enlazar el grupo de seguridad con un espacio específico. Para obtener más información, consulte [Enlace de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Aviso**: Al desenlazar los conjuntos de grupos **Default Staging** o **Default Running** de los dos grupos de seguridad creados por IBM, `public_networks` y `dns` inhabilitarán el acceso global a la red externa. Utilice la acción de desenlazar con precaución y conocimiento de las ramificaciones en todas las aplicaciones en ejecución y en transferencia de su entorno.
+**AVISO**: al desenlazar los conjuntos de grupos **Default Staging** o **Default Running** de los dos grupos de seguridad creados por IBM, `public_networks` y `dns` inhabilitarán el acceso global a la red externa. Utilice la acción de desenlazar con precaución y conocimiento de su efecto potencial en las aplicaciones en ejecución y en transferencia de su entorno.
+
 
 **Nota**: los mandatos siguientes que le permiten trabajar con grupos de seguridad se basan en la versión 1.6 de Cloud Foundry. Para obtener más información, incluidos los campos obligatorios y opcionales, consulte la información de Cloud Foundry sobre [Creación de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 

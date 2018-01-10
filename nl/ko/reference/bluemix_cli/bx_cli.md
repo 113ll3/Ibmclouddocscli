@@ -31,7 +31,7 @@ lastupdated: "2017-11-06"
 <dt>엔드포인트</dt>
 <dd>명령을 사용하기 전에 <code>bluemix api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
 <dt>로그인</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다. 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여  API 키로 인증하십시오. API 키를 작성하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **플랫폼 API 키**로 이동하십시오.
+<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다. 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여 API 키로 인증하십시오. API 키를 작성하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **플랫폼 API 키**로 이동하십시오.
 </dd>
 <dt>대상</dt>
 <dd>이 명령을 사용하기 전에 <code>bluemix target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
@@ -214,6 +214,9 @@ lastupdated: "2017-11-06"
    <td>[bluemix iam user-policy-create](bx_cli.html#bluemix_iam_user_policy_create)</td>
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
+   <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
+   <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
+
   </tr>
   </tbody>
   </table>
@@ -555,7 +558,7 @@ bluemix -q cf services
 사용자가 로그인됩니다. 
 
 ```
-bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -580,6 +583,8 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dd> 대상 조직의 이름</dd>
   <dt> -s <i>SPACE_NAME</i>(선택사항)</dt>
   <dd> 대상 영역의 이름</dd>
+  <dt> --no-iam </dt>
+  <dd> 공용 IAM 대신 로그인 서버를 통한 인증 강제 실행</dd>
   <dt> --skip-ssl-validation(선택사항)</dt>
   <dd> HTTP 요청의 SSL 유효성 검증을 무시합니다. 이 옵션은 권장되지 않습니다.</dd>
 </dl>
@@ -1678,6 +1683,7 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dt>-f, --file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i>(선택사항)</dt>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
 <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>(선택사항)</dt>
@@ -1692,7 +1698,6 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dd>리소스 그룹의 이름. 이 경우에만 '-f, --file', '--resource' 및 '--resource-group-id' 플래그가 사용됩니다.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>(선택사항)</dt>
 <dd>리소스 그룹의 ID. 이 경우에만 '-f, --file', '--resource' 및 '--resource-group-name' 플래그가 사용됩니다.</dd>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1718,7 +1723,7 @@ bluemix iam user-policy-create name@example.com --roles Editor --service-name sa
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 `name@example.com` `운영자` 역할 제공:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 리소스 그룹 `sample-resource-group`의 멤버에 `name@example.com` `뷰어` 역할 제공:
@@ -1756,6 +1761,7 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dt>-f, --file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i>(선택사항)</dt>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
 <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>(선택사항)</dt>
@@ -1770,7 +1776,6 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>리소스 그룹의 이름. 이 경우에만 '-f, --file', '--resource' 및 '--resource-group-id' 플래그가 사용됩니다.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>(선택사항)</dt>
 <dd>리소스 그룹의 ID. 이 경우에만 '-f, --file', '--resource' 및 '--resource-group-name' 플래그가 사용됩니다.</dd>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1790,13 +1795,13 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Administr
  `us-south` 지역에 있는 샘플 서비스 인스턴스 `ServiceId-ade78e9f`의 리소스 `key123`에 `name@example.com` `편집자` 역할을 제공하도록 사용자 정책 업데이트:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+bluemix iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 `name@example.com` `운영자` 역할을 제공하도록 사용자 정책 업데이트:
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 리소스 그룹 `sample-resource-group`의 멤버에 `name@example.com` `뷰어` 역할을 제공하도록 사용자 정책 업데이트:
@@ -1881,7 +1886,7 @@ bluemix iam service-policies test 140798e2-8ea7db3
 서비스 정책 작성
 
 ```
-bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -1891,19 +1896,23 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>SERVICE_ID_NAME(필수)</dt>
   <dd>서비스 ID의 이름</dd>
   <dt>-f, --file</dt>
-  <dd>정책 정의의 JSON 파일. 이 경우에만 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type' 및 '--resource' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 JSON 파일. 이 경우에만 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' 및 '--resource-group-id' 플래그가 사용됩니다.</dd>
   <dt>-r, --roles</dt>
   <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
-  <dt>-service-name</dt>
+  <dt>--service-name</dt>
   <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
-  <dt>-service-instance</dt>
+  <dt>--service-instance</dt>
   <dd>정책 정의의 서비스 인스턴스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
   <dt>-region</dt>
   <dd>정책 정의 지역. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
-  <dt>-resource-type</dt>
+  <dt>--resource-type</dt>
   <dd>정책 정의의 리소스 유형. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
-  <dt>-resource</dt>
+  <dt>--resource</dt>
   <dd>정책 정의의 리소스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dt>--resource-group-name</dt>
+  <dd>리소스 그룹의 이름입니다. 이 옵션에만 '-f, --file' 및 '--resource-group-id'가 사용됩니다.</dd>
+  <dt>--resource-group-id </dt>
+  <dd>리소스 그룹의 ID 입니다. 이 옵션에만 '-f, --file' 및 '--resource-group-name'이 사용됩니다.</dd>
   <dt>-F, --force</dt>
   <dd>확인 없이 서비스 정책 작성</dd>
 </dl>
@@ -1923,7 +1932,7 @@ bluemix iam service-policy-create test -f @policy.json
 서비스 정책 업데이트
 
 ```
-bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -1937,7 +1946,7 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-v, --version</dt>
   <dd>서비스 정책의 버전</dd>
   <dt>-f, --file</dt>
-  <dd>정책 정의의 JSON 파일. 이 경우에만 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type' 및 '--resource' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 JSON 파일. 이 경우에만 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' 및 'resource-group-id' 플래그가 사용됩니다.</dd>
   <dt>-r, --roles</dt>
   <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
   <dt>-service-name</dt>
@@ -1950,6 +1959,10 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dd>정책 정의의 리소스 유형. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
   <dt>-resource</dt>
   <dd>정책 정의의 리소스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dt>--resource-group-name</dt>
+  <dd>리소스 그룹의 이름입니다. 이 옵션에만 '-f, --file' 및 '--resource-group-id'가 사용됩니다.</dd>
+  <dt>--resource-group-id </dt>
+  <dd>리소스 그룹의 ID 입니다. 이 옵션에만 '-f, --file' 및 '--resource-group-name'이 사용됩니다.</dd>
   <dt>-F, --force</dt>
   <dd>확인 없이 서비스 정책 업데이트</dd>
 </dl>
@@ -1991,6 +2004,45 @@ bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
 bluemix iam service-policy-delete test 140798e2-8ea7db3
 ```
 
+## bluemix iam oauth-tokens
+{: #bluemix_iam_oauth_tokens}
+
+현재 세션에 대한 OAuth 토큰 검색 및 표시
+
+```
+bluemix iam oauth-tokens
+```
+
+<strong>전제조건</strong>: 로그인, 대상
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+OAuth 토큰 새로 고치기 및 표시
+
+```
+bluemix iam oauth-tokens
+```
+
+## bluemix iam dedicated-id-disconnect
+{: #bluemix_iam_dedicated_id_disconnect}
+
+전용 비IBM ID와 공용 IBM ID의 연결 끊기
+
+```
+bluemix iam dedicated-id-disconnect [-f, --force]
+```
+
+<strong>전제조건</strong>: 로그인, 대상
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 강제 연결 끊기</dd>
+</dl>
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
@@ -2599,7 +2651,7 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 서비스 인스턴스 나열
 
 ```
-bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2608,8 +2660,8 @@ bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region R
 <dl>
   <dt>--service-name</dt>
   <dd>속해 있는 서비스의 이름</dd>
-  <dt>-r, --region</dt>
-  <dd>지역 ID별로 필터링합니다. 지정되지 않은 경우, 기본값은 현재 지역입니다. 모든 지역 아래의 서비스 인스턴스를 표시하려면 '-r, --region all'을 사용하십시오. </dd>
+  <dt>--location</dt>
+  <dd>위치별 필터링</dd>
   <dt>--long</dt>
   <dd>출력에 추가 필드 표시</dd>
 </dl>
@@ -2628,7 +2680,7 @@ bluemix resource service-instances --service-name test-service
 서비스 인스턴스의 세부사항 표시
 
 ```
-bluemix resource service-instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [--location LOCATION] [--id]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2637,8 +2689,8 @@ bluemix resource service-instance NAME [-r, --region REGION] [--id]
 <dl>
   <dt>NAME(필수)</dt>
   <dd>서비스 인스턴스의 이름</dd>
-  <dt>-r, --region</dt>
-  <dd>지역 ID별로 필터링합니다. 지정되지 않은 경우, 기본값은 현재 지역입니다. 모든 지역 아래의 서비스 인스턴스를 표시하려면 '-r, --region all'을 사용하십시오. </dd>
+  <dt>--location</dt>
+  <dd>위치별 필터링</dd>
   <dt>--id</dt>
   <dd>서비스 인스턴스의 ID 표시</dd>
 </dl>
@@ -2656,7 +2708,7 @@ bluemix resource service-instance my-service-instance
 서비스 인스턴스 작성
 
 ```
-bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상
@@ -2669,8 +2721,8 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
   <dd>서비스의 이름 또는 ID</dd>
   <dt>SERVICE_PLAN_NAME 또는 SERVICE_PLAN_ID(필수)</dt>
   <dd>서비스 플랜의 이름 또는 ID</dd>
-  <dt>-r, --region</dt>
-  <dd>서비스 인스턴스를 작성하기 위한 지역입니다. 지정되지 않은 경우, 기본값은 현재 지역입니다. </dd>
+  <dt>LOCATION</dt>
+  <dd>서비스 인스턴스를 작성하는 대상 위치 또는 환경</dd>
   <dt>-t, --tags</dt>
   <dd>태그</dd>
   <dt>-p, --parameters</dt>
@@ -2678,10 +2730,10 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
 </dl>
 
 <strong>예</strong>:
-서비스 `test-service`의 서비스 플랜 `test-service-plan`을 사용하여 `my-service-instance`로 이름 지정된 서비스 인스턴스 작성: 
+위치 `eu-gb`에 있는 서비스 `test-service`의 서비스 플랜 `test-service-plan`을 사용하여 서비스 인스턴스 `my-service-instance` 작성:
 
 ```
-bluemix resource service-instance-create my-service-instance test-service test-service-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
 
 ## bluemix resource service-instance-update

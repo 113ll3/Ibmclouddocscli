@@ -18,18 +18,19 @@ lastupdated: "2017-10-20"
 # プラグインを使用した {{site.data.keyword.Bluemix_notm}} CLI の拡張
 {: #plug-ins}
 
-{{site.data.keyword.Bluemix_notm}} CLI は、機能を拡張するためにプラグイン・フレームワークをサポートしています。リポジトリーまたは Web URL からプラグインをインストールしたり、ローカルにプラグイン・バイナリーをインストールしたりすることができます。 
+{{site.data.keyword.Bluemix_notm}} CLI は、機能を拡張するためにプラグイン・フレームワークをサポートしています。 リポジトリーまたは Web URL からプラグインをインストールしたり、ローカルにプラグイン・バイナリーをインストールしたりすることができます。 
 
 [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) は、プラグインがホストされている公式リポジトリーです。
 
-プラグインを管理するためのその他のコマンドについては、`bluemix plugin` を実行してヘルプ・メッセージを表示してください。{: tip}
+プラグインを管理するためのその他のコマンドについては、`bluemix plugin` を実行してヘルプ・メッセージを表示してください。
+{: tip}
 
-## {site.data.keyword.Bluemix_notm}} CLI リポジトリーからのプラグインのインストール
+## {{site.data.keyword.Bluemix_notm}} CLI リポジトリーからのプラグインのインストール
 
 ### ステップ 1: プラグインの検索
 
 1. リポジトリーでプラグインを探すには、コマンド `bluemix plugin repo-plugins -r REPO_NAME` を使用します。
-2. {{site.data.keyword.Bluemix_notm}} CLI は、デフォルトで `Bluemix` という名前を使用します。公式の `Bluemix` リポジトリー内のプラグインをリストすることができます。例えば次のようにします。
+2. {{site.data.keyword.Bluemix_notm}} CLI は、デフォルトで `Bluemix` という名前を使用します。 公式の `Bluemix` リポジトリー内のプラグインをリストすることができます。 例えば次のようにします。
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -44,7 +45,7 @@ lastupdated: "2017-10-20"
 
 ### ステップ 2: プラグインのインストール
 
-プラグインをインストールするには、`bx plugin install PLUGIN_NAME -r REPO_NAME` コマンドを使用します。例えば次のようにします。
+プラグインをインストールするには、`bx plugin install PLUGIN_NAME -r REPO_NAME` コマンドを使用します。 例えば次のようにします。
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix
@@ -57,7 +58,7 @@ lastupdated: "2017-10-20"
 
 ## ローカルでのプラグインのインストール
 
-ローカル・マシンにプラグイン・バイナリーをインストールするには、`bluemix plugin install LOCAL_FILE_NAME` コマンドを使用します。例えば次のようにします。
+ローカル・マシンにプラグイン・バイナリーをインストールするには、`bluemix plugin install LOCAL_FILE_NAME` コマンドを使用します。 例えば次のようにします。
 
   ```
   $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2
@@ -69,7 +70,7 @@ lastupdated: "2017-10-20"
 
 ## Web URL からのプラグインのインストール
 
-Web URL から直接プラグインをインストールするには、`bluemix plugin install URL` コマンドを使用します。次に例を示します。
+Web URL から直接プラグインをインストールするには、`bluemix plugin install URL` コマンドを使用します。 次に例を示します。
 
   ```
   ~$ bluemix plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2

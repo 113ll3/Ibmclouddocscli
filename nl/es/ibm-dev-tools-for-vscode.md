@@ -84,7 +84,7 @@ Puede empezar con flujos de trabajo de CloudFoundry en unos cuantos pasos:
 * Abra la carpeta del proyecto localmente en el editor de Visual Studio Code
 * Utilice `bx cf apps` para mostrar una lista de todas sus aplicaciones
 * Utilice `bx cf push` para enviar una compilación de su aplicación al tiempo de ejecución de Cloud Foundry
-* Utilice `cf <start/stop/restage/restart>` para cambiar el estado de su aplicación
+* Utilice `bx cf <start/stop/restage/restart>` para cambiar el estado de su aplicación
 * Utilice `bx cf logs` para ver la corriente de anotaciones cronológicas en directo de su aplicación
   * Utilice `bx cf logs` para detener la corriente de anotaciones cronológicas
 

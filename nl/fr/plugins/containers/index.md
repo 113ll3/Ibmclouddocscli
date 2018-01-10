@@ -32,9 +32,7 @@ L'interface de ligne de commande d'IBM Containers est un plug-in d'interface de 
 <dt>Cible</dt>
 <dd>La commande <code>bluemix target</code> doit être utilisée pour définir une organisation et un espace avant l'utilisation de cette commande.</dd>
 <dt>Docker</dt>
-<dd>L'interface de ligne de commande Docker (docker) est requise pour
-l'exécution des commandes dans le plug-in d'interface de ligne de commande
-d'IBM Containers.</dd>
+<dd>L'interface de ligne de commande Docker (docker) est requise pour l'exécution des commandes dans le plug-in d'interface de ligne de commande d'IBM Containers.</dd>
 </dl>
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer des conteneurs dans Bluemix.">
@@ -141,8 +139,7 @@ bluemix ic attach [--no-stdin] [--sig-proxy] CONTENEUR
    <dt>--no-stdin (facultatif)</dt>
    <dd>Indique de ne pas inclure l'entrée standard.</dd>
    <dt>--sig-proxy (facultatif)</dt>
-   <dd>Indique d'envoyer par proxy tous les signaux reçus au processus. La valeur
-par défaut est <i>true</i>.</dd>
+   <dd>Indique d'envoyer par proxy tous les signaux reçus au processus. La valeur par défaut est <i>true</i>.</dd>
    <dt><i>CONTENEUR</i> (requis)</dt>
    <dd>Nom ou ID du conteneur.</dd>
     </dl>
@@ -275,8 +272,8 @@ bluemix ic exec mon_conteneur date
 Créez un groupe de conteneurs évolutif.
 
 ```
-bluemix ic group-create [--publish,-p PORT] --name NOM_GROUPE [--memory,-m TAILLE_MEMOIRE] [-n,--hostname NOM_HOTE] [-d,--domain DOMAINE] [--env,-e CLE_ENV=VAL_ENV] [--env-file
-FICHIER_VARIABLE_ENVIRONNEMENT] [-P false|true] [--volume] [--min NOMBRE_MIN_INSTANCES] [--max NOMBRE_MAX_INSTANCES] [--desired NOMBRE_INSTANCES_SOUHAITE] [--anti false|true] [--auto false|true] NOM_IMAGE [CMD [CMD ...]]
+bluemix ic group-create [--publish,-p PORT] --name NOM_GROUPE [--memory,-m TAILLE_MEMOIRE] [-n,--hostname NOM_HOTE] [-d,--domain DOMAINE] [--env,-e CLE_ENV=VAL_ENV] [--env-file FICHIER_VARIABLE_ENVIRONNEMENT] [-P false|true] [--volume] [--min NOMBRE_MIN_INSTANCES] [--max NOMBRE_MAX_INSTANCES] [--desired NOMBRE_INSTANCES_SOUHAITE] [--anti false|true] [--auto false|true] NOM_IMAGE [CMD [CMD ...]]
+
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible

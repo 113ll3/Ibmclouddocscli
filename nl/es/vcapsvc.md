@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2016-03-15"
+lastupdated: "2017-12-11"
 
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2016-03-15"
 {: #vcap_services}
 
 
-La variable de entorno VCAP_SERVICES es un objeto JSON que contiene
+La variable de entorno VCAP_SERVICES (VMware Cloud Application Platform) es un objeto JSON que contiene
 información que puede utilizar para interactuar con una instancia de servicio en
 {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}

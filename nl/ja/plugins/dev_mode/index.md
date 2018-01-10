@@ -20,9 +20,9 @@ lastupdated: "2017-01-12"
 {: #devmodecli}
 
 
-**この CLI は非推奨になっています:** 開発モード (dev_mode) CLI を使用する代わりに、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} または DevOps Web IDE を使用してください。dev_mode CLI は、2016 年 6 月 30 日まで引き続き使用できます。
+**この CLI は非推奨になっています:** 開発モード (dev_mode) CLI を使用する代わりに、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} または DevOps Web IDE を使用してください。 dev_mode CLI は、2016 年 6 月 30 日まで引き続き使用できます。
 
-{{site.data.keyword.Bluemix_notm}} 開発モード・コマンド・ライン・インターフェース (dev_mode CLI) を使用すると、クラウドでアプリを実行中にそのアプリを更新できます。dev_mode CLI は cf CLI プラグインとしてビルドされており、Liberty のアプリと IBM Node.js のアプリを両方サポートしています。
+{{site.data.keyword.Bluemix_notm}} 開発モード・コマンド・ライン・インターフェース (dev_mode CLI) を使用すると、クラウドでアプリを実行中にそのアプリを更新できます。 dev_mode CLI は cf CLI プラグインとしてビルドされており、Liberty のアプリと IBM Node.js のアプリを両方サポートしています。
 {: shortdesc}
 
 
@@ -32,35 +32,35 @@ lastupdated: "2017-01-12"
 - 既存コンテナー内のアプリの開始、停止、または再始動を行う。
 
 ## dev_mode プラグインのインストール
-**前提条件:** 始める前に Cloud Foundry CLI をインストールしてください。詳しくは、 [『Start coding with Cloud Foundry command line interface』](https://github.com/cloudfoundry/cli)を参照してください。
+**前提条件:** 始める前に Cloud Foundry CLI をインストールしてください。 詳しくは、 [『Start coding with Cloud Foundry command line interface』](https://github.com/cloudfoundry/cli)を参照してください。
 
 
 dev_mode コマンド・ライン・ツールのインストールには、以下の方法のいずれかを使用します。
 - ローカルでインストールする。
   1. [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
-  2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。例えば次のようにします。
+  2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。 例えば次のようにします。
 
         ```
-cf install-plugin dev_mode-linux64
+        cf install-plugin dev_mode-linux64
         ```
 
 - {{site.data.keyword.Bluemix_notm}} CLI リポジトリーからインストールする。
   1. 以下のコマンドを使用して、Cloud Foundry CLI リポジトリー群に bluemix-repo リポジトリーを追加します。
 
         ```
-cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
+        cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
-  2. cf repo-plugins を入力します。bluemix-repo リポジトリーに dev_mode プラグインが表示されます。
+  2. cf repo-plugins を入力します。 bluemix-repo リポジトリーに dev_mode プラグインが表示されます。
 
 		```
-cf repo-plugins
+        cf repo-plugins
         ```
 
   3. 以下のコマンドを使用して、Cloud Foundry CLI プラグイン群に dev_mode プラグインをインストールします。
 
         ```
-cf install-plugin dev_mode -r bluemix-repo
+        cf install-plugin dev_mode -r bluemix-repo
         ```
 
 ## dev_mo {{site.data.keyword.Bluemix_notm}} の表示  
@@ -77,7 +77,7 @@ cf plugins
 以下の表の索引を使用して、使用頻度の高い dev_mode CLI コマンドを参照してください。
 
 <table summary="dev_mode コマンドの索引">
- <caption>表 1. dev_mode のコマンド</caption>
+<caption>表 1. dev_mode のコマンド</caption>
  <thead>
  <th colspan="4">dev_mode のコマンド</th>
  </thead>
@@ -116,7 +116,9 @@ cf help <commandName>
 ```
 cf mode <appName> <dev|normal>
 ```
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+
+   <dl>
    <dt>dev</dt>
    <dd>開発モード。</dd>
    <dt>normal</dt>

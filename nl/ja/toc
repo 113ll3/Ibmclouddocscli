@@ -20,8 +20,7 @@ CLI と開発ツール
 	IBM Cloud CLI プラグイン
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Container Service (クラスター)](../containers/cs_cli_devtools.html)
-		[Container Service (単一およびスケーラブル・グループ)](../containers/container_cli_cfic.html)
+		[Container Service](../containers/cs_cli_devtools.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
@@ -47,6 +46,7 @@ CLI と開発ツール
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
 	login_federated_id.md
+	connect_dedicated_id.md
 	[ツールチェーンを使用した開発](../services/ContinuousDelivery/dev_use_toolchains.html)
 	[Eclipse Tools を使用した開発](../starters/deploy_eclipsetools.html)
 	[CLI を使用したアプリのデプロイ](../starters/install_cli.html)

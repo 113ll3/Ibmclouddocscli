@@ -22,7 +22,7 @@ Utilisez les commandes de l'infrastructure {{site.data.keyword.BluSoftlayer_notm
 Pour commencer, installez l'interface de ligne de commande IBM {{site.data.keyword.Bluemix_notm}}. Voir le site
 [Interface de ligne de commande Bluemix ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} pour obtenir plus d'informations.
 
-Pour obtenir une liste complète de commandes {{site.data.keyword.Bluemix_notm}}, voir : [Commandes {{site.data.keyword.Bluemix_notm:}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
+Pour obtenir une liste complète des commandes {{site.data.keyword.Bluemix_notm}}, voir : [Commandes {{site.data.keyword.Bluemix_notm}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
 ## Commandes générales de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}
@@ -432,7 +432,7 @@ Choisissez comment configurer l'infrastructure de l'infrastructure {{site.data.k
 1. Connexion à l'aide du nom d'utilisateur et du mot de passe ou de la clé d'API de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}
 2. Utilisation de la fonction {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 Entrez un nombre> 2
-URL de point d'extrémité d'API Softlayer : [https://api.softlayer.com/mobile/v3.1]>
+URL de point d'extrémité d'API Softlayer : [https://api.softlayer.com/mobile/v3.1]> 
 Compte : 278444
 OK
                               

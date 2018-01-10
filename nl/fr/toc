@@ -20,8 +20,7 @@ Interface de ligne de commande et outils de développement
 	Plug-in d'interface de ligne de commande IBM Cloud
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Container Service (clusters)](../containers/cs_cli_devtools.html)
-		[Container Service (groupes uniques et évolutifs)](../containers/container_cli_cfic.html)
+		[Container Service](../containers/cs_cli_devtools.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
@@ -47,8 +46,9 @@ Interface de ligne de commande et outils de développement
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
 	login_federated_id.md
-	[Développement à l'aide de chaînes d'outils](../services/ContinuousDelivery/dev_use_toolchains.html)
-	[Développement à l'aide d'Eclipse Tools](../starters/deploy_eclipsetools.html)
-	[Déploiement de votre application à l'aide de l'interface de ligne de commande](../starters/install_cli.html)
+	connect_dedicated_id.md
+	[Développement avec des chaînes d'outils](../services/ContinuousDelivery/dev_use_toolchains.html)
+	[Développement avec Eclipse Tools](../starters/deploy_eclipsetools.html)
+	[Déploiement de votre application avec l'interface de ligne de commande](../starters/install_cli.html)
 	[Téléchargement de votre application](../starters/upload_app.html)
 	{: .navgroup-end}

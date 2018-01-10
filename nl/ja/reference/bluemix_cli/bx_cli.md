@@ -20,18 +20,19 @@ lastupdated: "2017-11-06"
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 
-バージョン 0.5.0 以降、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・クライアントは、Cloud Foundry コマンド・ライン・クライアントをインストール済み環境にバンドルしています。独自の cf cli がインストールされている場合は、{{site.data.keyword.Bluemix_notm}} CLI コマンド `bx [command]` と、独自のインストール済み環境の Cloud Foundry CLI コマンド `cf [command]` の両方を同じコンテキストで使用しないでください。cf cli を使用して {{site.data.keyword.Bluemix_notm}} CLI コンテキストで Cloud Foundry リソースを管理したい場合は、代わりに `bluemix cf [command]` を使用してください。`bluemix cf api/login/logout/target` は使用できないので注意してください。代わりに、`bluemix api/login/logout/target` を使用してください。
+バージョン 0.5.0 以降、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・クライアントは、Cloud Foundry コマンド・ライン・クライアントをインストール済み環境にバンドルしています。 独自の cf cli がインストールされている場合は、{{site.data.keyword.Bluemix_notm}} CLI コマンド `bx [command]` と、独自のインストール済み環境の Cloud Foundry CLI コマンド `cf [command]` の両方を同じコンテキストで使用しないでください。 cf cli を使用して {{site.data.keyword.Bluemix_notm}} CLI コンテキストで Cloud Foundry リソースを管理したい場合は、代わりに `bluemix cf [command]` を使用してください。  `bluemix cf api/login/logout/target` は使用できないので注意してください。代わりに、`bluemix api/login/logout/target` を使用してください。
 
 名前、引数、オプション、前提条件、説明、および例を含め、{{site.data.keyword.Bluemix_notm}} CLI でサポートされている詳細なコマンドを以下にリストします。
 {:shortdesc}
 
-**注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。前提条件となるアクションのないコマンドでは、**なし**とリストされています。それ以外の場合、前提条件には以下のアクションのうちの 1 つ以上が含まれます。
+**注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。 前提条件となるアクションのないコマンドでは、**なし**とリストされています。 それ以外の場合、前提条件には以下のアクションのうちの 1 つ以上が含まれます。
 
 <dl>
 <dt>エンドポイント</dt>
 <dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
 <dt>ログイン</dt>
-<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します。{{site.data.keyword.Bluemix_notm}} コンソールで**「管理」** &gt; **「セキュリティー」** &gt; **「プラットフォーム API キー」**に移動して、API キーを作成します。
+<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。
+フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します。 {{site.data.keyword.Bluemix_notm}} コンソールで**「管理」** &gt; **「セキュリティー」** &gt; **「プラットフォーム API キー」**に移動して、API キーを作成します。
 </dd>
 <dt>ターゲット</dt>
 <dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
@@ -48,7 +49,7 @@ lastupdated: "2017-11-06"
 {: #bx_commands_index}
 
 <table summary="汎用 Bluemix コマンド。">
- <caption>表 1. 汎用 bluemix コマンド</caption>
+<caption>表 1. 汎用 bluemix コマンド</caption>
  <thead>
  <th colspan="5">汎用 Bluemix コマンド</th>
  </thead>
@@ -74,7 +75,7 @@ lastupdated: "2017-11-06"
  ## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サービスを管理および構成するためのコマンド (bluemix sl)
   {: #bx_commands_softlayer}
 
-{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーを管理するためのコマンドは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。{{site.data.keyword.Bluemix_notm}} CLI を使用した {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サービスの構成および管理について詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー (bluemix sl) コマンド](/docs/cli/reference/softlayer/index.md#softlayer_cli)を参照してください。
+{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーを管理するためのコマンドは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。 {{site.data.keyword.Bluemix_notm}} CLI を使用した {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サービスの構成および管理について詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー (bluemix sl) コマンド](/docs/cli/reference/softlayer/index.md#softlayer_cli)を参照してください。
 
  ## アカウント、組織、および役割を管理するためのコマンド
  {: #bx_commands_account}
@@ -213,6 +214,9 @@ lastupdated: "2017-11-06"
    <td>[bluemix iam user-policy-create](bx_cli.html#bluemix_iam_user_policy_create)</td>
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
+   <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
+   <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
+
   </tr>
   </tbody>
   </table>
@@ -370,7 +374,7 @@ bluemix help [COMMAND|NAMESPACE]
 
    <dl>
    <dt>COMMAND|NAMESPACE (オプション)</dt>
-   <dd>ヘルプを表示する対象のコマンドまたは名前空間。指定されない場合、{{site.data.keyword.Bluemix_notm}} CLI の一般ヘルプが表示されます。</dd>
+   <dd>ヘルプを表示する対象のコマンドまたは名前空間。 指定されない場合、{{site.data.keyword.Bluemix_notm}} CLI の一般ヘルプが表示されます。</dd>
    </dl>
 
 
@@ -408,7 +412,7 @@ bluemix api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
    <dt>--unset (オプション)</dt>
    <dd>API エンドポイント設定を削除します。</dd>
    <dt>--skip-ssl-validation (オプション)</dt>
-   <dd>HTTP 要求の SSL 検証をバイパスします。 </dd>
+   <dd>HTTP 要求の SSL 検証をバイパスします。</dd>
    </dl>
 <strong>例</strong>:
 
@@ -449,13 +453,13 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
 <strong>コマンド・オプション</strong>:
    <dl>
    <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
-   <dd>HTTP 要求のタイムアウト値。デフォルト値は 60 秒です。</dd>
+   <dd>HTTP 要求のタイムアウト値。 デフォルト値は 60 秒です。</dd>
    <dt>--trace true|false|<i>path-to-file</i></dt>
    <dd>端末または指定されたファイルへの HTTP 要求をトレースします。</dd>
    <dt>--color true|false</dt>
-   <dd>カラー出力を使用可能または使用不可にします。カラー出力はデフォルトで使用可能に設定されています。</dd>
+   <dd>カラー出力を使用可能または使用不可にします。 カラー出力はデフォルトで使用可能に設定されています。</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>デフォルト・ロケールを設定します。LOCALE  が <i>CLEAR</i> の場合は、前のロケールが削除されます。</dd>
+   <dd>デフォルト・ロケールを設定します。 LOCALE  が <i>CLEAR</i> の場合は、前のロケールが削除されます。</dd>
    <dt>--check-version true|false</dt>
    <dd>CLI バージョン・チェックを使用可能または使用不可にします。</dd>
    </dl>
@@ -552,7 +556,7 @@ bluemix -q cf services
 ユーザーをログインします。
 
 ```
-bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
 ```
 
 <strong>前提条件</strong>: なし
@@ -566,19 +570,21 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dt> --apikey <i>API_KEY または @API_KEY_FILE_PATH</i>
   <dd> API キーの内容、または @ で示された API キー・ファイルのパス</dd>
   <dt> --sso (オプション) </dt>
-  <dd> ワンタイム・パスコードを使用してログインします</dd>
+  <dd> ワンタイム・パスコードを使用してログインします </dd>
   <dt> -u <i>USERNAME</i> (オプション)</dt>
   <dd> ユーザー名</dd>
   <dt> -p <i>PASSWORD</i> (オプション)</dt>
   <dd> パスワード</dd>
   <dt> -c <i>ACCOUNT_ID</i> (オプション) </dt>
   <dd> ターゲット・アカウントの ID</dd>
-  <dt> -o <i>ORG_NAME</i> (オプション)</dt>
+  <dt> -o <i>ORG_NAME</i> (オプション) </dt>
   <dd> ターゲット組織の名前 </dd>
-  <dt> -s <i>SPACE_NAME</i> (オプション)</dt>
+  <dt> -s <i>SPACE_NAME</i> (オプション) </dt>
   <dd> ターゲット・スペースの名前</dd>
+  <dt> --no-iam </dt>
+  <dd> パブリック IAM の代わりにログイン・サーバーでの認証を強制します</dd>
   <dt> --skip-ssl-validation (オプション) </dt>
-  <dd> HTTP 要求の SSL 検証をバイパスします。このオプションは推奨されません。</dd>
+  <dd> HTTP 要求の SSL 検証をバイパスします。 このオプションは推奨されません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -586,7 +592,8 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
 #### 対話式ログイン
 
 ```
-bluemix login```
+bluemix login
+```
 
 以下のように、ユーザー名とパスワードを使用してログインし、ターゲットのアカウント、組織、およびスペースを設定します。
 
@@ -635,7 +642,7 @@ bluemix login -u UserID --sso
 One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
 
-ブラウザーでこのリンクを開くと、パスコードを取得するための案内が表示されます。提供されたパスコードをコンソールに入力するとログインできます。
+ブラウザーでこのリンクを開くと、パスコードを取得するための案内が表示されます。 提供されたパスコードをコンソールに入力するとログインできます。
 
 ## bluemix logout
 {: #bluemix_logout}
@@ -732,7 +739,7 @@ bluemix account orgs [-r REGION] [--guid]
 <strong>コマンド・オプション</strong>:
    <dl>
    <dt>-r <i>REGION</i> (オプション)</dt>
-   <dd>どの地域の組織情報を表示するかを指定します。'all' に設定された場合は、すべての地域のすべての組織がリストされます。</dd>
+   <dd>どの地域の組織情報を表示するかを指定します。 'all' に設定された場合は、すべての地域のすべての組織がリストされます。</dd>
    <dt>--guid (オプション)</dt>
    <dd>組織の GUID を表示します。</dd>
    </dl>
@@ -778,7 +785,7 @@ bluemix account org IBM --guid
 ## bluemix account org-create
 {: #bluemix_account_org_create}
 
-新しい組織を作成します。この操作は、アカウントの所有者のみが実行できます。  
+新しい組織を作成します。 この操作は、アカウントの所有者のみが実行できます。
 
 ```
 bluemix account org-create ORG_NAME [-f]
@@ -833,7 +840,7 @@ bluemix account org-replicate myorg eu-gb
 ## bluemix account org-rename
 {: #bluemix_account_org_rename}
 
-組織の名前を変更します。この操作は、組織の管理者のみが実行できます。
+組織の名前を変更します。 この操作は、組織の管理者のみが実行できます。
 
 ```
 bluemix account org-rename OLD_ORG_NAME NEW_ORG_NAME
@@ -862,9 +869,9 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 <strong>コマンド・オプション</strong>:
    <dl>
    <dt>-o</dt>
-   <dd>組織名。指定された組織の下のスペースをリストします。未指定の場合、デフォルトは現行組織です。</dd>
+   <dd>組織名。 指定された組織の下のスペースをリストします。 未指定の場合、デフォルトは現行組織です。</dd>
    <dt>-r</dt>
-   <dd>地域名。 指定した地域の下のスペースをリストします。未指定の場合、デフォルトは現行地域です。</dd>
+   <dd>地域名。 指定した地域の下のスペースをリストします。 未指定の場合、デフォルトは現行地域です。</dd>
    </dl>
 
 
@@ -951,13 +958,13 @@ bluemix account org-roles [-u USER_ID]
 <strong>コマンド・オプション</strong>:
   <dl>
    <dt>-u</dt>
-   <dd>ユーザー ID。指定しない場合、現行ユーザーがデフォルトで使用されます。</dd>
+   <dd>ユーザー ID。 指定しない場合、現行ユーザーがデフォルトで使用されます。</dd>
   </dl>
 
 ## bluemix account org-role-set
 {: #bluemix_account_org_role_set}
 
-組織の役割をユーザーに割り当てます。この操作は、組織の管理者のみが実行できます。  
+組織の役割をユーザーに割り当てます。 この操作は、組織の管理者のみが実行できます。
 
 ```
 bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
@@ -972,8 +979,8 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME (必須)</dt>
    <dd>このユーザーの割り当て先の組織の名前。</dd>
    <dt>ORG_ROLE (必須)</dt>
-   <dd>このユーザーの割り当て先の組織内での役割の名前。以下に例を示します。
-<ul>
+   <dd>このユーザーの割り当て先の組織内での役割の名前。 以下に例を示します。
+   <ul>
    <li>OrgManager: この役割は、ユーザーの招待と管理、プランの選択と変更、支払上限の設定を行います。</li>
    <li>BillingManager: この役割は、請求アカウントと支払い情報の作成および管理を行えます。</li>
    <li>OrgAuditor: この役割は、組織の情報とレポートに読み取りアクセスだけが可能です。</li>
@@ -989,12 +996,13 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
 bluemix account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**注**: 組織/スペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。詳細については、[ユーザー・アクセスの割り当て](/docs/iam/assignaccess.html#assignaccess)を参照してください。<!-- Begin Staging URL vs Prod URL -->
+**注**: 組織/スペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。 詳細については、[ユーザー・アクセスの割り当て](/docs/iam/assignaccess.html#assignaccess)を参照してください。
+<!-- Begin Staging URL vs Prod URL -->
 
 ## bluemix account org-role-unset
 {: #bluemix_account_org_role_unset}
 
-組織の役割をユーザーから削除します。この操作は、組織の管理者のみが実行できます。  
+組織の役割をユーザーから削除します。 この操作は、組織の管理者のみが実行できます。
 
 ```
 bluemix account org-role-unset USER_NAME ORG_NAME ORG_ROLE
@@ -1009,8 +1017,8 @@ bluemix account org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME (必須)</dt>
    <dd>このユーザーの削除元の組織の名前。</dd>
    <dt>ORG_ROLE (必須)</dt>
-   <dd>このユーザーの削除元の組織内での役割の名前。以下に例を示します。
-<ul>
+   <dd>このユーザーの削除元の組織内での役割の名前。 以下に例を示します。
+   <ul>
    <li>OrgManager: この役割は、ユーザーの招待と管理、プランの選択と変更、支払上限の設定を行います。</li>
    <li>BillingManager: この役割は、請求アカウントと支払い情報の作成および管理を行えます。</li>
    <li>OrgAuditor: この役割は、組織の情報とレポートに読み取りアクセスだけが可能です。</li>
@@ -1049,7 +1057,7 @@ bluemix account space-users ORG_NAME SPACE_NAME
 ## bluemix account space-role-set
 {: #bluemix_account_space_role_set}
 
-スペースの役割をユーザーに割り当てます。この操作は、スペースの管理者のみが実行できます。  
+スペースの役割をユーザーに割り当てます。 この操作は、スペースの管理者のみが実行できます。
 
 ```
 bluemix account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -1067,11 +1075,11 @@ bluemix account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME (必須)</dt>
    <dd>このユーザーの割り当て先のスペースの名前。</dd>
    <dt>SPACE_ROLE (必須)</dt>
-   <dd>このユーザーの割り当て先のスペース内での役割の名前。以下に例を示します。
-<ul>
+   <dd>このユーザーの割り当て先のスペース内での役割の名前。 以下に例を示します。
+   <ul>
    <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、特定のスペースに対してフィーチャーを有効にします。</li>
    <li>SpaceDeveloper: この役割は、アプリとサービスを作成して管理し、ログとレポートを表示します。</li>
-   <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。 </li>
+   <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
    </ul></dd>
     </dl>
 
@@ -1086,7 +1094,7 @@ bluemix account space-role-set Mary IBM Cloud SpaceManager
 ## bluemix account space-role-unset
 {: #bluemix_account_space_role_unset}
 
-スペースの役割をユーザーから削除します。この操作は、スペースの管理者のみが実行できます。  
+スペースの役割をユーザーから削除します。 この操作は、スペースの管理者のみが実行できます。
 
 ```
 bluemix account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -1104,11 +1112,11 @@ bluemix account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME (必須)</dt>
    <dd>このユーザーの削除元のスペースの名前。</dd>
    <dt>SPACE_ROLE (必須)</dt>
-   <dd>このユーザーの削除元のスペース内での役割の名前。以下に例を示します。
-<ul>
+   <dd>このユーザーの削除元のスペース内での役割の名前。 以下に例を示します。
+   <ul>
    <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、特定のスペースに対してフィーチャーを有効にします。</li>
    <li>SpaceDeveloper: この役割は、アプリとサービスを作成して管理し、ログとレポートを表示します。</li>
-   <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。 </li>
+   <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
    </ul></dd>
     </dl>
 
@@ -1127,7 +1135,8 @@ bluemix account space-role-unset Mary IBM Cloud SpaceManager
 現行ユーザーのすべてのアカウントをリストします
 
 ```
-bluemix account list```
+bluemix account list
+```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -1153,7 +1162,7 @@ bluemix account org-account ORG_NAME [--guid]
 ## bluemix account users
 {: #bluemix_account_users}
 
-アカウントに関連付けられているユーザーを表示します。この操作は、アカウントの所有者のみが実行できます。
+アカウントに関連付けられているユーザーを表示します。 この操作は、アカウントの所有者のみが実行できます。
 
 ```
 bluemix account users
@@ -1175,7 +1184,7 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 <dt>USERNAME (必須)</dt>
 <dd>ユーザー名</dd>
 <dt>-c ACCOUNT_ID</dt>
-<dd>アカウント ID。指定しない場合、現行アカウントがデフォルトで使用されます。</dd>
+<dd>アカウント ID。 指定しない場合、現行アカウントがデフォルトで使用されます。</dd>
 <dt>--force、-f (オプション)</dt>
 <dd>確認なしで削除を強制します。</dd>
 </dl>
@@ -1183,7 +1192,7 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix account user-invite
 {: #bluemix_account_user_invite}
 
-組織とスペースの役割が既に設定されているアカウントにユーザーを招待します。この操作は、アカウントの所有者のみが実行できます。
+組織とスペースの役割が既に設定されているアカウントにユーザーを招待します。 この操作は、アカウントの所有者のみが実行できます。
 
 ```
 bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
@@ -1198,8 +1207,8 @@ bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
    <dt>ORG_NAME (必須)</dt>
    <dd>このユーザーの招待先の組織の名前。</dd>
    <dt>ORG_ROLE (必須)</dt>
-   <dd>このユーザーの招待先の組織内での役割の名前。以下に例を示します。
-<ul>
+   <dd>このユーザーの招待先の組織内での役割の名前。 以下に例を示します。
+   <ul>
   <li>OrgManager: この役割は、ユーザーの招待と管理、プランの選択と変更、支払上限の設定を行います。</li>
   <li>BillingManager: この役割は、請求アカウントと支払い情報の作成および管理を行えます。</li>
   <li>OrgAuditor: この役割は、組織の情報とレポートに読み取りアクセスだけが可能です。</li>
@@ -1207,11 +1216,11 @@ bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME (必須)</dt>
    <dd>このユーザーの招待先のスペースの名前。</dd>
    <dt>SPACE_ROLE (必須)</dt>
-   <dd>このユーザーの招待先のスペースの名前。このユーザーの招待先のスペース内での役割の名前。以下に例を示します。
-<ul>
+   <dd>このユーザーの招待先のスペースの名前。 このユーザーの招待先のスペース内での役割の名前。 以下に例を示します。
+   <ul>
 <li>SpaceManager: この役割は、ユーザーの招待と管理を行い、特定のスペースに対してフィーチャーを有効にします。</li>
 <li>SpaceDeveloper: この役割は、アプリとサービスを作成して管理し、ログとレポートを表示します。</li>
-<li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。 </li>
+<li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
 </ul>
 </dd>
 </dl>
@@ -1224,7 +1233,8 @@ bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
 bluemix account user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**注**: 組織/スペースの役割は、CLI を使用して招待中に設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。詳細については、[ユーザー・アクセスの割り当て](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)を参照してください。<!-- End Staging URL vs Prod URL -->
+**注**: 組織/スペースの役割は、CLI を使用して招待中に設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。 詳細については、[ユーザー・アクセスの割り当て](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)を参照してください。
+<!-- End Staging URL vs Prod URL -->
 
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
@@ -1392,7 +1402,8 @@ bluemix iam service-id-delete sample-teset -f
 すべての {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーをリストします
 
 ```
-bluemix iam api-keys```
+bluemix iam api-keys
+```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -1414,7 +1425,7 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dt>-d <i>DESCRIPTION</i> (オプション)</dt>
 <dd>API キーの説明</dd>
 <dt>-f, -- file <i>FILE</i></dt>
-<dd>指定されたファイルに API キー情報を保存します。設定されていない場合、JSON コンテンツが表示されます。</dd>
+<dd>指定されたファイルに API キー情報を保存します。 設定されていない場合、JSON コンテンツが表示されます。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1537,7 +1548,7 @@ bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTIO
   <dt>-d, --description</dt>
   <dd>API キーの説明</dd>
   <dt>-f, --file</dt>
-  <dd>指定されたファイルに API キー情報を保存します。設定されていない場合、JSON コンテンツが表示されます。</dd>
+  <dd>指定されたファイルに API キー情報を保存します。 設定されていない場合、JSON コンテンツが表示されます。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1674,6 +1685,7 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dt>-f, --file <i>FILE</i> (オプション)</dt>
 <dd>ポリシー定義の JSON ファイル</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (オプション)</dt>
+<dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (オプション)</dt>
 <dd>ポリシー定義のサービス名。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (オプション)</dt>
@@ -1688,7 +1700,6 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dd>リソース・グループの名前。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (オプション)</dt>
 <dd>リソース・グループの ID。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
-  <dd>ポリシー定義の役割名。特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。このオプションは、「-f, --file」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1714,7 +1725,7 @@ bluemix iam user-policy-create name@example.com --roles Editor --service-name sa
 `name@example.com` に、リソース・グループ ID `dda27e49d2a1efca58083a01dfde18f6` の `Operator` 役割を与えます。
 
 ```
-bluemix iam user-policy-create name@example.com --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 `name@example.com` に、 リソース・グループ `sample-resource-group` のメンバーの `Viewer` 役割を与えます。
@@ -1752,6 +1763,7 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dt>-f, --file <i>FILE</i> (オプション)</dt>
 <dd>ポリシー定義の JSON ファイル</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (オプション)</dt>
+<dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (オプション)</dt>
 <dd>ポリシー定義のサービス名。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (オプション)</dt>
@@ -1766,7 +1778,6 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>リソース・グループの名前。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (オプション)</dt>
 <dd>リソース・グループの ID。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
-  <dd>ポリシー定義の役割名。特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。このオプションは、「-f, --file」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1786,13 +1797,13 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Administr
  `name@example.com` に、`us-south` 地域のサンプル・サービス・インスタンス `ServiceId-ade78e9f` のリソース `key123` の `Editor` 役割を与えるようにユーザー・ポリシーを更新します
 
 ```
-bluemix iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+bluemix iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
 ```
 
 `name@example.com` に、リソース・グループ ID `dda27e49d2a1efca58083a01dfde18f6` の `Operator` 役割を与えるようにユーザー・ポリシーを更新します
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 `name@example.com` に、 リソース・グループ `sample-resource-group` のメンバーの `Viewer` 役割を与えるようにユーザー・ポリシーを更新します
@@ -1877,7 +1888,7 @@ bluemix iam service-policies test 140798e2-8ea7db3
 サービス・ポリシーを作成します
 
 ```
-bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1887,19 +1898,23 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>SERVICE_ID_NAME (必須)</dt>
   <dd>サービス ID の名前</dd>
   <dt>-f, --file</dt>
-  <dd>ポリシー定義の JSON ファイル。これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、および「--resource」の各フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義の JSON ファイル。 これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、「--resource」、「--resource-group-name」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
   <dt>-r, --roles</dt>
-  <dd>ポリシー定義の役割名。特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。このオプションは、「-f, --file」と同時に指定することはできません。</dd>
-  <dt>-service-name</dt>
+  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>--service-name</dt>
   <dd>ポリシー定義のサービス名。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
-  <dt>-service-instance</dt>
+  <dt>--service-instance</dt>
   <dd>ポリシー定義のサービス・インスタンス。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
   <dt>-region</dt>
   <dd>ポリシー定義の地域。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
-  <dt>-resource-type</dt>
+  <dt>--resource-type</dt>
   <dd>ポリシー定義のリソース・タイプ。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
-  <dt>-resource</dt>
-  <dd>ポリシー定義のリソース。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dt>--resource</dt>
+  <dd>ポリシー定義のリソース。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dt>--resource-group-name</dt>
+  <dd>リソース・グループの名前。 このオプションは、「-f, --file」および「--resource-group-id」と同時に指定することはできません。</dd>
+  <dt>--resource-group-id </dt>
+  <dd>リソース・グループの ID。 このオプションは、「-f, --file」および「--resource-group-name」と同時に指定することはできません。</dd>
   <dt>-F, --force</dt>
   <dd>確認を求めずにサービス・ポリシーを作成します</dd>
 </dl>
@@ -1919,7 +1934,7 @@ bluemix iam service-policy-create test -f @policy.json
 サービス・ポリシーを更新します
 
 ```
-bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1933,9 +1948,9 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-v, --version</dt>
   <dd>サービス・ポリシーのバージョン</dd>
   <dt>-f, --file</dt>
-  <dd>ポリシー定義の JSON ファイル。これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、および「--resource」の各フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義の JSON ファイル。 これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、「--resource」、「--resource-group-name」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
   <dt>-r, --roles</dt>
-  <dd>ポリシー定義の役割名。特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
   <dt>-service-name</dt>
   <dd>ポリシー定義のサービス名。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
   <dt>-service-instance</dt>
@@ -1945,7 +1960,11 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-resource-type</dt>
   <dd>ポリシー定義のリソース・タイプ。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
   <dt>-resource</dt>
-  <dd>ポリシー定義のリソース。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dt>--resource-group-name</dt>
+  <dd>リソース・グループの名前。 このオプションは、「-f, --file」および「--resource-group-id」と同時に指定することはできません。</dd>
+  <dt>--resource-group-id </dt>
+  <dd>リソース・グループの ID。 このオプションは、「-f, --file」および「--resource-group-name」と同時に指定することはできません。</dd>
   <dt>-F, --force</dt>
   <dd>確認を求めずにサービス・ポリシーを更新します</dd>
 </dl>
@@ -1987,6 +2006,45 @@ bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
 bluemix iam service-policy-delete test 140798e2-8ea7db3
 ```
 
+## bluemix iam oauth-tokens
+{: #bluemix_iam_oauth_tokens}
+
+現行セッションの OAuth トークンを取得して表示します
+
+```
+bluemix iam oauth-tokens
+```
+
+<strong>前提条件</strong>: ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+OAuth トークンを更新して表示します
+
+```
+bluemix iam oauth-tokens
+```
+
+## bluemix iam dedicated-id-disconnect
+{: #bluemix_iam_dedicated_id_disconnect}
+
+パブリック IBM ID を専用の非 IBM ID から切断します
+
+```
+bluemix iam dedicated-id-disconnect [-f, --force]
+```
+
+<strong>前提条件</strong>: ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>確認なしで切断を強制します</dd>
+</dl>
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
@@ -2096,7 +2154,8 @@ bluemix resource group-update example-group -q free
 すべての割り当て量定義をリストします
 
 ```
-bluemix resource quotas```
+bluemix resource quotas
+```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2109,7 +2168,8 @@ bluemix resource quotas```
 すべての割り当て量定義をリストします
 
 ```
-bluemix resource quotas```
+bluemix resource quotas
+```
 
 ## bluemix resource quota
 {: #bluemix_resource_quota}
@@ -2392,9 +2452,9 @@ bluemix app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dd>経路によってマップされる cf アプリケーションまたはコンテナー・
 グループの名前。</dd>
    <dt>DOMAIN (必須)</dt>
-   <dd>経路のドメイン。例えば、mychinabluemix.net または chinabluemix.net などです。</dd>
+   <dd>経路のドメイン。 例えば、mychinabluemix.net または chinabluemix.net などです。 </dd>
    <dt>-n <i>HOST_NAME</i> (オプション)</dt>
-   <dd>経路のホスト名。指定されない場合、ホスト名は、デフォルトで、アプリケーション名またはコンテナー・グループ名に設定されます。</dd>
+   <dd>経路のホスト名。 指定されない場合、ホスト名は、デフォルトで、アプリケーション名またはコンテナー・グループ名に設定されます。</dd>
    </dl>
 
 <strong>例</strong>:
@@ -2431,7 +2491,7 @@ bluemix app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dt>DOMAIN (必須)</dt>
    <dd>経路のドメイン (例えば、mychinabluemix.net または chinabluemix.net)。</dd>
    <dt>-n <i>HOST_NAME</i> (オプション)</dt>
-   <dd>経路のホスト名。指定されない場合、ホスト名は、デフォルトで、アプリケーション名またはコンテナー・グループ名に設定されます。</dd>
+   <dd>経路のホスト名。 指定されない場合、ホスト名は、デフォルトで、アプリケーション名またはコンテナー・グループ名に設定されます。</dd>
    </dl>
 
 <strong>例</strong>:
@@ -2594,7 +2654,7 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 サービス・インスタンスをリストします
 
 ```
-bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2603,8 +2663,8 @@ bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region R
 <dl>
   <dt>--service-name</dt>
   <dd>従属サービスの名前</dd>
-  <dt>-r, --region</dt>
-  <dd>地域 ID を基準にフィルター操作します。未指定の場合、デフォルトは現行地域です。「-r, --region all」はすべての地域のサービス・インスタンスを表示します</dd>
+  <dt>--location</dt>
+  <dd>場所を基準にフィルター操作します</dd>
   <dt>--long</dt>
   <dd>出力に追加フィールドを表示します</dd>
 </dl>
@@ -2623,7 +2683,7 @@ bluemix resource service-instances --service-name test-service
 サービス・インスタンスの詳細を表示します
 
 ```
-bluemix resource service-instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [--location LOCATION] [--id]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2632,8 +2692,8 @@ bluemix resource service-instance NAME [-r, --region REGION] [--id]
 <dl>
   <dt>NAME (必須)</dt>
   <dd>サービス・インスタンスの名前</dd>
-  <dt>-r, --region</dt>
-  <dd>地域 ID を基準にフィルター操作します。未指定の場合、デフォルトは現行地域です。「-r, --region all」はすべての地域のサービス・インスタンスを表示します</dd>
+  <dt>--location</dt>
+  <dd>場所を基準にフィルター操作します</dd>
   <dt>--id</dt>
   <dd>サービス・インスタンスの ID を表示します</dd>
 </dl>
@@ -2651,7 +2711,7 @@ bluemix resource service-instance my-service-instance
 サービス・インスタンスの作成
 
 ```
-bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2664,8 +2724,8 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
   <dd>サービスの名前または ID</dd>
   <dt>SERVICE_PLAN_NAME または SERVICE_PLAN_ID (必須)</dt>
   <dd>サービス・プランの名前または ID</dd>
-  <dt>-r, --region</dt>
-  <dd>サービス・インスタンスを作成する地域。未指定の場合、デフォルトは現行地域です。</dd>
+  <dt>LOCATION</dt>
+  <dd>サービス・インスタンスを作成するターゲットの場所または環境</dd>
   <dt>-t, --tags</dt>
   <dd>タグ</dd>
   <dt>-p, --parameters</dt>
@@ -2673,10 +2733,10 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
 </dl>
 
 <strong>例</strong>:
-サービス `test-service` のサービス・プラン `test-service-plan` を使用してサービス・インスタンス `my-service-instance` を作成します。
+場所 `eu-gb` にサービス `test-service` のサービス・プラン `test-service-plan` を使用してサービス・インスタンス `my-service-instance` を作成します。
 
 ```
-bluemix resource service-instance-create my-service-instance test-service test-service-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
 
 ## bluemix resource service-instance-update
@@ -2780,7 +2840,7 @@ bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
   <dt>APP_NAME</dt>
   <dd>CloudFoundry アプリケーション名</dd>
   <dt>--id</dt>
-  <dd>ID のみを表示します。このサービス・バインディングの他の出力はすべて抑制されます。</dd>
+  <dd>ID のみを表示します。 このサービス・バインディングの他の出力はすべて抑制されます。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -3010,7 +3070,7 @@ bluemix resource service-alias ALIAS_NAME [--id]
   <dt>ALIAS_NAME (必須)</dt>
   <dd>サービス別名の名前</dd>
   <dt>--id</dt>
-  <dd>指定されたサービス別名の ID のみを表示してください。この別名の他の出力はすべて抑制されます。</dd>
+  <dd>指定されたサービス別名の ID のみを表示してください。 この別名の他の出力はすべて抑制されます。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -3124,17 +3184,17 @@ bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --pr
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>-r, --region</dt>
-  <dd>検索範囲の地理的地域を指定します。現在は、「us-south」と「united-kingdom」のみがサポートされています。</dd>
+  <dd>検索範囲の地理的地域を指定します。 現在は、「us-south」と「united-kingdom」のみがサポートされています。</dd>
   <dt>-k, --kind</dt>
-  <dd>リソースの種類を基準にしてフィルター操作します。現在は、「service-cf」、「iaas」、「runtime」、「template」、および「dashboard」のみがサポートされています。</dd>
+  <dd>リソースの種類を基準にしてフィルター操作します。 現在は、「service-cf」、「iaas」、「runtime」、「template」、および「dashboard」のみがサポートされています。</dd>
   <dt>-p, --price</dt>
-  <dd>価格を基準にしてフィルター操作します。現在は、「free」、「paygo」、「bluemix-subscription」のみがサポートされています。</dd>
+  <dd>価格を基準にしてフィルター操作します。 現在は、「free」、「paygo」、「bluemix-subscription」のみがサポートされています。</dd>
   <dt>-t, --tag</dt>
   <dd>タグを基準にしてフィルター操作します。</dd>
   <dt>--sort-by</dt>
   <dd>ソート基準のプロパティー</dd>
   <dt>--col</dt>
-  <dd>表の追加列を指定します。現在は、「group」、「provider」、および「 tags」です。</dd>
+  <dd>表の追加列を指定します。 現在は、「group」、「provider」、および「 tags」です。</dd>
   <dt>--reverse</dt>
   <dd>ソート順序を反転するかどうか</dd>
   <dt>--json</dt>
@@ -3199,7 +3259,7 @@ bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--gl
   <dt>-p, --parent</dt>
   <dd>オブジェクトの親 ID</dd>
   <dt>-c</dt>
-  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
+  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。 サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
@@ -3226,7 +3286,7 @@ bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>-c</dt>
-  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
+  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。 サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
@@ -3304,21 +3364,21 @@ bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove
 <dl>
 
   <dt>--includes-add</dt>
-  <dd>アカウント (またはコンマ区切りの一連のアカウント) を組み込みリストに追加し、項目の可視性を付与します。E メールまたはアカウント GUID を指定可能です</dd>
+  <dd>アカウント (またはコンマ区切りの一連のアカウント) を組み込みリストに追加し、項目の可視性を付与します。 E メールまたはアカウント GUID を指定可能です</dd>
   <dt>--includes-remove</dt>
-  <dd>アカウント (またはコンマ区切りの一連のアカウント) を組み込みリストから削除し、項目の可視性を取り消します。E メールまたはアカウント GUID を指定可能です</dd>  
+  <dd>アカウント (またはコンマ区切りの一連のアカウント) を組み込みリストから削除し、項目の可視性を取り消します。 E メールまたはアカウント GUID を指定可能です</dd>  
   <dt>--excludes-add</dt>
-  <dd>アカウント (またはコンマ区切りの一連のアカウント) を除外リストに追加します。E メールまたはアカウント GUID を指定可能です</dd>
+  <dd>アカウント (またはコンマ区切りの一連のアカウント) を除外リストに追加します。 E メールまたはアカウント GUID を指定可能です</dd>
   <dt>--excludes-remove</dt>
-  <dd>アカウント (またはコンマ区切りの一連のアカウント) を除外リストから削除し、項目の可視性を取り消します。アカウントがグローバル管理者によって設定されていた場合は、アカウント管理者がそのアカウントを削除することはできません。E メールまたはアカウント GUID を指定可能です</dd>
+  <dd>アカウント (またはコンマ区切りの一連のアカウント) を除外リストから削除し、項目の可視性を取り消します。 アカウントがグローバル管理者によって設定されていた場合は、アカウント管理者がそのアカウントを削除することはできません。E メールまたはアカウント GUID を指定可能です</dd>
   <dt>--owner</dt>
-  <dd>オブジェクトの所有者を変更します。E メールまたはアカウント GUID を指定可能です。</dd>
+  <dd>オブジェクトの所有者を変更します。 E メールまたはアカウント GUID を指定可能です。</dd>
   <dt>--restrict</dt>
   <dd>表示可能オブジェクトの制限を「プライベート」に変更します</dd>
   <dt>--unrestrict</dt>
   <dd>表示可能オブジェクトの制限を「パブリック」に変更します</dd>  
   <dt>-c</dt>
-  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
+  <dd>インラインまたはファイルのいずれかで提供される、カタログ固有の構成パラメーターを含む有効な JSON オブジェクト。 サポートされている構成パラメーターのリストについては、特定のカタログ項目用の資料を参照してください。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
@@ -3376,7 +3436,7 @@ bluemix catalog templates [-d]
    <dl>
    <dt>-d (オプション)</dt>
    <dd><i>-d</i> オプションが指定されている場合、各テンプレートの説明
-も表示されます。それ以外の場合、各テンプレートの ID および名前のみが表示されます。</dd>
+も表示されます。 それ以外の場合、各テンプレートの ID および名前のみが表示されます。</dd>
    </dl>
 
 
@@ -3394,7 +3454,7 @@ bluemix catalog template TEMPLATE_ID
 <strong>コマンド・オプション</strong>:
    <dl>
    <dt>TEMPLATE_ID (必須)</dt>
-   <dd>ボイラープレート・テンプレートの ID。すべてのテンプレートの ID を表示するには、
+   <dd>ボイラープレート・テンプレートの ID。 すべてのテンプレートの ID を表示するには、
 <i>bluemix templates</i> を使用します。</dd>
    </dl>
 
@@ -3411,7 +3471,7 @@ bluemix catalog template mobileBackendStarter
 ## bluemix catalog template-run
 {: #bluemix_catalog_template_run}
 
-指定されたテンプレートをベースにした、指定された URL と説明を持つ cf アプリケーションを作成します。デフォルトでは、この新規アプリケーションは自動的に開始されます。
+指定されたテンプレートをベースにした、指定された URL と説明を持つ cf アプリケーションを作成します。 デフォルトでは、この新規アプリケーションは自動的に開始されます。
 
 ```
 bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
@@ -3422,16 +3482,15 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTIO
 <strong>コマンド・オプション</strong>:
    <dl>
    <dt>TEMPLATE_ID (必須)</dt>
-   <dd>アプリケーションの作成時にそのアプリケーションの基盤とするテンプレート。すべてのテンプレートの ID を表示するには、<i>bluemix templates</i> を使用します。</dd>
+   <dd>アプリケーションの作成時にそのアプリケーションの基盤とするテンプレート。 すべてのテンプレートの ID を表示するには、<i>bluemix templates</i> を使用します。</dd>
    <dt>CF_APP_NAME (必須)</dt>
    <dd>作成される cf アプリケーションの名前。</dd>
    <dt>-u <i>URL</i> (オプション)</dt>
-   <dd>アプリケーションの経路。指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.Bluemix_notm}} によって自動的に設定されます。</dd>
+   <dd>アプリケーションの経路。 指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.Bluemix_notm}} によって自動的に設定されます。</dd>
    <dt>-d <i>DESCRIPTION</i> (オプション)</dt>
    <dd>アプリケーションの説明。</dd>
    <dt>--no-start (オプション)</dt>
-   <dd>作成後のアプリケーションを自動的に開始しません。
-指定されない場合、アプリケーションは作成された後で自動的に開始されます。</dd>
+   <dd>作成後のアプリケーションを自動的に開始しません。 指定されない場合、アプリケーションは作成された後で自動的に開始されます。</dd>
    </dl>
 
 
@@ -3470,7 +3529,7 @@ bluemix billing account-usage [-d YYYY-MM] [--json]
 
 <dl>
   <dt>-d MONTH_DATE (オプション)</dt>
-  <dd>YYYY-MM 形式を使用して指定する日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dd>YYYY-MM 形式を使用して指定する日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
   <dt>--json (オプション)</dt>
   <dd>使用量の結果を JSON 形式で表示します。</dd>
 </dl>
@@ -3500,7 +3559,7 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
   <dt>ORG_NAME (必須)</dt>
   <dd>組織の名前。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
-  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
   <dt>-r REGION_NAME</dt>
   <dd>組織をホストする地域の名前。「all」に設定されている場合、すべての地域の組織の使用量が表示されます。</dd>
   <dt>--json (オプション)</dt>
@@ -3524,9 +3583,9 @@ bluemix billing orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 
 <dl>
   <dt>-d MONTH_DATE (オプション)</dt>
-  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
   <dt>-r REGION_NAME</dt>
-  <dd>組織をホストする地域の名前。「all」に設定されている場合、すべての地域の組織の使用量サマリーが表示されます。</dd>
+  <dd>組織をホストする地域の名前。 「all」に設定されている場合、すべての地域の組織の使用量サマリーが表示されます。</dd>
   <dt>--json (オプション)</dt>
   <dd>使用量の結果を JSON 形式で表示します。</dd>
 </dl>
@@ -3559,9 +3618,9 @@ bluemix plugin repo-add REPO_NAME REPO_URL
 
    <dl>
    <dt>REPO_NAME (必須)</dt>
-   <dd>追加するリポジトリーの名前。各リポジトリーに対して任意の名前を定義できます。</dd>
+   <dd>追加するリポジトリーの名前。 各リポジトリーに対して任意の名前を定義できます。</dd>
    <dt>REPO_URL (必須)</dt>
-   <dd>追加するリポジトリーの URL。リポジトリー URL にはプロトコルが含まれている必要があります (例えば、plugins.ng.bluemix.net ではなく、http://plugins.ng.bluemix.net)。{{site.data.keyword.Bluemix_notm}} CLI の公式プラグイン・リポジトリーは http://plugins.ng.bluemix.net です。</dd>
+   <dd>追加するリポジトリーの URL。 リポジトリー URL にはプロトコルが含まれている必要があります (例えば、plugins.ng.bluemix.net ではなく、http://plugins.ng.bluemix.net)。 {{site.data.keyword.Bluemix_notm}} CLI の公式プラグイン・リポジトリーは http://plugins.ng.bluemix.net です。</dd>
     </dl>
 
 
@@ -3647,7 +3706,7 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
    <dl>
    <dt>-r <i>REPO_NAME</i> (オプション)</dt>
-   <dd>リポジトリーの名前。リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します</dd>
+   <dd>リポジトリーの名前。 リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します</dd>
    </dl>
 
 <strong>例</strong>:
@@ -3706,9 +3765,9 @@ bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
    <dd>「-r <i>REPO_NAME</i>」が指定されない場合、指定されたローカル
 ・パスまたはリモート URL からプラグインがインストールされます。</dd>
    <dt>-r <i>REPO_NAME</i> (オプション)</dt>
-   <dd>プラグインのバイナリーが配置されているリポジトリーの名前。リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します。</dd>
+   <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します。</dd>
    <dt>-v <i>VERSION</i> (オプション)</dt>
-   <dd>インストールするプラグインのバージョン。指定されていない場合は、最新バージョンのプラグインがインストールされます。このオプションは、リポジトリーからプラグインをインストールする場合にのみ有効です。</dd>
+   <dd>インストールするプラグインのバージョン。 指定されていない場合は、最新バージョンのプラグインがインストールされます。 このオプションは、リポジトリーからプラグインをインストールする場合にのみ有効です。</dd>
     </dl>
 
 <strong>例</strong>:
@@ -3750,11 +3809,11 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 <strong>コマンド・オプション</strong>:
 <dl>
  <dt>PLUGIN NAME</dt>
- <dd>更新するプラグインの名前。指定されない場合、コマンドは、インストールされているすべてのプラグインのアップグレードを確認します。</dd>
+ <dd>更新するプラグインの名前。 指定されない場合、コマンドは、インストールされているすべてのプラグインのアップグレードを確認します。</dd>
  <dt>-r REPO_NAME</dt>
- <dd>プラグインのバイナリーが配置されているリポジトリーの名前。指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します。</dd>
+ <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します。</dd>
  <dt>-v <i>VERSION</i> (オプション)</dt>
- <dd>更新するプラグインのバージョン。表示されない場合、プラグインを入手可能な最新バージョンに更新してください。</dd>
+ <dd>更新するプラグインのバージョン。 表示されない場合、プラグインを入手可能な最新バージョンに更新してください。</dd>
  <dt>--all</dt>
  <dd>利用可能なすべてのプラグインを更新します</dd>
 </dl>

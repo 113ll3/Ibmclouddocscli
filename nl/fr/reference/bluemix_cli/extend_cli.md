@@ -25,9 +25,9 @@ Le [{{site.data.keyword.Bluemix_notm}} référentiel de plug-in d'interface de l
 Pour découvrir d'autres commandes de gestion de plug-ins, exécutez `bluemix plugin` afin d'afficher les messages d'aide.
 {: tip}
 
-## Installation d'un plug-in à partir du référentiel de l'interface de ligne de commande {site.data.keyword.Bluemix_notm}}
+## Installation d'un plug-in à partir du référentiel de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
-### Etape 1 : Recherchez le plug-in
+### Etape 1 : recherchez le plug-in
 
 1. Utilisez la commande `bluemix plugin repo-plugins -r REPO_NAME` pour rechercher un plug-in dans le référentiel.
 2. L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} utilise par défaut le nom `Bluemix`. Vous pouvez afficher la liste des plug-in du référentiel `Bluemix`. Par exemple :

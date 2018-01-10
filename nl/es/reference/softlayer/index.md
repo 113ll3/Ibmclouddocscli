@@ -22,7 +22,7 @@ Utilice los mandatos de la infraestructura de {{site.data.keyword.BluSoftlayer_n
 Para empezar, instale IBM {{site.data.keyword.Bluemix_notm}} CLI. Consulte
 [CLI de Bluemix ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} para obtener más detalles.
 
-Para obtener una lista completa de los mandatos de {{site.data.keyword.Bluemix_notm}}, consulte: [Mandatos de {{site.data.keyword.Bluemix_notm:}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
+Para obtener una lista completa de los mandatos de {{site.data.keyword.Bluemix_notm}}, consulte:  [Mandatos de {{site.data.keyword.Bluemix_notm}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
 ## Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}}
