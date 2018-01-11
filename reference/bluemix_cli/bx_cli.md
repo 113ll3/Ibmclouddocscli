@@ -727,7 +727,7 @@ bluemix update
 <dl>
   <dt>-f</dt>
   <dd>Force update without confirmation</dd>
-<dl>
+</dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
