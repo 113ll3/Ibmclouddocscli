@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -125,6 +125,46 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 
 **Tipp:** Sie können auch **ba au** als Alias für den längeren Befehlsnamen **ba add-user** verwenden.
 
+### Benutzer über {{site.data.keyword.Bluemix_dedicated_notm}} einladen
+{: #admin_dedicated_invite_public}
+
+Jede {{site.data.keyword.Bluemix_dedicated_notm}}-Umgebung verfügt in {{site.data.keyword.Bluemix_notm}} über einen öffentliches, kundeneigenes Firmenkonto. Benutzer können in der Dedicated-Umgebung nur Cluster mit dem {{site.data.keyword.containershort}} erstellen, wenn sie zuvor vom Administrator zu diesem öffentlichen Firmenkonto hinzugefügt wurden. Wenn die Benutzer zum öffentlichen Firmenkonto hinzugefügt wurden, sind die jeweiligen Dedicated-Konten und Public-Konten miteinander verknüpft. Benutzer können sich mit ihrer IBMid gleichzeitig bei Dedicated und Public anmelden und Sie können Ressourcen unter dem öffentlichen Konto von der Dedicated-Schnittstelle aus erstellen. Weitere Informationen finden Sie unter [IBM Cloud Container Service unter Dedicated einrichten](/docs/containers/cs_dedicated.html#dedicated_setup). Laden Sie Dedicated-Benutzer wie folgt zum öffentlichen Konto ein: 
+
+```
+cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
+```
+{: pre}
+
+**Hinweis**: Benutzer der Dedicated-Umgebung können Sie nur zu Ihrem öffentlichen {{site.data.keyword.Bluemix_notm}}-Konto hinzufügen, wenn Sie ein **Administrator** des Dedicated-Kontos sind. 
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">Wenn Sie einen einzelnen Benutzer einladen, die E-Mail-Adresse dieses Benutzers. </dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">Wenn alle Benutzer in einer Organisation des Dedicated-Kontos eingeladen werden sollen, die ID der Organisation des Dedicated-Kontos. </dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">Ein API-Schlüssel zum Einladen von Benutzern für das öffentliche Konto. Dieser Schlüssel muss vom <b>Administrator</b> des öffentlichen Kontos generiert werden. </dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">Die ID der Organisation des öffentlichen Kontos, zu der Benutzer eingeladen werden. </dd>
+</dl>
+
+### Von {{site.data.keyword.Bluemix_dedicated_notm}} aus eingeladene Benutzer auflisten
+{: #admin_dedicated_list}
+
+Wenn Sie Benutzer einer Dedicated-Umgebung für Ihr {{site.data.keyword.Bluemix_notm}}-Konto mit dem [Befehl `invite-users-to-public`](#admin_dedicated_invite_public) eingeladen haben, können Sie die Benutzer in Ihrem Konto auflisten, um den zugehörigen Einladungsstatus anzuzeigen. Eingeladene Benutzer mit einer IBMid haben den Status `ACTIVE`. Eingeladene Benutzer ohne IBMid haben, je nachdem ob sie die Kontoeinladung bereits angenommen haben, den Status `PENDING` oder `ACTIVE`. Listen Sie die Benutzer in Ihrem {{site.data.keyword.Bluemix_notm}}-Konto wie folgt auf: 
+
+```
+cf ba invite-users-status -apikey=<public_api_key>
+```
+{: pre}
+
+**Hinweis**: Benutzer der Dedicated-Umgebung können Sie nur zu Ihrem öffentlichen {{site.data.keyword.Bluemix_notm}}-Konto hinzufügen, wenn Sie ein **Administrator** des Dedicated-Kontos sind. 
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">Der API-Schlüssel, der für die Einladung der Benutzer zu dem Konto verwendet wurde. Dieser Schlüssel muss vom <b>Administrator</b> des öffentlichen Kontos generiert werden. </dd>
+</dl>
+
 <!-- staging-only commands start. Live for interconnect -->
 
 ### Nach einem Benutzer suchen
@@ -142,11 +182,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">Die Berechtigung, die dem Benutzer zugewiesen wurde. Beispiel: admin (oder superuser), login (oder basic), catalog.read, catalog.write, reports.read, reports.write, users.read oder users.write. Weitere Informationen zu den zugewiesenen Benutzerberechtigungen finden Sie im Abschnitt [Berechtigungen](/docs/admin/index.html#permissions). Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'organization' verwendet werden. </dd>
+<dd class="pd">Die Berechtigung, die dem Benutzer zugewiesen wurde. Verfügbare Berechtigungen: admin (oder superuser), login (oder basic), catalog.read, catalog.write, reports.read, reports.write, users.read oder users.write. Weitere Informationen zu zugewiesenen Benutzerberechtigungen finden Sie im Abschnitt [Berechtigungen](/docs/admin/index.html#permissions). Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'organization' verwendet werden. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">Der Name der Organisation, zu der der Benutzer gehört. Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'permission' verwendet werden.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">Die Organisationsrolle, die dem Benutzer zugewiesen wurde. Beispiel: auditor, manager oder billing_manager. Sie müssen mit diesem Parameter die Organisation angeben. Weitere Informationen zu Rollen finden Sie im Abschnitt [Benutzerrollen](/docs/admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">Die Organisationsrolle, die dem Benutzer zugewiesen wurde. Verfügbare Rollen: 'auditors', 'managers' und 'billing_managers'. Sie müssen mit diesem Parameter die Organisation angeben.</dd>
 
 </dl>
 
@@ -483,7 +523,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 Befehlsnamen **ba set-space** verwenden.
 
 
-### Rolle eines Benutzers in einem Bereich entfernen 
+### Rolle eines Benutzers in einem Bereich entfernen
 
 Verwenden Sie den folgenden Befehl, um die Rolle eines Benutzers in einem Bereich zu entfernen:
 
@@ -694,7 +734,7 @@ cf ba resource-metrics
 
 **Tipp:** Sie können auch **ba rsm** als Alias für den längeren Befehlsnamen **ba resource-metrics** verwenden.
 
-## Verlaufsprotokoll für Ressourcenmetriken anzeigen 
+## Verlaufsprotokoll für Ressourcenmetriken anzeigen
 {: #cliresourceusagehistory}
 
 Sie können das Verlaufsprotokoll für Ressourcenmetriken für die Hauptspeicher- und Plattenspeichernutzung abrufen. Die zurückgegebenen Metriken umfassen die Menge der genutzten Ressourcen gegenüber der Gesamtmenge der verfügbaren Ressourcen sowohl für die physischen als auch für die reservierten Ressourcen. Protokolldaten für die Hauptspeicher- und Plattenspeichernutzung können in stündlichen, täglichen oder monatlichen Intervallen angezeigt werden.  Zum Abrufen von Daten innerhalb eines bestimmten Datumsbereichs können Sie Anfangs- und Enddatumsangaben machen. Die Standardeinstellung für die Protokolldaten, wenn kein Datum angegeben wird, lautet: Hauptspeicherdaten in stündlichen Intervallen für die letzten 48 Stunden. Die Daten werden in absteigender Reihenfolge angezeigt, wobei die neuesten Datumsangaben am Anfang stehen.   Verwenden Sie den folgenden Befehl, um die Verlaufsprotokolldaten zu Ressourcenmetriken anzuzeigen:
@@ -731,7 +771,8 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-Sie können die oben angeführte Liste mit Befehlsparametern und Beispielen mit dem folgenden Befehl anzeigen: 
+
+Sie können die oben angeführte Liste mit Befehlsparametern und Beispielen mit dem folgenden Befehl anzeigen:
 
 ```
 cf ba resource-metrics-history -help
@@ -839,7 +880,8 @@ ASGs fungieren als virtuelle Firewalls, die den abgehenden Datenverkehr aus der 
 
 Bei der Erstinstallation von {{site.data.keyword.Bluemix_notm}} wird der gesamte Zugriff auf das externe Netz eingeschränkt. Zwei von IBM erstellte Sicherheitsgruppen (`public_networks` und `dns`) ermöglichen den globalen Zugriff auf das externe Netz, wenn Sie diese Gruppen an die Cloud Foundry-Standardsicherheitsgruppensätze binden. Die beiden Sicherheitsgruppensätze in Cloud Foundry zur Anwendung des globalen Zugriffs sind die Gruppensätze **Default Staging** und **Default Running**. Von diesen Gruppensätzen werden die Regeln für den Datenverkehr auf alle aktiven Apps bzw. alle Staging-Apps angewendet. Wenn Sie keine Bindung an diese beiden Sicherheitsgruppensätze herstellen möchten, können Sie die Bindung an die Cloud Foundry-Gruppensätze aufheben und die Sicherheitsgruppe anschließend an einen bestimmten Bereich binden. Weitere Informationen finden Sie in [Binding Application Security Groups ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Warnung**: Durch das Aufheben der Bindung der Gruppensätze **Default Staging** oder **Default Running** zu den beiden von IBM erstellen Sicherheitsgruppen `public_networks` und `dns` wird der globale Zugriff auf das externe Netz inaktiviert. Verwenden Sie das Aufheben der Bindung mit Vorsicht und ziehen Sie die Auswirkungen auf alle Anwendungen in Ihrer Umgebung in Betracht, die ausgeführt werden oder für die Staging durchgeführt wird.
+**WARNUNG**: Durch das Aufheben der Bindung der Gruppensätze **Default Staging** oder **Default Running** zu den beiden von IBM erstellen Sicherheitsgruppen `public_networks` und `dns` wird der globale Zugriff auf das externe Netz inaktiviert. Verwenden Sie das Aufheben der Bindung mit Vorsicht und berücksichtigen Sie dabei die potenziellen Auswirkungen auf die Anwendungen in Ihrer Umgebung, die ausgeführt werden oder für die das Staging durchgeführt wird. 
+
 
 **Hinweis:** Die folgenden Befehle, die Ihnen die Arbeit mit Sicherheitsgruppen ermöglichen, basieren auf Cloud Foundry Version 1.6. Weitere Informationen einschließlich der Angaben zu erforderlichen und optionalen Feldern finden Sie in den Cloud Foundry-Informationen zum Thema [Anwendungssicherheitsgruppen erstellen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 

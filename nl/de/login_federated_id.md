@@ -31,7 +31,7 @@ Ein einmaliger Kenncode ruft Code über die {{site.data.keyword.Bluemix_notm}}-K
 {: tip}
 
 ### Über die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle
-1. Geben sie die Option `--sso` mit dem Befehl `bluemix login` an.
+1. Geben Sie die Option `--sso` mit dem Befehl `bluemix login` an.
 2. Folgen Sie der URL in der Eingabeaufforderung, um den einmaligen Kenncode abzurufen.
 3. Verwenden den Kenncodewert in der Befehlszeilenschnittstelle per Cut-and-paste als Ihre Eingabe.
     

@@ -18,7 +18,7 @@ Sie können die Befehlszeilenschnittstelle (CLI) für privates Netzpeering zum K
 
 Das CLI-Plug-in für privates Netzpeering steht für die Betriebssysteme Windows, MAC und Linux zur Verfügung. Stellen Sie sicher, dass Sie das für Sie geeignete Plug-in verwenden.
 
-Bevor Sie beginnen, erstellen Sie {{site.data.keyword.Bluemix_notm}}-Bereiche. Stellen Sie sicher, dass jeder Container eines Bereichs eine IP-Adresse aus einem anderen Netzwerk besitzt. Details hierzu finden Sie unter [Eigene private IP-Adresse verwenden ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}. 
+Bevor Sie beginnen, erstellen Sie {{site.data.keyword.Bluemix_notm}}-Bereiche. Stellen Sie sicher, dass jeder Container eines Bereichs eine IP-Adresse aus einem anderen Netzwerk besitzt. Details hierzu finden Sie unter [Eigene private IP-Adresse verwenden ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
 
 **Hinweis:** Wenn Sie das private Netzpeering mit einem {{site.data.keyword.Bluemix_notm}}-Bereich verwendet haben und den Bereich löschen müssen, dann löschen Sie zuerst die Verbindungen für das private Netzpeering in diesem Bereich.
 

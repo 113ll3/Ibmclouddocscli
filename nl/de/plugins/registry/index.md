@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-12-08"
 
 
 ---
@@ -25,10 +25,10 @@ Die {{site.data.keyword.registrylong}}-Befehlszeilenschnittstelle (CLI) ist ein 
 **Voraussetzungen**
 * Melden Sie sich vor der Ausführung von Registry-Befehlen bei {{site.data.keyword.Bluemix_notm}} mit dem Befehl `bx login` an, um ein Zugriffstoken zu generieren und Ihre Sitzung zu authentifizieren.
 
-Informationen zur Verwendung der {{site.data.keyword.registrylong_notm}}-CLI finden Sie unter [Private Image-Registry einrichten](../../../services/Registry/index.html).
+Informationen zur Verwendung der {{site.data.keyword.registrylong_notm}}-CLI finden Sie in der [Einführung zu {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html). 
 
 <table summary="{{site.data.keyword.registrylong_notm}} verwalten">
-<caption>Tabelle 1. Befehle zur Verwaltung der {{site.data.keyword.registrylong_notm}} in {{site.data.keyword.Bluemix_notm}}
+<caption>Tabelle 1. Befehle zur Verwaltung von {{site.data.keyword.registrylong_notm}}
 </caption>
  <thead>
  <th colspan="5">Befehle zur Verwaltung der Registry</th>
@@ -85,7 +85,7 @@ bx cr api
 Erstellt ein Docker-Image in {{site.data.keyword.registrylong_notm}}.
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--file FILE | -f FILE] --tag TAG DIRECTORY
 ```
 {: codeblock}
 
@@ -96,14 +96,14 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file
 <dt>--no-cache</dt>
 <dd>(Optional) Bei Angabe werden im Cache zwischengespeicherte Image-Layer aus vorherigen Builds in diesem Build nicht verwendet.</dd>
 <dt>--pull</dt>
-<dd>(Optional) Bei Angabe wird das Basisimage auch dann extrahiert, wenn ein Image mit einem übereinstimmenden Tag bereits auf dem Build-Host existiert.</dd>
+<dd>(Optional) Bei Angabe werden die Basisimages auch dann extrahiert, wenn ein Image mit einem übereinstimmenden Tag bereits auf dem Build-Host existiert. </dd>
 <dt>--quiet, -q</dt>
-<dd>(Optional) Bei Angabe wird die Buildausgabe unterdrückt, es sei denn, es tritt ein Fehler auf.</dd>
-<dt> --build-arg value</dt>
-<dd>(Optional) Geben Sie ein zusätzliches Buildargument im Format 'KEY=VALUE' an. Mehrere Buildargumente können angegeben werden, indem Sie diesen Parameter mehrmals einschließen. Der Wert von Buildargumenten steht in Form von Umgebungsvariablen zur Verfügung, wenn Sie eine ARG-Zeile angeben, die mit dem Schlüssel in Ihrer Dockerfile übereinstimmt.</dd>
-<dt>--file value, -f value</dt>
+<dd>(Optional) Bei Angabe wird die Buildausgabe unterdrückt, es sei denn, es tritt ein Fehler auf. </dd>
+<dt> --build-arg KEY=VALUE</dt>
+<dd>(Optional) Geben Sie ein zusätzliches Buildargument im Format 'KEY=VALUE' an. Mehrere Buildargumente können angegeben werden, indem Sie diesen Parameter mehrmals einschließen. Der Wert der einzelnen Buildargumente steht als Umgebungsvariable zur Verfügung, wenn Sie eine ARG-Zeile angeben, die mit dem Schlüssel in Ihrer Dockerfile übereinstimmt. </dd>
+<dt>--file FILE, -f FILE</dt>
 <dd>(Optional) Wenn Sie die gleichen Dateien für mehrere Builds verwenden, können Sie einen Pfad zu einer anderen Dockerfile auswählen. Geben Sie die Position der Dockerfile relativ zum Buildkontext an. Wenn keine Angabe gemacht wird, lautet der Standardwert `PATH/Dockerfile`, wobei PATH das Stammverzeichnis des Buildkontextes ist.</dd>
-<dt>--tag value, -t value</dt>
+<dt>--tag TAG, -t TAG</dt>
 <dd>Der vollständige Name für das Image, das erstellt werden soll. Dieser Name umfasst die Registry-URL und den Namensbereich.</dd>
 </dl>
 
@@ -130,16 +130,17 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 {: codeblock}
 
 **Parameter**
-
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage.
+<dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
 
 </dd>
 <dt>IMAGE</dt>
-<dd>Der vollständige Registry-Pfad zu dem Image, das Sie untersuchen möchten (Format: `namespace/image:tag`). Wenn in dem Image-Pfad kein Tag angegeben wird, wird das Image mit dem Tag `latest` untersucht. Sie können mehrere Images untersuchen, indem Sie die einzelnen privaten Registry-Pfade in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten.</dd>
+<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Sie können mehrere Images untersuchen, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten. <p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Ist im Imagenamen kein Tag angegeben, wird das Image mit dem Tag `latest` untersucht. </p> 
+
+</dd>
 </dl>
 
 
@@ -148,8 +149,10 @@ Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../
 
 Zeigt alle Images in Ihrem {{site.data.keyword.Bluemix_notm}}-Konto an.
 
+<p>**Hinweis:** Der Imagename stellt eine Kombination aus dem Inhalt der Spalten für Repository und Tag im Format `repository:tag` dar. </p> 
+
 ```
- bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
+ bx cr image-list [--no-trunc] [--format FORMAT] [-q, --quiet] [--restrict RESTRICTION] [--include-ibm] 
 ```
 {: codeblock}
 
@@ -157,17 +160,20 @@ Zeigt alle Images in Ihrem {{site.data.keyword.Bluemix_notm}}-Konto an.
 <dl>
 <dt>--no-trunc</dt>
 <dd>(Optional) Gibt an, die Imageauszüge nicht abzuschneiden.</dd>
-<dt>-q, --quiet</dt>
-<dd>(Optional) Jedes Image ist in folgendem Format aufgelistet: `repository:tag`.</dd>
-<dt>--include-ibm</dt>
-<dd>(Optional) Schließt von {{site.data.keyword.IBM_notm}} bereitgestellte öffentliche Images in die Ausgabe ein. Ohne diese Option werden standardmäßig nur private Images aufgelistet.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage.
+<dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
 
 </dd>
+<dt>-q, --quiet</dt>
+<dd>(Optional) Die einzelnen Images werden in folgendem Format aufgelistet: `repository:tag`. </dd>
+<dt>--restrict RESTRICTION</dt>
+<dd>(Optional) Begrenzen Sie die Ausgabe, um lediglich Images in dem angegebenen Namensbereich bzw. in der Kombination aus Namensbereich und Repository anzuzeigen. </dd>
+<dt>--include-ibm</dt>
+<dd>(Optional) Schließt von {{site.data.keyword.IBM_notm}} bereitgestellte öffentliche Images in die Ausgabe ein. Ohne diese Option werden standardmäßig nur private Images aufgelistet.</dd>
 </dl>
+
 
 
 ## bx cr image-rm
@@ -183,7 +189,9 @@ bx cr image-rm IMAGE [IMAGE...]
 **Parameter**
 <dl>
 <dt>IMAGE</dt>
-<dd>Der vollständige Registry-Pfad zu dem Image, das Sie entfernen möchten (Format: `namespace/image:tag`). Wenn der Image-Pfad nicht mit einem Tag versehen wird, wird standardmäßig das Image mit dem Tag `latest` entfernt. Sie können mehrere Images entfernen, indem Sie die einzelnen privaten Registry-Pfade in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten.</dd>
+<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Sie können mehrere Images gleichzeitig löschen, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten. <p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Wenn der Imagename ohne Tag angegeben wird, wird standardmäßig das Image mit dem Tag `latest` gelöscht. </p> 
+
+</dd>
 </dl>
 
 
@@ -290,15 +298,15 @@ bx cr quota
 Ändert das angegebene Kontingent.
 
 ```
-bx cr quota-set [--traffic VALUE] [--storage VALUE]
+bx cr quota-set [--traffic TRAFFIC] [--storage STORAGE]
 ```
 {: codeblock}
 
 **Parameter**
 <dl>
-<dt>--traffic VALUE</dt>
+<dt>--traffic TRAFFIC</dt>
 <dd>(Optional) Ändert Ihr Datenverkehrskontingent auf den angegebenen Wert in Megabyte. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Datenverkehr festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
-<dt>--storage VALUE</dt>
+<dt>--storage STORAGE</dt>
 <dd>(Optional) Ändert Ihr Speicherkontingent auf den angegebenen Wert in Megabyte. Die Operation schlägt fehl, wenn Sie nicht berechtigt sind, den Speicherkontingente festzulegen, oder wenn Sie einen Wert festlegen, der Ihren aktuellen Preistarif überschreitet.</dd>
 </dl>
 
@@ -312,6 +320,8 @@ Zeigt die Zielregion und die Registry an.
 bx cr region
 ```
 {: codeblock}
+
+Weitere Informationen finden Sie unter [Regionen](../../../services/Registry/registry_overview.html#registry_regions). 
 
 
 ## bx cr region-set
@@ -327,7 +337,11 @@ bx cr region-set [REGION]
 **Parameter**
 <dl>
 <dt>REGION</dt>
-<dd>(Optional) Der Name Ihrer Zielregion, z. B. `us-south`.</dd>
+<dd>(Optional) Der Name Ihrer Zielregion, z. B. `us-south`. 
+
+Weitere Informationen finden Sie unter [Regionen](../../../services/Registry/registry_overview.html#registry_regions). 
+
+</dd>
 </dl>
 
 
@@ -337,7 +351,7 @@ bx cr region-set [REGION]
 Fügt ein Token hinzu, das Sie verwenden können, um den Zugriff auf eine Registry zu steuern.
 
 ```
-bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrite]
+bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--readwrite]
 ```
 
 {: codeblock}
@@ -345,7 +359,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 **Parameter**
 <dl>
-<dt>--description VALUE</dt>
+<dt>--description DESCRIPTION</dt>
 <dd>(Optional) Gibt den Wert als Beschreibung für das Token an, das beim Ausführen von `bx cr token-list` angezeigt wird. Wenn das Token automatisch vom {{site.data.keyword.containerlong_notm}} erstellt wird, wird als Beschreibung der Kubernetes-Clustername festgelegt. In diesem Fall wird das Token automatisch entfernt, wenn Ihr Cluster entfernt wird.</dd>
 <dt>-q, --quiet</dt>
 <dd>(Optional) Zeigt nur das Token ohne den umgebenden Text an.</dd>
@@ -387,12 +401,13 @@ bx cr token-list --format FORMAT
 **Parameter**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage.
+<dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [Informationen zu Images anzeigen](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
+Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
 
 </dd>
 </dl>
+
 
 ## bx cr token-rm
 {: #bx_cr_token_rm}
@@ -414,17 +429,19 @@ bx cr token-rm TOKEN [TOKEN...]
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
 
-Anzeige einer Schwachstellenanalyse für ein Image.
+Zeigt eine Schwachstellenanalyse für Ihre Images an. 
 
 ```
-bx cr vulnerability-assessment IMAGE [IMAGE...]
+bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--configuration-issues | -c] [--output FORMAT | -o FORMAT] IMAGE [IMAGE...] 
 ```
 {: codeblock}
 
 **Parameter**
 <dl>
 <dt>IMAGE</dt>
-<dd>Der vollständige Registry-Pfad zu dem Image, für das ein Bericht abgerufen werden soll, im Format `namespace/image:tag`. Der Bericht informiert Sie darüber, ob das Image bekannte Paketschwachstellen aufweist. Folgende Betriebssysteme werden unterstützt:
+<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Der Bericht informiert Sie darüber, ob das Image bekannte Paketschwachstellen aufweist. Sie können Berichte für mehrere Images gleichzeitig anfordern, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten. <p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Ist im Imagenamen kein Tag angegeben, wird das Image mit dem Tag `latest` im Bericht beurteilt. </p> 
+
+<p>Folgende Betriebssysteme werden unterstützt:
 
 <ul>
 
@@ -435,8 +452,27 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
+</p>
+
 Weitere Informationen finden Sie in [Imagesicherheit mit Vulnerability Advisor verwalten](../../../services/va/va_index.html).
 
 </dd>
+<dt>--output FORMAT, -o FORMAT</dt>
+<dd>(Optional) Die Befehlsausgabe wird im ausgewählten Format ausgegeben. Das Standardformat ist `text`. Folgende Formate werden unterstützt:
+
+<ul>
+
+<li>`text`</li>
+<li>`json`</li>
+</ul>
+
+</dd>
+<dt>--vulnerabilities, -v</dt>
+<dd>(Optional) Die Befehlsausgabe ist auf die Anzeige von Schwachstellen begrenzt. </dd>
+<dt>--configuration-issues, -c</dt>
+<dd>(Optional) Die Befehlsausgabe ist auf die Anzeige von Konfigurationsproblemen begrenzt. </dd>
+<dt>--extended, -e </dt>
+<dd>(Optional) In der Befehlsausgabe werden zusätzliche Informationen zu Korrekturen für gefährdete Pakete angezeigt. </dd>
 
 </dl>
+

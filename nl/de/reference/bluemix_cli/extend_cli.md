@@ -25,7 +25,7 @@ Das [{{site.data.keyword.Bluemix_notm}}-CLI-Plug-in-Repository](http://clis.ng.b
 Wenn Sie weitere Informationen zu den Befehlen zur Verwaltung von Plug-ins benötigen, dann führen Sie den Befehl `bluemix plugin` aus, um die Hilfenachrichten anzuzeigen.
 {: tip}
 
-## Plug-in aus {site.data.keyword.Bluemix_notm}}-CLI-Repository installieren
+## Plug-in aus dem Repository für {{site.data.keyword.Bluemix_notm}} CLI installieren
 
 ### Schritt 1: Plug-in suchen
 

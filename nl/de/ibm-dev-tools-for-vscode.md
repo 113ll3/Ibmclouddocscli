@@ -16,7 +16,7 @@ lastupdated: "2017-06-29"
 # IBM Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Tools for Visual Studio Code ist eine Erweiterung für den Editor, die den Zugriff auf die Funktionen der IBM Developer-Befehlszeilenschnittstelle direkt in der Befehlspalette des Visual Studio Code-Editors zur Verfügung stellt. Dies ermöglicht einen schnellen Zugriff auf ein Subset von `bx dev`-Befehlen für Docker- und Cloud Foundry-Workflows (wie z. B. Bereitstellen von Apps, Starten/Stoppen/Neustarten von Apps unter {{site.data.keyword.Bluemix_notm}}, Anzeigen von Protokollen ferner Apps usw.), ohne dass der Editorkontext verlassen werden muss.
+IBM Developer Tools for Visual Studio Code ist eine Erweiterung für den Editor, die den Zugriff auf die Funktionen der IBM Developer-Befehlszeilenschnittstelle direkt in der Befehlspalette des Visual Studio Code-Editors zur Verfügung stellt.  Dies ermöglicht einen schnellen Zugriff auf ein Subset von `bx dev`-Befehlen für Docker- und Cloud Foundry-Workflows (wie z. B. Bereitstellen von Apps, Starten/Stoppen/Neustarten von Apps unter {{site.data.keyword.Bluemix_notm}}, Anzeigen von Protokollen ferner Apps usw.), ohne dass der Editorkontext verlassen werden muss.
 {:shortdesc}
 
 ![Screenshot der Download-Anzeige der IBM Developer Tools-Erweiterung.](ibm-dev-tools-for-vscode.png "Download-Anzeige der Erweiterung in Visual Studio Code")

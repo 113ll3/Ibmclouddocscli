@@ -17,7 +17,7 @@ lastupdated: "2017-08-20"
 # Einführung in die {{site.data.keyword.Bluemix_notm}}-CLI
 {: #getting-started}
 
-Die {{site.data.keyword.Bluemix_notm}}-CLI stellt die Befehlszeilenschnittstelle zum Verwalten von Anwendungen, Containern, Infrastrukturen, Services und anderen Ressourcen in {{site.data.keyword.Bluemix_notm}} zur Verfügung.  
+Die {{site.data.keyword.Bluemix_notm}}-CLI stellt die Befehlszeilenschnittstelle zum Verwalten von Anwendungen, Containern, Infrastrukturen, Services und anderen Ressourcen in {{site.data.keyword.Bluemix_notm}} zur Verfügung. 
 
 Gehen Sie wie folgt vor, um sich mit der {{site.data.keyword.Bluemix_notm}}-CLI vertraut zu machen:
 

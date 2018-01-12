@@ -17,11 +17,10 @@ CLI- und Dev-Tools
 	reference/cfcommands/index.md
 
 	{: .topicgroup}
-	IBM Cloud-CLI-Plug-ins
+	Plug-ins für IBM Cloud CLI
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Container-Service (Cluster)](../containers/cs_cli_devtools.html)
-		[Container-Service (einzelne und skalierbare Gruppen)](../containers/container_cli_cfic.html)
+		[Container-Service](../containers/cs_cli_devtools.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
@@ -47,8 +46,9 @@ CLI- und Dev-Tools
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
 	login_federated_id.md
-	[Entwicklung mit Toolchains](../services/ContinuousDelivery/dev_use_toolchains.html)
-	[Entwicklung mit Eclipse-Tools](../starters/deploy_eclipsetools.html)
-	[Eigene App mit CLI bereitstellen](../starters/install_cli.html)
-	[Eigene App hochladen](../starters/upload_app.html)
+	connect_dedicated_id.md
+	[Mit Toolchains entwickeln](../services/ContinuousDelivery/dev_use_toolchains.html)
+	[Mit Eclipse-Tools entwickeln](../starters/deploy_eclipsetools.html)
+	[Deploying your app with CLI](../starters/install_cli.html)
+	[Uploading your app](../starters/upload_app.html)
 	{: .navgroup-end}

@@ -17,7 +17,7 @@ lastupdated: "2017-010-13"
 # {{site.data.keyword.Bluemix_notm}}-CLI herunterladen und installieren
 {: #download_install}
 
-Sie können ein [Installationsprogramm](#installers) verwenden oder die [Installation über die Shell](#shell_install) durchführen, um die {{site.data.keyword.Bluemix_notm}}-CLI zu installieren. 
+Sie können ein [Installationsprogramm](#installers) verwenden oder die [Installation über die Shell](#shell_install) durchführen, um die {{site.data.keyword.Bluemix_notm}}-CLI zu installieren.
 
 ## Installationsprogramme herunterladen
 {: #installers}

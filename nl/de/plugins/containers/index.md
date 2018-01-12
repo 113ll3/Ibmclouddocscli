@@ -20,8 +20,7 @@ lastupdated: "2017-01-12"
 
 *Version:* 1.0.0
 
-IBM Containers CLI ist ein {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in zur Verwaltung von Containern und Containergruppen unter {{site.data.keyword.Bluemix_notm}}.
-  
+IBM Containers CLI ist ein {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in zur Verwaltung von Containern und Containergruppen unter {{site.data.keyword.Bluemix_notm}}.  
 {: shortdesc}
 
 **Hinweis:** Unter *Voraussetzungen* wird aufgelistet, welche Aktionen vor der Verwendung des Befehls ausgeführt werden müssen. Für Befehle, für die keine Voraussetzungen erfüllt sein müssen, ist **Keine** angegeben. Andernfalls kann mindestens eine der folgenden Aktionen eine Voraussetzung sein:

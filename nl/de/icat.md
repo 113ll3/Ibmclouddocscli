@@ -34,7 +34,7 @@ Um mit der Arbeit beginnen zu können, [laden Sie IBM Cloud Application Tools 2 
 
 ### Quick Links
 
-Über die Registerkarte **Quick Links** können Sie auf Links zu {{site.data.keyword.Bluemix_notm}}-Katalog und -Dashboard, Systemstatus und Kontenverwaltungseinstellungen sowie Produktdokumentation und Support aufrufen. 
+Über die Registerkarte **Quick Links** können Sie Links zu {{site.data.keyword.Bluemix_notm}}-Katalog und -Dashboard, Systemstatus und Kontenverwaltungseinstellungen sowie Produktdokumentation und Support aufrufen. 
 
 ![Screenshot der Registerkarte **Quick Links**.](icat_quicklinks.png "Registerkarte 'Quick Links' für den Zugriff auf Konsoleneinstellungen, Produktdokumentation und Support") <br> Abbildung 2. Registerkarte **Quick Links** für den Zugriff auf Konsole, Produktdokumentation und Support
 

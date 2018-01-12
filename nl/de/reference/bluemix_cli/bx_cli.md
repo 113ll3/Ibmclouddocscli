@@ -20,7 +20,7 @@ Version: 0.6.2
 
 Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werden Befehle bereitgestellt, die nach Namensbereich für Benutzer zur Interaktion mit {{site.data.keyword.Bluemix_notm}} zusammengefasst sind.
 
-Ab Version 0.5.0 enthält die Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilenclients einen Cloud Foundry-Befehlszeilenclient. Wenn Sie eine eigene Cloud Foundry-Befehlszeilenschnittstelle installiert haben, dann verwenden Sie die {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bx [command]` und die Cloud Foundry-CLI-Befehle `cf [command]` Ihrer eigenen Installation nicht in demselben Kontext. Verwenden Sie stattdessen `bluemix cf [command]`, wenn Sie Cloud Foundry-Ressourcen mit der Coud Foundry-Befehlszeilenschnittstelle (CF-CLI) im {{site.data.keyword.Bluemix_notm}}-CLI-Kontext verwalten wollen.  Beachten Sie, dass `bluemix cf api/login/logout/target` nicht zulässig ist und dass Sie stattdessen `bluemix api/login/logout/target` verwenden müssen.
+Ab Version 0.5.0 enthält die Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilenclients einen Cloud Foundry-Befehlszeilenclient. Wenn Sie eine eigene Cloud Foundry-Befehlszeilenschnittstelle installiert haben, dann verwenden Sie die {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bx [command]` und die Cloud Foundry-CLI-Befehle `cf [command]` Ihrer eigenen Installation nicht in demselben Kontext. Verwenden Sie stattdessen `bluemix cf [command]`, wenn Sie Cloud Foundry-Ressourcen mit der Cloud Foundry-Befehlszeilenschnittstelle (CF-CLI) im {{site.data.keyword.Bluemix_notm}}-CLI-Kontext verwalten wollen.  Beachten Sie, dass `bluemix cf api/login/logout/target` nicht zulässig ist und dass Sie stattdessen `bluemix api/login/logout/target` verwenden müssen.
 
 In der nachfolgenden Liste finden Sie detaillierte Angaben zu den von der {{site.data.keyword.Bluemix_notm}}-CLI unterstützten Befehlen mit zugehörigen Namen, Argumenten, Optionen, Voraussetzungen, Beschreibungen und Beispielen.
 {:shortdesc}
@@ -213,6 +213,9 @@ Die Befehle zur Verwaltung der Infrastruktur für {{site.data.keyword.BluSoftlay
    <td>[bluemix iam user-policy-create](bx_cli.html#bluemix_iam_user_policy_create)</td>
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
+   <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
+   <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
+
   </tr>
   </tbody>
   </table>
@@ -552,7 +555,7 @@ bluemix -q cf services
 Benutzer anmelden.
 
 ```
-bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
 ```
 
 <strong>Voraussetzungen</strong>: Keine
@@ -577,6 +580,8 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dd> Der Name der Zielorganisation. </dd>
   <dt> -s <i>SPACE_NAME</i> (optional) </dt>
   <dd> Der Name des Zielbereichs.</dd>
+  <dt> --no-iam </dt>
+  <dd> Authentifizierung beim Anmeldeserver anstatt beim öffentlichen IAM erzwingen</dd>
   <dt> --skip-ssl-validation (optional) </dt>
   <dd> Umgeht die SSL-Validierung von HTTP-Anforderungen. Diese Option wird nicht empfohlen.</dd>
 </dl>
@@ -861,9 +866,9 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 <strong>Befehlsoptionen:</strong>
    <dl>
    <dt>-o</dt>
-   <dd>Organisationsname. Die Bereiche unter der angegebenen Organisation auflisten. Standardmäßig wird die aktuelle Organisation verwendet, wenn keine Angabe gemacht wurde. </dd>
+   <dd>Organisationsname. Die Bereiche unter der angegebenen Organisation auflisten. Standardmäßig wird die aktuelle Organisation verwendet, wenn keine Angabe gemacht wurde.</dd>
    <dt>-r</dt>
-   <dd>Regionsname. Die Bereiche unter der angegebenen Region auflisten. Standardmäßig wird die aktuelle Region verwendet, wenn keine Angabe gemacht wurde. </dd>
+   <dd>Regionsname. Die Bereiche unter der angegebenen Region auflisten. Standardmäßig wird die aktuelle Region verwendet, wenn keine Angabe gemacht wurde.</dd>
    </dl>
 
 
@@ -1677,6 +1682,7 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dt>-f, --file <i>FILE</i> (optional)</dt>
 <dd>Die JSON-Datei der Richtliniendefinition</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (optional)</dt>
+<dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
 <dd>Der Servicename der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (optional)</dt>
@@ -1691,7 +1697,6 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dd>Der Name der Ressourcengruppe. Dieser ist gegenseitig ausschließend mit den Flags '-f, --file', '--resource' und '--resource-group-id'.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (optional)</dt>
 <dd>Die ID der Ressourcengruppe. Diese ist gegenseitig ausschließend mit den Flags '-f, --file', '--resource' und '--resource-group-name'.</dd>
-  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -1717,7 +1722,7 @@ bluemix iam user-policy-create name@example.com --roles Editor --service-name sa
 `name@example.com` die Rolle `Operator` für die Ressourcengruppe mit der ID `dda27e49d2a1efca58083a01dfde18f6` zuweisen:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 `name@example.com` die Rolle `Anzeigeberechtigter` für die Mitglieder der Ressourcengruppe `sample-resource-group` zuweisen:
@@ -1755,6 +1760,7 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dt>-f, --file <i>FILE</i> (optional)</dt>
 <dd>Die JSON-Datei der Richtliniendefinition</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (optional)</dt>
+<dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
 <dd>Der Servicename der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (optional)</dt>
@@ -1769,7 +1775,6 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>Der Name der Ressourcengruppe. Dieser ist gegenseitig ausschließend mit den Flags '-f, --file', '--resource' und '--resource-group-id'.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (optional)</dt>
 <dd>Die ID der Ressourcengruppe. Diese ist gegenseitig ausschließend mit den Flags '-f, --file', '--resource' und '--resource-group-name'.</dd>
-  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -1789,13 +1794,13 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Administr
  Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Editor` für die Ressource `key123` der Beispielserviceinstanz `ServiceId-ade78e9f` in der Region `us-south` zuzuweisen:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+bluemix iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
 ```
 
 Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Operator` für die Ressourcengruppe mit der ID `dda27e49d2a1efca58083a01dfde18f6` zuzuweisen:
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 Benutzerrichtlinie aktualisieren, um `name@example.com` die Rolle `Anzeigeberechtigter` für die Mitglieder der Ressourcengruppe `sample-resource-group` zuzuweisen:
@@ -1880,7 +1885,7 @@ bluemix iam service-policies test 140798e2-8ea7db3
 Servicerichtlinie erstellen
 
 ```
-bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1890,19 +1895,23 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>SERVICE_ID_NAME (erforderlich)</dt>
   <dd>Der Name der Service-ID</dd>
   <dt>-f, --file</dt>
-  <dd>Die JSON-Datei der Richtliniendefinition. Diese ist gegenseitig ausschließend mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type' und '--resource'.</dd>
+  <dd>Die JSON-Datei der Richtliniendefinition. Dies ist gegenseitig ausschließend mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' und '--resource-group-id'.</dd>
   <dt>-r, --roles</dt>
   <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
-  <dt>-service-name</dt>
-  <dd>Der Servicename der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
-  <dt>-service-instance</dt>
-  <dd>Die Serviceinstanz der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dt>--service-name</dt>
+  <dd>Der Servicename der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dt>--service-instance</dt>
+  <dd>Die Serviceinstanz der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
   <dt>-region</dt>
-  <dd>Die Region der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
-  <dt>-resource-type</dt>
-  <dd>Der Ressourcentyp der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
-  <dt>-resource</dt>
-  <dd>Die Ressource der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Region der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dt>--resource-type</dt>
+  <dd>Der Ressourcentyp der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dt>--resource</dt>
+  <dd>Die Ressource der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dt>--resource-group-name</dt>
+  <dd>Name der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '-f, --file' und '--resource-group-id'.</dd>
+  <dt>--resource-group-id </dt>
+  <dd>ID der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '-f, --file' und '--resource-group-name'.</dd>
   <dt>-F, --force</dt>
   <dd>Die Servicerichtlinie ohne Bestätigung erstellen</dd>
 </dl>
@@ -1922,7 +1931,7 @@ bluemix iam service-policy-create test -f @policy.json
 Servicerichtlinie aktualisieren
 
 ```
-bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -1936,19 +1945,23 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-v, --version</dt>
   <dd>Die Version der Servicerichtlinie</dd>
   <dt>-f, --file</dt>
-  <dd>Die JSON-Datei der Richtliniendefinition. Diese ist gegenseitig ausschließend mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type' und '--resource'.</dd>
+  <dd>Die JSON-Datei der Richtliniendefinition. Dies ist gegenseitig ausschließend mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' und 'resource-group-id'. </dd>
   <dt>-r, --roles</dt>
   <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
   <dt>-service-name</dt>
-  <dd>Der Servicename der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Der Servicename der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
   <dt>-service-instance</dt>
-  <dd>Die Serviceinstanz der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Serviceinstanz der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
   <dt>-region</dt>
-  <dd>Die Region der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Region der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
   <dt>-resource-type</dt>
-  <dd>Der Ressourcentyp der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Der Ressourcentyp der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
   <dt>-resource</dt>
-  <dd>Die Ressource der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Ressource der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dt>--resource-group-name</dt>
+  <dd>Name der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '-f, --file' und '--resource-group-id'.</dd>
+  <dt>--resource-group-id </dt>
+  <dd>ID der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '-f, --file' und '--resource-group-name'.</dd>
   <dt>-F, --force</dt>
   <dd>Die Servicerichtlinie ohne Bestätigung aktualisieren</dd>
 </dl>
@@ -1990,6 +2003,45 @@ Richtlinie `140798e2-8ea7db3` des Service `test` löschen
 bluemix iam service-policy-delete test 140798e2-8ea7db3
 ```
 
+## bluemix iam oauth-tokens
+{: #bluemix_iam_oauth_tokens}
+
+OAuth-Tokens für die aktuelle Sitzung abrufen und anzeigen
+
+```
+bluemix iam oauth-tokens
+```
+
+<strong>Voraussetzungen</strong>: Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+<dl>
+</dl>
+
+<strong>Beispiele</strong>:
+
+OAuth-Tokens aktualisieren und anzeigen
+
+```
+bluemix iam oauth-tokens
+```
+
+## bluemix iam dedicated-id-disconnect
+{: #bluemix_iam_dedicated_id_disconnect}
+
+Verbindung zwischen öffentlicher IBMid und dedizierter, von IBM unabhängiger ID aufheben
+
+```
+bluemix iam dedicated-id-disconnect [-f, --force]
+```
+
+<strong>Voraussetzungen</strong>: Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>Trennen ohne Bestätigung erzwingen</dd>
+</dl>
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
@@ -2598,7 +2650,7 @@ Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `c
 Serviceinstanzen auflisten
 
 ```
-bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2607,8 +2659,8 @@ bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region R
 <dl>
   <dt>--service-name</dt>
   <dd>Der Name des zugehörigen Service</dd>
-  <dt>-r, --region</dt>
-  <dd>Filtern nach Regions-ID, aktuelle Region als Standardwert festlegen, wenn nicht angegeben, '-r, --region all' zum Anzeigen von Serviceinstanzen unter allen Regionen</dd>
+  <dt>--location</dt>
+  <dd>Nach Position filtern</dd>
   <dt>--long</dt>
   <dd>Weitere Felder in Ausgabe anzeigen</dd>
 </dl>
@@ -2627,7 +2679,7 @@ bluemix resource service-instances --service-name test-service
 Details einer Serviceinstanz anzeigen
 
 ```
-bluemix resource service-instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [--location LOCATION] [--id]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2636,8 +2688,8 @@ bluemix resource service-instance NAME [-r, --region REGION] [--id]
 <dl>
   <dt>NAME (erforderlich)</dt>
   <dd>Der Name der Serviceinstanz</dd>
-  <dt>-r, --region</dt>
-  <dd>Filtern nach Regions-ID, aktuelle Region als Standardwert festlegen, wenn nicht angegeben, '-r, --region all' zum Anzeigen von Serviceinstanzen unter allen Regionen</dd>
+  <dt>--location</dt>
+  <dd>Nach Position filtern</dd>
   <dt>--id</dt>
   <dd>ID der Serviceinstanz anzeigen</dd>
 </dl>
@@ -2655,7 +2707,7 @@ bluemix resource service-instance my-service-instance
 Serviceinstanz erstellen
 
 ```
-bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2668,8 +2720,8 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
   <dd>Der Name oder die ID des Service</dd>
   <dt>SERVICE_PLAN_NAME oder SERVICE_PLAN_ID (erforderlich)</dt>
   <dd>Der Name oder die ID des Serviceplans</dd>
-  <dt>-r, --region</dt>
-  <dd>Die Region zum Erstellen der Serviceinstanz, standardmäßig wird aktuelle Region verwendet, wenn nicht angegeben</dd>
+  <dt>LOCATION</dt>
+  <dd>Zielposition oder -umgebung zum Erstellen der Serviceinstanz </dd>
   <dt>-t, --tags</dt>
   <dd>Tags</dd>
   <dt>-p, --parameters</dt>
@@ -2677,10 +2729,10 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
 </dl>
 
 <strong>Beispiele</strong>:
-Eine Serviceinstanz mit dem Namen `my-service-instance` mithilfe des Serviceplans `test-service-plan` des Service `test-service` erstellen:
+Eine Serviceinstanz mit dem Namen `my-service-instance` mithilfe des Serviceplans `test-service-plan` des Service `test-service` in der Region `eu-gb` erstellen:
 
 ```
-bluemix resource service-instance-create my-service-instance test-service test-service-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
 
 ## bluemix resource service-instance-update
@@ -3045,9 +3097,9 @@ bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance
   <dt>-s</dt>
   <dd>Der Name des Bereichs, in dem der Alias erstellt wird. Der Standardwert ist der aktuelle Bereich.</dd>
   <dt>-t, --tags</dt>
-  <dd>Tagliste.</dd>
+  <dd>Tagaufzählung</dd>
   <dt>-p, --parameters</dt>
-  <dd>Parameter JSON-Datei oder JSON-Zeichenfolge.</dd>
+  <dd>JSON-Datei oder JSON-Zeichenfolge als Parameter</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -3074,9 +3126,9 @@ bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --ta
   <dt>-n, --name</dt>
   <dd>Der neue Name des Servicealias</dd>
   <dt>-t, --tags</dt>
-  <dd>Tagliste</dd>
+  <dd>Tagaufzählung</dd>
   <dt>-p, --parameters</dt>
-  <dd>Parameter JSON-Datei oder JSON-Zeichenfolge</dd>
+  <dd>JSON-Datei oder JSON-Zeichenfolge als Parameter</dd>
   <dt>-f, --force</dt>
   <dd>Aktualisierung ohne Bestätigung durch Benutzer erzwingen</dd>
 </dl>

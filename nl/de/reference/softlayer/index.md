@@ -22,7 +22,7 @@ Verwenden Sie die Befehle der Infrastruktur für {{site.data.keyword.BluSoftlaye
 Zu Beginn installieren Sie die IBM {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle. Details hierzu finden Sie unter
 [Bluemix-Befehlszeilenschnittstelle ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}.
 
-Eine vollständige Liste der {{site.data.keyword.Bluemix_notm}}-Befehle finden Sie unter [{{site.data.keyword.Bluemix_notm:}}-Befehle (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli).
+Eine vollständige Liste der {{site.data.keyword.Bluemix_notm}}-Befehle finden Sie unter [{{site.data.keyword.Bluemix_notm}}-Befehle (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli).
 
 
 ## Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}}
@@ -432,7 +432,7 @@ Konfiguration der Authentifizierung der Infrastruktur für {{site.data.keyword.B
 1. Mit dem Benutzernamen und dem Kennwort/API-Schlüssel der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} anmelden.
 2. {{site.data.keyword.Bluemix_notm}} Single Sign-On verwenden.
 Geben Sie eine Zahl > 2 ein.
-Softlayer-API-Endpunkt-URL: [https://api.softlayer.com/mobile/v3.1]>
+Softlayer-API-Endpunkt-URL: [https://api.softlayer.com/mobile/v3.1]> 
 Für Konto festlegen: 278444
 OK
                               
