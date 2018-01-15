@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -117,6 +117,46 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 
 **提示：**您也可以使用 **ba au** 作為 **ba add-user** 這個較長指令名稱的別名。
 
+### 從 {{site.data.keyword.Bluemix_dedicated_notm}} 邀請使用者
+{: #admin_dedicated_invite_public}
+
+每一個 {{site.data.keyword.Bluemix_dedicated_notm}} 環境都具有 {{site.data.keyword.Bluemix_notm}} 中由客戶擁有的公用公司帳戶。若要讓「專用」環境中的使用者利用 {{site.data.keyword.containershort}} 來建立叢集，管理者必須將使用者新增至這個公用公司帳戶。將使用者新增至公用公司帳戶之後，會將其「專用」及公用帳戶鏈結在一起。使用者接著可以使用其 IBM ID 同時登入「專用」及公用，而且可以從「專用」介面建立公用帳戶中的資源。如需相關資訊，請參閱[在專用上設定 IBM Cloud Container Service](/docs/containers/cs_dedicated.html#dedicated_setup)。若要邀請「專用」使用者加入公用帳戶，請執行下列指令：
+
+```
+cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
+```
+{: pre}
+
+**附註**：若要將「專用」環境使用者新增至 {{site.data.keyword.Bluemix_notm}} 公用帳戶，您必須是「專用」帳戶的**管理者**。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">如果您要邀請單一使用者，則為使用者的電子郵件。</dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">如果您要邀請「專用」帳戶組織中目前的所有使用者，則為「專用」帳戶組織 ID。</dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">用於邀請使用者加入公用帳戶的 API 金鑰。這必須由公用帳戶的<b>管理者</b>所產生。</dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">您要邀請使用者加入的公用帳戶組織的 ID。</dd>
+</dl>
+
+### 列出從 {{site.data.keyword.Bluemix_dedicated_notm}} 邀請的使用者
+{: #admin_dedicated_list}
+
+如果您已使用 [`invite-users-to-public` 指令](#admin_dedicated_invite_public)來邀請「專用」環境使用者加入您的 {{site.data.keyword.Bluemix_notm}} 帳戶，則可以列出您帳戶中的使用者來查看其邀請狀態。具有現有 IBM ID 的受邀使用者將具有 `ACTIVE` 狀態。根據是否已接受邀請加入帳戶，沒有現有 IBM ID 的受邀使用者將具有 `PENDING` 或 `ACTIVE` 狀態。若要列出您 {{site.data.keyword.Bluemix_notm}} 帳戶中的使用者，請執行下列指令：
+
+```
+cf ba invite-users-status -apikey=<public_api_key>
+```
+{: pre}
+
+**附註**：若要將「專用」環境使用者新增至 {{site.data.keyword.Bluemix_notm}} 公用帳戶，您必須是「專用」帳戶的**管理者**。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">用來邀請使用者加入帳戶的 API 金鑰。這必須由公用帳戶的<b>管理者</b>所產生。</dd>
+</dl>
+
 <!-- staging-only commands start. Live for interconnect -->
 
 ### 搜尋使用者
@@ -134,11 +174,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">指派給使用者的許可權。例如，admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。如需所指派使用者許可權的相關資訊，請參閱[許可權](/docs/admin/index.html#permissions)。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dd class="pd">指派給使用者的許可權。可用的許可權為：admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。如需所指派使用者許可權的相關資訊，請參閱[許可權](/docs/admin/index.html#permissions)。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">使用者所屬的組織名稱。您不能在相同的查詢中搭配使用此參數與 permission 參數。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">指派給使用者的組織角色。例如，auditor、manager 或 billing_manager。您必須使用此參數來指定組織。如需角色的相關資訊，請參閱[使用者角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
+<dd class="pd">指派給使用者的組織角色。可用的角色為：'auditors'、'managers' 及 'billing_managers'。您必須使用此參數來指定組織。</dd>
 
 </dl>
 
@@ -466,7 +506,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 **提示：**您也可以使用 **ba ss** 作為 **ba set-space** 這個較長指令名稱的別名。
 
 
-### 移除空間中的使用者角色 
+### 移除空間中的使用者角色
 
 若要移除空間中的使用者角色，請使用下列指令：
 
@@ -662,7 +702,7 @@ cf ba resource-metrics
 
 **提示：**您也可以使用 **ba rsm** 作為 **ba resource-metrics** 這個較長指令名稱的別名。
 
-## 檢視資源度量值歷程 
+## 檢視資源度量值歷程
 {: #cliresourceusagehistory}
 
 您可以擷取記憶體及磁碟用量的資源度量值歷程。傳回的度量值包括已使用的資源量佔可用總計的比例（針對實體以及保留資源）。記憶體及磁碟用量歷程資料可以每小時、每日或每月顯示。您可以指定開始及結束日期，以在特定日期範圍內擷取資料。未指定任何日期時，預設歷程資料是最新 48 小時的每小時記憶體資料。資料以遞減順序顯示，最近的日期最先顯示。若要檢視資源度量值歷程資訊，請使用下列指令：
@@ -699,7 +739,8 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-您可以使用下列指令來檢視應用程式環境變數： 
+
+您可以使用下列指令來檢視應用程式環境變數：
 
 ```
 cf ba resource-metrics-history -help
@@ -802,8 +843,8 @@ ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱 [Binding Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
-**警告**：取消連結 **Default Staging** 或 **Default Running** 群組集與兩個 IBM 建立的安全群組
-`public_networks` 及 `dns`，將會停用對外部網路的廣域存取。請小心使用取消連結，並了解它對您環境中所有執行中與編譯打包中的應用程式造成的結果。
+**警告**：取消連結 **Default Staging** 或 **Default Running** 群組集與兩個 IBM 建立的安全群組 `public_networks` 及 `dns`，將會停用對外部網路的廣域存取。請小心使用取消連結，並了解它對您環境中執行中及編譯打包中的應用程式可能造成的影響。
+
 
 **附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。如需相關資訊（包括必要及選用性欄位），請參閱有關 [Creating Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 資訊。
 

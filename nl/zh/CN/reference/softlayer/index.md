@@ -21,7 +21,7 @@ lastupdated: "2017-11-10"
 
 首先，请安装 IBM {{site.data.keyword.Bluemix_notm}} CLI。有关详细信息，请参阅 [Bluemix CLI ![外部链接图标](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}。
 
-要获取 {{site.data.keyword.Bluemix_notm}} 命令的完整列表，请参阅：[{{site.data.keyword.Bluemix_notm:}} (bx) 命令](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
+要获取 {{site.data.keyword.Bluemix_notm}} 命令的完整列表，请参阅：[{{site.data.keyword.Bluemix_notm}} (bx) 命令](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
 ## 常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令

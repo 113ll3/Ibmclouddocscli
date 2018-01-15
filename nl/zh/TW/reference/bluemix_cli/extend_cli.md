@@ -25,7 +25,7 @@ lastupdated: "2017-10-20"
 如需其他可管理外掛程式的指令，請執行 `bluemix plugin` 以查看說明訊息。
 {: tip}
 
-## 從 {site.data.keyword.Bluemix_notm}} CLI 儲存庫安裝外掛程式
+## 從 {{site.data.keyword.Bluemix_notm}} CLI 儲存庫安裝外掛程式
 
 ### 步驟 1：搜尋外掛程式
 

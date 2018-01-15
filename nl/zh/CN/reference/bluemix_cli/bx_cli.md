@@ -211,6 +211,9 @@ lastupdated: "2017-11-06"
    <td>[bluemix iam user-policy-create](bx_cli.html#bluemix_iam_user_policy_create)</td>
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
+   <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
+   <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
+
   </tr>
   </tbody>
   </table>
@@ -550,7 +553,7 @@ bluemix -q cf services
 用户登录。
 
 ```
-bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
 ```
 
 <strong>先决条件</strong>：无
@@ -575,6 +578,8 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dd> 目标组织的名称</dd>
   <dt> -s <i>SPACE_NAME</i>（可选）</dt>
   <dd> 目标空间的名称</dd>
+  <dt> --no-iam</dt>
+  <dd> 强制向登录服务器（而不是公共 IAM）进行认证</dd>
   <dt> --skip-ssl-validation（可选）</dt>
   <dd> 绕过 HTTP 请求的 SSL 验证。建议不要使用此选项。</dd>
 </dl>
@@ -1671,6 +1676,7 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dt>-f, --file <i>FILE</i>（可选）</dt>
 <dd>策略定义的 JSON 文件</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i>（可选）</dt>
+<dd>策略定义的角色名称。要了解某个服务所支持的角色，请运行“bluemix iam roles --service SERVICE_NAME”。此选项与“-f, --file”互斥。</dd>
 <dt>--service-name <i>SERVICE_NAME</i>（可选）</dt>
 <dd>策略定义的服务名称，此项与“-f, --file”标志互斥。</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>（可选）</dt>
@@ -1685,7 +1691,6 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dd>资源组的名称，此项与“-f, --file”、“--resource”和“--resource-group-id”标志互斥。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>（可选）</dt>
 <dd>资源组的标识，此项与“-f, --file”、“--resource”和“--resource-group-name”标志互斥。</dd>
-  <dd>策略定义的角色名称。要了解某个服务所支持的角色，请运行“bluemix iam roles --service SERVICE_NAME”。此选项与“-f, --file”互斥。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1711,7 +1716,7 @@ bluemix iam user-policy-create name@example.com --roles Editor --service-name sa
 授予 `name@example.com` 对标识为 `dda27e49d2a1efca58083a01dfde18f6` 的资源组的 `Operator` 角色：
 
 ```
-bluemix iam user-policy-create name@example.com --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 授予 `name@example.com` 对资源组 `sample-resource-group` 的成员的 `Viewer` 角色：
@@ -1749,6 +1754,7 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dt>-f, --file <i>FILE</i>（可选）</dt>
 <dd>策略定义的 JSON 文件</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i>（可选）</dt>
+<dd>策略定义的角色名称。要了解某个服务所支持的角色，请运行“bluemix iam roles --service SERVICE_NAME”。此选项与“-f, --file”互斥。</dd>
 <dt>--service-name <i>SERVICE_NAME</i>（可选）</dt>
 <dd>策略定义的服务名称，此项与“-f, --file”标志互斥。</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>（可选）</dt>
@@ -1763,7 +1769,6 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>资源组的名称，此项与“-f, --file”、“--resource”和“--resource-group-id”标志互斥。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>（可选）</dt>
 <dd>资源组的标识，此项与“-f, --file”、“--resource”和“--resource-group-name”标志互斥。</dd>
-  <dd>策略定义的角色名称。要了解某个服务所支持的角色，请运行“bluemix iam roles --service SERVICE_NAME”。此选项与“-f, --file”互斥。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -1783,13 +1788,13 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Administr
  更新用户策略以授予 `name@example.com` 对 `us-south` 区域中样本服务实例 `ServiceId-ade78e9f` 的资源 `key123` 的 `Editor` 角色：
 
 ```
-bluemix iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+bluemix iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
 ```
 
 更新用户策略以授予 `name@example.com` 对标识为 `dda27e49d2a1efca58083a01dfde18f6` 的资源组的 `Operator` 角色：
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --service-name resource-controller --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 更新用户策略以授予 `name@example.com` 对资源组 `sample-resource-group` 的成员的 `Viewer` 角色：
@@ -1874,7 +1879,7 @@ bluemix iam service-policies test 140798e2-8ea7db3
 创建服务策略
 
 ```
-bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -1884,19 +1889,23 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称</dd>
   <dt>-f, --file</dt>
-  <dd>策略定义的 JSON 文件。此项与“-r, --roles”、“--service-name”、“--service-instance”、“--region”、“--resource-type”和“--resource”标志互斥。</dd>
+  <dd>策略定义的 JSON 文件。此选项与“-r, --roles”、“--service-name”、“--service-instance”、“--region”、“--resource-type”、“--resource”、“--resource-group-name”和“--resource-group-id”标志互斥。</dd>
   <dt>-r, --roles</dt>
   <dd>策略定义的角色名称。要了解某个服务所支持的角色，请运行“bluemix iam roles --service SERVICE_NAME”。此选项与“-f, --file”互斥。</dd>
-  <dt>-service-name</dt>
+  <dt>--service-name</dt>
   <dd>策略定义的服务名称。此项与“-f, --file”标志互斥。</dd>
-  <dt>-service-instance</dt>
+  <dt>--service-instance</dt>
   <dd>策略定义的服务实例。此项与“-f, --file”标志互斥。</dd>
   <dt>-region</dt>
   <dd>策略定义的区域。此项与“-f, --file”标志互斥。</dd>
-  <dt>-resource-type</dt>
+  <dt>--resource-type</dt>
   <dd>策略定义的资源类型。此项与“-f, --file”标志互斥。</dd>
-  <dt>-resource</dt>
+  <dt>--resource</dt>
   <dd>策略定义的资源。此项与“-f, --file”标志互斥。</dd>
+  <dt>--resource-group-name</dt>
+  <dd>资源组的名称。此选项与“-f, --file”和“--resource-group-id”互斥。</dd>
+  <dt>--resource-group-id </dt>
+  <dd>资源组的标识。此选项与“-f, --file”和“--resource-group-name”互斥。</dd>
   <dt>-F, --force</dt>
   <dd>创建服务策略而不确认</dd>
 </dl>
@@ -1916,7 +1925,7 @@ bluemix iam service-policy-create test -f @policy.json
 更新服务策略
 
 ```
-bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE]} [-F, --force]
+bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -1930,7 +1939,7 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-v, --version</dt>
   <dd>服务策略的版本</dd>
   <dt>-f, --file</dt>
-  <dd>策略定义的 JSON 文件。此项与“-r, --roles”、“--service-name”、“--service-instance”、“--region”、“--resource-type”和“--resource”标志互斥。</dd>
+  <dd>策略定义的 JSON 文件。此选项与“-r, --roles”、“--service-name”、“--service-instance”、“--region”、“--resource-type”、“--resource”、“resource-group-name”和“resource-group-id”标志互斥。</dd>
   <dt>-r, --roles</dt>
   <dd>策略定义的角色名称。要了解某个服务所支持的角色，请运行“bluemix iam roles --service SERVICE_NAME”。此选项与“-f, --file”互斥。</dd>
   <dt>-service-name</dt>
@@ -1943,6 +1952,10 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dd>策略定义的资源类型。此项与“-f, --file”标志互斥。</dd>
   <dt>-resource</dt>
   <dd>策略定义的资源。此项与“-f, --file”标志互斥。</dd>
+  <dt>--resource-group-name</dt>
+  <dd>资源组的名称。此选项与“-f, --file”和“--resource-group-id”互斥。</dd>
+  <dt>--resource-group-id </dt>
+  <dd>资源组的标识。此选项与“-f, --file”和“--resource-group-name”互斥。</dd>
   <dt>-F, --force</dt>
   <dd>更新服务策略而不确认</dd>
 </dl>
@@ -1984,6 +1997,45 @@ bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
 bluemix iam service-policy-delete test 140798e2-8ea7db3
 ```
 
+## bluemix iam oauth-tokens
+{: #bluemix_iam_oauth_tokens}
+
+检索并显示当前会话的 OAuth 令牌
+
+```
+bluemix iam oauth-tokens
+```
+
+<strong>先决条件</strong>：登录和目标
+
+<strong>命令选项</strong>：
+<dl>
+</dl>
+
+<strong>示例</strong>：
+
+刷新并显示 OAuth 令牌
+
+```
+bluemix iam oauth-tokens
+```
+
+## bluemix iam dedicated-id-disconnect
+{: #bluemix_iam_dedicated_id_disconnect}
+
+断开公共 IBM 标识与专用非 IBM 标识的连接
+
+```
+bluemix iam dedicated-id-disconnect [-f, --force]
+```
+
+<strong>先决条件</strong>：登录和目标
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>-f, --force</dt>
+  <dd>强制断开连接而不确认</dd>
+</dl>
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
@@ -2591,7 +2643,7 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 列出服务实例
 
 ```
-bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region REGION_ID] [--long]
+bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -2600,8 +2652,8 @@ bluemix resource service-instances [--service-name SERVICE_NAME] [-r, --region R
 <dl>
   <dt>--service-name</dt>
   <dd>所属服务的名称</dd>
-  <dt>-r, --region</dt>
-  <dd>按区域标识过滤，如果未指定，将缺省为当前区域；使用“-r, --region all”可显示所有区域下的服务实例</dd>
+  <dt>--location</dt>
+  <dd>按位置过滤</dd>
   <dt>--long</dt>
   <dd>在输出中显示更多字段</dd>
 </dl>
@@ -2620,7 +2672,7 @@ bluemix resource service-instances --service-name test-service
 显示服务实例的详细信息
 
 ```
-bluemix resource service-instance NAME [-r, --region REGION] [--id]
+bluemix resource service-instance NAME [--location LOCATION] [--id]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -2629,8 +2681,8 @@ bluemix resource service-instance NAME [-r, --region REGION] [--id]
 <dl>
   <dt>NAME（必需）</dt>
   <dd>服务实例的名称</dd>
-  <dt>-r, --region</dt>
-  <dd>按区域标识过滤，如果未指定，将缺省为当前区域；使用“-r, --region all”可显示所有区域下的服务实例</dd>
+  <dt>--location</dt>
+  <dd>按位置过滤</dd>
   <dt>--id</dt>
   <dd>显示服务实例的标识</dd>
 </dl>
@@ -2648,7 +2700,7 @@ bluemix resource service-instance my-service-instance
 创建服务实例
 
 ```
-bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID [-r, --region REGION] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -2661,8 +2713,8 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
   <dd>服务的名称或标识</dd>
   <dt>SERVICE_PLAN_NAME 或 SERVICE_PLAN_ID（必需）</dt>
   <dd>服务套餐的名称或标识</dd>
-  <dt>-r, --region</dt>
-  <dd>要创建服务实例的区域，如果未指定，将缺省为当前区域</dd>
+  <dt>LOCATION</dt>
+  <dd>用于创建服务实例的目标位置或环境</dd>
   <dt>-t, --tags</dt>
   <dd>标记</dd>
   <dt>-p, --parameters</dt>
@@ -2670,10 +2722,10 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
 </dl>
 
 <strong>示例</strong>：
-使用服务 `test-service` 的服务套餐 `test-service-plan` 创建名为 `my-service-instance` 的服务实例：
+使用服务 `test-service` 的服务套餐 `test-service-plan` 在位置 `eu-gb` 中创建名为 `my-service-instance` 的服务实例：
 
 ```
-bluemix resource service-instance-create my-service-instance test-service test-service-plan
+bluemix resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
 
 ## bluemix resource service-instance-update

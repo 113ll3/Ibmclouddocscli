@@ -21,7 +21,7 @@ lastupdated: "2017-11-10"
 
 若要開始使用，請安裝 IBM {{site.data.keyword.Bluemix_notm}} CLI。如需詳細資料，請參閱 [Bluemix CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}。
 
-如需完整 {{site.data.keyword.Bluemix_notm}} 指令清單，請參閱：[{{site.data.keyword.Bluemix_notm:}} (bx) 指令](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
+如需完整 {{site.data.keyword.Bluemix_notm}} 指令清單，請參閱：[{{site.data.keyword.Bluemix_notm}} (bx) 指令](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
 ## 一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令
@@ -423,9 +423,10 @@ User:           wangjunl@cn.ibm.com
 Account:        Wilma's Account (65ce8074c6c62b5)   
 No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 ```
-提示：使用 'bx cf <command>'，以搭配 {{site.data.keyword.Bluemix_notm}} CLI 環境定義執行 Cloud Foundry CLI 。
-```
 
+提示：使用 'bx cf <command>'，以搭配 {{site.data.keyword.Bluemix_notm}} CLI 環境定義執行 Cloud Foundry CLI 。
+
+```
 $ bx sl init
 Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
 1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key

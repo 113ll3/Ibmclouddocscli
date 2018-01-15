@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-12-08"
 
 
 ---
@@ -19,16 +19,17 @@ lastupdated: "2017-11-10"
 # {{site.data.keyword.registrylong_notm}} CLI
 {: #containerregcli}
 
-{{site.data.keyword.registrylong}} CLI 是一種外掛程式，可管理您 {{site.data.keyword.Bluemix_notm}} 帳戶的登錄及其資源。
+{{site.data.keyword.registrylong}} CLI 是一種外掛程式，可為您的 {{site.data.keyword.Bluemix_notm}} 帳戶管理登錄及其資源。
 {: shortdesc}
 
 **必要條件**
 * 在執行登錄指令之前，請先使用 `bx login` 指令來登入 {{site.data.keyword.Bluemix_notm}}，以產生存取記號，並鑑別您的階段作業。
 
-若要瞭解如何使用 {{site.data.keyword.registrylong_notm}} CLI，請參閱[設定專用映像檔登錄](../../../services/Registry/index.html)。
+若要瞭解如何使用 {{site.data.keyword.registrylong_notm}} CLI，請參閱[開始使用 {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html)。
 
 <table summary="管理 {{site.data.keyword.registrylong_notm}}">
-<caption>表 1. 用來在 {{site.data.keyword.Bluemix_notm}} 上管理 {{site.data.keyword.registrylong_notm}} 的指令</caption>
+<caption>表 1. 用來管理 {{site.data.keyword.registrylong_notm}} 的指令
+</caption>
  <thead>
  <th colspan="5">用來管理登錄的指令</th>
  </thead>
@@ -84,7 +85,7 @@ bx cr api
 在 {{site.data.keyword.registrylong_notm}} 中建置 Docker 映像檔。
 
 ```
-bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file value | -f value] --tag value DIRECTORY
+bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--file FILE | -f FILE] --tag TAG DIRECTORY
 ```
 {: codeblock}
 
@@ -98,11 +99,11 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg value ...] [--file
 <dd>（選用）如果指定，則即使建置主機上已有具有相符標籤的映像檔，也會取回基礎映像檔。</dd>
 <dt>--quiet, -q</dt>
 <dd>（選用）如果指定，則除非發生錯誤，否則會抑制建置輸出。</dd>
-<dt> --build-arg value</dt>
-<dd>（選用）以 'KEY=VALUE' 格式指定其他建置引數。包括此參數多次，即可指定多個建置引數。當您指定符合 Dockerfile 中索引鍵的 ARG 行時，建置引數的值可以作為環境變數。</dd>
-<dt>--file value, -f value</dt>
+<dt> --build-arg KEY=VALUE</dt>
+<dd>（選用）以 'KEY=VALUE' 格式指定其他建置引數。包含這個參數多次，即可指定多個建置引數。當您指定符合 Dockerfile 中索引鍵的 ARG 行時，每一個建置引數的值都可以作為環境變數。</dd>
+<dt>--file FILE、-f FILE</dt>
 <dd>（選用）如果您對多個建置使用相同的檔案，則可以選擇不同 Dockerfile 的路徑。請指定與建置環境定義相關的 Dockerfile 位置。如果未指定，則預設值為 `PATH/Dockerfile`，其中 PATH 是建置環境定義的根目錄。</dd>
-<dt>--tag value, -t value</dt>
+<dt>--tag TAG、-t TAG</dt>
 <dd>您要建置之映像檔的完整名稱，其包含登錄 URL 及名稱空間。</dd>
 </dl>
 
@@ -129,14 +130,15 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 {: codeblock}
 
 **參數**
-
 <dl>
 <dt>--format FORMAT</dt>
-<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[檢視映像檔的相關資訊](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
 <dt>IMAGE</dt>
-<dd>您要檢查之映像檔的完整登錄路徑，格式為 `namespace/image:tag`。如果映像檔路徑中未指定標籤，則會檢查以 `latest` 標記的映像檔。若要檢查多個映像檔，您可以在指令中列出每一個專用登錄路徑，每一個路徑之間以空格隔開。</dd>
+<dd>您要取得其報告的映像檔名稱。若要檢查多個映像檔，您可以在指令中列出每一個映像檔，並以空格隔開每一個名稱。<p>若要尋找映像檔的名稱，請執行 `bx cr image-list`。請以 `repository:tag` 格式，結合「儲存庫」及「標籤」直欄的內容來建立映像檔名稱。如果映像檔名稱中未指定標籤，則會檢查有 `latest` 標記的映像檔。</p> 
+
+</dd>
 </dl>
 
 
@@ -145,8 +147,10 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 顯示 {{site.data.keyword.Bluemix_notm}} 帳戶中的所有映像檔。
 
+<p>**附註：**映像檔名稱是「儲存庫」及「標籤」直欄的內容組合，格式為 `repository:tag`。</p> 
+
 ```
- bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
+ bx cr image-list [--no-trunc] [--format FORMAT] [-q, --quiet] [--restrict RESTRICTION] [--include-ibm] 
 ```
 {: codeblock}
 
@@ -154,15 +158,18 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dl>
 <dt>--no-trunc</dt>
 <dd>（選用）不要截斷映像檔摘要。</dd>
-<dt>-q, --quiet</dt>
-<dd>（選用）以下列格式列出每一個映像檔：`repository:tag`。</dd>
-<dt>--include-ibm</dt>
-<dd>（選用）將 {{site.data.keyword.IBM_notm}} 提供的公用映像檔包含在輸出中。若不使用此選項，依預設只會列出專用映像檔。</dd>
 <dt>--format FORMAT</dt>
-<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[檢視映像檔的相關資訊](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
+<dt>-q, --quiet</dt>
+<dd>（選用）以下列格式列出每一個映像檔：`repository:tag`</dd>
+<dt>--restrict RESTRICTION</dt>
+<dd>（選用）限制輸出，只顯示所指定名稱空間或名稱空間及儲存庫中的映像檔。</dd>
+<dt>--include-ibm</dt>
+<dd>（選用）將 {{site.data.keyword.IBM_notm}} 提供的公用映像檔包含在輸出中。若不使用此選項，依預設只會列出專用映像檔。</dd>
 </dl>
+
 
 
 ## bx cr image-rm
@@ -178,7 +185,11 @@ bx cr image-rm IMAGE [IMAGE...]
 **參數**
 <dl>
 <dt>IMAGE</dt>
-<dd>您要移除之映像檔的完整登錄路徑，格式為 `namespace/image:tag`。如果映像檔路徑中未指定標籤，則依預設會刪除以 `latest` 標記的映像檔。若要刪除多個映像檔，您可以在指令中列出每一個專用登錄路徑，每一個路徑之間以空格隔開。</dd>
+<dd>您要取得其報告的映像檔名稱。若要同時刪除多個映像檔，您可以在指令中列出每一個映像檔，而每一個名稱之間都是以空格隔開。
+
+<p>若要尋找映像檔的名稱，請執行 `bx cr image-list`。請以 `repository:tag` 格式，結合「儲存庫」及「標籤」直欄的內容來建立映像檔名稱。如果映像檔名稱中未指定標籤，則依預設會刪除有 `latest` 標記的映像檔。</p> 
+
+</dd>
 </dl>
 
 
@@ -285,15 +296,15 @@ bx cr quota
 修改指定的配額。
 
 ```
-bx cr quota-set [--traffic VALUE] [--storage VALUE]
+bx cr quota-set [--traffic TRAFFIC] [--storage STORAGE]
 ```
 {: codeblock}
 
 **參數**
 <dl>
-<dt>--traffic VALUE</dt>
+<dt>--traffic TRAFFIC</dt>
 <dd>（選用）將資料流量配額變更為指定的值 (MB)。如果您未獲授權，無法設定資料流量，或是設定了超出現行定價方案的值，則作業會失敗。</dd>
-<dt>--storage VALUE</dt>
+<dt>--storage STORAGE</dt>
 <dd>（選用）將儲存空間配額變更為指定的值 (MB)。如果您未獲授權，無法設定儲存空間配額，或設定了超出現行定價方案的值，則作業會失敗。</dd>
 </dl>
 
@@ -308,11 +319,13 @@ bx cr region
 ```
 {: codeblock}
 
+如需相關資訊，請參閱[地區](../../../services/Registry/registry_overview.html#registry_regions)。
+
 
 ## bx cr region-set
 {: #bx_cr_region_set}
 
-設定 {{site.data.keyword.registrylong_notm}} 指令的目標地區。若要列出可用的地區，請執行沒有參數的指令。
+設定 {{site.data.keyword.registrylong_notm}} 指令的目標地區。若要列出可用的地區，請執行不含任何參數的指令。
 
 ```
 bx cr region-set [REGION]
@@ -322,7 +335,9 @@ bx cr region-set [REGION]
 **參數**
 <dl>
 <dt>REGION</dt>
-<dd>（選用）目標地區的名稱（例如，`us-south`）。</dd>
+<dd>（選用）目標地區的名稱（例如，`us-south`）。如需相關資訊，請參閱[地區](../../../services/Registry/registry_overview.html#registry_regions)。
+
+</dd>
 </dl>
 
 
@@ -332,7 +347,7 @@ bx cr region-set [REGION]
 新增可用來控制登錄存取權的記號。
 
 ```
-bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrite]
+bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--readwrite]
 ```
 
 {: codeblock}
@@ -340,7 +355,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 **參數**
 <dl>
-<dt>--description VALUE</dt>
+<dt>--description DESCRIPTION</dt>
 <dd>（選用）指定值作為記號說明，在您執行 `bx cr token-list` 時顯示。如果 {{site.data.keyword.containerlong_notm}} 自動建立您的記號，則會將說明設為「Kubernetes 叢集」名稱。在此情況下，移除您的叢集時，會自動移除此記號。</dd>
 <dt>-q, --quiet</dt>
 <dd>（選用）僅顯示記號，不含任何周圍文字。</dd>
@@ -382,10 +397,11 @@ bx cr token-list --format FORMAT
 **參數**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[檢視映像檔的相關資訊](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
 </dl>
+
 
 ## bx cr token-rm
 {: #bx_cr_token_rm}
@@ -410,14 +426,18 @@ bx cr token-rm TOKEN [TOKEN...]
 檢視映像檔的漏洞評量報告。
 
 ```
-bx cr vulnerability-assessment IMAGE [IMAGE...]
+bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--configuration-issues | -c] [--output FORMAT | -o FORMAT] IMAGE [IMAGE...] 
 ```
 {: codeblock}
 
 **參數**
 <dl>
 <dt>IMAGE</dt>
-<dd>您要取得報告之映像檔的完整登錄路徑，格式為 `namespace/image:tag`。報告會告訴您映像檔是否有任何已知的套件漏洞。支援下列作業系統：
+<dd>您要取得其報告的映像檔名稱。報告會告訴您映像檔是否有任何已知的套件漏洞。若要同時要求多個映像檔的報告，您可以在指令中列出每一個映像檔，而每一個名稱之間都是以空格隔開。
+
+<p>若要尋找映像檔的名稱，請執行 `bx cr image-list`。請以 `repository:tag` 格式，結合「儲存庫」及「標籤」直欄的內容來建立映像檔名稱。如果映像檔名稱中未指定標籤，則報告會評量有 `latest` 標記的映像檔。</p> 
+
+<p>支援下列作業系統：
 
 <ul>
 
@@ -428,8 +448,27 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
+</p>
+
 如需相關資訊，請參閱[使用漏洞警告器管理映像檔安全](../../../services/va/va_index.html)。
 
 </dd>
+<dt>--output FORMAT、-o FORMAT</dt>
+<dd>（選用）以選擇的格式傳回指令輸出。預設格式為 `text`。支援的格式如下：
+
+<ul>
+
+<li>`text`</li>
+<li>`json`</li>
+</ul>
+
+</dd>
+<dt>--vulnerabilities、-v</dt>
+<dd>（選用）指令輸出限制為只顯示漏洞。</dd>
+<dt>--configuration-issues、-c</dt>
+<dd>（選用）指令輸出限制為只顯示配置問題。</dd>
+<dt>--extended、-e </dt>
+<dd>（選用）指令輸出會針對有漏洞的套件顯示修正程式的其他資訊。</dd>
 
 </dl>
+

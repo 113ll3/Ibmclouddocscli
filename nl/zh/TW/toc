@@ -20,11 +20,10 @@ CLI 及開發工具
 	IBM Cloud CLI 外掛程式
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Container Service（叢集）](../containers/cs_cli_devtools.html)
-		[Container Service（單一及可擴充群組）](../containers/container_cli_cfic.html)
+		[Container Service](../containers/cs_cli_devtools.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
-		[IBM SDK 產生器](../cloudnative/sdk_cli.html)
+		[IBM SDK Generator](../cloudnative/sdk_cli.html)
 		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 	
@@ -47,6 +46,7 @@ CLI 及開發工具
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
 	login_federated_id.md
+	connect_dedicated_id.md
 	[使用工具鏈進行開發](../services/ContinuousDelivery/dev_use_toolchains.html)
 	[使用 Eclipse Tools 進行開發](../starters/deploy_eclipsetools.html)
 	[使用 CLI 部署應用程式](../starters/install_cli.html)

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2016-03-15"
+lastupdated: "2017-12-11"
 
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2016-03-15"
 {: #vcap_services}
 
 
-VCAP_SERVICES 環境變數是含有資訊的 JSON 物件，而您可以使用這項資訊來與 {{site.data.keyword.Bluemix_notm}} 中的服務實例互動。
+VCAP_SERVICES (VMware Cloud Application Platform) 環境變數是含有資訊的 JSON 物件，而您可以使用這項資訊來與 {{site.data.keyword.Bluemix_notm}} 中的服務實例互動。
 {:shortdesc}
 
 

@@ -25,7 +25,7 @@ lastupdated: "2017-10-20"
 有关管理插件的更多命令，请运行 `bluemix plugin` 以查看帮助消息。
 {: tip}
 
-## 从 {site.data.keyword.Bluemix_notm}} CLI 存储库安装插件
+## 从 {{site.data.keyword.Bluemix_notm}} CLI 存储库安装插件
 
 ### 步骤 1：搜索插件
 

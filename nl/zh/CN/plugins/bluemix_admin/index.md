@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -116,6 +116,46 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 
 **提示：****ba add-user** 命令名较长，您还可以使用 **ba au** 作为其别名。
 
+### 邀请 {{site.data.keyword.Bluemix_dedicated_notm}} 中的用户
+{: #admin_dedicated_invite_public}
+
+每个 {{site.data.keyword.Bluemix_dedicated_notm}} 环境在 {{site.data.keyword.Bluemix_notm}} 中都有一个客户机拥有的公共企业帐户。为了使 Dedicated 环境中的用户可使用 {{site.data.keyword.containershort}} 创建集群，管理员必须将这些用户添加到此公共企业帐户。将用户添加到公共企业帐户后，其 Dedicated 帐户和公共帐户会链接在一起。然后，用户可以使用其 IBM 标识同时登录到 Dedicated 帐户和公共帐户，并且可以通过 Dedicated 界面在公共帐户中创建资源。有关更多信息，请参阅[在 Dedicated 上设置 IBM Cloud Container Service](/docs/containers/cs_dedicated.html#dedicated_setup)。要邀请 Dedicated 用户加入公共帐户，请运行以下命令：
+
+```
+cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
+```
+{: pre}
+
+**注**：要将 Dedicated 环境用户添加到 {{site.data.keyword.Bluemix_notm}} 公共帐户，您必须是 Dedicated 帐户的**管理员**。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">如果要邀请单个用户，请使用该用户的电子邮件。</dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">如果要邀请当前位于 Dedicated 帐户组织中的所有用户，请使用 Dedicated 帐户组织标识。</dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">用于邀请用户加入公共帐户的 API 密钥。此密钥必须由公共帐户的<b>管理员</b>来生成。</dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">要邀请用户加入的公共帐户组织的标识。</dd>
+</dl>
+
+### 列出邀请的 {{site.data.keyword.Bluemix_dedicated_notm}} 用户
+{: #admin_dedicated_list}
+
+如果已使用 [`invite-users-to-public` 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以列出帐户中的用户以查看其邀请状态。具有现有 IBM 标识的受邀用户的状态将为`活动`。没有现有 IBM 标识的受邀用户的状态将为`暂挂`或`活动`，具体取决于他们是否已接受加入该帐户的邀请。要列出 {{site.data.keyword.Bluemix_notm}} 帐户中的用户，请运行以下命令：
+
+```
+cf ba invite-users-status -apikey=<public_api_key>
+```
+{: pre}
+
+**注**：要将 Dedicated 环境用户添加到 {{site.data.keyword.Bluemix_notm}} 公共帐户，您必须是 Dedicated 帐户的**管理员**。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">用于邀请用户加入帐户的 API 密钥。此密钥必须由公共帐户的<b>管理员</b>来生成。</dd>
+</dl>
+
 <!-- staging-only commands start. Live for interconnect -->
 
 ### 搜索用户
@@ -133,11 +173,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">分配给用户的许可权。例如，admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。有关分配的用户许可权的更多信息，请参阅[许可权](/docs/admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dd class="pd">分配给用户的许可权。可用的许可权为：admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。有关分配的用户许可权的更多信息，请参阅[许可权](/docs/admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">用户所属的组织名称。不能将此参数与 permission 参数用于同一查询中。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">分配给用户的组织角色。例如，auditor、manager 或 billing_manager。使用此参数时必须指定组织。有关角色的更多信息，请参阅[用户角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
+<dd class="pd">分配给用户的组织角色。可用的角色为：“auditors”、“managers”和“billing_managers”。使用此参数时必须指定组织。</dd>
 
 </dl>
 
@@ -464,7 +504,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 **提示：****ba set-space** 命令名较长，您还可以使用 **ba ss** 作为其别名。
 
 
-### 除去空间中用户的角色 
+### 除去空间中用户的角色
 
 要除去空间中用户的角色，请使用以下命令：
 
@@ -660,7 +700,7 @@ cf ba resource-metrics
 
 **提示：****ba resource-metrics** 命令名较长，您还可以使用 **ba rsm** 作为其别名。
 
-## 查看资源度量值历史记录 
+## 查看资源度量值历史记录
 {: #cliresourceusagehistory}
 
 您可以检索内存和磁盘使用情况的资源度量值历史记录。返回的度量值包括使用的资源量占可用总量的比例，包括物理资源和预留资源。内存和磁盘使用情况的历史记录数据可以按小时、按天或按月显示。您可以指定开始和结束日期，以便在某个特定的日期范围内检索数据。在未指定日期的情况下，缺省的历史记录数据是最近 48 小时内的每小时内存数据。数据按降序排列，较新的日期显示在前边。要查看资源度量值历史记录信息，请使用以下命令：
@@ -697,7 +737,8 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-您可以使用以下命令来查看上面的命令参数和示例列表： 
+
+您可以使用以下命令来查看上面的命令参数和示例列表：
 
 ```
 cf ba resource-metrics-history -help
@@ -800,7 +841,8 @@ ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
-**警告**：如果取消**缺省编译打包**或**缺省运行**组集与两个 IBM 创建的安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问。请慎用取消绑定，还要了解环境中所有运行和编译打包的应用程序上的分支。
+**警告**：如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
+
 
 **注**：以下可使您使用安全组的命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 信息。
 
