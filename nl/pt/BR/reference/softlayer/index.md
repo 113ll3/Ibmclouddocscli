@@ -22,7 +22,7 @@ Use os comandos de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} na 
 Para iniciar, instale a CLI do IBM {{site.data.keyword.Bluemix_notm}}. Veja
 [CLI do Bluemix ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} para obter detalhes.
 
-Para obter uma lista completa de comandos do {{site.data.keyword.Bluemix_notm}}, veja: [Comandos do {{site.data.keyword.Bluemix_notm:}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
+Para obter uma lista completa de comandos do {{site.data.keyword.Bluemix_notm}}, veja: [Comandos do {{site.data.keyword.Bluemix_notm}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
 
 
 ## Comandos gerais de infraestrutura {{site.data.keyword.BluSoftlayer_notm}}
@@ -432,7 +432,7 @@ Escolha como configurar a autenticação de infraestrutura do {{site.data.keywor
 1. Efetue login com o nome do usuário e a senha/chave API da infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}
 2. Use a conexão única do {{site.data.keyword.Bluemix_notm}}
 Insira um número> 2
-URL de terminal do Softlayer API: [https://api.softlayer.com/mobile/v3.1]>
+URL de terminal do Softlayer API: [https://api.softlayer.com/mobile/v3.1]> 
 Setting account to: 278444
 OK
                               

@@ -25,13 +25,12 @@ A CLI do {{site.data.keyword.Bluemix_notm}} suporta uma estrutura de plug-in par
 Para obter mais comandos para gerenciar plug-ins, execute `bluemix plugin` para ver as mensagens de ajuda.
 {: tip}
 
-## Instalar um plug-in por meio do repositório do {site.data.keyword.Bluemix_notm}} CLI
+## Instalar um plug-in do repositório da CLI do {{site.data.keyword.Bluemix_notm}}
 
 ### Etapa 1: procurar o plug-in
 
 1. Use o comando `bluemix plugin repo-plugins -r REPO_NAME` para procurar um plug-in no repositório.
-2. O {{site.data.keyword.Bluemix_notm}} CLI usa o nome `Bluemix` por padrão. É possível listar os plug-ins no repositório oficial do `Bluemix`. Por
-exemplo:
+2. O {{site.data.keyword.Bluemix_notm}} CLI usa o nome `Bluemix` por padrão. É possível listar os plug-ins no repositório oficial do `Bluemix`. Por exemplo:
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -46,8 +45,7 @@ exemplo:
 
 ### Etapa 2: instalar o plug-in
 
-Use o comando `bx plugin install PLUGIN_NAME -r REPO_NAME` para instalar o plug-in. Por
-exemplo:
+Use o comando `bx plugin install PLUGIN_NAME -r REPO_NAME` para instalar o plug-in. Por exemplo:
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix
@@ -60,8 +58,7 @@ exemplo:
 
 ## Instalar um plug-in localmente
 
-Use o comando `bluemix plugin install LOCAL_FILE_NAME` para instalar um binário de plug-in em sua máquina local. Por
-exemplo:
+Use o comando `bluemix plugin install LOCAL_FILE_NAME` para instalar um binário de plug-in em sua máquina local. Por exemplo:
 
   ```
   $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-09-11"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -25,8 +25,7 @@ Antes de iniciar, instale a interface de linha de comandos do cf. O plug-in da C
 requer o cf versão 6.11.2 ou posterior. [Fazer download da interface da linha de comandos do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restrição:** A interface de linha de
-comandos do Cloud Foundry não é suportada por
-Cygwin. Use a interface de linha de comandos do Cloud Foundry
+comandos do Cloud Foundry não é suportada por Cygwin. Use a interface de linha de comandos do Cloud Foundry
 em uma janela de linha de comandos diferente da janela de linha de comandos do Cygwin.
 
 **Observação**: a CLI do administrador do {{site.data.keyword.Bluemix_notm}} é usada somente para o ambiente {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated. Ele não é suportado pelo {{site.data.keyword.Bluemix_notm}} Public.
@@ -36,12 +35,9 @@ em uma janela de linha de comandos diferente da janela de linha de comandos do C
 Após a interface de linha de comandos do cf ser instalada, é possível
 incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
 
-**Nota**: se você tiver instalado
-anteriormente o plug-in Administrador do
-{{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
+**Nota**: se você tiver instalado anteriormente o plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
 
-Conclua as etapas a seguir para incluir o repositório e instalar
-o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
 
 <ol>
 <li>Para incluir o repositório do plug-in de administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
@@ -133,6 +129,46 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 
 **Dica:** também é possível usar **ba au** como um alias para o nome do comando mais longo **ba add-user**.
 
+### Convidando um usuário do {{site.data.keyword.Bluemix_dedicated_notm}}
+{: #admin_dedicated_invite_public}
+
+Cada ambiente do {{site.data.keyword.Bluemix_dedicated_notm}} tem uma conta pública, corporativa ou de propriedade do cliente no {{site.data.keyword.Bluemix_notm}}. Para que os usuários no ambiente Dedicated criem clusters com o {{site.data.keyword.containershort}}, o administrador deve incluir os usuários nessa conta corporativa pública. Quando os usuários são incluídos na conta corporativa pública, suas contas Dedicated e públicas são vinculadas. Os usuários podem então usar seu IBMid para efetuar login no Dedicated ou público simultaneamente e podem criar recursos na conta pública da interface Dedicated. Para obter mais informações, veja [Configurando o IBM Cloud Container Service no Dedicated](/docs/containers/cs_dedicated.html#dedicated_setup). Para convidar usuários do Dedicated para a conta pública:
+
+```
+cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
+```
+{: pre}
+
+**Nota**: para incluir usuários de ambientes dedicados à sua conta pública do {{site.data.keyword.Bluemix_notm}}, deve-se ser um **Administrador** da conta dedicada.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_email&gt;</dt>
+<dd class="pd">Se você estiver convidando um único usuário, o e-mail do usuário.</dd>
+<dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
+<dd class="pd">Se você estiver convidando todos os usuários atualmente em uma organização da conta Dedicated, o ID da organização da conta Dedicated.</dd>
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">Uma chave API para convidar usuários para a conta pública. Isso deve ser gerado pelo <b>Administrador</b> da conta pública.</dd>
+<dt class="pt dlterm">&lt;public_org_id&gt;</dt>
+<dd class="pd">O ID da organização da conta pública para qual você está convidando usuários.</dd>
+</dl>
+
+### Listando usuários convidados do {{site.data.keyword.Bluemix_dedicated_notm}}
+{: #admin_dedicated_list}
+
+Se você tiver convidado usuários do ambiente Dedicated para a sua conta do {{site.data.keyword.Bluemix_notm}} com o [comando `invite-users-to-public`](#admin_dedicated_invite_public), será possível listar os usuários em sua conta para ver o status do convite. Os usuários convidados que têm um IBMid existente terão um status de `ACTIVE`. Os usuários convidados que não têm um IBMid existente terão um status de `PENDING` ou `ACTIVE`, dependendo se eles já aceitaram o convite para a conta ou não. Para listar os usuários em sua conta do {{site.data.keyword.Bluemix_notm}}:
+
+```
+cf ba invite-users-status -apikey=<public_api_key>
+```
+{: pre}
+
+**Nota**: para incluir usuários do ambiente Dedicated em sua conta pública do {{site.data.keyword.Bluemix_notm}}, deve-se ser um **Administrador** da conta Dedicated.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;public_api_key&gt;</dt>
+<dd class="pd">A chave API que foi usada para convidar os usuários para a conta. Isso deve ser gerado pelo <b>Administrador</b> da conta pública.</dd>
+</dl>
+
 <!-- staging-only commands start. Live for interconnect -->
 
 ### Procurando um usuário
@@ -151,11 +187,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">O nome do usuário no {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">A permissão designada ao usuário. Por exemplo, administrador (ou superusuário), login (ou básico), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Para obter mais informações sobre permissões de usuário designadas, veja [Permissões](/docs/admin/index.html#permissions). Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta. </dd>
+<dd class="pd">A permissão designada ao usuário. As permissões disponíveis são: administrador (ou superusuário), login (ou básico), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Para obter mais informações sobre permissões de usuário designadas, veja [Permissões](/docs/admin/index.html#permissions). Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">O nome da organização à qual o usuário pertence. Não é possível usar esse parâmetro com o parâmetro de permissão na mesma consulta.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">A função de organização designada ao usuário. Por exemplo, auditor, gerenciador ou billing_manager. Deve-se especificar a organização com esse parâmetro. Para obter mais informações sobre funções, veja [Funções de usuário](/docs/admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">A função de organização designada ao usuário. As funções disponíveis são: 'auditors', 'managers' e 'billing_managers'. Deve-se especificar a organização com esse parâmetro.</dd>
 
 </dl>
 
@@ -509,7 +545,7 @@ do {{site.data.keyword.Bluemix_notm}} em um espaço.</dd>
 do comando mais longo **ba set-space**.
 
 
-### Removendo a função de um usuário em um espaço 
+### Removendo a função de um usuário em um espaço
 
 Para remover a função de um usuário em um espaço, use o comando a seguir:
 
@@ -743,7 +779,7 @@ cf ba resource-metrics
 **Dica:** também é possível usar **ba rsm** como um alias para o nome mais longo
 do comando **ba resource-metrics**.
 
-## Visualizando o histórico de métrica de recurso 
+## Visualizando o histórico de métrica de recurso
 {: #cliresourceusagehistory}
 
 É possível recuperar o histórico de métrica de recurso para uso de memória e disco. As métricas retornadas incluem a quantia de recursos usados do total disponível para ambos os recursos, físico e reservado. Os dados históricos para uso de memória e disco podem ser exibidos por hora, diariamente ou mensalmente.  É possível especificar datas de início e de encerramento para recuperar dados dentro de um intervalo de data específico. Os dados históricos padrão, quando nenhuma data é especificada, são dados de memória por hora para as últimas 48 horas. Os dados são exibidos em ordem decrescente, com datas mais recentes mostradas primeiro.   Para visualizar as informações de histórico de métrica de recurso, use o comando a seguir:
@@ -781,7 +817,8 @@ padrão.</dd>
 <dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
-É possível visualizar a lista de parâmetros de comando e exemplos acima usando o comando a seguir: 
+
+É possível visualizar a lista de parâmetros de comando e exemplos acima usando o comando a seguir:
 
 ```
 cf ba resource-metrics-history -help
@@ -907,7 +944,8 @@ não desejar ligar a esses dois conjuntos grupos de segurança, poderá desvincu
 conjuntos de grupos do Cloud Foundry e depois ligar o grupo de segurança a um espaço
 específico. Para obter mais informações, veja [Ligando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Aviso**: a desvinculação dos conjuntos de grupos **Preparação padrão** ou **Execução padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns`, desativará o acesso global à rede externa. Use a desvinculação com cuidado e reconhecimento das ramificações em todos os aplicativos em execução e de preparação em seu ambiente.
+**AVISO**: desvinculando os conjuntos de grupos **Preparação padrão** ou **Execução padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns` desativarão o acesso global à rede externa. Use a desvinculação com cuidado e reconhecimento do seu potencial impacto nos aplicativos em execução e de preparação em seu ambiente.
+
 
 **Nota**: Os comandos a seguir que permitem trabalhar com
 grupos de segurança são baseadas na versão do Cloud Foundry 1.6. Para obter mais informações, incluindo campos obrigatórios e opcionais, veja as informações do Cloud Foundry sobre [Como criar Grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
