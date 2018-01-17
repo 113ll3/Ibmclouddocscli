@@ -18,6 +18,7 @@ CLI and Dev Tools
 
 	{: .topicgroup}
 	IBM Cloud CLI plug-ins
+		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service](../containers/cs_cli_devtools.html)
@@ -35,21 +36,14 @@ CLI and Dev Tools
 		plugins/vpn/index.md
 	
 	{: .topicgroup}
-	Integrated development tools
-		ibm-dev-tools-for-vscode.md
-		[API Connect developer toolkit](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
-		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
-		[Deploying apps with IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
-		[Managing Liberty and Node.js apps](../manageapps/app_mng.html#app_management)
+	Recommended development environments
+		[Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
+		[IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	login_federated_id.md
-	connect_dedicated_id.md
-	[Developing with toolchains](../services/ContinuousDelivery/dev_use_toolchains.html)
-	[Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
-	[Deploying your app with CLI](../starters/install_cli.html)
-	[Uploading your app](../starters/upload_app.html)
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
 	{: .navgroup-end}

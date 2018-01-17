@@ -2395,7 +2395,6 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>Force deletion without confirmation.</dd>
    </dl>
 
-
 ## bluemix app routes
 {: #bluemix_app_routes}
 
