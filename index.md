@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-11-08"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -14,7 +14,10 @@ lastupdated: "2017-11-08"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Downloads 
+# CLI and tools overview
+{: #overview}
+
+{{site.data.keyword.Bluemix_notm}} provides a robust CLI as well as plug-ins that integrate with the CLI.
 
 ## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
@@ -22,26 +25,12 @@ lastupdated: "2017-11-08"
 {{site.data.keyword.Bluemix}} CLI provides a command line experience to manage the resources in your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command-line interface, cf, in its installation, for managing Cloud Foundry applications and services.
 {:shortdesc}
 
-[Download](/docs/cli/reference/bluemix_cli/all_versions.html){: new_window} <br>
-[Get started](/docs/cli/reference/bluemix_cli/get_started.html){: new_window} <br>
-[View docs](/docs/cli/reference/bluemix_cli/bx_cli.html){: new_window} <br>
+Click an option to get started:
 
+<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="Click an icon to get started quickly with {{site.data.keyword.Bluemix_notm}} CLI." style="width:440px;" />
+<map name="home_map" id="home_map">
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Download the {{site.data.keyword.Bluemix_notm}} CLI" title="Download" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Get started." title="Get started" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="View docs" title="View docs" shape="rect" coords="326, -10, 448, 218" />
+</map>
 
-## IBM Cloud Application Tools 2 (Beta)
-{: #icat notoc}
-
-IBM Cloud Application Tools 2 is a menu bar application that's streamlined for local environment setup and management on macOS. By using IBM Cloud Application Tools 2, you can easily install and update Bluemix tools and CLIs, change CLI deployment targets, and quickly access common Bluemix links.
-
-[Download](http://ibm.biz/icat-2-download){: new_window} <br>
-[View docs](/docs/cli/icat.html){: new_window} <br>
-
-
-## ![](./images/Integrated_Dev_Tools.svg) Integrated development tools
-{: #ide}
-
-Download and install plug-ins to integrate your favorite {{site.data.keyword.Bluemix_notm}} services.
-
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
-|----------|----------|----------|----------|----------|
-| [Liberty Eclipse Plug-in ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse Plug-in ![External link icon](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](/docs/services/rules/index-gentopic1.html#genTopProcId2) | [Developer Toolkit ![External link icon](../icons/launch-glyph.svg)](/docs/services/apiconnect/creating_apis.html){: new_window} | [{{site.data.keyword.Bluemix_notm}} Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="Table 6. Plug-ins" caption-side="top"}

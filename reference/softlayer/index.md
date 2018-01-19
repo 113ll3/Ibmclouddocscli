@@ -2,16 +2,16 @@
 
 copyright:
 
-  years: 2016,2017
+  years: 2016,2018
 
-lastupdated: "2017-11-10"
 
+lastupdated: "2017-12-08"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) commands
+# {{site.data.keyword.BluSoftlayer_notm}} infrastructure (bluemix sl) commands
 {: #softlayer_cli}
 
 The {{site.data.keyword.BluSoftlayer}} plugin has been merged into the {{site.data.keyword.Bluemix_notm}} CLI. You no longer need to install the plug-in.
@@ -47,7 +47,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 2. {{site.data.keyword.BluSoftlayer_notm}} infrastructure Block storage</caption>
  <thead>
- <th colspan="6">Softlayer Block storage</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure Block storage</th>
  </thead>
  <tbody>
  <tr>
@@ -88,7 +88,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 3. {{site.data.keyword.BluSoftlayer_notm}} infrastructure CDN</caption>
  <thead>
- <th colspan="6">Softlayer CDN</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure CDN</th>
  </thead>
  <tbody>
  <tr>
@@ -113,7 +113,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 4. {{site.data.keyword.BluSoftlayer_notm}} infrastructure File storage</caption>
  <thead>
- <th colspan="6">Softlayer File storage</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure File storage</th>
  </thead>
  <tbody>
  <tr>
@@ -154,7 +154,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
 <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 5. {{site.data.keyword.BluSoftlayer_notm}} infrastructure DNS commands</caption>
  <thead>
- <th colspan="6">Softlayer DNS commands</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure DNS commands</th>
  </thead>
  <tbody>
  <tr>
@@ -173,10 +173,11 @@ The following commands are supported. Use the `bluemix sl` command to see the li
    </tbody>
  </table>
 
+
 <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 6. {{site.data.keyword.BluSoftlayer_notm}} infrastructure Global IP commands</caption>
  <thead>
- <th colspan="6">Softlayer Global IP commands</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure Global IP commands</th>
  </thead>
  <tbody>
  <tr>
@@ -194,7 +195,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 7. {{site.data.keyword.BluSoftlayer_notm}} infrastructure image commands</caption>
  <thead>
- <th colspan="6">Softlayer image commands</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure image commands</th>
  </thead>
  <tbody>
  <tr>
@@ -211,7 +212,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 7. {{site.data.keyword.BluSoftlayer_notm}} infrastructure IPSec VPN commands</caption>
  <thead>
- <th colspan="6">Softlayer IPSec VPN commands</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure IPSec VPN commands</th>
  </thead>
  <tbody>
  <tr>
@@ -237,7 +238,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 8. {{site.data.keyword.BluSoftlayer_notm}} infrastructure Load Balancer commands</caption>
  <thead>
- <th colspan="6">Softlayer Load Balancer commands</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure Load Balancer commands</th>
  </thead>
  <tbody>
  <tr>
@@ -270,7 +271,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 9. {{site.data.keyword.BluSoftlayer_notm}} infrastructure security commands</caption>
  <thead>
- <th colspan="5">Softlayer security commands</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} infrastructure security commands</th>
  </thead>
  <tbody>
  <tr>
@@ -295,7 +296,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 10. {{site.data.keyword.BluSoftlayer_notm}} infrastructure subnet commands</caption>
  <thead>
- <th colspan="5">Softlayer subnet commands</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} infrastructure subnet commands</th>
  </thead>
  <tbody>
  <tr>
@@ -313,7 +314,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
  <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 11. {{site.data.keyword.BluSoftlayer_notm}} infrastructure virtual server commands</caption>
  <thead>
- <th colspan="6">Softlayer virtual server commands</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure virtual server commands</th>
  </thead>
  <tbody>
  <tr>
@@ -346,7 +347,7 @@ The following commands are supported. Use the `bluemix sl` command to see the li
   <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
 <caption>Table 12. {{site.data.keyword.BluSoftlayer_notm}} infrastructure VLAN commands</caption>
  <thead>
- <th colspan="6">Softlayer VLAN commands</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure VLAN commands</th>
  </thead>
  <tbody>
  <tr>
@@ -366,7 +367,7 @@ To view help information for the commands, run: `bluemix sl [command] -h`.
 ### bluemix sl init
 {: #sl_init}
 
-Initialize the configuration settings that are used to connect to the SoftLayer environment. The configuration includes user name, API key or password, account and endpoint.
+Initialize the configuration settings that are used to connect to the {{site.data.keyword.BluSoftlayer_notm}} infrastructure environment. The configuration includes user name, API key or password, account and endpoint.
 ```
 bluemix sl init [OPTIONS]
 ```
@@ -374,7 +375,7 @@ bluemix sl init [OPTIONS]
 <strong>Command options</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API endpoint URL, default is: https://api.softlayer.com/rest/v3.1 for {{site.data.keyword.BluSoftlayer_notm}} infrastructure API key authentication, https://api.softlayer.com/mobile/v3.1 for IBMid authentication.</dd>
+<dd>{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint URL, default is: https://api.softlayer.com/rest/v3.1 for API key authentication, https://api.softlayer.com/mobile/v3.1 for IBMid authentication.</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer user name.</dd>
 <dt>-p, --sl-password</dt>
