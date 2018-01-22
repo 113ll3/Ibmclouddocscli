@@ -34,3 +34,13 @@ Click an option to get started:
 <area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="View docs" title="View docs" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
+## {{site.data.keyword.dev_cli_notm}}
+{: #idt}
+
+{{site.data.keyword.dev_cli_long}} (IDT) provides a developer specific extension to {{site.data.keyword.Bluemix}} CLI (`bx dev`) to create, build, and deploy cloud native apps. Installation of the IDT includes the base {{site.data.keyword.Bluemix_notm}} CLI, several extensions, and all system pre-requisites.
+{:shortdesc}
+
+- [Overview and Installation](/docs/cloudnative/idt/index.html) <br>
+- [Get started](/docs/cloudnative/idt/index.html){: new_window} <br>
+- [Commands](/docs/cloudnative/idt/commands.html){: new_window} <br>
+- [Cloud native development](/docs/cloudnative/index.html) <br>
