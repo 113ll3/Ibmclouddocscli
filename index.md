@@ -41,6 +41,6 @@ Click an option to get started:
 {:shortdesc}
 
 - [Overview and Installation](/docs/cloudnative/idt/index.html) <br>
-- [Get started](/docs/cloudnative/idt/index.html){: new_window} <br>
-- [Commands](/docs/cloudnative/idt/commands.html){: new_window} <br>
+- [Get started](/docs/cloudnative/idt/index.html) <br>
+- [Commands](/docs/cloudnative/idt/commands.html) <br>
 - [Cloud native development](/docs/cloudnative/index.html) <br>
