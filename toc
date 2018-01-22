@@ -13,6 +13,7 @@ CLI and Dev Tools
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
 	reference/bluemix_cli/all_versions.md
+	[IBM Cloud developer tools commands](../cloudnative/idt/commands.html)
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
 
@@ -22,10 +23,9 @@ CLI and Dev Tools
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service](../containers/cs_cli_devtools.html)
-		[IBM Developer](../cloudnative/dev_cli.html)
-		[Docker EE for IBM Cloud](../services/docker-for-ibm-cloud/cli-ref.html)
-		plugins/pnp/index.md
-		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[IBM Developer](../cloudnative/idt/index.html)
+ 		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk/index.html)
 		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 	
@@ -39,6 +39,7 @@ CLI and Dev Tools
 	Recommended development environments
 		[Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
 		[IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
+		[IBM Developer Tools for JetBrains](../cloudnative/idt/jetbrains.html)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
