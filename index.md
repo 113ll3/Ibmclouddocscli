@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-10"
+lastupdated: "2018-01-29"
 
 ---
 
@@ -29,9 +29,9 @@ Click an option to get started:
 
 <img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="Click an icon to get started quickly with {{site.data.keyword.Bluemix_notm}} CLI." style="width:440px;" />
 <map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Download the {{site.data.keyword.Bluemix_notm}} CLI" title="Download" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Get started." title="Get started" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="View docs" title="View docs" shape="rect" coords="326, -10, 448, 218" />
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Download the {{site.data.keyword.Bluemix_notm}} CLI (Opens new page)" title="Download" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Get started (Opens new page)" title="Get started" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="View docs (Opens new page)" title="View docs" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
 ## {{site.data.keyword.dev_cli_notm}}
