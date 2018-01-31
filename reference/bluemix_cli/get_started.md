@@ -11,6 +11,7 @@ lastupdated: "2017-08-20"
 
 
 {:shortdesc: .shortdesc}
+{:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
 
 
@@ -35,7 +36,7 @@ To get started with {{site.data.keyword.Bluemix_notm}} CLI:
 
 1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}}
 
-  ![Example](example.gif)
+  ![Example](example.gif){: gif}
 
 Now you are ready to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `bluemix help` or `bx help` to see the command descriptions. 
 
