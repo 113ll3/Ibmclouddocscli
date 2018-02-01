@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2017-12-08"
+lastupdated: "2018-02-01"
 ---
 
 {:new_window: target="_blank"}
@@ -428,12 +428,14 @@ No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 Tip: use 'bx cf <command>' to run the Cloud Foundry CLI with {{site.data.keyword.Bluemix_notm}} CLI context.
 ```
 
+```
 $ bx sl init
 Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
 1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
 2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
-Enter a number> 2
-Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]> 
+
+Enter a number: 2
+Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1] 
 Setting account to: 278444
 OK
                               
