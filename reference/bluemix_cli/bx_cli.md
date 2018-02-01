@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2017-12-21"
+lastupdated: "2018-02-01"
 
 ---
 
@@ -3728,6 +3728,13 @@ Install the specific version of plugin to {{site.data.keyword.Bluemix_notm}} CLI
 bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
 
+```
+bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
+```
+
+If no repository is specified, the command uses the default plug-in repository.
+If no version is specified, the command selects the latest available version to install.
+
 <strong>Prerequisites</strong>:  None
 
 <strong>Command options</strong>:
@@ -3739,7 +3746,12 @@ bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
    <dd>The name of the repository where the plugin binary is located. If no repository is specified, the command uses the default plug-in repository.</dd>
    <dt>-v <i>VERSION</i> (optional)</dt>
    <dd>The version of the plugin to be installed. If not provided, the latest version of the plugin is installed. This option is valid only when you install the plugin from the repository.</dd>
+   <dt>-f </dt>
+   <dd>Force install of plugin without confirmation.</dd>
     </dl>
+    
+    
+The {{site.data.keyword.Bluemix_notm}} CLI has the official repository name of `Bluemix`.    
 
 <strong>Examples</strong>:
 
@@ -3755,15 +3767,15 @@ Install a plugin from the remote URL:
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-Install the `IBM-Containers` plugin of the latest version from the `bluemix-repo` repository:
+Install the `IBM-Containers` plugin of the latest version from the `Bluemix` repository:
 
 ```
-bluemix plugin install IBM-Containers -r bluemix-repo
+bluemix plugin install IBM-Containers -r Bluemix
 ```
-Install the `IBM-Containers` plugin with the  version `0.5.800` from the `bluemix-repo` repository:
+Install the `IBM-Containers` plugin with the  version `0.5.800` from the `Bluemix` repository:
 
 ```
-bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
+bluemix plugin install IBM-Containers -r Bluemix -v 0.5.800
 ```
 
 ## bluemix plugin update
