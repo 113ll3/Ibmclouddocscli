@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-01"
+lastupdated: "2018-02-05"
 
 ---
 
@@ -29,8 +29,8 @@ For more commands to manage plug-ins, run `bluemix plugin` to see the help messa
 
 ### Step 1: Search for the plug-in
 
-1. Use the command `bluemix plugin repo-plugins -r REPO_NAME` to look for a plugin in the repository.
-2. The {{site.data.keyword.Bluemix_notm}} CLI has the official repository with the name `Bluemix`, you can search the official plugins as shown in the following example:
+1. Use the command `bluemix plugin repo-plugins -r REPO_NAME` to look for a plug-in in the repository.
+2. The {{site.data.keyword.Bluemix_notm}} CLI has the official repository with the name `Bluemix`, you can search the official plug-ins as shown in the following example:
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -45,7 +45,7 @@ For more commands to manage plug-ins, run `bluemix plugin` to see the help messa
 
 ### Step 2: Install the plug-in
 
-Use the `bx plugin install PLUGIN_NAME -r REPO_NAME` command to install the plugin. For example, use the following command to install a plugin from the official IBM plugin repo `Bluemix`:
+Use the `bx plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug-in. For example, use the following command to install a plug-in from the official IBM plug-in repo `Bluemix`:
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix
@@ -70,7 +70,7 @@ Use the `bluemix plugin install LOCAL_FILE_NAME` command to install a plugin-in 
 
 ## Install a plug-in from a web URL
 
-Use the `bluemix plugin install URL` command to install a plugin directly from a web URL. For example
+Use the `bluemix plugin install URL` command to install a plug-in directly from a web URL. For example
 
   ```
   ~$ bluemix plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
