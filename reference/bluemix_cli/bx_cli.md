@@ -345,6 +345,8 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}} infrastructure
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
  </tr>
  <tr>
+  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
+  <td>[bluemix catalog locations](bx_cli.html#bluemix_catalog_locations)</td>
   <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
@@ -3536,6 +3538,32 @@ Create an application `my-python-app` based on `pythonHelloWorld` template witho
 ```
 bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 ```
+
+## bluemix catalog locations
+{: #bluemix_catalog_locations}
+
+Get a choice subset of regions in your choice of format.
+
+```
+bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+```
+
+<strong>Command options</strong>:
+
+<dl>
+  <dt>-i, --id</dt>
+  <dd>Specify geography by id.</dd>
+  <dt>-k, --kind</dt>
+  <dd>Get a list of entries for the specified kind.</dd>
+  <dt>--col</dt>
+  <dd>Specify additional columns for the table. Currently "group", "provider", and "tags".</dd>
+  <dt>--json</dt>
+  <dd>Output of the original JSON response.</dd>
+  <dt>--global</dt>
+  <dd>Operate in a global scope.</dd>
+  <dt>--csv</dt>
+  <dd>Output CSV file</dd>
+</dl>
 
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
