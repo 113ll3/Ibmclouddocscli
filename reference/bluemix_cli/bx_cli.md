@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-05"
+lastupdated: "2018-02-06"
 
 ---
 
@@ -2785,8 +2785,6 @@ bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_N
   <dd>New tags</dd>
   <dt>--service-plan-id</dt>
   <dd>New Service Plan ID</dd>
-  <dt>--update-time</dt>
-  <dd>Time in seconds since epoch when the chargeable record should take effect</dd>
   <dt>-f, --force</dt>
   <dd>Force update without confirmation</dd>
 </dl>
