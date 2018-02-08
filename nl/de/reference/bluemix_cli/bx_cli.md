@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-11-06"
+  years: 2015, 2018
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-11-06"
 # {{site.data.keyword.Bluemix_notm}}-Befehle (bx)
 {: #bluemix_cli}
 
-Version: 0.6.2
+Version: 0.6.4
 
 Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werden Befehle bereitgestellt, die nach Namensbereich für Benutzer zur Interaktion mit {{site.data.keyword.Bluemix_notm}} zusammengefasst sind.
 
@@ -713,7 +713,7 @@ Aktuelles Konto, aktuelle Region, aktuelle Organisation und aktuellen Bereich an
 bluemix target
 ```
 
-### bluemix update
+## bluemix update
 {: #bluemix_update}
 
 Die Befehlszeilenschnittstelle auf die neueste Version aktualisieren.
@@ -723,6 +723,12 @@ bluemix update
 ```
 
 <strong>Voraussetzungen</strong>: Keine
+
+<strong>Befehlsoptionen:</strong>
+<dl>
+  <dt>-f</dt>
+  <dd>Aktualisierung ohne Bestätigung erzwingen</dd>
+</dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
@@ -1945,7 +1951,7 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-v, --version</dt>
   <dd>Die Version der Servicerichtlinie</dd>
   <dt>-f, --file</dt>
-  <dd>Die JSON-Datei der Richtliniendefinition. Dies ist gegenseitig ausschließend mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' und 'resource-group-id'. </dd>
+  <dd>Die JSON-Datei der Richtliniendefinition. Dies ist gegenseitig ausschließend mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' und 'resource-group-id'.</dd>
   <dt>-r, --roles</dt>
   <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
   <dt>-service-name</dt>
@@ -2390,35 +2396,6 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>Löschung ohne Bestätigung erzwingen.</dd>
    </dl>
 
-## bluemix app domains
-{: #bluemix_app_domains}
-
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf domains`.
-
-
-## bluemix app domain-create
-{: #bluemix_app_domain_create}
-
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-domain`.
-
-
-## bluemix app domain-delete
-{: #bluemix_app_domain_delete}
-
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-domain`.
-
-
-## bluemix app shared-domain-create
-{: #bluemix_app_shared_domain_create}
-
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-shared-domain`.
-
-
-## bluemix app shared-domain-delete
-{: #bluemix_app_shared_domain_delete}
-
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-shared-domain`.
-
 ## bluemix app routes
 {: #bluemix_app_routes}
 
@@ -2721,7 +2698,7 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
   <dt>SERVICE_PLAN_NAME oder SERVICE_PLAN_ID (erforderlich)</dt>
   <dd>Der Name oder die ID des Serviceplans</dd>
   <dt>LOCATION</dt>
-  <dd>Zielposition oder -umgebung zum Erstellen der Serviceinstanz </dd>
+  <dd>Zielposition oder -umgebung zum Erstellen der Serviceinstanz</dd>
   <dt>-t, --tags</dt>
   <dd>Tags</dd>
   <dt>-p, --parameters</dt>
@@ -2852,7 +2829,7 @@ bluemix resource bindings my-service-alias my-app
 Servicebindung erstellen
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -2867,6 +2844,8 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>Der Name der Benutzerrolle</dd>
   <dt>--service-id-name</dt>
   <dd>Der Name der Service-ID, zu der die Rolle gehört</dd>
+  <dt>-p, --parameter</dt>
+  <dd>JSON-Datei oder JSON-Zeichenfolge als Parameter</dd>
   <dt>-f, --force</dt>
   <dd>Erstellung ohne Bestätigung erzwingen</dd>
 </dl>

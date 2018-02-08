@@ -2,16 +2,16 @@
 
 copyright:
 
-  years: 2016,2017
+  years: 2016,2018
 
-lastupdated: "2017-11-10"
 
+lastupdated: "2017-12-08"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) コマンド
+# {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー (bluemix sl) コマンド
 {: #softlayer_cli}
 
 {{site.data.keyword.BluSoftlayer}} プラグインは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。 このプラグインのインストールは必要なくなりました。
@@ -46,7 +46,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 2. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ブロック・ストレージ</caption>
  <thead>
- <th colspan="6">Softlayer ブロック・ストレージ</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ブロック・ストレージ</th>
  </thead>
  <tbody>
  <tr>
@@ -87,7 +87,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 3. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー CDN</caption>
  <thead>
- <th colspan="6">Softlayer CDN</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー CDN</th>
  </thead>
  <tbody>
  <tr>
@@ -113,7 +113,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 4. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ファイル・ストレージ</caption>
  <thead>
- <th colspan="6">Softlayer ファイル・ストレージ</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ファイル・ストレージ</th>
  </thead>
  <tbody>
  <tr>
@@ -155,7 +155,7 @@ lastupdated: "2017-11-10"
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 5. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー DNS コマンド</caption>
  <thead>
- <th colspan="6">Softlayer DNS コマンド</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー DNS コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -174,10 +174,11 @@ lastupdated: "2017-11-10"
    </tbody>
  </table>
 
+
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 6. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・グローバル IP コマンド</caption>
  <thead>
- <th colspan="6">Softlayer グローバル IP コマンド</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・グローバル IP コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -195,7 +196,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・イメージ・コマンド</caption>
  <thead>
- <th colspan="6">Softlayer イメージ・コマンド</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・イメージ・コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -212,7 +213,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー IPSec VPN コマンド</caption>
  <thead>
- <th colspan="6">Softlayer IPSec VPN コマンド</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー IPSec VPN コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -238,7 +239,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 8. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ロード・バランサー・コマンド</caption>
  <thead>
- <th colspan="6">Softlayer ロード・バランサー・コマンド</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ロード・バランサー・コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -276,7 +277,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 9. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・セキュリティー・コマンド</caption>
  <thead>
- <th colspan="5">Softlayer セキュリティー・コマンド</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・セキュリティー・コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -301,7 +302,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 10. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サブネット・コマンド</caption>
  <thead>
- <th colspan="5">Softlayer サブネット・コマンド</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サブネット・コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -319,7 +320,7 @@ lastupdated: "2017-11-10"
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 11. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー仮想サーバー・コマンド</caption>
  <thead>
- <th colspan="6">Softlayer 仮想サーバー・コマンド</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー仮想サーバー・コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -352,7 +353,7 @@ lastupdated: "2017-11-10"
   <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
 <caption>表 12. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー VLAN コマンド</caption>
  <thead>
- <th colspan="6">Softlayer VLAN コマンド</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー VLAN コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -372,7 +373,7 @@ lastupdated: "2017-11-10"
 ### bluemix sl init
 {: #sl_init}
 
-SoftLayer 環境への接続に使用される構成設定を初期化します。 この構成には、ユーザー名、API キーまたはパスワード、アカウント、およびエンドポイントが含まれます。
+{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー環境への接続に使用される構成設定を初期化します。この構成には、ユーザー名、API キーまたはパスワード、アカウント、およびエンドポイントが含まれます。
 ```
 bluemix sl init [OPTIONS]
 ```
@@ -380,7 +381,7 @@ bluemix sl init [OPTIONS]
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API エンドポイント URL (デフォルト: {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー API キー認証は https://api.softlayer.com/rest/v3.1、IBMid 認証は https://api.softlayer.com/mobile/v3.1)。</dd>
+<dd>{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー API エンドポイント URL。デフォルトは、API キー認証の場合は https://api.softlayer.com/rest/v3.1、IBMid 認証の場合は https://api.softlayer.com/mobile/v3.1。</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer ユーザー名。</dd>
 <dt>-p, --sl-password</dt>

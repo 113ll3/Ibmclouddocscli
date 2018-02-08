@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-11-06"
+  years: 2015, 2018
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-11-06"
 # Commandes {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Version : 0.6.2
+Version : 0.6.4
 
 L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit un ensemble de commandes qui sont regroupées par espace de nom pour que les utilisateurs puissent interagir avec {{site.data.keyword.Bluemix_notm}}.
 
@@ -714,7 +714,7 @@ Afficher le compte, la région, l'organisation et l'espace en cours :
 bluemix target
 ```
 
-### bluemix update
+## bluemix update
 {: #bluemix_update}
 
 Mettre à jour l'interface de ligne de commande vers la version la plus récente.
@@ -724,6 +724,12 @@ bluemix update
 ```
 
 <strong>Prérequis</strong> : Aucun
+
+<strong>Options de commande</strong> :
+<dl>
+  <dt>-f</dt>
+  <dd>Forcer la mise à jour sans confirmation</dd>
+</dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
@@ -2392,35 +2398,6 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>Force une suppression sans demander de confirmation.</dd>
    </dl>
 
-## bluemix app domains
-{: #bluemix_app_domains}
-
-Cette commande possède la même fonction et les mêmes options que la commande `cf domains`.
-
-
-## bluemix app domain-create
-{: #bluemix_app_domain_create}
-
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-domain`.
-
-
-## bluemix app domain-delete
-{: #bluemix_app_domain_delete}
-
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-domain`.
-
-
-## bluemix app shared-domain-create
-{: #bluemix_app_shared_domain_create}
-
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-shared-domain`.
-
-
-## bluemix app shared-domain-delete
-{: #bluemix_app_shared_domain_delete}
-
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-shared-domain`.
-
 ## bluemix app routes
 {: #bluemix_app_routes}
 
@@ -2854,7 +2831,7 @@ bluemix resource bindings my-service-alias my-app
 Créer une liaison de service
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
@@ -2869,6 +2846,8 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>Nom du rôle utilisateur</dd>
   <dt>--service-id-name</dt>
   <dd>Nom de l'ID de service auquel le rôle appartient</dd>
+  <dt>-p, --parameter</dt>
+  <dd>Fichier JSON ou chaîne JSON de paramètres</dd>
   <dt>-f, --force</dt>
   <dd>Forcer la création sans confirmation</dd>
 </dl>

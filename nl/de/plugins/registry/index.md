@@ -25,7 +25,7 @@ Die {{site.data.keyword.registrylong}}-Befehlszeilenschnittstelle (CLI) ist ein 
 **Voraussetzungen**
 * Melden Sie sich vor der Ausführung von Registry-Befehlen bei {{site.data.keyword.Bluemix_notm}} mit dem Befehl `bx login` an, um ein Zugriffstoken zu generieren und Ihre Sitzung zu authentifizieren.
 
-Informationen zur Verwendung der {{site.data.keyword.registrylong_notm}}-CLI finden Sie in der [Einführung zu {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html). 
+Informationen zur Verwendung der {{site.data.keyword.registrylong_notm}}-CLI finden Sie in der [Einführung zu {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html).
 
 <table summary="{{site.data.keyword.registrylong_notm}} verwalten">
 <caption>Tabelle 1. Befehle zur Verwaltung von {{site.data.keyword.registrylong_notm}}
@@ -96,11 +96,11 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--
 <dt>--no-cache</dt>
 <dd>(Optional) Bei Angabe werden im Cache zwischengespeicherte Image-Layer aus vorherigen Builds in diesem Build nicht verwendet.</dd>
 <dt>--pull</dt>
-<dd>(Optional) Bei Angabe werden die Basisimages auch dann extrahiert, wenn ein Image mit einem übereinstimmenden Tag bereits auf dem Build-Host existiert. </dd>
+<dd>(Optional) Bei Angabe werden die Basisimages auch dann extrahiert, wenn ein Image mit einem übereinstimmenden Tag bereits auf dem Build-Host existiert.</dd>
 <dt>--quiet, -q</dt>
-<dd>(Optional) Bei Angabe wird die Buildausgabe unterdrückt, es sei denn, es tritt ein Fehler auf. </dd>
+<dd>(Optional) Bei Angabe wird die Buildausgabe unterdrückt, es sei denn, es tritt ein Fehler auf.</dd>
 <dt> --build-arg KEY=VALUE</dt>
-<dd>(Optional) Geben Sie ein zusätzliches Buildargument im Format 'KEY=VALUE' an. Mehrere Buildargumente können angegeben werden, indem Sie diesen Parameter mehrmals einschließen. Der Wert der einzelnen Buildargumente steht als Umgebungsvariable zur Verfügung, wenn Sie eine ARG-Zeile angeben, die mit dem Schlüssel in Ihrer Dockerfile übereinstimmt. </dd>
+<dd>(Optional) Geben Sie ein zusätzliches Buildargument im Format 'KEY=VALUE' an. Mehrere Buildargumente können angegeben werden, indem Sie diesen Parameter mehrmals einschließen. Der Wert der einzelnen Buildargumente steht als Umgebungsvariable zur Verfügung, wenn Sie eine ARG-Zeile angeben, die mit dem Schlüssel in Ihrer Dockerfile übereinstimmt.</dd>
 <dt>--file FILE, -f FILE</dt>
 <dd>(Optional) Wenn Sie die gleichen Dateien für mehrere Builds verwenden, können Sie einen Pfad zu einer anderen Dockerfile auswählen. Geben Sie die Position der Dockerfile relativ zum Buildkontext an. Wenn keine Angabe gemacht wird, lautet der Standardwert `PATH/Dockerfile`, wobei PATH das Stammverzeichnis des Buildkontextes ist.</dd>
 <dt>--tag TAG, -t TAG</dt>
@@ -134,11 +134,13 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
+Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
-<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Sie können mehrere Images untersuchen, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten. <p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Ist im Imagenamen kein Tag angegeben, wird das Image mit dem Tag `latest` untersucht. </p> 
+<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Sie können mehrere Images untersuchen, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten.
+
+<p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Ist im Imagenamen kein Tag angegeben, wird das Image mit dem Tag `latest` untersucht. </p> 
 
 </dd>
 </dl>
@@ -163,11 +165,11 @@ Zeigt alle Images in Ihrem {{site.data.keyword.Bluemix_notm}}-Konto an.
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
+Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>-q, --quiet</dt>
-<dd>(Optional) Die einzelnen Images werden in folgendem Format aufgelistet: `repository:tag`. </dd>
+<dd>(Optional) Die einzelnen Images werden in folgendem Format aufgelistet: `repository:tag`.</dd>
 <dt>--restrict RESTRICTION</dt>
 <dd>(Optional) Begrenzen Sie die Ausgabe, um lediglich Images in dem angegebenen Namensbereich bzw. in der Kombination aus Namensbereich und Repository anzuzeigen. </dd>
 <dt>--include-ibm</dt>
@@ -189,7 +191,9 @@ bx cr image-rm IMAGE [IMAGE...]
 **Parameter**
 <dl>
 <dt>IMAGE</dt>
-<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Sie können mehrere Images gleichzeitig löschen, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten. <p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Wenn der Imagename ohne Tag angegeben wird, wird standardmäßig das Image mit dem Tag `latest` gelöscht. </p> 
+<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Sie können mehrere Images gleichzeitig löschen, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten.
+
+<p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Wenn der Imagename ohne Tag angegeben wird, wird standardmäßig das Image mit dem Tag `latest` gelöscht.</p> 
 
 </dd>
 </dl>
@@ -321,7 +325,7 @@ bx cr region
 ```
 {: codeblock}
 
-Weitere Informationen finden Sie unter [Regionen](../../../services/Registry/registry_overview.html#registry_regions). 
+Weitere Informationen finden Sie unter [Regionen](../../../services/Registry/registry_overview.html#registry_regions).
 
 
 ## bx cr region-set
@@ -339,7 +343,7 @@ bx cr region-set [REGION]
 <dt>REGION</dt>
 <dd>(Optional) Der Name Ihrer Zielregion, z. B. `us-south`. 
 
-Weitere Informationen finden Sie unter [Regionen](../../../services/Registry/registry_overview.html#registry_regions). 
+Weitere Informationen finden Sie unter [Regionen](../../../services/Registry/registry_overview.html#registry_regions).
 
 </dd>
 </dl>
@@ -403,7 +407,7 @@ bx cr token-list --format FORMAT
 <dt>--format FORMAT</dt>
 <dd>(Optional) Formatiert die Ausgabeelemente unter Verwendung einer Go-Vorlage. 
 
-Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing). 
+Weitere Informationen finden Sie unter [CLI-Ausgabe für {{site.data.keyword.registrylong_notm}}-Befehle formatieren und filtern](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 </dl>
@@ -429,7 +433,7 @@ bx cr token-rm TOKEN [TOKEN...]
 ## bx cr vulnerability-assessment (bx cr va)
 {: #bx_cr_va}
 
-Zeigt eine Schwachstellenanalyse für Ihre Images an. 
+Zeigt eine Schwachstellenanalyse für Ihre Images an.
 
 ```
 bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--configuration-issues | -c] [--output FORMAT | -o FORMAT] IMAGE [IMAGE...] 
@@ -439,7 +443,9 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 **Parameter**
 <dl>
 <dt>IMAGE</dt>
-<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Der Bericht informiert Sie darüber, ob das Image bekannte Paketschwachstellen aufweist. Sie können Berichte für mehrere Images gleichzeitig anfordern, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten. <p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Ist im Imagenamen kein Tag angegeben, wird das Image mit dem Tag `latest` im Bericht beurteilt. </p> 
+<dd>Der Name des Images, für das ein Bericht abgerufen werden soll. Der Bericht informiert Sie darüber, ob das Image bekannte Paketschwachstellen aufweist. Sie können Berichte für mehrere Images gleichzeitig anfordern, indem Sie die einzelnen Images in dem Befehl jeweils durch ein Leerzeichen getrennt auflisten.
+
+<p>Eine Liste mit den Namen Ihrer Images können Sie mit dem Befehl `bx cr image-list` anzeigen. Kombinieren Sie den Inhalt der Spalten für Repository und Tag, um den Imagenamen im Format `repository:tag` zu erstellen. Ist im Imagenamen kein Tag angegeben, wird das Image mit dem Tag `latest` im Bericht beurteilt. </p> 
 
 <p>Folgende Betriebssysteme werden unterstützt:
 
@@ -468,11 +474,11 @@ Weitere Informationen finden Sie in [Imagesicherheit mit Vulnerability Advisor v
 
 </dd>
 <dt>--vulnerabilities, -v</dt>
-<dd>(Optional) Die Befehlsausgabe ist auf die Anzeige von Schwachstellen begrenzt. </dd>
+<dd>(Optional) Die Befehlsausgabe ist auf die Anzeige von Schwachstellen begrenzt.</dd>
 <dt>--configuration-issues, -c</dt>
-<dd>(Optional) Die Befehlsausgabe ist auf die Anzeige von Konfigurationsproblemen begrenzt. </dd>
+<dd>(Optional) Die Befehlsausgabe ist auf die Anzeige von Konfigurationsproblemen begrenzt.</dd>
 <dt>--extended, -e </dt>
-<dd>(Optional) In der Befehlsausgabe werden zusätzliche Informationen zu Korrekturen für gefährdete Pakete angezeigt. </dd>
+<dd>(Optional) In der Befehlsausgabe werden zusätzliche Informationen zu Korrekturen für gefährdete Pakete angezeigt.</dd>
 
 </dl>
 

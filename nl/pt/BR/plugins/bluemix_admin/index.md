@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-12-07"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -703,7 +703,7 @@ organização no comando.</dd>
 {: #admin_add_report}
 
 ### Incluindo Relatórios
-{: #admin_add_report}
+{: #admin_adding_report}
 
 Para incluir um relatório de segurança, use o comando a seguir:
 
@@ -818,7 +818,7 @@ padrão.</dd>
 </dl>
 
 
-É possível visualizar a lista de parâmetros de comando e exemplos acima usando o comando a seguir:
+É possível visualizar a lista anterior de parâmetros de comando e exemplos usando o comando a seguir:
 
 ```
 cf ba resource-metrics-history -help

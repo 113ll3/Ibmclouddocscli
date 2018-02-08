@@ -13,17 +13,19 @@ Interface de ligne de commande et outils de développement
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
 	reference/bluemix_cli/all_versions.md
+	[Commandes d'outils de développement IBM Cloud](../cloudnative/idt/commands.html)
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
 
 	{: .topicgroup}
 	Plug-in d'interface de ligne de commande IBM Cloud
+		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service](../containers/cs_cli_devtools.html)
-		[IBM Developer](../cloudnative/dev_cli.html)
-		plugins/pnp/index.md
-		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[IBM Developer](../cloudnative/idt/index.html)
+ 		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk/index.html)
 		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 	
@@ -34,21 +36,15 @@ Interface de ligne de commande et outils de développement
 		plugins/vpn/index.md
 	
 	{: .topicgroup}
-	Outils de développement intégrés
-		ibm-dev-tools-for-vscode.md
-		[Kit d'outils de développement API Connect](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
-		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
-		[Déploiement d'applications à l'aide d'IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
-		[Gestion des applications Liberty et Node.js](../manageapps/app_mng.html#app_management)
+	Environnements de développement recommandés
+		[Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
+		[IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
+		[IBM Developer Tools for JetBrains](../cloudnative/idt/jetbrains.html)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	login_federated_id.md
-	connect_dedicated_id.md
-	[Développement avec des chaînes d'outils](../services/ContinuousDelivery/dev_use_toolchains.html)
-	[Développement avec Eclipse Tools](../starters/deploy_eclipsetools.html)
-	[Déploiement de votre application avec l'interface de ligne de commande](../starters/install_cli.html)
-	[Téléchargement de votre application](../starters/upload_app.html)
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
 	{: .navgroup-end}

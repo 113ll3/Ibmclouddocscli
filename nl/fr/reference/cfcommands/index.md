@@ -23,7 +23,7 @@ lastupdated: "2017-05-03"
 L'interface de ligne de commande Cloud Foundry (cf) fournit un ensemble de commandes permettant de gérer vos applications. Les informations ci-après répertorient les commandes cf le plus souvent utilisées pour gérer les applications avec leurs noms, leurs options, leur syntaxe, les éléments prérequis, leur description et des exemples. Pour afficher toutes les commandes cf et les informations d'aide associées, entrez `cf help`. Entrez `cf nom_commande -h` afin d'afficher des informations d'aide détaillées pour une commande particulière.
 {: shortdesc}
 
-**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement `HTTP_PROXY`. Pour plus d'informations, voir [Using the cf CLI with an HTTP Proxy Server ![External link icon](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement `HTTP_PROXY`. Pour plus d'informations, voir [Using the cf CLI with an HTTP Proxy Server ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
 
 ## Index des commandes de l'interface de ligne de commande Cloud Foundry
@@ -418,7 +418,7 @@ avec le paramètre -p. A la place,
 entrez le mot de passe lorsque l'interface de ligne de commande vous y invite.</dd>
 <dt>*-sso*</dt>
 <dd>Vous devez utiliser l'option de connexion unique (SSO) pour vous connecter à l'aide d'un ID fédéré. Cela n'est pas obligatoire lorsque vous vous connectez avec un IBMid. Si vous essayez de vous connecter avec un ID fédéré sans spécifier le paramètre de connexion unique, vous serez invité à l'inclure. Lorsque vous utilisez le paramètre de connexion unique, vous êtes invité à entrer un code d'accès unique lors de la connexion.</dd>
-<dt>*-o*nom_organisation</dt>
+<dt>*-o* nom_organisation</dt>
 <dd>Nom de l'organisation à laquelle vous voulez vous connecter.</dd>
 <dt>*-s*nom_espace</dt>
 <dd>Nom de l'espace auquel vous voulez vous connecter.</dd>
@@ -842,7 +842,7 @@ cf -v
 ## Liens connexes
 {: #general}
 
-* [Download Cloud Foundry CLI ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+* [Download Cloud Foundry CLI ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
-* [Quick Reference Card - cf commands ![External link icon](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+* [Quick Reference Card - cf commands ![Icône de lien externe](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}

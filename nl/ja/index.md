@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-11-08"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -14,34 +14,33 @@ lastupdated: "2017-11-08"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# ダウンロード 
+# CLI およびツールの概要
+{: #overview}
 
-## Bluemix CLI
+{{site.data.keyword.Bluemix_notm}} には、堅固な CLI、および CLI と統合されるプラグインが用意されています。
+
+## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
 
 {{site.data.keyword.Bluemix}} CLI は、{{site.data.keyword.Bluemix_notm}} 環境内のリソースを管理するためのコマンド・ライン・エクスペリエンスを提供します。 また、Cloud Foundry アプリケーションとサービスを管理するための Cloud Foundry コマンド・ライン・インターフェースである cf が、そのインストール済み環境に組み込まれています。
 {:shortdesc}
 
-[ダウンロード](/docs/cli/reference/bluemix_cli/all_versions.html){: new_window} <br>
-[開始](/docs/cli/reference/bluemix_cli/get_started.html){: new_window} <br>
-[資料の表示](/docs/cli/reference/bluemix_cli/bx_cli.html){: new_window} <br>
+開始するには、以下のいずれかのオプションをクリックします。
 
+<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="アイコンをクリックして、{{site.data.keyword.Bluemix_notm}} CLI を即時に開始する。" style="width:440px;" />
+<map name="home_map" id="home_map">
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="{{site.data.keyword.Bluemix_notm}} CLI のダウンロード" title="ダウンロード" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="開始" title="開始" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="資料の表示" title="資料の表示" shape="rect" coords="326, -10, 448, 218" />
+</map>
 
-## IBM Cloud Application Tools 2 (ベータ)
-{: #icat notoc}
+## {{site.data.keyword.dev_cli_notm}}
+{: #idt}
 
-IBM Cloud Application Tools 2 は、macOS でのローカル環境のセットアップと管理を目的として合理化されたメニュー・バー・アプリケーションです。 IBM Cloud Application Tools 2 を使用することにより、Bluemix のツールと CLI のインストールや更新を容易に行ったり、CLI のデプロイメント・ターゲットを変更したり、共通の Bluemix リンクに素早くアクセスしたりすることができます。
+{{site.data.keyword.dev_cli_long}} (IDT) は、クラウド・ネイティブ・アプリを作成、ビルド、およびデプロイするための、{{site.data.keyword.Bluemix}} CLI に対する開発者固有の拡張機能 (`bx dev`) を提供します。IDT のインストールには、基本の {{site.data.keyword.Bluemix_notm}} CLI、複数の拡張機能、およびすべてのシステムの前提条件が含まれます。
+{:shortdesc}
 
-[ダウンロード](http://ibm.biz/icat-2-download){: new_window} <br>
-[資料の表示](/docs/cli/icat.html){: new_window} <br>
-
-
-## ![](./images/Integrated_Dev_Tools.svg) 統合開発ツール
-{: #ide}
-
-お気に入りの {{site.data.keyword.Bluemix_notm}} サービスを統合するためのプラグインをダウンロードしてインストールします。
-
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
-|----------|----------|----------|----------|----------|
-| [Liberty Eclipse プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse プラグイン](/docs/services/rules/index-gentopic1.html#genTopProcId2) | [デベロッパーズ・ツールキット![外部リンク・アイコン](../icons/launch-glyph.svg)](/docs/services/apiconnect/creating_apis.html){: new_window} | [{{site.data.keyword.Bluemix_notm}} Eclipse プラグイン](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="表 6. プラグイン" caption-side="top"}
+- [概要とインストール](/docs/cloudnative/idt/index.html) <br>
+- [開始](/docs/cloudnative/idt/index.html) <br>
+- [コマンド](/docs/cloudnative/idt/commands.html) <br>
+- [クラウド・ネイティブの開発](/docs/cloudnative/index.html) <br>

@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-08-20"
 
 ---
@@ -31,7 +31,7 @@ lastupdated: "2017-08-20"
 
 1. インストーラーを実行します。
    * macOS および Windows の場合は、単純にインストーラーを実行します。
-   * Linux の場合は、パッケージを解凍し、`install_bluemix_cli` スクリプトを実行します。
+   * Linux の場合、パッケージを解凍し、`install_bluemix_cli` スクリプトを実行します。
 
 1. API エンドポイントをターゲットに指定し、{{site.data.keyword.Bluemix_notm}} にログインします。
 

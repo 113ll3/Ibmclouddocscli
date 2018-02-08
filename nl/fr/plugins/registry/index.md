@@ -96,11 +96,11 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--
 <dt>--no-cache</dt>
 <dd>(Facultatif) Lorsque ce paramètre est spécifié, les couches d'image mises en cache à partir de générations précédentes ne sont pas utilisées dans cette génération.</dd>
 <dt>--pull</dt>
-<dd>(Facultatif) Si ce paramètre est spécifié, les images de base sont extraites même si une image dotée d'une étiquette correspondante existe déjà sur l'hôte de génération. </dd>
+<dd>(Facultatif) Si ce paramètre est spécifié, les images de base sont extraites même si une image dotée d'une étiquette correspondante existe déjà sur l'hôte de génération.</dd>
 <dt>--quiet, -q</dt>
 <dd>(Facultatif) Si ce paramètre est spécifié, la sortie de génération est supprimée sauf en cas d'erreur.</dd>
 <dt> --build-arg KEY=VALUE</dt>
-<dd>(Facultatif) Spécifiez un argument de génération supplémentaire au format 'KEY=VALUE'. Vous avez la possibilité d'indiquer plusieurs arguments de génération en ajoutant ce paramètre plusieurs fois. La valeur de chaque argument de génération est disponible en tant que variable d'environnement quand vous spécifiez une ligne ARG qui correspond à la clé dans votre Dockerfile. </dd>
+<dd>(Facultatif) Spécifiez un argument de génération supplémentaire au format 'KEY=VALUE'. Vous avez la possibilité d'indiquer plusieurs arguments de génération en ajoutant ce paramètre plusieurs fois. La valeur de chaque argument de génération est disponible en tant que variable d'environnement quand vous spécifiez une ligne ARG qui correspond à la clé dans votre Dockerfile.</dd>
 <dt>--file FILE, -f FILE</dt>
 <dd>(Facultatif) Si vous utilisez les mêmes fichiers pour plusieurs générations, vous pouvez sélectionner un chemin vers un fichier Dockerfile différent. Indiquez l'emplacement du fichier Dockerfile par rapport au contexte de génération. Si vous ne l'indiquez pas, la valeur par défaut est `PATH/Dockerfile`, où PATH correspond à la racine du contexte de génération.</dd>
 <dt>--tag TAG, -t TAG</dt>
@@ -139,6 +139,7 @@ Pour plus d'informations, voir [Formatage et filtrage de la sortie de l'interfac
 </dd>
 <dt>IMAGE</dt>
 <dd>Nom de l'image pour laquelle vous voulez obtenir un rapport. Vous pouvez inspecter plusieurs images en les répertoriant dans la commande, séparées les unes des autres par un espace.
+
 <p>Pour trouver les noms de vos images, exécutez `bx cr image-list`. Associez le contenu des colonnes Repository et Tag pour créer le nom de l'image au format `repository:tag`. Si aucune étiquette n'est spécifiée dans le nom de l'image, l'image associée à l'étiquette `latest` est inspectée. </p> 
 
 </dd>
@@ -191,6 +192,7 @@ bx cr image-rm IMAGE [IMAGE...]
 <dl>
 <dt>IMAGE</dt>
 <dd>Nom de l'image pour laquelle vous voulez obtenir un rapport. Vous pouvez supprimer plusieurs images en même temps en les répertoriant dans la commande, séparées les unes des autres par un espace.
+
 <p>Pour trouver les noms de vos images, exécutez `bx cr image-list`. Associez le contenu des colonnes Repository et Tag pour créer le nom de l'image au format `repository:tag`. Si aucune étiquette n'est spécifiée dans le nom de l'image, l'image associée à l'étiquette `latest` est supprimée par défaut.</p> 
 
 </dd>
@@ -442,6 +444,7 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 <dl>
 <dt>IMAGE</dt>
 <dd>Nom de l'image pour laquelle vous voulez obtenir un rapport. Le rapport vous signale si l'image comporte des vulnérabilités de package connues. Vous pouvez demander des rapports pour plusieurs images en même temps en les répertoriant dans la commande, séparées les unes des autres par un espace.
+
 <p>Pour trouver les noms de vos images, exécutez `bx cr image-list`. Associez le contenu des colonnes Repository et Tag pour créer le nom de l'image au format `repository:tag`. Si aucune étiquette n'est spécifiée dans le nom de l'image, le rapport évalue l'image associée à l'étiquette `latest`. </p> 
 
 <p>Les systèmes d'exploitation suivants sont pris en charge :
@@ -462,6 +465,7 @@ Pour plus d'informations, voir la rubrique relative à la [gestion de la sécuri
 </dd>
 <dt>--output FORMAT, -o FORMAT</dt>
 <dd>(Facultatif) La sortie de la commande est retournée dans le format choisi. Le format par défaut est `text`. Les formats suivants sont pris en charge :
+
 <ul>
 
 <li>`text`</li>

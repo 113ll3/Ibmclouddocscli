@@ -879,7 +879,7 @@ bluemix ic ps -a
 ```
 bluemix ic rename OLD_NAME NEW_NAME
 ```
-<strong>前提条件</strong>:  エンドポイント、ログイン、ターゲット、Docker
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
 <strong>コマンド・オプション</strong>:
 

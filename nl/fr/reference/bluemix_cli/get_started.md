@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-08-20"
 
 ---
@@ -31,7 +31,7 @@ Pour vous initier à l'interface de ligne de commande {{site.data.keyword.Bluemi
 
 1. Exécutez le programme d'installation
    * Pour Mac OS et Windows, exécutez simplement le programme d'installation.
-   * Pour Linux, procédez à l'extraction du contenu du package et exécutez le script `install_bluemix_cli`.
+   * Pour Linux, procédez à l'extraction du package et exécutez le script `install_bluemix_cli`. 
 
 1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}}
 

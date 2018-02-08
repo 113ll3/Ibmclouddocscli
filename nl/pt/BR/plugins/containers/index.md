@@ -28,9 +28,7 @@ O IBM Containers CLI é um plugin do {{site.data.keyword.Bluemix_notm}} CLI para
 <dt>Nó de Extremidade</dt>
 <dd>Um terminal de API deve ser configurado por meio de <code>bluemix api</code> antes de usar o comando.</dd>
 <dt>Login</dt>
-<dd>É necessário efetuar login usando o comando <code>bluemix login</code> antes de usar esse comando. Se
-estiver efetuando login com o ID federado, use a opção '--sso' para
-autenticar com a senha descartável.</dd>
+<dd>É necessário efetuar login usando o comando <code>bluemix login</code> antes de usar esse comando. Se estiver efetuando login com o ID federado, use a opção '--sso' para autenticar com a senha descartável.</dd>
 <dt>Destino</dt>
 <dd>O comando <code>bluemix target</code> deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
 <dt>Docker</dt>
@@ -141,8 +139,7 @@ bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
    <dt>--no-stdin (opcional)</dt>
    <dd>Não inclua a entrada padrão.</dd>
    <dt>--sig-proxy (opcional)</dt>
-   <dd>Efetue proxy de todos os sinais recebidos para o processo. O valor padrão é
-<i>true</i>.</dd>
+   <dd>Efetue proxy de todos os sinais recebidos para o processo. O valor padrão é <i>true</i>.</dd>
    <dt><i>CONTAINER</i> (obrigatório)</dt>
    <dd>O nome ou ID do contêiner.</dd>
     </dl>
@@ -463,15 +460,11 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 <strong>Opções de comando</strong>:
  <dl>
    <dt>--anti (opcional)</dt>
-   <dd>Use antiafinidade para tornar seu grupo de contêiner mais altamente
-disponível. A opção --anti força cada instância de contêiner em seu grupo a ser colocada em um nó de cálculo físico separado, reduzindo as chances de todos os contêineres em um grupo sofrerem um impacto devido a uma falha no hardware. Talvez você não consiga usar essa opção com tamanhos de grupo maiores, porque cada região e organização {{site.data.keyword.Bluemix_notm}} têm um conjunto limitado de nós de cálculo. Se sua
-implementação não for bem-sucedida, reduza o número de instâncias de contêiner no grupo
-ou remova a opção --anti.</dd>
+   <dd>Use antiafinidade para tornar seu grupo de contêiner mais altamente disponível. A opção --anti força cada instância de contêiner em seu grupo a ser colocada em um nó de cálculo físico separado, reduzindo as chances de todos os contêineres em um grupo sofrerem um impacto devido a uma falha no hardware. Talvez você não consiga usar essa opção com tamanhos de grupo maiores, porque cada região e organização {{site.data.keyword.Bluemix_notm}} têm um conjunto limitado de nós de cálculo. Se sua implementação não for bem-sucedida, reduza o número de instâncias de contêiner no grupo ou remova a opção --anti.</dd>
    <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (opcional)</dt>
    <dd>O número de instância que você precisa. O padrão é <i>2</i>.</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>(opcional)</dt>
-   <dd>Configure a variável de ambiente. Liste diversas chaves separadamente. Se aspas forem incluídas, inclua-as em torno do nome da variável de ambiente e do valor. Por
-exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.</dd>
+   <dd>Configure a variável de ambiente. Liste diversas chaves separadamente. Se aspas forem incluídas, inclua-as em torno do nome da variável de ambiente e do valor. Por exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.</dd>
    <dt><i>GROUP_NAME</i> (obrigatório)</dt>
    <dd>O ID ou o nome do grupo de contêiner.</dd>
    </dl>
@@ -854,13 +847,11 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
    <dt>-a|--all (opcional)</dt>
    <dd>Mostre todos os contêineres, em execução e interrompidos.</dd>
    <dt>--filter env=<i>SEARCH_CRITERIA</i> (opcional)</dt>
-   <dd>Procure contêineres que possuem um valor específico da variável de ambiente. É possível filtrar seus contêineres por qualquer chave ou valor de variável de ambiente listados na seção Env da resposta da CLI ao inspecionar um contêiner. Substitua SEARCH_CRITERIA pela chave ou valor que você está procurando. Seus
-critérios de procura não precisam ser uma correspondência exata. </dd>
+   <dd>Procure contêineres que possuem um valor específico da variável de ambiente. É possível filtrar seus contêineres por qualquer chave ou valor de variável de ambiente listados na seção Env da resposta da CLI ao inspecionar um contêiner. Substitua SEARCH_CRITERIA pela chave ou valor que você está procurando. Seus critérios de procura não precisam ser uma correspondência exata. </dd>
    <dt>-s|--size (opcional)</dt>
    <dd>Liste os tamanhos dos contêineres.</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i> (opcional)</dt>
-   <dd>Liste os contêineres criados mais recentemente, em que <i>NUM</i> é o número dos contêineres criados mais recentemente que você deseja retornar. <br><br> Por exemplo, se você criou contêineres
-<i>node1</i> até <i>node5</i> sequencialmente, o comando <i>bluemix ic ps --limit 2</i> retornará node4 e node5 porque eles são os últimos dois contêineres criados. </dd>
+   <dd>Liste os contêineres criados mais recentemente, em que <i>NUM</i> é o número dos contêineres criados mais recentemente que você deseja retornar. <br><br> Por exemplo, se você criou contêineres <i>node1</i> até <i>node5</i> sequencialmente, o comando <i>bluemix ic ps --limit 2</i> retornará node4 e node5 porque eles são os últimos dois contêineres criados. </dd>
    <dt>-q|--quiet (opcional)</dt>
    <dd>Exiba somente os IDs de contêineres.</dd>
    </dl>
@@ -896,8 +887,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
-Recrie o serviço IBM Containers no espaço do {{site.data.keyword.Bluemix_notm}} no qual você efetuou login. A
-cota original para o espaço é mantida.
+Recrie o serviço IBM Containers no espaço do {{site.data.keyword.Bluemix_notm}} no qual você efetuou login. A cota original para o espaço é mantida.
 
 <strong>Importante</strong>: quando você executa esse comando, nenhum dos seus contêineres únicos e grupos nesse espaço será migrado para o espaço reprovisionado e eles serão removidos durante o processo de migração.
 
@@ -1188,9 +1178,7 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ## bluemix ic service-bind
 {: #bluemix_ic_service-bind}
 
-Inclua um serviço em um grupo de contêiner em execução. Esse comando está
-disponível apenas para grupos de contêineres. Contêineres únicos devem ligar um serviço
-como parte do comando bluemix ic run.
+Inclua um serviço em um grupo de contêiner em execução. Esse comando está disponível apenas para grupos de contêineres. Contêineres únicos devem ligar um serviço como parte do comando bluemix ic run.
 
 ```
 bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
@@ -1208,9 +1196,7 @@ bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
 ## bluemix ic service-unbind
 {: #bluemix_ic_service-unbind}
 
-Remova um serviço de um grupo de contêiner em execução. Esse comando está
-disponível apenas para grupos de contêineres. Contêineres únicos devem remover o contêiner e criar um
-novo sem o serviço.
+Remova um serviço de um grupo de contêiner em execução. Esse comando está disponível apenas para grupos de contêineres. Contêineres únicos devem remover o contêiner e criar um novo sem o serviço.
 
 ```
 bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
@@ -1384,8 +1370,7 @@ bluemix ic unpause CONTAINER
 
  `{message}`
 
- Em que
-`{message}` é o erro relacionado.
+ Em que `{message}` é o erro relacionado.
 
 - Comando com falha - Não foi possível se conectar ao serviço de nuvem do contêiner
 
@@ -1402,9 +1387,7 @@ bluemix ic unpause proxy
 
 Exclua o serviço IBM Containers do espaço do {{site.data.keyword.Bluemix_notm}} no qual você efetuou login.
 
-<strong>Atenção</strong>: Quando você executar esse comando, todos os contêineres
-únicos e grupos de contêineres serão perdidos. Seu espaço ainda estará disponível no
-Bluemix. Para começar a usar o IBM Containers novamente, deve-se executar `bluemix ic reprovision` para provisionar o serviço IBM Containers novamente.
+<strong>Atenção</strong>: Quando você executar esse comando, todos os contêineres únicos e grupos de contêineres serão perdidos. Seu espaço ainda estará disponível no Bluemix. Para começar a usar o IBM Containers novamente, deve-se executar `bluemix ic reprovision` para provisionar o serviço IBM Containers novamente.
 
 ```
 bluemix ic reprovision [--force|-f]
@@ -1446,8 +1429,7 @@ bluemix ic volume-create VOLUME_NAME FS_NAME
 
    <dl>
    <dt><i>FS_NAME</i> (opcional)</dt>
-   <dd>O nome do compartilhamento de arquivo. Se nenhum compartilhamento de arquivo estiver disponível ou nomeado, o volume será construído
-no compartilhamento de arquivo padrão do espaço.</dd>
+   <dd>O nome do compartilhamento de arquivo. Se nenhum compartilhamento de arquivo estiver disponível ou nomeado, o volume será construído no compartilhamento de arquivo padrão do espaço.</dd>
    <dt><i>VOLUME_NAME</i> (obrigatório)</dt>
    <dd>O nome do volume. O nome pode conter letras minúsculas, números, sublinhados _ e hifens -.</dd>
    </dl>
@@ -1654,13 +1636,7 @@ bluemix ic wait my_container
 ## bluemix ic wait-status
 {: #bluemix_ic_wait_status}
 
-Aguarde até que um único contêiner ou um grupo de contêiner atinja um estado não
-temporário. Durante esse tempo de espera, a linha de comandos
-não é retornada e você não pode inserir os comandos. Assim que o contêiner atinge um
-estado não temporário, uma mensagem de OK é exibida. Para contêineres únicos, os estados
-não temporários incluem Executando, Encerramento, Travado, Pausado ou Suspenso. Para
-grupos de contêineres, os estados não temporários incluem CREATE_COMPLETE,
-UPDATE_COMPLETE ou FAILED
+Aguarde até que um único contêiner ou um grupo de contêiner atinja um estado não temporário. Durante esse tempo de espera, a linha de comandos não é retornada e você não pode inserir os comandos. Assim que o contêiner atinge um estado não temporário, uma mensagem de OK é exibida. Para contêineres únicos, os estados não temporários incluem Executando, Encerramento, Travado, Pausado ou Suspenso. Para grupos de contêineres, os estados não temporários incluem CREATE_COMPLETE, UPDATE_COMPLETE ou FAILED
 
 ```
 bluemix ic wait-status CONTAINER

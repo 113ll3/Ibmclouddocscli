@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-12-07"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -79,7 +79,7 @@ Pour pouvoir utiliser le plug-in d'interface de ligne de commande d'administrati
 cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </code>
 <dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
+<dt class="pt dlterm">&lt;sous-domaine&gt;</dt>
 <dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}.<br />
 </dd>
 </dl>
@@ -667,7 +667,7 @@ edit-service-plan-visibility**.
 {: #admin_add_report}
 
 ### Ajout de rapports
-{: #admin_add_report}
+{: #admin_adding_report}
 
 Pour ajouter un rapport de sécurité, entrez la commande suivante :
 
@@ -785,7 +785,7 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 </dl>
 
 
-Vous pouvez afficher la liste des paramètres et exemples ci-dessus en utilisant la commande suivante :
+Vous pouvez afficher la liste précédente des paramètres et exemples en utilisant la commande suivante :
 
 ```
 cf ba resource-metrics-history -help

@@ -133,14 +133,18 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 **パラメーター**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。 
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。
+
+ 
 
 詳しくは、[{{site.data.keyword.registrylong_notm}} コマンドの CLI 出力のフォーマット設定およびフィルター操作](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)を参照してください。
 
 </dd>
 <dt>IMAGE</dt>
-<dd>レポートを取得するイメージの名前。このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージを検査できます。
-<p>イメージの名前を調べるには、`bx cr image-list` を実行します。リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。イメージ名にタグが指定されていない場合、`latest` というタグが付いたイメージが検査されます。 </p> 
+<dd>レポートを取得するイメージの名前。 このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージを検査できます。
+
+
+<p>イメージの名前を調べるには、`bx cr image-list` を実行します。 リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。 イメージ名にタグが指定されていない場合、`latest` というタグが付いたイメージが検査されます。 </p> 
 
 </dd>
 </dl>
@@ -151,7 +155,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 
 {{site.data.keyword.Bluemix_notm}} アカウント内のすべてのイメージを表示します。
 
-<p>**注:** イメージ名は、リポジトリー列とタグ列のコンテンツを `repository:tag` の形式で組み合わせたものです。</p> 
+<p>**注:** イメージ名は、リポジトリー列とタグ列のコンテンツを `repository:tag` の形式で組み合わせたものです。 </p> 
 
 ```
  bx cr image-list [--no-trunc] [--format FORMAT] [-q, --quiet] [--restrict RESTRICTION] [--include-ibm] 
@@ -163,7 +167,9 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>--no-trunc</dt>
 <dd>(オプション) イメージ・ダイジェストを切り捨てません。</dd>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。 
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。
+
+ 
 
 詳しくは、[{{site.data.keyword.registrylong_notm}} コマンドの CLI 出力のフォーマット設定およびフィルター操作](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)を参照してください。
 
@@ -171,7 +177,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>-q, --quiet</dt>
 <dd>(オプション) 各イメージが、`repository:tag` というフォーマットでリストされます。</dd>
 <dt>--restrict RESTRICTION</dt>
-<dd>(オプション) 指定された名前空間内または名前空間およびリポジトリー内のイメージのみを表示するように出力を制限します。</dd>
+<dd>(オプション) 指定された名前空間内または名前空間およびリポジトリー内のイメージのみを表示するように出力を制限します。 </dd>
 <dt>--include-ibm</dt>
 <dd>(オプション) {{site.data.keyword.IBM_notm}} 提供のパブリック・イメージを出力に含めます。 このオプションを指定しない場合、デフォルトではプライベート・イメージのみがリストされます。</dd>
 </dl>
@@ -191,8 +197,10 @@ bx cr image-rm IMAGE [IMAGE...]
 **パラメーター**
 <dl>
 <dt>IMAGE</dt>
-<dd>レポートを取得するイメージの名前。このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージを同時に削除できます。
-<p>イメージの名前を調べるには、`bx cr image-list` を実行します。リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。イメージ名にタグが指定されていない場合、`latest` とタグ付けされたイメージはデフォルトで削除されます。</p> 
+<dd>レポートを取得するイメージの名前。 このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージを同時に削除できます。
+
+
+<p>イメージの名前を調べるには、`bx cr image-list` を実行します。 リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。 イメージ名にタグが指定されていない場合、`latest` とタグ付けされたイメージはデフォルトで削除されます。</p> 
 
 </dd>
 </dl>
@@ -340,7 +348,9 @@ bx cr region-set [REGION]
 **パラメーター**
 <dl>
 <dt>REGION</dt>
-<dd>(オプション) ターゲット地域の名前。例えば、`us-south` などです。 
+<dd>(オプション) ターゲット地域の名前。例えば、`us-south` などです。
+
+ 
 
 詳しくは、『[地域](../../../services/Registry/registry_overview.html#registry_regions)』を参照してください。
 
@@ -404,7 +414,9 @@ bx cr token-list --format FORMAT
 **パラメーター**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。 
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。
+
+ 
 
 詳しくは、[{{site.data.keyword.registrylong_notm}} コマンドの CLI 出力のフォーマット設定およびフィルター操作](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)を参照してください。
 
@@ -442,10 +454,14 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 **パラメーター**
 <dl>
 <dt>IMAGE</dt>
-<dd>レポートを取得するイメージの名前。このレポートは、イメージに、既知のパッケージ脆弱性があるかどうかを報告します。 このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージを同時に要求できます。
-<p>イメージの名前を調べるには、`bx cr image-list` を実行します。リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。イメージ名にタグが指定されていない場合、レポートは `latest` というタグが付いたイメージを評価します。</p> 
+<dd>レポートを取得するイメージの名前。 このレポートは、イメージに、既知のパッケージ脆弱性があるかどうかを報告します。 このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージのレポートを同時に要求できます。
+
+
+<p>イメージの名前を調べるには、`bx cr image-list` を実行します。 リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。 イメージ名にタグが指定されていない場合、レポートは `latest` というタグが付いたイメージを評価します。 </p> 
 
 <p>以下のオペレーティング・システムがサポートされています。
+
+
 
 <ul>
 
@@ -462,7 +478,9 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 
 </dd>
 <dt>--output FORMAT、-o FORMAT</dt>
-<dd>(オプション) コマンド出力は選択された形式で返されます。デフォルトの形式は `text` です。以下の形式がサポートされています。
+<dd>(オプション) コマンド出力は選択された形式で返されます。 デフォルトの形式は `text` です。 以下の形式がサポートされています。
+
+
 
 <ul>
 

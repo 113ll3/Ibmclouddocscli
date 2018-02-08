@@ -13,17 +13,19 @@ CLI と開発ツール
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
 	reference/bluemix_cli/all_versions.md
+	[IBM Cloud Developer Tools コマンド](../cloudnative/idt/commands.html)
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
 
 	{: .topicgroup}
 	IBM Cloud CLI プラグイン
+		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service](../containers/cs_cli_devtools.html)
-		[IBM Developer](../cloudnative/dev_cli.html)
-		plugins/pnp/index.md
-		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[IBM Developer](../cloudnative/idt/index.html)
+ 		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk/index.html)
 		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 	
@@ -34,21 +36,15 @@ CLI と開発ツール
 		plugins/vpn/index.md
 	
 	{: .topicgroup}
-	統合開発ツール
-		ibm-dev-tools-for-vscode.md
-		[API Connect developer toolkit](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
-		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
-		[IBM Eclipse Tools for IBM Cloud を使用したアプリのデプロイ](../manageapps/eclipsetools/eclipsetools.html)
-		[Liberty および Node.js アプリの管理](../manageapps/app_mng.html#app_management)
+	推奨される開発環境
+		[Eclipse Tools を使用した開発](../starters/deploy_eclipsetools.html)
+		[IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
+		[IBM Developer Tools for JetBrains](../cloudnative/idt/jetbrains.html)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	login_federated_id.md
-	connect_dedicated_id.md
-	[ツールチェーンを使用した開発](../services/ContinuousDelivery/dev_use_toolchains.html)
-	[Eclipse Tools を使用した開発](../starters/deploy_eclipsetools.html)
-	[CLI を使用したアプリのデプロイ](../starters/install_cli.html)
-	[アプリのアップロード](../starters/upload_app.html)
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
 	{: .navgroup-end}

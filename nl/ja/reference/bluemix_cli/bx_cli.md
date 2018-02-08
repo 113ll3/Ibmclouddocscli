@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-11-06"
+  years: 2015, 2018
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-11-06"
 # {{site.data.keyword.Bluemix_notm}} (bx) コマンド
 {: #bluemix_cli}
 
-バージョン: 0.6.2
+バージョン: 0.6.4
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 
@@ -694,6 +694,8 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [--cf] [-o ORG] [-s SPACE]
    </dl>
 どのオプションも指定されていない場合、現行のアカウント、地域、組織、およびスペースが表示されます。
 
+
+
 <strong>例</strong>:
 
 現行のアカウント、組織、およびスペースを設定します。
@@ -714,7 +716,7 @@ bluemix target -r eu-gb
 bluemix target
 ```
 
-### bluemix update
+## bluemix update
 {: #bluemix_update}
 
 CLI を最新バージョンに更新します。
@@ -724,6 +726,12 @@ bluemix update
 ```
 
 <strong>前提条件</strong>: なし
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f</dt>
+  <dd>確認を求めずに更新を強制します</dd>
+</dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
@@ -2393,35 +2401,6 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>確認なしで削除を強制します。</dd>
    </dl>
 
-## bluemix app domains
-{: #bluemix_app_domains}
-
-このコマンドの機能とオプションは `cf domains` コマンドと同じです。
-
-
-## bluemix app domain-create
-{: #bluemix_app_domain_create}
-
-このコマンドの機能とオプションは `cf create-domain` コマンドと同じです。
-
-
-## bluemix app domain-delete
-{: #bluemix_app_domain_delete}
-
-このコマンドの機能とオプションは `cf delete-domain` コマンドと同じです。
-
-
-## bluemix app shared-domain-create
-{: #bluemix_app_shared_domain_create}
-
-このコマンドの機能とオプションは `cf create-shared-domain` コマンドと同じです。
-
-
-## bluemix app shared-domain-delete
-{: #bluemix_app_shared_domain_delete}
-
-このコマンドの機能とオプションは `cf delete-shared-domain` コマンドと同じです。
-
 ## bluemix app routes
 {: #bluemix_app_routes}
 
@@ -2856,7 +2835,7 @@ bluemix resource bindings my-service-alias my-app
 サービス・バインディングの作成
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2871,6 +2850,8 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>ユーザー役割の名前</dd>
   <dt>--service-id-name</dt>
   <dd>役割が属しているサービス ID の名前</dd>
+  <dt>-p, --parameter</dt>
+  <dd>パラメーター JSON ファイルまたは JSON 文字列</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに作成を強制します</dd>
 </dl>
@@ -3790,6 +3771,8 @@ bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 bluemix plugin install IBM-Containers -r bluemix-repo
 ```
 バージョン `0.5.800` の `IBM-Containers` プラグインを `bluemix-repo` リポジトリーからインストールするには、以下のように指定します。
+
+
 
 ```
 bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800

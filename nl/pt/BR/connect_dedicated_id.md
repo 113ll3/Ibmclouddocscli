@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
 lastupdated: "2017-12-08"
 
@@ -29,7 +29,7 @@ Para efetuar login em uma nuvem dedicada na qual o serviço IAM público está d
   O serviço de token público do IAM está disponível no ambiente dedicado.
   Efetue login com seu IBMid público ou use '--no-iam' para efetuar login somente como um usuário dedicado.
 
-  Email>
+  E-mail>
 ```
 
 Se seu ID dedicado já foi conectado ao IBMid público, ele autenticará e efetuará login:

@@ -41,7 +41,7 @@ Vous pouvez effectuer les tâches suivantes à l'aide de l'interface de ligne de
 Utilisez l'une des méthodes suivantes pour installer l'outil de ligne de commande dev_mode :
 - Installation locale
   1. Téléchargez le plug-in dev_mode correspondant à votre plateforme depuis le [référentiel de plug-in
-de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
   2. Accédez au dossier dans lequel le plug-in dev_mode est enregistré et installez ce plug-in via la commande cf install-plugin. Par exemple :
 
         ```

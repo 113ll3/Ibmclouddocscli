@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
 lastupdated: "2017-12-08"
 
@@ -63,7 +63,7 @@ Pour forcer une connexion au serveur UAA avec un ID dédié, spécifiez l'option
   $ bluemix login --no-iam
 ```
 
-## Déconnexion de votre ID dédié depuis l'IBMid public  
+## Déconnexion de votre ID dédié depuis l'IBMid public 
 
 Vous pouvez utiliser `bluemix iam dedicated-id-disconnect` pour déconnecter l'IBMid public de l'ID dédié connecté.
 

@@ -2,16 +2,16 @@
 
 copyright:
 
-  years: 2016,2017
+  years: 2016,2018
 
-lastupdated: "2017-11-10"
 
+lastupdated: "2017-12-08"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Befehle für {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl)
+# Befehle für {{site.data.keyword.BluSoftlayer_notm}}-Infrastruktur (bluemix sl)
 {: #softlayer_cli}
 
 Das Plug-in für {{site.data.keyword.BluSoftlayer}} wurde in die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle integriert. Sie müssen das Plug-in nicht mehr installieren.
@@ -47,7 +47,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 2. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Blockspeicher</caption>
  <thead>
- <th colspan="6">Softlayer - Blockspeicher</th>
+ <th colspan="6">Blockspeicher der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -88,7 +88,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 3. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Content Delivery Network</caption>
  <thead>
- <th colspan="6">Softlayer - Content Delivery Network</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}}-Infrastruktur - CDN</th>
  </thead>
  <tbody>
  <tr>
@@ -113,7 +113,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 4. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Dateispeicher</caption>
  <thead>
- <th colspan="6">Softlayer - Dateispeicher</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}}-Infrastruktur - Dateispeicher</th>
  </thead>
  <tbody>
  <tr>
@@ -154,7 +154,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
 <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 5. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - DNS-Befehle</caption>
  <thead>
- <th colspan="6">Softlayer - DNS-Befehle</th>
+ <th colspan="6">Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - DNS-Befehle</th>
  </thead>
  <tbody>
  <tr>
@@ -173,10 +173,11 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
    </tbody>
  </table>
 
+
 <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 6. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Befehle für globales IP (globalip)</caption>
  <thead>
- <th colspan="6">Softlayer - Befehle für globales IP (globalip)</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}}-Infrastruktur - Befehle für globales IP</th>
  </thead>
  <tbody>
  <tr>
@@ -194,7 +195,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 7. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Image-Befehle</caption>
  <thead>
- <th colspan="6">Softlayer - Image-Befehle</th>
+ <th colspan="6">Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Image-Befehle</th>
  </thead>
  <tbody>
  <tr>
@@ -211,7 +212,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 7. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - IPSec-VPN-Befehle</caption>
  <thead>
- <th colspan="6">Softlayer - IPSec-VPN-Befehle</th>
+ <th colspan="6">Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - IPSec-VPN-Befehle</th>
  </thead>
  <tbody>
  <tr>
@@ -237,7 +238,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 8. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Befehle der Lastausgleichsfunktion (loadbal)</caption>
  <thead>
- <th colspan="6">Softlayer - Befehle der Lastausgleichsfunktion (loadbal)</th>
+ <th colspan="6">Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Befehle der Lastausgleichsfunktion (loadbal)</th>
  </thead>
  <tbody>
  <tr>
@@ -270,7 +271,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 9. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Sicherheitsbefehle (security)</caption>
  <thead>
- <th colspan="5">Softlayer - Sicherheitsbefehle (security)</th>
+ <th colspan="5">Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Sicherheitsbefehle</th>
  </thead>
  <tbody>
  <tr>
@@ -295,7 +296,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 10. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Teilnetzbefehle (subnet)</caption>
  <thead>
- <th colspan="5">Softlayer - Teilnetzbefehle (subnet)</th>
+ <th colspan="5">Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Teilnetzbefehle (subnet)</th>
  </thead>
  <tbody>
  <tr>
@@ -313,7 +314,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 11. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Virtual-Server-Befehle</caption>
  <thead>
- <th colspan="6">Softlayer - Virtual-Server-Befehle</th>
+ <th colspan="6">Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - Virtual-Server-Befehle</th>
  </thead>
  <tbody>
  <tr>
@@ -346,7 +347,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix sl`, um 
   <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 12. Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - VLAN-Befehle</caption>
  <thead>
- <th colspan="6">Softlayer - VLAN-Befehle</th>
+ <th colspan="6">Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} - VLAN-Befehle</th>
  </thead>
  <tbody>
  <tr>
@@ -366,7 +367,7 @@ Zur Anzeige der Hilfeinformationen für die Befehle führen Sie folgenden Befehl
 ### bluemix sl init
 {: #sl_init}
 
-Konfigurationseinstellungen initialisieren, die für die Verbindung zur SoftLayer-Umgebung verwendet werden. Die Konfiguration enthält den Benutzernamen, den API-Schlüssel oder das Kennwort, das Konto und den Endpunkt.
+Konfigurationseinstellungen initialisieren, die für die Verbindung zur {{site.data.keyword.BluSoftlayer_notm}}-Infrastrukturumgebung verwendet werden. Die Konfiguration enthält den Benutzernamen, den API-Schlüssel oder das Kennwort, das Konto und den Endpunkt.
 ```
 bluemix sl init [OPTIONEN]
 ```
@@ -374,7 +375,7 @@ bluemix sl init [OPTIONEN]
 <strong>Befehlsoptionen</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer-API-Endpunkt-URL, Standardwert: https://api.softlayer.com/rest/v3.1 für API-Schlüssel-Authentifizierung der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}}, https://api.softlayer.com/mobile/v3.1 für IBMid-Authentifizierung.</dd>
+<dd>URL des API-Endpunkts für die {{site.data.keyword.BluSoftlayer_notm}}-Infrastruktur, Standardwert: https://api.softlayer.com/rest/v3.1 für API-Schlüssel-Authentifizierung, https://api.softlayer.com/mobile/v3.1 für IBMid-Authentifizierung.</dd>
 <dt>-u, --sl-user</dt>
 <dd>Der SoftLayer-Benutzername.</dd>
 <dt>-p, --sl-password</dt>

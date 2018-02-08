@@ -13,17 +13,19 @@ Ferramentas CLI e de desenvolvimento
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
 	reference/bluemix_cli/all_versions.md
+	[Comandos de ferramentas do desenvolvedor do IBM Cloud](../cloudnative/idt/commands.html)
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
 
 	{: .topicgroup}
 	Plug-ins da CLI do IBM Cloud
+		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Container Service](../containers/cs_cli_devtools.html)
-		[IBM Developer](../cloudnative/dev_cli.html)
-		plugins/pnp/index.md
-		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[Serviço de contêiner](../containers/cs_cli_devtools.html)
+		[IBM Developer](../cloudnative/idt/index.html)
+ 		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk/index.html)
 		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 	
@@ -34,21 +36,15 @@ Ferramentas CLI e de desenvolvimento
 		plugins/vpn/index.md
 	
 	{: .topicgroup}
-	Ferramentas de desenvolvimento integrado
-		ibm-dev-tools-for-vscode.md
-		[API Connect Developer Toolkit](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
-		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
-		[Implementando apps com o IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
-		[Gerenciando apps do Liberty e Node.js](../manageapps/app_mng.html#app_management)
+	Ambientes de desenvolvimento recomendados
+  [Desenvolvendo com o Eclipse Tools](../starters/deploy_eclipsetools.html)
+  [IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
+  [IBM Developer Tools for JetBrains](../cloudnative/idt/jetbrains.html)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	login_federated_id.md
-	connect_dedicated_id.md
-	[Desenvolvendo com cadeias de ferramentas](../services/ContinuousDelivery/dev_use_toolchains.html)
-	[Desenvolvendo com Eclipse Tools](../starters/deploy_eclipsetools.html)
-	[Implementando seu aplicativo com a CLI](../starters/install_cli.html)
-	[Fazendo upload de seu app](../starters/upload_app.html)
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
 	{: .navgroup-end}

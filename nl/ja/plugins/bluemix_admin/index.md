@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-12-07"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -121,7 +121,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ### {{site.data.keyword.Bluemix_dedicated_notm}} からのユーザーの招待
 {: #admin_dedicated_invite_public}
 
-それぞれの {{site.data.keyword.Bluemix_dedicated_notm}} 環境には、{{site.data.keyword.Bluemix_notm}} にパブリックの、クライアント所有の、企業アカウントがあります。Dedicated 環境のユーザーが {{site.data.keyword.containershort}} を使用してクラスターを作成するためには、管理者はユーザーをこのパブリック企業アカウントに追加する必要があります。ユーザーがパブリック企業アカウントに追加されると、ユーザーの Dedicated アカウントとパブリック・アカウントがリンクされます。そしてユーザーは IBM ID を使用して Dedicated とパブリックの両方に同時にログインでき、Dedicated のインターフェースからパブリック・アカウントにリソースを作成できます。詳しくは、『[Dedicated での IBM Cloud Container Service のセットアップ](/docs/containers/cs_dedicated.html#dedicated_setup)』を参照してください。Dedicated のユーザーをパブリック・アカウントに招待するには以下のようにします。
+それぞれの {{site.data.keyword.Bluemix_dedicated_notm}} 環境には、{{site.data.keyword.Bluemix_notm}} にパブリックの、クライアント所有の、企業アカウントがあります。 Dedicated 環境のユーザーが {{site.data.keyword.containershort}} を使用してクラスターを作成するためには、管理者はユーザーをこのパブリック企業アカウントに追加する必要があります。 ユーザーがパブリック企業アカウントに追加されると、ユーザーの Dedicated アカウントとパブリック・アカウントがリンクされます。 そしてユーザーは IBM ID を使用して Dedicated とパブリックの両方に同時にログインでき、Dedicated のインターフェースからパブリック・アカウントにリソースを作成できます。 詳しくは、『[Dedicated での IBM Cloud Container Service のセットアップ](/docs/containers/cs_dedicated.html#dedicated_setup)』を参照してください。 Dedicated のユーザーをパブリック・アカウントに招待するには以下のようにします。
 
 ```
 cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
@@ -136,7 +136,7 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 <dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
 <dd class="pd">Dedicated アカウント組織に現在いるすべてのユーザーを招待する場合、Dedicated アカウント組織 ID。</dd>
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">ユーザーをパブリック・アカウントに招待するための API キー。これはパブリック・アカウントの<b>管理者</b>が生成する必要があります。</dd>
+<dd class="pd">ユーザーをパブリック・アカウントに招待するための API キー。 これはパブリック・アカウントの<b>管理者</b>が生成する必要があります。</dd>
 <dt class="pt dlterm">&lt;public_org_id&gt;</dt>
 <dd class="pd">ユーザーを招待するパブリック・アカウント組織の ID。</dd>
 </dl>
@@ -144,7 +144,7 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ### {{site.data.keyword.Bluemix_dedicated_notm}} から招待したユーザーのリスト表示
 {: #admin_dedicated_list}
 
-Dedicated 環境のユーザーを {{site.data.keyword.Bluemix_notm}} アカウントに [`invite-users-to-public` コマンド](#admin_dedicated_invite_public)を使用して招待した場合、招待の状況を確認するためにアカウントのユーザーをリスト表示することができます。既存の IBM ID を持つ招待されたユーザーは、`ACTIVE` の状況になります。既存の IBM ID を持たない招待されたユーザーは、アカウントへの招待を受け入れたかどうかによって、`PENDING` または `ACTIVE` のいずれかの状況になります。{{site.data.keyword.Bluemix_notm}} アカウントのユーザーをリストするには、以下のようにします。
+Dedicated 環境のユーザーを {{site.data.keyword.Bluemix_notm}} アカウントに [`invite-users-to-public` コマンド](#admin_dedicated_invite_public)を使用して招待した場合、招待の状況を確認するためにアカウントのユーザーをリスト表示することができます。 既存の IBM ID を持つ招待されたユーザーは、`ACTIVE` の状況になります。 既存の IBM ID を持たない招待されたユーザーは、アカウントへの招待を受け入れたかどうかによって、`PENDING` または `ACTIVE` のいずれかの状況になります。 {{site.data.keyword.Bluemix_notm}} アカウントのユーザーをリストするには、以下のようにします。
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
@@ -155,7 +155,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">ユーザーをアカウントに招待するのに使用された API キー。これはパブリック・アカウントの<b>管理者</b>が生成する必要があります。</dd>
+<dd class="pd">ユーザーをアカウントに招待するのに使用された API キー。 これはパブリック・アカウントの<b>管理者</b>が生成する必要があります。</dd>
 </dl>
 
 <!-- staging-only commands start. Live for interconnect -->
@@ -175,11 +175,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 内のユーザーの名前。 </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">ユーザーに割り当てられた許可。 使用可能な許可は、admin (または superuser)、login (または basic)、catalog.read、catalog.write、reports.read 、reports.write、users.read、または users.write です。割り当てられたユーザー許可について詳しくは、『[許可](/docs/admin/index.html#permissions)』を参照してください。 同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。 </dd>
+<dd class="pd">ユーザーに割り当てられた許可。 使用可能な許可は、admin (または superuser)、login (または basic)、catalog.read、catalog.write、reports.read 、reports.write、users.read、または users.write です。 割り当てられたユーザー許可について詳しくは、『[許可](/docs/admin/index.html#permissions)』を参照してください。 同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。 </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">ユーザーが所属する組織の名前。 同じ照会内でこのパラメーターを permission パラメーターと一緒に使用することはできません。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">ユーザーに割り当てられた、組織の役割。 使用可能な役割は、「auditors」、「managers」、および「billing_managers」です。このパラメーターと一緒に組織を指定する必要があります。</dd>
+<dd class="pd">ユーザーに割り当てられた、組織の役割。 使用可能な役割は、「auditors」、「managers」、および「billing_managers」です。 このパラメーターと一緒に組織を指定する必要があります。</dd>
 
 </dl>
 
@@ -546,7 +546,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。 </dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「標準」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。 </dd>
 </dl>
 
 **ヒント:** **ba enable-service-plan** という長いコマンド名の別名として **ba esp** を使用することもできます。
@@ -563,7 +563,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「標準」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 </dl>
 
 **ヒント:** **ba disable-service-plan<retrieve-report** という長いコマンド名の別名として **ba dsp**を使用することもできます。
@@ -580,7 +580,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「標準」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストに追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -599,7 +599,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効にするサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効にするサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「標準」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストから削除する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -620,7 +620,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。 非固有のサービス・プラン名 (例えば、「標準」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。 サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。 サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">表示可能性を追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。 コマンドに追加の組織名または GUID を入力することで、複数の組織に対してサービスの表示可能性を有効化できます。</dd>
 </dl>
@@ -631,7 +631,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 {: #admin_add_report}
 
 ### レポートの追加
-{: #admin_add_report}
+{: #admin_adding_report}
 
 セキュリティー・レポートを追加するには、以下のコマンドを使用します。
 
@@ -742,7 +742,7 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 </dl>
 
 
-以下のコマンドを使用して、上記のコマンド・パラメーターおよび例のリストを表示できます。
+以下のコマンドを使用して、前述のコマンド・パラメーターおよび例のリストを表示できます。
 
 ```
 cf ba resource-metrics-history -help

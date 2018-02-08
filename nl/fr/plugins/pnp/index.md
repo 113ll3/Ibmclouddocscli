@@ -18,7 +18,7 @@ Utilisez l'interface de ligne de commande d'appairage de réseau privé pour con
 
 Le plug-in d'interface de ligne de commande d'appairage de réseau privé est disponible pour les systèmes d'exploitation Windows, MAC et Linux. Assurez-vous d'utiliser le plug-in qui vous convient.
 
-Avant de commencer, créez des espaces {{site.data.keyword.Bluemix_notm}}. Assurez-vous que chaque conteneur dans un espace dispose d'une adresse IP provenant d'un réseau différent. Pour plus d'informations, voir [Using your own private IP address ![External link icon](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
+Avant de commencer, créez des espaces {{site.data.keyword.Bluemix_notm}}. Assurez-vous que chaque conteneur dans un espace dispose d'une adresse IP provenant d'un réseau différent. Pour plus d'informations, voir [Using your own private IP address ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
 
 **Remarque :** si vous avez utilisé l'appairage de réseau privé avec un espace {{site.data.keyword.Bluemix_notm}} et que vous devez supprimer l'espace, supprimez d'abord les connexions d'appairage de réseau privé dans cet espace.
 
@@ -32,7 +32,7 @@ Pour commencer, installez l'interface de ligne de commande {{site.data.keyword.B
 bluemix plugin uninstall private-network-peering
 ```
 ### Installation locale
-Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
+Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
 
 Installez le plug-in d'appairage de réseau privé avec la commande suivante :
 

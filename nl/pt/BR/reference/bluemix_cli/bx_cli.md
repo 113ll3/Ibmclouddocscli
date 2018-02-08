@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-11-06"
+  years: 2015, 2018
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-11-06"
 # Comandos do {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Versão: 0.6.2
+Versão: 0.6.4
 
 A interface de linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} fornece um conjunto de comandos que são agrupados por namespace para que os usuários interajam com o {{site.data.keyword.Bluemix_notm}}.
 
@@ -717,7 +717,7 @@ Visualize a conta, a região, a organização e o espaço atuais:
 bluemix target
 ```
 
-### bluemix update
+## bluemix update
 {: #bluemix_update}
 
 Atualize a CLI para a versão mais recente.
@@ -727,6 +727,12 @@ bluemix update
 ```
 
 <strong>Pré-requisitos</strong>: Nenhum
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-f</dt>
+  <dd>Forçar atualização sem confirmação</dd>
+</dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
@@ -2078,7 +2084,7 @@ Liste todos os grupos de recursos sob a conta destinada atualmente:
 bluemix resource groups
 ```
 
-Liste o grupo padrão da conta destinada atualmente:
+Listar grupo padrão da conta destinada atualmente:
 
 ```
 bluemix resource groups --default
@@ -2399,35 +2405,6 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dt>-f (opcional)</dt>
    <dd>Force a exclusão sem confirmação.</dd>
    </dl>
-
-## bluemix app domains
-{: #bluemix_app_domains}
-
-Esse comando tem a mesma função e opções que o comando `cf domains`.
-
-
-## bluemix app domain-create
-{: #bluemix_app_domain_create}
-
-Esse comando tem a mesma função e opções que o comando `cf create-domain`.
-
-
-## bluemix app domain-delete
-{: #bluemix_app_domain_delete}
-
-Esse comando tem a mesma função e opções que o comando `cf delete-domain`.
-
-
-## bluemix app shared-domain-create
-{: #bluemix_app_shared_domain_create}
-
-Esse comando tem a mesma função e opções que o comando `cf create-shared-domain`.
-
-
-## bluemix app shared-domain-delete
-{: #bluemix_app_shared_domain_delete}
-
-Esse comando tem a mesma função e opções que o comando `cf delete-shared-domain`.
 
 ## bluemix app routes
 {: #bluemix_app_routes}
@@ -2862,7 +2839,7 @@ bluemix resource bindings my-service-alias my-app
 Criar uma ligação de serviços
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -2877,6 +2854,8 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>Nome da função de usuário</dd>
   <dt>--service-id-name</dt>
   <dd>Nome do ID de serviço ao qual a função pertence</dd>
+  <dt>-p, --parameter</dt>
+  <dd>Arquivo JSON ou sequência JSON de parâmetros</dd>
   <dt>-f, --force</dt>
   <dd>Forçar a criação sem confirmação</dd>
 </dl>

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-11-08"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -14,34 +14,33 @@ lastupdated: "2017-11-08"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Downloads 
+# CLI und Tools im Überblick
+{: #overview}
 
-## Bluemix-CLI
+{{site.data.keyword.Bluemix_notm}} bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line Interface, CLI) sowie Plug-ins, die bei der CLI integriert werden.
+
+## {{site.data.keyword.Bluemix_notm}}-CLI
 {: #cli}
 
 Die {{site.data.keyword.Bluemix}}-CLI stellt eine Befehlszeilenbedienung zur Verwaltung der Ressourcen in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit. Sie enthält außerdem eine Cloud Foundry-Befehlszeilenschnittstelle (cf) in ihrer Installation, die zur Verwaltung von Cloud Foundry-Anwendungen und -Services verwendet werden kann.
 {:shortdesc}
 
-[Download](/docs/cli/reference/bluemix_cli/all_versions.html){: new_window} <br>
-[Erste Schritte](/docs/cli/reference/bluemix_cli/get_started.html){: new_window} <br>
-[Dokumentation anzeigen](/docs/cli/reference/bluemix_cli/bx_cli.html){: new_window} <br>
+Klicken Sie zum Einstieg auf eine Option:
 
+<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="Klicken Sie für den Schnelleinstieg mit der {{site.data.keyword.Bluemix_notm}}-CLI auf eine Option." style="width:440px;" />
+<map name="home_map" id="home_map">
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt=" {{site.data.keyword.Bluemix_notm}}-CLI herunterladen" title="Herunterladen" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Einführung" title="Einführung" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Dokumentation anzeigen" title="Dokumentation anzeigen" shape="rect" coords="326, -10, 448, 218" />
+</map>
 
-## IBM Cloud Application Tools 2 (Beta)
-{: #icat notoc}
+## {{site.data.keyword.dev_cli_notm}}
+{: #idt}
 
-IBM Cloud Application Tools 2 ist eine Menüleistenanwendung, die für das Einrichten und Verwalten einer lokalen Umgebung unter Mac OS optimiert ist. IBM Cloud Application Tools 2 bietet komfortable Verfahren, um Bluemix-Tools und -Befehlszeilenschnittstellen zu installieren und zu aktualisieren, um CLI-Bereitstellungsziele zu ändern und schnell auf allgemeine Bluemix-Links zuzugreifen.
+{{site.data.keyword.dev_cli_long}} (IDT) bietet eine speziell für Entwickler gedachte Erweiterung der {{site.data.keyword.Bluemix}}-CLI (`bx dev`), mit der cloudnative Apps erstellt, gebuildet und bereitgestellt werden können. Die Installation von IDT umfasst die {{site.data.keyword.Bluemix_notm}}-Basis-CLI, mehrere Erweiterungen sowie alle Systemvoraussetzungen.
+{:shortdesc}
 
-[Download](http://ibm.biz/icat-2-download){: new_window} <br>
-[Dokumentation anzeigen](/docs/cli/icat.html){: new_window} <br>
-
-
-## ![](./images/Integrated_Dev_Tools.svg) Integrierte Entwicklungstools
-{: #ide}
-
-Sie können Plug-ins herunterladen und installieren, um Ihre bevorzugten {{site.data.keyword.Bluemix_notm}}-Services zu integrieren.
-
-| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
-|----------|----------|----------|----------|----------|
-| [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](/docs/services/rules/index-gentopic1.html#genTopProcId2) | [Entwicklertoolkit ![Symbol für externen Link](../icons/launch-glyph.svg)](/docs/services/apiconnect/creating_apis.html){: new_window} | [{{site.data.keyword.Bluemix_notm}}-Eclipse-Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
-{: caption="Tabelle 6. Plug-ins" caption-side="top"}
+- [Übersicht und Installation](/docs/cloudnative/idt/index.html) <br>
+- [Einführung](/docs/cloudnative/idt/index.html) <br>
+- [Befehle](/docs/cloudnative/idt/commands.html) <br>
+- [Cloudnative Entwicklung](/docs/cloudnative/index.html) <br>
