@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2018
+  years: 2015, 2017
 
-lastupdated: "2018-01-08"
+lastupdated: "2017-12-07"
 
 ---
 
@@ -676,7 +676,7 @@ cf ba edit-service-plan-visibilities <identificador_plan> <organización_1> <org
 {: #admin_add_report}
 
 ### Adición de informes
-{: #admin_adding_report}
+{: #admin_add_report}
 
 Para añadir un informe de seguridad, utilice el siguiente mandato:
 

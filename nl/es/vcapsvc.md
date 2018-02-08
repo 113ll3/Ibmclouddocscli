@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2018
+  years: 2015, 2017
 
 lastupdated: "2017-12-11"
 

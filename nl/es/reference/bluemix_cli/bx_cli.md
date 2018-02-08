@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2017-12-21"
+  years: 2015, 2017
+lastupdated: "2017-11-06"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-12-21"
 # Mandatos {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Versión: 0.6.4
+Versión: 0.6.2
 
 La interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} proporciona un conjunto de mandatos que se agrupan por espacio de nombres para que los usuarios interactúen con {{site.data.keyword.Bluemix_notm}}.
 
@@ -692,8 +692,6 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [--cf] [-o ORG] [-s SPACE]
    </dl>
 Si no se especifica ninguna opción, se visualiza la cuenta, la región, la organización y el espacio actuales.
 
-
-
 <strong>Ejemplos</strong>:
 
 Establecer la cuenta, organización y espacio actuales:
@@ -714,7 +712,7 @@ Visualiza la cuenta, región, organización y espacio actual:
 bluemix target
 ```
 
-## bluemix update
+### bluemix update
 {: #bluemix_update}
 
 Actualiza la CLI a la última versión.
@@ -724,12 +722,6 @@ bluemix update
 ```
 
 <strong>Requisitos previos</strong>:  Ninguno
-
-<strong>Opciones de mandato</strong>:
-<dl>
-  <dt>-f</dt>
-  <dd>Forzar actualización sin confirmación</dd>
-</dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
@@ -2397,6 +2389,35 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>Forzar la eliminación sin confirmación.</dd>
    </dl>
 
+## bluemix app domains
+{: #bluemix_app_domains}
+
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf domains`.
+
+
+## bluemix app domain-create
+{: #bluemix_app_domain_create}
+
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-domain`.
+
+
+## bluemix app domain-delete
+{: #bluemix_app_domain_delete}
+
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-domain`.
+
+
+## bluemix app shared-domain-create
+{: #bluemix_app_shared_domain_create}
+
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-shared-domain`.
+
+
+## bluemix app shared-domain-delete
+{: #bluemix_app_shared_domain_delete}
+
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-shared-domain`.
+
 ## bluemix app routes
 {: #bluemix_app_routes}
 
@@ -2830,7 +2851,7 @@ bluemix resource bindings my-service-alias my-app
 Crear un enlace de servicio
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
 <strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
@@ -2845,8 +2866,6 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>Nombre del rol de usuario</dd>
   <dt>--service-id-name</dt>
   <dd>Nombre del ID de servicio al que pertenece el rol</dd>
-  <dt>-p, --parameter</dt>
-  <dd>Parámetros del archivo JSON o de la serie JSON</dd>
   <dt>-f, --force</dt>
   <dd>Forzar la creación sin confirmación</dd>
 </dl>
@@ -3763,8 +3782,6 @@ Instala el plugin `IBM-Containers` de la versión más reciente del repositorio 
 bluemix plugin install IBM-Containers -r bluemix-repo
 ```
 Instala el plugin `IBM-Containers` con la versión `0.5.800` del repositorio `bluemix-repo`:
-
-
 
 ```
 bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
