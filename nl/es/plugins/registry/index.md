@@ -135,11 +135,15 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>--format FORMAT</dt>
 <dd>(Opcional) Formatear los elementos de salida mediante una plantilla de Go. 
 
+ 
+
 Para obtener más información, consulte [Formateo y filtrado de la salida de la CLI para mandatos de {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
 <dd>El nombre de la imagen de la que desea obtener un informe. Puede examinar varias imágenes creando una lista de cada imagen en el mandato con un espacio entre cada nombre.
+
+
 
 <p>Para encontrar los nombres de sus imágenes, ejecute `bx cr image-list`. Combine el contenido de las columnas Repositorio y Etiqueta para crear el nombre de imagen en el formato `repository:tag`. Si no se especifica ninguna etiqueta en el nombre de la imagen, se examina la imagen etiquetada como `latest`. </p> 
 
@@ -165,6 +169,8 @@ Visualiza todas las imágenes de su cuenta de {{site.data.keyword.Bluemix_notm}}
 <dd>(Opcional) No truncar los resúmenes de imagen.</dd>
 <dt>--format FORMAT</dt>
 <dd>(Opcional) Formatear los elementos de salida mediante una plantilla de Go. 
+
+ 
 
 Para obtener más información, consulte [Formateo y filtrado de la salida de la CLI para mandatos de {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
@@ -193,6 +199,8 @@ bx cr image-rm IMAGE [IMAGE...]
 <dl>
 <dt>IMAGE</dt>
 <dd>El nombre de la imagen de la que desea obtener un informe. Puede suprimir varias imágenes al mismo tiempo creando una lista de cada imagen en el mandato con un espacio entre cada nombre.
+
+
 
 <p>Para encontrar los nombres de sus imágenes, ejecute `bx cr image-list`. Combine el contenido de las columnas Repositorio y Etiqueta para crear el nombre de imagen en el formato `repository:tag`. Si no se especifica una etiqueta en el nombre de la imagen, la imagen etiquetada como `latest` se suprime de forma predeterminada.</p> 
 
@@ -344,6 +352,8 @@ bx cr region-set [REGION]
 <dt>REGION</dt>
 <dd>(Opcional) El nombre de su región de destino, por ejemplo, `us-south`. 
 
+ 
+
 Para obtener más información, consulte [Regiones](../../../services/Registry/registry_overview.html#registry_regions).
 
 </dd>
@@ -408,6 +418,8 @@ bx cr token-list --format FORMAT
 <dt>--format FORMAT</dt>
 <dd>(Opcional) Formatear los elementos de salida mediante una plantilla de Go. 
 
+ 
+
 Para obtener más información, consulte [Formateo y filtrado de la salida de la CLI para mandatos de {{site.data.keyword.registrylong_notm}}](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
@@ -446,9 +458,13 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 <dt>IMAGE</dt>
 <dd>El nombre de la imagen de la que desea obtener un informe. El informe indica si la imagen tiene vulnerabilidades de empaquetamiento conocidas. Puede solicitar informes para varias imágenes al mismo tiempo creando una lista de cada imagen en el mandato con un espacio entre cada nombre.
 
+
+
 <p>Para encontrar los nombres de sus imágenes, ejecute `bx cr image-list`. Combine el contenido de las columnas Repositorio y Etiqueta para crear el nombre de imagen en el formato `repository:tag`. Si no se especifica una etiqueta en el nombre de la imagen, el informe evalúa la imagen que está etiquetada como `latest`. </p> 
 
 <p>Se da soporte a los sistemas operativos siguientes:
+
+
 
 <ul>
 
@@ -466,6 +482,8 @@ Para obtener más información, consulte [Gestión de imágenes de seguridad con
 </dd>
 <dt>--output FORMAT, -o FORMAT</dt>
 <dd>(Opcional) La salida del mandato se devuelve en el formato elegido. El formato predeterminado es `text`. Se da soporte a los formatos siguientes:
+
+
 
 <ul>
 
