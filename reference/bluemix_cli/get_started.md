@@ -35,6 +35,10 @@ To get started with {{site.data.keyword.Bluemix_notm}} CLI:
    * For Linux, extract the package and run `install_bluemix_cli` script
 
 1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}}
+  
+    ```
+    bx login
+    ```
 
   ![Example](example.gif){: gif}
 
