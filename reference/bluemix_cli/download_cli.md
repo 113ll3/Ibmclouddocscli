@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2017-010-13"
+lastupdated: "2018-02-14"
 
 ---
 
@@ -34,6 +34,7 @@ For Linux, after downloading the installer package, extract it and run the insta
   $ sudo ./install_bluemix_cli
 
   ```
+  {: codeblock}
   
 ## Install from shell
 {: #shell_install}
