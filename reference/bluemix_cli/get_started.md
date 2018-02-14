@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2017-08-20"
+lastupdated: "2018-02-14"
 
 ---
 
@@ -34,11 +34,8 @@ To get started with {{site.data.keyword.Bluemix_notm}} CLI:
    * For macOS and windows, just run the installer.
    * For Linux, extract the package and run `install_bluemix_cli` script
 
-1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}}
+1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}} using the `bx login` command.
   
-    ```
-    bx login
-    ```
 
   ![Example](example.gif){: gif}
 
