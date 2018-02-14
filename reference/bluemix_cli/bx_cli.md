@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-06"
+lastupdated: "2018-02-14"
 
 ---
 
@@ -2164,7 +2164,7 @@ bluemix resource group example-group
 Show only ID of resource group `example-group`:
 
 ```
-bluemix resourxce group example-group --id
+bluemix resource group example-group --id
 ```
 
 
