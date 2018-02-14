@@ -83,14 +83,14 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 
 **예제**:
 
-이름이 `my_connection`인 새 vpn 연결을 작성합니다. 
+이름이 `my_connection`인 새 vpn 연결을 작성합니다.
 ```
 bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
 
 
 ## bluemix vpn ike-create
-IKE 정책을 작성합니다. 
+IKE 정책을 작성합니다.
 
 ```
 bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
@@ -114,14 +114,14 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP]
 
 **예제**:
 
-이름이 `my_ike`인 새 IKE 정책을 작성합니다. 
+이름이 `my_ike`인 새 IKE 정책을 작성합니다.
 ```
 bluemix vpn ike-create my_ike -g my_gateway
 ```
 
 
 ## bluemix vpn ipsec-create
-IPSec 정책을 작성합니다. 
+IPSec 정책을 작성합니다.
 
 ```
 bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
@@ -145,7 +145,7 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROU
 
 **예제**:
 
-이름이 `my_policy`인 IPSec 정책을 작성합니다. 
+이름이 `my_policy`인 IPSec 정책을 작성합니다.
 ```
 bluemix vpn ipsec-create my_policy -g my_gateway
 ```
@@ -172,7 +172,7 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subne
 
 **예제**:
 
-이름이 `my_gateway`이고 유형이 `allContainerGroups`인 게이트웨이를 작성합니다. 
+이름이 `my_gateway`이고 유형이 `allContainerGroups`인 게이트웨이를 작성합니다.
 ```
 bluemix vpn gateway-create my_gateway -t allContainerGroups
 ```
@@ -261,7 +261,7 @@ bluemix vpn ipsec POLICY_NAME
 
 
 ## bluemix vpn gateway
-게이트웨이에 대한 연결 정보를 표시합니다. 
+게이트웨이에 대한 연결 정보를 표시합니다.
 
 ```
 bluemix vpn gateway GATEWAY_NAME
@@ -357,15 +357,15 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KE
 
 -admin_state *ADMIN_STATE*  (선택사항): VPN 연결의 상태입니다. 올바른 값은 `UP` 또는 `DOWN`입니다.
 
--dpd-action *ACTION*  (선택사항): 피어가 작동하지 않는 것으로 발견될 때 수행할 조치입니다. 올바른 값은 `hold`, `clear`, `disabled`, `restart` 또는 `restart-by-peer`입니다. 
+-dpd-action *ACTION*  (선택사항): 피어가 작동하지 않는 것으로 발견될 때 수행할 조치입니다. 올바른 값은 `hold`, `clear`, `disabled`, `restart` 또는 `restart-by-peer`입니다.
 
 -gateway_ip *IP_ADDRESS*  (선택사항): 로컬 VPN 터널 엔드포인트의 IP 주소입니다.
 
--i *INITIATOR_STATE*  (선택사항): 개시자의 상태입니다. 
+-i *INITIATOR_STATE*  (선택사항): 개시자의 상태입니다.
 
 -dpd-timeout *VALUE*  (선택사항): 세션이 종료되는 제한시간 값(초)입니다. 범위: 6 - 86400초.
 
--dpd-interval *VALUE*  (선택사항): 킵얼라이브 간격(초)입니다. 구성된 간격으로 킵얼라이브 메시지를 전송하여 피어가 작동 중인지 확인하십시오. 범위: 5-86399초. 
+-dpd-interval *VALUE*  (선택사항): 킵얼라이브 간격(초)입니다. 구성된 간격으로 킵얼라이브 메시지를 전송하여 피어가 작동 중인지 확인하십시오. 범위: 5-86399초.
 
 -ike *NAME*  (선택사항): IKE 정책의 이름입니다.
 
@@ -389,9 +389,9 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROU
 
 -d *DESCRIPTION*  (선택사항): 지정된 매개변수에 대한 설명입니다.
 
--pfs *GROUP*  (선택사항): DH(Diffie-Hellman) 그룹 ID입니다. 올바른 값은 `Group2`, `Group5` 또는 `Group14`입니다. 
+-pfs *GROUP*  (선택사항): DH(Diffie-Hellman) 그룹 ID입니다. 올바른 값은 `Group2`, `Group5` 또는 `Group14`입니다.
 
--e *ENCRYPTION_ALGORITHM*  (선택사항): 암호화 알고리즘입니다. 올바른 값은 `aes-128`, `aes-192`, `aes-256` 또는 `3des`입니다. 
+-e *ENCRYPTION_ALGORITHM*  (선택사항): 암호화 알고리즘입니다. 올바른 값은 `aes-128`, `aes-192`, `aes-256` 또는 `3des`입니다.
 
 -lv *LIFETIME_VALUE*  (선택사항): IKE 보안 연관의 유효 기간 값입니다. 범위: 60 - 86400초.
 
@@ -413,9 +413,9 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GR
 
 -d *DESCRIPTION*  (선택사항): 지정된 매개변수에 대한 설명입니다.
 
--pfs *GROUP*  (선택사항): DH(Diffie-Hellman) 그룹 ID입니다. 올바른 값은 `Group2`, `Group5` 또는 `Group14`입니다. 
+-pfs *GROUP*  (선택사항): DH(Diffie-Hellman) 그룹 ID입니다. 올바른 값은 `Group2`, `Group5` 또는 `Group14`입니다.
 
--e *ENCRYPTION_ALGORITHM*  (선택사항): 암호화 알고리즘입니다. 올바른 값은 `aes-128`, `aes-192`, `aes-256` 또는 `3des`입니다. 
+-e *ENCRYPTION_ALGORITHM*  (선택사항): 암호화 알고리즘입니다. 올바른 값은 `aes-128`, `aes-192`, `aes-256` 또는 `3des`입니다.
 
 -lv *LIFETIME_VALUE*  (선택사항): 보안 연관의 유효 기간 값입니다. 범위: 60 - 86400초.
 
@@ -433,7 +433,7 @@ bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-sub
 
 *GATEWAY_NAME*  (필수): 게이트웨이의 이름입니다.
 
--t *TYPE*  (선택사항): 서비스가 사용되도록 설정할 컨테이너입니다. 올바른 값은 `allSingleContainers`, `allContainerGroups` 또는 `allContainers`입니다. 
+-t *TYPE*  (선택사항): 서비스가 사용되도록 설정할 컨테이너입니다. 올바른 값은 `allSingleContainers`, `allContainerGroups` 또는 `allContainers`입니다.
 
 -gateway_ip *IP_ADDRESS*  (선택사항): 게이트웨이의 IP 주소입니다.
 

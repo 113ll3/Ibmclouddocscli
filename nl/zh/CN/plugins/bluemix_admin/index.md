@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-12-07"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -627,7 +627,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 {: #admin_add_report}
 
 ### 添加报告
-{: #admin_add_report}
+{: #admin_adding_report}
 
 要添加安全报告，请使用以下命令：
 

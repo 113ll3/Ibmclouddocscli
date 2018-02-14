@@ -2,21 +2,21 @@
 
 copyright:
 
-  years: 2016,2017
+  years: 2016,2018
 
-lastupdated: "2017-11-10"
 
+lastupdated: "2017-12-08"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 명령
+# {{site.data.keyword.BluSoftlayer_notm}} 인프라(bluemix sl) 명령
 {: #softlayer_cli}
 
 {{site.data.keyword.BluSoftlayer}} 플러그인은 {{site.data.keyword.Bluemix_notm}} CLI에 병합되었습니다. 더 이상 플러그인을 설치할 필요가 없습니다.
 
-SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령을 사용하십시오. 
+SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령을 사용하십시오.
 
 
 시작하려면 IBM {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 세부사항은
@@ -47,7 +47,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 2. {{site.data.keyword.BluSoftlayer_notm}} 인프라 블록 스토리지</caption>
  <thead>
- <th colspan="6">Softlayer 블록 스토리지</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 블록 스토리지</th>
  </thead>
  <tbody>
  <tr>
@@ -88,7 +88,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 3. {{site.data.keyword.BluSoftlayer_notm}} 인프라 CDN</caption>
  <thead>
- <th colspan="6">Softlayer CDN</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 CDN</th>
  </thead>
  <tbody>
  <tr>
@@ -111,9 +111,9 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
 ## {{site.data.keyword.BluSoftlayer_notm}} 인프라 파일 스토리지 명령
 
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
-<caption>표 4. {{site.data.keyword.BluSoftlayer_notm}} 인프라 파일 스토리지 </caption>
+<caption>표 4. {{site.data.keyword.BluSoftlayer_notm}} 인프라 파일 스토리지</caption>
  <thead>
- <th colspan="6">Softlayer 파일 스토리지</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 파일 스토리지</th>
  </thead>
  <tbody>
  <tr>
@@ -154,7 +154,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 5. {{site.data.keyword.BluSoftlayer_notm}} 인프라 DNS 명령</caption>
  <thead>
- <th colspan="6">Softlayer DNS 명령</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 DNS 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -173,10 +173,11 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
    </tbody>
  </table>
 
+
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 6. {{site.data.keyword.BluSoftlayer_notm}} 인프라 글로벌 IP 명령</caption>
  <thead>
- <th colspan="6">Softlayer 글로벌 IP 명령</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 글로벌 IP 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -194,7 +195,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 7. {{site.data.keyword.BluSoftlayer_notm}} 인프라 이미지 명령</caption>
  <thead>
- <th colspan="6">Softlayer 이미지 명령</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 이미지 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -211,7 +212,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 7. {{site.data.keyword.BluSoftlayer_notm}} 인프라 IPSec VPN 명령</caption>
  <thead>
- <th colspan="6">Softlayer IPSec VPN 명령</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 IPSec VPN 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -237,7 +238,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 8. {{site.data.keyword.BluSoftlayer_notm}} 인프라 로드 밸런서 명령</caption>
  <thead>
- <th colspan="6">Softlayer 로드 밸런서 명령</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 로드 밸런서 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -270,7 +271,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 9. {{site.data.keyword.BluSoftlayer_notm}} 인프라 보안 명령</caption>
  <thead>
- <th colspan="5">Softlayer 보안 명령</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} 인프라 보안 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -295,7 +296,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 10. {{site.data.keyword.BluSoftlayer_notm}} 인프라 서브넷 명령</caption>
  <thead>
- <th colspan="5">Softlayer 서브넷 명령</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} 인프라 서브넷 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -313,7 +314,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 11. {{site.data.keyword.BluSoftlayer_notm}} 인프라 가상 서버 명령</caption>
  <thead>
- <th colspan="6">Softlayer 가상 서버 명령</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 가상 서버 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -346,7 +347,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
   <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
 <caption>표 12. {{site.data.keyword.BluSoftlayer_notm}} 인프라 VLAN 명령</caption>
  <thead>
- <th colspan="6">Softlayer VLAN 명령</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 VLAN 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -366,7 +367,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
 ### bluemix sl init
 {: #sl_init}
 
-Softlayer 환경에 연결하는 데 사용되는 구성 설정을 초기화하십시오. 구성에는 사용자 이름, API 키 또는 비밀번호, 계정 및 엔드포인트가 포함됩니다.
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 환경에 연결하는 데 사용되는 구성 설정을 초기화하십시오. 구성에는 사용자 이름, API 키 또는 비밀번호, 계정 및 엔드포인트가 포함됩니다.
 ```
 bluemix sl init [OPTIONS]
 ```
@@ -374,13 +375,13 @@ bluemix sl init [OPTIONS]
 <strong>명령 옵션</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API 엔드포인트 URL. 기본값: https://api.softlayer.com/rest/v3.1({{site.data.keyword.BluSoftlayer_notm}} 인프라 API 키 인증의 경우), https://api.softlayer.com/mobile/v3.1(IBM ID 인증의 경우).</dd>
+<dd>{{site.data.keyword.BluSoftlayer_notm}} 인프라 API 엔드포인트 URL. 기본값: https://api.softlayer.com/rest/v3.1 (API 키 인증의 경우), https://api.softlayer.com/mobile/v3.1 (IBM ID 인증의 경우).</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer 사용자 이름.</dd>
 <dt>-p, --sl-password</dt>
 <dd>Softlayer 비밀번호 또는 API 키.</dd>
 <dt>-c, --account-id</dt>
-<dd>Softlayer 계정 ID 입니다.</dd>
+<dd>Softlayer 계정 ID.</dd>
 <dt>-q, --security-question-id</dt>
 <dd>인증에 사용되는 보안 질문 ID. 모르는 경우 계정 소유자에게 문의하십시오.</dd>
 <dt>-w, --security-question-answer</dt>
@@ -399,14 +400,14 @@ $ bluemix sl config
 {{site.data.keyword.BluSoftlayer_notm}} 인프라 인증을 구성하는 방법 선택:
 1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
 2. {{site.data.keyword.Bluemix_notm}} Single-Sign-On 사용
-번호 입력>1
-Softlayer API 엔드포인트 URL: [https://api.softlayer.com/rest/v3.1]>
+Enter a number>1
+Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
 Username: []> wangjunl@cn.ibm.com
 API key or password: []> abcd
 
-Softlayer API endpoint:    https://api.softlayer.com/rest/v3.1   
-Account ID:                278444   
-User ID:                   wangjunl@cn.ibm.com   
+Softlayer API endpoint:    https://api.softlayer.com/rest/v3.1
+Account ID:                278444
+User ID:                   wangjunl@cn.ibm.com
 API Key:                   xxxxxxxxxx
 ```
 예: {{site.data.keyword.Bluemix_notm}} Single-Sign-On을 사용하여 Softlayer에 로그인
@@ -428,20 +429,18 @@ No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 ```
 
 $ bx sl init
-{{site.data.keyword.BluSoftlayer_notm}} 인프라 인증을 구성하는 방법 선택: 
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 인증을 구성하는 방법 선택:
 1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
 2. {{site.data.keyword.Bluemix_notm}} Single-Sign-On 사용
-번호 입력> 2
-Softlayer API 엔드포인트 URL: [https://api.softlayer.com/mobile/v3.1]>
+Enter a number> 2
+Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
 Setting account to: 278444
 OK
                               
-
-                              
 Softlayer API 엔드포인트:    https://api.softlayer.com/mobile/v3.1   
-계정 ID:                278444   
-사용자 ID:                   12345678   
-IMS 토큰:                 xxxxxxxxxx
+Account ID:                278444   
+User ID:                   12345678   
+IMS token:                 xxxxxxxxxx
 ```
 
 ### bluemix sl help
@@ -462,8 +461,7 @@ bluemix sl block access-authorize VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-d, --hardware-id</dt>
 <dd>권한 부여할 하나의 하드웨어 서버의 ID입니다.</dd>
 <dt>-v, --virtual-id</dt>
@@ -489,8 +487,7 @@ bluemix sl block access-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열. 옵션: id,name,type,private_ip_address,host_iqn,username,password.</dd>
 <dt>--columns</dt>
@@ -512,8 +509,7 @@ bluemix sl block access-list 12345678 --sortby id
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-d, --hardware-id</dt>
 <dd>권한을 취소할 하나의 하드웨어 서버 ID.</dd>
 <dt>-v, --virtual-id</dt>
@@ -584,16 +580,15 @@ bluemix sl block replica-locations 12345678
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --snapshot-schedule</dt>
 <dd>필수. 복제에 사용할 스냅샷 스케줄. 옵션: HOURLY,DAILY,WEEKLY.</dd>
 <dt>-d, --datacenter</dt>
 <dd>필수. 복제본에 대한 데이터 센터의 짧은 이름(예: dal09).</dd>
 <dt>-t, --tier</dt>
-<dd>선택사항. 복제본이 주문되는 기본 볼륨의 Endurance 스토리지 계층(GB당 IOPS). 옵션: 0.25,2,4,10. 계층이 지정되지 않은 경우 원본 볼륨의 계층이 사용됩니다.</dd>
+<dd>선택사항. 복제본이 주문되는 기본 볼륨의 Endurance Storage Tier(GB당 IOPS). 옵션: 0.25,2,4,10. 계층이 지정되지 않은 경우 원본 볼륨의 계층이 사용됩니다.</dd>
 <dt>-i, --iops</dt>
-<dd>100 - 6000의 100의 배수인 Performance 스토리지 IOP. 지정되지 않은 경우 원본 볼륨의 IOPS가 사용됩니다.</dd>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOP. 지정되지 않은 경우 원본 볼륨의 IOPS가 사용됩니다.</dd>
 <dt>-o, --os-type</dt>
 <dd>선택사항. 복제본이 주문되는 기본 볼륨의 운영 체제 유형(예: Linux). 옵션: HYPER_V,LINUX,VMWARE,WINDOWS_2008,WINDOWS_GPT,WINDOWS,XEN.</dd>
 <dt>-f, --force</dt>
@@ -630,8 +625,7 @@ bluemix sl block replica-partners 12345678
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--reason</dt>
 <dd>취소에 대한 선택적 이유입니다.</dd>
 <dt>--immediate</dt>
@@ -655,8 +649,7 @@ bluemix sl block replica-partners 12345678
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-n, --note</dt>
 <dd>새 스냅샷에 설정할 참고.</dd>
 </dl>
@@ -676,8 +669,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --schedule-type</dt>
 <dd>필수. 스냅샷 스케줄. 옵션: HOURLY,DAILY,WEEKLY.</dd>
 </dl>
@@ -697,19 +689,17 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --schedule-type</dt>
 <dd>필수. 스냅샷 스케줄. 옵션: HOURLY,DAILY,WEEKLY.</dd>
 <dt>-c, --retention-count</dt>
 <dd>필수. 유지할 스냅샷 수입니다.</dd>
 <dt>-m, --minute</dt>
-<dd>스냅샷을 작성해야 하는 시간(분), 0 - 59 사이의 정수. </dd>
+<dd>스냅샷을 작성해야 하는 시간(분), 0 - 59 사이의 정수.</dd>
 <dt>-r, --hour</dt>
-<dd>스냅샷을 작성해야 하는 시간, 0 - 23 사이의 정수. </dd>
+<dd>스냅샷을 작성해야 하는 시간, 0 - 23 사이의 정수.</dd>
 <dt>-d, --day-of-week</dt>
-<dd>스냅샷을 작성해야 하는 요일, 0 - 6 사이의 정수.
-0은 일요일, 1은 월요일, 2는 화요일, 3은 수요일, 4는 목요일, 5는 금요일, 6은 토요일을 의미합니다. </dd>
+<dd>스냅샷을 작성해야 하는 요일, 0 - 6 사이의 정수. 0은 일요일, 1은 월요일, 2는 화요일, 3은 수요일, 4는 목요일, 5는 금요일, 6은 토요일을 의미합니다.</dd>
 </dl>
 
 **예제**:
@@ -739,12 +729,10 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 블록 스토리지 스냅샷을 나열합니다.
 ```
  bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
-
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열. 옵션: id,name,created,size_bytes.</dd>
 </dl>
@@ -764,14 +752,13 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --size</dt>
 <dd>필수. 작성할 스냅샷 영역의 크기(GB).</dd>
 <dt>-t, --tier</dt>
-<dd>선택사항. 영역이 주문되는 블록 볼륨의 Endurance 스토리지 계층(GB당 IOPS). 옵션: 0.25,2,4,10.</dd>
+<dd>선택사항. 영역이 주문되는 블록 볼륨의 Endurance Storage Tier(GB당 IOPS). 옵션: 0.25,2,4,10.</dd>
 <dt>-i, --iops</dt>
-<dd>100 - 6000의 100의 배수인 Performance 스토리지 IOP.</dd>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOP.</dd>
 <dt>-u, --upgrade</dt>
 <dd>업그레이드 주문임을 표시하는 플래그.</dd>
 <dt>-f, --force</dt>
@@ -808,8 +795,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--reason</dt>
 <dd>취소에 대한 선택적 이유입니다.</dd>
 <dt>--immediate</dt>
@@ -833,8 +819,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-u, --username</dt>
 <dd>볼륨 사용자 이름별 필터링.</dd>
 <dt>-d, --datacenter</dt>
@@ -854,7 +839,6 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
  bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 이 명령은 dal09에 위치하는 현재 계정의 모든 endurance 볼륨을 나열하고 용량별로 정렬합니다.
-
 
 ### bluemix sl block volume-detail
 {: #sl_block_volume_detail}
@@ -880,16 +864,15 @@ bluemix sl block volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-o, --origin-snapshot-id</dt>
 <dd>복제에 사용할 원본 볼륨 스냅샷의 ID.</dd>
 <dt>-s, --duplicate-size</dt>
 <dd>중복 블록 볼륨의 크기(GB). 크기가 지정되지 않은 경우 원본 볼륨의 크기가 사용됩니다.</dd>
 <dt>-i, --duplicate-iops</dt>
-<dd>100 - 6000의 100의 배수인 Performance 스토리지 IOPS. 지정되지 않은 경우 원본 볼륨의 IOPS가 사용됩니다.</dd>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOPS. 지정되지 않은 경우 원본 볼륨의 IOPS가 사용됩니다.</dd>
 <dt>-t, --duplicate-tier</dt>
-<dd>Endurance 스토리지 계층. 계층이 지정되지 않은 경우 원본 볼륨의 계층이 사용됩니다.</dd>
+<dd>Endurance Storage Tier. 계층이 지정되지 않은 경우 원본 볼륨의 계층이 사용됩니다.</dd>
 <dt>-n, --duplicate-snapshot-size</dt>
 <dd>복제를 위해 주문할 스냅샷 영역의 크기. 스냅샷 영역 크기가 지정되지 않은 경우 원본 볼륨의 스냅샷 영역 크기가 사용됩니다.</dd>
 <dt>-f, --force</dt>
@@ -911,16 +894,15 @@ bluemix sl block volume-duplicate 12345678
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-t, --storage-type</dt>
 <dd>필수. 스토리지 볼륨의 유형. 옵션: performance,endurance.</dd>
 <dt>-s, --size</dt>
 <dd>필수. 스토리지 볼륨의 크기(GB).</dd>
 <dt>-i, --iops</dt>
-<dd>100 - 6000의 100의 배수인 Performance 스토리지 IOP[storage-type performance에 필요].</dd>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOP[storage-type performance에 필요].</dd>
 <dt>-e, --tier</dt>
-<dd>Endurance 스토리지 계층(GB당 IOP)[storage-type endurance에 필요]. 옵션: 0.25,2,4,10.</dd>
+<dd>Endurance Storage Tier(GB당 IOP)[storage-type endurance에 필요]. 옵션: 0.25,2,4,10.</dd>
 <dt>-o, --os-type</dt>
 <dd>필수. 운영 체제. 옵션: HYPER_V,LINUX,VMWARE,WINDOWS_2008,WINDOWS_GPT,WINDOWS,XEN.</dd>
 <dt>-d, --datacenter</dt>
@@ -952,7 +934,6 @@ bluemix sl block volume-duplicate 12345678
 ```
 이 명령은 스토리지 유형, 볼륨 크기, OS 유형, IOPS, 계층 레벨, 데이터 센터 및 스냅샷 크기를 포함하여 블록 스토리지 볼륨 작성에 대한 모든 옵션을 나열합니다.
 
-
 ### bluemix sl cdn cancel
 {: #sl_cdn_cancel}
 
@@ -962,8 +943,7 @@ bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -984,8 +964,7 @@ bluemix sl cdn list [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열. 옵션: id, name, type, created.</dd>
 <dt>--order</dt>
@@ -1008,8 +987,7 @@ bluemix sl cdn order [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-b, --bandwidth</dt>
 <dd>CDN 대역폭. 지정되지 않은 경우 '종량과금제' 가격이 사용됩니다.</dd>
 <dt>-s, --storage</dt>
@@ -1034,8 +1012,7 @@ bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-t, --type</dt>
 <dd>이 맵핑의 매체 유형(http, flash, wm, ...). 기본값: http.</dd>
 <dt>-c, --cname</dt>
@@ -1058,8 +1035,7 @@ bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -1072,8 +1048,7 @@ bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...][OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -1086,8 +1061,7 @@ bluemix sl file access-authorize VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-d, --hardware-id</dt>
 <dd>권한 부여할 하나의 하드웨어 서버의 ID입니다.</dd>
 <dt>-v, --virtual-id</dt>
@@ -1115,8 +1089,7 @@ bluemix sl file access-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열. 옵션: id,name,type,private_ip_address,host_iqn,username,password.</dd>
 <dt>--columns</dt>
@@ -1138,8 +1111,7 @@ bluemix sl file access-revoke VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-d, --hardware-id</dt>
 <dd>권한을 취소할 하나의 하드웨어 서버 ID.</dd>
 <dt>-v, --virtual-id</dt>
@@ -1212,16 +1184,15 @@ bluemix sl file replica-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --snapshot-schedule</dt>
 <dd>필수. 복제에 사용할 스냅샷 스케줄. 옵션: HOURLY,DAILY,WEEKLY.</dd>
 <dt>-d, --datacenter</dt>
 <dd>필수. 복제본에 대한 데이터 센터의 짧은 이름(예: dal09).</dd>
 <dt>-t, --tier</dt>
-<dd>선택사항. 복제본이 주문되는 기본 볼륨의 Endurance 스토리지 계층(GB당 IOPS). 옵션: 0.25,2,4,10. 계층이 지정되지 않은 경우 원본 볼륨의 계층이 사용됩니다.</dd>
+<dd>선택사항. 복제본이 주문되는 기본 볼륨의 Endurance Storage Tier(GB당 IOPS). 옵션: 0.25,2,4,10. 계층이 지정되지 않은 경우 원본 볼륨의 계층이 사용됩니다.</dd>
 <dt>-i, --iops</dt>
-<dd>100 - 6000의 100의 배수인 Performance 스토리지 IOP. 지정되지 않은 경우 원본 볼륨의 IOPS가 사용됩니다.</dd>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOP. 지정되지 않은 경우 원본 볼륨의 IOPS가 사용됩니다.</dd>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -1256,8 +1227,7 @@ bluemix sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--reason</dt>
 <dd>취소에 대한 선택적 이유입니다.</dd>
 <dt>--immediate</dt>
@@ -1281,8 +1251,7 @@ bluemix sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-n, --note</dt>
 <dd>새 스냅샷에 설정할 참고.</dd>
 </dl>
@@ -1302,8 +1271,7 @@ bluemix sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --schedule-type</dt>
 <dd>필수. 스냅샷 스케줄. 옵션: HOURLY,DAILY,WEEKLY.</dd>
 </dl>
@@ -1323,19 +1291,17 @@ bluemix sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --schedule-type</dt>
 <dd>필수. 스냅샷 스케줄. 옵션: HOURLY,DAILY,WEEKLY.</dd>
 <dt>-c, --retention-count</dt>
 <dd>필수. 유지할 스냅샷 수입니다.</dd>
 <dt>-m, --minute</dt>
-<dd>스냅샷을 작성해야 하는 시간(분), 0 - 59 사이의 정수. </dd>
+<dd>스냅샷을 작성해야 하는 시간(분), 0 - 59 사이의 정수.</dd>
 <dt>-r, --hour</dt>
-<dd>스냅샷을 작성해야 하는 시간, 0 - 23 사이의 정수. </dd>
+<dd>스냅샷을 작성해야 하는 시간, 0 - 23 사이의 정수.</dd>
 <dt>-d, --day-of-week</dt>
-<dd>스냅샷을 작성해야 하는 요일, 0 - 6 사이의 정수.
-0은 일요일, 1은 월요일, 2는 화요일, 3은 수요일, 4는 목요일, 5는 금요일, 6은 토요일을 의미합니다. </dd>
+<dd>스냅샷을 작성해야 하는 요일, 0 - 6 사이의 정수. 0은 일요일, 1은 월요일, 2는 화요일, 3은 수요일, 4는 목요일, 5는 금요일, 6은 토요일을 의미합니다.</dd>
 </dl>
 
 **예제**:
@@ -1368,8 +1334,7 @@ bluemix sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열. 옵션: id,name,created,size_bytes.</dd>
 </dl>
@@ -1389,14 +1354,13 @@ bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --size</dt>
 <dd>필수. 작성할 스냅샷 영역의 크기(GB).</dd>
 <dt>-t, --tier</dt>
-<dd>선택사항. 영역이 주문되는 파일 볼륨의 Endurance 스토리지 계층(GB당 IOPS). 옵션: 0.25,2,4,10.</dd>
+<dd>선택사항. 영역이 주문되는 파일 볼륨의 Endurance Storage Tier(GB당 IOPS). 옵션: 0.25,2,4,10.</dd>
 <dt>-i, --iops</dt>
-<dd>100 - 6000의 100의 배수인 Performance 스토리지 IOP.</dd>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOP.</dd>
 <dt>-u, --upgrade</dt>
 <dd>업그레이드 주문임을 표시하는 플래그.</dd>
 <dt>-f, --force</dt>
@@ -1433,8 +1397,7 @@ bluemix sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--reason</dt>
 <dd>취소에 대한 선택적 이유입니다.</dd>
 <dt>--immediate</dt>
@@ -1458,8 +1421,7 @@ bluemix sl file volume-list [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-u, --username</dt>
 <dd>볼륨 사용자 이름별 필터링.</dd>
 <dt>-d, --datacenter</dt>
@@ -1479,7 +1441,6 @@ bluemix sl file volume-list [OPTIONS]
 bluemix sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 이 명령은 dal09에 위치하는 현재 계정의 모든 endurance 볼륨을 나열하고 용량별로 정렬합니다.
-
 
 ### bluemix sl file volume-detail
 {: #sl_file_volume_detail}
@@ -1505,16 +1466,15 @@ bluemix sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-o, --origin-snapshot-id</dt>
 <dd>복제에 사용할 원본 볼륨 스냅샷의 ID.</dd>
 <dt>-s, --duplicate-size</dt>
 <dd>중복 파일 볼륨의 크기(GB). 크기가 지정되지 않은 경우 원본 볼륨의 크기가 사용됩니다.</dd>
 <dt>-i, --duplicate-iops</dt>
-<dd>100 - 6000의 100의 배수인 Performance 스토리지 IOPS. 지정되지 않은 경우 원본 볼륨의 IOPS가 사용됩니다.</dd>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOPS. 지정되지 않은 경우 원본 볼륨의 IOPS가 사용됩니다.</dd>
 <dt>-t, --duplicate-tier</dt>
-<dd>Endurance 스토리지 계층. 계층이 지정되지 않은 경우 원본 볼륨의 계층이 사용됩니다.</dd>
+<dd>Endurance Storage Tier. 계층이 지정되지 않은 경우 원본 볼륨의 계층이 사용됩니다.</dd>
 <dt>-n, --duplicate-snapshot-size</dt>
 <dd>복제를 위해 주문할 스냅샷 영역의 크기. 스냅샷 영역 크기가 지정되지 않은 경우 원본 볼륨의 스냅샷 영역 크기가 사용됩니다.</dd>
 <dt>-f, --force</dt>
@@ -1536,16 +1496,15 @@ bluemix sl file volume-order [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-t, --storage-type</dt>
 <dd>필수. 스토리지 볼륨의 유형. 옵션: performance,endurance.</dd>
 <dt>-s, --size</dt>
 <dd>필수. 스토리지 볼륨의 크기(GB).</dd>
 <dt>-i, --iops</dt>
-<dd>100 - 6000의 100의 배수인 Performance 스토리지 IOP[storage-type performance에 필요].</dd>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOP[storage-type performance에 필요].</dd>
 <dt>-e, --tier</dt>
-<dd>Endurance 스토리지 계층(GB당 IOP)[storage-type endurance에 필요]. 옵션: 0.25,2,4,10.</dd>
+<dd>Endurance Storage Tier(GB당 IOP)[storage-type endurance에 필요]. 옵션: 0.25,2,4,10.</dd>
 <dt>-d, --datacenter</dt>
 <dd>필수. 데이터 센터의 짧은 이름.</dd>
 <dt>-n, --snapshot-size</dt>
@@ -1584,8 +1543,7 @@ bluemix sl dns import ZONEFILE [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--dry-run</dt>
 <dd>레코드를 실제로 작성하지 않음.</dd>
 </dl>
@@ -1605,8 +1563,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--ttl</dt>
 <dd>TTL(Time-To-Live)(초). 예: 86400. 기본값: 7200.</dd>
 </dl>
@@ -1615,7 +1572,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
  bluemix sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
 ```
-이 명령은 A 레코드를 bluemix.net 구역에 추가합니다. 그 호스트는 "ftp"이고, 데이터는 "127.0.0.1"이며 ttl은 86400초입니다.
+이 명령은 A 레코드를 bluemix.net 구역에 추가합니다. 해당 호스트는 "ftp"이고, 데이터는 "127.0.0.1"이며 ttl은 86400초입니다.
 
 ### bluemix sl dns record-edit
 {: #sl_dns_record_edit}
@@ -1626,8 +1583,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--by-record</dt>
 <dd>호스트 레코드로 편집(예: www).</dd>
 <dt>--by-id</dt>
@@ -1653,8 +1609,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--data</dt>
 <dd>레코드 데이터별 필터링(예: IP 주소).</dd>
 <dt>--record</dt>
@@ -1746,7 +1701,6 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 이 명령은 BIND 형식으로 bluemix.net이라는 구역을 인쇄합니다.
 
-
 ### bluemix sl globalip create
 {: #sl_globalip_create}
 
@@ -1756,8 +1710,7 @@ bluemix sl globalip create [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--v6</dt>
 <dd>IPv6 IP 주소 주문.</dd>
 <dt>--test</dt>
@@ -1787,7 +1740,6 @@ bluemix sl globalip assign IDENTIFIER TARGET
 ```
 이 명령은 ID가 12345678인 IP 주소를 IP 주소가 9.111.123.456인 대상 디바이스에 지정합니다.
 
-
 ### bluemix sl globalip cancel
 {: #sl_globalip_cancel}
 
@@ -1797,8 +1749,7 @@ bluemix sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -1818,8 +1769,7 @@ bluemix sl globalip list [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--v4</dt>
 <dd>IPv4 IP만 표시.</dd>
 <dt>--v6</dt>
@@ -1884,8 +1834,7 @@ bluemix sl globalip list --v4
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--name</dt>
 <dd>이미지의 이름입니다.</dd>
 <dt>--note</dt>
@@ -1909,8 +1858,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--name</dt>
 <dd>이미지 이름 필터링.</dd>
 <dt>--public</dt>
@@ -1928,8 +1876,7 @@ bluemix sl ipsec cancel CONTEXT_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--immediate</dt>
 <dd>청구 주기 대신 즉시 IPSec 취소.</dd>
 <dt>--reason</dt>
@@ -1955,8 +1902,7 @@ bluemix sl ipsec detail CONTEXT_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-i, --include</dt>
 <dd>추가 리소스 포함. 옵션: at,is,rs,sr,ss.</dd>
 </dl>
@@ -1969,8 +1915,7 @@ bluemix sl ipsec list [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--order</dt>
 <dd>IPSEC을 구매한 주문 ID별 필터링.</dd>
 </dl>
@@ -1983,8 +1928,7 @@ bluemix sl ipsec order [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-d, --datacenter</dt>
 <dd>필수. IPSEC에 대한 데이터 센터의 짧은 이름(예: dal09).</dd>
 </dl>
@@ -1998,8 +1942,7 @@ bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --subnet-id</dt>
 <dd>추가할 서브넷 ID. 필수.</dd>
 <dt>-t, --subnet-type</dt>
@@ -2025,8 +1968,7 @@ bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --static-ip</dt>
 <dd>정적 IP 주소. 필수.</dd>
 <dt>-r, --remote-ip</dt>
@@ -2051,8 +1993,7 @@ bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-s, --static-ip</dt>
 <dd>정적 IP 주소. 필수.</dd>
 <dt>-r, --remote-ip</dt>
@@ -2069,8 +2010,7 @@ bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-n, --name</dt>
 <dd>별명.</dd>
 <dt>-r, --remote-peer</dt>
@@ -2106,8 +2046,7 @@ bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2121,8 +2060,7 @@ bluemix sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2152,8 +2090,7 @@ bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-a, --allocation</dt>
 <dd>필수. 연결의 할당된 백분율.</dd>
 <dt>-p, --port</dt>
@@ -2173,8 +2110,7 @@ bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2188,8 +2124,7 @@ bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-a, --allocation</dt>
 <dd>연결의 할당된 백분율을 변경합니다.</dd>
 <dt>-p, --port</dt>
@@ -2225,8 +2160,7 @@ bluemix sl loadbal list
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-d, --datacenter</dt>
 <dd>데이터 센터 짧은 이름별 필터링.</dd>
 <dt>-o, --order</dt>
@@ -2259,8 +2193,7 @@ bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--disabled</dt>
 <dd>선택사항. 서비스를 사용 안함으로 작성합니다. 지정되지 않은 경우 기본값이 사용됩니다.</dd>
 <dt>-p, --port</dt>
@@ -2282,8 +2215,7 @@ bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2297,8 +2229,7 @@ bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--disabled</dt>
 <dd>서비스를 사용 안함으로 설정합니다.</dd>
 <dt>--enabled</dt>
@@ -2322,8 +2253,7 @@ bluemix sl loadbal service-toggle SERVICE_ID
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2337,8 +2267,7 @@ bluemix sl loadbal service-toggle SERVICE_ID
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --in-file</dt>
 <dd>이 키를 위해 가져올 id_rsa.pub 파일.</dd>
 <dt>-k, --key</dt>
@@ -2353,7 +2282,6 @@ bluemix sl loadbal service-toggle SERVICE_ID
 ```
 이 명령은 ~/.ssh/id_rsa.pub 파일에서 "mykey" 참고가 지정된 SSH 키를 추가합니다.
 
-
 ### bluemix sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
@@ -2363,8 +2291,7 @@ SSH 키를 편집합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--label</dt>
 <dd>키의 새 레이블.</dd>
 <dt>--note</dt>
@@ -2386,8 +2313,7 @@ SSH 키를 편집합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열. 옵션: id,label,fingerprint,notes.</dd>
 </dl>
@@ -2407,10 +2333,9 @@ SSH 키를 화면에 인쇄합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --out-file</dt>
-<dd>공용 SSH 키가 이 파일에 작성됩니다. </dd>
+<dd>공용 SSH 키가 이 파일에 작성됩니다.</dd>
 </dl>
 
 **예제**:
@@ -2428,8 +2353,7 @@ SSH 키를 영구적으로 제거합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2449,8 +2373,7 @@ SSL 인증서 세부사항을 추가하고 업로드합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--crt</dt>
 <dd>인증 파일.</dd>
 <dt>--csr</dt>
@@ -2465,7 +2388,7 @@ SSL 인증서 세부사항을 추가하고 업로드합니다.
 
 **예제**:
 ```
- bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key 
+ bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key
 ```
 이 명령은 도메인 bluemix.net에 대한 인증서 파일 ~/bluemix.net.cert 및 개인 키 파일 ~/bluemix.net.key를 추가합니다.
 
@@ -2478,8 +2401,7 @@ SSL 인증서를 편집합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--crt</dt>
 <dd>인증 파일.</dd>
 <dt>--csr</dt>
@@ -2522,8 +2444,7 @@ SSL 인증서 및 키 파일을 다운로드합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--status</dt>
 <dd>이 상태의 인증서 표시. 기본값: all, options are: all,valid,expired.</dd>
 <dt>--sortby</dt>
@@ -2545,8 +2466,7 @@ SSL 인증서를 제거합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2566,8 +2486,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2587,8 +2506,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--v6, --ipv6</dt>
 <dd>IPv6 주소 주문.</dd>
 <dt>--test</dt>
@@ -2603,8 +2521,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 이 명령은 16개의 IP v4 주소를 사용하여 공용 서브넷을 작성하고 ID 567인 VLAN에 배치합니다.
 
-
-
 ### bluemix sl subnet detail
 {: #sl_subnet_detail}
 
@@ -2614,8 +2530,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--no-vs</dt>
 <dd>가상 서버 목록 숨기기.</dd>
 <dt>--no-hardware</dt>
@@ -2628,7 +2543,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 이 명령은 가상 서버 및 하드웨어 서버 정보를 포함하여 ID가 12345678인 서브넷에 대한 자세한 정보를 표시합니다.
 
-
 ### bluemix sl subnet list
 {: #sl_subnet_list}
 
@@ -2638,8 +2552,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열. 옵션: id,identifier,type,network_space,datacenter,vlan_id,IPs,hardware,vs.</dd>
 <dt>-d, --datacenter</dt>
@@ -2664,8 +2577,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 이 명령은 현재 계정의 IP V4 서브넷을 나열합니다. 데이터 센터 기준 필터링은 dal09이고, 서브넷 유형은 PRIMARY이며 네트워크 영역은 PUBLIC입니다.
 
-
-
 ### bluemix sl subnet lookup
 {: #sl_subnet_lookup}
 
@@ -2681,7 +2592,6 @@ IP 주소를 찾고 해당 서브넷 및 디바이스 정보를 표시합니다.
 ```
 이 명령은 주소가 9.125.235.255인 IP 주소 레코드를 찾고 해당 서브넷과 디바이스 정보를 표시합니다.
 
-
 ### bluemix sl vlan create
 {: #sl_vlan_create}
 
@@ -2691,8 +2601,7 @@ IP 주소를 찾고 해당 서브넷 및 디바이스 정보를 표시합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-t, --vlan-type</dt>
 <dd>VLAN의 유형(공용 또는 사설).</dd>
 <dt>-r, --router</dt>
@@ -2712,6 +2621,7 @@ IP 주소를 찾고 해당 서브넷 및 디바이스 정보를 표시합니다.
  bluemix sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 이 명령은 16개의 IP 주소와 함께 데이터 센터 dal09에 위치하고 이름이 myvlan인 공용 VLAN을 작성합니다.
+
 ### bluemix sl vlan cancel
 {: #sl_vlan_cancel}
 
@@ -2721,8 +2631,7 @@ VLAN을 취소합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2733,8 +2642,6 @@ VLAN을 취소합니다.
 ```
 이 명령은 확인 요청 없이 ID가 12345678인 VLAN을 취소합니다.
 
-
-
 ### bluemix sl vlan detail
 {: #sl_vlan_detail}
 
@@ -2744,8 +2651,7 @@ VLAN에 대한 세부사항을 가져옵니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--no-vs</dt>
 <dd>가상 서버 목록 숨기기.</dd>
 <dt>--no-hardware</dt>
@@ -2758,7 +2664,6 @@ VLAN에 대한 세부사항을 가져옵니다.
 ```
 이 명령은 ID가 12345678인 VLAN의 세부사항을 표시하며 가상 서버 또는 하드웨어 서버는 나열하지 않습니다.
 
-
 ### bluemix sl vlan edit
 {: #sl_vlan_edit}
 
@@ -2768,8 +2673,7 @@ VLAN에 대한 세부사항을 편집합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-n, --name</dt>
 <dd>VLAN의 이름.</dd>
 </dl>
@@ -2780,7 +2684,6 @@ VLAN에 대한 세부사항을 편집합니다.
 ```
 이 명령은 ID가 12345678인 VLAN을 업데이트하고 새 이름으로 "myvlan-rename"을 지정합니다.
 
-
 ### bluemix sl vlan list
 {: #sl_vlan_list}
 
@@ -2790,8 +2693,7 @@ VLAN에 대한 세부사항을 편집합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열, 옵션: id, number, name, firewall, datacenter, hardware, virtual_servers, public_ips.</dd>
 <dt>-d, --datacenter</dt>
@@ -2809,9 +2711,6 @@ VLAN에 대한 세부사항을 편집합니다.
  bluemix sl vlan list -d dal09 --sortby number
 ```
 이 명령은 현재 계정의 모든 VLAN을 나열합니다. 데이터 센터 기준 필터링은 dal09와 동일하고 VLAN 번호별로 정렬합니다.
-
-
-
 
 ### bluemix sl vlan options
 {: #sl_vlan_options}
@@ -2837,8 +2736,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -2849,7 +2747,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스를 취소합니다.
 
-
 ### bluemix sl vs capture
 {: #sl_vs_capture}
 
@@ -2859,8 +2756,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-n, --name</dt>
 <dd>필수. 이미지의 이름입니다.</dd>
 <dt>--all</dt>
@@ -2875,8 +2771,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 모든 디스크와 함께 ID가 12345678인 가상 서버 인스턴스를 이름이 "mybluemix"이며 "testing" 참고가 지정된 이미지로 캡처합니다.
 
-
-
 ### bluemix sl vs create
 {: #sl_vs_create}
 
@@ -2886,10 +2780,9 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-H, --hostname</dt>
-<dd>필수. FQDN의 호스트 부분. </dd>
+<dd>필수. FQDN의 호스트 부분.</dd>
 <dt>-D, --domain</dt>
 <dd>필수. FQDN의 도메인 부분.</dd>
 <dt>-c, --cpu</dt>
@@ -2987,8 +2880,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--passwords</dt>
 <dd>비밀번호를 표시합니다(유출되지 않도록 주의).</dd>
 <dt>--price</dt>
@@ -3001,7 +2893,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대한 자세한 정보를 나열합니다.
 
-
 ### bluemix sl vs dns-sync
 {: #sl_vs_dns_sync}
 
@@ -3011,8 +2902,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-a, --a-record</dt>
 <dd>호스트의 A 레코드를 동기화합니다.</dd>
 <dt>--aaaa-record</dt>
@@ -3030,6 +2920,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
  bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스의 A 레코드(IP V4 주소)를 DNS 서버에 동기화하고 이 A 레코드의 ttl을 3600으로 설정합니다.
+
 ### bluemix sl vs edit
 {: #sl_vs_edit}
 
@@ -3039,8 +2930,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-D, --domain</dt>
 <dd>FQDN의 도메인 부분.</dd>
 <dt>-H, --hostname</dt>
@@ -3072,8 +2962,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-c, --cpu</dt>
 <dd>CPU 코어 수.</dd>
 <dt>-D, --domain</dt>
@@ -3081,7 +2970,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 <dt>-d, --datacenter</dt>
 <dd>데이터 센터의 짧은 이름.</dd>
 <dt>-H, --hostname</dt>
-<dd>FQDN의 호스트 부분. </dd>
+<dd>FQDN의 호스트 부분.</dd>
 <dt>-m, --memory</dt>
 <dd>메모리(MB).</dd>
 <dt>-n, --network</dt>
@@ -3104,8 +2993,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 현재 계정의 시간별 청구되는 모든 가상 서버 인스턴스를 나열합니다. 도메인 기준 필터링은 "bluemix.net"과 동일하고 메모리별로 정렬합니다.
 
-
-
 ### bluemix sl vs pause
 {: #sl_vs_pause}
 
@@ -3115,8 +3002,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -3127,8 +3013,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 확인 요청 없이 ID가 12345678인 가상 서버 인스턴스를 일시정지합니다.
 
-
-
 ### bluemix sl vs power-off
 {: #sl_vs_power_off}
 
@@ -3138,8 +3022,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--hard</dt>
 <dd>하드 시스템 종료 수행.</dd>
 <dt>--soft</dt>
@@ -3163,8 +3046,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -3175,7 +3057,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대해 전원 켜기를 수행합니다.
 
-
 ### bluemix sl vs ready
 {: #sl_vs_ready}
 
@@ -3185,8 +3066,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--wait</dt>
 <dd>리턴하기 전에 가상 서버가 프로비저닝을 완료할 때까지 최대 X초 동안 대기.</dd>
 </dl>
@@ -3206,8 +3086,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>--hard</dt>
 <dd>하드 재부팅 수행.</dd>
 <dt>--soft</dt>
@@ -3222,8 +3101,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대해 하드 재부팅을 수행합니다.
 
-
-
 ### bluemix sl vs reload
 {: #sl_vs_reload}
 
@@ -3233,12 +3110,11 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-i, --postinstall</dt>
 <dd>다운로드할 사후 설치 스크립트.</dd>
 <dt>--image</dt>
-<dd>이미지 ID. 기본값은 현재 운영 체제를 사용하는 것입니다. </dd>
+<dd>이미지 ID. 기본값은 현재 운영 체제를 사용하는 것입니다.</dd>
 <dt>참조:</dt>
 <dd>참조를 위한 'bluemix sl image list'.</dd>
 <dt>-k, --key</dt>
@@ -3252,6 +3128,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
    bluemix sl vs reload 12345678
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대해 현재 운영 체제를 다시 로드합니다.
+
 ### bluemix sl vs rescue
 {: #sl_vs_rescue}
 
@@ -3261,8 +3138,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -3273,7 +3149,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스를 복구 이미지로 다시 부팅합니다.
 
-
 ### bluemix sl vs resume
 {: #sl_vs_resume}
 
@@ -3283,8 +3158,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
@@ -3295,7 +3169,6 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스를 재개합니다.
 
-
 ### bluemix sl vs upgrade
 {: #sl_vs_upgrade}
 
@@ -3305,12 +3178,11 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
 
 <strong>명령 옵션</strong>:
-
-   <dl>
+<dl>
 <dt>-c, --cpu</dt>
 <dd>CPU 코어 수.</dd>
 <dt>--private</dt>
-<dd>CPU 코어는 전용 호스트 서버에 위치합니다. </dd>
+<dd>CPU 코어는 전용 호스트 서버에 위치합니다.</dd>
 <dt>-m, --memory</dt>
 <dd>메모리(MB).</dd>
 <dt>--network</dt>

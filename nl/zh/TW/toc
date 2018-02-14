@@ -13,17 +13,19 @@ CLI 及開發工具
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
 	reference/bluemix_cli/all_versions.md
+	[IBM Cloud Developer Tools 指令](../cloudnative/idt/commands.html)
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
 
 	{: .topicgroup}
 	IBM Cloud CLI 外掛程式
+		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service](../containers/cs_cli_devtools.html)
-		[IBM Developer](../cloudnative/dev_cli.html)
-		plugins/pnp/index.md
-		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		[IBM Developer](../cloudnative/idt/index.html)
+ 		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk/index.html)
 		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 	
@@ -34,21 +36,15 @@ CLI 及開發工具
 		plugins/vpn/index.md
 	
 	{: .topicgroup}
-	整合式開發工具
-		ibm-dev-tools-for-vscode.md
-		[API Connect Developer Toolkit](../services/apiconnect/creating_apis.html?pos=2#install_dev_tk)
-		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
-		[使用 IBM Eclipse Tools for IBM Cloud 部署應用程式](../manageapps/eclipsetools/eclipsetools.html)
-		[管理 Liberty 及 Node.js 應用程式](../manageapps/app_mng.html#app_management)
+	建議的開發環境
+		[使用 Eclipse Tools 進行開發](../starters/deploy_eclipsetools.html)
+		[IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
+		[IBM Developer Tools for JetBrains](../cloudnative/idt/jetbrains.html)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	login_federated_id.md
-	connect_dedicated_id.md
-	[使用工具鏈進行開發](../services/ContinuousDelivery/dev_use_toolchains.html)
-	[使用 Eclipse Tools 進行開發](../starters/deploy_eclipsetools.html)
-	[使用 CLI 部署應用程式](../starters/install_cli.html)
-	[上傳應用程式](../starters/upload_app.html)
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
 	{: .navgroup-end}

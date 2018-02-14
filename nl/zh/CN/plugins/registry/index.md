@@ -132,11 +132,15 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 **参数**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>（可选）使用 Go 模板设置输出元素的格式。有关更多信息，请参阅[对 {{site.data.keyword.registrylong_notm}} 命令的 CLI 输出设置格式和过滤](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（可选）使用 Go 模板设置输出元素的格式。 
+
+有关更多信息，请参阅[对 {{site.data.keyword.registrylong_notm}} 命令的 CLI 输出设置格式和过滤](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
 <dt>IMAGE</dt>
 <dd>要获取其报告的映像的名称。可以通过在命令中列出每个映像（各名称之间用空格分隔）来检查多个映像。
+
+
 
 <p>要查找映像的名称，请运行 `bx cr image-list`。将“存储库”和“标记”列中的内容组合在一起，以创建格式为 `repository:tag` 的映像名称。如果未在映像名称中指定标记，那么将检查标记为 `latest` 的映像。</p> 
 
@@ -161,7 +165,9 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>--no-trunc</dt>
 <dd>（可选）不截断映像摘要。</dd>
 <dt>--format FORMAT</dt>
-<dd>（可选）使用 Go 模板设置输出元素的格式。有关更多信息，请参阅[对 {{site.data.keyword.registrylong_notm}} 命令的 CLI 输出设置格式和过滤](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（可选）使用 Go 模板设置输出元素的格式。 
+
+有关更多信息，请参阅[对 {{site.data.keyword.registrylong_notm}} 命令的 CLI 输出设置格式和过滤](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
 <dt>-q, --quiet</dt>
@@ -188,6 +194,8 @@ bx cr image-rm IMAGE [IMAGE...]
 <dl>
 <dt>IMAGE</dt>
 <dd>要获取其报告的映像的名称。可以通过在命令中列出每个映像（各名称之间用空格分隔）来同时删除多个映像。
+
+
 
 <p>要查找映像的名称，请运行 `bx cr image-list`。将“存储库”和“标记”列中的内容组合在一起，以创建格式为 `repository:tag` 的映像名称。如果未在映像名称中指定标记，那么缺省情况下会删除标记为 `latest` 的映像。</p> 
 
@@ -337,7 +345,9 @@ bx cr region-set [REGION]
 **参数**
 <dl>
 <dt>REGION</dt>
-<dd>（可选）目标区域的名称，例如 `us-south`。有关更多信息，请参阅[区域](../../../services/Registry/registry_overview.html#registry_regions)。
+<dd>（可选）目标区域的名称，例如 `us-south`。 
+
+有关更多信息，请参阅[区域](../../../services/Registry/registry_overview.html#registry_regions)。
 
 </dd>
 </dl>
@@ -399,7 +409,9 @@ bx cr token-list --format FORMAT
 **参数**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>（可选）使用 Go 模板设置输出元素的格式。有关更多信息，请参阅[对 {{site.data.keyword.registrylong_notm}} 命令的 CLI 输出设置格式和过滤](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（可选）使用 Go 模板设置输出元素的格式。 
+
+有关更多信息，请参阅[对 {{site.data.keyword.registrylong_notm}} 命令的 CLI 输出设置格式和过滤](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
 </dl>
@@ -437,9 +449,13 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 <dt>IMAGE</dt>
 <dd>要获取其报告的映像的名称。报告将告知您该映像是否存在任何已知的软件包漏洞。可以通过在命令中列出每个映像（各名称之间用空格分隔）来同时请求多个映像的报告。
 
+
+
 <p>要查找映像的名称，请运行 `bx cr image-list`。将“存储库”和“标记”列中的内容组合在一起，以创建格式为 `repository:tag` 的映像名称。如果未在映像名称中指定标记，那么报告会评估标记为 `latest` 的映像。</p> 
 
 <p>以下是支持的操作系统：
+
+
 
 <ul>
 
@@ -458,6 +474,8 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 <dt>--output FORMAT, -o FORMAT</dt>
 <dd>（可选）命令输出以所选格式返回。缺省格式为 `text`。支持以下格式：
 
+
+
 <ul>
 
 <li>`text`</li>
@@ -470,7 +488,7 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 <dt>--configuration-issues, -c</dt>
 <dd>（可选）命令输出限制为仅显示配置问题。</dd>
 <dt>--extended, -e </dt>
-<dd>（可选）命令输出显示有关针对有漏洞软件包的修订的其他信息。</dd>
+<dd>（可选）命令输出显示有关易受攻击软件包修订的其他信息。</dd>
 
 </dl>
 

@@ -22,18 +22,18 @@ lastupdated: "2017-11-16"
 {{site.data.keyword.Bluemix_notm}}용 {{site.data.keyword.autoscaling}} CLI를 사용하여 {{site.data.keyword.autoscaling}} 서비스를 구성할 수 있습니다. {{site.data.keyword.autoscaling}} CLI는 Linux64, Win64 및 OSX를 지원하며, Auto Scaling RESTful API와 비슷한 기능을 제공합니다.
 {: shortdesc}
 
-시작하기 전에 {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 지시사항은 [{{site.data.keyword.Bluemix_notm}} CLI 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}을 참조하십시오.
+시작하기 전에 {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 지시사항은 [{{site.data.keyword.Bluemix_notm}} CLI 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}를 참조하십시오.
 
 ## {{site.data.keyword.Bluemix_notm}} CLI 플러그인 추가
 
-{{site.data.keyword.Bluemix_notm}} CL를 설치하고 나면 {{site.data.keyword.autoscaling}} CLI 플러그인을 추가할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} CLI를 설치하고 나면 {{site.data.keyword.autoscaling}} CLI 플러그인을 추가할 수 있습니다.
 
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
-1. {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오. 
+1. {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
-2. {{site.data.keyword.autoscaling}} CLI 플러그인을 설치하려면 다음 명령을 실행하십시오. 
+2. {{site.data.keyword.autoscaling}} CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.
 ```
 bluemix plugin install auto-scaling -r Bluemix
 ```
@@ -93,7 +93,7 @@ bx as policy-detach <APP_NAME>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
-<dd class="pd">Auto-Scaling 정책을 분리할 앱의 이름입니다. </dd>
+<dd class="pd">Auto-Scaling 정책을 분리할 앱의 이름입니다.</dd>
 </dl>
 
 
@@ -108,7 +108,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
-<dd class="pd">Auto-Scaling 정책의 사용 여부를 설정할 앱의 이름입니다. </dd>
+<dd class="pd">Auto-Scaling 정책의 사용 여부를 설정할 앱의 이름입니다.</dd>
 </dl>
 
 

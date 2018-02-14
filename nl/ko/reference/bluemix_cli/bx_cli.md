@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-11-06"
+  years: 2015, 2018
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2017-11-06"
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
 
-버전: 0.6.2
+버전: 0.6.4
 
-{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다. 
+{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다.
 
-버전 0.5.0부터 {{site.data.keyword.Bluemix_notm}} 명령행 클라이언트는 Cloud Foundry 명령행 클라이언트를 해당 설치에서 번들화합니다. 고유 cf cli가 설치되어 있는 경우 동일한 컨텍스트에서 고유 설치의 {{site.data.keyword.Bluemix_notm}} CLI 명령 `bx [command]`와 Cloud Foundry CLI 명령 `cf [command]`를 함께 사용하지 마십시오. 대신 cf cli를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry 리소스를 관리하려면 `bluemix cf [command]`를 사용하십시오. 참고로, `bluemix cf api/login/logout/target`은 허용되지 않으며 그 대신에 `bluemix api/login/logout/target`을 사용해야 합니다. 
+버전 0.5.0부터 {{site.data.keyword.Bluemix_notm}} 명령행 클라이언트는 Cloud Foundry 명령행 클라이언트를 해당 설치에서 번들화합니다. 고유 cf cli가 설치되어 있는 경우 동일한 컨텍스트에서 고유 설치의 {{site.data.keyword.Bluemix_notm}} CLI 명령 `bx [command]`와 Cloud Foundry CLI 명령 `cf [command]`를 함께 사용하지 마십시오. 대신 cf cli를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry 리소스를 관리하려면 `bluemix cf [command]`를 사용하십시오.  참고로, `bluemix cf api/login/logout/target`은 허용되지 않으며 그 대신에 `bluemix api/login/logout/target`을 사용해야 합니다.
 
 다음에는 해당 이름, 인수, 옵션, 필수 소프트웨어, 설명 및 예제를 포함하여 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 자세한 명령이 나열되어 있습니다.
 {:shortdesc}
@@ -31,7 +31,8 @@ lastupdated: "2017-11-06"
 <dt>엔드포인트</dt>
 <dd>명령을 사용하기 전에 <code>bluemix api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
 <dt>로그인</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다. 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여 API 키로 인증하십시오. API 키를 작성하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **플랫폼 API 키**로 이동하십시오.
+<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다.
+ 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여 API 키로 인증하십시오. API 키를 작성하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **플랫폼 API 키**로 이동하십시오.
 </dd>
 <dt>대상</dt>
 <dd>이 명령을 사용하기 전에 <code>bluemix target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
@@ -39,7 +40,7 @@ lastupdated: "2017-11-06"
 <dd>이 명령을 실행하려면 Docker CLI(docker)가 설치되어 있어야 합니다.</dd>
 </dl>
 
-**참고:** Bluemix 명령의 short 형식을 사용할 수 있습니다. 예를 들어, `bx api`는 `bluemix api`의 단축형입니다. 
+**참고:** Bluemix 명령의 short 형식을 사용할 수 있습니다. 예를 들어, `bx api`는 `bluemix api`의 단축형입니다.
 
 자주 사용되는 Bluemix 명령을 참조하려면 다음 표의 색인을 사용하십시오.
 
@@ -47,7 +48,7 @@ lastupdated: "2017-11-06"
 {: #bx_commands_index}
 
 <table summary="일반 Bluemix 명령.">
- <caption>표 1. 일반 Bluemix 명령</caption>
+<caption>표 1. 일반 Bluemix 명령</caption>
  <thead>
  <th colspan="5">일반 Bluemix 명령</th>
  </thead>
@@ -75,7 +76,7 @@ lastupdated: "2017-11-06"
  ## {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 관리 및 구성을 위한 명령(bluemix sl)
   {: #bx_commands_softlayer}
 
-{{site.data.keyword.BluSoftlayer_notm}} 인프라 관리를 위한 명령은 {{site.data.keyword.Bluemix_notm}} CLI에 병합되었습니다. {{site.data.keyword.Bluemix_notm}} CLI를 사용한 {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 구성 및 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} 인프라 (bluemix sl) 명령](/docs/cli/reference/softlayer/index.md#softlayer_cli)을 참조하십시오. 
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 관리를 위한 명령은 {{site.data.keyword.Bluemix_notm}} CLI에 병합되었습니다. {{site.data.keyword.Bluemix_notm}} CLI를 사용한 {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 구성 및 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} 인프라 (bluemix sl) 명령](/docs/cli/reference/softlayer/index.md#softlayer_cli)을 참조하십시오.
 
  ## 계정, 조직 및 역할 관리를 위한 명령
  {: #bx_commands_account}
@@ -364,7 +365,7 @@ lastupdated: "2017-11-06"
 
 ## bluemix help
 {: #bluemix_help}
-첫 번째 레벨 기본 제공 명령 및 지원되는 {{site.data.keyword.Bluemix_notm}} CLI 네임스페이스에 대한 일반 도움말 또는 특정 기본 제공 명령 또는 네임스페이스의 도움말을 표시합니다. 
+첫 번째 레벨 기본 제공 명령 및 지원되는 {{site.data.keyword.Bluemix_notm}} CLI 네임스페이스에 대한 일반 도움말 또는 특정 기본 제공 명령 또는 네임스페이스의 도움말을 표시합니다.
 
 ```
 bluemix help [COMMAND|NAMESPACE]
@@ -399,7 +400,7 @@ bluemix help info
 
 ## bluemix api
 {: #bluemix_api}
-{{site.data.keyword.Bluemix_notm}} API 엔드포인트를 설정하거나 확인합니다. 
+{{site.data.keyword.Bluemix_notm}} API 엔드포인트를 설정하거나 확인합니다.
 
 ```
 bluemix api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
@@ -410,7 +411,7 @@ bluemix api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 <strong>명령 옵션</strong>:
    <dl>
    <dt>API_ENDPOINT(선택사항)</dt>
-   <dd>대상으로 지정된 API 엔드포인트입니다(예: `https://api.chinabluemix.net`). *API_ENDPOINT* 및 `--unset` 옵션 중 하나를 지정하지 않으면 현재 API 엔드포인트가 표시됩니다. </dd>
+   <dd>대상으로 지정된 API 엔드포인트입니다(예: `https://api.chinabluemix.net`). *API_ENDPOINT* 및 `--unset` 옵션 중 하나를 지정하지 않으면 현재 API 엔드포인트가 표시됩니다.</dd>
    <dt>--unset(선택사항)</dt>
    <dd>API 엔드포인트 설정을 제거합니다.</dd>
    <dt>--skip-ssl-validation(선택사항)</dt>
@@ -457,16 +458,16 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
    <dd>HTTP 요청의 제한시간 값입니다. 기본값은 60초입니다.</dd>
    <dt>--trace true|false|<i>path-to-file</i></dt>
-   <dd>터미널 또는 지정된 파일에 대한 HTTP 요청을 추적합니다. </dd>
+   <dd>터미널 또는 지정된 파일에 대한 HTTP 요청을 추적합니다.</dd>
    <dt>--color true|false</dt>
-   <dd>색상 출력을 사용하거나 사용하지 않습니다. 색상 출력은 기본적으로 사용됩니다. </dd>
+   <dd>색상 출력을 사용하거나 사용하지 않습니다. 색상 출력은 기본적으로 사용됩니다.</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>기본 로케일을 설정합니다. LOCALE이 <i>CLEAR</i>인 경우 이전 로케일이 삭제됩니다. </dd>
+   <dd>기본 로케일을 설정합니다. LOCALE이 <i>CLEAR</i>인 경우 이전 로케일이 삭제됩니다.</dd>
    <dt>--check-version true|false</dt>
    <dd>CLI 버전 확인을 사용하거나 사용하지 않습니다.</dd>
    </dl>
 
-이들 옵션 중에서 한 번에 하나만 지정할 수 있습니다. 
+이들 옵션 중에서 한 번에 하나만 지정할 수 있습니다.
 
 <strong>예제</strong>:
 
@@ -482,7 +483,7 @@ HTTP 요청에 대한 추적 출력을 사용하도록 설정합니다.
 bluemix config --trace true
 ```
 
-지정된 파일 */home/usera/my_trace*에 대한 HTTP 요청 추적: 
+지정된 파일 */home/usera/my_trace*에 대한 HTTP 요청 추적:
 
 ```
 bluemix config --trace /home/usera/my_trace
@@ -517,7 +518,7 @@ bluemix config --locale CLEAR
 bluemix info
 ```
 
-<strong>전제조건</strong>:  엔드포인트
+<strong>전제조건</strong>: 엔드포인트
 
 
 ## bluemix cf
@@ -555,7 +556,7 @@ bluemix -q cf services
 ## bluemix login
 {: #bluemix_login}
 
-사용자가 로그인됩니다. 
+사용자가 로그인됩니다.
 
 ```
 bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
@@ -572,20 +573,20 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dt> --apikey <i>API_KEY 또는 @API_KEY_FILE_PATH</i>
   <dd> API 키 컨텐츠 또는 @로 표시되는 API 키 파일의 경로</dd>
   <dt> --sso(선택사항) </dt>
-  <dd> 일회성 패스코드를 사용하여 로그인</dd>
+  <dd> 일회성 패스코드를 사용하여 로그인 </dd>
   <dt> -u <i>USERNAME</i>(선택사항)</dt>
   <dd> 사용자 이름</dd>
   <dt> -p <i>PASSWORD</i>(선택사항)</dt>
   <dd> 비밀번호</dd>
   <dt> -c <i>ACCOUNT_ID</i>(선택사항) </dt>
   <dd> 대상 계정의 ID</dd>
-  <dt> -o <i>ORG_NAME</i>(선택사항)</dt>
-  <dd> 대상 조직의 이름</dd>
-  <dt> -s <i>SPACE_NAME</i>(선택사항)</dt>
+  <dt> -o <i>ORG_NAME</i>(선택사항) </dt>
+  <dd> 대상 조직의 이름 </dd>
+  <dt> -s <i>SPACE_NAME</i>(선택사항) </dt>
   <dd> 대상 영역의 이름</dd>
   <dt> --no-iam </dt>
   <dd> 공용 IAM 대신 로그인 서버를 통한 인증 강제 실행</dd>
-  <dt> --skip-ssl-validation(선택사항)</dt>
+  <dt> --skip-ssl-validation(선택사항) </dt>
   <dd> HTTP 요청의 SSL 유효성 검증을 무시합니다. 이 옵션은 권장되지 않습니다.</dd>
 </dl>
 
@@ -639,7 +640,7 @@ bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 bluemix login -u UserID --sso
 ```
 
-그러면 CLI에서 URL 링크를 제공하고 패스코드를 요청합니다. 
+그러면 CLI에서 URL 링크를 제공하고 패스코드를 요청합니다.
 ```
 One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
@@ -649,7 +650,7 @@ One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ## bluemix logout
 {: #bluemix_logout}
 
-사용자가 로그아웃됩니다. 
+사용자가 로그아웃됩니다.
 
 ```
 bluemix logout
@@ -666,7 +667,7 @@ bluemix logout
 bluemix regions
 ```
 
-<strong>전제조건</strong>:  엔드포인트
+<strong>전제조건</strong>: 엔드포인트
 
 
 ## bluemix target
@@ -685,14 +686,14 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [--cf] [-o ORG] [-s SPACE]
    <dl>
    <dt>-r <i>REGION_NAME</i>(선택사항)</dt>
    <dd>전환할 지역의 이름입니다(예: 'us-south' 또는 'eu-gb').</dd>
-   <dt>-c <i>ACCOUNT_ID</i>(선택사항) </dt>
+   <dt>-c <i>ACCOUNT_ID</i>(선택사항)</dt>
    <dd>대상으로 지정된 계정의 ID입니다.</dd>
    <dt>--cf</dt>
    <dd>대상 조직 및 영역을 대화식으로 선택합니다.</dd>
    <dt>-o <i>ORG_NAME</i>(선택사항)</dt>
-   <dd>대상으로 지정된 조직의 이름입니다. </dd>
+   <dd>대상으로 지정된 조직의 이름입니다.</dd>
    <dt>-s <i>SPACE_NAME</i>(선택사항)</dt>
-   <dd>대상으로 지정된 영역의 이름입니다. </dd>
+   <dd>대상으로 지정된 영역의 이름입니다.</dd>
    </dl>
 옵션이 지정되지 않은 경우, 현재 계정, 영역, 조직 및 영역이 표시됩니다.
 
@@ -716,7 +717,7 @@ bluemix target -r eu-gb
 bluemix target
 ```
 
-### bluemix update
+## bluemix update
 {: #bluemix_update}
 
 최신 버전으로 CLI를 업데이트합니다.
@@ -726,6 +727,12 @@ bluemix update
 ```
 
 <strong>전제조건</strong>: 없음
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-f</dt>
+  <dd>확인 없이 강제 업데이트</dd>
+</dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
@@ -743,12 +750,12 @@ bluemix account orgs [-r REGION] [--guid]
    <dt>-r <i>REGION</i>(선택사항)</dt>
    <dd>조직 정보가 표시되는 대상 지역입니다. 'all'로 설정되면 모든 지역의 모든 조직이 나열됩니다.</dd>
    <dt>--guid(선택사항)</dt>
-   <dd>조직의 GUID를 표시합니다. </dd>
+   <dd>조직의 GUID를 표시합니다.</dd>
    </dl>
 
 <strong>예제</strong>:
 
-지역: `us-south`의 모든 조직을 GUID를 표시하여 나열합니다. 
+지역: `us-south`의 모든 조직을 GUID를 표시하여 나열합니다.
 
 ```
 bluemix account orgs -r us-south --guid
@@ -768,14 +775,14 @@ bluemix account org ORG_NAME [--guid]
 <strong>명령 옵션</strong>:
    <dl>
    <dt>ORG_NAME(필수)</dt>
-   <dd>조직의 이름입니다. </dd>
+   <dd>조직의 이름입니다.</dd>
    <dt>--guid(선택사항)</dt>
-   <dd>조직의 GUID를 표시합니다. </dd>
+   <dd>조직의 GUID를 표시합니다.</dd>
    </dl>
 
 <strong>예제</strong>:
 
-조직 `IBM`의 정보를 GUID를 표시하여 보여줍니다. 
+조직 `IBM`의 정보를 GUID를 표시하여 보여줍니다.
 
 ```
 bluemix account org IBM --guid
@@ -796,14 +803,14 @@ bluemix account org-create ORG_NAME [-f]
 <strong>명령 옵션</strong>:
    <dl>
    <dt>ORG_NAME(필수)</dt>
-   <dd>작성 중인 조직의 이름입니다. </dd>
+   <dd>작성 중인 조직의 이름입니다.</dd>
    <dt>-f</dt>
-   <dd>확인 없이 작성을 강제 실행합니다. </dd>
+   <dd>확인 없이 작성을 강제 실행합니다.</dd>
    </dl>
 
 <strong>예제</strong>:
 
-이름이 `IBM`인 조직을 작성합니다. 
+이름이 `IBM`인 조직을 작성합니다.
 
 ```
 bluemix account org-create IBM
@@ -823,9 +830,9 @@ bluemix account org-replicate ORG_NAME REGION_NAME
 <strong>명령 옵션</strong>:
    <dl>
    <dt>ORG_NAME(필수)</dt>
-   <dd>복제할 기존 조직의 이름입니다. </dd>
+   <dd>복제할 기존 조직의 이름입니다.</dd>
    <dt>REGION_NAME(필수)</dt>
-   <dd>복제된 조직을 호스팅하는 지역의 이름입니다. </dd>
+   <dd>복제된 조직을 호스팅하는 지역의 이름입니다.</dd>
    </dl>
 
 <strong>예제</strong>:
@@ -853,7 +860,7 @@ bluemix account org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dt>OLD_ORG_NAME(필수)</dt>
    <dd>이름이 변경될 조직의 이전 이름입니다.</dd>
    <dt>NEW_ORG_NAME(필수)</dt>
-   <dd>이름이 변경될 대상 조직의 새 이름입니다. </dd>
+   <dd>이름이 변경될 대상 조직의 새 이름입니다.</dd>
    </dl>
 
 
@@ -869,9 +876,9 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 <strong>명령 옵션</strong>:
    <dl>
    <dt>-o</dt>
-   <dd>조직 이름입니다. 지정된 조직 아래의 영역을 나열합니다. 지정되지 않은 경우, 기본값은 현재 조직입니다. </dd>
+   <dd>조직 이름입니다. 지정된 조직 아래의 영역을 나열합니다. 지정되지 않은 경우 현재 조직으로 기본값이 지정됩니다.</dd>
    <dt>-r</dt>
-   <dd>지역 이름입니다. 지정된 지역 아래의 영역을 나열합니다. 지정되지 않은 경우, 기본값은 현재 지역입니다. </dd>
+   <dd>지역 이름입니다. 지정된 지역 아래의 영역을 나열합니다. 지정되지 않은 경우 현재 지역으로 기본값이 지정됩니다.</dd>
    </dl>
 
 
@@ -915,9 +922,9 @@ bluemix account org-users ORG_NAME [-a]
 <strong>명령 옵션</strong>:
 <dl>
 <dt>ORG_NAME(필수)</dt>
-<dd>조직의 이름입니다. </dd>
+<dd>조직의 이름입니다.</dd>
 <dt>-a(선택사항)</dt>
-<dd>지정된 조직의 모든 사용자를 나열하지만, 역할별로 그룹화하지는 않습니다. </dd>
+<dd>지정된 조직의 모든 사용자를 나열하지만, 역할별로 그룹화하지는 않습니다.</dd>
 </dl>
 
 ## bluemix account org-user-add
@@ -941,7 +948,7 @@ bluemix account org-users ORG_NAME [-a]
 <strong>명령 옵션</strong>:
 <dl>
 <dt>--force, -f</dt>
-<dd>확인 없이 강제 삭제합니다. </dd>
+<dd>확인 없이 강제 삭제합니다.</dd>
 </dl>
 
 ## bluemix account org-roles
@@ -958,7 +965,7 @@ bluemix account org-roles [-u USER_ID]
 <strong>명령 옵션</strong>:
   <dl>
    <dt>-u</dt>
-   <dd>사용자 ID입니다. 지정되지 않은 경우, 기본값은 현재 사용자입니다. </dd>
+   <dd>사용자 ID입니다. 지정되지 않은 경우 현재 사용자로 기본값이 지정됩니다.</dd>
   </dl>
 
 ## bluemix account org-role-set
@@ -975,15 +982,15 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
 <strong>명령 옵션</strong>:
   <dl>
    <dt>USER_NAME(필수)</dt>
-   <dd>지정되는 사용자의 이름입니다. </dd>
+   <dd>지정되는 사용자의 이름입니다.</dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 지정되는 조직의 이름입니다. </dd>
+   <dd>이 사용자가 지정되는 조직의 이름입니다.</dd>
    <dt>ORG_ROLE(필수)</dt>
    <dd>이 사용자가 지정되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
    <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
-   <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
-   <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다. </li>
+   <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다.</li>
+   <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다.</li>
    </ul>
    </dd>
   </dl>
@@ -996,7 +1003,8 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
 bluemix account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**참고**: CLI를 사용하여 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](/docs/iam/assignaccess.html#assignaccess)을 참조하십시오. <!-- Begin Staging URL vs Prod URL -->
+**참고**: CLI를 사용하여 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](/docs/iam/assignaccess.html#assignaccess)을 참조하십시오.
+<!-- Begin Staging URL vs Prod URL -->
 
 ## bluemix account org-role-unset
 {: #bluemix_account_org_role_unset}
@@ -1012,15 +1020,15 @@ bluemix account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 <strong>명령 옵션</strong>:
    <dl>
    <dt>USER_NAME(필수)</dt>
-   <dd>제거되는 사용자의 이름입니다. </dd>
+   <dd>제거되는 사용자의 이름입니다.</dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 제거되는 조직의 이름입니다. </dd>
+   <dd>이 사용자가 제거되는 조직의 이름입니다.</dd>
    <dt>ORG_ROLE(필수)</dt>
    <dd>이 사용자가 제거되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
    <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
-   <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
-   <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다. </li>
+   <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다.</li>
+   <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다.</li>
    </ul>
    </dd>
     </dl>
@@ -1047,9 +1055,9 @@ bluemix account space-users ORG_NAME SPACE_NAME
 <strong>명령 옵션</strong>:
    <dl>
    <dt>ORG_NAME(필수)</dt>
-   <dd>조직의 이름입니다. </dd>
+   <dd>조직의 이름입니다.</dd>
    <dt>SPACE_NAME(필수)</dt>
-   <dd>영역의 이름입니다. </dd>
+   <dd>영역의 이름입니다.</dd>
    </dl>
 
 
@@ -1068,17 +1076,17 @@ bluemix account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
    <dl>
    <dt>USER_NAME(필수)</dt>
-   <dd>지정되는 사용자의 이름입니다. </dd>
+   <dd>지정되는 사용자의 이름입니다.</dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 지정되는 조직의 이름입니다. </dd>
+   <dd>이 사용자가 지정되는 조직의 이름입니다.</dd>
    <dt>SPACE_NAME(필수)</dt>
-   <dd>이 사용자가 지정되는 영역의 이름입니다. </dd>
+   <dd>이 사용자가 지정되는 영역의 이름입니다.</dd>
    <dt>SPACE_ROLE(필수)</dt>
    <dd>이 사용자가 지정되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
-   <li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다. </li>
-   <li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다. </li>
-   <li>SpaceAuditor: 이 역할은 영역에 대한 설정 및 로그, 보고서를 볼 수 있습니다. </li>
+   <li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다.</li>
+   <li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다.</li>
+   <li>SpaceAuditor: 이 역할은 영역에 대한 설정 및 로그, 보고서를 볼 수 있습니다.</li>
    </ul></dd>
     </dl>
 
@@ -1105,17 +1113,17 @@ bluemix account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
    <dl>
    <dt>USER_NAME(필수)</dt>
-   <dd>제거되는 사용자의 이름입니다. </dd>
+   <dd>제거되는 사용자의 이름입니다.</dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 제거되는 조직의 이름입니다. </dd>
+   <dd>이 사용자가 제거되는 조직의 이름입니다.</dd>
    <dt>SPACE_NAME(필수)</dt>
-   <dd>이 사용자가 제거되는 영역의 이름입니다. </dd>
+   <dd>이 사용자가 제거되는 영역의 이름입니다.</dd>
    <dt>SPACE_ROLE(필수)</dt>
    <dd>이 사용자가 제거되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
-   <li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다. </li>
-   <li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다. </li>
-   <li>SpaceAuditor: 이 역할은 영역에 대한 설정 및 로그, 보고서를 볼 수 있습니다. </li>
+   <li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다.</li>
+   <li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다.</li>
+   <li>SpaceAuditor: 이 역할은 영역에 대한 설정 및 로그, 보고서를 볼 수 있습니다.</li>
    </ul></dd>
     </dl>
 
@@ -1183,9 +1191,9 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 <dt>USERNAME(필수)</dt>
 <dd>사용자 이름</dd>
 <dt>-c ACCOUNT_ID</dt>
-<dd>계정 ID. 지정되지 않은 경우 현재 계정을 기본값으로 설정합니다.</dd>
+<dd>계정 ID. 지정되지 않은 경우 현재 계정으로 기본값이 지정됩니다.</dd>
 <dt>--force, -f(선택사항)</dt>
-<dd>확인 없이 강제 삭제합니다. </dd>
+<dd>확인 없이 강제 삭제합니다.</dd>
 </dl>
 
 ## bluemix account user-invite
@@ -1202,24 +1210,24 @@ bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
 <strong>명령 옵션</strong>:
 <dl>
    <dt>USER_NAME(필수)</dt>
-   <dd>초대되는 사용자의 이름입니다. </dd>
+   <dd>초대되는 사용자의 이름입니다.</dd>
    <dt>ORG_NAME(필수)</dt>
-   <dd>이 사용자가 초대되는 조직의 이름입니다. </dd>
+   <dd>이 사용자가 초대되는 조직의 이름입니다.</dd>
    <dt>ORG_ROLE(필수)</dt>
    <dd>이 사용자가 초대되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
   <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
-  <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
-  <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다. </li>
+  <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다.</li>
+  <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다.</li>
   </ul> </dd>
    <dt>SPACE_NAME(필수)</dt>
-   <dd>이 사용자가 초대되는 영역의 이름입니다. </dd>
+   <dd>이 사용자가 초대되는 영역의 이름입니다.</dd>
    <dt>SPACE_ROLE(필수)</dt>
    <dd>이 사용자가 초대되는 영역의 이름입니다. 이 사용자가 초대되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
-<li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다. </li>
-<li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다. </li>
-<li>SpaceAuditor: 이 역할은 영역에 대한 설정 및 로그, 보고서를 볼 수 있습니다. </li>
+<li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다.</li>
+<li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다.</li>
+<li>SpaceAuditor: 이 역할은 영역에 대한 설정 및 로그, 보고서를 볼 수 있습니다.</li>
 </ul>
 </dd>
 </dl>
@@ -1232,7 +1240,8 @@ bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
 bluemix account user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**참고**: CLI를 사용하여 초대 중에 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)을 참조하십시오. <!-- End Staging URL vs Prod URL -->
+**참고**: CLI를 사용하여 초대 중에 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)을 참조하십시오.
+<!-- End Staging URL vs Prod URL -->
 
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
@@ -1254,7 +1263,7 @@ bluemix account user-reinvite USER_EMAIL ORG_NAME
 bluemix iam service-ids --uuid
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1279,7 +1288,7 @@ bluemix iam service-ids --uuid
 bluemix iam service-id NAME [--uuid]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1307,7 +1316,7 @@ bluemix iam service-id sample-test
 bluemix iam service-id-create NAME [-d, --description DESCRIPTION]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1335,7 +1344,7 @@ bluemix iam service-id-create sample-test -d 'hello, world!'
 bluemix iam service-id-update NAME [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1375,7 +1384,7 @@ bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 bluemix iam service-id-delete NAME [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1479,7 +1488,7 @@ bluemix iam api-key-delete NAME [-f]
 <dt>NAME(필수)</dt>
 <dd>삭제할 API 키의 이름입니다.</dd>
 <dt>-f(선택사항)</dt>
-<dd>확인 없이 강제 삭제합니다. </dd>
+<dd>확인 없이 강제 삭제합니다.</dd>
 </dl>
 
 ## bluemix iam service-api-keys
@@ -1491,7 +1500,7 @@ bluemix iam api-key-delete NAME [-f]
 bluemix iam service-api-keys SERVICE_ID
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1499,7 +1508,7 @@ bluemix iam service-api-keys SERVICE_ID
 
 <strong>예제</strong>:
 
-서비스 `sample-service`의 모든 API 키 나열: 
+서비스 `sample-service`의 모든 API 키 나열:
 
 ```
 bluemix iam service-api-keys sample-service
@@ -1514,7 +1523,7 @@ bluemix iam service-api-keys sample-service
 bluemix iam service-api-key NAME SERVICE_ID [--uuid]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1524,7 +1533,7 @@ bluemix iam service-api-key NAME SERVICE_ID [--uuid]
 
 <strong>예제</strong>:
 
-서비스 `sample-service`의 서비스 API 키 `sample-key`의 세부사항 표시: 
+서비스 `sample-service`의 서비스 API 키 `sample-key`의 세부사항 표시:
 
 ```
 bluemix iam service-api-key sample-key sample-service
@@ -1539,7 +1548,7 @@ bluemix iam service-api-key sample-key sample-service
 bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [-f, --file FILE]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1551,7 +1560,7 @@ bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTIO
 
 <strong>예제</strong>:
 
-서비스 `sample-service`의 서비스 API 키 `sample-key` 작성: 
+서비스 `sample-service`의 서비스 API 키 `sample-key` 작성:
 
 ```
 bluemix iam service-api-key-create sample-key sample-service
@@ -1566,7 +1575,7 @@ bluemix iam service-api-key-create sample-key sample-service
 bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1597,7 +1606,7 @@ bluemix iam service-api-key-update sample-key sample-service -n new-sample-key
 bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1622,7 +1631,7 @@ bluemix iam service-api-key-delete sample-key sample-service
 bluemix iam user-policies name@example.com
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 계정을 대상으로 지정
+<strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1647,7 +1656,7 @@ bluemix iam user-policies name@example.com
 bluemix iam user-policy USER_NAME POLICY_ID
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 계정을 대상으로 지정
+<strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1674,7 +1683,7 @@ bluemix iam user-policy name@example.com 0bb730daa
 bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 계정을 대상으로 지정
+<strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1682,8 +1691,8 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dd>정책이 속한 사용자 이름</dd>
 <dt>-f, --file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
-<dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i>(선택사항)</dt>
-<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
+<dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (선택사항)</dt>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션에만 '-f, --file'이 사용됩니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
 <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>(선택사항)</dt>
@@ -1747,7 +1756,7 @@ bluemix iam user-policy-create name@example.com --roles Viewer --resource-group-
 bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 계정을 대상으로 지정
+<strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
 
 <strong>명령 옵션</strong>:
 <dt>USER_NAME(필수)</dt>
@@ -1760,8 +1769,8 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>정책 정의의 JSON 파일</dd>
 <dt>-f, --file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
-<dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i>(선택사항)</dt>
-<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
+<dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (선택사항)</dt>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션에만 '-f, --file'이 사용됩니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
 <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>(선택사항)</dt>
@@ -1827,7 +1836,7 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Viewer --
 bluemix iam service-policies SERVICE_ID_NAME [--json] [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1857,7 +1866,7 @@ bluemix iam service-policies test
 bluemix iam service-policy SERVICE_ID_NAME POLICY_ID [--json] [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1889,7 +1898,7 @@ bluemix iam service-policies test 140798e2-8ea7db3
 bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1898,7 +1907,7 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>-f, --file</dt>
   <dd>정책 정의의 JSON 파일. 이 경우에만 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' 및 '--resource-group-id' 플래그가 사용됩니다.</dd>
   <dt>-r, --roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션에만 '-f, --file'이 사용됩니다.</dd>
   <dt>--service-name</dt>
   <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
   <dt>--service-instance</dt>
@@ -1910,9 +1919,9 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>--resource</dt>
   <dd>정책 정의의 리소스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
   <dt>--resource-group-name</dt>
-  <dd>리소스 그룹의 이름입니다. 이 옵션에만 '-f, --file' 및 '--resource-group-id'가 사용됩니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션에만 '-f, --file' 및 '--resource-group-id'가 사용됩니다.</dd>
   <dt>--resource-group-id </dt>
-  <dd>리소스 그룹의 ID 입니다. 이 옵션에만 '-f, --file' 및 '--resource-group-name'이 사용됩니다.</dd>
+  <dd>리소스 그룹의 ID. 이 옵션에만 '-f, --file' 및 '--resource-group-name'이 사용됩니다.</dd>
   <dt>-F, --force</dt>
   <dd>확인 없이 서비스 정책 작성</dd>
 </dl>
@@ -1935,7 +1944,7 @@ bluemix iam service-policy-create test -f @policy.json
 bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -1948,7 +1957,7 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-f, --file</dt>
   <dd>정책 정의의 JSON 파일. 이 경우에만 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' 및 'resource-group-id' 플래그가 사용됩니다.</dd>
   <dt>-r, --roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 경우에만 '-f, --file'이 사용됩니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션에만 '-f, --file'이 사용됩니다.</dd>
   <dt>-service-name</dt>
   <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
   <dt>-service-instance</dt>
@@ -1960,9 +1969,9 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-resource</dt>
   <dd>정책 정의의 리소스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
   <dt>--resource-group-name</dt>
-  <dd>리소스 그룹의 이름입니다. 이 옵션에만 '-f, --file' 및 '--resource-group-id'가 사용됩니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션에만 '-f, --file' 및 '--resource-group-id'가 사용됩니다.</dd>
   <dt>--resource-group-id </dt>
-  <dd>리소스 그룹의 ID 입니다. 이 옵션에만 '-f, --file' 및 '--resource-group-name'이 사용됩니다.</dd>
+  <dd>리소스 그룹의 ID. 이 옵션에만 '-f, --file' 및 '--resource-group-name'이 사용됩니다.</dd>
   <dt>-F, --force</dt>
   <dd>확인 없이 서비스 정책 업데이트</dd>
 </dl>
@@ -1984,7 +1993,7 @@ bluemix iam service-policy-update test 140798e2-8ea7db3 -f @policy.json
 bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2053,7 +2062,7 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 bluemix resource groups [--default]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2084,7 +2093,7 @@ bluemix resource groups --default
 bluemix resource group NAME [--id]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2118,7 +2127,7 @@ bluemix resourxce group example-group --id
 bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2155,7 +2164,7 @@ bluemix resource group-update example-group -q free
 bluemix resource quotas
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2178,7 +2187,7 @@ bluemix resource quotas
 bluemix resource quota NAME
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2323,7 +2332,7 @@ bluemix app domain-cert DOMAIN_NAME
 <strong>명령 옵션</strong>:
 <dl>
 <dt>DOMAIN_NAME(필수)</dt>
-<dd>인증서를 호스팅하는 도메인입니다. </dd>
+<dd>인증서를 호스팅하는 도메인입니다.</dd>
 </dl>
 
 
@@ -2344,20 +2353,20 @@ bluemix app domain-cert ibmcxo-eventconnect.com
 bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
    <dl>
    <dt>DOMAIN(필수)</dt>
-   <dd>인증서가 추가되는 도메인입니다. </dd>
+   <dd>인증서가 추가되는 도메인입니다.</dd>
    <dt>-k <i>PRIVATE_KEY_FILE</i>(필수)</dt>
-   <dd>개인 키 파일 경로입니다. </dd>
+   <dd>개인 키 파일 경로입니다.</dd>
    <dt>-c <i>CERT_FILE</i>(필수)</dt>
-   <dd>인증서 파일 경로입니다. </dd>
+   <dd>인증서 파일 경로입니다.</dd>
    <dt>-p <i>PASSWORD</i>(선택사항)</dt>
-   <dd>인증서의 비밀번호입니다. </dd>
+   <dd>인증서의 비밀번호입니다.</dd>
    <dt>-i <i>INTERMEDIATE_CERT_FILE</i>(선택사항)</dt>
-   <dd>중간 인증서 파일 경로입니다. </dd>
+   <dd>중간 인증서 파일 경로입니다.</dd>
    <dt>-t <i>TRUST_STORE_FILE</i>(선택사항)</dt>
    <dd>신뢰 저장소 파일입니다.</dd>
    </dl>
@@ -2380,45 +2389,16 @@ bluemix app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file
 bluemix app domain-cert-remove DOMAIN [-f]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
 
    <dl>
    <dt>DOMAIN(필수)</dt>
-   <dd>인증서가 제거되는 도메인입니다. </dd>
+   <dd>인증서가 제거되는 도메인입니다.</dd>
    <dt>-f(선택사항)</dt>
-   <dd>확인 없이 강제 삭제합니다. </dd>
+   <dd>확인 없이 강제 삭제합니다.</dd>
    </dl>
-
-## bluemix app domains
-{: #bluemix_app_domains}
-
-이 명령은 `cf domains` 명령과 기능 및 옵션이 동일합니다.
-
-
-## bluemix app domain-create
-{: #bluemix_app_domain_create}
-
-이 명령은 `cf create-domain` 명령과 기능 및 옵션이 동일합니다.
-
-
-## bluemix app domain-delete
-{: #bluemix_app_domain_delete}
-
-이 명령은 `cf delete-domain` 명령과 기능 및 옵션이 동일합니다.
-
-
-## bluemix app shared-domain-create
-{: #bluemix_app_shared_domain_create}
-
-이 명령은 `cf create-shared-domain` 명령과 기능 및 옵션이 동일합니다.
-
-
-## bluemix app shared-domain-delete
-{: #bluemix_app_shared_domain_delete}
-
-이 명령은 `cf delete-shared-domain` 명령과 기능 및 옵션이 동일합니다.
 
 ## bluemix app routes
 {: #bluemix_app_routes}
@@ -2441,13 +2421,13 @@ bluemix app domain-cert-remove DOMAIN [-f]
 bluemix app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
 
    <dl>
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME(필수)</dt>
-   <dd>라우트로 맵핑되는 cf 애플리케이션 또는 컨테이너 그룹의 이름입니다. </dd>
+   <dd>라우트로 맵핑되는 cf 애플리케이션 또는 컨테이너 그룹의 이름입니다.</dd>
    <dt>DOMAIN(필수)</dt>
    <dd>라우트의 도메인입니다. 예: mychinabluemix.net 또는 chinabluemix.net. </dd>
    <dt>-n <i>HOST_NAME</i>(선택사항)</dt>
@@ -2478,13 +2458,13 @@ bluemix app route-map my-container-group chinabluemix.net -n abc
 bluemix app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
 
    <dl>
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME(필수)</dt>
-   <dd>cf 애플리케이션 또는 컨테이너 그룹의 이름입니다. </dd>
+   <dd>cf 애플리케이션 또는 컨테이너 그룹의 이름입니다.</dd>
    <dt>DOMAIN(필수)</dt>
    <dd>라우트의 도메인입니다(예: mychinabluemix.net 또는 chinabluemix.net).</dd>
    <dt>-n <i>HOST_NAME</i>(선택사항)</dt>
@@ -2654,7 +2634,7 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2668,7 +2648,7 @@ bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOC
 
 <strong>예제</strong>:
 
-서비스 `test-service`의 서비스 인스턴스 나열: 
+서비스 `test-service`의 서비스 인스턴스 나열:
 
 ```
 bluemix resource service-instances --service-name test-service
@@ -2683,7 +2663,7 @@ bluemix resource service-instances --service-name test-service
 bluemix resource service-instance NAME [--location LOCATION] [--id]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2696,7 +2676,7 @@ bluemix resource service-instance NAME [--location LOCATION] [--id]
 </dl>
 
 <strong>예</strong>:
-서비스 인스턴스 `my-service-instance`의 세부사항 표시: 
+서비스 인스턴스 `my-service-instance`의 세부사항 표시:
 
 ```
 bluemix resource service-instance my-service-instance
@@ -2711,7 +2691,7 @@ bluemix resource service-instance my-service-instance
 bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2745,7 +2725,7 @@ bluemix resource service-instance-create my-service-instance test-service test-s
 bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2779,7 +2759,7 @@ bluemix resource service-instance-update my-service-instance -n new-service-inst
 bluemix resource service-instance-delete NAME [-f, --force] [--recursive]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2805,7 +2785,7 @@ bluemix resource service-instance-delete my-service-instance
 bluemix resource bindings SERVICE_ALIAS
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2814,7 +2794,7 @@ bluemix resource bindings SERVICE_ALIAS
 </dl>
 
 <strong>예</strong>:
-서비스 별명 `my-service-alias`에 대한 리소스 바인딩 표시: 
+서비스 별명 `my-service-alias`에 대한 리소스 바인딩 표시:
 
 ```
 bluemix resource bindings my-service-alias
@@ -2828,7 +2808,7 @@ bluemix resource bindings my-service-alias
 bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2837,11 +2817,11 @@ bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 애플리케이션 이름</dd>
   <dt>--id</dt>
-  <dd>ID만 표시합니다. 서비스 바인딩의 기타 모든 출력을 숨깁니다. </dd>
+  <dd>ID만 표시합니다. 서비스 바인딩의 기타 모든 출력은 표시되지 않습니다.</dd>
 </dl>
 
 <strong>예</strong>:
-서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩의 세부사항 표시: 
+서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩의 세부사항 표시:
 
 ```
 bluemix resource bindings my-service-alias my-app
@@ -2853,10 +2833,10 @@ bluemix resource bindings my-service-alias my-app
 서비스 바인딩 작성
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2868,12 +2848,14 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>사용자 역할의 이름</dd>
   <dt>--service-id-name</dt>
   <dd>역할이 속한 서비스 ID의 이름</dd>
+  <dt>-p, --parameter</dt>
+  <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 작성</dd>
 </dl>
 
 <strong>예</strong>:
-`관리자` 역할로 서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 작성: 
+`관리자` 역할로 서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 작성:
 
 ```
 bluemix resource service-binding-create my-service-alias my-app Administrator
@@ -2900,7 +2882,7 @@ bluemix resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 </dl>
 
 <strong>예</strong>:
-서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 삭제: 
+서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 삭제:
 
 ```
 bluemix resource service-binding-delete my-service-alias my-app
@@ -2915,7 +2897,7 @@ bluemix resource service-binding-delete my-service-alias my-app
 bluemix resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2930,7 +2912,7 @@ bluemix resource service-keys [ --instance-id ID | --instance-name NAME | --alia
 </dl>
 
 <strong>예</strong>:
-서비스 인스턴스 `my-service-instance`의 서비스 키 나열: 
+서비스 인스턴스 `my-service-instance`의 서비스 키 나열:
 
 ```
 bluemix resource service-keys --instance-name my-service-instance
@@ -2945,7 +2927,7 @@ bluemix resource service-keys --instance-name my-service-instance
 bluemix resource service-key KEY_NAME [--id]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2956,7 +2938,7 @@ bluemix resource service-key KEY_NAME [--id]
 </dl>
 
 <strong>예</strong>:
-서비스 키 `my-service-key`의 세부사항 표시: 
+서비스 키 `my-service-key`의 세부사항 표시:
 
 ```
 bluemix resource service-key my-service-key
@@ -2971,7 +2953,7 @@ bluemix resource service-key my-service-key
 bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -2994,7 +2976,7 @@ bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTA
 </dl>
 
 <strong>예</strong>:
-서비스 인스턴스 `my-service-instance`에 대해 `관리자` 역할로 `my-service-key`로 이름 지정된 서비스 키 작성: 
+서비스 인스턴스 `my-service-instance`에 대해 `관리자` 역할로 `my-service-key`로 이름 지정된 서비스 키 작성:
 
 ```
 bluemix resource service-key-create my-service-key Administrator --instance-name my-service-instance
@@ -3009,7 +2991,7 @@ bluemix resource service-key-create my-service-key Administrator --instance-name
 bluemix resource service-key-delete KEY_NAME [-f, --forece]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3035,18 +3017,18 @@ bluemix resource service-key-delete my-service-key
 bluemix resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
   <dt>--instance-id</dt>
-  <dd>속해 있는 서비스 인스턴스의 ID입니다. </dd>
+  <dd>속해 있는 서비스 인스턴스의 ID.</dd>
   <dt>--instance-name</dt>
-  <dd>속해 있는 서비스 인스턴스의 이름입니다. </dd>
+  <dd>속해 있는 서비스 인스턴스의 이름.</dd>
 </dl>
 
 <strong>예</strong>:
-서비스 인스턴스 `my-service-instance`의 서비스 별명 나열: 
+서비스 인스턴스 `my-service-instance`의 서비스 별명 나열:
 ```
 bluemix resource service-aliases my-service-instance
 ```
@@ -3060,18 +3042,18 @@ bluemix resource service-aliases my-service-instance
 bluemix resource service-alias ALIAS_NAME [--id]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
   <dt>ALIAS_NAME(필수)</dt>
   <dd>서비스 별명의 이름</dd>
   <dt>--id</dt>
-  <dd>제공된 서비스 별명의 ID만 표시합니다. 별명에 대한 다른 모든 출력은 무시됩니다.</dd>
+  <dd>제공된 서비스 별명의 ID만 표시합니다. 별명에 대한 다른 모든 출력은 표시되지 않습니다.</dd>
 </dl>
 
 <strong>예</strong>:
-서비스 별명 `my-service-alias`의 세부사항 표시: 
+서비스 별명 `my-service-alias`의 세부사항 표시:
 ```
 bluemix resource service-aliase  my-service-alias
 ```
@@ -3085,16 +3067,16 @@ bluemix resource service-aliase  my-service-alias
 bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
   <dt>ALIAS_NAME(필수)</dt>
   <dd>서비스 별명의 이름</dd>
   <dt>--instance-id</dt>
-  <dd>속해 있는 서비스 인스턴스의 ID입니다. </dd>
+  <dd>속해 있는 서비스 인스턴스의 ID.</dd>
   <dt>--instance-name</dt>
-  <dd>속해 있는 서비스 인스턴스의 이름입니다. </dd>
+  <dd>속해 있는 서비스 인스턴스의 이름.</dd>
   <dt>-s</dt>
   <dd>별명이 작성되는 영역의 이름. 기본값은 현재 영역입니다.</dd>
   <dt>-t, --tags</dt>
@@ -3104,7 +3086,7 @@ bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance
 </dl>
 
 <strong>예</strong>:
-서비스 인스턴스 `my-service-instance`의 `my-service-alias`로 이름 지정된 서비스 별명 작성: 
+서비스 인스턴스 `my-service-instance`의 `my-service-alias`로 이름 지정된 서비스 별명 작성:
 ```
 bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
 ```
@@ -3118,7 +3100,7 @@ bluemix resource service-aliase-create my-service-alias --instance-name my-servi
 bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3135,7 +3117,7 @@ bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --ta
 </dl>
 
 <strong>예</strong>:
-서비스 별명 `my-service-alias` 업데이트, 해당 이름을 `new-service-alias`로 변경: 
+서비스 별명 `my-service-alias` 업데이트, 해당 이름을 `new-service-alias`로 변경:
 
 ```
 bluemix resource service-alias-update my-service-alias -n new-service-alias
@@ -3150,7 +3132,7 @@ bluemix resource service-alias-update my-service-alias -n new-service-alias
 bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3161,7 +3143,7 @@ bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 </dl>
 
 <strong>예</strong>:
-서비스 별명 `my-service-alias` 삭제: 
+서비스 별명 `my-service-alias` 삭제:
 
 ```
 bluemix resource service-alias-delete my-service-alias
@@ -3176,7 +3158,7 @@ bluemix resource service-alias-delete my-service-alias
 bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3220,7 +3202,7 @@ bluemix catalog search -k service -q 'Automation test'
 bluemix catalog entry ID [--global]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3249,7 +3231,7 @@ bluemix catalog entry 'a0ef1-d3b4j0'
 bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3278,7 +3260,7 @@ bluemix catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3303,7 +3285,7 @@ bluemix update 'j402-dnf1i' -c @update.json
 bluemix catalog entry-delete ID [--global]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3328,7 +3310,7 @@ bluemix catalog delete 'j402-dnf1i'
 bluemix catalog entry-visibility ID [--global]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3355,7 +3337,7 @@ bluemix catalog entry-visibility 'j402-dnf1i' --global
 bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3369,7 +3351,7 @@ bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove
   <dt>--excludes-remove</dt>
   <dd>계정(또는 쉼표로 구분된 계정의 목록)을 제외 목록에서 제거하고 항목에 대한 가시성을 취소합니다. 글로벌 관리자가 계정을 설정한 경우, 계정 관리자는 계정을 제거할 수 없습니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--owner</dt>
-  <dd>오브젝트의 소유자를 변경합니다. 이메일 또는 계정 GUID 허용 </dd>
+  <dd>오브젝트의 소유자를 변경합니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--restrict</dt>
   <dd>가시성 오브젝트의 제한을 '개인용'으로 변경</dd>
   <dt>--unrestrict</dt>
@@ -3397,7 +3379,7 @@ bluemix catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 bluemix catalog service-marketplace [--cf] [--rc] [--global]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -3450,7 +3432,7 @@ bluemix catalog template TEMPLATE_ID
 <strong>명령 옵션</strong>:
    <dl>
    <dt>TEMPLATE_ID(필수)</dt>
-   <dd>표준 유형 템플리트의 ID입니다. <i>bluemix 템플리트</i>를 사용하여 모든 템플리트의 ID를 볼 수 있습니다. </dd>
+   <dd>표준 유형 템플리트의 ID입니다. <i>bluemix 템플리트</i>를 사용하여 모든 템플리트의 ID를 볼 수 있습니다.</dd>
    </dl>
 
 
@@ -3466,26 +3448,26 @@ bluemix catalog template mobileBackendStarter
 ## bluemix catalog template-run
 {: #bluemix_catalog_template_run}
 
-특정 URL 및 설명이 있는 지정된 템플리트를 기반으로 하는 cf 애플리케이션을 작성합니다. 기본적으로 새 앱이 자동으로 시작됩니다. 
+특정 URL 및 설명이 있는 지정된 템플리트를 기반으로 하는 cf 애플리케이션을 작성합니다. 기본적으로 새 앱이 자동으로 시작됩니다.
 
 ```
 bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
 ```
 
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
    <dl>
    <dt>TEMPLATE_ID(필수)</dt>
    <dd>애플리케이션을 작성할 때 이의 기반이 되는 템플리트입니다. 모든 템플리트의 ID를 보려면 <i>bluemix templates</i>를 사용하십시오.</dd>
    <dt>CF_APP_NAME(필수)</dt>
-   <dd>작성되는 cf 애플리케이션의 이름입니다. </dd>
+   <dd>작성되는 cf 애플리케이션의 이름입니다.</dd>
    <dt>-u <i>URL</i>(선택사항)</dt>
-   <dd>애플리케이션의 라우트입니다. 지정되지 않은 경우, 앱 이름과 기본 도메인을 기반으로 {{site.data.keyword.Bluemix_notm}}에 의해 자동으로 라우트가 설정됩니다. </dd>
+   <dd>애플리케이션의 라우트입니다. 지정되지 않은 경우, 앱 이름과 기본 도메인을 기반으로 {{site.data.keyword.Bluemix_notm}}에 의해 자동으로 라우트가 설정됩니다.</dd>
    <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
-   <dd>애플리케이션에 대한 설명입니다. </dd>
+   <dd>애플리케이션에 대한 설명입니다.</dd>
    <dt>--no-start(선택사항)</dt>
-   <dd>애플리케이션을 작성한 후에 이를 자동으로 시작하지 않습니다. 값을 지정하지 않으면 애플리케이션이 작성 후 자동으로 시작됩니다. </dd>
+   <dd>애플리케이션을 작성한 후에 이를 자동으로 시작하지 않습니다. 값을 지정하지 않으면 애플리케이션이 작성 후 자동으로 시작됩니다.</dd>
    </dl>
 
 
@@ -3615,7 +3597,7 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME(필수)</dt>
    <dd>추가되는 저장소의 이름입니다. 각 저장소의 고유 이름을 정의할 수 있습니다.</dd>
    <dt>REPO_URL(필수)</dt>
-   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net은 {{site.data.keyword.Bluemix_notm}} CLI공식 플러그인 저장소입니다. </dd>
+   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net은 {{site.data.keyword.Bluemix_notm}} CLI공식 플러그인 저장소입니다.</dd>
     </dl>
 
 
@@ -3642,7 +3624,7 @@ bluemix plugin repo-remove REPO_NAME
 <strong>명령 옵션</strong>:
    <dl>
    <dt>REPO_NAME(필수)</dt>
-   <dd>제거되는 저장소의 이름입니다. </dd>
+   <dd>제거되는 저장소의 이름입니다.</dd>
    </dl>
 
 <strong>예제</strong>:
@@ -3669,7 +3651,7 @@ bluemix plugin repo-plugins [-r REPO_NAME]
 
    <dl>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
-   <dd>지정된 저장소의 플러그인만 나열합니다. </dd>
+   <dd>지정된 저장소의 플러그인만 나열합니다.</dd>
    </dl>
 
 <strong>예제</strong>:
@@ -3757,7 +3739,7 @@ bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 
    <dl>
    <dt>PLUGIN_PATH|PLUGIN_NAME(필수)</dt>
-   <dd>-r <i>REPO_NAME</i>을 지정하지 않으면 지정된 로컬 경로 또는 원격 URL에서 플러그인이 설치됩니다. </dd>
+   <dd>-r <i>REPO_NAME</i>을 지정하지 않으면 지정된 로컬 경로 또는 원격 URL에서 플러그인이 설치됩니다.</dd>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
    <dd>플러그인 바이너리가 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소를 사용합니다.</dd>
    <dt>-v <i>VERSION</i>(선택사항)</dt>
@@ -3847,7 +3829,7 @@ bluemix plugin uninstall PLUGIN_NAME
 
    <dl>
    <dt>PLUGIN_NAME(필수)</dt>
-   <dd>설치 제거되는 플러그인의 이름입니다. </dd>
+   <dd>설치 제거되는 플러그인의 이름입니다.</dd>
     </dl>
 
 <strong>예제</strong>:

@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-11-06"
+  years: 2015, 2018
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-11-06"
 # {{site.data.keyword.Bluemix_notm}} (bx) 命令
 {: #bluemix_cli}
 
-版本：0.6.2
+版本：0.6.4
 
 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 提供了一组按名称空间分组的命令，供用户用于与 {{site.data.keyword.Bluemix_notm}} 进行交互。
 
@@ -690,6 +690,8 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [--cf] [-o ORG] [-s SPACE]
    <dd>要作为目标的空间的名称。</dd>
    </dl>
 如果未指定任何选项，那么将显示当前帐户、区域、组织和空间。
+
+
 <strong>示例</strong>：
 
 设置当前帐户、组织和空间：
@@ -710,7 +712,7 @@ bluemix target -r eu-gb
 bluemix target
 ```
 
-### bluemix update
+## bluemix update
 {: #bluemix_update}
 
 将 CLI 更新到最新版本。
@@ -720,6 +722,12 @@ bluemix update
 ```
 
 <strong>先决条件</strong>：无
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>-f</dt>
+  <dd>强制更新而不确认</dd>
+</dl>
 
 ### bluemix account orgs
 {: #bluemix_account_orgs}
@@ -2383,35 +2391,6 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>强制删除而不确认。</dd>
    </dl>
 
-## bluemix app domains
-{: #bluemix_app_domains}
-
-此命令的功能和选项与 `cf domains` 命令的相同。
-
-
-## bluemix app domain-create
-{: #bluemix_app_domain_create}
-
-此命令的功能和选项与 `cf create-domain` 命令的相同。
-
-
-## bluemix app domain-delete
-{: #bluemix_app_domain_delete}
-
-此命令的功能和选项与 `cf delete-domain` 命令的相同。
-
-
-## bluemix app shared-domain-create
-{: #bluemix_app_shared_domain_create}
-
-此命令的功能和选项与 `cf create-shared-domain` 命令的相同。
-
-
-## bluemix app shared-domain-delete
-{: #bluemix_app_shared_domain_delete}
-
-此命令的功能和选项与 `cf delete-shared-domain` 命令的相同。
-
 ## bluemix app routes
 {: #bluemix_app_routes}
 
@@ -2845,7 +2824,7 @@ bluemix resource bindings my-service-alias my-app
 创建服务绑定
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -2860,6 +2839,8 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>用户角色的名称</dd>
   <dt>--service-id-name</dt>
   <dd>角色所属的服务标识的名称</dd>
+  <dt>-p, --parameter</dt>
+  <dd>参数 JSON 文件或 JSON 字符串</dd>
   <dt>-f, --force</dt>
   <dd>强制创建而不确认</dd>
 </dl>
@@ -3776,6 +3757,8 @@ bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 bluemix plugin install IBM-Containers -r bluemix-repo
 ```
 从 `bluemix-repo` 存储库安装版本为 `0.5.800` 的 `IBM-Containers` 插件：
+
+
 
 ```
 bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800

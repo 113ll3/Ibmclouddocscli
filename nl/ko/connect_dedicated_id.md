@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
 lastupdated: "2017-12-08"
 
@@ -35,9 +35,9 @@ lastupdated: "2017-12-08"
 데디케이티드 ID가 공용 IBM ID에 이미 연결되어 있는 경우 다음과 같이 인증되고 로그인됩니다.
 
 ```
-Authenticating...
+  Authenticating...
   OK
-      
+
   Connected to dedicated user my_dedicated_id
 ```
 

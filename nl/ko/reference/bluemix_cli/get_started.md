@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-08-20"
 
 ---
@@ -17,9 +17,9 @@ lastupdated: "2017-08-20"
 # {{site.data.keyword.Bluemix_notm}} CLI 시작하기
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI는 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션, 컨테이너, 인프라, 서비스 및 기타 리소스를 관리하기 위한 명령행 인터페이스를 제공합니다.  
+{{site.data.keyword.Bluemix_notm}} CLI는 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션, 컨테이너, 인프라, 서비스 및 기타 리소스를 관리하기 위한 명령행 인터페이스를 제공합니다. 
 
-{{site.data.keyword.Bluemix_notm}} CLI를 시작하려면 다음을 수행하십시오. 
+{{site.data.keyword.Bluemix_notm}} CLI를 시작하려면 다음을 수행하십시오.
 
 1. 다운로드할 OS의 설치 프로그램 선택
    
@@ -27,7 +27,7 @@ lastupdated: "2017-08-20"
    Windows 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window}/[체크섬](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
    Linux 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window}/[체크섬](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
   
-   **32비트 릴리스 및 이전 버전은 [여기서](all_versions.html) 찾을 수 있습니다. 
+   **32비트 릴리스 및 이전 버전은 [여기서](all_versions.html) 찾을 수 있습니다.
 
 1. 설치 프로그램 실행
    * macOS 및 Windows의 경우 설치 프로그램을 실행하십시오.

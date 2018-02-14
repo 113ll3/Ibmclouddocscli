@@ -1117,6 +1117,9 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 **注：**确保已安装 Cloud Foundry 命令工具，并且您具有 Cloud Foundry 令牌。使用 `bluemix login` 成功登录，然后使用 `bluemix ic init` 生成必需的令牌和证书。
 
 
+
+
+
 <strong>先决条件</strong>：端点、登录、目标和 Docker
 
 <strong>命令选项</strong>：

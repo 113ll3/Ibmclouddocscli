@@ -8,6 +8,7 @@ copyright:
 
 lastupdated: "2017-01-12"
 
+
 ---
 
 {:codeblock: .codeblock}
@@ -890,7 +891,9 @@ bluemix ic ps -a
 ```
 bluemix ic rename OLD_NAME NEW_NAME
 ```
-<strong>必要條件</strong>：端點、登入、目標、Docker<strong>指令選項</strong>：
+<strong>必要條件</strong>：端點、登入、目標、Docker
+
+<strong>指令選項</strong>：
 
 <dl>
    <dt><i>OLD_NAME</i>（必要）</dt>
@@ -910,7 +913,9 @@ bluemix ic rename OLD_NAME NEW_NAME
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
-<strong>指令選項</strong>：<dl>
+<strong>指令選項</strong>：
+
+<dl>
    <dt>--force|-f（選用）</dt>
    <dd>強制在 {{site.data.keyword.Bluemix_notm}} 空間中重建 IBM Containers 服務。</dd>
    <dt><i>AVAILABILITY_ZONE</i>（選用）</dt>
@@ -1117,6 +1122,9 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 ```
 **附註：**請確定已安裝 Cloud Foundry 指令工具，而且您有 Cloud Foundry 記號。使用 `bluemix login` 和 `bluemix ic init` 成功登入時，會產生必要的記號及憑證。
 
+
+
+
 <strong>必要條件</strong>：端點、登入、目標、Docker
 
 <strong>指令選項</strong>：
@@ -1198,7 +1206,9 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ```
 bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
 ```
-<strong>指令選項</strong>：<dl>
+<strong>指令選項</strong>：
+
+   <dl>
    <dt><i>GROUP_NAME</i>（必要）</dt>
    <dd>群組 ID 或名稱。</dd>
    <dt><i>SERVICE_INSTANCE</i>（必要）</dt>
@@ -1214,7 +1224,9 @@ bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
 ```
 bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
 ```
-<strong>指令選項</strong>：<dl>
+<strong>指令選項</strong>：
+
+   <dl>
    <dt><i>GROUP_NAME</i>（必要）</dt>
    <dd>群組 ID 或名稱。</dd>
    <dt><i>SERVICE_INSTANCE</i>（必要）</dt>
@@ -1406,7 +1418,9 @@ bluemix ic unpause proxy
 ```
 bluemix ic reprovision [--force|-f] 
 ```
-<strong>指令選項</strong>：<dl>
+<strong>指令選項</strong>：
+
+<dl>
    <dt>--force|-f（選用）</dt>
    <dd>強制從 {{site.data.keyword.Bluemix_notm}} 空間刪除 {{site.data.keyword.Bluemix_notm}} 服務。</dd>
  </dl>

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-11-08"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -14,35 +14,33 @@ lastupdated: "2017-11-08"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# 下载 
+# CLI 和工具概述
+{: #overview}
 
-## Bluemix CLI
+{{site.data.keyword.Bluemix_notm}} 提供了稳健的 CLI 以及与该 CLI 集成的插件。
+
+## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
 
 {{site.data.keyword.Bluemix}} CLI 提供了管理 {{site.data.keyword.Bluemix_notm}} 环境中资源的命令行体验。其安装中还会包含 Cloud Foundry 命令行界面 (cf)，用于管理 Cloud Foundry 应用程序和服务。
 {:shortdesc}
 
-[下载](/docs/cli/reference/bluemix_cli/all_versions.html){: new_window}<br>
-[入门](/docs/cli/reference/bluemix_cli/get_started.html){: new_window}<br>
-[查看文档](/docs/cli/reference/bluemix_cli/bx_cli.html){: new_window}<br>
+单击某个选项以开始：
 
+<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="单击某个图标可快速开始使用 {{site.data.keyword.Bluemix_notm}} CLI。" style="width:440px;" />
+<map name="home_map" id="home_map">
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="下载 {{site.data.keyword.Bluemix_notm}} CLI" title="下载" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="入门。" title="入门" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="查看文档" title="查看文档" shape="rect" coords="326, -10, 448, 218" />
+</map>
 
-## IBM Cloud Application Tools 2 (Beta)
-{: #icat notoc}
+## {{site.data.keyword.dev_cli_notm}}
+{: #idt}
 
-IBM Cloud Application Tools 2 是一个经过简化的菜单栏应用程序，用于在 macOS 上执行本地环境设置和管理。通过使用 IBM Cloud Application Tools 2，可以轻松安装和更新 Bluemix 工具和 CLI，更改 CLI 部署目标，快速访问常用 Bluemix 链接。
+{{site.data.keyword.dev_cli_long}} (IDT) 提供了特定于开发者的 {{site.data.keyword.Bluemix}} CLI 扩展 (`bx dev`)，用于创建、构建和部署云本机应用程序。安装 IDT 包括安装基本 {{site.data.keyword.Bluemix_notm}} CLI、多个扩展以及所有系统必备软件。
+{:shortdesc}
 
-
-[下载](http://ibm.biz/icat-2-download){: new_window}<br>
-[查看文档](/docs/cli/icat.html){: new_window}<br>
-
-
-## ![](./images/Integrated_Dev_Tools.svg) 集成开发工具
-{: #ide}
-
-下载并安装插件，以集成首选的 {{site.data.keyword.Bluemix_notm}} 服务。
-
-| *Liberty for Java*| *MobileFirst*| *{{site.data.keyword.rules_short}}* | *API Connect*| *Eclipse Tools for {{site.data.keyword.Bluemix_notm}}* |
-|----------|----------|----------|----------|----------|
-| [Liberty Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window}| [Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window}| [Rules Designer Eclipse 插件](/docs/services/rules/index-gentopic1.html#genTopProcId2)| [开发者工具箱 ![外部链接图标](../icons/launch-glyph.svg)](/docs/services/apiconnect/creating_apis.html){: new_window}| [{{site.data.keyword.Bluemix_notm}} Eclipse 插件](/docs/manageapps/eclipsetools/eclipsetools.html)|
-{: caption="表 6. 插件" caption-side="top"}
+- [概述和安装](/docs/cloudnative/idt/index.html) <br>
+- [入门](/docs/cloudnative/idt/index.html)<br>
+- [命令](/docs/cloudnative/idt/commands.html) <br>
+- [云本机开发](/docs/cloudnative/index.html) <br>

@@ -14,13 +14,13 @@ lastupdated: "2017-01-12"
 # {{site.data.keyword.Bluemix_notm}} CLI의 사설 네트워크 피어링 플러그인
 {: #private_network_cli}
 
-사설 네트워크 피어링 명령행 인터페이스(CLI)를 사용하여 두 {{site.data.keyword.Bluemix}} 영역 간의 사설 네트워크 피어링을 구성하고 관리하십시오. 사설 네트워크 피어링은 IBM Containers(Docker 컨테이너)에서 지원됩니다. {{site.data.keyword.Bluemix_notm}} 영역은 동일 지역의 서로 다른 가용성 구역에 위치하거나 서로 다른 지역에 위치할 수 있습니다. 사설 네트워크 피어링 CLI 플러그인은 {{site.data.keyword.Bluemix_notm}} CLI 플러그인과 함께 사용 가능합니다. 
+사설 네트워크 피어링 명령행 인터페이스(CLI)를 사용하여 두 {{site.data.keyword.Bluemix}} 영역 간의 사설 네트워크 피어링을 구성하고 관리하십시오. 사설 네트워크 피어링은 IBM Containers(Docker 컨테이너)에서 지원됩니다. {{site.data.keyword.Bluemix_notm}} 영역은 동일 지역의 서로 다른 가용성 구역에 위치하거나 서로 다른 지역에 위치할 수 있습니다. 사설 네트워크 피어링 CLI 플러그인은 {{site.data.keyword.Bluemix_notm}} CLI 플러그인과 함께 사용 가능합니다.
 
 사설 네트워크 피어링 CLI 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 플러그인을 사용해야 합니다.
 
-시작하기 전에 {{site.data.keyword.Bluemix_notm}} 영역을 작성하십시오. 영역의 각 컨테이너에 다른 네트워크에서의 IP 주소가 있는지 확인하십시오. 세부사항은 [자체 사설 IP 주소 사용 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}을 참조하십시오. 
+시작하기 전에 {{site.data.keyword.Bluemix_notm}} 영역을 작성하십시오. 영역의 각 컨테이너에 다른 네트워크에서의 IP 주소가 있는지 확인하십시오. 세부사항은 [자체 사설 IP 주소 사용 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}을 참조하십시오.
 
-**참고:** {{site.data.keyword.Bluemix_notm}} 영역에서 사설 네트워크 피어링을 사용한 후에 해당 영역을 삭제해야 하는 경우에는 우선 해당 영역에서 사설 네트워크 피어링 연결을 삭제하십시오. 
+**참고:** {{site.data.keyword.Bluemix_notm}} 영역에서 사설 네트워크 피어링을 사용한 후에 해당 영역을 삭제해야 하는 경우에는 우선 해당 영역에서 사설 네트워크 피어링 연결을 삭제하십시오.
 
 시작하려면 {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 세부사항은
 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)를 참조하십시오.
@@ -33,7 +33,7 @@ lastupdated: "2017-01-12"
 bluemix plugin uninstall private-network-peering
 ```
 ### 로컬로 설치
-[{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}에서 플랫폼에 대한 사설 네트워크 피어링 플러그인을 다운로드하십시오. 
+[{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}에서 플랫폼에 대한 사설 네트워크 피어링 플러그인을 다운로드하십시오.
 
 다음 명령을 사용하여 사설 네트워크 피어링 플러그인을 설치하십시오.
 
@@ -65,9 +65,9 @@ chmod a+x ./private-network-peering-linux-amd64
 
 ### {{site.data.keyword.Bluemix_notm}} 저장소에서 설치
 
-{{site.data.keyword.Bluemix_notm}} 저장소에서 플러그인을 설치하려면 다음 단계를 따르십시오. 
+{{site.data.keyword.Bluemix_notm}} 저장소에서 플러그인을 설치하려면 다음 단계를 따르십시오.
 
-1. {{site.data.keyword.Bluemix_notm}} 플러그인 저장소 엔드포인트를 추가하십시오. 
+1. {{site.data.keyword.Bluemix_notm}} 플러그인 저장소 엔드포인트를 추가하십시오.
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
@@ -81,13 +81,12 @@ chmod a+x ./private-network-peering-linux-amd64
 ## 사설 네트워크 피어링 명령의 목록
 다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 나열하려면 `bluemix network` 명령을 사용하십시오.
 
-| 명령| 설명 
-|
+| 명령     | 설명                                    |
 |-------------|------------------------------------------------|
-| pnp-routers| 피어링에 대해 사용 가능한 모든 라우터를 나열합니다.|
-| pnp-create| 사설 네트워크 피어링 연결을 작성합니다.|
-| pnp-delete| 사설 네트워크 피어링 연결을 삭제합니다.|
-| pnp-show| 모든 사설 네트워크 피어링 연결을 나열합니다.|
+| pnp-routers | 피어링에 대해 사용 가능한 모든 라우터를 나열합니다.        |
+| pnp-create  | 사설 네트워크 피어링 연결을 작성합니다.   |
+| pnp-delete  | 사설 네트워크 피어링 연결을 삭제합니다.   |
+| pnp-show    | 모든 사설 네트워크 피어링 연결을 나열합니다.  |
 {: caption="표 1. 개인용 네트워크 피어링 명령" caption-side="top"}
 
 

@@ -93,7 +93,7 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--
 **매개변수**
 <dl>
 <dt>DIRECTORY</dt>
-<dd>빌드 컨텍스트의 위치이며, Dockerfile 및 전제조건 파일이 포함되어 있습니다. </dd>
+<dd>빌드 컨텍스트의 위치이며, Dockerfile 및 전제조건 파일이 포함되어 있습니다.</dd>
 <dt>--no-cache</dt>
 <dd>(선택사항) 지정된 경우, 이전 빌드에서 캐시된 이미지 계층은 이 빌드에 사용되지 않습니다.</dd>
 <dt>--pull</dt>
@@ -103,7 +103,7 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--
 <dt> --build-arg KEY=VALUE</dt>
 <dd>(선택사항) 추가 빌드 인수를 'KEY=VALUE' 형식으로 지정하십시오. 이 매개변수를 여러 번 포함하여 복수의 빌드 인수를 지정할 수 있습니다. Dockerfile에서 키와 일치하는 ARG 행을 지정하는 경우 각 빌드 인수의 값은 환경 변수로 사용 가능합니다.</dd>
 <dt>--file FILE, -f FILE</dt>
-<dd>(선택사항) 다중 빌드에 동일한 파일을 사용 중인 경우에는 다른 Dockerfile에 대한 경로를 선택할 수 있습니다. 빌드 컨텍스트에 상대적인 Dockerfile의 위치를 지정하십시오. 지정되지 않은 경우, 기본값은 `PATH/Dockerfile`입니다. 여기서 PATH는 빌드 컨텍스트의 루트입니다. </dd>
+<dd>(선택사항) 다중 빌드에 동일한 파일을 사용 중인 경우에는 다른 Dockerfile에 대한 경로를 선택할 수 있습니다. 빌드 컨텍스트에 상대적인 Dockerfile의 위치를 지정하십시오. 지정되지 않은 경우, 기본값은 `PATH/Dockerfile`입니다. 여기서 PATH는 빌드 컨텍스트의 루트입니다.</dd>
 <dt>--tag TAG, -t TAG</dt>
 <dd>빌드할 이미지의 전체 이름이며, 레지스트리 URL 및 네임스페이스가 포함됩니다.</dd>
 </dl>
@@ -123,7 +123,7 @@ bx cr info
 ## bx cr image-inspect
 {: #bx_cr_image_inspect}
 
-특정 이미지에 대한 세부사항을 표시합니다. 
+특정 이미지에 대한 세부사항을 표시합니다.
 
 ```
 bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
@@ -133,7 +133,9 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 **매개변수**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
+<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다. 
+
+자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
 
 </dd>
 <dt>IMAGE</dt>
@@ -148,7 +150,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 ## bx cr image-list (bx cr images)
 {: #bx_cr_image_list}
 
-{{site.data.keyword.Bluemix_notm}} 계정의 모든 이미지를 표시합니다. 
+{{site.data.keyword.Bluemix_notm}} 계정의 모든 이미지를 표시합니다.
 
 <p>**참고:** 이미지 이름은 `repository:tag` 형식으로 이루어진, 저장소 열과 태그 열의 컨텐츠 조합입니다. </p> 
 
@@ -160,17 +162,19 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 **매개변수**
 <dl>
 <dt>--no-trunc</dt>
-<dd>(선택사항) 이미지 다이제스트를 자르지 않습니다. </dd>
+<dd>(선택사항) 이미지 다이제스트를 자르지 않습니다.</dd>
 <dt>--format FORMAT</dt>
-<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
+<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다. 
+
+자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
 
 </dd>
 <dt>-q, --quiet</dt>
 <dd>(선택사항) 각 이미지가 `repository:tag` 형식으로 나열됩니다.</dd>
 <dt>--restrict RESTRICTION</dt>
-<dd>(선택사항) 지정된 네임스페이스 또는 네임스페이스와 저장소에 이미지만 표시하도록 출력을 제한합니다.</dd>
+<dd>(선택사항) 지정된 네임스페이스 또는 네임스페이스와 저장소에 이미지만 표시하도록 출력을 제한합니다. </dd>
 <dt>--include-ibm</dt>
-<dd>(선택사항) 출력에 {{site.data.keyword.IBM_notm}} 제공 공용 이미지를 포함합니다. 이 옵션이 없으면 기본적으로 개인용 이미지만 나열됩니다. </dd>
+<dd>(선택사항) 출력에 {{site.data.keyword.IBM_notm}} 제공 공용 이미지를 포함합니다. 이 옵션이 없으면 기본적으로 개인용 이미지만 나열됩니다.</dd>
 </dl>
 
 
@@ -178,7 +182,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 ## bx cr image-rm
 {: #bx_cr_image_rm}
 
-레지스트리에서 하나 이상의 지정된 이미지를 삭제합니다. 
+레지스트리에서 하나 이상의 지정된 이미지를 삭제합니다.
 
 ```
 bx cr image-rm IMAGE [IMAGE...]
@@ -210,7 +214,7 @@ bx cr login
 ## bx cr namespace-add
 {: #bx_cr_namespace_add}
 
-{{site.data.keyword.Bluemix_notm}} 계정에 네임스페이스를 추가합니다. 
+{{site.data.keyword.Bluemix_notm}} 계정에 네임스페이스를 추가합니다.
 
 ```
 bx cr namespace-add NAMESPACE
@@ -220,14 +224,14 @@ bx cr namespace-add NAMESPACE
 **매개변수**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>추가하려는 네임스페이스입니다. 네임스페이스는 동일 지역의 모든 {{site.data.keyword.Bluemix_notm}} 계정에서 고유해야 합니다. </dd>
+<dd>추가하려는 네임스페이스입니다. 네임스페이스는 동일 지역의 모든 {{site.data.keyword.Bluemix_notm}} 계정에서 고유해야 합니다.</dd>
 </dl>
 
 
 ## bx cr namespace-list (bx cr namespaces)
 {: #bx_cr_namespace_list}
 
-{{site.data.keyword.Bluemix_notm}} 계정이 소유하는 모든 네임스페이스를 표시합니다. 
+{{site.data.keyword.Bluemix_notm}} 계정이 소유하는 모든 네임스페이스를 표시합니다.
 
 ```
 bx cr namespace-list
@@ -238,7 +242,7 @@ bx cr namespace-list
 ## bx cr namespace-rm
 {: #bx_cr_namespace_rm}
 
-{{site.data.keyword.Bluemix_notm}} 계정에서 네임스페이스를 제거합니다. 이 네임스페이스의 이미지는 네임스페이스가 제거될 때 삭제됩니다. 
+{{site.data.keyword.Bluemix_notm}} 계정에서 네임스페이스를 제거합니다. 이 네임스페이스의 이미지는 네임스페이스가 제거될 때 삭제됩니다.
 
 ```
 bx cr namespace-rm NAMESPACE
@@ -248,14 +252,14 @@ bx cr namespace-rm NAMESPACE
 **매개변수**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>제거하려는 네임스페이스입니다. </dd>
+<dd>제거하려는 네임스페이스입니다.</dd>
 </dl>
 
 
 ## bx cr plan
 {: #bx_cr_plan}
 
-가격 책정 플랜을 표시합니다. 
+가격 책정 플랜을 표시합니다.
 
 ```
 bx cr plan
@@ -285,7 +289,7 @@ bx cr plan-upgrade [PLAN]
 ## bx cr quota
 {: #bx_cr_quota}
 
-트래픽 및 스토리지에 대한 현재 할당량과, 이러한 할당량의 사용량 정보를 표시합니다. 
+트래픽 및 스토리지에 대한 현재 할당량과, 이러한 할당량의 사용량 정보를 표시합니다.
 
 ```
 bx cr quota
@@ -296,7 +300,7 @@ bx cr quota
 ## bx cr quota-set
 {: #bx_cr_quota_set}
 
-지정된 할당량을 수정합니다. 
+지정된 할당량을 수정합니다.
 
 ```
 bx cr quota-set [--traffic TRAFFIC] [--storage STORAGE]
@@ -306,16 +310,16 @@ bx cr quota-set [--traffic TRAFFIC] [--storage STORAGE]
 **매개변수**
 <dl>
 <dt>--traffic TRAFFIC</dt>
-<dd>(선택사항) 트래픽 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 트래픽을 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
+<dd>(선택사항) 트래픽 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 트래픽을 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다.</dd>
 <dt>--storage STORAGE</dt>
-<dd>(선택사항) 스토리지 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 스토리지를 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다. </dd>
+<dd>(선택사항) 스토리지 할당량을 MB 단위의 지정된 값으로 변경합니다. 이 오퍼레이션은 사용자가 스토리지를 설정할 수 있도록 권한 부여되지 않았거나 현재 가격 책정 플랜을 초과하는 값을 설정하면 실패합니다.</dd>
 </dl>
 
 
 ## bx cr region
 {: #bx_cr_region}
 
-대상 지역 및 레지스트리를 표시합니다. 
+대상 지역 및 레지스트리를 표시합니다.
 
 ```
 bx cr region
@@ -328,7 +332,7 @@ bx cr region
 ## bx cr region-set
 {: #bx_cr_region_set}
 
-{{site.data.keyword.registrylong_notm}} 명령에 대한 대상 지역을 설정합니다. 사용 가능한 지역을 나열하려면 매개변수 없이 명령을 실행하십시오. 
+{{site.data.keyword.registrylong_notm}} 명령에 대한 대상 지역을 설정합니다. 사용 가능한 지역을 나열하려면 매개변수 없이 명령을 실행하십시오.
 
 ```
 bx cr region-set [REGION]
@@ -338,7 +342,9 @@ bx cr region-set [REGION]
 **매개변수**
 <dl>
 <dt>REGION</dt>
-<dd>(선택사항) 대상 지역의 이름입니다(예: `us-south`).자세한 정보는 [지역](../../../services/Registry/registry_overview.html#registry_regions)을 참조하십시오.
+<dd>(선택사항) 대상 지역의 이름입니다(예: `us-south`). 
+
+자세한 정보는 [지역](../../../services/Registry/registry_overview.html#registry_regions)을 참조하십시오.
 
 </dd>
 </dl>
@@ -347,7 +353,7 @@ bx cr region-set [REGION]
 ## bx cr token-add
 {: #bx_cr_token_add}
 
-레지스트리에 대한 액세스를 제어하는 데 사용할 수 있는 토큰을 추가합니다. 
+레지스트리에 대한 액세스를 제어하는 데 사용할 수 있는 토큰을 추가합니다.
 
 ```
 bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--readwrite]
@@ -359,20 +365,20 @@ bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--re
 **매개변수**
 <dl>
 <dt>--description DESCRIPTION</dt>
-<dd>(선택사항) `bx cr token-list`를 실행할 때 표시되는 토큰에 대한 설명으로서 값을 지정합니다. 토큰이 {{site.data.keyword.containerlong_notm}}에 의해 자동으로 작성되는 경우에는 설명이 Kubernetes 클러스터 이름으로 설정됩니다. 이 경우에 토큰은 클러스터가 제거될 때 자동으로 제거됩니다. </dd>
+<dd>(선택사항) `bx cr token-list`를 실행할 때 표시되는 토큰에 대한 설명으로서 값을 지정합니다. 토큰이 {{site.data.keyword.containerlong_notm}}에 의해 자동으로 작성되는 경우에는 설명이 Kubernetes 클러스터 이름으로 설정됩니다. 이 경우에 토큰은 클러스터가 제거될 때 자동으로 제거됩니다.</dd>
 <dt>-q, --quiet</dt>
-<dd>(선택사항) 주변 텍스트 없이 토큰만 표시합니다. </dd>
+<dd>(선택사항) 주변 텍스트 없이 토큰만 표시합니다.</dd>
 <dt>--non-expiring</dt>
-<dd>(선택사항) 만료되지 않는 액세스 권한으로 토큰을 작성합니다. 이 매개변수 설정이 없는 경우 기본적으로 토큰의 액세스 권한이 24시간 후에 만료됩니다. </dd>
+<dd>(선택사항) 만료되지 않는 액세스 권한으로 토큰을 작성합니다. 이 매개변수 설정이 없는 경우 기본적으로 토큰의 액세스 권한이 24시간 후에 만료됩니다.</dd>
 <dt>--readwrite</dt>
-<dd>(선택사항) 읽기/쓰기 액세스 권한을 부여하는 토큰을 작성합니다. 이 옵션이 없는 경우 기본적으로 액세스 권한은 읽기 전용입니다. </dd>
+<dd>(선택사항) 읽기/쓰기 액세스 권한을 부여하는 토큰을 작성합니다. 이 옵션이 없는 경우 기본적으로 액세스 권한은 읽기 전용입니다.</dd>
 </dl>
 
 
 ## bx cr token-get
 {: #bx_cr_token_get}
 
-지정된 토큰을 레지스트리에서 검색합니다. 
+지정된 토큰을 레지스트리에서 검색합니다.
 
 ```
 bx cr token-get TOKEN
@@ -383,14 +389,14 @@ bx cr token-get TOKEN
 **매개변수**
 <dl>
 <dt>TOKEN</dt>
-<dd>(선택사항) 검색할 토큰의 고유 ID입니다. </dd>
+<dd>(선택사항) 검색할 토큰의 고유 ID입니다.</dd>
 </dl>
 
 
 ## bx cr token-list (bx cr tokens)
 {: #bx_cr_token_list}
 
-{{site.data.keyword.Bluemix_notm}} 계정에 대해 존재하는 모든 토큰을 표시합니다. 
+{{site.data.keyword.Bluemix_notm}} 계정에 대해 존재하는 모든 토큰을 표시합니다.
 
 ```
 bx cr token-list --format FORMAT
@@ -400,7 +406,9 @@ bx cr token-list --format FORMAT
 **매개변수**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
+<dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다. 
+
+자세한 정보는 [{{site.data.keyword.registrylong_notm}} 명령에 대한 CLI 출력 형식화 및 필터링](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)을 참조하십시오.
 
 </dd>
 </dl>
@@ -409,7 +417,7 @@ bx cr token-list --format FORMAT
 ## bx cr token-rm
 {: #bx_cr_token_rm}
 
-지정된 토큰을 하나 이상 제거합니다. 
+지정된 토큰을 하나 이상 제거합니다.
 
 ```
 bx cr token-rm TOKEN [TOKEN...]
@@ -419,7 +427,7 @@ bx cr token-rm TOKEN [TOKEN...]
 **매개변수**
 <dl>
 <dt>TOKEN</dt>
-<dd>(선택사항) TOKEN은 `bx cr token-list`에 표시되는 토큰의 고유 ID 또는 토큰 자체일 수 있습니다. 여러 개의 토큰을 지정할 수 있으며, 이는 공백으로 분리되어야 합니다. </dd>
+<dd>(선택사항) TOKEN은 `bx cr token-list`에 표시되는 토큰의 고유 ID 또는 토큰 자체일 수 있습니다. 여러 개의 토큰을 지정할 수 있으며, 이는 공백으로 분리되어야 합니다.</dd>
 </dl>
 
 
@@ -453,7 +461,7 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 
 </p>
 
-자세한 정보는 [취약성 관리자로 이미지 보안 관리](../../../services/va/va_index.html)를 참조하십시오. 
+자세한 정보는 [취약성 관리자로 이미지 보안 관리](../../../services/va/va_index.html)를 참조하십시오.
 
 </dd>
 <dt>--output FORMAT, -o FORMAT</dt>

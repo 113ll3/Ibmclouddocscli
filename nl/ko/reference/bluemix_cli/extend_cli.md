@@ -20,7 +20,7 @@ lastupdated: "2017-10-20"
 
 {{site.data.keyword.Bluemix_notm}} CLI는 해당 기능을 확장하도록 플러그인 프레임워크를 지원합니다. 저장소 또는 웹 URL에서 플러그인을 설치하거나 플러그인 2진을 로컬로 설치할 수 있습니다. 
 
-[{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)는 플러그인이 호스팅되는 공식 저장소입니다. 
+[{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)는 플러그인이 호스팅되는 공식 저장소입니다.
 
 플러그인 관리에 대한 자세한 명령을 보려면 `bluemix plugin`을 실행하여 도움말 메시지를 확인하십시오.
 {: tip}
@@ -29,8 +29,8 @@ lastupdated: "2017-10-20"
 
 ### 1단계: 플러그인 검색
 
-1. `bluemix plugin repo-plugins -r REPO_NAME` 명령을 사용하여 저장소에서 플러그인을 찾으십시오. 
-2. {{site.data.keyword.Bluemix_notm}} CLI는 기본적으로 `Bluemix`라는 이름을 사용합니다. 공식 `Bluemix` 저장소에서 플러그인을 나열할 수 있습니다. 예를 들어, 다음과 같습니다. 
+1. `bluemix plugin repo-plugins -r REPO_NAME` 명령을 사용하여 저장소에서 플러그인을 찾으십시오.
+2. {{site.data.keyword.Bluemix_notm}} CLI는 기본적으로 `Bluemix`라는 이름을 사용합니다. 공식 `Bluemix` 저장소에서 플러그인을 나열할 수 있습니다. 예를 들어, 다음과 같습니다.
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -45,7 +45,7 @@ lastupdated: "2017-10-20"
 
 ### 2단계: 플러그인 설치
 
-`bx plugin install PLUGIN_NAME -r REPO_NAME` 명령을 사용하여 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다. 
+`bx plugin install PLUGIN_NAME -r REPO_NAME` 명령을 사용하여 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다.
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix
@@ -58,7 +58,7 @@ lastupdated: "2017-10-20"
 
 ## 로컬로 플러그인 설치
 
-`bluemix plugin install LOCAL_FILE_NAME` 명령을 사용하여 로컬 머신에서 플러그인 2진을 설치하십시오. 예를 들어, 다음과 같습니다. 
+`bluemix plugin install LOCAL_FILE_NAME` 명령을 사용하여 로컬 머신에서 플러그인 2진을 설치하십시오. 예를 들어, 다음과 같습니다.
 
   ```
   $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2

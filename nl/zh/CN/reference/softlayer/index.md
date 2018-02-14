@@ -2,16 +2,16 @@
 
 copyright:
 
-  years: 2016,2017
+  years: 2016,2018
 
-lastupdated: "2017-11-10"
 
+lastupdated: "2017-12-08"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 命令
+# {{site.data.keyword.BluSoftlayer_notm}} 基础架构 (bluemix sl) 命令
 {: #softlayer_cli}
 
 {{site.data.keyword.BluSoftlayer}} 插件已合并到 {{site.data.keyword.Bluemix_notm}} CLI 中。您不再需要安装该插件。
@@ -46,7 +46,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 2. {{site.data.keyword.BluSoftlayer_notm}} 基础架构块存储器</caption>
  <thead>
- <th colspan="6">Softlayer 块存储器</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构块存储器</th>
  </thead>
  <tbody>
  <tr>
@@ -87,7 +87,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 3. {{site.data.keyword.BluSoftlayer_notm}} 基础架构 CDN</caption>
  <thead>
- <th colspan="6">Softlayer CDN</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构 CDN</th>
  </thead>
  <tbody>
  <tr>
@@ -112,7 +112,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 4. {{site.data.keyword.BluSoftlayer_notm}} 基础架构文件存储器</caption>
  <thead>
- <th colspan="6">Softlayer 文件存储器</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构文件存储器</th>
  </thead>
  <tbody>
  <tr>
@@ -153,7 +153,7 @@ lastupdated: "2017-11-10"
 <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 5. {{site.data.keyword.BluSoftlayer_notm}} 基础架构 DNS 命令</caption>
  <thead>
- <th colspan="6">Softlayer DNS 命令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构 DNS 命令</th>
  </thead>
  <tbody>
  <tr>
@@ -172,10 +172,11 @@ lastupdated: "2017-11-10"
    </tbody>
  </table>
 
+
 <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 6. {{site.data.keyword.BluSoftlayer_notm}} 基础架构全局 IP 命令</caption>
  <thead>
- <th colspan="6">Softlayer 全局 IP 命令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构全局 IP 命令</th>
  </thead>
  <tbody>
  <tr>
@@ -193,7 +194,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} 基础架构映像命令</caption>
  <thead>
- <th colspan="6">Softlayer 映像命令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构映像命令</th>
  </thead>
  <tbody>
  <tr>
@@ -210,7 +211,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} 基础架构 IPSec VPN 命令</caption>
  <thead>
- <th colspan="6">Softlayer IPSec VPN 命令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构 IPSec VPN 命令</th>
  </thead>
  <tbody>
  <tr>
@@ -236,7 +237,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 8. {{site.data.keyword.BluSoftlayer_notm}} 基础架构负载均衡器命令</caption>
  <thead>
- <th colspan="6">Softlayer 负载均衡器命令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构负载均衡器命令</th>
  </thead>
  <tbody>
  <tr>
@@ -269,7 +270,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 9. {{site.data.keyword.BluSoftlayer_notm}} 基础架构安全命令</caption>
  <thead>
- <th colspan="5">Softlayer 安全命令</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} 基础架构安全命令</th>
  </thead>
  <tbody>
  <tr>
@@ -294,7 +295,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 10. {{site.data.keyword.BluSoftlayer_notm}} 基础架构子网命令</caption>
  <thead>
- <th colspan="5">Softlayer 子网命令</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} 基础架构子网命令</th>
  </thead>
  <tbody>
  <tr>
@@ -312,7 +313,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 11. {{site.data.keyword.BluSoftlayer_notm}} 基础架构虚拟服务器命令</caption>
  <thead>
- <th colspan="6">Softlayer 虚拟服务器命令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构虚拟服务器命令</th>
  </thead>
  <tbody>
  <tr>
@@ -345,7 +346,7 @@ lastupdated: "2017-11-10"
   <table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 12. {{site.data.keyword.BluSoftlayer_notm}} 基础架构 VLAN 命令</caption>
  <thead>
- <th colspan="6">Softlayer VLAN 命令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构 VLAN 命令</th>
  </thead>
  <tbody>
  <tr>
@@ -365,7 +366,7 @@ lastupdated: "2017-11-10"
 ### bluemix sl init
 {: #sl_init}
 
-初始化用于连接到 SoftLayer 环境的配置设置。该配置包括用户名、API 密钥或密码、帐户和端点。
+初始化用于连接到 {{site.data.keyword.BluSoftlayer_notm}} 基础架构环境的配置设置。该配置包括用户名、API 密钥或密码、帐户和端点。
 ```
 bluemix sl init [OPTIONS]
 ```
@@ -373,7 +374,7 @@ bluemix sl init [OPTIONS]
 <strong>命令选项</strong>：
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API 端点 URL，缺省值为 https://api.softlayer.com/rest/v3.1（对于 {{site.data.keyword.BluSoftlayer_notm}} 基础架构 API 密钥认证）或 https://api.softlayer.com/mobile/v3.1（对于 IBM 标识认证）。</dd>
+<dd>{{site.data.keyword.BluSoftlayer_notm}} 基础架构 API 端点 URL，缺省值为 https://api.softlayer.com/rest/v3.1（对于 API 密钥认证）或 https://api.softlayer.com/mobile/v3.1（对于 IBM 标识认证）。</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer 用户名。</dd>
 <dt>-p, --sl-password</dt>
@@ -449,6 +450,8 @@ IMS 令牌：                xxxxxxxxxx
 查看用于操作 {{site.data.keyword.BluSoftlayer_notm}} 基础架构环境的所有命令的帮助信息。
 ```
 bluemix sl help
+
+
 
 ```
 
@@ -2828,7 +2831,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 取消虚拟服务器实例。
 ```
-   bluemix sl vs cancel IDENTIFIER [OPTIONS]
+bluemix sl vs cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -2840,7 +2843,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs cancel 12345678
+bluemix sl vs cancel 12345678
 ```
 此命令取消标识为 12345678 的虚拟服务器实例。
 
@@ -2850,7 +2853,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 将虚拟服务器实例捕获到映像中。
 ```
- bluemix sl vs capture IDENTIFIER [OPTIONS]
+bluemix sl vs capture IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -2866,7 +2869,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs capture 12345678 -n mybluemix --all --note testing
+bluemix sl vs capture 12345678 -n mybluemix --all --note testing
 ```
 此命令将标识为 12345678 的虚拟服务器实例中的所有磁盘捕获到映像“mybluemix”中，注释为“testing”。
 
@@ -2877,7 +2880,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 创建虚拟服务器实例。
 ```
-   bluemix sl vs create [OPTIONS]
+bluemix sl vs create [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -2939,7 +2942,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
-  bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
+bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
 此命令订购虚拟服务器实例，其主机名为 myvsi，域为 bluemix.net，4 个 CPU 核心，4096M 内存，位于数据中心 dal10。
 
@@ -2948,13 +2951,13 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 列出用于创建虚拟服务器实例的选项。
 ```
-   bluemix sl vs options [OPTIONS]
+bluemix sl vs options [OPTIONS]
 ```
 
 
 **示例**：
 ```
- bluemix sl vs options
+bluemix sl vs options
 ```
 此命令列出用于创建虚拟服务器实例的所有选项，例如数据中心、CPU、内存、操作系统、磁盘、网络速度等。
 
@@ -2963,13 +2966,13 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 列出虚拟服务器实例凭证。
 ```
-   bluemix sl vs credentials IDENTIFIER [OPTIONS]
+bluemix sl vs credentials IDENTIFIER [OPTIONS]
 ```
 
 
 **示例**：
 ```
- bluemix sl vs credentials 12345678
+bluemix sl vs credentials 12345678
 ```
 此命令列出标识为 12345678 的虚拟服务器实例的所有用户名和密码对。
 
@@ -2978,7 +2981,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 获取虚拟服务器实例的详细信息。
 ```
-   bluemix sl vs detail IDENTIFIER [OPTIONS]
+bluemix sl vs detail IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -2992,7 +2995,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
-   bluemix sl vs details 12345678
+bluemix sl vs details 12345678
 ```
 此命令列出有关标识为 12345678 的虚拟服务器实例的详细信息。
 
@@ -3002,7 +3005,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 同步虚拟服务器实例的 DNS 记录。
 ```
-   bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
+bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3022,7 +3025,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
+bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 此命令将标识为 12345678 的虚拟服务器实例的 A 记录（IP V4 地址）与 DNS 服务器同步，并将此 A 记录的 ttl 设置为 3600。
 ### bluemix sl vs edit
@@ -3030,7 +3033,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 编辑虚拟服务器实例的详细信息。
 ```
-   bluemix sl vs edit IDENTIFIER [OPTIONS]
+bluemix sl vs edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3054,7 +3057,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
+bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
 ```
 此命令更新标识为 12345678 的虚拟服务器实例，并将其域设置为“bluemix.net”，主机名设置为“myapp”，标记设置为“testcli”。
 
@@ -3063,7 +3066,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 列出帐户的虚拟服务器实例。
 ```
-   bluemix sl vs list [OPTIONS]
+bluemix sl vs list [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3095,7 +3098,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs list --domain bluemix.net --hourly --sortby memory
+bluemix sl vs list --domain bluemix.net --hourly --sortby memory
 ```
 此命令列出当前帐户的所有每小时计费的虚拟服务器实例，依据其过滤的域为“bluemix.net”域，并按内存对其排序。
 
@@ -3106,7 +3109,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 暂停活动的虚拟服务器实例。
 ```
-   bluemix sl vs pause IDENTIFIER [OPTIONS]
+bluemix sl vs pause IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3118,7 +3121,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs pause 12345678 -f
+bluemix sl vs pause 12345678 -f
 ```
 此命令暂停标识为 12345678 的虚拟服务器实例，而不要求确认。
 
@@ -3129,7 +3132,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 关闭活动虚拟服务器实例的电源。
 ```
-   bluemix sl vs power-off IDENTIFIER [OPTIONS]
+bluemix sl vs power-off IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3145,7 +3148,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
-   bluemix sl vs power-off 12345678 --soft
+bluemix sl vs power-off 12345678 --soft
 ```
 此命令对标识为 12345678 的虚拟服务器实例执行软电源关闭操作。
 
@@ -3154,7 +3157,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 打开虚拟服务器实例的电源。
 ```
- bluemix sl vs power-on IDENTIFIER [OPTIONS]
+bluemix sl vs power-on IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3166,7 +3169,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs power-on 12345678
+bluemix sl vs power-on 12345678
 ```
 此命令对标识为 12345678 的虚拟服务器实例执行打开电源操作。
 
@@ -3176,7 +3179,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 检查虚拟服务器实例是否准备就绪可供使用。
 ```
- bluemix sl vs ready IDENTIFIER [OPTIONS]
+bluemix sl vs ready IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3188,7 +3191,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs ready 12345678 --wait 30
+bluemix sl vs ready 12345678 --wait 30
 ```
 此命令检查标识为 12345678 的虚拟服务器实例的状态以确定其是否准备就绪可持续使用，并且最长等待 30 秒。
 
@@ -3197,7 +3200,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 重新引导活动的虚拟服务器实例。
 ```
- bluemix sl vs reboot IDENTIFIER [OPTIONS]
+bluemix sl vs reboot IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3213,7 +3216,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs reboot 12345678 --hard
+bluemix sl vs reboot 12345678 --hard
 ```
 此命令对标识为 12345678 的虚拟服务器实例执行硬重新引导。
 
@@ -3224,7 +3227,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 在虚拟服务器实例上重新装入操作系统。
 ```
- bluemix sl vs reload IDENTIFIER [OPTIONS]
+bluemix sl vs reload IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3244,7 +3247,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
-   bluemix sl vs reload 12345678
+bluemix sl vs reload 12345678
 ```
 此命令为标识为 12345678 的虚拟服务器实例重新装入当前操作系统。
 ### bluemix sl vs rescue
@@ -3252,7 +3255,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 将虚拟服务器实例重新引导到拯救映像。
 ```
- bluemix sl vs rescue IDENTIFIER [OPTIONS]
+bluemix sl vs rescue IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3264,7 +3267,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs rescue 12345678
+bluemix sl vs rescue 12345678
 ```
 此命令将标识为 12345678 的虚拟服务器实例重新引导到拯救映像。
 
@@ -3274,7 +3277,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 恢复已暂停的虚拟服务器实例。
 ```
-   bluemix sl vs resume IDENTIFIER [OPTIONS]
+bluemix sl vs resume IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3286,7 +3289,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs resume 12345678
+bluemix sl vs resume 12345678
 ```
 此命令恢复标识为 12345678 的虚拟服务器实例。
 
@@ -3296,7 +3299,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 升级虚拟服务器实例。
 ```
-   bluemix sl vs upgrade IDENTIFIER [OPTIONS]
+bluemix sl vs upgrade IDENTIFIER [OPTIONS]
 ```
 
 <strong>命令选项</strong>：
@@ -3316,7 +3319,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
- bluemix sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
+bluemix sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
 此命令升级标识为 12345678 的虚拟服务器实例，并将 CPU 核心数设置为 8，内存设置为 8192M，网络端口速度设置为 1000 Mbps。
 

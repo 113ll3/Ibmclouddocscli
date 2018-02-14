@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-12-07"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -51,7 +51,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </li>
 </ol>
 
-플러그인을 설치 제거해야 하는 경우 다음 명령을 사용한 후 업데이트된 저장소를 추가하고 최신 플러그인을 설치할 수 있습니다. 
+플러그인을 설치 제거해야 하는 경우 다음 명령을 사용한 후 업데이트된 저장소를 추가하고 최신 플러그인을 설치할 수 있습니다.
 
 * 플러그인 설치 제거: `cf uninstall-plugin BluemixAdminCLI`
 * 플러그인 저장소 제거: `cf remove-plugin-repo BluemixAdmin`
@@ -59,7 +59,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 사용
 
-{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다.
 
 명령 목록을 보려면 다음 명령을
 실행하십시오.
@@ -74,7 +74,7 @@ cf plugins
 ### {{site.data.keyword.Bluemix_notm}}에 연결 및 로그인
 
 관리 CLI 플러그인을 사용하려면 (아직 그렇게 하지 않은 경우) 먼저 연결하여
-로그인해야 합니다. 
+로그인해야 합니다.
 
 <ol>
 <li>{{site.data.keyword.Bluemix_notm}} API 엔드포인트에 연결하려면 다음 명령을 실행하십시오.<br/><br/>
@@ -111,7 +111,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**참고**: 특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다. 자세한 정보는 [관리자를 사용하여 사용자 추가](index.html#clius_emau)를 참조하십시오.
+**참고**: 특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다.  자세한 정보는 [관리자를 사용하여 사용자 추가](index.html#clius_emau)를 참조하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -130,7 +130,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ### {{site.data.keyword.Bluemix_dedicated_notm}}에서 사용자 초대
 {: #admin_dedicated_invite_public}
 
-각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.Bluemix_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [데디케이티드에 IBM Cloud Container Service 설정](/docs/containers/cs_dedicated.html#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
+각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.Bluemix_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [데디케이티드에 IBM Cloud Container 서비스 설정](/docs/containers/cs_dedicated.html#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
 
 ```
 cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
@@ -183,13 +183,13 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dl class="parml">
 
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
 <dd class="pd">사용자에게 지정된 권한입니다. 사용 가능한 권한은 admin(또는 superuser), login(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](/docs/admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">사용자가 속한 조직 이름입니다. 동일한 조회에 권한 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
+<dd class="pd">사용자가 속한 조직 이름입니다. 동일한 조회에 권한 매개변수가 있으면 이 매개변수를 사용할 수 없습니다.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">사용자에게 지정된 조직 역할입니다. 사용 가능한 역할은 'auditors', 'managers' 및 'billing_managers'입니다. 이 매개변수와 함께 조직을 지정해야 합니다. </dd>
+<dd class="pd">사용자에게 지정된 조직 역할입니다. 사용 가능한 역할은 'auditors', 'managers' 및 'billing_managers'입니다. 이 매개변수와 함께 조직을 지정해야 합니다.</dd>
 
 </dl>
 
@@ -206,15 +206,15 @@ cf ba set-permissions <user_name> <permission> <access>
 ```
 {: codeblock}
 
-**참고**: 한 번에 하나의 권한을 설정할 수 있습니다. 
+**참고**: 한 번에 하나의 권한을 설정할 수 있습니다.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">사용자의 권한을 설정합니다. 권한은 관리(사용 가능한 대체는 수퍼유저), 로그인(사용 가능한 대체는 기본), 카탈로그(읽기 또는 쓰기 액세스 권한), 보고서(읽기 또는 쓰기 액세스 권한) 또는 사용자(읽기 또는 쓰기 액세스 권한)입니다. </dd>
+<dd class="pd">사용자의 권한을 설정합니다. 권한은 관리(사용 가능한 대체는 수퍼유저), 로그인(사용 가능한 대체는 기본), 카탈로그(읽기 또는 쓰기 액세스 권한), 보고서(읽기 또는 쓰기 액세스 권한) 또는 사용자(읽기 또는 쓰기 액세스 권한)입니다.</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
-<dd class="pd">카탈로그, 보고서 또는 사용자 권한의 경우 <code>read</code> 또는 <code>write</code>로 액세스 레벨을 설정해야 합니다. </dd>
+<dd class="pd">카탈로그, 보고서 또는 사용자 권한의 경우 <code>read</code> 또는 <code>write</code>로 액세스 레벨을 설정해야 합니다.</dd>
 </dl>
 
 **팁:** 긴 **ba set-permissions** 명령어에 대한
@@ -253,12 +253,12 @@ cf ba enable-managers-add-users
 {: codeblock}
 
 **팁:** 긴 **ba enable-managers-add-users** 명령어의
-별명으로 **ba emau**를 사용할 수도 있습니다. 
+별명으로 **ba emau**를 사용할 수도 있습니다.
 
 ### 관리자가 사용자를 추가하도록 설정 제거
 {: #clius_dmau}
 
-조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 관리하는 조직에 사용자를 추가하도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다. 관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
+조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 관리하는 조직에 사용자를 추가하도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다.  관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba disable-managers-add-users
@@ -266,7 +266,7 @@ cf ba disable-managers-add-users
 {: codeblock}
 
 **팁:** 긴 **ba disable-managers-add-users** 명령어의
-별명으로 **ba emau**를 사용할 수도 있습니다. 
+별명으로 **ba emau**를 사용할 수도 있습니다.
 
 ## 조직 관리
 {: #admin_orgs}
@@ -274,7 +274,7 @@ cf ba disable-managers-add-users
 ### 조직 추가
 {: #admin_add_org}
 
-조직을 추가하려면 다음 명령을 사용하십시오. 
+조직을 추가하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba create-org <organization> <manager>
@@ -283,9 +283,9 @@ cf ba create-org <organization> <manager>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">추가할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다. </dd>
+<dd class="pd">추가할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 <dt class="pt dlterm">&lt;manager&gt;</dt>
-<dd class="pd">조직 관리자의 사용자 이름입니다. </dd>
+<dd class="pd">조직 관리자의 사용자 이름입니다.</dd>
 </dl>
 
 **팁:** 긴 **ba create-org** 명령어에 대한
@@ -295,7 +295,7 @@ cf ba create-org <organization> <manager>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">삭제할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다. </dd>
+<dd class="pd">삭제할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 </dl>
 
 **팁:** 긴 **ba delete-org** 명령어에 대한
@@ -373,7 +373,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 ### 조직에 할당량 설정
 {: #admin_set_org_quota}
 
-특정 조직에 사용 할당량을 설정하려면 다음 명령을 사용하십시오. 
+특정 조직에 사용 할당량을 설정하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba set-quota <organization> <plan>
@@ -382,9 +382,9 @@ cf ba set-quota <organization> <plan>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">할당량을 설정할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다. </dd>
+<dd class="pd">할당량을 설정할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 <dt class="pt dlterm">&lt;plan&gt;</dt>
-<dd class="pd">조직에 대한 할당량 플랜입니다. </dd>
+<dd class="pd">조직에 대한 할당량 플랜입니다.</dd>
 </dl>
 
 **팁:** 긴 **ba set-quota** 명령어에 대한
@@ -394,7 +394,7 @@ cf ba set-quota <organization> <plan>
 ### 조직의 컨테이너 할당량 찾기
 {: #admin_find_containquotas}
 
-조직의 컨테이너 할당량을 찾으려면 다음 명령을 사용하십시오. 
+조직의 컨테이너 할당량을 찾으려면 다음 명령을 사용하십시오.
 
 ```
 cf bluemix-admin containers-quota <organization>
@@ -403,7 +403,7 @@ cf bluemix-admin containers-quota <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다. </dd>
+<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 </dl>
 
 **팁:** 긴 **bluemix-admin containers-quota** 명령어의 별명으로
@@ -423,7 +423,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다. </dd>
+<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">값이 정수여야 하는 다음 옵션 중 하나 이상을 포함합니다.
 <ul>
@@ -458,7 +458,7 @@ cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
-JSON 파일의 형식은 다음 예제와 같습니다. 
+JSON 파일의 형식은 다음 예제와 같습니다.
 
 ```
 {
@@ -578,7 +578,7 @@ cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 
 모든 조직에 대해
 {{site.data.keyword.Bluemix_notm}} 카탈로그에
-서비스를 표시하도록 설정하려면 다음 명령을 사용하십시오. 
+서비스를 표시하도록 설정하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba enable-service-plan <plan_identifier>
@@ -587,7 +587,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
+<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다. </dd>
 </dl>
 
 **팁:** 긴 **ba enable-service-plan** 명령어에 대한
@@ -597,7 +597,7 @@ cf ba enable-service-plan <plan_identifier>
 {: #admin_dis_service_org}
 
 모든 조직에 대해 {{site.data.keyword.Bluemix_notm}} 카탈로그에
-서비스를 표시하지 않도록 설정하려면 다음 명령을 사용하십시오. 
+서비스를 표시하지 않도록 설정하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba disable-service-plan <plan_identifier>
@@ -616,7 +616,7 @@ cf ba disable-service-plan <plan_identifier>
 {: #admin_addvis_service_org}
 
 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 특정 서비스를 볼 수 있는 조직을 조직 목록에서 추가할 수 있습니다. 조직이 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
-특정 서비스를 볼 수 있도록 허용하려면 다음 명령을 사용하십시오. 
+특정 서비스를 볼 수 있도록 허용하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
@@ -627,7 +627,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">서비스의 가시성 목록에 추가할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다. </dd>
+<dd class="pd">서비스의 가시성 목록에 추가할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 </dl>
 
 **팁:** 긴 **ba add-service-plan-visibility** 명령어에 대한
@@ -639,7 +639,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
 특정 서비스를 볼 수 있는 조직을 조직 목록에서 제거할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 카탈로그에서
 조직에 대한 서비스의 가시성을 제거하려면
-다음 명령을 사용하십시오. 
+다음 명령을 사용하십시오.
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -650,7 +650,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">사용으로 설정할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">서비스의 가시성 목록에서 제거할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다. </dd>
+<dd class="pd">서비스의 가시성 목록에서 제거할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 </dl>
 
 **팁:** 긴 **ba remove-service-plan-visibility** 명령어에 대한
@@ -661,21 +661,21 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
 특정 조직이 볼 수 있는 서비스의 목록을 편집하고 대체할 수도 있습니다. 단일 조직 또는 여러 조직에 대해 표시되는 기존 서비스를 모두 대체하려면
-다음 명령을 사용하십시오. 
+다음 명령을 사용하십시오.
 
 ```
 cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
 ```
 {: codeblock}
 
-**참고:** 이 명령은 지정된 조직에 대해 표시되는 기존 서비스를 명령에서 지정하는 서비스로 대체합니다. 
+**참고:** 이 명령은 지정된 조직에 대해 표시되는 기존 서비스를 명령에서 지정하는 서비스로 대체합니다.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">가시성을 추가할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다. 명령에 추가로 조직 이름 또는 GUID를 입력하여 둘 이상의 조직에 대해
-서비스의 가시성을 사용으로 설정할 수 있습니다. </dd>
+서비스의 가시성을 사용으로 설정할 수 있습니다.</dd>
 </dl>
 
 **팁:** 긴 **ba edit-service-plan-visibility** 명령어에 대한
@@ -685,28 +685,28 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 {: #admin_add_report}
 
 ### 보고서 추가
-{: #admin_add_report}
+{: #admin_adding_report}
 
-보안 보고서를 추가하려면 다음 명령을 사용하십시오. 
+보안 보고서를 추가하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-**참고**: 보고서 권한에 대해 쓰기 액세스 권한이 있는 경우, 새 카테고리를 작성하고 사용자에 대한 허용된 형식으로 보고서를 추가할 수 있습니다. `category` 매개변수에 대해 새 카테고리 이름을 입력하거나 새 보고서를 기존 카테고리에 추가하십시오. 
+**참고**: 보고서 권한에 대해 쓰기 액세스 권한이 있는 경우, 새 카테고리를 작성하고 사용자에 대한 허용된 형식으로 보고서를 추가할 수 있습니다. `category` 매개변수에 대해 새 카테고리 이름을 입력하거나 새 보고서를 기존 카테고리에 추가하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
 <dd class="pd">보고서의 카테고리입니다. 이름에 공백이 있는 경우 이름을 따옴표 안에
-넣으십시오. </dd>
+넣으십시오.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd"><samp class="ph codeph">YYYYMMDD</samp> 형식의 보고서 날짜입니다. </dd>
+<dd class="pd"><samp class="ph codeph">YYYYMMDD</samp> 형식의 보고서 날짜입니다.</dd>
 <dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
-<dd class="pd">업로드할 보고서 PDF, 텍스트 파일 또는 로그 파일의 경로입니다. </dd>
+<dd class="pd">업로드할 보고서 PDF, 텍스트 파일 또는 로그 파일의 경로입니다.</dd>
 <dt class="pt dlterm">&lt;RTF&gt;</dt>
 <dd class="pd">PDF의 RTF(Rich Text Format) 버전을 포함시키는 옵션입니다. 이 옵션은 보고서 PDF의 경로를 포함시킨 경우에만
-적용됩니다. RTF 버전은 색인 작성 및 검색에 사용됩니다. </dd>
+적용됩니다. RTF 버전은 색인 작성 및 검색에 사용됩니다.</dd>
 </dl>
 
 **팁:** 긴 **ba add-report** 명령어에 대한
@@ -715,7 +715,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ### 보고서 삭제
 {: #admin_del_report}
 
-보안 보고서를 삭제하려면 다음 명령을 사용하십시오. 
+보안 보고서를 삭제하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba delete-report <category> <date> <name>
@@ -725,11 +725,11 @@ cf ba delete-report <category> <date> <name>
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
 <dd class="pd">보고서의 카테고리입니다. 이름에 공백이 있는 경우 이름을 따옴표 안에
-넣으십시오. </dd>
+넣으십시오.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd"><samp class="ph codeph">YYYYMMDD</samp> 형식의 보고서 날짜입니다. </dd>
+<dd class="pd"><samp class="ph codeph">YYYYMMDD</samp> 형식의 보고서 날짜입니다.</dd>
 <dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">보고서의 이름입니다. </dd>
+<dd class="pd">보고서의 이름입니다.</dd>
 </dl>
 
 **팁:** 긴 **ba delete-report** 명령어에 대한
@@ -738,7 +738,7 @@ cf ba delete-report <category> <date> <name>
 ### 보고서 검색
 {: #admin_retr_report}
 
-보안 보고서를 검색하려면 다음 명령을 사용하십시오. 
+보안 보고서를 검색하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba retrieve-report <search>
@@ -748,7 +748,7 @@ cf ba retrieve-report <search>
 <dl class="parml">
 <dt class="pt dlterm">&lt;search&gt;</dt>
 <dd class="pd">보고서의 파일 이름입니다. 이름에 공백이 있는 경우 이름을 따옴표 안에
-넣으십시오. </dd>
+넣으십시오.</dd>
 </dl>
 
 **팁:** 긴 **ba retrieve-report** 명령어에 대한 별명으로 **ba rr**을 사용할 수도 있습니다.
@@ -763,12 +763,12 @@ cf ba resource-metrics
 ```
 
 **팁:** 긴 **ba resource-metrics** 명령어의 별명으로
-**ba rsm**을 사용할 수도 있습니다. 
+**ba rsm**을 사용할 수도 있습니다.
 
 ## 리소스 메트릭 히스토리 보기
 {: #cliresourceusagehistory}
 
-메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다. 시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다. 리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
+메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다.  시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다.   리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -781,15 +781,15 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--daily&gt;</dt>
 <dd class="pd">지난 30일 동안의 히스토리 데이터 일별 평균을 봅니다.</dd>
 <dt class="pt dlterm">&lt;--monthly&gt;</dt>
-<dd class="pd">지난 6개월 동안의 히스토리 데이터 월별 평균을 봅니다.</dd>
+<dd class="pd">지난 6개월 동안의 히스토리 데이터 월별 평균을 봅니다. </dd>
 <dt class="pt dlterm">&lt;--memory&gt;</dt>
-<dd class="pd">사용된 메모리 및 예약된 메모리와 실제 메모리의 총계를 봅니다.</dd>
+<dd class="pd">사용된 메모리 및 예약된 메모리와 실제 메모리의 총계를 봅니다. </dd>
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">사용된 디스크 및 예약된 디스크와 실제 디스크의 총계를 봅니다.</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">일별 또는 월별 시작 날짜를 지정하거나(mm-dd-yyyy 형식이어야 함) 시간별 시작 날짜와 시간을 지정하십시오(mm-dd-yyyy hh:mm:ss 시간대 형식이어야 함).</dd>
+<dd class="pd">일별 또는 월별 시작 날짜를 지정하거나(mm-dd-yyyy 형식이어야 함) 시간별 시작 날짜와 시간을 지정하십시오(mm-dd-yyyy hh:mm:ss 시간대 형식이어야 함). </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">일별 또는 월별 종료 날짜를 지정하거나(mm-dd-yyyy 형식이어야 함) 시간별 종료 날짜와 시간을 지정하십시오(mm-dd-yyyy hh:mm:ss 시간대 형식이어야 함).</dd>
+<dd class="pd">일별 또는 월별 종료 날짜를 지정하거나(mm-dd-yyyy 형식이어야 함) 시간별 종료 날짜와 시간을 지정하십시오(mm-dd-yyyy hh:mm:ss 시간대 형식이어야 함). </dd>
 </dl>
 
 {: codeblock}
@@ -803,7 +803,7 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 </dl>
 
 
-다음 명령을 사용하여 위의 명령 매개변수 및 예제의 목록을 볼 수 있습니다. 
+다음 명령을 사용하여 이전 명령 매개변수 및 예제의 목록을 볼 수 있습니다. 
 
 ```
 cf ba resource-metrics-history -help
@@ -817,7 +817,7 @@ cf ba resource-metrics-history -help
 ### 서비스 브로커 나열
 {: #clilistservbro}
 
-서비스 브로커를 나열하려면 다음 명령을 사용하십시오. 
+서비스 브로커를 나열하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba service-brokers <broker_name>
@@ -881,7 +881,7 @@ cf ba delete-service-broker <service_broker>
 ### 서비스 브로커 업데이트
 {: #cliupdservbro}
 
-서비스 브로커를 업데이트하려면 다음 명령을 사용하십시오. 
+서비스 브로커를 업데이트하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
@@ -906,21 +906,21 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 ## 애플리케이션 보안 그룹 관리
 {: #admin_secgro}
 
-애플리케이션 보안 그룹(ASG)에 대해 작업하려면 로컬 또는 데디케이티드 환경의 전체 액세스 관리자여야 합니다. 환경의 모든 사용자는 명령으로 대상이 되는 조직의 사용 가능한 ASG를 나열할 수 있습니다. 그러나 ASG의 작성, 업데이트 또는 바인드를 수행하려면 {{site.data.keyword.Bluemix_notm}} 환경의 관리자여야 합니다. 
+애플리케이션 보안 그룹(ASG)에 대해 작업하려면 로컬 또는 데디케이티드 환경의 전체 액세스 관리자여야 합니다. 환경의 모든 사용자는 명령으로 대상이 되는 조직의 사용 가능한 ASG를 나열할 수 있습니다. 그러나 ASG의 작성, 업데이트 또는 바인드를 수행하려면 {{site.data.keyword.Bluemix_notm}} 환경의 관리자여야 합니다.
 
-ASG는 {{site.data.keyword.Bluemix_notm}} 환경에서 애플리케이션의 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다. 각 ASG는 네트워크 안팎으로 특정 트래픽과 통신을 허용하는 규칙의 목록으로 구성됩니다. 하나 이상의 ASG를 특정 보안 그룹 세트(예: 글로벌 액세스를 적용하는 데 사용되는 그룹 세트)에 바인딩하거나 {{site.data.keyword.Bluemix_notm}} 환경에서 조직 내의 영역에 바인딩할 수 있습니다. 
+ASG는 {{site.data.keyword.Bluemix_notm}} 환경에서 애플리케이션의 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다. 각 ASG는 네트워크 안팎으로 특정 트래픽과 통신을 허용하는 규칙의 목록으로 구성됩니다. 하나 이상의 ASG를 특정 보안 그룹 세트(예: 글로벌 액세스를 적용하는 데 사용되는 그룹 세트)에 바인딩하거나 {{site.data.keyword.Bluemix_notm}} 환경에서 조직 내의 영역에 바인딩할 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}을 참조하십시오. 
+{{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}을 참조하십시오.
 
 **경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 스테이징** 또는 **기본 실행** 그룹 세트의 바인드를 해제하면, `public_networks` 및 `dns`에서 외부 네트워크에 대한 글로벌 액세스를 사용 안함으로 설정합니다. 바인드 해제를 사용할 때는 환경에 있는 실행 및 스테이징 애플리케이션에 대한 잠재적 영향을 이해하고 주의를 기울이십시오.
 
 
-**참고**: 보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 필수 필드 및 선택 필드를 포함하여 자세한 정보는 [애플리케이션 보안 그룹 작성 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}에 대한 Cloud Foundry 정보를 참조하십시오. 
+**참고**: 보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 필수 필드 및 선택 필드를 포함하여 자세한 정보는 [애플리케이션 보안 그룹 작성 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}에 대한 Cloud Foundry 정보를 참조하십시오.
 
 ### 보안 그룹 나열
 {: #clilissecgro}
 
-* 보안 그룹을 모두 나열하려면 다음 명령을 사용하십시오. 
+* 보안 그룹을 모두 나열하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba security-groups
@@ -928,7 +928,7 @@ cf ba security-groups
 {: codeblock}
 
 **팁:** 긴 **ba security-groups** 명령어의 별명으로
-**ba sgs**를 사용할 수도 있습니다. 
+**ba sgs**를 사용할 수도 있습니다.
 
 * 특정 보안 그룹에 대한 세부사항을 표시하려면 다음 명령을 사용하십시오.
 
@@ -943,22 +943,22 @@ cf ba security-groups <security-group>
 </dl>
 
 **팁:** `security-group` 매개변수가 있는 긴 **ba security-groups**
-명령어의 별명으로 **ba sg**를 사용할 수도 있습니다. 
+명령어의 별명으로 **ba sg**를 사용할 수도 있습니다.
 
 
 ### 보안 그룹 작성
 {: #clicreasecgro}
 
-보안 그룹 및 출력 트래픽을 정의하는 규칙 작성에 대한 자세한 정보는 [애플리케이션 보안 그룹 작성 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}을 참조하십시오. 
+보안 그룹 및 출력 트래픽을 정의하는 규칙 작성에 대한 자세한 정보는 [애플리케이션 보안 그룹 작성 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}을 참조하십시오.
 
-보안 그룹을 작성하려면 다음 명령을 사용하십시오. 
+보안 그룹을 작성하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba create-security-group <security-group> <path-to-rules-file>
 ```
 {: codeblock}
 
-작성하는 각 보안 그룹의 이름에 접두부 `adminconsole_`이 추가되어 IBM에서 작성한 보안 그룹과 구별됩니다. 
+작성하는 각 보안 그룹의 이름에 접두부 `adminconsole_`이 추가되어 IBM에서 작성한 보안 그룹과 구별됩니다.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Security group&gt;</dt>
@@ -968,12 +968,12 @@ cf ba create-security-group <security-group> <path-to-rules-file>
 </dl>
 
 **팁:** 긴 **ba create-security-group** 명령어의
-별명으로 **ba csg**를 사용할 수도 있습니다. 
+별명으로 **ba csg**를 사용할 수도 있습니다.
 
 ### 보안 그룹 업데이트
 {: #cliupdsecgro}
 
-보안 그룹을 업데이트하려면 다음 명령을 사용하십시오. 
+보안 그룹을 업데이트하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba update-security-group <security-group> <path-to-rules-file>
@@ -988,12 +988,12 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 </dl>
 
 **팁:** 긴 **ba update-security-group** 명령어의
-별명으로 **ba usg**를 사용할 수도 있습니다. 
+별명으로 **ba usg**를 사용할 수도 있습니다.
 
 ### 보안 그룹 삭제
 {: #clidelsecgro}
 
-보안 그룹을 삭제하려면 다음 명령을 사용하십시오. 
+보안 그룹을 삭제하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba delete-security-group <security-group>
@@ -1006,13 +1006,13 @@ cf ba delete-security-group <security-group>
 </dl>
 
 **팁:** 긴 **ba delete-security-group** 명령어의
-별명으로 **ba dsg**를 사용할 수도 있습니다. 
+별명으로 **ba dsg**를 사용할 수도 있습니다.
 
 
 ### 보안 그룹 바인딩
 {: #clibindsecgro}
 
-보안 그룹 바인딩에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}을 참조하십시오. 
+보안 그룹 바인딩에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}을 참조하십시오.
 
 * 기본 스테이징 보안 그룹 세트를 바인드하려면 다음 명령을 사용하십시오.
 
@@ -1027,7 +1027,7 @@ cf ba bind-staging-security-group <security-group>
 </dl>
 
 **팁:** 긴 **ba bind-staging-security-group** 명령어의
-별명으로 **ba bssg**를 사용할 수도 있습니다. 
+별명으로 **ba bssg**를 사용할 수도 있습니다.
 
 * 기본 실행 보안 그룹 세트를 바인드하려면 다음 명령을 사용하십시오.
 
@@ -1042,9 +1042,9 @@ cf ba bind-running-security-group <security-group>
 </dl>
 
 **팁:** 긴 **ba bind-running-security-group** 명령어의
-별명으로 **ba brsg**를 사용할 수도 있습니다. 
+별명으로 **ba brsg**를 사용할 수도 있습니다.
 
-* 보안 그룹을 영역에 바인드하려면 다음 명령을 사용하십시오. 
+* 보안 그룹을 영역에 바인드하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba bind-security-group <security-group> <org> <space>
@@ -1061,12 +1061,12 @@ cf ba bind-security-group <security-group> <org> <space>
 </dl>
 
 **팁:** 긴 **ba bind-security-group** 명령어의
-별명으로 **ba bsg**를 사용할 수도 있습니다. 
+별명으로 **ba bsg**를 사용할 수도 있습니다.
 
 ### 보안 그룹 바인드 해제
 {: #cliunbindsecgro}
 
-보안 그룹 바인딩 해제에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 해제 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}를 참조하십시오. 
+보안 그룹 바인딩 해제에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 해제 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}를 참조하십시오.
 
 * 기본 스테이징 보안 그룹 세트에서 바인드 해제하려면 다음 명령을 사용하십시오.
 
@@ -1083,7 +1083,7 @@ cf ba unbind-staging-security-group <security-group>
 **경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 스테이징** 그룹 세트의 바인딩을 해제하면, `public_networks` 및 `dns`에서 네트워크 외부에 대한 글로벌 액세스를 사용 안함으로 설정하므로, 환경에 있는 모든 스테이징 애플리케이션에 미치는 영향을 이해하고 주의하여 사용해야 합니다.
 
 **팁:** 긴 **ba unbind-staging-security-group** 명령어의
-별명으로 **ba ussg**를 사용할 수도 있습니다. 
+별명으로 **ba ussg**를 사용할 수도 있습니다.
 
 * 기본 실행 보안 그룹 세트에서 바인드 해제하려면 다음 명령을 사용하십시오.
 
@@ -1101,7 +1101,7 @@ cf ba unbind-running-security-group <security-group>
 
 **팁:** 긴 **ba unbind-running-security-group** 명령어의 별명으로 **ba brsg**를 사용할 수도 있습니다.
 
-* 보안 그룹을 영역에서 바인드 해제하려면 다음 명령을 사용하십시오. 
+* 보안 그룹을 영역에서 바인드 해제하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba unbind-security-group <security-group> <org> <space>
@@ -1118,7 +1118,7 @@ cf ba unbind-security-group <security-group> <org> <space>
 </dl>
 
 **팁:** 긴 **ba unbind-staging-security-group** 명령어의
-별명으로 **ba usg**를 사용할 수도 있습니다. 
+별명으로 **ba usg**를 사용할 수도 있습니다.
 
 ## 빌드팩 관리
 {: #admin_buildpack}
@@ -1139,12 +1139,12 @@ cf ba buildpacks <buildpack_name>
 </dl>
 
 **팁:** 긴 **ba buildpacks** 명령어의
-별명으로 **ba lb**를 사용할 수도 있습니다. 
+별명으로 **ba lb**를 사용할 수도 있습니다.
 
 ### 빌드팩 작성 및 업로드
 {: #clicreupbuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 빌드팩을 작성 및 업로드할 수 있습니다. .zip 파일 유형이 있는 압축된 파일을 업로드할 수 있습니다. 빌드팩을 업로드하려면 다음 명령을 사용하십시오. 
+앱 카탈로그 쓰기 권한이 있는 경우, 빌드팩을 작성 및 업로드할 수 있습니다. .zip 파일 유형이 있는 압축된 파일을 업로드할 수 있습니다. 빌드팩을 업로드하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba create-buildpack <buildpack_name> <file_path> <position>
@@ -1161,12 +1161,12 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 </dl>
 
 **팁:** 긴 **ba create-buildpack** 명령어의
-별명으로 **ba cb**를 사용할 수도 있습니다. 
+별명으로 **ba cb**를 사용할 수도 있습니다.
 
 ### 빌드팩 업데이트
 {: #cliupdabuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 업데이트할 수 있습니다. 빌드팩을 업데이트하려면 다음 명령을 사용하십시오. 
+앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 업데이트할 수 있습니다.  빌드팩을 업데이트하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -1185,12 +1185,12 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 </dl>
 
 **팁:** 긴 **ba update-buildpack** 명령어의
-별명으로 **ba ub**를 사용할 수도 있습니다. 
+별명으로 **ba ub**를 사용할 수도 있습니다.
 
 ### 빌드팩 삭제
 {: #clidelbuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 삭제할 수 있습니다. 빌드팩을 삭제하려면 다음 명령을 사용하십시오. 
+앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 삭제할 수 있습니다.  빌드팩을 삭제하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba delete-buildpack <buildpack_name>
@@ -1203,4 +1203,4 @@ cf ba delete-buildpack <buildpack_name>
 </dl>
 
 **팁:** 긴 **ba delete-buildpack** 명령어의
-별명으로 **ba db**를 사용할 수도 있습니다. 
+별명으로 **ba db**를 사용할 수도 있습니다.

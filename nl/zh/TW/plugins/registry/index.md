@@ -101,9 +101,9 @@ bx cr build [--no-cache] [--pull] [--quiet | -q] [--build-arg KEY=VALUE ...] [--
 <dd>（選用）如果指定，則除非發生錯誤，否則會抑制建置輸出。</dd>
 <dt> --build-arg KEY=VALUE</dt>
 <dd>（選用）以 'KEY=VALUE' 格式指定其他建置引數。包含這個參數多次，即可指定多個建置引數。當您指定符合 Dockerfile 中索引鍵的 ARG 行時，每一個建置引數的值都可以作為環境變數。</dd>
-<dt>--file FILE、-f FILE</dt>
+<dt>--file FILE, -f FILE</dt>
 <dd>（選用）如果您對多個建置使用相同的檔案，則可以選擇不同 Dockerfile 的路徑。請指定與建置環境定義相關的 Dockerfile 位置。如果未指定，則預設值為 `PATH/Dockerfile`，其中 PATH 是建置環境定義的根目錄。</dd>
-<dt>--tag TAG、-t TAG</dt>
+<dt>--tag TAG, -t TAG</dt>
 <dd>您要建置之映像檔的完整名稱，其包含登錄 URL 及名稱空間。</dd>
 </dl>
 
@@ -132,11 +132,15 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 **參數**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（選用）使用 Go 範本將輸出元素格式化。 
+
+如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
 <dt>IMAGE</dt>
-<dd>您要取得其報告的映像檔名稱。若要檢查多個映像檔，您可以在指令中列出每一個映像檔，並以空格隔開每一個名稱。<p>若要尋找映像檔的名稱，請執行 `bx cr image-list`。請以 `repository:tag` 格式，結合「儲存庫」及「標籤」直欄的內容來建立映像檔名稱。如果映像檔名稱中未指定標籤，則會檢查有 `latest` 標記的映像檔。</p> 
+<dd>您要取得其報告的映像檔名稱。若要檢查多個映像檔，您可以在指令中列出每一個映像檔，並以空格隔開每一個名稱。
+
+<p>若要尋找映像檔的名稱，請執行 `bx cr image-list`。請以 `repository:tag` 格式，結合「儲存庫」及「標籤」直欄的內容來建立映像檔名稱。如果映像檔名稱中未指定標籤，則會檢查有 `latest` 標記的映像檔。</p> 
 
 </dd>
 </dl>
@@ -159,7 +163,9 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>--no-trunc</dt>
 <dd>（選用）不要截斷映像檔摘要。</dd>
 <dt>--format FORMAT</dt>
-<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（選用）使用 Go 範本將輸出元素格式化。 
+
+如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
 <dt>-q, --quiet</dt>
@@ -186,6 +192,8 @@ bx cr image-rm IMAGE [IMAGE...]
 <dl>
 <dt>IMAGE</dt>
 <dd>您要取得其報告的映像檔名稱。若要同時刪除多個映像檔，您可以在指令中列出每一個映像檔，而每一個名稱之間都是以空格隔開。
+
+
 
 <p>若要尋找映像檔的名稱，請執行 `bx cr image-list`。請以 `repository:tag` 格式，結合「儲存庫」及「標籤」直欄的內容來建立映像檔名稱。如果映像檔名稱中未指定標籤，則依預設會刪除有 `latest` 標記的映像檔。</p> 
 
@@ -335,7 +343,9 @@ bx cr region-set [REGION]
 **參數**
 <dl>
 <dt>REGION</dt>
-<dd>（選用）目標地區的名稱（例如，`us-south`）。如需相關資訊，請參閱[地區](../../../services/Registry/registry_overview.html#registry_regions)。
+<dd>（選用）目標地區的名稱（例如，`us-south`）。 
+
+如需相關資訊，請參閱[地區](../../../services/Registry/registry_overview.html#registry_regions)。
 
 </dd>
 </dl>
@@ -397,7 +407,9 @@ bx cr token-list --format FORMAT
 **參數**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>（選用）使用 Go 範本將輸出元素格式化。如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
+<dd>（選用）使用 Go 範本將輸出元素格式化。 
+
+如需相關資訊，請參閱[格式化及過濾 {{site.data.keyword.registrylong_notm}} 指令的 CLI 輸出](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)。
 
 </dd>
 </dl>
@@ -435,9 +447,13 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 <dt>IMAGE</dt>
 <dd>您要取得其報告的映像檔名稱。報告會告訴您映像檔是否有任何已知的套件漏洞。若要同時要求多個映像檔的報告，您可以在指令中列出每一個映像檔，而每一個名稱之間都是以空格隔開。
 
+
+
 <p>若要尋找映像檔的名稱，請執行 `bx cr image-list`。請以 `repository:tag` 格式，結合「儲存庫」及「標籤」直欄的內容來建立映像檔名稱。如果映像檔名稱中未指定標籤，則報告會評量有 `latest` 標記的映像檔。</p> 
 
 <p>支援下列作業系統：
+
+
 
 <ul>
 
@@ -453,8 +469,10 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 如需相關資訊，請參閱[使用漏洞警告器管理映像檔安全](../../../services/va/va_index.html)。
 
 </dd>
-<dt>--output FORMAT、-o FORMAT</dt>
+<dt>--output FORMAT, -o FORMAT</dt>
 <dd>（選用）以選擇的格式傳回指令輸出。預設格式為 `text`。支援的格式如下：
+
+
 
 <ul>
 
@@ -463,11 +481,11 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 </ul>
 
 </dd>
-<dt>--vulnerabilities、-v</dt>
+<dt>--vulnerabilities, -v</dt>
 <dd>（選用）指令輸出限制為只顯示漏洞。</dd>
-<dt>--configuration-issues、-c</dt>
+<dt>--configuration-issues, -c</dt>
 <dd>（選用）指令輸出限制為只顯示配置問題。</dd>
-<dt>--extended、-e </dt>
+<dt>--extended, -e </dt>
 <dd>（選用）指令輸出會針對有漏洞的套件顯示修正程式的其他資訊。</dd>
 
 </dl>

@@ -2,16 +2,16 @@
 
 copyright:
 
-  years: 2016,2017
+  years: 2016,2018
 
-lastupdated: "2017-11-10"
 
+lastupdated: "2017-12-08"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 指令
+# {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 (bluemix sl) 指令
 {: #softlayer_cli}
 
 {{site.data.keyword.BluSoftlayer}} 外掛程式已合併至 {{site.data.keyword.Bluemix_notm}} CLI。您不再需要安裝外掛程式。
@@ -46,7 +46,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 2. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 Block Storage</caption>
  <thead>
- <th colspan="6">Softlayer Block Storage</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 Block Storage</th>
  </thead>
  <tbody>
  <tr>
@@ -87,7 +87,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 3. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 CDN</caption>
  <thead>
- <th colspan="6">Softlayer CDN</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 CDN</th>
  </thead>
  <tbody>
  <tr>
@@ -112,7 +112,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 4. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 File Storage</caption>
  <thead>
- <th colspan="6">Softlayer File Storage</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 File Storage</th>
  </thead>
  <tbody>
  <tr>
@@ -153,7 +153,7 @@ lastupdated: "2017-11-10"
 <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 5. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 DNS 指令</caption>
  <thead>
- <th colspan="6">Softlayer DNS 指令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 DNS 指令</th>
  </thead>
  <tbody>
  <tr>
@@ -172,10 +172,11 @@ lastupdated: "2017-11-10"
    </tbody>
  </table>
 
+
 <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 6. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構廣域 IP 指令</caption>
  <thead>
- <th colspan="6">Softlayer 廣域 IP 指令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構廣域 IP 指令</th>
  </thead>
  <tbody>
  <tr>
@@ -193,7 +194,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 image 指令</caption>
  <thead>
- <th colspan="6">Softlayer image 指令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 image 指令</th>
  </thead>
  <tbody>
  <tr>
@@ -210,7 +211,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 7. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 IPSec VPN 指令</caption>
  <thead>
- <th colspan="6">Softlayer IPSec VPN 指令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 IPSec VPN 指令</th>
  </thead>
  <tbody>
  <tr>
@@ -236,7 +237,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 8. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構負載平衡器指令</caption>
  <thead>
- <th colspan="6">Softlayer 負載平衡器指令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構負載平衡器指令</th>
  </thead>
  <tbody>
  <tr>
@@ -269,7 +270,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 9. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 security 指令</caption>
  <thead>
- <th colspan="5">Softlayer security 指令</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 security 指令</th>
  </thead>
  <tbody>
  <tr>
@@ -294,7 +295,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 10. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 subnet 指令</caption>
  <thead>
- <th colspan="5">Softlayer subnet 指令</th>
+ <th colspan="5">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 subnet 指令</th>
  </thead>
  <tbody>
  <tr>
@@ -312,7 +313,7 @@ lastupdated: "2017-11-10"
  <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 11. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構虛擬伺服器指令</caption>
  <thead>
- <th colspan="6">Softlayer 虛擬伺服器指令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構虛擬伺服器指令</th>
  </thead>
  <tbody>
  <tr>
@@ -345,7 +346,7 @@ lastupdated: "2017-11-10"
   <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 12. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 VLAN 指令</caption>
  <thead>
- <th colspan="6">Softlayer VLAN 指令</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 VLAN 指令</th>
  </thead>
  <tbody>
  <tr>
@@ -365,7 +366,7 @@ lastupdated: "2017-11-10"
 ### bluemix sl init
 {: #sl_init}
 
-起始設定用來連接至 SoftLayer 環境的配置設定。配置包括使用者名稱、API 金鑰或密碼、帳戶及端點。
+起始設定用來連接至 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構環境的配置設定。配置包括使用者名稱、API 金鑰或密碼、帳戶及端點。
 ```
 bluemix sl init [OPTIONS]
 ```
@@ -373,7 +374,7 @@ bluemix sl init [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>Softlayer API 端點 URL，預設值為：https://api.softlayer.com/rest/v3.1（適用於 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 API 金鑰鑑別）、https://api.softlayer.com/mobile/v3.1（適用於 IBM ID 鑑別）。</dd>
+<dd>{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 API 端點 URL，預設值為：https://api.softlayer.com/rest/v3.1（適用於 API 金鑰鑑別）、https://api.softlayer.com/mobile/v3.1（適用於 IBM ID 鑑別）。</dd>
 <dt>-u, --sl-user</dt>
 <dd>Softlayer 使用者名稱。</dd>
 <dt>-p, --sl-password</dt>
@@ -423,10 +424,9 @@ User:           wangjunl@cn.ibm.com
 Account:        Wilma's Account (65ce8074c6c62b5)   
 No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 ```
-
 提示：使用 'bx cf <command>'，以搭配 {{site.data.keyword.Bluemix_notm}} CLI 環境定義執行 Cloud Foundry CLI 。
-
 ```
+
 $ bx sl init
 Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
 1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
@@ -504,7 +504,7 @@ bluemix sl block access-list 12345678 --sortby id
 
 撤銷主機存取給定磁區的授權。
 ```
- bluemix sl block access-revoke VOLUME_ID [OPTIONS]
+bluemix sl block access-revoke VOLUME_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -530,13 +530,13 @@ bluemix sl block access-revoke 12345678 --virtual-id 87654321
 
 從抄本進行區塊磁區失效回復。
 ```
- bluemix sl block replica-failback VOLUME_ID
+bluemix sl block replica-failback VOLUME_ID
 ```
 
 
 **範例**：
 ```
- bluemix sl block replica-failback 12345678
+bluemix sl block replica-failback 12345678
 ```
 這個指令會針對 ID 為 12345678 的磁區執行失效回復作業。
 
@@ -551,7 +551,7 @@ bluemix sl block replica-failover VOLUME_ID REPLICA_ID
 
 **範例**：
 ```
- bluemix sl block replica-failover 12345678 87654321
+bluemix sl block replica-failover 12345678 87654321
 ```
 這個指令會執行將 ID 為 12345678 的磁區失效接手至 ID 為 87654321 的抄本磁區的作業。
 
@@ -575,7 +575,7 @@ bluemix sl block replica-locations 12345678
 
 訂購區塊儲存空間抄本磁區。
 ```
- bluemix sl block replica-order VOLUME_ID [OPTIONS]
+bluemix sl block replica-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -620,7 +620,7 @@ bluemix sl block replica-partners 12345678
 
 取消給定磁區的現有 Snapshot 空間。
 ```
- bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
+bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -635,7 +635,7 @@ bluemix sl block replica-partners 12345678
 
 **範例**：
 ```
- bluemix sl block snapshot-cancel 12345678 --immediate -f
+bluemix sl block snapshot-cancel 12345678 --immediate -f
 ```
 這個指令會立即取消 ID 為 12345678 的 Snapshot，而不要求確認。
 
@@ -644,7 +644,7 @@ bluemix sl block replica-partners 12345678
 
 在給定的磁區上建立 Snapshot。
 ```
- bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -664,7 +664,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 依給定磁區的指定排程停用 Snapshot。
 ```
- bluemix sl block snapshot-disable VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -675,7 +675,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 **範例**：
 ```
- bluemix sl block snapshot-disable 12345678 -s DAILY
+bluemix sl block snapshot-disable 12345678 -s DAILY
 ```
 這個指令會針對 ID 為 12345678 的磁區停用每日 Snapshot。
 
@@ -684,7 +684,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 依指定的排程為給定磁區啟用 Snapshot。
 ```
- bluemix sl block snapshot-enable VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -703,7 +703,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 **範例**：
 ```
- bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
+bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 這個指令會針對 ID 為 12345678 的磁區啟用 Snapshot、在每週的星期日 2:00 擷取 Snapshot，且最多保留 5 個 Snapshot。
 
@@ -712,13 +712,13 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 在給定的磁區上刪除 Snapshot。
 ```
-  bluemix sl block snapshot-delete SNAPSHOT_ID
+bluemix sl block snapshot-delete SNAPSHOT_ID
 ```
 
 
 **範例**：
 ```
- bluemix sl block snapshot-delete 12345678
+bluemix sl block snapshot-delete 12345678
 ```
 這個指令會刪除 ID 為 12345678 的 Snapshot。
 
@@ -727,8 +727,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 列出區塊儲存空間 Snapshot。
 ```
- bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
-
+bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -739,7 +738,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 **範例**：
 ```
- bluemix sl block snapshot-list 12345678 --sortby id
+bluemix sl block snapshot-list 12345678 --sortby id
 ```
 這個指令會列出 ID 為 12345678 的磁區的所有 Snapshot，並依 ID 排序。
 
@@ -748,7 +747,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 訂購區塊儲存空間磁區的 Snapshot 空間。
 ```
- bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -767,7 +766,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 **範例**：
 ```
-   bluemix sl block snapshot-order 12345678 -s 1000 -t 4
+bluemix sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 這個指令會針對 ID 為 12345678 的磁區訂購 Snapshot 空間、大小為 1000GB、層級層次為每 GB 4 個 IOPS。
 
@@ -776,13 +775,13 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 使用給定的 Snapshot 還原區塊磁區。
 ```
- bluemix sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
+bluemix sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
 **範例**：
 ```
- bluemix sl block snapshot-restore 12345678 87654321
+bluemix sl block snapshot-restore 12345678 87654321
 ```
 這個指令會從 ID 為 87654321 的 Snapshot 還原 ID 為 12345678 的磁區。
 
@@ -791,7 +790,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 取消現有的區塊儲存空間磁區。
 ```
- bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
+bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -806,7 +805,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 **範例**：
 ```
- bluemix sl block volume-cancel 12345678 --immediate -f
+bluemix sl block volume-cancel 12345678 --immediate -f
 ```
 這個指令會立即取消 ID 為 12345678 的磁區，而不要求確認。
 
@@ -815,7 +814,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 列出區塊儲存空間。
 ```
- bluemix sl block volume-list [OPTIONS]
+bluemix sl block volume-list [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -836,23 +835,22 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 
 **範例**：
 ```
- bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
+bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 這個指令會列出現行帳戶中位於 dal09 的所有耐久性磁區，並依容量排序。
-
 
 ### bluemix sl block volume-detail 
 {: #sl_block_volume_detail} 
 
 顯示指定磁區的詳細資料。
 ```
- bluemix sl block volume-detail VOLUME_ID
+bluemix sl block volume-detail VOLUME_ID
 ```
 
 
 **範例**：
 ```
- bluemix sl block volume-detail 12345678
+bluemix sl block volume-detail 12345678
 ```
 這個指令會顯示 ID 為 12345678 的磁區的詳細資料。
 
@@ -891,7 +889,7 @@ bluemix sl block volume-duplicate 12345678
 
 訂購區塊儲存空間磁區。
 ```
-   bluemix sl block volume-order [OPTIONS]
+bluemix sl block volume-order [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -916,7 +914,7 @@ bluemix sl block volume-duplicate 12345678
 
 **範例**：
 ```
- bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
+bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
 ```
 這個指令會訂購效能磁區：大小為 1000GB、IOPS 為 4000、OS 類型為 LINUX、位於 dal09。
 
@@ -925,16 +923,15 @@ bluemix sl block volume-duplicate 12345678
 
 列出用來訂購區塊儲存空間的所有選項。
 ```
- bluemix sl block volume-options
+bluemix sl block volume-options
 ```
 
 
 **範例**：
 ```
- bluemix sl block volume-options
+bluemix sl block volume-options
 ```
 這個指令會列出用來建立區塊儲存空間磁區的所有選項，包括儲存空間類型、磁區大小、OS 類型、IOPS、層級層次、資料中心和 Snapshot 大小。
-
 
 ### bluemix sl cdn cancel 
 {: #sl_cdn_cancel} 
@@ -1444,7 +1441,6 @@ bluemix sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 這個指令會列出現行帳戶中位於 dal09 的所有耐久性磁區，並依容量排序。
 
-
 ### bluemix sl file volume-detail 
 {: #sl_file_volume_detail} 
 
@@ -1582,7 +1578,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 更新區域中的資源記錄。
 ```
-   bluemix sl dns record-edit ZONE [OPTIONS]
+bluemix sl dns record-edit ZONE [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -2529,8 +2525,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 這個指令會建立含有 16 個 IP V4 位址的公用子網路，並將其放在 ID 為 567 的 VLAN 上。
 
-
-
 ### bluemix sl subnet detail 
 {: #sl_subnet_detail} 
 
@@ -2588,8 +2582,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 這個指令會列出現行帳戶上的 IP V4 子網路，用來過濾的資料中心為 dal09、子網路類型為 PRIMARY，而網路空間為 PUBLIC。
 
-
-
 ### bluemix sl subnet lookup 
 {: #sl_subnet_lookup} 
 
@@ -2635,6 +2627,8 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
  bluemix sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 這個指令會建立一個公用 VLAN：位於資料中心 dal09、包含 16 個 IP 位址，且名稱為 myvlan。
+
+
 ### bluemix sl vlan cancel 
 {: #sl_vlan_cancel} 
 
@@ -2654,8 +2648,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
    bluemix sl vlan cancel 12345678 -f
 ```
 這個指令會取消 ID 為 12345678 的 VLAN，而不要求確認。
-
-
 
 ### bluemix sl vlan detail 
 {: #sl_vlan_detail} 
@@ -2730,8 +2722,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 這個指令會列出現行帳戶上的所有 VLAN，用來過濾的資料中心為 dal09，並依 VLAN 號碼排序。
 
 
-
-
 ### bluemix sl vlan options 
 {: #sl_vlan_options} 
 
@@ -2746,6 +2736,8 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
  bluemix sl vlan options
 ```
 這個指令會列出用來建立 VLAN 的所有選項，例如 VLAN 類型、資料中心、子網路大小、路由器等等。
+
+
 ### bluemix sl vs cancel 
 {: #sl_vs_cancel} 
 
@@ -2790,8 +2782,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
  bluemix sl vs capture 12345678 -n mybluemix --all --note testing
 ```
 這個指令會將 ID 為 12345678 的虛擬伺服器實例及其所有磁碟都擷取至名為 "mybluemix" 且附註為 "testing" 的映像檔。
-
-
 
 ### bluemix sl vs create 
 {: #sl_vs_create} 
@@ -2859,7 +2849,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
-  bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
+bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
 這個指令會訂購虛擬伺服器實例，其主機名稱為 myvsi、網域為 bluemix.net、有 4 個 CPU 核心及 4096M 的記憶體，位於資料中心：dal10。
 
@@ -2868,30 +2858,28 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 列出用來建立虛擬伺服器實例的選項。
 ```
-   bluemix sl vs options [OPTIONS]
+bluemix sl vs options [OPTIONS]
 ```
 
 
 **範例**：
 ```
- bluemix sl vs options
+bluemix sl vs options
 ```
 這個指令會列出用來建立虛擬伺服器實例的所有選項，例如資料中心、CPU、記憶體、OS、磁碟、網路速度等等。
-
-
 
 ### bluemix sl vs credentials 
 {: #sl_vs_credentials} 
 
 列出虛擬伺服器實例認證。
 ```
-   bluemix sl vs credentials IDENTIFIER [OPTIONS]
+bluemix sl vs credentials IDENTIFIER [OPTIONS]
 ```
 
 
 **範例**：
 ```
- bluemix sl vs credentials 12345678
+bluemix sl vs credentials 12345678
 ```
 這個指令會列出 ID 為 12345678 的虛擬伺服器實例的所有使用者名稱及密碼配對。
 
@@ -2900,7 +2888,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 取得虛擬伺服器實例的詳細資料。
 ```
-   bluemix sl vs detail IDENTIFIER [OPTIONS]
+bluemix sl vs detail IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -2913,17 +2901,16 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
-   bluemix sl vs details 12345678
+bluemix sl vs details 12345678
 ```
 這個指令會列出 ID 為 12345678 的虛擬伺服器實例的詳細資訊。
-
 
 ### bluemix sl vs dns-sync 
 {: #sl_vs_dns_sync} 
 
 為虛擬伺服器實例同步 DNS 記錄。
 ```
-   bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
+bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -2942,15 +2929,16 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
- bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
+bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 這個指令會將 ID 為 12345678 的虛擬伺服器實例的 A 記錄（IP V4 位址）同步至 DNS 伺服器，並將這個 A 記錄的 ttl 設為 3600。
+
 ### bluemix sl vs edit 
 {: #sl_vs_edit} 
 
 編輯虛擬伺服器實例的詳細資料。
 ```
-   bluemix sl vs edit IDENTIFIER [OPTIONS]
+bluemix sl vs edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -2973,7 +2961,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
- bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
+bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
 ```
 這個指令會更新 ID 為 12345678 的虛擬伺服器實例，並將其網域設為 "bluemix.net"、將主機名稱設為 "myapp"、將標籤設為 "testcli"。
 
@@ -2982,7 +2970,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 列出您帳戶上的虛擬伺服器實例。
 ```
-   bluemix sl vs list [OPTIONS]
+bluemix sl vs list [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -3013,18 +3001,16 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
- bluemix sl vs list --domain bluemix.net --hourly --sortby memory
+bluemix sl vs list --domain bluemix.net --hourly --sortby memory
 ```
 這個指令會列出現行帳戶上所有依時數計費的虛擬伺服器實例，用來過濾的網域為 "bluemix.net"，並依記憶體排序。
-
-
 
 ### bluemix sl vs pause 
 {: #sl_vs_pause} 
 
 暫停作用中虛擬伺服器實例。
 ```
-   bluemix sl vs pause IDENTIFIER [OPTIONS]
+bluemix sl vs pause IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -3035,18 +3021,16 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
- bluemix sl vs pause 12345678 -f
+bluemix sl vs pause 12345678 -f
 ```
-   這個指令會暫停 ID 為 12345678 的虛擬伺服器實例，而不要求確認。
-
-
+這個指令會暫停 ID 為 12345678 的虛擬伺服器實例，而不要求確認。
 
 ### bluemix sl vs power-off 
 {: #sl_vs_power_off} 
 
 關閉作用中虛擬伺服器實例。
 ```
-   bluemix sl vs power-off IDENTIFIER [OPTIONS]
+bluemix sl vs power-off IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -3061,7 +3045,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
-   bluemix sl vs power-off 12345678 --soft
+bluemix sl vs power-off 12345678 --soft
 ```
 這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行正常關機。
 
@@ -3084,7 +3068,6 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
  bluemix sl vs power-on 12345678
 ```
 這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行開機作業。
-
 
 ### bluemix sl vs ready 
 {: #sl_vs_ready} 
@@ -3111,7 +3094,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 將作用中虛擬伺服器實例重新開機。
 ```
- bluemix sl vs reboot IDENTIFIER [OPTIONS]
+bluemix sl vs reboot IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -3126,18 +3109,16 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
- bluemix sl vs reboot 12345678 --hard
+bluemix sl vs reboot 12345678 --hard
 ```
 這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行強迫重新開機。
-
-
 
 ### bluemix sl vs reload 
 {: #sl_vs_reload} 
 
 在虛擬伺服器實例上重新載入作業系統。
 ```
- bluemix sl vs reload IDENTIFIER [OPTIONS]
+bluemix sl vs reload IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -3145,8 +3126,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 <dt>-i, --postinstall</dt>
 <dd>要下載的後置安裝 Script。</dd>
 <dt>--image</dt>
-<dd>映像檔 ID。預設值為使用現行作業系統。
-</dd>
+<dd>映像檔 ID。預設值為使用現行作業系統。</dd>
 <dt>請參閱：</dt>
 <dd>'bluemix sl image list' 以取得參考資料。</dd>
 <dt>-k, --key</dt>
@@ -3157,15 +3137,16 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
-   bluemix sl vs reload 12345678
+bluemix sl vs reload 12345678
 ```
 這個指令會針對 ID 為 12345678 的虛擬伺服器實例重新載入現行作業系統。
+
 ### bluemix sl vs rescue 
 {: #sl_vs_rescue} 
 
 將虛擬伺服器實例重新開機至救援映像檔。
 ```
- bluemix sl vs rescue IDENTIFIER [OPTIONS]
+bluemix sl vs rescue IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -3176,17 +3157,16 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **範例**：
 ```
- bluemix sl vs rescue 12345678
+bluemix sl vs rescue 12345678
 ```
 這個指令會將 ID 為 12345678 的虛擬伺服器實例重新開機至救援映像檔。
-
 
 ### bluemix sl vs resume 
 {: #sl_vs_resume} 
 
 繼續已暫停的虛擬伺服器實例。
 ```
-   bluemix sl vs resume IDENTIFIER [OPTIONS]
+bluemix sl vs resume IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：
@@ -3201,13 +3181,12 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 這個指令會繼續 ID 為 12345678 的虛擬伺服器實例。
 
-
 ### bluemix sl vs upgrade 
 {: #sl_vs_upgrade} 
 
 升級虛擬伺服器實例。
 ```
-   bluemix sl vs upgrade IDENTIFIER [OPTIONS]
+bluemix sl vs upgrade IDENTIFIER [OPTIONS]
 ```
 
 <strong>指令選項</strong>：

@@ -8,6 +8,8 @@ copyright:
 
 lastupdated: "2017-01-12"
 
+
+
 ---
 
 {:codeblock: .codeblock}
@@ -114,7 +116,9 @@ cf help <commandName>
 ```
 cf mode <appName> <dev|normal>
 ```
-<strong>指令選項</strong>：<dl>
+<strong>指令選項</strong>：
+
+   <dl>
    <dt>dev</dt>
    <dd>開發模式。</dd>
    <dt>normal</dt>

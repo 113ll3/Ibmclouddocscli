@@ -20,7 +20,7 @@ lastupdated: "2017-01-12"
 {: #devmodecli}
 
 
-**이 CLI는 더 이상 사용되지 않음:** 개발 모드(dev_mode) CLI를 사용하는 대신에 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 또는 DevOps 웹 IDE를 사용하십시오. 2016년 6월 30일까지는 dev_mode CLI 사용을 계속할 수 있습니다. 
+**이 CLI는 더 이상 사용되지 않음:** 개발 모드(dev_mode) CLI를 사용하는 대신에 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 또는 DevOps 웹 IDE를 사용하십시오. 2016년 6월 30일까지는 dev_mode CLI 사용을 계속할 수 있습니다.
 
 {{site.data.keyword.Bluemix_notm}} 개발 모드 명령행 인터페이스(dev_mode CLI)를 사용하면 클라우드에서 앱이 실행 중인 동안 앱을 업데이트할 수 있습니다. dev_mode CLI는 cf CLI 플러그인으로 빌드되며 Liberty 앱과 IBM Node.js 앱을 모두 지원합니다.
 {: shortdesc}
@@ -37,21 +37,21 @@ dev_mode CLI로 다음 태스크를 수행할 수 있습니다.
 
 dev_mode 명령행 도구를 설치하려면 다음 방법 중 하나를 사용하십시오.
 - 로컬로 설치합니다.
-  1. [{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}에서 플랫폼에 대한 dev_mode 플러그인을 다운로드하십시오.  
-  2. dev_mode 플러그인이 저장된 폴더로 이동하고, cf install-plugin 명령을 사용하여 dev_mode 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다. 
+  1. [{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}에서 플랫폼에 대한 dev_mode 플러그인을 다운로드하십시오.
+  2. dev_mode 플러그인이 저장된 폴더로 이동하고, cf install-plugin 명령을 사용하여 dev_mode 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다.
 
         ```
         cf install-plugin dev_mode-linux64
         ```
 
-- {{site.data.keyword.Bluemix_notm}} CLI 저장소에서 설치합니다. 
+- {{site.data.keyword.Bluemix_notm}} CLI 저장소에서 설치합니다.
   1. 다음 명령을 사용하여 Cloud Foundry CLI 저장소에 bluemix-repo 저장소를 추가하십시오.
 
         ```
         cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
-  2. cf repo-plugins를 입력하십시오. dev_mode 플러그인이 bluemix-repo 저장소에 나타납니다. 
+  2. cf repo-plugins를 입력하십시오. dev_mode 플러그인이 bluemix-repo 저장소에 나타납니다.
 
 		```
         cf repo-plugins
@@ -77,7 +77,7 @@ cf plugins
 자주 사용되는 dev_mode CLI 명령을 참조하려면 다음 표의 색인을 사용하십시오.
 
 <table summary="dev_mode 명령 색인">
- <caption>표 1. dev_mode 명령</caption>
+<caption>표 1. dev_mode 명령</caption>
  <thead>
  <th colspan="4">dev_mode 명령</th>
  </thead>
@@ -129,7 +129,7 @@ cf mode <appName> <dev|normal>
 ## status
 {: #status}
 
-앱 모드와 런타임 상태를 표시합니다. 
+앱 모드와 런타임 상태를 표시합니다.
 ```
 cf status <appName>
 ```

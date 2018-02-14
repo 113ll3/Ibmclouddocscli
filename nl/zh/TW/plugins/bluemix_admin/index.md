@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-12-07"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -629,7 +629,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 {: #admin_add_report}
 
 ### 新增報告
-{: #admin_add_report}
+{: #admin_adding_report}
 
 若要新增安全報告，請使用下列指令：
 
@@ -740,7 +740,7 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 </dl>
 
 
-您可以使用下列指令來檢視應用程式環境變數：
+您可以使用下列指令來檢視先前的指令參數及範例清單：
 
 ```
 cf ba resource-metrics-history -help
