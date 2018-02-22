@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2017
+  years: 2016, 2018
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-02-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 
 プライベート・ネットワーク・ピアリング CLI プラグインは、Windows、MAC、および Linux オペレーティング・システムで使用可能です。 環境に適したプラグインを使用してください。
 
-開始する前に、{{site.data.keyword.Bluemix_notm}} スペースを作成します。 スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。 詳しくは、『[独自のプライベート IP アドレスを使う![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}』を参照してください。
+開始する前に、{{site.data.keyword.Bluemix_notm}} スペースを作成します。 スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。
 
 **注:** {{site.data.keyword.Bluemix_notm}} スペースでプライベート・ネットワーク・ピアリングを使用した後に、スペースを削除する必要が生じた場合、まず、当該スペースのプライベート・ネットワーク・ピアリング接続を削除してください。
 
