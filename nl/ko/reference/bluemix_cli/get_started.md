@@ -5,12 +5,13 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2017-08-20"
+lastupdated: "2018-02-14"
 
 ---
 
 
 {:shortdesc: .shortdesc}
+{:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
 
 
@@ -33,9 +34,10 @@ lastupdated: "2017-08-20"
    * macOS 및 Windows의 경우 설치 프로그램을 실행하십시오.
    * Linux의 경우 패키지의 압축을 풀고 `install_bluemix_cli` 스크립트를 실행하십시오.
 
-1. API 엔드포인트를 대상으로 지정 및 {{site.data.keyword.Bluemix_notm}}에 로그인
+1. API 엔드포인트를 대상으로 지정하고 `bx login` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. 
+  
 
-  ![예제](example.gif)
+  ![예제](example.gif){: gif}
 
 이제 {{site.data.keyword.Bluemix_notm}} 리소스를 관리할 준비가 되었습니다. 명령에 대한 설명을 보려면 `bluemix help` 또는 `bx help`를 입력하십시오. 
 
