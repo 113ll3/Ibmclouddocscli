@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-02-05"
 
 ---
 
@@ -29,8 +29,8 @@ Wenn Sie weitere Informationen zu den Befehlen zur Verwaltung von Plug-ins benö
 
 ### Schritt 1: Plug-in suchen
 
-1. Verwenden Sie den Befehl `bluemix plugin repo-plugins -r REPO_NAME`, um ein Plug-in im Repository zu suchen.
-2. Die {{site.data.keyword.Bluemix_notm}}-CLI verwendet standardmäßig den Namen `Bluemix`. Sie können die Plug-ins im offiziellen `Bluemix`-Repository auflisten. Beispiel:
+1. Verwenden Sie den Befehl `bluemix plugin repo-plugins -r REPO_NAME`, um nach einem Plug-in im Repository zu suchen.
+2. Die {{site.data.keyword.Bluemix_notm}}-CLI enthält das offizielle Repository mit dem Namen `Bluemix`. Die offiziellen Plug-ins können Sie wie im folgenden Beispiel beschrieben durchsuchen:
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -45,7 +45,7 @@ Wenn Sie weitere Informationen zu den Befehlen zur Verwaltung von Plug-ins benö
 
 ### Schritt 2: Plug-in installieren
 
-Verwenden Sie den Befehl `bx plugin install PLUGIN_NAME -r REPO_NAME`, um das Plug-in zu installieren. Beispiel:
+Verwenden Sie den Befehl `bx plugin install PLUGIN_NAME -r REPO_NAME`, um das Plug-in zu installieren. Verwenden Sie beispielsweise den folgenden Befehl, um ein Plug-in aus dem offiziellen IBM Plug-in-Repository `Bluemix` zu installieren:
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix

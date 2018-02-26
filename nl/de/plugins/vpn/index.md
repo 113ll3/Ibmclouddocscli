@@ -21,7 +21,7 @@ Sie können den {{site.data.keyword.vpn_full}}-Service mit der Befehlszeilenschn
 
 Das {{site.data.keyword.vpn_short}}-Plug-in ist für Windows-, MAC- und Linux-Betriebssysteme verfügbar. Stellen Sie sicher, dass Sie das für Sie geeignete Plug-in verwenden.
 
-Die nachfolgenden Anweisungen sind für das Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle vorgesehen. Informationen zur Verwendung des Plug-ins mit dem Plug-in für {{site.data.keyword.Bluemix_notm}} CLI finden Sie unter [{{site.data.keyword.vpn_short}}-Plug-in für {{site.data.keyword.Bluemix_notm}}-CLI ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}. 
+Die nachfolgenden Anweisungen sind für das Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle vorgesehen. Informationen zur Verwendung des Plug-ins mit dem Plug-in für {{site.data.keyword.Bluemix_notm}} CLI finden Sie unter [{{site.data.keyword.vpn_short}}-Plug-in für {{site.data.keyword.Bluemix_notm}}-CLI ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
 
 ## Plug-in für die Befehlszeilenschnittstelle 'cf' installieren
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Weitere Informationen finden Sie unter [Cloud Foundry-Befehlszeilenschnittstelle  ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}.
@@ -83,19 +83,19 @@ cf vpn-create connection <Verbindungsname> -g <Gateway-Name> -k <vorab_verteilte
 {: #p1}
 
 **Verbindungsname:**
-Der Name der Verbindung. 
+Der Name der Verbindung.
 
 **-g:**
-Der Name des Gateways. 
+Der Name des Gateways.
 
 **-k:**
-Der vorab verteilte Schlüssel. 
+Der vorab verteilte Schlüssel.
 
 **Teilnetz/Maske:**
 Die Adresse des fernen Teilnetzes im CIDR-Format.
 
 **IP-Adresse_des_Kundengateways:**
-Die IP-Adresse des fernen Endpunkts des VPN-Tunnels. 
+Die IP-Adresse des fernen Endpunkts des VPN-Tunnels.
 
 ##### Optionale Parameter:
 {: #op1}
@@ -135,7 +135,7 @@ cf vpn-create ike <Richtlinienname> -g <Gateway-Name> -d <Beschreibung> -pfs <Gr
 Der Name der IKE-Richtlinie.
 
 **Gateway-Name:**
-Der Name des Gateways. 
+Der Name des Gateways.
 
 ##### Optionale Parameter:
 {: #op2}
@@ -165,7 +165,7 @@ cf vpn-create ipsec <Richtlinienname> -g <Gateway-Name> -d <Beschreibung> -pfs <
 Der Name der IPsec-Richtlinie.
 
 **Gateway-Name:**
-Der Name des Gateways. 
+Der Name des Gateways.
 
 ##### Optionale Parameter:
 {: #op3}
@@ -191,7 +191,7 @@ cf vpn-create gateway <Gateway-Name> -t <Typ> -gateway_ip <IP-Adresse> -subnets 
 {: #p4}
 
 **-g:**
-Der Name des Gateways. 
+Der Name des Gateways.
 
 **-t:** Die Container, für die der Service aktiviert werden soll. Werte: allSingleContainers; allContainerGroups; allContainers. Kein Standardwert; Sie müssen einen Typ angeben.
 
@@ -299,16 +299,16 @@ Der Name der Verbindung.
 {: #op5}
 
 **Gateway-Name:**
-Der Name des Gateways. 
+Der Name des Gateways.
 
 **IP-Adresse_des_Kundengateways:**
-Die IP-Adresse des fernen Endpunkts des VPN-Tunnels. 
+Die IP-Adresse des fernen Endpunkts des VPN-Tunnels.
 
 **-subnets:**
 Die Teilnetzadresse im CIDR-Format.
 
 **-k:**
-Der vorab verteilte Schlüssel. 
+Der vorab verteilte Schlüssel.
 
 **-d:** Die Beschreibung der angegebenen Parameter.
 
@@ -348,7 +348,7 @@ Der Name der IKE-Richtlinie.
 {: #op6}
 
 **-g:**
-Der Name des Gateways. 
+Der Name des Gateways.
 
 **-d:** Die Beschreibung der angegebenen Parameter.
 
@@ -379,7 +379,7 @@ Der Name der IPsec-Richtlinie.
 {: #op7}
 
 **-g:**
-Der Name des Gateways. 
+Der Name des Gateways.
 
 **-d:** Die Beschreibung der angegebenen Parameter.
 
@@ -402,7 +402,7 @@ cf vpn-update gateway <Gateway-Name> -t <Typ> -gateway_ip <IP-Adresse> -subnets 
 {: #p8}
 
 **Gateway-Name:**
-Der Name des Gateways. 
+Der Name des Gateways.
 
 #####Optionale Parameter:
 {: #op8}
