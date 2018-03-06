@@ -284,7 +284,7 @@ bx cr plan-upgrade [PLAN]
 
 **参数**
 <dl>
-<dt>PLAN</dt>
+<dt>套餐</dt>
 <dd>要升级到的价格套餐的名称。如果未指定 PLAN，那么缺省值为 `standard`。</dd>
 </dl>
 

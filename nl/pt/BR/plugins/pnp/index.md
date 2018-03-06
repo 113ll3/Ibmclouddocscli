@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2017
+  years: 2016, 2018
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-02-15"
 
 ---
 
@@ -18,7 +18,7 @@ Use a interface da linha de comandos (CLI) de peering de rede privada para confi
 
 O plug-in da CLI de peering de rede privada está disponível para os sistemas operacionais Windows, MAC e Linux. Assegure-se de usar o plug-in aplicável a você.
 
-Antes de iniciar, crie espaços do {{site.data.keyword.Bluemix_notm}}. Assegure-se de que cada contêiner em um espaço tenha um endereço IP de uma rede diferente. Para obter detalhes, veja [Usando seu próprio endereço IP privado ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
+Antes de iniciar, crie espaços do {{site.data.keyword.Bluemix_notm}}. Assegure-se de que cada contêiner em um espaço tenha um endereço IP de uma rede diferente.
 
 **Nota:** depois de usar o peering de rede privada com um espaço do {{site.data.keyword.Bluemix_notm}}, se você precisar excluir o espaço, primeiro exclua as conexões de peering de rede privada nesse espaço.
 

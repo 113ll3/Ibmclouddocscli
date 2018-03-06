@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-02-05"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2017-10-20"
 ### 步驟 1：搜尋外掛程式
 
 1. 使用指令 `bluemix plugin repo-plugins -r REPO_NAME`，以尋找儲存庫中的外掛程式。
-2. 依預設，{{site.data.keyword.Bluemix_notm}} CLI 會使用名稱 `Bluemix`。您可以列出正式 `Bluemix` 儲存庫中的外掛程式。例如：
+2. {{site.data.keyword.Bluemix_notm}} CLI 具有名稱為 `Bluemix` 的正式儲存庫，您可以搜尋正式外掛程式，如下列範例中所示：
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -45,7 +45,7 @@ lastupdated: "2017-10-20"
 
 ### 步驟 2：安裝外掛程式
 
-使用 `bx plugin install PLUGIN_NAME -r REPO_NAME` 指令來安裝外掛程式。例如：
+使用 `bx plugin install PLUGIN_NAME -r REPO_NAME` 指令來安裝外掛程式。例如，使用下列指令，從正式 IBM 外掛程式儲存庫 `Bluemix` 安裝外掛程式：
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix

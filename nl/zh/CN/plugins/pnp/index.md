@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2017
+  years: 2016, 2018
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-02-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 
 专用网络对等连接 CLI 插件可用于 Windows、MAC 和 Linux 操作系统。请确保使用适合于您的插件。
 
-开始之前，请先创建 {{site.data.keyword.Bluemix_notm}} 空间。确保空间中的每个容器都具有来自不同网络的 IP 地址。有关详细信息，请参阅[使用自己的专用 IP 地址 ![外部链接图标](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}。
+开始之前，请先创建 {{site.data.keyword.Bluemix_notm}} 空间。确保空间中的每个容器都具有来自不同网络的 IP 地址。
 
 **注：**将专用网络对等连接用于 {{site.data.keyword.Bluemix_notm}} 空间后，如果需要删除该空间，请首先删除该空间内的专用网络对等连接。
 
