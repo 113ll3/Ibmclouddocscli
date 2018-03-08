@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2017
+  years: 2016, 2018
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-02-15"
 
 ---
 
@@ -18,7 +18,7 @@ Utilice la interfaz de línea de mandatos (CLI) de igualdad de red privada para 
 
 El plug-in de la CLI de igualdad de red privada está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el plug-in aplicable a su caso.
 
-Antes de empezar, cree los espacios de {{site.data.keyword.Bluemix_notm}}. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. Para obtener detalles, consulte [Uso de direcciones IP privadas ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
+Antes de empezar, cree los espacios de {{site.data.keyword.Bluemix_notm}}. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. 
 
 **Nota:** después de utilizar la igualdad de red privada con un espacio de {{site.data.keyword.Bluemix_notm}}, si necesita suprimir el espacio, suprima en primer lugar las conexiones de la igualdad de red privada en dicho espacio.
 
