@@ -75,4 +75,3 @@ Download and install plug-ins to integrate your favorite {{site.data.keyword.Blu
 | IBM Developer Tools for VS Code | [VS Code extension installation](/idt/vscode.html) |
 | IBM Developer Tools for Jetbrains IDEs | [Jetbrains extension installation](/idt/jetbrains.html) |
 {: caption="Table 1. IDE Extensions" caption-side="top"}
-=======
