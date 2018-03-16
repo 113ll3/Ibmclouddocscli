@@ -32,7 +32,7 @@ bx dev debug
 
 	* Eclipse
       1. Import the **Existing maven project** into Eclipse.
-      2. Create a [Java remote application ![External link icon](../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) debug configuration.
+      2. Create a [Java remote application ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) debug configuration.
       		1. Enter the IP address or `localhost:<port>`  
       		2. Enter `7777` for port number.
       		3. Specify the name of the java project that you imported.
@@ -40,8 +40,8 @@ bx dev debug
       7. Run the debug configuration.
       8. Access the endpoint with a browser to recreate the issue.  
 	   **Note**: The default port is 9080 for the Java basic Microservices endpoint.
-	* [IntelliJ ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![External link icon](../icons/launch-glyph.svg "External link icon")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
+	* [IntelliJ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
+	* [VSCode ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
 	* JDK command line: `jdb -attach <host:port>`
 
 ## Node.js application debugging
@@ -56,8 +56,8 @@ bx dev debug
 ```
 
 2. Connecting the debugger to your application:
-	* [VSCode ![External link icon](../icons/launch-glyph.svg "External link icon")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![External link icon](../icons/launch-glyph.svg "External link icon")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://blog.docker.com/2016/07/live-debugging-docker/)
+	* [WebStorm ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
 
 
 <!--
