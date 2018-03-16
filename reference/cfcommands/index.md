@@ -171,7 +171,7 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-Creates a service instance
+Creates a service instance.
 
 ```
 cf create-service service_name service_plan service_instance
