@@ -46,20 +46,6 @@ Click an option to get started:
 - [Cloud native development](/docs/cli/index.html)
 
 
-
-## IBM Cloud Application Tools 2 (Beta)
-{: #icat notoc}
-
-idt-jetbrains
-
-Note: This tool is offered as-is and is not currently maintained.
-
-IBM Cloud Application Tools 2 is a menu bar application that's streamlined for local environment setup and management on macOS. By using IBM Cloud Application Tools 2, you can easily install and update Bluemix tools and CLIs, change CLI deployment targets, and quickly access common Bluemix links.
-
-- [Download](http://ibm.biz/icat-2-download){: new_window}
-- [View docs](/docs/cli/icat.html)
-
-
 ## ![](./images/Integrated_Dev_Tools.svg) Integrated development tools
 {: #ide}
 
