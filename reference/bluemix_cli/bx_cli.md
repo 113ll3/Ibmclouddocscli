@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -2830,7 +2830,7 @@ bluemix resource service-instance-delete my-service-instance
 Show bindings to the service alias
 
 ```
-bluemix resource bindings SERVICE_ALIAS
+bluemix resource service-bindings SERVICE_ALIAS
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
