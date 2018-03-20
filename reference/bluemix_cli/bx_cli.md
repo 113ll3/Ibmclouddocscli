@@ -115,7 +115,7 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}} infrastructure
  <td>[bluemix account list](bx_cli.html#bluemix_account_list)</td>
  <td>[bluemix account org-account](bx_cli.html#bluemix_account_org_account)</td>
  <td>[bluemix account users](bx_cli.html#bluemix_account_users)</td>
- <td>[bluemix account users-delete](bx_cli.html#bluemix_account_users_delete)</td>
+ <td>[bluemix account user-delete](bx_cli.html#bluemix_account_user_delete)</td>
  <td>[bluemix account user-invite](bx_cli.html#bluemix_account_user_invite)</td>
  </tr>
  <tr>
