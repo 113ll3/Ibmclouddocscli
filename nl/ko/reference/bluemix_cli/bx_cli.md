@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-05"
 
 ---
 
@@ -699,7 +699,7 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
    <dt>-c <i>ACCOUNT_ID</i>(선택사항)</dt>
    <dd>대상으로 지정된 계정의 ID입니다.</dd>
    <dt>-g <i>RESOURCE_GROUP</i>(선택사항)</dt>
-   <dd>리소스 그룹의 이름입니다. </dd>
+   <dd>리소스 그룹의 이름입니다.</dd>
    <dt>--cf</dt>
    <dd>대상 조직 및 영역을 대화식으로 선택합니다.</dd>
    <dt>-o <i>ORG_NAME</i>(선택사항)</dt>
@@ -898,27 +898,27 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 ## bluemix account space
 {: #bluemix_account_space}
 
-이 명령은 `cf space` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix account space-create
 {: #bluemix_account_space_create}
 
-이 명령은 `cf create-space` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf create-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix account space-rename
 {: #bluemix_account_space_rename}
 
 
-이 명령은 `cf rename-space` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf rename-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix account space-delete
 {: #bluemix_account_space_delete}
 
 
-이 명령은 `cf delete-space` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf delete-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 ## bluemix account org-users
 {: #bluemix_account_org_users}
@@ -1220,7 +1220,7 @@ bluemix account user-invite USER_EMAIL
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
 
-사용자에게 초대를 재전송합니다(계정 소유자 필요). 
+사용자에게 초대를 재전송합니다(계정 소유자 필요).
 
 ```
 bluemix account user-reinvite USER_EMAIL
@@ -1998,7 +1998,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 ## bluemix iam oauth-tokens
 {: #bluemix_iam_oauth_tokens}
 
-현재 세션에 대한 OAuth 토큰을 검색하고 표시합니다. 
+현재 세션에 대한 OAuth 토큰을 검색하고 표시합니다.
 
 ```
 bluemix iam oauth-tokens
@@ -2012,7 +2012,7 @@ bluemix iam oauth-tokens
 
 <strong>예제</strong>:
 
-OAuth 토큰을 새로 고치고 표시합니다. 
+OAuth 토큰을 새로 고치고 표시합니다.
 
 ```
 bluemix iam oauth-tokens
@@ -2021,7 +2021,7 @@ bluemix iam oauth-tokens
 ## bluemix iam dedicated-id-disconnect
 {: #bluemix_iam_dedicated_id_disconnect}
 
-전용 비-IBM ID와 공용 IBM ID 간의 연결을 끊습니다. 
+전용 비-IBM ID와 공용 IBM ID 간의 연결을 끊습니다.
 
 ```
 bluemix iam dedicated-id-disconnect [-f, --force]
@@ -2038,7 +2038,7 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 ## bluemix iam authorization-policy-create
 {: #bluemix_iam_authorization_policy_create}
  
-다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용하기 위한 권한 부여 정책을 작성합니다. 
+다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용하기 위한 권한 부여 정책을 작성합니다.
 
 ```
 bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
@@ -2049,21 +2049,21 @@ bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME 
 <strong>명령 옵션</strong>:
 <dl>
   <dt>SOURCE_SERVICE_NAME</dt>
-  <dd>액세스 권한이 부여될 수 있는 소스 서비스입니다. </dd>
+  <dd>액세스 권한이 부여될 수 있는 소스 서비스입니다.</dd>
   <dt>TARGET_SERVICE_NAME</dt>
-  <dd>소스 서비스의 액세스 권한이 부여될 수 있는 대상 서비스입니다. </dd>
+  <dd>소스 서비스의 액세스 권한이 부여될 수 있는 대상 서비스입니다.</dd>
   <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>소스 서비스의 모든 인스턴스의 액세스 권한이 부여될 소스 서비스 인스턴스 이름(지정되지 않은 경우)입니다. </dd>
+  <dd>소스 서비스의 모든 인스턴스의 액세스 권한이 부여될 소스 서비스 인스턴스 이름(지정되지 않은 경우)입니다.</dd>
   <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>대상 서비스의 모든 인스턴스의 액세스 권한이 부여될 대상 서비스 인스턴스 이름(지정되지 않은 경우)입니다. </dd>
+  <dd>대상 서비스의 모든 인스턴스의 액세스 권한이 부여될 대상 서비스 인스턴스 이름(지정되지 않은 경우)입니다.   </dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>소스 서비스에 대한 액세스 권한을 제공하는 역할입니다. </dd>  
+  <dd>소스 서비스에 대한 액세스 권한을 제공하는 역할입니다.</dd>  
 </dl>
 
 ## bluemix iam authorization-policy-delete
 {: #bluemix_iam_authorization_policy_delete}
 
-권한 부여 정책을 삭제합니다. 
+권한 부여 정책을 삭제합니다.
 
 ```
 bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
@@ -2074,7 +2074,7 @@ bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 <strong>명령 옵션</strong>:
 <dl>
  <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>삭제될 권한 부여 정책의 ID입니다. </dd> 
+ <dd>삭제될 권한 부여 정책의 ID입니다.</dd> 
  <dt>-f, --force</dt>
  <dd>확인 없이 삭제를 강제 실행합니다.</dd> 
 </dl>
@@ -2082,7 +2082,7 @@ bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ## bluemix iam authorization-policy
 {: #bluemix_iam_authorization_policy}
 
-권한 부여 정책의 세부사항을 표시합니다. 
+권한 부여 정책의 세부사항을 표시합니다.
 
 ```
 bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
@@ -2093,14 +2093,14 @@ bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
 <strong>명령 옵션</strong>:
 <dl>
  <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>표시할 권한 부여 정책의 ID입니다. </dd> 
+ <dd>표시할 권한 부여 정책의 ID입니다.</dd> 
 </dl>
 
 
 ## bluemix iam authorization-policies
 {: #bluemix_iam_authorization_policies}
 
-현재 계정의 권한 부여 정책을 나열합니다. 
+현재 계정의 권한 부여 정책을 나열합니다.
 
 ```
 bluemix iam authorization-policies
@@ -2111,7 +2111,7 @@ bluemix iam authorization-policies
 ## bluemix resource groups
 {: #bluemix_resource_groups}
 
-리소스 그룹을 나열합니다. 
+리소스 그룹을 나열합니다.
 
 ```
 bluemix resource groups [--default]
@@ -2122,12 +2122,12 @@ bluemix resource groups [--default]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>--default</dt>
-  <dd>현재 계정의 기본 그룹을 가져옵니다. </dd>
+  <dd>현재 계정의 기본 그룹을 가져옵니다.</dd>
 </dl>
 
 <strong>예제</strong>:
 
-현재 대상 계정의 모든 리소스 그룹을 나열합니다. 
+현재 대상 계정의 모든 리소스 그룹을 나열합니다.
 
 ```
 bluemix resource groups
@@ -2142,7 +2142,7 @@ bluemix resource groups --default
 ## bluemix resource group
 {: #bluemix_resource_group}
 
-리소스 그룹의 세부사항을 표시합니다. 
+리소스 그룹의 세부사항을 표시합니다.
 
 ```
 bluemix resource group NAME [--id]
@@ -2176,7 +2176,7 @@ bluemix resource group example-group --id
 ## bluemix resource group-update
 {: #bluemix_resource_group_update}
 
-기존 리소스 그룹을 업데이트합니다. 
+기존 리소스 그룹을 업데이트합니다.
 
 ```
 bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
@@ -2187,11 +2187,11 @@ bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_
 <strong>명령 옵션</strong>:
 <dl>
   <dt>NAME(필수)</dt>
-  <dd>대상 리소스 그룹의 이름입니다. </dd>
+  <dd>대상 리소스 그룹의 이름입니다.</dd>
   <dt>-n, --name</dt>
-  <dd>리소스 그룹의 새 이름입니다. </dd>
+  <dd>리소스 그룹의 새 이름입니다.</dd>
   <dt>-q, --quota</dt>
-  <dd>새 할당량 정의의 이름입니다. </dd>
+  <dd>새 할당량 정의의 이름입니다.</dd>
   <dt>-f</dt>
   <dd>확인 없이 업데이트를 강제 실행합니다.</dd>
 </dl>
@@ -2213,7 +2213,7 @@ bluemix resource group-update example-group -q free
 ## bluemix resource quotas
 {: #bluemix_resource_quotas}
 
-모든 할당량 정의를 나열합니다. 
+모든 할당량 정의를 나열합니다.
 
 ```
 bluemix resource quotas
@@ -2261,117 +2261,117 @@ bluemix resource quota free
 ## bluemix app push
 {: #bluemix_app_push}
 
-이 명령은 `cf push` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf push ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-이 명령은 `cf apps` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf apps ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-이 명령은 `cf app` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf app ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-이 명령은 `cf delete` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf delete ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-이 명령은 `cf rename` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf rename ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-이 명령은 `cf start` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf start ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-이 명령은 `cf stop` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf stop ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-이 명령은 `cf restart` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf restart ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-이 명령은 `cf restage` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf restage ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-이 명령은 `cf restart-app-instance` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf restart-app-instance ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-이 명령은 `cf events` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf events ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-이 명령은 `cf files` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf files ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-이 명령은 `cf logs` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf logs ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-이 명령은 `cf env` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-이 명령은 `cf set-env` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf set-env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-이 명령은 `cf unset-env` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf unset-env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-이 명령은 `cf stacks` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf stacks ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
-이 명령은 `cf stack` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf stack ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-이 명령은 `cf create-app-manifest` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf create-app-manifest ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 ## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
@@ -2458,13 +2458,13 @@ bluemix app domain-cert-remove DOMAIN [-f]
 ## bluemix app routes
 {: #bluemix_app_routes}
 
-이 명령은 `cf routes` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf routes ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app route-check
 {: #bluemix_app_route_check}
 
-이 명령은 `cf check-route` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf check-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app route-map
@@ -2544,140 +2544,140 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ## bluemix app route-create
 {: #bluemix_app_route_create}
 
-이 명령은 `cf create-route` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf create-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
-이 명령은 `cf delete-route` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf delete-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
-이 명령은 `cf delete-orphaned-routes` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf delete-orphaned-routes ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-이 명령은 `cf domains` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf domains ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-이 명령은 `cf create-domain` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf create-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-이 명령은 `cf delete-domain` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf delete-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-이 명령은 `cf create-shared-domain` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf create-shared-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-이 명령은 `cf delete-shared-domain` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf delete-shared-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-이 명령은 `cf marketplace` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf marketplace ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-이 명령은 `cf services` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf services ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-이 명령은 `cf service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-이 명령은 `cf create-service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf create-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-이 명령은 `cf update-service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf update-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-이 명령은 `cf delete-service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf delete-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-이 명령은 `cf rename-service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf rename-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-이 명령은 `cf bind-service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf bind-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-이 명령은 `cf unbind-service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf unbind-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-이 명령은 `cf create-service-key` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf create-service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-이 명령은 `cf delete-service-key` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf delete-service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-이 명령은 `cf service-keys` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf service-keys ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-이 명령은 `cf service-key` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-이 명령은 `cf create-user-provided-service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf create-user-provided-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-이 명령은 `cf update-user-provided-service` 명령과 기능 및 옵션이 동일합니다.
+이 명령은 [cf update-user-provided-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
 
 
 ## bluemix resource service-instances
@@ -3547,7 +3547,7 @@ bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 ## bluemix catalog locations
 {: #bluemix_catalog_locations}
 
-선택한 형식으로 지역의 선택 서브세트를 가져옵니다. 
+선택한 형식으로 지역의 선택 서브세트를 가져옵니다.
 
 ```
 bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
@@ -3557,15 +3557,15 @@ bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--jso
 
 <dl>
   <dt>-i, --id</dt>
-  <dd>id에 의해 지역을 지정합니다. </dd>
+  <dd>id에 의해 지역을 지정합니다.</dd>
   <dt>-k, --kind</dt>
-  <dd>지정된 유형에 대한 항목의 목록을 가져옵니다. </dd>
+  <dd>지정된 유형에 대한 항목의 목록을 가져옵니다.</dd>
   <dt>--col</dt>
-  <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다. </dd>
+  <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다.</dd>
   <dt>--json</dt>
-  <dd>원래 JSON 응답의 출력입니다. </dd>
+  <dd>원래 JSON 응답의 출력입니다.</dd>
   <dt>--global</dt>
-  <dd>글로벌 범위에서 작동됩니다. </dd>
+  <dd>글로벌 범위에서 작동됩니다.</dd>
   <dt>--csv</dt>
   <dd>출력 CSV 파일</dd>
 </dl>
@@ -3573,7 +3573,7 @@ bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--jso
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-현재 계정의 월별 사용량 및 비용을 표시합니다. 
+현재 계정의 월별 사용량 및 비용을 표시합니다.
 
 ```
 bluemix billing account-usage [-d YYYY-MM] [--json]
@@ -3592,7 +3592,7 @@ bluemix billing account-usage [-d YYYY-MM] [--json]
 
 <strong>예제</strong>:
 
-2016년 6월에 현재 계정의 사용량 및 비용 보고서를 표시합니다. 
+2016년 6월에 현재 계정의 사용량 및 비용 보고서를 표시합니다.
 
 ```
 bluemix billing account-usage -d 2016-06
@@ -3601,7 +3601,7 @@ bluemix billing account-usage -d 2016-06
 ## bluemix billing org-usage
 {: #bluemix_billing_org_usage}
 
-조직의 월별 사용량을 표시합니다. 계정 소유자 또는 조직 청구 관리자만 이 조작을 수행할 수 있습니다. 
+조직의 월별 사용량을 표시합니다. 계정 소유자 또는 조직 청구 관리자만 이 조작을 수행할 수 있습니다.
 
 ```
 bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
@@ -3625,7 +3625,7 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 ## bluemix billing resource-group-usage
 {: #bluemix_billing_resource_group_usage}
 
-리소스 그룹의 월별 사용량을 표시합니다. 계정 소유자 또는 리소스 그룹 청구 관리자만 이 조작을 수행할 수 있습니다. 
+리소스 그룹의 월별 사용량을 표시합니다. 계정 소유자 또는 리소스 그룹 청구 관리자만 이 조작을 수행할 수 있습니다.
 
 ```
 bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
@@ -3647,7 +3647,7 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 ## bluemix billing resource-instances-usage
 {: #bluemix_billing_resource_instances_usage}
  
- 현재 계정의 월별 리소스 인스턴스 사용량을 표시합니다. 
+ 현재 계정의 월별 리소스 인스턴스 사용량을 표시합니다.
  
  ```
  bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
@@ -3659,9 +3659,9 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
  
  <dl>
    <dt>-o ORG_NAME(선택사항)</dt>
-   <dd>조직으로 인스턴스를 필터링합니다. </dd>
+   <dd>조직으로 인스턴스를 필터링합니다.</dd>
    <dt>-g GROUP_NAME</dt>
-   <dd>리소스 그룹으로 인스턴스를 필터링합니다. </dd>
+   <dd>리소스 그룹으로 인스턴스를 필터링합니다.</dd>
    <dt>-d MONTH_DATE(선택사항)</dt>
    <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
    <dt>--json(선택사항)</dt>
@@ -3672,7 +3672,7 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 ## bluemix plugin repos
 {: #bluemix_plugin_repos}
 
-{{site.data.keyword.Bluemix_notm}} CLI에 등록된 모든 플러그인 저장소를 나열합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI에 등록된 모든 플러그인 저장소를 나열합니다.
 
 ```
 bluemix plugin repos
@@ -3684,7 +3684,7 @@ bluemix plugin repos
 ## bluemix plugin repo-add
 {: #bluemix_plugin_repo_add}
 
-{{site.data.keyword.Bluemix_notm}} CLI에 새 플러그인 저장소를 추가합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI에 새 플러그인 저장소를 추가합니다.
 
 ```
 bluemix plugin repo-add REPO_NAME REPO_URL
@@ -3698,13 +3698,13 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME(필수)</dt>
    <dd>추가되는 저장소의 이름입니다. 각 저장소의 고유 이름을 정의할 수 있습니다.</dd>
    <dt>REPO_URL(필수)</dt>
-   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net은 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소입니다. </dd>
+   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). 다음이 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소입니다. http://plugins.ng.bluemix.net</dd>
     </dl>
 
 
 <strong>예제</strong>:
 
-`bluemix-repo`로서 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소 추가: 
+`bluemix-repo`로서 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소 추가:
 
 ```
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
@@ -3714,7 +3714,7 @@ bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ## bluemix plugin repo-remove
 {: #bluemix_plugin_repo_remove}
 
-{{site.data.keyword.Bluemix_notm}} CLI에서 플러그인 저장소를 제거합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI에서 플러그인 저장소를 제거합니다.
 
 ```
 bluemix plugin repo-remove REPO_NAME
@@ -3740,7 +3740,7 @@ bluemix plugin repo-remove bluemix-repo
 ## bluemix plugin repo-plugins
 {: #bluemix_plugin_repo_plugins}
 
-추가된 모든 저장소 또는 특정 저장소에서 사용 가능한 모든 플러그인을 나열합니다. 
+추가된 모든 저장소 또는 특정 저장소에서 사용 가능한 모든 플러그인을 나열합니다.
 
 ```
 bluemix plugin repo-plugins [-r REPO_NAME]
@@ -3752,18 +3752,18 @@ bluemix plugin repo-plugins [-r REPO_NAME]
 
    <dl>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
-   <dd>지정된 저장소의 플러그인만 나열합니다. </dd>
+   <dd>지정된 저장소의 플러그인만 나열합니다.</dd>
    </dl>
 
 <strong>예제</strong>:
 
-추가된 모든 저장소의 모든 플러그인 나열: 
+추가된 모든 저장소의 모든 플러그인 나열:
 
 ```
 bluemix plugin repo-plugins
 ```
 
-`bluemix-repo` 저장소의 모든 플러그인 나열: 
+`bluemix-repo` 저장소의 모든 플러그인 나열:
 
 ```
 bluemix plugin repo-plugins -r bluemix-repo
@@ -3789,13 +3789,13 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
 <strong>예제</strong>:
 
-저장소 'Bluemix'의 플러그인 "container-service"의 세부사항 나열: 
+저장소 'Bluemix'의 플러그인 "container-service"의 세부사항 나열:
 
 ```
 bluemix plugin repo-plugin container-service -r Bluemix
 ```
 
-기본 저장소 'Bluemix'의 플러그인 "container-service"의 세부사항을 나열합니다. 
+기본 저장소 'Bluemix'의 플러그인 "container-service"의 세부사항을 나열합니다.
 
 ```
 bluemix plugin repo-plugin container-service -r Bluemix
@@ -3805,7 +3805,7 @@ bluemix plugin repo-plugin container-service -r Bluemix
 ## bluemix plugin list
 {: #bluemix_plugin_list}
 
-{{site.data.keyword.Bluemix_notm}} CLI의 설치된 모든 플러그인을 나열합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI의 설치된 모든 플러그인을 나열합니다.
 
 ```
 bluemix plugin list
@@ -3828,7 +3828,7 @@ bluemix plugin show PLUGIN-NAME
 ## bluemix plugin install
 {: #bluemix_plugin_install}
 
-지정된 경로 또는 저장소의 {{site.data.keyword.Bluemix_notm}} CLI에 특정 버전의 플러그인을 설치합니다. 
+지정된 경로 또는 저장소의 {{site.data.keyword.Bluemix_notm}} CLI에 특정 버전의 플러그인을 설치합니다.
 
 ```
 bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
@@ -3839,7 +3839,7 @@ bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
-버전이 지정되지 않은 경우 명령은 설치할 최신의 사용 가능한 버전을 선택합니다. 
+버전이 지정되지 않은 경우 명령은 설치할 최신의 사용 가능한 버전을 선택합니다.
 
 <strong>전제조건</strong>: 없음
 
@@ -3847,17 +3847,17 @@ bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 
    <dl>
    <dt>PLUGIN_PATH|PLUGIN_NAME(필수)</dt>
-   <dd>-r <i>REPO_NAME</i>이 지정되지 않은 경우 플러그인은 지정된 로컬 경로 또는 원격 URL에서 설치됩니다. </dd>
+   <dd>-r <i>REPO_NAME</i>이 지정되지 않은 경우 플러그인은 지정된 로컬 경로 또는 원격 URL에서 설치됩니다.</dd>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
-   <dd>플러그인 2진이 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다. </dd>
+   <dd>플러그인 2진이 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.</dd>
    <dt>-v <i>VERSION</i>(선택사항)</dt>
-   <dd>설치될 플러그인의 버전입니다. 제공되지 않은 경우 최신 버전의 플러그인이 설치됩니다. 이 옵션은 저장소에서 플러그인을 설치하는 경우에만 유효합니다. </dd>
+   <dd>설치될 플러그인의 버전입니다. 제공되지 않은 경우 최신 버전의 플러그인이 설치됩니다. 이 옵션은 저장소에서 플러그인을 설치하는 경우에만 유효합니다.</dd>
    <dt>-f </dt>
    <dd>확인 없이 플러그인 설치를 강제 실행합니다.</dd>
     </dl>
     
     
-{{site.data.keyword.Bluemix_notm}} CLI의 공식 저장소 이름은 'Bluemix'입니다.     
+{{site.data.keyword.Bluemix_notm}} CLI의 공식 저장소 이름은 'Bluemix'입니다.    
 
 <strong>예제</strong>:
 
@@ -3873,12 +3873,12 @@ bluemix plugin install /downloads/new_plugin
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-'Bluemix' 저장소에서 최신 버전의 'container-service' 플러그인을 설치합니다. 
+'Bluemix' 저장소에서 최신 버전의 'container-service' 플러그인을 설치합니다.
 
 ```
 bluemix plugin install container-service -r Bluemix
 ```
-공식 플러그인 저장소에서 버전 '0.1.425'의 'container-service' 플러그인 설치: 
+공식 플러그인 저장소에서 버전 '0.1.425'의 'container-service' 플러그인 설치:
 
 ```
 bluemix plugin install container-service -v 0.1.425
@@ -3887,14 +3887,14 @@ bluemix plugin install container-service -v 0.1.425
 ## bluemix plugin update
 {: #bluemix_plugin_update}
 
-저장소에서 플러그인을 업그레이드합니다. 
+저장소에서 플러그인을 업그레이드합니다.
 
 ```
 bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
-버전이 지정되지 않은 경우 명령은 설치할 최신의 사용 가능한 버전을 선택합니다. 
+버전이 지정되지 않은 경우 명령은 설치할 최신의 사용 가능한 버전을 선택합니다.
 
 <strong>전제조건</strong>: 없음
 
@@ -3903,28 +3903,28 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>업데이트할 플러그인의 이름입니다. 지정되지 않은 경우, 이 명령은 설치된 모든 플러그인의 업그레이드를 확인합니다.</dd>
  <dt>-r REPO_NAME</dt>
- <dd>플러그인 2진이 있는 저장소의 이름입니다. 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다. </dd>
+ <dd>플러그인 2진이 있는 저장소의 이름입니다. 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.</dd>
  <dt>-v <i>VERSION</i>(선택사항)</dt>
- <dd>업데이트되는 플러그인의 버전입니다. 제공되지 않은 경우 최신 사용 가능 버전으로 플러그인을 업데이트합니다. </dd>
+ <dd>업데이트되는 플러그인의 버전입니다. 제공되지 않은 경우 최신 사용 가능 버전으로 플러그인을 업데이트합니다.</dd>
  <dt>--all</dt>
  <dd>사용 가능한 플러그인 모두 업데이트</dd>
 </dl>
 
 <strong>예제</strong>:
 
-공식 플러그인 저장소 'Bluemix'에서 사용 가능한 모든 업그레이드 확인: 
+공식 플러그인 저장소 'Bluemix'에서 사용 가능한 모든 업그레이드 확인:
 
 ```
 bluemix plugin update -r Bluemix
 ```
 
-공식 플러그인 저장소의 플러그인 'container-service'를 최신으로 업그레이드: 
+공식 플러그인 저장소의 플러그인 'container-service'를 최신으로 업그레이드:
 
 ```
 bluemix plugin update container-service
 ```
 
-공식 플러그인 저장소의 플러그인 'container-service'를 버전 '0.1.440'으로 업데이트: 
+공식 플러그인 저장소의 플러그인 'container-service'를 버전 '0.1.440'으로 업데이트:
 
 ```
 bluemix plugin update container-service -v 0.1.440
@@ -3933,7 +3933,7 @@ bluemix plugin update container-service -v 0.1.440
 ## bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
-{{site.data.keyword.Bluemix_notm}} CLI에서 지정된 플러그인을 설치 제거합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI에서 지정된 플러그인을 설치 제거합니다.
 
 ```
 bluemix plugin uninstall PLUGIN_NAME
@@ -3945,12 +3945,12 @@ bluemix plugin uninstall PLUGIN_NAME
 
    <dl>
    <dt>PLUGIN_NAME(필수)</dt>
-   <dd>설치 제거될 플러그인의 이름입니다. </dd>
+   <dd>설치 제거될 플러그인의 이름입니다.</dd>
     </dl>
 
 <strong>예제</strong>:
 
-이전에 설치된 'container-service' 플러그인 설치 제거: 
+이전에 설치된 'container-service' 플러그인 설치 제거:
 
 ```
 bluemix plugin uninstall container-service

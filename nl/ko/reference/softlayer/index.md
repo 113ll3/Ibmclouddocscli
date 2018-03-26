@@ -448,7 +448,7 @@ IMS token:                 xxxxxxxxxx
 ### bluemix sl help
 {: #sl_help}
 
-{{site.data.keyword.BluSoftlayer_notm}} 인프라 환경을 운영하기 위한 모든 명령에 대한 도움말 정보를 봅니다. 
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 환경을 운영하기 위한 모든 명령에 대한 도움말 정보를 봅니다.
 ```
 bluemix sl help
 
@@ -457,7 +457,7 @@ bluemix sl help
 ### bluemix sl block access-authorize 
 {: #sl_block_access_authorize} 
 
-제공된 볼륨에 액세스하도록 호스트에 권한을 부여합니다. 
+제공된 볼륨에 액세스하도록 호스트에 권한을 부여합니다.
 ```
 bluemix sl block access-authorize VOLUME_ID [OPTIONS]
 ```
@@ -483,7 +483,7 @@ bluemix sl block access-authorize 12345678 --virtual-id 87654321
 ### bluemix sl block access-list 
 {: #sl_block_access_list} 
 
-ACL을 나열합니다. 
+ACL을 나열합니다.
 ```
 bluemix sl block access-list VOLUME_ID [OPTIONS]
 ```
@@ -505,7 +505,7 @@ bluemix sl block access-list 12345678 --sortby id
 ### bluemix sl block access-revoke 
 {: #sl_block_access_revoke} 
 
-제공된 볼륨에 액세스 중인 호스트에 대한 권한 부여를 취소합니다. 
+제공된 볼륨에 액세스 중인 호스트에 대한 권한 부여를 취소합니다.
 ```
  bluemix sl block access-revoke VOLUME_ID [OPTIONS]
 ```
@@ -531,7 +531,7 @@ bluemix sl block access-revoke 12345678 --virtual-id 87654321
 ### bluemix sl block replica-failback 
 {: #sl_block_replica_failback} 
 
-복제본에서 블록 볼륨을 장애 복구합니다. 
+복제본에서 블록 볼륨을 장애 복구합니다.
 ```
  bluemix sl block replica-failback VOLUME_ID
 ```
@@ -546,7 +546,7 @@ bluemix sl block access-revoke 12345678 --virtual-id 87654321
 ### bluemix sl block replica-failover 
 {: #sl_block_replica_failover} 
 
-제공된 복제본 볼륨으로 블록 볼륨을 장애 복구합니다. 
+제공된 복제본 볼륨으로 블록 볼륨을 장애 복구합니다.
 ```
 bluemix sl block replica-failover VOLUME_ID REPLICA_ID
 ```
@@ -561,7 +561,7 @@ bluemix sl block replica-failover VOLUME_ID REPLICA_ID
 ### bluemix sl block replica-locations 
 {: #sl_block_replica_locations} 
 
-제공된 볼륨에 대해 적합한 복제 데이터 센터를 나열합니다. 
+제공된 볼륨에 대해 적합한 복제 데이터 센터를 나열합니다.
 ```
 bluemix sl block replica-locations VOLUME_ID
 ```
@@ -576,7 +576,7 @@ bluemix sl block replica-locations 12345678
 ### bluemix sl block replica-order 
 {: #sl_block_replica_order} 
 
-블록 스토리지 복제본 볼륨을 주문합니다. 
+블록 스토리지 복제본 볼륨을 주문합니다.
 ```
  bluemix sl block replica-order VOLUME_ID [OPTIONS]
 ```
@@ -606,7 +606,7 @@ bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LIN
 ### bluemix sl block replica-partners 
 {: #sl_block_replica_partners} 
 
-블록 볼륨에 대한 기존 복제본 볼륨을 나열합니다. 
+블록 볼륨에 대한 기존 복제본 볼륨을 나열합니다.
 ```
 bluemix sl block replica-partners VOLUME_ID [OPTIONS]
 ```
@@ -621,7 +621,7 @@ bluemix sl block replica-partners 12345678
 ### bluemix sl block snapshot-cancel 
 {: #sl_block_snapshot_cancel} 
 
-제공된 볼륨에 대한 기존 스냅샷 영역을 취소합니다. 
+제공된 볼륨에 대한 기존 스냅샷 영역을 취소합니다.
 ```
  bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
@@ -645,7 +645,7 @@ bluemix sl block replica-partners 12345678
 ### bluemix sl block snapshot-create 
 {: #sl_block_snapshot_create} 
 
-제공된 볼륨의 스냅샷을 작성합니다. 
+제공된 볼륨의 스냅샷을 작성합니다.
 ```
  bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
 ```
@@ -665,7 +665,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block snapshot-disable 
 {: #sl_block_snapshot_disable} 
 
-제공된 볼륨에 대해 지정된 스케줄에 따라 스냅샷을 사용 중지합니다. 
+제공된 볼륨에 대해 지정된 스케줄에 따라 스냅샷을 사용 중지합니다.
 ```
  bluemix sl block snapshot-disable VOLUME_ID [OPTIONS]
 ```
@@ -685,7 +685,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block snapshot-enable 
 {: #sl_block_snapshot_enable} 
 
-지정된 스케줄에 따라 제공된 볼륨에 대한 스냅샷을 사용합니다. 
+지정된 스케줄에 따라 제공된 볼륨에 대한 스냅샷을 사용합니다.
 ```
  bluemix sl block snapshot-enable VOLUME_ID [OPTIONS]
 ```
@@ -713,7 +713,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block snapshot-delete 
 {: #sl_block_snapshot_delete} 
 
-제공된 볼륨의 스냅샷을 삭제합니다. 
+제공된 볼륨의 스냅샷을 삭제합니다.
 ```
   bluemix sl block snapshot-delete SNAPSHOT_ID
 ```
@@ -728,7 +728,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block snapshot-list 
 {: #sl_block_snapshot_list} 
 
-블록 스토리지 스냅샷을 나열합니다. 
+블록 스토리지 스냅샷을 나열합니다.
 ```
  bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
 ```
@@ -748,7 +748,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block snapshot-order 
 {: #sl_block_snapshot_order} 
 
-블록 스토리지 볼륨에 대한 스냅샷 영역을 주문합니다. 
+블록 스토리지 볼륨에 대한 스냅샷 영역을 주문합니다.
 ```
  bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 ```
@@ -776,7 +776,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block snapshot-restore 
 {: #sl_block_snapshot_restore} 
 
-제공된 스냅샷을 사용하여 블록 볼륨을 복원합니다. 
+제공된 스냅샷을 사용하여 블록 볼륨을 복원합니다.
 ```
  bluemix sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
@@ -791,7 +791,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block volume-cancel 
 {: #sl_block_volume_cancel} 
 
-기존 블록 스토리지 볼륨을 취소합니다. 
+기존 블록 스토리지 볼륨을 취소합니다.
 ```
  bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
 ```
@@ -815,7 +815,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block volume-list 
 {: #sl_block_volume_list} 
 
-블록 스토리지를 나열합니다. 
+블록 스토리지를 나열합니다.
 ```
  bluemix sl block volume-list [OPTIONS]
 ```
@@ -845,7 +845,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block volume-detail 
 {: #sl_block_volume_detail} 
 
-제공된 볼륨에 대한 세부사항을 표시합니다. 
+제공된 볼륨에 대한 세부사항을 표시합니다.
 ```
  bluemix sl block volume-detail VOLUME_ID
 ```
@@ -860,7 +860,7 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl block volume-duplicate 
 {: #sl_block_volume_duplicate} 
 
-기존 볼륨을 복제하여 블록 볼륨을 주문합니다. 
+기존 볼륨을 복제하여 블록 볼륨을 주문합니다.
 ```
 bluemix sl block volume-duplicate VOLUME_ID [OPTIONS]
 ```
@@ -890,7 +890,7 @@ bluemix sl block volume-duplicate 12345678
 ### bluemix sl block volume-order 
 {: #sl_block_volume_order} 
 
-블록 스토리지 볼륨을 주문합니다. 
+블록 스토리지 볼륨을 주문합니다.
 ```
    bluemix sl block volume-order [OPTIONS]
 ```
@@ -924,7 +924,7 @@ bluemix sl block volume-duplicate 12345678
 ###  bluemix sl block volume-options 
 {: #sl_block_volume_options} 
 
-블록 스토리지 주문을 위한 모든 옵션을 나열합니다. 
+블록 스토리지 주문을 위한 모든 옵션을 나열합니다.
 ```
  bluemix sl block volume-options
 ```
@@ -939,7 +939,7 @@ bluemix sl block volume-duplicate 12345678
 ### bluemix sl cdn cancel 
 {: #sl_cdn_cancel} 
 
-CDN 계정을 취소합니다. 
+CDN 계정을 취소합니다.
 ```
 bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
 ```
@@ -952,7 +952,7 @@ bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
 ### bluemix sl cdn detail 
 {: #sl_cdn_detail} 
 
-CDN 계정의 세부사항을 표시합니다. 
+CDN 계정의 세부사항을 표시합니다.
 ```
 bluemix sl cdn detail ACCOUNT_ID
 ```
@@ -960,7 +960,7 @@ bluemix sl cdn detail ACCOUNT_ID
 ### bluemix sl cdn list 
 {: #sl_cdn_list} 
 
-모든 CDN 계정을 나열합니다. 
+모든 CDN 계정을 나열합니다.
 ```
 bluemix sl cdn list [OPTIONS]
 ```
@@ -975,7 +975,7 @@ bluemix sl cdn list [OPTIONS]
 ### bluemix sl cdn load 
 {: #sl_cdn_load} 
 
-모든 에지 노드에서 하나 이상의 파일을 캐시합니다. 
+모든 에지 노드에서 하나 이상의 파일을 캐시합니다.
 ```
 bluemix sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
@@ -983,7 +983,7 @@ bluemix sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ### bluemix sl cdn order 
 {: #sl_cdn_order} 
 
-CDN 계정을 주문합니다. 
+CDN 계정을 주문합니다.
 ```
 bluemix sl cdn order [OPTIONS]
 ```
@@ -1000,7 +1000,7 @@ bluemix sl cdn order [OPTIONS]
 ### bluemix sl cdn options 
 {: #sl_cdn_options} 
 
-CDN 계정 주문을 위한 대역폭 및 스토리지 옵션입니다. 
+CDN 계정 주문을 위한 대역폭 및 스토리지 옵션입니다.
 ```
 bluemix sl cdn options
 ```
@@ -1008,7 +1008,7 @@ bluemix sl cdn options
 ### bluemix sl cdn origin-add 
 {: #sl_cdn_origin_add} 
 
-원본 가져오기 맵핑을 작성합니다. 
+원본 가져오기 맵핑을 작성합니다.
 ```
 bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ```
@@ -1023,7 +1023,7 @@ bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ### bluemix sl cdn origin-list 
 {: #sl_cdn_origin_list} 
 
-원본 가져오기 맵핑을 나열합니다. 
+원본 가져오기 맵핑을 나열합니다.
 ```
 bluemix sl cdn origin-list ACCOUNT_ID
 ```
@@ -1031,7 +1031,7 @@ bluemix sl cdn origin-list ACCOUNT_ID
 ### bluemix sl cdn origin-remove 
 {: #sl_cdn_origin_remove} 
 
-원본 가져오기 맵핑을 제거합니다. 
+원본 가져오기 맵핑을 제거합니다.
 ```
 bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ```
@@ -1044,7 +1044,7 @@ bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ### bluemix sl cdn purge 
 {: #sl_cdn_purge} 
 
-모든 에지 노드에서 캐시된 파일을 영구 제거합니다. 
+모든 에지 노드에서 캐시된 파일을 영구 제거합니다.
 ```
 bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
 ```
@@ -1057,7 +1057,7 @@ bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
 ### bluemix sl file access-authorize 
 {: #sl_file_access_authorize} 
 
-제공된 볼륨에 액세스하도록 호스트에 권한을 부여합니다. 
+제공된 볼륨에 액세스하도록 호스트에 권한을 부여합니다.
 ```
 bluemix sl file access-authorize VOLUME_ID [OPTIONS]
 ```
@@ -1085,7 +1085,7 @@ bluemix sl file access-authorize 12345678 --virtual-id 87654321
 ### bluemix sl file access-list 
 {: #sl_file_access_list} 
 
-ACL을 나열합니다. 
+ACL을 나열합니다.
 ```
 bluemix sl file access-list VOLUME_ID [OPTIONS]
 ```
@@ -1107,7 +1107,7 @@ bluemix sl file access-list 12345678 --sortby id
 ### bluemix sl file access-revoke 
 {: #sl_file_access_revoke} 
 
-제공된 볼륨에 액세스 중인 호스트에 대한 권한 부여를 취소합니다. 
+제공된 볼륨에 액세스 중인 호스트에 대한 권한 부여를 취소합니다.
 ```
 bluemix sl file access-revoke VOLUME_ID [OPTIONS]
 ```
@@ -1135,7 +1135,7 @@ bluemix sl file access-revoke 12345678 --virtual-id 87654321
 ### bluemix sl file replica-failback 
 {: #sl_file_replica_failback} 
 
-복제본에서 파일 볼륨을 장애 복구합니다. 
+복제본에서 파일 볼륨을 장애 복구합니다.
 ```
 bluemix sl file replica-failback VOLUME_ID
 ```
@@ -1150,7 +1150,7 @@ bluemix sl file replica-failback 12345678
 ### bluemix sl file replica-failover 
 {: #sl_file_replica_failover} 
 
-제공된 복제본 볼륨으로 파일 볼륨을 장애 복구합니다. 
+제공된 복제본 볼륨으로 파일 볼륨을 장애 복구합니다.
 ```
 bluemix sl file replica-failover VOLUME_ID REPLICA_ID
 ```
@@ -1165,7 +1165,7 @@ bluemix sl file replica-failover 12345678 87654321
 ### bluemix sl file replica-locations 
 {: #sl_file_replica_locations} 
 
-제공된 볼륨에 대해 적합한 복제 데이터 센터를 나열합니다. 
+제공된 볼륨에 대해 적합한 복제 데이터 센터를 나열합니다.
 ```
 bluemix sl file replica-locations VOLUME_ID
 ```
@@ -1175,12 +1175,12 @@ bluemix sl file replica-locations VOLUME_ID
 ```
 bluemix sl file replica-locations 12345678
 ```
-이 명령은 ID가 12345678인 파일 볼륨에 대해 적합한 복제 데이터 센터를 나열합니다. 
+이 명령은 ID가 12345678인 파일 볼륨에 대해 적합한 복제 데이터 센터를 나열합니다.
 
 ### bluemix sl file replica-order 
 {: #sl_file_replica_order} 
 
-파일 스토리지 복제본 볼륨을 주문합니다. 
+파일 스토리지 복제본 볼륨을 주문합니다.
 ```
 bluemix sl file replica-order VOLUME_ID [OPTIONS]
 ```
@@ -1208,7 +1208,7 @@ bluemix sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ### bluemix sl file replica-partners 
 {: #sl_file_replica_partners} 
 
-파일 볼륨에 대한 기존 복제본 볼륨을 나열합니다. 
+파일 볼륨에 대한 기존 복제본 볼륨을 나열합니다.
 ```
 bluemix sl file replica-partners VOLUME_ID [OPTIONS]
 ```
@@ -1223,7 +1223,7 @@ bluemix sl file replica-partners 12345678
 ### bluemix sl file snapshot-cancel 
 {: #sl_file_snapshot_cancel} 
 
-제공된 볼륨에 대한 기존 스냅샷 영역을 취소합니다. 
+제공된 볼륨에 대한 기존 스냅샷 영역을 취소합니다.
 ```
 bluemix sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
@@ -1247,7 +1247,7 @@ bluemix sl file snapshot-cancel 12345678 --immediate -f
 ### bluemix sl file snapshot-create 
 {: #sl_file_snapshot_create} 
 
-제공된 볼륨의 스냅샷을 작성합니다. 
+제공된 볼륨의 스냅샷을 작성합니다.
 ```
 bluemix sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
@@ -1267,7 +1267,7 @@ bluemix sl file snapshot-create 12345678 --note snapshotforbluemix
 ### bluemix sl file snapshot-disable 
 {: #sl_file_snapshot_disable} 
 
-제공된 볼륨에 대해 지정된 스케줄에 따라 스냅샷을 사용 중지합니다. 
+제공된 볼륨에 대해 지정된 스케줄에 따라 스냅샷을 사용 중지합니다.
 ```
 bluemix sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
@@ -1287,7 +1287,7 @@ bluemix sl file snapshot-disable 12345678 -s DAILY
 ### bluemix sl file snapshot-enable 
 {: #sl_file_snapshot_enable} 
 
-지정된 스케줄에 따라 제공된 볼륨에 대한 스냅샷을 사용합니다. 
+지정된 스케줄에 따라 제공된 볼륨에 대한 스냅샷을 사용합니다.
 ```
 bluemix sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
@@ -1315,7 +1315,7 @@ bluemix sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ### bluemix sl file snapshot-delete 
 {: #sl_file_snapshot_delete} 
 
-제공된 볼륨의 스냅샷을 삭제합니다. 
+제공된 볼륨의 스냅샷을 삭제합니다.
 ```
 bluemix sl file snapshot-delete SNAPSHOT_ID
 ```
@@ -1330,7 +1330,7 @@ bluemix sl file snapshot-delete 12345678
 ### bluemix sl file snapshot-list 
 {: #sl_file_snapshot_list} 
 
-파일 스토리지 스냅샷을 나열합니다. 
+파일 스토리지 스냅샷을 나열합니다.
 ```
 bluemix sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
@@ -1350,7 +1350,7 @@ bluemix sl file snapshot-list 12345678 --sortby id
 ### bluemix sl file snapshot-order 
 {: #sl_file_snapshot_order} 
 
-파일 스토리지 볼륨에 대한 스냅샷 영역을 주문합니다. 
+파일 스토리지 볼륨에 대한 스냅샷 영역을 주문합니다.
 ```
 bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
@@ -1378,7 +1378,7 @@ bluemix sl file snapshot-order 12345678 -s 1000 -t 4
 ### bluemix sl file snapshot-restore 
 {: #sl_file_snapshot_restore} 
 
-제공된 스냅샷을 사용하여 파일 볼륨을 복원합니다. 
+제공된 스냅샷을 사용하여 파일 볼륨을 복원합니다.
 ```
 bluemix sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
@@ -1393,7 +1393,7 @@ bluemix sl file snapshot-restore 12345678 87654321
 ### bluemix sl file volume-cancel 
 {: #sl_file_volume_cancel} 
 
-기존 파일 스토리지 볼륨을 취소합니다. 
+기존 파일 스토리지 볼륨을 취소합니다.
 ```
 bluemix sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
@@ -1417,7 +1417,7 @@ bluemix sl file volume-cancel 12345678 --immediate -f
 ### bluemix sl file volume-list 
 {: #sl_file_volume_list} 
 
-파일 스토리지를 나열합니다. 
+파일 스토리지를 나열합니다.
 ```
 bluemix sl file volume-list [OPTIONS]
 ```
@@ -1447,7 +1447,7 @@ bluemix sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ### bluemix sl file volume-detail 
 {: #sl_file_volume_detail} 
 
-제공된 볼륨에 대한 세부사항을 표시합니다. 
+제공된 볼륨에 대한 세부사항을 표시합니다.
 ```
 bluemix sl file volume-detail VOLUME_ID
 ```
@@ -1462,7 +1462,7 @@ bluemix sl file volume-detail 12345678
 ### bluemix sl file volume-duplicate 
 {: #sl_file_volume_duplicate} 
 
-기존 볼륨을 복제하여 파일 볼륨을 주문합니다. 
+기존 볼륨을 복제하여 파일 볼륨을 주문합니다.
 ```
 bluemix sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
@@ -1492,7 +1492,7 @@ bluemix sl file volume-duplicate 12345678
 ### bluemix sl file volume-order 
 {: #sl_file_volume_order} 
 
-파일 스토리지 볼륨을 주문합니다. 
+파일 스토리지 볼륨을 주문합니다.
 ```
 bluemix sl file volume-order [OPTIONS]
 ```
@@ -1524,7 +1524,7 @@ bluemix sl file volume-order --storage-type performance --size 1000 --iops 4000 
 ### bluemix sl file volume-options 
 {: #sl_file_volume_options} 
 
-파일 스토리지 주문을 위한 모든 옵션을 나열합니다. 
+파일 스토리지 주문을 위한 모든 옵션을 나열합니다.
 ```
 bluemix sl file volume-options
 ```
@@ -1539,7 +1539,7 @@ bluemix sl file volume-options
 ### bluemix sl dns import 
 {: #sl_dns_import} 
 
-BIND 구역 파일 기반이 아닌 구역을 가져옵니다. 
+BIND 구역 파일 기반이 아닌 구역을 가져옵니다.
 ```
 bluemix sl dns import ZONEFILE [OPTIONS]
 ```
@@ -1559,7 +1559,7 @@ bluemix sl dns import ZONEFILE [OPTIONS]
 ### bluemix sl dns record-add 
 {: #sl_dns_record_add} 
 
-구역의 리소스 레코드를 추가합니다. 
+구역의 리소스 레코드를 추가합니다.
 ```
 bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
@@ -1579,7 +1579,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ### bluemix sl dns record-edit 
 {: #sl_dns_record_edit} 
 
-구역의 리소스 레코드를 업데이트합니다. 
+구역의 리소스 레코드를 업데이트합니다.
 ```
    bluemix sl dns record-edit ZONE [OPTIONS]
 ```
@@ -1605,7 +1605,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ### bluemix sl dns record-list 
 {: #sl_dns_record_list} 
 
-구역의 모든 리소스 레코드를 나열합니다. 
+구역의 모든 리소스 레코드를 나열합니다.
 ```
    bluemix sl dns record-list ZONE [OPTIONS]
 ```
@@ -1631,7 +1631,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ### bluemix sl dns record-remove 
 {: #sl_dns_record_remove} 
 
-구역에서 리소스 레코드를 제거합니다. 
+구역에서 리소스 레코드를 제거합니다.
 ```
  bluemix sl dns record-remove RECORD_ID
 ```
@@ -1676,7 +1676,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ###    bluemix sl dns zone-list 
 {: #sl_dns_zone_list} 
 
-계정의 모든 구역을 나열합니다. 
+계정의 모든 구역을 나열합니다.
 ```
    bluemix sl dns zone-list
 ```
@@ -1691,7 +1691,7 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ### bluemix sl dns zone-print 
 {: #sl_dns_zone_print} 
 
-BIND 형식으로 구역 및 리소스 레코드를 인쇄합니다. 
+BIND 형식으로 구역 및 리소스 레코드를 인쇄합니다.
 ```
  bluemix sl dns zone-print ZONE
 ```
@@ -1706,7 +1706,7 @@ BIND 형식으로 구역 및 리소스 레코드를 인쇄합니다.
 ### bluemix sl globalip create 
 {: #sl_globalip_create} 
 
-글로벌 IP를 작성합니다. 
+글로벌 IP를 작성합니다.
 ```
 bluemix sl globalip create [OPTIONS]
 ```
@@ -1730,7 +1730,7 @@ bluemix sl globalip create [OPTIONS]
 ### bluemix sl globalip assign 
 {: #sl_globalip_assign} 
 
-대상 라우터 또는 디바이스에 글로벌 IP를 지정합니다. 
+대상 라우터 또는 디바이스에 글로벌 IP를 지정합니다.
 ```
 bluemix sl globalip assign IDENTIFIER TARGET
 ```
@@ -1745,7 +1745,7 @@ bluemix sl globalip assign IDENTIFIER TARGET
 ### bluemix sl globalip cancel 
 {: #sl_globalip_cancel} 
 
-글로벌 IP를 취소합니다. 
+글로벌 IP를 취소합니다.
 ```
 bluemix sl globalip cancel IDENTIFIER [OPTIONS]
 ```
@@ -1765,7 +1765,7 @@ bluemix sl globalip cancel IDENTIFIER [OPTIONS]
 ### bluemix sl globalip list 
 {: #sl_globalip_list} 
 
-계정의 모든 글로벌 IP를 나열합니다. 
+계정의 모든 글로벌 IP를 나열합니다.
 ```
 bluemix sl globalip list [OPTIONS]
 ```
@@ -1789,7 +1789,7 @@ bluemix sl globalip list --v4
 ### bluemix sl globalip unassign 
 {: #sl_globalip_unassign} 
 
-대상 라우터 또는 디바이스에서 글로벌 IP를 지정 해제합니다. 
+대상 라우터 또는 디바이스에서 글로벌 IP를 지정 해제합니다.
 ```
  bluemix sl globalip unassign IDENTIFIER
 ```
@@ -1804,7 +1804,7 @@ bluemix sl globalip list --v4
 ### bluemix sl image delete 
 {: #sl_image_delete} 
 
-이미지를 삭제합니다. 
+이미지를 삭제합니다.
 ```
    bluemix sl image delete IDENTIFIER
 ```
@@ -1812,12 +1812,12 @@ bluemix sl globalip list --v4
 ```
    bluemix sl image delete 12345678
 ```
-이 명령은 ID가 `12345678`인 이미지를 삭제합니다. 
+이 명령은 ID가 `12345678`인 이미지를 삭제합니다.
 
 ### bluemix sl image detail 
 {: #sl_image_detail} 
 
-이미지에 대한 세부사항을 가져옵니다. 
+이미지에 대한 세부사항을 가져옵니다.
 ```
  bluemix sl image detail IDENTIFIER
 ```
@@ -1830,7 +1830,7 @@ bluemix sl globalip list --v4
 ### bluemix sl image edit 
 {: #sl_image_edit} 
 
-이미지의 세부사항을 편집합니다. 
+이미지의 세부사항을 편집합니다.
 ```
    bluemix sl image edit IDENTIFIER [OPTIONS]
 ```
@@ -1849,12 +1849,12 @@ bluemix sl globalip list --v4
 ```  
 bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
-이 명령은 ID가 `12345678`인 이미지를 편집하고 해당 이름을 `ubuntu16`, 참고를 `testing`, 태그를 `staging`으로 설정합니다. 
+이 명령은 ID가 `12345678`인 이미지를 편집하고 해당 이름을 `ubuntu16`, 참고를 `testing`, 태그를 `staging`으로 설정합니다.
 
 ### bluemix sl image list 
 {: #sl_image_list} 
 
-계정의 모든 이미지를 나열합니다. 
+계정의 모든 이미지를 나열합니다.
 ```
    bluemix sl image list [OPTIONS]
 ```
@@ -1872,7 +1872,7 @@ bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ### bluemix sl ipsec cancel 
 {: #sl_ipsec_cancel} 
 
-IPSec VPN 터널 컨텍스트를 취소합니다. 
+IPSec VPN 터널 컨텍스트를 취소합니다.
 ```
 bluemix sl ipsec cancel CONTEXT_ID [OPTIONS]
 ```
@@ -1890,7 +1890,7 @@ bluemix sl ipsec cancel CONTEXT_ID [OPTIONS]
 ### bluemix sl ipsec config 
 {: #sl_ipsec_config} 
 
-터널 컨텍스트의 구성을 요청합니다. 
+터널 컨텍스트의 구성을 요청합니다.
 ```
 bluemix sl ipsec config CONTEXT_ID [OPTIONS]
 ```
@@ -1898,7 +1898,7 @@ bluemix sl ipsec config CONTEXT_ID [OPTIONS]
 ### bluemix sl ipsec detail 
 {: #sl_ipsec_detail} 
 
-IPSec VPN 터널 컨텍스트 세부사항을 나열합니다. 
+IPSec VPN 터널 컨텍스트 세부사항을 나열합니다.
 ```
 bluemix sl ipsec detail CONTEXT_ID [OPTIONS]
 ```
@@ -1911,7 +1911,7 @@ bluemix sl ipsec detail CONTEXT_ID [OPTIONS]
 ### bluemix sl ipsec list 
 {: #sl_ipsec_list} 
 
-IPSec VPN 터널 컨텍스트를 나열합니다. 
+IPSec VPN 터널 컨텍스트를 나열합니다.
 ```
 bluemix sl ipsec list [OPTIONS]
 ```
@@ -1924,7 +1924,7 @@ bluemix sl ipsec list [OPTIONS]
 ### bluemix sl ipsec order 
 {: #sl_ipsec_order} 
 
-IPSec VPN 터널을 주문합니다. 
+IPSec VPN 터널을 주문합니다.
 ```
 bluemix sl ipsec order [OPTIONS]
 ```
@@ -1938,7 +1938,7 @@ bluemix sl ipsec order [OPTIONS]
 ### bluemix sl ipsec subnet-add 
 {: #sl_ipsec_subnet_add} 
 
-IPSec 터널 컨텍스트에 서브넷을 추가합니다. 
+IPSec 터널 컨텍스트에 서브넷을 추가합니다.
 ```
 bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ```
@@ -1956,7 +1956,7 @@ bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ### bluemix sl ipsec subnet-remove 
 {: #sl_ipsec_subnet_remove} 
 
-IPSEC 터널 컨텍스트에서 서브넷을 제거합니다. 
+IPSEC 터널 컨텍스트에서 서브넷을 제거합니다.
 ```
 bluemix sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
@@ -1964,7 +1964,7 @@ bluemix sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ### bluemix sl ipsec translation-add 
 {: #sl_ipsec_translation_add} 
 
-IPSec 터널에 주소 변환을 추가합니다. 
+IPSec 터널에 주소 변환을 추가합니다.
 ```
 bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ```
@@ -1981,7 +1981,7 @@ bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ### bluemix sl ipsec translation-remove 
 {: #sl_ipsec_translation_remove} 
 
-IPSec에서 변환 항목을 제거합니다. 
+IPSec에서 변환 항목을 제거합니다.
 ```
 bluemix sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
@@ -1989,7 +1989,7 @@ bluemix sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ### bluemix sl ipsec translation-update 
 {: #sl_ipsec_translation_update} 
 
-IPSec에 대한 주소 변환을 업데이트합니다. 
+IPSec에 대한 주소 변환을 업데이트합니다.
 ```
 bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
@@ -2006,7 +2006,7 @@ bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ### bluemix sl ipsec update 
 {: #sl_ipsec_update} 
 
-터널 컨텍스트 특성을 업데이트합니다. 
+터널 컨텍스트 특성을 업데이트합니다.
 ```
 bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 ```
@@ -2042,7 +2042,7 @@ bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 ### bluemix sl loadbal cancel 
 {: #sl_loadbal_cancel} 
 
-기존 로드 밸런서를 취소합니다. 
+기존 로드 밸런서를 취소합니다.
 ```
 bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
 ```
@@ -2056,7 +2056,7 @@ bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
 ### bluemix sl loadbal create 
 {: #sl_loadbal_create} 
 
-작성-옵션에서 리턴된 ID가 제공된 로드 밸런서를 추가합니다. 
+작성-옵션에서 리턴된 ID가 제공된 로드 밸런서를 추가합니다.
 ```
 bluemix sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ```
@@ -2070,7 +2070,7 @@ bluemix sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ### bluemix sl loadbal create-options 
 {: #sl_loadbal_create_options} 
 
-로드 밸런서를 작성하기 위한 가격 옵션을 가져옵니다. 
+로드 밸런서를 작성하기 위한 가격 옵션을 가져옵니다.
 ```
 bluemix sl loadbal create-options
 ```
@@ -2078,7 +2078,7 @@ bluemix sl loadbal create-options
 ### bluemix sl loadbal detail 
 {: #sl_loadbal_detail} 
 
-로드 밸런서 세부사항을 가져옵니다. 
+로드 밸런서 세부사항을 가져옵니다.
 ```
 bluemix sl loadbal detail LOADBAL_ID
 ```
@@ -2086,7 +2086,7 @@ bluemix sl loadbal detail LOADBAL_ID
 ### bluemix sl loadbal group-add 
 {: #sl_loadbal_group_add} 
 
-새 load_balancer 서비스를 추가합니다. 
+새 load_balancer 서비스를 추가합니다.
 ```
 bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 ```
@@ -2106,7 +2106,7 @@ bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 ### bluemix sl loadbal group-delete 
 {: #sl_loadbal_group_delete} 
 
-기존 로드 밸런서 서비스 그룹을 삭제합니다. 
+기존 로드 밸런서 서비스 그룹을 삭제합니다.
 ```
 bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 ```
@@ -2120,7 +2120,7 @@ bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 ### bluemix sl loadbal group-edit 
 {: #sl_loadbal_group_edit} 
 
-기존 로드 밸런서 서비스 그룹을 편집합니다. 
+기존 로드 밸런서 서비스 그룹을 편집합니다.
 ```
 bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 ```
@@ -2140,7 +2140,7 @@ bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 ### bluemix sl loadbal group-reset 
 {: #sl_loadbal_group_reset} 
 
-특정 서비스 그룹의 연결을 재설정합니다. 
+특정 서비스 그룹의 연결을 재설정합니다.
 ```
 bluemix sl loadbal group-reset LOADBAL_ID GROUP_ID
 ```
@@ -2148,7 +2148,7 @@ bluemix sl loadbal group-reset LOADBAL_ID GROUP_ID
 ### bluemix sl loadbal health-checks 
 {: #sl_loadbal_health_checks} 
 
-상태 확인 유형을 나열합니다. 
+상태 확인 유형을 나열합니다.
 ```
 bluemix sl loadbal health-checks
 ```
@@ -2156,7 +2156,7 @@ bluemix sl loadbal health-checks
 ### bluemix sl loadbal list 
 {: #sl_loadbal_list} 
 
-활성 로드 밸런서를 나열합니다. 
+활성 로드 밸런서를 나열합니다.
 ```
 bluemix sl loadbal list
 ```
@@ -2173,7 +2173,7 @@ bluemix sl loadbal list
 ### bluemix sl loadbal routing-methods 
 {: #sl_loadbal_routing_methods} 
 
-라우팅 방법을 나열합니다. 
+라우팅 방법을 나열합니다.
 ```
 bluemix sl loadbal routing-methods
 ```
@@ -2181,7 +2181,7 @@ bluemix sl loadbal routing-methods
 ### bluemix sl loadbal routing-types 
 {: #sl_loadbal_routing_types} 
 
-라우팅 유형을 나열합니다. 
+라우팅 유형을 나열합니다.
 ```
 bluemix sl loadbal routing-types
 ```
@@ -2189,7 +2189,7 @@ bluemix sl loadbal routing-types
 ### bluemix sl loadbal service-add 
 {: #sl_loadbal_service_add} 
 
-새 로드 밸런서 서비스를 추가합니다. 
+새 로드 밸런서 서비스를 추가합니다.
 ```
 bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 ```
@@ -2211,7 +2211,7 @@ bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 ### bluemix sl loadbal service-delete 
 {: #sl_loadbal_service_delete} 
 
-기존 로드 밸런서 서비스를 삭제합니다. 
+기존 로드 밸런서 서비스를 삭제합니다.
 ```
 bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 ```
@@ -2225,7 +2225,7 @@ bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 ### bluemix sl loadbal service-edit 
 {: #sl_loadbal_service_edit} 
 
-서비스 그룹의 특성을 편집합니다. 
+서비스 그룹의 특성을 편집합니다.
 ```
 bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 ```
@@ -2249,7 +2249,7 @@ bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 ### bluemix sl loadbal service-toggle 
 {: #sl_loadbal_service_toggle} 
 
-기존 로드 밸런서 서비스의 상태를 토글합니다. 
+기존 로드 밸런서 서비스의 상태를 토글합니다.
 ```
 bluemix sl loadbal service-toggle SERVICE_ID
 ```
@@ -2263,7 +2263,7 @@ bluemix sl loadbal service-toggle SERVICE_ID
 ### bluemix sl security sshkey-add 
 {: #sl_security_sshkey_add} 
 
-새 SSH 키를 추가합니다. 
+새 SSH 키를 추가합니다.
 ```
  bluemix sl security sshkey-add LABEL [OPTIONS]
 ```
@@ -2287,7 +2287,7 @@ bluemix sl loadbal service-toggle SERVICE_ID
 ### bluemix sl security sshkey-edit 
 {: #sl_security_sshkey_edit} 
 
-SSH 키를 편집합니다. 
+SSH 키를 편집합니다.
 ```
  bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
@@ -2309,7 +2309,7 @@ SSH 키를 편집합니다.
 ### bluemix sl security sshkey-list 
 {: #sl_security_sshkey_list} 
 
-계정의 SSH 키를 나열합니다. 
+계정의 SSH 키를 나열합니다.
 ```
  bluemix sl security sshkey-list [OPTIONS]
 ```
@@ -2329,7 +2329,7 @@ SSH 키를 편집합니다.
 ### bluemix sl security sshkey-print 
 {: #sl_security_sshkey_print} 
 
-SSH 키를 화면에 인쇄합니다. 
+SSH 키를 화면에 인쇄합니다.
 ```
  bluemix sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
@@ -2349,7 +2349,7 @@ SSH 키를 화면에 인쇄합니다.
 ### bluemix sl security sshkey-remove 
 {: #sl_security_sshkey_remove} 
 
-SSH 키를 영구 제거합니다. 
+SSH 키를 영구 제거합니다.
 ```
  bluemix sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
@@ -2369,7 +2369,7 @@ SSH 키를 영구 제거합니다.
 ### bluemix sl security cert-add 
 {: #sl_security_cert_add} 
 
-SSL 인증서 세부사항을 추가하고 업로드합니다. 
+SSL 인증서 세부사항을 추가하고 업로드합니다.
 ```
  bluemix sl security cert-add [OPTIONS]
 ```
@@ -2397,7 +2397,7 @@ SSL 인증서 세부사항을 추가하고 업로드합니다.
 ### bluemix sl security cert-edit 
 {: #sl_security_cert_edit} 
 
-SSL 인증서를 편집합니다. 
+SSL 인증서를 편집합니다.
 ```
  bluemix sl security cert-edit IDENTIFIER [OPTIONS]
 ```
@@ -2425,7 +2425,7 @@ SSL 인증서를 편집합니다.
 ### bluemix sl security cert-download 
 {: #sl_security_cert_download} 
 
-SSL 인증서 및 키 파일을 다운로드합니다. 
+SSL 인증서 및 키 파일을 다운로드합니다.
 ```
  bluemix sl security cert-download IDENTIFIER
 ```
@@ -2440,7 +2440,7 @@ SSL 인증서 및 키 파일을 다운로드합니다.
 ### bluemix sl security cert-list 
 {: #sl_security_cert_list} 
 
-계정의 SSL 인증서를 나열합니다. 
+계정의 SSL 인증서를 나열합니다.
 ```
  bluemix sl security cert-list [OPTIONS]
 ```
@@ -2462,7 +2462,7 @@ SSL 인증서 및 키 파일을 다운로드합니다.
 ### bluemix sl security cert-remove 
 {: #sl_security_cert_remove} 
 
-SSL 인증서를 제거합니다. 
+SSL 인증서를 제거합니다.
 ```
  bluemix sl security cert-remove IDENTIFIER [OPTIONS]
 ```
@@ -2482,7 +2482,7 @@ SSL 인증서를 제거합니다.
 ### bluemix sl subnet cancel 
 {: #sl_subnet_cancel} 
 
-서브넷을 취소합니다. 
+서브넷을 취소합니다.
 ```
 bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
@@ -2502,7 +2502,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ### bluemix sl subnet create 
 {: #sl_subnet_create} 
 
-계정에 새 서브넷을 추가합니다. 
+계정에 새 서브넷을 추가합니다.
 ```
    bluemix sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
@@ -2526,7 +2526,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ### bluemix sl subnet detail 
 {: #sl_subnet_detail} 
 
-서브넷의 세부사항을 가져옵니다. 
+서브넷의 세부사항을 가져옵니다.
 ```
    bluemix sl subnet detail IDENTIFIER [OPTIONS]
 ```
@@ -2548,7 +2548,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ### bluemix sl subnet list 
 {: #sl_subnet_list} 
 
-계정의 모든 서브넷을 나열합니다. 
+계정의 모든 서브넷을 나열합니다.
 ```
    bluemix sl subnet list [OPTIONS]
 ```
@@ -2582,7 +2582,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ### bluemix sl subnet lookup 
 {: #sl_subnet_lookup} 
 
-IP 주소를 찾고 해당 서브넷 및 디바이스 정보를 표시합니다. 
+IP 주소를 찾고 해당 서브넷 및 디바이스 정보를 표시합니다.
 ```
    bluemix sl subnet lookup IP_ADDRESS
 ```
@@ -2597,7 +2597,7 @@ IP 주소를 찾고 해당 서브넷 및 디바이스 정보를 표시합니다.
 ### bluemix sl vlan create 
 {: #sl_vlan_create} 
 
-새 VLAN을 작성합니다. 
+새 VLAN을 작성합니다.
 ```
    bluemix sl vlan create [OPTIONS]
 ```
@@ -2627,7 +2627,7 @@ IP 주소를 찾고 해당 서브넷 및 디바이스 정보를 표시합니다.
 ### bluemix sl vlan cancel 
 {: #sl_vlan_cancel} 
 
-VLAN을 취소합니다. 
+VLAN을 취소합니다.
 ```
    bluemix sl vlan cancel IDENTIFIER [OPTIONS]
 ```
@@ -2647,7 +2647,7 @@ VLAN을 취소합니다.
 ### bluemix sl vlan detail 
 {: #sl_vlan_detail} 
 
-VLAN에 대한 세부사항을 가져옵니다. 
+VLAN에 대한 세부사항을 가져옵니다.
 ```
    bluemix sl vlan detail IDENTIFIER [OPTIONS]
 ```
@@ -2669,7 +2669,7 @@ VLAN에 대한 세부사항을 가져옵니다.
 ### bluemix sl vlan edit 
 {: #sl_vlan_edit} 
 
-VLAN에 대한 세부사항을 편집합니다. 
+VLAN에 대한 세부사항을 편집합니다.
 ```
    bluemix sl vlan edit IDENTIFIER [OPTIONS]
 ```
@@ -2689,7 +2689,7 @@ VLAN에 대한 세부사항을 편집합니다.
 ### bluemix sl vlan list 
 {: #sl_vlan_list} 
 
-계정의 모든 VLAN을 나열합니다. 
+계정의 모든 VLAN을 나열합니다.
 ```
  bluemix sl vlan list [OPTIONS]
 ```
@@ -2717,7 +2717,7 @@ VLAN에 대한 세부사항을 편집합니다.
 ###  bluemix sl vlan options 
 {: #sl_vlan_options} 
 
-VLAN 작성을 위한 모든 옵션을 나열합니다. 
+VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
  bluemix sl vlan options
 ```
@@ -2727,12 +2727,12 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
  bluemix sl vlan options
 ```
-이 명령은 VLAN 작성을 위한 모든 옵션(예: VLAN 유형, 데이터 센터, 서브넷 크기, 라우터 등)을 나열합니다. 
+이 명령은 VLAN 작성을 위한 모든 옵션(예: VLAN 유형, 데이터 센터, 서브넷 크기, 라우터 등)을 나열합니다.
 
 ### bluemix sl vs cancel 
 {: #sl_vs_cancel} 
 
-가상 서버 인스턴스를 취소합니다. 
+가상 서버 인스턴스를 취소합니다.
 ```
    bluemix sl vs cancel IDENTIFIER [OPTIONS]
 ```
@@ -2752,7 +2752,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs capture 
 {: #sl_vs_capture} 
 
-이미지로 가상 서버 인스턴스를 캡처합니다. 
+이미지로 가상 서버 인스턴스를 캡처합니다.
 ```
  bluemix sl vs capture IDENTIFIER [OPTIONS]
 ```
@@ -2776,7 +2776,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs create 
 {: #sl_vs_create} 
 
-가상 서버 인스턴스를 작성합니다. 
+가상 서버 인스턴스를 작성합니다.
 ```
    bluemix sl vs create [OPTIONS]
 ```
@@ -2846,7 +2846,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ###  bluemix sl vs options 
 {: #sl_vs_options} 
 
-가상 서버 인스턴스 작성을 위한 옵션을 나열합니다. 
+가상 서버 인스턴스 작성을 위한 옵션을 나열합니다.
 ```
    bluemix sl vs options [OPTIONS]
 ```
@@ -2856,12 +2856,12 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ```
  bluemix sl vs options
 ```
-이 명령은 가상 서버 인스턴스 작성을 위한 모든 옵션(예: 데이터 센터, CPU, 메모리, OS, 디스크, 네트워크 속도 등)을 나열합니다. 
+이 명령은 가상 서버 인스턴스 작성을 위한 모든 옵션(예: 데이터 센터, CPU, 메모리, OS, 디스크, 네트워크 속도 등)을 나열합니다.
 
 ### bluemix sl vs credentials 
 {: #sl_vs_credentials} 
 
-가상 서버 인스턴스 신임 정보를 나열합니다. 
+가상 서버 인스턴스 신임 정보를 나열합니다.
 ```
    bluemix sl vs credentials IDENTIFIER [OPTIONS]
 ```
@@ -2876,7 +2876,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs detail 
 {: #sl_vs_detail} 
 
-가상 서버 인스턴스에 대한 세부사항을 가져옵니다. 
+가상 서버 인스턴스에 대한 세부사항을 가져옵니다.
 ```
    bluemix sl vs detail IDENTIFIER [OPTIONS]
 ```
@@ -2898,7 +2898,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs dns-sync 
 {: #sl_vs_dns_sync} 
 
-가상 가상의 인스턴스에 대한 DNS 레코드를 동기화합니다. 
+가상 가상의 인스턴스에 대한 DNS 레코드를 동기화합니다.
 ```
    bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
@@ -2926,7 +2926,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs edit 
 {: #sl_vs_edit} 
 
-가상 서버 인스턴스의 세부사항을 편집합니다. 
+가상 서버 인스턴스의 세부사항을 편집합니다.
 ```
    bluemix sl vs edit IDENTIFIER [OPTIONS]
 ```
@@ -2958,7 +2958,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs list 
 {: #sl_vs_list} 
 
-계정의 가상 서버 인스턴스를 나열합니다. 
+계정의 가상 서버 인스턴스를 나열합니다.
 ```
    bluemix sl vs list [OPTIONS]
 ```
@@ -2998,7 +2998,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs pause 
 {: #sl_vs_pause} 
 
-활성 가상 서버 인스턴스를 일시정지합니다. 
+활성 가상 서버 인스턴스를 일시정지합니다.
 ```
    bluemix sl vs pause IDENTIFIER [OPTIONS]
 ```
@@ -3018,7 +3018,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs power-off 
 {: #sl_vs_power_off} 
 
-활성 가상 서버 인스턴스의 전원을 끕니다. 
+활성 가상 서버 인스턴스의 전원을 끕니다.
 ```
    bluemix sl vs power-off IDENTIFIER [OPTIONS]
 ```
@@ -3042,7 +3042,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs power-on 
 {: #sl_vs_power_on} 
 
-가상 서버 인스턴스의 전원을 켭니다. 
+가상 서버 인스턴스의 전원을 켭니다.
 ```
  bluemix sl vs power-on IDENTIFIER [OPTIONS]
 ```
@@ -3062,7 +3062,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs ready 
 {: #sl_vs_ready} 
 
-가상 서버 인스턴스가 사용 준비가 되었는지 확인합니다. 
+가상 서버 인스턴스가 사용 준비가 되었는지 확인합니다.
 ```
  bluemix sl vs ready IDENTIFIER [OPTIONS]
 ```
@@ -3082,7 +3082,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs reboot 
 {: #sl_vs_reboot} 
 
-활성 가상 서버 인스턴스를 다시 부팅합니다. 
+활성 가상 서버 인스턴스를 다시 부팅합니다.
 ```
  bluemix sl vs reboot IDENTIFIER [OPTIONS]
 ```
@@ -3106,7 +3106,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs reload 
 {: #sl_vs_reload} 
 
-가상 서버 인스턴스의 운영 체제를 다시 로드합니다. 
+가상 서버 인스턴스의 운영 체제를 다시 로드합니다.
 ```
  bluemix sl vs reload IDENTIFIER [OPTIONS]
 ```
@@ -3134,7 +3134,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs rescue 
 {: #sl_vs_rescue} 
 
-복구 이미지로 가상 서버 인스턴스를 다시 부팅합니다. 
+복구 이미지로 가상 서버 인스턴스를 다시 부팅합니다.
 ```
  bluemix sl vs rescue IDENTIFIER [OPTIONS]
 ```
@@ -3154,7 +3154,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs resume 
 {: #sl_vs_resume} 
 
-일시정지된 가상 서버 인스턴스를 재개합니다. 
+일시정지된 가상 서버 인스턴스를 재개합니다.
 ```
    bluemix sl vs resume IDENTIFIER [OPTIONS]
 ```
@@ -3174,7 +3174,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 ### bluemix sl vs upgrade 
 {: #sl_vs_upgrade} 
 
-가상 서버 인스턴스를 업그레이드합니다. 
+가상 서버 인스턴스를 업그레이드합니다.
 ```
    bluemix sl vs upgrade IDENTIFIER [OPTIONS]
 ```

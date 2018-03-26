@@ -10,10 +10,34 @@ CLI 및 개발 도구
 	[CF CLI 시작하기](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
 	
+	{: .navgroup id="howto"}
+	reference/bluemix_cli/download_cli.md
+	reference/bluemix_cli/extend_cli.md
+	
+        	
+	{: .topicgroup}
+	IBM Cloud Developer Tools
+		idt/setting_up_idt.md
+		idt/index.md
+		idt/vscode.md
+		idt/jetbrains.md
+		idt/local_debug.md
+        	
+	{: .topicgroup}
+	모바일용 SDK
+		sdk/index.md
+		sdk/contribute.md
+		sdk/sdk.md
+		sdk/sdk_BMSClient.md
+		sdk/sdk_network_request.md
+	
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
+	{: .navgroup-end}
+
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
-	reference/bluemix_cli/all_versions.md
-	[IBM Cloud 개발자 도구 명령](../cloudnative/idt/commands.html)
+	idt/commands.md
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
 
@@ -22,13 +46,11 @@ CLI 및 개발 도구
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Container 서비스](../containers/cs_cli_devtools.html)
-		[IBM Developer](../cloudnative/idt/index.html)
+		[컨테이너 서비스](../containers/cs_cli_devtools.html)
  		plugins/pnp/index.md
-		[IBM SDK Generator](../cloudnative/sdk/index.html)
 		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
-	
+
 	{: .topicgroup}
 	Cloud Foundry CLI 플러그인
 		plugins/bluemix_admin/index.md
@@ -37,14 +59,9 @@ CLI 및 개발 도구
 	
 	{: .topicgroup}
 	권장 개발 환경
-		[Eclipse Tools로 개발](../starters/deploy_eclipsetools.html)
-		[VSCode용 IBM Developer Tools](../cloudnative/idt/vscode.html)
-		[JetBrains용 IBM Developer Tools](../cloudnative/idt/jetbrains.html)
-	{: .navgroup-end}
-	
-	{: .navgroup id="howto"}
-	reference/bluemix_cli/download_cli.md
-	reference/bluemix_cli/extend_cli.md
-	<link toc="../monitor_log/toc.xml"/>
-	<link toc="../debug/toc.xml"/>
+		[Eclipse 도구로 개발](../starters/deploy_eclipsetools.html)
+		[IBM Cloud용 IBM Eclipse Tools로 앱 개발](../manageapps/eclipsetools/eclipsetools.html)
+		[Liberty 및 Node.js 앱 관리](../runtimes/common/app_mng.html#app_management)
+		[API Connect 개발자 툴킷](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[IBM Cloud 실시간 동기화](../services/ContinuousDelivery/bluemixlive.html)
 	{: .navgroup-end}
