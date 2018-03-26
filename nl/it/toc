@@ -1,0 +1,50 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
+CLI e strumenti di sviluppo
+
+	{: .navgroup id="learn"}
+	index.md
+	reference/bluemix_cli/get_started.md
+	[Introduzione alla CLI CF](https://github.com/cloudfoundry/cli#getting-started)
+	{: .navgroup-end}
+	
+	{: .navgroup id="reference"}
+	reference/bluemix_cli/bx_cli.md
+	reference/bluemix_cli/all_versions.md
+	[Comandi di IBM Cloud Developer Tools](../cloudnative/idt/commands.html)
+	reference/softlayer/index.md
+	reference/cfcommands/index.md
+
+	{: .topicgroup}
+	Plug-in CLI IBM Cloud
+		plugins/api-management-cliplugin/
+		plugins/auto-scaling/index.md
+		plugins/registry/index.md
+		[Container Service](../containers/cs_cli_devtools.html)
+		[IBM Developer](../cloudnative/idt/index.html)
+ 		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk/index.html)
+		[Schematics](../services/schematics/schematics_reference.html)
+		plugins/bx_vpn/index.md
+	
+	{: .topicgroup}
+	Plug-in CLI Cloud Foundry
+		plugins/bluemix_admin/index.md
+		plugins/dev_mode/index.md
+		plugins/vpn/index.md
+	
+	{: .topicgroup}
+	Ambienti di sviluppo consigliati
+		[Sviluppo con Eclipse Tools](../starters/deploy_eclipsetools.html)
+		[IBM Developer Tools per VSCode](../cloudnative/idt/vscode.html)
+		[IBM Developer Tools per JetBrains](../cloudnative/idt/jetbrains.html)
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	reference/bluemix_cli/download_cli.md
+	reference/bluemix_cli/extend_cli.md
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
+	{: .navgroup-end}
