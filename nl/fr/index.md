@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -17,12 +17,12 @@ lastupdated: "2018-01-29"
 # Présentation de l'interface de ligne de commande et des outils
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande robuste ainsi que des plug-in qui s'intègrent à l'interface CLI.
+{{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande robuste, ainsi que des plug-in et des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande. 
 
-## Interface de ligne de commande d'{{site.data.keyword.Bluemix_notm}}
+## Interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #cli}
 
-L'interface CLI {{site.data.keyword.Bluemix}} fournit une expérience de ligne de commande vous permettant de gérer les ressources de votre environnement {{site.data.keyword.Bluemix_notm}}. Elle inclut également une interface de ligne de commande Cloud Foundry, cf, dans son installation, pour la gestion des applications et des services Cloud Foundry.
+L'interface en ligne de commande {{site.data.keyword.Bluemix}} fournit une expérience de ligne de commande vous permettant de gérer les ressources de votre environnement {{site.data.keyword.Bluemix_notm}}. Elle inclut également une interface de ligne de commande Cloud Foundry, cf, dans son installation, pour la gestion des applications et des services Cloud Foundry.
 {:shortdesc}
 
 Cliquez sur une option pour commencer :
@@ -37,10 +37,10 @@ Cliquez sur une option pour commencer :
 ## {{site.data.keyword.dev_cli_notm}}
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) fournit une extension spécifique aux développement à l'interface CLI {{site.data.keyword.Bluemix}} (`bx dev`) pour permettre de créer, générer et déployer des applications natives. L'installation de l'outil IDT inclut l'interface CLI {{site.data.keyword.Bluemix_notm}} de base, plusieurs extensions, ainsi que tous les prérequis système.
+{{site.data.keyword.dev_cli_long}} (IDT) fournit une extension propre aux développeurs à l'interface de ligne de commande {{site.data.keyword.Bluemix}} (`bx dev`) pour permettre de créer, générer et déployer des applications natives. L'installation de l'outil IDT inclut l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} de base, plusieurs extensions, ainsi que tous les prérequis système. IDT fournit également des extensions à plusieurs IDE afin d'accéder directement aux commandes de l'interface de ligne de commande.
 {:shortdesc}
 
-- [Présentation et installation](/docs/cloudnative/idt/index.html) <br>
-- [Initiation](/docs/cloudnative/idt/index.html) <br>
-- [Commandes](/docs/cloudnative/idt/commands.html) <br>
-- [Développement natif cloud](/docs/cloudnative/index.html) <br>
+- [Présentation et installation](/docs/cli/idt/index.html)
+- [Initiation](/docs/cli/idt/index.html)
+- [Commandes](/docs/cli/idt/commands.html)
+- [Développement natif cloud](/docs/cli/index.html)

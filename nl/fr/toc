@@ -10,10 +10,34 @@ Interface de ligne de commande et outils de développement
 	[Initiation à l'interface CLI CF](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
 	
+	{: .navgroup id="howto"}
+	reference/bluemix_cli/download_cli.md
+	reference/bluemix_cli/extend_cli.md
+	
+        	
+	{: .topicgroup}
+	Outils pour les développeurs IBM Cloud
+		idt/setting_up_idt.md
+		idt/index.md
+		idt/vscode.md
+		idt/jetbrains.md
+		idt/local_debug.md
+        	
+	{: .topicgroup}
+	Logiciels SDK pour les applications mobiles
+		sdk/index.md
+		sdk/contribute.md
+		sdk/sdk.md
+		sdk/sdk_BMSClient.md
+		sdk/sdk_network_request.md
+	
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
+	{: .navgroup-end}
+
 	{: .navgroup id="reference"}
 	reference/bluemix_cli/bx_cli.md
-	reference/bluemix_cli/all_versions.md
-	[Commandes d'outils de développement IBM Cloud](../cloudnative/idt/commands.html)
+	idt/commands.md
 	reference/softlayer/index.md
 	reference/cfcommands/index.md
 
@@ -23,12 +47,10 @@ Interface de ligne de commande et outils de développement
 		plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container Service](../containers/cs_cli_devtools.html)
-		[IBM Developer](../cloudnative/idt/index.html)
  		plugins/pnp/index.md
-		[IBM SDK Generator](../cloudnative/sdk/index.html)
 		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
-	
+
 	{: .topicgroup}
 	Plug-in d'interface de ligne de commande Cloud Foundry
 		plugins/bluemix_admin/index.md
@@ -37,14 +59,9 @@ Interface de ligne de commande et outils de développement
 	
 	{: .topicgroup}
 	Environnements de développement recommandés
-		[Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
-		[IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
-		[IBM Developer Tools for JetBrains](../cloudnative/idt/jetbrains.html)
-	{: .navgroup-end}
-	
-	{: .navgroup id="howto"}
-	reference/bluemix_cli/download_cli.md
-	reference/bluemix_cli/extend_cli.md
-	<link toc="../monitor_log/toc.xml"/>
-	<link toc="../debug/toc.xml"/>
+		[Développement avec Eclipse Tools](../starters/deploy_eclipsetools.html)
+		[Déploiement d'applications avec IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
+		[Gestion des applications Liberty et Node.js](../runtimes/common/app_mng.html#app_management)
+		[Kit d'outils de développement API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
 	{: .navgroup-end}

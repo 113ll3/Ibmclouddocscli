@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-05"
 
 ---
 
@@ -896,27 +896,27 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 ## bluemix account space
 {: #bluemix_account_space}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf space`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf space ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window}. 
 
 
 ## bluemix account space-create
 {: #bluemix_account_space_create}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-space`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf create-space ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window}. 
 
 
 ## bluemix account space-rename
 {: #bluemix_account_space_rename}
 
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf rename-space`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf rename-space ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window}. 
 
 
 ## bluemix account space-delete
 {: #bluemix_account_space_delete}
 
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-space`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf delete-space ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window}. 
 
 ## bluemix account org-users
 {: #bluemix_account_org_users}
@@ -1996,7 +1996,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 ## bluemix iam oauth-tokens
 {: #bluemix_iam_oauth_tokens}
 
-Extraire et afficher les jetons OAuth de la session en cours. 
+Extraire et afficher les jetons OAuth de la session en cours.
 
 ```
 bluemix iam oauth-tokens
@@ -2036,7 +2036,7 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 ## bluemix iam authorization-policy-create
 {: #bluemix_iam_authorization_policy_create}
  
-Créer une règle d'autorisation permettant à une instance de service d'accéder à une autre instance de service. 
+Créer une règle d'autorisation permettant à une instance de service d'accéder à une autre instance de service.
 
 ```
 bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
@@ -2049,13 +2049,13 @@ bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME 
   <dt>SOURCE_SERVICE_NAME</dt>
   <dd>Service source dont l'accès peut être autorisé.</dd>
   <dt>TARGET_SERVICE_NAME</dt>
-  <dd>Service cible auquel le service source peut être autorisé à accéder. </dd>
+  <dd>Service cible auquel le service source peut être autorisé à accéder.</dd>
   <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>Nom de l'instance de service source ; s'il n'est pas spécifié, l'accès sera autorisé pour toutes les instances du service source. </dd>
+  <dd>Nom de l'instance de service source ; s'il n'est pas spécifié, l'accès sera autorisé pour toutes les instances du service source.</dd>
   <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>Nom de l'instance de service cible ; s'il n'est pas spécifié, l'accès sera autorisé pour toutes les instances du service cible.    </dd>
+  <dd>Nom de l'instance de service cible ; s'il n'est pas spécifié, l'accès sera autorisé pour toutes les instances du service cible.   </dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>Rôles permettant d'accéder au service source. </dd>  
+  <dd>Rôles permettant d'accéder au service source.</dd>  
 </dl>
 
 ## bluemix iam authorization-policy-delete
@@ -2098,7 +2098,7 @@ bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
 ## bluemix iam authorization-policies
 {: #bluemix_iam_authorization_policies}
 
-Répertorier les règles d'autorisation du compte en cours. 
+Répertorier les règles d'autorisation du compte en cours.
 
 ```
 bluemix iam authorization-policies
@@ -2120,12 +2120,12 @@ bluemix resource groups [--default]
 <strong>Options de commande</strong> :
 <dl>
   <dt>--default</dt>
-  <dd>Obtenir le groupe par défaut du compte en cours. </dd>
+  <dd>Obtenir le groupe par défaut du compte en cours.</dd>
 </dl>
 
 <strong>Exemples</strong> :
 
-Répertorier tous les groupes de ressources du compte actuellement ciblé : 
+Répertorier tous les groupes de ressources du compte actuellement ciblé :
 
 ```
 bluemix resource groups
@@ -2259,117 +2259,117 @@ bluemix resource quota free
 ## bluemix app push
 {: #bluemix_app_push}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf push`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf push ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window}. 
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf apps`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf apps ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window}. 
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf app`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf app ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window}. 
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf delete ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window}. 
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf rename`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf rename ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window}. 
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf start`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf start ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window}. 
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf stop`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf stop ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window}. 
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf restart`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf restart ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window}. 
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf restage`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf restage ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window}. 
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf restart-app-instance`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf restart-app-instance ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window}. 
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf events`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf events ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window}. 
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf files`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf files ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window}. 
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf logs`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf logs ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window}. 
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf env`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf env ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window}. 
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf set-env`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf set-env ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window}. 
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf unset-env`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf unset-env ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window}. 
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf stacks`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf stacks ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window}. 
 
 
 ## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf stack`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf stack ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window}. 
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-app-manifest`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf create-app-manifest ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window}. 
 
 ## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
@@ -2456,13 +2456,13 @@ bluemix app domain-cert-remove DOMAIN [-f]
 ## bluemix app routes
 {: #bluemix_app_routes}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf routes`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf routes ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window}. 
 
 
 ## bluemix app route-check
 {: #bluemix_app_route_check}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf check-route`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf check-route ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window}. 
 
 
 ## bluemix app route-map
@@ -2542,140 +2542,140 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ## bluemix app route-create
 {: #bluemix_app_route_create}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-route`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf create-route ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window}. 
 
 
 ## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-route`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf delete-route ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window}. 
 
 
 ## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-orphaned-routes`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf delete-orphaned-routes ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window}. 
 
 
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf domains`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf domains ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window}. 
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-domain`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf create-domain ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window}. 
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-domain`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf delete-domain ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window}. 
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-shared-domain`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf create-shared-domain ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window}. 
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-shared-domain`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf delete-shared-domain ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window}. 
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf marketplace`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf marketplace ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window}. 
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf services`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf services ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window}. 
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window}. 
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf create-service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window}. 
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf update-service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf update-service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window}. 
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf delete-service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window}. 
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf rename-service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf rename-service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window}. 
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf bind-service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf bind-service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window}. 
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf unbind-service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf unbind-service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window}. 
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-service-key`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf create-service-key ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window}. 
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf delete-service-key`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf delete-service-key ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window}. 
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf service-keys`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf service-keys ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window}. 
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf service-key`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf service-key ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window}. 
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf create-user-provided-service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf create-user-provided-service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window}. 
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-Cette commande possède la même fonction et les mêmes options que la commande `cf update-user-provided-service`.
+Cette commande possède la même fonction et les mêmes options que la commande [cf update-user-provided-service ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window}. 
 
 
 ## bluemix resource service-instances
@@ -3546,7 +3546,7 @@ bluemix catalog template-run pythonHelloWorld mon-app-python --no-start
 ## bluemix catalog locations
 {: #bluemix_catalog_locations}
 
-Obtenir un sous-ensemble de choix de régions dans le format de votre choix. 
+Obtenir un sous-ensemble de choix de régions dans le format de votre choix.
 
 ```
 bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
@@ -3558,7 +3558,7 @@ bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--jso
   <dt>-i, --id</dt>
   <dd>Indiquer la géographie par ID.</dd>
   <dt>-k, --kind</dt>
-  <dd>Obtenir une liste d'entrées pour le type indiqué. </dd>
+  <dd>Obtenir une liste d'entrées pour le type indiqué.</dd>
   <dt>--col</dt>
   <dd>Spécifier des colonnes supplémentaires pour la table. Actuellement "groupe", "fournisseur" et "balises".</dd>
   <dt>--json</dt>
@@ -3572,7 +3572,7 @@ bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--jso
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-Afficher l'utilisation mensuelle et les coûts liés au compte en cours. 
+Afficher l'utilisation mensuelle et les coûts liés au compte en cours.
 
 ```
 bluemix billing account-usage [-d YYYY-MM] [--json]
@@ -3624,7 +3624,7 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 ## bluemix billing resource-group-usage
 {: #bluemix_billing_resource_group_usage}
 
-Afficher l'utilisation mensuelle d'un groupe de ressources. Cette opération peut être effectuée par le propriétaire du compte ou le responsable de la facturation du groupe de ressources. 
+Afficher l'utilisation mensuelle d'un groupe de ressources. Cette opération peut être effectuée par le propriétaire du compte ou le responsable de la facturation du groupe de ressources.
 
 ```
 bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
@@ -3646,7 +3646,7 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 ## bluemix billing resource-instances-usage
 {: #bluemix_billing_resource_instances_usage}
  
- Afficher l'utilisation mensuelle des instances de ressource du compte en cours. 
+ Afficher l'utilisation mensuelle des instances de ressource du compte en cours.
  
  ```
  bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
@@ -3683,7 +3683,7 @@ bluemix plugin repos
 ## bluemix plugin repo-add
 {: #bluemix_plugin_repo_add}
 
-Ajouter un nouveau référentiel de plug-in dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. 
+Ajouter un nouveau référentiel de plug-in dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix plugin repo-add REPO_NAME REPO_URL
@@ -3697,7 +3697,7 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (obligatoire)</dt>
    <dd>Nom du référentiel à ajouter. Vous pouvez définir votre propre nom pour chaque référentiel.</dd>
    <dt>REPO_URL (obligatoire)</dt>
-   <dd>URL du référentiel à ajouter. Elle doit contenir le protocole (par exemple http://plugins.ng.bluemix.net au lieu de plugins.ng.bluemix.net). http://plugins.ng.bluemix.net est le référentiel de plug-in officiel de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. </dd>
+   <dd>URL du référentiel à ajouter. Elle doit contenir le protocole (par exemple http://plugins.ng.bluemix.net au lieu de plugins.ng.bluemix.net). http://plugins.ng.bluemix.net est le référentiel de plug-in officiel de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.</dd>
     </dl>
 
 
@@ -3804,7 +3804,7 @@ bluemix plugin repo-plugin container-service -r Bluemix
 ## bluemix plugin list
 {: #bluemix_plugin_list}
 
-Répertorier tous les plug-in installés dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. 
+Répertorier tous les plug-in installés dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix plugin list
@@ -3848,8 +3848,7 @@ Si aucune version n'est indiquée, la commande sélectionne la version la plus r
    <dt>PLUGIN_PATH|PLUGIN_NAME (obligatoire)</dt>
    <dd>Si -r <i>REPO_NAME</i> n'est pas spécifié, le plug-in est installé depuis le chemin local spécifié ou depuis l'URL distante.</dd>
    <dt>-r <i>REPO_NAME</i> (facultatif)</dt>
-   <dd>Nom du référentiel hébergeant le fichier binaire du plug-in. Si aucun référentiel n'est spécifié, la commande utilise le référentiel de plug-in par défaut 'Bluemix'.
-</dd>
+   <dd>Nom du référentiel hébergeant le fichier binaire du plug-in. Si aucun référentiel n'est spécifié, la commande utilise le référentiel de plug-in par défaut 'Bluemix'.</dd>
    <dt>-v <i>VERSION</i> (facultatif)</dt>
    <dd>Version du plug-in à installer. Si elle n'est pas fournie, la dernière version du plug-in est installée. Cette option n'est valide que si vous installez le plug-in à partir du référentiel.</dd>
    <dt>-f </dt>
@@ -3873,12 +3872,12 @@ Installer un plug-in depuis l'adresse URL distante :
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-Installer la dernière version du plug-in 'container-service' à partir du référentiel 'Bluemix' : 
+Installer la dernière version du plug-in 'container-service' à partir du référentiel 'Bluemix' :
 
 ```
 bluemix plugin install container-service -r Bluemix
 ```
-Installer la version '0.1.425' du plug-in 'container-service' à partir du référentiel de plug-in officiel : 
+Installer la version '0.1.425' du plug-in 'container-service' à partir du référentiel de plug-in officiel :
 
 ```
 bluemix plugin install container-service -v 0.1.425
@@ -3903,10 +3902,9 @@ Si aucune version n'est indiquée, la commande sélectionne la version la plus r
  <dt>PLUGIN NAME</dt>
  <dd>Nom du plug-in à mettre à jour. Si ce paramètre n'est pas spécifié, la commande recherche des mises à niveau pour tous les plug-ins installés.</dd>
  <dt>-r REPO_NAME</dt>
- <dd>Nom du référentiel hébergeant le fichier binaire du plug-in. Si aucun référentiel n'est spécifié, la commande utilise le référentiel de plug-in par défaut 'Bluemix'.
-</dd>
+ <dd>Nom du référentiel hébergeant le fichier binaire du plug-in. Si aucun référentiel n'est spécifié, la commande utilise le référentiel de plug-in par défaut 'Bluemix'.</dd>
  <dt>-v <i>VERSION</i> (facultatif)</dt>
- <dd>Version du plug-in vers laquelle effectuer la mise à jour. Si elle n'est pas indiquée, le plug-in est mis à jour vers la version disponible la plus récente. </dd>
+ <dd>Version du plug-in vers laquelle effectuer la mise à jour. Si elle n'est pas indiquée, le plug-in est mis à jour vers la version disponible la plus récente.</dd>
  <dt>--all</dt>
  <dd>Mettre à jour tous les plug-in disponibles</dd>
 </dl>
@@ -3919,7 +3917,7 @@ Rechercher toutes les mises à niveau disponibles dans le référentiel de plug-
 bluemix plugin update -r Bluemix
 ```
 
-Mettre à niveau le plug-in 'container-service' dans le référentiel de plug-in officiel vers la dernière version : 
+Mettre à niveau le plug-in 'container-service' dans le référentiel de plug-in officiel vers la dernière version :
 
 ```
 bluemix plugin update container-service
@@ -3934,7 +3932,7 @@ bluemix plugin update container-service -v 0.1.440
 ## bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
-Désinstaller le plug-in spécifié de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. 
+Désinstaller le plug-in spécifié de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix plugin uninstall PLUGIN_NAME
