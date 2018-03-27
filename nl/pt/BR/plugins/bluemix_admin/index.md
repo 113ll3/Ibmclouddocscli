@@ -162,7 +162,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 ```
 {: pre}
 
-**Nota**: para incluir usuários do ambiente Dedicated em sua conta pública do {{site.data.keyword.Bluemix_notm}}, deve-se ser um **Administrador** da conta Dedicated.
+**Nota**: para incluir usuários de ambientes dedicados à sua conta pública do {{site.data.keyword.Bluemix_notm}}, deve-se ser um **Administrador** da conta dedicada.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>

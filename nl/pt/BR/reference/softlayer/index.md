@@ -435,10 +435,10 @@ Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure a
 2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 
 Enter a number: 2
-Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]
+Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1] 
 Setting account to: 278444
 OK
-
+                              
 Softlayer API endpoint:    https://api.softlayer.com/mobile/v3.1
 Account ID:                278444
 User ID:                   12345678

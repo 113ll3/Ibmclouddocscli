@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -17,9 +17,9 @@ lastupdated: "2018-01-29"
 # Visão geral da CLI e das ferramentas
 {: #overview}
 
-O {{site.data.keyword.Bluemix_notm}} fornece uma CLI robusta, bem como os plug-ins que se integram com a CLI.
+O {{site.data.keyword.Bluemix_notm}} fornece uma CLI robusta, bem como plug-ins e extensões de ferramentas do desenvolvedor que se integram com a CLI.
 
-## {{site.data.keyword.Bluemix_notm}} CLI
+## {{site.data.keyword.Bluemix_notm}} CLI (interface da linha de comandos)
 {: #cli}
 
 A CLI do {{site.data.keyword.Bluemix}} fornece uma experiência de linha de comandos para gerenciar os recursos no ambiente do {{site.data.keyword.Bluemix_notm}}. Ela também inclui uma interface da linha de comandos do Cloud Foundry, cf, em sua instalação, para gerenciar aplicativos e serviços do Cloud Foundry.
@@ -37,10 +37,10 @@ Clique em uma opção para começar:
 ## {{site.data.keyword.dev_cli_notm}}
 {: #idt}
 
-O {{site.data.keyword.dev_cli_long}} (IDT) fornece uma extensão específica do desenvolvedor para a CLI do {{site.data.keyword.Bluemix}} (`bx dev`) para criar, construir e implementar aplicativos nativos de nuvem. A instalação do IDT inclui a CLI base do {{site.data.keyword.Bluemix_notm}}, várias extensões e todos os pré-requisitos do sistema.
+O {{site.data.keyword.dev_cli_long}} (IDT) fornece uma extensão específica do desenvolvedor para a CLI do {{site.data.keyword.Bluemix}} (`bx dev`) para criar, construir e implementar aplicativos nativos de nuvem. A instalação do IDT inclui a CLI base do {{site.data.keyword.Bluemix_notm}}, várias extensões e todos os pré-requisitos do sistema. O IDT também fornece extensões para múltiplos IDEs para acessar diretamente os comandos da CLI.
 {:shortdesc}
 
-- [Visão geral e instalação](/docs/cloudnative/idt/index.html) <br>
-- [Introdução](/docs/cloudnative/idt/index.html) <br>
-- [Comandos](/docs/cloudnative/idt/commands.html) <br>
-- [Desenvolvimento nativo de nuvem](/docs/cloudnative/index.html) <br>
+- [Visão geral e instalação](/docs/cli/idt/index.html)
+- [Introdução](/docs/cli/idt/index.html)
+- [Comandos](/docs/cli/idt/commands.html)
+- [Desenvolvimento nativo de nuvem](/docs/cli/index.html)
