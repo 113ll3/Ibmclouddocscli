@@ -65,7 +65,7 @@ Dado que un código de acceso de una sola vez recupera código de la consola de 
 
 La clave de API necesaria es la clave de API de {{site.data.keyword.Bluemix_notm}} que ha utilizado para autenticarse con la plataforma de {{site.data.keyword.Bluemix_notm}}, no la clave de API de Softlayer ni la clave de API del servicio de {{site.data.keyword.Bluemix_notm}}.
 
-1. Cree una clave de API con el mandato [`bluemix iam api-key-create`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_api_key_create). Utilice la opción `-f` para generar un archivo de claves de APIen lugar de mostrar la clave en la ventana de mandatos:
+1. Cree una clave de API con el mandato [`bluemix iam api-key-create`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_api_key_create). Utilice la opción `-f` para generar un archivo de claves de API en lugar de mostrar la clave en la ventana de mandatos:
 
    ```
    bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]

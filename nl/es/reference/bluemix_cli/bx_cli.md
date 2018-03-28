@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-05"
 
 ---
 
@@ -704,8 +704,6 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
    </dl>
 Si no se especifica ninguna opción, se visualiza la cuenta, la región, la organización y el espacio actuales.
 
-
-
 <strong>Ejemplos</strong>:
 
 Establecer la cuenta, organización y espacio actuales:
@@ -895,27 +893,27 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 ## bluemix account space
 {: #bluemix_account_space}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf space`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf space ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window}.
 
 
 ## bluemix account space-create
 {: #bluemix_account_space_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato que el mandato `cf create-space`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-space ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window}.
 
 
 ## bluemix account space-rename
 {: #bluemix_account_space_rename}
 
 
-Este mandato tiene la misma función y las mismas opciones que el mandato que el mandato `cf rename-space`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf rename-space ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window}.
 
 
 ## bluemix account space-delete
 {: #bluemix_account_space_delete}
 
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-space`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-space ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window}.
 
 ## bluemix account org-users
 {: #bluemix_account_org_users}
@@ -2150,7 +2148,7 @@ bluemix resource group NAME [--id]
 <strong>Opciones de mandato</strong>:
 <dl>
   <dt>NAME (necesario)</dt>
-  <dd>Nombre del grupo de recursos. </dd>
+  <dd>Nombre del grupo de recursos.</dd>
   <dt>--id</dt>
   <dd>Mostrar solo ID</dd>
 </dl>
@@ -2258,117 +2256,117 @@ bluemix resource quota free
 ## bluemix app push
 {: #bluemix_app_push}
 
-Este mandato tiene la misma función y opciones que el mandato `cf push`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf push ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window}.
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf apps`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf apps ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window}.
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-Este mandato tiene la misma función y opciones que el mandato `cf app`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf app ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window}.
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-Este mandato tiene la misma función y opciones que el mandato `cf delete`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window}.
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf rename`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf rename ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window}.
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-Este mandato tiene la misma función y opciones que el mandato `cf start`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf start ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window}.
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf stop`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf stop ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window}.
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-Este mandato tiene la misma función y opciones que el mandato `cf restart`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf restart ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window}.
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf restage`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf restage ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window}.
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-Este mandato tiene la misma función y opciones que el mandato `cf restart-app-instance`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf restart-app-instance ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window}.
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf events`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf events ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window}.
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-Este mandato tiene la misma función y opciones que el mandato `cf files`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf files ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window}.
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf logs`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf logs ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window}.
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-Este mandato tiene la misma función y opciones que el mandato `cf env`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf env ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window}.
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf set-env`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf set-env ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window}.
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-Este mandato tiene la misma función y opciones que el mandato `cf unset-env`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf unset-env ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window}.
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf stacks`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf stacks ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window}.
 
 
 ## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
-Este mandato tiene la misma función y opciones que el mandato `cf stack`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf stack ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window}.
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-app-manifest`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-app-manifest ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window}.
 
 ## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
@@ -2455,13 +2453,13 @@ bluemix app domain-cert-remove DOMAIN [-f]
 ## bluemix app routes
 {: #bluemix_app_routes}
 
-Este mandato tiene la misma función y opciones que el mandato `cf routes`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf routes ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window}.
 
 
 ## bluemix app route-check
 {: #bluemix_app_route_check}
 
-Este mandato tiene la misma función y opciones que el mandato `cf check-route`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf check-route ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window}.
 
 
 ## bluemix app route-map
@@ -2541,140 +2539,140 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ## bluemix app route-create
 {: #bluemix_app_route_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-route`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-route ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window}.
 
 
 ## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
-Este mandato tiene la misma función y opciones que el mandato `cf delete-route`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-route ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window}.
 
 
 ## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
-Este mandato tiene la misma función y opciones que el mandato `cf delete-orphaned-routes`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-orphaned-routes ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window}.
 
 
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf domains`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf domains ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window}.
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-domain`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-domain ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window}.
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-domain`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-domain ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window}.
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-shared-domain`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-shared-domain ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window}.
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-shared-domain`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-shared-domain ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window}.
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-Este mandato tiene la misma función y opciones que el mandato `cf marketplace`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf marketplace ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window}.
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf services`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf services ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window}.
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-Este mandato tiene la misma función y opciones que el mandato `cf service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window}.
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window}.
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-Este mandato tiene la misma función y opciones que el mandato `cf update-service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf update-service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window}.
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window}.
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-Este mandato tiene la misma función y opciones que el mandato `cf rename-service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf rename-service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window}.
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf bind-service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf bind-service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window}.
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-Este mandato tiene la misma función y opciones que el mandato `cf unbind-service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf unbind-service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window}.
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-service-key`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-service-key ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window}.
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-Este mandato tiene la misma función y opciones que el mandato `cf delete-service-key`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-service-key ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window}.
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf service-keys`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf service-keys ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window}.
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-Este mandato tiene la misma función y opciones que el mandato `cf service-key`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf service-key ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window}.
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-user-provided-service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-user-provided-service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window}.
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-Este mandato tiene la misma función y opciones que el mandato `cf update-user-provided-service`.
+Este mandato tiene la misma función y las mismas opciones que el mandato [cf update-user-provided-service ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window}.
 
 
 ## bluemix resource service-instances
@@ -3634,7 +3632,7 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 
 <dl>
   <dt>GROUP_NAME (necesario)</dt>
-  <dd>Nombre del grupo de recursos. </dd>
+  <dd>Nombre del grupo de recursos.</dd>
   <dt>-d MONTH_DATE (opcional)</dt>
   <dd>Mostrar datos para el mes y la fecha especificados utilizando el formato AAAA-MM. Si no se especifica, se muestra el uso en el mes actual.</dd>
   <dt>--json (opcional)</dt>
@@ -3849,7 +3847,7 @@ Si no se especifica ninguna versión, el mandato selecciona la versión disponib
    <dd>Nombre del repositorio en el que se encuentra el binario del plug-in. Si no se especifica ningún repositorio, el mandato utilizará el repositorio de plug-in predeterminado, 'Bluemix'.</dd>
    <dt>-v <i>VERSION</i> (opcional)</dt>
    <dd>Versión del plug-in que se debe instalar. Si no se proporciona, se instalará la versión más reciente del plug-in. Esta opción sólo es válida al instalar el plug-in desde el repositorio.</dd>
-   <dt>-f</dt>
+   <dt>-f </dt>
    <dd>Forzar la instalación del plugin sin confirmación.</dd>
     </dl>
     
