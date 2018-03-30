@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-03-21"
+lastupdated: "2018-03-30"
 
 ---
 
@@ -3118,7 +3118,7 @@ bluemix resource service-alias ALIAS_NAME [--id]
 <strong>Examples</strong>:
 Show details of service alias `my-service-alias`:
 ```
-bluemix resource service-aliase  my-service-alias
+bluemix resource service-alias  my-service-alias
 ```
 
 ## bluemix resource service-alias-create
@@ -3151,7 +3151,7 @@ bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance
 <strong>Examples</strong>:
 Create a service alias named `my-service-alias` of service instance `my-service-instance`:
 ```
-bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
+bluemix resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
 ## bluemix resource service-alias-update
