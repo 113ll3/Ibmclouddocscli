@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-02-01"
+lastupdated: "2018-03-30"
 ---
 
 {:new_window: target="_blank"}
@@ -3092,7 +3092,7 @@ bluemix sl vs reboot IDENTIFIER [OPTIONS]
 <dt>--hard</dt>
 <dd>Perform a hard reboot.</dd>
 <dt>--soft</dt>
-<dd>Perform a hard reboot.</dd>
+<dd>Perform a soft reboot.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
