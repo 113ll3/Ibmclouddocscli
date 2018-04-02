@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-05"
 
 ---
 
@@ -897,27 +897,27 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 ## bluemix account space
 {: #bluemix_account_space}
 
-このコマンドの機能とオプションは `cf space` コマンドと同じです。
+このコマンドの機能とオプションは [cf space ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} コマンドと同じです。
 
 
 ## bluemix account space-create
 {: #bluemix_account_space_create}
 
-このコマンドの機能とオプションは `cf create-space` コマンドと同じです。
+このコマンドの機能とオプションは [cf create-space![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} コマンドと同じです。
 
 
 ## bluemix account space-rename
 {: #bluemix_account_space_rename}
 
 
-このコマンドの機能とオプションは `cf rename-space` コマンドと同じです。
+このコマンドの機能とオプションは [cf rename-space![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} コマンドと同じです。
 
 
 ## bluemix account space-delete
 {: #bluemix_account_space_delete}
 
 
-このコマンドの機能とオプションは `cf delete-space` コマンドと同じです。
+このコマンドの機能とオプションは [cf delete-space![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} コマンドと同じです。
 
 ## bluemix account org-users
 {: #bluemix_account_org_users}
@@ -1210,7 +1210,7 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix account user-invite
 {: #bluemix_account_user_invite}
 
-ユーザーをアカウントに招待します。この操作は、アカウントの所有者のみが実行できます。
+ユーザーをアカウントに招待します。 この操作は、アカウントの所有者のみが実行できます。
 
 ```
 bluemix account user-invite USER_EMAIL
@@ -2054,7 +2054,7 @@ bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME 
   <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
   <dd>ソース・サービスのインスタンス名。指定されない場合、ソース・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
   <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>ターゲット・サービスのインスタンス名。指定されない場合、ターゲット・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
+  <dd>ターゲット・サービスのインスタンス名。指定されない場合、ターゲット・サービスのすべてのインスタンスがアクセスを許可されます。   </dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>ソース・サービスのアクセス権限を提供する役割。</dd>  
 </dl>
@@ -2260,117 +2260,117 @@ bluemix resource quota free
 ## bluemix app push
 {: #bluemix_app_push}
 
-このコマンドの機能とオプションは `cf push` コマンドと同じです。
+このコマンドの機能とオプションは [cf push![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-このコマンドの機能とオプションは `cf apps` コマンドと同じです。
+このコマンドの機能とオプションは [cf apps![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-このコマンドの機能とオプションは `cf app` コマンドと同じです。
+このコマンドの機能とオプションは [cf app![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-このコマンドの機能とオプションは `cf delete` コマンドと同じです。
+このコマンドの機能とオプションは [cf delete![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-このコマンドの機能とオプションは `cf rename` コマンドと同じです。
+このコマンドの機能とオプションは [cf rename![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-このコマンドの機能とオプションは `cf start` コマンドと同じです。
+このコマンドの機能とオプションは [cf start![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-このコマンドの機能とオプションは `cf stop` コマンドと同じです。
+このコマンドの機能とオプションは [cf stop![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-このコマンドの機能とオプションは `cf restart` コマンドと同じです。
+このコマンドの機能とオプションは [cf restart![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-このコマンドの機能とオプションは `cf restage` コマンドと同じです。
+このコマンドの機能とオプションは [cf restage![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-このコマンドの機能とオプションは `cf restart-app-instance` コマンドと同じです。
+このコマンドの機能とオプションは [cf restart-app-instance![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-このコマンドの機能とオプションは `cf events` コマンドと同じです。
+このコマンドの機能とオプションは [cf events![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-このコマンドの機能とオプションは `cf files` コマンドと同じです。
+このコマンドの機能とオプションは [cf files![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-このコマンドの機能とオプションは `cf logs` コマンドと同じです。
+このコマンドの機能とオプションは [cf logs![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-このコマンドの機能とオプションは `cf env` コマンドと同じです。
+このコマンドの機能とオプションは [cf env![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-このコマンドの機能とオプションは `cf set-env` コマンドと同じです。
+このコマンドの機能とオプションは [cf set-env![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-このコマンドの機能とオプションは `cf unset-env` コマンドと同じです。
+このコマンドの機能とオプションは [cf unset-env![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-このコマンドの機能とオプションは `cf stacks` コマンドと同じです。
+このコマンドの機能とオプションは [cf stacks![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
-このコマンドの機能とオプションは `cf stack` コマンドと同じです。
+このコマンドの機能とオプションは [cf stack![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-このコマンドの機能とオプションは `cf create-app-manifest` コマンドと同じです。
+このコマンドの機能とオプションは [cf create-app-manifest![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} コマンドと同じです。
 
 ## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
@@ -2457,13 +2457,13 @@ bluemix app domain-cert-remove DOMAIN [-f]
 ## bluemix app routes
 {: #bluemix_app_routes}
 
-このコマンドの機能とオプションは `cf routes` コマンドと同じです。
+このコマンドの機能とオプションは [cf routes![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app route-check
 {: #bluemix_app_route_check}
 
-このコマンドの機能とオプションは `cf check-route` コマンドと同じです。
+このコマンドの機能とオプションは [cf check-route![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app route-map
@@ -2544,140 +2544,140 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ## bluemix app route-create
 {: #bluemix_app_route_create}
 
-このコマンドの機能とオプションは `cf create-route` コマンドと同じです。
+このコマンドの機能とオプションは [cf create-route![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
-このコマンドの機能とオプションは `cf delete-route` コマンドと同じです。
+このコマンドの機能とオプションは [cf delete-route![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
-このコマンドの機能とオプションは `cf delete-orphaned-routes` コマンドと同じです。
+このコマンドの機能とオプションは [cf delete-orphaned-routes![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-このコマンドの機能とオプションは `cf domains` コマンドと同じです。
+このコマンドの機能とオプションは [cf domains![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-このコマンドの機能とオプションは `cf create-domain` コマンドと同じです。
+このコマンドの機能とオプションは [cf create-domain![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-このコマンドの機能とオプションは `cf delete-domain` コマンドと同じです。
+このコマンドの機能とオプションは [cf delete-domain![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-このコマンドの機能とオプションは `cf create-shared-domain` コマンドと同じです。
+このコマンドの機能とオプションは [cf create-shared-domain![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window} コマンドと同じです。
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-このコマンドの機能とオプションは `cf delete-shared-domain` コマンドと同じです。
+このコマンドの機能とオプションは [cf delete-shared-domain![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-このコマンドの機能とオプションは `cf marketplace` コマンドと同じです。
+このコマンドの機能とオプションは [cf marketplace![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-このコマンドの機能とオプションは `cf services` コマンドと同じです。
+このコマンドの機能とオプションは [cf services![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-このコマンドの機能とオプションは `cf service` コマンドと同じです。
+このコマンドの機能とオプションは [cf service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-このコマンドの機能とオプションは `cf create-service` コマンドと同じです。
+このコマンドの機能とオプションは [cf create-service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-このコマンドの機能とオプションは `cf update-service` コマンドと同じです。
+このコマンドの機能とオプションは [cf update-service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-このコマンドの機能とオプションは `cf delete-service` コマンドと同じです。
+このコマンドの機能とオプションは [cf delete-service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-このコマンドの機能とオプションは `cf rename-service` コマンドと同じです。
+このコマンドの機能とオプションは [cf rename-service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-このコマンドの機能とオプションは `cf bind-service` コマンドと同じです。
+このコマンドの機能とオプションは [cf bind-service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-このコマンドの機能とオプションは `cf unbind-service` コマンドと同じです。
+このコマンドの機能とオプションは [cf unbind-service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-このコマンドの機能とオプションは `cf create-service-key` コマンドと同じです。
+このコマンドの機能とオプションは [cf create-service-key![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-このコマンドの機能とオプションは `cf delete-service-key` コマンドと同じです。
+このコマンドの機能とオプションは [cf delete-service-key![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-このコマンドの機能とオプションは `cf service-keys` コマンドと同じです。
+このコマンドの機能とオプションは [cf service-keys![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-このコマンドの機能とオプションは `cf service-key` コマンドと同じです。
+このコマンドの機能とオプションは [cf service-key![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-このコマンドの機能とオプションは `cf create-user-provided-service` コマンドと同じです。
+このコマンドの機能とオプションは [cf create-user-provided-service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-このコマンドの機能とオプションは `cf update-user-provided-service` コマンドと同じです。
+このコマンドの機能とオプションは [cf update-user-provided-service![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window} コマンドと同じです。
 
 
 ## bluemix resource service-instances
@@ -3627,7 +3627,7 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 ## bluemix billing resource-group-usage
 {: #bluemix_billing_resource_group_usage}
 
-リソース・グループの月次使用量を表示します。この操作を実行できるのは、アカウント所有者または組織の請求処理管理者のみになります。
+リソース・グループの月次使用量を表示します。 この操作を実行できるのは、アカウント所有者または組織の請求処理管理者のみになります。
 
 ```
 bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]

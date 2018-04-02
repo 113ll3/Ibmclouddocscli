@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-01-29"
 # CLI およびツールの概要
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} には、堅固な CLI、および CLI と統合されるプラグインが用意されています。
+{{site.data.keyword.Bluemix_notm}} には、堅固な CLI、および CLI と統合されるプラグインと開発者ツール拡張機能が用意されています。
 
 ## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
@@ -37,10 +37,9 @@ lastupdated: "2018-01-29"
 ## {{site.data.keyword.dev_cli_notm}}
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) は、クラウド・ネイティブ・アプリを作成、ビルド、およびデプロイするための、{{site.data.keyword.Bluemix}} CLI に対する開発者固有の拡張機能 (`bx dev`) を提供します。 IDT のインストールには、基本の {{site.data.keyword.Bluemix_notm}} CLI、複数の拡張機能、およびすべてのシステムの前提条件が含まれます。
-{:shortdesc}
+{{site.data.keyword.dev_cli_long}} (IDT) は、クラウド・ネイティブ・アプリを作成、ビルド、およびデプロイするための、{{site.data.keyword.Bluemix}} CLI に対する開発者固有の拡張機能 (`bx dev`) を提供します。 IDT のインストールには、基本の {{site.data.keyword.Bluemix_notm}} CLI、複数の拡張機能、およびすべてのシステムの前提条件が含まれます。IDT には、CLI コマンドに直接アクセスするための、複数の IDE 用拡張機能も用意されています。{:shortdesc}
 
-- [概要とインストール](/docs/cloudnative/idt/index.html) <br>
-- [開始](/docs/cloudnative/idt/index.html) <br>
-- [コマンド](/docs/cloudnative/idt/commands.html) <br>
-- [クラウド・ネイティブの開発](/docs/cloudnative/index.html) <br>
+- [概要とインストール](/docs/cli/idt/index.html)
+- [開始](/docs/cli/idt/index.html)
+- [コマンド](/docs/cli/idt/commands.html)
+- [クラウド・ネイティブの開発](/docs/cli/index.html)

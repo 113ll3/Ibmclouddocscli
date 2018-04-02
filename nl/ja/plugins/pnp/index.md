@@ -32,7 +32,7 @@ lastupdated: "2018-02-15"
 bluemix plugin uninstall private-network-peering
 ```
 ### ローカル・インストール
-ご使用のプラットフォーム用のプライベート・ネットワーク・ピアリング・プラグインを [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}からダウンロードします。
+ご使用のプラットフォーム用のプライベート・ネットワーク・ピアリング・プラグインを [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}からダウンロードします。
 
 以下のコマンドを使用して、プライベート・ネットワーク・ピアリング・プラグインをインストールします。
 
