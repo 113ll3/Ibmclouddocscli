@@ -155,7 +155,7 @@ Visualizza tutte le immagini nel tuo account {{site.data.keyword.Bluemix_notm}}.
 <p>**Nota:** il nome dell'immagine è la combinazione del contenuto delle colonne Repository e Tag nel formato `repository:tag`. </p> 
 
 ```
- bx cr image-list [--no-trunc] [--format FORMATO] [-q, --quiet] [--restrict LIMITAZIONE] [--include-ibm]
+ bx cr image-list [--no-trunc] [--format FORMATO] [-q, --quiet] [--restrict LIMITAZIONE] [--include-ibm] 
 ```
 {: codeblock}
 
@@ -437,7 +437,7 @@ bx cr token-rm TOKEN [TOKEN...]
 Visualizza un report di valutazione delle vulnerabilità per le tue immagini.
 
 ```
-bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--configuration-issues | -c] [--output FORMATO | -o FORMATO] IMMAGINE [IMMAGINE...]
+bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--configuration-issues | -c] [--output FORMATO | -o FORMATO] IMMAGINE [IMMAGINE...] 
 ```
 {: codeblock}
 

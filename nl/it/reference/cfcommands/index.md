@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2017
+  years: 2016, 2018
 
-lastupdated: "2017-05-03"
+lastupdated: "2018-03-01"
 
 
 ---
@@ -22,6 +22,8 @@ lastupdated: "2017-05-03"
 
 L'interfaccia di riga comando (CLI) Cloud Foundry (cf) fornisce una serie di comandi per gestire le tue applicazioni. Le seguenti informazioni elencano i comandi cf più utilizzati per la gestione delle applicazioni e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi. Per elencare tutti i comandi cf e le informazioni di guida associate, utilizza `cf help`. Utilizza `cf nome_comando -h` per visualizzare delle informazioni di guida dettagliate per uno specifico comando.
 {: shortdesc}
+
+Per un elenco più dettagliato di comandi `cf CLI`, consulta la community [Cloud Foundry CLI Reference Guide ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}.
 
 **Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli,vedi [Utilizzo della CLI cf con un server proxy HTTP ![Icona link esterno](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
@@ -90,7 +92,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>BluemixServerURL (facoltativo)</dt>
@@ -150,7 +152,7 @@ cf bind-service nome_applicazione istanza_servizio
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_applicazione (obbligatorio)</dt>
@@ -171,7 +173,8 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-Crea un'istanza del servizio
+Crea un'istanza
+del servizio.
 
 ```
 cf create-service nome_servizio piano_servizio istanza_servizio
@@ -179,7 +182,7 @@ cf create-service nome_servizio piano_servizio istanza_servizio
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_servizio (obbligatorio)</dt>
@@ -211,7 +214,7 @@ cf create-space nome_spazio [-o] [-q]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_spazio (obbligatorio)</dt>
@@ -243,7 +246,7 @@ cf delete nome_applicazione [-f] [-r]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_applicazione (obbligatorio)</dt>
@@ -403,7 +406,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>*-a* https://api.{DomainName} (facoltativo)</dt>

@@ -435,7 +435,7 @@ Scegli come configurare l'autenticazione dell'infrastruttura {{site.data.keyword
 2. Utilizza {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 
 Immetti un numero: 2
-URL endpoint API Softlayer: [https://api.softlayer.com/mobile/v3.1]
+URL endpoint API Softlayer: [https://api.softlayer.com/mobile/v3.1] 
 Impostazione dell'account su: 278444
 OK
                               

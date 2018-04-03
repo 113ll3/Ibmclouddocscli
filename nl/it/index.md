@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-01-29"
 # Panoramica della CLI e degli strumenti
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} fornisce una solida CLI e plug-in che si integrano con la CLI.
+{{site.data.keyword.Bluemix_notm}} fornisce una solida CLI nonché i plug-in e le estensioni dello strumento per sviluppatori che si integrano con la CLI.
 
 ## {{site.data.keyword.Bluemix_notm}}CLI
 {: #cli}
@@ -37,10 +37,10 @@ Fai clic su un'opzione per iniziare:
 ## {{site.data.keyword.dev_cli_notm}}
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) fornisce un'estensione specifica per sviluppatori alla CLI {{site.data.keyword.Bluemix}} (`bx dev`) per creare, compilare e distribuire applicazioni native cloud. L'installazione di IDT include la CLI {{site.data.keyword.Bluemix_notm}} di base, diverse estensioni e tutti i prerequisiti di sistema.
+{{site.data.keyword.dev_cli_long}} (IDT) fornisce un'estensione specifica per sviluppatori alla CLI {{site.data.keyword.Bluemix}} (`bx dev`) per creare, compilare e distribuire applicazioni native cloud. L'installazione di IDT include la CLI {{site.data.keyword.Bluemix_notm}} di base, diverse estensioni e tutti i prerequisiti di sistema. IDT fornisce anche le estensioni a più IDE per accedere direttamente ai comandi CLI.
 {:shortdesc}
 
-- [Panoramica e installazione](/docs/cloudnative/idt/index.html) <br>
-- [Introduzione](/docs/cloudnative/idt/index.html) <br>
-- [Comandi](/docs/cloudnative/idt/commands.html) <br>
-- [Sviluppo nativo cloud](/docs/cloudnative/index.html) <br>
+- [Panoramica e installazione](/docs/cli/idt/index.html)
+- [Inizia subito](/docs/cli/idt/index.html)
+- [Comandi](/docs/cli/idt/commands.html)
+- [Sviluppo nativo cloud](/docs/cli/index.html)
