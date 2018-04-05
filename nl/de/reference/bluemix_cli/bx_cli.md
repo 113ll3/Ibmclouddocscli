@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-05"
 
 ---
 
@@ -894,27 +894,27 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 ## bluemix account space
 {: #bluemix_account_space}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf space`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf space ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window}. 
 
 
 ## bluemix account space-create
 {: #bluemix_account_space_create}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-space`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf create-space ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window}. 
 
 
 ## bluemix account space-rename
 {: #bluemix_account_space_rename}
 
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf rename-space`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf rename-space ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window}. 
 
 
 ## bluemix account space-delete
 {: #bluemix_account_space_delete}
 
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-space`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf delete-space ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window}. 
 
 ## bluemix account org-users
 {: #bluemix_account_org_users}
@@ -1670,21 +1670,21 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dt>-f, --file <i>FILE</i> (optional)</dt>
 <dd>Die JSON-Datei der Richtliniendefinition</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (optional)</dt>
-<dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
-<dd>Der Servicename der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Der Servicename der Richtliniendefinition. Dieser kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (optional)</dt>
-<dd>Die Serviceinstanz der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Die Serviceinstanz der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--region <i>REGION</i> (optional)</dt>
-<dd>Die Region der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Die Region der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (optional)</dt>
-<dd>Der Ressourcentyp der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Der Ressourcentyp der Richtliniendefinition. Dieser kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--resource <i>RESOURCE</i> (optional)</dt>
-<dd>Die Resource der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Die Resource der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (optional)</dt>
-<dd>Der Name der Ressourcengruppe. Dieser ist gegenseitig ausschließend mit den Flags '-f, --file', '--resource' und '--resource-group-id'.</dd>
+<dd>Der Name der Ressourcengruppe. Dieser kann nur mit den Flags '-f, --file', '--resource' und '--resource-group-id' verwendet werden.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (optional)</dt>
-<dd>Die ID der Ressourcengruppe. Diese ist gegenseitig ausschließend mit den Flags '-f, --file', '--resource' und '--resource-group-name'.</dd>
+<dd>Die ID der Ressourcengruppe. Diese kann nur mit den Flags '-f, --file', '--resource' und '--resource-group-name' verwendet werden.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -1748,21 +1748,21 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dt>-f, --file <i>FILE</i> (optional)</dt>
 <dd>Die JSON-Datei der Richtliniendefinition</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (optional)</dt>
-<dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (optional)</dt>
-<dd>Der Servicename der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Der Servicename der Richtliniendefinition. Dieser kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (optional)</dt>
-<dd>Die Serviceinstanz der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Die Serviceinstanz der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--region <i>REGION</i> (optional)</dt>
-<dd>Die Region der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Die Region der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (optional)</dt>
-<dd>Der Ressourcentyp der Richtliniendefinition. Dieser ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Der Ressourcentyp der Richtliniendefinition. Dieser kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--resource <i>RESOURCE</i> (optional)</dt>
-<dd>Die Resource der Richtliniendefinition. Diese ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+<dd>Die Resource der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (optional)</dt>
-<dd>Der Name der Ressourcengruppe. Dieser ist gegenseitig ausschließend mit den Flags '-f, --file', '--resource' und '--resource-group-id'.</dd>
+<dd>Der Name der Ressourcengruppe. Dieser kann nur mit den Flags '-f, --file', '--resource' und '--resource-group-id' verwendet werden.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (optional)</dt>
-<dd>Die ID der Ressourcengruppe. Diese ist gegenseitig ausschließend mit den Flags '-f, --file', '--resource' und '--resource-group-name'.</dd>
+<dd>Die ID der Ressourcengruppe. Diese kann nur mit den Flags '-f, --file', '--resource' und '--resource-group-name' verwendet werden.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -1883,23 +1883,23 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
   <dt>SERVICE_ID_NAME (erforderlich)</dt>
   <dd>Der Name der Service-ID</dd>
   <dt>-f, --file</dt>
-  <dd>Die JSON-Datei der Richtliniendefinition. Dies ist gegenseitig ausschließend mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' und '--resource-group-id'.</dd>
+  <dd>Die JSON-Datei der Richtliniendefinition. Dies kann nur mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' und '--resource-group-id' verwendet werden.</dd>
   <dt>-r, --roles</dt>
-  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>--service-name</dt>
-  <dd>Der Servicename der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Der Servicename der Richtliniendefinition. Dieser kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>--service-instance</dt>
-  <dd>Die Serviceinstanz der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Serviceinstanz der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>-region</dt>
-  <dd>Die Region der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Region der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>--resource-type</dt>
-  <dd>Der Ressourcentyp der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Der Ressourcentyp der Richtliniendefinition. Dieser kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>--resource</dt>
-  <dd>Die Ressource der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Ressource der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>--resource-group-name</dt>
-  <dd>Name der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '-f, --file' und '--resource-group-id'.</dd>
+  <dd>Name der Ressourcengruppe. Diese Option kann nur mit den Flags '-f, --file' und '--resource-group-id' verwendet werden. </dd>
   <dt>--resource-group-id </dt>
-  <dd>ID der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '-f, --file' und '--resource-group-name'.</dd>
+  <dd>ID der Ressourcengruppe. Diese Option kann nur mit den Flags '-f, --file' und '--resource-group-name' verwendet werden.</dd>
   <dt>-F, --force</dt>
   <dd>Die Servicerichtlinie ohne Bestätigung erstellen</dd>
 </dl>
@@ -1933,23 +1933,23 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
   <dt>-v, --version</dt>
   <dd>Die Version der Servicerichtlinie</dd>
   <dt>-f, --file</dt>
-  <dd>Die JSON-Datei der Richtliniendefinition. Dies ist gegenseitig ausschließend mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' und 'resource-group-id'.</dd>
+  <dd>Die JSON-Datei der Richtliniendefinition. Diese kann nur mit den Flags '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' und 'resource-group-id' verwendet werden.</dd>
   <dt>-r, --roles</dt>
-  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Rollennamen der Richtliniendefinition. Führen Sie für unterstützte Rollen eines bestimmten Service 'bluemix iam roles --service SERVICE_NAME' aus. Diese Option kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>-service-name</dt>
-  <dd>Der Servicename der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Der Servicename der Richtliniendefinition. Dieser kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>-service-instance</dt>
-  <dd>Die Serviceinstanz der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Serviceinstanz der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>-region</dt>
-  <dd>Die Region der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Region der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>-resource-type</dt>
-  <dd>Der Ressourcentyp der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Der Ressourcentyp der Richtliniendefinition. Dieser kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>-resource</dt>
-  <dd>Die Ressource der Richtliniendefinition. Dies ist gegenseitig ausschließend mit dem Flag '-f, --file'.</dd>
+  <dd>Die Ressource der Richtliniendefinition. Diese kann nur mit dem Flag '-f, --file' verwendet werden.</dd>
   <dt>--resource-group-name</dt>
-  <dd>Name der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '-f, --file' und '--resource-group-id'.</dd>
+  <dd>Name der Ressourcengruppe. Diese Option kann nur mit den Flags '-f, --file' und '--resource-group-id' verwendet werden.</dd>
   <dt>--resource-group-id </dt>
-  <dd>ID der Ressourcengruppe. Diese Option ist gegenseitig ausschließend mit '-f, --file' und '--resource-group-name'.</dd>
+  <dd>ID der Ressourcengruppe. Diese Option kann nur mit den Flags '-f, --file' und '--resource-group-name' verwendet werden.</dd>
   <dt>-F, --force</dt>
   <dd>Die Servicerichtlinie ohne Bestätigung aktualisieren</dd>
 </dl>
@@ -2034,7 +2034,7 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 ## bluemix iam authorization-policy-create
 {: #bluemix_iam_authorization_policy_create}
  
-Berechtigungsrichtlinie erstellen, um den Zugriff einer Serviceinstanz auf eine andere Serviceinstanz zu ermöglichen. 
+Berechtigungsrichtlinie erstellen, um den Zugriff einer Serviceinstanz auf eine andere Serviceinstanz zu ermöglichen.
 
 ```
 bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
@@ -2051,7 +2051,7 @@ bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME 
   <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
   <dd>Instanzname des Quellenservice. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Quellenservice Zugriffsberechtigung.</dd>
   <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>Instanzname des Zielservice. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Zielservice Zugriffsberechtigung.    </dd>
+  <dd>Instanzname des Zielservice. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Zielservice Zugriffsberechtigung.   </dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>Die Rollen, die Zugriff für den Quellenservice bereitstellen.</dd>  
 </dl>
@@ -2257,117 +2257,117 @@ bluemix resource quota free
 ## bluemix app push
 {: #bluemix_app_push}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf push`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf push ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window}. 
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf apps`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf apps ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window}. 
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf app`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf app ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window}. 
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf delete ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window}. 
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf rename`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf rename ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window}. 
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf start`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf start ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window}. 
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf stop`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf stop ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window}. 
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf restart`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf restart ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window}. 
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf restage`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf restage ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window}. 
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf restart-app-instance`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf restart-app-instance ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window}. 
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf events`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf events ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window}. 
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf files`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf files ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window}. 
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf logs`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf logs ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window}. 
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf env`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf env ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window}. 
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf set-env`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf set-env ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window}. 
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf unset-env`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf unset-env ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window}. 
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf stacks`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf stacks ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window}. 
 
 
 ## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf stack`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf stack ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window}. 
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-app-manifest`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf create-app-manifest ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window}. 
 
 ## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
@@ -2454,13 +2454,13 @@ bluemix app domain-cert-remove DOMAIN [-f]
 ## bluemix app routes
 {: #bluemix_app_routes}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf routes`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf routes ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window}. 
 
 
 ## bluemix app route-check
 {: #bluemix_app_route_check}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf check-route`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf check-route ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window}. 
 
 
 ## bluemix app route-map
@@ -2540,140 +2540,140 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ## bluemix app route-create
 {: #bluemix_app_route_create}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-route`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf create-route ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window}. 
 
 
 ## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-route`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf delete-route ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window}. 
 
 
 ## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-orphaned-routes`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf delete-orphaned-routes ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window}. 
 
 
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf domains`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf domains ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window}. 
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-domain`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf create-domain ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window}. 
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-domain`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf delete-domain ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window}. 
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-shared-domain`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf create-shared-domain ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window}. 
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-shared-domain`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf delete-shared-domain ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window}. 
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf marketplace`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf marketplace ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window}. 
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf services`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf services ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window}. 
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window}. 
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf create-service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window}. 
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf update-service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf update-service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window}. 
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf delete-service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window}. 
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf rename-service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf rename-service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window}. 
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf bind-service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf bind-service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window}. 
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf unbind-service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf unbind-service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window}. 
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-service-key`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf create-service-key ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window}. 
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf delete-service-key`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf delete-service-key ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window}. 
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf service-keys`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf service-keys ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window}. 
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf service-key`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf service-key ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window}. 
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf create-user-provided-service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf create-user-provided-service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window}. 
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `cf update-user-provided-service`.
+Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf update-user-provided-service ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window}. 
 
 
 ## bluemix resource service-instances
@@ -3104,7 +3104,7 @@ bluemix resource service-alias ALIAS_NAME [--id]
 <strong>Beispiele</strong>:
 Details des Servicealias `my-service-alias` anzeigen:
 ```
-bluemix resource service-aliase  my-service-alias
+bluemix resource service-alias  my-service-alias
 ```
 
 ## bluemix resource service-alias-create
@@ -3137,7 +3137,7 @@ bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance
 <strong>Beispiele</strong>:
 Servicealias mit dem Namen `my-service-alias` der Serviceinstanz `my-service-instance` erstellen:
 ```
-bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
+bluemix resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
 ## bluemix resource service-alias-update

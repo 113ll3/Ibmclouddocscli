@@ -435,11 +435,11 @@ Konfiguration der Authentifizierung der Infrastruktur für {{site.data.keyword.B
 2. {{site.data.keyword.Bluemix_notm}}-Single Sign-on verwenden
 
 Geben Sie eine Zahl ein: 2
-Softlayer-API-Endpunkt-URL: [https://api.softlayer.com/mobile/v3.1]
+Softlayer-API-Endpunkt-URL: [https://api.softlayer.com/mobile/v3.1] 
 Für Konto festlegen: 278444
 OK
                               
-Softlayer-API-Endpnkt:    https://api.softlayer.com/mobile/v3.1
+Softlayer-API-Endpunkt:    https://api.softlayer.com/mobile/v3.1
 Konto-ID:                 278444
 Benutzer-ID:              12345678
 IMS-Token:                xxxxxxxxxx
@@ -2056,7 +2056,7 @@ bluemix sl loadbal cancel LOADBAL_ID [OPTIONEN]
 ### bluemix sl loadbal create 
 {: #sl_loadbal_create} 
 
-Fügt eine Lastausgleichsfunktion hinzu, wenn die ID von 'create-options' zurückgegeben wurde.
+Fügt eine Lastausgleichsfunktion hinzu, der die ID zugewiesen wird, die von 'create-options' zurückgegeben wurde.
 ```
 bluemix sl loadbal create PRICE_ID LOCATION [OPTIONEN]
 ```
@@ -3092,7 +3092,7 @@ bluemix sl vs reboot IDENTIFIER [OPTIONEN]
 <dt>--hard</dt>
 <dd>Kaltstart durchführen.</dd>
 <dt>--soft</dt>
-<dd>Kaltstart durchführen.</dd>
+<dd>Warmstart durchführen.</dd>
 <dt>-f, --force</dt>
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
