@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Using the {{site.data.keyword.dev_cli_notm}}
+# Using the {{site.data.keyword.dev_cli_notm}} CLI
 {: developing}
 
-Developing Cloud Native apps using {{site.data.keyword.dev_cli_notm}} follows a fairly simple flow:
+Developing Cloud Native apps using {{site.data.keyword.dev_cli_notm}} CLI follows a fairly simple flow:
 
 1. [Create or Enable an app](#create)
 2. [Code, Build, and Run](#build) your app locally using containers
@@ -82,9 +82,9 @@ Once the project has been built, you'll next want to run your app using the [`bx
 ### How local containers are used
 {: local-containers}
 
-The {{site.data.keyword.dev_cli_long}} uses two containers to facilitate building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your application. The Dockerfile for this container is defined by the [`dockerfile-tools`](commands.html#command-parameters) parameter. You might think of it as a development container as it contains the tools normally used for development of a particular runtime.
+The {{site.data.keyword.dev_cli_long}} CLI uses two containers to facilitate building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your application. The Dockerfile for this container is defined by the [`dockerfile-tools`](commands.html#command-parameters) parameter. You might think of it as a development container as it contains the tools normally used for development of a particular runtime.
 
-The second container is the run container. This container is of a form suitable to be deployed for use, for example, in {{site.data.keyword.Bluemix}}. As a result, an entry point is defined that starts your application. When you select to run your application through the {{site.data.keyword.dev_cli_short}}, it uses this container. The Dockerfile for this container is defined by the [`dockerfile-run`](commands.html#run-parameters) parameter.
+The second container is the run container. This container is of a form suitable to be deployed for use, for example, in {{site.data.keyword.Bluemix}}. As a result, an entry point is defined that starts your application. When you select to run your application through the {{site.data.keyword.dev_cli_short}} CLI, it uses this container. The Dockerfile for this container is defined by the [`dockerfile-run`](commands.html#run-parameters) parameter.
 
 
 ### Helpful CLI commands

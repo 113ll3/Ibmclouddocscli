@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Setting up the {{site.data.keyword.dev_cli_notm}}
+# Setting up the {{site.data.keyword.dev_cli_notm}} CLI
 {: #add-cli}
 
-The {{site.data.keyword.dev_cli_short}} is a command line approach for creating, developing, and deploying applications for developers who want to use a command line to develop end-to-end web, mobile, and microservice applications.
+The {{site.data.keyword.dev_cli_short}} CLI is a command line approach for creating, developing, and deploying applications for developers who want to use a command line to develop end-to-end web, mobile, and microservice applications.
 {: shortdesc}
 
 ## Prerequisites
@@ -96,13 +96,13 @@ bx dev
 ## Learn More
 {: #learn}
 
-Now that you have your {{site.data.keyword.dev_cli_short}} installed, you can learn how to be effective with this powerful tool.:
+Now that you have your {{site.data.keyword.dev_cli_short}} CLI installed, you can learn how to be effective with this powerful tool.:
 - [Getting Started with IDT CLI](index.html)
 - [IDT (bx dev) commands](commands.html)
 - [Developer Tools for VS Code](vscode.html)
 - [Developer Tools for Jetbrains IDEs](jetbrains.html)
 
-Check out the [tutorials](/docs/apps/tutorials/tutorial_bff.html) that show how to create cloud native apps using {{site.data.keyword.dev_cli_short}}.
+Check out the [tutorials](/docs/apps/tutorials/tutorial_bff.html) that show how to create cloud native apps using {{site.data.keyword.dev_cli_short}} CLI.
 
 ## Further reading
 {: #learn-more}

@@ -34,10 +34,10 @@ Click an option to get started:
 <area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="View docs (Opens new page)" title="View docs" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
-## {{site.data.keyword.dev_cli_notm}}
+## {{site.data.keyword.dev_cli_notm}} CLI
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) provides a developer specific extension to {{site.data.keyword.Bluemix}} CLI (`bx dev`) to create, build, and deploy cloud native apps. Installation of the IDT includes the base {{site.data.keyword.Bluemix_notm}} CLI, several extensions, and all system pre-requisites. IDT also provides extensions to multiple IDEs to directly access the CLI commands.
+{{site.data.keyword.dev_cli_long}} CLI (IDT) provides a developer specific extension to {{site.data.keyword.Bluemix}} CLI (`bx dev`) to create, build, and deploy cloud native apps. Installation of the IDT includes the base {{site.data.keyword.Bluemix_notm}} CLI, several extensions, and all system pre-requisites. IDT also provides extensions to multiple IDEs to directly access the CLI commands.
 {:shortdesc}
 
 - [Overview and Installation](/docs/cli/idt/index.html)
