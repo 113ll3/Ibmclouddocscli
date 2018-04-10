@@ -11,13 +11,13 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# {{site.data.keyword.dev_cli_notm}} (bx dev) commands
+# {{site.data.keyword.dev_cli_notm}} CLI (bx dev) commands
 {: #idt-cli}
 
 Version: 1.2.0
 Released: Mar 8, 2018
 
-Use the following {{site.data.keyword.dev_cli_notm}} (bx dev) commands to create a project, deploy, debug, and test it.
+Use the following {{site.data.keyword.dev_cli_notm}} CLI (bx dev) commands to create a project, deploy, debug, and test it.
 
 - [build](#build): Build the project in a local container
 - [code](#code): Download the code from a project
@@ -415,7 +415,7 @@ By simply running this command
 bx dev shell
 ```
 
-the {{site.data.keyword.dev_cli_short}} will open an interactive shell into the application's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command will target the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. See [this reference](https://docs.docker.com/engine/reference/builder/#workdir) for more information.
+the {{site.data.keyword.dev_cli_short}} CLI will open an interactive shell into the application's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command will target the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. See [this reference](https://docs.docker.com/engine/reference/builder/#workdir) for more information.
 
 Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container will be brought up and the shell will be opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you wish to shell. However, this flag should be reserved for when no containers are running. The `run` and `tools` arguments are more flexible and allow you to switch between containers when one is currently running. For example, if the tools container is running and you execute `bx dev shell run`, the `tools` container will be stopped and the `run` container will be started, and vice versa.
 
@@ -447,7 +447,7 @@ For example, you can run the Linux `ls` command inside of the tools container sh
 ## status
 {: #status}
 
-You can query the status of the containers that are used by the {{site.data.keyword.dev_cli_short}} as defined by `container-name-run` and `container-name-tools`.
+You can query the status of the containers that are used by the {{site.data.keyword.dev_cli_short}} CLI as defined by `container-name-run` and `container-name-tools`.
 
 Run the following command in your current project directory to check container status:
 
