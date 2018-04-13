@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-01-29"
 # CLI 及工具概觀
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} 提供一個健全的 CLI，以及與 CLI 整合的外掛程式。
+{{site.data.keyword.Bluemix_notm}} 提供一個健全的 CLI，以及與 CLI 整合的外掛程式和開發人員工具延伸規格。
 
 ## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
@@ -37,10 +37,10 @@ lastupdated: "2018-01-29"
 ## {{site.data.keyword.dev_cli_notm}}
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) 提供 {{site.data.keyword.Bluemix}} CLI 的開發人員特定延伸規格 (`bx dev`)，以建立、建置及部署雲端原生應用程式。IDT 安裝包括基礎 {{site.data.keyword.Bluemix_notm}} CLI、數個延伸規格及所有系統必要條件。
+{{site.data.keyword.dev_cli_long}} (IDT) 提供 {{site.data.keyword.Bluemix}} CLI 的開發人員特定延伸規格 (`bx dev`)，以建立、建置及部署雲端原生應用程式。IDT 安裝包括基礎 {{site.data.keyword.Bluemix_notm}} CLI、數個延伸規格及所有系統必要條件。IDT 也提供多個 IDE 的延伸規格，來直接存取 CLI 指令。
 {:shortdesc}
 
-- [概觀及安裝](/docs/cloudnative/idt/index.html) <br>
-- [開始使用](/docs/cloudnative/idt/index.html) <br>
-- [指令](/docs/cloudnative/idt/commands.html) <br>
-- [雲端原生開發](/docs/cloudnative/index.html) <br>
+- [概觀及安裝](/docs/cli/idt/index.html)
+- [開始使用](/docs/cli/idt/index.html)
+- [指令](/docs/cli/idt/commands.html)
+- [雲端原生開發](/docs/cli/index.html) ਍

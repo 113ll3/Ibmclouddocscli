@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-05"
 
 ---
 
@@ -894,27 +894,27 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 ## bluemix account space
 {: #bluemix_account_space}
 
-這個指令的功能及選項與 `cf space` 指令相同。
+這個指令的功能及選項與 [cf space ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} 指令相同。
 
 
 ## bluemix account space-create
 {: #bluemix_account_space_create}
 
-這個指令的功能及選項與 `cf create-space` 指令相同。
+這個指令的功能及選項與 [cf create-space ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} 指令相同。
 
 
 ## bluemix account space-rename
 {: #bluemix_account_space_rename}
 
 
-這個指令的功能及選項與 `cf rename-space` 指令相同。
+這個指令的功能及選項與 [cf rename-space ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} 指令相同。
 
 
 ## bluemix account space-delete
 {: #bluemix_account_space_delete}
 
 
-這個指令的功能及選項與 `cf delete-space` 指令相同。
+這個指令的功能及選項與 [cf delete-space ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} 指令相同。
 
 ## bluemix account org-users
 {: #bluemix_account_org_users}
@@ -2254,117 +2254,117 @@ bluemix resource quota free
 ## bluemix app push
 {: #bluemix_app_push}
 
-這個指令的功能及選項與 `cf push` 指令相同。
+這個指令的功能及選項與 [cf push ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} 指令相同。
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-這個指令的功能及選項與 `cf apps` 指令相同。
+這個指令的功能及選項與 [cf apps ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window} 指令相同。
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-這個指令的功能及選項與 `cf app` 指令相同。
+這個指令的功能及選項與 [cf app ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window} 指令相同。
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-這個指令的功能及選項與 `cf delete` 指令相同。
+這個指令的功能及選項與 [cf delete ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window} 指令相同。
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-這個指令的功能及選項與 `cf rename` 指令相同。
+這個指令的功能及選項與 [cf rename ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window} 指令相同。
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-這個指令的功能及選項與 `cf start` 指令相同。
+這個指令的功能及選項與 [cf start ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window} 指令相同。
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-這個指令的功能及選項與 `cf stop` 指令相同。
+這個指令的功能及選項與 [cf stop ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window} 指令相同。
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-這個指令的功能及選項與 `cf restart` 指令相同。
+這個指令的功能及選項與 [cf restart ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window} 指令相同。
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-這個指令的功能及選項與 `cf restage` 指令相同。
+這個指令的功能及選項與 [cf restage ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} 指令相同。
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-這個指令的功能及選項與 `cf restart-app-instance` 指令相同。
+這個指令的功能及選項與 [cf restart-app-instance ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} 指令相同。
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-這個指令的功能及選項與 `cf events` 指令相同。
+這個指令的功能及選項與 [cf events ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window} 指令相同。
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-這個指令的功能及選項與 `cf files` 指令相同。
+這個指令的功能及選項與 [cf files ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window} 指令相同。
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-這個指令的功能及選項與 `cf logs` 指令相同。
+這個指令的功能及選項與 [cf logs ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window} 指令相同。
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-這個指令的功能及選項與 `cf env` 指令相同。
+這個指令的功能及選項與 [cf env ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window} 指令相同。
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-這個指令的功能及選項與 `cf set-env` 指令相同。
+這個指令的功能及選項與 [cf set-env ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window} 指令相同。
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-這個指令的功能及選項與 `cf unset-env` 指令相同。
+這個指令的功能及選項與 [cf unset-env ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window} 指令相同。
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-這個指令的功能及選項與 `cf stacks` 指令相同。
+這個指令的功能及選項與 [cf stacks ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window} 指令相同。
 
 
 ## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
-這個指令的功能及選項與 `cf stack` 指令相同。
+這個指令的功能及選項與 [cf stack ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window} 指令相同。
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-這個指令的功能及選項與 `cf create-app-manifest` 指令相同。
+這個指令的功能及選項與 [cf create-app-manifest ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} 指令相同。
 
 ## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
@@ -2451,13 +2451,13 @@ bluemix app domain-cert-remove DOMAIN [-f]
 ## bluemix app routes
 {: #bluemix_app_routes}
 
-這個指令的功能及選項與 `cf routes` 指令相同。
+這個指令的功能及選項與 [cf routes ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window} 指令相同。
 
 
 ## bluemix app route-check
 {: #bluemix_app_route_check}
 
-這個指令的功能及選項與 `cf check-route` 指令相同。
+這個指令的功能及選項與 [cf check-route ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window} 指令相同。
 
 
 ## bluemix app route-map
@@ -2537,140 +2537,140 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ## bluemix app route-create
 {: #bluemix_app_route_create}
 
-這個指令的功能及選項與 `cf create-route` 指令相同。
+這個指令的功能及選項與 [cf create-route ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window} 指令相同。
 
 
 ## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
-這個指令的功能及選項與 `cf delete-route` 指令相同。
+這個指令的功能及選項與 [cf delete-route ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window} 指令相同。
 
 
 ## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
-這個指令的功能及選項與 `cf delete-orphaned-routes` 指令相同。
+這個指令的功能及選項與 [cf delete-orphaned-routes ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window} 指令相同。
 
 
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-這個指令的功能及選項與 `cf domains` 指令相同。
+這個指令的功能及選項與 [cf domains ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window} 指令相同。
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-這個指令的功能及選項與 `cf create-domain` 指令相同。
+這個指令的功能及選項與 [cf create-domain ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window} 指令相同。
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-這個指令的功能及選項與 `cf delete-domain` 指令相同。
+這個指令的功能及選項與 [cf delete-domain ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window} 指令相同。
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-這個指令的功能及選項與 `cf create-shared-domain` 指令相同。
+這個指令的功能及選項與 [cf create-shared-domain ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window} 指令相同。
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-這個指令的功能及選項與 `cf delete-shared-domain` 指令相同。
+這個指令的功能及選項與 [cf delete-shared-domain ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window} 指令相同。
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-這個指令的功能及選項與 `cf marketplace` 指令相同。
+這個指令的功能及選項與 [cf marketplace ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window} 指令相同。
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-這個指令的功能及選項與 `cf services` 指令相同。
+這個指令的功能及選項與 [cf services ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window} 指令相同。
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-這個指令的功能及選項與 `cf service` 指令相同。
+這個指令的功能及選項與 [cf service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window} 指令相同。
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-這個指令的功能及選項與 `cf create-service` 指令相同。
+這個指令的功能及選項與 [cf create-service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window} 指令相同。
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-這個指令的功能及選項與 `cf update-service` 指令相同。
+這個指令的功能及選項與 [cf update-service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window} 指令相同。
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-這個指令的功能及選項與 `cf delete-service` 指令相同。
+這個指令的功能及選項與 [cf delete-service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window} 指令相同。
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-這個指令的功能及選項與 `cf rename-service` 指令相同。
+這個指令的功能及選項與 [cf rename-service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window} 指令相同。
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-這個指令的功能及選項與 `cf bind-service` 指令相同。
+這個指令的功能及選項與 [cf bind-service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window} 指令相同。
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-這個指令的功能及選項與 `cf unbind-service` 指令相同。
+這個指令的功能及選項與 [cf unbind-service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window} 指令相同。
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-這個指令的功能及選項與 `cf create-service-key` 指令相同。
+這個指令的功能及選項與 [cf create-service-key ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window} 指令相同。
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-這個指令的功能及選項與 `cf delete-service-key` 指令相同。
+這個指令的功能及選項與 [cf delete-service-key ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window} 指令相同。
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-這個指令的功能及選項與 `cf service-keys` 指令相同。
+這個指令的功能及選項與 [cf service-keys ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window} 指令相同。
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-這個指令的功能及選項與 `cf service-key` 指令相同。
+這個指令的功能及選項與 [cf service-key ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window} 指令相同。
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-這個指令的功能及選項與 `cf create-user-provided-service` 指令相同。
+這個指令的功能及選項與 [cf create-user-provided-service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window} 指令相同。
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-這個指令的功能及選項與 `cf update-user-provided-service` 指令相同。
+這個指令的功能及選項與 [cf update-user-provided-service ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window} 指令相同。
 
 
 ## bluemix resource service-instances

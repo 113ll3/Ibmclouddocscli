@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2017
+  years: 2016, 2018
 
-lastupdated: "2017-05-03"
+lastupdated: "2018-03-01"
 
 
 ---
@@ -22,6 +22,8 @@ lastupdated: "2017-05-03"
 
 Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序的命令。以下信息列出了管理应用程序最常用的 cf 命令，并包含命令名称、选项、用法、先决条件、描述和示例。要列出所有 cf 命令及其关联的帮助信息，请使用 `cf help`。使用 `cf command_name -h` 可查看特定命令的详细帮助信息。
 {: shortdesc}
+
+有关 `cf CLI` 命令的更详细列表，请参阅社区的 [Cloud Foundry CLI Reference Guide ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}。
 
 **注**：如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须通过设置 `HTTP_PROXY` 环境变量来指定该代理服务器的主机名或 IP 地址。有关详细信息，请参阅 [Using the cf CLI with an HTTP Proxy Server ![外部链接图标](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
 
@@ -169,7 +171,7 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-创建服务实例
+创建服务实例。
 
 ```
 cf create-service service_name service_plan service_instance
@@ -621,7 +623,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 
 
 ## cf services
-  
+
 {: #cf_services}
 
 列出当前空间中可用的所有服务。
@@ -629,7 +631,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 
 ```
 cf services
-  ```
+```
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
 <strong>命令选项</strong>：无。
@@ -639,7 +641,7 @@ cf services
 列出当前空间中的所有服务。
 ```
 cf services
-  ```
+```
 {: codeblock}
 
 
