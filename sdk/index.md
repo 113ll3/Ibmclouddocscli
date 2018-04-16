@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -16,11 +16,11 @@ lastupdated: "2018-03-16"
 
 The {{site.data.keyword.IBM}} SDK Generator plug-in can be installed in the [{{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/bluemix_cli/all_versions.html).
 
-As a developer on {{site.data.keyword.Bluemix_notm}}, you can use this plug-in to generate SDKs from your [Open API Specification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/) compliant REST API definition. As you make changes to your REST API definition, you can use this plug-in to regenerate only the SDK instead of regenerating the entire project.
+As a developer on {{site.data.keyword.Bluemix_notm}}, you can use this plug-in to generate SDKs from your [Open API Specification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/) compliant REST API definition. As you change your REST API definition, you can use this plug-in to regenerate only the SDK instead of regenerating the entire project.
 
-You can also see if your Cloud Foundry apps in a given space have REST API definitions that are valid for SDK generation. Finally, you can use the {{site.data.keyword.IBM_notm}} SDK Generator plug-in to validate any REST API definitions to ensure that they comply with the SDK generator requirements.
+You can also see whether your Cloud Foundry apps in a specific space have REST API definitions that are valid for SDK generation. Finally, you can use the {{site.data.keyword.IBM_notm}} SDK Generator plug-in to validate any REST API definitions to ensure that they comply with the SDK generator requirements.
 
-This {{site.data.keyword.IBM_notm}} SDK Generator plug-in allows you to easily integrate your backend services to your app with a generated SDK. When a change to a REST API occurs, you can re-generate the SDK and replace the old one for a seamless SDK upgrade. You can also integrate the CLI into a devops pipeline and ensure that the SDK is always consistent with the API spec each time the app is built.
+This {{site.data.keyword.IBM_notm}} SDK Generator plug-in allows you to easily integrate your backend services to your app with a generated SDK. When a change to a REST API occurs, you can regenerate the SDK and replace the old one for an SDK upgrade. You can also integrate the CLI into a DevOps pipeline and ensure that the SDK is always consistent with the API spec each time the app is built.
 
 The REST API definition must be valid and either hosted on a live server endpoint or a local file on your system. If the REST API definition is hosted, the relative URL must be defined in the `OPENAPI_SPEC` environment variable.
 
