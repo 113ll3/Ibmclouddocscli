@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -17,12 +17,12 @@ lastupdated: "2018-03-16"
 # CLI and tools overview
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} provides a robust CLI as well as plug-ins and developer tool extensions that integrate with the CLI.
+{{site.data.keyword.Bluemix_notm}} provides a robust CLI and plug-ins with developer tool extensions that integrate with the CLI.
 
 ## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
 
-{{site.data.keyword.Bluemix}} CLI provides a command line experience to manage the resources in your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command-line interface, cf, in its installation, for managing Cloud Foundry applications and services.
+{{site.data.keyword.Bluemix}} CLI provides a command line experience to manage the resources in your {{site.data.keyword.Bluemix_notm}} environment. It also includes a Cloud Foundry command line interface, cf, in its installation, for managing Cloud Foundry applications and services.
 {:shortdesc}
 
 Click an option to get started:
@@ -37,7 +37,7 @@ Click an option to get started:
 ## {{site.data.keyword.dev_cli_notm}} CLI
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} CLI (IDT) provides a developer specific extension to {{site.data.keyword.Bluemix}} CLI (`bx dev`) to create, build, and deploy cloud native apps. Installation of the IDT includes the base {{site.data.keyword.Bluemix_notm}} CLI, several extensions, and all system pre-requisites. IDT also provides extensions to multiple IDEs to directly access the CLI commands.
+{{site.data.keyword.dev_cli_long}} CLI (IDT) provides a developer-specific extension to {{site.data.keyword.Bluemix}} CLI (`bx dev`) to create, build, and deploy cloud native apps. Installation of the IDT includes the base {{site.data.keyword.Bluemix_notm}} CLI, several extensions, and all system prerequisites. IDT also provides extensions to multiple IDEs to directly access the CLI commands.
 {:shortdesc}
 
 - [Overview and Installation](/docs/cli/idt/index.html)
