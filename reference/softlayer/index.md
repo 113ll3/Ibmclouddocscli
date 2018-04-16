@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-03-30"
+lastupdated: "2018-04-16"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-03-30"
 # {{site.data.keyword.BluSoftlayer_notm}} infrastructure (bluemix sl) commands
 {: #softlayer_cli}
 
-The {{site.data.keyword.BluSoftlayer}} plugin has been merged into the {{site.data.keyword.Bluemix_notm}} CLI. You no longer need to install the plug-in.
+The {{site.data.keyword.BluSoftlayer}} plug-in has been merged into the {{site.data.keyword.Bluemix_notm}} CLI. You no longer need to install the plug-in.
 
 Use {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands in the {{site.data.keyword.Bluemix_notm}} command line interface (CLI) to configure and manage SoftLayer services.
 
