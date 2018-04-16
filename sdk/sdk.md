@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-16"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 # Available Mobile SDKs
@@ -34,7 +34,7 @@ If you have a Java, NodeJS, or Swift server application, you can use the followi
 ## Client SDKs
 {: #client_sdk}
 
-You can use the following SDKs in your mobile application to leverage the respective capabilities.
+You can use the following SDKs in your mobile application to use the respective capabilities.
 
 
 ### Android SDKs
@@ -55,7 +55,7 @@ You can use the following SDKs in your mobile application to leverage the respec
 - [{{site.data.keyword.mobilepushshort}} SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push)
 
 
-### Cordova Plugins
+### Cordova Plug-ins
 {: #cordova_plugin}
 
 - [Core plugin ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
