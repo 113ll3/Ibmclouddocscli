@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2017-2018
-lastupdated: "2018-03-16"
+years: 2017, 2018
+lastupdated: "2018-04-17"
 
 ---
 
@@ -27,16 +27,16 @@ Use the following {{site.data.keyword.dev_cli_notm}} CLI (bx dev) commands to cr
 - [delete](#delete): Deletes a project from your space
 - [deploy](#deploy): Deploy an application to IBM Cloud
 - [enable](#enable): Add IBM Cloud files to an existing project
-- [get-credentials](#get-credentials): Gets credentials required by the project to enable use of bound services
+- [get-credentials](#get-credentials): Gets credentials that are required by the project to enable use of bound services
 - [help](#help): Help on IDT syntax and arguments
 - [list](#list): List all IBM Cloud projects in a space
 - [run](#run): Run your application in a local container
 - [shell](#shell): Open a shell into a local container
-- [status](#status): Check the status of the containers used by the CLI
+- [status](#status): Check the status of the containers that are used by the CLI
 - [stop](#stop): Stop a container
 - [test](#test): Test your application in a local container
-- [view](#view): View the app's deployed URL for testing and viewing
-- [compound commands](#compound): Execute multiple commands in one command line statement
+- [view](#view): View the apps deployed URL for testing and viewing
+- [compound commands](#compound): Run multiple commands in one command line statement
 
 
 
@@ -45,9 +45,9 @@ Use the following {{site.data.keyword.dev_cli_notm}} CLI (bx dev) commands to cr
 
 You can build your application by using the `build` command. The `test`, `debug`, and `run` commands expect to find a compiled project so you must first run a `build` operation beforehand.  
 
-The `build-cmd-debug` configuration element is used to build the application for all uses except for `run`. You build your application for debugging by specifying the command line option `--debug`.  The `build-cmd-run` configuration element is used when building the application for use with the `run` command.
+The `build-cmd-debug` configuration element is used to build the application for all uses except for `run`. You build your application for debugging by specifying the command line option `--debug`.  The `build-cmd-run` configuration element is used when you are building the application for use with the `run` command.
 
-In order to build with multiple containers, either your project should contain a [Compose](https://docs.docker.com/compose/overview/) file, specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one. See the [Compose File](/docs/apps/projects/compose_file.html) for more information.
+To build with multiple containers, either your project must contain a [Compose](https://docs.docker.com/compose/overview/) file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one. See the [Compose File](/docs/apps/projects/compose_file.html) for more information.
 
 Run the following command in your current project directory to build your application:  
 
@@ -63,7 +63,7 @@ bx dev build [--debug]
 ## code
 {: #code}
 
-Use the `code` command to download a previously created project with application template code and configuration files for the {{site.data.keyword.Bluemix_notm}}.  This is useful when you need to extract a second copy of a project you have created.
+Use the `code` command to download a previously created project with application template code and configuration files for the {{site.data.keyword.Bluemix_notm}}.  This is useful when you need to extract a second copy of a project that you have created.
 
 Run the following command to download the code from a specified project.
 
@@ -78,7 +78,7 @@ bx dev code <projectName>
 
 Use the `console` command to open a web browser to your application's web console on IBM Cloud.  You can run the `bx dev console` command from inside your project's folder, and the CLI attempts to find a matching project on the IBM Cloud that has the same project ID as the current directory. If the system is not able to find a matching name, it opens the Web and Mobile dashboard on IBM Cloud instead of the specific project.
 
-Optionally, you can provide a project name and the CLI will skip matching based on folder/application name.  In this case, the CLI opens the named project's console in a web browser.  
+You can provide a project name and the CLI skips matching based on folder/application name. In this case, the CLI opens the named project's console in a web browser.  
 
 Run the following command to open a web browser to your application's web console.
 
@@ -104,7 +104,7 @@ bx dev create
 ## debug
 {: #debug}
 
-You can debug your application through the `debug` command. A build must first be completed against the project by using the build command with the `--debug` argument. When you invoke the `debug` command, a container is started which provides a debug port or ports as defined by the `container-port-map-debug` value in the cli-config.yml or specified on the command line. Connect your favorite debugging tool to the port or ports, and you can debug your application as normal.
+You can debug your application through the `debug` command. A build must first be completed against the project by using the build command with the `--debug` argument. When you start the `debug` command, a container is started which provides a debug port or ports as defined by the `container-port-map-debug` value in the cli-config.yml or specified on the command line. Connect your favorite debugging tool to the port or ports, and you can debug your application as normal.
 
 First, compile your project:
 
@@ -128,8 +128,7 @@ To exit the debug session, use `CTRL-C`.
 ### debug command parameters
 {: #debug-parameters}
 
-The following parameters are exclusive to the `debug` command and
-assist with debugging an application. There are [additional parameters](#command-parameters) shared with other commands.
+The following parameters are exclusive to the `debug` command and assist with debugging an application. There are [additional parameters](#command-parameters) shared with other commands.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
