@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -49,7 +49,7 @@ bx dev debug
 
 Steps to enable the debugging tool for a Node.js application:
 
-1. From your application project's root directory run the following command:
+1. From your application projects root directory run the following command:
 
 ```
 bx dev debug
@@ -66,7 +66,7 @@ bx dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
+1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:
