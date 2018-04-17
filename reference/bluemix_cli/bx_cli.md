@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-03-30"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -18,20 +18,20 @@ lastupdated: "2018-03-30"
 
 Version: 0.6.6
 
-The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}.
+The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that is grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}.
 
-Starting from version 0.5.0, {{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, do not use both {{site.data.keyword.Bluemix_notm}} CLI commands `bx [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `bluemix cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context.  Note that `bluemix cf api/login/logout/target` is not allowed, and you must use `bluemix api/login/logout/target` instead.
+Starting from version 0.5.0, {{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, do not use both {{site.data.keyword.Bluemix_notm}} CLI commands `bx [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `bluemix cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context. `bluemix cf api/login/logout/target` is not allowed, and you must use `bluemix api/login/logout/target` instead.
 
 The following lists detailed commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, including their names, arguments, options, prerequisites, descriptions, and examples.
 {:shortdesc}
 
-**Note:** *Prerequisites* list which actions are required before using the command. Commands that have no prerequisite actions list **None**. Otherwise, prerequisites might include one or more of the following actions:
+**Note:** *Prerequisites* list which actions are required before you use the command. Commands that have no prerequisite actions list **None**. Otherwise, prerequisites might include one or more of the following actions:
 
 <dl>
 <dt>Endpoint</dt>
 <dd>An API endpoint must be set through the <code>bluemix api</code> before using the command.</dd>
 <dt>Login</dt>
-<dd>Login by using the <code>bluemix login</code> command is required before using this command.
+<dd>Log in by using the <code>bluemix login</code> command is required before using this command.
 If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key. Go to {{site.data.keyword.Bluemix_notm}} console **Manage** &gt; **Security** &gt; **Platform API keys** to create API keys.
 </dd>
 <dt>Target</dt>
@@ -78,8 +78,8 @@ The commands for managing {{site.data.keyword.BluSoftlayer_notm}} infrastructure
  ## Commands for managing accounts, orgs, and roles
  {: #bx_commands_account}
 
-<table summary="bluemix commands that you can use to manage accounts, orgs, spaces and roles.">
-<caption>Table 2. Commands for managing accounts, orgs, spaces and roles</caption>
+<table summary="bluemix commands that you can use to manage accounts, orgs, spaces, and roles.">
+<caption>Table 2. Commands for managing accounts, orgs, spaces, and roles</caption>
  <thead>
  <th colspan="5">Commands for managing accounts, orgs, spaces, and roles</th>
  </thead>
