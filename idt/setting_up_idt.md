@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -31,7 +31,7 @@ Sign up for [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
 ## Install
 {: #installation}
 
-To install the tool, you can run the relevant command to invoke our installer. This will install dependencies as well, such as the IBM Cloud CLI, Kubernetes, Helm, and Docker. To install these, use these installation steps:
+To install the tool, you can run the relevant command to start the installer. This installs dependencies as well, such as the IBM Cloud CLI, Kubernetes, Helm, and Docker. To install, use these installation steps:
 
 **Mac and Linux:**
 
