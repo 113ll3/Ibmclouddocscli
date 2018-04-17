@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2017
+  years: 2017, 2018
 
-lastupdated: "2017-12-08"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -23,8 +23,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
 {: shortdesc}
 
 **Prerequisites**
-* Before running the registry commands, log in to {{site.data.keyword.Bluemix_notm}}
- with the `bx login` command to generate an access token and authenticate your session.
+* Before running the registry commands, log in to {{site.data.keyword.Bluemix_notm}} with the `bx login` command to generate an access token and authenticate your session.
 
 To find out about how to use the {{site.data.keyword.registrylong_notm}} CLI, see [Getting started with {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html).
 
