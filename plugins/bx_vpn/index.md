@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2016-06-20"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -27,7 +27,7 @@ The VPN plug-in is available for Windows, MAC, and Linux operating systems. Ensu
 The instructions that follow are for working with the {{site.data.keyword.Bluemix_notm}} CLI plug-in. To use the plug-in with the Cloud Foundry (cf) CLI plug-in, see [VPN CLI plug-in for cf CLI](../vpn/index.html).
 
 
-The information that follows lists all commands that are supported by VPN plug-in for Bluemix CLI and includes their names, options, usage, prerequisites, descriptions, and examples. See [Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext) on how to install the vpn plug-in.
+The information that follows lists all commands that are supported by VPN plug-in for {{site.data.keyword.Bluemix_notm}} CLI and includes their names, options, usage, prerequisites, descriptions, and examples. See [Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext) on how to install the vpn plug-in.
 
 **Note:** *Prerequisites* list which actions are required before using the command. Prerequisites might include one or more of the following actions:
 <dl>
