@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2017-11-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -29,11 +29,11 @@ Before you begin, install the {{site.data.keyword.Bluemix_notm}} CLI. See [Downl
 After the {{site.data.keyword.Bluemix_notm}} CLI is installed, you can add the {{site.data.keyword.autoscaling}} CLI plug-in.
 
 Complete the following steps to add the repository and install the plug-in:
-1. To add the {{site.data.keyword.Bluemix_notm}} CLI plugin repository, run the following command:
+1. To add the {{site.data.keyword.Bluemix_notm}} CLI plug-in repository, run the following command:
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
-2. To install the {{site.data.keyword.autoscaling}} CLI plugin, run the following command:
+2. To install the {{site.data.keyword.autoscaling}} CLI plug-in, run the following command:
 ```
 bluemix plugin install auto-scaling -r Bluemix
 ```
@@ -57,7 +57,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 
 ## Generating an auto-scaling policy
 
-You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter  the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
+You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
 
 ```
 bx as policy-create
