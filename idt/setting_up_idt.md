@@ -43,6 +43,8 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
+* Note: Open Windows PowerShell by right-clicking and select "Run as Administrator".
+
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
