@@ -6,7 +6,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-04-19"
 
 
 ---
@@ -26,6 +26,10 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
 * Before running the registry commands, log in to {{site.data.keyword.Bluemix_notm}} with the `bx login` command to generate an access token and authenticate your session.
 
 To find out about how to use the {{site.data.keyword.registrylong_notm}} CLI, see [Getting started with {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html).
+
+Do not put personal information in your container images, image names, namespace names, or any description fields; for example, in registry tokens.
+{:tip}
+
 
 <table summary="Manage {{site.data.keyword.registrylong_notm}}">
 <caption>Table 1. Commands for managing {{site.data.keyword.registrylong_notm}}
@@ -223,7 +227,13 @@ bx cr namespace-add NAMESPACE
 **Parameters**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>The namespace you want to add. The namespace must be unique across all {{site.data.keyword.Bluemix_notm}} accounts in the same region.</dd>
+<dd>The namespace you want to add. The namespace must be unique across all {{site.data.keyword.Bluemix_notm}} accounts in the same region.
+  
+<p>  
+<b>Tip</b>: Do not put personal information in your namespace names.
+</p>
+
+</dd>
 </dl>
 
 
@@ -364,7 +374,13 @@ bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--re
 **Parameters**
 <dl>
 <dt>--description DESCRIPTION</dt>
-<dd>(Optional) Specifies the value as a description for the token, which is displayed when you run `bx cr token-list`. If your token is created automatically by {{site.data.keyword.containerlong_notm}}, the description is set to your Kubernetes Cluster name. In this case, the token is removed automatically when your cluster is removed.</dd>
+<dd>(Optional) Specifies the value as a description for the token, which is displayed when you run `bx cr token-list`. If your token is created automatically by {{site.data.keyword.containerlong_notm}}, the description is set to your Kubernetes Cluster name. In this case, the token is removed automatically when your cluster is removed.
+  
+<p> 
+  <b>Tip</b>: Do not put personal information in your token description.
+</p>
+
+  </dd>
 <dt>-q, --quiet</dt>
 <dd>(Optional) Displays the token only, without any surrounding text.</dd>
 <dt>--non-expiring</dt>
