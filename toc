@@ -21,6 +21,7 @@ CLI and Dev Tools
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
+		idt/troubleshooting_idt.md
         	
 	{: .topicgroup}
 	SDKs for Mobile
