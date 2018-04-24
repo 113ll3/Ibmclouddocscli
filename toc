@@ -21,7 +21,7 @@ CLI and Dev Tools
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
-		idt/troubleshooting_idt.md
+		[Troubleshooting for IDT](../troubleshoot/ts_createapps.html)
         	
 	{: .topicgroup}
 	SDKs for Mobile
