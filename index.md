@@ -43,4 +43,3 @@ Click an option to get started:
 - [Overview and Installation](/docs/cli/idt/index.html)
 - [Get started](/docs/cli/idt/index.html)
 - [Commands](/docs/cli/idt/commands.html)
-- [Cloud native development](/docs/cli/index.html)
