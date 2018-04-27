@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-08"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-01-08"
 {: #bluemixadmincli}
 
 
-Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境を管理できます。 例えば、LDAP レジストリーからユーザーを追加できます。 {{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報を探している場合は、『[管理](/docs/admin/adminpublic.html#administer)』を参照してください。
+Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境を管理できます。 例えば、LDAP レジストリーからユーザーを追加できます。 {{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報は、『[管理](/docs/admin/adminpublic.html#administer)』を参照してください。
 
 最初に、CF コマンド・ライン・インターフェースをインストールします。 {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。 [Cloud Foundry コマンド・ライン・インターフェースのダウンロード ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} を行ってください。
 

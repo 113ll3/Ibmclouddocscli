@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-02-01"
+lastupdated: "2018-04-16"
 ---
 
 {:new_window: target="_blank"}
@@ -141,7 +141,7 @@ lastupdated: "2018-02-01"
   <td>[bluemix sl file volume-detail](/docs/cli/reference/softlayer/index.html#sl_file_volume_detail)</td>
    </tr>
  <tr>
-   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate</td>
+   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate)</td>
    <td>[bluemix sl file volume-list](/docs/cli/reference/softlayer/index.html#sl_file_volume_list)</td>
    <td>[bluemix sl file volume-order](/docs/cli/reference/softlayer/index.html#sl_file_volume_order)</td>
    <td>[bluemix sl file volume-options
@@ -3098,7 +3098,7 @@ bluemix sl vs reboot IDENTIFIER [OPTIONS]
 <dt>--hard</dt>
 <dd>ハード・リブートを実行します。</dd>
 <dt>--soft</dt>
-<dd>ハード・リブートを実行します。</dd>
+<dd>ソフト・リブートを実行します。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>

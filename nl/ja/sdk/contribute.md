@@ -27,13 +27,13 @@ lastupdated: "2018-03-16"
 
 * {{site.data.keyword.Bluemix_notm}} [CLI ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.{DomainName}/ui/home.html)
 
-   このプラグインは、{{site.data.keyword.Bluemix_notm}} CLI にインストールされます。{{site.data.keyword.Bluemix_notm}} CLI にも、端末から {{site.data.keyword.Bluemix_notm}} にアクセスするのに役立つリソースが用意されています。
+   このプラグインは、{{site.data.keyword.Bluemix_notm}} CLI にインストールされます。 {{site.data.keyword.Bluemix_notm}} CLI にも、端末から {{site.data.keyword.Bluemix_notm}} にアクセスするのに役立つリソースが用意されています。
 
    {{site.data.keyword.Bluemix_notm}} CLI について詳しくは、[資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html){: new_window}を参照してください。
 
 * Go の[開発環境 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://golang.org/doc/code.html)
 
-   Go では、パッケージの場所が厳しく管理されているので、`$GOPATH` ディレクトリー構造内にソースを定義する必要があります。必ず `$GOPATH` 変数および `$GOROOT` 変数を定義するとともに、`$GOPATH/bin` を `$PATH` 環境変数に含める必要があります。これは、(Mac OS 上で)、`~/.bash_profile` 構成ファイルを編集することによって行います。
+   Go では、パッケージの場所が厳しく管理されているので、`$GOPATH` ディレクトリー構造内にソースを定義する必要があります。 必ず `$GOPATH` 変数および `$GOROOT` 変数を定義するとともに、`$GOPATH/bin` を `$PATH` 環境変数に含める必要があります。これは、(Mac OS 上で)、`~/.bash_profile` 構成ファイルを編集することによって行います。
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -45,7 +45,7 @@ lastupdated: "2018-03-16"
 
 * 依存関係マネージャー: [govendor ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/kardianos/govendor)
 
-   `govendor` ツールは、Go の依存関係を作成し、管理します。ベンダー・ディレクトリーを更新する予定がない限り、必要ありません。
+   `govendor` ツールは、Go の依存関係を作成し、管理します。 ベンダー・ディレクトリーを更新する予定がない限り、必要ありません。
 
    * 以下のコマンドを使用してインストールします。
 
@@ -70,7 +70,7 @@ lastupdated: "2018-03-16"
 
 * BDD テスト・フレームワーク: [Ginkgo ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://onsi.github.io/ginkgo/)
 
-テスト・フレームワークは、Go 用の BDD テスト・フレームワーク Ginkgo に基づいています。Ginkgo 用のマッチャーおよびアサーション・ライブラリーである[Gomega ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://onsi.github.io/gomega/)と併せて使用します。
+テスト・フレームワークは、Go 用の BDD テスト・フレームワーク Ginkgo に基づいています。 Ginkgo 用のマッチャーおよびアサーション・ライブラリーである[Gomega ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://onsi.github.io/gomega/)と併せて使用します。
 
    * 以下のコマンドを使用して `ginkgo` をインストールします。
 
@@ -106,7 +106,7 @@ lastupdated: "2018-03-16"
 
 * 国際化対応: [go-i18n ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/nicksnyder/go-i18n) および [go-bindata ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/jteeuwen/go-bindata)
 
-国際化対応は、Go アプリケーションを複数の言語に翻訳することをサポートするパッケージおよびコマンド・ライン・ツールである go-i18n に基づきます。翻訳バンドルは、各種入力ファイルを管理しやすい GO ソース・コードに変換するコマンドである go-bindata で事前処理されます。
+国際化対応は、Go アプリケーションを複数の言語に翻訳することをサポートするパッケージおよびコマンド・ライン・ツールである go-i18n に基づきます。 翻訳バンドルは、各種入力ファイルを管理しやすい GO ソース・コードに変換するコマンドである go-bindata で事前処理されます。
 
    * 以下のコマンドを使用して `go-i18n` をインストールします。
 
@@ -152,11 +152,11 @@ Go は、堅固な依存関係マネージャーを提供していないので�
 
 * [github.com/urfave/cli ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/urfave/cli)
 
-   このパッケージは、Go 内にコマンド・ライン・アプリをビルドするためのインフラストラクチャーを提供します。{{site.data.keyword.Bluemix_notm}} CLI プラグインは、このライブラリー (github.com/codegangsta/cli) のより古いバージョンに依存します。
+   このパッケージは、Go 内にコマンド・ライン・アプリをビルドするためのインフラストラクチャーを提供します。 {{site.data.keyword.Bluemix_notm}} CLI プラグインは、このライブラリー (github.com/codegangsta/cli) のより古いバージョンに依存します。
 
 * [github.com/asaskevich/govalidator ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/asaskevich/govalidator)
 
-   このパッケージは、ストリング、ストラクチャー、およびコレクション用のバリデーターおよびサニタイザーをいくつか提供します。独自のバリデーターを実装する代わりにこのパッケージを使用してください。
+   このパッケージは、ストリング、ストラクチャー、およびコレクション用のバリデーターおよびサニタイザーをいくつか提供します。 独自のバリデーターを実装する代わりにこのパッケージを使用してください。
 
 * [github.com/parnurzeal/gorequest ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/parnurzeal/gorequest)
 

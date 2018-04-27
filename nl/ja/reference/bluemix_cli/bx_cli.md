@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-03-05"
 # {{site.data.keyword.Bluemix_notm}} (bx) コマンド
 {: #bluemix_cli}
 
-バージョン: 0.6.5
+バージョン: 0.6.7
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 
@@ -122,6 +122,30 @@ lastupdated: "2018-03-05"
  </tr>
  <tr>
   <td>[bluemix account user-reinvite](bx_cli.html#bluemix_account_user_reinvite)</td>
+  <td>[bluemix iam access-groups](bx_cli.html#bluemix_iam_access-groups)</td>
+  <td>[bluemix iam access-group](bx_cli.html#bluemix_iam_access-group)</td>
+  <td>[bluemix iam access-group-create](bx_cli.html#bluemix_iam_access-group-create)</td>
+  <td>[bluemix iam access-group-update](bx_cli.html#bluemix_iam_access-group-update)</td>
+</tr>
+<tr>
+  <td>[bluemix iam access-group-delete](bx_cli.html#bluemix_iam_access-group-delete)</td>
+  <td>[bluemix iam access-group-users](bx_cli.html#bluemix_iam_access-group-users)</td>
+  <td>[bluemix iam access-group-user-add](bx_cli.html#bluemix_iam_access-group-user-add)</td>
+  <td>[bluemix iam access-group-user-remove](bx_cli.html#bluemix_iam_access-group-user-remove)</td>
+  <td>[bluemix iam access-group-user-purge](bx_cli.html#bluemix_iam_access-group-user-purge)</td>
+</tr>
+<tr>
+  <td>[bluemix iam access-group-service-ids](bx_cli.html#bluemix_iam_access-group-service-ids)</td>
+  <td>[bluemix iam access-group-service-id-add](bx_cli.html#bluemix_iam_access-group-service-id-add)</td>
+  <td>[bluemix iam access-group-service-id-remove](bx_cli.html#bluemix_iam_access-group-service-id-remove)</td>
+  <td>[bluemix iam access-group-service-id-purge](bx_cli.html#bluemix_iam_access-group-service-id-purge)</td>
+  <td>[bluemix iam access-group-policies](bx_cli.html#bluemix_iam_access-group-policies)</td>
+</tr>
+<tr>
+  <td>[bluemix iam access-group-policy](bx_cli.html#bluemix_iam_access-group-policy)</td>
+  <td>[bluemix iam access-group-policy-create](bx_cli.html#bluemix_iam_access-group-policy-create)</td>
+  <td>[bluemix iam access-group-policy-update](bx_cli.html#bluemix_iam_access-group-policy-update)</td>
+  <td>[bluemix iam access-group-policy-delete](bx_cli.html#bluemix_iam_access-group-policy-delete)</td>
  </tr>
  </tbody>
  </table>
@@ -169,6 +193,9 @@ lastupdated: "2018-03-05"
       <td>[bluemix resource service-alias-update](bx_cli.html#bluemix_resource_service_alias_update)</td>
       <td>[bluemix resource service-alias-delete](bx_cli.html#bluemix_resource_service_alias_delete)</td>
     </tr>
+    <tr>
+      <td>[bluemix resource search](bx_cli.html#bluemix_resource_search)</td>
+    </tr>
   </tbody>
 </table>
 
@@ -203,11 +230,11 @@ lastupdated: "2018-03-05"
    <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service_policies)</td>
   </tr>
   <tr>
-   <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
-   <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
-   <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
-   <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
-   <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
+    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
+    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
+    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
+    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
+    <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
   </tr>
   <tr>
    <td>[bluemix iam user-policy](bx_cli.html#bluemix_iam_user_policy)</td>
@@ -216,14 +243,12 @@ lastupdated: "2018-03-05"
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
    <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
   </tr>
-   <tr>
-   <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
-   <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
-   <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
-   <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
-   <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
-  </tr>
-
+  <tr>
+     <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
+     <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
+     <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
+     <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
+     <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
   </tr>
   </tbody>
   </table>
@@ -349,21 +374,25 @@ lastupdated: "2018-03-05"
  <tr>
   <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
   <td>[bluemix catalog locations](bx_cli.html#bluemix_catalog_locations)</td>
+  <td>[bluemix catalog runtime](bx_cli.html#bluemix_catalog_runtime)</td>
+  <td>[bluemix catalog runtimes](bx_cli.html#bluemix_catalog_runtimes)</td>
   <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
+</tr>
+<tr>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
   <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
- </tr>
- <tr>
   <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
   <td>[bluemix plugin list](bx_cli.html#bluemix_plugin_list)</td>
+</tr>
+<tr>
   <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
   <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
   <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
- </tr>
- <tr>
   <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
+</tr>
+<tr>
   <td>[bluemix billing resource-group-usage](bx_cli.html#bluemix_resource_group_usage)</td>
   <td>[bluemix billing resource-instances-usage](bx_cli.html#bluemix_resource_instances_usage)</td>
  </tr>
@@ -566,7 +595,7 @@ bluemix -q cf services
 ユーザーをログインします。
 
 ```
-bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>前提条件</strong>: なし
@@ -587,10 +616,12 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dd> パスワード</dd>
   <dt> -c <i>ACCOUNT_ID</i> (オプション) </dt>
   <dd> ターゲット・アカウントの ID</dd>
-  <dt> -o <i>ORG_NAME</i> (オプション) </dt>
-  <dd> ターゲット組織の名前 </dd>
-  <dt> -s <i>SPACE_NAME</i> (オプション) </dt>
-  <dd> ターゲット・スペースの名前</dd>
+  <dt> -g <i>RESOURCE_GROUP</i> (オプション) </dt>
+  <dd> ターゲット・リソース・グループの名前</dd>
+  <dt> -o <i>ORG</i> (オプション)</dt>
+  <dd> ターゲット組織の名前 (非推奨。'bluemix target -o ORG' を使用のこと)</dd>
+  <dt> -s <i>SPACE</i> (オプション) </dt>
+  <dd> ターゲット・スペースの名前 (非推奨。'bluemix target -s SPACE' を使用のこと)</dd>
   <dt> --no-iam </dt>
   <dd> パブリック IAM の代わりにログイン・サーバーでの認証を強制します</dd>
   <dt> --skip-ssl-validation (オプション) </dt>
@@ -732,7 +763,7 @@ bluemix target
 CLI を最新バージョンに更新します。
 
 ```
-bluemix update
+bluemix update [-f]
 ```
 
 <strong>前提条件</strong>: なし
@@ -740,7 +771,7 @@ bluemix update
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>-f</dt>
-  <dd>確認を求めずに更新を強制します</dd>
+  <dd>確認を求めずに更新を強制します。 root 権限が必要です。</dd>
 </dl>
 
 ### bluemix account orgs
@@ -1210,30 +1241,560 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix account user-invite
 {: #bluemix_account_user_invite}
 
-ユーザーをアカウントに招待します。 この操作は、アカウントの所有者のみが実行できます。
+ユーザーをアカウントに招待します (アカウント管理者)
 
 ```
 bluemix account user-invite USER_EMAIL
 ```
 
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+   <dt>USER_EMAIL (必須)</dt>
+   <dd>招待されるユーザーの E メール。</dd>
+</dl>
+
+
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
 
-ユーザーに招待を再送信します (アカウント所有者が必要)。
+ユーザーに招待を再送信します (アカウント管理者)
 
 ```
 bluemix account user-reinvite USER_EMAIL
 ```
-
 <strong>前提条件</strong>: エンドポイント、ログイン
-  
- <strong>コマンド・オプション</strong>:
- <dl>
+
+<strong>コマンド・オプション</strong>:
+<dl>
    <dt>USER_EMAIL (必須)</dt>
    <dd>再度招待されるユーザーの E メール。</dd>
- </dl>
+</dl>
 
+## bluemix iam access-groups
+{: #bluemix_iam_access_groups}
 
+現行アカウントのアクセス・グループをリストします
+
+```
+bluemix iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-u</dt>
+  <dd>ユーザーが所属するアクセス・グループをリストします。このフラグと '-s' を同時に指定することはできません。</dd>
+  <dt>-s</dt>
+  <dd>サービス ID が所属するアクセス・グループをリストします。このフラグと '-u' を同時に指定することはできません。</dd>
+</dl>
+
+<strong>例</strong>:
+
+すべてのアクセス・グループをリストします
+
+```
+bluemix iam access-groups
+```
+
+## bluemix iam access-group
+{: #bluemix_iam_access_group}
+
+アクセス・グループの詳細を表示します
+
+```
+bluemix iam access-group GROUP_NAME [--id]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-id</dt>
+  <dd>ID のみを表示します</dd>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` の詳細を表示します。
+
+```
+bluemix iam access-group example_group
+```
+
+## bluemix iam access-group-create
+{: #bluemix_iam_access_group_create}
+
+アクセス・グループを作成します
+
+```
+bluemix iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-d, --description</dt>
+  <dd>アクセス・グループの説明</dd>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` を作成します。
+
+```
+bluemix iam access-group-create example_group -d "example access group"
+```
+
+## bluemix iam access-group-update
+{: #bluemix_iam_access_group_update}
+
+アクセス・グループを更新します
+
+```
+bluemix iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-n, --name</dt>
+  <dd>新規アクセス・グループ名</dd>
+  <dt>-d, --description</dt>
+  <dd>新規説明</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずに更新を強制します</dd>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` を `hello_world_group` に名前変更します。
+
+```
+bluemix iam access-group-update example_group --name "hello_world_group"
+```
+
+## bluemix iam access-group-delete
+{: #bluemix_iam_access_group_delete}
+
+アクセス・グループを削除します
+
+```
+bluemix iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>確認なしで削除を強制します</dd>
+  <dt>-r, --recursive</dt>
+  <dd>アクセス・グループとそのメンバーを削除します</dd>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` を削除します。
+
+```
+bluemix iam access-group-delete example_group --force
+```
+
+## bluemix iam access-group-users
+{: #bluemix_iam_access_group_users}
+
+アクセス・グループ内のユーザーをリストします
+
+```
+bluemix iam access-group-users GROUP_NAME
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` 内のすべてのユーザーをリストします。
+
+```
+bluemix iam access-group-users example_group
+```
+
+## bluemix iam access-group-user-add
+{: #bluemix_iam_access_group_user_add}
+
+アクセス・グループにユーザーを追加します
+
+```
+bluemix iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+ユーザー `name@example.com` をアクセス・グループ `example_group` に追加します。
+
+```
+bluemix iam access group-user-add example_group name@example.com
+```
+
+## bluemix iam access-group-user-remove
+{: #bluemix_iam_access_group_user_remove}
+
+アクセス・グループからユーザーを削除します
+
+```
+bluemix iam access-group-user-remove GROUP_NAME USER_NAME
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+ユーザー `name@example.com` をアクセス・グループ `example_group` から削除します。
+
+```
+bluemix iam access-group-user-remove example_group name@example.com
+```
+
+## bluemix iam access-group-user-purge
+{: #bluemix_iam_access_group_user_purge}
+
+すべてのアクセス・グループからユーザーを削除します
+
+```
+bluemix iam access-group-user-purge USER_NAME [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずに削除します</dd>
+</dl>
+
+<strong>例</strong>:
+
+ユーザー `name@example.com` をすべてのアクセス・グループから削除します。
+
+```
+bluemix iam access-group-user-purge name@example.com -f
+```
+
+## bluemix iam access-group-service-ids
+{: #bluemix_iam_access_group_service_ids}
+
+アクセス・グループ内のサービス ID をリストします
+
+```
+bluemix iam access-group-service-ids GROUP_NAME
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` 内のすべてのサービス ID をリストします。
+
+```
+bluemix iam access-group-service-ids example_group
+```
+
+## bluemix iam access-group-service-id-add
+{: #bluemix_iam_access_group_service_id_add}
+
+サービス ID をアクセス・グループに追加します
+
+```
+bluemix iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+サービス ID `example-service` をアクセス・グループ `example_group` に追加します。
+
+```
+bluemix iam access-group-service-id-add example_group example-service
+```
+
+## bluemix iam access-group-service-id-remove
+{: #bluemix_iam_access_group_service_id_remove}
+
+アクセス・グループからサービス ID を削除します
+
+```
+bluemix iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+サービス ID `example-service` をアクセス・グループ `example_group` から削除します。
+
+```
+bluemix iam access-group-service-id-remove example_group example-service
+```
+
+## bluemix iam access-group-service-id-purge
+{: #bluemix_iam_access_group_service_id_purge}
+
+サービス ID をすべてのアクセス・グループから削除します
+
+```
+bluemix iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずに削除します</dd>
+</dl>
+
+<strong>例</strong>:
+
+サービス ID `example-service` をすべてのアクセス・グループからから削除します。
+
+```
+bluemix iam access-group-service-id-purge example --force
+```
+
+## bluemix iam access-group-policies
+{: #bluemix_iam_access_group_policies}
+
+アクセス・グループのポリシーをリストします
+
+```
+bluemix iam access-group-policies GROUP_NAME
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` のすべてのポリシーをリストします。
+
+```
+bluemix iam access-group-policies example_group
+```
+
+## bluemix iam access-group-policy
+{: #bluemix_iam_access_group_policy}
+
+アクセス・グループ・ポリシーの詳細を表示します
+
+```
+bluemix iam access-group-policy GROUP_NAME POLICY_ID
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` のポリシー `51b9717e-76b0-4f6a-bda7-b8132431f926` の詳細を表示します
+
+```
+bluemix iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
+```
+
+## bluemix iam access-group-policy-create
+{: #bluemix_iam_access_group_policy_create}
+
+アクセス・グループ・ポリシーを作成します
+
+```
+bluemix iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f, --file</dt>
+  <dd>ポリシー定義の JSON ファイル</dd>
+  <dt>-roles</dt>
+  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-service-name</dt>
+  <dd>ポリシー定義のサービス名。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-service-instance</dt>
+  <dd>ポリシー定義のサービス・インスタンス。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-region</dt>
+  <dd>ポリシー定義の地域。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-resource-type</dt>
+  <dd>ポリシー定義のリソース・タイプ。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-resource</dt>
+  <dd>ポリシー定義のリソース。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-resource-group-name</dt>
+  <dd>リソース・グループの名前。 このオプションは、「-f, --file」および「--resource-group-id」と同時に指定することはできません。</dd>
+  <dt>-resource-group-id</dt>
+  <dd>リソース・グループの ID。 このオプションは、「-f, --file」および「--resource-group-name」と同時に指定することはできません。</dd>
+</dl>
+
+<strong>例</strong>:
+
+JSON ファイルからアクセス・グループ・ポリシーを作成します。
+
+```
+bluemix iam access-group-policy-create example_group -f @policy.json
+```
+    
+`example_group` に、すべての `sample-service` リソースの `Administrator` 役割を与えます。
+```
+bluemix iam access-group-policy-create example_group --roles Administrator --service-name sample-service
+```
+
+`example_group` に、`us-south` 地域の `sample-service` インスタンス `ServiceId-ade78e9f` のリソース `key123` の `Editor` 役割を与えます。
+```
+bluemix iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+```
+
+`example_group` に、リソース・グループ ID `dda27e49d2a1efca58083a01dfde18f6` の `Operator` 役割を与えます。
+```
+bluemix iam access-group-policy-create example_group --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+```
+
+`example_group` に、 リソース・グループ `sample-resource-group` のメンバーの `Viewer` 役割を与えます。
+```
+bluemix iam access-group-policy-create example_group --roles Viewer --resource-group-name sample-resource-group
+```
+
+`example_group` に、ID `dda27e49d2a1efca58083a01dfde18f6` を持つリソース・グループのメンバーの `Viewer` 役割を与えます。
+```
+bluemix iam access-group-policy-create example_group --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+
+## bluemix iam access-group-policy-update
+{: #bluemix_iam_access_group_policy_update}
+
+アクセス・グループ・ポリシーを更新します
+
+```
+bluemix iam access-group-policy-update GROUP_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f, --file</dt>
+  <dd>ポリシー定義の JSON ファイル</dd>
+  <dt>-v, --version</dt>
+  <dd>ポリシーのバージョン</dd>
+  <dt>-roles</dt>
+  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-service-name</dt>
+  <dd>ポリシー定義のサービス名。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-service-instance</dt>
+  <dd>ポリシー定義のサービス・インスタンス。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-region</dt>
+  <dd>ポリシー定義の地域。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-resource-type</dt>
+  <dd>ポリシー定義のリソース・タイプ。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-resource</dt>
+  <dd>ポリシー定義のリソース。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>-resource-group-name</dt>
+  <dd>リソース・グループの名前。 このオプションは、「-f, --file」および「--resource-group-id」と同時に指定することはできません。</dd>
+  <dt>-resource-group-id</dt>
+  <dd>リソース・グループの ID。 このオプションは、「-f, --file」および「--resource-group-name」と同時に指定することはできません。</dd>
+</dl>
+
+<strong>例</strong>:
+
+ポリシー JSON ファイル内のもので、アクセス・グループ・ポリシーを更新します。
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 -f @policy.json
+```
+
+`example_group` に、すべての `sample-service` リソースの `Administrator` 役割を与えるようにアクセス・グループ・ポリシーを更新します。
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
+```
+
+`example_group` に、`us-south` 地域の `sample-service` インスタンス `ServiceId-ade78e9f` のリソース `key123` の `Editor` 役割を与えるようにアクセス・グループ・ポリシーを更新します。
+```
+bluemix iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south
+```
+
+`example_group` に、リソース・グループ ID `dda27e49d2a1efca58083a01dfde18f6` の `Operator` 役割を与えるようにアクセス・グループ・ポリシーを更新します。
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+```
+
+`example_group` に、リソース・グループ `sample-resource-group` のメンバーの `Viewer` 役割を与えるようにアクセス・グループ・ポリシーを更新します。
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-name sample-resource-group
+```
+
+`example_group` に、ID `dda27e49d2a1efca58083a01dfde18f6` を持つリソース・グループのメンバーの `Viewer` 役割を与えるようにアクセス・グループ・ポリシーを更新します。
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+
+## bluemix iam access-group-policy-delete
+{: #bluemix_iam_access_group_policy_delete}
+
+アクセス・グループ・ポリシーを削除します
+
+```
+bluemix iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>確認なしで削除を強制します</dd>
+</dl>
+
+<strong>例</strong>:
+
+アクセス・グループ `example_group` のポリシー `51b9717e-76b0-4f6a-bda7-b8132431f926` を削除します。
+```
+bluemix iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
+```
 
 ## bluemix iam service-ids
 {: #bluemix_iam_service_ids}
@@ -1248,7 +1809,7 @@ bluemix iam service-ids --uuid
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-uuid</dt>
+  <dt>--uuid</dt>
   <dd>サービス ID の UUID のみを表示します</dd>
 </dl>
 
@@ -1266,16 +1827,16 @@ bluemix iam service-ids --uuid
 サービス ID の詳細を表示します
 
 ```
-bluemix iam service-id NAME [--uuid]
+bluemix iam service-id (NAME|UUID) [--uuid]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>NAME (必須)</dt>
-  <dd>サービスの名前</dd>
-  <dt>-uuid</dt>
+  <dt>NAME|UUID (必須)</dt>
+  <dd>サービスの名前または UUID</dd>
+  <dt>--uuid</dt>
   <dd>サービス ID の UUID を表示します</dd>
 </dl>
 
@@ -1285,6 +1846,11 @@ bluemix iam service-id NAME [--uuid]
 
 ```
 bluemix iam service-id sample-test
+```
+サービス ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` の詳細を表示します
+
+```
+bluemix iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
 
@@ -1322,15 +1888,15 @@ bluemix iam service-id-create sample-test -d 'hello, world!'
 サービス ID を更新します
 
 ```
-bluemix iam service-id-update NAME [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+bluemix iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>NAME (必須)</dt>
-  <dd>サービスの名前</dd>
+  <dt>NAME|UUID (必須)</dt>
+  <dd>サービスの名前または UUID</dd>
   <dt>-n, --name</dt>
   <dd>サービスの新しい名前</dd>
   <dt>-d, --description</dt>
@@ -1355,6 +1921,12 @@ bluemix iam service-id-update sample-test -n sample-test-2 -f
 bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 ```
 
+サービス ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` を `sample-test-3` に名前変更し、説明も新しくします。
+
+```
+bluemix iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!' 
+```
+
 
 ## bluemix iam service-id-delete
 {: #bluemix_iam_service_id_delete}
@@ -1362,15 +1934,15 @@ bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 サービス ID を削除します
 
 ```
-bluemix iam service-id-delete NAME [-f, --force]
+bluemix iam service-id-delete (NAME|UUID) [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>NAME (必須)</dt>
-  <dd>サービスの名前</dd>
+  <dt>NAME|UUID (必須)</dt>
+  <dd>サービスの名前または UUID</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに削除します</dd>
 </dl>
@@ -1381,6 +1953,12 @@ bluemix iam service-id-delete NAME [-f, --force]
 
 ```
 bluemix iam service-id-delete sample-teset -f
+```
+
+サービス ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` を削除します
+
+```
+bluemix iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
 
@@ -1401,7 +1979,7 @@ bluemix iam api-keys
 新しい {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを作成します
 
 ```
-bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
+bluemix iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1412,7 +1990,7 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dd>作成する API キーの名前。</dd>
 <dt>-d <i>DESCRIPTION</i> (オプション)</dt>
 <dd>API キーの説明</dd>
-<dt>-f, -- file <i>FILE</i></dt>
+<dt>--file <i>FILE</i></dt>
 <dd>指定されたファイルに API キー情報を保存します。 設定されていない場合、JSON コンテンツが表示されます。</dd>
 </dl>
 
@@ -1421,7 +1999,7 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 API キーを作成し、ファイルに保存します
 
 ```
-bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
+bluemix iam api-key-create MyKey -d "this is my API key" --file key_file
 ```
 
 ## bluemix iam api-key-update
@@ -1478,13 +2056,17 @@ bluemix iam api-key-delete NAME [-f]
 サービスのすべての API キーをリストします
 
 ```
-bluemix iam service-api-keys SERVICE_ID
+bluemix iam service-api-keys SERVICE_ID [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずにサービス API キーを表示します</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1501,15 +2083,19 @@ bluemix iam service-api-keys sample-service
 サービス API キーの詳細をリストします
 
 ```
-bluemix iam service-api-key NAME SERVICE_ID [--uuid]
+bluemix iam service-api-key NAME SERVICE_ID [--uuid] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-uuid</dt>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
+  <dt>--uuid</dt>
   <dd>サービス API キーの UUID を表示します</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずにサービス API キーを表示します</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1526,25 +2112,29 @@ bluemix iam service-api-key sample-key sample-service
 サービス API キーを作成します
 
 ```
-bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [-f, --file FILE]
+bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [--file FILE] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
   <dt>-d, --description</dt>
   <dd>API キーの説明</dd>
-  <dt>-f, --file</dt>
+  <dt>--file</dt>
   <dd>指定されたファイルに API キー情報を保存します。 設定されていない場合、JSON コンテンツが表示されます。</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずに作成を強制します</dd>
 </dl>
 
 <strong>例</strong>:
 
-サービス `sample-service` のサービス API キー `sample-key` を作成します。
+確認を求めずにサービス `sample-service` のサービス API キー `sample-key` を作成します。
 
 ```
-bluemix iam service-api-key-create sample-key sample-service
+bluemix iam service-api-key-create sample-key sample-service -f
 ```
 
 ## bluemix iam service-api-key-update
@@ -1560,6 +2150,8 @@ bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, 
 
 <strong>コマンド・オプション</strong>:
 <dl>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
   <dt>-n, --name</dt>
   <dd>サービスAPI キーの新しい名前</dd>
   <dt>-d, --description</dt>
@@ -1591,6 +2183,8 @@ bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 
 <strong>コマンド・オプション</strong>:
 <dl>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに削除します</dd>
 </dl>
@@ -1661,7 +2255,7 @@ bluemix iam user-policy name@example.com 0bb730daa
 ユーザー・ポリシーを作成します
 
 ```
-bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+bluemix iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -1670,24 +2264,24 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dl>
 <dt>USER_NAME (必須)</dt>
 <dd>ポリシーが属するユーザー名</dd>
-<dt>-f, --file <i>FILE</i> (オプション)</dt>
+<dt>--file <i>FILE</i> (オプション)</dt>
 <dd>ポリシー定義の JSON ファイル</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (オプション)</dt>
-<dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+<dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (オプション)</dt>
-<dd>ポリシー定義のサービス名。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義のサービス名。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (オプション)</dt>
-<dd>ポリシー定義のサービス・インスタンス。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義のサービス・インスタンス。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--region <i>REGION</i> (オプション)</dt>
-<dd>ポリシー定義の地域。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義の地域。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (オプション)</dt>
-<dd>ポリシー定義のリソース・タイプ。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義のリソース・タイプ。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--resource <i>RESOURCE</i> (オプション)</dt>
-<dd>ポリシー定義のリソース。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義のリソース。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (オプション)</dt>
-<dd>リソース・グループの名前。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
+<dd>リソース・グループの名前。これは、「--file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (オプション)</dt>
-<dd>リソース・グループの ID。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
+<dd>リソース・グループの ID。これは、「--file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1695,7 +2289,7 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 ポリシー JSON ファイル `policy.json` から、ユーザー `name@example.com` のユーザー・ポリシーを作成します。
 
 ```
-bluemix iam user-policy-create name@example.com -f @policy.json
+bluemix iam user-policy-create name@example.com --file @policy.json
 ```
 
 `name@example.com` に、すべての `sample-service` リソースの `Administrator` 役割を与えます。
@@ -1734,7 +2328,7 @@ bluemix iam user-policy-create name@example.com --roles Viewer --resource-group-
 ユーザー・ポリシーを更新します
 
 ```
-bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -1746,26 +2340,24 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>更新するポリシーの ID</dd>
 <dt>-v, --version <i>VERSION</i> (オプション)</dt>
 <dd>既存のポリシーのバージョン</dd>
-<dt>-f, --file <i>FILE</i> (オプション)</dt>
-<dd>ポリシー定義の JSON ファイル</dd>
-<dt>-f, --file <i>FILE</i> (オプション)</dt>
+<dt>--file <i>FILE</i> (オプション)</dt>
 <dd>ポリシー定義の JSON ファイル</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (オプション)</dt>
-<dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+<dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (オプション)</dt>
-<dd>ポリシー定義のサービス名。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義のサービス名。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i> (オプション)</dt>
-<dd>ポリシー定義のサービス・インスタンス。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義のサービス・インスタンス。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--region <i>REGION</i> (オプション)</dt>
-<dd>ポリシー定義の地域。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義の地域。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (オプション)</dt>
-<dd>ポリシー定義のリソース・タイプ。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義のリソース・タイプ。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--resource <i>RESOURCE</i> (オプション)</dt>
-<dd>ポリシー定義のリソース。これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+<dd>ポリシー定義のリソース。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (オプション)</dt>
-<dd>リソース・グループの名前。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
+<dd>リソース・グループの名前。これは、「--file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (オプション)</dt>
-<dd>リソース・グループの ID。これは、「-f, --file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
+<dd>リソース・グループの ID。これは、「--file」、「--resource」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1773,7 +2365,7 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 JSON ファイル内のポリシーによってユーザー・ポリシーを更新します
 
 ```
-bluemix iam user-policy-update name@example.com 0bb730daa -f @policy.json
+bluemix iam user-policy-update name@example.com 0bb730daa --file @policy.json
 ```
 
 `name@example.com` に、すべての `sample-service` リソースの `Administrator` 役割を与えるようにユーザー・ポリシーを更新します
@@ -1814,15 +2406,15 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Viewer --
 指定したサービスのすべてのサービス・ポリシーをリストします
 
 ```
-bluemix iam service-policies SERVICE_ID_NAME [--json] [-f, --force]
+bluemix iam service-policies SERVICE_ID [--json] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME (必須)</dt>
-  <dd>サービス ID の名前</dd>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
   <dt>-json</dt>
   <dd>JSON フォーマットでポリシーを表示します</dd>
   <dt>-f, --force</dt>
@@ -1836,6 +2428,11 @@ bluemix iam service-policies SERVICE_ID_NAME [--json] [-f, --force]
 ```
 bluemix iam service-policies test
 ```
+サービス `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` のポリシーをリストします
+
+```
+bluemix iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+```
 
 
 ## bluemix iam service-policy
@@ -1844,15 +2441,15 @@ bluemix iam service-policies test
 サービス・ポリシーの詳細を表示します
 
 ```
-bluemix iam service-policy SERVICE_ID_NAME POLICY_ID [--json] [-f, --force]
+bluemix iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME (必須)</dt>
-  <dd>サービス ID の名前</dd>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
   <dt>POLICY_ID (必須)</dt>
   <dd>サービス・ポリシーの ID<dd>
   <dt>-json</dt>
@@ -1868,6 +2465,11 @@ bluemix iam service-policy SERVICE_ID_NAME POLICY_ID [--json] [-f, --force]
 ```
 bluemix iam service-policies test 140798e2-8ea7db3
 ```
+サービス `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` のポリシー `140798e2-8ea7db3` を表示します
+
+```
+bluemix iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
+```
 
 
 ## bluemix iam service-policy-create
@@ -1876,34 +2478,34 @@ bluemix iam service-policies test 140798e2-8ea7db3
 サービス・ポリシーを作成します
 
 ```
-bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
+bluemix iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME (必須)</dt>
-  <dd>サービス ID の名前</dd>
-  <dt>-f, --file</dt>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
+  <dt>--file</dt>
   <dd>ポリシー定義の JSON ファイル。 これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、「--resource」、「--resource-group-name」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
   <dt>-r, --roles</dt>
-  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>--service-name</dt>
-  <dd>ポリシー定義のサービス名。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス名。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>--service-instance</dt>
-  <dd>ポリシー定義のサービス・インスタンス。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス・インスタンス。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-region</dt>
-  <dd>ポリシー定義の地域。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義の地域。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>--resource-type</dt>
-  <dd>ポリシー定義のリソース・タイプ。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース・タイプ。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>--resource</dt>
-  <dd>ポリシー定義のリソース。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>--resource-group-name</dt>
-  <dd>リソース・グループの名前。 このオプションは、「-f, --file」および「--resource-group-id」と同時に指定することはできません。</dd>
+  <dd>リソース・グループの名前。 このオプションは、「--file」および「--resource-group-id」と同時に指定することはできません。</dd>
   <dt>--resource-group-id </dt>
-  <dd>リソース・グループの ID。 このオプションは、「-f, --file」および「--resource-group-name」と同時に指定することはできません。</dd>
-  <dt>-F, --force</dt>
+  <dd>リソース・グループの ID。 このオプションは、「--file」および「--resource-group-name」と同時に指定することはできません。</dd>
+  <dt>-f, --force</dt>
   <dd>確認を求めずにサービス・ポリシーを作成します</dd>
 </dl>
 
@@ -1912,7 +2514,12 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
 サービス `test` のサービス・ポリシーを JSON ファイルから作成します
 
 ```
-bluemix iam service-policy-create test -f @policy.json
+bluemix iam service-policy-create test --file @policy.json
+```
+サービス `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` のサービス・ポリシーを JSON ファイルから作成します
+
+```
+bluemix iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
 
@@ -1922,38 +2529,38 @@ bluemix iam service-policy-create test -f @policy.json
 サービス・ポリシーを更新します
 
 ```
-bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
+bluemix iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME (必須)</dt>
-  <dd>サービス ID の名前</dd>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
   <dt>POLICY_ID (必須)</dt>
   <dd>サービス・ポリシーの ID<dd>
   <dt>-v, --version</dt>
   <dd>サービス・ポリシーのバージョン</dd>
-  <dt>-f, --file</dt>
+  <dt>--file</dt>
   <dd>ポリシー定義の JSON ファイル。 これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、「--resource」、「--resource-group-name」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
   <dt>-r, --roles</dt>
-  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「bluemix iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-service-name</dt>
-  <dd>ポリシー定義のサービス名。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス名。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-service-instance</dt>
-  <dd>ポリシー定義のサービス・インスタンス。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス・インスタンス。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-region</dt>
-  <dd>ポリシー定義の地域。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義の地域。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-resource-type</dt>
-  <dd>ポリシー定義のリソース・タイプ。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース・タイプ。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-resource</dt>
-  <dd>ポリシー定義のリソース。 これは、「-f, --file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>--resource-group-name</dt>
-  <dd>リソース・グループの名前。 このオプションは、「-f, --file」および「--resource-group-id」と同時に指定することはできません。</dd>
+  <dd>リソース・グループの名前。 このオプションは、「--file」および「--resource-group-id」と同時に指定することはできません。</dd>
   <dt>--resource-group-id </dt>
-  <dd>リソース・グループの ID。 このオプションは、「-f, --file」および「--resource-group-name」と同時に指定することはできません。</dd>
-  <dt>-F, --force</dt>
+  <dd>リソース・グループの ID。 このオプションは、「--file」および「--resource-group-name」と同時に指定することはできません。</dd>
+  <dt>-f, --force</dt>
   <dd>確認を求めずにサービス・ポリシーを更新します</dd>
 </dl>
 
@@ -1962,7 +2569,12 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
 サービス `test` のサービス・ポリシー `140798e2-8ea7db3` を JSON ファイルから更新します
 
 ```
-bluemix iam service-policy-update test 140798e2-8ea7db3 -f @policy.json
+bluemix iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
+```
+サービス `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` のサービス・ポリシー `140798e2-8ea7db3` を JSON ファイルから更新します
+
+```
+bluemix iam service-policy-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3 --file @policy.json
 ```
 
 ## bluemix iam service-policy-delete
@@ -1971,15 +2583,15 @@ bluemix iam service-policy-update test 140798e2-8ea7db3 -f @policy.json
 サービス・ポリシーを削除します
 
 ```
-bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
+bluemix iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME (必須)</dt>
-  <dd>サービス ID の名前</dd>
+  <dt>SERVICE_ID (必須)</dt>
+  <dd>サービス ID の名前または UUID</dd>
   <dt>POLICY_ID (必須)</dt>
   <dd>サービス・ポリシーの ID<dd>
   <dt>-f, --force</dt>
@@ -1993,11 +2605,16 @@ bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
 ```
 bluemix iam service-policy-delete test 140798e2-8ea7db3
 ```
+サービス `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` のポリシー `140798e2-8ea7db3` を削除します
+
+```
+bluemix iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
+```
 
 ## bluemix iam oauth-tokens
 {: #bluemix_iam_oauth_tokens}
 
-現行セッションの OAuth トークンを取得して表示します。
+現行セッションの OAuth トークンを取得して表示します
 
 ```
 bluemix iam oauth-tokens
@@ -2011,7 +2628,7 @@ bluemix iam oauth-tokens
 
 <strong>例</strong>:
 
-OAuth トークンを更新して表示します。
+OAuth トークンを更新して表示します
 
 ```
 bluemix iam oauth-tokens
@@ -2020,7 +2637,7 @@ bluemix iam oauth-tokens
 ## bluemix iam dedicated-id-disconnect
 {: #bluemix_iam_dedicated_id_disconnect}
 
-パブリック IBM ID を専用の非 IBM ID から切断します。
+パブリック IBM ID を専用の非 IBM ID から切断します
 
 ```
 bluemix iam dedicated-id-disconnect [-f, --force]
@@ -2031,12 +2648,13 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>確認なしで切断を強制します。</dd>
+  <dd>確認なしで切断を強制します</dd>
 </dl>
+
 
 ## bluemix iam authorization-policy-create
 {: #bluemix_iam_authorization_policy_create}
- 
+
 特定のサービス・インスタンスが別のサービス・インスタンスへアクセスできるようにするための許可ポリシーを作成します。
 
 ```
@@ -2054,7 +2672,7 @@ bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME 
   <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
   <dd>ソース・サービスのインスタンス名。指定されない場合、ソース・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
   <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>ターゲット・サービスのインスタンス名。指定されない場合、ターゲット・サービスのすべてのインスタンスがアクセスを許可されます。   </dd>
+  <dd>ターゲット・サービスのインスタンス名。指定されない場合、ターゲット・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>ソース・サービスのアクセス権限を提供する役割。</dd>  
 </dl>
@@ -2072,10 +2690,10 @@ bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 
 <strong>コマンド・オプション</strong>:
 <dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>削除する許可ポリシーの ID。</dd> 
- <dt>-f, --force</dt>
- <dd>確認なしで削除を強制します。</dd> 
+  <dt>AUTHORIZATION_POLICY_ID</dt>
+  <dd>削除する許可ポリシーの ID。</dd> 
+  <dt>-f, --force</dt>
+  <dd>確認なしで削除を強制します。</dd> 
 </dl>
 
 ## bluemix iam authorization-policy
@@ -2091,8 +2709,8 @@ bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
 
 <strong>コマンド・オプション</strong>:
 <dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>表示する許可ポリシーの ID。</dd> 
+  <dt>AUTHORIZATION_POLICY_ID</dt>
+  <dd>表示する許可ポリシーの ID。</dd> 
 </dl>
 
 
@@ -2106,6 +2724,7 @@ bluemix iam authorization-policies
 ```
 
 <strong>前提条件</strong>: ログイン、ターゲット
+
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
@@ -2141,7 +2760,7 @@ bluemix resource groups --default
 ## bluemix resource group
 {: #bluemix_resource_group}
 
-リソース・グループの詳細を表示します。
+リソース・グループの詳細を表示します
 
 ```
 bluemix resource group NAME [--id]
@@ -2152,7 +2771,7 @@ bluemix resource group NAME [--id]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>NAME (必須)</dt>
-  <dd>リソース・グループの名前。</dd>
+  <dd>リソース・グループの名前</dd>
   <dt>--id</dt>
   <dd>ID のみを表示します</dd>
 </dl>
@@ -2175,7 +2794,7 @@ bluemix resource group example-group --id
 ## bluemix resource group-update
 {: #bluemix_resource_group_update}
 
-既存のリソース・グループを更新します。
+既存のリソース・グループを更新します
 
 ```
 bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
@@ -2186,13 +2805,13 @@ bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>NAME (必須)</dt>
-  <dd>ターゲット・リソース・グループの名前。</dd>
+  <dd>ターゲット・リソース・グループの名前</dd>
   <dt>-n, --name</dt>
-  <dd>リソース・グループの新しい名前。</dd>
+  <dd>リソース・グループの新しい名前</dd>
   <dt>-q, --quota</dt>
-  <dd>新規割り当て量定義の名前。</dd>
+  <dd>新規割り当て量定義の名前</dd>
   <dt>-f</dt>
-  <dd>確認を求めずに更新を強制します。</dd>
+  <dd>確認を求めずに更新を強制します</dd>
 </dl>
 
 <strong>例</strong>:
@@ -2212,7 +2831,7 @@ bluemix resource group-update example-group -q free
 ## bluemix resource quotas
 {: #bluemix_resource_quotas}
 
-すべての割り当て量定義をリストします。
+すべての割り当て量定義をリストします
 
 ```
 bluemix resource quotas
@@ -2743,7 +3362,7 @@ bluemix resource service-instance my-service-instance
 サービス・インスタンスの作成
 
 ```
-bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2762,6 +3381,8 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
   <dd>タグ</dd>
   <dt>-p, --parameters</dt>
   <dd>サービス・インスタンスを作成するパラメーターの JSON ファイルまたは JSON 文字列</dd>
+  <dt>-d, --deployment</dt>
+  <dd>デプロイメントの名前</dd>
 </dl>
 
 <strong>例</strong>:
@@ -2835,7 +3456,7 @@ bluemix resource service-instance-delete my-service-instance
 サービス別名へのバインディングを表示します
 
 ```
-bluemix resource bindings SERVICE_ALIAS
+bluemix resource service-bindings SERVICE_ALIAS
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2886,7 +3507,7 @@ bluemix resource bindings my-service-alias my-app
 サービス・バインディングの作成
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2899,8 +3520,8 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>CloudFoundry アプリケーション名</dd>
   <dt>ROLE_NAME</dt>
   <dd>ユーザー役割の名前</dd>
-  <dt>--service-id-name</dt>
-  <dd>役割が属しているサービス ID の名前</dd>
+  <dt>--service-id</dt>
+  <dd>役割が属しているサービス ID の名前または UUID</dd>
   <dt>-p, --parameter</dt>
   <dd>パラメーター JSON ファイルまたは JSON 文字列</dd>
   <dt>-f, --force</dt>
@@ -3003,7 +3624,7 @@ bluemix resource service-key my-service-key
 サービス・キーを作成します
 
 ```
-bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -3022,8 +3643,10 @@ bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTA
   <dd>サービス別名 ID</dd>
   <dt>--alias-name</dt>
   <dd>サービス別名</dd>
-  <dt>-service-id-name</dt>
-  <dd>役割が属しているサービス ID の名前</dd>
+  <dt>--service-id</dt>
+  <dd>役割が属しているサービス ID の名前または UUID</dd>
+  <dt>-p, --parameters</dt>
+  <dd>パラメーター JSON ファイルまたは JSON 文字列</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに作成を強制します</dd>
 </dl>
@@ -3108,7 +3731,7 @@ bluemix resource service-alias ALIAS_NAME [--id]
 <strong>例</strong>:
 サービス別名 `my-service-alias` の詳細を表示します
 ```
-bluemix resource service-aliase  my-service-alias
+bluemix resource service-alias  my-service-alias
 ```
 
 ## bluemix resource service-alias-create
@@ -3141,7 +3764,7 @@ bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance
 <strong>例</strong>:
 サービス・インスタンス `my-service-instance` のサービス別名 `my-service-alias` を作成します。
 ```
-bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
+bluemix resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
 ## bluemix resource service-alias-update
@@ -3200,6 +3823,91 @@ bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 
 ```
 bluemix resource service-alias-delete my-service-alias
+```
+
+## bluemix resource search
+{: #bluemix_resource_search}
+Lucene 照会構文を使用してリソースを検索します
+
+```
+bluemix search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-offset, --o</dt>
+  <dd>開始リソース位置番号</dd>
+  <dt>-limit, --l</dt>
+  <dd>返されるリソースの数 (最大 10000)</dd>
+</dl>
+
+<strong>例</strong>:
+指定したテキストで始まる名前の Cloud Foundry アプリケーションを検索します。
+
+```
+bluemix resource search 'name:my* AND type:cf-application'
+```
+
+指定したサービス名の Cloud Foundry サービス・インスタンスを検索します。
+
+```
+bluemix resource search 'service_name:messagehub AND type:cf-service-instance'
+```
+
+指定した ID を持つ組織内の Cloud Foundry サービス・バインディングを検索します。
+
+```
+bluemix resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
+```
+
+指定した 2 つの地域のどちらかにある、指定した名前の Cloud Foundry スペースを検索します。
+
+```
+bluemix resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
+```
+
+指定した ID の Cloud Foundry スペースの中で、名前に dev が入ったリソースを検索します。
+
+```            
+bluemix resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
+```
+
+指定した場所 (つまり us-south 地域) で、リソース・コントローラーのリソースを検索します。
+
+```
+bluemix resource search 'region:us-south AND family:resource_controller'
+```
+
+指定した ID を持つリソース・グループ内のリソースまたは別名を検索します。
+
+```
+bluemix resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
+```
+
+デフォルトの名前を持つリソース・グループを検索します。
+
+```
+bluemix resource search 'name:default AND type:resource-group'
+```
+
+指定したサービス名のリソース・バインディングを検索します。
+
+```
+bluemix resource search 'service_name:cloud-object-storage AND type:resource-binding'
+```
+
+指定したクラウド・リソース名 (CRN) を持つリソースを検索します。
+
+```
+bluemix resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
+```
+
+指定したタグを持つリソースを検索します。
+
+```
+bluemix resource search "tags:\"mykey:myvalue\""
 ```
 
 ## bluemix catalog search
@@ -3328,7 +4036,7 @@ bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 JSON ファイルからリソース `j402-dnf1i` を更新します
 
 ```
-bluemix update 'j402-dnf1i' -c @update.json
+bluemix catalog entry-update 'j402-dnf1i' -c @update.json
 ```
 
 ## bluemix catalog entry-delete
@@ -3572,10 +4280,51 @@ bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--jso
   <dd>CSV ファイルを出力します</dd>
 </dl>
 
+## bluemix catalog runtime
+{: #bluemix_catalog_runtime}
+
+ランタイムの詳細を表示します。このコマンドは、パブリック・クラウドにのみ使用可能です。
+
+```
+bluemix catalog runtime RUNTIME_ID
+```
+
+<strong>例</strong>:
+
+ランタイム "nodejsHelloWorld" の詳細を表示します。
+
+```
+catalog runtime nodejsHelloWorld
+```
+
+## bluemix catalog runtimes
+{: #bluemix_catalog_runtimes}
+
+すべてのランタイムをリストします。このコマンドは、パブリック・クラウドにのみ使用可能です。
+
+```
+bluemix catalog runtimes [-d]
+```
+
+<strong>コマンド・オプション</strong>:
+
+<dl>
+  <dt>-d</dt>
+  <dd>各ランタイムの説明を表示します</dd>
+</dl>
+
+<strong>例</strong>:
+
+すべてのランタイムを説明と共にリストします。
+
+```
+bluemix catalog runtimes -d
+```
+
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-現行アカウントの月次使用量とコストを表示します。
+現行アカウントの月々の使用量を表示します (アカウント管理者のみ)
 
 ```
 bluemix billing account-usage [-d YYYY-MM] [--json]
@@ -3603,7 +4352,7 @@ bluemix billing account-usage -d 2016-06
 ## bluemix billing org-usage
 {: #bluemix_billing_org_usage}
 
-組織の月次使用量を表示します。この操作を実行できるのは、アカウント所有者または組織の請求処理管理者のみになります。
+組織の月々の使用量を表示します (アカウント管理者または組織の請求管理者のみ)
 
 ```
 bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
@@ -3623,11 +4372,10 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 </dl>
 
 
-
 ## bluemix billing resource-group-usage
 {: #bluemix_billing_resource_group_usage}
 
-リソース・グループの月次使用量を表示します。 この操作を実行できるのは、アカウント所有者または組織の請求処理管理者のみになります。
+リソース・グループの月々の使用量を表示します (アカウント管理者またはリソース・グループ管理者のみ)
 
 ```
 bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
@@ -3648,28 +4396,27 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 
 ## bluemix billing resource-instances-usage
 {: #bluemix_billing_resource_instances_usage}
- 
- 現行アカウントの月次リソース・インスタンス使用量を表示します。
- 
- ```
- bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
- ```
- 
- <strong>前提条件</strong>: エンドポイント、ログイン
- 
- <strong>コマンド・オプション</strong>:
- 
- <dl>
-   <dt>-o ORG_NAME (オプション)</dt>
-   <dd>組織を基準にしてインスタンスをフィルターに掛けます。</dd>
-   <dt>-g GROUP_NAME</dt>
-   <dd>リソース・グループを基準にしてインスタンスをフィルターに掛けます。</dd>
-   <dt>-d MONTH_DATE (オプション)</dt>
-   <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
-   <dt>--json (オプション)</dt>
-   <dd>使用量の結果を JSON 形式で表示します。</dd>
- </dl>
 
+現行アカウントの月次リソース・インスタンス使用量を表示します。
+
+```
+bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+
+<dl>
+  <dt>-o ORG_NAME (オプション)</dt>
+  <dd>組織を基準にしてインスタンスをフィルターに掛けます。</dd>
+  <dt>-g GROUP_NAME</dt>
+  <dd>リソース・グループを基準にしてインスタンスをフィルターに掛けます。</dd>
+  <dt>-d MONTH_DATE (オプション)</dt>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
+  <dt>--json (オプション)</dt>
+  <dd>使用量の結果を JSON 形式で表示します。</dd>
+</dl>
 
 ## bluemix plugin repos
 {: #bluemix_plugin_repos}
@@ -3791,16 +4538,16 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
 <strong>例</strong>:
 
-リポジトリー「Bluemix」内のプラグイン「container-service」の詳細をリストするには、以下のように指定します。
+リポジトリー「sample-repo」内のプラグイン「IBM-Containers」の詳細をリストします
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-デフォルト・リポジトリー「Bluemix」内のプラグイン「container-service」の詳細をリストします。
+デフォルト・リポジトリー内のプラグイン「IBM-Containers」の詳細をリストします
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
 
@@ -3818,7 +4565,7 @@ bluemix plugin list
 ## bluemix plugin show
 {: #bluemix_plugin_show}
 
-インストールされたプラグインの詳細を表示します
+インストールされたプラグインの詳細を表示します。
 
 ```
 bluemix plugin show PLUGIN-NAME
@@ -3837,7 +4584,7 @@ bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
 
 ```
-bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
+bx plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
 リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。
@@ -3857,9 +4604,9 @@ bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
    <dt>-f </dt>
    <dd>確認なしでプラグインのインストールを強制します。</dd>
     </dl>
-    
-    
-{{site.data.keyword.Bluemix_notm}} CLI の公式リポジトリー名は、「Bluemix」です。    
+
+
+{{site.data.keyword.Bluemix_notm}} CLI の公式リポジトリー名は、`Bluemix` です。
 
 <strong>例</strong>:
 
@@ -3880,6 +4627,13 @@ bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 bluemix plugin install container-service -r Bluemix
 ```
+
+あるいは、簡単に以下のように指定します。
+
+```
+bluemix plugin install container-service
+```
+
 公式プラグイン・リポジトリーから、バージョン「0.1.425」の「container-service」プラグインをインストールするには、以下のように指定します。
 
 ```
@@ -3918,6 +4672,12 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 ```
 bluemix plugin update -r Bluemix
+```
+
+あるいは、簡単に以下のように指定します。
+
+```
+bluemix plugin update
 ```
 
 公式プラグイン・リポジトリー内のプラグイン「container-service」を最新にアップグレードするには、以下のように指定します。

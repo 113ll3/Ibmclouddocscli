@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-03-16"
 # CLI およびツールの概要
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} には、堅固な CLI、および CLI と統合されるプラグインと開発者ツール拡張機能が用意されています。
+{{site.data.keyword.Bluemix_notm}} は、堅固な CLI  、および CLI と統合される開発者ツール拡張機能を備えたプラグインを提供します。
 
 ## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
@@ -34,10 +34,11 @@ lastupdated: "2018-03-16"
 <area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="資料の表示 (新規ページを開く)" title="資料の表示" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
-## {{site.data.keyword.dev_cli_notm}}
+## {{site.data.keyword.dev_cli_notm}} CLI
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) は、クラウド・ネイティブ・アプリを作成、ビルド、およびデプロイするための、{{site.data.keyword.Bluemix}} CLI に対する開発者固有の拡張機能 (`bx dev`) を提供します。 IDT のインストールには、基本の {{site.data.keyword.Bluemix_notm}} CLI、複数の拡張機能、およびすべてのシステムの前提条件が含まれます。IDT には、CLI コマンドに直接アクセスするための、複数の IDE 用拡張機能も用意されています。{:shortdesc}
+{{site.data.keyword.dev_cli_long}} CLI (IDT) は、クラウド・ネイティブ・アプリを作成、ビルド、およびデプロイするための、{{site.data.keyword.Bluemix}} CLI に対する開発者固有の拡張機能 (`bx dev`) を提供します。 IDT のインストールには、基本の {{site.data.keyword.Bluemix_notm}} CLI、複数の拡張機能、およびすべてのシステムの前提条件が含まれます。 IDT には、CLI コマンドに直接アクセスするための、複数の IDE 用拡張機能も用意されています。
+{:shortdesc}
 
 - [概要とインストール](/docs/cli/idt/index.html)
 - [開始](/docs/cli/idt/index.html)

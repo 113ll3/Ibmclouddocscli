@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-02-14"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+
 
 
 # {{site.data.keyword.Bluemix_notm}} CLI の概説
@@ -24,22 +25,24 @@ lastupdated: "2018-02-14"
 
 1. ダウンロードするための、ご使用の OS のインストーラーを選択します。
    
-   Mac OS X 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [チェックサム](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
-   Windows 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [チェックサム](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
-   Linux 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [チェックサム](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Mac OS X 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
+   Windows 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
+   Linux X86 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Linux PowerPC LE 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
   
    **32 ビットのリリースと以前のバージョンについては、[ここ](all_versions.html)を参照してください。
 
 1. インストーラーを実行します。
    * macOS および Windows の場合は、単純にインストーラーを実行します。
-   * Linux の場合、パッケージを解凍し、`install_bluemix_cli` スクリプトを実行します。
+   * Linux の場合は、パッケージを解凍し、`install_bluemix_cli` スクリプトを実行します。
 
-1. API エンドポイントをターゲットに指定し、`bx login` コマンドを使用して {{site.data.keyword.Bluemix_notm}} にログインします。
-  
+1. API エンドポイントをターゲットに指定し、{{site.data.keyword.Bluemix_notm}} にログインします。
 
   ![例](example.gif){: gif}
 
 これで、{{site.data.keyword.Bluemix_notm}} リソースを管理する準備ができました。 コマンド説明を表示するには、`bluemix help` または `bx help` と入力します。 
+
+フェデレーテッド ID を使用する場合は、[ここ](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)で説明する手順に従って、ワンタイム・パスコードまたは API キーを使用してログインします {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} CLI をさらに探索するためのその他のリンク
 

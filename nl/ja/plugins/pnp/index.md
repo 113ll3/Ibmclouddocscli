@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-02-15"
 
 **注:** {{site.data.keyword.Bluemix_notm}} スペースでプライベート・ネットワーク・ピアリングを使用した後に、スペースを削除する必要が生じた場合、まず、当該スペースのプライベート・ネットワーク・ピアリング接続を削除してください。
 
-まず、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)』を参照してください。
+まず、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[IBM Cloud CLI](http://clis.ng.bluemix.net/ui/home.html)』を参照してください。
 
 ## プライベート・ネットワーク・ピアリング CLI プラグインをインストールします。
 

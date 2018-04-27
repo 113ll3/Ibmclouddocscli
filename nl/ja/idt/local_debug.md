@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -33,7 +33,7 @@ bx dev debug
 	* Eclipse
       1. **既存の maven プロジェクト**を Eclipse にインポートします。
       2. [Java リモート・アプリケーション![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) のデバッグ構成を作成します。
-      		1. IP アドレスまたは `localhost:<port>` を入力します。  
+      		1. IP アドレスまたは `localhost:<port> を入力します。`  
       		2. ポート番号に `7777` を入力します。
       		3. インポートした Java プロジェクトの名前を指定します。
       6. IDE 内でブレークポイントを設定します。
@@ -66,7 +66,7 @@ bx dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
+1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# {{site.data.keyword.dev_cli_notm}} のセットアップ
+# {{site.data.keyword.dev_cli_notm}} CLI のセットアップ
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} は、コマンド・ラインを使用して Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで開発することを希望する開発者に向けた、アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチです。
+{{site.data.keyword.dev_cli_short}} CLI は、コマンド・ラインを使用して Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで開発することを希望する開発者に向けた、アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチです。
 {: shortdesc}
 
 ## 前提条件
@@ -31,7 +31,7 @@ lastupdated: "2018-03-16"
 ## インストール
 {: #installation}
 
-ツールをインストールするには、該当コマンドを実行して、インストーラーを起動します。これにより、IBM Cloud CLI、Kubernetes、Helm、Docker などの依存関係もインストールされます。これらをインストールするには、以下のインストール・ステップを使用します。
+ツールをインストールするには、関連するコマンドを実行して、インストーラーを起動します。これにより、IBM Cloud CLI、Kubernetes、Helm、Docker などの依存関係もインストールされます。 インストールするには、以下のインストール・ステップを使用します。
 
 **Mac および Linux:**
 
@@ -42,6 +42,8 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 
 **Windows 10:**
+
+* 注: 右クリックして「管理者として実行」を選択することにより、Windows PowerShell を開きます。
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -58,7 +60,7 @@ bx dev
 ## 環境の構成
 {: #configure-environment}
 
-1. ご使用の [{{site.data.keyword.Bluemix_notm}} 地域](/docs/overview/cf.html#ov_intro_reg)の API エンドポイントに接続します。例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、以下のコマンドを入力します。
+1. ご使用の [{{site.data.keyword.Bluemix_notm}} 地域](/docs/overview/cf.html#ov_intro_reg)の API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、以下のコマンドを入力します。
 
 	```
 	bx api https://api.ng.bluemix.net
@@ -72,7 +74,7 @@ bx dev
 	```
 	{: codeblock}
 
-	**注:** 資格情報が拒否された場合、統合 ID を使用している可能性があります。統合 ID を使用して認証を受けるには、以下のステップに従ってください。
+	**注:** 資格情報が拒否された場合、統合 ID を使用している可能性があります。 統合 ID を使用して認証を受けるには、以下のステップに従ってください。
 
 	1. [{{site.data.keyword.iamshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.bluemix.net/iam/#/apikeys){: new_window} にログインします。
 	2. **「API キーの作成」**を選択します。
@@ -96,13 +98,13 @@ bx dev
 ## 詳細はこちら
 {: #learn}
 
-これで、{{site.data.keyword.dev_cli_short}} のインストールが完了したので、この便利なツールを有効に利用する方法について学習できます。
+これで、{{site.data.keyword.dev_cli_short}} CLI のインストールが完了したので、この便利なツールを有効に利用する方法について学習できます。
 - [IDT CLI の概説](index.html)
 - [IDT (bx dev) コマンド](commands.html)
 - [VS Code 用の Developer Tools](vscode.html)
 - [Jetbrains IDE 用 Developer Tools](jetbrains.html)
 
-{{site.data.keyword.dev_cli_short}} を使用してクラウド・ネイティブ・アプリを作成する方法を示した[チュートリアル](/docs/apps/tutorials/tutorial_bff.html)を確認してください。
+{{site.data.keyword.dev_cli_short}} CLI を使用してクラウド・ネイティブ・アプリを作成する方法を示した[チュートリアル](/docs/apps/tutorials/tutorial_bff.html)を確認してください。
 
 ## 追加の資料
 {: #learn-more}

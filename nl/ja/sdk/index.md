@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -16,13 +16,13 @@ lastupdated: "2018-03-16"
 
 {{site.data.keyword.IBM}} SDK ジェネレーター・プラグインは、[{{site.data.keyword.Bluemix_notm}} CLI ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/all_versions.html)にインストールできます。
 
-{{site.data.keyword.Bluemix_notm}} の開発者は、このプラグインを使用して[Open API Specification ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 準拠の REST API 定義から SDK を生成できます。REST API 定義を変更する際、このプラグインを使用することで、プロジェクト全体を再生成する代わりに SDKのみを再生成することができます。
+{{site.data.keyword.Bluemix_notm}} の開発者は、このプラグインを使用して[Open API Specification ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 準拠の REST API 定義から SDK を生成できます。 REST API 定義を変更する際、このプラグインを使用することで、プロジェクト全体を再生成する代わりに SDK のみを再生成することができます。
 
-あるスペースの Cloud Foundry アプリに、SDK の生成に有効な REST API 定義が含まれているかどうかを確認することもできます。最後に、{{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインを使用して、REST API 定義が SDK ジェネレーターの条件に準拠していることを確認することができます。
+特定のスペースの Cloud Foundry アプリに、SDK の生成に有効な REST API 定義が含まれているかどうかを確認することもできます。最後に、{{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインを使用して、REST API 定義が SDK ジェネレーターの条件に準拠していることを確認することができます。
 
-この {{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインによって、開発者は、生成済みの SDK を使用してバックエンド・サービスをアプリに簡単に統合することができます。REST API に変更が生じた場合、SDK を再生成して古い SDK と置き換えることによって、SDK のアップグレードをシームレスに行うことができます。また、CLI を devops パイプラインに統合することによって、アプリをビルドするたびに、SDK が API スペックに常に整合していることを確認することができます。
+この {{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインによって、開発者は、生成済みの SDK を使用してバックエンド・サービスをアプリに簡単に統合することができます。 REST API に変更が生じた場合、SDK を再生成して古い SDK と置き換えることによって、SDK のアップグレードを行うことができます。 また、CLI を DevOps パイプラインに統合することによって、アプリをビルドするたびに、SDK が API スペックに常に整合していることを確認することができます。
 
-REST API 定義は有効であり、かつ稼働中のサーバー・エンドポイントでホストするか、システム上のローカル・ファイルである必要があります。REST API 定義がホストされている場合、`OPENAPI_SPEC` 環境変数に相対 URL を定義する必要があります。
+REST API 定義は有効であり、かつ稼働中のサーバー・エンドポイントでホストするか、システム上のローカル・ファイルである必要があります。 REST API 定義がホストされている場合、`OPENAPI_SPEC` 環境変数に相対 URL を定義する必要があります。
 
 
 ## 要件
@@ -87,7 +87,7 @@ REST API 定義は有効であり、かつ稼働中のサーバー・エンド�
 #### 使用法
 {: #gen-usage}
 
-{{site.data.keyword.Bluemix_notm}} で稼働中の Cloud Foundry アプリから SDK を生成するには、アプリの名前を CLI のパラメーターに使用します。以下のコマンドでは、アプリの名前を`SDK_Name` に使用します。
+{{site.data.keyword.Bluemix_notm}} で稼働中の Cloud Foundry アプリから SDK を生成するには、アプリの名前を CLI のパラメーターに使用します。 以下のコマンドでは、アプリの名前を`SDK_Name` に使用します。
 
 ```
 bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
@@ -137,13 +137,13 @@ bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### アプリ (Cloud Foundry) のリスト
 {: #list-apps}
 
-アプリのリストおよび API スペックの検証には、次のコマンドを使用します: `bx sdk list [argument] [option]``OPENAPI_SPEC` 環境変数を、スペックをホスティングする相対 URL パスに設定する必要があります。
+アプリのリストおよび API スペックの検証には、次のコマンドを使用します: `bx sdk list [argument] [option]` `OPENAPI_SPEC` 環境変数を、スペックをホスティングする相対 URL パスに設定する必要があります。
 
 
 #### arguments
 {: #list-args}
 
-* `SPACE_NAME` (オプション) - 現在の組織内でアプリを検索する Cloud Foundry スペースの名前。指定しない場合、現在のスペースが検索されます。
+* `SPACE_NAME` (オプション) - 現在の組織内でアプリを検索する Cloud Foundry スペースの名前。 指定しない場合、現在のスペースが検索されます。
 
 
 #### options

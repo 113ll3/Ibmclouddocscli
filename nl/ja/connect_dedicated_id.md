@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2017-12-08"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2017-12-08"
 # 専用 ID とパブリック IBM ID との接続
 {: #connect_dedicated_id}
 
-パブリック IAM サービスが使用可能な専用クラウドにログインするために、{{site.data.keyword.Bluemix_notm}} CLI では専用 ID ではなくパブリック IBM ID でログインするよう要求されます。
+パブリック IAM サービスが使用可能な専用クラウドにログインする場合、{{site.data.keyword.Bluemix_notm}} CLI では、専用 ID ではなくパブリック IBM ID を使用してログインする必要があります。
 
 
 ```
@@ -27,7 +27,7 @@ lastupdated: "2017-12-08"
   API endpoint: https://api.{dedicated_env}.bluemix.net
 
   Public IAM token service is available in the dedicated environment.
-  Login with your public IBMid, or use '--no-iam' to login as a dedicated user only.
+  Log in with your public IBMid, or use '--no-iam' to log in as a dedicated user only.
 
   Email>
 ```
@@ -44,7 +44,7 @@ lastupdated: "2017-12-08"
 しかし、専用 ID がパブリック IBM ID に接続されていない場合、パブリック IBM ID に手動で接続するようプロンプトが出されます。
 
 ```
-  You are logging with an IBMid that does not associated with any dedicated user.
+  You are logging in with an IBMid that is not associated with any dedicated user.
   To set up the connection, input the credentials of the dedicated user.
 
   Choose a credential type:

@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-03-16"
 # Visual Studio Code 用 IBM Developer Tools
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension for Visual Studio Code は、Visual Studio Code エディターのコマンド・パレット内から直接、IBM Developer CLI の機能へのアクセスを提供する、エディターの拡張機能です。  これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを離れることなく、`bx dev` コマンドのサブセットに素早くアクセスすることができます。
+IBM Developer Extension for Visual Studio Code は、Visual Studio Code エディターのコマンド・パレット内から直接、IBM Developer CLI の機能へのアクセスを提供する、エディターの拡張機能です。  これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを一切離れることなく、`bx dev` コマンドのサブセットに素早くアクセスすることができます。
 {:shortdesc}
 
 ![IBM Developer Tools の拡張機能ダウンロード画面の画面キャプチャー。](vscode.png "Visual Studio Code 内の拡張機能ダウンロード画面")
@@ -26,7 +26,7 @@ IBM Developer Extension for Visual Studio Code は、Visual Studio Code エデ�
 ## 従属関係
 {: #dependencies}
 
-IBM Developer Tools の Visual Studio Code 用拡張機能を使用するには、さらに [{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) および [IBM Developer CLI](index.html) プラグインがシステムにインストールされている必要があります。
+IBM Developer Tools の Visual Studio Code 用拡張機能を使用するには、[{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) および [IBM Developer CLI](index.html) プラグインがシステムにインストールされている必要があります。
 
 ## インストール
 {: #installation}
@@ -40,7 +40,7 @@ IBM Developers Tools のこの拡張機能をインストールするための�
 
 2. `ext install ibm-developer` コマンドを入力し、Enter キーを押してこの IBM Developer Tools 拡張機能を Visual Studio Code エディター内にインストールします。
 
-あるいは、以下に示すように、「拡張機能」管理パネルを介してこの IBM Developer Tools 拡張機能をインストールすることもできます。
+あるいは、以下に示すように、「拡張機能」管理ウィンドウを介してこの IBM Developer Tools 拡張機能をインストールすることもできます。
 
 1. Visual Studio Code エディターの**「拡張機能」**サイドバーを開き、次に、ストリング `publisher:IBM Developer` を使用して検索します。  IBM Developer Tools 拡張機能が検索結果に表示されます。  
 2. **「インストール」**ボタンをクリックしてインストールを開始します。
@@ -50,14 +50,14 @@ IBM Developers Tools のこの拡張機能をインストールするための�
 ## 使用量
 {: #usage}
 
-Visual Studio Code のコマンド・パレットを使用して extension のコマンドを呼び出します。
+Visual Studio Code のコマンド・パレットを使用して、拡張コマンドを開始します。
 
 最初に、以下のキーの組み合わせを使用してコマンド・パレットを開きます。
 
 * **Mac:** `cmd + shift + p`
 * **Windows / Linux:** `ctrl + shift + p`
 
-次に、呼び出すコマンドを入力または選択します。 コマンド・パレット内に「bx」と入力すると、すべての使用可能コマンドのリストを表示できます。
+次に、開始するコマンドを入力または選択します。 コマンド・パレット内に「bx」と入力すると、すべての使用可能コマンドのリストを表示できます。
 
 ### Docker ワークフロー (Docker コンテナー) での IBM Developer Extension の使用
 {: #usage-docker}
@@ -71,12 +71,12 @@ Visual Studio Code のコマンド・パレットを使用して extension の�
 * `bx dev debug` コマンドを使用して、開発用のローカル Docker でアプリを実行します
 > 注: ローカル Docker コンテナー内で実行されている Node.js アプリケーションをデバッグするには、[ローカル・コンテナー用のデバッグ構成を追加](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container)する必要があります。
 * `bx dev run` コマンドを使用して、アプリをローカル Docker 内でリリース・モードで実行します
-* `bx dev deploy` コマンドを使用して、アプリケーションを {{site.data.keyword.Bluemix_notm}} 上の Cloud Foundry ランタイムにデプロイします *(IBM Container サポートは間もなく利用可能になります)。*
+* `bx dev deploy` コマンドを使用して、アプリケーションを {{site.data.keyword.Bluemix_notm}} 上の Cloud Foundry ランタイムにデプロイします 
 
 ### Cloud Foundry ワークフローでの IBM Developer Extension の使用
 {: #usage-cloud-foundry}
 
-現在、IBM {{site.data.keyword.Bluemix_notm}} 上の Cloud Foundry ランタイムにアプリをデプロイしているユーザーのために、`cf` 操作セットのサポートも提供しています。
+現在、IBM {{site.data.keyword.Bluemix_notm}} 上の Cloud Foundry ランタイムにアプリをデプロイしているユーザー用に、`cf` 操作セットのサポートもあります。
 
 以下のに示すように、ほんの数ステップで CloudFoundry ワークフローを開始することができます。
 * 新規 CloudFoundry アプリケーションを作成します。

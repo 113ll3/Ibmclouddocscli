@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-16"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 # 使用可能なモバイル SDK
@@ -34,7 +34,7 @@ Java、NodeJS、または Swift のサーバー・アプリケーションがあ
 ## Client SDK
 {: #client_sdk}
 
-モバイル・アプリケーションで以下の SDK を使用して、それぞれの機能を活用することができます。
+モバイル・アプリケーションで以下の SDK を使用して、それぞれの機能を使用することができます。
 
 
 ### Android SDK

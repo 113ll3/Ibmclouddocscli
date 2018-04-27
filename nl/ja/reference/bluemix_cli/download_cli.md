@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -17,16 +17,15 @@ lastupdated: "2018-02-14"
 # {{site.data.keyword.Bluemix_notm}} CLI のダウンロードおよびインストール
 {: #download_install}
 
-{{site.data.keyword.Bluemix_notm}} CLI をインストールするには、[インストーラー](#installers)を使用するか、または[シェルからインストール](#shell_install)することができます。
+インストーラーまたはシェルを使用して、CLI をダウンロードしてインストールすることができます。
 
-## インストーラーのダウンロード
-{: #installers}
+## インストーラーの使用
+{: #installer}
 
-[{{site.data.keyword.Bluemix_notm}} CLI インストーラー (すべてのバージョン)](all_versions.html){: new_window} のページを参照して、ご使用の OS の最新インストーラーをダウンロードします。
-
-macOS および Windows の場合は、単純にインストーラーを実行します。 
-
-Linux の場合は、インストーラー・パッケージをダウンロードした後、それを解凍し、root 権限を使用してインストール・スクリプトを実行します。
+{{site.data.keyword.Bluemix_notm}} CLI をインストールするには、以下のようにします。
+* [ここ](all_versions.html)に移動して、インストーラーをダウンロードします。
+* macOS および Windows の場合は、インストーラーを実行します。 
+* Linux の場合は、インストーラー・パッケージをダウンロードした後、それを解凍し、root 権限を使用してインストール・スクリプトを実行します。
 
   ```
   $ tar -xvf Bluemix_CLI.tar.gz
@@ -34,15 +33,14 @@ Linux の場合は、インストーラー・パッケージをダウンロー�
   $ sudo ./install_bluemix_cli
 
   ```
-  {: codeblock}
-  
+
 ## shell からのインストール
 {: #shell_install}
 
 
 ### macOS
 
-以下のコマンドを mac OS の端末にコピー・アンド・ペーストし、実行します。
+以下のコマンドを Mac OS の端末にコピー・アンド・ペーストし、実行します。
 
 ```
 curl -fsSL https://clis.ng.bluemix.net/install/osx | sh

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-03-16"
+  years: 2016, 2018
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ lastupdated: "2018-03-16"
 	```
 	{: codeblock}
 
-`Request` クラスは、HTTP 要求を発行し、要求が完了した後に応答を取得するための簡単な方法です。大きなファイルまたは大量のデータをダウンロードまたはアップロードする場合は、`Request` `download` または `upload` のメソッドを使用できます。ダウンロードまたはアップロードの進行をモニターするには、カスタムの `ProgressListener` を作成して、`download` または `upload` のメソッドに渡します。
+`Request` クラスは、HTTP 要求を発行し、要求が完了した後に応答を取得するための簡単な方法です。 大きなファイルまたは大量のデータをダウンロードまたはアップロードする場合は、`Request` `download` または `upload` のメソッドを使用できます。 ダウンロードまたはアップロードの進行をモニターするには、カスタムの `ProgressListener` を作成して、`download` または `upload` のメソッドに渡します。
 
 <!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
 
@@ -90,7 +90,7 @@ lastupdated: "2018-03-16"
 	```
 	{: codeblock}
 
-`Request` クラスは、HTTP 要求を発行し、要求が完了した後に応答を取得するための簡単な方法です。`Request` クラスよりも柔軟に、細かく管理する必要がある場合は、`BMSURLSession` クラスを使用できます。`BMSURLSession` クラスには、アップロードの進行のモニタリング、要求の一時停止またはキャンセルなどの機能があります。応答の取得には、完了ハンドラーまたはデリゲートのいずれかを選択することができます。
+`Request` クラスは、HTTP 要求を発行し、要求が完了した後に応答を取得するための簡単な方法です。 `Request` クラスよりも柔軟に、細かく管理する必要がある場合は、`BMSURLSession` クラスを使用できます。 `BMSURLSession` クラスには、アップロードの進行のモニタリング、要求の一時停止またはキャンセルなどの機能があります。 応答の取得には、完了ハンドラーまたはデリゲートのいずれかを選択することができます。
 
 `BMSURLSession` クラスは、iOS のみで使用可能です。
 
