@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-04-27"
 
 ---
 
@@ -49,6 +49,8 @@ curl -sL https://ibm.biz/idt-installer | bash
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
+
+The [Reinstalling tools](/docs/troubleshoot/ts_createapps.html#appendix) section contains information to individually install all dependencies.
 
 Validate successful plug-in installation by running the following command:  
 
