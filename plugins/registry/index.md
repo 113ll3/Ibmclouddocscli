@@ -6,7 +6,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-04-19"
+lastupdated: "2018-05-01"
 
 
 ---
@@ -27,8 +27,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
 
 To find out about how to use the {{site.data.keyword.registrylong_notm}} CLI, see [Getting started with {{site.data.keyword.registrylong_notm}}](../../../services/Registry/index.html).
 
-Do not put personal information in your container images, image names, namespace names, or any description fields; for example, in registry tokens.
-{:tip}
+**Note**: Do not put personal information in your container images, namespace names, description fields (for example, in registry tokens), or in any image configuration data (for example, image names or image labels).
 
 
 <table summary="Manage {{site.data.keyword.registrylong_notm}}">
@@ -230,7 +229,7 @@ bx cr namespace-add NAMESPACE
 <dd>The namespace you want to add. The namespace must be unique across all {{site.data.keyword.Bluemix_notm}} accounts in the same region.
   
 <p>  
-<b>Tip</b>: Do not put personal information in your namespace names.
+<strong>Note</strong>: Do not put personal information in your namespace names.
 </p>
 
 </dd>
@@ -377,7 +376,7 @@ bx cr token-add [--description DESCRIPTION] [-q, --quiet] [--non-expiring] [--re
 <dd>(Optional) Specifies the value as a description for the token, which is displayed when you run `bx cr token-list`. If your token is created automatically by {{site.data.keyword.containerlong_notm}}, the description is set to your Kubernetes Cluster name. In this case, the token is removed automatically when your cluster is removed.
   
 <p> 
-  <b>Tip</b>: Do not put personal information in your token description.
+  <strong>Note</strong>: Do not put personal information in your token description.
 </p>
 
   </dd>
