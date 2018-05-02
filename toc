@@ -45,10 +45,9 @@ CLI and Dev Tools
 	IBM Cloud CLI plug-ins
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
-		plugins/registry/index.md
-		[Container Service](../containers/cs_cli_devtools.html)
+		[Container Registry CLI](../services/Registry/registry_cli.html)
+		[Container Service CLI](../containers/cs_cli_devtools.html)
  		plugins/pnp/index.md
-		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 
 	{: .topicgroup}
