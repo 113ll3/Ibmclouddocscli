@@ -1,7 +1,8 @@
 ---
+
 copyright:
 years: 2017, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -364,7 +365,7 @@ assist with managing your application within the run container.
 There are [additional parameters](#command-parameters) shared with other commands.
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * Container name for the run container.
 * Usage: `bx dev run --container-name-run [<projectName>]`
@@ -566,7 +567,7 @@ The following parameters are exclusive to the `view` command.
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * Parameter optionally used to define the name of the Kubernetes cluster when targeting a container deployment
 * Usage `bx dev view --ibm-cluster [cluster-name]`
@@ -607,13 +608,13 @@ The following parameters can be used with the `build|debug|run|test` commands or
 * Usage: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * Container name for the run container.
 * Usage: `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * Container name for the tools container.
 * Usage: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
