@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-04-17"
 {:pre: .pre}  
 
 # Using the {{site.data.keyword.dev_cli_notm}} CLI
-{: developing}
+{: #developing}
 
 Developing Cloud Native apps by using the {{site.data.keyword.dev_cli_notm}} CLI follows a fairly simple flow:
 
@@ -39,6 +39,8 @@ For any of the previous creation methods, the flow is similar. You can choose th
 The {{site.data.keyword.dev_cli_notm}} CLI works closely together to provide a seamless experience during development. Projects that are created within any of the web consoles provide a "Download code" button to download the generated source code to your workstation for more development.
 
 ### Helpful CLI commands
+{: #helpful}
+
 The following CLI commands help in working with your project and the web consoles:
 - [`code`](./commands.html#enable) to directly pull an apps generated source code to your workstation
 - [`console`](./commands.html#console) to open your browser to the current app's project page in the {{site.data.keyword.Bluemix_notm}}
@@ -50,7 +52,7 @@ The following CLI commands help in working with your project and the web console
 
 
 ### Exploring the app's project structure
-{: exploring-project}
+{: #exploring-project}
 
 Projects that are created or enabled for use with the tool come with pre-configured settings encapsulated in the `cli-config.yml` file. The `cli-config.yml` contains default entries that are used by the commands of the tool that can be overridden by values that are passed through the command line.
 
@@ -62,6 +64,8 @@ More details on project structures can be found here:
 
 
 ### Reference Blogs and Videos
+{: #ref1}
+
 - Video: [Installing IDT on Ubuntu Linux]()
 - Blog: [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
@@ -80,7 +84,7 @@ Once the project has been built, you'll next want to run your app using the [`bx
 
 
 ### How local containers are used
-{: local-containers}
+{: #local-containers}
 
 The {{site.data.keyword.dev_cli_long}} CLI uses two containers to facilitate building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your application. The Dockerfile for this container is defined by the [`dockerfile-tools`](commands.html#command-parameters) parameter. You might think of it as a development container as it contains the tools normally used for development of a particular runtime.
 
@@ -88,6 +92,8 @@ The second container is the run container. This container is of a form suitable 
 
 
 ### Helpful CLI commands
+{: #helpful2}
+
 The following CLI commands assist in working with your project during the code, build, and run cycles:
 - [`build`](./commands.html#build) Build the project in a local container
 - [`debug`](./commands.html#debug) Debug your application in a local container
@@ -98,6 +104,8 @@ The following CLI commands assist in working with your project during the code, 
 - [`test`](./commands.html#test) Test your application in a local container
 
 ### Reference Blogs and Videos
+{: #ref2}
+
 - [Debugging local apps](local_debug.html)
 
 
@@ -105,13 +113,15 @@ The following CLI commands assist in working with your project during the code, 
 
 
 ## Deploy
-{: deploy}
+{: #deploy}
 
 Under a proper cloud native environment, you will want to utilize a fully functional DevOps pipeline to manage all deployments, as well as a wealth of other capabilities.  During the create flow, you can set up your app to use IBM Cloud's DevOps.  If you are not ready to use the built-in DevOps, then you can either manually [`bx dev deploy`](./commands.html#deploy) your app, or use the deploy command within your own DevOps pipeline.  
 
 
 
 ### Helpful CLI commands
+{: #helpful3}
+
 The following CLI commands help in working with your project during the deploy process:
 - [`console`](./commands.html#console) Opens the IBM Cloud console for a project
 - [`deploy`](./commands.html#deploy) Deploy an application to IBM Cloud
@@ -119,5 +129,7 @@ The following CLI commands help in working with your project during the deploy p
 
 
 ### Reference Blogs and Videos
+{: #ref3}
+
 - Blog: [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - Blog: [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
