@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-20"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -235,10 +235,12 @@ You might attempt to deploy to Bluemix with the {{site.data.keyword.dev_cli_shor
 
 
 #### Cause
+{: #cause1}
 
 This could be that you are not logged in to your account. 
 
 #### Resolution
+{: #resolution1}
 
 Log in and try again.
 
@@ -261,6 +263,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 
 
 #### Cause
+{: #cause2}
 
 Most likely this is due to an invalid cluster name and can be confirmed by running the same command with `--trace` and you may see this in the error output:
 
@@ -270,6 +273,7 @@ Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"T
 
 
 #### Resolution
+{: #resolution2}
 
 Be sure that you are using the correct cluster and that you have configured your cluster for deployment by running
 
@@ -293,11 +297,13 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<projec
 
 
 #### Cause
+{: #cause3}
 
 Most likely, this is due to an invalid deploy image target. More specifically, it could be an invalid namespace, the middle value in the deploy image target
 
 
 #### Resolution
+{: #resolution3}
 
 Be sure that the namespace in the deploy image target matches one of the namespaces found from running
 
