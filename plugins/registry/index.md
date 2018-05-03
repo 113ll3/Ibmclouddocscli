@@ -6,7 +6,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-03"
 
 
 ---
@@ -19,5 +19,5 @@ lastupdated: "2018-05-02"
 # The content that you are looking for moved.
 {: #containerregcli}
 
-Check out the latest information in [its new location](../../services/Registry/registry_cli.html).
+Check out the latest information in [its new location](../../../services/Registry/registry_cli.html).
 {: shortdesc}
