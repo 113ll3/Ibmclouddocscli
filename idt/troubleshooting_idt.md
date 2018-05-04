@@ -230,6 +230,7 @@ Delete `node_modules` folder and run `bx dev run` again.
 
 
 ### Failure to deploy to Bluemix
+{: #failuretodeploy}
 
 You might attempt to deploy to Bluemix with the {{site.data.keyword.dev_cli_short}} and you see that it does not deploy to Bluemix but there is no error.
 
@@ -250,6 +251,7 @@ bx login
 
 
 ### Failure to deploy to Kubernetes on Bluemix
+{: #failuretodeploytokube}
 
 You may see this failure after the initial prompt for your cluster name:
 
