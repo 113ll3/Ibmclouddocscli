@@ -34,7 +34,7 @@ To get started with {{site.data.keyword.Bluemix_notm}} CLI:
 
 1. Run the installer
    * For macOS and windows, just run the installer.
-   * For Linux, exact the package and run `install_bluemix_cli` script
+   * For Linux, extract the package and run `install_bluemix_cli` script
 
 1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}}
 
