@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2017-11-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -29,11 +29,11 @@ Antes de empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte
 Una vez instalada la CLI de {{site.data.keyword.Bluemix_notm}}, puede añadir el plugin de la CLI {{site.data.keyword.autoscaling}}.
 
 Siga estos pasos para añadir el repositorio e instalar el plug-in:
-1. Para añadir el repositorio de plugins de la CLI {{site.data.keyword.Bluemix_notm}}, ejecute el siguiente mandato:
+1. Para añadir el repositorio del plugin de la CLI de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato siguiente:
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
-2. Para instalar el plugin de la CLI {{site.data.keyword.autoscaling}}, ejecute el siguiente mandato:
+2. Para instalar el plugin de la CLI de {{site.data.keyword.autoscaling}}, ejecute el mandato siguiente:
 ```
 bluemix plugin install auto-scaling -r Bluemix
 ```

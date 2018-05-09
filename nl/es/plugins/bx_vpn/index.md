@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2016-06-20"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -29,7 +29,7 @@ A continuación se muestran instrucciones para trabajar con el plugin de CLI de
 {{site.data.keyword.Bluemix_notm}}. Para utilizar el plugin con el plugin de la interfaz de línea de mandatos de Cloud Foundry (cf), consulte [Plugin de interfaz de línea de mandatos de VPN para la interfaz de línea de mandatos de cf](../vpn/index.html).
 
 
-La información que se indica a continuación muestra todos los mandatos soportados por el plugin de VPN para la interfaz de línea de mandatos de Bluemix e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Consulte [Amplíe su interfaz de línea de mandatos de Bluemix](../../index.html#cli_bluemix_ext) para ver cómo instalar el plugin vpn.
+La información que se indica a continuación muestra todos los mandatos soportados por el plugin de VPN para la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Consulte [Amplíe su interfaz de línea de mandatos de Bluemix](../../index.html#cli_bluemix_ext) para ver cómo instalar el plugin vpn.
 
 **Nota:** *Requisitos previos* lista las acciones que son necesarias antes de utilizar el mandato. Los requisitos previos pueden incluir una o varias de las acciones siguientes:
 <dl>

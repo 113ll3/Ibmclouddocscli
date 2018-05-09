@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Configuración de {{site.data.keyword.dev_cli_notm}}
+# Configuración de la CLI de {{site.data.keyword.dev_cli_notm}}
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} permite una aproximación mediante la interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones para desarrolladores que desean utilizar una línea de mandatos para desarrollar aplicaciones web de principio a fin, móviles y de microservicios.
+La CLI de {{site.data.keyword.dev_cli_short}} permite una aproximación mediante la interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones para desarrolladores que desean utilizar una línea de mandatos para desarrollar aplicaciones web de principio a fin, móviles y de microservicios.
 {: shortdesc}
 
 ## Requisitos previos
@@ -31,7 +31,7 @@ Regístrese en [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
 ## Instalación
 {: #installation}
 
-Para instalar la herramienta, ejecute el mandato relevante para invocar el instalador de IBM. De esta forma instalará dependencias, como IBM Cloud CLI, Kubernetes, Helm y Docker. Para la instalación de estos componentes, utilice estos pasos de instalación:
+Para instalar la herramienta, ejecute el mandato relevante para iniciar el instalador. De esta forma se instalan dependencias, como IBM Cloud CLI, Kubernetes, Helm y Docker. Para la instalación, utilice estos pasos de instalación:
 
 **Mac y Linux:**
 
@@ -42,6 +42,8 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 
 **Windows 10:**
+
+* Nota: Abra Windows PowerShell pulsando con el botón derecho y seleccione "Ejecutar como administrador".
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -96,13 +98,13 @@ bx dev
 ## Más información
 {: #learn}
 
-Ahora que ha instalado {{site.data.keyword.dev_cli_short}}, aprenda cómo aprovechar esta potente herramienta:
+Ahora que ha instalado la CLI de {{site.data.keyword.dev_cli_short}}, aprenda cómo aprovechar esta potente herramienta:
 - [Iniciación a IDT CLI](index.html)
 - [Mandatos IDT (bx dev)](commands.html)
 - [Herramientas de desarrollador para VS Code](vscode.html)
 - [Herramientas de desarrollador para IDE de Jetbrains](jetbrains.html)
 
-Consulte las [guías de aprendizaje](/docs/apps/tutorials/tutorial_bff.html) que muestran cómo crear apps nativas en la nube utilizando {{site.data.keyword.dev_cli_short}}.
+Consulte las [guías de aprendizaje](/docs/apps/tutorials/tutorial_bff.html) que muestran cómo crear apps nativas en la nube utilizando la CLI de {{site.data.keyword.dev_cli_short}}.
 
 ## Lectura adicional
 {: #learn-more}

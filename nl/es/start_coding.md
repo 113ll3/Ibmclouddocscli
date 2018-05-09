@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2015-12-07"
+lastupdated: "2018-04-16"
 
 
 ---
@@ -17,5 +17,5 @@ lastupdated: "2015-12-07"
 {: #start_coding}
 
 En {{site.data.keyword.Bluemix_notm}} puede
-empezar rápidamente a crear código siguiendo los pasos proporcionados tras la creación de una app.
+empezar rápidamente a crear código siguiendo los pasos proporcionados después de crear una app.
 {:shortdesc}

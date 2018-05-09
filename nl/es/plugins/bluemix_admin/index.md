@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-08"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -18,8 +18,7 @@ lastupdated: "2018-01-08"
 
 
 Puede gestionar el entorno de {{site.data.keyword.Bluemix_notm}} Local o {{site.data.keyword.Bluemix_notm}} Dedicated mediante la interfaz de línea de mandatos de Cloud Foundry con el plugin CLI de administración de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede añadir usuarios de un registro
-de LDAP. Si busca información sobre la gestión de su cuenta {{site.data.keyword.Bluemix_notm}} pública, consulte
-[Administración](/docs/admin/adminpublic.html#administer).
+de LDAP. Para obtener información sobre la gestión de su cuenta de {{site.data.keyword.Bluemix_notm}} pública, consulte [Administración](/docs/admin/adminpublic.html#administer).
 
 Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita
 cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos
@@ -54,7 +53,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 Si necesita desinstalar el plug-in, puede utilizar los mandatos siguientes y, a continuación, puede añadir el repositorio actualizado e instalar el plug-in más reciente:
 
 * Desinstale el plug-in: `cf uninstall-plugin BluemixAdminCLI`
-* Elimine el repositorio de plug-ins: `cf remove-plugin-repo BluemixAdmin`
+* Elimine el repositorio de plugin: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## Utilización del plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}

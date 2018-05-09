@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Utilización de {{site.data.keyword.dev_cli_notm}}
+# Uso de la CLI de {{site.data.keyword.dev_cli_notm}}
 {: developing}
 
-El desarrollo de apps nativas de nube con {{site.data.keyword.dev_cli_notm}} sigue un flujo sencillo:
+El desarrollo de apps nativas de nube con la CLI de {{site.data.keyword.dev_cli_notm}} sigue un flujo sencillo:
 
 1. [Crear o habilitar una app](#create)
 2. [Codificar, compilar y ejecutar](#build) apps localmente utilizando contenedores
@@ -29,32 +29,32 @@ Existen varias maneras en las que crear una app de nube.
 - [Consola web de App Services](https://console.bluemix.net/developer/appservice) para microservicios y apps web genéricas
 - [Watson Dashboard](https://console.bluemix.net/dashboard/watson) para crear apps iniciadoras habilitando una funcionalidad basada en Watson.
     - Hay disponibles paneles de control basados en otras tecnologías y sectores en el icono de menú en la página de inicio de {{site.data.keyword.Bluemix_notm}}. Todos ellos siguen un enfoque similar a los kits de iniciación para crear nuevas apps.
-- El mandato de {{site.data.keyword.dev_cli_notm}} CLI [`bx dev create`](./commands.html#create) para crear una nueva app.
-- El mandato de {{site.data.keyword.dev_cli_notm}} CLI [`bx dev enable`](./commands.html#enable) para habilitar en la nube una app existente del lado del servidor.
+- El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`bx dev create`](./commands.html#create) para crear una nueva app.
+- El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`bx dev enable`](./commands.html#enable) para habilitar rápidamente la nube en una app existente del lado del servidor.
 
-Para cualquiera de los métodos de creación anterior, el flujo es similar. Puede elegir el tipo de proyecto, el lenguaje de implementación y el patrón de app a utilizar. También puede optar por añadir servicios de valor añadido a la app como, por ejemplo, autenticación o persistencia. Por último, puede elegir habilitar la funcionalidad de DevOps para la app. Esta funcionalidad proporciona una cadena de herramientas completas de control de origen y comunicaciones en equipo, así como un conducto que se desencadenan en cada confirmación de código para validar, compilar y desplegar su app en la nube de IBM.
+Para cualquiera de los métodos de creación anteriores, el flujo es similar. Puede elegir el tipo de proyecto, el lenguaje de implementación y el patrón de app a utilizar. También puede optar por añadir servicios de valor añadido a la app como, por ejemplo, autenticación o persistencia. Por último, puede elegir habilitar la funcionalidad de DevOps para la app. Esta funcionalidad proporciona una cadena de herramientas completas de control de origen y comunicaciones en equipo y un conducto que se desencadenan en cada confirmación de código para validar, compilar y desplegar su app en IBM Cloud.
 
 ![Ejemplo de crear flujo utilizando IDT CLI](create_flow.png "Ejemplo de crear flujo utilizando IDT CLI") <br> Figura 2. Ejemplo de crear flujo utilizando IDT CLI
 
 La CLI de {{site.data.keyword.dev_cli_notm}} funciona de forma integrada para proporcionar una experiencia transparente durante el desarrollo. Los proyectos creados en cualquiera de las consolas web proporcionan un botón "Descargar código" para descargar el código fuente generado en su estación de trabajo para un desarrollo adicional.
 
 ### Mandatos de CLI útiles
-Los siguientes mandatos de CLI ayudan a trabajar con el proyecto y las consolas web:
-- [`code`](./commands.html#enable) para recuperar directamente el código fuente generado de una app en su estación de trabajo.
+Los mandatos de CLI siguientes le ayudan a trabajar con el proyecto y las consolas web:
+- [`code`](./commands.html#enable) para extraer el código fuente generado de una app en su estación de trabajo
 - [`console`](./commands.html#console) para abrir su navegador en la página de proyecto actual de la app en {{site.data.keyword.Bluemix_notm}}
 - [`create`](./commands.html#create) para crear una nueva app.
 - [`delete`](./commands.html#delete) para suprimir la app actual del área de proyecto de {{site.data.keyword.Bluemix_notm}}.
 - [`enable`](./commands.html#enable) para habilitar en la nube una app existente del lado del servidor.
-- [`get-credentials`](./commands.html#get-credentials) para obtener las credenciales necesarias para el proyecto para habilitar el uso de los servicios enlazados.
-- [`list`](./commands.html#list) para listar todas las apps creadas en la organización/espacio seleccionado actualmente, desde la CLI o desde las consolas.
+- [`get-credentials`](./commands.html#get-credentials) para obtener las credenciales necesarias para el proyecto para habilitar el uso de los servicios vinculados.
+- [`list`](./commands.html#list) para listar todas las apps que ha creado en el espacio/organización seleccionado actualmente, desde la CLI o las consolas.
 
 
 ### Exploración de estructuras de proyecto de apps
 {: exploring-project}
 
-Los proyectos creados o habilitados para ser utilizados con la herramienta vienen con valores configurados encapsulados de forma previa en el archivo `config.yml`. El archivo `config.yml` contiene entradas predeterminadas que utilizan los mandatos de la herramienta. Estas entradas se pueden alterar con valores que se pasen a través de la línea de mandatos.
+Los proyectos creados o habilitados para ser utilizados con la herramienta vienen con valores configurados encapsulados de forma previa en el archivo `config.yml`. `cli-config.yml` contiene entradas predeterminadas que utilizan los mandatos de la herramienta que pueden sustituirse por valores que se pasan a través de la línea de mandatos.
 
-Aquí podrá encontrar detalles adicionales sobre las estructuras de los proyectos:
+Aquí podrá encontrar más detalles sobre las estructuras de los proyectos:
 - [Proyectos Java](/docs/apps/projects/java_project_contents.html)
 - [Proyectos NodeJS ](/docs/apps/projects/node_project_contents.html)
 - [Proyectos Python ](/docs/apps/projects/python_project_contents.html)
@@ -82,9 +82,9 @@ Una vez compilado el proyecto, el siguiente paso será ejecutar la app con [`bx 
 ### Cómo se utilizan los contenedores locales
 {: local-containers}
 
-El {{site.data.keyword.dev_cli_long}} utiliza dos contenedores para facilitar la creación y la realización de pruebas de su aplicación. El primero es el contenedor de herramientas que contiene los programas de utilidad necesarios para crear y probar la aplicación. El Dockerfile para este contenedor está definido por el parámetro [`dockerfile-tools`](commands.html#command-parameters). Podría considerarlo como un contenedor de desarrollo que contiene las herramientas normalmente utilizadas para el desarrollo de un tiempo de ejecución concreto.
+La CLI de {{site.data.keyword.dev_cli_long}} utiliza dos contenedores para facilitar la creación y la realización de pruebas de su aplicación. El primero es el contenedor de herramientas que contiene los programas de utilidad necesarios para crear y probar la aplicación. El Dockerfile para este contenedor está definido por el parámetro [`dockerfile-tools`](commands.html#command-parameters). Podría considerarlo como un contenedor de desarrollo que contiene las herramientas normalmente utilizadas para el desarrollo de un tiempo de ejecución concreto.
 
-El segundo contenedor es el contenedor de ejecución. El formato de este contenedor es adecuado para desplegarlo y utilizarlo en, por ejemplo, {{site.data.keyword.Bluemix}}. Como resultado, se define un punto de entrada que inicia su aplicación. Al seleccionar ejecutar la aplicación a través de {{site.data.keyword.dev_cli_short}}, utiliza este contenedor. El Dockerfile para este contenedor está definido por el parámetro [`dockerfile-run`](commands.html#run-parameters).
+El segundo contenedor es el contenedor de ejecución. El formato de este contenedor es adecuado para desplegarlo y utilizarlo en, por ejemplo, {{site.data.keyword.Bluemix}}. Como resultado, se define un punto de entrada que inicia su aplicación. Al seleccionar ejecutar la aplicación a través de la CLI de {{site.data.keyword.dev_cli_short}}, utiliza este contenedor. El Dockerfile para este contenedor está definido por el parámetro [`dockerfile-run`](commands.html#run-parameters).
 
 
 ### Mandatos de CLI útiles

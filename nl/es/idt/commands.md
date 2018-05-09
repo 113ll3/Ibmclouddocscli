@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2017-2018
-lastupdated: "2018-03-16"
+years: 2017, 2018
+lastupdated: "2018-04-17"
 
 ---
 
@@ -11,13 +11,13 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Mandatos {{site.data.keyword.dev_cli_notm}} (bx dev)
+# Mandatos de CLI (bx dev) de {{site.data.keyword.dev_cli_notm}}
 {: #idt-cli}
 
 Versión: 1.2.0
 Release: 8 de marzo de 2018
 
-Los siguientes mandatos de {{site.data.keyword.dev_cli_notm}} (bx dev) sirven para crear un proyecto, desplegarlo, depurarlo y probarlo.
+Los siguientes mandatos de CLI (bx dev) {{site.data.keyword.dev_cli_notm}} sirven para crear un proyecto, desplegarlo, depurarlo y probarlo.
 
 - [build](#build): Compila el proyecto en un contenedor local
 - [code](#code): Descarga el código de un proyecto
@@ -36,7 +36,7 @@ Los siguientes mandatos de {{site.data.keyword.dev_cli_notm}} (bx dev) sirven pa
 - [stop](#stop): Detiene un contenedor
 - [test](#test): Prueba la aplicación en un contenedor local
 - [view](#view): Visualiza los URL desplegados de la app para pruebas y visualización
-- [mandatos compuestos](#compound): Permite ejecutar varios mandatos en una sentencia de línea de mandatos
+- [compound commands](#compound): Ejecuta varios mandatos en una sentencia de línea de mandatos
 
 
 
@@ -47,7 +47,7 @@ Compile su aplicación con el mandato `build`. Los mandatos `test`, `debug` y `r
 
 El elemento de configuración `build-cmd-debug` se utiliza para compilar la aplicación para todos los usos, excepto para `run`. La aplicación se compila para depuración especificando la opción de línea de mandatos `--debug`.  El elemento de configuración `build-cmd-run` se utiliza al compilar la aplicación para utilizarla con el mandato `run`.
 
-Para poder compilar con varios contenedores, su proyecto debería contener un archivo [Compose](https://docs.docker.com/compose/overview/), especificado en `cli-config.yml` o bien debería utilizar el parámetro de mandato `dockerfile-tools` para especificar uno. Consulte [Archivo Compose](/docs/apps/projects/compose_file.html) para obtener más información.
+Para compilar con varios contenedores, su proyecto debe contener un archivo [Compose](https://docs.docker.com/compose/overview/), que especificado en `cli-config.yml` o puede utilizar el parámetro de mandato `dockerfile-tools` para especificar uno. Consulte [Archivo Compose](/docs/apps/projects/compose_file.html) para obtener más información.
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para crear la aplicación:  
 
@@ -78,7 +78,7 @@ bx dev code <projectName>
 
 El mandato `console` abre en un navegador web la consola web de su aplicación en IBM Cloud.  Ejecute el mandato `bx dev console` desde la carpeta de su proyecto. El mandato de CLI intenta encontrar un proyecto coincidente en IBM Cloud con el mismo ID de proyecto que el del directorio actual. Si el sistema no puede encontrar un nombre coincidente, en su lugar, abre el panel de control Web y móvil en IBM Cloud en lugar del proyecto específico.
 
-Opcionalmente, puede proporcionar un nombre de proyecto de forma que la CLI, omitirá la coincidencia basada en el nombre de carpeta/aplicación.  En este caso, la CLI abrirá la consola del proyecto con el nombre que ha indicado en un navegador web.  
+Puede proporcionar un nombre de proyecto y, de esta forma, la CLI omitirá la coincidencia basada en el nombre de carpeta/aplicación. En este caso, la CLI abrirá la consola del proyecto con el nombre que ha indicado en un navegador web.  
 
 Ejecute el siguiente mandato para abrir un navegador web para la consola web de su aplicación.
 
@@ -104,7 +104,7 @@ bx dev create
 ## debug
 {: #debug}
 
-Puede depurar la aplicación a través del mandato `debug`. Primero es necesario completar una compilación con relación al proyecto utilizando el mandato build con el argumento `--debug`. Cuando se invoca al mandato `debug`, se inicia un contenedor que proporciona uno o varios puertos de depuración tal como se defina en el valor `container-port-map-debug` en cli-config.yml o tal como se especifique en la línea de mandatos. Conecte su herramienta de depuración preferida al puerto o puertos y podrá depurar su aplicación como siempre.
+Puede depurar la aplicación a través del mandato `debug`. Primero es necesario completar una compilación con relación al proyecto utilizando el mandato build con el argumento `--debug`. Cuando se inicia el mandato `debug`, se inicia un contenedor que proporciona uno o varios puertos de depuración tal como se defina en el valor `container-port-map-debug` en cli-config.yml o tal como se especifique en la línea de mandatos. Conecte su herramienta de depuración preferida al puerto o puertos y podrá depurar su aplicación como siempre.
 
 En primer lugar, compile su proyecto:
 
@@ -414,7 +414,7 @@ Simplemente ejecute este mandato
 bx dev shell
 ```
 
-{{site.data.keyword.dev_cli_short}} abrirá un shell interactivo en el contenedor docker de la aplicación. El contenedor de destino predeterminado para el mandato de shell se define por el valor `container-shell-target` en el `config.yml`, donde los valores válidos son `run` o `tools`. Si este valor no está definido o si se especifica un valor no válido, de forma predeterminada el mandato `shell` afectará al contenedor `tools`. El mandato de shell abre el contenedor en el directorio especificado por la instrucción `WORKDIR` en el Dockerfile correspondiente. Si `WORKDIR` no está en el Dockerfile, Dockerfile se utiliza la raíz del contenedor como el directorio de trabajo. Consulte esta [información de referencia](https://docs.docker.com/engine/reference/builder/#workdir) para más detalles.
+la CLI de {{site.data.keyword.dev_cli_short}} abrirá un shell interactivo en el contenedor docker de la aplicación. El contenedor de destino predeterminado para el mandato de shell se define por el valor `container-shell-target` en el `config.yml`, donde los valores válidos son `run` o `tools`. Si este valor no está definido o si se especifica un valor no válido, de forma predeterminada el mandato `shell` afectará al contenedor `tools`. El mandato de shell abre el contenedor en el directorio especificado por la instrucción `WORKDIR` en el Dockerfile correspondiente. Si `WORKDIR` no está en el Dockerfile, Dockerfile se utiliza la raíz del contenedor como el directorio de trabajo. Consulte esta [información de referencia](https://docs.docker.com/engine/reference/builder/#workdir) para más detalles.
 
 Como alternativa, puede decidir pasar `run` o `tools` como argumento para el mandato de forma que el shell se abra y sirva para dicho contenedor. Asimismo, puede utilizar el parámetro `container-name` para pasar el nombre del contenedor en el que desea el shell. Sin embargo, este distintivo debe reservarse para cuando no haya contenedores en ejecución. Los argumentos `run` y `tools` son más flexibles y permiten conmutar entre contenedores cuando alguno de ellos esté en ejecución. Por ejemplo, si el contenedor tools está en ejecución y ejecuta `bx dev shell run`, se detendrá el contenedor `tools` y se reiniciará el contenedor `run`, y viceversa.
 
@@ -446,7 +446,7 @@ Por ejemplo, puede ejecutar el mandato Linux `ls` dentro del contenedor shell in
 ## status
 {: #status}
 
-Puede consultar el estado de los contenedores que utiliza {{site.data.keyword.dev_cli_short}} tal y como se definen en `container-name-run` y `container-name-tools`.
+Puede consultar el estado de los contenedores que utiliza la CLI de {{site.data.keyword.dev_cli_short}}, tal y como se define en `container-name-run` y `container-name-tools`.
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para comprobar el estado de los contenedores:
 

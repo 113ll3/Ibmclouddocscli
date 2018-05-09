@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2017-12-08"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -32,7 +32,7 @@ Para iniciar sesión en una nube dedicada en la que el servicio IAM público est
   Correo electrónico>
 ```
 
-Si el ID dedicado ya se ha conectado al IBMid público, se autenticará y se iniciará sesión:
+Si el ID dedicado ya se ha conectado al IBMid público, se autentica y se inicia sesión:
 
 ```
   Autenticando...
@@ -41,10 +41,10 @@ Si el ID dedicado ya se ha conectado al IBMid público, se autenticará y se ini
   Conectado con el usuario dedicado my_dedicated_id
 ```
 
-Sin embargo, si el ID dedicado no se ha conectado con el IBMid público, se le solicitará que se conecte manualmente al IBMid público:
+Sin embargo, si el ID dedicado no se ha conectado con el IBMid público, se le solicita que se conecte manualmente al IBMid público:
 
 ```
-  Está registrándose con un ID de IBM no asociado con ningún usuario dedicado.
+  Está registrándose con IBMid no asociado con ningún usuario dedicado.
   Para configurar la conexión, especifique las credenciales del usuario dedicado.
 
   Elija un tipo de credencial:

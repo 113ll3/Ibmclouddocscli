@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -36,7 +36,7 @@ La forma más simple de instalar la extensión IBM Developerss Tools para un IDE
 
 Puede empezar con una app existente del lado del servidor, y habilitarla para IBM Cloud, o utilizar IDT CLI para crear una nueva app desde un kit de iniciación (bx dev create). Una vez haya creado su proyecto de app, ábralo en su IDE de JetBrains.
 
-Si tiene una app genérica del lado del servidor, seleccione Herramientas > IBM Cloud Developer Tools > Habilitar app para IBM Cloud. Esto comprobará, y añadirá todos los archivos necesarios para habilitar la compilación local de la app, así como su despliegue en IBM Cloud ya sea como una app de Cloud Foundry, o dentro de un clúster de Kubernetes.
+Si tiene una app genérica del lado del servidor, seleccione Herramientas > IBM Cloud Developer Tools > Habilitar app para IBM Cloud. Esto comprueba todos los archivos necesarios y añade los que faltan, lo que le permite compilar la app localmente, y desplegarla en IBM Cloud utilizando una app de Cloud Foundry, o en un clúster de Kubernetes.
 
-Desarrolle su app nativa de nube como siempre, utilizando las acciones básicas de compilar/ejecutar/desplegar desde el menú de IDT. Si necesita realizar acciones que no están en el menú, simplemente abra el separador Terminal y especifique los mandatos deseados de forma manual.
+Desarrolle su app nativa de nube utilizando las acciones básicas de compilar/ejecutar/desplegar desde el menú de IDT. Si necesita realizar acciones que no están en el menú, abra el separador Terminal y especifique los mandatos deseados de forma manual.
 

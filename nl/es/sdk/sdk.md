@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-16"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 # SDK móviles disponibles
@@ -34,7 +34,7 @@ Si tiene una aplicación de servidor de Java, NodeJS o Swift, puede utilizar los
 ## SDK de cliente
 {: #client_sdk}
 
-Puede utilizar los siguientes SDK en la aplicación móvil para optimizar las prestaciones respectivas.
+Puede utilizar los siguientes SDK en la aplicación móvil para utilizar las prestaciones respectivas.
 
 
 ### SDK de Android

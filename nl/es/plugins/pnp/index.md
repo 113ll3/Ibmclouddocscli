@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -22,8 +22,7 @@ Antes de empezar, cree los espacios de {{site.data.keyword.Bluemix_notm}}. Aseg�
 
 **Nota:** después de utilizar la igualdad de red privada con un espacio de {{site.data.keyword.Bluemix_notm}}, si necesita suprimir el espacio, suprima en primer lugar las conexiones de la igualdad de red privada en dicho espacio.
 
-Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte
-[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html) para obtener más información.
+Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Para obtener detalles, consulte [CLI de IBM Cloud](http://clis.ng.bluemix.net/ui/home.html).
 
 ## Instale el plug-in de la CLI de igualdad de red privada
 

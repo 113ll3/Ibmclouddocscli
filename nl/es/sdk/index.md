@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -16,11 +16,11 @@ lastupdated: "2018-03-16"
 
 El plugin {{site.data.keyword.IBM}} SDK Generator se puede instalar en [{{site.data.keyword.Bluemix_notm}} CLI ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/all_versions.html).
 
-Como desarrollador en {{site.data.keyword.Bluemix_notm}}, puede utilizar este plug-in para generar SDK desde su definición de la API REST compatible con la [Especificación de Open API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.openapis.org/). A medida que realice cambios a su definición de API REST, podrá utilizar este plug-in para volver a generar sólo el SDK, en lugar de volver a generar todo el proyecto.
+Como desarrollador en {{site.data.keyword.Bluemix_notm}}, puede utilizar este plug-in para generar SDK desde su definición de la API REST compatible con la [Especificación de Open API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.openapis.org/). A medida que modifica la definición de API REST, podrá utilizar este plugin para volver a generar sólo el SDK, en lugar de volver a generar todo el proyecto.
 
 También puede ver si las apps de Cloud Foundry en un espacio determinado tienen definiciones de API REST válidas para la generación de SDK. Finalmente, puede utilizar el plugin del Generador de SDK de {{site.data.keyword.IBM_notm}} para validar cualquier definición de API REST para garantizar que cumpla con los requisitos del generador de SDK.
 
-Este plugin {{site.data.keyword.IBM_notm}} SDK Generator le permite integrar con facilidad los servicios de fondo con la app con un SDK generado. Cuando se produzca un cambio en una API REST, puede volver a generar el SDK y sustituir el antiguo por una actualización de SDK integrada. También puede integrar la CLI en un conducto de devops y garantizar que el SDK sea siempre coherente con la especificación de la API cada vez que se cree la app.
+Este plugin {{site.data.keyword.IBM_notm}} SDK Generator le permite integrar con facilidad los servicios de fondo con la app con un SDK generado. Cuando se produzca un cambio en una API REST, puede volver a generar el SDK y sustituir el antiguo por una actualización de SDK. También puede integrar la CLI en un conducto de DevOps y garantizar que el SDK sea siempre coherente con la especificación de la API cada vez que se cree la app.
 
 La definición de la API REST debe ser válida y estar alojada en un punto final de servidor activo o en un archivo local en el sistema. Si la definición de la API REST está alojada, el URL relativo debe estar definido en la variable de entorno `OPENAPI_SPEC`.
 
