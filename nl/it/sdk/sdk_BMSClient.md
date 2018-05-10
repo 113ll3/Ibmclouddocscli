@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 # Inizializzazione di BMSClient
 {: #sdk_BMSClient}
 
-`BMSCore` fornisce l'infrastruttura HTTP che le altre SDK client dei servizi {{site.data.keyword.Bluemix}} Web e Mobile utilizzano per comunicare con i loro servizi {{site.data.keyword.Bluemix_notm}} corrispondenti. 
+`BMSCore` fornisce l'infrastruttura HTTP che le altre SDK client dei servizi {{site.data.keyword.Bluemix}} Web e Mobile utilizzano per comunicare con i loro servizi {{site.data.keyword.Bluemix_notm}} corrispondenti.
 
 
 ## Inizializzazione della tua applicazione Android
@@ -89,7 +89,7 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
   ```
   {: codeblock}
 
-  Devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`. 
+  Devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.
 
 
 ## Inizializzazione della tua applicazione Cordova

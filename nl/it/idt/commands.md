@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2017-2018
-lastupdated: "2018-03-16"
+years: 2017, 2018
+lastupdated: "2018-04-17"
 
 ---
 
@@ -11,13 +11,13 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Comandi {{site.data.keyword.dev_cli_notm}} (bx dev)
+# Comandi CLI {{site.data.keyword.dev_cli_notm}} (bx dev) 
 {: #idt-cli}
 
 Versione: 1.2.0
 Rilasciata: 8 marzo 2018
 
-Utilizza i seguenti comandi {{site.data.keyword.dev_cli_notm}} (bx dev) per creare un progetto, distribuirlo, eseguirne il debug e verificarlo.
+Utilizza i seguenti comandi CLI {{site.data.keyword.dev_cli_notm}} (bx dev) per creare un progetto, distribuirlo, eseguirne il debug e verificarlo. 
 
 - [build](#build): crea il progetto in un contenitore locale
 - [code](#code): scarica il codice da un progetto
@@ -27,16 +27,16 @@ Utilizza i seguenti comandi {{site.data.keyword.dev_cli_notm}} (bx dev) per crea
 - [delete](#delete): elimina un progetto dal tuo spazio
 - [deploy](#deploy): distribuisce un'applicazione a IBM Cloud
 - [enable](#enable): aggiunge file IBM Cloud a un progetto esistente
-- [get-credentials](#get-credentials): richiama le credenziali richieste dal progetto per abilitare l'utilizzo dei servizi collegati
+- [get-credentials](#get-credentials): richiama le credenziali richieste dal progetto per abilitare l'utilizzo dei servizi collegati 
 - [help](#help): guida per gli argomenti e la sintassi IDT
 - [list](#list): elenca tutti i progetti IBM Cloud in uno spazio
 - [run](#run): esegue la tua applicazione in un contenitore locale
 - [shell](#shell): apre una shell in un contenitore locale
-- [status](#status): controlla lo stato dei contenitori utilizzati dalla CLI
+- [status](#status): controlla lo stato dei contenitori utilizzati dalla CLI 
 - [stop](#stop): arresta un contenitore
 - [test](#test): verifica la tua applicazione in un contenitore locale
-- [view](#view): visualizza l'URL distribuito dell'applicazione per la verifica e la visualizzazione
-- [compound commands](#compound): esegue più comandi in una istruzione della riga di comando
+- [view](#view): visualizza l'URL distribuito delle applicazioni per la verifica e la visualizzazione 
+- [compound commands](#compound): esegue più comandi in una istruzione della riga di comando 
 
 
 
@@ -45,7 +45,7 @@ Utilizza i seguenti comandi {{site.data.keyword.dev_cli_notm}} (bx dev) per crea
 
 Puoi creare la tua applicazione utilizzando il comando `build`. I comandi `test`, `debug` e `run` si aspettano di trovare un progetto compilato per cui devi prima eseguire un'operazione `build`.  
 
-Viene utilizzato l'elemento di configurazione `build-cmd-debug` per creare l'applicazione per tutti gli utilizzi ad eccezione di `run`. Crea la tua applicazione per il debug specificando l'opzione della riga di comando `--debug`.  Viene utilizzato l'elemento di configurazione `build-cmd-run` quando crei l'applicazione per essere utilizzata con il comando `run`.
+Viene utilizzato l'elemento di configurazione `build-cmd-debug` per creare l'applicazione per tutti gli utilizzi ad eccezione di `run`. Crea la tua applicazione per il debug specificando l'opzione della riga di comando `--debug`.  Viene utilizzato l'elemento di configurazione `build-cmd-run` quando stai creando l'applicazione per essere utilizzata con il comando `run`. 
 
 Per creare con più contenitori, il tuo progetto deve contenere un file [Compose](https://docs.docker.com/compose/overview/), specificato in `cli-config.yml` o puoi utilizzare il parametro del comando `dockerfile-tools` per fornirne uno. Consulta [File Compose](/docs/apps/projects/compose_file.html) per ulteriori informazioni.
 
@@ -63,7 +63,7 @@ bx dev build [--debug]
 ## code
 {: #code}
 
-Utilizza il comando `code` per scaricare un progetto precedentemente creato con il codice del template dell'applicazione e i file di configurazione per {{site.data.keyword.Bluemix_notm}}.  Questo è utile quando devi estrarre una seconda copia di un progetto che hai creato.
+Utilizza il comando `code` per scaricare un progetto precedentemente creato con il codice del template dell'applicazione e i file di configurazione per {{site.data.keyword.Bluemix_notm}}.  Questo è utile quando devi estrarre una seconda copia di un progetto che hai creato. 
 
 Immetti il seguente comando per scaricare il codice da un progetto specificato.
 
@@ -78,7 +78,7 @@ bx dev code <projectName>
 
 Utilizza il comando `console` per aprire un browser web per la console web della tua applicazione su IBM Cloud.  Puoi eseguire il comando `bx dev console` dall'interno della cartella del tuo progetto e la CLI tenta di trovare un progetto corrispondente su IBM  CLOUD con lo stesso ID del progetto della directory corrente. Se il sistema non è in grado di trovare un nome corrispondente, apre il dashboard web e mobile su IBM Cloud invece del progetto specificato.
 
-Facoltativamente, puoi fornire un nome progetto e la CLI ignorerà le corrispondenze basate sul nome cartella/applicazione.  In questo caso, la CLI apre la console del progetto denominato in un browser web.  
+Puoi fornire un nome progetto e la CLI ignora le corrispondenze basate sul nome cartella/applicazione. In questo caso, la CLI apre la console del progetto denominato in un browser web.  
 
 Immetti il seguente comando per aprire un browser web per la console web della tua applicazione.
 
@@ -104,7 +104,7 @@ bx dev create
 ## debug
 {: #debug}
 
-Puoi eseguire il debug della tua applicazione tramite il comando `debug`. Deve prima essere completata una build nel progetto utilizzando il comando di build con l'argomento `--debug`. Quando richiami il comando `debug` viene avviato un contenitore che fornisce una o più porte di debug come definito dal valore `container-port-map-debug` in cli-config.yml o specificato nella riga di comando. Collega il tuo strumento di debug preferito alla porta o alle porte e puoi eseguire il debug della tua applicazione normalmente.
+Puoi eseguire il debug della tua applicazione tramite il comando `debug`. Deve prima essere completata una build nel progetto utilizzando il comando di build con l'argomento `--debug`. Quando avvii il comando `debug` viene avviato un contenitore che fornisce una o più porte di debug come definito dal valore `container-port-map-debug` in cli-config.yml o specificato nella riga di comando. Collega il tuo strumento di debug preferito alla porta o alle porte e puoi eseguire il debug della tua applicazione normalmente.
 
 Per prima cosa, compila il tuo progetto:
 
@@ -291,15 +291,15 @@ I seguenti parametri possono essere utilizzati con il comando `enable` o aggiorn
 ## get-credentials
 {: #get-credentials}
 
-Richiama le credenziali richieste dal progetto per abilitare l'utilizzo dei servizi collegati. 
+Richiama le credenziali richieste dal progetto per abilitare l'utilizzo dei servizi collegati.
 
 
 ## help
 {: #help}
 
-Per impostazione predefinita, se non viene trasmesso alcun argomento o azione o se viene fornita l'azione 'help', questo comando mostra un testo di "Aiuto" generale. La guida generale visualizzata include una descrizione degli argomenti di base così come un elenco di azioni disponibili.   
+Per impostazione predefinita, se non viene trasmesso alcun argomento o azione o se viene fornita l'azione 'help', questo comando mostra un testo di "Aiuto" generale. La guida generale visualizzata include una descrizione degli argomenti di base così come un elenco di azioni disponibili.  
 
-Immetti il seguente comando per visualizzare le informazioni della guida generale: 
+Immetti il seguente comando per visualizzare le informazioni della guida generale:
 
 ```
 bx dev help
@@ -312,7 +312,7 @@ bx dev help
 
 Puoi elencare tutti i progetti {{site.data.keyword.Bluemix_notm}} in uno spazio.
 
-Immetti il seguente comando per elencare i tuoi progetti: 
+Immetti il seguente comando per elencare i tuoi progetti:
 
 ```
 bx dev list
@@ -347,7 +347,7 @@ bx dev build
 ```
 {: codeblock}
 
-Immetti il seguente comando nella tua directory del progetto corrente per avviare la tua applicazione: 
+Immetti il seguente comando nella tua directory del progetto corrente per avviare la tua applicazione:
 
 ```
 bx dev run
@@ -367,7 +367,7 @@ Esistono [ulteriori parametri](#command-parameters) condivisi con altri comandi.
 #### `container-name-run`
 {: #container-name-run}
 
-* Il nome del contenitore di esecuzione. 
+* Il nome del contenitore di esecuzione.
 * Utilizzo: `bx dev run --container-name-run [<projectName>]`
 
 #### `container-path-run`
@@ -379,14 +379,14 @@ Esistono [ulteriori parametri](#command-parameters) condivisi con altri comandi.
 #### `host-path-run`
 {: #host-path-run}
 
-* Ubicazione sul sistema host da condividere nel contenitore all'esecuzione. 
+* Ubicazione sul sistema host da condividere nel contenitore all'esecuzione.
 * Utilizzo: `bx dev run --host-path-run [/path/to/app/bin]`
 
 #### `dockerfile-run`
 {: #dockerfile-run}
 
 * Dockerfile del contenitore di esecuzione.
-* Se intendi eseguire più contenitori, questo dovrebbe essere un file Compose. 
+* Se intendi eseguire più contenitori, questo dovrebbe essere un file Compose.
 * Per utilizzare più file Compose, racchiudi un elenco delimitato da virgole dei nomi file tra le virgolette.
 * Utilizzo: `bx dev run --dockerfile-run [/path/to/Dockerfile]`
 * Utilizzo: `bx dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
@@ -409,13 +409,13 @@ Esistono [ulteriori parametri](#command-parameters) condivisi con altri comandi.
 
 Puoi aprire la shell all'interno del contenitore di esecuzione o degli strumenti con il comando `shell`.
 
-Semplicemente eseguendo questo comando 
+Semplicemente eseguendo questo comando
 
 ```
 bx dev shell
 ```
 
-{{site.data.keyword.dev_cli_short}} aprirà una shell interattiva nel contenitore docker dell'applicazione. Il contenitore di destinazione predefinito per il comando shell è definito dal valore `container-shell-target` nel file `cli-config.yml`, dove i valori validi sono `run` o `tools`. Se questo valore non è definito o viene specificato un valore non valido, il comando `shell` indirizzerà al contenitore `tools` per impostazione predefinita. Il comando shell apre il contenitore nella directory specificata dall'istruzione `WORKDIR` nel Dockerfile corrispondente. Se `WORKDIR` non è elencato nel Dockerfile, viene utilizzata la root del contenitore come directory di lavoro. Per ulteriori informazioni, vedi [questo riferimento](https://docs.docker.com/engine/reference/builder/#workdir).
+la CLI {{site.data.keyword.dev_cli_short}} aprirà una shell interattiva nel contenitore docker dell'applicazione. Il contenitore di destinazione predefinito per il comando shell è definito dal valore `container-shell-target` nel file `cli-config.yml`, dove i valori validi sono `run` o `tools`. Se questo valore non è definito o viene specificato un valore non valido, il comando `shell` indirizzerà al contenitore `tools` per impostazione predefinita. Il comando shell apre il contenitore nella directory specificata dall'istruzione `WORKDIR` nel Dockerfile corrispondente. Se `WORKDIR` non è elencato nel Dockerfile, viene utilizzata la root del contenitore come directory di lavoro. Per ulteriori informazioni, vedi [questo riferimento](https://docs.docker.com/engine/reference/builder/#workdir).
 
 In alternativa, è possibile decidere di passare `run` o `tools` come un argomento al comando e questo contenitore sarà aggiornato e la shell verrà aperta per tale contenitore. Allo stesso modo, puoi utilizzare il parametro `container-name` per passare il nome del contenitore in cui desideri utilizzare la shell. Tuttavia, questo indicatore dovrebbe essere riservato per quando non ci sono contenitori in esecuzione. Gli argomenti `run` e `tools` sono più flessibili e ti consentono di spostarti tra i contenitori quando uno di essi è al momento in esecuzione. Ad esempio, se il contenitore degli strumenti è in esecuzione ed esegui `bx dev shell run`, il contenitore `tools` sarà arrestato e il contenitore `run` sarà avviato e viceversa.
 
@@ -424,7 +424,7 @@ Se il contenitore `run` o `tools` di destinazione non è ancora in esecuzione qu
 
 Puoi anche specificare l'eseguibile della shell che desideri aprire utilizzando il parametro `container-shell`. Per impostazione predefinita, viene utilizzato `/bin/sh`. Se preferisci usare la shell bash, specifica che il valore `container-shell` sia `/bin/bash`; tuttavia, tieni presente che bash non è disponibile automaticamente in tutte le varianti Linux.
 
-Tutti gli argomenti aggiuntivi che passi al comando oltre agli indicatori saranno analizzati come il comando da eseguire quando la shell è aperta. Se fornisci un comando da eseguire, la shell all'interno del contenitore uscirà dopo l'esecuzione del comando e ritornerai al tuo terminale. 
+Tutti gli argomenti aggiuntivi che passi al comando oltre agli indicatori saranno analizzati come il comando da eseguire quando la shell è aperta. Se fornisci un comando da eseguire, la shell all'interno del contenitore uscirà dopo l'esecuzione del comando e ritornerai al tuo terminale.
 
 Ad esempio, puoi eseguire il comando Linux `ls` nella shell del contenitore degli strumenti richiamando `bx dev shell tools ls`.   Puoi anche specificare ulteriori indicatori che devono essere passati nell'esecuzione del comando shell racchiudendo gli argomenti tra virgolette, come ad esempio `bx dev shell "ls -la"`.
 
@@ -434,22 +434,22 @@ Ad esempio, puoi eseguire il comando Linux `ls` nella shell del contenitore degl
 #### `container-name`
 {: #container-name}
 
-* Nome del contenitore in cui si desidera eseguire la shell. 
+* Nome del contenitore in cui si desidera eseguire la shell.
 * Utilizzo: `bx dev shell --container-name [<container-name>]`
 
 #### `container-shell`
 {: #container-shell}
 
-* Specifica quale shell eseguire all'interno del contenitore (il valore predefinito è /bin/sh) 
+* Specifica quale shell eseguire all'interno del contenitore (il valore predefinito è /bin/sh)
 * Utilizzo: `bx dev shell --container-shell [path/to/shell]`
 
 
 ## status
 {: #status}
 
-Puoi eseguire la query dello stato dei contenitori che sono utilizzati dalla {{site.data.keyword.dev_cli_short}} come definito da `container-name-run` e `container-name-tools`.
+Puoi eseguire la query dello stato dei contenitori che sono utilizzati dalla CLI {{site.data.keyword.dev_cli_short}} come definito da `container-name-run` e `container-name-tools`.
 
-Immetti il seguente comando nella tua directory del progetto corrente per controllare lo stato del contenitore: 
+Immetti il seguente comando nella tua directory del progetto corrente per controllare lo stato del contenitore:
 
 ```
 bx dev status
@@ -482,13 +482,13 @@ I seguenti parametri vengono utilizzati per il comando `stop`. Esistono [ulterio
 #### `container-name-run`
 {: #container-name-run}
 
-* Il nome del contenitore di esecuzione. 
+* Il nome del contenitore di esecuzione.
 * Utilizzo: `bx dev stop --container-name-run [<projectName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
-* Il nome del contenitore degli strumenti. 
+* Il nome del contenitore degli strumenti.
 * Utilizzo: `bx dev stop --container-name-tools [<projectName>]`
 
 
@@ -505,7 +505,7 @@ bx dev build --debug
 ```
 {: codeblock}
 
-Immetti il seguente comando per verificare la tua applicazione: 
+Immetti il seguente comando per verificare la tua applicazione:
 
 ```
 bx dev test
@@ -521,7 +521,7 @@ Il seguente parametro è esclusivo per il comando `test`.  Esistono [ulteriori p
 #### `test-cmd`
 {: #test-cmd}
 
-* Parametro che viene utilizzato per specificare un comando per verificare il codice nel contenitore degli strumenti. 
+* Parametro che viene utilizzato per specificare un comando per verificare il codice nel contenitore degli strumenti.
 * Utilizzo: `bx dev test --test-cmd /the/test/command`
 
 
@@ -530,11 +530,11 @@ Il seguente parametro è esclusivo per il comando `test`.  Esistono [ulteriori p
 
 Puoi visualizzare l'URL a cui viene distribuita la tua applicazione tramite il comando `view`. Esegui questo comando nella directory root dell'applicazione che desideri visualizzare. Anche il comando `view` aprirà l'URL nel tuo browser predefinito.
 
-Per le applicazioni distribuite a Cloud Foundry, l'URL è composto dal nome host e dal dominio dell'applicazione. 
+Per le applicazioni distribuite a Cloud Foundry, l'URL è composto dal nome host e dal dominio dell'applicazione.
 
 Per le applicazioni distribuite a Kubernetes, l'URL è composto dall'indirizzo IP del nodo a cui viene eseguita la distribuzione e la porta pubblica. Se il comando determina che l'applicazione è stata distribuita a Kubernetes, lo strumento CLI richiederà conferma. Se specifichi che l'applicazione non è stata effettivamente distribuita a Kubernetes, viene visualizzato l'URL Cloud Foundry. Se presupponi che il comando mostri l'URL di un'applicazione distribuita a Kubernetes ma non è così, assicurati che `cli-config.yml` contenga una voce per `chart-path` o forniscila tramite la riga di comando come mostrato [qui](#chart-path).
 
-Immetti il seguente comando per visualizzare la tua applicazione: 
+Immetti il seguente comando per visualizzare la tua applicazione:
 
 ```
 bx dev view
@@ -548,35 +548,35 @@ I seguenti parametri sono esclusivi per il comando `view`.
 
 #### `deploy-target`
 
-* Parametro facoltativo utilizzato per indicare al tipo di distribuzione di ignorare la richiesta 
+* Parametro facoltativo utilizzato per indicare al tipo di distribuzione di ignorare la richiesta
 * Utilizzo `bx dev view -t|--target buildpack|container`
 
 
 #### `no-open`
 {: #no-open}
 
-* Parametro che viene utilizzato per specificare di non aprire il browser. 
+* Parametro che viene utilizzato per specificare di non aprire il browser.
 * Utilizzo: `bx dev view --no-open`
 
 
 #### `web-app-root`
 {: #web-app-root}
 
-* Root del progetto da aggiungere all'URL dell'applicazione Kubernetes 
+* Root del progetto da aggiungere all'URL dell'applicazione Kubernetes
 * Utilizzo: `bx dev view --web-app-root [root]`
 
 
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Parametro facoltativo utilizzato per definire il nome del cluster Kubernetes quando indirizzi una distribuzione del contenitore 
+* Parametro facoltativo utilizzato per definire il nome del cluster Kubernetes quando indirizzi una distribuzione del contenitore
 * Utilizzo `bx dev view --ibm-cluster [cluster-name]`
 
 
 ## comandi composti
 {: #compound}
 
-Puoi eseguire più comandi in una istruzione della riga di comando separando i comandi IDT con il delimitatore `/`. Possono essere specificati ulteriori indicatori della riga di comando dopo aver specificato i comandi composti. I seguenti comandi sono esempi di come puoi utilizzare i comandi composti: 
+Puoi eseguire più comandi in una istruzione della riga di comando separando i comandi IDT con il delimitatore `/`. Possono essere specificati ulteriori indicatori della riga di comando dopo aver specificato i comandi composti.  I seguenti comandi sono esempi di come puoi utilizzare i comandi composti:
 
 ```
 bx dev build/run
@@ -591,7 +591,7 @@ Tutti gli indicatori devono seguire il comando finale e saranno applicati a tutt
 Questi sono i comandi che possono essere utilizzati con questa funzione:
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Se un comando ha esito negativo per un qualsiasi motivo, i comandi successivi non verranno eseguiti.  Se tutti i comandi che seguono `debug` o `run`, l'esecuzione continuerà solo se `debug` o `run` vengono terminati, il che significa di terminare il processo dalla finestra di terminale corrente. `CTRL+C` terminerà il processo e non eseguirà i comandi successivi. Ad esempio, puoi eseguire `bx dev stop` da un'altra finestra di terminale per arrestare il contenitore in esecuzione e continuare l'esecuzione del comando successivo. 
+Se un comando ha esito negativo per un qualsiasi motivo, i comandi successivi non verranno eseguiti. Se tutti i comandi che seguono `debug` o `run`, l'esecuzione continuerà solo se `debug` o `run` vengono terminati, il che significa di terminare il processo dalla finestra di terminale corrente. `CTRL+C` terminerà il processo e non eseguirà i comandi successivi. Ad esempio, puoi eseguire `bx dev stop` da un'altra finestra di terminale per arrestare il contenitore in esecuzione e continuare l'esecuzione del comando successivo.
 
 
 ## Parametri per build, debug, run e test
@@ -599,7 +599,7 @@ Se un comando ha esito negativo per un qualsiasi motivo, i comandi successivi no
 
 I seguenti parametri possono essere utilizzati con i comandi `build|debug|run|test` o aggiornando direttamente il file `cli-config.yml` del progetto. Sono disponibili ulteriori parametri per i comandi [`debug`](#debug-parameters) e [`run`](#run-parameters).
 
-**Nota**: i parametri di comando immessi sulla riga di comando hanno la precedenza sulla configurazione `cli-config.yml`. 
+**Nota**: i parametri di comando immessi sulla riga di comando hanno la precedenza sulla configurazione `cli-config.yml`.
 
 #### `config-file`  
 {: #config-file}
@@ -610,25 +610,25 @@ I seguenti parametri possono essere utilizzati con i comandi `build|debug|run|te
 #### `container-name-run`  
 {: #container-name-run}
 
-* Il nome del contenitore di esecuzione. 
+* Il nome del contenitore di esecuzione.
 * Utilizzo: `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools}
 
-* Il nome del contenitore degli strumenti. 
+* Il nome del contenitore degli strumenti.
 * Utilizzo: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}
 
-* Ubicazione sull'host da condividere per la creazione, il debug e la verifica. 
+* Ubicazione sull'host da condividere per la creazione, il debug e la verifica.
 * Utilizzo: `bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 #### `container-path-tools`
 {: #container-path-tools}
 
-* Ubicazione nel contenitore da condividere per la creazione, il debug e la verifica. 
+* Ubicazione nel contenitore da condividere per la creazione, il debug e la verifica.
 * Utilizzo: `bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 #### `container-port-map`
@@ -640,7 +640,7 @@ I seguenti parametri possono essere utilizzati con i comandi `build|debug|run|te
 #### `dockerfile-tools`
 {: #dockerfile-tools}
 
-* Dockerfile del contenitore degli strumenti. 
+* Dockerfile del contenitore degli strumenti.
 * Utilizzo: `bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 #### `image-name-tools`
@@ -652,27 +652,27 @@ I seguenti parametri possono essere utilizzati con i comandi `build|debug|run|te
 #### `container-mounts-run`
 {: #container-mounts-run}
 
-* Utilizza questa opzione per definire i montaggi tra il sistema host e il contenitore di esecuzione. 
+* Utilizza questa opzione per definire i montaggi tra il sistema host e il contenitore di esecuzione.
 * I valori `host-path-run` e `container-path-run` vengono inseriti all'inizio di questo elenco.
-* Come procedura ottimale e per evitare risultati imprevisti, devi creare ed eseguire utilizzando le stesse impostazioni di montaggio. 
+* Come procedura ottimale e per evitare risultati imprevisti, devi creare ed eseguire utilizzando le stesse impostazioni di montaggio.
 * Utilizzo: `bx dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `container-mounts-tools`
 {: #container-mounts-tools}
 
-* Utilizza questa opzione per definire i montaggi tra il sistema host e il contenitore degli strumenti. 
+* Utilizza questa opzione per definire i montaggi tra il sistema host e il contenitore degli strumenti.
 * I valori `host-path-run` e `container-path-run` vengono inseriti all'inizio di questo elenco.* Come procedura ottimale e per evitare risultati imprevisti, devi creare ed eseguire il debug utilizzando le stesse impostazioni di montaggio.
 * Utilizzo: `bx dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `build-cmd-run`
 {: #build-cmd-run}
 
-* Parametro che viene utilizzato per specificare un comando per creare il codice per tutti gli utilizzi di DEBUG. 
+* Parametro che viene utilizzato per specificare un comando per creare il codice per tutti gli utilizzi di DEBUG.
 * Utilizzo: `bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 #### `trace`
 {: #trace}
 
-* Utilizza questo parametro per fornire l'output dettagliato. 
+* Utilizza questo parametro per fornire l'output dettagliato.
 * Utilizzo: `bx dev <build|debug|run|test> --trace`
 

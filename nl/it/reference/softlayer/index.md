@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-02-01"
+lastupdated: "2018-04-16"
 ---
 
 {:new_window: target="_blank"}
@@ -141,7 +141,7 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
   <td>[bluemix sl file volume-detail](/docs/cli/reference/softlayer/index.html#sl_file_volume_detail)</td>
    </tr>
  <tr>
-   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate</td>
+   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate)</td>
    <td>[bluemix sl file volume-list](/docs/cli/reference/softlayer/index.html#sl_file_volume_list)</td>
    <td>[bluemix sl file volume-order](/docs/cli/reference/softlayer/index.html#sl_file_volume_order)</td>
    <td>[bluemix sl file volume-options](/docs/cli/reference/softlayer/index.html#sl_file_volume_options)</td>
@@ -1706,7 +1706,7 @@ Questo comando stampa la zona denominata bluemix.net in formato BIND.
 ### bluemix sl globalip create 
 {: #sl_globalip_create} 
 
-Crea un IP globle.
+Crea un IP globale.
 ```
 bluemix sl globalip create [OPZIONI]
 ```
@@ -3092,7 +3092,7 @@ bluemix sl vs reboot IDENTIFICATIVO [OPZIONI]
 <dt>--hard</dt>
 <dd>Esegue un riavvio forzato.</dd>
 <dt>--soft</dt>
-<dd>Esegue un riavvio forzato.</dd>
+<dd>Esegue un riavvio non forzato. </dd>
 <dt>-f, --force</dt>
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>

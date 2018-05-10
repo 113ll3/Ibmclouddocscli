@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -23,7 +23,7 @@ Prima di iniziare, crea gli spazi {{site.data.keyword.Bluemix_notm}}. Assicurati
 **Note:** dopo aver utilizzato il peering della rete privata con uno spazio {{site.data.keyword.Bluemix_notm}}, se devi eliminare lo spazio, elimina prima le connessioni peering della rete privata in tale spazio.
 
 Per iniziare, installa la CLI {{site.data.keyword.Bluemix_notm}}. Per i dettagli, vedi
-[CLI Bluemix](http://clis.ng.bluemix.net/ui/home.html).
+[CLI IBM Cloud](http://clis.ng.bluemix.net/ui/home.html).
 
 ## Installa il plug-in della CLI peering della rete privata
 

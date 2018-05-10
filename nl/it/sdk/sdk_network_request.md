@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-03-16"
+  years: 2016, 2018
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ Puoi utilizzare l'SDK `BMSCore` per effettuare richieste di rete a qualsiasi ris
 ## Android
 {: #request-android}
 
-1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-android) nella tua applicazione Android.
+1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-android) nella tua applicazione Android. 
 
 2. Effettua una richiesta di rete.
 
@@ -42,7 +42,7 @@ Puoi utilizzare l'SDK `BMSCore` per effettuare richieste di rete a qualsiasi ris
 	```
 	{: codeblock}
 
-La classe `Request` rappresenta un metodo semplice per effettuare una richiesta HTTP e ottenere la risposta al completamento della richiesta. Se stai scaricando o caricando dei file o dei corpi di dati di grandi dimensioni, puoi utilizzare i metodi `Request` `download` o `upload`. Per monitorare l'avanzamento dello scaricamento o del caricamento, crea un `ProgressListener` personalizzato e trasmettilo ai metodi `download` o `upload`. 
+La classe `Request` rappresenta un metodo semplice per effettuare una richiesta HTTP e ottenere la risposta al completamento della richiesta. Se stai scaricando o caricando dei file o dei corpi di dati di grandi dimensioni, puoi utilizzare i metodi `Request` `download` o `upload`. Per monitorare l'avanzamento dello scaricamento o del caricamento, crea un `ProgressListener` personalizzato e trasmettilo ai metodi `download` o `upload`.
 
 <!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
 
@@ -50,7 +50,7 @@ La classe `Request` rappresenta un metodo semplice per effettuare una richiesta 
 ## iOS
 {: #request-ios}
 
-1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-ios) nella tua applicazione iOS.
+1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-ios) nella tua applicazione iOS. 
 
 2. Crea una richiesta di rete.
 
@@ -92,15 +92,15 @@ La classe `Request` rappresenta un metodo semplice per effettuare una richiesta 
 
 La classe `Request` rappresenta un metodo semplice per effettuare una richiesta HTTP e ottenere la risposta al completamento della richiesta. Se vuoi più flessibilità e controllo rispetto a quello ottenuto con `Request`, puoi utilizzare la classe `BMSURLSession`. Alcune funzioni della classe `BMSURLSession` comprendono il monitoraggio dell'avanzamento dei caricamenti e la messa in pausa o l'annullamento delle richieste. Per ottenere le risposte, hai la possibilità di scegliere i gestori o i delegati di completamento.
 
-La classe `BMSURLSession` è disponibile solo per iOS. 
+La classe `BMSURLSession` è disponibile solo per iOS.
 
-Per esempi di utilizzo completi, consulta `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core). 
+Per esempi di utilizzo completi, consulta `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core).
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-cordova) nella tua applicazione Cordova.
+1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-cordova) nella tua applicazione Cordova. 
 
 2. Crea una richiesta di rete.
 

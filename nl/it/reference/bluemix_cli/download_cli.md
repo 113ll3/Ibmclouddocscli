@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -17,16 +17,15 @@ lastupdated: "2018-02-14"
 # Scarica e installa la CLI {{site.data.keyword.Bluemix_notm}}
 {: #download_install}
 
-Per installare la CLI {{site.data.keyword.Bluemix_notm}} puoi utilizzare un [programma di installazione](#installers) o puoi [eseguire l'installazione dalla shell](#shell_install).
+Puoi utilizzare il programma di installazione o la shell per scaricare e installare la CLI.
 
-## Scarica i programmi di installazione
-{: #installers}
+## Utilizza il programma di installazione
+{: #installer}
 
-Vedi la pagina [Programma di installazione della CLI {{site.data.keyword.Bluemix_notm}} (tutte le versioni)](all_versions.html){: new_window} per scaricare il programma di installazione più recente del tuo sistema operativo.
-
-Per macOS e Windows, esegui semplicemente il programma di installazione. 
-
-Per Linux, dopo che hai scaricato il pacchetto del programma di installazione, eseguine l'estrazione ed esegui lo script di installazione con l'autorizzazione root.
+Per installare la CLI {{site.data.keyword.Bluemix_notm}}:
+* Vai [qui](all_versions.html) per scaricare il programma di installazione.
+* Per macOS e Windows, esegui il programma di installazione.  
+* Per Linux, dopo che hai scaricato il pacchetto del programma di installazione, eseguine l'estrazione ed esegui lo script di installazione con l'autorizzazione root.
 
   ```
   $ tar -xvf Bluemix_CLI.tar.gz
@@ -34,15 +33,14 @@ Per Linux, dopo che hai scaricato il pacchetto del programma di installazione, e
   $ sudo ./install_bluemix_cli
 
   ```
-  {: codeblock}
-  
-## Installa dalla shell
+
+## Installa dalla shell 
 {: #shell_install}
 
 
 ### macOS
 
-Copia e incolla il seguente comando in un terminale del tuo macOS ed eseguilo:
+Copia e incolla il seguente comando in un terminale del tuo SO Mac ed eseguilo: 
 
 ```
 curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
@@ -51,7 +49,7 @@ curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
 
 ### Linux
 
-Copia e incolla il seguente comando in un terminale del tuo sistema operativo Linux ed eseguilo:
+Copia e incolla il seguente comando in un terminale del tuo SO Linux ed eseguilo: 
 
 ```
 curl -fsSL https://clis.ng.bluemix.net/install/linux | sh

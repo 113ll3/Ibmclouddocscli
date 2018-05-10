@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-03-16"
 # Panoramica della CLI e degli strumenti
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} fornisce una solida CLI nonché i plug-in e le estensioni dello strumento per sviluppatori che si integrano con la CLI.
+{{site.data.keyword.Bluemix_notm}} fornisce solidi plug-in e CLI con le estensioni dello strumento per sviluppatori che si integrano con la CLI.
 
 ## {{site.data.keyword.Bluemix_notm}}CLI
 {: #cli}
@@ -34,10 +34,10 @@ Fai clic su un'opzione per iniziare:
 <area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Visualizza documenti (Apre una nuova pagina)" title="Visualizza documenti" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
-## {{site.data.keyword.dev_cli_notm}}
+## {{site.data.keyword.dev_cli_notm}}CLI
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) fornisce un'estensione specifica per sviluppatori alla CLI {{site.data.keyword.Bluemix}} (`bx dev`) per creare, compilare e distribuire applicazioni native cloud. L'installazione di IDT include la CLI {{site.data.keyword.Bluemix_notm}} di base, diverse estensioni e tutti i prerequisiti di sistema. IDT fornisce anche le estensioni a più IDE per accedere direttamente ai comandi CLI.
+La CLI {{site.data.keyword.dev_cli_long}} (IDT) fornisce un'estensione specifica per sviluppatori alla CLI {{site.data.keyword.Bluemix}} (`bx dev`) per creare, compilare e distribuire applicazioni native cloud. L'installazione di IDT include la CLI {{site.data.keyword.Bluemix_notm}} di base, diverse estensioni e tutti i prerequisiti di sistema. IDT fornisce anche le estensioni a più IDE per accedere direttamente ai comandi CLI.
 {:shortdesc}
 
 - [Panoramica e installazione](/docs/cli/idt/index.html)

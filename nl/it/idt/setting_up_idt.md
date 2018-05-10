@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Configurazione di {{site.data.keyword.dev_cli_notm}}
+# Configurazione della CLI {{site.data.keyword.dev_cli_notm}}
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} è un approccio della riga di comando per la creazione, lo sviluppo e la distribuzione delle applicazioni per gli sviluppatori che desiderano utilizzare una riga di comando per sviluppare le applicazioni web end-to-end, mobile e del microservizio.
+La CLI {{site.data.keyword.dev_cli_short}} è un approccio della riga di comando per la creazione, lo sviluppo e la distribuzione delle applicazioni per gli sviluppatori che desiderano utilizzare una riga di comando per sviluppare le applicazioni web end-to-end, mobile e del microservizio.
 {: shortdesc}
 
 ## Prerequisiti
@@ -26,12 +26,12 @@ Registrati per [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
 
 *  Se stai utilizzando Microsoft Windows&trade;, devi utilizzare Windows 10 o successivi.
 
-* Devi utilizzare il canale stabile per Docker, con una versione minima di 1.13.1. 
+* Devi utilizzare il canale stabile per Docker, con una versione minima di 1.13.1.
 
 ## Installa
 {: #installation}
 
-Per installare lo strumento, puoi eseguire il comando pertinente per richiamare il nostro programma di installazione. Questo installerà anche le dipendenze, come la CLI IBM Cloud, Kubernetes, Helm e Docker. Per installarle, utilizza questa procedura di installazione: 
+Per installare lo strumento, puoi eseguire il comando pertinente per avviare il programma di installazione.  Questo installa anche le dipendenze, come la CLI IBM Cloud, Kubernetes, Helm e Docker. Per installare, utilizza questa procedura di installazione: 
 
 **Mac e Linux:**
 
@@ -43,19 +43,21 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
+* Nota: apri Windows PowerShell facendo clic con il tasto destro e selezionando "Run as Administrator".
+
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
 
-Convalida la riuscita dell'installazione del plugin immettendo il seguente comando:   
+Convalida la riuscita dell'installazione del plugin immettendo il seguente comando:  
 
 ```
 bx dev
 ```
 {: codeblock}
 
-## Configura il tuo ambiente 
+## Configura il tuo ambiente
 {: #configure-environment}
 
 1. Collegati a un endpoint API nella tua [regione {{site.data.keyword.Bluemix_notm}}](/docs/overview/cf.html#ov_intro_reg). Ad esempio, immetti il seguente comando per stabilire una connessione alla regione Stati Uniti Sud {{site.data.keyword.Bluemix_notm}}:
@@ -65,28 +67,28 @@ bx dev
 	```
 	{: codeblock}
 
-2. Accedi a {{site.data.keyword.Bluemix_notm}} con il tuo ID IBM. 
+2. Accedi a {{site.data.keyword.Bluemix_notm}} con il tuo ID IBM.
 
 	```
 	bx login
 	```
 	{: codeblock}
 
-	**Nota:** se le tue credenziali vengono rifiutate, puoi utilizzare un ID federato. Segui questa procedura per l'autenticazione utilizzando l'ID federato. 
+	**Nota:** se le tue credenziali vengono rifiutate, puoi utilizzare un ID federato. Segui questa procedura per l'autenticazione utilizzando l'ID federato.
 
 	1. Accedi a [{{site.data.keyword.iamshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.bluemix.net/iam/#/apikeys){: new_window}.
 	2. Seleziona **Crea chiave API**.
-		* Immetti un nome e una descrizione per apiKey 
-	3. Scarica la tua apiKey. 
-	4. Apri il file e copia il valore dal campo `apiKey`. 
-	5. Accedi utilizzando il seguente comando: 
+		* Immetti un nome e una descrizione per apiKey
+	3. Scarica la tua apiKey.
+	4. Apri il file e copia il valore dal campo `apiKey`.
+	5. Accedi utilizzando il seguente comando:
 
 		```
 		bx login --apikey <value>
 		```
 		{: codeblock}
 
-3. Imposta la tua ORGANIZZAZIONE e SPAZIO utilizzando: 
+3. Imposta la tua ORGANIZZAZIONE e SPAZIO utilizzando:
 
 	```
 	bx target -o <value> -s <value>
@@ -96,18 +98,18 @@ bx dev
 ## Ulteriori informazioni
 {: #learn}
 
-Ora che hai installato la tua {{site.data.keyword.dev_cli_short}}, puoi imparare come utilizzare questo potente strumento:
+Ora che hai installato la tua CLI {{site.data.keyword.dev_cli_short}}, puoi imparare come utilizzare questo potente strumento:
 - [Introduzione alla CLI IDT](index.html)
 - [Comandi IDT (bx dev)](commands.html)
 - [Developer Tools per il codice VS](vscode.html)
 - [Developer Tools per l'IDE Jetbrains](jetbrains.html)
 
-Controlla le [esercitazioni](/docs/apps/tutorials/tutorial_bff.html) che mostrano come creare le applicazioni native cloud utilizzando la {{site.data.keyword.dev_cli_short}}.
+Controlla le [esercitazioni](/docs/apps/tutorials/tutorial_bff.html) che mostrano come creare le applicazioni native cloud utilizzando la CLI {{site.data.keyword.dev_cli_short}}.
 
 ## Documentazione aggiuntiva
 {: #learn-more}
 
-Le seguenti risorse possono essere utili quando sviluppi le applicazioni native cloud con la CLI di IBM Developer Tools: 
+Le seguenti risorse possono essere utili quando sviluppi le applicazioni native cloud con la CLI di IBM Developer Tools:
 
 - [Pagina di destinazione principale di IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Pagina del prodotto principale per la CLI IDT
 - [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Repository GitHub pubblico con le istruzioni di installazione dettagliate
