@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2017-11-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -30,12 +30,10 @@ lastupdated: "2017-11-16"
 
 完成下列步驟以新增儲存庫並安裝外掛程式：
 1. 若要新增 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫，請執行下列指令：
-
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. 若要安裝 {{site.data.keyword.autoscaling}} CLI 外掛程式，請執行下列指令：
-
 ```
 bluemix plugin install auto-scaling -r Bluemix
 ```

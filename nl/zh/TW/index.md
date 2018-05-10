@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-03-16"
 # CLI 及工具概觀
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} 提供一個健全的 CLI，以及與 CLI 整合的外掛程式和開發人員工具延伸規格。
+{{site.data.keyword.Bluemix_notm}} 提供強健的 CLI，以及具有與 CLI 整合之開發人員工具延伸規格的外掛程式。
 
 ## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
@@ -34,10 +34,10 @@ lastupdated: "2018-03-16"
 <area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="檢視文件（開啟新頁面）" title="檢視文件" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
-## {{site.data.keyword.dev_cli_notm}}
+## {{site.data.keyword.dev_cli_notm}} CLI
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) 提供 {{site.data.keyword.Bluemix}} CLI 的開發人員特定延伸規格 (`bx dev`)，以建立、建置及部署雲端原生應用程式。IDT 安裝包括基礎 {{site.data.keyword.Bluemix_notm}} CLI、數個延伸規格及所有系統必要條件。IDT 也提供多個 IDE 的延伸規格，來直接存取 CLI 指令。
+{{site.data.keyword.dev_cli_long}} CLI (IDT) 提供 {{site.data.keyword.Bluemix}} CLI 的開發人員特定延伸規格 (`bx dev`)，以建立、建置及部署雲端原生應用程式。IDT 安裝包括基礎 {{site.data.keyword.Bluemix_notm}} CLI、數個延伸規格及所有系統必要條件。IDT 也提供多個 IDE 的延伸規格，來直接存取 CLI 指令。
 {:shortdesc}
 
 - [概觀及安裝](/docs/cli/idt/index.html)

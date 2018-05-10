@@ -11,10 +11,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 貢獻 SDK 外掛程式
+# 提出至 SDK 外掛程式
 {: #contribute}
 
-請遵循下列準則來貢獻 {{site.data.keyword.Bluemix}} CLI SDK 外掛程式。
+請遵循下列準則來提出至 {{site.data.keyword.Bluemix}} CLI SDK 外掛程式。
 
 ## 設定開發環境
 {: #dev-env}
@@ -139,7 +139,7 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
 ## 必要運行環境程式庫
 {: #runtime-libs}
 
-必要運行環境程式庫是在 `vendor` 目錄下進行管理，並確定至 Git 儲存庫以確保穩定性，因為 Go 未提供健全的相依關係管理員。
+必要運行環境程式庫是在 `vendor` 目錄下進行管理，並確定至 Git 儲存庫以確保穩定性，因為 Go 未提供強健的相依關係管理員。
 
 ### 運行環境相依關係
 {: #runtime-dependencies}

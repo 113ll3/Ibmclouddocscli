@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-03-01"
+lastupdated: "2018-04-16"
 
 
 ---
@@ -415,7 +415,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>您的密碼。</dd>
 <dd>*重要事項：*如果您在指令行介面上使用 *-p* 參數提供密碼，密碼可能會記錄在指令行歷程中。為了安全因素，請避免使用 -p 參數提供密碼。請改為在指令行介面提示您時再輸入密碼。</dd>
 <dt>*-sso*</dt>
-<dd>以聯合 ID 登入時，必須使用單一登入選項 (SSO)。以 IBM ID 登入時，則不需要這麼做。如果您嘗試使用聯合 ID 來登入，而沒有指定 SSO 參數，系統會提示您將其包含在內。使用 SSO 參數時，系統會提示您在登入時輸入一次性密碼。</dd>
+<dd>以聯合 ID 進行登入時，必須使用單一登入選項 (SSO)。以 IBM ID 進行登入時，則不需要這麼做。如果您嘗試使用聯合 ID 來登入，而沒有指定 SSO 參數，系統會提示您將其包含在內。使用 SSO 參數時，系統會提示您在登入時輸入一次性密碼。</dd>
 <dt>*-o* organization_name</dt>
 <dd>您要登入的組織名稱。</dd>
 <dt>*-s* space_name</dt>

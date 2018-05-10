@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-02-15"
 
 **附註：**在您對 {{site.data.keyword.Bluemix_notm}} 空間使用專用網路對等作業之後，如果需要刪除該空間，請先刪除該空間中的專用網路對等作業連線。
 
-若要開始使用，請安裝 {{site.data.keyword.Bluemix_notm}} CLI。如需詳細資料，請參閱 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)。
+若要開始使用，請安裝 {{site.data.keyword.Bluemix_notm}} CLI。如需詳細資料，請參閱 [IBM Cloud CLI](http://clis.ng.bluemix.net/ui/home.html)。
 
 ## 安裝專用網路對等作業 CLI 外掛程式
 

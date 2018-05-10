@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2017-2018
-lastupdated: "2018-03-16"
+years: 2017, 2018
+lastupdated: "2018-04-17"
 
 ---
 
@@ -11,13 +11,13 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# {{site.data.keyword.dev_cli_notm}} (bx dev) 指令
+# {{site.data.keyword.dev_cli_notm}} CLI (bx dev) 指令
 {: #idt-cli}
 
 版本：1.2.0
 發表日期：2018 年 3 月 8 日
 
-請使用下列 {{site.data.keyword.dev_cli_notm}} (bx dev) 指令來建立專案、部署、除錯及測試它。
+請使用下列 {{site.data.keyword.dev_cli_notm}} CLI (bx dev) 指令來建立專案、部署、除錯及測試它。
 
 - [build](#build)：在本端容器中建置專案
 - [code](#code)：從專案下載程式碼
@@ -47,7 +47,7 @@ lastupdated: "2018-03-16"
 
 `build-cmd-debug` 配置元素用於為除了 `run` 之外的所有使用情形而建置應用程式。建置應用程式以便進行除錯的方法是指定指令行選項 `--debug`。`build-cmd-run` 配置元素用於建置應用程式以便搭配 `run` 指令使用之時。
 
-若要使用多個容器建置，您的專案應該包含 [Compose](https://docs.docker.com/compose/overview/) 檔案（指定於 `cli-config.yml` 中），也可以使用 `dockerfile-tools` 指令參數來提供檔案。如需相關資訊，請參閱 [Compose 檔案](/docs/apps/projects/compose_file.html)。
+若要使用多個容器建置，您的專案必須包含 [Compose](https://docs.docker.com/compose/overview/) 檔案（指定於 `cli-config.yml` 中），或是您可以使用 `dockerfile-tools` 指令參數來提供檔案。如需相關資訊，請參閱 [Compose 檔案](/docs/apps/projects/compose_file.html)。
 
 在現行專案目錄中執行下列指令，以建置您的應用程式：  
 
@@ -76,9 +76,9 @@ bx dev code <projectName>
 ## console
 {: #console}
 
-使用 `console` 指令，以在 IBM Cloud 上將 Web 瀏覽器開啟到應用程式的 Web 主控台。您可以從專案資料夾內執行 `bx dev console` 指令，而 CLI 會嘗試在 IBM Cloud 上尋找專案 ID 與現行目錄相同的相符專案。如果系統找不到相符名稱，則會在 IBM Cloud 上開啟 Web 及「行動式」儀表板，而非特定專案。
+使用 `console` 指令，以在 IBM Cloud 上將 Web 瀏覽器開啟到應用程式的 Web 主控台。您可以從專案資料夾內執行 `bx dev console` 指令，而 CLI 會嘗試在 IBM Cloud 上尋找專案 ID 與現行目錄相同的相符專案。如果系統找不到相符名稱，則會在 IBM Cloud 上開啟 Web 及「行動」儀表板，而非特定專案。
 
-您可以選擇性地提供專案名稱，而 CLI 會根據資料夾/應用程式名稱來跳過相符項目。在此情況下，CLI 會在 Web 瀏覽器中開啟具名專案的主控台。  
+您可以提供專案名稱，CLI 便會跳過根據資料夾/應用程式名稱進行比對。在此情況下，CLI 會在 Web 瀏覽器中開啟具名專案的主控台。  
 
 執行下列指令，以將 Web 瀏覽器開啟到應用程式的 Web 主控台。
 
@@ -104,7 +104,7 @@ bx dev create
 ## debug
 {: #debug}
 
-您可以透過 `debug` 指令，對您的應用程式進行除錯。必須先搭配使用 build 指令與 `--debug` 引數，針對專案完成建置。當您呼叫 `debug` 指令時，會啟動容器，以提供 cli-config.yml 中 `container-port-map-debug` 值所定義或指令行上所指定的一個以上除錯埠。將您的最愛除錯工具連接至一個以上的埠，而且可以正常地對應用程式進行除錯。
+您可以透過 `debug` 指令，對您的應用程式進行除錯。必須先搭配使用 build 指令與 `--debug` 引數，針對專案完成建置。當您啟動 `debug` 指令時，會啟動容器，以提供 cli-config.yml 中 `container-port-map-debug` 值所定義或指令行上所指定的一個以上除錯埠。將您的最愛除錯工具連接至一個以上的埠，而且可以正常地對應用程式進行除錯。
 
 首先，請編譯您的專案：
 
@@ -412,7 +412,7 @@ bx dev run
 bx dev shell
 ```
 
-{{site.data.keyword.dev_cli_short}} 會開啟互動式 Shell，以連接至應用程式的 Docker 容器。Shell 指令的預設目標容器是由 `cli-config.yml` 檔案中的 `container-shell-target` 值所定義，而有效值是 `run` 或 `tools`。如果未定義此值，或指定無效值，則依預設 `shell` 指令會以 `tools` 容器為目標。shell 指令會將容器開啟到對應 Dockerfile 中 `WORKDIR` 指示所指定的目錄。如果 Dockerfile 中未列出 `WORKDIR`，則會使用容器根目錄作為工作目錄。如需相關資訊，請參閱[此參照](https://docs.docker.com/engine/reference/builder/#workdir)。
+{{site.data.keyword.dev_cli_short}} CLI 會開啟互動式 Shell，以連接至應用程式的 Docker 容器。Shell 指令的預設目標容器是由 `cli-config.yml` 檔案中的 `container-shell-target` 值所定義，而有效值是 `run` 或 `tools`。如果未定義此值，或指定無效值，則依預設 `shell` 指令會以 `tools` 容器為目標。shell 指令會將容器開啟到對應 Dockerfile 中 `WORKDIR` 指示所指定的目錄。如果 Dockerfile 中未列出 `WORKDIR`，則會使用容器根目錄作為工作目錄。如需相關資訊，請參閱[此參照](https://docs.docker.com/engine/reference/builder/#workdir)。
 
 或者，您可以決定傳遞 `run` 或 `tools` 作為指令的引數，那麼便會啟動該容器，且會開啟 Shell 以連接該容器。同樣地，您可以使用 `container-name` 參數，傳遞您想要以 Shell 方式連接的容器名稱。不過，此旗標應該保留用於沒有容器在執行中的情況。`run` 和 `tools` 引數更有彈性，而且可讓您在目前執行中的容器之間切換。例如，如果 tools 容器在執行中，且您執行 `bx dev shell run`，則會停止 `tools` 容器，並啟動 `run` 容器，反之亦然。
 
@@ -444,7 +444,7 @@ bx dev shell
 ## status
 {: #status}
 
-您可以查詢 `container-name-run` 及 `container-name-tools` 所定義之 {{site.data.keyword.dev_cli_short}} 所使用容器的狀態。
+您可以查詢 `container-name-run` 及 `container-name-tools` 所定義之 {{site.data.keyword.dev_cli_short}} CLI 所使用容器的狀態。
 
 在現行專案目錄中執行下列指令，以檢查容器狀態：
 

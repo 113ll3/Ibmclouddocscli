@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -17,16 +17,15 @@ lastupdated: "2018-02-14"
 # 下載並安裝 {{site.data.keyword.Bluemix_notm}} CLI
 {: #download_install}
 
-您可以使用[安裝程式](#installers)或[從 Shell 安裝](#shell_install)來安裝 {{site.data.keyword.Bluemix_notm}} CLI。
+您可以使用安裝程式或 Shell 下載並安裝 CLI。
 
-## 下載安裝程式
-{: #installers}
+## 使用安裝程式
+{: #installer}
 
-請參閱 [{{site.data.keyword.Bluemix_notm}} CLI 安裝程式（所有版本）](all_versions.html){: new_window}頁面，以下載您 OS 的最新安裝程式。
-
-若為 macOS 及 Windows，只需要執行安裝程式。 
-
-若為 Linux，在下載安裝程式套件之後，解壓縮該套件，並使用 root 許可權來執行安裝 Script。
+若要安裝 {{site.data.keyword.Bluemix_notm}} CLI，請執行下列動作：
+* 到[這裡](all_versions.html)下載安裝程式。
+* 若為 macOS 及 Windows，請執行安裝程式。 
+* 若為 Linux，在下載安裝程式套件之後，解壓縮該套件，並使用 root 許可權來執行安裝 Script。
 
   ```
   $ tar -xvf Bluemix_CLI.tar.gz
@@ -34,15 +33,14 @@ lastupdated: "2018-02-14"
   $ sudo ./install_bluemix_cli
 
   ```
-  {: codeblock}
-  
+
 ## 從 Shell 安裝
 {: #shell_install}
 
 
 ### macOS  
 
-複製下列指令，並將其貼入 mac OS 的終端機，然後予以執行：
+複製下列指令，並將其貼入 Mac OS 的終端機，然後予以執行：
 
 ```
 curl -fsSL https://clis.ng.bluemix.net/install/osx | sh

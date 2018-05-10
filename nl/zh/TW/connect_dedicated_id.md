@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2017-12-08"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2017-12-08"
   API endpoint: https://api.{dedicated_env}.bluemix.net
 
   Public IAM token service is available in the dedicated environment.
-  Login with your public IBMid, or use '--no-iam' to login as a dedicated user only.
+  Log in with your public IBMid, or use '--no-iam' to log in as a dedicated user only.
 
   Email>
 ```
@@ -35,16 +35,16 @@ lastupdated: "2017-12-08"
 如果您的專用 ID 已連接至公用 IBM ID，則會進行鑑別並登入：
 
 ```
-Authenticating...
+  Authenticating...
   OK
-      
+
   Connected to dedicated user my_dedicated_id
 ```
 
 不過，如果您的專用 ID 尚未連接至公用 IBM ID，則系統會提示您手動連接至公用 IBM ID：
 
 ```
-  You are logging with an IBMid that does not associated with any dedicated user.
+  You are logging in with an IBMid that is not associated with any dedicated user.
   To set up the connection, input the credentials of the dedicated user.
 
   Choose a credential type:

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# 設定 {{site.data.keyword.dev_cli_notm}}
+# 設定 {{site.data.keyword.dev_cli_notm}} CLI
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} 是一種指令行方法，可針對想要使用指令行開發端對端 Web、行動及微服務應用程式的開發人員建立、開發及部署應用程式。
+{{site.data.keyword.dev_cli_short}} CLI 是一種指令行方法，可針對想要使用指令行開發端對端 Web、行動及微服務應用程式的開發人員建立、開發及部署應用程式。
 {: shortdesc}
 
 ## 必要條件
@@ -31,7 +31,7 @@ lastupdated: "2018-03-16"
 ## 安裝
 {: #installation}
 
-若要安裝此工具，您可以執行相關的指令來呼叫我們的安裝程式。這也會安裝相依關係，例如 IBM Cloud CLI、Kubernetes、Helm 及 Docker。若要安裝這些項目，請使用下列安裝步驟：
+若要安裝此工具，您可以執行相關的指令來啟動安裝程式。這也會安裝相依關係，例如 IBM Cloud CLI、Kubernetes、Helm 及 Docker。若要進行安裝，請使用下列安裝步驟：
 
 **Mac 及 Linux：**
 
@@ -42,6 +42,8 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 
 **Windows 10：**
+
+* 附註：請按一下滑鼠右鍵並選取「以系統管理員身分執行」，以開啟 Windows PowerShell。
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -65,7 +67,7 @@ bx dev
 	```
 	{: codeblock}
 
-2. 登入 IBM ID 登入 {{site.data.keyword.Bluemix_notm}}。
+2. 使用 IBM ID 登入 {{site.data.keyword.Bluemix_notm}}。
 
 	```
 	bx login
@@ -96,13 +98,13 @@ bx dev
 ## 進一步瞭解
 {: #learn}
 
-現在，您已安裝 {{site.data.keyword.dev_cli_short}}，因此可以瞭解如何有效地使用此功能強大的工具。
+現在，您已安裝 {{site.data.keyword.dev_cli_short}} CLI，因此可以瞭解如何有效地使用此功能強大的工具：
 - [開始使用 IDT CLI](index.html)
 - [IDT (bx dev) 指令](commands.html)
 - [Developer Tools for VS Code](vscode.html)
 - [Developer Tools for Jetbrains IDE](jetbrains.html)
 
-查看[指導教學](/docs/apps/tutorials/tutorial_bff.html)，以顯示如何使用 {{site.data.keyword.dev_cli_short}} 建立雲端原生應用程式。
+查看[指導教學](/docs/apps/tutorials/tutorial_bff.html)，以顯示如何使用 {{site.data.keyword.dev_cli_short}} CLI 建立雲端原生應用程式。
 
 ## 進一步閱讀
 {: #learn-more}
@@ -115,7 +117,7 @@ bx dev
 - [IBM Cloud Tech 的 Slack - #developer-tools 通道](https://ibm-cloud-tech.slack.com) - 討論 IDT 工具、取得答案、建議構想等
 	- [要求團隊存取](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
-**聚焦語言**
+**著重的語言**
 
 - [IBM Cloud 上的 Node.js](https://developer.ibm.com/node/cloud/)
 - [Spring @ IBM Cloud](https://developer.ibm.com/java/spring/)

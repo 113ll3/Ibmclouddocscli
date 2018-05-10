@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-03-16"
 # IBM Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension for Visual Studio Code 是一種延伸規格，可讓編輯器直接存取 Visual Studio Code 編輯器之指令選用區內的 IBM Developer CLI 功能。它可讓您快速存取 Docker 及 CloudFoundry 工作流程的 `bx dev` 指令子集，包括應用程式部署、在 {{site.data.keyword.Bluemix_notm}} 上啟動/停止/重新啟動應用程式、檢視遠端應用程式日誌等，而這些都不需要離開編輯器的環境定義。
+IBM Developer Extension for Visual Studio Code 是一種延伸規格，可讓編輯器直接存取 Visual Studio Code 編輯器之指令選用區內的 IBM Developer CLI 功能。它可讓您快速存取 Docker 及 CloudFoundry 工作流程的部分 `bx dev` 指令，包括應用程式部署、在 {{site.data.keyword.Bluemix_notm}} 上啟動/停止/重新啟動應用程式、檢視遠端應用程式日誌等，而這些都不需要離開編輯器的環境定義。
 {:shortdesc}
 
 ![IBM Developer Tools 延伸規格下載畫面的畫面擷取。](vscode.png "Visual Studio Code 內的延伸規格下載畫面")
@@ -26,7 +26,7 @@ IBM Developer Extension for Visual Studio Code 是一種延伸規格，可讓編
 ## 相依關係
 {: #dependencies}
 
-若要使用 Visual Studio Code 的 IBM Developer Tools 延伸規格，您還需要在系統上安裝 [{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) 及 [IBM Developer CLI](index.html) 外掛程式。
+若要使用 Visual Studio Code 的 IBM Developer Tools 延伸規格，您需要在系統上安裝 [{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) 及 [IBM Developer CLI](index.html) 外掛程式。
 
 ## 安裝
 {: #installation}
@@ -40,9 +40,9 @@ IBM Developers Tools 延伸規格的最簡單安裝方式是使用 Visual Studio
 
 2. 輸入 `ext install ibm-developer` 指令，然後按 Enter 鍵以在 Visual Studio Code 編輯器內安裝 IBM Developer Tools 延伸規格。
 
-或者，您可以透過「延伸規格」管理畫面來安裝 IBM Developer Tools 延伸規格：
+或者，您可以透過「延伸規格」管理視窗來安裝 IBM Developer Tools 延伸規格：
 
-1. 開啟 Visual Studio Code 編輯器內的**延伸規格**資訊看板，然後使用字串 `publisher:IBM Developer` 進行搜尋。IBM Developer Tools 延伸規格將會顯示在搜尋結果中。  
+1. 開啟 Visual Studio Code 編輯器內的**延伸規格**資訊看板，然後使用字串 `publisher:IBM Developer` 進行搜尋。IBM Developer Tools 延伸規格會顯示在搜尋結果中。  
 2. 按一下**安裝**按鈕以開始安裝。
 
 您也可以直接存取 [Visual Studio Code Marketplace 內的 IBM Developer Tools 延伸規格](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer)。
@@ -50,14 +50,14 @@ IBM Developers Tools 延伸規格的最簡單安裝方式是使用 Visual Studio
 ## 用法
 {: #usage}
 
-您可以使用 Visual Studio Code 的指令選用區來呼叫延伸規格指令。
+您可以使用 Visual Studio Code 的指令選用區來啟動延伸規格指令。
 
 首先，使用下列組合鍵來開啟指令選用區：
 
 * **Mac：**`cmd + shift + p`
 * **Windows/Linux：**`ctrl + shift + p`
 
-接下來，輸入或選取您要呼叫的指令。您可以在指令選用區內鍵入 'bx'，以查看所有可用指令的清單。
+接下來，輸入或選取您要啟動的指令。您可以在指令選用區內鍵入 'bx'，以查看所有可用指令的清單。
 
 ### 使用 IBM Developer Extension for Docker 工作流程（Docker 容器）
 {: #usage-docker}
@@ -71,7 +71,7 @@ IBM Developers Tools 延伸規格的最簡單安裝方式是使用 Visual Studio
 * 使用 `bx dev debug` 指令，在本端 Docker 中執行應用程式以進行開發
 > 附註：若要對本端 Docker 容器內執行的 Node.js 應用程式進行除錯，您需要[新增本端容器的除錯配置](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container)。
 * 使用 `bx dev run` 指令，以發行模式在本端 Docker 中執行應用程式
-* 使用 `bx dev deploy` 指令，以在 {{site.data.keyword.Bluemix_notm}} * 上將應用程式部署至 Cloud Foundry 運行環境（我們即將推出 IBM Container Support）。*
+* 使用 `bx dev deploy` 指令，以在 {{site.data.keyword.Bluemix_notm}} 上將應用程式部署至 Cloud Foundry 運行環境 
 
 ### 使用 IBM Developer Extension for Cloud Foundry 工作流程
 {: #usage-cloud-foundry}

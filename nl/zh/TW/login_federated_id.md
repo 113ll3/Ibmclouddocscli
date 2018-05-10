@@ -16,7 +16,7 @@ lastupdated: "2017-07-12"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# 使用聯合 ID 登入
+# 使用聯合 ID 進行登入
 {: #federated_id}
 
 身為聯合使用者，您可以使用一次性密碼或 API 金鑰從指令行介面 (CLI) 登入 {{site.data.keyword.Bluemix}}。
@@ -25,7 +25,7 @@ lastupdated: "2017-07-12"
 ## 使用一次性密碼
 {:onetime_passcode}
 
-當您使用一次性密碼選項以利用聯合 ID 登入時，會指定單一登入 (SSO) 參數來取得一次性密碼，您之後在登入時需要輸入它。 
+當您使用一次性密碼選項以利用聯合 ID 進行登入時，會指定單一登入 (SSO) 參數來取得一次性密碼，您之後在登入時需要輸入它。 
 
 因為一次性密碼會從 {{site.data.keyword.Bluemix_notm}} 主控台擷取密碼，所以在自動化 Script 中使用聯合 ID 會失敗。搭配使用 API 金鑰選項與自動化 Script，即可避免麻煩。
 {: tip}
