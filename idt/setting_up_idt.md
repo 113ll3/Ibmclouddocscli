@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-27"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -16,22 +16,22 @@ lastupdated: "2018-04-27"
 # Setting up the {{site.data.keyword.dev_cli_notm}} CLI
 {: #add-cli}
 
-The {{site.data.keyword.dev_cli_short}} CLI is a command line approach for creating, developing, and deploying applications for developers who want to use a command line to develop end-to-end web, mobile, and microservice applications.
+The {{site.data.keyword.dev_cli_short}} CLI is a command line approach for creating, developing, and deploying applications for developers who want to use a command line to develop end-to-end web, mobile, and microservice applications. Quickly get started with the recommended toolset by running one of the following scripts.
 {: shortdesc}
 
-## Prerequisites
+## Prerequisites for {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
 Sign up for [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
 
-*  If you're using Microsoft Windows&trade;, you must use Windows 10 or later.
+*  If you're using Microsoft Windows &trade;, you must use Windows 10 or later.
 
 * You must use the stable channel for Docker, with a minimum version of 1.13.1.
 
-## Install
+## How to install {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
-To install the tool, you can run the relevant command to start the installer. This installs dependencies as well, such as the IBM Cloud CLI, Kubernetes, Helm, and Docker. To install, use these installation steps:
+To install the toolset, you can run the relevant command to start the installer. This installs the following recommended tools for {{site.data.keyword.Bluemix_notm}} development (if not already installed): `Homebrew` (Mac only), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}} CLI, {{site.data.keyword.dev_cli_notm}} plug-in, Cloud Functions plug-in, Container Registry plug-in, Container Service plug-in, and `sdk-gen` plug-in. To install, use these installation steps:
 
 **Mac and Linux:**
 
@@ -62,7 +62,7 @@ bx dev
 ## Configure Your Environment
 {: #configure-environment}
 
-1. Connect to an API endpoint in your [{{site.data.keyword.Bluemix_notm}} region](/docs/overview/cf.html#ov_intro_reg). For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} US South region:
+1. Connect to an API endpoint in your {{site.data.keyword.Bluemix_notm}} region. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} US South region:
 
 	```
 	bx api https://api.ng.bluemix.net
