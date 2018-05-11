@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -11,7 +11,8 @@ lastupdated: "2018-05-02"
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}
 
 # Using the {{site.data.keyword.dev_cli_notm}} CLI
 {: #developing}
@@ -42,7 +43,7 @@ The {{site.data.keyword.dev_cli_notm}} CLI works closely together to provide a s
 {: #helpful}
 
 The following CLI commands help in working with your project and the web consoles:
-- [`code`](./commands.html#enable) to directly pull an apps generated source code to your workstation
+- [`code`](./commands.html#code) to directly pull an apps generated source code to your workstation
 - [`console`](./commands.html#console) to open your browser to the current app's project page in the {{site.data.keyword.Bluemix_notm}}
 - [`create`](./commands.html#create) command to create a new app.
 - [`delete`](./commands.html#delete) to delete the current app from the {{site.data.keyword.Bluemix_notm}} project area.
@@ -66,7 +67,7 @@ More details on project structures can be found here:
 ### Reference Blogs and Videos
 {: #ref1}
 
-- Video: [Installing IDT on Ubuntu Linux]()
+- Video: [Installing IDT on Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - Blog: [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 
