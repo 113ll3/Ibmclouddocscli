@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-02-14"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+
 
 
 # Initiation à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
@@ -24,22 +25,24 @@ Pour vous initier à l'interface de ligne de commande {{site.data.keyword.Bluemi
 
 1. Sélectionnez le programme d'installation de votre système d'exploitation afin de le télécharger
    
-   Mac OS X 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [checksum](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
-   Windows 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [checksum](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
-   Linux 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [checksum](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Mac OS X 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
+   Windows 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
+   Linux X86 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Linux PowerPC LE 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
   
    **Les éditions 32 bits et les versions antérieures sont disponibles [ici](all_versions.html).
 
 1. Exécutez le programme d'installation
    * Pour Mac OS et Windows, exécutez simplement le programme d'installation.
-   * Pour Linux, procédez à l'extraction du package et exécutez le script `install_bluemix_cli`.
+   * Pour Linux, procédez à l'extraction du contenu du package et exécutez le script `install_bluemix_cli`.
 
-1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bx login`.
-  
+1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}}
 
   ![Exemple](example.gif){: gif}
 
 Vous êtes maintenant prêt à gérer des ressources {{site.data.keyword.Bluemix_notm}}. Tapez `bluemix help` ou `bx help` pour voir les descriptions de commande. 
+
+Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) pour vous connecter avec un code d'accès unique ou une clé d'API. {: tip}
 
 ## Autres liens permettant d'explorer davantage l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 

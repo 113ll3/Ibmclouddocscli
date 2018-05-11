@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2017-11-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -30,12 +30,10 @@ lastupdated: "2017-11-16"
 
 完成以下步骤来添加存储库并安装该插件：
 1. 要添加 {{site.data.keyword.Bluemix_notm}} CLI 插件存储库，请运行以下命令：
-
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. 要安装 {{site.data.keyword.autoscaling}} CLI 插件，请运行以下命令：
-
 ```
 bluemix plugin install auto-scaling -r Bluemix
 ```

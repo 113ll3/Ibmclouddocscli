@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2017-12-08"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2017-12-08"
 # Connexion d'un ID dédié à votre IBMid public
 {: #connect_dedicated_id}
 
-Pour une connexion à un cloud dédié sur lequel un service IAM public est disponible, l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} vous demande de vous connecter avec votre IBMid public plutôt que via l'ID dédié.
+Pour une connexion à un cloud dédié sur lequel un service IAM public est disponible, l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} exige que vous vous connectiez avec votre IBMid public plutôt que via l'ID dédié.
 
 
 ```

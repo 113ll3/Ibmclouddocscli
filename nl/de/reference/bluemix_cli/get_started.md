@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-02-14"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+
 
 
 # Einführung in die {{site.data.keyword.Bluemix_notm}}-CLI
@@ -24,9 +25,10 @@ Gehen Sie wie folgt vor, um sich mit der {{site.data.keyword.Bluemix_notm}}-CLI 
 
 1. Wählen Sie das Installationsprogramm für Ihr Betriebssystem zum Herunterladen aus.
    
-   Mac OS X 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [Kontrollsumme](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
-   Windows 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [Kontrollsumme](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
-   Linux 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [Kontrollsumme](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Mac OS X 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
+   Windows 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
+   Linux X86 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Linux PowerPC LE 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
   
    **32-Bit-Releases und Vorgängerversionen finden Sie [hier.](all_versions.html)
 
@@ -34,12 +36,13 @@ Gehen Sie wie folgt vor, um sich mit der {{site.data.keyword.Bluemix_notm}}-CLI 
    * Für Mac OS und Windows führen Sie einfach das Installationsprogramm aus.
    * Für Linux müssen Sie das Paket extrahieren und das Script `install_bluemix_cli` ausführen.
 
-1. Wählen Sie einen API-Endpunkt als Ziel aus und melden Sie sich bei {{site.data.keyword.Bluemix_notm}} mit dem Befehl `bx login` an.
-  
+1. Wählen Sie einen API-Endpunkt als Ziel aus und melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an.
 
   ![Beispiel](example.gif){: gif}
 
 Jetzt können Sie {{site.data.keyword.Bluemix_notm}}-Ressourcen verwalten. Geben Sie `bluemix help` oder `bx help` ein, um die Befehlsbeschreibungen anzuzeigen. 
+
+Wenn Sie eine eingebundene ID verwenden, folgen Sie den [hier](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) angegebenen Anweisungen zur Anmeldung mit einem einmaligen Kenncode oder einem API-Schlüssel. {: tip}
 
 ## Links mit weiterführenden Informationen zur {{site.data.keyword.Bluemix_notm}}-CLI
 

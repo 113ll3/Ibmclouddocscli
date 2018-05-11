@@ -1,20 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-16"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 # Verfügbare Mobile-SDKs
 {: #sdk}
 
-Um SDKs für {{site.data.keyword.Bluemix}} Web- und Mobile-Services zu Ihrer App hinzuzufügen, wählen Sie die gewünschten SDKs aus und konfigurieren Sie Ihren Abhängigkeitsmanager so, dass er die SDKs per Pull-Operation Ihrer App hinzufügt. 
+Um SDKs für {{site.data.keyword.Bluemix}} Web- und Mobile-Services zu Ihrer App hinzuzufügen, wählen Sie die gewünschten SDKs aus und konfigurieren Sie Ihren Abhängigkeitsmanager so, dass er die SDKs per Pull-Operation Ihrer App hinzufügt.
 
 
 ## Server-SDKs
 {: #server_sdk}
 
-Wenn Sie über eine Java-, NodeJS- oder Swift-Serveranwendungen verfügen, können Sie die folgenden SDKs für die Kommunikation mit den jeweiligen Services verwenden. 
+Wenn Sie über eine Java-, NodeJS- oder Swift-Serveranwendungen verfügen, können Sie die folgenden SDKs für die Kommunikation mit den jeweiligen Services verwenden.
 
 
 ### {{site.data.keyword.appid_short}}-Server-SDKs

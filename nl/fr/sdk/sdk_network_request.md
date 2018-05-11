@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-03-16"
+  years: 2016, 2018
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 # Elaboration d'une demande de réseau
 {: #sdk-network-request}
 
-Vous pouvez également utiliser le SDK `BMSCore` pour effectuer des demandes de réseau sur n'importe quelle ressource. 
+Vous pouvez également utiliser le SDK `BMSCore` pour effectuer des demandes de réseau sur n'importe quelle ressource.
 
 ## Android
 {: #request-android}
@@ -56,8 +56,7 @@ de l'envoi ou de la réception par téléchargement, créez un élément
 ## iOS
 {: #request-ios}
 
-1. Vérifiez que vous avez bien [importé et initialisé le SDK client](sdk_BMSClient.html#init-BMSClient-ios) dans votre
-application iOS.
+1. Vérifiez que vous avez bien [importé et initialisé le SDK client](sdk_BMSClient.html#init-BMSClient-ios) dans votre application iOS.
 
 2. Créez une demande de réseau.
 
@@ -112,8 +111,7 @@ Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
 ## Cordova
 {: #request-cordova}
 
-1. Vérifiez que vous avez bien [importé et initialisé le SDK client](sdk_BMSClient.html#init-BMSClient-cordova) dans votre
-application Cordova.
+1. Vérifiez que vous avez bien [importé et initialisé le SDK client](sdk_BMSClient.html#init-BMSClient-cordova) dans votre application Cordova.
 
 2. Créez une demande de réseau.
 

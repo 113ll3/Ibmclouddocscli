@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2016-06-20"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -27,7 +27,7 @@ VPN 插件可用于 Windows、MAC 和 Linux 操作系统。请确保使用适合
 以下指示信息适用于使用 {{site.data.keyword.Bluemix_notm}} CLI 插件。要将该插件与 Cloud Foundry (cf) CLI 插件一起使用，请参阅 [cf CLI 的 VPN CLI 插件](../vpn/index.html)。
 
 
-以下信息列出了 Bluemix CLI 的 VPN 插件支持的所有命令，并包含命令名称、选项、用法、先决条件、描述和示例。请参阅[扩展 Bluemix 命令行界面](../../index.html#cli_bluemix_ext)，以了解如何安装 vpn 插件。
+以下信息列出了 {{site.data.keyword.Bluemix_notm}} CLI 的 VPN 插件支持的所有命令，并包含命令名称、选项、用法、先决条件、描述和示例。请参阅[扩展 Bluemix 命令行界面](../../index.html#cli_bluemix_ext)，以了解如何安装 vpn 插件。
 
 **注：***先决条件*列出使用命令前必须执行的操作。先决条件可能会包含以下一个或多个操作：
 <dl>

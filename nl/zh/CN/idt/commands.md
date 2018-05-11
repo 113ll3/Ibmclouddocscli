@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2017-2018
-lastupdated: "2018-03-16"
+years: 2017, 2018
+lastupdated: "2018-04-17"
 
 ---
 
@@ -11,13 +11,13 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# {{site.data.keyword.dev_cli_notm}} (bx dev) 命令
+# {{site.data.keyword.dev_cli_notm}} CLI (bx dev) 命令
 {: #idt-cli}
 
 版本：1.2.0
 发布时间：2018 年 3 月 8 日
 
-使用以下 {{site.data.keyword.dev_cli_notm}} (bx dev) 命令来创建、部署、调试和测试项目。
+使用以下 {{site.data.keyword.dev_cli_notm}} CLI (bx dev) 命令来创建、部署、调试和测试项目。
 
 - [build](#build)：在本地容器中构建项目
 - [code](#code)：从项目下载代码
@@ -36,7 +36,7 @@ lastupdated: "2018-03-16"
 - [stop](#stop)：停止容器
 - [test](#test)：在本地容器中测试应用程序
 - [view](#view)：查看应用程序的部署 URL 以进行测试和查看
-- [compound 命令](#compound)：在一个命令行语句中执行多个命令
+- [compound 命令](#compound)：在一个命令行语句中运行多个命令
 
 
 
@@ -47,7 +47,7 @@ lastupdated: "2018-03-16"
 
 `build-cmd-debug` 配置元素用于构建应用程序以用于除 `run` 之外的所有用途。通过指定命令行选项 `--debug` 来构建应用程序以进行调试。在构建应用程序以用于 `run` 命令时，会使用 `build-cmd-run` 配置元素。
 
-为了使用多个容器进行构建，项目应包含 `cli-config.yml` 中指定的 [Compose](https://docs.docker.com/compose/overview/) 文件，或者您也可以使用 `dockerfile-tools` 命令参数来提供 Compose 文件。有关更多信息，请参阅 [Compose 文件](/docs/apps/projects/compose_file.html)。
+为了使用多个容器进行构建，项目必须包含 `cli-config.yml` 中指定的 [Compose](https://docs.docker.com/compose/overview/) 文件，或者您也可以使用 `dockerfile-tools` 命令参数来提供 Compose 文件。有关更多信息，请参阅 [Compose 文件](/docs/apps/projects/compose_file.html)。
 
 在当前项目目录中运行以下命令来构建应用程序：  
 
@@ -78,7 +78,7 @@ bx dev code <projectName>
 
 使用 `console` 命令可打开 Web 浏览器并转至 IBM Cloud 上的应用程序 Web 控制台。可以从项目的文件夹内运行 `bx dev console` 命令，然后 CLI 会尝试在 IBM Cloud 上查找与当前目录具有相同项目标识的匹配项目。如果系统找不到匹配的名称，将会在 IBM Cloud 上打开 Web 和 Mobile 仪表板，而不是打开特定项目。
 
-（可选）可以提供项目名称，这样 CLI 会跳过基于文件夹/应用程序名称进行匹配。在这种情况下，CLI 会在 Web 浏览器中打开指定项目的控制台。  
+可以提供项目名称，这样 CLI 会跳过基于文件夹/应用程序名称进行匹配。在这种情况下，CLI 会在 Web 浏览器中打开指定项目的控制台。  
 
 运行以下命令来打开 Web 浏览器并转至应用程序的 Web 控制台。
 
@@ -104,7 +104,7 @@ bx dev create
 ## debug
 {: #debug}
 
-可以通过 `debug` 命令来调试应用程序。在此之前，必须先使用带 `--debug` 自变量的 build 命令对项目完成构建。调用 `debug` 命令时，会启动一个容器，用于提供由 cli-config.yml 中的 `container-port-map-debug` 值定义的调试端口或在命令行上指定的调试端口。将您喜欢的调试工具连接到相应端口，然后可以如常调试应用程序。
+可以通过 `debug` 命令来调试应用程序。在此之前，必须先使用带 `--debug` 自变量的 build 命令对项目完成构建。启动 `debug` 命令时，会启动一个容器，用于提供如 cli-config.yml 中的 `container-port-map-debug` 值所定义或如命令行上所指定的一个或多个调试端口。将您喜欢的调试工具连接到相应端口，然后可以如常调试应用程序。
 
 首先编译项目：
 
@@ -412,7 +412,7 @@ bx dev run
 bx dev shell
 ```
 
-{{site.data.keyword.dev_cli_short}} 就会将交互式 shell 打开到应用程序的 Docker 容器中。shell 命令的缺省目标容器由 `cli-config.yml` 文件中的 `container-shell-target` 值定义，其中有效值为 `run` 或 `tools`。如果未定义此值或指定了无效的值，那么缺省情况下 `shell` 命令会将 `tools` 容器设定为目标。shell 命令会将容器打开到相应 Dockerfile 中 `WORKDIR` 指令所指定的目录。如果 Dockerfile 中未列出 `WORKDIR`，那么会将容器根目录用作工作目录。有关更多信息，请参阅[此参考](https://docs.docker.com/engine/reference/builder/#workdir)。
+{{site.data.keyword.dev_cli_short}} 会将交互式 shell 打开到应用程序的 Docker 容器中。shell 命令的缺省目标容器由 `cli-config.yml` 文件中的 `container-shell-target` 值定义，其中有效值为 `run` 或 `tools`。如果未定义此值或指定了无效的值，那么缺省情况下 `shell` 命令会将 `tools` 容器设定为目标。shell 命令会将容器打开到相应 Dockerfile 中 `WORKDIR` 指令所指定的目录。如果 Dockerfile 中未列出 `WORKDIR`，那么会将容器根目录用作工作目录。有关更多信息，请参阅[此参考](https://docs.docker.com/engine/reference/builder/#workdir)。
 
 或者，您可以决定将 `run` 或 `tools` 作为自变量传递给命令，这将启动该容器，并且将为该容器打开 shell。与此类似，可以使用 `container-name` 参数来传递要将 shell 打开到其中的容器的名称。但是，应该保留此标志用于没有容器在运行的情况。`run` 和 `tools` 自变量更灵活，并支持在当前有一个容器正在运行的情况下切换容器。例如，如果 tools 容器正在运行，并且您执行了 `bx dev shell run`，那么 `tools` 容器将停止，`run` 容器将启动，反之亦然。
 
@@ -444,7 +444,7 @@ bx dev shell
 ## status
 {: #status}
 
-可以查询 {{site.data.keyword.dev_cli_short}} 使用的容器（如 `container-name-run` 和 `container-name-tools` 所定义）的状态。
+可以查询 {{site.data.keyword.dev_cli_short}} CLI 使用的容器（如 `container-name-run` 和 `container-name-tools` 所定义）的状态。
 
 在当前项目目录中运行以下命令来检查容器状态：
 

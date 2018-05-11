@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -22,7 +22,7 @@ Bevor Sie beginnen, erstellen Sie {{site.data.keyword.Bluemix_notm}}-Bereiche. S
 
 **Hinweis:** Wenn Sie das private Netzpeering mit einem {{site.data.keyword.Bluemix_notm}}-Bereich verwendet haben und den Bereich löschen müssen, dann löschen Sie zuerst die Verbindungen für das private Netzpeering in diesem Bereich.
 
-Zu Beginn installieren Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle. Details hierzu finden Sie unter [Bluemix-CLI](http://clis.ng.bluemix.net/ui/home.html).
+Zu Beginn installieren Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle. Weitere Informationen finden Sie unter [IBM Cloud CLI](http://clis.ng.bluemix.net/ui/home.html).
 
 ## CLI-Plug-in für privates Netzpeering installieren
 

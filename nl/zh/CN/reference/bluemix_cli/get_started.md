@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-02-14"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+
 
 
 # {{site.data.keyword.Bluemix_notm}} CLI 入门
@@ -24,9 +25,10 @@ lastupdated: "2018-02-14"
 
 1. 选择要下载的适用于您操作系统的安装程序
    
-   Mac OS X 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [校验和](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
-   Windows 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [校验和](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
-   Linux 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [校验和](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Mac OS X 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
+   Windows 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
+   Linux X86 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Linux PowerPC LE 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
   
    **32 位发行版及先前版本可以在[此处](all_versions.html)找到
 
@@ -34,12 +36,14 @@ lastupdated: "2018-02-14"
    * 对于 macOS 和 Windows，只需运行安装程序即可。
    * 对于 Linux，请解压缩程序包，并运行 `install_bluemix_cli` 脚本
 
-1. 将 API 端点定为目标并使用 `bx login` 命令登录到 {{site.data.keyword.Bluemix_notm}}。
-  
+1. 将 API 端点定为目标并登录到 {{site.data.keyword.Bluemix_notm}}
 
   ![示例](example.gif){: gif}
 
 现在，您可以随时管理 {{site.data.keyword.Bluemix_notm}} 资源。输入 `bluemix help` 或 `bx help` 可查看命令描述。 
+
+如果要使用联合标识，请遵循[此处](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)的指示信息，以使用一次性密码或 API 密钥进行登录
+{: tip}
 
 ## 用于进一步探索 {{site.data.keyword.Bluemix_notm}} CLI 的其他链接
 

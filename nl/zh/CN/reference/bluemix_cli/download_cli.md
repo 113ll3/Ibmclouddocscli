@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -17,16 +17,15 @@ lastupdated: "2018-02-14"
 # 下载并安装 {{site.data.keyword.Bluemix_notm}} CLI
 {: #download_install}
 
-可以使用[安装程序](#installers)或[通过 shell 安装](#shell_install)来安装 {{site.data.keyword.Bluemix_notm}} CLI。
+您可以使用安装程序或 shell 来下载和安装 CLI。
 
-## 下载安装程序
-{: #installers}
+## 使用安装程序
+{: #installer}
 
-请参阅 [{{site.data.keyword.Bluemix_notm}} CLI 安装程序（所有版本）](all_versions.html){: new_window}页面以下载适合您操作系统的最新安装程序。
-
-对于 macOS 和 Windows，只需运行安装程序即可。 
-
-对于 Linux，下载安装程序包后，将其解压缩并以 root 用户许可权运行安装脚本。
+要安装 {{site.data.keyword.Bluemix_notm}} CLI，请执行以下操作：
+* 转至[此处](all_versions.html)以下载安装程序。
+* 对于 macOS 和 Windows，请运行安装程序。 
+* 对于 Linux，下载安装程序包后，将其解压缩并以 root 用户许可权运行安装脚本。
 
   ```
   $ tar -xvf Bluemix_CLI.tar.gz
@@ -34,15 +33,14 @@ lastupdated: "2018-02-14"
   $ sudo ./install_bluemix_cli
 
   ```
-  {: codeblock}
-  
-## 从 shell 安装
+
+## 通过 shell 安装
 {: #shell_install}
 
 
 ### macOS
 
-将以下命令复制并粘贴到 mac OS 终端，然后执行该命令：
+将以下命令复制并粘贴到 Mac OS 终端，然后运行该命令：
 
 ```
 curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
@@ -51,7 +49,7 @@ curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
 
 ### Linux
 
-将以下命令复制并粘贴到 Linux OS 终端，然后执行该命令：
+将以下命令复制并粘贴到 Linux 操作系统终端，然后运行该命令：
 
 ```
 curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
@@ -60,7 +58,7 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 
 ### Windows PowerShell
 
-将以下命令复制并粘贴到 [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} 终端控制台，然后执行该命令：
+将以下命令复制并粘贴到 [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} 终端控制台，然后运行该命令：
 
 ```
 iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')

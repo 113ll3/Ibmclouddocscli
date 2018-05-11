@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -17,16 +17,15 @@ lastupdated: "2018-02-14"
 # {{site.data.keyword.Bluemix_notm}}-CLI herunterladen und installieren
 {: #download_install}
 
-Sie können ein [Installationsprogramm](#installers) verwenden oder die [Installation über die Shell](#shell_install) durchführen, um die {{site.data.keyword.Bluemix_notm}}-CLI zu installieren.
+Sie können die CLI mit einem Installationsprogramm oder über eine Shell herunterladen und installieren.
 
-## Installationsprogramme herunterladen
-{: #installers}
+## Installationsprogramm verwenden
+{: #installer}
 
-Rufen Sie die Seite für das [{{site.data.keyword.Bluemix_notm}}-CLI-Installationsprogramm (Alle Versionen)](all_versions.html){: new_window} auf, um das aktuellste Installationsprogramm für Ihr Betriebssystem herunterzuladen.
-
-Für Mac OS und Windows führen Sie einfach das Installationsprogramm aus. 
-
-Für Linux müssen Sie nach dem Herunterladen des Pakets mit dem Installationsprogramm die Dateien aus diesem Paket extrahieren und das Installationsscript mit Rootberechtigung ausführen.
+Gehen Sie wie folgt vor, um die {{site.data.keyword.Bluemix_notm}}-CLI zu installieren:
+* Klicken Sie [hier](all_versions.html), um das Installationsprogramm herunterzuladen.
+* Für Mac OS und Windows führen Sie das Installationsprogramm aus. 
+* Für Linux müssen Sie nach dem Herunterladen des Pakets mit dem Installationsprogramm die Dateien aus diesem Paket extrahieren und das Installationsscript mit Rootberechtigung ausführen.
 
   ```
   $ tar -xvf Bluemix_CLI.tar.gz
@@ -34,8 +33,7 @@ Für Linux müssen Sie nach dem Herunterladen des Pakets mit dem Installationspr
   $ sudo ./install_bluemix_cli
 
   ```
-  {: codeblock}
-  
+
 ## Über Shell installieren
 {: #shell_install}
 

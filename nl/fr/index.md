@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-03-16"
 # Présentation de l'interface de ligne de commande et des outils
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande robuste, ainsi que des plug-in et des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande. 
+{{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande robuste, ainsi que des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande. 
 
 ## Interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #cli}
@@ -34,13 +34,13 @@ Cliquez sur une option pour commencer :
 <area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Afficher la documentation (S'ouvre dans une nouvelle page)" title="Afficher la documentation" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
-## {{site.data.keyword.dev_cli_notm}}
+## {{site.data.keyword.dev_cli_notm}} CLI
 {: #idt}
 
-{{site.data.keyword.dev_cli_long}} (IDT) fournit une extension propre aux développeurs à l'interface de ligne de commande {{site.data.keyword.Bluemix}} (`bx dev`) pour permettre de créer, générer et déployer des applications natives. L'installation de l'outil IDT inclut l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} de base, plusieurs extensions, ainsi que tous les prérequis système. IDT fournit également des extensions à plusieurs IDE afin d'accéder directement aux commandes de l'interface de ligne de commande.
+{{site.data.keyword.dev_cli_long}} CLI (IDT) fournit une extension propre aux développeurs à l'interface de ligne de commande {{site.data.keyword.Bluemix}} (`bx dev`) pour permettre de créer, générer et déployer des applications natives. L'installation de l'outil IDT inclut l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} de base, plusieurs extensions, ainsi que tous les prérequis système. IDT fournit également des extensions à plusieurs IDE afin d'accéder directement aux commandes de l'interface de ligne de commande.
 {:shortdesc}
 
 - [Présentation et installation](/docs/cli/idt/index.html)
-- [Initiation](/docs/cli/idt/index.html)
+- [Mise en route](/docs/cli/idt/index.html)
 - [Commandes](/docs/cli/idt/commands.html)
 - [Développement natif cloud](/docs/cli/index.html)

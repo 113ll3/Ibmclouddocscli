@@ -42,9 +42,9 @@ Vous pouvez soit télécharger et importer le package `BMSCore` dans votre proje
 ## Initialisation de votre application iOS
 {: #init-BMSClient-ios}
 
-Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Carthage](https://github.com/Carthage/Carthage){: new_window} pour obtenir le package `BMSCore`. 
+Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Carthage](https://github.com/Carthage/Carthage){: new_window} pour obtenir le package `BMSCore`.
 
-1. Pour installer `BMSCore` à l'aide de CocoaPods, ajoutez les lignes ci-après à votre fichier Pod. Si votre projet ne comporte pas de fichier Pod, utilisez la commande `pod init`. 
+1. Pour installer `BMSCore` à l'aide de CocoaPods, ajoutez les lignes ci-après à votre fichier Pod. Si votre projet ne comporte pas de fichier Pod, utilisez la commande `pod init`.
 
   ```Swift
   use_frameworks!
@@ -68,11 +68,11 @@ Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Cartha
       ```
       {: codeblock}
 
-  2. Exécutez la commande `carthage update`. 
+  2. Exécutez la commande `carthage update`.
 
   3. Une fois la génération terminée, ajoutez `BMSCore.framework` à votre projet en suivant l'[étape 3 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/Carthage/Carthage#getting-started) des instructions Carthage.
 
-      Pour les applications générées avec Swift 2.3, utilisez la commande `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Sinon, utilisez la commande `carthage update`. 
+      Pour les applications générées avec Swift 2.3, utilisez la commande `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Sinon, utilisez la commande `carthage update`.
 
 3. Importez le module.
 
@@ -83,7 +83,7 @@ Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Cartha
 
 4. Initialisez la classe `BMSClient` à l'aide du code suivant :
 
-  Placez le code d'initialisation dans la méthode `application(_:didFinishLaunchingWithOptions:)` de votre délégué d'application ou dans un endroit particulièrement approprié pour votre projet. 
+  Placez le code d'initialisation dans la méthode `application(_:didFinishLaunchingWithOptions:)` de votre délégué d'application ou dans un endroit particulièrement approprié pour votre projet.
 
   ```Swift
   BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region

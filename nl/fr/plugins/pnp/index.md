@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -22,7 +22,7 @@ Avant de commencer, créez des espaces {{site.data.keyword.Bluemix_notm}}. Assur
 
 **Remarque :** si vous avez utilisé l'appairage de réseau privé avec un espace {{site.data.keyword.Bluemix_notm}} et que vous devez supprimer l'espace, supprimez d'abord les connexions d'appairage de réseau privé dans cet espace.
 
-Pour commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir [Interface de ligne de commande Bluemix](http://clis.ng.bluemix.net/ui/home.html) pour des détails.
+Pour commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Interface de ligne de commande IBM Cloud](http://clis.ng.bluemix.net/ui/home.html). 
 
 ## Installation du plug-in d'interface de ligne de commande d'appairage de réseau privé
 

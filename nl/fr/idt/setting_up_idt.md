@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Configuration du {{site.data.keyword.dev_cli_notm}}
+# Configuration de l'interface de ligne de commande d'{{site.data.keyword.dev_cli_notm}}
 {: #add-cli}
 
-Le plug-in {{site.data.keyword.dev_cli_short}} est un outil de création , de développement et de déploiement d'applications à l'aide d'une ligne de commande qui est utilisée par les développeurs souhaitant utiliser une ligne de commande pour développer des applications Web, mobiles et de microservice de bout en bout.
+L'interface de ligne de commande {{site.data.keyword.dev_cli_short}} est un outil de création, de développement et de déploiement d'applications à l'aide d'une ligne de commande qui est utilisée par les développeurs souhaitant utiliser une ligne de commande pour développer des applications Web, mobiles et de microservice de bout en bout.
 {: shortdesc}
 
 ## Prérequis
@@ -24,14 +24,14 @@ Le plug-in {{site.data.keyword.dev_cli_short}} est un outil de création , de d�
 
 Inscrivez-vous auprès de [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
 
-*  Si vous utilisez Microsoft Windows, vous devez utiliser Windows 10 ou une version ultérieure. 
+*  Si vous utilisez Microsoft Windows, vous devez utiliser Windows 10 ou une version ultérieure.
 
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
 ## Installation
 {: #installation}
 
-Pour installer l'outil, vous pouvez exécuter la commande appropriée afin d'appeler notre programme d'installation. L'exécution de cette commande aura également pour conséquence d'installer des dépendances, telles qu'IBM Cloud CLI, Kubernetes, Helm et Docker. Pour installer ces dépendances, suivez les étapes d'installation ci-dessous :
+Pour installer l'outil, vous pouvez exécuter la commande appropriée afin de lancer le programme d'installation. L'exécution de cette commande a également pour conséquence d'installer des dépendances, telles qu'IBM Cloud CLI, Kubernetes, Helm et Docker. Pour lancer l'installation, procédez comme suit :
 
 **Mac et Linux :**
 
@@ -42,6 +42,8 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 
 **Windows 10 :**
+
+* Remarque : ouvrez Windows PowerShell en cliquant avec le bouton droit de la souris et en sélectionnant "Run as Administrator".
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -97,13 +99,13 @@ bx dev
 ## En savoir plus
 {: #learn}
 
-Maintenant que le plug-in {{site.data.keyword.dev_cli_short}} est installé, vous pouvez apprendre à utiliser efficacement cet outil puissant :
+Maintenant que l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} est installée, vous pouvez apprendre à utiliser efficacement cet outil puissant :
 - [Initiation à l'interface de ligne de commande IDT](index.html)
 - [Commandes IDT (bx dev)](commands.html)
 - [Developer Tools pour VS Code](vscode.html)
 - [Developer Tools pour interfaces IDE Jetbrains](jetbrains.html)
 
-Consultez les [tutoriels](/docs/apps/tutorials/tutorial_bff.html) montrant comment créer des applications natives en cloud à l'aide du plug-in {{site.data.keyword.dev_cli_short}}.
+Consultez les [tutoriels](/docs/apps/tutorials/tutorial_bff.html) montrant comment créer des applications natives en cloud à l'aide de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}}.
 
 ## Pour aller plus loin
 {: #learn-more}
@@ -112,8 +114,8 @@ Les ressources suivantes peuvent vous être utiles lorsque vous développez des 
 
 - [Principale page d'arrivée IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Page de produit principale pour l'interface de ligne de commande IDT
 - [Programme d'installation d'IBM Developer Tools](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Référentiel GitHub public contenant des instructions d'installation détaillées
-- [Service d'application IBM Cloud](https://console.bluemix.net/developer/appservice) - Page de console IBM Cloud qui accompagne les outils IDT pour créer et gérer les applications natives en cloud 
-- [Canal slack technique d'outils de développement IBM Cloud](https://ibm-cloud-tech.slack.com) - Echanger au sujet des outils IDT, obtenir des réponses, suggérer des idées, etc. 
+- [Service d'application IBM Cloud](https://console.bluemix.net/developer/appservice) - Page de console IBM Cloud qui accompagne les outils IDT pour créer et gérer les applications natives en cloud
+- [Canal slack technique d'outils de développement IBM Cloud](https://ibm-cloud-tech.slack.com) - Echanger au sujet des outils IDT, obtenir des réponses, suggérer des idées, etc.
 	- [Demander un accès par équipe](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
 **Langage ciblé**

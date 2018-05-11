@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-02-15"
 
 **注：**将专用网络对等连接用于 {{site.data.keyword.Bluemix_notm}} 空间后，如果需要删除该空间，请首先删除该空间内的专用网络对等连接。
 
-首先，请安装 {{site.data.keyword.Bluemix_notm}} CLI。有关详细信息，请参阅 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)。
+首先，请安装 {{site.data.keyword.Bluemix_notm}} CLI。有关详细信息，请参阅 [IBM Cloud CLI](http://clis.ng.bluemix.net/ui/home.html)。
 
 ## 安装专用网络对等连接 CLI 插件
 

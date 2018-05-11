@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -17,16 +17,15 @@ lastupdated: "2018-02-14"
 # Téléchargement et installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #download_install}
 
-Vous pouvez utiliser un [programme d'installation](#installers) ou procéder à l'[installation depuis le shell](#shell_install) pour installer l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
+Vous pouvez utiliser un programme d'installation ou un interpréteur de commandes pour télécharger et installer l'interface de ligne de commande. 
 
-## Téléchargement des programmes d'installation
-{: #installers}
+## Utilisation du programme d'installation
+{: #installer}
 
-Pour télécharger le dernier programme d'installation de votre système d'exploitation, voir la page [Programme d'installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} - Toutes les versions](all_versions.html){: new_window}.
-
-Pour Mac OS et Windows, exécutez simplement le programme d'installation. 
-
-Pour Linux, après avoir téléchargé le package du programme d'installation, procédez à l'extraction de son contenu et exécutez le script d'installation avec les droits root.
+Pour installer l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} :
+* Rendez-vous [ici](all_versions.html) pour télécharger le programme d'installation. 
+* Pour macOS et Windows, exécutez le programme d'installation.  
+* Pour Linux, après avoir téléchargé le package du programme d'installation, procédez à l'extraction de son contenu et exécutez le script d'installation avec les droits root.
 
   ```
   $ tar -xvf Bluemix_CLI.tar.gz
@@ -34,15 +33,14 @@ Pour Linux, après avoir téléchargé le package du programme d'installation, p
   $ sudo ./install_bluemix_cli
 
   ```
-  {: codeblock}
-  
-## Installation depuis un interpréteur de commandes
+
+## Installation depuis l'interpréteur de commandes
 {: #shell_install}
 
 
 ### Mac OS
 
-Copiez et collez la commande suivante sur un terminal Mac OS et exécutez-la :
+Copiez et collez la commande suivante sur un terminal de votre système d'exploitation Mac et exécutez-la :
 
 ```
 curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
@@ -60,7 +58,7 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 
 ### Windows PowerShell
 
-Copiez et collez la commande suivante sur une console de terminal [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} et exécutez-la :
+Copiez et collez la commande suivante dans une console de terminal [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} et exécutez-la :
 
 ```
 iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')

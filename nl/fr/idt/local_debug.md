@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -49,7 +49,7 @@ bx dev debug
 
 Etapes permettant d'activer l'outil de débogage pour une application Node.js :
 
-1. Depuis le répertoire racine de votre projet d'application, exécutez la commande suivante :
+1. Depuis le répertoire racine de vos projets d'application, exécutez la commande suivante :
 
 ```
 bx dev debug
@@ -66,7 +66,7 @@ bx dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
+1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:

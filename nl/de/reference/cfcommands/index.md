@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-03-01"
+lastupdated: "2018-04-16"
 
 
 ---
@@ -171,7 +171,7 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-Erstellen einer Serviceinstanz. 
+Erstellen einer Serviceinstanz.
 
 ```
 cf create-service service_name service_plan service_instance

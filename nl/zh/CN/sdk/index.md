@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -18,9 +18,9 @@ lastupdated: "2018-03-16"
 
 作为 {{site.data.keyword.Bluemix_notm}} 上的开发者，您可以使用此插件通过符合 [Open API 规范 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/) 的 REST API 定义来生成 SDK。对 REST API 定义进行更改后，可以使用此插件来仅重新生成 SDK，而不重新生成整个项目。
 
-您还可以查看给定空间中的 Cloud Foundry 应用程序是否具有可有效用于生成 SDK 的 REST API 定义。最后，您可以使用 {{site.data.keyword.IBM_notm}} SDK Generator 插件来验证任何 REST API 定义，以确保这些定义符合 SDK Generator 的需求。
+您还可以查看特定空间中的 Cloud Foundry 应用程序是否具有对于生成 SDK 有效的 REST API 定义。最后，您可以使用 {{site.data.keyword.IBM_notm}} SDK Generator 插件来验证任何 REST API 定义，以确保这些定义符合 SDK Generator 的需求。
 
-通过此 {{site.data.keyword.IBM_notm}} SDK Generator 插件，您可以轻松将应用程序的后端服务与生成的 SDK 集成在一起。对 REST API 进行更改后，可以重新生成 SDK，并替换旧的 SDK，以实现无缝 SDK 升级。还可以将 CLI 集成到 DevOps 管道中，并确保每次构建应用程序时，SDK 始终与 API 规范一致。
+通过此 {{site.data.keyword.IBM_notm}} SDK Generator 插件，您可以轻松将应用程序的后端服务与生成的 SDK 集成在一起。对 REST API 进行更改后，可以重新生成 SDK，并替换旧的 SDK，以实现 SDK 升级。还可以将 CLI 集成到 DevOps 管道中，并确保每次构建应用程序时，SDK 始终与 API 规范一致。
 
 REST API 定义必须有效，并且在实时服务器端点上或在系统上的本地文件中托管。如果托管了 REST API 定义，那么必须在 `OPENAPI_SPEC` 环境变量中定义相对 URL。
 

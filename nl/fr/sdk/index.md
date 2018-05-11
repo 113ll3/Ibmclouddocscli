@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -16,9 +16,9 @@ lastupdated: "2018-03-16"
 
 Le plug-in de générateur de SDK {{site.data.keyword.IBM}} peut être installé dans l'[interface de ligne de commande {{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/cli/reference/bluemix_cli/all_versions.html).
 
-En tant que développeur sous {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser ce plug-in pour générer des SDK depuis votre définition d'API REST conforme à la [spécification Open API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/). Quand vous apportez des modifications à votre définition d'API REST, vous pouvez utiliser ce plug-in pour ne régénérer que le SDK au lieu de régénérer l'ensemble du projet.
+En tant que développeur sous {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser ce plug-in pour générer des SDK depuis votre définition d'API REST conforme à la [spécification Open API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/). Lorsque vous apportez des modifications à votre définition d'API REST, vous pouvez utiliser ce plug-in pour ne régénérer que le SDK au lieu de régénérer l'ensemble du projet.
 
-Vous pouvez aussi déterminer si vos applications Cloud Foundry dans un espace donné
+Vous pouvez aussi voir si vos applications Cloud Foundry dans un espace donné
 disposent
 de définitions d'API REST valides pour la génération de SDK. Enfin, vous pouvez
 utiliser le plug-in de générateur de SDK {{site.data.keyword.IBM_notm}} pour
@@ -26,7 +26,7 @@ valider les définitions d'API REST afin de vous assurer qu'elles sont conformes
 exigences du générateur de SDK.
 
 Ce plug-in de générateur de SDK {{site.data.keyword.IBM_notm}}
-vous permet d'intégrer facilement vos services de back end à votre application avec un SDK généré. Quand un changement se produit dans une API REST, vous pouvez générer à nouveau le SDK et remplacer l'ancien pour une mise à niveau transparente du SDK. Vous pouvez aussi intégrer l'interface de ligne de commande dans un pipeline DevOps et vous assurer que le SDK est toujours cohérent avec la spécification d'API chaque fois que l'application est générée.
+vous permet d'intégrer facilement vos services de back end à votre application avec un SDK généré. Lorsqu'un changement se produit dans une API REST, vous pouvez générer à nouveau le SDK et remplacer l'ancien pour une mise à niveau transparente du SDK. Vous pouvez aussi intégrer l'interface de ligne de commande dans un pipeline DevOps et vous assurer que le SDK est toujours cohérent avec la spécification d'API chaque fois que l'application est générée.
 
 La définition d'API REST doit être valide et hébergée sur un noeud final de serveur opérationnel de votre système. Si la définition d'API REST est hébergée, l'URL relative doit être définie dans la variable d'environnement `OPENAPI_SPEC`.
 

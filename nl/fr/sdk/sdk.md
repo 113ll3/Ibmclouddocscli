@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-16"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 # SDK mobiles disponibles
@@ -36,7 +36,7 @@ Si vous disposez d'une application serveur Java, NodeJS ou Swift, vous pouvez ut
 ## SDK client
 {: #client_sdk}
 
-Vous pouvez utiliser les SDK suivants dans votre application mobile pour optimiser les fonctions respectives. 
+Vous pouvez utiliser les SDK suivants dans votre application mobile pour utiliser les fonctions respectives. 
 
 
 ### SDK Android
@@ -57,7 +57,7 @@ Vous pouvez utiliser les SDK suivants dans votre application mobile pour optimis
 - [SDK {{site.data.keyword.mobilepushshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push)
 
 
-### Plug-in Cordova
+### Plug-ins Cordova
 {: #cordova_plugin}
 
 - [Plug-in

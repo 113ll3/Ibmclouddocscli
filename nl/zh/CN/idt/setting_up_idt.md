@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# 设置 {{site.data.keyword.dev_cli_notm}}
+# 设置 {{site.data.keyword.dev_cli_notm}} CLI
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} 是一种命令行方法，用于为希望使用命令行来开发端到端 Web、移动和微服务应用程序的开发者创建、开发和部署应用程序。
+{{site.data.keyword.dev_cli_short}} CLI 是一种命令行方法，用于为希望使用命令行来开发端到端 Web、移动和微服务应用程序的开发者创建、开发和部署应用程序。
 {: shortdesc}
 
 ## 先决条件
@@ -31,7 +31,7 @@ lastupdated: "2018-03-16"
 ## 安装
 {: #installation}
 
-要安装工具，可以运行相关命令来调用安装程序。这还将安装依赖项，例如 IBM Cloud CLI、Kubernetes、Helm 和 Docker。要安装这些项，请使用以下安装步骤：
+要安装工具，可以运行相关命令来启动安装程序。这还将安装依赖项，例如 IBM Cloud CLI、Kubernetes、Helm 和 Docker。要进行安装，请使用以下安装步骤：
 
 **Mac 和 Linux：**
 
@@ -42,6 +42,8 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 
 **Windows 10：**
+
+* 注：通过右键单击并选择“以管理员身份运行”来打开 Windows PowerShell。
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -97,13 +99,13 @@ bx dev
 ## 了解更多
 {: #learn}
 
-现在，您已安装了 {{site.data.keyword.dev_cli_short}}，您可以了解如何有效利用此功能强大的工具：
+现在，您已安装了 {{site.data.keyword.dev_cli_short}} CLI，接下来可以了解如何有效利用此功能强大的工具：
 - [IDT CLI 入门](index.html)
 - [IDT (bx dev) 命令](commands.html)
 - [用于 VS Code 的 Developer Tools](vscode.html)
 - [用于 Jetbrains IDE 的 Developer Tools](jetbrains.html)
 
-查看显示如何使用 {{site.data.keyword.dev_cli_short}} 来创建云本机应用程序的[教程](/docs/apps/tutorials/tutorial_bff.html)。
+查看显示如何使用 {{site.data.keyword.dev_cli_short}} CLI 来创建云本机应用程序的[教程](/docs/apps/tutorials/tutorial_bff.html)。
 
 ## 进一步阅读
 {: #learn-more}
