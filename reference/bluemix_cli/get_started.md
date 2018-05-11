@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -13,15 +13,21 @@ lastupdated: "2018-04-18"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+{:tip: .tip}
 
 
 
 # Getting started with {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
+It is recommended that you install the {{site.data.keyword.Bluemix_notm}} CLI and all recommended dependencies using the method described [here.](/docs/cli/index.html)
+{: tip}
+
+
 {{site.data.keyword.Bluemix_notm}} CLI provides the command line interface to manage applications, containers, infrastructures, services and other resources in {{site.data.keyword.Bluemix_notm}}. 
 
-To get started with {{site.data.keyword.Bluemix_notm}} CLI:
+
+To get started with just the {{site.data.keyword.Bluemix_notm}} CLI:
 
 1. Select the installer of your OS to download
    
@@ -58,4 +64,3 @@ If you are using a federated ID, follow the instructions [here](https://console.
 Use the following options to report issues or submit new feature requests:
  * Create issues in [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
  * leave messages in [Slack channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
-
