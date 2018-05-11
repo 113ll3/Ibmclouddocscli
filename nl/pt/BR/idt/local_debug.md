@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -50,7 +50,7 @@ remoto Java ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de li
 
 Etapas para ativar a ferramenta de depuração para um aplicativo Node.js:
 
-1. No diretório raiz do projeto do aplicativo, execute o comando a seguir:
+1. No diretório raiz do seu aplicativo, os projetos executam o comando a seguir:
 
 ```
 bx dev debug
@@ -67,7 +67,7 @@ bx dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
+1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:

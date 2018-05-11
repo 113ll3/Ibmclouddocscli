@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2017-11-16"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -30,11 +30,13 @@ Após o {{site.data.keyword.Bluemix_notm}} CLI ser instalado, é possível inclu
 
 Conclua as etapas a seguir para incluir o repositório e instalar
 o plug-in:
-1. Para incluir o repositório do plug-in {{site.data.keyword.Bluemix_notm}} CLI, execute o comando a seguir:
+1. Para incluir o repositório de plug-in da CLI do {{site.data.keyword.Bluemix_notm}},
+execute o comando a seguir:
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
-2. Para instalar o plug-in {{site.data.keyword.autoscaling}} CLI, execute o comando a seguir:
+2. Para instalar o plug-in da CLI do {{site.data.keyword.autoscaling}}, execute o
+comando a seguir:
 ```
 bluemix plugin install auto-scaling -r Bluemix
 ```

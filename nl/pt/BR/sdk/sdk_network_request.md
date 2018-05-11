@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-03-16"
+  years: 2016, 2018
+lastupdated: "2018-04-16"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,8 @@ Também é possível usar o SDK `BMSCore` para fazer solicitações de rede para
 ## Android
 {: #request-android}
 
-1. Certifique-se de que você tenha [importado o Client SDK e inicializado](sdk_BMSClient.html#init-BMSClient-android) em seu aplicativo Android.
+1. Certifique-se de que você tenha [importado o
+SDK do Client e o inicializado](sdk_BMSClient.html#init-BMSClient-android) em seu aplicativo Android.
 
 2. Faça uma solicitação de rede.
 
@@ -51,7 +52,8 @@ de obter a resposta após a solicitação ser concluída. Se você estiver fazen
 ## iOS
 {: #request-ios}
 
-1. Certifique-se de que você tenha [importado o Client SDK e inicializado](sdk_BMSClient.html#init-BMSClient-ios) em seu aplicativo iOS.
+1. Certifique-se de que você tenha [importado o SDK
+do Client e o inicializado](sdk_BMSClient.html#init-BMSClient-ios) em seu aplicativo iOS.
 
 2. Crie uma solicitação de rede.
 
@@ -98,7 +100,8 @@ Para concluir os exemplos a seguir, consulte o GitHub `BMSCore` [LEIA-ME](https:
 ## Cordova
 {: #request-cordova}
 
-1. Certifique-se de ter [importado o SDK do Cliente e de tê-lo inicializado](sdk_BMSClient.html#init-BMSClient-cordova) em seu aplicativo Cordova.
+1. Certifique-se de que você tenha [importado o
+SDK do Client e o inicializado](sdk_BMSClient.html#init-BMSClient-cordova) em seu aplicativo Cordova.
 
 2. Crie uma solicitação de rede.
 

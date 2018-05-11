@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2017-2018
-lastupdated: "2018-03-16"
+years: 2017, 2018
+lastupdated: "2018-04-17"
 
 ---
 
@@ -11,13 +11,14 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Comandos do {{site.data.keyword.dev_cli_notm}} (bx dev)
+# Comandos da CLI (bx dev) do {{site.data.keyword.dev_cli_notm}} 
 {: #idt-cli}
 
 Versão: 1.2.0
 Liberação: 08 de março de 2018
 
-Use os comandos do {{site.data.keyword.dev_cli_notm}} (bx dev) a seguir para criar um projeto, implementar, depurar e testá-lo.
+Use os comandos da CLI (bx dev) do {{site.data.keyword.dev_cli_notm}} para
+criar um projeto, implementá-lo, depurá-lo e testá-lo.
 
 - [build](#build): construa o projeto em um contêiner local
 - [code](#code): faça download do código de um projeto
@@ -27,16 +28,19 @@ Use os comandos do {{site.data.keyword.dev_cli_notm}} (bx dev) a seguir para cri
 - [delete](#delete): exclui um projeto de seu espaço
 - [deploy](#deploy): implemente um aplicativo no IBM Cloud
 - [enable](#enable): inclua arquivos do IBM Cloud em um projeto existente
-- [get-credentials](#get-credentials): obtém as credenciais requeridas pelo projeto para ativar o uso de serviços de limite
+- [get-credentials](#get-credentials): obtém credenciais que são necessárias pelo
+projeto para ativar o uso de serviços ligados
 - [help](#help): ajuda sobre sintaxe e argumentos do IDT
 - [list](#list): liste todos os projetos do IBM Cloud em um espaço
 - [run](#run): execute seu aplicativo em um contêiner local
 - [shell](#shell): abra um shell em um contêiner local
-- [status](#status): verifique o status dos contêineres usados pela CLI
+- [status](#status): verifique o status dos contêineres que são usados pela CLI
 - [stop](#stop): pare um contêiner
 - [test](#test): teste seu aplicativo em um contêiner local
-- [view](#view): visualize a URL implementada do app para teste e visualização
-- [comandos compostos](#compound): execute múltiplos comandos em uma instrução de linha de comandos
+- [view](#view): visualize os apps implementados por URL para teste e
+visualização
+- [compound commands](#compound): execute vários comandos em uma instrução de linha
+de comandos
 
 
 
@@ -45,9 +49,14 @@ Use os comandos do {{site.data.keyword.dev_cli_notm}} (bx dev) a seguir para cri
 
 É possível construir seu aplicativo usando o comando `build`. Os comandos `test`, `debug` e `run` esperam localizar um projeto compilado, portanto deve-se primeiro executar uma operação `build` antecipadamente.  
 
-O elemento de configuração `build-cmd-debug` é usado para construir o aplicativo para todos os usos, exceto para `run`. Você constrói seu aplicativo para depuração especificando a opção da linha de comandos `--debug`. O elemento de configuração `build-cmd-run` é usado ao construir o aplicativo para uso com o comando `run`.
+O elemento de configuração `build-cmd-debug` é usado para construir o aplicativo para todos os usos, exceto para `run`. Você constrói seu aplicativo para depuração especificando a opção da linha de comandos `--debug`.  
+O elemento de configuração `build-cmd-run` é usado quando você
+está construindo o aplicativo para uso com o comando `run`.
 
-Para construir com múltiplos contêineres, seu projeto deve conter um arquivo do [Compose](https://docs.docker.com/compose/overview/) especificado no `cli-config.yml` ou é possível usar o parâmetro de comando `dockerfile-tools` para fornecer um. Consulte [Editar arquivo](/docs/apps/projects/compose_file.html) para obter mais informações.
+Para construir com múltiplos contêineres, seu projeto deve conter um arquivo
+[Compose](https://docs.docker.com/compose/overview/), que é especificado no
+`cli-config.yml` ou é possível usar o parâmetro de comando `dockerfile-tools`
+para fornecer um. Consulte [Editar arquivo](/docs/apps/projects/compose_file.html) para obter mais informações.
 
 Execute o comando a seguir no diretório de projeto atual para construir seu aplicativo:  
 
@@ -63,7 +72,8 @@ bx dev build [--debug]
 ## code
 {: #code}
 
-Use o comando `code` para fazer download de um projeto criado anteriormente com o código de modelo de aplicativo e arquivos de configuração para o {{site.data.keyword.Bluemix_notm}}. Isso é útil quando você precisa extrair uma segunda cópia de um projeto criado.
+Use o comando `code` para fazer download de um projeto criado anteriormente com o código de modelo de aplicativo e arquivos de configuração para o {{site.data.keyword.Bluemix_notm}}.  
+Isso é útil ao precisar extrair uma segunda cópia de um projeto que você criou.
 
 Execute o comando a seguir para fazer download do código de um projeto especificado.
 
@@ -76,9 +86,9 @@ bx dev code <projectName>
 ## console
 {: #console}
 
-Use o comando `console` para abrir um navegador da web para o console da web do seu aplicativo no IBM Cloud. É possível executar o comando `bx dev console` de dentro da pasta do seu projeto e a CLI tenta localizar um projeto correspondente no IBM Cloud que tem o mesmo ID do projeto que o diretório atual. Se o sistema não consegue localizar um nome correspondente, ele abre o painel Web e Móvel no IBM Cloud em vez do projeto específico.
+Use o comando `console` para abrir um navegador da web para o console da web do seu aplicativo no IBM Cloud.  É possível executar o comando `bx dev console` de dentro da pasta do seu projeto e a CLI tenta localizar um projeto correspondente no IBM Cloud que tem o mesmo ID do projeto que o diretório atual. Se o sistema não consegue localizar um nome correspondente, ele abre o painel Web e Móvel no IBM Cloud em vez do projeto específico.
 
-Opcionalmente, é possível fornecer um nome de projeto e a CLI ignorará a correspondência baseada no nome de pasta/aplicativo. Nesse caso, a CLI abre console do projeto nomeado em um navegador da web.  
+É possível fornecer um nome de projeto e a CLI ignora a correspondência com base no nome de pasta/aplicativo. Nesse caso, a CLI abre console do projeto nomeado em um navegador da web.  
 
 Execute o comando a seguir para abrir um navegador da web para o console da web do seu aplicativo.
 
@@ -104,7 +114,10 @@ bx dev create
 ## depuração
 {: #debug}
 
-É possível depurar o aplicativo por meio do comando `debug`. Uma construção deve primeiro ser concluída com relação ao projeto usando o comando de construção com o argumento `--debug`. Quando você chama o comando `debug`, um contêiner é iniciado que fornece uma porta ou portas de depuração conforme definido pelo valor `container-port-map-debug` no cli-config.yml ou especificado na linha de comandos. Conecte sua ferramenta de depuração favorita à porta ou portas e será possível depurar seu aplicativo normalmente.
+É possível depurar o aplicativo por meio do comando `debug`. Uma construção deve primeiro ser concluída com relação ao projeto usando o comando de construção com o argumento `--debug`. 
+Ao iniciar o comando `debug`, um contêiner é iniciado fornecendo uma ou mais
+portas de depuração, conforme definido pelo valor de `container-port-map-debug` no
+cli-config.yml ou especificado na linha de comandos. Conecte sua ferramenta de depuração favorita à porta ou portas e será possível depurar seu aplicativo normalmente.
 
 Primeiro, compile seu projeto:
 
@@ -176,7 +189,9 @@ Para implementar como um aplicativo Cloud Foundry no {{site.data.keyword.Bluemix
 
 Para implementar um aplicativo como um contêiner, deve-se instalar localmente o [Kubernetes](https://kubernetes.io/) e o [Helm](https://github.com/kubernetes/helm). A versão do cliente Helm não deve ser mais recente que a versão do servidor Helm. É possível localizar ambos executando `helm version`. Recomendamos usar v2.4.2 para a versão do cliente.
 
-No `cli-config.yml`, é possível escolher definir o local de um gráfico Helm na propriedade `chart-path`, configurar o elemento `deploy-target` para `container` e configurar o `deploy-image-target` como mostrado no exemplo. O elemento `deploy-image-target` no `cli-config.yml` é usado em vez dos elementos `repository` e `tag` no arquivo `chart/values.yml`. Para implementar no {{site.data.keyword.Bluemix}} especificamente, configure o elemento de configuração `ibm-cluster` para o nome do cluster do Kubernetes que você criou no {{site.data.keyword.Bluemix}} conforme descrito no [Tutorial: criando clusters](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
+No `cli-config.yml`, é possível escolher definir o local de um gráfico Helm na propriedade `chart-path`, configurar o elemento `deploy-target` para `container` e configurar o `deploy-image-target` como mostrado no exemplo. O elemento `deploy-image-target` no `cli-config.yml` é usado em vez dos elementos `repository` e `tag` no arquivo `chart/values.yml`. Para
+implementar no {{site.data.keyword.Bluemix}} especificamente, configure o elemento de configuração `ibm-cluster` para o nome do cluster do Kubernetes que você criou no {{site.data.keyword.Bluemix}},
+conforme descrito no [Tutorial: criando clusters](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
 
 Para obter mais informações sobre o fornecimento, configuração e implementação para um cluster do Kubernetes, veja o tutorial [Implementar um aplicativo da web escalável no Kubernetes](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes).
 
@@ -221,13 +236,13 @@ Os parâmetros a seguir podem ser usados com o comando `deploy` ou atualizando o
 #### `deploy-target`
 {: #deploy-target}
 
-* Parâmetro usado opcionalmente para indicar o tipo de implementação a ser concluída. O tipo de implementação padrão é buildpack.
+* Parâmetro usado opcionalmente para indicar o tipo de implementação a ser concluída.  O tipo de implementação padrão é buildpack.
 * Uso `bx dev deploy -t|--target buildpack|container`
 
 #### `deploy-image-target`
 {: #deploy-image-target}
 
-* Parâmetro usado com uma implementação de contêiner como o nome da imagem de destino para a implementação (por exemplo, para identificar um registro do Docker). O valor não deve incluir uma versão, por exemplo: image-name:{version}, porque a versão é incrementada e anexada automaticamente pelo `deploy`.
+* Parâmetro usado com uma implementação de contêiner como o nome da imagem de destino para a implementação (por exemplo, para identificar um registro do Docker).  O valor não deve incluir uma versão, por exemplo: image-name:{version}, porque a versão é incrementada e anexada automaticamente pelo `deploy`.
 * Uso `bx dev deploy --deploy-image-target [image-name]`
 
 #### `ibm-cluster`
@@ -258,7 +273,7 @@ A presença de arquivos necessários fornece detecção de linguagem do projeto 
 	* A presença de um `pom.xml` identifica um projeto Maven.
 	* A presença de um `build.gradle` identifica um projeto Gradle.
 
-Opcionalmente, também é possível substituir a linguagem do projeto detectada usando o argumento `--language`. No entanto, somente projetos válidos e completos são suportados. O comando de ativação não modifica o seu código-fonte.
+Opcionalmente, também é possível substituir a linguagem do projeto detectada usando o argumento `--language`.  No entanto, somente projetos válidos e completos são suportados. O comando de ativação não modifica o seu código-fonte.
 
 As opções de linguagem incluem:
 * node
@@ -415,7 +430,8 @@ Basta executar este comando
 bx dev shell
 ```
 
-e o {{site.data.keyword.dev_cli_short}} abrirá um shell interativo no contêiner do docker do aplicativo. O contêiner de destino padrão para o comando shell é definido pelo valor `container-shell-target` no arquivo `cli-config.yml`, em que os valores válidos são `run` ou `tools`. Se esse valor não for definido ou um valor inválido for especificado, o comando `shell` direcionará para o contêiner `tools` por padrão. O comando shell abre o contêiner no diretório especificado pela instrução `WORKDIR` no Dockerfile correspondente. Se `WORKDIR` não estiver listado no Dockerfile, a raiz do contêiner será usada como o diretório ativo. Veja [esta referência](https://docs.docker.com/engine/reference/builder/#workdir) para obter mais informações.
+A CLI do {{site.data.keyword.dev_cli_short}} abrirá um shell interativo no contêiner do
+docker do aplicativo. O contêiner de destino padrão para o comando shell é definido pelo valor `container-shell-target` no arquivo `cli-config.yml`, em que os valores válidos são `run` ou `tools`. Se esse valor não for definido ou um valor inválido for especificado, o comando `shell` direcionará para o contêiner `tools` por padrão. O comando shell abre o contêiner no diretório especificado pela instrução `WORKDIR` no Dockerfile correspondente. Se `WORKDIR` não estiver listado no Dockerfile, a raiz do contêiner será usada como o diretório ativo. Veja [esta referência](https://docs.docker.com/engine/reference/builder/#workdir) para obter mais informações.
 
 Como alternativa, é possível decidir passar `run` ou `tools` como um argumento para o comando e esse contêiner será trazido para cima e o shell será aberto para esse contêiner. De forma semelhante, é possível usar o parâmetro `container-name` para passar o nome do contêiner no qual você deseja executar o shell. No entanto, essa sinalização deve ser reservada para quando nenhum contêiner está em execução. Os argumentos `run` e `tools` são mais flexíveis e permitem que você alterne entre contêineres no momento em que um está em execução. Por exemplo, se o contêiner de ferramentas estiver em execução e você executar `bx dev shell run`, o contêiner `tools` será interrompido e o contêiner `run` será iniciado e vice-versa.
 
@@ -426,7 +442,7 @@ Também é possível especificar o executável do shell que você deseja abrir u
 
 Quaisquer argumentos adicionais que você passar para o comando além das sinalizações serão analisados como o comando a ser executado quando o shell for aberto. Se você fornecer um comando para ser executado, o shell dentro do contêiner sairá após a execução do comando e retornará para o seu terminal.
 
-Por exemplo, é possível executar o comando `ls` do Linux dentro do shell do contêiner de ferramentas, chamando `bx dev shell tools ls`. Também é possível especificar as sinalizações adicionais a serem passadas para a execução do comando shell, agrupando os argumentos entre aspas, como `bx dev shell "ls -la"`.
+Por exemplo, é possível executar o comando `ls` do Linux dentro do shell do contêiner de ferramentas, chamando `bx dev shell tools ls`.   Também é possível especificar as sinalizações adicionais a serem passadas para a execução do comando shell, agrupando os argumentos entre aspas, como `bx dev shell "ls -la"`.
 
 ### Parâmetros de comando shell
 {: #shell-parameters}
@@ -447,7 +463,9 @@ Por exemplo, é possível executar o comando `ls` do Linux dentro do shell do co
 ## status
 {: #status}
 
-É possível consultar o status dos contêineres que são usados pelo {{site.data.keyword.dev_cli_short}} conforme definido por `container-name-run` e `container-name-tools`.
+É possível consultar o status dos contêineres que são usados pela CLI do
+{{site.data.keyword.dev_cli_short}}, conforme definido por `container-name-run` e
+por `container-name-tools`.
 
 Execute o comando a seguir no diretório de projeto atual para verificar o status do contêiner:
 
@@ -516,7 +534,7 @@ bx dev test
 ### Parâmetros de comando de teste
 {: #test-parameters}
 
-O parâmetro a seguir é exclusivo para o comando `test`. Há [parâmetros adicionais](#command-parameters) compartilhados com outros comandos.
+O parâmetro a seguir é exclusivo para o comando `test`.  Há [parâmetros adicionais](#command-parameters) compartilhados com outros comandos.
 
 #### `test-cmd`
 {: #test-cmd}
@@ -576,7 +594,7 @@ Os parâmetros a seguir são exclusivos para o comando `view`.
 ## Comandos compostos
 {: #compound}
 
-É possível executar múltiplos comandos em uma instrução de linha de comandos, separando os comandos do IDT com o delimitador `/`. As sinalizações de linha de comandos adicionais podem ser especificadas após você especificar os comandos compostos. Os comandos a seguir são exemplos de como é possível usar comandos compostos:
+É possível executar múltiplos comandos em uma instrução de linha de comandos, separando os comandos do IDT com o delimitador `/`. As sinalizações de linha de comandos adicionais podem ser especificadas após você especificar os comandos compostos.  Os comandos a seguir são exemplos de como é possível usar comandos compostos:
 
 ```
 bx dev build/run

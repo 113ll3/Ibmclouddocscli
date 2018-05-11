@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-08"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -19,7 +19,9 @@ lastupdated: "2018-01-08"
 
 É possível gerenciar o seu ambiente do {{site.data.keyword.Bluemix_notm}} Local ou do {{site.data.keyword.Bluemix_notm}} Dedicated
 usando a interface de linha de comandos do Cloud Foundry com o plug-in da CLI do Administrador do {{site.data.keyword.Bluemix_notm}}. Por
-exemplo, é possível incluir usuários a partir de um registro LDAP. Se estiver procurando informações sobre como gerenciar sua conta do {{site.data.keyword.Bluemix_notm}} Public, consulte [Administrando](/docs/admin/adminpublic.html#administer).
+exemplo, é possível incluir usuários a partir de um registro LDAP. Para obter informações sobre como gerenciar
+sua conta do {{site.data.keyword.Bluemix_notm}} Public, consulte
+[Administração](/docs/admin/adminpublic.html#administer).
 
 Antes de iniciar, instale a interface de linha de comandos do cf. O plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 requer o cf versão 6.11.2 ou posterior. [Fazer download da interface da linha de comandos do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
@@ -35,7 +37,9 @@ em uma janela de linha de comandos diferente da janela de linha de comandos do C
 Após a interface de linha de comandos do cf ser instalada, é possível
 incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
 
-**Nota**: se você tiver instalado anteriormente o plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
+**Nota**: se você instalou anteriormente o
+plug-in do {{site.data.keyword.Bluemix_notm}} Admin, poderá ser necessário desinstalar o plug-in,
+excluir o repositório e, em seguida, reinstalar para obter as atualizações mais recentes.
 
 Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
 
@@ -56,7 +60,7 @@ Se você precisar desinstalar o plug-in, será possível usar os comandos a segu
 seguida, poderá incluir o repositório atualizado e instalar o plug-in mais recente:
 
 * Desinstalar o plug-in: `cf uninstall-plugin BluemixAdminCLI`
-* Remover o repositório de plug-in: `cf remove-plugin-repo BluemixAdmin`
+* Remova o repositório de plug-in: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## Usando o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}

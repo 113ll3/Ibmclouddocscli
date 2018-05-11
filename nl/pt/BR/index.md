@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -17,12 +17,13 @@ lastupdated: "2018-03-16"
 # Visão geral da CLI e das ferramentas
 {: #overview}
 
-O {{site.data.keyword.Bluemix_notm}} fornece uma CLI robusta, bem como plug-ins e extensões de ferramentas do desenvolvedor que se integram com a CLI.
+O {{site.data.keyword.Bluemix_notm}} fornece uma CLI robusta e plug-ins com extensões de
+ferramentas do desenvolvedor que se integram à CLI.
 
-## {{site.data.keyword.Bluemix_notm}} CLI (interface da linha de comandos)
+## {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
 
-A CLI do {{site.data.keyword.Bluemix}} fornece uma experiência de linha de comandos para gerenciar os recursos no ambiente do {{site.data.keyword.Bluemix_notm}}. Ela também inclui uma interface da linha de comandos do Cloud Foundry, cf, em sua instalação, para gerenciar aplicativos e serviços do Cloud Foundry.
+A CLI do {{site.data.keyword.Bluemix}} fornece uma experiência de linha de comandos para gerenciar os recursos no ambiente do {{site.data.keyword.Bluemix_notm}}. Ela também inclui uma interface da linha de comandos Cloud Foundry, cf, em sua instalação, para gerenciar aplicativos e serviços do Cloud Foundry.
 {:shortdesc}
 
 Clique em uma opção para começar:
@@ -34,10 +35,13 @@ Clique em uma opção para começar:
 <area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Visualizar docs (Abre nova página)" title="Visualizar docs" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
-## {{site.data.keyword.dev_cli_notm}}
+## {{site.data.keyword.dev_cli_notm}} CLI
 {: #idt}
 
-O {{site.data.keyword.dev_cli_long}} (IDT) fornece uma extensão específica do desenvolvedor para a CLI do {{site.data.keyword.Bluemix}} (`bx dev`) para criar, construir e implementar aplicativos nativos de nuvem. A instalação do IDT inclui a CLI base do {{site.data.keyword.Bluemix_notm}}, várias extensões e todos os pré-requisitos do sistema. O IDT também fornece extensões para múltiplos IDEs para acessar diretamente os comandos da CLI.
+A CLI do {{site.data.keyword.dev_cli_long}} (IDT) fornece uma extensão específica do
+desenvolvedor para a CLI do {{site.data.keyword.Bluemix}} (`bx dev`) para criar,
+construir e implementar apps nativos de nuvem. A instalação do IDT inclui a CLI do
+{{site.data.keyword.Bluemix_notm}} de base, várias extensões e todos os pré-requisitos do sistema. O IDT também fornece extensões para múltiplos IDEs para acessar diretamente os comandos da CLI.
 {:shortdesc}
 
 - [Visão geral e instalação](/docs/cli/idt/index.html)

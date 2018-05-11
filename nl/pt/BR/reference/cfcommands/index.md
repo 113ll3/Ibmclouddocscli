@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-03-01"
+lastupdated: "2018-04-16"
 
 
 ---
@@ -20,7 +20,9 @@ lastupdated: "2018-03-01"
 # Comandos do Cloud Foundry (cf)
 {: #cf}
 
-A interface da linha de comandos (CLI) do Cloud Foundry (cf) fornece um conjunto de comandos para gerenciar seus apps. As informações a seguir listam os comandos cf usados mais comumente para gerenciar apps e inclui seus nomes, opções, uso, pré-requisitos, descrições e exemplos. Para listar todos os comandos cf e informações de ajuda associadas, use `cf help`. Use `cf command_name -h` para visualizar informações detalhadas da ajuda para um comando específico.
+A interface da linha de comandos (CLI) do Cloud Foundry (cf) fornece um conjunto de comandos para gerenciar seus apps. 
+As informações a seguir listam os comandos cf que são mais normalmente usados para gerenciamento de
+apps e incluem seus nomes, opções, uso, pré-requisitos, descrições e exemplos. Para listar todos os comandos cf e informações de ajuda associadas, use `cf help`. Use `cf command_name -h` para visualizar informações detalhadas da ajuda para um comando específico.
 {: shortdesc}
 
 Para obter uma lista mais detalhada de comandos `cf CLI`, veja o [Guia de referência da CLI do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} da comunidade.

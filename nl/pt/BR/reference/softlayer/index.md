@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-02-01"
+lastupdated: "2018-04-16"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,8 @@ lastupdated: "2018-02-01"
 # Comandos da infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl)
 {: #softlayer_cli}
 
-O plug-in do {{site.data.keyword.BluSoftlayer}} foi mesclado na CLI do {{site.data.keyword.Bluemix_notm}}. Não é mais necessário instalar o plug-in.
+O plug-in do {{site.data.keyword.BluSoftlayer}} foi mesclado na
+CLI do {{site.data.keyword.Bluemix_notm}}. Não é mais necessário instalar o plug-in.
 
 Use os comandos de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} na interface da linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} para configurar e gerenciar os serviços do SoftLayer.
 
@@ -141,7 +142,7 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
   <td>[bluemix sl file volume-detail](/docs/cli/reference/softlayer/index.html#sl_file_volume_detail)</td>
    </tr>
  <tr>
-   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate</td>
+   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate)</td>
    <td>[bluemix sl file volume-list](/docs/cli/reference/softlayer/index.html#sl_file_volume_list)</td>
    <td>[bluemix sl file volume-order](/docs/cli/reference/softlayer/index.html#sl_file_volume_order)</td>
    <td>[bluemix sl file volume-options](/docs/cli/reference/softlayer/index.html#sl_file_volume_options)</td>
@@ -3092,7 +3093,7 @@ bluemix sl vs reboot IDENTIFIER [OPTIONS]
 <dt>--hard</dt>
 <dd>Execute uma reinicialização forçada.</dd>
 <dt>--soft</dt>
-<dd>Execute uma reinicialização forçada.</dd>
+<dd>Executa uma reinicialização normal.</dd>
 <dt>-f, --force</dt>
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
