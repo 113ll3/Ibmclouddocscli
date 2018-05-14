@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -22,7 +22,7 @@ The {{site.data.keyword.dev_cli_short}} CLI is a command line approach for creat
 ## Prerequisites for {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
-Sign up for [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
+Sign up for [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
 
 *  If you're using Microsoft Windows &trade;, you must use Windows 10 or later.
 
