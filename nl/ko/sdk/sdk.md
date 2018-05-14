@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-16"
+  years: 2015, 2018
+lastupdated: "2018-04-16"
 
 ---
 # 사용 가능한 모바일 SDK

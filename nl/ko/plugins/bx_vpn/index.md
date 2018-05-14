@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2016-06-20"
+lastupdated: "2018-04-17"
 
 
 ---
@@ -27,7 +27,7 @@ VPN 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니�
 뒤따르는 지시사항은 {{site.data.keyword.Bluemix_notm}} CLI 플러그인 작업에 대한 것입니다. Cloud Foundry(cf) CLI 플러그인으로 플러그인을 사용하려면 [cf CLI의 VPN CLI 플러그인](../vpn/index.html)을 참조하십시오.
 
 
-다음 정보는 Bluemix CLI의 VPN 플러그인에서 지원하는 모든 명령을 나열하며 해당 이름, 옵션, 사용, 전제조건, 설명 및 예제를 포함합니다. vpn 플러그인을 설치하는 방법에 대해 [Bluemix 명령행 인터페이스 확장](../../index.html#cli_bluemix_ext)을 참조하십시오.
+다음 정보는 {{site.data.keyword.Bluemix_notm}} CLI의 VPN 플러그인에서 지원하는 모든 명령을 나열하며 해당 이름, 옵션, 사용, 전제조건, 설명 및 예제를 포함합니다. vpn 플러그인을 설치하는 방법에 대해 [Bluemix 명령행 인터페이스 확장](../../index.html#cli_bluemix_ext)을 참조하십시오.
 
 **참고:** *전제조건*에는 명령을 사용하기 전에 필요한 조치가 설명되어 있습니다. 전제조건에는 다음 조치 중 하나 이상이 포함될 수 있습니다.
 <dl>

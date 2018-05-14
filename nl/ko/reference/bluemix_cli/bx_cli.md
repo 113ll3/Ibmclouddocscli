@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-03-05"
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
 
-버전: 0.6.5
+버전: 0.6.7
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다.
 
@@ -123,6 +123,30 @@ lastupdated: "2018-03-05"
  </tr>
  <tr>
   <td>[bluemix account user-reinvite](bx_cli.html#bluemix_account_user_reinvite)</td>
+  <td>[bluemix iam access-groups](bx_cli.html#bluemix_iam_access-groups)</td>
+  <td>[bluemix iam access-group](bx_cli.html#bluemix_iam_access-group)</td>
+  <td>[bluemix iam access-group-create](bx_cli.html#bluemix_iam_access-group-create)</td>
+  <td>[bluemix iam access-group-update](bx_cli.html#bluemix_iam_access-group-update)</td>
+</tr>
+<tr>
+  <td>[bluemix iam access-group-delete](bx_cli.html#bluemix_iam_access-group-delete)</td>
+  <td>[bluemix iam access-group-users](bx_cli.html#bluemix_iam_access-group-users)</td>
+  <td>[bluemix iam access-group-user-add](bx_cli.html#bluemix_iam_access-group-user-add)</td>
+  <td>[bluemix iam access-group-user-remove](bx_cli.html#bluemix_iam_access-group-user-remove)</td>
+  <td>[bluemix iam access-group-user-purge](bx_cli.html#bluemix_iam_access-group-user-purge)</td>
+</tr>
+<tr>
+  <td>[bluemix iam access-group-service-ids](bx_cli.html#bluemix_iam_access-group-service-ids)</td>
+  <td>[bluemix iam access-group-service-id-add](bx_cli.html#bluemix_iam_access-group-service-id-add)</td>
+  <td>[bluemix iam access-group-service-id-remove](bx_cli.html#bluemix_iam_access-group-service-id-remove)</td>
+  <td>[bluemix iam access-group-service-id-purge](bx_cli.html#bluemix_iam_access-group-service-id-purge)</td>
+  <td>[bluemix iam access-group-policies](bx_cli.html#bluemix_iam_access-group-policies)</td>
+</tr>
+<tr>
+  <td>[bluemix iam access-group-policy](bx_cli.html#bluemix_iam_access-group-policy)</td>
+  <td>[bluemix iam access-group-policy-create](bx_cli.html#bluemix_iam_access-group-policy-create)</td>
+  <td>[bluemix iam access-group-policy-update](bx_cli.html#bluemix_iam_access-group-policy-update)</td>
+  <td>[bluemix iam access-group-policy-delete](bx_cli.html#bluemix_iam_access-group-policy-delete)</td>
  </tr>
  </tbody>
  </table>
@@ -170,6 +194,9 @@ lastupdated: "2018-03-05"
       <td>[bluemix resource service-alias-update](bx_cli.html#bluemix_resource_service_alias_update)</td>
       <td>[bluemix resource service-alias-delete](bx_cli.html#bluemix_resource_service_alias_delete)</td>
     </tr>
+    <tr>
+      <td>[bluemix resource search](bx_cli.html#bluemix_resource_search)</td>
+    </tr>
   </tbody>
 </table>
 
@@ -204,11 +231,11 @@ lastupdated: "2018-03-05"
    <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service_policies)</td>
   </tr>
   <tr>
-   <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
-   <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
-   <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
-   <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
-   <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
+    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
+    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
+    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
+    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
+    <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
   </tr>
   <tr>
    <td>[bluemix iam user-policy](bx_cli.html#bluemix_iam_user_policy)</td>
@@ -217,14 +244,12 @@ lastupdated: "2018-03-05"
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
    <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
   </tr>
-   <tr>
-   <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
-   <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
-   <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
-   <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
-   <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
-  </tr>
-
+  <tr>
+     <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
+     <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
+     <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
+     <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
+     <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
   </tr>
   </tbody>
   </table>
@@ -350,23 +375,27 @@ lastupdated: "2018-03-05"
  <tr>
   <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
   <td>[bluemix catalog locations](bx_cli.html#bluemix_catalog_locations)</td>
+  <td>[bluemix catalog runtime](bx_cli.html#bluemix_catalog_runtime)</td>
+  <td>[bluemix catalog runtimes](bx_cli.html#bluemix_catalog_runtimes)</td>
   <td>[bluemix plugin repos
 ](bx_cli.html#bluemix_plugin_repos)</td>
+</tr>
+<tr>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
   <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
- </tr>
- <tr>
   <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
   <td>[bluemix plugin list
 ](bx_cli.html#bluemix_plugin_list)</td>
+</tr>
+<tr>
   <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
   <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
   <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
- </tr>
- <tr>
   <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
+</tr>
+<tr>
   <td>[bluemix billing resource-group-usage](bx_cli.html#bluemix_resource_group_usage)</td>
   <td>[bluemix billing resource-instances-usage](bx_cli.html#bluemix_resource_instances_usage)</td>
  </tr>
@@ -569,7 +598,7 @@ bluemix -q cf services
 사용자가 로그인됩니다.
 
 ```
-bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-o ORG] [-s SPACE]
+bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -590,10 +619,12 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dd> 비밀번호</dd>
   <dt> -c <i>ACCOUNT_ID</i>(선택사항) </dt>
   <dd> 대상 계정의 ID</dd>
-  <dt> -o <i>ORG_NAME</i>(선택사항) </dt>
-  <dd> 대상 조직의 이름 </dd>
-  <dt> -s <i>SPACE_NAME</i>(선택사항) </dt>
-  <dd> 대상 영역의 이름</dd>
+  <dt> -g <i>RESOURCE_GROUP</i>(선택사항) </dt>
+  <dd> 대상 리소스 그룹의 이름</dd>
+  <dt> -o <i>ORG</i>(선택사항)</dt>
+  <dd> 대상 조직의 이름(더 이상 사용되지 않음, 'bluemix target -o ORG' 사용)</dd>
+  <dt> -s <i>SPACE</i>(선택사항) </dt>
+  <dd> 대상 영역의 이름(더 이상 사용되지 않음, 'bluemix target -s SPACE' 사용)</dd>
   <dt> --no-iam </dt>
   <dd> 공용 IAM 대신 로그인 서버를 통한 인증 강제 실행</dd>
   <dt> --skip-ssl-validation(선택사항) </dt>
@@ -699,7 +730,7 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
    <dt>-c <i>ACCOUNT_ID</i>(선택사항)</dt>
    <dd>대상으로 지정된 계정의 ID입니다.</dd>
    <dt>-g <i>RESOURCE_GROUP</i>(선택사항)</dt>
-   <dd>리소스 그룹의 이름입니다.</dd>
+   <dd>리소스 그룹의 이름</dd>
    <dt>--cf</dt>
    <dd>대상 조직 및 영역을 대화식으로 선택합니다.</dd>
    <dt>-o <i>ORG_NAME</i>(선택사항)</dt>
@@ -735,7 +766,7 @@ bluemix target
 최신 버전으로 CLI를 업데이트합니다.
 
 ```
-bluemix update
+bluemix update [-f]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -743,7 +774,7 @@ bluemix update
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-f</dt>
-  <dd>확인 없이 강제 업데이트</dd>
+  <dd>확인 없이 업데이트를 강제 실행합니다. 루트 권한이 필요합니다.</dd>
 </dl>
 
 ### bluemix account orgs
@@ -898,27 +929,27 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 ## bluemix account space
 {: #bluemix_account_space}
 
-이 명령은 [cf space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix account space-create
 {: #bluemix_account_space_create}
 
-이 명령은 [cf create-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf create-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix account space-rename
 {: #bluemix_account_space_rename}
 
 
-이 명령은 [cf rename-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf rename-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix account space-delete
 {: #bluemix_account_space_delete}
 
 
-이 명령은 [cf delete-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf delete-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 ## bluemix account org-users
 {: #bluemix_account_org_users}
@@ -1211,30 +1242,560 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix account user-invite
 {: #bluemix_account_user_invite}
 
-사용자를 계정에 초대합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
+계정에 사용자 초대(계정 관리자)
 
 ```
 bluemix account user-invite USER_EMAIL
 ```
 
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+   <dt>USER_EMAIL(필수)</dt>
+   <dd>초대받는 사용자의 이메일입니다.</dd>
+</dl>
+
+
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
 
-사용자에게 초대를 재전송합니다(계정 소유자 필요).
+사용자에게 초대 재발송(계정 관리자)
 
 ```
 bluemix account user-reinvite USER_EMAIL
 ```
-
 <strong>전제조건</strong>: 엔드포인트, 로그인
-  
- <strong>명령 옵션</strong>:
- <dl>
+
+<strong>명령 옵션</strong>:
+<dl>
    <dt>USER_EMAIL(필수)</dt>
    <dd>다시 초대되는 사용자의 이메일입니다.</dd>
- </dl>
+</dl>
 
+## bluemix iam access-groups
+{: #bluemix_iam_access_groups}
 
+현재 계정에서 액세스 그룹 나열
+
+```
+bluemix iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-u</dt>
+  <dd>사용자가 속한 액세스 그룹을 나열합니다. 이 플래그는 '-s'와 배타적입니다.</dd>
+  <dt>-s</dt>
+  <dd>서비스 ID가 속한 액세스 그룹을 나열합니다. 이 플래그는 '-u'와 배타적입니다.</dd>
+</dl>
+
+<strong>예제</strong>:
+
+모든 액세스 그룹 나열:
+
+```
+bluemix iam access-groups
+```
+
+## bluemix iam access-group
+{: #bluemix_iam_access_group}
+
+액세스 그룹의 세부사항 표시
+
+```
+bluemix iam access-group GROUP_NAME [--id]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-id</dt>
+  <dd>ID만 표시</dd>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`의 세부사항 표시:
+
+```
+bluemix iam access-group example_group
+```
+
+## bluemix iam access-group-create
+{: #bluemix_iam_access_group_create}
+
+액세스 그룹 작성
+
+```
+bluemix iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-d, --description</dt>
+  <dd>액세스 그룹에 대한 설명</dd>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group` 작성:
+
+```
+bluemix iam access-group-create example_group -d "example access group"
+```
+
+## bluemix iam access-group-update
+{: #bluemix_iam_access_group_update}
+
+액세스 그룹 업데이트
+
+```
+bluemix iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-n, --name</dt>
+  <dd>새 액세스 그룹 이름</dd>
+  <dt>-d, --description</dt>
+  <dd>새 설명</dd>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 강제 업데이트</dd>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`의 이름을 `hello_world_group`으로 바꾸기:
+
+```
+bluemix iam access-group-update example_group --name "hello_world_group"
+```
+
+## bluemix iam access-group-delete
+{: #bluemix_iam_access_group_delete}
+
+액세스 그룹 삭제
+
+```
+bluemix iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 강제 삭제</dd>
+  <dt>-r, --recursive</dt>
+  <dd>액세스 그룹 및 해당 구성원 삭제</dd>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group` 삭제:
+
+```
+bluemix iam access-group-delete example_group --force
+```
+
+## bluemix iam access-group-users
+{: #bluemix_iam_access_group_users}
+
+액세스 그룹의 사용자 나열
+
+```
+bluemix iam access-group-users GROUP_NAME
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`의 모든 사용자 나열:
+
+```
+bluemix iam access-group-users example_group
+```
+
+## bluemix iam access-group-user-add
+{: #bluemix_iam_access_group_user_add}
+
+액세스 그룹에 사용자 추가
+
+```
+bluemix iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`에 사용자 `name@example.com` 추가:
+
+```
+bluemix iam access group-user-add example_group name@example.com
+```
+
+## bluemix iam access-group-user-remove
+{: #bluemix_iam_access_group_user_remove}
+
+액세스 그룹에서 사용자 제거
+
+```
+bluemix iam access-group-user-remove GROUP_NAME USER_NAME
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`에서 사용자 `name@example.com` 제거:
+
+```
+bluemix iam access-group-user-remove example_group name@example.com
+```
+
+## bluemix iam access-group-user-purge
+{: #bluemix_iam_access_group_user_purge}
+
+모든 액세스 그룹에서 사용자 제거
+
+```
+bluemix iam access-group-user-purge USER_NAME [-f, --force]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 삭제</dd>
+</dl>
+
+<strong>예제</strong>:
+
+모든 액세스 그룹에서 사용자 `name@example.com` 제거:
+
+```
+bluemix iam access-group-user-purge name@example.com -f
+```
+
+## bluemix iam access-group-service-ids
+{: #bluemix_iam_access_group_service_ids}
+
+액세스 그룹에 서비스 ID 나열
+
+```
+bluemix iam access-group-service-ids GROUP_NAME
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`에 모든 서비스 ID 나열:
+
+```
+bluemix iam access-group-service-ids example_group
+```
+
+## bluemix iam access-group-service-id-add
+{: #bluemix_iam_access_group_service_id_add}
+
+액세스 그룹에 서비스 ID 추가
+
+```
+bluemix iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`에 서비스 ID `example-service` 추가:
+
+```
+bluemix iam access-group-service-id-add example_group example-service
+```
+
+## bluemix iam access-group-service-id-remove
+{: #bluemix_iam_access_group_service_id_remove}
+
+액세스 그룹에서 서비스 ID 제거
+
+```
+bluemix iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`에서 서비스 ID `example-service` 제거:
+
+```
+bluemix iam access-group-service-id-remove example_group example-service
+```
+
+## bluemix iam access-group-service-id-purge
+{: #bluemix_iam_access_group_service_id_purge}
+
+모든 액세스 그룹에서 서비스 ID 제거
+
+```
+bluemix iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 삭제</dd>
+</dl>
+
+<strong>예제</strong>:
+
+모든 액세스 그룹에서 서비스 ID `example-service` 제거:
+
+```
+bluemix iam access-group-service-id-purge example --force
+```
+
+## bluemix iam access-group-policies
+{: #bluemix_iam_access_group_policies}
+
+액세스 그룹의 정책 나열
+
+```
+bluemix iam access-group-policies GROUP_NAME
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`의 모든 정책 나열:
+
+```
+bluemix iam access-group-policies example_group
+```
+
+## bluemix iam access-group-policy
+{: #bluemix_iam_access_group_policy}
+
+액세스 그룹 정책의 세부사항 표시
+
+```
+bluemix iam access-group-policy GROUP_NAME POLICY_ID
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`의 정책 `51b9717e-76b0-4f6a-bda7-b8132431f926`에 대한 세부사항 표시:
+
+```
+bluemix iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
+```
+
+## bluemix iam access-group-policy-create
+{: #bluemix_iam_access_group_policy_create}
+
+액세스 그룹 정책 작성
+
+```
+bluemix iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-f, --file</dt>
+  <dd>정책 정의의 JSON 파일</dd>
+  <dt>-roles</dt>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-service-name</dt>
+  <dd>정책 정의의 서비스 이름. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-service-instance</dt>
+  <dd>정책 정의의 서비스 인스턴스. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-region</dt>
+  <dd>정책 정의 지역. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-resource-type</dt>
+  <dd>정책 정의의 리소스 유형. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-resource</dt>
+  <dd>정책 정의의 리소스. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-resource-group-name</dt>
+  <dd>리소스 그룹의 이름. 이 옵션은 '-f, --file' 및 '--resource-group-id'과 배타적입니다.</dd>
+  <dt>-resource-group-id</dt>
+  <dd>리소스 그룹의 ID. 이 옵션은 '-f, --file' 및 '--resource-group-name'과 배타적입니다.</dd>
+</dl>
+
+<strong>예제</strong>:
+
+JSON 파일에서 액세스 그룹 정책 작성:
+
+```
+bluemix iam access-group-policy-create example_group -f @policy.json
+```
+    
+모든 `sample-service` 리소스에 `example_group` `관리자` 역할 제공:
+```
+bluemix iam access-group-policy-create example_group --roles Administrator --service-name sample-service
+```
+
+`us-south` 지역에 있는 `sample-service` 인스턴스 `ServiceId-ade78e9f`의 리소스 `key123`에 대한 `name@example.com` `편집자` 역할 제공:
+```
+bluemix iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+```
+
+ID가 `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 대한 `example_group` `운영자` 역할 제공:
+```
+bluemix iam access-group-policy-create example_group --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+```
+
+리소스 그룹 `sample-resource-group`의 멤버에 대한 `example_group` `뷰어` 역할 제공:
+```
+bluemix iam access-group-policy-create example_group --roles Viewer --resource-group-name sample-resource-group
+```
+
+ID가 `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹의 멤버에 대한 `example_group` `뷰어` 역할 제공:
+```
+bluemix iam access-group-policy-create example_group --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+
+## bluemix iam access-group-policy-update
+{: #bluemix_iam_access_group_policy_update}
+
+액세스 그룹 정책 업데이트
+
+```
+bluemix iam access-group-policy-update GROUP_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-f, --file</dt>
+  <dd>정책 정의의 JSON 파일</dd>
+  <dt>-v, --version</dt>
+  <dd>정책의 버전</dd>
+  <dt>-roles</dt>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-service-name</dt>
+  <dd>정책 정의의 서비스 이름. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-service-instance</dt>
+  <dd>정책 정의의 서비스 인스턴스. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-region</dt>
+  <dd>정책 정의 지역. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-resource-type</dt>
+  <dd>정책 정의의 리소스 유형. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-resource</dt>
+  <dd>정책 정의의 리소스. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dt>-resource-group-name</dt>
+  <dd>리소스 그룹의 이름. 이 옵션은 '-f, --file' 및 '--resource-group-id'과 배타적입니다.</dd>
+  <dt>-resource-group-id</dt>
+  <dd>리소스 그룹의 ID. 이 옵션은 '-f, --file' 및 '--resource-group-name'과 배타적입니다.</dd>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 정책을 정책 JSON 파일의 정책으로 업데이트:
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 -f @policy.json
+```
+
+모든 `sample-service` 리소스에 대한 `example_group` `관리자` 역할을 제공하도록 액세스 그룹 정책 업데이트:
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
+```
+
+`us-south` 지역에 있는 `sample-service` 인스턴스 `ServiceId-ade78e9f`의 리소스 `key123`에 대한 `example_group` `편집자` 역할을 제공하도록 액세스 그룹 정책 업데이트:
+```
+bluemix iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south
+```
+
+ID가 `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 대한 `example_group` `운영자` 역할을 제공하도록 액세스 그룹 정책 업데이트:
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+```
+
+리소스 그룹 `sample-resource-group`의 멤버에 대한 `example_group` `뷰어` 역할을 제공하도록 액세스 그룹 정책 업데이트:
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-name sample-resource-group
+```
+
+ID가 `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹의 멤버에 대한 `example_group` `뷰어` 역할을 제공하도록 액세스 그룹 정책 업데이트:
+```
+bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+
+## bluemix iam access-group-policy-delete
+{: #bluemix_iam_access_group_policy_delete}
+
+액세스 그룹 정책 삭제
+
+```
+bluemix iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 강제 삭제</dd>
+</dl>
+
+<strong>예제</strong>:
+
+액세스 그룹 `example_group`의 정책 `51b9717e-76b0-4f6a-bda7-b8132431f926` 삭제:
+```
+bluemix iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
+```
 
 ## bluemix iam service-ids
 {: #bluemix_iam_service_ids}
@@ -1249,7 +1810,7 @@ bluemix iam service-ids --uuid
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-uuid</dt>
+  <dt>--uuid</dt>
   <dd>서비스 ID의 UUID만 표시</dd>
 </dl>
 
@@ -1267,16 +1828,16 @@ bluemix iam service-ids --uuid
 서비스 ID의 세부사항 표시
 
 ```
-bluemix iam service-id NAME [--uuid]
+bluemix iam service-id (NAME|UUID) [--uuid]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>NAME(필수)</dt>
-  <dd>서비스 이름</dd>
-  <dt>-uuid</dt>
+  <dt>NAME|UUID(필수)</dt>
+  <dd>서비스의 이름 또는 UUID</dd>
+  <dt>--uuid</dt>
   <dd>서비스 ID의 UUID 표시</dd>
 </dl>
 
@@ -1286,6 +1847,11 @@ bluemix iam service-id NAME [--uuid]
 
 ```
 bluemix iam service-id sample-test
+```
+서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 세부사항 표시
+
+```
+bluemix iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
 
@@ -1323,15 +1889,15 @@ bluemix iam service-id-create sample-test -d 'hello, world!'
 서비스 ID 업데이트
 
 ```
-bluemix iam service-id-update NAME [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+bluemix iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>NAME(필수)</dt>
-  <dd>서비스 이름</dd>
+  <dt>NAME|UUID(필수)</dt>
+  <dd>서비스의 이름 또는 UUID</dd>
   <dt>-n, --name</dt>
   <dd>서비스의 새 이름</dd>
   <dt>-d, --description</dt>
@@ -1356,6 +1922,12 @@ bluemix iam service-id-update sample-test -n sample-test-2 -f
 bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 ```
 
+서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 이름을 설명이 새로 포함된 `sample-test-3`으로 바꾸기
+
+```
+bluemix iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!' 
+```
+
 
 ## bluemix iam service-id-delete
 {: #bluemix_iam_service_id_delete}
@@ -1363,15 +1935,15 @@ bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 서비스 ID 삭제
 
 ```
-bluemix iam service-id-delete NAME [-f, --force]
+bluemix iam service-id-delete (NAME|UUID) [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>NAME(필수)</dt>
-  <dd>서비스 이름</dd>
+  <dt>NAME|UUID(필수)</dt>
+  <dd>서비스의 이름 또는 UUID</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 삭제</dd>
 </dl>
@@ -1382,6 +1954,12 @@ bluemix iam service-id-delete NAME [-f, --force]
 
 ```
 bluemix iam service-id-delete sample-teset -f
+```
+
+서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 삭제
+
+```
+bluemix iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
 
@@ -1402,7 +1980,7 @@ bluemix iam api-keys
 새 {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 작성
 
 ```
-bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
+bluemix iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1413,7 +1991,7 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dd>작성할 API 키의 이름입니다.</dd>
 <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
 <dd>API 키의 설명</dd>
-<dt>-f, -- file <i>FILE</i></dt>
+<dt>--file <i>FILE</i></dt>
 <dd>지정된 파일에 API 키 정보를 저장합니다. 설정하지 않으면 JSON 컨텐츠가 표시됩니다.</dd>
 </dl>
 
@@ -1422,7 +2000,7 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 API 키 작성 및 파일에 저장
 
 ```
-bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
+bluemix iam api-key-create MyKey -d "this is my API key" --file key_file
 ```
 
 ## bluemix iam api-key-update
@@ -1479,13 +2057,17 @@ bluemix iam api-key-delete NAME [-f]
 서비스의 모든 API 키 나열
 
 ```
-bluemix iam service-api-keys SERVICE_ID
+bluemix iam service-api-keys SERVICE_ID [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 서비스 API 키 표시</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1502,15 +2084,19 @@ bluemix iam service-api-keys sample-service
 서비스 API 키의 세부사항 나열
 
 ```
-bluemix iam service-api-key NAME SERVICE_ID [--uuid]
+bluemix iam service-api-key NAME SERVICE_ID [--uuid] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-uuid</dt>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
+  <dt>--uuid</dt>
   <dd>서비스 API 키의 UUID 표시</dd>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 서비스 API 키 표시</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1527,25 +2113,29 @@ bluemix iam service-api-key sample-key sample-service
 서비스 API 키 작성
 
 ```
-bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [-f, --file FILE]
+bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [--file FILE] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>-d, --description</dt>
   <dd>API 키의 설명</dd>
-  <dt>-f, --file</dt>
+  <dt>--file</dt>
   <dd>지정된 파일에 API 키 정보를 저장합니다. 설정하지 않으면 JSON 컨텐츠가 표시됩니다.</dd>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 강제 작성</dd>
 </dl>
 
 <strong>예제</strong>:
 
-서비스 `sample-service`의 서비스 API 키 `sample-key` 작성:
+확인 없이 서비스 `sample-service`의 서비스 API 키 `sample-key` 작성:
 
 ```
-bluemix iam service-api-key-create sample-key sample-service
+bluemix iam service-api-key-create sample-key sample-service -f
 ```
 
 ## bluemix iam service-api-key-update
@@ -1561,6 +2151,8 @@ bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, 
 
 <strong>명령 옵션</strong>:
 <dl>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>-n, --name</dt>
   <dd>서비스 API 키의 새 이름</dd>
   <dt>-d, --description</dt>
@@ -1592,6 +2184,8 @@ bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 
 <strong>명령 옵션</strong>:
 <dl>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 삭제</dd>
 </dl>
@@ -1662,7 +2256,7 @@ bluemix iam user-policy name@example.com 0bb730daa
 사용자 정책 작성
 
 ```
-bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+bluemix iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -1671,24 +2265,24 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 <dl>
 <dt>USER_NAME(필수)</dt>
 <dd>정책이 속한 사용자 이름</dd>
-<dt>-f, --file <i>FILE</i>(선택사항)</dt>
+<dt>--file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (선택사항)</dt>
-<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션에만 '-f, --file'이 사용됩니다.</dd>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
-<dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>(선택사항)</dt>
-<dd>정책 정의의 서비스 인스턴스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 서비스 인스턴스. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--region <i>REGION</i>(선택사항)</dt>
-<dd>정책 정의의 지역. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 지역. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i>(선택사항)</dt>
-<dd>정책 정의의 리소스 유형. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 리소스 유형. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource <i>RESOURCE</i>(선택사항)</dt>
-<dd>정책 정의의 리소스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 리소스. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i>(선택사항)</dt>
-<dd>리소스 그룹의 이름. 이 경우에만 '-f, --file', '--resource' 및 '--resource-group-id' 플래그가 사용됩니다.</dd>
+<dd>리소스 그룹의 이름. 이는 '--file', '--resource' 및 '--resource-group-id' 플래그와 배타적입니다.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>(선택사항)</dt>
-<dd>리소스 그룹의 ID. 이 경우에만 '-f, --file', '--resource' 및 '--resource-group-name' 플래그가 사용됩니다.</dd>
+<dd>리소스 그룹의 ID. 이는 '--file', '--resource' 및 '--resource-group-name' 플래그와 배타적입니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1696,7 +2290,7 @@ bluemix iam user-policy-create USER_NAME {-f, --file JSON_FILE | --roles ROLE_NA
 정책 JSON 파일 `policy.json`에서 사용자 `name@example.com`의 사용자 정책 작성:
 
 ```
-bluemix iam user-policy-create name@example.com -f @policy.json
+bluemix iam user-policy-create name@example.com --file @policy.json
 ```
 
 모든 `sample-service` 리소스에 `name@example.com` `관리자` 역할 제공:
@@ -1735,7 +2329,7 @@ bluemix iam user-policy-create name@example.com --roles Viewer --resource-group-
 사용자 정책 업데이트
 
 ```
-bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -1747,26 +2341,24 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 <dd>업데이트할 정책의 ID</dd>
 <dt>-v, --version <i>VERSION</i>(선택사항)</dt>
 <dd>기존 정책의 버전</dd>
-<dt>-f, --file <i>FILE</i>(선택사항)</dt>
-<dd>정책 정의의 JSON 파일</dd>
-<dt>-f, --file <i>FILE</i>(선택사항)</dt>
+<dt>--file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (선택사항)</dt>
-<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션에만 '-f, --file'이 사용됩니다.</dd>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
-<dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>(선택사항)</dt>
-<dd>정책 정의의 서비스 인스턴스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 서비스 인스턴스. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--region <i>REGION</i>(선택사항)</dt>
-<dd>정책 정의의 지역. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 지역. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i>(선택사항)</dt>
-<dd>정책 정의의 리소스 유형. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 리소스 유형. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource <i>RESOURCE</i>(선택사항)</dt>
-<dd>정책 정의의 리소스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+<dd>정책 정의의 리소스. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i>(선택사항)</dt>
-<dd>리소스 그룹의 이름. 이 경우에만 '-f, --file', '--resource' 및 '--resource-group-id' 플래그가 사용됩니다.</dd>
+<dd>리소스 그룹의 이름. 이는 '--file', '--resource' 및 '--resource-group-id' 플래그와 배타적입니다.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i>(선택사항)</dt>
-<dd>리소스 그룹의 ID. 이 경우에만 '-f, --file', '--resource' 및 '--resource-group-name' 플래그가 사용됩니다.</dd>
+<dd>리소스 그룹의 ID. 이는 '--file', '--resource' 및 '--resource-group-name' 플래그와 배타적입니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1774,7 +2366,7 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, 
 사용자 정책을 JSON 파일로 된 정책으로 업데이트:
 
 ```
-bluemix iam user-policy-update name@example.com 0bb730daa -f @policy.json
+bluemix iam user-policy-update name@example.com 0bb730daa --file @policy.json
 ```
 
 모든 `sample-service` 리소스에 `name@example.com` `관리자` 역할을 제공하도록 사용자 정책 업데이트:
@@ -1815,15 +2407,15 @@ bluemix iam user-policy-update name@example.com user-policy-id --roles Viewer --
 지정된 서비스의 모든 서비스 정책 나열
 
 ```
-bluemix iam service-policies SERVICE_ID_NAME [--json] [-f, --force]
+bluemix iam service-policies SERVICE_ID [--json] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME(필수)</dt>
-  <dd>서비스 ID의 이름</dd>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>-json</dt>
   <dd>JSON 형식으로 정책 표시</dd>
   <dt>-f, --force</dt>
@@ -1837,6 +2429,11 @@ bluemix iam service-policies SERVICE_ID_NAME [--json] [-f, --force]
 ```
 bluemix iam service-policies test
 ```
+서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 나열:
+
+```
+bluemix iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+```
 
 
 ## bluemix iam service-policy
@@ -1845,15 +2442,15 @@ bluemix iam service-policies test
 서비스 정책의 세부사항 표시
 
 ```
-bluemix iam service-policy SERVICE_ID_NAME POLICY_ID [--json] [-f, --force]
+bluemix iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME(필수)</dt>
-  <dd>서비스 ID의 이름</dd>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>POLICY_ID(필수)</dt>
   <dd>서비스 정책의 ID<dd>
   <dt>-json</dt>
@@ -1869,6 +2466,11 @@ bluemix iam service-policy SERVICE_ID_NAME POLICY_ID [--json] [-f, --force]
 ```
 bluemix iam service-policies test 140798e2-8ea7db3
 ```
+서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 `140798e2-8ea7db3` 표시:
+
+```
+bluemix iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
+```
 
 
 ## bluemix iam service-policy-create
@@ -1877,34 +2479,34 @@ bluemix iam service-policies test 140798e2-8ea7db3
 서비스 정책 작성
 
 ```
-bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
+bluemix iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME(필수)</dt>
-  <dd>서비스 ID의 이름</dd>
-  <dt>-f, --file</dt>
-  <dd>정책 정의의 JSON 파일. 이 경우에만 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' 및 '--resource-group-id' 플래그가 사용됩니다.</dd>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
+  <dt>--file</dt>
+  <dd>정책 정의의 JSON 파일. 이는 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' 및 '--resource-group-id' 플래그와 배타적입니다.</dd>
   <dt>-r, --roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션에만 '-f, --file'이 사용됩니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>--service-name</dt>
-  <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--service-instance</dt>
-  <dd>정책 정의의 서비스 인스턴스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 서비스 인스턴스. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-region</dt>
-  <dd>정책 정의 지역. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의 지역. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--resource-type</dt>
-  <dd>정책 정의의 리소스 유형. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 리소스 유형. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--resource</dt>
-  <dd>정책 정의의 리소스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 리소스. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--resource-group-name</dt>
-  <dd>리소스 그룹의 이름. 이 옵션에만 '-f, --file' 및 '--resource-group-id'가 사용됩니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션은 '--file' 및 '--resource-group-id'와 배타적입니다.</dd>
   <dt>--resource-group-id </dt>
-  <dd>리소스 그룹의 ID. 이 옵션에만 '-f, --file' 및 '--resource-group-name'이 사용됩니다.</dd>
-  <dt>-F, --force</dt>
+  <dd>리소스 그룹의 ID. 이 옵션은 '--file' 및 '--resource-group-name'과 배타적입니다.</dd>
+  <dt>-f, --force</dt>
   <dd>확인 없이 서비스 정책 작성</dd>
 </dl>
 
@@ -1913,7 +2515,12 @@ bluemix iam service-policy-create SERVICE_ID_NAME {-f, --file JSON_FILE | -r, --
 서비스 `test`에 대해 JSON 파일에서 서비스 정책 작성:
 
 ```
-bluemix iam service-policy-create test -f @policy.json
+bluemix iam service-policy-create test --file @policy.json
+```
+서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`에 대해 JSON 파일에서 서비스 정책 작성:
+
+```
+bluemix iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
 
@@ -1923,38 +2530,38 @@ bluemix iam service-policy-create test -f @policy.json
 서비스 정책 업데이트
 
 ```
-bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-F, --force]",
+bluemix iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME(필수)</dt>
-  <dd>서비스 ID의 이름</dd>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>POLICY_ID(필수)</dt>
   <dd>서비스 정책의 ID<dd>
   <dt>-v, --version</dt>
   <dd>서비스 정책의 버전</dd>
-  <dt>-f, --file</dt>
-  <dd>정책 정의의 JSON 파일. 이 경우에만 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' 및 'resource-group-id' 플래그가 사용됩니다.</dd>
+  <dt>--file</dt>
+  <dd>정책 정의의 JSON 파일. 이는 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' 및 'resource-group-id' 플래그와 배타적입니다.</dd>
   <dt>-r, --roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션에만 '-f, --file'이 사용됩니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-service-name</dt>
-  <dd>정책 정의의 서비스 이름. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-service-instance</dt>
-  <dd>정책 정의의 서비스 인스턴스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 서비스 인스턴스. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-region</dt>
-  <dd>정책 정의 지역. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의 지역. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-resource-type</dt>
-  <dd>정책 정의의 리소스 유형. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 리소스 유형. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-resource</dt>
-  <dd>정책 정의의 리소스. 이 경우에만 '-f, --file' 플래그가 사용됩니다.</dd>
+  <dd>정책 정의의 리소스. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--resource-group-name</dt>
-  <dd>리소스 그룹의 이름. 이 옵션에만 '-f, --file' 및 '--resource-group-id'가 사용됩니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션은 '--file' 및 '--resource-group-id'와 배타적입니다.</dd>
   <dt>--resource-group-id </dt>
-  <dd>리소스 그룹의 ID. 이 옵션에만 '-f, --file' 및 '--resource-group-name'이 사용됩니다.</dd>
-  <dt>-F, --force</dt>
+  <dd>리소스 그룹의 ID. 이 옵션은 '--file' 및 '--resource-group-name'과 배타적입니다.</dd>
+  <dt>-f, --force</dt>
   <dd>확인 없이 서비스 정책 업데이트</dd>
 </dl>
 
@@ -1963,7 +2570,12 @@ bluemix iam service-policy-update SERVICE_ID_NAME POLICY_ID [-v, --version VERSI
 서비스 `test`에 대해 JSON 파일에서 서비스 정책 `140798e2-8ea7db3` 업데이트:
 
 ```
-bluemix iam service-policy-update test 140798e2-8ea7db3 -f @policy.json
+bluemix iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
+```
+서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`에 대해 JSON 파일에서 서비스 정책 `140798e2-8ea7db3` 업데이트:
+
+```
+bluemix iam service-policy-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3 --file @policy.json
 ```
 
 ## bluemix iam service-policy-delete
@@ -1972,15 +2584,15 @@ bluemix iam service-policy-update test 140798e2-8ea7db3 -f @policy.json
 서비스 정책 삭제
 
 ```
-bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
+bluemix iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>SERVICE_ID_NAME(필수)</dt>
-  <dd>서비스 ID의 이름</dd>
+  <dt>SERVICE_ID(필수)</dt>
+  <dd>서비스 ID의 UUID 또는 이름</dd>
   <dt>POLICY_ID(필수)</dt>
   <dd>서비스 정책의 ID<dd>
   <dt>-f, --force</dt>
@@ -1994,11 +2606,16 @@ bluemix iam service-policy-delete SERVICE_ID_NAME POLICY_ID [-f, --force]
 ```
 bluemix iam service-policy-delete test 140798e2-8ea7db3
 ```
+서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 `140798e2-8ea7db3` 삭제
+
+```
+bluemix iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
+```
 
 ## bluemix iam oauth-tokens
 {: #bluemix_iam_oauth_tokens}
 
-현재 세션에 대한 OAuth 토큰을 검색하고 표시합니다.
+현재 세션에 대한 OAuth 토큰 검색 및 표시
 
 ```
 bluemix iam oauth-tokens
@@ -2012,7 +2629,7 @@ bluemix iam oauth-tokens
 
 <strong>예제</strong>:
 
-OAuth 토큰을 새로 고치고 표시합니다.
+OAuth 토큰 새로 고치기 및 표시
 
 ```
 bluemix iam oauth-tokens
@@ -2021,7 +2638,7 @@ bluemix iam oauth-tokens
 ## bluemix iam dedicated-id-disconnect
 {: #bluemix_iam_dedicated_id_disconnect}
 
-전용 비-IBM ID와 공용 IBM ID 간의 연결을 끊습니다.
+전용 비IBM ID와 공용 IBM ID의 연결 끊기
 
 ```
 bluemix iam dedicated-id-disconnect [-f, --force]
@@ -2032,12 +2649,13 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>확인 없이 연결 끊기를 강제 실행합니다.</dd>
+  <dd>확인 없이 강제 연결 끊기</dd>
 </dl>
+
 
 ## bluemix iam authorization-policy-create
 {: #bluemix_iam_authorization_policy_create}
- 
+
 다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용하기 위한 권한 부여 정책을 작성합니다.
 
 ```
@@ -2055,7 +2673,7 @@ bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME 
   <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
   <dd>소스 서비스의 모든 인스턴스의 액세스 권한이 부여될 소스 서비스 인스턴스 이름(지정되지 않은 경우)입니다.</dd>
   <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>대상 서비스의 모든 인스턴스의 액세스 권한이 부여될 대상 서비스 인스턴스 이름(지정되지 않은 경우)입니다.   </dd>
+  <dd>대상 서비스의 모든 인스턴스의 액세스 권한이 부여될 대상 서비스 인스턴스 이름(지정되지 않은 경우)입니다.</dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>소스 서비스에 대한 액세스 권한을 제공하는 역할입니다.</dd>  
 </dl>
@@ -2073,16 +2691,16 @@ bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 
 <strong>명령 옵션</strong>:
 <dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>삭제될 권한 부여 정책의 ID입니다.</dd> 
- <dt>-f, --force</dt>
- <dd>확인 없이 삭제를 강제 실행합니다.</dd> 
+  <dt>AUTHORIZATION_POLICY_ID</dt>
+  <dd>삭제할 권한 정책의 ID입니다.</dd> 
+  <dt>-f, --force</dt>
+  <dd>확인 없이 삭제를 강제 실행합니다.</dd> 
 </dl>
 
 ## bluemix iam authorization-policy
 {: #bluemix_iam_authorization_policy}
 
-권한 부여 정책의 세부사항을 표시합니다.
+권한 정책의 세부사항을 표시합니다.
 
 ```
 bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
@@ -2092,8 +2710,8 @@ bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
 
 <strong>명령 옵션</strong>:
 <dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>표시할 권한 부여 정책의 ID입니다.</dd> 
+  <dt>AUTHORIZATION_POLICY_ID</dt>
+  <dd>표시할 권한 정책의 ID입니다.</dd> 
 </dl>
 
 
@@ -2107,6 +2725,7 @@ bluemix iam authorization-policies
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
+
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
@@ -2142,7 +2761,7 @@ bluemix resource groups --default
 ## bluemix resource group
 {: #bluemix_resource_group}
 
-리소스 그룹의 세부사항을 표시합니다.
+리소스 그룹의 세부사항 표시
 
 ```
 bluemix resource group NAME [--id]
@@ -2153,7 +2772,7 @@ bluemix resource group NAME [--id]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>NAME(필수)</dt>
-  <dd>리소스 그룹의 이름.</dd>
+  <dd>리소스 그룹의 이름</dd>
   <dt>--id</dt>
   <dd>ID만 표시</dd>
 </dl>
@@ -2176,7 +2795,7 @@ bluemix resource group example-group --id
 ## bluemix resource group-update
 {: #bluemix_resource_group_update}
 
-기존 리소스 그룹을 업데이트합니다.
+기존 리소스 그룹 업데이트
 
 ```
 bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
@@ -2187,13 +2806,13 @@ bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_
 <strong>명령 옵션</strong>:
 <dl>
   <dt>NAME(필수)</dt>
-  <dd>대상 리소스 그룹의 이름입니다.</dd>
+  <dd>대상 리소스 그룹의 이름</dd>
   <dt>-n, --name</dt>
-  <dd>리소스 그룹의 새 이름입니다.</dd>
+  <dd>리소스 그룹의 새 이름</dd>
   <dt>-q, --quota</dt>
-  <dd>새 할당량 정의의 이름입니다.</dd>
+  <dd>새 할당량 정의의 이름</dd>
   <dt>-f</dt>
-  <dd>확인 없이 업데이트를 강제 실행합니다.</dd>
+  <dd>확인 없이 강제 업데이트</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -2213,7 +2832,7 @@ bluemix resource group-update example-group -q free
 ## bluemix resource quotas
 {: #bluemix_resource_quotas}
 
-모든 할당량 정의를 나열합니다.
+모든 할당량 정의 나열
 
 ```
 bluemix resource quotas
@@ -2261,117 +2880,117 @@ bluemix resource quota free
 ## bluemix app push
 {: #bluemix_app_push}
 
-이 명령은 [cf push ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf push ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-이 명령은 [cf apps ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf apps ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-이 명령은 [cf app ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf app ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-이 명령은 [cf delete ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf delete ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-이 명령은 [cf rename ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf rename ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-이 명령은 [cf start ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf start ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-이 명령은 [cf stop ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf stop ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-이 명령은 [cf restart ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf restart ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-이 명령은 [cf restage ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf restage ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-이 명령은 [cf restart-app-instance ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf restart-app-instance ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-이 명령은 [cf events ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf events ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-이 명령은 [cf files ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf files ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-이 명령은 [cf logs ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf logs ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-이 명령은 [cf env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-이 명령은 [cf set-env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf set-env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-이 명령은 [cf unset-env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf unset-env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-이 명령은 [cf stacks ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf stacks ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app stack-show
 {: #bluemix_app_stack_show}
 
-이 명령은 [cf stack ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf stack ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-이 명령은 [cf create-app-manifest ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf create-app-manifest ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 ## bluemix app domain-cert
 {: #bluemix_app_domain_cert}
@@ -2458,13 +3077,13 @@ bluemix app domain-cert-remove DOMAIN [-f]
 ## bluemix app routes
 {: #bluemix_app_routes}
 
-이 명령은 [cf routes ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf routes ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app route-check
 {: #bluemix_app_route_check}
 
-이 명령은 [cf check-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf check-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app route-map
@@ -2544,140 +3163,140 @@ bluemix app route-unmap my-container-group chinabluemix.net -n abc
 ## bluemix app route-create
 {: #bluemix_app_route_create}
 
-이 명령은 [cf create-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf create-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app route-delete
 {: #bluemix_app_route_delete}
 
-이 명령은 [cf delete-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf delete-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app orphaned-routes-delete
 {: #bluemix_app_orphaned_routes_delete}
 
-이 명령은 [cf delete-orphaned-routes ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf delete-orphaned-routes ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app domains
 {: #bluemix_app_domains}
 
-이 명령은 [cf domains ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf domains ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app domain-create
 {: #bluemix_app_domain_create}
 
-이 명령은 [cf create-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf create-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app domain-delete
 {: #bluemix_app_domain_delete}
 
-이 명령은 [cf delete-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf delete-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app shared-domain-create
 {: #bluemix_app_shared_domain_create}
 
-이 명령은 [cf create-shared-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf create-shared-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix app shared-domain-delete
 {: #bluemix_app_shared_domain_delete}
 
-이 명령은 [cf delete-shared-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf delete-shared-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-이 명령은 [cf marketplace ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf marketplace ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-이 명령은 [cf services ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf services ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-이 명령은 [cf service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-이 명령은 [cf create-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf create-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-이 명령은 [cf update-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf update-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-이 명령은 [cf delete-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf delete-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-이 명령은 [cf rename-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf rename-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-이 명령은 [cf bind-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf bind-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-이 명령은 [cf unbind-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf unbind-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-이 명령은 [cf create-service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf create-service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-이 명령은 [cf delete-service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf delete-service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-이 명령은 [cf service-keys ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf service-keys ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-이 명령은 [cf service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-이 명령은 [cf create-user-provided-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf create-user-provided-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-이 명령은 [cf update-user-provided-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다. 
+이 명령은 [cf update-user-provided-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
 ## bluemix resource service-instances
@@ -2743,7 +3362,7 @@ bluemix resource service-instance my-service-instance
 서비스 인스턴스 작성
 
 ```
-bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2762,6 +3381,8 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
   <dd>태그</dd>
   <dt>-p, --parameters</dt>
   <dd>서비스 인스턴스를 작성하기 위한 매개변수의 JOSN 문자열 또는 JSON 파일</dd>
+  <dt>-d, --deployment</dt>
+  <dd>배치의 이름</dd>
 </dl>
 
 <strong>예</strong>:
@@ -2835,7 +3456,7 @@ bluemix resource service-instance-delete my-service-instance
 서비스 별명에 대한 바인딩 표시
 
 ```
-bluemix resource bindings SERVICE_ALIAS
+bluemix resource service-bindings SERVICE_ALIAS
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2886,7 +3507,7 @@ bluemix resource bindings my-service-alias my-app
 서비스 바인딩 작성
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id-name SERVICE_ID_NAME] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
+bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2899,8 +3520,8 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
   <dd>CloudFoundry 애플리케이션 이름</dd>
   <dt>ROLE_NAME</dt>
   <dd>사용자 역할의 이름</dd>
-  <dt>--service-id-name</dt>
-  <dd>역할이 속한 서비스 ID의 이름</dd>
+  <dt>--service-id</dt>
+  <dd>역할이 속한 서비스 ID의 UUID 또는 이름</dd>
   <dt>-p, --parameter</dt>
   <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
   <dt>-f, --force</dt>
@@ -3003,7 +3624,7 @@ bluemix resource service-key my-service-key
 서비스 키 작성
 
 ```
-bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id-name SERVICE_ID_NAME [-f, --force]]
+bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3022,8 +3643,10 @@ bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTA
   <dd>서비스 별명 ID</dd>
   <dt>--alias-name</dt>
   <dd>서비스 별명 이름</dd>
-  <dt>-service-id-name</dt>
-  <dd>역할이 속한 서비스 ID의 이름</dd>
+  <dt>--service-id</dt>
+  <dd>역할이 속한 서비스 ID의 UUID 또는 이름</dd>
+  <dt>-p, --parameters</dt>
+  <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 작성</dd>
 </dl>
@@ -3108,7 +3731,7 @@ bluemix resource service-alias ALIAS_NAME [--id]
 <strong>예</strong>:
 서비스 별명 `my-service-alias`의 세부사항 표시:
 ```
-bluemix resource service-aliase  my-service-alias
+bluemix resource service-alias  my-service-alias
 ```
 
 ## bluemix resource service-alias-create
@@ -3141,7 +3764,7 @@ bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance
 <strong>예</strong>:
 서비스 인스턴스 `my-service-instance`의 `my-service-alias`로 이름 지정된 서비스 별명 작성:
 ```
-bluemix resource service-aliase-create my-service-alias --instance-name my-service-instance
+bluemix resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
 ## bluemix resource service-alias-update
@@ -3200,6 +3823,91 @@ bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 
 ```
 bluemix resource service-alias-delete my-service-alias
+```
+
+## bluemix resource search
+{: #bluemix_resource_search}
+Lucene 조회 구문을 사용하여 리소스 검색
+
+```
+bluemix search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>-offset, --o</dt>
+  <dd>시작 리소스 위치 번호</dd>
+  <dt>-limit, --l</dt>
+  <dd>리턴할 리소스의 수(최대 10000)</dd>
+</dl>
+
+<strong>예제</strong>:
+이름이 지정된 텍스트로 시작하는 Cloud Foundry 애플리케이션 검색:
+
+```
+bluemix resource search 'name:my* AND type:cf-application'
+```
+
+지정된 서비스 이름의 Cloud Foundry 서비스 인스턴스 검색:
+
+```
+bluemix resource search 'service_name:messagehub AND type:cf-service-instance'
+```
+
+지정된 ID의 조직에서 Cloud Foundry 서비스 바인딩 검색:
+
+```
+bluemix resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
+```
+
+지정된 두 지역 중 하나에 있으며 지정된 이름을 가진 Cloud Foundry 영역 검색:
+
+```
+bluemix resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
+```
+
+지정된 ID를 가진 Cloud Foundry 영역에서 이름에 단어 dev가 포함된 리소스 검색:
+
+```            
+bluemix resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
+```
+
+지정된 위치(즉, 미국 남부 지역)에서 리소스 제어기의 리소스 검색:
+
+```
+bluemix resource search 'region:us-south AND family:resource_controller'
+```
+
+지정된 ID를 가진 리소스 그룹에서 리소스 또는 별명 검색:
+
+```
+bluemix resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
+```
+
+이름이 기본값인 리소스 그룹 검색:
+
+```
+bluemix resource search 'name:default AND type:resource-group'
+```
+
+지정된 서비스 이름에 대한 리소스 바인딩 검색:
+
+```
+bluemix resource search 'service_name:cloud-object-storage AND type:resource-binding'
+```
+
+지정된 클라우드 리소스 이름(CRN)의 리소스 검색:
+
+```
+bluemix resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
+```
+
+지정된 태그가 있는 리소스 검색:
+
+```
+bluemix resource search "tags:\"mykey:myvalue\""
 ```
 
 ## bluemix catalog search
@@ -3328,7 +4036,7 @@ bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 JSON 파일에서 리소스 `j402-dnf1i` 업데이트:
 
 ```
-bluemix update 'j402-dnf1i' -c @update.json
+bluemix catalog entry-update 'j402-dnf1i' -c @update.json
 ```
 
 ## bluemix catalog entry-delete
@@ -3570,10 +4278,51 @@ bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--jso
   <dd>출력 CSV 파일</dd>
 </dl>
 
+## bluemix catalog runtime
+{: #bluemix_catalog_runtime}
+
+런타임의 세부사항을 봅니다. 이 명령은 퍼블릭 클라우에서만 사용할 수 있습니다.
+
+```
+bluemix catalog runtime RUNTIME_ID
+```
+
+<strong>예제</strong>:
+
+"nodejsHelloWorld" 런타임의 세부사항 표시:
+
+```
+catalog runtime nodejsHelloWorld
+```
+
+## bluemix catalog runtimes
+{: #bluemix_catalog_runtimes}
+
+모든 런타임을 나열합니다. 이 명령은 퍼블릭 클라우에서만 사용할 수 있습니다.
+
+```
+bluemix catalog runtimes [-d]
+```
+
+<strong>명령 옵션</strong>:
+
+<dl>
+  <dt>-d</dt>
+  <dd>각 런타임의 설명 표시</dd>
+</dl>
+
+<strong>예제</strong>:
+
+모든 런타임을 설명과 함께 나열:
+
+```
+bluemix catalog runtimes -d
+```
+
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-현재 계정의 월별 사용량 및 비용을 표시합니다.
+현재 계정의 월별 사용량 표시(계정 관리자만)
 
 ```
 bluemix billing account-usage [-d YYYY-MM] [--json]
@@ -3592,7 +4341,7 @@ bluemix billing account-usage [-d YYYY-MM] [--json]
 
 <strong>예제</strong>:
 
-2016년 6월에 현재 계정의 사용량 및 비용 보고서를 표시합니다.
+2016년 6월에 현재 계정의 사용량 및 비용 보고서 표시:
 
 ```
 bluemix billing account-usage -d 2016-06
@@ -3601,7 +4350,7 @@ bluemix billing account-usage -d 2016-06
 ## bluemix billing org-usage
 {: #bluemix_billing_org_usage}
 
-조직의 월별 사용량을 표시합니다. 계정 소유자 또는 조직 청구 관리자만 이 조작을 수행할 수 있습니다.
+조직의 월별 사용량 표시(계정 관리자 또는 조직 청구 관리자만)
 
 ```
 bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
@@ -3621,11 +4370,10 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 </dl>
 
 
-
 ## bluemix billing resource-group-usage
 {: #bluemix_billing_resource_group_usage}
 
-리소스 그룹의 월별 사용량을 표시합니다. 계정 소유자 또는 리소스 그룹 청구 관리자만 이 조작을 수행할 수 있습니다.
+리소스 그룹의 월별 사용량 표시(계정 관리자 또는 리소스 그룹 관리자만)
 
 ```
 bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
@@ -3646,28 +4394,27 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 
 ## bluemix billing resource-instances-usage
 {: #bluemix_billing_resource_instances_usage}
- 
- 현재 계정의 월별 리소스 인스턴스 사용량을 표시합니다.
- 
- ```
- bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
- ```
- 
- <strong>전제조건</strong>: 엔드포인트, 로그인
- 
- <strong>명령 옵션</strong>:
- 
- <dl>
-   <dt>-o ORG_NAME(선택사항)</dt>
-   <dd>조직으로 인스턴스를 필터링합니다.</dd>
-   <dt>-g GROUP_NAME</dt>
-   <dd>리소스 그룹으로 인스턴스를 필터링합니다.</dd>
-   <dt>-d MONTH_DATE(선택사항)</dt>
-   <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
-   <dt>--json(선택사항)</dt>
-   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
- </dl>
 
+현재 계정의 월별 리소스 인스턴스 사용량을 표시합니다.
+
+```
+ bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+
+<dl>
+  <dt>-o ORG_NAME(선택사항)</dt>
+  <dd>조직으로 인스턴스를 필터링합니다.</dd>
+  <dt>-g GROUP_NAME</dt>
+  <dd>리소스 그룹으로 인스턴스를 필터링합니다.</dd>
+  <dt>-d MONTH_DATE(선택사항)</dt>
+  <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dt>--json(선택사항)</dt>
+  <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
+</dl>
 
 ## bluemix plugin repos
 {: #bluemix_plugin_repos}
@@ -3757,7 +4504,7 @@ bluemix plugin repo-plugins [-r REPO_NAME]
 
 <strong>예제</strong>:
 
-추가된 모든 저장소의 모든 플러그인 나열:
+모든 추가된 저장소의 플러그인을 나열합니다.
 
 ```
 bluemix plugin repo-plugins
@@ -3789,16 +4536,16 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
 <strong>예제</strong>:
 
-저장소 'Bluemix'의 플러그인 "container-service"의 세부사항 나열:
+"sample-repo" 저장소의 "IBM-Containers" 플러그인 세부사항 나열:
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-기본 저장소 'Bluemix'의 플러그인 "container-service"의 세부사항을 나열합니다.
+기본 저장소의 "IBM-Containers" 플러그인 세부사항 나열
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
 
@@ -3816,7 +4563,7 @@ bluemix plugin list
 ## bluemix plugin show
 {: #bluemix_plugin_show}
 
-설치된 플러그인의 세부사항 표시
+설치된 플러그인의 세부사항을 표시합니다.
 
 ```
 bluemix plugin show PLUGIN-NAME
@@ -3835,7 +4582,7 @@ bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
 
 ```
-bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
+bx plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
@@ -3855,9 +4602,9 @@ bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
    <dt>-f </dt>
    <dd>확인 없이 플러그인 설치를 강제 실행합니다.</dd>
     </dl>
-    
-    
-{{site.data.keyword.Bluemix_notm}} CLI의 공식 저장소 이름은 'Bluemix'입니다.    
+
+
+{{site.data.keyword.Bluemix_notm}} CLI에 `Bluemix`의 공식 저장소 이름이 있습니다.
 
 <strong>예제</strong>:
 
@@ -3878,6 +4625,13 @@ bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 bluemix plugin install container-service -r Bluemix
 ```
+
+또는 단순히
+
+```
+bluemix plugin install container-service
+```
+
 공식 플러그인 저장소에서 버전 '0.1.425'의 'container-service' 플러그인 설치:
 
 ```
@@ -3916,6 +4670,12 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 ```
 bluemix plugin update -r Bluemix
+```
+
+또는 단순히
+
+```
+bluemix plugin update
 ```
 
 공식 플러그인 저장소의 플러그인 'container-service'를 최신으로 업그레이드:

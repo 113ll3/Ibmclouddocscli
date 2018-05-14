@@ -58,7 +58,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 
   CocoaPods 사용에 대한 자세한 정보는 [CocoaPods 안내서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://guides.cocoapods.org/using/index.html){: new_window}를 참조하십시오.
 
-2. Carthage를 사용하여 `BMSCore`를 설치하려면 다음 [지시사항 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#getting-started){: new_window}을 참조하십시오. 
+2. Carthage를 사용하여 `BMSCore`를 설치하려면 다음 [지시사항 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#getting-started){: new_window}을 참조하십시오.
 
   1. Cartfile에 다음 행을 추가하십시오.
 
@@ -69,7 +69,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 
   2. `carthage update` 명령을 실행하십시오.
 
-  3. 빌드가 완료된 후 Carthage 지시사항의 [3단계 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#getting-started)를 수행하여 프로젝트에 `BMSCore.framework`를 추가하십시오. 
+  3. 빌드가 완료된 후 Carthage 지시사항의 [3단계 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#getting-started)를 수행하여 프로젝트에 `BMSCore.framework`를 추가하십시오.
 
       Swift 2.3으로 빌드된 애플리케이션의 경우, `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 명령을 사용하십시오. 그 외에는 `carthage update` 명령을 사용하십시오.
 
@@ -95,14 +95,14 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 ## Cordova 애플리케이션 초기화
 {: #init-BMSClient-cordova}
 
-1. Cordova 애플리케이션 루트 디렉토리에서 다음 명령을 실행하여 Cordova 플러그인을 추가하십시오. 
+1. Cordova 애플리케이션 루트 디렉토리에서 다음 명령을 실행하여 Cordova 플러그인을 추가하십시오.
 
   ```
   cordova plugin add bms-core
   ```
   {: codeblock}
 
-2. 프로젝트에 대해 최적으로 작동하는 위치 또는 기본 JavaScript 파일에 초기화 코드를 추가하여 Cordova 애플리케이션에서 `BMSClient` 클래스를 초기화하십시오. 
+2. 프로젝트에 대해 최적으로 작동하는 위치 또는 기본 JavaScript 파일에 초기화 코드를 추가하여 Cordova 애플리케이션에서 `BMSClient` 클래스를 초기화하십시오.
 
   ```
   BMSClient.initialize(BMSClient.REGION_US_SOUTH);

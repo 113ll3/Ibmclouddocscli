@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-08"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-01-08"
 {: #bluemixadmincli}
 
 
-{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인에 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 로컬 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경을 관리할 수 있습니다. 예를 들어, LDAP 레지스트리에서 사용자를 추가할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭 계정 관리에 대한 정보를 찾는 경우 [관리](/docs/admin/adminpublic.html#administer)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인에 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 로컬 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경을 관리할 수 있습니다. 예를 들어, LDAP 레지스트리에서 사용자를 추가할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭의 계정 관리에 대한 정보는 [관리](/docs/admin/adminpublic.html#administer)를 참조하십시오.
 
 시작하기 전에 cf 명령행 인터페이스를 설치하십시오. {{site.data.keyword.Bluemix_notm}} 관리
 CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다. [Cloud Foundry 명령행 인터페이스 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
@@ -34,7 +34,7 @@ cf 명령행 인터페이스가 설치된 후에
 {{site.data.keyword.Bluemix_notm}} 관리 CLI
 플러그인을 추가할 수 있습니다.
 
-**참고**: 이전에 {{site.data.keyword.Bluemix_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 다시 설치해야 할 수도 있습니다.
+**참고**: 이전에 {{site.data.keyword.Bluemix_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 다시 설치해야 합니다.
 
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 
@@ -130,7 +130,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ### {{site.data.keyword.Bluemix_dedicated_notm}}에서 사용자 초대
 {: #admin_dedicated_invite_public}
 
-각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.Bluemix_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [데디케이티드에 IBM Cloud Container 서비스 설정](/docs/containers/cs_dedicated.html#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
+각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.Bluemix_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [IBM Cloud Container Service on Dedicated 설정](/docs/containers/cs_dedicated.html#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
 
 ```
 cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>

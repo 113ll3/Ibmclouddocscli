@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-02-01"
+lastupdated: "2018-04-16"
 ---
 
 {:new_window: target="_blank"}
@@ -141,7 +141,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
   <td>[bluemix sl file volume-detail](/docs/cli/reference/softlayer/index.html#sl_file_volume_detail)</td>
    </tr>
  <tr>
-   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate</td>
+   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate)</td>
    <td>[bluemix sl file volume-list](/docs/cli/reference/softlayer/index.html#sl_file_volume_list)</td>
    <td>[bluemix sl file volume-order](/docs/cli/reference/softlayer/index.html#sl_file_volume_order)</td>
    <td>[bluemix sl file volume-options](/docs/cli/reference/softlayer/index.html#sl_file_volume_options)</td>
@@ -397,9 +397,9 @@ bluemix sl init [OPTIONS]
 예: {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
 ```
 $ bluemix sl config
-{{site.data.keyword.BluSoftlayer_notm}} 인프라 인증을 구성하는 방법 선택:
-1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
-2. {{site.data.keyword.Bluemix_notm}} Single-Sign-On 사용
+Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 Enter a number>1
 Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
 Username: []> wangjunl@cn.ibm.com
@@ -425,14 +425,14 @@ User:           wangjunl@cn.ibm.com
 Account:        Wilma's Account (65ce8074c6c62b5)   
 No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 
-팁: 'bx cf <command>'를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry CLI를 실행할 수 있습니다.
+Tip: use 'bx cf <command>' to run the Cloud Foundry CLI with {{site.data.keyword.Bluemix_notm}} CLI context.
 ```
 
 ```
 $ bx sl init
 Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
-1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
-2. {{site.data.keyword.Bluemix_notm}} Single-Sign-On 사용
+1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 
 Enter a number: 2
 Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1] 
@@ -2521,7 +2521,7 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
  bluemix sl subnet create public 16 567
 ```
-이 명령은 16개의 IP v4 주소를 사용하여 공용 서브넷을 작성하고 ID 567인 VLAN에 배치합니다.
+이 명령은 16개의 IP v4 주소를 사용하여 공인 서브넷을 작성하고 ID 567인 VLAN에 배치합니다.
 
 ### bluemix sl subnet detail 
 {: #sl_subnet_detail} 
@@ -3092,7 +3092,7 @@ VLAN 작성을 위한 모든 옵션을 나열합니다.
 <dt>--hard</dt>
 <dd>하드 재부팅 수행.</dd>
 <dt>--soft</dt>
-<dd>하드 재부팅 수행.</dd>
+<dd>소프트 재부팅 수행.</dd>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>

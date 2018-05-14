@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-02-15"
 **참고:** {{site.data.keyword.Bluemix_notm}} 영역에서 사설 네트워크 피어링을 사용한 후에 해당 영역을 삭제해야 하는 경우에는 우선 해당 영역에서 사설 네트워크 피어링 연결을 삭제하십시오.
 
 시작하려면 {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 세부사항은
-[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)를 참조하십시오.
+[IBM Cloud CLI](http://clis.ng.bluemix.net/ui/home.html)를 참조하십시오.
 
 ## 사설 네트워크 피어링 CLI 플러그인 설치
 

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-02-14"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+
 
 
 # {{site.data.keyword.Bluemix_notm}} CLI 시작하기
@@ -24,9 +25,10 @@ lastupdated: "2018-02-14"
 
 1. 다운로드할 OS의 설치 프로그램 선택
    
-   Mac OS X 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window}/[체크섬](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
-   Windows 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window}/[체크섬](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
-   Linux 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window}/[체크섬](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Mac OS X 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
+   Windows 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
+   Linux X86 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Linux PowerPC LE 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
   
    **32비트 릴리스 및 이전 버전은 [여기서](all_versions.html) 찾을 수 있습니다.
 
@@ -34,12 +36,14 @@ lastupdated: "2018-02-14"
    * macOS 및 Windows의 경우 설치 프로그램을 실행하십시오.
    * Linux의 경우 패키지의 압축을 풀고 `install_bluemix_cli` 스크립트를 실행하십시오.
 
-1. API 엔드포인트를 대상으로 지정하고 `bx login` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.
-  
+1. API 엔드포인트를 대상으로 지정 및 {{site.data.keyword.Bluemix_notm}}에 로그인
 
   ![예제](example.gif){: gif}
 
 이제 {{site.data.keyword.Bluemix_notm}} 리소스를 관리할 준비가 되었습니다. 명령에 대한 설명을 보려면 `bluemix help` 또는 `bx help`를 입력하십시오. 
+
+연합 ID를 사용하는 경우 [여기](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)의 지시사항을 따라 일회성 패스코드 또는 API 키로 로그인
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} CLI를 자세히 살펴보기 위한 기타 링크
 
