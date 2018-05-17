@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -44,12 +44,22 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* Note: Open Windows PowerShell by right-clicking and select "Run as Administrator".
+* Note: Open Windows PowerShell by right-clicking the PowerShell icon and selecting "Run as Administrator".
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
+
+## Verify Installation
+To verify installation, run the `help` command:
+
+```
+bx dev help
+```
+{: codeblock}
+
+If installation was successful, the output should list usage instructions, the current version, and supported commands.
 
 
 ## Other links to further explore {{site.data.keyword.dev_cli_notm}}
@@ -60,3 +70,5 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 - [CLI Plug-ins](/docs/cli/reference/bluemix_cli/extend_cli.html)
 - [VSCode IDE Extension](/docs/cli/idt/vscode.html)
 - [Install IBM Cloud CLI Manually](/docs/cli/reference/bluemix_cli/get_started.html)
+- [Report issues on GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
