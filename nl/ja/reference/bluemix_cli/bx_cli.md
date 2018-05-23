@@ -1286,9 +1286,9 @@ bluemix iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>-u</dt>
-  <dd>ユーザーが所属するアクセス・グループをリストします。このフラグと '-s' を同時に指定することはできません。</dd>
+  <dd>ユーザーが所属するアクセス・グループをリストします。 このフラグと '-s' を同時に指定することはできません。</dd>
   <dt>-s</dt>
-  <dd>サービス ID が所属するアクセス・グループをリストします。このフラグと '-u' を同時に指定することはできません。</dd>
+  <dd>サービス ID が所属するアクセス・グループをリストします。 このフラグと '-u' を同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -4283,7 +4283,7 @@ bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--jso
 ## bluemix catalog runtime
 {: #bluemix_catalog_runtime}
 
-ランタイムの詳細を表示します。このコマンドは、パブリック・クラウドにのみ使用可能です。
+ランタイムの詳細を表示します。 このコマンドは、パブリック・クラウドにのみ使用可能です。
 
 ```
 bluemix catalog runtime RUNTIME_ID
@@ -4300,7 +4300,7 @@ catalog runtime nodejsHelloWorld
 ## bluemix catalog runtimes
 {: #bluemix_catalog_runtimes}
 
-すべてのランタイムをリストします。このコマンドは、パブリック・クラウドにのみ使用可能です。
+すべてのランタイムをリストします。 このコマンドは、パブリック・クラウドにのみ使用可能です。
 
 ```
 bluemix catalog runtimes [-d]

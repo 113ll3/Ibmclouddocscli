@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
-CLI 및 개발 도구
+IBM Cloud Developer Tools(CLI 및 개발 도구)
 
 	{: .navgroup id="learn"}
 	index.md
@@ -21,6 +21,7 @@ CLI 및 개발 도구
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
+		[IDT에 대한 문제점 해결](../troubleshoot/ts_createapps.html)
         	
 	{: .topicgroup}
 	모바일용 SDK
@@ -44,10 +45,9 @@ CLI 및 개발 도구
 	IBM Cloud CLI 플러그인
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
-		plugins/registry/index.md
-		[컨테이너 서비스](../containers/cs_cli_devtools.html)
+		[Container Registry CLI](../services/Registry/registry_cli.html)
+		[Container Service CLI](../containers/cs_cli_devtools.html)
  		plugins/pnp/index.md
-		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 
 	{: .topicgroup}
@@ -59,8 +59,8 @@ CLI 및 개발 도구
 	{: .topicgroup}
 	권장 개발 환경
 		[Eclipse 도구로 개발](../starters/deploy_eclipsetools.html)
-		[IBM Cloud용 IBM Eclipse Tools로 앱 개발](../manageapps/eclipsetools/eclipsetools.html)
+		[IBM Eclipse Tools for IBM Cloud로 앱 개발](../manageapps/eclipsetools/eclipsetools.html)
 		[Liberty 및 Node.js 앱 관리](../runtimes/common/app_mng.html#app_management)
 		[API Connect 개발자 툴킷](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
-		[IBM Cloud 실시간 동기화](../services/ContinuousDelivery/bluemixlive.html)
+		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
 	{: .navgroup-end}

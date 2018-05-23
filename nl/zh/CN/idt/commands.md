@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -362,7 +365,7 @@ bx dev run
 以下参数是 `run` 命令独有的，可帮助管理 run 容器内的应用程序。有[更多参数](#command-parameters)与其他命令共享。
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * run 容器的容器名称。
 * 用法：`bx dev run --container-name-run [<projectName>]`
@@ -564,7 +567,7 @@ bx dev view
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * 参数（可选），用于定义将容器部署设定为目标时 Kubernetes 集群的名称
 * 用法：`bx dev view --ibm-cluster [cluster-name]`
@@ -604,13 +607,13 @@ bx dev build/deploy/view -t container --trace
 * 用法：`bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * run 容器的容器名称。
 * 用法：`bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * tools 容器的容器名称。
 * 用法：`bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

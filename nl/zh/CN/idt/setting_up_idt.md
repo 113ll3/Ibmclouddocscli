@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -16,22 +16,22 @@ lastupdated: "2018-04-17"
 # 设置 {{site.data.keyword.dev_cli_notm}} CLI
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} CLI 是一种命令行方法，用于为希望使用命令行来开发端到端 Web、移动和微服务应用程序的开发者创建、开发和部署应用程序。
+{{site.data.keyword.dev_cli_short}} CLI 是一种命令行方法，用于为那些想要使用命令行来开发端到端 Web、移动和微服务应用程序的开发者创建、开发和部署应用程序。通过运行以下其中一个脚本来快速开始使用建议的工具集。
 {: shortdesc}
 
-## 先决条件
+## {{site.data.keyword.dev_cli_notm}} 的先决条件
 {: #prereq}
 
-注册 [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net)。
+注册 [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration)。
 
 *  如果使用的是 Microsoft Windows&trade;，那么必须使用 Windows 10 或更高版本。
 
 * 您必须使用 Docker 的稳定通道，最低版本为 1.13.1。
 
-## 安装
+## 如何安装 {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
-要安装工具，可以运行相关命令来启动安装程序。这还将安装依赖项，例如 IBM Cloud CLI、Kubernetes、Helm 和 Docker。要进行安装，请使用以下安装步骤：
+要安装工具集，可以运行相关命令来启动安装程序。这将安装用于 {{site.data.keyword.Bluemix_notm}} 开发的以下建议工具（如果尚未安装）：`Homebrew`（仅限 Mac）、`Git`、`Docker`、`Helm`、`kubectl`、`curl`、{{site.data.keyword.Bluemix_notm}} CLI、{{site.data.keyword.dev_cli_notm}} 插件、Cloud Functions 插件、Container Registry 插件、Container Service 插件和 `sdk-gen` 插件。要进行安装，请使用以下安装步骤：
 
 **Mac 和 Linux：**
 
@@ -50,6 +50,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+[重新安装工具](/docs/troubleshoot/ts_createapps.html#appendix)部分包含有关单独安装所有依赖项的信息。
+
 通过运行以下命令，验证插件安装是否成功：  
 
 ```
@@ -60,7 +62,7 @@ bx dev
 ## 配置环境
 {: #configure-environment}
 
-1. 连接到您的 [{{site.data.keyword.Bluemix_notm}} 区域](/docs/overview/cf.html#ov_intro_reg)中的 API 端点。例如，输入以下命令来连接到 {{site.data.keyword.Bluemix_notm}} 美国南部区域：
+1. 连接到您的 {{site.data.keyword.Bluemix_notm}} 区域中的 API 端点。例如，输入以下命令来连接到 {{site.data.keyword.Bluemix_notm}} 美国南部区域：
 
 	```
 	bx api https://api.ng.bluemix.net

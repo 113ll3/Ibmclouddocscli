@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -14,33 +14,49 @@ lastupdated: "2018-04-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# CLI 和工具概述
+# {{site.data.keyword.dev_cli_notm}} 概述
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} 提供了稳健的 CLI 以及带有与该 CLI 集成的开发者工具扩展的插件。
+{{site.data.keyword.dev_cli_notm}} 是一种命令行方法，用于为那些想要使用命令行来开发端到端 Web、移动和微服务应用程序的开发者创建、开发和部署应用程序。通过运行以下其中一个脚本来快速开始使用建议的工具集。
+{: shortdesc} 
 
-## {{site.data.keyword.Bluemix_notm}} CLI
-{: #cli}
+## {{site.data.keyword.dev_cli_notm}} 的先决条件
+{: #prereq}
 
-{{site.data.keyword.Bluemix}} CLI 提供了管理 {{site.data.keyword.Bluemix_notm}} 环境中资源的命令行体验。其安装中还会包含 Cloud Foundry 命令行界面 (cf)，用于管理 Cloud Foundry 应用程序和服务。
-{:shortdesc}
+注册 [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration)。
 
-单击某个选项以开始：
+* 如果使用的是 Microsoft Windows&trade;，那么必须使用 Windows 10 或更高版本。
 
-<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="单击某个图标可快速开始使用 {{site.data.keyword.Bluemix_notm}} CLI。" style="width:440px;" />
-<map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="下载 {{site.data.keyword.Bluemix_notm}} CLI（打开新页面）" title="下载" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="入门（打开新页面）" title="入门" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="查看文档（打开新页面）" title="查看文档" shape="rect" coords="326, -10, 448, 218" />
-</map>
+* 您必须使用 Docker 的稳定通道，最低版本为 1.13.1。
 
-## {{site.data.keyword.dev_cli_notm}} CLI
-{: #idt}
+## 如何安装 {{site.data.keyword.dev_cli_notm}}
+{: #installation}
 
-{{site.data.keyword.dev_cli_long}} CLI (IDT) 提供了特定于开发者的 {{site.data.keyword.Bluemix}} CLI 扩展 (`bx dev`)，用于创建、构建和部署云本机应用程序。安装 IDT 包括安装基本 {{site.data.keyword.Bluemix_notm}} CLI、多个扩展以及所有系统必备软件。IDT 还为多个 IDE 提供扩展，以便直接访问 CLI 命令。
-{:shortdesc}
+要安装工具集，可以运行相关命令来启动安装程序。这将安装用于 {{site.data.keyword.Bluemix_notm}} 开发的以下建议工具（如果尚未安装）：`Homebrew`（仅限 Mac）、`Git`、`Docker`、`Helm`、`kubectl`、`curl`、{{site.data.keyword.Bluemix_notm}} CLI、{{site.data.keyword.dev_cli_notm}} 插件、Cloud Functions 插件、Container Registry 插件、Container Service 插件和 `sdk-gen` 插件。
 
-- [概述和安装](/docs/cli/idt/index.html)
-- [入门](/docs/cli/idt/index.html)
+**Mac 和 Linux：**
+
+```
+curl -sL https://ibm.biz/idt-installer | bash
+```
+{: codeblock}
+
+
+**Windows 10：**
+
+* 注：通过右键单击并选择“以管理员身份运行”来打开 Windows PowerShell。
+
+```
+Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+```
+{: codeblock}
+
+
+## 用于进一步探索 {{site.data.keyword.dev_cli_notm}} 的其他链接
+
+- [详细设置](/docs/cli/idt/setting_up_idt.html)
+- [用法](/docs/cli/idt/index.html)
 - [命令](/docs/cli/idt/commands.html)
-- [云本机开发](/docs/cli/index.html)
+- [CLI 插件](/docs/cli/reference/bluemix_cli/extend_cli.html)
+- [VSCode IDE 扩展](/docs/cli/idt/vscode.html)
+- [手动安装 IBM Cloud CLI](/docs/cli/reference/bluemix_cli/get_started.html)

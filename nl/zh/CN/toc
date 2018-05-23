@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
-CLI 和开发工具
+IBM Cloud Developer Tools（CLI 和 Dev Tools）
 
 	{: .navgroup id="learn"}
 	index.md
@@ -21,6 +21,7 @@ CLI 和开发工具
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
+		[有关 IDT 的故障诊断](../troubleshoot/ts_createapps.html)
         	
 	{: .topicgroup}
 	SDKs for Mobile
@@ -44,10 +45,9 @@ CLI 和开发工具
 	IBM Cloud CLI 插件
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
-		plugins/registry/index.md
-		[Container Service](../containers/cs_cli_devtools.html)
+		[Container Registry CLI](../services/Registry/registry_cli.html)
+		[Container Service CLI](../containers/cs_cli_devtools.html)
  		plugins/pnp/index.md
-		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 
 	{: .topicgroup}

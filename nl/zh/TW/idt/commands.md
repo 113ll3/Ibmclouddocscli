@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -362,7 +365,7 @@ bx dev run
 下列參數專用於 `run` 指令，並且可協助您在 run 容器內管理您的應用程式。還有[其他參數](#command-parameters)與其他指令共用。
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * run 容器的容器名稱。
 * 用法：`bx dev run --container-name-run [<projectName>]`
@@ -564,7 +567,7 @@ bx dev view
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * 以容器部署為目標時，選擇性地用來定義 Kubernetes 叢集名稱的參數
 * 用法：`bx dev view --ibm-cluster [cluster-name]`
@@ -604,13 +607,13 @@ bx dev build/deploy/view -t container --trace
 * 用法：`bx dev<build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * run 容器的容器名稱。
 * 用法：`bx dev<run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * tools 容器的容器名稱。
 * 用法：`bx dev<build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

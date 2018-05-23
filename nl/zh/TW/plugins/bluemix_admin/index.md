@@ -17,13 +17,13 @@ lastupdated: "2018-04-17"
 {: #bluemixadmincli}
 
 
-您可以搭配使用 Cloud Foundry 指令行介面與 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，來管理「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」環境。例如，您可以從 LDAP 登錄新增使用者。如需管理「{{site.data.keyword.Bluemix_notm}} 公用」帳戶的相關資訊，請參閱[管理](/docs/admin/adminpublic.html#administer)。
+您可以搭配使用 Cloud Foundry 指令行介面與 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，來管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 環境。例如，您可以從 LDAP 登錄新增使用者。如需管理 {{site.data.keyword.Bluemix_notm}} Public 帳戶的相關資訊，請參閱[管理](/docs/admin/adminpublic.html#administer)。
 
 在開始之前，請先安裝 cf 指令行介面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **限制：**Cygwin 不支援 Cloud Foundry 指令行介面。請在非 Cygwin 指令行視窗的指令行視窗中使用 Cloud Foundry 指令行介面。
 
-**附註**：{{site.data.keyword.Bluemix_notm}} 管理 CLI 僅適用於「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」環境。「{{site.data.keyword.Bluemix_notm}} 公用」則不予支援。
+**附註**：{{site.data.keyword.Bluemix_notm}} 管理 CLI 僅適用於 {{site.data.keyword.Bluemix_notm}} Local 及 {{site.data.keyword.Bluemix_notm}} Dedicated 環境。{{site.data.keyword.Bluemix_notm}} Public 則不予支援。
 
 ## 新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 

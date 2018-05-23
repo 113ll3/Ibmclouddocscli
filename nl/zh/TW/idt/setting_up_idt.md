@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -16,22 +16,22 @@ lastupdated: "2018-04-17"
 # 設定 {{site.data.keyword.dev_cli_notm}} CLI
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} CLI 是一種指令行方法，可針對想要使用指令行開發端對端 Web、行動及微服務應用程式的開發人員建立、開發及部署應用程式。
+{{site.data.keyword.dev_cli_short}} CLI 是一種指令行方法，可針對想要使用指令行開發端對端 Web、行動及微服務應用程式的開發人員建立、開發及部署應用程式。執行下列其中一個 Script，以快速開始使用建議的工具集。
 {: shortdesc}
 
-## 必要條件
+## {{site.data.keyword.dev_cli_notm}} 的必要條件
 {: #prereq}
 
-註冊 [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net)。
+註冊 [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration)。
 
 *  如果您是使用 Microsoft Windows&trade;，則必須使用 Windows 10 或更新版本。
 
 * 您必須使用適用於 Docker 的穩定通道，而最低版本為 1.13.1。
 
-## 安裝
+## 如何安裝 {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
-若要安裝此工具，您可以執行相關的指令來啟動安裝程式。這也會安裝相依關係，例如 IBM Cloud CLI、Kubernetes、Helm 及 Docker。若要進行安裝，請使用下列安裝步驟：
+若要安裝工具集，您可以執行相關的指令來啟動安裝程式。這會安裝 {{site.data.keyword.Bluemix_notm}} 開發的下列建議工具（如果尚未安裝的話）：`Homebrew`（僅限 Mac）、`Git`、`Docker`、`Helm`、`kubectl`、`curl`、{{site.data.keyword.Bluemix_notm}} CLI、{{site.data.keyword.dev_cli_notm}} 外掛程式、Cloud Functions 外掛程式、Container Registry 外掛程式、Container Service 外掛程式，及 `sdk-gen` 外掛程式。若要進行安裝，請使用下列安裝步驟：
 
 **Mac 及 Linux：**
 
@@ -50,6 +50,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+[重新安裝工具](/docs/troubleshoot/ts_createapps.html#appendix)一節包含個別安裝所有相依關係的資訊。
+
 執行下列指令，以驗證成功的外掛程式安裝：  
 
 ```
@@ -60,7 +62,7 @@ bx dev
 ## 配置環境
 {: #configure-environment}
 
-1. 連接至 [{{site.data.keyword.Bluemix_notm}} 地區](/docs/overview/cf.html#ov_intro_reg)中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 美國南部地區：
+1. 連接至 {{site.data.keyword.Bluemix_notm}} 地區中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 美國南部地區：
 
 	```
 	bx api https://api.ng.bluemix.net
@@ -125,6 +127,6 @@ bx dev
 
 **部落格及指導教學**
 
-- [使用 IBM Cloud Developer Tools CLI 部署至 IBM Cloud 專用](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
-- [使用 IBM Cloud Developer Tools CLI 啟用 IBM Cloud 的現有專案](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
-- [使用 IBM Cloud Developer Tools CLI 部署至 IBM Cloud 上的 Kubernetes](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
+- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
+- [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

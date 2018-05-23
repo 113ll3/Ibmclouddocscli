@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -363,7 +366,7 @@ bx dev run
 다른 명령과 공유하는 [추가 매개변수](#command-parameters)도 있습니다.
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * run 컨테이너의 컨테이너 이름입니다.
 * 사용법: `bx dev run --container-name-run [<projectName>]`
@@ -565,7 +568,7 @@ bx dev view
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * 컨테이너 배치를 대상으로 하는 경우에서 Kubernetes 클러스터의 이름을 정의하기 위해 선택적으로 사용되는 매개변수입니다.
 * 사용법: `bx dev view --ibm-cluster [cluster-name]`
@@ -605,13 +608,13 @@ bx dev build/deploy/view -t container --trace
 * 사용법: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * run 컨테이너의 컨테이너 이름입니다.
 * 사용법: `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * tools 컨테이너의 컨테이너 이름입니다.
 * 사용법: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

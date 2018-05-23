@@ -42,7 +42,7 @@ IBM Developers Tools 확장은 설치하는 가장 간단한 방법은 Visual St
 
 또는 "확장" 관리 창을 통해 IBM Developer Tools 확장을 설치할 수 있습니다.
 
-1. Visual Studio Code 편집기의 내부에서 **확장** 사이드바를 연 후에 `publisher:IBM Developer` 문자열을 사용하여 검색하십시오. IBM Developer Tools 확장이 검색 결과에 표시됩니다.  
+1. Visual Studio Code 편집기의 내부에서 **확장** 사이드바를 연 후에 `publisher:IBM Developer` 문자열을 사용하여 검색하십시오.  IBM Developer Tools 확장이 검색 결과에 표시됩니다.  
 2. **설치** 단추를 클릭하여 설치를 시작하십시오.
 
 [IBM Developer Tools extension directly within the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer)에 액세스할 수도 있습니다.

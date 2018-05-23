@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -16,22 +16,22 @@ lastupdated: "2018-04-17"
 # {{site.data.keyword.dev_cli_notm}} CLI のセットアップ
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} CLI は、コマンド・ラインを使用して Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで開発することを希望する開発者に向けた、アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチです。
+{{site.data.keyword.dev_cli_short}} CLI は、コマンド・ラインを使用して Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで開発することを希望する開発者に向けた、アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチです。 以下のいずれかのスクリプトを実行することによって、推奨ツール・セットの使用を素早く開始できます。
 {: shortdesc}
 
-## 前提条件
+## {{site.data.keyword.dev_cli_notm}} の前提条件
 {: #prereq}
 
-[{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) に登録します。
+[{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration) に登録します。
 
 *  Microsoft Windows&trade; を使用する場合、Windows 10 以降を使用する必要があります。
 
 * Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。
 
-## インストール
+## {{site.data.keyword.dev_cli_notm}} のインストール方法
 {: #installation}
 
-ツールをインストールするには、関連するコマンドを実行して、インストーラーを起動します。これにより、IBM Cloud CLI、Kubernetes、Helm、Docker などの依存関係もインストールされます。 インストールするには、以下のインストール・ステップを使用します。
+ツール・セットをインストールするには、関連するコマンドを実行して、インストーラーを起動します。 これにより、{{site.data.keyword.Bluemix_notm}} 開発用の推奨されるツールである、`Homebrew` (Mac のみ)、`Git`、`Docker`、`Helm`、`kubectl`、`curl`、{{site.data.keyword.Bluemix_notm}} CLI、{{site.data.keyword.dev_cli_notm}} プラグイン、Cloud Functions プラグイン、Container Registry プラグイン、Container Service プラグイン、および `sdk-gen` プラグインがインストールされます (まだインストールされていない場合)。インストールするには、以下のインストール・ステップを使用します。
 
 **Mac および Linux:**
 
@@ -50,6 +50,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+『[ツールの再インストール](/docs/troubleshoot/ts_createapps.html#appendix)』セクションに、すべての従属関係を個々にインストールするための説明があります。
+
 以下のコマンドを実行して、プラグインが正常にインストールされたことを確認します。  
 
 ```
@@ -60,7 +62,7 @@ bx dev
 ## 環境の構成
 {: #configure-environment}
 
-1. ご使用の [{{site.data.keyword.Bluemix_notm}} 地域](/docs/overview/cf.html#ov_intro_reg)の API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、以下のコマンドを入力します。
+1. ご使用の {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、以下のコマンドを入力します。
 
 	```
 	bx api https://api.ng.bluemix.net

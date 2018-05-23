@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -14,33 +14,49 @@ lastupdated: "2018-04-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# CLI 및 도구 개요
+# {{site.data.keyword.dev_cli_notm}} 개요
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}}는 강력한 CLI 및 CLI와 통합된 개발자 도구 확장이 있는 플러그인을 제공합니다.
+{{site.data.keyword.dev_cli_notm}}은 엔드 투 엔드 웹, 모바일 및 마이크로서비스 애플리케이션을 개발하는 데 명령행을 사용하려는 개발자를 위한 애플리케이션 작성, 개발 및 배치용 명령행 방식입니다. 다음 스크립트 중 하나를 실행하여 권장 도구 세트를 빠르게 시작하십시오.
+{: shortdesc} 
 
-## {{site.data.keyword.Bluemix_notm}} CLI
-{: #cli}
+## {{site.data.keyword.dev_cli_notm}}의 전제조건
+{: #prereq}
 
-{{site.data.keyword.Bluemix}} CLI는 명령행 경험을 제공하여 {{site.data.keyword.Bluemix_notm}} 환경에서 리소스를 관리합니다. 또한 Cloud Foundry 애플리케이션 및 서비스 관리를 위한 Cloud Foundry 명령 인터페이스 cf를 설치에 포함합니다.
-{:shortdesc}
+[{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration)에 등록하십시오.
 
-시작하려면 옵션을 클릭하십시오.
+* Microsoft Windows&trade;를 사용하는 경우 Windows 10 이상을 사용해야 합니다.
 
-<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="{{site.data.keyword.Bluemix_notm}} CLI를 빠르게 시작하려면 아이콘을 클릭하십시오." style="width:440px;" />
-<map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="{{site.data.keyword.Bluemix_notm}} CLI 다운로드(새 페이지에서 열림)" title="다운로드" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="시작하기(새 페이지에서 열림)" title="시작하기" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="문서 보기(새 페이지에서 열림)" title="문서 보기" shape="rect" coords="326, -10, 448, 218" />
-</map>
+* 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다.
 
-## {{site.data.keyword.dev_cli_notm}} CLI
-{: #idt}
+## {{site.data.keyword.dev_cli_notm}} 설치 방법
+{: #installation}
 
-{{site.data.keyword.dev_cli_long}} CLI(IDT)는 개발자 특정 확장을 {{site.data.keyword.Bluemix}} CLI(`bx dev`)에 제공하여 클라우드 네이티브 앱을 작성하고 빌드하고 배치합니다. IDT 설치에는 기본 {{site.data.keyword.Bluemix_notm}} CLI, 여러 확장 및 모든 시스템 전제조건이 포함됩니다. IDT는 또한 CLI 명령에 직접 액세스하도록 여러 IDE에 확장을 제공합니다.
-{:shortdesc}
+도구 세트를 설치하기 위해 관련 명령을 실행하여 설치 프로그램을 시작할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 개발을 위한 다음 권장 도구 `Homebrew`(Mac 전용), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}} CLI, {{site.data.keyword.dev_cli_notm}} 플러그인, Cloud Functions 플러그인, Container Registry 플러그인, Container Service 플러그인 및 `sdk-gen` 플러그인을 설치합니다(아직 설치되지 않은 경우). 
 
-- [개요 및 설치](/docs/cli/idt/index.html)
-- [시작하기](/docs/cli/idt/index.html)
+**Mac 및 Linux:**
+
+```
+curl -sL https://ibm.biz/idt-installer | bash
+```
+{: codeblock}
+
+
+**Windows 10:**
+
+* 참고: 마우스 오른쪽 단추를 클릭하여 Windows PowerShell을 열고 "관리자로서 실행"을 선택하십시오.
+
+```
+Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+```
+{: codeblock}
+
+
+## {{site.data.keyword.dev_cli_notm}}을 자세히 살펴보기 위한 기타 링크
+
+- [세부 설정](/docs/cli/idt/setting_up_idt.html)
+- [사용](/docs/cli/idt/index.html)
 - [명령](/docs/cli/idt/commands.html)
-- [Cloud 원시 개발](/docs/cli/index.html)
+- [CLI 플러그인](/docs/cli/reference/bluemix_cli/extend_cli.html)
+- [VSCode IDE 확장](/docs/cli/idt/vscode.html)
+- [수동으로 IBM Cloud CLI 설치](/docs/cli/reference/bluemix_cli/get_started.html)

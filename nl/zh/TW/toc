@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
-CLI 及開發工具
+IBM Cloud Developer Tools（CLI 及 Dev Tools）
 
 	{: .navgroup id="learn"}
 	index.md
@@ -13,15 +13,15 @@ CLI 及開發工具
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	
-        
-		{: .topicgroup}
+        	
+	{: .topicgroup}
 	IBM Cloud Developer Tools
 		idt/setting_up_idt.md
 		idt/index.md
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
+		[IDT 的疑難排解](../troubleshoot/ts_createapps.html)
         	
 	{: .topicgroup}
 	行動的 SDK
@@ -45,10 +45,9 @@ CLI 及開發工具
 	IBM Cloud CLI 外掛程式
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
-		plugins/registry/index.md
-		[容器服務](../containers/cs_cli_devtools.html)
+		[Container Registry CLI](../services/Registry/registry_cli.html)
+		[Container Service CLI](../containers/cs_cli_devtools.html)
  		plugins/pnp/index.md
-		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 
 	{: .topicgroup}

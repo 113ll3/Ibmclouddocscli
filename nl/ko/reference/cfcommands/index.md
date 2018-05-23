@@ -527,7 +527,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname(필수)</dt>
 <dd>애플리케이션 이름입니다.</dd>
 <dt>*-b* buildpack_name(선택사항)</dt>
-<dd>빌드팩 이름입니다. buildpack_name은 이름(예: liberty-for-java)별 사용자 정의 빌드팩이거나 Git URL(예: https://github.com/cloudfoundry/java-buildpack.git) 또는 분기나 태그가 포함된 Git URL(예: v3.3.0 태그의 경우 https://github.com/cloudfoundry/java-buildpack.git#v3.3.0) 중 하나입니다. </dd>
+<dd>빌드팩 이름입니다. buildpack_name은 이름(예: liberty-for-java)별 사용자 정의 빌드팩이거나 Git URL(예: https://github.com/cloudfoundry/java-buildpack.git) 또는 분기나 태그가 포함된 Git URL(예: v3.3.0 태그의 경우 https://github.com/cloudfoundry/java-buildpack.git#v3.3.0) 중 하나입니다.</dd>
 <dt>*-c* start_command(선택사항)</dt>
 <dd>애플리케이션의 시작 명령입니다. 기본 시작 명령을 사용하려면 이 옵션에 대해 null 값을 지정하십시오. </dd>
 <dt>*-f* manifest_path(선택사항)</dt>

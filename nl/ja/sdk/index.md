@@ -18,7 +18,7 @@ lastupdated: "2018-04-16"
 
 {{site.data.keyword.Bluemix_notm}} の開発者は、このプラグインを使用して[Open API Specification ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 準拠の REST API 定義から SDK を生成できます。 REST API 定義を変更する際、このプラグインを使用することで、プロジェクト全体を再生成する代わりに SDK のみを再生成することができます。
 
-特定のスペースの Cloud Foundry アプリに、SDK の生成に有効な REST API 定義が含まれているかどうかを確認することもできます。最後に、{{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインを使用して、REST API 定義が SDK ジェネレーターの条件に準拠していることを確認することができます。
+特定のスペースの Cloud Foundry アプリに、SDK の生成に有効な REST API 定義が含まれているかどうかを確認することもできます。 最後に、{{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインを使用して、REST API 定義が SDK ジェネレーターの条件に準拠していることを確認することができます。
 
 この {{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインによって、開発者は、生成済みの SDK を使用してバックエンド・サービスをアプリに簡単に統合することができます。 REST API に変更が生じた場合、SDK を再生成して古い SDK と置き換えることによって、SDK のアップグレードを行うことができます。 また、CLI を DevOps パイプラインに統合することによって、アプリをビルドするたびに、SDK が API スペックに常に整合していることを確認することができます。
 

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -16,22 +16,22 @@ lastupdated: "2018-04-17"
 # {{site.data.keyword.dev_cli_notm}} CLI 설정
 {: #add-cli}
 
-{{site.data.keyword.dev_cli_short}} CLI는 엔드 투 엔드 웹, 모바일 및 마이크로서비스 애플리케이션을 개발할 때 명령행을 사용하려는 개발자를 위한 것으로, 애플리케이션 작성, 개발 및 배치에 대한 명령행 방식입니다.
+{{site.data.keyword.dev_cli_short}} CLI는 엔드 투 엔드 웹, 모바일 및 마이크로서비스 애플리케이션을 개발할 때 명령행을 사용하려는 개발자를 위한 것으로, 애플리케이션 작성, 개발 및 배치에 대한 명령행 방식입니다. 다음 스크립트 중 하나를 실행하여 권장 도구 세트를 빠르게 시작하십시오.
 {: shortdesc}
 
-## 전제조건
+## {{site.data.keyword.dev_cli_notm}}의 전제조건
 {: #prereq}
 
-[{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net)에 등록하십시오.
+[{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration)에 등록하십시오.
 
 *  Microsoft Windows&trade;를 사용하는 경우 Windows 10 이상을 사용해야 합니다.
 
 * 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다.
 
-## 설치
+## {{site.data.keyword.dev_cli_notm}} 설치 방법
 {: #installation}
 
-도구를 설치하기 위해 관련 명령을 실행하여 설치 프로그램을 시작할 수 있습니다. 이는 IBM Cloud CLI, Kubernetes, Helm 및 Docker 등의 종속 항목도 설치합니다. 설치하려면 다음 설치 단계를 사용하십시오.
+도구 세트를 설치하기 위해 관련 명령을 실행하여 설치 프로그램을 시작할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 개발을 위한 다음 권장 도구 `Homebrew`(Mac 전용), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}} CLI, {{site.data.keyword.dev_cli_notm}} 플러그인, Cloud Functions 플러그인, Container Registry 플러그인, Container Service 플러그인 및 `sdk-gen` 플러그인을 설치합니다(아직 설치되지 않은 경우). 설치하려면 다음 설치 단계를 사용하십시오.
 
 **Mac 및 Linux:**
 
@@ -50,6 +50,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+[재설치 도구](/docs/troubleshoot/ts_createapps.html#appendix) 섹션에는 모든 종속 항목을 개별적으로 설치하기 위한 정보가 포함되어 있습니다.
+
 다음 명령을 실행하여 플러그인이 제대로 설치되었는지 검증하십시오.  
 
 ```
@@ -60,7 +62,7 @@ bx dev
 ## 환경 구성
 {: #configure-environment}
 
-1. [{{site.data.keyword.Bluemix_notm}} 지역](/docs/overview/cf.html#ov_intro_reg)에서 API 엔드포인트에 연결하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 미국 남부 지역에 연결하십시오.
+1. {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트에 연결하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 미국 남부 지역에 연결하십시오.
 
 	```
 	bx api https://api.ng.bluemix.net

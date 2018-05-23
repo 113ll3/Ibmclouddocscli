@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -11,10 +11,11 @@ lastupdated: "2018-04-17"
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}
 
 # 使用 {{site.data.keyword.dev_cli_notm}} CLI
-{: developing}
+{: #developing}
 
 使用 {{site.data.keyword.dev_cli_notm}} CLI 开发云本机应用程序遵循相当简单的流程：
 
@@ -39,8 +40,10 @@ lastupdated: "2018-04-17"
 {{site.data.keyword.dev_cli_notm}} CLI 将紧密协作，以在开发过程中提供无缝的体验。在任一 Web 控制台中创建的项目都会提供“下载代码”按钮，用于将生成的源代码下载到工作站以进行更多开发。
 
 ### 有帮助的 CLI 命令
+{: #helpful}
+
 以下 CLI 命令可帮助使用项目和 Web 控制台：
-- [`code`](./commands.html#enable)，用于直接将应用程序的已生成源代码拉取到工作站
+- [`code`](./commands.html#code)，用于直接将应用程序的已生成源代码拉取到工作站
 - [`console`](./commands.html#console)，用于打开浏览器，转至 {{site.data.keyword.Bluemix_notm}} 中当前应用程序的项目页面。
 - [`create`](./commands.html#create) 命令，用于创建新应用程序。
 - [`delete`](./commands.html#delete)，用于从 {{site.data.keyword.Bluemix_notm}} 项目区域中删除当前应用程序。
@@ -50,7 +53,7 @@ lastupdated: "2018-04-17"
 
 
 ### 浏览应用程序的项目结构
-{: exploring-project}
+{: #exploring-project}
 
 为了与工具配合使用而创建或启用的项目随附了 `cli-config.yml` 文件中封装的预配置设置。`cli-config.yml` 包含工具命令使用的缺省条目，可由通过命令行传递的值覆盖。
 
@@ -62,7 +65,9 @@ lastupdated: "2018-04-17"
 
 
 ### 参考博客和视频
-- 视频：[在 Ubuntu Linux 上安装 IDT]()
+{: #ref1}
+
+- 视频：[在 Ubuntu Linux 上安装 IDT](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - 博客：[Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 
@@ -80,7 +85,7 @@ lastupdated: "2018-04-17"
 
 
 ### 如何使用本地容器
-{: local-containers}
+{: #local-containers}
 
 {{site.data.keyword.dev_cli_long}} CLI 使用两个容器来帮助构建和测试应用程序。第一个是“工具”容器，包含用于构建和测试应用程序的必要实用程序。此容器的 Dockerfile 由 [`dockerfile-tools`](commands.html#command-parameters) 参数定义。您可将其视为开发容器，因为它包含正常用于开发特定运行时的工具。
 
@@ -88,6 +93,8 @@ lastupdated: "2018-04-17"
 
 
 ### 有帮助的 CLI 命令
+{: #helpful2}
+
 以下 CLI 命令可帮助在编码、构建和运行周期中使用项目：
 - [`build`](./commands.html#build)，在本地容器中构建项目
 - [`debug`](./commands.html#debug)，在本地容器中调试应用程序
@@ -98,6 +105,8 @@ lastupdated: "2018-04-17"
 - [`test`](./commands.html#test)，在本地容器中测试应用程序
 
 ### 参考博客和视频
+{: #ref2}
+
 - [调试本地应用程序](local_debug.html)
 
 
@@ -105,13 +114,15 @@ lastupdated: "2018-04-17"
 
 
 ## 部署
-{: deploy}
+{: #deploy}
 
 在相应的云本机环境下，您将希望利用完整功能的 DevOps 管道来管理所有部署以及丰富的其他功能。在创建流的过程中，可以将应用程序设置为使用 IBM Cloud 的 DevOps。如果尚未准备好使用内置 DevOps，那么可以手动对应用程序运行 [`bx dev deploy`](./commands.html#deploy)，也可以在自己的 DevOps 管道中使用部署命令。  
 
 
 
 ### 有帮助的 CLI 命令
+{: #helpful3}
+
 以下 CLI 命令可帮助您在部署过程中使用项目：
 - [`console`](./commands.html#console)，打开 IBM Cloud 控制台以使用项目
 - [`deploy`](./commands.html#deploy)，将应用程序部署到 IBM Cloud
@@ -119,5 +130,7 @@ lastupdated: "2018-04-17"
 
 
 ### 参考博客和视频
+{: #ref3}
+
 - 博客：[Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - 博客：[Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

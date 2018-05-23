@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -47,7 +50,7 @@ lastupdated: "2018-04-17"
 
 `run` を除くすべての用途に関して、アプリケーションをビルドするときは、`build-cmd-debug` 構成エレメントを使用します。 デバッグ用のアプリケーションをビルドする際は、コマンド・ライン・オプション `--debug` を指定します。  `run` コマンドで使用するためのアプリケーションをビルドするときは、`build-cmd-run` 構成エレメントを使用します。
 
-複数のコンテナーを使用してビルドするには、`cli-config.yml` で指定されている [Compose](https://docs.docker.com/compose/overview/) ファイルがプロジェクトに含まれているか、`dockerfile-tools` コマンド・パラメーターを使用して、このファイルを提供できなければなりません。詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
+複数のコンテナーを使用してビルドするには、`cli-config.yml` で指定されている [Compose](https://docs.docker.com/compose/overview/) ファイルがプロジェクトに含まれているか、`dockerfile-tools` コマンド・パラメーターを使用して、このファイルを提供できなければなりません。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
 
 現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
 
@@ -364,7 +367,7 @@ bx dev run
 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * 実行コンテナーのコンテナー名。
 * 使用法: `bx dev run --container-name-run [<projectName>]`
@@ -566,7 +569,7 @@ bx dev view
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * ターゲットがコンテナー・デプロイメントの場合に、Kubernetes クラスターの名前を定義するために使用されるオプションのパラメーター。
 * 使用法 `bx dev view --ibm-cluster [cluster-name]`
@@ -607,13 +610,13 @@ bx dev build/deploy/view -t container --trace
 * 使用法: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * 実行コンテナーのコンテナー名。
 * 使用法: `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * ツール・コンテナーのコンテナー名。
 * 使用法: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

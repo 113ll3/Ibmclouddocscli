@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -13,13 +13,19 @@ lastupdated: "2018-04-18"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+{:tip: .tip}
 
 
 
 # {{site.data.keyword.Bluemix_notm}} CLI の概説
 {: #getting-started}
 
+{{site.data.keyword.Bluemix_notm}} CLI および推奨されるすべての従属関係を、[ここ](/docs/cli/index.html)で説明されている方法を使用してインストールすることをお勧めします。
+{: tip}
+
+
 {{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} でアプリケーション、コンテナー、インフラストラクチャー、サービス、およびその他のリソースを管理するためのコマンド・ライン・インターフェースを提供します。 
+
 
 {{site.data.keyword.Bluemix_notm}} CLI の使用を開始するには、以下を行います。
 
@@ -28,7 +34,7 @@ lastupdated: "2018-04-18"
    Mac OS X 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
    Linux X86 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
-   Linux PowerPC LE 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
+   Linux LE 64 ビット (ppc64le): [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
   
    **32 ビットのリリースと以前のバージョンについては、[ここ](all_versions.html)を参照してください。
 
@@ -42,7 +48,7 @@ lastupdated: "2018-04-18"
 
 これで、{{site.data.keyword.Bluemix_notm}} リソースを管理する準備ができました。 コマンド説明を表示するには、`bluemix help` または `bx help` と入力します。 
 
-フェデレーテッド ID を使用する場合は、[ここ](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)で説明する手順に従って、ワンタイム・パスコードまたは API キーを使用してログインします {: tip}
+フェデレーテッド ID を使用する場合は、[ここ](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)で説明する手順に従って、ワンタイム・パスコードまたは API キーを使用してログインします  {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} CLI をさらに探索するためのその他のリンク
 
@@ -58,4 +64,3 @@ lastupdated: "2018-04-18"
 問題を報告したり新しいフィーチャーの要求を送信したりするには、以下のオプションを使用してください。
  * [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) で問題を作成する
  * [Slack channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) にメッセージを残す
-

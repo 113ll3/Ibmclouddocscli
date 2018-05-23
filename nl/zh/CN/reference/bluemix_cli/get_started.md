@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -13,22 +13,28 @@ lastupdated: "2018-04-18"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+{:tip: .tip}
 
 
 
 # {{site.data.keyword.Bluemix_notm}} CLI 入门
 {: #getting-started}
 
+建议您使用[此处](/docs/cli/index.html)描述的方法来安装 {{site.data.keyword.Bluemix_notm}} CLI 和所有建议的依赖项。
+{: tip}
+
+
 {{site.data.keyword.Bluemix_notm}} CLI 提供了用于管理 {{site.data.keyword.Bluemix_notm}} 中应用程序、容器、基础架构、服务和其他资源的命令行界面。 
 
-要开始使用 {{site.data.keyword.Bluemix_notm}} CLI，请执行以下操作：
+
+要仅开始使用 {{site.data.keyword.Bluemix_notm}} CLI，请执行以下操作：
 
 1. 选择要下载的适用于您操作系统的安装程序
    
    Mac OS X 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
    Linux X86 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
-   Linux PowerPC LE 64 位：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
+   Linux LE 64 位 (ppc64le)：[安装程序](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window}<br>
   
    **32 位发行版及先前版本可以在[此处](all_versions.html)找到
 
@@ -59,4 +65,3 @@ lastupdated: "2018-04-18"
 使用以下选项来报告问题或提交新的功能请求：
  * 在 [Github ](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window}![外部链接图标](../../../icons/launch-glyph.svg) 中创建问题
  * 在 [Slack 频道 ](https://dwopen.slack.com/messages/bluemix-cli/){: new_window}![外部链接图标](../../../icons/launch-glyph.svg) 中留言
-

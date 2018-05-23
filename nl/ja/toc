@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
-CLI と開発ツール
+IBM Cloud 開発者ツール (CLI および Dev ツール)
 
 	{: .navgroup id="learn"}
 	index.md
@@ -15,12 +15,13 @@ CLI と開発ツール
 	reference/bluemix_cli/extend_cli.md
         	
 	{: .topicgroup}
-	IBM クラウド開発者ツール
+	IBM Cloud 開発者ツール
 		idt/setting_up_idt.md
 		idt/index.md
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
+		[IDT のトラブルシューティング](../troubleshoot/ts_createapps.html)
         	
 	{: .topicgroup}
 	モバイル用 SDK
@@ -44,10 +45,9 @@ CLI と開発ツール
 	IBM Cloud CLI プラグイン
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
-		plugins/registry/index.md
-		[Container Service](../containers/cs_cli_devtools.html)
+		[Container Registry CLI](../services/Registry/registry_cli.html)
+		[Container Service CLI](../containers/cs_cli_devtools.html)
  		plugins/pnp/index.md
-		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 
 	{: .topicgroup}
