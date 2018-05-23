@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-05"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -18,22 +18,22 @@ lastupdated: "2018-02-05"
 # Extending {{site.data.keyword.Bluemix_notm}} CLI with plug-ins
 {: #plug-ins}
 
-{{site.data.keyword.Bluemix_notm}} CLI supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally. 
+{{site.data.keyword.Bluemix_notm}} CLI supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
 
 [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg) is the official repository where plug-ins are hosted.
 
-For more commands to manage plug-ins, run `bluemix plugin` to see the help messages.
+For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages.
 {: tip}
 
 ## Install a plug-in from the {{site.data.keyword.Bluemix_notm}} CLI repository
 
 ### Step 1: Search for the plug-in
 
-1. Use the command `bluemix plugin repo-plugins -r REPO_NAME` to look for a plug-in in the repository.
+1. Use the command `ibmcloud plugin repo-plugins -r REPO_NAME` to look for a plug-in in the repository.
 2. The {{site.data.keyword.Bluemix_notm}} CLI has the official repository with the name `Bluemix`, you can search the official plug-ins as shown in the following example:
-  
+
   ```
-  $ bluemix plugin repo-plugins -r Bluemix
+  $ ibmcloud plugin repo-plugins -r Bluemix
   Getting plug-ins from repository 'Bluemix'...
 
   Repository: Bluemix
@@ -45,10 +45,10 @@ For more commands to manage plug-ins, run `bluemix plugin` to see the help messa
 
 ### Step 2: Install the plug-in
 
-Use the `bx plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug-in. For example, use the following command to install a plug-in from the official IBM plug-in repo `Bluemix`:
+Use the `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug-in. For example, use the following command to install a plug-in from the official IBM plug-in repo `Bluemix`:
 
   ```
-  $ bluemix plugin install auto-scaling -r Bluemix
+  $ ibmcloud plugin install auto-scaling -r Bluemix
   Looking up 'auto-scaling' from repository 'Bluemix'...
   9857792 bytes downloaded
   Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
@@ -58,10 +58,10 @@ Use the `bx plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug
 
 ## Install a plug-in locally
 
-Use the `bluemix plugin install LOCAL_FILE_NAME` command to install a plugin-in binary on your local machine. For example:
+Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plugin-in binary on your local machine. For example:
 
   ```
-  $ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2
+  $ ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.2
   Installing pluign './auto-scaling-darwin-amd64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
@@ -70,10 +70,10 @@ Use the `bluemix plugin install LOCAL_FILE_NAME` command to install a plugin-in 
 
 ## Install a plug-in from a web URL
 
-Use the `bluemix plugin install URL` command to install a plug-in directly from a web URL. For example
+Use the `ibmcloud plugin install URL` command to install a plug-in directly from a web URL. For example
 
   ```
-  ~$ bluemix plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
+  ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
   Attempting to download the binary file...
   9857792 bytes downloaded
   Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
