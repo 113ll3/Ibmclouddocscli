@@ -10,13 +10,18 @@ lastupdated: "2018-05-23"
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 
 # {{site.data.keyword.BluSoftlayer_notm}} infrastructure (ibmcloud sl) commands
 {: #softlayer_cli}
 
 The {{site.data.keyword.BluSoftlayer}} plug-in has been merged into the {{site.data.keyword.Bluemix_notm}} CLI. You no longer need to install the plug-in.
+{: tip}
 
 Use {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands in the {{site.data.keyword.Bluemix_notm}} command line interface (CLI) to configure and manage SoftLayer services.
+
+As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However you can still use the `bluemix` and `bx` CLI commands until they are deprecated at a later date.
+{: tip}
 
 
 To get started, install the IBM {{site.data.keyword.Bluemix_notm}} CLI. See
