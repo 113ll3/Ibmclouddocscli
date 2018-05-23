@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -31,11 +31,11 @@ After the {{site.data.keyword.Bluemix_notm}} CLI is installed, you can add the {
 Complete the following steps to add the repository and install the plug-in:
 1. To add the {{site.data.keyword.Bluemix_notm}} CLI plug-in repository, run the following command:
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. To install the {{site.data.keyword.autoscaling}} CLI plug-in, run the following command:
 ```
-bluemix plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r Bluemix
 ```
 
 ## Attaching an auto-scaling policy
@@ -43,7 +43,7 @@ bluemix plugin install auto-scaling -r Bluemix
 You can attach an auto-scaling policy to a specific app. Run the following command:
 
 ```
-bx as policy-attach <APP_NAME> -p <policy_file>
+ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -60,7 +60,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
 
 ```
-bx as policy-create
+ibmcloud as policy-create
 ```
 {: codeblock}
 
@@ -70,7 +70,7 @@ bx as policy-create
 You can show the auto-scaling policy of an app. The content of the policy is printed to the command line directly. Run the following command:
 
 ```
-bx as policy-show <APP_NAME> [--json]
+ibmcloud as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -87,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 You can remove an auto-scaling policy from an  app. Run the following command:
 
 ```
-bx as policy-detach <APP_NAME>
+ibmcloud as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -102,7 +102,7 @@ bx as policy-detach <APP_NAME>
 You can enable or disable the auto-scaling policy of a specific  app. Run the following command:
 
 ```
-bx as policy-enable|policy-disable <APP_NAME>
+ibmcloud as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -117,7 +117,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 You can show the history of the auto-scaling activity of a specific app. A table of auto-scaling history records is displayed in the command line interface.
 
 ```
-bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 
