@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -244,8 +244,8 @@ Run the plug-in as a stand-alone CLI.
 Install and invoke the plug-in as a {{site.data.keyword.Bluemix_notm}} CLI by choosing either of the following commands.
 
 ```
-bluemix plugin install main
-bluemix help sdk
+ibmcloud plugin install main
+ibmcloud help sdk
 ```
 {: codeblock}
 
