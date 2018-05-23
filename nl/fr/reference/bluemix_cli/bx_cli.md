@@ -1258,7 +1258,7 @@ bluemix account user-invite USER_EMAIL
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
 
-Renvoyer l'invitation à un utilisateur (administrateur de compte). 
+Renvoyer l'invitation à un utilisateur (administrateur de compte).
 
 ```
 bluemix account user-reinvite USER_EMAIL
@@ -1274,7 +1274,7 @@ bluemix account user-reinvite USER_EMAIL
 ## bluemix iam access-groups
 {: #bluemix_iam_access_groups}
 
-Afficher les groupes d'accès du compte en cours. 
+Afficher les groupes d'accès du compte en cours.
 
 ```
 bluemix iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
@@ -2491,15 +2491,15 @@ bluemix iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROL
   <dt>-r, --roles</dt>
   <dd>Noms de rôle de la définition de règle. Pour les rôles pris en charge d'un service spécifique, exécutez 'bluemix iam roles --service SERVICE_NAME'. Cette option s'utilise exclusivement avec '--file'.</dd>
   <dt>--service-name</dt>
-  <dd>Nom de service de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Nom de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>--service-instance</dt>
-  <dd>Instance de service de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Instance de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>-region</dt>
-  <dd>Région de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Région de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>--resource-type</dt>
-  <dd>Type de ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Type de ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>--resource</dt>
-  <dd>Ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>--resource-group-name</dt>
   <dd>Nom du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-id'.</dd>
   <dt>--resource-group-id </dt>
@@ -2546,15 +2546,15 @@ bluemix iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {
   <dt>-r, --roles</dt>
   <dd>Noms de rôle de la définition de règle. Pour les rôles pris en charge d'un service spécifique, exécutez 'bluemix iam roles --service SERVICE_NAME'. Cette option s'utilise exclusivement avec '--file'.</dd>
   <dt>-service-name</dt>
-  <dd>Nom de service de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Nom de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>-service-instance</dt>
-  <dd>Instance de service de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Instance de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>-region</dt>
-  <dd>Région de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Région de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>-resource-type</dt>
-  <dd>Type de ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Type de ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>-resource</dt>
-  <dd>Ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'. </dd>
+  <dd>Ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
   <dt>--resource-group-name</dt>
   <dd>Nom du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-id'.</dd>
   <dt>--resource-group-id </dt>

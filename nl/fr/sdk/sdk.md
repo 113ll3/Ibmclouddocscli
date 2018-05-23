@@ -36,7 +36,7 @@ Si vous disposez d'une application serveur Java, NodeJS ou Swift, vous pouvez ut
 ## SDK client
 {: #client_sdk}
 
-Vous pouvez utiliser les SDK suivants dans votre application mobile pour utiliser les fonctions respectives. 
+Vous pouvez utiliser les SDK suivants dans votre application mobile pour utiliser les fonctions respectives.
 
 
 ### SDK Android

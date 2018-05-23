@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
-Interface de ligne de commande et outils de développement
+IBM Cloud Developer Tools (Interface de ligne de commande et outils de développement)
 
 	{: .navgroup id="learn"}
 	index.md
@@ -16,12 +16,13 @@ Interface de ligne de commande et outils de développement
 	
         	
 	{: .topicgroup}
-	Outils pour les développeurs IBM Cloud
+	IBM Cloud Developer Tools
 		idt/setting_up_idt.md
 		idt/index.md
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
+		[Traitement des incidents liés à IDT](../troubleshoot/ts_createapps.html)
         	
 	{: .topicgroup}
 	Logiciels SDK pour les applications mobiles
@@ -45,10 +46,9 @@ Interface de ligne de commande et outils de développement
 	Plug-in d'interface de ligne de commande IBM Cloud
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
-		plugins/registry/index.md
-		[Container Service](../containers/cs_cli_devtools.html)
+		[Interface de ligne de commande Container Registry](../services/Registry/registry_cli.html)
+		[Interface de ligne de commande Container Service](../containers/cs_cli_devtools.html)
  		plugins/pnp/index.md
-		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 
 	{: .topicgroup}

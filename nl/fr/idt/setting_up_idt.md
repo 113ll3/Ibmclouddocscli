@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -16,22 +16,23 @@ lastupdated: "2018-04-17"
 # Configuration de l'interface de ligne de commande d'{{site.data.keyword.dev_cli_notm}}
 {: #add-cli}
 
-L'interface de ligne de commande {{site.data.keyword.dev_cli_short}} est un outil de création, de développement et de déploiement d'applications à l'aide d'une ligne de commande qui est utilisée par les développeurs souhaitant utiliser une ligne de commande pour développer des applications Web, mobiles et de microservice de bout en bout.
+L'interface de ligne de commande {{site.data.keyword.dev_cli_short}} est un outil de création, de développement et de déploiement d'applications à l'aide d'une ligne de commande qui est utilisée par les développeurs souhaitant utiliser une ligne de commande pour développer des applications Web, mobiles et de microservice de bout en bout. Commencez rapidement avec un jeu d'outils recommandé en exécutant l'un des scripts ci-après.
 {: shortdesc}
 
-## Prérequis
+## Prérequis pour {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
-Inscrivez-vous auprès de [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
+Inscrivez-vous auprès de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
 
 *  Si vous utilisez Microsoft Windows, vous devez utiliser Windows 10 ou une version ultérieure.
 
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
-## Installation
+## Comment installer {{site.data.keyword.dev_cli_notm}}
+
 {: #installation}
 
-Pour installer l'outil, vous pouvez exécuter la commande appropriée afin de lancer le programme d'installation. L'exécution de cette commande a également pour conséquence d'installer des dépendances, telles qu'IBM Cloud CLI, Kubernetes, Helm et Docker. Pour lancer l'installation, procédez comme suit :
+Pour installer le jeu d'outils, vous pouvez exécuter la commande appropriée afin de lancer le programme d'installation. Cette action entraîne l'installation des outils recommandés pour le développement d'{{site.data.keyword.Bluemix_notm}} (s'ils ne sont pas déjà installés) : `Homebrew` (Mac uniquement), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, plug-in {{site.data.keyword.dev_cli_notm}}, plug-in Cloud Functions, plug-in Container Registry, plug-in Container Service et plug-in `sdk-gen`. Pour lancer l'installation, procédez comme suit :
 
 **Mac et Linux :**
 
@@ -50,6 +51,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+La section [Réinstallation d'outils](/docs/troubleshoot/ts_createapps.html#appendix) contient des informations sur l'installation de toutes les dépendances une par une.
+
 Vérifiez que l'installation du plug-in a abouti en exécutant la
 commande suivante :  
 
@@ -61,7 +64,7 @@ bx dev
 ## Configuration de votre environnement
 {: #configure-environment}
 
-1. Connectez-vous à un noeud final d'API dans votre région [{{site.data.keyword.Bluemix_notm}} ](/docs/overview/cf.html#ov_intro_reg). Entrez, par exemple, la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis :
+1. Connectez-vous à un noeud final d'API dans votre région {{site.data.keyword.Bluemix_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis :
 
 	```
 	bx api https://api.ng.bluemix.net
@@ -110,11 +113,11 @@ Consultez les [tutoriels](/docs/apps/tutorials/tutorial_bff.html) montrant comme
 ## Pour aller plus loin
 {: #learn-more}
 
-Les ressources suivantes peuvent vous être utiles lorsque vous développez des applicatoins natives en cloud avec l'interface de ligne de commande IBM Developer Tools :
+Les ressources suivantes peuvent vous être utiles lorsque vous développez des applications natives en cloud avec l'interface de ligne de commande IBM Developer Tools :
 
 - [Principale page d'arrivée IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Page de produit principale pour l'interface de ligne de commande IDT
 - [Programme d'installation d'IBM Developer Tools](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Référentiel GitHub public contenant des instructions d'installation détaillées
-- [Service d'application IBM Cloud](https://console.bluemix.net/developer/appservice) - Page de console IBM Cloud qui accompagne les outils IDT pour créer et gérer les applications natives en cloud
+- [IBM Cloud App service](https://console.bluemix.net/developer/appservice) - Page de console IBM Cloud qui accompagne les outils IDT pour créer et gérer les applications natives en cloud
 - [Canal slack technique d'outils de développement IBM Cloud](https://ibm-cloud-tech.slack.com) - Echanger au sujet des outils IDT, obtenir des réponses, suggérer des idées, etc.
 	- [Demander un accès par équipe](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 

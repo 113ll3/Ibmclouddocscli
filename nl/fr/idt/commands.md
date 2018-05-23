@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -27,16 +30,16 @@ Utilisez les commandes CLI {{site.data.keyword.dev_cli_notm}} (bx dev) suivantes
 - La commande [delete](#delete) vous permet de supprimer un projet de votre espace.
 - La commande [deploy](#deploy) vous permet de déployer une application sur IBM Cloud.
 - La commande [enable](#enable) vous permet d'ajouter des fichiers IBM Cloud à un projet existant.
-- La commande [get-credentials](#get-credentials) vous permet d'obtenir les données d'identification requises par le projet pour activer l'utilisation de services liés. 
+- La commande [get-credentials](#get-credentials) vous permet d'obtenir les données d'identification requises par le projet pour activer l'utilisation de services liés.
 - La commande [help](#help) vous permet d'obtenir de l'aide sur la syntaxe et les arguments IDT.
 - La commande [list](#list) vous permet de répertorier tous les projets IBM Cloud dans un espace.
 - La commande [run](#run) vous permet d'exécuter votre application dans un conteneur local.
 - La commande [shell](#shell) vous permet d'ouvrir un interpréteur de commandes dans un conteneur local.
-- La commande [status](#status) vous permet de vérifier le statut des conteneurs utilisés par l'interface de ligne de commande. 
+- La commande [status](#status) vous permet de vérifier le statut des conteneurs utilisés par l'interface de ligne de commande.
 - La commande [stop](#stop) vous permet d'arrêter un conteneur.
 - La commande [test](#test) vous permet de tester votre application dans un conteneur local.
-- La commande [view](#view) vous permet d'afficher l'URL déployée pour les applications à des fins de test et de visualisation. 
-- Les [commandes composées](#compound) vous permettent d'exécuter plusieurs commandes dans une instruction de ligne de commande. 
+- La commande [view](#view) vous permet d'afficher l'URL déployée pour les applications à des fins de test et de visualisation.
+- Les [commandes composées](#compound) vous permettent d'exécuter plusieurs commandes dans une instruction de ligne de commande.
 
 
 
@@ -45,7 +48,7 @@ Utilisez les commandes CLI {{site.data.keyword.dev_cli_notm}} (bx dev) suivantes
 
 Vous pouvez générer votre application en utilisant la commande `build`. Les commandes `test`, `debug` et `run` s'attendent à trouver un projet compilé, par conséquent, vous devez préalablement exécuter une opération `build`.  
 
-L'élément de configuration `build-cmd-debug` est utilisé afin de générer l'application pour toutes les utilisations, à l'exception de`run`. Vous générez votre application à des fins d débogage en spécifiant l'option de ligne de commande `--debug`. L'élément de configuration `build-cmd-run` est utilisé lors de la génération de l'application afin de l'utiliser avec la commande `run`. 
+L'élément de configuration `build-cmd-debug` est utilisé afin de générer l'application pour toutes les utilisations, à l'exception de`run`. Vous générez votre application à des fins d débogage en spécifiant l'option de ligne de commande `--debug`.  L'élément de configuration `build-cmd-run` est utilisé lors de la génération de l'application afin de l'utiliser avec la commande `run`.
 
 Pour une génération avec plusieurs conteneurs, votre projet doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/), spécifié dans le fichier `cli-config.yml`, ou vous pouvez utiliser le paramètre de commande `dockerfile-tools` pour en indiquer un. Pour plus d'informations, voir[Fichier Compose ](/docs/apps/projects/compose_file.html).
 
@@ -64,7 +67,7 @@ bx dev build [--debug]
 ## Commande code
 {: #code}
 
-Utilisez la commande `code` pour télécharger un projet précédemment créé avec le code de modèle d'application et les fichiers de configuration de {{site.data.keyword.Bluemix_notm}}. Cela est utile lorsque vous devez extraire une seconde copie d'un projet que vous avez créé. 
+Utilisez la commande `code` pour télécharger un projet précédemment créé avec le code de modèle d'application et les fichiers de configuration de {{site.data.keyword.Bluemix_notm}}.  Cela est utile lorsque vous devez extraire une seconde copie d'un projet que vous avez créé.
 
 Exécutez la commande suivante pour télécharger le code à partir du projet spécifié :
 
@@ -384,7 +387,7 @@ Les paramètres ci-dessous, qui sont réservés à la commande
 Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'autres commandes.
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * Nom de conteneur pour le conteneur run.
 * Syntaxe : `bx dev run --container-name-run [<projectName>]`
@@ -595,7 +598,7 @@ Les paramètres ci-après sont réservés à la commande `view`.
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * Paramètre facultatif permettant de définir le nom du cluster kubernetes lors du ciblage d'un déploiement de conteneur
 * Syntaxe : `bx dev view --ibm-cluster [cluster-name]`
@@ -639,13 +642,13 @@ Les paramètres ci-dessous peuvent être utilisés avec les commandes
 * Syntaxe : `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * Nom de conteneur pour le conteneur run.
 * Syntaxe : `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * Nom de conteneur pour le conteneur tools.
 * Syntaxe : `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

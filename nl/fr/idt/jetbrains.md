@@ -24,7 +24,7 @@ L'extension IBM Developer Tools pour les interfaces IDE Jetbrains, comprenant In
 ## Dépendances
 {: #dependencies}
 
-L'utilisation de l'extension IBM Developer Tools pour les interfaces IDE basées sur Jetbrains requiert que [l'interface de ligne de commande IBM Cloud Developer Tools](index.html) soit installée sur votre système. 
+L'utilisation de l'extension IBM Developer Tools pour les interfaces IDE basées sur Jetbrains requiert que [l'interface de ligne de commande IBM Cloud Developer Tools](index.html) soit installée sur votre système.
 
 ## Installation
 {: #installation}
@@ -34,9 +34,9 @@ Le moyen le plus simple d'installer l'extension IBM Developers Tools pour une in
 ## Syntaxe
 {: #usage}
 
-Vous pouvez soit commencer avec une application côté serveur existante et l'activer pour IBM Cloud, soit utiliser l'interface de ligne de commande IDT afin de créer une nouvelle application à partir d'un kit de démarrage (bx dev create). Une fois le projet de vos applications créé, ouvrez-le dans votre interface IDE JetBrains. 
+Vous pouvez soit commencer avec une application côté serveur existante et l'activer pour IBM Cloud, soit utiliser l'interface de ligne de commande IDT afin de créer une nouvelle application à partir d'un kit de démarrage (bx dev create). Une fois le projet de vos applications créé, ouvrez-le dans votre interface IDE JetBrains.
 
-Si vous avez une application côté serveur générique, sélectionnez Outils > IBM Cloud Developer Tools > Activer l'application pour IBM Cloud. Cette action recherche tous les fichiers requis et ajoute ceux éventuellement manquants pour vous permettre de générer l'application localement et de la déployer dans IBM Cloud à l'aide d'une application Cloud Foundry ou dans un cluster Kubernetes. 
+Si vous avez une application côté serveur générique, sélectionnez Outils > IBM Cloud Developer Tools > Activer l'application pour IBM Cloud. Cette action recherche tous les fichiers requis et ajoute ceux éventuellement manquants pour vous permettre de générer l'application localement et de la déployer dans IBM Cloud à l'aide d'une application Cloud Foundry ou dans un cluster Kubernetes.
 
-Développez votre application native en cloud en utilisant les actions Générer/Exécuter/Déployer de base du menu IDT. Si vous devez effectuer des actions qui ne figurent pas dans le menu, ouvrez l'onglet terminal et entrez manuellement les commandes appropriées. 
+Développez votre application native en cloud en utilisant les actions Générer/Exécuter/Déployer de base du menu IDT. Si vous devez effectuer des actions qui ne figurent pas dans le menu, ouvrez l'onglet terminal et entrez manuellement les commandes appropriées.
 

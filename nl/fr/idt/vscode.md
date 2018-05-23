@@ -26,7 +26,7 @@ L'extension IBM Developer pour Visual Studio Code est une extension de l'éditeu
 ## Dépendances
 {: #dependencies}
 
-L'utilisation de l'extension IBM Developer Tools pour Visual Studio Code requiert que [l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ](https://plugins.ng.bluemix.net/ui/home.html) et [le plug-in de l'interface de ligne de commande IBM Developer](index.html) soient installés sur votre système. 
+L'utilisation de l'extension IBM Developer Tools pour Visual Studio Code requiert que [l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ](https://plugins.ng.bluemix.net/ui/home.html) et [le plug-in de l'interface de ligne de commande IBM Developer](index.html) soient installés sur votre système.
 
 ## Installation
 {: #installation}
@@ -42,7 +42,7 @@ Le moyen le plus simple d'installer l'extension IBM Developers Tools consiste à
 
 Vous pouvez aussi installer l'extension IBM Developer Tools via la fenêtre de gestion des extensions :
 
-1. Ouvrez la barre d'options latérale **Extensions** dans l'éditeur Visual Studio Code, puis lancez une recherche sur la chaîne `publisher:IBM Developer`. L'extension IBM Developer Tools apparaît dans les résultats de la recherche.   
+1. Ouvrez la barre d'options latérale **Extensions** dans l'éditeur Visual Studio Code, puis lancez une recherche sur la chaîne `publisher:IBM Developer`.  L'extension IBM Developer Tools apparaît dans les résultats de la recherche.  
 2. Cliquez sur le bouton **Install** pour lancer l'installation.
 
 Vous pouvez également accéder à l'extension [IBM Developer Tools directement à partir de Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
@@ -50,7 +50,7 @@ Vous pouvez également accéder à l'extension [IBM Developer Tools directement 
 ## Syntaxe
 {: #usage}
 
-Vous lancez les commandes d'extension à l'aide de la palette de commandes de Visual Studio Code. 
+Vous lancez les commandes d'extension à l'aide de la palette de commandes de Visual Studio Code.
 
 Tout d'abord, ouvrez la palette de commandes à l'aide de la combinaison de touches suivante :
 
@@ -65,7 +65,7 @@ Ensuite, entrez ou sélectionnez la commande que vous souhaitez lancer. Vous pou
 Vous pouvez démarrer les flux de travail bx dev en quelques étapes seulement :
 * Créez un projet à l'aide de l'une des deux méthodes suivantes :
   * Utilisez la [console Web {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/developer/getting-started/) et téléchargez le code généré.
-  * Utilisez l'[interface de ligne de commande {{site.data.keyword.Bluemix_notm}} Developer](index.html) et générez un projet à l'aide de la commande `bx dev create`. 
+  * Utilisez l'[interface de ligne de commande {{site.data.keyword.Bluemix_notm}} Developer](index.html) et générez un projet à l'aide de la commande `bx dev create`.
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `bx dev build` pour générer l'application dans une image Docker.
 * Utilisez la commande `bx dev debug` pour exécuter l'application dans un conteneur Docker local à des fins de développement.
@@ -76,7 +76,7 @@ Vous pouvez démarrer les flux de travail bx dev en quelques étapes seulement :
 ### Utilisation de l'extension IBM Developer pour les flux de travail Cloud Foundry
 {: #usage-cloud-foundry}
 
-Pour les utilisateurs qui déploient actuellement des applications dans des environnements d'exécution Cloud Foundry sur IBM {{site.data.keyword.Bluemix_notm}}, la prise en charge de l'ensemble d'opérations `cf` est également fournie. 
+Pour les utilisateurs qui déploient actuellement des applications dans des environnements d'exécution Cloud Foundry sur IBM {{site.data.keyword.Bluemix_notm}}, la prise en charge de l'ensemble d'opérations `cf` est également fournie.
 
 Vous pouvez démarrer les flux de travail CloudFoundry en quelques étapes seulement :
 * Créez une nouvelle application CloudFoundry.
