@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -40,7 +40,7 @@ The hostname <myHostname> is taken.
 
 #### Cause
 {: #hostname-cause}
-   
+
 This error is due to an expired login token.
 
 
@@ -50,7 +50,7 @@ This error is due to an expired login token.
 Log in again.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -68,7 +68,7 @@ Failed to <command> project.
 
 #### Cause
 {: #general-cause}
-   
+
 This error is due to an expired login token.
 
 
@@ -78,7 +78,7 @@ This error is due to an expired login token.
 Log in again.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -89,7 +89,7 @@ bx login
 You might see the following error when you run a project without building it first.
 
 ```
-$ bx dev run testProject
+$ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -105,7 +105,7 @@ Error: No such image: bx-dev-testProject
 #### Cause
 {: #nosuchimage-cause}
 
-You must build a project before you run it. 
+You must build a project before you run it.
 
 
 #### Resolution
@@ -114,14 +114,14 @@ You must build a project before you run it.
 Run the following command in your current project directory to build your application:
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Run the following command in your current project directory to start your application:
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 
 
@@ -139,7 +139,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 
 #### Cause
 {: #os-cause}
-   
+
 This error is due to the {{site.data.keyword.objectstorageshort}} service, which provides only one instance of the Free {{site.data.keyword.objectstorageshort}} plan.
 
 
@@ -153,20 +153,20 @@ You are prompted to choose a different plan to avoid this error.
 {: #code}
 
 You might see the following error if you use the {{site.data.keyword.dev_cli_short}} to create a project:
-	
+
 ```
 FAILED                            
 Project created, but could not get code
 https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
-	
+
 
 #### Cause
 {: #code-cause}
 
 This error is due to an internal timeout.
-	
+
 
 #### Resolution
 {: #code-resolution}
@@ -176,7 +176,7 @@ You can get the code either of the following ways:
 * Run the following command by using the CLI:
 
    ```
-   bx dev code <your-project-name>
+   ibmcloud dev code <your-project-name>
    ```
    {: codeblock}
 
@@ -191,10 +191,10 @@ You can get the code either of the following ways:
 	3. After the code is generated, click **Download Code**.
 
 
-### Error running `bx dev run` for Node.js projects
+### Error running `ibmcloud dev run` for Node.js projects
 {: #node}
 
-You might see the following error if you are running `bx dev run` with the {{site.data.keyword.dev_cli_short}} for Node.js Web or BFF projects:
+You might see the following error if you are running `ibmcloud dev run` with the {{site.data.keyword.dev_cli_short}} for Node.js Web or BFF projects:
 
 ```
 module.js:597
@@ -219,26 +219,26 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 
 #### Cause
 {: #node-cause}
-   
+
 This error occurs when the `appmetrics` module is installed on a different architecture. Native npm modules that are installed on one architecture do not work on another. The included Docker images are based on the Linux kernel.
 
 
 #### Resolution
 {: #node-resolution}
 
-Delete `node_modules` folder and run `bx dev run` again.
+Delete `node_modules` folder and run `ibmcloud dev run` again.
 
 
-### Failure to deploy to Bluemix
+### Failure to deploy to {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploy}
 
-You might attempt to deploy to Bluemix with the {{site.data.keyword.dev_cli_short}} and you see that it does not deploy to Bluemix but there is no error.
+You might attempt to deploy to {{site.data.keyword.Bluemix_notm}} with the {{site.data.keyword.dev_cli_short}} and you see that it does not deploy to {{site.data.keyword.Bluemix_notm}} but there is no error.
 
 
 #### Cause
 {: #cause1}
 
-This could be that you are not logged in to your account. 
+This could be that you are not logged in to your account.
 
 #### Resolution
 {: #resolution1}
@@ -246,11 +246,11 @@ This could be that you are not logged in to your account.
 Log in and try again.
 
 ```
-bx login
+ibmcloud login
 ```
 
 
-### Failure to deploy to Kubernetes on Bluemix
+### Failure to deploy to Kubernetes on {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploytokube}
 
 You may see this failure after the initial prompt for your cluster name:
@@ -270,7 +270,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 Most likely this is due to an invalid cluster name and can be confirmed by running the same command with `--trace` and you may see this in the error output:
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 
 
@@ -280,11 +280,11 @@ Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"T
 Be sure that you are using the correct cluster and that you have configured your cluster for deployment by running
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 
 
-### Failure to deploy to Kubernetes on Bluemix
+### Failure to deploy to Kubernetes on {{site.data.keyword.Bluemix_notm}}
 
 You may see this failure after the prompt for the deploy image target:
 
@@ -310,7 +310,7 @@ Most likely, this is due to an invalid deploy image target. More specifically, i
 Be sure that the namespace in the deploy image target matches one of the namespaces found from running
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 
 
@@ -322,20 +322,20 @@ All prerequisites will install for most users using the platform installers at t
 
 To install the dev plugin, the [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started) must first be installed.
 
-To use the dev plugin itself, you must install it by running the following command: `bx plugin install dev -r Bluemix`
+To use the dev plugin itself, you must install it by running the following command: `ibmcloud plugin install dev -r Bluemix`
 
 For running and debugging applications locally, you must also install [Docker ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-docker).
 
 For deploying an application as a container, you must also install install Kubernetes, Helm, and the following IBM Cloud CLI plugins:
 
 To install Kubernetes:
-* Mac users: 
+* Mac users:
 `curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl`
 
-* Linux users: 
+* Linux users:
 `curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl`
 
-* Windows users: 
+* Windows users:
 `curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe`
 
 To install Helm:
@@ -347,10 +347,10 @@ To install Helm:
 Download and install the binary at https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
 To install the container-registry plugin:
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 To install the container-service plugin:
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`
 
 
 <!--
