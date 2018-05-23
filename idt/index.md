@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -30,8 +30,8 @@ There are several ways that you can create a Cloud app.
 - [App Services web console](https://console.bluemix.net/developer/appservice) for generic web apps and microservices
 - [Watson Dashboard](https://console.bluemix.net/dashboard/watson) for creating Watson based capability enabled starter apps.
     - Other industry and technology-based dashboards are available from the "Hamburger" menu on the {{site.data.keyword.Bluemix_notm}} home page. All take a similar approach of using Starter Kits to create new apps.
-- {{site.data.keyword.dev_cli_notm}} CLIs [`bx dev create`](./commands.html#create) command to create a new app.
-- {{site.data.keyword.dev_cli_notm}} CLIs [`bx dev enable`](./commands.html#enable) command to quickly enable the cloud on an existing server-side app.
+- {{site.data.keyword.dev_cli_notm}} CLIs [`ibmcloud dev create`](./commands.html#create) command to create a new app.
+- {{site.data.keyword.dev_cli_notm}} CLIs [`ibmcloud dev enable`](./commands.html#enable) command to quickly enable the cloud on an existing server-side app.
 
 For any of the previous creation methods, the flow is similar. You can choose the project type, implementation language, and app pattern to use. You can also opt to add services with an added value to your app, such as authentication or persistence. Finally, you can choose to enable DevOps capability to the app that provides a complete toolchain of source control and team communications, and a pipeline that is triggered on each commit to validate, build, and deploy your app to the IBM Cloud.
 
@@ -76,12 +76,12 @@ More details on project structures can be found here:
 {: #build}
 
 
-Once your project has been created, it's now up to you to craft it into something useful. The general flow consists of editing the source code, then running a [`bx dev build`](commands.html#build) to compile the app within a local container specific to your app's language and configuration. Depending on your apps language and generator that is used, there are one or more containers defaulted to support building and running locally.  Typically, there will be a "tools" container for builds and local debugging.  This container will usually have extra tools and capabilities to aid you in development.  There is also a "run" container that closely mimics the actual runtime environment of your app once deployed to the cloud, either in Cloud Foundry or IBM's Kubernetes based container environment.
+Once your project has been created, it's now up to you to craft it into something useful. The general flow consists of editing the source code, then running a [`ibmcloud dev build`](commands.html#build) to compile the app within a local container specific to your app's language and configuration. Depending on your apps language and generator that is used, there are one or more containers defaulted to support building and running locally.  Typically, there will be a "tools" container for builds and local debugging.  This container will usually have extra tools and capabilities to aid you in development.  There is also a "run" container that closely mimics the actual runtime environment of your app once deployed to the cloud, either in Cloud Foundry or IBM's Kubernetes based container environment.
 
 
 You are free to use whatever IDE or editor you prefer to code up your application. We offer an extension for the Microsoft VisualStudio Code (VSCode) editor that enables you to access all the IDE commands from directly within the editor.
 
-Once the project has been built, you'll next want to run your app using the [`bx dev run`](commands.html#run) or [`bx dev debug`](commands.html#debug), depending on your apps generator configuration.  This will run the app within the proper container.  Some apps patterns support multiple containers external to your apps such as persistence or other capabilities.  These will automatically be started and configured during run or debug.  There is also a [`bx dev test`](commands.html#test) command that will execute any test cases associated with the app.
+Once the project has been built, you'll next want to run your app using the [`ibmcloud dev run`](commands.html#run) or [`ibmcloud dev debug`](commands.html#debug), depending on your apps generator configuration.  This will run the app within the proper container.  Some apps patterns support multiple containers external to your apps such as persistence or other capabilities.  These will automatically be started and configured during run or debug.  There is also a [`ibmcloud dev test`](commands.html#test) command that will execute any test cases associated with the app.
 
 
 ### How local containers are used
@@ -116,7 +116,7 @@ The following CLI commands assist in working with your project during the code, 
 ## Deploy
 {: #deploy}
 
-Under a proper cloud native environment, you will want to utilize a fully functional DevOps pipeline to manage all deployments, as well as a wealth of other capabilities.  During the create flow, you can set up your app to use IBM Cloud's DevOps.  If you are not ready to use the built-in DevOps, then you can either manually [`bx dev deploy`](./commands.html#deploy) your app, or use the deploy command within your own DevOps pipeline.  
+Under a proper cloud native environment, you will want to utilize a fully functional DevOps pipeline to manage all deployments, as well as a wealth of other capabilities.  During the create flow, you can set up your app to use IBM Cloud's DevOps.  If you are not ready to use the built-in DevOps, then you can either manually [`ibmcloud dev deploy`](./commands.html#deploy) your app, or use the deploy command within your own DevOps pipeline.  
 
 
 
