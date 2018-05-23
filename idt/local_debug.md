@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -25,7 +25,7 @@ Steps to enable the debugging tool for a Java application:
 1. From the root directory of your application project run the following command:
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. Connecting the debugger to your application:
@@ -52,7 +52,7 @@ Steps to enable the debugging tool for a Node.js application:
 1. From your application projects root directory run the following command:
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. Connecting the debugger to your application:
