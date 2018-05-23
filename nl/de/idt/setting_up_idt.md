@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -16,22 +16,22 @@ lastupdated: "2018-04-17"
 # {{site.data.keyword.dev_cli_notm}}-CLI einrichten
 {: #add-cli}
 
-Die {{site.data.keyword.dev_cli_short}}-CLI ist eine Befehlszeilenmethode zum Erstellen, Entwickeln und Bereitstellen von Anwendungen für Entwickler, die über eine Befehlszeile End-to-End-Webanwendungen, -Mobilanwendungen und -Mikroserviceanwendungen entwickeln möchten.
+Die {{site.data.keyword.dev_cli_short}}-CLI ist eine Befehlszeilenmethode zum Erstellen, Entwickeln und Bereitstellen von Anwendungen für Entwickler, die über eine Befehlszeile End-to-End-Webanwendungen, -Mobilanwendungen und -Mikroserviceanwendungen entwickeln möchten. Finden Sie einen schnellen Einstieg mit dem empfohlenen Toolset, indem Sie eines der folgenden Scripts ausführen.
 {: shortdesc}
 
-## Voraussetzungen
+## Voraussetzungen für {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
-Registrieren Sie sich für [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
+Registrieren Sie sich für [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
 
 *  Wenn Sie mit Microsoft Windows&trade; arbeiten, müssen Sie Windows 10 oder höher verwenden.
 
 * Sie müssen den stabilen Kanal für Docker mit Version 1.13.1 oder höher verwenden.
 
-## Installieren
+## Vorgehensweise zur Installation von {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
-Zum Installieren des Tools können Sie den entsprechenden Befehl ausführen, um das Installationsprogramm zu starten. Dabei werden auch Abhängigkeiten installiert, z. B. IBM Cloud-CLI, Kubernetes, Helm und Docker. Führen Sie die folgenden Installationsschritte aus: 
+Zum Installieren des Toolsets können Sie den entsprechenden Befehl ausführen, um das Installationsprogramm zu starten. Es werden die folgenden empfohlenen Tools für die {{site.data.keyword.Bluemix_notm}}-Entwicklung installiert (falls noch nicht geschehen): `Homebrew` (nur Mac), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}}-CLI, {{site.data.keyword.dev_cli_notm}}-Plug-in, Cloud Functions-Plug-in, Container Registry-Plug-in, Container Service-Plug-in und `sdk-gen`-Plug-in. Führen Sie die folgenden Installationsschritte aus:
 
 **Mac und Linux:**
 
@@ -43,12 +43,14 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* Hinweis: Öffnen Sie die Windows PowerShell, indem Sie mit der rechten Maustaste klicken und die Option "Als Administrator ausführen" auswählen. 
+* Hinweis: Öffnen Sie die Windows PowerShell, indem Sie mit der rechten Maustaste klicken und die Option "Als Administrator ausführen" auswählen.
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
+
+Der Abschnitt [Tools erneut installieren](/docs/troubleshoot/ts_createapps.html#appendix) enthält Informationen zum individuellen Installieren aller Abhängigkeiten. 
 
 Werten Sie aus, ob die Plug-in-Installation erfolgreich war, indem Sie den folgenden Befehl ausführen:  
 
@@ -60,7 +62,7 @@ bx dev
 ## Umgebung konfigurieren
 {: #configure-environment}
 
-1. Stellen Sie eine Verbindung zu einem API-Endpunkt in Ihrer [{{site.data.keyword.Bluemix_notm}}-Region](/docs/overview/cf.html#ov_intro_reg) her. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung mit der {{site.data.keyword.Bluemix_notm}}-Region 'Vereinigte Staaten (Süden)' herzustellen:
+1. Stellen Sie eine Verbindung zu einem API-Endpunkt in Ihrer {{site.data.keyword.Bluemix_notm}}-Region her. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung mit der {{site.data.keyword.Bluemix_notm}}-Region 'Vereinigte Staaten (Süden)' herzustellen:
 
 	```
 	bx api https://api.ng.bluemix.net
@@ -98,13 +100,13 @@ bx dev
 ## Weitere Informationen
 {: #learn}
 
-Nachdem die {{site.data.keyword.dev_cli_short}}-CLI installiert wurde, können Sie lernen, wie Sie mit diesem leistungsfähigen Tool effektiver arbeiten können: 
+Nachdem die {{site.data.keyword.dev_cli_short}}-CLI installiert wurde, können Sie lernen, wie Sie mit diesem leistungsfähigen Tool effektiver arbeiten können:
 - [Einführung in die IDT-CLI](index.html)
 - [IDT -Befehle (bx dev)](commands.html)
 - [Developer Tools für VS Code](vscode.html)
 - [Developer Tools für Jetbrains-IDEs](jetbrains.html)
 
-Sehen Sie sich die [Lernprogramme](/docs/apps/tutorials/tutorial_bff.html) an, die zeigen, wie Sie cloudnative Apps mithilfe der {{site.data.keyword.dev_cli_short}}-CLI erstellen. 
+Sehen Sie sich die [Lernprogramme](/docs/apps/tutorials/tutorial_bff.html) an, die zeigen, wie Sie cloudnative Apps mithilfe der {{site.data.keyword.dev_cli_short}}-CLI erstellen.
 
 ## Weitere Referenzen
 {: #learn-more}

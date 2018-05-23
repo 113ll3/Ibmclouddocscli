@@ -1921,7 +1921,7 @@ bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 Service-ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` mit neuer Beschreibung in `sample-test-3` umbenennen
 
 ```
-bluemix iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!'
+bluemix iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!' 
 ```
 
 
@@ -3859,7 +3859,6 @@ bluemix resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 
 ```
 
 Nach Cloud Foundry-Bereichen mit dem angegebenen Namen in einer der zwei angegebenen Regionen suchen:
-
 
 ```
 bluemix resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'

@@ -20,7 +20,7 @@ Als Entwickler können Sie dieses Plug-in in {{site.data.keyword.Bluemix_notm}} 
 
 Sie können auch prüfen, ob Ihre Cloud Foundry-Apps in einem bestimmten Bereich REST-API-Definitionen aufweisen, die für die SDK-Generierung gültig sind. Schließlich können Sie das {{site.data.keyword.IBM_notm}} SDK Generator-Plug-in verwenden, um alle REST-API-Definitionen zu prüfen und sicherzustellen, dass sie den SDK Generator-Definitionen entsprechen.
 
-Dieses {{site.data.keyword.IBM_notm}} SDK Generator-Plug-in ermöglicht Ihnen, Ihre Back-End-Services mit einem generierten SDK einfach in Ihre App zu integrieren. Wenn eine Änderung an einer REST-API auftritt, können Sie das SDK neu generieren und das alte durch ein SDK-Upgrade ersetzen. Sie können auch die CLI in eine 'DevOps'-Pipeline integrieren und sicherstellen, dass das SDK immer mit den API-Spezifikationen übereinstimmt, wenn die App erstellt wird. 
+Dieses {{site.data.keyword.IBM_notm}} SDK Generator-Plug-in ermöglicht Ihnen, Ihre Back-End-Services mit einem generierten SDK einfach in Ihre App zu integrieren. Wenn eine Änderung an einer REST-API auftritt, können Sie das SDK neu generieren und das alte durch ein SDK-Upgrade ersetzen. Sie können auch die CLI in eine 'DevOps'-Pipeline integrieren und sicherstellen, dass das SDK immer mit den API-Spezifikationen übereinstimmt, wenn die App erstellt wird.
 
 Die REST-API-Definition muss gültig sein und entweder an einem Live-Serverendpunkt oder in einer lokalen Datei auf Ihrem System gehostet sein. Wenn die REST-API-Definition gehostet wird, muss die relative URL in der Umgebungsvariablen `OPENAPI_SPEC` definiert sein.
 
