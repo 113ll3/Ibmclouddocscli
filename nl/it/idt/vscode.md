@@ -33,16 +33,16 @@ Per utilizzare l'estensione IBM Developer Tools per Visual Studio Code, sul tuo 
 
 Il modo più semplice per installare l'estensione IBM Developers Tools è quello di utilizzare il comando 'quick open' di Visual Studio Code:
 
-1. Apri il riquadro comandi 'quick open' utilizzando la seguente combinazione di tasti dall'interno dell'editor: 
+1. Apri il riquadro comandi 'quick open' utilizzando la seguente combinazione di tasti dall'interno dell'editor:
 
   * **Mac:** `cmd + p`
   * **Windows / Linux:** `ctrl + p`
 
 2. Immetti il comando `ext install ibm-developer` e premi Invio per installare l'estensione IBM Developer Tools all'interno dell'editor Visual Studio Code.
 
-In alternativa, puoi installare l'estensione IBM Developer Tools attraverso la finestra di gestione "Extensions": 
+In alternativa, puoi installare l'estensione IBM Developer Tools attraverso la finestra di gestione "Extensions":
 
-1. Apri la barra laterale **Extensions** nell'editor Visual Studio Code ed effettua la ricerca utilizzando la stringa `publisher:IBM Developer`.  L'estensione IBM Developer Tools viene visualizzata nei risultati della ricerca.   
+1. Apri la barra laterale **Extensions** nell'editor Visual Studio Code ed effettua la ricerca utilizzando la stringa `publisher:IBM Developer`.  L'estensione IBM Developer Tools viene visualizzata nei risultati della ricerca.  
 2. Fai clic sul pulsante **Install** per avviare l'installazione.
 
 Puoi anche accedere all'[estensione IBM Developer Tools direttamente da Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
@@ -50,9 +50,9 @@ Puoi anche accedere all'[estensione IBM Developer Tools direttamente da Visual S
 ## Utilizzo
 {: #usage}
 
-Puoi avviare i comandi dell'estensione utilizzando il riquadro comandi di Visual Studio Code. 
+Puoi avviare i comandi dell'estensione utilizzando il riquadro comandi di Visual Studio Code.
 
-Per prima cosa, apri il riquadro comandi utilizzando la seguente combinazione di tasti: 
+Per prima cosa, apri il riquadro comandi utilizzando la seguente combinazione di tasti:
 
 * **Mac:** `cmd + shift + p`
 * **Windows / Linux:** `ctrl + shift + p`
@@ -65,7 +65,7 @@ Successivamente, immetti o seleziona il comando da avviare. Puoi digitare ‘bx�
 Puoi iniziare a utilizzare i flussi di lavoro bx dev in pochi passi:
 * Crea un progetto utilizzando uno dei due seguenti metodi:
   * Utilizza la [console web {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/developer/getting-started/) e scarica il codice generato
-  * Utilizza la [{{site.data.keyword.Bluemix_notm}}CLI Bluemix Developer](index.html) e genera un progetto utilizzando il comando `bx dev create` 
+  * Utilizza la [{{site.data.keyword.Bluemix_notm}}CLI Bluemix Developer](index.html) e genera un progetto utilizzando il comando `bx dev create`
 * Apri la cartella del progetto in locale nell'editor Visual Studio Code
 * Utilizza il comando `bx dev build` per creare l'applicazione in un'immagine Docker
 * Utilizza il comando `bx dev debug` per eseguire l'applicazione nel Docker locale per lo sviluppo

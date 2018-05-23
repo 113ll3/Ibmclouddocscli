@@ -18,7 +18,7 @@ lastupdated: "2018-04-17"
 
 
 Puoi gestire gli ambienti {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI. Ad
-esempio, puoi aggiungere utenti da un registro LDAP. Per informazioni sulla gestione del tuo account {{site.data.keyword.Bluemix_notm}} pubblico, vedi [Amministrazione](/docs/admin/adminpublic.html#administer). 
+esempio, puoi aggiungere utenti da un registro LDAP. Per informazioni sulla gestione del tuo account {{site.data.keyword.Bluemix_notm}} pubblico, vedi [Amministrazione](/docs/admin/adminpublic.html#administer).
 
 Prima di iniziare, installa l'interfaccia riga di comando cf. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI richiede cf versione 6.11.2 o successive. [Scarica interfaccia riga di comando Cloud Foundry ![Icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
@@ -36,7 +36,7 @@ Dopo aver installato l'interfaccia riga di comandi cf, puoi
 aggiungere il plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI.
 
-**Nota**: se avevi già installato il plug-in Gestione {{site.data.keyword.Bluemix_notm}}, per ottenere gli ultimi aggiornamenti potresti doverlo disinstallare, eliminare il repository e reinstallare il plug-in. 
+**Nota**: se avevi già installato il plug-in Gestione {{site.data.keyword.Bluemix_notm}}, per ottenere gli ultimi aggiornamenti potresti doverlo disinstallare, eliminare il repository e reinstallare il plug-in.
 
 Completa la seguente procedura per aggiungere il repository e installare il plug-in:
 
@@ -56,7 +56,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 Se devi disinstallare il plug-in, puoi utilizzare i seguenti comandi e quindi aggiungere il repository aggiornato e installare l'ultimo plug-in:
 
 * Disinstalla il plug-in: `cf uninstall-plugin BluemixAdminCLI`
-* Rimuovi il repository di plug-in: `cf remove-plugin-repo BluemixAdmin` 
+* Rimuovi il repository di plug-in: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## Utilizzo del plug-in {{site.data.keyword.Bluemix_notm}} Admin
@@ -148,7 +148,7 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 <dt class="pt dlterm">&lt;dedicated_org_id&gt;</dt>
 <dd class="pd">Se inviti tutti gli utenti attualmente in un'organizzazione dell'account dedicato, l'ID organizzazione dell'account dedicato.</dd>
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">Una chiave API per inviatare gli utenti all'account pubblico. Deve essere generata dall'<b>Amministratore</b> dell'account pubblico.</dd>
+<dd class="pd">Una chiave API per invitare gli utenti all'account pubblico. Deve essere generata dall'<b>Amministratore</b> dell'account pubblico.</dd>
 <dt class="pt dlterm">&lt;public_org_id&gt;</dt>
 <dd class="pd">L'ID dell'organizzazione dell'account pubblico a cui inviti gli utenti.</dd>
 </dl>
@@ -167,7 +167,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
-<dd class="pd">La chiave API utilizzata per inviatare gli utenti all'account. Deve essere generata dall'<b>Amministratore</b> dell'account pubblico.</dd>
+<dd class="pd">La chiave API utilizzata per invitare gli utenti all'account. Deve essere generata dall'<b>Amministratore</b> dell'account pubblico.</dd>
 </dl>
 
 <!-- staging-only commands start. Live for interconnect -->

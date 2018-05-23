@@ -106,7 +106,7 @@ Il framework di test si basa su Ginkgo, un framework di test BDD per Go. Viene u
 
 * Internazionalizzazione: [go-i18n ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/nicksnyder/go-i18n) e [go-bindata ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/jteeuwen/go-bindata)
 
-L'internazionalizzazione si basa su go-i18n, che è un pacchetto e uno strumento della riga di comando che fornisce il supporto per tradurre un'applicazione Go in più linguaggi. I bundle di traduzione sono rielaborati da go-bindata, che è un comando che converte tutti i file di input in codice di origine Go gestibile.
+L'internazionalizzazione si basa su go-i18n, che è un pacchetto e uno strumento della riga di comando che fornisce il supporto per tradurre un'applicazione Go in più linguaggi. I bundle di traduzione sono rielaborati da go-bindata, che è un comando che converte tutti i file di input in codice sorgente Go gestibile.
 
    * Installa `go-i18n` utilizzando il seguente comando.
 

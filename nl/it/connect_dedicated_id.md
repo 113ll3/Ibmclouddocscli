@@ -32,7 +32,7 @@ Per accedere a un cloud dedicato in cui è disponibile il servizio IAM pubblico,
   Email>
 ```
 
-Se il tuo ID dedicato è già stato connesso all'ID IBM pubblico, esegue l'autenticazione e l'accesso: 
+Se il tuo ID dedicato è già stato connesso all'ID IBM pubblico, esegue l'autenticazione e l'accesso:
 
 ```
   Autenticazione in corso...
@@ -41,7 +41,7 @@ Se il tuo ID dedicato è già stato connesso all'ID IBM pubblico, esegue l'auten
   Connesso all'utente dedicato my_dedicated_id
 ```
 
-Tuttavia, se il tuo ID dedicato non è stato connesso all'ID IBM pubblico, ti viene richiesto di connetterti manualmente all'ID IBM pubblico: 
+Tuttavia, se il tuo ID dedicato non è stato connesso all'ID IBM pubblico, ti viene richiesto di connetterti manualmente all'ID IBM pubblico:
 
 ```
   Stai eseguendo l'accesso con un ID IBM non associato ad alcun utente dedicato.

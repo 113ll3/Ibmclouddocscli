@@ -1272,7 +1272,7 @@ bluemix account user-reinvite EMAIL_UTENTE
 ## bluemix iam access-groups
 {: #bluemix_iam_access_groups}
 
-lenca i gruppi di accesso nell'account corrente
+Elenca i gruppi di accesso nell'account corrente
 
 ```
 bluemix iam access-groups [-u NOME_UTENTE | -s NOME_ID_SERVIZIO]
@@ -1360,7 +1360,7 @@ bluemix iam access-group-update NOME_GRUPPO [-n, --name NUOVO_NOME] [-d, --descr
 <strong>Opzioni comando</strong>:
 <dl>
   <dt>-n, --name</dt>
-  <dd>Nuovo neome del gruppo di accesso</dd>
+  <dd>Nuovo nome del gruppo di accesso</dd>
   <dt>-d, --description</dt>
   <dd>Nuova descrizione</dd>
   <dt>-f, --force</dt>
@@ -1918,7 +1918,7 @@ Aggiorna la descrizione del servizio `sample-test` versione `1-0jn39fbefew`
 bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 ```
 
-Rinomina l'ID servizio `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` con `sample-test-3` con una nuuova descrizione
+Rinomina l'ID servizio `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` con `sample-test-3` con una nuova descrizione
 
 ```
 bluemix iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!' 
@@ -3823,7 +3823,7 @@ bluemix resource service-alias-delete my-service-alias
 
 ## bluemix resource search
 {: #bluemix_resource_search}
-Ricerca le risorse utilizzando la sintassi di query Lucene 
+Ricerca le risorse utilizzando la sintassi di query Lucene
 
 ```
 bluemix search QUERY_LUCENE [-o, --offset OFFSET] [-l, --limit LIMITE]
@@ -3836,7 +3836,7 @@ bluemix search QUERY_LUCENE [-o, --offset OFFSET] [-l, --limit LIMITE]
   <dt>-offset, --o</dt>
   <dd>Avvio numero posizione risorsa</dd>
   <dt>-limit, --l</dt>
-  <dd>Numero di risorse da restituire (massimo 10000) </dd>
+  <dd>Numero di risorse da restituire (massimo 10000)</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -3864,7 +3864,7 @@ Ricerca gli spazi Cloud Foundry con il nome specificato e ubicati in una delle d
 bluemix resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
 ```
 
-Ricerca le risorse il cui nome contiene la parola dev nello spazio Cloud Foundry con l'ID specificato: 
+Ricerca le risorse il cui nome contiene la parola dev nello spazio Cloud Foundry con l'ID specificato:
 
 ```            
 bluemix resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
@@ -3876,19 +3876,19 @@ Ricerca le risorse del controller delle risorse nell'ubicazione specificata (ad 
 bluemix resource search 'region:us-south AND family:resource_controller'
 ```
 
-Ricerca le risorse o gli alias nel gruppo di risorse con l'ID specificato: 
+Ricerca le risorse o gli alias nel gruppo di risorse con l'ID specificato:
 
 ```
 bluemix resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
 ```
 
-Ricerca i gruppi di risorse con il nome predefinito: 
+Ricerca i gruppi di risorse con il nome predefinito:
 
 ```
 bluemix resource search 'name:default AND type:resource-group'
 ```
 
-Ricerca i bind della risorsa per il nome servizio specificato: 
+Ricerca i bind della risorsa per il nome servizio specificato:
 
 ```
 bluemix resource search 'service_name:cloud-object-storage AND type:resource-binding'
@@ -3900,7 +3900,7 @@ Ricerca una risorsa con il CRN (Cloud Resource Name) specificato:
 bluemix resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
-Ricerca una risorsa con la tag specificata: 
+Ricerca una risorsa con la tag specificata:
 
 ```
 bluemix resource search "tags:\"mykey:myvalue\""
@@ -4309,7 +4309,7 @@ bluemix catalog runtimes [-d]
 
 <strong>Esempi</strong>:
 
-Elenca tutti i runtime con le loro descrizioni: 
+Elenca tutti i runtime con le loro descrizioni:
 
 ```
 bluemix catalog runtimes -d
@@ -4318,7 +4318,7 @@ bluemix catalog runtimes -d
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-Mostra l'utilizzo mensile dell'account corrente (solo amministratore dell'account) 
+Mostra l'utilizzo mensile dell'account corrente (solo amministratore dell'account)
 
 ```
 bluemix billing account-usage [-d AAAA-MM] [--json]
@@ -4337,7 +4337,7 @@ bluemix billing account-usage [-d AAAA-MM] [--json]
 
 <strong>Esempi</strong>:
 
-Mostra il report su costo e utilizzo dell'account corrente per 2016-06: 
+Mostra il report su costo e utilizzo dell'account corrente per 2016-06:
 
 ```
 bluemix billing account-usage -d 2016-06
@@ -4391,7 +4391,7 @@ bluemix billing resource-group-usage NOME_GRUPPO [-d AAAA-MM] [--json]
 ## bluemix billing resource-instances-usage
 {: #bluemix_billing_resource_instances_usage}
 
-Mostra l'utilizzo mensile delle istanze della risorsa nell'account corrente. 
+Mostra l'utilizzo mensile delle istanze della risorsa nell'account corrente.
 
 ```
 bluemix billing resource-instances-usage [-o ORGANIZZAZIONE] [-g GRUPPO_RISORSE] [-d AAAA-MM] [--json]
@@ -4532,13 +4532,13 @@ bluemix plugin repo-plugin NOME_PLUGIN [-r NOME_REPOSITORY]
 
 <strong>Esempi</strong>:
 
-Elenca i dettagli del plugin "IBM-Containers" nel repository "sample-repo": 
+Elenca i dettagli del plugin "IBM-Containers" nel repository "sample-repo":
 
 ```
 bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-Elenca i dettagli del plugin "IBM-Containers" nel repository predefinito. 
+Elenca i dettagli del plugin "IBM-Containers" nel repository predefinito.
 
 ```
 bluemix plugin repo-plugin IBM-Containers -r sample-repo
@@ -4559,7 +4559,7 @@ bluemix plugin list
 ## bluemix plugin show
 {: #bluemix_plugin_show}
 
-Visualizza i dettagli di un plugin installato. 
+Visualizza i dettagli di un plugin installato.
 
 ```
 bluemix plugin show NOME-PLUGIN
@@ -4622,13 +4622,13 @@ Installa il plug-in 'container-service' dell'ultima versione dal repository 'Blu
 bluemix plugin install container-service -r Bluemix
 ```
 
-o semplicemente: 
+o semplicemente:
 
 ```
 bluemix plugin install container-service
 ```
 
-Installa il plug-in 'container-service' con la versione '0.1.425' dal repository di plugin ufficiale: 
+Installa il plug-in 'container-service' con la versione '0.1.425' dal repository di plugin ufficiale:
 
 ```
 bluemix plugin install container-service -v 0.1.425
@@ -4653,7 +4653,7 @@ Se non viene specificata alcuna versione, il comando seleziona l'ultima versione
  <dt>NOME PLUGIN</dt>
  <dd>Nome del plug-in da aggiornare. Se non specificato, il comando ricerca gli aggiornamenti per tutti i plug-in installati.</dd>
  <dt>-r NOME_REPOSITORY</dt>
- <dd>Il nome del repository in cui si trova il file binario del plug-in. Se non specificato, il comando utilizza il repository di plugin predefinito 'Bluemix'. </dd>
+ <dd>Il nome del repository in cui si trova il file binario del plug-in. Se non specificato, il comando utilizza il repository di plugin predefinito 'Bluemix'.</dd>
  <dt>-v <i>VERSIONE</i> (facoltativo)</dt>
  <dd>La versione a cui aggiornare il plug-in. Se non viene fornita, aggiorna il plug-in all'ultima versione disponibile.</dd>
  <dt>--all</dt>
@@ -4668,13 +4668,13 @@ controlla tutti gli aggiornamenti disponibili nel repository di plugin 'Bluemix'
 bluemix plugin update -r Bluemix
 ```
 
-o semplicemente: 
+o semplicemente:
 
 ```
 bluemix plugin update
 ```
 
-Aggiorna il plug-in 'container-service' nel repository di plug-in ufficiale all'ultima versione: 
+Aggiorna il plug-in 'container-service' nel repository di plug-in ufficiale all'ultima versione:
 
 ```
 bluemix plugin update container-service

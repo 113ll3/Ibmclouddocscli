@@ -233,12 +233,12 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix sl` per visuali
    </tbody>
  </table>
 
- ## Comandi del programma di bilanciamento del carico dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
+ ## Comandi Load Balancer dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
 
  <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 8. Comandi del programma di bilanciamento del carico dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<caption>Tabella 8. Comandi Load Balancer dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Comandi del programma di bilanciamento del carico dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Comandi Load Balancer dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -924,7 +924,7 @@ Questo comando ordina un volume delle prestazioni con dimensione di 1000 GB, IOP
 ### bluemix sl block volume-options 
 {: #sl_block_volume_options} 
 
-Elenca tutte le opzioni per l'ordinamento di un archiviazione blocchi.
+Elenca tutte le opzioni per l'ordinamento di una archiviazione blocchi.
 ```
 bluemix sl block volume-options
 ```
@@ -1524,7 +1524,7 @@ Questo comando ordina un volume delle prestazioni con dimensione di 1000GB, IOPS
 ### bluemix sl file volume-options 
 {: #sl_file_volume_options} 
 
-Elenca tutte le opzioni per l'ordinamento di un archiviazione file.
+Elenca tutte le opzioni per l'ordinamento di un'archiviazione file.
 ```
 bluemix sl file volume-options
 ```
@@ -2425,7 +2425,7 @@ Questo comando modifica il certificato con ID 12345678 e aggiorna la sua chiave 
 ### bluemix sl security cert-download 
 {: #sl_security_cert_download} 
 
-Scarica i file di chiave e certificato SSL.
+Scarica i file di chiave e i certificati SSL.
 ```
 bluemix sl security cert-download IDENTIFICATIVO
 ```
@@ -2762,7 +2762,7 @@ bluemix sl vs capture IDENTIFICATIVO [OPZIONI]
 <dt>-n, --name</dt>
 <dd>Obbligatorio. Nome dell'immagine.</dd>
 <dt>--all</dt>
-<dd>Acquisisce tutti i dischi appartenenti al server virtuale.</dd>
+<dd>Acquisisce tutti i dischi appartenenti al quanto.</dd>
 <dt>--note</dt>
 <dd>Aggiunge una nota da associare all'immagine.</dd>
 </dl>
@@ -2800,7 +2800,7 @@ bluemix sl vs create [OPZIONI]
 <dt>--billing</dt>
 <dd>Frequenza di fatturazione. Il valore predefinito è: hourly. Le opzioni sono: hourly, monthly.</dd>
 <dt>--dedicated</dt>
-<dd>Crea un server virtuale dedicato (nodo privato).</dd>
+<dd>Crea un Virtual Server dedicato (nodo privato).</dd>
 <dt>--san</dt>
 <dd>Utilizza l'archiviazione SAN invece del disco locale.</dd>
 <dt>--test</dt>
@@ -2830,7 +2830,7 @@ bluemix sl vs create [OPZIONI]
 <dt>--vlan-public</dt>
 <dd>L'ID della VLAN pubblica in cui desideri venga posizionato il server virtuale.</dd>
 <dt>--vlan-private</dt>
-<dd>L'ID della VLAN privata in cui desideri venga posizionato il server virtuale-</dd>
+<dd>L'ID della VLAN privata in cui desideri venga posizionato il virtual server-</dd>
 <dt>--wait</dt>
 <dd>Attendi finché il server virtuale non ha terminato il provisioning fino a X secondi prima di ritornare.</dd>
 <dt>-f, --force</dt>
@@ -3092,7 +3092,7 @@ bluemix sl vs reboot IDENTIFICATIVO [OPZIONI]
 <dt>--hard</dt>
 <dd>Esegue un riavvio forzato.</dd>
 <dt>--soft</dt>
-<dd>Esegue un riavvio non forzato. </dd>
+<dd>Esegue un riavvio non forzato.</dd>
 <dt>-f, --force</dt>
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>

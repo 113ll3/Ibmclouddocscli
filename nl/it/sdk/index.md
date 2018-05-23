@@ -16,11 +16,11 @@ lastupdated: "2018-04-16"
 
 Il plugin {{site.data.keyword.IBM}} SDK Generator può essere installato nella [CLI {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/cli/reference/bluemix_cli/all_versions.html).
 
-Come sviluppatore in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare questo plugin per generare gli SDK dalla tua definizione API REST conforme con la [Open API Specification ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.openapis.org/). Quando modifichi la tua definizione API REST, puoi utilizzare questo plugin per rigenerare solo il SDK anziché rigenerare l'intero progetto. 
+Come sviluppatore in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare questo plugin per generare gli SDK dalla tua definizione API REST conforme con la [Open API Specification ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.openapis.org/). Quando modifichi la tua definizione API REST, puoi utilizzare questo plugin per rigenerare solo il SDK anziché rigenerare l'intero progetto.
 
 Puoi anche vedere se le tue applicazioni Cloud Foundry in uno spazio specifico hanno definizioni API REST che sono valide per la generazione SDK. Infine, puoi utilizzare il plugin {{site.data.keyword.IBM_notm}} SDK Generator per convalidare qualsiasi definizione API REST per assicurarti che siano conformi ai requisiti del generatore SDK.
 
-Questo plugin {{site.data.keyword.IBM_notm}} SDK Generator ti consente di integrare facilmente i tuoi servizi di backend nella tua applicazione con un SDK generato. Quando si verifica una modifica a un'API REST, puoi rigenerare il SDK e sostituire la versione precedente per un upgrade del SDK. Puoi anche integrare la CLI in una pipeline DevOps e garantire che il SDK sia sempre conforme alla specifica API ogni volta che l'applicazione viene creata. 
+Questo plugin {{site.data.keyword.IBM_notm}} SDK Generator ti consente di integrare facilmente i tuoi servizi di backend nella tua applicazione con un SDK generato. Quando si verifica una modifica a un'API REST, puoi rigenerare il SDK e sostituire la versione precedente per un upgrade del SDK. Puoi anche integrare la CLI in una pipeline DevOps e garantire che il SDK sia sempre conforme alla specifica API ogni volta che l'applicazione viene creata.
 
 La definizione API REST deve essere valida e ospitata su un endpoint del server live o su un file locale nel tuo sistema. Se la definizione API REST è ospitata, l'URL relativo deve essere definito nella variabile di ambiente `OPENAPI_SPEC`.
 

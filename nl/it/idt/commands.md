@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -11,13 +14,13 @@ lastupdated: "2018-04-17"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Comandi CLI {{site.data.keyword.dev_cli_notm}} (bx dev) 
+# Comandi CLI {{site.data.keyword.dev_cli_notm}} (bx dev)
 {: #idt-cli}
 
 Versione: 1.2.0
 Rilasciata: 8 marzo 2018
 
-Utilizza i seguenti comandi CLI {{site.data.keyword.dev_cli_notm}} (bx dev) per creare un progetto, distribuirlo, eseguirne il debug e verificarlo. 
+Utilizza i seguenti comandi CLI {{site.data.keyword.dev_cli_notm}} (bx dev) per creare un progetto, distribuirlo, eseguirne il debug e verificarlo.
 
 - [build](#build): crea il progetto in un contenitore locale
 - [code](#code): scarica il codice da un progetto
@@ -27,16 +30,16 @@ Utilizza i seguenti comandi CLI {{site.data.keyword.dev_cli_notm}} (bx dev) per 
 - [delete](#delete): elimina un progetto dal tuo spazio
 - [deploy](#deploy): distribuisce un'applicazione a IBM Cloud
 - [enable](#enable): aggiunge file IBM Cloud a un progetto esistente
-- [get-credentials](#get-credentials): richiama le credenziali richieste dal progetto per abilitare l'utilizzo dei servizi collegati 
+- [get-credentials](#get-credentials): richiama le credenziali richieste dal progetto per abilitare l'utilizzo dei servizi collegati
 - [help](#help): guida per gli argomenti e la sintassi IDT
 - [list](#list): elenca tutti i progetti IBM Cloud in uno spazio
 - [run](#run): esegue la tua applicazione in un contenitore locale
 - [shell](#shell): apre una shell in un contenitore locale
-- [status](#status): controlla lo stato dei contenitori utilizzati dalla CLI 
+- [status](#status): controlla lo stato dei contenitori utilizzati dalla CLI
 - [stop](#stop): arresta un contenitore
 - [test](#test): verifica la tua applicazione in un contenitore locale
-- [view](#view): visualizza l'URL distribuito delle applicazioni per la verifica e la visualizzazione 
-- [compound commands](#compound): esegue più comandi in una istruzione della riga di comando 
+- [view](#view): visualizza l'URL distribuito delle applicazioni per la verifica e la visualizzazione
+- [compound commands](#compound): esegue più comandi in una istruzione della riga di comando
 
 
 
@@ -45,7 +48,7 @@ Utilizza i seguenti comandi CLI {{site.data.keyword.dev_cli_notm}} (bx dev) per 
 
 Puoi creare la tua applicazione utilizzando il comando `build`. I comandi `test`, `debug` e `run` si aspettano di trovare un progetto compilato per cui devi prima eseguire un'operazione `build`.  
 
-Viene utilizzato l'elemento di configurazione `build-cmd-debug` per creare l'applicazione per tutti gli utilizzi ad eccezione di `run`. Crea la tua applicazione per il debug specificando l'opzione della riga di comando `--debug`.  Viene utilizzato l'elemento di configurazione `build-cmd-run` quando stai creando l'applicazione per essere utilizzata con il comando `run`. 
+Viene utilizzato l'elemento di configurazione `build-cmd-debug` per creare l'applicazione per tutti gli utilizzi ad eccezione di `run`. Crea la tua applicazione per il debug specificando l'opzione della riga di comando `--debug`.  Viene utilizzato l'elemento di configurazione `build-cmd-run` quando stai creando l'applicazione per essere utilizzata con il comando `run`.
 
 Per creare con più contenitori, il tuo progetto deve contenere un file [Compose](https://docs.docker.com/compose/overview/), specificato in `cli-config.yml` o puoi utilizzare il parametro del comando `dockerfile-tools` per fornirne uno. Consulta [File Compose](/docs/apps/projects/compose_file.html) per ulteriori informazioni.
 
@@ -63,7 +66,7 @@ bx dev build [--debug]
 ## code
 {: #code}
 
-Utilizza il comando `code` per scaricare un progetto precedentemente creato con il codice del template dell'applicazione e i file di configurazione per {{site.data.keyword.Bluemix_notm}}.  Questo è utile quando devi estrarre una seconda copia di un progetto che hai creato. 
+Utilizza il comando `code` per scaricare un progetto precedentemente creato con il codice del template dell'applicazione e i file di configurazione per {{site.data.keyword.Bluemix_notm}}.  Questo è utile quando devi estrarre una seconda copia di un progetto che hai creato.
 
 Immetti il seguente comando per scaricare il codice da un progetto specificato.
 
@@ -365,7 +368,7 @@ assistono con la gestione della tua applicazione all'interno del contenitore in 
 Esistono [ulteriori parametri](#command-parameters) condivisi con altri comandi.
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * Il nome del contenitore di esecuzione.
 * Utilizzo: `bx dev run --container-name-run [<projectName>]`
@@ -567,7 +570,7 @@ I seguenti parametri sono esclusivi per il comando `view`.
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * Parametro facoltativo utilizzato per definire il nome del cluster Kubernetes quando indirizzi una distribuzione del contenitore
 * Utilizzo `bx dev view --ibm-cluster [cluster-name]`
@@ -608,13 +611,13 @@ I seguenti parametri possono essere utilizzati con i comandi `build|debug|run|te
 * Utilizzo: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * Il nome del contenitore di esecuzione.
 * Utilizzo: `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * Il nome del contenitore degli strumenti.
 * Utilizzo: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

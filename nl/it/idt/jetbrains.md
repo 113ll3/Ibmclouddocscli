@@ -24,7 +24,7 @@ L'estensione IBM Developer per le IDE Jetbrains, che include IntelliJ, WebStorm,
 ## Dipendenze
 {: #dependencies}
 
-Per utilizzare l'estensione IBM Developer Tools per le IDE basate su Jetbrains, hai anche bisogno della [CLI di IBM Cloud Developer Tools](index.html) installata sul tuo sistema. 
+Per utilizzare l'estensione IBM Developer Tools per le IDE basate su Jetbrains, hai anche bisogno della [CLI di IBM Cloud Developer Tools](index.html) installata sul tuo sistema.
 
 ## Installazione
 {: #installation}
@@ -34,9 +34,9 @@ Il modo più semplice per installare l'estensione IBM Developers Tools per l'IDE
 ## Utilizzo
 {: #usage}
 
-Puoi iniziare con un'applicazione lato server esistente e abilitarla per IBM Cloud o utilizzare la CLI IDT per creare una nuova applicazione da un StarterKit (bx dev create). Una volta che disponi del progetto delle tue applicazioni, aprilo nella tua IDE JetBrains. 
+Puoi iniziare con un'applicazione lato server esistente e abilitarla per IBM Cloud o utilizzare la CLI IDT per creare una nuova applicazione da un StarterKit (bx dev create). Una volta che disponi del progetto delle tue applicazioni, aprilo nella tua IDE JetBrains.
 
 Se hai un'applicazione lato server generica, seleziona Strumenti > IBM Cloud Developer Tools > Abilita applicazione per IBM Cloud. Questo controlla tutti i file necessari e li aggiunge dove mancano il che ti consente di creare l'applicazione localmente e distribuirla a IBM Cloud utilizzando un'applicazione Cloud Foundry o in un cluster Kubernetes.
 
-Sviluppa la tua applicazione nativa cloud utilizzando le azioni di creazione/esecuzione/distribuzione di base dal menu IDT. Se hai bisogno di eseguire azioni che non sono nel menu, apri la scheda del terminale e immetti i comandi desiderati manualmente. 
+Sviluppa la tua applicazione nativa cloud utilizzando le azioni di creazione/esecuzione/distribuzione di base dal menu IDT. Se hai bisogno di eseguire azioni che non sono nel menu, apri la scheda del terminale e immetti i comandi desiderati manualmente.
 

@@ -34,7 +34,7 @@ Se hai un'applicazione server Java, NodeJS o Swift, puoi utilizzare le seguenti 
 ## SDK client
 {: #client_sdk}
 
-Puoi utilizzare le seguenti SDK nella tua applicazione mobile per sfruttare le rispettive funzionalità. 
+Puoi utilizzare le seguenti SDK nella tua applicazione mobile per sfruttare le rispettive funzionalità.
 
 
 ### SDK Android
@@ -55,7 +55,7 @@ Puoi utilizzare le seguenti SDK nella tua applicazione mobile per sfruttare le r
 - [{{site.data.keyword.mobilepushshort}} SDK ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push)
 
 
-### Plug-in Cordova 
+### Plug-in Cordova
 {: #cordova_plugin}
 
 - [Core plugin ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)

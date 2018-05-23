@@ -465,8 +465,7 @@ cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ## cf logs
 {: #cf_logs}
 
-Visualizza i flussi di log
-STDOUT e STDERR di un'applicazione.
+Visualizza i flussi di log STDOUT e STDERR di un'applicazione.
 
 ```
 cf logs nomeapplicazione [--recent]
@@ -500,8 +499,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Elenca tutti
-i servizi disponibili nel marketplace. I servizi elencati da questo comando sono visualizzati anche nel catalogo {{site.data.keyword.Bluemix_notm}}.
+Elenca tutti i servizi disponibili nel marketplace. I servizi elencati da questo comando sono visualizzati anche nel catalogo {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
@@ -554,8 +552,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-s* nome_stack (facoltativo)</dt>
 <dd>Lo stack per l'esecuzione delle applicazioni. Uno stack è un file system precostruito che include il sistema operativo. Utilizza `cf stacks` per visualizzare gli stack disponibili in {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-t* timeout (facoltativo)</dt>
-<dd>Il tempo massimo in secondi per l'avvio dell'applicazione. Altri timeout lato server potrebbero
-sovrascrivere questo valore.</dd>
+<dd>Il tempo massimo in secondi per l'avvio dell'applicazione. Altri timeout lato server potrebbero sovrascrivere questo valore.</dd>
 <dt>*--no-hostname* (facoltativo)</dt>
 <dd>Associa il dominio di sistema {{site.data.keyword.Bluemix_notm}} a questa applicazione.</dd>
 <dt>*--no-manifest* (facoltativo)</dt>
@@ -587,8 +584,7 @@ cf push `my_app` -c "bash ./<run.sh>"
 ## cf scale
 {: #cf_scale}
 
-Visualizza o modifica il numero di istanze,
-il limite di spazio su disco e il limite di memoria per un'applicazione.
+Visualizza o modifica il numero di istanze, il limite di spazio su disco e il limite di memoria per un'applicazione.
 
 ```
 cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
@@ -629,8 +625,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 ## cf services
 {: #cf_services}
 
-Elenca tutti i servizi
-disponibili nello spazio corrente.
+Elenca tutti i servizi disponibili nello spazio corrente.
 
 ```
 cf services
@@ -734,9 +729,7 @@ $ cf ssh -N -T -L 7777:localhost:8888 my_app
 ## cf stacks
 {: #cf_stacks}
 
-Elenca tutti
-gli stack. Uno stack è un file system precostruito, compreso un sistema operativo che può eseguire
-le applicazioni.
+Elenca tutti gli stack. Uno stack è un file system precostruito, compreso un sistema operativo che può eseguire le applicazioni.
 
 ```
 cf stacks
@@ -811,8 +804,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Visualizza la versione
-dell'interfaccia riga di comando cf.
+Visualizza la versione dell'interfaccia riga di comando cf.
 
 ```
 cf -v

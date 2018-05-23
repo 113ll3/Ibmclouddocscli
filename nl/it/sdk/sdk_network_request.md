@@ -18,7 +18,7 @@ Puoi utilizzare l'SDK `BMSCore` per effettuare richieste di rete a qualsiasi ris
 ## Android
 {: #request-android}
 
-1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-android) nella tua applicazione Android. 
+1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-android) nella tua applicazione Android.
 
 2. Effettua una richiesta di rete.
 
@@ -50,7 +50,7 @@ La classe `Request` rappresenta un metodo semplice per effettuare una richiesta 
 ## iOS
 {: #request-ios}
 
-1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-ios) nella tua applicazione iOS. 
+1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-ios) nella tua applicazione iOS.
 
 2. Crea una richiesta di rete.
 
@@ -100,7 +100,7 @@ Per esempi di utilizzo completi, consulta `BMSCore` GitHub [README](https://gith
 ## Cordova
 {: #request-cordova}
 
-1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-cordova) nella tua applicazione Cordova. 
+1. Assicurati di aver [importato e inizializzato l'SDK Client](sdk_BMSClient.html#init-BMSClient-cordova) nella tua applicazione Cordova.
 
 2. Crea una richiesta di rete.
 

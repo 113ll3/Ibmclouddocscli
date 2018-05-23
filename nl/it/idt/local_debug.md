@@ -49,7 +49,7 @@ bx dev debug
 
 Procedura per abilitare lo strumento di debug per un'applicazione Node.js:
 
-1. Dalla tua directory root dei progetti dell'applicazione esegui il seguente comando: 
+1. Dalla tua directory root dei progetti dell'applicazione esegui il seguente comando:
 
 ```
 bx dev debug
