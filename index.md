@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-17"
 {: #overview}
 
 {{site.data.keyword.dev_cli_notm}} is a command line approach for creating, developing, and deploying applications for developers who want to use a command line to develop end-to-end web, mobile, and microservice applications. Quickly get started with the recommended toolset by running one of the following scripts.
-{: shortdesc} 
+{: shortdesc}
 
 ## Prerequisites for {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
@@ -55,7 +55,7 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 To verify installation, run the `help` command:
 
 ```
-bx dev help
+ibmcloud dev help
 ```
 {: codeblock}
 
