@@ -34,7 +34,7 @@ Wenn Sie über eine Java-, NodeJS- oder Swift-Serveranwendungen verfügen, könn
 ## Client-SDKs
 {: #client_sdk}
 
-Sie können die folgenden SDKs in Ihrer mobilen Anwendung verwenden, um die jeweiligen Funktionalitäten zu nutzen. 
+Sie können die folgenden SDKs in Ihrer mobilen Anwendung verwenden, um die jeweiligen Funktionalitäten zu nutzen.
 
 
 ### Android-SDKs

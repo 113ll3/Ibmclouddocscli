@@ -49,7 +49,7 @@ bx dev debug
 
 Schritte zum Aktivieren des Debugging-Tools für eine Node.js-Anwendung:
 
-1. Führen Sie im Stammverzeichnis des Anwendungsprojekts den folgenden Befehl aus: 
+1. Führen Sie im Stammverzeichnis des Anwendungsprojekts den folgenden Befehl aus:
 
 ```
 bx dev debug

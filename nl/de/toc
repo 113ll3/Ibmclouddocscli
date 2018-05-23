@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
-CLI- und Dev-Tools
+IBM Cloud Developer Tools (CLI- und Dev-Tools)
 
 	{: .navgroup id="learn"}
 	index.md
@@ -22,6 +22,7 @@ CLI- und Dev-Tools
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
+		[Fehlerbehebung für IDT](../troubleshoot/ts_createapps.html)
         	
 	{: .topicgroup}
 	SDKs für Mobile
@@ -42,13 +43,12 @@ CLI- und Dev-Tools
 	reference/cfcommands/index.md
 
 	{: .topicgroup}
-	Plug-ins für IBM Cloud-CLI
+	IBM Cloud CLI plug-ins
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
-		plugins/registry/index.md
-		[Container Service](../containers/cs_cli_devtools.html)
+		[Container Registry-CLI](../services/Registry/registry_cli.html)
+		[Container Service-CLI](../containers/cs_cli_devtools.html)
  		plugins/pnp/index.md
-		[Schematics](../services/schematics/schematics_reference.html)
 		plugins/bx_vpn/index.md
 
 	{: .topicgroup}

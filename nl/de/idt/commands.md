@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -27,16 +30,16 @@ Verwenden Sie die folgenden {{site.data.keyword.dev_cli_notm}}-CLI-Befehle (bx d
 - [delete](#delete): Löscht ein Projekt aus Ihrem Bereich.
 - [deploy](#deploy): Stellt eine Anwendung in IBM Cloud bereit.
 - [enable](#enable): Fügt IBM Cloud-Dateien zu einem vorhandenen Projekt hinzu.
-- [get-credentials](#get-credentials): Ruft für das Projekt erforderliche Berechtigungsnachweise ab, um die Nutzung gebundener Services zu aktivieren. 
+- [get-credentials](#get-credentials): Ruft für das Projekt erforderliche Berechtigungsnachweise ab, um die Nutzung gebundener Services zu aktivieren.
 - [help](#help): Hilfe zu IDT-Syntax und -Argumenten
 - [list](#list): Listet alle IBM Cloud-Projekte in einem Bereich auf.
 - [run](#run): Führen Sie Ihre Anwendung in einem lokalen Container aus.
 - [shell](#shell): Öffnet eine Shell in einem lokalen Container.
-- [status](#status): Prüft den Status der von der Befehlszeilenschnittstelle verwendeten Container. 
+- [status](#status): Prüft den Status der von der Befehlszeilenschnittstelle verwendeten Container.
 - [stop](#stop): Stoppt einen Container.
 - [test](#test): Testet Ihre Anwendung in einem lokalen Container.
-- [view](#view): Zeigt die bereitgestellte URL der App zum Testen und Anzeigen an. 
-- [compound commands](#compound): Führt mehrere Befehle in einer Befehlszeilenanweisung aus. 
+- [view](#view): Zeigt die bereitgestellte URL der App zum Testen und Anzeigen an.
+- [compound commands](#compound): Führt mehrere Befehle in einer Befehlszeilenanweisung aus.
 
 
 
@@ -45,7 +48,7 @@ Verwenden Sie die folgenden {{site.data.keyword.dev_cli_notm}}-CLI-Befehle (bx d
 
 Sie können Ihre Anwendung mithilfe des Befehls `build` erstellen. Die Befehle `test`, `debug` und `run` setzen ein kompiliertes Projekt voraus, deshalb müssen Sie zunächst eine `build`-Operation ausführen.  
 
-Das Konfigurationselement `build-cmd-debug` wird zum Erstellen der Anwendung für alle Verwendungszwecke, mit Ausnahme von `run`, verwendet. Sie erstellen Ihre Anwendung für das Debuggen, indem Sie die Befehlszeilenoption `--debug` angeben.  Das Konfigurationselement `build-cmd-run` wird beim Erstellen der Anwendung für den Einsatz mit dem Befehl `run` verwendet. 
+Das Konfigurationselement `build-cmd-debug` wird zum Erstellen der Anwendung für alle Verwendungszwecke, mit Ausnahme von `run`, verwendet. Sie erstellen Ihre Anwendung für das Debuggen, indem Sie die Befehlszeilenoption `--debug` angeben.  Das Konfigurationselement `build-cmd-run` wird beim Erstellen der Anwendung für den Einsatz mit dem Befehl `run` verwendet.
 
 Für eine Erstellung mit mehreren Containern muss Ihr Projekt entweder eine [Compose](https://docs.docker.com/compose/overview/)-Datei enthalten, die in der `cli-config.yml` angegeben ist, oder Sie können den Befehlsparameter `dockerfile-tools` verwenden, um eine anzugeben. Weitere Informationen finden Sie unter [Compose-Datei](/docs/apps/projects/compose_file.html).
 
@@ -63,7 +66,7 @@ bx dev build [--debug]
 ## code
 {: #code}
 
-Verwenden Sie den Befehl `code`, um ein zuvor erstelltes Projekt mit Anwendungsvorlagencode und Konfigurationsdateien für {{site.data.keyword.Bluemix_notm}} herunterzuladen.  Dies ist nützlich, wenn Sie eine zweite Kopie eines von Ihnen erstellten Projekts extrahieren müssen. 
+Verwenden Sie den Befehl `code`, um ein zuvor erstelltes Projekt mit Anwendungsvorlagencode und Konfigurationsdateien für {{site.data.keyword.Bluemix_notm}} herunterzuladen.  Dies ist nützlich, wenn Sie eine zweite Kopie eines von Ihnen erstellten Projekts extrahieren müssen.
 
 Führen Sie den folgenden Befehl aus, um den Code aus einem angegebenen Projekt herunterzuladen.
 
@@ -365,7 +368,7 @@ unterstützen Sie beim Verwalten Ihrer Anwendung im Ausführungscontainer.
 Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam verwendet werden.
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * Containername für den Ausführungscontainer.
 * Verwendung: `bx dev run --container-name-run [<projectName>]`
@@ -447,7 +450,7 @@ Sie können beispielsweise den Linux-Befehl `ls` innerhalb der Containershell 't
 ## status
 {: #status}
 
-Sie können den Status der Container abfragen, die von der {{site.data.keyword.dev_cli_short}}-CLI verwendet werden, wie durch `container-name-run` und `container-name-tools` definiert. 
+Sie können den Status der Container abfragen, die von der {{site.data.keyword.dev_cli_short}}-CLI verwendet werden, wie durch `container-name-run` und `container-name-tools` definiert.
 
 Führen Sie den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um den Containerstatus zu prüfen:
 
@@ -567,7 +570,7 @@ Die folgenden Parameter werden ausschließlich mit dem Befehl `view` verwendet.
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung.
 * Verwendung: `bx dev view --ibm-cluster [cluster-name]`
@@ -608,13 +611,13 @@ Die folgenden Parameter können mit den Befehlen `build|debug|run|test` verwende
 * Verwendung: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * Containername für den Container 'run'.
 * Verwendung: `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * Containername für den Container 'tools'.
 * Verwendung: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

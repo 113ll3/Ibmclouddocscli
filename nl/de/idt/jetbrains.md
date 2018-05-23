@@ -24,7 +24,7 @@ Die IBM Developer-Erweiterung für Jetbrains-IDEs, die IntelliJ, WebStorm, Andro
 ## Abhängigkeiten
 {: #dependencies}
 
-Um die IBM Developer Tools-Erweiterung für Jetbrains-basierte IDEs nutzen zu können, muss die [IBM Cloud Developer Tools-CLI](index.html) auf Ihrem System installiert sein. 
+Um die IBM Developer Tools-Erweiterung für Jetbrains-basierte IDEs nutzen zu können, muss die [IBM Cloud Developer Tools-CLI](index.html) auf Ihrem System installiert sein.
 
 ## Installation
 {: #installation}
@@ -34,9 +34,9 @@ Der einfachste Weg, die IBM Developers Tools-Erweiterung für Jetbrains-IDE zu i
 ## Verwendung
 {: #usage}
 
-Sie können entweder mit einer vorhandenen serverseitigen App starten und sie für die IBM Cloud aktivieren oder Sie verwenden die IDT-CLI, um eine neue App aus dem Starter-Kit zu erstellen (bx dev create). Wenn Sie Ihr App-Projekt erstellt haben, öffnen Sie es in Ihrer JetBrains-IDE. 
+Sie können entweder mit einer vorhandenen serverseitigen App starten und sie für die IBM Cloud aktivieren oder Sie verwenden die IDT-CLI, um eine neue App aus dem Starter-Kit zu erstellen (bx dev create). Wenn Sie Ihr App-Projekt erstellt haben, öffnen Sie es in Ihrer JetBrains-IDE.
 
 Wählen Sie bei einer generischen serverseitigen App 'Tools' > 'IBM Cloud Developer Tools' > 'App für IBM Cloud aktivieren' aus. Damit werden alle erforderlichen Dateien geprüft und alle fehlenden Dateien hinzugefügt, was es Ihnen ermöglicht, die App lokal zu erstellen und sie mithilfe einer Cloud Foundry-App oder innerhalb eines Kubernetes-Clusters in IBM Cloud zu implementieren.
 
-Entwickeln Sie Ihre cloudnative App mithilfe der grundlegenden Erstellen-/Ausführen-/Bereitstellen-Aktionen im IDT-Menü. Wenn Sie Aktionen ausführen müssen, die nicht im Menü enthalten sind, öffnen Sie die Registerkarte 'Terminal' und geben Sie die gewünschten Befehle manuell ein. 
+Entwickeln Sie Ihre cloudnative App mithilfe der grundlegenden Erstellen-/Ausführen-/Bereitstellen-Aktionen im IDT-Menü. Wenn Sie Aktionen ausführen müssen, die nicht im Menü enthalten sind, öffnen Sie die Registerkarte 'Terminal' und geben Sie die gewünschten Befehle manuell ein.
 
