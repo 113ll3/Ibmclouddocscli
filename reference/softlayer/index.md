@@ -25,7 +25,7 @@ As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed 
 
 
 To get started, install the IBM {{site.data.keyword.Bluemix_notm}} CLI. See
-[Bluemix CLI ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} for details.
+[IBM Cloud CLI ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} for details.
 
 For a complete list of {{site.data.keyword.Bluemix_notm}} commands, see: [{{site.data.keyword.Bluemix_notm}} (ibmcloud) commands](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)
 
