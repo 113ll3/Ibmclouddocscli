@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -18,23 +18,22 @@ lastupdated: "2018-04-17"
 
 A CLI do {{site.data.keyword.dev_cli_short}} é uma abordagem de linha de comandos para
 criação, desenvolvimento e implementação de aplicativos para desenvolvedores que desejam usar uma linha de
-comandos para desenvolver aplicativos da web, de dispositivos móveis e de microsserviço de ponta a ponta.
+comandos para desenvolver aplicativos da web, de dispositivos móveis e de microsserviço de ponta a ponta. Comece a usar rapidamente o conjunto de ferramentas recomendado executando um dos scripts a seguir.
 {: shortdesc}
 
-## Pré-requisito
+## Pré-requisitos para o {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
-Inscreva-se para o [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
+Inscreva-se para o [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
 
 *  Se você está usando o Microsoft Windows&trade;, deve-se usar o Windows 10 ou mais recente.
 
 * Use o canal estável para Docker, com uma versão mínima de 1.13.1.
 
-## Instalar
+## Como instalar o {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
-Para instalar a ferramenta, é possível executar o comando relevante para iniciar o instalador. Isso
-também instala as dependências, como a CLI do IBM Cloud, o Kubernetes, o Helm e o Docker. Para instalar, use
+Para instalar o conjunto de ferramentas, é possível executar o comando relevante para iniciar o instalador. Isso instala as ferramentas recomendadas a seguir para desenvolvimento do {{site.data.keyword.Bluemix_notm}} (caso ainda não estejam instaladas): `Homebrew` (Mac somente), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, CLI do {{site.data.keyword.Bluemix_notm}}, plug-in {{site.data.keyword.dev_cli_notm}}, plug-in Cloud Functions, plug-in Container Registry, plug-in Container Service e plug-in `sdk-gen`. Para instalar, use
 estas etapas de instalação:
 
 **Mac e Linux:**
@@ -55,6 +54,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+A seção [Reinstalando ferramentas](/docs/troubleshoot/ts_createapps.html#appendix) contém informações para instalar todas as dependências individualmente.
+
 Valide a instalação bem-sucedida do plug-in executando o comando a seguir:  
 
 ```
@@ -65,7 +66,7 @@ bx dev
 ## Configurar o seu ambiente
 {: #configure-environment}
 
-1. Conecte-se a um terminal de API em sua [{{site.data.keyword.Bluemix_notm}} região](/docs/overview/cf.html#ov_intro_reg). Por exemplo, insira o comando a seguir para se conectar à região Sul dos EUA {{site.data.keyword.Bluemix_notm}}:
+1. Conecte-se a um terminal de API em sua região do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à região Sul dos EUA {{site.data.keyword.Bluemix_notm}}:
 
 	```
 	bx api https://api.ng.bluemix.net

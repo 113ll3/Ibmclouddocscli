@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -13,15 +13,21 @@ lastupdated: "2018-04-18"
 {:shortdesc: .shortdesc}
 {:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
+{:tip: .tip}
 
 
 
 # Introdução ao {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
+Recomenda-se instalar a CLI do {{site.data.keyword.Bluemix_notm}} e todas as dependências recomendadas usando o método descrito [aqui.](/docs/cli/index.html)
+{: tip}
+
+
 O {{site.data.keyword.Bluemix_notm}} CLI fornece a interface da linha de comandos para gerenciar aplicativos, contêineres, infraestruturas, serviços e outros recursos no {{site.data.keyword.Bluemix_notm}}. 
 
-Para introdução ao {{site.data.keyword.Bluemix_notm}} CLI:
+
+Para iniciar apenas com uma CLI do {{site.data.keyword.Bluemix_notm}}:
 
 1. Selecione o instalador do OS para download
    
@@ -34,8 +40,7 @@ Para introdução ao {{site.data.keyword.Bluemix_notm}} CLI:
    Linux X86 de 64 bits:
 [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window}
 / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
-   Linux PowerPC LE de 64 bits:
-[instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
+   Linux LE 64 bits (ppc64le): [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
   
    **As liberações de 32 bits e versões anteriores podem ser localizadas [aqui](all_versions.html)
 
@@ -67,4 +72,3 @@ com uma senha única ou com uma chave API  {: tip}
 Use as opções a seguir para relatar problemas ou enviar novas solicitações de recursos:
  * Criar problemas no [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg)
  * Deixar mensagens no [canal Slack](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg)
-

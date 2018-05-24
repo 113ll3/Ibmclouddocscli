@@ -123,7 +123,8 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
  </tr>
  <tr>
   <td>[bluemix account user-reinvite](bx_cli.html#bluemix_account_user_reinvite)</td>
-  <td>[bluemix iam access-groups](bx_cli.html#bluemix_iam_access-groups)</td>
+  <td>[bluemix iam access-groups
+](bx_cli.html#bluemix_iam_access-groups)</td>
   <td>[bluemix iam access-group](bx_cli.html#bluemix_iam_access-group)</td>
   <td>[bluemix iam access-group-create](bx_cli.html#bluemix_iam_access-group-create)</td>
   <td>[bluemix iam access-group-update](bx_cli.html#bluemix_iam_access-group-update)</td>
@@ -1872,6 +1873,7 @@ Mostre detalhes do ID de serviço `sample-test`
 bluemix iam service-id sample-test
 ```
 Mostrar detalhes do ID do serviço `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`
+
 ```
 bluemix iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
@@ -2635,6 +2637,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 ```
 Excluir a política `140798e2-8ea7db3` de serviço
 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`
+
 ```
 bluemix iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
@@ -4405,7 +4408,7 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 {: #bluemix_billing_resource_group_usage}
 
 Mostrar o uso mensal para um grupo de recursos (somente administrador de conta ou administrador de
-grupo de recursos) 
+grupo de recursos)
 
 ```
 bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]

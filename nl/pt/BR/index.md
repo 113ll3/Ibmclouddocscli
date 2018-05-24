@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -14,37 +14,50 @@ lastupdated: "2018-04-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Visão geral da CLI e das ferramentas
+# {{site.data.keyword.dev_cli_notm}} Visão geral
 {: #overview}
 
-O {{site.data.keyword.Bluemix_notm}} fornece uma CLI robusta e plug-ins com extensões de
-ferramentas do desenvolvedor que se integram à CLI.
+{{site.data.keyword.dev_cli_notm}} é uma abordagem de linha de comandos para criação, desenvolvimento e implementação de aplicativos para desenvolvedores que desejam usar uma linha de comandos para desenvolver aplicativos da web, de dispositivos móveis e de microsserviço de ponta a ponta. Comece a usar rapidamente o conjunto de ferramentas recomendado executando um dos scripts a seguir.
+{: shortdesc} 
 
-## {{site.data.keyword.Bluemix_notm}} CLI
-{: #cli}
+## Pré-requisitos para o {{site.data.keyword.dev_cli_notm}}
+{: #prereq}
 
-A CLI do {{site.data.keyword.Bluemix}} fornece uma experiência de linha de comandos para gerenciar os recursos no ambiente do {{site.data.keyword.Bluemix_notm}}. Ela também inclui uma interface da linha de comandos Cloud Foundry, cf, em sua instalação, para gerenciar aplicativos e serviços do Cloud Foundry.
-{:shortdesc}
+Inscreva-se para o [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
 
-Clique em uma opção para começar:
+* Se você está usando o Microsoft Windows&trade;, deve-se usar o Windows 10 ou mais recente.
 
-<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="Clique em um ícone para começar a usar rapidamente a CLI do {{site.data.keyword.Bluemix_notm}}." style="width:440px;" />
-<map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Fazer download da CLI do {{site.data.keyword.Bluemix_notm}} (Abre nova página)" title="Fazer download" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Introdução (Abre nova página)" title="Introdução" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Visualizar docs (Abre nova página)" title="Visualizar docs" shape="rect" coords="326, -10, 448, 218" />
-</map>
+* Use o canal estável para Docker, com uma versão mínima de 1.13.1.
 
-## {{site.data.keyword.dev_cli_notm}} CLI
-{: #idt}
+## Como instalar o {{site.data.keyword.dev_cli_notm}}
+{: #installation}
 
-A CLI do {{site.data.keyword.dev_cli_long}} (IDT) fornece uma extensão específica do
-desenvolvedor para a CLI do {{site.data.keyword.Bluemix}} (`bx dev`) para criar,
-construir e implementar apps nativos de nuvem. A instalação do IDT inclui a CLI do
-{{site.data.keyword.Bluemix_notm}} de base, várias extensões e todos os pré-requisitos do sistema. O IDT também fornece extensões para múltiplos IDEs para acessar diretamente os comandos da CLI.
-{:shortdesc}
+Para instalar o conjunto de ferramentas, é possível executar o comando relevante para iniciar o instalador. Isso instala as ferramentas recomendadas a seguir para desenvolvimento do {{site.data.keyword.Bluemix_notm}} (caso ainda não estejam instaladas): `Homebrew` (Mac somente), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, CLI do {{site.data.keyword.Bluemix_notm}}, plug-in {{site.data.keyword.dev_cli_notm}}, plug-in Cloud Functions, plug-in Container Registry, plug-in Container Service e plug-in `sdk-gen`.
 
-- [Visão geral e instalação](/docs/cli/idt/index.html)
-- [Introdução](/docs/cli/idt/index.html)
+**Mac e Linux:**
+
+```
+curl -sL https://ibm.biz/idt-installer | bash
+```
+{: codeblock}
+
+
+**Windows 10:**
+
+* Nota: abra o Windows PowerShell clicando com o botão direito e selecionando "Executar como
+administrador".
+
+```
+Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+```
+{: codeblock}
+
+
+## Outros links para explorar ainda mais o {{site.data.keyword.dev_cli_notm}}
+
+- [Configuração detalhada](/docs/cli/idt/setting_up_idt.html)
+- [Uso ](/docs/cli/idt/index.html)
 - [Comandos](/docs/cli/idt/commands.html)
-- [Desenvolvimento nativo de nuvem](/docs/cli/index.html)
+- [Plug-ins da CLI](/docs/cli/reference/bluemix_cli/extend_cli.html)
+- [Extensão IDE de VSCode](/docs/cli/idt/vscode.html)
+- [Instalar a CLI do IBM Cloud manualmente](/docs/cli/reference/bluemix_cli/get_started.html)

@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -11,7 +14,7 @@ lastupdated: "2018-04-17"
 {:codeblock: .codeblock}  
 {:pre: .pre}  
 
-# Comandos da CLI (bx dev) do {{site.data.keyword.dev_cli_notm}} 
+# Comandos da CLI (bx dev) do {{site.data.keyword.dev_cli_notm}}
 {: #idt-cli}
 
 Versão: 1.2.0
@@ -49,8 +52,7 @@ de comandos
 
 É possível construir seu aplicativo usando o comando `build`. Os comandos `test`, `debug` e `run` esperam localizar um projeto compilado, portanto deve-se primeiro executar uma operação `build` antecipadamente.  
 
-O elemento de configuração `build-cmd-debug` é usado para construir o aplicativo para todos os usos, exceto para `run`. Você constrói seu aplicativo para depuração especificando a opção da linha de comandos `--debug`.  
-O elemento de configuração `build-cmd-run` é usado quando você
+O elemento de configuração `build-cmd-debug` é usado para construir o aplicativo para todos os usos, exceto para `run`. Você constrói seu aplicativo para depuração especificando a opção da linha de comandos `--debug`.  O elemento de configuração `build-cmd-run` é usado quando você
 está construindo o aplicativo para uso com o comando `run`.
 
 Para construir com múltiplos contêineres, seu projeto deve conter um arquivo
@@ -72,8 +74,7 @@ bx dev build [--debug]
 ## code
 {: #code}
 
-Use o comando `code` para fazer download de um projeto criado anteriormente com o código de modelo de aplicativo e arquivos de configuração para o {{site.data.keyword.Bluemix_notm}}.  
-Isso é útil ao precisar extrair uma segunda cópia de um projeto que você criou.
+Use o comando `code` para fazer download de um projeto criado anteriormente com o código de modelo de aplicativo e arquivos de configuração para o {{site.data.keyword.Bluemix_notm}}.  Isso é útil ao precisar extrair uma segunda cópia de um projeto que você criou.
 
 Execute o comando a seguir para fazer download do código de um projeto especificado.
 
@@ -114,8 +115,7 @@ bx dev create
 ## depuração
 {: #debug}
 
-É possível depurar o aplicativo por meio do comando `debug`. Uma construção deve primeiro ser concluída com relação ao projeto usando o comando de construção com o argumento `--debug`. 
-Ao iniciar o comando `debug`, um contêiner é iniciado fornecendo uma ou mais
+É possível depurar o aplicativo por meio do comando `debug`. Uma construção deve primeiro ser concluída com relação ao projeto usando o comando de construção com o argumento `--debug`. Ao iniciar o comando `debug`, um contêiner é iniciado fornecendo uma ou mais
 portas de depuração, conforme definido pelo valor de `container-port-map-debug` no
 cli-config.yml ou especificado na linha de comandos. Conecte sua ferramenta de depuração favorita à porta ou portas e será possível depurar seu aplicativo normalmente.
 
@@ -380,7 +380,7 @@ ajudam no gerenciamento do aplicativo dentro do contêiner de execução.
 Há [parâmetros adicionais](#command-parameters) compartilhados com outros comandos.
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * Nome do contêiner para o contêiner de execução.
 * Uso: `bx dev run --container-name-run [<projectName>]`
@@ -585,7 +585,7 @@ Os parâmetros a seguir são exclusivos para o comando `view`.
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * O parâmetro usado opcionalmente para definir o nome do cluster do Kubernetes ao direcionar para uma implementação do contêiner
 * Uso `bx dev view --ibm-cluster [cluster-name]`
@@ -626,13 +626,13 @@ Os parâmetros a seguir podem ser usados com os comandos `build|debug|run|test` 
 * Uso: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * Nome do contêiner para o contêiner de execução.
 * Uso: `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * O nome do contêiner para o contêiner de ferramentas.
 * Uso: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

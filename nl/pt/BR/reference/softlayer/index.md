@@ -2801,7 +2801,7 @@ bluemix sl vs create [OPTIONS]
 <dt>--billing</dt>
 <dd>Taxa de faturamento. O padrão é: de hora em hora. As opções são: hourly, monthly.</dd>
 <dt>--dedicated</dt>
-<dd>Criar um Servidor virtual dedicado (Nó privado).</dd>
+<dd>Criar um Virtual Server dedicado (Nó privado).</dd>
 <dt>--san</dt>
 <dd>Usar o armazenamento SAN, em vez de disco local.</dd>
 <dt>--test</dt>

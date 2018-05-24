@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -11,10 +11,11 @@ lastupdated: "2018-04-17"
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}
 
 # Usando o {{site.data.keyword.dev_cli_notm}} CLI
-{: developing}
+{: #developing}
 
 O desenvolvendo de apps nativos do Cloud usando a CLI do {{site.data.keyword.dev_cli_notm}} segue
 um fluxo bastante simples:
@@ -38,21 +39,21 @@ app.
 enable](./commands.html#enable) de CLIs do {{site.data.keyword.dev_cli_notm}} para ativar
 rapidamente a nuvem em um app do lado do servidor existente.
 
-Para qualquer um dos métodos de criação anteriores, o fluxo é semelhante. É possível escolher o tipo de projeto, a linguagem de implementação e o padrão de app a serem usados. 
-Também é possível optar por incluir serviços com um valor agregado em seu app, como autenticação ou
+Para qualquer um dos métodos de criação anteriores, o fluxo é semelhante. É possível escolher o tipo de projeto, a linguagem de implementação e o padrão de app a serem usados. Também é possível optar por incluir serviços com um valor agregado em seu app, como autenticação ou
 persistência. Finalmente, é possível escolher ativar o recurso do DevOps para o app que fornece uma cadeia de
 ferramentas completa de controle de versão e de comunicações de equipe, bem como um pipeline que é acionado em
 cada confirmação para validar, construir e implementar seu app no IBM Cloud.
 
 ![Fluxo de criação de amostra usando a CLI do IDT](create_flow.png "Fluxo de criação de amostra usando a CLI do IDT") <br> Figura 2. Fluxo de criação de amostra usando a CLI do IDT
 
-A CLI do {{site.data.keyword.dev_cli_notm}} trabalha estreitamente junto para fornecer uma experiência contínua durante o desenvolvimento. 
-Os projetos que são criados em qualquer um dos consoles da web fornecem um botão "Fazer download do código" para
+A CLI do {{site.data.keyword.dev_cli_notm}} trabalha estreitamente junto para fornecer uma experiência contínua durante o desenvolvimento. Os projetos que são criados em qualquer um dos consoles da web fornecem um botão "Fazer download do código" para
 fazer download do código-fonte gerado para sua estação para mais desenvolvimento.
 
 ### Comandos úteis da CLI
+{: #helpful}
+
 Os comandos da CLI a seguir ajudam a trabalhar com seu projeto e com os consoles da web:
-- [`code`](./commands.html#enable) para puxar diretamente um
+- [`code`](./commands.html#code) para puxar diretamente um
 código-fonte gerado por apps para a sua estação de trabalho
 - [`console`](./commands.html#console) para abrir seu navegador para a página do projeto do app atual no {{site.data.keyword.Bluemix_notm}}
 - Comando [`create`](./commands.html#create) para criar um novo app.
@@ -65,7 +66,7 @@ você criou na organização/espaço atualmente selecionado, por meio da CLI ou 
 
 
 ### Explorando a estrutura do projeto do app
-{: exploring-project}
+{: #exploring-project}
 
 Os projetos que são criados ou ativados para uso com a ferramenta são fornecidos com configurações
 pré-definidas contidas no arquivo `cli-config.yml`. O `cli-config.yml`
@@ -80,7 +81,9 @@ Mais detalhes sobre as estruturas do projeto podem ser localizados aqui:
 
 
 ### Blogs e vídeos de referência
-- Vídeo: [Instalando o IDT no Ubuntu Linux]()
+{: #ref1}
+
+- Vídeo: [Instalando o IDT no Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - Blog: [Ativar projetos existentes para o IBM Cloud com o IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 
@@ -89,8 +92,7 @@ Mais detalhes sobre as estruturas do projeto podem ser localizados aqui:
 {: #build}
 
 
-Após seu projeto ter sido criado, agora depende de você criá-lo para algo útil. O fluxo geral consiste em editar o código-fonte e, em seguida, executar um [`bx dev build`](commands.html#build) para compilar o app em um contêiner local específico para a linguagem e a configuração do seu app. 
-Dependendo da linguagem de apps e do gerador que é usado, há um ou mais contêineres padronizados para suportar
+Após seu projeto ter sido criado, agora depende de você criá-lo para algo útil. O fluxo geral consiste em editar o código-fonte e, em seguida, executar um [`bx dev build`](commands.html#build) para compilar o app em um contêiner local específico para a linguagem e a configuração do seu app. Dependendo da linguagem de apps e do gerador que é usado, há um ou mais contêineres padronizados para suportar
 construção e execução localmente.  Geralmente, haverá um contêiner "ferramentas" para construções e depuração local.  Esse contêiner normalmente terá ferramentas e recursos extras para ajudá-lo no desenvolvimento.  Há também um contêiner de "execução" que simula aproximadamente o ambiente de tempo de execução real de seu app quando implementado na nuvem, no Cloud Foundry ou no ambiente de contêiner baseado em Kubernetes da IBM.
 
 
@@ -103,17 +105,18 @@ de seus apps.  Isso executará o app dentro do contêiner adequado.  Alguns padr
 
 
 ### Como os contêineres locais são usados
-{: local-containers}
+{: #local-containers}
 
 A CLI do {{site.data.keyword.dev_cli_long}} usa dois contêineres para facilitar a construção
 e o teste do aplicativo. O primeiro é o contêiner de ferramentas, que contém os utilitários necessários para construir e testar seu aplicativo. O Dockerfile para esse contêiner é definido pelo parâmetro [`dockerfile-tools`](commands.html#command-parameters). Você pode considerá-lo como um contêiner de desenvolvimento, pois contém as ferramentas normalmente usadas para o desenvolvimento de um tempo de execução específico.
 
-O segundo contêiner é o contêiner de execução. Esse contêiner tem um formato adequado para ser implementado para uso, por exemplo, no {{site.data.keyword.Bluemix}}. Como resultado, um ponto de entrada que inicia seu aplicativo é definido. 
-Ao selecionar para executar o aplicativo por meio da CLI do {{site.data.keyword.dev_cli_short}},
+O segundo contêiner é o contêiner de execução. Esse contêiner tem um formato adequado para ser implementado para uso, por exemplo, no {{site.data.keyword.Bluemix}}. Como resultado, um ponto de entrada que inicia seu aplicativo é definido. Ao selecionar para executar o aplicativo por meio da CLI do {{site.data.keyword.dev_cli_short}},
 ele usa esse contêiner. O Dockerfile para esse contêiner é definido pelo parâmetro [`dockerfile-run`](commands.html#run-parameters).
 
 
 ### Comandos úteis da CLI
+{: #helpful2}
+
 Os comandos da CLI a seguir ajudam a trabalhar com seu projeto durante os ciclos de codificação, construção e execução:
 - [`build`](./commands.html#build) Construa o projeto em um contêiner local
 - [`debug`](./commands.html#debug) Depure seu aplicativo em um contêiner local
@@ -124,6 +127,8 @@ Os comandos da CLI a seguir ajudam a trabalhar com seu projeto durante os ciclos
 - [`test`](./commands.html#test) Teste seu aplicativo em um contêiner local
 
 ### Blogs e vídeos de referência
+{: #ref2}
+
 - [Depurando apps locais](local_debug.html)
 
 
@@ -131,13 +136,15 @@ Os comandos da CLI a seguir ajudam a trabalhar com seu projeto durante os ciclos
 
 
 ## Implementação
-{: deploy}
+{: #deploy}
 
 Em um ambiente nativo de nuvem adequado, você desejará utilizar um pipeline do DevOps totalmente funcional para gerenciar todas as implementações, bem como uma variedade de outros recursos.  Durante o fluxo de criação, é possível configurar seu app para usar o DevOps do IBM Cloud.  Se você não estiver pronto para usar o DevOps integrado, será possível usar [`bx dev deploy`](./commands.html#deploy) manualmente para seu app ou usar o comando deploy dentro de seu próprio pipeline do DevOps.  
 
 
 
 ### Comandos úteis da CLI
+{: #helpful3}
+
 Os comandos da CLI a seguir ajudam a trabalhar com seu projeto durante o processo de implementação:
 - [`console`](./commands.html#console) Abre o console do IBM Cloud para um projeto
 - [`deploy`](./commands.html#deploy) Implemente um aplicativo para o IBM Cloud
@@ -145,5 +152,7 @@ Os comandos da CLI a seguir ajudam a trabalhar com seu projeto durante o process
 
 
 ### Blogs e vídeos de referência
+{: #ref3}
+
 - Blog: [Implementando no IBM Cloud privado com o IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - Blog: [Implementando no Kubernetes no IBM Cloud com o IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

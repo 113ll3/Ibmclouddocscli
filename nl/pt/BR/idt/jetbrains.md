@@ -36,11 +36,9 @@ A maneira mais simples de instalar a extensão IBM Developers Tools para o IDE d
 ## Uso
 {: #usage}
 
-É possível iniciar com um app do lado do servidor existente e ativá-lo para o IBM Cloud ou usar a CLI do IDT para criar um novo app por meio de um StarterKit (bx dev create). 
-Quando você tiver seu projeto de apps, abra-o em seu IDE do JetBrains.
+É possível iniciar com um app do lado do servidor existente e ativá-lo para o IBM Cloud ou usar a CLI do IDT para criar um novo app por meio de um StarterKit (bx dev create). Quando você tiver seu projeto de apps, abra-o em seu IDE do JetBrains.
 
-Se você tiver um app do lado do servidor genérico, selecione Ferramentas > IBM Cloud Developer Tools > Ativar app para o IBM Cloud. 
-Isso verifica todos os arquivos necessários e inclui quaisquer arquivos que estejam ausentes, o que permite
+Se você tiver um app do lado do servidor genérico, selecione Ferramentas > IBM Cloud Developer Tools > Ativar app para o IBM Cloud. Isso verifica todos os arquivos necessários e inclui quaisquer arquivos que estejam ausentes, o que permite
 construir o app localmente e implementá-lo no IBM Cloud usando um app do Cloud Foundry ou dentro de um cluster do Kubernetes.
 
 Desenvolva seu app nativo de nuvem usando as ações básicas de construção/execução/implementação no

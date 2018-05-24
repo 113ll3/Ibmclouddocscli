@@ -30,6 +30,7 @@ vez com seu ID dedicado.
 
   O serviço de token público do IAM está disponível no ambiente dedicado.
   Efetue login com seu IBMid público ou use '--no-iam' para efetuar login somente como um usuário dedicado.
+
   E-mail>
 ```
 

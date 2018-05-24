@@ -16,15 +16,13 @@ lastupdated: "2018-04-16"
 
 O plug-in do {{site.data.keyword.IBM}} SDK Generator pode ser instalado no [{{site.data.keyword.Bluemix_notm}} CLI ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/cli/reference/bluemix_cli/all_versions.html).
 
-Como um desenvolvedor no {{site.data.keyword.Bluemix_notm}}, é possível usar esse plug-in para gerar os SDKs de sua definição de API de REST compatível com a [Especificação da Open API ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.openapis.org/). 
-Conforme você muda a definição de API de REST, é possível usar esse plug-in para gerar novamente apenas o
+Como um desenvolvedor no {{site.data.keyword.Bluemix_notm}}, é possível usar esse plug-in para gerar os SDKs de sua definição de API de REST compatível com a [Especificação da Open API ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.openapis.org/). Conforme você muda a definição de API de REST, é possível usar esse plug-in para gerar novamente apenas o
 SDK, em vez de gerar novamente o projeto inteiro.
 
 Também é possível ver se seus apps do Cloud Foundry em um espaço específico têm definições de API
 de REST que sejam válidas para geração de SDK. Finalmente, é possível usar o plug-in do {{site.data.keyword.IBM_notm}} SDK Generator para validar quaisquer definições de API de REST para assegurar-se de que obedeçam aos requisitos do gerador de SDK.
 
-Esse plug-in do {{site.data.keyword.IBM_notm}} SDK Generator permite integrar facilmente seus serviços de backend ao app com um SDK gerado. 
-Quando uma mudança em uma API de REST ocorre, é possível gerar novamente o SDK e substituir o antigo para um
+Esse plug-in do {{site.data.keyword.IBM_notm}} SDK Generator permite integrar facilmente seus serviços de backend ao app com um SDK gerado. Quando uma mudança em uma API de REST ocorre, é possível gerar novamente o SDK e substituir o antigo para um
 upgrade do SDK. Também é possível integrar a CLI a um pipeline do DevOps e assegurar-se de que o SDK esteja
 sempre consistente com a especificação de API toda vez que o app é construído.
 
