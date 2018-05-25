@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -11,10 +11,11 @@ lastupdated: "2018-04-17"
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}
 
 # Uso de la CLI de {{site.data.keyword.dev_cli_notm}}
-{: developing}
+{: #developing}
 
 El desarrollo de apps nativas de nube con la CLI de {{site.data.keyword.dev_cli_notm}} sigue un flujo sencillo:
 
@@ -39,8 +40,10 @@ Para cualquiera de los métodos de creación anteriores, el flujo es similar. Pu
 La CLI de {{site.data.keyword.dev_cli_notm}} funciona de forma integrada para proporcionar una experiencia transparente durante el desarrollo. Los proyectos creados en cualquiera de las consolas web proporcionan un botón "Descargar código" para descargar el código fuente generado en su estación de trabajo para un desarrollo adicional.
 
 ### Mandatos de CLI útiles
+{: #helpful}
+
 Los mandatos de CLI siguientes le ayudan a trabajar con el proyecto y las consolas web:
-- [`code`](./commands.html#enable) para extraer el código fuente generado de una app en su estación de trabajo
+- [`code`](./commands.html#code) para extraer el código fuente generado de una app en su estación de trabajo
 - [`console`](./commands.html#console) para abrir su navegador en la página de proyecto actual de la app en {{site.data.keyword.Bluemix_notm}}
 - [`create`](./commands.html#create) para crear una nueva app.
 - [`delete`](./commands.html#delete) para suprimir la app actual del área de proyecto de {{site.data.keyword.Bluemix_notm}}.
@@ -50,7 +53,7 @@ Los mandatos de CLI siguientes le ayudan a trabajar con el proyecto y las consol
 
 
 ### Exploración de estructuras de proyecto de apps
-{: exploring-project}
+{: #exploring-project}
 
 Los proyectos creados o habilitados para ser utilizados con la herramienta vienen con valores configurados encapsulados de forma previa en el archivo `config.yml`. `cli-config.yml` contiene entradas predeterminadas que utilizan los mandatos de la herramienta que pueden sustituirse por valores que se pasan a través de la línea de mandatos.
 
@@ -62,7 +65,9 @@ Aquí podrá encontrar más detalles sobre las estructuras de los proyectos:
 
 
 ### Vídeos y blogs de referencia
-- Vídeo: [Instalación de IDT en Ubuntu (Linux)]()
+{: #ref1}
+
+- Vídeo: [Instalación de IDT en Ubuntu (Linux)](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - Blog: [Habilitación de proyectos existentes para IBM Cloud con IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 
@@ -80,7 +85,7 @@ Una vez compilado el proyecto, el siguiente paso será ejecutar la app con [`bx 
 
 
 ### Cómo se utilizan los contenedores locales
-{: local-containers}
+{: #local-containers}
 
 La CLI de {{site.data.keyword.dev_cli_long}} utiliza dos contenedores para facilitar la creación y la realización de pruebas de su aplicación. El primero es el contenedor de herramientas que contiene los programas de utilidad necesarios para crear y probar la aplicación. El Dockerfile para este contenedor está definido por el parámetro [`dockerfile-tools`](commands.html#command-parameters). Podría considerarlo como un contenedor de desarrollo que contiene las herramientas normalmente utilizadas para el desarrollo de un tiempo de ejecución concreto.
 
@@ -88,6 +93,8 @@ El segundo contenedor es el contenedor de ejecución. El formato de este contene
 
 
 ### Mandatos de CLI útiles
+{: #helpful2}
+
 Los siguientes mandatos de CLI ayudan a trabajar con el proyecto durante los ciclos de codificación, compilación y ejecución:
 - [`build`](./commands.html#build) Compila el proyecto en un contenedor local
 - [`debug`](./commands.html#debug) Depura aplicaciones en un contenedor local
@@ -98,6 +105,8 @@ Los siguientes mandatos de CLI ayudan a trabajar con el proyecto durante los cic
 - [`test`](./commands.html#test) Prueba la aplicación en un contenedor local
 
 ### Vídeos y blogs de referencia
+{: #ref2}
+
 - [Depuración de apps locales](local_debug.html)
 
 
@@ -105,13 +114,15 @@ Los siguientes mandatos de CLI ayudan a trabajar con el proyecto durante los cic
 
 
 ## Desplegar
-{: deploy}
+{: #deploy}
 
 Bajo un entorno nativo adecuado en la nube, podría querer utilizar un conducto DevOps completamente funcional para gestionar todos los despliegues, así como otras muchas funcionalidades.  Durante la creación del flujo, puede configurar la app para utilizar DevOps en IBM Cloud.  Si no está preparado para utilizar la funcionalidad de DevOps incorporada, puede desplegar manualmente la app con [`bx dev deploy`](./commands.html#deploy) o utilizar el mandato de despliegue dentro de su propio conducto de DevOps.  
 
 
 
 ### Mandatos de CLI útiles
+{: #helpful3}
+
 Los siguientes mandatos de CLI ayudan a trabajar con su proyecto durante el proceso de despliegue:
 - [`console`](./commands.html#console) Abre la consola de IBM Cloud para un proyecto
 - [`deploy`](./commands.html#deploy) Despliega aplicaciones en IBM Cloud
@@ -119,5 +130,7 @@ Los siguientes mandatos de CLI ayudan a trabajar con su proyecto durante el proc
 
 
 ### Vídeos y blogs de referencia
+{: #ref3}
+
 - Blog: [Despliegue en una instancia de IBM Cloud privada con IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - Blog: [Despliegue en Kubernetes en IBM Cloud con IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

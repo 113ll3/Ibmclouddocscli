@@ -1,7 +1,10 @@
 ---
+
 copyright:
-years: 2017, 2018
-lastupdated: "2018-04-17"
+
+   years: 2017, 2018
+   
+lastupdated: "2018-05-02"
 
 ---
 
@@ -364,7 +367,7 @@ Los siguientes parámetros son exclusivos del mandato `run` y ayudan a gestionar
 Hay [parámetros adicionales](#command-parameters) compartidos con otros mandatos.
 
 #### `container-name-run`
-{: #container-name-run}
+{: #container-name-run2}
 
 * Nombre del contenedor de ejecución.
 * Uso: `bx dev run --container-name-run [<projectName>]`
@@ -566,7 +569,7 @@ Los siguientes parámetros son exclusivos del mandato `view`.
 
 
 #### `ibm-cluster`
-{: #ibm-cluster}
+{: #ibm-cluster2}
 
 * Parámetro opcional que define el nombre el clúster Kubernetes en el que desplegar un contenedor.
 * Uso `bx dev view --ibm-cluster [cluster-name]`
@@ -607,13 +610,13 @@ Los siguientes parámetros se pueden utilizar con los mandatos `build|debug|run|
 * Uso: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
-{: #container-name-run}
+{: #container-name-run1}
 
 * Nombre del contenedor de ejecución.
 * Uso: `bx dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
-{: #container-name-tools}
+{: #container-name-tools1}
 
 * Nombre del contenedor de herramientas.
 * Uso: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`

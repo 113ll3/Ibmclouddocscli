@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -16,22 +16,22 @@ lastupdated: "2018-04-17"
 # Configuración de la CLI de {{site.data.keyword.dev_cli_notm}}
 {: #add-cli}
 
-La CLI de {{site.data.keyword.dev_cli_short}} permite una aproximación mediante la interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones para desarrolladores que desean utilizar una línea de mandatos para desarrollar aplicaciones web de principio a fin, móviles y de microservicios.
+La CLI de {{site.data.keyword.dev_cli_short}} permite una aproximación mediante la interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones para desarrolladores que desean utilizar una línea de mandatos para desarrollar aplicaciones web de principio a fin, móviles y de microservicios. Comience a trabajar rápidamente con el conjunto de herramientas recomendado ejecutando uno de los scripts siguientes.
 {: shortdesc}
 
-## Requisitos previos
+## Requisitos previos para {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
-Regístrese en [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
+Regístrese en [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
 
 *  Si está utilizando Microsoft Windows&trade;, debe utilizar Windows 10 o posterior.
 
 * Debe utilizar el canal estable para Docker, con una versión mínima de 1.13.1.
 
-## Instalación
+## Cómo instalar {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
-Para instalar la herramienta, ejecute el mandato relevante para iniciar el instalador. De esta forma se instalan dependencias, como IBM Cloud CLI, Kubernetes, Helm y Docker. Para la instalación, utilice estos pasos de instalación:
+Para instalar el conjunto de herramientas, puede ejecutar el mandato relevante para iniciar el instalador. De esta forma se instalan las siguientes herramientas recomendadas para el desarrollo de {{site.data.keyword.Bluemix_notm}} (si todavía no se ha instalado): `Homebrew` (solo en Mac), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, la CLI de {{site.data.keyword.Bluemix_notm}}, y los plugins de {{site.data.keyword.dev_cli_notm}}, Cloud Functions, Container Registry, Container Service y `sdk-gen`. Para la instalación, utilice estos pasos de instalación:
 
 **Mac y Linux:**
 
@@ -50,6 +50,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+La sección [Reinstalación de herramientas](/docs/troubleshoot/ts_createapps.html#appendix) contiene información para instalar todas las dependencias individualmente.
+
 Valide la correcta instalación del plugin ejecutando el siguiente mandato:  
 
 ```
@@ -60,7 +62,7 @@ bx dev
 ## Configure su entorno
 {: #configure-environment}
 
-1. Conéctese a un punto final de API en su [región de {{site.data.keyword.Bluemix_notm}}](/docs/overview/cf.html#ov_intro_reg). Por ejemplo, escriba el siguiente mandato para conectar con la región de {{site.data.keyword.Bluemix_notm}} EE.UU. Sur:
+1. Conéctese a un punto final de API en su región de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la región de {{site.data.keyword.Bluemix_notm}} EE.UU. Sur:
 
 	```
 	bx api https://api.ng.bluemix.net
