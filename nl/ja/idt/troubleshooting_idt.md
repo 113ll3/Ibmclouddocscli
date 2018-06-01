@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -40,7 +40,7 @@ The hostname <myHostname> is taken.
 
 #### 原因
 {: #hostname-cause}
-   
+
 このエラーの原因は、ログイン・トークンが有効期限切れになったことです。
 
 
@@ -50,7 +50,7 @@ The hostname <myHostname> is taken.
 再ログインしてください。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -68,7 +68,7 @@ Failed to <command> project.
 
 #### 原因
 {: #general-cause}
-   
+
 このエラーの原因は、ログイン・トークンが有効期限切れになったことです。
 
 
@@ -78,7 +78,7 @@ Failed to <command> project.
 再ログインしてください。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -89,7 +89,7 @@ bx login
 ビルドをせずにプロジェクトを実行すると、以下のエラーが表示される場合があります。
 
 ```
-$ bx dev run testProject
+$ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -105,7 +105,7 @@ Error: No such image: bx-dev-testProject
 #### 原因
 {: #nosuchimage-cause}
 
-プロジェクトは、実行する前にビルドする必要があります。 
+プロジェクトは、実行する前にビルドする必要があります。
 
 
 #### 解決策
@@ -114,14 +114,14 @@ Error: No such image: bx-dev-testProject
 現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションを開始します。
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 
 
@@ -139,7 +139,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 
 #### 原因
 {: #os-cause}
-   
+
 このエラーの原因は、{{site.data.keyword.objectstorageshort}} サービスが、フリー {{site.data.keyword.objectstorageshort}} プランの 1 つのインスタンスのみ提供していることです。
 
 
@@ -153,20 +153,20 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 {: #code}
 
 {{site.data.keyword.dev_cli_short}} を使用してプロジェクトを作成すると、以下のエラーが表示される場合があります。
-	
+
 ```
 FAILED                            
 Project created, but could not get code
 https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
-	
+
 
 #### 原因
 {: #code-cause}
 
 このエラーの原因は、内部タイムアウトです。
-	
+
 
 #### 解決策
 {: #code-resolution}
@@ -176,7 +176,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 * CLI を使用して以下のコマンドを実行します。
 
    ```
-   bx dev code <your-project-name>
+   ibmcloud dev code <your-project-name>
    ```
    {: codeblock}
 
@@ -191,10 +191,10 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 	3. コードの生成が終了したら、**「コードのダウンロード」**をクリックします。
 
 
-### Node.js プロジェクトで `bx dev run` を実行するとエラーになる
+### Node.js プロジェクトで `ibmcloud dev run` を実行するとエラーになる
 {: #node}
 
-Node.js Web プロジェクトまたは BFF プロジェクト用の {{site.data.keyword.dev_cli_short}} で `bx dev run` を実行すると、以下のエラーが表示される場合があります。
+Node.js Web プロジェクトまたは BFF プロジェクト用の {{site.data.keyword.dev_cli_short}} で `ibmcloud dev run` を実行すると、以下のエラーが表示される場合があります。
 
 ```
 module.js:597
@@ -219,26 +219,26 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 
 #### 原因
 {: #node-cause}
-   
+
 このエラーは、`appmetrics` モジュールが別のアーキテクチャーにインストールされている場合に発生します。 1 つのアーキテクチャーにインストールされているネイティブ NPM モジュールは、別のアーキテクチャーでは機能しません。 付属の Docker イメージは、Linux カーネルに基づいています。
 
 
 #### 解決策
 {: #node-resolution}
 
-`node_modules` フォルダーを削除してから、`bx dev run` を再度実行します。
+`node_modules` フォルダーを削除してから、`ibmcloud dev run` を再度実行します。
 
 
-### Bluemix へのデプロイに失敗する
+### {{site.data.keyword.Bluemix_notm}} へのデプロイに失敗する
 {: #failuretodeploy}
 
-{{site.data.keyword.dev_cli_short}}を使用して Bluemix へのデプロイを行おうとしたときに、Bluemix へのデプロイは行われないが、エラーがないことがあります。
+{{site.data.keyword.dev_cli_short}}を使用して {{site.data.keyword.Bluemix_notm}} へのデプロイを行おうとしたときに、{{site.data.keyword.Bluemix_notm}} へのデプロイは行われないが、エラーがないことがあります。
 
 
 #### 原因
 {: #cause1}
 
-アカウントにログインしていない可能性があります。 
+アカウントにログインしていない可能性があります。
 
 #### 解決策
 {: #resolution1}
@@ -246,11 +246,11 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 ログインして、やり直してください。
 
 ```
-bx login
+ibmcloud login
 ```
 
 
-### Bluemix 上の Kubernetes へのデプロイに失敗する
+### {{site.data.keyword.Bluemix_notm}} 上の Kubernetes へのデプロイに失敗する
 {: #failuretodeploytokube}
 
 クラスター名を求める最初のプロンプトの後、次のような失敗が表示されることがあります。
@@ -270,7 +270,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 最も可能性の高い原因は無効なクラスター名です。これは、同じコマンドを `--trace` を指定して実行することで確認でき、エラー出力に次のように表示される可能性があります。
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 
 
@@ -280,11 +280,11 @@ Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"T
 正しいクラスターを使用していて、かつクラスターがデプロイメント用に構成済みであることを確認するために、以下を実行します。
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 
 
-### Bluemix 上の Kubernetes へのデプロイに失敗する
+### {{site.data.keyword.Bluemix_notm}} 上の Kubernetes へのデプロイに失敗する
 
 デプロイ用イメージ・ターゲットを指定するよう求めるプロンプトの後、次のような失敗が表示されることがあります。
 
@@ -301,7 +301,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<projec
 #### 原因
 {: #cause3}
 
-最も可能性の高い原因は、無効なデプロイ用イメージ・ターゲットです。具体的には、デプロイ用イメージ・ターゲットの中間値である名前空間が無効である可能性があります。
+最も可能性の高い原因は、無効なデプロイ用イメージ・ターゲットです。 具体的には、デプロイ用イメージ・ターゲットの中間値である名前空間が無効である可能性があります。
 
 
 #### 解決策
@@ -310,7 +310,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<projec
 デプロイ用イメージ・ターゲット内の名前空間が、以下を実行して表示される名前空間のいずれかと一致していることを確認します。
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 
 
@@ -318,11 +318,11 @@ bx cr namespaces
 ## 付録
 {: #appendix}
 
-このページの上部のプラットフォーム・インストーラーを使用して、ほとんどのユーザー向けにすべての前提条件がインストールされます。いずれかのコンポーネントを手動でインストールする必要がある場合の手順を以下に示します。
+このページの上部のプラットフォーム・インストーラーを使用して、ほとんどのユーザー向けにすべての前提条件がインストールされます。 いずれかのコンポーネントを手動でインストールする必要がある場合の手順を以下に示します。
 
 開発プラグインをインストールするには、まず [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started) をインストールする必要があります。
 
-開発プラグイン自体を使用するには、`bx plugin install dev -r Bluemix` コマンドを実行してそれをインストールする必要があります。
+開発プラグイン自体を使用するには、`ibmcloud plugin install dev -r Bluemix` コマンドを実行してそれをインストールする必要があります。
 
 アプリケーションをローカルに実行およびデバッグするには、[Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker) もインストールする必要があります。
 
@@ -347,10 +347,10 @@ Helm をインストールするには、次のようにします。
 Download and install the binary at https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
 container-registry プラグインをインストールするには、次のようにします。
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 container-service プラグインをインストールするには、次のようにします。
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`
 
 
 <!--
@@ -364,7 +364,7 @@ container-service プラグインをインストールするには、次のよ�
 ## ヘルプおよびサポートの利用
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}または {{site.data.keyword.dev_cli_notm}} に関して問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。サポート・チケットをオープンすることもできます。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}または {{site.data.keyword.dev_cli_notm}} に関して問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。 サポート・チケットをオープンすることもできます。
 
 フォーラムに投稿するときには、{{site.data.keyword.Bluemix_notm}} 開発チームに通知するために、質問にタグを付けることができます。
 
@@ -373,7 +373,7 @@ container-service プラグインをインストールするには、次のよ�
 {{site.data.keyword.dev_console}}または {{site.data.keyword.dev_cli_notm}}を使用したアプリの開発やデプロイに関して技術上の質問がある場合は、次のようにします。
 
 * [スタック・オーバーフロー ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) に質問を投稿し、質問に `bluemix-dev-services` および `ibm-bluemix` というタグを付けます。
-* [Slack ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm-cloud-tech.slack.com/) の `bluemix-dev-services` チャネルで質問を投稿します。すぐに [登録 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/IBMCloudNativeSlack) してください。
+* [Slack ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm-cloud-tech.slack.com/) の `bluemix-dev-services` チャネルで質問を投稿します。 すぐに [登録 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/IBMCloudNativeSlack) してください。
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->

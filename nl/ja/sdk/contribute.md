@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -244,8 +244,8 @@ sh bin/testAll.sh
 以下のいずれかのコマンドを選択して、プラグインをインストールし、{{site.data.keyword.Bluemix_notm}} CLI として起動します。
 
 ```
-bluemix plugin install main
-bluemix help sdk
+ibmcloud plugin install main
+ibmcloud help sdk
 ```
 {: codeblock}
 

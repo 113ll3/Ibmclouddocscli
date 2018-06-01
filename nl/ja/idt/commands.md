@@ -3,8 +3,8 @@
 copyright:
 
    years: 2017, 2018
-   
-lastupdated: "2018-05-02"
+
+lastupdated: "2018-05-23"
 
 ---
 
@@ -12,15 +12,19 @@ lastupdated: "2018-05-02"
 {:new_window: target="_blank"}
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}  
 
-# {{site.data.keyword.dev_cli_notm}} CLI (bx dev) コマンド
+# {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) コマンド
 {: #idt-cli}
 
 バージョン: 1.2.0
 リリース: 2018 年 3 月 8 日
 
-以下の {{site.data.keyword.dev_cli_notm}} CLI (bx dev) コマンドを使用して、プロジェクトを作成し、プロジェクトをデプロイ、デバッグ、およびテストします。
+2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。ただし、後日非推奨になるまで、`bluemix` および `bx` CLI コマンドを引き続き使用できます。
+{: tip}
+
+以下の {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) コマンドを使用して、プロジェクトを作成し、プロジェクトをデプロイ、デバッグ、およびテストします。
 
 - [build](#build): ローカル・コンテナー内にプロジェクトをビルドします。
 - [code](#code): プロジェクトからコードをダウンロードします。
@@ -55,7 +59,7 @@ lastupdated: "2018-05-02"
 現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
 
 ```
-bx dev build [--debug]
+ibmcloud dev build [--debug]
 ```
 {: codeblock}
 
@@ -71,7 +75,7 @@ bx dev build [--debug]
 以下のコマンドを実行して、指定したプロジェクトからコードをダウンロードします。
 
 ```
-bx dev code <projectName>
+ibmcloud dev code <projectName>
 ```
 {: codeblock}
 
@@ -79,14 +83,14 @@ bx dev code <projectName>
 ## console
 {: #console}
 
-`console` コマンドを使用して、Web ブラウザーに IBM Cloud 上のアプリケーションの Web コンソールを開きます。  `bx dev console` コマンドはプロジェクトのフォルダー内から実行できます。そうすると、CLI によって、現行ディレクトリーと同じプロジェクト ID を持つ、IBM Cloud 上の一致するプロジェクトの検索が試行されます。 一致する名前を検出できない場合、システムは、指定されたプロジェクトの代わりに IBM Cloud の Web and Mobile ダッシュボードを開きます。
+`console` コマンドを使用して、Web ブラウザーに IBM Cloud 上のアプリケーションの Web コンソールを開きます。  `ibmcloud dev console` コマンドはプロジェクトのフォルダー内から実行できます。そうすると、CLI によって、現行ディレクトリーと同じプロジェクト ID を持つ、IBM Cloud 上の一致するプロジェクトの検索が試行されます。 一致する名前を検出できない場合、システムは、指定されたプロジェクトの代わりに IBM Cloud の Web and Mobile ダッシュボードを開きます。
 
 プロジェクト名を指定できます。そうすると、CLI は、フォルダー/アプリケーション名に基づいたマッチングをスキップします。 この場合、CLI は、指定されたプロジェクトのコンソールを Web ブラウザーに開きます。  
 
 以下のコマンドを実行して、Web ブラウザーにアプリケーションの Web コンソールを開きます。
 
 ```
-bx dev console [projectName]
+ibmcloud dev console [projectName]
 ```
 {: codeblock}
 
@@ -99,7 +103,7 @@ bx dev console [projectName]
 現行ディレクトリー内にプロジェクトを作成し、プロジェクトにサービスを関連付けるには、以下のコマンドを実行します。
 
 ```
-bx dev create
+ibmcloud dev create
 ```
 {: codeblock}
 
@@ -112,14 +116,14 @@ bx dev create
 まず、プロジェクトをコンパイルします。
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 開始するには、現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションをデバッグします。
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 {: codeblock}
 
@@ -137,19 +141,19 @@ bx dev debug
 {: #port-map-debug}
 
 * デバッグ・ポートのポート・マッピング。 最初の値は、ホスト OS で使用するポートで、2 番目の値は、コンテナーのポートです [host-port:container-port]。
-* 使用法: `bx dev debug --container-port-map-debug 7777:7777`
+* 使用法: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
 {: #build-cmd-debug}
 
 * デバッグ用のコードをビルドするために使用されるパラメーター。
-* 使用法: `bx dev debug --build-cmd-debug build.command.sh`
+* 使用法: `ibmcloud dev debug --build-cmd-debug build.command.sh`
 
 #### `debug-cmd`
 {: #debug-cmd}
 
 * ツール・コンテナー内のデバッグを起動するコマンドを指定するために使用されるパラメーター。 `build-cmd-debug` によってアプリケーションがデバッグ・モードで開始された場合、このパラメーターを使用します。
-* 使用法: `bx dev debug --debug-cmd /the/debug/command`
+* 使用法: `ibmcloud dev debug --debug-cmd /the/debug/command`
 
 
 
@@ -161,7 +165,7 @@ bx dev debug
 以下のコマンドを実行して、{{site.data.keyword.Bluemix}} からプロジェクトを削除します。
 
 ```
-bx dev delete <projectName>
+ibmcloud dev delete <projectName>
 ```
 {: codeblock}
 
@@ -197,14 +201,14 @@ Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix}} �
 現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、プロジェクトをデプロイします。
 
 ```
-bx dev deploy
+ibmcloud dev deploy
 ```
 {: codeblock}
 
@@ -218,25 +222,25 @@ bx dev deploy
 {: #chart-path}
 
 * コンテナー・デプロイメントの場合に使用されるパラメーターで、デプロイメントに使用する Helm チャートの場所を指定します。
-* 使用法 `bx dev deploy --chart-path [/the/path]`
+* 使用法 `ibmcloud dev deploy --chart-path [/the/path]`
 
 #### `deploy-target`
 {: #deploy-target}
 
 * 実行するデプロイメントのタイプを指示するために使用するオプションのパラメーター。  デフォルトのデプロイメント・タイプは、ビルドパックです。
-* 使用法 `bx dev deploy -t|--target buildpack|container`
+* 使用法 `ibmcloud dev deploy -t|--target buildpack|container`
 
 #### `deploy-image-target`
 {: #deploy-image-target}
 
 * デプロイメントのターゲット・イメージ名として (例えば、Docker レジストリーにタグ付けするため)、コンテナー・デプロイメントで使用されるパラメーター。  値にバージョンを含めることはできません (例えば、image-name:{version} などにはできません)。バージョンは、`deploy` によって自動的に増やされ、追加されます。
-* 使用法 `bx dev deploy --deploy-image-target [image-name]`
+* 使用法 `ibmcloud dev deploy --deploy-image-target [image-name]`
 
 #### `ibm-cluster`
 {: #ibm-cluster}
 
 * {{site.data.keyword.Bluemix}} へのコンテナー・デプロイメントの場合に、Kubernetes クラスターの名前を定義するために使用されるオプションのパラメーター。
-* 使用法 `bx dev deploy --ibm-cluster [cluster-name]`
+* 使用法 `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 
 ## enable
@@ -247,7 +251,7 @@ bx dev deploy
 以下のコマンドを実行して、現行ディレクトリー内の既存のプロジェクトを {{site.data.keyword.Bluemix_notm}} デプロイメントに対応できるようにします。
 
 ```
-bx dev enable
+ibmcloud dev enable
 ```
 {: codeblock}
 
@@ -270,7 +274,7 @@ bx dev enable
 * java-mp (Java - Java MicroProfile と解釈されます)
 * java-spring (Java - Spring フレームワークと解釈されます)
 
-`bx dev enable` コマンドを使用して作成されるファイルのうち、プロジェクト・フォルダー内にある既存のファイルとの間でネーミングに競合が生じるファイルは、`.merge` ファイル拡張子を使用して保存されます。  
+`ibmcloud dev enable` コマンドを使用して作成されるファイルのうち、プロジェクト・フォルダー内にある既存のファイルとの間でネーミングに競合が生じるファイルは、`.merge` ファイル拡張子を使用して保存されます。  
 
 ### enable コマンド・パラメーター
 {: #enable-parameters}
@@ -281,13 +285,13 @@ bx dev enable
 {: #enable-language}
 
 * 使用可能にするプロジェクトの言語を指定するために使用されるパラメーター。
-* 使用法 `bx dev enable -l|--language [language]`
+* 使用法 `ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
 * 既に使用可能になっているプロジェクトの再使用可能化を強制するために使用されるパラメーター。
-* 使用法 `bx dev enable -f|--force`
+* 使用法 `ibmcloud dev enable -f|--force`
 
 
 ## get-credentials
@@ -304,7 +308,7 @@ bx dev enable
 以下のコマンドを実行して、一般的なヘルプ情報を表示します。
 
 ```
-bx dev help
+ibmcloud dev help
 ```
 {: codeblock}
 
@@ -317,7 +321,7 @@ bx dev help
 以下のコマンドを実行して、プロジェクトをリストします。
 
 ```
-bx dev list
+ibmcloud dev list
 ```
 {: codeblock}
 
@@ -329,7 +333,7 @@ bx dev list
 You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
 
 ```
-bx dev edit
+ibmcloud dev edit
 ```
 {: codeblock}
 -->
@@ -345,14 +349,14 @@ bx dev edit
 まず、プロジェクトをコンパイルします。
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションを開始します。
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: codeblock}
 
@@ -370,19 +374,19 @@ bx dev run
 {: #container-name-run2}
 
 * 実行コンテナーのコンテナー名。
-* 使用法: `bx dev run --container-name-run [<projectName>]`
+* 使用法: `ibmcloud dev run --container-name-run [<projectName>]`
 
 #### `container-path-run`
 {: #container-path-run}
 
 * 実行時に共有するコンテナー内の場所。
-* 使用法: `bx dev run --container-path-run [/path/to/app]`
+* 使用法: `ibmcloud dev run --container-path-run [/path/to/app]`
 
 #### `host-path-run`
 {: #host-path-run}
 
 * 実行時にコンテナー内で共有するホスト・システム上の場所。
-* 使用法: `bx dev run --host-path-run [/path/to/app/bin]`
+* 使用法: `ibmcloud dev run --host-path-run [/path/to/app/bin]`
 
 #### `dockerfile-run`
 {: #dockerfile-run}
@@ -390,20 +394,20 @@ bx dev run
 * 実行コンテナーの Dockerfile。
 * 複数のコンテナーを使用して実行する予定の場合、これは Compose ファイルにする必要があります。
 * 複数の Compose ファイルを使用するには、ファイル名のコンマ区切りリストを二重引用符で囲んでください。
-* 使用法: `bx dev run --dockerfile-run [/path/to/Dockerfile]`
-* 使用法: `bx dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
+* 使用法: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
+* 使用法: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
 #### `image-name-run`
 {: #image-name-run}
 
 * `dockerfile-run` から作成するイメージ。
-* 使用法: `bx dev run --image-name-run [/path/to/image-name]`
+* 使用法: `ibmcloud dev run --image-name-run [/path/to/image-name]`
 
 #### `run-cmd`
 {: #run-cmd}
 
 * 実行コンテナー内でコードを実行するために使用されるパラメーター。 イメージによってアプリケーションが開始される場合、このパラメーターを使用します。
-* 使用法: `bx dev run --run-cmd [/the/run/command]`
+* 使用法: `ibmcloud dev run --run-cmd [/the/run/command]`
 
 
 ## shell
@@ -414,12 +418,12 @@ bx dev run
 以下のように、単純にこのコマンドを実行します。
 
 ```
-bx dev shell
+ibmcloud dev shell
 ```
 
 そうすると、{{site.data.keyword.dev_cli_short}} CLI によって、対話式シェルがアプリケーションの Docker コンテナーに開かれます。 シェル・コマンドのデフォルトのターゲット・コンテナーは、`cli-config.yml` ファイルの `container-shell-target` 値によって定義され、有効な値は、`run` または `tools` です。 この値が定義されていない場合、または無効値が指定されている場合、`shell` コマンドは、デフォルトで `tools` コンテナーをターゲットとします。 シェル・コマンドは、対応する Dockerfile 内の `WORKDIR` 命令によって指定されたディレクトリーにコンテナーを開きます。 `WORKDIR` が Dockerfile 内にリストされていない場合、コンテナーのルートが作業ディレクトリーとして使用されます。 詳しくは、[このリファレンス](https://docs.docker.com/engine/reference/builder/#workdir)を参照してください。
 
-代わりの方法として、`run` または `tools` のいずれかを引数としてコマンドに渡すこともできます。そうすると、そのコンテナーが開始され、シェルはそのコンテナーに開かれます。 同様に、`container-name` パラメーターを使用して、シェルを開くコンテナーの名前を渡すことができます。 ただし、このフラグは、実行中のコンテナーがないときに限って使用するようにしてください。 `run` 引数および `tools` 引数のほうが柔軟性が高く、その時点でいずれかのコンテナーが実行中の場合、コンテナーの切り替えが可能です。 例えば、ツール・コンテナーが実行中の場合に `bx dev shell run` を実行すると、`tools` コンテナーは停止し、`run` コンテナーが開始されます。その逆も可能です。
+代わりの方法として、`run` または `tools` のいずれかを引数としてコマンドに渡すこともできます。そうすると、そのコンテナーが開始され、シェルはそのコンテナーに開かれます。 同様に、`container-name` パラメーターを使用して、シェルを開くコンテナーの名前を渡すことができます。 ただし、このフラグは、実行中のコンテナーがないときに限って使用するようにしてください。 `run` 引数および `tools` 引数のほうが柔軟性が高く、その時点でいずれかのコンテナーが実行中の場合、コンテナーの切り替えが可能です。 例えば、ツール・コンテナーが実行中の場合に `ibmcloud dev shell run` を実行すると、`tools` コンテナーは停止し、`run` コンテナーが開始されます。その逆も可能です。
 
 `shell` コマンドを実行したときにターゲットの `run` コンテナーまたは `tools` コンテナーがまだ実行されていない場合、そこでターゲット・コンテナーが開始されます。 しかし、Dockerfile 内のデフォルトの `Cmd` または `Entrypoint` はオーバーライドされ、サーバー・プロセスが開始される代わりに、直接シェルで起動されます。 これで、`run` コンテナーまたは `tools` コンテナーを開始でき、任意のコマンドまたはカスタム・コマンドを独自に使用してサーバーを手動で開始できるようになります。
 
@@ -428,7 +432,7 @@ bx dev shell
 
 フラグの先にさらに引数を追加してコマンドに渡した場合、それらの引数はすべて、シェルが開かれたときに実行するコマンドとして解析されます。 実行すべきコマンドを提供した場合、コンテナー内のシェルは、コマンドの実行をもって終了し、ユーザーの端末に戻ります。
 
-例えば、`bx dev shell tools ls` と呼び出すことにより、ツール・コンテナー・シェル内で Linux `ls` コマンドを実行できます。   また、引数を引用符で囲むことにより、シェル・コマンド実行に渡す追加のフラグを指定することもできます。例えば、`bx dev shell "ls -la"` のようにできます。
+例えば、`ibmcloud dev shell tools ls` と呼び出すことにより、ツール・コンテナー・シェル内で Linux `ls` コマンドを実行できます。   また、引数を引用符で囲むことにより、シェル・コマンド実行に渡す追加のフラグを指定することもできます。例えば、`ibmcloud dev shell "ls -la"` のようにできます。
 
 ### shell コマンド・パラメーター
 {: #shell-parameters}
@@ -437,13 +441,13 @@ bx dev shell
 {: #container-name}
 
 * シェルを開くコンテナーの名前。
-* 使用法: `bx dev shell --container-name [<container-name>]`
+* 使用法: `ibmcloud dev shell --container-name [<container-name>]`
 
 #### `container-shell`
 {: #container-shell}
 
 * コンテナー内で実行するシェルを指定します (デフォルトは /bin/sh)。
-* 使用法: `bx dev shell --container-shell [path/to/shell]`
+* 使用法: `ibmcloud dev shell --container-shell [path/to/shell]`
 
 
 ## status
@@ -454,7 +458,7 @@ bx dev shell
 現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、コンテナーの状況をチェックします。
 
 ```
-bx dev status
+ibmcloud dev status
 ```
 {: codeblock}
 
@@ -470,7 +474,7 @@ bx dev status
 `cli-config.yml` ファイルに定義されているツール・コンテナーおよび実行コンテナーを停止するには、以下を実行します。
 
 ```
-bx dev stop
+ibmcloud dev stop
 ```
 {: codeblock}
 
@@ -485,13 +489,13 @@ bx dev stop
 {: #container-name-run}
 
 * 実行コンテナーのコンテナー名。
-* 使用法: `bx dev stop --container-name-run [<projectName>]`
+* 使用法: `ibmcloud dev stop --container-name-run [<projectName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * ツール・コンテナーのコンテナー名。
-* 使用法: `bx dev stop --container-name-tools [<projectName>]`
+* 使用法: `ibmcloud dev stop --container-name-tools [<projectName>]`
 
 
 
@@ -503,14 +507,14 @@ bx dev stop
 まず、プロジェクトをコンパイルします。
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 以下のコマンドを実行して、アプリケーションをテストします。
 
 ```
-bx dev test
+ibmcloud dev test
 ```
 {: codeblock}
 
@@ -524,7 +528,7 @@ bx dev test
 {: #test-cmd}
 
 * ツール・コンテナー内でコードをテストするコマンドを指定するために使用されるパラメーター。
-* 使用法: `bx dev test --test-cmd /the/test/command`
+* 使用法: `ibmcloud dev test --test-cmd /the/test/command`
 
 
 ## view
@@ -539,7 +543,7 @@ Kubernetes にデプロイされたアプリケーションの場合、URL は�
 以下のコマンドを実行して、アプリケーションの URL を表示します。
 
 ```
-bx dev view
+ibmcloud dev view
 ```
 {: codeblock}
 
@@ -551,28 +555,28 @@ bx dev view
 #### `deploy-target`
 
 * プロンプトをバイパスするために、デプロイメントのタイプを指示するために使用するオプションのパラメーター。
-* 使用法 `bx dev view -t|--target buildpack|container`
+* 使用法 `ibmcloud dev view -t|--target buildpack|container`
 
 
 #### `no-open`
 {: #no-open}
 
 * ブラウザーを開かないように指定するために使用されるパラメーター。
-* 使用法: `bx dev view --no-open`
+* 使用法: `ibmcloud dev view --no-open`
 
 
 #### `web-app-root`
 {: #web-app-root}
 
 * Kubernetes アプリ URL に追加するプロジェクトのルート。
-* 使用法: `bx dev view --web-app-root [root]`
+* 使用法: `ibmcloud dev view --web-app-root [root]`
 
 
 #### `ibm-cluster`
 {: #ibm-cluster2}
 
 * ターゲットがコンテナー・デプロイメントの場合に、Kubernetes クラスターの名前を定義するために使用されるオプションのパラメーター。
-* 使用法 `bx dev view --ibm-cluster [cluster-name]`
+* 使用法 `ibmcloud dev view --ibm-cluster [cluster-name]`
 
 
 ## 複合コマンド
@@ -581,10 +585,10 @@ bx dev view
 IDT コマンドを区切り文字 `/` で分離することで、複数のコマンドを 1 つのコマンド・ライン・ステートメントで実行できます。 複合コマンドを指定した後に、追加のコマンド・ライン・フラグを指定できます。  以下に、複合コマンドの使用法の例を示します。
 
 ```
-bx dev build/run
-bx dev build/deploy --trace -t buildpack
-bx dev build/debug --debug --trace
-bx dev build/deploy/view -t container --trace
+ibmcloud dev build/run
+ibmcloud dev build/deploy --trace -t buildpack
+ibmcloud dev build/debug --debug --trace
+ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
@@ -593,7 +597,7 @@ bx dev build/deploy/view -t container --trace
 この機能で使用できるコマンドは、次のとおりです。
 `build、debug、deploy、get-credentials、run、stop、test、view`
 
-いずれかのコマンドが何らかの理由で失敗すると、後続のコマンドは実行されません。 `debug` または `run` の後にいずれかのコマンドが続く場合、現在の端末ウィンドウからプロセスを強制終了する以外の方法で `debug` または `run` が終了した場合にのみ、それらのコマンドは続行されます。 `CTRL+C` はプロセスを強制終了することになるので、後続のコマンドは実行されません。 例えば、別の端末ウィンドウから `bx dev stop` を実行して、実行中のコンテナーを停止すると、次のコマンドの実行を続行できます。
+いずれかのコマンドが何らかの理由で失敗すると、後続のコマンドは実行されません。 `debug` または `run` の後にいずれかのコマンドが続く場合、現在の端末ウィンドウからプロセスを強制終了する以外の方法で `debug` または `run` が終了した場合にのみ、それらのコマンドは続行されます。 `CTRL+C` はプロセスを強制終了することになるので、後続のコマンドは実行されません。 例えば、別の端末ウィンドウから `ibmcloud dev stop` を実行して、実行中のコンテナーを停止すると、次のコマンドの実行を続行できます。
 
 
 ## build、debug、run、および test 用のパラメーター
@@ -607,49 +611,49 @@ bx dev build/deploy/view -t container --trace
 {: #config-file}
 
 * コマンドで使用する cli-config.yml ファイルを指定します。
-* 使用法: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
+* 使用法: `ibmcloud dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
 {: #container-name-run1}
 
 * 実行コンテナーのコンテナー名。
-* 使用法: `bx dev <run|status|stop> --container-name-run [<projectName>]`
+* 使用法: `ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * ツール・コンテナーのコンテナー名。
-* 使用法: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* 使用法: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}
 
 * build、debug、test で共有するホスト上の場所。
-* 使用法: `bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
+* 使用法: `ibmcloud dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 #### `container-path-tools`
 {: #container-path-tools}
 
 * build、debug、test で共有するコンテナー内の場所。
-* 使用法: `bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
+* 使用法: `ibmcloud dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 #### `container-port-map`
 {: #container-port-map}
 
 * コンテナーのポート・マッピング。 最初の値は、ホスト OS で使用するポートで、2 番目の値は、コンテナーのポートです [host-port:container-port]。
-* 使用法: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
+* 使用法: `ibmcloud dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
 
 #### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * ツール・コンテナーの Dockerfile。
-* 使用法: `bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
+* 使用法: `ibmcloud dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 #### `image-name-tools`
 {: #image-name-tools}
 
 * `dockerfile-tools` から作成するイメージ。
-* 使用法: `bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
+* 使用法: `ibmcloud dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 #### `container-mounts-run`
 {: #container-mounts-run}
@@ -657,24 +661,23 @@ bx dev build/deploy/view -t container --trace
 * このオプションを使用して、ホスト・システムと実行コンテナーの間のマウントを定義します。
 * このリストの先頭に、`host-path-run` と `container-path-run` の値が挿入されます。
 * ベスト・プラクティスとして、また、予期しない結果を回避するためにも、build と run では同じマウント設定を使用してください。
-* 使用法: `bx dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* 使用法: `ibmcloud dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `container-mounts-tools`
 {: #container-mounts-tools}
 
 * このオプションを使用して、ホスト・システムとツール・コンテナーの間のマウントを定義します。
 * このリストの先頭に、`host-path-tools` と `container-path-tools` の値が挿入されます。* ベスト・プラクティスとして、また、予期しない結果を回避するためにも、build と debug では同じマウント設定を使用してください。
-* 使用法: `bx dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* 使用法: `ibmcloud dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `build-cmd-run`
 {: #build-cmd-run}
 
 * デバッグ以外のすべての用途のコードをビルドするコマンドを指定するために使用されるパラメーター。
-* 使用法: `bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
+* 使用法: `ibmcloud dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 #### `trace`
 {: #trace}
 
 * このパラメーターを使用して、詳細出力を提供します。
-* 使用法: `bx dev <build|debug|run|test> --trace`
-
+* 使用法: `ibmcloud dev <build|debug|run|test> --trace`

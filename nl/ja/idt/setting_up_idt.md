@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-05-14"
 ## {{site.data.keyword.dev_cli_notm}} のインストール方法
 {: #installation}
 
-ツール・セットをインストールするには、関連するコマンドを実行して、インストーラーを起動します。 これにより、{{site.data.keyword.Bluemix_notm}} 開発用の推奨されるツールである、`Homebrew` (Mac のみ)、`Git`、`Docker`、`Helm`、`kubectl`、`curl`、{{site.data.keyword.Bluemix_notm}} CLI、{{site.data.keyword.dev_cli_notm}} プラグイン、Cloud Functions プラグイン、Container Registry プラグイン、Container Service プラグイン、および `sdk-gen` プラグインがインストールされます (まだインストールされていない場合)。インストールするには、以下のインストール・ステップを使用します。
+ツール・セットをインストールするには、関連するコマンドを実行して、インストーラーを起動します。 これにより、{{site.data.keyword.Bluemix_notm}} 開発用の推奨されるツールである、`Homebrew` (Mac のみ)、`Git`、`Docker`、`Helm`、`kubectl`、`curl`、{{site.data.keyword.Bluemix_notm}} CLI、{{site.data.keyword.dev_cli_notm}} プラグイン、Cloud Functions プラグイン、Container Registry プラグイン、Container Service プラグイン、および `sdk-gen` プラグインがインストールされます (まだインストールされていない場合)。 インストールするには、以下のインストール・ステップを使用します。
 
 **Mac および Linux:**
 
@@ -43,21 +43,24 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* 注: 右クリックして「管理者として実行」を選択することにより、Windows PowerShell を開きます。
+* 注: PowerShell アイコンを右クリックして「管理者として実行」を選択することによって、Windows PowerShell を開きます。
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
 
-『[ツールの再インストール](/docs/troubleshoot/ts_createapps.html#appendix)』セクションに、すべての従属関係を個々にインストールするための説明があります。
-
-以下のコマンドを実行して、プラグインが正常にインストールされたことを確認します。  
+## インストールの検証
+インストールを検査するには、次の `help` コマンドを実行します。
 
 ```
-bx dev
+ibmcloud dev help
 ```
 {: codeblock}
+
+インストールが成功していた場合、出力には、使用方法の説明、現行バージョン、およびサポートされるコマンドがリストされます。
+
+『[ツールの再インストール](/docs/troubleshoot/ts_createapps.html#appendix)』セクションに、すべての従属関係を個々にインストールするための説明があります。
 
 ## 環境の構成
 {: #configure-environment}
@@ -65,14 +68,14 @@ bx dev
 1. ご使用の {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、以下のコマンドを入力します。
 
 	```
-	bx api https://api.ng.bluemix.net
+	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
 2. IBM ID を使用して {{site.data.keyword.Bluemix_notm}} にログインします。
 
 	```
-	bx login
+	ibmcloud login
 	```
 	{: codeblock}
 
@@ -86,14 +89,14 @@ bx dev
 	5. 以下のコマンドを使用してログインします。
 
 		```
-		bx login --apikey <value>
+		ibmcloud login --apikey <value>
 		```
 		{: codeblock}
 
 3. 以下のように、組織とスペースを設定します。
 
 	```
-	bx target -o <value> -s <value>
+	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
 
@@ -102,7 +105,7 @@ bx dev
 
 これで、{{site.data.keyword.dev_cli_short}} CLI のインストールが完了したので、この便利なツールを有効に利用する方法について学習できます。
 - [IDT CLI の概説](index.html)
-- [IDT (bx dev) コマンド](commands.html)
+- [IDT (ibmcloud dev) コマンド](commands.html)
 - [VS Code 用の Developer Tools](vscode.html)
 - [Jetbrains IDE 用 Developer Tools](jetbrains.html)
 
@@ -116,8 +119,8 @@ IBM Developer Tools CLI を使用してクラウド・ネイティブ・アプ�
 - [IBM Cloud Developer Tools メイン・ランディング・ページ](https://www.ibm.com/cloud/cli) - IDT CLI のメイン製品ページ
 - [IBM Developer Tools インストーラー](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - 詳細なインストール指示を含むパブリック GitHub リポジトリー
 - [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - クラウド・ネイティブ・アプリを作成および管理するときに、IDT ツールのガイドとなる IBM Cloud コンソール・ページ
-- [IBM Cloud Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com) - IDT ツールに関する議論、回答の入手、アイデアの提案など
-	- [ここからチームにアクセスを申請できます。](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+- [Report issues on GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [IBM Cloud Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com) - [ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/)でチーム・アクセスを要求
 
 **言語に焦点を置いた資料**
 
