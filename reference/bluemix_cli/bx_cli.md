@@ -76,7 +76,7 @@ Use the indexes in the following tables to refer to the frequently used ibmcloud
  ## Commands for managing and configuring {{site.data.keyword.BluSoftlayer_notm}} infrastructure services (ibmcloud sl)
   {: #bx_commands_softlayer}
 
-The commands for managing {{site.data.keyword.BluSoftlayer_notm}} infrastructure have been merged into the {{site.data.keyword.Bluemix_notm}} CLI. For more information on using the {{site.data.keyword.Bluemix_notm}} CLI to configure and manage {{site.data.keyword.BluSoftlayer_notm}} infrastructure services, see: [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} infrastructure (ibmcloud sl) commands](/docs/cli/reference/softlayer/index.md#softlayer_cli).
+The commands for managing {{site.data.keyword.BluSoftlayer_notm}} infrastructure have been merged into the {{site.data.keyword.Bluemix_notm}} CLI. For more information on using the {{site.data.keyword.Bluemix_notm}} CLI to configure and manage {{site.data.keyword.BluSoftlayer_notm}} infrastructure services, see: [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} infrastructure (ibmcloud sl) commands](/docs/cli/reference/softlayer/index.html#softlayer_cli).
 
  ## Commands for managing accounts, orgs, and roles
  {: #bx_commands_account}
