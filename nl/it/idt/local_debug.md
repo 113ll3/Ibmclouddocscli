@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -25,7 +25,7 @@ Procedura per abilitare lo strumento di debug per un'applicazione Java:
 1. Dalla directory root del tuo progetto dell'applicazione esegui il seguente comando:
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. Collegamento del programma di debug alla tua applicazione:
@@ -52,7 +52,7 @@ Procedura per abilitare lo strumento di debug per un'applicazione Node.js:
 1. Dalla tua directory root dei progetti dell'applicazione esegui il seguente comando:
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. Collegamento del programma di debug alla tua applicazione:

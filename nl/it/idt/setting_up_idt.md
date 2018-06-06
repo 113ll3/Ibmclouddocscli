@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -31,7 +31,7 @@ Registrati per [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registrat
 ## Come installare {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
-Per installare l'insieme di strumenti, puoi eseguire il comando pertinente per avviare il programma di installazione.  Questo installa i seguenti strumenti consigliati per lo sviluppo {{site.data.keyword.Bluemix_notm}} (se non sono già installati): `Homebrew` (solo Mac), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, CLI {{site.data.keyword.Bluemix_notm}}, plugin {{site.data.keyword.dev_cli_notm}}, plugin Cloud Functions, plugin Container Registry, plugin Container Service e plugin `sdk-gen`.Per installare, utilizza questa procedura di installazione:
+Per installare l'insieme di strumenti, puoi eseguire il comando pertinente per avviare il programma di installazione. Questo installa i seguenti strumenti consigliati per lo sviluppo {{site.data.keyword.Bluemix_notm}} (se non sono già installati): `Homebrew` (solo Mac), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, CLI {{site.data.keyword.Bluemix_notm}}, plugin {{site.data.keyword.dev_cli_notm}}, plugin Cloud Functions, plugin Container Registry, plugin Container Service e plugin `sdk-gen`. Per installare, utilizza questa procedura di installazione:
 
 **Mac e Linux:**
 
@@ -43,21 +43,24 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* Nota: apri Windows PowerShell facendo clic con il tasto destro e selezionando "Run as Administrator".
+* Nota: apri Windows PowerShell facendo clic con il tasto destro sull'icona PowerShell e selezionando "Run as Administrator".
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
 
-La sezione [Reinstallazione degli strumenti](/docs/troubleshoot/ts_createapps.html#appendix) contiene informazioni per installare singolarmente tutte le dipendenze.
-
-Convalida la riuscita dell'installazione del plugin immettendo il seguente comando:  
+## Verifica l'installazione
+Per verificare l'installazione, esegui il comando `help`:
 
 ```
-bx dev
+ibmcloud dev help
 ```
 {: codeblock}
+
+Se l'installazione ha avuto esito positivo, l'output dovrebbe elencare le istruzioni di utilizzo, la versione corrente e i comandi supportati.
+
+La sezione [Reinstallazione degli strumenti](/docs/troubleshoot/ts_createapps.html#appendix) contiene informazioni per installare singolarmente tutte le dipendenze.
 
 ## Configura il tuo ambiente
 {: #configure-environment}
@@ -65,14 +68,14 @@ bx dev
 1. Stabilisci una connessione a un endpoint API nella tua regione {{site.data.keyword.Bluemix_notm}}. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione Stati Uniti Sud {{site.data.keyword.Bluemix_notm}}:
 
 	```
-	bx api https://api.ng.bluemix.net
+	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
 2. Accedi a {{site.data.keyword.Bluemix_notm}} con il tuo ID IBM.
 
 	```
-	bx login
+	ibmcloud login
 	```
 	{: codeblock}
 
@@ -86,14 +89,14 @@ bx dev
 	5. Accedi utilizzando il seguente comando:
 
 		```
-		bx login --apikey <value>
+		ibmcloud login --apikey <value>
 		```
 		{: codeblock}
 
 3. Imposta la tua ORGANIZZAZIONE e SPAZIO utilizzando:
 
 	```
-	bx target -o <value> -s <value>
+	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
 
@@ -102,7 +105,7 @@ bx dev
 
 Ora che hai installato la tua CLI {{site.data.keyword.dev_cli_short}}, puoi imparare come utilizzare questo potente strumento:
 - [Introduzione alla CLI IDT](index.html)
-- [Comandi IDT (bx dev)](commands.html)
+- [Comandi IDT (ibmcloud dev)](commands.html)
 - [Developer Tools per il codice VS](vscode.html)
 - [Developer Tools per l'IDE Jetbrains](jetbrains.html)
 
@@ -116,8 +119,8 @@ Le seguenti risorse possono essere utili quando sviluppi le applicazioni native 
 - [Pagina di destinazione principale di IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Pagina del prodotto principale per la CLI IDT
 - [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Repository GitHub pubblico con le istruzioni di installazione dettagliate
 - [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - La pagina della console IBM Cloud che è complementare agli strumenti IDT di creazione e gestione delle applicazioni native cloud
-- [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Discuti degli strumenti IDT, ricevi risposte, suggerisci idee e altro
-	- [Request team access](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+- [Segnala problemi su GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [IBM Cloud Tech's Slack - Canale #developer-tools](https://ibm-cloud-tech.slack.com) - Richiedi l'accesso al team [qui](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
 **Incentrati sul linguaggio**
 

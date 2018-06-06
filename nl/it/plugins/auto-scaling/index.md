@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -31,11 +31,11 @@ Una volta installata la CLI {{site.data.keyword.Bluemix_notm}}, puoi aggiungere 
 Completa la seguente procedura per aggiungere il repository e installare il plug-in:
 1. Per aggiungere il repository di plug-in della CLI {{site.data.keyword.Bluemix_notm}}, immetti il seguente comando:
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Per installare il plug-in della CLI {{site.data.keyword.autoscaling}}, immetti il seguente comando:
 ```
-bluemix plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r Bluemix
 ```
 
 ## Collegamento di una politica di ridimensionamento automatico
@@ -43,7 +43,7 @@ bluemix plugin install auto-scaling -r Bluemix
 Puoi collegare una politica di ridimensionamento automatico a una specifica applicazione. Immetti il seguente comando:
 
 ```
-bx as policy-attach <APP_NAME> -p <policy_file>
+ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -60,7 +60,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 Puoi generare una politica di ridimensionamento automatico rispondendo alle domande visualizzate nell'interfaccia riga di comando. A seconda del tuo input, un file JSON contenente la definizione della politica di ridimensionamento automatico viene salvato con il nome immesso. Se non immetti il nome del file, il contenuto della politica viene stampato direttamente nella riga di comando senza essere salvato in un file. Immetti il seguente comando:
 
 ```
-bx as policy-create
+ibmcloud as policy-create
 ```
 {: codeblock}
 
@@ -70,7 +70,7 @@ bx as policy-create
 Puoi visualizzare la politica di ridimensionamento automatico di un'applicazione. Il contenuto della politica viene stampato direttamente nella riga di comando. Immetti il seguente comando:
 
 ```
-bx as policy-show <APP_NAME> [--json]
+ibmcloud as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -87,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 Puoi rimuovere una politica di ridimensionamento automatico da un'applicazione. Immetti il seguente comando:
 
 ```
-bx as policy-detach <APP_NAME>
+ibmcloud as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -102,7 +102,7 @@ bx as policy-detach <APP_NAME>
 Puoi abilitare o disabilitare la politica di ridimensionamento automatico di una specifica applicazione. Immetti il seguente comando:
 
 ```
-bx as policy-enable|policy-disable <APP_NAME>
+ibmcloud as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -117,7 +117,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 Puoi visualizzare la cronologia dell'attività di ridimensionamento automatico di una specifica applicazione. Una tabella di record della cronologia del ridimensionamento automatico viene visualizzata nell'interfaccia riga di comando.
 
 ```
-bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 

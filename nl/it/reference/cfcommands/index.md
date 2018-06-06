@@ -415,8 +415,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>Il tuo nome utente.</dd>
 <dt>*-p* password (facoltativo)</dt>
 <dd>La tua password.</dd>
-<dd>*Importante:* se fornisci la tua password utilizzando il parametro *-p* sull'interfaccia riga di comando, la password potrebbe essere registrata nella cronologia della riga di comando. Per motivi di sicurezza, evita di fornire la password utilizzando il parametro
--p. Immetti invece la password quando te lo chiede l'interfaccia riga di comando.</dd>
+<dd>*Importante:* se fornisci la tua password utilizzando il parametro *-p* sull'interfaccia riga di comando, la password potrebbe essere registrata nella cronologia della riga di comando. Per motivi di sicurezza, evita di fornire la password utilizzando il parametro -p. Immetti invece la password quando te lo chiede l'interfaccia riga di comando.</dd>
 <dt>*-sso*</dt>
 <dd>Devi utilizzare l'opzione SSO (single sign-on ) quando accedi con un ID federato. Non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti verrà richiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere il passcode monouso all'accesso.</dd>
 <dt>*-o*nome_organizzazione</dt>

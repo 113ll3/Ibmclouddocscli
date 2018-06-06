@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -24,18 +24,18 @@ Ti consigliamo di installare la CLI {{site.data.keyword.Bluemix_notm}} e tutte l
 {: tip}
 
 
-La CLI {{site.data.keyword.Bluemix_notm}} fornisce l'interfaccia della riga di comando per gestire applicazioni, contenitori, infrastrutture, servizi e altre risorse in {{site.data.keyword.Bluemix_notm}}. 
+La CLI {{site.data.keyword.Bluemix_notm}} fornisce l'interfaccia della riga di comando per gestire applicazioni, contenitori, infrastrutture, servizi e altre risorse in {{site.data.keyword.Bluemix_notm}}.
 
 
 Per iniziare solo con la CLI {{site.data.keyword.Bluemix_notm}}:
 
 1. Seleziona il programma di installazione del tuo sistema operativo per il download
-   
+
    Mac OS X a 64 bit: [programma di installazione](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows a 64 bit: [programma di installazione](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
    Linux X86 a 64 bit: [programma di installazione](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE a 64 bit (ppc64le): [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
-  
+
    **Le release a 32 bit e le versioni precedenti sono disponibili [qui](all_versions.html)
 
 1. Esegui il programma di installazione
@@ -46,7 +46,7 @@ Per iniziare solo con la CLI {{site.data.keyword.Bluemix_notm}}:
 
   ![Esempio](example.gif){: gif}
 
-Ora sei pronto a gestire le risorse {{site.data.keyword.Bluemix_notm}}. Immetti `bluemix help` o `bx help` per visualizzare le descrizioni dei comandi. 
+Ora sei pronto a gestire le risorse {{site.data.keyword.Bluemix_notm}}. Immetti `ibmcloud help` per visualizzare le descrizioni dei comandi.
 
 Se stai utilizzando un ID federato, segui le istruzioni [qui](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) e accedi con un passcode monouso o una chiave API.  {: tip}
 

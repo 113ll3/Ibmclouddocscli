@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -32,19 +32,19 @@ Le informazioni che seguono elencano tutti i comandi supportati dal plug-in VPN 
 **Nota:** i *Prerequisiti* elencano quali azioni sono richieste prima di utilizzare il comando. I prerequisiti possono includere una o più delle seguenti azioni:
 <dl>
 <dt>**Endpoint**</dt>
-<dd>Un endpoint API deve essere impostato mediante `bluemix api` prima di utilizzare il comando.</dd>
+<dd>Un endpoint API deve essere impostato mediante `ibmcloud api` prima di utilizzare il comando.</dd>
 <dt>**Accesso**</dt>
-<dd>L'accesso utilizzando il comando `bluemix login` è richiesto prima di utilizzare questo comando.</dd>
+<dd>È necessario accedere utilizzando il comando `ibmcloud login` prima di utilizzare questo comando.</dd>
 <dt>**Destinazione**</dt>
-<dd>Il comando `bluemix target` deve essere utilizzato per impostare un'organizzazione e uno spazio prima di utilizzare questo comando.</dd>
+<dd>È necessario utilizzare il comando `ibmcloud target` per impostare un'organizzazione e uno spazio prima di utilizzare questo comando.</dd>
 </dl>
 
 
-## bluemix vpn connection-create
+## ibmcloud vpn connection-create
 Crea una connessione VPN.
 
 ```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+ibmcloud vpn connection-create NOME_CONNESSIONE -g NOME_GATEWAY -k CHIAVE_PRECONDIVISA -subnets "SOTTORETE/MASCHERA" -cip INDIRIZZO_IP_GATEWAY_CLIENTE [-d DESCRIZIONE] [-peer_id ID_PEER] [-admin_state STATO_AMMINISTRAZIONE] [-dpd-action AZIONE] [-gateway_ip INDIRIZZO_IP] [-i STATO_INIZIATORE] [-dpd-timeout VALORE] [-dpd-interval VALORE] [-ike NOME] [-ipsec NOME]
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -85,15 +85,15 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 
 Crea una nuova connessione vpn con il nome `my_connection`:
 ```
-bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
+ibmcloud vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
 
 
-## bluemix vpn ike-create
+## ibmcloud vpn ike-create
 Crea una politica IKE.
 
 ```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ike-create NOME_POLITICA -g NOME_GATEWAY [-d DESCRIZIONE] [-pfs GRUPPO] [-e ALGORITMO_DI_CRITTOGRAFIA] [-lv VALORE_DURATA]
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -116,15 +116,15 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP]
 
 Crea una nuova politica IKE con il nome `my_ike`:
 ```
-bluemix vpn ike-create my_ike -g my_gateway
+ibmcloud vpn ike-create my_ike -g my_gateway
 ```
 
 
-## bluemix vpn ipsec-create
+## ibmcloud vpn ipsec-create
 Crea una politica IPSec.
 
 ```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ipsec-create NOME_POLITICA -g NOME_GATEWAY [-d DESCRIZIONE] [-pfs GRUPPO] [-e ALGORITMO_DI_CRITTOGRAFIA] [-lv VALORE_DURATA]
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -147,15 +147,15 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROU
 
 Crea una politica IPSec con il nome `my_policy`:
 ```
-bluemix vpn ipsec-create my_policy -g my_gateway
+ibmcloud vpn ipsec-create my_policy -g my_gateway
 ```
 
 
-## bluemix vpn gateway-create
+## ibmcloud vpn gateway-create
 Crea un gateway VPN.
 
 ```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+ibmcloud vpn gateway-create NOME_GATEWAY -t TIPO [-gateway_ip INDIRIZZO_IP] [-subnets INDIRIZZO_SOTTORETE]
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -174,55 +174,55 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subne
 
 Crea un gateway con il nome `my_gateway` e il tipo `allContainerGroups`:
 ```
-bluemix vpn gateway-create my_gateway -t allContainerGroups
+ibmcloud vpn gateway-create my_gateway -t allContainerGroups
 ```
 
 
-## bluemix vpn connections
+## ibmcloud vpn connections
 Visualizza le informazioni su tutte le connessioni correnti.
 
 ```
-bluemix vpn connections
+ibmcloud vpn connections
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
 
 
-## bluemix vpn ikes
+## ibmcloud vpn ikes
 Visualizza le informazioni sulle connessioni IKE correnti.
 
 ```
-bluemix vpn ikes
+ibmcloud vpn ikes
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
 
 
-## bluemix vpn ipsecs
+## ibmcloud vpn ipsecs
 Visualizza le informazioni sulle connessioni IPSec correnti.
 
 ```
-bluemix vpn ipsecs
+ibmcloud vpn ipsecs
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
 
 
-## bluemix vpn gateways
+## ibmcloud vpn gateways
 Visualizza le informazioni sui gateway correnti.
 
 ```
-bluemix vpn gateways
+ibmcloud vpn gateways
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
 
 
-## bluemix vpn connection
+## ibmcloud vpn connection
 Visualizza tutte le informazioni su una specifica connessione.
 
 ```
-bluemix vpn connection NOME_CONNESSIONE
+ibmcloud vpn connection NOME_CONNESSIONE
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -232,11 +232,11 @@ bluemix vpn connection NOME_CONNESSIONE
 *NOME_CONNESSIONE*  (obbligatorio): il nome della connessione da visualizzare.
 
 
-## bluemix vpn ike
+## ibmcloud vpn ike
 Visualizza le informazioni su una connessione IKE.
 
 ```
-bluemix vpn ike NOME_POLITICA
+ibmcloud vpn ike NOME_POLITICA
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -246,11 +246,11 @@ bluemix vpn ike NOME_POLITICA
 *NOME_POLITICA* (obbligatorio): il nome della politica IKE da visualizzare.
 
 
-## bluemix vpn ipsec
+## ibmcloud vpn ipsec
 Visualizza le informazioni su una connessione IPSec.
 
 ```
-bluemix vpn ipsec NOME_POLITICA
+ibmcloud vpn ipsec NOME_POLITICA
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -260,11 +260,11 @@ bluemix vpn ipsec NOME_POLITICA
 *NOME_POLITICA* (obbligatorio): il nome della politica IPSec da visualizzare.
 
 
-## bluemix vpn gateway
+## ibmcloud vpn gateway
 Visualizza le informazioni di connessione relative a un gateway.
 
 ```
-bluemix vpn gateway NOME_GATEWAY
+ibmcloud vpn gateway NOME_GATEWAY
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -274,11 +274,11 @@ bluemix vpn gateway NOME_GATEWAY
 *NOME_GATEWAY*  (obbligatorio): il nome del gateway da visualizzare.
 
 
-## bluemix vpn connection-delete
+## ibmcloud vpn connection-delete
 Elimina una connessione esistente.
 
 ```
-bluemix vpn connection-delete NOME_CONNESSIONE
+ibmcloud vpn connection-delete NOME_CONNESSIONE
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -288,11 +288,11 @@ bluemix vpn connection-delete NOME_CONNESSIONE
 *NOME_CONNESSIONE*  (obbligatorio): il nome della connessione da eliminare.
 
 
-## bluemix vpn ike-delete
+## ibmcloud vpn ike-delete
 Elimina una politica IKE esistente.
 
 ```
-bluemix vpn ike-delete NOME_POLITICA
+ibmcloud vpn ike-delete NOME_POLITICA
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -302,11 +302,11 @@ bluemix vpn ike-delete NOME_POLITICA
 *NOME_POLITICA* (obbligatorio): il nome della politica IKE da eliminare.
 
 
-## bluemix vpn ipsec-delete
+## ibmcloud vpn ipsec-delete
 Elimina una politica IPSec esistente.
 
 ```
-bluemix vpn ipsec-delete NOME_POLITICA
+ibmcloud vpn ipsec-delete NOME_POLITICA
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -316,11 +316,11 @@ bluemix vpn ipsec-delete NOME_POLITICA
 *NOME_POLITICA* (obbligatorio): il nome della politica IPSec da eliminare.
 
 
-## bluemix vpn gateway-delete
+## ibmcloud vpn gateway-delete
 Elimina un gateway esistente.
 
 ```
-bluemix vpn gateway-delete NOME_GATEWAY
+ibmcloud vpn gateway-delete NOME_GATEWAY
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -330,11 +330,11 @@ bluemix vpn gateway-delete NOME_GATEWAY
 *NOME_GATEWAY*  (obbligatorio): il nome del gateway da eliminare.
 
 
-## bluemix vpn connection-update
+## ibmcloud vpn connection-update
 Aggiorna una connessione VPN esistente.
 
 ```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+ibmcloud vpn connection-update NOME_CONNESSIONE [-g NOME_GATEWAY] [-k CHIAVE_PRECONDIVISA] [-subnets "SOTTORETE/MASCHERA"] [-cip INDIRIZZO_IP_GATEWAY_CLIENTE] [-d DESCRIZIONE] [-peer_id ID_PEER] [-admin_state STATO_AMMINISTRAZIONE] [-dpd-action ACTION] [-gateway_ip INDIRIZZO_IP] [-i STATO_INIZIATORE] [-dpd-timeout VALORE] [-dpd-interval VALORE] [-ike NOME] [-ipsec NOME]
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -372,11 +372,11 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KE
 -ipsec *NOME*  (facoltativo): il nome della politica IPSec.
 
 
-## bluemix vpn ike-update
+## ibmcloud vpn ike-update
 Aggiorna una politica IKE.
 
 ```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ike-update NOME_POLITICA [-g NOME_GATEWAY] [-d DESCRIZIONE] [-pfs GRUPPO] [-e ALGORITMO_DI_CRITTOGRAFIA] [-lv VALORE_DURATA]
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -396,11 +396,11 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROU
 -lv *VALORE_DURATA*  (facoltativo): il valore di durata dell'associazione di sicurezza IKE. Intervallo: 60 - 86400 secondi.
 
 
-## bluemix vpn ipsec-update
+## ibmcloud vpn ipsec-update
 Aggiorna una politica IPSec.
 
 ```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ipsec-update NOME_POLITICA [-g NOME_GATEWAY] [-d DESCRIZIONE] [-pfs GRUPPO] [-e ALGORITMO_DI_CRITTOGRAFIA] [-lv VALORE_DURATA]
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
@@ -420,11 +420,11 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GR
 -lv *VALORE_DURATA*  (facoltativo): il valore di durata dell'associazione di sicurezza. Intervallo: 60 - 86400 secondi.
 
 
-## bluemix vpn gateway-update
+## ibmcloud vpn gateway-update
 Aggiorna un gateway VPN esistente.
 
 ```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+ibmcloud vpn gateway-update NOME_GATEWAY [-t TIPO] [-gateway_ip INDIRIZZO_IP] [-subnets INDIRIZZO_SOTTORETE]
 ```
 
 **Prerequisiti**:  Endpoint, Accesso, Destinazione
