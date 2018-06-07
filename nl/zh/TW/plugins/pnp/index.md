@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -29,10 +29,10 @@ lastupdated: "2018-04-17"
 **附註**：如果您已安裝舊版的外掛程式，則需要將它解除安裝。請使用下列指令，以解除安裝外掛程式：
 
 ```
-bluemix plugin uninstall private-network-peering
+ibmcloud plugin uninstall private-network-peering
 ```
 ### 在本端安裝
-從 [{{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} 中，下載您平台的專用網路對等作業外掛程式。
+從 [{{site.data.keyword.ibmcloud_notm}} CLI 外掛程式儲存庫 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window} 中，下載您平台的專用網路對等作業外掛程式。
 
 使用下列指令，以安裝專用網路對等作業外掛程式：
 
@@ -41,19 +41,19 @@ bluemix plugin uninstall private-network-peering
 * 若為 Microsoft Windows OS：
 
 ```
-bluemix plugin install private-network-peering-windows-amd64.exe
+ibmcloud plugin install private-network-peering-windows-amd64.exe
 ```
 
 * 若為 Apple MAC OS：
 
 ```
-bluemix plugin install private-network-peering-darwin-amd64
+ibmcloud plugin install private-network-peering-darwin-amd64
 ```
 
 * 若為 Linux OS：
 
 ```
-bluemix plugin install private-network-peering-linux-amd64
+ibmcloud plugin install private-network-peering-linux-amd64
 ```
 
 **附註**：當您安裝 Linux OS 的外掛程式時，如果看到顯示拒絕許可權的錯誤訊息，請執行下列指令，並變更許可權：
@@ -62,40 +62,39 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### 從 {{site.data.keyword.Bluemix_notm}} 儲存庫安裝
+### 從 {{site.data.keyword.ibmcloud_notm}} 儲存庫安裝
 
-遵循下列步驟，以從 {{site.data.keyword.Bluemix_notm}} 儲存庫安裝外掛程式：
+遵循下列步驟，以從 {{site.data.keyword.ibmcloud_notm}} 儲存庫安裝外掛程式：
 
-1. 新增 {{site.data.keyword.Bluemix_notm}} 外掛程式登錄端點：
+1. 新增 {{site.data.keyword.ibmcloud_notm}} 外掛程式登錄端點：
 	```
-	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
+	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
 
 2. 請執行下列指令：
 
 	```
-	bluemix plugin install private-network-peering -r bluemix-bx
+	ibmcloud plugin install private-network-peering -r bluemix-bx
 	```
 
 ## 專用網路對等作業指令清單
-支援下列指令。使用 `bluemix network` 指令，以查看可用的指令清單：
+支援下列指令。使用 `ibmcloud network` 指令，以查看可用的指令清單：
 
-| 指令| 說明
-|
+|指令|說明|
 |-------------|------------------------------------------------|
-| pnp-routers| 列出對等作業的所有可用路由器|
-| pnp-create| 建立專用網路對等作業連線|
-| pnp-delete| 刪除專用網路對等作業連線|
-| pnp-show| 列出所有專用網路對等作業連線|
+|pnp-routers|列出對等作業的所有可用路由器|
+|pnp-create|建立專用網路對等作業連線|
+|pnp-delete|刪除專用網路對等作業連線|
+|pnp-show|列出所有專用網路對等作業連線|
 {: caption="表 1. 專用網路對等作業指令" caption-side="top"}
 
 
 ### 指令用法
-若要檢視指令的說明資訊，請執行：`bluemix network [command] -h`。
+若要檢視指令的說明資訊，請執行：`ibmcloud network [command] -h`。
 
 #### 列出對等作業的所有可用路由器
 ```
-bluemix network pnp-routers [--verbose（或 -v）]
+ibmcloud network pnp-routers [--verbose（或 -v）]
 ```
 
 #####選用性參數
@@ -108,7 +107,7 @@ bluemix network pnp-routers [--verbose（或 -v）]
 
 若要檢視所有路由器的網路資訊，請執行下列指令：
 
-	$ bluemix network pnp-routers
+	$ ibmcloud network pnp-routers
 	Listing available routers ...
 	OK
 
@@ -121,7 +120,7 @@ bluemix network pnp-routers [--verbose（或 -v）]
 若要檢視所有路由器的詳細網路資訊，請執行下列指令：
 
 
-	$ bluemix network pnp-routers -v
+	$ ibmcloud network pnp-routers -v
 	Listing available routers ...
 	OK
 
@@ -150,19 +149,19 @@ bluemix network pnp-routers [--verbose（或 -v）]
 
 #### 使用 IP 位址建立專用網路對等作業連線
 ```
-bluemix network pnp-create <router_ip> <router_ip> <name>
+ibmcloud network pnp-create <router_ip> <router_ip> <name>
 ```
 
 #####參數
 {: #p1}
 
-* **router_ip**：您要連接的兩個路由器的 IP 位址。您可以使用下列指令來找出 IP 位址：`bluemix network pnp-routers`
+* **router_ip**：您要連接的兩個路由器的 IP 位址。您可以使用下列指令來找出 IP 位址：`ibmcloud network pnp-routers`
 * **name**：專用網路對等作業連線的名稱。
 
 ######指令範例
 {: #ex2}
 
-	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
+	$ ibmcloud network pnp-create 129.41.234.246 129.41.237.172 demo
 	Creating private network peering connection 'demo' ...
 	Connecting 'default-router(129.41.234.246)' and 'default-router(129.41.237.172)' ...
 	OK
@@ -173,7 +172,7 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 ####使用連線名稱建立專用網路對等作業連線
 
 ```
-bluemix network pnp-create -i <name>
+ibmcloud network pnp-create -i <name>
 ```
 
 #####參數
@@ -185,7 +184,7 @@ bluemix network pnp-create -i <name>
 ######指令範例
 {: #ex3}
 
-	$ bluemix network pnp-create -i demo
+	$ ibmcloud network pnp-create -i demo
 	Creating private network peering connection 'demo' ...
 	List of available routers (select TWO for peering):
 
@@ -205,7 +204,7 @@ bluemix network pnp-create -i <name>
 
 #### 列出所有專用網路對等作業連線
 ```
-bluemix network pnp-show [--verbose（或 -v）]
+ibmcloud network pnp-show [--verbose（或 -v）]
 ```
 
 #####選用性參數
@@ -218,7 +217,7 @@ bluemix network pnp-show [--verbose（或 -v）]
 
 檢視基本資訊：
 
-	$ bluemix network pnp-show
+	$ ibmcloud network pnp-show
 	Listing private network peering connections ...
 	OK
 
@@ -227,7 +226,7 @@ bluemix network pnp-show [--verbose（或 -v）]
 
 檢視詳細資訊：
 
-	$ bluemix network pnp-show -v
+	$ ibmcloud network pnp-show -v
 	Listing private network peering connections ...
 	OK
 
@@ -245,7 +244,7 @@ bluemix network pnp-show [--verbose（或 -v）]
 
 #### 刪除專用網路對等作業連線
 ```
-bluemix network pnp-delete [--force（或 -f）] <connection_id>
+ibmcloud network pnp-delete [--force（或 -f）] <connection_id>
 ```
 #####參數
 {: #p3}
@@ -261,7 +260,7 @@ bluemix network pnp-delete [--force（或 -f）] <connection_id>
 
 刪除連線：
 
-	$ bluemix network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
+	$ ibmcloud network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
 	Warning: deleted connections cannot be restored.
 	Are you sure you want to delete the connection? (yes/no)> yes
 
@@ -274,5 +273,5 @@ bluemix network pnp-delete [--force（或 -f）] <connection_id>
 刪除多個連線：
 
 ```
-bluemix network pnp-delete [-f] <connection_id>,<connection_id>,<connection_id>
+ibmcloud network pnp-delete [-f] <connection_id>,<connection_id>,<connection_id>
 ```

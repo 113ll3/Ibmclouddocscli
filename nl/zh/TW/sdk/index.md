@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ REST API 定義必須有效，且在即時伺服器端點上或您系統的本�
 2. [安裝外掛程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in)。
 
 	```
-	bx plugin install sdk-gen
+	ibmcloud plugin install sdk-gen
 	```
 	{: codeblock}
 
@@ -56,7 +56,7 @@ REST API 定義必須有效，且在即時伺服器端點上或您系統的本�
 ### 產生 SDK
 {: #gen}
 
-使用 `bx sdk generate [arguments...] [command options]`。
+使用 `ibmcloud sdk generate [arguments...] [command options]`。
 
 
 #### 引數
@@ -90,14 +90,14 @@ REST API 定義必須有效，且在即時伺服器端點上或您系統的本�
 若要從 {{site.data.keyword.Bluemix_notm}} 中所執行的 Cloud Foundry 應用程式產生 SDK，您可以使用應用程式的名稱作為 CLI 的參數。下列指令使用應用程式的名稱作為 `SDK_Name`。
 
 ```
-bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
+ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 若要從開放式 API 定義檔或是本端 JSON 或 Yaml 檔案的 URL 產生 SDK，請使用下列指令。
 
 ```
-bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
+ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### 驗證開放式 API 定義
 {: #validating}
 
-使用 `bx sdk validate [argument]`。
+使用 `ibmcloud sdk validate [argument]`。
 
 
 #### 引數
@@ -121,14 +121,14 @@ bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 若要驗證在 {{site.data.keyword.Bluemix_notm}} 中執行之 Cloud Foundry 應用程式的 API 規格，您可以使用應用程式的名稱作為 CLI 的參數。
 
 ```
-bx sdk validate [APP_NAME] [LOCATION]
+ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 若要從 API 規格文件或是本端 JSON 或 Yaml 檔案的 URL 驗證 SDK，請使用下列指令。
 
 ```
-bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
+ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### 列出應用程式 (Cloud Foundry)
 {: #list-apps}
 
-使用 `bx sdk list [argument] [option]` 來列出應用程式，以及驗證 API 規格。您必須將 `OPENAPI_SPEC` 環境變數設為管理規格的相對 URL 路徑。
+使用 `ibmcloud sdk list [argument] [option]` 來列出應用程式，以及驗證 API 規格。您必須將 `OPENAPI_SPEC` 環境變數設為管理規格的相對 URL 路徑。
 
 
 #### 引數
@@ -158,27 +158,27 @@ bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 若要列出現行空間中的應用程式，請使用下列指令。
 
 ```
-bx sdk list
+ibmcloud sdk list
 ```
 {: codeblock}
 
 若要列出現行空間中的應用程式，並顯示 API 規格 URL，請使用下列指令。
 
 ```
-bx sdk list --url
+ibmcloud sdk list --url
 ```
 {: codeblock}
 
 若要列出特定空間中的應用程式，請使用下列指令。
 
 ```
-bx sdk list [SPACE_NAME]
+ibmcloud sdk list [SPACE_NAME]
 ```
 {: codeblock}
 
 若要列出特定空間中的應用程式，並顯示 API 規格 URL，請使用下列指令。
 
 ```
-bx sdk list [SPACE_NAME] --url
+ibmcloud sdk list [SPACE_NAME] --url
 ```
 {: codeblock}

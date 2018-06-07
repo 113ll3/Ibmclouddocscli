@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -30,8 +30,8 @@ lastupdated: "2018-05-11"
 - 適用於通用 Web 應用程式及微服務的[應用程式服務 Web 主控台](https://console.bluemix.net/developer/appservice)
 - 用於建立啟用 Watson 型功能之入門範本應用程式的 [Watson 儀表板](https://console.bluemix.net/dashboard/watson)。
     - 其他產業及技術型儀表板可以從 {{site.data.keyword.Bluemix_notm}} 首頁上的「漢堡式」功能表取得。全部都採用使用「入門範本套件」建立新應用程式的類似方法。
-- {{site.data.keyword.dev_cli_notm}} CLI 的 [`bx dev create`](./commands.html#create) 指令以建立新的應用程式。
-- {{site.data.keyword.dev_cli_notm}} CLI 的 [`bx dev enable`](./commands.html#enable) 指令以快速在現有伺服器端應用程式上啟用雲端。
+- {{site.data.keyword.dev_cli_notm}} CLI 的 [`ibmcloud dev create`](./commands.html#create) 指令以建立新的應用程式。
+- {{site.data.keyword.dev_cli_notm}} CLI 的 [`ibmcloud dev enable`](./commands.html#enable) 指令以快速在現有伺服器端應用程式上啟用雲端。
 
 針對上述任何建立方法，流程類似。您可以選擇要使用的專案類型、實作語言及應用程式模式。您也可以選擇將加值型服務新增至應用程式（例如鑑別或持續性）。最後，您可以選擇啟用應用程式的 DevOps 功能，以提供來源控制及團隊通訊的完整工具鏈，以及每次確定時觸發的管線，以驗證、建置及部署您的應用程式至 IBM Cloud。
 
@@ -76,12 +76,12 @@ lastupdated: "2018-05-11"
 {: #build}
 
 
-建立專案之後，您現在可以將它精心製作成有用的項目。一般流程包含編輯原始碼，然後執行 [`bx dev build`](commands.html#build) 以在應用程式語言及配置特有的本端容器內編譯應用程式。根據使用的應用程式語言及產生器，有一個以上的容器預設為支援在本端進行建置及執行。一般而言，將會有 "tools" 容器以進行建置及本端除錯。此容器通常會有額外的工具及功能可協助您進行開發。還有一個 "run" 容器，可在部署至雲端（在 Cloud Foundry 或 IBM 的 Kubernetes 型容器環境中）之後，緊密模擬您應用程式的實際運行環境環境。
+建立專案之後，您現在可以將它精心製作成有用的項目。一般流程包含編輯原始碼，然後執行 [`ibmcloud dev build`](commands.html#build) 以在應用程式語言及配置特有的本端容器內編譯應用程式。根據使用的應用程式語言及產生器，有一個以上的容器預設為支援在本端進行建置及執行。一般而言，將會有 "tools" 容器以進行建置及本端除錯。此容器通常會有額外的工具及功能可協助您進行開發。還有一個 "run" 容器，可在部署至雲端（在 Cloud Foundry 或 IBM 的 Kubernetes 型容器環境中）之後，緊密模擬您應用程式的實際運行環境環境。
 
 
 您可以免費使用偏好用來編寫應用程式的 IDE 或編輯器。我們提供 Microsoft VisualStudio Code (VSCode) 編輯器的延伸規格，讓您能夠直接在編輯器內存取所有 IDE 指令。
 
-根據應用程式的產生器配置，在建置專案之後，您接著想要使用 [`bx dev run`](commands.html#run) 或 [`bx dev debug`](commands.html#debug) 來執行應用程式。這會在適當的容器內執行應用程式。部分應用程式模式支援應用程式外部的多個容器（例如持續性或其他功能）。這些會在執行或除錯期間自動啟動及配置。還有 [`bx dev test`](commands.html#test) 指令可執行與應用程式相關聯的任何測試案例。
+根據應用程式的產生器配置，在建置專案之後，您接著想要使用 [`ibmcloud dev run`](commands.html#run) 或 [`ibmcloud dev debug`](commands.html#debug) 來執行應用程式。這會在適當的容器內執行應用程式。部分應用程式模式支援應用程式外部的多個容器（例如持續性或其他功能）。這些會在執行或除錯期間自動啟動及配置。還有 [`ibmcloud dev test`](commands.html#test) 指令可執行與應用程式相關聯的任何測試案例。
 
 
 ### 本端容器的使用方式
@@ -116,7 +116,7 @@ lastupdated: "2018-05-11"
 ## 部署
 {: #deploy}
 
-在適當的雲端原生環境下，您想要利用完整運作的 DevOps 管線來管理所有部署，以及其他許多功能。在建立流程期間，您可以設定應用程式以使用 IBM Cloud 的 DevOps。如果您還沒有準備好使用內建 DevOps，則可以手動對應用程式執行 [`bx dev deploy`](./commands.html#deploy)，或在自己的 DevOps 管線內使用 deploy 指令。  
+在適當的雲端原生環境下，您想要利用完整運作的 DevOps 管線來管理所有部署，以及其他許多功能。在建立流程期間，您可以設定應用程式以使用 IBM Cloud 的 DevOps。如果您還沒有準備好使用內建 DevOps，則可以手動對應用程式執行 [`ibmcloud dev deploy`](./commands.html#deploy)，或在自己的 DevOps 管線內使用 deploy 指令。  
 
 
 

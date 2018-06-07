@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -40,7 +40,7 @@ The hostname <myHostname> is taken.
 
 #### 原因
 {: #hostname-cause}
-   
+
 此錯誤是過期登入記號所造成。
 
 
@@ -50,7 +50,7 @@ The hostname <myHostname> is taken.
 請重新登入。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -68,7 +68,7 @@ Failed to <command> project.
 
 #### 原因
 {: #general-cause}
-   
+
 此錯誤是過期登入記號所造成。
 
 
@@ -78,7 +78,7 @@ Failed to <command> project.
 請重新登入。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -89,7 +89,7 @@ bx login
 當您執行專案而未先進行建置時，可能會看到下列錯誤。
 
 ```
-$ bx dev run testProject
+$ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -106,7 +106,7 @@ Error: No such image: bx-dev-testProject
 {: #nosuchimage-cause}
 
 您必須先建置專案，才能執行它。
- 
+
 
 
 #### 解決方法
@@ -115,14 +115,14 @@ Error: No such image: bx-dev-testProject
 在現行專案目錄中執行下列指令，以建置您的應用程式：
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 在現行專案目錄中執行下列指令，以啟動您的應用程式：
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 
 
@@ -140,7 +140,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 
 #### 原因
 {: #os-cause}
-   
+
 此錯誤是 {{site.data.keyword.objectstorageshort}} 服務所造成，而此服務只提供免費 {{site.data.keyword.objectstorageshort}} 方案的一個實例。
 
 
@@ -155,21 +155,21 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 {: #code}
 
 如果您使用 {{site.data.keyword.dev_cli_short}} 建立專案，則可能會看到下列錯誤：
-	
+
 ```
 FAILED                            
 Project created, but could not get code
 https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
-	
+
 
 #### 原因
 {: #code-cause}
 
 此錯誤是內部逾時所造成。
 
-	
+
 
 #### 解決方法
 {: #code-resolution}
@@ -179,7 +179,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 * 使用 CLI 執行下列指令：
 
    ```
-   bx dev code <your-project-name>
+   ibmcloud dev code <your-project-name>
    ```
    {: codeblock}
 
@@ -195,10 +195,10 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 
 
-### 針對 Node.js 專案執行 `bx dev run` 時發生錯誤
+### 針對 Node.js 專案執行 `ibmcloud dev run` 時發生錯誤
 {: #node}
 
-如果您是搭配執行 `bx dev run` 與適用於 Node.js Web 或 BFF 專案的 {{site.data.keyword.dev_cli_short}}，則可能會看到下列錯誤：
+如果您是搭配執行 `ibmcloud dev run` 與適用於 Node.js Web 或 BFF 專案的 {{site.data.keyword.dev_cli_short}}，則可能會看到下列錯誤：
 
 ```
 module.js:597
@@ -223,7 +223,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 
 #### 原因
 {: #node-cause}
-   
+
 `appmetrics` 模組安裝在不同的架構上時，會發生此錯誤。安裝在某個架構上的原生 mpm 模組無法在另一個架構上運作。所包括的 Docker 映像檔是以 Linux Kernel 為基礎。
 
 
@@ -231,19 +231,19 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 解決方法
 {: #node-resolution}
 
-刪除 `node_modules` 資料夾，並重新執行 `bx dev run`。
+刪除 `node_modules` 資料夾，並重新執行 `ibmcloud dev run`。
 
 
-### 無法部署至 Bluemix
+### 無法部署至 {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploy}
 
-您可能會嘗試使用 {{site.data.keyword.dev_cli_short}} 部署至 Bluemix，您看到它未部署至 Bluemix，但沒有發生錯誤。
+您可能會嘗試使用 {{site.data.keyword.dev_cli_short}} 部署至 {{site.data.keyword.Bluemix_notm}}，您看到它未部署至 {{site.data.keyword.Bluemix_notm}}，但沒有發生錯誤。
 
 
 #### 原因
 {: #cause1}
 
-這可能是您未登入您的帳戶。 
+這可能是您未登入您的帳戶。
 
 #### 解決方法
 {: #resolution1}
@@ -251,11 +251,11 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 請登入，然後再試一次。
 
 ```
-bx login
+ibmcloud login
 ```
 
 
-### 無法部署至 Bluemix 上的 Kubernetes
+### 無法部署至 {{site.data.keyword.Bluemix_notm}} 上的 Kubernetes
 {: #failuretodeploytokube}
 
 在叢集名稱的起始提示之後，您可能會看到此失敗：
@@ -275,7 +275,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 這最有可能是因為叢集名稱無效，且可以利用 `--trace` 來執行相同指令來確認，您可能會在錯誤輸出中看到此內容：
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 
 
@@ -285,11 +285,11 @@ Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"T
 請確定您使用的是正確叢集，而且您已透過執行下列指令來配置要進行部署的叢集：
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 
 
-### 無法部署至 Bluemix 上的 Kubernetes
+### 無法部署至 {{site.data.keyword.Bluemix_notm}} 上的 Kubernetes
 
 在部署映像檔目標的提示之後，您可能會看到此失敗：
 
@@ -315,7 +315,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<projec
 請確定部署映像檔目標中的名稱空間符合執行下列指令所找到的其中一個名稱空間：
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 
 
@@ -327,7 +327,7 @@ bx cr namespaces
 
 若要安裝 dev 外掛程式，必須先安裝 [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started)。
 
-若要使用 dev 外掛程式本身，您必須執行下列指令來安裝它：`bx plugin install dev -r Bluemix`。
+若要使用 dev 外掛程式本身，您必須執行下列指令來安裝它：`ibmcloud plugin install dev -r Bluemix`。
 
 若要在本端執行和除錯應用程式，您也必須安裝 [Docker ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.docker.com/get-docker)。
 
@@ -352,10 +352,10 @@ bx cr namespaces
 在 https://github.com/kubernetes/helm/releases/tag/v2.6.0 下載並安裝二進位檔
 
 若要安裝 container-registry 外掛程式：
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 若要安裝 container-service 外掛程式：
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`
 
 
 <!--

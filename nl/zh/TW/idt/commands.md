@@ -3,8 +3,8 @@
 copyright:
 
    years: 2017, 2018
-   
-lastupdated: "2018-05-02"
+
+lastupdated: "2018-05-23"
 
 ---
 
@@ -12,15 +12,19 @@ lastupdated: "2018-05-02"
 {:new_window: target="_blank"}
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}  
 
-# {{site.data.keyword.dev_cli_notm}} CLI (bx dev) 指令
+# {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 指令
 {: #idt-cli}
 
 版本：1.2.0
 發表日期：2018 年 3 月 8 日
 
-請使用下列 {{site.data.keyword.dev_cli_notm}} CLI (bx dev) 指令來建立專案、部署、除錯及測試它。
+到 2018 年五月為止，{{site.data.keyword.Bluemix_notm}} CLI 指令已從 `bluemix` 和 `bx` 變更為 `ibmcloud`。不過，您仍然可以使用 `bluemix` 和 `bx` CLI 指令，直到未來它們被淘汰為止。
+{: tip}
+
+請使用下列 {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 指令來建立專案、部署、除錯及測試它。
 
 - [build](#build)：在本端容器中建置專案
 - [code](#code)：從專案下載程式碼
@@ -55,7 +59,7 @@ lastupdated: "2018-05-02"
 在現行專案目錄中執行下列指令，以建置您的應用程式：  
 
 ```
-bx dev build [--debug]
+ibmcloud dev build [--debug]
 ```
 {: codeblock}
 
@@ -71,7 +75,7 @@ bx dev build [--debug]
 執行下列指令，以從指定的專案下載程式碼。
 
 ```
-bx dev code <projectName>
+ibmcloud dev code <projectName>
 ```
 {: codeblock}
 
@@ -79,14 +83,14 @@ bx dev code <projectName>
 ## console
 {: #console}
 
-使用 `console` 指令，以在 IBM Cloud 上將 Web 瀏覽器開啟到應用程式的 Web 主控台。您可以從專案資料夾內執行 `bx dev console` 指令，而 CLI 會嘗試在 IBM Cloud 上尋找專案 ID 與現行目錄相同的相符專案。如果系統找不到相符名稱，則會在 IBM Cloud 上開啟 Web 及「行動」儀表板，而非特定專案。
+使用 `console` 指令，以在 IBM Cloud 上將 Web 瀏覽器開啟到應用程式的 Web 主控台。您可以從專案資料夾內執行 `ibmcloud dev console` 指令，而 CLI 會嘗試在 IBM Cloud 上尋找專案 ID 與現行目錄相同的相符專案。如果系統找不到相符名稱，則會在 IBM Cloud 上開啟 Web 及「行動」儀表板，而非特定專案。
 
 您可以提供專案名稱，CLI 便會跳過根據資料夾/應用程式名稱進行比對。在此情況下，CLI 會在 Web 瀏覽器中開啟具名專案的主控台。  
 
 執行下列指令，以將 Web 瀏覽器開啟到應用程式的 Web 主控台。
 
 ```
-bx dev console [projectName]
+ibmcloud dev console [projectName]
 ```
 {: codeblock}
 
@@ -99,7 +103,7 @@ bx dev console [projectName]
 若要在現行目錄中建立專案，並讓服務與其相關聯，請執行下列指令：
 
 ```
-bx dev create
+ibmcloud dev create
 ```
 {: codeblock}
 
@@ -112,14 +116,14 @@ bx dev create
 首先，請編譯您的專案：
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 若要開始，請在現行專案目錄中執行下列指令，以對應用程式進行除錯：
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 {: codeblock}
 
@@ -137,19 +141,19 @@ bx dev debug
 {: #port-map-debug}
 
 * 除錯埠的埠對映。第一個值是要在主機 OS 中使用的埠，第二個值是容器中的埠 [host-port:container-port]。
-* 用法：`bx dev debug --container-port-map-debug 7777:7777`
+* 用法：`ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
 {: #build-cmd-debug}
 
 * 用來建置 DEBUG 程式碼的參數。
-* 用法：`bx dev debug --build-cmd-debug build.command.sh`
+* 用法：`ibmcloud dev debug --build-cmd-debug build.command.sh`
 
 #### `debug-cmd`
 {: #debug-cmd}
 
 * 用來指定指令以在 tools 容器中呼叫除錯的參數。如果 `build-cmd-debug` 以除錯模式啟動應用程式，請使用此參數。
-* 用法：`bx dev debug --debug-cmd /the/debug/command`
+* 用法：`ibmcloud dev debug --debug-cmd /the/debug/command`
 
 
 
@@ -161,7 +165,7 @@ bx dev debug
 執行下列指令，以從 {{site.data.keyword.Bluemix}} 中刪除專案：
 
 ```
-bx dev delete <projectName>
+ibmcloud dev delete <projectName>
 ```
 {: codeblock}
 
@@ -197,14 +201,14 @@ bx dev delete <projectName>
 在現行專案目錄中執行下列指令，以建置您的應用程式：  
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 在現行專案目錄中執行下列指令，以部署您的專案：
 
 ```
-bx dev deploy
+ibmcloud dev deploy
 ```
 {: codeblock}
 
@@ -218,25 +222,25 @@ bx dev deploy
 {: #chart-path}
 
 * 這是用於容器部署的參數，用來指定部署所用的 Helm 圖表位置。
-* 用法：`bx dev deploy --chart-path [/the/path]`
+* 用法：`ibmcloud dev deploy --chart-path [/the/path]`
 
 #### `deploy-target`
 {: #deploy-target}
 
 * 選擇性地用來指出要完成之部署類型的參數。預設部署類型是 buildpack。
-* 用法：`bx dev deploy -t|--target buildpack|container`
+* 用法：`ibmcloud dev deploy -t|--target buildpack|container`
 
 #### `deploy-image-target`
 {: #deploy-image-target}
 
 * 這是用於容器部署的參數，用來指定部署的目標映像名稱（例如標記至 Docker 登錄）。值不得包括版本（例如：image-name:{version}），因為版本會自動遞增並附加 `deploy`。
-* 用法：`bx dev deploy --deploy-image-target [image-name]`
+* 用法：`ibmcloud dev deploy --deploy-image-target [image-name]`
 
 #### `ibm-cluster`
 {: #ibm-cluster}
 
 * 這是對 {{site.data.keyword.Bluemix}} 進行容器部署時選擇性使用之參數，用來定義 Kubernetes 叢集名稱
-* 用法：`bx dev deploy --ibm-cluster [cluster-name]`
+* 用法：`ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 
 ## enable
@@ -247,7 +251,7 @@ bx dev deploy
 執行下列指令，以在現行目錄中啟用現有專案進行 {{site.data.keyword.Bluemix_notm}} 部署：
 
 ```
-bx dev enable
+ibmcloud dev enable
 ```
 {: codeblock}
 
@@ -270,7 +274,7 @@ bx dev enable
 * java-mp（解譯為 Java - Java MicroProfile）
 * java-spring（解譯為 Java - Spring Framework）
 
-如果使用 `bx dev enable` 指令所建立檔案的名稱與專案資料夾中的現有檔案衝突，則會儲存為 `.merge` 副檔名。  
+如果使用 `ibmcloud dev enable` 指令所建立檔案的名稱與專案資料夾中的現有檔案衝突，則會儲存為 `.merge` 副檔名。  
 
 ### enable 指令參數
 {: #enable-parameters}
@@ -281,13 +285,13 @@ bx dev enable
 {: #enable-language}
 
 * 用來指定要啟用之專案語言的參數。
-* 用法：`bx dev enable -l|--language [language]`
+* 用法：`ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
 * 用來強制重新啟用已啟用專案的參數。
-* 用法：`bx dev enable -f|--force`
+* 用法：`ibmcloud dev enable -f|--force`
 
 
 ## get-credentials
@@ -304,7 +308,7 @@ bx dev enable
 執行下列指令，以顯示一般說明資訊：
 
 ```
-bx dev help
+ibmcloud dev help
 ```
 {: codeblock}
 
@@ -317,7 +321,7 @@ bx dev help
 執行下列指令，以列出您的專案：
 
 ```
-bx dev list
+ibmcloud dev list
 ```
 {: codeblock}
 
@@ -329,7 +333,7 @@ bx dev list
 You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
 
 ```
-bx dev edit
+ibmcloud dev edit
 ```
 {: codeblock}
 -->
@@ -345,14 +349,14 @@ bx dev edit
 首先，請編譯您的專案：
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 在現行專案目錄中執行下列指令，以啟動您的應用程式：
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: codeblock}
 
@@ -368,19 +372,19 @@ bx dev run
 {: #container-name-run2}
 
 * run 容器的容器名稱。
-* 用法：`bx dev run --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev run --container-name-run [<projectName>]`
 
 #### `container-path-run`
 {: #container-path-run}
 
 * 執行時，容器中要共用的位置。
-* 用法：`bx dev run --container-path-run [/path/to/app]`
+* 用法：`ibmcloud dev run --container-path-run [/path/to/app]`
 
 #### `host-path-run`
 {: #host-path-run}
 
 * 執行時，主機系統上要在容器中共用的位置。
-* 用法：`bx dev run --host-path-run [/path/to/app/bin]`
+* 用法：`ibmcloud dev run --host-path-run [/path/to/app/bin]`
 
 #### `dockerfile-run`
 {: #dockerfile-run}
@@ -388,20 +392,20 @@ bx dev run
 * run 容器的 Dockerfile。
 * 如果您打算使用多個容器來執行，這應該是 Compose 檔。
 * 若要使用多個 Compose 檔，請用雙引號括住以逗點區隔的檔名清單。
-* 用法：`bx dev run --dockerfile-run [/path/to/Dockerfile]`
-* 用法：`bx dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
+* 用法：`ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
+* 用法：`ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
 #### `image-name-run`
 {: #image-name-run}
 
 * 要從 `dockerfile-run` 建立的映像檔。
-* 用法：`bx dev run --image-name-run [/path/to/image-name]`
+* 用法：`ibmcloud dev run --image-name-run [/path/to/image-name]`
 
 #### `run-cmd`
 {: #run-cmd}
 
 * 用來在 run 容器中執行程式碼的參數。如果您的映像檔會啟動應用程式，請使用此參數。
-* 用法：`bx dev run --run-cmd [/the/run/command]`
+* 用法：`ibmcloud dev run --run-cmd [/the/run/command]`
 
 
 ## shell
@@ -412,12 +416,12 @@ bx dev run
 只要執行下列指令：
 
 ```
-bx dev shell
+ibmcloud dev shell
 ```
 
 {{site.data.keyword.dev_cli_short}} CLI 會開啟互動式 Shell，以連接至應用程式的 Docker 容器。Shell 指令的預設目標容器是由 `cli-config.yml` 檔案中的 `container-shell-target` 值所定義，而有效值是 `run` 或 `tools`。如果未定義此值，或指定無效值，則依預設 `shell` 指令會以 `tools` 容器為目標。shell 指令會將容器開啟到對應 Dockerfile 中 `WORKDIR` 指示所指定的目錄。如果 Dockerfile 中未列出 `WORKDIR`，則會使用容器根目錄作為工作目錄。如需相關資訊，請參閱[此參照](https://docs.docker.com/engine/reference/builder/#workdir)。
 
-或者，您可以決定傳遞 `run` 或 `tools` 作為指令的引數，那麼便會啟動該容器，且會開啟 Shell 以連接該容器。同樣地，您可以使用 `container-name` 參數，傳遞您想要以 Shell 方式連接的容器名稱。不過，此旗標應該保留用於沒有容器在執行中的情況。`run` 和 `tools` 引數更有彈性，而且可讓您在目前執行中的容器之間切換。例如，如果 tools 容器在執行中，且您執行 `bx dev shell run`，則會停止 `tools` 容器，並啟動 `run` 容器，反之亦然。
+或者，您可以決定傳遞 `run` 或 `tools` 作為指令的引數，那麼便會啟動該容器，且會開啟 Shell 以連接該容器。同樣地，您可以使用 `container-name` 參數，傳遞您想要以 Shell 方式連接的容器名稱。不過，此旗標應該保留用於沒有容器在執行中的情況。`run` 和 `tools` 引數更有彈性，而且可讓您在目前執行中的容器之間切換。例如，如果 tools 容器在執行中，且您執行 `ibmcloud dev shell run`，則會停止 `tools` 容器，並啟動 `run` 容器，反之亦然。
 
 如果在您執行 `shell` 指令時，目標 `run` 或 `tools` 容器尚未執行，則會啟動目標容器。不過，Dockerfile 中的預設 `Cmd` 或 `Entrypoint` 會置換成直接啟動到 Shell，而不是啟動伺服器處理程序。這可讓您啟動 `run` 或 `tools` 容器，並使用您自己的任意或自訂指令手動啟動伺服器。
 
@@ -426,7 +430,7 @@ bx dev shell
 
 您在旗標後面傳遞給指令的任何其他引數都會剖析為要在開啟 Shell 時執行的指令。如果您提供要執行的指令，則容器內的 Shell 會在執行指令時結束並回到您的終端機。
 
-例如，您可以呼叫 `bx dev shell tools ls`，以在 tools 容器 Shell 內執行 Linux `ls` 指令。您也可以使用引號括住引數（例如 `bx dev shell "ls -la"`），來指定要傳入 Shell 指令執行的其他旗標。
+例如，您可以呼叫 `ibmcloud dev shell tools ls`，以在 tools 容器 Shell 內執行 Linux `ls` 指令。您也可以使用引號括住引數（例如 `ibmcloud dev shell "ls -la"`），來指定要傳入 Shell 指令執行的其他旗標。
 
 ### shell 指令參數
 {: #shell-parameters}
@@ -435,13 +439,13 @@ bx dev shell
 {: #container-name}
 
 * 您想要以 Shell 方式連接的容器名稱。
-* 用法：`bx dev shell --container-name [<container-name>]`
+* 用法：`ibmcloud dev shell --container-name [<container-name>]`
 
 #### `container-shell`
 {: #container-shell}
 
 * 指定要在容器內執行的 Shell（預設值是 /bin/sh）
-* 用法：`bx dev shell --container-shell [path/to/shell]`
+* 用法：`ibmcloud dev shell --container-shell [path/to/shell]`
 
 
 ## status
@@ -452,7 +456,7 @@ bx dev shell
 在現行專案目錄中執行下列指令，以檢查容器狀態：
 
 ```
-bx dev status
+ibmcloud dev status
 ```
 {: codeblock}
 
@@ -468,7 +472,7 @@ bx dev status
 若要停止您 `cli-config.yml` 檔案定義的 tools 和 run 容器，請執行：
 
 ```
-bx dev stop
+ibmcloud dev stop
 ```
 {: codeblock}
 
@@ -483,13 +487,13 @@ bx dev stop
 {: #container-name-run}
 
 * run 容器的容器名稱。
-* 用法：`bx dev stop --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev stop --container-name-run [<projectName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * tools 容器的容器名稱。
-* 用法：`bx dev stop --container-name-tools [<projectName>]`
+* 用法：`ibmcloud dev stop --container-name-tools [<projectName>]`
 
 
 
@@ -501,14 +505,14 @@ bx dev stop
 首先，請編譯您的專案：
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 執行下列指令，以測試您的應用程式：
 
 ```
-bx dev test
+ibmcloud dev test
 ```
 {: codeblock}
 
@@ -522,7 +526,7 @@ bx dev test
 {: #test-cmd}
 
 * 用來指定指令以在 tools 容器中測試程式碼的參數。
-* 用法：`bx dev test --test-cmd /the/test/command`
+* 用法：`ibmcloud dev test --test-cmd /the/test/command`
 
 
 ## view
@@ -537,7 +541,7 @@ bx dev test
 執行下列指令，以檢視您的應用程式：
 
 ```
-bx dev view
+ibmcloud dev view
 ```
 {: codeblock}
 
@@ -549,28 +553,28 @@ bx dev view
 #### `deploy-target`
 
 * 選擇性地用來指出要略過提示之部署類型的參數。
-* 用法：`bx dev view -t|--target buildpack|container`
+* 用法：`ibmcloud dev view -t|--target buildpack|container`
 
 
 #### `no-open`
 {: #no-open}
 
 * 用來指定不要開啟瀏覽器的參數。
-* 用法：`bx dev view --no-open`
+* 用法：`ibmcloud dev view --no-open`
 
 
 #### `web-app-root`
 {: #web-app-root}
 
 * 要附加至 Kubernetes 應用程式 URL 的專案根目錄
-* 用法：`bx dev view --web-app-root [root]`
+* 用法：`ibmcloud dev view --web-app-root [root]`
 
 
 #### `ibm-cluster`
 {: #ibm-cluster2}
 
 * 以容器部署為目標時，選擇性地用來定義 Kubernetes 叢集名稱的參數
-* 用法：`bx dev view --ibm-cluster [cluster-name]`
+* 用法：`ibmcloud dev view --ibm-cluster [cluster-name]`
 
 
 ## 複合指令
@@ -579,10 +583,10 @@ bx dev view
 您可以在一個指令行陳述式中執行多個指令，方法是使用 `/` 定界字元來區隔 IDT 指令。在您指定複合指令之後，可以指定其他指令行旗標。下列指令是如何使用複合指令的範例：
 
 ```
-bx dev build/run
-bx dev build/deploy --trace -t buildpack
-bx dev build/debug --debug --trace
-bx dev build/deploy/view -t container --trace
+ibmcloud dev build/run
+ibmcloud dev build/deploy --trace -t buildpack
+ibmcloud dev build/debug --debug --trace
+ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
@@ -590,7 +594,7 @@ bx dev build/deploy/view -t container --trace
 
 這些指令可以與此特性搭配使用：`build、debug、deploy、get-credentials、run、stop、test、view`
 
-如果有一個指令因任何原因而失敗，則不會執行後續指令。如果 `debug` 或 `run` 後面有任何指令，則只有在透過從現行終端機視窗結束處理程序以外的方式終止 `debug` 或 `run` 時，才會繼續執行。`CTRL+C` 將會結束處理程序，而不會執行後續指令。例如，您可以從另一個終端機視窗執行 `bx dev stop`，以停止執行中容器並繼續執行到下一個指令。
+如果有一個指令因任何原因而失敗，則不會執行後續指令。如果 `debug` 或 `run` 後面有任何指令，則只有在透過從現行終端機視窗結束處理程序以外的方式終止 `debug` 或 `run` 時，才會繼續執行。`CTRL+C` 將會結束處理程序，而不會執行後續指令。例如，您可以從另一個終端機視窗執行 `ibmcloud dev stop`，以停止執行中容器並繼續執行到下一個指令。
 
 
 ## build、debug、run 及 test 的參數
@@ -604,49 +608,49 @@ bx dev build/deploy/view -t container --trace
 {: #config-file}
 
 * 指定要用於指令的 cli-config.yml 檔案。
-* 用法：`bx dev<build|debug|run|status|stop|test> --config-file cli-config.yml`
+* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
 {: #container-name-run1}
 
 * run 容器的容器名稱。
-* 用法：`bx dev<run|status|stop> --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * tools 容器的容器名稱。
-* 用法：`bx dev<build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}
 
 * 主機上要共用以進行建置、除錯、測試的位置。
-* 用法：`bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
+* 用法：`ibmcloud dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 #### `container-path-tools`
 {: #container-path-tools}
 
 * 容器中要共用以進行建置、除錯、測試的位置。
-* 用法：`bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
+* 用法：`ibmcloud dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 #### `container-port-map`
 {: #container-port-map}
 
 * 容器的埠對映。第一個值是要在主機 OS 中使用的埠，第二個值是容器中的埠 [host-port:container-port]。
-* 用法：`bx dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
+* 用法：`ibmcloud dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
 
 #### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * tools 容器的 Dockerfile。
-* 用法：`bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
+* 用法：`ibmcloud dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 #### `image-name-tools`
 {: #image-name-tools}
 
 * 要從 `dockerfile-tools` 建立的映像檔。
-* 用法：`bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
+* 用法：`ibmcloud dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 #### `container-mounts-run`
 {: #container-mounts-run}
@@ -654,24 +658,23 @@ bx dev build/deploy/view -t container --trace
 * 使用此選項來定義主機系統與 run 容器之間的裝載。
 * 在此清單的開頭插入 `host-path-run` 及 `container-path-run` 值。
 * 作為最佳作法並防止非預期的結果，您應該使用相同的裝載設定來建置並執行。
-* 用法：`bx dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* 用法：`ibmcloud dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `container-mounts-tools`
 {: #container-mounts-tools}
 
 * 使用此選項來定義主機系統與 tools 容器之間的裝載。
 * `host-path-tools` 及 `container-path-tools` 值會插入至此清單的開頭。* 作為最佳作法並防止非預期的結果，您應該使用相同的裝載設定來建置並除錯。
-* 用法：`bx dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* 用法：`ibmcloud dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `build-cmd-run`
 {: #build-cmd-run}
 
 * 用來指定指令以建置所有用法的程式碼（但 DEBUG 除外）的參數。
-* 用法：`bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
+* 用法：`ibmcloud dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 #### `trace`
 {: #trace}
 
 * 使用此參數來提供詳細輸出。
-* 用法：`bx dev <build|debug|run|test> --trace`
-
+* 用法：`ibmcloud dev <build|debug|run|test> --trace`

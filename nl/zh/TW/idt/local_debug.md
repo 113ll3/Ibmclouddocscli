@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -25,7 +25,7 @@ lastupdated: "2018-04-17"
 1. 從應用程式專案的根目錄中，執行下列指令：
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. 將除錯器連接至您的應用程式：
@@ -52,7 +52,7 @@ bx dev debug
 1. 從您應用程式專案的根目錄，執行下列指令：
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. 將除錯器連接至您的應用程式：

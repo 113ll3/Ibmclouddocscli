@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -32,19 +32,19 @@ VPN 外掛程式適用於 Windows、MAC 及 Linux 作業系統。請確定您是
 **附註：***必要條件* 列出使用指令之前需要哪些動作。必要條件可能包括下列一個以上的動作：
 <dl>
 <dt>**端點**</dt>
-<dd>必須透過 `bluemix api` 設定 API 端點後，才能使用這個指令。</dd>
+<dd>必須透過 `ibmcloud api` 設定 API 端點後，才能使用這個指令。</dd>
 <dt>**登入**</dt>
-<dd>需要使用 `bluemix login` 指令進行登入後，才能使用這個指令。</dd>
+<dd>需要使用 `ibmcloud login` 指令進行登入後，才能使用這個指令。</dd>
 <dt>**目標**</dt>
-<dd>必須使用 `bluemix target` 指令來設定組織及空間後，才能使用這個指令。</dd>
+<dd>必須使用 `ibmcloud target` 指令來設定組織及空間後，才能使用這個指令。</dd>
 </dl>
 
 
-## bluemix vpn connection-create
+## ibmcloud vpn connection-create
 建立 VPN 連線。
 
 ```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **必要條件**：端點、登入、目標
@@ -86,15 +86,15 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 建立名稱為 `my_connection` 的新 VPN 連線：
 
 ```
-bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
+ibmcloud vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
 
 
-## bluemix vpn ike-create
+## ibmcloud vpn ike-create
 建立 IKE 原則。
 
 ```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **必要條件**：端點、登入、目標
@@ -118,15 +118,15 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP]
 建立名稱為 `my_ike` 的新 IKE 原則：
 
 ```
-bluemix vpn ike-create my_ike -g my_gateway
+ibmcloud vpn ike-create my_ike -g my_gateway
 ```
 
 
-## bluemix vpn ipsec-create
+## ibmcloud vpn ipsec-create
 建立 IPSec 原則。
 
 ```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **必要條件**：端點、登入、目標
@@ -150,15 +150,15 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROU
 建立名稱為 `my_policy` 的 IPSec 原則：
 
 ```
-bluemix vpn ipsec-create my_policy -g my_gateway
+ibmcloud vpn ipsec-create my_policy -g my_gateway
 ```
 
 
-## bluemix vpn gateway-create
+## ibmcloud vpn gateway-create
 建立 VPN 閘道。
 
 ```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+ibmcloud vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **必要條件**：端點、登入、目標
@@ -178,55 +178,55 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subne
 建立名稱為 `my_gateway` 且類型為 `allContainerGroups` 的閘道：
 
 ```
-bluemix vpn gateway-create my_gateway -t allContainerGroups
+ibmcloud vpn gateway-create my_gateway -t allContainerGroups
 ```
 
 
-## bluemix vpn connections
+## ibmcloud vpn connections
 顯示所有現行連線的相關資訊。
 
 ```
-bluemix vpn connections
+ibmcloud vpn connections
 ```
 
 **必要條件**：端點、登入、目標
 
 
-## bluemix vpn ikes
+## ibmcloud vpn ikes
 顯示現行 IKE 連線的相關資訊。
 
 ```
-bluemix vpn ikes
+ibmcloud vpn ikes
 ```
 
 **必要條件**：端點、登入、目標
 
 
-## bluemix vpn ipsecs
+## ibmcloud vpn ipsecs
 顯示現行 IPSec 連線的相關資訊。
 
 ```
-bluemix vpn ipsecs
+ibmcloud vpn ipsecs
 ```
 
 **必要條件**：端點、登入、目標
 
 
-## bluemix vpn gateways
+## ibmcloud vpn gateways
 顯示現行閘道的相關資訊。
 
 ```
-bluemix vpn gateways
+ibmcloud vpn gateways
 ```
 
 **必要條件**：端點、登入、目標
 
 
-## bluemix vpn connection
+## ibmcloud vpn connection
 顯示特定連線的所有資訊。
 
 ```
-bluemix vpn connection CONNECTION_NAME
+ibmcloud vpn connection CONNECTION_NAME
 ```
 
 **必要條件**：端點、登入、目標
@@ -236,11 +236,11 @@ bluemix vpn connection CONNECTION_NAME
 *CONNECTION_NAME*（必要）：要顯示的連線名稱。
 
 
-## bluemix vpn ike
+## ibmcloud vpn ike
 顯示 IKE 連線的相關資訊。
 
 ```
-bluemix vpn ike POLICY_NAME
+ibmcloud vpn ike POLICY_NAME
 ```
 
 **必要條件**：端點、登入、目標
@@ -250,11 +250,11 @@ bluemix vpn ike POLICY_NAME
 *POLICY_NAME*（必要）：要顯示的 IKE 原則名稱。
 
 
-## bluemix vpn ipsec
+## ibmcloud vpn ipsec
 顯示 IPSec 連線的相關資訊。
 
 ```
-bluemix vpn ipsec POLICY_NAME
+ibmcloud vpn ipsec POLICY_NAME
 ```
 
 **必要條件**：端點、登入、目標
@@ -264,11 +264,11 @@ bluemix vpn ipsec POLICY_NAME
 *POLICY_NAME*（必要）：要顯示的 IPSec 原則名稱。
 
 
-## bluemix vpn gateway
+## ibmcloud vpn gateway
 顯示閘道的連線資訊。
 
 ```
-bluemix vpn gateway GATEWAY_NAME
+ibmcloud vpn gateway GATEWAY_NAME
 ```
 
 **必要條件**：端點、登入、目標
@@ -278,11 +278,11 @@ bluemix vpn gateway GATEWAY_NAME
 *GATEWAY_NAME*（必要）：要顯示的閘道名稱。
 
 
-## bluemix vpn connection-delete
+## ibmcloud vpn connection-delete
 刪除現有連線。
 
 ```
-bluemix vpn connection-delete CONNECTION_NAME
+ibmcloud vpn connection-delete CONNECTION_NAME
 ```
 
 **必要條件**：端點、登入、目標
@@ -292,11 +292,11 @@ bluemix vpn connection-delete CONNECTION_NAME
 *CONNECTION_NAME*（必要）：要刪除的連線名稱。
 
 
-## bluemix vpn ike-delete
+## ibmcloud vpn ike-delete
 刪除現有 IKE 原則。
 
 ```
-bluemix vpn ike-delete POLICY_NAME
+ibmcloud vpn ike-delete POLICY_NAME
 ```
 
 **必要條件**：端點、登入、目標
@@ -306,11 +306,11 @@ bluemix vpn ike-delete POLICY_NAME
 *POLICY_NAME*（必要）：要刪除的 IKE 原則名稱。
 
 
-## bluemix vpn ipsec-delete
+## ibmcloud vpn ipsec-delete
 刪除現有 IPSec 原則。
 
 ```
-bluemix vpn ipsec-delete POLICY_NAME
+ibmcloud vpn ipsec-delete POLICY_NAME
 ```
 
 **必要條件**：端點、登入、目標
@@ -320,11 +320,11 @@ bluemix vpn ipsec-delete POLICY_NAME
 *POLICY_NAME*（必要）：要刪除的 IPSec 原則名稱。
 
 
-## bluemix vpn gateway-delete
+## ibmcloud vpn gateway-delete
 刪除現有閘道。
 
 ```
-bluemix vpn gateway-delete GATEWAY_NAME
+ibmcloud vpn gateway-delete GATEWAY_NAME
 ```
 
 **必要條件**：端點、登入、目標
@@ -334,11 +334,11 @@ bluemix vpn gateway-delete GATEWAY_NAME
 *GATEWAY_NAME*（必要）：要刪除的閘道名稱。
 
 
-## bluemix vpn connection-update
+## ibmcloud vpn connection-update
 更新現有 VPN 連線。
 
 ```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **必要條件**：端點、登入、目標
@@ -376,11 +376,11 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KE
 -ipsec *NAME*（選用）：IPSec 原則的名稱。
 
 
-## bluemix vpn ike-update
+## ibmcloud vpn ike-update
 更新 IKE 原則。
 
 ```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **必要條件**：端點、登入、目標
@@ -400,11 +400,11 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROU
 -lv *LIFETIME_VALUE*（選用）：IKE 安全關聯的生命期限值。範圍：60 - 86400 秒。
 
 
-## bluemix vpn ipsec-update
+## ibmcloud vpn ipsec-update
 更新 IPSec 原則。
 
 ```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **必要條件**：端點、登入、目標
@@ -424,11 +424,11 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GR
 -lv *LIFETIME_VALUE*（選用）：安全關聯的生命期限值。範圍：60 - 86400 秒。
 
 
-## bluemix vpn gateway-update
+## ibmcloud vpn gateway-update
 更新現有 VPN 閘道。
 
 ```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+ibmcloud vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **必要條件**：端點、登入、目標

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-14"
 {: #overview}
 
 {{site.data.keyword.dev_cli_notm}} 是一種指令行方法，可針對想要使用指令行開發端對端 Web、行動及微服務應用程式的開發人員建立、開發及部署應用程式。執行下列其中一個 Script，以快速開始使用建議的工具集。
-{: shortdesc} 
+{: shortdesc}
 
 ## {{site.data.keyword.dev_cli_notm}} 的必要條件
 {: #prereq}
@@ -44,12 +44,22 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10：**
 
-* 附註：請按一下滑鼠右鍵並選取「以系統管理員身分執行」，以開啟 Windows PowerShell。
+* 附註：請在 PowerShell 圖示按一下滑鼠右鍵並選取「以系統管理員身分執行」，以開啟 Windows PowerShell。
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
+
+## 驗證安裝
+若要驗證安裝，請執行 `help` 指令：
+
+```
+ibmcloud dev help
+```
+{: codeblock}
+
+如果安裝成功，輸出應該列出用法指令、現行版本，及支援的指令。
 
 
 ## 可進一步探索 {{site.data.keyword.dev_cli_notm}} 的其他鏈結
@@ -60,3 +70,5 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 - [CLI 外掛程式](/docs/cli/reference/bluemix_cli/extend_cli.html)
 - [VSCode IDE Extension](/docs/cli/idt/vscode.html)
 - [手動安裝 IBM Cloud CLI](/docs/cli/reference/bluemix_cli/get_started.html)
+- [在 GitHub 上報告問題](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [IBM Cloud Tech 的 Slack - #developer-tools 頻道](https://ibm-cloud-tech.slack.com) - 在[這裡](https://slack-invite-ibm-cloud-tech.mybluemix.net/)要求團隊存取

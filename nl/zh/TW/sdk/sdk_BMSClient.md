@@ -63,7 +63,7 @@ lastupdated: "2018-03-16"
   1. 將下行新增至 Cartfile：
 
       ```
-      github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
+            github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
       ```
       {: codeblock}
 
