@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -30,8 +30,8 @@ Existen varias maneras en las que crear una app de nube.
 - [Consola web de App Services](https://console.bluemix.net/developer/appservice) para microservicios y apps web genéricas
 - [Watson Dashboard](https://console.bluemix.net/dashboard/watson) para crear apps iniciadoras habilitando una funcionalidad basada en Watson.
     - Hay disponibles paneles de control basados en otras tecnologías y sectores en el icono de menú en la página de inicio de {{site.data.keyword.Bluemix_notm}}. Todos ellos siguen un enfoque similar a los kits de iniciación para crear nuevas apps.
-- El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`bx dev create`](./commands.html#create) para crear una nueva app.
-- El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`bx dev enable`](./commands.html#enable) para habilitar rápidamente la nube en una app existente del lado del servidor.
+- El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`ibmcloud dev create`](./commands.html#create) para crear una nueva app.
+- El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`ibmcloud dev enable`](./commands.html#enable) para habilitar rápidamente la nube en una app existente del lado del servidor.
 
 Para cualquiera de los métodos de creación anteriores, el flujo es similar. Puede elegir el tipo de proyecto, el lenguaje de implementación y el patrón de app a utilizar. También puede optar por añadir servicios de valor añadido a la app como, por ejemplo, autenticación o persistencia. Por último, puede elegir habilitar la funcionalidad de DevOps para la app. Esta funcionalidad proporciona una cadena de herramientas completas de control de origen y comunicaciones en equipo y un conducto que se desencadenan en cada confirmación de código para validar, compilar y desplegar su app en IBM Cloud.
 
@@ -76,12 +76,12 @@ Aquí podrá encontrar más detalles sobre las estructuras de los proyectos:
 {: #build}
 
 
-Una vez que el proyecto se ha creado, es el usuario quien lo debe transformar de modo que tenga una utilidad. El flujo general consiste en editar el código fuente, ejecutar un mandato [`bx dev build`](commands.html#build) para compilar la app dentro de un contenedor local específico para su configuración y lenguaje de la app. Dependiendo del lenguaje y generador utilizados por la app, puede haber uno o varios contenedores de forma predeterminada para dar soporte a la compilación y la ejecución local.  Normalmente, habrá un contenedor de herramientas ("tools") para las compilaciones y la depuración local.  Este contenedor normalmente tendrá más herramientas y funcionalidades para ayudarle en el desarrollo.  También habrá un contenedor de ejecución ("run") que imitará el entorno de tiempo de ejecución real de la app una vez desplegada en la nube, ya sea en Cloud Foundry o en un entorno de contenedores basados den Kubernetes de IBM.
+Una vez que el proyecto se ha creado, es el usuario quien lo debe transformar de modo que tenga una utilidad. El flujo general consiste en editar el código fuente, ejecutar un mandato [`ibmcloud dev build`](commands.html#build) para compilar la app dentro de un contenedor local específico para su configuración y lenguaje de la app. Dependiendo del lenguaje y generador utilizados por la app, puede haber uno o varios contenedores de forma predeterminada para dar soporte a la compilación y la ejecución local.  Normalmente, habrá un contenedor de herramientas ("tools") para las compilaciones y la depuración local.  Este contenedor normalmente tendrá más herramientas y funcionalidades para ayudarle en el desarrollo.  También habrá un contenedor de ejecución ("run") que imitará el entorno de tiempo de ejecución real de la app una vez desplegada en la nube, ya sea en Cloud Foundry o en un entorno de contenedores basados den Kubernetes de IBM.
 
 
 Tiene la libertad de utilizar el editor o IDE que prefiera para codificar su aplicación. Ofrecemos una extensión para el editor Microsoft VisualStudio Code (VSCode) que habilita el acceso a todos los mandatos de IDE directamente desde el editor.
 
-Una vez compilado el proyecto, el siguiente paso será ejecutar la app con [`bx dev run`](commands.html#run) o [`bx dev debug`](commands.html#debug), dependiendo de la configuración del generador de la app.  De esta forma ejecutará la app en el contenedor adecuado.  Algunos patrones de apps dan soporte a varios contenedores externos para sus apps, proporcionando persistencia u otras funcionalidades.  Estos se iniciarán y configurarán automáticamente durante la ejecución o depuración.  También hay un mandato [`bx dev test`](commands.html#test) que ejecutará casos de prueba asociados a la app.
+Una vez compilado el proyecto, el siguiente paso será ejecutar la app con [`ibmcloud dev run`](commands.html#run) o [`ibmcloud dev debug`](commands.html#debug), dependiendo de la configuración del generador de la app.  De esta forma ejecutará la app en el contenedor adecuado.  Algunos patrones de apps dan soporte a varios contenedores externos para sus apps, proporcionando persistencia u otras funcionalidades.  Estos se iniciarán y configurarán automáticamente durante la ejecución o depuración.  También hay un mandato [`ibmcloud dev test`](commands.html#test) que ejecutará casos de prueba asociados a la app.
 
 
 ### Cómo se utilizan los contenedores locales
@@ -116,7 +116,7 @@ Los siguientes mandatos de CLI ayudan a trabajar con el proyecto durante los cic
 ## Desplegar
 {: #deploy}
 
-Bajo un entorno nativo adecuado en la nube, podría querer utilizar un conducto DevOps completamente funcional para gestionar todos los despliegues, así como otras muchas funcionalidades.  Durante la creación del flujo, puede configurar la app para utilizar DevOps en IBM Cloud.  Si no está preparado para utilizar la funcionalidad de DevOps incorporada, puede desplegar manualmente la app con [`bx dev deploy`](./commands.html#deploy) o utilizar el mandato de despliegue dentro de su propio conducto de DevOps.  
+Bajo un entorno nativo adecuado en la nube, podría querer utilizar un conducto DevOps completamente funcional para gestionar todos los despliegues, así como otras muchas funcionalidades.  Durante la creación del flujo, puede configurar la app para utilizar DevOps en IBM Cloud.  Si no está preparado para utilizar la funcionalidad de DevOps incorporada, puede desplegar manualmente la app con [`ibmcloud dev deploy`](./commands.html#deploy) o utilizar el mandato de despliegue dentro de su propio conducto de DevOps.  
 
 
 

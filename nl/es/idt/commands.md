@@ -3,8 +3,8 @@
 copyright:
 
    years: 2017, 2018
-   
-lastupdated: "2018-05-02"
+
+lastupdated: "2018-05-23"
 
 ---
 
@@ -12,15 +12,19 @@ lastupdated: "2018-05-02"
 {:new_window: target="_blank"}
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}  
 
-# Mandatos de CLI (bx dev) de {{site.data.keyword.dev_cli_notm}}
+# Mandatos de CLI (ibmcloud dev) de {{site.data.keyword.dev_cli_notm}}
 {: #idt-cli}
 
 Versión: 1.2.0
 Release: 8 de marzo de 2018
 
-Los siguientes mandatos de CLI (bx dev) {{site.data.keyword.dev_cli_notm}} sirven para crear un proyecto, desplegarlo, depurarlo y probarlo.
+A partir de mayo de 2018, los mandatos de la CLI de {{site.data.keyword.Bluemix_notm}} han cambiado de `bluemix` y `bx` a `ibmcloud`. Sin embargo, todavía puede utilizar los mandatos de CLI `bluemix` y `bx` hasta que se dejen de utilizar en una fecha posterior.
+{: tip}
+
+Los siguientes mandatos de CLI (ibmcloud dev) {{site.data.keyword.dev_cli_notm}} sirven para crear un proyecto, desplegarlo, depurarlo y probarlo.
 
 - [build](#build): Compila el proyecto en un contenedor local
 - [code](#code): Descarga el código de un proyecto
@@ -55,7 +59,7 @@ Para compilar con varios contenedores, su proyecto debe contener un archivo [Com
 Ejecute el siguiente mandato en el directorio del proyecto actual para crear la aplicación:  
 
 ```
-bx dev build [--debug]
+ibmcloud dev build [--debug]
 ```
 {: codeblock}
 
@@ -71,7 +75,7 @@ El mandato `code` sirve para descargar un proyecto creado con anterioridad con l
 Ejecute el siguiente mandato para descargar el código de un proyecto específico.
 
 ```
-bx dev code <projectName>
+ibmcloud dev code <projectName>
 ```
 {: codeblock}
 
@@ -79,14 +83,14 @@ bx dev code <projectName>
 ## console
 {: #console}
 
-El mandato `console` abre en un navegador web la consola web de su aplicación en IBM Cloud.  Ejecute el mandato `bx dev console` desde la carpeta de su proyecto. El mandato de CLI intenta encontrar un proyecto coincidente en IBM Cloud con el mismo ID de proyecto que el del directorio actual. Si el sistema no puede encontrar un nombre coincidente, en su lugar, abre el panel de control Web y móvil en IBM Cloud en lugar del proyecto específico.
+El mandato `console` abre en un navegador web la consola web de su aplicación en IBM Cloud.  Ejecute el mandato `ibmcloud dev console` desde la carpeta de su proyecto. El mandato de CLI intenta encontrar un proyecto coincidente en IBM Cloud con el mismo ID de proyecto que el del directorio actual. Si el sistema no puede encontrar un nombre coincidente, en su lugar, abre el panel de control Web y móvil en IBM Cloud en lugar del proyecto específico.
 
 Puede proporcionar un nombre de proyecto y, de esta forma, la CLI omitirá la coincidencia basada en el nombre de carpeta/aplicación. En este caso, la CLI abrirá la consola del proyecto con el nombre que ha indicado en un navegador web.  
 
 Ejecute el siguiente mandato para abrir un navegador web para la consola web de su aplicación.
 
 ```
-bx dev console [projectName]
+ibmcloud dev console [projectName]
 ```
 {: codeblock}
 
@@ -99,7 +103,7 @@ Crea un proyecto, solicitando toda la información, incluido el tipo de recurso,
 Para crear un proyecto en el directorio actual y asociar servicios a dicho proyecto, ejecute el mandato siguiente:
 
 ```
-bx dev create
+ibmcloud dev create
 ```
 {: codeblock}
 
@@ -112,14 +116,14 @@ Puede depurar la aplicación a través del mandato `debug`. Primero es necesario
 En primer lugar, compile su proyecto:
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 Para empezar, ejecute el siguiente mandato en el directorio del proyecto actual para depurar la aplicación:
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 {: codeblock}
 
@@ -137,19 +141,19 @@ Los siguientes parámetros son exclusivos del mandato `debug` y ayudan a depurar
 {: #port-map-debug}
 
 * Correlaciones de puertos para el puerto de depuración. El primer valor es el puerto que se utilizará en el sistema operativo del host, el segundo es el puerto del contenedor [host-port:container-port].
-* Uso: `bx dev debug --container-port-map-debug 7777:7777`
+* Uso: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
 {: #build-cmd-debug}
 
 * Parámetro utilizado para generar código para DEBUG.
-* Uso: `bx dev debug --build-cmd-debug build.command.sh`
+* Uso: `ibmcloud dev debug --build-cmd-debug build.command.sh`
 
 #### `debug-cmd`
 {: #debug-cmd}
 
 * Parámetro que se utiliza para especificar un mandato para invocar debug en el contenedor de herramientas. Utilice este parámetro si `build-cmd-debug` inicia la aplicación en depuración.
-* Uso: `bx dev debug --debug-cmd /the/debug/command`
+* Uso: `ibmcloud dev debug --debug-cmd /the/debug/command`
 
 
 
@@ -161,7 +165,7 @@ Utilice el mandato `delete` para eliminar proyectos de su espacio {{site.data.ke
 Ejecute el siguiente mandato para suprimir su proyecto de {{site.data.keyword.Bluemix}}:
 
 ```
-bx dev delete <projectName>
+ibmcloud dev delete <projectName>
 ```
 {: codeblock}
 
@@ -197,14 +201,14 @@ Si no los define en cli-config.yml, debe desplegar con el parámetro `-t contain
 Ejecute el siguiente mandato en el directorio del proyecto actual para crear la aplicación:  
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para desplegar su proyecto:
 
 ```
-bx dev deploy
+ibmcloud dev deploy
 ```
 {: codeblock}
 
@@ -219,25 +223,25 @@ actualizando directamente el archivo `cli-config.yml` del proyecto. Hay [paráme
 {: #chart-path}
 
 * Este parámetro se utiliza en el despliegue del contenedor para especificar la ubicación del diagrama Helm utilizado para el despliegue.
-* Uso `bx dev deploy --chart-path [/the/path]`
+* Uso `ibmcloud dev deploy --chart-path [/the/path]`
 
 #### `deploy-target`
 {: #deploy-target}
 
 * El parámetro opcional utilizado para indicar el tipo de despliegue a completar.  El tipo de despliegue predeterminado es buildpack.
-* Uso `bx dev deploy -t|--target buildpack|container`
+* Uso `ibmcloud dev deploy -t|--target buildpack|container`
 
 #### `deploy-image-target`
 {: #deploy-image-target}
 
 * Parámetro utilizado con un despliegue de contenedor como el nombre de la imagen de destino para el despliegue (por ejemplo para etiquetar un registro Docker).  El valor no debe incluir una versión, por ejemplo: image-name:{version} porque `deploy` la incrementa y añade de forma automática.
-* Uso `bx dev deploy --deploy-image-target [image-name]`
+* Uso `ibmcloud dev deploy --deploy-image-target [image-name]`
 
 #### `ibm-cluster`
 {: #ibm-cluster}
 
 * Parámetro opcional que define el nombre del clúster Kubernetes para una despliegue de contenedor en {{site.data.keyword.Bluemix}}.
-* Uso `bx dev deploy --ibm-cluster [cluster-name]`
+* Uso `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 
 ## enable
@@ -248,7 +252,7 @@ Habilita un proyecto existente para el despliegue en {{site.data.keyword.Bluemix
 Ejecute el siguiente mandato para habilitar un proyecto existente en el directorio actual para el despliegue en {{site.data.keyword.Bluemix_notm}}:
 
 ```
-bx dev enable
+ibmcloud dev enable
 ```
 {: codeblock}
 
@@ -271,7 +275,7 @@ Las opciones de lenguaje incluyen:
 * java-mp (interpretado como Java - Java MicroProfile)
 * java-spring (interpretado como Java - Spring Framework)
 
-Los archivos creados mediante el mandato `bx dev enable` con conflictos de denominación con archivos existentes en la carpeta del proyecto se guardan con una extensión de archivo `.merge`.  
+Los archivos creados mediante el mandato `ibmcloud dev enable` con conflictos de denominación con archivos existentes en la carpeta del proyecto se guardan con una extensión de archivo `.merge`.  
 
 ### Parámetros del mandato enable
 {: #enable-parameters}
@@ -282,13 +286,13 @@ Los siguientes parámetros se pueden utilizar con el mandato `enable` o actualiz
 {: #enable-language}
 
 * Este parámetro sirve para especificar el lenguaje del proyecto que se tiene que habilitar.
-* Uso `bx dev enable -l|--language [language]`
+* Uso `ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
 * Parámetro utilizado para volver a forzar la habilitación de un proyecto que ya ha sido habilitado.
-* Uso `bx dev enable -f|--force`
+* Uso `ibmcloud dev enable -f|--force`
 
 
 ## get-credentials
@@ -305,7 +309,7 @@ De forma predeterminada, si no se pasa ninguna acción ni argumento, o si se pro
 Ejecute el siguiente mandato para visualizar la información de ayuda general:
 
 ```
-bx dev help
+ibmcloud dev help
 ```
 {: codeblock}
 
@@ -318,7 +322,7 @@ Sirve para listar todos los proyectos de {{site.data.keyword.Bluemix_notm}} en u
 Ejecute el siguiente mandato para listar sus proyectos:
 
 ```
-bx dev list
+ibmcloud dev list
 ```
 {: codeblock}
 
@@ -330,7 +334,7 @@ bx dev list
 You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
 
 ```
-bx dev edit
+ibmcloud dev edit
 ```
 {: codeblock}
 -->
@@ -346,14 +350,14 @@ Para poder ejecutar varios contenedores, su proyecto debería contener un archiv
 En primer lugar, compile su proyecto:
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para iniciar la aplicación:
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: codeblock}
 
@@ -370,19 +374,19 @@ Hay [parámetros adicionales](#command-parameters) compartidos con otros mandato
 {: #container-name-run2}
 
 * Nombre del contenedor de ejecución.
-* Uso: `bx dev run --container-name-run [<projectName>]`
+* Uso: `ibmcloud dev run --container-name-run [<projectName>]`
 
 #### `container-path-run`
 {: #container-path-run}
 
 * Ubicación en el contenedor para compartir en ejecución.
-* Uso: `bx dev run --container-path-run [/path/to/app]`
+* Uso: `ibmcloud dev run --container-path-run [/path/to/app]`
 
 #### `host-path-run`
 {: #host-path-run}
 
 * Ubicación en el sistema host para compartir en el contenedor en ejecución.
-* Uso: `bx dev run --host-path-run [/path/to/app/bin]`
+* Uso: `ibmcloud dev run --host-path-run [/path/to/app/bin]`
 
 #### `dockerfile-run`
 {: #dockerfile-run}
@@ -390,20 +394,20 @@ Hay [parámetros adicionales](#command-parameters) compartidos con otros mandato
 * Dockerfile para el contenedor de ejecución.
 * Si tiene prevista la ejecución con varios contenedores, este archivo debería ser un archivo Compose.
 * Para utilizar varios archivos Compose, delimite con comillas dobles la lista de nombres.
-* Uso: `bx dev run --dockerfile-run [/path/to/Dockerfile]`
-* Uso: `bx dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
+* Uso: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
+* Uso: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
 #### `image-name-run`
 {: #image-name-run}
 
 * Imagen para crear desde `dockerfile-run`.
-* Uso: `bx dev run --image-name-run [/path/to/image-name]`
+* Uso: `ibmcloud dev run --image-name-run [/path/to/image-name]`
 
 #### `run-cmd`
 {: #run-cmd}
 
 * Parámetro utilizado para ejecutar código en el contenedor de ejecución. Utilice este parámetro si su imagen inicia la aplicación.
-* Uso: `bx dev run --run-cmd [/the/run/command]`
+* Uso: `ibmcloud dev run --run-cmd [/the/run/command]`
 
 
 ## shell
@@ -414,12 +418,12 @@ Puede abrir el shell dentro del contenedor de herramientas o de ejecución con e
 Simplemente ejecute este mandato
 
 ```
-bx dev shell
+ibmcloud dev shell
 ```
 
 la CLI de {{site.data.keyword.dev_cli_short}} abrirá un shell interactivo en el contenedor docker de la aplicación. El contenedor de destino predeterminado para el mandato de shell se define por el valor `container-shell-target` en el `config.yml`, donde los valores válidos son `run` o `tools`. Si este valor no está definido o si se especifica un valor no válido, de forma predeterminada el mandato `shell` afectará al contenedor `tools`. El mandato de shell abre el contenedor en el directorio especificado por la instrucción `WORKDIR` en el Dockerfile correspondiente. Si `WORKDIR` no está en el Dockerfile, Dockerfile se utiliza la raíz del contenedor como el directorio de trabajo. Consulte esta [información de referencia](https://docs.docker.com/engine/reference/builder/#workdir) para más detalles.
 
-Como alternativa, puede decidir pasar `run` o `tools` como argumento para el mandato de forma que el shell se abra y sirva para dicho contenedor. Asimismo, puede utilizar el parámetro `container-name` para pasar el nombre del contenedor en el que desea el shell. Sin embargo, este distintivo debe reservarse para cuando no haya contenedores en ejecución. Los argumentos `run` y `tools` son más flexibles y permiten conmutar entre contenedores cuando alguno de ellos esté en ejecución. Por ejemplo, si el contenedor tools está en ejecución y ejecuta `bx dev shell run`, se detendrá el contenedor `tools` y se reiniciará el contenedor `run`, y viceversa.
+Como alternativa, puede decidir pasar `run` o `tools` como argumento para el mandato de forma que el shell se abra y sirva para dicho contenedor. Asimismo, puede utilizar el parámetro `container-name` para pasar el nombre del contenedor en el que desea el shell. Sin embargo, este distintivo debe reservarse para cuando no haya contenedores en ejecución. Los argumentos `run` y `tools` son más flexibles y permiten conmutar entre contenedores cuando alguno de ellos esté en ejecución. Por ejemplo, si el contenedor tools está en ejecución y ejecuta `ibmcloud dev shell run`, se detendrá el contenedor `tools` y se reiniciará el contenedor `run`, y viceversa.
 
 Si el contenedor `run` o `tools` de destino no está ya en ejecución al ejecutar el mandato `shell`, se iniciará el contenedor de destino. Sin embargo, se cambiará el valor predeterminado `Cmd` o `Entrypoint` en el Dockerfile para iniciar directamente el shell en lugar de iniciar el proceso del servidor. Esto permite iniciar el contenedor `run` o `tools`, e iniciar manualmente el servidor con sus propios mandatos arbitrarios o personalizados.
 
@@ -428,7 +432,7 @@ También puede especificar el ejecutable del shell que desea abrir utilizando el
 
 Cualquier otro argumento adicional que pase al mandato más allá de los distintivos se analizarán como si el mandato se ejecutase al abrir el shell. Si proporciona un mandato para ejecutarlo, el shell dentro del contenedor saldrá después de la ejecución del mandato y volverá al terminal.
 
-Por ejemplo, puede ejecutar el mandato Linux `ls` dentro del contenedor shell invocando `bx dev shell tools ls`.   También puede especificar distintivos adicionales para pasar a la ejecución del mandato del shell delimitando los argumentos entre comillas como, por ejemplo, `bx dev shell "ls -la"`.
+Por ejemplo, puede ejecutar el mandato Linux `ls` dentro del contenedor shell invocando `ibmcloud dev shell tools ls`.   También puede especificar distintivos adicionales para pasar a la ejecución del mandato del shell delimitando los argumentos entre comillas como, por ejemplo, `ibmcloud dev shell "ls -la"`.
 
 ### Parámetros del mandato shell
 {: #shell-parameters}
@@ -437,13 +441,13 @@ Por ejemplo, puede ejecutar el mandato Linux `ls` dentro del contenedor shell in
 {: #container-name}
 
 * Nombre del contenedor en el que desea utilizar el shell.
-* Uso: `bx dev shell --container-name [<container-name>]`
+* Uso: `ibmcloud dev shell --container-name [<container-name>]`
 
 #### `container-shell`
 {: #container-shell}
 
 * Especifica el shell a ejecutar dentro del contenedor (el predeterminado es /bin/sh)
-* Uso: `bx dev shell --container-shell [path/to/shell]`
+* Uso: `ibmcloud dev shell --container-shell [path/to/shell]`
 
 
 ## status
@@ -454,7 +458,7 @@ Puede consultar el estado de los contenedores que utiliza la CLI de {{site.data.
 Ejecute el siguiente mandato en el directorio del proyecto actual para comprobar el estado de los contenedores:
 
 ```
-bx dev status
+ibmcloud dev status
 ```
 {: codeblock}
 
@@ -470,7 +474,7 @@ Puede detener sus contenedores mediante el mandato `stop`.
 Para detener las herramientas y ejecutar los contenedores tal como se define en el archivo `cli-config.yml`, ejecute:
 
 ```
-bx dev stop
+ibmcloud dev stop
 ```
 {: codeblock}
 
@@ -485,13 +489,13 @@ Los parámetros siguientes se utilizan para el mandato `stop`. Hay [parámetros 
 {: #container-name-run}
 
 * Nombre del contenedor de ejecución.
-* Uso: `bx dev stop --container-name-run [<projectName>]`
+* Uso: `ibmcloud dev stop --container-name-run [<projectName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * Nombre del contenedor de herramientas.
-* Uso: `bx dev stop --container-name-tools [<projectName>]`
+* Uso: `ibmcloud dev stop --container-name-tools [<projectName>]`
 
 
 
@@ -503,14 +507,14 @@ Puede probar la aplicación a través del mandato `test`. Se debe completar prim
 En primer lugar, compile su proyecto:
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 Ejecute el siguiente mandato para probar la aplicación:
 
 ```
-bx dev test
+ibmcloud dev test
 ```
 {: codeblock}
 
@@ -524,7 +528,7 @@ El siguiente parámetro es exclusivo del mandato `test`.  Hay [parámetros adici
 {: #test-cmd}
 
 * Parámetro que se utiliza para especificar un mandato para probar código en el contenedor de herramientas.
-* Uso: `bx dev test --test-cmd /the/test/command`
+* Uso: `ibmcloud dev test --test-cmd /the/test/command`
 
 
 ## view
@@ -539,7 +543,7 @@ Para las aplicaciones desplegadas en Kubernetes, el URL consta de la dirección 
 Ejecute el siguiente mandato para ver su aplicación:
 
 ```
-bx dev view
+ibmcloud dev view
 ```
 {: codeblock}
 
@@ -551,28 +555,28 @@ Los siguientes parámetros son exclusivos del mandato `view`.
 #### `deploy-target`
 
 * Parámetro opcional utilizado para indicar el tipo de despliegue para omitir la solicitud
-* Uso `bx dev view -t|--target buildpack|container`
+* Uso `ibmcloud dev view -t|--target buildpack|container`
 
 
 #### `no-open`
 {: #no-open}
 
 * Parámetro que se utiliza para especificar que no se desea abrir el navegador.
-* Uso: `bx dev view --no-open`
+* Uso: `ibmcloud dev view --no-open`
 
 
 #### `web-app-root`
 {: #web-app-root}
 
 * Raíz de proyecto para añadir al URL de la app de Kubernetes
-* Uso: `bx dev view --web-app-root [root]`
+* Uso: `ibmcloud dev view --web-app-root [root]`
 
 
 #### `ibm-cluster`
 {: #ibm-cluster2}
 
 * Parámetro opcional que define el nombre el clúster Kubernetes en el que desplegar un contenedor.
-* Uso `bx dev view --ibm-cluster [cluster-name]`
+* Uso `ibmcloud dev view --ibm-cluster [cluster-name]`
 
 
 ## Mandatos compuestos
@@ -581,10 +585,10 @@ Los siguientes parámetros son exclusivos del mandato `view`.
 Ejecute varios mandatos en una sentencia de línea de mandatos separando los mandatos IDT con el delimitador `/`. Se pueden especificar distintivos de línea de mandatos adicionales después de especificar los mandatos compuestos.  A continuación se muestran algunos ejemplos de mandatos compuestos:
 
 ```
-bx dev build/run
-bx dev build/deploy --trace -t buildpack
-bx dev build/debug --debug --trace
-bx dev build/deploy/view -t container --trace
+ibmcloud dev build/run
+ibmcloud dev build/deploy --trace -t buildpack
+ibmcloud dev build/debug --debug --trace
+ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
@@ -593,7 +597,7 @@ Todos los distintivos deben estar al final del mandato y se aplicarán a todos l
 Los mandatos que se pueden utilizar con esta característica son:
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Si un mandato falla por algún motivo, los mandatos subsiguientes no se ejecutarán. Si hay más mandatos que sigan a `debug` o `run`, la ejecución solo continuará si `debug` o `run` son interrumpidos por cualquier forma que no sea interrumpir el proceso desde la ventana de terminal actual. `Control+C` interrumpirá el proceso y los mandatos subsiguientes no se ejecutarán. Por ejemplo, puede ejecutar `bx dev stop` desde otra ventana de terminal para detener el contenedor en ejecución y continuar la ejecución del siguiente mandato.
+Si un mandato falla por algún motivo, los mandatos subsiguientes no se ejecutarán. Si hay más mandatos que sigan a `debug` o `run`, la ejecución solo continuará si `debug` o `run` son interrumpidos por cualquier forma que no sea interrumpir el proceso desde la ventana de terminal actual. `Control+C` interrumpirá el proceso y los mandatos subsiguientes no se ejecutarán. Por ejemplo, puede ejecutar `ibmcloud dev stop` desde otra ventana de terminal para detener el contenedor en ejecución y continuar la ejecución del siguiente mandato.
 
 
 ## Parámetros para build, debug, run y test
@@ -607,49 +611,49 @@ Los siguientes parámetros se pueden utilizar con los mandatos `build|debug|run|
 {: #config-file}
 
 * Especifique un archivo cli-config.yml para utilizar con un mandato.
-* Uso: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
+* Uso: `ibmcloud dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
 {: #container-name-run1}
 
 * Nombre del contenedor de ejecución.
-* Uso: `bx dev <run|status|stop> --container-name-run [<projectName>]`
+* Uso: `ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * Nombre del contenedor de herramientas.
-* Uso: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* Uso: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}
 
 * Ubicación en el host para compartir para la compilación, depuración, pruebas.
-* Uso: `bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
+* Uso: `ibmcloud dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 #### `container-path-tools`
 {: #container-path-tools}
 
 * Ubicación en el contenedor para compartir para la compilación, depuración, pruebas.
-* Uso: `bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
+* Uso: `ibmcloud dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 #### `container-port-map`
 {: #container-port-map}
 
 * Correlaciones de puertos para el contenedor. El primer valor es el puerto que se utilizará en el sistema operativo del host, el segundo es el puerto del contenedor [host-port:container-port].
-* Uso: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
+* Uso: `ibmcloud dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
 
 #### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * Dockerfile para el contenedor de herramientas.
-* Uso: `bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
+* Uso: `ibmcloud dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 #### `image-name-tools`
 {: #image-name-tools}
 
 * Imagen para crear desde `dockerfile-tools`.
-* Uso: `bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
+* Uso: `ibmcloud dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 #### `container-mounts-run`
 {: #container-mounts-run}
@@ -657,24 +661,23 @@ Los siguientes parámetros se pueden utilizar con los mandatos `build|debug|run|
 * Utilice esta opción para definir montajes entre el sistema host y el contenedor de ejecución.
 * Los valores de `host-path-run` y `container-path-run` se insertan al principio de la lista.
 * El procedimiento recomendado para evitar resultados inesperados, es compilar y ejecutar utilizando los mismos valores de montaje.
-* Uso: `bx dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* Uso: `ibmcloud dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `container-mounts-tools`
 {: #container-mounts-tools}
 
 * Utilice esta opción para definir montajes entre el sistema host y el contenedor de herramientas.
 * Los valores de `host-path-tools` y `container-path-tools` se insertan al principio de esta lista.* El procedimiento recomendado para evitar resultados inesperados, es compilar y depurar utilizando los mismos valores de montaje.
-* Uso: `bx dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* Uso: `ibmcloud dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `build-cmd-run`
 {: #build-cmd-run}
 
 * Parámetro que se utiliza para especificar un mandato para generar código para todos los usos menos DEBUG.
-* Uso: `bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
+* Uso: `ibmcloud dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 #### `trace`
 {: #trace}
 
 * Utilice este parámetro para proporcionar una salida detallada.
-* Uso: `bx dev <build|debug|run|test> --trace`
-
+* Uso: `ibmcloud dev <build|debug|run|test> --trace`

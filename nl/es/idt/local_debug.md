@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -25,7 +25,7 @@ Pasos para habilitar la herramienta de depuración para una aplicación Java:
 1. Desde el directorio raíz del proyecto de su aplicación ejecute el mandato siguiente:
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. Conexión del depurador a su aplicación:
@@ -52,7 +52,7 @@ Pasos para habilitar la herramienta de depuración para una aplicación Node.js:
 1. Desde el directorio raíz del proyecto de aplicación ejecute el mandato siguiente:
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. Conexión del depurador a su aplicación:

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-14"
 {: #overview}
 
 {{site.data.keyword.dev_cli_notm}} es una aproximación mediante la interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones para desarrolladores que desean utilizar una línea de mandatos para desarrollar aplicaciones web de principio a fin, móviles y de microservicios. Comience a trabajar rápidamente con el conjunto de herramientas recomendado ejecutando uno de los scripts siguientes.
-{: shortdesc} 
+{: shortdesc}
 
 ## Requisitos previos para {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
@@ -44,12 +44,22 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* Nota: Abra Windows PowerShell pulsando con el botón derecho y seleccione "Ejecutar como administrador".
+* Nota: Abra Windows PowerShell pulsando con el botón derecho del ratón el icono de PowerShell y seleccionando "Ejecutar como administrador".
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
+
+## Verificar la instalación
+Para verificar la instalación, ejecute el mandato `help`:
+
+```
+ibmcloud dev help
+```
+{: codeblock}
+
+Si la instalación ha sido satisfactoria, la salida debe listar las instrucciones de uso, la versión actual y los mandatos soportados.
 
 
 ## Otros enlaces para explorar más la {{site.data.keyword.dev_cli_notm}}
@@ -60,3 +70,5 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 - [Plugins de CLI](/docs/cli/reference/bluemix_cli/extend_cli.html)
 - [Extensión IDE VSCode](/docs/cli/idt/vscode.html)
 - [Instalar la CLI de IBM Cloud de forma manual](/docs/cli/reference/bluemix_cli/get_started.html)
+- [Informar de problemas en GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [IBM Cloud Tech's Slack - canal #developer-tools](https://ibm-cloud-tech.slack.com) - Solicitar acceso de equipo [aquí](https://slack-invite-ibm-cloud-tech.mybluemix.net/)

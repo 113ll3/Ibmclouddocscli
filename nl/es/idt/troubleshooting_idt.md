@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -40,7 +40,7 @@ The hostname <myHostname> is taken.
 
 #### Causa
 {: #hostname-cause}
-   
+
 Este error se debe a una señal de inicio de sesión caducada.
 
 
@@ -50,7 +50,7 @@ Este error se debe a una señal de inicio de sesión caducada.
 Inicie de nuevo una sesión.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -68,7 +68,7 @@ Failed to <command> project.
 
 #### Causa
 {: #general-cause}
-   
+
 Este error se debe a una señal de inicio de sesión caducada.
 
 
@@ -78,7 +78,7 @@ Este error se debe a una señal de inicio de sesión caducada.
 Inicie de nuevo una sesión.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -89,12 +89,12 @@ bx login
 Es posible que le aparezca el siguiente error cuando ejecute un proyecto sin compilarlo con anterioridad.
 
 ```
-$ bx dev run testProject
+$ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
 Creating image bx-dev-testProject based on Dockerfile...
-OK                    
+OK
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
@@ -105,7 +105,7 @@ Error: No such image: bx-dev-testProject
 #### Causa
 {: #nosuchimage-cause}
 
-Debe compilar un proyecto antes de ejecutarlo. 
+Debe compilar un proyecto antes de ejecutarlo.
 
 
 #### Resolución
@@ -114,14 +114,14 @@ Debe compilar un proyecto antes de ejecutarlo.
 Ejecute el siguiente mandato en el directorio del proyecto actual para crear la aplicación:
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para iniciar la aplicación:
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 
 
@@ -139,7 +139,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 
 #### Causa
 {: #os-cause}
-   
+
 Este error se debe al servicio de {{site.data.keyword.objectstorageshort}}, que solo proporciona una instancia del plan de {{site.data.keyword.objectstorageshort}} gratuito.
 
 
@@ -153,20 +153,20 @@ Se le solicitará que elija otro plan para evitar este error.
 {: #code}
 
 Es posible que le aparezca el siguiente error si utiliza {{site.data.keyword.dev_cli_short}} para crear un proyecto:
-	
+
 ```
 FAILED                            
 Project created, but could not get code
 https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
-	
+
 
 #### Causa
 {: #code-cause}
 
 Este error se debe a un tiempo de espera interno excedido.
-	
+
 
 #### Resolución
 {: #code-resolution}
@@ -176,7 +176,7 @@ Puede obtener el código de una de las siguientes formas:
 * Ejecute el siguiente mandato utilizando la CLI:
 
    ```
-   bx dev code <your-project-name>
+   ibmcloud dev code <your-project-name>
    ```
    {: codeblock}
 
@@ -191,10 +191,10 @@ Puede obtener el código de una de las siguientes formas:
 	3. Después de generar el código, pulse **Descargar código**.
 
 
-### Error al ejecutar `bx dev run` para proyectos de Node.js
+### Error al ejecutar `ibmcloud dev run` para proyectos de Node.js
 {: #node}
 
-Es posible que le aparezca el siguiente error si ejecuta `bx dev run` con {{site.data.keyword.dev_cli_short}} para proyectos web o BFF de Node.js:
+Es posible que le aparezca el siguiente error si ejecuta `ibmcloud dev run` con {{site.data.keyword.dev_cli_short}} para proyectos web o BFF de Node.js:
 
 ```
 module.js:597
@@ -219,26 +219,26 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 
 #### Causa
 {: #node-cause}
-   
+
 Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux.
 
 
 #### Resolución
 {: #node-resolution}
 
-Suprima la carpeta `node_modules` y vuelva a ejecutar `bx dev run`.
+Suprima la carpeta `node_modules` y vuelva a ejecutar `ibmcloud dev run`.
 
 
-### Se ha producido una anomalía al desplegar en Bluemix
+### Anomalía al desplegar en {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploy}
 
-Puede intentar desplegar en Bluemix con la {{site.data.keyword.dev_cli_short}} y verá que no se realiza el despliegue en Bluemix, pero tampoco aparece ningún error.
+Puede intentar desplegar en {{site.data.keyword.Bluemix_notm}} con la {{site.data.keyword.dev_cli_short}} y verá que no se realiza el despliegue en {{site.data.keyword.Bluemix_notm}}, pero tampoco aparece ningún error.
 
 
 #### Causa
 {: #cause1}
 
-Puede ser debido a que no ha iniciado sesión en su cuenta. 
+Puede ser debido a que no ha iniciado sesión en su cuenta.
 
 #### Resolución
 {: #resolution1}
@@ -246,11 +246,11 @@ Puede ser debido a que no ha iniciado sesión en su cuenta.
 Inicie la sesión y vuélvalo a intentar.
 
 ```
-bx login
+ibmcloud login
 ```
 
 
-### Se ha producido una anomalía en desplegar en Kubernetes en Bluemix
+### Se ha producido una anomalía al desplegar en Kubernetes en {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploytokube}
 
 Es posible que vea esta anomalía tras la solicitud inicial del nombre de clúster:
@@ -270,7 +270,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 Probablemente se debe a un nombre de clúster no válido y puede confirmarse ejecutando el mismo mandato con `--trace`, y puede verlo en la salida del error:
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 
 
@@ -280,11 +280,11 @@ Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"T
 Asegúrese de que utiliza el clúster correcto y de que ha configurado el clúster para el despliegue ejecutando
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 
 
-### Se ha producido una anomalía en desplegar en Kubernetes en Bluemix
+### Se ha producido una anomalía al desplegar en Kubernetes en {{site.data.keyword.Bluemix_notm}}
 
 Es posible que vea esta anomalía tras la solicitud del destino de imagen de despliegue:
 
@@ -310,7 +310,7 @@ Lo más probable es que esto se deba a un destino de imagen de despliegue. Más 
 Asegúrese de que el espacio de nombres en el destino de imagen de despliegue coincide con uno de los espacios de nombres encontrados en la ejecución
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 
 
@@ -322,7 +322,7 @@ Se instalaran todos los requisitos previos para la mayoría de los usuarios que 
 
 Para instalar el plugin de desarrollo, primero debe estar instalada la [CLI de IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
 
-Para utilizar el plugin de desarrollo, debe instalarlo ejecutando el mandato siguiente: `bx plugin install dev -r Bluemix`
+Para utilizar el plugin de desarrollo, debe instalarlo ejecutando el mandato siguiente: `ibmcloud plugin install dev -r Bluemix`
 
 Para ejecutar y depurar aplicaciones localmente, también debe instalar el [Docker ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.docker.com/get-docker).
 
@@ -347,10 +347,10 @@ Para instalar Helm:
 Descargue e instale el binario de https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
 Para instalar el plugin container-registry:
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 Para instalar el plugin container-service:
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`
 
 
 <!--

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -31,11 +31,11 @@ Una vez instalada la CLI de {{site.data.keyword.Bluemix_notm}}, puede añadir el
 Siga estos pasos para añadir el repositorio e instalar el plug-in:
 1. Para añadir el repositorio del plugin de la CLI de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato siguiente:
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Para instalar el plugin de la CLI de {{site.data.keyword.autoscaling}}, ejecute el mandato siguiente:
 ```
-bluemix plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r Bluemix
 ```
 
 ## Adjunción de una política de escalado automático
@@ -43,7 +43,7 @@ bluemix plugin install auto-scaling -r Bluemix
 Puede adjuntar una política de escalado automático a una app específica. Ejecute el mandato siguiente:
 
 ```
-bx as policy-attach <APP_NAME> -p <policy_file>
+ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -60,7 +60,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 Puede generar una política de escalado automático si responde a las preguntas en la interfaz de línea de mandatos. Según sus respuestas, se guardará un archivo JSON que contiene la definición de la política de escalado automático, con el nombre que haya especificado. Si no especifica el nombre del archivo, el contenido de la política se mostrará directamente en la línea de mandatos sin guardarse en un archivo. Ejecute el mandato siguiente:
 
 ```
-bx as policy-create
+ibmcloud as policy-create
 ```
 {: codeblock}
 
@@ -70,7 +70,7 @@ bx as policy-create
 Puede mostrar una política de escalado automático de una app. El contenido de la política se mostrará directamente en la línea de mandatos. Ejecute el mandato siguiente:
 
 ```
-bx as policy-show <APP_NAME> [--json]
+ibmcloud as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -87,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 Puede eliminar una política de escalado automático de una app. Ejecute el mandato siguiente:
 
 ```
-bx as policy-detach <APP_NAME>
+ibmcloud as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -102,7 +102,7 @@ bx as policy-detach <APP_NAME>
 Puede habilitar o inhabilitar la política de escalado automático de una app específica. Ejecute el mandato siguiente:
 
 ```
-bx as policy-enable|policy-disable <APP_NAME>
+ibmcloud as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -117,7 +117,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 Puede mostrar el historial de la actividad de escalado automático de una app específica. Se muestra una tabla de historial de registros de escalado automático en la interfaz de línea de mandatos.
 
 ```
-bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 
