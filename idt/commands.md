@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-05-23"
 Version: 1.2.0
 Released: Mar 8, 2018
 
-As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However you can still use the `bluemix` and `bx` CLI commands until they are deprecated at a later date.
+As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud` and `ic`. However you can still use the `bluemix` and `bx` CLI commands until they are removed at a later date.
 {: tip}
 
 Use the following {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) commands to create a project, deploy, debug, and test it.
