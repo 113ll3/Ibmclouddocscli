@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -16,8 +16,8 @@ lastupdated: "2017-01-12"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Plug-ins da interface da linha de comandos {{site.data.keyword.Bluemix_notm}} (bx cli)
+# {{site.data.keyword.Bluemix_notm}} Command Line Interface (ibmcloud cli) plug-ins
 {: #cli_plugins}
 
-Estenda sua interface da linha de comandos {{site.data.keyword.Bluemix_notm}} (bx cli) com plug-ins. É possível instalar e usar plug-ins disponíveis no [Repositório de plug-in da CLI ![Ícone de link externo](../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/){: new_window}. Cada plug-in é identificado por seu nome de arquivo binário, seu nome de plug-in definido pelo desenvolvedor e os comandos que o plug-in fornece. É possível usar o nome do arquivo binário apenas para instalar um plug-in e usar o nome do plug-in ou um comando para qualquer outra ação.
+Amplie sua interface da linha de comandos (ibmcloud cli) do {{site.data.keyword.Bluemix_notm}} com plug-ins. É possível instalar e usar plug-ins disponíveis no [Repositório de plug-in da CLI ![Ícone de link externo](../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/){: new_window}. Cada plug-in é identificado por seu nome de arquivo binário, seu nome de plug-in definido pelo desenvolvedor e os comandos que o plug-in fornece. É possível usar o nome do arquivo binário apenas para instalar um plug-in e usar o nome do plug-in ou um comando para qualquer outra ação.
 {:shortdesc}

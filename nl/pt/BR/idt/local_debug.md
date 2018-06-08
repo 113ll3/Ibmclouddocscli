@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -25,7 +25,7 @@ Etapas para ativar a ferramenta de depuração para um aplicativo Java:
 1. No diretório-raiz de seu projeto do aplicativo, execute o comando a seguir:
 
 ```
-bx dev debug
+Ibmcloud dev debug
 ```
 
 2. Conectando o depurador a seu aplicativo:
@@ -53,7 +53,7 @@ Etapas para ativar a ferramenta de depuração para um aplicativo Node.js:
 1. No diretório raiz do seu aplicativo, os projetos executam o comando a seguir:
 
 ```
-bx dev debug
+Ibmcloud dev debug
 ```
 
 2. Conectando o depurador a seu aplicativo:

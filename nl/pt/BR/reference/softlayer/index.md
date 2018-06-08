@@ -5,30 +5,35 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-23"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 
-# Comandos da infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl)
+# {{site.data.keyword.BluSoftlayer_notm}} infraestrutura (sl ibmcloud) comandos
 {: #softlayer_cli}
 
 O plug-in do {{site.data.keyword.BluSoftlayer}} foi mesclado na
 CLI do {{site.data.keyword.Bluemix_notm}}. Não é mais necessário instalar o plug-in.
+{: tip}
 
 Use os comandos de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} na interface da linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} para configurar e gerenciar os serviços do SoftLayer.
 
+Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que eles sejam descontinuados em uma data posterior.
+{: tip}
 
-Para iniciar, instale a CLI do IBM {{site.data.keyword.Bluemix_notm}}. Veja
-[CLI do Bluemix ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} para obter detalhes.
 
-Para obter uma lista completa de comandos do {{site.data.keyword.Bluemix_notm}}, veja: [Comandos do {{site.data.keyword.Bluemix_notm}} (bx)](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)
+Para iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Veja
+[IBM Cloud CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} para obter detalhes.
+
+Para obter uma lista completa de comandos do {{site.data.keyword.Bluemix_notm}}, veja: [Comandos do {{site.data.keyword.Bluemix_notm}} (ibmcloud)](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)
 
 
 ## Comandos gerais de infraestrutura {{site.data.keyword.BluSoftlayer_notm}}
 
-Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a lista de comandos disponíveis:
+Os comandos a seguir são compatíveis. Use o comando `ibmcloud sl` para ver a lista de comandos disponíveis:
 
 <table summary="Comandos gerais ordenados alfabeticamente que possuem links que levam a mais informações sobre o comando">
 <caption>Tabela 1. Comandos gerais de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</caption>
@@ -37,8 +42,8 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl init](/docs/cli/reference/softlayer/index.html#sl_init)</td>
- <td>[bluemix sl help](/docs/cli/reference/softlayer/index.html#sl_help)</td>
+ <td>[ibmcloud sl init](/docs/cli/reference/softlayer/index.html#sl_init)</td>
+ <td>[ibmcloud sl help](/docs/cli/reference/softlayer/index.html#sl_help)</td>
    </tbody>
  </table>
 
@@ -52,34 +57,34 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
-  <td>[bluemix sl block access-authorize](/docs/cli/reference/softlayer/index.html#sl_block_access_authorize)</td>
-  <td>[bluemix sl block access-list](/docs/cli/reference/softlayer/index.html#sl_block_access_list)</td>
-  <td>[bluemix sl block access-revoke](/docs/cli/reference/softlayer/index.html#sl_block_access_revoke)</td>
-  <td>[bluemix sl block replica-failback](/docs/cli/reference/softlayer/index.html#sl_block_replica_failback)</td>
-  <td>[bluemix sl block replica-failover](/docs/cli/reference/softlayer/index.html#sl_block_replica_failover)</td>
-  <td>[bluemix sl block replica-locations](/docs/cli/reference/softlayer/index.html#sl_block_replica_locations)</td>
+  <td>[ibmcloud sl block access-authorize](/docs/cli/reference/softlayer/index.html#sl_block_access_authorize)</td>
+  <td>[ibmcloud sl block access-list](/docs/cli/reference/softlayer/index.html#sl_block_access_list)</td>
+  <td>[ibmcloud sl block access-revoke](/docs/cli/reference/softlayer/index.html#sl_block_access_revoke)</td>
+  <td>[ibmcloud sl block replica-failback](/docs/cli/reference/softlayer/index.html#sl_block_replica_failback)</td>
+  <td>[ibmcloud sl block replica-failover](/docs/cli/reference/softlayer/index.html#sl_block_replica_failover)</td>
+  <td>[Ibmcloud sl block replica-locations](/docs/cli/reference/softlayer/index.html#sl_block_replica_locations)</td>
    </tr>
  <tr>
-  <td>[bluemix sl block replica-order](/docs/cli/reference/softlayer/index.html#sl_block_replica_order)</td>
-  <td>[bluemix sl block replica-partners](/docs/cli/reference/softlayer/index.html#sl_block_replica_partners)</td>
-  <td>[bluemix sl block snapshot-cancel](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_cancel)</td>
-  <td>[bluemix sl block snapshot-create](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_create)</td>
-  <td>[bluemix sl block snapshot-disable](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_disable)</td>
-  <td>[bluemix sl block snapshot-enable](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_enable)</td>
+  <td>[ibmcloud sl block replica-order](/docs/cli/reference/softlayer/index.html#sl_block_replica_order)</td>
+  <td>[ibmcloud sl block replica-partners](/docs/cli/reference/softlayer/index.html#sl_block_replica_partners)</td>
+  <td>[ibmcloud sl block snapshot-cancel](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_cancel)</td>
+  <td>[ibmcloud sl block snapshot-create](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_create)</td>
+  <td>[ibmcloud sl block snapshot-disable](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_disable)</td>
+  <td>[ibmcloud sl block snapshot-enable](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_enable)</td>
   </tr>
  <tr>
-  <td>[bluemix sl block snapshot-delete](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_delete)</td>
-  <td>[bluemix sl block snapshot-list](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_list)</td>
-  <td>[bluemix sl block snapshot-order](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_order)</td>
-  <td>[bluemix sl block snapshot-restore](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_restore)</td>
-  <td>[bluemix sl block volume-cancel](/docs/cli/reference/softlayer/index.html#sl_block_volume_cancel)</td>  
-  <td>[bluemix sl block volume-detail](/docs/cli/reference/softlayer/index.html#sl_block_volume_detail)</td>
+  <td>[ibmcloud sl block snapshot-delete](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_delete)</td>
+  <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_list)</td>
+  <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_order)</td>
+  <td>[Ibmcloud sl block snapshot-restore](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_restore)</td>
+  <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/softlayer/index.html#sl_block_volume_cancel)</td>  
+  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/softlayer/index.html#sl_block_volume_detail)</td>
    </tr>
  <tr>
-   <td>[bluemix sl block volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_block_volume_duplicate)</td>
-   <td>[bluemix sl block volume-list](/docs/cli/reference/softlayer/index.html#sl_block_volume_list)</td>
-   <td>[bluemix sl block volume-order](/docs/cli/reference/softlayer/index.html#sl_block_volume_order)</td>
-   <td>[bluemix sl block volume-options](/docs/cli/reference/softlayer/index.html#sl_block_volume_options)</td>
+   <td>[ibmcloud sl block volume-duplicados](/docs/cli/reference/softlayer/index.html#sl_block_volume_duplicate)</td>
+   <td>[ibmcloud sl block volume-list](/docs/cli/reference/softlayer/index.html#sl_block_volume_list)</td>
+   <td>[ibmcloud sl block volume-order](/docs/cli/reference/softlayer/index.html#sl_block_volume_order)</td>
+   <td>[ibmcloud sl block volume-options](/docs/cli/reference/softlayer/index.html#sl_block_volume_options)</td>
  </tr>
    </tbody>
  </table>
@@ -93,18 +98,18 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
-  <td>[bluemix sl cdn cancel](/docs/cli/reference/softlayer/index.html#sl_cdn_cancel)</td>
-  <td>[bluemix sl cdn detail](/docs/cli/reference/softlayer/index.html#sl_cdn_detail)</td>
-  <td>[bluemix sl cdn list](/docs/cli/reference/softlayer/index.html#sl_cdn_list)</td>
-  <td>[bluemix sl cdn load](/docs/cli/reference/softlayer/index.html#sl_cdn_load)</td>
-  <td>[bluemix sl cdn order](/docs/cli/reference/softlayer/index.html#sl_cdn_order)</td>
-  <td>[bluemix sl cdn options](/docs/cli/reference/softlayer/index.html#sl_cdn_options)</td>
+  <td>[ibmcloud sl cdn cancel](/docs/cli/reference/softlayer/index.html#sl_cdn_cancel)</td>
+  <td>[ibmcloud sl cdn detail](/docs/cli/reference/softlayer/index.html#sl_cdn_detail)</td>
+  <td>[ibmcloud sl cdn list](/docs/cli/reference/softlayer/index.html#sl_cdn_list)</td>
+  <td>[Sl cdn load ibmcloud](/docs/cli/reference/softlayer/index.html#sl_cdn_load)</td>
+  <td>[ibmcloud sl cdn order](/docs/cli/reference/softlayer/index.html#sl_cdn_order)</td>
+  <td>[ibmcloud sl cdn options](/docs/cli/reference/softlayer/index.html#sl_cdn_options)</td>
    </tr>
  <tr>
-  <td>[bluemix sl cdn origin-add](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_add)</td>
-  <td>[bluemix sl cdn origin-list](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_list)</td>
-  <td>[bluemix sl cdn origin-remove](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_remove)</td>
-  <td>[bluemix sl cdn purge](/docs/cli/reference/softlayer/index.html#sl_cdn_purge)</td>
+  <td>[ibmcloud sl cdn origin-add](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_add)</td>
+  <td>[ibmcloud sl cdn origin-list](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_list)</td>
+  <td>[ibmcloud sl cdn origin-remove](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_remove)</td>
+  <td>[ibmcloud sl cdn purge](/docs/cli/reference/softlayer/index.html#sl_cdn_purge)</td>
   </tr>
    </tbody>
  </table>
@@ -118,34 +123,34 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
-  <td>[bluemix sl file access-authorize](/docs/cli/reference/softlayer/index.html#sl_file_access_authorize)</td>
-  <td>[bluemix sl file access-list](/docs/cli/reference/softlayer/index.html#sl_file_access_list)</td>
-  <td>[bluemix sl file access-revoke](/docs/cli/reference/softlayer/index.html#sl_file_access_revoke)</td>
-  <td>[bluemix sl file replica-failback](/docs/cli/reference/softlayer/index.html#sl_file_replica_failback)</td>
-  <td>[bluemix sl file replica-failover](/docs/cli/reference/softlayer/index.html#sl_file_replica_failover)</td>
-  <td>[bluemix sl file replica-locations](/docs/cli/reference/softlayer/index.html#sl_file_replica_locations)</td>
+  <td>[ibmcloud sl file access-authorize](/docs/cli/reference/softlayer/index.html#sl_file_access_authorize)</td>
+  <td>[ibmcloud sl file access-list](/docs/cli/reference/softlayer/index.html#sl_file_access_list)</td>
+  <td>[ibmcloud sl file access-revoke](/docs/cli/reference/softlayer/index.html#sl_file_access_revoke)</td>
+  <td>[Ibmcloud sl file replica-failback](/docs/cli/reference/softlayer/index.html#sl_file_replica_failback)</td>
+  <td>[ibmcloud sl file replica-failover](/docs/cli/reference/softlayer/index.html#sl_file_replica_failover)</td>
+  <td>[ibmcloud sl file replica-locations](/docs/cli/reference/softlayer/index.html#sl_file_replica_locations)</td>
    </tr>
  <tr>
-  <td>[bluemix sl file replica-order](/docs/cli/reference/softlayer/index.html#sl_file_replica_order)</td>
-  <td>[bluemix sl file replica-partners](/docs/cli/reference/softlayer/index.html#sl_file_replica_partners)</td>
-  <td>[bluemix sl file snapshot-cancel](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_cancel)</td>
-  <td>[bluemix sl file snapshot-create](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_create)</td>
-  <td>[bluemix sl file snapshot-disable](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_disable)</td>
-  <td>[bluemix sl file snapshot-enable](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_enable)</td>
+  <td>[ibmcloud sl file replica-order](/docs/cli/reference/softlayer/index.html#sl_file_replica_order)</td>
+  <td>[ibmcloud sl file replica-partners](/docs/cli/reference/softlayer/index.html#sl_file_replica_partners)</td>
+  <td>[ibmcloud sl file snapshot-cancel](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_cancel)</td>
+  <td>[ibmcloud sl file snapshot-create](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_create)</td>
+  <td>[ibmcloud sl file snapshot-disable](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_disable)</td>
+  <td>[ibmcloud sl file snapshot-enable](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_enable)</td>
   </tr>
  <tr>
-  <td>[bluemix sl file snapshot-delete](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_delete)</td>
-  <td>[bluemix sl file snapshot-list](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_list)</td>
-  <td>[bluemix sl file snapshot-order](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_order)</td>
-  <td>[bluemix sl file snapshot-restore](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_restore)</td>
-  <td>[bluemix sl file volume-cancel](/docs/cli/reference/softlayer/index.html#sl_file_volume_cancel)</td>  
-  <td>[bluemix sl file volume-detail](/docs/cli/reference/softlayer/index.html#sl_file_volume_detail)</td>
+  <td>[ibmcloud sl file snapshot-delete](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_delete)</td>
+  <td>[Ibmcloud sl file snapshot-list](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_list)</td>
+  <td>[ibmcloud sl file snapshot-order](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_order)</td>
+  <td>[ibmcloud sl file snapshot-restore](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_restore)</td>
+  <td>[ibmcloud sl file volume-cancel](/docs/cli/reference/softlayer/index.html#sl_file_volume_cancel)</td>  
+  <td>[ibmcloud sl file volume-detail](/docs/cli/reference/softlayer/index.html#sl_file_volume_detail)</td>
    </tr>
  <tr>
-   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate)</td>
-   <td>[bluemix sl file volume-list](/docs/cli/reference/softlayer/index.html#sl_file_volume_list)</td>
-   <td>[bluemix sl file volume-order](/docs/cli/reference/softlayer/index.html#sl_file_volume_order)</td>
-   <td>[bluemix sl file volume-options](/docs/cli/reference/softlayer/index.html#sl_file_volume_options)</td>
+   <td>[ibmcloud sl file volume-duplicados](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate)</td>
+   <td>[ibmcloud sl file volume-list](/docs/cli/reference/softlayer/index.html#sl_file_volume_list)</td>
+   <td>[ibmcloud sl file volume-order](/docs/cli/reference/softlayer/index.html#sl_file_volume_order)</td>
+   <td>[ibmcloud sl file volume-options](/docs/cli/reference/softlayer/index.html#sl_file_volume_options)</td>
  </tr>
    </tbody>
  </table>
@@ -159,17 +164,17 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl dns import](/docs/cli/reference/softlayer/index.html#sl_dns_import)</td>
- <td>[bluemix sl dns record-add](/docs/cli/reference/softlayer/index.html#sl_dns_record_add)</td>
- <td>[bluemix sl dns record-edit](/docs/cli/reference/softlayer/index.html#sl_dns_record_edit)</td>
- <td>[bluemix sl dns record-list](/docs/cli/reference/softlayer/index.html#sl_dns_record_list)</td>
- <td>[bluemix sl dns record-remove](/docs/cli/reference/softlayer/index.html#sl_dns_record_remove)</td>
- <td>[bluemix sl dns zone-create](/docs/cli/reference/softlayer/index.html#sl_dns_zone_create)</td>
+ <td>[ibmcloud sl dns import](/docs/cli/reference/softlayer/index.html#sl_dns_import)</td>
+ <td>[Ibmcloud sl dns record-add](/docs/cli/reference/softlayer/index.html#sl_dns_record_add)</td>
+ <td>[ibmcloud sl dns record-edit](/docs/cli/reference/softlayer/index.html#sl_dns_record_edit)</td>
+ <td>[ibmcloud sl dns record-list](/docs/cli/reference/softlayer/index.html#sl_dns_record_list)</td>
+ <td>[ibmcloud sl dns record-remove](/docs/cli/reference/softlayer/index.html#sl_dns_record_remove)</td>
+ <td>[ibmcloud sl dns zone-create](/docs/cli/reference/softlayer/index.html#sl_dns_zone_create)</td>
  </tr>
  <tr>
-   <td>[bluemix sl dns zone-delete](/docs/cli/reference/softlayer/index.html#sl_dns_zone_delete)</td>
-   <td>[bluemix sl dns zone-list](/docs/cli/reference/softlayer/index.html#sl_dns_zone_list)</td>
-   <td>[bluemix sl dns zone-print](/docs/cli/reference/softlayer/index.html#sl_dns_zone_print)</td>
+   <td>[ibmcloud sl dns zone-delete](/docs/cli/reference/softlayer/index.html#sl_dns_zone_delete)</td>
+   <td>[ibmcloud sl dns zone-list](/docs/cli/reference/softlayer/index.html#sl_dns_zone_list)</td>
+   <td>[ibmcloud sl dns zone-print](/docs/cli/reference/softlayer/index.html#sl_dns_zone_print)</td>
  </tr>
    </tbody>
  </table>
@@ -182,11 +187,11 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
-  <td>[bluemix sl globalip assign](/docs/cli/reference/softlayer/index.html#sl_globalip_assign)</td>
-  <td>[bluemix sl globalip cancel](/docs/cli/reference/softlayer/index.html#sl_globalip_cancel)</td>
-  <td>[bluemix sl globalip create](/docs/cli/reference/softlayer/index.html#sl_globalip_create)</td>
- <td>[bluemix sl globalip list](/docs/cli/reference/softlayer/index.html#sl_globalip_list)</td>
- <td>[bluemix sl globalip unassign](/docs/cli/reference/softlayer/index.html#sl_globalip_cancel)</td>
+  <td>[ibmcloud sl globalip assign](/docs/cli/reference/softlayer/index.html#sl_globalip_assign)</td>
+  <td>[ibmcloud sl globalip cancel](/docs/cli/reference/softlayer/index.html#sl_globalip_cancel)</td>
+  <td>[Ibmcloud sl globalip create](/docs/cli/reference/softlayer/index.html#sl_globalip_create)</td>
+ <td>[ibmcloud sl globalip list](/docs/cli/reference/softlayer/index.html#sl_globalip_list)</td>
+ <td>[ibmcloud sl globalip unassign](/docs/cli/reference/softlayer/index.html#sl_globalip_cancel)</td>
  </tr>
    </tbody>
  </table>
@@ -200,10 +205,10 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl image delete](/docs/cli/reference/softlayer/index.html#sl_image_delete)</td>
- <td>[bluemix sl image detail](/docs/cli/reference/softlayer/index.html#sl_image_detail)</td>
- <td>[bluemix sl image edit](/docs/cli/reference/softlayer/index.html#sl_image_edit)</td>
- <td>[bluemix sl image list](/docs/cli/reference/softlayer/index.html#sl_image_list)</td>
+ <td>[ibmcloud sl image delete](/docs/cli/reference/softlayer/index.html#sl_image_delete)</td>
+ <td>[ibmcloud sl image detail](/docs/cli/reference/softlayer/index.html#sl_image_detail)</td>
+ <td>[ibmcloud sl image edit](/docs/cli/reference/softlayer/index.html#sl_image_edit)</td>
+ <td>[ibmcloud sl image list](/docs/cli/reference/softlayer/index.html#sl_image_list)</td>
  </tr>
    </tbody>
  </table>
@@ -217,19 +222,19 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl ipsec cancel](/docs/cli/reference/softlayer/index.html#sl_ipsec_cancel)</td>
- <td>[bluemix sl ipsec config](/docs/cli/reference/softlayer/index.html#sl_ipsec_config)</td>
- <td>[bluemix sl ipsec detail](/docs/cli/reference/softlayer/index.html#sl_ipsec_detail)</td>
- <td>[bluemix sl ipsec list](/docs/cli/reference/softlayer/index.html#sl_ipsec_list)</td>
- <td>[bluemix sl ipsec order](/docs/cli/reference/softlayer/index.html#sl_ipsec_order)</td>
- <td>[bluemix sl ipsec subnet-add](/docs/cli/reference/softlayer/index.html#sl_ipsec_subnet_add)</td>
+ <td>[ibmcloud sl ipsec cancel](/docs/cli/reference/softlayer/index.html#sl_ipsec_cancel)</td>
+ <td>[ibmcloud sl ipsec config](/docs/cli/reference/softlayer/index.html#sl_ipsec_config)</td>
+ <td>[ibmcloud sl ipsec detail](/docs/cli/reference/softlayer/index.html#sl_ipsec_detail)</td>
+ <td>[Sl ipsec list ibmcloud](/docs/cli/reference/softlayer/index.html#sl_ipsec_list)</td>
+ <td>[ibmcloud sl ipsec order](/docs/cli/reference/softlayer/index.html#sl_ipsec_order)</td>
+ <td>[ibmcloud sl ipsec subnet-add](/docs/cli/reference/softlayer/index.html#sl_ipsec_subnet_add)</td>
  </tr>
  <tr>
- <td>[bluemix sl ipsec subnet-remove](/docs/cli/reference/softlayer/index.html#sl_ipsec_subnet_remove)</td>
- <td>[bluemix sl ipsec translation-add](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_add)</td>
- <td>[bluemix sl ipsec translation-remove](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_remove)</td>
- <td>[bluemix sl ipsec translation-update](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_update)</td>
- <td>[bluemix sl ipsec update](/docs/cli/reference/softlayer/index.html#sl_ipsec_update)</td>
+ <td>[ibmcloud sl ipsec subnet-remove](/docs/cli/reference/softlayer/index.html#sl_ipsec_subnet_remove)</td>
+ <td>[ibmcloud sl ipsec translation-add](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_add)</td>
+ <td>[ibmcloud sl ipsec translation-remove](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_remove)</td>
+ <td>[ibmcloud sl ipsec translation-update](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_update)</td>
+ <td>[ibmcloud sl ipsec update](/docs/cli/reference/softlayer/index.html#sl_ipsec_update)</td>
  </tr>
    </tbody>
  </table>
@@ -243,26 +248,26 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl loadbal cancel](/docs/cli/reference/softlayer/index.html#sl_loadbal_cancel)</td>
- <td>[bluemix sl loadbal create](/docs/cli/reference/softlayer/index.html#sl_loadbal_create)</td>
- <td>[bluemix sl loadbal create-options](/docs/cli/reference/softlayer/index.html#sl_loadbal_create_options)</td>
- <td>[bluemix sl loadbal detail](/docs/cli/reference/softlayer/index.html#sl_loadbal_detail)</td>
- <td>[bluemix sl loadbal group-add](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_add)</td>
- <td>[bluemix sl loadbal group-delete](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_delete)</td>
+ <td>[ibmcloud sl loadbal cancel](/docs/cli/reference/softlayer/index.html#sl_loadbal_cancel)</td>
+ <td>[ibmcloud sl loadbal create](/docs/cli/reference/softlayer/index.html#sl_loadbal_create)</td>
+ <td>[Ibmcloud sl loadbal create-options](/docs/cli/reference/softlayer/index.html#sl_loadbal_create_options)</td>
+ <td>[ibmcloud sl loadbal detail](/docs/cli/reference/softlayer/index.html#sl_loadbal_detail)</td>
+ <td>[ibmcloud sl loadbal group-add](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_add)</td>
+ <td>[ibmcloud sl loadbal group-delete](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_delete)</td>
  </tr>
  <tr>
- <td>[bluemix sl loadbal group-edit](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_edit)</td>
- <td>[bluemix sl loadbal group-reset](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_reset)</td>
- <td>[bluemix sl loadbal health-checks](/docs/cli/reference/softlayer/index.html#sl_loadbal_health_checks)</td>
- <td>[bluemix sl loadbal list](/docs/cli/reference/softlayer/index.html#sl_loadbal_list)</td>
- <td>[bluemix sl loadbal routing-methods](/docs/cli/reference/softlayer/index.html#sl_loadbal_routing_methods)</td>
- <td>[bluemix sl loadbal routing-types](/docs/cli/reference/softlayer/index.html#sl_loadbal_routing_types)</td>
+ <td>[ibmcloud sl loadbal group-edit](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_edit)</td>
+ <td>[ibmcloud sl loadbal group-reset](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_reset)</td>
+ <td>[ibmcloud sl loadbal health-checks](/docs/cli/reference/softlayer/index.html#sl_loadbal_health_checks)</td>
+ <td>[ibmcloud sl loadbal list](/docs/cli/reference/softlayer/index.html#sl_loadbal_list)</td>
+ <td>[ibmcloud sl loadbal routing-methods](/docs/cli/reference/softlayer/index.html#sl_loadbal_routing_methods)</td>
+ <td>[ibmcloud sl loadbal routing-types](/docs/cli/reference/softlayer/index.html#sl_loadbal_routing_types)</td>
  </tr>
  <tr>
- <td>[bluemix sl loadbal service-add](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_add)</td>
- <td>[bluemix sl loadbal service-delete](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_delete)</td>
- <td>[bluemix sl loadbal service-edit](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_edit)</td>
- <td>[bluemix sl loadbal service-toggle](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_toggle)</td>
+ <td>[Ibmcloud sl loadbal service-add](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_add)</td>
+ <td>[ibmcloud sl loadbal service-delete](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_delete)</td>
+ <td>[ibmcloud sl loadbal service-edit](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_edit)</td>
+ <td>[ibmcloud sl loadbal service-toggle](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_toggle)</td>
  </tr>
 </tbody>
  </table>
@@ -276,18 +281,18 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
-  <td>[bluemix sl security sshkey-add](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_add)</td>
-  <td>[bluemix sl security sshkey-edit](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_edit)</td>
-  <td>[bluemix sl security sshkey-list](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_list)</td>
-  <td>[bluemix sl security sshkey-print](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_print)</td>   
-  <td>[bluemix sl security sshkey-remove](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_remove)</td>
+  <td>[ibmcloud sl security sshkey-add](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_add)</td>
+  <td>[ibmcloud sl security sshkey-edit](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_edit)</td>
+  <td>[ibmcloud sl security sshkey-list](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_list)</td>
+  <td>[ibmcloud sl security sshkey-print](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_print)</td>   
+  <td>[ibmcloud sl security sshkey-remove](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_remove)</td>
  </tr>
  <tr>
-  <td>[bluemix sl security cert-add](/docs/cli/reference/softlayer/index.html#sl_security_cert_add)</td>
-  <td>[bluemix sl security cert-edit](/docs/cli/reference/softlayer/index.html#sl_security_cert_edit)</td>
-  <td>[bluemix sl security cert-download](/docs/cli/reference/softlayer/index.html#sl_security_cert_download)</td>
-  <td>[bluemix sl security cert-list](/docs/cli/reference/softlayer/index.html#sl_security_cert_list)</td>
-  <td>[bluemix sl security cert-remove](/docs/cli/reference/softlayer/index.html#sl_security_cert_remove)</td>
+  <td>[ibmcloud sl security cert-add](/docs/cli/reference/softlayer/index.html#sl_security_cert_add)</td>
+  <td>[Ibmcloud sl security cert-edit](/docs/cli/reference/softlayer/index.html#sl_security_cert_edit)</td>
+  <td>[ibmcloud sl security cert-download](/docs/cli/reference/softlayer/index.html#sl_security_cert_download)</td>
+  <td>[ibmcloud sl security cert-list](/docs/cli/reference/softlayer/index.html#sl_security_cert_list)</td>
+  <td>[ibmcloud sl security cert-remove](/docs/cli/reference/softlayer/index.html#sl_security_cert_remove)</td>
  </tr>
    </tbody>
  </table>
@@ -301,11 +306,11 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl subnet cancel](/docs/cli/reference/softlayer/index.html#sl_subnet_cancel)</td>
- <td>[bluemix sl subnet create](/docs/cli/reference/softlayer/index.html#sl_subnet_create)</td>
- <td>[bluemix sl subnet detail](/docs/cli/reference/softlayer/index.html#sl_subnet_detail)</td>
- <td>[bluemix sl subnet list](/docs/cli/reference/softlayer/index.html#sl_subnet_list)</td>
- <td>[bluemix sl subnet lookup](/docs/cli/reference/softlayer/index.html#sl_subnet_lookup)</td>
+ <td>[ibmcloud sl subnet cancel](/docs/cli/reference/softlayer/index.html#sl_subnet_cancel)</td>
+ <td>[ibmcloud sl subnet create](/docs/cli/reference/softlayer/index.html#sl_subnet_create)</td>
+ <td>[ibmcloud sl subnet detail](/docs/cli/reference/softlayer/index.html#sl_subnet_detail)</td>
+ <td>[ibmcloud sl subnet list](/docs/cli/reference/softlayer/index.html#sl_subnet_list)</td>
+ <td>[ibmcloud sl subnet lookup](/docs/cli/reference/softlayer/index.html#sl_subnet_lookup)</td>
  </tr>
    </tbody>
  </table>
@@ -319,26 +324,26 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl vs cancel](/docs/cli/reference/softlayer/index.html#sl_vs_cancel)</td>
- <td>[bluemix sl vs capture](/docs/cli/reference/softlayer/index.html#sl_vs_capture)</td>
- <td>[bluemix sl vs create](/docs/cli/reference/softlayer/index.html#sl_vs_create)</td>
- <td>[bluemix sl vs options](/docs/cli/reference/softlayer/index.html#sl_vs_options)</td>
- <td>[bluemix sl vs credentials](/docs/cli/reference/softlayer/index.html#sl_vs_credentials)</td>
- <td>[bluemix sl vs detail](/docs/cli/reference/softlayer/index.html#sl_vs_detail)</td>
+ <td>[ibmcloud sl vs cancel](/docs/cli/reference/softlayer/index.html#sl_vs_cancel)</td>
+ <td>[Sl vs capture ibmcloud](/docs/cli/reference/softlayer/index.html#sl_vs_capture)</td>
+ <td>[ibmcloud sl vs create](/docs/cli/reference/softlayer/index.html#sl_vs_create)</td>
+ <td>[ibmcloud sl vs options](/docs/cli/reference/softlayer/index.html#sl_vs_options)</td>
+ <td>[ibmcloud sl vs credentials](/docs/cli/reference/softlayer/index.html#sl_vs_credentials)</td>
+ <td>[ibmcloud sl vs detail](/docs/cli/reference/softlayer/index.html#sl_vs_detail)</td>
  </tr><tr>
- <td>[bluemix sl vs dns-sync](/docs/cli/reference/softlayer/index.html#sl_vs_dns_sync)</td>
- <td>[bluemix sl vs edit](/docs/cli/reference/softlayer/index.html#sl_vs_edit)</td>
- <td>[bluemix sl vs list](/docs/cli/reference/softlayer/index.html#sl_vs_list)</td>
- <td>[bluemix sl vs pause](/docs/cli/reference/softlayer/index.html#sl_vs_pause)</td>
- <td>[bluemix sl vs power-off](/docs/cli/reference/softlayer/index.html#sl_vs_power_off)</td>
- <td>[bluemix sl vs power-on](/docs/cli/reference/softlayer/index.html#sl_vs_power_on)
+ <td>[ibmcloud sl vs dns-sync](/docs/cli/reference/softlayer/index.html#sl_vs_dns_sync)</td>
+ <td>[ibmcloud sl vs edit](/docs/cli/reference/softlayer/index.html#sl_vs_edit)</td>
+ <td>[ibmcloud sl vs list](/docs/cli/reference/softlayer/index.html#sl_vs_list)</td>
+ <td>[ibmcloud sl vs pause](/docs/cli/reference/softlayer/index.html#sl_vs_pause)</td>
+ <td>[ibmcloud sl vs power-off](/docs/cli/reference/softlayer/index.html#sl_vs_power_off)</td>
+ <td>[Sl vs power-ibmcloud](/docs/cli/reference/softlayer/index.html#sl_vs_power_on)
  </tr><tr>
- <td>[bluemix sl vs ready](/docs/cli/reference/softlayer/index.html#sl_vs_ready)</td>
- <td>[bluemix sl vs reboot](/docs/cli/reference/softlayer/index.html#sl_vs_reboot)</td>
- <td>[bluemix sl vs reload](/docs/cli/reference/softlayer/index.html#sl_vs_reload)</td>
- <td>[bluemix sl vs rescure](/docs/cli/reference/softlayer/index.html#sl_vs_rescure)</td>
- <td>[bluemix sl vs resume](/docs/cli/reference/softlayer/index.html#sl_vs_resume)</td>
- <td>[bluemix sl vs upgrade](/docs/cli/reference/softlayer/index.html#sl_vs_upgrade)</td>
+ <td>[ibmcloud sl vs ready](/docs/cli/reference/softlayer/index.html#sl_vs_ready)</td>
+ <td>[ibmcloud sl vs reboot](/docs/cli/reference/softlayer/index.html#sl_vs_reboot)</td>
+ <td>[ibmcloud sl vs reload](/docs/cli/reference/softlayer/index.html#sl_vs_reload)</td>
+ <td>[ibmcloud sl vs rescure](/docs/cli/reference/softlayer/index.html#sl_vs_rescure)</td>
+ <td>[ibmcloud sl vs resume](/docs/cli/reference/softlayer/index.html#sl_vs_resume)</td>
+ <td>[ibmcloud sl vs upgrade](/docs/cli/reference/softlayer/index.html#sl_vs_upgrade)</td>
  </tr>
    </tbody>
  </table>
@@ -352,25 +357,25 @@ Os comandos a seguir são compatíveis. Use o comando `bluemix sl` para ver a li
  </thead>
  <tbody>
  <tr>
- <td>[bluemix sl vlan create](/docs/cli/reference/softlayer/index.html#sl_vlan_create)</td>
- <td>[bluemix sl vlan cancel](/docs/cli/reference/softlayer/index.html#sl_vlan_cancel)</td>
- <td>[bluemix sl vlan detail](/docs/cli/reference/softlayer/index.html#sl_vlan_detail)</td>
- <td>[bluemix sl vlan edit](/docs/cli/reference/softlayer/index.html#sl_vlan_edite)</td>
- <td>[bluemix sl vlan list](/docs/cli/reference/softlayer/index.html#sl_vlan_list)</td>
- <td>[bluemix sl vlan options](/docs/cli/reference/softlayer/index.html#sl_vlan_options)</td>
+ <td>[ibmcloud sl vlan create](/docs/cli/reference/softlayer/index.html#sl_vlan_create)</td>
+ <td>[ibmcloud sl vlan cancel](/docs/cli/reference/softlayer/index.html#sl_vlan_cancel)</td>
+ <td>[ibmcloud sl vlan detail](/docs/cli/reference/softlayer/index.html#sl_vlan_detail)</td>
+ <td>[Sl vlan edit ibmcloud](/docs/cli/reference/softlayer/index.html#sl_vlan_edite)</td>
+ <td>[ibmcloud sl vlan list](/docs/cli/reference/softlayer/index.html#sl_vlan_list)</td>
+ <td>[ibmcloud sl vlan options](/docs/cli/reference/softlayer/index.html#sl_vlan_options)</td>
  </tr>
    </tbody>
  </table>
 
 ### Uso do comando
-Para visualizar informações da ajuda dos comandos, execute: `bluemix sl [command] -h`.
+Para visualizar informações da ajuda para os comandos, execute: `ibmcloud sl [command] -h`.
 
-### bluemix sl init
+### Ibmcloud sl init
 {: #sl_init}
 
 Inicializar as definições de configuração que são usadas para se conectar ao ambiente de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}. A configuração inclui o nome do usuário, a chave API ou a senha, a conta e o terminal.
 ```
-bluemix sl init [OPTIONS]
+Ibmcloud sl init [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -397,7 +402,7 @@ bluemix sl init [OPTIONS]
 
 Por exemplo, login com nome do usuário e senha/chave API da infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}
 ```
-$ bluemix sl config
+$ ibmcloud sl config
 Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
 1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
 2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
@@ -413,7 +418,7 @@ API Key:                   xxxxxxxxxx
 ```
 Por exemplo, use a conexão única do {{site.data.keyword.Bluemix_notm}} para efetuar login no Softlayer
 ```
-$ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
+$ ibmcloud login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
 Authenticating...
 OK
@@ -424,43 +429,43 @@ API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
 Region:         us-south   
 User:           wangjunl@cn.ibm.com   
 Account:        Wilma's Account (65ce8074c6c62b5)   
-No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
+No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
 
-Tip: use 'bx cf <command>' to run the Cloud Foundry CLI with {{site.data.keyword.Bluemix_notm}} CLI context.
+Tip: use 'ibmcloud cf <command>' to run the Cloud Foundry CLI with {{site.data.keyword.Bluemix_notm}} CLI context.
 ```
 
 ```
-$ bx sl init
+$ ibmcloud sl init
 Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
 1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
 2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 
 Enter a number: 2
-Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1] 
+Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]
 Setting account to: 278444
 OK
-                              
+
 Softlayer API endpoint:    https://api.softlayer.com/mobile/v3.1
 Account ID:                278444
 User ID:                   12345678
 IMS token:                 xxxxxxxxxx
 ```
 
-### bluemix sl help
+### ibmcloud sl help
 {: #sl_help}
 
 Visualizar informações da ajuda para todos os comandos para operar o ambiente de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}.
 ```
-bluemix sl help
+ibmcloud sl help
 
 ```
 
-### bluemix sl block access-authorize 
-{: #sl_block_access_authorize} 
+### Ibmcloud sl block access-authorize
+{: #sl_block_access_authorize}
 
 Autorizar hosts a acessar um determinado volume.
 ```
-bluemix sl block access-authorize VOLUME_ID [OPTIONS]
+Ibmcloud sl block access-authorize VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -477,16 +482,16 @@ bluemix sl block access-authorize VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block access-authorize 12345678 --virtual-id 87654321
+ibmcloud sl block access-authorize 12345678 --virtual-id 87654321
 ```
 Esse comando autoriza o servidor virtual com ID 87654321 a acessar o volume com ID 12345678.
 
-### bluemix sl block access-list 
-{: #sl_block_access_list} 
+### ibmcloud sl block access-list
+{: #sl_block_access_list}
 
 Listar ACLs.
 ```
-bluemix sl block access-list VOLUME_ID [OPTIONS]
+Ibmcloud sl block access-list VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -499,16 +504,16 @@ bluemix sl block access-list VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block access-list 12345678 --sortby id
+ibmcloud sl block access-list 12345678 --sortby id
 ```
 Esse comando lista todos os hosts que estão autorizados a acessar o volume com ID 12345678 e os classifica por ID.
 
-### bluemix sl block access-revoke 
-{: #sl_block_access_revoke} 
+### Ibmcloud sl block access-revoke
+{: #sl_block_access_revoke}
 
 Revogar autorização para hosts que acessam um determinado volume.
 ```
-bluemix sl block access-revoke VOLUME_ID [OPTIONS]
+Ibmcloud sl block access-revoke VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -525,61 +530,61 @@ bluemix sl block access-revoke VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block access-revoke 12345678 --virtual-id 87654321
+ibmcloud sl block access-revoke 12345678 --virtual-id 87654321
 ```
 Esse comando revoga o acesso do servidor virtual com ID 87654321 para o volume com ID 12345678.
 
-### bluemix sl block replica-failback 
-{: #sl_block_replica_failback} 
+### Ibmcloud sl block replica-failback
+{: #sl_block_replica_failback}
 
 Efetuar failback de um volume de bloco da réplica.
 ```
-bluemix sl block replica-failback VOLUME_ID
+Ibmcloud sl block replica-failback VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl block replica-failback 12345678
+Ibmcloud sl block replica-failback 12345678
 ```
 Esse comando executa a operação de failback para o volume com ID 12345678.
 
-### bluemix sl block replica-failover 
-{: #sl_block_replica_failover} 
+### Ibmcloud sl block replica-failover
+{: #sl_block_replica_failover}
 
 Efetuar failover de um volume de bloco no volume de réplica especificado.
 ```
-bluemix sl block replica-failover VOLUME_ID REPLICA_ID
+Ibmcloud sl block replica-failover VOLUME_ID REPLICA_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl block replica-failover 12345678 87654321
+Ibmcloud sl block replica-failover 12345678 87654321
 ```
 Esse comando executa a operação de failover do volume com ID 12345678 para o volume de réplica com ID 87654321.
 
-### bluemix sl block replica-locations 
-{: #sl_block_replica_locations} 
+### Ibmcloud sl block replica-locations
+{: #sl_block_replica_locations}
 
 Listar data centers de replicação adequados para o volume especificado.
 ```
-bluemix sl block replica-locations VOLUME_ID
+Ibmcloud sl block replica-locations VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl block replica-locations 12345678
+Ibmcloud sl block replica-locations 12345678
 ```
 Esse comando lista os data centers de replicação adequados para o volume de bloco com ID 12345678.
 
-### bluemix sl block replica-order 
-{: #sl_block_replica_order} 
+### Ibmcloud sl block replica-order
+{: #sl_block_replica_order}
 
 Pedir um volume de réplica de armazenamento de bloco.
 ```
-bluemix sl block replica-order VOLUME_ID [OPTIONS]
+Ibmcloud sl block replica-order VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -600,31 +605,31 @@ bluemix sl block replica-order VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LINUX
+ibmcloud sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LINUX
 ```
 Esse comando pede uma réplica para o volume com ID 12345678, que executa a replicação DAILY, está localizado em dal09, o nível de camada é 4, o tipo de OS é Linux.
 
-### bluemix sl block replica-partners 
-{: #sl_block_replica_partners} 
+### Ibmcloud sl block replica-partners
+{: #sl_block_replica_partners}
 
 Listar volumes replicantes existentes para um volume de bloco.
 ```
-bluemix sl block replica-partners VOLUME_ID [OPTIONS]
+Ibmcloud sl block replica-partners VOLUME_ID [ OPTIONS ]
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl block replica-partners 12345678
+Ibmcloud sl block replica-partners 12345678
 ```
 Esse comando lista volumes replicantes existentes para o volume de bloco com ID 12345678.
 
-### bluemix sl block snapshot-cancel 
-{: #sl_block_snapshot_cancel} 
+### Ibmcloud sl block snapshot-cancel
+{: #sl_block_snapshot_cancel}
 
 Cancelar o espaço de captura instantânea existente para um determinado volume.
 ```
-bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
+Ibmcloud sl block snapshot-cancel SNAPSHOT_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -639,16 +644,16 @@ bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block snapshot-cancel 12345678 --immediate -f
+ibmcloud sl block snapshot-cancel 12345678 --immediate -f
 ```
 Esse comando cancela a captura instantânea com ID 12345678 imediatamente sem pedir confirmação.
 
-### bluemix sl block snapshot-create 
-{: #sl_block_snapshot_create} 
+### Ibmcloud sl block snapshot-create
+{: #sl_block_snapshot_create}
 
 Criar uma captura instantânea em um determinado volume.
 ```
-bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
+Ibmcloud sl block snapshot-create VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -659,16 +664,16 @@ bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
+ibmcloud sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 Esse comando cria uma captura instantânea para o volume com ID 12345678 e com nota de adição como snapshotforbluemix.
 
-### bluemix sl block snapshot-disable 
-{: #sl_block_snapshot_disable} 
+### Ibmcloud sl block snapshot-disable
+{: #sl_block_snapshot_disable}
 
 Desativar capturas instantâneas no planejamento especificado para um determinado volume.
 ```
-bluemix sl block snapshot-disable VOLUME_ID [OPTIONS]
+Ibmcloud sl block snapshot-disable VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -679,16 +684,16 @@ bluemix sl block snapshot-disable VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block snapshot-disable 12345678 -s DAILY
+ibmcloud sl block snapshot-disable 12345678 -s DAILY
 ```
 Esse comando desativa a captura instantânea diária para o volume com ID 12345678.
 
-### bluemix sl block snapshot-enable 
-{: #sl_block_snapshot_enable} 
+### ibmcloud sl block snapshot-enable
+{: #sl_block_snapshot_enable}
 
 Ativar capturas instantâneas para um determinado volume no planejamento especificado.
 ```
-bluemix sl block snapshot-enable VOLUME_ID [OPTIONS]
+Ibmcloud sl block snapshot-enable VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -707,31 +712,31 @@ bluemix sl block snapshot-enable VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
+ibmcloud sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Esse comando ativa a captura instantânea para o volume com ID 12345678, a captura instantânea é tomada semanalmente todo domingo às 2h e até cinco capturas instantâneas são retidas.
 
-### bluemix sl block snapshot-delete 
-{: #sl_block_snapshot_delete} 
+### Ibmcloud sl block snapshot-delete
+{: #sl_block_snapshot_delete}
 
 Excluir uma captura instantânea em um determinado volume.
 ```
-bluemix sl block snapshot-delete SNAPSHOT_ID
+Ibmcloud sl block snapshot-delete SNAPSHOT_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl block snapshot-delete 12345678
+Ibmcloud sl block snapshot-delete 12345678
 ```
 Esse comando exclui a captura instantânea com ID 12345678.
 
-### bluemix sl block snapshot-list 
-{: #sl_block_snapshot_list} 
+### Ibmcloud sl block snapshot-list
+{: #sl_block_snapshot_list}
 
 Listar capturas instantâneas de armazenamento de bloco.
 ```
-bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
+Ibmcloud sl block snapshot-list VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -742,16 +747,16 @@ bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block snapshot-list 12345678 --sortby id
+ibmcloud sl block snapshot-list 12345678 --sortby id
 ```
 Esse comando lista todas as capturas instantâneas do volume com ID 12345678 e as classifica por ID.
 
-### bluemix sl block snapshot-order 
-{: #sl_block_snapshot_order} 
+### Ibmcloud sl block snapshot-order
+{: #sl_block_snapshot_order}
 
 Pedir espaço de captura instantânea para um volume de armazenamento de bloco.
 ```
-bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
+Ibmcloud sl block snapshot-order VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -770,31 +775,31 @@ bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block snapshot-order 12345678 -s 1000 -t 4
+ibmcloud sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 Esse comando pede o espaço de captura instantânea para o volume com ID 12345678; o tamanho é 1.000 GB, o nível de camada é 4 IOPS por GB.
 
-### bluemix sl block snapshot-restore 
-{: #sl_block_snapshot_restore} 
+### Ibmcloud sl block snapshot-restore
+{: #sl_block_snapshot_restore}
 
 Restaurar volume de bloco usando uma captura instantânea especificada.
 ```
-bluemix sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
+Ibmcloud sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl block snapshot-restore 12345678 87654321
+Ibmcloud sl block snapshot-restore 12345678 87654321
 ```
 Esse comando restaura o volume com ID 12345678 da captura instantânea com ID 87654321.
 
-### bluemix sl block volume-cancel 
-{: #sl_block_volume_cancel} 
+### Ibmcloud sl block volume-cancel
+{: #sl_block_volume_cancel}
 
 Cancelar um volume de armazenamento de bloco existente.
 ```
-bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
+Ibmcloud sl block volume-cancel VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -809,16 +814,16 @@ bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block volume-cancel 12345678 --immediate -f
+ibmcloud sl block volume-cancel 12345678 --immediate -f
 ```
 Esse comando cancela o volume com ID 12345678 imediatamente e sem pedir confirmação.
 
-### bluemix sl block volume-list 
-{: #sl_block_volume_list} 
+### Ibmcloud sl block volume-list
+{: #sl_block_volume_list}
 
 Listar armazenamento de bloco.
 ```
-bluemix sl block volume-list [OPTIONS]
+Ibmcloud sl block volume-list [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -839,31 +844,31 @@ bluemix sl block volume-list [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
+ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Esse comando lista todos os volumes de resistência na conta atual que estão localizados em dal09 e os classifica por capacidade.
 
-### bluemix sl block volume-detail 
-{: #sl_block_volume_detail} 
+### Ibmcloud sl block volume-detail
+{: #sl_block_volume_detail}
 
 Exibir detalhes para um volume especificado.
 ```
-bluemix sl block volume-detail VOLUME_ID
+Ibmcloud sl block volume-detail VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl block volume-detail 12345678
+Ibmcloud sl block volume-detail 12345678
 ```
 Esse comando mostra os detalhes do volume com ID 12345678.
 
-### bluemix sl block volume-duplicate 
-{: #sl_block_volume_duplicate} 
+### Ibmcloud sl block volume-duplicate
+{: #sl_block_volume_duplicate}
 
 Pedir um volume de bloco duplicando um volume existente.
 ```
-bluemix sl block volume-duplicate VOLUME_ID [OPTIONS]
+Ibmcloud sl block volume-duplicate VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -884,16 +889,16 @@ bluemix sl block volume-duplicate VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block volume-duplicate 12345678
+Ibmcloud sl block volume-duplicate 12345678
 ```
 Esse comando mostra a ordem de um novo volume duplicando o volume com ID 12345678.
 
-### bluemix sl block volume-order 
-{: #sl_block_volume_order} 
+### Ibmcloud sl block volume-order
+{: #sl_block_volume_order}
 
 Pedir um volume de armazenamento de bloco.
 ```
-bluemix sl block volume-order [OPTIONS]
+Ibmcloud sl block volume-order [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -918,31 +923,31 @@ bluemix sl block volume-order [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
+ibmcloud sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
 ```
 Esse comando pede um volume de desempenho com tamanho 1.000 GB, IOPS 4.000, tipo de OS LINUX, localizado em dal09.
 
-### bluemix sl block volume-options 
-{: #sl_block_volume_options} 
+### ibmcloud sl block volume-options
+{: #sl_block_volume_options}
 
 Listar todas as opções para pedir um armazenamento de bloco.
 ```
-bluemix sl block volume-options
+ibmcloud sl block volume-options
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl block volume-options
+ibmcloud sl block volume-options
 ```
 Esse comando lista todas as opções para criar um volume de armazenamento de bloco, incluindo tipo de armazenamento, tamanho do volume, tipo de OS, IOPS, nível de camada, data center e tamanho da captura instantânea.
 
-### bluemix sl cdn cancel 
-{: #sl_cdn_cancel} 
+### Sl cdn cancel ibmcloud
+{: #sl_cdn_cancel}
 
 Cancelar uma conta do CDN.
 ```
-bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
+Ibmcloud sl cdn cancel ACCOUNT_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -950,20 +955,20 @@ bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
 <dt>-f, --force</dt>
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
-### bluemix sl cdn detail 
-{: #sl_cdn_detail} 
+### Sl cdn detail ibmcloud
+{: #sl_cdn_detail}
 
 Detalhar uma Conta do CDN.
 ```
-bluemix sl cdn detail ACCOUNT_ID
+ibmcloud sl cdn detail ACCOUNT_ID
 ```
 
-### bluemix sl cdn list 
-{: #sl_cdn_list} 
+### Sl cdn list ibmcloud
+{: #sl_cdn_list}
 
 Listar todas as contas do CDN.
 ```
-bluemix sl cdn list [OPTIONS]
+Sl cdn list ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -973,20 +978,20 @@ bluemix sl cdn list [OPTIONS]
 <dt>--order</dt>
 <dd>Filtrar pelo ID da ordem.</dd>
 </dl>
-### bluemix sl cdn load 
-{: #sl_cdn_load} 
+### Sl cdn load ibmcloud
+{: #sl_cdn_load}
 
 Armazenar em cache um ou mais arquivos em todos os nós da borda.
 ```
-bluemix sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
+ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### bluemix sl cdn order 
-{: #sl_cdn_order} 
+### Ordem ibmcloud sl cdn
+{: #sl_cdn_order}
 
 Pedir uma conta do CDN.
 ```
-bluemix sl cdn order [OPTIONS]
+Sl cdn order ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -998,20 +1003,20 @@ bluemix sl cdn order [OPTIONS]
 <dt>-f, --force</dt>
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
-### bluemix sl cdn options 
-{: #sl_cdn_options} 
+### ibmcloud sl cdn options
+{: #sl_cdn_options}
 
 Opções de largura da banda e de armazenamento para pedir a conta do CDN.
 ```
-bluemix sl cdn options
+ibmcloud sl cdn options
 ```
 
-### bluemix sl cdn origin-add 
-{: #sl_cdn_origin_add} 
+### ibmcloud sl cdn origin-add
+{: #sl_cdn_origin_add}
 
 Criar um mapeamento pull de origem.
 ```
-bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
+ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1021,20 +1026,20 @@ bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dt>-c, --cname</dt>
 <dd>Um CNAME opcional para anexar ao mapeamento.</dd>
 </dl>
-### bluemix sl cdn origin-list 
-{: #sl_cdn_origin_list} 
+### Ibmcloud sl cdn origin-list
+{: #sl_cdn_origin_list}
 
 Listar mapeamentos pull de origem.
 ```
-bluemix sl cdn origin-list ACCOUNT_ID
+Ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
 
-### bluemix sl cdn origin-remove 
-{: #sl_cdn_origin_remove} 
+### Ibmcloud sl cdn origin-remove
+{: #sl_cdn_origin_remove}
 
 Remover um mapeamento pull de origem.
 ```
-bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
+ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1042,12 +1047,12 @@ bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 <dt>-f, --force</dt>
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
-### bluemix sl cdn purge 
-{: #sl_cdn_purge} 
+### Sl cdn purge ibmcloud
+{: #sl_cdn_purge}
 
 Limpar arquivos em cache de todos os nós da borda.
 ```
-bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
+ibmcloud sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1055,12 +1060,12 @@ bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
 <dt>-f, --force</dt>
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
-### bluemix sl file access-authorize 
-{: #sl_file_access_authorize} 
+### Sl file access-authorize ibmcloud
+{: #sl_file_access_authorize}
 
 Autorizar hosts a acessar um determinado volume.
 ```
-bluemix sl file access-authorize VOLUME_ID [OPTIONS]
+Sl file access-ibmcloud authorize VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1079,16 +1084,16 @@ bluemix sl file access-authorize VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file access-authorize 12345678 --virtual-id 87654321
+ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
 Esse comando autoriza o servidor virtual com ID 87654321 a acessar o volume com ID 12345678.
 
-### bluemix sl file access-list 
-{: #sl_file_access_list} 
+### Ibmcloud sl file access-list
+{: #sl_file_access_list}
 
 Listar ACLs.
 ```
-bluemix sl file access-list VOLUME_ID [OPTIONS]
+ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1101,16 +1106,16 @@ bluemix sl file access-list VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file access-list 12345678 --sortby id
+ibmcloud sl file access-list 12345678 --sortby id
 ```
 Esse comando lista todos os hosts que estão autorizados a acessar o volume com ID 12345678 e os classifica por ID.
 
-### bluemix sl file access-revoke 
-{: #sl_file_access_revoke} 
+### Sl file access-revoke ibmcloud
+{: #sl_file_access_revoke}
 
 Revogar autorização para hosts que acessam um determinado volume.
 ```
-bluemix sl file access-revoke VOLUME_ID [OPTIONS]
+Sl file access-ibmcloud revoke VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1129,61 +1134,61 @@ bluemix sl file access-revoke VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file access-revoke 12345678 --virtual-id 87654321
+ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
 Esse comando revoga o acesso do servidor virtual com ID 87654321 para o volume com ID 12345678.
 
-### bluemix sl file replica-failback 
-{: #sl_file_replica_failback} 
+### Ibmcloud sl file replica-failback
+{: #sl_file_replica_failback}
 
 Efetuar failback de um volume de arquivo da réplica.
 ```
-bluemix sl file replica-failback VOLUME_ID
+Ibmcloud sl file replica-failback VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl file replica-failback 12345678
+Ibmcloud sl file replica-failback 12345678
 ```
 Esse comando executa a operação de failback para o volume com ID 12345678.
 
-### bluemix sl file replica-failover 
-{: #sl_file_replica_failover} 
+### Ibmcloud sl file replica-failover
+{: #sl_file_replica_failover}
 
 Efetuar failover de um volume de arquivo no volume de réplica especificado.
 ```
-bluemix sl file replica-failover VOLUME_ID REPLICA_ID
+Ibmcloud sl file replica-failover VOLUME_ID REPLICA_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl file replica-failover 12345678 87654321
+Ibmcloud sl file replica-failover 12345678 87654321
 ```
 Esse comando executa a operação de failover do volume com ID 12345678 para o volume de réplica com ID 87654321.
 
-### bluemix sl file replica-locations 
-{: #sl_file_replica_locations} 
+### Ibmcloud sl file replica-locations
+{: #sl_file_replica_locations}
 
 Listar data centers de replicação adequados para o volume especificado.
 ```
-bluemix sl file replica-locations VOLUME_ID
+Ibmcloud sl file replica-locations VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl file replica-locations 12345678
+Ibmcloud sl file replica-locations 12345678
 ```
 Esse comando lista data centers de replicação adequados para o volume de arquivo com ID 12345678.
 
-### bluemix sl file replica-order 
-{: #sl_file_replica_order} 
+### ibmcloud sl file replica-order
+{: #sl_file_replica_order}
 
 Pedir um volume de réplica de armazenamento de arquivo.
 ```
-bluemix sl file replica-order VOLUME_ID [OPTIONS]
+ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1202,31 +1207,31 @@ bluemix sl file replica-order VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
+ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 Esse comando pede uma réplica para o volume com ID 12345678, que executa a replicação DAILY, está localizado em dal09, o nível de camada é 4.
 
-### bluemix sl file replica-partners 
-{: #sl_file_replica_partners} 
+### Ibmcloud sl file replica-partners
+{: #sl_file_replica_partners}
 
 Listar volumes replicantes existentes para um volume de arquivo.
 ```
-bluemix sl file replica-partners VOLUME_ID [OPTIONS]
+Ibmcloud sl file replica-partners VOLUME_ID [ OPTIONS ]
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl file replica-partners 12345678
+Ibmcloud sl file replica-partners 12345678
 ```
 Esse comando lista volumes replicantes existentes para o volume de arquivo com ID 12345678.
 
-### bluemix sl file snapshot-cancel 
-{: #sl_file_snapshot_cancel} 
+### Ibmcloud sl file snapshot-cancel
+{: #sl_file_snapshot_cancel}
 
 Cancelar o espaço de captura instantânea existente para um determinado volume.
 ```
-bluemix sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
+Sl file snapshot-cancel SNAPSHOT_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1241,16 +1246,16 @@ bluemix sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file snapshot-cancel 12345678 --immediate -f
+ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 ```
 Esse comando cancela a captura instantânea com ID 12345678 imediatamente sem pedir confirmação.
 
-### bluemix sl file snapshot-create 
-{: #sl_file_snapshot_create} 
+### Ibmcloud sl file snapshot-create
+{: #sl_file_snapshot_create}
 
 Criar uma captura instantânea em um determinado volume.
 ```
-bluemix sl file snapshot-create VOLUME_ID [OPTIONS]
+Sl file snapshot-create VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1261,16 +1266,16 @@ bluemix sl file snapshot-create VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file snapshot-create 12345678 --note snapshotforbluemix
+ibmcloud sl file snapshot-create 12345678 --note snapshotforbluemix
 ```
 Esse comando cria uma captura instantânea para o volume com ID 12345678 e com nota de adição como snapshotforbluemix.
 
-### bluemix sl file snapshot-disable 
-{: #sl_file_snapshot_disable} 
+### Sl file snapshot-disable ibmcloud
+{: #sl_file_snapshot_disable}
 
 Desativar capturas instantâneas no planejamento especificado para um determinado volume.
 ```
-bluemix sl file snapshot-disable VOLUME_ID [OPTIONS]
+Sl file snapshot-disable VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1281,16 +1286,16 @@ bluemix sl file snapshot-disable VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file snapshot-disable 12345678 -s DAILY
+ibmcloud sl file snapshot-disable 12345678 -s DAILY
 ```
 Esse comando desativa a captura instantânea diária para o volume com ID 12345678.
 
-### bluemix sl file snapshot-enable 
-{: #sl_file_snapshot_enable} 
+### Sl file snapshot-enable ibmcloud
+{: #sl_file_snapshot_enable}
 
 Ativar capturas instantâneas para um determinado volume no planejamento especificado.
 ```
-bluemix sl file snapshot-enable VOLUME_ID [OPTIONS]
+ibmcloud sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1309,31 +1314,31 @@ bluemix sl file snapshot-enable VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
+ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Esse comando ativa a captura instantânea para o volume com ID 12345678, a captura instantânea é tomada semanalmente todo domingo às 2h e até cinco capturas instantâneas são retidas.
 
-### bluemix sl file snapshot-delete 
-{: #sl_file_snapshot_delete} 
+### Ibmcloud sl file snapshot-delete
+{: #sl_file_snapshot_delete}
 
 Excluir uma captura instantânea em um determinado volume.
 ```
-bluemix sl file snapshot-delete SNAPSHOT_ID
+Ibmcloud sl file snapshot-delete SNAPSHOT_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl file snapshot-delete 12345678
+Ibmcloud sl file snapshot-delete 12345678
 ```
 Esse comando exclui a captura instantânea com ID 12345678.
 
-### bluemix sl file snapshot-list 
-{: #sl_file_snapshot_list} 
+### Ibmcloud sl file snapshot-list
+{: #sl_file_snapshot_list}
 
 Listar capturas instantâneas do armazenamento de arquivo.
 ```
-bluemix sl file snapshot-list VOLUME_ID [OPTIONS]
+Ibmcloud sl file snapshot-list VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1344,16 +1349,16 @@ bluemix sl file snapshot-list VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file snapshot-list 12345678 --sortby id
+ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
 Esse comando lista todas as capturas instantâneas do volume com ID 12345678 e as classifica por ID.
 
-### bluemix sl file snapshot-order 
-{: #sl_file_snapshot_order} 
+### Ibmcloud sl file snapshot-order
+{: #sl_file_snapshot_order}
 
 Pedir espaço de captura instantânea para um volume de armazenamento de arquivo.
 ```
-bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
+Ibmcloud sl file snapshot-order VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1372,31 +1377,31 @@ bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file snapshot-order 12345678 -s 1000 -t 4
+ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 Esse comando pede espaço de captura instantânea para o volume com ID 12345678, o tamanho é 1.000 GB, o nível de camada é 4 IOPS por GB.
 
-### bluemix sl file snapshot-restore 
-{: #sl_file_snapshot_restore} 
+### Ibmcloud sl file snapshot-restore
+{: #sl_file_snapshot_restore}
 
 Restaurar volume de arquivo usando uma captura instantânea especificada.
 ```
-bluemix sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
+Ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl file snapshot-restore 12345678 87654321
+Ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 Esse comando restaura o volume com ID 12345678 da captura instantânea com ID 87654321.
 
-### bluemix sl file volume-cancel 
-{: #sl_file_volume_cancel} 
+### ibmcloud sl file volume-cancel
+{: #sl_file_volume_cancel}
 
 Cancelar um volume de armazenamento de arquivo existente.
 ```
-bluemix sl file volume-cancel VOLUME_ID [OPTIONS]
+ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1411,16 +1416,16 @@ bluemix sl file volume-cancel VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file volume-cancel 12345678 --immediate -f
+ibmcloud sl file volume-cancel 12345678 --immediate -f
 ```
 Esse comando cancela o volume com ID 12345678 imediatamente e sem pedir confirmação.
 
-### bluemix sl file volume-list 
-{: #sl_file_volume_list} 
+### Ibmcloud sl file volume-list
+{: #sl_file_volume_list}
 
 Listar armazenamento de arquivo.
 ```
-bluemix sl file volume-list [OPTIONS]
+Ibmcloud sl file volume-list [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1441,31 +1446,31 @@ bluemix sl file volume-list [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file volume-list -d dal09 -t endurance --sortby capacity_gb
+ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Esse comando lista todos os volumes de resistência na conta atual que estão localizados em dal09 e os classifica por capacidade.
 
-### bluemix sl file volume-detail 
-{: #sl_file_volume_detail} 
+### Ibmcloud sl file volume-detail
+{: #sl_file_volume_detail}
 
 Exibir detalhes para um volume especificado.
 ```
-bluemix sl file volume-detail VOLUME_ID
+Ibmcloud sl file volume-detail VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl file volume-detail 12345678
+Ibmcloud sl file volume-detail 12345678
 ```
 Esse comando mostra os detalhes do volume com ID 12345678.
 
-### bluemix sl file volume-duplicate 
-{: #sl_file_volume_duplicate} 
+### Ibmcloud sl file volume-duplicate
+{: #sl_file_volume_duplicate}
 
 Pedir um volume de arquivo duplicando um volume existente.
 ```
-bluemix sl file volume-duplicate VOLUME_ID [OPTIONS]
+Sl file volume-duplicate VOLUME_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1486,16 +1491,16 @@ bluemix sl file volume-duplicate VOLUME_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file volume-duplicate 12345678
+Ibmcloud sl file volume-duplicate 12345678
 ```
 Esse comando mostra a ordem de um novo volume duplicando o volume com ID 12345678.
 
-### bluemix sl file volume-order 
-{: #sl_file_volume_order} 
+### Ibmcloud sl file volume-order
+{: #sl_file_volume_order}
 
 Pedir um volume de armazenamento de arquivo.
 ```
-bluemix sl file volume-order [OPTIONS]
+Ibmcloud sl file volume-order [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1518,31 +1523,31 @@ bluemix sl file volume-order [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
+ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
 Esse comando pede um volume de desempenho com o tamanho 1.000 GB, IOPS de 4.000, localizado em dal09.
 
-### bluemix sl file volume-options 
-{: #sl_file_volume_options} 
+### ibmcloud sl file volume-options
+{: #sl_file_volume_options}
 
 Listar todas as opções para pedir um armazenamento de arquivo.
 ```
-bluemix sl file volume-options
+ibmcloud sl file volume-options
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl file volume-options
+ibmcloud sl file volume-options
 ```
 Esse comando lista todas as opções para criar um volume de armazenamento de arquivo, incluindo o tipo de armazenamento, o tamanho do volume, o IOPS, o nível de camada, o data center e o tamanho da captura instantânea.
 
-### bluemix sl dns import 
-{: #sl_dns_import} 
+### Sl dns import ibmcloud
+{: #sl_dns_import}
 
 Importar uma zona com base em um arquivo de zona BIND.
 ```
-bluemix sl dns import ZONEFILE [OPTIONS]
+ibmcloud sl dns import ZONEFILE [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1553,16 +1558,16 @@ bluemix sl dns import ZONEFILE [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl dns import ~/blumix.net.txt
+Sl dns import ibmcloud
 ```
 Esse comando importa a zona e seus registros de recursos do arquivo: ~/blumix.net.txt.
 
-### bluemix sl dns record-add 
-{: #sl_dns_record_add} 
+### Ibmcloud sl dns record-add
+{: #sl_dns_record_add}
 
 Incluir registro de recurso em uma zona.
 ```
-bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
+ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1573,16 +1578,16 @@ bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
+ibmcloud sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
 ```
 Esse comando inclui um registro A na zona: bluemix.net, seu host é "ftp", os dados são "127.0.0.1" e ttl é 86400 segundos.
 
-### bluemix sl dns record-edit 
-{: #sl_dns_record_edit} 
+### ibmcloud sl dns record-edit
+{: #sl_dns_record_edit}
 
 Atualizar registros de recurso em uma zona.
 ```
-bluemix sl dns record-edit ZONE [OPTIONS]
+Ibmcloud sl dns record-edit ZONE [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1599,16 +1604,16 @@ bluemix sl dns record-edit ZONE [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
+ibmcloud sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 Esse comando edita registros na zona: bluemix.net, cujo ID é 12345678 e configura seus dados como "127.0.0.2" e ttl como 3600.
 
-### bluemix sl dns record-list 
-{: #sl_dns_record_list} 
+### Ibmcloud sl dns record-list
+{: #sl_dns_record_list}
 
 Listar todos os registros de recurso em uma zona.
 ```
-bluemix sl dns record-list ZONE [OPTIONS]
+Ibmcloud sl dns record-list ZONE [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1625,91 +1630,91 @@ bluemix sl dns record-list ZONE [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
+ibmcloud sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
 ```
 Esse comando lista todos os registros A na zona: bluemix.net, filtrado pelo host é elasticsearch e ttl é 900 segundos.
 
-### bluemix sl dns record-remove 
-{: #sl_dns_record_remove} 
+### Ibmcloud sl dns record-remove
+{: #sl_dns_record_remove}
 
 Remover registro de recurso de uma zona.
 ```
-bluemix sl dns record-remove RECORD_ID
+Ibmcloud sl dns record-remove RECORD_ID
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl dns record-remove 12345678
+Ibmcloud sl dns record-remove 12345678
 ```
 Esse comando remove o registro de recurso com ID 12345678.
 
-### bluemix sl dns zone-create 
-{: #sl_dns_zone_create} 
+### Ibmcloud sl dns zone-create
+{: #sl_dns_zone_create}
 
 Criar uma zona.
 ```
-bluemix sl dns zone-create ZONE
+ibmcloud sl dns zone-create ZONE
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl dns zone-create bluemix.net
+Ibmcloud sl dns zone-create bluemix.net
 ```
 Esse comando cria uma zona denominada bluemix.net.
 
-### bluemix sl dns zone-delete 
-{: #sl_dns_zone_delete} 
+### Ibmcloud sl dns zone-delete
+{: #sl_dns_zone_delete}
 
 Excluir uma zona.
 ```
-bluemix sl dns zone-delete ZONE
+Ibmcloud sl dns zone-delete ZONE
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl dns zone-delete bluemix.net
+Ibmcloud sl dns zone-delete bluemix.net
 ```
 Esse comando exclui uma zona denominada bluemix.net.
 
-### bluemix sl dns zone-list 
-{: #sl_dns_zone_list} 
+### ibmcloud sl dns zone-list
+{: #sl_dns_zone_list}
 
 Listar todas as zonas em sua conta.
 ```
-bluemix sl dns zone-list
+ibmcloud sl dns zone-list
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl dns zone-list
+ibmcloud sl dns zone-list
 ```
 Esse comando lista todas as zonas na conta atual.
 
-### bluemix sl dns zone-print 
-{: #sl_dns_zone_print} 
+### Ibmcloud sl dns zone-print
+{: #sl_dns_zone_print}
 
 Imprimir registros de zona e recurso no formato BIND.
 ```
-bluemix sl dns zone-print ZONE
+Ibmcloud sl dns zone-print ZONE
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl dns zone-print bluemix.net
+Ibmcloud sl dns zone-print bluemix.net
 ```
 Esse comando imprime a zona chamada bluemix.net no formato BIND.
 
-### bluemix sl globalip create 
-{: #sl_globalip_create} 
+### Ibmcloud sl globalip create
+{: #sl_globalip_create}
 
 Criar um IP global.
 ```
-bluemix sl globalip create [OPTIONS]
+Ibmcloud sl globalip create [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1724,31 +1729,31 @@ bluemix sl globalip create [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl globalip create --v6
+Sl globalip create ibmcloud -- v6
 ```
 Esse comando cria um endereço IP V6.
 
-### bluemix sl globalip assign 
-{: #sl_globalip_assign} 
+### ibmcloud sl globalip assign
+{: #sl_globalip_assign}
 
 Designar um IP global a um roteador ou dispositivo de destino.
 ```
-bluemix sl globalip assign IDENTIFIER TARGET
+ibmcloud sl globalip assign IDENTIFIER TARGET
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl globalip assign 12345678 9.111.123.456
+Ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
 Esse comando designa um endereço IP com ID 12345678 a um dispositivo de destino cujo endereço IP é 9.111.123.456.
 
-### bluemix sl globalip cancel 
-{: #sl_globalip_cancel} 
+### Sl globalip cancel ibmcloud
+{: #sl_globalip_cancel}
 
 Cancelar um IP global.
 ```
-bluemix sl globalip cancel IDENTIFIER [OPTIONS]
+ibmcloud sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1759,16 +1764,16 @@ bluemix sl globalip cancel IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl globalip cancel 12345678
+Ibmcloud sl globalip cancel 12345678
 ```
 Esse comando cancela o endereço IP com ID 12345678.
 
-### bluemix sl globalip list 
-{: #sl_globalip_list} 
+### Sl globalip list ibmcloud
+{: #sl_globalip_list}
 
 Listar todos os IPs globais em sua conta.
 ```
-bluemix sl globalip list [OPTIONS]
+Sl globalip list ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1783,57 +1788,57 @@ bluemix sl globalip list [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl globalip list --v4
+Sl globalip list ibmcloud -- v4
 ```
 Esse comando lista todos os endereços IP V4 na conta atual.
 
-### bluemix sl globalip unassign 
-{: #sl_globalip_unassign} 
+### Sl globalip unassign ibmcloud
+{: #sl_globalip_unassign}
 
 Remover designação de um IP global de um roteador ou dispositivo de destino.
 ```
-bluemix sl globalip unassign IDENTIFIER
+Ibmcloud sl globalip unassign IDENTIFIER
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl globalip unassign 12345678
+Ibmcloud sl globalip unassign 12345678
 ```
 Esse comando remove a designação do endereço IP com ID 12345678 do dispositivo de destino.
 
-### bluemix sl image delete 
-{: #sl_image_delete} 
+### Sl image delete ibmcloud
+{: #sl_image_delete}
 
 Excluir uma imagem.
 ```
-bluemix sl image delete IDENTIFIER
+Sl image delete IDENTIFIER ibmcloud
 ```
 **Exemplos**:
 ```
-   bluemix sl image delete 12345678
+   Ibmcloud sl image delete 12345678
 ```
 Esse comando exclui a imagem com ID `12345678`.
 
-### bluemix sl image detail 
-{: #sl_image_detail} 
+### Sl image detail ibmcloud
+{: #sl_image_detail}
 
 Obter detalhes para uma imagem.
 ```
-bluemix sl image detail IDENTIFIER
+Sl image detail IDENTIFIER ibmcloud
 ```
 **Exemplos**:
 ```
- bluemix sl image detail 12345678
+ Ibmcloud sl image detail 12345678
 ```
 Esse comando obtém detalhes para a imagem com ID 12345678.
 
-### bluemix sl image edit 
-{: #sl_image_edit} 
+### Sl image edit ibmcloud
+{: #sl_image_edit}
 
 Editar detalhes de uma imagem.
 ```
-bluemix sl image edit IDENTIFIER [OPTIONS]
+ibmcloud sl image edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1848,16 +1853,16 @@ bluemix sl image edit IDENTIFIER [OPTIONS]
 
 *Exemplos**:
 ```  
-bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
+ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 Esse comando edita a imagem com o ID `12345678` e configura seu nome para `ubuntu16`, a nota para `testing` e a tag para `staging`.
 
-### bluemix sl image list 
-{: #sl_image_list} 
+### Sl image list ibmcloud
+{: #sl_image_list}
 
 Listar todas as imagens em sua conta.
 ```
-bluemix sl image list [OPTIONS]
+Sl image list ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1870,12 +1875,12 @@ bluemix sl image list [OPTIONS]
 <dd>Exibir somente imagens privadas.</dd>
 </dl>
 
-### bluemix sl ipsec cancel 
-{: #sl_ipsec_cancel} 
+### Sl ipsec cancel ibmcloud
+{: #sl_ipsec_cancel}
 
 Cancelar um contexto do túnel VPN IPSec.
 ```
-bluemix sl ipsec cancel CONTEXT_ID [OPTIONS]
+Ibmcloud sl ipsec cancel CONTEXT_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1888,20 +1893,20 @@ bluemix sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### bluemix sl ipsec config 
-{: #sl_ipsec_config} 
+### Ibmcloud sl ipsec config
+{: #sl_ipsec_config}
 
 Solicitar configuração de um contexto de túnel.
 ```
-bluemix sl ipsec config CONTEXT_ID [OPTIONS]
+Sl ipsec config CONTEXT_ID ibmcloud [ OPTIONS ]
 ```
 
-### bluemix sl ipsec detail 
-{: #sl_ipsec_detail} 
+### ibmcloud sl ipsec detail
+{: #sl_ipsec_detail}
 
 Listar detalhes de contexto do túnel VPN IPSec.
 ```
-bluemix sl ipsec detail CONTEXT_ID [OPTIONS]
+Ibmcloud sl ipsec detail CONTEXT_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1909,12 +1914,12 @@ bluemix sl ipsec detail CONTEXT_ID [OPTIONS]
 <dt>-i, --include</dt>
 <dd>Incluir recursos adicionais, as opções são: at, is, rs, sr, ss.</dd>
 </dl>
-### bluemix sl ipsec list 
-{: #sl_ipsec_list} 
+### Sl ipsec list ibmcloud
+{: #sl_ipsec_list}
 
 Listar contextos do túnel VPN IPSec.
 ```
-bluemix sl ipsec list [OPTIONS]
+Sl ipsec list ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1922,12 +1927,12 @@ bluemix sl ipsec list [OPTIONS]
 <dt>--order</dt>
 <dd>Filtrar pelo ID da ordem que comprou o IPSEC.</dd>
 </dl>
-### bluemix sl ipsec order 
-{: #sl_ipsec_order} 
+### Sl ipsec order ibmcloud
+{: #sl_ipsec_order}
 
 Pedir um túnel VPN IPSec.
 ```
-bluemix sl ipsec order [OPTIONS]
+Sl ipsec order ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1936,12 +1941,12 @@ bluemix sl ipsec order [OPTIONS]
 <dd>Requerido. Nome abreviado do data center para o IPSEC, por exemplo, dal09.</dd>
 </dl>
 
-### bluemix sl ipsec subnet-add 
-{: #sl_ipsec_subnet_add} 
+### Sl ipsec subnet-add
+{: #sl_ipsec_subnet_add}
 
 Incluir uma sub-rede em um contexto do túnel IPSec.
 ```
-bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
+Ibmcloud sl ipsec subnet-add CONTEXT_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1954,20 +1959,20 @@ bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>O identificador de rede da sub-rede a ser criado.</dd>
 </dl>
 
-### bluemix sl ipsec subnet-remove 
-{: #sl_ipsec_subnet_remove} 
+### Ibmcloud sl ipsec subnet-remove
+{: #sl_ipsec_subnet_remove}
 
 Remover uma sub-rede de um contexto do túnel IPSec.
 ```
-bluemix sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
+ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### bluemix sl ipsec translation-add 
-{: #sl_ipsec_translation_add} 
+### Sl ipsec translation-add
+{: #sl_ipsec_translation_add}
 
 Incluir uma conversão de endereço em um túnel IPSec.
 ```
-bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
+ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -1979,20 +1984,20 @@ bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dt>-n, --note</dt>
 <dd>Nota.</dd>
 </dl>
-### bluemix sl ipsec translation-remove 
-{: #sl_ipsec_translation_remove} 
+### Ibmcloud sl ipsec translation-remove
+{: #sl_ipsec_translation_remove}
 
 Remover uma entrada de conversão de um IPSec.
 ```
-bluemix sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
+ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### bluemix sl ipsec translation-update 
-{: #sl_ipsec_translation_update} 
+### Ibmcloud sl ipsec translation-update
+{: #sl_ipsec_translation_update}
 
 Atualizar uma conversão de endereço para um IPSec.
 ```
-bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
+ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2004,12 +2009,12 @@ bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dt>-n, --note</dt>
 <dd>Nota.</dd>
 </dl>
-### bluemix sl ipsec update 
-{: #sl_ipsec_update} 
+### Sl ipsec update ibmcloud
+{: #sl_ipsec_update}
 
 Atualizar propriedades de contexto de túnel.
 ```
-bluemix sl ipsec update CONTEXT_ID [OPTIONS]
+Sl ipsec update ibmcloud CONTEXT_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2040,12 +2045,12 @@ bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 <dd>Duração da chave fase 2, o intervalo é 120 - 172.800.</dd>
 </dl>
 
-### bluemix sl loadbal cancel 
-{: #sl_loadbal_cancel} 
+### Sl loadbal cancel ibmcloud
+{: #sl_loadbal_cancel}
 
 Cancelar um balanceador de carga existente.
 ```
-bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
+Ibmcloud sl loadbal cancel LOADBAL_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2054,12 +2059,12 @@ bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### bluemix sl loadbal create 
-{: #sl_loadbal_create} 
+### ibmcloud sl loadbal create
+{: #sl_loadbal_create}
 
 Inclui um balanceador de carga devido ao ID retornado de opções de criação.
 ```
-bluemix sl loadbal create PRICE_ID LOCATION [OPTIONS]
+ibmcloud sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2068,28 +2073,28 @@ bluemix sl loadbal create PRICE_ID LOCATION [OPTIONS]
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### bluemix sl loadbal create-options 
-{: #sl_loadbal_create_options} 
+### ibmcloud sl loadbal create-options
+{: #sl_loadbal_create_options}
 
 Obter opções de preço para criar um balanceador de carga.
 ```
-bluemix sl loadbal create-options
+ibmcloud sl loadbal create-options
 ```
 
-### bluemix sl loadbal detail 
-{: #sl_loadbal_detail} 
+### Sl loadbal detail ibmcloud
+{: #sl_loadbal_detail}
 
 Obter detalhes do balanceador de carga.
 ```
-bluemix sl loadbal detail LOADBAL_ID
+Sl loadbal detail LOADBAL_ID ibmcloud
 ```
 
-### bluemix sl loadbal group-add 
-{: #sl_loadbal_group_add} 
+### Ibmcloud sl loadbal group-add
+{: #sl_loadbal_group_add}
 
 Inclui um novo serviço de balanceador de carga.
 ```
-bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
+Ibmcloud sl loadbal group-add LOADBAL_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2099,17 +2104,17 @@ bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>Requerido. O número da porta.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Requerido. O ID do tipo de roteamento. Execute 'bluemix sl loadbal routing-types' para localizar um ID.</dd>
+<dd>Requerido. O ID do tipo de roteamento. Execute 'ibmcloud sl loadbal routing-types' para localizar um ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Requerido. O ID do método de roteamento. Execute 'bluemix sl loadbal routing-methods' para localizar um ID.</dd>
+<dd>Requerido. O ID do método de roteamento. Execute 'ibmcloud sl loadbal routing-methods' para localizar um ID.</dd>
 </dl>
 
-### bluemix sl loadbal group-delete 
-{: #sl_loadbal_group_delete} 
+### Ibmcloud sl loadbal group-delete
+{: #sl_loadbal_group_delete}
 
 Exclui um grupo de serviços do balanceador de carga existente.
 ```
-bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
+ibmcloud sl loadbal group-delete GROUP_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2118,12 +2123,12 @@ bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### bluemix sl loadbal group-edit 
-{: #sl_loadbal_group_edit} 
+### Ibmcloud sl loadbal group-edit
+{: #sl_loadbal_group_edit}
 
 Editar um grupo de serviços do balanceador de carga existente.
 ```
-bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
+ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2133,33 +2138,33 @@ bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>Mudar o número da porta.</dd>
 <dt>-t, --routing-type</dt>
-<dd>Mude o ID do tipo de roteamento. Execute 'bluemix sl loadbal routing-types' para localizar um ID.</dd>
+<dd>Mude o ID do tipo de roteamento. Execute 'ibmcloud sl loadbal routing-types' para localizar um ID.</dd>
 <dt>-m, --routing-method</dt>
-<dd>Mude o ID do método de roteamento. Execute 'bluemix sl loadbal routing-methods' para localizar um ID.</dd>
+<dd>Mude o ID do método de roteamento. Execute 'ibmcloud sl loadbal routing-methods' para localizar um ID.</dd>
 </dl>
 
-### bluemix sl loadbal group-reset 
-{: #sl_loadbal_group_reset} 
+### Ibmcloud sl loadbal group-reset
+{: #sl_loadbal_group_reset}
 
 Reconfigurar conexões em um determinado grupo de serviços.
 ```
-bluemix sl loadbal group-reset LOADBAL_ID GROUP_ID
+Ibmcloud sl loadbal group-reset LOADBAL_ID GROUP_ID
 ```
 
-### bluemix sl loadbal health-checks 
-{: #sl_loadbal_health_checks} 
+### ibmcloud sl loadbal health-checks
+{: #sl_loadbal_health_checks}
 
 Listar tipos de verificação de funcionamento.
 ```
-bluemix sl loadbal health-checks
+ibmcloud sl loadbal health-checks
 ```
 
-### bluemix sl loadbal list 
-{: #sl_loadbal_list} 
+### ibmcloud sl loadbal list
+{: #sl_loadbal_list}
 
 Listar balanceadores de carga ativos.
 ```
-bluemix sl loadbal list
+ibmcloud sl loadbal list
 ```
 
 <strong>Opções de comando</strong>:
@@ -2171,28 +2176,28 @@ bluemix sl loadbal list
 <dt>-p, --ip-address</dt>
 <dd>Filtrar pelo endereço IP.</dd>
 </dl>
-### bluemix sl loadbal routing-methods 
-{: #sl_loadbal_routing_methods} 
+### ibmcloud sl loadbal routing-methods
+{: #sl_loadbal_routing_methods}
 
 Listar métodos de roteamento.
 ```
-bluemix sl loadbal routing-methods
+ibmcloud sl loadbal routing-methods
 ```
 
-### bluemix sl loadbal routing-types 
-{: #sl_loadbal_routing_types} 
+### ibmcloud sl loadbal routing-types
+{: #sl_loadbal_routing_types}
 
 Listar tipos de roteamento.
 ```
-bluemix sl loadbal routing-types
+ibmcloud sl loadbal routing-types
 ```
 
-### bluemix sl loadbal service-add 
-{: #sl_loadbal_service_add} 
+### Ibmcloud sl loadbal service-add
+{: #sl_loadbal_service_add}
 
 Inclui um novo serviço do balanceador de carga.
 ```
-bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
+ibmcloud sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2209,12 +2214,12 @@ bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 <dd>Requerido. O endereço IP do serviço.</dd>
 </dl>
 
-### bluemix sl loadbal service-delete 
-{: #sl_loadbal_service_delete} 
+### Ibmcloud sl loadbal service-delete
+{: #sl_loadbal_service_delete}
 
 Exclui um serviço do balanceador de carga existente.
 ```
-bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
+Ibmcloud sl loadbal service-delete SERVICE_ID [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2223,12 +2228,12 @@ bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### bluemix sl loadbal service-edit 
-{: #sl_loadbal_service_edit} 
+### Ibmcloud sl loadbal service-edit
+{: #sl_loadbal_service_edit}
 
 Editar as propriedades de um grupo de serviços.
 ```
-bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
+ibmcloud sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2247,12 +2252,12 @@ bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 <dd>Mudar o endereço IP do serviço.</dd>
 </dl>
 
-### bluemix sl loadbal service-toggle 
-{: #sl_loadbal_service_toggle} 
+### Ibmcloud sl loadbal service-toggle
+{: #sl_loadbal_service_toggle}
 
 Alternar o status de um serviço do balanceador de carga existente.
 ```
-bluemix sl loadbal service-toggle SERVICE_ID
+Ibmcloud sl loadbal service-toggle SERVICE_ID
 ```
 
 <strong>Opções de comando</strong>:
@@ -2261,12 +2266,12 @@ bluemix sl loadbal service-toggle SERVICE_ID
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### bluemix sl security sshkey-add 
-{: #sl_security_sshkey_add} 
+### ibmcloud sl security sshkey-add
+{: #sl_security_sshkey_add}
 
 Incluir uma nova chave SSH.
 ```
-bluemix sl security sshkey-add LABEL [OPTIONS]
+Ibmcloud sl security sshkey-add LABEL [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2281,16 +2286,16 @@ bluemix sl security sshkey-add LABEL [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
+ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 Esse comando inclui uma chave SSH por meio do arquivo: ~/.ssh/id_rsa.pub with a note "mykey".
 
-### bluemix sl security sshkey-edit 
-{: #sl_security_sshkey_edit} 
+### Ibmcloud sl security sshkey-edit
+{: #sl_security_sshkey_edit}
 
 Editar uma chave SSH.
 ```
-bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
+Ibmcloud sl security sshkey-edit IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2303,16 +2308,16 @@ bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security sshkey-edit 12345678 --label Bluemix --note testing
+ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
 Esse comando atualiza a chave SSH com ID 12345678, configura a etiqueta como "Bluemix" e a nota como "testing".
 
-### bluemix sl security sshkey-list 
-{: #sl_security_sshkey_list} 
+### Ibmcloud sl security sshkey-list
+{: #sl_security_sshkey_list}
 
 Listar chaves SSH em sua conta.
 ```
-bluemix sl security sshkey-list [OPTIONS]
+Ibmcloud sl security sshkey-list [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2323,16 +2328,16 @@ bluemix sl security sshkey-list [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security sshkey-list --sortby label
+Ibmcloud sl security sshkey-list -- sortby label
 ```
 Esse comando lista todas as chaves SSH na conta atual e as classifica pela etiqueta.
 
-### bluemix sl security sshkey-print 
-{: #sl_security_sshkey_print} 
+### Ibmcloud sl security sshkey-print
+{: #sl_security_sshkey_print}
 
 Imprime uma chave SSH na tela.
 ```
-bluemix sl security sshkey-print IDENTIFIER [OPTIONS]
+Ibmcloud sl security sshkey-print IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2343,16 +2348,16 @@ bluemix sl security sshkey-print IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
+ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 Esse comando mostra o ID, o rótulo e as notas da chave SSH com ID 12345678 e grava a chave pública no arquivo: ~/mykey.pub.
 
-### bluemix sl security sshkey-remove 
-{: #sl_security_sshkey_remove} 
+### Ibmcloud sl security sshkey-remove
+{: #sl_security_sshkey_remove}
 
 Remove permanentemente uma chave SSH.
 ```
-bluemix sl security sshkey-remove IDENTIFIER [OPTIONS]
+Ibmcloud sl security sshkey-remove IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2363,16 +2368,16 @@ bluemix sl security sshkey-remove IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security sshkey-remove 12345678 -f
+Ibmcloud sl security sshkey-remove 12345678 -f
 ```
 Esse comando remove a chave SSH com ID 12345678 sem solicitar confirmação.
 
-### bluemix sl security cert-add 
-{: #sl_security_cert_add} 
+### Ibmcloud sl security cert-add
+{: #sl_security_cert_add}
 
 Incluir e fazer upload de detalhes do certificado SSL.
 ```
-bluemix sl security cert-add [OPTIONS]
+Ibmcloud sl security cert-add [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2391,16 +2396,16 @@ bluemix sl security cert-add [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key
+ibmcloud sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key
 ```
 Esse comando inclui o arquivo de certificado: ~/bluemix.net.cert e o arquivo de chave privado ~/bluemix.net.key para o domínio bluemix.net.
 
-### bluemix sl security cert-edit 
-{: #sl_security_cert_edit} 
+### Ibmcloud sl security cert-edit
+{: #sl_security_cert_edit}
 
 Editar certificado SSL.
 ```
-bluemix sl security cert-edit IDENTIFIER [OPTIONS]
+Ibmcloud sl security cert-edit IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2419,31 +2424,31 @@ bluemix sl security cert-edit IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security cert-edit 12345678 --key ~/bluemix.net.key
+ibmcloud sl security cert-edit 12345678 --key ~/bluemix.net.key
 ```
 Esse comando edita o certificado com ID 12345678 e atualiza sua chave privada com o arquivo: ~/bluemix.net.key.
 
-### bluemix sl security cert-download 
-{: #sl_security_cert_download} 
+### Ibmcloud sl security cert-download
+{: #sl_security_cert_download}
 
 Fazer download do certificado SSL e dos arquivos-chave.
 ```
-bluemix sl security cert-download IDENTIFIER
+Ibmcloud sl security cert-download IDENTIFIER
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl security cert-download 12345678
+Ibmcloud sl security cert-download 12345678
 ```
 Esse comando faz download de 4 arquivos no diretório atual para o certificado com ID 12345678. Os 4 arquivos são: arquivo de certificado, arquivo de solicitação de assinatura de certificado, arquivo de certificado intermediário e arquivo de chave privado.
 
-### bluemix sl security cert-list 
-{: #sl_security_cert_list} 
+### Ibmcloud sl security cert-list
+{: #sl_security_cert_list}
 
 Listar certificados SSL em sua conta.
 ```
-bluemix sl security cert-list [OPTIONS]
+Ibmcloud sl security cert-list [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2456,16 +2461,16 @@ bluemix sl security cert-list [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security cert-list --status valid --sortby days_until_expire
+ibmcloud sl security cert-list --status valid --sortby days_until_expire
 ```
 Esse comando lista todos os certificados válidos na conta atual e os classifica pelos dias de validade.
 
-### bluemix sl security cert-remove 
-{: #sl_security_cert_remove} 
+### Ibmcloud sl security cert-remove
+{: #sl_security_cert_remove}
 
 Remover certificado SSL.
 ```
-bluemix sl security cert-remove IDENTIFIER [OPTIONS]
+Ibmcloud sl security cert-remove IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2476,16 +2481,16 @@ bluemix sl security cert-remove IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl security cert-remove 12345678
+Ibmcloud sl security cert-remove 12345678
 ```
 Esse comando remove o certificado com ID 12345678.
 
-### bluemix sl subnet cancel 
-{: #sl_subnet_cancel} 
+### ibmcloud sl subnet cancel
+{: #sl_subnet_cancel}
 
 Cancelar uma sub-rede.
 ```
-bluemix sl subnet cancel IDENTIFIER [OPTIONS]
+Ibmcloud sl subnet cancel IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2496,16 +2501,16 @@ bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl subnet cancel 12345678 -f
+ibmcloud sl subnet cancel 12345678 -f
 ```
 Esse comando cancela a sub-rede com ID 12345678 sem solicitar confirmação.
 
-### bluemix sl subnet create 
-{: #sl_subnet_create} 
+### Ibmcloud sl subnet create
+{: #sl_subnet_create}
 
 Inclua uma nova sub-rede em sua conta.
 ```
-bluemix sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
+ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2520,16 +2525,16 @@ bluemix sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl subnet create public 16 567
+ibmcloud sl subnet create public 16 567
 ```
 Esse comando cria uma sub-rede pública com 16 endereços IP v4 e a coloca na vlan com ID 567.
 
-### bluemix sl subnet detail 
-{: #sl_subnet_detail} 
+### Sl subnet detail ibmcloud
+{: #sl_subnet_detail}
 
 Obter detalhes de uma sub-rede.
 ```
-bluemix sl subnet detail IDENTIFIER [OPTIONS]
+Sl subnet detail IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2542,16 +2547,16 @@ bluemix sl subnet detail IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl subnet detail 12345678
+Ibmcloud sl subnet detail 12345678
 ```
 Esse comando mostra informações detalhadas sobre a sub-rede com ID 12345678, incluindo informações de servidores virtuais e de hardware.
 
-### bluemix sl subnet list 
-{: #sl_subnet_list} 
+### Sl subnet list ibmcloud
+{: #sl_subnet_list}
 
 Listar todas as sub-redes em sua conta.
 ```
-bluemix sl subnet list [OPTIONS]
+Sl subnet list ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2576,31 +2581,31 @@ bluemix sl subnet list [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
+ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 Esse comando lista sub-redes IP V4 na conta atual filtrando pelo data center dal09, tipo de sub-rede PRIMARY e espaço de rede PUBLIC.
 
-### bluemix sl subnet lookup 
-{: #sl_subnet_lookup} 
+### Sl subnet lookup ibmcloud
+{: #sl_subnet_lookup}
 
 Localizar um endereço IP e exibir suas informações de sub-rede e dispositivo.
 ```
-bluemix sl subnet lookup IP_ADDRESS
+Ibmcloud sl subnet lookup IP_ADDRESS
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl subnet lookup 9.125.235.255
+Ibmcloud sl subnet lookup 9.125.235.255
 ```
 Esse comando localiza o registro de endereço IP com endereço 9.125.235.255 e exibe suas informações sobre a sub-rede e o dispositivo.
 
-### bluemix sl vlan create 
-{: #sl_vlan_create} 
+### Ibmcloud sl vlan create
+{: #sl_vlan_create}
 
 Criar uma nova VLAN.
 ```
-bluemix sl vlan create [OPTIONS]
+Sl vlan create ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2621,16 +2626,16 @@ bluemix sl vlan create [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vlan create -t public -d dal09 -s 16 -n myvlan
+ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 Esse comando cria uma vlan pública localizada no data center dal09 com 16 endereços IP e o nome é myvlan.
 
-### bluemix sl vlan cancel 
-{: #sl_vlan_cancel} 
+### Sl vlan cancel ibmcloud
+{: #sl_vlan_cancel}
 
 Cancelar uma VLAN.
 ```
-bluemix sl vlan cancel IDENTIFIER [OPTIONS]
+Sl vlan cancel IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2641,16 +2646,16 @@ bluemix sl vlan cancel IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vlan cancel 12345678 -f
+Ibmcloud sl vlan cancel 12345678 -f
 ```
 Esse comando cancela a vlan com ID 12345678 sem solicitar confirmação.
 
-### bluemix sl vlan detail 
-{: #sl_vlan_detail} 
+### Sl vlan detail ibmcloud
+{: #sl_vlan_detail}
 
 Obter detalhes sobre uma VLAN.
 ```
-bluemix sl vlan detail IDENTIFIER [OPTIONS]
+Sl vlan detail IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2663,16 +2668,16 @@ bluemix sl vlan detail IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vlan detail 12345678  --no-vs --no-hardware
+ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 ```
 Esse comando mostra detalhes da vlan com ID 12345678 e não lista o servidor virtual ou o servidor de hardware.
 
-### bluemix sl vlan edit 
-{: #sl_vlan_edit} 
+### Sl vlan edit ibmcloud
+{: #sl_vlan_edit}
 
 Editar os detalhes sobre uma VLAN.
 ```
-bluemix sl vlan edit IDENTIFIER [OPTIONS]
+Sl vlan edit IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2683,16 +2688,16 @@ bluemix sl vlan edit IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vlan edit 12345678 -n myvlan-rename
+ibmcloud sl vlan edit 12345678 -n myvlan-rename
 ```
 Esse comando atualiza a vlan com ID 12345678 e fornece um novo nome a ela "myvlan-rename".
 
-### bluemix sl vlan list 
-{: #sl_vlan_list} 
+### Sl vlan list ibmcloud
+{: #sl_vlan_list}
 
 Listar todas as VLANs em sua conta.
 ```
-bluemix sl vlan list [OPTIONS]
+Sl vlan list ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2711,31 +2716,31 @@ bluemix sl vlan list [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vlan list -d dal09 --sortby number
+ibmcloud sl vlan list -d dal09 --sortby number
 ```
 Esse comando lista todas as vlans na conta atual, a filtragem por data center é igual a dal09 e a classificação é pelo número da vlan.
 
-### bluemix sl vlan options 
-{: #sl_vlan_options} 
+### ibmcloud sl vlan options
+{: #sl_vlan_options}
 
 Listar todas as opções para criar a VLAN.
 ```
-bluemix sl vlan options
+ibmcloud sl vlan options
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl vlan options
+ibmcloud sl vlan options
 ```
 Esse comando lista todas as opções para criar uma vlan, por exemplo, tipo de vlan, data centers, tamanho da sub-rede, roteadores, etc.
 
-### bluemix sl vs cancel 
-{: #sl_vs_cancel} 
+### Ibmcloud sl vs cancel
+{: #sl_vs_cancel}
 
 Cancelar a instância de servidor virtual.
 ```
-bluemix sl vs cancel IDENTIFIER [OPTIONS]
+Ibmcloud sl vs cancel IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2746,16 +2751,16 @@ bluemix sl vs cancel IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs cancel 12345678
+ibmcloud sl vs cancel 12345678
 ```
 Esse comando cancela a instância de servidor virtual com ID de 12345678.
 
-### bluemix sl vs capture 
-{: #sl_vs_capture} 
+### Sl vs capture ibmcloud
+{: #sl_vs_capture}
 
 Capturar a instância do servidor virtual em uma imagem.
 ```
-bluemix sl vs capture IDENTIFIER [OPTIONS]
+Ibmcloud sl vs capture IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2770,16 +2775,16 @@ bluemix sl vs capture IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs capture 12345678 -n mybluemix --all --note testing
+ibmcloud sl vs capture 12345678 -n mybluemix --all --note testing
 ```
 Esse comando captura a instância de servidor virtual com ID de 12345678 com todos os discos em uma imagem chamada "mybluemix" com a nota "testing".
 
-### bluemix sl vs create 
-{: #sl_vs_create} 
+### Ibmcloud sl vs create
+{: #sl_vs_create}
 
 Criar instância de servidor virtual.
 ```
-bluemix sl vs create [OPTIONS]
+Ibmcloud sl vs create [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2797,7 +2802,7 @@ bluemix sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>Código de instalação do OS. Dica: é possível especificar <OS>_LATEST.</dd>
 <dt>--image</dt>
-<dd>ID da imagem. Veja: 'bluemix sl image list' para referência.</dd>
+<dd>ID da imagem. Veja: 'ibmcloud sl image list' para referência.</dd>
 <dt>--billing</dt>
 <dd>Taxa de faturamento. O padrão é: de hora em hora. As opções são: hourly, monthly.</dd>
 <dt>--dedicated</dt>
@@ -2840,46 +2845,46 @@ bluemix sl vs create [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
+ibmcloud sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
 Esse comando pede uma instância de servidor virtual com o nome de host myvsi, domínio bluemix.net, 4 núcleos de CPU, 4.096 M de memória, localizada no data center: dal10,
 
-### bluemix sl vs options 
-{: #sl_vs_options} 
+### ibmcloud sl vs options
+{: #sl_vs_options}
 
 Listar opções para criar a instância de servidor virtual.
 ```
-bluemix sl vs options [OPTIONS]
+As opções ibmcloud sl vs [ OPTIONS ]
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl vs options
+ibmcloud sl vs options
 ```
 Esse comando lista todas as opções para criar uma instância de servidor virtual, por exemplo, data centers, CPU, memória, sistema operacional, disco, velocidade de rede, etc.
 
-### bluemix sl vs credentials 
-{: #sl_vs_credentials} 
+### Sl vs ibmcloud credenciais
+{: #sl_vs_credentials}
 
 Listar credenciais da instância de servidor virtual.
 ```
-bluemix sl vs credentials IDENTIFIER [OPTIONS]
+Ibmcloud sl vs credentials IDENTIFIER [ OPTIONS ]
 ```
 
 
 **Exemplos**:
 ```
-bluemix sl vs credentials 12345678
+As credenciais sl vs ibmcloud 12345678
 ```
 Esse comando lista todos os pares de nome de usuário e senha de instância de servidor virtual com ID 12345678.
 
-### bluemix sl vs detail 
-{: #sl_vs_detail} 
+### Sl vs detail ibmcloud
+{: #sl_vs_detail}
 
 Obter detalhes para uma instância de servidor virtual.
 ```
-bluemix sl vs detail IDENTIFIER [OPTIONS]
+Ibmcloud sl vs detail IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2892,16 +2897,16 @@ bluemix sl vs detail IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs details 12345678
+Ibmcloud sl vs details 12345678
 ```
 Esse comando lista informações detalhadas sobre a instância de servidor virtual com ID 12345678.
 
-### bluemix sl vs dns-sync 
-{: #sl_vs_dns_sync} 
+### ibmcloud sl vs dns-sync
+{: #sl_vs_dns_sync}
 
 Sincronizar registros DNS para uma instância de servidor virtual.
 ```
-bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
+ibmcloud sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2920,16 +2925,16 @@ bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
+ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 Esse comando sincroniza o registro A (endereço IP V4) da instância de servidor virtual com ID 12345678 para o servidor DNS e configura ttl desse registro A como 3.600.
 
-### bluemix sl vs edit 
-{: #sl_vs_edit} 
+### Sl vs edit ibmcloud
+{: #sl_vs_edit}
 
 Editar detalhes de uma instância de servidor virtual.
 ```
-bluemix sl vs edit IDENTIFIER [OPTIONS]
+Sl vs edit IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2952,16 +2957,16 @@ bluemix sl vs edit IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
+ibmcloud sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
 ```
 Esse comando atualiza a instância de servidor virtual com o ID 12345678 e configura seu domínio para ser "bluemix.net", hostname para "myapp", tag para "testcli",
 
-### bluemix sl vs list 
-{: #sl_vs_list} 
+### Sl vs list ibmcloud
+{: #sl_vs_list}
 
 Listar instâncias de servidor virtual em sua conta.
 ```
-bluemix sl vs list [OPTIONS]
+Sl vs list ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -2992,16 +2997,16 @@ bluemix sl vs list [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs list --domain bluemix.net --hourly --sortby memory
+ibmcloud sl vs list --domain bluemix.net --hourly --sortby memory
 ```
 Esse comando lista todas as instâncias de servidor virtual de faturamento por hora na conta atual, o domínio de filtragem é igual a "bluemix.net" e a classificação é pela memória.
 
-### bluemix sl vs pause 
-{: #sl_vs_pause} 
+### Ibmcloud sl vs pause
+{: #sl_vs_pause}
 
 Pausar uma instância de servidor virtual ativa.
 ```
-bluemix sl vs pause IDENTIFIER [OPTIONS]
+Sl vs pause IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3012,16 +3017,16 @@ bluemix sl vs pause IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs pause 12345678 -f
+Ibmcloud sl vs pause 12345678 -f
 ```
 Esse comando pausa a instância de servidor virtual com ID 12345678 sem solicitar confirmação.
 
-### bluemix sl vs power-off 
-{: #sl_vs_power_off} 
+### Ibmcloud sl vs power-off
+{: #sl_vs_power_off}
 
 Desligar uma instância de servidor virtual ativa.
 ```
-bluemix sl vs power-off IDENTIFIER [OPTIONS]
+Ibmcloud sl vs power-off IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3036,16 +3041,16 @@ bluemix sl vs power-off IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs power-off 12345678 --soft
+Ibmcloud sl vs power-off 12345678 -- soft
 ```
 Esse comando executa um desligamento normal da instância de servidor virtual com ID 12345678.
 
-### bluemix sl vs power-on 
-{: #sl_vs_power_on} 
+### Sl vs power-ibmcloud
+{: #sl_vs_power_on}
 
 Ligar uma instância de servidor virtual.
 ```
-bluemix sl vs power-on IDENTIFIER [OPTIONS]
+ibmcloud sl vs power-on IDENTIFIER [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3056,16 +3061,16 @@ bluemix sl vs power-on IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs power-on 12345678
+Ibmcloud sl vs power-on 12345678
 ```
 Esse comando executa uma ligação da instância de servidor virtual com ID 12345678.
 
-### bluemix sl vs ready 
-{: #sl_vs_ready} 
+### Sl vs ibmcloud pronto
+{: #sl_vs_ready}
 
 Verificar se uma instância de servidor virtual está pronta para uso.
 ```
-bluemix sl vs ready IDENTIFIER [OPTIONS]
+Ibmcloud sl vs ready IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3076,16 +3081,16 @@ bluemix sl vs ready IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs ready 12345678 --wait 30
+ibmcloud sl vs ready 12345678 --wait 30
 ```
 Esse comando verifica a instância de servidor virtual com o status de ID 12345678 para ver se está pronto para ser usado continuamente e aguarda até 30 segundos.
 
-### bluemix sl vs reboot 
-{: #sl_vs_reboot} 
+### Ibmcloud sl vs reboot
+{: #sl_vs_reboot}
 
 Reinicializar uma instância de servidor virtual ativa.
 ```
-bluemix sl vs reboot IDENTIFIER [OPTIONS]
+Ibmcloud sl vs reboot IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3100,16 +3105,16 @@ bluemix sl vs reboot IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs reboot 12345678 --hard
+Ibmcloud sl vs reboot 12345678 -- hard
 ```
 Esse comando executa uma reinicialização permanente da instância de servidor virtual com ID 12345678.
 
-### bluemix sl vs reload 
-{: #sl_vs_reload} 
+### Sl vs reload ibmcloud
+{: #sl_vs_reload}
 
 Recarregar o sistema operacional em uma instância de servidor virtual.
 ```
-bluemix sl vs reload IDENTIFIER [OPTIONS]
+Sl vs reload IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3119,7 +3124,7 @@ bluemix sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>ID da imagem. O padrão é usar o sistema operacional atual.</dd>
 <dt>Veja:</dt>
-<dd>'bluemix sl image list' para obter referência.</dd>
+<dd>" Ibmcloud sl image list ' para referência.</dd>
 <dt>-k, --key</dt>
 <dd>Os IDs das chaves SSH a serem incluídas para o usuário raiz (múltiplas ocorrências permitidas).</dd>
 <dt>-f, --force</dt>
@@ -3128,16 +3133,16 @@ bluemix sl vs reload IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs reload 12345678
+Ibmcloud sl vs reload 12345678
 ```
 Esse comando recarrega o sistema operacional atual para a instância de servidor virtual com ID 12345678.
 
-### bluemix sl vs rescue 
-{: #sl_vs_rescue} 
+### Sl vs rescue ibmcloud
+{: #sl_vs_rescue}
 
 Reinicializar uma instância de servidor virtual em uma imagem de resgate.
 ```
-bluemix sl vs rescue IDENTIFIER [OPTIONS]
+Sl vs rescue IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3148,16 +3153,16 @@ bluemix sl vs rescue IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs rescue 12345678
+ibmcloud sl vs rescue 12345678
 ```
 Esse comando reinicializa a instância de servidor virtual com ID 12345678 em uma imagem de resgate.
 
-### bluemix sl vs resume 
-{: #sl_vs_resume} 
+### ibmcloud sl vs resume
+{: #sl_vs_resume}
 
 Continuar uma instância de servidor virtual pausada.
 ```
-bluemix sl vs resume IDENTIFIER [OPTIONS]
+Ibmcloud sl vs resume IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3168,16 +3173,16 @@ bluemix sl vs resume IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs resume 12345678
+Ibmcloud sl vs resume 12345678
 ```
 Esse comando continua a instância de servidor virtual com ID 12345678.
 
-### bluemix sl vs upgrade 
-{: #sl_vs_upgrade} 
+### Ibmcloud sl vs upgrade
+{: #sl_vs_upgrade}
 
 Fazer upgrade de uma instância de servidor virtual.
 ```
-bluemix sl vs upgrade IDENTIFIER [OPTIONS]
+Ibmcloud sl vs upgrade IDENTIFIER [ OPTIONS ]
 ```
 
 <strong>Opções de comando</strong>:
@@ -3196,7 +3201,6 @@ bluemix sl vs upgrade IDENTIFIER [OPTIONS]
 
 **Exemplos**:
 ```
-bluemix sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
+ibmcloud sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
 Esse comando faz upgrade da instância de servidor virtual com ID 12345678 e configura o número de núcleos da CPU como 8, a memória como 8.192 M, a velocidade da porta de rede como 1.000 Mbps.
-

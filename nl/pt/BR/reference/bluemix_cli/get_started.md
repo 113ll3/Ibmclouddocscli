@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -24,13 +24,13 @@ Recomenda-se instalar a CLI do {{site.data.keyword.Bluemix_notm}} e todas as dep
 {: tip}
 
 
-O {{site.data.keyword.Bluemix_notm}} CLI fornece a interface da linha de comandos para gerenciar aplicativos, contêineres, infraestruturas, serviços e outros recursos no {{site.data.keyword.Bluemix_notm}}. 
+O {{site.data.keyword.Bluemix_notm}} CLI fornece a interface da linha de comandos para gerenciar aplicativos, contêineres, infraestruturas, serviços e outros recursos no {{site.data.keyword.Bluemix_notm}}.
 
 
 Para iniciar apenas com uma CLI do {{site.data.keyword.Bluemix_notm}}:
 
 1. Selecione o instalador do OS para download
-   
+
    Mac OS X de 64 bits:
 [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} /
 [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
@@ -41,7 +41,7 @@ Para iniciar apenas com uma CLI do {{site.data.keyword.Bluemix_notm}}:
 [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window}
 / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 bits (ppc64le): [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
-  
+
    **As liberações de 32 bits e versões anteriores podem ser localizadas [aqui](all_versions.html)
 
 1. Execute o instalador
@@ -52,7 +52,7 @@ Para iniciar apenas com uma CLI do {{site.data.keyword.Bluemix_notm}}:
 
   ![Exemplo](example.gif){: gif}
 
-Agora você está pronto para gerenciar recursos do {{site.data.keyword.Bluemix_notm}}. Digite `bluemix help` ou `bx help` para ver as descrições dos comandos. 
+Agora você está pronto para gerenciar recursos do {{site.data.keyword.Bluemix_notm}}. Digite `ibmcloud help` para ver as descrições dos comandos.
 
 Se você estiver usando um ID federado, siga as instruções
 [aqui](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) para efetuar login

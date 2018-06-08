@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -25,7 +25,7 @@ vez com seu ID dedicado.
 
 
 ```
-  $ bluemix login -a https://api.{dedicated_env}.bluemix.net
+  $ ibmcloud login -a https://api.{dedicated_env}.bluemix.net
   Terminal da API: https://api.{dedicated_env}.bluemix.net
 
   O serviço de token público do IAM está disponível no ambiente dedicado.
@@ -60,23 +60,21 @@ Selecione uma opção para inserir as credenciais para o ID dedicado. Após a au
 
 ## Forçar o login no servidor UAA local
 
-Para forçar o login no servidor UAA com um ID dedicado, especifique a opção `--no-iam` no comando `bluemix login`:
+Para forçar a criação de log para o servidor do UAA com um ID dedicado, especifique a opção `--no-iam` no comando `ibmcloud login`:
 
 ```
-  $ bluemix login --no-iam
+  $ ibmcloud login --no-iam
 ```
 
-## Desconectar seu ID dedicado do IBMid público 
+## Desconectar seu ID dedicado do IBMid público
 
-É possível usar `bluemix iam dedicated-id-disconnect` para desconectar o IBMid público com o ID dedicado conectado.
+É possível usar `ibmcloud iam dedicated-id-disconnect` para desconectar o IBMid público com o ID dedicado conectado.
 
 ```
-  $ bluemix iam dedicated-id-disconnect
-  Do you really want to disconnect my_dedicated_id from public IBMid? (Y/N)> y
+  $ ibmcloud iam dedicated-id-disconnect Você realmente deseja desconectar my_dedicated_id do IBMid público? (Y/N)> y
   Disconnecting dedicated user my_dedicated_id from public IBMid...
   OK
 
   Logging out...
   OK
 ```
-

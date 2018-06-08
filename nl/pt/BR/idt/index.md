@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -32,12 +32,8 @@ Há várias maneiras para criar um app Cloud.
 - [Painel do Watson](https://console.bluemix.net/dashboard/watson) para criar apps do iniciador ativado para recursos com base no Watson.
     - Outros painéis baseados no segmento de mercado ou na tecnologia estão disponíveis no menu
 "Hamburger" na página inicial do {{site.data.keyword.Bluemix_notm}}. Todos têm uma abordagem semelhante de usar Kits do iniciador para criar novos apps.
-- Comando [`bx dev
-create](./commands.html#create) de CLIs do {{site.data.keyword.dev_cli_notm}} para criar um novo
-app.
-- Comando [`bx dev
-enable](./commands.html#enable) de CLIs do {{site.data.keyword.dev_cli_notm}} para ativar
-rapidamente a nuvem em um app do lado do servidor existente.
+- Comando [`ibmcloud dev create`](./commands.html#create) das CLIs do {{site.data.keyword.dev_cli_notm}} para criar um novo app.
+- Comando [`ibmcloud dev enable`](./commands.html#enable) das CLIs do {{site.data.keyword.dev_cli_notm}} para ativar rapidamente a nuvem em um app existente do lado do servidor.
 
 Para qualquer um dos métodos de criação anteriores, o fluxo é semelhante. É possível escolher o tipo de projeto, a linguagem de implementação e o padrão de app a serem usados. Também é possível optar por incluir serviços com um valor agregado em seu app, como autenticação ou
 persistência. Finalmente, é possível escolher ativar o recurso do DevOps para o app que fornece uma cadeia de
@@ -92,16 +88,13 @@ Mais detalhes sobre as estruturas do projeto podem ser localizados aqui:
 {: #build}
 
 
-Após seu projeto ter sido criado, agora depende de você criá-lo para algo útil. O fluxo geral consiste em editar o código-fonte e, em seguida, executar um [`bx dev build`](commands.html#build) para compilar o app em um contêiner local específico para a linguagem e a configuração do seu app. Dependendo da linguagem de apps e do gerador que é usado, há um ou mais contêineres padronizados para suportar
+Após seu projeto ter sido criado, agora depende de você criá-lo para algo útil. O fluxo geral consiste em editar o código-fonte e, em seguida, executar um [`ibmcloud dev build`](commands.html#build) para compilar o app em um contêiner local específico para a linguagem e a configuração do seu app. Dependendo da linguagem de apps e do gerador que é usado, há um ou mais contêineres padronizados para suportar
 construção e execução localmente.  Geralmente, haverá um contêiner "ferramentas" para construções e depuração local.  Esse contêiner normalmente terá ferramentas e recursos extras para ajudá-lo no desenvolvimento.  Há também um contêiner de "execução" que simula aproximadamente o ambiente de tempo de execução real de seu app quando implementado na nuvem, no Cloud Foundry ou no ambiente de contêiner baseado em Kubernetes da IBM.
 
 
 Você está livre para usar qualquer IDE ou editor que preferir para codificar seu aplicativo. Oferecemos uma extensão para o editor Microsoft VisualStudio Code (VSCode) que permite acessar todos os comandos do IDE diretamente no editor.
 
-Após o projeto ter sido construído, você desejará, em seguida, executar seu app usando o
-[`bx dev run`](commands.html#run) ou
-[`bx dev debug`](commands.html#debug), dependendo da configuração do gerador
-de seus apps.  Isso executará o app dentro do contêiner adequado.  Alguns padrões de apps suportam múltiplos contêineres externos para seus apps, como persistência ou outros recursos.  Eles serão iniciados automaticamente e configurados durante a execução ou depuração.  Há também um comando [`bx dev test`](commands.html#test) que executará quaisquer casos de teste associados com o app.
+Depois que o projeto tiver sido construído, você desejará em seguida executar seu app usando o [`ibmcloud dev run`](commands.html#run) ou o [`ibmcloud dev debug`](commands.html#debug), dependendo da configuração do gerador de seus apps. Isso executará o app dentro do contêiner adequado.  Alguns padrões de apps suportam múltiplos contêineres externos para seus apps, como persistência ou outros recursos.  Eles serão iniciados automaticamente e configurados durante a execução ou depuração.  Há também um comando [`ibmcloud dev test`](commands.html#test) que executará quaisquer casos de teste associados ao app.
 
 
 ### Como os contêineres locais são usados
@@ -138,7 +131,7 @@ Os comandos da CLI a seguir ajudam a trabalhar com seu projeto durante os ciclos
 ## Implementação
 {: #deploy}
 
-Em um ambiente nativo de nuvem adequado, você desejará utilizar um pipeline do DevOps totalmente funcional para gerenciar todas as implementações, bem como uma variedade de outros recursos.  Durante o fluxo de criação, é possível configurar seu app para usar o DevOps do IBM Cloud.  Se você não estiver pronto para usar o DevOps integrado, será possível usar [`bx dev deploy`](./commands.html#deploy) manualmente para seu app ou usar o comando deploy dentro de seu próprio pipeline do DevOps.  
+Em um ambiente nativo de nuvem adequado, você desejará utilizar um pipeline do DevOps totalmente funcional para gerenciar todas as implementações, bem como uma variedade de outros recursos.  Durante o fluxo de criação, é possível configurar seu app para usar o DevOps do IBM Cloud.  Se você não estiver pronto para usar o DevOps integrado, será possível executar manualmente [`ibmcloud dev deploy`](./commands.html#deploy) em seu app ou usar o comando deploy dentro de seu próprio pipeline do DevOps.  
 
 
 

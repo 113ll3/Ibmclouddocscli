@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -33,12 +33,12 @@ o plug-in:
 1. Para incluir o repositório de plug-in da CLI do {{site.data.keyword.Bluemix_notm}},
 execute o comando a seguir:
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+Ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Para instalar o plug-in da CLI do {{site.data.keyword.autoscaling}}, execute o
 comando a seguir:
 ```
-bluemix plugin install auto-scaling -r Bluemix
+Ibmcloud plugin install auto-scaling -r Bluemix
 ```
 
 ## Anexando uma política de ajuste automático de escala
@@ -46,7 +46,7 @@ bluemix plugin install auto-scaling -r Bluemix
 É possível anexar uma política de ajuste automático de escala a um app específico. Execute o seguinte comando:
 
 ```
-bx as policy-attach <APP_NAME> -p <policy_file>
+ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -63,7 +63,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 É possível gerar uma política de ajuste automático de escala respondendo às perguntas na interface de linha de comandos. Dependendo de sua entrada, um arquivo JSON que contém a definição da política de ajuste automático de escala é salvo com o nome que você inserir. Se não inserir o nome do arquivo, o conteúdo da política será impresso na linha de comandos diretamente sem que seja salvo em um arquivo. Execute o seguinte comando:
 
 ```
-bx as policy-create
+Ibmcloud como criar política
 ```
 {: codeblock}
 
@@ -73,7 +73,7 @@ bx as policy-create
 É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso na linha de comandos diretamente. Execute o seguinte comando:
 
 ```
-bx as policy-show <APP_NAME> [--json]
+Ibmcloud como política-show < APP_NAME> [ -- json ]
 ```
 {: codeblock}
 
@@ -90,7 +90,7 @@ bx as policy-show <APP_NAME> [--json]
 É possível remover uma política de ajuste automático de escala de um app. Execute o seguinte comando:
 
 ```
-bx as policy-detach <APP_NAME>
+ibmcloud as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ bx as policy-detach <APP_NAME>
 É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o seguinte comando:
 
 ```
-bx as policy-enable|policy-disable <APP_NAME>
+ibmcloud as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -120,7 +120,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 É possível mostrar o histórico da atividade de ajuste automático de escala de um app específico. Uma tabela de registros de histórico de ajuste automático de escala é exibida na interface de linha de comandos.
 
 ```
-bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 
