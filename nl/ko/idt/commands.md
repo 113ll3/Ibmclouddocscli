@@ -3,8 +3,8 @@
 copyright:
 
    years: 2017, 2018
-   
-lastupdated: "2018-05-02"
+
+lastupdated: "2018-05-23"
 
 ---
 
@@ -12,15 +12,19 @@ lastupdated: "2018-05-02"
 {:new_window: target="_blank"}
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}  
 
-# {{site.data.keyword.dev_cli_notm}} CLI(bx dev) 명령
+# {{site.data.keyword.dev_cli_notm}} CLI(ibmcloud dev) 명령
 {: #idt-cli}
 
 버전: 1.2.0
 릴리스 날짜: 2018년 3월 8일
 
-프로젝트를 작성하고 이를 배치, 디버그 및 테스트하려면 다음 {{site.data.keyword.dev_cli_notm}} CLI(bx dev) 명령을 사용하십시오.
+2018년 5월부터 {{site.data.keyword.Bluemix_notm}} CLI 명령은 `bluemix` 및 `bx`에서 `ibmcloud`로 변경되었습니다. 그러나 `bluemix` 및 `bx` CLI 명령은 이후에 더 이상 사용되지 않는 항목으로 지정되기 전까지 사용할 수 있습니다.
+{: tip}
+
+프로젝트를 작성하고 이를 배치, 디버그 및 테스트하려면 다음 {{site.data.keyword.dev_cli_notm}} CLI(ibmcloud dev) 명령을 사용하십시오. 
 
 - [build](#build): 로컬 컨테이너에 있는 프로젝트 빌드
 - [code](#code): 프로젝트로부터 코드 다운로드
@@ -55,7 +59,7 @@ lastupdated: "2018-05-02"
 애플리케이션을 빌드하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오.  
 
 ```
-bx dev build [--debug]
+ibmcloud dev build [--debug]
 ```
 {: codeblock}
 
@@ -71,7 +75,7 @@ bx dev build [--debug]
 지정된 프로젝트에서 코드를 다운로드하려면 다음 명령을 실행하십시오.
 
 ```
-bx dev code <projectName>
+ibmcloud dev code <projectName>
 ```
 {: codeblock}
 
@@ -79,14 +83,14 @@ bx dev code <projectName>
 ## console
 {: #console}
 
-웹 브라우저에서 IBM Cloud에 있는 애플리케이션의 웹 콘솔을 열려면 `console` 명령을 사용하십시오.  사용자는 프로젝트 폴더 내에서 `bx dev console` 명령을 실행할 수 있으며, CLI는 IBM Cloud에서 현재 디렉토리와 동일한 프로젝트 ID를 가진 일치 프로젝트를 찾으려 시도합니다. 시스템은 일치하는 이름을 찾을 수 없는 경우 특정 프로젝트 대신 IBM Cloud의 웹 및 모바일 대시보드를 엽니다.
+웹 브라우저에서 IBM Cloud에 있는 애플리케이션의 웹 콘솔을 열려면 `console` 명령을 사용하십시오.  사용자는 프로젝트 폴더 내에서 `ibmcloud dev console` 명령을 실행할 수 있으며, 이 경우 CLI는 IBM Cloud에서 현재 디렉토리와 동일한 프로젝트 ID를 가진 일치하는 프로젝트를 찾으려 시도합니다. 시스템은 일치하는 이름을 찾을 수 없는 경우 특정 프로젝트 대신 IBM Cloud의 웹 및 모바일 대시보드를 엽니다.
 
 프로젝트 이름을 제공할 수 있으며 CLI가 폴더/애플리케이션 이름을 기반으로 하는 매칭을 건너뜁니다. 이 경우 CLI는 이름 지정된 프로젝트의 콘솔을 웹 브라우저에서 엽니다.  
 
 웹 브라우저로 애플리케이션의 웹 콘솔을 열려면 다음 명령을 실행하십시오.
 
 ```
-bx dev console [projectName]
+ibmcloud dev console [projectName]
 ```
 {: codeblock}
 
@@ -99,7 +103,7 @@ bx dev console [projectName]
 현재 디렉토리에 프로젝트를 작성하고 이를 서비스와 연관시키려면 다음 명령을 실행하십시오.
 
 ```
-bx dev create
+ibmcloud dev create
 ```
 {: codeblock}
 
@@ -112,14 +116,14 @@ bx dev create
 먼저 프로젝트를 컴파일하십시오.
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 먼저 현재 프로젝트 디렉토리에서 애플리케이션을 디버그하는 데 필요한 다음 명령을 실행하십시오.
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 {: codeblock}
 
@@ -137,19 +141,19 @@ bx dev debug
 {: #port-map-debug}
 
 * 디버그 포트의 포트 맵핑입니다. 첫 번째 값은 호스트 OS에서 사용하는 포트이며 두 번째 값은 컨테이너의 포트입니다[host-port:container-port].
-* 사용법: `bx dev debug --container-port-map-debug 7777:7777`
+* 사용법: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
 {: #build-cmd-debug}
 
 * 디버그를 위한 코드를 빌드하는 데 사용되는 매개변수입니다.
-* 사용법: `bx dev debug --build-cmd-debug build.command.sh`
+* 사용법: `ibmcloud dev debug --build-cmd-debug build.command.sh`
 
 #### `debug-cmd`
 {: #debug-cmd}
 
 * tools 컨테이너에서 디버그를 호출하기 위한 명령을 지정하는 데 사용되는 매개변수입니다. `build-cmd-debug`가 애플리케이션을 디버그 모드로 시작하는 경우 이 매개변수를 사용하십시오.
-* 사용법: `bx dev debug --debug-cmd /the/debug/command`
+* 사용법: `ibmcloud dev debug --debug-cmd /the/debug/command`
 
 
 
@@ -161,7 +165,7 @@ bx dev debug
 프로젝트를 {{site.data.keyword.Bluemix}}에서 삭제하려면 다음 명령을 실행하십시오.
 
 ```
-bx dev delete <projectName>
+ibmcloud dev delete <projectName>
 ```
 {: codeblock}
 
@@ -197,14 +201,14 @@ cli-config.yml에서 이러한 항목을 정의하지 않은 경우에는 `-t co
 애플리케이션을 빌드하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오.  
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 프로젝트를 배치하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오.
 
 ```
-bx dev deploy
+ibmcloud dev deploy
 ```
 {: codeblock}
 
@@ -218,25 +222,25 @@ bx dev deploy
 {: #chart-path}
 
 * 컨테이너 배치에서 배치에 사용되는 Helm 차트의 위치를 지정하기 위해 사용되는 매개변수입니다.
-* 사용법: `bx dev deploy --chart-path [/the/path]`
+* 사용법: `ibmcloud dev deploy --chart-path [/the/path]`
 
 #### `deploy-target`
 {: #deploy-target}
 
 * 완료되는 배치의 유형을 표시하기 위해 선택적으로 사용되는 매개변수입니다.  기본 배치 유형은 빌드팩입니다.
-* 사용법: `bx dev deploy -t|--target buildpack|container`
+* 사용법: `ibmcloud dev deploy -t|--target buildpack|container`
 
 #### `deploy-image-target`
 {: #deploy-image-target}
 
 * 컨테이너 배치에서 배치의 대상 이미지 이름으로 사용되는 매개변수입니다(예: Docker 레지스트리에 태그를 지정하기 위해).  버전은 `deploy`에 의해 자동으로 증가되어 추가되므로 값은 image-name:{version}과 같이 버전을 포함하지 않아야 합니다.
-* 사용법: `bx dev deploy --deploy-image-target [image-name]`
+* 사용법: `ibmcloud dev deploy --deploy-image-target [image-name]`
 
 #### `ibm-cluster`
 {: #ibm-cluster}
 
 * {{site.data.keyword.Bluemix}}로의 컨테이너 배치에서 Kubernetes 클러스터의 이름을 정의하기 위해 선택적으로 사용되는 매개변수입니다.
-* 사용법: `bx dev deploy --ibm-cluster [cluster-name]`
+* 사용법: `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 
 ## enable
@@ -247,7 +251,7 @@ bx dev deploy
 현재 디렉토리에 있는 기존 프로젝트를 {{site.data.keyword.Bluemix_notm}} 배치에 사용할 수 있도록 설정하려면 다음 명령을 실행하십시오.
 
 ```
-bx dev enable
+ibmcloud dev enable
 ```
 {: codeblock}
 
@@ -270,7 +274,7 @@ bx dev enable
 * java-mp(Java - Java MicroProfile로 해석)
 * java-spring(Java - Spring Framework로 해석)
 
-`bx dev enable` 명령을 사용하여 작성된 파일 중 프로젝트 폴더에 있는 기존 파일과 이름이 충돌하는 파일은 `.merge` 파일 확장자를 사용하여 저장됩니다.  
+`ibmcloud dev enable` 명령을 사용하여 작성된 파일 중 프로젝트 폴더에 있는 기존 파일과 이름이 충돌하는 파일은 `.merge` 파일 확장자를 사용하여 저장됩니다.   
 
 ### enable 명령 매개변수
 {: #enable-parameters}
@@ -281,13 +285,13 @@ bx dev enable
 {: #enable-language}
 
 * 사용으로 설정되는 프로젝트의 언어를 지정하는 데 사용되는 매개변수입니다.
-* 사용법: `bx dev enable -l|--language [language]`
+* 사용법: `ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
 * 이미 사용으로 설정된 프로젝트를 다시 사용으로 설정하는 데 사용되는 매개변수입니다.
-* 사용법: `bx dev enable -f|--force`
+* 사용법: `ibmcloud dev enable -f|--force`
 
 
 ## get-credentials
@@ -304,7 +308,7 @@ bx dev enable
 일반 도움말 정보를 표시하려면 다음 명령을 실행하십시오.
 
 ```
-bx dev help
+ibmcloud dev help
 ```
 {: codeblock}
 
@@ -317,7 +321,7 @@ bx dev help
 프로젝트를 나열하려면 다음 명령을 실행하십시오.
 
 ```
-bx dev list
+ibmcloud dev list
 ```
 {: codeblock}
 
@@ -329,7 +333,7 @@ bx dev list
 You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
 
 ```
-bx dev edit
+ibmcloud dev edit
 ```
 {: codeblock}
 -->
@@ -345,14 +349,14 @@ bx dev edit
 먼저 프로젝트를 컴파일하십시오.
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 애플리케이션을 시작하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오.
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: codeblock}
 
@@ -369,19 +373,19 @@ bx dev run
 {: #container-name-run2}
 
 * run 컨테이너의 컨테이너 이름입니다.
-* 사용법: `bx dev run --container-name-run [<projectName>]`
+* 사용법: `ibmcloud dev run --container-name-run [<projectName>]`
 
 #### `container-path-run`
 {: #container-path-run}
 
 * 실행 시 공유할 컨테이너 내의 위치입니다.
-* 사용법: `bx dev run --container-path-run [/path/to/app]`
+* 사용법: `ibmcloud dev run --container-path-run [/path/to/app]`
 
 #### `host-path-run`
 {: #host-path-run}
 
 * 실행 시 컨테이너에서 공유할 호스트 시스템 내의 위치입니다.
-* 사용법: `bx dev run --host-path-run [/path/to/app/bin]`
+* 사용법: `ibmcloud dev run --host-path-run [/path/to/app/bin]`
 
 #### `dockerfile-run`
 {: #dockerfile-run}
@@ -389,20 +393,20 @@ bx dev run
 * run 컨테이너의 Dockerfile입니다.
 * 여러 컨테이너에서 실행하려는 경우 이 파일은 Compose 파일이어야 합니다.
 * 여러 compose 파일을 사용하려면 쉼표로 구분된 파일 이름 목록을 큰따옴표로 묶으십시오.
-* 사용법: `bx dev run --dockerfile-run [/path/to/Dockerfile]`
-* 사용법: `bx dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
+* 사용법: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
+* 사용법: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
 #### `image-name-run`
 {: #image-name-run}
 
 * `dockerfile-run`에서 작성할 이미지입니다.
-* 사용법: `bx dev run --image-name-run [/path/to/image-name]`
+* 사용법: `ibmcloud dev run --image-name-run [/path/to/image-name]`
 
 #### `run-cmd`
 {: #run-cmd}
 
 * run 컨테이너에 있는 코드를 실행하는 데 사용되는 매개변수입니다. 이미지가 애플리케이션을 시작하는 경우 이 매개변수를 사용하십시오.
-* 사용법: `bx dev run --run-cmd [/the/run/command]`
+* 사용법: `ibmcloud dev run --run-cmd [/the/run/command]`
 
 
 ## shell
@@ -413,12 +417,12 @@ bx dev run
 다음 명령을 실행하십시오.
 
 ```
-bx dev shell
+ibmcloud dev shell
 ```
 
 {{site.data.keyword.dev_cli_short}} CLI가 애플리케이션의 Docker 컨테이너에 대한 대화식 쉘을 엽니다. shell 명령의 기본 대상 컨테이너는 `cli-config.yml` 파일의 `container-shell-target` 값으로 정의되며, 올바른 값은 `run` 또는 `tools`입니다. 이 값이 정의되지 않거나 올바르지 않은 값이 지정된 경우 `shell` 명령은 기본적으로 `tools` 컨테이너를 대상으로 합니다. shell 명령은 해당 Dockerfile의 `WORKDIR` 명령어로 지정된 디렉토리에 컨테이너를 엽니다. Dockerfile에 `WORKDIR`이 나열되지 않은 경우에는 컨테이너 루트가 작업 디렉토리로 사용됩니다. 자세한 정보는 [이 참조](https://docs.docker.com/engine/reference/builder/#workdir)를 참조하십시오.
 
-또는, `run` 또는 `tools`를 인수로 전달하도록 결정할 수 있으며 이렇게 하면 해당 컨테이너가 선택되고 이 컨테이너에 대해 쉘이 열립니다. 마찬가지로, `container-name` 매개변수를 사용하여 쉘을 열 컨테이너의 이름을 전달할 수 있습니다. 그러나 이 플래그는 실행 중인 컨테이너가 없는 경우 사용해야 합니다. `run` 및 `tools` 인수는 더 유연하며 현재 실행 중인 컨테이너가 있는 경우 이 컨테이너로 전환할 수 있게 해 줍니다. 예를 들어, tools 컨테이너가 실행 중인 상태에서 `bx dev shell run`을 실행하는 경우 `tools` 컨테이너가 중지되고 `run` 컨테이너가 시작되며, 이는 반대의 경우도 마찬가지입니다.
+또는, `run` 또는 `tools`를 인수로 전달하도록 결정할 수 있으며 이렇게 하면 해당 컨테이너가 선택되고 이 컨테이너에 대해 쉘이 열립니다. 마찬가지로, `container-name` 매개변수를 사용하여 쉘을 열 컨테이너의 이름을 전달할 수 있습니다. 그러나 이 플래그는 실행 중인 컨테이너가 없는 경우 사용해야 합니다. `run` 및 `tools` 인수는 더 유연하며 현재 실행 중인 컨테이너가 있는 경우 이 컨테이너로 전환할 수 있게 해 줍니다. 예를 들어, tools 컨테이너가 실행 중인 상태에서 `ibmcloud dev shell run`을 실행하는 경우 `tools` 컨테이너가 중지되고 `run` 컨테이너가 시작되며, 이는 반대의 경우도 마찬가지입니다. 
 
 `shell` 명령을 실행할 때 대상 `run` or `tools` 컨테이너가 이미 실행 중이 아닌 경우에는 대상 컨테이너가 시작됩니다. 그러나 Dockerfile의 기본 `Cmd` 또는 `Entrypoint`는 서버 프로세스를 시작하는 대신 직접 쉘에서 실행하기 위해 대체됩니다. 이는 사용자가 `run` 또는 `tools` 컨테이너를 시작하고, 임의의 또는 사용자 정의 명령을 사용하여 서버를 수동으로 시작할 수 있게 해 줍니다.
 
@@ -427,7 +431,7 @@ bx dev shell
 
 플래그 외에 이 명령에 전달하는 추가 매개변수는 쉘이 열린 후 실행하는 명령으로 구문 분석됩니다. 실행할 명령을 제공하면 컨테이너 내의 쉘은 해당 명령을 실행한 후 종료되며 터미널로 리턴됩니다.
 
-예를 들면, `bx dev shell tools ls`를 호출하여 tools 컨테이너 쉘 내에서 Linux `ls` 명령을 실행할 수 있습니다.   `bx dev shell "ls -la"`와 같이 인수를 따옴표로 묶어 쉘 명령 실행에 전달되는 추가 플래그를 지정할 수도 있습니다.
+예를 들면, `bx dev shell tools ls`를 호출하여 tools 컨테이너 쉘 내에서 Linux `ls` 명령을 실행할 수 있습니다. `ibmcloud dev shell "ls -la"`와 같이 인수를 따옴표로 묶어 쉘 명령 실행에 전달되는 추가 플래그를 지정할 수도 있습니다. 
 
 ### shell 명령 매개변수
 {: #shell-parameters}
@@ -436,13 +440,13 @@ bx dev shell
 {: #container-name}
 
 * 쉘을 열 컨테이너의 이름입니다.
-* 사용법: `bx dev shell --container-name [<container-name>]`
+* 사용법: `ibmcloud dev shell --container-name [<container-name>]`
 
 #### `container-shell`
 {: #container-shell}
 
 * 컨테이너 내에서 실행할 쉘을 지정합니다(기본값은 /bin/sh).
-* 사용법: `bx dev shell --container-shell [path/to/shell]`
+* 사용법: `ibmcloud dev shell --container-shell [path/to/shell]`
 
 
 ## status
@@ -453,7 +457,7 @@ bx dev shell
 컨테이너 상태를 확인하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오.
 
 ```
-bx dev status
+ibmcloud dev status
 ```
 {: codeblock}
 
@@ -469,7 +473,7 @@ bx dev status
 `cli-config.yml` 파일에 정의된 tools 및 run 컨테이너를 중지하려면 다음 명령을 실행하십시오.
 
 ```
-bx dev stop
+ibmcloud dev stop
 ```
 {: codeblock}
 
@@ -484,13 +488,13 @@ bx dev stop
 {: #container-name-run}
 
 * run 컨테이너의 컨테이너 이름입니다.
-* 사용법: `bx dev stop --container-name-run [<projectName>]`
+* 사용법: `ibmcloud dev stop --container-name-run [<projectName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * tools 컨테이너의 컨테이너 이름입니다.
-* 사용법: `bx dev stop --container-name-tools [<projectName>]`
+* 사용법: `ibmcloud dev stop --container-name-tools [<projectName>]`
 
 
 
@@ -502,14 +506,14 @@ bx dev stop
 먼저 프로젝트를 컴파일하십시오.
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 애플리케이션을 테스트하려면 다음 명령을 실행하십시오.
 
 ```
-bx dev test
+ibmcloud dev test
 ```
 {: codeblock}
 
@@ -523,7 +527,7 @@ bx dev test
 {: #test-cmd}
 
 * tools 컨테이너에서 코드를 테스트하기 위한 명령을 지정하는 데 사용되는 매개변수입니다.
-* 사용법: `bx dev test --test-cmd /the/test/command`
+* 사용법: `ibmcloud dev test --test-cmd /the/test/command`
 
 
 ## view
@@ -538,7 +542,7 @@ Kubernetes에 배치된 애플리케이션의 경우, URL은 배치된 노드의
 애플리케이션을 보려면 다음 명령을 실행하십시오.
 
 ```
-bx dev view
+ibmcloud dev view
 ```
 {: codeblock}
 
@@ -550,28 +554,28 @@ bx dev view
 #### `deploy-target`
 
 * 프롬프트를 우회하는 배치의 유형을 표시하기 위해 선택적으로 사용되는 매개변수입니다.
-* 사용법: `bx dev view -t|--target buildpack|container`
+* 사용법: `ibmcloud dev view -t|--target buildpack|container`
 
 
 #### `no-open`
 {: #no-open}
 
 * 브라우저를 열지 않도록 지정하는 데 사용되는 매개변수입니다.
-* 사용법: `bx dev view --no-open`
+* 사용법: `ibmcloud dev view --no-open`
 
 
 #### `web-app-root`
 {: #web-app-root}
 
 * Kubernetes 앱 URL에 추가할 프로젝트의 루트입니다.
-* 사용법: `bx dev view --web-app-root [root]`
+* 사용법: `ibmcloud dev view --web-app-root [root]`
 
 
 #### `ibm-cluster`
 {: #ibm-cluster2}
 
 * 컨테이너 배치를 대상으로 하는 경우에서 Kubernetes 클러스터의 이름을 정의하기 위해 선택적으로 사용되는 매개변수입니다.
-* 사용법: `bx dev view --ibm-cluster [cluster-name]`
+* 사용법: `ibmcloud dev view --ibm-cluster [cluster-name]`
 
 
 ## 복합 명령
@@ -580,10 +584,10 @@ bx dev view
 IDT 명령을 `/` 구분 기호로 구분하여 한 명령행에서 여러 명령을 실행할 수 있습니다. 복합 명령을 지정한 후에는 추가 명령행 플래그를 지정할 수 있습니다.  다음 명령은 복합 명령 사용 방법에 대한 예입니다.
 
 ```
-bx dev build/run
-bx dev build/deploy --trace -t buildpack
-bx dev build/debug --debug --trace
-bx dev build/deploy/view -t container --trace
+ibmcloud dev build/run
+ibmcloud dev build/deploy --trace -t buildpack
+ibmcloud dev build/debug --debug --trace
+ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
@@ -591,7 +595,7 @@ bx dev build/deploy/view -t container --trace
 
 이 기능을 사용할 수 있는 명령은 `build, debug, deploy, get-credentials, run, stop, test, view`입니다.
 
-어떤 이유에서든 한 명령이 실패하면 후속 명령은 실행되지 않습니다. `debug` 또는 `run` 뒤에 명령이 있는 경우에는 `debug` 또는 `run`이 현재 터미널 창에서 프로세스를 강제 종료하는 것 외의 방법으로 종료된 경우에만 실행이 계속됩니다. `CTRL+C`는 프로세스를 강제 종료하며 후속 명령을 실행하지 않습니다. 예를 들면, 실행 중인 컨테이너를 중지하고 다음 명령 실행을 계속하기 위해 다른 터미널 창에서 `bx dev stop`을 실행할 수 있습니다.
+어떤 이유에서든 한 명령이 실패하면 후속 명령은 실행되지 않습니다. `debug` 또는 `run` 뒤에 명령이 있는 경우에는 `debug` 또는 `run`이 현재 터미널 창에서 프로세스를 강제 종료하는 것 외의 방법으로 종료된 경우에만 실행이 계속됩니다. `CTRL+C`는 프로세스를 강제 종료하며 후속 명령을 실행하지 않습니다. 예를 들면, 실행 중인 컨테이너를 중지하고 다음 명령 실행을 계속하기 위해 다른 터미널 창에서 `ibmcloud dev stop`을 실행할 수 있습니다. 
 
 
 ## build, debug, run 및 test용 매개변수
@@ -605,49 +609,49 @@ bx dev build/deploy/view -t container --trace
 {: #config-file}
 
 * 명령에 사용할 cli-config.yml 파일을 지정합니다.
-* 사용법: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
+* 사용법: `ibmcloud dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
 {: #container-name-run1}
 
 * run 컨테이너의 컨테이너 이름입니다.
-* 사용법: `bx dev <run|status|stop> --container-name-run [<projectName>]`
+* 사용법: `ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * tools 컨테이너의 컨테이너 이름입니다.
-* 사용법: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* 사용법: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}
 
 * 빌드, 디버그 및 테스트를 위해 공유할 호스트 내의 위치입니다.
-* 사용법: `bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
+* 사용법: `ibmcloud dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 #### `container-path-tools`
 {: #container-path-tools}
 
 * 빌드, 디버그 및 테스트를 위해 공유할 컨테이너 내의 위치입니다.
-* 사용법: `bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
+* 사용법: `ibmcloud dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 #### `container-port-map`
 {: #container-port-map}
 
 * 컨테이너의 포트 맵핑입니다. 첫 번째 값은 호스트 OS에서 사용하는 포트이며 두 번째 값은 컨테이너의 포트입니다[host-port:container-port].
-* 사용법: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
+* 사용법: `ibmcloud dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
 
 #### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * tools 컨테이너의 Dockerfile입니다.
-* 사용법: `bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
+* 사용법: `ibmcloud dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 #### `image-name-tools`
 {: #image-name-tools}
 
 * `dockerfile-tools`에서 작성할 이미지입니다.
-* 사용법: `bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
+* 사용법: `ibmcloud dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 #### `container-mounts-run`
 {: #container-mounts-run}
@@ -655,24 +659,23 @@ bx dev build/deploy/view -t container --trace
 * 호스트 시스템과 run 컨테이너 간의 마운트를 정의하려면 이 옵션을 사용하십시오.
 * `host-path-run` 및 `container-path-run` 값은 이 목록의 시작 부분에 삽입됩니다.
 * 예기치 않은 결과가 발생하는 것을 방지하기 위한 우수 사례로서, 사용자는 동일한 마운트 설정을 사용하여 빌드 및 실행을 수행해야 합니다.
-* 사용법: `bx dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* 사용법: `ibmcloud dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `container-mounts-tools`
 {: #container-mounts-tools}
 
 * 호스트 시스템과 tools 컨테이너 간의 마운트를 정의하려면 이 옵션을 사용하십시오.
 * `host-path-tools` 및 `container-path-tools` 값은 이 목록의 시작 부분에 삽입됩니다. * 예기치 않은 결과가 발생하는 것을 방지하기 위한 우수 사례로서, 사용자는 동일한 마운트 설정을 사용하여 빌드 및 디버그를 수행해야 합니다.
-* 사용법: `bx dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* 사용법: `ibmcloud dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `build-cmd-run`
 {: #build-cmd-run}
 
 * 디버그 외의 모든 용도를 위한 코드를 빌드하기 위한 명령을 지정하는 데 사용되는 매개변수입니다.
-* 사용법: `bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
+* 사용법: `ibmcloud dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 #### `trace`
 {: #trace}
 
 * 상세 출력을 제공하려면 이 매개변수를 사용하십시오.
-* 사용법: `bx dev <build|debug|run|test> --trace`
-
+* 사용법: `ibmcloud dev <build|debug|run|test> --trace`

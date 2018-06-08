@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -43,21 +43,24 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10：**
 
-* 注：通过右键单击并选择“以管理员身份运行”来打开 Windows PowerShell。
+* 注：通过右键单击 PowerShell 图标并选择“以管理员身份运行”来打开 Windows PowerShell。
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
 
-[重新安装工具](/docs/troubleshoot/ts_createapps.html#appendix)部分包含有关单独安装所有依赖项的信息。
-
-通过运行以下命令，验证插件安装是否成功：  
+## 验证安装
+要验证安装，请运行 `help` 命令：
 
 ```
-bx dev
+ibmcloud dev help
 ```
 {: codeblock}
+
+如果安装成功，那么输出应该列出用法指示信息、当前版本和支持的命令。
+
+[重新安装工具](/docs/troubleshoot/ts_createapps.html#appendix)部分包含有关单独安装所有依赖项的信息。
 
 ## 配置环境
 {: #configure-environment}
@@ -65,14 +68,14 @@ bx dev
 1. 连接到您的 {{site.data.keyword.Bluemix_notm}} 区域中的 API 端点。例如，输入以下命令来连接到 {{site.data.keyword.Bluemix_notm}} 美国南部区域：
 
 	```
-	bx api https://api.ng.bluemix.net
+	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
 2. 使用 IBM 标识登录到 {{site.data.keyword.Bluemix_notm}}。
 
 	```
-	bx login
+	ibmcloud login
 	```
 	{: codeblock}
 
@@ -87,14 +90,14 @@ bx dev
 	5. 使用以下命令进行登录：
 
 		```
-		bx login --apikey <value>
+		ibmcloud login --apikey <value>
 		```
 		{: codeblock}
 
 3. 使用以下内容设置 ORG 和 SPACE：
 
 	```
-	bx target -o <value> -s <value>
+	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
 
@@ -103,7 +106,7 @@ bx dev
 
 现在，您已安装了 {{site.data.keyword.dev_cli_short}} CLI，接下来可以了解如何有效利用此功能强大的工具：
 - [IDT CLI 入门](index.html)
-- [IDT (bx dev) 命令](commands.html)
+- [IDT (ibmcloud dev) 命令](commands.html)
 - [用于 VS Code 的 Developer Tools](vscode.html)
 - [用于 Jetbrains IDE 的 Developer Tools](jetbrains.html)
 
@@ -117,8 +120,8 @@ bx dev
 - [IBM Cloud Developer Tools 主登录页面](https://www.ibm.com/cloud/cli) - IDT CLI 的主产品页面
 - [IBM Developer Tools 安装程序](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - 包含详细安装指示信息的公共 GitHub 存储库
 - [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud 控制台页面，是 IDT 工具用于创建和管理云本机应用程序的指南
-- [IBM Cloud Tech 的 Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - 讨论 IDT 工具，获取答案，建议构想，等等
-	- [请求团队访问权](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+- [在 GitHub 上报告问题](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [IBM Cloud Tech 的 Slack - #developer-tools 频道](https://ibm-cloud-tech.slack.com) - 请求团队访问[此处](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
 **专注于语言**
 

@@ -32,6 +32,8 @@ lastupdated: "2018-04-16"
 			Log.i("MyApp", "Response: " + response.getResponseText());
 		}
 
+		
+
 		@Override
 		public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
 			Log.i("MyApp", "Request failed. Response: " + response.getResponseText() + ". Error: " + t.getLocalizedMessage());

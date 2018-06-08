@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -50,21 +50,21 @@ lastupdated: "2018-03-16"
    * 使用以下命令安装 govendor。
 
       ```
-      go get -u github.com/kardianos/govendor
+            go get -u github.com/kardianos/govendor
       ```
       {: codeblock}
 
    * 使用以下命令对项目目录上的 `govendor` 进行初始化。
 
       ```
-      govendor init
+            govendor init
       ```
       {: codeblock}
 
    * 使用以下命令将 `$GOPATH` 中的依赖关系添加到供应商目录。
 
       ```
-      govendor add +local
+            govendor add +local
       ```
       {: codeblock}
 
@@ -75,14 +75,14 @@ lastupdated: "2018-03-16"
    * 使用以下命令安装 `ginkgo`。
 
       ```
-      go get -u github.com/onsi/ginkgo/ginkgo
+            go get -u github.com/onsi/ginkgo/ginkgo
       ```
       {: codeblock}
 
    * 使用以下命令安装 `gomega`。
 
       ```
-      go get -u github.com/onsi/gomega
+            go get -u github.com/onsi/gomega
       ```
       {: codeblock}
 
@@ -90,7 +90,7 @@ lastupdated: "2018-03-16"
 
       ```
       ginkgo -r
-      ```
+```
       {: codeblock}
 
       * 要添加代码覆盖范围，请在命令后面附加 `-cover`。
@@ -98,7 +98,7 @@ lastupdated: "2018-03-16"
    * 要获取易用 HTML 形式的代码覆盖范围，请使用以下命令。
 
       ```
-      go tool -html={package}.coverprofile
+            go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
@@ -111,14 +111,14 @@ lastupdated: "2018-03-16"
    * 使用以下命令安装 `go-i18n`。
 
       ```
-      go get -u github.com/nicksnyder/go-i18n/goi18n
+            go get -u github.com/nicksnyder/go-i18n/goi18n
       ```
       {: codeblock}
 
    * 使用以下命令安装 `go-bindata`。
 
       ```
-      go get -u github/com/jteeuwen/go-bindata/go-bindata
+            go get -u github/com/jteeuwen/go-bindata/go-bindata
       ```
       {: codeblock}
 
@@ -129,7 +129,7 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
    * 使用以下命令安装 `delve`。
 
       ```
-      go get -u github.com/derekparker/delve/cmd/dlv
+            go get -u github.com/derekparker/delve/cmd/dlv
       ```
       {: codeblock}
 
@@ -244,8 +244,8 @@ sh bin/testAll.sh
 通过选择以下任一命令来安装插件并将其作为 {{site.data.keyword.Bluemix_notm}} CLI 进行调用。
 
 ```
-bluemix plugin install main
-bluemix help sdk
+ibmcloud plugin install main
+ibmcloud help sdk
 ```
 {: codeblock}
 

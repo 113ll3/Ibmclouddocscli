@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 2. [플러그인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in)을 설치하십시오.
 
 	```
-	bx plugin install sdk-gen
+	ibmcloud plugin install sdk-gen
 	```
 	{: codeblock}
 
@@ -56,7 +56,7 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 ### SDK 생성
 {: #gen}
 
-`bx sdk generate [arguments...] [command options]`를 사용하십시오.
+`ibmcloud sdk generate [arguments...] [command options]`를 사용하십시오. 
 
 
 #### 인수
@@ -90,14 +90,14 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Cloud Foundry 앱에서 SDK를 생성하기 위해 CLI의 매개변수로 앱 이름을 사용할 수 있습니다. 다음 명령은 `SDK_Name`으로 앱의 이름을 사용합니다.
 
 ```
-bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
+ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 Open API 정의 파일 또는 로컬 JSON이나 Yaml 파일에 대한 URL에서 SDK를 생성하려면 다음 명령을 사용하십시오.
 
 ```
-bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
+ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### Open API 정의 유효성 검증
 {: #validating}
 
-`bx sdk validate [argument]`를 사용하십시오.
+`ibmcloud sdk validate [argument]`를 사용하십시오. 
 
 
 #### 인수
@@ -121,14 +121,14 @@ bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Cloud Foundry 앱의 API 스펙을 유효성 검증하기 위해 CLI의 매개변수로 앱 이름을 사용할 수 있습니다.
 
 ```
-bx sdk validate [APP_NAME] [LOCATION]
+ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 API 스펙 문서 또는 로컬 JSON이나 Yaml 파일에 대한 URL에서 SDK를 생성하려면 다음 명령을 사용하십시오.
 
 ```
-bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
+ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### 앱 나열(Cloud Foundry)
 {: #list-apps}
 
-앱을 나열하고 API 스펙을 유효성 검증하려면 `bx sdk list [argument] [option]`을 사용하십시오. `OPENAPI_SPEC` 환경 변수가 스펙을 호스트하는 상대 URL 경로로 설정되어야 합니다.
+앱을 나열하고 API 스펙을 유효성 검증하려면 `ibmcloud sdk list [argument] [option]`을 사용하십시오. `OPENAPI_SPEC` 환경 변수가 스펙을 호스트하는 상대 URL 경로로 설정되어야 합니다.
 
 
 #### 인수
@@ -158,27 +158,27 @@ bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 현재 영역에 있는 앱을 나열하려면 다음 명령을 사용하십시오.
 
 ```
-bx sdk list
+ibmcloud sdk list
 ```
 {: codeblock}
 
 현재 영역의 앱을 나열하고 API 스펙 URL을 표시하려면 다음 명령을 사용하십시오.
 
 ```
-bx sdk list --url
+ibmcloud sdk list --url
 ```
 {: codeblock}
 
 특정 영역의 앱을 나열하려면 다음 명령을 사용하십시오.
 
 ```
-bx sdk list [SPACE_NAME]
+ibmcloud sdk list [SPACE_NAME]
 ```
 {: codeblock}
 
 특정 영역의 앱을 나열하고 API 스펙 URL을 표시하려면 다음 명령을 사용하십시오.
 
 ```
-bx sdk list [SPACE_NAME] --url
+ibmcloud sdk list [SPACE_NAME] --url
 ```
 {: codeblock}

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -33,14 +33,14 @@ lastupdated: "2018-05-02"
 如果使用 {{site.data.keyword.dev_cli_short}} 通过 Web 应用程序、BFF 或微服务模式来创建项目，那么可能会看到以下错误：
 
 ```
-主机名 <myHostname> 已采用。
+The hostname <myHostname> is taken.
 ```
 {: codeblock}
 
 
 #### 原因
 {: #hostname-cause}
-   
+
 导致此错误的原因是登录令牌已到期。
 
 
@@ -50,7 +50,7 @@ lastupdated: "2018-05-02"
 请重新登录。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -61,14 +61,14 @@ bx login
 如果使用 {{site.data.keyword.dev_cli_short}} CLI 的 create、delete、list 或 code 命令，那么可能会看到以下错误：
 
 ```
-对项目执行 <command> 失败。
+Failed to <command> project.
 ```
 {: codeblock}
 
 
 #### 原因
 {: #general-cause}
-   
+
 导致此错误的原因是登录令牌已到期。
 
 
@@ -78,7 +78,7 @@ bx login
 请重新登录。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -89,16 +89,16 @@ bx login
 未首先构建项目就运行项目时，可能会看到以下错误。
 
 ```
-$ bx dev run testProject
-未指定 run-cmd 选项
-正在停止“testProject”容器...
-找不到“testProject”容器
-正在基于 Dockerfile 创建映像 bx-dev-testProject...
-正常
-正在基于该映像创建名为“testProject”的容器...
-失败
-无法创建容器“testProject”：
-错误：没有此类映像：bx-dev-testProject
+$ ibmcloud dev run testProject
+The run-cmd option was not specified
+Stopping the 'testProject' container...
+The 'testProject' container was not found
+Creating image bx-dev-testProject based on Dockerfile...
+OK
+Creating a container named 'testProject' from that image...
+FAILED
+Container 'testProject' could not be created:
+Error: No such image: bx-dev-testProject
 ```
 
 
@@ -106,7 +106,7 @@ $ bx dev run testProject
 {: #nosuchimage-cause}
 
 必须先构建项目，然后才能运行项目。
- 
+
 
 
 #### 解决方法
@@ -115,14 +115,14 @@ $ bx dev run testProject
 在当前项目目录中运行以下命令来构建应用程序：
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 在当前项目目录中运行以下命令来启动应用程序：
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 
 
@@ -132,15 +132,15 @@ bx dev run
 如果使用 {{site.data.keyword.dev_cli_short}} 创建具有 {{site.data.keyword.objectstorageshort}} 功能的两个项目，那么可能会看到以下错误：
 
 ```
-失败
-代理程序错误：{"description"=>"无法创建此 Object Storage 实例。每个使用 Object Storage 服务的组织在免费套餐中只能使用一个实例。"}
+FAILED
+Service broker error: {"description"=>"You can not create this Object Storage instance. Each organization using the Object Storage service is limited to one instance of the Free plan."}
 ```
 {: codeblock}
 
 
 #### 原因
 {: #os-cause}
-   
+
 导致此错误的原因是 {{site.data.keyword.objectstorageshort}} 服务仅在免费套餐中提供一个 {{site.data.keyword.objectstorageshort}} 实例。
 
 
@@ -155,21 +155,21 @@ bx dev run
 {: #code}
 
 如果使用 {{site.data.keyword.dev_cli_short}} 来创建项目，那么可能会看到以下错误：
-	
+
 ```
-失败
-项目已创建，但无法获取代码
+FAILED
+Project created, but could not get code
 https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
-	
+
 
 #### 原因
 {: #code-cause}
 
 导致此错误的原因是内部超时。
 
-	
+
 
 #### 解决方法
 {: #code-resolution}
@@ -179,7 +179,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 * 使用 CLI 运行以下命令：
 
    ```
-   bx dev code <your-project-name>
+   ibmcloud dev code <your-project-name>
    ```
    {: codeblock}
 
@@ -195,17 +195,17 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 
 
-### 对 Node.js 项目运行 `bx dev run` 时出错
+### 对 Node.js 项目运行 `ibmcloud dev run` 时出错
 {: #node}
 
-如果要使用 {{site.data.keyword.dev_cli_short}} 对 Node.js Web 或 BFF 项目运行 `bx dev run`，那么可能会看到以下错误：
+如果要使用 {{site.data.keyword.dev_cli_short}} 对 Node.js Web 或 BFF 项目运行 `ibmcloud dev run`，那么可能会看到以下错误：
 
 ```
 module.js:597
   return process.dlopen(module, path._makeLong(filename));
                  ^
 
-错误：/app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: ELF 头无效
+Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
     at Error (native)
     at Object.Module._extensions..node (module.js:597:18)
     at Module.load (module.js:487:32)
@@ -223,7 +223,7 @@ module.js:597
 
 #### 原因
 {: #node-cause}
-   
+
 `appmetrics` 模块安装在其他体系结构上时，会发生此错误。安装在一个体系结构上的本机 npm 模块不能在另一个体系结构上运行。包含的 Docker 映像基于 Linux 内核。
 
 
@@ -231,19 +231,19 @@ module.js:597
 #### 解决方法
 {: #node-resolution}
 
-删除 `node_modules` 文件夹，然后再次运行 `bx dev run`。
+删除 `node_modules` 文件夹，然后再次运行 `ibmcloud dev run`。
 
 
-### 部署到 Bluemix 失败
+### 未能部署到 {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploy}
 
-您可能尝试使用 {{site.data.keyword.dev_cli_short}} 部署到 Bluemix，但发现没有部署到 Bluemix，而且没有错误。
+您可能尝试使用 {{site.data.keyword.dev_cli_short}} 部署到 {{site.data.keyword.Bluemix_notm}}，但发现没有部署到 {{site.data.keyword.Bluemix_notm}}，而且没有错误。
 
 
 #### 原因
 {: #cause1}
 
-这可能是因为您未登录到帐户。 
+这可能是因为您未登录到帐户。
 
 #### 解决方法
 {: #resolution1}
@@ -251,21 +251,21 @@ module.js:597
 请登录并重试。
 
 ```
-bx login
+ibmcloud login
 ```
 
 
-### 部署到 Bluemix 上的 Kubernetes 失败
+### 未能部署到 {{site.data.keyword.Bluemix_notm}} 上的 Kubernetes
 {: #failuretodeploytokube}
 
 在初始提示输入集群名称后，可能会看到以下失败：
 
 ```
-失败
-未能执行操作：退出状态 1：
+FAILED
+Failed to execute the action:  exit status 1:
 
-失败
-未能配置对集群“<cluster-name>”的部署，原因是：退出状态 1
+FAILED
+Failed to configure deployment with cluster '<cluster-name>' due to: exit status 1
 ```
 
 
@@ -275,7 +275,7 @@ bx login
 导致此错误的最可能的原因是集群名称无效，您可以通过运行带有 `--trace` 的相同命令来进行确认，此时可能会看到以下错误输出：
 
 ```
-失败，错误为：{"incidentID":"<id-number>","code":"E0008","description":"找不到指定的集群。","recoveryCLI":"请运行“bx cs clusters”以列出您有权访问的所有集群。","type":"正在供应"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 
 
@@ -285,21 +285,21 @@ bx login
 确保使用的集群正确，并且已通过运行以下命令将集群配置为用于部署：
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 
 
-### 部署到 Bluemix 上的 Kubernetes 失败
+### 未能部署到 {{site.data.keyword.Bluemix_notm}} 上的 Kubernetes
 
 在提示输入部署映像目标后，可能会看到以下失败：
 
 ```
-失败
-无法执行操作：退出状态 1：已拒绝：请求对资源的访问被拒绝
+FAILED
+Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
 
 
-失败
-未能将标记为“registry.ng.bluemix.net/<namespace>/<project-name>:0.0.1”的 Run 映像推送到 Docker 注册表，原因：退出状态 1
+FAILED
+Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<project-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
 
 
@@ -315,7 +315,7 @@ bx cs cluster-config <cluster-name>
 确保部署映像目标中的名称空间与通过运行以下命令而找到的其中一个名称空间相匹配：
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 
 
@@ -327,7 +327,7 @@ bx cr namespaces
 
 要安装 dev 插件，必须先安装 [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started)。
 
-要使用 dev 插件本身，必须运行以下命令来安装该插件：`bx plugin install dev -r Bluemix`
+要使用 dev 插件本身，必须运行以下命令来安装该插件：`ibmcloud plugin install dev -r Bluemix`
 
 要在本地运行和调试应用程序，还必须安装 [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker)。
 
@@ -352,10 +352,10 @@ bx cr namespaces
 下载并安装二进制文件：https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
 安装 container-registry 插件：
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 安装 container-service 插件：
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`
 
 
 <!--

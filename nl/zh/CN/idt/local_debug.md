@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -25,7 +25,7 @@ lastupdated: "2018-04-17"
 1. 从应用程序项目的根目录，运行以下命令：
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. 将调试器连接到应用程序：
@@ -52,7 +52,7 @@ bx dev debug
 1. 从应用程序项目的根目录，运行以下命令：
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. 将调试器连接到应用程序：

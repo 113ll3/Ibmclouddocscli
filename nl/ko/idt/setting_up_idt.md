@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -43,21 +43,24 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* 참고: 마우스 오른쪽 단추를 클릭하여 Windows PowerShell을 열고 "관리자로서 실행"을 선택하십시오.
+* 참고: PowerShell 아이콘을 마우스 오른쪽 단추로 클릭하고 "관리자 권한으로 실행"을 선택하여 Windows PowerShell을 여십시오. 
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
 
-[재설치 도구](/docs/troubleshoot/ts_createapps.html#appendix) 섹션에는 모든 종속 항목을 개별적으로 설치하기 위한 정보가 포함되어 있습니다.
-
-다음 명령을 실행하여 플러그인이 제대로 설치되었는지 검증하십시오.  
+## 설치 확인
+설치를 확인하려면 `help` 명령을 실행하십시오. 
 
 ```
-bx dev
+ibmcloud dev help
 ```
 {: codeblock}
+
+설치가 성공한 경우에는 출력에 사용법 지시사항, 현재 버전 및 지원되는 명령이 나열됩니다. 
+
+[재설치 도구](/docs/troubleshoot/ts_createapps.html#appendix) 섹션에는 모든 종속 항목을 개별적으로 설치하기 위한 정보가 포함되어 있습니다.
 
 ## 환경 구성
 {: #configure-environment}
@@ -65,14 +68,14 @@ bx dev
 1. {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트에 연결하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 미국 남부 지역에 연결하십시오.
 
 	```
-	bx api https://api.ng.bluemix.net
+	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
 2. IBM ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.
 
 	```
-	bx login
+	ibmcloud login
 	```
 	{: codeblock}
 
@@ -86,14 +89,14 @@ bx dev
 	5. 다음 명령을 사용하여 로그인하십시오.
 
 		```
-		bx login --apikey <value>
+		ibmcloud login --apikey <value>
 		```
 		{: codeblock}
 
 3. 다음을 사용하여 사용자의 조직 및 영역을 설정하십시오.
 
 	```
-	bx target -o <value> -s <value>
+	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
 
@@ -102,7 +105,7 @@ bx dev
 
 {{site.data.keyword.dev_cli_short}}가 설치되었으므로 이 강력한 도구로 효율성을 높일 수 있는 방법을 배울 수 있습니다.
 - [IDT CLI로 시작하기](index.html)
-- [IDT (bx dev) 명령](commands.html)
+- [IDT(ibmcloud dev) 명령](commands.html)
 - [VS 코드를 위한 개발자 도구](vscode.html)
 - [Jetbrains IDE를 위한 개발자 도구](jetbrains.html)
 
@@ -116,8 +119,8 @@ bx dev
 - [IBM Cloud Developer Tools 기본 시작 페이지](https://www.ibm.com/cloud/cli) - IDT CLI에 대한 기본 제품 페이지
 - [IBM Developer Tools 설치 프로그램](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - 자세한 설치 지시사항이 있는 공용 GitHub 저장소
 - [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - 클라우드 네이티브 앱을 작성하고 관리하기 위한 IDT 도구의 컴패니온인 IBM Cloud 콘솔 페이지
-- [IBM Cloud TechTech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - IDT 도구 논의, 답변 얻기, 아이디어 제시 등
-	- [팀 액세스 요청](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+- [GitHub에 문제 보고](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [IBM Cloud 기술에 대한 Slack - #developer-tools 채널](https://ibm-cloud-tech.slack.com) - [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/)서 팀 액세스 권한 요청
 
 **언어에 초점**
 

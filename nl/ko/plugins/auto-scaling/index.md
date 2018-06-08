@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -31,11 +31,11 @@ lastupdated: "2018-04-17"
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 1. {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. {{site.data.keyword.autoscaling}} CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.
 ```
-bluemix plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r Bluemix
 ```
 
 ## Auto-Scaling 정책 연결
@@ -43,7 +43,7 @@ bluemix plugin install auto-scaling -r Bluemix
 특정 앱에 Auto-Scaling 정책을 연결할 수 있습니다. 다음 명령을 실행하십시오.
 
 ```
-bx as policy-attach <APP_NAME> -p <policy_file>
+ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -60,7 +60,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 명령행 인터페이스에서 질문에 답변하여 Auto-Scaling 정책을 생성할 수 있습니다. 입력 내용에 따라 Auto-Scaling 정책 정의를 포함한 JSON 파일이 사용자가 입력한 이름으로 저장됩니다. 파일 이름을 입력하지 않은 경우, 정책 내용이 파일에 저장되지 않은 채 명령행에 바로 인쇄됩니다. 다음 명령을 실행하십시오.
 
 ```
-bx as policy-create
+ibmcloud as policy-create
 ```
 {: codeblock}
 
@@ -70,7 +70,7 @@ bx as policy-create
 앱의 Auto-Scaling 정책을 표시할 수 있습니다. 정책의 내용이 명령행에 바로 인쇄됩니다. 다음 명령을 실행하십시오.
 
 ```
-bx as policy-show <APP_NAME> [--json]
+ibmcloud as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -87,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 앱에서 Auto-Scaling 정책을 제거할 수 있습니다. 다음 명령을 실행하십시오.
 
 ```
-bx as policy-detach <APP_NAME>
+ibmcloud as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -102,7 +102,7 @@ bx as policy-detach <APP_NAME>
 특정 앱의 Auto-Scaling 정책을 사용 또는 사용 안함으로 설정할 수 있습니다. 다음 명령을 실행하십시오.
 
 ```
-bx as policy-enable|policy-disable <APP_NAME>
+ibmcloud as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -117,7 +117,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 특정 앱의 Auto-Scaling 활동 히스토리를 표시할 수 있습니다. Auto-Scaling 히스토리 레코드의 테이블이 명령행 인터페이스에 표시됩니다.
 
 ```
-bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 

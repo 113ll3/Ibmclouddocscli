@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -244,8 +244,8 @@ sh bin/testAll.sh
 다음 명령 중 하나를 선택하여 {{site.data.keyword.Bluemix_notm}} CLI로 플러그인을 설치 및 호출하십시오.
 
 ```
-bluemix plugin install main
-bluemix help sdk
+ibmcloud plugin install main
+ibmcloud help sdk
 ```
 {: codeblock}
 

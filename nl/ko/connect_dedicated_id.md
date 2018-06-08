@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-04-16"
 
 
 ```
-  $ bluemix login -a https://api.{dedicated_env}.bluemix.net
+  $ ibmcloud login -a https://api.{dedicated_env}.bluemix.net
   API endpoint: https://api.{dedicated_env}.bluemix.net
 
   Public IAM token service is available in the dedicated environment.
@@ -57,18 +57,18 @@ lastupdated: "2018-04-16"
 
 ## 로컬 UAA 서버에 강제 로그인
 
-데디케이티드 ID로 UAA 서버에 강제로 로그인하려면 `bluemix login` 명령에 `--no-iam` 옵션을 지정하십시오.
+UAA 서버에 대한, 데디케이티드 ID를 사용한 로그인을 강제하려면 `ibmcloud login` 명령에 `--no-iam` 옵션을 지정하십시오. 
 
 ```
-  $ bluemix login --no-iam
+  $ ibmcloud login --no-iam
 ```
 
-## 공용 IBM ID에서 데디케이티드 ID 연결 끊기 
+## 공용 IBM ID에서 데디케이티드 ID 연결 끊기
 
-`bluemix iam dedicated-id-disconnect`를 사용하여 데디케이티드 ID와 공용 IBM ID의 연결을 끊으십시오.
+`ibmcloud iam dedicated-id-disconnect`를 사용하여 공용 IBM ID와 연결된 데디케이티드 ID의 연결을 끊을 수 있습니다. 
 
 ```
-  $ bluemix iam dedicated-id-disconnect
+  $ ibmcloud iam dedicated-id-disconnect
   Do you really want to disconnect my_dedicated_id from public IBMid? (Y/N)> y
   Disconnecting dedicated user my_dedicated_id from public IBMid...
   OK
@@ -76,4 +76,3 @@ lastupdated: "2018-04-16"
   Logging out...
   OK
 ```
-

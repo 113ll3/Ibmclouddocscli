@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -31,11 +31,11 @@ lastupdated: "2018-04-17"
 完成以下步骤来添加存储库并安装该插件：
 1. 要添加 {{site.data.keyword.Bluemix_notm}} CLI 插件存储库，请运行以下命令：
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. 要安装 {{site.data.keyword.autoscaling}} CLI 插件，请运行以下命令：
 ```
-bluemix plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r Bluemix
 ```
 
 ## 附加 Auto-Scaling 策略
@@ -43,7 +43,7 @@ bluemix plugin install auto-scaling -r Bluemix
 可以将 Auto-Scaling 策略附加到特定应用程序。运行以下命令：
 
 ```
-bx as policy-attach <APP_NAME> -p <policy_file>
+ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -60,7 +60,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 可以通过回答命令行界面上的问题来生成 Auto-Scaling 策略。根据您的输入，将以您输入的名称保存包含 Auto-Scaling 策略定义的 JSON 文件。如果未输入文件名，那么策略内容将直接显示在命令行上，而不保存到文件。运行以下命令：
 
 ```
-bx as policy-create
+ibmcloud as policy-create
 ```
 {: codeblock}
 
@@ -70,7 +70,7 @@ bx as policy-create
 可以显示应用程序的 Auto-Scaling 策略。该策略的内容会直接显示到命令行。运行以下命令：
 
 ```
-bx as policy-show <APP_NAME> [--json]
+ibmcloud as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -87,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 可以从应用程序中除去 Auto-Scaling 策略。运行以下命令：
 
 ```
-bx as policy-detach <APP_NAME>
+ibmcloud as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -102,7 +102,7 @@ bx as policy-detach <APP_NAME>
 可以启用或禁用特定应用程序的 Auto-Scaling 策略。运行以下命令：
 
 ```
-bx as policy-enable|policy-disable <APP_NAME>
+ibmcloud as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -117,7 +117,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 可以显示特定应用程序的自动扩展活动历史记录。自动扩展历史记录表将显示在命令行界面中。
 
 ```
-bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 

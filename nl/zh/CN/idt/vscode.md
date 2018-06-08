@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-04-17"
 # IBM Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension for Visual Studio Code 是一个编辑器扩展，可用于直接在 Visual Studio Code 编辑器的命令选用板内访问 IBM 开发者 CLI 中的功能。它支持快速访问适用于 Docker 和 CloudFoundry 工作流的 `bx dev` 命令子集，包括应用程序部署、在 {{site.data.keyword.Bluemix_notm}} 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需离开编辑器的上下文。
+IBM Developer Extension for Visual Studio Code 是一个编辑器扩展，可用于直接在 Visual Studio Code 编辑器的命令选用板内访问 IBM 开发者 CLI 中的功能。它支持快速访问适用于 Docker 和 CloudFoundry 工作流的 `ibmcloud dev` 命令子集，包括应用程序部署、在 {{site.data.keyword.Bluemix_notm}} 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需离开编辑器的上下文。
 {:shortdesc}
 
 ![IBM Developer Tools 扩展下载屏幕的截屏。](vscode.png "Visual Studio Code 中的扩展下载屏幕")
@@ -57,21 +57,21 @@ IBM Developer Extension for Visual Studio Code 是一个编辑器扩展，可用
 * **Mac：**`cmd + shift + p`
 * **Windows / Linux：**`ctrl + shift + p`
 
-接下来，输入或选择要启动的命令。可以在命令选用板中输入“bx”来查看所有可用命令的列表。
+接下来，输入或选择要启动的命令。可以在命令选用板中输入“ibmcloud”来查看所有可用命令的列表。
 
 ### 使用 IBM Developer Extension for Docker 工作流（Docker 容器）
 {: #usage-docker}
 
-只需几个步骤即可开始使用 bx dev 工作流：
+只需几个步骤即可开始使用 ibmcloud dev 工作流：
 * 使用以下两种方法之一来创建项目：
   * 使用 [{{site.data.keyword.Bluemix_notm}} Web 控制台](https://console.ng.bluemix.net/developer/getting-started/)并下载生成的代码
-  * 使用 [{{site.data.keyword.Bluemix_notm}} Developer CLI](index.html)，并使用 `bx dev create` 命令生成项目
+  * 使用 [{{site.data.keyword.Bluemix_notm}} Developer CLI](index.html)，并使用 `ibmcloud dev create` 命令生成项目
 * 在 Visual Studio Code 编辑器本地打开项目的文件夹
-* 使用 `bx dev build` 命令将应用程序构建到 Docker 映像中
-* 使用 `bx dev debug` 命令在本地 Docker 中运行应用程序以进行开发
+* 使用 `ibmcloud dev build` 命令将应用程序构建到 Docker 映像中
+* 使用 `ibmcloud dev debug` 命令在本地 Docker 中运行应用程序以进行开发
 > 注：要调试在本地 Docker 容器内运行的 Node.js 应用程序，需要[为本地容器添加调试配置](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container)。
-* 使用 `bx dev run` 命令在本地 Docker 中以发布方式运行应用程序
-* 使用 `bx dev deploy` 命令将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 上的 Cloud Foundry 运行时 
+* 使用 `ibmcloud dev run` 命令在本地 Docker 中以发布方式运行应用程序
+* 使用 `ibmcloud dev deploy` 命令将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 上的 Cloud Foundry 运行时
 
 ### 使用 IBM Developer Extension for Cloud Foundry 工作流
 {: #usage-cloud-foundry}
@@ -83,8 +83,8 @@ IBM Developer Extension for Visual Studio Code 是一个编辑器扩展，可用
   * 使用 [Web 控制台](https://console.ng.bluemix.net/dashboard/cf-apps)并下载入门模板代码
   * 手动创建新的 CloudFoundry 应用程序
 * 在 Visual Studio Code 编辑器本地打开项目文件夹
-* 使用 `bx cf apps` 列出所有应用程序
-* 使用 `bx cf push` 将应用程序的构建推送到 Cloud Foundry 运行时
-* 使用 `bx cf<start/stop/restage/restart>` 更改应用程序的状态
-* 使用 `bx cf logs` 查看应用程序的实时日志流
-  * 使用 `bx cf logs` 停止日志流
+* 使用 `ibmcloud cf apps` 列出所有应用程序
+* 使用 `ibmcloud cf push` 将应用程序的构建推送到 Cloud Foundry 运行时
+* 使用 `ibmcloud cf <start/stop/restage/restart>` 更改应用程序的状态
+* 使用 `ibmcloud cf logs` 查看应用程序的实时日志流
+  * 使用 `ibmcloud cf logs` 停止日志流

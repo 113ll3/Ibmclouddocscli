@@ -5,22 +5,26 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-05-23"
 
 ---
 
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}(bx) 명령
-{: #bluemix_cli}
+# {{site.data.keyword.Bluemix_notm}}(ibmcloud) 명령
+{: #ibmcloud_cli}
 
 버전: 0.6.7
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다.
 
-버전 0.5.0부터 {{site.data.keyword.Bluemix_notm}} 명령행 클라이언트는 Cloud Foundry 명령행 클라이언트를 해당 설치에서 번들화합니다. 고유 cf cli가 설치되어 있는 경우 동일한 컨텍스트에서 고유 설치의 {{site.data.keyword.Bluemix_notm}} CLI 명령 `bx [command]`와 Cloud Foundry CLI 명령 `cf [command]`를 함께 사용하지 마십시오. 대신 cf cli를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry 리소스를 관리하려면 `bluemix cf [command]`를 사용하십시오.  참고로, `bluemix cf api/login/logout/target`은 허용되지 않으며 그 대신에 `bluemix api/login/logout/target`을 사용해야 합니다.
+버전 0.5.0부터 {{site.data.keyword.Bluemix_notm}} 명령행 클라이언트는 Cloud Foundry 명령행 클라이언트를 해당 설치에서 번들화합니다. 자신에게 직접 설치한 cf cli가 있는 경우에는 {{site.data.keyword.Bluemix_notm}} CLI 명령 `ibmcloud [command]`와 해당 설치의 Cloud Foundry CLI 명령 `cf [command]`를 동일한 컨텍스트에서 함께 사용하지 마십시오. cf cli를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry 리소스를 관리하려면 `ibmcloud cf [command]`를 대신 사용하십시오.  `ibmcloud cf api/login/logout/target`은 허용되지 않으며 대신 `ibmcloud api/login/logout/target`을 사용해야 한다는 점을 참고하십시오. 
+
+2018년 5월부터 {{site.data.keyword.Bluemix_notm}} CLI 명령은 `bluemix` 및 `bx`에서 `ibmcloud`로 변경되었습니다. 그러나 `bluemix` 및 `bx` CLI 명령은 이후에 더 이상 사용되지 않는 항목으로 지정되기 전까지 사용할 수 있습니다.
+{: tip}
 
 다음에는 해당 이름, 인수, 옵션, 필수 소프트웨어, 설명 및 예제를 포함하여 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 자세한 명령이 나열되어 있습니다.
 {:shortdesc}
@@ -29,385 +33,379 @@ lastupdated: "2018-04-18"
 
 <dl>
 <dt>엔드포인트</dt>
-<dd>명령을 사용하기 전에 <code>bluemix api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
+<dd>명령을 사용하기 전에 <code>ibmcloud api</code>를 통해 API 엔드포인트를 설정해야 합니다. </dd>
 <dt>로그인</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다.
+<dd>이 명령을 사용하기 전에 <code>ibmcloud login</code> 명령을 사용하여 로그인해야 합니다.
  연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여 API 키로 인증하십시오. API 키를 작성하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **플랫폼 API 키**로 이동하십시오.
 </dd>
 <dt>대상</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
+<dd>이 명령을 사용하기 전에 <code>ibmcloud target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다. </dd>
 <dt>Docker</dt>
 <dd>이 명령을 실행하려면 Docker CLI(docker)가 설치되어 있어야 합니다.</dd>
 </dl>
 
-**참고:** Bluemix 명령의 short 형식을 사용할 수 있습니다. 예를 들어, `bx api`는 `bluemix api`의 단축형입니다.
 
-자주 사용되는 Bluemix 명령을 참조하려면 다음 표의 색인을 사용하십시오.
+자주 사용되는 ibmcloud 명령을 참조하려면 다음 표의 색인을 사용하십시오. 
 
-## 일반 Bluemix 명령
-{: #bx_commands_index}
+## 일반 ibmcloud 명령
+{: #ibmcloud_commands_index}
 
-<table summary="일반 Bluemix 명령.">
-<caption>표 1. 일반 Bluemix 명령</caption>
+<table summary="일반 ibmcloud 명령입니다. ">
+<caption>표 1. 일반 ibmcloud 명령</caption>
  <thead>
- <th colspan="5">일반 Bluemix 명령</th>
+ <th colspan="5">일반 ibmcloud 명령</th>
  </thead>
  <tbody>
  <tr>
- <td>[bluemix help
-](bx_cli.html#bluemix_help)</td>
- <td>[bluemix api
-](bx_cli.html#bluemix_api)</td>
- <td>[bluemix config](bx_cli.html#bluemix_config)</td>
- <td>[bluemix info](bx_cli.html#bluemix_info)</td>
- <td>[bluemix cf](bx_cli.html#bluemix_cf)</td>
+ <td>[ibmcloud help](bx_cli.html#ibmcloud_help)</td>
+ <td>[ibmcloud api](bx_cli.html#ibmcloud_api)</td>
+ <td>[ibmcloud config](bx_cli.html#ibmcloud_config)</td>
+ <td>[ibmcloud info](bx_cli.html#ibmcloud_info)</td>
+ <td>[ibmcloud cf](bx_cli.html#ibmcloud_cf)</td>
  </tr>
  <tr>
- <td>[bluemix login](bx_cli.html#bluemix_login) </td>
- <td>[bluemix logout](bx_cli.html#bluemix_logout) </td>
- <td>[bluemix regions](bx_cli.html#bluemix_regions)</td>
- <td>[bluemix target
-](bx_cli.html#bluemix_target)</td>
- <td>[bluemix update](bx_cli.html#bluemix_update)</td>
+ <td>[ibmcloud login](bx_cli.html#ibmcloud_login) </td>
+ <td>[ibmcloud logout](bx_cli.html#ibmcloud_logout) </td>
+ <td>[ibmcloud regions](bx_cli.html#ibmcloud_regions)</td>
+ <td>[ibmcloud target](bx_cli.html#ibmcloud_target)</td>
+ <td>[ibmcloud update](bx_cli.html#ibmcloud_update)</td>
  </tr>
  </tbody>
  </table>
 
- ## {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 관리 및 구성을 위한 명령(bluemix sl)
-  {: #bx_commands_softlayer}
+ ## {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 관리 및 구성을 위한 명령(ibmcloud sl)
+  {: #ibmcloud_commands_softlayer}
 
-{{site.data.keyword.BluSoftlayer_notm}} 인프라 관리를 위한 명령은 {{site.data.keyword.Bluemix_notm}} CLI에 병합되었습니다. {{site.data.keyword.Bluemix_notm}} CLI를 사용한 {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 구성 및 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} 인프라 (bluemix sl) 명령](/docs/cli/reference/softlayer/index.md#softlayer_cli)을 참조하십시오.
+{{site.data.keyword.BluSoftlayer_notm}} 인프라 관리를 위한 명령은 {{site.data.keyword.Bluemix_notm}} CLI에 병합되었습니다. {{site.data.keyword.Bluemix_notm}} CLI를 사용한 {{site.data.keyword.BluSoftlayer_notm}} 인프라 서비스의 구성 및 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} 인프라(ibmcloud sl) 명령](/docs/cli/reference/softlayer/index.md#softlayer_cli)을 참조하십시오. 
 
  ## 계정, 조직 및 역할 관리를 위한 명령
- {: #bx_commands_account}
+ {: #ibmcloud_commands_account}
 
-<table summary="계정, 조직, 영역 및 역할 관리에 사용할 수 있는 bluemix 명령.">
+<table summary="계정, 조직, 영역 및 역할을 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
 <caption>표 2. 계정, 조직, 영역 및 역할 관리를 위한 명령</caption>
  <thead>
  <th colspan="5">계정, 조직, 영역 및 역할 관리를 위한 명령</th>
  </thead>
  <tbody>
  <tr>
- <td>[bluemix account orgs](bx_cli.html#bluemix_account_orgs)</td>
- <td>[bluemix account org](bx_cli.html#bluemix_account_org)</td>
- <td>[bluemix account org-create](bx_cli.html#bluemix_account_org_create)</td>
- <td>[bluemix account org-replicate](bx_cli.html#bluemix_account_org_replicate)</td>
- <td>[bluemix account org-rename](bx_cli.html#bluemix_account_org_rename)</td>
+ <td>[ibmcloud account orgs](bx_cli.html#ibmcloud_account_orgs)</td>
+ <td>[ibmcloud account org](bx_cli.html#ibmcloud_account_org)</td>
+ <td>[ibmcloud account org-create](bx_cli.html#ibmcloud_account_org_create)</td>
+ <td>[ibmcloud account org-replicate](bx_cli.html#ibmcloud_account_org_replicate)</td>
+ <td>[ibmcloud account org-rename](bx_cli.html#ibmcloud_account_org_rename)</td>
  </tr>
  <tr>
- <td>[bluemix account spaces](bx_cli.html#bluemix_account_spaces)</td>
- <td>[bluemix account space](bx_cli.html#bluemix_account_space)</td>
- <td>[bluemix account space-create](bx_cli.html#bluemix_account_space_create)</td>
- <td>[bluemix account space-rename](bx_cli.html#bluemix_account_space_rename)</td>
- <td>[bluemix account space-delete](bx_cli.html#bluemix_account_space_delete)</td>
+ <td>[ibmcloud account spaces](bx_cli.html#ibmcloud_account_spaces)</td>
+ <td>[ibmcloud account space](bx_cli.html#ibmcloud_account_space)</td>
+ <td>[ibmcloud account space-create](bx_cli.html#ibmcloud_account_space_create)</td>
+ <td>[ibmcloud account space-rename](bx_cli.html#ibmcloud_account_space_rename)</td>
+ <td>[ibmcloud account space-delete](bx_cli.html#ibmcloud_account_space_delete)</td>
  </tr>
  <tr>
- <td>[bluemix account org-users](bx_cli.html#bluemix_account_org_users)</td>
- <td>[bluemix account org-user-add](bx_cli.html#bluemix_account_org_user_add)</td>
- <td>[bluemix account org-user-remove](bx_cli.html#bluemix_account_org_user_remove)</td>
- <td>[bluemix account org-roles](bx_cli.html#bluemix_account_org_roles)</td>
- <td>[bluemix account org-role-set](bx_cli.html#bluemix_account_org_role_set)</td>
+ <td>[ibmcloud account org-users](bx_cli.html#ibmcloud_account_org_users)</td>
+ <td>[ibmcloud account org-user-add](bx_cli.html#ibmcloud_account_org_user_add)</td>
+ <td>[ibmcloud account org-user-remove](bx_cli.html#ibmcloud_account_org_user_remove)</td>
+ <td>[ibmcloud account org-roles](bx_cli.html#ibmcloud_account_org_roles)</td>
+ <td>[ibmcloud account org-role-set](bx_cli.html#ibmcloud_account_org_role_set)</td>
  </tr>
  <tr>
- <td>[bluemix account org-role-unset](bx_cli.html#bluemix_account_org_role_unset)</td>
- <td>[bluemix account space-users](bx_cli.html#bluemix_account_space_users)</td>
- <td>[bluemix account space-roles](bx_cli.html#bluemix_account_space_roles)</td>
- <td>[bluemix account space-role-set](bx_cli.html#bluemix_account_space_role_set)</td>
- <td>[bluemix account space-role-unset](bx_cli.html#bluemix_account_space_role_unset)</td>
+ <td>[ibmcloud account org-role-unset](bx_cli.html#ibmcloud_account_org_role_unset)</td>
+ <td>[ibmcloud account space-users](bx_cli.html#ibmcloud_account_space_users)</td>
+ <td>[ibmcloud account space-roles](bx_cli.html#ibmcloud_account_space_roles)</td>
+ <td>[ibmcloud account space-role-set](bx_cli.html#ibmcloud_account_space_role_set)</td>
+ <td>[ibmcloud account space-role-unset](bx_cli.html#ibmcloud_account_space_role_unset)</td>
 </tr>
- <td>[bluemix account list](bx_cli.html#bluemix_account_list)</td>
- <td>[bluemix account org-account](bx_cli.html#bluemix_account_org_account)</td>
- <td>[bluemix account users](bx_cli.html#bluemix_account_users)</td>
- <td>[bluemix account users-delete](bx_cli.html#bluemix_account_users_delete)</td>
- <td>[bluemix account user-invite](bx_cli.html#bluemix_account_user_invite)</td>
+ <td>[ibmcloud account list](bx_cli.html#ibmcloud_account_list)</td>
+ <td>[ibmcloud account org-account](bx_cli.html#ibmcloud_account_org_account)</td>
+ <td>[ibmcloud account users](bx_cli.html#ibmcloud_account_users)</td>
+ <td>[ibmcloud account users-delete](bx_cli.html#ibmcloud_account_users_delete)</td>
+ <td>[ibmcloud account user-invite](bx_cli.html#ibmcloud_account_user_invite)</td>
  </tr>
  <tr>
-  <td>[bluemix account user-reinvite](bx_cli.html#bluemix_account_user_reinvite)</td>
-  <td>[bluemix iam access-groups](bx_cli.html#bluemix_iam_access-groups)</td>
-  <td>[bluemix iam access-group](bx_cli.html#bluemix_iam_access-group)</td>
-  <td>[bluemix iam access-group-create](bx_cli.html#bluemix_iam_access-group-create)</td>
-  <td>[bluemix iam access-group-update](bx_cli.html#bluemix_iam_access-group-update)</td>
-</tr>
-<tr>
-  <td>[bluemix iam access-group-delete](bx_cli.html#bluemix_iam_access-group-delete)</td>
-  <td>[bluemix iam access-group-users](bx_cli.html#bluemix_iam_access-group-users)</td>
-  <td>[bluemix iam access-group-user-add](bx_cli.html#bluemix_iam_access-group-user-add)</td>
-  <td>[bluemix iam access-group-user-remove](bx_cli.html#bluemix_iam_access-group-user-remove)</td>
-  <td>[bluemix iam access-group-user-purge](bx_cli.html#bluemix_iam_access-group-user-purge)</td>
+  <td>[ibmcloud account user-reinvite](bx_cli.html#ibmcloud_account_user_reinvite)</td>
+  <td>[ibmcloud iam access-groups](bx_cli.html#ibmcloud_iam_access-groups)</td>
+  <td>[ibmcloud iam access-group](bx_cli.html#ibmcloud_iam_access-group)</td>
+  <td>[ibmcloud iam access-group-create](bx_cli.html#ibmcloud_iam_access-group-create)</td>
+  <td>[ibmcloud iam access-group-update](bx_cli.html#ibmcloud_iam_access-group-update)</td>
 </tr>
 <tr>
-  <td>[bluemix iam access-group-service-ids](bx_cli.html#bluemix_iam_access-group-service-ids)</td>
-  <td>[bluemix iam access-group-service-id-add](bx_cli.html#bluemix_iam_access-group-service-id-add)</td>
-  <td>[bluemix iam access-group-service-id-remove](bx_cli.html#bluemix_iam_access-group-service-id-remove)</td>
-  <td>[bluemix iam access-group-service-id-purge](bx_cli.html#bluemix_iam_access-group-service-id-purge)</td>
-  <td>[bluemix iam access-group-policies](bx_cli.html#bluemix_iam_access-group-policies)</td>
+  <td>[ibmcloud iam access-group-delete](bx_cli.html#ibmcloud_iam_access-group-delete)</td>
+  <td>[ibmcloud iam access-group-users](bx_cli.html#ibmcloud_iam_access-group-users)</td>
+  <td>[ibmcloud iam access-group-user-add](bx_cli.html#ibmcloud_iam_access-group-user-add)</td>
+  <td>[ibmcloud iam access-group-user-remove](bx_cli.html#ibmcloud_iam_access-group-user-remove)</td>
+  <td>[ibmcloud iam access-group-user-purge](bx_cli.html#ibmcloud_iam_access-group-user-purge)</td>
 </tr>
 <tr>
-  <td>[bluemix iam access-group-policy](bx_cli.html#bluemix_iam_access-group-policy)</td>
-  <td>[bluemix iam access-group-policy-create](bx_cli.html#bluemix_iam_access-group-policy-create)</td>
-  <td>[bluemix iam access-group-policy-update](bx_cli.html#bluemix_iam_access-group-policy-update)</td>
-  <td>[bluemix iam access-group-policy-delete](bx_cli.html#bluemix_iam_access-group-policy-delete)</td>
+  <td>[ibmcloud iam access-group-service-ids](bx_cli.html#ibmcloud_iam_access-group-service-ids)</td>
+  <td>[ibmcloud iam access-group-service-id-add](bx_cli.html#ibmcloud_iam_access-group-service-id-add)</td>
+  <td>[ibmcloud iam access-group-service-id-remove](bx_cli.html#ibmcloud_iam_access-group-service-id-remove)</td>
+  <td>[ibmcloud iam access-group-service-id-purge](bx_cli.html#ibmcloud_iam_access-group-service-id-purge)</td>
+  <td>[ibmcloud iam access-group-policies](bx_cli.html#ibmcloud_iam_access-group-policies)</td>
+</tr>
+<tr>
+  <td>[ibmcloud iam access-group-policy](bx_cli.html#ibmcloud_iam_access-group-policy)</td>
+  <td>[ibmcloud iam access-group-policy-create](bx_cli.html#ibmcloud_iam_access-group-policy-create)</td>
+  <td>[ibmcloud iam access-group-policy-update](bx_cli.html#ibmcloud_iam_access-group-policy-update)</td>
+  <td>[ibmcloud iam access-group-policy-delete](bx_cli.html#ibmcloud_iam_access-group-policy-delete)</td>
  </tr>
  </tbody>
  </table>
 
 
  ## 리소스 그룹 및 리소스 관리를 위한 명령
-{: #bx_commands_resource}
+{: #ibmcloud_commands_resource}
 
-<table summary="리소스 그룹 및 리소스 관리에 사용할 수 있는 bluemix 명령.">
+<table summary="리소스 그룹 및 리소스를 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
   <caption>표 3. 리소스 그룹 및 리소스 관리를 위한 명령</caption>
   <thead>
     <th colspan="5">리소스 그룹 및 리소스 관리를 위한 명령</th>
   </thead>
   <tbody>
     <tr>
-      <td>[bluemix resource groups](bx_cli.html#bluemix_resource_groups)</td>
-      <td>[bluemix resource group](bx_cli.html#bluemix_resource_group)</td>
-      <td>[bluemix resource group-update](bx_cli.html#bluemix_resource_group_update)</td>
-      <td>[bluemix resource quotas](bx_cli.html#bluemix_resource_quotas)</td>
-      <td>[bluemix resource quota](bx_cli.html#bluemix_resource_quota)</td>
+      <td>[ibmcloud resource groups](bx_cli.html#ibmcloud_resource_groups)</td>
+      <td>[ibmcloud resource group](bx_cli.html#ibmcloud_resource_group)</td>
+      <td>[ibmcloud resource group-update](bx_cli.html#ibmcloud_resource_group_update)</td>
+      <td>[ibmcloud resource quotas](bx_cli.html#ibmcloud_resource_quotas)</td>
+      <td>[ibmcloud resource quota](bx_cli.html#ibmcloud_resource_quota)</td>
     </tr>
     <tr>
-      <td>[bluemix resource service-instances](bx_cli.html#bluemix_resource_service_instances)</td>
-      <td>[bluemix resource service-instance](bx_cli.html#bluemix_resource_service_instance)</td>
-      <td>[bluemix resource service-instance-create](bx_cli.html#bluemix_resource_service_instance_create)</td>
-      <td>[bluemix resource service-instance-update](bx_cli.html#bluemix_resource_service_instance_update)</td>
-      <td>[bluemix resource service-instance-delete](bx_cli.html#bluemix_resource_service_instance_delete)</td>
+      <td>[ibmcloud resource service-instances](bx_cli.html#ibmcloud_resource_service_instances)</td>
+      <td>[ibmcloud resource service-instance](bx_cli.html#ibmcloud_resource_service_instance)</td>
+      <td>[ibmcloud resource service-instance-create](bx_cli.html#ibmcloud_resource_service_instance_create)</td>
+      <td>[ibmcloud resource service-instance-update](bx_cli.html#ibmcloud_resource_service_instance_update)</td>
+      <td>[ibmcloud resource service-instance-delete](bx_cli.html#ibmcloud_resource_service_instance_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource service-bindings](bx_cli.html#bluemix_resource_service_bindings)</td>
-      <td>[bluemix resource service-binding](bx_cli.html#bluemix_resource_service_binding)</td>
-      <td>[bluemix resource service-binding-create](bx_cli.html#bluemix_resource_service_binding_create)</td>
-      <td>[bluemix resource service-binding-delete](bx_cli.html#bluemix_resource_service_binding_delete)</td>
+      <td>[ibmcloud resource service-bindings](bx_cli.html#ibmcloud_resource_service_bindings)</td>
+      <td>[ibmcloud resource service-binding](bx_cli.html#ibmcloud_resource_service_binding)</td>
+      <td>[ibmcloud resource service-binding-create](bx_cli.html#ibmcloud_resource_service_binding_create)</td>
+      <td>[ibmcloud resource service-binding-delete](bx_cli.html#ibmcloud_resource_service_binding_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource service-keys](bx_cli.html#bluemix_resource_service_keys)</td>
-      <td>[bluemix resource service-key](bx_cli.html#bluemix_resource_service_key)</td>
-      <td>[bluemix resource service-key-create](bx_cli.html#bluemix_resource_service_key_create)</td>
-      <td>[bluemix resource service-key-delete](bx_cli.html#bluemix_resource_service_key_delete)</td>
+      <td>[ibmcloud resource service-keys](bx_cli.html#ibmcloud_resource_service_keys)</td>
+      <td>[ibmcloud resource service-key](bx_cli.html#ibmcloud_resource_service_key)</td>
+      <td>[ibmcloud resource service-key-create](bx_cli.html#ibmcloud_resource_service_key_create)</td>
+      <td>[ibmcloud resource service-key-delete](bx_cli.html#ibmcloud_resource_service_key_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource service-aliases](bx_cli.html#bluemix_resource_service_aliases)</td>
-      <td>[bluemix resource service-alias](bx_cli.html#bluemix_resource_service_alias)</td>
-      <td>[bluemix resource service-alias-create](bx_cli.html#bluemix_resource_service_alias_create)</td>
-      <td>[bluemix resource service-alias-update](bx_cli.html#bluemix_resource_service_alias_update)</td>
-      <td>[bluemix resource service-alias-delete](bx_cli.html#bluemix_resource_service_alias_delete)</td>
+      <td>[ibmcloud resource service-aliases](bx_cli.html#ibmcloud_resource_service_aliases)</td>
+      <td>[ibmcloud resource service-alias](bx_cli.html#ibmcloud_resource_service_alias)</td>
+      <td>[ibmcloud resource service-alias-create](bx_cli.html#ibmcloud_resource_service_alias_create)</td>
+      <td>[ibmcloud resource service-alias-update](bx_cli.html#ibmcloud_resource_service_alias_update)</td>
+      <td>[ibmcloud resource service-alias-delete](bx_cli.html#ibmcloud_resource_service_alias_delete)</td>
     </tr>
     <tr>
-      <td>[bluemix resource search](bx_cli.html#bluemix_resource_search)</td>
+      <td>[ibmcloud resource search](bx_cli.html#ibmcloud_resource_search)</td>
     </tr>
   </tbody>
 </table>
 
 
  ## API 키 및 정책 관리를 위한 명령
- {: #bx_commands_iam}
- <table summary="API 키 및 정책 관리에 사용할 수 있는 bluemix 명령.">
+ {: #ibmcloud_commands_iam}
+ <table summary="API 키 및 정책을 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
  <caption>표 3. API 키 및 정책 관리를 위한 명령</caption>
   <thead>
   <th colspan="5">API 키 및 정책 관리를 위한 명령</th>
   </thead>
   <tbody>
   <tr>
-   <td>[bluemix iam service-id](bx_cli.html#bluemix_iam_service_id)</td>
-   <td>[bluemix iam service-id-create](bx_cli.html#bluemix_iam_service_id_create)</td>
-   <td>[bluemix iam service-id-update](bx_cli.html#bluemix_iam_service_id_update)</td>
-   <td>[bluemix iam service-id-delete](bx_cli.html#bluemix_iam_service_id_delete)</td>
-   <td>[bluemix iam service-ids](bx_cli.html#bluemix_iam_service_ids)</td>
+   <td>[ibmcloud iam service-id](bx_cli.html#ibmcloud_iam_service_id)</td>
+   <td>[ibmcloud iam service-id-create](bx_cli.html#ibmcloud_iam_service_id_create)</td>
+   <td>[ibmcloud iam service-id-update](bx_cli.html#ibmcloud_iam_service_id_update)</td>
+   <td>[ibmcloud iam service-id-delete](bx_cli.html#ibmcloud_iam_service_id_delete)</td>
+   <td>[ibmcloud iam service-ids](bx_cli.html#ibmcloud_iam_service_ids)</td>
   </tr>
   <tr>
-   <td>[bluemix iam api-keys](bx_cli.html#bluemix_iam_api_keys)</td>
-   <td>[bluemix iam api-key-create](bx_cli.html#bluemix_iam_api_key_create)</td>
-   <td>[bluemix iam api-key-delete](bx_cli.html#bluemix_iam_api_key_delete)</td>
-   <td>[bluemix iam api-key-update](bx_cli.html#bluemix_iam_api_key_update)</td>
-   <td>[bluemix iam service-api-keys](bx_cli.html#bluemix_iam_service_api_keys)</td>
+   <td>[ibmcloud iam api-keys](bx_cli.html#ibmcloud_iam_api_keys)</td>
+   <td>[ibmcloud iam api-key-create](bx_cli.html#ibmcloud_iam_api_key_create)</td>
+   <td>[ibmcloud iam api-key-delete](bx_cli.html#ibmcloud_iam_api_key_delete)</td>
+   <td>[ibmcloud iam api-key-update](bx_cli.html#ibmcloud_iam_api_key_update)</td>
+   <td>[ibmcloud iam service-api-keys](bx_cli.html#ibmcloud_iam_service_api_keys)</td>
   </tr>
   <tr>
-   <td>[bluemix iam service-api-key](bx_cli.html#bluemix_iam_service_api_key)</td>
-   <td>[bluemix iam service-api-key-create](bx_cli.html#bluemix_iam_service_api_key_create)</td>
-   <td>[bluemix iam service-api-key-update](bx_cli.html#bluemix_iam_service_api_key_update)</td>
-   <td>[bluemix iam service-api-key-delete](bx_cli.html#bluemix_iam_service_api_key_delete)</td>
-   <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service_policies)</td>
+   <td>[ibmcloud iam service-api-key](bx_cli.html#ibmcloud_iam_service_api_key)</td>
+   <td>[ibmcloud iam service-api-key-create](bx_cli.html#ibmcloud_iam_service_api_key_create)</td>
+   <td>[ibmcloud iam service-api-key-update](bx_cli.html#ibmcloud_iam_service_api_key_update)</td>
+   <td>[ibmcloud iam service-api-key-delete](bx_cli.html#ibmcloud_iam_service_api_key_delete)</td>
+   <td>[ibmcloud iam service-policies](bx_cli.html#ibmcloud_iam_service_policies)</td>
   </tr>
   <tr>
-    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
-    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
-    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
-    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
-    <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
+    <td>[ibmcloud iam service-policy](bx_cli.html#ibmcloud_iam_service_policy)</td>
+    <td>[ibmcloud iam service-policy-create](bx_cli.html#ibmcloud_iam_service_policy_create)</td>
+    <td>[ibmcloud iam service-policy-update](bx_cli.html#ibmcloud_iam_service_policy_update)</td>
+    <td>[ibmcloud iam service-policy-delete](bx_cli.html#ibmcloud_iam_service_policy_delete)</td>
+    <td>[ibmcloud iam user-policies](bx_cli.html#ibmcloud_iam_user_policies)</td>
   </tr>
   <tr>
-   <td>[bluemix iam user-policy](bx_cli.html#bluemix_iam_user_policy)</td>
-   <td>[bluemix iam user-policy-create](bx_cli.html#bluemix_iam_user_policy_create)</td>
-   <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
-   <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
-   <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
+   <td>[ibmcloud iam user-policy](bx_cli.html#ibmcloud_iam_user_policy)</td>
+   <td>[ibmcloud iam user-policy-create](bx_cli.html#ibmcloud_iam_user_policy_create)</td>
+   <td>[ibmcloud iam user-policy-update](bx_cli.html#ibmcloud_iam_user_policy_update)</td>
+   <td>[ibmcloud iam user-policy-delete](bx_cli.html#ibmcloud_iam_user_policy_delete)</td>
+   <td>[ibmcloud iam oauth-tokens](bx_cli.html#ibmcloud_iam_oauth_tokens)</td>
   </tr>
   <tr>
-     <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
-     <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
-     <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
-     <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
-     <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
+     <td>[ibmcloud iam dedicated-id-disconnect](bx_cli.html#ibmcloud_iam_dedicated_id_disconnect)</td>
+     <td>[ibmcloud iam authorization-policy-create](bx_cli.html#ibmcloud_iam_authorization_policy_create)</td>
+     <td>[ibmcloud iam authorization-policy-delete](bx_cli.html#ibmcloud_iam_authorization_policy_delete)</td>
+     <td>[ibmcloud iam authorization-policy](bx_cli.html#ibmcloud_iam_authorization_policy)</td>
+     <td>[ibmcloud iam authorization-policies](bx_cli.html#ibmcloud_iam_authorization_policies)</td>
   </tr>
   </tbody>
   </table>
 
  ## cf 앱 및 앱 관련 도메인, 라우트 및 인증서 관리를 위한 명령
- {: #bx_commands_apps}
+ {: #ibmcloud_commands_apps}
 
-<table summary="cf 앱 및 앱 관련 도메인, 라우트와 인증서를 관리하는 데 사용할 수 있는 bluemix 명령입니다.">
+<table summary="cf 앱 및 앱 관련 도메인, 라우트, 인증서를 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
 <caption>표 4. cf 앱 및 앱 관련 도메인, 라우트 및 인증서 관리를 위한 명령</caption>
  <thead>
  <th colspan="5">cf 앱 및 앱 관련 도메인, 라우트 및 인증서 관리를 위한 명령</th>
  </thead>
  <tbody>
  <tr>
- <td>[bluemix app push](bx_cli.html#bluemix_app_push)</td>
- <td>[bluemix app list](bx_cli.html#bluemix_app_list)</td>
- <td>[bluemix app show](bx_cli.html#bluemix_app_show)</td>
- <td>[bluemix app delete](bx_cli.html#bluemix_app_delete)</td>
- <td>[bluemix app rename](bx_cli.html#bluemix_app_rename)</td>
+ <td>[ibmcloud app push](bx_cli.html#ibmcloud_app_push)</td>
+ <td>[ibmcloud app list](bx_cli.html#ibmcloud_app_list)</td>
+ <td>[ibmcloud app show](bx_cli.html#ibmcloud_app_show)</td>
+ <td>[ibmcloud app delete](bx_cli.html#ibmcloud_app_delete)</td>
+ <td>[ibmcloud app rename](bx_cli.html#ibmcloud_app_rename)</td>
  </tr>
  <tr>
- <td>[bluemix app start](bx_cli.html#bluemix_app_start)</td>
- <td>[bluemix app stop](bx_cli.html#bluemix_app_stop)</td>
- <td>[bluemix app restart](bx_cli.html#bluemix_app_restart)</td>
- <td>[bluemix app restage](bx_cli.html#bluemix_app_restage)</td>
- <td>[bluemix app instance-restart](bx_cli.html#bluemix_app_instance_restart)</td>
+ <td>[ibmcloud app start](bx_cli.html#ibmcloud_app_start)</td>
+ <td>[ibmcloud app stop](bx_cli.html#ibmcloud_app_stop)</td>
+ <td>[ibmcloud app restart](bx_cli.html#ibmcloud_app_restart)</td>
+ <td>[ibmcloud app restage](bx_cli.html#ibmcloud_app_restage)</td>
+ <td>[ibmcloud app instance-restart](bx_cli.html#ibmcloud_app_instance_restart)</td>
  </tr>
  <tr>
- <td>[bluemix app events](bx_cli.html#bluemix_app_events)</td>
- <td>[bluemix app files](bx_cli.html#bluemix_app_files)</td>
- <td>[bluemix app logs](bx_cli.html#bluemix_app_logs)</td>
- <td>[bluemix app env](bx_cli.html#bluemix_app_env)</td>
- <td>[bluemix app env-set](bx_cli.html#bluemix_app_env_set)</td>
+ <td>[ibmcloud app events](bx_cli.html#ibmcloud_app_events)</td>
+ <td>[ibmcloud app files](bx_cli.html#ibmcloud_app_files)</td>
+ <td>[ibmcloud app logs](bx_cli.html#ibmcloud_app_logs)</td>
+ <td>[ibmcloud app env](bx_cli.html#ibmcloud_app_env)</td>
+ <td>[ibmcloud app env-set](bx_cli.html#ibmcloud_app_env_set)</td>
  </tr>
  <tr>
- <td>[bluemix app env-unset](bx_cli.html#bluemix_app_env_unset)</td>
- <td>[bluemix app stacks](bx_cli.html#bluemix_app_stacks)</td>
- <td>[bluemix app stack-show](bx_cli.html#bluemix_app_stack_show)</td>
- <td>[bluemix app manifest-create](bx_cli.html#bluemix_app_manifest_create)</td>
- <td>[bluemix app domain-cert](bx_cli.html#bluemix_app_domain_cert)</td>
+ <td>[ibmcloud app env-unset](bx_cli.html#ibmcloud_app_env_unset)</td>
+ <td>[ibmcloud app stacks](bx_cli.html#ibmcloud_app_stacks)</td>
+ <td>[ibmcloud app stack-show](bx_cli.html#ibmcloud_app_stack_show)</td>
+ <td>[ibmcloud app manifest-create](bx_cli.html#ibmcloud_app_manifest_create)</td>
+ <td>[ibmcloud app domain-cert](bx_cli.html#ibmcloud_app_domain_cert)</td>
  </tr>
  <tr>
-  <td>[bluemix app domain-cert-add](bx_cli.html#bluemix_app_domain_cert_add)</td>
-  <td>[bluemix app domain-cert-remove](bx_cli.html#bluemix_app_domain_cert_remove)</td>
-  <td>[bluemix app domains](bx_cli.html#bluemix_app_domains)</td>
-  <td>[bluemix app domain-create](bx_cli.html#bluemix_app_domain_create)</td>
-  <td>[bluemix app domain-delete](bx_cli.html#bluemix_app_domain_delete)</td>
+  <td>[ibmcloud app domain-cert-add](bx_cli.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](bx_cli.html#ibmcloud_app_domain_cert_remove)</td>
+  <td>[ibmcloud app domains](bx_cli.html#ibmcloud_app_domains)</td>
+  <td>[ibmcloud app domain-create](bx_cli.html#ibmcloud_app_domain_create)</td>
+  <td>[ibmcloud app domain-delete](bx_cli.html#ibmcloud_app_domain_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix app shared-domain-create](bx_cli.html#bluemix_app_shared_domain_create)</td>
-  <td>[bluemix app shared-domain-delete](bx_cli.html#bluemix_app_shared_domain_delete)</td>
-  <td>[bluemix app routes](bx_cli.html#bluemix_app_routes)</td>
-  <td>[bluemix app route-check](bx_cli.html#bluemix_app_route_check)</td>
-  <td>[bluemix app route-map](bx_cli.html#bluemix_app_route_map)</td>
+  <td>[ibmcloud app shared-domain-create](bx_cli.html#ibmcloud_app_shared_domain_create)</td>
+  <td>[ibmcloud app shared-domain-delete](bx_cli.html#ibmcloud_app_shared_domain_delete)</td>
+  <td>[ibmcloud app routes](bx_cli.html#ibmcloud_app_routes)</td>
+  <td>[ibmcloud app route-check](bx_cli.html#ibmcloud_app_route_check)</td>
+  <td>[ibmcloud app route-map](bx_cli.html#ibmcloud_app_route_map)</td>
  </tr>
  <tr>
-  <td>[bluemix app route-unmap](bx_cli.html#bluemix_app_route_unmap)</td>
-  <td>[bluemix app route-create](bx_cli.html#bluemix_app_route_create)</td>
-  <td>[bluemix app route-delete](bx_cli.html#bluemix_app_route_delete)</td>
-  <td>[bluemix app orphaned-routes-delete](bx_cli.html#bluemix_app_orphaned_routes_delete)</td>
+  <td>[ibmcloud app route-unmap](bx_cli.html#ibmcloud_app_route_unmap)</td>
+  <td>[ibmcloud app route-create](bx_cli.html#ibmcloud_app_route_create)</td>
+  <td>[ibmcloud app route-delete](bx_cli.html#ibmcloud_app_route_delete)</td>
+  <td>[ibmcloud app orphaned-routes-delete](bx_cli.html#ibmcloud_app_orphaned_routes_delete)</td>
   <td></td>
  </tr>
   </tbody>
  </table>
 
  ## {{site.data.keyword.Bluemix_notm}} 서비스 관리를 위한 명령
- {: #bx_commands_services}
+ {: #ibmcloud_commands_services}
 
-<table summary="{{site.data.keyword.Bluemix_notm}} 서비스 관리에 사용할 수 있는 bluemix 명령입니다.">
+<table summary="{{site.data.keyword.Bluemix_notm}} 서비스를 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
 <caption>표 5. {{site.data.keyword.Bluemix_notm}} 서비스 관리를 위한 명령</caption>
  <thead>
  <th colspan="5">{{site.data.keyword.Bluemix_notm}} 서비스 관리를 위한 명령</th>
  </thead>
  <tbody>
  <tr>
- <td>[bluemix service offerings](bx_cli.html#bluemix_service_offerings)</td>
- <td>[bluemix service list](bx_cli.html#bluemix_service_list)</td>
- <td>[bluemix service show](bx_cli.html#bluemix_service_show)</td>
- <td>[bluemix service create](bx_cli.html#bluemix_service_create)</td>
- <td>[bluemix service update](bx_cli.html#bluemix_service_update)</td>
+ <td>[ibmcloud service offerings](bx_cli.html#ibmcloud_service_offerings)</td>
+ <td>[ibmcloud service list](bx_cli.html#ibmcloud_service_list)</td>
+ <td>[ibmcloud service show](bx_cli.html#ibmcloud_service_show)</td>
+ <td>[ibmcloud service create](bx_cli.html#ibmcloud_service_create)</td>
+ <td>[ibmcloud service update](bx_cli.html#ibmcloud_service_update)</td>
  </tr>
  <tr>
- <td>[bluemix service delete](bx_cli.html#bluemix_service_delete)</td>
- <td>[bluemix service rename](bx_cli.html#bluemix_service_rename)</td>
- <td>[bluemix service bind](bx_cli.html#bluemix_service_bind)</td>
- <td>[bluemix service unbind](bx_cli.html#bluemix_service_unbind)</td>
- <td>[bluemix service key-create](bx_cli.html#bluemix_service_key_create)</td>
+ <td>[ibmcloud service delete](bx_cli.html#ibmcloud_service_delete)</td>
+ <td>[ibmcloud service rename](bx_cli.html#ibmcloud_service_rename)</td>
+ <td>[ibmcloud service bind](bx_cli.html#ibmcloud_service_bind)</td>
+ <td>[ibmcloud service unbind](bx_cli.html#ibmcloud_service_unbind)</td>
+ <td>[ibmcloud service key-create](bx_cli.html#ibmcloud_service_key_create)</td>
  </tr>
  <tr>
- <td>[bluemix service key-delete](bx_cli.html#bluemix_service_key_delete)</td>
- <td>[bluemix service keys](bx_cli.html#bluemix_service_keys)</td>
- <td>[bluemix service key-show](bx_cli.html#bluemix_service_key_show)</td>
- <td>[bluemix service user-provided-create](bx_cli.html#bluemix_service_user_provided_create)</td>
- <td>[bluemix service user-provided-update](bx_cli.html#bluemix_service_user_provided_update)</td>
+ <td>[ibmcloud service key-delete](bx_cli.html#ibmcloud_service_key_delete)</td>
+ <td>[ibmcloud service keys](bx_cli.html#ibmcloud_service_keys)</td>
+ <td>[ibmcloud service key-show](bx_cli.html#ibmcloud_service_key_show)</td>
+ <td>[ibmcloud service user-provided-create](bx_cli.html#ibmcloud_service_user_provided_create)</td>
+ <td>[ibmcloud service user-provided-update](bx_cli.html#ibmcloud_service_user_provided_update)</td>
  </tr>
   </tbody>
  </table>
 
 
  ## 카탈로그, 플러그인 및 청구 설정 관리를 위한 명령
- {: #bx_commands_settings}
+ {: #ibmcloud_commands_settings}
 
-<table summary=" {{site.data.keyword.Bluemix_notm}} 카탈로그, 플러그인, 청구 및 보안 설정의 관리에 사용할 수 있는 bluemix 명령입니다. ">
+<table summary="{{site.data.keyword.Bluemix_notm}} 카탈로그, 플러그인, 비용 청구 및 보안 설정을 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
 <caption>표 6. {{site.data.keyword.Bluemix_notm}} 카탈로그, 플러그인, 청구 및 보안 설정의 관리를 위한 명령</caption>
  <thead>
  <th colspan="5">{{site.data.keyword.Bluemix_notm}} 카탈로그, 플러그인, 청구 및 보안 설정의 관리를 위한 명령</th>
  </thead>
  <tbody>
  <tr>
-  <td>[bluemix catalog search](bx_cli.html#bluemix_catalog_search)</td>
-  <td>[bluemix catalog entry](bx_cli.html#bluemix_catalog_entry)</td>
-  <td>[bluemix catalog entry-create](bx_cli.html#bluemix_catalog_entry_create)</td>
-  <td>[bluemix catalog entry-update](bx_cli.html#bluemix_catalog_entry_update)</td>
-  <td>[bluemix catalog entry-delete](bx_cli.html#bluemix_catalog_entry_delete)</td>
+  <td>[ibmcloud catalog search](bx_cli.html#ibmcloud_catalog_search)</td>
+  <td>[ibmcloud catalog entry](bx_cli.html#ibmcloud_catalog_entry)</td>
+  <td>[ibmcloud catalog entry-create](bx_cli.html#ibmcloud_catalog_entry_create)</td>
+  <td>[ibmcloud catalog entry-update](bx_cli.html#ibmcloud_catalog_entry_update)</td>
+  <td>[ibmcloud catalog entry-delete](bx_cli.html#ibmcloud_catalog_entry_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog entry-visibility](bx_cli.html#bluemix_catalog_entry_visibility)</td>
-  <td>[bluemix catalog service-marketplace](bx_cli.html#bluemix_catalog_service_marketplace)</td>
-  <td>[bluemix catalog entry-visibility-set](bx_cli.html#bluemix_catalog_entry_visibility_set)</td>
-  <td>[bluemix catalog templates](bx_cli.html#bluemix_catalog_templates)</td>
-  <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
+  <td>[ibmcloud catalog entry-visibility](bx_cli.html#ibmcloud_catalog_entry_visibility)</td>
+  <td>[ibmcloud catalog service-marketplace](bx_cli.html#ibmcloud_catalog_service_marketplace)</td>
+  <td>[ibmcloud catalog entry-visibility-set](bx_cli.html#ibmcloud_catalog_entry_visibility_set)</td>
+  <td>[ibmcloud catalog templates](bx_cli.html#ibmcloud_catalog_templates)</td>
+  <td>[ibmcloud catalog template](bx_cli.html#ibmcloud_catalog_template)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
-  <td>[bluemix catalog locations](bx_cli.html#bluemix_catalog_locations)</td>
-  <td>[bluemix catalog runtime](bx_cli.html#bluemix_catalog_runtime)</td>
-  <td>[bluemix catalog runtimes](bx_cli.html#bluemix_catalog_runtimes)</td>
-  <td>[bluemix plugin repos
-](bx_cli.html#bluemix_plugin_repos)</td>
+  <td>[ibmcloud catalog template-run](bx_cli.html#ibmcloud_catalog_template_run)</td>
+  <td>[ibmcloud catalog locations](bx_cli.html#ibmcloud_catalog_locations)</td>
+  <td>[ibmcloud catalog runtime](bx_cli.html#ibmcloud_catalog_runtime)</td>
+  <td>[ibmcloud catalog runtimes](bx_cli.html#ibmcloud_catalog_runtimes)</td>
+  <td>[ibmcloud plugin repos](bx_cli.html#ibmcloud_plugin_repos)</td>
 </tr>
 <tr>
-  <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
-  <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
-  <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
-  <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
-  <td>[bluemix plugin list
-](bx_cli.html#bluemix_plugin_list)</td>
+  <td>[ibmcloud plugin repo-add](bx_cli.html#ibmcloud_plugin_repo_add)</td>
+  <td>[ibmcloud plugin repo-remove](bx_cli.html#ibmcloud_plugin_repo_remove)</td>
+  <td>[ibmcloud plugin repo-plugins](bx_cli.html#ibmcloud_plugin_repo_plugins)</td>
+  <td>[ibmcloud plugin repo-plugin](bx_cli.html#ibmcloud_plugin_repo_plugin)</td>
+  <td>[ibmcloud plugin list](bx_cli.html#ibmcloud_plugin_list)</td>
 </tr>
 <tr>
-  <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
-  <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
-  <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
-  <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
-  <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
+  <td>[ibmcloud plugin install](bx_cli.html#ibmcloud_plugin_install)</td>
+  <td>[ibmcloud plugin uninstall](bx_cli.html#ibmcloud_plugin_uninstall)</td>
+  <td>[ibmcloud plugin update](bx_cli.html#ibmcloud_plugin_update)</td>
+  <td>[ibmcloud billing account-usage](bx_cli.html#ibmcloud_billing_account_usage)</td>
+  <td>[ibmcloud billing org-usage](bx_cli.html#ibmcloud_billing_org_usage)</td>
 </tr>
 <tr>
-  <td>[bluemix billing resource-group-usage](bx_cli.html#bluemix_resource_group_usage)</td>
-  <td>[bluemix billing resource-instances-usage](bx_cli.html#bluemix_resource_instances_usage)</td>
+  <td>[ibmcloud billing resource-group-usage](bx_cli.html#ibmcloud_resource_group_usage)</td>
+  <td>[ibmcloud billing resource-instances-usage](bx_cli.html#ibmcloud_resource_instances_usage)</td>
  </tr>
  </tbody>
  </table>
 
-## bluemix help
-{: #bluemix_help}
+## ibmcloud help
+{: #ibmcloud_help}
 첫 번째 레벨 기본 제공 명령 및 지원되는 {{site.data.keyword.Bluemix_notm}} CLI 네임스페이스에 대한 일반 도움말 또는 특정 기본 제공 명령 또는 네임스페이스의 도움말을 표시합니다.
 
 ```
-bluemix help [COMMAND|NAMESPACE]
+ibmcloud help [COMMAND|NAMESPACE]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -426,23 +424,23 @@ bluemix help [COMMAND|NAMESPACE]
 {{site.data.keyword.Bluemix_notm}} CLI의 일반 도움말을 표시합니다.
 
 ```
-bluemix help
+ibmcloud help
 ```
 
 `info` 명령의 도움말을 표시합니다.
 
 ```
-bluemix help info
+ibmcloud help info
 ```
 
 
 
-## bluemix api
-{: #bluemix_api}
+## ibmcloud api
+{: #ibmcloud_api}
 {{site.data.keyword.Bluemix_notm}} API 엔드포인트를 설정하거나 확인합니다.
 
 ```
-bluemix api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
+ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -461,33 +459,33 @@ bluemix api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 API 엔드포인트를 api.chinabluemix.net으로 설정합니다.
 
 ```
-bluemix api api.chinabluemix.net
+ibmcloud api api.chinabluemix.net
 ```
 
 ```
-bluemix api https://api.chinabluemix.net --skip-ssl-validation
+ibmcloud api https://api.chinaibmcloud.net --skip-ssl-validation
 ```
 
 현재 API 엔드포인트를 확인합니다.
 
 ```
-bluemix api
+ibmcloud api
 ```
 
 API 엔드포인트를 설정 해제합니다.
 
 ```
-bluemix api --unset
+ibmcloud api --unset
 ```
 
-## bluemix config
-{: #bluemix_config}
+## ibmcloud config
+{: #ibmcloud_config}
 
 
 구성 파일에 기본값을 작성합니다.
 
 ```
-bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
+ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
 ```
 
 <strong>전제조건</strong>: 없음
@@ -513,60 +511,60 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
 HTTP 요청 제한시간을 30초로 설정합니다.
 
 ```
-bluemix config --http-timeout 30
+ibmcloud config --http-timeout 30
 ```
 
 HTTP 요청에 대한 추적 출력을 사용하도록 설정합니다.
 
 ```
-bluemix config --trace true
+ibmcloud config --trace true
 ```
 
 지정된 파일 */home/usera/my_trace*에 대한 HTTP 요청 추적:
 
 ```
-bluemix config --trace /home/usera/my_trace
+ibmcloud config --trace /home/usera/my_trace
 ```
 
 색상 출력을 사용하지 않도록 설정합니다.
 
 ```
-bluemix config --color false
+ibmcloud config --color false
 ```
 
 로케일을 zh_Hans로 설정합니다.
 
 ```
-bluemix config --locale zh_Hans
+ibmcloud config --locale zh_Hans
 ```
 
 로케일 설정을 지웁니다.
 
 ```
-bluemix config --locale CLEAR
+ibmcloud config --locale CLEAR
 ```
 
 
 
-## bluemix info
-{: #bluemix_info}
+## ibmcloud info
+{: #ibmcloud_info}
 
 현재 지역, 클라우드 제어기 버전, 로그인과 교환 액세스 토큰의 엔드포인트 같은 유용한 엔드포인트 등 기본 {{site.data.keyword.Bluemix_notm}} 정보를 확인합니다.
 
 ```
-bluemix info
+ibmcloud info
 ```
 
 <strong>전제조건</strong>: 엔드포인트
 
 
-## bluemix cf
-{: #bluemix_cf}
+## ibmcloud cf
+{: #ibmcloud_cf}
 
 임베디드 CF CLI 호출
 
 ```
-bluemix [-q, --quiet] cf COMMAND...
+ibmcloud [-q, --quiet] cf COMMAND...
 ```
 
 <strong>전제조건</strong>: 없음
@@ -582,23 +580,23 @@ bluemix [-q, --quiet] cf COMMAND...
 cf 앱 나열:
 
 ```
-bluemix cf apps
+ibmcloud cf apps
 ```
 
 메시지 "cf 명령 호출 중..." 없이 cf 서비스 나열:
 
 ```
-bluemix -q cf services
+ibmcloud -q cf services
 ```
 
 
-## bluemix login
-{: #bluemix_login}
+## ibmcloud login
+{: #ibmcloud_login}
 
 사용자가 로그인됩니다.
 
 ```
-bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -622,9 +620,9 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dt> -g <i>RESOURCE_GROUP</i>(선택사항) </dt>
   <dd> 대상 리소스 그룹의 이름</dd>
   <dt> -o <i>ORG</i>(선택사항)</dt>
-  <dd> 대상 조직의 이름(더 이상 사용되지 않음, 'bluemix target -o ORG' 사용)</dd>
+  <dd> 대상 조직의 이름(더 이상 사용되지 않음, 'ibmcloud target -o ORG' 사용)</dd>
   <dt> -s <i>SPACE</i>(선택사항) </dt>
-  <dd> 대상 영역의 이름(더 이상 사용되지 않음, 'bluemix target -s SPACE' 사용)</dd>
+  <dd> 대상 영역의 이름(더 이상 사용되지 않음, 'ibmcloud target -s SPACE' 사용)</dd>
   <dt> --no-iam </dt>
   <dd> 공용 IAM 대신 로그인 서버를 통한 인증 강제 실행</dd>
   <dt> --skip-ssl-validation(선택사항) </dt>
@@ -636,19 +634,19 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
 #### 대화식 로그인
 
 ```
-bluemix login
+ibmcloud login
 ```
 
 사용자 이름과 비밀번호로 로그인하고 대상 계정, 조직 및 영역을 설정하십시오.
 
 ```
-bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
+ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 
 일회성 패스코드로 로그인하고 대상 계정, 조직 및 영역을 설정하십시오.
 
 ```
-bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
+ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
 API 키로 로그인하고 대상을 설정하십시오.
@@ -656,21 +654,21 @@ API 키로 로그인하고 대상을 설정하십시오.
 #### API 키에 계정이 연관되어 있음
 
 ```
-bluemix login --apikey api-key-string -o MyOrg -s MySpace
+ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
 ```
 
 ```
-bluemix login --apikey @filename -o MyOrg -s MySpace
+ibmcloud login --apikey @filename -o MyOrg -s MySpace
 ```
 
 #### API에 계정이 연관되어 있지 않음
 
 ```
-bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
+ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ```
 
 ```
-bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
+ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
 <strong>참고:</strong> API 키에 연관된 계정이 있는 경우, 다른 계정으로 전환이 허용되지 않습니다.
@@ -678,7 +676,7 @@ bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 #### 일회성 패스코드 사용
 
 ```
-bluemix login -u UserID --sso
+ibmcloud login -u UserID --sso
 ```
 
 그러면 CLI에서 URL 링크를 제공하고 패스코드를 요청합니다.
@@ -688,37 +686,37 @@ One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 
 브라우저에서 링크를 열면 패스코드를 가져오도록 안내를 받게 됩니다. 콘솔에서 제공된 패스코드를 입력하면 로그인할 수 있어야 합니다.
 
-## bluemix logout
-{: #bluemix_logout}
+## ibmcloud logout
+{: #ibmcloud_logout}
 
 사용자가 로그아웃됩니다.
 
 ```
-bluemix logout
+ibmcloud logout
 ```
 
 <strong>전제조건</strong>: 없음
 
-## bluemix regions
-{: #bluemix_regions}
+## ibmcloud regions
+{: #ibmcloud_regions}
 
 {{site.data.keyword.Bluemix_notm}}의 모든 지역에 대한 정보를 확인합니다.
 
 ```
-bluemix regions
+ibmcloud regions
 ```
 
 <strong>전제조건</strong>: 엔드포인트
 
 
-## bluemix target
-{: #bluemix_target}
+## ibmcloud target
+{: #ibmcloud_target}
 
 
 대상 계정, 지역, 조직 또는 영역을 설정하거나 보십시오.
 
 ```
-bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -745,28 +743,28 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
 현재 계정, 조직 및 영역 설정하기:
 
 ```
-bluemix target -c MyAccountID -o MyOrg -s MySpace
+ibmcloud target -c MyAccountID -o MyOrg -s MySpace
 ```
 
 새 지역으로 전환하기:
 
 ```
-bluemix target -r eu-gb
+ibmcloud target -r eu-gb
 ```
 
 현재 계정, 지역, 조직 및 영역 보기:
 
 ```
-bluemix target
+ibmcloud target
 ```
 
-## bluemix update
-{: #bluemix_update}
+## ibmcloud update
+{: #ibmcloud_update}
 
 최신 버전으로 CLI를 업데이트합니다.
 
 ```
-bluemix update [-f]
+ibmcloud update [-f]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -777,13 +775,13 @@ bluemix update [-f]
   <dd>확인 없이 업데이트를 강제 실행합니다. 루트 권한이 필요합니다.</dd>
 </dl>
 
-### bluemix account orgs
-{: #bluemix_account_orgs}
+### ibmcloud account orgs
+{: #ibmcloud_account_orgs}
 
 모든 조직 나열
 
 ```
-bluemix account orgs [-r REGION] [--guid]
+ibmcloud account orgs [-r REGION] [--guid]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -801,16 +799,16 @@ bluemix account orgs [-r REGION] [--guid]
 지역: `us-south`의 모든 조직을 GUID를 표시하여 나열합니다.
 
 ```
-bluemix account orgs -r us-south --guid
+ibmcloud account orgs -r us-south --guid
 ```
 
-## bluemix account org
-{: #bluemix_account_org}
+## ibmcloud account org
+{: #ibmcloud_account_org}
 
 지정된 조직의 정보를 표시합니다.
 
 ```
-bluemix account org ORG_NAME [--guid]
+ibmcloud account org ORG_NAME [--guid]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -828,17 +826,17 @@ bluemix account org ORG_NAME [--guid]
 조직 `IBM`의 정보를 GUID를 표시하여 보여줍니다.
 
 ```
-bluemix account org IBM --guid
+ibmcloud account org IBM --guid
 ```
 
 
-## bluemix account org-create
-{: #bluemix_account_org_create}
+## ibmcloud account org-create
+{: #ibmcloud_account_org_create}
 
 새 조직을 작성합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
 
 ```
-bluemix account org-create ORG_NAME [-f]
+ibmcloud account org-create ORG_NAME [-f]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -856,16 +854,16 @@ bluemix account org-create ORG_NAME [-f]
 이름이 `IBM`인 조직을 작성합니다.
 
 ```
-bluemix account org-create IBM
+ibmcloud account org-create IBM
 ```
 
-## bluemix account org-replicate
-{: #bluemix_account_org_replicate}
+## ibmcloud account org-replicate
+{: #ibmcloud_account_org_replicate}
 
 현재 지역의 조직을 다른 지역으로 복제합니다.
 
 ```
-bluemix account org-replicate ORG_NAME REGION_NAME
+ibmcloud account org-replicate ORG_NAME REGION_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -883,17 +881,17 @@ bluemix account org-replicate ORG_NAME REGION_NAME
 `myorg` 조직을 `eu-gb` 지역에 복제합니다.
 
 ```
-bluemix account org-replicate myorg eu-gb
+ibmcloud account org-replicate myorg eu-gb
 ```
 
 
-## bluemix account org-rename
-{: #bluemix_account_org_rename}
+## ibmcloud account org-rename
+{: #ibmcloud_account_org_rename}
 
 조직의 이름을 변경합니다. 이 조작은 조직 관리자만 수행할 수 있습니다.
 
 ```
-bluemix account org-rename OLD_ORG_NAME NEW_ORG_NAME
+ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -907,13 +905,13 @@ bluemix account org-rename OLD_ORG_NAME NEW_ORG_NAME
    </dl>
 
 
-## bluemix account spaces
-{: #bluemix_account_spaces}
+## ibmcloud account spaces
+{: #ibmcloud_account_spaces}
 
 모든 영역 나열
 
 ```
-bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
+ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
 ```
 
 <strong>명령 옵션</strong>:
@@ -926,38 +924,38 @@ bluemix account spaces [-o ORG_NAME] [-r REGION-NAME]
 
 
 
-## bluemix account space
-{: #bluemix_account_space}
+## ibmcloud account space
+{: #ibmcloud_account_space}
 
 이 명령은 [cf space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix account space-create
-{: #bluemix_account_space_create}
+## ibmcloud account space-create
+{: #ibmcloud_account_space_create}
 
 이 명령은 [cf create-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix account space-rename
-{: #bluemix_account_space_rename}
+## ibmcloud account space-rename
+{: #ibmcloud_account_space_rename}
 
 
 이 명령은 [cf rename-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix account space-delete
-{: #bluemix_account_space_delete}
+## ibmcloud account space-delete
+{: #ibmcloud_account_space_delete}
 
 
 이 명령은 [cf delete-space ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
-## bluemix account org-users
-{: #bluemix_account_org_users}
+## ibmcloud account org-users
+{: #ibmcloud_account_org_users}
 
 역할별로 지정된 조직의 사용자를 표시합니다.
 
 ```
-bluemix account org-users ORG_NAME [-a]
+ibmcloud account org-users ORG_NAME [-a]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -970,22 +968,22 @@ bluemix account org-users ORG_NAME [-a]
 <dd>지정된 조직의 모든 사용자를 나열하지만, 역할별로 그룹화하지는 않습니다.</dd>
 </dl>
 
-## bluemix account org-user-add
-{: #bluemix_account_org_user_add}
+## ibmcloud account org-user-add
+{: #ibmcloud_account_org_user_add}
 
 조직에 사용자를 추가합니다(조직 관리자 필요).
 
 ```
- bluemix account org-user-add USER_NAME ORG
+ ibmcloud account org-user-add USER_NAME ORG
 ```
 
-## bluemix account org-user-remove
-{: #bluemix_account_org_user_remove}
+## ibmcloud account org-user-remove
+{: #ibmcloud_account_org_user_remove}
 
 조직에서 사용자 제거(조직 관리자 또는 사용자 자신만)
 
 ```
-   bluemix account org-user-remove USER_NAME ORG [-f, --force]
+   ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 ```
 
 <strong>명령 옵션</strong>:
@@ -994,13 +992,13 @@ bluemix account org-users ORG_NAME [-a]
 <dd>확인 없이 강제 삭제합니다.</dd>
 </dl>
 
-## bluemix account org-roles
-{: #bluemix_account_org_roles}
+## ibmcloud account org-roles
+{: #ibmcloud_account_org_roles}
 
 현재 사용자의 모든 조직 역할 가져오기
 
 ```
-bluemix account org-roles [-u USER_ID]
+ibmcloud account org-roles [-u USER_ID]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1011,13 +1009,13 @@ bluemix account org-roles [-u USER_ID]
    <dd>사용자 ID입니다. 지정되지 않은 경우 현재 사용자로 기본값이 지정됩니다.</dd>
   </dl>
 
-## bluemix account org-role-set
-{: #bluemix_account_org_role_set}
+## ibmcloud account org-role-set
+{: #ibmcloud_account_org_role_set}
 
 사용자에게 조직 역할을 지정합니다. 이 조작은 조직 관리자만 수행할 수 있습니다.
 
 ```
-bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1043,19 +1041,19 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
 사용자 `Mary`를 `IBM` 조직에 `OrgManager` 역할로 지정합니다.
 
 ```
-bluemix account org-role-set Mary IBM OrgManager
+ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
 **참고**: CLI를 사용하여 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](/docs/iam/assignaccess.html#assignaccess)을 참조하십시오.
 <!-- Begin Staging URL vs Prod URL -->
 
-## bluemix account org-role-unset
-{: #bluemix_account_org_role_unset}
+## ibmcloud account org-role-unset
+{: #ibmcloud_account_org_role_unset}
 
 사용자로부터 조직 역할을 제거합니다. 이 조작은 조직 관리자만 수행할 수 있습니다.
 
 ```
-bluemix account org-role-unset USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1081,16 +1079,16 @@ bluemix account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 사용자 `Mary`를 `IBM` 조직에서 `OrgManager` 역할로 제거합니다.
 
 ```
-bluemix account org-role-unset Mary IBM OrgManager
+ibmcloud account org-role-unset Mary IBM OrgManager
 ```
 
-## bluemix account space-users
-{: #bluemix_account_space_users}
+## ibmcloud account space-users
+{: #ibmcloud_account_space_users}
 
 역할별로 지정된 영역의 사용자를 표시합니다.
 
 ```
-bluemix account space-users ORG_NAME SPACE_NAME
+ibmcloud account space-users ORG_NAME SPACE_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1104,13 +1102,13 @@ bluemix account space-users ORG_NAME SPACE_NAME
    </dl>
 
 
-## bluemix account space-role-set
-{: #bluemix_account_space_role_set}
+## ibmcloud account space-role-set
+{: #ibmcloud_account_space_role_set}
 
 사용자에게 영역 역할을 지정합니다. 이 조작은 영역 관리자만 수행할 수 있습니다.
 
 ```
-bluemix account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1138,16 +1136,16 @@ bluemix account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 사용자 `Mary`를 `IBM` 조직 및 `Cloud` 영역에 `SpaceManager` 역할로 지정합니다.
 
 ```
-bluemix account space-role-set Mary IBM Cloud SpaceManager
+ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ```
 
-## bluemix account space-role-unset
-{: #bluemix_account_space_role_unset}
+## ibmcloud account space-role-unset
+{: #ibmcloud_account_space_role_unset}
 
 사용자로부터 영역 역할을 제거합니다. 이 조작은 영역 관리자만 수행할 수 있습니다.
 
 ```
-bluemix account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1176,28 +1174,28 @@ bluemix account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 사용자 `Mary`를 `IBM` 조직 및 `Cloud` 영역에서 `SpaceManager` 역할로 제거합니다.
 
 ```
-bluemix account space-role-unset Mary IBM Cloud SpaceManager
+ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 ```
 
-## bluemix account list
-{: #bluemix_account_list}
+## ibmcloud account list
+{: #ibmcloud_account_list}
 
 현재 사용자의 모든 계정 나열
 
 ```
-bluemix account list
+ibmcloud account list
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
 
-## bluemix account org-account
-{: #bluemix_account_org_account}
+## ibmcloud account org-account
+{: #ibmcloud_account_org_account}
 
 지정된 조직의 계정 표시(조직 사용자 필요)
 
 ```
-bluemix account org-account ORG_NAME [--guid]
+ibmcloud account org-account ORG_NAME [--guid]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1209,22 +1207,22 @@ bluemix account org-account ORG_NAME [--guid]
 </dl>
 
 
-## bluemix account users
-{: #bluemix_account_users}
+## ibmcloud account users
+{: #ibmcloud_account_users}
 
 계정과 연관된 사용자를 표시합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
 
 ```
-bluemix account users
+ibmcloud account users
 ```
 
-## bluemix account user-delete
-{: #bluemix_account_user_delete}
+## ibmcloud account user-delete
+{: #ibmcloud_account_user_delete}
 
 현재 계정에서 사용자 삭제(계정 소유자만)
 
 ```
-bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
+ibmcloud account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1239,13 +1237,13 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 <dd>확인 없이 강제 삭제합니다.</dd>
 </dl>
 
-## bluemix account user-invite
-{: #bluemix_account_user_invite}
+## ibmcloud account user-invite
+{: #ibmcloud_account_user_invite}
 
 계정에 사용자 초대(계정 관리자)
 
 ```
-bluemix account user-invite USER_EMAIL
+ibmcloud account user-invite USER_EMAIL
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1257,13 +1255,13 @@ bluemix account user-invite USER_EMAIL
 </dl>
 
 
-## bluemix account user-reinvite
-{: #bluemix_account_user_reinvite}
+## ibmcloud account user-reinvite
+{: #ibmcloud_account_user_reinvite}
 
 사용자에게 초대 재발송(계정 관리자)
 
 ```
-bluemix account user-reinvite USER_EMAIL
+ibmcloud account user-reinvite USER_EMAIL
 ```
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
@@ -1273,13 +1271,13 @@ bluemix account user-reinvite USER_EMAIL
    <dd>다시 초대되는 사용자의 이메일입니다.</dd>
 </dl>
 
-## bluemix iam access-groups
-{: #bluemix_iam_access_groups}
+## ibmcloud iam access-groups
+{: #ibmcloud_iam_access_groups}
 
 현재 계정에서 액세스 그룹 나열
 
 ```
-bluemix iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1297,16 +1295,16 @@ bluemix iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 모든 액세스 그룹 나열:
 
 ```
-bluemix iam access-groups
+ibmcloud iam access-groups
 ```
 
-## bluemix iam access-group
-{: #bluemix_iam_access_group}
+## ibmcloud iam access-group
+{: #ibmcloud_iam_access_group}
 
 액세스 그룹의 세부사항 표시
 
 ```
-bluemix iam access-group GROUP_NAME [--id]
+ibmcloud iam access-group GROUP_NAME [--id]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1322,16 +1320,16 @@ bluemix iam access-group GROUP_NAME [--id]
 액세스 그룹 `example_group`의 세부사항 표시:
 
 ```
-bluemix iam access-group example_group
+ibmcloud iam access-group example_group
 ```
 
-## bluemix iam access-group-create
-{: #bluemix_iam_access_group_create}
+## ibmcloud iam access-group-create
+{: #ibmcloud_iam_access_group_create}
 
 액세스 그룹 작성
 
 ```
-bluemix iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
+ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1347,16 +1345,16 @@ bluemix iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 액세스 그룹 `example_group` 작성:
 
 ```
-bluemix iam access-group-create example_group -d "example access group"
+ibmcloud iam access-group-create example_group -d "example access group"
 ```
 
-## bluemix iam access-group-update
-{: #bluemix_iam_access_group_update}
+## ibmcloud iam access-group-update
+{: #ibmcloud_iam_access_group_update}
 
 액세스 그룹 업데이트
 
 ```
-bluemix iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
+ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1376,16 +1374,16 @@ bluemix iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descript
 액세스 그룹 `example_group`의 이름을 `hello_world_group`으로 바꾸기:
 
 ```
-bluemix iam access-group-update example_group --name "hello_world_group"
+ibmcloud iam access-group-update example_group --name "hello_world_group"
 ```
 
-## bluemix iam access-group-delete
-{: #bluemix_iam_access_group_delete}
+## ibmcloud iam access-group-delete
+{: #ibmcloud_iam_access_group_delete}
 
 액세스 그룹 삭제
 
 ```
-bluemix iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
+ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1403,16 +1401,16 @@ bluemix iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
 액세스 그룹 `example_group` 삭제:
 
 ```
-bluemix iam access-group-delete example_group --force
+ibmcloud iam access-group-delete example_group --force
 ```
 
-## bluemix iam access-group-users
-{: #bluemix_iam_access_group_users}
+## ibmcloud iam access-group-users
+{: #ibmcloud_iam_access_group_users}
 
 액세스 그룹의 사용자 나열
 
 ```
-bluemix iam access-group-users GROUP_NAME
+ibmcloud iam access-group-users GROUP_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1426,16 +1424,16 @@ bluemix iam access-group-users GROUP_NAME
 액세스 그룹 `example_group`의 모든 사용자 나열:
 
 ```
-bluemix iam access-group-users example_group
+ibmcloud iam access-group-users example_group
 ```
 
-## bluemix iam access-group-user-add
-{: #bluemix_iam_access_group_user_add}
+## ibmcloud iam access-group-user-add
+{: #ibmcloud_iam_access_group_user_add}
 
 액세스 그룹에 사용자 추가
 
 ```
-bluemix iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
+ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1449,16 +1447,16 @@ bluemix iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 액세스 그룹 `example_group`에 사용자 `name@example.com` 추가:
 
 ```
-bluemix iam access group-user-add example_group name@example.com
+ibmcloud iam access group-user-add example_group name@example.com
 ```
 
-## bluemix iam access-group-user-remove
-{: #bluemix_iam_access_group_user_remove}
+## ibmcloud iam access-group-user-remove
+{: #ibmcloud_iam_access_group_user_remove}
 
 액세스 그룹에서 사용자 제거
 
 ```
-bluemix iam access-group-user-remove GROUP_NAME USER_NAME
+ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1472,16 +1470,16 @@ bluemix iam access-group-user-remove GROUP_NAME USER_NAME
 액세스 그룹 `example_group`에서 사용자 `name@example.com` 제거:
 
 ```
-bluemix iam access-group-user-remove example_group name@example.com
+ibmcloud iam access-group-user-remove example_group name@example.com
 ```
 
-## bluemix iam access-group-user-purge
-{: #bluemix_iam_access_group_user_purge}
+## ibmcloud iam access-group-user-purge
+{: #ibmcloud_iam_access_group_user_purge}
 
 모든 액세스 그룹에서 사용자 제거
 
 ```
-bluemix iam access-group-user-purge USER_NAME [-f, --force]
+ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1497,16 +1495,16 @@ bluemix iam access-group-user-purge USER_NAME [-f, --force]
 모든 액세스 그룹에서 사용자 `name@example.com` 제거:
 
 ```
-bluemix iam access-group-user-purge name@example.com -f
+ibmcloud iam access-group-user-purge name@example.com -f
 ```
 
-## bluemix iam access-group-service-ids
-{: #bluemix_iam_access_group_service_ids}
+## ibmcloud iam access-group-service-ids
+{: #ibmcloud_iam_access_group_service_ids}
 
 액세스 그룹에 서비스 ID 나열
 
 ```
-bluemix iam access-group-service-ids GROUP_NAME
+ibmcloud iam access-group-service-ids GROUP_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1520,16 +1518,16 @@ bluemix iam access-group-service-ids GROUP_NAME
 액세스 그룹 `example_group`에 모든 서비스 ID 나열:
 
 ```
-bluemix iam access-group-service-ids example_group
+ibmcloud iam access-group-service-ids example_group
 ```
 
-## bluemix iam access-group-service-id-add
-{: #bluemix_iam_access_group_service_id_add}
+## ibmcloud iam access-group-service-id-add
+{: #ibmcloud_iam_access_group_service_id_add}
 
 액세스 그룹에 서비스 ID 추가
 
 ```
-bluemix iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
+ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1543,16 +1541,16 @@ bluemix iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_N
 액세스 그룹 `example_group`에 서비스 ID `example-service` 추가:
 
 ```
-bluemix iam access-group-service-id-add example_group example-service
+ibmcloud iam access-group-service-id-add example_group example-service
 ```
 
-## bluemix iam access-group-service-id-remove
-{: #bluemix_iam_access_group_service_id_remove}
+## ibmcloud iam access-group-service-id-remove
+{: #ibmcloud_iam_access_group_service_id_remove}
 
 액세스 그룹에서 서비스 ID 제거
 
 ```
-bluemix iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
+ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1566,16 +1564,16 @@ bluemix iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 액세스 그룹 `example_group`에서 서비스 ID `example-service` 제거:
 
 ```
-bluemix iam access-group-service-id-remove example_group example-service
+ibmcloud iam access-group-service-id-remove example_group example-service
 ```
 
-## bluemix iam access-group-service-id-purge
-{: #bluemix_iam_access_group_service_id_purge}
+## ibmcloud iam access-group-service-id-purge
+{: #ibmcloud_iam_access_group_service_id_purge}
 
 모든 액세스 그룹에서 서비스 ID 제거
 
 ```
-bluemix iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
+ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1591,16 +1589,16 @@ bluemix iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
 모든 액세스 그룹에서 서비스 ID `example-service` 제거:
 
 ```
-bluemix iam access-group-service-id-purge example --force
+ibmcloud iam access-group-service-id-purge example --force
 ```
 
-## bluemix iam access-group-policies
-{: #bluemix_iam_access_group_policies}
+## ibmcloud iam access-group-policies
+{: #ibmcloud_iam_access_group_policies}
 
 액세스 그룹의 정책 나열
 
 ```
-bluemix iam access-group-policies GROUP_NAME
+ibmcloud iam access-group-policies GROUP_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1614,16 +1612,16 @@ bluemix iam access-group-policies GROUP_NAME
 액세스 그룹 `example_group`의 모든 정책 나열:
 
 ```
-bluemix iam access-group-policies example_group
+ibmcloud iam access-group-policies example_group
 ```
 
-## bluemix iam access-group-policy
-{: #bluemix_iam_access_group_policy}
+## ibmcloud iam access-group-policy
+{: #ibmcloud_iam_access_group_policy}
 
 액세스 그룹 정책의 세부사항 표시
 
 ```
-bluemix iam access-group-policy GROUP_NAME POLICY_ID
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1637,16 +1635,16 @@ bluemix iam access-group-policy GROUP_NAME POLICY_ID
 액세스 그룹 `example_group`의 정책 `51b9717e-76b0-4f6a-bda7-b8132431f926`에 대한 세부사항 표시:
 
 ```
-bluemix iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
+ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
 ```
 
-## bluemix iam access-group-policy-create
-{: #bluemix_iam_access_group_policy_create}
+## ibmcloud iam access-group-policy-create
+{: #ibmcloud_iam_access_group_policy_create}
 
 액세스 그룹 정책 작성
 
 ```
-bluemix iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1656,7 +1654,7 @@ bluemix iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --rol
   <dt>-f, --file</dt>
   <dd>정책 정의의 JSON 파일</dd>
   <dt>-roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
   <dt>-service-name</dt>
   <dd>정책 정의의 서비스 이름. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
   <dt>-service-instance</dt>
@@ -1678,41 +1676,41 @@ bluemix iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --rol
 JSON 파일에서 액세스 그룹 정책 작성:
 
 ```
-bluemix iam access-group-policy-create example_group -f @policy.json
+ibmcloud iam access-group-policy-create example_group -f @policy.json
 ```
-    
+
 모든 `sample-service` 리소스에 `example_group` `관리자` 역할 제공:
 ```
-bluemix iam access-group-policy-create example_group --roles Administrator --service-name sample-service
+ibmcloud iam access-group-policy-create example_group --roles Administrator --service-name sample-service
 ```
 
 `us-south` 지역에 있는 `sample-service` 인스턴스 `ServiceId-ade78e9f`의 리소스 `key123`에 대한 `name@example.com` `편집자` 역할 제공:
 ```
-bluemix iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
 ```
 
 ID가 `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 대한 `example_group` `운영자` 역할 제공:
 ```
-bluemix iam access-group-policy-create example_group --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+ibmcloud iam access-group-policy-create example_group --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 리소스 그룹 `sample-resource-group`의 멤버에 대한 `example_group` `뷰어` 역할 제공:
 ```
-bluemix iam access-group-policy-create example_group --roles Viewer --resource-group-name sample-resource-group
+ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-group-name sample-resource-group
 ```
 
 ID가 `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹의 멤버에 대한 `example_group` `뷰어` 역할 제공:
 ```
-bluemix iam access-group-policy-create example_group --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
 
-## bluemix iam access-group-policy-update
-{: #bluemix_iam_access_group_policy_update}
+## ibmcloud iam access-group-policy-update
+{: #ibmcloud_iam_access_group_policy_update}
 
 액세스 그룹 정책 업데이트
 
 ```
-bluemix iam access-group-policy-update GROUP_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1724,7 +1722,7 @@ bluemix iam access-group-policy-update GROUP_NAME POLICY_ID [-v, --version VERSI
   <dt>-v, --version</dt>
   <dd>정책의 버전</dd>
   <dt>-roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
   <dt>-service-name</dt>
   <dd>정책 정의의 서비스 이름. 이 옵션은 '-f, --file'과 배타적입니다.</dd>
   <dt>-service-instance</dt>
@@ -1745,41 +1743,41 @@ bluemix iam access-group-policy-update GROUP_NAME POLICY_ID [-v, --version VERSI
 
 액세스 그룹 정책을 정책 JSON 파일의 정책으로 업데이트:
 ```
-bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 -f @policy.json
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 -f @policy.json
 ```
 
 모든 `sample-service` 리소스에 대한 `example_group` `관리자` 역할을 제공하도록 액세스 그룹 정책 업데이트:
 ```
-bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
 ```
 
 `us-south` 지역에 있는 `sample-service` 인스턴스 `ServiceId-ade78e9f`의 리소스 `key123`에 대한 `example_group` `편집자` 역할을 제공하도록 액세스 그룹 정책 업데이트:
 ```
-bluemix iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south
+ibmcloud iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south
 ```
 
 ID가 `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 대한 `example_group` `운영자` 역할을 제공하도록 액세스 그룹 정책 업데이트:
 ```
-bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 리소스 그룹 `sample-resource-group`의 멤버에 대한 `example_group` `뷰어` 역할을 제공하도록 액세스 그룹 정책 업데이트:
 ```
-bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-name sample-resource-group
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-name sample-resource-group
 ```
 
 ID가 `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹의 멤버에 대한 `example_group` `뷰어` 역할을 제공하도록 액세스 그룹 정책 업데이트:
 ```
-bluemix iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
 
-## bluemix iam access-group-policy-delete
-{: #bluemix_iam_access_group_policy_delete}
+## ibmcloud iam access-group-policy-delete
+{: #ibmcloud_iam_access_group_policy_delete}
 
 액세스 그룹 정책 삭제
 
 ```
-bluemix iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
+ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -1794,16 +1792,16 @@ bluemix iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 
 액세스 그룹 `example_group`의 정책 `51b9717e-76b0-4f6a-bda7-b8132431f926` 삭제:
 ```
-bluemix iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
+ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
 ```
 
-## bluemix iam service-ids
-{: #bluemix_iam_service_ids}
+## ibmcloud iam service-ids
+{: #ibmcloud_iam_service_ids}
 
 모든 서비스 ID 나열
 
 ```
-bluemix iam service-ids --uuid
+ibmcloud iam service-ids --uuid
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -1818,17 +1816,17 @@ bluemix iam service-ids --uuid
 현재 계정 아래에 모든 서비스 ID의 UUID 나열
 
 ```
-bluemix iam service-ids --uuid
+ibmcloud iam service-ids --uuid
 ```
 
 
-## bluemix iam service-id
-{: #bluemix_iam_service_id}
+## ibmcloud iam service-id
+{: #ibmcloud_iam_service_id}
 
 서비스 ID의 세부사항 표시
 
 ```
-bluemix iam service-id (NAME|UUID) [--uuid]
+ibmcloud iam service-id (NAME|UUID) [--uuid]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -1846,22 +1844,22 @@ bluemix iam service-id (NAME|UUID) [--uuid]
 서비스 ID `sample-test`의 세부사항 표시
 
 ```
-bluemix iam service-id sample-test
+ibmcloud iam service-id sample-test
 ```
 서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 세부사항 표시
 
 ```
-bluemix iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
 
-## bluemix iam service-id-create
-{: #bluemix_iam_service_id_create}
+## ibmcloud iam service-id-create
+{: #ibmcloud_iam_service_id_create}
 
 서비스 ID 작성
 
 ```
-bluemix iam service-id-create NAME [-d, --description DESCRIPTION]
+ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -1879,17 +1877,17 @@ bluemix iam service-id-create NAME [-d, --description DESCRIPTION]
 서비스 이름이 `sample-test`이고 해당 설명이 `hello, world!`인 서비스 ID 작성
 
 ```
-bluemix iam service-id-create sample-test -d 'hello, world!'
+ibmcloud iam service-id-create sample-test -d 'hello, world!'
 ```
 
 
-## bluemix iam service-id-update
+## ibmcloud iam service-id-update
 
-{: #bluemix_iam_service_id_update}
+{: #ibmcloud_iam_service_id_update}
 서비스 ID 업데이트
 
 ```
-bluemix iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -1913,29 +1911,29 @@ bluemix iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descripti
 서비스 ID 이름 `sample-test`를 확인 없이 `sample-test-2`로 바꾸기
 
 ```
-bluemix iam service-id-update sample-test -n sample-test-2 -f
+ibmcloud iam service-id-update sample-test -n sample-test-2 -f
 ```
 
 서비스 `sample-test` 버전 `1-0jn39fbefew`의 설명 업데이트
 
 ```
-bluemix iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
+ibmcloud iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
 ```
 
 서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 이름을 설명이 새로 포함된 `sample-test-3`으로 바꾸기
 
 ```
-bluemix iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!' 
+ibmcloud iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!'
 ```
 
 
-## bluemix iam service-id-delete
-{: #bluemix_iam_service_id_delete}
+## ibmcloud iam service-id-delete
+{: #ibmcloud_iam_service_id_delete}
 
 서비스 ID 삭제
 
 ```
-bluemix iam service-id-delete (NAME|UUID) [-f, --force]
+ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -1953,34 +1951,34 @@ bluemix iam service-id-delete (NAME|UUID) [-f, --force]
 확인 없이 서비스 ID `sample-teset` 삭제
 
 ```
-bluemix iam service-id-delete sample-teset -f
+ibmcloud iam service-id-delete sample-teset -f
 ```
 
 서비스 ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 삭제
 
 ```
-bluemix iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+ibmcloud iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
 
-## bluemix iam api-keys
-{: #bluemix_iam_api_keys}
+## ibmcloud iam api-keys
+{: #ibmcloud_iam_api_keys}
 
 {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 나열
 
 ```
-bluemix iam api-keys
+ibmcloud iam api-keys
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
-## bluemix iam api-key-create
-{: #bluemix_iam_api_key_create}
+## ibmcloud iam api-key-create
+{: #ibmcloud_iam_api_key_create}
 
 새 {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 작성
 
 ```
-bluemix iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
+ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -2000,16 +1998,16 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
 API 키 작성 및 파일에 저장
 
 ```
-bluemix iam api-key-create MyKey -d "this is my API key" --file key_file
+ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
 ```
 
-## bluemix iam api-key-update
-{: #bluemix_iam_api_key_update}
+## ibmcloud iam api-key-update
+{: #ibmcloud_iam_api_key_update}
 
 {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 업데이트
 
 ```
-bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
+ibmcloud iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -2029,16 +2027,16 @@ bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 API 키의 설명 업데이트:
 
 ```
-bluemix iam api-key-update MyKey -d "the new description of my key"
+ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
 
-## bluemix api-key-delete
-{: #bluemix_api_key_delete}
+## ibmcloud api-key-delete
+{: #ibmcloud_api_key_delete}
 
 {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키 삭제
 
 ```
-bluemix iam api-key-delete NAME [-f]
+ibmcloud iam api-key-delete NAME [-f]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -2051,13 +2049,13 @@ bluemix iam api-key-delete NAME [-f]
 <dd>확인 없이 강제 삭제합니다.</dd>
 </dl>
 
-## bluemix iam service-api-keys
-{: #bluemix_iam_service_api_keys}
+## ibmcloud iam service-api-keys
+{: #ibmcloud_iam_service_api_keys}
 
 서비스의 모든 API 키 나열
 
 ```
-bluemix iam service-api-keys SERVICE_ID [-f, --force]
+ibmcloud iam service-api-keys SERVICE_ID [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2075,16 +2073,16 @@ bluemix iam service-api-keys SERVICE_ID [-f, --force]
 서비스 `sample-service`의 모든 API 키 나열:
 
 ```
-bluemix iam service-api-keys sample-service
+ibmcloud iam service-api-keys sample-service
 ```
 
-## bluemix iam service-api-key
-{: #bluemix_iam_service_api_key}
+## ibmcloud iam service-api-key
+{: #ibmcloud_iam_service_api_key}
 
 서비스 API 키의 세부사항 나열
 
 ```
-bluemix iam service-api-key NAME SERVICE_ID [--uuid] [-f, --force]
+ibmcloud iam service-api-key NAME SERVICE_ID [--uuid] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2104,16 +2102,16 @@ bluemix iam service-api-key NAME SERVICE_ID [--uuid] [-f, --force]
 서비스 `sample-service`의 서비스 API 키 `sample-key`의 세부사항 표시:
 
 ```
-bluemix iam service-api-key sample-key sample-service
+ibmcloud iam service-api-key sample-key sample-service
 ```
 
-## bluemix iam service-api-key-create
-{: #bluemix_iam_service_api_key_create}
+## ibmcloud iam service-api-key-create
+{: #ibmcloud_iam_service_api_key_create}
 
 서비스 API 키 작성
 
 ```
-bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [--file FILE] [-f, --force]
+ibmcloud iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [--file FILE] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2135,16 +2133,16 @@ bluemix iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTIO
 확인 없이 서비스 `sample-service`의 서비스 API 키 `sample-key` 작성:
 
 ```
-bluemix iam service-api-key-create sample-key sample-service -f
+ibmcloud iam service-api-key-create sample-key sample-service -f
 ```
 
-## bluemix iam service-api-key-update
-{: #bluemix_iam_service_api_key_update}
+## ibmcloud iam service-api-key-update
+{: #ibmcloud_iam_service_api_key_update}
 
 서비스 API 키 업데이트
 
 ```
-bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+ibmcloud iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2168,16 +2166,16 @@ bluemix iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, 
 서비스 API 키 이름 `sample-key`를 `new-sample-key`로 바꾸기:
 
 ```
-bluemix iam service-api-key-update sample-key sample-service -n new-sample-key
+ibmcloud iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
 
-## bluemix iam service-api-key-delete
-{: #bluemix_iam_service_api_key_delete}
+## ibmcloud iam service-api-key-delete
+{: #ibmcloud_iam_service_api_key_delete}
 
 서비스 API 키 삭제
 
 ```
-bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
+ibmcloud iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2195,16 +2193,16 @@ bluemix iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 서비스 API 키 `sample-key` 삭제:
 
 ```
-bluemix iam service-api-key-delete sample-key sample-service
+ibmcloud iam service-api-key-delete sample-key sample-service
 ```
 
-## bluemix iam user-policies
-{: #bluemix_iam_user_policies}
+## ibmcloud iam user-policies
+{: #ibmcloud_iam_user_policies}
 
 사용자 `name@example.com`의 정책 나열:
 
 ```
-bluemix iam user-policies name@example.com
+ibmcloud iam user-policies name@example.com
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -2220,16 +2218,16 @@ bluemix iam user-policies name@example.com
 사용자 `name@example.com`의 정책 나열:
 
 ```
-bluemix iam user-policies name@example.com
+ibmcloud iam user-policies name@example.com
 ```
 
-## bluemix iam user-policy
-{: #bluemix_iam_user_policy}
+## ibmcloud iam user-policy
+{: #ibmcloud_iam_user_policy}
 
 사용자 정책의 세부사항 표시
 
 ```
-bluemix iam user-policy USER_NAME POLICY_ID
+ibmcloud iam user-policy USER_NAME POLICY_ID
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -2247,16 +2245,16 @@ bluemix iam user-policy USER_NAME POLICY_ID
 사용자 `name@example.com`의 정책 `0bb730daa` 나열:
 
 ```
-bluemix iam user-policy name@example.com 0bb730daa
+ibmcloud iam user-policy name@example.com 0bb730daa
 ```
 
-## bluemix iam user-policy-create
-{: #bluemix_iam_user_policy_create}
+## ibmcloud iam user-policy-create
+{: #ibmcloud_iam_user_policy_create}
 
 사용자 정책 작성
 
 ```
-bluemix iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -2268,7 +2266,7 @@ bluemix iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,
 <dt>--file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (선택사항)</dt>
-<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
 <dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>(선택사항)</dt>
@@ -2290,46 +2288,46 @@ bluemix iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,
 정책 JSON 파일 `policy.json`에서 사용자 `name@example.com`의 사용자 정책 작성:
 
 ```
-bluemix iam user-policy-create name@example.com --file @policy.json
+ibmcloud iam user-policy-create name@example.com --file @policy.json
 ```
 
 모든 `sample-service` 리소스에 `name@example.com` `관리자` 역할 제공:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Administrator --service-name sample-service
+ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name sample-service
 ```
 
 `us-south` 지역에 있는 샘플 서비스 인스턴스 `ServiceId-ade78e9f`의 리소스 `key123`에 `name@example.com` `편집자` 역할 제공:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 `name@example.com` `운영자` 역할 제공:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+ibmcloud iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 리소스 그룹 `sample-resource-group`의 멤버에 `name@example.com` `뷰어` 역할 제공:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Viewer --resource-group-name sample-resource-group
+ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-name sample-resource-group
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹의 멤버에 `name@example.com` `뷰어` 역할 제공:
 
 ```
-bluemix iam user-policy-create name@example.com --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
 
-## bluemix iam user-policy-update
-{: #bluemix_iam_user_policy_update}
+## ibmcloud iam user-policy-update
+{: #ibmcloud_iam_user_policy_update}
 
 사용자 정책 업데이트
 
 ```
-bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 계정을 대상으로 지정
@@ -2344,7 +2342,7 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--fi
 <dt>--file <i>FILE</i>(선택사항)</dt>
 <dd>정책 정의의 JSON 파일</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (선택사항)</dt>
-<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
+<dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
 <dt>--service-name <i>SERVICE_NAME</i>(선택사항)</dt>
 <dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
 <dt>--serivce-instance <i>SERVICE_INSTANCE</i>(선택사항)</dt>
@@ -2366,48 +2364,48 @@ bluemix iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--fi
 사용자 정책을 JSON 파일로 된 정책으로 업데이트:
 
 ```
-bluemix iam user-policy-update name@example.com 0bb730daa --file @policy.json
+ibmcloud iam user-policy-update name@example.com 0bb730daa --file @policy.json
 ```
 
 모든 `sample-service` 리소스에 `name@example.com` `관리자` 역할을 제공하도록 사용자 정책 업데이트:
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Administrator --service-name sample-service
+ibmcloud iam user-policy-update name@example.com user-policy-id --roles Administrator --service-name sample-service
 ```
 
  `us-south` 지역에 있는 샘플 서비스 인스턴스 `ServiceId-ade78e9f`의 리소스 `key123`에 `name@example.com` `편집자` 역할을 제공하도록 사용자 정책 업데이트:
 
 ```
-bluemix iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹에 `name@example.com` `운영자` 역할을 제공하도록 사용자 정책 업데이트:
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+ibmcloud iam user-policy-update name@example.com user-policy-id --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
 리소스 그룹 `sample-resource-group`의 멤버에 `name@example.com` `뷰어` 역할을 제공하도록 사용자 정책 업데이트:
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-name sample-resource-group
+ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-name sample-resource-group
 ```
 
 ID `dda27e49d2a1efca58083a01dfde18f6`인 리소스 그룹의 멤버에 `name@example.com` `뷰어` 역할을 제공하도록 사용자 정책 업데이트:
 
 ```
-bluemix iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
 
 
 
-## bluemix iam service-policies
-{: #bluemix_iam_service_policies}
+## ibmcloud iam service-policies
+{: #ibmcloud_iam_service_policies}
 
 지정된 서비스의 모든 서비스 정책 나열
 
 ```
-bluemix iam service-policies SERVICE_ID [--json] [-f, --force]
+ibmcloud iam service-policies SERVICE_ID [--json] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2427,22 +2425,22 @@ bluemix iam service-policies SERVICE_ID [--json] [-f, --force]
 서비스 `test`의 정책 나열:
 
 ```
-bluemix iam service-policies test
+ibmcloud iam service-policies test
 ```
 서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 나열:
 
 ```
-bluemix iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
 
-## bluemix iam service-policy
-{: #bluemix_iam_service_policy}
+## ibmcloud iam service-policy
+{: #ibmcloud_iam_service_policy}
 
 서비스 정책의 세부사항 표시
 
 ```
-bluemix iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
+ibmcloud iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2464,22 +2462,22 @@ bluemix iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
 서비스 `test`의 정책 `140798e2-8ea7db3` 표시:
 
 ```
-bluemix iam service-policies test 140798e2-8ea7db3
+ibmcloud iam service-policies test 140798e2-8ea7db3
 ```
 서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 `140798e2-8ea7db3` 표시:
 
 ```
-bluemix iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
+ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
 
 
-## bluemix iam service-policy-create
-{: #bluemix_iam_service_policy_create}
+## ibmcloud iam service-policy-create
+{: #ibmcloud_iam_service_policy_create}
 
 서비스 정책 작성
 
 ```
-bluemix iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2491,7 +2489,7 @@ bluemix iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROL
   <dt>--file</dt>
   <dd>정책 정의의 JSON 파일. 이는 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' 및 '--resource-group-id' 플래그와 배타적입니다.</dd>
   <dt>-r, --roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>--service-name</dt>
   <dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>--service-instance</dt>
@@ -2515,22 +2513,22 @@ bluemix iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROL
 서비스 `test`에 대해 JSON 파일에서 서비스 정책 작성:
 
 ```
-bluemix iam service-policy-create test --file @policy.json
+ibmcloud iam service-policy-create test --file @policy.json
 ```
 서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`에 대해 JSON 파일에서 서비스 정책 작성:
 
 ```
-bluemix iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
+ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
 
-## bluemix iam service-policy-update
-{: #bluemix_iam_service_policy_update}
+## ibmcloud iam service-policy-update
+{: #ibmcloud_iam_service_policy_update}
 
 서비스 정책 업데이트
 
 ```
-bluemix iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2546,7 +2544,7 @@ bluemix iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {
   <dt>--file</dt>
   <dd>정책 정의의 JSON 파일. 이는 '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' 및 'resource-group-id' 플래그와 배타적입니다.</dd>
   <dt>-r, --roles</dt>
-  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'bluemix iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
+  <dd>정책 정의의 역할 이름. 특정 서비스의 지원되는 역할의 경우 'ibmcloud iam roles --service SERVICE_NAME'을 실행하십시오. 이 옵션은 '--file'과 배타적입니다.</dd>
   <dt>-service-name</dt>
   <dd>정책 정의의 서비스 이름. 이는 '--file' 플래그와 배타적입니다.</dd>
   <dt>-service-instance</dt>
@@ -2570,21 +2568,21 @@ bluemix iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {
 서비스 `test`에 대해 JSON 파일에서 서비스 정책 `140798e2-8ea7db3` 업데이트:
 
 ```
-bluemix iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
+ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
 서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`에 대해 JSON 파일에서 서비스 정책 `140798e2-8ea7db3` 업데이트:
 
 ```
-bluemix iam service-policy-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3 --file @policy.json
+ibmcloud iam service-policy-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3 --file @policy.json
 ```
 
-## bluemix iam service-policy-delete
-{: #bluemix_iam_service_policy_delete}
+## ibmcloud iam service-policy-delete
+{: #ibmcloud_iam_service_policy_delete}
 
 서비스 정책 삭제
 
 ```
-bluemix iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
+ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2604,21 +2602,21 @@ bluemix iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 서비스 `test`의 정책 `140798e2-8ea7db3` 삭제
 
 ```
-bluemix iam service-policy-delete test 140798e2-8ea7db3
+ibmcloud iam service-policy-delete test 140798e2-8ea7db3
 ```
 서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`의 정책 `140798e2-8ea7db3` 삭제
 
 ```
-bluemix iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
+ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
 
-## bluemix iam oauth-tokens
-{: #bluemix_iam_oauth_tokens}
+## ibmcloud iam oauth-tokens
+{: #ibmcloud_iam_oauth_tokens}
 
 현재 세션에 대한 OAuth 토큰 검색 및 표시
 
 ```
-bluemix iam oauth-tokens
+ibmcloud iam oauth-tokens
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
@@ -2632,16 +2630,16 @@ bluemix iam oauth-tokens
 OAuth 토큰 새로 고치기 및 표시
 
 ```
-bluemix iam oauth-tokens
+ibmcloud iam oauth-tokens
 ```
 
-## bluemix iam dedicated-id-disconnect
-{: #bluemix_iam_dedicated_id_disconnect}
+## ibmcloud iam dedicated-id-disconnect
+{: #ibmcloud_iam_dedicated_id_disconnect}
 
 전용 비IBM ID와 공용 IBM ID의 연결 끊기
 
 ```
-bluemix iam dedicated-id-disconnect [-f, --force]
+ibmcloud iam dedicated-id-disconnect [-f, --force]
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
@@ -2653,13 +2651,13 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 </dl>
 
 
-## bluemix iam authorization-policy-create
-{: #bluemix_iam_authorization_policy_create}
+## ibmcloud iam authorization-policy-create
+{: #ibmcloud_iam_authorization_policy_create}
 
 다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용하기 위한 권한 부여 정책을 작성합니다.
 
 ```
-bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
+ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
@@ -2678,13 +2676,13 @@ bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME 
   <dd>소스 서비스에 대한 액세스 권한을 제공하는 역할입니다.</dd>  
 </dl>
 
-## bluemix iam authorization-policy-delete
-{: #bluemix_iam_authorization_policy_delete}
+## ibmcloud iam authorization-policy-delete
+{: #ibmcloud_iam_authorization_policy_delete}
 
 권한 부여 정책을 삭제합니다.
 
 ```
-bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
+ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
@@ -2692,18 +2690,18 @@ bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
-  <dd>삭제할 권한 정책의 ID입니다.</dd> 
+  <dd>삭제할 권한 정책의 ID입니다.</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 삭제를 강제 실행합니다.</dd> 
+  <dd>확인 없이 삭제를 강제 실행합니다.</dd>
 </dl>
 
-## bluemix iam authorization-policy
-{: #bluemix_iam_authorization_policy}
+## ibmcloud iam authorization-policy
+{: #ibmcloud_iam_authorization_policy}
 
 권한 정책의 세부사항을 표시합니다.
 
 ```
-bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
+ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
@@ -2711,29 +2709,29 @@ bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
 <strong>명령 옵션</strong>:
 <dl>
   <dt>AUTHORIZATION_POLICY_ID</dt>
-  <dd>표시할 권한 정책의 ID입니다.</dd> 
+  <dd>표시할 권한 정책의 ID입니다.</dd>
 </dl>
 
 
-## bluemix iam authorization-policies
-{: #bluemix_iam_authorization_policies}
+## ibmcloud iam authorization-policies
+{: #ibmcloud_iam_authorization_policies}
 
 현재 계정의 권한 부여 정책을 나열합니다.
 
 ```
-bluemix iam authorization-policies
+ibmcloud iam authorization-policies
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
 
 
-## bluemix resource groups
-{: #bluemix_resource_groups}
+## ibmcloud resource groups
+{: #ibmcloud_resource_groups}
 
 리소스 그룹을 나열합니다.
 
 ```
-bluemix resource groups [--default]
+ibmcloud resource groups [--default]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2749,22 +2747,22 @@ bluemix resource groups [--default]
 현재 대상 계정의 모든 리소스 그룹을 나열합니다.
 
 ```
-bluemix resource groups
+ibmcloud resource groups
 ```
 
 현재 대상으로 지정된 계정의 기본 그룹 나열:
 
 ```
-bluemix resource groups --default
+ibmcloud resource groups --default
 ```
 
-## bluemix resource group
-{: #bluemix_resource_group}
+## ibmcloud resource group
+{: #ibmcloud_resource_group}
 
 리소스 그룹의 세부사항 표시
 
 ```
-bluemix resource group NAME [--id]
+ibmcloud resource group NAME [--id]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2782,23 +2780,23 @@ bluemix resource group NAME [--id]
 리소스 그룹 `example-group` 표시:
 
 ```
-bluemix resource group example-group
+ibmcloud resource group example-group
 ```
 
 리소스 그룹 `example-group`의 ID만 표시:
 
 ```
-bluemix resource group example-group --id
+ibmcloud resource group example-group --id
 ```
 
 
-## bluemix resource group-update
-{: #bluemix_resource_group_update}
+## ibmcloud resource group-update
+{: #ibmcloud_resource_group_update}
 
 기존 리소스 그룹 업데이트
 
 ```
-bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
+ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2820,22 +2818,22 @@ bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_
 리소스 그룹 이름 `example-group`을 `trial-group`으로 바꾸기:
 
 ```
-bluemix resource group-update example-group -n trial-group
+ibmcloud resource group-update example-group -n trial-group
 ```
 
 리소스 그룹 `example-group`의 할당량을 `free`로 변경:
 
 ```
-bluemix resource group-update example-group -q free
+ibmcloud resource group-update example-group -q free
 ```
 
-## bluemix resource quotas
-{: #bluemix_resource_quotas}
+## ibmcloud resource quotas
+{: #ibmcloud_resource_quotas}
 
 모든 할당량 정의 나열
 
 ```
-bluemix resource quotas
+ibmcloud resource quotas
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2849,16 +2847,16 @@ bluemix resource quotas
 모든 할당량 정의 나열:
 
 ```
-bluemix resource quotas
+ibmcloud resource quotas
 ```
 
-## bluemix resource quota
-{: #bluemix_resource_quota}
+## ibmcloud resource quota
+{: #ibmcloud_resource_quota}
 
 할당량 정의의 세부사항 표시
 
 ```
-bluemix resource quota NAME
+ibmcloud resource quota NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2873,132 +2871,132 @@ bluemix resource quota NAME
 할당량 `free`의 세부사항 표시:
 
 ```
-bluemix resource quota free
+ibmcloud resource quota free
 ```
 
 
-## bluemix app push
-{: #bluemix_app_push}
+## ibmcloud app push
+{: #ibmcloud_app_push}
 
 이 명령은 [cf push ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app list
-{: #bluemix_app_list}
+## ibmcloud app list
+{: #ibmcloud_app_list}
 
 이 명령은 [cf apps ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app show
-{: #bluemix_app_show}
+## ibmcloud app show
+{: #ibmcloud_app_show}
 
 이 명령은 [cf app ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app delete
-{: #bluemix_app_delete}
+## ibmcloud app delete
+{: #ibmcloud_app_delete}
 
 이 명령은 [cf delete ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app rename
-{: #bluemix_app_rename}
+## ibmcloud app rename
+{: #ibmcloud_app_rename}
 
 이 명령은 [cf rename ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app start
-{: #bluemix_app_start}
+## ibmcloud app start
+{: #ibmcloud_app_start}
 
 이 명령은 [cf start ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app stop
-{: #bluemix_app_stop}
+## ibmcloud app stop
+{: #ibmcloud_app_stop}
 
 이 명령은 [cf stop ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app restart
-{: #bluemix_app_restart}
+## ibmcloud app restart
+{: #ibmcloud_app_restart}
 
 이 명령은 [cf restart ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app restage
-{: #bluemix_app_restage}
+## ibmcloud app restage
+{: #ibmcloud_app_restage}
 
 
 이 명령은 [cf restage ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app instance-restart
-{: #bluemix_app_instance_restart}
+## ibmcloud app instance-restart
+{: #ibmcloud_app_instance_restart}
 
 
 이 명령은 [cf restart-app-instance ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app events
-{: #bluemix_app_events}
+## ibmcloud app events
+{: #ibmcloud_app_events}
 
 이 명령은 [cf events ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app files
-{: #bluemix_app_files}
+## ibmcloud app files
+{: #ibmcloud_app_files}
 
 이 명령은 [cf files ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app logs
-{: #bluemix_app_logs}
+## ibmcloud app logs
+{: #ibmcloud_app_logs}
 
 이 명령은 [cf logs ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app env
-{: #bluemix_app_env}
+## ibmcloud app env
+{: #ibmcloud_app_env}
 
 이 명령은 [cf env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app env-set
-{: #bluemix_app_env_set}
+## ibmcloud app env-set
+{: #ibmcloud_app_env_set}
 
 이 명령은 [cf set-env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app env-unset
-{: #bluemix_app_env_unset}
+## ibmcloud app env-unset
+{: #ibmcloud_app_env_unset}
 
 이 명령은 [cf unset-env ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app stacks
-{: #bluemix_app_stacks}
+## ibmcloud app stacks
+{: #ibmcloud_app_stacks}
 
 이 명령은 [cf stacks ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app stack-show
-{: #bluemix_app_stack_show}
+## ibmcloud app stack-show
+{: #ibmcloud_app_stack_show}
 
 이 명령은 [cf stack ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app manifest-create
-{: #bluemix_app_manifest_create}
+## ibmcloud app manifest-create
+{: #ibmcloud_app_manifest_create}
 
 이 명령은 [cf create-app-manifest ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
-## bluemix app domain-cert
-{: #bluemix_app_domain_cert}
+## ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
 
 도메인의 인증서 정보를 나열합니다.
 
 ```
-bluemix app domain-cert DOMAIN_NAME
+ibmcloud app domain-cert DOMAIN_NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -3015,16 +3013,16 @@ bluemix app domain-cert DOMAIN_NAME
 `ibmcxo-eventconnect.com` 도메인의 인증서 정보를 봅니다.
 
 ```
-bluemix app domain-cert ibmcxo-eventconnect.com
+ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
-## bluemix app domain-cert-add
-{: #bluemix_app_domain_cert_add}
+## ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
 
 현재 조직의 지정된 도메인에 인증서를 추가합니다.
 
 ```
-bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3051,16 +3049,16 @@ bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD
 인증서를 도메인 `ibmcxo-eventconnect.com`에 추가합니다.
 
 ```
-bluemix app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-## bluemix app domain-cert-remove
-{: #bluemix_app_domain_cert_remove}
+## ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
 
 현재 조직의 지정된 도메인에서 인증서를 제거합니다.
 
 ```
-bluemix app domain-cert-remove DOMAIN [-f]
+ibmcloud app domain-cert-remove DOMAIN [-f]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3074,25 +3072,25 @@ bluemix app domain-cert-remove DOMAIN [-f]
    <dd>확인 없이 강제 삭제합니다.</dd>
    </dl>
 
-## bluemix app routes
-{: #bluemix_app_routes}
+## ibmcloud app routes
+{: #ibmcloud_app_routes}
 
 이 명령은 [cf routes ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app route-check
-{: #bluemix_app_route_check}
+## ibmcloud app route-check
+{: #ibmcloud_app_route_check}
 
 이 명령은 [cf check-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app route-map
-{: #bluemix_app_route_map}
+## ibmcloud app route-map
+{: #ibmcloud_app_route_map}
 
 지정된 도메인과 호스트 이름이 있는 기존의 cf 애플리케이션 또는 컨테이너 그룹에 라우트를 맵핑합니다.
 
 ```
-bluemix app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
+ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3113,23 +3111,23 @@ bluemix app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 라우트를 지정된 도메인이 있는 `my-app`으로 맵핑합니다.
 
 ```
-bluemix app route-map my-app mychinabluemix.net
+ibmcloud app route-map my-app mychinabluemix.net
 ```
 
 라우트를 지정된 도메인과 호스트 이름이 있는 'my-container-group'으로 맵핑합니다.
 
 ```
-bluemix app route-map my-container-group chinabluemix.net -n abc
+ibmcloud app route-map my-container-group chinabluemix.net -n abc
 ```
 
 
-## bluemix app route-unmap
-{: #bluemix_app_route_unmap}
+## ibmcloud app route-unmap
+{: #ibmcloud_app_route_unmap}
 
 기존의 cf 애플리케이션이나 컨테이너 그룹과 지정된 라우트의 맵핑을 해제합니다.
 
 ```
-bluemix app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
+ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3150,162 +3148,162 @@ bluemix app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 `my-app`에서 `my-app.mychinabluemix.net`을 맵핑 해제합니다.
 
 ```
-bluemix app route-unmap my-app mychianbluemix.net
+ibmcloud app route-unmap my-app mychianbluemix.net
 ```
 
 `my-container-group`에서 `abc.chinabluexmix.net`을 맵핑 해제합니다.
 
 ```
-bluemix app route-unmap my-container-group chinabluemix.net -n abc
+ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
 ```
 
 
-## bluemix app route-create
-{: #bluemix_app_route_create}
+## ibmcloud app route-create
+{: #ibmcloud_app_route_create}
 
 이 명령은 [cf create-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app route-delete
-{: #bluemix_app_route_delete}
+## ibmcloud app route-delete
+{: #ibmcloud_app_route_delete}
 
 이 명령은 [cf delete-route ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app orphaned-routes-delete
-{: #bluemix_app_orphaned_routes_delete}
+## ibmcloud app orphaned-routes-delete
+{: #ibmcloud_app_orphaned_routes_delete}
 
 이 명령은 [cf delete-orphaned-routes ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app domains
-{: #bluemix_app_domains}
+## ibmcloud app domains
+{: #ibmcloud_app_domains}
 
 이 명령은 [cf domains ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app domain-create
-{: #bluemix_app_domain_create}
+## ibmcloud app domain-create
+{: #ibmcloud_app_domain_create}
 
 이 명령은 [cf create-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app domain-delete
-{: #bluemix_app_domain_delete}
+## ibmcloud app domain-delete
+{: #ibmcloud_app_domain_delete}
 
 이 명령은 [cf delete-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app shared-domain-create
-{: #bluemix_app_shared_domain_create}
+## ibmcloud app shared-domain-create
+{: #ibmcloud_app_shared_domain_create}
 
 이 명령은 [cf create-shared-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix app shared-domain-delete
-{: #bluemix_app_shared_domain_delete}
+## ibmcloud app shared-domain-delete
+{: #ibmcloud_app_shared_domain_delete}
 
 이 명령은 [cf delete-shared-domain ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service offerings
-{: #bluemix_service_offerings}
+## ibmcloud service offerings
+{: #ibmcloud_service_offerings}
 
 
 이 명령은 [cf marketplace ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service list
-{: #bluemix_service_list}
+## ibmcloud service list
+{: #ibmcloud_service_list}
 
 이 명령은 [cf services ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/services.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service show
-{: #bluemix_service_show}
+## ibmcloud service show
+{: #ibmcloud_service_show}
 
 이 명령은 [cf service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service create
-{: #bluemix_service_create}
+## ibmcloud service create
+{: #ibmcloud_service_create}
 
 이 명령은 [cf create-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service update
-{: #bluemix_service_update}
+## ibmcloud service update
+{: #ibmcloud_service_update}
 
 이 명령은 [cf update-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service delete
-{: #bluemix_service_delete}
+## ibmcloud service delete
+{: #ibmcloud_service_delete}
 
 이 명령은 [cf delete-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service rename
-{: #bluemix_service_rename}
+## ibmcloud service rename
+{: #ibmcloud_service_rename}
 
 이 명령은 [cf rename-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service bind
-{: #bluemix_service_bind}
+## ibmcloud service bind
+{: #ibmcloud_service_bind}
 
 이 명령은 [cf bind-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/bind-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service unbind
-{: #bluemix_service_unbind}
+## ibmcloud service unbind
+{: #ibmcloud_service_unbind}
 
 이 명령은 [cf unbind-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unbind-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service key-create
-{: #bluemix_service_key_create}
+## ibmcloud service key-create
+{: #ibmcloud_service_key_create}
 
 이 명령은 [cf create-service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service key-delete
-{: #bluemix_service_key_delete}
+## ibmcloud service key-delete
+{: #ibmcloud_service_key_delete}
 
 이 명령은 [cf delete-service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service keys
-{: #bluemix_service_keys}
+## ibmcloud service keys
+{: #ibmcloud_service_keys}
 
 이 명령은 [cf service-keys ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-keys.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service key-show
-{: #bluemix_service_key_show}
+## ibmcloud service key-show
+{: #ibmcloud_service_key_show}
 
 이 명령은 [cf service-key ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/service-key.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service user-provided-create
-{: #bluemix_service_user_provided_create}
+## ibmcloud service user-provided-create
+{: #ibmcloud_service_user_provided_create}
 
 이 명령은 [cf create-user-provided-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-user-provided-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix service user-provided-update
-{: #bluemix_service_user_provided_update}
+## ibmcloud service user-provided-update
+{: #ibmcloud_service_user_provided_update}
 
 이 명령은 [cf update-user-provided-service ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/update-user-provided-service.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 
 
-## bluemix resource service-instances
-{: #bluemix_resource_service_instances}
+## ibmcloud resource service-instances
+{: #ibmcloud_resource_service_instances}
 
 서비스 인스턴스 나열
 
 ```
-bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3325,16 +3323,16 @@ bluemix resource service-instances [--service-name SERVICE_NAME] [--location LOC
 서비스 `test-service`의 서비스 인스턴스 나열:
 
 ```
-bluemix resource service-instances --service-name test-service
+ibmcloud resource service-instances --service-name test-service
 ```
 
-## bluemix resource service-instance
-{: #bluemix_resource_service_instance}
+## ibmcloud resource service-instance
+{: #ibmcloud_resource_service_instance}
 
 서비스 인스턴스의 세부사항 표시
 
 ```
-bluemix resource service-instance NAME [--location LOCATION] [--id]
+ibmcloud resource service-instance NAME [--location LOCATION] [--id]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3353,16 +3351,16 @@ bluemix resource service-instance NAME [--location LOCATION] [--id]
 서비스 인스턴스 `my-service-instance`의 세부사항 표시:
 
 ```
-bluemix resource service-instance my-service-instance
+ibmcloud resource service-instance my-service-instance
 ```
 
-## bluemix resource service-instance-create
-{: #bluemix_resource_service_instance_create}
+## ibmcloud resource service-instance-create
+{: #ibmcloud_resource_service_instance_create}
 
 서비스 인스턴스 작성
 
 ```
-bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3389,16 +3387,16 @@ bluemix resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PL
 위치 `eu-gb`에 있는 서비스 `test-service`의 서비스 플랜 `test-service-plan`을 사용하여 서비스 인스턴스 `my-service-instance` 작성:
 
 ```
-bluemix resource service-instance-create my-service-instance test-service test-service-plan eu-gb
+ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
 
-## bluemix resource service-instance-update
-{: #bluemix_resource_service_instance_update}
+## ibmcloud resource service-instance-update
+{: #ibmcloud_resource_service_instance_update}
 
 서비스 인스턴스 업데이트
 
 ```
-bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+ibmcloud resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3421,16 +3419,16 @@ bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_N
 서비스 인스턴스 `my-service-instance` 업데이트, 해당 이름을 `new-service-instance`로 변경:
 
 ```
-bluemix resource service-instance-update my-service-instance -n new-service-instance
+ibmcloud resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-## bluemix resource service-instance-delete
-{: #bluemix_resource_service_instance_delete}
+## ibmcloud resource service-instance-delete
+{: #ibmcloud_resource_service_instance_delete}
 
 서비스 인스턴스 삭제
 
 ```
-bluemix resource service-instance-delete NAME [-f, --force] [--recursive]
+ibmcloud resource service-instance-delete NAME [-f, --force] [--recursive]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3447,16 +3445,16 @@ bluemix resource service-instance-delete NAME [-f, --force] [--recursive]
 리소스 서비스 인스턴스 `my-service-instance` 삭제:
 
 ```
-bluemix resource service-instance-delete my-service-instance
+ibmcloud resource service-instance-delete my-service-instance
 ```
 
-## bluemix resource service-bindings
-{: #bluemix_resource_service_bindings}
+## ibmcloud resource service-bindings
+{: #ibmcloud_resource_service_bindings}
 
 서비스 별명에 대한 바인딩 표시
 
 ```
-bluemix resource service-bindings SERVICE_ALIAS
+ibmcloud resource service-bindings SERVICE_ALIAS
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3471,15 +3469,15 @@ bluemix resource service-bindings SERVICE_ALIAS
 서비스 별명 `my-service-alias`에 대한 리소스 바인딩 표시:
 
 ```
-bluemix resource bindings my-service-alias
+ibmcloud resource bindings my-service-alias
 ```
-## bluemix resource service-binding
-{: #bluemix_resource_service_binding}
+## ibmcloud resource service-binding
+{: #ibmcloud_resource_service_binding}
 
 서비스 바인딩의 세부사항 표시
 
 ```
-bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
+ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3498,16 +3496,16 @@ bluemix resource service-binding ALIAS_NAME APP_NAME [--id]
 서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩의 세부사항 표시:
 
 ```
-bluemix resource bindings my-service-alias my-app
+ibmcloud resource bindings my-service-alias my-app
 ```
 
-## bluemix resource service-binding-create
-{: #bluemix_resource_service_binding_create}
+## ibmcloud resource service-binding-create
+{: #ibmcloud_resource_service_binding_create}
 
 서비스 바인딩 작성
 
 ```
-bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
+ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3532,15 +3530,15 @@ bluemix resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-
 `관리자` 역할로 서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 작성:
 
 ```
-bluemix resource service-binding-create my-service-alias my-app Administrator
+ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
-## bluemix resource service-binding-delete
-{: #bluemix_resource_service_binding_delete}
+## ibmcloud resource service-binding-delete
+{: #ibmcloud_resource_service_binding_delete}
 
 서비스 바인딩 삭제
 
 ```
-bluemix resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
+ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -3559,16 +3557,16 @@ bluemix resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 삭제:
 
 ```
-bluemix resource service-binding-delete my-service-alias my-app
+ibmcloud resource service-binding-delete my-service-alias my-app
 ```
 
-## bluemix resource service-keys
-{: #bluemix_resource_service_keys}
+## ibmcloud resource service-keys
+{: #ibmcloud_resource_service_keys}
 
 서비스 별명 또는 서비스 인스턴스의 서비스 키 나열
 
 ```
-bluemix resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3589,16 +3587,16 @@ bluemix resource service-keys [ --instance-id ID | --instance-name NAME | --alia
 서비스 인스턴스 `my-service-instance`의 서비스 키 나열:
 
 ```
-bluemix resource service-keys --instance-name my-service-instance
+ibmcloud resource service-keys --instance-name my-service-instance
 ```
 
-## bluemix resource service-key
-{: #bluemix_resource_service_key}
+## ibmcloud resource service-key
+{: #ibmcloud_resource_service_key}
 
 서비스 키의 세부사항 표시
 
 ```
-bluemix resource service-key KEY_NAME [--id]
+ibmcloud resource service-key KEY_NAME [--id]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3615,16 +3613,16 @@ bluemix resource service-key KEY_NAME [--id]
 서비스 키 `my-service-key`의 세부사항 표시:
 
 ```
-bluemix resource service-key my-service-key
+ibmcloud resource service-key my-service-key
 ```
 
-## bluemix resource service-key-create
-{: #bluemix_resource_service_key_create}
+## ibmcloud resource service-key-create
+{: #ibmcloud_resource_service_key_create}
 
 서비스 키 작성
 
 ```
-bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
+ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3655,16 +3653,16 @@ bluemix resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTA
 서비스 인스턴스 `my-service-instance`에 대해 `관리자` 역할로 `my-service-key`로 이름 지정된 서비스 키 작성:
 
 ```
-bluemix resource service-key-create my-service-key Administrator --instance-name my-service-instance
+ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
 
-## bluemix resource service-key-delete
-{: #bluemix_resource_service_key_delete}
+## ibmcloud resource service-key-delete
+{: #ibmcloud_resource_service_key_delete}
 
 서비스 키 삭제
 
 ```
-bluemix resource service-key-delete KEY_NAME [-f, --forece]
+ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3681,16 +3679,16 @@ bluemix resource service-key-delete KEY_NAME [-f, --forece]
 서비스 키 `my-service-key` 삭제:
 
 ```
-bluemix resource service-key-delete my-service-key
+ibmcloud resource service-key-delete my-service-key
 ```
 
-## bluemix resource service-aliases
-{: #bluemix_resource_service_aliases}
+## ibmcloud resource service-aliases
+{: #ibmcloud_resource_service_aliases}
 
 서비스 인스턴스의 별명 나열
 
 ```
-bluemix resource service-aliases [ --instance-id ID | --instance-name NAME ]
+ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3706,16 +3704,16 @@ bluemix resource service-aliases [ --instance-id ID | --instance-name NAME ]
 <strong>예</strong>:
 서비스 인스턴스 `my-service-instance`의 서비스 별명 나열:
 ```
-bluemix resource service-aliases my-service-instance
+ibmcloud resource service-aliases my-service-instance
 ```
 
-## bluemix resource service-alias
-{: #bluemix_resource_service_alias}
+## ibmcloud resource service-alias
+{: #ibmcloud_resource_service_alias}
 
 서비스 별명의 세부사항 표시
 
 ```
-bluemix resource service-alias ALIAS_NAME [--id]
+ibmcloud resource service-alias ALIAS_NAME [--id]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3731,16 +3729,16 @@ bluemix resource service-alias ALIAS_NAME [--id]
 <strong>예</strong>:
 서비스 별명 `my-service-alias`의 세부사항 표시:
 ```
-bluemix resource service-alias  my-service-alias
+ibmcloud resource service-alias  my-service-alias
 ```
 
-## bluemix resource service-alias-create
-{: #bluemix_resource_service_alias_create}
+## ibmcloud resource service-alias-create
+{: #ibmcloud_resource_service_alias_create}
 
 서비스 인스턴스의 별명 작성
 
 ```
-bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
+ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3764,16 +3762,16 @@ bluemix resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance
 <strong>예</strong>:
 서비스 인스턴스 `my-service-instance`의 `my-service-alias`로 이름 지정된 서비스 별명 작성:
 ```
-bluemix resource service-alias-create my-service-alias --instance-name my-service-instance
+ibmcloud resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
-## bluemix resource service-alias-update
-{: #bluemix_resource_service_alias_update}
+## ibmcloud resource service-alias-update
+{: #ibmcloud_resource_service_alias_update}
 
 서비스 별명 업데이트
 
 ```
-bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
+ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3796,16 +3794,16 @@ bluemix resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --ta
 서비스 별명 `my-service-alias` 업데이트, 해당 이름을 `new-service-alias`로 변경:
 
 ```
-bluemix resource service-alias-update my-service-alias -n new-service-alias
+ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-## bluemix resource service-alias-delete
-{: #bluemix_resource_service_alias_delete}
+## ibmcloud resource service-alias-delete
+{: #ibmcloud_resource_service_alias_delete}
 
 서비스 별명 삭제
 
 ```
-bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
+ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3822,15 +3820,15 @@ bluemix resource service-alias-delete ALIAS_NAME [-f, --force]
 서비스 별명 `my-service-alias` 삭제:
 
 ```
-bluemix resource service-alias-delete my-service-alias
+ibmcloud resource service-alias-delete my-service-alias
 ```
 
-## bluemix resource search
-{: #bluemix_resource_search}
+## ibmcloud resource search
+{: #ibmcloud_resource_search}
 Lucene 조회 구문을 사용하여 리소스 검색
 
 ```
-bluemix search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -3847,76 +3845,76 @@ bluemix search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
 이름이 지정된 텍스트로 시작하는 Cloud Foundry 애플리케이션 검색:
 
 ```
-bluemix resource search 'name:my* AND type:cf-application'
+ibmcloud resource search 'name:my* AND type:cf-application'
 ```
 
 지정된 서비스 이름의 Cloud Foundry 서비스 인스턴스 검색:
 
 ```
-bluemix resource search 'service_name:messagehub AND type:cf-service-instance'
+ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
 ```
 
 지정된 ID의 조직에서 Cloud Foundry 서비스 바인딩 검색:
 
 ```
-bluemix resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
+ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
 ```
 
 지정된 두 지역 중 하나에 있으며 지정된 이름을 가진 Cloud Foundry 영역 검색:
 
 ```
-bluemix resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
+ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
 ```
 
 지정된 ID를 가진 Cloud Foundry 영역에서 이름에 단어 dev가 포함된 리소스 검색:
 
 ```            
-bluemix resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
+ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
 ```
 
 지정된 위치(즉, 미국 남부 지역)에서 리소스 제어기의 리소스 검색:
 
 ```
-bluemix resource search 'region:us-south AND family:resource_controller'
+ibmcloud resource search 'region:us-south AND family:resource_controller'
 ```
 
 지정된 ID를 가진 리소스 그룹에서 리소스 또는 별명 검색:
 
 ```
-bluemix resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
+ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
 ```
 
 이름이 기본값인 리소스 그룹 검색:
 
 ```
-bluemix resource search 'name:default AND type:resource-group'
+ibmcloud resource search 'name:default AND type:resource-group'
 ```
 
 지정된 서비스 이름에 대한 리소스 바인딩 검색:
 
 ```
-bluemix resource search 'service_name:cloud-object-storage AND type:resource-binding'
+ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
 ```
 
 지정된 클라우드 리소스 이름(CRN)의 리소스 검색:
 
 ```
-bluemix resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
+ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 지정된 태그가 있는 리소스 검색:
 
 ```
-bluemix resource search "tags:\"mykey:myvalue\""
+ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
 
-## bluemix catalog search
-{: #bluemix_catalog_search}
+## ibmcloud catalog search
+{: #ibmcloud_catalog_search}
 
 카탈로그 항목 검색
 
 ```
-bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3950,17 +3948,17 @@ bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --pr
 서비스 `Automation test` 검색:
 
 ```
-bluemix catalog search -k service -q 'Automation test'
+ibmcloud catalog search -k service -q 'Automation test'
 ```
 
 
-## bluemix catalog entry
-{: #bluemix_catalog_entry}
+## ibmcloud catalog entry
+{: #ibmcloud_catalog_entry}
 
 카탈로그 항목 가져오기
 
 ```
-bluemix catalog entry ID [--global]
+ibmcloud catalog entry ID [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -3980,16 +3978,16 @@ bluemix catalog entry ID [--global]
 ID가 `a0ef1-d3b4j0`인 항목 가져오기:
 
 ```
-bluemix catalog entry 'a0ef1-d3b4j0'
+ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
 
-## bluemix catalog entry-create
-{: #bluemix_catalog_entry_create}
+## ibmcloud catalog entry-create
+{: #ibmcloud_catalog_entry_create}
 새 카탈로그 항목 작성(계정의 카탈로그 관리자만)
 
 ```
-bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
+ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -4009,16 +4007,16 @@ bluemix catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--gl
 상위 ID가 `a0ef1-d3b4j0`인 JSON 파일에서 리소스 작성:
 
 ```
-bluemix catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
+ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
 
-## bluemix catalog entry-update
-{: #bluemix_catalog_entry_update}
+## ibmcloud catalog entry-update
+{: #ibmcloud_catalog_entry_update}
 기존 카탈로그 항목 업데이트(계정의 카탈로그 관리자 또는 편집자만)
 
 ```
-bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
+ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -4036,14 +4034,14 @@ bluemix catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 JSON 파일에서 리소스 `j402-dnf1i` 업데이트:
 
 ```
-bluemix catalog entry-update 'j402-dnf1i' -c @update.json
+ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
 
-## bluemix catalog entry-delete
-{: #bluemix_catalog_entry_delete}
+## ibmcloud catalog entry-delete
+{: #ibmcloud_catalog_entry_delete}
 카탈로그 항목 삭제(계정의 카탈로그 관리자만)
 ```
-bluemix catalog entry-delete ID [--global]
+ibmcloud catalog entry-delete ID [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -4059,16 +4057,16 @@ bluemix catalog entry-delete ID [--global]
 리소스 `j402-dnf1i` 삭제:
 
 ```
-bluemix catalog delete 'j402-dnf1i'
+ibmcloud catalog delete 'j402-dnf1i'
 ```
 
 
-## bluemix catalog entry-visibility
-{: #bluemix_catalog_entry_visibility}
+## ibmcloud catalog entry-visibility
+{: #ibmcloud_catalog_entry_visibility}
 카탈로그 항목의 가시성 가져오기(계정의 카탈로그 관리자만)
 
 ```
-bluemix catalog entry-visibility ID [--global]
+ibmcloud catalog entry-visibility ID [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -4086,16 +4084,16 @@ bluemix catalog entry-visibility ID [--global]
 글로벌 범위에서 리소스 `j402-dnf1i`의 가시성 가져오기:
 
 ```
-bluemix catalog entry-visibility 'j402-dnf1i' --global
+ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
 
 
-## bluemix catalog entry-visibility-set
-{: #bluemix_catalog_entry_visibility_set}
+## ibmcloud catalog entry-visibility-set
+{: #ibmcloud_catalog_entry_visibility_set}
 기존 카탈로그 항목의 가시성 업데이트(계정의 카탈로그 관리자만)
 
 ```
-bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
+ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -4128,16 +4126,16 @@ bluemix catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove
 JSON 파일에서 리소스 `j402-dnf1i`의 가시성 설정:
 
 ```
-bluemix catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
+ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
 
-## bluemix catalog service-marketplace
-{: #bluemix_catalog_service_marketplace}
+## ibmcloud catalog service-marketplace
+{: #ibmcloud_catalog_service_marketplace}
 마켓플레이스의 서비스 오퍼링 나열
 
 ```
-bluemix catalog service-marketplace [--cf] [--rc] [--global]
+ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -4157,16 +4155,16 @@ bluemix catalog service-marketplace [--cf] [--rc] [--global]
 글로벌 범위의 서비스 오퍼링 표시:
 
 ```
-bluemix catalog service-marketplace --global
+ibmcloud catalog service-marketplace --global
 ```
 
-## bluemix catalog templates
-{: #bluemix_catalog_templates}
+## ibmcloud catalog templates
+{: #ibmcloud_catalog_templates}
 
-Bluemix에서 표준 유형 템플리트를 확인합니다.
+IBM Cloud에 있는 표준 유형 템플리트를 봅니다. 
 
 ```
-bluemix catalog templates [-d]
+ibmcloud catalog templates [-d]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -4179,13 +4177,13 @@ bluemix catalog templates [-d]
    </dl>
 
 
-## bluemix catalog template
-{: #bluemix_catalog_template}
+## ibmcloud catalog template
+{: #ibmcloud_catalog_template}
 
 지정된 표준 유형 템플리트의 자세한 정보를 봅니다.
 
 ```
-bluemix catalog template TEMPLATE_ID
+ibmcloud catalog template TEMPLATE_ID
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -4193,7 +4191,7 @@ bluemix catalog template TEMPLATE_ID
 <strong>명령 옵션</strong>:
    <dl>
    <dt>TEMPLATE_ID(필수)</dt>
-   <dd>표준 유형 템플리트의 ID입니다. <i>bluemix 템플리트</i>를 사용하여 모든 템플리트의 ID를 볼 수 있습니다.</dd>
+   <dd>표준 유형 템플리트의 ID입니다. 모든 템플리트의 ID를 보려면 <i>ibmcloud templates</i>를 사용하십시오. </dd>
    </dl>
 
 
@@ -4202,17 +4200,17 @@ bluemix catalog template TEMPLATE_ID
 `mobileBackendStarter` 템플리트의 세부사항을 봅니다.
 
 ```
-bluemix catalog template mobileBackendStarter
+ibmcloud catalog template mobileBackendStarter
 ```
 
 
-## bluemix catalog template-run
-{: #bluemix_catalog_template_run}
+## ibmcloud catalog template-run
+{: #ibmcloud_catalog_template_run}
 
 특정 URL 및 설명이 있는 지정된 템플리트를 기반으로 하는 cf 애플리케이션을 작성합니다. 기본적으로 새 앱이 자동으로 시작됩니다.
 
 ```
-bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
+ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -4220,7 +4218,7 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [
 <strong>명령 옵션</strong>:
    <dl>
    <dt>TEMPLATE_ID(필수)</dt>
-   <dd>애플리케이션을 작성할 때 이의 기반이 되는 템플리트입니다. 모든 템플리트의 ID를 보려면 <i>bluemix templates</i>를 사용하십시오.</dd>
+   <dd>애플리케이션을 작성할 때 이의 기반이 되는 템플리트입니다. 모든 템플리트의 ID를 보려면 <i>ibmcloud templates</i>를 사용하십시오. </dd>
    <dt>CF_APP_NAME(필수)</dt>
    <dd>작성되는 cf 애플리케이션의 이름입니다.</dd>
    <dt>-u <i>URL</i>(선택사항)</dt>
@@ -4237,28 +4235,28 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [
 `javaHelloWorld` 템플리트를 기반으로 cf 애플리케이션 `my-app`을 작성합니다.
 
 ```
-bluemix catalog template-run javaHelloWorld my-app
+ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
 라우트가 `myrubyapp.chinabluemix.net`이고 설명이 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`인 `rubyHelloWorld` 템플리트를 기반으로 `my-ruby-app` 애플리케이션을 작성합니다.
 
 ```
-bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
 ```
 
 자동 시작 없이 `pythonHelloWorld` 템플리트를 기반으로 `my-python-app` 애플리케이션을 작성합니다.
 
 ```
-bluemix catalog template-run pythonHelloWorld my-python-app --no-start
+ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-## bluemix catalog locations
-{: #bluemix_catalog_locations}
+## ibmcloud catalog locations
+{: #ibmcloud_catalog_locations}
 
 선택한 형식으로 지역의 선택 서브세트를 가져옵니다.
 
 ```
-bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
 ```
 
 <strong>명령 옵션</strong>:
@@ -4278,13 +4276,13 @@ bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--jso
   <dd>출력 CSV 파일</dd>
 </dl>
 
-## bluemix catalog runtime
-{: #bluemix_catalog_runtime}
+## ibmcloud catalog runtime
+{: #ibmcloud_catalog_runtime}
 
 런타임의 세부사항을 봅니다. 이 명령은 퍼블릭 클라우에서만 사용할 수 있습니다.
 
 ```
-bluemix catalog runtime RUNTIME_ID
+ibmcloud catalog runtime RUNTIME_ID
 ```
 
 <strong>예제</strong>:
@@ -4295,13 +4293,13 @@ bluemix catalog runtime RUNTIME_ID
 catalog runtime nodejsHelloWorld
 ```
 
-## bluemix catalog runtimes
-{: #bluemix_catalog_runtimes}
+## ibmcloud catalog runtimes
+{: #ibmcloud_catalog_runtimes}
 
 모든 런타임을 나열합니다. 이 명령은 퍼블릭 클라우에서만 사용할 수 있습니다.
 
 ```
-bluemix catalog runtimes [-d]
+ibmcloud catalog runtimes [-d]
 ```
 
 <strong>명령 옵션</strong>:
@@ -4316,16 +4314,16 @@ bluemix catalog runtimes [-d]
 모든 런타임을 설명과 함께 나열:
 
 ```
-bluemix catalog runtimes -d
+ibmcloud catalog runtimes -d
 ```
 
-## bluemix billing account-usage
-{: #bluemix_billing_account_usage}
+## ibmcloud billing account-usage
+{: #ibmcloud_billing_account_usage}
 
 현재 계정의 월별 사용량 표시(계정 관리자만)
 
 ```
-bluemix billing account-usage [-d YYYY-MM] [--json]
+ibmcloud billing account-usage [-d YYYY-MM] [--json]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -4344,16 +4342,16 @@ bluemix billing account-usage [-d YYYY-MM] [--json]
 2016년 6월에 현재 계정의 사용량 및 비용 보고서 표시:
 
 ```
-bluemix billing account-usage -d 2016-06
+ibmcloud billing account-usage -d 2016-06
 ```
 
-## bluemix billing org-usage
-{: #bluemix_billing_org_usage}
+## ibmcloud billing org-usage
+{: #ibmcloud_billing_org_usage}
 
 조직의 월별 사용량 표시(계정 관리자 또는 조직 청구 관리자만)
 
 ```
-bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -4370,13 +4368,13 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 </dl>
 
 
-## bluemix billing resource-group-usage
-{: #bluemix_billing_resource_group_usage}
+## ibmcloud billing resource-group-usage
+{: #ibmcloud_billing_resource_group_usage}
 
 리소스 그룹의 월별 사용량 표시(계정 관리자 또는 리소스 그룹 관리자만)
 
 ```
-bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -4392,13 +4390,13 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
 </dl>
 
-## bluemix billing resource-instances-usage
-{: #bluemix_billing_resource_instances_usage}
+## ibmcloud billing resource-instances-usage
+{: #ibmcloud_billing_resource_instances_usage}
 
 현재 계정의 월별 리소스 인스턴스 사용량을 표시합니다.
 
 ```
- bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
+ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -4416,25 +4414,25 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
 </dl>
 
-## bluemix plugin repos
-{: #bluemix_plugin_repos}
+## ibmcloud plugin repos
+{: #ibmcloud_plugin_repos}
 
 {{site.data.keyword.Bluemix_notm}} CLI에 등록된 모든 플러그인 저장소를 나열합니다.
 
 ```
-bluemix plugin repos
+ibmcloud plugin repos
 ```
 
 <strong>전제조건</strong>: 없음
 
 
-## bluemix plugin repo-add
-{: #bluemix_plugin_repo_add}
+## ibmcloud plugin repo-add
+{: #ibmcloud_plugin_repo_add}
 
 {{site.data.keyword.Bluemix_notm}} CLI에 새 플러그인 저장소를 추가합니다.
 
 ```
-bluemix plugin repo-add REPO_NAME REPO_URL
+ibmcloud plugin repo-add REPO_NAME REPO_URL
 ```
 
 <strong>전제조건</strong>: 없음
@@ -4454,17 +4452,17 @@ bluemix plugin repo-add REPO_NAME REPO_URL
 `bluemix-repo`로서 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소 추가:
 
 ```
-bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
 
-## bluemix plugin repo-remove
-{: #bluemix_plugin_repo_remove}
+## ibmcloud plugin repo-remove
+{: #ibmcloud_plugin_repo_remove}
 
 {{site.data.keyword.Bluemix_notm}} CLI에서 플러그인 저장소를 제거합니다.
 
 ```
-bluemix plugin repo-remove REPO_NAME
+ibmcloud plugin repo-remove REPO_NAME
 ```
 
 <strong>전제조건</strong>: 없음
@@ -4480,17 +4478,17 @@ bluemix plugin repo-remove REPO_NAME
 {{site.data.keyword.Bluemix_notm}} CLI에서 `bluemix-repo` 저장소를 제거합니다.
 
 ```
-bluemix plugin repo-remove bluemix-repo
+ibmcloud plugin repo-remove bluemix-repo
 ```
 
 
-## bluemix plugin repo-plugins
-{: #bluemix_plugin_repo_plugins}
+## ibmcloud plugin repo-plugins
+{: #ibmcloud_plugin_repo_plugins}
 
 추가된 모든 저장소 또는 특정 저장소에서 사용 가능한 모든 플러그인을 나열합니다.
 
 ```
-bluemix plugin repo-plugins [-r REPO_NAME]
+ibmcloud plugin repo-plugins [-r REPO_NAME]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -4507,22 +4505,22 @@ bluemix plugin repo-plugins [-r REPO_NAME]
 모든 추가된 저장소의 플러그인을 나열합니다.
 
 ```
-bluemix plugin repo-plugins
+ibmcloud plugin repo-plugins
 ```
 
 `bluemix-repo` 저장소의 모든 플러그인 나열:
 
 ```
-bluemix plugin repo-plugins -r bluemix-repo
+ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
-## bluemix plugin repo-plugin
-{: #bluemix_plugin_repo_plugin}
+## ibmcloud plugin repo-plugin
+{: #ibmcloud_plugin_repo_plugin}
 
 저장소의 플러그인 세부사항을 표시합니다.
 
 ```
-bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
+ibmcloud plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -4539,50 +4537,50 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 "sample-repo" 저장소의 "IBM-Containers" 플러그인 세부사항 나열:
 
 ```
-bluemix plugin repo-plugin IBM-Containers -r sample-repo
+ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
 기본 저장소의 "IBM-Containers" 플러그인 세부사항 나열
 
 ```
-bluemix plugin repo-plugin IBM-Containers -r sample-repo
+ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
 
-## bluemix plugin list
-{: #bluemix_plugin_list}
+## ibmcloud plugin list
+{: #ibmcloud_plugin_list}
 
 {{site.data.keyword.Bluemix_notm}} CLI의 설치된 모든 플러그인을 나열합니다.
 
 ```
-bluemix plugin list
+ibmcloud plugin list
 ```
 
 <strong>전제조건</strong>: 없음
 
-## bluemix plugin show
-{: #bluemix_plugin_show}
+## ibmcloud plugin show
+{: #ibmcloud_plugin_show}
 
 설치된 플러그인의 세부사항을 표시합니다.
 
 ```
-bluemix plugin show PLUGIN-NAME
+ibmcloud plugin show PLUGIN-NAME
 ```
 
 <strong>전제조건</strong>: 없음
 
 
-## bluemix plugin install
-{: #bluemix_plugin_install}
+## ibmcloud plugin install
+{: #ibmcloud_plugin_install}
 
 지정된 경로 또는 저장소의 {{site.data.keyword.Bluemix_notm}} CLI에 특정 버전의 플러그인을 설치합니다.
 
 ```
-bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
+ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
 
 ```
-bx plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
+ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
@@ -4611,40 +4609,40 @@ bx plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 로컬 파일에서 플러그인 설치:
 
 ```
-bluemix plugin install /downloads/new_plugin
+ibmcloud plugin install /downloads/new_plugin
 ```
 
 원격 URL에서 플러그인 설치:
 
 ```
-bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
+ibmcloud plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
 'Bluemix' 저장소에서 최신 버전의 'container-service' 플러그인을 설치합니다.
 
 ```
-bluemix plugin install container-service -r Bluemix
+ibmcloud plugin install container-service -r Bluemix
 ```
 
 또는 단순히
 
 ```
-bluemix plugin install container-service
+ibmcloud plugin install container-service
 ```
 
 공식 플러그인 저장소에서 버전 '0.1.425'의 'container-service' 플러그인 설치:
 
 ```
-bluemix plugin install container-service -v 0.1.425
+ibmcloud plugin install container-service -v 0.1.425
 ```
 
-## bluemix plugin update
-{: #bluemix_plugin_update}
+## ibmcloud plugin update
+{: #ibmcloud_plugin_update}
 
 저장소에서 플러그인을 업그레이드합니다.
 
 ```
-bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
+ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
@@ -4669,34 +4667,34 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 공식 플러그인 저장소 'Bluemix'에서 사용 가능한 모든 업그레이드 확인:
 
 ```
-bluemix plugin update -r Bluemix
+ibmcloud plugin update -r Bluemix
 ```
 
 또는 단순히
 
 ```
-bluemix plugin update
+ibmcloud plugin update
 ```
 
 공식 플러그인 저장소의 플러그인 'container-service'를 최신으로 업그레이드:
 
 ```
-bluemix plugin update container-service
+ibmcloud plugin update container-service
 ```
 
 공식 플러그인 저장소의 플러그인 'container-service'를 버전 '0.1.440'으로 업데이트:
 
 ```
-bluemix plugin update container-service -v 0.1.440
+ibmcloud plugin update container-service -v 0.1.440
 ```
 
-## bluemix plugin uninstall
-{: #bluemix_plugin_uninstall}
+## ibmcloud plugin uninstall
+{: #ibmcloud_plugin_uninstall}
 
 {{site.data.keyword.Bluemix_notm}} CLI에서 지정된 플러그인을 설치 제거합니다.
 
 ```
-bluemix plugin uninstall PLUGIN_NAME
+ibmcloud plugin uninstall PLUGIN_NAME
 ```
 
 <strong>전제조건</strong>: 없음
@@ -4713,5 +4711,5 @@ bluemix plugin uninstall PLUGIN_NAME
 이전에 설치된 'container-service' 플러그인 설치 제거:
 
 ```
-bluemix plugin uninstall container-service
+ibmcloud plugin uninstall container-service
 ```

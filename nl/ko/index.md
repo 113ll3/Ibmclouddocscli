@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-14"
 {: #overview}
 
 {{site.data.keyword.dev_cli_notm}}은 엔드 투 엔드 웹, 모바일 및 마이크로서비스 애플리케이션을 개발하는 데 명령행을 사용하려는 개발자를 위한 애플리케이션 작성, 개발 및 배치용 명령행 방식입니다. 다음 스크립트 중 하나를 실행하여 권장 도구 세트를 빠르게 시작하십시오.
-{: shortdesc} 
+{: shortdesc}
 
 ## {{site.data.keyword.dev_cli_notm}}의 전제조건
 {: #prereq}
@@ -32,7 +32,7 @@ lastupdated: "2018-05-14"
 ## {{site.data.keyword.dev_cli_notm}} 설치 방법
 {: #installation}
 
-도구 세트를 설치하기 위해 관련 명령을 실행하여 설치 프로그램을 시작할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 개발을 위한 다음 권장 도구 `Homebrew`(Mac 전용), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}} CLI, {{site.data.keyword.dev_cli_notm}} 플러그인, Cloud Functions 플러그인, Container Registry 플러그인, Container Service 플러그인 및 `sdk-gen` 플러그인을 설치합니다(아직 설치되지 않은 경우). 
+도구 세트를 설치하기 위해 관련 명령을 실행하여 설치 프로그램을 시작할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 개발을 위한 다음 권장 도구 `Homebrew`(Mac 전용), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}} CLI, {{site.data.keyword.dev_cli_notm}} 플러그인, Cloud Functions 플러그인, Container Registry 플러그인, Container Service 플러그인 및 `sdk-gen` 플러그인을 설치합니다(아직 설치되지 않은 경우).
 
 **Mac 및 Linux:**
 
@@ -44,12 +44,22 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* 참고: 마우스 오른쪽 단추를 클릭하여 Windows PowerShell을 열고 "관리자로서 실행"을 선택하십시오.
+* 참고: PowerShell 아이콘을 마우스 오른쪽 단추로 클릭하고 "관리자 권한으로 실행"을 선택하여 Windows PowerShell을 여십시오. 
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
+
+## 설치 확인
+설치를 확인하려면 `help` 명령을 실행하십시오. 
+
+```
+ibmcloud dev help
+```
+{: codeblock}
+
+설치가 성공한 경우에는 출력에 사용법 지시사항, 현재 버전 및 지원되는 명령이 나열됩니다. 
 
 
 ## {{site.data.keyword.dev_cli_notm}}을 자세히 살펴보기 위한 기타 링크
@@ -60,3 +70,5 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 - [CLI 플러그인](/docs/cli/reference/bluemix_cli/extend_cli.html)
 - [VSCode IDE 확장](/docs/cli/idt/vscode.html)
 - [수동으로 IBM Cloud CLI 설치](/docs/cli/reference/bluemix_cli/get_started.html)
+- [GitHub에 문제 보고](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [IBM Cloud 기술에 대한 Slack - #developer-tools 채널](https://ibm-cloud-tech.slack.com) - [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/)서 팀 액세스 권한 요청
