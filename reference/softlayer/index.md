@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-08"
 ---
 
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ The {{site.data.keyword.BluSoftlayer}} plug-in has been merged into the {{site.d
 
 Use {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands in the {{site.data.keyword.Bluemix_notm}} command line interface (CLI) to configure and manage SoftLayer services.
 
-As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud` and `ic`. However you can still use the `bluemix` and `bx` CLI commands until they are removed at a later date.
+As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However you can still use the `bluemix` and `bx` CLI commands until they are removed at a later date.
 {: tip}
 
 
