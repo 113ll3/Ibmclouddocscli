@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -31,11 +31,11 @@ Nach der Installation der {{site.data.keyword.Bluemix_notm}}-CLI können Sie das
 Führen Sie die folgenden Schritte aus, um das Repository hinzuzufügen und das Plug-in zu installieren:
 1. Führen Sie den folgenden Befehl aus, um das Repository für das {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in hinzuzufügen:
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Führen Sie den folgenden Befehl aus, um das Plug-in für die {{site.data.keyword.autoscaling}}-CLI zu installieren:
 ```
-bluemix plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r Bluemix
 ```
 
 ## Autoskalierungsrichtlinie zuordnen
@@ -43,7 +43,7 @@ bluemix plugin install auto-scaling -r Bluemix
 Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führen Sie den folgenden Befehl aus:
 
 ```
-bx as policy-attach <APP_NAME> -p <policy_file>
+ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -60,7 +60,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 Sie können eine Autoskalierungsrichtlinie erstellen, indem Sie die Fragen in der Befehlszeilenschnittstelle beantworten. Entsprechend Ihrer Eingabe wird eine JSON-Datei mit der Definition der Autoskalierungsrichtlinie mit dem von Ihnen eingegebenen Namen gespeichert. Wenn Sie den Dateinamen nicht eingeben, wird der Richtlinieninhalt direkt in der Befehlszeile ausgegeben und nicht in einer Datei gespeichert. Führen Sie den folgenden Befehl aus:
 
 ```
-bx as policy-create
+ibmcloud as policy-create
 ```
 {: codeblock}
 
@@ -70,7 +70,7 @@ bx as policy-create
 Sie können die Autoskalierungsrichtlinie einer App anzeigen. Der Inhalt der Richtlinie wird direkt in der Befehlszeile ausgegeben. Führen Sie den folgenden Befehl aus:
 
 ```
-bx as policy-show <APP_NAME> [--json]
+ibmcloud as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -87,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 Sie können eine Autoskalierungsrichtlinie aus einer App entfernen. Führen Sie den folgenden Befehl aus:
 
 ```
-bx as policy-detach <APP_NAME>
+ibmcloud as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -102,7 +102,7 @@ bx as policy-detach <APP_NAME>
 Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder inaktivieren. Führen Sie den folgenden Befehl aus:
 
 ```
-bx as policy-enable|policy-disable <APP_NAME>
+ibmcloud as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -117,7 +117,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 Sie können das Protokoll der Autoskalierungsaktivität einer bestimmten App anzeigen. In der Befehlszeilenschnittstelle wird eine Tabelle der Autoskalierungsprotokolleinträge angezeigt.
 
 ```
-bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 

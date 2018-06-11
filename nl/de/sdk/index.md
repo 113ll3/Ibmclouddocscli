@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ Stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen.
 2. [Installieren Sie das Plug-in ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in).
 
 	```
-	bx plugin install sdk-gen
+	ibmcloud plugin install sdk-gen
 	```
 	{: codeblock}
 
@@ -56,7 +56,7 @@ Verwenden Sie die folgenden Befehle, um ein SDK zu generieren, Open API-Definiti
 ### SDK generieren
 {: #gen}
 
-Verwenden Sie `bx sdk generate [arguments...] [command options]`.
+Verwenden Sie `ibmcloud sdk generate [arguments...] [command options]`.
 
 
 #### Argumente
@@ -90,14 +90,14 @@ Verwenden Sie `bx sdk generate [arguments...] [command options]`.
 Um ein SDK aus einer Cloud Foundry-App zu extrahieren, das in {{site.data.keyword.Bluemix_notm}} ausgeführt wird, können Sie den Namen der App als Parameter für die CLI verwenden. Der folgende Befehl verwendet den Namen der App als `SDK_Name`.
 
 ```
-bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
+ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 Führen Sie den folgenden Befehl aus, um ein SDK aus einer URL in einer Open API-Definitionsdatei oder einer lokalen JSON- bzw. Yaml-Datei zu generieren.
 
 ```
-bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
+ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### Open API-Definitionen prüfen
 {: #validating}
 
-Verwenden Sie `bx sdk validate [argument]`.
+Verwenden Sie `ibmcloud sdk validate [argument]`.
 
 
 #### Argumente
@@ -121,14 +121,14 @@ Verwenden Sie `bx sdk validate [argument]`.
 Um eine API-Spezifikation einer Cloud Foundry-App zu prüfen, die in {{site.data.keyword.Bluemix_notm}} ausgeführt wird, können Sie den Namen der App als Parameter für die CLI verwenden.
 
 ```
-bx sdk validate [APP_NAME] [LOCATION]
+ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 Führen Sie den folgenden Befehl aus, um ein SDK aus der URL für ein API-Spezifikationsdokument oder eine lokale JSON- oder Yaml-Datei zu prüfen.
 
 ```
-bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
+ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### Apps auflisten (Cloud Foundry)
 {: #list-apps}
 
-Verwenden Sie `bx sdk list [argument] [option]` zum Auflisten von Apps und Prüfen von API-Spezifikationen. Sie müssen die Umgebungsvariable `OPENAPI_SPEC` auf einen relativen URL-Pfad festlegen, in dem Ihre Spezifikationen gehostet sind.
+Verwenden Sie `ibmcloud sdk list [argument] [option]` zum Auflisten von Apps und Prüfen von API-Spezifikationen. Sie müssen die Umgebungsvariable `OPENAPI_SPEC` auf einen relativen URL-Pfad festlegen, in dem Ihre Spezifikationen gehostet sind.
 
 
 #### Argumente
@@ -158,27 +158,27 @@ Verwenden Sie `bx sdk list [argument] [option]` zum Auflisten von Apps und Prüf
 Verwenden Sie den folgenden Befehl, um alle Apps im aktuellen Bereich aufzulisten.
 
 ```
-bx sdk list
+ibmcloud sdk list
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um Apps im aktuellen Bereich aufzulisten und die URL der API-Spezifikation anzuzeigen.
 
 ```
-bx sdk list --url
+ibmcloud sdk list --url
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um Apps in einem bestimmten Bereich aufzulisten.
 
 ```
-bx sdk list [SPACE_NAME]
+ibmcloud sdk list [SPACE_NAME]
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um Apps in einem bestimmten Bereich aufzulisten und die URL der API-Spezifikation anzuzeigen.
 
 ```
-bx sdk list [SPACE_NAME] --url
+ibmcloud sdk list [SPACE_NAME] --url
 ```
 {: codeblock}

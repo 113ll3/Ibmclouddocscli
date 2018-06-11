@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -244,8 +244,8 @@ Führen Sie das Plug-in als eigenständige CLI aus.
 Installieren und rufen Sie Sie das Plug-in als {{site.data.keyword.Bluemix_notm}}-CLI auf, indem Sie einen der folgenden Befehle ausführen.
 
 ```
-bluemix plugin install main
-bluemix help sdk
+ibmcloud plugin install main
+ibmcloud help sdk
 ```
 {: codeblock}
 

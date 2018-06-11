@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -23,7 +23,7 @@ Bei der Anmeldung bei einer dedizierten Cloud, bei der der öffentliche IAM-Serv
 
 
 ```
-  $ bluemix login -a https://api.{dedicated_env}.bluemix.net
+  $ ibmcloud login -a https://api.{dedicated_env}.bluemix.net
   API-Endpunkt: https://api.{dedicated_env}.bluemix.net
 
   Der öffentliche IAM-Token-Service ist in der dedizierten Umgebung verfügbar.
@@ -57,18 +57,18 @@ Wählen Sie eine Option aus, um die Berechtigungsnachweise für die dedizierte I
 
 ## Anmeldung bei einem lokalen UAA-Server erzwingen
 
-Erzwingen Sie eine Anmeldung bei dem UAA-Server unter einer dedizierten ID, indem Sie die Option `--no-iam` beim Befehl `bluemix login` angeben:
+Erzwingen Sie eine Anmeldung bei dem UAA-Server unter einer dedizierten ID, indem Sie die Option `--no-iam` beim Befehl `ibmcloud login` angeben:
 
 ```
-  $ bluemix login --no-iam
+  $ ibmcloud login --no-iam
 ```
 
-## Verbindung zwischen dedizierter ID und öffentlicher IBMid aufheben 
+## Verbindung zwischen dedizierter ID und öffentlicher IBMid aufheben
 
-Mit dem Befehl `bluemix iam dedicated-id-disconnect` können Sie die Verbindung zwischen der öffentlichen IBMid und der dedizierten ID aufheben.
+Mit dem Befehl `ibmcloud iam dedicated-id-disconnect` können Sie die Verbindung zwischen der öffentlichen IBMid und der dedizierten ID aufheben.
 
 ```
-  $ bluemix iam dedicated-id-disconnect
+  $ ibmcloud iam dedicated-id-disconnect
   Soll eigene_dedizierte_ID wirklich von der öffentlichen IBMid getrennt werden? (J/N)> j
   Dedizierter Benutzer 'eigene_dedizierte_ID' wird von öffentlicher IBMid getrennt...
   OK
@@ -76,4 +76,3 @@ Mit dem Befehl `bluemix iam dedicated-id-disconnect` können Sie die Verbindung 
   Abmelden...
   OK
 ```
-

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -24,7 +24,7 @@ Dokumentiert sind bekannte Probleme mit der {{site.data.keyword.dev_cli_notm}} u
 ## Bekannte Probleme
 {: #knownissues}
 
-In den folgenden Abschnitten werden bekannte Probleme und mögliche Lösungen beschrieben. 
+In den folgenden Abschnitten werden bekannte Probleme und mögliche Lösungen beschrieben.
 
 
 ### 'Hostname is taken'-Fehler beim Erstellen eines Projekts mit einem nicht mobilen Muster
@@ -40,8 +40,8 @@ The hostname <myHostname> is taken.
 
 #### Ursache
 {: #hostname-cause}
-   
-Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht. 
+
+Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht.
 
 
 #### Lösung
@@ -50,7 +50,7 @@ Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht.
 Melden Sie sich erneut an.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -58,7 +58,7 @@ bx login
 ### Allgemeine Fehler mit der {{site.data.keyword.dev_cli_short}}
 {: #general}
 
-Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie die {{site.data.keyword.dev_cli_short}}-CLI-Befehle 'create', 'delete', 'list' oder 'code' verwenden: 
+Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie die {{site.data.keyword.dev_cli_short}}-CLI-Befehle 'create', 'delete', 'list' oder 'code' verwenden:
 
 ```
 Failed to <command> project.
@@ -68,8 +68,8 @@ Failed to <command> project.
 
 #### Ursache
 {: #general-cause}
-   
-Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht. 
+
+Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht.
 
 
 #### Lösung
@@ -78,7 +78,7 @@ Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht.
 Melden Sie sich erneut an.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 
@@ -89,12 +89,12 @@ bx login
 Möglicherweise wird der folgende Fehler angezeigt, wenn Sie ein Projekt ausführen, ohne es zunächst zu erstellen.
 
 ```
-$ bx dev run testProject
+$ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
 Creating image bx-dev-testProject based on Dockerfile...
-OK                    
+OK
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
@@ -105,7 +105,7 @@ Error: No such image: bx-dev-testProject
 #### Ursache
 {: #nosuchimage-cause}
 
-Sie müssen ein Projekt erstellen, bevor Sie es ausführen. 
+Sie müssen ein Projekt erstellen, bevor Sie es ausführen.
 
 
 #### Lösung
@@ -114,14 +114,14 @@ Sie müssen ein Projekt erstellen, bevor Sie es ausführen.
 Führen Sie den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um Ihre Anwendung zu erstellen:
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Führen Sie den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um Ihre Anwendung zu starten:
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 
 
@@ -139,9 +139,8 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 
 #### Ursache
 {: #os-cause}
-   
-Dieser Fehler wird vom {{site.data.keyword.objectstorageshort}}-Service verursacht, der nur eine Instanz des kostenlosen {{site.data.keyword.objectstorageshort}}-Plans bereitstellen kann.
 
+Dieser Fehler wird vom {{site.data.keyword.objectstorageshort}}-Service verursacht, der nur eine Instanz des kostenlosen {{site.data.keyword.objectstorageshort}}-Plans bereitstellen kann.
 
 
 #### Lösung
@@ -154,20 +153,20 @@ Sie werden aufgefordert, einen anderen Plan auszuwählen, um diesen Fehler zu ve
 {: #code}
 
 Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie die {{site.data.keyword.dev_cli_short}} verwenden, um ein Projekt zu erstellen:
-	
+
 ```
 FAILED                            
 Project created, but could not get code
 https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
-	
+
 
 #### Ursache
 {: #code-cause}
 
 Dieser Fehler wird durch eine interne Zeitlimitüberschreitung verursacht.
-	
+
 
 #### Lösung
 {: #code-resolution}
@@ -177,7 +176,7 @@ Sie können den Code auf eine der folgenden Arten abrufen:
 * Führen Sie den folgenden Befehl in der CLI aus:
 
    ```
-   bx dev code <your-project-name>
+   ibmcloud dev code <your-project-name>
    ```
    {: codeblock}
 
@@ -192,10 +191,10 @@ Sie können den Code auf eine der folgenden Arten abrufen:
 	3. Klicken Sie auf **Code herunterladen**, nachdem der Code generiert wurde.
 
 
-### Fehler beim Ausführen von `bx dev run` für Node.js-Projekte
+### Fehler beim Ausführen von `ibmcloud dev run` für Node.js-Projekte
 {: #node}
 
-Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie `bx dev run` in der {{site.data.keyword.dev_cli_short}} für Web- oder BFF-Projekte mit Node.js ausführen:
+Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie `ibmcloud dev run` in der {{site.data.keyword.dev_cli_short}} für Web- oder BFF-Projekte mit Node.js ausführen:
 
 ```
 module.js:597
@@ -220,26 +219,26 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 
 #### Ursache
 {: #node-cause}
-   
+
 Dieser Fehler tritt auf, wenn das Modul `appmetrics` in einer anderen Architektur installiert ist. Native NPM-Module, die in einer Architektur installiert sind, funktionieren nicht in einer anderen. Die eingeschlossenen Docker-Images basieren auf dem Linux-Kernel.
 
 
 #### Lösung
 {: #node-resolution}
 
-Löschen Sie den Ordner `node_modules` und führen Sie den Befehl `bx dev run` erneut aus. 
+Löschen Sie den Ordner `node_modules` und führen Sie den Befehl `ibmcloud dev run` erneut aus.
 
 
-### Fehler bei der Bereitstellung in Bluemix
+### Fehler bei der Bereitstellung in {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploy}
 
-Sie versuchen, unter Bluemix mithilfe der {{site.data.keyword.dev_cli_short}} bereitzustellen, und stellen fest, dass das nicht funktioniert, aber es wird keine Fehlermeldung angezeigt. 
+Sie versuchen möglicherweise, mithilfe der {{site.data.keyword.dev_cli_short}} die Bereitstellung in {{site.data.keyword.Bluemix_notm}} zu erzielen und die Bereitstellung in {{site.data.keyword.Bluemix_notm}} funktioniert nicht, doch es wird kein Fehler gemeldet.
 
 
 #### Ursache
 {: #cause1}
 
-Möglicherweise sind Sie nicht bei Ihrem Konto angemeldet.  
+Möglicherweise sind Sie nicht bei Ihrem Konto angemeldet.
 
 #### Lösung
 {: #resolution1}
@@ -247,14 +246,14 @@ Möglicherweise sind Sie nicht bei Ihrem Konto angemeldet.
 Melden Sie sich an und versuchen Sie es erneut.
 
 ```
-bx login
+ibmcloud login
 ```
 
 
-### Fehler bei der Bereitstellung in Kubernetes unter Bluemix
+### Fehler bei der Bereitstellung in Kubernetes unter {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploytokube}
 
-Dieser Fehler wird möglicherweise im Anschluss an die erste Eingabeaufforderung für Ihren Clusternamen angezeigt: 
+Dieser Fehler wird möglicherweise im Anschluss an die erste Eingabeaufforderung für Ihren Clusternamen angezeigt:
 
 ```
 FAILED
@@ -268,26 +267,26 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 #### Ursache
 {: #cause2}
 
-Dies liegt wahrscheinlich an einem ungültigen Clusternamen. Sie können dies bestätigen, indem Sie denselben Befehl mit `--trace` ausführen. Sie sehen möglicherweise Folgendes in der Fehlernachricht: 
+Dies liegt wahrscheinlich an einem ungültigen Clusternamen. Sie können dies bestätigen, indem Sie denselben Befehl mit `--trace` ausführen. Sie sehen möglicherweise Folgendes in der Fehlernachricht:
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 
 
 #### Lösung
 {: #resolution2}
 
-Stellen Sie sicher, dass Sie den korrekten Cluster verwenden und dass Sie Ihren Cluster für die Bereitstellung konfiguriert haben, indem Sie den folgenden Befehl ausführen: 
+Stellen Sie sicher, dass Sie den korrekten Cluster verwenden und dass Sie Ihren Cluster für die Bereitstellung konfiguriert haben, indem Sie den folgenden Befehl ausführen:
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 
 
-### Fehler bei der Bereitstellung in Kubernetes unter Bluemix
+### Fehler bei der Bereitstellung in Kubernetes unter {{site.data.keyword.Bluemix_notm}}
 
-Dieser Fehler wird möglicherweise im Anschluss an die Eingabeaufforderung für das Bereitstellungsimageziel angezeigt: 
+Dieser Fehler wird möglicherweise im Anschluss an die Eingabeaufforderung für das Bereitstellungsimageziel angezeigt:
 
 ```
 FAILED
@@ -302,16 +301,16 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<projec
 #### Ursache
 {: #cause3}
 
-Wahrscheinlich liegt dies an einem ungültigen Bereitstellungsimageziel. Genauer gesagt könnte es ein ungültiger Namensbereich sein, der mittlere Wert im Bereitstellungsimageziel. 
+Wahrscheinlich liegt dies an einem ungültigen Bereitstellungsimageziel. Genauer gesagt könnte es ein ungültiger Namensbereich sein, der mittlere Wert im Bereitstellungsimageziel.
 
 
 #### Lösung
 {: #resolution3}
 
-Stellen Sie sicher, dass der Namensbereich im Bereitstellungsimageziel einem der Namensbereiche entspricht, die während der Ausführung des folgenden Befehls gefunden werden: 
+Stellen Sie sicher, dass der Namensbereich im Bereitstellungsimageziel einem der Namensbereiche entspricht, die während der Ausführung des folgenden Befehls gefunden werden:
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 
 
@@ -319,17 +318,17 @@ bx cr namespaces
 ## ANHANG
 {: #appendix}
 
-Für die meisten Benutzer werden alle Voraussetzungen mithilfe der Plattforminstallationsprogramme oben auf dieser Seite installiert. Im Folgenden finden Sie Anweisungen, falls Sie weitere Komponenten manuell installieren müssen: 
+Für die meisten Benutzer werden alle Voraussetzungen mithilfe der Plattforminstallationsprogramme oben auf dieser Seite installiert. Im Folgenden finden Sie Anweisungen, falls Sie weitere Komponenten manuell installieren müssen:
 
-Zum Installieren des Entwickler-Plug-ins muss zunächst die [IBM Cloud-CLI](../reference/bluemix_cli/get_started.md#getting-started) installiert werden. 
+Zum Installieren des Entwickler-Plug-ins muss zunächst die [IBM Cloud-CLI](../reference/bluemix_cli/get_started.md#getting-started) installiert werden.
 
-Zum Verwenden des Entwickler-Plug-ins müssen Sie es mithilfe dieses Befehls installieren: `bx plugin install dev -r Bluemix`
+Zum Verwenden des Entwickler-Plug-ins müssen Sie es mithilfe dieses Befehls installieren: `ibmcloud plugin install dev -r Bluemix`
 
-Zum lokalen Ausführen und Debuggen von Anwendungen müssen Sie auch [Docker ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.docker.com/get-docker) installieren. 
+Zum lokalen Ausführen und Debuggen von Anwendungen müssen Sie auch [Docker ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.docker.com/get-docker) installieren.
 
-Zum Bereitstellen einer Anwendung als Container müssen Sie auch Kubernetes, Helm und die folgenden IBM Cloud-CLI-Plug-ins installieren: 
+Zum Bereitstellen einer Anwendung als Container müssen Sie auch Kubernetes, Helm und die folgenden IBM Cloud-CLI-Plug-ins installieren:
 
-Gehen Sie wie folgt vor, um Kubernetes zu installieren: 
+Gehen Sie wie folgt vor, um Kubernetes zu installieren:
 * Mac-Benutzer:
 `curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl`
 
@@ -339,7 +338,7 @@ Gehen Sie wie folgt vor, um Kubernetes zu installieren:
 * Windows-Benutzer:
 `curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe`
 
-Gehen Sie wie folgt vor, um Helm zu installieren: 
+Gehen Sie wie folgt vor, um Helm zu installieren:
 * Mac- und Linux-Benutzer:
 `export DESIRED_VERSION=v2.6.0`
 `curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash`
@@ -348,10 +347,10 @@ Gehen Sie wie folgt vor, um Helm zu installieren:
 Binärdatei unter https://github.com/kubernetes/helm/releases/tag/v2.6.0 herunterladen und installieren
 
 Gehen Sie wie folgt vor, um das Plug-in 'container-registry' zu installieren:
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren:
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`
 
 
 <!--
@@ -365,16 +364,16 @@ Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren:
 ## Hilfe und Support anfordern
 {: #gettinghelp}
 
-Bei Problemen mit der oder Fragen zur {{site.data.keyword.Bluemix_notm}}-{{site.data.keyword.dev_console}} oder der -{{site.data.keyword.dev_cli_notm}} erhalten Sie Hilfe, indem Sie in einem Forum nach Informationen suchen oder Fragen stellen. Sie können auch ein Support-Ticket öffnen. 
+Bei Problemen mit der oder Fragen zur {{site.data.keyword.Bluemix_notm}}-{{site.data.keyword.dev_console}} oder der -{{site.data.keyword.dev_cli_notm}} erhalten Sie Hilfe, indem Sie in einem Forum nach Informationen suchen oder Fragen stellen. Sie können auch ein Support-Ticket öffnen.
 
-Wenn Sie in den Foren Beiträge veröffentlichen, können Sie Ihre Fragen so taggen, dass die {{site.data.keyword.Bluemix_notm}}-Entwicklerteams benachrichtigt werden. 
+Wenn Sie in den Foren Beiträge veröffentlichen, können Sie Ihre Fragen so taggen, dass die {{site.data.keyword.Bluemix_notm}}-Entwicklerteams benachrichtigt werden.
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 
 Wenn Sie technische Fragen zur Entwicklung oder Bereitstellung einer App mit der {{site.data.keyword.dev_console}} oder der {{site.data.keyword.dev_cli_notm}} haben:
 
-* Veröffentlichen Sie Ihre Frage auf [Stack Overflow ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) und versehen Sie sie mit den Tags `bluemix-dev-services` und `ibm-bluemix`. 
-* Veröffentlichen Sie Ihre Frage auf [Slack ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm-cloud-tech.slack.com/) im `bluemix-dev-services`-Kanal. [Registrieren Sie sich ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/IBMCloudNativeSlack) noch heute. 
+* Veröffentlichen Sie Ihre Frage auf [Stack Overflow ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) und versehen Sie sie mit den Tags `bluemix-dev-services` und `ibm-bluemix`.
+* Veröffentlichen Sie Ihre Frage auf [Slack ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm-cloud-tech.slack.com/) im `bluemix-dev-services`-Kanal. [Registrieren Sie sich ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/IBMCloudNativeSlack) noch heute.
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
@@ -382,8 +381,8 @@ Wenn Sie technische Fragen zur Entwicklung oder Bereitstellung einer App mit der
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/bluemix-dev-services/?smartspace=bluemix) forum. Include the  "bluemix-dev-services" and "bluemix" tags.
 * -->
 
-Weitere Details zur Verwendung der Foren finden Sie unter [Hilfe anfordern ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/support/index.html#getting-help). 
+Weitere Details zur Verwendung der Foren finden Sie unter [Hilfe anfordern ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/support/index.html#getting-help).
 
-Informationen zum Öffnen eines {{site.data.keyword.IBM}} Support-Tickets oder zu Supportstufen und zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/support/index.html#contacting-support). 
+Informationen zum Öffnen eines {{site.data.keyword.IBM}} Support-Tickets oder zu Supportstufen und zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/support/index.html#contacting-support).
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->

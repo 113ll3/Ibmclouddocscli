@@ -3,8 +3,8 @@
 copyright:
 
    years: 2017, 2018
-   
-lastupdated: "2018-05-02"
+
+lastupdated: "2018-05-23"
 
 ---
 
@@ -12,15 +12,19 @@ lastupdated: "2018-05-02"
 {:new_window: target="_blank"}
 {:screen: .screen}  
 {:codeblock: .codeblock}  
-{:pre: .pre}  
+{:pre: .pre}
+{:tip: .tip}  
 
-# {{site.data.keyword.dev_cli_notm}}-CLI-Befehle (bx dev)
+# Befehle der {{site.data.keyword.dev_cli_notm}}-CLI (ibmcloud dev)
 {: #idt-cli}
 
 Version: 1.2.0
 Freigegeben: 8. März 2018
 
-Verwenden Sie die folgenden {{site.data.keyword.dev_cli_notm}}-CLI-Befehle (bx dev), um ein Projekt zu erstellen, bereitzustellen, zu debuggen und zu testen.
+Ab Mai 2018 wird an Stelle der {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bluemix` und `bx` künftig der Befehl `ibmcloud` verwendet. Sie können die CLI-Befehle `bluemix` und `bx` jedoch auch weiterhin noch so lange verwenden, bis sie endgültig nicht mehr unterstützt werden.
+{: tip}
+
+Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-CLI (ibmcloud dev), um ein Projekt zu erstellen, bereitzustellen, zu debuggen und zu testen.
 
 - [build](#build): Erstellt das Projekt in einem lokalen Container.
 - [code](#code): Lädt Code aus einem Projekt herunter.
@@ -55,7 +59,7 @@ Für eine Erstellung mit mehreren Containern muss Ihr Projekt entweder eine [Com
 Führen Sie den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um Ihre Anwendung zu erstellen:  
 
 ```
-bx dev build [--debug]
+ibmcloud dev build [--debug]
 ```
 {: codeblock}
 
@@ -71,7 +75,7 @@ Verwenden Sie den Befehl `code`, um ein zuvor erstelltes Projekt mit Anwendungsv
 Führen Sie den folgenden Befehl aus, um den Code aus einem angegebenen Projekt herunterzuladen.
 
 ```
-bx dev code <projektname>
+ibmcloud dev code <projectName>
 ```
 {: codeblock}
 
@@ -79,14 +83,14 @@ bx dev code <projektname>
 ## console
 {: #console}
 
-Verwenden Sie den Befehl `console`, um in einem Web-Browser die Webkonsole Ihrer Anwendung unter IBM Cloud zu öffnen.  Sie können den Befehl `bx dev console` aus dem Ordner Ihres Projekts heraus ausführen und die Befehlszeilenschnittstelle versucht, ein passendes Projekt in der IBM Cloud zu finden, das dieselbe Projekt-ID wie das aktuelle Verzeichnis hat. Falls das System keinen passenden Namen finden kann, wird statt des spezifischen Projekts das Dashboard für Web-Apps und mobile Apps in IBM Cloud geöffnet.
+Verwenden Sie den Befehl `console`, um in einem Web-Browser die Webkonsole Ihrer Anwendung unter IBM Cloud zu öffnen.  Sie können den Befehl `ibmcloud dev console` aus dem Ordner Ihres Projekts heraus ausführen und die Befehlszeilenschnittstelle versucht, ein passendes Projekt in der IBM Cloud zu finden, das dieselbe Projekt-ID wie das aktuelle Verzeichnis hat. Falls das System keinen passenden Namen finden kann, wird statt des spezifischen Projekts das Dashboard für Web-Apps und mobile Apps in IBM Cloud geöffnet.
 
 Sie können einen Projektnamen bereitstellen und die Befehlszeilenschnittstelle überspringt den Abgleich auf der Grundlage des Ordner-/Anwendungsnamens. In diesem Fall öffnet die Befehlszeilenschnittstelle die Konsole des genannten Projekts in einem Web-Browser.  
 
 Führen Sie den folgenden Befehl aus, um einen Web-Browser in der Webkonsole Ihrer Anwendung zu öffnen.
 
 ```
-bx dev console [projectName]
+ibmcloud dev console [projectName]
 ```
 {: codeblock}
 
@@ -99,7 +103,7 @@ Erstellen Sie ein Projekt, wobei Sie zur Angabe aller Informationen wie Ressourc
 Führen Sie den folgenden Befehl aus, um ein Projekt im aktuellen Verzeichnis zu erstellen und ihm Services zuzuordnen:
 
 ```
-bx dev create
+ibmcloud dev create
 ```
 {: codeblock}
 
@@ -112,14 +116,14 @@ Sie können Ihre Anwendung mithilfe des Befehls `debug` debuggen. Zunächst muss
 Kompilieren Sie zunächst Ihr Projekt:
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 Führen Sie zunächst den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um Ihre Anwendung zu debuggen:
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 {: codeblock}
 
@@ -138,19 +142,19 @@ unterstützen Sie beim Debugging einer Anwendung. Es gibt [zusätzliche Paramete
 {: #port-map-debug}
 
 * Portzuordnungen für den Debugport. Der erste Wert ist der Port, der im Hostbetriebssystem verwendet werden soll, der zweite Wert ist der Port im Container [host-port:container-port].
-* Verwendung: `bx dev debug --container-port-map-debug 7777:7777`
+* Verwendung: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
 {: #build-cmd-debug}
 
 * Parameter zum Erstellen von Code für DEBUG.
-* Verwendung: `bx dev debug --build-cmd-debug build.command.sh`
+* Verwendung: `ibmcloud dev debug --build-cmd-debug build.command.sh`
 
 #### `debug-cmd`
 {: #debug-cmd}
 
 * Parameter zum Angeben eines Befehls zum Aufrufen des Debuggers im Toolscontainer. Verwenden Sie diesen Parameter, wenn `build-cmd-debug` Ihre Anwendung im Debugger startet.
-* Verwendung: `bx dev debug --debug-cmd /the/debug/command`
+* Verwendung: `ibmcloud dev debug --debug-cmd /the/debug/command`
 
 
 
@@ -162,7 +166,7 @@ Setzen Sie den Befehl `delete` ab, um Projekte aus Ihrem {{site.data.keyword.Blu
 Führen Sie den folgenden Befehl aus, um Ihr Projekt aus {{site.data.keyword.Bluemix}} zu löschen:
 
 ```
-bx dev delete <projektname>
+ibmcloud dev delete <projectName>
 ```
 {: codeblock}
 
@@ -198,14 +202,14 @@ Wenn Sie diese in der cli-config.yml nicht konfigurieren, müssen Sie die Bereit
 Führen Sie den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um Ihre Anwendung zu erstellen:  
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Führen Sie den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um Ihr Projekt bereitzustellen:
 
 ```
-bx dev deploy
+ibmcloud dev deploy
 ```
 {: codeblock}
 
@@ -219,25 +223,25 @@ Die folgenden Parameter können mit dem Befehl `deploy` verwendet werden oder in
 {: #chart-path}
 
 * Parameter für eine Containerbereitstellung zur Angabe der Position des Helm-Diagramms, das für die Bereitstellung verwendet wird.
-* Verwendung: `bx dev deploy --chart-path [/the/path]`
+* Verwendung: `ibmcloud dev deploy --chart-path [/the/path]`
 
 #### `deploy-target`
 {: #deploy-target}
 
 * Optionaler Parameter zum Angeben des Typs der fertigzustellenden Bereitstellung.  Der Standardbereitstellungstyp ist ein Buildpack.
-* Verwendung: `bx dev deploy -t|--target buildpack|container`
+* Verwendung: `ibmcloud dev deploy -t|--target buildpack|container`
 
 #### `deploy-image-target`
 {: #deploy-image-target}
 
 * Parameter zur Verwendung mit einer Containerbereitstellung als Zielimagename für die Bereitstellung (z. B. zum Kennzeichnen einer Docker-Registry).  Der Wert darf keine Version enthalten, z. B.: image-name:{version}, weil die Version von `deploy` inkrementiert und angehängt wird.
-* Verwendung: `bx dev deploy --deploy-image-target [image-name]`
+* Verwendung: `ibmcloud dev deploy --deploy-image-target [image-name]`
 
 #### `ibm-cluster`
 {: #ibm-cluster}
 
 * Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung in {{site.data.keyword.Bluemix}}.
-* Verwendung: `bx dev deploy --ibm-cluster [cluster-name]`
+* Verwendung: `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 
 ## enable
@@ -248,7 +252,7 @@ Aktivieren Sie ein vorhandenes Projekt für die {{site.data.keyword.Bluemix_notm
 Führen Sie den folgenden Befehl aus, um ein vorhandenes Projekt im aktuellen Verzeichnis für die {{site.data.keyword.Bluemix_notm}}-Bereitstellung zu aktivieren:
 
 ```
-bx dev enable
+ibmcloud dev enable
 ```
 {: codeblock}
 
@@ -271,7 +275,7 @@ Sprachenoptionen sind unter anderem:
 * java-mp (interpretiert als Java - Java MicroProfile)
 * java-spring (interpretiert als Java - Spring Framework)
 
-Mit dem Befehl `bx dev enable` erstellte Dateien, die Namenskonflikte mit vorhandenen Dateien im Projektordner aufweisen, werden mit einer Dateierweiterung `.merge` gespeichert.  
+Mit dem Befehl `ibmcloud dev enable` erstellte Dateien, die Namenskonflikte mit vorhandenen Dateien im Projektordner aufweisen, werden mit einer Dateierweiterung `.merge` gespeichert.  
 
 ### Aktivierungsbefehlsparameter
 {: #enable-parameters}
@@ -282,13 +286,13 @@ Die folgenden Parameter können mit dem Befehl `enable` verwendet werden oder in
 {: #enable-language}
 
 * Parameter zum Angeben der Sprache des zu aktivierenden Projekts.
-* Verwendung: `bx dev enable -l|--language [language]`
+* Verwendung: `ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
 * Parameter zum Erzwingen einer erneuten Aktivierung eines bereits aktivierten Projekts.
-* Verwendung: `bx dev enable -f|--force`
+* Verwendung: `ibmcloud dev enable -f|--force`
 
 
 ## get-credentials
@@ -305,7 +309,7 @@ Wenn keine Aktion oder keine Argumente übergeben werden oder wenn die Aktion 'h
 Führen Sie den folgenden Befehl aus, um allgemeine Hilfeinformationen anzuzeigen:
 
 ```
-bx dev help
+ibmcloud dev help
 ```
 {: codeblock}
 
@@ -318,7 +322,7 @@ Sie können alle {{site.data.keyword.Bluemix_notm}}-Projekte in einem Bereich au
 Führen Sie den folgenden Befehl aus, um Ihre Projekte aufzulisten:
 
 ```
-bx dev list
+ibmcloud dev list
 ```
 {: codeblock}
 
@@ -330,7 +334,7 @@ bx dev list
 You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
 
 ```
-bx dev edit
+ibmcloud dev edit
 ```
 {: codeblock}
 -->
@@ -346,14 +350,14 @@ Für eine Ausführung mit mehreren Containern sollte Ihr Projekt entweder eine [
 Kompilieren Sie zunächst Ihr Projekt:
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Führen Sie den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um Ihre Anwendung zu starten:
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: codeblock}
 
@@ -371,19 +375,19 @@ Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen 
 {: #container-name-run2}
 
 * Containername für den Ausführungscontainer.
-* Verwendung: `bx dev run --container-name-run [<projectName>]`
+* Verwendung: `ibmcloud dev run --container-name-run [<projectName>]`
 
 #### `container-path-run`
 {: #container-path-run}
 
 * Gemeinsam zu verwendende Position im Container bei Ausführung.
-* Verwendung: `bx dev run --container-path-run [/path/to/app]`
+* Verwendung: `ibmcloud dev run --container-path-run [/path/to/app]`
 
 #### `host-path-run`
 {: #host-path-run}
 
 * Im Container bei Ausführung gemeinsam zu verwendende Position im Hostsystem.
-* Verwendung: `bx dev run --host-path-run [/path/to/app/bin]`
+* Verwendung: `ibmcloud dev run --host-path-run [/path/to/app/bin]`
 
 #### `dockerfile-run`
 {: #dockerfile-run}
@@ -391,20 +395,20 @@ Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen 
 * Dockerfile für den Ausführungscontainer.
 * Wenn Sie eine Ausführung mit mehreren Containern planen, sollte dies eine Compose-Datei sein.
 * Um mehrere Compose-Dateien zu verwenden, schließen Sie eine durch Kommas begrenzte Liste der Dateinamen in doppelte Anführungszeichen ein.
-* Verwendung: `bx dev run --dockerfile-run [/path/to/Dockerfile]`
-* Verwendung: `bx dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
+* Verwendung: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
+* Verwendung: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
 #### `image-name-run`
 {: #image-name-run}
 
 * Zu erstellendes Image aus `dockerfile-run`.
-* Verwendung: `bx dev run --image-name-run [/path/to/image-name]`
+* Verwendung: `ibmcloud dev run --image-name-run [/path/to/image-name]`
 
 #### `run-cmd`
 {: #run-cmd}
 
 * Parameter zum Ausführen von Code im Ausführungscontainer. Verwenden Sie diesen Parameter, wenn Ihr Image Ihre Anwendung startet.
-* Verwendung: `bx dev run --run-cmd [/the/run/command]`
+* Verwendung: `ibmcloud dev run --run-cmd [/the/run/command]`
 
 
 ## shell
@@ -415,12 +419,12 @@ Sie können die Shell innerhalb des Ausführungs- oder Toolscontainers mit dem B
 Führen Sie einfach diesen Befehl aus:
 
 ```
-bx dev shell
+ibmcloud dev shell
 ```
 
 Die {{site.data.keyword.dev_cli_short}}-CLI öffnet eine interaktive Shell in den Docker-Container der Anwendung. Der Standardzielcontainer für den Shell-Befehl wird durch den Wert `container-shell-target` in der Datei `cli-config.yml` definiert, wobei die gültigen Werte `run` oder `tools` lauten. Ist dieser Wert nicht definiert oder wird ein ungültiger Wert angegeben, verwendet der Befehl `shell` standardmäßig den Container `tools`. Der Shellbefehl öffnet den Container zum dem in der Anweisung `WORKDIR` in der entsprechenden Dockerfile angegebenen Verzeichnis. Wenn `WORKDIR` nicht in der Dockerfile aufgelistet ist, wird das Containerstammverzeichnis als Arbeitsverzeichnis verwendet. Weitere Informationen finden Sie in dieser [Referenz](https://docs.docker.com/engine/reference/builder/#workdir).
 
-Alternativ können Sie entweder `run` oder `tools` als Argument an den Befehl übergeben und der jeweilige Container wird aufgerufen und die Shell für diesen Container wird geöffnet. Entsprechend können Sie den Parameter `container-name` verwenden, um den Namen des Containers zu übergeben, in dem Sie eine Shell öffnen möchten. Allerdings sollte dieses Flag für den Fall reserviert sein, wenn keine Container ausgeführt werden. Die Argumente `run` und `tools` sind flexibler und ermöglichen Ihnen, zwischen Containern zu wechseln, wenn einer aktuell ausgeführt wird. Wenn beispielsweise der Container 'tools' ausgeführt wird und Sie `bx dev shell run` absetzen, wird der Container `tools` gestoppt und der Container `run` gestartet und umgekehrt.
+Alternativ können Sie entweder `run` oder `tools` als Argument an den Befehl übergeben und der jeweilige Container wird aufgerufen und die Shell für diesen Container wird geöffnet. Entsprechend können Sie den Parameter `container-name` verwenden, um den Namen des Containers zu übergeben, in dem Sie eine Shell öffnen möchten. Allerdings sollte dieses Flag für den Fall reserviert sein, wenn keine Container ausgeführt werden. Die Argumente `run` und `tools` sind flexibler und ermöglichen Ihnen, zwischen Containern zu wechseln, wenn einer aktuell ausgeführt wird. Wenn beispielsweise der Container 'tools' ausgeführt wird und Sie `ibmcloud dev shell run` absetzen, wird der Container `tools` gestoppt und der Container `run` gestartet und umgekehrt.
 
 Falls der Zielcontainer `run` oder `tools` noch nicht ausgeführt wird, wenn Sie den Befehl `shell` absetzen, wird der Zielcontainer gestartet. Dabei wird jedoch der Standardwert `Cmd` oder `Entrypoint` in der Dockerfile überschrieben, um die Shell direkt zu öffnen, statt den Serverprozess zu starten. Auf diese Weise können Sie den Container `run` oder `tools` starten und den Server manuell mit Ihren eigenen beliebigen oder angepassten Befehlen starten.
 
@@ -429,7 +433,7 @@ Sie können auch die ausführbare Shelldatei angeben, die Sie öffnen möchten, 
 
 Alle zusätzlichen Argumente, die Sie neben Flags an den Befehl übergeben, werden für den auszuführenden Befehl analysiert, wenn die Shell geöffnet wird. Wenn Sie einen auszuführenden Befehl angeben, wird die Shell innerhalb des Containers bei Ausführung des Befehls beendet und an das Terminal zurückgegeben.
 
-Sie können beispielsweise den Linux-Befehl `ls` innerhalb der Containershell 'tools' ausführen, indem Sie `bx dev shell tools ls` aufrufen.   Sie können auch zusätzliche Flags angeben, die an die Shellbefehlsausführung übergeben werden sollen, indem Sie die Argumente in Anführungszeichen einschließen, z. B. `bx dev shell "ls -la"`.
+Sie können beispielsweise den Linux-Befehl `ls` innerhalb der Containershell 'tools' ausführen, indem Sie `ibmcloud dev shell tools ls` aufrufen.   Sie können auch zusätzliche Flags angeben, die an die Shellbefehlsausführung übergeben werden sollen, indem Sie die Argumente in Anführungszeichen einschließen, z. B. `ibmcloud dev shell "ls -la"`.
 
 ### shell-Befehlsparameter
 {: #shell-parameters}
@@ -438,13 +442,13 @@ Sie können beispielsweise den Linux-Befehl `ls` innerhalb der Containershell 't
 {: #container-name}
 
 * Name des Containers, dessen Shell Sie öffnen möchten.
-* Verwendung: `bx dev shell --container-name [<container-name>]`
+* Verwendung: `ibmcloud dev shell --container-name [<container-name>]`
 
 #### `container-shell`
 {: #container-shell}
 
 * Gibt an, welche Shell innerhalb des Containers ausgeführt werden soll (Standardwert ist '/bin/sh').
-* Verwendung: `bx dev shell --container-shell [path/to/shell]`
+* Verwendung: `ibmcloud dev shell --container-shell [path/to/shell]`
 
 
 ## status
@@ -455,7 +459,7 @@ Sie können den Status der Container abfragen, die von der {{site.data.keyword.d
 Führen Sie den folgenden Befehl in Ihrem aktuellen Projektverzeichnis aus, um den Containerstatus zu prüfen:
 
 ```
-bx dev status
+ibmcloud dev status
 ```
 {: codeblock}
 
@@ -471,7 +475,7 @@ Sie können Ihre Container mithilfe des Befehls `stop` stoppen.
 Führen Sie den folgenden Befehl aus, um die Container 'tools' und 'run' wie in Ihrer Datei `cli-config.yml` definiert zu stoppen:
 
 ```
-bx dev stop
+ibmcloud dev stop
 ```
 {: codeblock}
 
@@ -485,14 +489,14 @@ Die folgenden Parameter werden für den Befehl `stop` verwendet. Es gibt [zusät
 #### `container-name-run`
 {: #container-name-run}
 
-* Containername für den Container 'run'.
-* Verwendung: `bx dev stop --container-name-run [<projectName>]`
+* Containername für den Ausführungscontainer.
+* Verwendung: `ibmcloud dev stop --container-name-run [<projectName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * Containername für den Container 'tools'.
-* Verwendung: `bx dev stop --container-name-tools [<projectName>]`
+* Verwendung: `ibmcloud dev stop --container-name-tools [<projectName>]`
 
 
 
@@ -504,14 +508,14 @@ Sie können Ihre Anwendung mithilfe des Befehls `test` stoppen. Zunächst muss e
 Kompilieren Sie zunächst Ihr Projekt:
 
 ```
-bx dev build --debug
+ibmcloud dev build --debug
 ```
 {: codeblock}
 
 Führen Sie den folgenden Befehl aus, um Ihre Anwendung zu testen:
 
 ```
-bx dev test
+ibmcloud dev test
 ```
 {: codeblock}
 
@@ -525,7 +529,7 @@ Der folgende Parameter wird ausschließlich mit dem Befehl `test` verwendet.  Es
 {: #test-cmd}
 
 * Parameter zum Angeben eines Befehls zum Testen von Code im Container 'tools'.
-* Verwendung: `bx dev test --test-cmd /the/test/command`
+* Verwendung: `ibmcloud dev test --test-cmd /the/test/command`
 
 
 ## view
@@ -540,7 +544,7 @@ Bei Anwendungen, die in Kubernetes bereitgestellt werden, besteht die URL aus de
 Führen Sie den folgenden Befehl aus, um Ihre Anwendung anzuzeigen:
 
 ```
-bx dev view
+ibmcloud dev view
 ```
 {: codeblock}
 
@@ -552,28 +556,28 @@ Die folgenden Parameter werden ausschließlich mit dem Befehl `view` verwendet.
 #### `deploy-target`
 
 * Optionaler Parameter zum Angeben des Typs von Bereitstellung, um die Eingabeaufforderung zu umgehen.
-* Verwendung: `bx dev view -t|--target buildpack|container`
+* Verwendung: `ibmcloud dev view -t|--target buildpack|container`
 
 
 #### `no-open`
 {: #no-open}
 
 * Parameter, der angibt, dass der Browser nicht geöffnet werden soll.
-* Verwendung: `bx dev view --no-open`
+* Verwendung: `ibmcloud dev view --no-open`
 
 
 #### `web-app-root`
 {: #web-app-root}
 
 * Stammverzeichnis des Projekts, das an die URL der Kubernetes-App angehängt werden soll.
-* Verwendung: `bx dev view --web-app-root [root]`
+* Verwendung: `ibmcloud dev view --web-app-root [root]`
 
 
 #### `ibm-cluster`
 {: #ibm-cluster2}
 
 * Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung.
-* Verwendung: `bx dev view --ibm-cluster [cluster-name]`
+* Verwendung: `ibmcloud dev view --ibm-cluster [cluster-name]`
 
 
 ## Zusammengesetzte Befehle
@@ -582,10 +586,10 @@ Die folgenden Parameter werden ausschließlich mit dem Befehl `view` verwendet.
 Sie können mehrere Befehle in einer Befehlszeilenanweisung ausführen, indem Sie die einzelnen IDT-Befehle mit dem Begrenzungszeichen `/` trennen. Zusätzliche Befehlszeilenflags können im Anschluss an die zusammengesetzten Befehle angegeben werden.  Die folgenden Befehle sind Beispiele für die Verwendung von zusammengesetzten Befehlen:
 
 ```
-bx dev build/run
-bx dev build/deploy --trace -t buildpack
-bx dev build/debug --debug --trace
-bx dev build/deploy/view -t container --trace
+ibmcloud dev build/run
+ibmcloud dev build/deploy --trace -t buildpack
+ibmcloud dev build/debug --debug --trace
+ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
@@ -594,7 +598,7 @@ Alle Flags müssen auf den finalen Befehl folgen und werden auf alle Befehle ang
 Dies sind die Befehle, die mit diesem Feature verwendet werden können:
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Falls ein Befehl fehlschlägt, werden die nachfolgenden Befehle nicht ausgeführt. Falls Befehle auf `debug` oder `run` folgen, wird die Ausführung nur fortgesetzt, wenn `debug` oder `run` auf andere Weise beendet wird als dass der Prozess im aktuellen Terminalfenster abgebrochen wird. `STRG+C` bricht den Prozess ab und die nachfolgenden Befehle werden nicht ausgeführt. Sie können beispielsweise `bx dev stop` in einem anderen Terminalfenster ausführen, um den laufenden Container zu stoppen und die Ausführung des nachfolgenden Befehls fortzusetzen.
+Falls ein Befehl fehlschlägt, werden die nachfolgenden Befehle nicht ausgeführt. Falls Befehle auf `debug` oder `run` folgen, wird die Ausführung nur fortgesetzt, wenn `debug` oder `run` auf andere Weise beendet wird als dass der Prozess im aktuellen Terminalfenster abgebrochen wird. `STRG+C` bricht den Prozess ab und die nachfolgenden Befehle werden nicht ausgeführt. Sie können beispielsweise `ibmcloud dev stop` in einem anderen Terminalfenster ausführen, um den laufenden Container zu stoppen und die Ausführung des nachfolgenden Befehls fortzusetzen.
 
 
 ## Parameter für 'build', 'debug', 'run' und 'test'
@@ -608,49 +612,49 @@ Die folgenden Parameter können mit den Befehlen `build|debug|run|test` verwende
 {: #config-file}
 
 * Geben Sie eine Datei 'cli-config.yml' für die Verwendung mit einem Befehl an.
-* Verwendung: `bx dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
+* Verwendung: `ibmcloud dev <build|debug|run|status|stop|test> --config-file cli-config.yml`
 
 #### `container-name-run`  
 {: #container-name-run1}
 
-* Containername für den Container 'run'.
-* Verwendung: `bx dev <run|status|stop> --container-name-run [<projectName>]`
+* Containername für den Ausführungscontainer.
+* Verwendung: `ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * Containername für den Container 'tools'.
-* Verwendung: `bx dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* Verwendung: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}
 
 * Gemeinsam zu verwendende Position auf dem Host für 'build', 'debug', 'test'.
-* Verwendung: `bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
+* Verwendung: `ibmcloud dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 #### `container-path-tools`
 {: #container-path-tools}
 
 * Gemeinsam zu verwendende Position im Container für 'build', 'debug', 'test'.
-* Verwendung: `bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
+* Verwendung: `ibmcloud dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 #### `container-port-map`
 {: #container-port-map}
 
 * Portzuordnungen für den Container. Der erste Wert ist der Port, der im Hostbetriebssystem verwendet werden soll, der zweite Wert ist der Port im Container [host-port:container-port].
-* Verwendung: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
+* Verwendung: `ibmcloud dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
 
 #### `dockerfile-tools`
 {: #dockerfile-tools}
 
-* Dockerfile für den Ccontainer 'tools'.
-* Verwendung: `bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
+* Dockerfile für den Container 'tools'.
+* Verwendung: `ibmcloud dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 #### `image-name-tools`
 {: #image-name-tools}
 
 * Zu erstellendes Image aus `dockerfile-tools`.
-* Verwendung: `bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
+* Verwendung: `ibmcloud dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 #### `container-mounts-run`
 {: #container-mounts-run}
@@ -658,24 +662,23 @@ Die folgenden Parameter können mit den Befehlen `build|debug|run|test` verwende
 * Verwenden Sie diese Option, um Mounts zwischen dem Hostsystem und dem Container 'run' zu definieren.
 * Die Werte `host-path-run` und `container-path-run` werden am Anfang dieser Liste eingefügt.
 * Eine Best Practice, um unerwartete Ergebnisse zu vermeiden, ist es, für 'build' und 'run' dieselben Mounteinstellungen zu verwenden.
-* Verwendung: `bx dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* Verwendung: `ibmcloud dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `container-mounts-tools`
 {: #container-mounts-tools}
 
 * Verwenden Sie diese Option, um Mounts zwischen dem Hostsystem und dem Container 'tools' zu definieren.
 * Die Werte `host-path-tools` und `container-path-tools` werden am Anfang dieser Liste eingefügt.* Eine Best Practice, um unerwartete Ergebnisse zu vermeiden, ist es, für 'build' und 'debug' dieselben Mounteinstellungen zu verwenden.
-* Verwendung: `bx dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* Verwendung: `ibmcloud dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `build-cmd-run`
 {: #build-cmd-run}
 
 * Parameter zum Angeben eines Befehls zum Erstellen von Code für alle Verwendungszwecke außer DEBUG.
-* Verwendung: `bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
+* Verwendung: `ibmcloud dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 #### `trace`
 {: #trace}
 
 * Verwenden Sie diesen Parameter, um eine ausführliche Ausgabe bereitzustellen.
-* Verwendung: `bx dev <build|debug|run|test> --trace`
-
+* Verwendung: `ibmcloud dev <build|debug|run|test> --trace`

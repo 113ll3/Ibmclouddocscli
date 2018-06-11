@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-04-17"
 # IBM Developer Tools für Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-Die IBM Developer-Erweiterung für Visual Studio Code ist eine Erweiterung für den Editor, der Zugriff auf Funktionen aus der IBM Developer-CLI direkt in der Befehlspalette des Visual Studio Code-Editors bereitstellt  Sie ermöglicht schnellen Zugriff auf eine Teilmenge der `bx dev`-Befehle sowohl für Docker- als auch für CloudFoundry-Workflows, einschließlich App-Bereitstellung, Starten/Stoppen/Neustarten von Apps in {{site.data.keyword.Bluemix_notm}}, Anzeigen von Protokollen ferner Apps und vieles mehr – ohne den Kontext des Editors dafür verlassen zu müssen.
+Die IBM Developer-Erweiterung für Visual Studio Code ist eine Erweiterung für den Editor, der Zugriff auf Funktionen aus der IBM Developer-CLI direkt in der Befehlspalette des Visual Studio Code-Editors bereitstellt  Sie ermöglicht schnellen Zugriff auf eine Teilmenge der `ibmcloud dev`-Befehle sowohl für Docker- als auch für CloudFoundry-Workflows, einschließlich App-Bereitstellung, Starten/Stoppen/Neustarten von Apps in {{site.data.keyword.Bluemix_notm}}, Anzeigen von Protokollen ferner Apps und vieles mehr – ohne den Kontext des Editors dafür verlassen zu müssen.
 {:shortdesc}
 
 ![Screenshot der IBM Developer-Downloadanzeige für Erweiterungen](vscode.png "Downloadanzeige für Erweiterungen in Visual Studio Code")
@@ -57,21 +57,21 @@ Sie können die Befehle der Erweiterung über die Befehlspalette von Visual Stud
 * **Mac:** `cmd + shift + p`
 * **Windows/Linux:** `strg + umschalt + p`
 
-Geben Sie dann den zu startenden Befehl ein oder wählen Sie ihn aus. Sie können 'bx' in der Befehlspalette eingeben, um eine Liste aller verfügbaren Kommentare anzuzeigen.
+Geben Sie dann den zu startenden Befehl ein oder wählen Sie ihn aus. Sie können 'ibmcloud' in der Befehlspalette eingeben, um eine Liste aller verfügbaren Kommentare anzuzeigen.
 
 ### IBM Developer-Erweiterung for Docker-Workflows (Docker-Container) verwenden
 {: #usage-docker}
 
-Sie können die Arbeit mit 'bx dev'-Workflows in nur wenigen Schritten beginnen:
+Sie können die Arbeit mit 'ibmcloud dev'-Workflows in nur wenigen Schritten beginnen:
 * Erstellen Sie ein Projekt mithilfe einer der folgenden Methoden:
   * Öffnen Sie die [{{site.data.keyword.Bluemix_notm}}-Webkonsole](https://console.ng.bluemix.net/developer/getting-started/) und laden Sie den generierten Code herunter.
-  * Verwenden Sie die [{{site.data.keyword.Bluemix_notm}} Developer-CLI](index.html) und generieren Sie ein Projekt mithilfe des Befehls `bx dev create`.
+  * Verwenden Sie die [{{site.data.keyword.Bluemix_notm}} Developer-CLI](index.html) und generieren Sie ein Projekt mithilfe des Befehls `ibmcloud dev create`.
 * Öffnen Sie den Projektordner lokal im Visual Studio Code-Editor.
-* Verwenden Sie den Befehl `bx dev build`, um die App in einem Docker-Image zu erstellen.
-* Verwenden Sie den Befehl `bx dev debug`, um die App in einer lokalen Docker-Instanz für die Entwicklung auszuführen.
+* Verwenden Sie den Befehl `ibmcloud dev build`, um die App in einem Docker-Image zu erstellen.
+* Verwenden Sie den Befehl `ibmcloud dev debug`, um die App in einer lokalen Docker-Instanz für die Entwicklung auszuführen.
 > Hinweis: Zum Debuggen einer Node.js-Anwendung, die in einem lokalen Docker-Container ausgeführt wird, müssen Sie [eine Debugkonfiguration für den lokalen Container hinzufügen](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
-* Verwenden Sie den Befehl `bx dev run`, um die App in einer lokalen Docker-Instanz im Freigabemodus auszuführen.
-* Verwenden Sie den Befehl `bx dev deploy`, um die Anwendung in einer Cloud Foundry-Laufzeitumgebung unter {{site.data.keyword.Bluemix_notm}} bereitzustellen. 
+* Verwenden Sie den Befehl `ibmcloud dev run`, um die App in einer lokalen Docker-Instanz im Freigabemodus auszuführen.
+* Verwenden Sie den Befehl `ibmcloud dev deploy`, um die Anwendung in einer Cloud Foundry-Laufzeitumgebung unter {{site.data.keyword.Bluemix_notm}} bereitzustellen.
 
 ### IBM Developer-Erweiterung für Cloud Foundry-Workflows verwenden
 {: #usage-cloud-foundry}
@@ -83,8 +83,8 @@ Sie können die Arbeit mit CloudFoundry-Workflows in nur wenigen Schritten begin
   * Öffnen Sie die [Webkonsole](https://console.ng.bluemix.net/dashboard/cf-apps) und laden Sie den Startcode herunter.
   * Erstellen Sie manuell eine neue CloudFoundry-Anwendung.
 * Öffnen Sie den Projektordner lokal im Visual Studio Code-Editor.
-* Verwenden Sie `bx cf apps`, um alle Ihre Anwendungen aufzulisten.
-* Verwenden Sie `bx cf push`, um ein Build Ihrer Anwendung in die Cloud Foundry-Laufzeit per Push-Operation zu übertragen.
-* Verwenden Sie bx `cf <start/stop/restage/restart>`, um den Status Ihrer Anwendung zu ändern.
-* Verwenden Sie `bx cf logs`, um den Live-Protokolldatenstrom für Ihre Anwendung anzuzeigen.
-  * Verwenden Sie `bx cf logs`, um den Protokolldatenstrom zu stoppen.
+* Verwenden Sie `ibmcloud cf apps`, um alle Ihre Anwendungen aufzulisten.
+* Verwenden Sie `ibmcloud cf push`, um ein Build Ihrer Anwendung in die Cloud Foundry-Laufzeit per Push-Operation zu übertragen.
+* Verwenden Sie ibmcloud `cf <start/stop/restage/restart>`, um den Status Ihrer Anwendung zu ändern.
+* Verwenden Sie `ibmcloud cf logs`, um den Live-Protokolldatenstrom für Ihre Anwendung anzuzeigen.
+  * Verwenden Sie `ibmcloud cf logs`, um den Protokolldatenstrom zu stoppen.

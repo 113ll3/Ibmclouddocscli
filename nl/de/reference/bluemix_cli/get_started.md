@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -24,18 +24,18 @@ Wir empfehlen, die {{site.data.keyword.Bluemix_notm}}-CLI und alle empfohlenen A
 {: tip}
 
 
-Die {{site.data.keyword.Bluemix_notm}}-CLI stellt die Befehlszeilenschnittstelle zum Verwalten von Anwendungen, Containern, Infrastrukturen, Services und anderen Ressourcen in {{site.data.keyword.Bluemix_notm}} zur Verfügung. 
+Die {{site.data.keyword.Bluemix_notm}}-CLI stellt die Befehlszeilenschnittstelle zum Verwalten von Anwendungen, Containern, Infrastrukturen, Services und anderen Ressourcen in {{site.data.keyword.Bluemix_notm}} zur Verfügung.
 
 
-Gehen Sie wie folgt vor, um Ihre ersten Schritte nur mit der {{site.data.keyword.Bluemix_notm}}-CLI zu machen: 
+Gehen Sie wie folgt vor, um Ihre ersten Schritte nur mit der {{site.data.keyword.Bluemix_notm}}-CLI zu machen:
 
 1. Wählen Sie das Installationsprogramm für Ihr Betriebssystem zum Herunterladen aus.
-   
+
    Mac OS X 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
    Linux X86 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 Bit (ppc64le): [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
-  
+
    **32-Bit-Releases und Vorgängerversionen finden Sie [hier.](all_versions.html)
 
 1. Führen Sie das Installationsprogramm aus.
@@ -46,7 +46,7 @@ Gehen Sie wie folgt vor, um Ihre ersten Schritte nur mit der {{site.data.keyword
 
   ![Beispiel](example.gif){: gif}
 
-Jetzt können Sie {{site.data.keyword.Bluemix_notm}}-Ressourcen verwalten. Geben Sie `bluemix help` oder `bx help` ein, um die Befehlsbeschreibungen anzuzeigen. 
+Jetzt können Sie {{site.data.keyword.Bluemix_notm}}-Ressourcen verwalten. Geben Sie `ibmcloud help` ein, damit Beschreibungen der einzelnen Befehle angezeigt werden.
 
 Wenn Sie eine eingebundene ID verwenden, folgen Sie den [hier](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) angegebenen Anweisungen zur Anmeldung mit einem einmaligen Kenncode oder einem API-Schlüssel.  {: tip}
 

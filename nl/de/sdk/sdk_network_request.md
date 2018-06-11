@@ -111,7 +111,7 @@ Vollständige Verwendungsbeispiele finden Sie in der GitHub-[README](https://git
 	var failure = function(error)
 		{console.log("failure", error);
 	}
-	var request = new BMSRequest("<your application route>", BMSRequest.GET);
+	var request = new BMSRequest("<Anwendungsroutine>", BMSRequest.GET);
 	request.send(success, failure);
 	```
 	{: codeblock}

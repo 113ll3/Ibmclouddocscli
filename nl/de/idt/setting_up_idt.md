@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -43,21 +43,24 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* Hinweis: Öffnen Sie die Windows PowerShell, indem Sie mit der rechten Maustaste klicken und die Option "Als Administrator ausführen" auswählen.
+* Hinweis: Öffnen Sie die Windows PowerShell, indem Sie mit der rechten Maustaste auf das PowerShell-Symbol klicken und die Option "Als Administrator ausführen" auswählen.
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
 {: codeblock}
 
-Der Abschnitt [Tools erneut installieren](/docs/troubleshoot/ts_createapps.html#appendix) enthält Informationen zum individuellen Installieren aller Abhängigkeiten. 
-
-Werten Sie aus, ob die Plug-in-Installation erfolgreich war, indem Sie den folgenden Befehl ausführen:  
+## Überprüfen der Installation
+Führen Sie zum Überprüfen der Installation den Befehl `help` wie folgt aus:
 
 ```
-bx dev
+ibmcloud dev help
 ```
 {: codeblock}
+
+Bei erfolgreicher Installation enthält die Ausgabe die aktuelle Version, Verwendungsanweisungen sowie eine Auflistung der unterstützten Befehle.
+
+Der Abschnitt [Tools erneut installieren](/docs/troubleshoot/ts_createapps.html#appendix) enthält Informationen zum individuellen Installieren aller Abhängigkeiten.
 
 ## Umgebung konfigurieren
 {: #configure-environment}
@@ -65,14 +68,14 @@ bx dev
 1. Stellen Sie eine Verbindung zu einem API-Endpunkt in Ihrer {{site.data.keyword.Bluemix_notm}}-Region her. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung mit der {{site.data.keyword.Bluemix_notm}}-Region 'Vereinigte Staaten (Süden)' herzustellen:
 
 	```
-	bx api https://api.ng.bluemix.net
+	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
 2. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} mit Ihrer IBMid an.
 
 	```
-	bx login
+	ibmcloud login
 	```
 	{: codeblock}
 
@@ -86,14 +89,14 @@ bx dev
 	5. Melden Sie sich mithilfe des folgenden Befehls an.
 
 		```
-		bx login --apikey <value>
+		ibmcloud login --apikey <wert>
 		```
 		{: codeblock}
 
 3. Legen Sie Ihre Organisation (ORG) und Ihren Bereich (SPACE) wie folgt fest:
 
 	```
-	bx target -o <value> -s <value>
+	ibmcloud target -o <wert> -s <wert>
 	```
 	{: codeblock}
 
@@ -102,7 +105,7 @@ bx dev
 
 Nachdem die {{site.data.keyword.dev_cli_short}}-CLI installiert wurde, können Sie lernen, wie Sie mit diesem leistungsfähigen Tool effektiver arbeiten können:
 - [Einführung in die IDT-CLI](index.html)
-- [IDT -Befehle (bx dev)](commands.html)
+- [IDT-Befehle (ibmcloud dev)](commands.html)
 - [Developer Tools für VS Code](vscode.html)
 - [Developer Tools für Jetbrains-IDEs](jetbrains.html)
 
@@ -116,8 +119,8 @@ Die folgenden Ressourcen können bei der Entwicklung von cloudnativen Apps mit d
 - [IBM Cloud Developer Tools-Landing-Page](https://www.ibm.com/cloud/cli) - Hauptproduktseite für die IDT-CLI
 - [IBM Developer Tools-Installationsprogramm](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Öffentliches GitHub-Repository mit detaillierten Installationsanweisungen
 - [IBM Cloud-App-Service](https://console.bluemix.net/developer/appservice) - IBM Cloud-Konsolenseite mit Begleitinformationen für die IDT-Tools zum Erstellen und Verwalten von cloudnativen Apps
-- [IBM Cloud Tech's Slack - #developer-tools-Kanal](https://ibm-cloud-tech.slack.com) - Besprechungen von IDT-Tools, Fragen und Antworten, Ideenvorschläge usw.
-	- [Teamzugriff anfordern](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+- [Probleme auf GitHub melden](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
+- [Slack für IBM Cloud Tech - Kanal für Entwicklertools (#developer-tools)](https://ibm-cloud-tech.slack.com) - Fordern Sie [hier](https://slack-invite-ibm-cloud-tech.mybluemix.net/) Zugriff für Ihr Team an.
 
 **Fokus auf die Sprache**
 
