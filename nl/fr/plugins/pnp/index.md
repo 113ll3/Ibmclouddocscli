@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -29,10 +29,10 @@ Pour commencer, installez l'interface de ligne de commande {{site.data.keyword.B
 **Remarque** : si une version précédente du plug-in est installée, vous devez la désinstaller. Utilisez la commande suivante pour désinstaller le plug-in :
 
 ```
-bluemix plugin uninstall private-network-peering
+ibmcloud plugin uninstall private-network-peering
 ```
 ### Installation locale
-Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
+Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande {{site.data.keyword.ibmcloud_notm}} ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
 
 Installez le plug-in d'appairage de réseau privé avec la commande suivante :
 
@@ -41,19 +41,19 @@ Installez le plug-in d'appairage de réseau privé avec la commande suivante :
 * Pour le système d'exploitation Microsoft Windows :
 
 ```
-bluemix plugin install private-network-peering-windows-amd64.exe
+ibmcloud plugin install private-network-peering-windows-amd64.exe
 ```
 
 * Pour le système d'exploitation MAC OS :
 
 ```
-bluemix plugin install private-network-peering-darwin-amd64
+ibmcloud plugin install private-network-peering-darwin-amd64
 ```
 
 * Pour le système d'exploitation Linux :
 
 ```
-bluemix plugin install private-network-peering-linux-amd64
+ibmcloud plugin install private-network-peering-linux-amd64
 ```
 
 **Remarque** : lorsque vous installez le plug-in pour le système d'exploitation Linux, si un message d'erreur signale que vous ne disposez pas des droits appropriés, exécutez la commande suivante et changez les droits :
@@ -62,23 +62,23 @@ bluemix plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Installation depuis le référentiel {{site.data.keyword.Bluemix_notm}}
+### Installation depuis le référentiel {{site.data.keyword.ibmcloud_notm}}
 
-Pour installer le plug-in depuis le référentiel {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
+Pour installer le plug-in depuis le référentiel {{site.data.keyword.ibmcloud_notm}}, procédez comme suit :
 
-1. Ajoutez le noeud final de registre de plug-in {{site.data.keyword.Bluemix_notm}} :
+1. Ajoutez le noeud final de registre de plug-in {{site.data.keyword.ibmcloud_notm}} :
 	```
-	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
+	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
 
 2. Exécutez la commande suivante :
 
 	```
-	bluemix plugin install private-network-peering -r bluemix-bx
+	ibmcloud plugin install private-network-peering -r bluemix-bx
 	```
 
 ## Liste des commandes d'appairage de réseau privé
-Les commandes ci-après sont prises en charge. Utilisez la commande `bluemix network` pour afficher la liste des commandes disponibles :
+Les commandes ci-après sont prises en charge. Utilisez la commande `ibmcloud network` pour consulter la liste des commandes disponibles :
 
 | Commande     | Description                                    |
 |-------------|------------------------------------------------|
@@ -90,11 +90,11 @@ Les commandes ci-après sont prises en charge. Utilisez la commande `bluemix net
 
 
 ### Syntaxe de la commande
-Afin d'afficher les informations d'aide pour les commandes, exécutez : `bluemix network [commande] -h`.
+Pour afficher les informations d'aide sur les commandes, exécutez : `ibmcloud network [commande] -h`.
 
 #### Liste de tous les routeurs disponibles pour l'appairage
 ```
-bluemix network pnp-routers [--verbose (ou -v)]
+ibmcloud network pnp-routers [--verbose (ou -v)]
 ```
 
 #####Paramètres facultatifs
@@ -107,7 +107,7 @@ bluemix network pnp-routers [--verbose (ou -v)]
 
 Afin d'afficher les informations réseau pour tous les routeurs :
 
-	$ bluemix network pnp-routers
+	$ ibmcloud network pnp-routers
 	Listing available routers ...
 	OK
 
@@ -120,7 +120,7 @@ Afin d'afficher les informations réseau pour tous les routeurs :
 Afin d'afficher les informations réseau détaillées pour tous les routeurs :
 
 
-	$ bluemix network pnp-routers -v
+	$ ibmcloud network pnp-routers -v
 	Listing available routers ...
 	OK
 
@@ -149,19 +149,19 @@ Afin d'afficher les informations réseau détaillées pour tous les routeurs :
 
 #### Création d'une connexion d'appairage de réseau privé avec les adresses IP
 ```
-bluemix network pnp-create <ip_routeur> <ip_routeur> <nom>
+ibmcloud network pnp-create <router_ip> <router_ip> <name>
 ```
 
 #####Paramètres
 {: #p1}
 
-* **ip_routeur** : adresses IP des deux routeurs à connecter. Vous pouvez les identifier avec la commande suivante : `bluemix network pnp-routers`
+* **router_ip** : adresses IP des deux routeurs à connecter. Vous pouvez les identifier avec la commande suivante : `ibmcloud network pnp-routers`
 * **nom** : nom de la connexion d'appairage de réseau privé.
 
 ######Exemple de commande
 {: #ex2}
 
-	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
+	$ ibmcloud network pnp-create 129.41.234.246 129.41.237.172 demo
 	Creating private network peering connection 'demo' ...
 	Connecting 'default-router(129.41.234.246)' and 'default-router(129.41.237.172)' ...
 	OK
@@ -172,7 +172,7 @@ bluemix network pnp-create <ip_routeur> <ip_routeur> <nom>
 ####Création d'une connexion d'appairage de réseau privé avec le nom de connexion
 
 ```
-bluemix network pnp-create -i <nom>
+ibmcloud network pnp-create -i <nom>
 ```
 
 #####Paramètres
@@ -184,7 +184,7 @@ bluemix network pnp-create -i <nom>
 ######Exemple de commande
 {: #ex3}
 
-	$ bluemix network pnp-create -i demo
+	$ ibmcloud network pnp-create -i demo
 	Creating private network peering connection 'demo' ...
 	List of available routers (select TWO for peering):
 
@@ -204,7 +204,7 @@ bluemix network pnp-create -i <nom>
 
 #### Liste de toutes les connexions d'appairage de réseau privé
 ```
-bluemix network pnp-show [--verbose (ou -v)]
+ibmcloud network pnp-show [--verbose (ou -v)]
 ```
 
 #####Paramètres facultatifs
@@ -217,7 +217,7 @@ bluemix network pnp-show [--verbose (ou -v)]
 
 Affichez les informations de base :
 
-	$ bluemix network pnp-show
+	$ ibmcloud network pnp-show
 	Listing private network peering connections ...
 	OK
 
@@ -226,7 +226,7 @@ Affichez les informations de base :
 
 Affichez les informations détaillées :
 
-	$ bluemix network pnp-show -v
+	$ ibmcloud network pnp-show -v
 	Listing private network peering connections ...
 	OK
 
@@ -244,11 +244,11 @@ Affichez les informations détaillées :
 
 #### Suppression d'une connexion d'appairage de réseau privé
 ```
-bluemix network pnp-delete [--force (ou -f)] <id_connexion>
+ibmcloud network pnp-delete [--force (or -f)] <connection_id>
 ```
 #####Paramètres
 {: #p3}
-* **id_connexion** : un ou plusieurs ID de connexion séparés par une virgule.
+* **connection_id** : un ou plusieurs ID de connexion séparés par une virgule.
 
 #####Paramètres facultatifs
 {: #op3}
@@ -260,7 +260,7 @@ bluemix network pnp-delete [--force (ou -f)] <id_connexion>
 
 Supprimez une connexion :
 
-	$ bluemix network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
+	$ ibmcloud network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
 	Warning: deleted connections cannot be restored.
 	Are you sure you want to delete the connection? (yes/no)> yes
 
@@ -273,5 +273,5 @@ Supprimez une connexion :
 Supprimez plusieurs connexions :
 
 ```
-bluemix network pnp-delete [-f] <id_connexion>,<id_connexion>,<id_connexion>
+ibmcloud network pnp-delete [-f] <connection_id>,<connection_id>,<connection_id>
 ```

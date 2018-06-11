@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-23"
 
 ---
 {:new_window: target="_blank"}
@@ -244,8 +244,8 @@ Exécutez le plug-in en tant qu'interface de ligne de commande autonome.
 Installez et appelez le plug-in en tant qu'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} en choisissant l'une des commandes suivantes :
 
 ```
-bluemix plugin install main
-bluemix help sdk
+ibmcloud plugin install main
+ibmcloud help sdk
 ```
 {: codeblock}
 

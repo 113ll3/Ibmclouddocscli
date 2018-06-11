@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-23"
 
 
 ---
@@ -25,7 +25,7 @@ Etapes permettant d'activer l'outil de débogage pour une application Java :
 1. Depuis le répertoire principal de votre projet d'application, exécutez la commande suivante :
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. Connectez le débogueur à votre application :
@@ -52,7 +52,7 @@ Etapes permettant d'activer l'outil de débogage pour une application Node.js :
 1. Depuis le répertoire racine de vos projets d'application, exécutez la commande suivante :
 
 ```
-bx dev debug
+ibmcloud dev debug
 ```
 
 2. Connectez le débogueur à votre application :

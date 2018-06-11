@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -24,18 +24,18 @@ Il est recommandé d'installer l'interface de ligne de commande {{site.data.keyw
 {: tip}
 
 
-L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}. 
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}.
 
 
 Pour vous initier en utilisant uniquement l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} :
 
 1. Sélectionnez le programme d'installation de votre système d'exploitation afin de le télécharger
-   
+
    Mac OS X 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
    Linux X86 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 bits (ppc64le) : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
-  
+
    **Les éditions 32 bits et les versions antérieures sont disponibles [ici](all_versions.html).
 
 1. Exécutez le programme d'installation
@@ -46,7 +46,7 @@ Pour vous initier en utilisant uniquement l'interface de ligne de commande {{sit
 
   ![Exemple](example.gif){: gif}
 
-Vous êtes maintenant prêt à gérer des ressources {{site.data.keyword.Bluemix_notm}}. Tapez `bluemix help` ou `bx help` pour voir les descriptions de commande. 
+Vous êtes maintenant prêt à gérer des ressources {{site.data.keyword.Bluemix_notm}}. Entrez `ibmcloud help` pour examiner les descriptions des commandes.
 
 Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) pour vous connecter avec un code d'accès unique ou une clé d'API.  {: tip}
 
