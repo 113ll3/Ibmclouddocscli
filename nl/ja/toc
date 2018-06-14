@@ -58,6 +58,9 @@ IBM Cloud 開発者ツール (CLI および Dev ツール)
 	
 	{: .topicgroup}
 	推奨される開発環境
-		『[Eclipse Tools を使用した開発](../starters/deploy_eclipsetools.html)』
-		『[IBM Eclipse Tools for IBM Cloud を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for IBM Cloud)](../manageapps/eclipsetools/eclipsetools.html)』 		    『[Liberty および Node.js アプリの管理 (Managing Liberty and Node.js apps)](../runtimes/common/app_mng.html#app_management)』		    『[API Connect 開発者ツールキット (API Connect developer toolkit)](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)』 	    『[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)』
+		[Eclipse Tools を使用した開発](../starters/deploy_eclipsetools.html)
+		[IBM Eclipse Tools for IBM Cloud を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for IBM Cloud)](../manageapps/eclipsetools/eclipsetools.html)
+		[Liberty および Node.js アプリの管理 (Managing Liberty and Node.js apps)](../runtimes/common/app_mng.html#app_management)
+		[API Connect 開発者ツールキット (API Connect developer toolkit)](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
 	{: .navgroup-end}
