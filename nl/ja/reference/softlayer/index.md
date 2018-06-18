@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 ---
 
 {:new_window: target="_blank"}
@@ -20,13 +20,13 @@ lastupdated: "2018-05-23"
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) で {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンドを使用して、SoftLayer のサービスを管理および構成します。
 
-2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。ただし、後日非推奨になるまで、`bluemix` および `bx` CLI コマンドを引き続き使用できます。
+2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。 ただし、後日削除されるまで、`bluemix` および `bx` CLI CLI コマンドを引き続き使用できます。
 {: tip}
 
 
 まず、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[IBM Cloud CLI ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}』を参照してください。
 
-{{site.data.keyword.Bluemix_notm}} コマンドの完全リストについては、[{{site.data.keyword.Bluemix_notm}} (ibmcloud) コマンド](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)を参照してください。
+{{site.data.keyword.Bluemix_notm}} CLI コマンドの完全リストについては、[{{site.data.keyword.Bluemix_notm}} (ibmcloud) コマンド](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)を参照してください。
 
 
 ## 汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド

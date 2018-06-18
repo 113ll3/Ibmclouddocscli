@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-23"
 
 {{site.data.keyword.Bluemix_notm}} CLI は、機能を拡張するためにプラグイン・フレームワークをサポートしています。 リポジトリーまたは Web URL からプラグインをインストールしたり、ローカルにプラグイン・バイナリーをインストールしたりすることができます。
 
-[{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) は、プラグインがホストされている公式リポジトリーです。
+[{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー](https://tools.ng.bluemix.net){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) は、プラグインがホストされている公式リポジトリーです。
 
 プラグインを管理するためのその他のコマンドについては、`ibmcloud plugin` を実行してヘルプ・メッセージを表示してください。
 {: tip}

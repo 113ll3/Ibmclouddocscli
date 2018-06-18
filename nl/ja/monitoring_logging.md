@@ -1,0 +1,30 @@
+---
+
+copyright:
+  years: 2018
+
+lastupdated: "2018-05-29"
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:screen: .screen}
+{:pre: .pre}
+
+# {{site.data.keyword.Bluemix_notm}} でのモニタリングとロギング
+{: #monitoring_logging}
+
+## モニタリング
+{{site.data.keyword.Bluemix}} は、デフォルトで、{{site.data.keyword.containershort_notm}} の CPU 使用量、メモリー使用量、およびネットワーク入出力のメトリックを収集して表示します。 {{site.data.keyword.Bluemix_notm}} で {{site.data.keyword.monitoringlong_notm}} サービスを使用すると、ご使用の環境およびアプリケーションから主要メトリックを自動的に収集し、測定することができます。 メトリックの収集には、特別な計測装置は必要ありません。
+
+詳しくは、[{{site.data.keyword.Bluemix_notm}} でのモニタリング](/docs/services/cloud-monitoring/monitoring_ov.html#monitoring_ov)を参照してください。
+
+## ロギング
+{{site.data.keyword.Bluemix_notm}} は、デフォルトで、アプリ、アプリ・ランタイム、およびそれらのアプリの実行場所である計算ランタイムについて、ログの収集と表示を行います。 {{site.data.keyword.Bluemix_notm}} ロギング機能はプラットフォームに統合されており、クラウド・リソースに関するデータ収集は自動的に有効になります。 
+
+{{site.data.keyword.loganalysisfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} プラットフォーム用のログ収集サービスとログ検索サービスを提供し、アプリケーションおよび {{site.data.keyword.Bluemix_notm}} サービスのデータを、選択したサービスから自動的に収集します。 {{site.data.keyword.loganalysisshort}} サービスを使用して、ログを処理する際のログ収集、ログ保存、およびログ検索の機能を拡張します。
+
+詳しくは、[{{site.data.keyword.Bluemix_notm}} でのロギング](/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov)を参照してください。

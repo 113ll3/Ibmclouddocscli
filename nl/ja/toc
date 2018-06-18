@@ -31,8 +31,8 @@ IBM Cloud 開発者ツール (CLI および Dev ツール)
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
 	
-	<link toc="../monitor_log/toc.xml"/>
-	<link toc="../debug/toc.xml"/>
+	monitoring_logging.md
+	debug.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}

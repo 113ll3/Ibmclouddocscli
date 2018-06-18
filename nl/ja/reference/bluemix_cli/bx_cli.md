@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -15,15 +15,15 @@ lastupdated: "2018-05-23"
 {:tip: .tip}
 
 # {{site.data.keyword.Bluemix_notm}} (ibmcloud) コマンド
-{: #ibmcloud_cli}
+{: #bluemix_cli}
 
-バージョン: 0.6.7
+バージョン: 0.7.1
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 
 バージョン 0.5.0 以降、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・クライアントは、Cloud Foundry コマンド・ライン・クライアントをインストール済み環境にバンドルしています。 独自の cf cli がインストールされている場合は、{{site.data.keyword.Bluemix_notm}} CLI コマンド `ibmcloud [command]` と、独自のインストール済み環境の Cloud Foundry CLI コマンド `cf [command]` の両方を同じコンテキストで使用しないでください。 cf cli を使用して {{site.data.keyword.Bluemix_notm}} CLI コンテキストで Cloud Foundry リソースを管理したい場合は、代わりに `ibmcloud cf [command]` を使用してください。  `ibmcloud cf api/login/logout/target` は使用できないので注意してください。代わりに、`ibmcloud api/login/logout/target` を使用してください。
 
-2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。ただし、後日非推奨になるまで、`bluemix` および `bx` CLI コマンドを引き続き使用できます。
+2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。 ただし、後日削除されるまで、`bluemix` および `bx` CLI CLI コマンドを引き続き使用できます。
 {: tip}
 
 名前、引数、オプション、前提条件、説明、および例を含め、{{site.data.keyword.Bluemix_notm}} CLI でサポートされている詳細なコマンドを以下にリストします。
@@ -33,13 +33,13 @@ lastupdated: "2018-05-23"
 
 <dl>
 <dt>エンドポイント</dt>
-<dd>このコマンドを使用する前に、<code>ibmcloud api</code> を介して API エンドポイントを設定する必要があります。</dd>
+<dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
 <dt>ログイン</dt>
-<dd>このコマンドを使用する前に、<code>ibmcloud login</code> コマンドを使用してログインする必要があります。
+<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。
 フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します。 {{site.data.keyword.Bluemix_notm}} コンソールで**「管理」** &gt; **「セキュリティー」** &gt; **「プラットフォーム API キー」**に移動して、API キーを作成します。
 </dd>
 <dt>ターゲット</dt>
-<dd>このコマンドを使用する前に、<code>ibmcloud target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
+<dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
 <dt>Docker</dt>
 <dd>このコマンドを実行するためには、Docker CLI (docker) がインストールされている必要があります。</dd>
 </dl>
@@ -49,7 +49,7 @@ lastupdated: "2018-05-23"
 参照してください。
 
 ## 汎用 ibmcloud コマンド
-{: #ibmcloud_commands_index}
+{: #bx_commands_index}
 
 <table summary="汎用 ibmcloud コマンド。">
 <caption>表 1. 汎用 ibmcloud コマンド</caption>
@@ -76,12 +76,12 @@ lastupdated: "2018-05-23"
  </table>
 
  ## {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サービスを管理および構成するためのコマンド (ibmcloud sl)
-  {: #ibmcloud_commands_softlayer}
+  {: #bx_commands_softlayer}
 
-{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーを管理するためのコマンドは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。 {{site.data.keyword.Bluemix_notm}} CLI を使用した {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サービスの構成および管理について詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー (ibmcloud sl) コマンド](/docs/cli/reference/softlayer/index.md#softlayer_cli)を参照してください。
+{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーを管理するためのコマンドは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。 {{site.data.keyword.Bluemix_notm}} CLI を使用した {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・サービスの構成および管理について詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー (ibmcloud sl) コマンド](/docs/cli/reference/softlayer/index.html#softlayer_cli)を参照してください。
 
  ## アカウント、組織、および役割を管理するためのコマンド
- {: #ibmcloud_commands_account}
+ {: #bx_commands_account}
 
 <table summary="アカウント、組織、スペース、および役割を管理するために使用できる ibmcloud コマンド。">
 <caption>表 2. アカウント、組織、スペース、および役割を管理するためのコマンド</caption>
@@ -120,7 +120,7 @@ lastupdated: "2018-05-23"
  <td>[ibmcloud account list](bx_cli.html#ibmcloud_account_list)</td>
  <td>[ibmcloud account org-account](bx_cli.html#ibmcloud_account_org_account)</td>
  <td>[ibmcloud account users](bx_cli.html#ibmcloud_account_users)</td>
- <td>[ibmcloud account users-delete](bx_cli.html#ibmcloud_account_users_delete)</td>
+ <td>[ibmcloud account user-remove](bx_cli.html#ibmcloud_account_user_remove)</td>
  <td>[ibmcloud account user-invite](bx_cli.html#ibmcloud_account_user_invite)</td>
  </tr>
  <tr>
@@ -146,16 +146,16 @@ lastupdated: "2018-05-23"
 </tr>
 <tr>
   <td>[ibmcloud iam access-group-policy](bx_cli.html#ibmcloud_iam_access-group-policy)</td>
-  <td>[ibmcloud iam access-group-policy-create](bx_cli.html#ibmcloud_iam_access-group-policy-create)</td>
-  <td>[ibmcloud iam access-group-policy-update](bx_cli.html#ibmcloud_iam_access-group-policy-update)</td>
-  <td>[ibmcloud iam access-group-policy-delete](bx_cli.html#ibmcloud_iam_access-group-policy-delete)</td>
+  <td>[ibmcloud iam access-group-policy-create](bx_cli.html#ibmcloud_iam_access_group_policy_create)</td>
+  <td>[ibmcloud iam access-group-policy-update](bx_cli.html#ibmcloud_iam_access_group_policy_update)</td>
+  <td>[ibmcloud iam access-group-policy-delete](bx_cli.html#ibmcloud_iam_access_group_policy_delete)</td>
  </tr>
  </tbody>
  </table>
 
 
  ## リソース・グループとリソースを管理するためのコマンド
-{: #ibmcloud_commands_resource}
+{: #bx_commands_resource}
 
 <table summary="リソース・グループとリソースを管理するために使用できる ibmcloud コマンド。">
   <caption>表 3. リソース・グループとリソースを管理するためのコマンド</caption>
@@ -166,9 +166,9 @@ lastupdated: "2018-05-23"
     <tr>
       <td>[ibmcloud resource groups](bx_cli.html#ibmcloud_resource_groups)</td>
       <td>[ibmcloud resource group](bx_cli.html#ibmcloud_resource_group)</td>
+      <td>[ibmcloud resource group-create](bx_cli.html#ibmcloud_resource_group_create)</td>
       <td>[ibmcloud resource group-update](bx_cli.html#ibmcloud_resource_group_update)</td>
       <td>[ibmcloud resource quotas](bx_cli.html#ibmcloud_resource_quotas)</td>
-      <td>[ibmcloud resource quota](bx_cli.html#ibmcloud_resource_quota)</td>
     </tr>
     <tr>
       <td>[ibmcloud resource service-instances](bx_cli.html#ibmcloud_resource_service_instances)</td>
@@ -182,8 +182,10 @@ lastupdated: "2018-05-23"
       <td>[ibmcloud resource service-binding](bx_cli.html#ibmcloud_resource_service_binding)</td>
       <td>[ibmcloud resource service-binding-create](bx_cli.html#ibmcloud_resource_service_binding_create)</td>
       <td>[ibmcloud resource service-binding-delete](bx_cli.html#ibmcloud_resource_service_binding_delete)</td>
+      <td>[ibmcloud resource cf-service-instance-migrate](bx_cli.html#ibmcloud_resource_cf_service_instance_migrate)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource quota](bx_cli.html#ibmcloud_resource_quota)</td>
       <td>[ibmcloud resource service-keys](bx_cli.html#ibmcloud_resource_service_keys)</td>
       <td>[ibmcloud resource service-key](bx_cli.html#ibmcloud_resource_service_key)</td>
       <td>[ibmcloud resource service-key-create](bx_cli.html#ibmcloud_resource_service_key_create)</td>
@@ -198,15 +200,24 @@ lastupdated: "2018-05-23"
     </tr>
     <tr>
       <td>[ibmcloud resource search](bx_cli.html#ibmcloud_resource_search)</td>
+      <td>[ibmcloud resource tags](bx_cli.html#ibmcloud_resource_tags)</td>
+      <td>[ibmcloud resource tag](bx_cli.html#ibmcloud_resource_tag)</td>
+      <td>[ibmcloud resource tag-create](bx_cli.html#ibmcloud_resource_tag_create)</td>
+      <td>[ibmcloud resource tag-delete](bx_cli.html#ibmcloud_resource_tag_delete)</td>
+    </tr>
+    <tr>
+      <td>[ibmcloud resource tag-attach](bx_cli.html#ibmcloud_resource_tag_attach)</td>
+      <td>[ibmcloud resource tag-detach](bx_cli.html#ibmcloud_resource_tag_detach)</td>
+      <td>[ibmcloud resource tag-update](bx_cli.html#ibmcloud_resource_tag_update)</td>
     </tr>
   </tbody>
 </table>
 
 
  ## API キーとポリシーを管理するためのコマンド
- {: #ibmcloud_commands_iam}
+ {: #bx_commands_iam}
  <table summary="API キーとポリシーを管理するために使用できる ibmcloud コマンド。">
- <caption>表 3. API キーとポリシーを管理するためのコマンド</caption>
+ <caption>表 4. API キーとポリシーを管理するためのコマンド</caption>
   <thead>
   <th colspan="5">API キーとポリシーを管理するためのコマンド</th>
   </thead>
@@ -216,51 +227,61 @@ lastupdated: "2018-05-23"
    <td>[ibmcloud iam service-id-create](bx_cli.html#ibmcloud_iam_service_id_create)</td>
    <td>[ibmcloud iam service-id-update](bx_cli.html#ibmcloud_iam_service_id_update)</td>
    <td>[ibmcloud iam service-id-delete](bx_cli.html#ibmcloud_iam_service_id_delete)</td>
-   <td>[ibmcloud iam service-ids](bx_cli.html#ibmcloud_iam_service_ids)</td>
+   <td>[ibmcloud iam service-id-lock](bx_cli.html#ibmcloud_iam_service_id_lock)</td>
   </tr>
   <tr>
+   <td>[ibmcloud iam service-id-unlock](bx_cli.html#ibmcloud_iam_service_id_unlock)</td>
+   <td>[ibmcloud iam service-ids](bx_cli.html#ibmcloud_iam_service_ids)</td>
    <td>[ibmcloud iam api-keys](bx_cli.html#ibmcloud_iam_api_keys)</td>
    <td>[ibmcloud iam api-key-create](bx_cli.html#ibmcloud_iam_api_key_create)</td>
    <td>[ibmcloud iam api-key-delete](bx_cli.html#ibmcloud_iam_api_key_delete)</td>
-   <td>[ibmcloud iam api-key-update](bx_cli.html#ibmcloud_iam_api_key_update)</td>
-   <td>[ibmcloud iam service-api-keys](bx_cli.html#ibmcloud_iam_service_api_keys)</td>
   </tr>
   <tr>
+   <td>[ibmcloud iam api-key-update](bx_cli.html#ibmcloud_iam_api_key_update)</td>
+   <td>[ibmcloud iam api-key-lock](bx_cli.html#ibmcloud_iam_api_key_lock)</td>
+   <td>[ibmcloud iam api-key-unlock](bx_cli.html#ibmcloud_iam_api_key_unlock)</td>
+   <td>[ibmcloud iam service-api-keys](bx_cli.html#ibmcloud_iam_service_api_keys)</td>
    <td>[ibmcloud iam service-api-key](bx_cli.html#ibmcloud_iam_service_api_key)</td>
+  </tr>
+  <tr>
    <td>[ibmcloud iam service-api-key-create](bx_cli.html#ibmcloud_iam_service_api_key_create)</td>
    <td>[ibmcloud iam service-api-key-update](bx_cli.html#ibmcloud_iam_service_api_key_update)</td>
    <td>[ibmcloud iam service-api-key-delete](bx_cli.html#ibmcloud_iam_service_api_key_delete)</td>
-   <td>[ibmcloud iam service-policies](bx_cli.html#ibmcloud_iam_service_policies)</td>
+   <td>[ibmcloud iam service-api-key-lock](bx_cli.html#ibmcloud_iam_service_api_key_lock)</td>
+   <td>[ibmcloud iam service-api-key-unlock](bx_cli.html#ibmcloud_iam_service_api_key_unlock)</td>
   </tr>
   <tr>
+    <td>[ibmcloud iam service-policies](bx_cli.html#ibmcloud_iam_service_policies)</td>
     <td>[ibmcloud iam service-policy](bx_cli.html#ibmcloud_iam_service_policy)</td>
     <td>[ibmcloud iam service-policy-create](bx_cli.html#ibmcloud_iam_service_policy_create)</td>
     <td>[ibmcloud iam service-policy-update](bx_cli.html#ibmcloud_iam_service_policy_update)</td>
     <td>[ibmcloud iam service-policy-delete](bx_cli.html#ibmcloud_iam_service_policy_delete)</td>
-    <td>[ibmcloud iam user-policies](bx_cli.html#ibmcloud_iam_user_policies)</td>
   </tr>
   <tr>
+   <td>[ibmcloud iam user-policies](bx_cli.html#ibmcloud_iam_user_policies)</td>
    <td>[ibmcloud iam user-policy](bx_cli.html#ibmcloud_iam_user_policy)</td>
    <td>[ibmcloud iam user-policy-create](bx_cli.html#ibmcloud_iam_user_policy_create)</td>
    <td>[ibmcloud iam user-policy-update](bx_cli.html#ibmcloud_iam_user_policy_update)</td>
    <td>[ibmcloud iam user-policy-delete](bx_cli.html#ibmcloud_iam_user_policy_delete)</td>
-   <td>[ibmcloud iam oauth-tokens](bx_cli.html#ibmcloud_iam_oauth_tokens)</td>
   </tr>
   <tr>
+     <td>[ibmcloud iam oauth-tokens](bx_cli.html#ibmcloud_iam_oauth_tokens)</td>
      <td>[ibmcloud iam dedicated-id-disconnect](bx_cli.html#ibmcloud_iam_dedicated_id_disconnect)</td>
      <td>[ibmcloud iam authorization-policy-create](bx_cli.html#ibmcloud_iam_authorization_policy_create)</td>
      <td>[ibmcloud iam authorization-policy-delete](bx_cli.html#ibmcloud_iam_authorization_policy_delete)</td>
      <td>[ibmcloud iam authorization-policy](bx_cli.html#ibmcloud_iam_authorization_policy)</td>
+  </tr>
+  <tr>
      <td>[ibmcloud iam authorization-policies](bx_cli.html#ibmcloud_iam_authorization_policies)</td>
   </tr>
   </tbody>
   </table>
 
  ## CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド
- {: #ibmcloud_commands_apps}
+ {: #bx_commands_apps}
 
 <table summary="CF アプリとアプリ関連ドメイン、経路、および証明書を管理するために使用できる ibmcloud コマンド。">
-<caption>表 4. CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド</caption>
+<caption>表 5. CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド</caption>
  <thead>
  <th colspan="5">CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド</th>
  </thead>
@@ -318,10 +339,10 @@ lastupdated: "2018-05-23"
  </table>
 
  ## {{site.data.keyword.Bluemix_notm}} サービスを管理するためのコマンド
- {: #ibmcloud_commands_services}
+ {: #bx_commands_services}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} サービスを管理するために使用できる ibmcloud コマンド">
-<caption>表 5. {{site.data.keyword.Bluemix_notm}} サービスを管理するためのコマンド</caption>
+<caption>表 6. {{site.data.keyword.Bluemix_notm}} サービスを管理するためのコマンド</caption>
  <thead>
  <th colspan="5">{{site.data.keyword.Bluemix_notm}} サービスを管理するためのコマンド</th>
  </thead>
@@ -352,10 +373,10 @@ lastupdated: "2018-05-23"
 
 
  ## カタログ、プラグイン、および請求処理の設定を管理するためのコマンド
- {: #ibmcloud_commands_settings}
+ {: #bx_commands_settings}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するために使用できる ibmcloud コマンド">
-<caption>表 6. {{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</caption>
+<caption>表 7. {{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</caption>
  <thead>
  <th colspan="5">{{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</th>
  </thead>
@@ -396,8 +417,24 @@ lastupdated: "2018-05-23"
   <td>[ibmcloud billing org-usage](bx_cli.html#ibmcloud_billing_org_usage)</td>
 </tr>
 <tr>
-  <td>[ibmcloud billing resource-group-usage](bx_cli.html#ibmcloud_resource_group_usage)</td>
-  <td>[ibmcloud billing resource-instances-usage](bx_cli.html#ibmcloud_resource_instances_usage)</td>
+  <td>[ibmcloud billing resource-group-usage](bx_cli.html#ibmcloud_billing_resource_group_usage)</td>
+  <td>[ibmcloud billing resource-instances-usage](bx_cli.html#ibmcloud_billing_resource_instances_usage)</td>
+ </tr>
+ </tbody>
+ </table>
+
+ ## Cloud Foundry エンタープライズ環境の管理 (試験的)
+{: #bx_commands_cfee}
+
+<table summary="Cloud Foundry エンタープライズ環境の管理 (試験的)">
+<caption>表 8. Cloud Foundry エンタープライズ環境の管理 (試験的)</caption>
+ <thead>
+ <th colspan="5">Cloud Foundry エンタープライズ環境の管理 (試験的)</th>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud cfee environments](bx_cli.html#ibmcloud_cfee_environments)</td>
+ <td>[ibmcloud cfee environment](bx_cli.html#ibmcloud_cfee_environment)</td>
  </tr>
  </tbody>
  </table>
@@ -465,7 +502,7 @@ ibmcloud api api.chinabluemix.net
 ```
 
 ```
-ibmcloud api https://api.chinaibmcloud.net --skip-ssl-validation
+ibmcloud api https://api.chinabluemix.net --skip-ssl-validation
 ```
 
 現行 API エンドポイントを表示します。
@@ -1220,34 +1257,34 @@ ibmcloud account org-account ORG_NAME [--guid]
 ibmcloud account users
 ```
 
-## ibmcloud account user-delete
-{: #ibmcloud_account_user_delete}
+## ibmcloud account user-remove
+{: #ibmcloud_account_user_remove}
 
-現行アカウントからユーザーを削除します (アカウント所有者のみ)
+アカウントからユーザーを削除します (アカウント所有者のみ)
 
 ```
-ibmcloud account user-delete USERNAME [-c ACCOUNT_ID] [-f]
+ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
-<dt>USERNAME (必須)</dt>
-<dd>ユーザー名</dd>
+<dt>USER_ID (必須)</dt>
+<dd>ユーザー ID</dd>
 <dt>-c ACCOUNT_ID</dt>
 <dd>アカウント ID。 指定しない場合、現行アカウントがデフォルトで使用されます。</dd>
-<dt>--force、-f (オプション)</dt>
+<dt>-f, --force</dt>
 <dd>確認なしで削除を強制します。</dd>
 </dl>
 
 ## ibmcloud account user-invite
 {: #ibmcloud_account_user_invite}
 
-ユーザーをアカウントに招待します (アカウント管理者)
+ユーザーをアカウントに招待します
 
 ```
-ibmcloud account user-invite USER_EMAIL
+ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE, --space-role SPACE_ROLE]]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1256,6 +1293,14 @@ ibmcloud account user-invite USER_EMAIL
 <dl>
    <dt>USER_EMAIL (必須)</dt>
    <dd>招待されるユーザーの E メール。</dd>
+   <dt>-o ORG</dt>
+   <dd>ユーザーを招待する先の組織</dd>
+   <dt>--org-role ORG_ROLE</dt>
+   <dd>組織の役割。有効な入力は、OrgManager、BillingManager、OrgAuditor、および OrgUser です。省略された場合、OrgUser 役割が設定されます。</dd>
+   <dt>-s SPACE</dt>
+   <dd>ユーザーを招待する先のスペース</dd>
+   <dt>--space-role SPACE_ROLE</dt>
+   <dd>スペースの役割。有効な入力は、SpaceManager、SpaceDeveloper、および SpaceAuditor です。</dd>
 </dl>
 
 
@@ -1648,31 +1693,31 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 アクセス・グループ・ポリシーを作成します
 
 ```
-ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-f, --file</dt>
+  <dt>--file</dt>
   <dd>ポリシー定義の JSON ファイル</dd>
   <dt>-roles</dt>
-  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「ibmcloud iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「ibmcloud iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-service-name</dt>
-  <dd>ポリシー定義のサービス名。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
-  <dt>-service-instance</dt>
-  <dd>ポリシー定義のサービス・インスタンス。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス名。 このオプションは、「--file」と同時に指定することはできません。</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>ポリシー定義のサービス・インスタンスの GUID。このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-region</dt>
-  <dd>ポリシー定義の地域。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義の地域。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-resource-type</dt>
-  <dd>ポリシー定義のリソース・タイプ。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース・タイプ。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-resource</dt>
-  <dd>ポリシー定義のリソース。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-resource-group-name</dt>
-  <dd>リソース・グループの名前。 このオプションは、「-f, --file」および「--resource-group-id」と同時に指定することはできません。</dd>
+  <dd>リソース・グループの名前。 このオプションは、「--file」および「--resource-group-id」と同時に指定することはできません。</dd>
   <dt>-resource-group-id</dt>
-  <dd>リソース・グループの ID。 このオプションは、「-f, --file」および「--resource-group-name」と同時に指定することはできません。</dd>
+  <dd>リソース・グループの ID。 このオプションは、「--file」および「--resource-group-name」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1688,9 +1733,9 @@ ibmcloud iam access-group-policy-create example_group -f @policy.json
 ibmcloud iam access-group-policy-create example_group --roles Administrator --service-name sample-service
 ```
 
-`example_group` に、`us-south` 地域の `sample-service` インスタンス `ServiceId-ade78e9f` のリソース `key123` の `Editor` 役割を与えます。
+`example_group` に、`us-south` 地域の GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` の `sample-service` インスタンスのリソース `key123` の `Editor` 役割を与えます。
 ```
-ibmcloud iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 `example_group` に、リソース・グループ ID `dda27e49d2a1efca58083a01dfde18f6` の `Operator` 役割を与えます。
@@ -1714,33 +1759,31 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 アクセス・グループ・ポリシーを更新します
 
 ```
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-f, --file</dt>
+  <dt>--file</dt>
   <dd>ポリシー定義の JSON ファイル</dd>
-  <dt>-v, --version</dt>
-  <dd>ポリシーのバージョン</dd>
-  <dt>-roles</dt>
-  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「ibmcloud iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dt>--roles</dt>
+  <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「ibmcloud iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-service-name</dt>
-  <dd>ポリシー定義のサービス名。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
-  <dt>-service-instance</dt>
-  <dd>ポリシー定義のサービス・インスタンス。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス名。 このオプションは、「--file」と同時に指定することはできません。</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>ポリシー定義のサービス・インスタンスの GUID。このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-region</dt>
-  <dd>ポリシー定義の地域。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義の地域。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-resource-type</dt>
-  <dd>ポリシー定義のリソース・タイプ。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース・タイプ。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-resource</dt>
-  <dd>ポリシー定義のリソース。 このオプションは、「-f, --file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義のリソース。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-resource-group-name</dt>
-  <dd>リソース・グループの名前。 このオプションは、「-f, --file」および「--resource-group-id」と同時に指定することはできません。</dd>
+  <dd>リソース・グループの名前。 このオプションは、「--file」および「--resource-group-id」と同時に指定することはできません。</dd>
   <dt>-resource-group-id</dt>
-  <dd>リソース・グループの ID。 このオプションは、「-f, --file」および「--resource-group-name」と同時に指定することはできません。</dd>
+  <dd>リソース・グループの ID。 このオプションは、「--file」および「--resource-group-name」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1755,9 +1798,9 @@ ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7a
 ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
 ```
 
-`example_group` に、`us-south` 地域の `sample-service` インスタンス `ServiceId-ade78e9f` のリソース `key123` の `Editor` 役割を与えるようにアクセス・グループ・ポリシーを更新します。
+`example_group` に、`us-south` 地域の GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` の `sample-service` インスタンスのリソース `key123` の `Editor` 役割を与えるように、アクセス・グループ・ポリシーを更新します。
 ```
-ibmcloud iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south
+ibmcloud iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south
 ```
 
 `example_group` に、リソース・グループ ID `dda27e49d2a1efca58083a01dfde18f6` の `Operator` 役割を与えるようにアクセス・グループ・ポリシーを更新します。
@@ -1805,7 +1848,7 @@ ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8
 すべてのサービス ID をリストします
 
 ```
-ibmcloud iam service-ids --uuid
+ibmcloud iam service-ids [--uuid]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1837,8 +1880,10 @@ ibmcloud iam service-id (NAME|UUID) [--uuid]
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>NAME|UUID (必須)</dt>
-  <dd>サービスの名前または UUID</dd>
+  <dt>NAME (必須)</dt>
+  <dd>サービスの名前。UUID と同時に指定することはできません。</dd>
+  <dt>UUID (必須)</dt>
+  <dd>サービスの UUID。NAME と同時に指定することはできません。</dd>
   <dt>--uuid</dt>
   <dd>サービス ID の UUID を表示します</dd>
 </dl>
@@ -1863,7 +1908,7 @@ ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 サービス ID を作成します
 
 ```
-ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION]
+ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1874,6 +1919,8 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION]
   <dd>サービスの名前</dd>
   <dt>-d, --description</dt>
   <dd>サービス ID の説明</dd>
+  <dt>--lock</dt>
+  <dd>作成時にサービス ID をロックします</dd>
 </dl>
 
 <strong>例</strong>:
@@ -1884,6 +1931,12 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION]
 ibmcloud iam service-id-create sample-test -d 'hello, world!'
 ```
 
+サービス名 `sample-test` と説明 `hello, world!` で、ロックされたサービス ID を作成します
+
+```
+ibmcloud iam service-id-create sample-test -d 'hello, world!' --lock
+```
+
 
 ## ibmcloud iam service-id-update
 
@@ -1891,21 +1944,21 @@ ibmcloud iam service-id-create sample-test -d 'hello, world!'
 サービス ID を更新します
 
 ```
-ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>NAME|UUID (必須)</dt>
-  <dd>サービスの名前または UUID</dd>
+  <dt>NAME (必須)</dt>
+  <dd>サービスの名前。UUID と同時に指定することはできません。</dd>
+  <dt>UUID (必須)</dt>
+  <dd>サービスの UUID。NAME と同時に指定することはできません。</dd>
   <dt>-n, --name</dt>
   <dd>サービスの新しい名前</dd>
   <dt>-d, --description</dt>
   <dd>サービスの新しい説明</dd>
-  <dt>-v, --version</dt>
-  <dd>サービス ID のバージョン</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新します</dd>
 </dl>
@@ -1918,10 +1971,10 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
 ibmcloud iam service-id-update sample-test -n sample-test-2 -f
 ```
 
-サービス `sample-test` バージョン `1-0jn39fbefew` の説明を更新します
+サービス `sample-test` の説明を更新します
 
 ```
-ibmcloud iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
+ibmcloud iam service-id-update sample-test -d 'hello, friend!'
 ```
 
 サービス ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` を `sample-test-3` に名前変更し、説明も新しくします。
@@ -1944,8 +1997,10 @@ ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>NAME|UUID (必須)</dt>
-  <dd>サービスの名前または UUID</dd>
+  <dt>NAME (必須)</dt>
+  <dd>サービスの名前。UUID と同時に指定することはできません。</dd>
+  <dt>UUID (必須)</dt>
+  <dd>サービスの UUID。NAME と同時に指定することはできません。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに削除します</dd>
 </dl>
@@ -1964,6 +2019,75 @@ ibmcloud iam service-id-delete sample-teset -f
 ibmcloud iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
+## ibmcloud iam service-id-lock
+{: #ibmcloud_iam_service_id_lock}
+
+サービス ID をロックします
+
+```
+ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>NAME (必須)</dt>
+  <dd>サービスの名前。UUID と同時に指定することはできません。</dd>
+  <dt>UUID (必須)</dt>
+  <dd>サービスの UUID。NAME と同時に指定することはできません。</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずにロックします</dd>
+</dl>
+
+<strong>例</strong>:
+
+確認を求めずにサービス ID `sample-teset` をロックします
+
+```
+ibmcloud iam service-id-lock sample-teset -f
+```
+
+サービス ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` をロックします
+
+```
+ibmcloud iam service-id-lock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+```
+
+## ibmcloud iam service-id-unlock
+{: #ibmcloud_iam_service_id_unlock}
+
+サービス ID をアンロックします
+
+```
+ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>NAME (必須)</dt>
+  <dd>サービスの名前。UUID と同時に指定することはできません。</dd>
+  <dt>UUID (必須)</dt>
+  <dd>サービスの UUID。NAME と同時に指定することはできません。</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずにアンロックします</dd>
+</dl>
+
+<strong>例</strong>:
+
+確認を求めずにサービス ID `sample-teset` をアンロックします
+
+```
+ibmcloud iam service-id-unlock sample-teset -f
+```
+
+サービス ID `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` をアンロックします
+
+```
+ibmcloud iam service-id-unlock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+```
 
 ## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
@@ -1982,7 +2106,7 @@ ibmcloud iam api-keys
 新しい {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを作成します
 
 ```
-ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
+ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1995,6 +2119,8 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
 <dd>API キーの説明</dd>
 <dt>--file <i>FILE</i></dt>
 <dd>指定されたファイルに API キー情報を保存します。 設定されていない場合、JSON コンテンツが表示されます。</dd>
+<dt>--lock</dt>
+<dd>作成時に API キーをロックします</dd>
 </dl>
 
 <strong>例</strong>:
@@ -2005,13 +2131,19 @@ API キーを作成し、ファイルに保存します
 ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
 ```
 
+"test-key" という名前のロックされた API キーを作成します
+
+```
+ibmcloud iam api-key-create test-key --lock
+```
+
 ## ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
 {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを更新します
 
 ```
-ibmcloud iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
+ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -2019,7 +2151,9 @@ ibmcloud iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>NAME (必須)</dt>
-<dd>更新する API キーの古い名前。</dd>
+<dd>更新する API キーの古い名前。UUID と同時に指定することはできません。</dd>
+<dt>UUID (必須)</dt>
+<dd>更新する API キーの UUID。NAME と同時に指定することはできません。</dd>
 <dt>-n <i>NAME</i> (オプション)</dt>
 <dd>API キーの新しい名前</dd>
 <dt>-d <i>DESCRIPTION</i> (オプション)</dt>
@@ -2035,12 +2169,12 @@ ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
 
 ## ibmcloud api-key-delete
-{: #ibmcloud_api_key_delete}
+{: #ibmcloud_iam_api_key_delete}
 
 {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを削除します
 
 ```
-ibmcloud iam api-key-delete NAME [-f]
+ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -2048,10 +2182,82 @@ ibmcloud iam api-key-delete NAME [-f]
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>NAME (必須)</dt>
-<dd>削除する API キーの名前。</dd>
-<dt>-f (オプション)</dt>
+<dd>削除する API キーの名前。UUID と同時に指定することはできません。</dd>
+<dt>UUID (必須)</dt>
+<dd>削除する API キーの UUID。NAME と同時に指定することはできません。</dd>
+<dt>-f, --force</dt>
 <dd>確認なしで削除を強制します。</dd>
 </dl>
+
+## ibmcloud api-key-lock
+{: #ibmcloud_iam_api_key_lock}
+
+プラットフォーム API キーをロックします
+
+```
+ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>NAME (必須)</dt>
+<dd>ロックする API キーの名前。UUID と同時に指定することはできません。</dd>
+<dt>UUID (必須)</dt>
+<dd>ロックする API キーの UUID。NAME と同時に指定することはできません。</dd>
+<dt>-f, --force</dt>
+<dd>確認なしでロックを強制します。</dd>
+</dl>
+
+<strong>例</strong>:
+
+API キー test-api-key をロックします
+
+```
+ibmcloud iam api-key-lock test-api-key
+```
+
+確認を求めずに、指定された UUID の API キーをロックします
+
+```
+ibmcloud iam api-key-lock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
+```
+
+## ibmcloud api-key-unlock
+{: #ibmcloud_iam_api_key_unlock}
+
+プラットフォーム API キーをアンロックします
+
+```
+ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>NAME (必須)</dt>
+<dd>アンロックする API キーの名前。UUID と同時に指定することはできません。</dd>
+<dt>UUID (必須)</dt>
+<dd>アンロックする API キーの UUID。NAME と同時に指定することはできません。</dd>
+<dt>-f, --force</dt>
+<dd>確認なしでアンロックを強制します。</dd>
+</dl>
+
+<strong>例</strong>:
+
+API キー test-api-key をアンロックします
+
+```
+ibmcloud iam api-key-unlock test-api-key
+```
+
+確認を求めずに、指定された UUID の API キーをアンロックします
+
+```
+ibmcloud iam api-key-unlock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
+```
 
 ## ibmcloud iam service-api-keys
 {: #ibmcloud_iam_service_api_keys}
@@ -2059,15 +2265,17 @@ ibmcloud iam api-key-delete NAME [-f]
 サービスのすべての API キーをリストします
 
 ```
-ibmcloud iam service-api-keys SERVICE_ID [-f, --force]
+ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID (必須)</dt>
-  <dd>サービス ID の名前または UUID</dd>
+  <dt>SERVICE_ID_NAME (必須)</dt>
+  <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_UUID (必須)</dt>
+  <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずにサービス API キーを表示します</dd>
 </dl>
@@ -2086,15 +2294,21 @@ ibmcloud iam service-api-keys sample-service
 サービス API キーの詳細をリストします
 
 ```
-ibmcloud iam service-api-key NAME SERVICE_ID [--uuid] [-f, --force]
+ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID (必須)</dt>
-  <dd>サービス ID の名前または UUID</dd>
+  <dt>APIKEY_NAME (必須)</dt>
+  <dd>API キーの名前。APIKEY_UUID と同時に指定することはできません。</dd>
+  <dt>APIKEY_UUID (必須)</dt>
+  <dd>API キーの UUID。APIKEY_NAME と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_NAME (必須)</dt>
+  <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_UUID (必須)</dt>
+  <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
   <dt>--uuid</dt>
   <dd>サービス API キーの UUID を表示します</dd>
   <dt>-f, --force</dt>
@@ -2115,15 +2329,19 @@ ibmcloud iam service-api-key sample-key sample-service
 サービス API キーを作成します
 
 ```
-ibmcloud iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [--file FILE] [-f, --force]
+ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID (必須)</dt>
-  <dd>サービス ID の名前または UUID</dd>
+  <dt>NAME (必須)</dt>
+  <dd>新しく作成されるサービス API キーの名前</dd>
+  <dt>SERVICE_ID_NAME (必須)</dt>
+  <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_UUID (必須)</dt>
+  <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
   <dt>-d, --description</dt>
   <dd>API キーの説明</dd>
   <dt>--file</dt>
@@ -2146,21 +2364,25 @@ ibmcloud iam service-api-key-create sample-key sample-service -f
 サービス API キーを更新します
 
 ```
-ibmcloud iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID (必須)</dt>
-  <dd>サービス ID の名前または UUID</dd>
+  <dt>APIKEY_NAME (必須)</dt>
+  <dd>API キーの名前。APIKEY_UUID と同時に指定することはできません。</dd>
+  <dt>APIKEY_UUID (必須)</dt>
+  <dd>API キーの UUID。APIKEY_NAME と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_NAME (必須)</dt>
+  <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_UUID (必須)</dt>
+  <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
   <dt>-n, --name</dt>
   <dd>サービスAPI キーの新しい名前</dd>
   <dt>-d, --description</dt>
   <dd>サービス API キーの新しい説明</dd>
-  <dt>-v, --version</dt>
-  <dd>サービス API キーのバージョン</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新します</dd>
 </dl>
@@ -2179,25 +2401,97 @@ ibmcloud iam service-api-key-update sample-key sample-service -n new-sample-key
 サービス API キーを削除します
 
 ```
-ibmcloud iam service-api-key-delete NAME SERVICE_ID [-f, --force]
+ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_ID (必須)</dt>
-  <dd>サービス ID の名前または UUID</dd>
+  <dt>APIKEY_NAME (必須)</dt>
+  <dd>API キーの名前。APIKEY_UUID と同時に指定することはできません。</dd>
+  <dt>APIKEY_UUID (必須)</dt>
+  <dd>API キーの UUID。APIKEY_NAME と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_NAME (必須)</dt>
+  <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_UUID (必須)</dt>
+  <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに削除します</dd>
 </dl>
 
 <strong>例</strong>:
 
-サービス API キー `sample-key` を削除します
+サービス ID `sample-service` のサービス API キー `sample-key` を削除します
 
 ```
 ibmcloud iam service-api-key-delete sample-key sample-service
+```
+
+## ibmcloud iam service-api-key-lock
+{: #ibmcloud_iam_service_api_key_lock}
+
+サービス API キーをロックします
+
+```
+ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>APIKEY_NAME (必須)</dt>
+  <dd>API キーの名前。APIKEY_UUID と同時に指定することはできません。</dd>
+  <dt>APIKEY_UUID (必須)</dt>
+  <dd>API キーの UUID。APIKEY_NAME と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_NAME (必須)</dt>
+  <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_UUID (必須)</dt>
+  <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずにロックします</dd>
+</dl>
+
+<strong>例</strong>:
+
+サービス ID `sample-service` のサービス API キー `sample-key` をロックします
+
+```
+ibmcloud iam service-api-key-lock sample-key sample-service
+```
+
+## ibmcloud iam service-api-key-unlock
+{: #ibmcloud_iam_service_api_key_unlock}
+
+サービス API キーをアンロックします
+
+```
+ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>APIKEY_NAME (必須)</dt>
+  <dd>API キーの名前。APIKEY_UUID と同時に指定することはできません。</dd>
+  <dt>APIKEY_UUID (必須)</dt>
+  <dd>API キーの UUID。APIKEY_NAME と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_NAME (必須)</dt>
+  <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
+  <dt>SERVICE_ID_UUID (必須)</dt>
+  <dd>サービス ID の UUID。SERVICE_ID_NAME と同時に指定することはできません。</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずにアンロックします</dd>
+</dl>
+
+<strong>例</strong>:
+
+サービス ID `sample-service` のサービス API キー `sample-key` をアンロックします
+
+```
+ibmcloud iam service-api-key-unlock sample-key sample-service
 ```
 
 ## ibmcloud iam user-policies
@@ -2258,7 +2552,7 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 ユーザー・ポリシーを作成します
 
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -2273,8 +2567,8 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「ibmcloud iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (オプション)</dt>
 <dd>ポリシー定義のサービス名。これは、「--file」フラグと同時に指定することはできません。</dd>
-<dt>--serivce-instance <i>SERVICE_INSTANCE</i> (オプション)</dt>
-<dd>ポリシー定義のサービス・インスタンス。これは、「--file」フラグと同時に指定することはできません。</dd>
+<dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (オプション)</dt>
+<dd>ポリシー定義のサービス・インスタンスの GUID。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--region <i>REGION</i> (オプション)</dt>
 <dd>ポリシー定義の地域。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (オプション)</dt>
@@ -2301,10 +2595,10 @@ ibmcloud iam user-policy-create name@example.com --file @policy.json
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name sample-service
 ```
 
-`name@example.com` に、`us-south` 地域のサンプル・サービス・インスタンス `ServiceId-ade78e9f` のリソース `key123` の `Editor` 役割を与えます。
+`name@example.com` に、`us-south` 地域の GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` のサンプル・サービス・インスタンスのリソース `key123` の `Editor` 役割を与えます。
 
 ```
-ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 `name@example.com` に、リソース・グループ ID `dda27e49d2a1efca58083a01dfde18f6` の `Operator` 役割を与えます。
@@ -2331,7 +2625,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 ユーザー・ポリシーを更新します
 
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
@@ -2341,16 +2635,14 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--f
 <dd>ポリシーが属するユーザー名</dd>
 <dt>POLICY_ID (必須)</dt>
 <dd>更新するポリシーの ID</dd>
-<dt>-v, --version <i>VERSION</i> (オプション)</dt>
-<dd>既存のポリシーのバージョン</dd>
 <dt>--file <i>FILE</i> (オプション)</dt>
 <dd>ポリシー定義の JSON ファイル</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (オプション)</dt>
 <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「ibmcloud iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (オプション)</dt>
 <dd>ポリシー定義のサービス名。これは、「--file」フラグと同時に指定することはできません。</dd>
-<dt>--serivce-instance <i>SERVICE_INSTANCE</i> (オプション)</dt>
-<dd>ポリシー定義のサービス・インスタンス。これは、「--file」フラグと同時に指定することはできません。</dd>
+<dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (オプション)</dt>
+<dd>ポリシー定義のサービス・インスタンスの GUID。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--region <i>REGION</i> (オプション)</dt>
 <dd>ポリシー定義の地域。これは、「--file」フラグと同時に指定することはできません。</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (オプション)</dt>
@@ -2377,10 +2669,10 @@ ibmcloud iam user-policy-update name@example.com 0bb730daa --file @policy.json
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Administrator --service-name sample-service
 ```
 
- `name@example.com` に、`us-south` 地域のサンプル・サービス・インスタンス `ServiceId-ade78e9f` のリソース `key123` の `Editor` 役割を与えるようにユーザー・ポリシーを更新します
+ `name@example.com` に、`us-south` 地域の GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` のサンプル・サービス・インスタンスのリソース `key123` の `Editor` 役割を与えるように、ユーザー・ポリシーを更新します。
 
 ```
-ibmcloud iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 `name@example.com` に、リソース・グループ ID `dda27e49d2a1efca58083a01dfde18f6` の `Operator` 役割を与えるようにユーザー・ポリシーを更新します
@@ -2401,7 +2693,34 @@ ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer -
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
 
+## ibmcloud iam user-policy-delete
+{: #ibmcloud_iam_user_policy_delete}
 
+ユーザー・ポリシーを削除します
+
+```
+ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
+```
+
+<strong>前提条件</strong>:  エンドポイント、ログイン、ターゲットのアカウント
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずにユーザー・ポリシーを削除します</dd>
+</dl>
+
+<strong>例</strong>: ユーザー `name@example.com` のポリシー `user-policy-id` を削除します。
+
+```
+ibmcloud iam user-policy-delete name@example.com user-policy-id
+```
+
+確認を求めずに、ユーザー `name@example.com` のポリシー `user-policy-id` を削除します。
+
+```
+ibmcloud iam user-policy-delete name@example.com user-policy-id -f
+```
 
 ## ibmcloud iam service-policies
 {: #ibmcloud_iam_service_policies}
@@ -2481,7 +2800,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 サービス・ポリシーを作成します
 
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2496,8 +2815,8 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「ibmcloud iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>--service-name</dt>
   <dd>ポリシー定義のサービス名。 これは、「--file」フラグと同時に指定することはできません。</dd>
-  <dt>--service-instance</dt>
-  <dd>ポリシー定義のサービス・インスタンス。 これは、「--file」フラグと同時に指定することはできません。</dd>
+  <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>ポリシー定義のサービス・インスタンスの GUID。これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-region</dt>
   <dd>ポリシー定義の地域。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>--resource-type</dt>
@@ -2532,7 +2851,7 @@ ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac97
 サービス・ポリシーを更新します
 
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2543,16 +2862,14 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] 
   <dd>サービス ID の名前または UUID</dd>
   <dt>POLICY_ID (必須)</dt>
   <dd>サービス・ポリシーの ID<dd>
-  <dt>-v, --version</dt>
-  <dd>サービス・ポリシーのバージョン</dd>
   <dt>--file</dt>
   <dd>ポリシー定義の JSON ファイル。 これは、「-r, --roles」、「--service-name」、「--service-instance」、「--region」、「--resource-type」、「--resource」、「--resource-group-name」、および「--resource-group-id」の各フラグと同時に指定することはできません。</dd>
   <dt>-r, --roles</dt>
   <dd>ポリシー定義の役割名。 特定のサービスの、サポートされる役割については、「ibmcloud iam roles --service SERVICE_NAME」を実行してください。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-service-name</dt>
   <dd>ポリシー定義のサービス名。 これは、「--file」フラグと同時に指定することはできません。</dd>
-  <dt>-service-instance</dt>
-  <dd>ポリシー定義のサービス・インスタンス。 これは、「--file」フラグと同時に指定することはできません。</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>ポリシー定義のサービス・インスタンスの GUID。これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-region</dt>
   <dd>ポリシー定義の地域。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-resource-type</dt>
@@ -2661,7 +2978,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 特定のサービス・インスタンスが別のサービス・インスタンスへアクセスできるようにするための許可ポリシーを作成します。
 
 ```
-ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
+ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME]
 ```
 
 <strong>前提条件</strong>: ログイン、ターゲット
@@ -2672,12 +2989,12 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>アクセスを許可されるソース・サービス。</dd>
   <dt>TARGET_SERVICE_NAME</dt>
   <dd>ソース・サービスがアクセスを許可されるターゲット・サービス。</dd>
+  <dt>ROLE_NAME1,ROLE_NAME2...</dt>
+  <dd>ソース・サービスのアクセス権限を提供する役割。</dd>  
   <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
   <dd>ソース・サービスのインスタンス名。指定されない場合、ソース・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
   <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
   <dd>ターゲット・サービスのインスタンス名。指定されない場合、ターゲット・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
-  <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>ソース・サービスのアクセス権限を提供する役割。</dd>  
 </dl>
 
 ## ibmcloud iam authorization-policy-delete
@@ -2794,6 +3111,28 @@ ibmcloud resource group example-group --id
 ```
 
 
+## ibmcloud resource group-create
+{: #ibmcloud_resource_group_create}
+
+リソース・グループを作成します
+
+```
+ibmcloud resource group-create NAME QUOTA_NAME
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+
+<strong>例</strong>:
+
+割り当て量 `free` のリソース・グループ `example-group` を作成します。
+
+```
+ibmcloud resource group-create example-group free
+```
+
+
 ## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
@@ -2877,6 +3216,29 @@ ibmcloud resource quota NAME
 ```
 ibmcloud resource quota free
 ```
+
+## ibmcloud resource cf-service-instance-migrate
+{: #ibmcloud_resource_cf_service_instance_migrate}
+
+Cloudfoundry サービス・インスタンスをリソース・グループにマイグレーションします
+
+```
+bx resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
+```
+
+<strong>前提条件</strong>: ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>SERVICE_INSTANCE_NAME または SERVICE_INSTANCE_ID (必須)</dt>
+  <dd>サービス・インスタンスの名前または ID</dd>
+  <dt>--resource-group-name</dt>
+  <dd>リソース・グループの名前。 このオプションは、「--resource-group-id」と同時に指定することはできません。 これらのどれも指定されない場合のデフォルトは、現在ターゲットになっているリソース・グループです。</dd>
+  <dt>--resource-group-id</dt>
+  <dd>リソース・グループの ID。 このオプションは、「--resource-group-name」と同時に指定することはできません。 これらのどれも指定されない場合のデフォルトは、現在ターゲットになっているリソース・グループです。</dd>
+  <dt>-f, --force</dt>
+  <dd>確認を求めずにマイグレーションします</dd>
+</dl>
 
 
 ## ibmcloud app push
@@ -3337,15 +3699,17 @@ ibmcloud resource service-instances --service-name test-service
 サービス・インスタンスの詳細を表示します
 
 ```
-ibmcloud resource service-instance NAME [--location LOCATION] [--id]
+ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>NAME (必須)</dt>
+  <dt>NAME (必須)。ID と同時に指定することはできません。</dt>
   <dd>サービス・インスタンスの名前</dd>
+  <dt>ID (必須)。NAME と同時に指定することはできません。</dt>
+  <dd>サービス・インスタンスの ID</dd>
   <dt>--location</dt>
   <dd>場所を基準にフィルター操作します</dd>
   <dt>--id</dt>
@@ -3353,11 +3717,12 @@ ibmcloud resource service-instance NAME [--location LOCATION] [--id]
 </dl>
 
 <strong>例</strong>:
+
 サービス・インスタンス `my-service-instance` の詳細を表示します
 
 ```
 ibmcloud resource service-instance my-service-instance
-```
+``` 
 
 ## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
@@ -3401,15 +3766,17 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 サービス・インスタンスを更新します
 
 ```
-ibmcloud resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>SERVICE_INSTANCE_NAME (必須)</dt>
-  <dd>サービス・インスタンスの名前</dd>
+  <dt>NAME (必須)</dt>
+  <dd>サービス・インスタンスの名前。ID と同時に指定することはできません。</dd>
+  <dt>ID (必須)</dt>
+  <dd>サービス・インスタンスの ID。NAME と同時に指定することはできません。</dd>
   <dt>-n, --name</dt>
   <dd>新規サービス・インスタンス名</dd>
   <dt>-t, --tags</dt>
@@ -3433,13 +3800,17 @@ ibmcloud resource service-instance-update my-service-instance -n new-service-ins
 サービス・インスタンスを削除します
 
 ```
-ibmcloud resource service-instance-delete NAME [-f, --force] [--recursive]
+ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
+  <dt>NAME (必須)</dt>
+  <dd>サービス・インスタンスの名前。ID と同時に指定することはできません。</dd>
+  <dt>ID (必須)</dt>
+  <dd>サービス・インスタンスの ID。NAME と同時に指定することはできません。</dd>
   <dt>-f, --force</dt>
   <dd>確認なしで削除を強制します</dd>
   <dt>--recursive</dt>
@@ -3913,6 +4284,228 @@ ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
 
+## ibmcloud resource tags
+{: #ibmcloud_resource_tags}
+
+すべてのタグをリストします
+
+```
+ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit LIMIT]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--tag-type</dt>
+  <dd>タグ・タイプ (サポートされる値: user、restricted)</dd>
+  <dt>-o, --offset</dt>
+  <dd>開始リソース位置番号 (デフォルト: 0)</dd>
+  <dt>-l, --limit</dt>
+  <dd>返されるリソースの数 (最大 10000) (デフォルト: 10000)</dd>
+</dl>
+
+<strong>例</strong>:
+
+すべてのタグをリストします
+
+```
+ibmcloud resource tags 
+```
+
+すべての制限付きタグをリストします
+
+```
+ibmcloud resource tags --tag-type restricted
+```
+
+## ibmcloud resource tag
+{: #ibmcloud_resource_tag}
+
+タグの詳細を表示します
+
+```
+ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--tag-name (必須)</dt>
+  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
+  <dt>--tag-crn (必須)</dt>
+  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
+</dl>
+
+<strong>例</strong>:
+
+タグ "Ray Brown" の詳細を表示します
+
+```
+ibmcloud resource tag --tag-name "Ray Brown"
+```
+
+## ibmcloud resource tag-create
+{: #ibmcloud_resource_tag_create}
+
+タグを作成します
+
+```
+ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--tag-name (必須)</dt>
+  <dd>タグ名</dd>
+  <dt>--tag-type</dt>
+  <dd>タグ・タイプ (サポートされる値: user、restricted。デフォルト: user)</dd>
+</dl>
+
+<strong>例</strong>:
+
+think:2018 という名前のユーザー・タグを作成します
+
+```
+ibmcloud resource tag-create --tag-name think:2018
+```
+
+department:marketing という名前の制限付きタグを作成します
+
+```
+ibmcloud resource tag-create --tag-name "department:marketing" --tag-type restricted
+```
+
+"Ray Brown" という名前のユーザー・タグを作成します
+
+```
+ibmcloud resource tag-create --tag-name "Ray Brown"
+```
+
+"environment:My Development" という名前の制限付きタグを作成します
+
+```
+ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
+```
+
+## ibmcloud resource tag-delete
+{: #ibmcloud_resource_tag_delete}
+
+タグを削除します
+
+```
+ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--tag-name (必須)</dt>
+  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
+  <dt>--tag-crn (必須)</dt>
+  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
+</dl>
+
+<strong>例</strong>:
+
+タグ "Ray Brown" を削除します
+
+```
+ibmcloud resource tag-delete --tag-name "Ray Brown"
+```
+
+## ibmcloud resource tag-attach
+{: #ibmcloud_resource_tag_attach}
+
+タグをリソースに追加します
+
+```
+ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resource-crn RESOURCE_CRN
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--tag-name (必須)</dt>
+  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
+  <dt>--tag-crn (必須)</dt>
+  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
+  <dt>--resource-crn (必須)</dt>
+  <dd>リソース CRN</dd>
+</dl>
+
+<strong>例</strong>:
+
+CRN が resource_example_crn であるリソースにタグ "Ray Brown" を追加します。
+
+```
+ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
+```
+
+## ibmcloud resource tag-detach
+{: #ibmcloud_resource_tag_detach}
+
+リソースからタグを削除します
+
+```
+ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RESOURCE_CRN
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--tag-name (必須)</dt>
+  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
+  <dt>--tag-crn (必須)</dt>
+  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
+  <dt>--resource-crn (必須)</dt>
+  <dd>リソース CRN</dd>
+</dl>
+
+<strong>例</strong>:
+
+CRN が resource_example_crn であるリソースからタグ "Ray Brown" を削除します。
+
+```
+ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
+```
+
+## ibmcloud resource tag-update
+{: #ibmcloud_resource_tag_update}
+
+ユーザー・タグと制限付きタグを切り替えます
+
+```
+ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--tag-name (必須)</dt>
+  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
+  <dt>--tag-crn (必須)</dt>
+  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
+  <dt>--tag-type (必須)</dt>
+  <dd>タグ・タイプ</dd>
+</dl>
+
+<strong>例</strong>:
+
+タグ "Ray Brown" を制限付きタグに切り替えます
+
+```
+ibmcloud tag-update --tag-name "Ray Brown"  --tag-type restricted
+```
+
+
 ## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
@@ -4166,7 +4759,7 @@ ibmcloud catalog service-marketplace --global
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
-IBM Cloud のボイラープレート・テンプレートを表示します。
+{{site.data.keyword.Bluemix_notm}} のボイラープレート・テンプレートを表示します。
 
 ```
 ibmcloud catalog templates [-d]
@@ -4719,4 +5312,49 @@ ibmcloud plugin uninstall PLUGIN_NAME
 
 ```
 ibmcloud plugin uninstall container-service
+```
+
+## ibmcloud cfee environments
+{: #ibmcloud_cfee_environments}
+
+CFEE 環境をリストします。
+
+```
+bx cfee environments
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+
+
+## ibmcloud cfee environment
+{: #ibmcloud_cfee_environment}
+
+CFEE 環境の詳細を表示します。
+
+```
+bx cfee environment NAME [--id]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+   <dt>--id</dt>
+   <dd>ID のみを表示します。</dd>
+  </dl>
+
+<strong>例</strong>:
+
+CFEE 環境 env_example の詳細を表示します。
+
+```
+bx cfee environment env_example
+```
+
+CFEE 環境 env_example の ID を表示します。
+
+```
+bx cfee environment env_example --id
 ```
