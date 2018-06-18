@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -2333,7 +2333,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>Command Options</strong>:
 <dl>
   <dt>NAME (required)</dt>
-  <dd>Name or new created service API key</dd>
+  <dd>Name of the service ID or newly created service API key</dd>
   <dt>SERVICE_ID_NAME (required)</dt>
   <dd>Name of the service ID, exclusive with SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (required)</dt>
