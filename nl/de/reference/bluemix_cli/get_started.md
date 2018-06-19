@@ -48,7 +48,8 @@ Gehen Sie wie folgt vor, um Ihre ersten Schritte nur mit der {{site.data.keyword
 
 Jetzt können Sie {{site.data.keyword.Bluemix_notm}}-Ressourcen verwalten. Geben Sie `ibmcloud help` ein, damit Beschreibungen der einzelnen Befehle angezeigt werden.
 
-Wenn Sie eine eingebundene ID verwenden, folgen Sie den [hier](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) angegebenen Anweisungen zur Anmeldung mit einem einmaligen Kenncode oder einem API-Schlüssel.  {: tip}
+Wenn Sie eine föderierte ID verwenden, folgen Sie den [hier](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) angegebenen Anweisungen zur Anmeldung mit einem einmaligen Kenncode oder einem API-Schlüssel.
+{: tip}
 
 ## Links mit weiterführenden Informationen zur {{site.data.keyword.Bluemix_notm}}-CLI
 
