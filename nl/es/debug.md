@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-27"
+  years: 2015, 2018
+lastupdated: "2018-05-29"
 
 ---
 
@@ -39,9 +39,9 @@ El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` par
 	 cf api https://api.stage1.ng.bluemix.net
 	 ```
 
-  2. Inicie la sesión en {{site.data.keyword.Bluemix_notm}} especificando `cf login`.
+  2. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} especificando `cf login`.
 
-  3. Recupere los registros recientes con el mandato `cf logs appname --recent`. Si desea filtrar un registro detallado, utilice la opción `grep`. Por ejemplo, puede introducir el siguiente código para mostrar solo los registros [STG]:
+  3. Recupere los registros recientes con el mandato `cf logs nombre_app --recent`. Si desea filtrar un registro detallado, utilice la opción `grep`. Por ejemplo, puede introducir el siguiente código para mostrar solo los registros [STG]:
     ```
 	cf logs nombre_app --recent | grep '\[STG\]'
 	```
@@ -49,11 +49,11 @@ El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` par
 
 Si utiliza el plug-in de herramientas IBM Eclipse para {{site.data.keyword.Bluemix_notm}} para desplegar apps, en el separador **Consola** de la herramienta Eclipse, verá registros parecidos a los que muestra el mandato cf logs. También puede abrir otra ventana Eclipse para realizar un seguimiento de `los registros` al desplegar la app.
 
-Además del mandato `cf logs`, en {{site.data.keyword.Bluemix_notm}} también puede utilizar el servicio {{site.data.keyword.loganalysisshort}} para recopilar detalles del registro.
+Además del mandato `cf logs`, en {{site.data.keyword.Bluemix_notm}} también puede utilizar el servicio {{site.data.keyword.loganalysisshort}} para recopilar detalles del registro. 
 
 ### Depuración de errores de transferencia para una app Node.js
 
-El ejemplo siguiente muestra el registro que se muestra después de escribir `cf logs appname --recent`. En el ejemplo se da por supuesto que los errores de transferencia se han producido para una app Node.js:
+El ejemplo siguiente muestra el registro que se muestra después de escribir `cf logs nombre_app --recent`. En el ejemplo se da por supuesto que los errores de transferencia se han producido para una app Node.js:
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
@@ -100,20 +100,20 @@ Como puede ver, se ha colocado una coma al final de la línea 17, por lo que se 
 {: screen}
 
 
-## Debugging runtime errors
+## Depuración de errores de tiempo de ejecución
 {: #debugging-runtime-errors}
 Si tiene problemas con la app en tiempo de ejecución, los registros de la app pueden ayudar a identificar la causa del error y a solucionar el problema.
 
 En concreto, se puede habilitar el registro en stdout y stderr. Para obtener más información sobre cómo configurar los archivos de registro para las apps que se despliegan mediante los paquetes de compilación integrados de {{site.data.keyword.Bluemix_notm}}, consulte la lista siguiente:
 
   * Para las apps Liberty for Java™, consulte [Liberty: registro y rastreo ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}.
-  * Para las apps Node.js, consulte [La depuración de Node.js se inicia con un registro mejor ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/03/node-js-better-logging/){: new_window}.
+  * Para las apps Node.js, consulte [La depuración de Node.js empieza por un registro mejor ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/03/node-js-better-logging/){: new_window}.
   * Para las apps PHP, consulte [error_log ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://php.net/manual/en/function.error-log.php){: new_window}.
   * Para las apps Python, consulte [Logging HOWTO ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.python.org/2/howto/logging.html){: new_window}.
   * Para las apps Ruby on Rails, consulte [The Logger ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Para las apps Ruby Sinatra, consulte [Registro ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
-Cuando especifica `cf logs nombre_app --recent` en la interfaz de línea de mandatos cf, solo se muestran los registros más recientes. Para ver los registros en busca de errores producidos anteriormente, debe recuperar todos los registros y buscar los errores. Para recuperar todos los registros correspondientes a la app, siga uno de los siguientes métodos:
+Cuando especifica `cf logs appname --recent` en la interfaz de línea de mandatos cf, solo se muestran los registros más recientes. Para ver los registros en busca de errores producidos anteriormente, debe recuperar todos los registros y buscar los errores. Para recuperar todos los registros correspondientes a la app, siga uno de los siguientes métodos:
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>Las funciones integradas de búsqueda y análisis de archivos de registro del servicio {{site.data.keyword.loganalysisshort}} le pueden ayudar a identificar errores rápidamente. Para obtener más información, consulte <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>.</dd>
@@ -125,11 +125,11 @@ Cuando especifica `cf logs nombre_app --recent` en la interfaz de línea de mand
 
 Antes se accedía a los archivos `stdout.log` y `stderr.log` de forma predeterminada a través de la vista de app de la consola de {{site.data.keyword.Bluemix_notm}} bajo **Archivos** > **registros**. Sin embargo, este registro de apps ya no está disponible con la versión actual de Cloud Foundry en la que se aloja {{site.data.keyword.Bluemix_notm}}. Para que se pueda acceder al registro de app stdout y stderr a través de la consola de {{site.data.keyword.Bluemix_notm}} bajo **Archivos** > **registros**, puede redirigir el registro a otros archivos del sistema de archivos de {{site.data.keyword.Bluemix_notm}}, en función del tiempo de ejecución que utilice.
 
-  * Para las apps Liberty for Java, la información de salida que se dirige a stdout y stderr ya está contenida en el archivo `messages.log` del directorio logs. Busque las entradas con el prefijo SystemOut y SystemErr respectivamente.
-  * Para apps Node.js, puede modificar la función console.log para que escriba específicamente en un archivo del directorio logs.
-  * Para las apps PHP, puede utilizar la función error_log para escribir en un archivo del directorio de logs.
+  * Para las aplicaciones Liberty for Java, la información de salida que se dirige a stdout y stderr ya está contenida en el archivo `messages.log` del directorio logs. Busque las entradas con el prefijo SystemOut y SystemErr respectivamente.
+  * Para las aplicaciones Node.js, puede modificar la función console.log para que escriba específicamente en un archivo del directorio logs.
+  * Para las aplicaciones PHP, puede utilizar la función error_log para escribir en un archivo del directorio de logs.
   * Para las aplicaciones Python, puede hacer que el registrador escriba en un archivo del directorio logs: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
-  * Para apps Ruby, puede hacer que el registrador escriba en un archivo del directorio logs.
+  * Para las aplicaciones Ruby, puede hacer que el registrador escriba en un archivo del directorio logs.
 
 
 ### Depuración de cambios de código
@@ -141,5 +141,4 @@ En función de la forma de desplegar el nuevo código, elija uno de los métodos
 
   * Para el nuevo código desplegado desde la línea de mandatos, compruebe la salida del mandato *cf push*. Además, puede utilizar el mandato *cf logs* para encontrar más pistas para resolver el problema. Para obtener más información sobre cómo utilizar el mandato *cf logs*, consulte [visualización de registros desde la interfaz de línea de mandatos](/docs/services/CloudLogAnalysis/manage_logs.html#manage_logs).
 
-  * Para el nuevo código que se despliega desde una interfaz gráfica de usuario, como la consola de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o Travis-CI, puede comprobar los registros de la interfaz. Por ejemplo, si despliega el nuevo código desde la consola de {{site.data.keyword.Bluemix_notm}}, puede ir a Panel de control, localizar la app y ver los registros para buscar claves sobre el problema.   Para obtener más información sobre cómo visualizar registros desde la consola de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización de registros desde el panel de control de {{site.data.keyword.Bluemix}}] (/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana).  
-
+  * Para el nuevo código que se despliega desde una interfaz gráfica de usuario, como la consola de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o Travis-CI, puede comprobar los registros de la interfaz. Por ejemplo, si despliega el nuevo código desde la consola de {{site.data.keyword.Bluemix_notm}}, puede ir a Panel de control, localizar la app y ver los registros para buscar claves sobre el problema.   Para obtener más información sobre cómo visualizar registros desde la consola de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización de registros desde el panel de control de {{site.data.keyword.Bluemix}}](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana).

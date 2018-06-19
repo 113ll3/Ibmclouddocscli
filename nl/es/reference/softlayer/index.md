@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 ---
 
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ A partir de mayo de 2018, los mandatos de la CLI de {{site.data.keyword.Bluemix_
 Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte
 [CLI de IBM Cloud ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} para obtener más detalles.
 
-Para obtener una lista completa de los mandatos de {{site.data.keyword.Bluemix_notm}}, consulte: [Mandatos de {{site.data.keyword.Bluemix_notm}} (ibmcloud)](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)
+Para obtener una lista completa de los mandatos de CLI de {{site.data.keyword.Bluemix_notm}}, consulte: [Mandatos de {{site.data.keyword.Bluemix_notm}} (ibmcloud)](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli).
 
 
 ## Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}}
