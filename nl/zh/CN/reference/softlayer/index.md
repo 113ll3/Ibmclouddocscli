@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 ---
 
 {:new_window: target="_blank"}
@@ -20,13 +20,13 @@ lastupdated: "2018-05-23"
 
 使用 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 中的 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令来配置和管理 SoftLayer 服务。
 
-从 2018 年 5 月起，{{site.data.keyword.Bluemix_notm}} CLI 命令已从 `bluemix` 和 `bx` 更改为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到未来某个日期弃用这些命令为止。
+从 2018 年 5 月起，{{site.data.keyword.Bluemix_notm}} CLI 命令已从 `bluemix` 和 `bx` 更改为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到未来某个日期这些命令被除去为止。
 {: tip}
 
 
 首先，请安装 {{site.data.keyword.Bluemix_notm}} CLI。有关详细信息，请参阅 [IBM Cloud CLI ![外部链接图标](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}。
 
-要获取 {{site.data.keyword.Bluemix_notm}} 命令的完整列表，请参阅：[{{site.data.keyword.Bluemix_notm}} (ibmcloud) 命令](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)
+要获取 {{site.data.keyword.Bluemix_notm}} CLI 命令的完整列表，请参阅：[{{site.data.keyword.Bluemix_notm}} (ibmcloud) 命令](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)。
 
 
 ## 常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令

@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-05-23"
 版本：1.2.0
 发布时间：2018 年 3 月 8 日
 
-从 2018 年 5 月起，{{site.data.keyword.Bluemix_notm}} CLI 命令已从 `bluemix` 和 `bx` 更改为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到未来某个日期弃用这些命令为止。
+从 2018 年 5 月起，{{site.data.keyword.Bluemix_notm}} CLI 命令已从 `bluemix` 和 `bx` 更改为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到未来某个日期这些命令被除去为止。
 {: tip}
 
 使用以下 {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 命令来创建、部署、调试和测试项目。

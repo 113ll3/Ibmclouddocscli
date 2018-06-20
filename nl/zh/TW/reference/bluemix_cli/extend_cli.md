@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-23"
 
 {{site.data.keyword.Bluemix_notm}} CLI 支援可延伸其功能的外掛程式架構。您可以從儲存庫或 Web URL 安裝外掛程式，或者在本端安裝外掛程式二進位檔。
 
-[{{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 是管理外掛程式的正式儲存庫。
+[{{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫](https://tools.ng.bluemix.net){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 是管理外掛程式的正式儲存庫。
 
 如需其他可管理外掛程式的指令，請執行 `ibmcloud plugin` 以查看說明訊息。
 {: tip}

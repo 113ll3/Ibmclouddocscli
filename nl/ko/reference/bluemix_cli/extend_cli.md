@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-23"
 
 {{site.data.keyword.Bluemix_notm}} CLI는 해당 기능을 확장하도록 플러그인 프레임워크를 지원합니다. 저장소 또는 웹 URL에서 플러그인을 설치하거나 플러그인 2진을 로컬로 설치할 수 있습니다.
 
-[{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)는 플러그인이 호스팅되는 공식 저장소입니다.
+[{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소](https://tools.ng.bluemix.net){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)는 플러그인이 호스팅되는 공식 저장소입니다.
 
 더 많은 플러그인 관리용 명령을 보려면 `ibmcloud plugin`을 실행하여 도움말 메시지를 보십시오.
 {: tip}
@@ -29,7 +29,7 @@ lastupdated: "2018-05-23"
 
 ### 1단계: 플러그인 검색
 
-1. `ibmcloud plugin repo-plugins -r REPO_NAME` 명령을 사용하여 저장소에서 플러그인을 찾으십시오. 
+1. `ibmcloud plugin repo-plugins -r REPO_NAME` 명령을 사용하여 저장소에서 플러그인을 찾으십시오.
 2. {{site.data.keyword.Bluemix_notm}} CLI에는 `Bluemix`라는 이름의 공식 저장소가 있으며, 사용자는 다음 예제에 표시된 대로 공식 플러그인을 검색할 수 있습니다.
 
   ```

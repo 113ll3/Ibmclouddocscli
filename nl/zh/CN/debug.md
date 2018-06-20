@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-27"
+  years: 2015, 2018
+lastupdated: "2018-05-29"
 
 ---
 
@@ -49,11 +49,12 @@ lastupdated: "2018-03-27"
 
 如果使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 插件来部署应用程序，那么可以在 Eclipse 工具的**控制台**选项卡中看到类似于 cf logs 输出的日志。部署应用程序时，还可以打开单独的 Eclipse 窗口来跟踪`日志`。
 
-除 `cf logs` 命令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您还可以使用 {{site.data.keyword.loganalysisshort}} 服务来收集日志详细信息。
+除 `cf logs` 命令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您还可以使用 {{site.data.keyword.loganalysisshort}} 服务来收集日志详细信息。 
 
 ### 调试 Node.js 应用程序的编译打包错误
 
 以下示例显示的是输入 `cf logs appname --recent` 之后显示的日志。以下示例假设 Node.js 应用程序发生了编译打包错误：
+
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
@@ -72,6 +73,7 @@ lastupdated: "2018-03-27"
 
 
 日志中的第一个错误显示编译打包失败的原因。在该示例中，第一个错误是编译打包阶段中 DEA 组件的输出。
+
 ```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
 ```
@@ -89,7 +91,9 @@ lastupdated: "2018-03-27"
 {: screen}
 
 
-您会看到第 17 行的结尾有逗号，因此预期第 18 行上存在键/值对。要解决问题，请除去逗号：
+您会看到第 17 行的结尾有逗号，因此第 18 行上应该存在键/值对。要解决问题，请除去逗号：
+
+
 ```
 15   "jade": "~1.3.0",
 16   "mongodb": "*",
@@ -105,13 +109,17 @@ lastupdated: "2018-03-27"
 
 尤其是，可以启用 stdout 和 stderr 日志记录。有关如何为通过使用 {{site.data.keyword.Bluemix_notm}} 内置 buildpack 部署的应用程序配置日志文件的更多信息，请参阅以下列表：
 
-* 对于 Liberty for Java™ 应用程序，请参阅 [Liberty：Logging and Trace ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}。
+
+
+  * 对于 Liberty for Java™ 应用程序，请参阅 [Liberty：记录和跟踪 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}。
   * 对于 Node.js 应用程序，请参阅 [Node.js debugging starts with better logging! ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2015/03/node-js-better-logging/){: new_window}。
   * 对于 PHP 应用程序，请参阅 [error_log ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://php.net/manual/en/function.error-log.php){: new_window}。
   * 对于 Python 应用程序，请参阅 [Logging HOWTO ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://docs.python.org/2/howto/logging.html){: new_window}。
   * 对于 Ruby on Rails 应用程序，请参阅 [The Logger ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}。
   * 对于 Ruby Sinatra 应用程序，请参阅 [Logging ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.sinatrarb.com/intro.html#Logging){: new_window}。
-在 cf 命令行界面中输入 `cf logs appname --recent` 后，仅会显示最新的日志。要查看先前发生的错误的日志，必须检索所有日志并搜索错误。要检索应用程序的所有日志，请使用以下一种方法：<dl>
+
+在 cf 命令行界面中输入 `cf logs appname --recent` 后，仅会显示最新的日志。要查看先前发生的错误的日志，必须检索所有日志并搜索错误。要检索应用程序的所有日志，请使用以下一种方法：
+<dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>{{site.data.keyword.loganalysisshort}} 服务的集成日志文件搜索和分析功能可以帮助您快速识别错误。有关更多信息，请参阅 <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>。</dd>
 <dt><strong>第三方工具</strong></dt>
@@ -123,20 +131,24 @@ lastupdated: "2018-03-27"
 以前，缺省情况下，可以在 {{site.data.keyword.Bluemix_notm}} 控制台中应用程序视图的**文件** > **日志**下访问 `stdout.log` 和 `stderr.log` 文件。但是，对于托管 {{site.data.keyword.Bluemix_notm}} 的当前版本的 Cloud Foundry，应用程序日志记录不再可用。要继续保持可在 {{site.data.keyword.Bluemix_notm}} 控制台中的**文件** > **日志**下访问 stdout 和 stderr 应用程序日志记录，可以将日志记录重定向到 {{site.data.keyword.Bluemix_notm}} 文件系统中的其他文件，具体取决于正在使用的运行时。
 
   * 对于 Liberty for Java 应用程序，定向到 stdout 和 stderr 的输出已包含在 logs 目录下的 `messages.log` 文件中。分别查找以 SystemOut 和 SystemErr 为前缀的条目。
-  * 对于 Node.js 应用程序，可以覆盖 console.log 函数以显式写入 logs 目录中的文件。
+
+  * 对于 Node.js 应用程序，可以覆盖 console.log 函数来显式写入 logs 目录中的文件。
   * 对于 PHP 应用程序，可以使用 error_log 函数来写入 logs 目录中的文件。
   * 对于 Python 应用程序，可以让日志记录器写入 logs 目录中的文件：`logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * 对于 Ruby 应用程序，可以让日志记录器写入 logs 目录中的文件。
 
 
-### 调试编码更改
+### 调试代码更改
 {: #debug_code_changes}
 
 如果您对已经部署且正在运作的应用程序进行代码更改，但您的代码更改并未反映在 {{site.data.keyword.Bluemix_notm}} 中，那么您可以使用日志进行调试。无论您的应用程序运行与否，您都可以检查应用程序部署期间或运行时生成的日志，进行调试以找出新代码不运作的原因。
 
+
+
 根据部署新代码的方式，选择下列其中一个方法来调试代码更改：
 
-  * 对于从 cf 命令行部署的新代码，请检查 *cf push* 命令的输出。此外，您还可以使用 *cf logs* 命令来查找解决问题的更多线索。有关如何使用 *cf logs* 命令的更多信息，请参阅[从命令行界面查看日志](/docs/services/CloudLogAnalysis/manage_logs.html#manage_logs)。
+  
 
-  * 对于从 GUI（如 {{site.data.keyword.Bluemix_notm}} 控制台、DevOps Delivery Pipeline 或 Travis-CI）部署的新代码，您可以从该界面检查日志。例如，如果您从 {{site.data.keyword.Bluemix_notm}} 控制台部署新代码，那么您可以转至“仪表板”，查找应用程序，然后查看日志以获取线索。有关如何从 {{site.data.keyword.Bluemix_notm}} 控制台查看日志的更多信息，请参阅[从 {{site.data.keyword.Bluemix}} 仪表板查看日志](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana)。
+  * 对于通过 cf 命令行部署的新代码，请检查 *cf push* 命令的输出。此外，您还可以使用 *cf logs* 命令来查找解决问题的更多线索。有关如何使用 *cf logs* 命令的更多信息，请参阅[通过命令行界面查看日志](/docs/services/CloudLogAnalysis/manage_logs.html#manage_logs)。
 
+  * 对于通过 GUI（如 {{site.data.keyword.Bluemix_notm}} 控制台、DevOps Delivery Pipeline 或 Travis-CI）部署的新代码，您可以在该界面中检查日志。例如，如果您从 {{site.data.keyword.Bluemix_notm}} 控制台部署新代码，那么您可以转至“仪表板”，查找应用程序，然后查看日志以获取线索。有关如何在 {{site.data.keyword.Bluemix_notm}} 控制台中查看日志的更多信息，请参阅[在 {{site.data.keyword.Bluemix}} 仪表板中查看日志](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana)。

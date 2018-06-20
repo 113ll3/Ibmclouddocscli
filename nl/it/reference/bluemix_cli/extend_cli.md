@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-23"
 
 La CLI {{site.data.keyword.Bluemix_notm}} supporta un framework di plug-in per ampliarne la funzionalità. Puoi installare un plug-in da un repository, un URL web o installare un file binario del plug-in localmente.
 
-Il [repository di plug-in della CLI {{site.data.keyword.Bluemix_notm}} ](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg) è il repository ufficiale in cui sono ospitati i plug-in.
+Il [repository di plug-in della CLI {{site.data.keyword.Bluemix_notm}} ](https://tools.ng.bluemix.net){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg) è il repository ufficiale in cui sono ospitati i plug-in.
 
 Per ulteriori comandi per gestire i plug-in, esegui `ibmcloud plugin` per visualizzare i messaggi della guida.
 {: tip}

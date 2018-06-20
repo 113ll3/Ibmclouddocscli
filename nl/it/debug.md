@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-27"
+  years: 2015, 2018
+lastupdated: "2018-05-29"
 
 ---
 
@@ -39,21 +39,22 @@ La seguente procedura mostra come puoi utilizzare il comando `cf logs` per esegu
 	 cf api https://api.stage1.ng.bluemix.net
 	 ```
 
-  2. Accedi a  {{site.data.keyword.Bluemix_notm}} immettendo `cf login`.
+  2. Accedi a {{site.data.keyword.Bluemix_notm}} immettendo `cf login`.
 
-  3. Recupera i log recenti immettendo `cf logs appname --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
+  3. Recupera i log recenti immettendo `cf logs nomeapplicazione --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
     ```
 	cf logs appname --recent | grep '\[STG\]'
 	```
   4. Visualizza il primo errore mostrato nel log.
 
-Se per distribuire le applicazioni utilizzi il plug-in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, nella scheda **Console** dello strumento Eclipse, puoi visualizzare dei log simili all'output di cf logs. Puoi anche aprire una finestra di Eclipse separata per tracciare `i log` quando distribuisci l'applicazione.
+Se utilizzi distribuisci le applicazioni attraverso gli strumenti IBM Eclipse per il plug-in {{site.data.keyword.Bluemix_notm}}, nella scheda **Console** dello strumento Eclipse puoi visualizzare dei log simili all'output di cf logs. Puoi anche aprire una finestra di Eclipse separata per tracciare `i log` quando distribuisci l'applicazione.
 
-Oltre al comando `cf logs`, in {{site.data.keyword.Bluemix_notm}} puoi utilizzare anche il servizio {{site.data.keyword.loganalysisshort}} per raccogliere i dettagli del log.
+Oltre al comando `cf logs`, in {{site.data.keyword.Bluemix_notm}} puoi anche utilizzare il servizio {{site.data.keyword.loganalysisshort}} per raccogliere i dettagli del log. 
 
 ### Debug degli errori di preparazione per un'applicazione Node.js
 
-Il seguente esempio mostra un log che viene visualizzato dopo che immetti `cf logs appname --recent`. Nell'esempio si suppone che si siano verificati errori di preparazione per un'applicazione Node.js:
+Il seguente esempio mostra un log che viene visualizzato dopo che immetti `cf logs nomeapplicazione --recent`. Nell'esempio
+si suppone che si siano verificati errori di preparazione per un'applicazione Node.js:
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
@@ -78,8 +79,7 @@ Il primo errore nel log mostra il motivo per cui la preparazione non riesce. Nel
 {: screen}
 
 
-Per un'applicazione Node.js, il DEA utilizza le informazioni contenute nel file `package.json` per scaricare i moduli. Da questo errore, puoi vedere
-che l'errore si verifica per il modulo. Pertanto, potresti dover riesaminare la riga 18 del file `package.json`.
+Per un'applicazione Node.js, il DEA utilizza le informazioni contenute nel file `package.json` per scaricare i moduli. Da questo errore, puoi vedere che l'errore si verifica per il modulo. Pertanto, potresti dover riesaminare la riga 18 del file `package.json`.
 
 ```
 15   "jade": "~1.3.0",
@@ -106,28 +106,27 @@ Puoi notare che viene inserita una virgola alla fine della riga 17 e quindi è p
 Se durante il runtime riscontri dei problemi con la tua applicazione, i log dell'applicazione possono aiutarti a individuare la causa dell'errore e a risolvere il problema.
 
 In particolare, è possibile abilitare la registrazione in stdout e stderr. Per ulteriori informazioni su come configurare i file di log per le applicazioni
-che vengono distribuite tramite i pacchetti di build integrati {{site.data.keyword.Bluemix_notm}}, vedi il seguente elenco:
+che vengono distribuite tramite i pacchetti di build integrati {{site.data.keyword.Bluemix_notm}}, consulta il seguente elenco:
 
-  * Per le applicazioni Liberty for Java™, vedi [Liberty: Logging and Trace ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}.
+  * Per ulteriori informazioni sulle applicazioni Liberty for Java™, vedi [Liberty Profile: Logging and Trace ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}.
   * Per le applicazioni Node.js, vedi [Node.js debugging starts with better logging! ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2015/03/node-js-better-logging/){: new_window}.
   * Per le applicazioni PHP, vedi [error_log ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://php.net/manual/en/function.error-log.php){: new_window}.
   * Per le applicazioni Python, vedi [Logging HOWTO ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://docs.python.org/2/howto/logging.html){: new_window}.
   * Per le applicazioni Ruby on Rails, vedi [The Logger ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Per le applicazioni Ruby Sinatra, vedi [Logging ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
-Quando immetti `cf logs appname --recent` nell'interfaccia riga di comando cf, vengono visualizzati solo i log più recenti. Per visualizzare i log con gli errori che si sono verificati in precedenza, devi recuperare tutti i log e ricercare gli errori. Per recuperare tutti i log
-per la tua applicazione, utilizza uno dei seguenti metodi:
+Quando immetti `cf logs nomeapplicazione --recent` nell'interfaccia riga di comando cf, vengono visualizzati solo i log più recenti. Per visualizzare i log con gli errori che si sono verificati in precedenza, devi recuperare tutti i log e ricercare gli errori. Per recuperare tutti i log per la tua applicazione, utilizza uno dei seguenti metodi:
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>La capacità di ricerca e analisi dei file di log del servizio {{site.data.keyword.loganalysisshort}} possono aiutarti a identificare rapidamente gli errori. Per ulteriori informazioni, vedi <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>.</dd>
-<dt><strong>Strumenti di terze parti </strong></dt>
+<dt><strong>Strumenti di terze parti</strong></dt>
 <dd>Puoi raccogliere ed esportare i log dalla tua applicazione a un host di log esterno. Per ulteriori informazioni, vedi <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">Configurazione della registrazione esterna</a>.</dd>
-<dt><strong>Script per la raccolta e l'esportazione dei log  </strong></dt>
+<dt><strong>Script per la raccolta e l'esportazione dei log </strong></dt>
 <dd>Per utilizzare uno script per la raccolta e l'esportazione automatica dei log in un file esterno, devi connetterti alla console {{site.data.keyword.Bluemix_notm}} dal tuo computer in cui deve essere disponibile spazio sufficiente per scaricare i log. Per ulteriori informazioni, vedi <a href="/docs/get-support/quicktickresp.html#collecting-diagnostic-information" target="_blank">Raccolta delle informazioni di diagnostica</a>. </dd>
 </dl>
 
-I file `stdout.log` e `stderr.log` erano precedentemente accessibili, per impostazione predefinita, tramite la vista dell'applicazione nella console {{site.data.keyword.Bluemix_notm}} sotto **Files** > **logs**. Tuttavia, tale registrazione dell'applicazione non è più disponibile
-con la versione corrente di Cloud Foundry in cui è ospitato {{site.data.keyword.Bluemix_notm}}. Per fare in modo che la registrazione dell'applicazione stdout e stderr continui a essere accessibile tramite la console {{site.data.keyword.Bluemix_notm}} sotto **Files** > **logs**, puoi reindirizzare la registrazione ad altri file nel file system {{site.data.keyword.Bluemix_notm}}, a seconda del runtime che stai utilizzando.
+I file `stdout.log` e `stderr.log` erano precedentemente accessibili, per impostazione predefinita, tramite la vista dell'applicazione nella console {{site.data.keyword.Bluemix_notm}} sotto **File** > **log**. Tuttavia, tale registrazione dell'applicazione non è più disponibile
+con la versione corrente di Cloud Foundry in cui è ospitato {{site.data.keyword.Bluemix_notm}}. Per fare in modo che la registrazione dell'applicazione stdout e stderr continui a essere accessibile tramite la console {{site.data.keyword.Bluemix_notm}} sotto **File** > **log**, puoi reindirizzare la registrazione ad altri file nel file system {{site.data.keyword.Bluemix_notm}}, a seconda del runtime che stai utilizzando.
 
   * Per le applicazioni Liberty for Java, l'output indirizzato a stdout e stderr è già contenuto nel file `messages.log` nella directory logs. Ricerca le voci con prefisso SystemOut e SystemErr.
   * Per le applicazioni Node.js, puoi sovrascrivere la funzione console.log per scrivere esplicitamente in un file nella directory logs.
@@ -139,11 +138,10 @@ con la versione corrente di Cloud Foundry in cui è ospitato {{site.data.keyword
 ### Debug delle modifiche al codice
 {: #debug_code_changes}
 
-Se stai apportando modifiche al codice in un'applicazione già distribuita e funzionante, ma le modifiche non vengono applicate in {{site.data.keyword.Bluemix_notm}}, puoi eseguire il debug utilizzando i log. A prescindere che la tua applicazione sia o no in esecuzione, puoi controllare i log generati durante la distribuzione dell'applicazione o il runtime per scoprire il motivo per cui il nuovo codice non funziona.
+Se stai apportando modifiche al codice in un'applicazione già distribuita e funzionante, ma le modifiche non vengono rispecchiate in {{site.data.keyword.Bluemix_notm}}, puoi eseguire il debug utilizzando i log. A prescindere che la tua applicazione sia o no in esecuzione, puoi controllare i log generati durante la distribuzione dell'applicazione o il runtime per scoprire il motivo per cui il nuovo codice non funziona.
 
 A seconda del modo in cui il nuovo codice viene distribuito, scegli uno dei seguenti metodi per eseguire il debug delle modifiche al codice:
 
   * In caso di nuovo codice distribuito dalla riga di comando cf, controlla l'output del comando *cf push*. Inoltre, puoi utilizzare il comando *cf logs* per trovare ulteriori indizi utili per la risoluzione del problema. Per ulteriori informazioni su come utilizzare il comando *cf logs*, vedi [visualizzazione dei log dall'interfaccia riga di comando](/docs/services/CloudLogAnalysis/manage_logs.html#manage_logs).
 
-  * In caso di nuovo codice distribuito da una GUI, quale ad esempio la console {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o Travis-CI, puoi controllare i log dall'interfaccia. Ad esempio, se distribuisci il nuovo codice dalla console {{site.data.keyword.Bluemix_notm}}, puoi passare al dashboard, trovare la tua applicazione e visualizzare i log per trovare degli indizi.   Per ulteriori informazioni su come visualizzare i log dalla console {{site.data.keyword.Bluemix_notm}}, vedi [Visualizzazione dei log dal dashboard {{site.data.keyword.Bluemix}}](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana).  
-
+  * In caso di nuovo codice distribuito da una GUI, quale ad esempio la console {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o l'IC di Travis, puoi controllare i log dall'interfaccia. Ad esempio, se distribuisci il nuovo codice dalla console {{site.data.keyword.Bluemix_notm}}, puoi passare al dashboard, trovare la tua applicazione e visualizzare i log per trovare degli indizi. Per ulteriori informazioni su come visualizzare i log dalla console {{site.data.keyword.Bluemix_notm}}, vedi [Visualizzazione dei log dal dashboard {{site.data.keyword.Bluemix}}](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana).

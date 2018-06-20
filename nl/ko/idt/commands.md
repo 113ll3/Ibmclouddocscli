@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -21,10 +21,10 @@ lastupdated: "2018-05-23"
 버전: 1.2.0
 릴리스 날짜: 2018년 3월 8일
 
-2018년 5월부터 {{site.data.keyword.Bluemix_notm}} CLI 명령은 `bluemix` 및 `bx`에서 `ibmcloud`로 변경되었습니다. 그러나 `bluemix` 및 `bx` CLI 명령은 이후에 더 이상 사용되지 않는 항목으로 지정되기 전까지 사용할 수 있습니다.
+2018년 5월부터 {{site.data.keyword.Bluemix_notm}} CLI 명령은 `bluemix` 및 `bx`에서 `ibmcloud`로 변경되었습니다. 하지만 `bluemix` 및 `bx` CLI 명령은 나중에 제거할 때까지 사용할 수 있습니다.
 {: tip}
 
-프로젝트를 작성하고 이를 배치, 디버그 및 테스트하려면 다음 {{site.data.keyword.dev_cli_notm}} CLI(ibmcloud dev) 명령을 사용하십시오. 
+프로젝트를 작성하고 이를 배치, 디버그 및 테스트하려면 다음 {{site.data.keyword.dev_cli_notm}} CLI(ibmcloud dev) 명령을 사용하십시오.
 
 - [build](#build): 로컬 컨테이너에 있는 프로젝트 빌드
 - [code](#code): 프로젝트로부터 코드 다운로드
@@ -274,7 +274,7 @@ ibmcloud dev enable
 * java-mp(Java - Java MicroProfile로 해석)
 * java-spring(Java - Spring Framework로 해석)
 
-`ibmcloud dev enable` 명령을 사용하여 작성된 파일 중 프로젝트 폴더에 있는 기존 파일과 이름이 충돌하는 파일은 `.merge` 파일 확장자를 사용하여 저장됩니다.   
+`ibmcloud dev enable` 명령을 사용하여 작성된 파일 중 프로젝트 폴더에 있는 기존 파일과 이름이 충돌하는 파일은 `.merge` 파일 확장자를 사용하여 저장됩니다.  
 
 ### enable 명령 매개변수
 {: #enable-parameters}
@@ -422,7 +422,7 @@ ibmcloud dev shell
 
 {{site.data.keyword.dev_cli_short}} CLI가 애플리케이션의 Docker 컨테이너에 대한 대화식 쉘을 엽니다. shell 명령의 기본 대상 컨테이너는 `cli-config.yml` 파일의 `container-shell-target` 값으로 정의되며, 올바른 값은 `run` 또는 `tools`입니다. 이 값이 정의되지 않거나 올바르지 않은 값이 지정된 경우 `shell` 명령은 기본적으로 `tools` 컨테이너를 대상으로 합니다. shell 명령은 해당 Dockerfile의 `WORKDIR` 명령어로 지정된 디렉토리에 컨테이너를 엽니다. Dockerfile에 `WORKDIR`이 나열되지 않은 경우에는 컨테이너 루트가 작업 디렉토리로 사용됩니다. 자세한 정보는 [이 참조](https://docs.docker.com/engine/reference/builder/#workdir)를 참조하십시오.
 
-또는, `run` 또는 `tools`를 인수로 전달하도록 결정할 수 있으며 이렇게 하면 해당 컨테이너가 선택되고 이 컨테이너에 대해 쉘이 열립니다. 마찬가지로, `container-name` 매개변수를 사용하여 쉘을 열 컨테이너의 이름을 전달할 수 있습니다. 그러나 이 플래그는 실행 중인 컨테이너가 없는 경우 사용해야 합니다. `run` 및 `tools` 인수는 더 유연하며 현재 실행 중인 컨테이너가 있는 경우 이 컨테이너로 전환할 수 있게 해 줍니다. 예를 들어, tools 컨테이너가 실행 중인 상태에서 `ibmcloud dev shell run`을 실행하는 경우 `tools` 컨테이너가 중지되고 `run` 컨테이너가 시작되며, 이는 반대의 경우도 마찬가지입니다. 
+또는, `run` 또는 `tools`를 인수로 전달하도록 결정할 수 있으며 이렇게 하면 해당 컨테이너가 선택되고 이 컨테이너에 대해 쉘이 열립니다. 마찬가지로, `container-name` 매개변수를 사용하여 쉘을 열 컨테이너의 이름을 전달할 수 있습니다. 그러나 이 플래그는 실행 중인 컨테이너가 없는 경우 사용해야 합니다. `run` 및 `tools` 인수는 더 유연하며 현재 실행 중인 컨테이너가 있는 경우 이 컨테이너로 전환할 수 있게 해 줍니다. 예를 들어, tools 컨테이너가 실행 중인 상태에서 `ibmcloud dev shell run`을 실행하는 경우 `tools` 컨테이너가 중지되고 `run` 컨테이너가 시작되며, 이는 반대의 경우도 마찬가지입니다.
 
 `shell` 명령을 실행할 때 대상 `run` or `tools` 컨테이너가 이미 실행 중이 아닌 경우에는 대상 컨테이너가 시작됩니다. 그러나 Dockerfile의 기본 `Cmd` 또는 `Entrypoint`는 서버 프로세스를 시작하는 대신 직접 쉘에서 실행하기 위해 대체됩니다. 이는 사용자가 `run` 또는 `tools` 컨테이너를 시작하고, 임의의 또는 사용자 정의 명령을 사용하여 서버를 수동으로 시작할 수 있게 해 줍니다.
 
@@ -431,7 +431,7 @@ ibmcloud dev shell
 
 플래그 외에 이 명령에 전달하는 추가 매개변수는 쉘이 열린 후 실행하는 명령으로 구문 분석됩니다. 실행할 명령을 제공하면 컨테이너 내의 쉘은 해당 명령을 실행한 후 종료되며 터미널로 리턴됩니다.
 
-예를 들면, `bx dev shell tools ls`를 호출하여 tools 컨테이너 쉘 내에서 Linux `ls` 명령을 실행할 수 있습니다. `ibmcloud dev shell "ls -la"`와 같이 인수를 따옴표로 묶어 쉘 명령 실행에 전달되는 추가 플래그를 지정할 수도 있습니다. 
+예를 들면, `bx dev shell tools ls`를 호출하여 tools 컨테이너 쉘 내에서 Linux `ls` 명령을 실행할 수 있습니다.   `ibmcloud dev shell "ls -la"`와 같이 인수를 따옴표로 묶어 쉘 명령 실행에 전달되는 추가 플래그를 지정할 수도 있습니다.
 
 ### shell 명령 매개변수
 {: #shell-parameters}
@@ -595,7 +595,7 @@ ibmcloud dev build/deploy/view -t container --trace
 
 이 기능을 사용할 수 있는 명령은 `build, debug, deploy, get-credentials, run, stop, test, view`입니다.
 
-어떤 이유에서든 한 명령이 실패하면 후속 명령은 실행되지 않습니다. `debug` 또는 `run` 뒤에 명령이 있는 경우에는 `debug` 또는 `run`이 현재 터미널 창에서 프로세스를 강제 종료하는 것 외의 방법으로 종료된 경우에만 실행이 계속됩니다. `CTRL+C`는 프로세스를 강제 종료하며 후속 명령을 실행하지 않습니다. 예를 들면, 실행 중인 컨테이너를 중지하고 다음 명령 실행을 계속하기 위해 다른 터미널 창에서 `ibmcloud dev stop`을 실행할 수 있습니다. 
+어떤 이유에서든 한 명령이 실패하면 후속 명령은 실행되지 않습니다. `debug` 또는 `run` 뒤에 명령이 있는 경우에는 `debug` 또는 `run`이 현재 터미널 창에서 프로세스를 강제 종료하는 것 외의 방법으로 종료된 경우에만 실행이 계속됩니다. `CTRL+C`는 프로세스를 강제 종료하며 후속 명령을 실행하지 않습니다. 예를 들면, 실행 중인 컨테이너를 중지하고 다음 명령 실행을 계속하기 위해 다른 터미널 창에서 `ibmcloud dev stop`을 실행할 수 있습니다.
 
 
 ## build, debug, run 및 test용 매개변수

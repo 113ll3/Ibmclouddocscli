@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-27"
+  years: 2015, 2018
+lastupdated: "2018-05-29"
 
 ---
 
@@ -35,23 +35,21 @@ lastupdated: "2018-03-27"
 下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/starters/install_cli.html){: new_window}。
 
   1. 在 cf 指令行介面中輸入下列程式碼，以連接至 {{site.data.keyword.Bluemix_notm}}：
-
-	 ```
+     ```
 	 cf api https://api.stage1.ng.bluemix.net
 	 ```
 
   2. 輸入 `cf login`，以登入 {{site.data.keyword.Bluemix_notm}}。
 
   3. 輸入 `cf logs appname --recent`，以擷取最近日誌。如果您要過濾詳細日誌，請使用 `grep` 選項。例如，您可以輸入下列程式碼，只顯示 [STG] 日誌：
-
-	```
+    ```
 	cf logs appname --recent | grep '\[STG\]'
 	```
   4. 檢視日誌中顯示的第一個錯誤。
 
 如果您使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 外掛程式來部署應用程式，則會在 Eclipse 工具的**主控台**標籤中，看到類似 cf logs 輸出的日誌。當您部署應用程式時，也可以開啟不同的 Eclipse 視窗來追蹤`日誌`。
 
-除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 {{site.data.keyword.loganalysisshort}} 服務來收集日誌詳細資料。
+除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 {{site.data.keyword.loganalysisshort}} 服務來收集日誌詳細資料。 
 
 ### 針對 Node.js 應用程式的編譯打包錯誤進行除錯
 
@@ -112,7 +110,7 @@ lastupdated: "2018-03-27"
 
 具體而言，您可以啟用記載至 stdout 及 stderr。如需如何針對使用 {{site.data.keyword.Bluemix_notm}} 內建建置套件部署的應用程式，配置其日誌檔的相關資訊，請參閱下列清單：
 
-
+  
 
   * 若為 Liberty for Java™ 應用程式，請參閱 [Liberty: Logging and Trace ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}。
   * 若為 Node.js 應用程式，請參閱 [Node.js debugging starts with better logging! ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2015/03/node-js-better-logging/){: new_window}。
@@ -134,7 +132,7 @@ lastupdated: "2018-03-27"
 依預設，之前可透過 {{site.data.keyword.Bluemix_notm}} 主控台中的應用程式視圖，在**檔案** > **日誌**下存取 `stdout.log` 及 `stderr.log` 檔案。然而，管理 {{site.data.keyword.Bluemix_notm}} 所在的現行 Cloud Foundry 版本已不再提供該項應用程式記載功能。若要維持可透過 {{site.data.keyword.Bluemix_notm}} 主控台在**檔案** > **日誌**下存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的運行環境而定）。
 
   * 若為 Liberty for Java 應用程式，導向到 stdout 及 stderr 的輸出已包含在 logs 目錄的 `messages.log` 檔案中。請分別尋找字首為 SystemOut 及 SystemErr 的項目。
-
+  
   * 若為 Node.js 應用程式，您可以置換 console.log 函數，以明確地寫入 logs 目錄中的檔案。
   * 若為 PHP 應用程式，您可以使用 error_log 函數來寫入 logs 目錄中的檔案。
   * 若為 Python 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案：`logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
@@ -148,9 +146,8 @@ lastupdated: "2018-03-27"
 
 視新程式碼部署的方式而定，選擇下列其中一個方法針對程式碼變更進行除錯：
 
-
+  
 
   * 若為從 cf 指令行部署的新程式碼，請檢閱 *cf push* 指令的輸出。此外，您可以使用 *cf logs* 指令來尋找可解決問題的更多線索。如需如何使用 *cf logs* 指令的相關資訊，請參閱[從指令行介面檢視日誌](/docs/services/CloudLogAnalysis/manage_logs.html#manage_logs)。
 
-  * 若為從 {{site.data.keyword.Bluemix_notm}} 主控台、DevOps Delivery Pipeline 或 Travis-CI 這類 GUI 部署的新程式碼，您可以從該介面檢閱日誌。例如，如果您是從 {{site.data.keyword.Bluemix_notm}} 主控台部署新程式碼，則可以移至「儀表板」、找到您的應用程式，然後檢視日誌以尋找線索。如需如何從 {{site.data.keyword.Bluemix_notm}} 主控台檢視日誌的相關資訊，請參閱[從 {{site.data.keyword.Bluemix}} 儀表板檢視日誌](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana)。  
-
+  * 若為從 {{site.data.keyword.Bluemix_notm}} 主控台、DevOps Delivery Pipeline 或 Travis-CI 這類 GUI 部署的新程式碼，您可以從該介面檢閱日誌。例如，如果您是從 {{site.data.keyword.Bluemix_notm}} 主控台部署新程式碼，則可以移至「儀表板」、找到您的應用程式，然後檢視日誌以尋找線索。如需如何從 {{site.data.keyword.Bluemix_notm}} 主控台檢視日誌的相關資訊，請參閱[從 {{site.data.keyword.Bluemix}} 儀表板檢視日誌](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana)。

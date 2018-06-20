@@ -48,7 +48,8 @@ lastupdated: "2018-05-23"
 
 現在，您已準備好管理 {{site.data.keyword.Bluemix_notm}} 資源。鍵入 `ibmcloud help` 以查看指令說明。
 
-如果您使用聯合 ID，請遵循[這裡](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)的指示，使用一次性密碼或 API 金鑰進行登入  {: tip}
+如果您使用聯合 ID，請遵循[這裡](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)的指示，使用一次性密碼或 API 金鑰進行登入。
+{: tip}
 
 ## 可進一步探索 {{site.data.keyword.Bluemix_notm}} CLI 的其他鏈結
 

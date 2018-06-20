@@ -48,7 +48,8 @@ Per iniziare solo con la CLI {{site.data.keyword.Bluemix_notm}}:
 
 Ora sei pronto a gestire le risorse {{site.data.keyword.Bluemix_notm}}. Immetti `ibmcloud help` per visualizzare le descrizioni dei comandi.
 
-Se stai utilizzando un ID federato, segui le istruzioni [qui](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) e accedi con un passcode monouso o una chiave API.  {: tip}
+Se stai utilizzando un ID federato, segui le istruzioni [qui](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) per accedere con un passcode monouso o una chiave API.
+{: tip}
 
 ## Altri link per esplorare ulteriormente la CLI {{site.data.keyword.Bluemix_notm}}
 

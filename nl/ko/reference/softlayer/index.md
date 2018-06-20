@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 ---
 
 {:new_window: target="_blank"}
@@ -20,19 +20,19 @@ lastupdated: "2018-05-23"
 
 SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령을 사용하십시오.
 
-2018년 5월부터 {{site.data.keyword.Bluemix_notm}} CLI 명령은 `bluemix` 및 `bx`에서 `ibmcloud`로 변경되었습니다. 그러나 `bluemix` 및 `bx` CLI 명령은 이후에 더 이상 사용되지 않는 항목으로 지정되기 전까지 사용할 수 있습니다.
+2018년 5월부터 {{site.data.keyword.Bluemix_notm}} CLI 명령은 `bluemix` 및 `bx`에서 `ibmcloud`로 변경되었습니다. 하지만 `bluemix` 및 `bx` CLI 명령은 나중에 제거할 때까지 사용할 수 있습니다.
 {: tip}
 
 
 시작하려면 {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 세부사항은
-[IBM Cloud CLI ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}를 참조하십시오. 
+[IBM Cloud CLI ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}를 참조하십시오.
 
-{{site.data.keyword.Bluemix_notm}} 명령의 전체 목록은 [{{site.data.keyword.Bluemix_notm}} (ibmcloud) 명령](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)을 참조하십시오. 
+{{site.data.keyword.Bluemix_notm}} CLI 명령의 전체 목록은 [{{site.data.keyword.Bluemix_notm}} (ibmcloud) 명령](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)을 참조하십시오.
 
 
 ## 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령
 
-다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 보려면 `ibmcloud sl` 명령을 사용하십시오. 
+다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 보려면 `ibmcloud sl` 명령을 사용하십시오.
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 명령">
 <caption>표 1. 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령</caption>
@@ -367,7 +367,7 @@ SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_
  </table>
 
 ### 명령 사용
-명령에 대한 도움말 정보를 보려면 `ibmcloud sl [command] -h`를 실행하십시오. 
+명령에 대한 도움말 정보를 보려면 `ibmcloud sl [command] -h`를 실행하십시오.
 
 ### ibmcloud sl init
 {: #sl_init}
@@ -2103,9 +2103,9 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>필수. 포트 번호.</dd>
 <dt>-t, --routing-type</dt>
-<dd>필수. 라우팅 유형의 ID. ID를 찾으려면 'ibmcloud sl loadbal routing-types'를 실행하십시오. </dd>
+<dd>필수. 라우팅 유형의 ID. ID를 찾으려면 'ibmcloud sl loadbal routing-types'를 실행하십시오.</dd>
 <dt>-m, --routing-method</dt>
-<dd>필수. 라우팅 메소드의 ID. ID를 찾으려면 'ibmcloud sl loadbal routing-methods'를 실행하십시오. </dd>
+<dd>필수. 라우팅 메소드의 ID. ID를 찾으려면 'ibmcloud sl loadbal routing-methods'를 실행하십시오.</dd>
 </dl>
 
 ### ibmcloud sl loadbal group-delete
@@ -2137,9 +2137,9 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>포트 번호를 변경합니다.</dd>
 <dt>-t, --routing-type</dt>
-<dd>라우팅 유형의 ID를 변경합니다. ID를 찾으려면 'ibmcloud sl loadbal routing-types'를 실행하십시오. </dd>
+<dd>라우팅 유형의 ID를 변경합니다. ID를 찾으려면 'ibmcloud sl loadbal routing-types'를 실행하십시오.</dd>
 <dt>-m, --routing-method</dt>
-<dd>라우팅 메소드의 ID를 변경합니다. ID를 찾으려면 'ibmcloud sl loadbal routing-methods'를 실행하십시오. </dd>
+<dd>라우팅 메소드의 ID를 변경합니다. ID를 찾으려면 'ibmcloud sl loadbal routing-methods'를 실행하십시오.</dd>
 </dl>
 
 ### ibmcloud sl loadbal group-reset
@@ -2801,7 +2801,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>OS 설치 코드. 팁: <OS>_LATEST를 지정할 수 있습니다.</dd>
 <dt>--image</dt>
-<dd>이미지 ID. 'ibmcloud sl image list'를 참조하십시오. </dd>
+<dd>이미지 ID. 'ibmcloud sl image list'를 참조하십시오.</dd>
 <dt>--billing</dt>
 <dd>청구 비율. 기본값: hourly. 옵션: hourly, monthly.</dd>
 <dt>--dedicated</dt>
@@ -3123,7 +3123,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>이미지 ID. 기본값은 현재 운영 체제를 사용하는 것입니다.</dd>
 <dt>참조:</dt>
-<dd>'ibmcloud sl image list'를 참조하십시오. </dd>
+<dd>'ibmcloud sl image list'를 참조하십시오.</dd>
 <dt>-k, --key</dt>
 <dd>루트 사용자에게 추가할 SSH 키 ID(다중 발생 허용).</dd>
 <dt>-f, --force</dt>
