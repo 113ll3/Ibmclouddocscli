@@ -5,7 +5,7 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 ---
 
 {:new_window: target="_blank"}
@@ -21,14 +21,16 @@ CLI do {{site.data.keyword.Bluemix_notm}}. Não é mais necessário instalar o p
 
 Use os comandos de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} na interface da linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} para configurar e gerenciar os serviços do SoftLayer.
 
-Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que eles sejam descontinuados em uma data posterior.
+Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que sejam removidos em uma data posterior.
 {: tip}
 
 
 Para iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Veja
 [IBM Cloud CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} para obter detalhes.
 
-Para obter uma lista completa de comandos do {{site.data.keyword.Bluemix_notm}}, veja: [Comandos do {{site.data.keyword.Bluemix_notm}} (ibmcloud)](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)
+Para obter uma lista completa de comandos da CLI do {{site.data.keyword.Bluemix_notm}}, consulte:
+Comandos do [{{site.data.keyword.Bluemix_notm}}
+(ibmcloud)](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli).
 
 
 ## Comandos gerais de infraestrutura {{site.data.keyword.BluSoftlayer_notm}}

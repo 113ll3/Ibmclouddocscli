@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-05-23"
 Versão: 1.2.0
 Liberação: 08 de março de 2018
 
-Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que eles sejam descontinuados em uma data posterior.
+Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que sejam removidos em uma data posterior.
 {: tip}
 
 Use os comandos da CLI do {{site.data.keyword.dev_cli_notm}} (ibmcloud dev) a seguir para criar um projeto, implementar, depurar e testá-lo.
@@ -132,7 +132,7 @@ ibmcloud dev build --debug
 Para iniciar, execute o comando a seguir no diretório de projeto atual para depurar seu aplicativo:
 
 ```
-ibmcloud dev debug
+Ibmcloud dev debug
 ```
 {: codeblock}
 

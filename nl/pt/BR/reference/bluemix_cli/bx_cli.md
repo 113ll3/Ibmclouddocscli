@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -15,15 +15,15 @@ lastupdated: "2018-05-23"
 {:tip: .tip}
 
 # {{site.data.keyword.Bluemix_notm}} (ibmcloud) comandos
-{: #ibmcloud_cli}
+{: #bluemix_cli}
 
-Versão: 0.6.7
+Versão: 0.7.1
 
 A interface de linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} fornece um conjunto de comandos que são agrupados por namespace para que os usuários interajam com o {{site.data.keyword.Bluemix_notm}}.
 
-A partir da versão 0.5.0, o cliente da linha de comandos do {{site.data.keyword.Bluemix_notm}} empacota um cliente da linha de comandos Cloud Foundry em sua instalação. Se você tiver seu próprio cf cli instalado, não use os comandos do {{site.data.keyword.Bluemix_notm}} CLI `ibmcloud [command]` e do Cloud Foundry CLI `cf [command]` de sua própria instalação no mesmo contexto. Em vez disso, use `ibmcloud cf [command]` se desejar usar cf cli para gerenciar recursos do Cloud Foundry no contexto do {{site.data.keyword.Bluemix_notm}} CLI. Observe que `ibmcloud cf api/login/logout/target` não é permitido e deve-se usar `ibmcloud api/login/logout/target` no lugar.
+A partir da versão 0.5.0, o cliente da linha de comandos do {{site.data.keyword.Bluemix_notm}} empacota um cliente da linha de comandos Cloud Foundry em sua instalação. Se você tiver seu próprio cf cli instalado, não use os comandos do {{site.data.keyword.Bluemix_notm}} CLI `ibmcloud [command]` e do Cloud Foundry CLI `cf [command]` de sua própria instalação no mesmo contexto. Em vez disso, use `ibmcloud cf [command]` se desejar usar cf cli para gerenciar recursos do Cloud Foundry no contexto do {{site.data.keyword.Bluemix_notm}} CLI.  Observe que `ibmcloud cf api/login/logout/target` não é permitido e deve-se usar `ibmcloud api/login/logout/target` no lugar.
 
-Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que eles sejam descontinuados em uma data posterior.
+Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que sejam removidos em uma data posterior.
 {: tip}
 
 A seguir são listados os comandos detalhados que são suportados pelo {{site.data.keyword.Bluemix_notm}} CLI, incluindo seus nomes, argumentos, opções, pré-requisitos, descrições e exemplos.
@@ -33,13 +33,13 @@ A seguir são listados os comandos detalhados que são suportados pelo {{site.da
 
 <dl>
 <dt>Nó de Extremidade</dt>
-<dd>Um terminal de API deve ser configurado por meio de <code>ibmcloud api</code> antes de usar o comando.</dd>
+<dd>Um terminal de API deve ser configurado por meio de <code>bluemix api</code> antes de usar o comando.</dd>
 <dt>Login</dt>
-<dd>Efetuar login usando o comando <code>ibmcloud login</code> é necessário antes de usar esse comando.
+<dd>É necessário efetuar login usando o comando <code>bluemix login</code> antes de usar esse comando.
 Se estiver efetuando login com o ID federado, use a opção '--sso' para se autenticar com uma senha única ou use '--apikey' para se autenticar com a chave API. Acesse o console do {{site.data.keyword.Bluemix_notm}} **Gerenciar** &gt; **Segurança** &gt; **Chaves API da plataforma** para criar chaves API.
 </dd>
 <dt>Destino</dt>
-<dd>O comando <code>ibmcloud target</code> deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
+<dd>O comando <code>bluemix target</code> deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
 <dt>Docker</dt>
 <dd>A CLI do Docker (docker) deve estar instalada para executar esse comando.</dd>
 </dl>
@@ -48,7 +48,7 @@ Se estiver efetuando login com o ID federado, use a opção '--sso' para se aute
 Use os índices nas tabelas a seguir para se referir aos comandos ibmcloud usados frequentemente.
 
 ## Comandos ibmcloud gerais
-{: #ibmcloud_commands_index}
+{: #bx_commands_index}
 
 <table summary="General ibmcloud commands.">
 <caption>Tabela 1. Comandos gerais ibmcloud</caption>
@@ -74,12 +74,12 @@ Use os índices nas tabelas a seguir para se referir aos comandos ibmcloud usado
  </table>
 
  ## Comandos para gerenciar e configurar os serviços de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} (ibmcloud sl)
-  {: #ibmcloud_commands_softlayer}
+  {: #bx_commands_softlayer}
 
-Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} foram mesclados no {{site.data.keyword.Bluemix_notm}} CLI. Para obter mais informações sobre como usar o {{site.data.keyword.Bluemix_notm}} CLI para configurar e gerenciar os serviços de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}, veja: [Comandos de infraestrutura do {{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.BluSoftlayer_notm}} (ibmcloud sl)](/docs/cli/reference/softlayer/index.md#softlayer_cli).
+Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} foram mesclados no {{site.data.keyword.Bluemix_notm}} CLI. Para obter informações adicionais sobre como usar a CLI do {{site.data.keyword.Bluemix_notm}} para configurar e gerenciar os serviços de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}, consulte: [Comandos da infraestrutura da CLI do {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.BluSoftlayer_notm}} (sl ibmcloud)](/docs/cli/reference/softlayer/index.html#softlayer_cli).
 
  ## Comandos para gerenciar contas, organizações e funções
- {: #ibmcloud_commands_account}
+ {: #bx_commands_account}
 
 <table summary="Comandos ibmcloud que podem ser usados para gerenciar contas, organizações, espaços e funções.">
 <caption>Tabela 2. Comandos para gerenciar contas, organizações, espaços e funções</caption>
@@ -118,7 +118,7 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
  <td>[Lista conta ibmcloud](bx_cli.html#ibmcloud_account_list)</td>
  <td>[conta ibmcloud org-account](bx_cli.html#ibmcloud_account_org_account)</td>
  <td>[usuários da conta ibmcloud](bx_cli.html#ibmcloud_account_users)</td>
- <td>[conta ibmcloud usuários-delete](bx_cli.html#ibmcloud_account_users_delete)</td>
+ <td>[account user-remove](bx_cli.html#ibmcloud_account_user_remove)</td>
  <td>[conta ibmcloud user-invite](bx_cli.html#ibmcloud_account_user_invite)</td>
  </tr>
  <tr>
@@ -144,16 +144,16 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
 </tr>
 <tr>
   <td>[Ibmcloud iam access-group-policy](bx_cli.html#ibmcloud_iam_access-group-policy)</td>
-  <td>[ibmcloud iam access-group-policy-create](bx_cli.html#ibmcloud_iam_access-group-policy-create)</td>
-  <td>[ibmcloud iam access-group-policy-update](bx_cli.html#ibmcloud_iam_access-group-policy-update)</td>
-  <td>[ibmcloud iam access-group-policy-delete](bx_cli.html#ibmcloud_iam_access-group-policy-delete)</td>
+  <td>[Ibmcloud iam access-group-policy-create](bx_cli.html#ibmcloud_iam_access_group_policy_create)</td>
+  <td>[ibmcloud iam access-group-policy-update](bx_cli.html#ibmcloud_iam_access_group_policy_update)</td>
+  <td>[Ibmcloud iam access-group-policy-delete](bx_cli.html#ibmcloud_iam_access_group_policy_delete)</td>
  </tr>
  </tbody>
  </table>
 
 
  ## Comandos para gerenciar recursos e grupos de recursos
-{: #ibmcloud_commands_resource}
+{: #bx_commands_resource}
 
 <table summary="Comando ibmcloud que pode ser usado para gerenciar grupos de recursos e recursos.">
   <caption>Tabela 3. Comandos para gerenciar grupos de recursos e recursos</caption>
@@ -164,9 +164,9 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
     <tr>
       <td>[ibmcloud grupos de recursos](bx_cli.html#ibmcloud_resource_groups)</td>
       <td>[ibmcloud grupo de recursos](bx_cli.html#ibmcloud_resource_group)</td>
+      <td>[resource group-create](bx_cli.html#ibmcloud_resource_group_create)</td>
       <td>[ibmcloud resource group-update](bx_cli.html#ibmcloud_resource_group_update)</td>
       <td>[ibmcloud cotas de recurso](bx_cli.html#ibmcloud_resource_quotas)</td>
-      <td>[ibmcloud cota de recursos](bx_cli.html#ibmcloud_resource_quota)</td>
     </tr>
     <tr>
       <td>[ibmcloud resource service-instances](bx_cli.html#ibmcloud_resource_service_instances)</td>
@@ -180,8 +180,10 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
       <td>[ibmcloud resource service-binding](bx_cli.html#ibmcloud_resource_service_binding)</td>
       <td>[ibmcloud resource service-binding-create](bx_cli.html#ibmcloud_resource_service_binding_create)</td>
       <td>[ibmcloud resource service-binding-delete](bx_cli.html#ibmcloud_resource_service_binding_delete)</td>
+      <td>[Ibmcloud resource cf-service-instance-migrate](bx_cli.html#ibmcloud_resource_cf_service_instance_migrate)</td>
     </tr>
     <tr>
+      <td>[ibmcloud cota de recursos](bx_cli.html#ibmcloud_resource_quota)</td>
       <td>[ibmcloud resource service-keys](bx_cli.html#ibmcloud_resource_service_keys)</td>
       <td>[ibmcloud resource service-key](bx_cli.html#ibmcloud_resource_service_key)</td>
       <td>[Ibmcloud resource service-key-create](bx_cli.html#ibmcloud_resource_service_key_create)</td>
@@ -196,15 +198,24 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
     </tr>
     <tr>
       <td>[ibmcloud recursos de procura](bx_cli.html#ibmcloud_resource_search)</td>
+      <td>[resource tags](bx_cli.html#ibmcloud_resource_tags)</td>
+      <td>[recurso de identificação](bx_cli.html#ibmcloud_resource_tag)</td>
+      <td>[recurso tag-create](bx_cli.html#ibmcloud_resource_tag_create)</td>
+      <td>[recurso tag-delete](bx_cli.html#ibmcloud_resource_tag_delete)</td>
+    </tr>
+    <tr>
+      <td>[recurso de identificação de conexão](bx_cli.html#ibmcloud_resource_tag_attach)</td>
+      <td>[recurso tag-detach](bx_cli.html#ibmcloud_resource_tag_detach)</td>
+      <td>[recurso tag-update](bx_cli.html#ibmcloud_resource_tag_update)</td>
     </tr>
   </tbody>
 </table>
 
 
  ## Comandos para gerenciar chaves API e políticas
- {: #ibmcloud_commands_iam}
+ {: #bx_commands_iam}
  <table summary="Comandos ibmcloud que podem ser usados para gerenciar chaves API e políticas.">
- <caption>Tabela 3. Comandos para gerenciar chaves API e políticas</caption>
+ <caption>Tabela 4. Comandos para gerenciar as chaves API e as políticas</caption>
   <thead>
   <th colspan="5">Comandos para gerenciar chaves API e políticas</th>
   </thead>
@@ -214,51 +225,61 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
    <td>[ibmcloud iam service-id-create](bx_cli.html#ibmcloud_iam_service_id_create)</td>
    <td>[Ibmcloud iam service-id-update](bx_cli.html#ibmcloud_iam_service_id_update)</td>
    <td>[ibmcloud iam service-id-delete](bx_cli.html#ibmcloud_iam_service_id_delete)</td>
-   <td>[ibmcloud iam service-ids](bx_cli.html#ibmcloud_iam_service_ids)</td>
+   <td>[>ibmcloud iam service-id-de bloqueio](bx_cli.html#ibmcloud_iam_service_id_lock)</td>
   </tr>
   <tr>
+   <td>[>ibmcloud iam service-id-unlock](bx_cli.html#ibmcloud_iam_service_id_unlock)</td>
+   <td>[ibmcloud iam service-ids](bx_cli.html#ibmcloud_iam_service_ids)</td>
    <td>[ibmcloud iam api-keys](bx_cli.html#ibmcloud_iam_api_keys)</td>
    <td>[ibmcloud iam api-key-create](bx_cli.html#ibmcloud_iam_api_key_create)</td>
    <td>[ibmcloud iam api-key-delete](bx_cli.html#ibmcloud_iam_api_key_delete)</td>
-   <td>[ibmcloud iam api-key-update](bx_cli.html#ibmcloud_iam_api_key_update)</td>
-   <td>[ibmcloud iam service-api-keys](bx_cli.html#ibmcloud_iam_service_api_keys)</td>
   </tr>
   <tr>
+   <td>[ibmcloud iam api-key-update](bx_cli.html#ibmcloud_iam_api_key_update)</td>
+   <td>[ibmcloud iam api-key-lock](bx_cli.html#ibmcloud_iam_api_key_lock)</td>
+   <td>[>ibmcloud iam api-key-unlock](bx_cli.html#ibmcloud_iam_api_key_unlock)</td>
+   <td>[ibmcloud iam service-api-keys](bx_cli.html#ibmcloud_iam_service_api_keys)</td>
    <td>[ibmcloud iam service-api-key](bx_cli.html#ibmcloud_iam_service_api_key)</td>
+  </tr>
+  <tr>
    <td>[ibmcloud iam service-api-key-create](bx_cli.html#ibmcloud_iam_service_api_key_create)</td>
    <td>[Ibmcloud iam service-api-key-update](bx_cli.html#ibmcloud_iam_service_api_key_update)</td>
    <td>[ibmcloud iam service-api-key-delete](bx_cli.html#ibmcloud_iam_service_api_key_delete)</td>
-   <td>[ibmcloud iam service-policies](bx_cli.html#ibmcloud_iam_service_policies)</td>
+   <td>[>ibmcloud iam service-api-key-bloqueio](bx_cli.html#ibmcloud_iam_service_api_key_lock)</td>
+   <td>[>ibmcloud iam service-api-key-unlock](bx_cli.html#ibmcloud_iam_service_api_key_unlock)</td>
   </tr>
   <tr>
+    <td>[ibmcloud iam service-policies](bx_cli.html#ibmcloud_iam_service_policies)</td>
     <td>[ibmcloud iam service-policy](bx_cli.html#ibmcloud_iam_service_policy)</td>
     <td>[ibmcloud iam service-policy-create](bx_cli.html#ibmcloud_iam_service_policy_create)</td>
     <td>[ibmcloud iam service-policy-update](bx_cli.html#ibmcloud_iam_service_policy_update)</td>
     <td>[ibmcloud iam service-policy-delete](bx_cli.html#ibmcloud_iam_service_policy_delete)</td>
-    <td>[ibmcloud iam user-policies](bx_cli.html#ibmcloud_iam_user_policies)</td>
   </tr>
   <tr>
+   <td>[ibmcloud iam user-policies](bx_cli.html#ibmcloud_iam_user_policies)</td>
    <td>[ibmcloud iam user-policy](bx_cli.html#ibmcloud_iam_user_policy)</td>
    <td>[ibmcloud iam user-policy-create](bx_cli.html#ibmcloud_iam_user_policy_create)</td>
    <td>[Ibmcloud iam user-policy-update](bx_cli.html#ibmcloud_iam_user_policy_update)</td>
    <td>[ibmcloud iam user-policy-delete](bx_cli.html#ibmcloud_iam_user_policy_delete)</td>
-   <td>[ibmcloud iam oauth-tokens](bx_cli.html#ibmcloud_iam_oauth_tokens)</td>
   </tr>
   <tr>
+     <td>[ibmcloud iam oauth-tokens](bx_cli.html#ibmcloud_iam_oauth_tokens)</td>
      <td>[ibmcloud iam dedicated-id-disconnect](bx_cli.html#ibmcloud_iam_dedicated_id_disconnect)</td>
      <td>[ibmcloud iam authorization-policy-create](bx_cli.html#ibmcloud_iam_authorization_policy_create)</td>
      <td>[ibmcloud iam authorization-policy-delete](bx_cli.html#ibmcloud_iam_authorization_policy_delete)</td>
      <td>[ibmcloud iam authorization-policy](bx_cli.html#ibmcloud_iam_authorization_policy)</td>
+  </tr>
+  <tr>
      <td>[ibmcloud iam authorization-policies](bx_cli.html#ibmcloud_iam_authorization_policies)</td>
   </tr>
   </tbody>
   </table>
 
  ## Comandos para gerenciar apps cf e domínios, rotas e certificados relacionados ao app
- {: #ibmcloud_commands_apps}
+ {: #bx_commands_apps}
 
 <table summary="Comandos ibmcloud que podem ser usados para gerenciar apps cf e domínios, rotas e certificados relacionados ao app.">
-<caption>Tabela 4. Comandos para gerenciar apps cf e domínios, rotas e certificados relacionados ao app</caption>
+<caption>Tabela 5. Comandos para gerenciar aplicativos cf e domínios, rotas e certificados relacionados a aplicativos</caption>
  <thead>
  <th colspan="5">Comandos para gerenciar apps cf e domínios, rotas e certificados relacionados aos apps</th>
  </thead>
@@ -316,10 +337,10 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
  </table>
 
  ## Comandos para gerenciar serviços do {{site.data.keyword.Bluemix_notm}}
- {: #ibmcloud_commands_services}
+ {: #bx_commands_services}
 
 <table summary="Comandos ibmcloud que podem ser usados para gerenciar serviços do {{site.data.keyword.Bluemix_notm}}.">
-<caption>Tabela 5. Comandos para gerenciar serviços do {{site.data.keyword.Bluemix_notm}}</caption>
+<caption>Tabela 6. Comandos para gerenciar {{site.data.keyword.Bluemix_notm}} serviços</caption>
  <thead>
  <th colspan="5">Comandos para gerenciar serviços do {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
@@ -350,10 +371,11 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
 
 
  ## Comandos para gerenciar configurações de catálogo, de plug-ins e de faturamento
- {: #ibmcloud_commands_settings}
+ {: #bx_commands_settings}
 
 <table summary="Comandos ibmcloud que podem ser usados para gerenciar o catálogo, os plug-ins, o faturamento e as configurações de segurança do {{site.data.keyword.Bluemix_notm}}.">
-<caption>Tabela 6. Comandos para gerenciar o catálogo, os plug-ins, o faturamento e as configurações de segurança do {{site.data.keyword.Bluemix_notm}}</caption>
+<caption>Tabela 7. Comandos para gerenciar as configurações de catálogo, de plug-ins, de faturamento e de segurança do
+{{site.data.keyword.Bluemix_notm}}</caption>
  <thead>
  <th colspan="5">Comandos para gerenciar o catálogo, os plug-ins, o faturamento e as configurações de segurança do {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
@@ -394,8 +416,24 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
   <td>[ibmcloud billing org-usage](bx_cli.html#ibmcloud_billing_org_usage)</td>
 </tr>
 <tr>
-  <td>[ibmcloud billing resource-group-usage](bx_cli.html#ibmcloud_resource_group_usage)</td>
-  <td>[ibmcloud billing resource-instances-usage](bx_cli.html#ibmcloud_resource_instances_usage)</td>
+  <td>[Ibmcloud billing resource-group-usage](bx_cli.html#ibmcloud_billing_resource_group_usage)</td>
+  <td>[Ibmcloud billing resource-instances-usage](bx_cli.html#ibmcloud_billing_resource_instances_usage)</td>
+ </tr>
+ </tbody>
+ </table>
+
+ ## Gerenciar Cloud Foundry Enterprise Environments (experimental)
+{: #bx_commands_cfee}
+
+<table summary="Manage Cloud Foundry Enterprise Environments (experimental)">
+<caption>Tabela 8. Gerenciar ambientes corporativos do Cloud Foundry (experimental)</caption>
+ <thead>
+ <th colspan="5">Gerenciar Cloud Foundry Enterprise Environments (experimental)</th>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud cfee ambientes](bx_cli.html#ibmcloud_cfee_environments)</td>
+ <td>[ibmcloud cfee ambiente](bx_cli.html#ibmcloud_cfee_environment)</td>
  </tr>
  </tbody>
  </table>
@@ -463,7 +501,7 @@ Ibmcloud api api.chinabluemix.net
 ```
 
 ```
-ibmcloud api https://api.chinaibmcloud.net --skip-ssl-validation
+Api https://api.chinabluemix.net--skip-ssl-validation
 ```
 
 Visualize o terminal de API atual:
@@ -1220,34 +1258,34 @@ Exibe os usuários associados à conta. Essa operação pode ser executada somen
 ibmcloud account users
 ```
 
-## Delete-ibmcloud conta do usuário
-{: #ibmcloud_account_user_delete}
+## Remove-ibmcloud conta do usuário
+{: #ibmcloud_account_user_remove}
 
-Exclua um usuário da conta atual (somente o proprietário da conta)
+Remover um usuário de uma conta (somente o proprietário da conta)
 
 ```
-ibmcloud account user-delete USERNAME [-c ACCOUNT_ID] [-f]
+ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
 
 <strong>Opções de comando</strong>:
 <dl>
-<dt>USERNAME (necessário)</dt>
-<dd>Nome do usuário</dd>
+<dt>USER_ID (obrigatório)</dt>
+<dd>ID do Usuário</dd>
 <dt>-c ACCOUNT_ID</dt>
 <dd>ID da conta. Se não especificado, o padrão será a conta atual.</dd>
-<dt>--force, -f (opcional)</dt>
-<dd>Force a exclusão sem confirmação.</dd>
+<dt>-f, --force</dt>
+<dd>Forçar a remoção sem confirmação.</dd>
 </dl>
 
 ## Account user-invite ibmcloud
 {: #ibmcloud_account_user_invite}
 
-Convidar um usuário para a conta (administrador de conta)
+Convidar um usuário para a conta
 
 ```
-Account user-invite USER_EMAIL ibmcloud
+ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE, --space-role SPACE_ROLE]]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -1256,6 +1294,15 @@ Account user-invite USER_EMAIL ibmcloud
 <dl>
    <dt>USER_EMAIL (necessário)</dt>
    <dd>O e-mail do usuário que está sendo convidado.</dd>
+   <dt>-o ORG</dt>
+   <dd>Organização para convidar usuário</dd>
+   <dt>-- org-role ORG_ROLE</dt>
+   <dd>Função organizacional. As entradas válidas são: OrgManager, BillingManager, OrgAuditor e OrgUser. Se omitida, a função
+OrgUser será configurada.</dd>
+   <dt>-s SPACE</dt>
+   <dd>Espaço de convidar usuário</dd>
+   <dt>-- SPACE_ROLE space-role</dt>
+   <dd>Função de Espaço. As entradas válidas são: SpaceManager, SpaceDeveloper e SpaceAuditor.</dd>
 </dl>
 
 
@@ -1652,31 +1699,31 @@ Ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 Criar uma política de grupo de acesso
 
 ```
-ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>-f, --file</dt>
+  <dt>--file</dt>
   <dd>Arquivo JSON de definição de política</dd>
   <dt>-roles</dt>
-  <dd>Os nomes de função da definição de política. Para funções suportadas de um serviço específico, execute 'ibmcloud iam roles --service SERVICE_NAME'. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Os nomes de função da definição de política. Para funções suportadas de um serviço específico, execute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opção é exclusiva com '--file'.</dd>
   <dt>-service-name</dt>
-  <dd>Nome do serviço da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
-  <dt>-service-instance</dt>
-  <dd>Instância de serviço da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Nome do serviço da definição de política. Esta opção é exclusiva com '--file'.</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>GUID da instância de serviço da definição de política. Esta opção é exclusiva com '--file'.</dd>
   <dt>-region</dt>
-  <dd>Região da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Região da definição de política. Esta opção é exclusiva com '--file'.</dd>
   <dt>-resource-type</dt>
-  <dd>Tipo de recurso da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Tipo de recurso da definição de política. Esta opção é exclusiva com '--file'.</dd>
   <dt>-resource</dt>
-  <dd>Recurso da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Recurso da definição de política. Esta opção é exclusiva com '--file'.</dd>
   <dt>-resource-group-name</dt>
-  <dd>Nome do grupo de recursos. Essa opção é exclusiva com '-f, -- file' e com '--resource-group-id'.</dd>
+  <dd>Nome do grupo de recursos. Esta opção é exclusiva com '--file' e '--resource-group-id'.</dd>
   <dt>-resource-group-id</dt>
-  <dd>ID do grupo de recursos. Essa opção é exclusiva com '-f, -- file' e com '--resource-group-name'.</dd>
+  <dd>ID do grupo de recursos. Esta opção é exclusiva com '--file' e '--resource-group-name'.</dd>
 </dl>
 
 <strong>Exemplos</strong>:
@@ -1693,11 +1740,11 @@ os recursos do `sample-service`:
 ibmcloud iam access-group-policy-create example_group --roles Administrator --service-name sample-service
 ```
 
-Fornecer ao `example_group` a função `Editor` para o recurso
-`key123` da instância `sample-service`
-`ServiceId-ade78e9f` na região `us-south`:
+Fornecer a função de `Editor` a `example_group` para o recurso `key123` da
+instância `sample-service` com a GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` na região `us-south`:
 ```
-ibmcloud iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance
+d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 Fornecer ao `example_group` a função `Operator` para o grupo de
@@ -1724,33 +1771,31 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 Atualizar uma política do grupo de acesso
 
 ```
-ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>-f, --file</dt>
+  <dt>--file</dt>
   <dd>Arquivo JSON de definição de política</dd>
-  <dt>-v, --version</dt>
-  <dd>Versão da política</dd>
-  <dt>-roles</dt>
-  <dd>Os nomes de função da definição de política. Para funções suportadas de um serviço específico, execute 'ibmcloud iam roles --service SERVICE_NAME'. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dt>-- roles</dt>
+  <dd>Os nomes de função da definição de política. Para funções suportadas de um serviço específico, execute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opção é exclusiva com '--file'.</dd>
   <dt>-service-name</dt>
-  <dd>Nome do serviço da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
-  <dt>-service-instance</dt>
-  <dd>Instância de serviço da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Nome do serviço da definição de política. Esta opção é exclusiva com '--file'.</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>GUID da instância de serviço da definição de política. Esta opção é exclusiva com '--file'.</dd>
   <dt>-region</dt>
-  <dd>Região da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Região da definição de política. Esta opção é exclusiva com '--file'.</dd>
   <dt>-resource-type</dt>
-  <dd>Tipo de recurso da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Tipo de recurso da definição de política. Esta opção é exclusiva com '--file'.</dd>
   <dt>-resource</dt>
-  <dd>Recurso da definição de política. Essa opção é exclusiva com '-f, --file'.</dd>
+  <dd>Recurso da definição de política. Esta opção é exclusiva com '--file'.</dd>
   <dt>-resource-group-name</dt>
-  <dd>Nome do grupo de recursos. Essa opção é exclusiva com '-f, -- file' e com '--resource-group-id'.</dd>
+  <dd>Nome do grupo de recursos. Esta opção é exclusiva com '--file' e '--resource-group-id'.</dd>
   <dt>-resource-group-id</dt>
-  <dd>ID do grupo de recursos. Essa opção é exclusiva com '-f, -- file' e com '--resource-group-name'.</dd>
+  <dd>ID do grupo de recursos. Esta opção é exclusiva com '--file' e '--resource-group-name'.</dd>
 </dl>
 
 <strong>Exemplos</strong>:
@@ -1766,12 +1811,10 @@ do `example_group` para todos os recursos do `sample-service`:
 ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
 ```
 
-Atualizar a política de grupo de acesso para fornecer ao `example_group`
-a função `Editor` para o recurso `key123` da
-instância `sample-service` `ServiceId-ade78e9f` na região
-`us-south`:
+Atualizar a política de grupo de acesso para fornecer a função de `Editor` a `example_group` para o recurso `key123` da instância `sample-service` com a GUID
+`d161aeea-fd02-40f8-a487-df1998bd69a9` na região `us-south`:
 ```
-ibmcloud iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south
+ibmcloud iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south
 ```
 
 Atualizar a política de grupo de acesso para fornecer ao `example_group`
@@ -1826,7 +1869,7 @@ Ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8
 Listar todos os IDs de serviço
 
 ```
-ibmcloud iam service-ids --uuid
+Ibmcloud iam service-ids [ -- uuid ]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -1858,8 +1901,10 @@ Ibmcloud iam service-id (NAME | UUID) [ -- uuid ]
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>NAME|UUID (necessário)</dt>
-  <dd>Nome ou UUID do serviço</dd>
+  <dt>NAME (necessário)</dt>
+  <dd>Nome do serviço, exclusivo com UUID</dd>
+  <dt>UUID (necessário)</dt>
+  <dd>UUID do serviço, exclusivo com NAME</dd>
   <dt>--uuid</dt>
   <dd>Exibir o UUID do ID de serviço</dd>
 </dl>
@@ -1884,7 +1929,7 @@ Ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 Criar um ID de serviço
 
 ```
-ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION]
+ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -1895,6 +1940,8 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION]
   <dd>Nome do serviço</dd>
   <dt>-d, --description</dt>
   <dd>Descrição do ID de serviço</dd>
+  <dt>-- bloqueio</dt>
+  <dd>Bloquear o ID do serviço ao criá-lo</dd>
 </dl>
 
 <strong>Exemplos</strong>:
@@ -1905,6 +1952,12 @@ Crie um ID de serviço com o nome de serviço `sample-test` e a descrição `hel
 ibmcloud iam service-id-create sample-test -d 'hello, world!'
 ```
 
+Criar um ID de serviço bloqueado com o nome do serviço `sample-teste` e a descrição `hello, world!`
+
+```
+ibmcloud iam service-id-create sample-test -d 'hello, world!' -- bloqueio
+```
+
 
 ## Ibmcloud iam service-id-update
 
@@ -1912,21 +1965,21 @@ ibmcloud iam service-id-create sample-test -d 'hello, world!'
 Atualizar um ID de serviço
 
 ```
-ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>NAME|UUID (necessário)</dt>
-  <dd>Nome ou UUID do serviço</dd>
+  <dt>NAME (necessário)</dt>
+  <dd>Nome do serviço, exclusivo com UUID</dd>
+  <dt>UUID (necessário)</dt>
+  <dd>UUID do serviço, exclusivo com NAME</dd>
   <dt>-n, --name</dt>
   <dd>Novo nome do serviço</dd>
   <dt>-d, --description</dt>
   <dd>Nova descrição do serviço</dd>
-  <dt>-v, --version</dt>
-  <dd>Versão do ID de serviço</dd>
   <dt>-f, --force</dt>
   <dd>Atualizar sem confirmação</dd>
 </dl>
@@ -1939,10 +1992,10 @@ Renomeie o ID de serviço `sample-test` para `sample-test-2` sem confirmação
 ibmcloud iam service-id-update sample-test -n sample-test-2 -f
 ```
 
-Atualize a descrição de serviço `sample-test` versão `1-0jn39fbefew`
+Atualize a descrição de serviço `sample-teste`
 
 ```
-ibmcloud iam service-id-update sample-test -d 'hello, friend!' -v 1-0jn39fbefew
+ibmcloud iam service-id-update sample-test -d 'hello, friend!'
 ```
 
 Renomear o ID de serviço `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` para
@@ -1966,8 +2019,10 @@ Ibmcloud iam service-id-delete (NAME | UUID) [ -f, -- force ]
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>NAME|UUID (necessário)</dt>
-  <dd>Nome ou UUID do serviço</dd>
+  <dt>NAME (necessário)</dt>
+  <dd>Nome do serviço, exclusivo com UUID</dd>
+  <dt>UUID (necessário)</dt>
+  <dd>UUID do serviço, exclusivo com NAME</dd>
   <dt>-f, --force</dt>
   <dd>Excluir sem confirmação</dd>
 </dl>
@@ -1986,6 +2041,75 @@ Excluir o ID do serviço `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`
 Ibmcloud iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
+## Ibmcloud iam service-id-bloqueio
+{: #ibmcloud_iam_service_id_lock}
+
+Bloquear um ID de serviço
+
+```
+Ibmcloud iam service-id-bloqueio (NAME | UUID) [ -f, -- force ]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>NAME (necessário)</dt>
+  <dd>Nome do serviço, exclusivo com UUID</dd>
+  <dt>UUID (necessário)</dt>
+  <dd>UUID do serviço, exclusivo com NAME</dd>
+  <dt>-f, --force</dt>
+  <dd>Bloquear sem confirmação</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Bloquear ID de serviço `sample-teset` sem confirmação
+
+```
+Ibmcloud iam service-id-bloqueio sample-teset -f
+```
+
+Bloquear ID do serviço `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`
+
+```
+Ibmcloud iam service-id-de bloqueio ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+```
+
+## ibmcloud iam service-id-unlock
+{: #ibmcloud_iam_service_id_unlock}
+
+Desbloquear um ID de serviço
+
+```
+ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>NAME (necessário)</dt>
+  <dd>Nome do serviço, exclusivo com UUID</dd>
+  <dt>UUID (necessário)</dt>
+  <dd>UUID do serviço, exclusivo com NAME</dd>
+  <dt>-f, --force</dt>
+  <dd>Desbloquear sem confirmação</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Desbloquear ID de serviço `sample-teset` sem confirmação
+
+```
+Ibmcloud iam service-id-unlock sample-teset -f
+```
+
+Desbloquear ID de serviço `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`
+
+```
+Ibmcloud iam service-id-desbloquear ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
+```
 
 ## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
@@ -2004,7 +2128,7 @@ ibmcloud iam api-keys
 Crie uma nova chave API da plataforma {{site.data.keyword.Bluemix_notm}}
 
 ```
-ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
+ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -2017,6 +2141,8 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
 <dd>Descrição da chave de API</dd>
 <dt>--file <i>FILE</i></dt>
 <dd>Salve as informações da chave API para o arquivo especificado. Se não configuradas, o conteúdo JSON será exibido.</dd>
+<dt>-- bloqueio</dt>
+<dd>Bloquear a chave API ao criá-la</dd>
 </dl>
 
 <strong>Exemplos</strong>:
@@ -2027,13 +2153,19 @@ Crie uma chave API e salve em um arquivo
 ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
 ```
 
+Criar uma chave API bloqueada com o nome "test-key"
+
+```
+Ibmcloud iam api-key-create test-key -- bloqueio
+```
+
 ## Ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
 Atualize uma chave API da plataforma {{site.data.keyword.Bluemix_notm}}
 
 ```
-ibmcloud iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
+ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -2041,7 +2173,9 @@ ibmcloud iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 <strong>Opções de comando</strong>:
 <dl>
 <dt>NAME (necessário)</dt>
-<dd>O nome antigo da chave API a ser atualizada.</dd>
+<dd>O nome antigo da chave API a ser atualizada, exclusivo com UUID</dd>
+<dt>UUID (necessário)</dt>
+<dd>O UUID da chave API a ser atualizada, exclusivo com NAME</dd>
 <dt>-n <i>NAME</i> (opcional)</dt>
 <dd>O nome novo da chave API</dd>
 <dt>-d <i>DESCRIPTION</i> (opcional)</dt>
@@ -2057,12 +2191,12 @@ ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
 
 ## Ibmcloud api-key-delete
-{: #ibmcloud_api_key_delete}
+{: #ibmcloud_iam_api_key_delete}
 
 Excluir uma chave API da plataforma {{site.data.keyword.Bluemix_notm}}
 
 ```
-ibmcloud iam api-key-delete NAME [-f]
+Ibmcloud iam api-key-delete (NAME | UUID) [ -f, -- force ]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -2070,10 +2204,82 @@ ibmcloud iam api-key-delete NAME [-f]
 <strong>Opções de comando</strong>:
 <dl>
 <dt>NAME (necessário)</dt>
-<dd>Nome da chave API a ser excluída.</dd>
-<dt>-f (opcional)</dt>
+<dd>Nome da chave API a ser excluída, exclusivo com UUID</dd>
+<dt>UUID (necessário)</dt>
+<dd>UUID da chave API a ser excluída, exclusivo com NAME</dd>
+<dt>-f, --force</dt>
 <dd>Force a exclusão sem confirmação.</dd>
 </dl>
+
+## Ibmcloud api-key-bloqueio
+{: #ibmcloud_iam_api_key_lock}
+
+Bloquear uma chave API da plataforma
+
+```
+Ibmcloud iam api-key-bloqueio (NAME | UUID) [ -f, -- force ]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+<dt>NAME (necessário)</dt>
+<dd>Nome da chave API a ser bloqueada, exclusivo com UUID</dd>
+<dt>UUID (necessário)</dt>
+<dd>UUID da chave API a ser bloqueada, exclusivo com NAME</dd>
+<dt>-f, --force</dt>
+<dd>Forçar a fechadura sem confirmação.</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Bloquear teste chave API-api-key
+
+```
+Ibmcloud iam api-key-bloqueio de teste api-key
+```
+
+Bloquear a chave API com o UUID fornecido sem confirmação
+
+```
+ibmcloud iam api-key-lock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
+```
+
+## Ibmcloud api-key-desbloquear
+{: #ibmcloud_iam_api_key_unlock}
+
+Desbloquear uma chave API da plataforma
+
+```
+Ibmcloud iam api-key-desbloquear (NAME | UUID) [ -f, -- force ]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+<dt>NAME (necessário)</dt>
+<dd>Nome da chave API a ser desbloqueada, exclusivo com UUID</dd>
+<dt>UUID (necessário)</dt>
+<dd>UUID da chave API a ser desbloqueada, exclusivo com NAME</dd>
+<dt>-f, --force</dt>
+<dd>Forçar o desbloqueio sem confirmação.</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Desbloquear chave API de teste api-key
+
+```
+Ibmcloud iam api-key-unlock-api-chave de teste
+```
+
+Desbloquear a chave API com o UUID fornecido sem confirmação
+
+```
+Ibmcloud iam api-key-desbloquear ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe -- force
+```
 
 ## Ibmcloud iam service-api-keys
 {: #ibmcloud_iam_service_api_keys}
@@ -2081,15 +2287,17 @@ ibmcloud iam api-key-delete NAME [-f]
 Listar todas as chaves API de um serviço
 
 ```
-ibmcloud iam service-api-keys SERVICE_ID [-f, --force]
+Ibmcloud iam service-api-keys (SERVICE_ID_NAME | SERVICE_ID_UUID) [ -f, -- force ]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>SERVICE_ID (necessário)</dt>
-  <dd>Nome ou UUID do ID do serviço</dd>
+  <dt>SERVICE_ID_NAME (necessário)</dt>
+  <dd>Nome do ID do serviço, exclusivo com SERVICE_ID_UUID</dd>
+  <dt>SERVICE_ID_UUID (necessário)</dt>
+  <dd>UUID do ID do serviço, exclusivo com SERVICE_ID_NAME</dd>
   <dt>-f, --force</dt>
   <dd>Exibir as chaves API de serviço sem confirmação</dd>
 </dl>
@@ -2108,15 +2316,21 @@ Ibmcloud iam service-api-keys sample-service
 Listar detalhes de uma chave API de serviço
 
 ```
-ibmcloud iam service-api-key NAME SERVICE_ID [--uuid] [-f, --force]
+ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>SERVICE_ID (necessário)</dt>
-  <dd>Nome ou UUID do ID do serviço</dd>
+  <dt>APIKEY_NAME (necessário)</dt>
+  <dd>Nome da chave API, exclusivo com APIKEY_UUID</dd>
+  <dt>APIKEY_UUID (necessário)</dt>
+  <dd>UUID da chave API, exclusivo com APIKEY_NAME</dd>
+  <dt>SERVICE_ID_NAME (necessário)</dt>
+  <dd>Nome do ID do serviço, exclusivo com SERVICE_ID_UUID</dd>
+  <dt>SERVICE_ID_UUID (necessário)</dt>
+  <dd>UUID do ID do serviço, exclusivo com SERVICE_ID_NAME</dd>
   <dt>--uuid</dt>
   <dd>Exibir o UUID da chave API de serviço</dd>
   <dt>-f, --force</dt>
@@ -2137,15 +2351,19 @@ Ibmcloud iam service-api-key sample-key sample-service
 Criar uma chave API de serviço
 
 ```
-ibmcloud iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [--file FILE] [-f, --force]
+ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>SERVICE_ID (necessário)</dt>
-  <dd>Nome ou UUID do ID do serviço</dd>
+  <dt>NAME (necessário)</dt>
+  <dd>Nome ou nova chave API de serviço criada</dd>
+  <dt>SERVICE_ID_NAME (necessário)</dt>
+  <dd>Nome do ID do serviço, exclusivo com SERVICE_ID_UUID</dd>
+  <dt>SERVICE_ID_UUID (necessário)</dt>
+  <dd>UUID do ID do serviço, exclusivo com SERVICE_ID_NAME</dd>
   <dt>-d, --description</dt>
   <dd>Descrição da chave de API</dd>
   <dt>--file</dt>
@@ -2169,21 +2387,25 @@ Ibmcloud iam service-api-key-create sample-key sample-service -f
 Atualizar uma chave API de serviço
 
 ```
-ibmcloud iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
+ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>SERVICE_ID (necessário)</dt>
-  <dd>Nome ou UUID do ID do serviço</dd>
+  <dt>APIKEY_NAME (necessário)</dt>
+  <dd>Nome da chave API, exclusivo com APIKEY_UUID</dd>
+  <dt>APIKEY_UUID (necessário)</dt>
+  <dd>UUID da chave API, exclusivo com APIKEY_NAME</dd>
+  <dt>SERVICE_ID_NAME (necessário)</dt>
+  <dd>Nome do ID do serviço, exclusivo com SERVICE_ID_UUID</dd>
+  <dt>SERVICE_ID_UUID (necessário)</dt>
+  <dd>UUID do ID do serviço, exclusivo com SERVICE_ID_NAME</dd>
   <dt>-n, --name</dt>
   <dd>Novo nome da chave API de serviço</dd>
   <dt>-d, --description</dt>
   <dd>Nova descrição da chave API de serviço</dd>
-  <dt>-v, --version</dt>
-  <dd>Versão da chave API de serviço</dd>
   <dt>-f, --force</dt>
   <dd>Atualizar sem confirmação</dd>
 </dl>
@@ -2202,25 +2424,97 @@ ibmcloud iam service-api-key-update sample-key sample-service -n new-sample-key
 Excluir uma chave API de serviço
 
 ```
-ibmcloud iam service-api-key-delete NAME SERVICE_ID [-f, --force]
+ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>SERVICE_ID (necessário)</dt>
-  <dd>Nome ou UUID do ID do serviço</dd>
+  <dt>APIKEY_NAME (necessário)</dt>
+  <dd>Nome da chave API, exclusivo com APIKEY_UUID</dd>
+  <dt>APIKEY_UUID (necessário)</dt>
+  <dd>UUID da chave API, exclusivo com APIKEY_NAME</dd>
+  <dt>SERVICE_ID_NAME (necessário)</dt>
+  <dd>Nome do ID do serviço, exclusivo com SERVICE_ID_UUID</dd>
+  <dt>SERVICE_ID_UUID (necessário)</dt>
+  <dd>UUID do ID do serviço, exclusivo com SERVICE_ID_NAME</dd>
   <dt>-f, --force</dt>
   <dd>Excluir sem confirmação</dd>
 </dl>
 
 <strong>Exemplos</strong>:
 
-Exclua a chave API de serviço `sample-key`:
+Excluir a chave API de serviço `sample-key` do ID de serviço `sample-serviço`:
 
 ```
 Ibmcloud iam service-api-key-delete sample-key sample-service
+```
+
+## ibmcloud iam service-api-key-lock
+{: #ibmcloud_iam_service_api_key_lock}
+
+Bloquear uma chave API de serviço
+
+```
+ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>APIKEY_NAME (necessário)</dt>
+  <dd>Nome da chave API, exclusivo com APIKEY_UUID</dd>
+  <dt>APIKEY_UUID (necessário)</dt>
+  <dd>UUID da chave API, exclusivo com APIKEY_NAME</dd>
+  <dt>SERVICE_ID_NAME (necessário)</dt>
+  <dd>Nome do ID do serviço, exclusivo com SERVICE_ID_UUID</dd>
+  <dt>SERVICE_ID_UUID (necessário)</dt>
+  <dd>UUID do ID do serviço, exclusivo com SERVICE_ID_NAME</dd>
+  <dt>-f, --force</dt>
+  <dd>Bloquear sem confirmação</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Bloquear a chave API de serviço `sample-key` do ID do serviço `sample-service`:
+
+```
+Ibmcloud iam service-api-key-bloqueio sample-key sample-service
+```
+
+## Ibmcloud iam service-api-key-desbloquear
+{: #ibmcloud_iam_service_api_key_unlock}
+
+Desbloquear uma chave API de serviço
+
+```
+ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>APIKEY_NAME (necessário)</dt>
+  <dd>Nome da chave API, exclusivo com APIKEY_UUID</dd>
+  <dt>APIKEY_UUID (necessário)</dt>
+  <dd>UUID da chave API, exclusivo com APIKEY_NAME</dd>
+  <dt>SERVICE_ID_NAME (necessário)</dt>
+  <dd>Nome do ID do serviço, exclusivo com SERVICE_ID_UUID</dd>
+  <dt>SERVICE_ID_UUID (necessário)</dt>
+  <dd>UUID do ID do serviço, exclusivo com SERVICE_ID_NAME</dd>
+  <dt>-f, --force</dt>
+  <dd>Desbloquear sem confirmação</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Desbloquear a chave API de serviço `sample-key` do ID do serviço `sample-service`:
+
+```
+Ibmcloud iam service-api-key-desbloquear sample-key sample-service
 ```
 
 ## Ibmcloud iam user-policies
@@ -2281,7 +2575,7 @@ Ibmcloud iam user-policy name@example.com 0bb730daa
 Criar uma política do usuário
 
 ```
-ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>Pré-requisitos</strong>: terminal, login, conta de destino
@@ -2296,8 +2590,8 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dd>Os nomes de função da definição de política. Para funções suportadas de um serviço específico, execute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opção é exclusiva com '--file'.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (opcional)</dt>
 <dd>Nome de serviço da definição de política; é exclusivo com a sinalização '--file'.</dd>
-<dt>--serivce-instance <i>SERVICE_INSTANCE</i> (opcional)</dt>
-<dd>Instância de serviço da definição de política; é exclusiva com a sinalização '--file'.</dd>
+<dt>-- serivce-instance <i>SERVICE_INSTANCE_GUID</i> (opcional)</dt>
+<dd>GUID da instância de serviço da definição de política. Isso é exclusivo com a sinalização '-- file'.</dd>
 <dt>--region <i>REGION</i> (opcional)</dt>
 <dd>Região da definição de política; é exclusiva com a sinalização '--file'.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (opcional)</dt>
@@ -2324,10 +2618,12 @@ Dê a `name@example.com` a função `Administrator` para todos os recursos `samp
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name sample-service
 ```
 
-Dê a `name@example.com` a função `Editor` para o recurso `key123` da instância de serviço de amostra `ServiceId-ade78e9f` na região `us-south`:
+Fornecer a função de `Editor` a `name@example.com` para o recurso `key123` da
+instância de serviço de amostra com o GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` na região `us-south`:
 
 ```
-ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance
+d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 Dê a `name@example.com` a função `Operator` para o grupo de recursos com ID `dda27e49d2a1efca58083a01dfde18f6`:
@@ -2354,7 +2650,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 Atualizar uma política do usuário
 
 ```
-ibmcloud iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
 <strong>Pré-requisitos</strong>: terminal, login, conta de destino
@@ -2364,16 +2660,14 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {--f
 <dd>Nome do usuário ao qual a política pertence</dd>
 <dt>POLICY_ID (necessário)</dt>
 <dd>ID da política a ser atualizada</dd>
-<dt>-v, --version <i>VERSION</i> (opcional)</dt>
-<dd>Versão da política existente</dd>
 <dt>--file <i>FILE</i> (opcional)</dt>
 <dd>Arquivo JSON de definição de política</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (opcional)</dt>
 <dd>Os nomes de função da definição de política. Para funções suportadas de um serviço específico, execute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opção é exclusiva com '--file'.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (opcional)</dt>
 <dd>Nome de serviço da definição de política; é exclusivo com a sinalização '--file'.</dd>
-<dt>--serivce-instance <i>SERVICE_INSTANCE</i> (opcional)</dt>
-<dd>Instância de serviço da definição de política; é exclusiva com a sinalização '--file'.</dd>
+<dt>-- serivce-instance <i>SERVICE_INSTANCE_GUID</i> (opcional)</dt>
+<dd>GUID da instância de serviço da definição de política. Isso é exclusivo com a sinalização '-- file'.</dd>
 <dt>--region <i>REGION</i> (opcional)</dt>
 <dd>Região da definição de política; é exclusiva com a sinalização '--file'.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (opcional)</dt>
@@ -2400,10 +2694,12 @@ Atualize a política de usuário para dar a `name@example.com` a função `Admin
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Administrator --service-name sample-service
 ```
 
- Atualize a política de usuário para dar a `name@example.com` a função `Editor` para o recurso `key123` da instância de serviço de amostra `ServiceId-ade78e9f` na região `us-south`:
+ Atualizar a política do usuário para fornecer a função de `Editor` a `name@example.com` para
+o recurso `key123` da instância de serviço de amostra com o GUID `d161aeea-fd02-40f8-a487-df1998bd69a9`
+na região `us-south`:
 
 ```
-ibmcloud iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance ServiceId-ade78e9f --region us-south --resource-type key --resource key123
+ibmcloud iam user-policy-update name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
 Atualize a política de usuário para dar a `name@example.com` a função `Operator` para o grupo de recursos com ID `dda27e49d2a1efca58083a01dfde18f6`:
@@ -2424,7 +2720,35 @@ Atualize a política de usuário para dar a `name@example.com` a função `Viewe
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
 
+## Ibmcloud iam user-policy-delete
+{: #ibmcloud_iam_user_policy_delete}
 
+Excluir uma política do usuário
+
+```
+ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
+```
+
+<strong>Pré-requisitos</strong>: terminal, login, conta de destino
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>Exclua a política do usuário sem confirmação</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+excluir as políticas `user-policy-id` do usuário `name@example.com`:
+
+```
+Delete-ibmcloud iam user-policy name@example.com user-policy-id
+```
+
+Excluir as políticas `user-policy-id` do usuário `name@example.com` sem confirmação:
+
+```
+Ibmcloud iam user-policy-delete name@example.com user-policy-id -f
+```
 
 ## As políticas de serviço iam ibmcloud
 {: #ibmcloud_iam_service_policies}
@@ -2505,7 +2829,7 @@ Ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 Criar uma política de serviço
 
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -2520,8 +2844,8 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dd>Os nomes de função da definição de política. Para funções suportadas de um serviço específico, execute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opção é exclusiva com '--file'.</dd>
   <dt>--service-name</dt>
   <dd>Nome do serviço da definição de política. Isso é exclusivo com a sinalização '--file'.</dd>
-  <dt>--service-instance</dt>
-  <dd>Instância de serviço da definição de política. Isso é exclusivo com a sinalização '--file'.</dd>
+  <dt>-- service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>GUID da instância de serviço da definição de política. Isso é exclusivo com a sinalização '--file'.</dd>
   <dt>-region</dt>
   <dd>Região da definição de política. Isso é exclusivo com a sinalização '--file'.</dd>
   <dt>--resource-type</dt>
@@ -2557,7 +2881,7 @@ Ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac97
 Atualizar uma política de serviço
 
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -2568,16 +2892,14 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] 
   <dd>Nome ou UUID do ID do serviço</dd>
   <dt>POLICY_ID (necessário)</dt>
   <dd>ID da política de serviço<dd>
-  <dt>-v, --version</dt>
-  <dd>Versão da política de serviço</dd>
   <dt>--file</dt>
   <dd>Arquivo JSON de definição de política. Isso é exclusivo com as sinalizações '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', 'resource-group-name' e 'resource-group-id'.</dd>
   <dt>-r, --roles</dt>
   <dd>Os nomes de função da definição de política. Para funções suportadas de um serviço específico, execute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opção é exclusiva com '--file'.</dd>
   <dt>-service-name</dt>
   <dd>Nome do serviço da definição de política. Isso é exclusivo com a sinalização '--file'.</dd>
-  <dt>-service-instance</dt>
-  <dd>Instância de serviço da definição de política. Isso é exclusivo com a sinalização '--file'.</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>GUID da instância de serviço da definição de política. Isso é exclusivo com a sinalização '--file'.</dd>
   <dt>-region</dt>
   <dd>Região da definição de política. Isso é exclusivo com a sinalização '--file'.</dd>
   <dt>-resource-type</dt>
@@ -2688,7 +3010,7 @@ Ibmcloud iam dedicated-id-disconnect [ -f, -- force ]
 Criar uma política de autorização para permitir que uma instância de serviço acesse outra instância de serviço.
 
 ```
-ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
+ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [--source-service-instance SOURCE_SERVICE_INSTANCE_NAME ] [--target-service-instance TARGET_SERVICE_INSTANCE_NAME ]
 ```
 
 <strong>Pré-requisitos</strong>: Login, Destino
@@ -2699,12 +3021,12 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>Serviço de origem que pode ser autorizado para acesso.</dd>
   <dt>TARGET_SERVICE_NAME</dt>
   <dd>Serviço de destino que o serviço de origem pode ser autorizado a acessar.</dd>
+  <dt>ROLE_NAME1,ROLE_NAME2...</dt>
+  <dd>As funções que fornecem acesso para o serviço de origem.</dd>  
   <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
   <dd>Nome da instância de serviço de origem, se não especificado, todas as instâncias do serviço de origem terão o acesso autorizado.</dd>
   <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
   <dd>Nome da instância de serviço de destino, se não especificado, todas as instâncias do serviço de destino terão o acesso autorizado.</dd>
-  <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>As funções que fornecem acesso para o serviço de origem.</dd>  
 </dl>
 
 ## Ibmcloud iam authorization-policy-delete
@@ -2821,6 +3143,28 @@ Exemplo de grupo de recursos ibmcloud-group -- id
 ```
 
 
+## Create-ibmcloud grupo de recursos
+{: #ibmcloud_resource_group_create}
+
+Crie um grupo de recursos
+
+```
+ibmcloud resource group-create NAME QUOTA_NAME
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
+
+<strong>Opções de comando</strong>:
+
+<strong>Exemplos</strong>:
+
+Criar um grupo de recursos `example-group` com a cota `free`:
+
+```
+Ibmcloud resource group-create exemplo-grupo grátis
+```
+
+
 ## Update-ibmcloud grupo de recursos
 {: #ibmcloud_resource_group_update}
 
@@ -2904,6 +3248,29 @@ mostre detalhes da cota `free`:
 ```
 Ibmcloud recurso cota grátis
 ```
+
+## Ibmcloud resource cf-service-instance-migrate
+{: #ibmcloud_resource_cf_service_instance_migrate}
+
+Migrar uma instância de serviço Cloudfoundry no grupo de recursos
+
+```
+bx resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
+```
+
+<strong>Pré-requisitos</strong>: Login, Destino
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>SERVICE_INSTANCE_NAME ou SERVICE_INSTANCE_ID (obrigatório)</dt>
+  <dd>Nome ou ID da instância de serviço</dd>
+  <dt>--resource-group-name</dt>
+  <dd>Nome do grupo de recursos. Essa opção é exclusiva com '--resource-group-id'. Se nenhum deles for especificado, assumirão o padrão para o grupo de recursos de destino atual.</dd>
+  <dt>--resource-group-id</dt>
+  <dd>ID do grupo de recursos. Essa opção é exclusiva com '--resource-group-name'. Se nenhum deles for especificado, assumirão o padrão para o grupo de recursos de destino atual.</dd>
+  <dt>-f, --force</dt>
+  <dd>Migrar sem confirmação</dd>
+</dl>
 
 
 ## Ibmcloud app push
@@ -3363,15 +3730,17 @@ Ibmcloud resource service-instances -- service-name test-service
 Mostrar detalhes de uma instância de serviço
 
 ```
-ibmcloud resource service-instance NAME [--location LOCATION] [--id]
+ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>NAME (necessário)</dt>
+  <dt>NAME (obrigatório), exclusivo com ID</dt>
   <dd>Nome da instância de serviço</dd>
+  <dt>ID (obrigatório), exclusivo com NAME</dt>
+  <dd>ID da instância de serviço</dd>
   <dt>--location</dt>
   <dd>Filtrar por local</dd>
   <dt>--id</dt>
@@ -3379,11 +3748,12 @@ ibmcloud resource service-instance NAME [--location LOCATION] [--id]
 </dl>
 
 <strong>Exemplos</strong>:
-mostre detalhes da instância de serviço `my-service-instance`:
+
+Mostrar detalhes de serviço da instância `my-service-instance`:
 
 ```
 Ibmcloud resource service-instance my-service-instance
-```
+``` 
 
 ## Ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
@@ -3427,15 +3797,17 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 Atualizar a instância de serviço
 
 ```
-ibmcloud resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>SERVICE_INSTANCE_NAME (necessário)</dt>
-  <dd>Nome da instância de serviço</dd>
+  <dt>Nome (obrigatório)</dt>
+  <dd>Nome da instância de serviço, exclusivo com ID</dd>
+  <dt>ID (obrigatório)</dt>
+  <dd>ID da instância de serviço, exclusivo com NAME</dd>
   <dt>-n, --name</dt>
   <dd>Novo nome da instância de serviço</dd>
   <dt>-t, --tags</dt>
@@ -3459,13 +3831,17 @@ Ibmcloud resource service-instance-update my-service-instance -n new-service-ins
 Excluir instância de serviço
 
 ```
-ibmcloud resource service-instance-delete NAME [-f, --force] [--recursive]
+ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
+  <dt>Nome (obrigatório)</dt>
+  <dd>Nome da instância de serviço, exclusivo com ID</dd>
+  <dt>ID (obrigatório)</dt>
+  <dd>ID da instância de serviço, exclusivo com NAME</dd>
   <dt>-f, --force</dt>
   <dd>Forçar exclusão sem confirmação</dd>
   <dt>--recursive</dt>
@@ -3940,6 +4316,228 @@ Procurar por um recurso com a tag especificada:
 Ibmcloud recurso de procura "tags: \" mykey:myvalue \""
 ```
 
+## Tags de recursos ibmcloud
+{: #ibmcloud_resource_tags}
+
+Listar todas as tags
+
+```
+ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit LIMIT]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-- tag tipo</dt>
+  <dd>Tipo de Tag (valores suportados: usuário, restrito)</dd>
+  <dt>-o, -- offset</dt>
+  <dd>Iniciando o número da posição de recursos (padrão: 0)</dd>
+  <dt>-l, --limit</dt>
+  <dd>Número de recursos a serem retornados (máximo 10000) (padrão: 10000)</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Listar todas as tags
+
+```
+Tags de recursos ibmcloud 
+```
+
+Liste todas as tags restritos
+
+```
+Tags de recursos ibmcloud -- tag tipo restrito
+```
+
+## Tag de recurso ibmcloud
+{: #ibmcloud_resource_tag}
+
+Mostrar detalhes de uma tag
+
+```
+ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-- tag-name (necessário)</dt>
+  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
+  <dt>-- tag-crn (obrigatório)</dt>
+  <dd>Tag CRN, exclusivo com -- tag-name</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Mostrar detalhes da tag "Ray Brown"
+
+```
+Tag de recurso ibmcloud -- tag-name "Ray Brown"
+```
+
+## Create-tag de recurso ibmcloud
+{: #ibmcloud_resource_tag_create}
+
+Crie uma tag
+
+```
+ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-- tag-name (necessário)</dt>
+  <dd>Nome de tag</dd>
+  <dt>-- tag tipo</dt>
+  <dd>Tipo de tag (valores suportados: user, restricted; padrão: user)</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Criar uma tag de usuário com o nome think:2018
+
+```
+Create-tag de recurso ibmcloud -- tag que nome: 2018
+```
+
+Criar uma tag restrita com o nome department:marketing
+
+```
+ibmcloud resource tag-create --tag-name "department:marketing" --tag-type restricted
+```
+
+Criar uma tag de usuário com o nome "Ray Brown"
+
+```
+ibmcloud resource tag-create --tag-name "Ray Brown"
+```
+
+Criar uma tag restrita com o nome "environment:My Development"
+
+```
+ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
+```
+
+## Delete-tag de recurso ibmcloud
+{: #ibmcloud_resource_tag_delete}
+
+Excluir uma tag
+
+```
+ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-- tag-name (necessário)</dt>
+  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
+  <dt>-- tag-crn (obrigatório)</dt>
+  <dd>Tag CRN, exclusivo com -- tag-name</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Tag Deletag "Ray Brown"
+
+```
+Delete-tag de recurso ibmcloud -- tag-name "Ray Brown"
+```
+
+## Ibmcloud recurso de tag de conexão
+{: #ibmcloud_resource_tag_attach}
+
+Inclua uma tag para um recurso
+
+```
+ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resource-crn RESOURCE_CRN
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-- tag-name (necessário)</dt>
+  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
+  <dt>-- tag-crn (obrigatório)</dt>
+  <dd>Tag CRN, exclusivo com -- tag-name</dd>
+  <dt>-- resource-crn (obrigatório)</dt>
+  <dd>Recursos CRN</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Incluir a tag "Ray Brown" no recurso cujo crn é resource_example_crn.
+
+```
+ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
+```
+
+## Ibmcloud recurso de identificação detach
+{: #ibmcloud_resource_tag_detach}
+
+Remover uma tag de um recurso
+
+```
+ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RESOURCE_CRN
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-- tag-name (necessário)</dt>
+  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
+  <dt>-- tag-crn (obrigatório)</dt>
+  <dd>Tag CRN, exclusivo com -- tag-name</dd>
+  <dt>-- resource-crn (obrigatório)</dt>
+  <dd>Recursos CRN</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Remover a tag "Ray Brown" do recurso cujo crn é resource_example_crn.
+
+```
+ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
+```
+
+## Update-tag de recurso ibmcloud
+{: #ibmcloud_resource_tag_update}
+
+Alternar a tag de usuário para a tag restrita e vice-versa
+
+```
+ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-- tag-name (necessário)</dt>
+  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
+  <dt>-- tag-crn (obrigatório)</dt>
+  <dd>Tag CRN, exclusivo com -- tag-name</dd>
+  <dt>--tag-type (obrigatório)</dt>
+  <dd>Tipo de tag</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Alternar a tag "Ray Brown" para a tag restrita
+
+```
+ibmcloud tag-update --tag-name "Ray Brown"  --tag-type restricted
+```
+
+
 ## Ibmcloud de procura de catálogo
 {: #ibmcloud_catalog_search}
 
@@ -4193,7 +4791,7 @@ Ibmcloud catalog service-marketplace -- global
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
-Visualize os modelos no IBM Cloud.
+Visualize os modelos de modelo no {{site.data.keyword.Bluemix_notm}}.
 
 ```
 Modelos do catálogo ibmcloud [ -d ]
@@ -4750,4 +5348,49 @@ Desinstalar o plug-in 'container-service' que foi instalado anteriormente:
 
 ```
 Ibmcloud plugin uninstall container-service
+```
+
+## Ambientes cfee ibmcloud
+{: #ibmcloud_cfee_environments}
+
+Lista de ambientes CFEE.
+
+```
+Ambientes cfee bx
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+
+
+## Ambiente cfee ibmcloud
+{: #ibmcloud_cfee_environment}
+
+Mostrar detalhes de um ambiente CFEE.
+
+```
+bx cfee environment NAME [--id]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+  <dl>
+   <dt>--id</dt>
+   <dd>Mostrar somente o ID.</dd>
+  </dl>
+
+<strong>Exemplos</strong>:
+
+Mostrar detalhes de um ambiente CFEE env_example:
+
+```
+Env_example ambiente cfee bx
+```
+
+Mostrar ID de um ambiente CFEE env_example:
+
+```
+bx cfee environment env_example --id
 ```
