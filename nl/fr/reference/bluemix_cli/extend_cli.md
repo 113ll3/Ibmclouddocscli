@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-23"
 
 L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} prend en charge une structure de plug-in destinée à étendre ses fonctionnalités. Vous pouvez installer un plug-in depuis un référentiel, une URL WEB, ou installer localement un fichier binaire de plug-in.
 
-Le [{{site.data.keyword.Bluemix_notm}} référentiel de plug-in d'interface de ligne de commande](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg) est le référentiel officiel d'hébergement des plug-in.
+Le [{{site.data.keyword.Bluemix_notm}} référentiel de plug-in d'interface de ligne de commande](https://tools.ng.bluemix.net){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg) est le référentiel officiel d'hébergement des plug-in.
 
 Pour explorer d'autres commandes de gestion de plug-in, exécutez `ibmcloud plugin` afin d'afficher les messages d'aide.
 {: tip}

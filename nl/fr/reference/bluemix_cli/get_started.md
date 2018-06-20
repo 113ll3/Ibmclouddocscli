@@ -48,7 +48,8 @@ Pour vous initier en utilisant uniquement l'interface de ligne de commande {{sit
 
 Vous êtes maintenant prêt à gérer des ressources {{site.data.keyword.Bluemix_notm}}. Entrez `ibmcloud help` pour examiner les descriptions des commandes.
 
-Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) pour vous connecter avec un code d'accès unique ou une clé d'API.  {: tip}
+Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) pour vous connecter avec un code d'accès unique ou une clé d'API.
+{: tip}
 
 ## Autres liens permettant d'explorer davantage l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 

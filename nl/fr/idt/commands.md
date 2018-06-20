@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-05-23"
 Version : 1.2.0
 Publication : 8 mars 2018
 
-A compter de mai 2018, les commandes de l'interface CLI d'{{site.data.keyword.Bluemix_notm}} ont été changées de `bluemix` et `bx` en `ibmcloud`. Vous pouvez toutefois continuer à utiliser les commandes `bluemix` et `bx` jusqu'à ce qu'elles soient déclarées obsolètes.
+A compter de mai 2018, les commandes de l'interface CLI d'{{site.data.keyword.Bluemix_notm}} ont été changées de `bluemix` et `bx` en `ibmcloud`. Vous pouvez toutefois continuer à utiliser les commandes de l'interface CLI `bluemix` et `bx` jusqu'à ce qu'elles soient retirées.
 {: tip}
 
 Utilisez les commandes CLI {{site.data.keyword.dev_cli_notm}} (ibmcloud dev) suivantes pour créer un projet, le déployer, le déboguer et le tester :

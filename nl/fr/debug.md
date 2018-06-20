@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-03-27"
+  years: 2015, 2018
+lastupdated: "2018-05-29"
 
 ---
 
@@ -54,7 +54,8 @@ La procédure suivante présente l'utilisation de la commande `cf logs` pour dé
 
 Si vous utilisez le plug-in des outils IBM Eclipse for {{site.data.keyword.Bluemix_notm}} pour déployer des applications, dans l'onglet **Console** de l'outil Eclipse figurent des journaux similaires à la sortie des journaux cf. Vous pouvez également ouvrir une fenêtre Eclipse distincte pour suivi des journaux lorsque vous déployez l'application.
 
-Outre la commande `cf logs`, dans {{site.data.keyword.Bluemix_notm}}, vous pouvez également utiliser le service {{site.data.keyword.loganalysisshort}} pour collecter les informations des journaux.
+Outre la commande `cf logs`, dans {{site.data.keyword.Bluemix_notm}}, vous pouvez également utiliser le service {{site.data.keyword.loganalysisshort}} pour collecter les informations des journaux. 
+
 ### Débogage des erreurs de constitution pour une application Node.js
 
 L'exemple suivant illustre un journal affiché après l'entrée de la commande `cf logs nom_application --recent`. On
@@ -154,5 +155,4 @@ Selon la manière dont le nouveau code est déployé, choisissez l'une des méth
 
   * Dans le cas d'un nouveau code déployé depuis une interface graphique telle que la console {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline ou Travis-CI, vous pouvez examiner les journaux depuis l'interface. Par exemple, si vous déployez le nouveau code depuis
 la console {{site.data.keyword.Bluemix_notm}}, vous pouvez accéder au tableau de bord, rechercher votre application, puis afficher
-tous les journaux pour repérer des indices.   Pour plus d'informations sur l'affichage des journaux depuis la console {{site.data.keyword.Bluemix_notm}}, voir [Affichage des journaux depuis le tableau de bord {{site.data.keyword.Bluemix}}](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana).  
-
+tous les journaux pour repérer des indices.   Pour plus d'informations sur l'affichage des journaux depuis la console {{site.data.keyword.Bluemix_notm}}, voir [Affichage des journaux depuis le tableau de bord {{site.data.keyword.Bluemix}}](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana).
