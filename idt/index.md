@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -76,12 +76,12 @@ More details on project structures can be found here:
 {: #build}
 
 
-Once your project has been created, it's now up to you to craft it into something useful. The general flow consists of editing the source code, then running a [`ibmcloud dev build`](commands.html#build) to compile the app within a local container specific to your app's language and configuration. Depending on your apps language and generator that is used, there are one or more containers defaulted to support building and running locally.  Typically, there will be a "tools" container for builds and local debugging.  This container will usually have extra tools and capabilities to aid you in development.  There is also a "run" container that closely mimics the actual runtime environment of your app once deployed to the cloud, either in Cloud Foundry or IBM's Kubernetes based container environment.
+Once your project has been created, it's now up to you to craft it into something useful. The general flow consists of editing the source code, then running a [`ibmcloud dev build`](commands.html#build) to compile the app within a local container specific to your app's language and configuration. Depending on your apps language and generator that is used, there are one or more containers defaulted to support building and running locally.  Typically, there will be a "tools" container for builds and local debugging. This container will usually have extra tools and capabilities to aid you in development. There is also a "run" container that closely mimics the actual runtime environment of your app once deployed to the cloud, either in Cloud Foundry or IBM's Kubernetes based container environment.
 
 
 You are free to use whatever IDE or editor you prefer to code up your application. We offer an extension for the Microsoft VisualStudio Code (VSCode) editor that enables you to access all the IDE commands from directly within the editor.
 
-Once the project has been built, you'll next want to run your app using the [`ibmcloud dev run`](commands.html#run) or [`ibmcloud dev debug`](commands.html#debug), depending on your apps generator configuration.  This will run the app within the proper container.  Some apps patterns support multiple containers external to your apps such as persistence or other capabilities.  These will automatically be started and configured during run or debug.  There is also a [`ibmcloud dev test`](commands.html#test) command that will execute any test cases associated with the app.
+Once the project has been built, you'll next want to run your app using the [`ibmcloud dev run`](commands.html#run) or [`ibmcloud dev debug`](commands.html#debug), depending on your apps generator configuration. This will run the app within the proper container. Some apps patterns support multiple containers external to your apps such as persistence or other capabilities. These will automatically be started and configured during run or debug. There is also a [`ibmcloud dev test`](commands.html#test) command that will execute any test cases associated with the app.
 
 
 ### How local containers are used
@@ -116,7 +116,7 @@ The following CLI commands assist in working with your project during the code, 
 ## Deploy
 {: #deploy}
 
-Under a proper cloud native environment, you will want to utilize a fully functional DevOps pipeline to manage all deployments, as well as a wealth of other capabilities.  During the create flow, you can set up your app to use IBM Cloud's DevOps.  If you are not ready to use the built-in DevOps, then you can either manually [`ibmcloud dev deploy`](./commands.html#deploy) your app, or use the deploy command within your own DevOps pipeline.  
+Under a proper cloud native environment, you will want to utilize a fully functional DevOps pipeline to manage all deployments, as well as a wealth of other capabilities. During the create flow, you can set up your app to use IBM Cloud's DevOps. If you are not ready to use the built-in DevOps, then you can either manually [`ibmcloud dev deploy`](./commands.html#deploy) your app, or use the deploy command within your own DevOps pipeline.  
 
 
 
@@ -132,5 +132,5 @@ The following CLI commands help in working with your project during the deploy p
 ### Reference Blogs and Videos
 {: #ref3}
 
-- Blog: [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- Blog: [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - Blog: [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

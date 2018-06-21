@@ -4,14 +4,14 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Private network peering plug-in for {{site.data.keyword.Bluemix_notm}} CLI
+# Private network peering Plug-in for {{site.data.keyword.Bluemix_notm}} CLI
 {: #private_network_cli}
 
 Use the private network peering command line interface (CLI) to configure and manage private network peering between two {{site.data.keyword.Bluemix}} spaces. Private network peering is supported for IBM Containers (docker containers). The {{site.data.keyword.Bluemix_notm}} spaces can be located in different availability zones in the same region or can be located in the different regions. The private network peering CLI plug-in is available for use with the {{site.data.keyword.Bluemix_notm}} CLI plug-in.
@@ -25,7 +25,7 @@ Before you begin, create {{site.data.keyword.Bluemix_notm}} spaces. Ensure that 
 To get started, install the {{site.data.keyword.Bluemix_notm}} CLI. See
 [IBM Cloud CLI](http://clis.ng.bluemix.net/ui/home.html) for details.
 
-## Install the private network peering CLI plug-in
+## Install the private network peering CLI Plug-in
 
 **Note**: If you have a previous version of the plug-in that is installed, you need to uninstall it. Use the following command to uninstall the plug-in:
 
@@ -148,7 +148,7 @@ To view detailed network information about all routers:
 	...
 
 
-#### Create a private network peering connection by using the IP addresses
+#### Create a private network peering connection by using the IP Addresses
 ```
 ibmcloud network pnp-create <router_ip> <router_ip> <name>
 ```

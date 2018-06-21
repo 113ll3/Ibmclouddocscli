@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -28,7 +28,7 @@ Sign up for [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration
 
 * You must use the stable channel for Docker, with a minimum version of 1.13.1.
 
-## How to install {{site.data.keyword.dev_cli_notm}}
+## How to Install {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
 To install the toolset, you can run the relevant command to start the installer. This installs the following recommended tools for {{site.data.keyword.Bluemix_notm}} development (if not already installed): `Homebrew` (Mac only), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}} CLI, {{site.data.keyword.dev_cli_notm}} plug-in, Cloud Functions plug-in, Container Registry plug-in, Container Service plug-in, and `sdk-gen` plug-in. To install, use these installation steps:
@@ -103,13 +103,13 @@ The [Reinstalling tools](/docs/troubleshoot/ts_createapps.html#appendix) section
 ## Learn More
 {: #learn}
 
-Now that you have your {{site.data.keyword.dev_cli_short}} CLI installed, you can learn how to be effective with this powerful tool.:
+Now that you have your {{site.data.keyword.dev_cli_short}} CLI installed, you can learn how to be effective with this powerful tool:
 - [Getting Started with IDT CLI](index.html)
 - [IDT (ibmcloud dev) commands](commands.html)
 - [Developer Tools for VS Code](vscode.html)
 - [Developer Tools for Jetbrains IDEs](jetbrains.html)
 
-Check out the [tutorials](/docs/apps/tutorials/tutorial_bff.html) that show how to create cloud native apps using {{site.data.keyword.dev_cli_short}} CLI.
+Check out the [tutorials](/docs/apps/tutorials/tutorial_bff.html) that show how to create cloud native apps that use the  {{site.data.keyword.dev_cli_short}} CLI.
 
 ## Further reading
 {: #learn-more}
@@ -118,18 +118,18 @@ The following resources can be helpful when developing Cloud Native apps with th
 
 - [IBM Cloud Developer Tools main landing page](https://www.ibm.com/cloud/cli) - Main product page for IDT CLI
 - [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Public GitHub repo with detailed installation instructions
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud console page which is a companion to the IDT tools to create and manage cloud native apps
+- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud console page, which is a companion to the IDT tools to create and manage cloud native apps
 - [Report issues on GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
 **Language focused**
 
-- [Node,js on IBM Cloud](https://developer.ibm.com/node/cloud/)
+- [Node.js on IBM Cloud](https://developer.ibm.com/node/cloud/)
 - [Spring @ IBM Cloud](https://developer.ibm.com/java/spring/)
 - [Swift @ IBM](https://developer.ibm.com/swift)
 
 **Blogs and Tutorials**
 
-- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 - [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

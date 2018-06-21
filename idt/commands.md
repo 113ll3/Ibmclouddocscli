@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -393,7 +393,7 @@ There are [additional parameters](#command-parameters) shared with other command
 
 * Dockerfile for the run container.
 * If you intend to run with multiple containers, this should be a Compose file.
-* To use multiple compose files, surround a comma-delimited list of the file names with double quotes.
+* To use multiple compose files, surround a comma-delimited list of the file names with double quotation marks.
 * Usage: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
 * Usage: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
@@ -423,12 +423,12 @@ ibmcloud dev shell
 
 the {{site.data.keyword.dev_cli_short}} CLI will open an interactive shell into the application's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command will target the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. See [this reference](https://docs.docker.com/engine/reference/builder/#workdir) for more information.
 
-Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container will be brought up and the shell will be opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you wish to shell. However, this flag should be reserved for when no containers are running. The `run` and `tools` arguments are more flexible and allow you to switch between containers when one is currently running. For example, if the tools container is running and you execute `ibmcloud dev shell run`, the `tools` container will be stopped and the `run` container will be started, and vice versa.
+Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container will be brought up and the shell will be opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you want to shell. However, this flag should be reserved for when no containers are running. The `run` and `tools` arguments are more flexible and allow you to switch between containers when one is currently running. For example, if the tools container is running and you execute `ibmcloud dev shell run`, the `tools` container will be stopped and the `run` container will be started, and vice versa.
 
 If the target `run` or `tools` container is not already running when you execute the `shell` command, then the target container will be started. However, the default `Cmd` or `Entrypoint` in the Dockerfile will be overridden to launch directly into the shell instead of starting the server process. This allows you to start the `run` or `tools` container, and manually start the server with your own arbitrary or custom commands.
 
 
-You can also specify the shell executable you wish to open by using the `container-shell` parameter. By default, `/bin/sh` is used. If you'd prefer to use the bash shell, then specify the `container-shell` value to be `/bin/bash`; however, keep in mind that bash is not automatically available across all Linux variants.
+You can also specify the shell executable you want to open by using the `container-shell` parameter. By default, `/bin/sh` is used. If you'd prefer to use the bash shell, then specify the `container-shell` value to be `/bin/bash`; however, keep in mind that bash is not automatically available across all Linux variants.
 
 Any additional arguments you pass to the command beyond the flags will be parsed as the command to be run when the shell is opened. If you provide a command to be run, the shell inside the container will exit upon running the command and return to your terminal.
 
@@ -440,7 +440,7 @@ For example, you can run the Linux `ls` command inside of the tools container sh
 #### `container-name`
 {: #container-name}
 
-* Name of the container into which you wish to shell.
+* Name of the container into which you want to shell.
 * Usage: `ibmcloud dev shell --container-name [<container-name>]`
 
 #### `container-shell`
@@ -534,7 +534,7 @@ The following parameter is exclusive to the `test` command.  There are [addition
 ## view
 {: #view}
 
-You can view the URL to which your application is deployed through the `view` command. Run this command in the root directory of the application you wish to view. The `view` command will also open the URL in your default browser.
+You can view the URL to which your application is deployed through the `view` command. Run this command in the root directory of the application you want to view. The `view` command will also open the URL in your default browser.
 
 For applications deployed to Cloud Foundry, the URL consists of the application's hostname and the application's domain.
 

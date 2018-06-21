@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 
 
@@ -20,7 +20,7 @@ lastupdated: "2017-01-12"
 {: #devmodecli}
 
 
-**This CLI has been deprecated:** Instead of using the Development mode (dev_mode) CLI, use IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}  or DevOps Web IDE. You can continue to use the dev_mode CLI until 30 June 2016.
+**This CLI has been deprecated:** Instead of using the Development mode (dev_mode) CLI, use IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} or DevOps Web IDE. You can continue to use the dev_mode CLI until 30 June 2016.
 
 With {{site.data.keyword.Bluemix_notm}} development mode command line interface (dev_mode CLI), you can update your apps while your apps are running in the cloud. dev_mode CLI is built as a cf CLI plug-in and supports both Liberty and IBM Node.js apps.
 {: shortdesc}
@@ -31,20 +31,20 @@ You can do the following tasks with the dev_mode CLI:
 - Update application files incrementally without a new push.
 - Start, stop, or restart your app in the existing container.
 
-## Installing the dev_mode plug-in
+## Installing the dev_mode Plug-in
 **Prerequisite:** Before you begin, install the Cloud Foundry CLI. See [Start coding with Cloud Foundry command line interface](https://github.com/cloudfoundry/cli) for details.
 
 
 Use one of the following methods to install the dev_mode command line tool:
 - Install locally.
-  1. Download the dev_mode plug-in for your platform from [{{site.data.keyword.Bluemix_notm}}  CLI Plugin Repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+  1. Download the dev_mode plug-in for your platform from [{{site.data.keyword.Bluemix_notm}} CLI Plug-in Repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
   2. Go to the folder that the dev_mode plug-in is saved, and install the dev_mode plug-in by using the cf install-plugin command. For example:
 
         ```
         cf install-plugin dev_mode-linux64
         ```
 
-- Install from the {{site.data.keyword.Bluemix_notm}}  CLI repository.
+- Install from the {{site.data.keyword.Bluemix_notm}} CLI repository.
   1. Add the bluemix-repo repository into the Cloud Foundry CLI repositories by using the following command:
 
         ```
@@ -150,7 +150,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expand</dt>
-   <dd>Indicate whether the uploaded files must be extracted from the zip file.</dd>
+   <dd>Indicate whether the uploaded files must be extracted from the .zip file.</dd>
    <dt>restart</dt>
    <dd>Restart the app runtime after the files are updated.</dd>
    </dl>

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -29,7 +29,7 @@ Sign up for [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration
 
 * You must use the stable channel for Docker, with a minimum version of 1.13.1.
 
-## How to install {{site.data.keyword.dev_cli_notm}}
+## How to Install {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
 To install the toolset, you can run the relevant command to start the installer. This installs the following recommended tools for {{site.data.keyword.Bluemix_notm}} development (if not already installed): `Homebrew` (Mac only), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}} CLI, {{site.data.keyword.dev_cli_notm}} plug-in, Cloud Functions plug-in, Container Registry plug-in, Container Service plug-in, and `sdk-gen` plug-in.
@@ -67,7 +67,7 @@ If installation was successful, the output should list usage instructions, the c
 - [Detailed Setup](/docs/cli/idt/setting_up_idt.html)
 - [Usage](/docs/cli/idt/index.html)
 - [Commands](/docs/cli/idt/commands.html)
-- [CLI Plug-ins](/docs/cli/reference/bluemix_cli/extend_cli.html)
+- [CLI plug-ins](/docs/cli/reference/bluemix_cli/extend_cli.html)
 - [VSCode IDE Extension](/docs/cli/idt/vscode.html)
 - [Install IBM Cloud CLI Manually](/docs/cli/reference/bluemix_cli/get_started.html)
 - [Report issues on GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)

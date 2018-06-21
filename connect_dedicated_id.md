@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -55,7 +55,7 @@ However, if your dedicated ID has not been connected to the public IBMid, you ar
 
 Select an option to input the credentials for the dedicated ID. After successful authentication, your dedicated ID will be connected to your public IBMid.
 
-## Force logging in to local UAA server
+## Force Logging in to local UAA server
 
 To force logging in to the UAA server with a dedicated ID, specify the `--no-iam` option in `ibmcloud login` command:
 

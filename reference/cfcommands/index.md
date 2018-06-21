@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -96,7 +96,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (optional)</dt>
-   <dd>The URL of the Bluemix API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is `https://api.{DomainName}`.
+   <dd>The URL of the IBM Cloud API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is `https://api.{DomainName}`.
    If you want to display the URL of the API endpoint that you are currently using, you do not need to specify this parameter for the cf api command.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
@@ -130,7 +130,7 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 
 Lists all of the applications that you deployed in the current space. The status of each application is also displayed.
 
-Assume that you have one instance for an app, in the instances column of the response from the cf apps command, you see 1/1 if your app is up and 0/1 if your app is down. If you see ?/1, which indicates that the app instance state is unknown, you can copy the app URL to your browser to check whether your app responds, or you can tail the log by the `cf logs appname` command to see if the app is generating log content.
+Assume that you have one instance for an app, in the instances column of the response from the cf apps command, you see 1/1 if your app is up and 0/1 if your app is down. If you see ?/1, which indicates that the app instance state is unknown, you can copy the app URL to your browser to check whether your app responds, or you can tail the log by the `cf logs appname` command to see whether the app is generating log content.
 
 ```
 cf apps
@@ -161,7 +161,7 @@ cf bind-service appname service_instance
 
 <strong>Examples</strong>:
 
-Bind a service instance named `my_dataworks` to your app named `my_app`.
+Bind a service instance that is named `my_dataworks` to your app named `my_app`.
 ```
 cf bind-service my_app my_dataworks
 ```
@@ -223,7 +223,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>Examples</strong>:
 
-Create a space named new_space
+Create a space that is named new_space
 ```
 cf create-space new_space
 ```
@@ -254,25 +254,25 @@ cf delete appname [-f] [-r]
 
 <strong>Examples</strong>:
 
-Deletes an application named `my_app` (will require confirmation).
+Deletes an application that is named `my_app` (will require confirmation).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Deletes an application named `my_app` without requiring confirmation.
+Deletes an application that is named `my_app` without requiring confirmation.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app`.
+Deletes an application that is named `my_app` and all domain names that are associated with `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app` without requiring confirmation.
+Deletes an application that is named `my_app` and all domain names that are associated with `my_app` without requiring confirmation.
 ```
 cf delete my_app -f -r
 ```
@@ -302,25 +302,25 @@ cf delete-space space_name [-f]
 
 <strong>Examples</strong>:
 
-Deletes an application named `my_app` (will require confirmation).
+Deletes an application that is named `my_app` (will require confirmation).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Deletes an application named `my_app` without requiring confirmation.
+Deletes an application that is named `my_app` without requiring confirmation.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app`.
+Deletes an application that is named `my_app` and all domain names that are associated with `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app` without requiring confirmation.
+Deletes an application that is named `my_app` and all domain names that are associated with `my_app` without requiring confirmation.
 ```
 cf delete my_app -f -r
 ```
@@ -347,7 +347,7 @@ cf events [appname]
 
 <strong>Examples</strong>:
 
-Displays the events for an application named `my_app`.
+Displays the events for an application that is named `my_app`.
 ```
 cf events my_app
 ```
@@ -390,7 +390,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Logs you in to {{site.data.keyword.Bluemix_notm}}. If you are logging in with a [federated ID](/docs/admin/account.html#signup), you must use the single sign-on (SSO) parameter to log in. 
+Logs you in to {{site.data.keyword.Bluemix_notm}}. If you are logging in with a [federated ID](/docs/admin/account.html#signup), you must use the single sign-on (SSO) parameter to log in.
 
 **Note**: You can also use a {{site.data.keyword.Bluemix_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password. For more information about creating an API key, see [Managing API keys](/docs/iam/apikeys.html).
 
@@ -411,7 +411,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>Your password.</dd>
 <dd>*Important:* If you provide your password by using the *-p* parameter on the command line interface, the password might be recorded in the command line history. For security reasons, avoid providing the password by using the -p parameter. Instead, enter the password when the command line interface prompts you.</dd>
 <dt>*-sso*</dt>
-<dd>You must use the single sign-on option (SSO) when logging in with a federated ID. This is not required when logging in with an IBMid. If you try to sign in with a federated ID, and you do not specify the SSO parameter, you will be prompted to include it. Using the SSO parameter prompts you to enter the one-time passcode upon login.</dd>
+<dd>You must use the single sign-on option (SSO) when logging in with a federated ID. This is not required when logging in with an IBMid. If you try to sign in with a federated ID, and you do not specify the SSO parameter, you are prompted to include it. Using the SSO parameter prompts you to enter the one-time passcode upon login.</dd>
 <dt>*-o* organization_name</dt>
 <dd>The name of the organization that you want to log in to.</dd>
 <dt>*-s* space_name</dt>
@@ -476,13 +476,13 @@ cf logs appname [--recent]
 
 <strong>Examples</strong>:
 
-Display the log streams for an application named `my_app`.
+Display the log streams for an application that is named `my_app`.
 ```
 cf logs my_app
 ```
 {: codeblock}
 
-Display the recent log streams for an application named `my_app`.
+Display the recent log streams for an application that is named `my_app`.
 ```
 cf logs my_app --recent
 ```
@@ -492,7 +492,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Lists all of the services that are available in the marketplace. The services listed by this command are also shown in the {{site.data.keyword.Bluemix_notm}} Catalog.
+Lists all of the services that are available in the marketplace. The services that are listed by this command are also shown in the {{site.data.keyword.Bluemix_notm}} catalog.
 
 ```
 cf marketplace
@@ -560,13 +560,13 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>Examples</strong>:
 
-Start an application named `my_app` with the default start command.
+Start an application that is named `my_app` with the default start command.
 ```
 cf push `my_app` -c null
 ```
 {: codeblock}
 
-Start an application named `my_app` with the option to run a script file named `run.sh`.
+Start an application that is named `my_app` with the option to run a script file named `run.sh`.
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -602,7 +602,7 @@ cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 
 <strong>Examples</strong>:
 
-Display the instance number, disk space limit, and memory limit for an application named `my_app`.
+Display the instance number, disk space limit, and memory limit for an application that is named `my_app`.
 ```
 cf scale my_app
 ```
@@ -659,7 +659,7 @@ cf set-env appname var_name var_value
 
 <strong>Examples</strong>:
 
-Set an environment variable named `variable_a` with a value of `123` for the application named `my_app`.
+Set an environment variable that is named `variable_a` with a value of `123` for the application that is named `my_app`.
 ```
 cf set-env my_app variable_a 123
 ```
@@ -676,7 +676,7 @@ cf ssh
 ```
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
-By default, SSH access is enabled for Diego applications. You can use the `cf ssh-enabled` command to verify if SSH access is enabled or the `cf enable-ssh` command to enable the access if it was disabled. 
+By default, SSH access is enabled for Diego applications. You can use the `cf ssh-enabled` command to verify whether SSH access is enabled or the `cf enable-ssh` command to enable the access if it was disabled.
 
 <strong>Command options</strong>:
 
@@ -713,7 +713,7 @@ Transfer a single file from the `my_app` application container instance.
 $ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Setup port forwarding of the 7777 port on the local machine to the 8888 port on the `my_app` application container instance.
+Set up port forwarding of the 7777 port on the local machine to the 8888 port on the `my_app` application container instance.
 ```
 $ cf ssh -N -T -L 7777:localhost:8888 my_app
 
@@ -759,7 +759,7 @@ cf stop appname
 
 <strong>Examples</strong>:
 
-Stop the application named `my_app`.
+Stop the application that is named `my_app`.
 ```
 cf stop my_app
 ```
@@ -787,7 +787,7 @@ cf target [-o org_name] [-s space_name]
 
 <strong>Examples</strong>:
 
-Set the target to the organization named "my_org" and the space named "my_space".
+Set the target to the organization named "my_org" and the space that is named "my_space".
 ```
 cf target -o my_org -s my_space
 ```

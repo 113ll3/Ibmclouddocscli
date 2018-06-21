@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2018-05-23"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# VPN plug-in for {{site.data.keyword.Bluemix_notm}} CLI
+# VPN Plug-in for {{site.data.keyword.Bluemix_notm}} CLI
 
 *Version:* 1.4.0
 
@@ -27,14 +27,14 @@ The VPN plug-in is available for Windows, MAC, and Linux operating systems. Ensu
 The instructions that follow are for working with the {{site.data.keyword.Bluemix_notm}} CLI plug-in. To use the plug-in with the Cloud Foundry (cf) CLI plug-in, see [VPN CLI plug-in for cf CLI](../vpn/index.html).
 
 
-The information that follows lists all commands that are supported by VPN plug-in for {{site.data.keyword.Bluemix_notm}} CLI and includes their names, options, usage, prerequisites, descriptions, and examples. See [Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext) on how to install the vpn plug-in.
+The information that follows lists all commands that are supported by VPN plug-in for {{site.data.keyword.Bluemix_notm}} CLI and includes their names, options, usage, prerequisites, descriptions, and examples. See [Extend your IBM Cloud command line interface](../../index.html#cli_bluemix_ext) on how to install the vpn plug-in.
 
 **Note:** *Prerequisites* list which actions are required before using the command. Prerequisites might include one or more of the following actions:
 <dl>
 <dt>**Endpoint**</dt>
 <dd>An API endpoint must be set through the `ibmcloud api` before using the command.</dd>
 <dt>**Login**</dt>
-<dd>Login by using the `ibmcloud login` command is required before using this command.</dd>
+<dd>Log in by using the `ibmcloud login` command is required before using this command.</dd>
 <dt>**Target**</dt>
 <dd>The `ibmcloud target` command must be used to set an org and space before using this command.</dd>
 </dl>
@@ -73,7 +73,7 @@ ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY 
 
 -i *INITIATOR_STATE*  (optional):  State of the initiator. Default value is `bi-directional`.
 
--dpd-timeout *VALUE*  (optional):  Timeout value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value is `120` seconds.
+-dpd-timeout *VALUE*  (optional):  Time out value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value is `120` seconds.
 
 -dpd-interval *VALUE*  (optional):  Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 5-86399 seconds. Default value is `15` seconds.
 
@@ -363,7 +363,7 @@ ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_K
 
 -i *INITIATOR_STATE*  (optional):  State of the initiator.
 
--dpd-timeout *VALUE*  (optional):  Timeout value in seconds after which the session is terminated. Range: 6 - 86400 seconds.
+-dpd-timeout *VALUE*  (optional):  Time out value in seconds after which the session is terminated. Range: 6 - 86400 seconds.
 
 -dpd-interval *VALUE*  (optional):  Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 5-86399 seconds.
 

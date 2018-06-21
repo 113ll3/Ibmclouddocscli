@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-04-17"
 {: #bluemixadmincli}
 
 
-You can manage your {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by using the Cloud Foundry command line interface with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For example, you can add users from an LDAP registry. For information about managing your {{site.data.keyword.Bluemix_notm}} Public account, see [Administering](/docs/admin/adminpublic.html#administer).
+You can manage your {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by using the Cloud Foundry command line interface with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For example, you can add users from an LDAP registry. For information about managing your {{site.data.keyword.Bluemix_notm}} Public account, see [administering](/docs/admin/adminpublic.html#administer).
 
 Before you begin, install the cf command line interface. The {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
@@ -27,7 +27,7 @@ Cygwin. Use the Cloud Foundry command line interface in a command line window ot
 
 **Note**: {{site.data.keyword.Bluemix_notm}} admin CLI is only used for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated environment. It is not supported by {{site.data.keyword.Bluemix_notm}} Public.
 
-## Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
+## Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI Plug-in
 
 After the cf command line interface is installed, you can add the {{site.data.keyword.Bluemix_notm}} admin CLI plug-in.
 
@@ -54,7 +54,7 @@ If you need to uninstall the plug-in, you can use the following commands, then y
 * Remove the plug-in repository: `cf remove-plugin-repo BluemixAdmin`
 
 
-## Using the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
+## Using the {{site.data.keyword.Bluemix_notm}} Admin CLI Plug-in
 
 You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks.
 
@@ -65,9 +65,9 @@ cf plugins
 ```
 {: codeblock}
 
-For additional help for a command, use the `-help` option.
+For more help for a command, use the `-help` option.
 
-### Connecting and logging in to {{site.data.keyword.Bluemix_notm}}
+### Connecting and Logging in to {{site.data.keyword.Bluemix_notm}}
 
 Before you can use the Admin CLI plug-in, you must connect and log in, if
 you are not already.
@@ -82,8 +82,8 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 <dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance.<br />
 </dd>
 </dl>
-<p>You can check the Admin Console Resources and Information page for the
-correct URL. The URL is shown in the API Information section in the **API URL**
+<p>You can check the Admin Console Resources and information page for the
+correct URL. The URL is shown in the API information section in the **API URL**
 field.</p>
 </li>
 <li>Log in to {{site.data.keyword.Bluemix_notm}} with the following command:<br/><br/>
@@ -107,7 +107,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**Note**: To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you are an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command.  See [Enabling managers to add users](index.html#clius_emau) for more information.
+**Note**: To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you are an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command. For more information, see [Enabling managers to add users](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -146,10 +146,10 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 <dd class="pd">The ID of the public account organization you are inviting users to.</dd>
 </dl>
 
-### Listing users invited from {{site.data.keyword.Bluemix_dedicated_notm}}
+### Listing users who are invited from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-If you have invited Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} account with the [`invite-users-to-public` command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users that have an existing IBMid will have a status of `ACTIVE`. Invited users that did not have an existing IBMid will have a status of either `PENDING` or `ACTIVE` depending on whether or not they have accepted the invitation to the account yet. To list the users in your {{site.data.keyword.Bluemix_notm}} account:
+If you have invited Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} account with the [`invite-users-to-public` command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users that have an existing IBMid has a status of `ACTIVE`. Invited users that did not have an existing IBMid has a status of either `PENDING` or `ACTIVE` depending on whether or not they have accepted the invitation to the account yet. To list the users in your {{site.data.keyword.Bluemix_notm}} account:
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
@@ -168,7 +168,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 ### Searching for a user
 {: #admin_search_user}
 
-To search for a user, use the following command in conjunction with the optional search filter parameters
+To search for a user, use the following command with the optional search filter parameters
 (name, permission, organization, and role):
 
 ```
@@ -238,7 +238,7 @@ cf ba remove-user <user_name>
 **Tip:** You can also use **ba ru** as an alias for the longer
 **ba remove-user** command name.
 
-### Enabling managers to add users
+### Enabling Managers to add users
 {: #clius_emau}
 
 If you have the **Superuser** permission in your {{site.data.keyword.Bluemix_notm}} environment, you can enable organization managers to add users to the organizations they manage. To enable managers to add users, use the following command:
@@ -251,10 +251,10 @@ cf ba enable-managers-add-users
 **Tip:** You can also use **ba emau** as an alias for the longer
 **ba enable-managers-add-users** command name.
 
-### Disabling managers from adding users
+### Disabling Managers from adding users
 {: #clius_dmau}
 
-If organization managers have been enabled to add users to the organizations they manage in your {{site.data.keyword.Bluemix_notm}} environment with the **enable-managers-add-users** command, and if you have the **Superuser** permission, you can remove this setting.  To disable managers from adding users, use the following  command:
+If organization managers have been enabled to add users to the organizations they manage in your {{site.data.keyword.Bluemix_notm}} environment with the **enable-managers-add-users** command, and if you have the **Superuser** permission, you can remove this setting. To disable managers from adding users, use the following command:
 
 ```
 cf ba disable-managers-add-users
@@ -399,7 +399,7 @@ cf bluemix-admin containers-quota <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">The name or ID of the organization in Bluemix. This parameter is required.</dd>
+<dd class="pd">The name or ID of the organization in IBM Cloud. This parameter is required.</dd>
 </dl>
 
 **Tip:** You can also use **ba cq** as an alias for the longer
@@ -419,7 +419,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">The name or ID of the organization in Bluemix. This parameter is required.</dd>
+<dd class="pd">The name or ID of the organization in IBM Cloud. This parameter is required.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">Include one or more of the following options in which the value must be an integer:
 <ul>
@@ -447,14 +447,14 @@ options names:
 <dd class="pd"><strong>il</strong></dd>
 </dl>
 
-Optionally, you can provide a file containing specific configuration parameters in a valid JSON object. If you use the **-file** option, it takes precedence and the other options are ignored. To provide a file instead of setting the options, use the following command:
+Optionally, you can provide a file that contains specific configuration parameters in a valid JSON object. If you use the **-file** option, it takes precedence and the other options are ignored. To provide a file instead of setting the options, use the following command:
 
 ```
 cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
-The JSON file should have the format shown in the following example:
+The JSON file should have the format that is shown in the following example:
 
 ```
 {
@@ -573,7 +573,7 @@ descriptions in a space.</dd>
 {: #admin_ena_service_org}
 
 To enable a service to be displayed in the
-{{site.data.keyword.Bluemix_notm}} Catalog for all
+{{site.data.keyword.Bluemix_notm}} catalog for all
 organizations, use the following command:
 
 ```
@@ -583,7 +583,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans that  to choose from. To identify a service plan name,  select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service. </dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name,  select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service. </dd>
 </dl>
 
 **Tip:** You can also use **ba esp** as an alias for the longer
@@ -592,7 +592,7 @@ cf ba enable-service-plan <plan_identifier>
 ### Disabling services for all organizations
 {: #admin_dis_service_org}
 
-To disable a service from being visible in the {{site.data.keyword.Bluemix_notm}} Catalog for all
+To disable a service from being visible in the {{site.data.keyword.Bluemix_notm}} catalog for all
 organizations, use the following command:
 
 ```
@@ -602,7 +602,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans that  to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 </dl>
 
 **Tip:** You can also use **ba dsp** as an alias for the longer
@@ -611,8 +611,8 @@ cf ba disable-service-plan <plan_identifier>
 ### Adding service visibility for organizations
 {: #admin_addvis_service_org}
 
-You can add an organization from the list of organizations that can see a specific service in the {{site.data.keyword.Bluemix_notm}} Catalog. To allow an organization to view a specific service in the
-{{site.data.keyword.Bluemix_notm}} Catalog, use the following command:
+You can add an organization from the list of organizations that can see a specific service in the {{site.data.keyword.Bluemix_notm}} catalog. To allow an organization to view a specific service in the
+{{site.data.keyword.Bluemix_notm}} catalog, use the following command:
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
@@ -621,7 +621,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans that  to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add to the service's visibility list.</dd>
 </dl>
@@ -633,8 +633,8 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 {: #admin_remvis_service_org}
 
 You can remove an organization from the list of organizations that can see a
-specific service in the {{site.data.keyword.Bluemix_notm}} Catalog. To remove the visibility of a service in the
-{{site.data.keyword.Bluemix_notm}} Catalog for an
+specific service in the {{site.data.keyword.Bluemix_notm}} catalog. To remove the visibility of a service in the
+{{site.data.keyword.Bluemix_notm}} catalog for an
 organization, use the following command:
 
 ```
@@ -644,7 +644,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">TThe name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans that  to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
+<dd class="pd">TThe name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to remove from the service's visibility list.</dd>
 </dl>
@@ -656,7 +656,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 {: #admin_editvis_service_org}
 
 You can edit and replace the list of services that specific
-organizations can see in the {{site.data.keyword.Bluemix_notm}} Catalog. To replace all existing visible services for an organization or multiple organizations, use the
+organizations can see in the {{site.data.keyword.Bluemix_notm}} catalog. To replace all existing visible services for an organization or multiple organizations, use the
 following command:
 
 ```
@@ -668,10 +668,10 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans that  to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add visibility for. You can enable visibility of the service for more than
-one organization by entering additional organization names or GUIDs in the command.</dd>
+one organization by entering more organization names or GUIDs in the command.</dd>
 </dl>
 
 **Tip:** You can also use **ba espv** as an alias for the longer
@@ -749,7 +749,7 @@ name.</dd>
 
 **Tip:** You can also use **ba rr** as an alias for the longer **ba retrieve-report** command name.
 
-## Viewing resource metric information
+## Viewing resource metric Information
 {: #cliresourceusage}
 
 You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data. To view the resource metric information, use the following command:
@@ -764,7 +764,7 @@ cf ba resource-metrics
 ## Viewing resource metric history
 {: #cliresourceusagehistory}
 
-You can retrieve resource metric history for memory and disk usage. The metrics returned include the amount of resources used out of the total available, for both physical and reserved resources. Historical data for memory and disk usage can be displayed hourly, daily, or monthly.  You can specify start and end dates to retrieve data within a specific date range. The default historical data, when no dates are specified, are hourly memory data for the latest 48 hours. Data are displayed in descending order, with more recent dates shown first.   To view the resource metric history information, use the following command:
+You can retrieve resource metric history for memory and disk usage. The metrics returned include the amount of resources that are used out of the total available, for both physical and reserved resources. Historical data for memory and disk usage can be displayed hourly, daily, or monthly. You can specify start and end dates to retrieve data within a specific date range. The default historical data, when no dates are specified, are hourly memory data for the latest 48 hours. Data is displayed in descending order, with more recent dates shown first. To view the resource metric history information, use the following command:
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -783,9 +783,9 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">View the used and total Reserved and Physical disk.</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">Specify a start date for daily or monthly (format must be mm-dd-yyyy), or start date a time for hourly (format must be mm-dd-yyyy hh:mm:ss timezone) </dd>
+<dd class="pd">Specify a start date for daily or monthly (format must be mm-dd-yyyy), or start date a time for hourly (format must be mm-dd-yyyy hh:mm:ss time zone) </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">Specify an end date for daily or monthly (format must be mm-dd-yyyy), or end date and time for hourly (format must be mm-dd-yyyy hh:mm:ss timezone) </dd>
+<dd class="pd">Specify an end date for daily or monthly (format must be mm-dd-yyyy), or end date and time for hourly (format must be mm-dd-yyyy hh:mm:ss time zone) </dd>
 </dl>
 
 {: codeblock}
@@ -799,7 +799,7 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 </dl>
 
 
-You can view the previous list of command parameters and examples using the following command:
+You can view the previous list of command parameters and examples by using the following command:
 
 ```
 cf ba resource-metrics-history -help
@@ -835,7 +835,7 @@ cf ba service-brokers <broker_name>
 {: #cliaddservbro}
 
 To add a service broker, so that you can add a custom service to your
-{{site.data.keyword.Bluemix_notm}} Catalog, use the following command:
+{{site.data.keyword.Bluemix_notm}} catalog, use the following command:
 
 ```
 cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
@@ -859,8 +859,8 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### Deleting a service broker
 {: #clidelservbro}
 
-To delete a service broker, to remove the custom service from your
-{{site.data.keyword.Bluemix_notm}} Catalog, use the following command:
+To delete a service broker that removes the custom service from your
+{{site.data.keyword.Bluemix_notm}} catalog, use the following command:
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -878,7 +878,7 @@ cf ba delete-service-broker <service_broker>
 ### Updating a service broker
 {: #cliupdservbro}
 
-To update a service broker use the following command:
+To update a service broker, use the following command:
 
 ```
 cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
@@ -907,9 +907,9 @@ To work with application security groups (ASGs), you must be a full access admin
 
 ASGs function as virtual firewalls that control outbound traffic from the applications in your {{site.data.keyword.Bluemix_notm}} environment. Each ASG consists of a list of rules that allow specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set, for example a group set that is used for applying global access, or you can bind to spaces within an organization in your {{site.data.keyword.Bluemix_notm}} environment.
 
-{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created  security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**WARNING**: Unbinding the  **Default Staging** or **Default Running** group sets from the two IBM-created security groups, `public_networks` and `dns` will disable global access to the outside network. Use unbinding with caution and awareness of its potential impact on the running and staging applications in your environment.
+**WARNING**: Unbinding the **Default Staging** or **Default Running** group sets from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network. Use unbinding with caution and awareness of its potential impact on the running and staging applications in your environment.
 
 
 **Note**: The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
@@ -1077,7 +1077,7 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">Name of your security group</dd>
 </dl>
 
-**Warning**: Unbinding the  **Default Staging** group set from the two IBM-created  security groups, `public_networks` and `dns` will disable global access to the outside network and must be used with caution and understanding of the ramifications it has on all staging applications in your environment.
+**Warning**: Unbinding the **Default Staging** group set from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network and must be used with caution and understanding of the ramifications it has on all staging applications in your environment.
 
 **Tip:** You can also use **ba ussg** as an alias for the longer
 **ba unbind-staging-security-group** command name.
@@ -1094,7 +1094,7 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">Name of your security group</dd>
 </dl>
 
-**Warning**: Unbinding the **Default Running** group set from the two IBM-created  security groups, `public_networks` and `dns` will disable global access to the outside network and must be used with caution and understanding of the ramifications it has on all running applications in your environment.
+**Warning**: Unbinding the **Default Running** group set from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network and must be used with caution and understanding of the ramifications it has on all running applications in your environment.
 
 **Tip:** You can also use **ba brsg** as an alias for the longer
 **ba unbind-running-security-group** command name.
@@ -1118,10 +1118,10 @@ cf ba unbind-security-group <security-group> <org> <space>
 **Tip:** You can also use **ba usg** as an alias for the longer
 **ba unbind-staging-security-group** command name.
 
-## Administering buildpacks
+## Administering Buildpacks
 {: #admin_buildpack}
 
-### Listing buildpacks
+### Listing Buildpacks
 {: #clilistbuildpack}
 
 If you have the apps catalog write permissions, you can list buildpacks. To list all buildpacks or view a specific buildpack, use the following command:
@@ -1139,7 +1139,7 @@ cf ba buildpacks <buildpack_name>
 **Tip:** You can also use **ba lb** as an alias for the longer
 **ba buildpacks** command name.
 
-### Creating and uploading a buildpack
+### Creating and uploading a Buildpack
 {: #clicreupbuildpack}
 
 If you have the apps catalog write permissions, you can create and upload a buildpack. You can upload any compressed file that has a .zip file type. To upload a buildpack, use the following command:
@@ -1161,10 +1161,10 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 **Tip:** You can also use **ba cb** as an alias for the longer
 **ba create-buildpack** command name.
 
-### Updating a buildpack
+### Updating a Buildpack
 {: #cliupdabuildpack}
 
-If you have the apps catalog write permissions, you can update an existing buildpack.  To update a buildpack, use the following command:
+If you have the apps catalog write permissions, you can update an existing buildpack. To update a buildpack, use the following command:
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -1185,10 +1185,10 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 **Tip:** You can also use **ba ub** as an alias for the longer
 **ba update-buildpack** command name.
 
-### Deleting a buildpack
+### Deleting a Buildpack
 {: #clidelbuildpack}
 
-If you have the apps catalog write permissions, you can delete an existing buildpack.  To delete a buildpack, use the following command:
+If you have the apps catalog write permissions, you can delete an existing buildpack. To delete a buildpack, use the following command:
 
 ```
 cf ba delete-buildpack <buildpack_name>

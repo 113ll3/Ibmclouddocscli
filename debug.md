@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -22,14 +22,14 @@ If you experience problems with {{site.data.keyword.Bluemix}}, you can view the 
 
 Logs provide information such as whether a job runs successfully, or whether it fails. They also provide relevant information that can be used to debug and determine the cause of a problem.
 
-Logs are in a fixed format. For verbose logs, you can filter the logs or use external logging hosts to store and process the logs. For more information about log formats, viewing and filtering logs, and configuring external logging, see [Logging for apps running on Cloud Foundry ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/monitor_log/logging.html#logging){: new_window}.
+Logs are in a fixed format. For verbose logs, you can filter the logs or use external logging hosts to store and process the logs. For more information about log formats, viewing and filtering logs, and configuring external logging, see [Logging for apps that are running on Cloud Foundry ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/monitor_log/logging.html#logging){: new_window}.
 
 
 ## Debugging staging errors
 {: #debugging-staging-errors}
 You might experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}. If your app fails to stage, you can search and review staging (STG) logs to determine what has happened during the app deployment and to recover from the problem. For more information about the methods of viewing logs for {{site.data.keyword.Bluemix}} apps, see [viewing logs ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}.  
 
-To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need to know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For detailed information, see [Application deployment ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
+To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need to know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For more information, see [Application deployment ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
 The following procedure shows how you can use the `cf logs` command to debug staging errors. Before you take the following steps, ensure that you have installed the cf command line interface. For more information about installing the cf command line interface, see [Installing the cf command line interface ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/starters/install_cli.html){: new_window}.
@@ -49,7 +49,7 @@ The following procedure shows how you can use the `cf logs` command to debug sta
 
 If you use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} plug-in to deploy applications, in the **Console** tab of the Eclipse tool, you can see logs that are similar to the cf logs output. You can also open a separate Eclipse window to track `the logs` when you deploy the application.
 
-In addition to the `cf logs` command, in {{site.data.keyword.Bluemix_notm}} you can also use the {{site.data.keyword.loganalysisshort}} service to collect the log details. 
+In addition to the `cf logs` command, in {{site.data.keyword.Bluemix_notm}} you can also use the {{site.data.keyword.loganalysisshort}} service to collect the log details.
 
 ### Debugging staging errors for a Node.js application
 
@@ -89,7 +89,7 @@ For a Node.js application, the DEA uses the information in the `package.json` fi
 {: screen}
 
 
-You can see that a comma is placed at the end of line 17, therefore, a key-value pair on line 18 is expected. To fix the problem, remove the comma:
+You can see that a comma is placed at the end of line 17, therefore, a key-value pair that is on line 18 is expected. To fix the problem, remove the comma:
 
 ```
 15   "jade": "~1.3.0",
@@ -125,7 +125,7 @@ When you enter `cf logs appname --recent` in the cf command line interface, only
 
 The `stdout.log` and `stderr.log` files were previously accessible, by default, through the application view in the {{site.data.keyword.Bluemix_notm}} console under **Files** > **logs**. However, that application logging is no longer available with the current version of Cloud Foundry where {{site.data.keyword.Bluemix_notm}} is hosted. To keep the stdout and stderr application logging accessible through the {{site.data.keyword.Bluemix_notm}} console under **Files** > **logs**, you can redirect the logging to other files in the {{site.data.keyword.Bluemix_notm}} file system, depending on the runtime that you are using.
 
-  * For Liberty for Java applications, output directed to stdout and stderr is already contained in the `messages.log` file in the logs directory. Look for entries prefixed with SystemOut and SystemErr respectively.
+  * For Liberty for Java applications, output directed to stdout and stderr is already contained in the `messages.log` file in the logs directory. Look for entries that are prefixed with SystemOut and SystemErr.
   * For Node.js applications, you can override the console.log function to explicitly write to a file in the logs directory.
   * For PHP applications, you can use the error_log function write to a file in the logs directory.
   * For Python applications, you can have the logger write to a file in the logs directory: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`

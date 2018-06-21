@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -63,7 +63,7 @@ Use `ibmcloud sdk generate [arguments...] [command options]`.
 {: #gen-args}
 
 * `APP_NAME` - the name of the Cloud Foundry app in your current space
-* `OPENAPI_DOC_LOCATION` - a URL or a relative file path to the raw REST API definition JSON or Yaml
+* `OPENAPI_DOC_LOCATION` - a URL or a relative file path to the raw REST API definition JSON or yaml
 * `GENERATED_SDK_NAME` (optional) - the name of the generated SDK
 
 
@@ -94,7 +94,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-To generate an SDK from a URL to an Open API definition file or a local JSON or Yaml file, use the following command.
+To generate an SDK from a URL to an Open API definition file or a local JSON or yaml file, use the following command.
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -112,7 +112,7 @@ Use `ibmcloud sdk validate [argument]`.
 {: #val-args}
 
 * `APP_NAME` - the name of the Cloud Foundry app in your current space
-* `OPENAPI_DOC_LOCATION` - a URL or a relative file path to the raw REST API definition JSON or Yaml
+* `OPENAPI_DOC_LOCATION` - a URL or a relative file path to the raw REST API definition JSON or yaml
 
 
 #### Usage
@@ -125,7 +125,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-To validate an SDK from the URL to an API spec document or a local JSON or Yaml file, use the following command.
+To validate an SDK from the URL to an API spec document or a local JSON or yaml file, use the following command.
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### List Apps (Cloud Foundry)
 {: #list-apps}
 
-Use `ibmcloud sdk list [argument] [option]` to list apps and validate API specs. You must have the `OPENAPI_SPEC` environment variable set to relative url path hosting your spec.
+Use `ibmcloud sdk list [argument] [option]` to list apps and validate API specs. You must have the `OPENAPI_SPEC` environment variable set to the relative url of the path that is hosting your spec.
 
 
 #### Arguments

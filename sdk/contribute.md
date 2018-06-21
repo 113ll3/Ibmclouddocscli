@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Contributing to the SDK plug-in
+# Contributing to the SDK Plug-in
 {: #contribute}
 
 Follow these guidelines to contribute to the {{site.data.keyword.Bluemix}} CLI SDK plug-in.
@@ -102,7 +102,7 @@ The test framework is based on Ginkgo, a BDD testing framework for Go. It is use
       ```
       {: codeblock}
 
-      * You will go to the directory where the `.coverprofile` file is located.
+      * You go to the directory where the `.coverprofile` file is located.
 
 * Internationalization: [go-i18n ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/nicksnyder/go-i18n) and [go-bindata ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/jteeuwen/go-bindata)
 
@@ -196,7 +196,7 @@ This [repository ![External link icon](../../icons/launch-glyph.svg "External li
    {: codeblock}
 
 
-## Building, testing, and installing the plug-in
+## Building, testing, and installing the Plug-in
 {: #build-plug-in}
 
 Build the plug-in by choosing either of the following commands.

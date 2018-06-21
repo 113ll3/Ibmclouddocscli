@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -253,7 +253,7 @@ ibmcloud login
 ### Failure to deploy to Kubernetes on {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploytokube}
 
-You may see this failure after the initial prompt for your cluster name:
+You might see this failure after the initial prompt for your cluster name:
 
 ```
 FAILED
@@ -267,7 +267,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 #### Cause
 {: #cause2}
 
-Most likely this is due to an invalid cluster name and can be confirmed by running the same command with `--trace` and you may see this in the error output:
+Most likely this is due to an invalid cluster name and can be confirmed by running the same command with `--trace` and you might see this in the error output:
 
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
@@ -286,7 +286,7 @@ ibmcloud cs cluster-config <cluster-name>
 
 ### Failure to deploy to Kubernetes on {{site.data.keyword.Bluemix_notm}}
 
-You may see this failure after the prompt for the deploy image target:
+You might see this failure after the prompt for the deploy image target:
 
 ```
 FAILED
@@ -307,7 +307,7 @@ Most likely, this is due to an invalid deploy image target. More specifically, i
 #### Resolution
 {: #resolution3}
 
-Be sure that the namespace in the deploy image target matches one of the namespaces found from running
+Be sure that the namespace in the deploy image target matches one of the namespaces that is found from running
 
 ```
 ibmcloud cr namespaces
@@ -318,15 +318,15 @@ ibmcloud cr namespaces
 ## APPENDIX
 {: #appendix}
 
-All prerequisites will install for most users using the platform installers at the top of this page. If you need to manually install any components, here are the instructions:
+All prerequisites are installed for most users that are using the platform installers. If you need to manually install any components, here are the instructions:
 
-To install the dev plugin, the [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started) must first be installed.
+To install the dev plug-in, the [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started) must first be installed.
 
-To use the dev plugin itself, you must install it by running the following command: `ibmcloud plugin install dev -r Bluemix`
+To use the dev plug-in itself, you must install it by running the following command: `ibmcloud plugin install dev -r Bluemix`
 
 For running and debugging applications locally, you must also install [Docker ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-docker).
 
-For deploying an application as a container, you must also install install Kubernetes, Helm, and the following IBM Cloud CLI plugins:
+For deploying an application as a container, you must also install `Kubernetes`, `Helm`, and the following IBM Cloud CLI plug-ins:
 
 To install Kubernetes:
 * Mac users:
@@ -346,10 +346,10 @@ To install Helm:
 * Windows users:
 Download and install the binary at https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-To install the container-registry plugin:
+To install the container-registry plug-in:
 `ibmcloud plugin install container-registry`
 
-To install the container-service plugin:
+To install the container-service plug-in:
 `ibmcloud plugin install container-service`
 
 

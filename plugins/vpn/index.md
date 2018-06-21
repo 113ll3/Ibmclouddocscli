@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-12"
 {:shortdesc: .shortdesc}
 
 
-# VPN CLI plug-in for cf CLI
+# VPN CLI Plug-in for cf CLI
 {: #vpn_cli_for_cf}
 
 
@@ -21,12 +21,12 @@ You can use the command line interface (CLI) to configure and manage your {{site
 
 The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
-The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the  {{site.data.keyword.Bluemix_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
+The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the {{site.data.keyword.Bluemix_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
 
-## Install the cf CLI plug-in
+## Install the cf CLI Plug-in
 Before you begin, install the cf CLI. See [Cloud Foundry command line interface ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window} for details.
 
-## Install the VPN CLI plug-in
+## Install the VPN CLI Plug-in
 **Note:** If you have a previous version of the {{site.data.keyword.vpn_short}} CLI plug-in that is installed, you must first uninstall it. Use the command:
 
 ```
@@ -35,7 +35,7 @@ cf uninstall-plugin vpn
 
 ### Install locally
 
-1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from [ {{site.data.keyword.Bluemix_notm}}  CLI Plug-in Repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
+1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [ {{site.data.keyword.Bluemix_notm}} CLI Plug-in Repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
 2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:
 **Note:** Either switch to the location of the {{site.data.keyword.vpn_short}} plug-in or specify the path to the plug-in location.
 
@@ -58,9 +58,9 @@ cf uninstall-plugin vpn
 	```
 
 
-### Install from {{site.data.keyword.Bluemix_notm}}  repository
+### Install from {{site.data.keyword.Bluemix_notm}} repository
 
-1. Add the {{site.data.keyword.Bluemix_notm}}  repository into the Cloud Foundry CLI repositories. Use the following command:
+1. Add the {{site.data.keyword.Bluemix_notm}} repository into the Cloud Foundry CLI repositories. Use the following command:
 
 	```
 	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
@@ -112,13 +112,13 @@ Remote endpoint IP address of the VPN tunnel.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
-**-dpd-timeout:** Timeout value in seconds after which the session is terminated.  Range: 6 - 86400 seconds. Default value: 120 seconds. The keep alive timeout value must be higher than the keep alive interval value.
+**-dpd-timeout:** Time out value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value: 120 seconds. The keep alive time out value must be higher than the keep alive interval value.
 
 **-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 5-86399 seconds. Default value: 15 seconds
 
 **-ike:** Name of the IKE policy.
 
-**-ipsec:** Name of the IPsec policy.
+**-ipsec:** Name of the IPSec policy.
 
 
 ### cf vpn-create ike
@@ -153,7 +153,7 @@ Name of the gateway.
 
 ### cf vpn-create ipsec
 
-Creates an IPsec policy.
+Creates an IPSec policy.
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -162,7 +162,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p3}
 
 **policy name:**
-Name of the IPsec policy.
+Name of the IPSec policy.
 
 **gateway name:**
 Name of the gateway.
@@ -220,7 +220,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-Displays information about the current IPsec connections.
+Displays information about the current IPSec connections.
 
 ```
 cf vpn-show ipsecs
@@ -241,7 +241,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-Displays information about an IPsec connection.
+Displays information about an IPSec connection.
 
 ```
 cf vpn-show ipsec <policy name>
@@ -322,13 +322,13 @@ Preshared key.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
-**-dpd-timeout:** Timeout value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value: 120 seconds
+**-dpd-timeout:** Time out value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value: 120 seconds
 
 **-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 5-86399 seconds. Default value: 15 seconds
 
 **-ike:** Name of the IKE policy.
 
-**-ipsec:** Name of the IPsec policy.
+**-ipsec:** Name of the IPSec policy.
 
 
 ### cf vpn-update ike
@@ -362,7 +362,7 @@ Name of the IKE policy.
 
 ### cf vpn-update ipsec
 
-Updates an IPsec policy.
+Updates an IPSec policy.
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -371,7 +371,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p7}
 
 **policy name:**
-Name of the IPsec policy.
+Name of the IPSec policy.
 
 
 ##### Optional Parameters:

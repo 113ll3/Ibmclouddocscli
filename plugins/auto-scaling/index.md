@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -24,7 +24,7 @@ You can configure the {{site.data.keyword.autoscaling}} service by using the {{s
 
 Before you begin, install the {{site.data.keyword.Bluemix_notm}} CLI. See [Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} for instructions.
 
-## Adding the {{site.data.keyword.Bluemix_notm}} CLI plug-in
+## Adding the {{site.data.keyword.Bluemix_notm}} CLI Plug-in
 
 After the {{site.data.keyword.Bluemix_notm}} CLI is installed, you can add the {{site.data.keyword.autoscaling}} CLI plug-in.
 
@@ -84,7 +84,7 @@ ibmcloud as policy-show <APP_NAME> [--json]
 
 ## Detaching an auto-scaling policy
 
-You can remove an auto-scaling policy from an  app. Run the following command:
+You can remove an auto-scaling policy from an app. Run the following command:
 
 ```
 ibmcloud as policy-detach <APP_NAME>
@@ -99,7 +99,7 @@ ibmcloud as policy-detach <APP_NAME>
 
 ## Enabling or disabling an auto-scaling policy
 
-You can enable or disable the auto-scaling policy of a specific  app. Run the following command:
+You can enable or disable the auto-scaling policy of a specific app. Run the following command:
 
 ```
 ibmcloud as policy-enable|policy-disable <APP_NAME>

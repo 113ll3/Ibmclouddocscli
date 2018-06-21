@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -38,7 +38,7 @@ ibmcloud dev debug
       		3. Specify the name of the java project that you imported.
       6. Set a breakpoint in the IDE.
       7. Run the debug configuration.
-      8. Access the endpoint with a browser to recreate the issue.  
+      8. Access the endpoint with a browser to re-create the issue.  
 	   **Note**: The default port is 9080 for the Java basic Microservices endpoint.
 	* [IntelliJ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
 	* [VSCode ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
