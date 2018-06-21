@@ -21,7 +21,7 @@ IBM Cloud Developer Tools (CLI and Dev Tools)
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
-		[Troubleshooting for IDT](../troubleshoot/ts_createapps.html)
+		ts_createapps.md
         	
 	{: .topicgroup}
 	SDKs for Mobile
