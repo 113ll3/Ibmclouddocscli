@@ -1725,27 +1725,27 @@ Créer une règle de groupe d'accès à partir d'un fichier JSON :
 ibmcloud iam access-group-policy-create example_group -f @policy.json
 ```
 
-Accorder le rôle `Administrator` à `example_group` pour toutes les ressources `sample-service` :
+Accorder le rôle `Administrateur` à `example_group` pour toutes les ressources `sample-service` :
 ```
 ibmcloud iam access-group-policy-create example_group --roles Administrator --service-name sample-service
 ```
 
-Accorder le rôle `Editor` à `example_group` pour la ressource `key123` de l'instance `sample-service` ayant l'identificateur global unique `d161aeea-fd02-40f8-a487-df1998bd69a9` dans la région `us-south` :
+Accorder le rôle `Editeur` à `example_group` pour la ressource `key123` de l'instance `sample-service` ayant l'identificateur global unique `d161aeea-fd02-40f8-a487-df1998bd69a9` dans la région `us-south` :
 ```
 ibmcloud iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
-Accorder le rôle `Operator` à `example_group` pour le groupe de ressources portant l'ID `dda27e49d2a1efca58083a01dfde18f6` :
+Accorder le rôle `Opérateur` à `example_group` pour le groupe de ressources portant l'ID `dda27e49d2a1efca58083a01dfde18f6` :
 ```
 ibmcloud iam access-group-policy-create example_group --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
-Accorder le rôle `Viewer` à `example_group` pour les membres du groupe de ressources `sample-resource-group` :
+Accorder le rôle `Afficheur` à `example_group` pour les membres du groupe de ressources `sample-resource-group` :
 ```
 ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-group-name sample-resource-group
 ```
 
-Accorder le rôle `Viewer` à `example_group` pour les membres du groupe de ressources portant l'ID `dda27e49d2a1efca58083a01dfde18f6` :
+Accorder le rôle `Afficheur` à `example_group` pour les membres du groupe de ressources portant l'ID `dda27e49d2a1efca58083a01dfde18f6` :
 ```
 ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
@@ -2586,31 +2586,31 @@ Créez une règle utilisateur pour l'utilisateur `name@example.com` à partir du
 ibmcloud iam user-policy-create name@example.com --file @policy.json
 ```
 
-Accordez le rôle `Administrator` à `name@example.com` pour toutes les ressources `sample-service` :
+Accorder le rôle `Administrateur` à `name@example.com` pour toutes les ressources `sample-service` :
 
 ```
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name sample-service
 ```
 
-Accorder le rôle `Editor` à `name@example.com` pour la ressource `key123` de l'exemple d'instance de service ayant l'identificateur global unique `d161aeea-fd02-40f8-a487-df1998bd69a9` dans la région `us-south` :
+Accorder le rôle `Editeur` à `name@example.com` pour la ressource `key123` de l'exemple d'instance de service ayant l'identificateur global unique `d161aeea-fd02-40f8-a487-df1998bd69a9` dans la région `us-south` :
 
 ```
 ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
 ```
 
-Accordez le rôle `Operator` à `name@example.com` pour le groupe de ressources portant l'ID `dda27e49d2a1efca58083a01dfde18f6` :
+Accorder le rôle `Opérateur` à `name@example.com` pour le groupe de ressources portant l'ID `dda27e49d2a1efca58083a01dfde18f6` :
 
 ```
 ibmcloud iam user-policy-create name@example.com --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
 ```
 
-Accordez le rôle `Viewer` à `name@example.com` pour les membres du groupe de ressources `sample-resource-group` :
+Accorder le rôle `Afficheur` à `name@example.com` pour les membres du groupe de ressources `sample-resource-group` :
 
 ```
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-name sample-resource-group
 ```
 
-Accordez le rôle `Viewer` à `name@example.com` pour les membres du groupe de ressources portant l'ID `dda27e49d2a1efca58083a01dfde18f6` :
+Accorder le rôle `Afficheur` à `name@example.com` pour les membres du groupe de ressources portant l'ID `dda27e49d2a1efca58083a01dfde18f6` :
 
 ```
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
