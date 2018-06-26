@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -15,19 +15,18 @@ lastupdated: "2018-06-21"
 {:tip: .tip}
 
 
-# Manually Installing the base {{site.data.keyword.Bluemix_notm}} CLI
+# Manually installing the base {{site.data.keyword.Bluemix_notm}} CLI
 {: #download_install}
 
-It is recommend that you install the {{site.data.keyword.Bluemix_notm}} CLI and all recommended dependencies by using the method described [here.](/docs/cli/index.html)
+It is recommend that you install the {{site.data.keyword.Bluemix}} CLI and all recommended dependencies by using the method described [here.](/docs/cli/index.html)
 {: tip}
 
-
-You can use an installer or shell to download and install the CLI.
+{{site.data.keyword.Bluemix_notm}} CLI provides the command line interface to manage applications, containers, infrastructures, services and other resources in {{site.data.keyword.Bluemix_notm}}.
 
 ## Using the installer
 {: #installer}
 
-To install the {{site.data.keyword.Bluemix_notm}} CLI, simply download the installer:
+To install the base {{site.data.keyword.Bluemix_notm}} CLI, download the installer:
 
 | Version |  Updated  | Downloads |
 |---------|-----------|-----------|
@@ -48,43 +47,42 @@ To install the {{site.data.keyword.Bluemix_notm}} CLI, simply download the insta
 | [0.5.2](https://github.com/IBM-Bluemix/bluemix-cli-release/releases/tag/v0.5.2) | 2017-04-10 | [macOS](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/osx)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/osx/checksum)  [linux64](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/linux64)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/linux64/checksum)  [win64](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/win64)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/win64/checksum) <br> [linux32](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/linux32)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/linux32/checksum)  [win32](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/win32)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.2/win32/checksum) |
 | [0.5.1](https://github.com/IBM-Bluemix/bluemix-cli-release/releases/tag/v0.5.1) | 2017-03-18 | [macOS](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/osx)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/osx/checksum)  [linux64](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/linux64) / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/linux64/checksum) [win64](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/win64)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/win64/checksum) <br> [linux32](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/linux32)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/linux32/checksum)  [win32](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/win32)/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/0.5.1/win32/checksum) |
 
-* For MacOS and Windows, run the installer.
-* For Linux, after downloading the installer package, extract it and run the installation script with root permission.
 
-  ```
-  $ tar -xvf Bluemix_CLI.tar.gz
-  $ cd Bluemix_CLI
-  $ sudo ./install_bluemix_cli
+To get started with just the {{site.data.keyword.Bluemix_notm}} CLI:
 
-  ```
+1. Select the installer of your OS to download
 
-## Install from the shell
-{: #shell_install}
+   Mac OS X 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
+   Windows 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
+   Linux X86 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Linux LE 64-bit (ppc64le): [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
+
+   **32 bit releases and previous versions can be found [here](all_versions.html)
+
+1. Run the installer
+   * For macOS and windows, just run the installer.
+   * For Linux, extract the package and run `install_bluemix_cli` script
+
+1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}}
+
+  ![Example](example.gif){: gif}
+
+Now you are ready to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `ibmcloud help` to see the command descriptions.
+
+If you are using a federated ID, follow the instructions [here](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) to log in with a one-time passcode or an API key.  
+{: tip}
+
+## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
+
+* [More options to download and install {{site.data.keyword.Bluemix_notm}} CLI](download_cli.html)
+* [Extend {{site.data.keyword.Bluemix_notm}} CLI capabilities with plugins](extend_cli.html)
+* [All versions of {{site.data.keyword.Bluemix_notm}} CLI and release notes](all_versions.html)
+* [Document of {{site.data.keyword.Bluemix_notm}} CLI commands usage](bx_cli.html)
 
 
-### MacOS
+## Report issues and submit feedback
+{: #issues}
 
-Copy and paste the following command to a terminal of your Mac OS and run it:
-
-```
-curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
-```
-{: codeblock}
-
-### Linux
-
-Copy and paste the following command to a terminal of your Linux OS and run it:
-
-```
-curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
-```
-{: codeblock}
-
-### Windows PowerShell
-
-Copy and paste the following command into a [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} terminal console and run it:
-
-```
-iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
-```
-{: codeblock}
+Use the following options to report issues or submit new feature requests:
+ * Create issues in [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
+ * leave messages in [Slack channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![External link icon](../../../icons/launch-glyph.svg)
