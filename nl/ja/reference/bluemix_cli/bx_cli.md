@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -1296,11 +1296,11 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dt>-o ORG</dt>
    <dd>ユーザーを招待する先の組織</dd>
    <dt>--org-role ORG_ROLE</dt>
-   <dd>組織の役割。有効な入力は、OrgManager、BillingManager、OrgAuditor、および OrgUser です。省略された場合、OrgUser 役割が設定されます。</dd>
+   <dd>組織の役割。 有効な入力は、OrgManager、BillingManager、OrgAuditor、および OrgUser です。 省略された場合、OrgUser 役割が設定されます。</dd>
    <dt>-s SPACE</dt>
    <dd>ユーザーを招待する先のスペース</dd>
    <dt>--space-role SPACE_ROLE</dt>
-   <dd>スペースの役割。有効な入力は、SpaceManager、SpaceDeveloper、および SpaceAuditor です。</dd>
+   <dd>スペースの役割。 有効な入力は、SpaceManager、SpaceDeveloper、および SpaceAuditor です。</dd>
 </dl>
 
 
@@ -1707,7 +1707,7 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dt>-service-name</dt>
   <dd>ポリシー定義のサービス名。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>ポリシー定義のサービス・インスタンスの GUID。このオプションは、「--file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス・インスタンスの GUID。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-region</dt>
   <dd>ポリシー定義の地域。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-resource-type</dt>
@@ -1773,7 +1773,7 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dt>-service-name</dt>
   <dd>ポリシー定義のサービス名。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>ポリシー定義のサービス・インスタンスの GUID。このオプションは、「--file」と同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス・インスタンスの GUID。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-region</dt>
   <dd>ポリシー定義の地域。 このオプションは、「--file」と同時に指定することはできません。</dd>
   <dt>-resource-type</dt>
@@ -2337,7 +2337,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>NAME (必須)</dt>
-  <dd>新しく作成されるサービス API キーの名前</dd>
+  <dd>サービス ID または新しく作成されるサービス API キーの名前</dd>
   <dt>SERVICE_ID_NAME (必須)</dt>
   <dd>サービス ID の名前。SERVICE_ID_UUID と同時に指定することはできません。</dd>
   <dt>SERVICE_ID_UUID (必須)</dt>
@@ -2816,7 +2816,7 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dt>--service-name</dt>
   <dd>ポリシー定義のサービス名。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>ポリシー定義のサービス・インスタンスの GUID。これは、「--file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス・インスタンスの GUID。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-region</dt>
   <dd>ポリシー定義の地域。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>--resource-type</dt>
@@ -2869,7 +2869,7 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dt>-service-name</dt>
   <dd>ポリシー定義のサービス名。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>ポリシー定義のサービス・インスタンスの GUID。これは、「--file」フラグと同時に指定することはできません。</dd>
+  <dd>ポリシー定義のサービス・インスタンスの GUID。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-region</dt>
   <dd>ポリシー定義の地域。 これは、「--file」フラグと同時に指定することはできません。</dd>
   <dt>-resource-type</dt>
