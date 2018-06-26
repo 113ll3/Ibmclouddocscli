@@ -38,7 +38,7 @@ lastupdated: "2018-06-26"
 
 Sign up for [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
 
-* If you're using Microsoft Windows &trade;, you must use Windows 10 or later.
+* If you are using Microsoft Windows &trade;, you must use Windows 10 or later.
 
 * You must use the stable channel for Docker, with a minimum version of 1.13.1.
 
@@ -167,7 +167,7 @@ Once your project has been created, it's now up to you to craft it into somethin
 
 You are free to use whatever IDE or editor you prefer to code up your application. We offer an extension for the Microsoft VisualStudio Code (VSCode) editor that enables you to access all the IDE commands from directly within the editor.
 
-Once the project has been built, you'll next want to run your app using the [`ibmcloud dev run`](commands.html#run) or [`ibmcloud dev debug`](commands.html#debug), depending on your apps generator configuration.  This will run the app within the proper container.  Some apps patterns support multiple containers external to your apps such as persistence or other capabilities.  These will automatically be started and configured during run or debug.  There is also an [`ibmcloud dev test`](commands.html#test) command that will execute any test cases associated with the app.
+Once the project has been built, you'll next want to run your app by using the [`ibmcloud dev run`](commands.html#run) or [`ibmcloud dev debug`](commands.html#debug), depending on your apps generator configuration.  This will run the app within the proper container.  Some apps patterns support multiple containers external to your apps such as persistence or other capabilities.  These will automatically be started and configured during run or debug.  There is also an [`ibmcloud dev test`](commands.html#test) command that will execute any test cases associated with the app.
 
 ### How local containers are used
 {: #local-containers}
