@@ -58,7 +58,7 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 
 	{: .topicgroup}
 	권장 개발 환경
-		[Eclipse 도구로 개발](../starters/deploy_eclipsetools.html)
+		deploy_eclipsetools.md
 		[IBM Eclipse Tools for IBM Cloud로 앱 개발](../manageapps/eclipsetools/eclipsetools.html)
 		[Liberty 및 Node.js 앱 관리](../runtimes/common/app_mng.html#app_management)
 		[API Connect 개발자 툴킷](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)

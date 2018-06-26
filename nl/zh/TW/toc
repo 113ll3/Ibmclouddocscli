@@ -58,7 +58,7 @@ IBM Cloud Developer Tools（CLI 及 Dev Tools）
 
 	{: .topicgroup}
 	建議的開發環境
-		[使用 Eclipse Tools 進行開發](../starters/deploy_eclipsetools.html)
+		deploy_eclipsetools.md
 		[使用 IBM Eclipse Tools for IBM Cloud 部署應用程式](../manageapps/eclipsetools/eclipsetools.html)
 		[管理 Liberty 及 Node.js 應用程式](../runtimes/common/app_mng.html#app_management)
 		[API Connect Developer Toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)

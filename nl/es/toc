@@ -59,7 +59,7 @@ IBM Cloud Developer Tools (Herramientas CLI y Dev)
 
 	{: .topicgroup}
 	Entornos de desarrollo recomendados
-		[Desarrollo con herramientas de Eclipse](../starters/deploy_eclipsetools.html)
+		deploy_eclipsetools.md
 		[Despliegue de apps con IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
 		[Gestión de apps de Liberty y Node.js](../runtimes/common/app_mng.html#app_management)
 		[Kit de herramientas del desarrollador de API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
