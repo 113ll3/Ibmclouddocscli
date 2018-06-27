@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 
 
-# Installing and using {{site.data.keyword.Bluemix_notm}} CLI
+# Manually installing the {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
 {{site.data.keyword.Bluemix_notm}} CLI provides the command line interface to manage applications, containers, infrastructures, services and other resources in {{site.data.keyword.Bluemix_notm}}.
@@ -48,6 +48,44 @@ Now you are ready to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `i
 
 If you are using a federated ID, follow the instructions [here](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) to log in with a one-time passcode or an API key.  
 {: tip}
+
+## More options to install the {{site.data.keyword.Bluemix_notm}} CLI
+{: #more_options_install}
+
+
+Besides the [installer](install_use_cli.html#getting_started), you can also use shell to download and install the CLI. 
+
+
+### Install from the shell
+{: #shell_install}
+
+
+### MacOS
+
+Copy and paste the following command to a terminal of your Mac OS and run it:
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
+```
+{: codeblock}
+
+### Linux
+
+Copy and paste the following command to a terminal of your Linux OS and run it:
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
+```
+{: codeblock}
+
+### Windows PowerShell
+
+Copy and paste the following command into a [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} terminal console and run it:
+
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+{: codeblock}
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
 
