@@ -23,9 +23,7 @@ lastupdated: "2018-06-27"
 If you want to install both the {{site.data.keyword.Bluemix}} CLI and other recommended plugins and tools for developing applications for {{site.data.keyword.Bluemix_notm}}, follow the method described [here](/docs/cli/index.html).
 {: tip}
 
-
-## Getting started with {{site.data.keyword.Bluemix_notm}} CLI
-{: #getting_started}
+Use the following steps to install the stand-alone {{site.data.keyword.Bluemix_notm}} CLI:
 
 1. Select the installer of your OS to download
 
