@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-26"
 
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2018-06-21"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Local application debugging
+# Local application debugging for the {{site.data.keyword.dev_cli_notm}} CLI
 {: #local-debug}
 
 There are tools to help you debug your application in Java and Node.js in {{site.data.keyword.cloud_notm}}.
