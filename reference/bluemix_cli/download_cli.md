@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 
 
-# Manually installing the {{site.data.keyword.Bluemix_notm}} CLI
+# Installing the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
 {{site.data.keyword.Bluemix_notm}} CLI provides the command line interface to manage applications, containers, infrastructures, services and other resources in {{site.data.keyword.Bluemix_notm}}.
