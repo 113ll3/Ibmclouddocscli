@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -105,4 +105,4 @@ The output lists the usage instructions, the current version, and the supported 
 ## Next steps
 {: #next-steps}
 
-You're now ready to develop and deploy your first app! See [Creating a basic web app with a starter kit](/docs/apps/tutorials/tutorial_web.html) for more information.
+You're now ready to develop and deploy your first app! See [Developing and deploying your apps](/docs/cli/idt/index.html) for more information.
