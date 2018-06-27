@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-21"
 {:screen: .screen}
 
 
-# Debugging
+# Debugging cf apps for {{site.data.keyword.Bluemix_notm}}
 {: #debugging}
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you can view the log files to investigate the problems and debug the errors.
