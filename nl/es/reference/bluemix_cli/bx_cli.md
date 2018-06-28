@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -2243,7 +2243,7 @@ ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 
 <strong>Ejemplos</strong>:
 
-Desbloquear clave de API test-api-key
+Desbloquear la clave de API test-api-key
 
 ```
 ibmcloud iam api-key-unlock test-api-key
@@ -2333,7 +2333,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>Opciones de mandato</strong>:
 <dl>
   <dt>NAME (necesario)</dt>
-  <dd>Nombre o clave de API de servicio recién creada</dd>
+  <dd>Nombre del ID de servicio o clave de API de servicio recién creada</dd>
   <dt>SERVICE_ID_NAME (necesario)</dt>
   <dd>Nombre del ID de servicio, exclusivo con SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (necesario)</dt>

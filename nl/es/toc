@@ -9,12 +9,12 @@ IBM Cloud Developer Tools (Herramientas CLI y Dev)
 	reference/bluemix_cli/get_started.md
 	[Iniciación a la CLI CF](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
-
+	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-
-
+	
+        	
 	{: .topicgroup}
 	IBM Cloud Developer Tools
 		idt/setting_up_idt.md
@@ -22,8 +22,8 @@ IBM Cloud Developer Tools (Herramientas CLI y Dev)
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
-		ts_createapps.md
-
+		[Resolución de problemas para IDT](../troubleshoot/ts_createapps.html)
+        	
 	{: .topicgroup}
 	SDK para móvil
 		sdk/index.md
@@ -31,7 +31,7 @@ IBM Cloud Developer Tools (Herramientas CLI y Dev)
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
-
+	
 	monitoring_logging.md
 	debug.md
 	{: .navgroup-end}
@@ -56,7 +56,7 @@ IBM Cloud Developer Tools (Herramientas CLI y Dev)
 		plugins/bluemix_admin/index.md
 		plugins/dev_mode/index.md
 		plugins/vpn/index.md
-
+	
 	{: .topicgroup}
 	Entornos de desarrollo recomendados
 		deploy_eclipsetools.md
