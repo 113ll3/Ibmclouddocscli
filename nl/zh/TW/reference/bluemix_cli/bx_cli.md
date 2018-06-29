@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2018-06-08"
 以下列出 {{site.data.keyword.Bluemix_notm}} CLI 所支援的詳細指令，包括其名稱、引數、選項、必要條件、說明及範例。
 {:shortdesc}
 
-**附註：***必要條件* 列出使用指令之前需要哪些動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
+**附註**：*必要條件* 列出使用指令之前需要哪些動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
 
 <dl>
 <dt>端點</dt>
@@ -2333,7 +2333,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>指令選項</strong>：
 <dl>
   <dt>NAME（必要）</dt>
-  <dd>新建之服務 API 金鑰的名稱</dd>
+  <dd>服務 ID 的名稱，或新建立的服務 API 金鑰</dd>
   <dt>SERVICE_ID_NAME（必要）</dt>
   <dd>服務 ID 的名稱，與 SERVICE_ID_UUID 不能同時使用</dd>
   <dt>SERVICE_ID_UUID（必要）</dt>

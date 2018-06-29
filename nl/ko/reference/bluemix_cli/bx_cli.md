@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -2333,7 +2333,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>명령 옵션</strong>:
 <dl>
   <dt>NAME(필수)</dt>
-  <dd>이름 또는 새로 작성된 서비스 API 키</dd>
+  <dd>서비스 ID 또는 새로 작성된 서비스 API 키 이름</dd>
   <dt>SERVICE_ID_NAME(필수)</dt>
   <dd>서비스 ID의 이름(SERVICE_ID_UUID와 배타적)</dd>
   <dt>SERVICE_ID_UUID(필수)</dt>

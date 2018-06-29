@@ -9,11 +9,11 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 	reference/bluemix_cli/get_started.md
 	[CF CLI 시작하기](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
-
+	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-
+        	
 	{: .topicgroup}
 	IBM Cloud Developer Tools
 		idt/setting_up_idt.md
@@ -21,8 +21,8 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
-		ts_createapps.md
-
+		[IDT에 대한 문제점 해결](../troubleshoot/ts_createapps.html)
+        	
 	{: .topicgroup}
 	모바일용 SDK
 		sdk/index.md
@@ -30,7 +30,7 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
-
+	
 	monitoring_logging.md
 	debug.md
 	{: .navgroup-end}
@@ -55,7 +55,7 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 		plugins/bluemix_admin/index.md
 		plugins/dev_mode/index.md
 		plugins/vpn/index.md
-
+	
 	{: .topicgroup}
 	권장 개발 환경
 		deploy_eclipsetools.md

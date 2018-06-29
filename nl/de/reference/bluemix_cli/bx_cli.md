@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -2333,7 +2333,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>NAME (erforderlich)</dt>
-  <dd>Der Name des neu erstellten Service-API-Schlüssels</dd>
+  <dd>Der Name der Service-ID oder des neu erstellten Service-API-Schlüssels</dd>
   <dt>SERVICE_ID_NAME (erforderlich)</dt>
   <dd>Der Name der Service-ID, gegenseitig ausschließend mit SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (erforderlich)</dt>
@@ -2591,7 +2591,7 @@ ibmcloud iam user-policy-create name@example.com --file @policy.json
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name sample-service
 ```
 
-`name@example.com` die Rolle `Editor` für die Ressource `key123` der Besipielserviceinstanz mit der GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in der Region `us-south` zuweisen:
+`name@example.com` die Rolle `Editor` für die Ressource `key123` der Beispielserviceinstanz mit der GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in der Region `us-south` zuweisen:
 
 ```
 ibmcloud iam user-policy-create name@example.com --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
@@ -4318,7 +4318,7 @@ ibmcloud resource tags --tag-type restricted
 ## ibmcloud resource tag
 {: #ibmcloud_resource_tag}
 
-Details eines Tags anzeigen 
+Details eines Tags anzeigen
 
 ```
 ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)

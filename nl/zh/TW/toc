@@ -9,11 +9,11 @@ IBM Cloud Developer Tools（CLI 及 Dev Tools）
 	reference/bluemix_cli/get_started.md
 	[開始使用 CF CLI](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
-
+	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-
+        	
 	{: .topicgroup}
 	IBM Cloud Developer Tools
 		idt/setting_up_idt.md
@@ -21,8 +21,8 @@ IBM Cloud Developer Tools（CLI 及 Dev Tools）
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
-		ts_createapps.md
-
+		[IDT 的疑難排解](../troubleshoot/ts_createapps.html)
+        	
 	{: .topicgroup}
 	行動的 SDK
 		sdk/index.md
@@ -30,7 +30,7 @@ IBM Cloud Developer Tools（CLI 及 Dev Tools）
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
-
+	
 	monitoring_logging.md
 	debug.md
 	{: .navgroup-end}
@@ -55,11 +55,11 @@ IBM Cloud Developer Tools（CLI 及 Dev Tools）
 		plugins/bluemix_admin/index.md
 		plugins/dev_mode/index.md
 		plugins/vpn/index.md
-
+	
 	{: .topicgroup}
 	建議的開發環境
 		deploy_eclipsetools.md
-		[使用 IBM Eclipse Tools for IBM Cloud 部署應用程式](../manageapps/eclipsetools/eclipsetools.html)
+		[使用 IBM Eclipse Tools for IBM Cloud 進行開發](../manageapps/eclipsetools/eclipsetools.html)
 		[管理 Liberty 及 Node.js 應用程式](../runtimes/common/app_mng.html#app_management)
 		[API Connect Developer Toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
