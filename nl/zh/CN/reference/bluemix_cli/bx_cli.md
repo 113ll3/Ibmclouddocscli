@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -2327,7 +2327,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>命令选项</strong>：
 <dl>
   <dt>NAME（必需）</dt>
-  <dd>名称或新创建的服务 API 密钥</dd>
+  <dd>服务标识的名称或新创建的服务 API 密钥的名称</dd>
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
   <dt>SERVICE_ID_UUID（必填）</dt>

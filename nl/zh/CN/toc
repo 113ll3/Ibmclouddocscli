@@ -9,11 +9,11 @@ IBM Cloud Developer Tools（CLI 和 Dev Tools）
 	reference/bluemix_cli/get_started.md
 	[CF CLI 入门](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
-
+	
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-
+        	
 	{: .topicgroup}
 	IBM Cloud Developer Tools
 		idt/setting_up_idt.md
@@ -21,8 +21,8 @@ IBM Cloud Developer Tools（CLI 和 Dev Tools）
 		idt/vscode.md
 		idt/jetbrains.md
 		idt/local_debug.md
-		ts_createapps.md
-
+		[有关 IDT 的故障诊断](../troubleshoot/ts_createapps.html)
+        	
 	{: .topicgroup}
 	SDKs for Mobile
 		sdk/index.md
@@ -30,7 +30,7 @@ IBM Cloud Developer Tools（CLI 和 Dev Tools）
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
-
+	
 	monitoring_logging.md
 	debug.md
 	{: .navgroup-end}
@@ -55,7 +55,7 @@ IBM Cloud Developer Tools（CLI 和 Dev Tools）
 		plugins/bluemix_admin/index.md
 		plugins/dev_mode/index.md
 		plugins/vpn/index.md
-
+	
 	{: .topicgroup}
 	建议的开发环境
 		deploy_eclipsetools.md
