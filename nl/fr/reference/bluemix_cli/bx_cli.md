@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -35,8 +35,7 @@ Les listes ci-dessous répertorient les commandes prises en charge par l'interfa
 <dt>Noeud final</dt>
 <dd>Un noeud final d'API doit être défini via <code>bluemix api</code> avant l'utilisation de la commande.</dd>
 <dt>Connexion</dt>
-<dd>La connexion avec la commande <code>bluemix login</code> est requise avant l'utilisation de cette commande.
-Si vous vous connectez avec un ID fédéré, utilisez l'option '--sso' pour vous authentifier avec un code d'accès unique ou utilisez l'option '--apikey' pour vous authentifier avec une clé d'API. Dans la console {{site.data.keyword.Bluemix_notm}} sélectionnez **Gérer** &gt; **Sécurité** &gt; **Clés d'API de la plateforme** pour créer des clés d'API.
+<dd>La connexion avec la commande <code>bluemix login</code> est requise avant l'utilisation de cette commande. Si vous vous connectez avec un ID fédéré, utilisez l'option '--sso' pour vous authentifier avec un code d'accès unique ou utilisez l'option '--apikey' pour vous authentifier avec une clé d'API. Dans la console {{site.data.keyword.Bluemix_notm}} sélectionnez **Gérer** &gt; **Sécurité** &gt; **Clés d'API de la plateforme** pour créer des clés d'API.
 </dd>
 <dt>Cible</dt>
 <dd>La commande <code>bluemix target</code> doit être utilisée pour définir une organisation et un espace avant l'utilisation de cette commande.</dd>
@@ -2148,7 +2147,7 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 <strong>Options de commande</strong> :
 <dl>
 <dt>NAME (obligatoire)</dt>
-<dd>Ancien nom de la clé d'API à mettre à jour, s'utilise exclusivement avec UUID </dd>
+<dd>Ancien nom de la clé d'API à mettre à jour, s'utilise exclusivement avec UUID</dd>
 <dt>UUID (obligatoire)</dt>
 <dd>Identificateur unique universel de la clé d'API à mettre à jour, s'utilise exclusivement avec NAME</dd>
 <dt>-n <i>NAME</i> (facultatif)</dt>
@@ -2334,7 +2333,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>Options de commande</strong> :
 <dl>
   <dt>NAME (obligatoire)</dt>
-  <dd>Nom de la clé d'API de service nouvellement créée</dd>
+  <dd>Nom de l'ID de service ou de la clé d'API de service nouvellement créée</dd>
   <dt>SERVICE_ID_NAME (obligatoire)</dt>
   <dd>Nom de l'ID de service, s'utilise exclusivement avec SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (obligatoire)</dt>
@@ -4433,7 +4432,7 @@ ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resour
   <dt>--tag-crn (obligatoire)</dt>
   <dd>Nom de ressource de cloud de l'étiquette, s'utilise exclusivement avec --tag-name</dd>
   <dt>--resource-crn (obligatoire)</dt>
-  <dd>Nom de ressource de cloud de la ressource </dd>
+  <dd>Nom de ressource de cloud de la ressource</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -4462,7 +4461,7 @@ ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RE
   <dt>--tag-crn (obligatoire)</dt>
   <dd>Nom de ressource de cloud de l'étiquette, s'utilise exclusivement avec --tag-name</dd>
   <dt>--resource-crn (obligatoire)</dt>
-  <dd>Nom de ressource de cloud de la ressource </dd>
+  <dd>Nom de ressource de cloud de la ressource</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -4476,7 +4475,7 @@ ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_exam
 ## ibmcloud resource tag-update
 {: #ibmcloud_resource_tag_update}
 
-Basculer l'étiquette utilisateur vers une étiquette restreinte et inversement 
+Basculer l'étiquette utilisateur vers une étiquette restreinte et inversement
 
 ```
 ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
