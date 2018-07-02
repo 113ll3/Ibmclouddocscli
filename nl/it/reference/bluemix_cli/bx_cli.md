@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -997,7 +997,7 @@ ibmcloud account org-users NOME_ORGANIZZAZIONE [-a]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 <dt>NOME_ORGANIZZAZIONE (obbligatorio)</dt>
 <dd>Il nome dell'organizzazione.</dd>
@@ -1023,7 +1023,7 @@ Rimuove un utente dall'organizzazione (gestore organizzazione o solo l'utente)
    ibmcloud account org-user-remove NOME_UTENTE ORGANIZZAZIONE [-f, --force]
 ```
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 <dt>--force, -f</dt>
 <dd>Forza l'eliminazione senza conferma.</dd>
@@ -1327,7 +1327,7 @@ ibmcloud iam access-groups [-u NOME_UTENTE | -s NOME_ID_SERVIZIO]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-u</dt>
   <dd>Elenca i gruppi di accesso a cui appartiene l'utente. Questo indicatore è esclusivo per '-s'.</dd>
@@ -1354,7 +1354,7 @@ ibmcloud iam access-group NOME_GRUPPO [--id]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-id</dt>
   <dd>Mostra solo l'ID</dd>
@@ -1379,7 +1379,7 @@ ibmcloud iam access-group-create NOME_GRUPPO [-d, --description DESCRIZIONE]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-d, --description</dt>
   <dd>Descrizione del gruppo di accesso</dd>
@@ -1404,7 +1404,7 @@ ibmcloud iam access-group-update NOME_GRUPPO [-n, --name NUOVO_NOME] [-d, --desc
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-n, --name</dt>
   <dd>Nuovo nome del gruppo di accesso</dd>
@@ -1433,7 +1433,7 @@ ibmcloud iam access-group-delete NOME_GRUPPO [-f, --force] [-r, --recursive]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-f, --force</dt>
   <dd>Forza l'eliminazione senza conferma</dd>
@@ -1460,7 +1460,7 @@ ibmcloud iam access-group-users NOME_GRUPPO
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -1483,7 +1483,7 @@ ibmcloud iam access-group-user-add NOME_GRUPPO NOME_UTENTE [NOME_UTENTE2...]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -1506,7 +1506,7 @@ ibmcloud iam access-group-user-remove NOME_GRUPPO NOME_UTENTE
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -1529,7 +1529,7 @@ ibmcloud iam access-group-user-purge NOME_UTENTE [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-f, --force</dt>
   <dd>Elimina senza conferma</dd>
@@ -1554,7 +1554,7 @@ ibmcloud iam access-group-service-ids NOME_GRUPPO
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -1577,7 +1577,7 @@ ibmcloud iam access-group-service-id-add NOME_GRUPPO NOME_ID_SERVIZIO [NOME_ID_S
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -1600,7 +1600,7 @@ ibmcloud iam access-group-service-id-remove NOME_GRUPPO NOME_ID_SERVIZIO
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -1623,7 +1623,7 @@ ibmcloud iam access-group-service-id-purge NOME_ID_SERVIZIO [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-f, --force</dt>
   <dd>Elimina senza conferma</dd>
@@ -1648,7 +1648,7 @@ ibmcloud iam access-group-policies NOME_GRUPPO
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -1671,7 +1671,7 @@ ibmcloud iam access-group-policy NOME_GRUPPO ID_POLITICA
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -1694,7 +1694,7 @@ ibmcloud iam access-group-policy-create NOME_GRUPPO {--file @FILE_JSON | --roles
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--file</dt>
   <dd>File JSON della definizione della politica</dd>
@@ -1760,7 +1760,7 @@ ibmcloud iam access-group-policy-update ID_POLITICA_NOME_GRUPPO {--file FILE_JSO
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--file</dt>
   <dd>File JSON della definizione della politica</dd>
@@ -1825,7 +1825,7 @@ ibmcloud iam access-group-policy-delete NOME_GRUPPO ID_POLITICA [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-f, --force</dt>
   <dd>Forza l'eliminazione senza conferma</dd>
@@ -1849,7 +1849,7 @@ ibmcloud iam service-ids [--uuid]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--uuid</dt>
   <dd>Mostra l'UUID solo degli ID servizio</dd>
@@ -1874,7 +1874,7 @@ ibmcloud iam service-id (NOME|UUID) [--uuid]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del servizio, esclusivo con UUID</dd>
@@ -1909,7 +1909,7 @@ ibmcloud iam service-id-create NOME [-d, --description DESCRIZIONE] [--lock]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del servizio</dd>
@@ -1945,7 +1945,7 @@ ibmcloud iam service-id-update (NOME|UUID) [-n, --name NUOVO_NOME] [-d, --descri
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del servizio, esclusivo con UUID</dd>
@@ -1991,7 +1991,7 @@ ibmcloud iam service-id-delete (NOME|UUID) [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del servizio, esclusivo con UUID</dd>
@@ -2026,7 +2026,7 @@ ibmcloud iam service-id-lock (NOME|UUID) [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del servizio, esclusivo con UUID</dd>
@@ -2061,7 +2061,7 @@ ibmcloud iam service-id-unlock (NOME|UUID) [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del servizio, esclusivo con UUID</dd>
@@ -2266,7 +2266,7 @@ ibmcloud iam service-api-keys (NOME_ID_SERVIZIO|UUID_ID_SERVIZIO) [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'ID servizio, esclusivo con UUID_ID_SERVIZIO</dd>
@@ -2295,7 +2295,7 @@ ibmcloud iam service-api-key (NOME_CHIAVE_API|UUID_CHIAVE_API) (NOME_ID_SERVIZIO
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_CHIAVE_API (obbligatorio)</dt>
   <dd>Nome della chiave API, esclusivo con UUID_CHIAVE_API</dd>
@@ -2330,10 +2330,10 @@ ibmcloud iam service-api-key-create NOME (NOME_ID_SERVIZIO|UUID_ID_SERVIZIO) [-d
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
-  <dd>Nome o chiave API del servizio appena creata</dd>
+  <dd>Nome dell'ID servizio o chiave API del servizio appena creato</dd>
   <dt>NOME_ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'ID servizio, esclusivo con UUID_ID_SERVIZIO</dd>
   <dt>UUID_ID_SERVIZIO (obbligatorio)</dt>
@@ -2365,7 +2365,7 @@ ibmcloud iam service-api-key-update (NOME_CHIAVE_API|UUID_CHIAVE_API) (NOME_ID_S
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_CHIAVE_API (obbligatorio)</dt>
   <dd>Nome della chiave API, esclusivo con UUID_CHIAVE_API</dd>
@@ -2402,7 +2402,7 @@ ibmcloud iam service-api-key-delete (NOME_CHIAVE_API|UUID_CHIAVE_API) (NOME_ID_S
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_CHIAVE_API (obbligatorio)</dt>
   <dd>Nome della chiave API, esclusivo con UUID_CHIAVE_API</dd>
@@ -2435,7 +2435,7 @@ ibmcloud iam service-api-key-lock (NOME_CHIAVE_API|UUID_CHIAVE_API) (NOME_ID_SER
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_CHIAVE_API (obbligatorio)</dt>
   <dd>Nome della chiave API, esclusivo con UUID_CHIAVE_API</dd>
@@ -2468,7 +2468,7 @@ ibmcloud iam service-api-key-unlock (NOME_CHIAVE_API|UUID_CHIAVE_API) (NOME_ID_S
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_CHIAVE_API (obbligatorio)</dt>
   <dd>Nome della chiave API, esclusivo con UUID_CHIAVE_API</dd>
@@ -2700,7 +2700,7 @@ ibmcloud iam user-policy-delete ID_UTENTE ID_POLITICA [-f, --force]
 
 <strong>Prerequisiti</strong>: Endpoint, Accesso, Account di destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-f, --force</dt>
   <dd>Elimina la politica utente senza conferma</dd>
@@ -2730,7 +2730,7 @@ ibmcloud iam service-policies ID_SERVIZIO [--json] [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o UUID dell'ID del servizio</dd>
@@ -2765,7 +2765,7 @@ ibmcloud iam service-policy ID_SERVIZIO ID_POLITICA [--json] [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o UUID dell'ID del servizio</dd>
@@ -2802,7 +2802,7 @@ ibmcloud iam service-policy-create ID_SERVIZIO {--file FILE_JSON | -r, --roles N
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o UUID dell'ID del servizio</dd>
@@ -2853,7 +2853,7 @@ ibmcloud iam service-policy-update ID_SERVIZIO ID_POLITICA {--file FILE_JSON | [
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o UUID dell'ID del servizio</dd>
@@ -2905,7 +2905,7 @@ ibmcloud iam service-policy-delete ID_SERVIZIO ID_POLITICA [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o UUID dell'ID del servizio</dd>
@@ -2939,7 +2939,7 @@ ibmcloud iam oauth-tokens
 
 <strong>Prerequisiti</strong>: Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -2962,7 +2962,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 
 <strong>Prerequisiti</strong>: Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-f, --force</dt>
   <dd>Forza la disconnessione senza conferma</dd>
@@ -2980,7 +2980,7 @@ ibmcloud iam authorization-policy-create NOME_SERVIZIO_ORIGINE NOME_SERVIZIO_DES
 
 <strong>Prerequisiti</strong>: Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_SERVIZIO_ORIGINE</dt>
   <dd>Servizio di origine che può essere autorizzato ad accedere.</dd>
@@ -3005,7 +3005,7 @@ ibmcloud iam authorization-policy-delete ID_POLITICA_AUTORIZZAZIONE [-f, --force
 
 <strong>Prerequisiti</strong>: Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>ID_POLITICA_AUTORIZZAZIONE</dt>
   <dd>ID della politica di autorizzazione da eliminare.</dd>
@@ -3024,7 +3024,7 @@ ibmcloud iam authorization-policy ID_POLITICA_AUTORIZZAZIONE
 
 <strong>Prerequisiti</strong>: Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>ID_POLITICA_AUTORIZZAZIONE</dt>
   <dd>ID della politica di autorizzazione da mostrare.</dd>
@@ -3054,7 +3054,7 @@ ibmcloud resource groups [--default]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--default</dt>
   <dd>Richiama il gruppo predefinito dell'account corrente.</dd>
@@ -3085,7 +3085,7 @@ ibmcloud resource group NOME [--id]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del gruppo di risorse</dd>
@@ -3119,7 +3119,7 @@ ibmcloud resource group-create NOME NOME_QUOTA
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <strong>Esempi</strong>:
 
@@ -3141,7 +3141,7 @@ ibmcloud resource group-update NOME [-n, --name NUOVO_NOME] [-q, --quota NOME_NU
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del gruppo di risorse di destinazione</dd>
@@ -3178,7 +3178,7 @@ ibmcloud resource quotas
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 </dl>
 
@@ -3201,7 +3201,7 @@ ibmcloud resource quota NOME
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome della quota</dd>
@@ -3225,7 +3225,7 @@ bx resource cf-service-instance-migrate (NOME_ISTANZA_SERVIZIO | ID_ISTANZA_SERV
 
 <strong>Prerequisiti</strong>: Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ISTANZA_SERVIZIO o ID_ISTANZA_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o ID dell'istanza del servizio</dd>
@@ -3671,7 +3671,7 @@ ibmcloud resource service-instances [--service-name NOME_SERVIZIO] [--location U
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--service-name</dt>
   <dd>Nome del servizio di appartenenza</dd>
@@ -3700,7 +3700,7 @@ ibmcloud resource service-instance (NOME|ID) [--location UBICAZIONE] [--id]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio), esclusivo con ID</dt>
   <dd>Nome dell'istanza del servizio</dd>
@@ -3731,7 +3731,7 @@ ibmcloud resource service-instance-create NOME NOME_SERVIZIO|ID_SERVIZIO NOME_PI
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome dell'istanza del servizio</dd>
@@ -3767,7 +3767,7 @@ ibmcloud resource service-instance-update (NOME|ID) [-n, --name NUOVO_NOME] [-t,
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>Nome (obbligatorio)</dt>
   <dd>Nome dell'istanza del servizio, esclusivo con ID</dd>
@@ -3801,7 +3801,7 @@ ibmcloud resource service-instance-delete (NOME|ID) [-f, --force] [--recursive]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>Nome (obbligatorio)</dt>
   <dd>Nome dell'istanza del servizio, esclusivo con ID</dd>
@@ -3831,7 +3831,7 @@ ibmcloud resource service-bindings ALIAS_SERVIZIO
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>ALIAS_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -3854,7 +3854,7 @@ ibmcloud resource service-binding NOME_ALIAS NOME_APPLICAZIONE [--id]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -3882,7 +3882,7 @@ ibmcloud resource service-binding-create NOME_ALIAS_SERVIZIO NOME_APPLICAZIONE N
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ALIAS_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -3915,7 +3915,7 @@ ibmcloud resource service-binding-delete ALIAS_SERVIZIO NOME_APPLICAZIONE [-f, -
 
 <strong>Prerequisiti</strong>:  Nessuno
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ALIAS_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -3943,7 +3943,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NOME | --ali
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--instance-id</dt>
   <dd>ID istanza del servizio</dd>
@@ -3973,7 +3973,7 @@ ibmcloud resource service-key NOME_CHIAVE [--id]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_CHIAVE</dt>
   <dd>Nome della chiave</dd>
@@ -3999,7 +3999,7 @@ ibmcloud resource service-key-create NOME NOME_RUOLO ( --instance-id ID_ISTANZA_
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME</dt>
   <dd>Nome della chiave</dd>
@@ -4039,7 +4039,7 @@ ibmcloud resource service-key-delete NOME_CHIAVE [-f, --forece]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_CHIAVE</dt>
   <dd>Nome della chiave</dd>
@@ -4065,7 +4065,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NOME ]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--instance-id</dt>
   <dd>ID dell'istanza del servizio di appartenenza.</dd>
@@ -4090,7 +4090,7 @@ ibmcloud resource service-alias NOME_ALIAS [--id]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -4115,7 +4115,7 @@ ibmcloud resource service-alias-create NOME_ALIAS ( --instance-id ID | --instanc
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -4148,7 +4148,7 @@ ibmcloud resource service-alias-update NOME_ALIAS [-n, --name NUOVO_NOME] [-t, -
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -4180,7 +4180,7 @@ ibmcloud resource service-alias-delete NOME_ALIAS [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -4205,7 +4205,7 @@ ibmcloud search QUERY_LUCENE [-o, --offset OFFSET] [-l, --limit LIMITE]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-offset, --o</dt>
   <dd>Avvio numero posizione risorsa</dd>
@@ -4291,7 +4291,7 @@ ibmcloud resource tags [--tag-type TIPO_TAG] [-o, --offset OFFSET] [-l, --limit 
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--tag-type</dt>
   <dd>Il tipo di tag (valori supportati: user, restricted)</dd>
@@ -4306,7 +4306,7 @@ ibmcloud resource tags [--tag-type TIPO_TAG] [-o, --offset OFFSET] [-l, --limit 
 Elenca tutte le tag
 
 ```
-ibmcloud resource tags
+ibmcloud resource tags 
 ```
 
 Elenca tutte le tag limitate
@@ -4326,7 +4326,7 @@ ibmcloud resource tag (--tag-name NOME_TAG | --tag-crn CRN_TAG)
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -4353,7 +4353,7 @@ ibmcloud resource tag-create --tag-name NOME_TAG [--tag-type TIPO_TAG]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag</dd>
@@ -4398,7 +4398,7 @@ ibmcloud resource tag-delete (--tag-name NOME_TAG | --tag-crn CRN_TAG)
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -4425,7 +4425,7 @@ ibmcloud resource tag-attach (--tag-name NOME_TAG | --tag-crn CRN_TAG ) --resour
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -4454,7 +4454,7 @@ ibmcloud  tag-detach (--tag-name NOME_TAG | --tag-crn CRN_TAG) --resource-crn CR
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -4483,7 +4483,7 @@ ibmcloud tag-update (--tag-name NOME_TAG | --tag-crn CRN_TAG) --tag-type TIPO_TA
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -4513,7 +4513,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGIONE] [-k, --kind TIPO] [-p, --
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-r, --region</dt>
   <dd>Specifica la regione geografica in cui cercare. Attualmente sono supportate solo "us-south" e "united-kingdom"</dd>
@@ -4557,7 +4557,7 @@ ibmcloud catalog entry ID [--global]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--children</dt>
   <dd>Ottieni tutti gli elementi secondari per la voce di catalogo</dd>
@@ -4586,7 +4586,7 @@ ibmcloud catalog entry-create [-c PARAMETERI_COME_JSON] [-p, --parent ELEMENTO_P
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-p, --parent</dt>
   <dd>ID elemento principale dell'oggetto</dd>
@@ -4615,7 +4615,7 @@ ibmcloud catalog entry-update ID [-c PARAMETRI_COME_JSON] [--global]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-c</dt>
   <dd>Oggetto JSON valido che contiene i parametri di configurazione specifici per il catalogo, fornito incorporato o in un file. Per un elenco dei parametri di configurazione supportati, consulta la documentazione per la specifica voce di catalogo.</dd>
@@ -4640,7 +4640,7 @@ ibmcloud catalog entry-delete ID [--global]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--global</dt>
   <dd>Opera in ambito globale</dd>
@@ -4665,7 +4665,7 @@ ibmcloud catalog entry-visibility ID [--global]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>-json</dt>
   <dd>Genera in output la risposta JSON originale</dd>
@@ -4692,7 +4692,7 @@ ibmcloud catalog entry-visibility-set ID [--includes-add ELENCO] [--includes-rem
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
 
   <dt>--includes-add</dt>
@@ -4734,7 +4734,7 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 <dl>
   <dt>--cf</dt>
   <dd>Mostra solo i servizi Cloud Foundry</dd>
