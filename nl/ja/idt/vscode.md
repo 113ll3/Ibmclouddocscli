@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-23"
 # Visual Studio Code 用 IBM Developer Tools
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension for Visual Studio Code は、Visual Studio Code エディターのコマンド・パレット内から直接、IBM Developer CLI の機能へのアクセスを提供する、エディターの拡張機能です。  これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを一切離れることなく、`ibmcloud dev` コマンドのサブセットに素早くアクセスすることができます。
+IBM Developer Extension for Visual Studio Code は、Visual Studio Code エディターのコマンド・パレット内から直接、IBM Developer CLI の機能へのアクセスを提供する、エディターの拡張機能です。 これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを一切離れることなく、`ibmcloud dev` コマンドのサブセットに素早くアクセスすることができます。
 {:shortdesc}
 
 ![IBM Developer Tools の拡張機能ダウンロード画面の画面キャプチャー。](vscode.png "Visual Studio Code 内の拡張機能ダウンロード画面")
@@ -42,7 +42,7 @@ IBM Developers Tools のこの拡張機能をインストールするための�
 
 あるいは、以下に示すように、「拡張機能」管理ウィンドウを介してこの IBM Developer Tools 拡張機能をインストールすることもできます。
 
-1. Visual Studio Code エディターの**「拡張機能」**サイドバーを開き、次に、ストリング `publisher:IBM Developer` を使用して検索します。  IBM Developer Tools 拡張機能が検索結果に表示されます。  
+1. Visual Studio Code エディターの**「拡張機能」**サイドバーを開き、次に、ストリング `publisher:IBM Developer` を使用して検索します。 IBM Developer Tools 拡張機能が検索結果に表示されます。  
 2. **「インストール」**ボタンをクリックしてインストールを開始します。
 
 また、[Visual Studio Code Marketplace 内から直接、IBM Developer Tools 拡張機能](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer)にアクセスすることもできます。

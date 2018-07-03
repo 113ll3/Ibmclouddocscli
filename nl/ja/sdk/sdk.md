@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 # 使用可能なモバイル SDK
@@ -60,5 +60,3 @@ Java、NodeJS、または Swift のサーバー・アプリケーションがあ
 
 - [Core プラグイン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 - [{{site.data.keyword.mobilepushshort}} プラグイン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
-
-

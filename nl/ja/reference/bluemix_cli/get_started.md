@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-05-23"
    **32 ビットのリリースと以前のバージョンについては、[ここ](all_versions.html)を参照してください。
 
 1. インストーラーを実行します。
-   * macOS および Windows の場合は、単純にインストーラーを実行します。
+   * macOS および Windows の場合は、インストーラーを実行します。
    * Linux の場合は、パッケージを解凍し、`install_bluemix_cli` スクリプトを実行します。
 
 1. API エンドポイントをターゲットに指定し、{{site.data.keyword.Bluemix_notm}} にログインします。
@@ -63,5 +63,5 @@ lastupdated: "2018-05-23"
 {: #issues}
 
 問題を報告したり新しいフィーチャーの要求を送信したりするには、以下のオプションを使用してください。
- * [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) で問題を作成する
+ * [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) で問題を作成する
  * [Slack channel](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) にメッセージを残す

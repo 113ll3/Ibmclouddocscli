@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -96,7 +96,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (オプション)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
+   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある IBM Cloud API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
    現在使用している API エンドポイントの URL を表示したい場合、cf api
 コマンドにこのパラメーターを指定する必要はありません。</dd>
    <dt>* --skip-ssl-validation</dt>
@@ -391,7 +391,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}} にログインします。 [フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。 
+{{site.data.keyword.Bluemix_notm}} にログインします。 [フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
 
 **注**: {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを使用してログインすることもできます。 ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。 API キーの作成について詳しくは、『[API キーの管理](/docs/iam/apikeys.html)』を参照してください。
 
@@ -484,7 +484,7 @@ cf logs my_app
 ```
 {: codeblock}
 
-`my_app` という名前のアプリケーションの最近のログ・ストリームを表示します。
+`my_app` という名前のアプリケーションのログ・ストリームを表示します。
 ```
 cf logs my_app --recent
 ```
@@ -678,7 +678,7 @@ cf ssh
 ```
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
-デフォルトでは、Diego アプリケーションには SSH アクセスが有効になります。 `cf ssh-enabled` コマンドを使用して SSH アクセスが有効かどうかを検証することができ、アクセスが無効であった場合は `cf enable-ssh` コマンドを使用して有効にすることができます。 
+デフォルトでは、Diego アプリケーションには SSH アクセスが有効になります。 `cf ssh-enabled` コマンドを使用して SSH アクセスが有効かどうかを検証することができ、アクセスが無効であった場合は `cf enable-ssh` コマンドを使用して有効にすることができます。
 
 <strong>コマンド・オプション</strong>:
 

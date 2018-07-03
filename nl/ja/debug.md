@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-05-29"
 {:screen: .screen}
 
 
-# デバッグ
+# {{site.data.keyword.Bluemix_notm}} の CF アプリのデバッグ
 {: #debugging}
 
 {{site.data.keyword.Bluemix}} で問題が発生した場合、ログ・ファイルを確認して問題を調査し、エラーをデバッグすることができます。
@@ -34,7 +34,7 @@ lastupdated: "2018-05-29"
 {{site.data.keyword.Bluemix_notm}} 上でアプリが失敗する
 場合の原因を理解するには、アプリがどのように
 {{site.data.keyword.Bluemix_notm}} にデプロイされ、実行される
-かを把握する必要があります。 詳細については、[アプリケーション・デプロイメント ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cfapps/depapps.html#appdeploy){: new_window} を参照してください。
+かを把握する必要があります。 詳しくは、[アプリケーション・デプロイメント ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cfapps/depapps.html#appdeploy){: new_window} を参照してください。
 
 
 以下の手順は、`cf
@@ -57,7 +57,7 @@ IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}}
 プラグインを使用してアプリケーションをデプロイする場合、Eclipse ツールの**「コ
 ンソール」**タブに、cf logs 出力に似たログが表示されます。 アプリケーションをデプロイするときに、`ログ`をトラッキングするために別の Eclipse ウィンドウを開くこともできます。
 
-`cf logs` コマンドに加え、{{site.data.keyword.Bluemix_notm}} では、{{site.data.keyword.loganalysisshort}} サービスを使用してログの詳細を収集することもできます。 
+`cf logs` コマンドに加え、{{site.data.keyword.Bluemix_notm}} では、{{site.data.keyword.loganalysisshort}} サービスを使用してログの詳細を収集することもできます。
 
 ### Node.js アプリケーションのステージング・エラーのデバッグ
 
@@ -98,7 +98,7 @@ Node.js アプリケーションに対し、DEA は `package.json` ファイル�
 {: screen}
 
 
-17 行目の末尾にコンマが置かれていることが分かります。これにより、18 行目では鍵と値のペアが予測されます。 問題を修正するには、このコンマを削除してください。
+17 行目の末尾にコンマがあることがわかります。したがって、18 行目では key-value ペアが予期されます。問題を修正するには、このコンマを削除してください。
 
 ```
 15   "jade": "~1.3.0",
@@ -135,8 +135,7 @@ cf コマンド・ライン・インターフェースに `cf logs appname --rec
 
 `stdout.log` ファイルおよび `stderr.log` ファイルは、以前は、デフォルトで、{{site.data.keyword.Bluemix_notm}} コンソールのアプリケーション・ビューから**「ファイル」** > **「ログ」**を選択することによってアクセスできました。 しかし、そのアプリケーションのロギングは、{{site.data.keyword.Bluemix_notm}} がホストされている現行バージョンの Cloud Foundry では使用不可になりました。 stdout および stderr のアプリケーション・ロギングを、{{site.data.keyword.Bluemix_notm}} コンソールで**「ファイル」** > **「ログ」**の下でアクセス可能にしておくために、使用しているランタイムに応じて、{{site.data.keyword.Bluemix_notm}} ファイル・システム内の他のファイルにロギングをリダイレクトできます。
 
-  * Liberty for Java アプリケーションの場合、stdout および stderr に向けられた出力は、logs ディレクトリー内の `messages.log` ファイルに既に含まれています。 接頭部が SystemOut および
-SystemErr のエントリーをそれぞれ探してください。
+  * Liberty for Java アプリケーションの場合、stdout および stderr に向けられた出力は、logs ディレクトリー内の `messages.log` ファイルに既に含まれています。 接頭部が SystemOut および SystemErr のエントリーを探してください。
   * Node.js アプリケーションの場合、console.log 関数をオーバーライドして、明示的に logs ディレクトリー内のファイルに書き込むことができます。
   * PHP アプリケーションの場合、error_log 関数を使用して、logs ディレクトリー内のファイルに書き込むことができます。
   * Python アプリケーションの場合、次のように、ロガーを使用して logs ディレクトリー内のファイルに書き込むことができます: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`

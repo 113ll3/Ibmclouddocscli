@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -318,7 +318,7 @@ ibmcloud cr namespaces
 ## 付録
 {: #appendix}
 
-このページの上部のプラットフォーム・インストーラーを使用して、ほとんどのユーザー向けにすべての前提条件がインストールされます。 いずれかのコンポーネントを手動でインストールする必要がある場合の手順を以下に示します。
+プラットフォーム・インストーラーを使用するほとんどのユーザー用に、すべての前提条件がインストールされます。いずれかのコンポーネントを手動でインストールする必要がある場合の手順を以下に示します。
 
 開発プラグインをインストールするには、まず [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started) をインストールする必要があります。
 
@@ -326,7 +326,7 @@ ibmcloud cr namespaces
 
 アプリケーションをローカルに実行およびデバッグするには、[Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker) もインストールする必要があります。
 
-アプリケーションをコンテナーとしてデプロイするには、Kubernetes、Helm、および以下の IBM Cloud CLI プラグインもインストールする必要があります。
+アプリケーションをコンテナーとしてデプロイするには、`Kubernetes`、`Helm`、および以下の IBM Cloud CLI プラグインもインストールする必要があります。
 
 Kubernetes をインストールするには、次のようにします。
 * Mac ユーザー:

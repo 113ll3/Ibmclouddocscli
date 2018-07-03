@@ -6,8 +6,6 @@ IBM Cloud 開発者ツール (CLI および Dev ツール)
 
 	{: .navgroup id="learn"}
 	index.md
-	reference/bluemix_cli/get_started.md
-	[Getting started with CF CLI](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
@@ -15,13 +13,11 @@ IBM Cloud 開発者ツール (CLI および Dev ツール)
 	reference/bluemix_cli/extend_cli.md
         	
 	{: .topicgroup}
-	IBM Cloud 開発者ツール
-		idt/setting_up_idt.md
-		idt/index.md
+	IBM Cloud 開発者ツール IDE 拡張
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/local_debug.md
-		[IDT のトラブルシューティング](../troubleshoot/ts_createapps.html)
+		deploy_eclipsetools.md
+		[IBM Cloud 用 IBM Eclipse ツールを使用してのアプリのデプロイ](../manageapps/eclipsetools/eclipsetools.html)
         	
 	{: .topicgroup}
 	モバイル用 SDK
@@ -32,7 +28,11 @@ IBM Cloud 開発者ツール (CLI および Dev ツール)
 		sdk/sdk_network_request.md
 	
 	monitoring_logging.md
-	debug.md
+	
+	{: topicgroup}
+	デバッグ
+		debug.md
+		idt/local_debug.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -59,7 +59,10 @@ IBM Cloud 開発者ツール (CLI および Dev ツール)
 	{: .topicgroup}
 	推奨される開発環境
 		deploy_eclipsetools.md
-		[IBM Eclipse Tools for IBM Cloud を使用したアプリのデプロイ](../manageapps/eclipsetools/eclipsetools.html)
 		[Liberty アプリケーションおよび Node.js アプリケーションの管理](../runtimes/common/app_mng.html#app_management) 		[API Connect 開発者ツールキット](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
+	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	ts_createapps.md
 	{: .navgroup-end}

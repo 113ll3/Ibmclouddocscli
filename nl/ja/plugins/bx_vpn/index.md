@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -27,7 +27,7 @@ VPN プラグインには、Windows、MAC、および Linux オペレーティ�
 以下の手順は、{{site.data.keyword.Bluemix_notm}} CLI プラグインで使用する場合の説明です。 Cloud Foundry (cf) CLI プラグインでプラグインを使用する場合は、『[VPN CLI plug-in for cf CLI](../vpn/index.html)』を参照してください。
 
 
-以下の説明では、{{site.data.keyword.Bluemix_notm}} CLI 用 VPN プラグインでサポートされるすべてのコマンドをリストし、それぞれの名前、オプション、使用法、前提条件、説明、および例を示します。 VPN プラグインのインストール方法については、『[Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext)』を参照してください。
+以下の説明では、{{site.data.keyword.Bluemix_notm}} CLI 用 VPN プラグインでサポートされるすべてのコマンドをリストし、それぞれの名前、オプション、使用法、前提条件、説明、および例を示します。 VPN プラグインのインストール方法については、『[Extend your IBM Cloud command line interface](../../index.html#cli_bluemix_ext)』を参照してください。
 
 **注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。 前提条件には、以下のアクションの 1 つ以上が含まれる場合があります。
 <dl>

@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -29,7 +29,7 @@ Jetbrains ベースの IDE 用の IBM Developer Tools 拡張機能を使用す�
 ## インストール
 {: #installation}
 
-Jetbrains IDE 用の IBM Developers Tools 拡張機能をインストールする最も簡単な方法は、[IDT Github リポジトリーの jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) ページにアクセスし、そこにある説明に従うことです。
+Jetbrains IDE 用の IBM Developers Tools 拡張機能をインストールする最も簡単な方法は、[IDT GitHub リポジトリーの jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) ページにアクセスし、そこにある説明に従うことです。
 
 ## 使用量
 {: #usage}

@@ -1,0 +1,162 @@
+---
+
+copyright:
+
+  years: 2018
+
+
+lastupdated: "2018-06-21"
+---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:tip: .tip}
+
+# CDN CLI コマンド
+
+ <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー CDN</caption>
+ <thead>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー CDN</th>
+ </thead>
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl cdn cancel](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_cancel)</td>
+  <td>[ibmcloud sl cdn detail](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_detail)</td>
+  <td>[ibmcloud sl cdn list](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_list)</td>
+  <td>[ibmcloud sl cdn load](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_load)</td>
+  <td>[ibmcloud sl cdn order](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_order)</td>
+  <td>[ibmcloud sl cdn options](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_options)</td>
+   </tr>
+ <tr>
+  <td>[ibmcloud sl cdn origin-add](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_origin_add)</td>
+  <td>[ibmcloud sl cdn origin-list](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_origin_list)</td>
+  <td>[ibmcloud sl cdn origin-remove](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_origin_remove)</td>
+  <td>[ibmcloud sl cdn purge](/docs/cli/reference/softlayer/sl_cli_cdn.html#sl_cdn_purge)</td>
+  </tr>
+   </tbody>
+ </table>
+ 
+ ### ibmcloud sl cdn cancel
+{: #sl_cdn_cancel}
+
+CDN アカウントを取り消します。
+```
+ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONS]
+```
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>-f, --force</dt>
+<dd>確認なしで操作を強制します。</dd>
+</dl>
+
+### ibmcloud sl cdn detail
+{: #sl_cdn_detail}
+
+CDN アカウントの詳細を表示します。
+```
+ibmcloud sl cdn detail ACCOUNT_ID
+```
+
+### ibmcloud sl cdn list
+{: #sl_cdn_list}
+
+すべての CDN アカウントをリストします。
+```
+ibmcloud sl cdn list [OPTIONS]
+```
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>--sortby</dt>
+<dd>ソートの基準となる列。オプション: id、name、type、created。</dd>
+<dt>--order</dt>
+<dd>注文 ID でフィルター操作します。</dd>
+</dl>
+
+### ibmcloud sl cdn load
+{: #sl_cdn_load}
+
+すべてのエッジ・ノード上で 1 つ以上のファイルをキャッシュに入れます。
+```
+ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
+```
+
+### ibmcloud sl cdn order
+{: #sl_cdn_order}
+
+CDN アカウントを注文します。
+```
+ibmcloud sl cdn order [OPTIONS]
+```
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>-b, --bandwidth</dt>
+<dd>CDN 処理能力。指定されていなければ、「従量課金 (PAYG)」価格が使用されます。</dd>
+<dt>-s, --storage</dt>
+<dd>CDN ストレージ。指定されていなければ、「従量課金 (PAYG)」価格が使用されます。</dd>
+<dt>-f, --force</dt>
+<dd>確認なしで操作を強制します。</dd>
+</dl>
+
+### ibmcloud sl cdn options
+{: #sl_cdn_options}
+
+CDN アカウントを注文する際の処理能力とストレージのオプション。
+```
+ibmcloud sl cdn options
+```
+
+### ibmcloud sl cdn origin-add
+{: #sl_cdn_origin_add}
+
+Origin Pull マッピングを作成します。
+```
+ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
+```
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>-t, --type</dt>
+<dd>このマッピングのメディア・タイプ (http、flash、wm、...)。デフォルト: http。</dd>
+<dt>-c, --cname</dt>
+<dd>マッピングに付加する CNAME (オプション)。</dd>
+</dl>
+
+### ibmcloud sl cdn origin-list
+{: #sl_cdn_origin_list}
+
+Origin Pull マッピングをリストします。
+```
+ibmcloud sl cdn origin-list ACCOUNT_ID
+```
+
+### ibmcloud sl cdn origin-remove
+{: #sl_cdn_origin_remove}
+
+Origin Pull マッピングを削除します。
+```
+ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
+```
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>-f, --force</dt>
+<dd>確認なしで操作を強制します。</dd>
+</dl>
+
+### ibmcloud sl cdn purge
+{: #sl_cdn_purge}
+
+すべてのエッジ・ノードからキャッシュされているファイルをパージします。
+```
+ibmcloud sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
+```
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>-f, --force</dt>
+<dd>確認なしで操作を強制します。</dd>
+</dl>

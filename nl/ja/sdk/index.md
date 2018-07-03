@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### アプリ (Cloud Foundry) のリスト
 {: #list-apps}
 
-アプリのリストおよび API スペックの検証には、次のコマンドを使用します: `ibmcloud sdk list [argument] [option]` `OPENAPI_SPEC` 環境変数を、スペックをホスティングする相対 URL パスに設定する必要があります。
+アプリのリストおよび API スペックの検証には、次のコマンドを使用します: `ibmcloud sdk list [argument] [option]` `OPENAPI_SPEC` 環境変数が、スペックをホストしているパスの相対 URL に設定されている必要があります。
 
 
 #### arguments

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# ローカル・アプリケーションのデバッグ
+# {{site.data.keyword.dev_cli_notm}} CLI のローカル・アプリケーションのデバッグ
 {: #local-debug}
 
 {{site.data.keyword.cloud_notm}} 内で Java や Node.js のアプリケーションをデバッグするのを支援するツールがあります。
@@ -40,8 +40,8 @@ ibmcloud dev debug
       7. デバッグ構成を実行します。
       8. ブラウザーでエンドポイントにアクセスし、問題を再現します。  
 	   **注**: Java 基本マイクロサービス・エンドポイントのデフォルト・ポートは、9080 です。
-	* [IntelliJ ![「外部リンク」アイコン](../../icons/launch-glyph.svg "「外部リンク」アイコン")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![「外部リンク」アイコン](../../icons/launch-glyph.svg "「外部リンク」アイコン")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
+	* [IntelliJ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
+	* [VSCode ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
 	* JDK コマンド・ライン: `jdb -attach <host:port>`
 
 ## Node.js アプリケーションのデバッグ
@@ -56,8 +56,8 @@ ibmcloud dev debug
 ```
 
 2. デバッガーをアプリケーションに接続します。
-	* [VSCode ![「外部リンク」アイコン](../../icons/launch-glyph.svg "「外部リンク」アイコン")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![「外部リンク」アイコン](../../icons/launch-glyph.svg "「外部リンク」アイコン")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://blog.docker.com/2016/07/live-debugging-docker/)
+	* [WebStorm ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
 
 
 <!--

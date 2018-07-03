@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -63,7 +63,7 @@ lastupdated: "2018-05-23"
 ## API キーの使用
 {:api_key}
 
-必要な API キーは、{{site.data.keyword.Bluemix_notm}} プラットフォームでの認証に使用される {{site.data.keyword.Bluemix_notm}} の API キーです。Softlayer の API キーまたは {{site.data.keyword.Bluemix_notm}} サービスの API キーではありません。
+必要な API キーは、{{site.data.keyword.Bluemix_notm}} プラットフォームでの認証に使用される {{site.data.keyword.Bluemix_notm}} の API キーです。SoftLayer の API キーまたは {{site.data.keyword.Bluemix_notm}} サービスの API キーではありません。
 
 1. [`ibmcloud iam api-key-create` コマンド](/docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_iam_api_key_create)を使用して API キーを作成します。 以下に示すように、コマンド・ウィンドウにキーを表示するのではなく API キー・ファイルを生成するには、`-f` オプションを使用します。
 

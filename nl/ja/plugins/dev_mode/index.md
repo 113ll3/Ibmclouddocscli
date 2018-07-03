@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 
 
@@ -150,7 +150,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expand</dt>
-   <dd>zip ファイルを解凍して、アップロードしたファイルを抜き出す必要があるかどうかを示します。</dd>
+   <dd>.zip ファイルを解凍して、アップロードしたファイルを取り出す必要があるかどうかを示します。</dd>
    <dt>restart</dt>
    <dd>ファイルの更新後にアプリ・ランタイムを再始動します。</dd>
    </dl>

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -76,12 +76,12 @@ lastupdated: "2018-05-23"
 {: #build}
 
 
-プロジェクトが作成された後、そのプロジェクトをどう活用するかはユーザー次第です。 フローの一般的な構成は、ソース・コードを編集し、次に [`ibmcloud dev build`](commands.html#build) を実行して、そのアプリの言語と構成に固有のローカル・コンテナー内でアプリをコンパイルすることです。 アプリの言語および使用される生成プログラムに応じて、アプリのビルドとローカルでの実行をデフォルトでサポートする 1 つ以上のコンテナーが存在します。  標準では、ビルドおよびローカル・デバッグのための「ツール」コンテナーがあります。  このコンテナーには、通常、開発を支援する追加のツールや機能が含まれます。  また、「実行」コンテナーも存在します。これは、Cloud Foundry または IBM の Kubernetes ベースのコンテナー環境のいずれかにおいて、アプリがクラウドにデプロイされた後の実際のランタイム環境に近い環境を再現します。
+プロジェクトが作成された後、そのプロジェクトをどう活用するかはユーザー次第です。 フローの一般的な構成は、ソース・コードを編集し、次に [`ibmcloud dev build`](commands.html#build) を実行して、そのアプリの言語と構成に固有のローカル・コンテナー内でアプリをコンパイルすることです。 アプリの言語および使用される生成プログラムに応じて、アプリのビルドとローカルでの実行をデフォルトでサポートする 1 つ以上のコンテナーが存在します。  標準では、ビルドおよびローカル・デバッグのための「ツール」コンテナーがあります。 このコンテナーには、通常、開発を支援する追加のツールや機能が含まれます。 また、「実行」コンテナーも存在します。これは、Cloud Foundry または IBM の Kubernetes ベースのコンテナー環境のいずれかにおいて、アプリがクラウドにデプロイされた後の実際のランタイム環境に近い環境を再現します。
 
 
 アプリケーションをコーディングするときは、好みの IDE またはエディターを任意に使用できます。 IBM は、Microsoft VisualStudio Code (VSCode) エディターの拡張を提供しており、これを使用すると、エディター内から直接すべての IDE のコマンドを利用できます。
 
-プロジェクトのビルドが完了したら、次は、アプリの生成プログラムの構成に応じて、[`ibmcloud dev run`](commands.html#run) または [`ibmcloud dev debug`](commands.html#debug) を使用してアプリを実行する必要があります。  これにより、適切なコンテナー内でアプリが実行されます。  一部のアプリ・パターンでは、パーシスタンスやその他の機能など、アプリ外部の複数のコンテナーがサポートされます。  これらは、実行時またはデバッグ時に自動的に開始され、構成されます。  アプリに関連付けられた任意のテスト・ケースを実行する、[`ibmcloud dev test`](commands.html#test) コマンドも存在します。
+プロジェクトのビルドが完了したら、次は、アプリの生成プログラムの構成に応じて、[`ibmcloud dev run`](commands.html#run) または [`ibmcloud dev debug`](commands.html#debug) を使用してアプリを実行する必要があります。 これにより、適切なコンテナー内でアプリが実行されます。 一部のアプリ・パターンでは、パーシスタンスやその他の機能など、アプリ外部の複数のコンテナーがサポートされます。 これらは、実行時またはデバッグ時に自動的に開始され、構成されます。 アプリに関連付けられた任意のテスト・ケースを実行する、[`ibmcloud dev test`](commands.html#test) コマンドも存在します。
 
 
 ### ローカル・コンテナーが使用される方法
@@ -116,7 +116,7 @@ lastupdated: "2018-05-23"
 ## デプロイします。
 {: #deploy}
 
-適切なクラウド・ネイティブ環境の下で、すべてのデプロイメントを管理する完全に機能する DevOps パイプラインを使用できるほか、その他の豊富な機能を活用できます。  作成フローの中で、IBM Cloud の DevOps を使用するようにアプリをセットアップできます。  組み込みの DevOps を使用する準備ができていない場合は、アプリを手動で [`ibmcloud dev deploy`](./commands.html#deploy) するか、独自の DevOps パイプライン内でデプロイ・コマンドを使用できます。  
+適切なクラウド・ネイティブ環境の下で、すべてのデプロイメントを管理する完全に機能する DevOps パイプラインを使用できるほか、その他の豊富な機能を活用できます。 作成フローの中で、IBM Cloud の DevOps を使用するようにアプリをセットアップできます。 組み込みの DevOps を使用する準備ができていない場合は、アプリを手動で [`ibmcloud dev deploy`](./commands.html#deploy) するか、独自の DevOps パイプライン内でデプロイ・コマンドを使用できます。  
 
 
 
@@ -132,5 +132,5 @@ lastupdated: "2018-05-23"
 ### 関連するブログやビデオ
 {: #ref3}
 
-- ブログ: [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- ブログ: [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - ブログ: [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

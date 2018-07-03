@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -53,8 +53,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 * プラグイン・リポジトリーの削除: `cf remove-plugin-repo BluemixAdmin`
 
 
-## {{site.data.keyword.Bluemix_notm}} 管理
-CLI プラグインの使用
+## {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインの使用
 
 {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。
 
@@ -81,7 +80,7 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 <dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。<br />
 </dd>
 </dl>
-<p>正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。 URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。</p>
+<p>正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。</p>
 </li>
 <li>次のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} にログインします。<br/><br/>
 <code>
@@ -103,7 +102,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**注**: ユーザーを特定の組織に追加するには、**users.write** (または **Superuser**) 許可を備えた**管理者**でなければなりません。 組織管理者の場合、**enable-managers-add-users** コマンドを実行する Superuser から、組織にユーザーを追加する権限を付与してもらうこともできます。  詳しくは、『[管理者へのユーザー追加権限の付与](index.html#clius_emau)』を参照してください。
+**注**: ユーザーを特定の組織に追加するには、**users.write** (または **Superuser**) 許可を備えた**管理者**でなければなりません。 組織管理者の場合、**enable-managers-add-users** コマンドを実行する Superuser から、組織にユーザーを追加する権限を付与してもらうこともできます。 詳しくは、[管理者へのユーザー追加権限の付与](index.html#clius_emau)を参照してください。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -244,7 +243,7 @@ cf ba enable-managers-add-users
 ### 管理者のユーザー追加権限の無効化
 {: #clius_dmau}
 
-**enable-managers-add-users** によって組織管理者が {{site.data.keyword.Bluemix_notm}} 環境で管理している組織にユーザーを追加できるようになっている場合、**Superuser** 許可を備えていれば、この設定を削除できます。  管理者によるユーザーの追加を不可にするには、以下のコマンドを使用します。
+**enable-managers-add-users** によって組織管理者が {{site.data.keyword.Bluemix_notm}} 環境で管理している組織にユーザーを追加できるようになっている場合、**Superuser** 許可を備えていれば、この設定を削除できます。 管理者によるユーザーの追加を不可にするには、以下のコマンドを使用します。
 
 ```
 cf ba disable-managers-add-users
@@ -375,7 +374,7 @@ cf bluemix-admin containers-quota <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 内の組織の名前または ID。 このパラメーターは必須です。</dd>
+<dd class="pd">IBM Cloud 内の組織の名前または ID。 このパラメーターは必須です。</dd>
 </dl>
 
 **ヒント:** **bluemix-admin containers-quota** という長いコマンド名の別名として **ba cq** を使用することもできます。
@@ -394,7 +393,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 内の組織の名前または ID。 このパラメーターは必須です。</dd>
+<dd class="pd">IBM Cloud 内の組織の名前または ID。 このパラメーターは必須です。</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">以下のオプションを 1 つ以上含めます。値は整数でなければなりません。
 <ul>
@@ -707,7 +706,7 @@ cf ba resource-metrics
 ## リソース・メトリック履歴の表示
 {: #cliresourceusagehistory}
 
-メモリーおよびディスクの使用量に関するリソース・メトリック履歴を取得できます。 返されるメトリックは、物理リソースと予約済みリソースの両方について、使用可能な合計量のうちの使用済みリソースの量を示します。 メモリーおよびディスクの使用量の履歴データは、毎時、日次、または月次で表示できます。  特定の日付範囲内のデータを取得するには、開始日と終了日を指定します。 日付が指定されていない場合、デフォルトの履歴データは、過去 48 時間の毎時のメモリー・データです。 データは、最新の日付を先頭にして、降順に表示されます。   リソース・メトリック履歴情報を表示するには、以下のコマンドを使用します。
+メモリーおよびディスクの使用量に関するリソース・メトリック履歴を取得できます。 返されるメトリックは、物理リソースと予約済みリソースの両方について、使用可能な合計量のうちの使用済みリソースの量を示します。メモリーおよびディスクの使用量の履歴データは、毎時、日次、または月次で表示できます。 特定の日付範囲内のデータを取得するには、開始日と終了日を指定します。 日付が指定されていない場合、デフォルトの履歴データは、過去 48 時間の毎時のメモリー・データです。 データは、最新の日付を先頭にして、降順に表示されます。 リソース・メトリック履歴情報を表示するには、以下のコマンドを使用します。
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -726,9 +725,9 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">予約済みディスクと物理ディスクの使用量と合計を表示します。</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">日次または月次の開始日 (形式 mm-dd-yyyy)、または毎時の開始日時 (形式 mm-dd-yyyy hh:mm:ss timezone) を指定します </dd>
+<dd class="pd">日次または月次の開始日 (形式 mm-dd-yyyy)、または毎時の開始日時 (形式 mm-dd-yyyy hh:mm:ss 時間帯) を指定します </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">日次または月次の終了日 (形式 mm-dd-yyyy)、または毎時の終了日時 (形式 mm-dd-yyyy hh:mm:ss timezone) を指定します </dd>
+<dd class="pd">日次または月次の終了日 (形式 mm-dd-yyyy)、または毎時の終了日時 (形式 mm-dd-yyyy hh:mm:ss 時間帯) を指定します </dd>
 </dl>
 
 {: codeblock}
@@ -798,7 +797,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### サービス・ブローカーの削除
 {: #clidelservbro}
 
-サービス・ブローカーを削除して、{{site.data.keyword.Bluemix_notm}} カタログからカスタム・サービスを削除するには、以下のコマンドを使用します。
+{{site.data.keyword.Bluemix_notm}} カタログからカスタム・サービスを削除するサービス・ブローカーを削除するには、以下のコマンドを使用します。
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -1087,7 +1086,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 ### ビルドパックの更新
 {: #cliupdabuildpack}
 
-アプリ・カタログ書き込み許可がある場合、既存のビルドパックを更新できます。  ビルドパックを更新するには、以下のコマンドを使用します。
+アプリ・カタログ書き込み許可がある場合、既存のビルドパックを更新できます。 ビルドパックを更新するには、以下のコマンドを使用します。
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -1110,7 +1109,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ### ビルドパックの削除
 {: #clidelbuildpack}
 
-アプリ・カタログ書き込み許可がある場合、既存のビルドパックを削除できます。  ビルドパックを削除するには、以下のコマンドを使用します。
+アプリ・カタログ書き込み許可がある場合、既存のビルドパックを削除できます。 ビルドパックを削除するには、以下のコマンドを使用します。
 
 ```
 cf ba delete-buildpack <buildpack_name>

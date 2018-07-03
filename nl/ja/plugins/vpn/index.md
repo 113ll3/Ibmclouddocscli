@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -108,7 +108,7 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 
 **-i:** イニシエーターの状態。 デフォルト値: bi-directional。
 
-**-dpd-timeout:** セッションが終了するまでのタイムアウト値 (秒)。  範囲: 6 秒から 86400 秒。 デフォルト値: 120 秒。 キープアライブ・タイムアウトの値は、キープアライブ間隔の値よりも高くなければなりません。
+**-dpd-timeout:** セッションが終了するまでのタイムアウト値 (秒)。 範囲: 6 秒から 86400 秒。 デフォルト値: 120 秒。 キープアライブ・タイムアウトの値は、キープアライブ間隔の値よりも高くなければなりません。
 
 **-dpd-interval:** キープアライブ間隔 (秒)。 ピアの活動状態を確認するために、構成された間隔でキープアライブ・メッセージを送信します。 範囲: 5 秒から 86399 秒。 デフォルト値: 15 秒
 
@@ -155,7 +155,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### パラメーター
 {: #p3}
 
-**policy name:** IPsec ポリシーの名前。
+**policy name:** IPSec ポリシーの名前。
 
 **gateway name:** ゲートウェイの名前。
 
@@ -356,7 +356,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### パラメーター
 {: #p7}
 
-**policy name:** IPsec ポリシーの名前。
+**policy name:** IPSec ポリシーの名前。
 
 
 ##### オプションのパラメーター:
