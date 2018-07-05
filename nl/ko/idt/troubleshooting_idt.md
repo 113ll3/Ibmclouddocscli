@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -194,7 +194,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 ### Node.js 프로젝트에 대해 `ibmcloud dev run` 실행 중 오류
 {: #node}
 
-Node.js 웹 또는 BFF 프로젝트에 대해 {{site.data.keyword.dev_cli_short}}을 사용하여 `ibmcloud dev run`을 실행하는 경우 다음 오류가 표시될 수 있습니다. 
+Node.js 웹 또는 BFF 프로젝트에 대해 {{site.data.keyword.dev_cli_short}}을 사용하여 `ibmcloud dev run`을 실행하는 경우 다음 오류가 표시될 수 있습니다.
 
 ```
 module.js:597
@@ -226,13 +226,13 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 해결책
 {: #node-resolution}
 
-`node_modules` 폴더를 삭제하고 `ibmcloud dev run`을 다시 실행하십시오. 
+`node_modules` 폴더를 삭제하고 `ibmcloud dev run`을 다시 실행하십시오.
 
 
 ### {{site.data.keyword.Bluemix_notm}}에 배치 실패
 {: #failuretodeploy}
 
-{{site.data.keyword.dev_cli_short}}을 사용하여 {{site.data.keyword.Bluemix_notm}}에 배치하려 시도한 상태에서, 오류가 없지만 {{site.data.keyword.Bluemix_notm}}에 배치되지 않는 경우가 있습니다. 
+{{site.data.keyword.dev_cli_short}}을 사용하여 {{site.data.keyword.Bluemix_notm}}에 배치하려 시도한 상태에서, 오류가 없지만 {{site.data.keyword.Bluemix_notm}}에 배치되지 않는 경우가 있습니다.
 
 
 #### 원인
@@ -318,15 +318,15 @@ ibmcloud cr namespaces
 ## 부록
 {: #appendix}
 
-대부분의 사용자를 위해 이 페이지 맨 위의 플랫폼 설치 프로그램을 사용하여 모든 전제조건이 설치딥니다. 컴포넌트를 수동으로 설치해야 하는 경우 다음 지시사항을 따르십시오.
+모든 필수 소프트웨어는 플랫폼 설치 프로그램을 사용하는 대부분의 사용자를 위해 설치됩니다. 컴포넌트를 수동으로 설치해야 하는 경우 다음 지시사항을 따르십시오.
 
 dev 플러그인을 설치하려면 먼저 [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started)가 설치되어 있어야 합니다.
 
-dev 플러그인 자체를 사용하려면 `ibmcloud plugin install dev -r Bluemix` 명령을 실행하여 이를 설치해야 합니다. 
+dev 플러그인 자체를 사용하려면 `ibmcloud plugin install dev -r Bluemix` 명령을 실행하여 설치해야 합니다.
 
 애플리케이션을 로컬로 실행하고 디버깅하려면 [Docker ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.docker.com/get-docker)도 설치해야 합니다.
 
-애플리케이션을 컨테이너로서 배치하려면 Kubernetes, Helm 및 다음 IBM Cloud CLI 플러그인도 설치해야 합니다.
+애플리케이션을 컨테이너로서 배치하려면 `Kubernetes`, `Helm` 및 다음 IBM Cloud CLI 플러그인도 설치해야 합니다.
 
 Kubernetes를 설치하려면 다음을 수행하십시오.
 * Mac 사용자:
@@ -346,10 +346,10 @@ Helm을 설치하려면 다음을 수행하십시오.
 * Windows 사용자:
 https://github.com/kubernetes/helm/releases/tag/v2.6.0 사이트에서 2진을 다운로드하여 설치하십시오.
 
-container-registry 플러그인을 설치하려는 경우:
+container-registry 플러그인을 설치하려면 다음을 수행하십시오.
 `ibmcloud plugin install container-registry`
 
-container-service 플러그인을 설치하려는 경우:
+container-service 플러그인을 설치하려면 다음을 수행하십시오.
 `ibmcloud plugin install container-service`
 
 

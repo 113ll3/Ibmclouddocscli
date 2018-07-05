@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -63,5 +63,5 @@ lastupdated: "2018-05-23"
 {: #issues}
 
 다음 옵션을 사용하여 문제를 보고하거나 새 기능 요청을 제출하십시오.
- * [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)에서 문제 작성
+ * [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)에서 문제 작성
  * [Slack 채널](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)에 메시지 남기기

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 
 
@@ -41,26 +41,26 @@ dev_mode 명령행 도구를 설치하려면 다음 방법 중 하나를 사용�
   2. dev_mode 플러그인이 저장된 폴더로 이동하고, cf install-plugin 명령을 사용하여 dev_mode 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다.
 
         ```
-        cf install-plugin dev_mode-linux64
+                cf install-plugin dev_mode-linux64
         ```
 
 - {{site.data.keyword.Bluemix_notm}} CLI 저장소에서 설치합니다.
   1. 다음 명령을 사용하여 Cloud Foundry CLI 저장소에 bluemix-repo 저장소를 추가하십시오.
 
         ```
-        cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
+                cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. cf repo-plugins를 입력하십시오. dev_mode 플러그인이 bluemix-repo 저장소에 나타납니다.
 
 		```
-        cf repo-plugins
+                cf repo-plugins
         ```
 
   3. 다음 명령을 사용하여 Cloud Foundry CLI 플러그인에 dev_mode 플러그인을 설치하십시오.
 
         ```
-        cf install-plugin dev_mode -r bluemix-repo
+                cf install-plugin dev_mode -r bluemix-repo
         ```
 
 ## dev_mo {{site.data.keyword.Bluemix_notm}} 보기  
@@ -150,7 +150,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expand</dt>
-   <dd>업로드된 파일을 zip 파일에서 압축을 풀어야 하는지 여부를 표시합니다.</dd>
+   <dd>업로드된 파일을 .zip 파일에서 압축을 풀어야 하는지 여부를 표시합니다.</dd>
    <dt>restart</dt>
    <dd>파일이 업데이트된 후 앱 런타임을 다시 시작합니다.</dd>
    </dl>

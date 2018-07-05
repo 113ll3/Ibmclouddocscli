@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-06-21"
 
 
 
@@ -22,7 +22,7 @@ lastupdated: "2018-06-20"
 {:shortdesc}
 
   1. Eclipse가 없으면, Eclipse Neon for Java EE Developers(4.6.1)를 설치하십시오.
-  
+
   2. 다음 단추를 클릭한 상태로 Eclipse 도구 모음으로 끌어서 놓은 다음 프롬프트에 따라 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 설치하십시오.
 
   ![IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)

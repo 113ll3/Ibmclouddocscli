@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -76,12 +76,12 @@ lastupdated: "2018-05-23"
 {: #build}
 
 
-일단 프로젝트가 작성되었으면 프로젝트를 더 유용하게 만드는 것은 사용자에게 달려있습니다. 일반적인 플로우는 소스 코드 편집 후 [`ibmcloud dev build`](commands.html#build)를 실행하여 앱의 언어 및 구성에 고유한 로컬 컨테이너 내에서 앱을 컴파일하는 것으로 구성되어 있습니다. 사용하는 앱의 언어와 생성기에 따라 로컬로 빌드 및 실행을 지원하기 위해 기본 설정된 하나 이상의 컨테이너가 있습니다.  일반적으로 빌드와 로컬 디버깅을 위한 "도구" 컨테이너입니다.  이 컨테이너는 대개 개발에서 사용자를 지원하기 위해 추가 도구 및 기능을 보유합니다.  또한 Cloud Foundry 또는 IBM의 Kubernetes 기반 컨테이너 환경에서 클라우드에 이미 배치된 앱의 실제 런타임 환경을 근접하게 모방하는 "실행" 컨테이너도 있습니다.
+일단 프로젝트가 작성되었으면 프로젝트를 더 유용하게 만드는 것은 사용자에게 달려있습니다. 일반적인 플로우는 소스 코드 편집 후 [`ibmcloud dev build`](commands.html#build)를 실행하여 앱의 언어 및 구성에 고유한 로컬 컨테이너 내에서 앱을 컴파일하는 것으로 구성되어 있습니다. 사용하는 앱의 언어와 생성기에 따라 로컬로 빌드 및 실행을 지원하기 위해 기본 설정된 하나 이상의 컨테이너가 있습니다.  일반적으로 빌드와 로컬 디버깅을 위한 "도구" 컨테이너입니다. 이 컨테이너는 대개 개발에서 사용자를 지원하기 위해 추가 도구 및 기능을 보유합니다. 또한 Cloud Foundry 또는 IBM의 Kubernetes 기반 컨테이너 환경에서 클라우드에 이미 배치된 앱의 실제 런타임 환경을 근접하게 모방하는 "실행" 컨테이너도 있습니다.
 
 
 선호하는 편집기나 IDE가 무엇이든 자유롭게 사용하여 애플리케이션을 코딩할 수 있습니다. 편집기 내에서 직접 모든 IDE 명령에 액세스할 수 있는 Microsoft VisualStudio Code(VSCode) 편집기 확장을 제공합니다.
 
-일단 프로젝트가 빌드되면 앱 생성기 구성에 따라 [`ibmcloud dev run`](commands.html#run) 또는 [`ibmcloud dev debug`](commands.html#debug)를 사용하여 앱을 실행하려 할 수 있습니다. 앱은 적절한 컨테이너에서 실행됩니다.  일부 앱 패턴은 지속성 또는 다른 기능 등을 앱의 여러 외부 컨테이너로 지원합니다.  이는 실행 또는 디버그 동안 자동으로 시작되고 구성됩니다.  또한 앱과 연관된 테스트 케이스를 실행하는 [`ibmcloud dev test`](commands.html#test) 명령이 있습니다. 
+일단 프로젝트가 빌드되면 앱 생성기 구성에 따라 [`ibmcloud dev run`](commands.html#run) 또는 [`ibmcloud dev debug`](commands.html#debug)를 사용하여 앱을 실행하려 할 수 있습니다. 앱은 적절한 컨테이너에서 실행됩니다. 일부 앱 패턴은 지속성 또는 다른 기능 등을 앱의 여러 외부 컨테이너로 지원합니다. 이는 실행 또는 디버그 동안 자동으로 시작되고 구성됩니다. 또한 앱과 연관된 테스트 케이스를 실행하는 [`ibmcloud dev test`](commands.html#test) 명령이 있습니다.
 
 
 ### 로컬 컨테이너 사용 방법
@@ -116,7 +116,7 @@ lastupdated: "2018-05-23"
 ## 배치
 {: #deploy}
 
-적절한 클라우드 네이티브 환경에서 다양한 여러 기능뿐 아니라 모든 배치를 관리하기 위한 완전한 기능의 DevOps 파이프라인을 활용하기를 원할 것입니다.  작성 플로우 동안 IBM Cloud의 DevOps를 사용하기 위해 앱을 설정할 수 있습니다.  기본 제공 DevOps를 사용할 준비가 되지 않은 경우에는 사용자의 앱에 대해 수동으로 [`ibmcloud dev deploy`](./commands.html#deploy) 명령을 실행하거나 자체 DevOps 파이프라인 내에서 deploy 명령을 사용할 수 있습니다.   
+적절한 클라우드 네이티브 환경에서 다양한 여러 기능뿐 아니라 모든 배치를 관리하기 위한 완전한 기능의 DevOps 파이프라인을 활용하기를 원할 것입니다. 작성 플로우 동안 IBM Cloud의 DevOps를 사용하기 위해 앱을 설정할 수 있습니다. 기본 제공 DevOps를 사용할 준비가 되지 않은 경우에는 사용자의 앱에 대해 수동으로 [`ibmcloud dev deploy`](./commands.html#deploy) 명령을 실행하거나 자체 DevOps 파이프라인 내에서 deploy 명령을 사용할 수 있습니다.  
 
 
 
@@ -132,5 +132,5 @@ lastupdated: "2018-05-23"
 ### 참조 블로그 및 동영상
 {: #ref3}
 
-- 블로그: [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- 블로그: [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - 블로그: [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

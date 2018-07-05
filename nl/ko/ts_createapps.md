@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 
 # {{site.data.keyword.Bluemix_notm}} 개발자 도구 문제점 해결
 {: #troubleshoot}
@@ -288,4 +288,3 @@ container-registry 플러그인을 설치하려면 다음을 수행하십시오.
 
 container-service 플러그인을 설치하려면 다음을 수행하십시오.
 `bx plugin install container-service`
-

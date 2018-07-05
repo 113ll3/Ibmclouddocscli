@@ -6,8 +6,6 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 
 	{: .navgroup id="learn"}
 	index.md
-	reference/bluemix_cli/get_started.md
-	[CF CLI 시작하기](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
@@ -15,13 +13,11 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 	reference/bluemix_cli/extend_cli.md
         	
 	{: .topicgroup}
-	IBM Cloud Developer Tools
-		idt/setting_up_idt.md
-		idt/index.md
+	IBM Cloud Developer Tools IDE 확장
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/local_debug.md
-		[IDT에 대한 문제점 해결](../troubleshoot/ts_createapps.html)
+		deploy_eclipsetools.md
+		[Deploying apps with IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
         	
 	{: .topicgroup}
 	모바일용 SDK
@@ -31,8 +27,12 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
 	
-	monitoring_logging.md
-	debug.md
+	    monitoring_logging.md
+	
+	{: topicgroup}
+	디버깅
+		debug.md
+		idt/local_debug.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -59,8 +59,11 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 	{: .topicgroup}
 	권장 개발 환경
 		deploy_eclipsetools.md
-		[IBM Eclipse Tools for IBM Cloud로 앱 개발](../manageapps/eclipsetools/eclipsetools.html)
-		[Liberty 및 Node.js 앱 관리](../runtimes/common/app_mng.html#app_management)
-		[API Connect 개발자 툴킷](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[Managing Liberty and Node.js apps](../runtimes/common/app_mng.html#app_management)
+		[API Connect developer toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
+	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	ts_createapps.md
 	{: .navgroup-end}

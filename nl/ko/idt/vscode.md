@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-23"
 # Visual Studio Code용 IBM Developer Tools
 {: #ibm-dev-tools-for-vscode}
 
-Visual Studio Code용 IBM Developer Extension은 Visual Studio Code 편집기의 명령 팔레트 내의 IBM Developer CLI에서 직접 기능에 액세스를 제공하는 편집기용 확장입니다.  이를 사용하면 앱 배치, {{site.data.keyword.Bluemix_notm}}에서의 앱 시작/중지/재시작, 원격 앱 로그 보기 등을 포함한 Docker 및 CloudFoundry 워크플로우에서 `ibmcloud dev` 명령의 서브세트에 신속하게 액세스할 수 있으며, 이 모든 경우에 편집기의 컨텍스트에서 나가지 않아도 됩니다.
+Visual Studio Code용 IBM Developer Extension은 Visual Studio Code 편집기의 명령 팔레트 내의 IBM Developer CLI에서 직접 기능에 액세스를 제공하는 편집기용 확장입니다. 이를 사용하면 앱 배치, {{site.data.keyword.Bluemix_notm}}에서의 앱 시작/중지/재시작, 원격 앱 로그 보기 등을 포함한 Docker 및 CloudFoundry 워크플로우에서 `ibmcloud dev` 명령의 서브세트에 신속하게 액세스할 수 있으며, 이 모든 경우에 편집기의 컨텍스트에서 나가지 않아도 됩니다.
 {:shortdesc}
 
 ![IBM Developer Tools 확장 다운로드 화면의 화면 캡처.](vscode.png "Visual Studio Code 내의 확장 다운로드 화면")
@@ -42,7 +42,7 @@ IBM Developers Tools 확장은 설치하는 가장 간단한 방법은 Visual St
 
 또는 "확장" 관리 창을 통해 IBM Developer Tools 확장을 설치할 수 있습니다.
 
-1. Visual Studio Code 편집기의 내부에서 **확장** 사이드바를 연 후에 `publisher:IBM Developer` 문자열을 사용하여 검색하십시오.  IBM Developer Tools 확장이 검색 결과에 표시됩니다.  
+1. Visual Studio Code 편집기의 내부에서 **확장** 사이드바를 연 후에 `publisher:IBM Developer` 문자열을 사용하여 검색하십시오. IBM Developer Tools 확장이 검색 결과에 표시됩니다.  
 2. **설치** 단추를 클릭하여 설치를 시작하십시오.
 
 [IBM Developer Tools extension directly within the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer)에 액세스할 수도 있습니다.
@@ -57,12 +57,12 @@ Visual Studio Code의 명령 팔레트를 사용하여 확장 명령을 시작�
 * **Mac:** `cmd + shift + p`
 * **Windows / Linux:** `ctrl + shift + p`
 
-그 다음에는 시작할 명령을 입력하거나 선택합니다. 명령 팔레트 내에서 ‘ibmcloud’를 입력하여 모든 사용 가능한 명령의 목록을 볼 수 있습니다. 
+그 다음에는 시작할 명령을 입력하거나 선택합니다. 명령 팔레트 내에서 ‘ibmcloud’를 입력하여 모든 사용 가능한 명령의 목록을 볼 수 있습니다.
 
 ### Docker 워크플로우(Docker 컨테이너)용 IBM Developer Extension 사용
 {: #usage-docker}
 
-다음과 같은 몇 가지 단계로 ibmcloud dev 워크플로우를 시작할 수 있습니다. 
+다음과 같은 몇 가지 단계로 ibmcloud dev 워크플로우를 시작할 수 있습니다.
 * 아래 두 가지 방법 중 하나를 사용하여 프로젝트 작성:
   * [{{site.data.keyword.Bluemix_notm}} 웹 콘솔](https://console.ng.bluemix.net/developer/getting-started/) 사용 및 생성된 코드 다운로드
   * [{{site.data.keyword.Bluemix_notm}} Developer CLI](index.html)를 사용해 `ibmcloud dev create` 명령을 사용하여 프로젝트 생성

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -22,7 +22,7 @@ lastupdated: "2018-05-23"
 
 이 {{site.data.keyword.IBM_notm}} SDK 생성기 플러그인을 사용하면 앱의 백엔드 서비스를 생성된 SDK와 쉽게 통합할 수 있습니다. REST API를 변경한 경우 SDK를 재생성하고 SDK 업그레이드를 위해 이전 SDK를 대체할 수 있습니다. 또한 CLI를 DevOps 파이프라인으로 통합하고 앱이 빌드될 때마다 SDK가 API 스펙과 항상 일치하도록 보장할 수 있습니다.
 
-REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 호스트되거나 시스템의 로컬 파일이어야 합니다. REST API 정의가 호스트되는 경우 상대 URL을 `OPENAPI_SPEC` 환경 변수에 정의해야 합니다.
+REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 호스팅되거나 시스템의 로컬 파일이어야 합니다. REST API 정의가 호스팅되는 경우 상대 URL을 `OPENAPI_SPEC` 환경 변수에 정의해야 합니다.
 
 
 ## 요구사항
@@ -56,14 +56,14 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 ### SDK 생성
 {: #gen}
 
-`ibmcloud sdk generate [arguments...] [command options]`를 사용하십시오. 
+`ibmcloud sdk generate [arguments...] [command options]`를 사용하십시오.
 
 
 #### 인수
 {: #gen-args}
 
 * `APP_NAME` - 현재 영역에서 Cloud Foundry 앱의 이름
-* `OPENAPI_DOC_LOCATION` - 원시 REST API 정의 JSON 또는 Yaml에 대한 상대 파일 경로 또는 URL
+* `OPENAPI_DOC_LOCATION` - 원시 REST API 정의 JSON 또는 yaml에 대한 상대 파일 경로 또는 URL
 * `GENERATED_SDK_NAME` (선택적) - 생성된 SDK 이름
 
 
@@ -94,7 +94,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-Open API 정의 파일 또는 로컬 JSON이나 Yaml 파일에 대한 URL에서 SDK를 생성하려면 다음 명령을 사용하십시오.
+Open API 정의 파일 또는 로컬 JSON이나 yaml 파일에 대한 URL에서 SDK를 생성하려면 다음 명령을 사용하십시오.
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -105,14 +105,14 @@ ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### Open API 정의 유효성 검증
 {: #validating}
 
-`ibmcloud sdk validate [argument]`를 사용하십시오. 
+`ibmcloud sdk validate [argument]`를 사용하십시오.
 
 
 #### 인수
 {: #val-args}
 
 * `APP_NAME` - 현재 영역에서 Cloud Foundry 앱의 이름
-* `OPENAPI_DOC_LOCATION` - 원시 REST API 정의 JSON 또는 Yaml에 대한 상대 파일 경로 또는 URL
+* `OPENAPI_DOC_LOCATION` - 원시 REST API 정의 JSON 또는 yaml에 대한 상대 파일 경로 또는 URL
 
 
 #### 사용
@@ -125,7 +125,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-API 스펙 문서 또는 로컬 JSON이나 Yaml 파일에 대한 URL에서 SDK를 생성하려면 다음 명령을 사용하십시오.
+API 스펙 문서 또는 로컬 JSON이나 yaml 파일에 대한 URL에서 SDK를 생성하려면 다음 명령을 사용하십시오.
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### 앱 나열(Cloud Foundry)
 {: #list-apps}
 
-앱을 나열하고 API 스펙을 유효성 검증하려면 `ibmcloud sdk list [argument] [option]`을 사용하십시오. `OPENAPI_SPEC` 환경 변수가 스펙을 호스트하는 상대 URL 경로로 설정되어야 합니다.
+앱을 나열하고 API 스펙을 유효성 검증하려면 `ibmcloud sdk list [argument] [option]`을 사용하십시오. `OPENAPI_SPEC` 환경 변수가 스펙을 호스팅하는 경로의 상대 URL로 설정되어야 합니다.
 
 
 #### 인수

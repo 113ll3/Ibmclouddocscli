@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -118,7 +118,7 @@ VPN 터널의 원격 엔드포인트 IP 주소입니다.
 
 **-ike:** IKE 정책의 이름입니다.
 
-**-ipsec:** IPsec 정책의 이름입니다.
+**-ipsec:** IPSec 정책의 이름입니다.
 
 
 ### cf vpn-create ike
@@ -153,7 +153,7 @@ IKE 정책의 이름입니다.
 
 ### cf vpn-create ipsec
 
-IPsec 정책을 작성합니다.
+IPSec 정책을 작성합니다.
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -162,7 +162,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p3}
 
 **policy name:**
-IPsec 정책의 이름입니다.
+IPSec 정책의 이름입니다.
 
 **gateway name:**
 게이트웨이 이름입니다.
@@ -220,7 +220,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-현재 IPsec 연결에 대한 정보를 표시합니다.
+현재 IPSec 연결에 대한 정보를 표시합니다.
 
 ```
 cf vpn-show ipsecs
@@ -241,7 +241,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-IPsec 연결에 대한 정보를 표시합니다.
+IPSec 연결에 대한 정보를 표시합니다.
 
 ```
 cf vpn-show ipsec <policy name>
@@ -322,13 +322,13 @@ CIDR 형식의 서브넷 주소입니다.
 
 **-i:** 개시자의 상태입니다. 기본값: 양방향.
 
-**-dpd-timeout:** 세션이 종료되는 제한시간 값(초)입니다. 범위: 6 - 86400초. 기본값: 120초
+**-dpd-timeout:** 세션이 종료되는 제한시간 값(초)입니다.  범위: 6 - 86400초. 기본값: 120초
 
 **-dpd-interval:** 활성 상태 지속 간격(초)입니다. 구성된 간격으로 킵얼라이브 메시지를 전송하여 피어가 작동 중인지 확인하십시오. 범위: 5-86399초. 기본값: 15초
 
 **-ike:** IKE 정책의 이름입니다.
 
-**-ipsec:** IPsec 정책의 이름입니다.
+**-ipsec:** IPSec 정책의 이름입니다.
 
 
 ### cf vpn-update ike
@@ -362,7 +362,7 @@ IKE 정책의 이름입니다.
 
 ### cf vpn-update ipsec
 
-IPsec 정책을 업데이트합니다.
+IPSec 정책을 업데이트합니다.
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -371,7 +371,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p7}
 
 **policy name:**
-IPsec 정책의 이름입니다.
+IPSec 정책의 이름입니다.
 
 
 ##### 선택적 매개변수:

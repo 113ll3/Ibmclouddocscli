@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 로컬 애플리케이션 디버깅
+# {{site.data.keyword.dev_cli_notm}} CLI용 로컬 애플리케이션 디버깅
 {: #local-debug}
 
 {{site.data.keyword.cloud_notm}}에서 Java 및 Node.js의 애플리케이션을 디버그하도록 도와주는 도구가 있습니다.

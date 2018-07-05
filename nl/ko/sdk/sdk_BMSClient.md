@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # BMSClient 초기화
 {: #sdk_BMSClient}
@@ -63,7 +63,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
   1. Cartfile에 다음 행을 추가하십시오.
 
       ```
-      github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
+            github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
       ```
       {: codeblock}
 

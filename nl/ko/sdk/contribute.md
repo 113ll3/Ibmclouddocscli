@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -50,21 +50,21 @@ lastupdated: "2018-05-23"
    * 다음 명령을 사용하여 이를 설치하십시오.
 
       ```
-      go get -u github.com/kardianos/govendor
+            go get -u github.com/kardianos/govendor
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 프로젝트 디렉토리에서 `govendor`를 초기화하십시오.
 
       ```
-      govendor init
+            govendor init
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 `$GOPATH`의 종속 항목을 공급업체 디렉토리에 추가하십시오.
 
       ```
-      govendor add +local
+            govendor add +local
       ```
       {: codeblock}
 
@@ -75,14 +75,14 @@ lastupdated: "2018-05-23"
    * 다음 명령을 사용하여 `ginkgo`를 설치하십시오.
 
       ```
-      go get -u github.com/onsi/ginkgo/ginkgo
+            go get -u github.com/onsi/ginkgo/ginkgo
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 `gomega`를 설치하십시오.
 
       ```
-      go get -u github.com/onsi/gomega
+            go get -u github.com/onsi/gomega
       ```
       {: codeblock}
 
@@ -98,7 +98,7 @@ lastupdated: "2018-05-23"
    * 익숙한 HTML 양식의 코드 적용 범위를 얻으려면 다음 명령을 사용하십시오.
 
       ```
-      go tool -html={package}.coverprofile
+            go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
@@ -111,14 +111,14 @@ lastupdated: "2018-05-23"
    * 다음 명령을 사용하여 `go-i18n`을 설치하십시오.
 
       ```
-      go get -u github.com/nicksnyder/go-i18n/goi18n
+            go get -u github.com/nicksnyder/go-i18n/goi18n
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 `go-bindata`를 설치하십시오.
 
       ```
-      go get -u github/com/jteeuwen/go-bindata/go-bindata
+            go get -u github/com/jteeuwen/go-bindata/go-bindata
       ```
       {: codeblock}
 
@@ -129,7 +129,7 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
    * 다음 명령을 사용하여 `delve`를 설치하십시오.
 
       ```
-      go get -u github.com/derekparker/delve/cmd/dlv
+            go get -u github.com/derekparker/delve/cmd/dlv
       ```
       {: codeblock}
 

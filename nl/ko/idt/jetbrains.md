@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -29,7 +29,7 @@ Jetbrains 기반 IDE용 IBM Developer Tools 확장을 사용하려면 시스템�
 ## 설치
 {: #installation}
 
-Jetbrains IDE용 IBM Developers Tools 확장을 설치하는 가장 간단한 방법은 [IDT Github 저장소의 jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) 페이지로 이동하여 다음 지시사항을 따르는 것입니다.
+Jetbrains IDE용 IBM Developers Tools 확장을 설치하는 가장 간단한 방법은 [IDT GitHub 저장소의 jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) 페이지로 이동하여 다음 지시사항을 따르는 것입니다.
 
 ## 사용
 {: #usage}

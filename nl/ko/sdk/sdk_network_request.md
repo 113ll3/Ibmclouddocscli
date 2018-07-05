@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # 네트워크 요청 작성
 {: #sdk-network-request}
@@ -115,4 +115,3 @@ lastupdated: "2018-04-16"
 	request.send(success, failure);
 	```
 	{: codeblock}
-

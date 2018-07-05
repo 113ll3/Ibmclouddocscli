@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -57,7 +57,7 @@ lastupdated: "2018-05-23"
 
 ## 로컬 UAA 서버에 강제 로그인
 
-UAA 서버에 대한, 데디케이티드 ID를 사용한 로그인을 강제하려면 `ibmcloud login` 명령에 `--no-iam` 옵션을 지정하십시오. 
+UAA 서버에 대한, 데디케이티드 ID를 사용한 로그인을 강제하려면 `ibmcloud login` 명령에 `--no-iam` 옵션을 지정하십시오.
 
 ```
   $ ibmcloud login --no-iam
@@ -65,7 +65,7 @@ UAA 서버에 대한, 데디케이티드 ID를 사용한 로그인을 강제하�
 
 ## 공용 IBM ID에서 데디케이티드 ID 연결 끊기
 
-`ibmcloud iam dedicated-id-disconnect`를 사용하여 공용 IBM ID와 연결된 데디케이티드 ID의 연결을 끊을 수 있습니다. 
+`ibmcloud iam dedicated-id-disconnect`를 사용하여 공용 IBM ID와 연결된 데디케이티드 ID의 연결을 끊을 수 있습니다.
 
 ```
   $ ibmcloud iam dedicated-id-disconnect

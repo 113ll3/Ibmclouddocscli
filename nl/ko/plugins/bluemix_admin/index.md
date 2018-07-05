@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -69,7 +69,7 @@ cf plugins
 ```
 {: codeblock}
 
-명령에 대한 추가 도움말을 보려면 `-help` 옵션을 사용하십시오.
+명령에 대한 도움말을 보려면 `-help` 옵션을 사용하십시오.
 
 ### {{site.data.keyword.Bluemix_notm}}에 연결 및 로그인
 
@@ -111,7 +111,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**참고**: 특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다.  자세한 정보는 [관리자를 사용하여 사용자 추가](index.html#clius_emau)를 참조하십시오.
+**참고**: 특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다. 자세한 정보는 [관리자가 사용자를 추가하도록 설정](index.html#clius_emau)을 참조하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -242,10 +242,10 @@ cf ba remove-user <user_name>
 **팁:** 긴 **ba remove-user** 명령어에 대한
 별명으로 **ba ru**를 사용할 수도 있습니다.
 
-### 관리자가 사용자를 추가하도록 설정
+### 관리자가 사용자를 추가할 수 있도록 설정
 {: #clius_emau}
 
-{{site.data.keyword.Bluemix_notm}} 환경에 **수퍼유저** 권한이 있는 경우 조직 관리자가 관리하는 조직에 사용자를 추가하도록 설정할 수 있습니다. 관리자가 사용자를 추가할 수 있도록 하려면 다음 명령을 사용하십시오.
+{{site.data.keyword.Bluemix_notm}} 환경에 **수퍼유저** 권한이 있는 경우 조직 관리자가 자신이 관리하는 조직에 사용자를 추가할 수 있도록 설정할 수 있습니다. 관리자가 사용자를 추가할 수 있도록 하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba enable-managers-add-users
@@ -255,10 +255,10 @@ cf ba enable-managers-add-users
 **팁:** 긴 **ba enable-managers-add-users** 명령어의
 별명으로 **ba emau**를 사용할 수도 있습니다.
 
-### 관리자가 사용자를 추가하도록 설정 제거
+### 관리자가 사용자를 추가할 수 없도록 설정
 {: #clius_dmau}
 
-조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 관리하는 조직에 사용자를 추가하도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다.  관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
+조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 자신이 관리하는 조직에 사용자를 추가할 수 있도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다. 관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba disable-managers-add-users
@@ -403,7 +403,7 @@ cf bluemix-admin containers-quota <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
+<dd class="pd">IBM Cloud의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 </dl>
 
 **팁:** 긴 **bluemix-admin containers-quota** 명령어의 별명으로
@@ -423,7 +423,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
+<dd class="pd">IBM Cloud의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">값이 정수여야 하는 다음 옵션 중 하나 이상을 포함합니다.
 <ul>
@@ -768,7 +768,7 @@ cf ba resource-metrics
 ## 리소스 메트릭 히스토리 보기
 {: #cliresourceusagehistory}
 
-메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다.  시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다.   리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
+메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다. 시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다. 리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -862,8 +862,8 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### 서비스 브로커 삭제
 {: #clidelservbro}
 
-서비스 브로커를 삭제하여 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
-사용자 정의 서비스를 제거하려면 다음 명령을 사용하십시오.
+{{site.data.keyword.Bluemix_notm}} 카탈로그에서
+사용자 정의 서비스를 제거하는 서비스 브로커를 삭제하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -1166,7 +1166,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 ### 빌드팩 업데이트
 {: #cliupdabuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 업데이트할 수 있습니다.  빌드팩을 업데이트하려면 다음 명령을 사용하십시오.
+앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 업데이트할 수 있습니다. 빌드팩을 업데이트하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -1190,7 +1190,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ### 빌드팩 삭제
 {: #clidelbuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 삭제할 수 있습니다.  빌드팩을 삭제하려면 다음 명령을 사용하십시오.
+앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 삭제할 수 있습니다. 빌드팩을 삭제하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba delete-buildpack <buildpack_name>

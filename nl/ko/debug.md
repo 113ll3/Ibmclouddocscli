@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-05-29"
 {:screen: .screen}
 
 
-# 디버깅
+# {{site.data.keyword.Bluemix_notm}}용 cf 앱 디버깅
 {: #debugging}
 
 {{site.data.keyword.Bluemix}}에서 문제점이 발견된 경우 로그 파일을 확인하여 문제점을 조사하고 오류를 디버그할 수 있습니다.
@@ -50,7 +50,7 @@ lastupdated: "2018-05-29"
 
 {{site.data.keyword.Bluemix_notm}} 플러그인의 IBM Eclipse 도구를 사용하여 애플리케이션을 배치하는 경우, Eclipse 도구의 **콘솔** 탭에서 cf 로그 출력과 유사한 로그를 볼 수 있습니다. 별도의 Eclipse 창을 열어 애플리케이션을 배치할 때 `the logs`를 추적할 수도 있습니다.
 
-`cf logs` 명령 이외에도 {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.loganalysisshort}} 서비스를 사용하여 로그 세부사항을 수집할 수도 있습니다. 
+`cf logs` 명령 이외에도 {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.loganalysisshort}} 서비스를 사용하여 로그 세부사항을 수집할 수도 있습니다.
 
 ### Node.js 애플리케이션에 대한 스테이징 오류 디버깅
 
@@ -134,7 +134,7 @@ cf 명령행 인터페이스에 `cf logs appname --recent`를 입력하면 가�
 이전에는 기본적으로 **파일** > **로그**의 {{site.data.keyword.Bluemix_notm}} 콘솔에 있는 애플리케이션 보기를 통해 `stdout.log` 및 `stderr.log` 파일에 액세스할 수 있었습니다. 그러나 {{site.data.keyword.Bluemix_notm}}에서
 호스팅하는 Cloud Foundry의 현재 버전에서는 애플리케이션 로깅을 사용할 수 없습니다. **파일** > **로그**의 {{site.data.keyword.Bluemix_notm}} 콘솔을 통해 stdout 및 stderr 애플리케이션 로깅에 계속 액세스할 수 있도록 하려면 사용 중인 런타임에 따라 {{site.data.keyword.Bluemix_notm}} 파일 시스템의 다른 파일로 로깅 경로를 재지정하면 됩니다.
 
-  * Liberty for Java 애플리케이션의 경우, stdout 및 stderr로 경로 지정된 출력이 이미 로그 디렉토리의 `messages.log` 파일에 포함되어 있습니다. 각각 SystemOut 및 SystemErr로 시작하는 항목을 찾으십시오.
+  * Liberty for Java 애플리케이션의 경우, stdout 및 stderr로 경로 지정된 출력이 이미 로그 디렉토리의 `messages.log` 파일에 포함되어 있습니다. SystemOut 및 SystemErr로 시작하는 항목을 찾으십시오.
   * Node.js 애플리케이션의 경우, 로그 디렉토리의 파일에 명시적으로 기록하도록 console.log 함수를 대체할 수 있습니다.
   * PHP 애플리케이션의 경우, error_log 함수를 사용하여 로그 디렉토리의 파일에
 기록할 수 있습니다.

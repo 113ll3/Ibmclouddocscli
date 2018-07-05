@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -96,7 +96,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL(선택사항)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 Bluemix API 엔드포인트의 URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
+   <dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 IBM Cloud API 엔드포인트의 URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
    현재 사용 중인 API 엔드포인트의 URL을 표시하려는 경우 cf api 명령에 이 매개변수를 지정할 필요가 없습니다.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다.</dd>
@@ -254,7 +254,7 @@ cf delete appname [-f] [-r]
 
 <strong>예제</strong>:
 
-`my_app`(확인 필수)이라는 애플리케이션을 삭제합니다.
+`my_app`이라는 애플리케이션을 삭제합니다(확인 필요).
 ```
 cf delete my_app
 ```
@@ -302,7 +302,7 @@ cf delete-space space_name [-f]
 
 <strong>예제</strong>:
 
-`my_app`(확인 필수)이라는 애플리케이션을 삭제합니다.
+`my_app`이라는 애플리케이션을 삭제합니다(확인 필요).
 ```
 cf delete my_app
 ```
@@ -390,7 +390,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}}에 로그인합니다. [연합 ID](/docs/admin/account.html#signup)로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용해야 합니다. 
+{{site.data.keyword.Bluemix_notm}}에 로그인합니다. [연합 ID](/docs/admin/account.html#signup)로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용해야 합니다.
 
 **참고**: {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키를 사용하여 로그인할 수도 있습니다. `apikey`를 사용자 이름으로, API 키 값을 비밀번호로 사용하십시오. API 키 작성에 대한 자세한 정보는 [API 키 관리](/docs/iam/apikeys.html)를 참조하십시오.
 
@@ -492,7 +492,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스가 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다.
+Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스는 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다.
 
 ```
 cf marketplace
@@ -566,7 +566,7 @@ cf push `my_app` -c null
 ```
 {: codeblock}
 
-옵션을 사용하여 `my_app`이라는 애플리케이션을 시작하여 `run.sh` 이라는 스크립트 파일을 실행합니다.
+옵션을 사용하여 `my_app`이라는 애플리케이션을 시작하여 `run.sh`라는 스크립트 파일을 실행합니다.
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -676,7 +676,7 @@ cf ssh
 ```
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
-기본적으로, SSH 액세스는 Diego 애플리케이션에 대해 사용 가능하도록 설정되어 있습니다. `cf ssh-enabled` 명령을 사용하여 SSH 액세스가 사용 가능하도록 설정되어 있는지 확인하거나, 사용 안함으로 설정되어 있는 경우 `cf enable-ssh` 명령을 사용하여 액세스를 사용으로 설정할 수 있습니다. 
+기본적으로, SSH 액세스는 Diego 애플리케이션에 대해 사용 가능하도록 설정되어 있습니다. `cf ssh-enabled` 명령을 사용하여 SSH 액세스가 사용 가능하도록 설정되어 있는지 확인하거나, 사용 안함으로 설정되어 있는 경우 `cf enable-ssh` 명령을 사용하여 액세스를 사용으로 설정할 수 있습니다.
 
 <strong>명령 옵션</strong>:
 

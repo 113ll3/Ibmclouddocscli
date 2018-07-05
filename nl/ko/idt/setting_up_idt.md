@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -43,7 +43,7 @@ curl -sL https://ibm.biz/idt-installer | bash
 
 **Windows 10:**
 
-* 참고: PowerShell 아이콘을 마우스 오른쪽 단추로 클릭하고 "관리자 권한으로 실행"을 선택하여 Windows PowerShell을 여십시오. 
+* 참고: PowerShell 아이콘을 마우스 오른쪽 단추로 클릭하고 "관리자 권한으로 실행"을 선택하여 Windows PowerShell을 여십시오.
 
 ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -51,14 +51,14 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 {: codeblock}
 
 ## 설치 확인
-설치를 확인하려면 `help` 명령을 실행하십시오. 
+설치를 확인하려면 `help` 명령을 실행하십시오.
 
 ```
 ibmcloud dev help
 ```
 {: codeblock}
 
-설치가 성공한 경우에는 출력에 사용법 지시사항, 현재 버전 및 지원되는 명령이 나열됩니다. 
+설치가 성공한 경우에는 출력에 사용법 지시사항, 현재 버전 및 지원되는 명령이 나열됩니다.
 
 [재설치 도구](/docs/troubleshoot/ts_createapps.html#appendix) 섹션에는 모든 종속 항목을 개별적으로 설치하기 위한 정보가 포함되어 있습니다.
 
@@ -103,13 +103,13 @@ ibmcloud dev help
 ## 자세히 보기
 {: #learn}
 
-{{site.data.keyword.dev_cli_short}}가 설치되었으므로 이 강력한 도구로 효율성을 높일 수 있는 방법을 배울 수 있습니다.
+{{site.data.keyword.dev_cli_short}} CLI가 설치되었으므로 이 강력한 도구로 효율성을 높일 수 있는 방법을 배울 수 있습니다.
 - [IDT CLI로 시작하기](index.html)
 - [IDT(ibmcloud dev) 명령](commands.html)
 - [VS 코드를 위한 개발자 도구](vscode.html)
 - [Jetbrains IDE를 위한 개발자 도구](jetbrains.html)
 
-{{site.data.keyword.dev_cli_short}} CLI를 사용하여 클라우드 네이티브 앱을 작성하는 방법을 보여주는 [튜토리얼](/docs/apps/tutorials/tutorial_bff.html)을 확인하십시오.
+{{site.data.keyword.dev_cli_short}} CLI를 사용하는 클라우드 네이티브 앱을 작성하는 방법을 보여주는 [튜토리얼](/docs/apps/tutorials/tutorial_bff.html)을 확인하십시오.
 
 ## 추가 읽기
 {: #learn-more}
@@ -124,12 +124,12 @@ ibmcloud dev help
 
 **언어에 초점**
 
-- [IBM Cloud의 Node,js](https://developer.ibm.com/node/cloud/)
+- [Node.js on IBM Cloud](https://developer.ibm.com/node/cloud/)
 - [Spring @ IBM Cloud](https://developer.ibm.com/java/spring/)
 - [Swift @ IBM](https://developer.ibm.com/swift)
 
 **블로그 및 튜토리얼**
 
-- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 - [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

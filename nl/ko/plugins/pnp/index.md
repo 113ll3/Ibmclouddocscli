@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -79,19 +79,19 @@ chmod a+x ./private-network-peering-linux-amd64
 	```
 
 ## 사설 네트워크 피어링 명령의 목록
-다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 보려면 `ibmcloud network` 명령을 사용하십시오. 
+다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 보려면 `ibmcloud network` 명령을 사용하십시오.
 
-| 명령     | 설명                                    |
+|명령     |설명                                    |
 |-------------|------------------------------------------------|
-| pnp-routers | 피어링에 대해 사용 가능한 모든 라우터를 나열합니다.        |
-| pnp-create  | 사설 네트워크 피어링 연결을 작성합니다.   |
-| pnp-delete  | 사설 네트워크 피어링 연결을 삭제합니다.   |
-| pnp-show    | 모든 사설 네트워크 피어링 연결을 나열합니다.  |
+|pnp-routers |피어링에 대해 사용 가능한 모든 라우터를 나열합니다.        |
+|pnp-create  |사설 네트워크 피어링 연결을 작성합니다.   |
+|pnp-delete  |사설 네트워크 피어링 연결을 삭제합니다.   |
+|pnp-show    |모든 사설 네트워크 피어링 연결을 나열합니다.  |
 {: caption="표 1. 개인용 네트워크 피어링 명령" caption-side="top"}
 
 
 ### 명령 사용
-명령에 대한 도움말 정보를 보려면 `ibmcloud network [command] -h`를 실행하십시오. 
+명령에 대한 도움말 정보를 보려면 `ibmcloud network [command] -h`를 실행하십시오.
 
 #### 피어링에 대해 사용 가능한 모든 라우터 나열
 ```
@@ -156,7 +156,7 @@ ibmcloud network pnp-create <router_ip> <router_ip> <name>
 #####매개변수
 {: #p1}
 
-* **router_ip**: 연결하려는 두 개의 라우터의 IP 주소. `ibmcloud network pnp-routers` 명령을 사용하여 IP 주소를 찾을 수 있습니다. 
+* **router_ip**: 연결하려는 두 개의 라우터의 IP 주소. `ibmcloud network pnp-routers` 명령을 사용하여 IP 주소를 찾을 수 있습니다.
 * **name**: 사설 네트워크 피어링 연결의 이름
 
 ######명령 예제
