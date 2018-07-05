@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-12"
 {:shortdesc: .shortdesc}
 
 
-# Plug-in VPN CLI para cf CLI
+# Plug-in da CLI da VPN para a CLI do cf
 {: #vpn_cli_for_cf}
 
 
@@ -25,10 +25,10 @@ O plug-in do {{site.data.keyword.vpn_short}} está disponível para sistemas ope
 
 As instruções a seguir são para trabalhar com o plug-in da CLI do Cloud Foundry (cf). Para usar o plug-in com o plug-in da CLI do {{site.data.keyword.Bluemix_notm}}, consulte Plug-in do [{{site.data.keyword.vpn_short}} para CLI do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
 
-## Instalar o plug-in cf CLI
+## Instalar o plug-in da CLI do cf
 Antes de iniciar, instale o cf CLI. Consulte Interface da linha de comandos do [Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window} para obter detalhes.
 
-## Instalar o plug-in VPN CLI
+## Instalar o plug-in da CLI da VPN
 **Nota:** se você tiver uma versão anterior do plug-in {{site.data.keyword.vpn_short}} CLI que está instalado, ela deverá ser desinstalada primeiro. Utilize o comando:
 
 ```
@@ -37,7 +37,9 @@ cf uninstall-plugin vpn
 
 ### Instalar localmente
 
-1. Faça download do plug-in do {{site.data.keyword.vpn_short}} para sua plataforma por meio do [Repositório de plug-ins da CLI do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
+1. Faça download do plug-in do {{site.data.keyword.vpn_short}} para a sua plataforma no
+[Repositório de plug-ins da CLI do {{site.data.keyword.Bluemix_notm}}
+![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
 2. Instale o plug-in {{site.data.keyword.vpn_short}} usando o comando a seguir:
 **Nota:** alterne para o local do plug-in {{site.data.keyword.vpn_short}} ou especifique o caminho para o local do plug-in.
 
@@ -113,13 +115,14 @@ endereço IP do terminal remoto do túnel VPN.
 
 **-i:** Estado do inicializador. Valor padrão: bi-directional.
 
-**-dpd-timeout:** Valor de tempo limite, em segundos, após o qual a sessão é finalizada.  Intervalo: 6 a 86400 segundos. Valor padrão: 120 segundos. O valor de tempo limite de keep-alive deve ser maior que o valor do intervalo keep-alive.
+**-dpd-timeout:** valor do tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. Valor padrão: 120 segundos. 
+O valor do tempo limite keep-alive deve ser maior que o valor do intervalo keep-alive.
 
 **-dpd-interval:** Intervalo keep-alive em segundos. Envie mensagens keep-alive no intervalo configurado para verificar se o peer está ativo. Intervalo: 5 a 86399 segundos. Valor padrão: 15 segundos
 
 **-ike:** Nome da política IKE.
 
-**-ipsec:** nome da política IPsec.
+**-ipsec:** Nome da política IPSec.
 
 
 ### cf vpn-create ike
@@ -153,7 +156,7 @@ nome da política IKE.
 
 ### cf vpn-create ipsec
 
-Cria uma política IPsec.
+Cria uma política IPSec.
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -161,8 +164,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### Parâmetros
 {: #p3}
 
-**policy name:**
-nome da política IPsec.
+**policy name:** nome da política Internet Protocol Security.
 
 **gateway name:** Nome do gateway.
 
@@ -218,7 +220,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-Exibe informações sobre as conexões IPsec atuais.
+Exibe informações sobre as conexões IPSec atuais.
 
 ```
 cf vpn-show ipsecs
@@ -239,7 +241,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-Exibe informações sobre uma conexão IPsec.
+Exibe informações sobre uma conexão IPSec.
 
 ```
 cf vpn-show ipsec <policy name>
@@ -319,14 +321,14 @@ chave pré-compartilhada.
 
 **-i:** Estado do inicializador. Valor padrão: bi-directional.
 
-**-dpd-timeout:** Valor de tempo limite, em segundos, após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. Valor padrão:
+**-dpd-timeout:** valor do tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. Valor padrão:
 120 segundos
 
 **-dpd-interval:** Intervalo keep-alive em segundos. Envie mensagens keep-alive no intervalo configurado para verificar se o peer está ativo. Intervalo: 5 a 86399 segundos. Valor padrão: 15 segundos
 
 **-ike:** Nome da política IKE.
 
-**-ipsec:** nome da política IPsec.
+**-ipsec:** Nome da política IPSec.
 
 
 ### cf vpn-update ike
@@ -360,7 +362,7 @@ nome da política IKE.
 
 ### cf vpn-update ipsec
 
-Atualiza uma política IPsec.
+Atualiza uma política IPSec.
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -368,8 +370,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### Parâmetros
 {: #p7}
 
-**policy name:**
-nome da política IPsec.
+**policy name:** nome da política Internet Protocol Security.
 
 
 ##### Parâmetros opcionais:

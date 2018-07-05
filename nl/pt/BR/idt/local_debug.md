@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Depuração do aplicativo local
+# Depuração de aplicativo local para a CLI do {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
 Há ferramentas para ajudá-lo a depurar seu aplicativo em Java e Node.js no {{site.data.keyword.cloud_notm}}.

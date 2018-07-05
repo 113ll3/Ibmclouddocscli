@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -24,7 +24,7 @@ lastupdated: "2018-05-23"
 
 Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Veja [Fazer download da CLI do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obter instruções.
 
-## Incluindo o plug-in do {{site.data.keyword.Bluemix_notm}} CLI
+## Incluindo o plug-in da CLI do {{site.data.keyword.Bluemix_notm}}
 
 Após o {{site.data.keyword.Bluemix_notm}} CLI ser instalado, é possível incluir o plug-in {{site.data.keyword.autoscaling}} CLI.
 

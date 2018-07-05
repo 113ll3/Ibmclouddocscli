@@ -6,8 +6,6 @@ IBM Cloud Developer Tools (CLI e ferramentas do desenvolvedor)
 
 	{: .navgroup id="learn"}
 	index.md
-	reference/bluemix_cli/get_started.md
-	[Introdução à CLI do CF](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
@@ -15,13 +13,11 @@ IBM Cloud Developer Tools (CLI e ferramentas do desenvolvedor)
 	reference/bluemix_cli/extend_cli.md
         	
 	{: .topicgroup}
-	IBM Cloud Developer Tools
-		idt/setting_up_idt.md
-		idt/index.md
+	Extensões IDE do IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/local_debug.md
-		[Resolução de problemas para o IDT](../troubleshoot/ts_createapps.html)
+		deploy_eclipsetools.md
+		[Implementando apps com o IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
         	
 	{: .topicgroup}
 	SDKs para dispositivo móvel
@@ -32,7 +28,11 @@ IBM Cloud Developer Tools (CLI e ferramentas do desenvolvedor)
 		sdk/sdk_network_request.md
 	
 	monitoring_logging.md
-	debug.md
+	
+	{: topicgroup}
+	Depuração
+		debug.md
+		idt/local_debug.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -57,9 +57,11 @@ IBM Cloud Developer Tools (CLI e ferramentas do desenvolvedor)
 		plugins/vpn/index.md
 	
 	{: .topicgroup}
-	Ambientes de desenvolvimento recomendados
-		deploy_eclipsetools.md
-		[Implementando apps com o IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
+	Ambientes de desenvolvimento recomendados 		deploy_eclipsetools.md
 		[Gerenciando apps Liberty e Node.js](../runtimes/common/app_mng.html#app_management)
-		[Kit de ferramentas de desenvolvedor do API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api) 		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
+		[kit de ferramentas do desenvolvedor do API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html) 	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	ts_createapps.md
 	{: .navgroup-end}

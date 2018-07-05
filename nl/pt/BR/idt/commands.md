@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -405,7 +405,7 @@ Há [parâmetros adicionais](#command-parameters) compartilhados com outros coma
 
 * Dockerfile para o contêiner de execução.
 * Se você pretende executar com múltiplos contêineres, esse deve ser um arquivo do Compose.
-* Para usar múltiplos arquivos do Compose, circunde uma lista delimitada por vírgulas dos nomes de arquivos com aspas duplas.
+* Para usar múltiplos arquivos do Compose, coloque aspas duplas entre uma lista delimitada por vírgulas dos nomes de arquivos.
 * Uso: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
 * Uso: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
@@ -436,12 +436,14 @@ Ibmcloud dev shell
 A CLI do {{site.data.keyword.dev_cli_short}} abrirá um shell interativo no contêiner do
 docker do aplicativo. O contêiner de destino padrão para o comando shell é definido pelo valor `container-shell-target` no arquivo `cli-config.yml`, em que os valores válidos são `run` ou `tools`. Se esse valor não for definido ou um valor inválido for especificado, o comando `shell` direcionará para o contêiner `tools` por padrão. O comando shell abre o contêiner no diretório especificado pela instrução `WORKDIR` no Dockerfile correspondente. Se `WORKDIR` não estiver listado no Dockerfile, a raiz do contêiner será usada como o diretório ativo. Veja [esta referência](https://docs.docker.com/engine/reference/builder/#workdir) para obter mais informações.
 
-Como alternativa, é possível decidir passar `run` ou `tools` como um argumento para o comando e esse contêiner será trazido para cima e o shell será aberto para esse contêiner. De forma semelhante, é possível usar o parâmetro `container-name` para passar o nome do contêiner no qual você deseja executar o shell. No entanto, essa sinalização deve ser reservada para quando nenhum contêiner está em execução. Os argumentos `run` e `tools` são mais flexíveis e permitem que você alterne entre contêineres no momento em que um está em execução. Por exemplo, se o contêiner de ferramentas estiver em execução e você executar `ibmcloud dev shell run`, o contêiner `tools` será interrompido e o contêiner `run` será iniciado e vice-versa.
+Como alternativa, é possível decidir passar `run` ou `tools` como um argumento para o comando e esse contêiner será trazido para cima e o shell será aberto para esse contêiner. 
+Da mesma forma, é possível usar o parâmetro `container-name` para transmitir o nome do contêiner no qual
+você deseja executar shell. No entanto, essa sinalização deve ser reservada para quando nenhum contêiner está em execução. Os argumentos `run` e `tools` são mais flexíveis e permitem que você alterne entre contêineres no momento em que um está em execução. Por exemplo, se o contêiner de ferramentas estiver em execução e você executar `ibmcloud dev shell run`, o contêiner `tools` será interrompido e o contêiner `run` será iniciado e vice-versa.
 
 Se o contêiner `run` ou `tools` de destino ainda não estiver em execução quando você executar o comando `shell`, o contêiner de destino será iniciado. No entanto, o padrão `Cmd` ou `Entrypoint` padrão no Dockerfile será substituído para ativar diretamente no shell em vez de iniciar o processo do servidor. Isso permite iniciar o contêiner `run` ou `tools` e iniciar manualmente o servidor com seus próprios comandos arbitrários ou customizados.
 
 
-Também é possível especificar o executável do shell que você deseja abrir usando o parâmetro `container-shell`. Por padrão, `/bin/sh` é usado. Se você preferir usar o shell bash, especifique o valor `container-shell` para `/bin/bash`; entretanto, tenha em mente que o bash não está automaticamente disponível em todas as variantes do Linux.
+Você também pode especificar o executável do shell que você deseja abrir usando o parâmetro `container-shell`. Por padrão, `/bin/sh` é usado. Se você preferir usar o shell bash, especifique o valor `container-shell` para `/bin/bash`; entretanto, tenha em mente que o bash não está automaticamente disponível em todas as variantes do Linux.
 
 Quaisquer argumentos adicionais que você passar para o comando além das sinalizações serão analisados como o comando a ser executado quando o shell for aberto. Se você fornecer um comando para ser executado, o shell dentro do contêiner sairá após a execução do comando e retornará para o seu terminal.
 
@@ -453,7 +455,7 @@ Por exemplo, é possível executar o comando `ls` do Linux dentro do shell do co
 #### `container-name`
 {: #container-name}
 
-* Nome do contêiner no qual você deseja executar o shell.
+* Nome do contêiner no qual você deseja executar shell.
 * Uso: `ibmcloud dev shell -- container-name [<container-name>]`
 
 #### `container-shell`
@@ -549,7 +551,8 @@ O parâmetro a seguir é exclusivo para o comando `test`.  Há [parâmetros adic
 ## view
 {: #view}
 
-É possível visualizar a URL na qual seu aplicativo é implementado por meio do comando `view`. Execute esse comando no diretório-raiz do aplicativo que você deseja visualizar. O comando `view` também abrirá a URL em seu navegador padrão.
+É possível visualizar a URL na qual seu aplicativo é implementado por meio do comando `view`. Execute esse
+comando no diretório raiz do aplicativo que você deseja visualizar. O comando `view` também abrirá a URL em seu navegador padrão.
 
 Para aplicativos implementados no Cloud Foundry, a URL consiste no nome do host do aplicativo e no domínio do aplicativo.
 

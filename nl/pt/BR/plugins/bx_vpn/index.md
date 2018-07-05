@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2018-05-23"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Plug-in do VPN para a CLI do {{site.data.keyword.Bluemix_notm}}
+# Plug-in da VPN para a CLI do {{site.data.keyword.Bluemix_notm}}
 
 *Versão:* 1.4.0
 
@@ -30,7 +30,8 @@ As instruções a seguir são para trabalhar com o plug-in da CLI do {{site.data
 
 As informações a seguir listam todos os comandos que são suportados pelo plug-in VPN para
 a CLI do {{site.data.keyword.Bluemix_notm}} e incluem seus nomes, opções, uso, pré-requisitos,
-descrições e exemplos. Consulte [Estender a sua interface de linha de comandos do Bluemix](../../index.html#cli_bluemix_ext) sobre como instalar o plug-in de vpn.
+descrições e exemplos. Consulte [Estender a sua interface da linha de comandos do
+IBM Cloud](../../index.html#cli_bluemix_ext) sobre como instalar o plug-in da VPN.
 
 **Nota:** *Pré-requisitos* listam quais ações são necessárias antes de usar o comando. Os pré-requisitos podem incluir uma ou mais das ações a seguir:
 <dl>
@@ -38,7 +39,7 @@ descrições e exemplos. Consulte [Estender a sua interface de linha de comandos
 **</dt>
 <dd>Um terminal de API deve ser configurado por meio de `ibmcloud api` antes de usar o comando.</dd>
 <dt>**Login**</dt>
-<dd>Efetuar login usando o comando `ibmcloud login` é necessário antes de usar esse comando.</dd>
+<dd>O login usando o comando `ibmcloud login` é necessário antes de usar esse comando.</dd>
 <dt>**Destino **</dt>
 <dd>O comando `ibmcloud target` deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
 </dl>
@@ -77,7 +78,7 @@ ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY 
 
 -i *INITIATOR_STATE* (opcional): estado do iniciador. O valor padrão é `bi-directional`.
 
--dpd-timeout *VALUE* (opcional): o valor de tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. O valor padrão é `120` segundos.
+-dpd-timeout *VALUE* (opcional): valor do tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. O valor padrão é `120` segundos.
 
 -dpd-interval *VALUE* (opcional): intervalo keep-alive em segundos. Envie mensagens keep-alive no intervalo configurado para verificar se o peer está ativo. Intervalo: 5 a 86399 segundos. O valor padrão é `15` segundos.
 
@@ -367,7 +368,7 @@ ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_K
 
 -i *INITIATOR_STATE* (opcional): estado do iniciador.
 
--dpd-timeout *VALUE* (opcional): o valor de tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos.
+-dpd-timeout *VALUE* (opcional): valor do tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos.
 
 -dpd-interval *VALUE* (opcional): intervalo keep-alive em segundos. Envie mensagens keep-alive no intervalo configurado para verificar se o peer está ativo. Intervalo: 5 a 86399 segundos.
 

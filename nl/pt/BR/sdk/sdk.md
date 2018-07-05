@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 # SDKs de dispositivos móveis disponíveis
@@ -58,7 +58,6 @@ Se você tiver um aplicativo do servidor Java, NodeJS ou Swift, poderá usar os 
 ### Plug-ins do Cordova
 {: #cordova_plugin}
 
-- [Plug-in principal ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
-- [Plug-in do {{site.data.keyword.mobilepushshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
-
-
+- Plug-in principal do [
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+- Plug-in do [{{site.data.keyword.mobilepushshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -20,11 +20,13 @@ lastupdated: "2018-05-23"
 # Introdução ao {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
-Recomenda-se instalar a CLI do {{site.data.keyword.Bluemix_notm}} e todas as dependências recomendadas usando o método descrito [aqui.](/docs/cli/index.html)
+Recomenda-se instalar a CLI do {{site.data.keyword.Bluemix_notm}} e todas as dependências recomendadas usando o método
+descrito [aqui.](/docs/cli/index.html)
 {: tip}
 
 
-O {{site.data.keyword.Bluemix_notm}} CLI fornece a interface da linha de comandos para gerenciar aplicativos, contêineres, infraestruturas, serviços e outros recursos no {{site.data.keyword.Bluemix_notm}}.
+A CLI do {{site.data.keyword.Bluemix_notm}} fornece a interface da linha de comandos para gerenciar aplicativos,
+contêineres, infraestruturas, serviços e outros recursos no {{site.data.keyword.Bluemix_notm}}.
 
 
 Para iniciar apenas com uma CLI do {{site.data.keyword.Bluemix_notm}}:
@@ -42,10 +44,10 @@ Para iniciar apenas com uma CLI do {{site.data.keyword.Bluemix_notm}}:
 / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 bits (ppc64le): [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
-   **As liberações de 32 bits e versões anteriores podem ser localizadas [aqui](all_versions.html)
+   **As liberações de 32 bits e as versões anteriores podem ser localizadas [aqui](all_versions.html)
 
 1. Execute o instalador
-   * Para Mac OS e Windows, apenas execute o instalador.
+   * Para macOS e Windows, execute o instalador.
    * Para Linux, extraia o pacote e execute o script `install_bluemix_cli`
 
 1. Destinar um terminal de API e login para o {{site.data.keyword.Bluemix_notm}}
@@ -62,7 +64,7 @@ ou uma chave API.
 ## Outros links para explorar ainda mais a CLI do {{site.data.keyword.Bluemix_notm}}
 
 * [Mais opções para fazer download e instalar a CLI do {{site.data.keyword.Bluemix_notm}}](download_cli.html)
-* [Ampliar os recursos da CLI do {{site.data.keyword.Bluemix_notm}} com plug-ins](extend_cli.html)
+* [Estender os recursos da CLI do {{site.data.keyword.Bluemix_notm}} com plug-ins](extend_cli.html)
 * [Todas as versões da CLI do {{site.data.keyword.Bluemix_notm}} e notas sobre a liberação](all_versions.html)
 * [Documento de uso de comandos da CLI do {{site.data.keyword.Bluemix_notm}}](bx_cli.html)
 
@@ -71,5 +73,6 @@ ou uma chave API.
 {: #issues}
 
 Use as opções a seguir para relatar problemas ou enviar novas solicitações de recursos:
- * Criar problemas no [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg)
- * Deixar mensagens no [canal Slack](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg)
+ * Criar problemas no [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window}
+![Ícone de link externo](../../../icons/launch-glyph.svg)
+ * Deixe mensagens no [canal Slack](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg)

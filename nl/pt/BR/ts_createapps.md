@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 
 # Resolução de problemas para o {{site.data.keyword.Bluemix_notm}} Developer Tools
 {: #troubleshoot}
@@ -25,7 +25,8 @@ Os problemas gerais com o uso da CLI do {{site.data.keyword.dev_cli_short}} para
 ## Erro de nome do host quando você cria um app com um padrão não móvel
 {: #hostname-error}
 
-Você poderá ver o erro a seguir se usar a CLI do {{site.data.keyword.dev_cli_short}} para implementar um app no Cloud Foundry. Se inserir um nome de host que você acredita ser exclusivo, ainda poderá ver essa mensagem.
+Você poderá ver o erro a seguir se usar a CLI do {{site.data.keyword.dev_cli_short}} para implementar um app no Cloud
+Foundry. Se você inserir um nome do host que acredita ser exclusivo, você ainda poderá ver essa mensagem.
 
 ```
 The hostname <myHostname> is taken.
@@ -189,7 +190,8 @@ Exclua a pasta `node_modules` e execute o comando `bx dev run` novamente.
 
 ## Falha ao implementar no {{site.data.keyword.Bluemix_notm}}
 
-A falha ocorre quando você tenta implementar no {{site.data.keyword.Bluemix_notm}} com a CLI do {{site.data.keyword.dev_cli_short}}, mas não há erros exibidos.
+A falha ocorre ao tentar implementar o {{site.data.keyword.Bluemix_notm}} com a CLI do
+{{site.data.keyword.dev_cli_short}}, mas nenhum erro é exibido.
 {: tsSymptoms}
 
 Você pode não estar com login efetuado em sua conta.
@@ -255,15 +257,17 @@ bx cr namespaces
 ## Reinstalando ferramentas
 {: #appendix}
 
-Todos os pré-requisitos são instalados para a maioria dos usuários usando os instaladores de plataforma. Caso você precise instalar manualmente quaisquer componentes, aqui estão as instruções:
+Todos os pré-requisitos instalam para a maioria dos usuários usando os instaladores de plataforma. Caso você precise instalar manualmente quaisquer componentes, aqui estão as instruções:
 
-Para instalar o plug-in dev, deve-se primeiramente instalar a [CLI do IBM Cloud](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
+Para instalar o plug-in dev, deve-se primeiro instalar a [CLI do IBM Cloud](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
 
-Para usar o próprio plug-in dev, deve-se instalá-lo executando o comando a seguir: `bx plugin install dev -r Bluemix`
+Para usar o próprio plug-in dev, deve-se instalá-lo executando o comando a seguir: `bx plugin install dev -r
+Bluemix`
 
 Para executar e depurar apps localmente, deve-se também instalar o [Docker](https://www.docker.com/get-docker).
 
-Para implementar um app como um contêiner, deve-se também instalar o Kubernetes, o Helm e os plug-ins da CLI do IBM Cloud a seguir:
+Para implementar um app como um contêiner, deve-se também instalar o Kubernetes, o Helm e os seguintes plug-ins da CLI do IBM
+Cloud:
 
 Para instalar o Kubernetes:
 * Usuários do Mac: `curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl`
@@ -279,5 +283,4 @@ Para instalar o Helm:
 
 Para instalar o plug-in container-registry: `bx plugin install container-registry`
 
-Para instalar o plug-in container-service: `bx plugin install container-service`
-
+Para instalar o plug-in container-registry: `bx plugin install container-service`

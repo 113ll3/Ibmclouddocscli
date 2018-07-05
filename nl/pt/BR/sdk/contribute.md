@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -102,7 +102,7 @@ A estrutura de teste é baseada no Ginkgo, uma estrutura de teste BDD para Go. E
       ```
       {: codeblock}
 
-      * Você acessará o diretório no qual o arquivo `.coverprofile` está localizado.
+      * Acesse o diretório no qual o arquivo `.coverprofile` está localizado.
 
 * Internacionalização: [go-i18n ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/nicksnyder/go-i18n) e [go-bindata ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/jteeuwen/go-bindata)
 

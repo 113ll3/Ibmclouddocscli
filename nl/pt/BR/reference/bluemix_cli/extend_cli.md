@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 {:tip: .tip}
 {:download: .download}
 
-# Ampliando a CLI do {{site.data.keyword.Bluemix_notm}} com plug-ins
+# Estendendo a CLI do {{site.data.keyword.Bluemix_notm}} com plug-ins
 {: #plug-ins}
 
 A CLI do {{site.data.keyword.Bluemix_notm}} suporta uma estrutura de plug-in para ampliar sua capacidade. É possível instalar um plug-in de um repositório, uma URL da web ou instalar um binário de plug-in localmente.
@@ -27,7 +27,7 @@ o repositório oficial no qual os plug-ins estão hospedados.
 Para obter mais comandos para gerenciar plug-ins, execute `ibmcloud plugin` para ver as mensagens de ajuda.
 {: tip}
 
-## Instalar um plug-in do repositório da CLI do {{site.data.keyword.Bluemix_notm}}
+## Instale um plug-in do repositório da CLI do {{site.data.keyword.Bluemix_notm}}
 
 ### Etapa 1: procurar o plug-in
 
@@ -58,7 +58,7 @@ Use o comando `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` para instalar o
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
 
-## Instalar um plug-in localmente
+## Instale um plug-in localmente
 
 Use o comando `ibmcloud plugin install LOCAL_FILE_NAME` para instalar um binário de plug-in em sua máquina local. Por exemplo:
 
@@ -70,7 +70,7 @@ Use o comando `ibmcloud plugin install LOCAL_FILE_NAME` para instalar um binári
   $
   ```
 
-## Instalar um plug-in por meio de uma URL da web
+## Instale um plug-in de uma URL da web
 
 Use o comando `ibmcloud plugin install URL` para instalar um plug-in diretamente de uma URL da web. Por exemplo
 

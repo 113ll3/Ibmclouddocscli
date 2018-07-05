@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,61 +14,104 @@ lastupdated: "2018-05-23"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.dev_cli_notm}} Visão geral
+# Introdução à CLI do {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-{{site.data.keyword.dev_cli_notm}} é uma abordagem de linha de comandos para criação, desenvolvimento e implementação de aplicativos para desenvolvedores que desejam usar uma linha de comandos para desenvolver aplicativos da web, de dispositivos móveis e de microsserviço de ponta a ponta. Comece a usar rapidamente o conjunto de ferramentas recomendado executando um dos scripts a seguir.
-{: shortdesc}
+Nesse tutorial, você instala um conjunto de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}}, verifica a
+instalação e configura o seu ambiente. As ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}} oferecem uma
+abordagem de linha de comandos para criação, desenvolvimento e implementação de aplicativos da web, de dispositivos móveis e de
+microsserviço de ponta a ponta.
+{:shortdesc}
 
-## Pré-requisitos para o {{site.data.keyword.dev_cli_notm}}
+Com essa instalação, você obtém a CLI do {{site.data.keyword.Bluemix_notm}}, além das seguintes ferramentas: 
+
+* `Homebrew` (somente Mac)
+* `Git`
+* `Docker`
+* `Helm`
+* `kubectl`
+* `ondulação`
+* Plug-in do {{site.data.keyword.dev_cli_notm}}
+* Plug-in do {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
+* Plug-in do {{site.data.keyword.registrylong_notm}}
+* Plug-in do {{site.data.keyword.containerlong_notm}}
+* Plug-in do `sdk-gen`
+
+## Antes de começar
 {: #prereq}
 
-Inscreva-se para o [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
+É necessária uma
+[conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/){: new_window}
+![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e os seguintes
+requisitos do sistema:
 
 * Se você está usando o Microsoft Windows&trade;, deve-se usar o Windows 10 ou mais recente.
+* Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1.
 
-* Use o canal estável para Docker, com uma versão mínima de 1.13.1.
+## Etapa 1: executar o comando de instalação
+{: #step1}
 
-## Como instalar o {{site.data.keyword.dev_cli_notm}}
-{: #installation}
+* Para Mac e Linux, execute o comando a seguir:
 
-Para instalar o conjunto de ferramentas, é possível executar o comando relevante para iniciar o instalador. Isso instala as ferramentas recomendadas a seguir para desenvolvimento do {{site.data.keyword.Bluemix_notm}} (caso ainda não estejam instaladas): `Homebrew` (Mac somente), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, CLI do {{site.data.keyword.Bluemix_notm}}, plug-in {{site.data.keyword.dev_cli_notm}}, plug-in Cloud Functions, plug-in Container Registry, plug-in Container Service e plug-in `sdk-gen`.
+  ```
+  curl -sL https://ibm.biz/idt-installer | bash
+  ```
+  {: codeblock}
+<br><br>
 
-**Mac e Linux:**
+* Para Windows 10, execute o comando a seguir como um administrador:
 
-```
-curl -sL https://ibm.biz/idt-installer | bash
-```
-{: codeblock}
+  ```
+  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  ```
+  {: codeblock}
+<br><br>
+ Clique com o botão direito no ícone do Windows PowerShell e selecione **Executar como
+administrador**.
+  {: tip}
 
+## Etapa 2: verificar a instalação
+{: #step2}
 
-**Windows 10:**
-
-* Nota: abra o Windows PowerShell clicando com o botão direito no ícone PowerShell e selecionando "Executar como Administrador".
-
-```
-Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
-```
-{: codeblock}
-
-## Verifique a instalação
-Para verificar a instalação, execute o comando `help`:
+Para verificar se a CLI e as ferramentas do desenvolvedor foram instalados com êxito, execute o comando `help`:
 
 ```
 ibmcloud dev help
 ```
 {: codeblock}
+<br><br>
+A saída lista as instruções de uso, a versão atual e os comandos suportados.
 
-Se a instalação for bem-sucedida, a saída deverá listar instruções de uso, a versão atual e os comandos suportados.
+## Etapa 3: configurar o seu ambiente
+{: #step3}
 
+1. Conecte-se a um terminal de API em sua região do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à região Sul dos EUA {{site.data.keyword.Bluemix_notm}}:
 
-## Outros links para explorar ainda mais o {{site.data.keyword.dev_cli_notm}}
+	```
+	Ibmcloud api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 
-- [Configuração detalhada](/docs/cli/idt/setting_up_idt.html)
-- [Uso ](/docs/cli/idt/index.html)
-- [Comandos](/docs/cli/idt/commands.html)
-- [Plug-ins da CLI](/docs/cli/reference/bluemix_cli/extend_cli.html)
-- [Extensão IDE de VSCode](/docs/cli/idt/vscode.html)
-- [Instalar a CLI do IBM Cloud manualmente](/docs/cli/reference/bluemix_cli/get_started.html)
-- [Relatar problemas no GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
-- [Folga da Tecnologia do IBM Cloud - #canal de ferramentas do desenvolvedor](https://ibm-cloud-tech.slack.com) - Solicite o acesso da equipe [aqui](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+2. Efetue login no {{site.data.keyword.Bluemix_notm}} com seu IBMid.
+
+	```
+	ibmcloud login
+	```
+	{: codeblock}
+<br><br>
+	Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Consulte
+[Efetuando login com um ID federado](/docs/iam/login_fedid.html#using-an-api-key) para obter mais detalhes.	{: tip}
+
+3. Configure a sua organização e o espaço.
+
+	```
+	ibmcloud target -o <value> -s <value>
+	```
+	{: codeblock}
+
+## Próximas Etapas
+{: #next-steps}
+
+Agora você está pronto para desenvolver e implementar o seu primeiro app! Consulte
+[Criando um app da web básico com um kit do iniciador](/docs/apps/tutorials/tutorial_web.html) para obter
+informações adicionais.

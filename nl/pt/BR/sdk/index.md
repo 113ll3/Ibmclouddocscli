@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -67,7 +67,7 @@ Use `ibmcloud sdk generate [ arguments ...] [command options]`.
 {: #gen-args}
 
 * `APP_NAME` - o nome do app Cloud Foundry em seu espaço atual
-* `OPENAPI_DOC_LOCATION` - uma URL ou um caminho de arquivo relativo para a definição de API de REST bruta JSON ou Yaml
+* `OPENAPI_DOC_LOCATION` - uma URL ou um caminho relativo de arquivo para a definição de API de REST bruta JSON ou yaml
 * `GENERATED_SDK_NAME` (opcional) - o nome do SDK gerado
 
 
@@ -98,7 +98,7 @@ Ibmcloud sdk generate [ APP_NAME ] [ LOCATION ] [ PLATFORM ]
 ```
 {: codeblock}
 
-Para gerar um SDK de uma URL para um arquivo de definição de Open API ou um arquivo JSON ou Yaml local, use o comando a seguir.
+Para gerar um SDK de uma URL para um arquivo de definição de Open API ou um JSON local ou arquivo yaml, use o comando a seguir.
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -116,7 +116,7 @@ Use `ibmcloud sdk validate [ argument ]`.
 {: #val-args}
 
 * `APP_NAME` - o nome do app Cloud Foundry em seu espaço atual
-* `OPENAPI_DOC_LOCATION` - uma URL ou um caminho de arquivo relativo para a definição de API de REST bruta JSON ou Yaml
+* `OPENAPI_DOC_LOCATION` - uma URL ou um caminho relativo de arquivo para a definição de API de REST bruta JSON ou yaml
 
 
 #### Uso
@@ -129,7 +129,7 @@ Ibmcloud sdk validate [ APP_NAME ] [ LOCATION ]
 ```
 {: codeblock}
 
-Para validar um SDK da URL para um documento de especificação de API ou um arquivo JSON ou Yaml local, use o comando a seguir.
+Para validar um SDK da URL para um documento de especificação de API ou um JSON local ou arquivo yaml, use o comando a seguir.
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -141,7 +141,9 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### Listar apps (Cloud Foundry)
 {: #list-apps}
 
-Use `ibmcloud sdk list [argument] [option]` para listar apps e validar especificações de API. Deve-se ter a variável de ambiente `OPENAPI_SPEC` configurada para o caminho da URL relativa que hospeda sua especificação.
+Use `ibmcloud sdk list [argument] [option]` para listar apps e validar especificações de API. Deve-se ter a
+variável de ambiente `OPENAPI_SPEC` configurada para a URL relativa do caminho que está
+hospedando a sua especificação.
 
 
 #### Argumentos

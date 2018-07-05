@@ -4,14 +4,14 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Plug-in de peering de rede privada para o {{site.data.keyword.Bluemix_notm}} CLI
+# Plug-in de peering de rede privada para a CLI do {{site.data.keyword.Bluemix_notm}}
 {: #private_network_cli}
 
 Use a interface da linha de comandos (CLI) de peering de rede privada para configurar e gerenciar o peering de rede privada entre dois espaços do {{site.data.keyword.Bluemix}}. O peerring de rede privada é suportado para o IBM Containers (contêineres de docker). Os espaços do {{site.data.keyword.Bluemix_notm}} podem ser localizados em diferentes zonas de disponibilidade na mesma região ou podem ser localizados nas diferentes regiões. O plug-in da CLI do peering de rede privada está disponível para uso com o plug-in do {{site.data.keyword.Bluemix_notm}} CLI.

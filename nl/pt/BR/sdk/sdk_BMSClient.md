@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # Inicializando o BMSClient
 {: #sdk_BMSClient}
@@ -83,7 +83,7 @@ para seu projeto.
   ```
   {: codeblock}
 
-4. Inicialize a classe `BMSClient` usando o código a seguir.
+4. Inicialize a classe `BMSClient`, usando o código a seguir.
 
   Coloque o código de inicialização no método `application(_:didFinishLaunchingWithOptions:)` de seu delegado do aplicativo ou em um local que funcione melhor para o seu projeto.
 
@@ -98,7 +98,7 @@ para seu projeto.
 ## Inicializando seu aplicativo Cordova
 {: #init-BMSClient-cordova}
 
-1. Inclua o plug-in do Cordova executando o comando a seguir no diretório-raiz de seu aplicativo Cordova:
+1. Inclua o plug-in do Cordova executando o comando a seguir do diretório raiz do seu aplicativo Cordova:
 
   ```
   cordova plugin add bms-core
@@ -123,4 +123,4 @@ para seu projeto.
 
 * [SDK Android BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
 * [SDK iOS BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [Plug-in do Cordova BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [Plug-in do BMSCore Cordova](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

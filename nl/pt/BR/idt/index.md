@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -89,12 +89,12 @@ Mais detalhes sobre as estruturas do projeto podem ser localizados aqui:
 
 
 Após seu projeto ter sido criado, agora depende de você criá-lo para algo útil. O fluxo geral consiste em editar o código-fonte e, em seguida, executar um [`ibmcloud dev build`](commands.html#build) para compilar o app em um contêiner local específico para a linguagem e a configuração do seu app. Dependendo da linguagem de apps e do gerador que é usado, há um ou mais contêineres padronizados para suportar
-construção e execução localmente.  Geralmente, haverá um contêiner "ferramentas" para construções e depuração local.  Esse contêiner normalmente terá ferramentas e recursos extras para ajudá-lo no desenvolvimento.  Há também um contêiner de "execução" que simula aproximadamente o ambiente de tempo de execução real de seu app quando implementado na nuvem, no Cloud Foundry ou no ambiente de contêiner baseado em Kubernetes da IBM.
+construção e execução localmente.  Geralmente, haverá um contêiner "ferramentas" para construções e depuração local. Esse contêiner normalmente terá ferramentas e recursos extras para ajudá-lo no desenvolvimento. Há também um contêiner de "execução" que simula aproximadamente o ambiente de tempo de execução real de seu app quando implementado na nuvem, no Cloud Foundry ou no ambiente de contêiner baseado em Kubernetes da IBM.
 
 
 Você está livre para usar qualquer IDE ou editor que preferir para codificar seu aplicativo. Oferecemos uma extensão para o editor Microsoft VisualStudio Code (VSCode) que permite acessar todos os comandos do IDE diretamente no editor.
 
-Depois que o projeto tiver sido construído, você desejará em seguida executar seu app usando o [`ibmcloud dev run`](commands.html#run) ou o [`ibmcloud dev debug`](commands.html#debug), dependendo da configuração do gerador de seus apps. Isso executará o app dentro do contêiner adequado.  Alguns padrões de apps suportam múltiplos contêineres externos para seus apps, como persistência ou outros recursos.  Eles serão iniciados automaticamente e configurados durante a execução ou depuração.  Há também um comando [`ibmcloud dev test`](commands.html#test) que executará quaisquer casos de teste associados ao app.
+Depois que o projeto tiver sido construído, você desejará em seguida executar seu app usando o [`ibmcloud dev run`](commands.html#run) ou o [`ibmcloud dev debug`](commands.html#debug), dependendo da configuração do gerador de seus apps. Isso executará o app dentro do contêiner adequado. Alguns padrões de apps suportam múltiplos contêineres externos para seus apps, como persistência ou outros recursos. Eles serão iniciados automaticamente e configurados durante a execução ou depuração. Há também um comando [`ibmcloud dev test`](commands.html#test) que executará quaisquer casos de teste associados ao app.
 
 
 ### Como os contêineres locais são usados
@@ -131,7 +131,7 @@ Os comandos da CLI a seguir ajudam a trabalhar com seu projeto durante os ciclos
 ## Implementação
 {: #deploy}
 
-Em um ambiente nativo de nuvem adequado, você desejará utilizar um pipeline do DevOps totalmente funcional para gerenciar todas as implementações, bem como uma variedade de outros recursos.  Durante o fluxo de criação, é possível configurar seu app para usar o DevOps do IBM Cloud.  Se você não estiver pronto para usar o DevOps integrado, será possível executar manualmente [`ibmcloud dev deploy`](./commands.html#deploy) em seu app ou usar o comando deploy dentro de seu próprio pipeline do DevOps.  
+Em um ambiente nativo de nuvem adequado, você desejará utilizar um pipeline do DevOps totalmente funcional para gerenciar todas as implementações, bem como uma variedade de outros recursos. Durante o fluxo de criação, é possível configurar seu app para usar o DevOps do IBM Cloud. Se você não estiver pronto para usar o DevOps integrado, será possível executar manualmente [`ibmcloud dev deploy`](./commands.html#deploy) em seu app ou usar o comando deploy dentro de seu próprio pipeline do DevOps.  
 
 
 
@@ -147,5 +147,7 @@ Os comandos da CLI a seguir ajudam a trabalhar com seu projeto durante o process
 ### Blogs e vídeos de referência
 {: #ref3}
 
-- Blog: [Implementando no IBM Cloud privado com o IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- Blog:
+[Implementando no
+IBM Cloud Private com a CLI do IBM Cloud Developer Tools](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - Blog: [Implementando no Kubernetes no IBM Cloud com o IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

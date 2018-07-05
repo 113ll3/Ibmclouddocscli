@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -97,7 +97,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (opcional)</dt>
-   <dd>A URL do terminal da API do Bluemix que você deve especificar ao se conectar ao {{site.data.keyword.Bluemix_notm}}. Normalmente, esta URL é `https://api.{DomainName}`.
+   <dd>A URL do terminal da API do IBM Cloud que deve ser especificada ao se conectar ao {{site.data.keyword.Bluemix_notm}}. Normalmente, esta URL é `https://api.{DomainName}`.
    Se você deseja exibir a URL do terminal da API que estiver usando atualmente, não será necessário especificar esse parâmetro para o comando cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Desativa o processo de validação SSL. O uso desse parâmetro pode causar problemas de segurança.</dd>
@@ -132,7 +132,10 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 Lista todos os aplicativos que você implementou no espaço atual. O
 status de cada aplicativo também é exibido.
 
-Suponha que tenha uma instância para um app, na coluna de instâncias da resposta do comando cf apps, você verá 1/1 se seu app estiver ativo e 0/1 se seu app estiver inativo. Se você vir ?/1, que indica que o estado da instância do app é desconhecido, será possível copiar a URL do app e colar em seu navegador para verificar se o app responde ou acompanhar o log pelo comando `cf logs appname` para ver se o app está gerando conteúdo de log.
+Suponha que tenha uma instância para um app, na coluna de instâncias da resposta do comando cf apps, você verá 1/1 se seu app estiver ativo e 0/1 se seu app estiver inativo. 
+Se você vir ?/1, que indica que o estado da instância do app é desconhecido, será possível copiar a URL do app para o seu navegador
+para verificar se o app responde ou acompanhar o log pelo comando `cf logs appname` para ver se o app
+está gerando conteúdo de log.
 
 ```
 cf apps
@@ -163,7 +166,8 @@ cf bind-service appname service_instance
 
 <strong>Exemplos</strong>:
 
-Ligue uma instância de serviço chamada `my_dataworks` ao seu app chamado `my_app`.
+Ligar uma instância de serviço que é denominada `my_dataworks` para o seu app chamado
+`my_app`.
 ```
 cf bind-service my_app my_dataworks
 ```
@@ -225,7 +229,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>Exemplos</strong>:
 
-Criar um espaço chamado new_space
+Crie um espaço chamado new_space
 ```
 cf create-space new_space
 ```
@@ -256,25 +260,25 @@ cf delete appname [-f] [-r]
 
 <strong>Exemplos</strong>:
 
-Exclui um aplicativo chamado `my_app` (requererá confirmação).
+Exclui um aplicativo que é denominado `my_app` (exigirá confirmação).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Exclui um aplicativo chamado `my_app` sem requerer confirmação.
+Exclui um aplicativo que é denominado `my_app` sem exibir confirmação.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Exclui um aplicativo chamado `my_app` e todos os nomes de domínio associados a `my_app`.
+Exclui um aplicativo que é denominado `my_app` e todos os nomes de domínios que estão associados a `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Exclui um aplicativo chamado `my_app` e todos os nomes de domínio associados a `my_app` sem requerer confirmação.
+Exclui um aplicativo que é denominado `my_app` e todos os nomes de domínios que estão associados a `my_app` sem exigir confirmação.
 ```
 cf delete my_app -f -r
 ```
@@ -304,25 +308,25 @@ cf delete-space space_name [-f]
 
 <strong>Exemplos</strong>:
 
-Exclui um aplicativo chamado `my_app` (requererá confirmação).
+Exclui um aplicativo que é denominado `my_app` (exigirá confirmação).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Exclui um aplicativo chamado `my_app` sem requerer confirmação.
+Exclui um aplicativo que é denominado `my_app` sem exibir confirmação.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Exclui um aplicativo chamado `my_app` e todos os nomes de domínio associados a `my_app`.
+Exclui um aplicativo que é denominado `my_app` e todos os nomes de domínios que estão associados a `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Exclui um aplicativo chamado `my_app` e todos os nomes de domínio associados a `my_app` sem requerer confirmação.
+Exclui um aplicativo que é denominado `my_app` e todos os nomes de domínios que estão associados a `my_app` sem exigir confirmação.
 ```
 cf delete my_app -f -r
 ```
@@ -349,7 +353,7 @@ cf events [appname]
 
 <strong>Exemplos</strong>:
 
-Exibe os eventos para um aplicativo chamado `my_app`.
+Exibe os eventos para um aplicativo que é denominado `my_app`.
 ```
 cf events my_app
 ```
@@ -392,7 +396,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Efetua seu login no {{site.data.keyword.Bluemix_notm}}. Se você estiver efetuando login com um [ID federado](/docs/admin/account.html#signup), deverá usar o parâmetro de conexão única (SSO) para efetuar login. 
+Efetua seu login no {{site.data.keyword.Bluemix_notm}}. Se você estiver efetuando login com um [ID federado](/docs/admin/account.html#signup), deverá usar o parâmetro de conexão única (SSO) para efetuar login.
 
 **Nota**: também é possível usar uma chave API da Plataforma do {{site.data.keyword.Bluemix_notm}} para efetuar login. Use o nome de usuário `apikey` e seu valor de chave API como a senha. Para obter mais informações sobre como criar uma chave API, veja [Gerenciando chaves API](/docs/iam/apikeys.html).
 
@@ -416,8 +420,8 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 insira a senha quando a interface da linha de comandos solicitar.</dd>
 <dt>*-sso*</dt>
 <dd>Deve-se usar a opção de conexão única (SSO) ao efetuar login com um ID federado. Isso
-não será necessário ao efetuar login com um ID IBM. Se você tentar efetuar sign in com um ID federado e não
-especificar o parâmetro SSO, será solicitado que o inclua. Usar o
+não será necessário ao efetuar login com um ID IBM. Se você tentar se conectar com um ID federado e não
+especificar o parâmetro SSO, você será solicitado a incluí-lo. Usar o
 parâmetro SSO solicita que você insira a senha descartável após o
 login.</dd>
 <dt>*-o* organization_name</dt>
@@ -485,13 +489,13 @@ cf logs appname [--recent]
 
 <strong>Exemplos</strong>:
 
-Exiba os fluxos de log para um aplicativo chamado `my_app`.
+Exiba os fluxos de logs para um aplicativo que é denominado `my_app`.
 ```
 cf logs my_app
 ```
 {: codeblock}
 
-Exiba os fluxos de log recentes para um aplicativo chamado `my_app`.
+Exiba os fluxos de logs recentes para um aplicativo que é denominado `my_app`.
 ```
 cf logs my_app --recent
 ```
@@ -501,7 +505,8 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Lista todos os serviços que estão disponíveis no mercado. Os serviços listados por esse comando também são mostrados no Catálogo do {{site.data.keyword.Bluemix_notm}}.
+Lista todos os serviços que estão disponíveis no mercado. Os serviços que são listados por esse comando também são mostrados
+no catálogo do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
@@ -569,13 +574,14 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>Exemplos</strong>:
 
-Inicie um aplicativo chamado `my_app` com o comando inicial padrão.
+Inicie um aplicativo que é denominado `my_app` com o comando inicial padrão.
 ```
 cf push `my_app` -c null
 ```
 {: codeblock}
 
-Inicie um aplicativo chamado `my_app` com a opção para executar um arquivo de script chamado `run.sh`.
+Inicie um aplicativo que é denominado `my_app` com a opção para executar um arquivo de script chamado
+`run.sh`.
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -611,7 +617,8 @@ cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 
 <strong>Exemplos</strong>:
 
-Exiba o número da instância, o limite de espaço em disco e o limite de memória para um aplicativo chamado `my_app`.
+Exiba o número da instância, o limite de espaço em disco e o limite de memória para um aplicativo que é denominado
+`my_app`.
 ```
 cf scale my_app
 ```
@@ -668,7 +675,8 @@ cf set-env appname var_name var_value
 
 <strong>Exemplos</strong>:
 
-Configure uma variável de ambiente chamada `variable_a` com um valor de `123` para o aplicativo chamado `my_app`.
+Configure uma variável de ambiente que é denominada `variable_a` com um valor de `123` para
+o aplicativo que é denominado `my_app`.
 ```
 cf set-env my_app variable_a 123
 ```
@@ -685,7 +693,8 @@ cf ssh
 ```
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
 
-Por padrão, o acesso SSH fica ativado para aplicativos Diego. É possível usar o comando `cf ssh-enabled` para verificar se o acesso SSH está ativado ou o comando `cf enable-ssh` para ativar o acesso no caso de ter sido desativado. 
+Por padrão, o acesso SSH fica ativado para aplicativos Diego. É possível usar o comando `cf ssh-enabled` para
+verificar se o acesso SSH está ativado ou o comando `cf enable-ssh` para ativar o acesso se foi desativado.
 
 <strong>Opções de comando</strong>:
 
@@ -722,7 +731,8 @@ Transferir um único arquivo da instância de contêiner de aplicativo `my_app`.
 $ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Configurar o encaminhamento de porta da porta 7777 na máquina local para a porta 8888 na instância de contêiner de aplicativo `my_app`.
+Configure o encaminhamento de porta da porta 7777 na máquina local para a porta 8888 na instância do contêiner de aplicativo
+`my_app`.
 ```
 $ cf ssh -N -T -L 7777:localhost:8888 my_app
 
@@ -768,7 +778,7 @@ cf stop appname
 
 <strong>Exemplos</strong>:
 
-Pare o aplicativo chamado `my_app`.
+Pare o aplicativo que é denominado `my_app`.
 ```
 cf stop my_app
 ```
@@ -796,7 +806,7 @@ cf target [-o org_name] [-s space_name]
 
 <strong>Exemplos</strong>:
 
-Configure o destino para a organização chamada "my_org" e o espaço chamado "my_space".
+Configure o destino para a organização chamada "my_org" e o espaço que é denominado "my_space".
 ```
 cf target -o my_org -s my_space
 ```

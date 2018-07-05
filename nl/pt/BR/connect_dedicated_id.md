@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -47,18 +47,18 @@ No entanto, se seu ID dedicado não estiver conectado ao IBMid público, será s
 manualmente com o IBMid público:
 
 ```
-  Você está efetuando login com um IBMid que não está associado a nenhum usuário dedicado.
-  Para configurar a conexão, insira as credenciais do usuário dedicado.
+  You are logging in with an IBMid that is not associated with any dedicated user.
+  To set up the connection, input the credentials of the dedicated user.
 
   Escolha um tipo de credencial:
   1. Nome do usuário e senha
   2. Um código de tempo (obtenha um em https://login.{dedicated_env}.bluemix.net.com/passcode)
-  Insira um número>
+  Enter a number>
 ```
 
 Selecione uma opção para inserir as credenciais para o ID dedicado. Após a autenticação bem-sucedida, seu ID dedicado será conectado a seu IBMid público.
 
-## Forçar o login no servidor UAA local
+## Forçar login no servidor UAA local
 
 Para forçar a criação de log para o servidor do UAA com um ID dedicado, especifique a opção `--no-iam` no comando `ibmcloud login`:
 
