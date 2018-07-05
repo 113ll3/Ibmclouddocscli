@@ -6,8 +6,6 @@ IBM Cloud Developer Tools（CLI 和 Dev Tools）
 
 	{: .navgroup id="learn"}
 	index.md
-	reference/bluemix_cli/get_started.md
-	[CF CLI 入门](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
@@ -15,13 +13,11 @@ IBM Cloud Developer Tools（CLI 和 Dev Tools）
 	reference/bluemix_cli/extend_cli.md
         	
 	{: .topicgroup}
-	IBM Cloud Developer Tools
-		idt/setting_up_idt.md
-		idt/index.md
+	IBM Cloud Developer Tools IDE 扩展
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/local_debug.md
-		[有关 IDT 的故障诊断](../troubleshoot/ts_createapps.html)
+		deploy_eclipsetools.md
+		[使用 IBM Eclipse Tools for IBM Cloud 部署应用程序](../manageapps/eclipsetools/eclipsetools.html)
         	
 	{: .topicgroup}
 	SDKs for Mobile
@@ -32,7 +28,11 @@ IBM Cloud Developer Tools（CLI 和 Dev Tools）
 		sdk/sdk_network_request.md
 	
 	monitoring_logging.md
-	debug.md
+	
+	{: topicgroup}
+	调试
+		debug.md
+		idt/local_debug.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -59,8 +59,11 @@ IBM Cloud Developer Tools（CLI 和 Dev Tools）
 	{: .topicgroup}
 	建议的开发环境
 		deploy_eclipsetools.md
-		[使用 IBM Eclipse Tools for IBM Cloud 部署应用程序](../manageapps/eclipsetools/eclipsetools.html)
 		[管理 Liberty 和 Node.js 应用程序](../runtimes/common/app_mng.html#app_management)
 		[API Connect 开发者工具箱](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
+	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	ts_createapps.md
 	{: .navgroup-end}

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -63,7 +63,7 @@ cf plugins
 ```
 {: codeblock}
 
-有关命令的其他帮助，请使用 `-help` 选项。
+有关命令的更多帮助，请使用 `-help` 选项。
 
 ### 连接并登录到 {{site.data.keyword.Bluemix_notm}}
 
@@ -142,7 +142,7 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ### 列出邀请的 {{site.data.keyword.Bluemix_dedicated_notm}} 用户
 {: #admin_dedicated_list}
 
-如果已使用 [`invite-users-to-public` 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以列出帐户中的用户以查看其邀请状态。具有现有 IBM 标识的受邀用户的状态将为`活动`。没有现有 IBM 标识的受邀用户的状态将为`暂挂`或`活动`，具体取决于他们是否已接受加入该帐户的邀请。要列出 {{site.data.keyword.Bluemix_notm}} 帐户中的用户，请运行以下命令：
+如果已使用 [`invite-users-to-public` 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以列出帐户中的用户以查看其邀请状态。具有现有 IBM 标识的受邀用户的状态为`活动`。没有现有 IBM 标识的受邀用户的状态为`暂挂`或`活动`，具体取决于他们是否已接受加入该帐户的邀请。要列出 {{site.data.keyword.Bluemix_notm}} 帐户中的用户，请运行以下命令：
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
@@ -161,7 +161,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 ### 搜索用户
 {: #admin_search_user}
 
-要搜索用户，请使用以下命令搭配可选的搜索过滤参数（name、permission、organization 和 role）：
+要搜索用户，请将以下命令与可选的搜索过滤参数（name、permission、organization 和 role）配合使用：
 
 ```
 cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
@@ -372,7 +372,7 @@ cf bluemix-admin containers-quota <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 中组织的名称或标识。此参数是必需的。</dd>
+<dd class="pd">IBM Cloud 中组织的名称或标识。此参数是必需的。</dd>
 </dl>
 
 **提示：****bluemix-admin containers-quota** 命令名较长，您还可以使用 **ba cq** 作为其别名。
@@ -391,7 +391,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 中组织的名称或标识。此参数是必需的。</dd>
+<dd class="pd">IBM Cloud 中组织的名称或标识。此参数是必需的。</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">包含以下一个或多个选项，其中值必须为整数：<ul>
 <li>floating-ips-max &lt;value&gt;</li>
@@ -533,7 +533,7 @@ cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 ### 对所有组织启用服务
 {: #admin_ena_service_org}
 
-要针对所有组织启用在 {{site.data.keyword.Bluemix_notm}}“目录”中显示的某个服务，请使用以下命令：
+要允许某个服务在所有组织的 {{site.data.keyword.Bluemix_notm}}“目录”中显示，请使用以下命令：
 
 ```
 cf ba enable-service-plan <plan_identifier>
@@ -550,7 +550,7 @@ cf ba enable-service-plan <plan_identifier>
 ### 对所有组织禁用服务
 {: #admin_dis_service_org}
 
-要针对所有组织禁用在 {{site.data.keyword.Bluemix_notm}}“目录”中显示的某个服务，请使用以下命令：
+要禁止某个服务在所有组织的 {{site.data.keyword.Bluemix_notm}}“目录”中显示，请使用以下命令：
 
 ```
 cf ba disable-service-plan <plan_identifier>
@@ -567,7 +567,7 @@ cf ba disable-service-plan <plan_identifier>
 ### 添加组织的服务可视性
 {: #admin_addvis_service_org}
 
-对于能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表，可以在其中添加组织。要允许某个组织在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务，请使用以下命令：
+可以在能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表中添加组织。要允许某个组织在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务，请使用以下命令：
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
@@ -586,7 +586,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 ### 除去组织的服务可视性
 {: #admin_remvis_service_org}
 
-对于能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表，可以在其中除去组织。要在 {{site.data.keyword.Bluemix_notm}}“目录”中对组织除去某个服务的可视性，请使用以下命令：
+可以从能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表中除去组织。要在某个组织的 {{site.data.keyword.Bluemix_notm}}“目录”中除去某个服务的可视性，请使用以下命令：
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -605,7 +605,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 ### 编辑组织的服务可视性
 {: #admin_editvis_service_org}
 
-您可以编辑和替换特定组织可以在 {{site.data.keyword.Bluemix_notm}}“目录”中查看的服务列表。要替换一个组织或多个组织的所有现有可视服务，请使用以下命令：
+您可以编辑和替换特定组织可以在 {{site.data.keyword.Bluemix_notm}}“目录”中查看的服务的列表。要替换一个组织或多个组织的所有现有可视服务，请使用以下命令：
 
 ```
 cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
@@ -703,7 +703,7 @@ cf ba resource-metrics
 ## 查看资源度量值历史记录
 {: #cliresourceusagehistory}
 
-您可以检索内存和磁盘使用情况的资源度量值历史记录。返回的度量值包括使用的资源量占可用总量的比例，包括物理资源和预留资源。内存和磁盘使用情况的历史记录数据可以按小时、按天或按月显示。您可以指定开始和结束日期，以便在某个特定的日期范围内检索数据。在未指定日期的情况下，缺省的历史记录数据是最近 48 小时内的每小时内存数据。数据按降序排列，较新的日期显示在前边。要查看资源度量值历史记录信息，请使用以下命令：
+您可以检索内存和磁盘使用情况的资源度量值历史记录。返回的度量值包括使用的资源量占可用总量的比例，包括物理资源和预留资源。内存和磁盘使用情况的历史记录数据可以按小时、按天或按月显示。您可以指定开始和结束日期，以便在某个特定的日期范围内检索数据。在未指定日期的情况下，缺省的历史记录数据是最近 48 小时内的每小时内存数据。数据按降序显示，较新的日期显示在前边。要查看资源度量值历史记录信息，请使用以下命令：
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -722,9 +722,9 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">查看预留磁盘和物理磁盘的已使用量和总量。</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">指定按天或按月的开始日期（格式必须为 mm-dd-yyyy），或者按小时的开始日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss 时区）</dd>
+<dd class="pd">指定按天或按月的开始日期（格式必须为 mm-dd-yyyy），或者按小时的开始日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss time zone）</dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">指定按天或按月的结束日期（格式必须为 mm-dd-yyyy），或者按小时的结束日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss 时区）</dd>
+<dd class="pd">指定按天或按月的结束日期（格式必须为 mm-dd-yyyy），或者按小时的结束日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss time zone）</dd>
 </dl>
 
 {: codeblock}
@@ -841,7 +841,7 @@ ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
-**警告**：如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
+**警告**：如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
 
 
 **注**：以下可使您使用安全组的命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 信息。
@@ -1001,7 +1001,7 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**警告**：如果取消**缺省编译打包**组集与两个 IBM 创建的安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解环境中所有编译打包的应用程序上的分支。
+**警告**：如果取消**缺省编译打包**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解这样对环境中所有正在编译打包的应用程序的可能影响。
 
 **提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba ussg** 作为其别名。
 
@@ -1017,7 +1017,7 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**警告**：如果取消**缺省运行**组集与两个 IBM 创建的安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解环境中所有运行的应用程序上的分支。
+**警告**：如果取消**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解这样对环境中所有正在运行的应用程序的可能影响。
 
 **提示：****ba unbind-running-security-group** 命令名较长，也可以使用 **ba brsg** 作为其别名。
 

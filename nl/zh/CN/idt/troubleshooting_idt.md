@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-05-23"
 如果使用 {{site.data.keyword.dev_cli_short}} 通过 Web 应用程序、BFF 或微服务模式来创建项目，那么可能会看到以下错误：
 
 ```
-The hostname <myHostname> is taken.
+主机名 <myHostname> 已占用。
 ```
 {: codeblock}
 
@@ -132,8 +132,8 @@ ibmcloud dev run
 如果使用 {{site.data.keyword.dev_cli_short}} 创建具有 {{site.data.keyword.objectstorageshort}} 功能的两个项目，那么可能会看到以下错误：
 
 ```
-FAILED
-Service broker error: {"description"=>"You can not create this Object Storage instance. Each organization using the Object Storage service is limited to one instance of the Free plan."}
+失败
+代理程序错误：{"description"=>"无法创建此 Object Storage 实例。每个使用 Object Storage 服务的组织在免费套餐中只能使用一个实例。"}
 ```
 {: codeblock}
 
@@ -205,7 +205,7 @@ module.js:597
   return process.dlopen(module, path._makeLong(filename));
                  ^
 
-Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
+错误：/app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: ELF 头无效
     at Error (native)
     at Object.Module._extensions..node (module.js:597:18)
     at Module.load (module.js:487:32)
@@ -261,11 +261,11 @@ ibmcloud login
 在初始提示输入集群名称后，可能会看到以下失败：
 
 ```
-FAILED
-Failed to execute the action:  exit status 1:
+失败
+未能执行操作：退出状态 1：
 
-FAILED
-Failed to configure deployment with cluster '<cluster-name>' due to: exit status 1
+失败
+未能配置对集群“<cluster-name>”的部署，原因是：退出状态 1
 ```
 
 
@@ -275,7 +275,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 导致此错误的最可能的原因是集群名称无效，您可以通过运行带有 `--trace` 的相同命令来进行确认，此时可能会看到以下错误输出：
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+失败，错误为：{"incidentID":"<id-number>","code":"E0008","description":"找不到指定的集群。","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"正在供应"}
 ```
 
 
@@ -294,8 +294,8 @@ ibmcloud cs cluster-config <cluster-name>
 在提示输入部署映像目标后，可能会看到以下失败：
 
 ```
-FAILED
-Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
+失败
+无法执行操作：退出状态 1：已拒绝：请求对资源的访问被拒绝
 
 
 FAILED
@@ -323,7 +323,7 @@ ibmcloud cr namespaces
 ## 附录
 {: #appendix}
 
-对于大多数用户，所有必备软件都将使用本页面顶部的平台安装程序进行安装。如果需要手动安装任何组件，请按以下指示信息进行操作：
+对于使用平台安装程序的大多数用户，将安装所有必备软件。如果需要手动安装任何组件，请按以下指示信息进行操作：
 
 要安装 dev 插件，必须先安装 [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started)。
 
@@ -331,7 +331,7 @@ ibmcloud cr namespaces
 
 要在本地运行和调试应用程序，还必须安装 [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker)。
 
-要将应用程序部署为容器，还必须安装 Kubernetes、Helm 和以下 IBM Cloud CLI 插件：
+要将应用程序部署为容器，还必须安装 `Kubernetes`、`Helm` 和以下 IBM Cloud CLI 插件：
 
 安装 Kubernetes：
 * Mac 用户：

@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2018-05-23"
 ## 安装
 {: #installation}
 
-安装用于 Jetbrains IDE 的 IBM Developers Tools 扩展的最简单方法是转至 [IDT Github 存储库的 Jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) 页面，并遵循相关指示信息进行操作。
+安装用于 Jetbrains IDE 的 IBM Developers Tools 扩展的最简单方法是转至 [IDT GitHub 存储库的 Jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) 页面，并遵循相关指示信息进行操作。
 
 ## 用法
 {: #usage}

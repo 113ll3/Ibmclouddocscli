@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-05-29"
 {:screen: .screen}
 
 
-# 调试
+# 为 {{site.data.keyword.Bluemix_notm}} 调试 CF 应用程序
 {: #debugging}
 
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，那么可以查看日志文件来调查问题并调试错误。
@@ -29,7 +29,7 @@ lastupdated: "2018-05-29"
 {: #debugging-staging-errors}
 当您在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时，可能会遇到问题。如果应用程序未能编译打包，那么可以搜索及复查编译打包 (STG) 日志，以确定在应用程序部署期间发生的事项，并从问题进行恢复。有关查看 {{site.data.keyword.Bluemix}} 应用程序日志的方法的更多信息，请参阅[查看日志 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}。  
 
-要了解您的应用程序可能在 {{site.data.keyword.Bluemix_notm}} 上失败的原因，需要知道应用程序如何在 {{site.data.keyword.Bluemix_notm}} 上部署和运行。有关详细信息，请参阅[应用程序部署 ![外部链接图标](../icons/launch-glyph.svg " 外部链接图标")](/docs/cfapps/depapps.html#appdeploy){: new_window}。
+要了解您的应用程序可能在 {{site.data.keyword.Bluemix_notm}} 上失败的原因，需要知道应用程序如何在 {{site.data.keyword.Bluemix_notm}} 上部署和运行。有关更多信息，请参阅[应用程序部署 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cfapps/depapps.html#appdeploy){: new_window}。
 
 
 以下过程显示您可以如何使用 `cf logs` 命令来调试编译打包错误。在执行以下步骤之前，确保您已安装 cf 命令行界面。有关安装 cf 命令行界面的更多信息，请参阅[安装 cf 命令行界面 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/starters/install_cli.html){: new_window}。
@@ -49,7 +49,7 @@ lastupdated: "2018-05-29"
 
 如果使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 插件来部署应用程序，那么可以在 Eclipse 工具的**控制台**选项卡中看到类似于 cf logs 输出的日志。部署应用程序时，还可以打开单独的 Eclipse 窗口来跟踪`日志`。
 
-除 `cf logs` 命令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您还可以使用 {{site.data.keyword.loganalysisshort}} 服务来收集日志详细信息。 
+除 `cf logs` 命令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您还可以使用 {{site.data.keyword.loganalysisshort}} 服务来收集日志详细信息。
 
 ### 调试 Node.js 应用程序的编译打包错误
 
@@ -130,8 +130,7 @@ lastupdated: "2018-05-29"
 
 以前，缺省情况下，可以在 {{site.data.keyword.Bluemix_notm}} 控制台中应用程序视图的**文件** > **日志**下访问 `stdout.log` 和 `stderr.log` 文件。但是，对于托管 {{site.data.keyword.Bluemix_notm}} 的当前版本的 Cloud Foundry，应用程序日志记录不再可用。要继续保持可在 {{site.data.keyword.Bluemix_notm}} 控制台中的**文件** > **日志**下访问 stdout 和 stderr 应用程序日志记录，可以将日志记录重定向到 {{site.data.keyword.Bluemix_notm}} 文件系统中的其他文件，具体取决于正在使用的运行时。
 
-  * 对于 Liberty for Java 应用程序，定向到 stdout 和 stderr 的输出已包含在 logs 目录下的 `messages.log` 文件中。分别查找以 SystemOut 和 SystemErr 为前缀的条目。
-
+  * 对于 Liberty for Java 应用程序，定向到 stdout 和 stderr 的输出已包含在 logs 目录下的 `messages.log` 文件中。查找以 SystemOut 和 SystemErr 为前缀的条目。
   * 对于 Node.js 应用程序，可以覆盖 console.log 函数来显式写入 logs 目录中的文件。
   * 对于 PHP 应用程序，可以使用 error_log 函数来写入 logs 目录中的文件。
   * 对于 Python 应用程序，可以让日志记录器写入 logs 目录中的文件：`logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`

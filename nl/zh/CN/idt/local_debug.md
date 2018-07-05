@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 本地应用程序调试
+# {{site.data.keyword.dev_cli_notm}} CLI 的本地应用程序调试
 {: #local-debug}
 
 有多种工具可以帮助您在 {{site.data.keyword.cloud_notm}} 中调试用 Java 和 Node.js 编写的应用程序。

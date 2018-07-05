@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-06-21"
 
 
 
@@ -22,12 +22,12 @@ lastupdated: "2018-06-20"
 {:shortdesc}
 
   1. 如果您还没有 Eclipse，请安装 Eclipse Neon for Java EE Developers (4.6.1)。
-  
+
   2. 单击并按住以下按钮，将其拖放到 Eclipse 工具栏中，然后按照提示安装 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}：
 
   ![拖放到正在运行的 Eclipse Neon 工作空间来安装 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)
 
-  3. 确认您处于 Java EE 透视图，然后在“服务器”选项卡中创建 {{site.data.keyword.Bluemix_notm}} 服务器。
+  3. 确认您处于 Java EE 透视图中，然后在“服务器”选项卡中创建 {{site.data.keyword.Bluemix_notm}} 服务器。
 
   ![创建 {{site.data.keyword.Bluemix_notm}} 服务器](images/eclipse_server.png)
 

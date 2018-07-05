@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-05-23"
    **32 位发行版及先前版本可以在[此处](all_versions.html)找到
 
 1. 运行安装程序
-   * 对于 macOS 和 Windows，只需运行安装程序即可。
+   * 对于 macOS 和 Windows，请运行安装程序。
    * 对于 Linux，请解压缩程序包，并运行 `install_bluemix_cli` 脚本
 
 1. 将 API 端点定为目标并登录到 {{site.data.keyword.Bluemix_notm}}
@@ -63,5 +63,5 @@ lastupdated: "2018-05-23"
 {: #issues}
 
 使用以下选项来报告问题或提交新的功能请求：
- * 在 [Github ](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window}![外部链接图标](../../../icons/launch-glyph.svg) 中创建问题
- * 在 [Slack 频道 ](https://dwopen.slack.com/messages/bluemix-cli/){: new_window}![外部链接图标](../../../icons/launch-glyph.svg) 中留言
+ * 在 [GitHub ](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window}![外部链接图标](../../../icons/launch-glyph.svg) 中创建问题
+ * 在 [Slack 通道 ](https://dwopen.slack.com/messages/bluemix-cli/){: new_window}![外部链接图标](../../../icons/launch-glyph.svg) 中留言

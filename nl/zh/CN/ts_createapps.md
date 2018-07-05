@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 
 # 有关 {{site.data.keyword.Bluemix_notm}} Developer Tools 的故障诊断
 {: #troubleshoot}
@@ -288,4 +288,3 @@ bx cr namespaces
 
 安装 container-service 插件：
 `bx plugin install container-service`
-

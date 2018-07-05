@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # 初始化 BMSClient
 {: #sdk_BMSClient}

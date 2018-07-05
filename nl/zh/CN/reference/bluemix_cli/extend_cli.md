@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-06-01"
 # 使用插件扩展 {{site.data.keyword.Bluemix_notm}} CLI
 {: #plug-ins}
 
-{{site.data.keyword.Bluemix_notm}} CLI 支持通过插件框架来扩展其功能。您可以从存储库或 Web URL 安装插件，也可以本地安装插件二进制文件。
+{{site.data.keyword.Bluemix_notm}} CLI 支持通过插件框架来扩展其功能。您可以从存储库或 Web URL 安装插件，也可以在本地安装插件二进制文件。
 
 [{{site.data.keyword.Bluemix_notm}} CLI 插件存储库](https://tools.ng.bluemix.net){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 是用于托管插件的官方存储库。
 
@@ -56,7 +56,7 @@ lastupdated: "2018-06-01"
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
 
-## 本地安装插件
+## 在本地安装插件
 
 使用 `ibmcloud plugin install LOCAL_FILE_NAME` 命令在本地机器上安装插件二进制文件。例如：
 

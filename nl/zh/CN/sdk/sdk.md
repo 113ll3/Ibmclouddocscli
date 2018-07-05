@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 # 可用的移动 SDK
@@ -60,5 +60,3 @@ lastupdated: "2018-04-16"
 
 - [核心插件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 - [{{site.data.keyword.mobilepushshort}} 插件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
-
-

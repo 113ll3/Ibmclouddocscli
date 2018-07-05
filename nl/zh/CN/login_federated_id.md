@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -63,7 +63,7 @@ lastupdated: "2018-05-23"
 ## 使用 API 密钥
 {:api_key}
 
-所需的 API 密钥是用于向 {{site.data.keyword.Bluemix_notm}} 平台认证的 {{site.data.keyword.Bluemix_notm}} API 密钥，而不是 Softlayer API 密钥或 {{site.data.keyword.Bluemix_notm}} 服务 API 密钥。
+所需的 API 密钥是用于向 {{site.data.keyword.Bluemix_notm}} 平台认证的 {{site.data.keyword.Bluemix_notm}} API 密钥，而不是 SoftLayer API 密钥或 {{site.data.keyword.Bluemix_notm}} 服务 API 密钥。
 
 1. 使用 [`ibmcloud iam api-key-create` 命令](/docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_iam_api_key_create)创建 API 密钥。使用 `-f` 选项来生成 API 密钥文件，而不在命令窗口中显示密钥：
 
