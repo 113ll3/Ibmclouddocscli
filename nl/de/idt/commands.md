@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -153,7 +153,7 @@ unterstützen Sie beim Debugging einer Anwendung. Es gibt [zusätzliche Paramete
 #### `debug-cmd`
 {: #debug-cmd}
 
-* Parameter zum Angeben eines Befehls zum Aufrufen des Debuggers im Toolscontainer. Verwenden Sie diesen Parameter, wenn `build-cmd-debug` Ihre Anwendung im Debugger startet.
+* Parameter zum Angeben eines Befehls zum Aufrufen des Debuggers im Container 'tools'. Verwenden Sie diesen Parameter, wenn `build-cmd-debug` Ihre Anwendung im Debugger startet.
 * Verwendung: `ibmcloud dev debug --debug-cmd /the/debug/command`
 
 
@@ -414,7 +414,7 @@ Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen 
 ## shell
 {: #shell}
 
-Sie können die Shell innerhalb des Ausführungs- oder Toolscontainers mit dem Befehl `shell` öffnen.
+Sie können die Shell innerhalb des Containers 'run' oder 'tools' mit dem Befehl `shell` öffnen.
 
 Führen Sie einfach diesen Befehl aus:
 
@@ -464,7 +464,7 @@ ibmcloud dev status
 {: codeblock}
 
 
-[Statusbefehlparameter](#command-parameters)
+[Statusbefehlsparameter](#command-parameters)
 
 
 ## stop

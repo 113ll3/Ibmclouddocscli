@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -63,7 +63,7 @@ Poiché un passcode monouso richiama il codice della console {{site.data.keyword
 ## Utilizzo di una chiave API
 {:api_key}
 
-La chiave API richiesta è la chiave API {{site.data.keyword.Bluemix_notm}} utilizzata per l'autenticazione con la piattaforma {{site.data.keyword.Bluemix_notm}} e non la chiave API Softlayer o la chiave API del servizio {{site.data.keyword.Bluemix_notm}}.
+La chiave API richiesta è la chiave API {{site.data.keyword.Bluemix_notm}} utilizzata per l'autenticazione con la piattaforma {{site.data.keyword.Bluemix_notm}} e non la chiave API SoftLayer o la chiave API del servizio {{site.data.keyword.Bluemix_notm}}.
 
 1. Crea una chiave API con il [comando `ibmcloud iam api-key-create`](/docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_iam_api_key_create). Utilizza l'opzione `-f` per generare un file della chiave API invece di mostrare la chiave nella finestra di comando:
 

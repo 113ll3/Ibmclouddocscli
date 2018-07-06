@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -27,14 +27,14 @@ Das VPN-Plug-in ist für Windows-, MAC- und Linux-Betriebssysteme verfügbar. St
 Die nachfolgenden Anweisungen sind für das Plug-in für die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle vorgesehen. Informationen zur Verwendung des Plug-ins mit der Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle (cf) finden Sie unter [VPN-CLI-Plug-in für cf-Befehlszeilenschnittstelle](../vpn/index.html).
 
 
-In der nachfolgenden Liste werden alle vom VPN-Plug-in für die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle unterstützten Befehle mit Namen, Optionen, Verwendungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Informationen zum Installieren des VPN-Plug-ins finden Sie unter [Bluemix-Befehlszeilenschnittstelle erweitern](../../index.html#cli_bluemix_ext).
+In der nachfolgenden Liste werden alle vom VPN-Plug-in für die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle unterstützten Befehle mit Namen, Optionen, Verwendungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Informationen zum Installieren des VPN-Plug-ins finden Sie unter [IBM Cloud-Befehlszeilenschnittstelle erweitern](../../index.html#cli_bluemix_ext). 
 
 **Hinweis:** Unter *Voraussetzungen* wird aufgelistet, welche Aktionen vor der Verwendung des Befehls ausgeführt werden müssen. Zu den Voraussetzungen könnten eine oder mehrere der folgenden Aktionen gehören:
 <dl>
 <dt>**Endpunkt**</dt>
 <dd>Vor der Verwendung des Befehls muss mittels `ibmcloud api` ein API-Endpunkt festgelegt werden.</dd>
 <dt>**Anmeldung**</dt>
-<dd>Vor der Verwendung des Befehls ist die Anmeldung über den Befehl `ibmcloud login` erforderlich.</dd>
+<dd>Vor der Verwendung dieses Befehls ist die Anmeldung über den Befehl `ibmcloud login` erforderlich. </dd>
 <dt>**Ziel**</dt>
 <dd>Vor der Verwendung dieses Befehls muss der Befehl `ibmcloud target` zum Festlegen einer Organisation oder eines Bereichs verwendet werden.</dd>
 </dl>
@@ -73,7 +73,7 @@ ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY 
 
 -i *INITIATOR_STATE* (optional): Der Status des Initiators. Standardwert: `bi-directional`.
 
--dpd-timeout *VALUE* (optional): Der Wert für das Zeitlimit in Sekunden, nach dessen Ablauf die Sitzung beendet wird. Bereich: 6 - 86400 Sekunden. Standardwert: `120` Sekunden.
+-dpd-timeout *VALUE*  (optional): Der Wert für das Zeitlimit in Sekunden, nach dessen Ablauf die Sitzung beendet wird. Bereich: 6 - 86400 Sekunden. Standardwert: `120` Sekunden.
 
 -dpd-interval *VALUE* (optional): Das Keepalive-Intervall in Sekunden. Sendet Keepalive-Nachrichten im konfigurierten Intervall, um den Aktivitätszustand des Peers zu prüfen. Bereich: 5-86399 Sekunden. Standardwert: `15` Sekunden.
 
@@ -363,7 +363,7 @@ ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_K
 
 -i *INITIATOR_STATE* (optional): Der Status des Initiators.
 
--dpd-timeout *VALUE* (optional): Der Wert für das Zeitlimit in Sekunden, nach dessen Ablauf die Sitzung beendet wird. Bereich: 6 - 86400 Sekunden.
+-dpd-timeout *VALUE*  (optional): Der Wert für das Zeitlimit in Sekunden, nach dessen Ablauf die Sitzung beendet wird. Bereich: 6 - 86400 Sekunden.
 
 -dpd-interval *VALUE* (optional): Das Keepalive-Intervall in Sekunden. Sendet Keepalive-Nachrichten im konfigurierten Intervall, um den Aktivitätszustand des Peers zu prüfen. Bereich: 5-86399 Sekunden.
 

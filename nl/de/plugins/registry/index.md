@@ -6,7 +6,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-05-03"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-05-03"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Die Inhalte, nach denen Sie suchen, wurden verschoben.
+# Der Inhalt, nach dem Sie suchen, wurde verschoben. 
 {: #containerregcli}
 
 Aktuelle Informationen finden Sie an der [neuen Position](../../../services/Registry/registry_cli.html).

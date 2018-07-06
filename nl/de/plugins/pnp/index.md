@@ -4,14 +4,14 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Plug-in für privates Netzpeering für {{site.data.keyword.Bluemix_notm}}-CLI
+# Plug-in für privates Netzpeering für {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle
 {: #private_network_cli}
 
 Sie können die Befehlszeilenschnittstelle (CLI) für privates Netzpeering zum Konfigurieren und Verwalten von privatem Netzpeering zwischen zwei {{site.data.keyword.Bluemix}}-Bereichen verwenden. Privates Netzpeering wird für IBM Containers (Docker-Containers) unterstützt. Die {{site.data.keyword.Bluemix_notm}}-Bereiche können sich in unterschiedlichen Verfügbarkeitszonen derselben Region oder in verschiedenen Regionen befinden. Das CLI-Plug-in für privates Netzpeering steht für die Verwendung mit dem {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in zur Verfügung.

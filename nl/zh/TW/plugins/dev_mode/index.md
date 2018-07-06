@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 
 
@@ -41,26 +41,26 @@ lastupdated: "2017-01-12"
   2. 移至儲存 dev_mode 外掛程式的資料夾，然後使用 cf install-plugin 指令來安裝 dev_mode 外掛程式。例如：
 
         ```
-                cf install-plugin dev_mode-linux64
+        cf install-plugin dev_mode-linux64
         ```
 
 - 從 {{site.data.keyword.Bluemix_notm}} CLI 儲存庫安裝。
   1. 使用下列指令將 bluemix-repo 儲存庫新增至 Cloud Foundry CLI 儲存庫：
 
         ```
-                cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
+        cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. 鍵入 cf repo-plugins。dev_mode 外掛程式會出現在 bluemix-repo 儲存庫中。
 
 		```
-                cf repo-plugins
+        cf repo-plugins
         ```
 
   3. 使用下列指令將 dev_mode 外掛程式安裝至 Cloud Foundry CLI 外掛程式：
 
         ```
-                cf install-plugin dev_mode -r bluemix-repo
+        cf install-plugin dev_mode -r bluemix-repo
         ```
 
 ## 檢視 dev_mo {{site.data.keyword.Bluemix_notm}}  
@@ -150,7 +150,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expand</dt>
-   <dd>指出是否必須從 zip 檔案擷取上傳的檔案。</dd>
+   <dd>指出是否必須從 .zip 檔案擷取上傳的檔案。</dd>
    <dt>restart</dt>
    <dd>檔案更新之後，重新啟動應用程式運行環境。</dd>
    </dl>

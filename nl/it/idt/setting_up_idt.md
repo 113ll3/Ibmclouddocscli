@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -103,13 +103,13 @@ La sezione [Reinstallazione degli strumenti](/docs/troubleshoot/ts_createapps.ht
 ## Ulteriori informazioni
 {: #learn}
 
-Ora che hai installato la tua CLI {{site.data.keyword.dev_cli_short}}, puoi imparare come utilizzare questo potente strumento:
+Ora che hai installato la tua CLI {{site.data.keyword.dev_cli_short}}, puoi imparare come essere efficace con questo potente strumento:
 - [Introduzione alla CLI IDT](index.html)
 - [Comandi IDT (ibmcloud dev)](commands.html)
 - [Developer Tools per il codice VS](vscode.html)
 - [Developer Tools per l'IDE Jetbrains](jetbrains.html)
 
-Controlla le [esercitazioni](/docs/apps/tutorials/tutorial_bff.html) che mostrano come creare le applicazioni native cloud utilizzando la CLI {{site.data.keyword.dev_cli_short}}.
+Controlla le [esercitazioni](/docs/apps/tutorials/tutorial_bff.html) che mostrano come creare le applicazioni native cloud che utilizzano la CLI {{site.data.keyword.dev_cli_short}}.
 
 ## Documentazione aggiuntiva
 {: #learn-more}
@@ -118,18 +118,18 @@ Le seguenti risorse possono essere utili quando sviluppi le applicazioni native 
 
 - [Pagina di destinazione principale di IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Pagina del prodotto principale per la CLI IDT
 - [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Repository GitHub pubblico con le istruzioni di installazione dettagliate
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - La pagina della console IBM Cloud che è complementare agli strumenti IDT di creazione e gestione delle applicazioni native cloud
+- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - Pagina della console IBM Cloud, che è complementare agli strumenti IDT per la creazione e gestione delle applicazioni native cloud
 - [Segnala problemi su GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech's Slack - Canale #developer-tools](https://ibm-cloud-tech.slack.com) - Richiedi l'accesso al team [qui](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
 **Incentrati sul linguaggio**
 
-- [Node,js on IBM Cloud](https://developer.ibm.com/node/cloud/)
+- [Node.js on IBM Cloud](https://developer.ibm.com/node/cloud/)
 - [Spring @ IBM Cloud](https://developer.ibm.com/java/spring/)
 - [Swift @ IBM](https://developer.ibm.com/swift)
 
 **Blog ed esercitazioni**
 
-- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 - [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

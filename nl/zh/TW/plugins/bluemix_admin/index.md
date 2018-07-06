@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -373,7 +373,7 @@ cf bluemix-admin containers-quota <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 中組織的名稱或 ID。這是必要參數。</dd>
+<dd class="pd">IBM Cloud 中組織的名稱或 ID。這是必要參數。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba cq** 作為 **bluemix-admin containers-quota** 這個較長指令名稱的別名。
@@ -392,7 +392,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 中組織的名稱或 ID。這是必要參數。</dd>
+<dd class="pd">IBM Cloud 中組織的名稱或 ID。這是必要參數。</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">包括下列一個以上的選項，其中的值必須是整數：
 <ul>
@@ -535,7 +535,7 @@ cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 ### 針對所有組織啟用服務
 {: #admin_ena_service_org}
 
-若要啟用服務，以便針對所有組織顯示在 {{site.data.keyword.Bluemix_notm}}「型錄」中，請使用下列指令：
+若要啟用服務，以便針對所有組織顯示在 {{site.data.keyword.Bluemix_notm}} 型錄中，請使用下列指令：
 
 ```
 cf ba enable-service-plan <plan_identifier>
@@ -552,7 +552,7 @@ cf ba enable-service-plan <plan_identifier>
 ### 針對所有組織停用服務
 {: #admin_dis_service_org}
 
-若要讓所有組織在 {{site.data.keyword.Bluemix_notm}}「型錄」中看不見服務，請使用下列指令：
+若要讓所有組織在 {{site.data.keyword.Bluemix_notm}} 型錄中看不見服務，請使用下列指令：
 
 ```
 cf ba disable-service-plan <plan_identifier>
@@ -569,7 +569,7 @@ cf ba disable-service-plan <plan_identifier>
 ### 新增組織的服務可見性
 {: #admin_addvis_service_org}
 
-您可以從組織清單中新增可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。若要容許組織在 {{site.data.keyword.Bluemix_notm}}「型錄」中檢視特定服務，請使用下列指令：
+您可以從組織清單中新增可在 {{site.data.keyword.Bluemix_notm}} 型錄中看見特定服務的組織。若要容許組織在 {{site.data.keyword.Bluemix_notm}} 型錄中檢視特定服務，請使用下列指令：
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
@@ -588,7 +588,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 ### 移除組織的服務可見性
 {: #admin_remvis_service_org}
 
-您可以從可在 {{site.data.keyword.Bluemix_notm}}「型錄」看見特定服務的組織清單，移除某個組織。若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請使用下列指令：
+您可以從可在 {{site.data.keyword.Bluemix_notm}} 型錄看見特定服務的組織清單，移除某個組織。若要針對組織移除 {{site.data.keyword.Bluemix_notm}} 型錄中的服務可見性，請使用下列指令：
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -607,7 +607,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 ### 編輯組織的服務可見性
 {: #admin_editvis_service_org}
 
-您可以編輯及取代特定組織可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看到的服務清單。若要取代一個組織或多個組織的所有現有可見服務，請使用下列指令：
+您可以編輯及取代特定組織可在 {{site.data.keyword.Bluemix_notm}} 型錄中看到的服務清單。若要取代一個組織或多個組織的所有現有可見服務，請使用下列指令：
 
 ```
 cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
@@ -724,9 +724,9 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">檢視已使用及總計的保留和實體磁碟。</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">指定每日或每月的開始日期（格式必須為 mm-dd-yyyy），或是每小時的開始日期及時間（格式必須為 mm-dd-yyyy hh:mm:ss timezone）</dd>
+<dd class="pd">指定每日或每月的開始日期（格式必須為 mm-dd-yyyy），或是每小時的開始日期及時間（格式必須為 mm-dd-yyyy hh:mm:ss 時區）</dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">指定每日或每月的結束日期（格式必須為 mm-dd-yyyy），或是每小時的結束日期及時間（格式必須為 mm-dd-yyyy hh:mm:ss timezone）</dd>
+<dd class="pd">指定每日或每月的結束日期（格式必須為 mm-dd-yyyy），或是每小時的結束日期及時間（格式必須為 mm-dd-yyyy hh:mm:ss 時區）</dd>
 </dl>
 
 {: codeblock}
@@ -773,7 +773,7 @@ cf ba service-brokers <broker_name>
 ### 新增服務分配管理系統
 {: #cliaddservbro}
 
-若要新增服務分配管理系統，以將自訂服務新增至 {{site.data.keyword.Bluemix_notm}}「型錄」，請使用下列指令：
+若要新增服務分配管理系統，以將自訂服務新增至 {{site.data.keyword.Bluemix_notm}} 型錄，請使用下列指令：
 
 ```
 cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
@@ -796,7 +796,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### 刪除服務分配管理系統
 {: #clidelservbro}
 
-若要刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」移除自訂服務，請使用下列指令：
+若要刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}} 型錄移除自訂服務，請使用下列指令：
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -843,7 +843,7 @@ ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱 [Binding Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
-**警告**：取消連結 **Default Staging** 或 **Default Running** 群組集與兩個 IBM 建立的安全群組 `public_networks` 及 `dns`，將會停用對外部網路的廣域存取。請小心使用取消連結，並了解它對您環境中執行中及編譯打包中的應用程式可能造成的影響。
+**警告**：取消連結 **Default Staging** 或 **Default Running** 群組集與兩個 IBM 建立的安全群組 `public_networks` 及 `dns`，會停用對外部網路的廣域存取。請小心使用取消連結，並了解它對您環境中執行中及編譯打包中的應用程式可能造成的影響。
 
 
 **附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。如需相關資訊（包括必要及選用性欄位），請參閱有關 [Creating Application Security Groups ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 資訊。
@@ -1003,8 +1003,7 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">您的安全群組名稱</dd>
 </dl>
 
-**警告**：取消連結 **Default Staging** 群組集與兩個 IBM 建立的安全群組
-`public_networks` 及 `dns`，將會停用對外部網路的廣域存取，必須小心使用取消連結，並了解它對您環境中所有編譯打包中的應用程式造成的結果。
+**警告**：取消連結 **Default Staging** 群組集與兩個 IBM 建立的安全群組 `public_networks` 及 `dns`，會停用對外部網路的廣域存取，必須小心使用取消連結，並了解它對您環境中所有編譯打包中的應用程式造成的結果。
 
 **提示：**您也可以使用 **ba ussg** 作為 **ba unbind-staging-security-group** 這個較長指令名稱的別名。
 
@@ -1020,8 +1019,7 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">您的安全群組名稱</dd>
 </dl>
 
-**警告**：取消連結 **Default Running** 群組集與兩個 IBM 建立的安全群組
-`public_networks` 及 `dns`，將會停用對外部網路的廣域存取，必須小心使用取消連結，並了解它對您環境中所有執行中的應用程式造成的結果。
+**警告**：取消連結 **Default Running** 群組集與兩個 IBM 建立的安全群組 `public_networks` 及 `dns`，會停用對外部網路的廣域存取，必須小心使用取消連結，並了解它對您環境中所有執行中的應用程式造成的結果。
 
 **提示：**您也可以使用 **ba brsg** 作為 **ba unbind-running-security-group** 這個較長指令名稱的別名。
 

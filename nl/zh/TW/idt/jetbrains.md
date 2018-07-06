@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -29,7 +29,7 @@ IBM Developer Extension for Jetbrains IDEs（包括 IntelliJ、WebStorm、Androi
 ## 安裝
 {: #installation}
 
-針對 Jetbrains IDE 安裝 IBM Developers Tools 延伸規格的最簡單方法，是移至 [IDT Github 儲存庫的 Jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) 頁面，然後遵循指示。
+針對 Jetbrains IDE 安裝 IBM Developers Tools 延伸規格的最簡單方法，是移至 [IDT GitHub 儲存庫的 Jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) 頁面，然後遵循指示。
 
 ## 用法
 {: #usage}

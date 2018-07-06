@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -24,7 +24,7 @@ Puoi configurare il servizio {{site.data.keyword.autoscaling}} utilizzando la CL
 
 Prima di iniziare, installa la CLI {{site.data.keyword.Bluemix_notm}}. Consulta [Download {{site.data.keyword.Bluemix_notm}} CLI ![Icona link esterno](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} per istruzioni.
 
-## Aggiunta del plug-in CLI {{site.data.keyword.Bluemix_notm}}
+## Aggiunta del plug-in della CLI {{site.data.keyword.Bluemix_notm}}
 
 Una volta installata la CLI {{site.data.keyword.Bluemix_notm}}, puoi aggiungere il plug-in della CLI {{site.data.keyword.autoscaling}}.
 

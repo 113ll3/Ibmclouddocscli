@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -253,7 +253,7 @@ ibmcloud login
 ### Impossibile distribuire a Kubernetes in {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploytokube}
 
-Puoi vedere questo errore dopo il prompt iniziale per il tuo nome cluster:
+Potresti vedere questo errore dopo il prompt iniziale per il nome del tuo cluster:
 
 ```
 FAILED
@@ -267,7 +267,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 #### Causa
 {: #cause2}
 
-Molto probabilmente la causa è un nome cluster non valido, cosa che può essere confermata eseguendo lo stesso comando con `--trace`; nell'output dell'errore potresti vedere quanto segue:
+Molto probabilmente questo è dovuto a un nome cluster non valido, cosa che può essere confermata eseguendo lo stesso comando con `--trace`; nell'output dell'errore potresti vedere quanto segue:
 
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
@@ -286,7 +286,7 @@ ibmcloud cs cluster-config <cluster-name>
 
 ### Impossibile distribuire a Kubernetes in {{site.data.keyword.Bluemix_notm}}
 
-Puoi vedere questo errore dopo il prompt per la destinazione dell'immagine da distribuire:
+Potresti vedere questo errore dopo il prompt per la destinazione dell'immagine da distribuire:
 
 ```
 FAILED
@@ -318,15 +318,15 @@ ibmcloud cr namespaces
 ## APPENDICE
 {: #appendix}
 
-Tutti i prerequisiti verranno installati per la maggior parte degli utenti utilizzando i programmi di installazione della piattaforma nella parte superiore di questa pagina. Se devi installare manualmente qualche componente, ecco le istruzioni:
+Tutti i prerequisiti vengono installati per la maggior parte degli utenti che utilizzano i programmi di installazione della piattaforma. Se devi installare manualmente qualche componente, ecco le istruzioni:
 
-Per installare il plugin di sviluppo, è necessario che venga prima installata la [CLI IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
+Per installare il plug-in di sviluppo, è necessario prima installare la [CLI IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
 
 Per utilizzare il plugin di sviluppo stesso, devi installarlo eseguendo questo comando: `ibmcloud plugin install dev -r Bluemix`
 
 Per l'esecuzione e il debug di applicazioni in locale, devi anche installare [Docker ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.docker.com/get-docker).
 
-Per la distribuzione di un'applicazione come un contenitore, devi anche installare Kubernetes, Helm e i seguenti plugin CLI IBM Cloud:
+Per la distribuzione di un'applicazione come contenitore, devi anche installare `Kubernetes`, `Helm` e i seguenti plug-in della CLI IBM Cloud:
 
 Per installare Kubernetes:
 * Utenti Mac:
@@ -346,10 +346,10 @@ Per installare Helm:
 * Utenti Windows:
 Scarica e installa il file binario all'indirizzo https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Per installare il plugin container-registry:
+Per installare il plug-in container-registry:
 `ibmcloud plugin install container-registry`
 
-Per installare il plugin container-service:
+Per installare il plug-in container-service:
 `ibmcloud plugin install container-service`
 
 

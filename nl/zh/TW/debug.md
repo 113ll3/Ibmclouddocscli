@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-05-29"
 {:screen: .screen}
 
 
-# 除錯
+# 針對 {{site.data.keyword.Bluemix_notm}} 進行 cf 應用程式的除錯
 {: #debugging}
 
 如果您遇到 {{site.data.keyword.Bluemix}} 問題，則可以檢視日誌檔來調查問題，並針對錯誤進行除錯。
@@ -29,7 +29,7 @@ lastupdated: "2018-05-29"
 {: #debugging-staging-errors}
 您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包應用程式，您可以搜尋及檢閱編譯打包 (STG) 日誌來判斷在應用程式部署期間發生什麼問題，並從問題回復。如需 {{site.data.keyword.Bluemix}} 應用程式日誌檢視方法的相關資訊，請參閱[檢視日誌 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}。  
 
-若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cfapps/depapps.html#appdeploy){: new_window}。
+若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需相關資訊，請參閱[應用程式部署 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cfapps/depapps.html#appdeploy){: new_window}。
 
 
 下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/starters/install_cli.html){: new_window}。
@@ -37,19 +37,19 @@ lastupdated: "2018-05-29"
   1. 在 cf 指令行介面中輸入下列程式碼，以連接至 {{site.data.keyword.Bluemix_notm}}：
      ```
 	 cf api https://api.stage1.ng.bluemix.net
-	 ```
+	    ```
 
   2. 輸入 `cf login`，以登入 {{site.data.keyword.Bluemix_notm}}。
 
   3. 輸入 `cf logs appname --recent`，以擷取最近日誌。如果您要過濾詳細日誌，請使用 `grep` 選項。例如，您可以輸入下列程式碼，只顯示 [STG] 日誌：
     ```
-	cf logs appname --recent | grep '\[STG\]'
-	```
+	   cf logs appname --recent | grep '\[STG\]'
+   	```
   4. 檢視日誌中顯示的第一個錯誤。
 
 如果您使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 外掛程式來部署應用程式，則會在 Eclipse 工具的**主控台**標籤中，看到類似 cf logs 輸出的日誌。當您部署應用程式時，也可以開啟不同的 Eclipse 視窗來追蹤`日誌`。
 
-除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 {{site.data.keyword.loganalysisshort}} 服務來收集日誌詳細資料。 
+除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 {{site.data.keyword.loganalysisshort}} 服務來收集日誌詳細資料。
 
 ### 針對 Node.js 應用程式的編譯打包錯誤進行除錯
 
@@ -131,8 +131,7 @@ lastupdated: "2018-05-29"
 
 依預設，之前可透過 {{site.data.keyword.Bluemix_notm}} 主控台中的應用程式視圖，在**檔案** > **日誌**下存取 `stdout.log` 及 `stderr.log` 檔案。然而，管理 {{site.data.keyword.Bluemix_notm}} 所在的現行 Cloud Foundry 版本已不再提供該項應用程式記載功能。若要維持可透過 {{site.data.keyword.Bluemix_notm}} 主控台在**檔案** > **日誌**下存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的運行環境而定）。
 
-  * 若為 Liberty for Java 應用程式，導向到 stdout 及 stderr 的輸出已包含在 logs 目錄的 `messages.log` 檔案中。請分別尋找字首為 SystemOut 及 SystemErr 的項目。
-  
+  * 若為 Liberty for Java 應用程式，導向到 stdout 及 stderr 的輸出已包含在 logs 目錄的 `messages.log` 檔案中。請尋找字首為 SystemOut 及 SystemErr 的項目。
   * 若為 Node.js 應用程式，您可以置換 console.log 函數，以明確地寫入 logs 目錄中的檔案。
   * 若為 PHP 應用程式，您可以使用 error_log 函數來寫入 logs 目錄中的檔案。
   * 若為 Python 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案：`logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`

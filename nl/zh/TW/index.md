@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,61 +14,95 @@ lastupdated: "2018-05-23"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.dev_cli_notm}} 概觀
+# 開始使用 {{site.data.keyword.Bluemix_notm}} CLI
 {: #overview}
 
-{{site.data.keyword.dev_cli_notm}} 是一種指令行方法，可針對想要使用指令行開發端對端 Web、行動及微服務應用程式的開發人員建立、開發及部署應用程式。執行下列其中一個 Script，以快速開始使用建議的工具集。
-{: shortdesc}
+在本指導教學中，您將安裝一組 {{site.data.keyword.Bluemix}} 開發人員工具、驗證安裝，並配置您的環境。{{site.data.keyword.Bluemix}} 開發人員工具提供指令行方法，以建立、開發及部署端對端的 Web、行動及微服務應用程式。
+{:shortdesc}
 
-## {{site.data.keyword.dev_cli_notm}} 的必要條件
+安裝之後，您會得到 {{site.data.keyword.Bluemix_notm}} CLI，以及下列工具： 
+
+* `Homebrew`（僅限 Mac）
+* `Git`
+* `Docker`
+* `Helm`
+* `kubectl`
+* `curl`
+* {{site.data.keyword.dev_cli_notm}} 外掛程式
+* {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} 外掛程式
+* {{site.data.keyword.registrylong_notm}} 外掛程式
+* {{site.data.keyword.containerlong_notm}} 外掛程式
+* `sdk-gen`外掛程式
+
+## 開始之前
 {: #prereq}
 
-註冊 [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration)。
+您需要 [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及下列系統需求：
 
 * 如果您是使用 Microsoft Windows&trade;，則必須使用 Windows 10 或更新版本。
-
 * 您必須使用適用於 Docker 的穩定通道，而最低版本為 1.13.1。
 
-## 如何安裝 {{site.data.keyword.dev_cli_notm}}
-{: #installation}
+## 步驟 1：執行 install 指令
+{: #step1}
 
-若要安裝工具集，您可以執行相關的指令來啟動安裝程式。這會安裝 {{site.data.keyword.Bluemix_notm}} 開發的下列建議工具（如果尚未安裝的話）：`Homebrew`（僅限 Mac）、`Git`、`Docker`、`Helm`、`kubectl`、`curl`、{{site.data.keyword.Bluemix_notm}} CLI、{{site.data.keyword.dev_cli_notm}} 外掛程式、Cloud Functions 外掛程式、Container Registry 外掛程式、Container Service 外掛程式，及 `sdk-gen` 外掛程式。
+* 若為 Mac 和 Linux，請執行下列指令：
 
-**Mac 及 Linux：**
+  ```
+  curl -sL https://ibm.biz/idt-installer | bash
+  ```
+  {: codeblock}
+<br><br>
 
-```
-curl -sL https://ibm.biz/idt-installer | bash
-```
-{: codeblock}
+* 若為 Windows 10，請以管理者身分執行下列指令：
 
+  ```
+  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  ```
+  {: codeblock}
+<br><br>
+  在 Windows PowerShell 圖示上按一下滑鼠右鍵，然後選取**以系統管理員身分執行**。
+  {: tip}
 
-**Windows 10：**
+## 步驟 2：驗證安裝
+{: #step2}
 
-* 附註：請在 PowerShell 圖示按一下滑鼠右鍵並選取「以系統管理員身分執行」，以開啟 Windows PowerShell。
-
-```
-Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
-```
-{: codeblock}
-
-## 驗證安裝
-若要驗證安裝，請執行 `help` 指令：
+若要驗證是否已順利安裝 CLI 及開發人員工具，請執行 `help` 指令：
 
 ```
 ibmcloud dev help
 ```
 {: codeblock}
+<br><br>
+輸出會列出用法指示、現行版本及支援的指令。
 
-如果安裝成功，輸出應該列出用法指令、現行版本，及支援的指令。
+## 步驟 3：配置環境
+{: #step3}
 
+1. 連接至 {{site.data.keyword.Bluemix_notm}} 地區中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 美國南部地區：
 
-## 可進一步探索 {{site.data.keyword.dev_cli_notm}} 的其他鏈結
+	```
+	ibmcloud api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 
-- [詳細設定](/docs/cli/idt/setting_up_idt.html)
-- [用法](/docs/cli/idt/index.html)
-- [指令](/docs/cli/idt/commands.html)
-- [CLI 外掛程式](/docs/cli/reference/bluemix_cli/extend_cli.html)
-- [VSCode IDE Extension](/docs/cli/idt/vscode.html)
-- [手動安裝 IBM Cloud CLI](/docs/cli/reference/bluemix_cli/get_started.html)
-- [在 GitHub 上報告問題](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
-- [IBM Cloud Tech 的 Slack - #developer-tools 頻道](https://ibm-cloud-tech.slack.com) - 在[這裡](https://slack-invite-ibm-cloud-tech.mybluemix.net/)要求團隊存取
+2. 使用 IBM ID 登入 {{site.data.keyword.Bluemix_notm}}。
+
+	```
+	ibmcloud login
+	```
+	{: codeblock}
+<br><br>
+	如果您的認證遭到拒絕，您可能是使用聯合 ID。如需詳細資料，請參閱[使用聯合 ID 進行登入](/docs/iam/login_fedid.html#using-an-api-key)。
+	{: tip}
+
+3. 設定您的組織及空間。
+
+	```
+	ibmcloud target -o <value> -s <value>
+	```
+	{: codeblock}
+
+## 後續步驟
+{: #next-steps}
+
+您現在已準備好開始開發及部署您的第一個應用程式！如需相關資訊，請參閱[使用入門範本套件來建立基本 Web 應用程式](/docs/apps/tutorials/tutorial_web.html)。

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-23"
 # Einführung in die {{site.data.keyword.Bluemix_notm}}-CLI
 {: #getting-started}
 
-Wir empfehlen, die {{site.data.keyword.Bluemix_notm}}-CLI und alle empfohlenen Abhängigkeiten mithilfe der [hier](/docs/cli/index.html) beschriebenen Methode zu installieren.
+Es wird empfohlen, die {{site.data.keyword.Bluemix_notm}}-CLI und alle empfohlenen Abhängigkeiten mithilfe der [hier](/docs/cli/index.html) beschriebenen Methode zu installieren.
 {: tip}
 
 
@@ -39,7 +39,7 @@ Gehen Sie wie folgt vor, um Ihre ersten Schritte nur mit der {{site.data.keyword
    **32-Bit-Releases und Vorgängerversionen finden Sie [hier.](all_versions.html)
 
 1. Führen Sie das Installationsprogramm aus.
-   * Für Mac OS und Windows führen Sie einfach das Installationsprogramm aus.
+   * Für Mac OS und Windows führen Sie einfach das Installationsprogramm aus. 
    * Für Linux müssen Sie das Paket extrahieren und das Script `install_bluemix_cli` ausführen.
 
 1. Wählen Sie einen API-Endpunkt als Ziel aus und melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an.
@@ -54,7 +54,7 @@ Wenn Sie eine föderierte ID verwenden, folgen Sie den [hier](https://console.bl
 ## Links mit weiterführenden Informationen zur {{site.data.keyword.Bluemix_notm}}-CLI
 
 * [Weitere Optionen zum Herunterladen und Installieren der {{site.data.keyword.Bluemix_notm}}-CLI](download_cli.html)
-* [{{site.data.keyword.Bluemix_notm}}-CLI-Funktionen mit Plug-ins erweitern](extend_cli.html)
+* [Leistungsspektrum der {{site.data.keyword.Bluemix_notm}}-CLI mit Plug-ins erweitern](extend_cli.html)
 * [Alle Versionen für die {{site.data.keyword.Bluemix_notm}}-CLI und Informationen zum Release](all_versions.html)
 * [Dokument zur {{site.data.keyword.Bluemix_notm}}-CLI-Befehlssyntax](bx_cli.html)
 
@@ -63,5 +63,5 @@ Wenn Sie eine föderierte ID verwenden, folgen Sie den [hier](https://console.bl
 {: #issues}
 
 Verwenden Sie die folgenden Optionen, um Probleme zu melden oder Anforderungen für neue Features abzuschicken:
- * Erstellen Sie Problemmeldungen in [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg)
+ * Erstellen Sie Problemmeldungen in [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg)
  * Hinterlassen Sie Nachrichten im [Slack-Kanal](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg)

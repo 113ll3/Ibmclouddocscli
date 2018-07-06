@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -50,21 +50,21 @@ lastupdated: "2018-05-23"
    * 使用下列指令進行安裝。
 
       ```
-            go get -u github.com/kardianos/govendor
+      go get -u github.com/kardianos/govendor
       ```
       {: codeblock}
 
    * 使用下列指令，起始設定專案目錄上的 `govendor`。
 
       ```
-            govendor init
+      govendor init
       ```
       {: codeblock}
 
    * 使用下列指令，將相依關係從 `$GOPATH` 新增至供應商目錄。
 
       ```
-            govendor add +local
+      govendor add +local
       ```
       {: codeblock}
 
@@ -75,14 +75,14 @@ lastupdated: "2018-05-23"
    * 使用下列指令，安裝 `ginkgo`。
 
       ```
-            go get -u github.com/onsi/ginkgo/ginkgo
+      go get -u github.com/onsi/ginkgo/ginkgo
       ```
       {: codeblock}
 
    * 使用下列指令，安裝 `gomega`。
 
       ```
-            go get -u github.com/onsi/gomega
+      go get -u github.com/onsi/gomega
       ```
       {: codeblock}
 
@@ -90,7 +90,7 @@ lastupdated: "2018-05-23"
 
       ```
       ginkgo -r
-```
+      ```
       {: codeblock}
 
       * 若要新增程式碼涵蓋面，請將 `-cover` 附加至指令。
@@ -98,11 +98,11 @@ lastupdated: "2018-05-23"
    * 使用下列指令，取得程式碼涵蓋面的易記 HTML 表單。
 
       ```
-            go tool -html={package}.coverprofile
+      go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
-      * 您將移至 `.coverprofile` 檔案所在的目錄。
+      * 移至 `.coverprofile` 檔案所在的目錄。
 
 * 國際化：[go-i18n ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/nicksnyder/go-i18n) 及 [go-bindata ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/jteeuwen/go-bindata)
 
@@ -111,14 +111,14 @@ lastupdated: "2018-05-23"
    * 使用下列指令，安裝 `go-i18n`。
 
       ```
-            go get -u github.com/nicksnyder/go-i18n/goi18n
+      go get -u github.com/nicksnyder/go-i18n/goi18n
       ```
       {: codeblock}
 
    * 使用下列指令，安裝 `go-bindata`。
 
       ```
-            go get -u github/com/jteeuwen/go-bindata/go-bindata
+      go get -u github/com/jteeuwen/go-bindata/go-bindata
       ```
       {: codeblock}
 
@@ -129,7 +129,7 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
    * 使用下列指令，安裝 `delve`。
 
       ```
-            go get -u github.com/derekparker/delve/cmd/dlv
+      go get -u github.com/derekparker/delve/cmd/dlv
       ```
       {: codeblock}
 

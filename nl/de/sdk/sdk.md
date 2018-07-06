@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 # Verfügbare Mobile-SDKs
@@ -60,5 +60,3 @@ Sie können die folgenden SDKs in Ihrer mobilen Anwendung verwenden, um die jewe
 
 - [Core-Plug-in ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 - [{{site.data.keyword.mobilepushshort}}-Plug-in ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
-
-

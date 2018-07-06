@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -63,7 +63,7 @@ Utilizza `ibmcloud sdk generate [arguments...] [command options]`.
 {: #gen-args}
 
 * `APP_NAME` - il nome dell'applicazione Cloud Foundry nel tuo spazio corrente
-* `OPENAPI_DOC_LOCATION` - un URL o percorso file relativo al JSON o Yaml della definizione API REST non elaborata
+* `OPENAPI_DOC_LOCATION` - un URL o un percorso file relativo al JSON o yaml della definizione API REST non elaborata
 * `GENERATED_SDK_NAME` (facoltativo) - il nome del SDK generato
 
 
@@ -94,7 +94,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-Per generare un SDK da un URL di un file di definizione Open API o un file JSON o Yaml locale, utilizza il seguente comando.
+Per generare un SDK da un URL di un file di definizione Open API o un file JSON o yaml locale, utilizza il seguente comando.
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -112,7 +112,7 @@ Utilizza `ibmcloud sdk validate [argument]`.
 {: #val-args}
 
 * `APP_NAME` - il nome dell'applicazione Cloud Foundry nel tuo spazio corrente
-* `OPENAPI_DOC_LOCATION` - un URL o percorso file relativo al JSON o Yaml della definizione API REST non elaborata
+* `OPENAPI_DOC_LOCATION` - un URL o un percorso file relativo al JSON o yaml della definizione API REST non elaborata
 
 
 #### Utilizzo
@@ -125,7 +125,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-Per convalidare un SDK dall'URL di un documento di specifiche API o un file JSON o Yaml locale, utilizza il seguente comando.
+Per convalidare un SDK dall'URL di un documento di specifiche API o un file JSON o yaml locale, utilizza il seguente comando.
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### Elenca applicazioni (Cloud Foundry)
 {: #list-apps}
 
-Utilizza `ibmcloud sdk list [argument] [option]` per elencare le applicazioni e convalidare le specifiche API. Devi impostare la variabile di ambiente `OPENAPI_SPEC` sul percorso URL relativo che ospita la tua specifica.
+Utilizza `ibmcloud sdk list [argument] [option]` per elencare le applicazioni e convalidare le specifiche API. Devi impostare la variabile di ambiente `OPENAPI_SPEC` sull'URL relativo del percorso che ospita la tua specifica.
 
 
 #### Argomenti

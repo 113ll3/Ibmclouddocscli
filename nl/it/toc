@@ -6,8 +6,6 @@ IBM Cloud Developer Tools (CLI e strumenti di sviluppo)
 
 	{: .navgroup id="learn"}
 	index.md
-	reference/bluemix_cli/get_started.md
-	[Introduzione alla CLI CF](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
@@ -16,13 +14,11 @@ IBM Cloud Developer Tools (CLI e strumenti di sviluppo)
 	
         	
 	{: .topicgroup}
-	IBM Cloud Developer Tools
-		idt/setting_up_idt.md
-		idt/index.md
+	Estensioni IDE di IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/local_debug.md
-		[Risoluzione dei problemi relativi a IDT](../troubleshoot/ts_createapps.html)
+		deploy_eclipsetools.md
+		[Distribuzione di applicazioni con IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
         	
 	{: .topicgroup}
 	SDK per Mobile
@@ -33,7 +29,11 @@ IBM Cloud Developer Tools (CLI e strumenti di sviluppo)
 		sdk/sdk_network_request.md
 	
 	monitoring_logging.md
-	debug.md
+	
+	{: topicgroup}
+	Debug
+		debug.md
+		idt/local_debug.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -60,8 +60,11 @@ IBM Cloud Developer Tools (CLI e strumenti di sviluppo)
 	{: .topicgroup}
 	Ambienti di sviluppo consigliati
 		deploy_eclipsetools.md
-		[Distribuzione di applicazioni con IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
 		[Gestione di applicazioni Liberty e Node.js](../runtimes/common/app_mng.html#app_management)
 		[Toolkit per gli sviluppatori API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
+	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	ts_createapps.md
 	{: .navgroup-end}

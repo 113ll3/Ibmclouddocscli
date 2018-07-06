@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -96,7 +96,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (facoltativo)</dt>
-   <dd>L'URL dell'endpoint API Bluemix che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Solitamente, questo URL è `https://api.{DomainName}`.
+   <dd>L'URL dell'endpoint API IBM Cloud che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Solitamente, questo URL è `https://api.{DomainName}`.
    Se vuoi visualizzare l'URL dell'endpoint API che stai attualmente utilizzando, non hai bisogno di specificare questo parametro per il comando cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
@@ -295,7 +295,7 @@ cf delete-space nome_spazio [-f]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_spazio (obbligatorio)</dt>
@@ -344,7 +344,7 @@ cf events [nomeapplicazione]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nomeapplicazione</dt>
@@ -371,7 +371,7 @@ cf help [nome_comando]
 
 <strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_comando (facoltativo)</dt>
@@ -396,7 +396,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Ti fa accedere a {{site.data.keyword.Bluemix_notm}}. Se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere. 
+Ti fa accedere a {{site.data.keyword.Bluemix_notm}}. Se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere.
 
 **Nota**: per accedere, puoi anche utilizzare una chiave API della piattaforma {{site.data.keyword.Bluemix_notm}}. Utilizza il nome utente `apikey` e il valore della tua chiave API come password. Per ulteriori informazioni sulla creazione di una chiave API, vedi [Gestione delle chiavi API](/docs/iam/apikeys.html).
 
@@ -417,7 +417,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>La tua password.</dd>
 <dd>*Importante:* se fornisci la tua password utilizzando il parametro *-p* sull'interfaccia riga di comando, la password potrebbe essere registrata nella cronologia della riga di comando. Per motivi di sicurezza, evita di fornire la password utilizzando il parametro -p. Immetti invece la password quando te lo chiede l'interfaccia riga di comando.</dd>
 <dt>*-sso*</dt>
-<dd>Devi utilizzare l'opzione SSO (single sign-on ) quando accedi con un ID federato. Non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti verrà richiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere il passcode monouso all'accesso.</dd>
+<dd>Devi utilizzare l'opzione SSO (single sign-on ) quando accedi con un ID federato. Non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti viene richiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere il passcode monouso all'accesso.</dd>
 <dt>*-o*nome_organizzazione</dt>
 <dd>Il nome dell'organizzazione alla quale desideri effettuare l'accesso.</dd>
 <dt>*-s*nome_spazio</dt>
@@ -471,7 +471,7 @@ cf logs nomeapplicazione [--recent]
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>nomeapplicazione</dt>
@@ -498,7 +498,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Elenca tutti i servizi disponibili nel marketplace. I servizi elencati da questo comando sono visualizzati anche nel catalogo {{site.data.keyword.Bluemix_notm}}.
+Elenca tutti i servizi disponibili nel marketplace. I servizi elencati da questo comando sono mostrati anche nel catalogo {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
@@ -527,7 +527,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>nome_applicazione (obbligatorio)</dt>
@@ -591,7 +591,7 @@ cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>nome_applicazione (obbligatorio)</dt>
@@ -652,7 +652,7 @@ cf set-env nomeapplicazione nome_var valore_var
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>nome_applicazione (obbligatorio)</dt>
@@ -665,7 +665,7 @@ cf set-env nomeapplicazione nome_var valore_var
 
 <strong>Esempi</strong>:
 
-Imposta una variabile di ambiente denominata `variable_a` con un valore `123` per l'applicazione denominata `my_app`.
+Imposta una variabile di ambiente denominata `variable_a` con il valore `123` per l'applicazione denominata `my_app`.
 ```
 cf set-env my_app variable_a 123
 ```
@@ -682,9 +682,9 @@ cf ssh
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-Per impostazione predefinita, l'accesso SSH è abilitato per le applicazioni Diego. Puoi utilizzare il comando `cf ssh-enabled` per verificare se l'accesso SSH è abilitato o il comando `cf enable-ssh` per abilitarlo se è disabilitato. 
+Per impostazione predefinita, l'accesso SSH è abilitato per le applicazioni Diego. Puoi utilizzare il comando `cf ssh-enabled` per verificare se l'accesso SSH è abilitato o il comando `cf enable-ssh` per abilitare l'accesso se è stato disabilitato.
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>nomeapplicazione</dt>
@@ -756,7 +756,7 @@ cf stop nome_applicazione
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>nome_applicazione (obbligatorio)</dt>
@@ -782,7 +782,7 @@ cf target [-o org_name] [-s space_name]
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Opzioni comando</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>-o *nome_organizzazione* (facoltativo)</dt>

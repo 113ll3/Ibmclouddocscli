@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -63,7 +63,7 @@ REST API 定義必須有效，且在即時伺服器端點上或您系統的本�
 {: #gen-args}
 
 * `APP_NAME` - 您現行空間中 Cloud Foundry 應用程式的名稱
-* `OPENAPI_DOC_LOCATION` - 原始 REST API 定義 JSON 或 Yaml 的 URL 或相對檔案路徑
+* `OPENAPI_DOC_LOCATION` - 原始 REST API 定義 JSON 或 yaml 的 URL 或相對檔案路徑
 * `GENERATED_SDK_NAME`（選用）- 所產生 SDK 的名稱
 
 
@@ -94,7 +94,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-若要從開放式 API 定義檔或是本端 JSON 或 Yaml 檔案的 URL 產生 SDK，請使用下列指令。
+若要從開放式 API 定義檔或是本端 JSON 或 yaml 檔案的 URL 產生 SDK，請使用下列指令。
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -112,7 +112,7 @@ ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 {: #val-args}
 
 * `APP_NAME` - 您現行空間中 Cloud Foundry 應用程式的名稱
-* `OPENAPI_DOC_LOCATION` - 原始 REST API 定義 JSON 或 Yaml 的 URL 或相對檔案路徑
+* `OPENAPI_DOC_LOCATION` - 原始 REST API 定義 JSON 或 yaml 的 URL 或相對檔案路徑
 
 
 #### 用法
@@ -125,7 +125,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-若要從 API 規格文件或是本端 JSON 或 Yaml 檔案的 URL 驗證 SDK，請使用下列指令。
+若要從 API 規格文件或是本端 JSON 或 yaml 檔案的 URL 驗證 SDK，請使用下列指令。
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### 列出應用程式 (Cloud Foundry)
 {: #list-apps}
 
-使用 `ibmcloud sdk list [argument] [option]` 來列出應用程式，以及驗證 API 規格。您必須將 `OPENAPI_SPEC` 環境變數設為管理規格的相對 URL 路徑。
+使用 `ibmcloud sdk list [argument] [option]` 來列出應用程式，以及驗證 API 規格。您必須將 `OPENAPI_SPEC` 環境變數設為管理規格之路徑的相對 URL。
 
 
 #### 引數

@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -95,7 +95,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL（選用）</dt>
-   <dd>Bluemix API 端點的 URL，您在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。這個 URL 通常是 `https://api.{DomainName}`。
+   <dd>IBM Cloud API 端點的 URL，您在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。這個 URL 通常是 `https://api.{DomainName}`。
    如果您要顯示目前所使用 API 端點的 URL，則不需要針對 cf api 指令指定此參數。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
@@ -161,7 +161,7 @@ cf bind-service appname service_instance
 
 <strong>範例</strong>：
 
-將 `my_dataworks` 服務實例連結至 `my_app` 應用程式。
+將名為 `my_dataworks` 的服務實例連結至 `my_app` 應用程式。
 ```
 cf bind-service my_app my_dataworks
 ```
@@ -224,7 +224,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>範例</strong>：
 
-建立 new_space 空間
+建立名為 new_space 的空間
 ```
 cf create-space new_space
 ```
@@ -256,25 +256,25 @@ cf delete appname [-f] [-r]
 
 <strong>範例</strong>：
 
-刪除 `my_app` 應用程式（將需要確認）。
+刪除名為 `my_app` 的應用程式（將需要確認）。
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-刪除 `my_app` 應用程式，不需要進行確認。
+刪除名為 `my_app` 的應用程式，不需要進行確認。
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱。
+刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱。
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
+刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
 ```
 cf delete my_app -f -r
 ```
@@ -305,25 +305,25 @@ cf delete-space space_name [-f]
 
 <strong>範例</strong>：
 
-刪除 `my_app` 應用程式（將需要確認）。
+刪除名為 `my_app` 的應用程式（將需要確認）。
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-刪除 `my_app` 應用程式，不需要進行確認。
+刪除名為 `my_app` 的應用程式，不需要進行確認。
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱。
+刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱。
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
+刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
 ```
 cf delete my_app -f -r
 ```
@@ -350,7 +350,7 @@ cf events [appname]
 
 <strong>範例</strong>：
 
-顯示 `my_app` 應用程式的事件。
+顯示名為 `my_app` 之應用程式的事件。
 ```
 cf events my_app
 ```
@@ -394,7 +394,7 @@ cf help events
 {: #cf_login}
 
 讓您登入 {{site.data.keyword.Bluemix_notm}}。
-如果您是使用[聯合 ID](/docs/admin/account.html#signup) 登入，則必須使用單一登入 (SSO) 參數來登入。 
+如果您是使用[聯合 ID](/docs/admin/account.html#signup) 登入，則必須使用單一登入 (SSO) 參數來登入。
 
 **附註**：您也可以使用「{{site.data.keyword.Bluemix_notm}} 平台」API 金鑰來登入。以使用者名稱 `apikey` 及 API 金鑰值作為密碼。如需建立 API 金鑰的相關資訊，請參閱[管理 API 金鑰](/docs/iam/apikeys.html)。
 
@@ -481,13 +481,13 @@ cf logs appname [--recent]
 
 <strong>範例</strong>：
 
-顯示 `my_app` 應用程式的日誌串流。
+顯示名為 `my_app` 之應用程式的日誌串流。
 ```
 cf logs my_app
 ```
 {: codeblock}
 
-顯示 `my_app` 應用程式的最近日誌串流。
+顯示名為 `my_app` 之應用程式的最近日誌串流。
 ```
 cf logs my_app --recent
 ```
@@ -497,8 +497,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-列出 Marketplace 中可用的所有服務。這個指令所列出的服務也會顯示在 {{site.data.keyword.Bluemix_notm}}「型錄」中。
-
+列出 Marketplace 中可用的所有服務。這個指令所列出的服務也會顯示在 {{site.data.keyword.Bluemix_notm}} 型錄中。
 
 ```
 cf marketplace
@@ -566,13 +565,13 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>範例</strong>：
 
-使用預設啟動指令，以啟動 `my_app` 應用程式。
+使用預設啟動指令，以啟動名為 `my_app` 的應用程式。
 ```
 cf push `my_app` -c null
 ```
 {: codeblock}
 
-使用執行 Script 檔 `run.sh` 的選項，以啟動 `my_app` 應用程式。
+使用執行 Script 檔 `run.sh` 的選項，以啟動名為 `my_app` 的應用程式。
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -609,7 +608,7 @@ cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 
 <strong>範例</strong>：
 
-顯示 `my_app` 應用程式的實例數目、磁碟空間限制及記憶體限制。
+顯示名為 `my_app` 之應用程式的實例數目、磁碟空間限制及記憶體限制。
 ```
 cf scale my_app
 ```
@@ -667,7 +666,7 @@ cf set-env appname var_name var_value
 
 <strong>範例</strong>：
 
-針對 `my_app` 應用程式，設定值為 `123` 的 `variable_a` 環境變數。
+針對名為 `my_app` 的應用程式，設定值為 `123` 且名為 `variable_a` 的環境變數。
 ```
 cf set-env my_app variable_a 123
 ```
@@ -684,7 +683,7 @@ cf ssh
 ```
 <strong>必要條件</strong>：`cf api`、`cf login`、`cf target`
 
-依預設，會啟用 Diego 應用程式的 SSH 存取。您可以使用 `cf ssh-enabled` 指令，驗證是否已啟用 SSH 存取，或是使用 `cf enable-ssh` 指令來啟用已停用的存取。 
+依預設，會啟用 Diego 應用程式的 SSH 存取。您可以使用 `cf ssh-enabled` 指令，驗證是否已啟用 SSH 存取，或是使用 `cf enable-ssh` 指令來啟用已停用的存取。
 
 <strong>指令選項</strong>：
 
@@ -768,7 +767,7 @@ cf stop appname
 
 <strong>範例</strong>：
 
-停止 `my_app` 應用程式。
+停止名為 `my_app` 的應用程式。
 ```
 cf stop my_app
 ```

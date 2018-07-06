@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 # SDK mobili disponibili
@@ -58,7 +58,5 @@ Puoi utilizzare le seguenti SDK nella tua applicazione mobile per sfruttare le r
 ### Plug-in Cordova
 {: #cordova_plugin}
 
-- [Core plugin ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
-- [{{site.data.keyword.mobilepushshort}} plugin ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
-
-
+- [Plug-in Core ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+- [Plug-in {{site.data.keyword.mobilepushshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)

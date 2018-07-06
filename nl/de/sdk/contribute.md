@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -102,7 +102,7 @@ Das Testframework basiert auf Ginkgo, einem BDD-Testframework für Go. Es wird m
       ```
       {: codeblock}
 
-      * Sie werden zu dem Verzeichnis geleitet, in dem sich die Datei `.coverprofile` befindet.
+      * Wechseln Sie in das Verzeichnis, in dem sich die Datei `.coverprofile` befindet.
 
 * Internationalisierung: [go-i18n ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/nicksnyder/go-i18n) und [go-bindata ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/jteeuwen/go-bindata)
 

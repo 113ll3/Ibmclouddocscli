@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -318,7 +318,7 @@ ibmcloud cr namespaces
 ## ANHANG
 {: #appendix}
 
-Für die meisten Benutzer werden alle Voraussetzungen mithilfe der Plattforminstallationsprogramme oben auf dieser Seite installiert. Im Folgenden finden Sie Anweisungen, falls Sie weitere Komponenten manuell installieren müssen:
+Für die meisten Benutzer, die Plattforminstallationsprogramme verwenden, werden alle Voraussetzungen installiert. Im Folgenden finden Sie Anweisungen, falls Sie weitere Komponenten manuell installieren müssen:
 
 Zum Installieren des Entwickler-Plug-ins muss zunächst die [IBM Cloud-CLI](../reference/bluemix_cli/get_started.md#getting-started) installiert werden.
 
@@ -326,7 +326,7 @@ Zum Verwenden des Entwickler-Plug-ins müssen Sie es mithilfe dieses Befehls ins
 
 Zum lokalen Ausführen und Debuggen von Anwendungen müssen Sie auch [Docker ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.docker.com/get-docker) installieren.
 
-Zum Bereitstellen einer Anwendung als Container müssen Sie auch Kubernetes, Helm und die folgenden IBM Cloud-CLI-Plug-ins installieren:
+Zum Bereitstellen einer App als Container müssen Sie auch `Kubernetes`, `Helm` und die folgenden IBM Cloud-CLI-Plug-ins installieren:
 
 Gehen Sie wie folgt vor, um Kubernetes zu installieren:
 * Mac-Benutzer:
@@ -346,11 +346,9 @@ Gehen Sie wie folgt vor, um Helm zu installieren:
 * Windows-Benutzer:
 Binärdatei unter https://github.com/kubernetes/helm/releases/tag/v2.6.0 herunterladen und installieren
 
-Gehen Sie wie folgt vor, um das Plug-in 'container-registry' zu installieren:
-`ibmcloud plugin install container-registry`
+Gehen Sie wie folgt vor, um das Plug-in 'container-registry' zu installieren: `ibmcloud plugin install container-registry`
 
-Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren:
-`ibmcloud plugin install container-service`
+Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren: `ibmcloud plugin install container-service`
 
 
 <!--

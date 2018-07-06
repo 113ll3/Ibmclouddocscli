@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 
 # Fehlerbehebung für {{site.data.keyword.Bluemix_notm}} Developer Tools
 {: #troubleshoot}
@@ -259,7 +259,7 @@ Für die meisten Benutzer werden alle Voraussetzungen mithilfe der Plattforminst
 
 Zum Installieren des Entwickler-Plug-ins müssen Sie zunächst die [IBM Cloud-CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) installieren.
 
-Zum Verwenden des Entwickler-Plugins müssen Sie es mithilfe dieses Befehls installieren: `bx plugin install dev -r Bluemix`
+Zum Verwenden des Entwickler-Plug-ins müssen Sie es mithilfe dieses Befehls installieren: `bx plugin install dev -r Bluemix`
 
 Zum lokalen Ausführen und Debuggen von Apps müssen Sie auch [Docker](https://www.docker.com/get-docker) installieren.
 
@@ -286,6 +286,4 @@ Binärdatei unter https://github.com/kubernetes/helm/releases/tag/v2.6.0 herunte
 Gehen Sie wie folgt vor, um das Plug-in 'container-registry' zu installieren:
 `bx plugin install container-registry`
 
-Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren:
-`bx plugin install container-service`
-
+Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren: `bx plugin install container-service`

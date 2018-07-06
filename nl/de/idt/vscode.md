@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-23"
 # IBM Developer Tools für Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-Die IBM Developer-Erweiterung für Visual Studio Code ist eine Erweiterung für den Editor, der Zugriff auf Funktionen aus der IBM Developer-CLI direkt in der Befehlspalette des Visual Studio Code-Editors bereitstellt  Sie ermöglicht schnellen Zugriff auf eine Teilmenge der `ibmcloud dev`-Befehle sowohl für Docker- als auch für CloudFoundry-Workflows, einschließlich App-Bereitstellung, Starten/Stoppen/Neustarten von Apps in {{site.data.keyword.Bluemix_notm}}, Anzeigen von Protokollen ferner Apps und vieles mehr – ohne den Kontext des Editors dafür verlassen zu müssen.
+Die IBM Developer-Erweiterung für Visual Studio Code ist eine Erweiterung für den Editor, der Zugriff auf Funktionen aus der IBM Developer-CLI direkt in der Befehlspalette des Visual Studio Code-Editors bereitstellt Sie ermöglicht schnellen Zugriff auf eine Teilmenge der `ibmcloud dev`-Befehle sowohl für Docker- als auch für CloudFoundry-Workflows, einschließlich App-Bereitstellung, Starten/Stoppen/Neustarten von Apps in {{site.data.keyword.Bluemix_notm}}, Anzeigen von Protokollen ferner Apps und vieles mehr – ohne den Kontext des Editors dafür verlassen zu müssen.
 {:shortdesc}
 
 ![Screenshot der IBM Developer-Downloadanzeige für Erweiterungen](vscode.png "Downloadanzeige für Erweiterungen in Visual Studio Code")
@@ -42,7 +42,7 @@ Der einfachste Weg, die IBM Developers Tools-Erweiterung zu installieren, ist di
 
 Alternativ können Sie die IBM Developer Tools-Erweiterung über das Verwaltungsfenster "Erweiterungen" installieren:
 
-1. Öffnen Sie die Seitenleiste **Erweiterungen** im Visual Studio Code-Editor und suchen Sie dann nach der Zeichenfolge `publisher:IBM Developer`.  Die IBM Developer Tools-Erweiterung wird in den Suchergebnissen angezeigt.  
+1. Öffnen Sie die Seitenleiste **Erweiterungen** im Visual Studio Code-Editor und suchen Sie dann nach der Zeichenfolge `publisher:IBM Developer`. Die IBM Developer Tools-Erweiterung wird in den Suchergebnissen angezeigt.  
 2. Klicken Sie auf die Schaltfläche **Installieren**, um die Installation zu starten.
 
 Sie können auch direkt auf die [IBM Developer Tools-Erweiterung in Visual Studio Code Marketplace zugreifen](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
@@ -63,13 +63,13 @@ Geben Sie dann den zu startenden Befehl ein oder wählen Sie ihn aus. Sie könne
 {: #usage-docker}
 
 Sie können die Arbeit mit 'ibmcloud dev'-Workflows in nur wenigen Schritten beginnen:
-* Erstellen Sie ein Projekt mithilfe einer der folgenden Methoden:
+* Erstellen Sie ein Projekt mithilfe einer der beiden folgenden Methoden: 
   * Öffnen Sie die [{{site.data.keyword.Bluemix_notm}}-Webkonsole](https://console.ng.bluemix.net/developer/getting-started/) und laden Sie den generierten Code herunter.
   * Verwenden Sie die [{{site.data.keyword.Bluemix_notm}} Developer-CLI](index.html) und generieren Sie ein Projekt mithilfe des Befehls `ibmcloud dev create`.
 * Öffnen Sie den Projektordner lokal im Visual Studio Code-Editor.
 * Verwenden Sie den Befehl `ibmcloud dev build`, um die App in einem Docker-Image zu erstellen.
 * Verwenden Sie den Befehl `ibmcloud dev debug`, um die App in einer lokalen Docker-Instanz für die Entwicklung auszuführen.
-> Hinweis: Zum Debuggen einer Node.js-Anwendung, die in einem lokalen Docker-Container ausgeführt wird, müssen Sie [eine Debugkonfiguration für den lokalen Container hinzufügen](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
+> Hinweis: Zum Debuggen einer Node.js-Anwendung, die in einem lokalen Docker-Container ausgeführt wird, müssen Sie [eine Debugkonfiguration für den lokalen Container hinzufügenn](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
 * Verwenden Sie den Befehl `ibmcloud dev run`, um die App in einer lokalen Docker-Instanz im Freigabemodus auszuführen.
 * Verwenden Sie den Befehl `ibmcloud dev deploy`, um die Anwendung in einer Cloud Foundry-Laufzeitumgebung unter {{site.data.keyword.Bluemix_notm}} bereitzustellen.
 

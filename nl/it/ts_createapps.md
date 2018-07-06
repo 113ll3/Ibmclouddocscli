@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 
 # Risoluzione dei problemi relativi a {{site.data.keyword.Bluemix_notm}} Developer Tools
 {: #troubleshoot}
@@ -189,7 +189,7 @@ Elimina la cartella `node_modules` ed esegui nuovamente il comando `bx dev run`.
 
 ## Impossibile distribuire a {{site.data.keyword.Bluemix_notm}}
 
-Si è verificato un errore durante la distribuzione a {{site.data.keyword.Bluemix_notm}} con la CLI {{site.data.keyword.dev_cli_short}} ma non viene visualizzato alcun errore.
+Si verifica un errore quando tenti la distribuzione a {{site.data.keyword.Bluemix_notm}} con la CLI {{site.data.keyword.dev_cli_short}}, ma non viene visualizzato alcun errore.
 {: tsSymptoms}
 
 Potresti non essere collegato al tuo account.
@@ -257,13 +257,13 @@ bx cr namespaces
 
 Tutti i prerequisiti vengono installati per la maggior parte degli utenti utilizzando i programmi di installazione della piattaforma. Se devi installare manualmente qualche componente, ecco le istruzioni:
 
-Per installare il plugin di sviluppo, devi prima installare la [CLI IBM Cloud](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
+Per installare il plug-in di sviluppo, devi prima installare la [CLI IBM Cloud](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
 
-Per utilizzare il plugin di sviluppo stesso, devi installarlo eseguendo questo comando: `bx plugin install dev -r Bluemix`
+Per utilizzare il plug-in di sviluppo stesso, devi installarlo eseguendo questo comando: `bx plugin install dev -r Bluemix`
 
 Per l'esecuzione e il debug di applicazioni in locale, devi anche installare [Docker](https://www.docker.com/get-docker).
 
-Per la distribuzione di un'applicazione come un contenitore, devi installare anche Kubernetes, Helm e i seguenti plugin CLI IBM Cloud:
+Per la distribuzione di un'applicazione come contenitore, devi anche installare Kubernetes, Helm e i seguenti plug-in della IBM Cloud:
 
 Per installare Kubernetes:
 * Utenti Mac:
@@ -283,9 +283,8 @@ Per installare Helm:
 * Utenti Windows:
 Scarica e installa il file binario all'indirizzo https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Per installare il plugin container-registry:
+Per installare il plug-in container-registry:
 `bx plugin install container-registry`
 
-Per installare il plugin container-service:
+Per installare il plug-in container-service:
 `bx plugin install container-service`
-

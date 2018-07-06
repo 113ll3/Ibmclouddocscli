@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-05-29"
 {:screen: .screen}
 
 
-# Fehlerbehebung
+# Fehler bei cf-Apps für {{site.data.keyword.Bluemix_notm}} beheben
 {: #debugging}
 
 Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, können Sie die Protokolldateien anzeigen, um die Probleme zu untersuchen und die Fehler zu beheben.
@@ -22,14 +22,14 @@ Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, können Sie die Proto
 
 In Protokollen sind z. B. Informationen darüber enthalten, ob ein Job erfolgreich ausgeführt wird oder ob er fehlschlägt. Sie enthalten auch relevante Informationen, die für Debugzwecke und zum Feststellen der Ursache eines Problems verwendet werden können.
 
-Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filterung möglich; Sie können auch externe Protokollierungshosts zum Speichern und Verarbeiten der Protokolle verwenden. Weitere Informationen zu Protokollformaten, zum Anzeigen und Filtern von Protokollen sowie zur Konfiguration einer externen Protokollierung finden Sie im Abschnitt zur [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/monitor_log/logging.html#logging){: new_window}.
+Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filterung möglich; Sie können auch externe Protokollierungshosts zum Speichern und Verarbeiten der Protokolle verwenden. Informationen zu Protokollformaten, zum Anzeigen und Filtern von Protokollen sowie zur Konfiguration einer externen Protokollierung finden Sie im Abschitt zur [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/monitor_log/logging.html#logging){: new_window}.
 
 
 ## Staging-Fehler beheben
 {: #debugging-staging-errors}
 Beim Durchführen des Stagings für die Anwendungen unter Verwendung von {{site.data.keyword.Bluemix_notm}} können Fehler auftreten. Wenn die Durchführung des Stagings für eine App fehlschlägt, können Sie die STG-Protokolle durchsuchen und prüfen, um den während der Bereitstellung der App aufgetretenen Fehler zu ermitteln und das Problem zu beheben. Weitere Informationen zum Anzeigen von Protokollen für {{site.data.keyword.Bluemix}}-Apps finden Sie unter [Protokolle anzeigen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}.  
 
-Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein Fehler auftritt, müssen Sie wissen, wie eine App unter {{site.data.keyword.Bluemix_notm}} bereitgestellt und ausgeführt wird. Detaillierte Informationen hierzu finden Sie in [Anwendungsbereitstellung ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
+Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein Fehler auftritt, müssen Sie wissen, wie eine App unter {{site.data.keyword.Bluemix_notm}} bereitgestellt und ausgeführt wird. Weitere Informationen finden Sie in [Anwendungsbereitstellung ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
 Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Staging-Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die Befehlszeilenschnittstelle 'cf' installiert haben. Weitere Informationen zum Installieren der Befehlszeilenschnittstelle 'cf' finden Sie unter [Befehlszeilenschnittstelle 'cf' installieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/starters/install_cli.html){: new_window}.
@@ -49,7 +49,7 @@ Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf l
 
 Wenn Sie das IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}-Plug-in zum Bereitstellen von Anwendungen verwenden, werden in der Registerkarte **Console** des Eclipse-Tools Protokolle angezeigt, die der Ausgabe des Befehls 'cf logs' ähneln. Sie können auch ein separates Eclipse-Fenster zum Verfolgen der `Protokolle` öffnen, wenn Sie die Anwendung bereitstellen.
 
-Zusätzlich zum Befehl `cf logs` können Sie in {{site.data.keyword.Bluemix_notm}} auch den {{site.data.keyword.loganalysisshort}}-Service zum Erfassen der Protokolldetails verwenden. 
+Zusätzlich zum Befehl `cf logs` können Sie in {{site.data.keyword.Bluemix_notm}} auch den {{site.data.keyword.loganalysisshort}}-Service zum Erfassen der Protokolldetails verwenden.
 
 ### Staging-Fehler für eine Node.js-Anwendung beheben
 
@@ -125,7 +125,7 @@ Wenn Sie `cf logs appname --recent` in die Befehlszeilenschnittstelle 'cf' einge
 
 Auf die Dateien `stdout.log` und `stderr.log` konnte früher standardmäßig in der {{site.data.keyword.Bluemix_notm}}-Konsole über die Anwendungssicht unter **Dateien** > **Protokolle** zugegriffen werden. Diese Anwendungsprotokollierung ist jedoch mit der aktuellen Version von Cloud Foundry nicht mehr verfügbar, von der {{site.data.keyword.Bluemix_notm}} per Hosting bereitgestellt wird. Wenn Sie weiterhin über die {{site.data.keyword.Bluemix_notm}}-Konsole unter **Dateien** > **Protokolle** mit 'stdout' und 'stderr' auf die Anwendungsprotokollierung zugreifen möchten, können Sie die Protokollierung abhängig von der jeweils verwendeten Laufzeit in andere Dateien im {{site.data.keyword.Bluemix_notm}}-Dateisystem umleiten.
 
-  * Bei Liberty for Java-Anwendungen ist die an 'stdout' und 'stderr' übertragene Ausgabe bereits in der Datei `messages.log` im Protokollverzeichnis enthalten. Suchen Sie nach Einträgen mit dem Präfix 'SystemOut' bzw. 'SystemErr'.
+  * Bei Liberty for Java-Anwendungen ist die an 'stdout' und 'stderr' übertragene Ausgabe bereits in der Datei `messages.log` im Protokollverzeichnis enthalten. Suchen Sie nach Einträgen mit dem Präfix 'SystemOut' und 'SystemErr'.
   * Bei Node.js-Anwendungen können Sie die 'console.log'-Funktion überschreiben, damit explizit in eine Datei im Protokollverzeichnis geschrieben wird.
   * Bei PHP-Anwendungen können Sie die Funktion 'error_log' verwenden, um in eine Datei im Protokollverzeichnis zu schreiben.
   * Bei Python-Anwendungen können Sie konfigurieren, dass von der Protokollfunktion in eine Datei im Protokollverzeichnis geschrieben wird: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`

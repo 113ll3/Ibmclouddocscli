@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 本端應用程式除錯
+# {{site.data.keyword.dev_cli_notm}} CLI 的本端應用程式除錯
 {: #local-debug}
 
 在 {{site.data.keyword.cloud_notm}} 中，有一些工具可協助您使用 Java 及 Node.js 來除錯應用程式。

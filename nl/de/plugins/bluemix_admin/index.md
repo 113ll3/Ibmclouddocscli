@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-04-17"
 {: #bluemixadmincli}
 
 
-Sie können Ihre {{site.data.keyword.Bluemix_notm}} Local- oder {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer zum Beispiel aus einer LDAP-Registry hinzufügen. Informationen zur Zuordnung Ihres {{site.data.keyword.Bluemix_notm}} Public-Kontos finden Sie unter [Verwalten](/docs/admin/adminpublic.html#administer).
+Sie können Ihre {{site.data.keyword.Bluemix_notm}} Local- oder {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer zum Beispiel aus einer LDAP-Registry hinzufügen. Informationen zur Verwaltung Ihres {{site.data.keyword.Bluemix_notm}}-Public-Kontos finden Sie unter [Verwalten](/docs/admin/adminpublic.html#administer).
 
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das
 {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in
@@ -41,7 +41,7 @@ hinzufügen.
 Führen Sie die folgenden Schritte aus, um das Repository hinzuzufügen und das Plug-in zu installieren:
 
 <ol>
-<li>Führen Sie den folgenden Befehl aus, um das Repository für das {{site.data.keyword.Bluemix_notm}}-Admin-Plug-in hinzuzufügen:<br/><br/>
+<li>Führen Sie den folgenden Befehl aus, um das Repository für das {{site.data.keyword.Bluemix_notm}}-Administrator-Plug-in hinzuzufügen:<br/><br/>
 <code>
 cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
@@ -59,7 +59,7 @@ Wenn Sie das Plug-in deinstallieren müssen, können Sie die folgenden Befehle v
 * Plug-in-Repository entfernen: `cf remove-plugin-repo BluemixAdmin`
 
 
-## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwenden
+## {{site.data.keyword.Bluemix_notm}}-Adminstrator-CLI-Plug-in verwenden
 
 Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in können Sie Benutzer hinzufügen oder entfernen, Benutzer aus Organisationen zuweisen oder die Zuweisung von Benutzern aufheben und andere Management-Tasks ausführen.
 
@@ -73,7 +73,7 @@ cf plugins
 
 Wenn Sie weitere Hilfe zu einem Befehl benötigen, verwenden Sie die Option `-help`.
 
-### Verbindung zu {{site.data.keyword.Bluemix_notm}} herstellen und anmelden
+### Verbindung zu {{site.data.keyword.Bluemix_notm}} herstellen und Anmeldung durchführen
 
 Bevor Sie das Administrator-CLI-Plug-in verwenden können, müssen Sie eine Verbindung herstellen und sich anmelden, falls dies noch nicht erfolgt ist.
 
@@ -110,7 +110,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**Hinweis:** Zum Hinzufügen einer bestimmten Organisation müssen Sie ein **Administrator** mit der Berechtigung **users.write** (oder **Superuser**) sein. Wenn Sie ein Organisationsmanager sind, kann Ihnen auch die Funktion bereitgestellt werden, mit der Sie Ihrer Organisation Benutzer über einen Superuser hinzufügen können, der den Befehl **enable-managers-add-users** ausführt.  Weitere Informationen hierzu finden Sie unter [Managern die Möglichkeit geben, Benutzer hinzuzufügen](index.html#clius_emau).
+**Hinweis:** Zum Hinzufügen einer bestimmten Organisation müssen Sie ein **Administrator** mit der Berechtigung **users.write** (oder **Superuser**) sein. Wenn Sie ein Organisationsmanager sind, kann Ihnen auch die Funktion bereitgestellt werden, mit der Sie Ihrer Organisation Benutzer über einen Superuser hinzufügen können, der den Befehl **enable-managers-add-users** ausführt. Weitere Informationen finden Sie unter [Managern das Hinzufügen von Benutzern ermöglichen](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -236,7 +236,7 @@ cf ba remove-user <user_name>
 
 **Tipp:** Sie können auch **ba ru** als Alias für den längeren Befehlsnamen **ba remove-user** verwenden.
 
-### Managern die Möglichkeit geben, Benutzer hinzuzufügen
+### Managern das Hinzufügen von Benutzern ermöglichen
 {: #clius_emau}
 
 Wenn Sie in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung über die **Superuser**-Berechtigung verfügen, können Sie Organisationsmanagern die Möglichkeit geben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen. Um Managern das Hinzufügen von Benutzern zu ermöglichen, verwenden Sie den folgenden Befehl:
@@ -248,10 +248,10 @@ cf ba enable-managers-add-users
 
 **Tipp:** Sie können auch **ba emau** als Alias für den längeren Befehlsnamen **ba enable-managers-add-users** verwenden.
 
-### Managern die Möglichkeit nehmen, Benutzer hinzuzufügen
+### Das Hinzufügen von Benutzern für Manager inaktivieren
 {: #clius_dmau}
 
-Wenn Organisationsmanager in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung die Fähigkeit erhalten haben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen, indem sie den Befehl **enable-managers-add-users** verwenden, und wenn Sie über die **Superuser**-Berechtigung verfügen, können Sie diese Einstellung entfernen.  Um Managern die Möglichkeit zu nehmen, Benutzer hinzuzufügen, verwenden Sie den folgenden Befehl:
+Wenn Organisationsmanager in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung die Fähigkeit erhalten haben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen, indem sie den Befehl **enable-managers-add-users** verwenden, und wenn Sie über die **Superuser**-Berechtigung verfügen, können Sie diese Einstellung entfernen. Um Managern die Möglichkeit zu nehmen, Benutzer hinzuzufügen, verwenden Sie den folgenden Befehl:
 
 ```
 cf ba disable-managers-add-users
@@ -387,7 +387,7 @@ cf bluemix-admin containers-quota <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Der Name oder die ID der Organisation in Bluemix. Dieser Parameter ist erforderlich.</dd>
+<dd class="pd">Der Name oder die ID der Organisation in IBM Cloud. Dieser Parameter ist erforderlich.</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba cq** als Alias für den längeren Befehlsnamen **bluemix-admin containers-quota** verwenden.
@@ -406,7 +406,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Der Name oder die ID der Organisation in Bluemix. Dieser Parameter ist erforderlich.</dd>
+<dd class="pd">Der Name oder die ID der Organisation in IBM Cloud. Dieser Parameter ist erforderlich.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">Geben Sie eine oder mehrere der folgenden Optionen an (der Wert muss jeweils eine ganze Zahl sein):
 <ul>
@@ -553,8 +553,8 @@ Befehlsnamen **ba unset-space** verwenden.
 ### Services für alle Organisationen aktivieren
 {: #admin_ena_service_org}
 
-Verwenden Sie den folgenden Befehl, um die Sichtbarkeit eines Service im
-{{site.data.keyword.Bluemix_notm}}-Katalog für alle Organisationen zu aktivieren:
+Verwenden Sie den folgenden Befehl, um die Sichtbarkeit eines Service im {{site.data.keyword.Bluemix_notm}}-Katalog für alle
+Organisationen zu aktivieren: 
 
 ```
 cf ba enable-service-plan <plan_identifier>
@@ -590,8 +590,7 @@ Befehlsnamen **ba disable-service-plan** verwenden.
 ### Sichtbarkeit von Services für Organisationen hinzufügen
 {: #admin_addvis_service_org}
 
-Sie können eine Organisation aus der Liste der Organisationen, für die ein bestimmter Service im
-{{site.data.keyword.Bluemix_notm}}-Katalog sichtbar ist, hinzufügen. Verwenden Sie den folgenden Befehl, um einer Organisation zu gestatten, einen bestimmten Service
+Sie können eine Organisation aus der Liste der Organisationen, für die ein bestimmter Service im {{site.data.keyword.Bluemix_notm}}-Katalog sichtbar ist, hinzufügen. Verwenden Sie den folgenden Befehl, um einer Organisation zu gestatten, einen bestimmten Service
 im {{site.data.keyword.Bluemix_notm}}-Katalog anzuzeigen:
 
 ```
@@ -650,7 +649,7 @@ durch den Service, den Sie im Befehl angeben.
 <dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, für die die Sichtbarkeit hinzugefügt werden soll. Sie können
-die Sichtbarkeit des Service für mehrere Organisationen aktivieren, indem Sie weitere Organisationsnamen oder GUIDs im Befehl angeben.</dd>
+die Sichtbarkeit des Service für mehrere Organisationen aktivieren, indem Sie zusätzliche Organisationsnamen oder GUIDs im Befehl angeben.</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba espv** als Alias für den längeren
@@ -737,7 +736,7 @@ cf ba resource-metrics
 ## Verlaufsprotokoll für Ressourcenmetriken anzeigen
 {: #cliresourceusagehistory}
 
-Sie können das Verlaufsprotokoll für Ressourcenmetriken für die Hauptspeicher- und Plattenspeichernutzung abrufen. Die zurückgegebenen Metriken umfassen die Menge der genutzten Ressourcen gegenüber der Gesamtmenge der verfügbaren Ressourcen sowohl für die physischen als auch für die reservierten Ressourcen. Protokolldaten für die Hauptspeicher- und Plattenspeichernutzung können in stündlichen, täglichen oder monatlichen Intervallen angezeigt werden.  Zum Abrufen von Daten innerhalb eines bestimmten Datumsbereichs können Sie Anfangs- und Enddatumsangaben machen. Die Standardeinstellung für die Protokolldaten, wenn kein Datum angegeben wird, lautet: Hauptspeicherdaten in stündlichen Intervallen für die letzten 48 Stunden. Die Daten werden in absteigender Reihenfolge angezeigt, wobei die neuesten Datumsangaben am Anfang stehen.   Verwenden Sie den folgenden Befehl, um die Verlaufsprotokolldaten zu Ressourcenmetriken anzuzeigen:
+Sie können das Verlaufsprotokoll für Ressourcenmetriken für die Hauptspeicher- und Plattenspeichernutzung abrufen. Die zurückgegebenen Metriken umfassen die Menge der genutzten Ressourcen gegenüber der Gesamtmenge der verfügbaren Ressourcen sowohl für die physischen als auch für die reservierten Ressourcen. Protokolldaten für die Hauptspeicher- und Plattenspeichernutzung können in stündlichen, täglichen oder monatlichen Intervallen angezeigt werden. Zum Abrufen von Daten innerhalb eines bestimmten Datumsbereichs können Sie Anfangs- und Enddatumsangaben machen. Die Standardeinstellung für die Protokolldaten, wenn kein Datum angegeben wird, lautet: Hauptspeicherdaten in stündlichen Intervallen für die letzten 48 Stunden. Die Daten werden in absteigender Reihenfolge angezeigt, wobei die neuesten Datumsangaben am Anfang stehen. Verwenden Sie den folgenden Befehl, um die Verlaufsprotokolldaten zu Ressourcenmetriken anzuzeigen:
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -756,9 +755,9 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">Genutzten und gesamten reservierten und physischen Plattenspeicher anzeigen.</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">Anfangsdatum für tägliche oder monatliche Daten (Format mm-tt-jjjj) oder Anfangsdatum und -uhrzeit für stündliche Daten (Format mm-tt-jjjj hh:mm:ss timezone) </dd>
+<dd class="pd">Anfangsdatum für tägliche oder monatliche Daten (Format mm-tt-jjjj) oder Anfangsdatum und -uhrzeit für stündliche Daten (Format mm-tt-jjjj hh:mm:ss zeitzone) </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">Enddatum für tägliche oder monatliche Daten (Format mm-tt-jjjj) oder Enddatum und -uhrzeit für stündliche Daten (Format mm-tt-jjjj hh:mm:ss timezone) </dd>
+<dd class="pd">Enddatum für tägliche oder monatliche Daten (Format mm-tt-jjjj) oder Enddatum und -uhrzeit für stündliche Daten (Format mm-tt-jjjj hh:mm:ss zeitzone) </dd>
 </dl>
 
 {: codeblock}
@@ -1122,7 +1121,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 ### Buildpack aktualisieren
 {: #cliupdabuildpack}
 
-Wenn Sie über eine Schreibberechtigung für den App-Katalog verfügen, können Sie ein vorhandenes Buildpack aktualisieren.  Verwenden Sie den folgenden Befehl, um ein Buildpack zu aktualisieren:
+Wenn Sie über eine Schreibberechtigung für den App-Katalog verfügen, können Sie ein vorhandenes Buildpack aktualisieren. Verwenden Sie den folgenden Befehl, um ein Buildpack zu aktualisieren:
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -1145,7 +1144,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ### Buildpack löschen
 {: #clidelbuildpack}
 
-Wenn Sie über eine Schreibberechtigung für den App-Katalog verfügen, können Sie ein vorhandenes Buildpack löschen.  Verwenden Sie den folgenden Befehl, um ein Buildpack zu löschen:
+Wenn Sie über eine Schreibberechtigung für den App-Katalog verfügen, können Sie ein vorhandenes Buildpack löschen. Verwenden Sie den folgenden Befehl, um ein Buildpack zu löschen:
 
 ```
 cf ba delete-buildpack <buildpack_name>

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -28,7 +28,7 @@ Registrieren Sie sich für [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/i
 
 * Sie müssen den stabilen Kanal für Docker mit Version 1.13.1 oder höher verwenden.
 
-## Vorgehensweise zur Installation von {{site.data.keyword.dev_cli_notm}}
+## Vorgehensweise bei der Installation von {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
 Zum Installieren des Toolsets können Sie den entsprechenden Befehl ausführen, um das Installationsprogramm zu starten. Es werden die folgenden empfohlenen Tools für die {{site.data.keyword.Bluemix_notm}}-Entwicklung installiert (falls noch nicht geschehen): `Homebrew` (nur Mac), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}}-CLI, {{site.data.keyword.dev_cli_notm}}-Plug-in, Cloud Functions-Plug-in, Container Registry-Plug-in, Container Service-Plug-in und `sdk-gen`-Plug-in. Führen Sie die folgenden Installationsschritte aus:
@@ -103,13 +103,13 @@ Der Abschnitt [Tools erneut installieren](/docs/troubleshoot/ts_createapps.html#
 ## Weitere Informationen
 {: #learn}
 
-Nachdem die {{site.data.keyword.dev_cli_short}}-CLI installiert wurde, können Sie lernen, wie Sie mit diesem leistungsfähigen Tool effektiver arbeiten können:
+Nachdem die {{site.data.keyword.dev_cli_short}}-CLI installiert wurde, können Sie lernen, wie Sie mit diesem leistungsfähigen Tool effektiv arbeiten. 
 - [Einführung in die IDT-CLI](index.html)
 - [IDT-Befehle (ibmcloud dev)](commands.html)
 - [Developer Tools für VS Code](vscode.html)
 - [Developer Tools für Jetbrains-IDEs](jetbrains.html)
 
-Sehen Sie sich die [Lernprogramme](/docs/apps/tutorials/tutorial_bff.html) an, die zeigen, wie Sie cloudnative Apps mithilfe der {{site.data.keyword.dev_cli_short}}-CLI erstellen.
+Sehen Sie sich die [Lernprogramme](/docs/apps/tutorials/tutorial_bff.html) an, die zeigen, wie Sie cloudnative Apps erstellen, die die {{site.data.keyword.dev_cli_short}}-CLI verwenden. 
 
 ## Weitere Referenzen
 {: #learn-more}
@@ -124,12 +124,12 @@ Die folgenden Ressourcen können bei der Entwicklung von cloudnativen Apps mit d
 
 **Fokus auf die Sprache**
 
-- [Node,js in IBM Cloud](https://developer.ibm.com/node/cloud/)
+- [Node.js in IBM Cloud](https://developer.ibm.com/node/cloud/)
 - [Spring @ IBM Cloud](https://developer.ibm.com/java/spring/)
 - [Swift @ IBM](https://developer.ibm.com/swift)
 
 **Blogs und Lernprogramme**
 
-- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 - [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

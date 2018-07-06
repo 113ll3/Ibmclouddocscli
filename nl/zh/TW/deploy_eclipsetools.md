@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-06-21"
 
 
 
@@ -22,7 +22,7 @@ lastupdated: "2018-06-20"
 {:shortdesc}
 
   1. 如果您沒有 Eclipse，請安裝 Eclipse Neon for Java EE Developers (4.6.1)。
-  
+
   2. 按住下列按鈕，將它拖放到 Eclipse 工具列，然後遵循提示以安裝 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}：
 
   ![拖放到執行中的 Eclipse Neon 工作區以安裝 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)

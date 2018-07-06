@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -25,9 +25,9 @@ Das [{{site.data.keyword.Bluemix_notm}}-CLI-Plug-in-Repository](https://tools.ng
 Wenn Sie weitere Informationen zu den Befehlen zur Verwaltung von Plug-ins benötigen, dann führen Sie den Befehl `ibmcloud plugin` aus, um die Hilfenachrichten anzuzeigen.
 {: tip}
 
-## Plug-in aus dem Repository für {{site.data.keyword.Bluemix_notm}} CLI installieren
+## Plug-in aus dem Repository für {{site.data.keyword.Bluemix_notm}}-CLI installieren
 
-### Schritt 1: Plug-in suchen
+### Schritt 1: Nach dem Plug-in suchen
 
 1. Verwenden Sie den Befehl `ibmcloud plugin repo-plugins -r REPO_NAME`, um nach einem Plug-in im Repository zu suchen.
 2. Die {{site.data.keyword.Bluemix_notm}}-CLI enthält das offizielle Repository mit dem Namen `Bluemix`. Die offiziellen Plug-ins können Sie wie im folgenden Beispiel beschrieben durchsuchen:
@@ -43,7 +43,7 @@ Wenn Sie weitere Informationen zu den Befehlen zur Verwaltung von Plug-ins benö
 
   ```
 
-### Schritt 2: Plug-in installieren
+### Schritt 2: Das Plug-in installieren
 
 Verwenden Sie den Befehl `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME`, um das Plug-in zu installieren. Verwenden Sie beispielsweise den folgenden Befehl, um ein Plug-in aus dem offiziellen IBM Plug-in-Repository `Bluemix` zu installieren:
 
@@ -56,7 +56,7 @@ Verwenden Sie den Befehl `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME`, um 
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
 
-## Plug-in lokal installieren
+## Ein Plug-in lokal installieren
 
 Verwenden Sie den Befehl `ibmcloud plugin install LOCAL_FILE_NAME`, um eine Plug-in-Binärdatei auf der lokalen Maschine zu installieren. Beispiel:
 
@@ -68,7 +68,7 @@ Verwenden Sie den Befehl `ibmcloud plugin install LOCAL_FILE_NAME`, um eine Plug
   $
   ```
 
-## Plug-in über Web-URL installieren
+## Ein Plug-in aus einer Web-URL installieren
 
 Verwenden Sie den Befehl `ibmcloud plugin install URL`, um ein Plug-in direkt über eine Web-URL zu installieren. Beispiel:
 

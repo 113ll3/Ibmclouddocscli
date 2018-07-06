@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -323,7 +323,7 @@ ibmcloud cr namespaces
 ## 附錄
 {: #appendix}
 
-全部必要條件會使用本頁面頂端的平台安裝程式，為大部分使用者安裝。如果您需要手動安裝任何元件，以下是其指示：
+會為大部分正在使用平台安裝程式的使用者，安裝所有必要條件。如果您需要手動安裝任何元件，以下是其指示：
 
 若要安裝 dev 外掛程式，必須先安裝 [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started)。
 
@@ -331,7 +331,7 @@ ibmcloud cr namespaces
 
 若要在本端執行和除錯應用程式，您也必須安裝 [Docker ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.docker.com/get-docker)。
 
-若要將應用程式部署為容器，您還必須安裝 Kubernetes、Helm 及下列 IBM Cloud CLI 外掛程式：
+若要將應用程式部署為容器，您還必須安裝 `Kubernetes`、`Helm` 及下列 IBM Cloud CLI 外掛程式：
 
 若要安裝 Kubernetes：
 * Mac 使用者：

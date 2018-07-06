@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -63,7 +63,7 @@ Verwenden Sie `ibmcloud sdk generate [arguments...] [command options]`.
 {: #gen-args}
 
 * `APP_NAME` - der Name der Cloud Foundry-App in Ihrem aktuellen Bereich
-* `OPENAPI_DOC_LOCATION` - eine URL oder ein relativer Dateipfad zur unformatierten JSON- oder Yaml-Datei mit der REST-API-Definition
+* `OPENAPI_DOC_LOCATION` - eine URL oder ein relativer Dateipfad zur unformatierten JSON- oder yaml-Datei mit der REST-API-Definition
 * `GENERATED_SDK_NAME` (optional) - der Name des generierten SDK
 
 
@@ -94,7 +94,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-Führen Sie den folgenden Befehl aus, um ein SDK aus einer URL in einer Open API-Definitionsdatei oder einer lokalen JSON- bzw. Yaml-Datei zu generieren.
+Führen Sie den folgenden Befehl aus, um ein SDK aus einer URL in einer Open API-Definitionsdatei oder einer lokalen JSON- bzw. yaml-Datei zu generieren.
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -112,7 +112,7 @@ Verwenden Sie `ibmcloud sdk validate [argument]`.
 {: #val-args}
 
 * `APP_NAME` - der Name der Cloud Foundry-App in Ihrem aktuellen Bereich
-* `OPENAPI_DOC_LOCATION` - eine URL oder ein relativer Dateipfad zur unformatierten JSON- oder Yaml-Datei mit der REST-API-Definition
+* `OPENAPI_DOC_LOCATION` - eine URL oder ein relativer Dateipfad zur unformatierten JSON- oder yaml-Datei mit der REST-API-Definition
 
 
 #### Verwendung
@@ -125,7 +125,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-Führen Sie den folgenden Befehl aus, um ein SDK aus der URL für ein API-Spezifikationsdokument oder eine lokale JSON- oder Yaml-Datei zu prüfen.
+Führen Sie den folgenden Befehl aus, um ein SDK aus der URL für ein API-Spezifikationsdokument oder eine lokale JSON- oder yaml-Datei zu prüfen.
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### Apps auflisten (Cloud Foundry)
 {: #list-apps}
 
-Verwenden Sie `ibmcloud sdk list [argument] [option]` zum Auflisten von Apps und Prüfen von API-Spezifikationen. Sie müssen die Umgebungsvariable `OPENAPI_SPEC` auf einen relativen URL-Pfad festlegen, in dem Ihre Spezifikationen gehostet sind.
+Verwenden Sie `ibmcloud sdk list [argument] [option]` zum Auflisten von Apps und Prüfen von API-Spezifikationen. Sie müssen die Umgebungsvariable `OPENAPI_SPEC` auf die relative URL des Pfads festlegen, in dem Ihre Spezifikationen gehostet sind.
 
 
 #### Argumente

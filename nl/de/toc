@@ -6,8 +6,6 @@ IBM Cloud Developer Tools (CLI- und Dev-Tools)
 
 	{: .navgroup id="learn"}
 	index.md
-	reference/bluemix_cli/get_started.md
-	[Einführung in die CF-CLI](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
@@ -16,13 +14,11 @@ IBM Cloud Developer Tools (CLI- und Dev-Tools)
 	
         	
 	{: .topicgroup}
-	IBM Cloud Developer Tools
-		idt/setting_up_idt.md
-		idt/index.md
+	IBM Cloud Developer Tools IDE Extensions
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/local_debug.md
-		[Fehlerbehebung für IDT](../troubleshoot/ts_createapps.html)
+		deploy_eclipsetools.md
+		[Deploying apps with IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
         	
 	{: .topicgroup}
 	SDKs für Mobile
@@ -33,7 +29,11 @@ IBM Cloud Developer Tools (CLI- und Dev-Tools)
 		sdk/sdk_network_request.md
 	
 	monitoring_logging.md
-	debug.md
+	
+	{: topicgroup}
+	Debugging
+		debug.md
+		idt/local_debug.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -43,7 +43,7 @@ IBM Cloud Developer Tools (CLI- und Dev-Tools)
 	reference/cfcommands/index.md
 
 	{: .topicgroup}
-	IBM Cloud CLI plug-ins
+	IBM Cloud CLI-Plug-ins
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
 		[Container Registry-CLI](../services/Registry/registry_cli.html)
@@ -60,8 +60,11 @@ IBM Cloud Developer Tools (CLI- und Dev-Tools)
 	{: .topicgroup}
 	Empfohlene Entwicklungsumgebungen
 		deploy_eclipsetools.md
-		[Apps mit IBM Eclipse Tools for IBM Cloud bereitstellen](../manageapps/eclipsetools/eclipsetools.html)
-		[Liberty- und Node.js-Apps verwalten](../runtimes/common/app_mng.html#app_management)
-		[API Connect-Entwicklertoolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[Managing Liberty and Node.js apps](../runtimes/common/app_mng.html#app_management)
+		[API Connect Developer Toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
 		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
+	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	ts_createapps.md
 	{: .navgroup-end}

@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -29,7 +29,7 @@ Um die IBM Developer Tools-Erweiterung für Jetbrains-basierte IDEs nutzen zu k�
 ## Installation
 {: #installation}
 
-Der einfachste Weg, die IBM Developers Tools-Erweiterung für Jetbrains-IDE zu installieren, ist, zur Seite [IBM Cloud Developer Tools CLI - Helper for Jetbrains IDEs](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) zu wechseln und die Anweisungen zu befolgen.
+Der einfachste Weg, die Erweiterung zu IBM Developers Tools für Jetbrains-IDE zu installieren, ist, zur Seite [IDT GitHub repo's jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) zu wechseln und die Anweisungen zu befolgen.
 
 ## Verwendung
 {: #usage}

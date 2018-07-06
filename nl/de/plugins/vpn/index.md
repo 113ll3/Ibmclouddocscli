@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-12"
 {:shortdesc: .shortdesc}
 
 
-# VPN-CLI-Plug-in für die Befehlszeilenschnittstelle 'cf'
+# VPN-CLI-Plug-in für die Befehlszeilenschnittstelle 'cf' 
 {: #vpn_cli_for_cf}
 
 
@@ -26,7 +26,7 @@ Die nachfolgenden Anweisungen sind für das Plug-in für die Cloud Foundry-Befeh
 ## Plug-in für die Befehlszeilenschnittstelle 'cf' installieren
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Weitere Informationen finden Sie unter [Cloud Foundry-Befehlszeilenschnittstelle  ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}.
 
-## CLI-Plug-in für VPN installieren
+## Plug-in für die Befehlszeilenschnittstelle VPN installieren
 **Hinweis:** Wenn Sie eine Vorgängerversion des installierten {{site.data.keyword.vpn_short}}-CLI-Plug-ins besitzen, müssen Sie sie zunächst deinstallieren. Verwenden Sie den folgenden Befehl:
 
 ```
@@ -35,7 +35,7 @@ cf uninstall-plugin vpn
 
 ### Lokal installieren
 
-1. Laden Sie das {{site.data.keyword.vpn_short}}-Plug-in für Ihre Plattform aus dem [ {{site.data.keyword.Bluemix_notm}} CLI-Plug-in-Repository![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} herunter.
+1. Laden Sie das {{site.data.keyword.vpn_short}}-Plug-in für Ihre Plattform aus dem [ {{site.data.keyword.Bluemix_notm}} CLI-Plug-in-Repository ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} herunter.
 2. Installieren Sie das {{site.data.keyword.vpn_short}}-Plug-in mit folgendem Befehl:
 **Hinweis:** Wechseln Sie entweder zur Position des {{site.data.keyword.vpn_short}}-Plug-ins oder geben Sie sein Verzeichnis an.
 
@@ -112,13 +112,13 @@ Die IP-Adresse des fernen Endpunkts des VPN-Tunnels.
 
 **-i:** Der Status des Initiators. Standardwert: bi-directional.
 
-**-dpd-timeout:** Der Wert für das Zeitlimit in Sekunden, nach dessen Ablauf die Sitzung beendet wird.  Bereich: 6 - 86400 Sekunden. Standardwert: 120 Sekunden. Der Keepalive-Zeitlimitwert muss höher als der Wert des Keepalive-Intervalls sein.
+**-dpd-timeout:** Der Wert für das Zeitlimit in Sekunden, nach dessen Ablauf die Sitzung beendet wird. Bereich: 6 - 86400 Sekunden. Standardwert: 120 Sekunden. Der Keepalive-Zeitlimitwert muss höher als der Wert des Keepalive-Intervalls sein.
 
 **-dpd-interval:** Das Keepalive-Intervall in Sekunden. Sendet Keepalive-Nachrichten im konfigurierten Intervall, um den Aktivitätszustand des Peers zu prüfen. Bereich: 5-86399 Sekunden. Standardwert: 15 Sekunden.
 
 **-ike:** Der Name der IKE-Richtlinie.
 
-**-ipsec:** Der Name der IPsec-Richtlinie.
+**-ipsec:** Der Name der IPSec-Richtlinie.
 
 
 ### cf vpn-create ike
@@ -153,7 +153,7 @@ Der Name des Gateways.
 
 ### cf vpn-create ipsec
 
-Erstellt eine IPsec-Richtlinie.
+Erstellt eine IPSec-Richtlinie.
 
 ```
 cf vpn-create ipsec <Richtlinienname> -g <Gateway-Name> -d <Beschreibung> -pfs <Gruppe> -e <Verschlüsselungsalgorithmus> -lv <Lebensdauerwert> -auth <Autorisierungsalgorithmus>
@@ -161,8 +161,7 @@ cf vpn-create ipsec <Richtlinienname> -g <Gateway-Name> -d <Beschreibung> -pfs <
 #### Parameter
 {: #p3}
 
-**Richtlinienname:**
-Der Name der IPsec-Richtlinie.
+**Richtlinienname:** Der Name der IPSec-Richtlinie.
 
 **Gateway-Name:**
 Der Name des Gateways.
@@ -220,7 +219,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-Zeigt Informationen zu den aktuellen IPsec-Verbindungen an.
+Zeigt Informationen zu den aktuellen IPSec-Verbindungen an.
 
 ```
 cf vpn-show ipsecs
@@ -241,7 +240,7 @@ cf vpn-show ike <Richtlinienname>
 ```
 ### cf vpn-show ipsec
 
-Zeigt Informationen zu einer IPsec-Verbindung an.
+Zeigt Informationen zu einer IPSec-Verbindung an.
 
 ```
 cf vpn-show ipsec <Richtlinienname>
@@ -328,7 +327,7 @@ Der vorab verteilte Schlüssel.
 
 **-ike:** Der Name der IKE-Richtlinie.
 
-**-ipsec:** Der Name der IPsec-Richtlinie.
+**-ipsec:** Der Name der IPSec-Richtlinie.
 
 
 ### cf vpn-update ike
@@ -363,7 +362,7 @@ Der Name des Gateways.
 
 ### cf vpn-update ipsec
 
-Aktualisiert eine IPsec-Richtlinie.
+Aktualisiert eine IPSec-Richtlinie.
 
 ```
 cf vpn-update ipsec <Richtlinienname> -g <Gateway-Name> -d <Beschreibung> -pfs <Gruppe> -e <Verschlüsselungsalgorithmus> -lv <Lebensdauerwert> -auth <Autorisierungsalgorithmus>
@@ -371,8 +370,7 @@ cf vpn-update ipsec <Richtlinienname> -g <Gateway-Name> -d <Beschreibung> -pfs <
 #### Parameter
 {: #p7}
 
-**Richtlinienname:**
-Der Name der IPsec-Richtlinie.
+**Richtlinienname:** Der Name der IPSec-Richtlinie.
 
 
 ##### Optionale Parameter:

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -109,7 +109,7 @@ ibmcloud dev help
 - [Developer Tools for VS Code](vscode.html)
 - [Developer Tools for Jetbrains IDE](jetbrains.html)
 
-查看[指導教學](/docs/apps/tutorials/tutorial_bff.html)，以顯示如何使用 {{site.data.keyword.dev_cli_short}} CLI 建立雲端原生應用程式。
+查看[指導教學](/docs/apps/tutorials/tutorial_bff.html)，以顯示如何建立使用 {{site.data.keyword.dev_cli_short}} CLI 的雲端原生應用程式。
 
 ## 進一步閱讀
 {: #learn-more}
@@ -124,12 +124,12 @@ ibmcloud dev help
 
 **著重的語言**
 
-- [IBM Cloud 上的 Node.js](https://developer.ibm.com/node/cloud/)
+- [Node.js on IBM Cloud](https://developer.ibm.com/node/cloud/)
 - [Spring @ IBM Cloud](https://developer.ibm.com/java/spring/)
 - [Swift @ IBM](https://developer.ibm.com/swift)
 
 **部落格及指導教學**
 
-- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 - [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
