@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -24,7 +24,7 @@ Il est recommandé d'installer l'interface de ligne de commande {{site.data.keyw
 {: tip}
 
 
-L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}.
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} permet de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}.
 
 
 Pour vous initier en utilisant uniquement l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} :
@@ -39,7 +39,7 @@ Pour vous initier en utilisant uniquement l'interface de ligne de commande {{sit
    **Les éditions 32 bits et les versions antérieures sont disponibles [ici](all_versions.html).
 
 1. Exécutez le programme d'installation
-   * Pour Mac OS et Windows, exécutez simplement le programme d'installation.
+   * Pour Mac OS et Windows, exécutez le programme d'installation.
    * Pour Linux, procédez à l'extraction du contenu du package et exécutez le script `install_bluemix_cli`.
 
 1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}}
@@ -54,7 +54,7 @@ Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](https:
 ## Autres liens permettant d'explorer davantage l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
 * [Autres options de téléchargement et d'installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](download_cli.html)
-* [Extension de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des plug-ins](extend_cli.html)
+* [Extension des fonctions de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des plug-in](extend_cli.html)
 * [Toutes les versions de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} et notes sur l'édition](all_versions.html)
 * [Document sur l'utilisation des commandes de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](bx_cli.html)
 
@@ -63,5 +63,5 @@ Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](https:
 {: #issues}
 
 Utilisez les options suivantes pour signaler des problèmes ou soumettre des demandes de nouvelle fonction :
- * Signalez des problèmes dans [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg)
+ * Signalez des problèmes dans [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg)
  * Laissez des messages sur le [canal Slack](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg)

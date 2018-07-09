@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-06-21"
 
 
 
@@ -22,7 +22,7 @@ lastupdated: "2018-06-20"
 {:shortdesc}
 
   1. Si vous ne disposez pas encore d'Eclipse, installez Eclipse Neon for Java EE Developers (4.6.1).
-  
+
   2. Cliquez en maintenant le bouton de votre souris enfoncé sur le bouton suivant pour le faire glisser et le déposer dans la barre d'outils Eclipse, puis suivez les invites d'installation d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} :
 
   ![Glisser et déposer dans un espace de travail Eclipse Neon en cours d'exécution pour installer IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)

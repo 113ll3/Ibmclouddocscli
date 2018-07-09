@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,61 +14,95 @@ lastupdated: "2018-05-23"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.dev_cli_notm}} Présentation
+# Initiation à l'interface de ligne de commande de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-{{site.data.keyword.dev_cli_notm}} est un outil de création, de développement et de déploiement d'applications à l'aide d'une ligne de commande qui est utilisée par les développeurs souhaitant utiliser une ligne de commande pour développer des applications Web, mobiles et de microservice de bout en bout. Commencez rapidement avec un jeu d'outils recommandé en exécutant l'un des scripts ci-après.
-{: shortdesc}
+En suivant ce tutoriel, vous allez installer un ensemble d'outils de développeur {{site.data.keyword.Bluemix}}, vérifier l'installation et configurer votre environnement. Les outils de développeur {{site.data.keyword.Bluemix}} offrent une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice de bout en bout.
+{:shortdesc}
 
-## Prérequis pour {{site.data.keyword.dev_cli_notm}}
+Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} et des outils suivants : 
+
+* `Homebrew` (Mac uniquement)
+* `Git`
+* `Docker`
+* `Helm`
+* `kubectl`
+* `curl`
+* Plug-in {{site.data.keyword.dev_cli_notm}}
+* Plug-in {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
+* Plug-in {{site.data.keyword.registrylong_notm}}
+* Plug-in {{site.data.keyword.containerlong_notm}}
+* Plug-in `sdk-gen` 
+
+## Avant de commencer
 {: #prereq}
 
-Inscrivez-vous auprès de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
+Vous devez avoir un compte [{{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et la configuration système doit être respectée :
 
 * Si vous utilisez Microsoft Windows, vous devez utiliser Windows 10 ou une version ultérieure.
-
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
-## Comment installer {{site.data.keyword.dev_cli_notm}}
-{: #installation}
+## Etape 1 : Exécuter la commande install
+{: #step1}
 
-Pour installer le jeu d'outils, vous pouvez exécuter la commande appropriée afin de lancer le programme d'installation. Cette action entraîne l'installation des outils recommandés pour le développement d'{{site.data.keyword.Bluemix_notm}} (s'ils ne sont pas déjà installés) : `Homebrew` (Mac uniquement), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, plug-in {{site.data.keyword.dev_cli_notm}}, plug-in Cloud Functions, plug-in Container Registry, plug-in Container Service et plug-in `sdk-gen`.
+* Pour Mac et Linux, exécutez la commande suivante :
 
-**Mac et Linux :**
+  ```
+  curl -sL https://ibm.biz/idt-installer | bash
+  ```
+  {: codeblock}
+<br><br>
 
-```
-curl -sL https://ibm.biz/idt-installer | bash
-```
-{: codeblock}
+* Pour Windows 10, exécutez la commande suivante en tant qu'administrateur :
 
+  ```
+  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  ```
+  {: codeblock}
+<br><br>
+  Cliquez avec le bouton droit de la souris sur l'icône Windows PowerShell et sélectionnez **Exécuter en tant qu'administrateur**.
+  {: tip}
 
-**Windows 10 :**
+## Etape 2 : Vérifier l'installation
+{: #step2}
 
-* Remarque : ouvrez Windows PowerShell en cliquant avec le bouton droit de la souris sur l'icône Windows PowerShell et en sélectionnant "Run as Administrator".
-
-```
-Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
-```
-{: codeblock}
-
-## Vérification de l'installation
-Pour vérifier l'installation, exécutez la commande `help` :
+Pour vérifier que l'installation de l'interface de ligne de commande et des outils de développeur a abouti, exécutez la commande `help` :
 
 ```
 ibmcloud dev help
 ```
 {: codeblock}
+<br><br>
+La sortie inclut les instructions d'utilisation, la version actuelle et les commandes prises en charge.
 
-Si l'installation a abouti, la sortie devrait indiquer les instructions d'utilisation, la version actuelle et les commandes prises en charge.
+## Etape 3 : Configurer votre environnement
+{: #step3}
 
+1. Connectez-vous à un noeud final d'API dans votre région {{site.data.keyword.Bluemix_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis :
 
-## Autres liens permettant d'explorer davantage {{site.data.keyword.dev_cli_notm}}
+	```
+	ibmcloud api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 
-- [Configuration détaillée](/docs/cli/idt/setting_up_idt.html)
-- [Syntaxe](/docs/cli/idt/index.html)
-- [Commandes](/docs/cli/idt/commands.html)
-- [Plug-in de l'interface de ligne de commande](/docs/cli/reference/bluemix_cli/extend_cli.html)
-- [VSCode IDE Extension](/docs/cli/idt/vscode.html)
-- [Installation manuelle de l'interface de ligne de commande IBM Cloud](/docs/cli/reference/bluemix_cli/get_started.html)
-- [Signalement de problèmes sur GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
-- [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Demandez un accès par équipe en cliquant [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+2. Connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de votre IBMid.
+
+	```
+	ibmcloud login
+	```
+	{: codeblock}
+<br><br>
+	Si vos données d'identification sont rejetées, vous pouvez utiliser un ID fédéré. Pour plus de détails, voir [Connexion à l'aide d'un ID fédéré](/docs/iam/login_fedid.html#using-an-api-key).
+	{: tip}
+
+3. Définissez votre organisation et votre espace.
+
+	```
+	ibmcloud target -o <value> -s <value>
+	```
+	{: codeblock}
+
+## Etapes suivantes
+{: #next-steps}
+
+Vous êtes maintenant à prêt à développer et à déployer votre première application ! Pour plus d'informations, voir [Création d'une application Web de base à l'aide d'un kit de démarrage](/docs/apps/tutorials/tutorial_web.html).

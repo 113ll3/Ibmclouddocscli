@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -320,7 +320,7 @@ ibmcloud cr namespaces
 ## ANNEXE
 {: #appendix}
 
-Tous les composants prérequis seront installés pour la plupart des utilisateurs à l'aide des programmes d'installation de plateforme en haut de cette page. Si vous devez installer manuellement des composants, suivez les instructions ci-dessous :
+Tous les composants prérequis sont installés pour la plupart des utilisateurs ayant recours aux programmes d'installation de la plateforme. Si vous devez installer manuellement des composants, suivez les instructions ci-dessous :
 
 Pour installer le plug-in dev, vous devez d'abord installer l'[interface de ligne de commande IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
 
@@ -328,7 +328,7 @@ Pour utiliser le plug-in dev proprement dit, vous devez l'installer en exécutan
 
 Pour exécuter et déboguer des applications localement, vous devez également installer [Docker ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.docker.com/get-docker).
 
-Pour déployer une application en tant que conteneur, vous devez également installer Kubernetes, Helm et les plug-in d'interface de ligne de commande IBM Cloud suivants :
+Pour déployer une application en tant que conteneur, vous devez également installer `Kubernetes`, `Helm` et les plug-in d'interface de ligne de commande IBM Cloud suivants :
 
 Pour installer Kubernetes :
 * Utilisateurs Mac :
@@ -348,10 +348,10 @@ Pour installer Helm :
 * Utilisateurs Windows :
 Téléchargez et installez le fichier binaire depuis https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Pour installer le plug-in container-registry :
+Pour installer le plug-in container-registry, entrez la commande suivante :
 `ibmcloud plugin install container-registry`
 
-Pour installer le plug-in container-service :
+Pour installer le plug-in container-service, entrez la commande suivante :
 `ibmcloud plugin install container-service`
 
 
@@ -374,8 +374,8 @@ Lorsque vous publiez des questions sur les forums, vous pouvez les étiqueter de
 
 Si vous avez des questions techniques sur le développement ou le déploiement d'une application avec {{site.data.keyword.dev_console}} ou le plug-in {{site.data.keyword.dev_cli_notm}} :
 
-* Postez votre question sur [stackoverflow![External link icon](../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) et marquez votre question avec les étiquettes `bluemix-dev-services` et `ibm-bluemix`.
-* Postez votre question sur [Slack ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm-cloud-tech.slack.com/) sur le canal `bluemix-dev-services`. [Inscrivez-vous ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IBMCloudNativeSlack) maintenant.
+* Postez votre question sur [stackoverflow![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) et marquez votre question avec les étiquettes `bluemix-dev-services` et `ibm-bluemix`.
+* Postez votre question sur [Slack ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://ibm-cloud-tech.slack.com/) sur le canal `bluemix-dev-services`. [Inscrivez-vous ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://ibm.biz/IBMCloudNativeSlack) maintenant.
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
@@ -383,8 +383,8 @@ Si vous avez des questions techniques sur le développement ou le déploiement d
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/bluemix-dev-services/?smartspace=bluemix) forum. Include the  "bluemix-dev-services" and "bluemix" tags.
 * -->
 
-Pour plus d'informations sur l'utilisation des forums, voir la rubrique expliquant [comment obtenir de l'aide ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#getting-help).
+Pour plus d'informations sur l'utilisation des forums, voir la rubrique expliquant [comment obtenir de l'aide ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/support/index.html#getting-help).
 
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service {{site.data.keyword.IBM}}, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique expliquant [comment contacter le support![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-support).
+Pour plus d'informations sur l'ouverture d'un ticket de demande de service {{site.data.keyword.IBM}}, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique expliquant [comment contacter le support![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/support/index.html#contacting-support).
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->

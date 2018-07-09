@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 # SDK mobiles disponibles
@@ -16,7 +16,7 @@ les extraire dans votre application.
 ## SDK de serveur
 {: #server_sdk}
 
-Si vous disposez d'une application serveur Java, NodeJS ou Swift, vous pouvez utiliser les SK suivants pour communiquer avec les services respectifs :
+Si vous disposez d'une application serveur Java, NodeJS ou Swift, vous pouvez utiliser les SDK suivants pour communiquer avec les services respectifs :
 
 
 ### SDK serveur {{site.data.keyword.appid_short}}
@@ -57,11 +57,8 @@ Vous pouvez utiliser les SDK suivants dans votre application mobile pour utilise
 - [SDK {{site.data.keyword.mobilepushshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push)
 
 
-### Plug-ins Cordova
+### Plug-in Cordova
 {: #cordova_plugin}
 
-- [Plug-in
-de base ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+- [Plug-in de base ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 - [Plug-in {{site.data.keyword.mobilepushshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
-
-

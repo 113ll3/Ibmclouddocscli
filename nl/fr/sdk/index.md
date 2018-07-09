@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2018-05-23"
 
 Le plug-in de générateur de SDK {{site.data.keyword.IBM}} peut être installé dans l'[interface de ligne de commande {{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/cli/reference/bluemix_cli/all_versions.html).
 
-En tant que développeur sous {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser ce plug-in pour générer des SDK depuis votre définition d'API REST conforme à la [spécification Open API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/). Lorsque vous apportez des modifications à votre définition d'API REST, vous pouvez utiliser ce plug-in pour ne régénérer que le SDK au lieu de régénérer l'ensemble du projet.
+En tant que développeur sous {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser ce plug-in pour générer des SDK depuis votre définition d'API REST conforme à la [spécification Open API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.openapis.org/). Lorsque vous apportez des modifications à votre définition d'API REST, vous pouvez utiliser ce plug-in pour ne régénérer que le SDK au lieu de régénérer l'ensemble du projet.
 
 Vous pouvez aussi voir si vos applications Cloud Foundry dans un espace donné
 disposent
@@ -36,8 +36,8 @@ La définition d'API REST doit être valide et hébergée sur un noeud final de 
 
 Vérifiez que vous répondez bien aux exigences suivantes :
 
-* Vous disposez d'un compte [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net)
-* Vous disposez d'une définition d'API valide conforme à la spécification [Open API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/)
+* Vous disposez d'un compte [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://bluemix.net)
+* Vous disposez d'une définition d'API valide conforme à la spécification [Open API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.openapis.org/)
 
 
 ## Installation
@@ -62,7 +62,7 @@ Utilisez les commandes ci-après pour générer un SDK, valider des fichiers de 
 ### Génération d'un SDK
 {: #gen}
 
-Utilisez `ibmcloud sdk generate [arguments...] [options de commande]`.
+Utilisez `ibmcloud sdk generate [arguments...] [command options]`.
 
 
 #### Arguments
@@ -70,9 +70,7 @@ Utilisez `ibmcloud sdk generate [arguments...] [options de commande]`.
 
 * `APP_NAME` - nom de l'application Cloud Foundry dans votre
 espace en cours
-* `OPENAPI_DOC_LOCATION` - URL ou chemin
-d'accès relatif au
-fichier de définition d'API REST brut JSON ou Yaml
+* `OPENAPI_DOC_LOCATION` - URL ou chemin d'accès relatif au fichier de définition d'API REST brut JSON ou yaml
 * `GENERATED_SDK_NAME` (facultatif) - nom du SDK généré
 
 
@@ -105,8 +103,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-Pour générer un SDK depuis une URL dans un fichier de définition Open API
-ou un fichier Yaml ou JSON local, utilisez la commande suivante :
+Pour générer un SDK depuis une URL dans un fichier de définition Open API ou un fichier yaml ou JSON local, utilisez la commande suivante :
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -125,9 +122,7 @@ Utilisez `ibmcloud sdk validate [argument]`.
 
 * `APP_NAME` - nom de l'application Cloud Foundry dans votre
 espace en cours
-* `OPENAPI_DOC_LOCATION` - URL ou chemin
-d'accès relatif au
-fichier de définition d'API REST brut JSON ou Yaml
+* `OPENAPI_DOC_LOCATION` - URL ou chemin d'accès relatif au fichier de définition d'API REST brut JSON ou yaml
 
 
 #### Syntaxe
@@ -140,7 +135,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-Pour valider un SDK depuis l'URL dans un document de spécification d'API ou un fichier Yaml ou JSON local, utilisez la commande suivante.
+Pour valider un SDK depuis l'URL dans un document de spécification d'API ou un fichier yaml ou JSON local, utilisez la commande suivante.
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -152,7 +147,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### Liste des applications (Cloud Foundry)
 {: #list-apps}
 
-Utilisez `ibmcloud sdk list [argument] [option]` pour répertorier les applications et valider les spécifications d'API. La variable d'environnement `OPENAPI_SPEC` doit être définie par rapport au chemin d'URL relatif qui héberge votre spécification.
+Utilisez `ibmcloud sdk list [argument] [option]` pour répertorier les applications et valider les spécifications d'API. La variable d'environnement `OPENAPI_SPEC` doit être définie par rapport à l'URL relative du chemin qui héberge votre spécification.
 
 
 #### Arguments

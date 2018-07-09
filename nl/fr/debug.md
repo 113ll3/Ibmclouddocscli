@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-05-29"
 {:screen: .screen}
 
 
-# Débogage
+# Débogage des applications cf pour {{site.data.keyword.Bluemix_notm}}
 {: #debugging}
 
 Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, vous pouvez afficher les fichiers journaux et déboguer les erreurs.
@@ -34,7 +34,7 @@ Vous pouvez rencontrer des problèmes lorsque vous constituez vos applications d
 échoue, vous pouvez rechercher et examiner les journaux de transfert (STG) afin de déterminer ce qui s'est passé lors du déploiement
 de l'application et corriger le problème. Pour plus d'informations sur les méthodes d'affichage des journaux pour les applications {{site.data.keyword.Bluemix}}, voir [Affichage des journaux ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}.  
 
-Pour comprendre la raison pour laquelle votre application ne fonctionne pas dans {{site.data.keyword.Bluemix_notm}}, vous devez savoir comment une application est déployée et exécutée dans {{site.data.keyword.Bluemix_notm}}. Pour des informations détaillées, voir [Déploiement d'application ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
+Pour comprendre la raison pour laquelle votre application ne fonctionne pas dans {{site.data.keyword.Bluemix_notm}}, vous devez savoir comment une application est déployée et exécutée dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Déploiement d'application ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
 La procédure suivante présente l'utilisation de la commande `cf logs` pour déboguer des erreurs constitution. Avant de continuer, vérifiez que vous avez installé l'interface de ligne de commande cf. Pour plus d'informations sur l'installation de l'interface de ligne de commande cf, voir [Installation de l'interface de ligne de commande cf ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/starters/install_cli.html){: new_window}.
@@ -54,7 +54,7 @@ La procédure suivante présente l'utilisation de la commande `cf logs` pour dé
 
 Si vous utilisez le plug-in des outils IBM Eclipse for {{site.data.keyword.Bluemix_notm}} pour déployer des applications, dans l'onglet **Console** de l'outil Eclipse figurent des journaux similaires à la sortie des journaux cf. Vous pouvez également ouvrir une fenêtre Eclipse distincte pour suivi des journaux lorsque vous déployez l'application.
 
-Outre la commande `cf logs`, dans {{site.data.keyword.Bluemix_notm}}, vous pouvez également utiliser le service {{site.data.keyword.loganalysisshort}} pour collecter les informations des journaux. 
+Outre la commande `cf logs`, dans {{site.data.keyword.Bluemix_notm}}, vous pouvez également utiliser le service {{site.data.keyword.loganalysisshort}} pour collecter les informations des journaux.
 
 ### Débogage des erreurs de constitution pour une application Node.js
 
@@ -96,7 +96,7 @@ Dans le cas d'une application Node.js, l'agent DEA utilise les informations du f
 {: screen}
 
 
-Vous pouvez constater qu'une virgule figure à la fin de la ligne 17 ; par conséquent une paire clé-valeur est attendue à la ligne 18. Pour corriger le problème, supprimez la virgule :
+Vous pouvez constater qu'une virgule figure à la fin de la ligne 17 ; par conséquent une paire clé-valeur se trouvant à la ligne 18 est attendue. Pour corriger le problème, supprimez la virgule :
 
 ```
 15   "jade": "~1.3.0",
@@ -135,7 +135,7 @@ console {{site.data.keyword.Bluemix_notm}} depuis votre ordinateur et disposer d
 
 Auparavant, les fichiers `stdout.log` et `stderr.log` étaient accessibles par défaut via la vue d'application dans la console {{site.data.keyword.Bluemix_notm}} sous **Fichiers** > **journaux**. Toutefois, cette journalisation d'application n'est plus disponible dans la version en cours de Cloud Foundry, où {{site.data.keyword.Bluemix_notm}} est hébergé. Pour pouvoir continuer à accéder aux journaux stdout et stderr de l'application via la console {{site.data.keyword.Bluemix_notm}} sous **Fichiers** > **journaux**, vous pouvez rediriger la sortie de journal vers d'autres fichiers dans le système de fichiers {{site.data.keyword.Bluemix_notm}}, en fonction de votre environnement d'exécution.
 
-  * Pour les applications Liberty for Java, la sortie dirigée aux fichiers stdout et stderr est déjà intégrée dans le fichier `messages.log` sous le répertoire 'logs'. Recherchez les entrées portant respectivement le préfixe SystemOut et SystemErr.
+  * Pour les applications Liberty for Java, la sortie dirigée aux fichiers stdout et stderr est déjà intégrée dans le fichier `messages.log` sous le répertoire 'logs'. Recherchez les entrées portant le préfixe SystemOut et SystemErr.
   * Pour les applications Node.js, vous pouvez redéfinir la fonction console.log afin de consigner explicitement la sortie journal dans un fichier sous le répertoire 'logs'.
   * Pour les applications PHP, vous pouvez utiliser la fonction error_log pour consigner la sortie journal dans un fichier sous le répertoire 'logs'.
   * Pour les applications Python, vous pouvez indiquer au consignateur d'utiliser un fichier situé sous le répertoire 'logs' : `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`

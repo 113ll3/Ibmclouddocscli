@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 
 ---
@@ -12,10 +12,10 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Débogage d'une application locale
+# Débogage d'application locale pour l'interface de ligne de commande {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
-Il existe des outils vous permettant de déboguer votre application en Java et Node.js dans {{site.data.keyword.cloud_notm}}.
+Il existe des outils vous permettant de déboguer votre application Java et Node.js dans {{site.data.keyword.cloud_notm}}.
 
 ## Débogage d'une application Java
 {: #java}
@@ -32,7 +32,7 @@ ibmcloud dev debug
 
 	* Eclipse
       1. Importez le **projet maven existant** dans Eclipse.
-      2. Créez une configuration de débogage d'[application distante Java ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm).
+      2. Créez une configuration de débogage d'[application distante Java ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm).
       		1. Entrez l'adresse IP ou `localhost:<port>`  
       		2. Entrez `7777` comme numéro de port.
       		3. Spécifiez le nom du projet java que vous avez importé.

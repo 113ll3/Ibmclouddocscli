@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -28,7 +28,7 @@ Inscrivez-vous auprès de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ib
 
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
-## Comment installer {{site.data.keyword.dev_cli_notm}}
+## Installation d'{{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
 Pour installer le jeu d'outils, vous pouvez exécuter la commande appropriée afin de lancer le programme d'installation. Cette action entraîne l'installation des outils recommandés pour le développement d'{{site.data.keyword.Bluemix_notm}} (s'ils ne sont pas déjà installés) : `Homebrew` (Mac uniquement), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, plug-in {{site.data.keyword.dev_cli_notm}}, plug-in Cloud Functions, plug-in Container Registry, plug-in Container Service et plug-in `sdk-gen`. Pour lancer l'installation, procédez comme suit :
@@ -81,7 +81,7 @@ La section [Réinstallation d'outils](/docs/troubleshoot/ts_createapps.html#appe
 
 	**Remarque :** si vos données d'identification sont rejetées, vous utilisez peut-être un ID fédéré. Procédez comme suit pour vous authentifier en utilisant un ID fédéré.
 
-	1. Connectez-vous à [{{site.data.keyword.iamshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.bluemix.net/iam/#/apikeys){: new_window}.
+	1. Connectez-vous à [{{site.data.keyword.iamshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.bluemix.net/iam/#/apikeys){: new_window}.
 	2. Sélectionnez **Créer une clé d'API**.
 		* Entrez une description et un nom de clé d'API.
 	3. Téléchargez votre clé d'API.
@@ -109,7 +109,7 @@ Maintenant que l'interface de ligne de commande {{site.data.keyword.dev_cli_shor
 - [Developer Tools pour VS Code](vscode.html)
 - [Developer Tools pour interfaces IDE Jetbrains](jetbrains.html)
 
-Consultez les [tutoriels](/docs/apps/tutorials/tutorial_bff.html) montrant comment créer des applications natives en cloud à l'aide de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}}.
+Consultez les [tutoriels](/docs/apps/tutorials/tutorial_bff.html) présentant comment créer des applications natives en cloud qui utilisent l'interface de ligne de commande {{site.data.keyword.dev_cli_short}}.
 
 ## Pour aller plus loin
 {: #learn-more}
@@ -118,7 +118,7 @@ Les ressources suivantes peuvent vous être utiles lorsque vous développez des 
 
 - [Principale page d'arrivée IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Page de produit principale pour l'interface de ligne de commande IDT
 - [Programme d'installation d'IBM Developer Tools](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Référentiel GitHub public contenant des instructions d'installation détaillées
-- [IBM Cloud App service](https://console.bluemix.net/developer/appservice) - Page de console IBM Cloud qui accompagne les outils IDT pour créer et gérer les applications natives en cloud
+- [Service IBM Cloud App](https://console.bluemix.net/developer/appservice) - Page de console IBM Cloud qui accompagne les outils IDT pour créer et gérer les applications natives en cloud
 - [Signalement de problèmes sur GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Demandez un accès par équipe en cliquant [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
@@ -130,6 +130,6 @@ Les ressources suivantes peuvent vous être utiles lorsque vous développez des 
 
 **Blogues et tutoriels**
 
-- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 - [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 
 # Traitement des incidents liés à {{site.data.keyword.Bluemix_notm}} Developer Tools
 {: #troubleshoot}
@@ -189,7 +189,7 @@ Supprimez le dossier `node_modules` et relancez l'exécution de la commande `bx 
 
 ## Echec du déploiement sur {{site.data.keyword.Bluemix_notm}}
 
-Une erreur se produit lorsque vous tentez d'effectuer un déploiement sur {{site.data.keyword.Bluemix_notm}} avec l'interface de ligne de commande{{site.data.keyword.dev_cli_short}} et qu'aucune erreur ne s'affiche.
+Une défaillance se produit lorsque vous tentez d'effectuer un déploiement sur {{site.data.keyword.Bluemix_notm}} avec l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} mais aucune erreur ne s'affiche.
 {: tsSymptoms}
 
 Vous n'êtes peut-être pas connecté à votre compte.
@@ -283,9 +283,8 @@ Pour installer Helm :
 * Utilisateurs Windows :
 Téléchargez et installez le fichier binaire depuis https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Pour installer le plug-in container-registry :
+Pour installer le plug-in container-registry, entrez :
 `bx plugin install container-registry`
 
-Pour installer le plug-in container-service :
+Pour installer le plug-in container-service, entrez :
 `bx plugin install container-service`
-

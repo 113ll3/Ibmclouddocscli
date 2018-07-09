@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -84,7 +84,7 @@ Utilisez l'index du tableau suivant pour consulter les commandes Cloud Foundry f
 ## cf api
 {: #cf_api}
 
-Utilisez cette commande pour afficher ou spécifier l'adresse URL du noeud final d'API de {{site.data.keyword.Bluemix_notm}}.
+Utiliser cette commande pour afficher ou spécifier l'adresse URL du noeud final d'API de {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf api [URL_serveur_Bluemix] [--skip-ssl-validation] [--unset]
@@ -96,7 +96,7 @@ cf api [URL_serveur_Bluemix] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>URL_serveur_Bluemix (facultatif)</dt>
-   <dd>Adresse URL du noeud final d'API Bluemix que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En général, il s'agit de `https://api.{NomDomaine}`.
+   <dd>Adresse URL du noeud final d'API IBM Cloud que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En général, il s'agit de `https://api.{NomDomaine}`.
    Si vous voulez afficher l'adresse URL du noeud final de l'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la commande cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Désactive le processus de validation SSL. L'utilisation de ce paramètre peut entraîner des problèmes de sécurité.</dd>
@@ -106,19 +106,19 @@ cf api [URL_serveur_Bluemix] [--skip-ssl-validation] [--unset]
 
 <strong>Exemples</strong> :
 
-Affichez le noeud final d'API en cours.
+Afficher le noeud final d'API en cours.
 ```
 cf api
 ```
 {: codeblock}
 
-Retirez la connexion à tous les noeuds finaux d'API pour api.ng.bluemix.net.
+Retirer la connexion à tous les noeuds finaux d'API pour api.ng.bluemix.net.
 ```
 cf api api.ng.bluemix.net --unset
 ```
 {: codeblock}
 
-Désactivez le processus de validation SSL pour api.ng.bluemix.network.
+Désactiver le processus de validation SSL pour api.ng.bluemix.network.
 ```
 cf api api.ng.bluemix.net --skip-ssl-validation
 ```
@@ -132,10 +132,7 @@ Répertorie toutes les applications que vous avez déployées dans l'espace en c
 chaque application est également affiché.
 
 Supposez que vous disposez d'une instance pour une application. La colonne des instances de la réponse générée par la commande cf apps comporte la
-valeur 1/1 si votre application est en cours d'exécution et 0/1 si elle est arrêtée. Si elle comporte ?/1, qui indique que l'état de l'instance
-d'application est inconnu, vous pouvez copier l'adresse URL de l'application dans votre navigateur afin de vérifier si votre application répond, ou
-n'afficher que les derniers lignes du journal avec la commande `cf logs nom_app` pour déterminer si l'application génère un contenu de
-journal.
+valeur 1/1 si votre application est en cours d'exécution et 0/1 si elle est arrêtée. Si la valeur ?/1 est affichée, valeur indiquant que l'état de l'instance d'application est inconnu, vous pouvez copier l'adresse URL de l'application dans votre navigateur afin de vérifier si votre application répond, ou n'afficher que les dernières lignes du journal avec la commande `cf logs nom_app` pour déterminer si l'application génère un contenu de journal.
 
 ```
 cf apps
@@ -166,7 +163,7 @@ cf bind-service nom_app instance_service
 
 <strong>Exemples</strong> :
 
-Liez une instance de service appelée `mon_dataworks` à votre application appelée `mon_app`.
+Lier une instance de service appelée `mon_dataworks` à votre application appelée `mon_app`.
 ```
 cf bind-service mon_app mon_dataworks
 ```
@@ -197,7 +194,7 @@ cf create-service nom_service plan_service instance_service
 
 <strong>Exemples</strong> :
 
-Créez une instance du service {{site.data.keyword.dataworks_short}} avec un plan `free`.
+Créer une instance du service {{site.data.keyword.dataworks_short}} avec un plan `free`.
 ```
 cf create-service DataWorks free mon_dataworks
 ```
@@ -228,7 +225,7 @@ cf create-space nom_espace [-o] [-q]
 
 <strong>Exemples</strong> :
 
-Créez un espace appelé nouvel_espace.
+Créer un espace appelé nouvel_espace.
 ```
 cf create-space nouvel_espace
 ```
@@ -379,13 +376,13 @@ cf help [nom_commande]
 
 <strong>Exemples</strong> :
 
-Affichez les informations d'aide pour toutes les commandes cf.
+Afficher les informations d'aide pour toutes les commandes cf.
 ```
 cf help
 ```
 {: codeblock}
 
-Affichez les informations d'aide pour la commande events.
+Afficher les informations d'aide pour la commande events.
 ```
 cf help events
 ```
@@ -395,7 +392,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Vous connecte à {{site.data.keyword.Bluemix_notm}}. Si vous êtes connecté à l'aide d'un [ID fédéré](/docs/admin/account.html#signup), vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter. 
+Vous connecte à {{site.data.keyword.Bluemix_notm}}. Si vous êtes connecté à l'aide d'un [ID fédéré](/docs/admin/account.html#signup), vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter.
 
 **Remarque** : vous pouvez aussi utiliser une clé d'API de plateforme {{site.data.keyword.Bluemix_notm}} pour vous connecter. Servez-vous du nom d'utilisateur `apikey` et de la valeur de votre clé d'API comme mot de passe. Pour plus d'informations sur la création d'une clé d'API, voir [Gestion des clés d'API](/docs/iam/apikeys.html).
 
@@ -419,7 +416,7 @@ de passe peut être enregistré dans l'historique de la ligne de commande. Pour 
 avec le paramètre -p. A la place,
 entrez le mot de passe lorsque l'interface de ligne de commande vous y invite.</dd>
 <dt>*-sso*</dt>
-<dd>Vous devez utiliser l'option de connexion unique (SSO) pour vous connecter à l'aide d'un ID fédéré. Cela n'est pas obligatoire lorsque vous vous connectez avec un IBMid. Si vous essayez de vous connecter avec un ID fédéré sans spécifier le paramètre de connexion unique, vous serez invité à l'inclure. Lorsque vous utilisez le paramètre de connexion unique, vous êtes invité à entrer un code d'accès unique lors de la connexion.</dd>
+<dd>Vous devez utiliser l'option de connexion unique (SSO) pour vous connecter à l'aide d'un ID fédéré. Cela n'est pas obligatoire lorsque vous vous connectez avec un IBMid. Si vous essayez de vous connecter avec un ID fédéré sans spécifier le paramètre de connexion unique, vous êtes invité à l'inclure. Lorsque vous utilisez le paramètre de connexion unique, vous êtes invité à entrer un code d'accès unique lors de la connexion.</dd>
 <dt>*-o* nom_organisation</dt>
 <dd>Nom de l'organisation à laquelle vous voulez vous connecter.</dd>
 <dt>*-s*nom_espace</dt>
@@ -434,26 +431,26 @@ historique de la commande shell et peut être visible pour les autres utilisateu
 
 <strong>Exemples</strong> :
 
-Connectez-vous à {{site.data.keyword.Bluemix_notm}}.
+Se connecter à {{site.data.keyword.Bluemix_notm}}.
 ```
 cf login
 ```
 {: codeblock}
 
-Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net`.
+Se connecter à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net`.
 ```
 cf login -a https://api.ng.bluemix.net
 ```
 {: codeblock}
 
-Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net`, le nom
+Se connecter à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net`, le nom
 d'utilisateur `nom_utilisateur`, sans spécifier de mot de passe pour des raisons de sécurité.
 ```
 cf login -a https://api.ng.bluemix.net -u nom_utilisateur
 ```
 {: codeblock}
 
-Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net`, le nom
+Se connecter à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net`, le nom
 d'utilisateur `nom_utilisateur`, sans spécifier de mot de passe pour des raisons de sécurité, le nom d'organisation
 `nom_org` et le nom d'espace `nom_espace`.
 ```
@@ -461,7 +458,7 @@ cf login -a https://api.ng.bluemix.net -u nom_utilisateur -o nom_org -s nom_espa
 ```
 {: codeblock}
 
-Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net` à l'aide d'une clé d'API. Utilisez `apikey` comme nom d'utilisateur et la clé d'API réelle comme mot de passe.
+Se connecter à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net` à l'aide d'une clé d'API. Utilisez `apikey` comme nom d'utilisateur et la clé d'API réelle comme mot de passe.
 ```
 cf login -a https://api.ng.bluemix.net -u apikey -p CetteValeurEstVotreCléD'API
 ```
@@ -489,13 +486,13 @@ cf logs nom_app [--recent]
 
 <strong>Exemples</strong> :
 
-Affichez les flux de journalisation pour une application appelée `mon_app`.
+Afficher les flux de journalisation pour une application appelée `mon_app`.
 ```
 cf logs mon_app
 ```
 {: codeblock}
 
-Affichez les flux de journalisation récents pour une application appelée `mon_app`.
+Afficher les flux de journalisation récents pour une application appelée `mon_app`.
 ```
 cf logs mon_app --recent
 ```
@@ -505,8 +502,7 @@ cf logs mon_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Répertorie tous les services disponibles sur la place de marché. Les services répertoriés par cette commande apparaissent également dans le catalogue
-{{site.data.keyword.Bluemix_notm}}.
+Répertorie tous les services disponibles sur la place de marché. Les services répertoriés par cette commande apparaissent également dans le catalogue {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
@@ -517,7 +513,7 @@ cf marketplace
 
 <strong>Exemples</strong> :
 
-Affichez la liste de tous les services de la place de marché.
+Afficher la liste de tous les services de la place de marché.
 ```
 cf marketplace
 ```
@@ -581,13 +577,13 @@ stacks` pour afficher les piles disponibles dans {{site.data.keyword.Bluemix_not
 
 <strong>Exemples</strong> :
 
-Démarrez une application appelée `mon_app` avec la commande de démarrage par défaut.
+Démarrer une application appelée `mon_app` avec la commande de démarrage par défaut.
 ```
 cf push `mon_app` -c null
 ```
 {: codeblock}
 
-Démarrez une application appelée `mon_app` avec l'option permettant d'exécuter un fichier script appelé `run.sh`.
+Démarrer une application appelée `mon_app` avec l'option permettant d'exécuter un fichier script appelé `run.sh`.
 ```
 cf push `mon_app` -c "bash ./<run.sh>"
 ```
@@ -623,13 +619,13 @@ cf scale nom_app [-i nombre_instances] [-k limite_disque] [-m limite_mémoire] [
 
 <strong>Exemples</strong> :
 
-Affichez le nombre d'instances, la limite d'espace disque et la limite de mémoire pour une application appelée `mon_app`.
+Afficher le nombre d'instances, la limite d'espace disque et la limite de mémoire pour une application appelée `mon_app`.
 ```
 cf scale mon_app
 ```
 {: codeblock}
 
-Modifiez le nombre d'instances en spécifiant `1234`, la limite d'espace disque en spécifiant `1G` et la limite de mémoire en spécifiant `1G` pour une application appelée `mon_app`.
+Modifier le nombre d'instances en spécifiant `1234`, la limite d'espace disque en spécifiant `1G` et la limite de mémoire en spécifiant `1G` pour une application appelée `mon_app`.
 ```
 cf scale nom_app -i 1234 -k 1G -m 1G
 ```
@@ -650,7 +646,7 @@ cf services
 
 <strong>Exemples</strong> :
 
-Affichez la liste de tous les services dans l'espace en cours.
+Afficher la liste de tous les services dans l'espace en cours.
 ```
 cf services
 ```
@@ -680,7 +676,7 @@ cf set-env nom_app nom_var valeur_var
 
 <strong>Exemples</strong> :
 
-Définissez une variable d'environnement appelée `variable_a` avec la valeur `123` pour l'application appelée `mon_app`.
+Définir une variable d'environnement appelée `variable_a` avec la valeur `123` pour l'application appelée `mon_app`.
 ```
 cf set-env mon_app variable_a 123
 ```
@@ -697,7 +693,7 @@ cf ssh
 ```
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
 
-Par défaut, l'accès SSH est activé pour les applications Diego. Vous pouvez utiliser la commande `cf ssh-enabled` pour vérifier si l'accès SSH est activé ou la commande `cf enable-ssh` pour activer l'accès s'il a été désactivé. 
+Par défaut, l'accès SSH est activé pour les applications Diego. Vous pouvez utiliser la commande `cf ssh-enabled` pour vérifier si l'accès SSH est activé ou la commande `cf enable-ssh` pour activer l'accès s'il a été désactivé.
 
 <strong>Options de commande</strong> :
 
@@ -711,31 +707,31 @@ Par défaut, l'accès SSH est activé pour les applications Diego. Vous pouvez u
 <dt>-L</dt>
 <dd>Active l'acheminement de port local, ce qui lie un port de sortie de votre machine à un port d'entrée sur la machine virtuelle de l'application.</dd>
 <dt>-N</dt>
-<dd>N'exécutez pas de commande distante.</dd>
+<dd>Ne pas exécuter de commande distante.</dd>
 <dt>-t, -tt ou -T</dt>
 <dd>Vous permet d'exécuter une session SSH en mode pseudo-tty plutôt que de générer une sortie sous forme de1 ligne de terminal.<dd>
 </dl>
 
 <strong>Exemples</strong> :
 
-Démarrez une session SSH interactive avec l'instance de conteneur exécutant l'application `mon_app`.
+Démarrer une session SSH interactive avec l'instance de conteneur exécutant l'application `mon_app`.
 ```
 $ cf ssh mon_app
 ```
 {: codeblock}
 
-Exécutez une seule commande sur l'instance de conteneur d'applications
+Exécuter une seule commande sur l'instance de conteneur d'applications
 `mon_app`.
 ```
 $ cf ssh mon_app -c "ls -l"
 ```
 
-Transférez un seul fichier à partir de l'instance de conteneur d'applications `mon_app`.
+Transférer un seul fichier à partir de l'instance de conteneur d'applications `mon_app`.
 ```
 $ cf ssh mon_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Configurez l'acheminement du port 7777 de la machine locale vers le port 8888 de l'instance de conteneur d'applications `mon_app`.
+Configurer l'acheminement du port 7777 de la machine locale vers le port 8888 de l'instance de conteneur d'applications `mon_app`.
 ```
 $ cf ssh -N -T -L 7777:hôtelocal:8888 mon_app
 
@@ -755,7 +751,7 @@ cf stacks
 
 <strong>Exemples</strong> :
 
-Affichez la liste de toutes les piles.
+Afficher la liste de toutes les piles.
 ```
 cf stacks
 ```
@@ -781,7 +777,7 @@ cf stop nom_app
 
 <strong>Exemples</strong> :
 
-Arrêtez l'application appelée `mon_app`.
+Arrêter l'application appelée `mon_app`.
 ```
 cf stop mon_app
 ```
@@ -809,7 +805,7 @@ cf target [-o nom_org] [-s nom_espace]
 
 <strong>Exemples</strong> :
 
-Définissez comme cible l'organisation appelée "mon_org" et l'espace appelé "mon_espace".
+Définir comme cible l'organisation appelée "mon_org" et l'espace appelé "mon_espace".
 ```
 cf target -o mon_org -s mon_espace
 ```
@@ -830,7 +826,7 @@ cf -v
 
 <strong>Exemples</strong> :
 
-Affichez la version de l'interface de ligne de commande cf.
+Afficher la version de l'interface de ligne de commande cf.
 ```
 cf -v
 ```

@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -414,7 +414,7 @@ l'exécution.
 
 * Fichier Dockerfile pour le conteneur run.
 * Si vous prévoyez d'exécuter avec plusieurs conteneurs, il doit s'agir d'un fichier Compose.
-* Pour utiliser plusieurs fichiers Compose, placez entre guillemets une liste de fichiers délimitée par des virgules.
+* Pour utiliser plusieurs fichiers Compose, placez entre guillemets une liste de noms de fichier délimitée par des virgules.
 * Syntaxe : `ibmcloud dev run --dockerfile-run [/chemin_Dockerfile]`
 * Syntaxe : `ibmcloud dev run --dockerfile-run "/chemin_fichier_compose, chemin_autre_fichier_compose, ..."`
 

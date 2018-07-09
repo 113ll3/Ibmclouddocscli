@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-05-23"
 # Contribution au plug-in SDK
 {: #contribute}
 
-Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'interface de ligne de commande {{site.data.keyword.Bluemix}}.
+Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'interface de ligne de commande {{site.data.keyword.Bluemix}}. 
 
 ## Configuration de votre environnement de développement
 {: #dev-env}

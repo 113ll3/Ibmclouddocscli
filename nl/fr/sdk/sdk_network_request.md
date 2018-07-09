@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # Elaboration d'une demande de réseau
 {: #sdk-network-request}
@@ -126,4 +126,3 @@ Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
 	request.send(success, failure);
 	```
 	{: codeblock}
-

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -35,7 +35,7 @@ cf uninstall-plugin vpn
 
 ### Installation locale
 
-1. Téléchargez le plug-in {{site.data.keyword.vpn_short}} pour votre plateforme depuis le [ référentiel de plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
+1. Téléchargez le plug-in {{site.data.keyword.vpn_short}} pour votre plateforme depuis le [référentiel de plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
 2. Installez le plug-in {{site.data.keyword.vpn_short}} à l'aide de la commande suivante :
 **Remarque :** placez-vous sur l'emplacement du plug-in {{site.data.keyword.vpn_short}} ou spécifiez le chemin d'accès à l'emplacement du plug-in.
 
@@ -114,7 +114,7 @@ configurée afin de vérifier l'état opérationnel de l'homologue. Plage : 5 à
 
 **-ike :** nom de la règle IKE.
 
-**-ipsec :** nom de la règle IPsec.
+**-ipsec :** nom de la règle IPSec.
 
 
 ### cf vpn-create ike
@@ -147,7 +147,7 @@ cf vpn-create ike <policy name> -g <gateway name> -d <description> -pfs <group> 
 
 ### cf vpn-create ipsec
 
-Crée une règle IPsec.
+Crée une règle IPSec (Internet Protocol Security).
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -155,7 +155,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### Paramètres
 {: #p3}
 
-**policy name :** nom de la règle IPsec.
+**policy name :** nom de la règle IPSec.
 
 **gateway name :** nom de la passerelle.
 
@@ -210,7 +210,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-Affiche des informations sur les connexions IPsec en cours.
+Affiche des informations sur les connexions IPSec (Internet Protocol Security) en cours.
 
 ```
 cf vpn-show ipsecs
@@ -231,7 +231,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-Affiche des informations sur une connexion IPsec.
+Affiche des informations sur une connexion IPSec (Internet Protocol Security).
 
 ```
 cf vpn-show ipsec <policy name>
@@ -307,7 +307,7 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 
 **-i :** état de l'initiateur. Valeur par défaut : bi-directional.
 
-**-dpd-timeout :** valeur de délai d'attente (en secondes) au bout duquel la session est terminée. Plage : 6 à 86400 secondes. Valeur par défaut : 120
+**-dpd-timeout :** valeur de délai d'attente (en secondes) au bout duquel la session est terminée.  Plage : 6 à 86400 secondes. Valeur par défaut : 120
 secondes
 
 **-dpd-interval :** intervalle de signal de présence, en secondes. Envoyez des messages d'état actif à la fréquence
@@ -315,7 +315,7 @@ configurée afin de vérifier l'état opérationnel de l'homologue. Plage : 5 à
 
 **-ike :** nom de la règle IKE.
 
-**-ipsec :** nom de la règle IPsec.
+**-ipsec :** nom de la règle IPSec.
 
 
 ### cf vpn-update ike
@@ -348,7 +348,7 @@ cf vpn-update ike <policy name> -g <gateway name> -d <description> -pfs <group> 
 
 ### cf vpn-update ipsec
 
-Met à jour une règle IPsec;
+Met à jour une règle IPSec (Internet Protocol Security).
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -356,7 +356,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### Paramètres
 {: #p7}
 
-**policy name :** nom de la règle IPsec.
+**policy name :** nom de la règle IPSec.
 
 
 ##### Paramètres facultatifs :

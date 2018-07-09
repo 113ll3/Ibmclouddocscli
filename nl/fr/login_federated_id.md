@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -63,7 +63,7 @@ Etant donné qu'un code d'accès à utilisation unique extrait du code de la con
 ## Utilisation d'une clé d'API
 {:api_key}
 
-La clé d'API requise est la clé d'API {{site.data.keyword.Bluemix_notm}} qui est utilisée pour l'authentification auprès de la plateforme {{site.data.keyword.Bluemix_notm}} et non la clé d'API Softlayer ni la clé d'API de service {{site.data.keyword.Bluemix_notm}}.
+La clé d'API requise est la clé d'API {{site.data.keyword.Bluemix_notm}} utilisée pour l'authentification auprès de la plateforme {{site.data.keyword.Bluemix_notm}} et non la clé d'API SoftLayer ou la clé d'API de service {{site.data.keyword.Bluemix_notm}}.
 
 1. Créez une clé d'API à l'aide de la commande [`ibmcloud iam api-key-create`](/docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_iam_api_key_create). Utilisez l'option `-f` pour générer un fichier de clés d'API au lieu d'afficher la clé dans la fenêtre de commande :
 

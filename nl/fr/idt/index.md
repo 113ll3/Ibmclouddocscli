@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -76,12 +76,12 @@ D'autres détails concernant les structures de projet sont disponibles dans les 
 {: #build}
 
 
-Une fois votre projet créé, il vous appartient d'en faire quelque chose d'utile. La procédure générale consiste à éditer le code source, puis à exécuter une commande [`ibmcloud dev build`](commands.html#build) pour compiler l'application dans un conteneur local spécifique au langage et à la configuration de votre application. Selon le langage et le générateur d'application utilisés, il existe un ou plusieurs conteneurs définis par défaut pour prendre en charge la génération et l'exécution en local.  En général, il existe un générateur "tools" dédié aux générations et au débogage en local.  Ce conteneur comporte généralement des outils et des fonctions supplémentaires pour vous aider dans vos tâches de développement.  Il existe également un conteneur "run" qui reproduit fidèlement l'environnement d'exécution réel de votre application une fois celle-ci déployée sur le cloud, que ce soit dans Cloud Foundry ou dans un environnement de conteneur basé sur le système Kubernetes d'IBM.
+Une fois votre projet créé, il vous appartient d'en faire quelque chose d'utile. La procédure générale consiste à éditer le code source, puis à exécuter une commande [`ibmcloud dev build`](commands.html#build) pour compiler l'application dans un conteneur local spécifique au langage et à la configuration de votre application. Selon le langage et le générateur d'application utilisés, il existe un ou plusieurs conteneurs définis par défaut pour prendre en charge la génération et l'exécution en local.  En général, il existe un générateur "tools" dédié aux générations et au débogage en local. Ce conteneur comporte généralement des outils et des fonctions supplémentaires pour vous aider dans vos tâches de développement. Il existe également un conteneur "run" qui reproduit fidèlement l'environnement d'exécution réel de votre application une fois celle-ci déployée sur le cloud, que ce soit dans Cloud Foundry ou dans un environnement de conteneur basé sur le système Kubernetes d'IBM.
 
 
 Vous êtes libre d'utiliser n'importe quelle interface IDE ou n'importe quel éditeur de votre choix pour coder votre application. Nous offrons une extension pour l'éditeur Microsoft VisualStudio Code (VSCode) qui vous permet d'accéder à toutes les commandes IDE directement depuis l'éditeur.
 
-Une fois le projet créé, vous souhaiterez ensuite exécuter votre application à l'aide de la commande [`ibmcloud dev run`](commands.html#run) ou [`ibmcloud dev debug`](commands.html#debug), selon la configuration de votre générateur d'application.  Cette commande exécutera l'application dans le conteneur approprié.  Certains modèles d'application prennent en charge plusieurs conteneurs externes à vos applications, tels que la persistance ou d'autres fonctions,  dont le démarrage et la configuration se feront automatiquement lors de l'exécution ou du débogage.  Il existe également une commande [`ibmcloud dev test`](commands.html#test) exécutant n'importe quel scénario de test éventuellement associé à l'application.
+Une fois le projet créé, vous souhaiterez ensuite exécuter votre application à l'aide de la commande [`ibmcloud dev run`](commands.html#run) ou [`ibmcloud dev debug`](commands.html#debug), selon la configuration de votre générateur d'application. Cette commande exécutera l'application dans le conteneur approprié. Certains modèles d'application prennent en charge plusieurs conteneurs externes à vos applications, tels que la persistance ou d'autres fonctions, dont le démarrage et la configuration se feront automatiquement lors de l'exécution ou du débogage. Il existe également une commande [`ibmcloud dev test`](commands.html#test) exécutant n'importe quel scénario de test éventuellement associé à l'application.
 
 
 ### Utilisation des conteneurs locaux
@@ -118,7 +118,7 @@ Les commandes suivantes offertes par l'interface de ligne de commande vous aiden
 ## Déployer
 {: #deploy}
 
-Dans un environnement natif en cloud approprié, vous souhaiterez utiliser un environnement DevOps complètement fonctionnel pour gérer tous les déploiements, ainsi qu'une multitude d'autres fonctions.  Durant le processus de création, vous pouvez configurer votre application pour l'utilisation de la méthodologie DevOps d'IBM Cloud.  Si vous n'êtes pas prêt à utiliser la méthodologie DevOps intégrée, vous pouvez soit déployer manuellement votre application (commande [`ibmcloud dev deploy`](./commands.html#deploy)), soit utiliser la commande deploy dans votre propre pipeline DevOps.  
+Dans un environnement natif en cloud approprié, vous souhaiterez utiliser un environnement DevOps complètement fonctionnel pour gérer tous les déploiements, ainsi qu'une multitude d'autres fonctions. Durant le processus de création, vous pouvez configurer votre application pour l'utilisation de la méthodologie DevOps d'IBM Cloud. Si vous n'êtes pas prêt à utiliser la méthodologie DevOps intégrée, vous pouvez soit déployer manuellement votre application (commande [`ibmcloud dev deploy`](./commands.html#deploy)), soit utiliser la commande deploy dans votre propre pipeline DevOps.  
 
 
 
@@ -134,5 +134,5 @@ Les commandes suivantes offertes par l'interface de ligne de commande vous aiden
 ### Blogues et vidéos de référence
 {: #ref3}
 
-- Blogue : [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- Blogue : [Deploying to IBM Cloud Private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - Blogue : [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -27,7 +27,7 @@ Le plug-in VPN est disponible pour les systèmes d'exploitation Windows, MAC et 
 Les instructions qui suivent s'appliquent au plug-in CLI {{site.data.keyword.Bluemix_notm}}. Pour utiliser le plug-in avec le plug-in d'interface de ligne de commande Cloud Foundry (cf), voir [Plug-in d'interface de ligne de commande VPN pour l'interface de ligne de commande cf](../vpn/index.html).
 
 
-Vous trouverez ci-après la liste de toutes les commandes qui sont prises en charge par le plug-in VPN pour l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, ainsi que leurs noms, leurs options, leur syntaxe, leurs prérequis, leurs descriptions et des exemples. Pour savoir comment installer le plug-in VPN, voir [Etendez votre interface de ligne de commande Bluemix](../../index.html#cli_bluemix_ext).
+Vous trouverez ci-après la liste de toutes les commandes qui sont prises en charge par le plug-in VPN pour l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, ainsi que leurs noms, leurs options, leur syntaxe, leurs prérequis, leurs descriptions et des exemples. Pour savoir comment installer le plug-in VPN, voir la section présentant comment [étendre l'interface de ligne de commande IBM Cloud](../../index.html#cli_bluemix_ext).
 
 **Remarque :** la zone *Prérequis* répertorie les actions qui sont requises avant l'utilisation de la commande. Il
 peut s'agir d'une ou de plusieurs des actions suivantes :
@@ -35,8 +35,7 @@ peut s'agir d'une ou de plusieurs des actions suivantes :
 <dt>**Noeud final**</dt>
 <dd>Un noeud final d'API doit être défini via `ibmcloud api` avant l'utilisation de la commande.</dd>
 <dt>**Connexion**</dt>
-<dd>Vous devez vous connecter avec la commande `ibmcloud login` avant d'utiliser cette commande.
-</dd>
+<dd>Vous devez vous connecter avec la commande `ibmcloud login` avant d'utiliser cette commande.</dd>
 <dt>**Cible**</dt>
 <dd>La commande `ibmcloud target` doit être utilisée pour configurer une organisation et un espace avant d'appeler cette commande.</dd>
 </dl>
@@ -59,9 +58,9 @@ ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY 
 
 -k *PRESHARED_KEY* (requis) : clé pré-partagée.
 
--subnets "*SUBNET*/*MASK*" (requis) : adresse de sous-réseau distant au format CIDR. 
+-subnets "*SUBNET*/*MASK*" (requis) : adresse de sous-réseau distant au format CIDR.
 
--cip *CUSTOMER_GATEWAY_IP_ADDRESS* requis) : adresse IP de noeud final distant du tunnel VPN. 
+-cip *CUSTOMER_GATEWAY_IP_ADDRESS* (requis) : adresse IP de noeud final distant du tunnel VPN.
 
 -d *DESCRIPTION* (facultatif) : description des paramètres spécifiés.
 

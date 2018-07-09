@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -32,7 +32,7 @@ Pour commencer, installez l'interface de ligne de commande {{site.data.keyword.B
 ibmcloud plugin uninstall private-network-peering
 ```
 ### Installation locale
-Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande {{site.data.keyword.ibmcloud_notm}} ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
+Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande {{site.data.keyword.ibmcloud_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
 
 Installez le plug-in d'appairage de réseau privé avec la commande suivante :
 
@@ -147,7 +147,7 @@ Afin d'afficher les informations réseau détaillées pour tous les routeurs :
 	...
 
 
-#### Création d'une connexion d'appairage de réseau privé avec les adresses IP
+#### Création d'une connexion d'appairage de réseau privé en utilisant les adresses IP
 ```
 ibmcloud network pnp-create <router_ip> <router_ip> <name>
 ```
