@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-06-26"
 # {{site.data.keyword.Bluemix_notm}} CLI の概説
 {: #overview}
 
-このチュートリアルでは、一連の {{site.data.keyword.Bluemix}} 開発者ツールをインストールし、インストールを検証して、ご使用の環境を構成します。{{site.data.keyword.Bluemix}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。
+このチュートリアルでは、一連の {{site.data.keyword.Bluemix}} 開発者ツールをインストールし、インストールを検証して、ご使用の環境を構成します。 {{site.data.keyword.Bluemix}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。 
 {:shortdesc}
 
 このインストールでは、{{site.data.keyword.Bluemix_notm}} CLI および以下のツールが用意されています。 
@@ -105,4 +105,4 @@ ibmcloud dev help
 ## 次のステップ
 {: #next-steps}
 
-これで、最初のアプリを開発してデプロイする準備ができました。詳しくは、[スターター・キットを使用した基本 Web アプリケーションの作成](/docs/apps/tutorials/tutorial_web.html)を参照してください。
+これで、最初のアプリを開発してデプロイする準備ができました。 詳しくは、[アプリの開発とデプロイ](/docs/cli/idt/index.html)を参照してください。
