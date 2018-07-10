@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -109,7 +109,7 @@ Ahora que ha instalado la CLI de {{site.data.keyword.dev_cli_short}}, aprenda c�
 - [Herramientas de desarrollador para VS Code](vscode.html)
 - [Herramientas de desarrollador para IDE de Jetbrains](jetbrains.html)
 
-Consulte las [guías de aprendizaje](/docs/apps/tutorials/tutorial_bff.html) que muestran cómo crear apps nativas en la nube utilizando la CLI de {{site.data.keyword.dev_cli_short}}.
+Consulte las [guías de aprendizaje](/docs/apps/tutorials/tutorial_bff.html) que muestran cómo crear apps nativas en la nube que utilizan la CLI de {{site.data.keyword.dev_cli_short}}.
 
 ## Lectura adicional
 {: #learn-more}
@@ -130,6 +130,6 @@ Los siguientes recursos pueden ser útiles para desarrollar apps nativas de nube
 
 **Blogs y guías de aprendizaje**
 
-- [Despliegue en una instancia de IBM Cloud privada con IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Despliegue en una instancia de IBM Cloud privada con la CLI de IBM Cloud Developer Tools](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - [Habilitación de proyectos existentes para IBM Cloud con IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 - [Despliegue en Kubernetes en IBM Cloud con IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

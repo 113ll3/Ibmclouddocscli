@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2018-03-16"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # Inicialización de BMSClient
 {: #sdk_BMSClient}
@@ -54,7 +54,7 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
   ```
   {: codeblock}
 
-  Luego ejecute el mandato `pod install` y abra el archivo `.xcworkspace` generado. Para actualizar a un release posterior de `BMSCore`, utilice `pod update BMSCore`.
+  A continuación, ejecute el mandato `pod install` y abra el archivo `.xcworkspace` generado. Para actualizar a un release posterior de `BMSCore`, utilice `pod update BMSCore`.
 
   Para obtener más información sobre cómo utilizar CocoaPods, consulte las [Guías de CocoaPods ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://guides.cocoapods.org/using/index.html){: new_window}.
 
@@ -95,7 +95,7 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
 ## Inicialización de la aplicación Cordova
 {: #init-BMSClient-cordova}
 
-1. Añada el plugin de Cordova ejecutando el siguiente mandato desde el directorio raíz de la aplicación Cordova:
+1. Añada el plug-in Cordova ejecutando el mandato siguiente desde el directorio raíz de la aplicación Cordova:
 
   ```
   cordova plugin add bms-core
@@ -120,4 +120,4 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
 
 * [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
 * [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova Plugin](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [Plugu_in de Cordova BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

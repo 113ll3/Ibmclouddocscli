@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-26"
 
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Depuración de aplicaciones locales
+# Depuración de aplicaciones locales para la CLI de {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
 Existen herramientas para ayudarle a depurar la aplicación en Java y Node.js en {{site.data.keyword.cloud_notm}}.
@@ -38,7 +38,7 @@ ibmcloud dev debug
       		3. Especifique el nombre del proyecto java que ha importado.
       6. Defina un punto de interrupción en el IDE.
       7. Ejecute la configuración de depuración.
-      8. Acceda al punto final con un navegador para reproducir el problema.  
+      8. Acceda al punto final con un navegador para recrear el problema.  
 	   **Nota**: el puerto predeterminado es 9080 para el punto final de Java Basic Microservices.
 	* [IntelliJ ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
 	* [VSCode ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)

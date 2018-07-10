@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -55,7 +55,7 @@ Sin embargo, si el ID dedicado no se ha conectado con el IBMid público, se le s
 
 Seleccione una opción para la entrada de credenciales para el ID dedicado. Después de una autenticación satisfactoria, el ID dedicado se conecta a su IBMid público.
 
-## Forzar el inicio de sesión en el servidor local UAA
+## Forzar inicio de sesión en el servidor local UAA
 
 Para forzar el inicio de sesión en el servidor UAA con un ID dedicado, especifique la opción `--no-iam` en el mandato `ibmcloud login`:
 

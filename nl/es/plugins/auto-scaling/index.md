@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -15,25 +15,25 @@ lastupdated: "2018-05-23"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# CLI de escalado automático
+# CLI de Auto-Scaling
 {: #autoscalingcli}
 
 
-Puede configurar el servicio {{site.data.keyword.autoscaling}} utilizando la {{site.data.keyword.autoscaling}} CLI para {{site.data.keyword.Bluemix_notm}}. La {{site.data.keyword.autoscaling}} CLI admite Linux64, Win64 y OSX, y proporciona una funcionalidad similar a la que proporciona la API RESTful de escalado automático.
+Puede configurar el servicio {{site.data.keyword.autoscaling}} utilizando la CLI de {{site.data.keyword.autoscaling}} para {{site.data.keyword.Bluemix_notm}}. La CLI de {{site.data.keyword.autoscaling}} admite Linux64, Win64 y OSX, y proporciona una funcionalidad similar a la que proporciona la API RESTful de escalado automático.
 {: shortdesc}
 
-Antes de empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte [Descargar {{site.data.keyword.Bluemix_notm}} CLI ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obtener instrucciones.
+Antes de empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte [Descargar la CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obtener instrucciones.
 
-## Adición del plugin de la CLI de {{site.data.keyword.Bluemix_notm}}
+## Adición del plug-in de CLI de {{site.data.keyword.Bluemix_notm}}
 
-Una vez instalada la CLI de {{site.data.keyword.Bluemix_notm}}, puede añadir el plugin de la CLI {{site.data.keyword.autoscaling}}.
+Una vez instalada la CLI de {{site.data.keyword.Bluemix_notm}}, puede añadir el plugin de CLI de {{site.data.keyword.autoscaling}}.
 
 Siga estos pasos para añadir el repositorio e instalar el plug-in:
-1. Para añadir el repositorio del plugin de la CLI de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato siguiente:
+1. Para añadir el repositorio del plugin de CLI de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato siguiente:
 ```
 ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
-2. Para instalar el plugin de la CLI de {{site.data.keyword.autoscaling}}, ejecute el mandato siguiente:
+2. Para instalar el plugin de CLI de {{site.data.keyword.autoscaling}}, ejecute el mandato siguiente:
 ```
 ibmcloud plugin install auto-scaling -r Bluemix
 ```

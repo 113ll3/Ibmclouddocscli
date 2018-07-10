@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-05-29"
 {:screen: .screen}
 
 
-# Depuración
+# Depuración de cf apps para {{site.data.keyword.Bluemix_notm}}
 {: #debugging}
 
 Si tiene problemas con {{site.data.keyword.Bluemix}}, consulte los archivos de registro para investigar los problemas y depurar los errores.
@@ -22,14 +22,14 @@ Si tiene problemas con {{site.data.keyword.Bluemix}}, consulte los archivos de r
 
 Los registros dan información si un trabajo se ejecuta correctamente o si falla. También proporcionan información importante que se puede utilizar para la depuración y determinar la causa de un problema.
 
-Los registros tienen un formato fijo. En registros detallados, puede filtrar registros o utilizar hosts de registros externos para almacenar y procesar los registros. Para obtener más información sobre los formatos de registro, los registros de visualización y de filtrado y la configuración de registro externo, consulte [Registro de apps que se ejecutan en Cloud Foundry ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/monitor_log/logging.html#logging){: new_window}.
+Los registros tienen un formato fijo. En registros detallados, puede filtrar registros o utilizar hosts de registros externos para almacenar y procesar los registros. Para obtener más información sobre los formatos de registro, visualizar y filtrar registros y configurar registros externos, consulte [Registro de apps que se ejecutan en Cloud Foundry ![Icono de enlace externo](../icons/launch-glyph.svg "External link icon")](/docs/monitor_log/logging.html#logging){: new_window}.
 
 
 ## Depuración de errores de transferencia
 {: #debugging-staging-errors}
 Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si la app no se puede transferir, puede buscar y revisar los registros de transferencia (STG) para determinar qué ha ocurrido durante el despliegue de la app y solucionar el problema. Para obtener más información sobre los métodos de visualización de registros para las apps de {{site.data.keyword.Bluemix}}, consulte [visualización de registros ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}.  
 
-Para obtener información explicativa sobre el motivo por el cual su app podría fallar en {{site.data.keyword.Bluemix_notm}}, debe saber cómo se despliega una app en {{site.data.keyword.Bluemix_notm}} y cómo se ejecuta. Para obtener información detallada, consulte [Despliegue de aplicaciones ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
+Para obtener información explicativa sobre el motivo por el cual su app podría fallar en {{site.data.keyword.Bluemix_notm}}, debe saber cómo se despliega una app en {{site.data.keyword.Bluemix_notm}} y cómo se ejecuta. Para obtener más información, consulte [Despliegue de aplicaciones ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
 El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` para depurar errores de transferencia. Antes de seguir estos pasos, asegúrese de haber instalado la interfaz de línea de mandatos cf. Para obtener más información sobre la instalación de la interfaz de línea de mandatos cf, consulte [Instalación de la interfaz de línea de mandatos de cf ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/starters/install_cli.html){: new_window}.
@@ -49,7 +49,7 @@ El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` par
 
 Si utiliza el plug-in de herramientas IBM Eclipse para {{site.data.keyword.Bluemix_notm}} para desplegar apps, en el separador **Consola** de la herramienta Eclipse, verá registros parecidos a los que muestra el mandato cf logs. También puede abrir otra ventana Eclipse para realizar un seguimiento de `los registros` al desplegar la app.
 
-Además del mandato `cf logs`, en {{site.data.keyword.Bluemix_notm}} también puede utilizar el servicio {{site.data.keyword.loganalysisshort}} para recopilar detalles del registro. 
+Además del mandato `cf logs`, en {{site.data.keyword.Bluemix_notm}} también puede utilizar el servicio {{site.data.keyword.loganalysisshort}} para recopilar detalles del registro.
 
 ### Depuración de errores de transferencia para una app Node.js
 
@@ -89,7 +89,7 @@ Para una app Node.js, el DEA utiliza la información del archivo `package.json` 
 {: screen}
 
 
-Como puede ver, se ha colocado una coma al final de la línea 17, por lo que se esperaba un par clave-valor en la línea 18. Para solucionar el problema, elimine la coma:
+Como puede ver, se ha colocado una coma al final de la línea 17, por lo que se esperaba un par clave-valor que está en la línea 18. Para solucionar el problema, elimine la coma:
 
 ```
 15   "jade": "~1.3.0",
@@ -125,7 +125,7 @@ Cuando especifica `cf logs appname --recent` en la interfaz de línea de mandato
 
 Antes se accedía a los archivos `stdout.log` y `stderr.log` de forma predeterminada a través de la vista de app de la consola de {{site.data.keyword.Bluemix_notm}} bajo **Archivos** > **registros**. Sin embargo, este registro de apps ya no está disponible con la versión actual de Cloud Foundry en la que se aloja {{site.data.keyword.Bluemix_notm}}. Para que se pueda acceder al registro de app stdout y stderr a través de la consola de {{site.data.keyword.Bluemix_notm}} bajo **Archivos** > **registros**, puede redirigir el registro a otros archivos del sistema de archivos de {{site.data.keyword.Bluemix_notm}}, en función del tiempo de ejecución que utilice.
 
-  * Para las aplicaciones Liberty for Java, la información de salida que se dirige a stdout y stderr ya está contenida en el archivo `messages.log` del directorio logs. Busque las entradas con el prefijo SystemOut y SystemErr respectivamente.
+  * Para las aplicaciones Liberty for Java, la información de salida que se dirige a stdout y stderr ya está contenida en el archivo `messages.log` del directorio logs. Busque las entradas con el prefijo SystemOut y SystemErr.
   * Para las aplicaciones Node.js, puede modificar la función console.log para que escriba específicamente en un archivo del directorio logs.
   * Para las aplicaciones PHP, puede utilizar la función error_log para escribir en un archivo del directorio de logs.
   * Para las aplicaciones Python, puede hacer que el registrador escriba en un archivo del directorio logs: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`

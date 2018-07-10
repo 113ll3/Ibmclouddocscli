@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-27"
 {:pre: .pre}
 {:tip: .tip}
 
-# アプリの開発とデプロイ
+# {{site.data.keyword.dev_cli_notm}} CLI の使用
 {: #developing}
 
 {{site.data.keyword.dev_cli_notm}} CLI を使用したクラウド・ネイティブ・アプリの開発は、以下のとおり、かなり単純なフローです。

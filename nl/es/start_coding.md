@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -16,6 +16,5 @@ lastupdated: "2018-04-16"
 # Empezar a crear código
 {: #start_coding}
 
-En {{site.data.keyword.Bluemix_notm}} puede
-empezar rápidamente a crear código siguiendo los pasos proporcionados después de crear una app.
+En {{site.data.keyword.Bluemix_notm}}, puede empezar rápidamente a escribir código siguiendo los pasos que se proporcionan tras la creación de una app.
 {:shortdesc}

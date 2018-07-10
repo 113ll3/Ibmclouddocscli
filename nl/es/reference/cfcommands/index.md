@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -96,7 +96,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (opcional)</dt>
-   <dd>El URL del punto final API de Bluemix que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es `https://api.{DomainName}`.
+   <dd>El URL del punto final API de IBM Cloud que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es `https://api.{DomainName}`.
    Si desea visualizar el URL del punto final API que está utilizando actualmente no tiene que especificar este parámetro para el mandato cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Inhabilita el proceso de validación de SSL. El uso de este parámetro puede ocasionar problemas de seguridad.</dd>
@@ -106,7 +106,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>Ejemplos</strong>:
 
-Visualice el punto final de la API actual
+Visualizar el punto final de la API actual
 ```
 cf api
 ```
@@ -161,7 +161,7 @@ cf bind-service nombre_app instancia_servicio
 
 <strong>Ejemplos</strong>:
 
-Enlace una instancia de servicio denominada `my_dataworks` a su app denominada `my_app`.
+Enlace una instancia de servicio que se denomina `my_dataworks` a su app denominada `my_app`.
 ```
 cf bind-service my_app my_dataworks
 ```
@@ -192,7 +192,7 @@ cf create-service nombre_servicio plan_servicio instancia_servicio
 
 <strong>Ejemplos</strong>:
 
-Cree una instancia del servicio de {{site.data.keyword.dataworks_short}} con un plan `free`.
+Crear una instancia del servicio de {{site.data.keyword.dataworks_short}} con un plan `free`.
 ```
 cf create-service DataWorks free my_dataworks
 ```
@@ -223,7 +223,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>Ejemplos</strong>:
 
-Crear un espacio denominado new_space
+Crear un espacio que se denomina new_space
 ```
 cf create-space new_space
 ```
@@ -254,25 +254,25 @@ cf delete appname [-f] [-r]
 
 <strong>Ejemplos</strong>:
 
-Suprime una aplicación denominada `my_app` (se requiere confirmación).
+Suprime una aplicación que se denomina `my_app` (se requiere confirmación).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Suprime una aplicación denominada `my_app` sin exigir confirmación.
+Suprime una aplicación que se denomina `my_app`, sin exigir confirmación.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Suprime una aplicación llamada `my_app` y todos los nombres de dominio asociados con `my_app`.
+Suprime una aplicación que se denomina `my_app` y todos los nombres de dominio asociados con `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Suprime una aplicación denominada `my_app` y todos los nombres de dominio asociados con `my_app` sin exigir confirmación.
+Suprime una aplicación que se denomina `my_app` y todos los nombres de dominio asociados con `my_app` sin exigir información.
 ```
 cf delete my_app -f -r
 ```
@@ -302,25 +302,25 @@ cf delete-space space_name [-f]
 
 <strong>Ejemplos</strong>:
 
-Suprime una aplicación denominada `my_app` (se requiere confirmación).
+Suprime una aplicación que se denomina `my_app` (se requiere confirmación).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Suprime una aplicación denominada `my_app` sin exigir confirmación.
+Suprime una aplicación que se denomina `my_app`, sin exigir confirmación.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Suprime una aplicación llamada `my_app` y todos los nombres de dominio asociados con `my_app`.
+Suprime una aplicación que se denomina `my_app` y todos los nombres de dominio asociados con `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Suprime una aplicación denominada `my_app` y todos los nombres de dominio asociados con `my_app` sin exigir confirmación.
+Suprime una aplicación que se denomina `my_app` y todos los nombres de dominio asociados con `my_app` sin exigir información.
 ```
 cf delete my_app -f -r
 ```
@@ -347,7 +347,7 @@ cf events [appname]
 
 <strong>Ejemplos</strong>:
 
-Muestra los sucesos para una aplicación denominada `my_app`.
+Visualizar los sucesos para una aplicación denominada `my_app`.
 ```
 cf events my_app
 ```
@@ -357,7 +357,7 @@ cf events my_app
 ## cf help
 {: #cf_help}
 
-Muestra información de ayuda para todos los mandatos cf o para un mandato cf específico.
+Visualizar información de ayuda para todos los mandatos cf o para un mandato cf específico.
 
 ```
 cf help [command_name]
@@ -380,7 +380,7 @@ cf help
 ```
 {: codeblock}
 
-Muestra la información de ayuda para el mandato events.
+Visualizar la información de ayuda para el mandato events.
 ```
 cf help events
 ```
@@ -391,7 +391,7 @@ cf help events
 {: #cf_login}
 
 Se inicia la sesión
-en {{site.data.keyword.Bluemix_notm}}. Si va a iniciar sesión con un [ID federado](/docs/admin/account.html#signup), debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión. 
+en {{site.data.keyword.Bluemix_notm}}. Si va a iniciar sesión con un [ID federado](/docs/admin/account.html#signup), debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión.
 
 **Nota**: También puede utilizar una clave de una API de la plataforma de {{site.data.keyword.Bluemix_notm}} para iniciar una sesión. Utilice el nombre de usuario `apikey` y su valor de clave de API como contraseña. Para obtener más información sobre la creación de claves de API, consulte [Gestión de claves de API](/docs/iam/apikeys.html).
 
@@ -426,31 +426,31 @@ y lo vean otros usuarios del sistema operativo local.
 
 <strong>Ejemplos</strong>:
 
-Inicie una sesión en {{site.data.keyword.Bluemix_notm}}.
+Iniciar sesión en {{site.data.keyword.Bluemix_notm}}.
 ```
 cf login
 ```
 {: codeblock}
 
-Inicie sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`.
+Iniciar sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`.
 ```
 cf login -a https://api.ng.bluemix.net
 ```
 {: codeblock}
 
-Inicie sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `nombre_usuario`, y sin contraseña especificada por motivos de seguridad.
+Iniciar sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `nombre_usuario`, y sin contraseña especificada por motivos de seguridad.
 ```
 cf login -a https://api.ng.bluemix.net -u nombre_usuario
 ```
 {: codeblock}
 
-Inicie sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `user_name`, sin contraseña especificada por motivos de seguridad, y un nombre de organización de `nombre_org` y un nombre de espacio de `nombre_espacio`.
+Iniciar sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `user_name`, sin contraseña especificada por motivos de seguridad, y un nombre de organización de `nombre_org` y un nombre de espacio de `nombre_espacio`.
 ```
 cf login -a https://api.ng.bluemix.net -u nombre_usuario -o nombre_org -s nombre_espacio
 ```
 {: codeblock}
 
-Inicie una sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net` utilizando una clave de API. Utilice `apikey` como el nombre de usuario y la clave de API real como contraseña.
+Iniciar una sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net` utilizando una clave de API. Utilice `apikey` como el nombre de usuario y la clave de API real como contraseña.
 ```
 cf login -a https://api.ng.bluemix.net -u apikey -p EsteValorEsSuClaveAPI
 ```
@@ -460,7 +460,7 @@ cf login -a https://api.ng.bluemix.net -u apikey -p EsteValorEsSuClaveAPI
 ## cf logs
 {: #cf_logs}
 
-Visualiza las
+Visualizar las
 corrientes de anotaciones cronológicas STDOUT y STDERR de una app.
 
 ```
@@ -479,13 +479,13 @@ cf logs appname [--recent]
 
 <strong>Ejemplos</strong>:
 
-Visualizar las corrientes de registros para una aplicación denominada `my_app`.
+Visualizar las secuencias de registro para una aplicación que se denomina ` mi_app `.
 ```
 cf logs my_app
 ```
 {: codeblock}
 
-Visualizar las corrientes de registros recientes para una aplicación denominada `my_app`.
+Visualizar las corrientes de registros de una aplicación que se denomina `my_app`.
 ```
 cf logs my_app --recent
 ```
@@ -496,7 +496,7 @@ cf logs my_app --recent
 {: #cf_marketplace}
 
 Lista todos los
-servicios disponibles en el mercado. Los servicios que muestra este mandato también se pueden ver en el catálogo de {{site.data.keyword.Bluemix_notm}}.
+servicios disponibles en el mercado. Los servicios que aparecen en la lista de este mandato también se pueden ver en el catálogo {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
@@ -517,7 +517,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-Despliega una aplicación nueva
+Desplegar una aplicación nueva
 en {{site.data.keyword.Bluemix_notm}}
 o actualiza una aplicación existente en {{site.data.keyword.Bluemix_notm}}.
 
@@ -569,13 +569,13 @@ a esta aplicación.</dd>
 
 <strong>Ejemplos</strong>:
 
-Iniciar una aplicación denominada `my_app` con el mandato de inicio predeterminado.
+Iniciar una aplicación que se denomine `my_app` con el mandato de iniciar predeterminado.
 ```
 cf push `my_app` -c null
 ```
 {: codeblock}
 
-Iniciar una aplicación denominada `my_app` con la opción para ejecutar un archivo de script denominada `run.sh`.
+Iniciar una aplicación que se denomina `my_app` con la opción de ejecutar un archivo de script denominado `run.sh`.
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -586,7 +586,7 @@ cf push `my_app` -c "bash ./<run.sh>"
 ## cf scale
 {: #cf_scale}
 
-Muestra o cambia el número de instancia, el límite de espacio de disco y el límite de memoria de una app.
+Mostrar o cambiar el número de instancia, el límite de espacio de disco y el límite de memoria de una app.
 
 ```
 cf scale appname [-i número_instancia] [-k límite_disco] [-m límite_memoria] [-f]
@@ -611,7 +611,7 @@ cf scale appname [-i número_instancia] [-k límite_disco] [-m límite_memoria] 
 
 <strong>Ejemplos</strong>:
 
-Mostrar el número de instancia, el límite de espacio de disco y el límite de memoria para una aplicación denominada `my_app`.
+Mostrar el número de instancia, el límite de espacio de disco y el límite de memoria de una aplicación que se denomina `my_app`.
 ```
 cf scale my_app
 ```
@@ -669,7 +669,7 @@ cf set-env nombre_app nombre_variable valor_variable
 
 <strong>Ejemplos</strong>:
 
-Defina una variable de entorno denominada `variable_a` con un valor de `123` para la aplicación denominada `my_app`.
+Definir una variable de entorno que se denomine `variable_a` con un valor de `123` para la aplicación denominada `my_app`.
 ```
 cf set-env my_app variable_a 123
 ```
@@ -686,7 +686,7 @@ cf ssh
 ```
 <strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
 
-De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego. Puede utilizar el mandato `cf ssh-enabled` para verificar si el acceso SSH está habilitado o el mandato `cf enable-ssh` para habilitar el acceso si está inhabilitado. 
+De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego. Puede utilizar el mandato `cf ssh-enabled` para verificar si se ha habilitado el acceso SSH o el mandato `cf enable-ssh` para habilitar el acceso, en caso de que estuviese inhabilitado.
 
 <strong>Opciones de mandato</strong>:
 
@@ -723,7 +723,7 @@ Transferencia de un solo archivo desde la instancia del contenedor de aplicacion
 $ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Configuración del reenvío de puertos del puerto 7777 de la máquina local al puerto 8888 de la instancia del contenedor de aplicaciones `my_app`.
+Configuración del reenvío de puertos del puerto 7777 de la máquina local al puerto 8888 de la instancia de contenedor de aplicaciones `my_app`.
 ```
 $ cf ssh -N -T -L 7777:localhost:8888 my_app
 
@@ -769,7 +769,7 @@ cf stop nombre_app
 
 <strong>Ejemplos</strong>:
 
-Detener la aplicación denominada `my_app`.
+Detener la aplicación que se denomina `my_app`.
 ```
 cf stop my_app
 ```
@@ -797,7 +797,7 @@ cf target [-o nombre_org] [-s nombre_espacio]
 
 <strong>Ejemplos</strong>:
 
-Establezca el destino en la organización denominada "my_org" y el espacio denominado "my_space".
+Establecer el destino en la organización denominada "my_org" y el espacio denominado "my_space".
 ```
 cf target -o my_org -s my_space
 ```

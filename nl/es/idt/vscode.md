@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-23"
 # IBM Developer Tools para Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension para Visual Studio Code es una extensión para el editor que proporciona acceso a las funciones de la CLI de desarrollador de IBM directamente dentro de la paleta de mandatos del editor de Visual Studio Code.  Le permite acceder rápidamente a un subconjunto de mandatos de `ibmcloud dev` para ambos flujos de trabajo de Docker y CloudFoundry, incluyendo despliegue de apps, iniciar/detener/reiniciar apps en {{site.data.keyword.Bluemix_notm}}, visualización de los registros de app remoto, etc., todos sin la necesidad de dejar el contexto del editor.
+IBM Developer Extension para Visual Studio Code es una extensión para el editor que proporciona acceso a las funciones de la CLI de desarrollador de IBM directamente dentro de la paleta de mandatos del editor de Visual Studio Code. Le permite acceder rápidamente a un subconjunto de mandatos de `ibmcloud dev` para ambos flujos de trabajo de Docker y CloudFoundry, incluyendo despliegue de apps, iniciar/detener/reiniciar apps en {{site.data.keyword.Bluemix_notm}}, visualización de los registros de app remoto, etc., todos sin la necesidad de dejar el contexto del editor.
 {:shortdesc}
 
 ![Captura de pantalla de la pantalla de descarga de la extensión de IBM Developer Tools.](vscode.png "Pantalla de descarga de la extensión en Visual Studio Code")
@@ -42,7 +42,7 @@ La forma más sencilla para instalar la extensión de IBM Developers Tools consi
 
 Como alternativa, puede instalar la extensión de IBM Developer Tools a través de la ventana de gestión "Extensiones":
 
-1. Abra la barra lateral de **Extensions** dentro de la ventana del editor de Visual Studio Code, y, a continuación, busque utilizando la serie `publisher:IBM Developer`.  La extensión de IBM Developer Tools se mostrará en los resultados de la búsqueda.  
+1. Abra la barra lateral de **Extensions** dentro de la ventana del editor de Visual Studio Code, y, a continuación, busque utilizando la serie `publisher:IBM Developer`. La extensión de IBM Developer Tools se mostrará en los resultados de la búsqueda.  
 2. Pulse el botón **Instalar** para empezar la instalación.
 
 También puede acceder a la extensión de [IBM Developer Tools directamente dentro de Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
@@ -69,7 +69,7 @@ Puede empezar con flujos de trabajo de ibmcloud dev, en unos cuantos pasos:
 * Abra la carpeta del proyecto localmente en la ventana del editor de Visual Studio Code
 * Utilice el mandato `ibmcloud dev build` para crear la app en una imagen de Docker
 * Utilice el mandato `ibmcloud dev debug` para ejecutar la app en el Docker local para desarrollo
-> Nota: Para depurar una aplicación Node.js que se ejecuta dentro del contenedor local de Docker, deberá [añadir una configuración de depuración para el contenedor local](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
+> Nota: para depurar una aplicación Node.js que se ejecuta dentro del contenedor local de Docker, deberá [añadir una configuración de depuración para el contenedor local](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
 * Utilice el mandato `ibmcloud dev run` para ejecutar la app en el Docker local en modo de publicación
 * Utilice el mandato `ibmcloud dev deploy` para desplegar la aplicación en un tiempo de ejecución de Cloud Foundry en {{site.data.keyword.Bluemix_notm}}
 

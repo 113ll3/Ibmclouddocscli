@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 
 
-# Instalando a CLI  {{site.data.keyword.Bluemix_notm}}  Independente
+# Instalando e usando a CLI do {{site.data.keyword.Bluemix_notm}}
 {: #install_use}
 
 O {{site.data.keyword.Bluemix_notm}} CLI fornece a interface da linha de comandos para gerenciar aplicativos, contêineres, infraestruturas, serviços e outros recursos no {{site.data.keyword.Bluemix_notm}}.
@@ -25,7 +25,9 @@ desenvolver aplicativos para o {{site.data.keyword.Bluemix_notm}}, siga o métod
 [aqui](/docs/cli/index.html).
 {: tip}
 
-Use as etapas a seguir para instalar a CLI do {{site.data.keyword.Bluemix_notm}} independente:
+
+## Introdução ao {{site.data.keyword.Bluemix_notm}} CLI
+{: #getting_started}
 
 1. Selecione o instalador do OS para download
 
@@ -56,46 +58,6 @@ Se você estiver usando um ID federado, siga as instruções
 [aqui](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) para efetuar login com uma senha única
 ou uma chave API.  
 {: tip}
-
-## Mais opções para instalar a CLI do {{site.data.keyword.Bluemix_notm}}
-{: #more_options_install}
-
-
-Além do [instalador](install_use_cli.html#getting_started), também é possível usar shell para fazer download e instalar a CLI. 
-
-
-### Instalar por meio do shell
-{: #shell_install}
-
-
-### MacOS
-
-Copie e cole o comando a seguir em um terminal de seu Mac OS e execute-o:
-
-```
-curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
-```
-{: codeblock}
-
-### Linux
-
-Copie e cole o comando a seguir em um terminal de seu S.O. Linux e execute-o:
-
-```
-curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
-```
-{: codeblock}
-
-### Windows PowerShell
-
-Copie e cole o comando a seguir em um console de terminal
-[Windows
-PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} e execute-o:
-
-```
-iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
-```
-{: codeblock}
 
 ## Outros links para explorar ainda mais a CLI do {{site.data.keyword.Bluemix_notm}}
 

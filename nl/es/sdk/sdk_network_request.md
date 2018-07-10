@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-04-16"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # Cómo realizar una solicitud de red
 {: #sdk-network-request}
@@ -115,4 +115,3 @@ Para ver ejemplos de uso completos, consulte archivo [README](https://github.com
 	request.send(success, failure);
 	```
 	{: codeblock}
-

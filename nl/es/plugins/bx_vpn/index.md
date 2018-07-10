@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -19,8 +19,7 @@ lastupdated: "2018-05-23"
 
 *Versión:* 1.4.0
 
-Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestionar su servicio de
-{{site.data.keyword.vpn_full}}. El plugin de interfaz de línea de mandatos de VPN está disponible en dos versiones: una para su uso con el plugin de CLI de Cloud Foundry y la otra para su uso con el plugin de CLI de {{site.data.keyword.Bluemix}}. Ambas versiones del plugin proporcionan las mismas funciones.
+Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestionar su servicio {{site.data.keyword.vpn_full}}. El plugin de CLI de VPN está disponible en dos versiones: una para su uso con el plugin de CLI de Cloud Foundry y la otra para su uso con el plugin de CLI de {{site.data.keyword.Bluemix}}. Ambas versiones del plugin proporcionan las mismas funciones.
 {:shortdesc}
 
 El plugin de VPN está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el aplicable a su caso.
@@ -29,7 +28,7 @@ A continuación se muestran instrucciones para trabajar con el plugin de CLI de
 {{site.data.keyword.Bluemix_notm}}. Para utilizar el plugin con el plugin de la interfaz de línea de mandatos de Cloud Foundry (cf), consulte [Plugin de interfaz de línea de mandatos de VPN para la interfaz de línea de mandatos de cf](../vpn/index.html).
 
 
-La información que se indica a continuación muestra todos los mandatos soportados por el plugin de VPN para la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Consulte [Amplíe su interfaz de línea de mandatos de Bluemix](../../index.html#cli_bluemix_ext) para ver cómo instalar el plugin vpn.
+La información que se indica a continuación muestra todos los mandatos soportados por el plugin de VPN para la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Consulte [Amplíe su interfaz de línea de mandatos de IBM Cloud](../../index.html#cli_bluemix_ext) para ver cómo instalar el plug-in vpn.
 
 **Nota:** *Requisitos previos* lista las acciones que son necesarias antes de utilizar el mandato. Los requisitos previos pueden incluir una o varias de las acciones siguientes:
 <dl>

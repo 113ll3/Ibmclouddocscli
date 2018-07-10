@@ -11,7 +11,6 @@ IBM Cloud Developer Tools (CLI e ferramentas do desenvolvedor)
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	idt/index.md
         	
 	{: .topicgroup}
 	Extensões IDE do IBM Cloud Developer Tools
@@ -61,8 +60,7 @@ IBM Cloud Developer Tools (CLI e ferramentas do desenvolvedor)
 	Ambientes de desenvolvimento recomendados 		deploy_eclipsetools.md
 		[Gerenciando apps Liberty e Node.js](../runtimes/common/app_mng.html#app_management)
 		[kit de ferramentas do desenvolvedor do API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
-		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
-	{: .navgroup-end}
+		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html) 	{: .navgroup-end}
 
 	{: .navgroup id="help"}
 	ts_createapps.md

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -140,7 +140,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### Causa
 {: #os-cause}
 
-Este error se debe al servicio de {{site.data.keyword.objectstorageshort}}, que solo proporciona una instancia del plan de {{site.data.keyword.objectstorageshort}} gratuito.
+Este error se debe al servicio {{site.data.keyword.objectstorageshort}}, que solo proporciona una instancia del plan gratuito de {{site.data.keyword.objectstorageshort}}.
 
 
 #### Resolución
@@ -267,7 +267,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 #### Causa
 {: #cause2}
 
-Probablemente se debe a un nombre de clúster no válido y puede confirmarse ejecutando el mismo mandato con `--trace`, y puede verlo en la salida del error:
+Probablemente se debe a un nombre de clúster no válido y puede confirmarse ejecutando el mismo mandato con `--trace` y puede verlo en la salida de error:
 
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
@@ -286,7 +286,7 @@ ibmcloud cs cluster-config <cluster-name>
 
 ### Se ha producido una anomalía al desplegar en Kubernetes en {{site.data.keyword.Bluemix_notm}}
 
-Es posible que vea esta anomalía tras la solicitud del destino de imagen de despliegue:
+Puede que vea esta anomalía tras la solicitud del destino de imagen de despliegue:
 
 ```
 FAILED
@@ -307,7 +307,7 @@ Lo más probable es que esto se deba a un destino de imagen de despliegue. Más 
 #### Resolución
 {: #resolution3}
 
-Asegúrese de que el espacio de nombres en el destino de imagen de despliegue coincide con uno de los espacios de nombres encontrados en la ejecución
+Asegúrese de que el espacio de nombres en el destino de imagen de despliegue coincide con uno de los espacios de nombres que se ha encontrado en la ejecución
 
 ```
 ibmcloud cr namespaces
@@ -318,15 +318,15 @@ ibmcloud cr namespaces
 ## APÉNDICE
 {: #appendix}
 
-Se instalaran todos los requisitos previos para la mayoría de los usuarios que utilizan los instaladores de plataforma situados en la parte superior de la página. Si necesita instalar cualquier componente manualmente, aquí encontrará las instrucciones:
+Se han instalado todos los requisitos previos para la mayoría de los usuarios que están ejecutando los instaladores de la plataforma. Si necesita instalar cualquier componente manualmente, aquí encontrará las instrucciones:
 
-Para instalar el plugin de desarrollo, primero debe estar instalada la [CLI de IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
+Para instalar el plug-in de desarrollo, primero debe estar instalada la [CLI de IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
 
-Para utilizar el plugin de desarrollo, debe instalarlo ejecutando el mandato siguiente: `ibmcloud plugin install dev -r Bluemix`
+Para utilizar el plug-in de desarrollo, debe instalarlo ejecutando el mandato siguiente: `ibmcloud plugin install dev -r Bluemix`
 
 Para ejecutar y depurar aplicaciones localmente, también debe instalar el [Docker ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.docker.com/get-docker).
 
-Para desplegar una aplicación como contenedor, también debe instalar Kubernetes, Helm y los siguientes plugins de la CLI de IBM Cloud:
+Para desplegar una aplicación como un contenedor, también deberá instalar `Kubernetes`, `Helm` y los siguientes plug-ins de la CLI de IBM Cloud:
 
 Para instalar Kubernetes:
 * Usuarios de Mac:
@@ -346,10 +346,10 @@ Para instalar Helm:
 * Usuarios de Windows:
 Descargue e instale el binario de https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Para instalar el plugin container-registry:
+Para instalar el plug-in container-registry:
 `ibmcloud plugin install container-registry`
 
-Para instalar el plugin container-service:
+Para instalar el plug-in container-service:
 `ibmcloud plugin install container-service`
 
 

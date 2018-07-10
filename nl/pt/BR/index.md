@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-06-27"
 Nesse tutorial, você instala um conjunto de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}}, verifica a
 instalação e configura o seu ambiente. As ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}} oferecem uma
 abordagem de linha de comandos para criação, desenvolvimento e implementação de aplicativos da web, de dispositivos móveis e de
-microsserviço de ponta a ponta. 
+microsserviço de ponta a ponta.
 {:shortdesc}
 
 Com essa instalação, você obtém a CLI do {{site.data.keyword.Bluemix_notm}}, além das seguintes ferramentas: 
@@ -30,7 +30,7 @@ Com essa instalação, você obtém a CLI do {{site.data.keyword.Bluemix_notm}},
 * `Docker`
 * `Helm`
 * `kubectl`
-* `curl`
+* `ondulação`
 * Plug-in do {{site.data.keyword.dev_cli_notm}}
 * Plug-in do {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 * Plug-in do {{site.data.keyword.registrylong_notm}}
@@ -66,7 +66,7 @@ requisitos do sistema:
   ```
   {: codeblock}
 <br><br>
-  Clique com o botão direito no ícone do Windows PowerShell e selecione **Executar como
+ Clique com o botão direito no ícone do Windows PowerShell e selecione **Executar como
 administrador**.
   {: tip}
 
@@ -88,7 +88,7 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 1. Conecte-se a um terminal de API em sua região do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à região Sul dos EUA {{site.data.keyword.Bluemix_notm}}:
 
 	```
-	ibmcloud api https://api.ng.bluemix.net
+	Ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
@@ -100,8 +100,7 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 	{: codeblock}
 <br><br>
 	Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Consulte
-[Efetuando login com um ID federado](/docs/iam/login_fedid.html#using-an-api-key) para obter mais detalhes.
-	{: tip}
+[Efetuando login com um ID federado](/docs/iam/login_fedid.html#using-an-api-key) para obter mais detalhes.	{: tip}
 
 3. Configure a sua organização e o espaço.
 
@@ -113,4 +112,6 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 ## Próximas Etapas
 {: #next-steps}
 
-Agora você está pronto para desenvolver e implementar o seu primeiro app! Consulte [Desenvolvendo e implementando seus apps](/docs/cli/idt/index.html) para obter mais informações.
+Agora você está pronto para desenvolver e implementar o seu primeiro app! Consulte
+[Criando um app da web básico com um kit do iniciador](/docs/apps/tutorials/tutorial_web.html) para obter
+informações adicionais.

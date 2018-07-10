@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-06-21"
 
 
 
@@ -24,7 +24,7 @@ Cloud Foundry.
 {:shortdesc}
 
   1. Si aún no tiene Eclipse, instale Eclipse Neon for Java EE Developers (4.6.1).
-  
+
   2. Pulse y mantenga el siguiente botón para arrastrarlo y soltarlo en la barra de herramientas de Eclipse y siga las indicaciones para instalar IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}:
 
   ![Arrastre y suelte en un espacio de trabajo de Eclipse Neon en ejecución para instalar IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)

@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-06-08"
 Versión: 1.2.0
 Release: 8 de marzo de 2018
 
-A partir de mayo de 2018, los mandatos de la CLI de {{site.data.keyword.Bluemix_notm}} han cambiado de `bluemix` y `bx` a `ibmcloud`. Sin embargo, todavía puede utilizar los mandatos de CLI `bluemix` y `bx` hasta que se dejen de utilizar en una fecha posterior.
+A partir de mayo de 2018, los mandatos de CLI de {{site.data.keyword.Bluemix_notm}} han cambiado de `bluemix` y `bx` a `ibmcloud`. Sin embargo, todavía puede utilizar los mandatos de CLI `bluemix` y `bx` hasta que se dejen de utilizar en una fecha posterior.
 {: tip}
 
 Los siguientes mandatos de CLI (ibmcloud dev) {{site.data.keyword.dev_cli_notm}} sirven para crear un proyecto, desplegarlo, depurarlo y probarlo.
@@ -393,7 +393,7 @@ Hay [parámetros adicionales](#command-parameters) compartidos con otros mandato
 
 * Dockerfile para el contenedor de ejecución.
 * Si tiene prevista la ejecución con varios contenedores, este archivo debería ser un archivo Compose.
-* Para utilizar varios archivos Compose, delimite con comillas dobles la lista de nombres.
+* Para utilizar archivos Compose, delimite con comillas dobles los nombres de la lista delimitada por comas.
 * Uso: `ibmcloud dev run --dockerfile-run [/path/to/Dockerfile]`
 * Uso: `ibmcloud dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
@@ -534,7 +534,7 @@ El siguiente parámetro es exclusivo del mandato `test`.  Hay [parámetros adici
 ## view
 {: #view}
 
-Visualice el URL en el que se despliega su aplicación a través del mandato `view`. Ejecute este mandato en el directorio raíz de la aplicación que desea visualizar. El mandato `view` también abrirá el URL en el navegador predeterminado.
+Visualice el URL en el que se despliega su aplicación a través del mandato `view`. Ejecute este mandato en el directorio raíz de la aplicación que desea ver. El mandato `view` también abrirá el URL en el navegador predeterminado.
 
 Para las aplicaciones desplegadas en Cloud Foundry, el URL consta del nombre de host y el dominio de la aplicación.
 

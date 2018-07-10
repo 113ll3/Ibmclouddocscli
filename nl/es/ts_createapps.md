@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 
 # Resolución de problemas de las herramientas de desarrollador de {{site.data.keyword.Bluemix_notm}}
 {: #troubleshoot}
@@ -114,7 +114,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 {: codeblock}
 {: tsSymptoms}
 
-Este error se debe al servicio {{site.data.keyword.objectstorageshort}}, que únicamente proporciona una instancia del plan {{site.data.keyword.objectstorageshort}} gratuito.
+Este error se debe al servicio {{site.data.keyword.objectstorageshort}}, que solo proporciona una instancia del plan gratuito de {{site.data.keyword.objectstorageshort}}.
 {: tsCauses}
 
 Se le solicitará que elija otro plan para evitar este error.
@@ -189,7 +189,7 @@ Suprima la carpeta `node_modules` y ejecute de nuevo el mandato `bx dev run`.
 
 ## Anomalía al desplegar en {{site.data.keyword.Bluemix_notm}}
 
-Se produce una anomalía cuando se intenta desplegar en {{site.data.keyword.Bluemix_notm}} con la CLI de {{site.data.keyword.dev_cli_short}}, sin embargo, no se visualiza ningún error.
+Se produce una anomalía cuando se intenta desplegar en {{site.data.keyword.Bluemix_notm}} con la CLI de {{site.data.keyword.dev_cli_short}}, sin embargo no se visualiza ningún error.
 {: tsSymptoms}
 
 Es posible que no haya iniciado una sesión con su cuenta.
@@ -255,15 +255,15 @@ bx cr namespaces
 ## Reinstalación de herramientas
 {: #appendix}
 
-Todos los requisitos previos se instalan para la mayoría de los usuarios que utilizan instaladores de la plataforma. Si necesita instalar cualquier componente manualmente, aquí encontrará las instrucciones:
+Se instalan todos los requisitos previos para la mayoría de los usuarios mediante los instaladores de plataforma. Si necesita instalar cualquier componente manualmente, aquí encontrará las instrucciones:
 
-Para instalar el plugin de desarrollo, primero debe instalar la [CLI de IBM Cloud](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
+Para instalar el plug-in de desarrollador, deberá instalar en primer lugar la [CLI de IBM Cloud](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
 
-Para utilizar el plugin de desarrollo, debe instalarlo ejecutando el mandato siguiente: `bx plugin install dev -r Bluemix`
+Para utilizar el plug-in de desarrollador, deberá instalarlo ejecutando el mandato siguiente: `bx plugin install dev -r Bluemix`
 
 Para ejecutar y depurar apps localmente, también debe instalar el [Docker](https://www.docker.com/get-docker).
 
-Para desplegar una app como contenedor, también debe instalar Kubernetes, Helm y los siguientes plugins de la CLI de IBM Cloud:
+Para desplegar una app como contenedor, deberá también instalar Kubernetes, Helm y los siguientes plug-ins de la CLI de IBM Cloud:
 
 Para instalar Kubernetes:
 * Usuarios de Mac:
@@ -283,9 +283,8 @@ Para instalar Helm:
 * Usuarios de Windows:
 Descargue e instale el binario de https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Para instalar el plugin container-registry:
+Para instalar el plug_in container-registry:
 `bx plugin install container-registry`
 
-Para instalar el plugin container-service:
+Para instalar el plug-in container-service:
 `bx plugin install container-service`
-

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-23"
 # Iniciación a la CLI de {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-Se recomienda instalar la CLI de {{site.data.keyword.Bluemix_notm}} y todas las dependencias recomendadas utilizando el método descrito [aquí.](/docs/cli/index.html)
+Se recomienda instalar la CLI de {{site.data.keyword.Bluemix_notm}} y todas las dependencias recomendadas utilizando el método que se describe [aquí.](/docs/cli/index.html)
 {: tip}
 
 
@@ -39,7 +39,7 @@ Para empezar solo con la CLI de {{site.data.keyword.Bluemix_notm}}:
    **Los releases de 32 bits y versiones anteriores se pueden encontrar [aquí](all_versions.html)
 
 1. Ejecute el instalador
-   * Para macOS y Windows, simplemente ejecute el instalador.
+   * Para macOS y Windows, ejecute el instalador.
    * Para Linux, extraiga el paquete y ejecute el script `install_bluemix_cli`
 
 1. Establezca como destino un punto final de API e inicie sesión en {{site.data.keyword.Bluemix_notm}}
@@ -54,14 +54,14 @@ Si está utilizando un ID federado, siga las instrucciones [aquí](https://conso
 ## Otros enlaces para explorar más la CLI de {{site.data.keyword.Bluemix_notm}}
 
 * [Más opciones para descargar e instalar la CLI de {{site.data.keyword.Bluemix_notm}}](download_cli.html)
-* [Amplíe las prestaciones de la CLI de {{site.data.keyword.Bluemix_notm}} con plugins](extend_cli.html)
+* [Extend {{site.data.keyword.Bluemix_notm}} Prestaciones de la CLI con plug-ins](extend_cli.html)
 * [Todas las versiones de la CLI de {{site.data.keyword.Bluemix_notm}} y las notas de release](all_versions.html)
-* [Uso del documento de mandatos de la CLI de {{site.data.keyword.Bluemix_notm}}](bx_cli.html)
+* [Documento sobre el {{site.data.keyword.Bluemix_notm}}uso de mandatos de CLI](bx_cli.html)
 
 
 ## Informar de problemas y enviar comentarios
 {: #issues}
 
 Utilice las opciones siguientes para informar de problemas o enviar nuevas solicitudes de características:
- * Crear problemas en [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg)
+ * Crear problemas en [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg)
  * Dejar mensajes en el [canal de Slack](https://dwopen.slack.com/messages/bluemix-cli/){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg)

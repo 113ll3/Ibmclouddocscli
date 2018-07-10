@@ -20,7 +20,7 @@ El plugin de {{site.data.keyword.BluSoftlayer}} se ha fusionado en la CLI de {{s
 
 Utilice los mandatos de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}} en la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} para configurar y gestionar los servicios de SoftLayer.
 
-A partir de mayo de 2018, los mandatos de la CLI de {{site.data.keyword.Bluemix_notm}} han cambiado de `bluemix` y `bx` a `ibmcloud`. Sin embargo, todavía puede utilizar los mandatos de CLI `bluemix` y `bx` hasta que se dejen de utilizar en una fecha posterior.
+A partir de mayo de 2018, los mandatos de CLI de {{site.data.keyword.Bluemix_notm}} han cambiado de `bluemix` y `bx` a `ibmcloud`. Sin embargo, todavía puede utilizar los mandatos de CLI `bluemix` y `bx` hasta que se dejen de utilizar en una fecha posterior.
 {: tip}
 
 

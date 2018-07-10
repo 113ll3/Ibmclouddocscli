@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -11,25 +11,25 @@ lastupdated: "2018-05-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Contribución al plugin SDK
+# Contribución al plug-in SDK
 {: #contribute}
 
-Siga estas directrices para contribuir al plugin {{site.data.keyword.Bluemix}} CLI SDK.
+Siga estas directrices para contribuir al plugin de SDK de CLI de {{site.data.keyword.Bluemix}}.
 
 ## Configuración del entorno de desarrollo
 {: #dev-env}
 
-* Cloud Foundry [CLI ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/cloudfoundry/cli/releases)
+* [CLI ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de Cloud Foundry](https://github.com/cloudfoundry/cli/releases)
 
-   Cloud Foundry CLI no es necesario, pero permite acceder a {{site.data.keyword.Bluemix_notm}} desde el terminal.
+   La CLI de Cloud Foundry no es necesaria, pero permite acceder a {{site.data.keyword.Bluemix_notm}} desde el terminal.
 
-   Para obtener más información sobre Cloud Foundry CLI, consulte la [documentación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/cfcommands/index.html){: new_window}.
+   Para obtener más información sobre la CLI de Cloud Foundry, consulte la [documentación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/cfcommands/index.html){: new_window}.
 
-* {{site.data.keyword.Bluemix_notm}} [CLI ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://clis.{DomainName}/ui/home.html)
+* [CLI ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://clis.{DomainName}/ui/home.html) de {{site.data.keyword.Bluemix_notm}}
 
-   Este plugin se instala en {{site.data.keyword.Bluemix_notm}} CLI. {{site.data.keyword.Bluemix_notm}} CLI también proporciona recursos útiles para acceder a {{site.data.keyword.Bluemix_notm}} desde el terminal.
+   Este plugin se instala en la CLI de {{site.data.keyword.Bluemix_notm}}. La CLI de {{site.data.keyword.Bluemix_notm}} también proporciona recursos útiles para acceder a {{site.data.keyword.Bluemix_notm}} desde el terminal.
 
-   Para obtener más información sobre {{site.data.keyword.Bluemix_notm}} CLI, consulte la [documentación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/index.html){: new_window}.
+   Para obtener más información sobre la CLI de {{site.data.keyword.Bluemix_notm}}, consulte la [documentación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/index.html){: new_window}.
 
 * [Entorno de desarrollo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://golang.org/doc/code.html) de Go
 
@@ -102,7 +102,7 @@ La infraestructura de prueba se basa en Ginkgo, una infraestructura de pruebas B
       ```
       {: codeblock}
 
-      * Irá al directorio en el que se encuentra ubicado el archivo `.coverprofile`.
+      * Vaya al directorio en el que se encuentra ubicado el archivo `.coverprofile`.
 
 * Internacionalización: [go-i18n ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/nicksnyder/go-i18n) y [go-bindata ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/jteeuwen/go-bindata)
 
@@ -148,11 +148,11 @@ Las dependencias anidadas no están listadas.
 
 * [github.ibm.com/Bluemix/bluemix-cli-sdk ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
-   El plugin {{site.data.keyword.Bluemix_notm}} CLI SDK, que proporciona la infraestructura para desarrollar plugins de {{site.data.keyword.Bluemix_notm}} CLI.
+   El plugin de SDK de CLI de {{site.data.keyword.Bluemix_notm}}, que proporciona la infraestructura para desarrollar plugins de CLI de {{site.data.keyword.Bluemix_notm}}.
 
 * [github.com/urfave/cli ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/urfave/cli)
 
-   Este paquete proporciona una infraestructura para compilar apps de línea de mandatos en Go. El plugin {{site.data.keyword.Bluemix_notm}} CLI se basa en una versión antigua de esta biblioteca (github.com/codegangsta/cli).
+   Este paquete proporciona una infraestructura para compilar apps de línea de mandatos en Go. El plugin de CLI de {{site.data.keyword.Bluemix_notm}} se basa en una versión antigua de esta biblioteca (github.com/codegangsta/cli).
 
 * [github.com/asaskevich/govalidator ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/asaskevich/govalidator)
 
@@ -196,7 +196,7 @@ Este [repositorio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono
    {: codeblock}
 
 
-## Compilación, pruebas e instalación del plugin
+## Compilación, pruebas e instalación del plug-in
 {: #build-plug-in}
 
 Compile el plugin eligiendo uno de los mandatos siguientes.
@@ -213,7 +213,7 @@ sh bin/build.sh
 ```
 {: codeblock}
 
-**Nota**: El script de compilación también instala el plugin para {{site.data.keyword.Bluemix_notm}} CLI.
+**Nota**: El script de compilación también instala el plugin en la CLI de {{site.data.keyword.Bluemix_notm}}.
 
 Pruebe el plugin eligiendo uno de los mandatos siguientes.
 
@@ -234,14 +234,14 @@ sh bin/testAll.sh
 ```
 {: codeblock}
 
-Ejecute el plugin como un CLI autónomo.
+Ejecute el plugin como una CLI autónoma.
 
 ```
 ./main
 ```
 {: codeblock}
 
-Instale e invoque el plugin como un {{site.data.keyword.Bluemix_notm}} CLI eligiendo alguno de los siguientes mandatos.
+Instale e invoque el plugin como una CLI de {{site.data.keyword.Bluemix_notm}} eligiendo alguno de los siguientes mandatos.
 
 ```
 ibmcloud plugin install main

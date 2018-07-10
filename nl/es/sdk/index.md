@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-05-23"
 # SDK Generator
 {: #sdk-cli}
 
-El plugin {{site.data.keyword.IBM}} SDK Generator se puede instalar en [{{site.data.keyword.Bluemix_notm}} CLI ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/all_versions.html).
+El plugin {{site.data.keyword.IBM}} SDK Generator se puede instalar en la [CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/all_versions.html).
 
 Como desarrollador en {{site.data.keyword.Bluemix_notm}}, puede utilizar este plug-in para generar SDK desde su definición de la API REST compatible con la [Especificación de Open API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.openapis.org/). A medida que modifica la definición de API REST, podrá utilizar este plugin para volver a generar sólo el SDK, en lugar de volver a generar todo el proyecto.
 
@@ -37,7 +37,7 @@ Asegúrese de haber satisfecho los siguientes requisitos.
 ## Instalación
 {: #installation}
 
-1. [Instale {{site.data.keyword.Bluemix}} CLI ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://clis.ng.bluemix.net/ui/home.html).
+1. [Instale la CLI de {{site.data.keyword.Bluemix}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://clis.ng.bluemix.net/ui/home.html).
 
 2. [Instale el plugin ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in).
 
@@ -63,7 +63,7 @@ Uso `ibmcloud sdk generate [arguments...] [command options]`.
 {: #gen-args}
 
 * `APP_NAME`: el nombre de la app de Cloud Foundry en el espacio actual
-* `OPENAPI_DOC_LOCATION`: un URL o una vía de acceso de archivos relativa al JSON o Yaml de la definición de la API REST sin formato
+* `OPENAPI_DOC_LOCATION`: un URL o una vía de acceso de archivos relativa al JSON o yaml de la definición de la API REST sin formato
 * `GENERATED_SDK_NAME` (opcional): el nombre del SDK generado
 
 
@@ -94,7 +94,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-Para generar un SDK desde un URL a un archivo de definición de Open API o un archivo JSON o Yaml local, utilice el siguiente mandato.
+Para generar un SDK desde un URL a un archivo de definición de Open API o un archivo JSON o yaml local, utilice el siguiente mandato.
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -112,7 +112,7 @@ Utilice `ibmcloud sdk validate [argument]`.
 {: #val-args}
 
 * `APP_NAME`: el nombre de la app de Cloud Foundry en el espacio actual
-* `OPENAPI_DOC_LOCATION`: un URL o una vía de acceso de archivos relativa al JSON o Yaml de la definición de la API REST sin formato
+* `OPENAPI_DOC_LOCATION`: un URL o una vía de acceso de archivos relativa al JSON o yaml de la definición de la API REST sin formato
 
 
 #### Uso
@@ -125,7 +125,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-Para validar un SDK desde el URL a un documento de especificación de la API o un archivo JSON o Yaml local, utilice el siguiente mandato.
+Para validar un SDK desde el URL a un documento de especificación de la API o un archivo JSON o yaml local, utilice el siguiente mandato.
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### List Apps (Cloud Foundry)
 {: #list-apps}
 
-Utilice `ibmcloud sdk list [argument] [option]` para listar apps y para validar las especificaciones de API. Debe tener la variable de entorno `OPENAPI_SPEC` establecida en la vía de acceso de URL relativo que aloja su especificación.
+Utilice `ibmcloud sdk list [argument] [option]` para listar apps y para validar las especificaciones de API. Debe tener la variable de entorno `OPENAPI_SPEC` establecida en el URL relativo de la vía de acceso que aloja su especificación.
 
 
 #### Argumentos

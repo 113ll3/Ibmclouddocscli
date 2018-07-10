@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -63,7 +63,7 @@ Dado que un código de acceso de una sola vez recupera código de la consola de 
 ## Utilización de la clave de API
 {:api_key}
 
-La clave de API necesaria es la clave de API de {{site.data.keyword.Bluemix_notm}} que ha utilizado para autenticarse con la plataforma de {{site.data.keyword.Bluemix_notm}}, no la clave de API de Softlayer ni la clave de API del servicio de {{site.data.keyword.Bluemix_notm}}.
+La clave de API necesaria es la clave de API de {{site.data.keyword.Bluemix_notm}} que se ha utilizado para autenticarse con la plataforma de {{site.data.keyword.Bluemix_notm}}, no la clave de API de SoftLayer ni la clave de API del servicio de {{site.data.keyword.Bluemix_notm}}.
 
 1. Cree una clave de API con el mandato [`ibmcloud iam api-key-create`](/docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_iam_api_key_create). Utilice la opción `-f` para generar un archivo de claves de API en lugar de mostrar la clave en la ventana de mandatos:
 

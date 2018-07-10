@@ -23,7 +23,7 @@ La interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} pr
 
 A partir de la versión 0.5.0, el cliente de línea de mandatos de {{site.data.keyword.Bluemix_notm}} empaqueta un cliente de línea de mandatos de Cloud Foundry en su instalación. Si tiene su propio cf cli instalado, no utilice los mandatos CLI de {{site.data.keyword.Bluemix_notm}} `ibmcloud [mandato]` ni los mandatos Cloud Foundry CLI `cf [mandato]` de su propia instalación en el mismo contexto. En su lugar, utilice `ibmcloud cf [mandato]` si desea utilizar cf cli para gestionar los recursos de Cloud Foundry en el contexto de CLI de {{site.data.keyword.Bluemix_notm}}.  Tenga en cuenta que `ibmcloud cf api/login/logout/target` no está permitido y debe utilizar `ibmcloud api/login/logout/target` en su lugar.
 
-A partir de mayo de 2018, los mandatos de la CLI de {{site.data.keyword.Bluemix_notm}} han cambiado de `bluemix` y `bx` a `ibmcloud`. Sin embargo, todavía puede utilizar los mandatos de CLI `bluemix` y `bx` hasta que se dejen de utilizar en una fecha posterior.
+A partir de mayo de 2018, los mandatos de CLI de {{site.data.keyword.Bluemix_notm}} han cambiado de `bluemix` y `bx` a `ibmcloud`. Sin embargo, todavía puede utilizar los mandatos de CLI `bluemix` y `bx` hasta que se dejen de utilizar en una fecha posterior.
 {: tip}
 
 A continuación se enumeran los mandatos detallados que están soportados por la CLI de {{site.data.keyword.Bluemix_notm}}, incluidos sus nombres, argumentos, opciones, requisitos previos, descripciones y ejemplos.
@@ -439,7 +439,7 @@ Los mandatos para gestionar la infraestructura de {{site.data.keyword.BluSoftlay
 
 ## ibmcloud help
 {: #ibmcloud_help}
-Muestra la ayuda general para mandatos incorporados de primer nivel y espacios de nombres soportados de {{site.data.keyword.Bluemix_notm}} CLI, o la ayuda para un mandato o un espacio de nombres incorporado específico.
+Muestra la ayuda general para mandatos incorporados de primer nivel y espacios de nombres soportados de la CLI de {{site.data.keyword.Bluemix_notm}}, o la ayuda para un mandato o un espacio de nombres incorporado específico.
 
 ```
 ibmcloud help [COMMAND|NAMESPACE]
@@ -451,14 +451,14 @@ ibmcloud help [COMMAND|NAMESPACE]
 
    <dl>
    <dt>COMMAND|NAMESPACE (opcional)</dt>
-   <dd>Mandato o espacio de nombres para el que se visualiza ayuda. Si no se especifica, se mostrará la ayuda general para {{site.data.keyword.Bluemix_notm}} CLI.</dd>
+   <dd>Mandato o espacio de nombres para el que se visualiza ayuda. Si no se especifica, se mostrará la ayuda general de la CLI de {{site.data.keyword.Bluemix_notm}}.</dd>
    </dl>
 
 
 
 <strong>Ejemplos</strong>:
 
-Visualiza ayuda general para {{site.data.keyword.Bluemix_notm}} CLI:
+Visualiza ayuda general de la CLI de {{site.data.keyword.Bluemix_notm}}:
 
 ```
 ibmcloud help
@@ -5069,7 +5069,7 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>Ejemplos</strong>:
 
-Eliminar el repositorio `bluemix-repo` de {{site.data.keyword.Bluemix_notm}} CLI:
+Eliminar el repositorio `bluemix-repo` desde la CLI de {{site.data.keyword.Bluemix_notm}}:
 
 ```
 ibmcloud plugin repo-remove bluemix-repo
@@ -5167,7 +5167,7 @@ ibmcloud plugin show PLUGIN-NAME
 ## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
-Instalar la versión específica del plug-in en {{site.data.keyword.Bluemix_notm}} CLI desde la vía de acceso o el repositorio especificados.
+Instalar la versión específica del plug-in en la CLI de {{site.data.keyword.Bluemix_notm}} desde la vía de acceso o el repositorio especificados.
 
 ```
 ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]

@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 
 
-# スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI のインストール
+# {{site.data.keyword.Bluemix_notm}} CLI のインストールおよび使用
 {: #install_use}
 
 {{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} でアプリケーション、コンテナー、インフラストラクチャー、サービス、およびその他のリソースを管理するためのコマンド・ライン・インターフェースを提供します。
@@ -23,7 +23,9 @@ lastupdated: "2018-06-27"
 {{site.data.keyword.Bluemix}} CLI と、{{site.data.keyword.Bluemix_notm}} 用のアプリケーションを開発するための推奨されるその他のプラグインおよびツールの両方をインストールする場合は、[ここ](/docs/cli/index.html)で説明されている方法に従ってください。
 {: tip}
 
-スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI をインストールするには、次の手順を実行します。
+
+## {{site.data.keyword.Bluemix_notm}} CLI の概説
+{: #getting_started}
 
 1. ダウンロードするための、ご使用の OS のインストーラーを選択します。
 
@@ -46,44 +48,6 @@ lastupdated: "2018-06-27"
 
 フェデレーテッド ID を使用する場合は、[ここ](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)で説明する手順に従って、ワンタイム・パスコードまたは API キーを使用してログインします。  
 {: tip}
-
-## {{site.data.keyword.Bluemix_notm}} CLI をインストールするその他のオプション
-{: #more_options_install}
-
-
-[インストーラー](install_use_cli.html#getting_started)に加えて、シェルを使って CLI をダウンロードおよびインストールすることもできます。 
-
-
-### シェルからのインストール
-{: #shell_install}
-
-
-### MacOS
-
-以下のコマンドを Mac OS の端末にコピー・アンド・ペーストし、実行します。
-
-```
-curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
-```
-{: codeblock}
-
-### Linux
-
-以下のコマンドを Linux OS の端末にコピー・アンド・ペーストし、実行します。
-
-```
-curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
-```
-{: codeblock}
-
-### Windows PowerShell
-
-以下のコマンドを [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} 端末コンソールにコピー・アンド・ペーストし、実行します。
-
-```
-iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
-```
-{: codeblock}
 
 ## {{site.data.keyword.Bluemix_notm}} CLI をさらに探索するためのその他のリンク
 
