@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-21"
 {:pre: .pre}
 {:tip: .tip}
 
-# Usando o {{site.data.keyword.dev_cli_notm}} CLI
+# Desenvolvendo e implementando seus apps
 {: #developing}
 
 O desenvolvendo de apps nativos do Cloud usando a CLI do {{site.data.keyword.dev_cli_notm}} segue
