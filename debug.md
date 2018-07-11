@@ -32,9 +32,9 @@ You might experience problems when you stage your applications on {{site.data.ke
 To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need to know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For more information, see [Application deployment ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
-The following procedure shows how you can use the `cf logs` command to debug staging errors. Before you take the following steps, ensure that you have installed the cf command line interface. For more information about installing the cf command line interface, see [Installing the cf command line interface ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/starters/install_cli.html){: new_window}.
+The following procedure shows how you can use the `cf logs` command to debug staging errors. Before you take the following steps, ensure that you have installed the Cloud Foundry command line interface. For more information about installing the Cloud Foundry command line interface, see [Installing the Cloud Foundry command line interface ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/starters/install_cli.html){: new_window}.
 
-  1. Connect to {{site.data.keyword.Bluemix_notm}} by entering the following code in the cf command line interface:
+  1. Connect to {{site.data.keyword.Bluemix_notm}} by entering the following code in the Cloud Foundry command line interface:
      ```
 	 cf api https://api.stage1.ng.bluemix.net
 	 ```
@@ -113,7 +113,7 @@ Specifically, logging to stdout and stderr can be enabled. For more information 
   * For Ruby on Rails applications, see [The Logger ![External link icon](../icons/launch-glyph.svg "External link icon")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * For Ruby Sinatra applications, see [Logging ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
-When you enter `cf logs appname --recent` in the cf command line interface, only the most recent logs are displayed. To view the logs for errors that occurred earlier, you must retrieve all the logs and search for the errors. To retrieve all the logs for your application, use one of the following methods:
+When you enter `cf logs appname --recent` in the Cloud Foundry command line interface, only the most recent logs are displayed. To view the logs for errors that occurred earlier, you must retrieve all the logs and search for the errors. To retrieve all the logs for your application, use one of the following methods:
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>The integrated log file search and analysis capabilities of the {{site.data.keyword.loganalysisshort}} service can help you to quickly identify errors. For more information, see <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>.</dd>

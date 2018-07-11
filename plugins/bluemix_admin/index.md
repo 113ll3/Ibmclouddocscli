@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 
 You can manage your {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by using the Cloud Foundry command line interface with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For example, you can add users from an LDAP registry. For information about managing your {{site.data.keyword.Bluemix_notm}} Public account, see [administering](/docs/admin/adminpublic.html#administer).
 
-Before you begin, install the cf command line interface. The {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
+Before you begin, install the Cloud Foundry command line interface. The {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restriction:** The Cloud Foundry command line interface is not supported by
@@ -29,7 +29,7 @@ Cygwin. Use the Cloud Foundry command line interface in a command line window ot
 
 ## Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI Plug-in
 
-After the cf command line interface is installed, you can add the {{site.data.keyword.Bluemix_notm}} admin CLI plug-in.
+After the Cloud Foundry command line interface is installed, you can add the {{site.data.keyword.Bluemix_notm}} admin CLI plug-in.
 
 **Note**: If you have previously installed the {{site.data.keyword.Bluemix_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
 
