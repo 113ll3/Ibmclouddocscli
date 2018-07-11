@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 
 
-# 安装和使用 {{site.data.keyword.Bluemix_notm}} CLI
+# 安装独立 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
 {{site.data.keyword.Bluemix_notm}} CLI 提供了用于管理 {{site.data.keyword.Bluemix_notm}} 中应用程序、容器、基础架构、服务和其他资源的命令行界面。
@@ -23,9 +23,7 @@ lastupdated: "2018-06-27"
 如果要安装 {{site.data.keyword.Bluemix}} CLI 和其他建议插件及工具，以用于为 {{site.data.keyword.Bluemix_notm}} 开发应用程序，请遵循[此处](/docs/cli/index.html)描述的方法进行操作。
 {: tip}
 
-
-## {{site.data.keyword.Bluemix_notm}} CLI 入门
-{: #getting_started}
+要安装独立 {{site.data.keyword.Bluemix_notm}} CLI，请执行以下操作：
 
 1. 选择要下载的适用于您操作系统的安装程序
 
@@ -49,6 +47,44 @@ lastupdated: "2018-06-27"
 如果要使用联合标识，请遵循[此处](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)的指示信息，以使用一次性密码或 API 密钥进行登录。
   
 {: tip}
+
+## 用于安装 {{site.data.keyword.Bluemix_notm}} CLI 的更多选项
+{: #more_options_install}
+
+
+除了[安装程序](install_use_cli.html#getting_started)之外，还可以使用 shell 下载和安装 CLI。 
+
+
+### 通过 shell 安装
+{: #shell_install}
+
+
+### MacOS
+
+将以下命令复制并粘贴到 Mac OS 终端，然后运行该命令：
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
+```
+{: codeblock}
+
+### Linux
+
+将以下命令复制并粘贴到 Linux 操作系统终端，然后运行该命令：
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
+```
+{: codeblock}
+
+### Windows PowerShell
+
+将以下命令复制并粘贴到 [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} 终端控制台，然后运行该命令：
+
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+{: codeblock}
 
 ## 用于进一步探索 {{site.data.keyword.Bluemix_notm}} CLI 的其他链接
 

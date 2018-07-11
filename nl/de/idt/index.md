@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-21"
 {:pre: .pre}
 {:tip: .tip}
 
-# {{site.data.keyword.dev_cli_notm}}-CLI verwenden
+# Apps entwickeln und bereitstellen
 {: #developing}
 
 Das Entwickeln von cloudnativen Apps mithilfe der {{site.data.keyword.dev_cli_notm}}-CLI ist ein relativ unkomplizierter Vorgang:
@@ -95,7 +95,7 @@ Der zweite Container ist der Container 'run'. Dieser Container hat ein Format, d
 ### Hilfreiche CLI-Befehle
 {: #helpful2}
 
-Die folgenden CLI-Befehle unterstützen Sie bei der Arbeit mit Ihrem Projekt während der Codierungs, Erstellungs- und Ausführungszyklen.
+Die folgenden CLI-Befehle unterstützen Sie bei der Arbeit mit Ihrem Projekt während der Codierungs-, Erstellungs- und Ausführungszyklen.
 - [`build`](./commands.html#build) Erstellt das Projekt in einem lokalen Container.
 - [`debug`](./commands.html#debug) Debuggt Ihre Anwendung in einem lokalen Container.
 - [`run`](./commands.html#run) Führt Ihre Anwendung in einem lokalen Container aus.

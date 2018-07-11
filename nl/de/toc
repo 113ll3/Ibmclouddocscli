@@ -11,14 +11,14 @@ IBM Cloud Developer Tools (CLI- und Dev-Tools)
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	
+	idt/index.md
         	
 	{: .topicgroup}
 	IBM Cloud Developer Tools IDE Extensions
 		idt/vscode.md
 		idt/jetbrains.md
 		deploy_eclipsetools.md
-		[Deploying apps with IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
+		[Anwendungen mit IBM Eclipse Tools for IBM Cloud bereitstellen](../manageapps/eclipsetools/eclipsetools.html)
         	
 	{: .topicgroup}
 	SDKs für Mobile

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-21"
 {:pre: .pre}
 {:tip: .tip}
 
-# 使用 {{site.data.keyword.dev_cli_notm}} CLI
+# 开发和部署应用程序
 {: #developing}
 
 使用 {{site.data.keyword.dev_cli_notm}} CLI 开发云本机应用程序遵循相当简单的流程：

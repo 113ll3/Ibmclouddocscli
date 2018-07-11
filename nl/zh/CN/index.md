@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -105,4 +105,4 @@ ibmcloud dev help
 ## 后续步骤
 {: #next-steps}
 
-现在，您已准备好开发和部署第一个应用程序！有关更多信息，请参阅[使用初学者工具包创建基本 Web 应用程序](/docs/apps/tutorials/tutorial_web.html)。
+现在，您已准备好开发和部署第一个应用程序！有关更多信息，请参阅[开发和部署应用程序](/docs/cli/idt/index.html)。

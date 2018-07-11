@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2018-06-26"
 # Einführung in die {{site.data.keyword.Bluemix_notm}}-CLI
 {: #overview}
 
-In diesem Lernprogramm installieren Sie eine Reihe von {{site.data.keyword.Bluemix}}-Entwicklertools, überprüfen die Installation und konfigurieren Ihre Umgebung. {{site.data.keyword.Bluemix}}-Entwicklertools bieten eine Befehlszeilenmethode zum Erstellen, Entwickeln und Bereitstellen von End-to-End-Webanwendungen, -Mobilanwendungen und -Mikroserviceanwendungen
+In diesem Lernprogramm installieren Sie eine Reihe von {{site.data.keyword.Bluemix}}-Entwicklertools, überprüfen die Installation und konfigurieren Ihre Umgebung. {{site.data.keyword.Bluemix}}-Entwicklertools bieten eine Befehlszeilenmethode zum Erstellen, Entwickeln und Bereitstellen von End-to-End-Webanwendungen, -Mobilanwendungen und -Mikroserviceanwendungen 
 {:shortdesc}
 
-Mit dieser Installation rufen Sie die {{site.data.keyword.Bluemix_notm}}-CLI sowie folgende Tools ab:  
+Mit dieser Installation rufen Sie die {{site.data.keyword.Bluemix_notm}}-CLI sowie folgende Tools ab: 
 
 * `Homebrew` (nur Mac)
 * `Git`
@@ -37,7 +37,7 @@ Mit dieser Installation rufen Sie die {{site.data.keyword.Bluemix_notm}}-CLI sow
 ## Vorbereitende Schritte
 {: #prereq}
 
-Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und die folgenden Systemvoraussetzungen: 
+Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und die folgenden Systemvoraussetzungen:
 
 * Wenn Sie mit Microsoft Windows&trade; arbeiten, müssen Sie Windows 10 oder höher verwenden.
 * Sie müssen den stabilen Kanal für Docker mit Version 1.13.1 oder höher verwenden.
@@ -45,7 +45,7 @@ Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bl
 ## Schritt 1: Installationsbefehl ausführen
 {: #step1}
 
-* Führen Sie unter Mac und Linux den folgenden Befehl aus: 
+* Führen Sie unter Mac und Linux den folgenden Befehl aus:
 
   ```
   curl -sL https://ibm.biz/idt-installer | bash
@@ -66,14 +66,14 @@ Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bl
 ## Schritt 2: Installation verifizieren
 {: #step2}
 
-Führen Sie den Befehl `help` aus, um zu überprüfen, dass die CLI und die Entwicklertools erfolgreich installiert wurden: 
+Führen Sie den Befehl `help` aus, um zu überprüfen, dass die CLI und die Entwicklertools erfolgreich installiert wurden:
 
 ```
 ibmcloud dev help
 ```
 {: codeblock}
 <br><br>
-Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unterstützten Befehle auf. 
+Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unterstützten Befehle auf.
 
 ## Schritt 3: Ihre Umgebung konfigurieren
 {: #step3}
@@ -92,9 +92,10 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 	```
 	{: codeblock}
 <br><br>
-	Wenn Ihre Berechtigungsnachweise zurückgewiesen werden, verwenden Sie möglicherweise eine föderierte ID. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](/docs/iam/login_fedid.html#using-an-api-key). {: tip}
+	Wenn Ihre Berechtigungsnachweise zurückgewiesen werden, verwenden Sie möglicherweise eine föderierte ID. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](/docs/iam/login_fedid.html#using-an-api-key).
+	{: tip}
 
-3. Legen Sie Ihre Organisation (org) und Ihren Bereich (space) fest. 
+3. Legen Sie Ihre Organisation (org) und Ihren Bereich (space) fest.
 
 	```
 	ibmcloud target -o <wert> -s <wert>
@@ -104,4 +105,4 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Nächste Schritte
 {: #next-steps}
 
-Sie können jetzt Ihre erste App entwickeln und bereitstellen. Weitere Informationen finden Sie unter [Grundlegende Webanwendung mit einem Starter-Kit erstellen](/docs/apps/tutorials/tutorial_web.html). 
+Sie können jetzt Ihre erste App entwickeln und bereitstellen. Weitere Informationen finden Sie unter [Apps entwickeln und bereitstellen](/docs/cli/idt/index.html). 
