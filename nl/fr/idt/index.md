@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-21"
 {:pre: .pre}
 {:tip: .tip}
 
-# Utilisation de l'interface de ligne de commande d'{{site.data.keyword.dev_cli_notm}}
+# Développement et déploiement de vos applications
 {: #developing}
 
 Le développement d'applications natives en cloud à l'aide de l'interface de ligne de commande {{site.data.keyword.dev_cli_notm}} est un processus relativement simple :

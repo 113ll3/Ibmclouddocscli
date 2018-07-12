@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-06-26"
 # Initiation à l'interface de ligne de commande de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-En suivant ce tutoriel, vous allez installer un ensemble d'outils de développeur {{site.data.keyword.Bluemix}}, vérifier l'installation et configurer votre environnement. Les outils de développeur {{site.data.keyword.Bluemix}} offrent une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice de bout en bout.
+En suivant ce tutoriel, vous allez installer un ensemble d'outils de développeur {{site.data.keyword.Bluemix}}, vérifier l'installation et configurer votre environnement. Les outils de développeur {{site.data.keyword.Bluemix}} offrent une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice de bout en bout. 
 {:shortdesc}
 
 Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} et des outils suivants : 
@@ -32,7 +32,7 @@ Avec cette installation, vous disposez de l'interface de ligne de commande {{sit
 * Plug-in {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 * Plug-in {{site.data.keyword.registrylong_notm}}
 * Plug-in {{site.data.keyword.containerlong_notm}}
-* Plug-in `sdk-gen` 
+* Plug-in `sdk-gen`
 
 ## Avant de commencer
 {: #prereq}
@@ -105,4 +105,4 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 ## Etapes suivantes
 {: #next-steps}
 
-Vous êtes maintenant à prêt à développer et à déployer votre première application ! Pour plus d'informations, voir [Création d'une application Web de base à l'aide d'un kit de démarrage](/docs/apps/tutorials/tutorial_web.html).
+Vous êtes maintenant à prêt à développer et à déployer votre première application ! Pour plus d'informations, voir [Développement et déploiement de vos applications](/docs/cli/idt/index.html).

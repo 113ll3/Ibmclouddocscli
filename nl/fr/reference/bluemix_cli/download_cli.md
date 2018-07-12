@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 
 
-# Installation et utilisation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
+# Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} autonome
 {: #install_use}
 
 L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}.
@@ -23,9 +23,7 @@ L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'in
 Si vous souhaitez installer l'interface de ligne de commande {{site.data.keyword.Bluemix}} ainsi que d'autres outils et plug-in recommandés pour le développement d'applications pour {{site.data.keyword.Bluemix_notm}}, suivez la méthode décrite [ici](/docs/cli/index.html).
 {: tip}
 
-
-## Initiation à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
-{: #getting_started}
+Procédez comme suit pour installer l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} autonome :
 
 1. Sélectionnez le programme d'installation de votre système d'exploitation afin de le télécharger
 
@@ -48,6 +46,44 @@ Vous êtes maintenant prêt à gérer des ressources {{site.data.keyword.Bluemix
 
 Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) pour vous connecter avec un code d'accès unique ou une clé d'API.  
 {: tip}
+
+## Autres options d'installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
+{: #more_options_install}
+
+
+Outre le [programme d'installation](install_use_cli.html#getting_started), vous pouvez également utiliser le shell pour télécharger et installer l'interface de ligne de commande. 
+
+
+### Installation à partir du shell
+{: #shell_install}
+
+
+### MacOS
+
+Copiez et collez la commande suivante dans un terminal de votre système Mac OS et exécutez-la :
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
+```
+{: codeblock}
+
+### Linux
+
+Copiez et collez la commande suivante dans un terminal de votre système Linux OS et exécutez-la :
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
+```
+{: codeblock}
+
+### Windows PowerShell
+
+Copiez et collez la commande suivante dans une console de terminal [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} et exécutez-la :
+
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+{: codeblock}
 
 ## Autres liens permettant d'explorer davantage l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
