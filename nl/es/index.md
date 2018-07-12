@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -105,4 +105,4 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 ## Pasos siguientes
 {: #next-steps}
 
-Ahora está listo para desarrollar y desplegar su primera app. Consulte [Creación de una aplicación web básica con un kit de iniciadores](/docs/apps/tutorials/tutorial_web.html) para obtener más información.
+Ahora está listo para desarrollar y desplegar su primera app. Consulte [Despliegue y desarrollo de apps](/docs/cli/idt/index.html) para obtener más información.

@@ -11,7 +11,7 @@ IBM Cloud Developer Tools (Herramientas CLI y Dev)
 	{: .navgroup id="howto"}
 	reference/bluemix_cli/download_cli.md
 	reference/bluemix_cli/extend_cli.md
-	
+	idt/index.md
         	
 	{: .topicgroup}
 	Extensiones de IDE de IBM Cloud Developer Tools

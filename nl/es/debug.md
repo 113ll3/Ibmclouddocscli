@@ -22,7 +22,7 @@ Si tiene problemas con {{site.data.keyword.Bluemix}}, consulte los archivos de r
 
 Los registros dan información si un trabajo se ejecuta correctamente o si falla. También proporcionan información importante que se puede utilizar para la depuración y determinar la causa de un problema.
 
-Los registros tienen un formato fijo. En registros detallados, puede filtrar registros o utilizar hosts de registros externos para almacenar y procesar los registros. Para obtener más información sobre los formatos de registro, visualizar y filtrar registros y configurar registros externos, consulte [Registro de apps que se ejecutan en Cloud Foundry ![Icono de enlace externo](../icons/launch-glyph.svg "External link icon")](/docs/monitor_log/logging.html#logging){: new_window}.
+Los registros tienen un formato fijo. En registros detallados, puede filtrar registros o utilizar hosts de registros externos para almacenar y procesar los registros. Para obtener más información sobre los formatos de registro, visualizar y filtrar registros y configurar registros externos, consulte [Registro de apps que se ejecutan en Cloud Foundry ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/monitor_log/logging.html#logging){: new_window}.
 
 
 ## Depuración de errores de transferencia
