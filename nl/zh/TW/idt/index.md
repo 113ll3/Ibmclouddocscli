@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-21"
 {:pre: .pre}
 {:tip: .tip}
 
-# 使用 {{site.data.keyword.dev_cli_notm}} CLI
+# 開發及部署應用程式
 {: #developing}
 
 使用 {{site.data.keyword.dev_cli_notm}} CLI 開發「雲端原生」應用程式時遵循相當簡單的流程：

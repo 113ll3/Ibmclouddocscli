@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-06-26"
 # Introduzione alla CLI {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-In questa esercitazione, vengono forniti i passi per installare una serie di strumenti per sviluppatori {{site.data.keyword.Bluemix}}, verificare l'installazione e configurare il tuo ambiente. Gli strumenti per sviluppatori {{site.data.keyword.Bluemix}} offrono un approccio da riga di comando per la creazione, lo sviluppo e la distribuzione di applicazioni web, mobili e di microservizio end-to-end.
+In questa esercitazione, vengono forniti i passi per installare una serie di strumenti per sviluppatori {{site.data.keyword.Bluemix}}, verificare l'installazione e configurare il tuo ambiente. Gli strumenti per sviluppatori {{site.data.keyword.Bluemix}} offrono un approccio da riga di comando per la creazione, lo sviluppo e la distribuzione di applicazioni web, mobili e di microservizio end-to-end. 
 {:shortdesc}
 
 Con questa installazione, ottieni la CLI {{site.data.keyword.Bluemix_notm}}, oltre ai seguenti strumenti: 
@@ -105,4 +105,4 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 ## Passi successivi
 {: #next-steps}
 
-Sei ora pronto per sviluppare e distribuire la tua prima applicazione. Per ulteriori informazioni, vedi [Creazione di un'applicazione web di base con un kit starter](/docs/apps/tutorials/tutorial_web.html).
+Sei ora pronto per sviluppare e distribuire la tua prima applicazione. Per ulteriori informazioni, consulta [Sviluppo e distribuzione delle tue applicazioni](/docs/cli/idt/index.html).

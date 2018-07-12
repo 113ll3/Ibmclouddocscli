@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 
 
-# {{site.data.keyword.Bluemix_notm}} CLI 설치 및 사용
+# 독립형 {{site.data.keyword.Bluemix_notm}} CLI 설치
 {: #install_use}
 
 {{site.data.keyword.Bluemix_notm}} CLI는 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션, 컨테이너, 인프라, 서비스 및 기타 리소스를 관리하기 위한 명령행 인터페이스를 제공합니다.
@@ -23,9 +23,7 @@ lastupdated: "2018-06-27"
 {{site.data.keyword.Bluemix}} CLI와 {{site.data.keyword.Bluemix_notm}}용 애플리케이션을 개발하기 위해 권장되는 플러그인 및 도구를 모두 설치하려면 [여기](/docs/cli/index.html)에 설명된 방법을 따르십시오.
 {: tip}
 
-
-## {{site.data.keyword.Bluemix_notm}} CLI 시작하기
-{: #getting_started}
+독립형 {{site.data.keyword.Bluemix_notm}} CLI를 설치하려면 다음 단계를 사용하십시오.
 
 1. 다운로드할 OS의 설치 프로그램 선택
 
@@ -48,6 +46,44 @@ lastupdated: "2018-06-27"
 
 연합 ID를 사용하는 경우 [여기](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)의 지시사항을 따라 일회성 패스코드 또는 API 키로 로그인하십시오.  
 {: tip}
+
+## {{site.data.keyword.Bluemix_notm}} CLI를 설치하기 위한 추가 옵션
+{: #more_options_install}
+
+
+[설치 프로그램](install_use_cli.html#getting_started) 이외에 쉘을 사용하여 CLI를 다운로드하고 설치할 수도 있습니다. 
+
+
+### 쉘에서 설치
+{: #shell_install}
+
+
+### MacOS
+
+다음 명령을 복사하여 Mac OS의 터미널에 붙여넣고 이를 실행하십시오.
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
+```
+{: codeblock}
+
+### Linux
+
+다음 명령을 복사하여 Linux OS의 터미널에 붙여넣고 이를 실행하십시오.
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
+```
+{: codeblock}
+
+### Windows PowerShell
+
+다음 명령을 복사하여 [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} 터미널 콘솔에 붙여넣고 이를 실행하십시오.
+
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+{: codeblock}
 
 ## {{site.data.keyword.Bluemix_notm}} CLI를 자세히 살펴보기 위한 기타 링크
 

@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 
 
-# Installazione e utilizzo della CLI {{site.data.keyword.Bluemix_notm}}
+# Installazione della CLI {{site.data.keyword.Bluemix_notm}} autonoma
 {: #install_use}
 
 La CLI {{site.data.keyword.Bluemix_notm}} fornisce l'interfaccia della riga di comando per gestire applicazioni, contenitori, infrastrutture, servizi e altre risorse in {{site.data.keyword.Bluemix_notm}}.
@@ -23,9 +23,7 @@ La CLI {{site.data.keyword.Bluemix_notm}} fornisce l'interfaccia della riga di c
 Se vuoi installare la CLI {{site.data.keyword.Bluemix}} e altri plug-in e strumenti consigliati per lo sviluppo di applicazioni per {{site.data.keyword.Bluemix_notm}}, segui il metodo descritto [qui](/docs/cli/index.html).
 {: tip}
 
-
-## Introduzione alla CLI {{site.data.keyword.Bluemix_notm}}
-{: #getting_started}
+Utilizza la seguente procedura per installare la CLI {{site.data.keyword.Bluemix_notm}} autonoma:
 
 1. Seleziona il programma di installazione del tuo sistema operativo per il download
 
@@ -48,6 +46,44 @@ Ora sei pronto a gestire le risorse {{site.data.keyword.Bluemix_notm}}. Immetti 
 
 Se stai utilizzando un ID federato, segui le istruzioni [qui](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) per accedere con un passcode monouso o una chiave API.  
 {: tip}
+
+## Ulteriori opzioni per installare la CLI {{site.data.keyword.Bluemix_notm}} 
+{: #more_options_install}
+
+
+Oltre al [programma di installazione](install_use_cli.html#getting_started), puoi utilizzare anche la shell per scaricare e installare la CLI. 
+
+
+### Installa dalla shell
+{: #shell_install}
+
+
+### MacOS
+
+Copia e incolla il seguente comando in un terminale del tuo SO Mac ed eseguilo:
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
+```
+{: codeblock}
+
+### Linux
+
+Copia e incolla il seguente comando in un terminale del tuo SO Linux ed eseguilo:
+
+```
+curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
+```
+{: codeblock}
+
+### Windows PowerShell
+
+Copia e incolla il seguente comando in una console del terminale [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ed eseguilo:
+
+```
+iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+```
+{: codeblock}
 
 ## Altri link per esplorare ulteriormente la CLI {{site.data.keyword.Bluemix_notm}}
 

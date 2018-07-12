@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2018-06-26"
 # {{site.data.keyword.Bluemix_notm}} CLI 시작하기
 {: #overview}
 
-이 튜토리얼에서 사용자는 {{site.data.keyword.Bluemix}} 개발자 도구를 설치하고, 설치를 확인하며, 환경을 구성합니다. {{site.data.keyword.Bluemix}} 개발자 도구는 엔드 투 엔드 웹, 모바일 및 마이크로서비스 애플리케이션을 작성하고, 개발하고, 배치할 수 있는 명령행 접근 방법을 제공합니다.
+이 튜토리얼에서 사용자는 {{site.data.keyword.Bluemix}} 개발자 도구를 설치하고, 설치를 확인하며, 환경을 구성합니다. {{site.data.keyword.Bluemix}} 개발자 도구는 엔드 투 엔드 웹, 모바일 및 마이크로서비스 애플리케이션을 작성하고, 개발하고, 배치할 수 있는 명령행 접근 방법을 제공합니다. 
 {:shortdesc}
 
-이 설치를 통해 {{site.data.keyword.Bluemix_notm}} CLI 및 다음 도구를 얻을 수 있습니다.  
+이 설치를 통해 {{site.data.keyword.Bluemix_notm}} CLI 및 다음 도구를 얻을 수 있습니다. 
 
 * `Homebrew`(Mac 전용)
 * `Git`
@@ -53,7 +53,7 @@ curl -sL https://ibm.biz/idt-installer | bash
   {: codeblock}
 <br><br>
 
-* Windows 10의 경우 관리자로 다음 명령을 실행하십시오. 
+* Windows 10의 경우 관리자로 다음 명령을 실행하십시오.
 
   ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -73,7 +73,7 @@ ibmcloud dev help
 ```
 {: codeblock}
 <br><br>
-출력에 사용법 지시사항, 현재 버전 및 지원되는 명령이 나열됩니다. 
+출력에 사용법 지시사항, 현재 버전 및 지원되는 명령이 나열됩니다.
 
 ## 3단계: 환경 구성
 {: #step3}
@@ -105,4 +105,4 @@ ibmcloud dev help
 ## 다음 단계
 {: #next-steps}
 
-이제 첫 번째 앱을 개발하고 배치할 준비가 되었습니다! 자세한 정보는 [스타터 킷을 사용한 기본 웹 앱 작성](/docs/apps/tutorials/tutorial_web.html)을 참조하십시오.
+이제 첫 번째 앱을 개발하고 배치할 준비가 되었습니다! 자세한 정보는 [앱 개발 및 배치](/docs/cli/idt/index.html)를 참조하십시오.

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-21"
 {:pre: .pre}
 {:tip: .tip}
 
-# {{site.data.keyword.dev_cli_notm}} CLI 사용
+# 앱 개발 및 배치
 {: #developing}
 
 {{site.data.keyword.dev_cli_notm}} CLI를 사용한 클라우드 네이티브 앱 개발은 아주 간단한 플로우를 따릅니다.

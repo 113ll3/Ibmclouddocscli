@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -105,4 +105,4 @@ ibmcloud dev help
 ## 後續步驟
 {: #next-steps}
 
-您現在已準備好開始開發及部署您的第一個應用程式！如需相關資訊，請參閱[使用入門範本套件來建立基本 Web 應用程式](/docs/apps/tutorials/tutorial_web.html)。
+您現在已準備好開始開發及部署您的第一個應用程式！如需相關資訊，請參閱[開發及部署應用程式](/docs/cli/idt/index.html)。

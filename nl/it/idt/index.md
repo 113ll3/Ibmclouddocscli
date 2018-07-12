@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-21"
 {:pre: .pre}
 {:tip: .tip}
 
-# Utilizzo della CLI {{site.data.keyword.dev_cli_notm}}
+# Sviluppo e distribuzione delle tue applicazioni
 {: #developing}
 
 Lo sviluppo delle applicazioni native cloud utilizzando la CLI {{site.data.keyword.dev_cli_notm}} segue un flusso abbastanza semplice:
