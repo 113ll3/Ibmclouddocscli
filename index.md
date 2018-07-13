@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -52,7 +52,6 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
   ```
   {: codeblock}
 <br>
-
 * For Windows 10, run the following command as an administrator:
 
   ```
@@ -92,12 +91,19 @@ The output lists the usage instructions, the current version, and the supported 
 	ibmcloud login
 	```
 	{: codeblock}
-<br>
-
+    <br>
+    
 	If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/iam/login_fedid.html#using-an-api-key) for more details.
 	{: tip}
 
 3. Set your org and space.
+
+	```
+	ibmcloud --cf
+	```
+	{: codeblock}
+	
+	You can then use the output from this command to programmatically set your org and space.
 
 	```
 	ibmcloud target -o <value> -s <value>
