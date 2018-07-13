@@ -103,7 +103,7 @@ The output lists the usage instructions, the current version, and the supported 
 	```
 	{: codeblock}
 	
-	Optionally, you can use the output from the command above to manually set your org and space with the following command
+	Optionally, you can use the output from the command above to manually set your org and space with the following command:
 
 	```
 	ibmcloud target -o <value> -s <value>
