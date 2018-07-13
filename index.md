@@ -99,11 +99,11 @@ The output lists the usage instructions, the current version, and the supported 
 3. Set your org and space.
 
 	```
-	ibmcloud --cf
+	ibmcloud target --cf
 	```
 	{: codeblock}
 	
-	You can then use the output from this command to programmatically set your org and space.
+	Optionally, you can use the output from the command above to manually set your org and space with the following command
 
 	```
 	ibmcloud target -o <value> -s <value>
