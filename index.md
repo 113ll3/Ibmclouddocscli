@@ -109,6 +109,8 @@ The output lists the usage instructions, the current version, and the supported 
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
+	
+To report issues or provide feedback you can use the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
 
 ## Next steps
 {: #next-steps}
