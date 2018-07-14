@@ -143,7 +143,6 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
 
-* [Enabling shell autocompletion](/docs/cli/reference/bluemix_cli/enable_cli_autocompletion.html)
 * [Extend {{site.data.keyword.Bluemix_notm}} CLI capabilities with plugins](/docs/cli/reference/bluemix_cli/extend_cli.html)
 * [General {{site.data.keyword.Bluemix_notm}} CLI commands usage](/docs/cli/reference/bluemix_cli/bx_cli.html)
 * [General {{site.data.keyword.Bluemix_notm}} (ibmcloud sl) commands usage](/docs/cli/reference/softlayer/index.html)
