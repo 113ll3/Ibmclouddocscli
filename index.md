@@ -110,7 +110,7 @@ The output lists the usage instructions, the current version, and the supported 
 	```
 	{: codeblock}
 	
-To report issues or provide feedback you can use the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
+To report issues or provide feedback you can use the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
 
 ## Next steps
 {: #next-steps}
