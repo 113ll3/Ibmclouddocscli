@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-18"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2018-06-18"
 # {{site.data.keyword.Bluemix_notm}} (ibmcloud) commands
 {: #bluemix_cli}
 
-Version: 0.7.1
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}.
 
-Starting from version 0.5.0, {{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, do not use both {{site.data.keyword.Bluemix_notm}} CLI commands `ibmcloud [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `ibmcloud cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context.  Note that `ibmcloud cf api/login/logout/target` is not allowed, and you must use `ibmcloud api/login/logout/target` instead.
+{{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, do not use both {{site.data.keyword.Bluemix_notm}} CLI commands `ibmcloud [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `ibmcloud cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context.  Note that `ibmcloud cf api/login/logout/target` is not allowed, and you must use `ibmcloud api/login/logout/target` instead.
 
 As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However you can still use the `bluemix` and `bx` CLI commands until they are removed at a later date.
 {: tip}
@@ -633,7 +632,7 @@ ibmcloud -q cf services
 Log in user.
 
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>Prerequisites</strong>:  None
@@ -653,7 +652,9 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i> (optional)</dt>
   <dd> Password</dd>
   <dt> -c <i>ACCOUNT_ID</i> (optional) </dt>
-  <dd> ID of the target account</dd>
+  <dd> ID of the target account. This option is excluusive with --no-account</dd>
+  <dt> --no-account (optional) </dt>
+  <dd> Force login without account. This option is not recommended. This option is excluusive with -c.</dd>
   <dt> -g <i>RESOURCE_GROUP</i> (optional) </dt>
   <dd> Name of the target resource group</dd>
   <dt> -o <i>ORG</i> (optional)</dt>
