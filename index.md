@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-13"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -93,7 +93,7 @@ The output lists the usage instructions, the current version, and the supported 
 	{: codeblock}
     <br>
     
-	If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/iam/login_fedid.html#using-an-api-key) for more details.
+	If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/iam/login_fedid.html#federated_id) for more details.
 	{: tip}
 
 3. Set your org and space.
