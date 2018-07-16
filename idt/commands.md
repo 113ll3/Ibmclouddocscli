@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -35,7 +35,7 @@ Use the following {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) commands
 - [deploy](#deploy): Deploy an application to IBM Cloud
 - [enable](#enable): Add IBM Cloud files to an existing project
 - [get-credentials](#get-credentials): Gets credentials that are required by the project to enable use of bound services
-- [help](#help): Help on IDT syntax and arguments
+- [help](#help): Help on {{site.data.keyword.Bluemix_notm}} developer tools syntax and arguments
 - [list](#list): List all IBM Cloud projects in a space
 - [run](#run): Run your application in a local container
 - [shell](#shell): Open a shell into a local container
@@ -582,7 +582,7 @@ The following parameters are exclusive to the `view` command.
 ## compound commands
 {: #compound}
 
-You can run multiple commands in one command line statement by separating the IDT commands with the `/` delimeter. Additional command line flags can be specified after you specify the compound commands.  The following commands are examples of how you can use compound commands:
+You can run multiple commands in one command line statement by separating the {{site.data.keyword.Bluemix_notm}} developer tools commands with the `/` delimeter. Additional command line flags can be specified after you specify the compound commands.  The following commands are examples of how you can use compound commands:
 
 ```
 ibmcloud dev build/run
