@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -35,7 +35,7 @@ There are several ways that you can create a Cloud app.
 
 For any of the previous creation methods, the flow is similar. You can choose the project type, implementation language, and app pattern to use. You can also opt to add services with an added value to your app, such as authentication or persistence. Finally, you can choose to enable DevOps capability to the app that provides a complete toolchain of source control and team communications, and a pipeline that is triggered on each commit to validate, build, and deploy your app to the IBM Cloud.
 
-![Sample create flow using IDT CLI](create_flow.png "Sample create flow using IDT CLI") <br> Figure 2. Sample create flow using IDT CLI
+![Sample create flow using {{site.data.keyword.dev_cli_notm}} CLI](create_flow.png "Sample create flow using {{site.data.keyword.dev_cli_notm}} CLI") <br> Figure 2. Sample create flow using {{site.data.keyword.dev_cli_notm}} CLI
 
 The {{site.data.keyword.dev_cli_notm}} CLI works closely together to provide a seamless experience during development. Projects that are created within any of the web consoles provide a "Download code" button to download the generated source code to your workstation for more development.
 
@@ -67,7 +67,7 @@ More details on project structures can be found here:
 ### Reference Blogs and Videos
 {: #ref1}
 
-- Video: [Installing IDT on Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
+- Video: [Installing {{site.data.keyword.Bluemix_notm}} developer tools on Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - Blog: [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 
