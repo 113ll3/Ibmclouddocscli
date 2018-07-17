@@ -14,7 +14,7 @@ lastupdated: "2018-07-17"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Getting started with the {{site.data.keyword.Bluemix_notm}} CLI
+# Getting started with {{site.data.keyword.Bluemix_notm}} developer tools
 {: #overview}
 
 In this tutorial, you install a set of {{site.data.keyword.Bluemix}} developer tools, verify the installation, and configure your environment. {{site.data.keyword.Bluemix}} developer tools offer a command-line approach to creating, developing, and deploying end-to-end web, mobile, and microservice applications. 
