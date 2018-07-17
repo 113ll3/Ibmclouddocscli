@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -32,11 +32,11 @@ You might experience problems when you stage your applications on {{site.data.ke
 To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need to know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For more information, see [Application deployment ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
-The following procedure shows how you can use the `cf logs` command to debug staging errors. Before you take the following steps, ensure that you have installed the Cloud Foundry command line interface. For more information about installing the Cloud Foundry command line interface, see [Installing the Cloud Foundry command line interface ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/starters/install_cli.html){: new_window}.
+The following procedure shows how you can use the `cf logs` command to debug errors. Before you take the following steps, ensure that you have installed the Cloud Foundry command line interface. For more information about installing the Cloud Foundry command line interface, see [Installing the Cloud Foundry command line interface ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/starters/install_cli.html){: new_window}.
 
   1. Connect to {{site.data.keyword.Bluemix_notm}} by entering the following code in the Cloud Foundry command line interface:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Log in to {{site.data.keyword.Bluemix_notm}} by entering `cf login`.
@@ -53,14 +53,14 @@ In addition to the `cf logs` command, in {{site.data.keyword.Bluemix_notm}} you 
 
 ### Debugging staging errors for a Node.js application
 
-The following example shows a log that is displayed after you enter `cf logs appname --recent`. The example assumes that staging errors occurred for a Node.js application:
+The following example shows a log that is displayed after you enter `cf logs appname --recent`. The example assumes that errors occurred for a Node.js application:
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
 2014-08-11T14:20:44.43+0100 [DEA]     OUT Stopping app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:44.44+0100 [DEA]     OUT Stopped app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:48.97+0100 [DEA]     OUT Got staging request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:48.97+0100 [DEA]     OUT Got request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:50.94+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
 2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Download app package (4.1M)
 2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Download app buildpack cache (1.1M)
