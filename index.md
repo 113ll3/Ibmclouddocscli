@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-16"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -48,20 +48,21 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
 * For Mac and Linux, run the following command:
 
   ```
-  curl -sL https://ibm.biz/idt-installer | bash
+  curl -sL http://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br>
+  
 * For Windows 10, run the following command as an administrator:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br>
 
   Right-click the Windows PowerShell icon, and select **Run as administrator**.
   {: tip}
+  
+  For instructions on installing these tools manually, see [Reinstalling Tools[(/docs/cli/ts_createapps.html#appendix).
 
 ## Step 2: Verify the installation
 {: #step2}
