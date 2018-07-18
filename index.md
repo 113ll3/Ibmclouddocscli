@@ -62,7 +62,7 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
   Right-click the Windows PowerShell icon, and select **Run as administrator**.
   {: tip}
   
-  For instructions on installing these tools manually, see [Reinstalling Tools[(/docs/cli/ts_createapps.html#appendix).
+  For instructions on installing these tools manually, see [Reinstalling Tools](/docs/cli/ts_createapps.html#appendix).
 
 ## Step 2: Verify the installation
 {: #step2}
