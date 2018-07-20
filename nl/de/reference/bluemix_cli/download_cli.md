@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -51,7 +51,7 @@ Wenn Sie eine föderierte ID verwenden, folgen Sie den [hier](https://console.bl
 {: #more_options_install}
 
 
-Neben dem [Installationsprogramm](install_use_cli.html#getting_started) können Sie auch die Shell zum Herunterladen und Installieren der Befehlszeilenschnittstelle verwenden.  
+Neben dem [Installationsprogramm](install_use_cli.html#getting_started) können Sie auch die Shell zum Herunterladen und Installieren der Befehlszeilenschnittstelle verwenden. 
 
 
 ### Über die Shell installieren
@@ -87,8 +87,9 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## Links mit weiterführenden Informationen zur {{site.data.keyword.Bluemix_notm}}-CLI
 
-* [{{site.data.keyword.Bluemix_notm}}-CLI-Funktionen mit Plug-ins erweitern](extend_cli.html)
-* [Dokument zur {{site.data.keyword.Bluemix_notm}}-CLI-Befehlssyntax](ic_cli_cmds.html)
+* [{{site.data.keyword.Bluemix_notm}}-CLI-Funktionen mit Plug-ins erweitern](/docs/cli/reference/bluemix_cli/extend_cli.html)
+* [Allgemeine Syntax der {{site.data.keyword.Bluemix_notm}}-CLI-Befehle](/docs/cli/reference/bluemix_cli/bx_cli.html)
+* [Allgemeine Syntax der {{site.data.keyword.Bluemix_notm}}-Befehle (ibmcloud sl)](/docs/cli/reference/softlayer/index.html)
 
 
 ## Probleme melden und Feedback abgeben

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -39,7 +39,7 @@ Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht.
 Melden Sie sich erneut an.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -61,7 +61,7 @@ Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht.
 Melden Sie sich erneut an.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -72,12 +72,12 @@ bx login
 Möglicherweise wird der folgende Fehler angezeigt, wenn Sie eine App ausführen, ohne sie zunächst zu erstellen.
 
 ```
-$ bx dev run
+$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
 Creating image bx-dev-testProject based on Dockerfile...
-OK                    
+OK
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
@@ -91,14 +91,14 @@ Sie müssen eine App erstellen, bevor Sie sie ausführen.
 Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um Ihre App zu erstellen:
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um Ihre App zu starten:
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: tsResolve}
 
@@ -141,7 +141,7 @@ Sie können den Code auf eine der folgenden Arten abrufen:
 * Führen Sie den folgenden Befehl in der CLI aus:
 
    ```
-   bx dev code <your-app-name>
+   ibmcloud dev code <your-app-name>
    ```
    {: codeblock}
 
@@ -155,10 +155,10 @@ Sie können den Code auf eine der folgenden Arten abrufen:
 
 {: tsResolve}
 
-## Fehler beim Ausführen von `bx dev run` für Node.js-Apps
+## Fehler beim Ausführen von `ibmcloud dev run` für Node.js-Apps
 {: #node}
 
-Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie `bx dev run` in der {{site.data.keyword.dev_cli_short}}-CLI für Web- oder BFF-Apps mit Node.js ausführen:
+Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie `ibmcloud dev run` in der {{site.data.keyword.dev_cli_short}}-CLI für Web- oder BFF-Apps mit Node.js ausführen:
 
 ```
 module.js:597
@@ -184,7 +184,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 Dieser Fehler tritt auf, wenn das Modul `appmetrics` in einer anderen Architektur installiert ist. Native NPM-Module, die in einer Architektur installiert sind, funktionieren nicht in einer anderen. Die eingeschlossenen Docker-Images basieren auf dem Linux-Kernel.
 {: tsCauses}
 
-Löschen Sie den Ordner `node_modules` und führen Sie den Befehl `bx dev run` erneut aus.
+Löschen Sie den Ordner `node_modules` und führen Sie den Befehl `ibmcloud dev run` erneut aus.
 {: tsResolve}
 
 ## Fehler bei der Bereitstellung in {{site.data.keyword.Bluemix_notm}}
@@ -198,7 +198,7 @@ Möglicherweise sind Sie nicht bei Ihrem Konto angemeldet.
 Melden Sie sich an und versuchen Sie es erneut.
 
 ```
-bx login
+ibmcloud login
 ```
 {: tsResolve}
 
@@ -218,14 +218,14 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 Dies liegt wahrscheinlich daran, dass der Clustername nicht gültig ist. Bestätigen Sie diese Annahme, indem Sie denselben Befehl mit `--trace` ausführen. Die folgenden Details können in der Fehlernachricht enthalten sein:
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 {: tsCauses}
 
 Stellen Sie sicher, dass Sie den korrekten Cluster verwenden und dass Sie Ihren Cluster für die Bereitstellung konfiguriert haben, indem Sie den folgenden Befehl ausführen:
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 {: tsResolve}
 
@@ -248,7 +248,7 @@ Dies liegt wahrscheinlich daran, dass das Bereitstellungsimageziel nicht gültig
 Stellen Sie sicher, dass der Namensbereich im Bereitstellungsimageziel einem der Namensbereiche entspricht, die während der Ausführung des folgenden Befehls gefunden werden:
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 {: tsResolve}
 
@@ -259,7 +259,7 @@ Für die meisten Benutzer werden alle Voraussetzungen mithilfe der Plattforminst
 
 Zum Installieren des Entwickler-Plug-ins müssen Sie zunächst die [IBM Cloud-CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) installieren.
 
-Zum Verwenden des Entwickler-Plug-ins müssen Sie es mithilfe dieses Befehls installieren: `bx plugin install dev -r Bluemix`
+Zum Verwenden des Entwickler-Plug-ins müssen Sie es mithilfe dieses Befehls installieren: `ibmcloud plugin install dev -r Bluemix`
 
 Zum lokalen Ausführen und Debuggen von Apps müssen Sie auch [Docker](https://www.docker.com/get-docker) installieren.
 
@@ -283,7 +283,6 @@ Gehen Sie wie folgt vor, um Helm zu installieren:
 * Windows-Benutzer:
 Binärdatei unter https://github.com/kubernetes/helm/releases/tag/v2.6.0 herunterladen und installieren
 
-Gehen Sie wie folgt vor, um das Plug-in 'container-registry' zu installieren:
-`bx plugin install container-registry`
+Gehen Sie wie folgt vor, um das Plug-in 'container-registry' zu installieren: `ibmcloud plugin install container-registry`
 
-Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren: `bx plugin install container-service`
+Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren: `ibmcloud plugin install container-service`

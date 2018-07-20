@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -51,7 +51,7 @@ Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bl
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br><br>
+<br>
 
 * Führen Sie unter Windows 10 den folgenden Befehl als Administrator aus:
 
@@ -59,7 +59,8 @@ Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bl
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br><br>
+<br>
+
   Klicken Sie mit der rechten Maustaste auf das Symbol für Windows PowerShell und wählen Sie **Als Administrator ausführen** aus.
   {: tip}
 
@@ -72,7 +73,7 @@ Führen Sie den Befehl `help` aus, um zu überprüfen, dass die CLI und die Entw
 ibmcloud dev help
 ```
 {: codeblock}
-<br><br>
+<br>
 Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unterstützten Befehle auf.
 
 ## Schritt 3: Ihre Umgebung konfigurieren
@@ -91,7 +92,8 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 	ibmcloud login
 	```
 	{: codeblock}
-<br><br>
+<br>
+
 	Wenn Ihre Berechtigungsnachweise zurückgewiesen werden, verwenden Sie möglicherweise eine föderierte ID. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](/docs/iam/login_fedid.html#using-an-api-key).
 	{: tip}
 
@@ -105,4 +107,4 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Nächste Schritte
 {: #next-steps}
 
-Sie können jetzt Ihre erste App entwickeln und bereitstellen. Weitere Informationen finden Sie unter [Apps entwickeln und bereitstellen](/docs/cli/idt/index.html). 
+Sie können jetzt Ihre erste App entwickeln und bereitstellen. Weitere Informationen finden Sie unter [Apps entwickeln und bereitstellen](/docs/cli/idt/index.html).
