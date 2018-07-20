@@ -39,8 +39,8 @@ With this installation, you get the {{site.data.keyword.Bluemix_notm}} CLI, plus
 
 You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and the following system requirements:
 
-* If you're using Microsoft Windows &trade;, you must use Windows 10 or later.
-* You must use the stable channel for Docker with a minimum version of 1.13.1.
+* If you're using Microsoft Windows &trade;, you must use Windows 10 Pro or later.
+* You must use the stable channel for Docker with a minimum version of 1.13.1. 
 
 ## Step 1: Run the install command
 {: #step1}
@@ -52,7 +52,7 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
   ```
   {: codeblock}
   
-* For Windows 10, run the following command as an administrator:
+* For Windows 10 Pro, run the following command as an administrator:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
