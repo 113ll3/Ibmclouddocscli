@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -51,7 +51,7 @@ lastupdated: "2018-06-27"
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br><br>
+<br>
 
 * Windows 10 の場合、管理者として次のコマンドを実行します。
 
@@ -59,7 +59,8 @@ lastupdated: "2018-06-27"
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br><br>
+<br>
+
   Windows PowerShell アイコンを右クリックして、**「管理者として実行」**を選択します。
   {: tip}
 
@@ -72,7 +73,7 @@ CLI と開発者ツールが正常にインストールされたことを検証�
 ibmcloud dev help
 ```
 {: codeblock}
-<br><br>
+<br>
 出力には、使用方法の説明、現行バージョン、およびサポートされるコマンドがリストされます。
 
 ## ステップ 3: 環境の構成
@@ -91,7 +92,8 @@ ibmcloud dev help
 	ibmcloud login
 	```
 	{: codeblock}
-<br><br>
+<br>
+
 	資格情報が拒否された場合、統合 ID を使用している可能性があります。 詳しくは、[フェデレーテッド ID を使用したログイン](/docs/iam/login_fedid.html#using-an-api-key)を参照してください。
 	{: tip}
 

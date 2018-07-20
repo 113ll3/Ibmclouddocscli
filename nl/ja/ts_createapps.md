@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -39,7 +39,7 @@ The hostname <myHostname> is taken.
 再ログインしてください。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -61,7 +61,7 @@ Failed to <command> application.
 再ログインしてください。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -72,7 +72,7 @@ bx login
 ビルドをせずにアプリを実行すると、以下のエラーが表示される場合があります。
 
 ```
-$ bx dev run
+$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -91,14 +91,14 @@ Error: No such image: bx-dev-testProject
 現行アプリ・ディレクトリー内で以下のコマンドを実行して、アプリをビルドします。
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 現行アプリ・ディレクトリー内で以下のコマンドを実行して、アプリを開始します。
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: tsResolve}
 
@@ -141,7 +141,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 * CLI を使用して以下のコマンドを実行します。
 
    ```
-   bx dev code <your-app-name>
+   ibmcloud dev code <your-app-name>
    ```
    {: codeblock}
 
@@ -155,10 +155,10 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 {: tsResolve}
 
-## Node.js アプリで `bx dev run` を実行するとエラーになる
+## Node.js アプリで `ibmcloud dev run` を実行するとエラーになる
 {: #node}
 
-Node.js Web プロジェクトまたは BFF アプリ用の {{site.data.keyword.dev_cli_short}} CLI で `bx dev run` を実行すると、以下のエラーが表示される場合があります。
+Node.js Web プロジェクトまたは BFF アプリ用の {{site.data.keyword.dev_cli_short}} CLI で `ibmcloud dev run` を実行すると、以下のエラーが表示される場合があります。
 
 ```
 module.js:597
@@ -184,7 +184,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 このエラーは、`appmetrics` モジュールが別のアーキテクチャーにインストールされている場合に発生します。 1 つのアーキテクチャーにインストールされているネイティブ NPM モジュールは、別のアーキテクチャーでは機能しません。 付属の Docker イメージは、Linux カーネルに基づいています。
 {: tsCauses}
 
-`node_modules` フォルダーを削除してから、`bx dev run` コマンドを再度実行します。
+`node_modules` フォルダーを削除してから、`ibmcloud dev run` コマンドを再度実行します。
 {: tsResolve}
 
 ## {{site.data.keyword.Bluemix_notm}} へのデプロイに失敗する
@@ -198,7 +198,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 ログインして、やり直してください。
 
 ```
-bx login
+ibmcloud login
 ```
 {: tsResolve}
 
@@ -218,14 +218,14 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 これは、ほとんどの場合、無効のクラスター名が原因です。 同じコマンドに `--trace` を付けて実行することによって、原因を確認することができます。エラー出力には、以下の詳細が含まれる場合があります。
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 {: tsCauses}
 
 正しいクラスターを使用していて、かつクラスターがデプロイメント用に構成済みであることを確認するために、以下を実行します。
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 {: tsResolve}
 
@@ -248,7 +248,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-na
 デプロイ用イメージ・ターゲット内の名前空間が、以下を実行して表示される名前空間のいずれかと一致していることを確認します。
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 {: tsResolve}
 
@@ -259,7 +259,7 @@ bx cr namespaces
 
 開発プラグインをインストールするには、最初に [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) をインストールする必要があります。
 
-開発プラグイン自体を使用するには、`bx plugin install dev -r Bluemix` コマンドを実行してそれをインストールする必要があります。
+開発プラグイン自体を使用するには、`ibmcloud plugin install dev -r Bluemix` コマンドを実行してそれをインストールする必要があります。
 
 アプリをローカルに実行およびデバッグするには、[Docker](https://www.docker.com/get-docker) もインストールする必要があります。
 
@@ -284,7 +284,7 @@ Helm をインストールするには、次のようにします。
 Download and install the binary at https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
 container-registry プラグインをインストールするには、次のようにします。
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 container-service プラグインをインストールするには、次のようにします。
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`

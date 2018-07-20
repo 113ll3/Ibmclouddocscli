@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -51,7 +51,7 @@ Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br><br>
+<br>
 
 * Per Windows 10, immetti il seguente comando come amministratore:
 
@@ -59,7 +59,8 @@ Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br><br>
+<br>
+
   Fai clic con il tasto destro del mouse sull'icona Windows PowerShell e seleziona **Run as administrator**.
   {: tip}
 
@@ -72,7 +73,7 @@ Per verificare che la CLI e gli strumenti per sviluppatori siano stati installat
 ibmcloud dev help
 ```
 {: codeblock}
-<br><br>
+<br>
 L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supportati.
 
 ## Passo 3: Configura il tuo ambiente
@@ -91,7 +92,8 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 	ibmcloud login
 	```
 	{: codeblock}
-<br><br>
+<br>
+
 	Se le tue credenziali vengono rifiutate, puoi utilizzare un ID federato. Per ulteriori dettagli, vedi [Accesso con un ID federato](/docs/iam/login_fedid.html#using-an-api-key).
 	{: tip}
 

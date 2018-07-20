@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -51,7 +51,7 @@ lastupdated: "2018-06-27"
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br><br>
+<br>
 
 * 若為 Windows 10，請以管理者身分執行下列指令：
 
@@ -59,8 +59,9 @@ lastupdated: "2018-06-27"
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br><br>
-  在 Windows PowerShell 圖示上按一下滑鼠右鍵，然後選取**以系統管理員身分執行**。
+<br>
+
+    在 Windows PowerShell 圖示上按一下滑鼠右鍵，然後選取**以系統管理員身分執行**。
   {: tip}
 
 ## 步驟 2：驗證安裝
@@ -72,7 +73,7 @@ lastupdated: "2018-06-27"
 ibmcloud dev help
 ```
 {: codeblock}
-<br><br>
+<br>
 輸出會列出用法指示、現行版本及支援的指令。
 
 ## 步驟 3：配置環境
@@ -91,7 +92,8 @@ ibmcloud dev help
 	ibmcloud login
 	```
 	{: codeblock}
-<br><br>
+<br>
+
 	如果您的認證遭到拒絕，您可能是使用聯合 ID。如需詳細資料，請參閱[使用聯合 ID 進行登入](/docs/iam/login_fedid.html#using-an-api-key)。
 	{: tip}
 

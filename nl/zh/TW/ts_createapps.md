@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -39,7 +39,7 @@ The hostname <myHostname> is taken.
 請重新登入。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -61,7 +61,7 @@ Failed to <command> application.
 請重新登入。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -72,7 +72,7 @@ bx login
 當您執行應用程式而未先進行建置時，可能會看到下列錯誤。
 
 ```
-$ bx dev run
+$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -91,14 +91,14 @@ Error: No such image: bx-dev-testProject
 在現行應用程式目錄中執行下列指令，以建置您的應用程式：
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 在現行應用程式目錄中執行下列指令，以啟動您的應用程式：
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: tsResolve}
 
@@ -141,7 +141,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 * 使用 CLI 執行下列指令：
 
    ```
-   bx dev code <your-app-name>
+   ibmcloud dev code <your-app-name>
    ```
    {: codeblock}
 
@@ -155,10 +155,10 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 {: tsResolve}
 
-## 針對 Node.js 應用程式執行 `bx dev run` 時發生錯誤
+## 針對 Node.js 應用程式執行 `ibmcloud dev run` 時發生錯誤
 {: #node}
 
-如果您使用 {{site.data.keyword.dev_cli_short}} CLI 針對 Node.js Web 或 BFF 應用程式執行 `bx dev run`，則可能會看到下列錯誤：
+如果您使用 {{site.data.keyword.dev_cli_short}} CLI 針對 Node.js Web 或 BFF 應用程式執行 `ibmcloud dev run`，則可能會看到下列錯誤：
 
 ```
 module.js:597
@@ -184,7 +184,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 `appmetrics` 模組安裝在不同的架構上時，會發生此錯誤。安裝在某個架構上的原生 mpm 模組無法在另一個架構上運作。所包括的 Docker 映像檔是以 Linux Kernel 為基礎。
 {: tsCauses}
 
-刪除 `node_modules` 資料夾，並重新執行 `bx dev run` 指令。
+刪除 `node_modules` 資料夾，並重新執行 `ibmcloud dev run` 指令。
 {: tsResolve}
 
 ## 無法部署至 {{site.data.keyword.Bluemix_notm}}
@@ -198,7 +198,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 請登入，然後再試一次。
 
 ```
-bx login
+ibmcloud login
 ```
 {: tsResolve}
 
@@ -218,14 +218,14 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 這最可能是叢集名稱無效所造成。您可以執行與 `--trace` 相同的指令來確認原因，而錯誤輸出中可能會包含下列詳細資料：
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 {: tsCauses}
 
 請確定您使用的是正確叢集，而且您已透過執行下列指令來配置要進行部署的叢集：
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 {: tsResolve}
 
@@ -248,7 +248,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-na
 請確定部署映像檔目標中的名稱空間符合執行下列指令所找到的其中一個名稱空間：
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 {: tsResolve}
 
@@ -259,7 +259,7 @@ bx cr namespaces
 
 若要安裝 dev 外掛程式，您必須先安裝 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started)。
 
-若要使用 dev 外掛程式本身，您必須執行下列指令來安裝它：`bx plugin install dev -r Bluemix`。
+若要使用 dev 外掛程式本身，您必須執行下列指令來安裝它：`ibmcloud plugin install dev -r Bluemix`。
 
 若要在本端執行和除錯應用程式，您也必須安裝 [Docker](https://www.docker.com/get-docker)。
 
@@ -284,7 +284,7 @@ bx cr namespaces
 在 https://github.com/kubernetes/helm/releases/tag/v2.6.0 下載並安裝二進位檔
 
 若要安裝 container-registry 外掛程式：
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 若要安裝 container-service 外掛程式：
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`

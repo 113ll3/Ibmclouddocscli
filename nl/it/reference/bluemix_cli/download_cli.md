@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -47,7 +47,7 @@ Ora sei pronto a gestire le risorse {{site.data.keyword.Bluemix_notm}}. Immetti 
 Se stai utilizzando un ID federato, segui le istruzioni [qui](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) per accedere con un passcode monouso o una chiave API.  
 {: tip}
 
-## Ulteriori opzioni per installare la CLI {{site.data.keyword.Bluemix_notm}} 
+## Ulteriori opzioni per installare la CLI {{site.data.keyword.Bluemix_notm}}
 {: #more_options_install}
 
 
@@ -87,8 +87,9 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## Altri link per esplorare ulteriormente la CLI {{site.data.keyword.Bluemix_notm}}
 
-* [Amplia le funzionalità della CLI {{site.data.keyword.Bluemix_notm}} con i plugin](extend_cli.html)
-* [Documento di utilizzo dei comandi della CLI {{site.data.keyword.Bluemix_notm}}](ic_cli_cmds.html)
+* [Amplia le funzionalità della CLI {{site.data.keyword.Bluemix_notm}} con i plugin](/docs/cli/reference/bluemix_cli/extend_cli.html)
+* [Utilizzo dei comandi della CLI {{site.data.keyword.Bluemix_notm}} generali](/docs/cli/reference/bluemix_cli/bx_cli.html)
+* [Utilizzo dei comandi {{site.data.keyword.Bluemix_notm}} (ibmcloud sl) generali](/docs/cli/reference/softlayer/index.html)
 
 
 ## Segnala problemi e inoltra un feedback
