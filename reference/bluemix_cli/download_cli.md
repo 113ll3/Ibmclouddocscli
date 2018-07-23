@@ -112,9 +112,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 When you use installers or a shell script to install the {{site.data.keyword.Bluemix_notm}} CLI, the binaries will go to your system directories. If you want to specify a different directory, use the following steps.
 
-1. Download the binaries.
-
-   Use the following links and download the binary package based on your OS.
+### Step 1: Download the binary package based on your OS by using the following links.
 
 | Platform | Downloads | Checksum |
 |---------|----------|---------|
@@ -125,7 +123,7 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
 | win32 | [zip](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win32/archive) | [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win32/archive/checksum) |
 | win64 | [zip](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/archive) | [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/archive/checksum) |
 
-1. Extract the package to a directory that you specify.
+### Step 2: Extract the package to a directory that you specify.
 
    After extracting the package, the content will look like the following:
 
@@ -158,7 +156,7 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
    ```
    {: codeblock}
 
-1. Add to the `PATH` environment variable and enable shell autocompletion.
+### Step 3: Add to the `PATH` environment variable and enable shell autocompletion.
 
    * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
    * For shell autocompletion support (MacOS and Linux only), refer to [this guide](enable_cli_autocompletion.html).
