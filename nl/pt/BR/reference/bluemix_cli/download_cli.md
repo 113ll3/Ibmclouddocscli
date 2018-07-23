@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -99,8 +99,9 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## Outros links para explorar ainda mais a CLI do {{site.data.keyword.Bluemix_notm}}
 
-* [Ampliar os recursos da CLI do {{site.data.keyword.Bluemix_notm}} com plug-ins](extend_cli.html)
-* [Documento do uso dos comandos da CLI do {{site.data.keyword.Bluemix_notm}}](ic_cli_cmds.html)
+* [Ampliar os recursos da CLI do {{site.data.keyword.Bluemix_notm}} com plug-ins](/docs/cli/reference/bluemix_cli/extend_cli.html)
+* [Uso de comandos gerais da CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/bluemix_cli/bx_cli.html)
+* [Uso de comandos gerais do {{site.data.keyword.Bluemix_notm}} (ibmcloud sl)](/docs/cli/reference/softlayer/index.html)
 
 
 ## Relatar problemas e enviar feedback

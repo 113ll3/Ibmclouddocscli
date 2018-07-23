@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -57,7 +57,7 @@ requisitos do sistema:
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br><br>
+<br>
 
 * Para Windows 10, execute o comando a seguir como um administrador:
 
@@ -65,7 +65,8 @@ requisitos do sistema:
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br><br>
+<br>
+
   Clique com o botão direito no ícone do Windows PowerShell e selecione **Executar como
 administrador**.
   {: tip}
@@ -79,7 +80,7 @@ Para verificar se a CLI e as ferramentas do desenvolvedor foram instalados com �
 ibmcloud dev help
 ```
 {: codeblock}
-<br><br>
+<br>
 A saída lista as instruções de uso, a versão atual e os comandos suportados.
 
 ## Etapa 3: configurar o seu ambiente
@@ -88,7 +89,7 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 1. Conecte-se a um terminal de API em sua região do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à região Sul dos EUA {{site.data.keyword.Bluemix_notm}}:
 
 	```
-	ibmcloud api https://api.ng.bluemix.net
+	Ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
@@ -98,7 +99,8 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 	ibmcloud login
 	```
 	{: codeblock}
-<br><br>
+<br>
+
 	Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Consulte
 [Efetuando login com um ID federado](/docs/iam/login_fedid.html#using-an-api-key) para obter mais detalhes.
 	{: tip}

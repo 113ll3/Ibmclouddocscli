@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -40,7 +40,7 @@ Esse erro é causado por um token de login expirado.
 Efetue login novamente.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -62,7 +62,7 @@ Esse erro é causado por um token de login expirado.
 Efetue login novamente.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -73,7 +73,7 @@ bx login
 Você pode ver o erro a seguir ao executar um app sem construí-lo primeiro.
 
 ```
-$ bx dev run
+$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -92,14 +92,14 @@ Deve-se construir um app antes de executá-lo.
 Execute o comando a seguir no seu diretório de aplicativos atual para construir seu app:
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 Execute o comando a seguir no seu diretório de aplicativos atual para iniciar seu app:
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: tsResolve}
 
@@ -142,7 +142,7 @@ Esse erro deve-se a um tempo limite interno.
 * Execute o comando a seguir usando a CLI:
 
    ```
-   bx dev code <your-app-name>
+   ibmcloud dev code <your-app-name>
    ```
    {: codeblock}
 
@@ -156,10 +156,10 @@ Esse erro deve-se a um tempo limite interno.
 
 {: tsResolve}
 
-## Erro ao executar `bx dev run` para apps Node.js
+## Erro ao executar `ibmcloud dev run` para apps Node.js
 {: #node}
 
-Você poderá ver o erro a seguir se estiver executando o `bx dev run` com a CLI do {{site.data.keyword.dev_cli_short}} para os apps Node.js Web ou BFF:
+Você poderá ver o erro a seguir se estiver executando `ibmcloud dev run` com a CLI do {{site.data.keyword.dev_cli_short}} para apps BFF ou Web Node.js:
 
 ```
 module.js:597
@@ -185,7 +185,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 Esse erro ocorre quando o módulo `appmetrics` é instalado em uma arquitetura diferente. Módulos npm nativos que estão instalados em uma arquitetura não funcionam em outra. As imagens incluídas do Docker baseiam-se no kernel Linux.
 {: tsCauses}
 
-Exclua a pasta `node_modules` e execute o comando `bx dev run` novamente.
+Exclua a pasta `node_modules` e execute o comando `ibmcloud dev run` novamente.
 {: tsResolve}
 
 ## Falha ao implementar no {{site.data.keyword.Bluemix_notm}}
@@ -200,7 +200,7 @@ Você pode não estar com login efetuado em sua conta.
 Efetue login e tente novamente.
 
 ```
-bx login
+ibmcloud login
 ```
 {: tsResolve}
 
@@ -220,14 +220,14 @@ Falha ao configurar a implementação com o cluster '<cluster-name>' devido a: s
 Isso é mais provável devido a um nome de cluster que não é válido. É possível confirmar a causa executando o mesmo comando com `--trace` e os detalhes a seguir podem ser incluídos na saída de erro:
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Execute 'bx cs clusters' para listar todos os clusters aos quais você tem acesso.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 {: tsCauses}
 
 Para verificar se o cluster usado está correto e se você o configurou para implementação, execute:
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 {: tsResolve}
 
@@ -250,7 +250,7 @@ Isso é mais provável devido a um destino de imagem de implementação que não
 Verifique se o namespace no destino de imagem de implementação corresponde a um dos namespaces localizados na execução:
 
 ```
-bx cr namespaces
+Ibmcloud cr namespaces
 ```
 {: tsResolve}
 
@@ -261,7 +261,7 @@ Todos os pré-requisitos instalam para a maioria dos usuários usando os instala
 
 Para instalar o plug-in dev, deve-se primeiro instalar a [CLI do IBM Cloud](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started).
 
-Para usar o próprio plug-in dev, deve-se instalá-lo executando o comando a seguir: `bx plugin install dev -r
+Para usar o próprio plug-in dev, deve-se instalá-lo executando o comando a seguir: `ibmcloud plugin install dev -r
 Bluemix`
 
 Para executar e depurar apps localmente, deve-se também instalar o [Docker](https://www.docker.com/get-docker).
@@ -281,6 +281,7 @@ Para instalar o Helm:
 
 * Usuários do Windows: faça download e instale o binário em https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Para instalar o plug-in container-registry: `bx plugin install container-registry`
+Para instalar o plug-in de container-registry: `ibmcloud plugin install
+container-registry`
 
-Para instalar o plug-in container-registry: `bx plugin install container-service`
+Para instalar o plug-in de container-service: `ibmcloud plugin install container-service`
