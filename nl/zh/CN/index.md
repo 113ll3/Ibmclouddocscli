@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -51,7 +51,7 @@ lastupdated: "2018-06-27"
 curl -sL https://ibm.biz/idt-installer | bash
 ```
   {: codeblock}
-<br><br>
+<br>
 
 * 对于 Windows 10，请以管理员身份运行以下命令：
 
@@ -59,8 +59,9 @@ curl -sL https://ibm.biz/idt-installer | bash
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
 ```
   {: codeblock}
-<br><br>
-  右键单击 Windows PowerShell 图标，并选择**以管理员身份运行**。
+<br>
+
+    右键单击 Windows PowerShell 图标，并选择**以管理员身份运行**。
   {: tip}
 
 ## 步骤 2：验证安装
@@ -72,7 +73,7 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ibmcloud dev help
 ```
 {: codeblock}
-<br><br>
+<br>
 输出会列出用法指示信息、当前版本和支持的命令。
 
 ## 步骤 3：配置环境
@@ -91,7 +92,8 @@ ibmcloud dev help
 	ibmcloud login
 	```
 	{: codeblock}
-<br><br>
+<br>
+
 	如果凭证被拒绝，说明您可能使用的是联合标识。有关更多详细信息，请参阅[使用联合标识进行登录](/docs/iam/login_fedid.html#using-an-api-key)。
 	{: tip}
 

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -87,8 +87,9 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## {{site.data.keyword.Bluemix_notm}} CLI를 자세히 살펴보기 위한 기타 링크
 
-* [플러그인으로 {{site.data.keyword.Bluemix_notm}} CLI 기능 확장](extend_cli.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI 명령 사용법](ic_cli_cmds.html) 문서
+* [플러그인으로 {{site.data.keyword.Bluemix_notm}} CLI 기능 확장](/docs/cli/reference/bluemix_cli/extend_cli.html)
+* [일반 {{site.data.keyword.Bluemix_notm}} CLI 명령 사용법](/docs/cli/reference/bluemix_cli/bx_cli.html)
+* [일반 {{site.data.keyword.Bluemix_notm}} (ibmcloud sl) 명령 사용법](/docs/cli/reference/softlayer/index.html)
 
 
 ## 문제 보고 및 피드백 제출

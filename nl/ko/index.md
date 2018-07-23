@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -51,7 +51,7 @@ lastupdated: "2018-06-27"
 curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br><br>
+<br>
 
 * Windows 10의 경우 관리자로 다음 명령을 실행하십시오.
 
@@ -59,8 +59,9 @@ curl -sL https://ibm.biz/idt-installer | bash
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br><br>
-  Windows PowerShell 아이콘을 마우스 오른쪽 단추로 클릭한 후 **관리자로 실행**을 선택하십시오.
+<br>
+
+    Windows PowerShell 아이콘을 마우스 오른쪽 단추로 클릭한 후 **관리자로 실행**을 선택하십시오.
   {: tip}
 
 ## 2단계: 설치 확인
@@ -72,7 +73,7 @@ CLI 및 개발자 도구가 설치되었는지 확인하려면 `help` 명령을 
 ibmcloud dev help
 ```
 {: codeblock}
-<br><br>
+<br>
 출력에 사용법 지시사항, 현재 버전 및 지원되는 명령이 나열됩니다.
 
 ## 3단계: 환경 구성
@@ -91,7 +92,8 @@ ibmcloud dev help
 	ibmcloud login
 	```
 	{: codeblock}
-<br><br>
+<br>
+
 	신임 정보가 거부되면 연합 ID를 사용할 수 있습니다. 자세한 사항은 [연합 ID로 로그인](/docs/iam/login_fedid.html#using-an-api-key)을 참조하십시오.
 	{: tip}
 

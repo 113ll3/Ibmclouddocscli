@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2018-06-21"
 如果使用 {{site.data.keyword.dev_cli_short}} CLI 将应用程序部署到 Cloud Foundry，那么可能会看到以下错误。即使您确信输入的主机名是唯一的，也仍然可能会看到此消息。
 
 ```
-主机名 <myHostname> 已占用。
+主机名 <myHostname> 已采用。
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -39,7 +39,7 @@ lastupdated: "2018-06-21"
 请重新登录。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -61,7 +61,7 @@ bx login
 请重新登录。
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -72,7 +72,7 @@ bx login
 如果没有先构建应用程序就运行应用程序，那么可能会看到以下错误。
 
 ```
-$ bx dev run
+$ ibmcloud dev run
 未指定 run-cmd 选项
 正在停止“testProject”容器...
 找不到“testProject”容器
@@ -91,14 +91,14 @@ $ bx dev run
 在当前应用程序目录中运行以下命令来构建应用程序：
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 在当前应用程序目录中运行以下命令来启动应用程序：
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: tsResolve}
 
@@ -141,7 +141,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 * 使用 CLI 运行以下命令：
 
    ```
-   bx dev code <your-app-name>
+   ibmcloud dev code <your-app-name>
    ```
    {: codeblock}
 
@@ -155,10 +155,10 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 {: tsResolve}
 
-## 对 Node.js 应用程序运行 `bx dev run` 时出错
+## 对 Node.js 应用程序运行 `ibmcloud dev run` 时出错
 {: #node}
 
-如果使用 {{site.data.keyword.dev_cli_short}} CLI 对 Node.js Web 或 BFF 应用程序运行 `bx dev run`，那么可能会看到以下错误：
+如果使用 {{site.data.keyword.dev_cli_short}} CLI 对 Node.js Web 或 BFF 应用程序运行 `ibmcloud dev run`，那么可能会看到以下错误：
 
 ```
 module.js:597
@@ -184,7 +184,7 @@ module.js:597
 `appmetrics` 模块安装在其他体系结构上时，会发生此错误。安装在一个体系结构上的本机 npm 模块不能在另一个体系结构上运行。包含的 Docker 映像基于 Linux 内核。
 {: tsCauses}
 
-删除 `node_modules` 文件夹，然后再次运行 `bx dev run` 命令。
+删除 `node_modules` 文件夹，然后再次运行 `ibmcloud dev run` 命令。
 {: tsResolve}
 
 ## 未能部署到 {{site.data.keyword.Bluemix_notm}}
@@ -198,7 +198,7 @@ module.js:597
 请登录并重试。
 
 ```
-bx login
+ibmcloud login
 ```
 {: tsResolve}
 
@@ -218,14 +218,14 @@ bx login
 最有可能导致此错误的原因是集群名称无效。可以通过运行带 `--trace` 的相同命令来确认原因，并且错误输出中可能包含以下详细信息：
 
 ```
-失败，错误为：{"incidentID":"<id-number>","code":"E0008","description":"找不到指定的集群。","recoveryCLI":"请运行“bx cs clusters”以列出您有权访问的所有集群。","type":"正在供应"}
+失败，错误为：{"incidentID":"<id-number>","code":"E0008","description":"找不到指定的集群。","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"正在供应"}
 ```
 {: tsCauses}
 
 确保使用的是正确集群，并且已通过运行以下命令将集群配置为用于部署：
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 {: tsResolve}
 
@@ -248,7 +248,7 @@ bx cs cluster-config <cluster-name>
 确保部署映像目标中的名称空间与通过运行以下命令而找到的名称空间之一相匹配：
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 {: tsResolve}
 
@@ -259,7 +259,7 @@ bx cr namespaces
 
 要安装 dev 插件，必须先安装 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started)。
 
-要使用 dev 插件本身，必须运行以下命令来安装该插件：`bx plugin install dev -r Bluemix`
+要使用 dev 插件本身，必须运行以下命令来安装该插件：`ibmcloud plugin install dev -r Bluemix`
 
 要在本地运行和调试应用程序，还必须安装 [Docker](https://www.docker.com/get-docker)。
 
@@ -284,7 +284,7 @@ bx cr namespaces
 下载并安装二进制文件：https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
 安装 container-registry 插件：
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 安装 container-service 插件：
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -39,7 +39,7 @@ The hostname <myHostname> is taken.
 다시 로그인하십시오.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -61,7 +61,7 @@ Failed to <command> application.
 다시 로그인하십시오.
 
 ```
-bx login
+ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
@@ -72,7 +72,7 @@ bx login
 먼저 앱을 빌드하지 않고 실행하면 다음 오류가 표시될 수 있습니다.
 
 ```
-$ bx dev run
+$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -91,14 +91,14 @@ Error: No such image: bx-dev-testProject
 앱을 빌드하려면 현재 앱 디렉토리에서 다음 명령을 실행하십시오.
 
 ```
-bx dev build
+ibmcloud dev build
 ```
 {: codeblock}
 
 앱을 시작하려면 현재 앱 디렉토리에서 다음 명령을 실행하십시오.
 
 ```
-bx dev run
+ibmcloud dev run
 ```
 {: tsResolve}
 
@@ -141,7 +141,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 * CLI를 사용하여 다음 명령을 실행하십시오.
 
    ```
-   bx dev code <your-app-name>
+   ibmcloud dev code <your-app-name>
    ```
    {: codeblock}
 
@@ -155,10 +155,10 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 {: tsResolve}
 
-## Node.js 앱에 대해 `bx dev run` 실행 중 오류 발생
+## Node.js 앱에 대해 `ibmcloud dev run` 실행 중 오류
 {: #node}
 
-Node.js 웹 또는 BFF 앱에 대해 {{site.data.keyword.dev_cli_short}} CLI로 `bx dev run`을 실행하는 동안 다음 오류가 표시될 수 있습니다.
+Node.js 웹 또는 BFF 앱에 대해 {{site.data.keyword.dev_cli_short}} CLI로 `ibmcloud dev run`을 실행하는 동안 다음 오류가 표시될 수 있습니다.
 
 ```
 module.js:597
@@ -184,7 +184,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 이 오류는 `appmetrics` 모듈이 다른 아키텍처에 설치될 때 발생할 수 있습니다. 한 아키텍처에 설치된 기본 npm 모듈은 다른 아키텍처에서 작동하지 않습니다. 포함된 Docker 이미지는 Linux 커널을 기반으로 합니다.
 {: tsCauses}
 
-`node_modules` 폴더를 삭제하고 `bx dev run` 명령을 다시 실행하십시오.
+`node_modules` 폴더를 삭제하고 `ibmcloud dev run` 명령을 다시 실행하십시오.
 {: tsResolve}
 
 ## {{site.data.keyword.Bluemix_notm}}에 배치 실패
@@ -198,7 +198,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 로그인하고 다시 시도하십시오.
 
 ```
-bx login
+ibmcloud login
 ```
 {: tsResolve}
 
@@ -218,14 +218,14 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 이는 올바르지 않은 클러스터 이름 때문일 가능성이 높습니다. 동일한 명령을 `--trace`와 함께 실행하여 원인을 확인할 수 있으며 다음 세부사항이 오류 출력에 포함될 수 있습니다.
 
 ```
-Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 {: tsCauses}
 
 올바른 클러스터를 사용 중인지 확인하고 다음을 실행하여 배치에 대해 클러스터를 구성했는지 확인하십시오.
 
 ```
-bx cs cluster-config <cluster-name>
+ibmcloud cs cluster-config <cluster-name>
 ```
 {: tsResolve}
 
@@ -248,7 +248,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-na
 배치 이미지 대상의 네임스페이스가 다음을 실행하여 발견한 네임스페이스 중 하나와 일치하는지 확인하십시오.
 
 ```
-bx cr namespaces
+ibmcloud cr namespaces
 ```
 {: tsResolve}
 
@@ -259,7 +259,7 @@ bx cr namespaces
 
 dev 플러그인을 설치하려면 먼저 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started)를 설치해야 합니다.
 
-dev 플러그인 자체를 사용하려면 `bx plugin install dev -r Bluemix` 명령을 실행하여 설치해야 합니다.
+dev 플러그인 자체를 사용하려면 `ibmcloud plugin install dev -r Bluemix` 명령을 실행하여 설치해야 합니다.
 
 앱을 로컬로 실행하고 디버깅하려면 [Docker](https://www.docker.com/get-docker)도 설치해야 합니다.
 
@@ -284,7 +284,7 @@ Helm을 설치하려면 다음을 수행하십시오.
 https://github.com/kubernetes/helm/releases/tag/v2.6.0 사이트에서 2진을 다운로드하여 설치하십시오.
 
 container-registry 플러그인을 설치하려면 다음을 수행하십시오.
-`bx plugin install container-registry`
+`ibmcloud plugin install container-registry`
 
 container-service 플러그인을 설치하려면 다음을 수행하십시오.
-`bx plugin install container-service`
+`ibmcloud plugin install container-service`
