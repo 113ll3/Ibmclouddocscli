@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -155,11 +155,41 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
    └── ibmcloud.exe
    ```
    {: codeblock}
-
 ### Step 3: Add to the `PATH` environment variable and enable shell autocompletion.
 
    * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
    * For shell autocompletion support (MacOS and Linux only), refer to [this guide](enable_cli_autocompletion.html).
+   
+## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
+
+The following sections provide details on how to uninstall the stand-alone {{site.data.keyword.Bluemix_notm}} CLI on specific platforms.
+
+### Uninstalling on Windows
+
+1. Click the `Start` button, and then select `Control Panel`.
+2. In the pop-up window, click `Uninstall a program`.
+3. In the pop-up application list, locate `IBM Cloud Command Line Interface`.
+4. Right click `IBM Cloud Command Line Interface`, and select `Uninstall`.
+5. The uninstaller will be launched. Follow the instructions to finish the uninstallation.
+
+### Uninstalling on Linux/macOS
+
+#### Prior to version `0.9.0`
+
+1. Open a terminal, and run the following commands:
+  * `rm -rf /usr/local/ibmcloud`
+  * `rm -f /usr/local/bin/ibmcloud`
+  * `rm -f /usr/local/bin/bluemix`
+  * `rm -f /usr/local/bin/bx`
+  * `rm -f /usr/local/bin/ibmcloud-analytics`
+2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
+
+#### Version `0.9.0` and later
+
+1. Open a terminal, and run the following command:
+  * `/usr/local/ibmcloud/uninstall`
+2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
+
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
 
