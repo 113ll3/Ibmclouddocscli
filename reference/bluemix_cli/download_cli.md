@@ -193,7 +193,6 @@ The following sections provide details on how to uninstall the stand-alone {{sit
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
 
-* [Enabling shell autocompletion](/docs/cli/reference/bluemix_cli/enable_cli_autocompletion.html)
 * [Extend {{site.data.keyword.Bluemix_notm}} CLI capabilities with plugins](/docs/cli/reference/bluemix_cli/extend_cli.html)
 * [General {{site.data.keyword.Bluemix_notm}} CLI commands usage](/docs/cli/reference/bluemix_cli/bx_cli.html)
 * [General {{site.data.keyword.Bluemix_notm}} (ibmcloud sl) commands usage](/docs/cli/reference/softlayer/index.html)
