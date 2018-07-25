@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -87,8 +87,9 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## Autres liens permettant d'explorer davantage l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
-* [Extension de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des plug-in](extend_cli.html)
-* [Document sur l'utilisation des commandes de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](ic_cli_cmds.html)
+* [Extension de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des plug-in](/docs/cli/reference/bluemix_cli/extend_cli.html)
+* [Utilisation des commandes générales de l'interface CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/bluemix_cli/bx_cli.html)
+* [Utilisation des commandes générales {{site.data.keyword.Bluemix_notm}} (ibmcloud sl)](/docs/cli/reference/softlayer/index.html)
 
 
 ## Signaler des problèmes et soumettre des commentaires en retour
