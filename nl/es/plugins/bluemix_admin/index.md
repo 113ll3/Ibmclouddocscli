@@ -355,7 +355,7 @@ roles y descripciones de usuarios de {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">BillingManager</dt>
 <dd class="pd">Gestor de facturación. Un gestor de facturación puede ver información de uso de tiempo de ejecución y servicio para la organización.</dd>
 <dt class="pt dlterm">OrgAuditor</dt>
-<dd class="pd">Auditor de la organización. Un auditor de la organización puede ver el contenido de la app y el servicio en el espacio.</dd>
+<dd class="pd">Auditor de la organización. Un auditor de la organización puede ver el contenido de la aplicación y el servicio en el espacio.</dd>
 </dl>
 
 ### Configuración de una cuota para una organización

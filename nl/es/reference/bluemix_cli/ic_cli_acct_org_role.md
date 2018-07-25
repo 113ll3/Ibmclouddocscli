@@ -94,7 +94,7 @@ Listar todas las organizaciones
 ibmcloud account orgs [-r REGION] [--guid]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -121,7 +121,7 @@ Mostrar la información para la organización especificada.
 ibmcloud account org ORG_NAME [--guid]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -148,7 +148,7 @@ Crear una nueva organización. Esta operación solamente la puede realizar el pr
 ibmcloud account org-create ORG_NAME [-f]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -175,7 +175,7 @@ Replicar una organización desde la región actual a otra región.
 ibmcloud account org-replicate ORG_NAME REGION_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -202,7 +202,7 @@ Cambiar el nombre de una organización. Esta operación solamente la puede lleva
 ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -260,7 +260,7 @@ Visualice usuarios en el archivo de organización según el rol.
 ibmcloud account org-users ORG_NAME [-a]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -303,7 +303,7 @@ Obtiene todos los roles de la organización del usuario actual
 ibmcloud account org-roles [-u USER_ID]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
   <dl>
@@ -320,7 +320,7 @@ Asignar un rol de organización a un usuario. Esta operación solamente la puede
 ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
   <dl>
@@ -358,7 +358,7 @@ Elimine un rol de organización de un usuario. Esta operación solamente la pued
 ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -393,7 +393,7 @@ Visualice usuarios en el espacio especificado según el rol.
 ibmcloud account space-users ORG_NAME SPACE_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -412,7 +412,7 @@ Asignar un rol de espacio a un usuario. Esta operación solamente la puede lleva
 ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -449,7 +449,7 @@ Elimine un rol de espacio de un usuario. Esta operación solamente la puede llev
 ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -487,7 +487,7 @@ Lista todas las cuentas del usuario actual
 ibmcloud account list
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 ### ibmcloud account org-account
 {: #ibmcloud_account_org_account}
@@ -498,7 +498,7 @@ Visualiza la cuenta de la organización especificada (se necesita un usuario de 
 ibmcloud account org-account ORG_NAME [--guid]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -524,7 +524,7 @@ Eliminar un usuario de una cuenta (solo propietario de cuenta)
 ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -545,7 +545,7 @@ Invitar a un usuario a la cuenta
 ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE, --space-role SPACE_ROLE]]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -569,7 +569,7 @@ Reenviar la invitación a un usuario (administrador de cuenta)
 ```
 ibmcloud account user-reinvite USER_EMAIL
 ```
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -586,7 +586,7 @@ Listar grupos de acceso en la cuenta actual
 ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -613,7 +613,7 @@ Mostrar detalles de un grupo de acceso
 ibmcloud iam access-group GROUP_NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -638,7 +638,7 @@ Crear un grupo de acceso
 ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -663,7 +663,7 @@ Actualizar un grupo de acceso
 ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -692,7 +692,7 @@ Suprimir un grupo de acceso
 ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -719,7 +719,7 @@ Listar usuarios en un grupo de acceso
 ibmcloud iam access-group-users GROUP_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -742,7 +742,7 @@ Agregar usuarios a un grupo de acceso
 ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -765,7 +765,7 @@ Eliminar un usuario de un grupo de acceso
 ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -788,7 +788,7 @@ Eliminar un usuario de todos los grupos de acceso
 ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -813,7 +813,7 @@ Listar ID de servicio en un grupo de acceso
 ibmcloud iam access-group-service-ids GROUP_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -836,7 +836,7 @@ Añadir un ID de servicio a un grupo de acceso
 ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -859,7 +859,7 @@ Eliminar un ID de servicio de un grupo de acceso
 ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -882,7 +882,7 @@ Eliminar el ID de servicio de todos los grupos de acceso
 ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -907,7 +907,7 @@ Listar las políticas de un grupo de acceso
 ibmcloud iam access-group-policies GROUP_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -930,7 +930,7 @@ Mostrar detalles de una política de grupo de acceso
 ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -953,7 +953,7 @@ Crear una política de grupo de acceso
 ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1019,7 +1019,7 @@ Actualizar una política de grupo de acceso
 ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1084,7 +1084,7 @@ Suprimir una política de grupo de acceso
 ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>

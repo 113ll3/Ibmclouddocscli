@@ -200,7 +200,7 @@ Acceder a una imagen Docker Hub o una imagen desde su registro local y copiar la
 bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -277,7 +277,7 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [--desired DESIRED_INSTANCE_COUNT] [--anti false|true] [--auto false|true] IMAGE_NAME [CMD [CMD ...]]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -372,7 +372,7 @@ Ver información detallada, como variables de entorno, puertos o memoria, especi
 bluemix ic group-inspect CONTAINER_GROUP
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -398,7 +398,7 @@ Listar instancias de un grupo de contenedores especificado.
 bluemix ic group-instances CONTAINER_GROUP
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -424,7 +424,7 @@ Elimine un grupo de contenedores de un espacio.
 bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -456,7 +456,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 
 **Sugerencia:** para actualizar el nombre de host o dominio de un grupo de contenedores, utilice `bluemix ic route-map [-n HOST] [-d DOMAIN] CONTAINER_GROUP`.
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
  <dl>
@@ -487,7 +487,7 @@ Listar grupos de contenedor en el repositorio privado de {{site.data.keyword.Blu
 bluemix ic groups [-q]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 	<dl>
@@ -541,7 +541,7 @@ depuración.
 bluemix ic info
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 
 ## bluemix ic init
@@ -553,7 +553,7 @@ Inicializar el entorno de contenedores en su máquina local para usar todas las 
 bluemix ic init
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 **Nota:** antes de la inicialización, asegúrese de que la CLI de Docker (docker) esté instalada y configurada en su variable de entorno PATH. Para cambiar a otra región, utilice el mandato `bluemix region-set`.
 
@@ -607,7 +607,7 @@ Enlazar una dirección IP flotante disponible a un contenedor.
 bluemix ic ip-bind IP_ADDRESS CONTAINER
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -635,7 +635,7 @@ Liberar una dirección IP flotante de la instancia de servicio de nube del conte
 bluemix ic ip-release IP_ADDRESS [IP_ADDRESS2 [...]]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -653,7 +653,7 @@ Solicitar una nueva dirección IP flotante.
 bluemix ic ip-request [-q]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -674,7 +674,7 @@ Las direcciones IP públicas son un recurso limitado en IBM Containers. Por lo t
 bluemix ic ip-unbind IP_ADDRESS CONTAINER
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -702,7 +702,7 @@ Mostrar una lista de las direcciones IP flotantes disponibles para el usuario qu
 bluemix ic ips [-q]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -767,7 +767,7 @@ Ver el nombre del repositorio de imágenes {{site.data.keyword.Bluemix_notm}} pr
 bluemix ic namespace-get
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 
 ## bluemix ic namespace-set
@@ -781,7 +781,7 @@ Establezca el nombre del repositorio de imágenes {{site.data.keyword.Bluemix_no
 bluemix ic namespace-set NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1041,7 +1041,7 @@ Establecer la ruta que utiliza el tráfico de Internet para acceder al grupo de 
 bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1071,7 +1071,7 @@ Establecer la ruta que utiliza el tráfico de Internet para acceder al grupo de 
 bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1420,7 +1420,7 @@ Crea un volumen.
 bluemix ic volume-create VOLUME_NAME FS_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1460,7 +1460,7 @@ Crear una compartición de archivos.
 bluemix ic volume-fs-create FILE_SHARE_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1487,7 +1487,7 @@ Listar todos los tipos de compartición de archivos.
 bluemix ic volume-fs-flavors
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 
 ## bluemix ic volume-fs-inspect
@@ -1499,7 +1499,7 @@ Inspeccionar una compartición de archivos.
 bluemix ic volume-fs-inspect FILE_SHARE_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1525,7 +1525,7 @@ Eliminar una compartición de archivos.
 bluemix ic volume-fs-remove FILE_SHARE_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1551,7 +1551,7 @@ Inspeccionar un volumen.
 bluemix ic volume-inspect VOLUME_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1577,7 +1577,7 @@ Eliminar un volumen.
 bluemix ic volume-remove VOLUME_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -1603,7 +1603,7 @@ Listar los volúmenes.
 bluemix ic volumes
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 
 ## bluemix ic wait

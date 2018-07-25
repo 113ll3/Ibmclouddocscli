@@ -592,7 +592,7 @@ Vea la información básica de {{site.data.keyword.Bluemix_notm}}, incluida la r
 ibmcloud info
 ```
 
-<strong>Requisitos previos</strong>:  Punto final
+<strong>Requisitos previos</strong>: Punto final
 
 
 ## ibmcloud cf
@@ -743,7 +743,7 @@ Visualiza la información para todas las regiones en {{site.data.keyword.Bluemix
 ibmcloud regions
 ```
 
-<strong>Requisitos previos</strong>:  Punto final
+<strong>Requisitos previos</strong>: Punto final
 
 
 ## ibmcloud target
@@ -756,7 +756,7 @@ Establece o visualiza la cuenta, región, organización o espacio de destino.
 ibmcloud target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -821,7 +821,7 @@ Listar todas las organizaciones
 ibmcloud account orgs [-r REGION] [--guid]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -848,7 +848,7 @@ Mostrar la información para la organización especificada.
 ibmcloud account org ORG_NAME [--guid]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -876,7 +876,7 @@ Crear una nueva organización. Esta operación solamente la puede realizar el pr
 ibmcloud account org-create ORG_NAME [-f]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -903,7 +903,7 @@ Replicar una organización desde la región actual a otra región.
 ibmcloud account org-replicate ORG_NAME REGION_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -931,7 +931,7 @@ Cambiar el nombre de una organización. Esta operación solamente la puede lleva
 ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -995,7 +995,7 @@ Visualice usuarios en el archivo de organización según el rol.
 ibmcloud account org-users ORG_NAME [-a]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1038,7 +1038,7 @@ Obtiene todos los roles de la organización del usuario actual
 ibmcloud account org-roles [-u USER_ID]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
   <dl>
@@ -1055,7 +1055,7 @@ Asignar un rol de organización a un usuario. Esta operación solamente la puede
 ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
   <dl>
@@ -1093,7 +1093,7 @@ Elimine un rol de organización de un usuario. Esta operación solamente la pued
 ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -1128,7 +1128,7 @@ Visualice usuarios en el espacio especificado según el rol.
 ibmcloud account space-users ORG_NAME SPACE_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -1148,7 +1148,7 @@ Asignar un rol de espacio a un usuario. Esta operación solamente la puede lleva
 ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -1185,7 +1185,7 @@ Elimine un rol de espacio de un usuario. Esta operación solamente la puede llev
 ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -1223,7 +1223,7 @@ Lista todas las cuentas del usuario actual
 ibmcloud account list
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 
 ## ibmcloud account org-account
@@ -1235,7 +1235,7 @@ Visualiza la cuenta de la organización especificada (se necesita un usuario de 
 ibmcloud account org-account ORG_NAME [--guid]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1262,7 +1262,7 @@ Eliminar un usuario de una cuenta (solo propietario de cuenta)
 ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1283,7 +1283,7 @@ Invitar a un usuario a la cuenta
 ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE, --space-role SPACE_ROLE]]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1308,7 +1308,7 @@ Reenviar la invitación a un usuario (administrador de cuenta)
 ```
 ibmcloud account user-reinvite USER_EMAIL
 ```
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1325,7 +1325,7 @@ Listar grupos de acceso en la cuenta actual
 ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1352,7 +1352,7 @@ Mostrar detalles de un grupo de acceso
 ibmcloud iam access-group GROUP_NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1377,7 +1377,7 @@ Crear un grupo de acceso
 ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1402,7 +1402,7 @@ Actualizar un grupo de acceso
 ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1431,7 +1431,7 @@ Suprimir un grupo de acceso
 ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1458,7 +1458,7 @@ Listar usuarios en un grupo de acceso
 ibmcloud iam access-group-users GROUP_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1481,7 +1481,7 @@ Agregar usuarios a un grupo de acceso
 ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1504,7 +1504,7 @@ Eliminar un usuario de un grupo de acceso
 ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1527,7 +1527,7 @@ Eliminar un usuario de todos los grupos de acceso
 ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1552,7 +1552,7 @@ Listar ID de servicio en un grupo de acceso
 ibmcloud iam access-group-service-ids GROUP_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1575,7 +1575,7 @@ Añadir un ID de servicio a un grupo de acceso
 ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1598,7 +1598,7 @@ Eliminar un ID de servicio de un grupo de acceso
 ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1621,7 +1621,7 @@ Eliminar el ID de servicio de todos los grupos de acceso
 ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1646,7 +1646,7 @@ Listar las políticas de un grupo de acceso
 ibmcloud iam access-group-policies GROUP_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1669,7 +1669,7 @@ Mostrar detalles de una política de grupo de acceso
 ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1692,7 +1692,7 @@ Crear una política de grupo de acceso
 ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1758,7 +1758,7 @@ Actualizar una política de grupo de acceso
 ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1823,7 +1823,7 @@ Suprimir una política de grupo de acceso
 ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1847,7 +1847,7 @@ Lista todos los ID de servicio
 ibmcloud iam service-ids [--uuid]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1872,7 +1872,7 @@ Mostrar detalles de un ID de servicio
 ibmcloud iam service-id (NAME|UUID) [--uuid]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1907,7 +1907,7 @@ Crear un ID de servicio
 ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1943,7 +1943,7 @@ Actualizar un ID de servicio
 ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1989,7 +1989,7 @@ Suprimir un ID de servicio
 ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2024,7 +2024,7 @@ Bloquear un ID de servicio
 ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2059,7 +2059,7 @@ Desbloquear un ID de servicio
 ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2094,7 +2094,7 @@ Lista todas las claves de API de la plataforma de {{site.data.keyword.Bluemix_no
 ibmcloud iam api-keys
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
@@ -2105,7 +2105,7 @@ Crear una nueva clave de API de la plataforma de {{site.data.keyword.Bluemix_not
 ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2142,7 +2142,7 @@ Actualizar una clave de API de la plataforma de {{site.data.keyword.Bluemix_notm
 ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2173,7 +2173,7 @@ Suprimir una clave de API de la plataforma de {{site.data.keyword.Bluemix_notm}}
 ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2194,7 +2194,7 @@ Bloquear una clave de API de plataforma
 ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2229,7 +2229,7 @@ Desbloquear una clave de API de plataforma
 ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2264,7 +2264,7 @@ Listar todas las claves de API de un servicio
 ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2293,7 +2293,7 @@ Listar detalles de una clave de API de servicio
 ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [--uuid] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2328,7 +2328,7 @@ Crear una clave de API de servicio
 ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, --description DESCRIPTION] [--file FILE] [-f, --force] [--lock]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2363,7 +2363,7 @@ Actualizar una clave de API de servicio
 ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID)  [-n, --name NEW_NAME] [-d, --description DESCRIPTION] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2400,7 +2400,7 @@ Suprimir una clave de API de servicio
 ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2433,7 +2433,7 @@ Bloquear una clave de API de servicio
 ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2466,7 +2466,7 @@ Desbloquear una clave de API de servicio
 ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2728,7 +2728,7 @@ Listar todas las políticas de servicio del servicio especificado
 ibmcloud iam service-policies SERVICE_ID [--json] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2763,7 +2763,7 @@ Mostrar detalles de una política de servicio
 ibmcloud iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2800,7 +2800,7 @@ Crear una política de servicio
 ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2851,7 +2851,7 @@ Actualizar una política de servicio
 ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -2903,7 +2903,7 @@ Suprimir una política de servicio
 ibmcloud iam service-policy-delete SERVICE_ID POLICY_ID [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3052,7 +3052,7 @@ Listar grupos de recursos.
 ibmcloud resource groups [--default]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3083,7 +3083,7 @@ Mostrar detalles de un grupo de recursos
 ibmcloud resource group NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3117,7 +3117,7 @@ Crear un grupo de recursos
 ibmcloud resource group-create NAME QUOTA_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -3139,7 +3139,7 @@ Actualizar un grupo de recursos existente
 ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3176,7 +3176,7 @@ Listar todas las definiciones de cuota
 ibmcloud resource quotas
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3199,7 +3199,7 @@ Mostrar detalles de una definición de cuota
 ibmcloud resource quota NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3362,7 +3362,7 @@ Liste la información de certificado de un dominio.
 ibmcloud app domain-cert DOMAIN_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3388,7 +3388,7 @@ Añadir un certificado para el dominio especificado en la organización actual.
 ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -3424,7 +3424,7 @@ Eliminar un certificado del dominio especificado en la organización actual.
 ibmcloud app domain-cert-remove DOMAIN [-f]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -3450,13 +3450,13 @@ Este mandato tiene la misma función y las mismas opciones que el mandato [cf ch
 ## ibmcloud app route-map
 {: #ibmcloud_app_route_map}
 
-Correlacione una ruta a una app cf o grupo de contenedores que tenga un dominio y nombre de host específicos.
+Correlacione una ruta a una aplicación cf o grupo de contenedores que tenga un dominio y nombre de host específicos.
 
 ```
 ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -3487,13 +3487,13 @@ ibmcloud app route-map my-container-group chinabluemix.net -n abc
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
-Elimina la correlación entre la ruta específica y una app cf existente o grupo de contenedores.
+Elimina la correlación entre la ruta específica y una aplicación cf existente o grupo de contenedores.
 
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -3669,7 +3669,7 @@ Listar instancias de servicio
 ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3698,7 +3698,7 @@ Mostrar los detalles de una instancia de servicio
 ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3729,7 +3729,7 @@ Crear una instancia de servicio
 ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3765,7 +3765,7 @@ Actualizar instancia de servicio
 ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3799,7 +3799,7 @@ Suprimir instancia de servicio
 ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3829,7 +3829,7 @@ Mostrar enlaces al alias de servicio
 ibmcloud resource service-bindings SERVICE_ALIAS
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3852,7 +3852,7 @@ Mostrar detalles de un enlace de servicio
 ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3880,7 +3880,7 @@ Crear un enlace de servicio
 ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3941,7 +3941,7 @@ Listar claves de servicio de la instancia de servicio o el alias de servicio
 ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3971,7 +3971,7 @@ Mostrar detalles de una clave de servicio
 ibmcloud resource service-key KEY_NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -3997,7 +3997,7 @@ Crear una clave de servicio
 ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4037,7 +4037,7 @@ Suprimir una clave de servicio
 ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4063,7 +4063,7 @@ Listar los alias de una instancia de servicio
 ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4088,7 +4088,7 @@ Mostrar detalles de un alias de servicio
 ibmcloud resource service-alias ALIAS_NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4113,7 +4113,7 @@ Crear un alias de una instancia de servicio
 ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4146,7 +4146,7 @@ Actualizar un alias de servicio
 ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4178,7 +4178,7 @@ Suprimir un alias de servicio
 ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4203,7 +4203,7 @@ Buscar recursos utilizando la sintaxis de consultas de Lucene
 ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4289,7 +4289,7 @@ Listar todas las etiquetas
 ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit LIMIT]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4324,7 +4324,7 @@ Mostrar detalles de una etiqueta
 ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4351,7 +4351,7 @@ Crear una etiqueta
 ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4396,7 +4396,7 @@ Suprimir una etiqueta
 ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4423,7 +4423,7 @@ Añadir una etiqueta a un recurso
 ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resource-crn RESOURCE_CRN
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4452,7 +4452,7 @@ Eliminar una etiqueta de un recurso
 ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RESOURCE_CRN
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4481,7 +4481,7 @@ Cambiar etiqueta de usuario a etiqueta restringida y viceversa
 ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4511,7 +4511,7 @@ Buscar entradas de catálogo
 ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4555,7 +4555,7 @@ Obtener una entrada de catálogo
 ibmcloud catalog entry ID [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4584,7 +4584,7 @@ Crear una nueva entrada de catálogo (sólo administrador del catálogo de una c
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4613,7 +4613,7 @@ Actualizar una entrada de catálogo existente (sólo administrador o editor del 
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4638,7 +4638,7 @@ Suprimir una entrada de catálogo (solo administrador del catálogo de una cuent
 ibmcloud catalog entry-delete ID [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4663,7 +4663,7 @@ Obtener la visibilidad para una entrada de catálogo (sólo administrador del ca
 ibmcloud catalog entry-visibility ID [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4690,7 +4690,7 @@ Actualizar la visibilidad de una entrada de catálogo existente (sólo administr
 ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4732,7 +4732,7 @@ Lista de ofertas de servicios en el mercado
 ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -4761,7 +4761,7 @@ Visualizar las plantillas de contenedor modelo en {{site.data.keyword.Bluemix_no
 ibmcloud catalog templates [-d]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -4780,7 +4780,7 @@ Ver la información detallada de una plantilla de contenedor modelo especificada
 ibmcloud catalog template TEMPLATE_ID
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -4801,18 +4801,18 @@ ibmcloud catalog template mobileBackendStarter
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
-Crea una app cf que se base en la plantilla específica con el URL y la descripción especificados. De forma predeterminada, la nueva app se iniciará automáticamente.
+Crea una aplicación cf que se base en la plantilla específica con el URL y la descripción especificados. De forma predeterminada, la nueva app se iniciará automáticamente.
 
 ```
 ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
    <dl>
    <dt>TEMPLATE_ID (necesario)</dt>
-   <dd>Plantilla en la que se basará la app cuando se cree. Utilice <i>ibmcloud templates</i> para ver el ID de todas las plantillas.</dd>
+   <dd>Plantilla en la que se basará la aplicación cuando se cree. Utilice <i>ibmcloud templates</i> para ver el ID de todas las plantillas.</dd>
    <dt>CF_APP_NAME (necesario)</dt>
    <dd>Nombre de la aplicación cf que se debe crear.</dd>
    <dt>-u <i>URL</i> (opcional)</dt>
@@ -4820,7 +4820,7 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTI
    <dt>-d <i>DESCRIPTION</i> (opcional)</dt>
    <dd>Descripción de la aplicación.</dd>
    <dt>--no-start (opcional)</dt>
-   <dd>No inicie la app automáticamente después de crearla. Si no se especifica, la app se iniciará automáticamente una vez que se haya creado.</dd>
+   <dd>No inicie la aplicación automáticamente después de crearla. Si no se especifica, la aplicación se iniciará automáticamente una vez que se haya creado.</dd>
    </dl>
 
 
@@ -4920,7 +4920,7 @@ Mostrar el uso mensual de la cuenta actual (solo el administrador de la cuenta)
 ibmcloud billing account-usage [-d YYYY-MM] [--json]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -4948,7 +4948,7 @@ Mostrar el uso mensual de una organización (solo el administrador de la cuenta 
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -4971,7 +4971,7 @@ Mostrar el uso mensual de un grupo de recursos (solo el administrador de la cuen
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -4993,7 +4993,7 @@ Mostrar el uso mensual de las instancias de recurso de la cuenta actual.
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -5318,7 +5318,7 @@ Listar entornos de CFEE.
 bx cfee environments
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -5332,7 +5332,7 @@ Mostrar detalles de un entorno CFEE.
 bx cfee environment NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
   <dl>

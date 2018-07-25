@@ -81,7 +81,7 @@ Listar grupos de recursos.
 ibmcloud resource groups [--default]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -112,7 +112,7 @@ Mostrar detalles de un grupo de recursos
 ibmcloud resource group NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -145,7 +145,7 @@ Crear un grupo de recursos
 ibmcloud resource group-create NAME QUOTA_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -166,7 +166,7 @@ Actualizar un grupo de recursos existente
 ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -203,7 +203,7 @@ Listar todas las definiciones de cuota
 ibmcloud resource quotas
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -226,7 +226,7 @@ Mostrar detalles de una definición de cuota
 ibmcloud resource quota NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -273,7 +273,7 @@ Listar instancias de servicio
 ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -302,7 +302,7 @@ Mostrar los detalles de una instancia de servicio
 ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -333,7 +333,7 @@ Crear una instancia de servicio
 ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -369,7 +369,7 @@ Actualizar instancia de servicio
 ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -403,7 +403,7 @@ Suprimir instancia de servicio
 ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -433,7 +433,7 @@ Mostrar enlaces al alias de servicio
 ibmcloud resource service-bindings SERVICE_ALIAS
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -457,7 +457,7 @@ Mostrar detalles de un enlace de servicio
 ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -485,7 +485,7 @@ Crear un enlace de servicio
 ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -547,7 +547,7 @@ Listar claves de servicio de la instancia de servicio o el alias de servicio
 ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -577,7 +577,7 @@ Mostrar detalles de una clave de servicio
 ibmcloud resource service-key KEY_NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -603,7 +603,7 @@ Crear una clave de servicio
 ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -643,7 +643,7 @@ Suprimir una clave de servicio
 ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -669,7 +669,7 @@ Listar los alias de una instancia de servicio
 ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -694,7 +694,7 @@ Mostrar detalles de un alias de servicio
 ibmcloud resource service-alias ALIAS_NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -719,7 +719,7 @@ Crear un alias de una instancia de servicio
 ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -752,7 +752,7 @@ Actualizar un alias de servicio
 ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -784,7 +784,7 @@ Suprimir un alias de servicio
 ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -809,7 +809,7 @@ Buscar recursos utilizando la sintaxis de consultas de Lucene
 ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -895,7 +895,7 @@ Listar todas las etiquetas
 ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit LIMIT]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -930,7 +930,7 @@ Mostrar detalles de una etiqueta
 ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -957,7 +957,7 @@ Crear una etiqueta
 ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1002,7 +1002,7 @@ Suprimir una etiqueta
 ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1029,7 +1029,7 @@ Añadir una etiqueta a un recurso
 ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resource-crn RESOURCE_CRN
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1058,7 +1058,7 @@ Eliminar una etiqueta de un recurso
 ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RESOURCE_CRN
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -1087,7 +1087,7 @@ Cambiar etiqueta de usuario a etiqueta restringida y viceversa
 ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>

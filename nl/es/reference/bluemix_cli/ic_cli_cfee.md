@@ -37,7 +37,7 @@ Listar entornos de CFEE.
 ibmcloud cfee environments
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -50,7 +50,7 @@ Mostrar detalles de un entorno CFEE.
 ibmcloud cfee environment NAME [--id]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
   <dl>

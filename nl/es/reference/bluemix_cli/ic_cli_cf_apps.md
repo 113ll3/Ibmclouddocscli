@@ -179,7 +179,7 @@ Liste la información de certificado de un dominio.
 ibmcloud app domain-cert DOMAIN_NAME
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -205,7 +205,7 @@ Añadir un certificado para el dominio especificado en la organización actual.
 ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -241,7 +241,7 @@ Eliminar un certificado del dominio especificado en la organización actual.
 ibmcloud app domain-cert-remove DOMAIN [-f]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -265,13 +265,13 @@ Este mandato tiene la misma función y las mismas opciones que el mandato [cf ch
 ### ibmcloud app route-map
 {: #ibmcloud_app_route_map}
 
-Correlacione una ruta a una app cf o grupo de contenedores que tenga un dominio y nombre de host específicos.
+Correlacione una ruta a una aplicación cf o grupo de contenedores que tenga un dominio y nombre de host específicos.
 
 ```
 ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 
@@ -301,13 +301,13 @@ ibmcloud app route-map my-container-group chinabluemix.net -n abc
 ### ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
-Elimina la correlación entre la ruta específica y una app cf existente o grupo de contenedores.
+Elimina la correlación entre la ruta específica y una aplicación cf existente o grupo de contenedores.
 
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 

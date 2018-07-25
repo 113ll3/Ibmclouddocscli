@@ -48,7 +48,7 @@ Crea una conexión VPN.
 ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -99,7 +99,7 @@ Crea una política IKE.
 ibmcloud vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -130,7 +130,7 @@ Crea una política IPSec.
 ibmcloud vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -161,7 +161,7 @@ Crea una pasarela VPN.
 ibmcloud vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -188,7 +188,7 @@ Muestra información sobre todas las conexiones actuales.
 ibmcloud vpn connections
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 
 ## ibmcloud vpn ikes
@@ -198,7 +198,7 @@ Muestra información sobre las conexiones IKE actuales.
 ibmcloud vpn ikes
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 
 ## ibmcloud vpn ipsecs
@@ -208,7 +208,7 @@ Muestra información sobre las conexiones IPSec actuales.
 ibmcloud vpn ipsecs
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 
 ## ibmcloud vpn gateways
@@ -218,7 +218,7 @@ Muestra información sobre las pasarelas actuales.
 ibmcloud vpn gateways
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 
 ## ibmcloud vpn connection
@@ -228,7 +228,7 @@ Muestra toda la información sobre una conexión particular.
 ibmcloud vpn connection CONNECTION_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -242,7 +242,7 @@ Muestra información sobre una conexión IKE.
 ibmcloud vpn ike POLICY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -256,7 +256,7 @@ Muestra información sobre una conexión IPSec.
 ibmcloud vpn ipsec POLICY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -270,7 +270,7 @@ Muestra información de conexión sobre una pasarela.
 ibmcloud vpn gateway GATEWAY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -284,7 +284,7 @@ Suprima una conexión existente.
 ibmcloud vpn connection-delete CONNECTION_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -298,7 +298,7 @@ Suprime una política IKE existente.
 ibmcloud vpn ike-delete POLICY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -312,7 +312,7 @@ Suprime una política IPSec existente.
 ibmcloud vpn ipsec-delete POLICY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -326,7 +326,7 @@ Suprime una pasarela existente.
 ibmcloud vpn gateway-delete GATEWAY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -340,7 +340,7 @@ Actualiza una conexión VPN existente.
 ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -383,7 +383,7 @@ Actualiza una política IKE.
 ibmcloud vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -407,7 +407,7 @@ Actualiza una política IPSec.
 ibmcloud vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -431,7 +431,7 @@ Actualiza una pasarela VPN existente.
 ibmcloud vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 

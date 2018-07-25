@@ -222,7 +222,7 @@ Vea la información básica de {{site.data.keyword.Bluemix_notm}}, incluida la r
 ibmcloud info
 ```
 
-<strong>Requisitos previos</strong>:  Punto final
+<strong>Requisitos previos</strong>: Punto final
 
 ## ibmcloud cf
 {: #ibmcloud_cf}
@@ -371,7 +371,7 @@ Visualiza la información para todas las regiones en {{site.data.keyword.Bluemix
 ibmcloud regions
 ```
 
-<strong>Requisitos previos</strong>:  Punto final
+<strong>Requisitos previos</strong>: Punto final
 
 ## ibmcloud target
 {: #ibmcloud_target}
@@ -383,7 +383,7 @@ Establece o visualiza la cuenta, región, organización o espacio de destino.
 ibmcloud target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>

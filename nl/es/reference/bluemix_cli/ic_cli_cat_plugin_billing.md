@@ -73,7 +73,7 @@ Buscar entradas de catálogo
 ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -116,7 +116,7 @@ Obtener una entrada de catálogo
 ibmcloud catalog entry ID [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -144,7 +144,7 @@ Crear una nueva entrada de catálogo (sólo administrador del catálogo de una c
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -172,7 +172,7 @@ Actualizar una entrada de catálogo existente (sólo administrador o editor del 
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -197,7 +197,7 @@ Suprimir una entrada de catálogo (solo administrador del catálogo de una cuent
 ibmcloud catalog entry-delete ID [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -221,7 +221,7 @@ Obtener la visibilidad para una entrada de catálogo (sólo administrador del ca
 ibmcloud catalog entry-visibility ID [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -247,7 +247,7 @@ Actualizar la visibilidad de una entrada de catálogo existente (sólo administr
 ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -288,7 +288,7 @@ Lista de ofertas de servicios en el mercado
 ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -317,7 +317,7 @@ Visualizar las plantillas de contenedor modelo en {{site.data.keyword.Bluemix_no
 ibmcloud catalog templates [-d]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -335,7 +335,7 @@ Ver la información detallada de una plantilla de contenedor modelo especificada
 ibmcloud catalog template TEMPLATE_ID
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
@@ -355,18 +355,18 @@ ibmcloud catalog template mobileBackendStarter
 ### ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
-Crea una app cf que se base en la plantilla específica con el URL y la descripción especificados. De forma predeterminada, la nueva app se iniciará automáticamente.
+Crea una aplicación cf que se base en la plantilla específica con el URL y la descripción especificados. De forma predeterminada, la nueva app se iniciará automáticamente.
 
 ```
 ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, inicio de sesión, destino
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
    <dl>
    <dt>TEMPLATE_ID (necesario)</dt>
-   <dd>Plantilla en la que se basará la app cuando se cree. Utilice <i>ibmcloud templates</i> para ver el ID de todas las plantillas.</dd>
+   <dd>Plantilla en la que se basará la aplicación cuando se cree. Utilice <i>ibmcloud templates</i> para ver el ID de todas las plantillas.</dd>
    <dt>CF_APP_NAME (necesario)</dt>
    <dd>Nombre de la aplicación cf que se debe crear.</dd>
    <dt>-u <i>URL</i> (opcional)</dt>
@@ -374,7 +374,7 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTI
    <dt>-d <i>DESCRIPTION</i> (opcional)</dt>
    <dd>Descripción de la aplicación.</dd>
    <dt>--no-start (opcional)</dt>
-   <dd>No inicie la app automáticamente después de crearla. Si no se especifica, la app se iniciará automáticamente una vez que se haya creado.</dd>
+   <dd>No inicie la aplicación automáticamente después de crearla. Si no se especifica, la aplicación se iniciará automáticamente una vez que se haya creado.</dd>
    </dl>
 
 
@@ -474,7 +474,7 @@ Mostrar el uso mensual de la cuenta actual (solo el administrador de la cuenta)
 ibmcloud billing account-usage [-d YYYY-MM] [--json]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -502,7 +502,7 @@ Mostrar el uso mensual de una organización (solo el administrador de la cuenta 
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -524,7 +524,7 @@ Mostrar el uso mensual de un grupo de recursos (solo el administrador de la cuen
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 
@@ -546,7 +546,7 @@ Mostrar el uso mensual de las instancias de recurso de la cuenta actual.
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
 ```
 
-<strong>Requisitos previos</strong>:  Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 

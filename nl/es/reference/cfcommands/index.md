@@ -128,7 +128,7 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 ## cf apps
 {: #cf_apps}
 
-Lista todas las apps desplegadas en el espacio actual. También se visualiza el estado de cada app.
+Lista todas las aplicaciones desplegadas en el espacio actual. También se visualiza el estado de cada aplicación.
 
 Suponga que tiene una instancia para una app, en la columna instancias de la respuesta desde el mandato cf apps, verá 1/1 si la app está activa y 0/1 si la app está desactivada. Si ve ?/1, lo que indica que el estado de la instancia de la app es desconocido, puede copiar el URL de la app en su navegador para comprobar si la app responde, o puede poner el registro en cola mediante el mandato `cf logs nombre_app` para ver si la app está generando contenido de registro.
 
@@ -142,7 +142,7 @@ cf apps
 ## cf bind-service
 {: #cf_bind-service}
 
-Enlaza una instancia de servicio existente a su app.
+Enlaza una instancia de servicio existente a su aplicación.
 
 ```
 cf bind-service nombre_app instancia_servicio
@@ -154,7 +154,7 @@ cf bind-service nombre_app instancia_servicio
 
    <dl>
    <dt>appname (necesario)</dt>
-   <dd>El nombre de la app.</dd>
+   <dd>El nombre de la aplicación.</dd>
    <dt>service_instance (necesario)</dt>
    <dd>El nombre de la instancia de servicio existente.</dd>
     </dl>
@@ -245,11 +245,11 @@ cf delete appname [-f] [-r]
 
    <dl>
    <dt>appname (necesario)</dt>
-   <dd>El nombre de la app.</dd>
+   <dd>El nombre de la aplicación.</dd>
    <dt>*-f* (opcional)</dt>
-   <dd>Fuerza la supresión de la app sin ninguna confirmación.</dd>
+   <dd>Fuerza la supresión de la aplicación sin ninguna confirmación.</dd>
    <dt>*-r* (opcional)</dt>
-   <dd>Suprime todos los nombres de dominio asociados a la app. </dd>
+   <dd>Suprime todos los nombres de dominio asociados a la aplicación. </dd>
     </dl>
 
 <strong>Ejemplos</strong>:
@@ -330,7 +330,7 @@ cf delete my_app -f -r
 ## cf events
 {: #cf_events}
 
-Muestra los sucesos de tiempo de ejecución relacionados con una app.
+Muestra los sucesos de tiempo de ejecución relacionados con una aplicación.
 
 ```
 cf events [appname]
@@ -342,7 +342,7 @@ cf events [appname]
 
    <dl>
    <dt>nombre_app</dt>
-   <dd>El nombre de la app.</dd>
+   <dd>El nombre de la aplicación.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:
@@ -461,7 +461,7 @@ cf login -a https://api.ng.bluemix.net -u apikey -p EsteValorEsSuClaveAPI
 {: #cf_logs}
 
 Visualizar las
-corrientes de anotaciones cronológicas STDOUT y STDERR de una app.
+corrientes de anotaciones cronológicas STDOUT y STDERR de una aplicación.
 
 ```
 cf logs appname [--recent]
@@ -472,7 +472,7 @@ cf logs appname [--recent]
 
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la app.</dd>
+<dd>El nombre de la aplicación.</dd>
 <dt>*--recent* (opcional)</dt>
 <dd>Recupera los registros recientes.</dd>
 </dl>
@@ -531,14 +531,14 @@ cf push appname [-b nombre_paquete_compilación] [-c mandato_inicio] [-f vía_ac
 
 <dl>
 <dt>appname (necesario)</dt>
-<dd>El nombre de la app.</dd>
+<dd>El nombre de la aplicación.</dd>
 <dt>*-b* nombre_paquete_compilación (opcional)</dt>
 <dd>El nombre del paquete de compilación. El nombre_paquete_compilación puede ser un paquete de compilación personalizado por nombre (por ejemplo liberty-for-java), un URL de Git (por ejemplo https://github.com/cloudfoundry/java-buildpack.git) o un URL de Git con una ramificación o etiqueta (por ejemplo https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 para la etiqueta v3.3.0).</dd>
 <dt>*-c* mandato_inicio (opcional)</dt>
-<dd>El mandato de inicio de la app. Para utilizar el mandato de inicio predeterminado
+<dd>El mandato de inicio de la aplicación. Para utilizar el mandato de inicio predeterminado
 debe especificar un valor null para esta opción. </dd>
 <dt>*-f* vía_acceso_manifiesto (opcional)</dt>
-<dd>La vía de acceso al archivo de manifiesto. El archivo de manifiesto predeterminado es manifest.yml y se encuentra en el directorio raíz de la app.</dd>
+<dd>La vía de acceso al archivo de manifiesto. El archivo de manifiesto predeterminado es manifest.yml y se encuentra en el directorio raíz de la aplicación.</dd>
 <dt>*-i* número_instancia (opcional)</dt>
 <dd>El número de instancias.</dd>
 <dt>*-k* límite_disco (opcional)</dt>
@@ -546,13 +546,13 @@ debe especificar un valor null para esta opción. </dd>
 <dt>*-m* límite_memoria (opcional)</dt>
 <dd>El límite de memoria para la aplicación. Los valores posibles son *256M*, *1024M* o *1G*.</dd>
 <dt>*-n* nombre_host (opcional)</dt>
-<dd>El nombre de host de la app, como por ejemplo *mi-subdominio*.</dd>
+<dd>El nombre de host de la aplicación, como por ejemplo *mi-subdominio*.</dd>
 <dt>*-p* vía_acceso_app (opcional)</dt>
-<dd>La vía de acceso al directorio de la app o el archivo de archivado de la app.</dd>
+<dd>La vía de acceso al directorio de la aplicación o el archivo de archivado de la aplicación.</dd>
 <dt>*-s* nombre_pila (opcional)</dt>
 <dd>La pila para ejecutar las apps. Una pila es un sistema de archivos preconstruido, incluido el sistema operativo. Utilice `cf stacks` para ver las pilas disponibles en {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-t* tiempo_espera (opcional)</dt>
-<dd>Tiempo máximo en segundos para que se inicie la app. Es posible que otros tiempos de espera de lado del servidor
+<dd>Tiempo máximo en segundos para que se inicie la aplicación. Es posible que otros tiempos de espera de lado del servidor
 sustituyan este valor.</dd>
 <dt>*--no-hostname* (opcional)</dt>
 <dd>Correlaciona el dominio de sistema de {{site.data.keyword.Bluemix_notm}}
@@ -560,11 +560,11 @@ a esta aplicación.</dd>
 <dt>*--no-manifest* (opcional)</dt>
 <dd>Ignora el archivo de manifiesto predeterminado.</dd>
 <dt>*--no-route* (opcional)</dt>
-<dd>No correlaciona ninguna ruta a esta app.</dd>
+<dd>No correlaciona ninguna ruta a esta aplicación.</dd>
 <dt>*--no-start* (opcional)</dt>
-<dd>No inicia la app tras desplegarse.</dd>
+<dd>No inicia la aplicación tras desplegarse.</dd>
 <dt>*--random-route* (opcional)</dt>
-<dd>Crea una ruta aleatoria para la app.</dd>
+<dd>Crea una ruta aleatoria para la aplicación.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -586,7 +586,7 @@ cf push `my_app` -c "bash ./<run.sh>"
 ## cf scale
 {: #cf_scale}
 
-Mostrar o cambiar el número de instancia, el límite de espacio de disco y el límite de memoria de una app.
+Mostrar o cambiar el número de instancia, el límite de espacio de disco y el límite de memoria de una aplicación.
 
 ```
 cf scale appname [-i número_instancia] [-k límite_disco] [-m límite_memoria] [-f]
@@ -598,15 +598,15 @@ cf scale appname [-i número_instancia] [-k límite_disco] [-m límite_memoria] 
 
 <dl>
 <dt>appname (necesario)</dt>
-<dd>El nombre de la app.</dd>
+<dd>El nombre de la aplicación.</dd>
 <dt>*-i* número_instancia (opcional)</dt>
 <dd>El número de instancias</dd>
 <dt>*-k* límite_disco (opcional)</dt>
-<dd>El límite de disco de la app; los valores posibles son `256M`, `1024M`, o `1G`.</dd>
+<dd>El límite de disco de la aplicación; los valores posibles son `256M`, `1024M`, o `1G`.</dd>
 <dt>*-m* límite_memoria (opcional)</dt>
 <dd>El límite de memoria para la aplicación; los valores posibles son `256M`, `1024M` o `1G`.</dd>
 <dt>*-f* (opcional)</dt>
-<dd>Fuerza el reinicio de la app sin ninguna solicitud.</dd>
+<dd>Fuerza el reinicio de la aplicación sin ninguna solicitud.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -660,7 +660,7 @@ cf set-env nombre_app nombre_variable valor_variable
 
 <dl>
 <dt>appname (necesario)</dt>
-<dd>El nombre de la app.</dd>
+<dd>El nombre de la aplicación.</dd>
 <dt>nombre_variable (necesario)</dt>
 <dd>El nombre de la variable de entorno.</dd>
 <dt>valor_variable (necesario)</dt>
@@ -692,7 +692,7 @@ De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego.
 
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la app.</dd>
+<dd>El nombre de la aplicación.</dd>
 <dt>-c</dt>
 <dd>Especifica el mandato remoto que se va a ejecutar.</dd>
 <dt>-i</dt>
@@ -764,7 +764,7 @@ cf stop nombre_app
 
 <dl>
 <dt>appname (necesario)</dt>
-<dd>El nombre de la app.</dd>
+<dd>El nombre de la aplicación.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:

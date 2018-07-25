@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 # Desarrollo mediante herramientas de Eclipse
 
 {{site.data.keyword.eclipsetoolsfull}} ofrece herramientas ligeras
-en Eclipse que permiten desarrollar e integrar rápidamente apps con {{site.data.keyword.Bluemix}} o con nubes de
+en Eclipse que permiten desarrollar e integrar rápidamente aplicaciones con {{site.data.keyword.Bluemix}} o con nubes de
 Cloud Foundry.
 {:shortdesc}
 
