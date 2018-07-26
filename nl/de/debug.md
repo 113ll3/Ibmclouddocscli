@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -22,7 +22,7 @@ Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, können Sie die Proto
 
 In Protokollen sind z. B. Informationen darüber enthalten, ob ein Job erfolgreich ausgeführt wird oder ob er fehlschlägt. Sie enthalten auch relevante Informationen, die für Debugzwecke und zum Feststellen der Ursache eines Problems verwendet werden können.
 
-Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filterung möglich; Sie können auch externe Protokollierungshosts zum Speichern und Verarbeiten der Protokolle verwenden. Informationen zu Protokollformaten, zum Anzeigen und Filtern von Protokollen sowie zur Konfiguration einer externen Protokollierung finden Sie im Abschitt zur [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/monitor_log/logging.html#logging){: new_window}.
+Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filterung möglich; Sie können auch externe Protokollierungshosts zum Speichern und Verarbeiten der Protokolle verwenden. Informationen zu Protokollformaten, zum Anzeigen und Filtern von Protokollen sowie zur Konfiguration einer externen Protokollierung finden Sie im Abschnitt zur [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/monitor_log/logging.html#logging){: new_window}.
 
 
 ## Staging-Fehler beheben
@@ -32,11 +32,11 @@ Beim Durchführen des Stagings für die Anwendungen unter Verwendung von {{site.
 Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein Fehler auftritt, müssen Sie wissen, wie eine App unter {{site.data.keyword.Bluemix_notm}} bereitgestellt und ausgeführt wird. Weitere Informationen finden Sie in [Anwendungsbereitstellung ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
-Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Staging-Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die Befehlszeilenschnittstelle 'cf' installiert haben. Weitere Informationen zum Installieren der Befehlszeilenschnittstelle 'cf' finden Sie unter [Befehlszeilenschnittstelle 'cf' installieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/starters/install_cli.html){: new_window}.
+Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die Cloud Foundry-Befehlszeilenschnittstelle installiert haben. Weitere Informationen zum Installieren der Cloud Foundry-Befehlszeilenschnittstelle finden Sie unter [Befehlszeilenschnittstelle 'cf' installieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/starters/install_cli.html){: new_window}.
 
-  1. Stellen Sie durch Eingeben des folgenden Codes in der Befehlszeilenschnittstelle 'cf' eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her:
+  1. Stellen Sie durch Eingeben des folgenden Codes in der Cloud Foundry-Befehlszeilenschnittstelle eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} durch Eingabe von `cf login` an.
@@ -53,14 +53,14 @@ Zusätzlich zum Befehl `cf logs` können Sie in {{site.data.keyword.Bluemix_notm
 
 ### Staging-Fehler für eine Node.js-Anwendung beheben
 
-Im folgenden Beispiel wird ein Protokoll dargestellt, das nach Eingabe des Befehls `cf logs appname --recent` angezeigt wird. In dem Beispiel wird davon ausgegangen, dass für eine Node.js-Anwendung Staging-Fehler aufgetreten sind:
+Im folgenden Beispiel wird ein Protokoll dargestellt, das nach Eingabe des Befehls `cf logs appname --recent` angezeigt wird. In dem Beispiel wird davon ausgegangen, dass für eine Node.js-Anwendung Fehler aufgetreten sind:
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
 2014-08-11T14:20:44.43+0100 [DEA]     OUT Stopping app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:44.44+0100 [DEA]     OUT Stopped app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:48.97+0100 [DEA]     OUT Got staging request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:48.97+0100 [DEA]     OUT Got request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:50.94+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
 2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Download app package (4.1M)
 2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Download app buildpack cache (1.1M)
@@ -113,7 +113,7 @@ Insbesondere die Protokollierung der Standardausgabe (stdout) und Standardfehler
   * Beachten Sie für zu Ruby on Rails-Anwendungen die Informationen im Abschnitt [The Logger ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Beachten Sie für Ruby Sinatra-Anwendungen die Informationen in [Logging ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
-Wenn Sie `cf logs appname --recent` in die Befehlszeilenschnittstelle 'cf' eingeben, werden nur die neuesten Protokolle angezeigt. Wenn Sie Protokolle für Fehler anzeigen möchten, die früher aufgetreten sind, müssen Sie alle Protokolle abrufen und in ihnen nach den Fehlern suchen. Verwenden Sie zum Abrufen aller Protokolle für Ihre Anwendung eine der folgenden Methoden:
+Wenn Sie `cf logs appname --recent` in die Cloud Foundry-Befehlszeilenschnittstelle eingeben, werden nur die neuesten Protokolle angezeigt. Wenn Sie Protokolle für Fehler anzeigen möchten, die früher aufgetreten sind, müssen Sie alle Protokolle abrufen und in ihnen nach den Fehlern suchen. Verwenden Sie zum Abrufen aller Protokolle für Ihre Anwendung eine der folgenden Methoden:
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>Die Funktionen für die integrierte Protokolldateisuche und -analyse des {{site.data.keyword.loganalysisshort}}-Service können Ihnen dabei helfen, Fehler schnell zu finden. Weitere Informationen finden Sie unter <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>.</dd>

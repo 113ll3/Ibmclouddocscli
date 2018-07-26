@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -35,7 +35,7 @@ Es gibt verschiedene Wege, eine Cloud-App zu erstellen.
 
 Für alle oben aufgeführten Erstellungsmethoden ist der Ablauf derselbe. Sie können den Projekttyp, die Implementierungssprache und das zu verwendende App-Muster auswählen. Sie können auch Services mit Mehrwert wie Authentifizierung oder Persistenz zu Ihrer App hinzufügen. Schließlich können Sie DevOps-Funktionalität für die App aktivieren, die eine vollständige Toolchain von Quellcodeverwaltung bis Teamkommunikation liefert sowie eine Pipeline, die bei jedem Commit ausgelöst wird, um Ihre App zu validieren, zu erstellen und in der IBM Cloud bereitzustellen.
 
-![Beispielablauf für das Erstellen mit IDT-CLI](create_flow.png "Beispielablauf für das Erstellen mit IDT-CLI") <br> Abbildung 2. Beispielablauf für das Erstellen mit IDT-CLI
+![Beispielablauf für die Erstellung mit der {{site.data.keyword.dev_cli_notm}}-Befehlszeilenschnittstelle](create_flow.png "Beispielablauf für die Erstellung mit der {{site.data.keyword.dev_cli_notm}}-Befehlszeilenschnittstelle") <br> Abbildung 2. Beispielablauf für die Erstellung mit der {{site.data.keyword.dev_cli_notm}}-Befehlszeilenschnittstelle
 
 Die {{site.data.keyword.dev_cli_notm}}-CLI ist nahtlos integriert für eine möglichst benutzerfreundliche Entwicklung. Projekte, die in einer der Webkonsolen erstellt werden, haben eine Schaltfläche 'Code herunterladen', um den generierten Quellcode zur weiteren Entwicklung auf Ihre Workstation herunterzuladen.
 
@@ -67,8 +67,8 @@ Weitere Details zu Projektstrukturen finden Sie hier:
 ### Referenz-Blogs und -Videos
 {: #ref1}
 
-- Video: [IDT unter Ubuntu Linux installieren](https://www.youtube.com/watch?v=sr7KjHAKpEs)
-- Blog: [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
+- Video: [{{site.data.keyword.Bluemix_notm}}-Entwicklertool unter Ubuntu Linux installieren](https://www.youtube.com/watch?v=sr7KjHAKpEs)
+- Blog: [Vorhandene Projekte für IBM Cloud mit der Befehlszeilenschnittstelle der IBM Cloud-Entwicklertools aktivieren](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 
 

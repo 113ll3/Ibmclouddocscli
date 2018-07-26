@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 
 Sie können Ihre {{site.data.keyword.Bluemix_notm}} Local- oder {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer zum Beispiel aus einer LDAP-Registry hinzufügen. Informationen zur Verwaltung Ihres {{site.data.keyword.Bluemix_notm}}-Public-Kontos finden Sie unter [Verwalten](/docs/admin/adminpublic.html#administer).
 
-Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das
+Vor dem Beginn müssen Sie die Cloud Foundry-Befehlszeilenschnittstelle installieren. Für das
 {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in
 ist cf Version 6.11.2 oder höher erforderlich. [Cloud Foundry-Befehlszeilenschnittstelle herunterladen![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -32,7 +32,7 @@ Befehlszeilenfenster, das sich von dem Befehlszeilenfenster von Cygwin untersche
 
 ## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in hinzufügen
 
-Nach der Installation der Befehlszeilenschnittstelle 'cf' können Sie das
+Nach der Installation der Cloud Foundry-Befehlszeilenschnittstelle können Sie das
 {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in
 hinzufügen.
 
@@ -59,7 +59,7 @@ Wenn Sie das Plug-in deinstallieren müssen, können Sie die folgenden Befehle v
 * Plug-in-Repository entfernen: `cf remove-plugin-repo BluemixAdmin`
 
 
-## {{site.data.keyword.Bluemix_notm}}-Adminstrator-CLI-Plug-in verwenden
+## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwenden
 
 Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in können Sie Benutzer hinzufügen oder entfernen, Benutzer aus Organisationen zuweisen oder die Zuweisung von Benutzern aufheben und andere Management-Tasks ausführen.
 
@@ -554,7 +554,7 @@ Befehlsnamen **ba unset-space** verwenden.
 {: #admin_ena_service_org}
 
 Verwenden Sie den folgenden Befehl, um die Sichtbarkeit eines Service im {{site.data.keyword.Bluemix_notm}}-Katalog für alle
-Organisationen zu aktivieren: 
+Organisationen zu aktivieren:
 
 ```
 cf ba enable-service-plan <plan_identifier>

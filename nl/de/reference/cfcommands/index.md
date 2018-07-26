@@ -192,7 +192,7 @@ cf create-service service_name service_plan service_instance
 
 <strong>Beispiele</strong>:
 
-Erstellen einer Instanz des {{site.data.keyword.dataworks_short}}-Service mit einem `kostenlosen` Plan.
+Erstellen einer Instanz des {{site.data.keyword.dataworks_short}}-Service mit einem `kostenfreien` Plan.
 ```
 cf create-service DataWorks free my_dataworks
 ```
@@ -260,7 +260,7 @@ cf delete my_app
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app`, ohne eine Bestätigung anzufordern. 
+Löscht eine Anwendung mit dem Namen `my_app`, ohne eine Bestätigung anzufordern.
 ```
 cf delete my_app -f
 ```
@@ -272,7 +272,7 @@ cf delete my_app -r
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app` und alle Domänennamen, die `my_app` zugeordnet sind, ohne eine Bestätigung anzufordern. 
+Löscht eine Anwendung mit dem Namen `my_app` und alle Domänennamen, die `my_app` zugeordnet sind, ohne eine Bestätigung anzufordern.
 ```
 cf delete my_app -f -r
 ```
@@ -308,7 +308,7 @@ cf delete my_app
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app`, ohne eine Bestätigung anzufordern. 
+Löscht eine Anwendung mit dem Namen `my_app`, ohne eine Bestätigung anzufordern.
 ```
 cf delete my_app -f
 ```
@@ -320,7 +320,7 @@ cf delete my_app -r
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app` und alle Domänennamen, die `my_app` zugeordnet sind, ohne eine Bestätigung anzufordern. 
+Löscht eine Anwendung mit dem Namen `my_app` und alle Domänennamen, die `my_app` zugeordnet sind, ohne eine Bestätigung anzufordern.
 ```
 cf delete my_app -f -r
 ```
@@ -560,7 +560,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>Beispiele</strong>:
 
-Starten einer Anwendung mit dem Namen `my_app` mit dem Standardstartbefehl. 
+Starten einer Anwendung mit dem Namen `my_app` mit dem Standardstartbefehl.
 ```
 cf push `my_app` -c null
 ```
@@ -676,7 +676,7 @@ cf ssh
 ```
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
 
-Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können den Befehl `cf ssh-enabled` verwenden, um zu überprüfen, ob der SSH-Zugriff für den Befehl `cf enable-ssh` aktiviert ist, oder Sie können diesen Zugriff aktivieren, falls er inaktiviert wurde. 
+Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können den Befehl `cf ssh-enabled` verwenden, um zu überprüfen, ob der SSH-Zugriff für den Befehl `cf enable-ssh` aktiviert ist, oder Sie können diesen Zugriff aktivieren, falls er inaktiviert wurde.
 
 <strong>Befehlsoptionen</strong>:
 
@@ -713,7 +713,7 @@ Mit diesem Befehl wird eine einzelne Datei aus der Containerinstanz der Anwendun
 $ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Mit diesem Befehl wird die Portweiterleitung von Port 7777 auf der lokalen Maschine an Port 8888 auf der Containerinstanz der Anwendung `my_app` eingerichtet. 
+Mit diesem Befehl wird die Portweiterleitung von Port 7777 auf der lokalen Maschine an Port 8888 auf der Containerinstanz der Anwendung `my_app` eingerichtet.
 ```
 $ cf ssh -N -T -L 7777:localhost:8888 my_app
 
@@ -787,7 +787,7 @@ cf target [-o org_name] [-s space_name]
 
 <strong>Beispiele</strong>:
 
-Festlegen des Ziels auf die Organisation mit dem  Namen "my_org" und den Bereich mit dem Namen "my_space".
+Festlegen des Ziels auf die Organisation mit dem Namen "my_org" und den Bereich mit dem Namen "my_space".
 ```
 cf target -o my_org -s my_space
 ```
@@ -797,7 +797,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Zeigt die Version der Befehlszeilenschnittstelle 'cf' an.
+Anzeigen der Version der Cloud Foundry-Befehlszeilenschnittstelle.
 
 ```
 cf -v
@@ -808,7 +808,7 @@ cf -v
 
 <strong>Beispiele</strong>:
 
-Anzeigen der Version der cf-Befehlszeilenschnittstelle.
+Anzeigen der Version der Cloud Foundry-Befehlszeilenschnittstelle.
 ```
 cf -v
 ```

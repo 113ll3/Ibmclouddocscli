@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-18"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2018-06-18"
 # {{site.data.keyword.Bluemix_notm}}-Befehle (ibmcloud)
 {: #bluemix_cli}
 
-Version: 0.7.1
 
 Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werden Befehle bereitgestellt, die nach Namensbereich für Benutzer zur Interaktion mit {{site.data.keyword.Bluemix_notm}} zusammengefasst sind.
 
-Ab Version 0.5.0 enthält die Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilenclients einen Cloud Foundry-Befehlszeilenclient. Wenn Sie eine eigene Cloud Foundry-Befehlszeilenschnittstelle installiert haben, dann verwenden Sie die Befehle der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) vom Typ `ibmcloud [command]` und die Befehle der Cloud Foundry-Befehlszeilenschnittstelle (CLI) vom Typ `cf [command]` Ihrer eigenen Installation nicht in demselben Kontext. Verwenden Sie stattdessen  `ibmcloud cf [command]`, wenn Sie Cloud Foundry-Ressourcen mit der Cloud Foundry-Befehlszeilenschnittstelle (CF-CLI) im Kontext der {{site.data.keyword.Bluemix_notm}}-CLI verwalten wollen.  Beachten Sie, dass `ibmcloud cf api/login/logout/target` nicht zulässig ist und Sie stattdessen `ibmcloud api/login/logout/target` verwenden müssen.
+Der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenclient enthält im Installationspaket einen Cloud Foundry-Befehlszeilenclient. Wenn Sie eine eigene Cloud Foundry-Befehlszeilenschnittstelle installiert haben, dann verwenden Sie die Befehle der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) vom Typ `ibmcloud [command]` und die Befehle der Cloud Foundry-Befehlszeilenschnittstelle (CLI) vom Typ `cf [command]` Ihrer eigenen Installation nicht in demselben Kontext. Verwenden Sie stattdessen  `ibmcloud cf [command]`, wenn Sie Cloud Foundry-Ressourcen mit der Cloud Foundry-Befehlszeilenschnittstelle (CF-CLI) im Kontext der {{site.data.keyword.Bluemix_notm}}-CLI verwalten wollen.  Beachten Sie, dass `ibmcloud cf api/login/logout/target` nicht zulässig ist und Sie stattdessen `ibmcloud api/login/logout/target` verwenden müssen.
 
 Ab Mai 2018 wird an Stelle der {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bluemix` und `bx` künftig der Befehl `ibmcloud` verwendet. Sie können die CLI-Befehle `bluemix` und `bx` jedoch auch weiterhin noch so lange verwenden, bis sie zu einem späteren Zeitpunkt entfernt werden.
 {: tip}
@@ -633,7 +632,7 @@ ibmcloud -q cf services
 Benutzer anmelden.
 
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>Voraussetzungen</strong>: Keine
@@ -653,7 +652,9 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i> (optional)</dt>
   <dd> Das Kennwort.</dd>
   <dt> -c <i>ACCOUNT_ID</i> (optional) </dt>
-  <dd> Die ID des Zielkontos.</dd>
+  <dd> ID des Zielkontos. Diese Option ist gegenseitig ausschließend mit dem Flag '--no-account'.</dd>
+  <dt> --no-account (optional) </dt>
+  <dd> Anmeldung ohne Konto erzwingen. Diese Option wird nicht empfohlen. Diese Option ist gegenseitig ausschließend mit dem Flag '-c'.</dd>
   <dt> -g <i>RESOURCE_GROUP</i> (optional) </dt>
   <dd> Der Name der Zielressourcengruppe</dd>
   <dt> -o <i>ORG</i> (optional)</dt>
@@ -1162,9 +1163,9 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_ROLE (erforderlich)</dt>
    <dd>Der Name der Bereichsrolle, der dieser Benutzer zugeordnet wird. Beispiel:
    <ul>
-   <li>Bereichsmanager: Diese Rolle kann Benutzer einladen und verwalten sowie Funktionen für einen angegebenen Bereich aktivieren.</li>
-   <li>Bereichsentwickler: Diese Rolle kann Apps und Services erstellen und verwalten sowie Protokolle und Berichte anzeigen.</li>
-   <li>Bereichsauditor: Diese Rolle kann Protokolle, Berichte und Einstellungen für den Bereich anzeigen.</li>
+   <li>SpaceManager: Diese Rolle kann Benutzer einladen und verwalten sowie Funktionen für einen angegebenen Bereich aktivieren.</li>
+   <li>SpaceDeveloper: Diese Rolle kann Apps und Services erstellen und verwalten sowie Protokolle und Berichte anzeigen.</li>
+   <li>SpaceAuditor: Diese Rolle kann Protokolle, Berichte und Einstellungen für den Bereich anzeigen.</li>
    </ul></dd>
     </dl>
 
@@ -2269,9 +2270,9 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 <strong>Befehlsoptionen</strong>:
 <dl>
   <dt>SERVICE_ID_NAME (erforderlich)</dt>
-  <dd>Name der Service-ID, gegenseitig ausschließend mit SERVICE_ID_UUID</dd>
+  <dd>Der Name der Service-ID, gegenseitig ausschließend mit SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (erforderlich)</dt>
-  <dd>UUID der Service-ID, gegenseitig ausschließend mit SERVICE_ID_NAME</dd>
+  <dd>Die UUID der Service-ID, gegenseitig ausschließend mit SERVICE_ID_NAME</dd>
   <dt>-f, --force</dt>
   <dd>Die Service-API-Schlüssel ohne Bestätigung anzeigen</dd>
 </dl>
