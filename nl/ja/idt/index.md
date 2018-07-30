@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -35,7 +35,7 @@ lastupdated: "2018-06-27"
 
 上記のいずれの作成方法でも、フローはよく似ています。 使用するプロジェクト・タイプ、実装言語、およびアプリ・パターンを選択できます。 また、認証やパーシスタンスなど、付加価値があるサービスをアプリに追加することを選択できます。 最後に、アプリに対して DevOps 機能を有効にするかどうかを選択できます。この機能は、ソース制御からチームのコミュニケーション、さらにアプリの検証、ビルド、および IBM Cloud へのデプロイがコミットされるたびにトリガーされるパイプラインに至るまでの完全なツールチェーンを提供します。
 
-![IDT CLI を使用した作成フローのサンプル](create_flow.png "IDT CLI を使用した作成フローのサンプル") <br> 図 2. IDT CLI を使用した作成フローのサンプル
+![{{site.data.keyword.dev_cli_notm}} CLI を使用した作成フローのサンプル](create_flow.png "{{site.data.keyword.dev_cli_notm}} CLI を使用した作成フローのサンプル") <br> 図 2. {{site.data.keyword.dev_cli_notm}} CLI を使用した作成フローのサンプル
 
 {{site.data.keyword.dev_cli_notm}} CLI は、密接に連携することで、シームレスな開発体験を提供します。 いずれの Web コンソールでも、そこで作成されたプロジェクトには、生成済みのソース・コードをワークステーションにダウンロードしてさらに開発を追加するための「コードのダウンロード」ボタンが表示されます。
 
@@ -67,7 +67,7 @@ lastupdated: "2018-06-27"
 ### 関連するブログやビデオ
 {: #ref1}
 
-- ビデオ: [Ubuntu Linux 上での IDT のインストール](https://www.youtube.com/watch?v=sr7KjHAKpEs)
+- ビデオ: [Ubuntu Linux 上での {{site.data.keyword.Bluemix_notm}} 開発者ツールのインストール](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - ブログ: [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 

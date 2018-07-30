@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-18"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2018-06-18"
 # {{site.data.keyword.Bluemix_notm}} (ibmcloud) コマンド
 {: #bluemix_cli}
 
-バージョン: 0.7.1
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 
-バージョン 0.5.0 以降、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・クライアントは、Cloud Foundry コマンド・ライン・クライアントをインストール済み環境にバンドルしています。 独自の cf cli がインストールされている場合は、{{site.data.keyword.Bluemix_notm}} CLI コマンド `ibmcloud [command]` と、独自のインストール済み環境の Cloud Foundry CLI コマンド `cf [command]` の両方を同じコンテキストで使用しないでください。 cf cli を使用して {{site.data.keyword.Bluemix_notm}} CLI コンテキストで Cloud Foundry リソースを管理したい場合は、代わりに `ibmcloud cf [command]` を使用してください。  `ibmcloud cf api/login/logout/target` は使用できないので注意してください。代わりに、`ibmcloud api/login/logout/target` を使用してください。
+{{site.data.keyword.Bluemix_notm}} コマンド・ライン・クライアントは、Cloud Foundry コマンド・ライン・クライアントをインストール済み環境にバンドルしています。 独自の cf cli がインストールされている場合は、{{site.data.keyword.Bluemix_notm}} CLI コマンド `ibmcloud [command]` と、独自のインストール済み環境の Cloud Foundry CLI コマンド `cf [command]` の両方を同じコンテキストで使用しないでください。 cf cli を使用して {{site.data.keyword.Bluemix_notm}} CLI コンテキストで Cloud Foundry リソースを管理したい場合は、代わりに `ibmcloud cf [command]` を使用してください。  `ibmcloud cf api/login/logout/target` は使用できないので注意してください。代わりに、`ibmcloud api/login/logout/target` を使用してください。
 
 2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。 ただし、後日削除されるまで、`bluemix` および `bx` CLI CLI コマンドを引き続き使用できます。
 {: tip}
@@ -635,7 +634,7 @@ ibmcloud -q cf services
 ユーザーをログインします。
 
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>前提条件</strong>: なし
@@ -655,7 +654,9 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i> (オプション)</dt>
   <dd> パスワード</dd>
   <dt> -c <i>ACCOUNT_ID</i> (オプション) </dt>
-  <dd> ターゲット・アカウントの ID</dd>
+  <dd> ターゲット・アカウントの ID。 このオプションは、「--no-account」と同時に指定することはできません。</dd>
+  <dt> --no-account (オプション) </dt>
+  <dd> アカウント無しでログインを強制します。このオプションは推奨されません。このオプションは、「-c」と同時に指定することはできません。</dd>
   <dt> -g <i>RESOURCE_GROUP</i> (オプション) </dt>
   <dd> ターゲット・リソース・グループの名前</dd>
   <dt> -o <i>ORG</i> (オプション)</dt>

@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 
 Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境を管理できます。 例えば、LDAP レジストリーからユーザーを追加できます。 {{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報は、『[管理](/docs/admin/adminpublic.html#administer)』を参照してください。
 
-最初に、CF コマンド・ライン・インターフェースをインストールします。 {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。 [Cloud Foundry コマンド・ライン・インターフェースのダウンロード ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} を行ってください。
+最初に、Cloud Foundry コマンド・ライン・インターフェースをインストールします。 {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。 [Cloud Foundry コマンド・ライン・インターフェースのダウンロード ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} を行ってください。
 
 **制限:** Cloud Foundry コマンド・ライン・インターフェースは、Cygwin ではサポートされていません。 Cloud Foundry コマンド・ライン・インターフェースは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
 
@@ -27,7 +27,7 @@ Cloud Foundry コマンド・ライン・インターフェースを {{site.data
 
 ## {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインの追加
 
-CF コマンド・ライン・インターフェースをインストール後、{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを追加できます。
+Cloud Foundry コマンド・ライン・インターフェースのインストール後に、{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを追加できます。
 
 **注**: 既に {{site.data.keyword.Bluemix_notm}} 管理プラグインをインストール済みの場合、プラグインをアンインストールし、リポジトリーを削除してから、再インストールして最新の更新を取得することが必要になる場合があります。
 
@@ -80,7 +80,7 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 <dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。<br />
 </dd>
 </dl>
-<p>正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。</p>
+<p>正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。 URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。</p>
 </li>
 <li>次のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} にログインします。<br/><br/>
 <code>
@@ -706,7 +706,7 @@ cf ba resource-metrics
 ## リソース・メトリック履歴の表示
 {: #cliresourceusagehistory}
 
-メモリーおよびディスクの使用量に関するリソース・メトリック履歴を取得できます。 返されるメトリックは、物理リソースと予約済みリソースの両方について、使用可能な合計量のうちの使用済みリソースの量を示します。メモリーおよびディスクの使用量の履歴データは、毎時、日次、または月次で表示できます。 特定の日付範囲内のデータを取得するには、開始日と終了日を指定します。 日付が指定されていない場合、デフォルトの履歴データは、過去 48 時間の毎時のメモリー・データです。 データは、最新の日付を先頭にして、降順に表示されます。 リソース・メトリック履歴情報を表示するには、以下のコマンドを使用します。
+メモリーおよびディスクの使用量に関するリソース・メトリック履歴を取得できます。 返されるメトリックは、物理リソースと予約済みリソースの両方について、使用可能な合計量のうちの使用済みリソースの量を示します。 メモリーおよびディスクの使用量の履歴データは、毎時、日次、または月次で表示できます。 特定の日付範囲内のデータを取得するには、開始日と終了日を指定します。 日付が指定されていない場合、デフォルトの履歴データは、過去 48 時間の毎時のメモリー・データです。 データは、最新の日付を先頭にして、降順に表示されます。 リソース・メトリック履歴情報を表示するには、以下のコマンドを使用します。
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>

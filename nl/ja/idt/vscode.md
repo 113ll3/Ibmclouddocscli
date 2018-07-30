@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-12"
 
 
 
@@ -15,10 +15,10 @@ lastupdated: "2018-06-21"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Visual Studio Code 用 IBM Developer Tools
+# Visual Studio Code 用 IBM Cloud Developer Tools
 {: #ibm-dev-tools-for-vscode}
 
-IBM Developer Extension for Visual Studio Code は、Visual Studio Code エディターのコマンド・パレット内から直接、IBM Developer CLI の機能へのアクセスを提供する、エディターの拡張機能です。 これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを一切離れることなく、`ibmcloud dev` コマンドのサブセットに素早くアクセスすることができます。
+IBM Cloud Developer Tools の Visual Studio Code 用拡張機能は、Visual Studio Code エディターのコマンド・パレット内から直接、IBM Developer CLI の機能にアクセスするための、エディターの拡張機能です。これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを一切離れることなく、`ibmcloud dev` コマンドのサブセットに素早くアクセスすることができます。
 {:shortdesc}
 
 ![IBM Developer Tools の拡張機能ダウンロード画面の画面キャプチャー。](vscode.png "Visual Studio Code 内の拡張機能ダウンロード画面")
@@ -26,26 +26,26 @@ IBM Developer Extension for Visual Studio Code は、Visual Studio Code エデ�
 ## 従属関係
 {: #dependencies}
 
-IBM Developer Tools の Visual Studio Code 用拡張機能を使用するには、[{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) および [IBM Developer CLI](index.html) プラグインがシステムにインストールされている必要があります。
+IBM Cloud Developer Tools の Visual Studio Code 用拡張機能を使用するには、[{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) および [IBM Developer CLI](index.html) プラグインがシステムにインストールされている必要があります。
 
 ## インストール
 {: #installation}
 
-IBM Developers Tools のこの拡張機能をインストールするための最も簡単な方法は、以下に示すように、Visual Studio Code の「quick open」コマンドを使用することです。
+IBM Cloud Developers Tools のこの拡張機能をインストールするための最も簡単な方法は、以下に示すように、Visual Studio Code の「quick open」コマンドを使用することです。
 
 1. エディター内から以下のキーの組み合わせを使用して、「quick open」コマンド・パレットを開きます。
 
   * **Mac:** `cmd + p`
   * **Windows / Linux:** `ctrl + p`
 
-2. `ext install ibm-developer` コマンドを入力し、Enter キーを押してこの IBM Developer Tools 拡張機能を Visual Studio Code エディター内にインストールします。
+2. `ext install ibm-developer` コマンドを入力し、Enter キーを押してこの IBM Cloud Developer Tools 拡張機能を Visual Studio Code エディター内にインストールします。
 
-あるいは、以下に示すように、「拡張機能」管理ウィンドウを介してこの IBM Developer Tools 拡張機能をインストールすることもできます。
+あるいは、以下に示すように、「拡張機能」管理ウィンドウを介してこの IBM Cloud Developer Tools 拡張機能をインストールすることもできます。
 
-1. Visual Studio Code エディターの**「拡張機能」**サイドバーを開き、次に、ストリング `publisher:IBM Developer` を使用して検索します。 IBM Developer Tools 拡張機能が検索結果に表示されます。  
+1. Visual Studio Code エディターの**「拡張機能」**サイドバーを開き、次に、ストリング `publisher:IBM Developer` を使用して検索します。 IBM Cloud Developer Tools 拡張機能が検索結果に表示されます。  
 2. **「インストール」**ボタンをクリックしてインストールを開始します。
 
-また、[Visual Studio Code Marketplace 内から直接、IBM Developer Tools 拡張機能](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer)にアクセスすることもできます。
+また、[Visual Studio Code Marketplace 内から直接、IBM Cloud Developer Tools 拡張機能](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer)にアクセスすることもできます。
 
 ## 使用量
 {: #usage}
@@ -62,7 +62,7 @@ Visual Studio Code のコマンド・パレットを使用して、拡張コマ�
 ### Docker ワークフロー (Docker コンテナー) での IBM Developer Extension の使用
 {: #usage-docker}
 
-以下に示すように、ほんの数ステップで ibmcloud dev ワークフローを開始することができます。
+以下に示すように、ほんの数ステップで `ibmcloud dev` ワークフローを開始することができます。
 * 以下の 2 つの方法のいずれかを使用してプロジェクトを作成します。
   * [{{site.data.keyword.Bluemix_notm}} Web コンソール](https://console.ng.bluemix.net/developer/getting-started/)を使用し、生成されたコードをダウンロードします
   * [{{site.data.keyword.Bluemix_notm}} Developer CLI](index.html) を使用し、`ibmcloud dev create` コマンドを使用してプロジェクトを生成します

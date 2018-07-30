@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -37,12 +37,11 @@ lastupdated: "2018-06-26"
 かを把握する必要があります。 詳しくは、[アプリケーション・デプロイメント ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cfapps/depapps.html#appdeploy){: new_window} を参照してください。
 
 
-以下の手順は、`cf
-logs` コマンドを使用してステージング・エラーをデバッグする方法を示しています。 以下のステップを実行する前に、cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。 cf コマンド・ライン・インターフェースのインストールについて詳しくは、[cf コマンド・ライン・インターフェースのインストール ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/starters/install_cli.html){: new_window} を参照してください。
+以下の手順は、`cf logs` コマンドを使用してエラーをデバッグする方法を示しています。 以下のステップを実行する前に、Cloud Foundry コマンド・ライン・インターフェースがインストール済みであることを確認してください。 Cloud Foundry コマンド・ライン・インターフェースのインストールについて詳しくは、[Cloud Foundry コマンド・ライン・インターフェースのインストール ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/starters/install_cli.html){: new_window} を参照してください。
 
-  1. cf コマンド・ライン・インターフェースに次のコードを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
+  1. Cloud Foundry コマンド・ライン・インターフェースに次のコードを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. `cf login` を入力して {{site.data.keyword.Bluemix_notm}} にログインします。
@@ -62,14 +61,14 @@ IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}}
 ### Node.js アプリケーションのステージング・エラーのデバッグ
 
 以下の例は、`cf logs appname --recent` を入力した後に表示されるログを示しています。 この例では、Node.js
- アプリケーションに対するステージング・エラーが発生したと想定しています。
+ アプリケーションに対するエラーが発生したと想定しています。
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
 2014-08-11T14:20:44.43+0100 [DEA]     OUT Stopping app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:44.44+0100 [DEA]     OUT Stopped app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:48.97+0100 [DEA]     OUT Got staging request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:48.97+0100 [DEA]     OUT Got request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:50.94+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
 2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Download app package (4.1M)
 2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Download app buildpack cache (1.1M)
@@ -98,7 +97,7 @@ Node.js アプリケーションに対し、DEA は `package.json` ファイル�
 {: screen}
 
 
-17 行目の末尾にコンマがあることがわかります。したがって、18 行目では key-value ペアが予期されます。問題を修正するには、このコンマを削除してください。
+17 行目の末尾にコンマがあることがわかります。したがって、18 行目では key-value ペアが予期されます。 問題を修正するには、このコンマを削除してください。
 
 ```
 15   "jade": "~1.3.0",
@@ -123,7 +122,7 @@ HOWTO![外部リンク・アイコン](../icons/launch-glyph.svg "外部リン�
   * Ruby on Rails アプリケーションの場合は、[「The Logger![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}」を参照してください。
   * Ruby Sinatra アプリケーションの場合は、[「Logging![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.sinatrarb.com/intro.html#Logging){: new_window}」を参照してください。
 
-cf コマンド・ライン・インターフェースに `cf logs appname --recent` と入力すると、最新のログのみが表示されます。 以前に発生したエラーのログを表示するには、すべてのログを取得してエラーを検索する必要があります。 ご使用のアプリケーションのログをすべて取得するには、以下のいずれかの方法を使用して下さい。
+Cloud Foundry コマンド・ライン・インターフェースに `cf logs appname --recent` と入力すると、最新のログのみが表示されます。 以前に発生したエラーのログを表示するには、すべてのログを取得してエラーを検索する必要があります。 ご使用のアプリケーションのログをすべて取得するには、以下のいずれかの方法を使用して下さい。
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>{{site.data.keyword.loganalysisshort}} サービスの統合されたログ・ファイル検索および分析機能は、エラーを素早く特定するのに役立ちます。 詳しくは、『<a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>』を参照してください。</dd>

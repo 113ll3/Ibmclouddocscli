@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -13,9 +13,9 @@ lastupdated: "2018-06-21"
 {:screen: .screen}  
 {:codeblock: .codeblock}  
 {:pre: .pre}
-{:tip: .tip}  
+{:tip: .tip}
 
-# {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) コマンド
+# {{site.data.keyword.dev_cli_notm}} CLI プラグイン (ibmcloud dev) コマンド
 {: #idt-cli}
 
 バージョン: 1.2.0
@@ -24,39 +24,40 @@ lastupdated: "2018-06-21"
 2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。 ただし、後日削除されるまで、`bluemix` および `bx` CLI CLI コマンドを引き続き使用できます。
 {: tip}
 
-以下の {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) コマンドを使用して、プロジェクトを作成し、プロジェクトをデプロイ、デバッグ、およびテストします。
+以下の {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) コマンドを使用して、アプリケーションの作成、管理、デプロイ、デバッグ、およびテストを行います。
 
-- [build](#build): ローカル・コンテナー内にプロジェクトをビルドします。
-- [code](#code): プロジェクトからコードをダウンロードします。
-- [console](#console): プロジェクトの IBM Cloud コンソールを開きます。
-- [create](#create): 新規プロジェクトを作成し、オプションでサービスを追加できます。
+- [build](#build): ローカル・コンテナー内にアプリケーションをビルドします。
+- [code](#code): アプリケーションのコードをダウンロードします。
+- [console](#console): アプリケーションの IBM Cloud コンソールを開きます。
+- [create](#create): 新規アプリケーションを作成し、オプションでサービスを追加できます。
 - [debug](#debug): ローカル・コンテナー内でアプリケーションをデバッグします。
-- [delete](#delete): スペースからプロジェクトを削除します。
+- [delete](#delete): スペースからアプリケーションを削除します。
 - [deploy](#deploy): アプリケーションを IBM Cloud にデプロイします。
-- [enable](#enable): 既存のプロジェクトに IBM Cloud ファイルを追加します。
-- [get-credentials](#get-credentials): バインドされたサービスを使用可能にするためにプロジェクトによって必要とされる資格情報を取得します。
-- [help](#help): IDT の構文と引数に関するヘルプ。
-- [list](#list): スペース内のすべての IBM Cloud プロジェクトをリストします。
+- [edit](#edit): 既存のアプリケーションにサービスを追加、あるいは既存のアプリケーションからサービスを削除します。
+- [enable](#enable): IBM Cloud Developer Tools で使用するために、既存のアプリケーションを更新します。
+- [get-credentials](#get-credentials): 接続された IBM Cloud サービスを使用可能にするためにアプリケーションによって必要とされる資格情報を取得します。
+- [help](#help): CLI の構文と引数に関するヘルプ。
+- [list](#list): リソース・グループ内のすべての IBM Cloud アプリケーションをリストします。
 - [run](#run): ローカル・コンテナー内でアプリケーションを実行します。
 - [shell](#shell): ローカル・コンテナーにシェルを開きます。
 - [status](#status): CLI で使用されるコンテナーの状況をチェックします。
 - [stop](#stop): コンテナーを停止します。
 - [test](#test): ローカル・コンテナー内でアプリケーションをテストします。
-- [view](#view): テストや表示目的で、デプロイされたアプリの URL を表示します。
-- [複合コマンド](#compound): 1 つのコマンド・ライン・ステートメント内で複数のコマンドを実行します。
+- [view](#view): テストや表示目的で、デプロイされたアプリケーションの URL を表示します。
+- [compound commands](#compound): 単一のコマンド・ライン・ステートメント内で複数のコマンドを実行します。
 
 
 
 ## build
 {: #build}
 
-`build` コマンドを使用して、アプリケーションをビルドできます。 `test`、`debug`、および `run` の各コマンドでは、コンパイル済みプロジェクトが検出される必要があるため、まず `build` 操作を事前に実行する必要があります。  
+`build` コマンドを使用して、アプリケーションをビルドできます。 `test`、`debug`、および `run` の各コマンドでは、コンパイル済みアプリケーションが検出される必要があるため、`build` 操作を事前に実行する必要があります。  
 
 `run` を除くすべての用途に関して、アプリケーションをビルドするときは、`build-cmd-debug` 構成エレメントを使用します。 デバッグ用のアプリケーションをビルドする際は、コマンド・ライン・オプション `--debug` を指定します。  `run` コマンドで使用するためのアプリケーションをビルドするときは、`build-cmd-run` 構成エレメントを使用します。
 
-複数のコンテナーを使用してビルドするには、`cli-config.yml` で指定されている [Compose](https://docs.docker.com/compose/overview/) ファイルがプロジェクトに含まれているか、`dockerfile-tools` コマンド・パラメーターを使用して、このファイルを提供できなければなりません。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
+複数のコンテナーを使用してビルドするには、`cli-config.yml` で指定されている [Compose](https://docs.docker.com/compose/overview/) ファイルがアプリケーションに含まれているか、`dockerfile-tools` コマンド・パラメーターを使用して、このファイルを提供できなければなりません。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
 
-現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
+現行アプリケーション・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
 
 ```
 ibmcloud dev build [--debug]
@@ -64,18 +65,16 @@ ibmcloud dev build [--debug]
 {: codeblock}
 
 
-[Build コマンド・パラメーター](#command-parameters)
-
 
 ## code
 {: #code}
 
-`code` コマンドを使用して、以前に作成されたプロジェクトをアプリケーションのテンプレート・コードおよび {{site.data.keyword.Bluemix_notm}} の構成ファイルとともにダウンロードします。  以前に作成したプロジェクトの 2 次コピーを抽出する必要がある場合に便利です。
+`code` コマンドを使用して、以前に作成されたアプリケーションをアプリケーションのテンプレート・コードおよび {{site.data.keyword.Bluemix_notm}} の構成ファイルとともにダウンロードします。  以前に作成したアプリケーションの 2 次コピーを抽出する必要がある場合に便利です。
 
-以下のコマンドを実行して、指定したプロジェクトからコードをダウンロードします。
+以下のコマンドを実行して、指定したアプリケーションからコードをダウンロードします。
 
 ```
-ibmcloud dev code <projectName>
+ibmcloud dev code <applicationName>
 ```
 {: codeblock}
 
@@ -83,14 +82,14 @@ ibmcloud dev code <projectName>
 ## console
 {: #console}
 
-`console` コマンドを使用して、Web ブラウザーに IBM Cloud 上のアプリケーションの Web コンソールを開きます。  `ibmcloud dev console` コマンドはプロジェクトのフォルダー内から実行できます。そうすると、CLI によって、現行ディレクトリーと同じプロジェクト ID を持つ、IBM Cloud 上の一致するプロジェクトの検索が試行されます。 一致する名前を検出できない場合、システムは、指定されたプロジェクトの代わりに IBM Cloud の Web and Mobile ダッシュボードを開きます。
+`console` コマンドを使用して、Web ブラウザーに IBM Cloud 上のアプリケーションの Web コンソールを開きます。  `ibmcloud dev console` コマンドはアプリケーションのフォルダー内から実行できます。そうすると、CLI によって、現行ディレクトリーと同じアプリケーション ID を持つ、IBM Cloud 上の一致するアプリケーションの検索が試行されます。 一致する名前を検出できない場合、システムは、指定されたアプリケーションの代わりに IBM Cloud の Web and Mobile ダッシュボードを開きます。
 
-プロジェクト名を指定できます。そうすると、CLI は、フォルダー/アプリケーション名に基づいたマッチングをスキップします。 この場合、CLI は、指定されたプロジェクトのコンソールを Web ブラウザーに開きます。  
+アプリケーション名を指定できます。そうすると、CLI は、フォルダー/アプリケーション名に基づいたマッチングをスキップします。 この場合、CLI は、指定されたアプリケーションのコンソールを Web ブラウザーに開きます。  
 
 以下のコマンドを実行して、Web ブラウザーにアプリケーションの Web コンソールを開きます。
 
 ```
-ibmcloud dev console [projectName]
+ibmcloud dev console [applicationName]
 ```
 {: codeblock}
 
@@ -98,9 +97,9 @@ ibmcloud dev console [projectName]
 ## create
 {: #create}
 
-プロジェクトを作成し、リソース・タイプ、言語、スターター・キット、および DevOps ツールチェーンのオプションなど、すべての情報を求めるプロンプトを出します。 プロジェクトは現行ディレクトリー内に作成されます。
+アプリケーションを作成し、リソース・タイプ、言語、スターター・キット、および DevOps ツールチェーンのオプションなど、すべての情報を求めるプロンプトを出します。 アプリケーションは現行ディレクトリー内に作成されます。
 
-現行ディレクトリー内にプロジェクトを作成し、プロジェクトにサービスを関連付けるには、以下のコマンドを実行します。
+現行ディレクトリー内にアプリケーションを作成し、プロジェクトにサービスを関連付けるには、以下のコマンドを実行します。
 
 ```
 ibmcloud dev create
@@ -111,16 +110,16 @@ ibmcloud dev create
 ## debug
 {: #debug}
 
-`debug` コマンドによって、アプリケーションをデバッグできます。 まず、`--debug` 引数を指定した build コマンドを使用して、プロジェクトに対するビルドが実行される必要があります。 `debug` コマンドを開始すると、コンテナーが開始され、それによりデバッグ・ポート (複数可) が提供されます。ポートは、cli-config.yml 内の `container-port-map-debug` 値で定義されるか、コマンド・ラインで指定されます。 お好みのデバッグ・ツールをポートに接続すれば、通常どおりアプリケーションをデバッグできます。
+`debug` コマンドによって、アプリケーションをデバッグできます。 まず、`--debug` 引数を指定した build コマンドを使用して、アプリケーションに対するビルドが実行される必要があります。 `debug` コマンドを開始すると、コンテナーが開始され、それによりデバッグ・ポート (複数可) が提供されます。ポートは、cli-config.yml 内の `container-port-map-debug` 値で定義されるか、コマンド・ラインで指定されます。 お好みのデバッグ・ツールをポートに接続すれば、通常どおりアプリケーションをデバッグできます。
 
-まず、プロジェクトをコンパイルします。
+まず、アプリケーションをコンパイルします。
 
 ```
 ibmcloud dev build --debug
 ```
 {: codeblock}
 
-開始するには、現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションをデバッグします。
+開始するには、現行アプリケーション・ディレクトリー内で以下のコマンドを実行して、アプリケーションをデバッグします。
 
 ```
 ibmcloud dev debug
@@ -160,12 +159,12 @@ ibmcloud dev debug
 ## delete
 {: #delete}
 
-`delete` コマンドを使用して、{{site.data.keyword.Bluemix}} スペースからプロジェクトを削除します。 パラメーターなしでコマンドを実行して、使用可能なプロジェクトをリストし、削除するプロジェクトを番号付きリストから選択できます。 プロジェクト・コードおよびディレクトリーはローカル・ディスク・スペースからは削除されません。
+`delete` コマンドを使用して、{{site.data.keyword.Bluemix}} スペースからアプリケーションを削除します。 パラメーターなしでコマンドを実行して、使用可能なアプリケーションをリストし、削除するアプリケーションを番号付きリストから選択できます。 アプリケーション・コードおよびディレクトリーはローカル・ディスク・スペースからは削除されません。
 
-以下のコマンドを実行して、{{site.data.keyword.Bluemix}} からプロジェクトを削除します。
+以下のコマンドを実行して、{{site.data.keyword.Bluemix}} からアプリケーションを削除します。
 
 ```
-ibmcloud dev delete <projectName>
+ibmcloud dev delete <applicationName>
 ```
 {: codeblock}
 
@@ -178,13 +177,13 @@ ibmcloud dev delete <projectName>
 
 アプリケーションは、Cloud Foundry アプリケーションまたはコンテナーとしてデプロイできます。
 
-Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix}} にデプロイする場合、`manifest.yml` ファイルがプロジェクトのルート・ディレクトリーに存在する必要があります。
+Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix}} にデプロイする前に、`manifest.yml` ファイルがアプリケーションのルート・ディレクトリーに存在する必要があります。
 
-アプリケーションをコンテナーとしてデプロイする場合、[Kubernetes](https://kubernetes.io/) と [Helm](https://github.com/kubernetes/helm) をローカルにインストールする必要があります。 Helm クライアント・バージョンが Helm サーバー・バージョンよりも新しくないことを確認してください。 `helm version` を実行することで、それら両方のバージョンを確認できます。 クライアント・バージョンには、v2.4.2 を使用することを推奨します。
+アプリケーションをコンテナーとしてデプロイする前に、[Kubernetes](https://kubernetes.io/) と [Helm](https://github.com/kubernetes/helm) をローカルにインストールする必要があります。 Helm クライアント・バージョンが Helm サーバー・バージョンよりも新しくないことを確認してください。 `helm version` を実行することで、それら両方のバージョンを確認できます。 クライアント・バージョンには、v2.4.2 を使用することを推奨します。
 
-以下の例に示すように、`cli-config.yml` 内で、Helm チャートの場所を `chart-path` プロパティーに定義し、`deploy-target` エレメントを `container` に設定し、`deploy-image-target` を構成するように選択できます。 `cli-config.yml` 内の `deploy-image-target` エレメントが、`chart/values.yml` ファイル内の `repository` エレメントおよび `tag` エレメントの代わりに使用されます。 具体的にデプロイ先を {{site.data.keyword.Bluemix}} にするには、構成エレメント `ibm-cluster` に、[チュートリアル: クラスターの作成](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)の説明に従って {{site.data.keyword.Bluemix}} 内に作成した Kubernetes クラスターの名前を設定します。
+アプリケーションを Kubernetes にデプロイするには、 `cli-config.yml` 内で `deploy-target` に `container` を指定するか、パラメーター `-t container` を使用する必要があります。 
 
-プロビジョニング、構成、および Kubernetes クラスターへのデプロイについて詳しくは、[Deploy a scalable web application on Kubernetes](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes) チュートリアルを参照してください。
+Kubernetes デプロイメントの構成に必要なその他パラメーターは、以下に示すように `cli-config.yml` 内に指定することも、コマンド・ライン引数を使用することもできます。これらを `cli-config.yml` 内に定義しない場合、パラメーター `-t container` を指定してデプロイする必要があり、その他すべての値について、プロンプトが出されます。
 
 ```
     chart-path: "chart/myapplication"
@@ -196,16 +195,18 @@ Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix}} �
     ibm-cluster: "mycluster"
 ```
 
-これらを cli-config.yml 内に定義しない場合、パラメーター `-t container` を指定してデプロイする必要があり、その他すべての値について、プロンプトが出されます。
+以下の例に示すように、`cli-config.yml` 内で、Helm チャートの場所を `chart-path` プロパティーに定義し、`deploy-image-target` を構成するように選択できます。 `cli-config.yml` 内の `deploy-image-target` エレメントが、`chart/values.yml` ファイル内の `repository` エレメントおよび `tag` エレメントの代わりに使用されます。 具体的にデプロイ先を {{site.data.keyword.Bluemix}} にするには、構成エレメント `ibm-cluster` に、[チュートリアル: クラスターの作成](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)の説明に従って {{site.data.keyword.Bluemix}} 内に作成した Kubernetes クラスターの名前を設定します。
 
-現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
+プロビジョニング、構成、および Kubernetes クラスターへのデプロイについて詳しくは、[Deploy a scalable web application on Kubernetes](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes) チュートリアルを参照してください。
+
+現行アプリケーション・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
 
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、プロジェクトをデプロイします。
+現行アプリケーション・ディレクトリー内で次のコマンドを実行して、アプリケーションをデプロイします。
 
 ```
 ibmcloud dev deploy
@@ -216,7 +217,7 @@ ibmcloud dev deploy
 ### deploy コマンド・パラメーター
 {: #deploy-parameters}
 
-以下のパラメーターを `deploy` コマンドに指定して使用するか、プロジェクトの `cli-config.yml` ファイルを直接更新することで使用できます。 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
+以下のパラメーターを `deploy` コマンドに指定して使用するか、アプリケーションの `cli-config.yml` ファイルを直接更新することで使用できます。 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
 
 #### `chart-path`
 {: #chart-path}
@@ -242,29 +243,63 @@ ibmcloud dev deploy
 * {{site.data.keyword.Bluemix}} へのコンテナー・デプロイメントの場合に、Kubernetes クラスターの名前を定義するために使用されるオプションのパラメーター。
 * 使用法 `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
+#### `host`
+{: #host}
+
+* Cloud Foundry にデプロイする場合に、アプリケーションのホスト名を定義するために使用されるオプションのパラメーター。
+* 使用法 `ibmcloud dev deploy --host [hostname]`
+
+#### `ドメイン (domain)`
+{: #domain}
+
+* Cloud Foundry にデプロイする場合に、アプリケーションのドメインを定義するために使用されるオプションのパラメーター。
+* 使用法 `ibmcloud dev deploy --domain [domain]`
+
+
+## edit
+{: #edit}
+
+新しいサービスを追加したり、既存のサービスを接続および切断したり、既存のサービスを削除したりして、アプリケーションを編集します。アプリケーション・ディレクトリーのルートで次のコマンドを実行します。
+
+```
+ibmcloud dev edit
+```
+{: codeblock}
+
+アカウントに既存のサービスがない場合、このコマンドによって、サービス・グループのリストが表示され、ここからアプリケーションに接続するサービスを選択できます。
+
+ただし、アカウントに既存のサービスがある場合は、このコマンドによってその既存のサービスのリストが表示され、各サービスがアプリケーションに接続されているかどうかが示されます。 
+
+接続済みサービスを選択すると、アプリケーションからサービスを切断したり、アカウントからサービスを削除したりするためのオプションが示され、接続先のすべてのアプリケーションからそのサービスを切断することができます。
+
+切断されているサービスを選択すると、そのサービスをアプリケーションに接続するオプションと、アカウントからサービスを削除するオプションが示されます。既存のサービスを接続すると、そのサービスの使用を開始するために、資格情報ファイルやソース・コードなどのファイルもダウンロードされます。
+
+また、アプリケーションに新しいサービスを追加するオプションを選択することもできます。このオプションを選択すると、サービス選択のプロンプトが表示され、新しいサービスの使用を開始するために、資格情報ファイルやソース・コードなどの追加ファイルがダウンロードされます。
+
+
 
 ## enable
 {: #enable}
 
-既存のプロジェクトを {{site.data.keyword.Bluemix_notm}} デプロイメントに対応できるようにします。 `enable` コマンドは、既存プロジェクトの言語の自動検出を試み、その後、必要な追加情報を求めるプロンプトを出します。 これにより、ローカル Docker コンテナー、CloudFoundry デプロイメント、または Kubernetes/コンテナー・デプロイメントのために使用できるファイルが生成され、追加されます。
+既存のアプリケーションを {{site.data.keyword.Bluemix_notm}} デプロイメントに対応できるようにします。 `enable` コマンドは、既存アプリケーションの言語の自動検出を試み、その後、必要な追加情報を求めるプロンプトを出します。 これにより、ローカル Docker コンテナー、CloudFoundry デプロイメント、または Kubernetes/コンテナー・デプロイメントのために使用できるファイルが生成され、追加されます。
 
-以下のコマンドを実行して、現行ディレクトリー内の既存のプロジェクトを {{site.data.keyword.Bluemix_notm}} デプロイメントに対応できるようにします。
+以下のコマンドを実行して、現行ディレクトリー内の既存のアプリケーションを {{site.data.keyword.Bluemix_notm}} デプロイメントに対応できるようにします。
 
 ```
 ibmcloud dev enable
 ```
 {: codeblock}
 
-必要なファイルの存在によって、有効なプロジェクト構造のために必要なプロジェクト言語検出が行われます。  
+必要なファイルの存在によって、有効なプロジェクト構造のために必要なアプリケーション言語検出が行われます。  
 
-* `package.json` ファイルが存在すると、Node.js プロジェクトと識別されます。
-* `package.swift` ファイルが存在すると、Swift プロジェクトと識別されます。
-* `setup.py` ファイルまたは `requirements.txt` ファイルのいずれかが存在すると、Python プロジェクトと識別されます。
-* `pom.xml` ファイルまたは `build.gradle` ファイルのいずれかが存在すると、Java プロジェクトと識別されます。
-	* `pom.xml` が存在すると、Maven プロジェクトと識別されます。
-	* `build.gradle` が存在すると、Gradle プロジェクトと識別されます。
+* `package.json` ファイルが存在すると、Node.js アプリケーションと識別されます。
+* `package.swift` ファイルが存在すると、Swift アプリケーションと識別されます。
+* `setup.py` ファイルまたは `requirements.txt` ファイルのいずれかが存在すると、Python アプリケーションと識別されます。
+* `pom.xml` ファイルまたは `build.gradle` ファイルのいずれかが存在すると、Java アプリケーションと識別されます。
+	* `pom.xml` が存在すると、Maven アプリケーションと識別されます。
+	* `build.gradle` が存在すると、Gradle アプリケーションと識別されます。
 
-オプションで、検出されたプロジェクト言語を `--language` 引数を使用してオーバーライドすることもできます。  ただし、サポートされるのは有効かつ完全なプロジェクトのみです。 enable コマンドによってソース・コードが変更されることはありません。
+オプションで、検出されたアプリケーション言語を `--language` 引数を使用してオーバーライドすることもできます。  ただし、サポートされるのは有効かつ完全なアプリケーションのみです。 enable コマンドによってソース・コードが変更されることはありません。
 
 言語オプションは以下のとおりです。
 * node
@@ -274,30 +309,30 @@ ibmcloud dev enable
 * java-mp (Java - Java MicroProfile と解釈されます)
 * java-spring (Java - Spring フレームワークと解釈されます)
 
-`ibmcloud dev enable` コマンドを使用して作成されるファイルのうち、プロジェクト・フォルダー内にある既存のファイルとの間でネーミングに競合が生じるファイルは、`.merge` ファイル拡張子を使用して保存されます。  
+`ibmcloud dev enable` コマンドを使用して作成されるファイルのうち、アプリケーション・フォルダー内にある既存のファイルとの間でネーミングに競合が生じるファイルは、`.merge` ファイル拡張子を使用して保存されます。  
 
 ### enable コマンド・パラメーター
 {: #enable-parameters}
 
-以下のパラメーターを `enable` コマンドに指定して使用するか、プロジェクトの `cli-config.yml` ファイルを直接更新することで使用できます。 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
+以下のパラメーターを `enable` コマンドに指定して使用するか、アプリケーションの `cli-config.yml` ファイルを直接更新することで使用できます。 その他のコマンドと共有される[追加のパラメーター](#command-parameters)もあります。
 
 #### `language`
 {: #enable-language}
 
-* 使用可能にするプロジェクトの言語を指定するために使用されるパラメーター。
+* 使用可能にするアプリケーションの言語を指定するために使用されるパラメーター。
 * 使用法 `ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
-* 既に使用可能になっているプロジェクトの再使用可能化を強制するために使用されるパラメーター。
+* 既に使用可能になっているアプリケーションの再使用可能化を強制するために使用されるパラメーター。
 * 使用法 `ibmcloud dev enable -f|--force`
 
 
 ## get-credentials
 {: #get-credentials}
 
-バインドされたサービスを使用可能にするためにプロジェクトによって必要とされる資格情報を取得します。
+接続済みサービスを使用可能にするためにアプリケーションで必要な資格情報を取得します。
 
 
 ## help
@@ -316,9 +351,9 @@ ibmcloud dev help
 ## list
 {: #list}
 
-スペース内にあるすべての {{site.data.keyword.Bluemix_notm}} プロジェクトをリストできます。
+リソース・グループ内のすべての {{site.data.keyword.Bluemix_notm}} アプリケーションをリストできます。
 
-以下のコマンドを実行して、プロジェクトをリストします。
+以下のコマンドを実行して、アプリケーションをリストします。
 
 ```
 ibmcloud dev list
@@ -326,34 +361,21 @@ ibmcloud dev list
 {: codeblock}
 
 
-<!--
-## edit
-{: #edit}
-
-You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
-
-```
-ibmcloud dev edit
-```
-{: codeblock}
--->
-
-
 ## run
 {: #run}
 
-`run` コマンドによって、アプリケーションを実行できます。 まず、`build` コマンドを使用して、プロジェクトに対するビルドが実行される必要があります。 `run` コマンドを起動すると、実行コンテナーが開始され、`container-port-map` パラメーターで定義されたポートが公開されます。 このステップを実行するためのエントリー・ポイントが実行コンテナー Dockerfile に含まれていない場合は、`run-cmd` パラメーターを使用してアプリケーションを起動できます。
+`run` コマンドによって、アプリケーションを実行できます。 まず、`build` コマンドを使用して、アプリケーションに対するビルドが実行される必要があります。 `run` コマンドを起動すると、実行コンテナーが開始され、`container-port-map` パラメーターで定義されたポートが公開されます。 このステップを実行するためのエントリー・ポイントが実行コンテナー Dockerfile に含まれていない場合は、`run-cmd` パラメーターを使用してアプリケーションを起動できます。
 
-複数のコンテナーを使用して実行するには、プロジェクトに [Compose](https://docs.docker.com/compose/overview/) ファイルが含まれているか (`cli-config.yml` 内に指定されているか)、`dockerfile-run` コマンド・パラメーターを使用して、このファイルを指定する必要があります。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
+複数のコンテナーを使用して実行するには、アプリケーションに [Compose](https://docs.docker.com/compose/overview/) ファイルが含まれているか (`cli-config.yml` 内に指定されているか)、`dockerfile-run` コマンド・パラメーターを使用して、このファイルを指定する必要があります。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
 
-まず、プロジェクトをコンパイルします。
+まず、アプリケーションをコンパイルします。
 
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、アプリケーションを開始します。
+現行アプリケーション・ディレクトリー内で以下のコマンドを実行して、アプリケーションを開始します。
 
 ```
 ibmcloud dev run
@@ -374,7 +396,7 @@ ibmcloud dev run
 {: #container-name-run2}
 
 * 実行コンテナーのコンテナー名。
-* 使用法: `ibmcloud dev run --container-name-run [<projectName>]`
+* 使用法: `ibmcloud dev run --container-name-run [<applicationName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -455,7 +477,7 @@ ibmcloud dev shell
 
 `container-name-run` および `container-name-tools` で定義された、{{site.data.keyword.dev_cli_short}} CLI によって使用されるコンテナーの状況を照会できます。
 
-現行プロジェクト・ディレクトリー内で以下のコマンドを実行して、コンテナーの状況をチェックします。
+現行アプリケーション・ディレクトリー内で以下のコマンドを実行して、コンテナーの状況をチェックします。
 
 ```
 ibmcloud dev status
@@ -489,22 +511,22 @@ ibmcloud dev stop
 {: #container-name-run}
 
 * 実行コンテナーのコンテナー名。
-* 使用法: `ibmcloud dev stop --container-name-run [<projectName>]`
+* 使用法: `ibmcloud dev stop --container-name-run [<applicationName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * ツール・コンテナーのコンテナー名。
-* 使用法: `ibmcloud dev stop --container-name-tools [<projectName>]`
+* 使用法: `ibmcloud dev stop --container-name-tools [<applicationName>]`
 
 
 
 ## test
 {: #test}
 
-`test` コマンドによって、アプリケーションをテストできます。 まず、`build --debug` コマンドを使用して、プロジェクトに対するビルドが実行される必要があります。 その後、ツール・コンテナーを使用して、アプリケーションの `test-cmd` が起動されます。
+`test` コマンドによって、アプリケーションをテストできます。 まず、`build --debug` コマンドを使用して、アプリケーションに対するビルドが実行される必要があります。 その後、ツール・コンテナーを使用して、アプリケーションの `test-cmd` が起動されます。
 
-まず、プロジェクトをコンパイルします。
+まず、アプリケーションをコンパイルします。
 
 ```
 ibmcloud dev build --debug
@@ -568,7 +590,7 @@ ibmcloud dev view
 #### `web-app-root`
 {: #web-app-root}
 
-* Kubernetes アプリ URL に追加するプロジェクトのルート。
+* Cloud Foundry および Kubernetes アプリ URL に追加するプロジェクトのルート。
 * 使用法: `ibmcloud dev view --web-app-root [root]`
 
 
@@ -582,7 +604,7 @@ ibmcloud dev view
 ## 複合コマンド
 {: #compound}
 
-IDT コマンドを区切り文字 `/` で分離することで、複数のコマンドを 1 つのコマンド・ライン・ステートメントで実行できます。 複合コマンドを指定した後に、追加のコマンド・ライン・フラグを指定できます。  以下に、複合コマンドの使用法の例を示します。
+{{site.data.keyword.Bluemix_notm}} 開発者ツール・コマンドを区切り文字 `/` で分離することで、複数のコマンドを 1 つのコマンド・ライン・ステートメントで実行できます。 複合コマンドを指定した後に、追加のコマンド・ライン・フラグを指定できます。  以下に、複合コマンドの使用法の例を示します。
 
 ```
 ibmcloud dev build/run
@@ -592,18 +614,20 @@ ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
-フラグはすべて、最後のコマンドの後に続く必要があり、そのフラグが関連付けられたすべてのコマンドに適用されます。 上記の例の場合、`--trace` フラグは、3 つすべてのコマンドに適用されます、`-t` は、最後の 2 つのコマンドにしか適用されず、`build` コマンドには適用されません。
+フラグはすべて、最後のコマンドの後に続く必要があり、そのフラグが関連付けられたすべてのコマンドに適用されます。 上記の最後の例では、`--trace` フラグは、3 つすべてのコマンドに適用されますが、`-t` は、最後の 2 つのコマンドにしか適用されず、`build` コマンドには適用されません。
 
 この機能で使用できるコマンドは、次のとおりです。
 `build、debug、deploy、get-credentials、run、stop、test、view`
 
-いずれかのコマンドが何らかの理由で失敗すると、後続のコマンドは実行されません。 `debug` または `run` の後にいずれかのコマンドが続く場合、現在の端末ウィンドウからプロセスを強制終了する以外の方法で `debug` または `run` が終了した場合にのみ、それらのコマンドは続行されます。 `CTRL+C` はプロセスを強制終了することになるので、後続のコマンドは実行されません。 例えば、別の端末ウィンドウから `ibmcloud dev stop` を実行して、実行中のコンテナーを停止すると、次のコマンドの実行を続行できます。
+いずれかのコマンドが何らかの理由で失敗すると、後続のコマンドは実行されません。  
+
+`debug` または `run` の後にいずれかのコマンドが続く場合、現在の端末ウィンドウからプロセスを強制終了する以外の方法で `debug` または `run` が終了した場合にのみ、それらのコマンドは続行されます。 `CTRL+C` はプロセスを強制終了することになるので、後続のコマンドは実行されません。 例えば、別の端末ウィンドウから `ibmcloud dev stop` を実行して、実行中のコンテナーを停止すると、次のコマンドの実行を続行できます。
 
 
 ## build、debug、run、および test 用のパラメーター
 {: #command-parameters}
 
-以下のパラメーターを `build|debug|run|test` コマンドに指定して使用するか、プロジェクトの `cli-config.yml` ファイルを直接更新することで使用できます。 [`debug`](#debug-parameters) コマンドおよび [`run`](#run-parameters) コマンドでは、追加のパラメーターが使用可能です。
+以下のパラメーターを `build|debug|run|test` コマンドに指定して使用するか、アプリケーションの `cli-config.yml` ファイルを直接更新することで使用できます。 [`debug`](#debug-parameters) コマンドおよび [`run`](#run-parameters) コマンドでは、追加のパラメーターが使用可能です。
 
 **注**: コマンド・ラインで入力されたコマンド・パラメーターは、`cli-config.yml` 構成よりも優先されます。
 
@@ -617,13 +641,13 @@ ibmcloud dev build/deploy/view -t container --trace
 {: #container-name-run1}
 
 * 実行コンテナーのコンテナー名。
-* 使用法: `ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
+* 使用法: `ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * ツール・コンテナーのコンテナー名。
-* 使用法: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* 使用法: `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}

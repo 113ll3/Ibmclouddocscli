@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-05"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI の概説
+# {{site.data.keyword.Bluemix_notm}} 開発者ツールの概説
 {: #overview}
 
 このチュートリアルでは、一連の {{site.data.keyword.Bluemix}} 開発者ツールをインストールし、インストールを検証して、ご使用の環境を構成します。 {{site.data.keyword.Bluemix}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。 
@@ -39,8 +39,8 @@ lastupdated: "2018-07-05"
 
 [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") と以下のシステム要件が必要です。
 
-* Microsoft Windows&trade; を使用する場合、Windows 10 以降を使用する必要があります。
-* Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。
+* Microsoft Windows&trade; を使用する場合、Windows 10 Pro 以降を使用する必要があります。
+* Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。 
 
 ## ステップ 1: インストール・コマンドの実行
 {: #step1}
@@ -48,21 +48,21 @@ lastupdated: "2018-07-05"
 * Mac および Linux の場合、次のコマンドを実行します。
 
   ```
-  curl -sL https://ibm.biz/idt-installer | bash
+  curl -sL http://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br>
-
-* Windows 10 の場合、管理者として次のコマンドを実行します。
+  
+* Windows 10 Pro の場合、管理者として次のコマンドを実行します。
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br>
 
   Windows PowerShell アイコンを右クリックして、**「管理者として実行」**を選択します。
   {: tip}
+  
+  これらのツールを手動でインストールする方法については、[ツールの再インストール](/docs/cli/ts_createapps.html#appendix)を参照してください。
 
 ## ステップ 2: インストールの検証
 {: #step2}
@@ -92,17 +92,26 @@ ibmcloud dev help
 	ibmcloud login
 	```
 	{: codeblock}
-<br>
-
-	資格情報が拒否された場合、統合 ID を使用している可能性があります。 詳しくは、[フェデレーテッド ID を使用したログイン](/docs/iam/login_fedid.html#using-an-api-key)を参照してください。
+    <br>
+    
+	資格情報が拒否された場合、統合 ID を使用している可能性があります。 詳しくは、[フェデレーテッド ID を使用したログイン](/docs/iam/login_fedid.html#federated_id)を参照してください。
 	{: tip}
 
 3. 組織とスペースを設定します。
 
 	```
+	ibmcloud target --cf
+	```
+	{: codeblock}
+	
+	オプションで、上記のコマンドの出力を使用して、次のコマンドで組織とスペースを手動で設定することができます。
+
+	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
+	
+問題を報告したり、フィードバックを提供したりするには、[IBM Cloud Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com) ([ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/)でチーム・アクセスを要求) を使用できます。
 
 ## 次のステップ
 {: #next-steps}
