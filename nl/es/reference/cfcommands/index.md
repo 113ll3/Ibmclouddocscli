@@ -807,8 +807,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Muestra
-la versión de la interfaz de línea de mandatos cf.
+Muestra la versión de la interfaz de línea de mandatos de Cloud Foundry.
 
 ```
 cf -v
@@ -819,7 +818,7 @@ cf -v
 
 <strong>Ejemplos</strong>:
 
-Mostrar la versión de la interfaz de línea de mandatos cf.
+Visualice la versión de la interfaz de línea de mandatos de Cloud Foundry.
 ```
 cf -v
 ```

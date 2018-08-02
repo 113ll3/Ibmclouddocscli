@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -32,11 +32,11 @@ Es posible que tenga algún problema al transferir sus aplicaciones en {{site.da
 Para obtener información explicativa sobre el motivo por el cual su app podría fallar en {{site.data.keyword.Bluemix_notm}}, debe saber cómo se despliega una app en {{site.data.keyword.Bluemix_notm}} y cómo se ejecuta. Para obtener más información, consulte [Despliegue de aplicaciones ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
-El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` para depurar errores de transferencia. Antes de seguir estos pasos, asegúrese de haber instalado la interfaz de línea de mandatos cf. Para obtener más información sobre la instalación de la interfaz de línea de mandatos cf, consulte [Instalación de la interfaz de línea de mandatos de cf ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/starters/install_cli.html){: new_window}.
+El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` para depurar errores. Antes de seguir estos pasos, asegúrese de haber instalado la interfaz de línea de mandatos de Cloud Foundry. Para obtener más información sobre cómo instalar la interfaz de línea de mandatos de Cloud Foundry, consulte [Instalación de la interfaz de línea de mandatos de Cloud Foundry ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/starters/install_cli.html){: new_window}.
 
-  1. Conecte con {{site.data.keyword.Bluemix_notm}} escribiendo el siguiente código en la interfaz de línea de mandatos cf:
+  1. Conecte con {{site.data.keyword.Bluemix_notm}} escribiendo el código siguiente en la interfaz de línea de mandatos de Cloud Foundry:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} especificando `cf login`.
@@ -53,14 +53,14 @@ Además del mandato `cf logs`, en {{site.data.keyword.Bluemix_notm}} también pu
 
 ### Depuración de errores de transferencia para una aplicación Node.js
 
-El ejemplo siguiente muestra el registro que se muestra después de escribir `cf logs nombre_app --recent`. En el ejemplo se da por supuesto que los errores de transferencia se han producido para una aplicación Node.js:
+El ejemplo siguiente muestra el registro que se muestra después de escribir `cf logs nombre_app --recent`. En el ejemplo se da por supuesto que se han producido errores para una aplicación Node.js:
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
 2014-08-11T14:20:44.43+0100 [DEA]     OUT Stopping app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:44.44+0100 [DEA]     OUT Stopped app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:48.97+0100 [DEA]     OUT Got staging request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:48.97+0100 [DEA]     OUT Got request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:50.94+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
 2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Download app package (4.1M)
 2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Download app buildpack cache (1.1M)
@@ -113,7 +113,7 @@ En concreto, se puede habilitar el registro en stdout y stderr. Para obtener má
   * Para las aplicaciones Ruby on Rails, consulte [The Logger ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Para las aplicaciones Ruby Sinatra, consulte [Registro ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
-Cuando especifica `cf logs appname --recent` en la interfaz de línea de mandatos cf, solo se muestran los registros más recientes. Para ver los registros en busca de errores producidos anteriormente, debe recuperar todos los registros y buscar los errores. Para recuperar todos los registros correspondientes a la aplicación, siga uno de los siguientes métodos:
+Cuando especifica `cf logs appname --recent` en la interfaz de línea de mandatos de Cloud Foundry, solo se visualizan los registros más recientes. Para ver los registros en busca de errores producidos anteriormente, debe recuperar todos los registros y buscar los errores. Para recuperar todos los registros correspondientes a la aplicación, siga uno de los siguientes métodos:
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>Las funciones integradas de búsqueda y análisis de archivos de registro del servicio {{site.data.keyword.loganalysisshort}} le pueden ayudar a identificar errores rápidamente. Para obtener más información, consulte <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>.</dd>

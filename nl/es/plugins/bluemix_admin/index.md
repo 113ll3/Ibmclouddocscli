@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 
 Puede gestionar el entorno de {{site.data.keyword.Bluemix_notm}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado mediante la interfaz de línea de mandatos de Cloud Foundry con el plugin de CLI de administración de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede añadir usuarios de un registro de LDAP. Para obtener información sobre la gestión de su cuenta de {{site.data.keyword.Bluemix_notm}} pública, consulte [Administración](/docs/admin/adminpublic.html#administer).
 
-Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in de CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos de Cloud Foundry ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
+Antes de empezar, instale la interfaz de línea de mandatos de Cloud Foundry. El plug-in de CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos de Cloud Foundry ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restricción:** Cygwin no admite la interfaz de línea de mandatos de Cloud Foundry. Utilice esta interfaz en una ventana de línea de mandatos que no sea la ventana de Cygwin.
 
@@ -27,7 +27,7 @@ Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in de CL
 
 ## Adición del plug-in de CLI de administración de {{site.data.keyword.Bluemix_notm}}
 
-Una vez instalada la interfaz de línea de mandatos cf, puede añadir el plug-in de CLI de administración de {{site.data.keyword.Bluemix_notm}}.
+Una vez instalada la interfaz de línea de mandatos Cloud Foundry, puede añadir el plug-in de CLI de administración de {{site.data.keyword.Bluemix_notm}}.
 
 **Nota**: si ha instalado previamente el plugin Admin de {{site.data.keyword.Bluemix_notm}}, es posible que
 tenga que desinstalarlo, suprimir el repositorio y luego volver a instalarlo para obtener las actualizaciones más recientes.
