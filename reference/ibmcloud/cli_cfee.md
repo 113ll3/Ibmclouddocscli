@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-27"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CLI commands for Managing Cloud Foundry Enterprise Environments (experimental)
+# Commands for Managing Cloud Foundry Enterprise Environments (experimental)
 {: #ibmcloud_commands_cfee}
 
 <table summary="Manage Cloud Foundry Enterprise Environments (experimental)">
@@ -22,12 +22,12 @@ lastupdated: "2018-06-21"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud cfee environments](ic_cli_cfee_cli.html#ibmcloud_cfee_environments)</td>
- <td>[ibmcloud cfee environment](ic_cli_cfee_cli.html#ibmcloud_cfee_environment)</td>
+ <td>[ibmcloud cfee environments](cli_cfee.html#ibmcloud_cfee_environments)</td>
+ <td>[ibmcloud cfee environment](cli_cfee.html#ibmcloud_cfee_environment)</td>
  </tr>
  </tbody>
  </table>
- 
+
  ### ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-06-21"
 {:tip: .tip}
 {:download: .download}
 
-# Extending {{site.data.keyword.Bluemix_notm}} CLI with Plug-ins
+# Extending {{site.data.keyword.Bluemix_notm}} CLI with plug-ins
 {: #plug-ins}
 
 {{site.data.keyword.Bluemix_notm}} CLI supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
@@ -25,12 +25,12 @@ lastupdated: "2018-06-21"
 For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages.
 {: tip}
 
-## Install a Plug-in from the {{site.data.keyword.Bluemix_notm}} CLI repository
+## Install a plug-in from the {{site.data.keyword.Bluemix_notm}} CLI repository
 
-### Step 1: Search for the Plug-in
+### Step 1: Search for the plug-in
 
 1. Use the command `ibmcloud plugin repo-plugins -r REPO_NAME` to look for a plug-in in the repository.
-2. The {{site.data.keyword.Bluemix_notm}} CLI has the official repository with the name `Bluemix`, you can search the official plug-ins as shown in the following example:
+2. The {{site.data.keyword.Bluemix_notm}} CLI has the official repository with name 'Bluemix', you can search the official plug-ins as shown in the following example:
 
   ```
   $ ibmcloud plugin repo-plugins -r Bluemix
@@ -43,9 +43,9 @@ For more commands to manage plug-ins, run `ibmcloud plugin` to see the help mess
 
   ```
 
-### Step 2: Install the Plug-in
+### Step 2: Install the plug-in
 
-Use the `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug-in. For example, use the following command to install a plug-in from the official IBM plug-in repo `Bluemix`:
+Use the `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug-in. For example, use the following command to install a plug-in from the official IBM plug-in repo 'Bluemix':
 
   ```
   $ ibmcloud plugin install auto-scaling -r Bluemix
@@ -56,19 +56,19 @@ Use the `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` command to install th
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
 
-## Install a Plug-in locally
+## Install a plug-in locally
 
-Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plugin-in binary on your local machine. For example:
+Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plug-in binary on your local machine. For example:
 
   ```
   $ ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.2
-  Installing pluign './auto-scaling-darwin-amd64-0.2.2'...
+  Installing plugin './auto-scaling-darwin-amd64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   $
   ```
 
-## Install a Plug-in from a web URL
+## Install a plug-in from a web URL
 
 Use the `ibmcloud plugin install URL` command to install a plug-in directly from a web URL. For example
 

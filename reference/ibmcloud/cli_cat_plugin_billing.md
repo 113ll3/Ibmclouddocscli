@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-26"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CLI commands for Managing Catalog, Plug-ins, and Billing Settings
+# Commands for Managing Catalog, Plug-ins, and Billing Settings
 {: #ibmcloud_commands_settings}
 
 <table summary="ibmcloud commands that you can use to manage the {{site.data.keyword.Bluemix_notm}} catalog, plug-ins, billing, and security settings.">
@@ -22,48 +22,48 @@ lastupdated: "2018-06-21"
  </thead>
  <tbody>
  <tr>
-  <td>[ibmcloud catalog search](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_search)</td>
-  <td>[ibmcloud catalog entry](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_entry)</td>
-  <td>[ibmcloud catalog entry-create](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_entry_create)</td>
-  <td>[ibmcloud catalog entry-update](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_entry_update)</td>
-  <td>[ibmcloud catalog entry-delete](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_entry_delete)</td>
+  <td>[ibmcloud catalog search](cli_cat_plugin_billing.html#ibmcloud_catalog_search)</td>
+  <td>[ibmcloud catalog entry](cli_cat_plugin_billing.html#ibmcloud_catalog_entry)</td>
+  <td>[ibmcloud catalog entry-create](cli_cat_plugin_billing.html#ibmcloud_catalog_entry_create)</td>
+  <td>[ibmcloud catalog entry-update](cli_cat_plugin_billing.html#ibmcloud_catalog_entry_update)</td>
+  <td>[ibmcloud catalog entry-delete](cli_cat_plugin_billing.html#ibmcloud_catalog_entry_delete)</td>
  </tr>
  <tr>
-  <td>[ibmcloud catalog entry-visibility](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_entry_visibility)</td>
-  <td>[ibmcloud catalog service-marketplace](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_service_marketplace)</td>
-  <td>[ibmcloud catalog entry-visibility-set](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_entry_visibility_set)</td>
-  <td>[ibmcloud catalog templates](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_templates)</td>
-  <td>[ibmcloud catalog template](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_template)</td>
+  <td>[ibmcloud catalog entry-visibility](cli_cat_plugin_billing.html#ibmcloud_catalog_entry_visibility)</td>
+  <td>[ibmcloud catalog service-marketplace](cli_cat_plugin_billing.html#ibmcloud_catalog_service_marketplace)</td>
+  <td>[ibmcloud catalog entry-visibility-set](cli_cat_plugin_billing.html#ibmcloud_catalog_entry_visibility_set)</td>
+  <td>[ibmcloud catalog templates](cli_cat_plugin_billing.html#ibmcloud_catalog_templates)</td>
+  <td>[ibmcloud catalog template](cli_cat_plugin_billing.html#ibmcloud_catalog_template)</td>
  </tr>
  <tr>
-  <td>[ibmcloud catalog template-run](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_template_run)</td>
-  <td>[ibmcloud catalog locations](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_locations)</td>
-  <td>[ibmcloud catalog runtime](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_runtime)</td>
-  <td>[ibmcloud catalog runtimes](ic_cli_cat_plugin_billing.html#ibmcloud_catalog_runtimes)</td>
-  <td>[ibmcloud plugin repos](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_repos)</td>
+  <td>[ibmcloud catalog template-run](cli_cat_plugin_billing.html#ibmcloud_catalog_template_run)</td>
+  <td>[ibmcloud catalog locations](cli_cat_plugin_billing.html#ibmcloud_catalog_locations)</td>
+  <td>[ibmcloud catalog runtime](cli_cat_plugin_billing.html#ibmcloud_catalog_runtime)</td>
+  <td>[ibmcloud catalog runtimes](cli_cat_plugin_billing.html#ibmcloud_catalog_runtimes)</td>
+  <td>[ibmcloud plugin repos](cli_cat_plugin_billing.html#ibmcloud_plugin_repos)</td>
 </tr>
 <tr>
-  <td>[ibmcloud plugin repo-add](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_repo_add)</td>
-  <td>[ibmcloud plugin repo-remove](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_repo_remove)</td>
-  <td>[ibmcloud plugin repo-plugins](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_repo_plugins)</td>
-  <td>[ibmcloud plugin repo-plugin](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_repo_plugin)</td>
-  <td>[ibmcloud plugin list](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_list)</td>
+  <td>[ibmcloud plugin repo-add](cli_cat_plugin_billing.html#ibmcloud_plugin_repo_add)</td>
+  <td>[ibmcloud plugin repo-remove](cli_cat_plugin_billing.html#ibmcloud_plugin_repo_remove)</td>
+  <td>[ibmcloud plugin repo-plugins](cli_cat_plugin_billing.html#ibmcloud_plugin_repo_plugins)</td>
+  <td>[ibmcloud plugin repo-plugin](cli_cat_plugin_billing.html#ibmcloud_plugin_repo_plugin)</td>
+  <td>[ibmcloud plugin list](cli_cat_plugin_billing.html#ibmcloud_plugin_list)</td>
 </tr>
 <tr>
-  <td>[ibmcloud plugin show](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_show)</td>
-  <td>[ibmcloud plugin install](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_install)</td>
-  <td>[ibmcloud plugin uninstall](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_uninstall)</td>
-  <td>[ibmcloud plugin update](ic_cli_cat_plugin_billing.html#ibmcloud_plugin_update)</td>
-  <td>[ibmcloud billing account-usage](ic_cli_cat_plugin_billing.html#ibmcloud_billing_account_usage)</td>
+  <td>[ibmcloud plugin show](cli_cat_plugin_billing.html#ibmcloud_plugin_show)</td>
+  <td>[ibmcloud plugin install](cli_cat_plugin_billing.html#ibmcloud_plugin_install)</td>
+  <td>[ibmcloud plugin uninstall](cli_cat_plugin_billing.html#ibmcloud_plugin_uninstall)</td>
+  <td>[ibmcloud plugin update](cli_cat_plugin_billing.html#ibmcloud_plugin_update)</td>
+  <td>[ibmcloud billing account-usage](cli_cat_plugin_billing.html#ibmcloud_billing_account_usage)</td>
 </tr>
 <tr>
-  <td>[ibmcloud billing org-usage](ic_cli_cat_plugin_billing.html#ibmcloud_billing_org_usage)</td>
-  <td>[ibmcloud billing resource-group-usage](ic_cli_cat_plugin_billing.html#ibmcloud_billing_resource_group_usage)</td>
-  <td>[ibmcloud billing resource-instances-usage](ic_cli_cat_plugin_billing.html#ibmcloud_billing_resource_instances_usage)</td>
+  <td>[ibmcloud billing org-usage](cli_cat_plugin_billing.html#ibmcloud_billing_org_usage)</td>
+  <td>[ibmcloud billing resource-group-usage](cli_cat_plugin_billing.html#ibmcloud_billing_resource_group_usage)</td>
+  <td>[ibmcloud billing resource-instances-usage](cli_cat_plugin_billing.html#ibmcloud_billing_resource_instances_usage)</td>
  </tr>
  </tbody>
  </table>
- 
+
  ### ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 

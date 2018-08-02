@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-26"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CLI commands for Managing Resource Groups and Resources
+# Commands for Managing Resource Groups and Resources
 {: #ibmcloud_commands_resource}
 
 <table summary="ibmcloud command that you can use to manage resource groups and resources.">
@@ -22,52 +22,52 @@ lastupdated: "2018-06-21"
   </thead>
   <tbody>
     <tr>
-      <td>[ibmcloud resource groups](ic_cli_resource_group.html#ibmcloud_resource_groups)</td>
-      <td>[ibmcloud resource group](ic_cli_resource_group.html#ibmcloud_resource_group)</td>
-      <td>[ibmcloud resource group-create](ic_cli_resource_group.html#ibmcloud_resource_group_create)</td>
-      <td>[ibmcloud resource group-update](ic_cli_resource_group.html#ibmcloud_resource_group_update)</td>
-      <td>[ibmcloud resource quotas](ic_cli_resource_group.html#ibmcloud_resource_quotas)</td>
+      <td>[ibmcloud resource groups](cli_resource_group.html#ibmcloud_resource_groups)</td>
+      <td>[ibmcloud resource group](cli_resource_group.html#ibmcloud_resource_group)</td>
+      <td>[ibmcloud resource group-create](cli_resource_group.html#ibmcloud_resource_group_create)</td>
+      <td>[ibmcloud resource group-update](cli_resource_group.html#ibmcloud_resource_group_update)</td>
+      <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quotas)</td>
     </tr>
     <tr>
-      <td>[ibmcloud resource quotas](ic_cli_resource_group.html#ibmcloud_resource_quota)</td>
-      <td>[ibmcloud resource service-instances](ic_cli_resource_group.html#ibmcloud_resource_service_instances)</td>
-      <td>[ibmcloud resource service-instance](ic_cli_resource_group.html#ibmcloud_resource_service_instance)</td>
-      <td>[ibmcloud resource service-instance-create](ic_cli_resource_group.html#ibmcloud_resource_service_instance_create)
-      <td>[ibmcloud resource service-instance-migrate](ic_cli_resource_group.html#ibmcloud_resource_cf_service_instance_migrate)</td>
+      <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quota)</td>
+      <td>[ibmcloud resource service-instances](cli_resource_group.html#ibmcloud_resource_service_instances)</td>
+      <td>[ibmcloud resource service-instance](cli_resource_group.html#ibmcloud_resource_service_instance)</td>
+      <td>[ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
+      <td>[ibmcloud resource service-instance-migrate](cli_resource_group.html#ibmcloud_resource_cf_service_instance_migrate)</td>
     </tr>  
     <tr>  
-      <td>[ibmcloud resource service-instance-update](ic_cli_resource_group.html#ibmcloud_resource_service_instance_update)</td>
-      <td>[ibmcloud resource service-instance-delete](ic_cli_resource_group.html#ibmcloud_resource_service_instance_delete)</td>
-      <td>[ibmcloud resource service-bindings](ic_cli_resource_group.html#ibmcloud_resource_service_bindings)</td>
-      <td>[ibmcloud resource service-binding](ic_cli_resource_group.html#ibmcloud_resource_service_binding)</td>
-      <td>[ibmcloud resource service-binding-create](ic_cli_resource_group.html#ibmcloud_resource_service_binding_create)</td>
+      <td>[ibmcloud resource service-instance-update](cli_resource_group.html#ibmcloud_resource_service_instance_update)</td>
+      <td>[ibmcloud resource service-instance-delete](cli_resource_group.html#ibmcloud_resource_service_instance_delete)</td>
+      <td>[ibmcloud resource service-bindings](cli_resource_group.html#ibmcloud_resource_service_bindings)</td>
+      <td>[ibmcloud resource service-binding](cli_resource_group.html#ibmcloud_resource_service_binding)</td>
+      <td>[ibmcloud resource service-binding-create](cli_resource_group.html#ibmcloud_resource_service_binding_create)</td>
     </tr>
     <tr>
-      <td>[ibmcloud resource service-binding-delete](ic_cli_resource_group.html#ibmcloud_resource_service_binding_delete)</td>
-      <td>[ibmcloud resource quota](ic_cli_resource_group.html#ibmcloud_resource_quota)</td>
-      <td>[ibmcloud resource service-keys](ic_cli_resource_group.html#ibmcloud_resource_service_keys)</td>
-      <td>[ibmcloud resource service-key](ic_cli_resource_group.html#ibmcloud_resource_service_key)</td>
-      <td>[ibmcloud resource service-key-create](ic_cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
+      <td>[ibmcloud resource service-binding-delete](cli_resource_group.html#ibmcloud_resource_service_binding_delete)</td>
+      <td>[ibmcloud resource quota](cli_resource_group.html#ibmcloud_resource_quota)</td>
+      <td>[ibmcloud resource service-keys](cli_resource_group.html#ibmcloud_resource_service_keys)</td>
+      <td>[ibmcloud resource service-key](cli_resource_group.html#ibmcloud_resource_service_key)</td>
+      <td>[ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
     </tr>
     <tr>
-      <td>[ibmcloud resource service-key-delete](ic_cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
-      <td>[ibmcloud resource service-aliases](ic_cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
-      <td>[ibmcloud resource service-alias](ic_cli_resource_group.html#ibmcloud_resource_service_alias)</td>
-      <td>[ibmcloud resource service-alias-create](ic_cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
-      <td>[ibmcloud resource service-alias-update](ic_cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
+      <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
+      <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
+      <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
+      <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
+      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
     </tr>
     <tr>
-      <td>[ibmcloud resource service-alias-delete](ic_cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
-      <td>[ibmcloud resource search](ic_cli_resource_group.html#ibmcloud_resource_search)</td>
-      <td>[ibmcloud resource tags](ic_cli_resource_group.html#ibmcloud_resource_tags)</td>
-      <td>[ibmcloud resource tag](ic_cli_resource_group.html#ibmcloud_resource_tag)</td>
-      <td>[ibmcloud resource tag-create](ic_cli_resource_group.html#ibmcloud_resource_tag_create)</td>
+      <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
+      <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
+      <td>[ibmcloud resource tags](cli_resource_group.html#ibmcloud_resource_tags)</td>
+      <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
+      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
     </tr>
     <tr>
-      <td>[ibmcloud resource tag-delete](ic_cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
-      <td>[ibmcloud resource tag-attach](ic_cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
-      <td>[ibmcloud resource tag-detach](ic_cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
-      <td>[ibmcloud resource tag-update](ic_cli_resource_group.html#ibmcloud_resource_tag_update)</td>
+      <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
+      <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
+      <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
+      <td>[ibmcloud resource tag-update](cli_resource_group.html#ibmcloud_resource_tag_update)</td>
     </tr>
   </tbody>
 </table>
@@ -322,7 +322,7 @@ Show details of service instance `my-service-instance`:
 
 ```
 ibmcloud resource service-instance my-service-instance
-``` 
+```
 
 ### ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
@@ -912,7 +912,7 @@ ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit 
 List all tags
 
 ```
-ibmcloud resource tags 
+ibmcloud resource tags
 ```
 
 List all restricted tags

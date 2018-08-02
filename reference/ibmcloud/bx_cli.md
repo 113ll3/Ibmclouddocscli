@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-27"
 ---
 
 {:new_window: target="_blank"}
@@ -15,11 +15,10 @@ lastupdated: "2018-06-21"
 # General CLI (ibmcloud) commands
 {: #ibmcloud_cli}
 
-Version: 0.7.1
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}.
 
-Starting from version 0.5.0, {{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, do not use both {{site.data.keyword.Bluemix_notm}} CLI commands `ibmcloud [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `ibmcloud cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context.  Note that `ibmcloud cf api/login/logout/target` is not allowed, and you must use `ibmcloud api/login/logout/target` instead.
+{{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, do not use both {{site.data.keyword.Bluemix_notm}} CLI commands `ibmcloud [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `ibmcloud cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context.  Note that `ibmcloud cf api/login/logout/target` is not allowed, and you must use `ibmcloud api/login/logout/target` instead.
 
 As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However you can still use the `bluemix` and `bx` CLI commands until they are removed at a later date.
 {: tip}
@@ -55,22 +54,22 @@ Use the indexes in the following table to refer to the frequently used ibmcloud 
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud help](ic_cli_cmds.html#ibmcloud_help)</td>
- <td>[ibmcloud api](ic_cli_cmds.html#ibmcloud_api)</td>
- <td>[ibmcloud config](ic_cli_cmds.html#ibmcloud_config)</td>
- <td>[ibmcloud info](ic_cli_cmds.html#ibmcloud_info)</td>
- <td>[ibmcloud cf](ic_cli_cmds.html#ibmcloud_cf)</td>
+ <td>[ibmcloud help](bx_cli.html#ibmcloud_help)</td>
+ <td>[ibmcloud api](bx_cli.html#ibmcloud_api)</td>
+ <td>[ibmcloud config](bx_cli.html#ibmcloud_config)</td>
+ <td>[ibmcloud info](bx_cli.html#ibmcloud_info)</td>
+ <td>[ibmcloud cf](bx_cli.html#ibmcloud_cf)</td>
  </tr>
  <tr>
- <td>[ibmcloud login](ic_cli_cmds.html#ibmcloud_login) </td>
- <td>[ibmcloud logout](ic_cli_cmds.html#ibmcloud_logout) </td>
- <td>[ibmcloud regions](ic_cli_cmds.html#ibmcloud_regions)</td>
- <td>[ibmcloud target](ic_cli_cmds.html#ibmcloud_target)</td>
- <td>[ibmcloud update](ic_cli_cmds.html#ibmcloud_update)</td>
+ <td>[ibmcloud login](bx_cli.html#ibmcloud_login) </td>
+ <td>[ibmcloud logout](bx_cli.html#ibmcloud_logout) </td>
+ <td>[ibmcloud regions](bx_cli.html#ibmcloud_regions)</td>
+ <td>[ibmcloud target](bx_cli.html#ibmcloud_target)</td>
+ <td>[ibmcloud update](bx_cli.html#ibmcloud_update)</td>
  </tr>
  </tbody>
  </table>
- 
+
  ## ibmcloud help
 {: #ibmcloud_help}
 Display the general help for first-level built-in commands and supported namespaces of {{site.data.keyword.Bluemix_notm}} CLI, or the help for a specific built-in command or namespace.
@@ -261,7 +260,7 @@ ibmcloud -q cf services
 Log in user.
 
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>Prerequisites</strong>:  None
@@ -281,7 +280,9 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i> (optional)</dt>
   <dd> Password</dd>
   <dt> -c <i>ACCOUNT_ID</i> (optional) </dt>
-  <dd> ID of the target account</dd>
+  <dd> ID of the target account. This option is excluusive with --no-account</dd>
+  <dt> --no-account (optional) </dt>
+  <dd> Force login without account. This option is not recommended. This option is excluusive with -c.</dd>
   <dt> -g <i>RESOURCE_GROUP</i> (optional) </dt>
   <dd> Name of the target resource group</dd>
   <dt> -o <i>ORG</i> (optional)</dt>
@@ -296,7 +297,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 
 <strong>Examples</strong>:
 
-#### Interactive login
+### Interactive login
 
 ```
 ibmcloud login
@@ -316,7 +317,7 @@ ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 
 Log in with API key and set targets:
 
-#### API key has account associated
+### API key has account associated
 
 ```
 ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
@@ -326,7 +327,7 @@ ibmcloud login --apikey api-key-string -o MyOrg -s MySpace
 ibmcloud login --apikey @filename -o MyOrg -s MySpace
 ```
 
-#### API key has no account associated
+### API key has no account associated
 
 ```
 ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
@@ -338,7 +339,7 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 
 <strong>Note:</strong> If the API Key has an associated account, switching to another account is not allowed.
 
-#### Use one time passcode
+### Use one time passcode
 
 ```
 ibmcloud login -u UserID --sso
@@ -438,3 +439,120 @@ ibmcloud update [-f]
   <dt>-f</dt>
   <dd>Force update without confirmation. Root privilege is required.</dd>
 </dl>
+
+
+## General CLI (ibmcloud sl) commands
+{: #softlayer_cli}
+
+The {{site.data.keyword.BluSoftlayer}} plugin has been merged into the {{site.data.keyword.Bluemix_notm}} CLI. You no longer need to install the plug-in.
+{: tip}
+
+Use {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands in the {{site.data.keyword.Bluemix_notm}} command line interface (CLI) to configure and manage SoftLayer services.
+
+As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However you can still use the `bluemix` and `bx` CLI commands until they are removed at a later date.
+{: tip}
+
+To get started, install the {{site.data.keyword.Bluemix_notm}} CLI. See
+[IBM Cloud CLI ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} for details.
+
+The following commands are supported. Use the `ibmcloud sl` command to see the list of available commands:
+
+<table summary="Alphabetically ordered general commands that have links that bring you to more info for the command">
+<caption>Table 1. General {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands</caption>
+ <thead>
+ <th colspan="6">General {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands</th>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl init](/docs/cli/reference/ibmcloud/bx_cli.html#sl_init)</td>
+ <td>[ibmcloud sl help](/docs/cli/reference/ibmcloud/bx_cli.html#sl_help)</td>
+   </tbody>
+ </table>
+
+ To view help information for the commands, run: `ibmcloud sl [command] -h`
+
+ ## ibmcloud sl init
+{: #sl_init}
+
+Initialize the configuration settings that are used to connect to the {{site.data.keyword.BluSoftlayer_notm}} infrastructure environment. The configuration includes user name, API key or password, account and endpoint.
+```
+ibmcloud sl init [OPTIONS]
+```
+
+<strong>Command options</strong>:
+<dl>
+<dt>-a, --api-endpoint</dt>
+<dd>{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint URL, default is: https://api.softlayer.com/rest/v3.1 for API key authentication, https://api.softlayer.com/mobile/v3.1 for IBMid authentication.</dd>
+<dt>-u, --sl-user</dt>
+<dd>Gen1 infrastructure user name.</dd>
+<dt>-p, --sl-password</dt>
+<dd>password or API key.</dd>
+<dt>-c, --account-id</dt>
+<dd>account ID.</dd>
+<dt>-q, --security-question-id</dt>
+<dd>Security question Id used to authenticate, ask your account owner if you do not know.</dd>
+<dt>-w, --security-question-answer</dt>
+<dd>Security question answer used to authenticate, ask your account owner if you do not know.</dd>
+<dt>-s, --security-code</dt>
+<dd>Security code generated by security vendor when 2-factor authentication is enabled.</dd>
+<dt>-v, --security-vendor</dt>
+<dd>Security vendor that provides security code for authentication, options are: VERISIGN,TOTP,PHONE_FACTOR.</dd>
+<dt>-t, --auth-token</dt>
+<dd>Authentication token when phone authentication is enabled.</dd>
+</dl>
+
+For example, login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+```
+$ ibmcloud sl init
+Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
+Enter a number>1
+Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
+Username: []> user@example.com
+API key or password: []> abcd
+
+API endpoint:    https://api.softlayer.com/rest/v3.1   
+User name:       user@example.com   
+API Key:         xxxxxxxxxx
+```
+For example, use {{site.data.keyword.Bluemix_notm}} Single-Sign-On to login Softlayer
+```
+$ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
+API endpoint: api.ng.bluemix.net
+Authenticating...
+OK
+
+Targeted account example user's Account (65ce8074c6c62b5)
+
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)   
+Region:         us-south   
+User:           user@example.com   
+Account:        example user's Account (65ce8074c6c62b5)   
+No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
+
+
+$ ibmcloud sl init
+Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+
+1. Login with Softlayer user name and password/API key
+2. Use IBM Cloud Single-Sign-On
+Enter a number> 2
+{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
+Setting account to: 123456
+OK
+
+{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
+
+Account ID:                123456   
+User ID:                   user@example.com  
+IMS token:                 xxxxxxxxxx
+```
+
+## ibmcloud sl help
+{: #sl_help}
+
+View help information for all commands to operate {{site.data.keyword.BluSoftlayer_notm}} infrastructure environment.
+```
+ibmcloud sl help
+```

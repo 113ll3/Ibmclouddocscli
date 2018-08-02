@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-26"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CLI commands for Managing cf Apps and App Related Domains, Routes, and Certificates
+# Commands for Managing cf Apps and App Related Domains, Routes, and Certificates
 {: #ibmcloud_commands_apps}
 
 <table summary="ibmcloud commands that you can use to manage cf apps and app related domains, routes and certificates.">
@@ -22,57 +22,57 @@ lastupdated: "2018-06-21"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud app push](ic_cli_cf_apps.html#ibmcloud_app_push)</td>
- <td>[ibmcloud app list](ic_cli_cf_apps.html#ibmcloud_app_list)</td>
- <td>[ibmcloud app show](ic_cli_cf_apps.html#ibmcloud_app_show)</td>
- <td>[ibmcloud app delete](ic_cli_cf_apps.html#ibmcloud_app_delete)</td>
- <td>[ibmcloud app rename](ic_cli_cf_apps.html#ibmcloud_app_rename)</td>
+ <td>[ibmcloud app push](cli_cf_apps.html#ibmcloud_app_push)</td>
+ <td>[ibmcloud app list](cli_cf_apps.html#ibmcloud_app_list)</td>
+ <td>[ibmcloud app show](cli_cf_apps.html#ibmcloud_app_show)</td>
+ <td>[ibmcloud app delete](cli_cf_apps.html#ibmcloud_app_delete)</td>
+ <td>[ibmcloud app rename](cli_cf_apps.html#ibmcloud_app_rename)</td>
  </tr>
  <tr>
- <td>[ibmcloud app start](ic_cli_cf_apps.html#ibmcloud_app_start)</td>
- <td>[ibmcloud app stop](ic_cli_cf_apps.html#ibmcloud_app_stop)</td>
- <td>[ibmcloud app restart](ic_cli_cf_apps.html#ibmcloud_app_restart)</td>
- <td>[ibmcloud app restage](ic_cli_cf_apps.html#ibmcloud_app_restage)</td>
- <td>[ibmcloud app instance-restart](ic_cli_cf_apps.html#ibmcloud_app_instance_restart)</td>
+ <td>[ibmcloud app start](cli_cf_apps.html#ibmcloud_app_start)</td>
+ <td>[ibmcloud app stop](cli_cf_apps.html#ibmcloud_app_stop)</td>
+ <td>[ibmcloud app restart](cli_cf_apps.html#ibmcloud_app_restart)</td>
+ <td>[ibmcloud app restage](cli_cf_apps.html#ibmcloud_app_restage)</td>
+ <td>[ibmcloud app instance-restart](cli_cf_apps.html#ibmcloud_app_instance_restart)</td>
  </tr>
  <tr>
- <td>[ibmcloud app events](ic_cli_cf_apps.html#ibmcloud_app_events)</td>
- <td>[ibmcloud app files](ic_cli_cf_apps.html#ibmcloud_app_files)</td>
- <td>[ibmcloud app logs](ic_cli_cf_apps.html#ibmcloud_app_logs)</td>
- <td>[ibmcloud app env](ic_cli_cf_apps.html#ibmcloud_app_env)</td>
- <td>[ibmcloud app env-set](ic_cli_cf_apps.html#ibmcloud_app_env_set)</td>
+ <td>[ibmcloud app events](cli_cf_apps.html#ibmcloud_app_events)</td>
+ <td>[ibmcloud app files](cli_cf_apps.html#ibmcloud_app_files)</td>
+ <td>[ibmcloud app logs](cli_cf_apps.html#ibmcloud_app_logs)</td>
+ <td>[ibmcloud app env](cli_cf_apps.html#ibmcloud_app_env)</td>
+ <td>[ibmcloud app env-set](cli_cf_apps.html#ibmcloud_app_env_set)</td>
  </tr>
  <tr>
- <td>[ibmcloud app env-unset](ic_cli_cf_apps.html#ibmcloud_app_env_unset)</td>
- <td>[ibmcloud app stacks](ic_cli_cf_apps.html#ibmcloud_app_stacks)</td>
- <td>[ibmcloud app stack-show](ic_cli_cf_apps.html#ibmcloud_app_stack_show)</td>
- <td>[ibmcloud app manifest-create](ic_cli_cf_apps.html#ibmcloud_app_manifest_create)</td>
- <td>[ibmcloud app domain-cert](ic_cli_cf_apps.html#ibmcloud_app_domain_cert)</td>
+ <td>[ibmcloud app env-unset](cli_cf_apps.html#ibmcloud_app_env_unset)</td>
+ <td>[ibmcloud app stacks](cli_cf_apps.html#ibmcloud_app_stacks)</td>
+ <td>[ibmcloud app stack-show](cli_cf_apps.html#ibmcloud_app_stack_show)</td>
+ <td>[ibmcloud app manifest-create](cli_cf_apps.html#ibmcloud_app_manifest_create)</td>
+ <td>[ibmcloud app domain-cert](cli_cf_apps.html#ibmcloud_app_domain_cert)</td>
  </tr>
  <tr>
-  <td>[ibmcloud app domain-cert-add](ic_cli_cf_apps.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](ic_cli_cf_apps.html#ibmcloud_app_domain_cert_remove)</td>
-  <td>[ibmcloud app domains](ic_cli_cf_apps.html#ibmcloud_app_domains)</td>
-  <td>[ibmcloud app domain-create](ic_cli_cf_apps.html#ibmcloud_app_domain_create)</td>
-  <td>[ibmcloud app domain-delete](ic_cli_cf_apps.html#ibmcloud_app_domain_delete)</td>
+  <td>[ibmcloud app domain-cert-add](cli_cf_apps.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_cf_apps.html#ibmcloud_app_domain_cert_remove)</td>
+  <td>[ibmcloud app domains](cli_cf_apps.html#ibmcloud_app_domains)</td>
+  <td>[ibmcloud app domain-create](cli_cf_apps.html#ibmcloud_app_domain_create)</td>
+  <td>[ibmcloud app domain-delete](cli_cf_apps.html#ibmcloud_app_domain_delete)</td>
  </tr>
  <tr>
-  <td>[ibmcloud app shared-domain-create](ic_cli_cf_apps.html#ibmcloud_app_shared_domain_create)</td>
-  <td>[ibmcloud app shared-domain-delete](ic_cli_cf_apps.html#ibmcloud_app_shared_domain_delete)</td>
-  <td>[ibmcloud app routes](ic_cli_cf_apps.html#ibmcloud_app_routes)</td>
-  <td>[ibmcloud app route-check](ic_cli_cf_apps.html#ibmcloud_app_route_check)</td>
-  <td>[ibmcloud app route-map](ic_cli_cf_apps.html#ibmcloud_app_route_map)</td>
+  <td>[ibmcloud app shared-domain-create](cli_cf_apps.html#ibmcloud_app_shared_domain_create)</td>
+  <td>[ibmcloud app shared-domain-delete](cli_cf_apps.html#ibmcloud_app_shared_domain_delete)</td>
+  <td>[ibmcloud app routes](cli_cf_apps.html#ibmcloud_app_routes)</td>
+  <td>[ibmcloud app route-check](cli_cf_apps.html#ibmcloud_app_route_check)</td>
+  <td>[ibmcloud app route-map](cli_cf_apps.html#ibmcloud_app_route_map)</td>
  </tr>
  <tr>
-  <td>[ibmcloud app route-unmap](ic_cli_cf_apps.html#ibmcloud_app_route_unmap)</td>
-  <td>[ibmcloud app route-create](ic_cli_cf_apps.html#ibmcloud_app_route_create)</td>
-  <td>[ibmcloud app route-delete](ic_cli_cf_apps.html#ibmcloud_app_route_delete)</td>
-  <td>[ibmcloud app orphaned-routes-delete](ic_cli_cf_apps.html#ibmcloud_app_orphaned_routes_delete)</td>
+  <td>[ibmcloud app route-unmap](cli_cf_apps.html#ibmcloud_app_route_unmap)</td>
+  <td>[ibmcloud app route-create](cli_cf_apps.html#ibmcloud_app_route_create)</td>
+  <td>[ibmcloud app route-delete](cli_cf_apps.html#ibmcloud_app_route_delete)</td>
+  <td>[ibmcloud app orphaned-routes-delete](cli_cf_apps.html#ibmcloud_app_orphaned_routes_delete)</td>
   <td></td>
  </tr>
   </tbody>
  </table>
- 
+
  ### ibmcloud app push
 {: #ibmcloud_app_push}
 

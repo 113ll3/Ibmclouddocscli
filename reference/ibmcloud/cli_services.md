@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-26"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CLI commands for Managing Services
+# Commands for Managing Services
 {: #ibmcloud_commands_services}
 
 <table summary="ibmcloud commands that you can use to manage {{site.data.keyword.Bluemix_notm}} services.">
@@ -22,29 +22,29 @@ lastupdated: "2018-06-21"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud service offerings](ic_cli_services.html#ibmcloud_service_offerings)</td>
- <td>[ibmcloud service list](ic_cli_services.html#ibmcloud_service_list)</td>
- <td>[ibmcloud service show](ic_cli_services.html#ibmcloud_service_show)</td>
- <td>[ibmcloud service create](ic_cli_services.html#ibmcloud_service_create)</td>
- <td>[ibmcloud service update](ic_cli_services.html#ibmcloud_service_update)</td>
+ <td>[ibmcloud service offerings](cli_services.html#ibmcloud_service_offerings)</td>
+ <td>[ibmcloud service list](cli_services.html#ibmcloud_service_list)</td>
+ <td>[ibmcloud service show](cli_services.html#ibmcloud_service_show)</td>
+ <td>[ibmcloud service create](cli_services.html#ibmcloud_service_create)</td>
+ <td>[ibmcloud service update](cli_services.html#ibmcloud_service_update)</td>
  </tr>
  <tr>
- <td>[ibmcloud service delete](ic_cli_services.html#ibmcloud_service_delete)</td>
- <td>[ibmcloud service rename](ic_cli_services.html#ibmcloud_service_rename)</td>
- <td>[ibmcloud service bind](ic_cli_services.html#ibmcloud_service_bind)</td>
- <td>[ibmcloud service unbind](ic_cli_services.html#ibmcloud_service_unbind)</td>
- <td>[ibmcloud service key-create](ic_cli_services.html#ibmcloud_service_key_create)</td>
+ <td>[ibmcloud service delete](cli_services.html#ibmcloud_service_delete)</td>
+ <td>[ibmcloud service rename](cli_services.html#ibmcloud_service_rename)</td>
+ <td>[ibmcloud service bind](cli_services.html#ibmcloud_service_bind)</td>
+ <td>[ibmcloud service unbind](cli_services.html#ibmcloud_service_unbind)</td>
+ <td>[ibmcloud service key-create](cli_services.html#ibmcloud_service_key_create)</td>
  </tr>
  <tr>
- <td>[ibmcloud service key-delete](ic_cli_services.html#ibmcloud_service_key_delete)</td>
- <td>[ibmcloud service keys](ic_cli_services.html#ibmcloud_service_keys)</td>
- <td>[ibmcloud service key-show](ic_cli_services.html#ibmcloud_service_key_show)</td>
- <td>[ibmcloud service user-provided-create](ic_cli_services.html#ibmcloud_service_user_provided_create)</td>
- <td>[ibmcloud service user-provided-update](ic_cli_services.html#ibmcloud_service_user_provided_update)</td>
+ <td>[ibmcloud service key-delete](cli_services.html#ibmcloud_service_key_delete)</td>
+ <td>[ibmcloud service keys](cli_services.html#ibmcloud_service_keys)</td>
+ <td>[ibmcloud service key-show](cli_services.html#ibmcloud_service_key_show)</td>
+ <td>[ibmcloud service user-provided-create](cli_services.html#ibmcloud_service_user_provided_create)</td>
+ <td>[ibmcloud service user-provided-update](cli_services.html#ibmcloud_service_user_provided_update)</td>
  </tr>
   </tbody>
  </table>
- 
+
  ### ibmcloud service offerings
 {: #ibmcloud_service_offerings}
 
