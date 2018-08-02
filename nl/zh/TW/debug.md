@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -32,12 +32,12 @@ lastupdated: "2018-06-26"
 若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需相關資訊，請參閱[應用程式部署 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cfapps/depapps.html#appdeploy){: new_window}。
 
 
-下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/starters/install_cli.html){: new_window}。
+下列程序顯示如何使用 `cf logs` 指令來針對錯誤進行除錯。採取下列步驟之前，請確定已安裝 Cloud Foundry 指令行介面。如需安裝 Cloud Foundry 指令行介面的相關資訊，請參閱[安裝 Cloud Foundry 指令行介面 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/starters/install_cli.html){: new_window}。
 
-  1. 在 cf 指令行介面中輸入下列程式碼，以連接至 {{site.data.keyword.Bluemix_notm}}：
-     ```
-	 cf api https://api.stage1.ng.bluemix.net
-	    ```
+  1. 在 Cloud Foundry 指令行介面中輸入下列程式碼，以連接至 {{site.data.keyword.Bluemix_notm}}：
+  ```
+	 cf api https://api.ng.bluemix.net
+	 ```
 
   2. 輸入 `cf login`，以登入 {{site.data.keyword.Bluemix_notm}}。
 
@@ -53,15 +53,14 @@ lastupdated: "2018-06-26"
 
 ### 針對 Node.js 應用程式的編譯打包錯誤進行除錯
 
-下列範例顯示在您輸入 `cf logs appname --recent` 之後所顯示的日誌。此範例假設 Node.js 應用程式發生編譯打包錯誤：
-
+下列範例顯示在您輸入 `cf logs appname --recent` 之後所顯示的日誌。此範例假設 Node.js 應用程式發生錯誤：
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
 2014-08-11T14:20:44.43+0100 [DEA]     OUT Stopping app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:44.44+0100 [DEA]     OUT Stopped app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:48.97+0100 [DEA]     OUT Got staging request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:48.97+0100 [DEA]     OUT Got request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:50.94+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
 2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Download app package (4.1M)
 2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Download app buildpack cache (1.1M)
@@ -119,7 +118,7 @@ lastupdated: "2018-06-26"
   * 若為 Ruby on Rails 應用程式，請參閱 [The Logger ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}。
   * 若為 Ruby Sinatra 應用程式，請參閱 [Logging ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.sinatrarb.com/intro.html#Logging){: new_window}。
 
-當您在 cf 指令行介面中輸入 `cf logs appname --recent` 時，只會顯示最新的日誌。若要檢視之前發生的錯誤日誌，您必須擷取所有的日誌，然後搜尋錯誤。若要擷取應用程式的所有日誌，請使用下列其中一種方法：
+當您在 Cloud Foundry 指令行介面中輸入 `cf logs appname --recent` 時，只會顯示最新的日誌。若要檢視之前發生的錯誤日誌，您必須擷取所有的日誌，然後搜尋錯誤。若要擷取應用程式的所有日誌，請使用下列其中一種方法：
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>{{site.data.keyword.loganalysisshort}} 服務具有整合性的日誌檔搜尋及分析功能，可協助您快速地識別錯誤。如需相關資訊，請參閱 <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>。</dd>

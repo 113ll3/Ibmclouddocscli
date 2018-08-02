@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -35,7 +35,7 @@ lastupdated: "2018-06-27"
 
 針對上述任何建立方法，流程類似。您可以選擇要使用的專案類型、實作語言及應用程式模式。您也可以選擇將加值型服務新增至應用程式（例如鑑別或持續性）。最後，您可以選擇啟用應用程式的 DevOps 功能，以提供來源控制及團隊通訊的完整工具鏈，以及每次確定時觸發的管線，以驗證、建置及部署您的應用程式至 IBM Cloud。
 
-![使用 IDT CLI 的範例建立流程](create_flow.png "使用 IDT CLI 的範例建立流程") <br> 圖 2. 使用 IDT CLI 的範例建立流程
+![使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程](create_flow.png "使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程") <br> 圖 2. 使用 {{site.data.keyword.dev_cli_notm}} CLI 的範例建立流程
 
 {{site.data.keyword.dev_cli_notm}} CLI 緊密合作，以在開發期間提供無縫經驗。在任何 Web 主控台內建立的專案都會提供「下載程式碼」按鈕，以將產生的原始碼下載至工作站，以進行更多開發。
 
@@ -67,7 +67,7 @@ lastupdated: "2018-06-27"
 ### 參照部落格及視訊
 {: #ref1}
 
-- 視訊：[Installing IDT on Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
+- 視訊：[Installing {{site.data.keyword.Bluemix_notm}} developer tools on Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - 部落格：[Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 

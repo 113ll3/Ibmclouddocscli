@@ -805,8 +805,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-顯示 cf 指令行介面的版本。
-
+顯示 Cloud Foundry 指令行介面的版本。
 
 ```
 cf -v
@@ -817,7 +816,7 @@ cf -v
 
 <strong>範例</strong>：
 
-顯示 cf 指令行介面的版本。
+顯示 Cloud Foundry 指令行介面的版本。
 ```
 cf -v
 ```

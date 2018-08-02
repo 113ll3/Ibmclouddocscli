@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -13,9 +13,9 @@ lastupdated: "2018-06-21"
 {:screen: .screen}  
 {:codeblock: .codeblock}  
 {:pre: .pre}
-{:tip: .tip}  
+{:tip: .tip}
 
-# {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 指令
+# {{site.data.keyword.dev_cli_notm}} CLI 外掛程式 (ibmcloud dev) 指令
 {: #idt-cli}
 
 版本：1.2.0
@@ -24,39 +24,40 @@ lastupdated: "2018-06-21"
 到 2018 年五月為止，{{site.data.keyword.Bluemix_notm}} CLI 指令已從 `bluemix` 和 `bx` 變更為 `ibmcloud`。不過，您仍然可以使用 `bluemix` 和 `bx` CLI 指令，直到未來移除它們為止。
 {: tip}
 
-請使用下列 {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 指令來建立專案、部署、除錯及測試它。
+請使用下列 {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 指令來建立應用程式、管理、部署、除錯及測試它。
 
-- [build](#build)：在本端容器中建置專案
-- [code](#code)：從專案下載程式碼
-- [console](#console)：開啟專案的 IBM Cloud 主控台
-- [create](#create)：建立新的專案，並讓您選擇新增服務
+- [build](#build)：在本端容器中建置應用程式
+- [code](#code)：下載應用程式的程式碼
+- [console](#console)：開啟應用程式的 IBM Cloud 主控台
+- [create](#create)：建立新的應用程式，並讓您選擇新增服務
 - [debug](#debug)：在本端容器中針對您的應用程式進行除錯
-- [delete](#delete)：從您的空間刪除專案
+- [delete](#delete)：從您的空間刪除應用程式
 - [deploy](#deploy)：將應用程式部署至 IBM Cloud
-- [enable](#enable)：將 IBM Cloud 檔案新增至現有的專案
-- [get-credentials](#get-credentials)：取得專案所需的認證，以啟用連結服務的使用
-- [help](#help)：IDT 語法和引數的說明
-- [list](#list)：列出空間中的所有 IBM Cloud 專案
+- [edit](#edit)：在現有應用程式裡新增或移除服務
+- [enable](#enable)：更新現有應用程式以便搭配 IBM Cloud Developer Tools 使用
+- [get-credentials](#get-credentials)：取得應用程式所需的認證，以啟用連接之 IBM Cloud 服務的使用
+- [help](#help)：CLI 語法和引數的說明
+- [list](#list)：列出資源群組中的所有 IBM Cloud 應用程式
 - [run](#run)：在本端容器中執行應用程式
 - [shell](#shell)：開啟 Shell 以連接至本端容器
 - [status](#status)：檢查 CLI 所使用容器的狀態
 - [stop](#stop)：停止容器
 - [test](#test)：在本端容器中測試應用程式
 - [view](#view)：檢視應用程式的部署 URL，以便測試和檢視
-- [複合指令](#compound)：在一個指令行陳述式中執行多個指令
+- [複合指令](#compound)：在單一指令行陳述式中執行多個指令
 
 
 
 ## build
 {: #build}
 
-您可以使用 `build` 指令來建置應用程式。`test`、`debug` 和 `run` 指令預期會發現已編譯的專案，因此您必須先執行 `build` 作業。  
+您可以使用 `build` 指令來建置應用程式。`test`、`debug` 和 `run` 指令預期會發現已編譯的應用程式，因此您必須先執行 `build` 作業。  
 
 `build-cmd-debug` 配置元素用於為除了 `run` 之外的所有使用情形而建置應用程式。建置應用程式以便進行除錯的方法是指定指令行選項 `--debug`。`build-cmd-run` 配置元素用於建置應用程式以便搭配 `run` 指令使用之時。
 
-若要使用多個容器建置，您的專案必須包含 [Compose](https://docs.docker.com/compose/overview/) 檔案（指定於 `cli-config.yml` 中），或是您可以使用 `dockerfile-tools` 指令參數來提供檔案。如需相關資訊，請參閱 [Compose 檔案](/docs/apps/projects/compose_file.html)。
+若要使用多個容器建置，您的應用程式必須包含 [Compose](https://docs.docker.com/compose/overview/) 檔案（指定於 `cli-config.yml` 中），或是您可以使用 `dockerfile-tools` 指令參數來提供檔案。如需相關資訊，請參閱 [Compose 檔案](/docs/apps/projects/compose_file.html)。
 
-在現行專案目錄中執行下列指令，以建置您的應用程式：  
+在現行應用程式目錄中執行下列指令，以建置您的應用程式：  
 
 ```
 ibmcloud dev build [--debug]
@@ -64,18 +65,16 @@ ibmcloud dev build [--debug]
 {: codeblock}
 
 
-[build 指令參數](#command-parameters)
-
 
 ## code
 {: #code}
 
-使用 `code` 指令以下載先前建立的專案，其中包含應用程式範本程式碼以及 {{site.data.keyword.Bluemix_notm}} 的配置檔。當您需要擷取已建立專案的第二個副本時，這十分有用。
+使用 `code` 指令以下載先前建立的應用程式，其中包含應用程式範本程式碼以及 {{site.data.keyword.Bluemix_notm}} 的配置檔。當您需要擷取已建立應用程式的第二個副本時，這十分有用。
 
-執行下列指令，以從指定的專案下載程式碼。
+執行下列指令，以從指定的應用程式下載程式碼。
 
 ```
-ibmcloud dev code <projectName>
+ibmcloud dev code <applicationName>
 ```
 {: codeblock}
 
@@ -83,14 +82,14 @@ ibmcloud dev code <projectName>
 ## console
 {: #console}
 
-使用 `console` 指令，以在 IBM Cloud 上將 Web 瀏覽器開啟到應用程式的 Web 主控台。您可以從專案資料夾內執行 `ibmcloud dev console` 指令，而 CLI 會嘗試在 IBM Cloud 上尋找專案 ID 與現行目錄相同的相符專案。如果系統找不到相符名稱，則會在 IBM Cloud 上開啟 Web 及「行動」儀表板，而非特定專案。
+使用 `console` 指令，以在 IBM Cloud 上將 Web 瀏覽器開啟到應用程式的 Web 主控台。您可以從應用程式資料夾內執行 `ibmcloud dev console` 指令，而 CLI 會嘗試在 IBM Cloud 上尋找應用程式 ID 與現行目錄相同的相符應用程式。如果系統找不到相符名稱，則會在 IBM Cloud 上開啟 Web 及「行動」儀表板，而非特定應用程式。
 
-您可以提供專案名稱，CLI 便會跳過根據資料夾/應用程式名稱進行比對。在此情況下，CLI 會在 Web 瀏覽器中開啟具名專案的主控台。  
+您可以提供應用程式名稱，CLI 便會跳過根據資料夾/應用程式名稱進行比對。在此情況下，CLI 會在 Web 瀏覽器中開啟具名應用程式的主控台。  
 
 執行下列指令，以將 Web 瀏覽器開啟到應用程式的 Web 主控台。
 
 ```
-ibmcloud dev console [projectName]
+ibmcloud dev console [applicationName]
 ```
 {: codeblock}
 
@@ -98,9 +97,9 @@ ibmcloud dev console [projectName]
 ## create
 {: #create}
 
-建立專案，並提示輸入所有資訊，包括資源類型、語言、入門範本套件及「DevOps 工具鏈」選項。專案會在現行目錄中建立。
+建立應用程式，並提示輸入所有資訊，包括資源類型、語言、入門範本套件及「DevOps 工具鏈」選項。應用程式會在現行目錄中建立。
 
-若要在現行目錄中建立專案，並讓服務與其相關聯，請執行下列指令：
+若要在現行目錄中建立應用程式，並讓服務與其相關聯，請執行下列指令：
 
 ```
 ibmcloud dev create
@@ -111,16 +110,16 @@ ibmcloud dev create
 ## debug
 {: #debug}
 
-您可以透過 `debug` 指令，對您的應用程式進行除錯。必須先搭配使用 build 指令與 `--debug` 引數，針對專案完成建置。當您啟動 `debug` 指令時，會啟動容器，以提供 cli-config.yml 中 `container-port-map-debug` 值所定義或指令行上所指定的一個以上除錯埠。將您的最愛除錯工具連接至一個以上的埠，而且可以正常地對應用程式進行除錯。
+您可以透過 `debug` 指令，對您的應用程式進行除錯。必須先搭配使用 build 指令與 `--debug` 引數，針對應用程式完成建置。當您啟動 `debug` 指令時，會啟動容器，以提供 cli-config.yml 中 `container-port-map-debug` 值所定義或指令行上所指定的一個以上除錯埠。將您的最愛除錯工具連接至一個以上的埠，而且可以正常地對應用程式進行除錯。
 
-首先，請編譯您的專案：
+首先，請編譯您的應用程式：
 
 ```
 ibmcloud dev build --debug
 ```
 {: codeblock}
 
-若要開始，請在現行專案目錄中執行下列指令，以對應用程式進行除錯：
+若要開始，請在現行應用程式目錄中執行下列指令，以對應用程式進行除錯：
 
 ```
 ibmcloud dev debug
@@ -160,12 +159,12 @@ ibmcloud dev debug
 ## delete
 {: #delete}
 
-使用 `delete` 指令，以移除 {{site.data.keyword.Bluemix}} 空間中的專案。您可以執行沒有參數的指令來列出可用的專案，然後從編號清單中選取要刪除的專案。專案程式碼及目錄不會從本端磁碟空間中予以移除。
+使用 `delete` 指令，以移除 {{site.data.keyword.Bluemix}} 空間中的應用程式。您可以執行沒有參數的指令來列出可用的應用程式，然後從編號清單中選取要刪除的應用程式。應用程式碼及目錄不會從本端磁碟空間移除。
 
-執行下列指令，以從 {{site.data.keyword.Bluemix}} 中刪除專案：
+執行下列指令，以從 {{site.data.keyword.Bluemix}} 刪除應用程式：
 
 ```
-ibmcloud dev delete <projectName>
+ibmcloud dev delete <applicationName>
 ```
 {: codeblock}
 
@@ -178,13 +177,13 @@ ibmcloud dev delete <projectName>
 
 您可以將應用程式部署為 Cloud Foundry 應用程式或容器。
 
-若要當成 Cloud Foundry 應用程式部署至 {{site.data.keyword.Bluemix}}，`manifest.yml` 檔案必須存在於專案的根目錄中。
+在當成 Cloud Foundry 應用程式部署至 {{site.data.keyword.Bluemix}} 之前，`manifest.yml` 檔案必須存在於應用程式的根目錄中。
 
-若要將應用程式部署為容器，您必須在本端安裝 [Kubernetes](https://kubernetes.io/) 及 [Helm](https://github.com/kubernetes/helm)。請確定 Helm 用戶端版本未比 Helm 伺服器版本還要新。您可以執行 `helm version` 來尋找這兩項。建議使用 2.4.2 版作為用戶端版本。
+將應用程式部署為容器之前，您必須在本端安裝 [Kubernetes](https://kubernetes.io/) 及 [Helm](https://github.com/kubernetes/helm)。請確定 Helm 用戶端版本未比 Helm 伺服器版本還要新。您可以執行 `helm version` 來尋找這兩項。建議使用 2.4.2 版作為用戶端版本。
 
-在 `cli-config.yml` 中，您可以選擇在 `chart-path` 內容中定義 Helm 圖表位置、將 `deploy-target` 元素設為 `container`，並配置 `deploy-image-target`（如範例中所示）。使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 檔案中的 `repository` 及 `tag` 元素。若要特別部署至 {{site.data.keyword.Bluemix}}，請將配置元素 `ibm-cluster` 設為您在 {{site.data.keyword.Bluemix}} 中建立的 Kubernetes 叢集名稱（如[指導教學：建立叢集](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)中所述）。
+若要在 Kubernetes 上部署應用程式，您必須在 `cli-config.yml` 中指定 `deploy-target` 作為 `container`，或使用參數 `-t container`。 
 
-如需佈建、配置及部署至 Kubernetes 叢集的相關資訊，請參閱[在 Kubernetes 上部署可擴充 Web 應用程式](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes)指導教學。
+配置 Kubernetes 部署所需的其他參數也可以指定於 `cli-config.yml`，如下所示，或是使用指令行引數。如果您未在 `cli-config.yml` 中定義這些參數，則必須使用 `-t container` 參數進行部署，而且系統會提示您輸入所有其他值。
 
 ```
     chart-path: "chart/myapplication"
@@ -196,16 +195,18 @@ ibmcloud dev delete <projectName>
     ibm-cluster: "mycluster"
 ```
 
-如果您未在 cli-config.yml 中定義這些參數，則必須使用 `-t container` 參數進行部署，而且系統會提示您輸入所有其他值。
+在 `cli-config.yml` 中，您可以選擇在 `chart-path` 內容中定義 Helm 圖表位置，並配置 `deploy-image-target`（如範例中所示）。使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 檔案中的 `repository` 及 `tag` 元素。若要特別部署至 {{site.data.keyword.Bluemix}}，請將配置元素 `ibm-cluster` 設為您在 {{site.data.keyword.Bluemix}} 中建立的 Kubernetes 叢集名稱（如[指導教學：建立叢集](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)中所述）。
 
-在現行專案目錄中執行下列指令，以建置您的應用程式：  
+如需佈建、配置及部署至 Kubernetes 叢集的相關資訊，請參閱[在 Kubernetes 上部署可擴充 Web 應用程式](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes)指導教學。
+
+在現行應用程式目錄中執行下列指令，以建置您的應用程式：  
 
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-在現行專案目錄中執行下列指令，以部署您的專案：
+在現行應用程式目錄中執行下列指令，以部署您的應用程式：
 
 ```
 ibmcloud dev deploy
@@ -216,7 +217,7 @@ ibmcloud dev deploy
 ### deploy 指令參數
 {: #deploy-parameters}
 
-下列參數可以與 `deploy` 指令搭配使用，或直接更新專案的 `cli-config.yml` 檔案予以使用。還有[其他參數](#command-parameters)與其他指令共用。
+下列參數可以與 `deploy` 指令搭配使用，或直接更新應用程式的 `cli-config.yml` 檔案予以使用。還有[其他參數](#command-parameters)與其他指令共用。
 
 #### `chart-path`
 {: #chart-path}
@@ -242,29 +243,63 @@ ibmcloud dev deploy
 * 這是對 {{site.data.keyword.Bluemix}} 進行容器部署時選擇性使用之參數，用來定義 Kubernetes 叢集名稱
 * 用法：`ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
+#### `host`
+{: #host}
+
+* 部署至 Cloud Foundry 時，選擇性地用來定義應用程式主機名稱的參數
+* 用法：`ibmcloud dev deploy --host [hostname]`
+
+#### `domain`
+{: #domain}
+
+* 部署至 Cloud Foundry 時，選擇性地用來定義應用程式網域的參數
+* 用法：`ibmcloud dev deploy --domain [domain]`
+
+
+## edit
+{: #edit}
+
+藉由新增服務、連接現有服務和將其中斷連線，或移除現有服務，來編輯您的應用程式。請在應用程式目錄的根目錄執行下列指令：
+
+```
+ibmcloud dev edit
+```
+{: codeblock}
+
+如果您在帳戶上沒有任何現有服務，這個指令將顯示服務群組的清單，供您選取要連接至應用程式的服務。
+
+不過，如果您在帳戶上有任何現有服務，這個指令將顯示那些服務的清單，以及每個服務是否連接至應用程式。 
+
+選取已連接的服務會讓您選擇是要從應用程式將服務中斷連線，還是從帳戶刪除服務，因而將它從已連接的所有應用程式中斷連線。
+
+選取已中斷連線的服務會讓您選擇是要將該服務連接至應用程式，還是從帳戶刪除服務。連接現有的服務也將下載例如認證檔或原始碼等檔案，以便開始使用該服務。
+
+您也可以選取新增服務至應用程式的選項。這會引導您完成選取服務的提示，並且將下載其他檔案，例如認證檔或原始碼，以便開始使用新服務。
+
+
 
 ## enable
 {: #enable}
 
-啟用現有專案以進行 {{site.data.keyword.Bluemix_notm}} 部署。`enable` 指令會嘗試自動偵測現有專案的語言，然後提示您輸入必要的其他資訊。這會產生及新增可用於本端 Docker 容器、CloudFoundry 部署或「Kubernetes/容器部署」的檔案。
+啟用現有應用程式以進行 {{site.data.keyword.Bluemix_notm}} 部署。`enable` 指令會嘗試自動偵測現有應用程式的語言，然後提示您輸入必要的其他資訊。這會產生及新增可用於本端 Docker 容器、CloudFoundry 部署或「Kubernetes/容器部署」的檔案。
 
-執行下列指令，以在現行目錄中啟用現有專案進行 {{site.data.keyword.Bluemix_notm}} 部署：
+執行下列指令，以在現行目錄中啟用現有應用程式進行 {{site.data.keyword.Bluemix_notm}} 部署：
 
 ```
 ibmcloud dev enable
 ```
 {: codeblock}
 
-如有必要檔案存在，便會提供對有效專案結構的專案語言偵測。  
+如有必要檔案存在，便會提供對有效專案結構的應用程式語言偵測。  
 
-* `package.json` 檔的存在會識別 Node.js 專案。
-* `package.swift` 檔的存在會識別 Swift 專案。
-* `setup.py` 或 `requirements.txt` 檔的存在會識別 Python 專案。
-* `pom.xml` 或 `build.gradle` 檔的存在會識別 Java 專案。
-	* `pom.xml` 檔的存在會識別 Maven 專案。
-	* `build.gradle` 檔的存在會識別 Gradle 專案。
+* `package.json` 檔的存在會識別 Node.js 應用程式。
+* `package.swift` 檔的存在會識別 Swift 應用程式。
+* `setup.py` 或 `requirements.txt` 檔的存在會識別 Python 應用程式。
+* `pom.xml` 或 `build.gradle` 檔的存在會識別 Java 應用程式。
+	* `pom.xml` 檔的存在會識別 Maven 應用程式。
+	* `build.gradle` 檔的存在會識別 Gradle 應用程式。
 
-您也可以選擇性地使用 `--language` 引數來置換偵測到的專案語言。不過，只支援有效且完整的專案。enable 指令不會修改原始碼。
+您也可以選擇性地使用 `--language` 引數來置換偵測到的應用程式語言。不過，只支援有效且完整的應用程式。enable 指令不會修改原始碼。
 
 語言選項包括：
 * node
@@ -274,30 +309,30 @@ ibmcloud dev enable
 * java-mp（解譯為 Java - Java MicroProfile）
 * java-spring（解譯為 Java - Spring Framework）
 
-如果使用 `ibmcloud dev enable` 指令所建立檔案的名稱與專案資料夾中的現有檔案衝突，則會儲存為 `.merge` 副檔名。  
+如果使用 `ibmcloud dev enable` 指令所建立檔案的名稱與應用程式資料夾中的現有檔案衝突，則會儲存為 `.merge` 副檔名。  
 
 ### enable 指令參數
 {: #enable-parameters}
 
-下列參數可以與 `enable` 指令搭配使用，或直接更新專案的 `cli-config.yml` 檔案予以使用。還有[其他參數](#command-parameters)與其他指令共用。
+下列參數可以與 `enable` 指令搭配使用，或直接更新應用程式的 `cli-config.yml` 檔案予以使用。還有[其他參數](#command-parameters)與其他指令共用。
 
 #### `language`
 {: #enable-language}
 
-* 用來指定要啟用之專案語言的參數。
+* 用來指定要啟用之應用程式語言的參數。
 * 用法：`ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
-* 用來強制重新啟用已啟用專案的參數。
+* 用來強制重新啟用已啟用應用程式的參數。
 * 用法：`ibmcloud dev enable -f|--force`
 
 
 ## get-credentials
 {: #get-credentials}
 
-取得專案所需的認證，以啟用連結服務的使用。
+取得應用程式所需的認證，以啟用連接服務的使用。
 
 
 ## help
@@ -316,9 +351,9 @@ ibmcloud dev help
 ## list
 {: #list}
 
-您可以列出空間中的所有 {{site.data.keyword.Bluemix_notm}} 專案。
+您可以列出資源群組中的所有 {{site.data.keyword.Bluemix_notm}} 應用程式。
 
-執行下列指令，以列出您的專案：
+執行下列指令，以列出您的應用程式：
 
 ```
 ibmcloud dev list
@@ -326,34 +361,21 @@ ibmcloud dev list
 {: codeblock}
 
 
-<!--
-## edit
-{: #edit}
-
-You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
-
-```
-ibmcloud dev edit
-```
-{: codeblock}
--->
-
-
 ## run
 {: #run}
 
-您可以透過 `run` 指令來執行您的應用程式。必須先使用 `build` 指令，針對專案完成建置。當您呼叫 `run` 指令時，會啟動 run 容器，並公開 `container-port-map` 參數所定義的埠。如果 run 容器 Dockerfile 未包含進入點以完成此步驟，則 `run-cmd` 參數可用來呼叫應用程式。
+您可以透過 `run` 指令來執行您的應用程式。必須先使用 `build` 指令，針對應用程式完成建置。當您呼叫 `run` 指令時，會啟動 run 容器，並公開 `container-port-map` 參數所定義的埠。如果 run 容器 Dockerfile 未包含進入點以完成此步驟，則 `run-cmd` 參數可用來呼叫應用程式。
 
-若要使用多個容器執行，您的專案應該包含 [Compose](https://docs.docker.com/compose/overview/) 檔案（指定於 `cli-config.yml` 中），也可以使用 `dockerfile-run` 指令參數來提供檔案。如需相關資訊，請參閱 [Compose 檔案](/docs/apps/projects/compose_file.html)。
+若要使用多個容器執行，您的應用程式應該包含 [Compose](https://docs.docker.com/compose/overview/) 檔案（指定於 `cli-config.yml` 中），也可以使用 `dockerfile-run` 指令參數來提供檔案。如需相關資訊，請參閱 [Compose 檔案](/docs/apps/projects/compose_file.html)。
 
-首先，請編譯您的專案：
+首先，請編譯您的應用程式：
 
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-在現行專案目錄中執行下列指令，以啟動您的應用程式：
+在現行應用程式目錄中執行下列指令，以啟動您的應用程式：
 
 ```
 ibmcloud dev run
@@ -372,7 +394,7 @@ ibmcloud dev run
 {: #container-name-run2}
 
 * run 容器的容器名稱。
-* 用法：`ibmcloud dev run --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev run --container-name-run [<applicationName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -453,7 +475,7 @@ ibmcloud dev shell
 
 您可以查詢 `container-name-run` 及 `container-name-tools` 所定義之 {{site.data.keyword.dev_cli_short}} CLI 所使用容器的狀態。
 
-在現行專案目錄中執行下列指令，以檢查容器狀態：
+在現行應用程式目錄中執行下列指令，以檢查容器狀態：
 
 ```
 ibmcloud dev status
@@ -487,22 +509,22 @@ ibmcloud dev stop
 {: #container-name-run}
 
 * run 容器的容器名稱。
-* 用法：`ibmcloud dev stop --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev stop --container-name-run [<applicationName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * tools 容器的容器名稱。
-* 用法：`ibmcloud dev stop --container-name-tools [<projectName>]`
+* 用法：`ibmcloud dev stop --container-name-tools [<applicationName>]`
 
 
 
 ## test
 {: #test}
 
-您可以透過 `test` 指令來測試您的應用程式。必須先使用 `build --debug` 指令，針對專案完成建置。然後，會使用 tools 容器來為應用程式呼叫 `test-cmd`。
+您可以透過 `test` 指令來測試您的應用程式。必須先使用 `build --debug` 指令，針對應用程式完成建置。然後，會使用 tools 容器來為應用程式呼叫 `test-cmd`。
 
-首先，請編譯您的專案：
+首先，請編譯您的應用程式：
 
 ```
 ibmcloud dev build --debug
@@ -566,7 +588,7 @@ ibmcloud dev view
 #### `web-app-root`
 {: #web-app-root}
 
-* 要附加至 Kubernetes 應用程式 URL 的專案根目錄
+* 要附加至 Cloud Foundry 及 Kubernetes 應用程式 URL 的專案根目錄
 * 用法：`ibmcloud dev view --web-app-root [root]`
 
 
@@ -580,7 +602,7 @@ ibmcloud dev view
 ## 複合指令
 {: #compound}
 
-您可以在一個指令行陳述式中執行多個指令，方法是使用 `/` 定界字元來區隔 IDT 指令。在您指定複合指令之後，可以指定其他指令行旗標。下列指令是如何使用複合指令的範例：
+您可以在一個指令行陳述式中執行多個指令，方法是使用 `/` 定界字元來區隔 {{site.data.keyword.Bluemix_notm}} Developer Tools 指令。在您指定複合指令之後，可以指定其他指令行旗標。下列指令是如何使用複合指令的範例：
 
 ```
 ibmcloud dev build/run
@@ -590,17 +612,19 @@ ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
-所有旗標都必須追蹤最終指令，並會套用至與該旗標相關聯的所有指令。在上面範例中，`--trace` 旗標適用於所有 3 個指令，但 `-t` 只適用於最後 2 個指令，因此不會套用至 `build` 指令。
+所有旗標都必須追蹤最終指令，並會套用至與該旗標相關聯的所有指令。在上面的最終範例中，`--trace` 旗標適用於所有 3 個指令，但 `-t` 只適用於最後 2 個指令，因此不會套用至 `build` 指令。
 
 這些指令可以與此特性搭配使用：`build、debug、deploy、get-credentials、run、stop、test、view`
 
-如果有一個指令因任何原因而失敗，則不會執行後續指令。如果 `debug` 或 `run` 後面有任何指令，則只有在透過從現行終端機視窗結束處理程序以外的方式終止 `debug` 或 `run` 時，才會繼續執行。`CTRL+C` 將會結束處理程序，而不會執行後續指令。例如，您可以從另一個終端機視窗執行 `ibmcloud dev stop`，以停止執行中容器並繼續執行到下一個指令。
+如果有一個指令因任何原因而失敗，則不會執行後續指令。 
+
+如果 `debug` 或 `run` 後面有任何指令，則只有在透過從現行終端機視窗結束處理程序以外的方式終止 `debug` 或 `run` 時，才會繼續執行。`CTRL+C` 將會結束處理程序，而不會執行後續指令。例如，您可以從另一個終端機視窗執行 `ibmcloud dev stop`，以停止執行中容器並繼續執行到下一個指令。
 
 
 ## build、debug、run 及 test 的參數
 {: #command-parameters}
 
-下列參數可以與 `build|debug|run|test` 指令搭配使用，或直接更新專案的 `cli-config.yml` 檔案予以使用。額外參數適用於 [`debug`](#debug-parameters) 及 [`run`](#run-parameters) 指令。
+下列參數可以與 `build|debug|run|test` 指令搭配使用，或直接更新應用程式的 `cli-config.yml` 檔案予以使用。額外參數適用於 [`debug`](#debug-parameters) 及 [`run`](#run-parameters) 指令。
 
 **附註**：指令行上所輸入指令參數的優先順序高於 `cli-config.yml` 配置。
 
@@ -614,13 +638,13 @@ ibmcloud dev build/deploy/view -t container --trace
 {: #container-name-run1}
 
 * run 容器的容器名稱。
-* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * tools 容器的容器名稱。
-* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}
@@ -664,7 +688,8 @@ ibmcloud dev build/deploy/view -t container --trace
 {: #container-mounts-tools}
 
 * 使用此選項來定義主機系統與 tools 容器之間的裝載。
-* `host-path-tools` 及 `container-path-tools` 值會插入至此清單的開頭。* 作為最佳作法並防止非預期的結果，您應該使用相同的裝載設定來建置並除錯。
+* `host-path-tools` 及 `container-path-tools` 值會插入至此清單的開頭。
+* 作為最佳作法並防止非預期的結果，您應該使用相同的裝載設定來建置並除錯。
 * 用法：`ibmcloud dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `build-cmd-run`

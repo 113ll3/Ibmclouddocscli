@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -13,9 +13,9 @@ lastupdated: "2018-06-21"
 {:screen: .screen}  
 {:codeblock: .codeblock}  
 {:pre: .pre}
-{:tip: .tip}  
+{:tip: .tip}
 
-# {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 命令
+# {{site.data.keyword.dev_cli_notm}} CLI 插件 (ibmcloud dev) 命令
 {: #idt-cli}
 
 版本：1.2.0
@@ -24,39 +24,40 @@ lastupdated: "2018-06-21"
 从 2018 年 5 月起，{{site.data.keyword.Bluemix_notm}} CLI 命令已从 `bluemix` 和 `bx` 更改为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到未来某个日期这些命令被除去为止。
 {: tip}
 
-使用以下 {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 命令来创建、部署、调试和测试项目。
+使用以下 {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) 命令来创建、管理、部署、调试和测试应用程序。
 
-- [build](#build)：在本地容器中构建项目
-- [code](#code)：从项目下载代码
-- [console](#console)：打开项目的 IBM Cloud 控制台
-- [create](#create)：创建新项目并提供用于添加服务的选项
+- [build](#build)：在本地容器中构建应用程序
+- [code](#code)：下载应用程序的代码
+- [console](#console)：打开应用程序的 IBM Cloud 控制台
+- [create](#create)：创建新应用程序并提供用于添加服务的选项
 - [debug](#debug)：在本地容器中调试应用程序
-- [delete](#delete)：从空间中删除项目
+- [delete](#delete)：从空间中删除应用程序
 - [deploy](#deploy)：将应用程序部署到 IBM Cloud
-- [enable](#enable)：将 IBM Cloud 文件添加到现有项目
-- [get-credentials](#get-credentials)：获取项目支持使用绑定服务时所需的凭证
-- [help](#help)：有关 IDT 语法和自变量的帮助
-- [list](#list)：列出空间中的所有 IBM Cloud 项目
+- [edit](#edit)：在现有应用程序中添加或除去服务
+- [enable](#enable)：更新现有应用程序以用于 IBM Cloud Developer Tools
+- [get-credentials](#get-credentials)：获取应用程序支持使用连接的 IBM Cloud 服务时所需的凭证
+- [help](#help)：有关 CLI 语法和自变量的帮助
+- [list](#list)：列出资源组中的所有 IBM Cloud 应用程序
 - [run](#run)：在本地容器中运行应用程序
 - [shell](#shell)：将 shell 打开到本地容器中
 - [status](#status)：检查 CLI 使用的容器的状态
 - [stop](#stop)：停止容器
 - [test](#test)：在本地容器中测试应用程序
 - [view](#view)：查看应用程序的部署 URL 以进行测试和查看
-- [compound 命令](#compound)：在一个命令行语句中运行多个命令
+- [复合命令](#compound)：在一个命令行语句中运行多个命令
 
 
 
 ## build
 {: #build}
 
-可以使用 `build` 命令来构建应用程序。`test`、`debug` 和 `run` 命令需要查找已编译的项目，因此必须先运行 `build` 操作。  
+可以使用 `build` 命令来构建应用程序。`test`、`debug` 和 `run` 命令需要查找已编译的应用程序，因此必须先运行 `build` 操作。  
 
 `build-cmd-debug` 配置元素用于构建应用程序以用于除 `run` 之外的所有用途。通过指定命令行选项 `--debug` 来构建应用程序以进行调试。在构建应用程序以用于 `run` 命令时，会使用 `build-cmd-run` 配置元素。
 
-为了使用多个容器进行构建，项目必须包含 `cli-config.yml` 中指定的 [Compose](https://docs.docker.com/compose/overview/) 文件，或者您也可以使用 `dockerfile-tools` 命令参数来提供 Compose 文件。有关更多信息，请参阅 [Compose 文件](/docs/apps/projects/compose_file.html)。
+为了使用多个容器进行构建，应用程序必须包含 `cli-config.yml` 中指定的 [Compose](https://docs.docker.com/compose/overview/) 文件，或者您也可以使用 `dockerfile-tools` 命令参数来提供 Compose 文件。有关更多信息，请参阅 [Compose 文件](/docs/apps/projects/compose_file.html)。
 
-在当前项目目录中运行以下命令来构建应用程序：  
+在当前应用程序目录中运行以下命令来构建应用程序：  
 
 ```
 ibmcloud dev build [--debug]
@@ -64,18 +65,16 @@ ibmcloud dev build [--debug]
 {: codeblock}
 
 
-[Build 命令参数](#command-parameters)
-
 
 ## code
 {: #code}
 
-使用 `code` 命令可下载先前为 {{site.data.keyword.Bluemix_notm}} 创建的包含应用程序模板代码和配置文件的项目。需要抽取已创建项目的第二个副本时，此命令非常有用。
+使用 `code` 命令可下载先前为 {{site.data.keyword.Bluemix_notm}} 创建的包含应用程序模板代码和配置文件的应用程序。需要抽取已创建应用程序的第二个副本时，此命令非常有用。
 
-运行以下命令从指定项目下载代码。
+运行以下命令从指定应用程序下载代码。
 
 ```
-ibmcloud dev code <projectName>
+ibmcloud dev code <applicationName>
 ```
 {: codeblock}
 
@@ -83,14 +82,14 @@ ibmcloud dev code <projectName>
 ## console
 {: #console}
 
-使用 `console` 命令可打开 Web 浏览器并转至 IBM Cloud 上的应用程序 Web 控制台。可以从项目的文件夹内运行 `ibmcloud dev console` 命令，然后 CLI 会尝试在 IBM Cloud 上查找与当前目录具有相同项目标识的匹配项目。如果系统找不到匹配的名称，将会在 IBM Cloud 上打开 Web 和 Mobile 仪表板，而不是打开特定项目。
+使用 `console` 命令可打开 Web 浏览器并转至 IBM Cloud 上的应用程序 Web 控制台。可以从应用程序的文件夹内运行 `ibmcloud dev console` 命令，然后 CLI 会尝试在 IBM Cloud 上查找与当前目录具有相同应用程序标识的匹配应用程序。如果系统找不到匹配的名称，将会在 IBM Cloud 上打开“Web 和移动”仪表板，而不是打开特定应用程序。
 
-可以提供项目名称，这样 CLI 会跳过基于文件夹/应用程序名称进行匹配。在这种情况下，CLI 会在 Web 浏览器中打开指定项目的控制台。  
+可以提供应用程序名称，这样 CLI 会跳过基于文件夹/应用程序名称进行匹配。在这种情况下，CLI 会在 Web 浏览器中打开指定应用程序的控制台。  
 
 运行以下命令来打开 Web 浏览器并转至应用程序的 Web 控制台。
 
 ```
-ibmcloud dev console [projectName]
+ibmcloud dev console [applicationName]
 ```
 {: codeblock}
 
@@ -98,9 +97,9 @@ ibmcloud dev console [projectName]
 ## create
 {: #create}
 
-创建项目，并提示输入所有信息，包括资源类型、语言、初学者工具包和 DevOps 工具链选项。这将在当前目录中创建项目。
+创建应用程序，并提示输入所有信息，包括资源类型、语言、入门模板工具包和 DevOps 工具链选项。这将在当前目录中创建应用程序。
 
-要在当前目录中创建项目并使服务与其相关联，请运行以下命令：
+要在当前目录中创建应用程序并使服务与其相关联，请运行以下命令：
 
 ```
 ibmcloud dev create
@@ -111,16 +110,16 @@ ibmcloud dev create
 ## debug
 {: #debug}
 
-可以通过 `debug` 命令来调试应用程序。在此之前，必须先使用带 `--debug` 自变量的 build 命令对项目完成构建。启动 `debug` 命令时，会启动一个容器，用于提供如 cli-config.yml 中的 `container-port-map-debug` 值所定义或如命令行上所指定的一个或多个调试端口。将您喜欢的调试工具连接到相应端口，然后可以如常调试应用程序。
+可以通过 `debug` 命令来调试应用程序。在此之前，必须先使用带 `--debug` 自变量的 build 命令对应用程序完成构建。启动 `debug` 命令时，会启动一个容器，用于提供如 cli-config.yml 中的 `container-port-map-debug` 值所定义或如命令行上所指定的一个或多个调试端口。将您喜欢的调试工具连接到相应端口，然后可以如常调试应用程序。
 
-首先编译项目：
+首先编译应用程序：
 
 ```
 ibmcloud dev build --debug
 ```
 {: codeblock}
 
-先在当前项目目录中运行以下命令来调试应用程序：
+首先，在当前应用程序目录中运行以下命令来调试应用程序：
 
 ```
 ibmcloud dev debug
@@ -160,12 +159,12 @@ ibmcloud dev debug
 ## delete
 {: #delete}
 
-使用 `delete` 命令可从 {{site.data.keyword.Bluemix}} 空间中除去项目。您可以运行不带参数的命令来列出可用的项目，然后从编号列表中选择要删除的项目。项目代码和目录不会从本地磁盘空间中除去。
+使用 `delete` 命令可从 {{site.data.keyword.Bluemix}} 空间中除去应用程序。您可以运行不带参数的命令来列出可用的应用程序，然后从编号列表中选择要删除的应用程序。应用程序代码和目录不会从本地磁盘空间中除去。
 
-运行以下命令从 {{site.data.keyword.Bluemix}} 中删除项目：
+运行以下命令从 {{site.data.keyword.Bluemix}} 中删除应用程序：
 
 ```
-ibmcloud dev delete <projectName>
+ibmcloud dev delete <applicationName>
 ```
 {: codeblock}
 
@@ -178,13 +177,13 @@ ibmcloud dev delete <projectName>
 
 可以将应用程序部署为 Cloud Foundry 应用程序或容器。
 
-要作为 Cloud Foundry 应用程序部署到 {{site.data.keyword.Bluemix}}，项目的根目录中必须存在 `manifest.yml` 文件。
+作为 Cloud Foundry 应用程序部署到 {{site.data.keyword.Bluemix}} 之前，应用程序的根目录中必须存在 `manifest.yml` 文件。
 
-要将应用程序部署为容器，必须在本地安装 [Kubernetes](https://kubernetes.io/) 和 [Helm](https://github.com/kubernetes/helm)。确保 Helm 客户机版本不高于 Helm 服务器版本。可以通过运行 `helm version` 来找到这两者的版本。建议使用客户机版本 V2.4.2。
+将应用程序部署为容器之前，必须在本地安装 [Kubernetes](https://kubernetes.io/) 和 [Helm](https://github.com/kubernetes/helm)。确保 Helm 客户机版本不高于 Helm 服务器版本。可以通过运行 `helm version` 来找到这两者的版本。建议使用客户机版本 V2.4.2。
 
-在 `cli-config.yml` 中，可以选择在 `chart-path` 属性中定义 Helm 图表的位置，将 `deploy-target` 元素设置为 `container`，然后配置 `deploy-image-target`，如示例所示。这将使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 文件中的 `repository` 和 `tag` 元素。具体来说，要部署到 {{site.data.keyword.Bluemix}}，请将配置元素 `ibm-cluster` 设置为已在 {{site.data.keyword.Bluemix}} 中创建的 Kubernetes 集群的名称，如[教程：创建集群](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)中所述。
+要在 Kubernetes 上部署应用程序，必须在 `cli-config.yml` 中将 `deploy-target` 指定为 `container`，或者使用 `-t container` 参数。 
 
-有关供应、配置和部署到 Kubernetes 集群的更多信息，请参阅[在 Kubernetes 上部署可扩展 Web 应用程序](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes)教程。
+配置 Kubernetes 部署所需的其他参数还可以如下所示在 `cli-config.yml` 中指定，或者使用命令行自变量来指定。如果未在 `cli-config.yml` 中定义这些参数，那么必须使用 `-t container` 参数进行部署，并且系统将提示您输入其他所有值。
 
 ```
     chart-path: "chart/myapplication"
@@ -196,16 +195,18 @@ ibmcloud dev delete <projectName>
     ibm-cluster: "mycluster"
 ```
 
-如果未在 cli-config.yml 中定义这些参数，那么必须使用 `-t container` 参数进行部署，并且系统将提示您输入其他所有值。
+在 `cli-config.yml` 中，可以选择在 `chart-path` 属性中定义 Helm 图表的位置，然后配置 `deploy-image-target`，如示例所示。这将使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 文件中的 `repository` 和 `tag` 元素。具体来说，要部署到 {{site.data.keyword.Bluemix}}，请将配置元素 `ibm-cluster` 设置为已在 {{site.data.keyword.Bluemix}} 中创建的 Kubernetes 集群的名称，如[教程：创建集群](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)中所述。
 
-在当前项目目录中运行以下命令来构建应用程序：  
+有关供应、配置和部署到 Kubernetes 集群的更多信息，请参阅[在 Kubernetes 上部署可扩展 Web 应用程序](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes)教程。
+
+在当前应用程序目录中运行以下命令来构建应用程序：  
 
 ```
-ibmcloud dev build
-```
+  ibmcloud dev build
+  ```
 {: codeblock}
 
-在当前项目目录中运行以下命令来部署项目：
+在当前应用程序目录中运行以下命令来部署应用程序：
 
 ```
 ibmcloud dev deploy
@@ -216,7 +217,7 @@ ibmcloud dev deploy
 ### deploy 命令参数
 {: #deploy-parameters}
 
-以下参数可以与 `deploy` 命令配合使用，也可以通过直接更新项目的 `cli-config.yml` 文件来使用。有[更多参数](#command-parameters)与其他命令共享。
+以下参数可以与 `deploy` 命令配合使用，也可以通过直接更新应用程序的 `cli-config.yml` 文件来使用。有[更多参数](#command-parameters)与其他命令共享。
 
 #### `chart-path`
 {: #chart-path}
@@ -242,29 +243,63 @@ ibmcloud dev deploy
 * 参数（可选），用于定义将容器部署到 {{site.data.keyword.Bluemix}} 的 Kubernetes 集群的名称
 * 用法：`ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
+#### `主机 (host)`
+{: #host}
+
+* 参数（可选），用于定义部署到 Cloud Foundry 时应用程序的主机名
+* 用法：`ibmcloud dev deploy --host [hostname]`
+
+#### `域 (domain)`
+{: #domain}
+
+* 参数（可选），用于定义部署到 Cloud Foundry 时应用程序的域
+* 用法：`ibmcloud dev deploy --domain [domain]`
+
+
+## edit
+{: #edit}
+
+通过添加新服务、连接和断开连接现有服务或删除现有服务来编辑应用程序。在应用程序目录的根目录中运行以下命令：
+
+```
+ibmcloud dev edit
+```
+{: codeblock}
+
+如果您的帐户上没有现有服务，此命令将显示服务组列表，您可以从中选择要连接到应用程序的服务。
+
+但是，如果您的帐户上有任何现有服务，此命令将显示这些服务的列表以及每个服务是否已连接到应用程序。 
+
+通过选择连接的服务，您可选择断开该服务与应用程序的连接或从帐户中删除该服务，从而使其与所连接的所有应用程序断开连接。
+
+通过选择断开连接的服务，您可选择将该服务连接到应用程序，或从帐户中删除该服务。连接现有服务还将下载文件（如凭证文件或源代码）以开始使用该服务。
+
+您还可以选择用于向应用程序添加新服务的选项。这将引导您逐步完成服务选择提示，并将下载其他文件（如凭证文件或源代码）以开始使用新服务。
+
+
 
 ## enable
 {: #enable}
 
-启用现有项目进行 {{site.data.keyword.Bluemix_notm}} 部署。`enable` 命令尝试自动检测现有项目的语言，然后提示您输入必需的其他信息。这将生成并添加可用于本地 Docker 容器、CloudFoundry 部署或 Kubernetes/容器部署的文件。
+允许现有应用程序进行 {{site.data.keyword.Bluemix_notm}} 部署。`enable` 命令尝试自动检测现有应用程序的语言，然后提示您输入其他必要信息。这将生成并添加可用于本地 Docker 容器、CloudFoundry 部署或 Kubernetes/容器部署的文件。
 
-运行以下命令来启用当前目录中的现有项目进行 {{site.data.keyword.Bluemix_notm}} 部署：
+运行以下命令来允许当前目录中的现有应用程序进行 {{site.data.keyword.Bluemix_notm}} 部署：
 
 ```
 ibmcloud dev enable
 ```
 {: codeblock}
 
-存在必要文件可为有效的项目结构提供项目语言检测。  
+存在必要文件可提供应用程序语言检测，以确定项目结构是否有效。  
 
-* 存在 `package.json` 文件可识别 Node.js 项目。
-* 存在 `package.swift` 文件可识别 Swift 项目。
-* 存在 `setup.py` 或 `requirements.txt` 文件可识别 Python 项目。
-* 存在 `pom.xml` 或 `build.gradle` 文件可识别 Java 项目。
-	* 存在 `pom.xml` 可识别 Maven 项目。
-	* 存在 `build.gradle` 可识别 Gradle 项目。
+* 存在 `package.json` 文件可识别 Node.js 应用程序。
+* 存在 `package.swift` 文件可识别 Swift 应用程序。
+* 存在 `setup.py` 或 `requirements.txt` 文件可识别 Python 应用程序。
+* 存在 `pom.xml` 或 `build.gradle` 文件可识别 Java 应用程序。
+	* 存在 `pom.xml` 可识别 Maven 应用程序。
+	* 存在 `build.gradle` 可识别 Gradle 应用程序。
 
-（可选）您还可以使用 `--language` 参数来覆盖检测到的项目语言。但是，仅支持有效且完整的项目。enable 命令不会修改源代码。
+（可选）您还可以使用 `--language` 自变量来覆盖检测到的应用程序语言。但是，仅支持有效且完整的应用程序。enable 命令不会修改源代码。
 
 语言选项包括：
 * node
@@ -274,30 +309,30 @@ ibmcloud dev enable
 * java-mp（解释为 Java - Java MicroProfile）
 * java-spring（解释为 Java - Spring Framework）
 
-如果使用 `ibmcloud dev enable` 命令创建的文件与项目文件夹中的现有文件存在命名冲突，这些文件将使用 `.merge` 文件扩展名进行保存。  
+如果使用 `ibmcloud dev enable` 命令创建的文件与应用程序文件夹中的现有文件存在命名冲突，这些文件将使用 `.merge` 文件扩展名进行保存。  
 
 ### enable 命令参数
 {: #enable-parameters}
 
-以下参数可以与 `enable` 命令配合使用，也可以通过直接更新项目的 `cli-config.yml` 文件来使用。有[更多参数](#command-parameters)与其他命令共享。
+以下参数可以与 `enable` 命令配合使用，也可以通过直接更新应用程序的 `cli-config.yml` 文件来使用。有[更多参数](#command-parameters)与其他命令共享。
 
 #### `language`
 {: #enable-language}
 
-* 该参数用于指定要启用的项目语言。
+* 该参数用于指定要启用的应用程序语言。
 * 用法：`ibmcloud dev enable -l|--language [language]`
 
 #### `force`
 {: #enable-force}
 
-* 该参数用于强制重新启用已启用的项目。
+* 该参数用于强制重新启用已启用的应用程序。
 * 用法：`ibmcloud dev enable -f|--force`
 
 
 ## get-credentials
 {: #get-credentials}
 
-获取项目支持使用绑定服务时所需的凭证。
+获取应用程序支持使用连接的服务时所需的凭证。
 
 
 ## help
@@ -316,9 +351,9 @@ ibmcloud dev help
 ## list
 {: #list}
 
-可以列出空间中的所有 {{site.data.keyword.Bluemix_notm}} 项目。
+可以列出资源组中的所有 {{site.data.keyword.Bluemix_notm}} 应用程序。
 
-运行以下命令来列出项目：
+运行以下命令来列出应用程序：
 
 ```
 ibmcloud dev list
@@ -326,38 +361,25 @@ ibmcloud dev list
 {: codeblock}
 
 
-<!--
-## edit
-{: #edit}
-
-You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
-
-```
-ibmcloud dev edit
-```
-{: codeblock}
--->
-
-
 ## run
 {: #run}
 
-可以通过 `run` 命令来运行应用程序。在此之前，必须先使用 `build` 命令对项目完成构建。调用 `run` 命令时，将启动 run 容器，并按 `container-port-map` 参数所定义的方式公开端口。如果 run 容器 Dockerfile 不包含用于完成此步骤的入口点，那么可以使用 `run-cmd` 参数来调用应用程序。
+可以通过 `run` 命令来运行应用程序。在此之前，必须先使用 `build` 命令对应用程序完成构建。调用 `run` 命令时，将启动 run 容器，并按 `container-port-map` 参数所定义的方式公开端口。如果 run 容器 Dockerfile 不包含用于完成此步骤的入口点，那么可以使用 `run-cmd` 参数来调用应用程序。
 
-为了使用多个容器来运行，项目应包含 `cli-config.yml` 中指定的 [Compose](https://docs.docker.com/compose/overview/) 文件，或者您也可以使用 `dockerfile-run` 命令参数来提供 Compose 文件。有关更多信息，请参阅 [Compose 文件](/docs/apps/projects/compose_file.html)。
+为了使用多个容器来运行，应用程序应包含 `cli-config.yml` 中指定的 [Compose](https://docs.docker.com/compose/overview/) 文件，或者您也可以使用 `dockerfile-run` 命令参数来提供 Compose 文件。有关更多信息，请参阅 [Compose 文件](/docs/apps/projects/compose_file.html)。
 
-首先编译项目：
+首先编译应用程序：
 
 ```
-ibmcloud dev build
-```
+  ibmcloud dev build
+  ```
 {: codeblock}
 
-在当前项目目录中运行以下命令来启动应用程序：
+在当前应用程序目录中运行以下命令来启动应用程序：
 
 ```
-ibmcloud dev run
-```
+  ibmcloud dev run
+  ```
 {: codeblock}
 
 要退出会话，请使用 `CTRL-C`。
@@ -372,7 +394,7 @@ ibmcloud dev run
 {: #container-name-run2}
 
 * run 容器的容器名称。
-* 用法：`ibmcloud dev run --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev run --container-name-run [<applicationName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -453,7 +475,7 @@ ibmcloud dev shell
 
 可以查询 {{site.data.keyword.dev_cli_short}} CLI 使用的容器（如 `container-name-run` 和 `container-name-tools` 所定义）的状态。
 
-在当前项目目录中运行以下命令来检查容器状态：
+在当前应用程序目录中运行以下命令来检查容器状态：
 
 ```
 ibmcloud dev status
@@ -487,22 +509,22 @@ ibmcloud dev stop
 {: #container-name-run}
 
 * run 容器的容器名称。
-* 用法：`ibmcloud dev stop --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev stop --container-name-run [<applicationName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * tools 容器的容器名称。
-* 用法：`ibmcloud dev stop --container-name-tools [<projectName>]`
+* 用法：`ibmcloud dev stop --container-name-tools [<applicationName>]`
 
 
 
 ## test
 {: #test}
 
-可以通过 `test` 命令来测试应用程序。在此之前，必须先使用 `build --debug` 命令对项目完成构建。然后，tools 容器用于对应用程序调用 `test-cmd`。
+可以通过 `test` 命令来测试应用程序。在此之前，必须先使用 `build --debug` 命令对应用程序完成构建。然后，tools 容器用于对应用程序调用 `test-cmd`。
 
-首先编译项目：
+首先编译应用程序：
 
 ```
 ibmcloud dev build --debug
@@ -566,7 +588,7 @@ ibmcloud dev view
 #### `web-app-root`
 {: #web-app-root}
 
-* 要附加到 Kubernetes 应用程序 URL 的项目根目录
+* 要附加到 Cloud Foundry 和 Kubernetes 应用程序 URL 的项目根目录
 * 用法：`ibmcloud dev view --web-app-root [root]`
 
 
@@ -577,10 +599,10 @@ ibmcloud dev view
 * 用法：`ibmcloud dev view --ibm-cluster [cluster-name]`
 
 
-## compound 命令
+## 复合命令
 {: #compound}
 
-可以通过使用 `/` 定界符来分隔 IDT 命令，从而在一个命令行语句中运行多个命令。在指定 compound 命令后，可以指定其他命令行标志。以下命令是可以如何使用 compound 命令的示例：
+可以通过使用 `/` 定界符来分隔 {{site.data.keyword.Bluemix_notm}} Developer Tools 命令，从而在一个命令行语句中运行多个命令。在指定复合命令后，可以指定其他命令行标志。以下命令是可以如何使用复合命令的示例：
 
 ```
 ibmcloud dev build/run
@@ -590,17 +612,19 @@ ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
-所有标志都必须尾随最后一个命令，并将应用于与该标志关联的所有命令。在以上示例中，`--trace` 标志适用于所有 3 个命令，但 `-t` 仅适用于最后 2 个命令，因此不适用于 `build` 命令。
+所有标志都必须尾随最后一个命令，并将应用于与该标志关联的所有命令。在以上最后一个示例中，`--trace` 标志适用于所有 3 个命令，但 `-t` 仅适用于最后 2 个命令，因此不适用于 `build` 命令。
 
 下面是可用于此功能的命令：`build、debug、deploy、get-credentials、run、stop、test 和 view`
 
-如果某个命令出于任何原因而失败，那么不会执行后续命令。如果 `debug` 或 `run` 后跟任何命令，那么仅当 `debug` 或 `run` 以不同于在当前终端窗口中终止进程的方法来终止时，执行才会继续。`CTRL+C` 将终止该进程，而不会运行后续命令。例如，可以在其他终端窗口中执行 `ibmcloud dev stop` 以停止正在运行的容器，然后继续执行到下一个命令。
+如果某个命令出于任何原因而失败，那么不会执行后续命令。 
+
+如果 `debug` 或 `run` 后跟任何命令，那么仅当 `debug` 或 `run` 以不同于在当前终端窗口中终止进程的方法来终止时，执行才会继续。`CTRL+C` 将终止该进程，而不会运行后续命令。例如，可以在其他终端窗口中执行 `ibmcloud dev stop` 以停止正在运行的容器，然后继续执行到下一个命令。
 
 
 ## 用于 build、debug、run 和 test 的参数
 {: #command-parameters}
 
-以下参数可以与 `build|debug|run|test` 命令配合使用，也可以通过直接更新项目的 `cli-config.yml` 文件来使用。还有额外的参数可用于 [`debug`](#debug-parameters) 和 [`run`](#run-parameters) 命令。
+以下参数可以与 `build|debug|run|test` 命令配合使用，也可以通过直接更新应用程序的 `cli-config.yml` 文件来使用。还有额外的参数可用于 [`debug`](#debug-parameters) 和 [`run`](#run-parameters) 命令。
 
 **注**：在命令行上输入的命令参数优先于 `cli-config.yml` 配置。
 
@@ -614,13 +638,13 @@ ibmcloud dev build/deploy/view -t container --trace
 {: #container-name-run1}
 
 * run 容器的容器名称。
-* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
+* 用法：`ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * tools 容器的容器名称。
-* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* 用法：`ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}

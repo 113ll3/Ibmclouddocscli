@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-18"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2018-06-18"
 # {{site.data.keyword.Bluemix_notm}} (ibmcloud) 指令
 {: #bluemix_cli}
 
-版本：0.7.1
 
 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 提供一組依名稱空間分組的指令，讓使用者與 {{site.data.keyword.Bluemix_notm}} 互動。
 
-從 0.5.0 版開始，{{site.data.keyword.Bluemix_notm}} 指令行用戶端已將 Cloud Foundry 指令行用戶端搭載在其安裝中。如果您已安裝自己的 cf cli，請不要在相同環境定義中使用自己的安裝的 {{site.data.keyword.Bluemix_notm}} CLI 指令 `ibmcloud [command]` 及 Cloud Foundry CLI 指令 `cf [command]`。如果您要使用 cf cli 來管理 {{site.data.keyword.Bluemix_notm}} CLI 環境定義中的 Cloud Foundry 資源，請改為使用 `ibmcloud cf [command]`。請注意，不容許 `ibmcloud cf api/login/logout/target`，必須改為使用 `ibmcloud api/login/logout/target`。
+{{site.data.keyword.Bluemix_notm}} 指令行用戶端已將 Cloud Foundry 指令行用戶端搭載在其安裝中。如果您已安裝自己的 cf cli，請不要在相同環境定義中使用自己的安裝的 {{site.data.keyword.Bluemix_notm}} CLI 指令 `ibmcloud [command]` 及 Cloud Foundry CLI 指令 `cf [command]`。如果您要使用 cf cli 來管理 {{site.data.keyword.Bluemix_notm}} CLI 環境定義中的 Cloud Foundry 資源，請改為使用 `ibmcloud cf [command]`。請注意，不容許 `ibmcloud cf api/login/logout/target`，必須改為使用 `ibmcloud api/login/logout/target`。
 
 到 2018 年五月為止，{{site.data.keyword.Bluemix_notm}} CLI 指令已從 `bluemix` 和 `bx` 變更為 `ibmcloud`。不過，您仍然可以使用 `bluemix` 和 `bx` CLI 指令，直到未來移除它們為止。
 {: tip}
@@ -632,7 +631,7 @@ ibmcloud -q cf services
 登入使用者。
 
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>必要條件</strong>：無
@@ -652,8 +651,10 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i>（選用）</dt>
   <dd> 密碼</dd>
   <dt> -c <i>ACCOUNT_ID</i>（選用）</dt>
-  <dd> 目標帳戶的 ID</dd>
-  <dt> -g <i>RESOURCE_GROUP</i> (optional)</dt>
+  <dd> 目標帳戶的 ID。此選項與 '--no-account' 不能同時使用。</dd>
+  <dt> --no-account（選用）</dt>
+  <dd> 強制以不使用帳戶的方式登入。不建議使用這個選項。此選項與 '-c' 不能同時使用。</dd>
+  <dt> -g <i>RESOURCE_GROUP</i>（選用）</dt>
   <dd> 目標資源群組的名稱</dd>
   <dt> -o <i>ORG</i>（選用）</dt>
   <dd> 目標組織的名稱（已淘汰，請使用 'ibmcloud target -o ORG'）</dd>

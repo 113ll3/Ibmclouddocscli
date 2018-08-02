@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 
 您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 环境。例如，可以从 LDAP 注册表添加用户。有关管理 {{site.data.keyword.Bluemix_notm}} Public 帐户的信息，请参阅[管理](/docs/admin/adminpublic.html#administer)。
 
-开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面 ![外部链接图标](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
+开始之前，请安装 Cloud Foundry 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面 ![外部链接图标](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
 
@@ -27,7 +27,7 @@ lastupdated: "2018-06-21"
 
 ## 添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
 
-安装了 cf 命令行界面后，可以添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件。
+安装了 Cloud Foundry 命令行界面后，可以添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件。
 
 **注**：如果先前安装了 {{site.data.keyword.Bluemix_notm}} 管理插件，那么可能需要卸载此插件，删除存储库，然后重新安装以获取最新更新。
 

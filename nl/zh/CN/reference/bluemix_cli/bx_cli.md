@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-18"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2018-06-18"
 # {{site.data.keyword.Bluemix_notm}} (ibmcloud) 命令
 {: #bluemix_cli}
 
-版本：0.7.1
 
 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 提供了一组按名称空间分组的命令，供用户用于与 {{site.data.keyword.Bluemix_notm}} 进行交互。
 
-从 V0.5.0 开始，{{site.data.keyword.Bluemix_notm}} 命令行客户机在其安装中捆绑了 Cloud Foundry 命令行客户机。如果您已安装 cf CLI，请勿在同一上下文中同时使用 {{site.data.keyword.Bluemix_notm}} CLI 命令 `ibmcloud [command]` 和您自己安装的 Cloud Foundry CLI 命令 `cf [command]`。如果要在 {{site.data.keyword.Bluemix_notm}} CLI 上下文中使用 cf CLI 来管理 Cloud Foundry 资源，请改为使用 `ibmcloud cf [command]`。请注意，不允许使用 `ibmcloud cf api/login/logout/target`，必须改为使用 `ibmcloud api/login/logout/target`。
+{{site.data.keyword.Bluemix_notm}} 命令行客户机在其安装中捆绑了 Cloud Foundry 命令行客户机。如果您已安装 cf CLI，请勿在同一上下文中同时使用 {{site.data.keyword.Bluemix_notm}} CLI 命令 `ibmcloud [command]` 和您自己安装的 Cloud Foundry CLI 命令 `cf [command]`。如果要在 {{site.data.keyword.Bluemix_notm}} CLI 上下文中使用 cf CLI 来管理 Cloud Foundry 资源，请改为使用 `ibmcloud cf [command]`。请注意，不允许使用 `ibmcloud cf api/login/logout/target`，必须改为使用 `ibmcloud api/login/logout/target`。
 
 从 2018 年 5 月起，{{site.data.keyword.Bluemix_notm}} CLI 命令已从 `bluemix` 和 `bx` 更改为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到未来某个日期这些命令被除去为止。
 {: tip}
@@ -632,7 +631,7 @@ ibmcloud -q cf services
 用户登录。
 
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>先决条件</strong>：无
@@ -652,7 +651,9 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i>（可选）</dt>
   <dd> 密码</dd>
   <dt> -c <i>ACCOUNT_ID</i>（可选）</dt>
-  <dd> 目标帐户的标识</dd>
+  <dd> 目标帐户的标识。此选项与 --no-account 互斥</dd>
+  <dt> --no-account（可选）</dt>
+  <dd> 强制在不使用帐户的情况下登录。建议不要使用此选项。此选项与 -c 互斥。</dd>
   <dt> -g <i>RESOURCE_GROUP</i>（可选）</dt>
   <dd> 目标资源组的名称</dd>
   <dt> -o <i>ORG</i>（可选）</dt>
@@ -1157,7 +1158,8 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户分配到的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户分配到的空间角色的名称。例如：<ul>
+   <dd>要将此用户分配到的空间角色的名称。例如：
+   <ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -1193,7 +1195,8 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户从中除去的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的空间角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的空间角色的名称。例如：
+   <ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -4691,7 +4694,7 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
   <dd>将帐户（或逗号分隔帐户列表）添加到“包含”列表，授予该条目可视性。可接受电子邮件或帐户 GUID</dd>
   <dt>--includes-remove</dt>
   <dd>从“包含”列表中除去帐户（或逗号分隔帐户列表），撤销该条目的可视性。可接受电子邮件或帐户 GUID</dd>  
-  <dt>--excludes-add </dt>
+  <dt>--excludes-add</dt>
   <dd>将帐户（或逗号分隔帐户列表）添加到“排除”列表。可接受电子邮件或帐户 GUID</dd>
   <dt>--excludes-remove</dt>
   <dd>从“排除”列表中除去帐户（或逗号分隔帐户列表），撤销该条目的可视性。如果帐户是由全局管理员设置的，那么帐户管理员无法除去该帐户。可接受电子邮件或帐户 GUID</dd>
