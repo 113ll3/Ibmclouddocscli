@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -35,7 +35,7 @@ Esistono diversi modi per creare un'applicazione Cloud.
 
 Per ognuno dei metodi di creazione precedenti, il flusso è simile. Puoi scegliere il tipo di progetto, il linguaggio di implementazione e il modello dell'applicazione da utilizzare. Puoi anche scegliere di aggiungere servizi di valore aggiunto alla tua applicazione, come l'autenticazione o la persistenza. Infine, puoi scegliere di abilitare la funzionalità DevOps all'applicazione che fornisce una toolchain completa del controllo di origine e le comunicazioni con il team e una pipeline che viene attivata ad ogni commit per convalidare, creare e distribuire la tua applicazione a IBM Cloud.
 
-![Esempio di flusso di creazione utilizzando la CLI IDT](create_flow.png "Esempio di flusso di creazione utilizzando la CLI IDT") <br> Figura 2. Esempio di flusso di creazione utilizzando la CLI IDT
+![Flusso di creazione di esempio utilizzando la CLI {{site.data.keyword.dev_cli_notm}}](create_flow.png "Flusso di creazione di esempio utilizzando la CLI {{site.data.keyword.dev_cli_notm}}") <br> Figura 2. Flusso di creazione di esempio utilizzando la CLI {{site.data.keyword.dev_cli_notm}}
 
 La CLI {{site.data.keyword.dev_cli_notm}} lavora a stretto contatto per fornire un'esperienza ottimale durante lo sviluppo. I progetti creati in qualsiasi console web forniscono un pulsante "Scarica codice" per scaricare il codice sorgente generato sulla tua workstation per un ulteriore sviluppo.
 
@@ -67,7 +67,7 @@ Ulteriori dettagli sulle strutture del progetto possono essere trovate qui:
 ### Video e blog di riferimento
 {: #ref1}
 
-- Video: [Installazione di IDT su Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
+- Video: [Installazione di {{site.data.keyword.Bluemix_notm}} Developer Tools su Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - Blog: [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 

@@ -20,7 +20,7 @@ lastupdated: "2018-06-21"
 Puoi gestire gli ambienti {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI. Ad
 esempio, puoi aggiungere utenti da un registro LDAP. Per informazioni sulla gestione del tuo account {{site.data.keyword.Bluemix_notm}} pubblico, vedi [Amministrazione](/docs/admin/adminpublic.html#administer).
 
-Prima di iniziare, installa l'interfaccia riga di comando cf. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
+Prima di iniziare, l'installa l'interfaccia riga di comando Cloud Foundry. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI richiede cf versione 6.11.2 o successive. [Scarica interfaccia riga di comando Cloud Foundry ![Icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Limitazione:** l'interfaccia riga di comando Cloud Foundry non
@@ -31,9 +31,7 @@ in una finestra riga di comando diversa da quella di Cygwin.
 
 ## Aggiunta del plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI
 
-Dopo aver installato l'interfaccia riga di comandi cf, puoi
-aggiungere il plug-in {{site.data.keyword.Bluemix_notm}} Admin
-CLI.
+Dopo aver installato l'interfaccia riga di comandi Cloud Foundry, puoi aggiungere il plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI.
 
 **Nota**: se avevi già installato il plug-in Gestione {{site.data.keyword.Bluemix_notm}}, per ottenere gli ultimi aggiornamenti potresti doverlo disinstallare, eliminare il repository e reinstallare il plug-in.
 
@@ -675,7 +673,7 @@ cf ba edit-service-plan-visibilities <identificativo_piano> <organizzazione_1> <
 <dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome di piano di servizio non univoco, ad esempio "Standard" o "Di base," ti verrà richiesto di scegliere tra i piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla home page, quindi seleziona **Aggiungi** per visualizzare i servizi per quella categoria. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio.</dd>
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} per cui aggiungere la visibilità. Puoi abilitare la visibilità del servizio per più di
-un'organizzazione immettendo altri nomi o GUID di organizzazione nel comando. </dd>
+un'organizzazione immettendo altri nomi o GUID di organizzazione nel comando.</dd>
 </dl>
 
 **Suggerimento:** puoi anche utilizzare **ba espv** come alias per il più lungo
@@ -756,7 +754,7 @@ tra virgolette.</dd>
 ## Visualizzazione delle informazioni sulle metriche della risorsa
 {: #cliresourceusage}
 
-Puoi visualizzare le informazioni sulle metriche della risorsa, tra cui l'utilizzo di memoria, disco e CPU. Oltre all'utilizzo di tali risorse, puoi vedere un riepilogo delle risorse fisiche e riservate disponibili. Inoltre, puoi visualizzare i dati di utilizzo dei DEA (droplet execution agent) e delle celle (architettura Diego). Per visualizzare le informazioni sulle metriche della risorsa, utilizza il seguente comando:
+Puoi visualizzare le informazioni sulle metriche della risorsa, compresi l'utilizzo di memoria, disco e CPU. Oltre all'utilizzo di tali risorse, puoi vedere un riepilogo delle risorse fisiche e riservate disponibili. Inoltre, puoi visualizzare i dati di utilizzo dei DEA (droplet execution agent) e delle celle (architettura Diego). Per visualizzare le informazioni sulle metriche della risorsa, utilizza il seguente comando:
 
 ```
 cf ba resource-metrics
@@ -1081,7 +1079,7 @@ cf ba unbind-staging-security-group <gruppo-di-sicurezza>
 <dd class="pd">Nome del tuo gruppo di sicurezza</dd>
 </dl>
 
-**Avvertenza**: l'annullamento del bind della serie di gruppi **Preparazione predefinita** dai due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, disabilita l'accesso globale alla rete esterna e deve essere utilizzato con cautela e comprensione delle implicazioni che ha su tutte le applicazioni in fase di preparazione nel tuo ambiente. 
+**Avvertenza**: l'annullamento del bind della serie di gruppi **Preparazione predefinita** dai due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, disabilita l'accesso globale alla rete esterna e deve essere utilizzato con cautela e comprensione delle implicazioni che ha su tutte le applicazioni in fase di preparazione nel tuo ambiente.
 
 **Suggerimento:** puoi anche utilizzare **ba ussg** come alias per il più lungo nome comando
 **ba unbind-staging-security-group**.

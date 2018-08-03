@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-05"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Introduzione alla CLI {{site.data.keyword.Bluemix_notm}}
+# Introduzione agli strumenti per sviluppatori {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
 In questa esercitazione, vengono forniti i passi per installare una serie di strumenti per sviluppatori {{site.data.keyword.Bluemix}}, verificare l'installazione e configurare il tuo ambiente. Gli strumenti per sviluppatori {{site.data.keyword.Bluemix}} offrono un approccio da riga di comando per la creazione, lo sviluppo e la distribuzione di applicazioni web, mobili e di microservizio end-to-end. 
@@ -39,8 +39,8 @@ Con questa installazione, ottieni la CLI {{site.data.keyword.Bluemix_notm}}, olt
 
 Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e dei seguenti requisiti di sistema:
 
-* Se stai utilizzando Microsoft Windows&trade;, devi utilizzare Windows 10 o successivi.
-* Devi utilizzare il canale stabile per Docker con una versione minima di 1.13.1.
+* Se stai utilizzando Microsoft Windows &trade;, devi utilizzare 10 Pro o versioni successive.
+* Devi utilizzare il canale stabile per Docker con una versione minima di 1.13.1. 
 
 ## Passo 1: Esegui il comando di installazione
 {: #step1}
@@ -48,21 +48,21 @@ Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.
 * Per Mac e Linux, immetti il seguente comando:
 
   ```
-  curl -sL https://ibm.biz/idt-installer | bash
+  curl -sL http://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br>
-
-* Per Windows 10, immetti il seguente comando come amministratore:
+  
+* Per Windows 10 Pro, esegui il seguente comando come amministratore:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br>
 
   Fai clic con il tasto destro del mouse sull'icona Windows PowerShell e seleziona **Run as administrator**.
   {: tip}
+  
+  Per istruzioni sull'installazione manuale di questi strumenti, vedi [Reinstallazione degli strumenti](/docs/cli/ts_createapps.html#appendix).
 
 ## Passo 2: Verifica l'installazione
 {: #step2}
@@ -92,17 +92,26 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 	ibmcloud login
 	```
 	{: codeblock}
-<br>
-
-	Se le tue credenziali vengono rifiutate, puoi utilizzare un ID federato. Per ulteriori dettagli, vedi [Accesso con un ID federato](/docs/iam/login_fedid.html#using-an-api-key).
+    <br>
+    
+	Se le tue credenziali vengono rifiutate, puoi utilizzare un ID federato. Per ulteriori dettagli, vedi [Accesso con un ID federato](/docs/iam/login_fedid.html#federated_id).
 	{: tip}
 
 3. Imposta la tua organizzazione e il tuo spazio.
 
 	```
+	ibmcloud target --cf
+	```
+	{: codeblock}
+	
+	Facoltativamente, puoi utilizzare l'output del comando sopra riportato per impostare manualmente la tua organizzazione e il tuo spazio con il seguente comando:
+
+	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
+	
+Per segnalare problemi o fornire un feedback, puoi utilizzare [Slack di IBM Cloud Tech - Canale #developer-tools](https://ibm-cloud-tech.slack.com) - richiedi l'accesso del team [qui](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
 
 ## Passi successivi
 {: #next-steps}

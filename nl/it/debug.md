@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -27,21 +27,21 @@ I log sono in un formato fisso. Per i log dettagliati, puoi filtrarli o utilizza
 
 ## Debug degli errori di preparazione
 {: #debugging-staging-errors}
-Potrebbero verificarsi dei problemi durante la preparazione delle tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Se la preparazione della tua applicazione non viene eseguita correttamente, puoi visualizzare ed effettuare ricerche nei log di preparazione (STG) al fine di scoprire cosa è accaduto durante la distribuzione dell'applicazione e risolvere il problema. Per ulteriori informazioni sui metodi di visualizzazione dei log per le applicazioni {{site.data.keyword.Bluemix}}, vedi [Visualizzazione dei log ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}.  
+Potrebbero verificarsi dei problemi durante la preparazione delle tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Se la preparazione della tua applicazione non viene eseguita correttamente, puoi visualizzare ed effettuare ricerche nei log di preparazione [STG] al fine di scoprire cosa è accaduto durante la distribuzione dell'applicazione e risolvere il problema. Per ulteriori informazioni sui metodi di visualizzazione dei log per le applicazioni {{site.data.keyword.Bluemix}}, vedi [Visualizzazione dei log ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}.  
 
 Per comprendere il motivo per cui la tua applicazione potrebbe provocare errori in {{site.data.keyword.Bluemix_notm}}, devi sapere come vengono distribuite ed eseguite le applicazioni in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
-La seguente procedura mostra come puoi utilizzare il comando `cf logs` per eseguire il debug degli errori di preparazione. Prima di iniziare la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Per ulteriori informazioni sull'installazione dell'interfaccia riga di comando cf, vedi [Installing the cf command line interface ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/starters/install_cli.html){: new_window}.
+La seguente procedura mostra come puoi utilizzare il comando `cf logs` per eseguire il debug degli errori. Prima di effettuare la seguente procedura, accertati di aver installato l'interfaccia riga di comando (CLI) Cloud Foundry. Per ulteriori informazioni sull'installazione dell'interfaccia riga di comando (CLI) Cloud Foundry, vedi [Installazione dell'interfaccia riga di comando (CLI) Cloud Foundry ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/starters/install_cli.html){: new_window}.
 
-  1. Connettiti a {{site.data.keyword.Bluemix_notm}} immettendo il seguente codice nell'interfaccia riga di comando cf:
+  1. Connettiti a {{site.data.keyword.Bluemix_notm}} immettendo il seguente codice nell'interfaccia riga di comando (CLI)) Cloud Foundry:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Accedi a {{site.data.keyword.Bluemix_notm}} immettendo `cf login`.
 
-  3. Recupera i log recenti immettendo `cf logs nomeapplicazione --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
+  3. Recupera i log recenti immettendo `cf logs appname --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
     ```
 	cf logs appname --recent | grep '\[STG\]'
 	```
@@ -53,15 +53,14 @@ Oltre al comando `cf logs`, in {{site.data.keyword.Bluemix_notm}} puoi utilizzar
 
 ### Debug degli errori di preparazione per un'applicazione Node.js
 
-Il seguente esempio mostra un log che viene visualizzato dopo che immetti `cf logs nomeapplicazione --recent`. Nell'esempio
-si suppone che si siano verificati errori di preparazione per un'applicazione Node.js:
+Il seguente esempio mostra un log che viene visualizzato dopo che immetti `cf logs nomeapplicazione --recent`. L'esempio presuppone che gli errori si siano verificati per un'applicazione Node.js:
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
 2014-08-11T14:20:44.43+0100 [DEA]     OUT Stopping app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:44.44+0100 [DEA]     OUT Stopped app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:48.97+0100 [DEA]     OUT Got staging request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:48.97+0100 [DEA]     OUT Got request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:50.94+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
 2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Download app package (4.1M)
 2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Download app buildpack cache (1.1M)
@@ -116,7 +115,7 @@ che vengono distribuite tramite i pacchetti di build integrati {{site.data.keywo
   * Per le applicazioni Ruby on Rails, vedi [The Logger ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Per le applicazioni Ruby Sinatra, vedi [Logging ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
-Quando immetti `cf logs nomeapplicazione --recent` nell'interfaccia riga di comando cf, vengono visualizzati solo i log più recenti. Per visualizzare i log con gli errori che si sono verificati in precedenza, devi recuperare tutti i log e ricercare gli errori. Per recuperare tutti i log per la tua applicazione, utilizza uno dei seguenti metodi:
+Quando immetti `cf logs appname --recent` nell'interfaccia riga di comando (CLI) Cloud Foundry, vengono visualizzati solo i log più recenti. Per visualizzare i log con gli errori che si sono verificati in precedenza, devi recuperare tutti i log e ricercare gli errori. Per recuperare tutti i log per la tua applicazione, utilizza uno dei seguenti metodi:
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>La capacità di ricerca e analisi dei file di log del servizio {{site.data.keyword.loganalysisshort}} possono aiutarti a identificare rapidamente gli errori. Per ulteriori informazioni, vedi <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>.</dd>

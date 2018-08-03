@@ -803,7 +803,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Visualizza la versione dell'interfaccia riga di comando cf.
+Visualizza la versione dell'interfaccia riga di comando (CLI) Cloud Foundry.
 
 ```
 cf -v
@@ -814,7 +814,7 @@ cf -v
 
 <strong>Esempi</strong>:
 
-Visualizza la versione dell'interfaccia riga di comando cf.
+Visualizzare la versione dell'interfaccia riga di comando (CLI) Cloud Foundry.
 ```
 cf -v
 ```

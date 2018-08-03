@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-18"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2018-06-18"
 # Comandi {{site.data.keyword.Bluemix_notm}} (ibmcloud)
 {: #bluemix_cli}
 
-Versione: 0.7.1
 
 L'interfaccia di riga comando (CLI) {{site.data.keyword.Bluemix_notm}} fornisce una serie di comandi che vengono raggruppati in base allo spazio dei nomi per consentire agli utenti di interagire con {{site.data.keyword.Bluemix_notm}}.
 
-A partire dalla versione 0.5.0, il client riga di comando {{site.data.keyword.Bluemix_notm}} include un client riga di comando Cloud Foundry nella sua installazione. Se hai la tua propria CLI cf installata, non utilizzare i comandi della CLI {{site.data.keyword.Bluemix_notm}} `ibmcloud [comando]` e i comandi della CLI Cloud Foundry `cf [comando]` della tua propria installazione nello stesso contesto. Utilizza invece `ibmcloud cf [comando]` se vuoi utilizzare la CLI cf per gestire le risorse Cloud Foundry nel contesto della CLI {{site.data.keyword.Bluemix_notm}}.  Nota che `ibmcloud cf api/login/logout/target` non è consentito e devi utilizzare invece `ibmcloud api/login/logout/target`.
+Il client riga di comando {{site.data.keyword.Bluemix_notm}} include un client riga di comando Cloud Foundry nella sua installazione. Se hai la tua propria CLI cf installata, non utilizzare i comandi della CLI {{site.data.keyword.Bluemix_notm}} `ibmcloud [comando]` e i comandi della CLI Cloud Foundry `cf [comando]` della tua propria installazione nello stesso contesto. Utilizza invece `ibmcloud cf [comando]` se vuoi utilizzare la CLI cf per gestire le risorse Cloud Foundry nel contesto della CLI {{site.data.keyword.Bluemix_notm}}.  Nota che `ibmcloud cf api/login/logout/target` non è consentito e devi utilizzare invece `ibmcloud api/login/logout/target`.
 
 A partire da maggio 2018, i comandi della CLI {{site.data.keyword.Bluemix_notm}} sono stati modificati da `bluemix` e `bx` a `ibmcloud`. Tuttavia, puoi ancora utilizzare i comandi della CLI `bluemix` e `bx` finché non vengono rimossi in una data successiva.
 {: tip}
@@ -633,7 +632,7 @@ ibmcloud -q cf services
 Esegue l'accesso dell'utente.
 
 ```
-ibmcloud login [-a ENDPOINT_API] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey CHIAVE | @FILE_CHIAVI] [--no-iam] [-c ID_ACCOUNT] [-g GRUPPO_RISORSE] [-o ORGANIZZAZIONE] [-s SPAZIO]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey CHIAVE | @FILE_CHIAVI] [--no-iam] [-c ID_ACCOUNT | --no-account] [-g GRUPPO_RISORSE] [-o ORG] [-s SPAZIO]
 ```
 
 <strong>Prerequisiti</strong>:  Nessuno
@@ -653,7 +652,9 @@ ibmcloud login [-a ENDPOINT_API] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey
   <dt> -p <i>PASSWORD</i> (facoltativo)</dt>
   <dd> Password</dd>
   <dt> -c <i>ID_ACCOUNT</i> (facoltativo) </dt>
-  <dd> ID dell'account di destinazione</dd>
+  <dd> L'ID dell'account di destinazione. Questa opzione è esclusiva con --no-account</dd>
+  <dt> --no-account (facoltativo)</dt>
+  <dd> Forza l'accesso senza account. Questa opzione non è consigliata. Questa opzione è esclusiva con -c.</dd>
   <dt> -g <i>GRUPPO_RISORSE</i> (facoltativo) </dt>
   <dd> Nome del gruppo di risorse di destinazione</dd>
   <dt> -o <i>ORGANIZZAZIONE</i> (facoltativo)</dt>
@@ -1483,7 +1484,7 @@ ibmcloud iam access-group-user-add NOME_GRUPPO NOME_UTENTE [NOME_UTENTE2...]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
 </dl>
 
@@ -1689,7 +1690,7 @@ ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f
 Crea una politica del gruppo di accesso
 
 ```
-ibmcloud iam access-group-policy-create NOME_GRUPPO {--file @FILE_JSON | --roles NOME_RUOLO1,NOME_RUOLO2... [--service-name NOME_SERVIZIO] [--service-instance GUID_ISTANZA_SERVIZIO] [--region REGIONE] [--resource-type TIPO_RISORSA] [--resource RISORSA] [--resource-group-name NOME_GRUPPO_RISORSA] [--resource-group-id ID_GRUPPO_RISORSA]}
+ibmcloud iam access-group-policy-create NOME_GRUPPO {--file @FILE_JSON | --roles NOME_RUOLO1,NOME_RUOLO2... [--service-name NOME_SERVIZIO] [--service-instance GUID_ISTANZA_SERVIZIO] [--region REGIONE] [--resource-type TIPO_RISORSA] [--resource RISORSA] [--resource-group-name NOME_GRUPPO_RISORSE] [--resource-group-id ID_GRUPPO_RISORSE]}
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
@@ -1755,7 +1756,7 @@ ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-
 Aggiorna una politica del gruppo di accesso
 
 ```
-ibmcloud iam access-group-policy-update ID_POLITICA_NOME_GRUPPO {--file FILE_JSON | [--roles NOME_RUOLO1,NOME_RUOLO2...] [--service-name NOME_SERVIZIO] [--service-instance GUID_ISTANZA_SERVIZIO] [--region REGIONE] [--resource-type TIPO_RISORSA] [--resource RISORSA] [--resource-group-name NOME_GRUPPO_RISORSA] [--resource-group-id ID_GRUPPO_RISORSA]}
+ibmcloud iam access-group-policy-update ID_POLITICA_NOME_GRUPPO {--file FILE_JSON | [--roles NOME_RUOLO1,NOME_RUOLO2...] [--service-name NOME_SERVIZIO] [--service-instance GUID_ISTANZA_SERVIZIO] [--region REGIONE] [--resource-type TIPO_RISORSA] [--resource RISORSA] [--resource-group-name NOME_GRUPPO_RISORSE] [--resource-group-id ID_GRUPPO_RISORSE]}
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
@@ -1991,7 +1992,7 @@ ibmcloud iam service-id-delete (NOME|UUID) [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del servizio, esclusivo con UUID</dd>
@@ -2548,7 +2549,7 @@ ibmcloud iam user-policy name@example.com 0bb730daa
 Crea una politica utente
 
 ```
-ibmcloud iam user-policy-create NOME_UTENTE {--file FILE_JSON | --roles NOME_RUOLO1,NOME_RUOLO2... [--service-name NOME_SERVIZIO] [--service-instance GUID_ISTANZA_SERVIZIO] [--region REGIONE] [--resource-type TIPO_RISORSA] [--resource RISORSA] [--resource-group-name NOME_GRUPPO_RISORSA] [--resource-group-id ID_GRUPPO_RISORSA]}
+ibmcloud iam user-policy-create NOME_UTENTE {--file FILE_JSON | --roles NOME_RUOLO1,NOME_RUOLO2... [--service-name NOME_SERVIZIO] [--service-instance GUID_ISTANZA_SERVIZIO] [--region REGIONE] [--resource-type TIPO_RISORSA] [--resource RISORSA] [--resource-group-name NOME_GRUPPO_RISORSE] [--resource-group-id ID_GRUPPO_RISORSE]}
 ```
 
 <strong>Prerequisiti</strong>: Endpoint, Accesso, Account di destinazione
@@ -2621,7 +2622,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 Aggiorna una politica utente
 
 ```
-ibmcloud iam user-policy-update NOME_UTENTE ID_POLITICA {--file FILE_JSON | [--roles NOME_RUOLO1,NOME_RUOLO2...] [--service-name NOME_SERVIZIO] [--service-instance GUID_ISTANZA_SERVIZIO] [--region REGIONE] [--resource-type TIPO_RISORSA] [--resource RISORSA] [--resource-group-name NOME_GRUPPO_RISORSA] [--resource-group-id ID_GRUPPO_RISORSA]}
+ibmcloud iam user-policy-update NOME_UTENTE ID_POLITICA {--file FILE_JSON | [--roles NOME_RUOLO1,NOME_RUOLO2...] [--service-name NOME_SERVIZIO] [--service-instance GUID_ISTANZA_SERVIZIO] [--region REGIONE] [--resource-type TIPO_RISORSA] [--resource RISORSA] [--resource-group-name NOME_GRUPPO_RISORSE] [--resource-group-id ID_GRUPPO_RISORSE]}
 ```
 
 <strong>Prerequisiti</strong>: Endpoint, Accesso, Account di destinazione
@@ -2700,7 +2701,7 @@ ibmcloud iam user-policy-delete ID_UTENTE ID_POLITICA [-f, --force]
 
 <strong>Prerequisiti</strong>: Endpoint, Accesso, Account di destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>-f, --force</dt>
   <dd>Elimina la politica utente senza conferma</dd>
@@ -3141,7 +3142,7 @@ ibmcloud resource group-update NOME [-n, --name NUOVO_NOME] [-q, --quota NOME_NU
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del gruppo di risorse di destinazione</dd>
@@ -3495,7 +3496,7 @@ ibmcloud app route-unmap NOME_APPLICAZIONE_CF|NOME_GRUPPO_CONTENITORE  DOMINIO  
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>NOME_APPLICAZIONE_CF|NOME_GRUPPO_CONTENITORI (obbligatorio)</dt>
@@ -3943,7 +3944,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NOME | --ali
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--instance-id</dt>
   <dd>ID istanza del servizio</dd>
@@ -4358,7 +4359,7 @@ ibmcloud resource tag-create --tag-name NOME_TAG [--tag-type TIPO_TAG]
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag</dd>
   <dt>--tag-type</dt>
-  <dd>Tipo di tag (valori supportati: user, restricted; default: user)</dd>
+  <dd>Tipo di tag (valori supportati: user, restricted; valore predefinito: user)</dd>
 </dl>
 
 <strong>Esempi</strong>:
