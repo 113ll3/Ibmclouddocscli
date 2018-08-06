@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 {:pre: .pre}
 {:note: .deprecated}
 
-# Risoluzione dei problemi relativi a {{site.data.keyword.Bluemix_notm}} Developer Tools
+# Risoluzione dei problemi relativi al plugin della CLI {{site.data.keyword.Bluemix_notm}} Developer Tools
 {: #troubleshoot}
 
 I problemi generali quando si utilizza la CLI {{site.data.keyword.dev_cli_short}} per creare le applicazioni potrebbero includere degli errori di distribuzione oppure l'impossibilità di richiamare il codice quando si crea un'applicazione. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
