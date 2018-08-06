@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -40,7 +40,7 @@ persistência. Finalmente, é possível escolher ativar o recurso do DevOps para
 ferramentas completa de controle de versão e de comunicações de equipe, bem como um pipeline que é acionado em
 cada confirmação para validar, construir e implementar seu app no IBM Cloud.
 
-![Fluxo de criação de amostra usando a CLI do IDT](create_flow.png "Fluxo de criação de amostra usando a CLI do IDT") <br> Figura 2. Fluxo de criação de amostra usando a CLI do IDT
+![Fluxo de criação de amostra usando a CLI do {{site.data.keyword.dev_cli_notm}}](create_flow.png "Fluxo de criação de amostra usando a CLI do {{site.data.keyword.dev_cli_notm}}") <br> Figura 2. Fluxo de criação de amostra usando a CLI do {{site.data.keyword.dev_cli_notm}}
 
 A CLI do {{site.data.keyword.dev_cli_notm}} trabalha estreitamente junto para fornecer uma experiência contínua durante o desenvolvimento. Os projetos que são criados em qualquer um dos consoles da web fornecem um botão "Fazer download do código" para
 fazer download do código-fonte gerado para sua estação para mais desenvolvimento.
@@ -79,7 +79,7 @@ Mais detalhes sobre as estruturas do projeto podem ser localizados aqui:
 ### Blogs e vídeos de referência
 {: #ref1}
 
-- Vídeo: [Instalando o IDT no Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
+- Vídeo: [Instalando ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}} no Ubuntu Linux ](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - Blog: [Ativar projetos existentes para o IBM Cloud com o IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 

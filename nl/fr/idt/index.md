@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -35,7 +35,7 @@ Il existe plusieurs façons de créer une application en cloud.
 
 Le processus est similaire pour toutes les méthodes de création décrites précédemment. Vous pouvez choisir le type de projet, le langage d'implémentation et le modèle d'application à utiliser. Vous pouvez également choisir d'ajouter des services à valeur ajoutée à votre application, tels que l'authentification ou la persistance. Enfin, vous pouvez choisir d'activer la fonction DevOps pour l'application, qui fournit une chaîne d'outils complète de contrôle des sources et de communication des équipes, ainsi qu'un pipeline qui se déclenche à chaque validation afin de valider, générer et déployer votre application sur IBM Cloud.
 
-![Exemple de processus de création à l'aide de l'interface de ligne de commande IDT](create_flow.png "Exemple de processus de création à l'aide de l'interface de ligne de commande IDT") <br> Figure 2. Exemple de processus de création à l'aide de l'interface de ligne de commande IDT
+![Exemple de processus de création à l'aide de l'interface de ligne de commande {{site.data.keyword.dev_cli_notm}}](create_flow.png "Exemple de processus de création à l'aide de l'interface de ligne de commande {{site.data.keyword.dev_cli_notm}}") <br> Figure 2. Exemple de processus de création à l'aide de l'interface de ligne de commande {{site.data.keyword.dev_cli_notm}}
 
 L'interface de ligne de commande {{site.data.keyword.dev_cli_notm}} fonctionne en étroite collaboration pour fournir une expérience transparente lors du développement. Les projets créés dans n'importe laquelle des consoles Web présentent un bouton "Télécharger le code" permettant de télécharger le code source généré sur votre poste de travail afin d'effectuer davantage de développement.
 
@@ -67,7 +67,7 @@ D'autres détails concernant les structures de projet sont disponibles dans les 
 ### Blogues et vidéos de référence
 {: #ref1}
 
-- Vidéo : [Installation d'IDT sous Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
+- Vidéo : [Installation d'{{site.data.keyword.Bluemix_notm}} Developer Tools sur Ubuntu Linux](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - Blogue : [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 

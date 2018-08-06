@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -32,11 +32,11 @@ Você poderá ter problemas ao preparar seus aplicativos no {{site.data.keyword.
 Para entender por que o seu aplicativo pode estar falhando no {{site.data.keyword.Bluemix_notm}}, é necessário saber como um aplicativo é implementado no {{site.data.keyword.Bluemix_notm}} e executado nele. Para obter mais informações, consulte [Implementação do aplicativo ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
-O procedimento a seguir mostra como você pode usar o comando `cf logs` para depurar os erros de preparação. Antes de executar as etapas a seguir, assegure-se de que tenha instalado a interface de linha de comandos cf. Para obter mais informações sobre como instalar a interface da linha de comandos cf, consulte [Instalando a interface da linha de comandos cf ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/starters/install_cli.html){: new_window}.
+O procedimento a seguir mostra como é possível usar o comando `cf logs` para depurar erros. Antes de executar as etapas a seguir, assegure-se de que você tenha instalado a interface da linha de comandos do Cloud Foundry. Para obter mais informações sobre como instalar a interface da linha de comandos do Cloud Foundry, veja [Instalando a interface da linha de comandos do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/starters/install_cli.html){: new_window}.
 
-  1. Conecte-se ao {{site.data.keyword.Bluemix_notm}} inserindo o código a seguir na interface de linha de comandos:
+  1. Conecte-se ao {{site.data.keyword.Bluemix_notm}} inserindo o código a seguir na interface da linha de comandos do Cloud Foundry:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Efetue login no {{site.data.keyword.Bluemix_notm}} inserindo `cf login`.
@@ -53,20 +53,20 @@ Além do comando `cf logs`, no {{site.data.keyword.Bluemix_notm}} também é pos
 
 ### Depurando erros de preparação para um aplicativo Node.js
 
-O exemplo a seguir mostra um log que é exibido após a inserção de `cf logs appname --recent`. O exemplo assume que os erros de preparação ocorreram para o aplicativo Node.js:
+O exemplo a seguir mostra um log que é exibido após a inserção de `cf logs appname --recent`. O exemplo presume que ocorreram erros para um aplicativo Node.js:
 ```
-2014-08-11T14:19:36.17+0100 [API]     OUT Atualizado o app com guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
-2014-08-11T14:20:44.17+0100 [API]     OUT Atualizado o app com guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
+2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
+2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
-2014-08-11T14:20:44.43+0100 [DEA]     OUT Parando a instância de app (índice 0) com guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:44.44+0100 [DEA]     OUT Interrompida a instância de app (índice 0) com guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:48.97+0100 [DEA]     OUT Obtida a solicitação de preparação para o app com id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:50.94+0100 [API]     OUT Atualizado o app com guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
-2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Fazer download do pacote de app (4,1 M)
-2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Fazer download do cache de buildpack do app (1,1 M)
-2014-08-11T14:20:52.78+0100 [STG]     OUT -----> Versão do buildpack: v1.1-20140717-1447
-2014-08-11T14:20:52.78+0100 [STG]     ERR Erro de análise: Esperado outro par de valores de chave na linha 18, coluna 3
-2014-08-11T14:20:52.79+0100 [STG]     OUT 0 informações de que funcionou se terminar com ok
+2014-08-11T14:20:44.43+0100 [DEA]     OUT Stopping app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:44.44+0100 [DEA]     OUT Stopped app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:48.97+0100 [DEA]     OUT Got request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:50.94+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
+2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Download app package (4.1M)
+2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Download app buildpack cache (1.1M)
+2014-08-11T14:20:52.78+0100 [STG]     OUT -----> Buildpack Version: v1.1-20140717-1447
+2014-08-11T14:20:52.78+0100 [STG]     ERR parse error: Expected another key-value pair at line 18, column 3
+2014-08-11T14:20:52.79+0100 [STG]     OUT 0 info it worked if it ends with ok
 ```
 {: screen}
 
@@ -113,7 +113,7 @@ Especificamente, a criação de log para saída padrão e erro padrão pode ser 
   * Para aplicativos Ruby on Rails, consulte [O criador de log ![Ícone de link externo](../icons/launch-glyph.svg "Icone de link externo")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Para aplicativos Ruby Sinatra, consulte [Criação de log ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
-Ao inserir `cf logs appname --recent` na interface de linha de comandos cf, somente os logs mais recentes são exibidos. Para visualizar os logs com relação a erros que ocorreram anteriormente, deve-se recuperar todos os logs e procurar pelos erros. Para recuperar todos os logs do seu aplicativo, use um dos métodos a seguir:
+Quando você insere `cf logs appname --recent` na interface da linha de comandos do Cloud Foundry, somente os logs mais recentes são exibidos. Para visualizar os logs com relação a erros que ocorreram anteriormente, deve-se recuperar todos os logs e procurar pelos erros. Para recuperar todos os logs do seu aplicativo, use um dos métodos a seguir:
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>Os recursos de procura e análise de arquivo de log integrado do serviço do {{site.data.keyword.loganalysisshort}} podem ajudá-lo a identificar erros com rapidez. Para obter mais informações, consulte <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">{{site.data.keyword.loganalysisfull}}</a>.</dd>

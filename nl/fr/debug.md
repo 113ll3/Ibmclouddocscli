@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -37,11 +37,11 @@ de l'application et corriger le problème. Pour plus d'informations sur les mét
 Pour comprendre la raison pour laquelle votre application ne fonctionne pas dans {{site.data.keyword.Bluemix_notm}}, vous devez savoir comment une application est déployée et exécutée dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Déploiement d'application ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
 
-La procédure suivante présente l'utilisation de la commande `cf logs` pour déboguer des erreurs constitution. Avant de continuer, vérifiez que vous avez installé l'interface de ligne de commande cf. Pour plus d'informations sur l'installation de l'interface de ligne de commande cf, voir [Installation de l'interface de ligne de commande cf ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/starters/install_cli.html){: new_window}.
+La procédure suivante présente l'utilisation de la commande `cf logs` pour déboguer des erreurs. Avant de continuer, vérifiez que vous avez installé l'interface de ligne de commande Cloud Foundry. Pour plus d'informations sur l'installation de l'interface de ligne de commande Cloud Foundry, voir [Installation de l'interface de ligne de commande Cloud Foundry ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/starters/install_cli.html){: new_window}.
 
-  1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} en entrant la commande suivante sur l'interface de ligne de commande cf :
+  1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} en entrant la commande suivante sur l'interface de ligne de commande Cloud Foundry :
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Connectez-vous à {{site.data.keyword.Bluemix_notm}} en entrant `cf login`.
@@ -58,15 +58,14 @@ Outre la commande `cf logs`, dans {{site.data.keyword.Bluemix_notm}}, vous pouve
 
 ### Débogage des erreurs de constitution pour une application Node.js
 
-L'exemple suivant illustre un journal affiché après l'entrée de la commande `cf logs nom_application --recent`. On
-présuppose que des erreurs de constitution se sont produites pour une application Node.js :
+L'exemple suivant illustre un journal affiché après l'entrée de la commande `cf logs nom_application --recent`. On présuppose que des erreurs se sont produites pour une application Node.js :
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
 2014-08-11T14:20:44.43+0100 [DEA]     OUT Stopping app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:44.44+0100 [DEA]     OUT Stopped app instance (index 0) with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
-2014-08-11T14:20:48.97+0100 [DEA]     OUT Got staging request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
+2014-08-11T14:20:48.97+0100 [DEA]     OUT Got request for app with id 6d80051d-eb56-4fc5-b499-e43d6fb87bc2
 2014-08-11T14:20:50.94+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STARTED"})
 2014-08-11T14:20:51.66+0100 [STG]     OUT -----> Download app package (4.1M)
 2014-08-11T14:20:51.90+0100 [STG]     OUT -----> Download app buildpack cache (1.1M)
@@ -120,7 +119,7 @@ La journalisation vers stdout (sortie standard) et stderr (erreur standard) peut
   * Pour les applications Ruby on Rails, voir [The Logger ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Pour les applications Ruby Sinatra, voir [Logging ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
-Lorsque vous entrez la commande `cf logs nom_application --recent` dans l'interface de ligne de commande cf, seuls les journaux les plus récents sont affichés. Pour accéder aux erreurs précédentes, vous devez extraire tous les journaux. Pour ce faire, utilisez l'une des méthodes suivantes :
+Lorsque vous entrez la commande `cf logs nom_application --recent` dans l'interface de ligne de commande Cloud Foundry, seuls les journaux les plus récents sont affichés. Pour accéder aux erreurs précédentes, vous devez extraire tous les journaux. Pour ce faire, utilisez l'une des méthodes suivantes :
 <dl>
 <dt><strong>{{site.data.keyword.loganalysisshort}}</strong></dt>
 <dd>Les fonctionnalités intégrées de recherche et d'analyse de fichier journal du service {{site.data.keyword.loganalysisshort}} permettent d'identifier rapidement les erreurs. Pour plus d'informations, voir

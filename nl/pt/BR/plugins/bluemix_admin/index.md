@@ -23,7 +23,7 @@ exemplo, é possível incluir usuários a partir de um registro LDAP. Para obter
 {{site.data.keyword.Bluemix_notm}} Public, consulte
 [administrando](/docs/admin/adminpublic.html#administer).
 
-Antes de iniciar, instale a interface de linha de comandos do cf. O plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
+Antes de iniciar, instale a interface da linha de comandos Cloud Foundry. O plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 requer o cf versão 6.11.2 ou posterior. [Fazer download da interface da linha de comandos do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restrição:** A interface de linha de
@@ -34,8 +34,7 @@ em uma janela de linha de comandos diferente da janela de linha de comandos do C
 
 ## Incluindo o plug-in da CLI do administrador do {{site.data.keyword.Bluemix_notm}}
 
-Após a interface de linha de comandos do cf ser instalada, é possível
-incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
+Após a interface da linha de comandos do Cloud Foundry ser instalada, será possível incluir o plug-in da CLI do administrador do {{site.data.keyword.Bluemix_notm}}.
 
 **Nota**: se você instalou anteriormente o
 plug-in do {{site.data.keyword.Bluemix_notm}} Admin, poderá ser necessário desinstalar o plug-in,
@@ -117,8 +116,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**Observação**: para incluir um usuário em uma organização específica, deve-se ser um **Administrador** com a permissão **users.write** (ou **Super usuário**). Se você for um gerenciador de organização, também poderá receber a capacidade de incluir usuários em sua organização por um Super usuário que executa o comando **enable-managers-add-users**. 
-Para obter mais informações, consulte [Ativando gerenciadores para incluir usuários](index.html#clius_emau).
+**Observação**: para incluir um usuário em uma organização específica, deve-se ser um **Administrador** com a permissão **users.write** (ou **Super usuário**). Se você for um gerenciador de organização, também poderá receber a capacidade de incluir usuários em sua organização por um Super usuário que executa o comando **enable-managers-add-users**. Para obter mais informações, consulte [Ativando gerenciadores para incluir usuários](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -159,8 +157,7 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ### Listando usuários que são convidados do {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Se você tiver convidado usuários do ambiente Dedicated para a sua conta do {{site.data.keyword.Bluemix_notm}} com o [comando `invite-users-to-public`](#admin_dedicated_invite_public), será possível listar os usuários em sua conta para ver o status do convite. 
-Os usuários convidados que têm um IBMid existente têm um status de `ACTIVE`. Os usuários convidados que não tinham
+Se você tiver convidado usuários do ambiente Dedicated para a sua conta do {{site.data.keyword.Bluemix_notm}} com o [comando `invite-users-to-public`](#admin_dedicated_invite_public), será possível listar os usuários em sua conta para ver o status do convite. Os usuários convidados que têm um IBMid existente têm um status de `ACTIVE`. Os usuários convidados que não tinham
 um IBMid existente têm um status de `PENDING` ou `ACTIVE` dependendo de se eles já aceitaram ou não o
 convite para a conta. Para listar os usuários em sua conta do {{site.data.keyword.Bluemix_notm}}:
 
@@ -622,8 +619,7 @@ serviços que estão disponíveis para esse serviço.</dd>
 ### Incluindo a visibilidade de serviço para organizações
 {: #admin_addvis_service_org}
 
-É possível incluir uma organização da lista de organizações que podem ver um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}}. 
-Para permitir que uma organização visualize um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}},
+É possível incluir uma organização da lista de organizações que podem ver um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}}. Para permitir que uma organização visualize um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}},
 use o comando a seguir:
 
 ```
@@ -644,8 +640,7 @@ serviços que estão disponíveis para esse serviço.</dd>
 ### Removendo a visibilidade de serviço para organizações
 {: #admin_remvis_service_org}
 
-É possível remover uma organização da lista de organizações que podem ver um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}}. 
-Para remover a visibilidade de um serviço no catálogo do {{site.data.keyword.Bluemix_notm}} para uma organização,
+É possível remover uma organização da lista de organizações que podem ver um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}}. Para remover a visibilidade de um serviço no catálogo do {{site.data.keyword.Bluemix_notm}} para uma organização,
 use o comando a seguir:
 
 ```
@@ -773,8 +768,7 @@ do comando **ba resource-metrics**.
 {: #cliresourceusagehistory}
 
 É possível recuperar o histórico de métrica de recurso para uso de memória e disco. As métricas retornadas incluem a quantia
-de recursos que são usados fora do total disponível para ambos os recursos, físico e reservado. Os dados históricos para uso de memória e disco podem ser exibidos por hora, diariamente ou mensalmente. É possível especificar datas de início e de encerramento para recuperar dados dentro de um intervalo de data específico. Os dados históricos padrão, quando nenhuma data é especificada, são dados de memória por hora para as últimas 48 horas. 
-Os dados são exibidos em ordem decrescente, com as datas mais recentes mostradas primeiro. Para visualizar as informações de histórico de métrica de recurso, use o comando a seguir:
+de recursos que são usados fora do total disponível para ambos os recursos, físico e reservado. Os dados históricos para uso de memória e disco podem ser exibidos por hora, diariamente ou mensalmente. É possível especificar datas de início e de encerramento para recuperar dados dentro de um intervalo de data específico. Os dados históricos padrão, quando nenhuma data é especificada, são dados de memória por hora para as últimas 48 horas. Os dados são exibidos em ordem decrescente, com as datas mais recentes mostradas primeiro. Para visualizar as informações de histórico de métrica de recurso, use o comando a seguir:
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>

@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-12"
 
 
 
@@ -15,10 +15,10 @@ lastupdated: "2018-06-21"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# IBM Developer Tools pour Visual Studio Code
+# IBM Cloud Developer Tools pour Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-L'extension IBM Developer pour Visual Studio Code est une extension de l'éditeur qui permet d'accéder à des fonctions de l'interface de ligne de commande IBM Developer directement depuis la palette de commandes de l'éditeur Visual Studio Code. Elle vous permet d'accéder rapidement à un sous-ensemble de commandes `ibmcloud dev` pour les flux de travail Docker et CloudFoundry, y compris le déploiement d'application, le démarrage/l'arrêt/le redémarrage d'applications sur {{site.data.keyword.Bluemix_notm}}, la visualisation de journaux d'applications distants, etc., le tout sans avoir à quitter le contexte de votre éditeur.
+L'extension IBM Cloud Developer Tools pour Visual Studio Code est une extension de l'éditeur qui permet d'accéder aux fonctions de l'interface de ligne de commande (CLI) IBM Developer directement depuis la palette de commandes de l'éditeur Visual Studio Code. Elle vous permet d'accéder rapidement à un sous-ensemble de commandes `ibmcloud dev` pour les flux de travail Docker et Cloud Foundry, y compris le déploiement d'application, le démarrage/l'arrêt/le redémarrage d'applications sur {{site.data.keyword.Bluemix_notm}}, la visualisation de journaux d'applications distants, etc., le tout sans avoir à quitter le contexte de votre éditeur.
 {:shortdesc}
 
 ![Capture d'écran de l'écran de téléchargement de l'extension IBM Developer Tools.](vscode.png "Ecran de téléchargement d'extension dans Visual Studio Code")
@@ -26,26 +26,26 @@ L'extension IBM Developer pour Visual Studio Code est une extension de l'éditeu
 ## Dépendances
 {: #dependencies}
 
-L'utilisation de l'extension IBM Developer Tools pour Visual Studio Code requiert que [l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ](https://plugins.ng.bluemix.net/ui/home.html) et [le plug-in de l'interface de ligne de commande IBM Developer](index.html) soient installés sur votre système.
+Pour utiliser l'extension IBM Cloud Developer Tools pour Visual Studio Code, l'interface CLI [{{site.data.keyword.Bluemix_notm}}](https://plugins.ng.bluemix.net/ui/home.html) et le plug-in [IBM Developer CLI](index.html) doivent être installés sur votre système.
 
 ## Installation
 {: #installation}
 
-Le moyen le plus simple d'installer l'extension IBM Developers Tools consiste à utiliser la commande 'quick open' de Visual Studio Code :
+Le moyen le plus simple d'installer l'extension IBM Cloud Developers Tools consiste à utiliser la commande 'quick open' de Visual Studio Code :
 
 1. Ouvrez la palette de commandes 'quick open' en utilisant les combinaisons de touches suivantes dans l'éditeur :
 
   * **Mac** : `cmd + p`
   * **Windows/Linux** : `ctrl + p`
 
-2. Entrez la commande `ext install ibm-developer` et appuyez sur Entrée pour installer l'extension IBM Developer Tools dans l'éditeur Visual Studio Code.
+2. Entrez la commande `ext install ibm-developer` et appuyez sur Entrée pour installer l'extension IBM Cloud Developer Tools dans l'éditeur Visual Studio Code.
 
-Vous pouvez aussi installer l'extension IBM Developer Tools via la fenêtre de gestion des extensions :
+Vous pouvez également installer l'extension IBM Cloud Developer Tools via la fenêtre de gestion des extensions :
 
-1. Ouvrez la barre d'options latérale **Extensions** dans l'éditeur Visual Studio Code, puis lancez une recherche sur la chaîne `publisher:IBM Developer`. L'extension IBM Developer Tools apparaît dans les résultats de la recherche.  
+1. Ouvrez la barre d'options latérale **Extensions** dans l'éditeur Visual Studio Code, puis lancez une recherche sur la chaîne `publisher:IBM Developer`. L'extension IBM Cloud Developer Tools apparaît dans les résultats de la recherche.  
 2. Cliquez sur le bouton **Install** pour lancer l'installation.
 
-Vous pouvez également accéder à l'extension [IBM Developer Tools directement à partir de Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
+Vous pouvez également accéder à l'extension [IBM Developer Cloud Tools directement à partir de Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
 
 ## Syntaxe
 {: #usage}
@@ -62,7 +62,7 @@ Ensuite, entrez ou sélectionnez la commande que vous souhaitez lancer. Vous pou
 ### Utilisation de l'extension IBM Developer pour les flux de travail Docker (conteneurs Docker)
 {: #usage-docker}
 
-Vous pouvez mettre en route des flux de travaux ibmcloud dev en quelques étapes seulement :
+Vous pouvez commencer à utiliser les flux de travaux `ibmcloud dev` en quelques étapes seulement :
 * Créez un projet en utilisant l'une des deux méthodes suivantes :
   * Utilisez la [console Web {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/developer/getting-started/) et téléchargez le code généré.
   * Utilisez l'[interface de ligne de commande d'{{site.data.keyword.Bluemix_notm}} Developer](index.html) et générez un projet à l'aide de la commande `ibmcloud dev create`.

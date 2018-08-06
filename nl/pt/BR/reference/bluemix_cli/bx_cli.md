@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-18"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2018-06-18"
 # {{site.data.keyword.Bluemix_notm}} (ibmcloud) comandos
 {: #bluemix_cli}
 
-Versão: 0.7.1
 
 A interface de linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} fornece um conjunto de comandos que são agrupados por namespace para que os usuários interajam com o {{site.data.keyword.Bluemix_notm}}.
 
-A partir da versão 0.5.0, o cliente da linha de comandos do {{site.data.keyword.Bluemix_notm}} empacota um cliente da linha de comandos Cloud Foundry em sua instalação. Se você tiver seu próprio cf cli instalado, não use os comandos do {{site.data.keyword.Bluemix_notm}} CLI `ibmcloud [command]` e do Cloud Foundry CLI `cf [command]` de sua própria instalação no mesmo contexto. Em vez disso, use `ibmcloud cf [command]` se desejar usar cf cli para gerenciar recursos do Cloud Foundry no contexto do {{site.data.keyword.Bluemix_notm}} CLI.  Observe que `ibmcloud cf api/login/logout/target` não é permitido e deve-se usar `ibmcloud api/login/logout/target` no lugar.
+O cliente da linha de comando do {{site.data.keyword.Bluemix_notm}} empacota um cliente da linha de comando do Cloud Foundry em sua instalação. Se você tiver seu próprio cf cli instalado, não use os comandos do {{site.data.keyword.Bluemix_notm}} CLI `ibmcloud [command]` e do Cloud Foundry CLI `cf [command]` de sua própria instalação no mesmo contexto. Em vez disso, use `ibmcloud cf [command]` se desejar usar cf cli para gerenciar recursos do Cloud Foundry no contexto do {{site.data.keyword.Bluemix_notm}} CLI.  Observe que `ibmcloud cf api/login/logout/target` não é permitido e deve-se usar `ibmcloud api/login/logout/target` no lugar.
 
 Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que sejam removidos em uma data posterior.
 {: tip}
@@ -634,7 +633,7 @@ Ibmcloud -q cf services
 Efetue login do usuário.
 
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>Pré-requisitos</strong>: Nenhum
@@ -654,7 +653,9 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i> (opcional)</dt>
   <dd> Senha</dd>
   <dt> -c <i>ACCOUNT_ID</i> (opcional) </dt>
-  <dd> ID da conta de destino</dd>
+  <dd> ID da conta de destino. Essa opção é exclusiva com --no-account</dd>
+  <dt> --no-account (opcional) </dt>
+  <dd> Forçar login sem conta. Essa opção não é recomendada. Essa opção é excluusiva com -c.</dd>
   <dt> -g <i>RESOURCE_GROUP</i> (opcional) </dt>
   <dd> Nome do grupo de recursos de destino</dd>
   <dt> -o <i>ORG</i> (opcional)</dt>
@@ -1083,7 +1084,7 @@ Designe o usuário `Mary` à organização do `IBM` como função `OrgManager`:
 Ibmcloud conta org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**Nota**: é possível configurar as funções de organização/espaço usando a CLI, mas se você desejar configurar as outras permissões, precisará usar a UI. Para obter detalhes adicionais, veja [Designando o acesso de usuário](/docs/iam/assignaccess.html#assignaccess).
+**Nota**: é possível configurar as funções de organização/espaço usando a CLI, mas se você desejar configurar as outras permissões, precisará usar a UI. Para obter detalhes adicionais, consulte [Designando o acesso de usuário](/docs/iam/assignaccess.html#assignaccess).
 <!-- Begin Staging URL vs Prod URL -->
 
 ## Ibmcloud account org-role-unset
@@ -2041,7 +2042,7 @@ Excluir o ID do serviço `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`
 Ibmcloud iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
-## Ibmcloud iam service-id-bloqueio
+## ibmcloud iam service-id-lock
 {: #ibmcloud_iam_service_id_lock}
 
 Bloquear um ID de serviço
@@ -2067,7 +2068,7 @@ Ibmcloud iam service-id-bloqueio (NAME | UUID) [ -f, -- force ]
 Bloquear ID de serviço `sample-teset` sem confirmação
 
 ```
-Ibmcloud iam service-id-bloqueio sample-teset -f
+ibmcloud iam service-id-lock sample-teset -f
 ```
 
 Bloquear ID do serviço `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`
@@ -2359,7 +2360,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 <strong>Opções de comando</strong>:
 <dl>
   <dt>NAME (necessário)</dt>
-  <dd>Nome do ID de serviço ou chave API de serviço recém-criada</dd>
+  <dd>Nome do ID do serviço ou da chave API de serviço recém-criada</dd>
   <dt>SERVICE_ID_NAME (necessário)</dt>
   <dd>Nome do ID do serviço, exclusivo com SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (necessário)</dt>
@@ -4627,7 +4628,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
   <dt>-p, --parent</dt>
   <dd>ID-pai do objeto</dd>
   <dt>-c</dt>
-  <dd>Objeto JSON válido contendo parâmetros de configuração específicos do catálogo, fornecido sequencialmente ou em um arquivo. Para obter uma lista de parâmetros de configuração suportados, veja a documentação para a entrada no catálogo específica.</dd>
+  <dd>Objeto JSON válido contendo parâmetros de configuração específicos do catálogo, fornecido sequencialmente ou em um arquivo. Para obter uma lista de parâmetros de configuração suportados, consulte a documentação para a entrada no catálogo específica.</dd>
   <dt>--global</dt>
   <dd>Operar no escopo global</dd>
 </dl>
@@ -4654,7 +4655,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 <strong>Opções de comando</strong>:
 <dl>
   <dt>-c</dt>
-  <dd>Objeto JSON válido contendo parâmetros de configuração específicos do catálogo, fornecido sequencialmente ou em um arquivo. Para obter uma lista de parâmetros de configuração suportados, veja a documentação para a entrada no catálogo específica.</dd>
+  <dd>Objeto JSON válido contendo parâmetros de configuração específicos do catálogo, fornecido sequencialmente ou em um arquivo. Para obter uma lista de parâmetros de configuração suportados, consulte a documentação para a entrada no catálogo específica.</dd>
   <dt>--global</dt>
   <dd>Operar no escopo global</dd>
 </dl>
@@ -4746,7 +4747,7 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
   <dt>--unrestrict</dt>
   <dd>Mudando a restrição do objeto de visibilidade para 'Público'</dd>  
   <dt>-c</dt>
-  <dd>Objeto JSON válido contendo parâmetros de configuração específicos do catálogo, fornecido sequencialmente ou em um arquivo. Para obter uma lista de parâmetros de configuração suportados, veja a documentação para a entrada no catálogo específica.</dd>
+  <dd>Objeto JSON válido contendo parâmetros de configuração específicos do catálogo, fornecido sequencialmente ou em um arquivo. Para obter uma lista de parâmetros de configuração suportados, consulte a documentação para a entrada no catálogo específica.</dd>
   <dt>--global</dt>
   <dd>Operar no escopo global</dd>
 </dl>

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-05"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Introdução à CLI do {{site.data.keyword.Bluemix_notm}}
+# Introdução às ferramentas do desenvolvedor do  {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
 Nesse tutorial, você instala um conjunto de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}}, verifica a
@@ -45,8 +45,8 @@ Com essa instalação, você obtém a CLI do {{site.data.keyword.Bluemix_notm}},
 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e os seguintes
 requisitos do sistema:
 
-* Se você está usando o Microsoft Windows&trade;, deve-se usar o Windows 10 ou mais recente.
-* Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1.
+* Se você está usando o Microsoft Windows&trade;, deve usar o Windows 10 Pro ou mais recente.
+* Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1. 
 
 ## Etapa 1: executar o comando de instalação
 {: #step1}
@@ -54,22 +54,22 @@ requisitos do sistema:
 * Para Mac e Linux, execute o comando a seguir:
 
   ```
-  curl -sL https://ibm.biz/idt-installer | bash
+  curl -sL http://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br>
-
-* Para Windows 10, execute o comando a seguir como um administrador:
+  
+* Para o Windows 10 Pro, execute o comando a seguir como um administrador:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br>
 
   Clique com o botão direito no ícone do Windows PowerShell e selecione **Executar como
 administrador**.
   {: tip}
+  
+  Para obter instruções sobre como instalar essas ferramentas manualmente, veja [Reinstalando ferramentas](/docs/cli/ts_createapps.html#appendix).
 
 ## Etapa 2: verificar a instalação
 {: #step2}
@@ -99,18 +99,27 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 	ibmcloud login
 	```
 	{: codeblock}
-<br>
-
+    <br>
+    
 	Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Consulte
-[Efetuando login com um ID federado](/docs/iam/login_fedid.html#using-an-api-key) para obter mais detalhes.
+[Efetuando login com um ID federado](/docs/iam/login_fedid.html#federated_id) para obter mais detalhes.
 	{: tip}
 
 3. Configure a sua organização e o espaço.
 
 	```
+	destino ibmcloud -- cf
+	```
+	{: codeblock}
+	
+	Opcionalmente, é possível usar a saída do comando acima para configurar manualmente sua organização e o espaço com o comando a seguir:
+
+	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
+	
+Para relatar problemas ou fornecer feedback, é possível usar o [Slack do IBM Cloud Tech - canal #developer-tools](https://ibm-cloud-tech.slack.com) - Solicite acesso de equipe [aqui](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
 
 ## Próximas Etapas
 {: #next-steps}

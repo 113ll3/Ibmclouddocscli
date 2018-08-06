@@ -815,7 +815,7 @@ cf target -o mon_org -s mon_espace
 ## cf -v
 {: #cf_v}
 
-Affiche la version de l'interface de ligne de commande cf.
+Affiche la version de l'interface de ligne de commande Cloud Foundry.
 
 ```
 cf -v
@@ -826,7 +826,7 @@ cf -v
 
 <strong>Exemples</strong> :
 
-Afficher la version de l'interface de ligne de commande cf.
+Afficher la version de l'interface de ligne de commande Cloud Foundry.
 ```
 cf -v
 ```

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -14,10 +14,10 @@ lastupdated: "2018-07-05"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Initiation à l'interface de ligne de commande de {{site.data.keyword.Bluemix_notm}}
+# Initiation à {{site.data.keyword.Bluemix_notm}} Developer Tools
 {: #overview}
 
-En suivant ce tutoriel, vous allez installer un ensemble d'outils de développeur {{site.data.keyword.Bluemix}}, vérifier l'installation et configurer votre environnement. Les outils de développeur {{site.data.keyword.Bluemix}} offrent une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice de bout en bout. 
+En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.Bluemix}} Developer Tools, vérifier l'installation et configurer votre environnement. Les outils {{site.data.keyword.Bluemix}} Developer Tools offrent une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice de bout en bout.
 {:shortdesc}
 
 Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} et des outils suivants : 
@@ -39,8 +39,8 @@ Avec cette installation, vous disposez de l'interface de ligne de commande {{sit
 
 Vous devez avoir un compte [{{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et la configuration système doit être respectée :
 
-* Si vous utilisez Microsoft Windows, vous devez utiliser Windows 10 ou une version ultérieure.
-* Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
+* Si vous utilisez Microsoft Windows &trade;, vous devez utiliser Windows 10 Pro ou une version ultérieure.
+* Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum. 
 
 ## Etape 1 : Exécuter la commande install
 {: #step1}
@@ -48,21 +48,21 @@ Vous devez avoir un compte [{{site.data.keyword.Bluemix_notm}} ](https://console
 * Pour Mac et Linux, exécutez la commande suivante :
 
   ```
-  curl -sL https://ibm.biz/idt-installer | bash
+  curl -sL http://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br>
-
-* Pour Windows 10, exécutez la commande suivante en tant qu'administrateur :
+  
+* Pour Windows 10 Pro, exécutez la commande suivante en tant qu'administrateur :
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br>
 
   Cliquez avec le bouton droit de la souris sur l'icône Windows PowerShell et sélectionnez **Exécuter en tant qu'administrateur**.
   {: tip}
+  
+  Pour obtenir des instructions sur l'installation manuelle de ces outils, voir [Réinstallation des outils](/docs/cli/ts_createapps.html#appendix).
 
 ## Etape 2 : Vérifier l'installation
 {: #step2}
@@ -92,17 +92,26 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 	ibmcloud login
 	```
 	{: codeblock}
-<br>
-
-	Si vos données d'identification sont rejetées, vous pouvez utiliser un ID fédéré. Pour plus de détails, voir [Connexion à l'aide d'un ID fédéré](/docs/iam/login_fedid.html#using-an-api-key).
+    <br>
+    
+	Si vos données d'identification sont rejetées, vous pouvez utiliser un ID fédéré. Pour plus de détails, voir [Connexion à l'aide d'un ID fédéré](/docs/iam/login_fedid.html#federated_id).
 	{: tip}
 
 3. Définissez votre organisation et votre espace.
 
 	```
+	ibmcloud target --cf
+	```
+	{: codeblock}
+	
+	Vous pouvez si vous le souhaitez utiliser la sortie de la commande ci-dessus pour définir manuellement votre organisation et votre espace à l'aide de la commande suivante :
+
+	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
+	
+Pour signaler des problèmes ou transmettre des commentaires, vous pouvez utiliser le [canal IBM Cloud Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com). Pour demander l'accès à l'équipe, cliquez [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
 
 ## Etapes suivantes
 {: #next-steps}

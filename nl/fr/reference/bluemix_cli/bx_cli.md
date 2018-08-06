@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-18"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2018-06-18"
 # Commandes {{site.data.keyword.Bluemix_notm}} (ibmcloud)
 {: #bluemix_cli}
 
-Version : 0.7.1
 
 L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit un ensemble de commandes qui sont regroupées par espace de nom pour que les utilisateurs puissent interagir avec {{site.data.keyword.Bluemix_notm}}.
 
-A compter de la version 0.5.0, le client de ligne de commande {{site.data.keyword.Bluemix_notm}} inclut un client de ligne de commande Cloud Foundry dans son installation. Si vous avez installé votre propre interface CLI cf, n'utilisez pas à la fois les commandes CLI d'{{site.data.keyword.Bluemix_notm}},(`ibmcloud [commande]`, et les commandes CLI de Cloud Foundry, `cf [commande]`, de votre propre installation dans le même contexte. Utilisez à la place `ibmcloud cf [commande]` si vous désirez utiliser cf cli pour gérer les ressources Cloud Foundry dans le contexte CLI d'{{site.data.keyword.Bluemix_notm}}.  Notez que `ibmcloud cf api/login/logout/target` n'est pas admis et que vous devez utiliser `ibmcloud api/login/logout/target` à la place.
+Le client de ligne de commande {{site.data.keyword.Bluemix_notm}} inclut un client de ligne de commande Cloud Foundry dans son installation. Si vous avez installé votre propre interface CLI cf, n'utilisez pas à la fois les commandes CLI d'{{site.data.keyword.Bluemix_notm}},(`ibmcloud [commande]`, et les commandes CLI de Cloud Foundry, `cf [commande]`, de votre propre installation dans le même contexte. Utilisez à la place `ibmcloud cf [commande]` si vous désirez utiliser cf cli pour gérer les ressources Cloud Foundry dans le contexte CLI d'{{site.data.keyword.Bluemix_notm}}.  Notez que `ibmcloud cf api/login/logout/target` n'est pas admis et que vous devez utiliser `ibmcloud api/login/logout/target` à la place.
 
 A compter de mai 2018, les commandes de l'interface CLI d'{{site.data.keyword.Bluemix_notm}} ont été changées de `bluemix` et `bx` en `ibmcloud`. Vous pouvez toutefois continuer à utiliser les commandes de l'interface CLI `bluemix` et `bx` jusqu'à ce qu'elles soient retirées.
 {: tip}
@@ -35,7 +34,8 @@ Les listes ci-dessous répertorient les commandes prises en charge par l'interfa
 <dt>Noeud final</dt>
 <dd>Un noeud final d'API doit être défini via <code>bluemix api</code> avant l'utilisation de la commande.</dd>
 <dt>Connexion</dt>
-<dd>La connexion avec la commande <code>bluemix login</code> est requise avant l'utilisation de cette commande. Si vous vous connectez avec un ID fédéré, utilisez l'option '--sso' pour vous authentifier avec un code d'accès unique ou utilisez l'option '--apikey' pour vous authentifier avec une clé d'API. Dans la console {{site.data.keyword.Bluemix_notm}} sélectionnez **Gérer** &gt; **Sécurité** &gt; **Clés d'API de la plateforme** pour créer des clés d'API.
+<dd>La connexion avec la commande <code>bluemix login</code> est requise avant l'utilisation de cette commande.
+Si vous vous connectez avec un ID fédéré, utilisez l'option '--sso' pour vous authentifier avec un code d'accès unique ou utilisez l'option '--apikey' pour vous authentifier avec une clé d'API. Dans la console {{site.data.keyword.Bluemix_notm}} sélectionnez **Gérer** &gt; **Sécurité** &gt; **Clés d'API de la plateforme** pour créer des clés d'API.
 </dd>
 <dt>Cible</dt>
 <dd>La commande <code>bluemix target</code> doit être utilisée pour définir une organisation et un espace avant l'utilisation de cette commande.</dd>
@@ -632,7 +632,7 @@ ibmcloud -q cf services
 Connecter l'utilisateur.
 
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>Prérequis</strong> : Aucun
@@ -652,7 +652,9 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i> (facultatif)</dt>
   <dd> Mot de passe</dd>
   <dt> -c <i>ACCOUNT_ID</i> (facultatif) </dt>
-  <dd> ID du compte cible</dd>
+  <dd> ID du compte cible. Cette option s'utilise exclusivement avec --no-account</dd>
+  <dt> --no-account (facultatif) </dt>
+  <dd> Forcer la connexion sans compte. Cette option n'est pas recommandée. Cette option s'utilise exclusivement avec -c.</dd>
   <dt> -g <i>RESOURCE_GROUP</i> (facultatif) </dt>
   <dd> Nom du groupe de ressources cible</dd>
   <dt> -o <i>ORG</i> (facultatif)</dt>
@@ -1142,7 +1144,7 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
 ## ibmcloud account space-role-set
 {: #ibmcloud_account_space_role_set}
 
-Affecte un rôle d'espace à un utilisateur. Cette opération ne peut être réalisée que par un gestionnaire d'espace.
+Affecte un rôle d'espace à un utilisateur. Cette opération ne peut être réalisée que par un responsable d'espace.
 
 ```
 ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -1179,7 +1181,7 @@ ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ## ibmcloud account space-role-unset
 {: #ibmcloud_account_space_role_unset}
 
-Suppression de l'affectation d'un rôle d'espace à un utilisateur. Cette opération ne peut être réalisée que par un gestionnaire d'espace.
+Suppression de l'affectation d'un rôle d'espace à un utilisateur. Cette opération ne peut être réalisée que par un responsable d'espace.
 
 ```
 ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -4943,7 +4945,7 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-Afficher l'utilisation mensuelle pour une organisation (administrateur de compte ou gestionnaire de facturation d'organisation seulement)
+Afficher l'utilisation mensuelle pour une organisation (administrateur de compte ou responsable de facturation d'organisation seulement)
 
 ```
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]

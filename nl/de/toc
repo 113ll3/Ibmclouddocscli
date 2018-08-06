@@ -1,77 +1,26 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" arm="" href="/docs/cli/index.html"}
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
 IBM Cloud Developer Tools (CLI- und Dev-Tools)
 
 	{: .navgroup id="learn"}
 	index.md
 	{: .navgroup-end}
-
+	
 	{: .navgroup id="howto"}
-	reference/ibmcloud/download_cli.md
-	reference/ibmcloud/extend_cli.md
-	reference/ibmcloud/enable_cli_autocompletion.md
+	reference/bluemix_cli/download_cli.md
+	reference/bluemix_cli/extend_cli.md
+	reference/bluemix_cli/enable_cli_autocompletion.md
 	idt/index.md
-
+        	
 	{: .topicgroup}
 	IBM Cloud Developer Tools IDE Extensions
 		idt/vscode.md
 		idt/jetbrains.md
 		deploy_eclipsetools.md
 		[Anwendungen mit IBM Eclipse Tools for IBM Cloud bereitstellen](../manageapps/eclipsetools/eclipsetools.html)
-
-	{: topicgroup}
-	Debugging
-		idt/local_debug.md
-	{: .navgroup-end}
-
-	{: .navgroup id="reference"}
-	{: .topicgroup}
-	Befehle der IBM Cloud-Befehlszeilenschnittstelle (ibmcloud)
-		reference/ibmcloud/bx_cli.md
-		reference/ibmcloud/cli_acct_org_role.md
-		reference/ibmcloud/cli_resource_group.md
-		reference/ibmcloud/cli_api_policy.md
-		reference/ibmcloud/cli_cf_apps.md
-		reference/ibmcloud/cli_services.md
-		reference/ibmcloud/cli_cat_plugin_billing.md
-		reference/ibmcloud/cli_cfee.md
-		reference/ibmcloud/cli_block_storage.md
-		reference/ibmcloud/cli_cdn.md
-		reference/ibmcloud/cli_dns.md
-		reference/ibmcloud/cli_file_storage.md
-		reference/ibmcloud/cli_global_ip.md
-		reference/ibmcloud/cli_hardware.md
-		reference/ibmcloud/cli_image.md
-		reference/ibmcloud/cli_ipsec_vpn.md
-		reference/ibmcloud/cli_load_balancer.md
-		reference/ibmcloud/cli_security.md
-		reference/ibmcloud/cli_securitygroup.md
-		reference/ibmcloud/cli_subnet.md
-		reference/ibmcloud/cli_virtual_server.md
-		reference/ibmcloud/cli_vlan.md
-		reference/ibmcloud/cf_index.md
-	idt/commands.md
-
-	{: .topicgroup}
-	Plug-ins der IBM Cloud-Befehlszeilenschnittstelle
-		plugins/api-management-cliplugin/
-		plugins/auto-scaling/index.md
-		[Befehlszeilenschnittstelle der Container-Registry](../services/Registry/registry_cli.html)
-		[Befehlszeilenschnittstelle des Container-Service](../containers/cs_cli_devtools.html)
-		plugins/pnp/index.md
-		plugins/bx_vpn/index.md
-		plugins/vpc/use-cli.md
-
-	{: .topicgroup}
-	Plug-ins für Cloud Foundry-CLI
-		plugins/bluemix_admin/index.md
-		plugins/dev_mode/index.md
-		plugins/vpn/index.md
-
-	monitoring_logging.md
-
+        	
 	{: .topicgroup}
 	SDKs für Mobile
 		sdk/index.md
@@ -79,8 +28,44 @@ IBM Cloud Developer Tools (CLI- und Dev-Tools)
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
+	
+	monitoring_logging.md
+	
+	{: topicgroup}
+	Debugging
+		debug.md
+		idt/local_debug.md
 	{: .navgroup-end}
 
-        {: .navgroup id="help"}
+	{: .navgroup id="reference"}
+	reference/bluemix_cli/bx_cli.md
+	idt/commands.md
+	reference/softlayer/index.md
+	reference/cfcommands/index.md
+
+	{: .topicgroup}
+	IBM Cloud CLI-Plug-ins
+		plugins/api-management-cliplugin/
+		plugins/auto-scaling/index.md
+		[Container Registry-CLI](../services/Registry/registry_cli.html)
+		[Container Service-CLI](../containers/cs_cli_devtools.html)
+ 		plugins/pnp/index.md
+		plugins/bx_vpn/index.md
+
+	{: .topicgroup}
+	Plug-ins für Cloud Foundry-CLI
+		plugins/bluemix_admin/index.md
+		plugins/dev_mode/index.md
+		plugins/vpn/index.md
+	
+	{: .topicgroup}
+	Empfohlene Entwicklungsumgebungen
+		deploy_eclipsetools.md
+		[Managing Liberty and Node.js apps](../runtimes/common/app_mng.html#app_management)
+		[API Connect Developer Toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
+	{: .navgroup-end}
+
+	{: .navgroup id="help"}
 	ts_createapps.md
-        {: .navgroup-end}
+	{: .navgroup-end}

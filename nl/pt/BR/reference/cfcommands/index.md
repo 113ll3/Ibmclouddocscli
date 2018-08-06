@@ -132,8 +132,7 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 Lista todos os aplicativos que você implementou no espaço atual. O
 status de cada aplicativo também é exibido.
 
-Suponha que tenha uma instância para um app, na coluna de instâncias da resposta do comando cf apps, você verá 1/1 se seu app estiver ativo e 0/1 se seu app estiver inativo. 
-Se você vir ?/1, que indica que o estado da instância do app é desconhecido, será possível copiar a URL do app para o seu navegador
+Suponha que tenha uma instância para um app, na coluna de instâncias da resposta do comando cf apps, você verá 1/1 se seu app estiver ativo e 0/1 se seu app estiver inativo. Se você vir ?/1, que indica que o estado da instância do app é desconhecido, será possível copiar a URL do app para o seu navegador
 para verificar se o app responde ou acompanhar o log pelo comando `cf logs appname` para ver se o app
 está gerando conteúdo de log.
 
@@ -816,7 +815,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Exibe a versão da interface da linha de comandos do cf.
+Exibe a versão da interface da linha de comandos do Cloud Foundry.
 
 ```
 cf -v
@@ -827,7 +826,7 @@ cf -v
 
 <strong>Exemplos</strong>:
 
-Exiba a versão da interface da linha de comandos cf.
+Exiba a versão da interface da linha de comandos do Cloud Foundry.
 ```
 cf -v
 ```

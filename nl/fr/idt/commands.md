@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -13,9 +13,9 @@ lastupdated: "2018-06-21"
 {:screen: .screen}  
 {:codeblock: .codeblock}  
 {:pre: .pre}
-{:tip: .tip}  
+{:tip: .tip}
 
-# Commandes de l'interface de ligne de commande {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev)
+# Commandes du plug-in {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev)
 {: #idt-cli}
 
 Version : 1.2.0
@@ -24,40 +24,40 @@ Publication : 8 mars 2018
 A compter de mai 2018, les commandes de l'interface CLI d'{{site.data.keyword.Bluemix_notm}} ont été changées de `bluemix` et `bx` en `ibmcloud`. Vous pouvez toutefois continuer à utiliser les commandes de l'interface CLI `bluemix` et `bx` jusqu'à ce qu'elles soient retirées.
 {: tip}
 
-Utilisez les commandes CLI {{site.data.keyword.dev_cli_notm}} (ibmcloud dev) suivantes pour créer un projet, le déployer, le déboguer et le tester :
+Utilisez les commandes {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) suivantes pour créer une application, la déployer, la déboguer et la tester :
 
-- La commande [build](#build) vous permet de créer le projet dans un conteneur local.
-- La commande [code](#code) vous permet de télécharger le code à partir d'un projet.
-- La commande [console](#console) vous permet d'ouvrir la console IBM Cloud pour un projet.
-- La commande [create](#create) vous permet de créer un nouveau projet et vous offre la possibilité d'ajouter des services.
-- La commande [debug](#debug) vous permet de déboguer votre application dans un conteneur local.
-- La commande [delete](#delete) vous permet de supprimer un projet de votre espace.
-- La commande [deploy](#deploy) vous permet de déployer une application sur IBM Cloud.
-- La commande [enable](#enable) vous permet d'ajouter des fichiers IBM Cloud à un projet existant.
-- La commande [get-credentials](#get-credentials) vous permet d'obtenir les données d'identification requises par le projet pour activer l'utilisation de services liés.
-- La commande [help](#help) vous permet d'obtenir de l'aide sur la syntaxe et les arguments IDT.
-- La commande [list](#list) vous permet de répertorier tous les projets IBM Cloud dans un espace.
-- La commande [run](#run) vous permet d'exécuter votre application dans un conteneur local.
-- La commande [shell](#shell) vous permet d'ouvrir un interpréteur de commandes dans un conteneur local.
-- La commande [status](#status) vous permet de vérifier le statut des conteneurs utilisés par l'interface de ligne de commande.
-- La commande [stop](#stop) vous permet d'arrêter un conteneur.
-- La commande [test](#test) vous permet de tester votre application dans un conteneur local.
-- La commande [view](#view) vous permet d'afficher l'URL déployée pour les applications à des fins de test et de visualisation.
-- Les [commandes composées](#compound) vous permettent d'exécuter plusieurs commandes dans une instruction de ligne de commande.
+- La commande [build](#build) permet de créer l'application dans un conteneur local.
+- La commande [code](#code) permet de télécharger le code pour une application.
+- La commande [console](#console) permet d'ouvrir la console IBM Cloud pour une application.
+- La commande [create](#create) permet de créer une nouvelle application et offre la possibilité d'ajouter des services.
+- La commande [debug](#debug) permet de déboguer votre application dans un conteneur local.
+- La commande [delete](#delete) permet de supprimer une application de votre espace.
+- La commande [deploy](#deploy) permet de déployer une application sur IBM Cloud.
+- La commande [edit](#edit) permet d'ajouter ou de retirer des services pour une application existante
+- La commande [enable](#enable) permet de mettre à jour une application existante à utiliser avec IBM Cloud Developer Tools
+- La commande [get-credentials](#get-credentials) permet d'obtenir les données d'identification requises par l'application pour activer l'utilisation de services IBM Cloud connectés.
+- La commande [help](#help) permet d'obtenir de l'aide sur la syntaxe et les arguments CLI.
+- La commande [list](#list) permet de répertorier toutes les applications IBM Cloud d'un groupe de ressources.
+- La commande [run](#run) permet d'exécuter votre application dans un conteneur local.
+- La commande [shell](#shell) permet d'ouvrir un shell dans un conteneur local.
+- La commande [status](#status) permet de vérifier le statut des conteneurs utilisés par l'interface de ligne de commande.
+- La commande [stop](#stop) permet d'arrêter un conteneur.
+- La commande [test](#test) permet de tester votre application dans un conteneur local.
+- La commande [view](#view) permet d'afficher l'URL déployée de l'application à des fins de test et de visualisation.
+- Les [commandes composées](#compound) permettent d'exécuter plusieurs commandes dans une seule instruction de ligne de commande.
 
 
 
 ## Commande build
 {: #build}
 
-Vous pouvez générer votre application en utilisant la commande `build`. Les commandes `test`, `debug` et `run` s'attendent à trouver un projet compilé, par conséquent, vous devez préalablement exécuter une opération `build`.  
+Vous pouvez générer votre application en utilisant la commande `build`. Les commandes `test`, `debug` et `run` s'attendent à trouver une application compilée, par conséquent, vous devez préalablement exécuter une opération `build`.  
 
 L'élément de configuration `build-cmd-debug` est utilisé afin de générer l'application pour toutes les utilisations, à l'exception de`run`. Vous générez votre application à des fins d débogage en spécifiant l'option de ligne de commande `--debug`.  L'élément de configuration `build-cmd-run` est utilisé lors de la génération de l'application afin de l'utiliser avec la commande `run`.
 
-Pour une génération avec plusieurs conteneurs, votre projet doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/), spécifié dans le fichier `cli-config.yml`, ou vous pouvez utiliser le paramètre de commande `dockerfile-tools` pour en indiquer un. Pour plus d'informations, voir[Fichier Compose ](/docs/apps/projects/compose_file.html).
+Pour une génération avec plusieurs conteneurs, votre application doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/), spécifié dans le fichier `cli-config.yml`, ou vous pouvez utiliser le paramètre de commande `dockerfile-tools` pour en indiquer un. Pour plus d'informations, voir [Fichier Compose](/docs/apps/projects/compose_file.html).
 
-Exécutez la commande suivante dans votre répertoire de projet en cours pour
-générer votre application :  
+Exécutez la commande suivante dans votre répertoire d'application en cours pour générer votre application :  
 
 ```
 ibmcloud dev build [--debug]
@@ -65,18 +65,16 @@ ibmcloud dev build [--debug]
 {: codeblock}
 
 
-[Paramètres de la commande build](#command-parameters)
-
 
 ## Commande code
 {: #code}
 
-Utilisez la commande `code` pour télécharger un projet précédemment créé avec le code de modèle d'application et les fichiers de configuration de {{site.data.keyword.Bluemix_notm}}.  Cela est utile lorsque vous devez extraire une seconde copie d'un projet que vous avez créé.
+Utilisez la commande `code` pour télécharger une application précédemment créée avec le code de modèle d'application et les fichiers de configuration de {{site.data.keyword.Bluemix_notm}}. Cette commande est particulièrement utile lorsque vous devez extraire une deuxième copie d'une application que vous avez créée.
 
-Exécutez la commande suivante pour télécharger le code à partir du projet spécifié :
+Exécutez la commande suivante pour télécharger le code à partir d'une application spécifiée :
 
 ```
-ibmcloud dev code <projectName>
+ibmcloud dev code <applicationName>
 ```
 {: codeblock}
 
@@ -84,14 +82,14 @@ ibmcloud dev code <projectName>
 ## Commande console
 {: #console}
 
-Utilisez la commande `console` pour ouvrir un navigateur Web sur la console Web de votre application sur IBM Cloud.  Vous pouvez exécuter la commande `ibmcloud dev console` depuis votre dossier de projet, auquel cas l'interface de ligne de commande tente de trouver un projet correspondant sur IBM Cloud portant le même ID de projet que le répertoire en cours. Si le système ne parvient pas à trouver un nom correspondant, il ouvre le tableau de bord Web et mobile sur IBM Cloud au lieu du projet spécifique.
+Utilisez la commande `console` pour ouvrir un navigateur Web dans la console Web de votre application sur IBM Cloud. Vous pouvez exécuter la commande `ibmcloud dev console` depuis votre dossier d'application, auquel cas l'interface de ligne de commande tente de trouver une application correspondante sur IBM Cloud portant le même ID d'application que le répertoire en cours. Si le système ne parvient pas à trouver de nom correspondant, il ouvre le tableau de bord Web et mobile sur IBM Cloud au lieu de l'application spécifique.
 
-Vous pouvez indiquer un nom de projet ; l'interface de ligne de commande ignore la mise en correspondance basée sur le nom de dossier/d'application. Dans ce cas, l'interface de ligne de commande ouvre la console du projet nommé dans un navigateur Web.  
+Vous pouvez indiquer un nom d'application ; l'interface de ligne de commande ignore la mise en correspondance basée sur le nom de dossier/d'application. Dans ce cas, l'interface de ligne de commande ouvre la console de l'application nommée dans un navigateur Web.  
 
 Exécutez la commande suivante pour ouvrir un navigateur Web sur la console Web de votre application :
 
 ```
-ibmcloud dev console [projectName]
+ibmcloud dev console [applicationName]
 ```
 {: codeblock}
 
@@ -99,10 +97,9 @@ ibmcloud dev console [projectName]
 ## Commande create
 {: #create}
 
-Créez un projet en invitant à spécifier toutes les informations, y compris, le type de ressource, la langue, le kit de démarrage et les options DevOps Toolchain. Le projet est
-créé dans le répertoire de travail.
+Créez une application en invitant à spécifier toutes les informations, notamment le type de ressource, le langage, le kit de démarrage et les options DevOps Toolchain. L'application est créée dans le répertoire de travail.
 
-Pour créer un projet dans le répertoire en cours et pour y associer des services, exécutez la commande suivante :
+Pour créer une application dans le répertoire de travail et pour y associer des services, exécutez la commande suivante :
 
 ```
 ibmcloud dev create
@@ -113,17 +110,16 @@ ibmcloud dev create
 ## Commande debug
 {: #debug}
 
-Vous pouvez déboguer votre application avec la commande `debug`. Une
-génération doit d'abord être effectuée pour le projet à l'aide de la commande build avec l'argument `--debug`. Le lancement de la commande `debug` entraîne le démarrage d'un conteneur qui fournit un ou plusieurs ports de débogage définis par la valeur `container-port-map-debug` dans le fichier cli-config.yml ou spécifiés sur la ligne de commande. Connectez votre outil de débogage favori au port ou aux ports et vous pourrez déboguer votre application en mode normal.
+Vous pouvez déboguer votre application avec la commande `debug`. Une génération doit d'abord être effectuée pour l'application en utilisant la commande build avec l'argument `--debug`. Le lancement de la commande `debug` entraîne le démarrage d'un conteneur qui fournit un ou plusieurs ports de débogage définis par la valeur `container-port-map-debug` dans le fichier cli-config.yml ou spécifiés sur la ligne de commande. Connectez votre outil de débogage favori au port ou aux ports et vous pourrez déboguer votre application en mode normal.
 
-D'abord, compilez votre projet :
+Compilez tout d'abord votre application :
 
 ```
 ibmcloud dev build --debug
 ```
 {: codeblock}
 
-Pour commencer, exécutez la commande suivante dans votre répertoire de projet en cours afin de déboguer votre application :
+Pour commencer, exécutez la commande suivante dans votre répertoire d'application en cours afin de déboguer votre application :
 
 ```
 ibmcloud dev debug
@@ -168,13 +164,12 @@ de débogage dans le conteneur tools. Utilisez-le si
 ## Commande delete
 {: #delete}
 
-Utilisez la commande `delete` pour supprimer des projets de votre espace {{site.data.keyword.Bluemix}}. Vous pouvez exécuter la commande sans paramètres pour afficher la liste des projets disponibles et sélectionner le projet à supprimer dans la liste numérotée. Le
-code du projet et les répertoires ne sont pas retirés de votre espace disque local.
+Utilisez la commande `delete` pour supprimer des applications de votre espace {{site.data.keyword.Bluemix}}. Vous pouvez exécuter la commande sans paramètre pour afficher la liste des applications disponibles et sélectionner l'application à supprimer dans la liste numérotée. Le code de l'application et les répertoires ne sont pas retirés de votre espace disque local.
 
-Exécutez la commande suivante pour supprimer votre projet depuis {{site.data.keyword.Bluemix}} :
+Exécutez la commande suivante pour supprimer votre application dans {{site.data.keyword.Bluemix}} :
 
 ```
-ibmcloud dev delete <projectName>
+ibmcloud dev delete <applicationName>
 ```
 {: codeblock}
 
@@ -187,13 +182,13 @@ ibmcloud dev delete <projectName>
 
 Vous pouvez déployer une application en tant qu'application Cloud Foundry ou en tant que conteneur.
 
-Pour permettre un déploiement en tant qu'application Cloud Foundry sur {{site.data.keyword.Bluemix}}, un fichier `manifest.yml` doit être présent dans le répertoire racine de votre projet.
+Pour le déploiement en tant qu'application Cloud Foundry dans {{site.data.keyword.Bluemix}}, un fichier `manifest.yml` doit être présent dans le répertoire racine de votre application.
 
-Pour déployer une application en tant que conteneur, vous devez installer localement [Kubernetes](https://kubernetes.io/) et [Helm](https://github.com/kubernetes/helm). Assurez-vous que la version du client Helm n'est pas plus récente que la version du serveur Helm. Pour connaître ces informations, exécutez la commande `helm version`. Il est recommandé d'utiliser la version 2.4.2 pour la version du client.
+Pour le déploiement d'une application en tant que conteneur, vous devez installer localement [Kubernetes](https://kubernetes.io/) et [Helm](https://github.com/kubernetes/helm). Assurez-vous que la version du client Helm n'est pas plus récente que la version du serveur Helm. Pour connaître ces informations, exécutez la commande `helm version`. Il est recommandé d'utiliser la version 2.4.2 pour la version du client.
 
-Dans le fichier `cli-config.yml`, vous pouvez choisir de définir l'emplacement d'un graphique Helm dans la propriété `chart-path`, d'affecter à l'élément `deploy-target` la valeur `container` et de configurer l'élément `deploy-image-target` comme illustré dans l'exemple. L'élément `deploy-image-target` dans le fichier `cli-config.yml` est utilisé à la place des éléments `repository` et `tag` dans le fichier `chart/values.yml`. Pour effectuer un déploiement spécifiquement sur {{site.data.keyword.Bluemix}}, affectez à l'élément de configuration `ibm-cluster` le nom du cluster Kubernetes que vous avez créé dans {{site.data.keyword.Bluemix}} comme indiqué dans le [Tutoriel : Création de clusters](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
+Pour déployer votre application sur Kubernetes, vous devez spécifier l'élément `deploy-target` en tant que `conteneur` dans le fichier `cli-config.yml` ou utiliser le paramètre `-t container`. 
 
-Pour plus d'informations sur la mise à disposition, la configuration et le déploiement sur un cluster Kubernetes, voir le tutoriel [Déploiement d'une application Web évolutive sur Kubernetes](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes).
+D'autres paramètres requis pour la configuration du déploiement Kubernetes peuvent être spécifiés dans le fichier `cli-config.yml`, comme présenté ci-dessous, ou via des arguments de ligne de commande. Si vous ne définissez pas ces informations dans le fichier `cli-config.yml`, vous devez effectuer le déploiement avec le paramètre `-t container`. Vous êtes alors invité à spécifier toutes les autres valeurs.
 
 ```
     chart-path: "chart/myapplication"
@@ -205,17 +200,18 @@ Pour plus d'informations sur la mise à disposition, la configuration et le dép
     ibm-cluster: "mycluster"
 ```
 
-Si vous ne définissez pas ces informations dans le fichier cli-config.yml, vous devez effectuer le déploiement avec le paramètre `-t container` afin d'être invité à spécifier toutes les autres valeurs.
+Dans le fichier `cli-config.yml`, vous pouvez choisir de définir l'emplacement d'un graphique Helm dans la propriété `chart-path` et de configurer l'élément `deploy-image-target`, comme cela est présenté dans l'exemple. L'élément `deploy-image-target` dans le fichier `cli-config.yml` est utilisé à la place des éléments `repository` et `tag` dans le fichier `chart/values.yml`. Pour effectuer un déploiement spécifiquement sur {{site.data.keyword.Bluemix}}, affectez à l'élément de configuration `ibm-cluster` le nom du cluster Kubernetes que vous avez créé dans {{site.data.keyword.Bluemix}} comme indiqué dans le [Tutoriel : Création de clusters](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
 
-Exécutez la commande suivante dans votre répertoire de projet en cours pour
-générer votre application :  
+Pour plus d'informations sur la mise à disposition, la configuration et le déploiement sur un cluster Kubernetes, voir le tutoriel [Déploiement d'une application Web évolutive sur Kubernetes](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes).
+
+Exécutez la commande suivante dans votre répertoire d'application en cours pour générer votre application :  
 
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-Exécutez la commande suivante dans votre répertoire de projet en cours pour déployer votre projet :
+Exécutez la commande suivante dans votre répertoire d'application en cours pour déployer votre application :
 
 ```
 ibmcloud dev deploy
@@ -226,7 +222,7 @@ ibmcloud dev deploy
 ### Paramètres de la commande deploy
 {: #deploy-parameters}
 
-Les paramètres ci-dessous peuvent être utilisés avec la commande `deploy` ou en mettant à jour directement le fichier `cli-config.yml` du projet. Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'autres commandes.
+Les paramètres ci-dessous peuvent être utilisés avec la commande `deploy` ou en mettant directement à jour le fichier `cli-config.yml` de l'application. Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'autres commandes.
 
 #### `chart-path`
 {: #chart-path}
@@ -252,29 +248,63 @@ Les paramètres ci-dessous peuvent être utilisés avec la commande `deploy` ou 
 * Paramètre facultatif permettant de définir le nom du cluster kubernetes pour un déploiement de conteneur sur {{site.data.keyword.Bluemix}}.
 * Syntaxe : `ibmcloud dev deploy --ibm-cluster [nom_cluster]`
 
+#### `hôte`
+{: #host}
+
+* Paramètre facultatif permettant de définir le nom d'hôte de l'application lors du déploiement dans Cloud Foundry
+* Syntaxe : `ibmcloud dev deploy --host [hostname]`
+
+#### `domaine`
+{: #domain}
+
+* Paramètre facultatif permettant de définir le domaine de l'application lors du déploiement dans Cloud Foundry
+* Syntaxe : `ibmcloud dev deploy --domain [domain]`
+
+
+## edit
+{: #edit}
+
+Editez votre application en ajoutant de nouveaux services, en connectant et déconnectant des services existants ou en retirant des services existants. Exécutez la commande suivante à la racine d'un répertoire d'application :
+
+```
+ibmcloud dev edit
+```
+{: codeblock}
+
+Si vous n'avez aucun service existant dans votre compte, cette commande affiche une liste des groupes de services à partir desquels vous pouvez sélectionner un service à connecter à votre application.
+
+Cependant, si vous disposez de services existants dans votre compte, cette commande affiche une liste de ces services et indique si chaque service est connecté ou non à l'application. 
+
+La sélection d'un service connecté vous permet de déconnecter le service de votre application ou de supprimer le service de votre compte, et donc de le déconnecter de toutes les applications auxquelles il est connecté.
+
+La sélection d'un service déconnecté vous permet de connecter ce service à votre application ou de supprimer le service de votre compte. La connexion d'un service existant entraîne le téléchargement de fichiers, tels que les fichiers de données d'identification ou le code source, qui vous permettent de commencer à utiliser ce service.
+
+Vous pouvez également choisir d'ajouter un nouveau service à votre application. Des invites de sélection de service s'affichent. De plus, des fichiers supplémentaires sont téléchargés (fichiers de données d'identification ou code source) vous permettant de commencer à utiliser le nouveau service.
+
+
 
 ## Commande enable
 {: #enable}
 
-Activez un projet existant pour le déploiement {{site.data.keyword.Bluemix_notm}}. La commande `enable` tente de détecter automatiquement la langue d'un projet existant, puis invite à indiquer les informations supplémentaires nécessaires. Cette opération génère et ajoute des fichiers pouvant être utilisés pour des conteneurs Docker locaux, le déploiement CloudFoundry ou le déploiement Kubernetes/conteneur.
+Activez une application existante pour le déploiement {{site.data.keyword.Bluemix_notm}}. La commande `enable` tente de détecter automatiquement le langage d'une application existante, puis invite à indiquer les informations supplémentaires nécessaires. Cette opération génère et ajoute des fichiers pouvant être utilisés pour des conteneurs Docker locaux, le déploiement Cloud Foundry ou le déploiement Kubernetes/conteneur.
 
-Exécutez la commande suivante pour activer un projet existant dans le répertoire en cours du déploiement {{site.data.keyword.Bluemix_notm}} :
+Exécutez la commande suivante pour activer une application existante dans le répertoire de travail pour le déploiement {{site.data.keyword.Bluemix_notm}} :
 
 ```
 ibmcloud dev enable
 ```
 {: codeblock}
 
-La présence des fichiers nécessaires permet de détecter une langue de projet pour une structure de projet valide.  
+La présence des fichiers nécessaires permet de détecter un langage d'application pour une structure de projet valide.  
 
-* La présence d'un fichier `package.json` identifie un projet Node.js.
-* La présence d'un fichier `package.swift` identifie un projet Swift.
-* La présence d'un fichier `setup.py` ou `requirements.txt` identifie un projet Python.
-* La présence d'un fichier `pom.xml` ou `build.gradle` identifie un projet Java.
-	* La présence d'un fichier `pom.xml` identifie un projet Maven.
-	* La présence d'un fichier `build.gradle` identifie un projet Gradle.
+* La présence d'un fichier `package.json` identifie une application Node.js.
+* La présence d'un fichier `package.swift` identifie une application Swift.
+* La présence d'un fichier `setup.py` ou `requirements.txt` identifie une application Python.
+* La présence d'un fichier `pom.xml` ou `build.gradle` identifie une application Java.
+	* La présence d'un fichier `pom.xml` identifie une application Maven.
+	* La présence d'un fichier `build.gradle` identifie une application Gradle.
 
-Vous pouvez éventuellement substituer la langue de projet détectée à l'aide de l'argument `--language`.  Cependant, seuls les projets valides et terminés sont pris en charge. La commande enable ne modifie pas votre code source.
+Vous pouvez éventuellement substituer le langage d'application détecté à l'aide de l'argument `--language`.  Cependant, seules les applications valides et terminées sont prises en charge. La commande enable ne modifie pas votre code source.
 
 Les options de langue sont notamment les suivantes :
 * node
@@ -284,30 +314,30 @@ Les options de langue sont notamment les suivantes :
 * java-mp (interprété comme Java - Java MicroProfile)
 * java-spring (interprété comme Java - Spring Framework)
 
-Les fichiers créés à l'aide de la commande `ibmcloud dev enable` et dont les noms entrent en conflit avec des noms de fichiers existants dans le dossier de projet sont sauvegardés avec une extension de fichier `.merge`.  
+Les fichiers créés à l'aide de la commande `ibmcloud dev enable` et dont les noms entrent en conflit avec des noms de fichiers existants dans le dossier d'application sont sauvegardés avec une extension de fichier `.merge`.  
 
 ### Paramètres de la commande enable
 {: #enable-parameters}
 
-Les paramètres ci-dessous peuvent être utilisés avec la commande `enable` ou en mettant à jour directement le fichier `cli-config.yml` du projet. Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'autres commandes.
+Les paramètres ci-dessous peuvent être utilisés avec la commande `enable` ou en mettant directement à jour le fichier `cli-config.yml` de l'application. Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'autres commandes.
 
 #### `language`
 {: #enable-language}
 
-* Paramètre utilisé pour indiquer la langue du projet à activer.
-* Syntaxe : `ibmcloud dev enable -l|--language [langue]`
+* Paramètre utilisé pour indiquer le langage de l'application à activer.
+* Syntaxe : `ibmcloud dev enable -l|--language [langage]`
 
 #### `force`
 {: #enable-force}
 
-* Paramètre utilisé pour forcer la réactivation d'un projet déjà activé.
+* Paramètre utilisé pour forcer la réactivation d'une application déjà activée.
 * Syntaxe : `ibmcloud dev enable -f|--force`
 
 
 ## Commande get-credentials
 {: #get-credentials}
 
-Permet d'obtenir les données d'identification requises par le projet pour activer l'utilisation de services liés.
+Permet d'obtenir les données d'identification requises par l'application pour activer l'utilisation de services connectés.
 
 
 ## Commande help
@@ -329,9 +359,9 @@ ibmcloud dev help
 ## Commande list
 {: #list}
 
-Vous pouvez répertorier tous les projets {{site.data.keyword.Bluemix_notm}} d'un espace.
+Vous pouvez répertorier toutes les applications {{site.data.keyword.Bluemix_notm}} d'un groupe de ressources.
 
-Exécutez la commande suivante pour répertorier vos projets :
+Exécutez la commande suivante pour répertorier vos applications :
 
 ```
 ibmcloud dev list
@@ -339,41 +369,21 @@ ibmcloud dev list
 {: codeblock}
 
 
-<!--
-## edit
-{: #edit}
-
-You can edit a project, such as changing the name, pattern or starter type, or adding services to your project. Run the following command:
-
-```
-ibmcloud dev edit
-```
-{: codeblock}
--->
-
-
 ## Commande run
 {: #run}
 
-Vous pouvez exécuter votre application avec la commande `run`. Une
-génération doit d'abord être effectuée pour le projet à l'aide de la commande
-`build`. Lorsque vous appelez la commande `run`, le conteneur run est
-démarré et expose les ports tels que définis par le paramètre
-`container-port-map`. Le paramètre `run-cmd` peut être
-utilisé pour appeler l'application si le conteneur run Dockerfile ne contient pas de
-point d'entrée pour effectuer cette étape.
+Vous pouvez exécuter votre application avec la commande `run`. Une génération doit d'abord être effectuée pour l'application à l'aide de la commande `build`. Lorsque vous appelez la commande `run`, le conteneur run est démarré et expose les ports tels qu'ils sont définis par le paramètre `container-port-map`. Le paramètre `run-cmd` peut être utilisé pour appeler l'application si le conteneur run Dockerfile ne contient pas de point d'entrée pour effectuer cette étape.
 
-Pour une exécution avec plusieurs conteneurs, votre projet doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/), spécifié dans le fichier `cli-config.yml`, ou vous pouvez utiliser le paramètre de commande `dockerfile-run` pour en indiquer un. Pour plus d'informations, voir[Fichier Compose ](/docs/apps/projects/compose_file.html).
+Pour une exécution avec plusieurs conteneurs, votre application doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/), spécifié dans le fichier `cli-config.yml`, ou vous pouvez utiliser le paramètre de commande `dockerfile-run` pour en indiquer un. Pour plus d'informations, voir [Fichier Compose](/docs/apps/projects/compose_file.html).
 
-D'abord, compilez votre projet :
+Compilez tout d'abord votre application :
 
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-Exécutez la commande suivante dans votre répertoire de projet en cours pour
-démarrer votre application :
+Exécutez la commande suivante dans votre répertoire d'application en cours pour démarrer votre application :
 
 ```
 ibmcloud dev run
@@ -394,7 +404,7 @@ Des [paramètres supplémentaires](#command-parameters) sont partagés avec d'au
 {: #container-name-run2}
 
 * Nom de conteneur pour le conteneur run.
-* Syntaxe : `ibmcloud dev run --container-name-run [<projectName>]`
+* Syntaxe : `ibmcloud dev run --container-name-run [<applicationName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -445,12 +455,12 @@ ibmcloud dev shell
 
 L'interface de ligne de commande {{site.data.keyword.dev_cli_short}} ouvrira un interpréteur de commandes interactif dans le conteneur Docker de l'application. Le conteneur cible par défaut pour la commande shell est défini par la valeur `container-shell-target` dans le fichier `cli-config.yml`, où les valeurs valides sont `run` ou `tools`. Si cette valeur n'est pas définie ou n'est pas valide, par défaut, la commande `shell` prend pour cible le conteneur `tools`. La commande shell ouvre le conteneur dans le répertoire spécifié par l'instruction `WORKDIR` dans le fichier Dockerfile correspondant. Si `WORKDIR` n'est pas indiqué dans le fichier Dockerfile, la racine de conteneur est utilisée comme répertoire de travail. Pour plus d'informations, voir[ce document de référence](https://docs.docker.com/engine/reference/builder/#workdir).
 
-Sinon, vous pouvez choisir de transmettre `run` ou `tools` en tant qu'argument à la commande pour que le conteneur soit installé et l'interpréteur de commandes ouvert pour ce conteneur. De même, vous pouvez utiliser le paramètre `container-name` pour transmettre le nom du conteneur dans lequel vous souhaitez exécuter l'interpréteur de commandes. Cependant, cette option doit être réservée pour les situations où aucun conteneur n'est actif. Les arguments `run` et `tools` sont plus souples et vous permettent de passer d'un conteneur à l'autre lorsque l'un d'entre eux est actif. Par exemple, si le conteneur tools est actif et que vous exécutez la commande `ibmcloud dev shell run`, le conteneur `tools` s'arrêtera et le conteneur `run` démarrera, et inversement.
+Sinon, vous pouvez choisir de transmettre `run` ou `tools` en tant qu'argument à la commande pour que le conteneur soit installé et l'interpréteur de commandes ouvert pour ce conteneur. De même, vous pouvez utiliser le paramètre `container-name` pour transmettre le nom du conteneur dans lequel vous souhaitez exécuter le shell. Cependant, cette option doit être réservée pour les situations où aucun conteneur n'est actif. Les arguments `run` et `tools` sont plus souples et vous permettent de passer d'un conteneur à l'autre lorsque l'un d'entre eux est actif. Par exemple, si le conteneur tools est actif et que vous exécutez la commande `ibmcloud dev shell run`, le conteneur `tools` s'arrêtera et le conteneur `run` démarrera, et inversement.
 
 Si le conteneur `run` ou `tools` cible n'est pas déjà actif lorsque vous exécutez la commande `shell`, le conteneur cible sera démarré. Toutefois, la valeur par défaut `Cmd` ou `Entrypoint` dans le fichier Dockerfile sera remplacée pour lancer le conteneur directement dans l'interpréteur de commandes au lieu de démarrer le processus serveur. Cela vous permet de démarrer le conteneur `run` ou `tools` et de démarrer manuellement le serveur avec vos propres commandes arbitraires ou personnalisées.
 
 
-Vous pouvez également spécifier l'exécutable d'interpréteur de commandes que vous souhaitez ouvrir à l'aide du paramètre `container-shell`. Par défaut, `/bin/sh` est utilisé. Si vous préférez utiliser l'interpréteur de commandes bash, affectez au paramètre `container-shell` la valeur`/bin/bash` ; cependant, gardez à l'esprit que l'interpréteur de commandes bash n'est pas automatiquement disponible dans toutes les variantes Linux.
+Vous pouvez également spécifier l'exécutable de shell que vous souhaitez ouvrir à l'aide du paramètre `container-shell`. Par défaut, `/bin/sh` est utilisé. Si vous préférez utiliser l'interpréteur de commandes bash, affectez au paramètre `container-shell` la valeur`/bin/bash` ; cependant, gardez à l'esprit que l'interpréteur de commandes bash n'est pas automatiquement disponible dans toutes les variantes Linux.
 
 Les arguments supplémentaires que vous transmettez à la commande en plus des options seront analysés en tant que commande à exécuter lors de l'ouverture de l'interpréteur de commandes. Si vous indiquez une commande à exécuter, l'interpréteur de commandes dans le conteneur prendra fin à l'issue de l'exécution de la commande et reviendra à votre terminal.
 
@@ -462,7 +472,7 @@ Par exemple, vous pouvez exécuter la commande Linux `ls` depuis l'interpréteur
 #### `container-name`
 {: #container-name}
 
-* Nom du conteneur dans lequel vous souhaitez exécuter l'interpréteur de commandes.
+* Nom du conteneur dans lequel vous souhaitez exécuter le shell.
 * Syntaxe : `ibmcloud dev shell --container-name [<container-name>]`
 
 #### `container-shell`
@@ -477,7 +487,7 @@ Par exemple, vous pouvez exécuter la commande Linux `ls` depuis l'interpréteur
 
 Vous pouvez effectuer une requête relative au statut des conteneurs qui sont utilisés par l'interface de ligne de commande {{site.data.keyword.dev_cli_short}}, comme défini par `container-name-run` et `container-name-tools`.
 
-Exécutez la commande suivante dans votre répertoire de projet actuel pour vérifier le statut du conteneur :
+Exécutez la commande suivante dans votre répertoire d'application en cours pour vérifier le statut du conteneur :
 
 ```
 ibmcloud dev status
@@ -516,23 +526,22 @@ Les paramètres ci-après sont utilisés pour la commande `stop`. Des [paramètr
 {: #container-name-run}
 
 * Nom de conteneur pour le conteneur run.
-* Syntaxe : `ibmcloud dev stop --container-name-run [<projectName>]`
+* Syntaxe : `ibmcloud dev stop --container-name-run [<applicationName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * Nom de conteneur pour le conteneur tools.
-* Syntaxe : `ibmcloud dev stop --container-name-tools [<projectName>]`
+* Syntaxe : `ibmcloud dev stop --container-name-tools [<applicationName>]`
 
 
 
 ## Commande test
 {: #test}
 
-Vous pouvez tester votre application avec la commande `test`. Une
-génération doit d'abord être effectuée pour le projet à l'aide de la commande `build --debug`. Le conteneur tools est ensuite utilisé afin d'appeler `test-cmd` pour l'application.
+Vous pouvez tester votre application avec la commande `test`. Une génération doit d'abord être effectuée pour l'application à l'aide de la commande `build --debug`. Le conteneur tools est ensuite utilisé afin d'appeler `test-cmd` pour l'application.
 
-D'abord, compilez votre projet :
+Compilez tout d'abord votre application :
 
 ```
 ibmcloud dev build --debug
@@ -597,7 +606,7 @@ Les paramètres ci-après sont réservés à la commande `view`.
 #### `web-app-root`
 {: #web-app-root}
 
-* Racine du projet à ajouter à l'URL de l'application Kubernetes
+* Racine du projet à ajouter à l'URL de l'application Kubernetes et Cloud Foundry
 * Syntaxe : `ibmcloud dev view --web-app-root [racine]`
 
 
@@ -611,7 +620,7 @@ Les paramètres ci-après sont réservés à la commande `view`.
 ## Commandes composées
 {: #compound}
 
-Vous pouvez exécuter plusieurs commandes dans une seule et même instruction de ligne de commande en séparant les commandes IDT par le délimiteur `/`. Des options de ligne de commande supplémentaires peuvent être spécifiées après les commandes composées.  Les exemples de commande suivants illustrent la façon dont vous pouvez utiliser des commandes composées :
+Vous pouvez exécuter plusieurs commandes dans une seule et même instruction de ligne de commande en séparant les commandes {{site.data.keyword.Bluemix_notm}} Developer Tools par le délimiteur `/`. Des options de ligne de commande supplémentaires peuvent être spécifiées après les commandes composées.  Les exemples de commande suivants illustrent la façon dont vous pouvez utiliser des commandes composées :
 
 ```
 ibmcloud dev build/run
@@ -621,19 +630,20 @@ ibmcloud dev build/deploy/view -t container --trace
 ```
 {: codeblock}
 
-Toutes les options doivent suivre la commande finale et seront appliquées à toutes les commandes auxquelles cette option est associée. Dans l'exemple ci-dessus, l'option`--trace` s'applique aux 3 commandes, mais l'option `-t` s'applique uniquement aux 2 commandes finales. Par conséquent, elle ne s'appliquera pas à la commande `build`.
+Toutes les options doivent suivre la commande finale et seront appliquées à toutes les commandes auxquelles cette option est associée. Dans l'exemple final ci-dessus, l'option `--trace` s'applique aux trois commandes, mais l'option `-t` s'applique uniquement aux deux commandes finales. Par conséquent, elle ne s'appliquera pas à la commande `build`.
 
 Voici les commandes qui peuvent être utilisées avec cette fonction :
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Si l'une des commandes échoue pour une raison quelconque, aucune autre commande ne sera exécutée. Si des commandes sont spécifiées après la commande `debug` ou`run`, l'exécution ne se poursuivra que si la commande `debug` ou `run` est terminée par un autre moyen que l'arrêt du processus à partir de la fenêtre de terminal en cours. La combinaison de touches `CTRL+C` permet d'arrêter le processus et de ne pas exécuter les commandes suivantes. Par exemple, vous pouvez exécuter `ibmcloud dev stop` à partir d'une autre fenêtre de terminal afin d'arrêter le conteneur actif et de poursuivre l'exécution avec la commande suivante.
+Si l'une des commandes échoue pour une raison quelconque, aucune autre commande ne sera exécutée. 
+
+Si des commandes sont spécifiées après la commande `debug` ou`run`, l'exécution ne se poursuivra que si la commande `debug` ou `run` est terminée par un autre moyen que l'arrêt du processus à partir de la fenêtre de terminal en cours. La combinaison de touches `CTRL+C` permet d'arrêter le processus et de ne pas exécuter les commandes suivantes. Par exemple, vous pouvez exécuter `ibmcloud dev stop` à partir d'une autre fenêtre de terminal afin d'arrêter le conteneur actif et de poursuivre l'exécution avec la commande suivante.
 
 
 ## Paramètres des commandes build, debug, run et test
 {: #command-parameters}
 
-Les paramètres ci-dessous peuvent être utilisés avec les commandes
-`build|debug|run|test` ou en mettant à jour directement le fichier `cli-config.yml` du projet. Des paramètres supplémentaires sont disponibles pour les commandes
+Les paramètres ci-dessous peuvent être utilisés avec les commandes `build|debug|run|test` ou en mettant directement à jour le fichier `cli-config.yml` de l'application. Des paramètres supplémentaires sont disponibles pour les commandes
 [`debug`](#debug-parameters) et
 [`run`](#run-parameters).
 
@@ -649,13 +659,13 @@ Les paramètres ci-dessous peuvent être utilisés avec les commandes
 {: #container-name-run1}
 
 * Nom de conteneur pour le conteneur run.
-* Syntaxe : `ibmcloud dev <run|status|stop> --container-name-run [<projectName>]`
+* Syntaxe : `ibmcloud dev <run|status|stop> --container-name-run [<applicationName>]`
 
 #### `container-name-tools`  
 {: #container-name-tools1}
 
 * Nom de conteneur pour le conteneur tools.
-* Syntaxe : `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<projectName>]`
+* Syntaxe : `ibmcloud dev <build|debug|run|status|stop|test> --container-name-tools [<applicationName>]`
 
 #### `host-path-tools`
 {: #host-path-tools}
