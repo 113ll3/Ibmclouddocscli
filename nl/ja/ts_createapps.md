@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 {:pre: .pre}
 {:note: .deprecated}
 
-# {{site.data.keyword.Bluemix_notm}} 開発者ツールに関するトラブルシューティング
+# {{site.data.keyword.Bluemix_notm}} Developer Tools CLI プラグインのトラブルシューティング
 {: #troubleshoot}
 
 {{site.data.keyword.dev_cli_short}} CLI を使用してアプリを作成する際の一般的な問題には、デプロイメントの失敗や、アプリを作成する際にコードを取得できないなどが含まれます。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 {:pre: .pre}
 {:note: .deprecated}
 
-# {{site.data.keyword.Bluemix_notm}} Developer Tools 的疑難排解
+# {{site.data.keyword.Bluemix_notm}} Developer Tools CLI 外掛程式的疑難排解
 {: #troubleshoot}
 
 使用 {{site.data.keyword.dev_cli_short}} CLI 建立應用程式的一般問題可能包括部署失敗或建立應用程式時無法擷取程式碼。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。

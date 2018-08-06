@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 {:pre: .pre}
 {:note: .deprecated}
 
-# Fehlerbehebung für {{site.data.keyword.Bluemix_notm}} Developer Tools
+# Fehlerbehebung für das Plug-in der {{site.data.keyword.Bluemix_notm}} Developer Tools-Befehlzeilenschnittstelle
 {: #troubleshoot}
 
 Allgemeine Probleme bei Verwendung der {{site.data.keyword.dev_cli_short}}-CLI zum Erstellen von Apps sind beispielsweise Bereitstellungsfehler oder Code, der beim Erstellen eines Projekts nicht abgerufen werden kann. In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben.
