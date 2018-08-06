@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-05"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI 시작하기
+# {{site.data.keyword.Bluemix_notm}} 개발자 도구 시작하기
 {: #overview}
 
 이 튜토리얼에서 사용자는 {{site.data.keyword.Bluemix}} 개발자 도구를 설치하고, 설치를 확인하며, 환경을 구성합니다. {{site.data.keyword.Bluemix}} 개발자 도구는 엔드 투 엔드 웹, 모바일 및 마이크로서비스 애플리케이션을 작성하고, 개발하고, 배치할 수 있는 명령행 접근 방법을 제공합니다. 
@@ -39,8 +39,8 @@ lastupdated: "2018-07-05"
 
 [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 다음 시스템 요구사항이 필요합니다.
 
-* Microsoft Windows&trade;를 사용하는 경우 Windows 10 이상을 사용해야 합니다.
-* 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다.
+* Microsoft Windows&trade;를 사용하는 경우 Windows 10 Pro 이상을 사용해야 합니다. 
+* 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다. 
 
 ## 1단계: 설치 명령 실행
 {: #step1}
@@ -48,21 +48,21 @@ lastupdated: "2018-07-05"
 * Mac 및 Linux의 경우 다음 명령을 실행하십시오.
 
   ```
-curl -sL https://ibm.biz/idt-installer | bash
+  curl -sL http://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-<br>
-
-* Windows 10의 경우 관리자로 다음 명령을 실행하십시오.
+  
+* Windows 10 Pro의 경우 관리자로서 다음 명령을 실행하십시오. 
 
   ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
-<br>
 
     Windows PowerShell 아이콘을 마우스 오른쪽 단추로 클릭한 후 **관리자로 실행**을 선택하십시오.
   {: tip}
+  
+  이러한 도구를 수동으로 설치하는 데 대한 지시사항은 [도구 재설치](/docs/cli/ts_createapps.html#appendix)를 참조하십시오. 
 
 ## 2단계: 설치 확인
 {: #step2}
@@ -92,17 +92,26 @@ ibmcloud dev help
 	ibmcloud login
 	```
 	{: codeblock}
-<br>
-
-	신임 정보가 거부되면 연합 ID를 사용할 수 있습니다. 자세한 사항은 [연합 ID로 로그인](/docs/iam/login_fedid.html#using-an-api-key)을 참조하십시오.
+    <br>
+    
+	신임 정보가 거부되면 연합 ID를 사용할 수 있습니다. 자세한 사항은 [연합 ID로 로그인](/docs/iam/login_fedid.html#federated_id)을 참조하십시오.
 	{: tip}
 
 3. 조직 및 영역을 설정하십시오.
 
 	```
+	  ibmcloud target --cf
+	```
+	{: codeblock}
+	
+	선택적으로 위 명령의 출력을 사용하여, 다음 명령을 통해 조직 및 영역을 수동으로 설정할 수 있습니다. 
+
+	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
+	
+문제를 보고하거나 피드백을 제공하려는 경우에는 [IBM Cloud 기술에 대한 Slack - #developer-tools 채널](https://ibm-cloud-tech.slack.com)을 사용하십시오. [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/)에서 팀 액세스 권한을 요청하십시오. 
 
 ## 다음 단계
 {: #next-steps}

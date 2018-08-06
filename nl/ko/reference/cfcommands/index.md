@@ -797,7 +797,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-명령행 인터페이스의 버전을 표시합니다.
+Cloud Foundry 명령행 인터페이스의 버전을 표시합니다. 
 
 ```
 cf -v
@@ -808,7 +808,7 @@ cf -v
 
 <strong>예제</strong>:
 
-명령행 인터페이스의 버전을 표시합니다.
+Cloud Foundry 명령행 인터페이스의 버전을 표시합니다. 
 ```
 cf -v
 ```

@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 
 {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인에 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 로컬 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경을 관리할 수 있습니다. 예를 들어, LDAP 레지스트리에서 사용자를 추가할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭의 계정 관리에 대한 정보는 [관리](/docs/admin/adminpublic.html#administer)를 참조하십시오.
 
-시작하기 전에 cf 명령행 인터페이스를 설치하십시오. {{site.data.keyword.Bluemix_notm}} 관리
+시작하기 전에 Cloud Foundry 명령행 인터페이스를 설치하십시오. {{site.data.keyword.Bluemix_notm}} 관리
 CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다. [Cloud Foundry 명령행 인터페이스 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **제한사항:** Cloud Foundry 명령행 인터페이스는
@@ -30,9 +30,7 @@ Cygwin에서는 지원되지 않습니다. Cygwin 명령행 창 외의
 
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 추가
 
-cf 명령행 인터페이스가 설치된 후에
-{{site.data.keyword.Bluemix_notm}} 관리 CLI
-플러그인을 추가할 수 있습니다.
+Cloud Foundry 명령행 인터페이스가 설치된 후에 {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 추가할 수 있습니다.
 
 **참고**: 이전에 {{site.data.keyword.Bluemix_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 다시 설치해야 합니다.
 

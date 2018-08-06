@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -35,7 +35,7 @@ lastupdated: "2018-06-27"
 
 이전 작성 방법의 경우에도 플로우는 유사합니다. 사용할 프로젝트 유형, 구현 언어, 앱 패턴을 선택할 수 있습니다. 또한 인증 또는 지속성과 같이 부가 가치 서비스를 앱에 추가하도록 선택할 수 있습니다. 마지막으로 IBM Cloud에서 앱을 유효성 검증, 빌드, 배치하기 위해 각 커미트에서 트리거된 파이프라인을 비롯하여 소스 제어 및 팀 통신의 완전한 도구 체인을 제공하는 DevOps 기능을 앱에서 사용하도록 선택할 수 있습니다.
 
-![IDT CLI를 사용한 샘플 플로우 작성](create_flow.png "IDT CLI를 사용한 샘플 플로우 작성") <br> IDT CLI를 사용한 샘플 플로우 작성
+![{{site.data.keyword.dev_cli_notm}} CLI를 사용한 샘플 create 플로우](create_flow.png "{{site.data.keyword.dev_cli_notm}} CLI를 사용한 샘플 create 플로우") <br> 그림 2. {{site.data.keyword.dev_cli_notm}} CLI를 사용한 샘플 create 플로우
 
 {{site.data.keyword.dev_cli_notm}} CLI는 개발 동안 완벽한 경험을 제공하기 위해 긴밀히 작업합니다. 웹 콘솔 내에서 작성된 프로젝트는 더 많은 개발을 위해 워크스테이션에 생성된 소스 코드를 다운로드할 수 있는 "코드 다운로드" 단추를 제공합니다.
 
@@ -67,7 +67,7 @@ lastupdated: "2018-06-27"
 ### 참조 블로그 및 동영상
 {: #ref1}
 
-- 동영상: [Ubuntu Linux에서 IDT 설치](https://www.youtube.com/watch?v=sr7KjHAKpEs)
+- 동영상: [Ubuntu Linux에 {{site.data.keyword.Bluemix_notm}} 개발자 도구 설치](https://www.youtube.com/watch?v=sr7KjHAKpEs)
 - 블로그: [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
 
@@ -116,7 +116,7 @@ lastupdated: "2018-06-27"
 ## 배치
 {: #deploy}
 
-적절한 클라우드 네이티브 환경에서 다양한 여러 기능뿐 아니라 모든 배치를 관리하기 위한 완전한 기능의 DevOps 파이프라인을 활용하기를 원할 것입니다. 작성 플로우 동안 IBM Cloud의 DevOps를 사용하기 위해 앱을 설정할 수 있습니다. 기본 제공 DevOps를 사용할 준비가 되지 않은 경우에는 사용자의 앱에 대해 수동으로 [`ibmcloud dev deploy`](./commands.html#deploy) 명령을 실행하거나 자체 DevOps 파이프라인 내에서 deploy 명령을 사용할 수 있습니다.  
+적절한 클라우드 네이티브 환경에서 다양한 여러 기능뿐 아니라 모든 배치를 관리하기 위한 완전한 기능의 DevOps 파이프라인을 활용하기를 원할 것입니다. 작성 플로우 동안 IBM Cloud의 DevOps를 사용하기 위해 앱을 설정할 수 있습니다. 기본 제공 DevOps를 사용할 준비가 되지 않은 경우에는 사용자의 앱에 대해 수동으로 [`ibmcloud dev deploy`](./commands.html#deploy) 명령을 실행하거나 고유 DevOps 파이프라인 내에서 deploy 명령을 사용할 수 있습니다.  
 
 
 
