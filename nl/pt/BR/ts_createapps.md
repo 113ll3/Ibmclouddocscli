@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 {:pre: .pre}
 {:note: .deprecated}
 
-# Resolução de problemas para o {{site.data.keyword.Bluemix_notm}} Developer Tools
+# Resolução de problemas para o  {{site.data.keyword.Bluemix_notm}}  Plug-in da CLI do Developer Tools
 {: #troubleshoot}
 
 Os problemas gerais com o uso da CLI do {{site.data.keyword.dev_cli_short}} para criar apps podem incluir falhas de implementação ou código que não pode ser recuperado ao criar um app. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
