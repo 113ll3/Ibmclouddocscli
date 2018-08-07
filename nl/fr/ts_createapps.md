@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 {:pre: .pre}
 {:note: .deprecated}
 
-# Traitement des incidents liés à {{site.data.keyword.Bluemix_notm}} Developer Tools
+# Traitement des incidents liés au plug-in {{site.data.keyword.Bluemix_notm}} Developer Tools CLI
 {: #troubleshoot}
 
 Les problèmes d'ordre général liés à l'utilisation de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour créer des applications peuvent inclure des échecs de déploiement ou l'échec de l'extraction du code lors de la création d'une application. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.

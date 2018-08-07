@@ -1,26 +1,77 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
+{: .toc subcollection="cloud-cli" audience="platform" arm="" href="/docs/cli/index.html"}
 IBM Cloud Developer Tools (Interface de ligne de commande et outils de développement)
 
 	{: .navgroup id="learn"}
 	index.md
 	{: .navgroup-end}
-	
+
 	{: .navgroup id="howto"}
-	reference/bluemix_cli/download_cli.md
-	reference/bluemix_cli/extend_cli.md
-	reference/bluemix_cli/enable_cli_autocompletion.md
+	reference/ibmcloud/download_cli.md
+	reference/ibmcloud/extend_cli.md
+	reference/ibmcloud/enable_cli_autocompletion.md
 	idt/index.md
-        	
+
 	{: .topicgroup}
 	Extensions IDE IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
 		deploy_eclipsetools.md
 		[Déploiement d'applications avec IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
-        	
+
+	{: topicgroup}
+	Débogage
+		idt/local_debug.md
+	{: .navgroup-end}
+
+	{: .navgroup id="reference"}
+	{: .topicgroup}
+	Commandes de l'interface CLI IBM Cloud (ibmcloud)
+		reference/ibmcloud/bx_cli.md
+		reference/ibmcloud/cli_acct_org_role.md
+		reference/ibmcloud/cli_resource_group.md
+		reference/ibmcloud/cli_api_policy.md
+		reference/ibmcloud/cli_cf_apps.md
+		reference/ibmcloud/cli_services.md
+		reference/ibmcloud/cli_cat_plugin_billing.md
+		reference/ibmcloud/cli_cfee.md
+		reference/ibmcloud/cli_block_storage.md
+		reference/ibmcloud/cli_cdn.md
+		reference/ibmcloud/cli_dns.md
+		reference/ibmcloud/cli_file_storage.md
+		reference/ibmcloud/cli_global_ip.md
+		reference/ibmcloud/cli_hardware.md
+		reference/ibmcloud/cli_image.md
+		reference/ibmcloud/cli_ipsec_vpn.md
+		reference/ibmcloud/cli_load_balancer.md
+		reference/ibmcloud/cli_security.md
+		reference/ibmcloud/cli_securitygroup.md
+		reference/ibmcloud/cli_subnet.md
+		reference/ibmcloud/cli_virtual_server.md
+		reference/ibmcloud/cli_vlan.md
+		reference/ibmcloud/cf_index.md
+	idt/commands.md
+
+	{: .topicgroup}
+	Plug-ins d'interface de ligne de commande IBM Cloud
+		plugins/api-management-cliplugin/
+		plugins/auto-scaling/index.md
+		[Interface CLI du registre de conteneurs](../services/Registry/registry_cli.html)
+		[Interface CLI du service de conteneur](../containers/cs_cli_devtools.html)
+		plugins/pnp/index.md
+		plugins/bx_vpn/index.md
+		plugins/vpc/use-cli.md
+
+	{: .topicgroup}
+	Plug-in d'interface de ligne de commande Cloud Foundry
+		plugins/bluemix_admin/index.md
+		plugins/dev_mode/index.md
+		plugins/vpn/index.md
+
+	monitoring_logging.md
+
 	{: .topicgroup}
 	Logiciels SDK pour les applications mobiles
 		sdk/index.md
@@ -28,44 +79,8 @@ IBM Cloud Developer Tools (Interface de ligne de commande et outils de développ
 		sdk/sdk.md
 		sdk/sdk_BMSClient.md
 		sdk/sdk_network_request.md
-	
-	monitoring_logging.md
-	
-	{: topicgroup}
-	Débogage
-		debug.md
-		idt/local_debug.md
 	{: .navgroup-end}
 
-	{: .navgroup id="reference"}
-	reference/bluemix_cli/bx_cli.md
-	idt/commands.md
-	reference/softlayer/index.md
-	reference/cfcommands/index.md
-
-	{: .topicgroup}
-	Plug-in d'interface de ligne de commande IBM Cloud
-		plugins/api-management-cliplugin/
-		plugins/auto-scaling/index.md
-		[Interface de ligne de commande Container Registry](../services/Registry/registry_cli.html)
-		[Interface de ligne de commande Container Service](../containers/cs_cli_devtools.html)
- 		plugins/pnp/index.md
-		plugins/bx_vpn/index.md
-
-	{: .topicgroup}
-	Plug-in d'interface de ligne de commande Cloud Foundry
-		plugins/bluemix_admin/index.md
-		plugins/dev_mode/index.md
-		plugins/vpn/index.md
-	
-	{: .topicgroup}
-	Environnements de développement recommandés
-		deploy_eclipsetools.md
-		[Gestion des applications Liberty et Node.js](../runtimes/common/app_mng.html#app_management)
-		[Kit d'outils de développement API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
-		[IBM Cloud Live Sync](../services/ContinuousDelivery/bluemixlive.html)
-	{: .navgroup-end}
-
-	{: .navgroup id="help"}
+        {: .navgroup id="help"}
 	ts_createapps.md
-	{: .navgroup-end}
+        {: .navgroup-end}
