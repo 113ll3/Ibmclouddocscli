@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 {:pre: .pre}
 {:note: .deprecated}
 
-# 有关 {{site.data.keyword.Bluemix_notm}} Developer Tools 的故障诊断
+# 有关 {{site.data.keyword.Bluemix_notm}} Developer Tools CLI 插件的故障诊断
 {: #troubleshoot}
 
 使用 {{site.data.keyword.dev_cli_short}} CLI 创建应用程序的常见问题可能包括部署失败，或者在创建应用程序时无法检索代码。在许多情况下，只需执行几个简单的步骤即可解决这些问题。

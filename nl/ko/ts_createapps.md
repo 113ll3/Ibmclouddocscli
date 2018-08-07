@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 {:pre: .pre}
 {:note: .deprecated}
 
-# {{site.data.keyword.Bluemix_notm}} 개발자 도구 문제점 해결
+# {{site.data.keyword.Bluemix_notm}} Developer Tools CLI 플러그인의 문제점 해결
 {: #troubleshoot}
 
 앱을 작성하기 위해 {{site.data.keyword.dev_cli_short}}을 사용할 때 발생하는 일반 문제점에는 앱 작성 시 검색할 수 없는 코드 또는 배치 실패가 포함될 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
