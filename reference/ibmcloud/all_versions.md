@@ -13,7 +13,7 @@ lastupdated: "2018-08-09"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI Installer all versions
+# All versions of the {{site.data.keyword.Bluemix_notm}} CLI Installer
 
 Make sure that you are always using the latest version of the {{site.data.keyword.Bluemix_notm}} CLI, but if you need to use a 32-bit version or a previous version other than the latest, see the following table.
 
