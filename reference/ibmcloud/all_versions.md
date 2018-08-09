@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-07-13"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -15,6 +15,7 @@ lastupdated: "2018-07-13"
 
 # {{site.data.keyword.Bluemix_notm}} CLI Installer all versions
 
+Make sure that you are always using the latest version of the {{site.data.keyword.Bluemix_notm}} CLI, but if you need to use a 32-bit version or a previous version other than the latest, see the following table.
 
 | Version |  Updated  | Installer Downloads | Binary Archives |
 |---------|-----------|-----------|----------|
