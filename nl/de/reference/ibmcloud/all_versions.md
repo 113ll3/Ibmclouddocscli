@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-07-13"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2018-07-13"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}}-CLI-Installationsprogramm - Alle Versionen
+# Alle Versionen des Installationsprogramms für die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle
 
+Stellen Sie sicher, dass stets die neueste Version der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwendet wird. Sollte jedoch eine 32-Bit-Version oder eine Vorgängerversion benötigt werden, können Sie der folgenden Tabelle die entsprechenden Informationen entnehmen.
 
 | Version |  Aktualisiert  | Downloads des Installationsprogramms | Binäre Archive |
 |---------|-----------|-----------|----------|
