@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-07-13"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2018-07-13"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Programme d'installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} - Toutes les version
+# Toutes les versions du programme d'installation de l'interface de ligne de commande d'{{site.data.keyword.Bluemix_notm}} 
 
+Assurez-vous que vous utilisez toujours la dernière version de l'interface CLI {{site.data.keyword.Bluemix_notm}}. Cependant, si vous avez besoin d'utiliser une version 32 bits ou une version antérieure, consultez le tableau suivant.
 
 | Version |  Mis à jour  | Téléchargements de programme d'installation | Archives binaires |
 |---------|-----------|-----------|----------|

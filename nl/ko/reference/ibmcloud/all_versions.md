@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-07-13"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -15,6 +15,7 @@ lastupdated: "2018-07-13"
 
 # {{site.data.keyword.Bluemix_notm}} CLI 설치 프로그램의 모든 버전
 
+항상 {{site.data.keyword.Bluemix_notm}} CLI의 최신 버전을 사용하되, 32비트 버전이나 최신 버전 외의 이전 버전을 사용해야 하는 경우에는 다음 표를 참조하십시오.
 
 |버전 |업데이트  | 설치 프로그램 다운로드 | 2진 아카이브 |
 |---------|-----------|-----------|----------|

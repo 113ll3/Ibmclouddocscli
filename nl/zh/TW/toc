@@ -30,11 +30,10 @@ IBM Cloud Developer Tools（CLI 及 Dev Tools）
 	{: .topicgroup}
 	IBM Cloud CLI (ibmcloud) 指令
 		reference/ibmcloud/bx_cli.md
+		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_acct_org_role.md
 		reference/ibmcloud/cli_resource_group.md
 		reference/ibmcloud/cli_api_policy.md
-		reference/ibmcloud/cli_cf_apps.md
-		reference/ibmcloud/cli_services.md
 		reference/ibmcloud/cli_cat_plugin_billing.md
 		reference/ibmcloud/cli_cfee.md
 		reference/ibmcloud/cli_block_storage.md
@@ -51,8 +50,8 @@ IBM Cloud Developer Tools（CLI 及 Dev Tools）
 		reference/ibmcloud/cli_subnet.md
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
-		reference/ibmcloud/cf_index.md
 	idt/commands.md
+	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
 	IBM Cloud CLI 外掛程式
@@ -67,7 +66,6 @@ IBM Cloud Developer Tools（CLI 及 Dev Tools）
 	{: .topicgroup}
 	Cloud Foundry CLI 外掛程式
 		plugins/bluemix_admin/index.md
-		plugins/dev_mode/index.md
 		plugins/vpn/index.md
 
 	monitoring_logging.md

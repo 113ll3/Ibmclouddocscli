@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-07-13"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2018-07-13"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI 安裝程式所有版本
+# {{site.data.keyword.Bluemix_notm}} CLI 安裝程式的所有版本
 
+請確定您一律使用最新版的 {{site.data.keyword.Bluemix_notm}} CLI，但如果您需要使用 32 位元版本或非最新版的舊版，請參閱下表。
 
 |版本 |更新日期  |安裝程式下載|二進位保存檔|
 |---------|-----------|-----------|----------|

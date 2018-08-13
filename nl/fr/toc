@@ -28,13 +28,12 @@ IBM Cloud Developer Tools (Interface de ligne de commande et outils de développ
 
 	{: .navgroup id="reference"}
 	{: .topicgroup}
-	Commandes de l'interface CLI IBM Cloud (ibmcloud)
+	Commandes de l'interface de ligne de commande d'IBM Cloud (ibmcloud)
 		reference/ibmcloud/bx_cli.md
+		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_acct_org_role.md
 		reference/ibmcloud/cli_resource_group.md
 		reference/ibmcloud/cli_api_policy.md
-		reference/ibmcloud/cli_cf_apps.md
-		reference/ibmcloud/cli_services.md
 		reference/ibmcloud/cli_cat_plugin_billing.md
 		reference/ibmcloud/cli_cfee.md
 		reference/ibmcloud/cli_block_storage.md
@@ -51,8 +50,8 @@ IBM Cloud Developer Tools (Interface de ligne de commande et outils de développ
 		reference/ibmcloud/cli_subnet.md
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
-		reference/ibmcloud/cf_index.md
 	idt/commands.md
+	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
 	Plug-ins d'interface de ligne de commande IBM Cloud
@@ -65,9 +64,8 @@ IBM Cloud Developer Tools (Interface de ligne de commande et outils de développ
 		plugins/vpc/use-cli.md
 
 	{: .topicgroup}
-	Plug-in d'interface de ligne de commande Cloud Foundry
+	Plug-in de l'interface de ligne de commande de Cloud Foundry
 		plugins/bluemix_admin/index.md
-		plugins/dev_mode/index.md
 		plugins/vpn/index.md
 
 	monitoring_logging.md
