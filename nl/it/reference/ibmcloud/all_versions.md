@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-07-13"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2018-07-13"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Programma di installazione della CLI {{site.data.keyword.Bluemix_notm}} - Tutte le versioni
+# Tutte le versioni del programma di installazione della CLI {{site.data.keyword.Bluemix_notm}}
 
+Assicurati che stai utilizzando sempre la versione più recente della CLI {{site.data.keyword.Bluemix_notm}}; se però devi utilizzare una versione a 32 bit o una versione precedente diversa da quella più recente, consulta la seguente tabella.
 
 | Versione |  Aggiornato  | Download del programma di installazione | Archivi binari |
 |---------|-----------|-----------|----------|
