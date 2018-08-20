@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -43,7 +43,7 @@ Führen Sie die folgenden Schritte aus, um das Repository hinzuzufügen und das 
 <ol>
 <li>Führen Sie den folgenden Befehl aus, um das Repository für das {{site.data.keyword.Bluemix_notm}}-Administrator-Plug-in hinzuzufügen:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>Führen Sie den folgenden Befehl aus, um das Plug-in für die {{site.data.keyword.Bluemix_notm}}-Administrator-CLI zu installieren:<br/><br/>

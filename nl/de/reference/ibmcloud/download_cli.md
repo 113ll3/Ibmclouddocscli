@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-09"
 # Eigenständige {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle installieren
 {: #install_use}
 
-Die {{site.data.keyword.Bluemix_notm}}-CLI stellt die Befehlszeilenschnittstelle zum Verwalten von Anwendungen, Containern, Infrastrukturen, Services und anderen Ressourcen in {{site.data.keyword.Bluemix_notm}} zur Verfügung.
+{{site.data.keyword.Bluemix_notm}} CLI stellt die Befehlszeilenschnittstelle für das Verwalten von Ressourcen in {{site.data.keyword.Bluemix_notm}} bereit. Sie können die Cloud Foundry-CLI (CF-CLI) weiterhin für die Anmeldung bei {{site.data.keyword.Bluemix_notm}} verwenden, sie kann in {{site.data.keyword.Bluemix_notm}} jedoch nur mit einem Cloud Foundry-Service eingesetzt werden. 
 
 Wenn Sie sowohl die {{site.data.keyword.Bluemix}}-CLI als auch andere empfohlene Plug-ins und Tools für die Anwendungsentwicklung für {{site.data.keyword.Bluemix_notm}} installieren möchten, verwenden Sie die [hier](/docs/cli/index.html) beschriebene Methode.
 {: tip}

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -444,15 +444,8 @@ ibmcloud update [-f]
 ## Allgemeine CLI-Befehle (ibmcloud sl)
 {: #softlayer_cli}
 
-Das Plug-in für {{site.data.keyword.BluSoftlayer}} wurde in die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle integriert. Sie müssen das Plug-in nicht mehr installieren.
-{: tip}
 
 Verwenden Sie die Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} in der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI), um die SoftLayer-Services zu konfigurieren und zu verwalten.
-
-Ab Mai 2018 wird an Stelle der {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bluemix` und `bx` künftig der Befehl `ibmcloud` verwendet. Sie können die CLI-Befehle `bluemix` und `bx` jedoch auch weiterhin noch so lange verwenden, bis sie zu einem späteren Zeitpunkt entfernt werden.
-{: tip}
-
-Zu Beginn installieren Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle. Details hierzu finden Sie in [IBM Cloud-Befehlszeilenschnittstelle (CLI) ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}.
 
 Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `ibmcloud sl`, um die Liste der verfügbaren Befehle anzuzeigen:
 
