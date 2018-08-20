@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-20"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commands for Managing Cloud Foundry Enterprise Environments (experimental)
+# Managing Cloud Foundry Enterprise Environments (experimental)
 {: #ibmcloud_commands_cfee}
 
 <table summary="Manage Cloud Foundry Enterprise Environments (experimental)">

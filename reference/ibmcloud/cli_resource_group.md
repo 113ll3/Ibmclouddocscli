@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-20"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commands for Managing Resource Groups and Resources
+# Managing Resource Groups and Resources
 {: #ibmcloud_commands_resource}
 
 <table summary="ibmcloud command that you can use to manage resource groups and resources.">

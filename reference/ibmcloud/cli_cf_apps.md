@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-20"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commands for Managing cf Apps and App Related Domains, Routes, and Certificates
+# Managing cf Apps and App Related Domains, Routes, and Certificates
 {: #ibmcloud_commands_apps}
 
 <table summary="ibmcloud commands that you can use to manage cf apps and app related domains, routes and certificates.">

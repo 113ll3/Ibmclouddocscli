@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-20"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commands for Managing API Keys and Policies
+# Managing API Keys, Identity and Access
 {: #ibmcloud_commands_iam}
 
 <table summary="ibmcloud commands that you can use to manage API keys and policies.">
@@ -50,11 +50,11 @@ lastupdated: "2018-07-26"
    <td>[ibmcloud iam service-api-key-unlock](cli_api_policy.html#ibmcloud_iam_service_api_key_unlock)</td>
   </tr>
   <tr>
-    <td>[ibmcloud iam service-policies](cli_api_policy.html#ibmcloud_iam_service_policies)</td>
-    <td>[ibmcloud iam service-policy](cli_api_policy.html#ibmcloud_iam_service_policy)</td>
-    <td>[ibmcloud iam service-policy-create](cli_api_policy.html#ibmcloud_iam_service_policy_create)</td>
-    <td>[ibmcloud iam service-policy-update](cli_api_policy.html#ibmcloud_iam_service_policy_update)</td>
-    <td>[ibmcloud iam service-policy-delete](cli_api_policy.html#ibmcloud_iam_service_policy_delete)</td>
+   <td>[ibmcloud iam service-policies](cli_api_policy.html#ibmcloud_iam_service_policies)</td>
+   <td>[ibmcloud iam service-policy](cli_api_policy.html#ibmcloud_iam_service_policy)</td>
+   <td>[ibmcloud iam service-policy-create](cli_api_policy.html#ibmcloud_iam_service_policy_create)</td>
+   <td>[ibmcloud iam service-policy-update](cli_api_policy.html#ibmcloud_iam_service_policy_update)</td>
+   <td>[ibmcloud iam service-policy-delete](cli_api_policy.html#ibmcloud_iam_service_policy_delete)</td>
   </tr>
   <tr>
    <td>[ibmcloud iam user-policies](cli_api_policy.html#ibmcloud_iam_user_policies)</td>
@@ -64,14 +64,38 @@ lastupdated: "2018-07-26"
    <td>[ibmcloud iam user-policy-delete](cli_api_policy.html#ibmcloud_iam_user_policy_delete)</td>
   </tr>
   <tr>
-     <td>[ibmcloud iam oauth-tokens](cli_api_policy.html#ibmcloud_iam_oauth_tokens)</td>
-     <td>[ibmcloud iam dedicated-id-disconnect](cli_api_policy.html#ibmcloud_iam_dedicated_id_disconnect)</td>
-     <td>[ibmcloud iam authorization-policy-create](cli_api_policy.html#ibmcloud_iam_authorization_policy_create)</td>
-     <td>[ibmcloud iam authorization-policy-delete](cli_api_policy.html#ibmcloud_iam_authorization_policy_delete)</td>
-     <td>[ibmcloud iam authorization-policy](cli_api_policy.html#ibmcloud_iam_authorization_policy)</td>
+   <td>[ibmcloud iam oauth-tokens](cli_api_policy.html#ibmcloud_iam_oauth_tokens)</td>
+   <td>[ibmcloud iam dedicated-id-disconnect](cli_api_policy.html#ibmcloud_iam_dedicated_id_disconnect)</td>
+   <td>[ibmcloud iam authorization-policy-create](cli_api_policy.html#ibmcloud_iam_authorization_policy_create)</td>
+   <td>[ibmcloud iam authorization-policy-delete](cli_api_policy.html#ibmcloud_iam_authorization_policy_delete)</td>
+   <td>[ibmcloud iam authorization-policy](cli_api_policy.html#ibmcloud_iam_authorization_policy)</td>
   </tr>
   <tr>
-     <td>[ibmcloud iam authorization-policies](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
+   <td>[ibmcloud iam authorization-policies](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
+   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access-groups)</td>
+   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access-group)</td>
+   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access-group-create)</td>
+   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access-group-update)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access-group-delete)</td>
+   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access-group-users)</td>
+   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access-group-user-add)</td>
+   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access-group-user-remove)</td>
+   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access-group-user-purge)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access-group-service-ids)</td>
+   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access-group-service-id-add)</td>
+   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access-group-service-id-remove)</td>
+   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access-group-service-id-purge)</td>
+   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access-group-policies)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access-group-policy)</td>
+   <td>[ibmcloud iam access-group-policy-create](cli_api_policy.html#ibmcloud_iam_access_group_policy_create)</td>
+   <td>[ibmcloud iam access-group-policy-update](cli_api_policy.html#ibmcloud_iam_access_group_policy_update)</td>
+   <td>[ibmcloud iam access-group-policy-delete](cli_api_policy.html#ibmcloud_iam_access_group_policy_delete)</td>
   </tr>
   </tbody>
   </table>
@@ -1270,3 +1294,525 @@ ibmcloud iam authorization-policies
 ```
 
 <strong>Prerequisites</strong>: Login, Target
+
+### ibmcloud iam access-groups
+{: #ibmcloud_iam_access_groups}
+
+List access groups under current account
+
+```
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>-u</dt>
+  <dd>List access groups the user belongs to. This flag is exclusive to '-s'.</dd>
+  <dt>-s</dt>
+  <dd>List access groups the service ID belongs to. This flag is exclusive to '-u'.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+List all access groups:
+
+```
+ibmcloud iam access-groups
+```
+
+### ibmcloud iam access-group
+{: #ibmcloud_iam_access_group}
+
+Show details of an access group
+
+```
+ibmcloud iam access-group GROUP_NAME [--id]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>-id</dt>
+  <dd>Show ID only</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Show details of access group `example_group`:
+
+```
+ibmcloud iam access-group example_group
+```
+
+### ibmcloud iam access-group-create
+{: #ibmcloud_iam_access_group_create}
+
+Create an access group
+
+```
+ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>-d, --description</dt>
+  <dd>Description of access group</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Create an access group `example_group`:
+
+```
+ibmcloud iam access-group-create example_group -d "example access group"
+```
+
+### ibmcloud iam access-group-update
+{: #ibmcloud_iam_access_group_update}
+
+Update an access group
+
+```
+ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>-n, --name</dt>
+  <dd>New access group name</dd>
+  <dt>-d, --description</dt>
+  <dd>New description</dd>
+  <dt>-f, --force</dt>
+  <dd>Force update without confirmation</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Rename access group `example_group` to `hello_world_group`:
+
+```
+ibmcloud iam access-group-update example_group --name "hello_world_group"
+```
+
+### ibmcloud iam access-group-delete
+{: #ibmcloud_iam_access_group_delete}
+
+Delete an access group
+
+```
+ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>Force deletion without confirmation</dd>
+  <dt>-r, --recursive</dt>
+  <dd>Delete access group and its members</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Delete access group `example_group`:
+
+```
+ibmcloud iam access-group-delete example_group --force
+```
+
+### ibmcloud iam access-group-users
+{: #ibmcloud_iam_access_group_users}
+
+List users in an access group
+
+```
+ibmcloud iam access-group-users GROUP_NAME
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+List all users in access group `example_group`:
+
+```
+ibmcloud iam access-group-users example_group
+```
+
+### ibmcloud iam access-group-user-add
+{: #ibmcloud_iam_access_group_user_add}
+
+Add user(s) to an access group
+
+```
+ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+Add user `name@example.com` to access group `example_group`:
+
+```
+ibmcloud iam access group-user-add example_group name@example.com
+```
+
+### ibmcloud iam access-group-user-remove
+{: #ibmcloud_iam_access_group_user_remove}
+
+Remove a user from an access group
+
+```
+ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+Remove user `name@example.com` from access group `example_group`:
+
+```
+ibmcloud iam access-group-user-remove example_group name@example.com
+```
+
+### ibmcloud iam access-group-user-purge
+{: #ibmcloud_iam_access_group_user_purge}
+
+Remove user from all access groups
+
+```
+ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>Delete without confirmation</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Remove user `name@example.com` from all access groups:
+
+```
+ibmcloud iam access-group-user-purge name@example.com -f
+```
+
+### ibmcloud iam access-group-service-ids
+{: #ibmcloud_iam_access_group_service_ids}
+
+List service IDs in an access group
+
+```
+ibmcloud iam access-group-service-ids GROUP_NAME
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+List all service IDs in access group `example_group`:
+
+```
+ibmcloud iam access-group-service-ids example_group
+```
+
+### ibmcloud iam access-group-service-id-add
+{: #ibmcloud_iam_access_group_service_id_add}
+
+Add service ID to an access group
+
+```
+ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+Add service ID `example-service` to access group `example_group`:
+
+```
+ibmcloud iam access-group-service-id-add example_group example-service
+```
+
+### ibmcloud iam access-group-service-id-remove
+{: #ibmcloud_iam_access_group_service_id_remove}
+
+Remove a service ID from an access group
+
+```
+ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+Remove service ID `example-service` from access group `example_group`:
+
+```
+ibmcloud iam access-group-service-id-remove example_group example-service
+```
+
+### ibmcloud iam access-group-service-id-purge
+{: #ibmcloud_iam_access_group_service_id_purge}
+
+Remove service ID from all access groups
+
+```
+ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>Delete without confirmation</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Remove service ID `example-service` from all access groups:
+
+```
+ibmcloud iam access-group-service-id-purge example --force
+```
+
+### ibmcloud iam access-group-policies
+{: #ibmcloud_iam_access_group_policies}
+
+List policies of an access group
+
+```
+ibmcloud iam access-group-policies GROUP_NAME
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+List all policies of access group `example_group`:
+
+```
+ibmcloud iam access-group-policies example_group
+```
+
+### ibmcloud iam access-group-policy
+{: #ibmcloud_iam_access_group_policy}
+
+Show details of an access group policy
+
+```
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+Show details of policy `51b9717e-76b0-4f6a-bda7-b8132431f926` of access group `example_group`:
+
+```
+ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
+```
+
+### ibmcloud iam access-group-policy-create
+{: #ibmcloud_iam_access_group_policy_create}
+
+Create an access group policy
+
+```
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>--file</dt>
+  <dd>JSON file of policy definition</dd>
+  <dt>-roles</dt>
+  <dd>Role names of the policy definition. For supported roles of a specific service, run 'ibmcloud iam roles --service SERVICE_NAME'. This option is exclusive with '--file'.</dd>
+  <dt>-service-name</dt>
+  <dd>Service name of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>GUID of service instance of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-region</dt>
+  <dd>Region of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-resource-type</dt>
+  <dd>Resource type of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-resource</dt>
+  <dd>Resource of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-resource-group-name</dt>
+  <dd>Name of the resource group. This option is exclusive with '--file' and '--resource-group-id'.</dd>
+  <dt>-resource-group-id</dt>
+  <dd>ID of the resource group. This option is exclusive with '--file' and '--resource-group-name'.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Create an access group policy from a JSON file:
+
+```
+ibmcloud iam access-group-policy-create example_group -f @policy.json
+```
+
+Give `example_group` `Administrator` role for all `sample-service` resources:
+```
+ibmcloud iam access-group-policy-create example_group --roles Administrator --service-name sample-service
+```
+
+Give `example_group` `Editor` role for resource `key123` of `sample-service` instance with GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in `us-south` region:
+```
+ibmcloud iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
+```
+
+Give `example_group` `Operator` role for resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
+```
+ibmcloud iam access-group-policy-create example_group --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+```
+
+Give `example_group` `Viewer` role for the members of resource group `sample-resource-group`:
+```
+ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-group-name sample-resource-group
+```
+
+Give `example_group` `Viewer` role for the members of resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
+```
+ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+
+### ibmcloud iam access-group-policy-update
+{: #ibmcloud_iam_access_group_policy_update}
+
+Update an access group policy
+
+```
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>--file</dt>
+  <dd>JSON file of policy definition</dd>
+  <dt>--roles</dt>
+  <dd>Role names of the policy definition. For supported roles of a specific service, run 'ibmcloud iam roles --service SERVICE_NAME'. This option is exclusive with '--file'.</dd>
+  <dt>-service-name</dt>
+  <dd>Service name of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>GUID of service instance of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-region</dt>
+  <dd>Region of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-resource-type</dt>
+  <dd>Resource type of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-resource</dt>
+  <dd>Resource of the policy definition. This option is exclusive with '--file'.</dd>
+  <dt>-resource-group-name</dt>
+  <dd>Name of the resource group. This option is exclusive with '--file' and '--resource-group-id'.</dd>
+  <dt>-resource-group-id</dt>
+  <dd>ID of the resource group. This option is exclusive with '--file' and '--resource-group-name'.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Update access group policy with the one in policy JSON file:
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 -f @policy.json
+```
+
+Update access group policy to give `example_group` `Administrator` role for all `sample-service` resources:
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
+```
+
+Update access group policy to give `example_group` `Editor` role for resource `key123` of `sample-service` instance with GUID `d161aeea-fd02-40f8-a487-df1998bd69a9` in `us-south` region:
+```
+ibmcloud iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south
+```
+
+Update access group policy to give `example_group` `Operator` role for resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+```
+
+Update access group policy to give `example_group` `Viewer` role for members of resource group `sample-resource-group`:
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-name sample-resource-group
+```
+
+Update access group policy to give `example_group` `Viewer` role for members of resource group with ID `dda27e49d2a1efca58083a01dfde18f6`:
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+
+### ibmcloud iam access-group-policy-delete
+{: #ibmcloud_iam_access_group_policy_delete}
+
+Delete an access group policy
+
+```
+ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command Options</strong>:
+<dl>
+  <dt>-f, --force</dt>
+  <dd>Force deletion without confirmation</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Delete policy `51b9717e-76b0-4f6a-bda7-b8132431f926` of access group `example_group`:
+```
+ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
+```
