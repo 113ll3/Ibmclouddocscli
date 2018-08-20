@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -38,7 +38,7 @@ Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 <ol>
 <li>Pour ajouter le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>Pour installer le plug-in de l'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/>

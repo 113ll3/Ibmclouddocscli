@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-09"
 # Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} autonome
 {: #install_use}
 
-L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit l'interface de ligne de commande permettant de gérer des applications, des conteneurs, des infrastructures, des services et d'autres ressources dans {{site.data.keyword.Bluemix_notm}}.
+L'interface CLI d'{{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande pour gérer les ressources dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez continuer à utiliser l'interface de ligne de commande cf pour vous connecter à {{site.data.keyword.Bluemix_notm}}, mais elle ne fonctionne qu'avec un service Cloud Foundry dans {{site.data.keyword.Bluemix_notm}}.
 
 Si vous souhaitez installer l'interface de ligne de commande {{site.data.keyword.Bluemix}} ainsi que d'autres outils et plug-in recommandés pour le développement d'applications pour {{site.data.keyword.Bluemix_notm}}, suivez la méthode décrite [ici](/docs/cli/index.html).
 {: tip}

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -81,6 +81,11 @@ lastupdated: "2018-07-26"
   <td>[Ibmcloud iam access-group-policy-create](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_create)</td>
   <td>[ibmcloud iam access-group-policy-update](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_update)</td>
   <td>[Ibmcloud iam access-group-policy-delete](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_delete)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
  </tr>
  </tbody>
  </table>
@@ -346,7 +351,7 @@ Designe o usuário `Mary` à organização do `IBM` como função `OrgManager`:
 Ibmcloud conta org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**Nota**: é possível configurar as funções de organização/espaço usando a CLI, mas se você desejar configurar as outras permissões, precisará usar a UI. Para obter detalhes adicionais, consulte [Designando o acesso de usuário](/docs/iam/assignaccess.html#assignaccess).
+**Nota**: é possível configurar as funções de organização/espaço usando a CLI, mas se você desejar configurar as outras permissões, precisará usar a UI. Para obter detalhes adicionais, veja [Designando o acesso de usuário](/docs/iam/assignaccess.html#assignaccess).
 <!-- Begin Staging URL vs Prod URL -->
 
 ### Ibmcloud account org-role-unset
@@ -1118,3 +1123,85 @@ Excluir a política `51b9717e-76b0-4f6a-bda7-b8132431f926` do grupo de acesso
 ```
 Ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
 ```
+
+### App domain-cert ibmcloud
+{: #ibmcloud_app_domain_cert}
+
+Liste as informações de certificado de um domínio.
+
+```
+Ibmcloud app domain-cert DOMAIN_NAME
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+<dt>DOMAIN_NAME (necessário)</dt>
+<dd>O domínio que hospeda o certificado.</dd>
+</dl>
+
+
+<strong>Exemplos</strong>:
+
+Visualize as informações de certificado do domínio `ibmcxo-eventconnect.com`:
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+### Ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+Inclua um certificado no domínio especificado na organização atual.
+
+```
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
+
+<strong>Opções de comando</strong>:
+   <dl>
+   <dt>DOMAIN (necessário)</dt>
+   <dd>O domínio no qual o certificado é incluído.</dd>
+   <dt>-k <i>PRIVATE_KEY_FILE</i> (necessário)</dt>
+   <dd>O caminho de arquivo de chave privado.</dd>
+   <dt>-c <i>CERT_FILE</i> (necessário)</dt>
+   <dd>O caminho de arquivo de certificado.</dd>
+   <dt>-p <i>PASSWORD</i> (opcional)</dt>
+   <dd>A senha para o certificado.</dd>
+   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (opcional)</dt>
+   <dd>O caminho de arquivo de certificado intermediário.</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i> (opcional)</dt>
+   <dd>O arquivo de armazenamento confiável.</dd>
+   </dl>
+
+
+<strong>Exemplos</strong>:
+
+Inclua um certificado no domínio `ibmcxo-eventconnect.com`:
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+### Ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+Remova um certificado do domínio especificado na organização atual.
+
+```
+Ibmcloud app domain-cert-remove DOMAIN [ -f ]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
+
+<strong>Opções de comando</strong>:
+
+   <dl>
+   <dt>DOMAIN (necessário)</dt>
+   <dd>Domínio do qual remover o certificado.</dd>
+   <dt>-f (opcional)</dt>
+   <dd>Force a exclusão sem confirmação.</dd>
+   </dl>
