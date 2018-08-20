@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -81,6 +81,11 @@ lastupdated: "2018-07-26"
   <td>[ibmcloud iam access-group-policy-create](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_create)</td>
   <td>[ibmcloud iam access-group-policy-update](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_update)</td>
   <td>[ibmcloud iam access-group-policy-delete](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_delete)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
  </tr>
  </tbody>
  </table>
@@ -1097,3 +1102,85 @@ ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
 ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
 ```
+
+### ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
+
+列出網域的憑證資訊。
+
+```
+ibmcloud app domain-cert DOMAIN_NAME
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+<dt>DOMAIN_NAME（必要）</dt>
+<dd>管理憑證的網域。</dd>
+</dl>
+
+
+<strong>範例</strong>：
+
+檢視網域 `ibmcxo-eventconnect.com` 的憑證資訊：
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+### ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+將憑證新增到現行組織中的指定網域。
+
+```
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+```
+
+<strong>必要條件</strong>：端點、登入、目標
+
+<strong>指令選項</strong>：
+   <dl>
+   <dt>DOMAIN（必要）</dt>
+   <dd>要新增憑證的網域。</dd>
+   <dt>-k <i>PRIVATE_KEY_FILE</i>（必要）</dt>
+   <dd>私密金鑰檔案路徑。</dd>
+   <dt>-c <i>CERT_FILE</i>（必要）</dt>
+   <dd>憑證檔案路徑。</dd>
+   <dt>-p <i>PASSWORD</i>（選用）</dt>
+   <dd>憑證的密碼。</dd>
+   <dt>-i <i>INTERMEDIATE_CERT_FILE</i>（選用）</dt>
+   <dd>中繼憑證檔案路徑。</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i>（選用）</dt>
+   <dd>信任儲存庫檔案。</dd>
+   </dl>
+
+
+<strong>範例</strong>：
+
+將憑證新增到網域 `ibmcxo-eventconnect.com`：
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+### ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+從現行組織中的指定網域移除憑證。
+
+```
+ibmcloud app domain-cert-remove DOMAIN [-f]
+```
+
+<strong>必要條件</strong>：端點、登入、目標
+
+<strong>指令選項</strong>：
+
+   <dl>
+   <dt>DOMAIN（必要）</dt>
+   <dd>要從中移除憑證的網域。</dd>
+   <dt>-f（選用）</dt>
+   <dd>強制刪除，而不確認。</dd>
+   </dl>

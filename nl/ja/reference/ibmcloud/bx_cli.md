@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -445,15 +445,8 @@ ibmcloud update [-f]
 ## 汎用 CLI (ibmcloud sl) コマンド
 {: #softlayer_cli}
 
-{{site.data.keyword.BluSoftlayer}} プラグインは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。 このプラグインのインストールは必要なくなりました。
-{: tip}
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) で {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンドを使用して、SoftLayer のサービスを管理および構成します。
-
-2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。 ただし、後日削除されるまで、`bluemix` および `bx` CLI CLI コマンドを引き続き使用できます。
-{: tip}
-
-まず、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[IBM Cloud CLI ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}』を参照してください。
 
 以下のコマンドがサポートされます。 使用可能なコマンドのリストを表示するには、`ibmcloud sl` コマンドを使用します。
 

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -81,6 +81,11 @@ lastupdated: "2018-07-26"
   <td>[ibmcloud iam access-group-policy-create](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_create)</td>
   <td>[ibmcloud iam access-group-policy-update](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_update)</td>
   <td>[ibmcloud iam access-group-policy-delete](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_delete)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
  </tr>
  </tbody>
  </table>
@@ -1100,3 +1105,85 @@ ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
 ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
 ```
+
+### ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
+
+ドメインの証明書情報をリストします。
+
+```
+ibmcloud app domain-cert DOMAIN_NAME
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>DOMAIN_NAME (必須)</dt>
+<dd>証明書をホストするドメイン。</dd>
+</dl>
+
+
+<strong>例</strong>:
+
+ドメイン `ibmcxo-eventconnect.com` の証明書情報を表示するには、次のように指定します。
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+### ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+現在の組織内の、指定したドメインに証明書を追加します。
+
+```
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+   <dl>
+   <dt>DOMAIN (必須)</dt>
+   <dd>証明書を追加するドメイン。</dd>
+   <dt>-k <i>PRIVATE_KEY_FILE</i> (必須)</dt>
+   <dd>秘密鍵ファイル・パス。</dd>
+   <dt>-c <i>CERT_FILE</i> (必須)</dt>
+   <dd>証明書ファイル・パス。</dd>
+   <dt>-p <i>PASSWORD</i> (オプション)</dt>
+   <dd>証明書のパスワード。</dd>
+   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (オプション)</dt>
+   <dd>中間証明書ファイル・パス。</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i> (オプション)</dt>
+   <dd>トラストストア・ファイル。</dd>
+   </dl>
+
+
+<strong>例</strong>:
+
+ドメイン `ibmcxo-eventconnect.com` に証明書を追加するには、以下のように指定します。
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+### ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+現在の組織内の、指定したドメインから証明書を削除します。
+
+```
+ibmcloud app domain-cert-remove DOMAIN [-f]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+
+   <dl>
+   <dt>DOMAIN (必須)</dt>
+   <dd>証明書を削除するドメイン。</dd>
+   <dt>-f (オプション)</dt>
+   <dd>確認なしで削除を強制します。</dd>
+   </dl>

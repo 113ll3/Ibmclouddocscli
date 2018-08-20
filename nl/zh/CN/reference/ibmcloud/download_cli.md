@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-09"
 # 安装独立 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI 提供了用于管理 {{site.data.keyword.Bluemix_notm}} 中应用程序、容器、基础架构、服务和其他资源的命令行界面。
+{{site.data.keyword.Bluemix_notm}} CLI 提供命令行界面用于管理 {{site.data.keyword.Bluemix_notm}} 中的资源。您仍可以使用 cf CLI 以登录到 {{site.data.keyword.Bluemix_notm}}，但是只能用于 {{site.data.keyword.Bluemix_notm}} 中的 Cloud Foundry 服务。
 
 如果要安装 {{site.data.keyword.Bluemix}} CLI 和其他建议插件及工具，以用于为 {{site.data.keyword.Bluemix_notm}} 开发应用程序，请遵循[此处](/docs/cli/index.html)描述的方法进行操作。
 {: tip}

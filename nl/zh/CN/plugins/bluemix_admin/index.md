@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -36,7 +36,7 @@ lastupdated: "2018-06-21"
 <ol>
 <li>要添加 {{site.data.keyword.Bluemix_notm}} 管理插件存储库，请运行以下命令：<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>要安装 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>

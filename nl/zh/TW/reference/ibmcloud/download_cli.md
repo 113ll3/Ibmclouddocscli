@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-09"
 # 安裝獨立式 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI 提供指令行介面，來管理應用程式、容器、基礎架構、服務及 {{site.data.keyword.Bluemix_notm}} 中的其他資源。
+{{site.data.keyword.Bluemix_notm}} CLI 提供指令行介面，以便在 {{site.data.keyword.Bluemix_notm}} 中管理資源。您仍可以使用 cf CLI 登入 {{site.data.keyword.Bluemix_notm}}，但它僅適用於 {{site.data.keyword.Bluemix_notm}} 中的 Cloud Foundry 服務。
 
 如果您想要安裝 {{site.data.keyword.Bluemix}} CLI 及其他建議外掛程式和工具來開發 {{site.data.keyword.Bluemix_notm}} 的應用程式，請遵循在[這裡](/docs/cli/index.html)說明的方法。
 {: tip}
@@ -39,8 +39,8 @@ lastupdated: "2018-08-09"
 1. 將目標設為 API 端點並登入 {{site.data.keyword.Bluemix_notm}}
 
    ```
-ibmcloud login
-```
+   ibmcloud login
+   ```
    {: codeblock}
    
 現在，您已準備好管理 {{site.data.keyword.Bluemix_notm}} 資源。鍵入 `ibmcloud help` 以查看指令說明。

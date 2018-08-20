@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -36,7 +36,7 @@ Cloud Foundry コマンド・ライン・インターフェースのインスト
 <ol>
 <li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>{{site.data.keyword.Bluemix_notm}} 管理

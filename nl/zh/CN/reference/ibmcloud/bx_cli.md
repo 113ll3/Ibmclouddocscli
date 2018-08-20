@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -444,15 +444,8 @@ ibmcloud update [-f]
 ## 常规 CLI (ibmcloud sl) 命令
 {: #softlayer_cli}
 
-{{site.data.keyword.BluSoftlayer}} 插件已合并到 {{site.data.keyword.Bluemix_notm}} CLI 中。您不再需要安装该插件。
-{: tip}
 
 使用 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 中的 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令来配置和管理 SoftLayer 服务。
-
-从 2018 年 5 月起，{{site.data.keyword.Bluemix_notm}} CLI 命令已从 `bluemix` 和 `bx` 更改为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到未来某个日期这些命令被除去为止。
-{: tip}
-
-首先，请安装 {{site.data.keyword.Bluemix_notm}} CLI。有关详细信息，请参阅 [IBM Cloud CLI ![外部链接图标](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}。
 
 支持以下命令。使用 `ibmcloud sl` 命令可查看可用命令的列表：
 
@@ -524,7 +517,7 @@ OK
 
 Targeted account example user's Account (65ce8074c6c62b5)
 
-API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)   
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
 Region:         us-south   
 User:           user@example.com   
 Account:        example user's Account (65ce8074c6c62b5)   

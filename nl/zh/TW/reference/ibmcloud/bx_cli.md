@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -445,15 +445,8 @@ ibmcloud update [-f]
 ## 一般 CLI (ibmcloud sl) 指令
 {: #softlayer_cli}
 
-{{site.data.keyword.BluSoftlayer}} 外掛程式已合併至 {{site.data.keyword.Bluemix_notm}} CLI。您不再需要安裝外掛程式。
-{: tip}
 
 在 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 中使用 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，以配置及管理 SoftLayer 服務。
-
-到 2018 年五月為止，{{site.data.keyword.Bluemix_notm}} CLI 指令已從 `bluemix` 和 `bx` 變更為 `ibmcloud`。不過，您仍然可以使用 `bluemix` 和 `bx` CLI 指令，直到未來移除它們為止。
-{: tip}
-
-若要開始使用，請安裝 {{site.data.keyword.Bluemix_notm}} CLI。如需詳細資料，請參閱 [IBM Cloud CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}。
 
 支援下列指令。使用 `ibmcloud sl` 指令，以查看可用的指令清單：
 
