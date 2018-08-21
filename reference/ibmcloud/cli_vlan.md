@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managiing {{site.data.keyword.Bluemix_notm}} infrastructure VLAN
+# Managing {{site.data.keyword.Bluemix_notm}} infrastructure VLAN
 
 <table summary="Alphabetically ordered general {{site.data.keyword.Bluemix_notm}} infrastructure commands that have links that bring you to more info for the command">
 
