@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -42,7 +42,7 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
 * If you're using Microsoft Windows &trade;, you must use Windows 10 Pro or later.
 * You must use the stable channel for Docker with a minimum version of 1.13.1. 
 
-## Step 1: Run the install command
+## Step 1. Run the install command
 {: #step1}
 
 * For Mac and Linux, run the following command:
@@ -64,7 +64,7 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
   
   For instructions on installing these tools manually, see [Reinstalling Tools](/docs/cli/ts_createapps.html#appendix).
 
-## Step 2: Verify the installation
+## Step 2. Verify the installation
 {: #step2}
 
 To verify that the CLI and developer tools were installed successfully, run the `help` command:
@@ -76,7 +76,7 @@ ibmcloud dev help
 <br>
 The output lists the usage instructions, the current version, and the supported commands.
 
-## Step 3: Configure your environment
+## Step 3. Configure your environment
 {: #step3}
 
 1. Connect to an API endpoint in your {{site.data.keyword.Bluemix_notm}} region. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} US South region:
@@ -111,7 +111,7 @@ The output lists the usage instructions, the current version, and the supported 
 	```
 	{: codeblock}
 	
-To report issues or provide feedback you can use the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
+To report issues or provide feedback you can use the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com).  Request team access at [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Next steps
 {: #next-steps}
