@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -83,6 +83,11 @@ lastupdated: "2018-07-26"
   <td>[ibmcloud iam access-group-policy-create](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_create)</td>
   <td>[ibmcloud iam access-group-policy-update](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_update)</td>
   <td>[ibmcloud iam access-group-policy-delete](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_delete)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
  </tr>
  </tbody>
  </table>
@@ -1100,3 +1105,85 @@ ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 ```
 ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
 ```
+
+### ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
+
+도메인의 인증서 정보를 나열합니다.
+
+```
+ibmcloud app domain-cert DOMAIN_NAME
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+<dt>DOMAIN_NAME(필수)</dt>
+<dd>인증서를 호스팅하는 도메인입니다.</dd>
+</dl>
+
+
+<strong>예제</strong>:
+
+`ibmcxo-eventconnect.com` 도메인의 인증서 정보를 봅니다.
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+### ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+현재 조직의 지정된 도메인에 인증서를 추가합니다.
+
+```
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+
+<strong>명령 옵션</strong>:
+   <dl>
+   <dt>DOMAIN(필수)</dt>
+   <dd>인증서가 추가되는 도메인입니다.</dd>
+   <dt>-k <i>PRIVATE_KEY_FILE</i>(필수)</dt>
+   <dd>개인 키 파일 경로입니다.</dd>
+   <dt>-c <i>CERT_FILE</i>(필수)</dt>
+   <dd>인증서 파일 경로입니다.</dd>
+   <dt>-p <i>PASSWORD</i>(선택사항)</dt>
+   <dd>인증서의 비밀번호입니다.</dd>
+   <dt>-i <i>INTERMEDIATE_CERT_FILE</i>(선택사항)</dt>
+   <dd>중간 인증서 파일 경로입니다.</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i>(선택사항)</dt>
+   <dd>신뢰 저장소 파일입니다.</dd>
+   </dl>
+
+
+<strong>예제</strong>:
+
+인증서를 도메인 `ibmcxo-eventconnect.com`에 추가합니다.
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+### ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+현재 조직의 지정된 도메인에서 인증서를 제거합니다.
+
+```
+ibmcloud app domain-cert-remove DOMAIN [-f]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+
+<strong>명령 옵션</strong>:
+
+   <dl>
+   <dt>DOMAIN(필수)</dt>
+   <dd>인증서가 제거되는 도메인입니다.</dd>
+   <dt>-f(선택사항)</dt>
+   <dd>확인 없이 강제 삭제합니다.</dd>
+   </dl>

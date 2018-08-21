@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-09"
 # 독립형 {{site.data.keyword.Bluemix_notm}} CLI 설치
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI는 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션, 컨테이너, 인프라, 서비스 및 기타 리소스를 관리하기 위한 명령행 인터페이스를 제공합니다.
+{{site.data.keyword.Bluemix_notm}} CLI에서는 {{site.data.keyword.Bluemix_notm}}에서 리소스를 관리하는 명령행 인터페이스를 제공합니다. 여전히 cf CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있지만 {{site.data.keyword.Bluemix_notm}}에서 Cloud Foundry 서비스와만 작동합니다.
 
 {{site.data.keyword.Bluemix}} CLI와 {{site.data.keyword.Bluemix_notm}}용 애플리케이션을 개발하기 위해 권장되는 플러그인 및 도구를 모두 설치하려면 [여기](/docs/cli/index.html)에 설명된 방법을 따르십시오.
 {: tip}
