@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -29,7 +29,7 @@ lastupdated: "2018-08-20"
    </tbody>
  </table>
 
- ### ibmcloud sl image delete
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 Delete an image.
@@ -42,7 +42,7 @@ ibmcloud sl image delete IDENTIFIER
 ```
 This command deletes image with ID `12345678`.
 
-### ibmcloud sl image detail
+## ibmcloud sl image detail
 {: #sl_image_detail}
 
 Get details for an image.
@@ -55,7 +55,7 @@ ibmcloud sl image detail IDENTIFIER
 ```
 This command gets details for image with ID 12345678.
 
-### ibmcloud sl image edit
+## ibmcloud sl image edit
 {: #sl_image_edit}
 
 Edit details of an image.
@@ -79,7 +79,7 @@ ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 This command edits image with ID `12345678` and set its name to `ubuntu16`, note to `testing`, and tag to `staging`.
 
-### ibmcloud sl image list
+## ibmcloud sl image list
 {: #sl_image_list}
 
 List all images on your account.

@@ -33,7 +33,7 @@ lastupdated: "2018-08-21"
    </tbody>
  </table>
 
- ### ibmcloud sl vlan create
+ ## ibmcloud sl vlan create
 {: #sl_vlan_create}
 
 Create a new VLAN.
@@ -63,7 +63,7 @@ ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 This command creates a public vlan located at datacenter dal09 with 16 IP addresses and name is myvlan.
 
-### ibmcloud sl vlan cancel
+## ibmcloud sl vlan cancel
 {: #sl_vlan_cancel}
 
 Cancel a VLAN.
@@ -83,7 +83,7 @@ ibmcloud sl vlan cancel 12345678 -f
 ```
 This command cancels vlan with ID 12345678 without asking for confirmation.
 
-### ibmcloud sl vlan detail
+## ibmcloud sl vlan detail
 {: #sl_vlan_detail}
 
 Get details about a VLAN.
@@ -105,7 +105,7 @@ ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 ```
 This command shows details of vlan with ID 12345678, and not list virtual server or hardware server.
 
-### ibmcloud sl vlan edit
+## ibmcloud sl vlan edit
 {: #sl_vlan_edit}
 
 Edit the details about a VLAN.
@@ -125,7 +125,7 @@ ibmcloud sl vlan edit 12345678 -n myvlan-rename
 ```
 This command updates vlan with ID 12345678 and gives it a new name "myvlan-rename".
 
-### ibmcloud sl vlan list
+## ibmcloud sl vlan list
 {: #sl_vlan_list}
 
 List all the VLANs on your account.
@@ -153,7 +153,7 @@ ibmcloud sl vlan list -d dal09 --sortby number
 ```
 This commands lists all vlans on current account filtering by datacenter equals to dal09, and sort them by vlan number.
 
-### ibmcloud sl vlan options
+## ibmcloud sl vlan options
 {: #sl_vlan_options}
 
 List all the options for creating VLAN.

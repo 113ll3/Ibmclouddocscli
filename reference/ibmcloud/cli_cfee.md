@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -28,7 +28,7 @@ lastupdated: "2018-08-20"
  </tbody>
  </table>
 
- ### ibmcloud cfee environments
+ ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
 List CFEE environments.
@@ -41,7 +41,7 @@ ibmcloud cfee environments
 
 <strong>Command options</strong>:
 
-### ibmcloud cfee environment
+## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
 Show details of a CFEE environment.

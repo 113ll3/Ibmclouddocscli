@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -39,7 +39,7 @@ lastupdated: "2018-08-20"
    </tbody>
  </table>
 
- ### ibmcloud sl ipsec cancel
+ ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 Cancel a IPSec VPN tunnel context.
@@ -57,7 +57,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>Force operation without confirmation.</dd>
 </dl>
 
-### ibmcloud sl ipsec config
+## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
 Request configuration of a tunnel context.
@@ -65,7 +65,7 @@ Request configuration of a tunnel context.
 ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec detail
+## ibmcloud sl ipsec detail
 {: #sl_ipsec_detail}
 
 List IPSec VPN tunnel context details.
@@ -79,7 +79,7 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <dd>Include additional resources, options are: at,is,rs,sr,ss.</dd>
 </dl>
 
-### ibmcloud sl ipsec list
+## ibmcloud sl ipsec list
 {: #sl_ipsec_list}
 
 List IPSec VPN tunnel contexts.
@@ -93,7 +93,7 @@ ibmcloud sl ipsec list [OPTIONS]
 <dd>Filter by ID of the order that purchased the IPSEC.</dd>
 </dl>
 
-### ibmcloud sl ipsec order
+## ibmcloud sl ipsec order
 {: #sl_ipsec_order}
 
 Order a IPSec VPN tunnel.
@@ -107,7 +107,7 @@ ibmcloud sl ipsec order [OPTIONS]
 <dd>Required. Short name of the datacenter for the IPSEC, eg. dal09 .</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-add
+## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
 Add a subnet to an IPSec tunnel context.
@@ -125,7 +125,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>Subnet network identifier to create.</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-remove
+## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
 Remove a subnet from an IPSEC tunnel context.
@@ -133,7 +133,7 @@ Remove a subnet from an IPSEC tunnel context.
 ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-add
+## ibmcloud sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
 Add an address translation to an IPSec tunnel.
@@ -151,7 +151,7 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dd>Note.</dd>
 </dl>
 
-### ibmcloud sl ipsec translation-remove
+## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
 Remove a translation entry from an IPSec.
@@ -159,7 +159,7 @@ Remove a translation entry from an IPSec.
 ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-update
+## ibmcloud sl ipsec translation-update
 {: #sl_ipsec_translation_update}
 
 Update an address translation for an IPSec.
@@ -177,7 +177,7 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dd>Note.</dd>
 </dl>
 
-### ibmcloud sl ipsec update
+## ibmcloud sl ipsec update
 {: #sl_ipsec_update}
 
 Update tunnel context properties.

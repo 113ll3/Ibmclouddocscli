@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -72,7 +72,7 @@ lastupdated: "2018-08-20"
   </tbody>
 </table>
 
-### ibmcloud resource groups
+## ibmcloud resource groups
 {: #ibmcloud_resource_groups}
 
 List resource groups.
@@ -103,7 +103,7 @@ List default group of currently targeted account:
 ibmcloud resource groups --default
 ```
 
-### ibmcloud resource group
+## ibmcloud resource group
 {: #ibmcloud_resource_group}
 
 Show details of a resource group
@@ -136,7 +136,7 @@ Show only ID of resource group `example-group`:
 ibmcloud resource group example-group --id
 ```
 
-### ibmcloud resource group-create
+## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
 Create a resource group
@@ -157,7 +157,7 @@ Create a resource group `example-group` with quota `free`:
 ibmcloud resource group-create example-group free
 ```
 
-### ibmcloud resource group-update
+## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
 Update an existing resource group
@@ -194,7 +194,7 @@ Change the quota of resource group `example-group` to `free`:
 ibmcloud resource group-update example-group -q free
 ```
 
-### ibmcloud resource quotas
+## ibmcloud resource quotas
 {: #ibmcloud_resource_quotas}
 
 List all quota definitions
@@ -217,7 +217,7 @@ List all quota definitions:
 ibmcloud resource quotas
 ```
 
-### ibmcloud resource quota
+## ibmcloud resource quota
 {: #ibmcloud_resource_quota}
 
 Show details of a quota definition
@@ -241,7 +241,7 @@ Show details of quota `free`:
 ibmcloud resource quota free
 ```
 
-### ibmcloud resource cf-service-instance-migrate
+## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
 Migrate a Cloudfoundry service instance into resource group
@@ -264,7 +264,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
   <dd>Migrate without confirmation</dd>
 </dl>
 
-### ibmcloud resource service-instances
+## ibmcloud resource service-instances
 {: #ibmcloud_resource_service_instances}
 
 List service instances
@@ -293,7 +293,7 @@ List service instances of service `test-service`:
 ibmcloud resource service-instances --service-name test-service
 ```
 
-### ibmcloud resource service-instance
+## ibmcloud resource service-instance
 {: #ibmcloud_resource_service_instance}
 
 Show details of a service instance
@@ -324,7 +324,7 @@ Show details of service instance `my-service-instance`:
 ibmcloud resource service-instance my-service-instance
 ```
 
-### ibmcloud resource service-instance-create
+## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
 
 Create a service instance
@@ -394,7 +394,7 @@ Update service instance `my-service-instance`, change its name to `new-service-i
 ibmcloud resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-### ibmcloud resource service-instance-delete
+## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
 Delete service instance
@@ -424,7 +424,7 @@ Delete resource service-instance `my-service-instance`:
 ibmcloud resource service-instance-delete my-service-instance
 ```
 
-### ibmcloud resource service-bindings
+## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
 
 Show bindings to the service alias
@@ -448,7 +448,7 @@ Show resource bindings to service alias `my-service-alias`:
 ibmcloud resource bindings my-service-alias
 ```
 
-### ibmcloud resource service-binding
+## ibmcloud resource service-binding
 {: #ibmcloud_resource_service_binding}
 
 Show details of a service binding
@@ -476,7 +476,7 @@ Show details of service binding between service alias `my-service-alias` and app
 ibmcloud resource bindings my-service-alias my-app
 ```
 
-### ibmcloud resource service-binding-create
+## ibmcloud resource service-binding-create
 {: #ibmcloud_resource_service_binding_create}
 
 Create a service binding
@@ -510,7 +510,7 @@ Create a service bindings between service alias `my-service-alias` and app `my-a
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
 
-### ibmcloud resource service-binding-delete
+## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
 
 Delete a service binding
@@ -538,7 +538,7 @@ Delete the service binding between service alias `my-service-alias` and app `my-
 ibmcloud resource service-binding-delete my-service-alias my-app
 ```
 
-### ibmcloud resource service-keys
+## ibmcloud resource service-keys
 {: #ibmcloud_resource_service_keys}
 
 List service keys of service instance or service alias
@@ -568,7 +568,7 @@ List service keys of service instance `my-service-instance`:
 ibmcloud resource service-keys --instance-name my-service-instance
 ```
 
-### ibmcloud resource service-key
+## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
 Show details of a service key
@@ -594,7 +594,7 @@ Show details of service keys `my-service-key`:
 ibmcloud resource service-key my-service-key
 ```
 
-### ibmcloud resource service-key-create
+## ibmcloud resource service-key-create
 {: #ibmcloud_resource_service_key_create}
 
 Create a service key
@@ -660,7 +660,7 @@ Delete service key `my-service-key`:
 ibmcloud resource service-key-delete my-service-key
 ```
 
-### ibmcloud resource service-aliases
+## ibmcloud resource service-aliases
 {: #ibmcloud_resource_service_aliases}
 
 List aliases for a service instance
@@ -685,7 +685,7 @@ List service aliases for service instance `my-service-instance`:
 ibmcloud resource service-aliases my-service-instance
 ```
 
-### ibmcloud resource service-alias
+## ibmcloud resource service-alias
 {: #ibmcloud_resource_service_alias}
 
 Show details of a service alias
@@ -710,7 +710,7 @@ Show details of service alias `my-service-alias`:
 ibmcloud resource service-alias  my-service-alias
 ```
 
-### ibmcloud resource service-alias-create
+## ibmcloud resource service-alias-create
 {: #ibmcloud_resource_service_alias_create}
 
 Create an alias of a service instance
@@ -743,7 +743,7 @@ Create a service alias named `my-service-alias` of service instance `my-service-
 ibmcloud resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
-### ibmcloud resource service-alias-update
+## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
 Update an service alias
@@ -775,7 +775,7 @@ Update service alias `my-service-alias`, change its name to `new-service-alias`:
 ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-### ibmcloud resource service-alias-delete
+## ibmcloud resource service-alias-delete
 {: #ibmcloud_resource_service_alias_delete}
 
 Delete a service alias
@@ -801,7 +801,7 @@ Delete service alias `my-service-alias`:
 ibmcloud resource service-alias-delete my-service-alias
 ```
 
-### ibmcloud resource search
+## ibmcloud resource search
 {: #ibmcloud_resource_search}
 Search resources using Lucene query syntax
 
@@ -886,7 +886,7 @@ Search for a resource with the specified tag:
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
 
-### ibmcloud resource tags
+## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
 List all tags
@@ -921,7 +921,7 @@ List all restricted tags
 ibmcloud resource tags --tag-type restricted
 ```
 
-### ibmcloud resource tag
+## ibmcloud resource tag
 {: #ibmcloud_resource_tag}
 
 Show details of a tag
@@ -948,7 +948,7 @@ Show details of tag "Ray Brown"
 ibmcloud resource tag --tag-name "Ray Brown"
 ```
 
-### ibmcloud resource tag-create
+## ibmcloud resource tag-create
 {: #ibmcloud_resource_tag_create}
 
 Create a tag
@@ -993,7 +993,7 @@ Create a restricted tag with name "environment:My Development"
 ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
 ```
 
-### ibmcloud resource tag-delete
+## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
 
 Delete a tag
@@ -1020,7 +1020,7 @@ Deletag tag "Ray Brown"
 ibmcloud resource tag-delete --tag-name "Ray Brown"
 ```
 
-### ibmcloud resource tag-attach
+## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
 
 Add a tag to a resource
@@ -1049,7 +1049,7 @@ Add tag "Ray Brown" to resource whose crn is resource_example_crn.
 ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
 ```
 
-### ibmcloud resource tag-detach
+## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
 Remove a tag from a resource
@@ -1078,7 +1078,7 @@ Remove tag "Ray Brown" from resource whose crn is resource_example_crn.
 ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
 ```
 
-### ibmcloud resource tag-update
+## ibmcloud resource tag-update
 {: #ibmcloud_resource_tag_update}
 
 Switch user tag to restricted tag and vice versa

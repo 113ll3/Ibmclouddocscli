@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -41,7 +41,7 @@ lastupdated: "2018-08-20"
    </tbody>
  </table>
 
- ### ibmcloud sl securitygroup create
+ ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 Create a security group.
@@ -57,7 +57,7 @@ ibmcloud sl securitygroup create [OPTIONS]
 <dd>The description of the security group.</dd>
 </dl>
 
-### ibmcloud sl securitygroup delete
+## ibmcloud sl securitygroup delete
 {: #sl_securitygroup_delete}
 
 Delete the given security group.
@@ -71,7 +71,7 @@ ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 <dd>Force operation without confirmation.</dd>
 </dl>
 
-### ibmcloud sl securitygroup detail
+## ibmcloud sl securitygroup detail
 {: #sl_securitygroup_detail}
 
 Get details about a security group.
@@ -79,7 +79,7 @@ Get details about a security group.
 ibmcloud sl securitygroup detail SECURITYGROUP_ID [OPTIONS]
 ```
 
-### ibmcloud sl securitygroup edit
+## ibmcloud sl securitygroup edit
 {: #sl_securitygroup_edit}
 
 Edit details of a security group.
@@ -95,7 +95,7 @@ ibmcloud sl securitygroup edit SECURITYGROUP_ID [OPTIONS]
 <dd>The description of the security group.</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-add
+## ibmcloud sl securitygroup interface-add
 {: #sl_securitygroup_interface_add}
 
 Attach an interface to a security group.
@@ -113,7 +113,7 @@ ibmcloud sl securitygroup interface-add SECURITYGROUP_ID [OPTIONS]
 <dd>The interface of the server to associate (public/private).</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-list
+## ibmcloud sl securitygroup interface-list
 {: #sl_securitygroup_interface_list}
 
 List interfaces associated with security group.
@@ -127,7 +127,7 @@ ibmcloud sl securitygroup interface-list SECURITYGROUP_ID [OPTIONS]
 <dd>Column to sort by, options are: id,virtualServerId,hostname.</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-remove
+## ibmcloud sl securitygroup interface-remove
 {: #sl_securitygroup_interface_remove}
 
 Detach an interface from a security group.
@@ -145,7 +145,7 @@ ibmcloud sl securitygroup interface-remove SECURITYGROUP_ID [OPTIONS]
 <dd>The interface of the server to remove (public/private).</dd>
 </dl>
 
-### ibmcloud sl securitygroup list
+## ibmcloud sl securitygroup list
 {: #sl_securitygroup_list}
 
 List security groups.
@@ -159,7 +159,7 @@ List security groups
 <dd>Column to sort by, options are: id,name,description,created.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-add
+## ibmcloud sl securitygroup rule-add
 {: #sl_securitygroup_rule_add}
 
 Add a security group rule to a security group.
@@ -185,7 +185,7 @@ ibmcloud sl securitygroup rule-add SECURITYGROUP_ID [OPTIONS]
 <dd>The protocol (icmp, tcp, udp) to enforce.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-edit
+## ibmcloud sl securitygroup rule-edit
 {: #sl_securitygroup_rule_edit}
 
 Edit a security group rule in a security group.
@@ -211,7 +211,7 @@ ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 <dd>The protocol (icmp, tcp, udp) to enforce.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-list
+## ibmcloud sl securitygroup rule-list
 {: #sl_securitygroup_rule_list}
 
 List security group rules.
@@ -225,7 +225,7 @@ ibmcloud sl securitygroup rule-list SECURITYGROUP_ID [OPTIONS]
 <dd>Column to sort by, options are: id,remoteIp,remoteGroupId,direction,ethertype,portRangeMin,portRangeMax,protocol.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-remove
+## ibmcloud sl securitygroup rule-remove
 {: #sl_securitygroup_rule_remove}
 
 Remove a rule from a security group.

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -64,7 +64,7 @@ lastupdated: "2018-08-20"
  </tbody>
  </table>
 
- ### ibmcloud account orgs
+ ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
 
 List all organizations
@@ -91,7 +91,7 @@ List all the organizations in region: `us-south` with the GUID displayed
 ibmcloud account orgs -r us-south --guid
 ```
 
-### ibmcloud account org
+## ibmcloud account org
 {: #ibmcloud_account_org}
 
 Show the information for the specified organization.
@@ -118,7 +118,7 @@ Show the information of organization `IBM` with the GUID displayed
 ibmcloud account org IBM --guid
 ```
 
-### ibmcloud account org-create
+## ibmcloud account org-create
 {: #ibmcloud_account_org_create}
 
 Create a new organization. This operation can only be performed by account owner.
@@ -145,7 +145,7 @@ Create an organization named `IBM`.
 ibmcloud account org-create IBM
 ```
 
-### ibmcloud account org-replicate
+## ibmcloud account org-replicate
 {: #ibmcloud_account_org_replicate}
 
 Replicate an org from the current region to another region.
@@ -172,7 +172,7 @@ Replicate the org `myorg` to the region `eu-gb`:
 ibmcloud account org-replicate myorg eu-gb
 ```
 
-### ibmcloud account org-rename
+## ibmcloud account org-rename
 {: #ibmcloud_account_org_rename}
 
 Rename an organization. This operation can be done only by an org manager.
@@ -191,7 +191,7 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dd>The new name of the org that it is renamed to.</dd>
    </dl>
 
-### ibmcloud account spaces
+## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
 
 List all spaces
@@ -208,29 +208,29 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
    <dd>Region name. List the spaces under the region specified. Default to current region if not specified.</dd>
    </dl>
 
-### ibmcloud account space
+## ibmcloud account space
 {: #ibmcloud_account_space}
 
 This command has the same function and options as the [cf space ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} command.
 
-### ibmcloud account space-create
+## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
 
 This command has the same function and options as the [cf create-space ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} command.
 
-### ibmcloud account space-rename
+## ibmcloud account space-rename
 {: #ibmcloud_account_space_rename}
 
 
 This command has the same function and options as the [cf rename-space ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} command.
 
-### ibmcloud account space-delete
+## ibmcloud account space-delete
 {: #ibmcloud_account_space_delete}
 
 
 This command has the same function and options as the [cf delete-space ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} command.
 
-### ibmcloud account org-users
+## ibmcloud account org-users
 {: #ibmcloud_account_org_users}
 
 Display users in the specified organization by role.
@@ -249,7 +249,7 @@ ibmcloud account org-users ORG_NAME [-a]
 <dd>List all the users in the specified organization, not grouped by role.</dd>
 </dl>
 
-### ibmcloud account org-user-add
+## ibmcloud account org-user-add
 {: #ibmcloud_account_org_user_add}
 
 Add a user into org (org manager required).
@@ -258,7 +258,7 @@ Add a user into org (org manager required).
  ibmcloud account org-user-add USER_NAME ORG
 ```
 
-### ibmcloud account org-user-remove
+## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
 Remove a user from org (org manager or user him/herself only)
@@ -273,7 +273,7 @@ Remove a user from org (org manager or user him/herself only)
 <dd>Force deletion without confirmation.</dd>
 </dl>
 
-### ibmcloud account org-roles
+## ibmcloud account org-roles
 {: #ibmcloud_account_org_roles}
 
 Get all organization roles of the current user
@@ -290,7 +290,7 @@ ibmcloud account org-roles [-u USER_ID]
    <dd>User ID. If not specified, default to current user.</dd>
   </dl>
 
-### ibmcloud account org-role-set
+## ibmcloud account org-role-set
 {: #ibmcloud_account_org_role_set}
 
 Assign an organization role to a user. This operation can be performed only by an organization manager.
@@ -328,7 +328,7 @@ ibmcloud account org-role-set Mary IBM OrgManager
 **Note**: You can set org/space roles using the CLI, but if you want to set the other permissions, you have to use the UI. For further details, see [Assigning user access](/docs/iam/assignaccess.html#assignaccess).
 <!-- Begin Staging URL vs Prod URL -->
 
-### ibmcloud account org-role-unset
+## ibmcloud account org-role-unset
 {: #ibmcloud_account_org_role_unset}
 
 Remove an organization role from a user. This operation can be performed only by an organization manager.
@@ -363,7 +363,7 @@ Remove user `Mary` from the organization `IBM` as `OrgManager` role:
 ibmcloud account org-role-unset Mary IBM OrgManager
 ```
 
-### ibmcloud account space-users
+## ibmcloud account space-users
 {: #ibmcloud_account_space_users}
 
 Display users in the specified space by role.
@@ -382,7 +382,7 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
    <dd>The name of the space.</dd>
    </dl>
 
-### ibmcloud account space-role-set
+## ibmcloud account space-role-set
 {: #ibmcloud_account_space_role_set}
 
 Assign a space role to a user. This operation can be performed only by a space manager.
@@ -419,7 +419,7 @@ Assign user `Mary` to the organization `IBM` and space `Cloud` as `SpaceManager`
 ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ```
 
-### ibmcloud account space-role-unset
+## ibmcloud account space-role-unset
 {: #ibmcloud_account_space_role_unset}
 
 Remove a space role from a user. This operation can be performed only by a space manager.
@@ -457,7 +457,7 @@ Remove user `Mary` from the organization `IBM` and space `Cloud` as `SpaceManage
 ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 ```
 
-### ibmcloud account list
+## ibmcloud account list
 {: #ibmcloud_account_list}
 
 List all accounts of the current user
@@ -468,7 +468,7 @@ ibmcloud account list
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
-### ibmcloud account org-account
+## ibmcloud account org-account
 {: #ibmcloud_account_org_account}
 
 Display the account of specified organization(org user required)
@@ -485,7 +485,7 @@ ibmcloud account org-account ORG_NAME [--guid]
   <dd>Display account ID only</dd>
 </dl>
 
-### ibmcloud account users
+## ibmcloud account users
 {: #ibmcloud_account_users}
 
 Displays users associated with the account. This operation can be performed only by the account owner.
@@ -494,7 +494,7 @@ Displays users associated with the account. This operation can be performed only
 ibmcloud account users
 ```
 
-### ibmcloud account user-remove
+## ibmcloud account user-remove
 {: #ibmcloud_account_user_remove}
 
 Remove a user from an account(account owner only)
@@ -515,7 +515,7 @@ ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 <dd>Force removal without confirmation.</dd>
 </dl>
 
-### ibmcloud account user-invite
+## ibmcloud account user-invite
 {: #ibmcloud_account_user_invite}
 
 Invite a user to the account
@@ -540,7 +540,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dd>Space role. Valid inputs are: SpaceManager, SpaceDeveloper and SpaceAuditor.</dd>
 </dl>
 
-### ibmcloud account user-reinvite
+## ibmcloud account user-reinvite
 {: #ibmcloud_account_user_reinvite}
 
 Resend invitation to a user (account admin)
@@ -556,7 +556,7 @@ ibmcloud account user-reinvite USER_EMAIL
    <dd>The email of the user being re-invited.</dd>
 </dl>
 
-### ibmcloud app domain-cert
+## ibmcloud app domain-cert
 {: #ibmcloud_app_domain_cert}
 
 List the certificate information of a domain.
@@ -582,7 +582,7 @@ View the certificate information of the domain `ibmcxo-eventconnect.com`:
 ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
-### ibmcloud app domain-cert-add
+## ibmcloud app domain-cert-add
 {: #ibmcloud_app_domain_cert_add}
 
 Add a certificate to the specified domain in the current org.
@@ -618,7 +618,7 @@ Add a certificate to the domain `ibmcxo-eventconnect.com`:
 ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-### ibmcloud app domain-cert-remove
+## ibmcloud app domain-cert-remove
 {: #ibmcloud_app_domain_cert_remove}
 
 Remove a certificate from the specified domain in current org.

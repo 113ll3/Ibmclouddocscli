@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -38,7 +38,7 @@ lastupdated: "2018-08-20"
    </tbody>
  </table>
 
- ### ibmcloud sl security sshkey-add
+ ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 Add a new SSH key.
@@ -62,7 +62,7 @@ ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 This command adds a SSH key from file: ~/.ssh/id_rsa.pub with a note "mykey".
 
-### ibmcloud sl security sshkey-edit
+## ibmcloud sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
 Edit an SSH key.
@@ -84,7 +84,7 @@ ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
 This command updates the SSH key with ID 12345678 and sets label to "Bluemix" and note to "testing".
 
-### ibmcloud sl security sshkey-list
+## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
 
 List SSH keys on your account.
@@ -104,7 +104,7 @@ ibmcloud sl security sshkey-list --sortby label
 ```
 This command lists all SSH keys on current account and sorts them by label.
 
-### ibmcloud sl security sshkey-print
+## ibmcloud sl security sshkey-print
 {: #sl_security_sshkey_print}
 
 Prints out an SSH key to the screen.
@@ -124,7 +124,7 @@ ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 This command shows the ID, label and notes of SSH key with ID 12345678 and write the public key to file: ~/mykey.pub.
 
-### ibmcloud sl security sshkey-remove
+## ibmcloud sl security sshkey-remove
 {: #sl_security_sshkey_remove}
 
 Permanently removes an SSH key.
@@ -144,7 +144,7 @@ ibmcloud sl security sshkey-remove 12345678 -f
 ```
 This command removes the SSH key with ID 12345678 without asking for confirmation.
 
-### ibmcloud sl security cert-add
+## ibmcloud sl security cert-add
 {: #sl_security_cert_add}
 
 Add and upload SSL certificate details.
@@ -172,7 +172,7 @@ ibmcloud sl security cert-add --crt ~/ibm.com.cert --key ~/ibm.com.key
 ```
 This command adds certificate file: ~/ibm.com.cert and private key file ~/ibm.com.key for domain ibm.com.
 
-### ibmcloud sl security cert-edit
+## ibmcloud sl security cert-edit
 {: #sl_security_cert_edit}
 
 Edit SSL certificate.
@@ -200,7 +200,7 @@ ibmcloud sl security cert-edit 12345678 --key ~/ibm.com.key
 ```
 This command edits certificate with ID 12345678 and updates its private key with file: ~/ibm.com.key.
 
-### ibmcloud sl security cert-download
+## ibmcloud sl security cert-download
 {: #sl_security_cert_download}
 
 Download SSL certificate and key files.
@@ -215,7 +215,7 @@ ibmcloud sl security cert-download 12345678
 ```
 This command downloads 4 files to current directory for certificate with ID 12345678. The 4 files are: certificate file, certificate signing request file, intermediate certificate file and private key file.
 
-### ibmcloud sl security cert-list
+## ibmcloud sl security cert-list
 {: #sl_security_cert_list}
 
 List SSL certificates on your account.
@@ -237,7 +237,7 @@ ibmcloud sl security cert-list --status valid --sortby days_until_expire
 ```
 This command lists all valid certificates on current account and sort them by validity days.
 
-### ibmcloud sl security cert-remove
+## ibmcloud sl security cert-remove
 {: #sl_security_cert_remove}
 
 Remove SSL certificate.

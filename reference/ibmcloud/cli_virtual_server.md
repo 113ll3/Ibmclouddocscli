@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -52,7 +52,7 @@ lastupdated: "2018-08-20"
    </tbody>
  </table>
 
- ### ibmcloud sl vs cancel
+ ## ibmcloud sl vs cancel
 {: #sl_vs_cancel}
 
 Cancel virtual server instance.
@@ -72,7 +72,7 @@ ibmcloud sl vs cancel 12345678
 ```
 This command cancels virtual server instance with ID of 12345678.
 
-### ibmcloud sl vs capture
+## ibmcloud sl vs capture
 {: #sl_vs_capture}
 
 Capture virtual server instance into an image.
@@ -96,7 +96,7 @@ ibmcloud sl vs capture 12345678 -n mycloud --all --note testing
 ```
 This command captures virtual server instance with ID of 12345678 with all disks into an image named "mycloud" with note "testing".
 
-### ibmcloud sl vs create
+## ibmcloud sl vs create
 {: #sl_vs_create}
 
 Create virtual server instance.
@@ -174,7 +174,7 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ```
 This command orders a virtual server instance with hostname is myvsi, domain is ibm.com, 4 cpu cores, 4096M memory, located at datacenter: dal10,
 
-### ibmcloud sl vs options
+## ibmcloud sl vs options
 {: #sl_vs_options}
 
 List options for creating virtual server instance.
@@ -189,7 +189,7 @@ ibmcloud sl vs options
 ```
 This command lists all the options for creating a virtual server instance, eg.datacenters, cpu, memory, os, disk, network speed, etc.
 
-### ibmcloud sl vs credentials
+## ibmcloud sl vs credentials
 {: #sl_vs_credentials}
 
 List virtual server instance credentials.
@@ -204,7 +204,7 @@ ibmcloud sl vs credentials 12345678
 ```
 This command lists all username and password pairs of virtual server instance with ID 12345678.
 
-### ibmcloud sl vs detail
+## ibmcloud sl vs detail
 {: #sl_vs_detail}
 
 Get details for a virtual server instance.
@@ -226,7 +226,7 @@ ibmcloud sl vs details 12345678
 ```
 This command lists detailed information about virtual server instance with ID 12345678.
 
-### ibmcloud sl vs dns-sync
+## ibmcloud sl vs dns-sync
 {: #sl_vs_dns_sync}
 
 Synchronize DNS records for a virtual server instance.
@@ -254,7 +254,7 @@ ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 This command synchronizes A record(IP V4 address) of virtual server instance with ID 12345678 to DNS server and sets ttl of this A record to 3600.
 
-### ibmcloud sl vs edit
+## ibmcloud sl vs edit
 {: #sl_vs_edit}
 
 Edit a virtual server instance's details.
@@ -286,7 +286,7 @@ ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 10
 ```
 This command updates virtual server instance with ID 12345678 and set its domain to be "ibm.com", hostname to "myapp", tag to "testcli",
 
-### ibmcloud sl vs host-create
+## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
 
 Create a host for dedicated virtual servers.
@@ -312,7 +312,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dd>Force operation without confirmation.</dd>
 </dl>
 
-### ibmcloud sl vs host-list
+## ibmcloud sl vs host-list
 {: #sl_vs_host_list}
 
 List dedicated hosts on your account.
@@ -333,7 +333,7 @@ ibmcloud sl vs host-list [OPTIONS]
 <dd>Filter by ID of the order which purchased this dedicated host.</dd>
 </dl>
 
-### ibmcloud sl vs list
+## ibmcloud sl vs list
 {: #sl_vs_list}
 
 List virtual server instances on your account.
@@ -381,7 +381,7 @@ ibmcloud sl vs list --domain ibm.com --hourly --sortby memory
 ```
 This command lists all hourly-billing virtual server instances on current account filtering domain equals to "ibm.com" and sort them by memory.
 
-### ibmcloud sl vs pause
+## ibmcloud sl vs pause
 {: #sl_vs_pause}
 
 Pause an active virtual server instance.
@@ -401,7 +401,7 @@ ibmcloud sl vs pause 12345678 -f
 ```
 This command pauses virtual server instance with ID 12345678 without asking for confirmation.
 
-### ibmcloud sl vs power-off
+## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
 
 Power off an active virtual server instance.
@@ -425,7 +425,7 @@ ibmcloud sl vs power-off 12345678 --soft
 ```
 This command performs a soft power off for virtual server instance with ID 12345678.
 
-### ibmcloud sl vs power-on
+## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
 
 Power on a virtual server instance.
@@ -445,7 +445,7 @@ ibmcloud sl vs power-on 12345678
 ```
 This command performs a power on for virtual server instance with ID 12345678.
 
-### ibmcloud sl vs ready
+## ibmcloud sl vs ready
 {: #sl_vs_ready}
 
 Check if a virtual server instance is ready for use.
@@ -465,7 +465,7 @@ ibmcloud sl vs ready 12345678 --wait 30
 ```
 This command checks virtual server instance with ID 12345678 status to see if it is ready for use continuously and waits up to 30 seconds.
 
-### ibmcloud sl vs reboot
+## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
 
 Reboot an active virtual server instance.
@@ -489,7 +489,7 @@ ibmcloud sl vs reboot 12345678 --hard
 ```
 This command performs a hard reboot for virtual server instance with ID 12345678.
 
-### ibmcloud sl vs reload
+## ibmcloud sl vs reload
 {: #sl_vs_reload}
 
 Reload operating system on a virtual server instance.
@@ -517,7 +517,7 @@ ibmcloud sl vs reload 12345678
 ```
 This command reloads current operating system for virtual server instance with ID 12345678.
 
-### ibmcloud sl vs rescue
+## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
 
 Reboot a virtual server instance into a rescue image.
@@ -537,7 +537,7 @@ ibmcloud sl vs rescue 12345678
 ```
 This command reboots virtual server instance with ID 12345678 into a rescue image.
 
-### ibmcloud sl vs resume
+## ibmcloud sl vs resume
 {: #sl_vs_resume}
 
 Resume a paused virtual server instance.
@@ -557,7 +557,7 @@ ibmcloud sl vs resume 12345678
 ```
 This command resumes virtual server instance with ID 12345678.
 
-### ibmcloud sl vs upgrade
+## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}
 
 Upgrade a virtual server instance.

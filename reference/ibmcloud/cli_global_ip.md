@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -30,7 +30,7 @@ lastupdated: "2018-08-20"
    </tbody>
  </table>
 
- ### ibmcloud sl globalip assign
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 Assign a global IP to a target router or device.
@@ -45,7 +45,7 @@ ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
 This command assigns IP address with ID 12345678 to a target device whose IP address is 9.111.123.456.
 
-### ibmcloud sl globalip cancel
+## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
 
 Cancel a global IP.
@@ -65,7 +65,7 @@ ibmcloud sl globalip cancel 12345678
 ```
 This command cancels IP address with ID 12345678.
 
- ### ibmcloud sl globalip create
+ ## ibmcloud sl globalip create
 {: #sl_globalip_create}
 
 Create a global IP.
@@ -89,7 +89,7 @@ ibmcloud sl globalip create --v6
 ```
 This command creates an IP V6 address.
 
-### ibmcloud sl globalip list
+## ibmcloud sl globalip list
 {: #sl_globalip_list}
 
 List all global IPs on your account.
@@ -113,7 +113,7 @@ ibmcloud sl globalip list --v4
 ```
 This command lists all IP V4 addresses on current account.
 
-### ibmcloud sl globalip unassign
+## ibmcloud sl globalip unassign
 {: #sl_globalip_unassign}
 
 Unassign a global IP from a target router or device.

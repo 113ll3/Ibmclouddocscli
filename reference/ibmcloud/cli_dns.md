@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ lastupdated: "2018-08-20"
    </tbody>
  </table>
 
-### ibmcloud sl dns import
+## ibmcloud sl dns import
 {: #sl_dns_import}
 
 Import a zone based off a BIND zone file.
@@ -56,7 +56,7 @@ ibmcloud sl dns import ~/ibm.com.txt
 ```
 This command imports zone and its resource records from file: ~/ibm.com.txt.
 
-### ibmcloud sl dns record-add
+## ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
 Add resource record in a zone.
@@ -76,7 +76,7 @@ ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
 This command adds an A record to zone: ibm.com, its host is "ftp", data is "127.0.0.1" and ttl is 86400 seconds.
 
-### ibmcloud sl dns record-edit
+## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
 
 Update resource records in a zone.
@@ -102,7 +102,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 This command edits records under zone: ibm.com, whose ID is 12345678, and set its data to "127.0.0.2" and ttl to 3600.
 
-### ibmcloud sl dns record-list
+## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
 List all the resource records in a zone.
@@ -128,7 +128,7 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
 This command lists all A records under zone: ibm.com,filtered by host is elasticsearch and ttl is 900 seconds.
 
-### ibmcloud sl dns record-remove
+## ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
 Remove resource record from a zone.
@@ -143,7 +143,7 @@ ibmcloud sl dns record-remove 12345678
 ```
 This command removes resource record with ID 12345678.
 
-### ibmcloud sl dns zone-create
+## ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
 
 Create a zone.
@@ -158,7 +158,7 @@ ibmcloud sl dns zone-create ibm.com
 ```
 This command creates a zone named ibm.com.
 
-### ibmcloud sl dns zone-delete
+## ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
 
 Delete a zone.
@@ -173,7 +173,7 @@ ibmcloud sl dns zone-delete ibm.com
 ```
 This command deletes a zone named ibm.com.
 
-### ibmcloud sl dns zone-list
+## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
 
 List all zones on your account.
@@ -188,7 +188,7 @@ ibmcloud sl dns zone-list
 ```
 This command lists all zones under current account.
 
-### ibmcloud sl dns zone-print
+## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
 
 Print zone and resource records in BIND format.
