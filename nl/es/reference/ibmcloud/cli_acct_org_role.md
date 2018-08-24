@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -81,6 +81,11 @@ lastupdated: "2018-07-26"
   <td>[ibmcloud iam access-group-policy-create](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_create)</td>
   <td>[ibmcloud iam access-group-policy-update](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_update)</td>
   <td>[ibmcloud iam access-group-policy-delete](cli_acct_org_role.html#ibmcloud_iam_access_group_policy_delete)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
  </tr>
  </tbody>
  </table>
@@ -1098,3 +1103,85 @@ Suprimir la política `51b9717e-76b0-4f6a-bda7-b8132431f926` del grupo de acceso
 ```
 ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
 ```
+
+### ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
+
+Liste la información de certificado de un dominio.
+
+```
+ibmcloud app domain-cert DOMAIN_NAME
+```
+
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
+
+<strong>Opciones de mandato</strong>:
+<dl>
+<dt>DOMAIN_NAME (necesario)</dt>
+<dd>Nombre del dominio que aloja el certificado.</dd>
+</dl>
+
+
+<strong>Ejemplos</strong>:
+
+Ver la información de certificado del dominio `ibmcxo-eventconnect.com`:
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+### ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+Añadir un certificado para el dominio especificado en la organización actual.
+
+```
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+```
+
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
+
+<strong>Opciones de mandato</strong>:
+   <dl>
+   <dt>DOMAIN (necesario)</dt>
+   <dd>Dominio al que se añade el certificado.</dd>
+   <dt>-k <i>PRIVATE_KEY_FILE</i> (necesario)</dt>
+   <dd>Vía de acceso del archivo de claves privado.</dd>
+   <dt>-c <i>CERT_FILE</i> (necesario)</dt>
+   <dd>Vía de acceso del archivo de certificado.</dd>
+   <dt>-p <i>PASSWORD</i> (opcional)</dt>
+   <dd>Contraseña del certificado.</dd>
+   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (opcional)</dt>
+   <dd>Vía de acceso del archivo de certificado intermedio.</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i> (opcional)</dt>
+   <dd>Archivo del almacén de confianza.</dd>
+   </dl>
+
+
+<strong>Ejemplos</strong>:
+
+Añadir un certificado al dominio `ibmcxo-eventconnect.com`:
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+### ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+Eliminar un certificado del dominio especificado en la organización actual.
+
+```
+ibmcloud app domain-cert-remove DOMAIN [-f]
+```
+
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
+
+<strong>Opciones de mandato</strong>:
+
+   <dl>
+   <dt>DOMAIN (necesario)</dt>
+   <dd>Dominio a eliminar del certificado.</dd>
+   <dt>-f  (opcional)</dt>
+   <dd>Forzar la eliminación sin confirmación.</dd>
+   </dl>

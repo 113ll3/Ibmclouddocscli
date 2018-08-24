@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 ---
 
 {:new_window: target="_blank"}
@@ -444,16 +444,8 @@ ibmcloud update [-f]
 ## Mandatos de CLI generales (ibmcloud sl)
 {: #softlayer_cli}
 
-El plugin de {{site.data.keyword.BluSoftlayer}} se ha fusionado en la CLI de {{site.data.keyword.Bluemix_notm}}. Ya no necesita instalar el plugin.
-{: tip}
 
 Utilice los mandatos de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}} en la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} para configurar y gestionar los servicios de SoftLayer.
-
-A partir de mayo de 2018, los mandatos de CLI de {{site.data.keyword.Bluemix_notm}} han cambiado de `bluemix` y `bx` a `ibmcloud`. Sin embargo, todavía puede utilizar los mandatos de CLI `bluemix` y `bx` hasta que se dejen de utilizar en una fecha posterior.
-{: tip}
-
-Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte
-[CLI de IBM Cloud ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window} para obtener más detalles.
 
 Se da soporte a los mandatos siguientes. Utilice el mandato `ibmcloud sl` para ver la lista de mandatos disponibles:
 

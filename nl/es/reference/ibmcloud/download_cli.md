@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-09"
 # Instalación de la CLI de {{site.data.keyword.Bluemix_notm}} autónoma
 {: #install_use}
 
-La CLI de {{site.data.keyword.Bluemix_notm}} proporciona la interfaz de línea de mandatos para gestionar aplicaciones, contenedores, infraestructuras, servicios y otros recursos de {{site.data.keyword.Bluemix_notm}}.
+La CLI de {{site.data.keyword.Bluemix_notm}} proporciona la interfaz de línea de mandatos para gestionar recursos en {{site.data.keyword.Bluemix_notm}}. Puede seguir utilizando la CLI cf para iniciar sesión en {{site.data.keyword.Bluemix_notm}}, pero solo funciona con un servicio de Cloud Foundry en {{site.data.keyword.Bluemix_notm}}.
 
 Si desea instalar tanto la CLI de {{site.data.keyword.Bluemix}} como otros plug-ins y herramientas recomendados para el desarrollo de aplicaciones de {{site.data.keyword.Bluemix_notm}}, siga el método descrito [aquí](/docs/cli/index.html).
 {: tip}
