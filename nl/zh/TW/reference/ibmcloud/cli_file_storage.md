@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 {{site.data.keyword.Bluemix_notm}} 基礎架構檔案儲存空間的指令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構檔案儲存空間
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構檔案儲存空間</caption>
@@ -55,7 +55,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl file access-authorize
+ ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
 授權主機存取給定的磁區。
@@ -83,7 +83,7 @@ ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
 這個指令會授權 ID 為 87654321 的虛擬伺服器存取 ID 為 12345678 的磁區。
 
-### ibmcloud sl file access-list
+## ibmcloud sl file access-list
 {: #sl_file_access_list}
 
 列出 ACL。
@@ -105,7 +105,7 @@ ibmcloud sl file access-list 12345678 --sortby id
 ```
 這個指令會列出獲授權存取 ID 為 12345678 的磁區的所有主機，並依 ID 排序。
 
-### ibmcloud sl file access-revoke
+## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
 
 撤銷主機存取給定磁區的授權。
@@ -133,7 +133,7 @@ ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
 這個指令會撤銷 ID 為 87654321 的虛擬伺服器對 ID 為 12345678 的磁區的存取權。
 
-### ibmcloud sl file replica-failback
+## ibmcloud sl file replica-failback
 {: #sl_file_replica_failback}
 
 從抄本進行檔案磁區失效回復。
@@ -148,7 +148,7 @@ ibmcloud sl file replica-failback 12345678
 ```
 這個指令會針對 ID 為 12345678 的磁區執行失效回復作業。
 
-### ibmcloud sl file replica-failover
+## ibmcloud sl file replica-failover
 {: #sl_file_replica_failover}
 
 將檔案磁區失效接手至給定的抄本磁區。
@@ -163,7 +163,7 @@ ibmcloud sl file replica-failover 12345678 87654321
 ```
 這個指令會執行將 ID 為 12345678 的磁區失效接手至 ID 為 87654321 的抄本磁區的作業。
 
-### ibmcloud sl file replica-locations
+## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
 
 列出給定磁區的適當抄寫資料中心。
@@ -178,7 +178,7 @@ ibmcloud sl file replica-locations 12345678
 ```
 這個指令會列出 ID 為 12345678 的檔案磁區的適當抄寫資料中心。
 
-### ibmcloud sl file replica-order
+## ibmcloud sl file replica-order
 {: #sl_file_replica_order}
 
 訂購檔案儲存空間抄本磁區。
@@ -206,7 +206,7 @@ ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 這個指令會訂購 ID 為 12345678 的磁區的抄本，此抄本會執行 DAILY 抄寫、位於 dal09、層級層次為 4。
 
-### ibmcloud sl file replica-partners
+## ibmcloud sl file replica-partners
 {: #sl_file_replica_partners}
 
 列出檔案磁區的現有抄本磁區。
@@ -221,7 +221,7 @@ ibmcloud sl file replica-partners 12345678
 ```
 這個指令會列出 ID 為 12345678 的檔案磁區的現有抄本磁區。
 
-### ibmcloud sl file snapshot-cancel
+## ibmcloud sl file snapshot-cancel
 {: #sl_file_snapshot_cancel}
 
 取消給定磁區的現有 Snapshot 空間。
@@ -245,7 +245,7 @@ ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 ```
 這個指令會立即取消 ID 為 12345678 的 Snapshot，而不要求確認。
 
-### ibmcloud sl file snapshot-create
+## ibmcloud sl file snapshot-create
 {: #sl_file_snapshot_create}
 
 在給定的磁區上建立 Snapshot。
@@ -265,7 +265,7 @@ ibmcloud sl file snapshot-create 12345678 --note snapshotforibmcloud
 ```
 這個指令會針對 ID 為 12345678 的磁區建立 Snapshot，並新增附註 snapshotforibmcloud。
 
-### ibmcloud sl file snapshot-disable
+## ibmcloud sl file snapshot-disable
 {: #sl_file_snapshot_disable}
 
 依給定磁區的指定排程停用 Snapshot。
@@ -285,7 +285,7 @@ ibmcloud sl file snapshot-disable 12345678 -s DAILY
 ```
 這個指令會針對 ID 為 12345678 的磁區停用每日 Snapshot。
 
-### ibmcloud sl file snapshot-enable
+## ibmcloud sl file snapshot-enable
 {: #sl_file_snapshot_enable}
 
 依指定的排程為給定磁區啟用 Snapshot。
@@ -313,7 +313,7 @@ ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 這個指令會針對 ID 為 12345678 的磁區啟用 Snapshot、在每週的星期日 2:00 擷取 Snapshot，且最多保留 5 個 Snapshot。
 
-### ibmcloud sl file snapshot-delete
+## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
 在給定的磁區上刪除 Snapshot。
@@ -328,7 +328,7 @@ ibmcloud sl file snapshot-delete 12345678
 ```
 這個指令會刪除 ID 為 12345678 的 Snapshot。
 
-### ibmcloud sl file snapshot-list
+## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
 
 列出檔案儲存空間 Snapshot。
@@ -348,7 +348,7 @@ ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
 這個指令會列出 ID 為 12345678 的磁區的所有 Snapshot，並依 ID 排序。
 
-### ibmcloud sl file snapshot-order
+## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
 
 訂購檔案儲存空間磁區的 Snapshot 空間。
@@ -376,7 +376,7 @@ ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 這個指令會針對 ID 為 12345678 的磁區訂購 Snapshot 空間、大小為 1000GB、層級層次為每 GB 4 個 IOPS。
 
-### ibmcloud sl file snapshot-restore
+## ibmcloud sl file snapshot-restore
 {: #sl_file_snapshot_restore}
 
 使用給定的 Snapshot 還原檔案磁區。
@@ -391,7 +391,7 @@ ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 這個指令會從 ID 為 87654321 的 Snapshot 還原 ID 為 12345678 的磁區。
 
-### ibmcloud sl file volume-cancel
+## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
 取消現有的檔案儲存空間磁區。
@@ -415,7 +415,7 @@ ibmcloud sl file volume-cancel 12345678 --immediate -f
 ```
 這個指令會立即取消 ID 為 12345678 的磁區，而不要求確認。
 
-### ibmcloud sl file volume-count
+## ibmcloud sl file volume-count
 {: #sl_file_volume_count}
 
 列出每個資料中心的檔案儲存空間磁區數目。
@@ -429,7 +429,7 @@ ibmcloud sl file volume-count [OPTIONS]
 <dd>依資料中心簡稱過濾。</dd>
 </dl>
 
-### ibmcloud sl file volume-list
+## ibmcloud sl file volume-list
 {: #sl_file_volume_list}
 
 列出檔案儲存空間。
@@ -459,7 +459,7 @@ ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 這個指令會列出現行帳戶中位於 dal09 的所有耐久性磁區，並依容量排序。
 
-### ibmcloud sl file volume-detail
+## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
 
 顯示指定磁區的詳細資料。
@@ -474,7 +474,7 @@ ibmcloud sl file volume-detail 12345678
 ```
 這個指令會顯示 ID 為 12345678 的磁區的詳細資料。
 
-### ibmcloud sl file volume-duplicate
+## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
 
 複製現有磁區，以訂購檔案磁區。
@@ -504,7 +504,7 @@ ibmcloud sl file volume-duplicate 12345678
 ```
 這個指令會顯示如何複製 ID 為 12345678 的磁區來訂購新磁區。
 
-### ibmcloud sl file volume-order
+## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
 
 訂購檔案儲存空間磁區。
@@ -536,7 +536,7 @@ ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000
 ```
 這個指令會訂購效能磁區：大小為 1000GB、IOPS 為 4000、位於 dal09。
 
-### ibmcloud sl file volume-options
+## ibmcloud sl file volume-options
 {: #sl_file_volume_options}
 
 列出用來訂購檔案儲存空間的所有選項。

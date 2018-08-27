@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Befehle zur Verwaltung der Hardware der {{site.data.keyword.Bluemix_notm}}-Infrastruktur
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Hardware verwalten
 
 <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 1. Hardwarebefehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</caption>
@@ -44,7 +44,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl hardware cancel
+ ## ibmcloud sl hardware cancel
 {: #sl_hardware_cancel}
 
 Einen Server abbrechen.
@@ -64,7 +64,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl hardware cancel-reasons
+## ibmcloud sl hardware cancel-reasons
 {: #sl_hardware_cancel_reasons}
 
 Zeigt eine Liste mit Gründen für den Abbruch an.
@@ -72,7 +72,7 @@ Zeigt eine Liste mit Gründen für den Abbruch an.
 ibmcloud sl hardware cancel-reasons
 ```
 
-### ibmcloud sl hardware create
+## ibmcloud sl hardware create
 {: #sl_hardware_create}
 
 Einen Server bestellen/erstellen
@@ -114,7 +114,7 @@ ibmcloud sl hardware create [OPTIONS]
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl hardware create-options
+## ibmcloud sl hardware create-options
 {: #sl_hardware_create_options}
 
 Serverbestelloptionen für ein bestimmtes Chassis
@@ -122,7 +122,7 @@ Serverbestelloptionen für ein bestimmtes Chassis
 ibmcloud sl hardware create-options
 ```
 
-### ibmcloud sl hardware credentials
+## ibmcloud sl hardware credentials
 {: #sl_hardware_credentials}
 
 Berechtigungsnachweise für Hardware-Server auflisten
@@ -130,7 +130,7 @@ Berechtigungsnachweise für Hardware-Server auflisten
 ibmcloud sl hardware credentials IDENTIFIER
 ```
 
-### ibmcloud sl hardware detail
+## ibmcloud sl hardware detail
 {: #sl_hardware_detail}
 
 Details zu einem Hardware-Server abrufen
@@ -146,7 +146,7 @@ ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 <dd>Zugeordnete Preise anzeigen.</dd>
 </dl>
 
-### ibmcloud sl hardware edit
+## ibmcloud sl hardware edit
 {: #sl_hardware_edit}
 
 Hardware-Server-Details bearbeiten
@@ -172,7 +172,7 @@ ibmcloud sl hardware edit IDENTIFIER [OPTIONS]
 <dd>Übertragungsgeschwindigkeit des privaten Ports; Optionen: 0,10,100,1000,10000.</dd>
 </dl>
 
-### ibmcloud sl hardware list
+## ibmcloud sl hardware list
 {: #sl_hardware_list}
 
 Server auflisten
@@ -210,7 +210,7 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>Spalten, die standardmäßig angezeigt werden sollen: id,hostname,domain,public_ip,private_ip,datacenter,status, Optionen: guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
 </dl>
 
-### ibmcloud sl hardware power-cycle
+## ibmcloud sl hardware power-cycle
 {: #sl_hardware_power_cycle}
 
 Server aus- und wieder einschalten.
@@ -224,7 +224,7 @@ ibmcloud sl hardware power-cycle IDENTIFIER
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl hardware power-off
+## ibmcloud sl hardware power-off
 {: #sl_hardware_power_off}
 
 Aktiven Server ausschalten.
@@ -238,7 +238,7 @@ ibmcloud sl hardware power-off IDENTIFIER
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl hardware power-on
+## ibmcloud sl hardware power-on
 {: #sl_hardware_power_on}
 
 Server einschalten.
@@ -246,7 +246,7 @@ Server einschalten.
 ibmcloud sl hardware power-on IDENTIFIER
 ```
 
-### ibmcloud sl hardware reboot
+## ibmcloud sl hardware reboot
 {: #sl_hardware_reboot}
 
 Warmstart für aktiven Server durchführen.
@@ -264,7 +264,7 @@ ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl hardware reload
+## ibmcloud sl hardware reload
 {: #sl_hardware_reload}
 
 Betriebssystem auf einen Server neu laden.
@@ -286,7 +286,7 @@ ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl hardware rescue
+## ibmcloud sl hardware rescue
 {: #sl_hardware_rescue}
 
 Warmstart für Server in ein Wiederherstellungsimage durchführen
@@ -300,7 +300,7 @@ ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl hardware update-firmware
+## ibmcloud sl hardware update-firmware
 {: #sl_hardware_update_firmware}
 
 Server-Firmware aktualisieren.

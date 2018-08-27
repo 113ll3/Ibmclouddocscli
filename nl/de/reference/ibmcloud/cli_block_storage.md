@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Befehle zur Verwaltung von Blockspeicher der {{site.data.keyword.Bluemix_notm}}-Infrastruktur
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Blockspeicher verwalten
 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 1. Blockspeicher der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</caption>
@@ -57,7 +57,7 @@ lastupdated: "2018-07-31"
 </tbody>
 </table>
 
-### ibmcloud sl block access-authorize
+## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
 Hosts für den Zugriff auf einen bestimmten Datenträger autorisieren.
@@ -83,7 +83,7 @@ ibmcloud sl block access-authorize 12345678 --virtual-id 87654321
 ```
 Dieser Befehl autorisiert den virtuellen Server mit der ID 87654321 für den Zugriff auf den Datenträger mit der ID 12345678.
 
-### ibmcloud sl block access-list
+## ibmcloud sl block access-list
 {: #sl_block_access_list}
 
 Listet ACLs auf.
@@ -105,7 +105,7 @@ ibmcloud sl block access-list 12345678 --sortby id
 ```
 Dieser Befehl listet alle Hosts auf, die für den Zugriff auf den Datenträger mit der ID 12345678 autorisiert sind, und sortiert diese nach ID.
 
-### ibmcloud sl block access-password
+## ibmcloud sl block access-password
 {: #sl_block_access_password}
 
 Ändert ein Kennwort für den Datenträgerzugriff.
@@ -113,7 +113,7 @@ Dieser Befehl listet alle Hosts auf, die für den Zugriff auf den Datenträger m
 ibmcloud sl block access-password ACCESS_ID PASSWORD
 ```
 
-### ibmcloud sl block access-revoke
+## ibmcloud sl block access-revoke
 {: #sl_block_access_revoke}
 
 Autorisierung für Hosts widerrufen, die auf einen bestimmten Datenträger zugreifen.
@@ -139,7 +139,7 @@ ibmcloud sl block access-revoke 12345678 --virtual-id 87654321
 ```
 Dieser Befehl widerruft den Zugriff des virtuellen Servers mit der ID 87654321 auf den Datenträger mit der ID 12345678.
 
-### ibmcloud sl block replica-failback
+## ibmcloud sl block replica-failback
 {: #sl_block_replica_failback}
 
 Failback eines Blockdatenträgers von einem Replikat.
@@ -154,7 +154,7 @@ ibmcloud sl block replica-failback 12345678
 ```
 Dieser Befehl führt eine Failback-Operation für den Datenträger mit der ID 12345678 aus.
 
-### ibmcloud sl block replica-failover
+## ibmcloud sl block replica-failover
 {: #sl_block_replica_failover}
 
 Failover eines Blockdatenträgers auf den angegebenen Replikatdatenträger.
@@ -169,7 +169,7 @@ ibmcloud sl block replica-failover 12345678 87654321
 ```
 Dieser Befehl führt eine Failover-Operation für den Datenträger mit der ID 12345678 auf den Replikatdatenträger mit der ID 87654321 aus.
 
-### ibmcloud sl block replica-locations
+## ibmcloud sl block replica-locations
 {: #sl_block_replica_locations}
 
 Geeignete Replikationsrechenzentren für den angegebenen Datenträger auflisten.
@@ -184,7 +184,7 @@ ibmcloud sl block replica-locations 12345678
 ```
 Dieser Befehl listet passende Replikationsrechenzentren für den Blockdatenträger mit der ID 12345678 auf.
 
-### ibmcloud sl block replica-order
+## ibmcloud sl block replica-order
 {: #sl_block_replica_order}
 
 Blockspeicher-Replikatdatenträger bestellen.
@@ -214,7 +214,7 @@ ibmcloud sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LI
 ```
 Dieser Befehl bestellt ein Replikat für den Datenträger mit der ID 12345678, der eine DAILY-Replikation durchführt, mit dem Ort 'dal09', der Tierebene 4 und dem Betriebssystemtyp Linux.
 
-### ibmcloud sl block replica-partners
+## ibmcloud sl block replica-partners
 {: #sl_block_replica_partners}
 
 Vorhandene Replicant-Datenträger für Blockdatenträger auflisten.
@@ -229,7 +229,7 @@ ibmcloud sl block replica-partners 12345678
 ```
 Dieser Befehl listet vorhandene Replicant-Datenträger für den Blockdatenträger mit der ID 12345678 auf.
 
-### ibmcloud sl block snapshot-cancel
+## ibmcloud sl block snapshot-cancel
 {: #sl_block_snapshot_cancel}
 
 Vorhandenen Snapshotbereich für einen bestimmten Datenträger abbrechen.
@@ -253,7 +253,7 @@ ibmcloud sl block snapshot-cancel 12345678 --immediate -f
 ```
 Dieser Befehl bricht den Snapshot mit der ID 12345678 sofort ab, ohne zu einer Bestätigung aufzufordern.
 
-### ibmcloud sl block snapshot-create
+## ibmcloud sl block snapshot-create
 {: #sl_block_snapshot_create}
 
 Snapshot für einen bestimmten Datenträger erstellen.
@@ -273,7 +273,7 @@ ibmcloud sl block snapshot-create 12345678 --note snapshotforibmcloud
 ```
 Dieser Befehl erstellt einen Snapshot für den Datenträger mit der ID 12345678 und mit Zusatzanmerkung snapshotforibmcloud.
 
-### ibmcloud sl block snapshot-disable
+## ibmcloud sl block snapshot-disable
 {: #sl_block_snapshot_disable}
 
 Snapshots für den angegebenen Zeitplan für einen bestimmten Datenträger inaktivieren.
@@ -293,7 +293,7 @@ ibmcloud sl block snapshot-disable 12345678 -s DAILY
 ```
 Dieser Befehl inaktiviert den täglichen Snapshot für den Datenträger mit der ID 12345678.
 
-### ibmcloud sl block snapshot-enable
+## ibmcloud sl block snapshot-enable
 {: #sl_block_snapshot_enable}
 
 Snapshots für einen bestimmten Datenträger gemäß angegebenem Zeitplan aktivieren.
@@ -321,7 +321,7 @@ ibmcloud sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Dieser Befehl aktiviert den Snapshot für den Datenträger mit der ID 12345678; der Snapshot wird wöchentlich jeden Sonntag um 2:00 ausgeführt und bis zu 5 Snapshots werden beibehalten.
 
-### ibmcloud sl block snapshot-delete
+## ibmcloud sl block snapshot-delete
 {: #sl_block_snapshot_delete}
 
 Snapshot für einen bestimmten Datenträger löschen.
@@ -336,7 +336,7 @@ ibmcloud sl block snapshot-delete 12345678
 ```
 Dieser Befehl löscht den Snapshot mit der ID 12345678.
 
-### ibmcloud sl block snapshot-list
+## ibmcloud sl block snapshot-list
 {: #sl_block_snapshot_list}
 
 Blockspeichersnapshots auflisten.
@@ -356,7 +356,7 @@ ibmcloud sl block snapshot-list 12345678 --sortby id
 ```
 Dieser Befehl listet alle Snapshots des Datenträgers mit der ID 12345678 auf und sortiert diese nach ID.
 
-### ibmcloud sl block snapshot-order
+## ibmcloud sl block snapshot-order
 {: #sl_block_snapshot_order}
 
 Snapshotbereich für einen Blockspeicherdatenträger bestellen.
@@ -384,7 +384,7 @@ ibmcloud sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 Dieser Befehl bestellt Snapshotbereich für den Datenträger mit der ID 12345678, Größe 1000 GB, Tierebene 4 E/A-Operationen pro Sekunde pro GB.
 
-### ibmcloud sl block snapshot-restore
+## ibmcloud sl block snapshot-restore
 {: #sl_block_snapshot_restore}
 
 Blockdatenträger mithilfe eines bestimmten Snapshots wiederherstellen.
@@ -399,7 +399,7 @@ ibmcloud sl block snapshot-restore 12345678 87654321
 ```
 Dieser Befehl stellt den Datenträger mit der ID 12345678 aus dem Snapshot mit der ID 87654321 wieder her.
 
-### ibmcloud sl block volume-cancel
+## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
 Abbruch für vorhandenen Blockspeicherdatenträger.
@@ -423,7 +423,7 @@ ibmcloud sl block volume-cancel 12345678 --immediate -f
 ```
 Dieser Befehl bricht den Datenträger mit der ID 12345678 sofort ab, ohne zu einer Bestätigung aufzufordern.
 
-### ibmcloud sl block volume-count
+## ibmcloud sl block volume-count
 {: #sl_block_volume_count}
 
 Anzahl der Blockspeicherdatenträger pro Rechenzentrum auflisten.
@@ -437,7 +437,7 @@ ibmcloud sl block volume-count [OPTIONS]
 <dd>Nach Kurzname des Rechenzentrums filtern.</dd>
 </dl>
 
-### ibmcloud sl block volume-list
+## ibmcloud sl block volume-list
 {: #sl_block_volume_list}
 
 Blockspeicher auflisten.
@@ -467,7 +467,7 @@ ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Dieser Befehl listet alle Endurance-Datenträger für das aktuelle Konto mit dem Ort 'dal09' auf und sortiert sie nach Kapazität.
 
-### ibmcloud sl block volume-set-lun-id
+## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}
 
 LUN-ID für einen vorhandenen Blockspeicherdatenträger festlegen.
@@ -475,7 +475,7 @@ LUN-ID für einen vorhandenen Blockspeicherdatenträger festlegen.
 ibmcloud sl block volume-set-lun-id VOLUME_ID LUN_ID
 ```
 
-### ibmcloud sl block volume-detail
+## ibmcloud sl block volume-detail
 {: #sl_block_volume_detail}
 
 Details zu einem angegebenen Datenträger anzeigen.
@@ -490,7 +490,7 @@ ibmcloud sl block volume-detail 12345678
 ```
 Dieser Befehl führt Details zu dem Datenträger mit der ID 12345678 auf.
 
-### ibmcloud sl block volume-duplicate
+## ibmcloud sl block volume-duplicate
 {: #sl_block_volume_duplicate}
 
 Blockdatenträger durch Duplizieren eines vorhandenen Datenträgers bestellen.
@@ -520,7 +520,7 @@ ibmcloud sl block volume-duplicate 12345678
 ```
 Dieser Befehl zeigt die Bestellung eines neuen Datenträgers durch Duplizierung des Datenträgers mit der ID 12345678 an.
 
-### ibmcloud sl block volume-order
+## ibmcloud sl block volume-order
 {: #sl_block_volume_order}
 
 Blockspeicherdatenträger bestellen.
@@ -554,7 +554,7 @@ ibmcloud sl block volume-order --storage-type performance --size 1000 --iops 400
 ```
 Dieser Befehl bestellt einen Leistungsdatenträger mit Größe 1000 GB, 4000 E/A-Operationen pro Sekunde, Betriebssystem LINUX, Ort 'dal09'.
 
-### ibmcloud sl block volume-options
+## ibmcloud sl block volume-options
 {: #sl_block_volume_options}
 
 Alle Optionen für die Anforderung eines Blockspeichers auflisten.

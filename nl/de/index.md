@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -42,7 +42,7 @@ Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bl
 * Wenn Sie mit Microsoft Windows&trade; arbeiten, müssen Sie Windows 10 Pro oder höher verwenden.
 * Sie müssen den stabilen Kanal für Docker mit Version 1.13.1 oder höher verwenden. 
 
-## Schritt 1: Installationsbefehl ausführen
+## Schritt 1. Installationsbefehl ausführen
 {: #step1}
 
 * Führen Sie unter Mac und Linux den folgenden Befehl aus:
@@ -64,7 +64,7 @@ Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bl
   
   Anweisungen zur manuellen Installation dieser Tools finden Sie in [Tools erneut installieren](/docs/cli/ts_createapps.html#appendix).
 
-## Schritt 2: Installation verifizieren
+## Schritt 2. Installation verifizieren
 {: #step2}
 
 Führen Sie den Befehl `help` aus, um zu überprüfen, dass die CLI und die Entwicklertools erfolgreich installiert wurden:
@@ -76,7 +76,7 @@ ibmcloud dev help
 <br>
 Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unterstützten Befehle auf.
 
-## Schritt 3: Ihre Umgebung konfigurieren
+## Schritt 3. Umgebung konfigurieren
 {: #step3}
 
 1. Stellen Sie eine Verbindung zu einem API-Endpunkt in Ihrer {{site.data.keyword.Bluemix_notm}}-Region her. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung mit der {{site.data.keyword.Bluemix_notm}}-Region 'Vereinigte Staaten (Süden)' herzustellen:
@@ -111,7 +111,7 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 	```
 	{: codeblock}
 	
-Probleme und Feedback können Sie im [Slack-Kanal für Entwicklertools (#developer-tools) von IBM Cloud Tech](https://ibm-cloud-tech.slack.com) posten - Teamzugriff [hier](https://slack-invite-ibm-cloud-tech.mybluemix.net/) anfordern.
+Probleme und Feedback können Sie im [Slack-Kanal für Entwicklertools (#developer-tools) von IBM Cloud Tech](https://ibm-cloud-tech.slack.com) posten. Teamzugriff unter [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") anfordern.
 
 ## Nächste Schritte
 {: #next-steps}

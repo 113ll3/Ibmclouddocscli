@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Befehle zur Verwaltung von Teilnetzen der {{site.data.keyword.Bluemix_notm}}-Infrastruktur
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Teilnetze verwalten
 
 <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 1. Teilnetzbefehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl subnet cancel
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 Abbruch für Teilnetz.
@@ -50,7 +50,7 @@ ibmcloud sl subnet cancel 12345678 -f
 ```
 Dieser Befehl bricht das Teilnetz mit der ID 12345678 ab, ohne zu einer Bestätigung aufzufordern
 
-### ibmcloud sl subnet create
+## ibmcloud sl subnet create
 {: #sl_subnet_create}
 
 Neues Teilnetz zu eigenem Konto hinzufügen.
@@ -74,7 +74,7 @@ ibmcloud sl subnet create public 16 567
 ```
 Dieser Befehl erstellt ein öffentliches Teilnetz mit 16 IPv4-Adressen und ordnet es im VLAN mit der ID 567 an.
 
-### ibmcloud sl subnet detail
+## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
 
 Details zu einem Teilnetz abrufen.
@@ -96,7 +96,7 @@ ibmcloud sl subnet detail 12345678
 ```
 Dieser Befehl zeigt Detailinformationen zum Teilnetz mit der ID 12345678 an, einschließlich Informationen zu virtuellen Servern und Hardware-Servern.
 
-### ibmcloud sl subnet list
+## ibmcloud sl subnet list
 {: #sl_subnet_list}
 
 Alle Teilnetze für eigenes Konto auflisten.
@@ -130,7 +130,7 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 Dieser Befehl listet IPv4-Teilnetze für das aktuelle Konto auf, gefiltert nach Rechenzentrum; Ort 'dal09', Teilnetztyp PRIMARY und Netzbereich PUBLIC.
 
-### ibmcloud sl subnet lookup
+## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
 
 IP-Adresse suchen und ihr Teilnetz sowie Gerätedaten anzeigen.

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 {{site.data.keyword.Bluemix_notm}} 基礎架構廣域 IP 的指令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構廣域 IP
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構廣域 IP 指令</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl globalip assign
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 將廣域 IP 指派給目標路由器或裝置。
@@ -46,7 +46,7 @@ ibmcloud sl globalip assign 12345678 9.111.123.456
 這個指令會將 ID 為 12345678 的 IP 位址指派給 IP 位址為 9.111.123.456 的目標裝置。
 
 
-### ibmcloud sl globalip cancel
+## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
 
 取消廣域 IP。
@@ -66,7 +66,7 @@ ibmcloud sl globalip cancel 12345678
 ```
 這個指令會取消 ID 為 12345678 的 IP 位址。
 
- ### ibmcloud sl globalip create
+ ## ibmcloud sl globalip create
 {: #sl_globalip_create}
 
 建立廣域 IP。
@@ -90,7 +90,7 @@ ibmcloud sl globalip create --v6
 ```
 這個指令會建立 IP V6 位址。
 
-### ibmcloud sl globalip list
+## ibmcloud sl globalip list
 {: #sl_globalip_list}
 
 列出您帳戶上的所有廣域 IP。
@@ -114,7 +114,7 @@ ibmcloud sl globalip list --v4
 ```
 這個指令會列出現行帳戶上的所有 IPV4 位址。
 
-### ibmcloud sl globalip unassign
+## ibmcloud sl globalip unassign
 {: #sl_globalip_unassign}
 
 取消指派目標路由器或裝置中的廣域 IP。

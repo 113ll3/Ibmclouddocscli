@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 {{site.data.keyword.Bluemix_notm}} 基礎架構硬體的指令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構硬體
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構 hardware 指令</caption>
@@ -46,7 +46,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl hardware cancel
+ ## ibmcloud sl hardware cancel
 {: #sl_hardware_cancel}
 
 取消硬體伺服器。
@@ -66,7 +66,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl hardware cancel-reasons
+## ibmcloud sl hardware cancel-reasons
 {: #sl_hardware_cancel_reasons}
 
 顯示取消原因清單。
@@ -74,7 +74,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 ibmcloud sl hardware cancel-reasons
 ```
 
-### ibmcloud sl hardware create
+## ibmcloud sl hardware create
 {: #sl_hardware_create}
 
 訂購/建立硬體伺服器。
@@ -116,7 +116,7 @@ ibmcloud sl hardware create [OPTIONS]
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl hardware create-options
+## ibmcloud sl hardware create-options
 {: #sl_hardware_create_options}
 
 給定機箱的伺服器訂單選項。
@@ -124,7 +124,7 @@ ibmcloud sl hardware create [OPTIONS]
 ibmcloud sl hardware create-options
 ```
 
-### ibmcloud sl hardware credentials
+## ibmcloud sl hardware credentials
 {: #sl_hardware_credentials}
 
 列出硬體伺服器認證。
@@ -132,7 +132,7 @@ ibmcloud sl hardware create-options
 ibmcloud sl hardware credentials IDENTIFIER
 ```
 
-### ibmcloud sl hardware detail
+## ibmcloud sl hardware detail
 {: #sl_hardware_detail}
 
 取得硬體伺服器的詳細資料。
@@ -148,7 +148,7 @@ ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 <dd>顯示關聯的價格。</dd>
 </dl>
 
-### ibmcloud sl hardware edit
+## ibmcloud sl hardware edit
 {: #sl_hardware_edit}
 
 編輯硬體伺服器詳細資料。
@@ -174,7 +174,7 @@ ibmcloud sl hardware edit IDENTIFIER [OPTIONS]
 <dd>專用埠速度，選項包含：0、10、100、1000、10000。</dd>
 </dl>
 
-### ibmcloud sl hardware list
+## ibmcloud sl hardware list
 {: #sl_hardware_list}
 
 列出硬體伺服器。
@@ -212,7 +212,7 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>要顯示的直欄，預設值為：id、hostname、domain、public_ip、private_ip、datacenter、status，選項包含：guid、cpu、memory、os、ipmi_ip、created、created_by、tags。</dd>
 </dl>
 
-### ibmcloud sl hardware power-cycle
+## ibmcloud sl hardware power-cycle
 {: #sl_hardware_power_cycle}
 
 將伺服器電源關閉後重開。
@@ -226,7 +226,7 @@ ibmcloud sl hardware power-cycle IDENTIFIER
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl hardware power-off
+## ibmcloud sl hardware power-off
 {: #sl_hardware_power_off}
 
 關閉作用中伺服器的電源。
@@ -240,7 +240,7 @@ ibmcloud sl hardware power-off IDENTIFIER
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl hardware power-on
+## ibmcloud sl hardware power-on
 {: #sl_hardware_power_on}
 
 開啟伺服器的電源。
@@ -248,7 +248,7 @@ ibmcloud sl hardware power-off IDENTIFIER
 ibmcloud sl hardware power-on IDENTIFIER
 ```
 
-### ibmcloud sl hardware reboot
+## ibmcloud sl hardware reboot
 {: #sl_hardware_reboot}
 
 將作用中伺服器重新開機。
@@ -266,7 +266,7 @@ ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl hardware reload
+## ibmcloud sl hardware reload
 {: #sl_hardware_reload}
 
 在伺服器上重新載入作業系統。
@@ -288,7 +288,7 @@ ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl hardware rescue
+## ibmcloud sl hardware rescue
 {: #sl_hardware_rescue}
 
 將伺服器重新開機至救援映像檔。
@@ -302,7 +302,7 @@ ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl hardware update-firmware
+## ibmcloud sl hardware update-firmware
 {: #sl_hardware_update_firmware}
 
 更新伺服器韌體。

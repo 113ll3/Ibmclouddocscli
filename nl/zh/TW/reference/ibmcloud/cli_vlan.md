@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 VLAN 的指令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 VLAN
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構 VLAN 指令</caption>
@@ -32,7 +32,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl vlan create
+ ## ibmcloud sl vlan create
 {: #sl_vlan_create}
 
 建立新的 VLAN。
@@ -63,7 +63,7 @@ ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
 這個指令會建立一個公用 VLAN：位於資料中心 dal09、包含 16 個 IP 位址，且名稱為 myvlan。
 
 
-### ibmcloud sl vlan cancel
+## ibmcloud sl vlan cancel
 {: #sl_vlan_cancel}
 
 取消 VLAN。
@@ -83,7 +83,7 @@ ibmcloud sl vlan cancel 12345678 -f
 ```
 這個指令會取消 ID 為 12345678 的 VLAN，而不要求確認。
 
-### ibmcloud sl vlan detail
+## ibmcloud sl vlan detail
 {: #sl_vlan_detail}
 
 取得 VLAN 的詳細資料。
@@ -106,7 +106,7 @@ ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 這個指令會顯示 ID 為 12345678 的 VLAN 詳細資料，而不會列出虛擬伺服器或硬體伺服器。
 
 
-### ibmcloud sl vlan edit
+## ibmcloud sl vlan edit
 {: #sl_vlan_edit}
 
 編輯 VLAN 的詳細資料。
@@ -127,7 +127,7 @@ ibmcloud sl vlan edit 12345678 -n myvlan-rename
 這個指令會更新 ID 為 12345678 的 VLAN，並為其指定新名稱 "myvlan-rename"。
 
 
-### ibmcloud sl vlan list
+## ibmcloud sl vlan list
 {: #sl_vlan_list}
 
 列出您帳戶上的所有 VLAN。
@@ -156,7 +156,7 @@ ibmcloud sl vlan list -d dal09 --sortby number
 這個指令會列出現行帳戶上的所有 VLAN，用來過濾的資料中心為 dal09，並依 VLAN 號碼排序。
 
 
-### ibmcloud sl vlan options
+## ibmcloud sl vlan options
 {: #sl_vlan_options}
 
 列出用來建立 VLAN 的所有選項。

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 API 金鑰及原則的指令
+# 管理 API 金鑰、身分及存取
 {: #ibmcloud_commands_iam}
 
 <table summary="您可以用來管理 API 金鑰及原則的 ibmcloud 指令。">
@@ -51,11 +51,11 @@ lastupdated: "2018-07-26"
    <td>[ibmcloud iam service-api-key-unlock](cli_api_policy.html#ibmcloud_iam_service_api_key_unlock)</td>
   </tr>
   <tr>
-    <td>[ibmcloud iam service-policies](cli_api_policy.html#ibmcloud_iam_service_policies)</td>
-    <td>[ibmcloud iam service-policy](cli_api_policy.html#ibmcloud_iam_service_policy)</td>
-    <td>[ibmcloud iam service-policy-create](cli_api_policy.html#ibmcloud_iam_service_policy_create)</td>
-    <td>[ibmcloud iam service-policy-update](cli_api_policy.html#ibmcloud_iam_service_policy_update)</td>
-    <td>[ibmcloud iam service-policy-delete](cli_api_policy.html#ibmcloud_iam_service_policy_delete)</td>
+   <td>[ibmcloud iam service-policies](cli_api_policy.html#ibmcloud_iam_service_policies)</td>
+   <td>[ibmcloud iam service-policy](cli_api_policy.html#ibmcloud_iam_service_policy)</td>
+   <td>[ibmcloud iam service-policy-create](cli_api_policy.html#ibmcloud_iam_service_policy_create)</td>
+   <td>[ibmcloud iam service-policy-update](cli_api_policy.html#ibmcloud_iam_service_policy_update)</td>
+   <td>[ibmcloud iam service-policy-delete](cli_api_policy.html#ibmcloud_iam_service_policy_delete)</td>
   </tr>
   <tr>
    <td>[ibmcloud iam user-policies](cli_api_policy.html#ibmcloud_iam_user_policies)</td>
@@ -65,21 +65,45 @@ lastupdated: "2018-07-26"
    <td>[ibmcloud iam user-policy-delete](cli_api_policy.html#ibmcloud_iam_user_policy_delete)</td>
   </tr>
   <tr>
-     <td>[ibmcloud iam oauth-tokens
+   <td>[ibmcloud iam oauth-tokens
 ](cli_api_policy.html#ibmcloud_iam_oauth_tokens)</td>
-     <td>[ibmcloud iam dedicated-id-disconnect](cli_api_policy.html#ibmcloud_iam_dedicated_id_disconnect)</td>
-     <td>[ibmcloud iam authorization-policy-create](cli_api_policy.html#ibmcloud_iam_authorization_policy_create)</td>
-     <td>[ibmcloud iam authorization-policy-delete](cli_api_policy.html#ibmcloud_iam_authorization_policy_delete)</td>
-     <td>[ibmcloud iam authorization-policy](cli_api_policy.html#ibmcloud_iam_authorization_policy)</td>
+   <td>[ibmcloud iam dedicated-id-disconnect](cli_api_policy.html#ibmcloud_iam_dedicated_id_disconnect)</td>
+   <td>[ibmcloud iam authorization-policy-create](cli_api_policy.html#ibmcloud_iam_authorization_policy_create)</td>
+   <td>[ibmcloud iam authorization-policy-delete](cli_api_policy.html#ibmcloud_iam_authorization_policy_delete)</td>
+   <td>[ibmcloud iam authorization-policy](cli_api_policy.html#ibmcloud_iam_authorization_policy)</td>
   </tr>
   <tr>
-     <td>[ibmcloud iam authorization-policies
+   <td>[ibmcloud iam authorization-policies
 ](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
+   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access-groups)</td>
+   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access-group)</td>
+   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access-group-create)</td>
+   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access-group-update)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access-group-delete)</td>
+   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access-group-users)</td>
+   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access-group-user-add)</td>
+   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access-group-user-remove)</td>
+   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access-group-user-purge)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access-group-service-ids)</td>
+   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access-group-service-id-add)</td>
+   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access-group-service-id-remove)</td>
+   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access-group-service-id-purge)</td>
+   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access-group-policies)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access-group-policy)</td>
+   <td>[ibmcloud iam access-group-policy-create](cli_api_policy.html#ibmcloud_iam_access_group_policy_create)</td>
+   <td>[ibmcloud iam access-group-policy-update](cli_api_policy.html#ibmcloud_iam_access_group_policy_update)</td>
+   <td>[ibmcloud iam access-group-policy-delete](cli_api_policy.html#ibmcloud_iam_access_group_policy_delete)</td>
   </tr>
   </tbody>
   </table>
 
-  ### ibmcloud iam service-ids
+  ## ibmcloud iam service-ids
 {: #ibmcloud_iam_service_ids}
 
 列出所有服務 ID
@@ -102,7 +126,7 @@ ibmcloud iam service-ids [--uuid]
 ibmcloud iam service-ids --uuid
 ```
 
-### ibmcloud iam service-id
+## ibmcloud iam service-id
 {: #ibmcloud_iam_service_id}
 
 顯示服務 ID 的詳細資料
@@ -136,7 +160,7 @@ ibmcloud iam service-id sample-test
 ibmcloud iam service-id ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
-### ibmcloud iam service-id-create
+## ibmcloud iam service-id-create
 {: #ibmcloud_iam_service_id_create}
 
 建立服務 ID
@@ -172,7 +196,7 @@ ibmcloud iam service-id-create sample-test -d 'hello, world!'
 --lock
 ```
 
-### ibmcloud iam service-id-update
+## ibmcloud iam service-id-update
 
 {: #ibmcloud_iam_service_id_update}
 更新服務 ID
@@ -217,7 +241,7 @@ ibmcloud iam service-id-update sample-test -d 'hello, friend!'
 ibmcloud iam service-id-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 -n sample-test-3 -d 'hello, my friends!'
 ```
 
-### ibmcloud iam service-id-delete
+## ibmcloud iam service-id-delete
 {: #ibmcloud_iam_service_id_delete}
 
 刪除服務 ID
@@ -252,7 +276,7 @@ ibmcloud iam service-id-delete sample-teset -f
 ibmcloud iam service-id-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
-### ibmcloud iam service-id-lock
+## ibmcloud iam service-id-lock
 {: #ibmcloud_iam_service_id_lock}
 
 鎖定服務 ID
@@ -287,7 +311,7 @@ ibmcloud iam service-id-lock sample-teset -f
 ibmcloud iam service-id-lock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
-### ibmcloud iam service-id-unlock
+## ibmcloud iam service-id-unlock
 {: #ibmcloud_iam_service_id_unlock}
 
 解除鎖定服務 ID
@@ -322,7 +346,7 @@ ibmcloud iam service-id-unlock sample-teset -f
 ibmcloud iam service-id-unlock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
-### ibmcloud iam api-keys
+## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
 
 列出所有 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰
@@ -333,7 +357,7 @@ ibmcloud iam api-keys
 
 <strong>必要條件</strong>：端點、登入
 
-### ibmcloud iam api-key-create
+## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
 建立新的 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰
@@ -370,7 +394,7 @@ ibmcloud iam api-key-create MyKey -d "this is my API key" --file key_file
 ibmcloud iam api-key-create test-key --lock
 ```
 
-### ibmcloud iam api-key-update
+## ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
 更新 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰
@@ -401,7 +425,7 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 ibmcloud iam api-key-update MyKey -d "the new description of my key"
 ```
 
-### ibmcloud api-key-delete
+## ibmcloud api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
 刪除 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰
@@ -422,7 +446,7 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 <dd>強制刪除，而不確認。</dd>
 </dl>
 
-### ibmcloud api-key-lock
+## ibmcloud api-key-lock
 {: #ibmcloud_iam_api_key_lock}
 
 鎖定平台 API 金鑰
@@ -457,7 +481,7 @@ ibmcloud iam api-key-lock test-api-key
 ibmcloud iam api-key-lock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
 
-### ibmcloud api-key-unlock
+## ibmcloud api-key-unlock
 {: #ibmcloud_iam_api_key_unlock}
 
 解除鎖定平台 API 金鑰
@@ -492,7 +516,7 @@ ibmcloud iam api-key-unlock test-api-key
 ibmcloud iam api-key-unlock ApiKey-18f773b0-db53-43f1-ad68-92c667c218fe --force
 ```
 
-### ibmcloud iam service-api-keys
+## ibmcloud iam service-api-keys
 {: #ibmcloud_iam_service_api_keys}
 
 列出服務的所有 API 金鑰
@@ -521,7 +545,7 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 ibmcloud iam service-api-keys sample-service
 ```
 
-### ibmcloud iam service-api-key
+## ibmcloud iam service-api-key
 {: #ibmcloud_iam_service_api_key}
 
 列出服務 API 金鑰的詳細資料
@@ -556,7 +580,7 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
 ibmcloud iam service-api-key sample-key sample-service
 ```
 
-### ibmcloud iam service-api-key-create
+## ibmcloud iam service-api-key-create
 {: #ibmcloud_iam_service_api_key_create}
 
 建立服務 API 金鑰
@@ -591,7 +615,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
 ibmcloud iam service-api-key-create sample-key sample-service -f
 ```
 
-### ibmcloud iam service-api-key-update
+## ibmcloud iam service-api-key-update
 {: #ibmcloud_iam_service_api_key_update}
 
 更新服務 API 金鑰
@@ -628,7 +652,7 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 ibmcloud iam service-api-key-update sample-key sample-service -n new-sample-key
 ```
 
-### ibmcloud iam service-api-key-delete
+## ibmcloud iam service-api-key-delete
 {: #ibmcloud_iam_service_api_key_delete}
 
 刪除服務 API 金鑰
@@ -661,7 +685,7 @@ ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 ibmcloud iam service-api-key-delete sample-key sample-service
 ```
 
-### ibmcloud iam service-api-key-lock
+## ibmcloud iam service-api-key-lock
 {: #ibmcloud_iam_service_api_key_lock}
 
 鎖定服務 API 金鑰
@@ -694,7 +718,7 @@ ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SER
 ibmcloud iam service-api-key-lock sample-key sample-service
 ```
 
-### ibmcloud iam service-api-key-unlock
+## ibmcloud iam service-api-key-unlock
 {: #ibmcloud_iam_service_api_key_unlock}
 
 解除鎖定服務 API 金鑰
@@ -727,7 +751,7 @@ ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 ibmcloud iam service-api-key-unlock sample-key sample-service
 ```
 
-### ibmcloud iam user-policies
+## ibmcloud iam user-policies
 {: #ibmcloud_iam_user_policies}
 
 列出使用者 `name@example.com` 的原則：
@@ -752,7 +776,7 @@ ibmcloud iam user-policies name@example.com
 ibmcloud iam user-policies name@example.com
 ```
 
-### ibmcloud iam user-policy
+## ibmcloud iam user-policy
 {: #ibmcloud_iam_user_policy}
 
 顯示使用者原則的詳細資料
@@ -779,7 +803,7 @@ ibmcloud iam user-policy USER_NAME POLICY_ID
 ibmcloud iam user-policy name@example.com 0bb730daa
 ```
 
-### ibmcloud iam user-policy-create
+## ibmcloud iam user-policy-create
 {: #ibmcloud_iam_user_policy_create}
 
 建立使用者原則
@@ -852,7 +876,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
 
-### ibmcloud iam user-policy-update
+## ibmcloud iam user-policy-update
 {: #ibmcloud_iam_user_policy_update}
 
 更新使用者原則
@@ -926,7 +950,7 @@ ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer -
 ibmcloud iam user-policy-update name@example.com user-policy-id --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
 ```
 
-### ibmcloud iam user-policy-delete
+## ibmcloud iam user-policy-delete
 {: #ibmcloud_iam_user_policy_delete}
 
 刪除使用者原則
@@ -955,7 +979,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id
 ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 ```
 
-### ibmcloud iam service-policies
+## ibmcloud iam service-policies
 {: #ibmcloud_iam_service_policies}
 
 列出指定服務的所有服務原則
@@ -989,7 +1013,7 @@ ibmcloud iam service-policies test
 ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ```
 
-### ibmcloud iam service-policy
+## ibmcloud iam service-policy
 {: #ibmcloud_iam_service_policy}
 
 顯示服務原則的詳細資料
@@ -1025,7 +1049,7 @@ ibmcloud iam service-policies test 140798e2-8ea7db3
 ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
 
-### ibmcloud iam service-policy-create
+## ibmcloud iam service-policy-create
 {: #ibmcloud_iam_service_policy_create}
 
 建立服務原則
@@ -1075,7 +1099,7 @@ ibmcloud iam service-policy-create test --file @policy.json
 ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
-### ibmcloud iam service-policy-update
+## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
 更新服務原則
@@ -1127,7 +1151,7 @@ ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ibmcloud iam service-policy-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3 --file @policy.json
 ```
 
-### ibmcloud iam service-policy-delete
+## ibmcloud iam service-policy-delete
 {: #ibmcloud_iam_service_policy_delete}
 
 刪除服務原則
@@ -1161,7 +1185,7 @@ ibmcloud iam service-policy-delete test 140798e2-8ea7db3
 ibmcloud iam service-policy-delete ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3
 ```
 
-### ibmcloud iam oauth-tokens
+## ibmcloud iam oauth-tokens
 {: #ibmcloud_iam_oauth_tokens}
 
 擷取並顯示現行階段作業的 OAuth 記號
@@ -1184,7 +1208,7 @@ ibmcloud iam oauth-tokens
 ibmcloud iam oauth-tokens
 ```
 
-### ibmcloud iam dedicated-id-disconnect
+## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
 
 中斷公用 IBM ID 與專用非 IBM ID 的連線
@@ -1201,7 +1225,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
   <dd>強制中斷連線，而不進行確認</dd>
 </dl>
 
-### ibmcloud iam authorization-policy-create
+## ibmcloud iam authorization-policy-create
 {: #ibmcloud_iam_authorization_policy_create}
 
 建立授權原則以容許某個服務實例存取另一個服務實例。
@@ -1226,7 +1250,7 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>目標服務實例名稱，如果未指定的話，將會授與所有目標服務實例的存取權。</dd>
 </dl>
 
-### ibmcloud iam authorization-policy-delete
+## ibmcloud iam authorization-policy-delete
 {: #ibmcloud_iam_authorization_policy_delete}
 
 刪除授權原則。
@@ -1245,7 +1269,7 @@ ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
   <dd>強制刪除，而不進行確認。</dd>
 </dl>
 
-### ibmcloud iam authorization-policy
+## ibmcloud iam authorization-policy
 {: #ibmcloud_iam_authorization_policy}
 
 顯示授權原則的詳細資料。
@@ -1262,7 +1286,7 @@ ibmcloud iam authorization-policy AUTHORIZATION_POLICY_ID
   <dd>要顯示的授權原則 ID。</dd>
 </dl>
 
-### ibmcloud iam authorization-policies
+## ibmcloud iam authorization-policies
 {: #ibmcloud_iam_authorization_policies}
 
 列出現行帳戶下的授權原則。
@@ -1272,3 +1296,525 @@ ibmcloud iam authorization-policies
 ```
 
 <strong>必要條件</strong>：登入、目標
+
+## ibmcloud iam access-groups
+{: #ibmcloud_iam_access_groups}
+
+列出現行帳戶下的存取群組
+
+```
+ibmcloud iam access-groups [-u USER_NAME | -s SERVICE_ID_NAME]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-u</dt>
+  <dd>列出使用者所屬的存取群組。此旗標與 '-s' 互斥。</dd>
+  <dt>-s</dt>
+  <dd>列出服務 ID 所屬的存取群組。此旗標與 '-u' 互斥。</dd>
+</dl>
+
+<strong>範例</strong>：
+
+列出所有存取群組：
+
+```
+ibmcloud iam access-groups
+```
+
+## ibmcloud iam access-group
+{: #ibmcloud_iam_access_group}
+
+顯示存取群組的詳細資料
+
+```
+ibmcloud iam access-group GROUP_NAME [--id]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-id</dt>
+  <dd>僅顯示 ID</dd>
+</dl>
+
+<strong>範例</strong>：
+
+顯示存取群組 `example_group` 的詳細資料：
+
+```
+ibmcloud iam access-group example_group
+```
+
+## ibmcloud iam access-group-create
+{: #ibmcloud_iam_access_group_create}
+
+建立存取群組
+
+```
+ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-d, --description</dt>
+  <dd>存取群組的說明</dd>
+</dl>
+
+<strong>範例</strong>：
+
+建立存取群組 `example_group`：
+
+```
+ibmcloud iam access-group-create example_group -d "example access group"
+```
+
+## ibmcloud iam access-group-update
+{: #ibmcloud_iam_access_group_update}
+
+更新存取群組
+
+```
+ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --description NEW_DESCRIPTION] [-f, --force]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-n, --name</dt>
+  <dd>新的存取群組名稱</dd>
+  <dt>-d, --description</dt>
+  <dd>新的說明</dd>
+  <dt>-f, --force</dt>
+  <dd>強制更新，而不進行確認</dd>
+</dl>
+
+<strong>範例</strong>：
+
+將存取群組 `example_group` 重新命名為 `hello_world_group`：
+
+```
+ibmcloud iam access-group-update example_group --name "hello_world_group"
+```
+
+## ibmcloud iam access-group-delete
+{: #ibmcloud_iam_access_group_delete}
+
+刪除存取群組
+
+```
+ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-f, --force</dt>
+  <dd>強制刪除，而不進行確認</dd>
+  <dt>-r, --recursive</dt>
+  <dd>刪除存取群組及其成員</dd>
+</dl>
+
+<strong>範例</strong>：
+
+刪除存取群組 `example_group`：
+
+```
+ibmcloud iam access-group-delete example_group --force
+```
+
+## ibmcloud iam access-group-users
+{: #ibmcloud_iam_access_group_users}
+
+列出存取群組中的使用者
+
+```
+ibmcloud iam access-group-users GROUP_NAME
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+</dl>
+
+<strong>範例</strong>：
+
+列出存取群組 `example_group` 中的所有使用者：
+
+```
+ibmcloud iam access-group-users example_group
+```
+
+## ibmcloud iam access-group-user-add
+{: #ibmcloud_iam_access_group_user_add}
+
+將使用者新增至存取群組
+
+```
+ibmcloud iam access-group-user-add GROUP_NAME USER_NAME [USER_NAME2...]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+</dl>
+
+<strong>範例</strong>：
+
+將使用者 `name@example.com` 新增至存取群組 `example_group`：
+
+```
+ibmcloud iam access group-user-add example_group name@example.com
+```
+
+## ibmcloud iam access-group-user-remove
+{: #ibmcloud_iam_access_group_user_remove}
+
+從存取群組移除使用者
+
+```
+ibmcloud iam access-group-user-remove GROUP_NAME USER_NAME
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+</dl>
+
+<strong>範例</strong>：
+
+將使用者 `name@example.com` 從存取群組 `example_group` 移除：
+
+```
+ibmcloud iam access-group-user-remove example_group name@example.com
+```
+
+## ibmcloud iam access-group-user-purge
+{: #ibmcloud_iam_access_group_user_purge}
+
+從所有存取群組移除使用者
+
+```
+ibmcloud iam access-group-user-purge USER_NAME [-f, --force]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-f, --force</dt>
+  <dd>刪除而不進行確認</dd>
+</dl>
+
+<strong>範例</strong>：
+
+從所有存取群組移除使用者 `name@example.com`：
+
+```
+ibmcloud iam access-group-user-purge name@example.com -f
+```
+
+## ibmcloud iam access-group-service-ids
+{: #ibmcloud_iam_access_group_service_ids}
+
+列出存取群組中的服務 ID
+
+```
+ibmcloud iam access-group-service-ids GROUP_NAME
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+</dl>
+
+<strong>範例</strong>：
+
+列出存取群組 `example_group` 中的所有服務 ID：
+
+```
+ibmcloud iam access-group-service-ids example_group
+```
+
+## ibmcloud iam access-group-service-id-add
+{: #ibmcloud_iam_access_group_service_id_add}
+
+將服務 ID 新增至存取群組
+
+```
+ibmcloud iam access-group-service-id-add GROUP_NAME SERVICE_ID_NAME [SERVICE_ID_NAME2...]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+</dl>
+
+<strong>範例</strong>：
+
+將服務 ID `example-service` 新增至存取群組 `example_group`：
+
+```
+ibmcloud iam access-group-service-id-add example_group example-service
+```
+
+## ibmcloud iam access-group-service-id-remove
+{: #ibmcloud_iam_access_group_service_id_remove}
+
+從存取群組移除服務 ID
+
+```
+ibmcloud iam access-group-service-id-remove GROUP_NAME SERVICE_ID_NAME
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+</dl>
+
+<strong>範例</strong>：
+
+將服務 ID `example-service` 從存取群組 `example_group` 移除：
+
+```
+ibmcloud iam access-group-service-id-remove example_group example-service
+```
+
+## ibmcloud iam access-group-service-id-purge
+{: #ibmcloud_iam_access_group_service_id_purge}
+
+從所有存取群組移除服務 ID
+
+```
+ibmcloud iam access-group-service-id-purge SERVICE_ID_NAME [-f, --force]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-f, --force</dt>
+  <dd>刪除而不進行確認</dd>
+</dl>
+
+<strong>範例</strong>：
+
+從所有存取群組移除服務 ID `example-service`：
+
+```
+ibmcloud iam access-group-service-id-purge example --force
+```
+
+## ibmcloud iam access-group-policies
+{: #ibmcloud_iam_access_group_policies}
+
+列出存取群組的原則
+
+```
+ibmcloud iam access-group-policies GROUP_NAME
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+</dl>
+
+<strong>範例</strong>：
+
+列出存取群組 `example_group` 的所有原則：
+
+```
+ibmcloud iam access-group-policies example_group
+```
+
+## ibmcloud iam access-group-policy
+{: #ibmcloud_iam_access_group_policy}
+
+顯示存取群組原則的詳細資料
+
+```
+ibmcloud iam access-group-policy GROUP_NAME POLICY_ID
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+</dl>
+
+<strong>範例</strong>：
+
+顯示存取群組 `example_group` 之原則 `51b9717e-76b0-4f6a-bda7-b8132431f926` 的詳細資料：
+
+```
+ibmcloud iam access-group-policy example_group 51b9717e-76b0-4f6a-bda7-b8132431f926
+```
+
+## ibmcloud iam access-group-policy-create
+{: #ibmcloud_iam_access_group_policy_create}
+
+建立存取群組原則
+
+```
+ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>--file</dt>
+  <dd>原則定義的 JSON 檔案</dd>
+  <dt>-roles</dt>
+  <dd>原則定義的角色名稱。針對特定服務所支援的角色，執行 'ibmcloud iam roles --service SERVICE_NAME'。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-service-name</dt>
+  <dd>原則定義的服務名稱。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>原則定義之服務實例的 GUID。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-region</dt>
+  <dd>原則定義的地區。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-resource-type</dt>
+  <dd>原則定義的資源類型。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-resource</dt>
+  <dd>原則定義的資源。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-resource-group-name</dt>
+  <dd>資源群組的名稱。此選項與 '--file' 及 '--resource-group-id' 不能同時使用。</dd>
+  <dt>-resource-group-id</dt>
+  <dd>資源群組的 ID。此選項與 '--file' 及 '--resource-group-name' 不能同時使用。</dd>
+</dl>
+
+<strong>範例</strong>：
+
+從 JSON 檔建立存取群組原則：
+
+```
+ibmcloud iam access-group-policy-create example_group -f @policy.json
+```
+
+針對所有 `sample-service` 資源，將 `Administrator` 角色授與給 `example_group`：
+```
+ibmcloud iam access-group-policy-create example_group --roles Administrator --service-name sample-service
+```
+
+針對 `us-south` 地區中 GUID 為 `d161aeea-fd02-40f8-a487-df1998bd69a9` 之 `sample-service` 實例的資源 `key123`，將 `Editor` 角色授與給 `name@example.com`：
+```
+ibmcloud iam access-group-policy-create example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south --resource-type key --resource key123
+```
+
+針對 ID 為 `dda27e49d2a1efca58083a01dfde18f6` 的資源群組，將 `Operator` 角色授與給 `example_group`：
+```
+ibmcloud iam access-group-policy-create example_group --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+```
+
+針對資源群組 `sample-resource-group` 的成員，將 `Viewer` 角色授與給 `example_group`：
+```
+ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-group-name sample-resource-group
+```
+
+針對 ID 為 `dda27e49d2a1efca58083a01dfde18f6` 之資源群組的成員，將 `Viewer` 角色授與給 `example_group`：
+```
+ibmcloud iam access-group-policy-create example_group --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+
+## ibmcloud iam access-group-policy-update
+{: #ibmcloud_iam_access_group_policy_update}
+
+更新存取群組原則
+
+```
+ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>--file</dt>
+  <dd>原則定義的 JSON 檔案</dd>
+  <dt>--roles</dt>
+  <dd>原則定義的角色名稱。針對特定服務所支援的角色，執行 'ibmcloud iam roles --service SERVICE_NAME'。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-service-name</dt>
+  <dd>原則定義的服務名稱。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
+  <dd>原則定義之服務實例的 GUID。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-region</dt>
+  <dd>原則定義的地區。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-resource-type</dt>
+  <dd>原則定義的資源類型。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-resource</dt>
+  <dd>原則定義的資源。此選項與 '--file' 不能同時使用。</dd>
+  <dt>-resource-group-name</dt>
+  <dd>資源群組的名稱。此選項與 '--file' 及 '--resource-group-id' 不能同時使用。</dd>
+  <dt>-resource-group-id</dt>
+  <dd>資源群組的 ID。此選項與 '--file' 及 '--resource-group-name' 不能同時使用。</dd>
+</dl>
+
+<strong>範例</strong>：
+
+以原則 JSON 檔案中的原則來更新存取群組原則：
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 -f @policy.json
+```
+
+更新存取群組原則，以針對所有 `sample-service` 資源，將 `Administrator` 角色授與給 `example_group`：
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Administrator --service-name sample-service
+```
+
+更新存取群組原則，以針對 `us-south` 地區中 GUID 為 `d161aeea-fd02-40f8-a487-df1998bd69a9` 之 `sample-service` 實例的資源 `key123`，將 `Editor` 角色授與給 `name@example.com`：
+```
+ibmcloud iam access-group-policy-update example_group --roles Editor --service-name sample-service --service-instance d161aeea-fd02-40f8-a487-df1998bd69a9 --region us-south
+```
+
+更新存取群組原則，以針對 ID 為 `dda27e49d2a1efca58083a01dfde18f6` 的資源群組，將 `Operator` 角色授與給 `example_group`：
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Operator --resource-type resource-group --resource dda27e49d2a1efca58083a01dfde18f6
+```
+
+更新存取群組原則，以針對資源群組 `sample-resource-group` 的成員，將 `Viewer` 角色授與給 `example_group`：
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-name sample-resource-group
+```
+
+更新存取群組原則，以針對具有 ID `dda27e49d2a1efca58083a01dfde18f6` 的資源群組的成員，將 `Viewer` 角色授與給 `example_group`：
+```
+ibmcloud iam access-group-policy-update example_group b8638ceb-5c4d-4d58-ae06-7ad95a10c4d4 --roles Viewer --resource-group-id dda27e49d2a1efca58083a01dfde18f6
+```
+
+## ibmcloud iam access-group-policy-delete
+{: #ibmcloud_iam_access_group_policy_delete}
+
+刪除存取群組原則
+
+```
+ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+<dl>
+  <dt>-f, --force</dt>
+  <dd>強制刪除，而不進行確認</dd>
+</dl>
+
+<strong>範例</strong>：
+
+刪除存取群組 `example_group` 的原則 `51b9717e-76b0-4f6a-bda7-b8132431f926`：
+```
+ibmcloud iam access-group-policy-delete example_group 51b9717e-76b0-4f6a-bda7-b8132431f926 -f
+```

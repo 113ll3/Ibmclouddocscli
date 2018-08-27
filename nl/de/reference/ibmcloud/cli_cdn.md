@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Befehle zur CDN-Verwaltung der {{site.data.keyword.Bluemix_notm}}-Infrastruktur
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - CDN verwalten
 
  <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 1. Infrastruktur für {{site.data.keyword.Bluemix_notm}} - Content Delivery Network (CDN)</caption>
@@ -37,7 +37,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl cdn cancel
+ ## ibmcloud sl cdn cancel
 {: #sl_cdn_cancel}
 
 Abbruch für CDN-Konto.
@@ -51,7 +51,7 @@ ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONEN]
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl cdn detail
+## ibmcloud sl cdn detail
 {: #sl_cdn_detail}
 
 Details eines CDN-Kontos aufführen.
@@ -59,7 +59,7 @@ Details eines CDN-Kontos aufführen.
 ibmcloud sl cdn detail ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn list
+## ibmcloud sl cdn list
 {: #sl_cdn_list}
 
 Alle CDN-Konten auflisten.
@@ -75,7 +75,7 @@ ibmcloud sl cdn list [OPTIONEN]
 <dd>Nach Bestell-ID filtern.</dd>
 </dl>
 
-### ibmcloud sl cdn load
+## ibmcloud sl cdn load
 {: #sl_cdn_load}
 
 Zwischenspeicherung von mindestens einer Datei auf allen Edge-Knoten.
@@ -83,7 +83,7 @@ Zwischenspeicherung von mindestens einer Datei auf allen Edge-Knoten.
 ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### ibmcloud sl cdn order
+## ibmcloud sl cdn order
 {: #sl_cdn_order}
 
 CDN-Konto bestellen.
@@ -101,7 +101,7 @@ ibmcloud sl cdn order [OPTIONEN]
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl cdn options
+## ibmcloud sl cdn options
 {: #sl_cdn_options}
 
 Optionen für die Bandbreite und den Speicher bei der Anforderung eines CDN-Kontos.
@@ -109,7 +109,7 @@ Optionen für die Bandbreite und den Speicher bei der Anforderung eines CDN-Kont
 ibmcloud sl cdn options
 ```
 
-### ibmcloud sl cdn origin-add
+## ibmcloud sl cdn origin-add
 {: #sl_cdn_origin_add}
 
 Origin-Pull-Zuordnung erstellen.
@@ -125,7 +125,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONEN]
 <dd>Ein optionaler CNAME zum Verknüpfen mit der Zuordnung.</dd>
 </dl>
 
-### ibmcloud sl cdn origin-list
+## ibmcloud sl cdn origin-list
 {: #sl_cdn_origin_list}
 
 Origin-Pull-Zuordnungen auflisten.
@@ -133,7 +133,7 @@ Origin-Pull-Zuordnungen auflisten.
 ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn origin-remove
+## ibmcloud sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
 Origin-Pull-Zuordnung entfernen.
@@ -147,7 +147,7 @@ ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONEN]
 <dd>Operation ohne Bestätigung erzwingen.</dd>
 </dl>
 
-### ibmcloud sl cdn purge
+## ibmcloud sl cdn purge
 {: #sl_cdn_purge}
 
 Zwischengespeicherte Dateien aus allen Edge-Knoten löschen.

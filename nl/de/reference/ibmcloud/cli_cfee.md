@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Befehle zur Verwaltung von Cloud Foundry-Unternehmensumgebungen (experimentell)
+# Cloud Foundry-Unternehmensumgebungen verwalten (experimentell)
 {: #ibmcloud_commands_cfee}
 
 <table summary="Cloud Foundry-Unternehmensumgebungen verwalten (experimentell)">
@@ -28,7 +28,7 @@ lastupdated: "2018-07-27"
  </tbody>
  </table>
 
- ### ibmcloud cfee environments
+ ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
 CFEE-Umgebungen auflisten
@@ -41,7 +41,7 @@ ibmcloud cfee environments
 
 <strong>Befehlsoptionen</strong>:
 
-### ibmcloud cfee environment
+## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
 Details einer CFEE-Umgebung anzeigen

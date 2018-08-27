@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN 的指令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN 指令</caption>
@@ -38,7 +38,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl ipsec cancel
+ ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 取消 IPSec VPN 通道環境定義。
@@ -56,7 +56,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl ipsec config
+## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
 通道環境定義的要求配置。
@@ -64,7 +64,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec detail
+## ibmcloud sl ipsec detail
 {: #sl_ipsec_detail}
 
 列出 IPSec VPN 通道環境定義詳細資料。
@@ -78,7 +78,7 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <dd>包括其他資源，選項包含：at、is、rs、sr、ss。</dd>
 </dl>
 
-### ibmcloud sl ipsec list
+## ibmcloud sl ipsec list
 {: #sl_ipsec_list}
 
 列出 IPSec VPN 通道環境定義。
@@ -92,7 +92,7 @@ ibmcloud sl ipsec list [OPTIONS]
 <dd>依購買 IPSEC 的訂單 ID 過濾。</dd>
 </dl>
 
-### ibmcloud sl ipsec order
+## ibmcloud sl ipsec order
 {: #sl_ipsec_order}
 
 訂購 IPSec VPN 通道。
@@ -106,7 +106,7 @@ ibmcloud sl ipsec order [OPTIONS]
 <dd>必要。IPSEC 資料中心的簡稱，例如：dal09。</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-add
+## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
 將子網路新增至 IPSec 通道環境定義。
@@ -124,7 +124,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>要建立的子網路 ID。</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-remove
+## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
 從 IPSEC 通道環境定義移除子網路。
@@ -132,7 +132,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-add
+## ibmcloud sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
 將位址轉換新增至 IPSec 通道。
@@ -150,7 +150,7 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dd>附註。</dd>
 </dl>
 
-### ibmcloud sl ipsec translation-remove
+## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
 從 IPSec 移除轉換項目。
@@ -158,7 +158,7 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-update
+## ibmcloud sl ipsec translation-update
 {: #sl_ipsec_translation_update}
 
 更新 IPSec 的位址轉換。
@@ -176,7 +176,7 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dd>附註。</dd>
 </dl>
 
-### ibmcloud sl ipsec update
+## ibmcloud sl ipsec update
 {: #sl_ipsec_update}
 
 更新通道環境定義內容。

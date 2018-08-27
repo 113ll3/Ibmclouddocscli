@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 {{site.data.keyword.Bluemix_notm}} 基礎架構虛擬伺服器的指令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構虛擬伺服器
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構虛擬伺服器指令</caption>
@@ -51,7 +51,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl vs cancel
+ ## ibmcloud sl vs cancel
 {: #sl_vs_cancel}
 
 取消虛擬伺服器實例。
@@ -72,7 +72,7 @@ ibmcloud sl vs cancel 12345678
 這個指令會取消 ID 為 12345678 的虛擬伺服器實例。
 
 
-### ibmcloud sl vs capture
+## ibmcloud sl vs capture
 {: #sl_vs_capture}
 
 將虛擬伺服器實例擷取至映像檔。
@@ -96,7 +96,7 @@ ibmcloud sl vs capture 12345678 -n mycloud --all --note testing
 ```
 這個指令會將 ID 為 12345678 的虛擬伺服器實例及其所有磁碟都擷取至名為 "mycloud" 且附註為 "testing" 的映像檔。
 
-### ibmcloud sl vs create
+## ibmcloud sl vs create
 {: #sl_vs_create}
 
 建立虛擬伺服器實例。
@@ -174,7 +174,7 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ```
 這個指令會訂購虛擬伺服器實例，其主機名稱為 myvsi、網域為 ibm.com、有 4 個 CPU 核心及 4096M 的記憶體，位於資料中心：dal10。
 
-### ibmcloud sl vs options
+## ibmcloud sl vs options
 {: #sl_vs_options}
 
 列出用來建立虛擬伺服器實例的選項。
@@ -189,7 +189,7 @@ ibmcloud sl vs options
 ```
 這個指令會列出用來建立虛擬伺服器實例的所有選項，例如資料中心、CPU、記憶體、OS、磁碟、網路速度等等。
 
-### ibmcloud sl vs credentials
+## ibmcloud sl vs credentials
 {: #sl_vs_credentials}
 
 列出虛擬伺服器實例認證。
@@ -204,7 +204,7 @@ ibmcloud sl vs credentials 12345678
 ```
 這個指令會列出 ID 為 12345678 的虛擬伺服器實例的所有使用者名稱及密碼配對。
 
-### ibmcloud sl vs detail
+## ibmcloud sl vs detail
 {: #sl_vs_detail}
 
 取得虛擬伺服器實例的詳細資料。
@@ -226,7 +226,7 @@ ibmcloud sl vs details 12345678
 ```
 這個指令會列出 ID 為 12345678 的虛擬伺服器實例的詳細資訊。
 
-### ibmcloud sl vs dns-sync
+## ibmcloud sl vs dns-sync
 {: #sl_vs_dns_sync}
 
 為虛擬伺服器實例同步 DNS 記錄。
@@ -254,7 +254,7 @@ ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 這個指令會將 ID 為 12345678 的虛擬伺服器實例的 A 記錄（IP V4 位址）同步至 DNS 伺服器，並將這個 A 記錄的 ttl 設為 3600。
 
-### ibmcloud sl vs edit
+## ibmcloud sl vs edit
 {: #sl_vs_edit}
 
 編輯虛擬伺服器實例的詳細資料。
@@ -286,7 +286,7 @@ ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 10
 ```
 這個指令會更新 ID 為 12345678 的虛擬伺服器實例，並將其網域設為 "ibm.com"、將主機名稱設為 "myapp"、將標籤設為 "testcli"。
 
-### ibmcloud sl vs host-create
+## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
 
 建立專用虛擬伺服器的主機。
@@ -312,7 +312,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>
 
-### ibmcloud sl vs host-list
+## ibmcloud sl vs host-list
 {: #sl_vs_host_list}
 
 列出您帳戶上的專用主機。
@@ -333,7 +333,7 @@ ibmcloud sl vs host-list [OPTIONS]
 <dd>依購買此專用主機的訂單 ID 過濾。</dd>
 </dl>
 
-### ibmcloud sl vs list
+## ibmcloud sl vs list
 {: #sl_vs_list}
 
 列出您帳戶上的虛擬伺服器實例。
@@ -381,7 +381,7 @@ ibmcloud sl vs list --domain ibm.com --hourly --sortby memory
 ```
 這個指令會列出現行帳戶上所有依時數計費的虛擬伺服器實例，用來過濾的網域為 "ibm.com"，並依記憶體排序。
 
-### ibmcloud sl vs pause
+## ibmcloud sl vs pause
 {: #sl_vs_pause}
 
 暫停作用中虛擬伺服器實例。
@@ -401,7 +401,7 @@ ibmcloud sl vs pause 12345678 -f
 ```
 這個指令會暫停 ID 為 12345678 的虛擬伺服器實例，而不要求確認。
 
-### ibmcloud sl vs power-off
+## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
 
 關閉作用中虛擬伺服器實例。
@@ -425,7 +425,7 @@ ibmcloud sl vs power-off 12345678 --soft
 ```
 這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行正常關機。
 
-### ibmcloud sl vs power-on
+## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
 
 啟動虛擬伺服器實例。
@@ -445,7 +445,7 @@ ibmcloud sl vs power-on 12345678
 ```
 這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行開機作業。
 
-### ibmcloud sl vs ready
+## ibmcloud sl vs ready
 {: #sl_vs_ready}
 
 檢查是否有虛擬伺服器實例已備妥可供使用。
@@ -465,7 +465,7 @@ ibmcloud sl vs ready 12345678 --wait 30
 ```
 這個指令會檢查 ID 為 12345678 的虛擬伺服器實例狀態，以查看它是否準備好可繼續使用，最多等待 30 秒。
 
-### ibmcloud sl vs reboot
+## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
 
 將作用中虛擬伺服器實例重新開機。
@@ -489,7 +489,7 @@ ibmcloud sl vs reboot 12345678 --hard
 ```
 這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行強迫重新開機。
 
-### ibmcloud sl vs reload
+## ibmcloud sl vs reload
 {: #sl_vs_reload}
 
 在虛擬伺服器實例上重新載入作業系統。
@@ -517,7 +517,7 @@ ibmcloud sl vs reload 12345678
 ```
 這個指令會針對 ID 為 12345678 的虛擬伺服器實例重新載入現行作業系統。
 
-### ibmcloud sl vs rescue
+## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
 
 將虛擬伺服器實例重新開機至救援映像檔。
@@ -537,7 +537,7 @@ ibmcloud sl vs rescue 12345678
 ```
 這個指令會將 ID 為 12345678 的虛擬伺服器實例重新開機至救援映像檔。
 
-### ibmcloud sl vs resume
+## ibmcloud sl vs resume
 {: #sl_vs_resume}
 
 繼續已暫停的虛擬伺服器實例。
@@ -557,7 +557,7 @@ ibmcloud sl vs resume 12345678
 ```
 這個指令會繼續 ID 為 12345678 的虛擬伺服器實例。
 
-### ibmcloud sl vs upgrade
+## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}
 
 升級虛擬伺服器實例。

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理型錄、外掛程式及計費設定的指令
+# 管理型錄、外掛程式及計費設定
 {: #ibmcloud_commands_settings}
 
 <table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} 型錄、外掛程式、帳單及安全設定的 ibmcloud 指令。">
@@ -66,7 +66,7 @@ lastupdated: "2018-07-26"
  </tbody>
  </table>
 
- ### ibmcloud catalog search
+ ## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
 搜尋型錄項目
@@ -109,7 +109,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 ibmcloud catalog search -k service -q 'Automation test'
 ```
 
-### ibmcloud catalog entry
+## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
 取得型錄項目
@@ -138,7 +138,7 @@ ibmcloud catalog entry ID [--global]
 ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-create
+## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 建立新型錄項目（僅限帳戶的型錄管理者）
 
@@ -166,7 +166,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-update
+## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
 更新現有型錄項目（僅限帳戶的型錄管理者或編輯者）
 
@@ -192,7 +192,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
 
-### ibmcloud catalog entry-delete
+## ibmcloud catalog entry-delete
 {: #ibmcloud_catalog_entry_delete}
 刪除型錄項目（僅限帳戶的型錄管理者）
 ```
@@ -215,7 +215,7 @@ ibmcloud catalog entry-delete ID [--global]
 ibmcloud catalog delete 'j402-dnf1i'
 ```
 
-### ibmcloud catalog entry-visibility
+## ibmcloud catalog entry-visibility
 {: #ibmcloud_catalog_entry_visibility}
 取得型錄項目的可見性（僅限帳戶的型錄管理者）
 
@@ -241,7 +241,7 @@ ibmcloud catalog entry-visibility ID [--global]
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
 
-### ibmcloud catalog entry-visibility-set
+## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
 更新現有型錄項目的可見性（僅限帳戶的型錄管理者）
 
@@ -282,7 +282,7 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
-### ibmcloud catalog service-marketplace
+## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
 列出 Marketplace 中的服務供應項目
 
@@ -310,7 +310,7 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ibmcloud catalog service-marketplace --global
 ```
 
-### ibmcloud catalog templates
+## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 檢視 {{site.data.keyword.Bluemix_notm}} 上的樣板範本。
@@ -328,7 +328,7 @@ ibmcloud catalog templates [-d]
    <dd>如果指定 <i>-d</i> 選項，也會顯示每個範本的說明。否則，只會顯示每一個範本的 ID 及名稱。</dd>
    </dl>
 
-### ibmcloud catalog template
+## ibmcloud catalog template
 {: #ibmcloud_catalog_template}
 
 檢視所指定樣板範本的詳細資訊。
@@ -354,7 +354,7 @@ ibmcloud catalog template TEMPLATE_ID
 ibmcloud catalog template mobileBackendStarter
 ```
 
-### ibmcloud catalog template-run
+## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
 以指定的 URL 及說明，建立根據所指定範本的 cf 應用程式。依預設，新的應用程式會自動啟動。
@@ -400,7 +400,7 @@ ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluem
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-### ibmcloud catalog locations
+## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
 
 以您選擇的格式取得地區的選擇子集。
@@ -426,7 +426,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>輸出 CSV 檔案</dd>
 </dl>
 
-### ibmcloud catalog runtime
+## ibmcloud catalog runtime
 {: #ibmcloud_catalog_runtime}
 
 檢視運行環境的詳細資料。這個指令僅適用於公用雲端。
@@ -443,7 +443,7 @@ ibmcloud catalog runtime RUNTIME_ID
 catalog runtime nodejsHelloWorld
 ```
 
-### ibmcloud catalog runtimes
+## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 列出所有運行環境。這個指令僅適用於公用雲端。
@@ -467,7 +467,7 @@ ibmcloud catalog runtimes [-d]
 ibmcloud catalog runtimes -d
 ```
 
-### ibmcloud billing account-usage
+## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
 顯示現行帳戶的每月用量（僅限帳戶管理者）
@@ -495,7 +495,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 ibmcloud billing account-usage -d 2016-06
 ```
 
-### ibmcloud billing org-usage
+## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
 顯示組織的每月用量（僅限帳戶管理者或組織帳單管理員）
@@ -517,7 +517,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>以 JSON 格式顯示用量結果。</dd>
 </dl>
 
-### ibmcloud billing resource-group-usage
+## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
 顯示資源群組的每月用量（僅帳戶管理者或資源群組管理者）
@@ -539,7 +539,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>以 JSON 格式顯示用量結果。</dd>
 </dl>
 
-### ibmcloud billing resource-instances-usage
+## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
 顯示現行帳戶下的每月資源實例用量。
@@ -563,7 +563,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>以 JSON 格式顯示用量結果。</dd>
 </dl>
 
-### ibmcloud plugin repos
+## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
 列出 {{site.data.keyword.Bluemix_notm}} CLI 中登錄的所有外掛程式儲存庫。
@@ -574,7 +574,7 @@ ibmcloud plugin repos
 
 <strong>必要條件</strong>：無
 
-### ibmcloud plugin repo-add
+## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
 
 將新的外掛程式儲存庫新增至 {{site.data.keyword.Bluemix_notm}} CLI。
@@ -603,7 +603,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
-### ibmcloud plugin repo-remove
+## ibmcloud plugin repo-remove
 {: #ibmcloud_plugin_repo_remove}
 
 從 {{site.data.keyword.Bluemix_notm}} CLI 移除外掛程式儲存庫。
@@ -628,7 +628,7 @@ ibmcloud plugin repo-remove REPO_NAME
 ibmcloud plugin repo-remove bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugins
+## ibmcloud plugin repo-plugins
 {: #ibmcloud_plugin_repo_plugins}
 
 列出所有已新增之儲存庫或特定儲存庫中的所有可用外掛程式。
@@ -660,7 +660,7 @@ ibmcloud plugin repo-plugins
 ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugin
+## ibmcloud plugin repo-plugin
 {: #ibmcloud_plugin_repo_plugin}
 
 顯示儲存庫中外掛程式的詳細資料。
@@ -692,7 +692,7 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-### ibmcloud plugin list
+## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
 
 列出 {{site.data.keyword.Bluemix_notm}} CLI 中的所有已安裝外掛程式。
@@ -703,7 +703,7 @@ ibmcloud plugin list
 
 <strong>必要條件</strong>：無
 
-### ibmcloud plugin show
+## ibmcloud plugin show
 {: #ibmcloud_plugin_show}
 
 顯示已安裝外掛程式的詳細資料。
@@ -714,7 +714,7 @@ ibmcloud plugin show PLUGIN-NAME
 
 <strong>必要條件</strong>：無
 
-### ibmcloud plugin install
+## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
 從指定的路徑或儲存庫，將特定版本的外掛程式安裝到 {{site.data.keyword.Bluemix_notm}} CLI 中。
@@ -780,7 +780,7 @@ ibmcloud plugin install container-service
 ibmcloud plugin install container-service -v 0.1.425
 ```
 
-### ibmcloud plugin update
+## ibmcloud plugin update
 {: #ibmcloud_plugin_update}
 
 從儲存庫升級外掛程式。
@@ -831,7 +831,7 @@ ibmcloud plugin update container-service
 ibmcloud plugin update container-service -v 0.1.440
 ```
 
-### ibmcloud plugin uninstall
+## ibmcloud plugin uninstall
 {: #ibmcloud_plugin_uninstall}
 
 從 {{site.data.keyword.Bluemix_notm}} CLI 解除安裝指定的外掛程式。

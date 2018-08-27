@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 {{site.data.keyword.Bluemix_notm}} 基礎架構子網路的指令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構子網路
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構 subnet 指令</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl subnet cancel
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 取消子網路。
@@ -50,7 +50,7 @@ ibmcloud sl subnet cancel 12345678 -f
 ```
 這個指令會取消 ID 為 12345678 的子網路，而不要求確認。
 
-### ibmcloud sl subnet create
+## ibmcloud sl subnet create
 {: #sl_subnet_create}
 
 將新子網路新增至您的帳戶。
@@ -74,7 +74,7 @@ ibmcloud sl subnet create public 16 567
 ```
 這個指令會建立含有 16 個 IP V4 位址的公用子網路，並將其放在 ID 為 567 的 VLAN 上。
 
-### ibmcloud sl subnet detail
+## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
 
 取得子網路的詳細資料。
@@ -97,7 +97,7 @@ ibmcloud sl subnet detail 12345678
 這個指令會顯示 ID 為 12345678 的子網路的詳細資訊，包括虛擬伺服器及硬體伺服器資訊。
 
 
-### ibmcloud sl subnet list
+## ibmcloud sl subnet list
 {: #sl_subnet_list}
 
 列出您帳戶上的所有子網路。
@@ -131,7 +131,7 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 這個指令會列出現行帳戶上的 IP V4 子網路，用來過濾的資料中心為 dal09、子網路類型為 PRIMARY，而網路空間為 PUBLIC。
 
-### ibmcloud sl subnet lookup
+## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
 
 尋找 IP 位址，並顯示其子網路及裝置資訊。

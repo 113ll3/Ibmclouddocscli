@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用來管理 {{site.data.keyword.Bluemix_notm}} 基礎架構映像檔的指令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構映像檔
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構 image 指令</caption>
@@ -29,7 +29,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl image delete
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 刪除映像檔。
@@ -43,7 +43,7 @@ ibmcloud sl image delete IDENTIFIER
 這個指令會刪除 ID 為 `12345678` 的映像檔。
 
 
-### ibmcloud sl image detail
+## ibmcloud sl image detail
 {: #sl_image_detail}
 
 取得映像檔的詳細資料。
@@ -56,7 +56,7 @@ ibmcloud sl image detail IDENTIFIER
 ```
 這個指令會取得 ID 為 12345678 的映像檔的詳細資料。
 
-### ibmcloud sl image edit
+## ibmcloud sl image edit
 {: #sl_image_edit}
 
 編輯映像檔的詳細資料。
@@ -81,7 +81,7 @@ ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 這個指令會編輯 ID 為 `12345678` 的映像檔、將名稱設為 `ubuntu16`、將附註設為 `testing`，並將標籤設為 `staging`。
 
 
-### ibmcloud sl image list
+## ibmcloud sl image list
 {: #sl_image_list}
 
 列出您帳戶上的所有映像檔。
