@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-20"
 ---
 
 {:new_window: target="_blank"}
@@ -16,9 +16,8 @@ lastupdated: "2018-08-21"
  {: #ibmcloud_commands_account}
 
 <table summary="ibmcloud commands that you can use to manage accounts, orgs, spaces and roles.">
-<caption>Table 1. Commands for managing accounts, orgs, spaces and roles</caption>
  <thead>
- <th colspan="5">Commands for managing accounts, orgs, spaces, and roles</th>
+ <th colspan="5">Use the following commands to manage accounts, users in an account, and the org, space, roles, domain certificates of Cloud Foundry services</th>
  </thead>
  <tbody>
  <tr>
@@ -57,9 +56,6 @@ lastupdated: "2018-08-21"
  </tr>
  <tr>
   <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
-  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
  </tr>
  </tbody>
  </table>
@@ -70,17 +66,23 @@ lastupdated: "2018-08-21"
 List all organizations
 
 ```
-ibmcloud account orgs [-r REGION] [--guid]
+ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID] [-u ACCOUNT_OWNER]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
    <dl>
-   <dt>-r <i>REGION</i> (optional)</dt>
-   <dd>For which region the organization information is shown. If set to 'all', all organizations in all regions are listed.</dd>
-   <dt>--guid (optional)</dt>
-   <dd>Display the GUID of the organizations.</dd>
+   <dt>-r REGION_NAME</dt>
+   <dd>Region name. List the organizations in the region specified. Default to current region if not specified. If set to 'all', list the organizations in all regions.</dd>
+   <dt>--guid</dt>
+   <dd>Display the guid of the organizations. This option is exclusive with '--output'.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Specify output format, only JSON is supported now. This option is exclusive with '--guid'.</dd>
+   <dt>-c ACCOUNT_ID</dt>
+   <dd>Account ID. List the organizations under the given account. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with '-u'.</dd>
+   <dt>-u ACCOUNT_OWNER</dt>
+   <dd>Account owner name. List the organizations under the accounts owned by the given user. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with '-c'.</dd>
    </dl>
 
 <strong>Examples</strong>:
@@ -91,13 +93,19 @@ List all the organizations in region: `us-south` with the GUID displayed
 ibmcloud account orgs -r us-south --guid
 ```
 
+List all the organizations in JSON format
+
+```
+ibmcloud account orgs --output JSON
+```
+
 ## ibmcloud account org
 {: #ibmcloud_account_org}
 
-Show the information for the specified organization.
+Show the info of specified org.
 
 ```
-ibmcloud account org ORG_NAME [--guid]
+ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -106,8 +114,12 @@ ibmcloud account org ORG_NAME [--guid]
    <dl>
    <dt>ORG_NAME (required)</dt>
    <dd>The name of the organization.</dd>
-   <dt>--guid (optional)</dt>
-   <dd>Display the GUID of the organization.</dd>
+   <dt>-r REGION</dt>
+   <dd>Region name. If not specified, the default is current region. If set to 'all', orgs with the given name in all regions are listed.</dd>
+   <dt>--guid</dt>
+   <dd>Retrieve and display the given org's guid. All other output for the org is suppressed. This option is exclusive with '--output'.</dd>
+   <dt>--output REGION</dt>
+   <dd>Specify output format, only JSON is supported now. This option is exclusive with '--guid'.</dd>
    </dl>
 
 <strong>Examples</strong>:
@@ -197,21 +209,85 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 List all spaces
 
 ```
-ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
+ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 ```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
    <dl>
-   <dt>-o</dt>
+   <dt>-o ORG_NAME</dt>
    <dd>Organization name. List the spaces under the organization specified. Default to current organization if not specified.</dd>
-   <dt>-r</dt>
+   <dt>-r REGION-NAM</dt>
    <dd>Region name. List the spaces under the region specified. Default to current region if not specified.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
    </dl>
+
+<strong>Examples</strong>:
+
+List all spaces:
+
+```
+ibmcloud account spaces
+```
+
+List all spaces of org `org_example` in JSON format:
+
+```
+ibmcloud account spaces -o org_example --output JSON
+```
 
 ## ibmcloud account space
 {: #ibmcloud_account_space}
 
-This command has the same function and options as the [cf space ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} command.
+Show the info of specified space
+
+```
+ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>SPACE_NAME (required)</dt>
+   <dd>Name of space to be shown.</dd>
+   <dt>-o ORG_NAME</dt>
+   <dd>Organization name. Default to current organization if not specified.</dd>
+   <dt>--guid</dt>
+   <dd>Retrieve and display the given space's guid. All other output for the space is suppressed. This option is exclusive with '--output'.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Specify output format, only JSON is supported now. All other output for the space is suppressed. This option is exclusive with '--guid'.</dd>
+   <dt>--security-group-rules</dt>
+   <dd>Retrieve the rules for all the security groups associated with the space.</dd>
+   </dl>
+
+<strong>Examples</strong>:
+
+Show the info of space `space_example`:
+
+```
+ibmcloud account space space_example
+```
+
+Show the GUID of space `space_example`:
+
+```
+ibmcloud account space space_example --guid
+```
+
+Show the info of space `space_example` in JSON format:
+
+```
+ibmcloud account space space_example --output JSON
+```
+
+Show the security group rules of space `space_example`:
+
+```
+ibmcloud account space space_example --security-group-rules
+```
 
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
@@ -556,84 +632,3 @@ ibmcloud account user-reinvite USER_EMAIL
    <dd>The email of the user being re-invited.</dd>
 </dl>
 
-## ibmcloud app domain-cert
-{: #ibmcloud_app_domain_cert}
-
-List the certificate information of a domain.
-
-```
-ibmcloud app domain-cert DOMAIN_NAME
-```
-
-<strong>Prerequisites</strong>:  Endpoint, Login
-
-<strong>Command options</strong>:
-<dl>
-<dt>DOMAIN_NAME (required)</dt>
-<dd>The domain that hosts the certificate.</dd>
-</dl>
-
-
-<strong>Examples</strong>:
-
-View the certificate information of the domain `ibmcxo-eventconnect.com`:
-
-```
-ibmcloud app domain-cert ibmcxo-eventconnect.com
-```
-
-## ibmcloud app domain-cert-add
-{: #ibmcloud_app_domain_cert_add}
-
-Add a certificate to the specified domain in the current org.
-
-```
-ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
-```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
-
-<strong>Command options</strong>:
-   <dl>
-   <dt>DOMAIN (required)</dt>
-   <dd>The domain that the certificate is added to.</dd>
-   <dt>-k <i>PRIVATE_KEY_FILE</i> (required)</dt>
-   <dd>The private key file path.</dd>
-   <dt>-c <i>CERT_FILE</i> (required)</dt>
-   <dd>The certificate file path.</dd>
-   <dt>-p <i>PASSWORD</i> (optional)</dt>
-   <dd>The password for the certificate.</dd>
-   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (optional)</dt>
-   <dd>The intermediate certificate file path.</dd>
-   <dt>-t <i>TRUST_STORE_FILE</i> (optional)</dt>
-   <dd>The trust store file.</dd>
-   </dl>
-
-
-<strong>Examples</strong>:
-
-Add a certificate to the domain `ibmcxo-eventconnect.com`:
-
-```
-ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
-```
-
-## ibmcloud app domain-cert-remove
-{: #ibmcloud_app_domain_cert_remove}
-
-Remove a certificate from the specified domain in current org.
-
-```
-ibmcloud app domain-cert-remove DOMAIN [-f]
-```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
-
-<strong>Command options</strong>:
-
-   <dl>
-   <dt>DOMAIN (required)</dt>
-   <dd>Domain to remove the certificate from.</dd>
-   <dt>-f  (optional)</dt>
-   <dd>Force deletion without confirmation.</dd>
-   </dl>

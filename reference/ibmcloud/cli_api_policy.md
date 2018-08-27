@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-20"
 ---
 
 {:new_window: target="_blank"}
@@ -16,9 +16,8 @@ lastupdated: "2018-08-21"
 {: #ibmcloud_commands_iam}
 
 <table summary="ibmcloud commands that you can use to manage API keys and policies.">
- <caption>Table 1. Commands for managing API keys and policies</caption>
   <thead>
-  <th colspan="5">Commands for managing API keys and policies</th>
+  <th colspan="5">Use the following commands to manage API keys, service IDs,  access groups, and access/authorization policies</th>
   </thead>
   <tbody>
   <tr>
@@ -983,7 +982,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 List all service policies of specified service
 
 ```
-ibmcloud iam service-policies SERVICE_ID [--json] [-f, --force]
+ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -992,9 +991,9 @@ ibmcloud iam service-policies SERVICE_ID [--json] [-f, --force]
 <dl>
   <dt>SERVICE_ID (required)</dt>
   <dd>Name or UUID of service ID</dd>
-  <dt>-json</dt>
-  <dd>Display policy in JSON format</dd>
-  <dt>-f, --force</dt>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify service policies output format, only JSON is supported now.</dd>
+  <dt>-f, --force (optional)</dt>
   <dd>Display service policies without confirmation</dd>
 </dl>
 
@@ -1017,7 +1016,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 Display details of a service policy
 
 ```
-ibmcloud iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
+ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -1028,9 +1027,9 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
   <dd>Name or UUID of service ID</dd>
   <dt>POLICY_ID (required)</dt>
   <dd>ID of the service policy<dd>
-  <dt>-json</dt>
-  <dd>Display policy in JSON format</dd>
-  <dt>-f, --force</dt>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify service policy output format, only JSON is supported now.</dd>
+  <dt>-f, --force (optional)</dt>
   <dd>Display service policy without confirmation</dd>
 </dl>
 

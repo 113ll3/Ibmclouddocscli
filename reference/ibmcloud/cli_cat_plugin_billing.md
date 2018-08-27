@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-20"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing Catalog, Plug-ins, and Billing Settings
+# Managing Catalog, Bills and CLI Plug-ins
 {: #ibmcloud_commands_settings}
 
 <table summary="ibmcloud commands that you can use to manage the {{site.data.keyword.Bluemix_notm}} catalog, plug-ins, billing, and security settings.">
-<caption>Table 1. Commands for managing the {{site.data.keyword.Bluemix_notm}} catalog, plug-ins, billing, and security settings</caption>
  <thead>
- <th colspan="5">Commands for managing {{site.data.keyword.Bluemix_notm}} catalog, plug-ins, billing, and security settings</th>
+ <th colspan="5">Use the following commands to manage {{site.data.keyword.Bluemix_notm}} catalog, usage/bills, and CLI plugins</th>
  </thead>
  <tbody>
  <tr>
@@ -471,7 +470,7 @@ ibmcloud catalog runtimes -d
 Show monthly usage of the current account (account admin only)
 
 ```
-ibmcloud billing account-usage [-d YYYY-MM] [--json]
+ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -481,8 +480,8 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 <dl>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--json (optional)</dt>
-  <dd>Display the usage result in JSON format.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -499,7 +498,7 @@ ibmcloud billing account-usage -d 2016-06
 Show monthly usage for an org (account admin or org billing manger only)
 
 ```
-ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -511,8 +510,8 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>Name of the org.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--json (optional)</dt>
-  <dd>Display the usage result in JSON format.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 ## ibmcloud billing resource-group-usage
@@ -521,7 +520,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 Show monthly usage for a resource group (account admin or resource group admin only)
 
 ```
-ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -533,8 +532,8 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>Name of the resource group.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for the month and date specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--json (optional)</dt>
-  <dd>Display the usage result in JSON format.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 ## ibmcloud billing resource-instances-usage
@@ -543,7 +542,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 Show monthly resource instances usage under the current account.
 
 ```
-ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
+ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -557,8 +556,8 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>Filter instance by resource group.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Display data for month and date specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
-  <dt>--json (optional)</dt>
-  <dd>Display the usage result in JSON format.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>Specify output format, only JSON is supported now.</dd>
 </dl>
 
 ## ibmcloud plugin repos

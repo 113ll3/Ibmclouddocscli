@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -34,7 +34,7 @@ Use the following steps to install the stand-alone {{site.data.keyword.Bluemix_n
 
 1. Run the installer
    * For macOS and windows, just run the installer.
-   * For Linux, extract the package and run `install_bluemix_cli` script
+   * For Linux, extract the package and run the `install` script
 
 1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}}
 
@@ -42,7 +42,7 @@ Use the following steps to install the stand-alone {{site.data.keyword.Bluemix_n
    ibmcloud login
    ```
    {: codeblock}
-   
+
 Now you are ready to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `ibmcloud help` to see the command descriptions.
 
 If you are using a federated ID, follow the instructions [here](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) to log in with a one-time passcode or an API key.  
@@ -134,7 +134,7 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
 
    * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
    * For shell autocompletion support (MacOS and Linux only), refer to [this guide](enable_cli_autocompletion.html).
-   
+
 ## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
 
 The following sections provide details on how to uninstall the stand-alone {{site.data.keyword.Bluemix_notm}} CLI on specific platforms.

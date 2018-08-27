@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-20"
 ---
 
 {:new_window: target="_blank"}
@@ -16,9 +16,8 @@ lastupdated: "2018-08-21"
 {: #ibmcloud_commands_resource}
 
 <table summary="ibmcloud command that you can use to manage resource groups and resources.">
-  <caption>Table 1. Commands for managing resource groups and resources</caption>
   <thead>
-    <th colspan="5">Commands for managing resource groups and resources</th>
+    <th colspan="5">Use the following commands to manage {site.data.keyword.Bluemix_notm}} resource groups and resources</th>
   </thead>
   <tbody>
     <tr>
@@ -806,17 +805,19 @@ ibmcloud resource service-alias-delete my-service-alias
 Search resources using Lucene query syntax
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command Options</strong>:
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>Starting resource position number</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>Number of resources to return (maximum 10000)</dd>
+  <dt>-s, --sort-by</dt>
+  <dd>Property to sort by. Accepted inputs are `name`, `family`, `region`, `type`, `crn`.</dd>
 </dl>
 
 <strong>Examples</strong>:
