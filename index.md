@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Getting started with {{site.data.keyword.Bluemix_notm}} developer tools
+# Getting started with the {{site.data.keyword.Bluemix_notm}} CLI
 {: #overview}
 
-In this tutorial, you install a set of {{site.data.keyword.Bluemix}} developer tools, verify the installation, and configure your environment. {{site.data.keyword.Bluemix}} developer tools offer a command-line approach to creating, developing, and deploying end-to-end web, mobile, and microservice applications. 
+In this tutorial, you install a set of {{site.data.keyword.Bluemix}} developer tools, verify the installation, and configure your environment. {{site.data.keyword.Bluemix}} developer tools offer a command-line approach to creating, developing, and deploying end-to-end web, mobile, and microservice applications.
 {:shortdesc}
 
-With this installation, you get the {{site.data.keyword.Bluemix_notm}} CLI, plus the following tools: 
+With this installation, you get the stand-alone {{site.data.keyword.Bluemix_notm}} CLI, plus the following tools:
 
 * `Homebrew` (Mac only)
 * `Git`
@@ -39,8 +39,8 @@ With this installation, you get the {{site.data.keyword.Bluemix_notm}} CLI, plus
 
 You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and the following system requirements:
 
-* If you're using Microsoft Windows &trade;, you must use Windows 10 Pro or later.
-* You must use the stable channel for Docker with a minimum version of 1.13.1. 
+* Some functionality may not be supported if you are not running Windows 10 Pro.
+* You must use the stable channel for Docker with a minimum version of 1.13.1.
 
 ## Step 1. Run the install command
 {: #step1}
@@ -48,11 +48,11 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
 * For Mac and Linux, run the following command:
 
   ```
-  curl -sL http://ibm.biz/idt-installer | bash
+  curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-  
-* For Windows 10 Pro, run the following command as an administrator:
+
+* For Windows, run the following command as an administrator:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -61,8 +61,10 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
 
   Right-click the Windows PowerShell icon, and select **Run as administrator**.
   {: tip}
-  
-  For instructions on installing these tools manually, see [Reinstalling Tools](/docs/cli/ts_createapps.html#appendix).
+
+  You may also download the installer script from our [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+
+  For the steps to install these tools manually, see [Reinstalling tools](/docs/cli/ts_createapps.html#appendix).
 
 ## Step 2. Verify the installation
 {: #step2}
@@ -93,7 +95,7 @@ The output lists the usage instructions, the current version, and the supported 
 	```
 	{: codeblock}
     <br>
-    
+
 	If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/iam/login_fedid.html#federated_id) for more details.
 	{: tip}
 
@@ -103,17 +105,15 @@ The output lists the usage instructions, the current version, and the supported 
 	ibmcloud target --cf
 	```
 	{: codeblock}
-	
+
 	Optionally, you can use the output from the command above to manually set your org and space with the following command:
 
 	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
-	
-To report issues or provide feedback you can use the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com).  Request team access at [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Next steps
 {: #next-steps}
 
-You're now ready to develop and deploy your first app! See [Developing and deploying your apps](/docs/cli/idt/index.html) for more information.
+You're now ready to develop and deploy your first application! See [Creating and deploying apps by using the CLI](/docs/apps/create-deploy-cli.html) for more information.

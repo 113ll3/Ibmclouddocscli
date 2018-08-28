@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -33,6 +33,7 @@ Use the following {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) commands
 - [debug](#debug): Debug your application in a local container
 - [delete](#delete): Deletes an application from your space
 - [deploy](#deploy): Deploy an application to IBM Cloud
+- [diag](#diag): Displays version information about installed dependencies
 - [edit](#edit): Add or remove services from an existing application
 - [enable](#enable): Update an existing application for use with IBM Cloud Developer Tools
 - [get-credentials](#get-credentials): Gets credentials that are required by the application to enable use of connected IBM Cloud services
@@ -50,6 +51,8 @@ Use the following {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) commands
 
 ## build
 {: #build}
+
+If you are using Windows &trade;, you must be running Windows 10 Pro or later.
 
 You can build your application by using the `build` command. The `test`, `debug`, and `run` commands expect to find a compiled application so you must run a `build` operation beforehand.  
 
@@ -97,7 +100,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-Create a application, prompting for all information, including resource type, language, starter kit, and DevOps Toolchain options. The application is created in the current directory.
+Create an application, prompting for all information, including resource type, language, starter kit, and DevOps Toolchain options. The application is created in the current directory.
 
 To create an application in the current directory and to associate services with it, run the following command:
 
@@ -109,6 +112,8 @@ ibmcloud dev create
 
 ## debug
 {: #debug}
+
+If you are using Windows &trade;, you must be running Windows 10 Pro or later.
 
 You can debug your application through the `debug` command. A build must first be completed against the application by using the build command with the `--debug` argument. When you start the `debug` command, a container is started which provides a debug port or ports as defined by the `container-port-map-debug` value in the cli-config.yml or specified on the command line. Connect your favorite debugging tool to the port or ports, and you can debug your application as normal.
 
@@ -181,7 +186,7 @@ Before deploying as a Cloud Foundry application to {{site.data.keyword.Bluemix}}
 
 Before deploying an application as a container, you must locally install [Kubernetes](https://kubernetes.io/) and [Helm](https://github.com/kubernetes/helm). Be sure that the Helm client version is not newer than the Helm server version. You can find both of these by running `helm version`. We recommend using v2.4.2 for the client version.
 
-To deploy your application on Kubernetes, you must either specify the `deploy-target` as `container` in the `cli-config.yml` or use the parameter `-t container`. 
+To deploy your application on Kubernetes, you must either specify the `deploy-target` as `container` in the `cli-config.yml` or use the parameter `-t container`.
 
 Other parameters needed to configure Kubernetes deployment can also be specified in the `cli-config.yml` as seen below or by using command line arguments. If you do not define these in the `cli-config.yml`, you then must deploy with the parameter `-t container` and you will be prompted for all of the other values.
 
@@ -256,6 +261,19 @@ The following parameters can be used with the `deploy` command or by updating th
 * Usage `ibmcloud dev deploy --domain [domain]`
 
 
+## diag
+{: #diag}
+
+This command is used as a diagnostic to display the version information of installed dependencies for the {{site.data.keyword.dev_cli_notm}} CLI. This will be especially helpful to determine if you are missing any dependencies or to help in debugging problems.
+
+Run the following command to display the versions of your installed dependencies:
+
+```
+ibmcloud dev diag
+```
+{: codeblock}
+
+
 ## edit
 {: #edit}
 
@@ -268,7 +286,7 @@ ibmcloud dev edit
 
 If you have no existing services on your account, this command will show you a list of service groups from which you can select a service to connect to your application.
 
-However, if you have any existing services on your account, this command will show you a list of those services and whether each service is connected to the application or not. 
+However, if you have any existing services on your account, this command will show you a list of those services and whether each service is connected to the application or not.
 
 Selecting a connected service gives you options to either disconnect the service from your application or delete the service from your account, thus disconnecting it from all applications to which it is connected.
 
@@ -364,6 +382,8 @@ ibmcloud dev list
 ## run
 {: #run}
 
+If you are using Windows &trade;, you must be running Windows 10 Pro or later.
+
 You can run your application through the `run` command. A build must first be completed against the application by using the `build` command. When you invoke the `run` command, the run container is started and exposes the ports as defined by the `container-port-map` parameter. The `run-cmd` parameter can be used to invoke the application if the run container Dockerfile does not contain an entry point to complete this step.
 
 In order to run with multiple containers, either your application should contain a [Compose](https://docs.docker.com/compose/overview/) file, specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one. See the [Compose File](/docs/apps/projects/compose_file.html) for more information.
@@ -435,6 +455,8 @@ There are [additional parameters](#command-parameters) shared with other command
 ## shell
 {: #shell}
 
+If you are using Windows &trade;, you must be running Windows 10 Pro or later.
+
 You can open the shell inside the run or tools container with the `shell` command.
 
 By simply running this command
@@ -475,6 +497,8 @@ For example, you can run the Linux `ls` command inside of the tools container sh
 ## status
 {: #status}
 
+If you are using Windows &trade;, you must be running Windows 10 Pro or later.
+
 You can query the status of the containers that are used by the {{site.data.keyword.dev_cli_short}} CLI as defined by `container-name-run` and `container-name-tools`.
 
 Run the following command in your current application directory to check container status:
@@ -490,6 +514,8 @@ ibmcloud dev status
 
 ## stop
 {: #stop}
+
+If you are using Windows &trade;, you must be running Windows 10 Pro or later.
 
 You can stop your containers through the `stop` command.
 
@@ -523,6 +549,8 @@ The following parameters are used for the `stop` command. There are [additional 
 
 ## test
 {: #test}
+
+If you are using Windows &trade;, you must be running Windows 10 Pro or later.
 
 You can test your application through the `test` command. A build must first be completed against the application by using the `build --debug` command. The tools container is then used to invoke the `test-cmd` for the application.
 
@@ -619,7 +647,7 @@ All flags must trail the final command and will be applied to all commands to wh
 These are the commands that may be used with this feature:
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-If one command fails for any reason, the subsequent commands will not be executed. 
+If one command fails for any reason, the subsequent commands will not be executed.
 
 If any commands follow `debug` or `run`, execution will only continue if `debug` or `run` is terminated by means other than killing the process from the current terminal window. `CTRL+C` will kill the process and not run the subsequent commands. For example, you can execute `ibmcloud dev stop` from another terminal window to stop the running container and continue execution to the next command.
 
