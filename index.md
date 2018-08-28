@@ -39,7 +39,7 @@ With this installation, you get the stand-alone {{site.data.keyword.Bluemix_notm
 
 You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and the following system requirements:
 
-* Some functionality may not be supported if you are not running Windows 10 Pro.
+* If you are running Windows, some functionality may not be supported if you are not running Windows 10 Pro.
 * You must use the stable channel for Docker with a minimum version of 1.13.1.
 
 ## Step 1. Run the install command
