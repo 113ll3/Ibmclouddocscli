@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー IPSec VPN を管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー IPSec VPN の管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 
@@ -39,7 +39,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl ipsec cancel
+ ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 IPSec VPN トンネル・コンテキストを取り消します。
@@ -57,7 +57,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl ipsec config
+## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
 トンネル・コンテキストの構成を要求します。
@@ -65,7 +65,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec detail
+## ibmcloud sl ipsec detail
 {: #sl_ipsec_detail}
 
 IPSec VPN トンネル・コンテキストの詳細をリストします。
@@ -79,7 +79,7 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <dd>追加リソースを組み込みます。オプション: at、is、rs、sr、ss。</dd>
 </dl>
 
-### ibmcloud sl ipsec list
+## ibmcloud sl ipsec list
 {: #sl_ipsec_list}
 
 IPSec VPN トンネル・コンテキストをリストします。
@@ -93,7 +93,7 @@ ibmcloud sl ipsec list [OPTIONS]
 <dd>IPSEC を購入した注文の ID を基準にフィルター操作します。</dd>
 </dl>
 
-### ibmcloud sl ipsec order
+## ibmcloud sl ipsec order
 {: #sl_ipsec_order}
 
 IPSec VPN トンネルを注文します。
@@ -107,7 +107,7 @@ ibmcloud sl ipsec order [OPTIONS]
 <dd>必須。 IPSEC 用のデータ・センターの短縮名。例えば、dal09 など。</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-add
+## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
 IPSec トンネル・コンテキストにサブネットを追加します。
@@ -125,7 +125,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>作成するサブネット・ネットワーク ID。</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-remove
+## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
 IPSEC トンネル・コンテキストからサブネットを削除します。
@@ -133,7 +133,7 @@ IPSEC トンネル・コンテキストからサブネットを削除します�
 ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-add
+## ibmcloud sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
 IPSec トンネルにアドレス変換を追加します。
@@ -151,7 +151,7 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dd>注。</dd>
 </dl>
 
-### ibmcloud sl ipsec translation-remove
+## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
 IPSec から変換入力を削除します。
@@ -159,7 +159,7 @@ IPSec から変換入力を削除します。
 ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-update
+## ibmcloud sl ipsec translation-update
 {: #sl_ipsec_translation_update}
 
 IPSec のアドレス変換を更新します。
@@ -177,7 +177,7 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dd>注。</dd>
 </dl>
 
-### ibmcloud sl ipsec update
+## ibmcloud sl ipsec update
 {: #sl_ipsec_update}
 
 トンネル・コンテキストのプロパティーを更新します。

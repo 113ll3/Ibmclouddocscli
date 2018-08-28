@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 Cloud Foundry Enterprise Environments 的命令（试验性）
+# 管理 Cloud Foundry Enterprise Environments（试验性）
 {: #ibmcloud_commands_cfee}
 
 <table summary="管理 Cloud Foundry Enterprise Environments（试验性）">
@@ -28,7 +28,7 @@ lastupdated: "2018-07-27"
  </tbody>
  </table>
 
- ### ibmcloud cfee environments
+ ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
 列出 CFEE 环境。
@@ -41,7 +41,7 @@ ibmcloud cfee environments
 
 <strong>命令选项</strong>：
 
-### ibmcloud cfee environment
+## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
 显示 CFEE 环境的详细信息。

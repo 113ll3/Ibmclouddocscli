@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构 CDN 的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构 CDN
 
  <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构 CDN</caption>
@@ -37,7 +37,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl cdn cancel
+ ## ibmcloud sl cdn cancel
 {: #sl_cdn_cancel}
 
 取消 CDN 帐户。
@@ -51,7 +51,7 @@ ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONS]
 <dd>强制操作而不确认。</dd>
 </dl>
 
-### ibmcloud sl cdn detail
+## ibmcloud sl cdn detail
 {: #sl_cdn_detail}
 
 详细描述 CDN 帐户。
@@ -59,7 +59,7 @@ ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONS]
 ibmcloud sl cdn detail ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn list
+## ibmcloud sl cdn list
 {: #sl_cdn_list}
 
 列出所有 CDN 帐户。
@@ -75,7 +75,7 @@ ibmcloud sl cdn list [OPTIONS]
 <dd>按订单标识过滤。</dd>
 </dl>
 
-### ibmcloud sl cdn load
+## ibmcloud sl cdn load
 {: #sl_cdn_load}
 
 在所有边缘节点上高速缓存一个或多个文件。
@@ -83,7 +83,7 @@ ibmcloud sl cdn list [OPTIONS]
 ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### ibmcloud sl cdn order
+## ibmcloud sl cdn order
 {: #sl_cdn_order}
 
 订购 CDN 帐户。
@@ -101,7 +101,7 @@ ibmcloud sl cdn order [OPTIONS]
 <dd>强制操作而不确认。</dd>
 </dl>
 
-### ibmcloud sl cdn options
+## ibmcloud sl cdn options
 {: #sl_cdn_options}
 
 用于订购 CDN 帐户的带宽和存储选项。
@@ -109,7 +109,7 @@ ibmcloud sl cdn order [OPTIONS]
 ibmcloud sl cdn options
 ```
 
-### ibmcloud sl cdn origin-add
+## ibmcloud sl cdn origin-add
 {: #sl_cdn_origin_add}
 
 创建源提取映射。
@@ -125,7 +125,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dd>连接到映射的可选 CNAME。</dd>
 </dl>
 
-### ibmcloud sl cdn origin-list
+## ibmcloud sl cdn origin-list
 {: #sl_cdn_origin_list}
 
 列出源提取映射。
@@ -133,7 +133,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn origin-remove
+## ibmcloud sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
 除去源提取映射。
@@ -147,7 +147,7 @@ ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 <dd>强制操作而不确认。</dd>
 </dl>
 
-### ibmcloud sl cdn purge
+## ibmcloud sl cdn purge
 {: #sl_cdn_purge}
 
 清除所有边缘节点中高速缓存的文件。

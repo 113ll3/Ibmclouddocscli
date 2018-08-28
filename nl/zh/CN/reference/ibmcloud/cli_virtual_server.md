@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构虚拟服务器的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构虚拟服务器
 
 <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构虚拟服务器命令</caption>
@@ -51,7 +51,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl vs cancel
+ ## ibmcloud sl vs cancel
 {: #sl_vs_cancel}
 
 取消虚拟服务器实例。
@@ -74,7 +74,7 @@ ibmcloud sl vs cancel 12345678
 
 
 
-### ibmcloud sl vs capture
+## ibmcloud sl vs capture
 {: #sl_vs_capture}
 
 将虚拟服务器实例捕获到映像中。
@@ -98,7 +98,7 @@ ibmcloud sl vs capture 12345678 -n mycloud --all --note testing
 ```
 此命令将标识为 12345678 的虚拟服务器实例中的所有磁盘捕获到名为“mycloud”的映像中，注释为“testing”。
 
-### ibmcloud sl vs create
+## ibmcloud sl vs create
 {: #sl_vs_create}
 
 创建虚拟服务器实例。
@@ -176,7 +176,7 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ```
 此命令订购虚拟服务器实例，其主机名为 myvsi，域为 ibm.com，4 个 CPU 核心，4096M 内存，位于数据中心 dal10。
 
-### ibmcloud sl vs options
+## ibmcloud sl vs options
 {: #sl_vs_options}
 
 列出用于创建虚拟服务器实例的选项。
@@ -195,7 +195,7 @@ ibmcloud sl vs options
 
 
 
-### ibmcloud sl vs credentials
+## ibmcloud sl vs credentials
 {: #sl_vs_credentials}
 
 列出虚拟服务器实例凭证。
@@ -212,7 +212,7 @@ ibmcloud sl vs credentials 12345678
 
 
 
-### ibmcloud sl vs detail
+## ibmcloud sl vs detail
 {: #sl_vs_detail}
 
 获取虚拟服务器实例的详细信息。
@@ -237,7 +237,7 @@ ibmcloud sl vs details 12345678
 
 
 
-### ibmcloud sl vs dns-sync
+## ibmcloud sl vs dns-sync
 {: #sl_vs_dns_sync}
 
 同步虚拟服务器实例的 DNS 记录。
@@ -266,7 +266,7 @@ ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 此命令将标识为 12345678 的虚拟服务器实例的 A 记录（IP V4 地址）与 DNS 服务器同步，并将此 A 记录的 ttl 设置为 3600。
 
 
-### ibmcloud sl vs edit
+## ibmcloud sl vs edit
 {: #sl_vs_edit}
 
 编辑虚拟服务器实例的详细信息。
@@ -298,7 +298,7 @@ ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 10
 ```
 此命令更新标识为 12345678 的虚拟服务器实例，并将其域设置为“ibm.com”，主机名设置为“myapp”，标记设置为“testcli”。
 
-### ibmcloud sl vs host-create
+## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
 
 为专用虚拟服务器创建主机。
@@ -324,7 +324,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dd>强制操作而不确认。</dd>
 </dl>
 
-### ibmcloud sl vs host-list
+## ibmcloud sl vs host-list
 {: #sl_vs_host_list}
 
 列出帐户上的专用主机。
@@ -345,7 +345,7 @@ ibmcloud sl vs host-list [OPTIONS]
 <dd>按购买了此专用主机的订单的标识过滤。</dd>
 </dl>
 
-### ibmcloud sl vs list
+## ibmcloud sl vs list
 {: #sl_vs_list}
 
 列出帐户的虚拟服务器实例。
@@ -393,7 +393,7 @@ ibmcloud sl vs list --domain ibm.com --hourly --sortby memory
 ```
 此命令列出当前帐户的所有每小时计费的虚拟服务器实例，过滤域为“ibm.com”域，并按内存对其排序。
 
-### ibmcloud sl vs pause
+## ibmcloud sl vs pause
 {: #sl_vs_pause}
 
 暂停活动的虚拟服务器实例。
@@ -417,7 +417,7 @@ ibmcloud sl vs pause 12345678 -f
 
 
 
-### ibmcloud sl vs power-off
+## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
 
 关闭活动虚拟服务器实例的电源。
@@ -443,7 +443,7 @@ ibmcloud sl vs power-off 12345678 --soft
 
 
 
-### ibmcloud sl vs power-on
+## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
 
 打开虚拟服务器实例的电源。
@@ -466,7 +466,7 @@ ibmcloud sl vs power-on 12345678
 
 
 
-### ibmcloud sl vs ready
+## ibmcloud sl vs ready
 {: #sl_vs_ready}
 
 检查虚拟服务器实例是否准备就绪可供使用。
@@ -488,7 +488,7 @@ ibmcloud sl vs ready 12345678 --wait 30
 
 
 
-### ibmcloud sl vs reboot
+## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
 
 重新引导活动的虚拟服务器实例。
@@ -516,7 +516,7 @@ ibmcloud sl vs reboot 12345678 --hard
 
 
 
-### ibmcloud sl vs reload
+## ibmcloud sl vs reload
 {: #sl_vs_reload}
 
 在虚拟服务器实例上重装操作系统。
@@ -545,7 +545,7 @@ ibmcloud sl vs reload 12345678
 此命令为标识为 12345678 的虚拟服务器实例重新装入当前操作系统。
 
 
-### ibmcloud sl vs rescue
+## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
 
 将虚拟服务器实例重新引导至拯救映像。
@@ -568,7 +568,7 @@ ibmcloud sl vs rescue 12345678
 
 
 
-### ibmcloud sl vs resume
+## ibmcloud sl vs resume
 {: #sl_vs_resume}
 
 恢复暂停的虚拟服务器实例。
@@ -591,7 +591,7 @@ ibmcloud sl vs resume 12345678
 
 
 
-### ibmcloud sl vs upgrade
+## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}
 
 升级虚拟服务器实例。

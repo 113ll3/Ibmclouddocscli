@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャーのセキュリティーを管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・セキュリティーの管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・セキュリティー・コマンド</caption>
@@ -38,7 +38,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl security sshkey-add
+ ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 新規の SSH 鍵を追加します。
@@ -62,7 +62,7 @@ ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 このコマンドは、ファイル ~/.ssh/id_rsa.pub から SSH 鍵を、メモ「mykey」を付けて追加します。
 
-### ibmcloud sl security sshkey-edit
+## ibmcloud sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
 SSH 鍵を編集します。
@@ -84,7 +84,7 @@ ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
 このコマンドは、ID 12345678 の SSH 鍵を更新し、ラベルを「Bluemix」に設定し、メモを「testing」に設定します。
 
-### ibmcloud sl security sshkey-list
+## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
 
 ご使用のアカウントの SSH 鍵をリストします。
@@ -104,7 +104,7 @@ ibmcloud sl security sshkey-list --sortby label
 ```
 このコマンドは、現行アカウントのすべての SSH 鍵をリストし、それらをラベルによってソートします。
 
-### ibmcloud sl security sshkey-print
+## ibmcloud sl security sshkey-print
 {: #sl_security_sshkey_print}
 
 SSH 鍵を画面に出力します。
@@ -124,7 +124,7 @@ ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 このコマンドは、ID 12345678 の SSH 鍵の ID、ラベル、およびメモを表示し、公開鍵をファイル ~/mykey.pub に書き込みます。
 
-### ibmcloud sl security sshkey-remove
+## ibmcloud sl security sshkey-remove
 {: #sl_security_sshkey_remove}
 
 SSH 鍵を永久に削除します。
@@ -144,7 +144,7 @@ ibmcloud sl security sshkey-remove 12345678 -f
 ```
 このコマンドは、ID 12345678 の SSH 鍵を、確認を求めずに削除します。
 
-### ibmcloud sl security cert-add
+## ibmcloud sl security cert-add
 {: #sl_security_cert_add}
 
 SSL 証明書の詳細を追加してアップロードします。
@@ -172,7 +172,7 @@ ibmcloud sl security cert-add --crt ~/ibm.com.cert --key ~/ibm.com.key
 ```
 このコマンドは、ドメイン ibm.com の証明書ファイル ~/ibm.com.cert と秘密鍵ファイル ~/ibm.com.key を追加します。
 
-### ibmcloud sl security cert-edit
+## ibmcloud sl security cert-edit
 {: #sl_security_cert_edit}
 
 SSL 証明書を編集します。
@@ -200,7 +200,7 @@ ibmcloud sl security cert-edit 12345678 --key ~/ibm.com.key
 ```
 このコマンドは、ID 12345678 の証明書を編集し、ファイル ~/ibm.com.key でその秘密鍵を更新します。
 
-### ibmcloud sl security cert-download
+## ibmcloud sl security cert-download
 {: #sl_security_cert_download}
 
 SSL 証明書および鍵ファイルをダウンロードします。
@@ -215,7 +215,7 @@ ibmcloud sl security cert-download 12345678
 ```
 このコマンドは、現行ディレクトリーに ID 12345678 の証明書に関する 4 つのファイルをダウンロードします。 4 つのファイルというのは、証明書ファイル、証明書署名要求ファイル、中間証明書ファイル、および秘密鍵ファイルです。
 
-### ibmcloud sl security cert-list
+## ibmcloud sl security cert-list
 {: #sl_security_cert_list}
 
 ご使用のアカウントの SSL 証明書をリストします。
@@ -237,7 +237,7 @@ ibmcloud sl security cert-list --status valid --sortby days_until_expire
 ```
 このコマンドは、現行アカウントのすべての有効な証明書をリストし、それらを有効期限日によってソートします。
 
-### ibmcloud sl security cert-remove
+## ibmcloud sl security cert-remove
 {: #sl_security_cert_remove}
 
 SSL 証明書を削除します。

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构安全性的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构安全性
 
 <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构安全命令</caption>
@@ -38,7 +38,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl security sshkey-add
+ ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 添加新的 SSH 密钥。
@@ -64,7 +64,7 @@ ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 
 
 
-### ibmcloud sl security sshkey-edit
+## ibmcloud sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
 编辑 SSH 密钥。
@@ -88,7 +88,7 @@ ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
 
 
 
-### ibmcloud sl security sshkey-list
+## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
 
 列出帐户的 SSH 密钥。
@@ -110,7 +110,7 @@ ibmcloud sl security sshkey-list --sortby label
 
 
 
-### ibmcloud sl security sshkey-print
+## ibmcloud sl security sshkey-print
 {: #sl_security_sshkey_print}
 
 将 SSH 密钥输出到屏幕。
@@ -132,7 +132,7 @@ ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 
 
 
-### ibmcloud sl security sshkey-remove
+## ibmcloud sl security sshkey-remove
 {: #sl_security_sshkey_remove}
 
 永久除去 SSH 密钥。
@@ -154,7 +154,7 @@ ibmcloud sl security sshkey-remove 12345678 -f
 
 
 
-### ibmcloud sl security cert-add
+## ibmcloud sl security cert-add
 {: #sl_security_cert_add}
 
 添加和上传 SSL 证书详细信息。
@@ -182,7 +182,7 @@ ibmcloud sl security cert-add --crt ~/ibm.com.cert --key ~/ibm.com.key
 ```
 此命令为域 ibm.com 添加证书文件 ~/ibm.com.cert 和专用密钥文件 ~/ibm.com.key。
 
-### ibmcloud sl security cert-edit
+## ibmcloud sl security cert-edit
 {: #sl_security_cert_edit}
 
 编辑 SSL 证书。
@@ -210,7 +210,7 @@ ibmcloud sl security cert-edit 12345678 --key ~/ibm.com.key
 ```
 此命令编辑标识为 12345678 的证书，并使用 ~/ibm.com.key 文件更新其专用密钥。
 
-### ibmcloud sl security cert-download
+## ibmcloud sl security cert-download
 {: #sl_security_cert_download}
 
 下载 SSL 证书和密钥文件。
@@ -227,7 +227,7 @@ ibmcloud sl security cert-download 12345678
 
 
 
-### ibmcloud sl security cert-list
+## ibmcloud sl security cert-list
 {: #sl_security_cert_list}
 
 列出帐户的 SSL 证书。
@@ -251,7 +251,7 @@ ibmcloud sl security cert-list --status valid --sortby days_until_expire
 
 
 
-### ibmcloud sl security cert-remove
+## ibmcloud sl security cert-remove
 {: #sl_security_cert_remove}
 
 除去 SSL 证书。

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャーのイメージを管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・イメージの管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・イメージ・コマンド</caption>
@@ -29,7 +29,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl image delete
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 イメージを削除します。
@@ -42,7 +42,7 @@ ibmcloud sl image delete IDENTIFIER
 ```
 このコマンドは、ID `12345678` のイメージを削除します。
 
-### ibmcloud sl image detail
+## ibmcloud sl image detail
 {: #sl_image_detail}
 
 イメージの詳細を取得します。
@@ -55,7 +55,7 @@ ibmcloud sl image detail IDENTIFIER
 ```
 このコマンドは、ID 12345678 のイメージの詳細を取得します。
 
-### ibmcloud sl image edit
+## ibmcloud sl image edit
 {: #sl_image_edit}
 
 イメージの詳細を編集します。
@@ -79,7 +79,7 @@ ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 このコマンドは、ID `12345678` のイメージを編集し、名前を「`ubuntu16`」に設定し、メモを「`testing`」に設定し、タグを「`staging`」に設定します。
 
-### ibmcloud sl image list
+## ibmcloud sl image list
 {: #sl_image_list}
 
 ご使用のアカウントのすべてのイメージをリストします。

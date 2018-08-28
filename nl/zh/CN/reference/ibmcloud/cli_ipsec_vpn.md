@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构 IPSec VPN 的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构 IPSec VPN
 
 <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构 IPSec VPN 命令</caption>
@@ -38,7 +38,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl ipsec cancel
+ ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 取消 IPSec VPN 隧道上下文。
@@ -56,7 +56,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>强制操作而不确认。</dd>
 </dl>
 
-### ibmcloud sl ipsec config
+## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
 请求隧道上下文的配置。
@@ -64,7 +64,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec detail
+## ibmcloud sl ipsec detail
 {: #sl_ipsec_detail}
 
 列出 IPSec VPN 隧道上下文详细信息。
@@ -78,7 +78,7 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <dd>包含其他资源，选项为：at、is、rs、sr 或 ss。</dd>
 </dl>
 
-### ibmcloud sl ipsec list
+## ibmcloud sl ipsec list
 {: #sl_ipsec_list}
 
 列出 IPSec VPN 隧道上下文。
@@ -92,7 +92,7 @@ ibmcloud sl ipsec list [OPTIONS]
 <dd>按购买了 IPSec 的订单的标识过滤。</dd>
 </dl>
 
-### ibmcloud sl ipsec order
+## ibmcloud sl ipsec order
 {: #sl_ipsec_order}
 
 订购 IPSec VPN 隧道。
@@ -106,7 +106,7 @@ ibmcloud sl ipsec order [OPTIONS]
 <dd>必需。IPSec 的数据中心的短名称，例如 dal09。</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-add
+## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
 向 IPSec 隧道上下文添加子网。
@@ -124,7 +124,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>要创建的子网标识。</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-remove
+## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
 从 IPSec 隧道上下文中除去子网。
@@ -132,7 +132,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-add
+## ibmcloud sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
 向 IPSec 隧道添加地址转换。
@@ -150,7 +150,7 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dd>注释。</dd>
 </dl>
 
-### ibmcloud sl ipsec translation-remove
+## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
 从 IPSec 中除去转换条目。
@@ -158,7 +158,7 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-update
+## ibmcloud sl ipsec translation-update
 {: #sl_ipsec_translation_update}
 
 更新 IPSec 的地址转换。
@@ -176,7 +176,7 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dd>注释。</dd>
 </dl>
 
-### ibmcloud sl ipsec update
+## ibmcloud sl ipsec update
 {: #sl_ipsec_update}
 
 更新隧道上下文属性。

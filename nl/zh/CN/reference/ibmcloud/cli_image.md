@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构映像的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构映像
 
 <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构映像命令</caption>
@@ -29,7 +29,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl image delete
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 删除映像。
@@ -44,7 +44,7 @@ ibmcloud sl image delete IDENTIFIER
 
 
 
-### ibmcloud sl image detail
+## ibmcloud sl image detail
 {: #sl_image_detail}
 
 获取映像的详细信息。
@@ -59,7 +59,7 @@ ibmcloud sl image detail IDENTIFIER
 
 
 
-### ibmcloud sl image edit
+## ibmcloud sl image edit
 {: #sl_image_edit}
 
 编辑映像的详细信息。
@@ -86,7 +86,7 @@ ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 
 
 
-### ibmcloud sl image list
+## ibmcloud sl image list
 {: #sl_image_list}
 
 列出帐户的所有映像。

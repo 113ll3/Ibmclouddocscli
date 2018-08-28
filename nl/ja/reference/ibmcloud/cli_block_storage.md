@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャーのブロック・ストレージを管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ブロック・ストレージの管理
 
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ブロック・ストレージ</caption>
@@ -57,7 +57,7 @@ lastupdated: "2018-07-31"
 </tbody>
 </table>
 
-### ibmcloud sl block access-authorize
+## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
 指定されたボリュームへのホストのアクセスを許可します。
@@ -83,7 +83,7 @@ ibmcloud sl block access-authorize 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーが、ID 12345678 のボリュームにアクセスすることを許可します。
 
-### ibmcloud sl block access-list
+## ibmcloud sl block access-list
 {: #sl_block_access_list}
 
 ACL をリストします。
@@ -105,7 +105,7 @@ ibmcloud sl block access-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームへのアクセスを許可されているすべてのホストをリストし、それらを ID によってソートします。
 
-### ibmcloud sl block access-password
+## ibmcloud sl block access-password
 {: #sl_block_access_password}
 
 ボリュームのアクセスのためのパスワードを変更します。
@@ -113,7 +113,7 @@ ibmcloud sl block access-list 12345678 --sortby id
 ibmcloud sl block access-password ACCESS_ID PASSWORD
 ```
 
-### ibmcloud sl block access-revoke
+## ibmcloud sl block access-revoke
 {: #sl_block_access_revoke}
 
 指定されたボリュームにアクセスするホストの許可を取り消します。
@@ -139,7 +139,7 @@ ibmcloud sl block access-revoke 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーの、ID 12345678 のボリュームへのアクセスを取り消します。
 
-### ibmcloud sl block replica-failback
+## ibmcloud sl block replica-failback
 {: #sl_block_replica_failback}
 
 レプリカからブロック・ボリュームをフェイルバックします。
@@ -154,7 +154,7 @@ ibmcloud sl block replica-failback 12345678
 ```
 このコマンドは、ID 12345678 のボリュームのフェイルバック操作を実行します。
 
-### ibmcloud sl block replica-failover
+## ibmcloud sl block replica-failover
 {: #sl_block_replica_failover}
 
 ブロック・ボリュームを、指定されたレプリカ・ボリュームにフェイルオーバーします。
@@ -169,7 +169,7 @@ ibmcloud sl block replica-failover 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームの、ID 87654321 のレプリカ・ボリュームへのフェイルオーバー操作を実行します。
 
-### ibmcloud sl block replica-locations
+## ibmcloud sl block replica-locations
 {: #sl_block_replica_locations}
 
 指定されたボリュームに適切な複製データ・センターをリストします。
@@ -184,7 +184,7 @@ ibmcloud sl block replica-locations 12345678
 ```
 このコマンドは、ID 12345678 のブロック・ボリュームの適切な複製データ・センターをリストします。
 
-### ibmcloud sl block replica-order
+## ibmcloud sl block replica-order
 {: #sl_block_replica_order}
 
 ブロック・ストレージ・レプリカ・ボリュームを注文します。
@@ -214,7 +214,7 @@ ibmcloud sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LI
 ```
 このコマンドは、ID 12345678 のボリュームのレプリカを注文します。このレプリカは、毎日の複製を実行し、dal09 にあり、層レベルは 4、OS タイプは Linux です。
 
-### ibmcloud sl block replica-partners
+## ibmcloud sl block replica-partners
 {: #sl_block_replica_partners}
 
 ブロック・ボリュームの既存のレプリカ・ボリュームをリストします。
@@ -229,7 +229,7 @@ ibmcloud sl block replica-partners 12345678
 ```
 このコマンドは、ID 12345678 のブロック・ボリュームの既存のレプリカ・ボリュームをリストします。
 
-### ibmcloud sl block snapshot-cancel
+## ibmcloud sl block snapshot-cancel
 {: #sl_block_snapshot_cancel}
 
 指定されたボリュームの既存のスナップショット・スペースを取り消します。
@@ -253,7 +253,7 @@ ibmcloud sl block snapshot-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のスナップショットを、確認を要求せず、即時に取り消します。
 
-### ibmcloud sl block snapshot-create
+## ibmcloud sl block snapshot-create
 {: #sl_block_snapshot_create}
 
 指定されたボリュームにスナップショットを作成します。
@@ -273,7 +273,7 @@ ibmcloud sl block snapshot-create 12345678 --note snapshotforibmcloud
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを、snapshotforibmcloud の追加メモと共に作成します。
 
-### ibmcloud sl block snapshot-disable
+## ibmcloud sl block snapshot-disable
 {: #sl_block_snapshot_disable}
 
 指定されたスケジュールでの指定されたボリュームのスナップショットを無効にします。
@@ -293,7 +293,7 @@ ibmcloud sl block snapshot-disable 12345678 -s DAILY
 ```
 このコマンドは、ID 12345678 のボリュームの毎日のスナップショットを無効にします。
 
-### ibmcloud sl block snapshot-enable
+## ibmcloud sl block snapshot-enable
 {: #sl_block_snapshot_enable}
 
 指定されたスケジュールで指定されたボリュームのスナップショットを有効にします。
@@ -321,7 +321,7 @@ ibmcloud sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを有効にします。スナップショットは、毎週日曜日の 2:00 に取られ、最高 5 個のスナップショットが保持されます。
 
-### ibmcloud sl block snapshot-delete
+## ibmcloud sl block snapshot-delete
 {: #sl_block_snapshot_delete}
 
 指定されたボリュームのスナップショットを削除します。
@@ -336,7 +336,7 @@ ibmcloud sl block snapshot-delete 12345678
 ```
 このコマンドは、ID 12345678 のスナップショットを削除します。
 
-### ibmcloud sl block snapshot-list
+## ibmcloud sl block snapshot-list
 {: #sl_block_snapshot_list}
 
 ブロック・ストレージ・スナップショットをリストします。
@@ -356,7 +356,7 @@ ibmcloud sl block snapshot-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームのすべてのスナップショットをリストし、それらを ID によってソートします。
 
-### ibmcloud sl block snapshot-order
+## ibmcloud sl block snapshot-order
 {: #sl_block_snapshot_order}
 
 ブロック・ストレージ・ボリュームのスナップショット・スペースを注文します。
@@ -384,7 +384,7 @@ ibmcloud sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショット・スペースを注文します。サイズは 1000 GB、階層レベルは 1 GB 当たり 4 IOPS です。
 
-### ibmcloud sl block snapshot-restore
+## ibmcloud sl block snapshot-restore
 {: #sl_block_snapshot_restore}
 
 指定されたスナップショットを使用してブロック・ボリュームをリストアします。
@@ -399,7 +399,7 @@ ibmcloud sl block snapshot-restore 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームを、ID 87654321 のスナップショットからリストアします。
 
-### ibmcloud sl block volume-cancel
+## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
 既存のブロック・ストレージ・ボリュームを取り消します。
@@ -423,7 +423,7 @@ ibmcloud sl block volume-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のボリュームを、確認を要求せず、即時に取り消します。
 
-### ibmcloud sl block volume-count
+## ibmcloud sl block volume-count
 {: #sl_block_volume_count}
 
 データ・センターごとのブロック・ストレージ・ボリュームの数をリストします。
@@ -437,7 +437,7 @@ ibmcloud sl block volume-count [OPTIONS]
 <dd>データ・センターの短縮名を基準にフィルター操作します。</dd>
 </dl>
 
-### ibmcloud sl block volume-list
+## ibmcloud sl block volume-list
 {: #sl_block_volume_list}
 
 ブロック・ストレージをリストします。
@@ -467,7 +467,7 @@ ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 このコマンドは、dal09 にある、現行アカウントのすべてのエンデュランス・ボリュームをリストし、それらを容量によってソートします。
 
-### ibmcloud sl block volume-set-lun-id
+## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}
 
 既存のブロック・ストレージ・ボリュームで LUN ID を設定します。
@@ -475,7 +475,7 @@ ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ibmcloud sl block volume-set-lun-id VOLUME_ID LUN_ID
 ```
 
-### ibmcloud sl block volume-detail
+## ibmcloud sl block volume-detail
 {: #sl_block_volume_detail}
 
 指定されたボリュームの詳細を表示します。
@@ -490,7 +490,7 @@ ibmcloud sl block volume-detail 12345678
 ```
 このコマンドは、ID 12345678 のボリュームの詳細を表示します。
 
-### ibmcloud sl block volume-duplicate
+## ibmcloud sl block volume-duplicate
 {: #sl_block_volume_duplicate}
 
 既存のボリュームを複写してブロック・ボリュームを注文します。
@@ -520,7 +520,7 @@ ibmcloud sl block volume-duplicate 12345678
 ```
 このコマンドは、ID 12345678 のボリュームを複写して新規ボリュームを注文します。
 
-### ibmcloud sl block volume-order
+## ibmcloud sl block volume-order
 {: #sl_block_volume_order}
 
 ブロック・ストレージ・ボリュームを注文します。
@@ -554,7 +554,7 @@ ibmcloud sl block volume-order --storage-type performance --size 1000 --iops 400
 ```
 このコマンドは、サイズが 1000 GB、IOPS が 4000、OS タイプが LINUX、ロケーションが dal09 のパフォーマンス・ボリュームを注文します。
 
-### ibmcloud sl block volume-options
+## ibmcloud sl block volume-options
 {: #sl_block_volume_options}
 
 ブロック・ストレージの注文に関するすべてのオプションをリストします。

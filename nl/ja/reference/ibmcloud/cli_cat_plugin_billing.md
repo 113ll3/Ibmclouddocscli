@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# カタログ、プラグイン、および請求処理の設定を管理するためのコマンド
+# カタログ、プラグイン、および請求処理の設定の管理
 {: #ibmcloud_commands_settings}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するために使用できる ibmcloud コマンド">
@@ -64,7 +64,7 @@ lastupdated: "2018-07-26"
  </tbody>
  </table>
 
- ### ibmcloud catalog search
+ ## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
 カタログ項目を検索します
@@ -107,7 +107,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 ibmcloud catalog search -k service -q 'Automation test'
 ```
 
-### ibmcloud catalog entry
+## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
 カタログ項目を取得します
@@ -136,7 +136,7 @@ ID `a0ef1-d3b4j0` の項目を取得します
 ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-create
+## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 新しいカタログ項目を作成します (アカウントのカタログ管理者のみ)
 
@@ -164,7 +164,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-update
+## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
 既存のカタログ項目を更新します (アカウントのカタログ管理者またはエディターのみ)
 
@@ -190,7 +190,7 @@ JSON ファイルからリソース `j402-dnf1i` を更新します
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
 
-### ibmcloud catalog entry-delete
+## ibmcloud catalog entry-delete
 {: #ibmcloud_catalog_entry_delete}
 カタログ項目を削除します (アカウントのカタログ管理者のみ)
 ```
@@ -213,7 +213,7 @@ ibmcloud catalog entry-delete ID [--global]
 ibmcloud catalog delete 'j402-dnf1i'
 ```
 
-### ibmcloud catalog entry-visibility
+## ibmcloud catalog entry-visibility
 {: #ibmcloud_catalog_entry_visibility}
 カタログ項目の可視性を取得します (アカウントのカタログ管理者のみ)
 
@@ -239,7 +239,7 @@ ibmcloud catalog entry-visibility ID [--global]
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
 
-### ibmcloud catalog entry-visibility-set
+## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
 既存のカタログ項目の可視性を更新します (アカウントのカタログ管理者のみ)
 
@@ -280,7 +280,7 @@ JSON ファイルからリソース `j402-dnf1i` の可視性を設定します
 ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
-### ibmcloud catalog service-marketplace
+## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
 マーケットプレイス内のサービス・オファリングをリストします
 
@@ -308,7 +308,7 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ibmcloud catalog service-marketplace --global
 ```
 
-### ibmcloud catalog templates
+## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 {{site.data.keyword.Bluemix_notm}} のボイラープレート・テンプレートを表示します。
@@ -327,7 +327,7 @@ ibmcloud catalog templates [-d]
 も表示されます。 それ以外の場合、各テンプレートの ID および名前のみが表示されます。</dd>
    </dl>
 
-### ibmcloud catalog template
+## ibmcloud catalog template
 {: #ibmcloud_catalog_template}
 
 指定されたボイラープレート・テンプレートの詳細情報を表示します。
@@ -354,7 +354,7 @@ ibmcloud catalog template TEMPLATE_ID
 ibmcloud catalog template mobileBackendStarter
 ```
 
-### ibmcloud catalog template-run
+## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
 指定されたテンプレートをベースにした、指定された URL と説明を持つ cf アプリケーションを作成します。 デフォルトでは、この新規アプリケーションは自動的に開始されます。
@@ -400,7 +400,7 @@ ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluem
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-### ibmcloud catalog locations
+## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
 
 選択されたフォーマットで地域の選択サブセットを取得します。
@@ -426,7 +426,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>CSV ファイルを出力します</dd>
 </dl>
 
-### ibmcloud catalog runtime
+## ibmcloud catalog runtime
 {: #ibmcloud_catalog_runtime}
 
 ランタイムの詳細を表示します。 このコマンドは、パブリック・クラウドにのみ使用可能です。
@@ -443,7 +443,7 @@ ibmcloud catalog runtime RUNTIME_ID
 catalog runtime nodejsHelloWorld
 ```
 
-### ibmcloud catalog runtimes
+## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 すべてのランタイムをリストします。 このコマンドは、パブリック・クラウドにのみ使用可能です。
@@ -467,7 +467,7 @@ ibmcloud catalog runtimes [-d]
 ibmcloud catalog runtimes -d
 ```
 
-### ibmcloud billing account-usage
+## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
 現行アカウントの月々の使用量を表示します (アカウント管理者のみ)
@@ -495,7 +495,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 ibmcloud billing account-usage -d 2016-06
 ```
 
-### ibmcloud billing org-usage
+## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
 組織の月々の使用量を表示します (アカウント管理者または組織の請求管理者のみ)
@@ -517,7 +517,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>使用量の結果を JSON 形式で表示します。</dd>
 </dl>
 
-### ibmcloud billing resource-group-usage
+## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
 リソース・グループの月々の使用量を表示します (アカウント管理者またはリソース・グループ管理者のみ)
@@ -539,7 +539,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>使用量の結果を JSON 形式で表示します。</dd>
 </dl>
 
-### ibmcloud billing resource-instances-usage
+## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
 現行アカウントの月次リソース・インスタンス使用量を表示します。
@@ -563,7 +563,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>使用量の結果を JSON 形式で表示します。</dd>
 </dl>
 
-### ibmcloud plugin repos
+## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
 {{site.data.keyword.Bluemix_notm}} CLI に登録されているすべてのプラグイン・リポジトリーをリストします。
@@ -574,7 +574,7 @@ ibmcloud plugin repos
 
 <strong>前提条件</strong>: なし
 
-### ibmcloud plugin repo-add
+## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
 
 新規プラグイン・リポジトリーを {{site.data.keyword.Bluemix_notm}} CLI に追加します。
@@ -603,7 +603,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
-### ibmcloud plugin repo-remove
+## ibmcloud plugin repo-remove
 {: #ibmcloud_plugin_repo_remove}
 
 {{site.data.keyword.Bluemix_notm}} CLI からプラグイン・リポジトリーを削除します。
@@ -628,7 +628,7 @@ ibmcloud plugin repo-remove REPO_NAME
 ibmcloud plugin repo-remove bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugins
+## ibmcloud plugin repo-plugins
 {: #ibmcloud_plugin_repo_plugins}
 
 追加されたすべてのリポジトリーまたは特定のリポジトリー内にある使用可能なプラグインをすべてリストします。
@@ -660,7 +660,7 @@ ibmcloud plugin repo-plugins
 ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugin
+## ibmcloud plugin repo-plugin
 {: #ibmcloud_plugin_repo_plugin}
 
 リポジトリー内のプラグインの詳細を表示します。
@@ -692,7 +692,7 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-### ibmcloud plugin list
+## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
 
 {{site.data.keyword.Bluemix_notm}} CLI 内のインストールされたプラグインをすべてリストします。
@@ -703,7 +703,7 @@ ibmcloud plugin list
 
 <strong>前提条件</strong>: なし
 
-### ibmcloud plugin show
+## ibmcloud plugin show
 {: #ibmcloud_plugin_show}
 
 インストールされたプラグインの詳細を表示します。
@@ -714,7 +714,7 @@ ibmcloud plugin show PLUGIN-NAME
 
 <strong>前提条件</strong>: なし
 
-### ibmcloud plugin install
+## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
 指定したパスまたはリポジトリーから、特定のバージョンのプラグインを {{site.data.keyword.Bluemix_notm}} CLI にインストールします。
@@ -780,7 +780,7 @@ ibmcloud plugin install container-service
 ibmcloud plugin install container-service -v 0.1.425
 ```
 
-### ibmcloud plugin update
+## ibmcloud plugin update
 {: #ibmcloud_plugin_update}
 
 リポジトリーからプラグインをアップグレードします。
@@ -832,7 +832,7 @@ ibmcloud plugin update container-service
 ibmcloud plugin update container-service -v 0.1.440
 ```
 
-### ibmcloud plugin uninstall
+## ibmcloud plugin uninstall
 {: #ibmcloud_plugin_uninstall}
 
 指定されたプラグインを {{site.data.keyword.Bluemix_notm}} CLI からアンインストールします。

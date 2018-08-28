@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -42,7 +42,7 @@ lastupdated: "2018-07-17"
 * Microsoft Windows&trade; を使用する場合、Windows 10 Pro 以降を使用する必要があります。
 * Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。 
 
-## ステップ 1: インストール・コマンドの実行
+## ステップ 1. インストール・コマンドの実行
 {: #step1}
 
 * Mac および Linux の場合、次のコマンドを実行します。
@@ -64,7 +64,7 @@ lastupdated: "2018-07-17"
   
   これらのツールを手動でインストールする方法については、[ツールの再インストール](/docs/cli/ts_createapps.html#appendix)を参照してください。
 
-## ステップ 2: インストールの検証
+## ステップ 2. インストールの検証
 {: #step2}
 
 CLI と開発者ツールが正常にインストールされたことを検証するには、`help` コマンドを実行します。
@@ -76,7 +76,7 @@ ibmcloud dev help
 <br>
 出力には、使用方法の説明、現行バージョン、およびサポートされるコマンドがリストされます。
 
-## ステップ 3: 環境の構成
+## ステップ 3. 環境の構成
 {: #step3}
 
 1. ご使用の {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、以下のコマンドを入力します。
@@ -111,7 +111,7 @@ ibmcloud dev help
 	```
 	{: codeblock}
 	
-問題を報告したり、フィードバックを提供したりするには、[IBM Cloud Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com) ([ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/)でチーム・アクセスを要求) を使用できます。
+問題を報告したり、フィードバックを提供したりするには、[IBM Cloud Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com)を使用できます。[https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") で、チーム・アクセスを要求します。
 
 ## 次のステップ
 {: #next-steps}

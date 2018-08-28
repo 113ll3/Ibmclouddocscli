@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构块存储器的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构块存储器
 
  <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构块存储器</caption>
@@ -57,7 +57,7 @@ lastupdated: "2018-07-31"
 </tbody>
 </table>
 
-### ibmcloud sl block access-authorize
+## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
 授权主机访问给定卷。
@@ -85,7 +85,7 @@ ibmcloud sl block access-authorize 12345678 --virtual-id 87654321
 
 
 
-### ibmcloud sl block access-list
+## ibmcloud sl block access-list
 {: #sl_block_access_list}
 
 列出 ACL。
@@ -109,7 +109,7 @@ ibmcloud sl block access-list 12345678 --sortby id
 
 
 
-### ibmcloud sl block access-password
+## ibmcloud sl block access-password
 {: #sl_block_access_password}
 
 更改卷访问的密码。
@@ -117,7 +117,7 @@ ibmcloud sl block access-list 12345678 --sortby id
 ibmcloud sl block access-password ACCESS_ID PASSWORD
 ```
 
-### ibmcloud sl block access-revoke
+## ibmcloud sl block access-revoke
 {: #sl_block_access_revoke}
 
 撤销主机访问给定卷的授权。
@@ -145,7 +145,7 @@ ibmcloud sl block access-revoke 12345678 --virtual-id 87654321
 
 
 
-### ibmcloud sl block replica-failback
+## ibmcloud sl block replica-failback
 {: #sl_block_replica_failback}
 
 从副本对块卷执行故障恢复操作。
@@ -162,7 +162,7 @@ ibmcloud sl block replica-failback 12345678
 
 
 
-### ibmcloud sl block replica-failover
+## ibmcloud sl block replica-failover
 {: #sl_block_replica_failover}
 
 从块卷故障转移到给定的副本卷。
@@ -179,7 +179,7 @@ ibmcloud sl block replica-failover 12345678 87654321
 
 
 
-### ibmcloud sl block replica-locations
+## ibmcloud sl block replica-locations
 {: #sl_block_replica_locations}
 
 列出给定卷的适用复制数据中心。
@@ -196,7 +196,7 @@ ibmcloud sl block replica-locations 12345678
 
 
 
-### ibmcloud sl block replica-order
+## ibmcloud sl block replica-order
 {: #sl_block_replica_order}
 
 订购块存储器副本卷。
@@ -228,7 +228,7 @@ ibmcloud sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LI
 
 
 
-### ibmcloud sl block replica-partners
+## ibmcloud sl block replica-partners
 {: #sl_block_replica_partners}
 
 列出块卷的现有副本卷。
@@ -245,7 +245,7 @@ ibmcloud sl block replica-partners 12345678
 
 
 
-### ibmcloud sl block snapshot-cancel
+## ibmcloud sl block snapshot-cancel
 {: #sl_block_snapshot_cancel}
 
 取消给定卷的现有快照空间。
@@ -271,7 +271,7 @@ ibmcloud sl block snapshot-cancel 12345678 --immediate -f
 
 
 
-### ibmcloud sl block snapshot-create
+## ibmcloud sl block snapshot-create
 {: #sl_block_snapshot_create}
 
 创建给定卷的快照。
@@ -291,7 +291,7 @@ ibmcloud sl block snapshot-create 12345678 --note snapshotforibmcloud
 ```
 此命令创建标识为 12345678 的卷的快照，并添加注释 snapshotforibmcloud。
 
-### ibmcloud sl block snapshot-disable
+## ibmcloud sl block snapshot-disable
 {: #sl_block_snapshot_disable}
 
 禁止按指定安排生成给定卷的快照。
@@ -313,7 +313,7 @@ ibmcloud sl block snapshot-disable 12345678 -s DAILY
 
 
 
-### ibmcloud sl block snapshot-enable
+## ibmcloud sl block snapshot-enable
 {: #sl_block_snapshot_enable}
 
 允许按指定安排生成给定卷的快照。
@@ -343,7 +343,7 @@ ibmcloud sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 
 
 
-### ibmcloud sl block snapshot-delete
+## ibmcloud sl block snapshot-delete
 {: #sl_block_snapshot_delete}
 
 删除给定卷的快照。
@@ -360,7 +360,7 @@ ibmcloud sl block snapshot-delete 12345678
 
 
 
-### ibmcloud sl block snapshot-list
+## ibmcloud sl block snapshot-list
 {: #sl_block_snapshot_list}
 
 列出块存储器快照。
@@ -382,7 +382,7 @@ ibmcloud sl block snapshot-list 12345678 --sortby id
 
 
 
-### ibmcloud sl block snapshot-order
+## ibmcloud sl block snapshot-order
 {: #sl_block_snapshot_order}
 
 为块存储卷订购快照空间。
@@ -412,7 +412,7 @@ ibmcloud sl block snapshot-order 12345678 -s 1000 -t 4
 
 
 
-### ibmcloud sl block snapshot-restore
+## ibmcloud sl block snapshot-restore
 {: #sl_block_snapshot_restore}
 
 使用给定快照复原块卷。
@@ -429,7 +429,7 @@ ibmcloud sl block snapshot-restore 12345678 87654321
 
 
 
-### ibmcloud sl block volume-cancel
+## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
 取消现有块存储卷。
@@ -455,7 +455,7 @@ ibmcloud sl block volume-cancel 12345678 --immediate -f
 
 
 
-### ibmcloud sl block volume-count
+## ibmcloud sl block volume-count
 {: #sl_block_volume_count}
 
 列出每个数据中心的块存储卷数。
@@ -469,7 +469,7 @@ ibmcloud sl block volume-count [OPTIONS]
 <dd>按数据中心短名称过滤。</dd>
 </dl>
 
-### ibmcloud sl block volume-list
+## ibmcloud sl block volume-list
 {: #sl_block_volume_list}
 
 列出块存储器。
@@ -502,7 +502,7 @@ ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 
 
 
-### ibmcloud sl block volume-set-lun-id
+## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}
 
 在现有块存储卷上设置 LUN 标识。
@@ -510,7 +510,7 @@ ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ibmcloud sl block volume-set-lun-id VOLUME_ID LUN_ID
 ```
 
-### ibmcloud sl block volume-detail
+## ibmcloud sl block volume-detail
 {: #sl_block_volume_detail}
 
 显示指定卷的详细信息。
@@ -527,7 +527,7 @@ ibmcloud sl block volume-detail 12345678
 
 
 
-### ibmcloud sl block volume-duplicate
+## ibmcloud sl block volume-duplicate
 {: #sl_block_volume_duplicate}
 
 通过复制现有卷来订购块卷。
@@ -559,7 +559,7 @@ ibmcloud sl block volume-duplicate 12345678
 
 
 
-### ibmcloud sl block volume-order
+## ibmcloud sl block volume-order
 {: #sl_block_volume_order}
 
 订购块存储卷。
@@ -594,7 +594,7 @@ ibmcloud sl block volume-order --storage-type performance --size 1000 --iops 400
 此命令订购性能卷，大小为 1000 GB，IOPS 为 4000，操作系统类型为 LINUX，位于 dal09。
 
 
-### ibmcloud sl block volume-options
+## ibmcloud sl block volume-options
 {: #sl_block_volume_options}
 
 列出用于订购块存储器的所有选项。

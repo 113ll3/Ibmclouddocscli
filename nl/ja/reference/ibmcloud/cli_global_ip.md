@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP を管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP の管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP コマンド</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl globalip assign
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 グローバル IP をターゲットのルーターまたはデバイスに割り当てます。
@@ -45,7 +45,7 @@ ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
 このコマンドは、ID 12345678 の IP アドレスを、IP アドレス 9.111.123.456 のターゲット・デバイスに割り当てます。
 
-### ibmcloud sl globalip cancel
+## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
 
 グローバル IP を取り消します。
@@ -65,7 +65,7 @@ ibmcloud sl globalip cancel 12345678
 ```
 このコマンドは、ID 12345678 の IP アドレスを取り消します。
 
- ### ibmcloud sl globalip create
+ ## ibmcloud sl globalip create
 {: #sl_globalip_create}
 
 グローバル IP を作成します。
@@ -89,7 +89,7 @@ ibmcloud sl globalip create --v6
 ```
 このコマンドは、IP V6 アドレスを作成します。
 
-### ibmcloud sl globalip list
+## ibmcloud sl globalip list
 {: #sl_globalip_list}
 
 アカウントのすべてのグローバル IP をリストします。
@@ -113,7 +113,7 @@ ibmcloud sl globalip list --v4
 ```
 このコマンドは、現行アカウントのすべての IP V4 アドレスをリストします。
 
-### ibmcloud sl globalip unassign
+## ibmcloud sl globalip unassign
 {: #sl_globalip_unassign}
 
 ターゲットのルーターまたはデバイスからグローバル IP を割り当て解除します。

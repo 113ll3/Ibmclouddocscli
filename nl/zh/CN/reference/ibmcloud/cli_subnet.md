@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构子网的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构子网
 
 <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构子网命令</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl subnet cancel
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 取消子网。
@@ -52,7 +52,7 @@ ibmcloud sl subnet cancel 12345678 -f
 
 
 
-### ibmcloud sl subnet create
+## ibmcloud sl subnet create
 {: #sl_subnet_create}
 
 向帐户添加新的子网。
@@ -79,7 +79,7 @@ ibmcloud sl subnet create public 16 567
 
 
 
-### ibmcloud sl subnet detail
+## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
 
 获取子网的详细信息。
@@ -104,7 +104,7 @@ ibmcloud sl subnet detail 12345678
 
 
 
-### ibmcloud sl subnet list
+## ibmcloud sl subnet list
 {: #sl_subnet_list}
 
 列出帐户的所有子网。
@@ -142,7 +142,7 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 
 
 
-### ibmcloud sl subnet lookup
+## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
 
 查找 IP 地址并显示其子网和设备信息。

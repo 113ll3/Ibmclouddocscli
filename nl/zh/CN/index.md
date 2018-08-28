@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -42,7 +42,7 @@ lastupdated: "2018-07-17"
 * 如果使用的是 Microsoft Windows&trade;，那么必须使用 Windows 10 专业版或更高版本。
 * 您必须使用 Docker 的稳定通道，最低版本为 1.13.1。 
 
-## 步骤 1：运行安装命令
+## 步骤 1. 运行安装命令
 {: #step1}
 
 * 对于 Mac 和 Linux，请运行以下命令：
@@ -64,7 +64,7 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
   
   有关手动安装这些工具的指示信息，请参阅[重新安装工具](/docs/cli/ts_createapps.html#appendix)。
 
-## 步骤 2：验证安装
+## 步骤 2. 验证安装
 {: #step2}
 
 要验证是否已成功安装 CLI 和开发者工具，请运行 `help` 命令：
@@ -76,7 +76,7 @@ ibmcloud dev help
 <br>
 输出会列出用法指示信息、当前版本和支持的命令。
 
-## 步骤 3：配置环境
+## 步骤 3. 配置环境
 {: #step3}
 
 1. 连接到您的 {{site.data.keyword.Bluemix_notm}} 区域中的 API 端点。例如，输入以下命令来连接到 {{site.data.keyword.Bluemix_notm}} 美国南部区域：
@@ -111,7 +111,7 @@ ibmcloud dev help
 	```
 	{: codeblock}
 	
-要报告问题或提供反馈，可以使用 [IBM Cloud Tech 的 Slack - #developer-tools 通道](https://ibm-cloud-tech.slack.com) - 请求团队访问[此处](https://slack-invite-ibm-cloud-tech.mybluemix.net/)。
+要报告问题或提供反馈，可以使用 [IBM Cloud Tech 的 Slack - #developer-tools 通道](https://ibm-cloud-tech.slack.com)。在 [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 请求团队访问。
 
 ## 后续步骤
 {: #next-steps}

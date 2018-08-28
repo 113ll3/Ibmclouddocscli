@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理资源组和资源的命令
+# 管理资源组和资源
 {: #ibmcloud_commands_resource}
 
 <table summary="可用于管理资源组和资源的 ibmcloud 命令。">
@@ -72,7 +72,7 @@ lastupdated: "2018-07-26"
   </tbody>
 </table>
 
-### ibmcloud resource groups
+## ibmcloud resource groups
 {: #ibmcloud_resource_groups}
 
 列出资源组。
@@ -103,7 +103,7 @@ ibmcloud resource groups
 ibmcloud resource groups --default
 ```
 
-### ibmcloud resource group
+## ibmcloud resource group
 {: #ibmcloud_resource_group}
 
 显示资源组的详细信息
@@ -136,7 +136,7 @@ ibmcloud resource group example-group
 ibmcloud resource group example-group --id
 ```
 
-### ibmcloud resource group-create
+## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
 创建资源组
@@ -157,7 +157,7 @@ ibmcloud resource group-create NAME QUOTA_NAME
 ibmcloud resource group-create example-group free
 ```
 
-### ibmcloud resource group-update
+## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
 更新现有资源组
@@ -194,7 +194,7 @@ ibmcloud resource group-update example-group -n trial-group
 ibmcloud resource group-update example-group -q free
 ```
 
-### ibmcloud resource quotas
+## ibmcloud resource quotas
 {: #ibmcloud_resource_quotas}
 
 列出所有配额定义
@@ -217,7 +217,7 @@ ibmcloud resource quotas
 ibmcloud resource quotas
 ```
 
-### ibmcloud resource quota
+## ibmcloud resource quota
 {: #ibmcloud_resource_quota}
 
 显示配额定义的详细信息
@@ -240,7 +240,7 @@ ibmcloud resource quota NAME
 ibmcloud resource quota free
 ```
 
-### ibmcloud resource cf-service-instance-migrate
+## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
 将 Cloudfoundry 服务实例迁移到资源组
@@ -263,7 +263,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
   <dd>迁移而不确认</dd>
 </dl>
 
-### ibmcloud resource service-instances
+## ibmcloud resource service-instances
 {: #ibmcloud_resource_service_instances}
 
 列出服务实例
@@ -292,7 +292,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 ibmcloud resource service-instances --service-name test-service
 ```
 
-### ibmcloud resource service-instance
+## ibmcloud resource service-instance
 {: #ibmcloud_resource_service_instance}
 
 显示服务实例的详细信息
@@ -323,7 +323,7 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 ibmcloud resource service-instance my-service-instance
 ```
 
-### ibmcloud resource service-instance-create
+## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
 
 创建服务实例
@@ -393,7 +393,7 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, -
 ibmcloud resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-### ibmcloud resource service-instance-delete
+## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
 删除服务实例
@@ -423,7 +423,7 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ibmcloud resource service-instance-delete my-service-instance
 ```
 
-### ibmcloud resource service-bindings
+## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
 
 显示与服务别名的绑定
@@ -447,7 +447,7 @@ ibmcloud resource service-bindings SERVICE_ALIAS
 ibmcloud resource bindings my-service-alias
 ```
 
-### ibmcloud resource service-binding
+## ibmcloud resource service-binding
 {: #ibmcloud_resource_service_binding}
 
 显示服务绑定的详细信息
@@ -475,7 +475,7 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 ibmcloud resource bindings my-service-alias my-app
 ```
 
-### ibmcloud resource service-binding-create
+## ibmcloud resource service-binding-create
 {: #ibmcloud_resource_service_binding_create}
 
 创建服务绑定
@@ -509,7 +509,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
 
-### ibmcloud resource service-binding-delete
+## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
 
 删除服务绑定
@@ -537,7 +537,7 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ibmcloud resource service-binding-delete my-service-alias my-app
 ```
 
-### ibmcloud resource service-keys
+## ibmcloud resource service-keys
 {: #ibmcloud_resource_service_keys}
 
 列出服务实例或服务别名的服务密钥
@@ -567,7 +567,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 ibmcloud resource service-keys --instance-name my-service-instance
 ```
 
-### ibmcloud resource service-key
+## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
 显示服务密钥的详细信息
@@ -593,7 +593,7 @@ ibmcloud resource service-key KEY_NAME [--id]
 ibmcloud resource service-key my-service-key
 ```
 
-### ibmcloud resource service-key-create
+## ibmcloud resource service-key-create
 {: #ibmcloud_resource_service_key_create}
 
 创建服务密钥
@@ -659,7 +659,7 @@ ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
 ibmcloud resource service-key-delete my-service-key
 ```
 
-### ibmcloud resource service-aliases
+## ibmcloud resource service-aliases
 {: #ibmcloud_resource_service_aliases}
 
 列出服务实例的别名
@@ -684,7 +684,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ibmcloud resource service-aliases my-service-instance
 ```
 
-### ibmcloud resource service-alias
+## ibmcloud resource service-alias
 {: #ibmcloud_resource_service_alias}
 
 显示服务别名的详细信息
@@ -709,7 +709,7 @@ ibmcloud resource service-alias ALIAS_NAME [--id]
 ibmcloud resource service-alias  my-service-alias
 ```
 
-### ibmcloud resource service-alias-create
+## ibmcloud resource service-alias-create
 {: #ibmcloud_resource_service_alias_create}
 
 创建服务实例的别名
@@ -742,7 +742,7 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
 ibmcloud resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
-### ibmcloud resource service-alias-update
+## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
 更新服务别名
@@ -774,7 +774,7 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-### ibmcloud resource service-alias-delete
+## ibmcloud resource service-alias-delete
 {: #ibmcloud_resource_service_alias_delete}
 
 删除服务别名
@@ -800,7 +800,7 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ibmcloud resource service-alias-delete my-service-alias
 ```
 
-### ibmcloud resource search
+## ibmcloud resource search
 {: #ibmcloud_resource_search}
 使用 Lucene 查询语法搜索资源
 
@@ -885,7 +885,7 @@ ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
 
-### ibmcloud resource tags
+## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
 列出所有标记
@@ -920,7 +920,7 @@ ibmcloud resource tags
 ibmcloud resource tags --tag-type restricted
 ```
 
-### ibmcloud resource tag
+## ibmcloud resource tag
 {: #ibmcloud_resource_tag}
 
 显示标记详细信息
@@ -947,7 +947,7 @@ ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ibmcloud resource tag --tag-name "Ray Brown"
 ```
 
-### ibmcloud resource tag-create
+## ibmcloud resource tag-create
 {: #ibmcloud_resource_tag_create}
 
 创建标记
@@ -992,7 +992,7 @@ ibmcloud resource tag-create --tag-name "Ray Brown"
 ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
 ```
 
-### ibmcloud resource tag-delete
+## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
 
 删除标记
@@ -1019,7 +1019,7 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ibmcloud resource tag-delete --tag-name "Ray Brown"
 ```
 
-### ibmcloud resource tag-attach
+## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
 
 向资源添加标记
@@ -1048,7 +1048,7 @@ ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resour
 ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
 ```
 
-### ibmcloud resource tag-detach
+## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
 从资源除去标记
@@ -1077,7 +1077,7 @@ ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RE
 ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
 ```
 
-### ibmcloud resource tag-update
+## ibmcloud resource tag-update
 {: #ibmcloud_resource_tag_update}
 
 从 user 标记切换到 restricted 标记，反之亦然

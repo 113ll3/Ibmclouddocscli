@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry エンタープライズ環境 (試験的) を管理するためのコマンド
+# Cloud Foundry エンタープライズ環境の管理 (試験的)
 {: #ibmcloud_commands_cfee}
 
 <table summary="Cloud Foundry エンタープライズ環境の管理 (試験的)">
@@ -28,7 +28,7 @@ lastupdated: "2018-07-27"
  </tbody>
  </table>
 
- ### ibmcloud cfee environments
+ ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
 CFEE 環境をリストします。
@@ -41,7 +41,7 @@ ibmcloud cfee environments
 
 <strong>コマンド・オプション</strong>:
 
-### ibmcloud cfee environment
+## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
 CFEE 環境の詳細を表示します。

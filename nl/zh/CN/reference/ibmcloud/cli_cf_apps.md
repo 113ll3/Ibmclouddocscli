@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 CF 应用程序及与应用程序相关的域、路径和证书的命令
+# 管理 CF 应用程序及与应用程序相关的域、路径和证书
 {: #ibmcloud_commands_apps}
 
 <table summary="可用于管理 CF 应用程序及与应用程序相关的域、路径和证书的 ibmcloud 命令。">
@@ -73,104 +73,104 @@ lastupdated: "2018-07-26"
   </tbody>
  </table>
 
- ### ibmcloud app push
+ ## ibmcloud app push
 {: #ibmcloud_app_push}
 
 此命令的功能和选项与 [cf push ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} 命令的相同。
 
-### ibmcloud app list
+## ibmcloud app list
 {: #ibmcloud_app_list}
 
 此命令的功能和选项与 [cf apps ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window} 命令的相同。
 
-### ibmcloud app show
+## ibmcloud app show
 {: #ibmcloud_app_show}
 
 此命令的功能和选项与 [cf app ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window} 命令的相同。
 
-### ibmcloud app delete
+## ibmcloud app delete
 {: #ibmcloud_app_delete}
 
 此命令的功能和选项与 [cf delete ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window} 命令的相同。
 
-### ibmcloud app rename
+## ibmcloud app rename
 {: #ibmcloud_app_rename}
 
 此命令的功能和选项与 [cf rename ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window} 命令的相同。
 
-### ibmcloud app start
+## ibmcloud app start
 {: #ibmcloud_app_start}
 
 此命令的功能和选项与 [cf start ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window} 命令的相同。
 
-### ibmcloud app stop
+## ibmcloud app stop
 {: #ibmcloud_app_stop}
 
 此命令的功能和选项与 [cf stop ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window} 命令的相同。
 
-### ibmcloud app restart
+## ibmcloud app restart
 {: #ibmcloud_app_restart}
 
 此命令的功能和选项与 [cf restart ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window} 命令的相同。
 
-### ibmcloud app restage
+## ibmcloud app restage
 {: #ibmcloud_app_restage}
 
 
 此命令的功能和选项与 [cf restage ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} 命令的相同。
 
-### ibmcloud app instance-restart
+## ibmcloud app instance-restart
 {: #ibmcloud_app_instance_restart}
 
 
 此命令的功能和选项与 [cf restart-app-instance ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} 命令的相同。
 
-### ibmcloud app events
+## ibmcloud app events
 {: #ibmcloud_app_events}
 
 此命令的功能和选项与 [cf events ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window} 命令的相同。
 
-### ibmcloud app files
+## ibmcloud app files
 {: #ibmcloud_app_files}
 
 此命令的功能和选项与 [cf files ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window} 命令的相同。
 
-### ibmcloud app logs
+## ibmcloud app logs
 {: #ibmcloud_app_logs}
 
 此命令的功能和选项与 [cf logs ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window} 命令的相同。
 
-### ibmcloud app env
+## ibmcloud app env
 {: #ibmcloud_app_env}
 
 此命令的功能和选项与 [cf env ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window} 命令的相同。
 
-### ibmcloud app env-set
+## ibmcloud app env-set
 {: #ibmcloud_app_env_set}
 
 此命令的功能和选项与 [cf set-env ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window} 命令的相同。
 
-### ibmcloud app env-unset
+## ibmcloud app env-unset
 {: #ibmcloud_app_env_unset}
 
 此命令的功能和选项与 [cf unset-env ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window} 命令的相同。
 
-### ibmcloud app stacks
+## ibmcloud app stacks
 {: #ibmcloud_app_stacks}
 
 此命令的功能和选项与 [cf stacks ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window} 命令的相同。
 
-### ibmcloud app stack-show
+## ibmcloud app stack-show
 {: #ibmcloud_app_stack_show}
 
 此命令的功能和选项与 [cf stack ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window} 命令的相同。
 
-### ibmcloud app manifest-create
+## ibmcloud app manifest-create
 {: #ibmcloud_app_manifest_create}
 
 此命令的功能和选项与 [cf create-app-manifest ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} 命令的相同。
 
-### ibmcloud app domain-cert
+## ibmcloud app domain-cert
 {: #ibmcloud_app_domain_cert}
 
 列出域的证书信息。
@@ -196,7 +196,7 @@ ibmcloud app domain-cert DOMAIN_NAME
 ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
-### ibmcloud app domain-cert-add
+## ibmcloud app domain-cert-add
 {: #ibmcloud_app_domain_cert_add}
 
 将证书添加到当前组织中的指定域。
@@ -232,7 +232,7 @@ ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWOR
 ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-### ibmcloud app domain-cert-remove
+## ibmcloud app domain-cert-remove
 {: #ibmcloud_app_domain_cert_remove}
 
 从当前组织中的指定域除去证书。
@@ -252,17 +252,17 @@ ibmcloud app domain-cert-remove DOMAIN [-f]
    <dd>强制删除而不确认。</dd>
    </dl>
 
-### ibmcloud app routes
+## ibmcloud app routes
 {: #ibmcloud_app_routes}
 
 此命令的功能和选项与 [cf routes ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window} 命令的相同。
 
-### ibmcloud app route-check
+## ibmcloud app route-check
 {: #ibmcloud_app_route_check}
 
 此命令的功能和选项与 [cf check-route ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window} 命令的相同。
 
-### ibmcloud app route-map
+## ibmcloud app route-map
 {: #ibmcloud_app_route_map}
 
 将路径映射到具有指定域和主机名的现有 cf 应用程序或容器组。
@@ -298,7 +298,7 @@ ibmcloud app route-map my-app mychinabluemix.net
 ibmcloud app route-map my-container-group chinabluemix.net -n abc
 ```
 
-### ibmcloud app route-unmap
+## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 取消来自现有 cf 应用程序或容器组中的指定路径映射。
@@ -334,42 +334,42 @@ ibmcloud app route-unmap my-app mychianbluemix.net
 ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
 ```
 
-### ibmcloud app route-create
+## ibmcloud app route-create
 {: #ibmcloud_app_route_create}
 
 此命令的功能和选项与 [cf create-route ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window} 命令的相同。
 
-### ibmcloud app route-delete
+## ibmcloud app route-delete
 {: #ibmcloud_app_route_delete}
 
 此命令的功能和选项与 [cf delete-route ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window} 命令的相同。
 
-### ibmcloud app orphaned-routes-delete
+## ibmcloud app orphaned-routes-delete
 {: #ibmcloud_app_orphaned_routes_delete}
 
 此命令的功能和选项与 [cf delete-orphaned-routes ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window} 命令的相同。
 
-### ibmcloud app domains
+## ibmcloud app domains
 {: #ibmcloud_app_domains}
 
 此命令的功能和选项与 [cf domains ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window} 命令的相同。
 
-### ibmcloud app domain-create
+## ibmcloud app domain-create
 {: #ibmcloud_app_domain_create}
 
 此命令的功能和选项与 [cf create-domain ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window} 命令的相同。
 
-### ibmcloud app domain-delete
+## ibmcloud app domain-delete
 {: #ibmcloud_app_domain_delete}
 
 此命令的功能和选项与 [cf delete-domain ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window} 命令的相同。
 
-### ibmcloud app shared-domain-create
+## ibmcloud app shared-domain-create
 {: #ibmcloud_app_shared_domain_create}
 
 此命令的功能和选项与 [cf create-shared-domain ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window} 命令的相同。
 
-### ibmcloud app shared-domain-delete
+## ibmcloud app shared-domain-delete
 {: #ibmcloud_app_shared_domain_delete}
 
 此命令的功能和选项与 [cf delete-shared-domain ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window} 命令的相同。

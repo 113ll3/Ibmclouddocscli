@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS を管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS の管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS コマンド</caption>
@@ -36,7 +36,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
-### ibmcloud sl dns import
+## ibmcloud sl dns import
 {: #sl_dns_import}
 
 BIND ゾーン・ファイルに基づいてゾーンをインポートします。
@@ -56,7 +56,7 @@ ibmcloud sl dns import ~/ibm.com.txt
 ```
 このコマンドは、ファイル ~/ibm.com.txt からゾーンとそのリソース・レコードをインポートします。
 
-### ibmcloud sl dns record-add
+## ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
 ゾーン内のリソース・レコードを追加します。
@@ -76,7 +76,7 @@ ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
 このコマンドは、A レコードをゾーン ibm.com に追加します。ホストは「ftp」、データは「127.0.0.1」、および ttl は 86400 秒です。
 
-### ibmcloud sl dns record-edit
+## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
 
 ゾーン内のリソース・レコードを更新します
@@ -102,7 +102,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 このコマンドは、ゾーン ibm.com のレコードを編集します。ID は 12345678 です。データを「127.0.0.2」に設定し、ttl を 3600 に設定します。
 
-### ibmcloud sl dns record-list
+## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
 ゾーン内のすべてのリソース・レコードをリストします。
@@ -128,7 +128,7 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
 このコマンドは、ゾーン ibm.com のすべての A レコードをリストします。フィルター基準ホストは elasticsearch で TTL は 900 秒です。
 
-### ibmcloud sl dns record-remove
+## ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
 ゾーンからリソース・レコードを削除します。
@@ -143,7 +143,7 @@ ibmcloud sl dns record-remove 12345678
 ```
 このコマンドは、ID 12345678 のリソース・レコードを削除します。
 
-### ibmcloud sl dns zone-create
+## ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
 
 ゾーンを作成します。
@@ -158,7 +158,7 @@ ibmcloud sl dns zone-create ibm.com
 ```
 このコマンドは、ibm.com という名前のゾーンを作成します。
 
-### ibmcloud sl dns zone-delete
+## ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
 
 ゾーンを削除します。
@@ -173,7 +173,7 @@ ibmcloud sl dns zone-delete ibm.com
 ```
 このコマンドは、ibm.com という名前のゾーンを削除します。
 
-### ibmcloud sl dns zone-list
+## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
 
 ユーザーのアカウントのすべてのゾーンをリストします。
@@ -188,7 +188,7 @@ ibmcloud sl dns zone-list
 ```
 このコマンドは、現行アカウントにあるすべてのゾーンをリストします。
 
-### ibmcloud sl dns zone-print
+## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
 
 ゾーンおよびリソース・レコードを BIND フォーマットで出力します。

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャーのファイル・ストレージを管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ファイル・ストレージの管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ファイル・ストレージ</caption>
@@ -54,7 +54,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl file access-authorize
+ ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
 指定されたボリュームへのホストのアクセスを許可します。
@@ -82,7 +82,7 @@ ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーが、ID 12345678 のボリュームにアクセスすることを許可します。
 
-### ibmcloud sl file access-list
+## ibmcloud sl file access-list
 {: #sl_file_access_list}
 
 ACL をリストします。
@@ -104,7 +104,7 @@ ibmcloud sl file access-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームへのアクセスを許可されているすべてのホストをリストし、それらを ID によってソートします。
 
-### ibmcloud sl file access-revoke
+## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
 
 指定されたボリュームにアクセスするホストの許可を取り消します。
@@ -132,7 +132,7 @@ ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーの、ID 12345678 のボリュームへのアクセスを取り消します。
 
-### ibmcloud sl file replica-failback
+## ibmcloud sl file replica-failback
 {: #sl_file_replica_failback}
 
 レプリカからファイル・ボリュームをフェイルバックします。
@@ -147,7 +147,7 @@ ibmcloud sl file replica-failback 12345678
 ```
 このコマンドは、ID 12345678 のボリュームのフェイルバック操作を実行します。
 
-### ibmcloud sl file replica-failover
+## ibmcloud sl file replica-failover
 {: #sl_file_replica_failover}
 
 ファイル・ボリュームを、指定されたレプリカ・ボリュームにフェイルオーバーします。
@@ -162,7 +162,7 @@ ibmcloud sl file replica-failover 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームの、ID 87654321 のレプリカ・ボリュームへのフェイルオーバー操作を実行します。
 
-### ibmcloud sl file replica-locations
+## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
 
 指定されたボリュームに適切な複製データ・センターをリストします。
@@ -177,7 +177,7 @@ ibmcloud sl file replica-locations 12345678
 ```
 このコマンドは、ID 12345678 のファイル・ボリュームの適切な複製データ・センターをリストします。
 
-### ibmcloud sl file replica-order
+## ibmcloud sl file replica-order
 {: #sl_file_replica_order}
 
 ファイル・ストレージ・レプリカ・ボリュームを注文します。
@@ -205,7 +205,7 @@ ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 このコマンドは、ID 12345678 のボリュームのレプリカを注文します。このレプリカは、毎日の複製を実行し、dal09 にあり、層レベルは 4 です。
 
-### ibmcloud sl file replica-partners
+## ibmcloud sl file replica-partners
 {: #sl_file_replica_partners}
 
 ファイル・ボリュームの既存のレプリカ・ボリュームをリストします。
@@ -220,7 +220,7 @@ ibmcloud sl file replica-partners 12345678
 ```
 このコマンドは、ID 12345678 のファイル・ボリュームの既存のレプリカ・ボリュームをリストします。
 
-### ibmcloud sl file snapshot-cancel
+## ibmcloud sl file snapshot-cancel
 {: #sl_file_snapshot_cancel}
 
 指定されたボリュームの既存のスナップショット・スペースを取り消します。
@@ -244,7 +244,7 @@ ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のスナップショットを、確認を要求せず、即時に取り消します。
 
-### ibmcloud sl file snapshot-create
+## ibmcloud sl file snapshot-create
 {: #sl_file_snapshot_create}
 
 指定されたボリュームにスナップショットを作成します。
@@ -264,7 +264,7 @@ ibmcloud sl file snapshot-create 12345678 --note snapshotforibmcloud
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを、snapshotforibmcloud の追加メモと共に作成します。
 
-### ibmcloud sl file snapshot-disable
+## ibmcloud sl file snapshot-disable
 {: #sl_file_snapshot_disable}
 
 指定されたスケジュールでの指定されたボリュームのスナップショットを無効にします。
@@ -284,7 +284,7 @@ ibmcloud sl file snapshot-disable 12345678 -s DAILY
 ```
 このコマンドは、ID 12345678 のボリュームの毎日のスナップショットを無効にします。
 
-### ibmcloud sl file snapshot-enable
+## ibmcloud sl file snapshot-enable
 {: #sl_file_snapshot_enable}
 
 指定されたスケジュールで指定されたボリュームのスナップショットを有効にします。
@@ -312,7 +312,7 @@ ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを有効にします。スナップショットは、毎週日曜日の 2:00 に取られ、最高 5 個のスナップショットが保持されます。
 
-### ibmcloud sl file snapshot-delete
+## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
 指定されたボリュームのスナップショットを削除します。
@@ -327,7 +327,7 @@ ibmcloud sl file snapshot-delete 12345678
 ```
 このコマンドは、ID 12345678 のスナップショットを削除します。
 
-### ibmcloud sl file snapshot-list
+## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
 
 ファイル・ストレージ・スナップショットをリストします。
@@ -347,7 +347,7 @@ ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームのすべてのスナップショットをリストし、それらを ID によってソートします。
 
-### ibmcloud sl file snapshot-order
+## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
 
 ファイル・ストレージ・ボリュームのスナップショット・スペースを注文します。
@@ -375,7 +375,7 @@ ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショット・スペースを注文します。サイズは 1000 GB、階層レベルは 1 GB 当たり 4 IOPS です。
 
-### ibmcloud sl file snapshot-restore
+## ibmcloud sl file snapshot-restore
 {: #sl_file_snapshot_restore}
 
 指定されたスナップショットを使用してファイル・ボリュームをリストアします。
@@ -390,7 +390,7 @@ ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームを、ID 87654321 のスナップショットからリストアします。
 
-### ibmcloud sl file volume-cancel
+## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
 既存のファイル・ストレージ・ボリュームを取り消します。
@@ -414,7 +414,7 @@ ibmcloud sl file volume-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のボリュームを、確認を要求せず、即時に取り消します。
 
-### ibmcloud sl file volume-count
+## ibmcloud sl file volume-count
 {: #sl_file_volume_count}
 
 データ・センターごとのファイル・ストレージ・ボリュームの数をリストします。
@@ -428,7 +428,7 @@ ibmcloud sl file volume-count [OPTIONS]
 <dd>データ・センターの短縮名を基準にフィルター操作します。</dd>
 </dl>
 
-### ibmcloud sl file volume-list
+## ibmcloud sl file volume-list
 {: #sl_file_volume_list}
 
 ファイル・ストレージをリストします。
@@ -458,7 +458,7 @@ ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 このコマンドは、dal09 にある、現行アカウントのすべてのエンデュランス・ボリュームをリストし、それらを容量によってソートします。
 
-### ibmcloud sl file volume-detail
+## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
 
 指定されたボリュームの詳細を表示します。
@@ -473,7 +473,7 @@ ibmcloud sl file volume-detail 12345678
 ```
 このコマンドは、ID 12345678 のボリュームの詳細を表示します。
 
-### ibmcloud sl file volume-duplicate
+## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
 
 既存のボリュームを複写してファイル・ボリュームを注文します。
@@ -503,7 +503,7 @@ ibmcloud sl file volume-duplicate 12345678
 ```
 このコマンドは、ID 12345678 のボリュームを複写して新規ボリュームを注文します。
 
-### ibmcloud sl file volume-order
+## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
 
 ファイル・ストレージ・ボリュームを注文します。
@@ -535,7 +535,7 @@ ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000
 ```
 このコマンドは、サイズが 1000 GB、IOPS が 4000、ロケーションが dal09 のパフォーマンス・ボリュームを注文します。
 
-### ibmcloud sl file volume-options
+## ibmcloud sl file volume-options
 {: #sl_file_volume_options}
 
 ファイル・ストレージの注文に関するすべてのオプションをリストします。

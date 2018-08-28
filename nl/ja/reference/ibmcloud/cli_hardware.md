@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャーのハードウェアを管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ハードウェアの管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ハードウェア・コマンド</caption>
@@ -44,7 +44,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl hardware cancel
+ ## ibmcloud sl hardware cancel
 {: #sl_hardware_cancel}
 
 ハードウェア・サーバーを取り消します。
@@ -64,7 +64,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl hardware cancel-reasons
+## ibmcloud sl hardware cancel-reasons
 {: #sl_hardware_cancel_reasons}
 
 取り消しの理由のリストを表示します。
@@ -72,7 +72,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 ibmcloud sl hardware cancel-reasons
 ```
 
-### ibmcloud sl hardware create
+## ibmcloud sl hardware create
 {: #sl_hardware_create}
 
 ハードウェア・サーバーを発注/作成します。
@@ -114,7 +114,7 @@ ibmcloud sl hardware create [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl hardware create-options
+## ibmcloud sl hardware create-options
 {: #sl_hardware_create_options}
 
 特定のシャーシのサーバー・オーダー・オプション。
@@ -122,7 +122,7 @@ ibmcloud sl hardware create [OPTIONS]
 ibmcloud sl hardware create-options
 ```
 
-### ibmcloud sl hardware credentials
+## ibmcloud sl hardware credentials
 {: #sl_hardware_credentials}
 
 ハードウェア・サーバーの資格情報をリストします。
@@ -130,7 +130,7 @@ ibmcloud sl hardware create-options
 ibmcloud sl hardware credentials IDENTIFIER
 ```
 
-### ibmcloud sl hardware detail
+## ibmcloud sl hardware detail
 {: #sl_hardware_detail}
 
 ハードウェア・サーバーの詳細を取得します。
@@ -146,7 +146,7 @@ ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 <dd>関連付けられた価格を表示します。</dd>
 </dl>
 
-### ibmcloud sl hardware edit
+## ibmcloud sl hardware edit
 {: #sl_hardware_edit}
 
 ハードウェア・サーバーの詳細を編集します。
@@ -172,7 +172,7 @@ ibmcloud sl hardware edit IDENTIFIER [OPTIONS]
 <dd>プライベート・ポート速度。オプション: 0、10、100、1000、10000。</dd>
 </dl>
 
-### ibmcloud sl hardware list
+## ibmcloud sl hardware list
 {: #sl_hardware_list}
 
 ハードウェア・サーバーをリストします。
@@ -210,7 +210,7 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>表示する列。デフォルト: id、hostname、domain、public_ip、private_ip、datacenter、status、オプション: guid、cpu、memory、os、ipmi_ip、created、created_by、tags。</dd>
 </dl>
 
-### ibmcloud sl hardware power-cycle
+## ibmcloud sl hardware power-cycle
 {: #sl_hardware_power_cycle}
 
 サーバーの電源サイクルを行います。
@@ -224,7 +224,7 @@ ibmcloud sl hardware power-cycle IDENTIFIER
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl hardware power-off
+## ibmcloud sl hardware power-off
 {: #sl_hardware_power_off}
 
 アクティブなサーバーを電源オフします。
@@ -238,7 +238,7 @@ ibmcloud sl hardware power-off IDENTIFIER
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl hardware power-on
+## ibmcloud sl hardware power-on
 {: #sl_hardware_power_on}
 
 サーバーを電源オンにします。
@@ -246,7 +246,7 @@ ibmcloud sl hardware power-off IDENTIFIER
 ibmcloud sl hardware power-on IDENTIFIER
 ```
 
-### ibmcloud sl hardware reboot
+## ibmcloud sl hardware reboot
 {: #sl_hardware_reboot}
 
 アクティブ・サーバーをリブートします。
@@ -264,7 +264,7 @@ ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl hardware reload
+## ibmcloud sl hardware reload
 {: #sl_hardware_reload}
 
 サーバー上でオペレーティング・システムを再ロードします。
@@ -286,7 +286,7 @@ ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl hardware rescue
+## ibmcloud sl hardware rescue
 {: #sl_hardware_rescue}
 
 サーバーをレスキュー・イメージでリブートします。
@@ -300,7 +300,7 @@ ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl hardware update-firmware
+## ibmcloud sl hardware update-firmware
 {: #sl_hardware_update_firmware}
 
 サーバー・ファームウェアを更新します。

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构文件存储器的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构文件存储器
 
 <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构文件存储器</caption>
@@ -54,7 +54,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl file access-authorize
+ ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
 授权主机访问给定卷。
@@ -84,7 +84,7 @@ ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 
 
 
-### ibmcloud sl file access-list
+## ibmcloud sl file access-list
 {: #sl_file_access_list}
 
 列出 ACL。
@@ -108,7 +108,7 @@ ibmcloud sl file access-list 12345678 --sortby id
 
 
 
-### ibmcloud sl file access-revoke
+## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
 
 撤销主机访问给定卷的授权。
@@ -138,7 +138,7 @@ ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 
 
 
-### ibmcloud sl file replica-failback
+## ibmcloud sl file replica-failback
 {: #sl_file_replica_failback}
 
 从副本对文件卷执行故障恢复操作。
@@ -155,7 +155,7 @@ ibmcloud sl file replica-failback 12345678
 
 
 
-### ibmcloud sl file replica-failover
+## ibmcloud sl file replica-failover
 {: #sl_file_replica_failover}
 
 从文件卷故障转移到给定的副本卷。
@@ -172,7 +172,7 @@ ibmcloud sl file replica-failover 12345678 87654321
 
 
 
-### ibmcloud sl file replica-locations
+## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
 
 列出给定卷的适用复制数据中心。
@@ -189,7 +189,7 @@ ibmcloud sl file replica-locations 12345678
 
 
 
-### ibmcloud sl file replica-order
+## ibmcloud sl file replica-order
 {: #sl_file_replica_order}
 
 订购文件存储器副本卷。
@@ -219,7 +219,7 @@ ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 
 
 
-### ibmcloud sl file replica-partners
+## ibmcloud sl file replica-partners
 {: #sl_file_replica_partners}
 
 列出文件卷的现有副本卷。
@@ -236,7 +236,7 @@ ibmcloud sl file replica-partners 12345678
 
 
 
-### ibmcloud sl file snapshot-cancel
+## ibmcloud sl file snapshot-cancel
 {: #sl_file_snapshot_cancel}
 
 取消给定卷的现有快照空间。
@@ -262,7 +262,7 @@ ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 
 
 
-### ibmcloud sl file snapshot-create
+## ibmcloud sl file snapshot-create
 {: #sl_file_snapshot_create}
 
 创建给定卷的快照。
@@ -282,7 +282,7 @@ ibmcloud sl file snapshot-create 12345678 --note snapshotforibmcloud
 ```
 此命令创建标识为 12345678 的卷的快照，并添加注释 snapshotforibmcloud。
 
-### ibmcloud sl file snapshot-disable
+## ibmcloud sl file snapshot-disable
 {: #sl_file_snapshot_disable}
 
 禁止按指定安排生成给定卷的快照。
@@ -304,7 +304,7 @@ ibmcloud sl file snapshot-disable 12345678 -s DAILY
 
 
 
-### ibmcloud sl file snapshot-enable
+## ibmcloud sl file snapshot-enable
 {: #sl_file_snapshot_enable}
 
 允许按指定安排生成给定卷的快照。
@@ -334,7 +334,7 @@ ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 
 
 
-### ibmcloud sl file snapshot-delete
+## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
 删除给定卷的快照。
@@ -351,7 +351,7 @@ ibmcloud sl file snapshot-delete 12345678
 
 
 
-### ibmcloud sl file snapshot-list
+## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
 
 列出文件存储器快照。
@@ -373,7 +373,7 @@ ibmcloud sl file snapshot-list 12345678 --sortby id
 
 
 
-### ibmcloud sl file snapshot-order
+## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
 
 为文件存储卷订购快照空间。
@@ -403,7 +403,7 @@ ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 
 
 
-### ibmcloud sl file snapshot-restore
+## ibmcloud sl file snapshot-restore
 {: #sl_file_snapshot_restore}
 
 使用给定快照复原文件卷。
@@ -420,7 +420,7 @@ ibmcloud sl file snapshot-restore 12345678 87654321
 
 
 
-### ibmcloud sl file volume-cancel
+## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
 取消现有文件存储卷。
@@ -446,7 +446,7 @@ ibmcloud sl file volume-cancel 12345678 --immediate -f
 
 
 
-### ibmcloud sl file volume-count
+## ibmcloud sl file volume-count
 {: #sl_file_volume_count}
 
 列出每个数据中心的文件存储卷数。
@@ -460,7 +460,7 @@ ibmcloud sl file volume-count [OPTIONS]
 <dd>按数据中心短名称过滤。</dd>
 </dl>
 
-### ibmcloud sl file volume-list
+## ibmcloud sl file volume-list
 {: #sl_file_volume_list}
 
 列出文件存储器。
@@ -493,7 +493,7 @@ ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 
 
 
-### ibmcloud sl file volume-detail
+## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
 
 显示指定卷的详细信息。
@@ -510,7 +510,7 @@ ibmcloud sl file volume-detail 12345678
 
 
 
-### ibmcloud sl file volume-duplicate
+## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
 
 通过复制现有卷来订购文件卷。
@@ -542,7 +542,7 @@ ibmcloud sl file volume-duplicate 12345678
 
 
 
-### ibmcloud sl file volume-order
+## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
 
 订购文件存储卷。
@@ -576,7 +576,7 @@ ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000
 
 
 
-### ibmcloud sl file volume-options
+## ibmcloud sl file volume-options
 {: #sl_file_volume_options}
 
 列出用于订购文件存储器的所有选项。

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构安全组的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构安全组
 
 <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构安全组命令</caption>
@@ -41,7 +41,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl securitygroup create
+ ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 创建安全组。
@@ -57,7 +57,7 @@ ibmcloud sl securitygroup create [OPTIONS]
 <dd>安全组的描述。</dd>
 </dl>
 
-### ibmcloud sl securitygroup delete
+## ibmcloud sl securitygroup delete
 {: #sl_securitygroup_delete}
 
 删除给定的安全组。
@@ -71,7 +71,7 @@ ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 <dd>强制操作而不确认。</dd>
 </dl>
 
-### ibmcloud sl securitygroup detail
+## ibmcloud sl securitygroup detail
 {: #sl_securitygroup_detail}
 
 获取有关安全组的详细信息。
@@ -79,7 +79,7 @@ ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 ibmcloud sl securitygroup detail SECURITYGROUP_ID [OPTIONS]
 ```
 
-### ibmcloud sl securitygroup edit
+## ibmcloud sl securitygroup edit
 {: #sl_securitygroup_edit}
 
 编辑安全组的详细信息。
@@ -95,7 +95,7 @@ ibmcloud sl securitygroup edit SECURITYGROUP_ID [OPTIONS]
 <dd>安全组的描述。</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-add
+## ibmcloud sl securitygroup interface-add
 {: #sl_securitygroup_interface_add}
 
 将接口连接到安全组。
@@ -113,7 +113,7 @@ ibmcloud sl securitygroup interface-add SECURITYGROUP_ID [OPTIONS]
 <dd>要关联的服务器的接口 (public/private)。</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-list
+## ibmcloud sl securitygroup interface-list
 {: #sl_securitygroup_interface_list}
 
 列出与安全组关联的接口。
@@ -127,7 +127,7 @@ ibmcloud sl securitygroup interface-list SECURITYGROUP_ID [OPTIONS]
 <dd>要作为排序依据的列，选项为：id、virtualServerId 或 hostname。</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-remove
+## ibmcloud sl securitygroup interface-remove
 {: #sl_securitygroup_interface_remove}
 
 从安全组拆离接口。
@@ -145,7 +145,7 @@ ibmcloud sl securitygroup interface-remove SECURITYGROUP_ID [OPTIONS]
 <dd>要除去的服务器的接口 (public/private)。</dd>
 </dl>
 
-### ibmcloud sl securitygroup list
+## ibmcloud sl securitygroup list
 {: #sl_securitygroup_list}
 
 列出安全组。
@@ -159,7 +159,7 @@ List security groups
 <dd>要作为排序依据的列，选项为：id、name、description 或 created。</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-add
+## ibmcloud sl securitygroup rule-add
 {: #sl_securitygroup_rule_add}
 
 将安全组规则添加到安全组。
@@ -185,7 +185,7 @@ ibmcloud sl securitygroup rule-add SECURITYGROUP_ID [OPTIONS]
 <dd>要强制实施的协议（icmp、tcp 或 udp）。</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-edit
+## ibmcloud sl securitygroup rule-edit
 {: #sl_securitygroup_rule_edit}
 
 编辑安全组中的安全组规则。
@@ -211,7 +211,7 @@ ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 <dd>要强制实施的协议（icmp、tcp 或 udp）。</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-list
+## ibmcloud sl securitygroup rule-list
 {: #sl_securitygroup_rule_list}
 
 列出安全组规则。
@@ -225,7 +225,7 @@ ibmcloud sl securitygroup rule-list SECURITYGROUP_ID [OPTIONS]
 <dd>要作为排序依据的列，选项为：id、remoteIp、remoteGroupId、direction、ethertype、portRangeMin、portRangeMax 或 protocol。</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-remove
+## ibmcloud sl securitygroup rule-remove
 {: #sl_securitygroup_rule_remove}
 
 从安全组中除去规则。

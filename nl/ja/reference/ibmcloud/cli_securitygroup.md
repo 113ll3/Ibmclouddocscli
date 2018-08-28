@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャーのセキュリティー・グループを管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー securitygroup の管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー securitygroup コマンド</caption>
@@ -41,7 +41,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl securitygroup create
+ ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 セキュリティー・グループを作成します。
@@ -57,7 +57,7 @@ ibmcloud sl securitygroup create [OPTIONS]
 <dd>セキュリティー・グループの説明。</dd>
 </dl>
 
-### ibmcloud sl securitygroup delete
+## ibmcloud sl securitygroup delete
 {: #sl_securitygroup_delete}
 
 指定されたセキュリティー・グループを削除します。
@@ -71,7 +71,7 @@ ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl securitygroup detail
+## ibmcloud sl securitygroup detail
 {: #sl_securitygroup_detail}
 
 セキュリティー・グループについての詳細を取得します。
@@ -79,7 +79,7 @@ ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 ibmcloud sl securitygroup detail SECURITYGROUP_ID [OPTIONS]
 ```
 
-### ibmcloud sl securitygroup edit
+## ibmcloud sl securitygroup edit
 {: #sl_securitygroup_edit}
 
 セキュリティー・グループの詳細を編集します。
@@ -95,7 +95,7 @@ ibmcloud sl securitygroup edit SECURITYGROUP_ID [OPTIONS]
 <dd>セキュリティー・グループの説明。</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-add
+## ibmcloud sl securitygroup interface-add
 {: #sl_securitygroup_interface_add}
 
 インターフェースにセキュリティー・グループを接続します。
@@ -113,7 +113,7 @@ ibmcloud sl securitygroup interface-add SECURITYGROUP_ID [OPTIONS]
 <dd>関連付けるサーバーのインターフェース (パブリック/プライベート)。</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-list
+## ibmcloud sl securitygroup interface-list
 {: #sl_securitygroup_interface_list}
 
 セキュリティー・グループに関連付けられたインターフェースをリストします。
@@ -127,7 +127,7 @@ ibmcloud sl securitygroup interface-list SECURITYGROUP_ID [OPTIONS]
 <dd>ソートの基準となる列。オプション: id、virtualServerId、hostname。</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-remove
+## ibmcloud sl securitygroup interface-remove
 {: #sl_securitygroup_interface_remove}
 
 セキュリティー・グループからインターフェースを切り離します。
@@ -145,7 +145,7 @@ ibmcloud sl securitygroup interface-remove SECURITYGROUP_ID [OPTIONS]
 <dd>削除するサーバーのインターフェース (パブリック/プライベート)。</dd>
 </dl>
 
-### ibmcloud sl securitygroup list
+## ibmcloud sl securitygroup list
 {: #sl_securitygroup_list}
 
 セキュリティー・グループをリストします。
@@ -159,7 +159,7 @@ List security groups
 <dd>ソートの基準となる列。オプション: id、name、description、created。</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-add
+## ibmcloud sl securitygroup rule-add
 {: #sl_securitygroup_rule_add}
 
 セキュリティー・グループにセキュリティー・グループ・ルールを追加します。
@@ -185,7 +185,7 @@ ibmcloud sl securitygroup rule-add SECURITYGROUP_ID [OPTIONS]
 <dd>強制するプロトコル (icmp、tcp、udp)。</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-edit
+## ibmcloud sl securitygroup rule-edit
 {: #sl_securitygroup_rule_edit}
 
 セキュリティー・グループ内のセキュリティー・グループ・ルールを編集します。
@@ -211,7 +211,7 @@ ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 <dd>強制するプロトコル (icmp、tcp、udp)。</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-list
+## ibmcloud sl securitygroup rule-list
 {: #sl_securitygroup_rule_list}
 
 セキュリティー・グループ・ルールをリストします。
@@ -225,7 +225,7 @@ ibmcloud sl securitygroup rule-list SECURITYGROUP_ID [OPTIONS]
 <dd>ソートの基準にする列。オプション: id、remoteIp、remoteGroupId、direction、ethertype、portRangeMin、portRangeMax、protocol。</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-remove
+## ibmcloud sl securitygroup rule-remove
 {: #sl_securitygroup_rule_remove}
 
 セキュリティー・グループからルールを削除します。

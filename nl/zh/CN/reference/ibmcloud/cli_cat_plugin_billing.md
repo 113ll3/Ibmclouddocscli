@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理目录、插件和帐单设置的命令
+# 管理目录、插件和帐单设置
 {: #ibmcloud_commands_settings}
 
 <table summary="可用于管理 {{site.data.keyword.Bluemix_notm}} 目录、插件、帐单和安全设置的 ibmcloud 命令。">
@@ -64,7 +64,7 @@ lastupdated: "2018-07-26"
  </tbody>
  </table>
 
- ### ibmcloud catalog search
+ ## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
 搜索目录条目
@@ -107,7 +107,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 ibmcloud catalog search -k service -q 'Automation test'
 ```
 
-### ibmcloud catalog entry
+## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
 获取目录条目
@@ -136,7 +136,7 @@ ibmcloud catalog entry ID [--global]
 ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-create
+## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 创建新的目录条目（仅限帐户的目录管理员）
 
@@ -164,7 +164,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-update
+## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
 更新现有目录条目（仅限帐户的目录管理员或编辑者）
 
@@ -190,7 +190,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
 
-### ibmcloud catalog entry-delete
+## ibmcloud catalog entry-delete
 {: #ibmcloud_catalog_entry_delete}
 删除目录条目（仅限帐户的目录管理员）
 ```
@@ -213,7 +213,7 @@ ibmcloud catalog entry-delete ID [--global]
 ibmcloud catalog delete 'j402-dnf1i'
 ```
 
-### ibmcloud catalog entry-visibility
+## ibmcloud catalog entry-visibility
 {: #ibmcloud_catalog_entry_visibility}
 获取目录条目的可视性（仅限帐户的目录管理员）
 
@@ -239,7 +239,7 @@ ibmcloud catalog entry-visibility ID [--global]
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
 
-### ibmcloud catalog entry-visibility-set
+## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
 更新现有目录条目的可视性（仅限帐户的目录管理员）
 
@@ -280,7 +280,7 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
-### ibmcloud catalog service-marketplace
+## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
 列出市场中的服务产品
 
@@ -308,7 +308,7 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ibmcloud catalog service-marketplace --global
 ```
 
-### ibmcloud catalog templates
+## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 查看 {{site.data.keyword.Bluemix_notm}} 上的样板模板。
@@ -326,7 +326,7 @@ ibmcloud catalog templates [-d]
    <dd>如果指定了 <i>-d</i> 选项，那么还会显示每个模板的描述。否则，只显示每个模板的标识和名称。</dd>
    </dl>
 
-### ibmcloud catalog template
+## ibmcloud catalog template
 {: #ibmcloud_catalog_template}
 
 查看指定样板模板的详细信息。
@@ -352,7 +352,7 @@ ibmcloud catalog template TEMPLATE_ID
 ibmcloud catalog template mobileBackendStarter
 ```
 
-### ibmcloud catalog template-run
+## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
 使用指定 URL 和描述基于指定模板创建 cf 应用程序。缺省情况下，新应用程序将自动启动。
@@ -398,7 +398,7 @@ ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluem
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-### ibmcloud catalog locations
+## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
 
 以您选择的格式获取区域选项子集。
@@ -424,7 +424,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>输出 CSV 文件</dd>
 </dl>
 
-### ibmcloud catalog runtime
+## ibmcloud catalog runtime
 {: #ibmcloud_catalog_runtime}
 
 查看运行时的详细信息。此命令仅可用于公共云。
@@ -441,7 +441,7 @@ ibmcloud catalog runtime RUNTIME_ID
 catalog runtime nodejsHelloWorld
 ```
 
-### ibmcloud catalog runtimes
+## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 列出所有运行时。此命令仅可用于公共云。
@@ -465,7 +465,7 @@ ibmcloud catalog runtimes [-d]
 ibmcloud catalog runtimes -d
 ```
 
-### ibmcloud billing account-usage
+## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
 显示当前帐户的每月使用情况（仅限帐户管理员）
@@ -493,7 +493,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 ibmcloud billing account-usage -d 2016-06
 ```
 
-### ibmcloud billing org-usage
+## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
 显示组织的每月使用情况（仅限帐户管理员或组织记帐管理员）
@@ -515,7 +515,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>以 JSON 格式显示使用情况结果。</dd>
 </dl>
 
-### ibmcloud billing resource-group-usage
+## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
 显示资源组的每月使用情况（仅限帐户管理员或资源组管理员）
@@ -537,7 +537,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>以 JSON 格式显示使用情况结果。</dd>
 </dl>
 
-### ibmcloud billing resource-instances-usage
+## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
 显示当前帐户的每月资源实例使用情况。
@@ -561,7 +561,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>以 JSON 格式显示使用情况结果。</dd>
 </dl>
 
-### ibmcloud plugin repos
+## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
 列出 {{site.data.keyword.Bluemix_notm}} CLI 中注册的所有插件存储库。
@@ -572,7 +572,7 @@ ibmcloud plugin repos
 
 <strong>先决条件</strong>：无
 
-### ibmcloud plugin repo-add
+## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
 
 将新的插件存储库添加到 {{site.data.keyword.Bluemix_notm}} CLI 中。
@@ -601,7 +601,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
-### ibmcloud plugin repo-remove
+## ibmcloud plugin repo-remove
 {: #ibmcloud_plugin_repo_remove}
 
 从 {{site.data.keyword.Bluemix_notm}} CLI 中除去插件存储库。
@@ -626,7 +626,7 @@ ibmcloud plugin repo-remove REPO_NAME
 ibmcloud plugin repo-remove bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugins
+## ibmcloud plugin repo-plugins
 {: #ibmcloud_plugin_repo_plugins}
 
 列出所有添加的存储库或特定存储库中的所有可用插件。
@@ -658,7 +658,7 @@ ibmcloud plugin repo-plugins
 ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugin
+## ibmcloud plugin repo-plugin
 {: #ibmcloud_plugin_repo_plugin}
 
 显示存储库中插件的详细信息。
@@ -690,7 +690,7 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-### ibmcloud plugin list
+## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
 
 列出 {{site.data.keyword.Bluemix_notm}} CLI 中的所有已安装插件。
@@ -701,7 +701,7 @@ ibmcloud plugin list
 
 <strong>先决条件</strong>：无
 
-### ibmcloud plugin show
+## ibmcloud plugin show
 {: #ibmcloud_plugin_show}
 
 显示已安装插件的详细信息。
@@ -712,7 +712,7 @@ ibmcloud plugin show PLUGIN-NAME
 
 <strong>先决条件</strong>：无
 
-### ibmcloud plugin install
+## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
 从指定的路径或存储库将特定版本的插件安装到 {{site.data.keyword.Bluemix_notm}} CLI 中。
@@ -777,7 +777,7 @@ ibmcloud plugin install container-service
 ibmcloud plugin install container-service -v 0.1.425
 ```
 
-### ibmcloud plugin update
+## ibmcloud plugin update
 {: #ibmcloud_plugin_update}
 
 从存储库升级插件。
@@ -828,7 +828,7 @@ ibmcloud plugin update container-service
 ibmcloud plugin update container-service -v 0.1.440
 ```
 
-### ibmcloud plugin uninstall
+## ibmcloud plugin uninstall
 {: #ibmcloud_plugin_uninstall}
 
 从 {{site.data.keyword.Bluemix_notm}} CLI 中卸载指定的插件。

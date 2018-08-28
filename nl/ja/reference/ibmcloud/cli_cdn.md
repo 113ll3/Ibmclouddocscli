@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー CDN を管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー CDN の管理
 
  <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー CDN</caption>
@@ -37,7 +37,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl cdn cancel
+ ## ibmcloud sl cdn cancel
 {: #sl_cdn_cancel}
 
 CDN アカウントを取り消します。
@@ -51,7 +51,7 @@ ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl cdn detail
+## ibmcloud sl cdn detail
 {: #sl_cdn_detail}
 
 CDN アカウントの詳細を表示します。
@@ -59,7 +59,7 @@ CDN アカウントの詳細を表示します。
 ibmcloud sl cdn detail ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn list
+## ibmcloud sl cdn list
 {: #sl_cdn_list}
 
 すべての CDN アカウントをリストします。
@@ -75,7 +75,7 @@ ibmcloud sl cdn list [OPTIONS]
 <dd>注文 ID でフィルター操作します。</dd>
 </dl>
 
-### ibmcloud sl cdn load
+## ibmcloud sl cdn load
 {: #sl_cdn_load}
 
 すべてのエッジ・ノード上で 1 つ以上のファイルをキャッシュに入れます。
@@ -83,7 +83,7 @@ ibmcloud sl cdn list [OPTIONS]
 ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### ibmcloud sl cdn order
+## ibmcloud sl cdn order
 {: #sl_cdn_order}
 
 CDN アカウントを注文します。
@@ -101,7 +101,7 @@ ibmcloud sl cdn order [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl cdn options
+## ibmcloud sl cdn options
 {: #sl_cdn_options}
 
 CDN アカウントを注文する際の処理能力とストレージのオプション。
@@ -109,7 +109,7 @@ CDN アカウントを注文する際の処理能力とストレージのオプ�
 ibmcloud sl cdn options
 ```
 
-### ibmcloud sl cdn origin-add
+## ibmcloud sl cdn origin-add
 {: #sl_cdn_origin_add}
 
 Origin Pull マッピングを作成します。
@@ -125,7 +125,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dd>マッピングに付加する CNAME (オプション)。</dd>
 </dl>
 
-### ibmcloud sl cdn origin-list
+## ibmcloud sl cdn origin-list
 {: #sl_cdn_origin_list}
 
 Origin Pull マッピングをリストします。
@@ -133,7 +133,7 @@ Origin Pull マッピングをリストします。
 ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn origin-remove
+## ibmcloud sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
 Origin Pull マッピングを削除します。
@@ -147,7 +147,7 @@ ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl cdn purge
+## ibmcloud sl cdn purge
 {: #sl_cdn_purge}
 
 すべてのエッジ・ノードからキャッシュされているファイルをパージします。

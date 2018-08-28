@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# リソース・グループとリソースを管理するためのコマンド
+# リソース・グループとリソースの管理
 {: #ibmcloud_commands_resource}
 
 <table summary="リソース・グループとリソースを管理するために使用できる ibmcloud コマンド。">
@@ -72,7 +72,7 @@ lastupdated: "2018-07-26"
   </tbody>
 </table>
 
-### ibmcloud resource groups
+## ibmcloud resource groups
 {: #ibmcloud_resource_groups}
 
 リソース・グループをリストします。
@@ -103,7 +103,7 @@ ibmcloud resource groups
 ibmcloud resource groups --default
 ```
 
-### ibmcloud resource group
+## ibmcloud resource group
 {: #ibmcloud_resource_group}
 
 リソース・グループの詳細を表示します
@@ -136,7 +136,7 @@ ibmcloud resource group example-group
 ibmcloud resource group example-group --id
 ```
 
-### ibmcloud resource group-create
+## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
 リソース・グループを作成します
@@ -157,7 +157,7 @@ ibmcloud resource group-create NAME QUOTA_NAME
 ibmcloud resource group-create example-group free
 ```
 
-### ibmcloud resource group-update
+## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
 既存のリソース・グループを更新します
@@ -194,7 +194,7 @@ ibmcloud resource group-update example-group -n trial-group
 ibmcloud resource group-update example-group -q free
 ```
 
-### ibmcloud resource quotas
+## ibmcloud resource quotas
 {: #ibmcloud_resource_quotas}
 
 すべての割り当て量定義をリストします
@@ -217,7 +217,7 @@ ibmcloud resource quotas
 ibmcloud resource quotas
 ```
 
-### ibmcloud resource quota
+## ibmcloud resource quota
 {: #ibmcloud_resource_quota}
 
 割り当て量定義の詳細を表示します
@@ -241,7 +241,7 @@ ibmcloud resource quota NAME
 ibmcloud resource quota free
 ```
 
-### ibmcloud resource cf-service-instance-migrate
+## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
 Cloudfoundry サービス・インスタンスをリソース・グループにマイグレーションします
@@ -264,7 +264,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
   <dd>確認を求めずにマイグレーションします</dd>
 </dl>
 
-### ibmcloud resource service-instances
+## ibmcloud resource service-instances
 {: #ibmcloud_resource_service_instances}
 
 サービス・インスタンスをリストします
@@ -293,7 +293,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 ibmcloud resource service-instances --service-name test-service
 ```
 
-### ibmcloud resource service-instance
+## ibmcloud resource service-instance
 {: #ibmcloud_resource_service_instance}
 
 サービス・インスタンスの詳細を表示します
@@ -324,7 +324,7 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 ibmcloud resource service-instance my-service-instance
 ```
 
-### ibmcloud resource service-instance-create
+## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
 
 サービス・インスタンスの作成
@@ -394,7 +394,7 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, -
 ibmcloud resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-### ibmcloud resource service-instance-delete
+## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
 サービス・インスタンスを削除します
@@ -424,7 +424,7 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ibmcloud resource service-instance-delete my-service-instance
 ```
 
-### ibmcloud resource service-bindings
+## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
 
 サービス別名へのバインディングを表示します
@@ -448,7 +448,7 @@ ibmcloud resource service-bindings SERVICE_ALIAS
 ibmcloud resource bindings my-service-alias
 ```
 
-### ibmcloud resource service-binding
+## ibmcloud resource service-binding
 {: #ibmcloud_resource_service_binding}
 
 サービス・バインディングの詳細を表示します
@@ -476,7 +476,7 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 ibmcloud resource bindings my-service-alias my-app
 ```
 
-### ibmcloud resource service-binding-create
+## ibmcloud resource service-binding-create
 {: #ibmcloud_resource_service_binding_create}
 
 サービス・バインディングの作成
@@ -510,7 +510,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
 
-### ibmcloud resource service-binding-delete
+## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
 
 サービス・バインディングの削除
@@ -538,7 +538,7 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ibmcloud resource service-binding-delete my-service-alias my-app
 ```
 
-### ibmcloud resource service-keys
+## ibmcloud resource service-keys
 {: #ibmcloud_resource_service_keys}
 
 サービス・インスタンスまたはサービス別名のサービス・キーをリストします
@@ -568,7 +568,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 ibmcloud resource service-keys --instance-name my-service-instance
 ```
 
-### ibmcloud resource service-key
+## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
 サービス・キーの詳細を表示します
@@ -594,7 +594,7 @@ ibmcloud resource service-key KEY_NAME [--id]
 ibmcloud resource service-key my-service-key
 ```
 
-### ibmcloud resource service-key-create
+## ibmcloud resource service-key-create
 {: #ibmcloud_resource_service_key_create}
 
 サービス・キーを作成します
@@ -660,7 +660,7 @@ ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
 ibmcloud resource service-key-delete my-service-key
 ```
 
-### ibmcloud resource service-aliases
+## ibmcloud resource service-aliases
 {: #ibmcloud_resource_service_aliases}
 
 サービス・インスタンスの別名をリストします
@@ -685,7 +685,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ibmcloud resource service-aliases my-service-instance
 ```
 
-### ibmcloud resource service-alias
+## ibmcloud resource service-alias
 {: #ibmcloud_resource_service_alias}
 
 サービス別名の詳細を表示します
@@ -710,7 +710,7 @@ ibmcloud resource service-alias ALIAS_NAME [--id]
 ibmcloud resource service-alias  my-service-alias
 ```
 
-### ibmcloud resource service-alias-create
+## ibmcloud resource service-alias-create
 {: #ibmcloud_resource_service_alias_create}
 
 サービス・インスタンスの別名を作成します
@@ -743,7 +743,7 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
 ibmcloud resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
-### ibmcloud resource service-alias-update
+## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
 サービス別名を更新します
@@ -775,7 +775,7 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-### ibmcloud resource service-alias-delete
+## ibmcloud resource service-alias-delete
 {: #ibmcloud_resource_service_alias_delete}
 
 サービス別名を削除します
@@ -801,7 +801,7 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ibmcloud resource service-alias-delete my-service-alias
 ```
 
-### ibmcloud resource search
+## ibmcloud resource search
 {: #ibmcloud_resource_search}
 Lucene 照会構文を使用してリソースを検索します
 
@@ -886,7 +886,7 @@ ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
 
-### ibmcloud resource tags
+## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
 すべてのタグをリストします
@@ -921,7 +921,7 @@ ibmcloud resource tags
 ibmcloud resource tags --tag-type restricted
 ```
 
-### ibmcloud resource tag
+## ibmcloud resource tag
 {: #ibmcloud_resource_tag}
 
 タグの詳細を表示します
@@ -948,7 +948,7 @@ ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ibmcloud resource tag --tag-name "Ray Brown"
 ```
 
-### ibmcloud resource tag-create
+## ibmcloud resource tag-create
 {: #ibmcloud_resource_tag_create}
 
 タグを作成します
@@ -993,7 +993,7 @@ ibmcloud resource tag-create --tag-name "Ray Brown"
 ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
 ```
 
-### ibmcloud resource tag-delete
+## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
 
 タグを削除します
@@ -1020,7 +1020,7 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ibmcloud resource tag-delete --tag-name "Ray Brown"
 ```
 
-### ibmcloud resource tag-attach
+## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
 
 タグをリソースに追加します
@@ -1049,7 +1049,7 @@ CRN が resource_example_crn であるリソースにタグ "Ray Brown" を追�
 ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
 ```
 
-### ibmcloud resource tag-detach
+## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
 リソースからタグを削除します
@@ -1078,7 +1078,7 @@ CRN が resource_example_crn であるリソースからタグ "Ray Brown" を�
 ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
 ```
 
-### ibmcloud resource tag-update
+## ibmcloud resource tag-update
 {: #ibmcloud_resource_tag_update}
 
 ユーザー・タグと制限付きタグを切り替えます

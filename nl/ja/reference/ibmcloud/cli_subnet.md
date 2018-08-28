@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャーのサブネットを管理するためのコマンド
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・サブネットの管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・サブネット・コマンド</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl subnet cancel
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 サブネットを取り消します。
@@ -50,7 +50,7 @@ ibmcloud sl subnet cancel 12345678 -f
 ```
 このコマンドは、ID 12345678 のサブネットを、確認を求めずに取り消します。
 
-### ibmcloud sl subnet create
+## ibmcloud sl subnet create
 {: #sl_subnet_create}
 
 ご使用のアカウントに新規サブネットを追加します。
@@ -74,7 +74,7 @@ ibmcloud sl subnet create public 16 567
 ```
 このコマンドは、16 個の IPv4 アドレスを持つパブリック・サブネットを作成し、ID 567 の VLAN に配置します。
 
-### ibmcloud sl subnet detail
+## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
 
 サブネットの詳細を取得します。
@@ -96,7 +96,7 @@ ibmcloud sl subnet detail 12345678
 ```
 このコマンドは、仮想サーバーおよびハードウェア・サーバーの情報を含め、ID 12345678 のサブネットに関する詳細情報を表示します。
 
-### ibmcloud sl subnet list
+## ibmcloud sl subnet list
 {: #sl_subnet_list}
 
 ご使用のアカウントのすべてのサブネットをリストします。
@@ -130,7 +130,7 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 このコマンドは、現行アカウントの IP V4 サブネットをリストします。フィルター基準のデータ・センターは dal09、サブネット・タイプは PRIMARY、およびネットワーク・スペースは PUBLIC です。
 
-### ibmcloud sl subnet lookup
+## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
 
 IP アドレスを検出し、そのサブネットとデバイスの情報を表示します。

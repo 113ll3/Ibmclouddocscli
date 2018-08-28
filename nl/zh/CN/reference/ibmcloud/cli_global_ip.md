@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 用于管理 {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP 的命令
+# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP
 
 <table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP 命令</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl globalip assign
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 为目标路由器或设备分配全局 IP。
@@ -48,7 +48,7 @@ ibmcloud sl globalip assign 12345678 9.111.123.456
 
 
 
-### ibmcloud sl globalip cancel
+## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
 
 取消全局 IP。
@@ -70,7 +70,7 @@ ibmcloud sl globalip cancel 12345678
 
 
 
- ### ibmcloud sl globalip create
+ ## ibmcloud sl globalip create
 {: #sl_globalip_create}
 
 创建全局 IP。
@@ -96,7 +96,7 @@ ibmcloud sl globalip create --v6
 
 
 
-### ibmcloud sl globalip list
+## ibmcloud sl globalip list
 {: #sl_globalip_list}
 
 列出帐户的所有全局 IP。
@@ -122,7 +122,7 @@ ibmcloud sl globalip list --v4
 
 
 
-### ibmcloud sl globalip unassign
+## ibmcloud sl globalip unassign
 {: #sl_globalip_unassign}
 
 从目标路由器或设备取消分配全局 IP。
