@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandi per gestire il gruppo di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
+# Gestione dei gruppi di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
 <caption>Tabella 1. Comandi per i gruppi di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
@@ -41,7 +41,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl securitygroup create
+ ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 Crea un gruppo di sicurezza.
@@ -57,7 +57,7 @@ ibmcloud sl securitygroup create [OPZIONI]
 <dd>La descrizione del gruppo di sicurezza.</dd>
 </dl>
 
-### ibmcloud sl securitygroup delete
+## ibmcloud sl securitygroup delete
 {: #sl_securitygroup_delete}
 
 Elimina il gruppo di sicurezza fornito.
@@ -71,7 +71,7 @@ ibmcloud sl securitygroup delete ID_GRUPPOSICUREZZA [OPZIONI]
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>
 
-### ibmcloud sl securitygroup detail
+## ibmcloud sl securitygroup detail
 {: #sl_securitygroup_detail}
 
 Ottieni i dettagli su un gruppo di sicurezza.
@@ -79,7 +79,7 @@ Ottieni i dettagli su un gruppo di sicurezza.
 ibmcloud sl securitygroup detail ID_GRUPPOSICUREZZA [OPZIONI]
 ```
 
-### ibmcloud sl securitygroup edit
+## ibmcloud sl securitygroup edit
 {: #sl_securitygroup_edit}
 
 Modifica i dettagli di un gruppo di sicurezza.
@@ -95,7 +95,7 @@ ibmcloud sl securitygroup edit ID_GRUPPOSICUREZZA [OPZIONI]
 <dd>La descrizione del gruppo di sicurezza.</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-add
+## ibmcloud sl securitygroup interface-add
 {: #sl_securitygroup_interface_add}
 
 Collega un'interfaccia a un gruppo di sicurezza.
@@ -113,7 +113,7 @@ ibmcloud sl securitygroup interface-add ID_GRUPPOSICUREZZA [OPZIONI]
 <dd>L'interfaccia del server da associare (pubblica/privata).</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-list
+## ibmcloud sl securitygroup interface-list
 {: #sl_securitygroup_interface_list}
 
 Elenca le interfacce associate al gruppo di sicurezza.
@@ -127,7 +127,7 @@ ibmcloud sl securitygroup interface-list ID_GRUPPOSICUREZZA [OPZIONI]
 <dd>Colonna in base a cui ordinare; le opzioni sono: id,virtualServerId,hostname.</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-remove
+## ibmcloud sl securitygroup interface-remove
 {: #sl_securitygroup_interface_remove}
 
 Scollega un'interfaccia da un gruppo di sicurezza.
@@ -145,7 +145,7 @@ ibmcloud sl securitygroup interface-remove ID_GRUPPOSICUREZZA [OPZIONI]
 <dd>L'interfaccia del server da rimuovere (pubblica/privata).</dd>
 </dl>
 
-### ibmcloud sl securitygroup list
+## ibmcloud sl securitygroup list
 {: #sl_securitygroup_list}
 
 Elenca i gruppi di sicurezza.
@@ -159,7 +159,7 @@ Elenca i gruppi di sicurezza
 <dd>Colonna in base a cui ordinare; le opzioni sono: id,name,description,created.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-add
+## ibmcloud sl securitygroup rule-add
 {: #sl_securitygroup_rule_add}
 
 Aggiungi una regola del gruppo di sicurezza a un gruppo di sicurezza.
@@ -185,7 +185,7 @@ ibmcloud sl securitygroup rule-add ID_GRUPPOSICUREZZA [OPZIONI]
 <dd>Il protocollo (icmp, tcp, udp) da applicare.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-edit
+## ibmcloud sl securitygroup rule-edit
 {: #sl_securitygroup_rule_edit}
 
 Modifica una regola del gruppo di sicurezza in un gruppo di sicurezza.
@@ -211,7 +211,7 @@ ibmcloud sl securitygroup rule-edit ID_GRUPPOSICUREZZA ID_REGOLA [OPZIONI]
 <dd>Il protocollo (icmp, tcp, udp) da applicare.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-list
+## ibmcloud sl securitygroup rule-list
 {: #sl_securitygroup_rule_list}
 
 Elenca le regole del gruppo di sicurezza.
@@ -225,7 +225,7 @@ ibmcloud sl securitygroup rule-list ID_GRUPPOSICUREZZA [OPZIONI]
 <dd>Colonna in base a cui ordinare; le opzioni sono: id,remoteIp,remoteGroupId,direction,ethertype,portRangeMin,portRangeMax,protocol.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-remove
+## ibmcloud sl securitygroup rule-remove
 {: #sl_securitygroup_rule_remove}
 
 Rimuovi una regola da un gruppo di sicurezza.

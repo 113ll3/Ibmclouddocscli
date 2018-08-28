@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandi per gestire l'archiviazione file dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
+# Gestione dell'archiviazione file dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
 <caption>Tabella 1. Archiviazione file dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
@@ -55,7 +55,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl file access-authorize
+ ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
 Autorizza gli host ad accedere a un determinato volume.
@@ -83,7 +83,7 @@ ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
 Questo comando autorizza il server virtuale con ID 87654321 ad accedere al volume con ID 12345678.
 
-### ibmcloud sl file access-list
+## ibmcloud sl file access-list
 {: #sl_file_access_list}
 
 Elenca ACL.
@@ -105,7 +105,7 @@ ibmcloud sl file access-list 12345678 --sortby id
 ```
 Questo comando elenca tutti gli host autorizzati ad accedere al volume con ID 12345678 e li ordina in base all'ID.
 
-### ibmcloud sl file access-revoke
+## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
 
 Revoca l'autorizzazione agli host che accedono a un determinato volume.
@@ -133,7 +133,7 @@ ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
 Questo comando revoca l'accesso del server virtuale con ID 87654321 al volume con ID 12345678.
 
-### ibmcloud sl file replica-failback
+## ibmcloud sl file replica-failback
 {: #sl_file_replica_failback}
 
 Failback di un volume di file dalla replica.
@@ -148,7 +148,7 @@ ibmcloud sl file replica-failback 12345678
 ```
 Questo comando esegue l'operazione di failback per il volume con ID 12345678.
 
-### ibmcloud sl file replica-failover
+## ibmcloud sl file replica-failover
 {: #sl_file_replica_failover}
 
 Failover di un volume di file per un volume di replica fornito.
@@ -163,7 +163,7 @@ ibmcloud sl file replica-failover 12345678 87654321
 ```
 Questo comando esegue l'operazione di failover per il volume con ID 12345678 nel volume di replica con ID 87654321.
 
-### ibmcloud sl file replica-locations
+## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
 
 Elenca i datacenter di replica appropriati per il volume fornito.
@@ -178,7 +178,7 @@ ibmcloud sl file replica-locations 12345678
 ```
 Questo comando elenca i datacenter di replica appropriati per il volume di file con ID 12345678.
 
-### ibmcloud sl file replica-order
+## ibmcloud sl file replica-order
 {: #sl_file_replica_order}
 
 Ordina un volume di replica dell'archiviazione file.
@@ -206,7 +206,7 @@ ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 Questo comando ordina una replica per il volume con ID 12345678, che esegue la replica giornaliera (DAILY); è ubicato in dal09, il livello è 4.
 
-### ibmcloud sl file replica-partners
+## ibmcloud sl file replica-partners
 {: #sl_file_replica_partners}
 
 Elenca i volumi di replica esistenti per un volume di file.
@@ -221,7 +221,7 @@ ibmcloud sl file replica-partners 12345678
 ```
 Questo comando elenca i volumi di replica esistenti per il volume di file con ID 12345678.
 
-### ibmcloud sl file snapshot-cancel
+## ibmcloud sl file snapshot-cancel
 {: #sl_file_snapshot_cancel}
 
 Annulla lo spazio di istantanea esistente per un determinato volume.
@@ -245,7 +245,7 @@ ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 ```
 Questo comando annulla l'istantanea con ID 12345678 immediatamente senza richiedere la conferma.
 
-### ibmcloud sl file snapshot-create
+## ibmcloud sl file snapshot-create
 {: #sl_file_snapshot_create}
 
 Crea un'istantanea in un determinato volume.
@@ -265,7 +265,7 @@ ibmcloud sl file snapshot-create 12345678 --note snapshotforibmcloud
 ```
 Questo comando crea un'istantanea per il volume con ID 12345678 e con una nota aggiunta come snapshotforibmcloud.
 
-### ibmcloud sl file snapshot-disable
+## ibmcloud sl file snapshot-disable
 {: #sl_file_snapshot_disable}
 
 Disabilita le istantanee nella pianificazione specificata per un determinato volume.
@@ -285,7 +285,7 @@ ibmcloud sl file snapshot-disable 12345678 -s DAILY
 ```
 Questo comando disabilita l'istantanea giornaliera per il volume con ID 12345678.
 
-### ibmcloud sl file snapshot-enable
+## ibmcloud sl file snapshot-enable
 {: #sl_file_snapshot_enable}
 
 Abilita le istantanee per un determinato volume nella pianificazione specificata.
@@ -313,7 +313,7 @@ ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Questo comando abilita l'istantanea per il volume con ID 12345678, l'istantanea viene acquisita settimanalmente ogni domenica alle 2:00 e vengono conservate fino a 5 istantanee.
 
-### ibmcloud sl file snapshot-delete
+## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
 Elimina un'istantanea in un determinato volume.
@@ -328,7 +328,7 @@ ibmcloud sl file snapshot-delete 12345678
 ```
 Questo comando elimina l'istantanea con ID 12345678.
 
-### ibmcloud sl file snapshot-list
+## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
 
 Elenca le istantanee dell'archiviazione file.
@@ -348,7 +348,7 @@ ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
 Questo comando elenca tutte le istantanee del volume con ID 12345678 e le ordina in base all'ID.
 
-### ibmcloud sl file snapshot-order
+## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
 
 Ordina lo spazio dell'istantanea per un volume dell'archiviazione file.
@@ -376,7 +376,7 @@ ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 Questo comando ordina lo spazio dell'istantanea per il volume con ID 12345678, la dimensione è 1000GB, la classe di livello è 4 IOPS per GB.
 
-### ibmcloud sl file snapshot-restore
+## ibmcloud sl file snapshot-restore
 {: #sl_file_snapshot_restore}
 
 Ripristina il volume di file utilizzando un'istantanea fornita.
@@ -391,7 +391,7 @@ ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 Questo comando ripristina il volume con ID 12345678 dall'istantanea con ID 87654321.
 
-### ibmcloud sl file volume-cancel
+## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
 Annulla un volume di archiviazione file esistente.
@@ -415,7 +415,7 @@ ibmcloud sl file volume-cancel 12345678 --immediate -f
 ```
 Questo comando annulla il volume con ID 12345678 immediatamente e senza richiedere conferma.
 
-### ibmcloud sl file volume-count
+## ibmcloud sl file volume-count
 {: #sl_file_volume_count}
 
 Elenca il numero di volumi di archiviazione file per datacenter.
@@ -429,7 +429,7 @@ ibmcloud sl file volume-count [OPZIONI]
 <dd>Filtra per nome breve del datacenter.</dd>
 </dl>
 
-### ibmcloud sl file volume-list
+## ibmcloud sl file volume-list
 {: #sl_file_volume_list}
 
 Elenca l'archiviazione file.
@@ -459,7 +459,7 @@ ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Questo comando elenca i volumi di durata sull'account corrente ubicati in dal09 e li ordina per capacità.
 
-### ibmcloud sl file volume-detail
+## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
 
 Visualizza i dettagli di un volume specificato.
@@ -474,7 +474,7 @@ ibmcloud sl file volume-detail 12345678
 ```
 Questo comando mostra i dettagli del volume con ID 12345678.
 
-### ibmcloud sl file volume-duplicate
+## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
 
 Ordina un volume di file duplicando un volume esistente.
@@ -504,7 +504,7 @@ ibmcloud sl file volume-duplicate 12345678
 ```
 Questo comando mostra come ordinare un nuovo volume duplicando il volume con ID 12345678.
 
-### ibmcloud sl file volume-order
+## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
 
 Ordina un volume dell'archiviazione file.
@@ -536,7 +536,7 @@ ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000
 ```
 Questo comando ordina un volume delle prestazioni con dimensione di 1000GB, IOPS di 4000, ubicato in dal09.
 
-### ibmcloud sl file volume-options
+## ibmcloud sl file volume-options
 {: #sl_file_volume_options}
 
 Elenca tutte le opzioni per l'ordinamento di un'archiviazione file.

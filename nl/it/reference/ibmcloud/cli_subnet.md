@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandi per gestire la sottorete dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
+# Gestione della sottorete dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
 <caption>Tabella 1. Comandi di sottorete dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl subnet cancel
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 Annulla una sottorete.
@@ -50,7 +50,7 @@ ibmcloud sl subnet cancel 12345678 -f
 ```
 Questo comando annulla la sottorete con ID 12345678 senza richiedere conferma.
 
-### ibmcloud sl subnet create
+## ibmcloud sl subnet create
 {: #sl_subnet_create}
 
 Aggiungi una nuova sottorete al tuo account.
@@ -74,7 +74,7 @@ ibmcloud sl subnet create public 16 567
 ```
 Questo comando crea una sottorete pubblica con 16 indirizzi IP v4 e la posiziona nella vlan con ID 567.
 
-### ibmcloud sl subnet detail
+## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
 
 Ottieni i dettagli di una sottorete.
@@ -96,7 +96,7 @@ ibmcloud sl subnet detail 12345678
 ```
 Questo comando mostra informazioni dettagliate sulla sottorete con ID 12345678, incluse le informazioni sui server virtuali e i server hardware.
 
-### ibmcloud sl subnet list
+## ibmcloud sl subnet list
 {: #sl_subnet_list}
 
 Elenca tutte le sottoreti per il tuo account.
@@ -130,7 +130,7 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 Questo comando elenca le sottoreti IP V4 sull'account corrente eseguendo il filtro per il datacenter dal09, il tipo di sottorete è PRIMARY e lo spazio di rete è PUBLIC.
 
-### ibmcloud sl subnet lookup
+## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
 
 Trova un indirizzo IP e visualizzane le informazioni su sottorete e dispositivo.

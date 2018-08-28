@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandi per gestire il Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
+# Gestione del Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
 <caption>Tabella 1. Comandi Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
@@ -49,7 +49,7 @@ lastupdated: "2018-07-31"
 </tbody>
  </table>
 
- ### ibmcloud sl loadbal cancel
+ ## ibmcloud sl loadbal cancel
 {: #sl_loadbal_cancel}
 
 Annulla un programma di bilanciamento del carico esistente.
@@ -63,7 +63,7 @@ ibmcloud sl loadbal cancel ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO [OPZIONI]
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>
 
-### ibmcloud sl loadbal create
+## ibmcloud sl loadbal create
 {: #sl_loadbal_create}
 
 Aggiunge un programma di bilanciamento del carico fornendo l'id restituito dalle opzioni di creazione.
@@ -77,7 +77,7 @@ ibmcloud sl loadbal create ID_PREZZO UBICAZIONE [OPZIONI]
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>
 
-### ibmcloud sl loadbal create-options
+## ibmcloud sl loadbal create-options
 {: #sl_loadbal_create_options}
 
 Ottieni le opzioni dei prezzi con cui creare un programma di bilanciamento del carico.
@@ -85,7 +85,7 @@ Ottieni le opzioni dei prezzi con cui creare un programma di bilanciamento del c
 ibmcloud sl loadbal create-options
 ```
 
-### ibmcloud sl loadbal detail
+## ibmcloud sl loadbal detail
 {: #sl_loadbal_detail}
 
 Ottieni i dettagli del programma di bilanciamento del carico.
@@ -93,7 +93,7 @@ Ottieni i dettagli del programma di bilanciamento del carico.
 ibmcloud sl loadbal detail ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO
 ```
 
-### ibmcloud sl loadbal group-add
+## ibmcloud sl loadbal group-add
 {: #sl_loadbal_group_add}
 
 Aggiunge un nuovo servizio del programma di bilanciamento del carico.
@@ -113,7 +113,7 @@ ibmcloud sl loadbal group-add ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO [OPZIONI]
 <dd>Obbligatorio. L'ID del metodo di instradamento. Esegui 'ibmcloud sl loadbal routing-methods' per trovare un ID.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-delete
+## ibmcloud sl loadbal group-delete
 {: #sl_loadbal_group_delete}
 
 Elimina un gruppo di servizi del programma di bilanciamento del carico esistente.
@@ -127,7 +127,7 @@ ibmcloud sl loadbal group-delete ID_GRUPPO [OPZIONI]
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-edit
+## ibmcloud sl loadbal group-edit
 {: #sl_loadbal_group_edit}
 
 Modifica un gruppo di servizi del programma di bilanciamento del carico esistente.
@@ -147,7 +147,7 @@ ibmcloud sl loadbal group-edit ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO ID_GRUPP
 <dd>Modifica l'ID del metodo di instradamento. Esegui 'ibmcloud sl loadbal routing-methods' per trovare un ID.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-reset
+## ibmcloud sl loadbal group-reset
 {: #sl_loadbal_group_reset}
 
 Reimposta i collegamenti a un determinato gruppo di servizi.
@@ -155,7 +155,7 @@ Reimposta i collegamenti a un determinato gruppo di servizi.
 ibmcloud sl loadbal group-reset ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO ID_GRUPPO
 ```
 
-### ibmcloud sl loadbal health-checks
+## ibmcloud sl loadbal health-checks
 {: #sl_loadbal_health_checks}
 
 Elenca i tipi di controllo di integrità.
@@ -163,7 +163,7 @@ Elenca i tipi di controllo di integrità.
 ibmcloud sl loadbal health-checks
 ```
 
-### ibmcloud sl loadbal list
+## ibmcloud sl loadbal list
 {: #sl_loadbal_list}
 
 Elenca i programmi di bilanciamento del carico attivi.
@@ -181,7 +181,7 @@ ibmcloud sl loadbal list
 <dd>Filtra in base all'indirizzo IP.</dd>
 </dl>
 
-### ibmcloud sl loadbal routing-methods
+## ibmcloud sl loadbal routing-methods
 {: #sl_loadbal_routing_methods}
 
 Elenca i metodi di instradamento.
@@ -189,7 +189,7 @@ Elenca i metodi di instradamento.
 ibmcloud sl loadbal routing-methods
 ```
 
-### ibmcloud sl loadbal routing-types
+## ibmcloud sl loadbal routing-types
 {: #sl_loadbal_routing_types}
 
 Elenca i tipi di instradamento.
@@ -197,7 +197,7 @@ Elenca i tipi di instradamento.
 ibmcloud sl loadbal routing-types
 ```
 
-### ibmcloud sl loadbal service-add
+## ibmcloud sl loadbal service-add
 {: #sl_loadbal_service_add}
 
 Aggiunge un nuovo servizio del programma di bilanciamento del carico.
@@ -219,7 +219,7 @@ ibmcloud sl loadbal service-add ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO ID_GRUP
 <dd>Obbligatorio. L'indirizzo IP del servizio.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-delete
+## ibmcloud sl loadbal service-delete
 {: #sl_loadbal_service_delete}
 
 Elimina un servizio del programma di bilanciamento del carico esistente.
@@ -233,7 +233,7 @@ ibmcloud sl loadbal service-delete ID_SERVIZIO [OPZIONI]
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-edit
+## ibmcloud sl loadbal service-edit
 {: #sl_loadbal_service_edit}
 
 Modifica le proprietà di un gruppo di servizi.
@@ -257,7 +257,7 @@ ibmcloud sl loadbal service-edit ID_PROGRAMMA_DI_BILANCIAMENTO_DEL_CARICO ID_SER
 <dd>Modifica l'indirizzo IP del servizio.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-toggle
+## ibmcloud sl loadbal service-toggle
 {: #sl_loadbal_service_toggle}
 
 Attiva lo stato di un servizio del programma di bilanciamento del carico esistente.

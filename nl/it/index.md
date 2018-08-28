@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -42,7 +42,7 @@ Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.
 * Se stai utilizzando Microsoft Windows &trade;, devi utilizzare 10 Pro o versioni successive.
 * Devi utilizzare il canale stabile per Docker con una versione minima di 1.13.1. 
 
-## Passo 1: Esegui il comando di installazione
+## Passo 1. Esegui il comando di installazione
 {: #step1}
 
 * Per Mac e Linux, immetti il seguente comando:
@@ -64,7 +64,7 @@ Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.
   
   Per istruzioni sull'installazione manuale di questi strumenti, vedi [Reinstallazione degli strumenti](/docs/cli/ts_createapps.html#appendix).
 
-## Passo 2: Verifica l'installazione
+## Passo 2. Verifica l'installazione
 {: #step2}
 
 Per verificare che la CLI e gli strumenti per sviluppatori siano stati installati correttamente, esegui il comando `help`:
@@ -76,7 +76,7 @@ ibmcloud dev help
 <br>
 L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supportati.
 
-## Passo 3: Configura il tuo ambiente
+## Passo 3. Configura il tuo ambiente
 {: #step3}
 
 1. Stabilisci una connessione a un endpoint API nella tua regione {{site.data.keyword.Bluemix_notm}}. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione Stati Uniti Sud {{site.data.keyword.Bluemix_notm}}:
@@ -111,7 +111,7 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 	```
 	{: codeblock}
 	
-Per segnalare problemi o fornire un feedback, puoi utilizzare [Slack di IBM Cloud Tech - Canale #developer-tools](https://ibm-cloud-tech.slack.com) - richiedi l'accesso del team [qui](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
+Per segnalare problemi o fornire un feedback, puoi utilizzare [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com).  Richiedi l'accesso al team all'indirizzo [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 ## Passi successivi
 {: #next-steps}
