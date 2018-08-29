@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar DNS de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Gestión de DNS de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
 <caption>Tabla 1. Mandatos DNS de la infraestructura de {{site.data.keyword.Bluemix_notm}}</caption>
@@ -36,7 +36,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
-### ibmcloud sl dns import
+## ibmcloud sl dns import
 {: #sl_dns_import}
 
 Importar una zona basada en un archivo de zona BIND.
@@ -56,7 +56,7 @@ ibmcloud sl dns import ~/ibm.com.txt
 ```
 Este mandato importa la zona y los registros de recursos del archivo : ~/ibm.com.txt.
 
-### ibmcloud sl dns record-add
+## ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
 Añadir registro de recurso en una zona.
@@ -76,7 +76,7 @@ ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
 Este mandato añade un registro A a la zona: ibm.com, su host es "ftp", los datos son "127.0.0.1" y el ttl es 86400 segundos.
 
-### ibmcloud sl dns record-edit
+## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
 
 Actualizar los registros de recursos en una zona.
@@ -102,7 +102,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 Este mandato edita registros de la zona: ibm.com, cuyo ID es 12345678, y establece sus datos en "127.0.0.2" y el ttl a 3600.
 
-### ibmcloud sl dns record-list
+## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
 Listar todos los registros de recursos en una zona.
@@ -128,7 +128,7 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
 Este mandato lista todos los registros A de la zona: ibm.com,filtrados por host es elasticsearch y el ttl es 900 segundos.
 
-### ibmcloud sl dns record-remove
+## ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
 Eliminar registro de recurso de una zona.
@@ -143,7 +143,7 @@ ibmcloud sl dns record-remove 12345678
 ```
 Este mandato elimina el registro de recurso con el ID 12345678.
 
-### ibmcloud sl dns zone-create
+## ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
 
 Crear una zona.
@@ -158,7 +158,7 @@ ibmcloud sl dns zone-create ibm.com
 ```
 Este mandato crea una zona denominada ibm.com.
 
-### ibmcloud sl dns zone-delete
+## ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
 
 Suprimir una zona.
@@ -173,7 +173,7 @@ ibmcloud sl dns zone-delete ibm.com
 ```
 Este mandato suprime una zona denominada ibm.com.
 
-### ibmcloud sl dns zone-list
+## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
 
 Listar todas las zonas de su cuenta.
@@ -188,7 +188,7 @@ ibmcloud sl dns zone-list
 ```
 Este mandato lista todas las zonas en la cuenta actual.
 
-### ibmcloud sl dns zone-print
+## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
 
 Imprimir registros del recurso y zona en formato BIND.

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar apps cf y dominios, rutas y certificados relacionados con las apps
+# Gestión de apps cf y dominios, rutas y certificados relacionados con las apps
 {: #ibmcloud_commands_apps}
 
 <table summary="mandatos de ibmcloud que sirven para gestionar apps cf y dominios, rutas y certificados relacionados con las apps.">
@@ -73,104 +73,104 @@ lastupdated: "2018-07-26"
   </tbody>
  </table>
 
- ### ibmcloud app push
+ ## ibmcloud app push
 {: #ibmcloud_app_push}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf push ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window}.
 
-### ibmcloud app list
+## ibmcloud app list
 {: #ibmcloud_app_list}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf apps ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window}.
 
-### ibmcloud app show
+## ibmcloud app show
 {: #ibmcloud_app_show}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf app ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window}.
 
-### ibmcloud app delete
+## ibmcloud app delete
 {: #ibmcloud_app_delete}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window}.
 
-### ibmcloud app rename
+## ibmcloud app rename
 {: #ibmcloud_app_rename}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf rename ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window}.
 
-### ibmcloud app start
+## ibmcloud app start
 {: #ibmcloud_app_start}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf start ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window}.
 
-### ibmcloud app stop
+## ibmcloud app stop
 {: #ibmcloud_app_stop}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf stop ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window}.
 
-### ibmcloud app restart
+## ibmcloud app restart
 {: #ibmcloud_app_restart}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf restart ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window}.
 
-### ibmcloud app restage
+## ibmcloud app restage
 {: #ibmcloud_app_restage}
 
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf restage ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window}.
 
-### ibmcloud app instance-restart
+## ibmcloud app instance-restart
 {: #ibmcloud_app_instance_restart}
 
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf restart-app-instance ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window}.
 
-### ibmcloud app events
+## ibmcloud app events
 {: #ibmcloud_app_events}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf events ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window}.
 
-### ibmcloud app files
+## ibmcloud app files
 {: #ibmcloud_app_files}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf files ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window}.
 
-### ibmcloud app logs
+## ibmcloud app logs
 {: #ibmcloud_app_logs}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf logs ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window}.
 
-### ibmcloud app env
+## ibmcloud app env
 {: #ibmcloud_app_env}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf env ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window}.
 
-### ibmcloud app env-set
+## ibmcloud app env-set
 {: #ibmcloud_app_env_set}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf set-env ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window}.
 
-### ibmcloud app env-unset
+## ibmcloud app env-unset
 {: #ibmcloud_app_env_unset}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf unset-env ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window}.
 
-### ibmcloud app stacks
+## ibmcloud app stacks
 {: #ibmcloud_app_stacks}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf stacks ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window}.
 
-### ibmcloud app stack-show
+## ibmcloud app stack-show
 {: #ibmcloud_app_stack_show}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf stack ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window}.
 
-### ibmcloud app manifest-create
+## ibmcloud app manifest-create
 {: #ibmcloud_app_manifest_create}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-app-manifest ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window}.
 
-### ibmcloud app domain-cert
+## ibmcloud app domain-cert
 {: #ibmcloud_app_domain_cert}
 
 Liste la información de certificado de un dominio.
@@ -196,7 +196,7 @@ Ver la información de certificado del dominio `ibmcxo-eventconnect.com`:
 ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
-### ibmcloud app domain-cert-add
+## ibmcloud app domain-cert-add
 {: #ibmcloud_app_domain_cert_add}
 
 Añadir un certificado para el dominio especificado en la organización actual.
@@ -232,7 +232,7 @@ Añadir un certificado al dominio `ibmcxo-eventconnect.com`:
 ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-### ibmcloud app domain-cert-remove
+## ibmcloud app domain-cert-remove
 {: #ibmcloud_app_domain_cert_remove}
 
 Eliminar un certificado del dominio especificado en la organización actual.
@@ -252,17 +252,17 @@ ibmcloud app domain-cert-remove DOMAIN [-f]
    <dd>Forzar la eliminación sin confirmación.</dd>
    </dl>
 
-### ibmcloud app routes
+## ibmcloud app routes
 {: #ibmcloud_app_routes}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf routes ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window}.
 
-### ibmcloud app route-check
+## ibmcloud app route-check
 {: #ibmcloud_app_route_check}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf check-route ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window}.
 
-### ibmcloud app route-map
+## ibmcloud app route-map
 {: #ibmcloud_app_route_map}
 
 Correlacione una ruta a una aplicación cf o grupo de contenedores que tenga un dominio y nombre de host específicos.
@@ -298,7 +298,7 @@ Correlacione una ruta a 'my-container-group' con el dominio y el nombre de host 
 ibmcloud app route-map my-container-group chinabluemix.net -n abc
 ```
 
-### ibmcloud app route-unmap
+## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 Elimina la correlación entre la ruta específica y una aplicación cf existente o grupo de contenedores.
@@ -334,42 +334,42 @@ Descorrelacionar `abc.chinabluexmix.net` desde `my-container-group`:
 ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
 ```
 
-### ibmcloud app route-create
+## ibmcloud app route-create
 {: #ibmcloud_app_route_create}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-route ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window}.
 
-### ibmcloud app route-delete
+## ibmcloud app route-delete
 {: #ibmcloud_app_route_delete}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-route ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window}.
 
-### ibmcloud app orphaned-routes-delete
+## ibmcloud app orphaned-routes-delete
 {: #ibmcloud_app_orphaned_routes_delete}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-orphaned-routes ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window}.
 
-### ibmcloud app domains
+## ibmcloud app domains
 {: #ibmcloud_app_domains}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf domains ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window}.
 
-### ibmcloud app domain-create
+## ibmcloud app domain-create
 {: #ibmcloud_app_domain_create}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-domain ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window}.
 
-### ibmcloud app domain-delete
+## ibmcloud app domain-delete
 {: #ibmcloud_app_domain_delete}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-domain ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window}.
 
-### ibmcloud app shared-domain-create
+## ibmcloud app shared-domain-create
 {: #ibmcloud_app_shared_domain_create}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf create-shared-domain ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window}.
 
-### ibmcloud app shared-domain-delete
+## ibmcloud app shared-domain-delete
 {: #ibmcloud_app_shared_domain_delete}
 
 Este mandato tiene la misma función y las mismas opciones que el mandato [cf delete-shared-domain ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window}.

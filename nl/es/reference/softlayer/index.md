@@ -180,9 +180,9 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `ibmcloud sl` para v
 
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 6. Mandatos de IP de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}} global</caption>
+<caption>Tabla 6. Mandatos de IP global de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Mandatos de IP de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}} global</th>
+ <th colspan="6">Mandatos de IP global de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>

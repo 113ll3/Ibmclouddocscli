@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar los valores de catálogo, plug-ins y facturación
+# Gestión de los valores de catálogo, plug-ins y facturación
 {: #ibmcloud_commands_settings}
 
 <table summary="mandatos ibmcloud que puede utilizar para gestionar los valores de catálogo, plug-ins, facturación y seguridad de {{site.data.keyword.Bluemix_notm}}.">
@@ -64,7 +64,7 @@ lastupdated: "2018-07-26"
  </tbody>
  </table>
 
- ### ibmcloud catalog search
+ ## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
 Buscar entradas de catálogo
@@ -107,7 +107,7 @@ Busque el servicio `Prueba de automatización`:
 ibmcloud catalog search -k service -q 'Automation test'
 ```
 
-### ibmcloud catalog entry
+## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
 Obtener una entrada de catálogo
@@ -136,7 +136,7 @@ Obtener entrada con el ID `a0ef1-d3b4j0`:
 ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-create
+## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 Crear una nueva entrada de catálogo (sólo administrador del catálogo de una cuenta)
 
@@ -164,7 +164,7 @@ Crear recurso desde el archivo JSON con el ID padre `a0ef1-d3b4j0`:
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-update
+## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
 Actualizar una entrada de catálogo existente (sólo administrador o editor del catálogo de una cuenta)
 
@@ -190,7 +190,7 @@ Actualizar recurso `j402-dnf1i` desde el archivo JSON:
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
 
-### ibmcloud catalog entry-delete
+## ibmcloud catalog entry-delete
 {: #ibmcloud_catalog_entry_delete}
 Suprimir una entrada de catálogo (solo administrador del catálogo de una cuenta)
 ```
@@ -213,7 +213,7 @@ Suprimir el recurso `j402-dnf1i`:
 ibmcloud catalog delete 'j402-dnf1i'
 ```
 
-### ibmcloud catalog entry-visibility
+## ibmcloud catalog entry-visibility
 {: #ibmcloud_catalog_entry_visibility}
 Obtener la visibilidad para una entrada de catálogo (sólo administrador del catálogo de una cuenta)
 
@@ -239,7 +239,7 @@ Obtener la visibilidad de recursos `j402-dnf1i` en el ámbito global:
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
 
-### ibmcloud catalog entry-visibility-set
+## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
 Actualizar la visibilidad de una entrada de catálogo existente (sólo administrador del catálogo de una cuenta)
 
@@ -280,7 +280,7 @@ Establecer visibilidad del recurso `j402-dnf1i` desde el archivo JSON:
 ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
-### ibmcloud catalog service-marketplace
+## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
 Lista de ofertas de servicios en el mercado
 
@@ -308,7 +308,7 @@ Mostrar ofertas de servicio en el ámbito global:
 ibmcloud catalog service-marketplace --global
 ```
 
-### ibmcloud catalog templates
+## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 Visualizar las plantillas de contenedor modelo en {{site.data.keyword.Bluemix_notm}}.
@@ -326,7 +326,7 @@ ibmcloud catalog templates [-d]
    <dd>Si se especifica la opción <i>-d</i>, también se mostrará la descripción de cada plantilla. De lo contrario, sólo se mostrará el ID y el nombre de cada plantilla.</dd>
    </dl>
 
-### ibmcloud catalog template
+## ibmcloud catalog template
 {: #ibmcloud_catalog_template}
 
 Ver la información detallada de una plantilla de contenedor modelo especificada.
@@ -352,7 +352,7 @@ Ver detalles de la plantilla `mobileBackendStarter`:
 ibmcloud catalog template mobileBackendStarter
 ```
 
-### ibmcloud catalog template-run
+## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
 Crea una aplicación cf que se base en la plantilla específica con el URL y la descripción especificados. De forma predeterminada, la nueva app se iniciará automáticamente.
@@ -398,7 +398,7 @@ Crear una aplicación `my-python-app` basada en la plantilla `pythonHelloWorld` 
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-### ibmcloud catalog locations
+## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
 
 Obtener un subconjunto determinado de regiones en el formato preferido.
@@ -424,7 +424,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>Saca un archivo CSV</dd>
 </dl>
 
-### ibmcloud catalog runtime
+## ibmcloud catalog runtime
 {: #ibmcloud_catalog_runtime}
 
 Visualice los detalles de un tiempo de ejecución. Este mandato solo está disponible para nube pública.
@@ -441,7 +441,7 @@ Mostrar los detalles del tiempo de ejecución "nodejsHelloWorld":
 catalog runtime nodejsHelloWorld
 ```
 
-### ibmcloud catalog runtimes
+## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 Listar todos los tiempos de ejecución. Este mandato solo está disponible para nube pública.
@@ -465,7 +465,7 @@ Listar todos los tiempos de ejecución junto con sus descripciones:
 ibmcloud catalog runtimes -d
 ```
 
-### ibmcloud billing account-usage
+## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
 Mostrar el uso mensual de la cuenta actual (solo el administrador de la cuenta)
@@ -493,7 +493,7 @@ Mostrar el informe de uso y de coste de la cuenta actual en 2016-06:
 ibmcloud billing account-usage -d 2016-06
 ```
 
-### ibmcloud billing org-usage
+## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
 Mostrar el uso mensual de una organización (solo el administrador de la cuenta o el gestor de facturación de la organización)
@@ -515,7 +515,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>Mostrar el resultado del uso en formato JSON.</dd>
 </dl>
 
-### ibmcloud billing resource-group-usage
+## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
 Mostrar el uso mensual de un grupo de recursos (solo el administrador de la cuenta o el administrado del grupo de recursos)
@@ -537,7 +537,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>Mostrar el resultado del uso en formato JSON.</dd>
 </dl>
 
-### ibmcloud billing resource-instances-usage
+## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
 Mostrar el uso mensual de las instancias de recurso de la cuenta actual.
@@ -561,7 +561,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>Mostrar el resultado del uso en formato JSON.</dd>
 </dl>
 
-### ibmcloud plugin repos
+## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
 Crear una lista de todos los repositorios de plug-in que se registran en la CLI de {{site.data.keyword.Bluemix_notm}}.
@@ -572,7 +572,7 @@ ibmcloud plugin repos
 
 <strong>Requisitos previos</strong>:  Ninguno
 
-### ibmcloud plugin repo-add
+## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
 
 Agrega un nuevo repositorio de plug-in a la CLI de {{site.data.keyword.Bluemix_notm}}.
@@ -601,7 +601,7 @@ Añadir el repositorio de plugins oficial de la CLI de {{site.data.keyword.Bluem
 ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
-### ibmcloud plugin repo-remove
+## ibmcloud plugin repo-remove
 {: #ibmcloud_plugin_repo_remove}
 
 Elimina el repositorio de plugins de la CLI de {{site.data.keyword.Bluemix_notm}}.
@@ -626,7 +626,7 @@ Eliminar el repositorio `bluemix-repo` desde la CLI de {{site.data.keyword.Bluem
 ibmcloud plugin repo-remove bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugins
+## ibmcloud plugin repo-plugins
 {: #ibmcloud_plugin_repo_plugins}
 
 Crear una lista de todos los plug-ins disponibles en todos los repositorios o repositorios específicos.
@@ -658,7 +658,7 @@ Listar todos los plug-ins del repositorio `bluemix-repo`:
 ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugin
+## ibmcloud plugin repo-plugin
 {: #ibmcloud_plugin_repo_plugin}
 
 Mostrar los detalles de un plug-in del repositorio.
@@ -690,7 +690,7 @@ Listar los detalles del plugin "IBM-Container" en el repositorio predeterminado
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-### ibmcloud plugin list
+## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
 
 Crea una lista de todos los plug-ins instalados en la CLI de {{site.data.keyword.Bluemix_notm}}.
@@ -701,7 +701,7 @@ ibmcloud plugin list
 
 <strong>Requisitos previos</strong>:  Ninguno
 
-### ibmcloud plugin show
+## ibmcloud plugin show
 {: #ibmcloud_plugin_show}
 
 Mostrar los detalles de un plugin instalado.
@@ -712,7 +712,7 @@ ibmcloud plugin show PLUGIN-NAME
 
 <strong>Requisitos previos</strong>:  Ninguno
 
-### ibmcloud plugin install
+## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
 Instalar la versión específica del plug-in en la CLI de {{site.data.keyword.Bluemix_notm}} desde la vía de acceso o el repositorio especificados.
@@ -778,7 +778,7 @@ Instalar el plugin 'container-service' con la versión '0.1.425' del repositorio
 ibmcloud plugin install container-service -v 0.1.425
 ```
 
-### ibmcloud plugin update
+## ibmcloud plugin update
 {: #ibmcloud_plugin_update}
 
 Actualizar el plugin desde un repositorio.
@@ -830,7 +830,7 @@ Actualizar el plugin 'container-service' en el repositorio oficial de plugins a 
 ibmcloud plugin update container-service -v 0.1.440
 ```
 
-### ibmcloud plugin uninstall
+## ibmcloud plugin uninstall
 {: #ibmcloud_plugin_uninstall}
 
 Desinstala el plug-in especificado desde la CLI de {{site.data.keyword.Bluemix_notm}}.

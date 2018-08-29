@@ -224,9 +224,9 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
 <strong>Opciones de mandato</strong>:
    <dl>
    <dt>-o</dt>
-   <dd>Nombre de la organización. Lista los espacios en la organización especificada. De forma predeterminada toma la organización actual si no se especifica.</dd>
+   <dd>Nombre de la organización. Lista los espacios en la organización especificada. Si no se especifica, el valor predeterminado es la organización actual.</dd>
    <dt>-r</dt>
-   <dd>Nombre de región. Lista los espacios en la región especificada. De forma predeterminada toma la región actual si no se especifica.</dd>
+   <dd>Nombre de región. Lista los espacios en la región especificada. Si no se especifica, el valor predeterminado es la región actual.</dd>
    </dl>
 
 ### ibmcloud account space

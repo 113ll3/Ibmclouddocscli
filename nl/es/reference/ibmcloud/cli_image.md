@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar la imagen de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Gestión de la imagen de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
 <caption>Tabla 1. Mandatos image de la infraestructura de {{site.data.keyword.Bluemix_notm}}</caption>
@@ -29,7 +29,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl image delete
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 Suprimir una imagen.
@@ -42,7 +42,7 @@ ibmcloud sl image delete IDENTIFIER
 ```
 Este mandato suprime la imagen con el ID `12345678`.
 
-### ibmcloud sl image detail
+## ibmcloud sl image detail
 {: #sl_image_detail}
 
 Obtener detalles para una imagen.
@@ -55,7 +55,7 @@ ibmcloud sl image detail IDENTIFIER
 ```
 Este mandato obtiene los detalles para la imagen con el ID 12345678.
 
-### ibmcloud sl image edit
+## ibmcloud sl image edit
 {: #sl_image_edit}
 
 Editar los detalles de una imagen.
@@ -79,7 +79,7 @@ ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 Este mandato edita la imagen con el ID `12345678` y establece el nombre en `ubuntu16`, la nota en `testing` y la etiqueta en `staging`.
 
-### ibmcloud sl image list
+## ibmcloud sl image list
 {: #sl_image_list}
 
 Listar todas las imágenes de su cuenta.

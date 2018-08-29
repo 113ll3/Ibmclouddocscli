@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar la seguridad de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Gestión de la seguridad de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
 <caption>Tabla 1. Mandatos security de la infraestructura de {{site.data.keyword.Bluemix_notm}}</caption>
@@ -38,7 +38,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl security sshkey-add
+ ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 Añadir una nueva clave SSH.
@@ -62,7 +62,7 @@ ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 Este mandato añade una clave SSH desde el archivo: ~/.ssh/id_rsa.pub con la nota "mykey".
 
-### ibmcloud sl security sshkey-edit
+## ibmcloud sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
 Editar una clave SSH.
@@ -84,7 +84,7 @@ ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
 Este mandato actualiza la clave SSH con el ID 12345678 y establece la etiqueta en "Bluemix" y la nota en "testing".
 
-### ibmcloud sl security sshkey-list
+## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
 
 Listar claves SSH de su cuenta.
@@ -104,7 +104,7 @@ ibmcloud sl security sshkey-list --sortby label
 ```
 Este mandato lista todas las claves SSH de la cuenta actual y las ordena por etiqueta.
 
-### ibmcloud sl security sshkey-print
+## ibmcloud sl security sshkey-print
 {: #sl_security_sshkey_print}
 
 Imprime una clave SSH para la pantalla.
@@ -124,7 +124,7 @@ ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 Este mandato muestra el ID, la etiqueta y las notas de la clave SSH con el ID 12345678 y escribe la clave pública en el archivo: ~/mykey.pub.
 
-### ibmcloud sl security sshkey-remove
+## ibmcloud sl security sshkey-remove
 {: #sl_security_sshkey_remove}
 
 Elimina una clave SSH de forma permanente.
@@ -144,7 +144,7 @@ ibmcloud sl security sshkey-remove 12345678 -f
 ```
 Este mandato elimina la clave SSH con el ID 12345678 sin solicitar confirmación.
 
-### ibmcloud sl security cert-add
+## ibmcloud sl security cert-add
 {: #sl_security_cert_add}
 
 Añadir y cargar detalles del certificado SSL.
@@ -172,7 +172,7 @@ ibmcloud sl security cert-add --crt ~/ibm.com.cert --key ~/ibm.com.key
 ```
 Este mandato añade un archivo de certificado: ~/ibm.com.cert and private key file ~/ibm.com.key for domain ibm.com.
 
-### ibmcloud sl security cert-edit
+## ibmcloud sl security cert-edit
 {: #sl_security_cert_edit}
 
 Editar certificado SSL.
@@ -200,7 +200,7 @@ ibmcloud sl security cert-edit 12345678 --key ~/ibm.com.key
 ```
 Este mandato edita el certificado con el ID 12345678 y actualiza su clave privada con el archivo: ~/ibm.com.key.
 
-### ibmcloud sl security cert-download
+## ibmcloud sl security cert-download
 {: #sl_security_cert_download}
 
 Descargar el certificado SSL y los archivos de claves.
@@ -215,7 +215,7 @@ ibmcloud sl security cert-download 12345678
 ```
 Este mandato descarga 4 archivos al directorio actual para el certificado con el ID 12345678. Los 4 archivos son: archivo de certificado, archivo de solicitud de firma de certificado, archivo de certificado intermedio y archivo de claves privado.
 
-### ibmcloud sl security cert-list
+## ibmcloud sl security cert-list
 {: #sl_security_cert_list}
 
 Listar certificados SSL de su cuenta.
@@ -237,7 +237,7 @@ ibmcloud sl security cert-list --status valid --sortby days_until_expire
 ```
 Este mandato lista todos los certificados válidos de la cuenta actual y los ordena por días de validez.
 
-### ibmcloud sl security cert-remove
+## ibmcloud sl security cert-remove
 {: #sl_security_cert_remove}
 
 Eliminar certificado SSL.

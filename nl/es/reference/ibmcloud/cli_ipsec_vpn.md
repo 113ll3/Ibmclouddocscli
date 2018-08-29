@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar VPN de IPSec de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Gestión de VPN de IPSec de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
 
@@ -39,7 +39,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl ipsec cancel
+ ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 Cancelar un contexto de túnel VPN de IPSec.
@@ -57,7 +57,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl ipsec config
+## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
 Solicitar configuración de un contexto de túnel.
@@ -65,7 +65,7 @@ Solicitar configuración de un contexto de túnel.
 ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec detail
+## ibmcloud sl ipsec detail
 {: #sl_ipsec_detail}
 
 Listar detalles de contexto de túnel VPN de IPSec.
@@ -79,7 +79,7 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <dd>Incluir recursos adicionales, las opciones son: at,is,rs,sr,ss.</dd>
 </dl>
 
-### ibmcloud sl ipsec list
+## ibmcloud sl ipsec list
 {: #sl_ipsec_list}
 
 Listar contextos de túnel VPN de IPSec.
@@ -93,7 +93,7 @@ ibmcloud sl ipsec list [OPTIONS]
 <dd>Filtrar por ID del pedido que ha comprado la IPSEC.</dd>
 </dl>
 
-### ibmcloud sl ipsec order
+## ibmcloud sl ipsec order
 {: #sl_ipsec_order}
 
 Solicitar un túnel VPN de IPSec.
@@ -107,7 +107,7 @@ ibmcloud sl ipsec order [OPTIONS]
 <dd>Obligatorio. Nombre abreviado del centro de datos para la IPSEC, por ejemplo dal09 .</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-add
+## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
 Añadir una nueva subred al contexto de túnel de IPSec.
@@ -125,7 +125,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>Identificador de red de subred que se va a crear.</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-remove
+## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
 Eliminar una subred del contexto de túnel de IPSEC.
@@ -133,7 +133,7 @@ Eliminar una subred del contexto de túnel de IPSEC.
 ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-add
+## ibmcloud sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
 Añadir una conversión de dirección a un túnel de IPSec.
@@ -151,7 +151,7 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dd>Nota.</dd>
 </dl>
 
-### ibmcloud sl ipsec translation-remove
+## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
 Eliminar una entrada de conversión de una IPSec.
@@ -159,7 +159,7 @@ Eliminar una entrada de conversión de una IPSec.
 ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-update
+## ibmcloud sl ipsec translation-update
 {: #sl_ipsec_translation_update}
 
 Actualizar una conversión de dirección para una IPSec.
@@ -177,7 +177,7 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dd>Nota.</dd>
 </dl>
 
-### ibmcloud sl ipsec update
+## ibmcloud sl ipsec update
 {: #sl_ipsec_update}
 
 Actualizar propiedades de contexto de túnel.

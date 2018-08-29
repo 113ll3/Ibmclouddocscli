@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar CDN de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Gestión de CDN de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
  <table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
 <caption>Tabla 1. CDN de la infraestructura de {{site.data.keyword.Bluemix_notm}}</caption>
@@ -37,7 +37,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl cdn cancel
+ ## ibmcloud sl cdn cancel
 {: #sl_cdn_cancel}
 
 Cancelar una cuenta CDN.
@@ -51,7 +51,7 @@ ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl cdn detail
+## ibmcloud sl cdn detail
 {: #sl_cdn_detail}
 
 Detallar una cuenta CDN.
@@ -59,7 +59,7 @@ Detallar una cuenta CDN.
 ibmcloud sl cdn detail ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn list
+## ibmcloud sl cdn list
 {: #sl_cdn_list}
 
 Listar todas las cuentas CDN.
@@ -75,7 +75,7 @@ ibmcloud sl cdn list [OPTIONS]
 <dd>Filtrar por ID de pedido.</dd>
 </dl>
 
-### ibmcloud sl cdn load
+## ibmcloud sl cdn load
 {: #sl_cdn_load}
 
 Almacenar en la memoria caché uno o más archivos en todos los nodos extremos.
@@ -83,7 +83,7 @@ Almacenar en la memoria caché uno o más archivos en todos los nodos extremos.
 ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### ibmcloud sl cdn order
+## ibmcloud sl cdn order
 {: #sl_cdn_order}
 
 Pedir una cuenta CDN.
@@ -101,7 +101,7 @@ ibmcloud sl cdn order [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl cdn options
+## ibmcloud sl cdn options
 {: #sl_cdn_options}
 
 Opciones de ancho de banda y almacenamiento para solicitar una cuenta CDN.
@@ -109,7 +109,7 @@ Opciones de ancho de banda y almacenamiento para solicitar una cuenta CDN.
 ibmcloud sl cdn options
 ```
 
-### ibmcloud sl cdn origin-add
+## ibmcloud sl cdn origin-add
 {: #sl_cdn_origin_add}
 
 Crear una correlación de extracción origen.
@@ -125,7 +125,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dd>Un CNAME opcional para adjuntar a la correlación.</dd>
 </dl>
 
-### ibmcloud sl cdn origin-list
+## ibmcloud sl cdn origin-list
 {: #sl_cdn_origin_list}
 
 Listar correlaciones de extracción de origen.
@@ -133,7 +133,7 @@ Listar correlaciones de extracción de origen.
 ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn origin-remove
+## ibmcloud sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
 Eliminar una correlación de extracción origen.
@@ -147,7 +147,7 @@ ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl cdn purge
+## ibmcloud sl cdn purge
 {: #sl_cdn_purge}
 
 Depurar archivos de memoria caché de todos los nodos extremos.

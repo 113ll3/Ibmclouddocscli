@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar entornos de empresa de Cloud Foundry (experimental)
+# Gestión de entornos de empresa de Cloud Foundry (experimental)
 {: #ibmcloud_commands_cfee}
 
 <table summary="Gestionar entornos de empresa de Cloud Foundry (experimental)">
@@ -28,7 +28,7 @@ lastupdated: "2018-07-27"
  </tbody>
  </table>
 
- ### ibmcloud cfee environments
+ ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
 Listar entornos de CFEE.
@@ -41,7 +41,7 @@ ibmcloud cfee environments
 
 <strong>Opciones de mandato</strong>:
 
-### ibmcloud cfee environment
+## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
 Mostrar detalles de un entorno CFEE.

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar la VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Gestión de VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
 
@@ -33,7 +33,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl vlan create
+ ## ibmcloud sl vlan create
 {: #sl_vlan_create}
 
 Crear una nueva VLAN.
@@ -63,7 +63,7 @@ ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 Este mandato crea una vlan pública, ubicada en el centro de datos dal09 con 16 direcciones IP y el nombre es myvlan.
 
-### ibmcloud sl vlan cancel
+## ibmcloud sl vlan cancel
 {: #sl_vlan_cancel}
 
 Cancelar una VLAN.
@@ -83,7 +83,7 @@ ibmcloud sl vlan cancel 12345678 -f
 ```
 Este mandato cancela la vlan con el ID 12345678 sin solicitar confirmación.
 
-### ibmcloud sl vlan detail
+## ibmcloud sl vlan detail
 {: #sl_vlan_detail}
 
 Obtener detalles sobre una VLAN.
@@ -105,7 +105,7 @@ ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 ```
 Este mandato muestra los detalles de la vlan con el ID 12345678, y no la lista de servidor virtual ni servidor de hardware.
 
-### ibmcloud sl vlan edit
+## ibmcloud sl vlan edit
 {: #sl_vlan_edit}
 
 Editar los detalles sobre una VLAN.
@@ -125,7 +125,7 @@ ibmcloud sl vlan edit 12345678 -n myvlan-rename
 ```
 Este mandato actualiza la vlan con el ID 12345678 y le da un nombre nuevo "myvlan-rename".
 
-### ibmcloud sl vlan list
+## ibmcloud sl vlan list
 {: #sl_vlan_list}
 
 Listar todas las VLAN de su cuenta.
@@ -153,7 +153,7 @@ ibmcloud sl vlan list -d dal09 --sortby number
 ```
 Este mandato lista todas las vlans de la cuenta actual filtrando por centro de datos igual a dal09, y los ordena por número de vlan.
 
-### ibmcloud sl vlan options
+## ibmcloud sl vlan options
 {: #sl_vlan_options}
 
 Listar todas las opciones para crear VLAN.

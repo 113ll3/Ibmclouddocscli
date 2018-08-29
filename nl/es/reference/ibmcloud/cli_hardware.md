@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar hardware de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Gestión de hardware de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
 <caption>Tabla 1. Mandatos de hardware de la infraestructura de {{site.data.keyword.Bluemix_notm}}</caption>
@@ -44,7 +44,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl hardware cancel
+ ## ibmcloud sl hardware cancel
 {: #sl_hardware_cancel}
 
 Cancelar un servidor de hardware.
@@ -64,7 +64,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl hardware cancel-reasons
+## ibmcloud sl hardware cancel-reasons
 {: #sl_hardware_cancel_reasons}
 
 Visualizar una lista de razones de cancelación.
@@ -72,7 +72,7 @@ Visualizar una lista de razones de cancelación.
 ibmcloud sl hardware cancel-reasons
 ```
 
-### ibmcloud sl hardware create
+## ibmcloud sl hardware create
 {: #sl_hardware_create}
 
 Solicitar/crear un servidor hardware.
@@ -114,7 +114,7 @@ ibmcloud sl hardware create [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl hardware create-options
+## ibmcloud sl hardware create-options
 {: #sl_hardware_create_options}
 
 Opciones de pedido de servidor para un determinado chasis.
@@ -122,7 +122,7 @@ Opciones de pedido de servidor para un determinado chasis.
 ibmcloud sl hardware create-options
 ```
 
-### ibmcloud sl hardware credentials
+## ibmcloud sl hardware credentials
 {: #sl_hardware_credentials}
 
 Listar credenciales de servidor de hardware.
@@ -130,7 +130,7 @@ Listar credenciales de servidor de hardware.
 ibmcloud sl hardware credentials IDENTIFIER
 ```
 
-### ibmcloud sl hardware detail
+## ibmcloud sl hardware detail
 {: #sl_hardware_detail}
 
 Obtener detalles para un servidor de hardware.
@@ -146,7 +146,7 @@ ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 <dd>Mostrar precios asociados.</dd>
 </dl>
 
-### ibmcloud sl hardware edit
+## ibmcloud sl hardware edit
 {: #sl_hardware_edit}
 
 Editar detalles del servidor de hardware.
@@ -172,7 +172,7 @@ ibmcloud sl hardware edit IDENTIFIER [OPTIONS]
 <dd>Velocidad de puerto privado, las opciones son: 0,10,100,1000,10000.</dd>
 </dl>
 
-### ibmcloud sl hardware list
+## ibmcloud sl hardware list
 {: #sl_hardware_list}
 
 Listar servidores de hardware.
@@ -210,7 +210,7 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>Columnas que se deben visualizar. Valor predeterminado: id,hostname,domain,public_ip,private_ip,datacenter,status, Opciones: guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
 </dl>
 
-### ibmcloud sl hardware power-cycle
+## ibmcloud sl hardware power-cycle
 {: #sl_hardware_power_cycle}
 
 Encender y apagar un servidor.
@@ -224,7 +224,7 @@ ibmcloud sl hardware power-cycle IDENTIFIER
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl hardware power-off
+## ibmcloud sl hardware power-off
 {: #sl_hardware_power_off}
 
 Apagar un servidor activo.
@@ -238,7 +238,7 @@ ibmcloud sl hardware power-off IDENTIFIER
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl hardware power-on
+## ibmcloud sl hardware power-on
 {: #sl_hardware_power_on}
 
 Encender un servidor.
@@ -246,7 +246,7 @@ Encender un servidor.
 ibmcloud sl hardware power-on IDENTIFIER
 ```
 
-### ibmcloud sl hardware reboot
+## ibmcloud sl hardware reboot
 {: #sl_hardware_reboot}
 
 Rearrancar un servidor activo.
@@ -264,7 +264,7 @@ ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl hardware reload
+## ibmcloud sl hardware reload
 {: #sl_hardware_reload}
 
 Volver a cargar el sistema operativo en un servidor.
@@ -286,7 +286,7 @@ ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl hardware rescue
+## ibmcloud sl hardware rescue
 {: #sl_hardware_rescue}
 
 Rearrancar el servidor en una imagen de rescate.
@@ -300,7 +300,7 @@ ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
 
-### ibmcloud sl hardware update-firmware
+## ibmcloud sl hardware update-firmware
 {: #sl_hardware_update_firmware}
 
 Actualizar firmware del servidor.

@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Mandatos para gestionar IP globales de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Gestión de IP global de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 1. Mandatos IP de la infraestructura de {{site.data.keyword.Bluemix_notm}} global</caption>
+<caption>Tabla 1. Mandatos IP global de la infraestructura de {{site.data.keyword.Bluemix_notm}}</caption>
  <thead>
- <th colspan="6">Mandatos de IP de la infraestructura de {{site.data.keyword.Bluemix_notm}} global</th>
+ <th colspan="6">Mandatos de IP global de la infraestructura de {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl globalip assign
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 Asignar una IP global a un direccionador de destino o dispositivo.
@@ -45,7 +45,7 @@ ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
 Este mandato asigna la dirección IP con el ID 12345678 a un dispositivo de destino cuya dirección IP es 9.111.123.456.
 
-### ibmcloud sl globalip cancel
+## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
 
 Cancelar una IP global.
@@ -65,7 +65,7 @@ ibmcloud sl globalip cancel 12345678
 ```
 Este mandato cancela la dirección IP con el ID 12345678.
 
- ### ibmcloud sl globalip create
+ ## ibmcloud sl globalip create
 {: #sl_globalip_create}
 
 Crear una IP global.
@@ -89,7 +89,7 @@ ibmcloud sl globalip create --v6
 ```
 Este mandato crea una dirección IP V6.
 
-### ibmcloud sl globalip list
+## ibmcloud sl globalip list
 {: #sl_globalip_list}
 
 Listar todas las IP globales de su cuenta.
@@ -113,7 +113,7 @@ ibmcloud sl globalip list --v4
 ```
 Este mandato lista todas las direcciones IP V4 en la cuenta actual.
 
-### ibmcloud sl globalip unassign
+## ibmcloud sl globalip unassign
 {: #sl_globalip_unassign}
 
 Desasignar una IP global de un direccionador de destino o dispositivo.
