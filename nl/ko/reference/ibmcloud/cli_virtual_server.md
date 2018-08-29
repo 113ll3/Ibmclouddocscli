@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 가상 서버 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 가상 서버 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 
@@ -52,7 +52,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl vs cancel
+ ## ibmcloud sl vs cancel
 {: #sl_vs_cancel}
 
 가상 서버 인스턴스를 취소합니다.
@@ -72,7 +72,7 @@ ibmcloud sl vs cancel 12345678
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스를 취소합니다.
 
-### ibmcloud sl vs capture
+## ibmcloud sl vs capture
 {: #sl_vs_capture}
 
 이미지로 가상 서버 인스턴스를 캡처합니다.
@@ -96,7 +96,7 @@ ibmcloud sl vs capture 12345678 -n mycloud --all --note testing
 ```
 이 명령은 모든 디스크와 함께 ID가 12345678인 가상 서버 인스턴스를 이름이 "mycloud"이며 "testing" 참고가 지정된 이미지로 캡처합니다.
 
-### ibmcloud sl vs create
+## ibmcloud sl vs create
 {: #sl_vs_create}
 
 가상 서버 인스턴스를 작성합니다.
@@ -174,7 +174,7 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ```
 이 명령은 호스트 이름이 myvsi이고 도메인이 ibm.com이며 4개의 CPU 코어와 4096M 메모리를 포함하며 데이터 센터 dal10에 위치하는 가상 서버 인스턴스를 주문합니다.
 
-### ibmcloud sl vs options
+## ibmcloud sl vs options
 {: #sl_vs_options}
 
 가상 서버 인스턴스 작성을 위한 옵션을 나열합니다.
@@ -189,7 +189,7 @@ ibmcloud sl vs options
 ```
 이 명령은 가상 서버 인스턴스 작성을 위한 모든 옵션(예: 데이터 센터, CPU, 메모리, OS, 디스크, 네트워크 속도 등)을 나열합니다.
 
-### ibmcloud sl vs credentials
+## ibmcloud sl vs credentials
 {: #sl_vs_credentials}
 
 가상 서버 인스턴스 신임 정보를 나열합니다.
@@ -204,7 +204,7 @@ ibmcloud sl vs credentials 12345678
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스의 모든 사용자 이름과 비밀번호 쌍을 나열합니다.
 
-### ibmcloud sl vs detail
+## ibmcloud sl vs detail
 {: #sl_vs_detail}
 
 가상 서버 인스턴스에 대한 세부사항을 가져옵니다.
@@ -226,7 +226,7 @@ ibmcloud sl vs details 12345678
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대한 자세한 정보를 나열합니다.
 
-### ibmcloud sl vs dns-sync
+## ibmcloud sl vs dns-sync
 {: #sl_vs_dns_sync}
 
 가상 가상의 인스턴스에 대한 DNS 레코드를 동기화합니다.
@@ -254,7 +254,7 @@ ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스의 A 레코드(IP V4 주소)를 DNS 서버에 동기화하고 이 A 레코드의 ttl을 3600으로 설정합니다.
 
-### ibmcloud sl vs edit
+## ibmcloud sl vs edit
 {: #sl_vs_edit}
 
 가상 서버 인스턴스의 세부사항을 편집합니다.
@@ -286,7 +286,7 @@ ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 10
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스를 업데이트하고 해당 도메인을 "ibm.com"으로, 호스트 이름을 "myapp"으로, 태그를 "testcli"로 설정합니다.
 
-### ibmcloud sl vs host-create
+## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
 
 전용 가상 서버용 호스트를 작성합니다.
@@ -312,7 +312,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl vs host-list
+## ibmcloud sl vs host-list
 {: #sl_vs_host_list}
 
 계정의 전용 호스트를 나열합니다.
@@ -333,7 +333,7 @@ ibmcloud sl vs host-list [OPTIONS]
 <dd>해당 전용 호스트를 구매한 주문 ID별 필터링.</dd>
 </dl>
 
-### ibmcloud sl vs list
+## ibmcloud sl vs list
 {: #sl_vs_list}
 
 계정의 가상 서버 인스턴스를 나열합니다.
@@ -381,7 +381,7 @@ ibmcloud sl vs list --domain ibm.com --hourly --sortby memory
 ```
 이 명령은 현재 계정의 시간별 청구되는 모든 가상 서버 인스턴스를 나열합니다. 도메인 기준 필터링은 "ibm.com"과 동일하고 메모리별로 정렬합니다.
 
-### ibmcloud sl vs pause
+## ibmcloud sl vs pause
 {: #sl_vs_pause}
 
 활성 가상 서버 인스턴스를 일시정지합니다.
@@ -401,7 +401,7 @@ ibmcloud sl vs pause 12345678 -f
 ```
 이 명령은 확인 요청 없이 ID가 12345678인 가상 서버 인스턴스를 일시정지합니다.
 
-### ibmcloud sl vs power-off
+## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
 
 활성 가상 서버 인스턴스의 전원을 끕니다.
@@ -425,7 +425,7 @@ ibmcloud sl vs power-off 12345678 --soft
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대해 소프트 전원 끄기를 수행합니다.
 
-### ibmcloud sl vs power-on
+## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
 
 가상 서버 인스턴스의 전원을 켭니다.
@@ -445,7 +445,7 @@ ibmcloud sl vs power-on 12345678
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대해 전원 켜기를 수행합니다.
 
-### ibmcloud sl vs ready
+## ibmcloud sl vs ready
 {: #sl_vs_ready}
 
 가상 서버 인스턴스가 사용 준비가 되었는지 확인합니다.
@@ -465,7 +465,7 @@ ibmcloud sl vs ready 12345678 --wait 30
 ```
 이 명령은 계속 사용할 준비가 되었는지 확인하기 위해 ID가 12345678인 가상 서버 인스턴스 상태를 확인하고 최대 30초 동안 대기합니다.
 
-### ibmcloud sl vs reboot
+## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
 
 활성 가상 서버 인스턴스를 다시 부팅합니다.
@@ -489,7 +489,7 @@ ibmcloud sl vs reboot 12345678 --hard
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대해 하드 재부팅을 수행합니다.
 
-### ibmcloud sl vs reload
+## ibmcloud sl vs reload
 {: #sl_vs_reload}
 
 가상 서버 인스턴스의 운영 체제를 다시 로드합니다.
@@ -517,7 +517,7 @@ ibmcloud sl vs reload 12345678
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스에 대해 현재 운영 체제를 다시 로드합니다.
 
-### ibmcloud sl vs rescue
+## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
 
 복구 이미지로 가상 서버 인스턴스를 다시 부팅합니다.
@@ -537,7 +537,7 @@ ibmcloud sl vs rescue 12345678
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스를 복구 이미지로 다시 부팅합니다.
 
-### ibmcloud sl vs resume
+## ibmcloud sl vs resume
 {: #sl_vs_resume}
 
 일시정지된 가상 서버 인스턴스를 재개합니다.
@@ -557,7 +557,7 @@ ibmcloud sl vs resume 12345678
 ```
 이 명령은 ID가 12345678인 가상 서버 인스턴스를 재개합니다.
 
-### ibmcloud sl vs upgrade
+## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}
 
 가상 서버 인스턴스를 업그레이드합니다.

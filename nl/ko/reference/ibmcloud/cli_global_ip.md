@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 글로벌 IP 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 글로벌 IP 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 <caption>표 1. {{site.data.keyword.Bluemix_notm}} 인프라 글로벌 IP 명령</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl globalip assign
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 대상 라우터 또는 디바이스에 글로벌 IP를 지정합니다.
@@ -45,7 +45,7 @@ ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
 이 명령은 ID가 12345678인 IP 주소를 IP 주소가 9.111.123.456인 대상 디바이스에 지정합니다.
 
-### ibmcloud sl globalip cancel
+## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
 
 글로벌 IP를 취소합니다.
@@ -65,7 +65,7 @@ ibmcloud sl globalip cancel 12345678
 ```
 이 명령은 ID가 12345678인 IP 주소를 취소합니다.
 
- ### ibmcloud sl globalip create
+ ## ibmcloud sl globalip create
 {: #sl_globalip_create}
 
 글로벌 IP를 작성합니다.
@@ -89,7 +89,7 @@ ibmcloud sl globalip create --v6
 ```
 이 명령은 IP V6 주소를 작성합니다.
 
-### ibmcloud sl globalip list
+## ibmcloud sl globalip list
 {: #sl_globalip_list}
 
 계정의 모든 글로벌 IP를 나열합니다.
@@ -113,7 +113,7 @@ ibmcloud sl globalip list --v4
 ```
 이 명령은 현재 계정의 모든 IP V4 주소를 나열합니다.
 
-### ibmcloud sl globalip unassign
+## ibmcloud sl globalip unassign
 {: #sl_globalip_unassign}
 
 대상 라우터 또는 디바이스에서 글로벌 IP를 지정 해제합니다.

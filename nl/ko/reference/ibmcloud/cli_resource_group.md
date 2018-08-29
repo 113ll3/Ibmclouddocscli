@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 리소스 그룹 및 리소스 관리를 위한 명령
+# 리소스 그룹 및 리소스 관리
 {: #ibmcloud_commands_resource}
 
 <table summary="리소스 그룹 및 리소스를 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
@@ -73,7 +73,7 @@ lastupdated: "2018-07-26"
   </tbody>
 </table>
 
-### ibmcloud resource groups
+## ibmcloud resource groups
 {: #ibmcloud_resource_groups}
 
 리소스 그룹을 나열합니다.
@@ -104,7 +104,7 @@ ibmcloud resource groups
 ibmcloud resource groups --default
 ```
 
-### ibmcloud resource group
+## ibmcloud resource group
 {: #ibmcloud_resource_group}
 
 리소스 그룹의 세부사항 표시
@@ -137,7 +137,7 @@ ibmcloud resource group example-group
 ibmcloud resource group example-group --id
 ```
 
-### ibmcloud resource group-create
+## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
 리소스 그룹 작성
@@ -158,7 +158,7 @@ ibmcloud resource group-create NAME QUOTA_NAME
 ibmcloud resource group-create example-group free
 ```
 
-### ibmcloud resource group-update
+## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
 기존 리소스 그룹 업데이트
@@ -195,7 +195,7 @@ ibmcloud resource group-update example-group -n trial-group
 ibmcloud resource group-update example-group -q free
 ```
 
-### ibmcloud resource quotas
+## ibmcloud resource quotas
 {: #ibmcloud_resource_quotas}
 
 모든 할당량 정의 나열
@@ -218,7 +218,7 @@ ibmcloud resource quotas
 ibmcloud resource quotas
 ```
 
-### ibmcloud resource quota
+## ibmcloud resource quota
 {: #ibmcloud_resource_quota}
 
 할당량 정의의 세부사항 표시
@@ -242,7 +242,7 @@ ibmcloud resource quota NAME
 ibmcloud resource quota free
 ```
 
-### ibmcloud resource cf-service-instance-migrate
+## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
 Cloudfoundry 서비스 인스턴스를 리소스 그룹으로 마이그레이션
@@ -265,7 +265,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
   <dd>확인 없이 마이그레이션</dd>
 </dl>
 
-### ibmcloud resource service-instances
+## ibmcloud resource service-instances
 {: #ibmcloud_resource_service_instances}
 
 서비스 인스턴스 나열
@@ -294,7 +294,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 ibmcloud resource service-instances --service-name test-service
 ```
 
-### ibmcloud resource service-instance
+## ibmcloud resource service-instance
 {: #ibmcloud_resource_service_instance}
 
 서비스 인스턴스의 세부사항 표시
@@ -325,7 +325,7 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 ibmcloud resource service-instance my-service-instance
 ```
 
-### ibmcloud resource service-instance-create
+## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
 
 서비스 인스턴스 작성
@@ -395,7 +395,7 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, -
 ibmcloud resource service-instance-update my-service-instance -n new-service-instance
 ```
 
-### ibmcloud resource service-instance-delete
+## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
 서비스 인스턴스 삭제
@@ -425,7 +425,7 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ibmcloud resource service-instance-delete my-service-instance
 ```
 
-### ibmcloud resource service-bindings
+## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
 
 서비스 별명에 대한 바인딩 표시
@@ -449,7 +449,7 @@ ibmcloud resource service-bindings SERVICE_ALIAS
 ibmcloud resource bindings my-service-alias
 ```
 
-### ibmcloud resource service-binding
+## ibmcloud resource service-binding
 {: #ibmcloud_resource_service_binding}
 
 서비스 바인딩의 세부사항 표시
@@ -477,7 +477,7 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
 ibmcloud resource bindings my-service-alias my-app
 ```
 
-### ibmcloud resource service-binding-create
+## ibmcloud resource service-binding-create
 {: #ibmcloud_resource_service_binding_create}
 
 서비스 바인딩 작성
@@ -511,7 +511,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
 
-### ibmcloud resource service-binding-delete
+## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
 
 서비스 바인딩 삭제
@@ -539,7 +539,7 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ibmcloud resource service-binding-delete my-service-alias my-app
 ```
 
-### ibmcloud resource service-keys
+## ibmcloud resource service-keys
 {: #ibmcloud_resource_service_keys}
 
 서비스 별명 또는 서비스 인스턴스의 서비스 키 나열
@@ -569,7 +569,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 ibmcloud resource service-keys --instance-name my-service-instance
 ```
 
-### ibmcloud resource service-key
+## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
 서비스 키의 세부사항 표시
@@ -595,7 +595,7 @@ ibmcloud resource service-key KEY_NAME [--id]
 ibmcloud resource service-key my-service-key
 ```
 
-### ibmcloud resource service-key-create
+## ibmcloud resource service-key-create
 {: #ibmcloud_resource_service_key_create}
 
 서비스 키 작성
@@ -661,7 +661,7 @@ ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
 ibmcloud resource service-key-delete my-service-key
 ```
 
-### ibmcloud resource service-aliases
+## ibmcloud resource service-aliases
 {: #ibmcloud_resource_service_aliases}
 
 서비스 인스턴스의 별명 나열
@@ -686,7 +686,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 ibmcloud resource service-aliases my-service-instance
 ```
 
-### ibmcloud resource service-alias
+## ibmcloud resource service-alias
 {: #ibmcloud_resource_service_alias}
 
 서비스 별명의 세부사항 표시
@@ -711,7 +711,7 @@ ibmcloud resource service-alias ALIAS_NAME [--id]
 ibmcloud resource service-alias  my-service-alias
 ```
 
-### ibmcloud resource service-alias-create
+## ibmcloud resource service-alias-create
 {: #ibmcloud_resource_service_alias_create}
 
 서비스 인스턴스의 별명 작성
@@ -744,7 +744,7 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
 ibmcloud resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
 
-### ibmcloud resource service-alias-update
+## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
 서비스 별명 업데이트
@@ -776,7 +776,7 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ```
 
-### ibmcloud resource service-alias-delete
+## ibmcloud resource service-alias-delete
 {: #ibmcloud_resource_service_alias_delete}
 
 서비스 별명 삭제
@@ -802,7 +802,7 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ibmcloud resource service-alias-delete my-service-alias
 ```
 
-### ibmcloud resource search
+## ibmcloud resource search
 {: #ibmcloud_resource_search}
 Lucene 조회 구문을 사용하여 리소스 검색
 
@@ -887,7 +887,7 @@ ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
 
-### ibmcloud resource tags
+## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
 모든 태그 나열
@@ -922,7 +922,7 @@ ibmcloud resource tags
 ibmcloud resource tags --tag-type restricted
 ```
 
-### ibmcloud resource tag
+## ibmcloud resource tag
 {: #ibmcloud_resource_tag}
 
 태그의 세부사항 표시
@@ -949,7 +949,7 @@ ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ibmcloud resource tag --tag-name "Ray Brown"
 ```
 
-### ibmcloud resource tag-create
+## ibmcloud resource tag-create
 {: #ibmcloud_resource_tag_create}
 
 태그 작성
@@ -994,7 +994,7 @@ ibmcloud resource tag-create --tag-name "Ray Brown"
 ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
 ```
 
-### ibmcloud resource tag-delete
+## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
 
 태그 삭제
@@ -1021,7 +1021,7 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ibmcloud resource tag-delete --tag-name "Ray Brown"
 ```
 
-### ibmcloud resource tag-attach
+## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
 
 리소스에 태그 추가
@@ -1050,7 +1050,7 @@ crn이 resource_example_crn인 리소스에 태그 "Ray Brown"을 추가합니�
 ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
 ```
 
-### ibmcloud resource tag-detach
+## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
 리소스에서 태그 제거
@@ -1079,7 +1079,7 @@ crn이 resource_example_crn인 리소스에서 태그 "Ray Brown"을 제거합�
 ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
 ```
 
-### ibmcloud resource tag-update
+## ibmcloud resource tag-update
 {: #ibmcloud_resource_tag_update}
 
 사용자 태그를 제한된 태그로 전환 또는 그 반대로 전환

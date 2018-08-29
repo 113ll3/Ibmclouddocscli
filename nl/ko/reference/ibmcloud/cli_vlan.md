@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 VLAN 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 VLAN 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 
@@ -34,7 +34,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl vlan create
+ ## ibmcloud sl vlan create
 {: #sl_vlan_create}
 
 새 VLAN을 작성합니다.
@@ -64,7 +64,7 @@ ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 이 명령은 16개의 IP 주소와 함께 데이터 센터 dal09에 위치하고 이름이 myvlan인 공용 VLAN을 작성합니다.
 
-### ibmcloud sl vlan cancel
+## ibmcloud sl vlan cancel
 {: #sl_vlan_cancel}
 
 VLAN을 취소합니다.
@@ -84,7 +84,7 @@ ibmcloud sl vlan cancel 12345678 -f
 ```
 이 명령은 확인 요청 없이 ID가 12345678인 VLAN을 취소합니다.
 
-### ibmcloud sl vlan detail
+## ibmcloud sl vlan detail
 {: #sl_vlan_detail}
 
 VLAN에 대한 세부사항을 가져옵니다.
@@ -106,7 +106,7 @@ ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 ```
 이 명령은 ID가 12345678인 VLAN의 세부사항을 표시하며 가상 서버 또는 하드웨어 서버는 나열하지 않습니다.
 
-### ibmcloud sl vlan edit
+## ibmcloud sl vlan edit
 {: #sl_vlan_edit}
 
 VLAN에 대한 세부사항을 편집합니다.
@@ -126,7 +126,7 @@ ibmcloud sl vlan edit 12345678 -n myvlan-rename
 ```
 이 명령은 ID가 12345678인 VLAN을 업데이트하고 새 이름으로 "myvlan-rename"을 지정합니다.
 
-### ibmcloud sl vlan list
+## ibmcloud sl vlan list
 {: #sl_vlan_list}
 
 계정의 모든 VLAN을 나열합니다.
@@ -154,7 +154,7 @@ ibmcloud sl vlan list -d dal09 --sortby number
 ```
 이 명령은 현재 계정의 모든 VLAN을 나열합니다. 데이터 센터 기준 필터링은 dal09와 동일하고 VLAN 번호별로 정렬합니다.
 
-### ibmcloud sl vlan options
+## ibmcloud sl vlan options
 {: #sl_vlan_options}
 
 VLAN 작성을 위한 모든 옵션을 나열합니다.

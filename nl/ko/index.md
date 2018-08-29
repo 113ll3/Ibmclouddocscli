@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -39,10 +39,10 @@ lastupdated: "2018-07-17"
 
 [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 다음 시스템 요구사항이 필요합니다.
 
-* Microsoft Windows&trade;를 사용하는 경우 Windows 10 Pro 이상을 사용해야 합니다. 
+* Microsoft Windows&trade;를 사용하는 경우 Windows 10 Pro 이상을 사용해야 합니다.
 * 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다. 
 
-## 1단계: 설치 명령 실행
+## 1단계. 설치 명령 실행
 {: #step1}
 
 * Mac 및 Linux의 경우 다음 명령을 실행하십시오.
@@ -52,7 +52,7 @@ lastupdated: "2018-07-17"
   ```
   {: codeblock}
   
-* Windows 10 Pro의 경우 관리자로서 다음 명령을 실행하십시오. 
+* Windows 10 Pro의 경우 관리자로서 다음 명령을 실행하십시오.
 
   ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -62,9 +62,9 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
     Windows PowerShell 아이콘을 마우스 오른쪽 단추로 클릭한 후 **관리자로 실행**을 선택하십시오.
   {: tip}
   
-  이러한 도구를 수동으로 설치하는 데 대한 지시사항은 [도구 재설치](/docs/cli/ts_createapps.html#appendix)를 참조하십시오. 
+  이러한 도구를 수동으로 설치하는 데 대한 지시사항은 [도구 재설치](/docs/cli/ts_createapps.html#appendix)를 참조하십시오.
 
-## 2단계: 설치 확인
+## 2단계. 설치 확인
 {: #step2}
 
 CLI 및 개발자 도구가 설치되었는지 확인하려면 `help` 명령을 실행하십시오.
@@ -76,7 +76,7 @@ ibmcloud dev help
 <br>
 출력에 사용법 지시사항, 현재 버전 및 지원되는 명령이 나열됩니다.
 
-## 3단계: 환경 구성
+## 3단계. 환경 구성
 {: #step3}
 
 1. {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트에 연결하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 미국 남부 지역에 연결하십시오.
@@ -104,14 +104,14 @@ ibmcloud dev help
 	```
 	{: codeblock}
 	
-	선택적으로 위 명령의 출력을 사용하여, 다음 명령을 통해 조직 및 영역을 수동으로 설정할 수 있습니다. 
+	선택적으로 위 명령의 출력을 사용하여, 다음 명령을 통해 조직 및 영역을 수동으로 설정할 수 있습니다.
 
 	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
 	
-문제를 보고하거나 피드백을 제공하려는 경우에는 [IBM Cloud 기술에 대한 Slack - #developer-tools 채널](https://ibm-cloud-tech.slack.com)을 사용하십시오. [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/)에서 팀 액세스 권한을 요청하십시오. 
+문제를 보고하거나 피드백을 제공하는 데 [IBM Cloud Tech's Slack - #developer-tools 채널](https://ibm-cloud-tech.slack.com)을 사용할 수 있습니다. [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 팀 액세스를 요청하십시오.
 
 ## 다음 단계
 {: #next-steps}

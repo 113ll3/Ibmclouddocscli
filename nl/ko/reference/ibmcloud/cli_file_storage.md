@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 파일 스토리지 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 파일 스토리지 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 <caption>표 1. {{site.data.keyword.Bluemix_notm}} 인프라 파일 스토리지</caption>
@@ -55,7 +55,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl file access-authorize
+ ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
 제공된 볼륨에 액세스하도록 호스트에 권한을 부여합니다.
@@ -83,7 +83,7 @@ ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
 이 명령은 ID 87654321인 가상 서버가 ID가 12345678인 볼륨에 액세스하도록 권한을 부여합니다.
 
-### ibmcloud sl file access-list
+## ibmcloud sl file access-list
 {: #sl_file_access_list}
 
 ACL을 나열합니다.
@@ -105,7 +105,7 @@ ibmcloud sl file access-list 12345678 --sortby id
 ```
 이 명령은 ID가 12345678인 볼륨에 액세스하도록 권한이 부여된 모든 호스트를 나열하고 ID별로 정렬합니다.
 
-### ibmcloud sl file access-revoke
+## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
 
 제공된 볼륨에 액세스 중인 호스트에 대한 권한 부여를 취소합니다.
@@ -133,7 +133,7 @@ ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
 이 명령은 ID 87654321인 가상 서버의 ID가 12345678인 볼륨에 대한 액세스 권한을 취소합니다.
 
-### ibmcloud sl file replica-failback
+## ibmcloud sl file replica-failback
 {: #sl_file_replica_failback}
 
 복제본에서 파일 볼륨을 장애 복구합니다.
@@ -148,7 +148,7 @@ ibmcloud sl file replica-failback 12345678
 ```
 이 명령은 ID가 12345678인 볼륨에 대해 장애 복구 조작을 수행합니다.
 
-### ibmcloud sl file replica-failover
+## ibmcloud sl file replica-failover
 {: #sl_file_replica_failover}
 
 제공된 복제본 볼륨으로 파일 볼륨을 장애 복구합니다.
@@ -163,7 +163,7 @@ ibmcloud sl file replica-failover 12345678 87654321
 ```
 이 명령은 ID 87654321인 복제본 볼륨에 ID가 12345678인 볼륨에 대한 장애 복구 조작을 수행합니다.
 
-### ibmcloud sl file replica-locations
+## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
 
 제공된 볼륨에 대해 적합한 복제 데이터 센터를 나열합니다.
@@ -178,7 +178,7 @@ ibmcloud sl file replica-locations 12345678
 ```
 이 명령은 ID가 12345678인 파일 볼륨에 대해 적합한 복제 데이터 센터를 나열합니다.
 
-### ibmcloud sl file replica-order
+## ibmcloud sl file replica-order
 {: #sl_file_replica_order}
 
 파일 스토리지 복제본 볼륨을 주문합니다.
@@ -206,7 +206,7 @@ ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 이 명령은 ID가 12345678인 볼륨에 대한 복제본(일별 복제를 수행하며, dal09에 위치하고, 계층 레벨이 4임)을 주문합니다.
 
-### ibmcloud sl file replica-partners
+## ibmcloud sl file replica-partners
 {: #sl_file_replica_partners}
 
 파일 볼륨에 대한 기존 복제본 볼륨을 나열합니다.
@@ -221,7 +221,7 @@ ibmcloud sl file replica-partners 12345678
 ```
 이 명령은 ID가 12345678인 파일 볼륨의 기존 복제본 볼륨을 나열합니다.
 
-### ibmcloud sl file snapshot-cancel
+## ibmcloud sl file snapshot-cancel
 {: #sl_file_snapshot_cancel}
 
 제공된 볼륨에 대한 기존 스냅샷 영역을 취소합니다.
@@ -245,7 +245,7 @@ ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 ```
 이 명령은 확인을 요청하지 않고 즉시 ID가 12345678인 스냅샷을 취소합니다.
 
-### ibmcloud sl file snapshot-create
+## ibmcloud sl file snapshot-create
 {: #sl_file_snapshot_create}
 
 제공된 볼륨의 스냅샷을 작성합니다.
@@ -265,7 +265,7 @@ ibmcloud sl file snapshot-create 12345678 --note snapshotforibmcloud
 ```
 이 명령은 snapshotforibmcloud와 같은 추가 참고와 함께 ID가 12345678인 볼륨에 대한 스냅샷을 작성합니다.
 
-### ibmcloud sl file snapshot-disable
+## ibmcloud sl file snapshot-disable
 {: #sl_file_snapshot_disable}
 
 제공된 볼륨에 대해 지정된 스케줄에 따라 스냅샷을 사용 중지합니다.
@@ -285,7 +285,7 @@ ibmcloud sl file snapshot-disable 12345678 -s DAILY
 ```
 이 명령은 ID가 12345678인 볼륨에 대한 일별 스냅샷을 사용 안함으로 설정합니다.
 
-### ibmcloud sl file snapshot-enable
+## ibmcloud sl file snapshot-enable
 {: #sl_file_snapshot_enable}
 
 지정된 스케줄에 따라 제공된 볼륨에 대한 스냅샷을 사용합니다.
@@ -313,7 +313,7 @@ ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 이 명령은 ID가 12345678인 볼륨의 스냅샷을 사용으로 설정하고, 스냅샷은 매주 일요일 2시에 작성되며 최대 5개의 스냅샷이 유지됩니다.
 
-### ibmcloud sl file snapshot-delete
+## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
 제공된 볼륨의 스냅샷을 삭제합니다.
@@ -328,7 +328,7 @@ ibmcloud sl file snapshot-delete 12345678
 ```
 이 명령은 ID가 12345678인 스냅샷을 삭제합니다.
 
-### ibmcloud sl file snapshot-list
+## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
 
 파일 스토리지 스냅샷을 나열합니다.
@@ -348,7 +348,7 @@ ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
 이 명령은 ID가 12345678인 볼륨의 모든 스냅샷을 나열하고 ID별로 정렬합니다.
 
-### ibmcloud sl file snapshot-order
+## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
 
 파일 스토리지 볼륨에 대한 스냅샷 영역을 주문합니다.
@@ -376,7 +376,7 @@ ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 이 명령은 ID가 12345678인 볼륨에 대한 스냅샷 영역을 주문합니다. 크기는 1,000GB이고 계층 레벨은 GB당 4IOPS입니다.
 
-### ibmcloud sl file snapshot-restore
+## ibmcloud sl file snapshot-restore
 {: #sl_file_snapshot_restore}
 
 제공된 스냅샷을 사용하여 파일 볼륨을 복원합니다.
@@ -391,7 +391,7 @@ ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 이 명령은 ID 87654321인 스냅샷에서 ID가 12345678인 볼륨을 복원합니다.
 
-### ibmcloud sl file volume-cancel
+## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
 기존 파일 스토리지 볼륨을 취소합니다.
@@ -415,7 +415,7 @@ ibmcloud sl file volume-cancel 12345678 --immediate -f
 ```
 이 명령은 확인을 요청하지 않고 즉시 ID가 12345678인 볼륨을 취소합니다.
 
-### ibmcloud sl file volume-count
+## ibmcloud sl file volume-count
 {: #sl_file_volume_count}
 
 데이터 센터당 파일 스토리지 볼륨의 수를 나열합니다.
@@ -429,7 +429,7 @@ ibmcloud sl file volume-count [OPTIONS]
 <dd>데이터 센터 짧은 이름별 필터링.</dd>
 </dl>
 
-### ibmcloud sl file volume-list
+## ibmcloud sl file volume-list
 {: #sl_file_volume_list}
 
 파일 스토리지를 나열합니다.
@@ -459,7 +459,7 @@ ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 이 명령은 dal09에 위치하는 현재 계정의 모든 endurance 볼륨을 나열하고 용량별로 정렬합니다.
 
-### ibmcloud sl file volume-detail
+## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
 
 제공된 볼륨에 대한 세부사항을 표시합니다.
@@ -474,7 +474,7 @@ ibmcloud sl file volume-detail 12345678
 ```
 이 명령은 ID가 12345678인 볼륨의 세부사항을 표시합니다.
 
-### ibmcloud sl file volume-duplicate
+## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
 
 기존 볼륨을 복제하여 파일 볼륨을 주문합니다.
@@ -504,7 +504,7 @@ ibmcloud sl file volume-duplicate 12345678
 ```
 이 명령은 ID가 12345678인 볼륨을 복제하여 새 볼륨 주문을 표시합니다.
 
-### ibmcloud sl file volume-order
+## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
 
 파일 스토리지 볼륨을 주문합니다.
@@ -536,7 +536,7 @@ ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000
 ```
 이 명령은 크기가 1000GB이고, IOPS가 4000이며, dal09에 위치하는 performance 볼륨을 주문합니다.
 
-### ibmcloud sl file volume-options
+## ibmcloud sl file volume-options
 {: #sl_file_volume_options}
 
 파일 스토리지 주문을 위한 모든 옵션을 나열합니다.

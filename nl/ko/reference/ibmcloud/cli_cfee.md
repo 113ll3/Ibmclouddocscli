@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry Enterprise Environments 관리를 위한 명령(시범)
+# Cloud Foundry Enterprise Environments 관리(시범)
 {: #ibmcloud_commands_cfee}
 
 <table summary="Cloud Foundry Enterprise Environments 관리(시범)">
@@ -28,7 +28,7 @@ lastupdated: "2018-07-27"
  </tbody>
  </table>
 
- ### ibmcloud cfee environments
+ ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
 CFEE 환경을 나열합니다.
@@ -41,7 +41,7 @@ ibmcloud cfee environments
 
 <strong>명령 옵션</strong>:
 
-### ibmcloud cfee environment
+## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
 CFEE 환경의 세부사항을 표시합니다.

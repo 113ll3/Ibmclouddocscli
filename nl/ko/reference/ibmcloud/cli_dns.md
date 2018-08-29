@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 DNS 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 DNS 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 <caption>표 1. {{site.data.keyword.Bluemix_notm}} 인프라 DNS 명령</caption>
@@ -36,7 +36,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
-### ibmcloud sl dns import
+## ibmcloud sl dns import
 {: #sl_dns_import}
 
 BIND 구역 파일 기반이 아닌 구역을 가져옵니다.
@@ -56,7 +56,7 @@ ibmcloud sl dns import ~/ibm.com.txt
 ```
 이 명령은 ~/ibm.com.txt 파일에서 구역 및 해당 리소스 레코드를 가져옵니다.
 
-### ibmcloud sl dns record-add
+## ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
 구역의 리소스 레코드를 추가합니다.
@@ -76,7 +76,7 @@ ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
 이 명령은 A 레코드를 ibm.com 구역에 추가합니다. 해당 호스트는 "ftp"이고, 데이터는 "127.0.0.1"이며 ttl은 86400초입니다.
 
-### ibmcloud sl dns record-edit
+## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
 
 구역의 리소스 레코드를 업데이트합니다.
@@ -102,7 +102,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 이 명령은 ID가 12345678인 ibm.com 구역 아래의 레코드를 편집하고, 해당 데이터는 "127.0.0.2"로 설정하고 ttl은 3600으로 설정합니다.
 
-### ibmcloud sl dns record-list
+## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
 구역의 모든 리소스 레코드를 나열합니다.
@@ -128,7 +128,7 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
 이 명령은 ibm.com 구역 아래의 모든 A 레코드를 나열합니다. 호스트 기준 필터링은 elasticsearch이고 ttl은 900초입니다.
 
-### ibmcloud sl dns record-remove
+## ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
 구역에서 리소스 레코드를 제거합니다.
@@ -143,7 +143,7 @@ ibmcloud sl dns record-remove 12345678
 ```
 이 명령은 ID가 12345678인 리소스 레코드를 제거합니다.
 
-### ibmcloud sl dns zone-create
+## ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
 
 구역을 작성합니다.
@@ -158,7 +158,7 @@ ibmcloud sl dns zone-create ibm.com
 ```
 이 명령은 이름이 ibm.com인 구역을 작성합니다.
 
-### ibmcloud sl dns zone-delete
+## ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
 
 구역을 삭제합니다.
@@ -173,7 +173,7 @@ ibmcloud sl dns zone-delete ibm.com
 ```
 이 명령은 이름이 ibm.com인 구역을 삭제합니다.
 
-### ibmcloud sl dns zone-list
+## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
 
 계정의 모든 구역을 나열합니다.
@@ -188,7 +188,7 @@ ibmcloud sl dns zone-list
 ```
 이 명령은 현재 계정 아래의 모든 구역을 나열합니다.
 
-### ibmcloud sl dns zone-print
+## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
 
 BIND 형식으로 구역 및 리소스 레코드를 인쇄합니다.

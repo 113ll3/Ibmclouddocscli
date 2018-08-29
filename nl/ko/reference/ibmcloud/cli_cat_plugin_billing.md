@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 카탈로그, 플러그인 및 청구 설정 관리를 위한 명령
+# 카탈로그, 플러그인 및 청구 설정 관리
 {: #ibmcloud_commands_settings}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} 카탈로그, 플러그인, 비용 청구 및 보안 설정을 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
@@ -66,7 +66,7 @@ lastupdated: "2018-07-26"
  </tbody>
  </table>
 
- ### ibmcloud catalog search
+ ## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
 카탈로그 항목 검색
@@ -109,7 +109,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
 ibmcloud catalog search -k service -q 'Automation test'
 ```
 
-### ibmcloud catalog entry
+## ibmcloud catalog entry
 {: #ibmcloud_catalog_entry}
 
 카탈로그 항목 가져오기
@@ -138,7 +138,7 @@ ID가 `a0ef1-d3b4j0`인 항목 가져오기:
 ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-create
+## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 새 카탈로그 항목 작성(계정의 카탈로그 관리자만)
 
@@ -166,7 +166,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
-### ibmcloud catalog entry-update
+## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
 기존 카탈로그 항목 업데이트(계정의 카탈로그 관리자 또는 편집자만)
 
@@ -192,7 +192,7 @@ JSON 파일에서 리소스 `j402-dnf1i` 업데이트:
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
 
-### ibmcloud catalog entry-delete
+## ibmcloud catalog entry-delete
 {: #ibmcloud_catalog_entry_delete}
 카탈로그 항목 삭제(계정의 카탈로그 관리자만)
 ```
@@ -215,7 +215,7 @@ ibmcloud catalog entry-delete ID [--global]
 ibmcloud catalog delete 'j402-dnf1i'
 ```
 
-### ibmcloud catalog entry-visibility
+## ibmcloud catalog entry-visibility
 {: #ibmcloud_catalog_entry_visibility}
 카탈로그 항목의 가시성 가져오기(계정의 카탈로그 관리자만)
 
@@ -241,7 +241,7 @@ ibmcloud catalog entry-visibility ID [--global]
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
 
-### ibmcloud catalog entry-visibility-set
+## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
 기존 카탈로그 항목의 가시성 업데이트(계정의 카탈로그 관리자만)
 
@@ -282,7 +282,7 @@ JSON 파일에서 리소스 `j402-dnf1i`의 가시성 설정:
 ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
-### ibmcloud catalog service-marketplace
+## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
 마켓플레이스의 서비스 오퍼링 나열
 
@@ -310,7 +310,7 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ibmcloud catalog service-marketplace --global
 ```
 
-### ibmcloud catalog templates
+## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
 {{site.data.keyword.Bluemix_notm}}에서 표준 유형 템플리트를 확인합니다.
@@ -328,7 +328,7 @@ ibmcloud catalog templates [-d]
    <dd><i>-d</i> 옵션을 지정하면 각 템플리트의 설명도 표시됩니다. 그렇지 않으면 각 템플리트의 ID와 이름만 표시됩니다.</dd>
    </dl>
 
-### ibmcloud catalog template
+## ibmcloud catalog template
 {: #ibmcloud_catalog_template}
 
 지정된 표준 유형 템플리트의 자세한 정보를 봅니다.
@@ -354,7 +354,7 @@ ibmcloud catalog template TEMPLATE_ID
 ibmcloud catalog template mobileBackendStarter
 ```
 
-### ibmcloud catalog template-run
+## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
 특정 URL 및 설명이 있는 지정된 템플리트를 기반으로 하는 cf 애플리케이션을 작성합니다. 기본적으로 새 앱이 자동으로 시작됩니다.
@@ -400,7 +400,7 @@ ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluem
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-### ibmcloud catalog locations
+## ibmcloud catalog locations
 {: #ibmcloud_catalog_locations}
 
 선택한 형식으로 지역의 선택 서브세트를 가져옵니다.
@@ -426,7 +426,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>출력 CSV 파일</dd>
 </dl>
 
-### ibmcloud catalog runtime
+## ibmcloud catalog runtime
 {: #ibmcloud_catalog_runtime}
 
 런타임의 세부사항을 봅니다. 이 명령은 퍼블릭 클라우에서만 사용할 수 있습니다.
@@ -443,7 +443,7 @@ ibmcloud catalog runtime RUNTIME_ID
 catalog runtime nodejsHelloWorld
 ```
 
-### ibmcloud catalog runtimes
+## ibmcloud catalog runtimes
 {: #ibmcloud_catalog_runtimes}
 
 모든 런타임을 나열합니다. 이 명령은 퍼블릭 클라우에서만 사용할 수 있습니다.
@@ -467,7 +467,7 @@ ibmcloud catalog runtimes [-d]
 ibmcloud catalog runtimes -d
 ```
 
-### ibmcloud billing account-usage
+## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
 현재 계정의 월별 사용량 표시(계정 관리자만)
@@ -495,7 +495,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 ibmcloud billing account-usage -d 2016-06
 ```
 
-### ibmcloud billing org-usage
+## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
 조직의 월별 사용량 표시(계정 관리자 또는 조직 청구 관리자만)
@@ -517,7 +517,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
 </dl>
 
-### ibmcloud billing resource-group-usage
+## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
 리소스 그룹의 월별 사용량 표시(계정 관리자 또는 리소스 그룹 관리자만)
@@ -539,7 +539,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
 </dl>
 
-### ibmcloud billing resource-instances-usage
+## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
 현재 계정의 월별 리소스 인스턴스 사용량을 표시합니다.
@@ -563,7 +563,7 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
 </dl>
 
-### ibmcloud plugin repos
+## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
 {{site.data.keyword.Bluemix_notm}} CLI에 등록된 모든 플러그인 저장소를 나열합니다.
@@ -574,7 +574,7 @@ ibmcloud plugin repos
 
 <strong>전제조건</strong>: 없음
 
-### ibmcloud plugin repo-add
+## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
 
 {{site.data.keyword.Bluemix_notm}} CLI에 새 플러그인 저장소를 추가합니다.
@@ -603,7 +603,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
-### ibmcloud plugin repo-remove
+## ibmcloud plugin repo-remove
 {: #ibmcloud_plugin_repo_remove}
 
 {{site.data.keyword.Bluemix_notm}} CLI에서 플러그인 저장소를 제거합니다.
@@ -628,7 +628,7 @@ ibmcloud plugin repo-remove REPO_NAME
 ibmcloud plugin repo-remove bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugins
+## ibmcloud plugin repo-plugins
 {: #ibmcloud_plugin_repo_plugins}
 
 추가된 모든 저장소 또는 특정 저장소에서 사용 가능한 모든 플러그인을 나열합니다.
@@ -660,7 +660,7 @@ ibmcloud plugin repo-plugins
 ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
-### ibmcloud plugin repo-plugin
+## ibmcloud plugin repo-plugin
 {: #ibmcloud_plugin_repo_plugin}
 
 저장소의 플러그인 세부사항을 표시합니다.
@@ -692,7 +692,7 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-### ibmcloud plugin list
+## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
 
 {{site.data.keyword.Bluemix_notm}} CLI의 설치된 모든 플러그인을 나열합니다.
@@ -703,7 +703,7 @@ ibmcloud plugin list
 
 <strong>전제조건</strong>: 없음
 
-### ibmcloud plugin show
+## ibmcloud plugin show
 {: #ibmcloud_plugin_show}
 
 설치된 플러그인의 세부사항을 표시합니다.
@@ -714,7 +714,7 @@ ibmcloud plugin show PLUGIN-NAME
 
 <strong>전제조건</strong>: 없음
 
-### ibmcloud plugin install
+## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
 지정된 경로 또는 저장소의 {{site.data.keyword.Bluemix_notm}} CLI에 특정 버전의 플러그인을 설치합니다.
@@ -780,7 +780,7 @@ ibmcloud plugin install container-service
 ibmcloud plugin install container-service -v 0.1.425
 ```
 
-### ibmcloud plugin update
+## ibmcloud plugin update
 {: #ibmcloud_plugin_update}
 
 저장소에서 플러그인을 업그레이드합니다.
@@ -832,7 +832,7 @@ ibmcloud plugin update container-service
 ibmcloud plugin update container-service -v 0.1.440
 ```
 
-### ibmcloud plugin uninstall
+## ibmcloud plugin uninstall
 {: #ibmcloud_plugin_uninstall}
 
 {{site.data.keyword.Bluemix_notm}} CLI에서 지정된 플러그인을 설치 제거합니다.

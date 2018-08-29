@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 로드 밸런서 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 로드 밸런서 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 <caption>표 1. {{site.data.keyword.Bluemix_notm}} 인프라 로드 밸런서 명령</caption>
@@ -49,7 +49,7 @@ lastupdated: "2018-07-31"
 </tbody>
  </table>
 
- ### ibmcloud sl loadbal cancel
+ ## ibmcloud sl loadbal cancel
 {: #sl_loadbal_cancel}
 
 기존 로드 밸런서를 취소합니다.
@@ -63,7 +63,7 @@ ibmcloud sl loadbal cancel LOADBAL_ID [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl loadbal create
+## ibmcloud sl loadbal create
 {: #sl_loadbal_create}
 
 작성-옵션에서 리턴된 ID가 제공된 로드 밸런서를 추가합니다.
@@ -77,7 +77,7 @@ ibmcloud sl loadbal create PRICE_ID LOCATION [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl loadbal create-options
+## ibmcloud sl loadbal create-options
 {: #sl_loadbal_create_options}
 
 로드 밸런서를 작성하기 위한 가격 옵션을 가져옵니다.
@@ -85,7 +85,7 @@ ibmcloud sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ibmcloud sl loadbal create-options
 ```
 
-### ibmcloud sl loadbal detail
+## ibmcloud sl loadbal detail
 {: #sl_loadbal_detail}
 
 로드 밸런서 세부사항을 가져옵니다.
@@ -93,7 +93,7 @@ ibmcloud sl loadbal create-options
 ibmcloud sl loadbal detail LOADBAL_ID
 ```
 
-### ibmcloud sl loadbal group-add
+## ibmcloud sl loadbal group-add
 {: #sl_loadbal_group_add}
 
 새 load_balancer 서비스를 추가합니다.
@@ -113,7 +113,7 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dd>필수. 라우팅 메소드의 ID. ID를 찾으려면 'ibmcloud sl loadbal routing-methods'를 실행하십시오.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-delete
+## ibmcloud sl loadbal group-delete
 {: #sl_loadbal_group_delete}
 
 기존 로드 밸런서 서비스 그룹을 삭제합니다.
@@ -127,7 +127,7 @@ ibmcloud sl loadbal group-delete GROUP_ID [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-edit
+## ibmcloud sl loadbal group-edit
 {: #sl_loadbal_group_edit}
 
 기존 로드 밸런서 서비스 그룹을 편집합니다.
@@ -147,7 +147,7 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dd>라우팅 메소드의 ID를 변경합니다. ID를 찾으려면 'ibmcloud sl loadbal routing-methods'를 실행하십시오.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-reset
+## ibmcloud sl loadbal group-reset
 {: #sl_loadbal_group_reset}
 
 특정 서비스 그룹의 연결을 재설정합니다.
@@ -155,7 +155,7 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 ibmcloud sl loadbal group-reset LOADBAL_ID GROUP_ID
 ```
 
-### ibmcloud sl loadbal health-checks
+## ibmcloud sl loadbal health-checks
 {: #sl_loadbal_health_checks}
 
 상태 확인 유형을 나열합니다.
@@ -163,7 +163,7 @@ ibmcloud sl loadbal group-reset LOADBAL_ID GROUP_ID
 ibmcloud sl loadbal health-checks
 ```
 
-### ibmcloud sl loadbal list
+## ibmcloud sl loadbal list
 {: #sl_loadbal_list}
 
 활성 로드 밸런서를 나열합니다.
@@ -181,7 +181,7 @@ ibmcloud sl loadbal list
 <dd>IP 주소별 필터링.</dd>
 </dl>
 
-### ibmcloud sl loadbal routing-methods
+## ibmcloud sl loadbal routing-methods
 {: #sl_loadbal_routing_methods}
 
 라우팅 방법을 나열합니다.
@@ -189,7 +189,7 @@ ibmcloud sl loadbal list
 ibmcloud sl loadbal routing-methods
 ```
 
-### ibmcloud sl loadbal routing-types
+## ibmcloud sl loadbal routing-types
 {: #sl_loadbal_routing_types}
 
 라우팅 유형을 나열합니다.
@@ -197,7 +197,7 @@ ibmcloud sl loadbal routing-methods
 ibmcloud sl loadbal routing-types
 ```
 
-### ibmcloud sl loadbal service-add
+## ibmcloud sl loadbal service-add
 {: #sl_loadbal_service_add}
 
 새 로드 밸런서 서비스를 추가합니다.
@@ -219,7 +219,7 @@ ibmcloud sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 <dd>필수. 서비스의 IP 주소.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-delete
+## ibmcloud sl loadbal service-delete
 {: #sl_loadbal_service_delete}
 
 기존 로드 밸런서 서비스를 삭제합니다.
@@ -233,7 +233,7 @@ ibmcloud sl loadbal service-delete SERVICE_ID [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-edit
+## ibmcloud sl loadbal service-edit
 {: #sl_loadbal_service_edit}
 
 서비스 그룹의 특성을 편집합니다.
@@ -257,7 +257,7 @@ ibmcloud sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 <dd>서비스의 IP 주소를 변경합니다.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-toggle
+## ibmcloud sl loadbal service-toggle
 {: #sl_loadbal_service_toggle}
 
 기존 로드 밸런서 서비스의 상태를 토글합니다.

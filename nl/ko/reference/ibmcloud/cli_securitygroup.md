@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 Securitygroup 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 보안 그룹 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 <caption>표 1. {{site.data.keyword.Bluemix_notm}} 인프라 Securitygroup 명령</caption>
@@ -41,7 +41,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl securitygroup create
+ ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 보안 그룹을 작성합니다.
@@ -57,7 +57,7 @@ ibmcloud sl securitygroup create [OPTIONS]
 <dd>보안 그룹의 설명입니다.</dd>
 </dl>
 
-### ibmcloud sl securitygroup delete
+## ibmcloud sl securitygroup delete
 {: #sl_securitygroup_delete}
 
 제공된 보안 그룹을 삭제합니다.
@@ -71,7 +71,7 @@ ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl securitygroup detail
+## ibmcloud sl securitygroup detail
 {: #sl_securitygroup_detail}
 
 보안 그룹에 대한 세부사항을 가져옵니다.
@@ -79,7 +79,7 @@ ibmcloud sl securitygroup delete SECURITYGROUP_ID [OPTIONS]
 ibmcloud sl securitygroup detail SECURITYGROUP_ID [OPTIONS]
 ```
 
-### ibmcloud sl securitygroup edit
+## ibmcloud sl securitygroup edit
 {: #sl_securitygroup_edit}
 
 보안 그룹에 대한 세부사항을 편집합니다.
@@ -95,7 +95,7 @@ ibmcloud sl securitygroup edit SECURITYGROUP_ID [OPTIONS]
 <dd>보안 그룹의 설명입니다.</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-add
+## ibmcloud sl securitygroup interface-add
 {: #sl_securitygroup_interface_add}
 
 보안 그룹에 인터페이스를 연결합니다.
@@ -113,7 +113,7 @@ ibmcloud sl securitygroup interface-add SECURITYGROUP_ID [OPTIONS]
 <dd>연관시킬 서버의 인터페이스입니다(공용/사설).</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-list
+## ibmcloud sl securitygroup interface-list
 {: #sl_securitygroup_interface_list}
 
 보안 그룹과 연관된 인터페이스를 나열합니다.
@@ -127,7 +127,7 @@ ibmcloud sl securitygroup interface-list SECURITYGROUP_ID [OPTIONS]
 <dd>정렬 기준 열, 옵션: id,virtualServerId,hostname.</dd>
 </dl>
 
-### ibmcloud sl securitygroup interface-remove
+## ibmcloud sl securitygroup interface-remove
 {: #sl_securitygroup_interface_remove}
 
 보안 그룹에서 인터페이스를 분리합니다.
@@ -145,7 +145,7 @@ ibmcloud sl securitygroup interface-remove SECURITYGROUP_ID [OPTIONS]
 <dd>제거할 서버의 인터페이스입니다(공용/사설).</dd>
 </dl>
 
-### ibmcloud sl securitygroup list
+## ibmcloud sl securitygroup list
 {: #sl_securitygroup_list}
 
 보안 그룹을 나열합니다.
@@ -159,7 +159,7 @@ List security groups
 <dd>정렬 기준 열, 옵션: id,name,description,created.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-add
+## ibmcloud sl securitygroup rule-add
 {: #sl_securitygroup_rule_add}
 
 보안 그룹 규칙을 보안 그룹에 추가합니다.
@@ -185,7 +185,7 @@ ibmcloud sl securitygroup rule-add SECURITYGROUP_ID [OPTIONS]
 <dd>적용할 프로토콜(icmp, tcp, udp)입니다.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-edit
+## ibmcloud sl securitygroup rule-edit
 {: #sl_securitygroup_rule_edit}
 
 보안 그룹의 보안 그룹 규칙을 편집합니다.
@@ -211,7 +211,7 @@ ibmcloud sl securitygroup rule-edit SECURITYGROUP_ID RULE_ID [OPTIONS]
 <dd>적용할 프로토콜(icmp, tcp, udp)입니다.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-list
+## ibmcloud sl securitygroup rule-list
 {: #sl_securitygroup_rule_list}
 
 그룹 규칙을 나열합니다.
@@ -225,7 +225,7 @@ ibmcloud sl securitygroup rule-list SECURITYGROUP_ID [OPTIONS]
 <dd>정렬 기준 열, 옵션: id,remoteIp,remoteGroupId,direction,ethertype,portRangeMin,portRangeMax,protocol.</dd>
 </dl>
 
-### ibmcloud sl securitygroup rule-remove
+## ibmcloud sl securitygroup rule-remove
 {: #sl_securitygroup_rule_remove}
 
 보안 그룹에서 규칙을 제거합니다.

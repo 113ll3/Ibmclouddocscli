@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 하드웨어 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 하드웨어 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 <caption>표 1. {{site.data.keyword.Bluemix_notm}} 인프라 하드웨어 명령</caption>
@@ -45,7 +45,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl hardware cancel
+ ## ibmcloud sl hardware cancel
 {: #sl_hardware_cancel}
 
 하드웨어 서버를 취소합니다.
@@ -65,7 +65,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl hardware cancel-reasons
+## ibmcloud sl hardware cancel-reasons
 {: #sl_hardware_cancel_reasons}
 
 취소 이유의 목록을 표시합니다.
@@ -73,7 +73,7 @@ ibmcloud sl hardware cancel IDENTIFIER [OPTIONS]
 ibmcloud sl hardware cancel-reasons
 ```
 
-### ibmcloud sl hardware create
+## ibmcloud sl hardware create
 {: #sl_hardware_create}
 
 하드웨어 서버를 주문/작성합니다.
@@ -115,7 +115,7 @@ ibmcloud sl hardware create [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl hardware create-options
+## ibmcloud sl hardware create-options
 {: #sl_hardware_create_options}
 
 제공된 섀시에 대한 서버 주문 옵션입니다.
@@ -123,7 +123,7 @@ ibmcloud sl hardware create [OPTIONS]
 ibmcloud sl hardware create-options
 ```
 
-### ibmcloud sl hardware credentials
+## ibmcloud sl hardware credentials
 {: #sl_hardware_credentials}
 
 하드웨어 서버 신임 정보를 나열합니다.
@@ -131,7 +131,7 @@ ibmcloud sl hardware create-options
 ibmcloud sl hardware credentials IDENTIFIER
 ```
 
-### ibmcloud sl hardware detail
+## ibmcloud sl hardware detail
 {: #sl_hardware_detail}
 
 하드웨어 서버에 대한 세부사항을 가져옵니다.
@@ -147,7 +147,7 @@ ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 <dd>연관된 가격을 표시합니다.</dd>
 </dl>
 
-### ibmcloud sl hardware edit
+## ibmcloud sl hardware edit
 {: #sl_hardware_edit}
 
 하드웨어 서버 세부사항을 편집합니다.
@@ -173,7 +173,7 @@ ibmcloud sl hardware edit IDENTIFIER [OPTIONS]
 <dd>개인용 포트 속도. 옵션: 0,10,100,1000,10000.</dd>
 </dl>
 
-### ibmcloud sl hardware list
+## ibmcloud sl hardware list
 {: #sl_hardware_list}
 
 하드웨어 서버를 나열합니다.
@@ -211,7 +211,7 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>표시할 열, default:id,hostname,domain,public_ip,private_ip,datacenter,status, options:guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
 </dl>
 
-### ibmcloud sl hardware power-cycle
+## ibmcloud sl hardware power-cycle
 {: #sl_hardware_power_cycle}
 
 서버의 전원을 껐다가 켭니다.
@@ -225,7 +225,7 @@ ibmcloud sl hardware power-cycle IDENTIFIER
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl hardware power-off
+## ibmcloud sl hardware power-off
 {: #sl_hardware_power_off}
 
 활성 서버의 전원을 끕니다.
@@ -239,7 +239,7 @@ ibmcloud sl hardware power-off IDENTIFIER
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl hardware power-on
+## ibmcloud sl hardware power-on
 {: #sl_hardware_power_on}
 
 서버의 전원을 켭니다.
@@ -247,7 +247,7 @@ ibmcloud sl hardware power-off IDENTIFIER
 ibmcloud sl hardware power-on IDENTIFIER
 ```
 
-### ibmcloud sl hardware reboot
+## ibmcloud sl hardware reboot
 {: #sl_hardware_reboot}
 
 활성 서버를 다시 부팅합니다.
@@ -265,7 +265,7 @@ ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl hardware reload
+## ibmcloud sl hardware reload
 {: #sl_hardware_reload}
 
 서버의 운영 체제를 다시 로드합니다.
@@ -287,7 +287,7 @@ ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl hardware rescue
+## ibmcloud sl hardware rescue
 {: #sl_hardware_rescue}
 
 복구 이미지로 서버를 다시 부팅합니다.
@@ -301,7 +301,7 @@ ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl hardware update-firmware
+## ibmcloud sl hardware update-firmware
 {: #sl_hardware_update_firmware}
 
 서버 펌웨어를 업데이트합니다.

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 IPSec VPN 관리를 위한 명령
+# {{site.data.keyword.Bluemix_notm}} 인프라 IPSec VPN 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
 
@@ -39,7 +39,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl ipsec cancel
+ ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 IPSec VPN 터널 컨텍스트를 취소합니다.
@@ -57,7 +57,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>
 
-### ibmcloud sl ipsec config
+## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
 터널 컨텍스트의 구성을 요청합니다.
@@ -65,7 +65,7 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec detail
+## ibmcloud sl ipsec detail
 {: #sl_ipsec_detail}
 
 IPSec VPN 터널 컨텍스트 세부사항을 나열합니다.
@@ -79,7 +79,7 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <dd>추가 리소스 포함. 옵션: at,is,rs,sr,ss.</dd>
 </dl>
 
-### ibmcloud sl ipsec list
+## ibmcloud sl ipsec list
 {: #sl_ipsec_list}
 
 IPSec VPN 터널 컨텍스트를 나열합니다.
@@ -93,7 +93,7 @@ ibmcloud sl ipsec list [OPTIONS]
 <dd>IPSEC을 구매한 주문 ID별 필터링.</dd>
 </dl>
 
-### ibmcloud sl ipsec order
+## ibmcloud sl ipsec order
 {: #sl_ipsec_order}
 
 IPSec VPN 터널을 주문합니다.
@@ -107,7 +107,7 @@ ibmcloud sl ipsec order [OPTIONS]
 <dd>필수. IPSEC에 대한 데이터 센터의 짧은 이름(예: dal09).</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-add
+## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
 IPSec 터널 컨텍스트에 서브넷을 추가합니다.
@@ -125,7 +125,7 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>작성할 서브넷 네트워크 ID.</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-remove
+## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
 IPSEC 터널 컨텍스트에서 서브넷을 제거합니다.
@@ -133,7 +133,7 @@ IPSEC 터널 컨텍스트에서 서브넷을 제거합니다.
 ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-add
+## ibmcloud sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
 IPSec 터널에 주소 변환을 추가합니다.
@@ -151,7 +151,7 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dd>참고.</dd>
 </dl>
 
-### ibmcloud sl ipsec translation-remove
+## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
 IPSec에서 변환 항목을 제거합니다.
@@ -159,7 +159,7 @@ IPSec에서 변환 항목을 제거합니다.
 ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-update
+## ibmcloud sl ipsec translation-update
 {: #sl_ipsec_translation_update}
 
 IPSec에 대한 주소 변환을 업데이트합니다.
@@ -177,7 +177,7 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dd>참고.</dd>
 </dl>
 
-### ibmcloud sl ipsec update
+## ibmcloud sl ipsec update
 {: #sl_ipsec_update}
 
 터널 컨텍스트 특성을 업데이트합니다.
