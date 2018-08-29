@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-07-17"
 # Initiation à {{site.data.keyword.Bluemix_notm}} Developer Tools
 {: #overview}
 
-En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.Bluemix}} Developer Tools, vérifier l'installation et configurer votre environnement. Les outils {{site.data.keyword.Bluemix}} Developer Tools offrent une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice de bout en bout.
+En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.Bluemix}} Developer Tools, vérifier l'installation et configurer votre environnement. Les outils {{site.data.keyword.Bluemix}} Developer Tools offrent une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice de bout en bout. 
 {:shortdesc}
 
 Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} et des outils suivants : 
@@ -42,7 +42,7 @@ Vous devez avoir un compte [{{site.data.keyword.Bluemix_notm}} ](https://console
 * Si vous utilisez Microsoft Windows &trade;, vous devez utiliser Windows 10 Pro ou une version ultérieure.
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum. 
 
-## Etape 1 : Exécuter la commande install
+## Etape 1. Exécuter la commande install
 {: #step1}
 
 * Pour Mac et Linux, exécutez la commande suivante :
@@ -64,7 +64,7 @@ Vous devez avoir un compte [{{site.data.keyword.Bluemix_notm}} ](https://console
   
   Pour obtenir des instructions sur l'installation manuelle de ces outils, voir [Réinstallation des outils](/docs/cli/ts_createapps.html#appendix).
 
-## Etape 2 : Vérifier l'installation
+## Etape 2. Vérifier l'installation
 {: #step2}
 
 Pour vérifier que l'installation de l'interface de ligne de commande et des outils de développeur a abouti, exécutez la commande `help` :
@@ -76,7 +76,7 @@ ibmcloud dev help
 <br>
 La sortie inclut les instructions d'utilisation, la version actuelle et les commandes prises en charge.
 
-## Etape 3 : Configurer votre environnement
+## Etape 3. Configurer votre environnement
 {: #step3}
 
 1. Connectez-vous à un noeud final d'API dans votre région {{site.data.keyword.Bluemix_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis :
@@ -111,7 +111,7 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 	```
 	{: codeblock}
 	
-Pour signaler des problèmes ou transmettre des commentaires, vous pouvez utiliser le [canal IBM Cloud Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com). Pour demander l'accès à l'équipe, cliquez [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
+Pour signaler des problèmes ou transmettre des commentaires, vous pouvez utiliser le [canal IBM Cloud Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com). Demandez l'accès de l'équipe à [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Etapes suivantes
 {: #next-steps}

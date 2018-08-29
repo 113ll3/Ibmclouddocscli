@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandos para gerenciar  {{site.data.keyword.Bluemix_notm}}  CDN de infraestrutura
+# Gerenciando o  {{site.data.keyword.Bluemix_notm}}  CDN de infraestrutura
 
  <table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
 <caption>Tabela 1. {{site.data.keyword.Bluemix_notm}}  CDN de infraestrutura</caption>
@@ -38,7 +38,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### Sl cdn cancel ibmcloud
+ ## Sl cdn cancel ibmcloud
 {: #sl_cdn_cancel}
 
 Cancelar uma conta do CDN.
@@ -52,7 +52,7 @@ Ibmcloud sl cdn cancel ACCOUNT_ID [ OPTIONS ]
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### Sl cdn detail ibmcloud
+## Sl cdn detail ibmcloud
 {: #sl_cdn_detail}
 
 Detalhar uma Conta do CDN.
@@ -60,7 +60,7 @@ Detalhar uma Conta do CDN.
 ibmcloud sl cdn detail ACCOUNT_ID
 ```
 
-### Sl cdn list ibmcloud
+## Sl cdn list ibmcloud
 {: #sl_cdn_list}
 
 Listar todas as contas do CDN.
@@ -76,7 +76,7 @@ Sl cdn list ibmcloud [ OPTIONS ]
 <dd>Filtrar pelo ID da ordem.</dd>
 </dl>
 
-### Sl cdn load ibmcloud
+## Sl cdn load ibmcloud
 {: #sl_cdn_load}
 
 Armazenar em cache um ou mais arquivos em todos os nós da borda.
@@ -84,7 +84,7 @@ Armazenar em cache um ou mais arquivos em todos os nós da borda.
 ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### Ordem ibmcloud sl cdn
+## Ordem ibmcloud sl cdn
 {: #sl_cdn_order}
 
 Pedir uma conta do CDN.
@@ -102,7 +102,7 @@ Sl cdn order ibmcloud [ OPTIONS ]
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### ibmcloud sl cdn options
+## ibmcloud sl cdn options
 {: #sl_cdn_options}
 
 Opções de largura da banda e de armazenamento para pedir a conta do CDN.
@@ -110,7 +110,7 @@ Opções de largura da banda e de armazenamento para pedir a conta do CDN.
 ibmcloud sl cdn options
 ```
 
-### ibmcloud sl cdn origin-add
+## ibmcloud sl cdn origin-add
 {: #sl_cdn_origin_add}
 
 Criar um mapeamento pull de origem.
@@ -126,7 +126,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dd>Um CNAME opcional para anexar ao mapeamento.</dd>
 </dl>
 
-### Ibmcloud sl cdn origin-list
+## Ibmcloud sl cdn origin-list
 {: #sl_cdn_origin_list}
 
 Listar mapeamentos pull de origem.
@@ -134,7 +134,7 @@ Listar mapeamentos pull de origem.
 Ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
 
-### Ibmcloud sl cdn origin-remove
+## Ibmcloud sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
 Remover um mapeamento pull de origem.
@@ -148,7 +148,7 @@ ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>
 
-### Sl cdn purge ibmcloud
+## Sl cdn purge ibmcloud
 {: #sl_cdn_purge}
 
 Limpar arquivos em cache de todos os nós da borda.

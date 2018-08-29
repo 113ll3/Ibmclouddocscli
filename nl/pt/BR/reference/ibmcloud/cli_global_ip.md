@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandos para gerenciar  {{site.data.keyword.Bluemix_notm}}  IP global de infraestrutura
+# Gerenciando o  {{site.data.keyword.Bluemix_notm}}  IP global de infraestrutura
 
 <table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
 <caption>Tabela 1. {{site.data.keyword.Bluemix_notm}}  Comandos IP globais da infraestrutura</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl globalip assign
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 Designar um IP global a um roteador ou dispositivo de destino.
@@ -45,7 +45,7 @@ Ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
 Esse comando designa um endereço IP com ID 12345678 a um dispositivo de destino cujo endereço IP é 9.111.123.456.
 
-### Sl globalip cancel ibmcloud
+## Sl globalip cancel ibmcloud
 {: #sl_globalip_cancel}
 
 Cancelar um IP global.
@@ -65,7 +65,7 @@ Ibmcloud sl globalip cancel 12345678
 ```
 Esse comando cancela o endereço IP com ID 12345678.
 
- ### Ibmcloud sl globalip create
+ ## Ibmcloud sl globalip create
 {: #sl_globalip_create}
 
 Criar um IP global.
@@ -89,7 +89,7 @@ Sl globalip create ibmcloud -- v6
 ```
 Esse comando cria um endereço IP V6.
 
-### Sl globalip list ibmcloud
+## Sl globalip list ibmcloud
 {: #sl_globalip_list}
 
 Listar todos os IPs globais em sua conta.
@@ -113,7 +113,7 @@ Sl globalip list ibmcloud -- v4
 ```
 Esse comando lista todos os endereços IP V4 na conta atual.
 
-### Sl globalip unassign ibmcloud
+## Sl globalip unassign ibmcloud
 {: #sl_globalip_unassign}
 
 Remover designação de um IP global de um roteador ou dispositivo de destino.

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commandes pour la gestion du réseau de diffusion de contenu (CDN) de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Gestion du réseau de diffusion de contenu (CDN) de l'infrastructure {{site.data.keyword.Bluemix_notm}}
 
  <table summary="Commandes générales de l'infrastructure {{site.data.keyword.Bluemix_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
 <caption>Tableau 1. Commandes CDN de l'infrastructure {{site.data.keyword.Bluemix_notm}}</caption>
@@ -38,7 +38,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl cdn cancel
+ ## ibmcloud sl cdn cancel
 {: #sl_cdn_cancel}
 
 Permet d'annuler un compte CDN.
@@ -52,7 +52,7 @@ ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### ibmcloud sl cdn detail
+## ibmcloud sl cdn detail
 {: #sl_cdn_detail}
 
 Permet d'afficher les détails d'un compte CDN.
@@ -60,7 +60,7 @@ Permet d'afficher les détails d'un compte CDN.
 ibmcloud sl cdn detail ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn list
+## ibmcloud sl cdn list
 {: #sl_cdn_list}
 
 Permet de répertorier tous les comptes CDN.
@@ -76,7 +76,7 @@ ibmcloud sl cdn list [OPTIONS]
 <dd>Filtrer par ID de commande.</dd>
 </dl>
 
-### ibmcloud sl cdn load
+## ibmcloud sl cdn load
 {: #sl_cdn_load}
 
 Permet de mettre en cache un ou plusieurs fichiers sur tous les noeuds périphériques.
@@ -84,7 +84,7 @@ Permet de mettre en cache un ou plusieurs fichiers sur tous les noeuds périphé
 ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### ibmcloud sl cdn order
+## ibmcloud sl cdn order
 {: #sl_cdn_order}
 
 Permet de commander un compte CDN.
@@ -102,7 +102,7 @@ ibmcloud sl cdn order [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### ibmcloud sl cdn options
+## ibmcloud sl cdn options
 {: #sl_cdn_options}
 
 Options de bande passante et de stockage pour la commande d'un compte CDN.
@@ -110,7 +110,7 @@ Options de bande passante et de stockage pour la commande d'un compte CDN.
 ibmcloud sl cdn options
 ```
 
-### ibmcloud sl cdn origin-add
+## ibmcloud sl cdn origin-add
 {: #sl_cdn_origin_add}
 
 Permet de créer un mappage d'extraction d'origine.
@@ -126,7 +126,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dd>Type d'enregistrement CNAME facultatif à joindre au mappage.</dd>
 </dl>
 
-### ibmcloud sl cdn origin-list
+## ibmcloud sl cdn origin-list
 {: #sl_cdn_origin_list}
 
 Permet de répertorier les mappages d'extraction d'origine.
@@ -134,7 +134,7 @@ Permet de répertorier les mappages d'extraction d'origine.
 ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn origin-remove
+## ibmcloud sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
 Permet de retirer un mappage d'extraction d'origine.
@@ -148,7 +148,7 @@ ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### ibmcloud sl cdn purge
+## ibmcloud sl cdn purge
 {: #sl_cdn_purge}
 
 Permet de purger les fichiers mis en cache depuis tous les noeuds périphériques.

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commandes pour la gestion de la sécurité de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Gestion de la sécurité de l'infrastructure {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Commandes générales de l'infrastructure {{site.data.keyword.Bluemix_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
 <caption>Tableau 1. Commandes de sécurité de l'infrastructure {{site.data.keyword.Bluemix_notm}}</caption>
@@ -38,7 +38,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl security sshkey-add
+ ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 Permet d'ajouter une nouvelle clé SSH.
@@ -62,7 +62,7 @@ ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 Cette commande ajoute une clé SSH à partir d'un fichier : ~/.ssh/id_rsa.pub with a note "mykey".
 
-### ibmcloud sl security sshkey-edit
+## ibmcloud sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
 Permet d'éditer une clé SSH.
@@ -84,7 +84,7 @@ ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
 Cette commande met à jour la clé SSH portant l'ID 12345678 et lui affecte le libellé "Bluemix" et la note "testing".
 
-### ibmcloud sl security sshkey-list
+## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
 
 Permet de répertorier les clés SSH sur votre compte.
@@ -104,7 +104,7 @@ ibmcloud sl security sshkey-list --sortby label
 ```
 Cette commande répertorie toutes les clés SSH sur le compte en cours et les trie par libellé.
 
-### ibmcloud sl security sshkey-print
+## ibmcloud sl security sshkey-print
 {: #sl_security_sshkey_print}
 
 Permet d'imprimer une clé SSH sur l'écran.
@@ -124,7 +124,7 @@ ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 Cette commande affiche l'ID, le libellé et les notes de la clé SSH portant l'ID 12345678 et écrit la clé publique dans le fichier : ~/mykey.pub.
 
-### ibmcloud sl security sshkey-remove
+## ibmcloud sl security sshkey-remove
 {: #sl_security_sshkey_remove}
 
 Permet de retirer définitivement une clé SSH.
@@ -144,7 +144,7 @@ ibmcloud sl security sshkey-remove 12345678 -f
 ```
 Cette commande retire la clé SSH portant l'ID 12345678 sans demander de confirmation.
 
-### ibmcloud sl security cert-add
+## ibmcloud sl security cert-add
 {: #sl_security_cert_add}
 
 Permet d'ajouter et de télécharger les détails relatifs au certificat SSL.
@@ -172,7 +172,7 @@ ibmcloud sl security cert-add --crt ~/ibm.com.cert --key ~/ibm.com.key
 ```
 Cette commande ajoute le fichier certificat ~/ibm.com.cert et le fichier de clé privée ~/ibm.com.key pour le domaine ibm.com.
 
-### ibmcloud sl security cert-edit
+## ibmcloud sl security cert-edit
 {: #sl_security_cert_edit}
 
 Permet d'éditer un certificat SSL.
@@ -200,7 +200,7 @@ ibmcloud sl security cert-edit 12345678 --key ~/ibm.com.key
 ```
 Cette commande modifie le certificat portant l'ID 12345678 et met à jour sa clé privée avec le fichier ~/ibm.com.key.
 
-### ibmcloud sl security cert-download
+## ibmcloud sl security cert-download
 {: #sl_security_cert_download}
 
 Permet de télécharger des fichiers de certificat et de clé SSL.
@@ -215,7 +215,7 @@ ibmcloud sl security cert-download 12345678
 ```
 Cette commande télécharge 4 fichiers sur le répertoire de travail pour le certificat portant l'ID 12345678. Ces 4 fichiers sont : le fichier certificat, le fichier de demande de signature de certificat, le fichier de certificat intermédiaire et le fichier de clé privée.
 
-### ibmcloud sl security cert-list
+## ibmcloud sl security cert-list
 {: #sl_security_cert_list}
 
 Permet de répertorier les certificats SSL présents sur votre compte.
@@ -237,7 +237,7 @@ ibmcloud sl security cert-list --status valid --sortby days_until_expire
 ```
 Cette commande répertorie tous les certificats valides sur le compte en cours et les trie par jours de validité.
 
-### ibmcloud sl security cert-remove
+## ibmcloud sl security cert-remove
 {: #sl_security_cert_remove}
 
 Permet de retirer un certificat SSL.

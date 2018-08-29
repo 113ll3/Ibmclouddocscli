@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commandes pour la gestion des adresses IP globales de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Gestion des adresses IP globales de l'infrastructure {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Commandes générales de l'infrastructure {{site.data.keyword.Bluemix_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
 <caption>Tableau 1. Commandes pour les adresses IP globales de l'infrastructure {{site.data.keyword.Bluemix_notm}}</caption>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl globalip assign
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 Permet d'affecter une adresse IP globale à un routeur ou un périphérique cible.
@@ -45,7 +45,7 @@ ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
 Cette commande affecte une adresse IP portant l'ID 12345678 à une unité cible dont l'adresse IP est 9.111.123.456.
 
-### ibmcloud sl globalip cancel
+## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
 
 Permet d'annuler une adresse IP globale.
@@ -65,7 +65,7 @@ ibmcloud sl globalip cancel 12345678
 ```
 Cette commande annule une adresse IP portant l'ID 12345678.
 
- ### ibmcloud sl globalip create
+ ## ibmcloud sl globalip create
 {: #sl_globalip_create}
 
 Permet de créer une adresse IP globale.
@@ -89,7 +89,7 @@ ibmcloud sl globalip create --v6
 ```
 Cette commande crée une adresse IP V6.
 
-### ibmcloud sl globalip list
+## ibmcloud sl globalip list
 {: #sl_globalip_list}
 
 Permet de répertorier toutes les adresses IP globale sur votre compte.
@@ -113,7 +113,7 @@ ibmcloud sl globalip list --v4
 ```
 Cette commande répertorie toutes les adresses IP V4 sur le compte en cours.
 
-### ibmcloud sl globalip unassign
+## ibmcloud sl globalip unassign
 {: #sl_globalip_unassign}
 
 Permet d'annuler l'affectation d'une adresse IP globale à partir d'un routeur ou d'un périphérique cible.

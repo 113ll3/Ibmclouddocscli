@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commandes pour la gestion de l'équilibreur de charge de l'infrastructure {{site.data.keyword.Bluemix_notm}} 
+# Gestion de l'équilibreur de charge de l'infrastructure {{site.data.keyword.Bluemix_notm}} 
 
 <table summary="Commandes générales de l'infrastructure {{site.data.keyword.Bluemix_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
 <caption>Tableau 1. Commandes d'équilibreur de charge de l'infrastructure {{site.data.keyword.Bluemix_notm}}</caption>
@@ -49,7 +49,7 @@ lastupdated: "2018-07-31"
 </tbody>
  </table>
 
- ### ibmcloud sl loadbal cancel
+ ## ibmcloud sl loadbal cancel
 {: #sl_loadbal_cancel}
 
 Permet d'annuler un équilibreur de charge existant.
@@ -63,7 +63,7 @@ ibmcloud sl loadbal cancel LOADBAL_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### ibmcloud sl loadbal create
+## ibmcloud sl loadbal create
 {: #sl_loadbal_create}
 
 Permet d'ajouter un équilibreur de charge en fonction de l'id renvoyé par create-options.
@@ -77,7 +77,7 @@ ibmcloud sl loadbal create PRICE_ID LOCATION [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### ibmcloud sl loadbal create-options
+## ibmcloud sl loadbal create-options
 {: #sl_loadbal_create_options}
 
 Permet d'obtenir les options tarifaires afin de créer un équilibreur de charge.
@@ -85,7 +85,7 @@ Permet d'obtenir les options tarifaires afin de créer un équilibreur de charge
 ibmcloud sl loadbal create-options
 ```
 
-### ibmcloud sl loadbal detail
+## ibmcloud sl loadbal detail
 {: #sl_loadbal_detail}
 
 Permet d'obtenir les détails relatifs à un équilibreur de charge.
@@ -93,7 +93,7 @@ Permet d'obtenir les détails relatifs à un équilibreur de charge.
 ibmcloud sl loadbal detail LOADBAL_ID
 ```
 
-### ibmcloud sl loadbal group-add
+## ibmcloud sl loadbal group-add
 {: #sl_loadbal_group_add}
 
 Permet d'ajouter un nouveau service load_balancer.
@@ -113,7 +113,7 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dd>Obligatoire. ID de la méthode de routage. Exécutez 'ibmcloud sl loadbal routing-methods' pour rechercher un ID.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-delete
+## ibmcloud sl loadbal group-delete
 {: #sl_loadbal_group_delete}
 
 Permet de supprimer un groupe de services d'équilibreur de charge existant.
@@ -127,7 +127,7 @@ ibmcloud sl loadbal group-delete GROUP_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-edit
+## ibmcloud sl loadbal group-edit
 {: #sl_loadbal_group_edit}
 
 Permet d'éditer un groupe de services d'équilibreur de charge existant.
@@ -147,7 +147,7 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dd>Modifiez l'ID de la méthode de routage. Exécutez 'ibmcloud sl loadbal routing-methods' pour rechercher un ID.</dd>
 </dl>
 
-### ibmcloud sl loadbal group-reset
+## ibmcloud sl loadbal group-reset
 {: #sl_loadbal_group_reset}
 
 Permet de réinitialiser des connexions sur un groupe de services donné.
@@ -155,7 +155,7 @@ Permet de réinitialiser des connexions sur un groupe de services donné.
 ibmcloud sl loadbal group-reset LOADBAL_ID GROUP_ID
 ```
 
-### ibmcloud sl loadbal health-checks
+## ibmcloud sl loadbal health-checks
 {: #sl_loadbal_health_checks}
 
 Permet de répertorier les types de diagnostic d'intégrité.
@@ -163,7 +163,7 @@ Permet de répertorier les types de diagnostic d'intégrité.
 ibmcloud sl loadbal health-checks
 ```
 
-### ibmcloud sl loadbal list
+## ibmcloud sl loadbal list
 {: #sl_loadbal_list}
 
 Permet de répertorier les équilibreurs de charge actifs.
@@ -181,7 +181,7 @@ ibmcloud sl loadbal list
 <dd>Filtrer par adresse IP.</dd>
 </dl>
 
-### ibmcloud sl loadbal routing-methods
+## ibmcloud sl loadbal routing-methods
 {: #sl_loadbal_routing_methods}
 
 Permet de répertorier les méthodes de routage.
@@ -189,7 +189,7 @@ Permet de répertorier les méthodes de routage.
 ibmcloud sl loadbal routing-methods
 ```
 
-### ibmcloud sl loadbal routing-types
+## ibmcloud sl loadbal routing-types
 {: #sl_loadbal_routing_types}
 
 Permet de répertorier les types de routage.
@@ -197,7 +197,7 @@ Permet de répertorier les types de routage.
 ibmcloud sl loadbal routing-types
 ```
 
-### ibmcloud sl loadbal service-add
+## ibmcloud sl loadbal service-add
 {: #sl_loadbal_service_add}
 
 Permet d'ajouter un nouveau service d'équilibreur de charge.
@@ -219,7 +219,7 @@ ibmcloud sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 <dd>Obligatoire. Adresse IP du service.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-delete
+## ibmcloud sl loadbal service-delete
 {: #sl_loadbal_service_delete}
 
 Permet de supprimer un service d'équilibreur de charge existant.
@@ -233,7 +233,7 @@ ibmcloud sl loadbal service-delete SERVICE_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-edit
+## ibmcloud sl loadbal service-edit
 {: #sl_loadbal_service_edit}
 
 Permet d'éditer les propriétés d'un groupe de services.
@@ -257,7 +257,7 @@ ibmcloud sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 <dd>Modifiez l'adresse IP du service.</dd>
 </dl>
 
-### ibmcloud sl loadbal service-toggle
+## ibmcloud sl loadbal service-toggle
 {: #sl_loadbal_service_toggle}
 
 Permet de basculer le statut d'un service d'équilibreur de charge existant.

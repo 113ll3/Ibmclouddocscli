@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandos para gerenciar  {{site.data.keyword.Bluemix_notm}}  DNS de infraestrutura
+# Gerenciando  {{site.data.keyword.Bluemix_notm}}  DNS de infraestrutura
 
 <table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
 <caption>Tabela 1. Comandos DNS de infraestrutura do {{site.data.keyword.Bluemix_notm}}</caption>
@@ -37,7 +37,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
-### Sl dns import ibmcloud
+## Sl dns import ibmcloud
 {: #sl_dns_import}
 
 Importar uma zona com base em um arquivo de zona BIND.
@@ -57,7 +57,7 @@ ibmcloud sl dns import ~/ibm.com.txt
 ```
 Esse comando importa a zona e seus registros de recurso do arquivo: ~/ibm.com.txt.
 
-### Ibmcloud sl dns record-add
+## Ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
 Incluir registro de recurso em uma zona.
@@ -77,7 +77,7 @@ ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
 Esse comando inclui um registro A para a zona: ibm.com, seu host é "ftp", os dados são "127.0.0.1" e ttl é 86400 segundos.
 
-### ibmcloud sl dns record-edit
+## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
 
 Atualizar registros de recurso em uma zona.
@@ -103,7 +103,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 Esse comando edita registros na zona: ibm.com, cujo ID é 12345678 e configura seus dados como "127.0.0.2" e ttl como 3600.
 
-### Ibmcloud sl dns record-list
+## Ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
 Listar todos os registros de recurso em uma zona.
@@ -129,7 +129,7 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
 Esse comando lista todos os registros A na zona: ibm.com, filtrados pelo host é elasticsearch e ttl é 900 segundos.
 
-### Ibmcloud sl dns record-remove
+## Ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
 Remover registro de recurso de uma zona.
@@ -144,7 +144,7 @@ Ibmcloud sl dns record-remove 12345678
 ```
 Esse comando remove o registro de recurso com ID 12345678.
 
-### Ibmcloud sl dns zone-create
+## Ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
 
 Criar uma zona.
@@ -159,7 +159,7 @@ ibmcloud sl dns zone-create ibm.com
 ```
 Esse comando cria uma zona chamada ibm.com.
 
-### Ibmcloud sl dns zone-delete
+## Ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
 
 Excluir uma zona.
@@ -174,7 +174,7 @@ ibmcloud sl dns zone-delete ibm.com
 ```
 Esse comando exclui uma zona chamada ibm.com.
 
-### ibmcloud sl dns zone-list
+## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
 
 Listar todas as zonas em sua conta.
@@ -189,7 +189,7 @@ ibmcloud sl dns zone-list
 ```
 Esse comando lista todas as zonas na conta atual.
 
-### Ibmcloud sl dns zone-print
+## Ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
 
 Imprimir registros de zona e recurso no formato BIND.

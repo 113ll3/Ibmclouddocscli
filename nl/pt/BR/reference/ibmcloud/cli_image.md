@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandos para gerenciar a imagem de infraestrutura do  {{site.data.keyword.Bluemix_notm}}
+# Gerenciando o  {{site.data.keyword.Bluemix_notm}}  Image Image
 
 <table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
 <caption>Tabela 1. Comandos de imagem de infraestrutura do {{site.data.keyword.Bluemix_notm}}</caption>
@@ -29,7 +29,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### Sl image delete ibmcloud
+ ## Sl image delete ibmcloud
 {: #sl_image_delete}
 
 Excluir uma imagem.
@@ -42,7 +42,7 @@ Sl image delete IDENTIFIER ibmcloud
 ```
 Esse comando exclui a imagem com ID `12345678`.
 
-### Sl image detail ibmcloud
+## Sl image detail ibmcloud
 {: #sl_image_detail}
 
 Obter detalhes para uma imagem.
@@ -55,7 +55,7 @@ Sl image detail IDENTIFIER ibmcloud
 ```
 Esse comando obtém detalhes para a imagem com ID 12345678.
 
-### Sl image edit ibmcloud
+## Sl image edit ibmcloud
 {: #sl_image_edit}
 
 Editar detalhes de uma imagem.
@@ -79,7 +79,7 @@ ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 Esse comando edita a imagem com o ID `12345678` e configura seu nome para `ubuntu16`, a nota para `testing` e a tag para `staging`.
 
-### Sl image list ibmcloud
+## Sl image list ibmcloud
 {: #sl_image_list}
 
 Listar todas as imagens em sua conta.

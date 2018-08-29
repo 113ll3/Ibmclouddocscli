@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Comandos para gerenciar a sub-rede de infraestrutura do  {{site.data.keyword.Bluemix_notm}}
+# Gerenciando a sub-rede de infraestrutura do {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
-<caption>Tabela 1. {{site.data.keyword.Bluemix_notm}}  comandos de sub-rede de infraestrutura</caption>
+<caption>Tabela 1. {{site.data.keyword.Bluemix_notm}} comandos de sub-rede de infraestrutura</caption>
  <thead>
- <th colspan="5">{{site.data.keyword.Bluemix_notm}}  comandos de sub-rede de infraestrutura</th>
+ <th colspan="5">{{site.data.keyword.Bluemix_notm}} comandos de sub-rede de infraestrutura</th>
  </thead>
  <tbody>
  <tr>
@@ -30,7 +30,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl subnet cancel
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 Cancelar uma sub-rede.
@@ -50,7 +50,7 @@ ibmcloud sl subnet cancel 12345678 -f
 ```
 Esse comando cancela a sub-rede com ID 12345678 sem solicitar confirmação.
 
-### Ibmcloud sl subnet create
+## Ibmcloud sl subnet create
 {: #sl_subnet_create}
 
 Inclua uma nova sub-rede em sua conta.
@@ -74,7 +74,7 @@ ibmcloud sl subnet create public 16 567
 ```
 Esse comando cria uma sub-rede pública com 16 endereços IP v4 e a coloca na vlan com ID 567.
 
-### Sl subnet detail ibmcloud
+## Sl subnet detail ibmcloud
 {: #sl_subnet_detail}
 
 Obter detalhes de uma sub-rede.
@@ -96,7 +96,7 @@ Ibmcloud sl subnet detail 12345678
 ```
 Esse comando mostra informações detalhadas sobre a sub-rede com ID 12345678, incluindo informações de servidores virtuais e de hardware.
 
-### Sl subnet list ibmcloud
+## Sl subnet list ibmcloud
 {: #sl_subnet_list}
 
 Listar todas as sub-redes em sua conta.
@@ -130,7 +130,7 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 Esse comando lista sub-redes IP V4 na conta atual filtrando pelo data center dal09, tipo de sub-rede PRIMARY e espaço de rede PUBLIC.
 
-### Sl subnet lookup ibmcloud
+## Sl subnet lookup ibmcloud
 {: #sl_subnet_lookup}
 
 Localizar um endereço IP e exibir suas informações de sub-rede e dispositivo.

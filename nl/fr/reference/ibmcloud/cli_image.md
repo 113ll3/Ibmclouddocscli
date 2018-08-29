@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commandes pour la gestion de l'image de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Gestion de l'image de l'infrastructure {{site.data.keyword.Bluemix_notm}}
 
 <table summary="Commandes générales de l'infrastructure {{site.data.keyword.Bluemix_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
 <caption>Tableau 1. Commandes d'image de l'infrastructure {{site.data.keyword.Bluemix_notm}}</caption>
@@ -29,7 +29,7 @@ lastupdated: "2018-07-31"
    </tbody>
  </table>
 
- ### ibmcloud sl image delete
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 Permet de supprimer une image.
@@ -42,7 +42,7 @@ ibmcloud sl image delete IDENTIFIER
 ```
 Cette commande supprime l'image portant l'ID `12345678`.
 
-### ibmcloud sl image detail
+## ibmcloud sl image detail
 {: #sl_image_detail}
 
 Permet d'obtenir les détails relatifs à une image.
@@ -55,7 +55,7 @@ ibmcloud sl image detail IDENTIFIER
 ```
 Cette commande permet d'obtenir les détails relatifs à l'image portant l'ID 12345678.
 
-### ibmcloud sl image edit
+## ibmcloud sl image edit
 {: #sl_image_edit}
 
 Permet d'éditer les détails relatifs à une image.
@@ -79,7 +79,7 @@ ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
 Cette commande édite l'image portant l'ID `12345678` en la nommant `ubuntu16` et en lui affectant la note `testing` ainsi que l'étiquette `staging`.
 
-### ibmcloud sl image list
+## ibmcloud sl image list
 {: #sl_image_list}
 
 Permet de répertorier toutes les images de votre compte.

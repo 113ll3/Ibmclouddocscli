@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commandes pour la gestion des services Cloud Foundry Enterprise Environment (expérimental)
+# Gestion des services Cloud Foundry Enterprise Environment (expérimental)
 {: #ibmcloud_commands_cfee}
 
 <table summary="Gestion des services Cloud Foundry Enterprise Environment (expérimental)">
@@ -28,7 +28,7 @@ lastupdated: "2018-07-27"
  </tbody>
  </table>
 
- ### ibmcloud cfee environments
+ ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
 Répertorier les environnements CFEE.
@@ -41,7 +41,7 @@ ibmcloud cfee environments
 
 <strong>Options de commande</strong> :
 
-### ibmcloud cfee environment
+## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
 Afficher les détails d'un environnement CFEE.

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Commandes pour la gestion des applications cf et les domaines, les routes et les certificats liés aux applications
+# Gestion des applications cf et des domaines, des routes et des certificats liés aux applications
 {: #ibmcloud_commands_apps}
 
 <table summary="Commandes ibmcloud que vous pouvez utiliser pour gérer les applications cf et les domaines, les routes et les certificats liés aux applications.">
@@ -73,104 +73,104 @@ lastupdated: "2018-07-26"
   </tbody>
  </table>
 
- ### ibmcloud app push
+ ## ibmcloud app push
 {: #ibmcloud_app_push}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf push ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window}.
 
-### ibmcloud app list
+## ibmcloud app list
 {: #ibmcloud_app_list}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf apps ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/apps.html){: new_window}.
 
-### ibmcloud app show
+## ibmcloud app show
 {: #ibmcloud_app_show}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf app ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/app.html){: new_window}.
 
-### ibmcloud app delete
+## ibmcloud app delete
 {: #ibmcloud_app_delete}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf delete ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete.html){: new_window}.
 
-### ibmcloud app rename
+## ibmcloud app rename
 {: #ibmcloud_app_rename}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf rename ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename.html){: new_window}.
 
-### ibmcloud app start
+## ibmcloud app start
 {: #ibmcloud_app_start}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf start ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/start.html){: new_window}.
 
-### ibmcloud app stop
+## ibmcloud app stop
 {: #ibmcloud_app_stop}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf stop ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stop.html){: new_window}.
 
-### ibmcloud app restart
+## ibmcloud app restart
 {: #ibmcloud_app_restart}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf restart ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart.html){: new_window}.
 
-### ibmcloud app restage
+## ibmcloud app restage
 {: #ibmcloud_app_restage}
 
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf restage ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window}.
 
-### ibmcloud app instance-restart
+## ibmcloud app instance-restart
 {: #ibmcloud_app_instance_restart}
 
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf restart-app-instance ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window}.
 
-### ibmcloud app events
+## ibmcloud app events
 {: #ibmcloud_app_events}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf events ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/events.html){: new_window}.
 
-### ibmcloud app files
+## ibmcloud app files
 {: #ibmcloud_app_files}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf files ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/files.html){: new_window}.
 
-### ibmcloud app logs
+## ibmcloud app logs
 {: #ibmcloud_app_logs}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf logs ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/logs.html){: new_window}.
 
-### ibmcloud app env
+## ibmcloud app env
 {: #ibmcloud_app_env}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf env ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/env.html){: new_window}.
 
-### ibmcloud app env-set
+## ibmcloud app env-set
 {: #ibmcloud_app_env_set}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf set-env ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/set-env.html){: new_window}.
 
-### ibmcloud app env-unset
+## ibmcloud app env-unset
 {: #ibmcloud_app_env_unset}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf unset-env ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/unset-env.html){: new_window}.
 
-### ibmcloud app stacks
+## ibmcloud app stacks
 {: #ibmcloud_app_stacks}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf stacks ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stacks.html){: new_window}.
 
-### ibmcloud app stack-show
+## ibmcloud app stack-show
 {: #ibmcloud_app_stack_show}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf stack ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/stack.html){: new_window}.
 
-### ibmcloud app manifest-create
+## ibmcloud app manifest-create
 {: #ibmcloud_app_manifest_create}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf create-app-manifest ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window}.
 
-### ibmcloud app domain-cert
+## ibmcloud app domain-cert
 {: #ibmcloud_app_domain_cert}
 
 Afficher les informations de certificat d'un domaine.
@@ -196,7 +196,7 @@ Affichage des informations de certificat du domaine `ibmcxo-eventconnect.com`:
 ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
-### ibmcloud app domain-cert-add
+## ibmcloud app domain-cert-add
 {: #ibmcloud_app_domain_cert_add}
 
 Ajouter un certificat au domaine indiqué dans l'organisation en cours.
@@ -232,7 +232,7 @@ Ajouter un certificat au domaine `ibmcxo-eventconnect.com` :
 ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
 ```
 
-### ibmcloud app domain-cert-remove
+## ibmcloud app domain-cert-remove
 {: #ibmcloud_app_domain_cert_remove}
 
 Supprimer un certificat du domaine spécifié dans l'organisation en cours.
@@ -252,17 +252,17 @@ ibmcloud app domain-cert-remove DOMAIN [-f]
    <dd>Force une suppression sans demander de confirmation.</dd>
    </dl>
 
-### ibmcloud app routes
+## ibmcloud app routes
 {: #ibmcloud_app_routes}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf routes ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/routes.html){: new_window}.
 
-### ibmcloud app route-check
+## ibmcloud app route-check
 {: #ibmcloud_app_route_check}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf check-route ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/check-route.html){: new_window}.
 
-### ibmcloud app route-map
+## ibmcloud app route-map
 {: #ibmcloud_app_route_map}
 
 Mappez une route à une application cf ou un groupe de conteneurs existant associé au domaine et au nom d'hôte spécifiés.
@@ -298,7 +298,7 @@ Mappez une route à 'mon-groupe-conteneurs' avec le domaine et le nom d'hôte sp
 ibmcloud app route-map my-container-group chinabluemix.net -n abc
 ```
 
-### ibmcloud app route-unmap
+## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 Supprimer le mappage de la route spécifiée à une application cf ou un groupe de conteneurs existant.
@@ -334,42 +334,42 @@ Supprimer le mappage de la route `abc.chinabluexmix.net` de `mon-groupe-conteneu
 ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
 ```
 
-### ibmcloud app route-create
+## ibmcloud app route-create
 {: #ibmcloud_app_route_create}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf create-route ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-route.html){: new_window}.
 
-### ibmcloud app route-delete
+## ibmcloud app route-delete
 {: #ibmcloud_app_route_delete}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf delete-route ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-route.html){: new_window}.
 
-### ibmcloud app orphaned-routes-delete
+## ibmcloud app orphaned-routes-delete
 {: #ibmcloud_app_orphaned_routes_delete}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf delete-orphaned-routes ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html){: new_window}.
 
-### ibmcloud app domains
+## ibmcloud app domains
 {: #ibmcloud_app_domains}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf domains ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/domains.html){: new_window}.
 
-### ibmcloud app domain-create
+## ibmcloud app domain-create
 {: #ibmcloud_app_domain_create}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf create-domain ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-domain.html){: new_window}.
 
-### ibmcloud app domain-delete
+## ibmcloud app domain-delete
 {: #ibmcloud_app_domain_delete}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf delete-domain ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-domain.html){: new_window}.
 
-### ibmcloud app shared-domain-create
+## ibmcloud app shared-domain-create
 {: #ibmcloud_app_shared_domain_create}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf create-shared-domain ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-shared-domain.html){: new_window}.
 
-### ibmcloud app shared-domain-delete
+## ibmcloud app shared-domain-delete
 {: #ibmcloud_app_shared_domain_delete}
 
 Cette commande possède la même fonction et les mêmes options que la commande [cf delete-shared-domain ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-shared-domain.html){: new_window}.
