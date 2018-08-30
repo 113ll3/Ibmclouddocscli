@@ -5,60 +5,62 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing Accounts, Users, and Orgs
+# Accounts, Users, and Orgs
  {: #ibmcloud_commands_account}
 
-<table summary="ibmcloud commands that you can use to manage accounts, orgs, spaces and roles.">
- <thead>
- <th colspan="5">Use the following commands to manage accounts, users in an account, and the org, space, roles, domain certificates of Cloud Foundry services</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
- <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
- <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
- <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
- <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
- </tr>
- <tr>
- <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
- <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
- <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
- <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
- <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
- <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
- <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
- <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
- <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
- <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
- <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
- <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
- <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-</tr>
- <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
- <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
- <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
- <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
- <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
- </tr>
- <tr>
-  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
- </tr>
- </tbody>
- </table>
+ Use the following commands to manage accounts, users in an account, and the org, space, roles, and domain certificates of Cloud Foundry services.
+  {: shortdesc}
+
+  <table summary="ibmcloud commands that you can use to manage accounts, orgs, spaces and roles.">
+   <thead>
+   </thead>
+   <tbody>
+   <tr>
+   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+   <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
+   <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
+   <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
+   <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+   <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
+   <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
+   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+   <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
+   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+   <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
+   <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
+  </tr>
+   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+   </tr>
+   <tr>
+    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+   </tr>
+   </tbody>
+   </table>
 
  ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
@@ -631,4 +633,3 @@ ibmcloud account user-reinvite USER_EMAIL
    <dt>USER_EMAIL (required)</dt>
    <dd>The email of the user being re-invited.</dd>
 </dl>
-

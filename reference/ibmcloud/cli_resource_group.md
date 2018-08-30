@@ -5,19 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing Resource Groups and Resources
+# Resource Groups and Resources
 {: #ibmcloud_commands_resource}
+
+Use the following commands to manage {{site.data.keyword.Bluemix_notm}} resource groups and resources.
+{: shortdesc}
 
 <table summary="ibmcloud command that you can use to manage resource groups and resources.">
   <thead>
-    <th colspan="5">Use the following commands to manage {site.data.keyword.Bluemix_notm}} resource groups and resources</th>
   </thead>
   <tbody>
     <tr>

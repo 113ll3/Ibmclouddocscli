@@ -5,19 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing Catalog, Bills and CLI Plug-ins
+# Catalog, Bills and CLI Plug-ins
 {: #ibmcloud_commands_settings}
+
+Use the following commands to manage the {{site.data.keyword.Bluemix_notm}} catalog, usage/billing, and CLI plugins.
+{: shortdesc}
 
 <table summary="ibmcloud commands that you can use to manage the {{site.data.keyword.Bluemix_notm}} catalog, plug-ins, billing, and security settings.">
  <thead>
- <th colspan="5">Use the following commands to manage {{site.data.keyword.Bluemix_notm}} catalog, usage/bills, and CLI plugins</th>
  </thead>
  <tbody>
  <tr>

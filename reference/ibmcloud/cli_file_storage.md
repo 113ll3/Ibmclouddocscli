@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing {{site.data.keyword.Bluemix_notm}} infrastructure File storage
+# {{site.data.keyword.Bluemix_notm}} infrastructure File Storage
 
-<table summary="Alphabetically ordered general {{site.data.keyword.Bluemix_notm}} infrastructure commands that have links that bring you to more info for the command">
-<caption>Table 1. {{site.data.keyword.Bluemix_notm}} infrastructure File storage</caption>
+Use the following commands to manage a given volume in the {{site.data.keyword.Bluemix_notm}} infrastructure File Storage service.
+{: shortdesc}
+
+<table summary="Alphabetically ordered {{site.data.keyword.Bluemix_notm}} infrastructure File Storage commands that have links that bring you to more info for the command">
  <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} infrastructure File storage</th>
  </thead>
  <tbody>
  <tr>

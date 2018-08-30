@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing Services
+# Cloud Foundry Services
 {: #ibmcloud_commands_services}
 
-<table summary="ibmcloud commands that you can use to manage {{site.data.keyword.Bluemix_notm}} services.">
-<caption>Table 1. Commands for managing {{site.data.keyword.Bluemix_notm}} services</caption>
+Use the following commands to manage the service offerings, service instances, service bindings and keys for the {{site.data.keyword.Bluemix_notm}} Foundry service.
+{: shortdesc}
+
+<table summary="ibmcloud commands that you can use to manage {{site.data.keyword.Bluemix_notm}} Cloud Foundry services.">
  <thead>
- <th colspan="5">Commands for managing {{site.data.keyword.Bluemix_notm}} services</th>
  </thead>
  <tbody>
  <tr>

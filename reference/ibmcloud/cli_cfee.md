@@ -5,19 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-23"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing Cloud Foundry Enterprise Environments (experimental)
+# Cloud Foundry Enterprise Environments (CFEE) (beta)
 {: #ibmcloud_commands_cfee}
+
+Use the following commands to manage CFEE orgs, spaces, users and roles.
+{: shortdesc}
 
 <table summary="Manage Cloud Foundry Enterprise Environments (experimental)">
  <thead>
- <th colspan="5">Use the following commands to manage Cloud Foundry Enterprise Environment(CFEE) orgs, spaces, users and roles </th>
  </thead>
  <tbody>
  <tr>

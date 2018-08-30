@@ -5,19 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing API Keys, Identity and Access
+# API Keys, Identity and Access
 {: #ibmcloud_commands_iam}
+
+Use the following commands to manage API keys, service IDs, access groups, and access/authorization policies for IAM.
+{: shortdesc}
 
 <table summary="ibmcloud commands that you can use to manage API keys and policies.">
   <thead>
-  <th colspan="5">Use the following commands to manage API keys, service IDs,  access groups, and access/authorization policies</th>
   </thead>
   <tbody>
   <tr>
