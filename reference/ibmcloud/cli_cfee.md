@@ -23,31 +23,31 @@ Use the following commands to manage CFEE orgs, spaces, users and roles.
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud cfee environments](cli_cfee_cli.html#ibmcloud_cfee_environments)</td>
- <td>[ibmcloud cfee environment](cli_cfee_cli.html#ibmcloud_cfee_environment)</td>
- <td>[ibmcloud cfee orgs](cli_cfee_cli.html#ibmcloud_cfee_orgs)</td>
- <td>[ibmcloud cfee org](cli_cfee_cli.html#ibmcloud_cfee_org)</td>
- <td>[ibmcloud cfee org-create](cli_cfee_cli.html#ibmcloud_cfee_org_create)</td>
+ <td>[ibmcloud cfee environments](cli_cfee.html#ibmcloud_cfee_environments)</td>
+ <td>[ibmcloud cfee environment](cli_cfee.html#ibmcloud_cfee_environment)</td>
+ <td>[ibmcloud cfee orgs](cli_cfee.html#ibmcloud_cfee_orgs)</td>
+ <td>[ibmcloud cfee org](cli_cfee.html#ibmcloud_cfee_org)</td>
+ <td>[ibmcloud cfee org-create](cli_cfee.html#ibmcloud_cfee_org_create)</td>
  </tr>
  <tr>
- <td>[ibmcloud cfee org-delete](cli_cfee_cli.html#ibmcloud_cfee_org_delete)</td>
- <td>[ibmcloud cfee org-users](cli_cfee_cli.html#ibmcloud_cfee_org_users)</td>
- <td>[ibmcloud cfee org-role-set](cli_cfee_cli.html#ibmcloud_cfee_org_role_set)</td>
- <td>[ibmcloud cfee org-role-unset](cli_cfee_cli.html#ibmcloud_cfee_org_role_unset)</td>
- <td>[ibmcloud cfee spaces](cli_cfee_cli.html#ibmcloud_cfee_spaces)</td>
+ <td>[ibmcloud cfee org-delete](cli_cfee.html#ibmcloud_cfee_org_delete)</td>
+ <td>[ibmcloud cfee org-users](cli_cfee.html#ibmcloud_cfee_org_users)</td>
+ <td>[ibmcloud cfee org-role-set](cli_cfee.html#ibmcloud_cfee_org_role_set)</td>
+ <td>[ibmcloud cfee org-role-unset](cli_cfee.html#ibmcloud_cfee_org_role_unset)</td>
+ <td>[ibmcloud cfee spaces](cli_cfee.html#ibmcloud_cfee_spaces)</td>
  </tr>
 <tr>
- <td>[ibmcloud cfee space](cli_cfee_cli.html#ibmcloud_cfee_space)</td>
- <td>[ibmcloud cfee space-create](cli_cfee_cli.html#ibmcloud_cfee_space_create)</td>
- <td>[ibmcloud cfee space-rename](cli_cfee_cli.html#ibmcloud_cfee_space_rename)</td>
- <td>[ibmcloud cfee space-delete](cli_cfee_cli.html#ibmcloud_cfee_space_delete)</td>
- <td>[ibmcloud cfee space-role-set](cli_cfee_cli.html#ibmcloud_cfee_space_role_set)</td>
+ <td>[ibmcloud cfee space](cli_cfee.html#ibmcloud_cfee_space)</td>
+ <td>[ibmcloud cfee space-create](cli_cfee.html#ibmcloud_cfee_space_create)</td>
+ <td>[ibmcloud cfee space-rename](cli_cfee.html#ibmcloud_cfee_space_rename)</td>
+ <td>[ibmcloud cfee space-delete](cli_cfee.html#ibmcloud_cfee_space_delete)</td>
+ <td>[ibmcloud cfee space-role-set](cli_cfee.html#ibmcloud_cfee_space_role_set)</td>
  </tr>
  <tr>
 
- <td>[ibmcloud cfee space-role-unset](cli_cfee_cli.html#ibmcloud_cfee_space_role_unset)</td>
- <td>[ibmcloud cfee space-roles](cli_cfee_cli.html#ibmcloud_cfee_space_roles)</td>
- <td>[ibmcloud cfee space-users](cli_cfee_cli.html#ibmcloud_cfee_space_users)</td>
+ <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
+ <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
+ <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
  </tr>
  </tbody>
  </table>
