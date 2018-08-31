@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-08-31"
 
 ---
 
@@ -116,4 +116,4 @@ The output lists the usage instructions, the current version, and the supported 
 ## Next steps
 {: #next-steps}
 
-You're now ready to develop and deploy your first application! See [Creating and deploying apps by using the CLI](/docs/apps/create-deploy-cli.html) for more information.
+You're now ready to develop and deploy your first application!
