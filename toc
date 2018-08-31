@@ -81,6 +81,6 @@ IBM Cloud Developer Tools (CLI and Dev Tools)
 		sdk/sdk_network_request.md
 	{: .navgroup-end}
 
-        {: .navgroup id="help"}
+    {: .navgroup id="help"}
 	ts_createapps.md
-        {: .navgroup-end}
+    {: .navgroup-end}
