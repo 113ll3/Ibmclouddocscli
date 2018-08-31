@@ -18,7 +18,6 @@ Use the following commands to manage {{site.data.keyword.Bluemix_notm}} infrastr
 {: shortdesc}
 
 <table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Bare-metal server commands that have links that bring you to more info for the command">
- <thead>
  <tbody>
  <tr>
  <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>

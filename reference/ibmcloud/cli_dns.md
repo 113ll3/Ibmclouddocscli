@@ -18,7 +18,6 @@ Use the following commands to manage zones in the {{site.data.keyword.Bluemix_no
 {: shortdesc}
 
 <table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure DNS commands that have links that bring you to more info for the command">
- <thead>
  <tbody>
  <tr>
  <td>[ibmcloud sl dns import](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_import)</td>

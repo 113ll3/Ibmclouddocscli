@@ -18,7 +18,6 @@ Use the following commands to manage {{site.data.keyword.Bluemix_notm}} infrastr
 {: shortdesc}
 
 <table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Image commands that have links that bring you to more info for the command">
- <thead>
  <tbody>
  <tr>
  <td>[ibmcloud sl image delete](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_delete)</td>

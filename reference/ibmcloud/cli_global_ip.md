@@ -18,7 +18,6 @@ Use the following commands to manage a global IP in the {{site.data.keyword.Blue
 {: shortdesc}
 
 <table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Global IP commands that have links that bring you to more info for the command">
- <thead>
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>
