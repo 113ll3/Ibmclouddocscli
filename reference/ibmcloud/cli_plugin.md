@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CLI Plug-ins
+# Plugin
 {: #ibmcloud_commands_settings}
 
 Use the following commands to manage the {{site.data.keyword.Bluemix_notm}} CLI plug-ins.
@@ -38,8 +38,8 @@ Use the following commands to manage the {{site.data.keyword.Bluemix_notm}} CLI 
 </tr>
  </tbody>
  </table>
- 
- 
+
+
  ## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 

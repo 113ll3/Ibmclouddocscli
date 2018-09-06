@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} infrastructure SSH Keys and Certificates
+# Security
 
 Use the following commands to manage {{site.data.keyword.Bluemix_notm}} infrastructure SSH Keys and Certificates.
 {: shortdesc}

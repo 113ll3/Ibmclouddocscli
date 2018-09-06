@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} infrastructure Block storage
+# Block Storage
 
 Use the following commands to manage a given volume for the {{site.data.keyword.Bluemix_notm}} infrastructure Block storage service.
 {: shortdesc}

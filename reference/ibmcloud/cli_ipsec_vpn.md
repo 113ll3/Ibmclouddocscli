@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} infrastructure IPSec VPN
+# IPSec VPN
 
 Use the following commands to manage an IPSec VPN tunnel in the {{site.data.keyword.Bluemix_notm}} infrastructure IPSec VPN service.
 {: shortdesc}
