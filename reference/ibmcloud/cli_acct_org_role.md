@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-08-30"
 # Accounts, Users, and Orgs
  {: #ibmcloud_commands_account}
 
- Use the following commands to manage accounts, users in an account, and the org, space, roles, and domain certificates of Cloud Foundry services.
+ Use the following commands to manage accounts, users in an account, and the org, space, and roles.
   {: shortdesc}
 
   <table summary="ibmcloud commands that you can use to manage accounts, orgs, spaces and roles.">
