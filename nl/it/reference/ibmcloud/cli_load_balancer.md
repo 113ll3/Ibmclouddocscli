@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione del Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
+# Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
 
-<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Comandi Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
+Utilizza i seguenti comandi per gestire un programma di bilanciamento del carico che utilizza il servizio Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandi Load Balancer {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
  <thead>
- <th colspan="6">Comandi Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

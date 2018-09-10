@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione dell'IP globale dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
+# IP globale dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
 
-<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Comandi IP globali dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
- <thead>
- <th colspan="6">Comandi IP globali dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</th>
- </thead>
+Utilizza i seguenti comandi per gestire un IP globale nel servizio IP globale dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandi IP globale dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>

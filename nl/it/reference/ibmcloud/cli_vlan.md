@@ -5,21 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione della VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
+# VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
 
-<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+Utilizza i seguenti comandi per gestire le VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
 
-<caption>Tabella 1. Comandi VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
-
+<table summary="Comandi della VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
  <thead>
- <th colspan="6">Comandi VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

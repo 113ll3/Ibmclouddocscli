@@ -5,20 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione della sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
+# Certificati e chiavi SSH dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
 
-<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Comandi di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
+Utilizza i seguenti comandi per gestire i certificati e le chiavi SSH dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
 
+<table summary="Comandi di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
  <thead>
- <th colspan="5">Comandi di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

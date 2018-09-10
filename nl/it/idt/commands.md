@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -33,6 +33,7 @@ Utilizza i seguenti comandi della CLI {{site.data.keyword.dev_cli_notm}} (ibmclo
 - [debug](#debug): esegue il debug della tua applicazione in un contenitore locale
 - [delete](#delete): elimina un'applicazione dal tuo spazio
 - [deploy](#deploy): distribuisce un'applicazione a IBM Cloud
+- [diag](#diag): visualizza le informazioni sulle dipendenze installate
 - [edit](#edit): aggiunge o rimuove servizi da un'applicazione esistente
 - [enable](#enable): aggiorna un'applicazione esistente per l'utilizzo con IBM Cloud Developer Tools
 - [get-credentials](#get-credentials): ottiene le credenziali richieste dall'applicazione per abilitare l'uso di servizi IBM Cloud collegati.
@@ -50,6 +51,8 @@ Utilizza i seguenti comandi della CLI {{site.data.keyword.dev_cli_notm}} (ibmclo
 
 ## build
 {: #build}
+
+Se stai utilizzando Windows &trade;, devi utilizzare Windows 10 Pro o versioni successive.
 
 Puoi creare la tua applicazione utilizzando il comando `build`. I comandi `test`, `debug` e `run` si aspettano di trovare un'applicazione compilata, per cui devi prima eseguire un'operazione `build`.  
 
@@ -86,7 +89,7 @@ Utilizza il comando `console` per aprire un browser web per la console web della
 
 Puoi fornire un nome applicazione e la CLI ignora le corrispondenze basate sul nome cartella/applicazione. In questo caso, la CLI apre la console dell'applicazione denominata in un browser web.  
 
-Esegui il seguente comando per aprire un browser web per la console web della tua applicazione.
+Immetti il seguente comando per aprire un browser web per la console web della tua applicazione.
 
 ```
 ibmcloud dev console [applicationName]
@@ -109,6 +112,8 @@ ibmcloud dev create
 
 ## debug
 {: #debug}
+
+Se stai utilizzando Windows &trade;, devi utilizzare Windows 10 Pro o versioni successive.
 
 Puoi eseguire il debug della tua applicazione tramite il comando `debug`. Deve prima essere completata una build nell'applicazione utilizzando il comando di build con l'argomento `--debug`. Quando avvii il comando `debug` viene avviato un contenitore che fornisce una o più porte di debug come definito dal valore `container-port-map-debug` in cli-config.yml o specificato nella riga di comando. Collega il tuo strumento di debug preferito alla porta o alle porte e puoi eseguire il debug della tua applicazione normalmente.
 
@@ -182,7 +187,7 @@ Prima di eseguire la distribuzione come un'applicazione Cloud Foundry a {{site.d
 
 Prima di distribuire un'applicazione come un contenitore, devi installare localmente [Kubernetes](https://kubernetes.io/) e [Helm](https://github.com/kubernetes/helm). Assicurati che la versione del client Helm non è più recente della versione del server Helm. Puoi trovare entrambe eseguendo `helm version`. Consigliamo di utilizzare la versione v2.4.2 per il client.
 
-Per distribuire la tua applicazione su Kubernetes, devi specificare `deploy-target` come `container` in `cli-config.yml` oppure utilizzare il parametro `-t container`. 
+Per distribuire la tua applicazione su Kubernetes, devi specificare `deploy-target` come `container` in `cli-config.yml` oppure utilizzare il parametro `-t container`.
 
 In `cli-config.yml` è anche possibile specificare altri parametri necessari per configurare la distribuzione Kubernetes, come di seguito indicato oppure utilizzando gli argomenti della riga di comando. Se non ne esegui la definizione in `cli-config.yml`, devi eseguire la distribuzione con il parametro `-t container` e ti verranno richiesti tutti gli altri valori.
 
@@ -257,6 +262,19 @@ I seguenti parametri possono essere utilizzati con il comando `deploy` o aggiorn
 * Utilizzo `ibmcloud dev deploy --domain [domain]`
 
 
+## diag
+{: #diag}
+
+Questo comando viene utilizzato come diagnostica per visualizzare le informazioni sulle dipendenze installate della CLI {{site.data.keyword.dev_cli_notm}}. Questa operazione è particolarmente utile per determinare se ti manca una dipendenza o se vuoi risolvere i problemi di debug.
+
+Immetti il seguente comando per visualizzare le versioni delle tue dipendenze installate:
+
+```
+ibmcloud dev diag
+```
+{: codeblock}
+
+
 ## edit
 {: #edit}
 
@@ -269,7 +287,7 @@ ibmcloud dev edit
 
 Se non disponi di servizi esistenti sul tuo account, questo comando ti mostrerà un elenco dei gruppi di servizi da cui puoi selezionare un servizio da collegare alla tua applicazione.
 
-Tuttavia, se hai dei servizi esistenti sul tuo account, questo comando ti mostrerà un elenco di questi servizi e se ciascun servizio è collegato all'applicazione o meno. 
+Tuttavia, se hai dei servizi esistenti sul tuo account, questo comando ti mostrerà un elenco di questi servizi e se ciascun servizio è collegato all'applicazione o meno.
 
 La selezione di un servizio collegato ti offre le opzioni per scollegare il servizio dalla tua applicazione o eliminare il servizio dal tuo account, scollegandolo così da tutte le applicazioni a cui è collegato.
 
@@ -341,7 +359,7 @@ Ottiene le credenziali richieste dall'applicazione per abilitare l'utilizzo di s
 
 Per impostazione predefinita, se non viene trasmesso alcun argomento o azione o se viene fornita l'azione 'help', questo comando mostra un testo di "Aiuto" generale. La guida generale visualizzata include una descrizione degli argomenti di base così come un elenco di azioni disponibili.  
 
-Esegui il seguente comando per visualizzare le informazioni della guida generale:
+Immetti il seguente comando per visualizzare le informazioni della guida generale:
 
 ```
 ibmcloud dev help
@@ -364,6 +382,8 @@ ibmcloud dev list
 
 ## run
 {: #run}
+
+Se stai utilizzando Windows &trade;, devi utilizzare Windows 10 Pro o versioni successive.
 
 Puoi eseguire la tua applicazione tramite il comando `run`. Deve prima essere completata una build sull'applicazione utilizzando il comando `build`. Quando richiami il comando `run`, viene avviato il contenitore di esecuzione che espone le porte come definito dal parametro `container-port-map`. Il parametro `run-cmd` può essere utilizzato per richiamare l'applicazione se il Dockerfile del contenitore di esecuzione non contiene un punto di ingresso per completare questa fase.
 
@@ -436,6 +456,8 @@ Esistono [ulteriori parametri](#command-parameters) condivisi con altri comandi.
 ## shell
 {: #shell}
 
+Se stai utilizzando Windows &trade;, devi utilizzare Windows 10 Pro o versioni successive.
+
 Puoi aprire la shell all'interno del contenitore di esecuzione o degli strumenti con il comando `shell`.
 
 Semplicemente eseguendo questo comando
@@ -476,6 +498,8 @@ Ad esempio, puoi eseguire il comando Linux `ls` nella shell del contenitore degl
 ## status
 {: #status}
 
+Se stai utilizzando Windows &trade;, devi utilizzare Windows 10 Pro o versioni successive.
+
 Puoi eseguire la query dello stato dei contenitori che sono utilizzati dalla CLI {{site.data.keyword.dev_cli_short}} come definito da `container-name-run` e `container-name-tools`.
 
 Esegui il seguente comando nella tua directory dell'applicazione corrente per controllare lo stato del contenitore:
@@ -491,6 +515,8 @@ ibmcloud dev status
 
 ## stop
 {: #stop}
+
+Se stai utilizzando Windows &trade;, devi utilizzare Windows 10 Pro o versioni successive.
 
 Puoi arrestare i tuoi contenitori tramite il comando `stop`.
 
@@ -525,6 +551,8 @@ I seguenti parametri vengono utilizzati per il comando `stop`. Esistono [ulterio
 ## test
 {: #test}
 
+Se stai utilizzando Windows &trade;, devi utilizzare Windows 10 Pro o versioni successive.
+
 Puoi eseguire la tua applicazione tramite il comando `test`. Deve prima essere completata una build sull'applicazione utilizzando il comando `build --debug`. Il contenitore degli strumenti viene quindi utilizzato per richiamare `test-cmd` per l'applicazione.
 
 Per prima cosa, compila la tua applicazione:
@@ -534,7 +562,7 @@ ibmcloud dev build --debug
 ```
 {: codeblock}
 
-Esegui il seguente comando per verificare la tua applicazione:
+Immetti il seguente comando per verificare la tua applicazione:
 
 ```
 ibmcloud dev test
@@ -563,7 +591,7 @@ Per le applicazioni distribuite a Cloud Foundry, l'URL è composto dal nome host
 
 Per le applicazioni distribuite a Kubernetes, l'URL è composto dall'indirizzo IP del nodo a cui viene eseguita la distribuzione e la porta pubblica. Se il comando determina che l'applicazione è stata distribuita a Kubernetes, lo strumento CLI richiederà conferma. Se specifichi che l'applicazione non è stata effettivamente distribuita a Kubernetes, viene visualizzato l'URL Cloud Foundry. Se presupponi che il comando mostri l'URL di un'applicazione distribuita a Kubernetes ma non è così, assicurati che `cli-config.yml` contenga una voce per `chart-path` o forniscila tramite la riga di comando come mostrato [qui](#chart-path).
 
-Esegui il seguente comando per visualizzare la tua applicazione:
+Immetti il seguente comando per visualizzare la tua applicazione:
 
 ```
 ibmcloud dev view
@@ -620,7 +648,7 @@ Tutti gli indicatori devono seguire il comando finale e saranno applicati a tutt
 Questi sono i comandi che possono essere utilizzati con questa funzione:
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Se un comando ha esito negativo per un qualsiasi motivo, i comandi successivi non verranno eseguiti. 
+Se un comando ha esito negativo per un qualsiasi motivo, i comandi successivi non verranno eseguiti.
 
 Se tutti i comandi che seguono `debug` o `run`, l'esecuzione continuerà solo se `debug` o `run` vengono terminati, il che significa di terminare il processo dalla finestra di terminale corrente. `CTRL+C` terminerà il processo e non eseguirà i comandi successivi. Ad esempio, puoi eseguire `ibmcloud dev stop` da un'altra finestra di terminale per arrestare il contenitore in esecuzione e continuare l'esecuzione al comando successivo.
 

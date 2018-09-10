@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 ---
 
 {:new_window: target="_blank"}
@@ -445,19 +445,20 @@ ibmcloud update [-f]
 {: #softlayer_cli}
 
 
-Utilizza i comandi dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} nella CLI (command line interface) {{site.data.keyword.Bluemix_notm}} per configurare e gestire i servizi SoftLayer.
+Utilizza i comandi del servizio dell'infrastruttura nella CLI (command line interface) {{site.data.keyword.Bluemix_notm}} per configurare e gestire i servizi dell'infrastruttura.
 
 Sono supportati i seguenti comandi. Utilizza il comando `ibmcloud sl` per visualizzare l'elenco di comandi disponibili:
 
 <table summary="Comandi generali riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<caption>Tabella 1. Comandi del servizio dell'infrastruttura generali</caption>
  <thead>
- <th colspan="6">Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Comandi del servizio dell'infrastruttura generali </th>
  </thead>
  <tbody>
  <tr>
  <td>[ibmcloud sl init](/docs/cli/reference/ibmcloud/bx_cli.html#sl_init)</td>
- <td>[ibmcloud sl help](/docs/cli/reference/ibmcloud/bx_cli.html#sl_help)</td>
+ <td>[ibmcloud sl help
+](/docs/cli/reference/ibmcloud/bx_cli.html#sl_help)</td>
    </tbody>
  </table>
 

@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione dell'immagine dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
+# Immagine dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
 
-<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Comandi di immagine dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
- <thead>
- <th colspan="6">Comandi di immagine dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</th>
- </thead>
+Utilizza i seguenti comandi per gestire le immagini dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandi dell'immagine dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
  <tbody>
  <tr>
  <td>[ibmcloud sl image delete](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_delete)</td>

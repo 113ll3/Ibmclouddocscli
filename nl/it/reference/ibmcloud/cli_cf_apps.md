@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione di applicazioni cf e di domini, rotte e certificati relativi all'applicazione
+# Applicazioni Cloud Foundry
 {: #ibmcloud_commands_apps}
 
+Utilizza i seguenti comandi per gestire le rotte, i domini e le applicazioni Cloud Foundry.
+{: shortdesc}
+
 <table summary="Comandi ibmcloud che puoi utilizzare per gestire le applicazioni cf e i domini, le rotte e i certificati relativi all'applicazione.">
-<caption>Tabella 1. Comandi per gestire le applicazioni cf e i domini, le rotte e i certificati correlati alle applicazioni</caption>
  <thead>
- <th colspan="5">Comandi per gestire le applicazioni cf e i domini, le rotte e i certificati correlati alle applicazioni</th>
  </thead>
  <tbody>
  <tr>

@@ -5,20 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione del Virtual Server dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
+# Virtual Server dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
 
-<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
+Utilizza i seguenti comandi per gestire i server virtuali dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
 
-<caption>Tabella 1. Comandi di server virtuale dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
+<table summary="Comandi Virtual Server dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
  <thead>
- <th colspan="6">Comandi di server virtuale dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

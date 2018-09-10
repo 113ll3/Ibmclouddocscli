@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione di chiavi API, identità e accesso
+# Chiavi API, identità e accesso
 {: #ibmcloud_commands_iam}
 
+Utilizza i seguenti comandi per gestire le chiavi API, gli ID servizio, i gruppi di accesso e le politiche di accesso/autorizzazione per IAM.
+{: shortdesc}
+
 <table summary="Comandi ibmcloud che puoi utilizzare per gestire le politiche e le chiavi API.">
- <caption>Tabella 1. Comandi per gestire le politiche e le chiavi API</caption>
   <thead>
-  <th colspan="5">Comandi per gestire le politiche e le chiavi API</th>
   </thead>
   <tbody>
   <tr>
@@ -75,27 +76,27 @@ lastupdated: "2018-08-21"
   <tr>
    <td>[ibmcloud iam authorization-policies
 ](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
-   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access-groups)</td>
-   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access-group)</td>
-   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access-group-create)</td>
-   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access-group-update)</td>
+   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access_groups)</td>
+   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access_group)</td>
+   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access_group_create)</td>
+   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access_group_update)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access-group-delete)</td>
-   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access-group-users)</td>
-   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access-group-user-add)</td>
-   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access-group-user-remove)</td>
-   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access-group-user-purge)</td>
+   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access_group_delete)</td>
+   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access_group_users)</td>
+   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access_group_user_add)</td>
+   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access_group_user_remove)</td>
+   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access_group_user_purge)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access-group-service-ids)</td>
-   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access-group-service-id-add)</td>
-   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access-group-service-id-remove)</td>
-   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access-group-service-id-purge)</td>
-   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access-group-policies)</td>
+   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access_group_service_ids)</td>
+   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access_group_service_id_add)</td>
+   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access_group_service_id_remove)</td>
+   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access_group_service_id_purge)</td>
+   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access_group_policies)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access-group-policy)</td>
+   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access_group_policy)</td>
    <td>[ibmcloud iam access-group-policy-create](cli_api_policy.html#ibmcloud_iam_access_group_policy_create)</td>
    <td>[ibmcloud iam access-group-policy-update](cli_api_policy.html#ibmcloud_iam_access_group_policy_update)</td>
    <td>[ibmcloud iam access-group-policy-delete](cli_api_policy.html#ibmcloud_iam_access_group_policy_delete)</td>
@@ -986,7 +987,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 Elenca tutte le politiche di servizio del servizio specificato
 
 ```
-ibmcloud iam service-policies ID_SERVIZIO [--json] [-f, --force]
+ibmcloud iam service-policies ID_SERVIZIO [--output FORMATO] [-f, --force]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
@@ -995,9 +996,9 @@ ibmcloud iam service-policies ID_SERVIZIO [--json] [-f, --force]
 <dl>
   <dt>ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o UUID dell'ID del servizio</dd>
-  <dt>-json</dt>
-  <dd>Visualizza la politica in formato JSON</dd>
-  <dt>-f, --force</dt>
+  <dt>--output FORMATO (facoltativo)</dt>
+  <dd>Specifica il formato di output delle politiche del servizio, al momento è supportato solo JSON. </dd>
+  <dt>-f, --force (facoltativo)</dt>
   <dd>Visualizza le politiche di servizio senza conferma</dd>
 </dl>
 
@@ -1020,7 +1021,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 Visualizza i dettagli di una politica di servizio
 
 ```
-ibmcloud iam service-policy ID_SERVIZIO ID_POLITICA [--json] [-f, --force]
+ibmcloud iam service-policy ID_SERVIZIO ID_POLITICA [--output FORMATO] [-f, --force]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
@@ -1031,9 +1032,9 @@ ibmcloud iam service-policy ID_SERVIZIO ID_POLITICA [--json] [-f, --force]
   <dd>Nome o UUID dell'ID del servizio</dd>
   <dt>ID_POLITICA (obbligatorio)</dt>
   <dd>ID della politica di servizio<dd>
-  <dt>-json</dt>
-  <dd>Visualizza la politica in formato JSON</dd>
-  <dt>-f, --force</dt>
+  <dt>--output FORMATO (facoltativo)</dt>
+  <dd>Specifica il formato di output della politica del servizio, al momento è supportato solo JSON. </dd>
+  <dt>-f, --force (facoltativo)</dt>
   <dd>Visualizza la politica di servizio senza conferma</dd>
 </dl>
 

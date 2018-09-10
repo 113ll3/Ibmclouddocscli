@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestione dell'archiviazione blocchi dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
+# Archiviazione blocchi dell'infrastruttura {{site.data.keyword.Bluemix_notm}}
 
- <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico  con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Archiviazione blocchi dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</caption>
+Utilizza i seguenti comandi per gestire un determinato volume per il servizio di archiviazione blocchi dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandi Block Storage dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
  <thead>
- <th colspan="6">Archiviazione blocchi dell'infrastruttura {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

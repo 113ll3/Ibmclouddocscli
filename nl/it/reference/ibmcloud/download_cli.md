@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-15"
 # Installazione della CLI {{site.data.keyword.Bluemix_notm}} autonoma
 {: #install_use}
 
-La CLI {{site.data.keyword.Bluemix_notm}} fornisce l'interfaccia riga di comando per la gestione delle risorse in {{site.data.keyword.Bluemix_notm}}. Puoi ancora utilizzare la CLI cf per accedere a {{site.data.keyword.Bluemix_notm}} ma funziona solo con un servizio Cloud Foundry in {{site.data.keyword.Bluemix_notm}}.
+La CLI {{site.data.keyword.Bluemix_notm}} fornisce l'interfaccia riga di comando per la gestione delle risorse in {{site.data.keyword.Bluemix_notm}}. Puoi ancora utilizzare la CLI cf per accedere a {{site.data.keyword.Bluemix_notm}} ma funziona solo con un servizio Cloud Foundry in {{site.data.keyword.Bluemix_notm}}. 
 
 Se vuoi installare la CLI {{site.data.keyword.Bluemix}} e altri plug-in e strumenti consigliati per lo sviluppo di applicazioni per {{site.data.keyword.Bluemix_notm}}, segui il metodo descritto [qui](/docs/cli/index.html).
 {: tip}
@@ -32,9 +32,11 @@ Utilizza la seguente procedura per installare la CLI {{site.data.keyword.Bluemix
    Linux X86 a 64 bit: [programma di installazione](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE a 64 bit (ppc64le): [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
+   Per le versioni a 32 bit o precedenti, passa alla pagina [tutte le versioni](/docs/cli/reference/ibmcloud/all_versions.html) per lo scaricamento
+
 1. Esegui il programma di installazione
    * Per macOS e Windows, esegui solo il programma di installazione.
-   * Per Linux, estrai il pacchetto ed esegui lo script `install_bluemix_cli`
+   * Per Linux, estrai il pacchetto ed esegui lo script `install`.
 
 1. Punta a un endpoint API ed esegui l'accesso a {{site.data.keyword.Bluemix_notm}}
 
@@ -168,9 +170,8 @@ Le seguenti sezioni forniscono i dettagli su come disinstallare la CLI {{site.da
 
 ## Altri link per esplorare ulteriormente la CLI {{site.data.keyword.Bluemix_notm}}
 
-* [Amplia le funzionalità della CLI {{site.data.keyword.Bluemix_notm}} con i plugin](/docs/cli/reference/bluemix_cli/extend_cli.html)
-* [Utilizzo dei comandi della CLI {{site.data.keyword.Bluemix_notm}} generali](/docs/cli/reference/bluemix_cli/bx_cli.html)
-* [Utilizzo dei comandi {{site.data.keyword.Bluemix_notm}} (ibmcloud sl) generali](/docs/cli/reference/softlayer/index.html)
+* [Amplia le funzionalità della CLI {{site.data.keyword.Bluemix_notm}} con i plugin](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [Guida di riferimento alla CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## Segnala problemi e inoltra un feedback
 {: #issues}
