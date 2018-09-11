@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -33,6 +33,7 @@ Use os comandos da CLI do {{site.data.keyword.dev_cli_notm}} (ibmcloud dev) a se
 - [debug](#debug): depure seu aplicativo em um contêiner local
 - [delete](#delete): exclui um aplicativo de seu espaço
 - [deploy](#deploy): implemente um aplicativo no IBM Cloud
+- [diag](#diag): exibe as informações da versão sobre as dependências instaladas
 - [edit](#edit): inclua ou remova serviços de um aplicativo existente
 - [enable](#enable): atualize um aplicativo existente para uso com o IBM Cloud Developer Tools
 - [get-credentials](#get-credentials): obtém as credenciais que são requeridas pelo aplicativo para ativar o uso de serviços conectados do IBM Cloud
@@ -50,6 +51,8 @@ Use os comandos da CLI do {{site.data.keyword.dev_cli_notm}} (ibmcloud dev) a se
 
 ## compilação
 {: #build}
+
+Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro ou mais recente.
 
 É possível construir seu aplicativo usando o comando `build`. Os comandos `test`, `debug` e `run` esperam localizar um aplicativo compilado, portanto, deve-se executar uma operação `build` antecipadamente.  
 
@@ -70,7 +73,7 @@ Ibmcloud dev build [ --debug ]
 ## code
 {: #code}
 
-Use o comando `code` para fazer download de um aplicativo criado anteriormente com código de modelo de aplicativo e arquivos de configuração para o {{site.data.keyword.Bluemix_notm}}. Isso é útil quando você precisa extrair uma segunda cópia de um aplicativo criado.
+Use o comando `code` para fazer download de um aplicativo criado anteriormente com código de modelo de aplicativo e arquivos de configuração para o {{site.data.keyword.Bluemix_notm}}.  Isso é útil quando você precisa extrair uma segunda cópia de um aplicativo criado.
 
 Execute o comando a seguir para fazer download do código de um aplicativo especificado.
 
@@ -98,7 +101,8 @@ ibmcloud dev console [ applicationName ]
 ## create
 {: #create}
 
-Crie um aplicativo, solicitando todas as informações, incluindo o tipo de recurso, a linguagem, o kit do iniciador e as opções do DevOps Toolchain. O aplicativo é criado no diretório atual.
+Crie um aplicativo, solicitando todas as informações, incluindo o tipo de recurso, o idioma, o kit do iniciador e as opções
+do DevOps Toolchain. O aplicativo é criado no diretório atual.
 
 Para criar um aplicativo no diretório atual e para associar serviços a ele, execute o comando a seguir:
 
@@ -110,6 +114,8 @@ Ibmcloud dev criar
 
 ## depuração
 {: #debug}
+
+Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro ou mais recente.
 
 É possível depurar o aplicativo por meio do comando `debug`. Uma construção deve primeiro ser concluída com relação ao aplicativo, usando o comando de construção com o argumento `--debug`. Ao iniciar o comando `debug`, um contêiner é iniciado fornecendo uma ou mais
 portas de depuração, conforme definido pelo valor de `container-port-map-debug` no
@@ -185,7 +191,7 @@ Antes de implementar como um aplicativo Cloud Foundry no {{site.data.keyword.Blu
 
 Antes de implementar um aplicativo como um contêiner, deve-se instalar localmente o [Kubernetes](https://kubernetes.io/) e o [Helm](https://github.com/kubernetes/helm). A versão do cliente Helm não deve ser mais recente que a versão do servidor Helm. É possível localizar ambos executando `helm version`. Recomendamos usar v2.4.2 para a versão do cliente.
 
-Para implementar seu aplicativo no Kubernetes, deve-se especificar o `deploy-target` como `container` no `cli-config.yml` ou usar o parâmetro `-t container`. 
+Para implementar seu aplicativo no Kubernetes, deve-se especificar o `deploy-target` como `container` no `cli-config.yml` ou usar o parâmetro `-t container`.
 
 Outros parâmetros necessários para configurar a implementação do Kubernetes também podem ser especificados no `cli-config.yml` conforme visto abaixo ou usando argumentos de linha de comandos. Se você não os define no `cli-config.yml`, deve-se então implementar com o parâmetro `-t container` e todos os outros valores serão solicitados.
 
@@ -262,6 +268,20 @@ Os parâmetros a seguir podem ser usados com o comando `deploy` ou atualizando o
 * Uso  ` ibmcloud dev deploy --domain [ domain ] `
 
 
+## diag
+{: #diag}
+
+Esse comando é usado como um diagnóstico para exibir as informações da versão das dependências instaladas para a CLI do {{site.data.keyword.dev_cli_notm}}. 
+Isso será especialmente útil para determinar se alguma dependência está ausente ou ajudar na depuração de problemas.
+
+Execute o comando a seguir para exibir as versões das dependências instaladas:
+
+```
+ibmcloud dev diag
+```
+{: codeblock}
+
+
 ## editar
 {: #edit}
 
@@ -274,7 +294,7 @@ ibmcloud dev edit
 
 Se você não tiver serviços existentes em sua conta, esse comando mostrará uma lista de grupos de serviços dentre os quais é possível selecionar um serviço para se conectar ao seu aplicativo.
 
-No entanto, se você tiver algum serviço existente em sua conta, esse comando mostrará uma lista desses serviços e se cada serviço está conectado ao aplicativo ou não. 
+No entanto, se você tiver algum serviço existente em sua conta, esse comando mostrará uma lista desses serviços e se cada serviço está conectado ao aplicativo ou não.
 
 Selecionar um serviço conectado fornece opções para desconectar o serviço de seu aplicativo ou excluir o serviço de sua conta, portanto, desconectando-o de todos os aplicativos aos quais ele está conectado.
 
@@ -305,7 +325,7 @@ A presença de arquivos necessários fornece detecção de idioma do aplicativo 
 	* A presença de um `pom.xml` identifica um aplicativo Maven.
 	* A presença de um `build.gradle` identifica um aplicativo Gradle.
 
-Opcionalmente, também é possível substituir a linguagem do aplicativo detectado usando o argumento `--language`. No entanto, somente aplicativos válidos e completos são suportados. O comando de ativação não modifica o seu código-fonte.
+Opcionalmente, também é possível substituir a linguagem do aplicativo detectado usando o argumento `--language`.  No entanto, somente aplicativos válidos e completos são suportados. O comando de ativação não modifica o seu código-fonte.
 
 As opções de linguagem incluem:
 * node
@@ -369,6 +389,8 @@ ibmcloud dev list
 
 ## execução
 {: #run}
+
+Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro ou mais recente.
 
 É possível executar seu aplicativo por meio do comando `run`. Uma construção deve primeiro ser concluída com relação ao aplicativo, usando o comando `build`. Quando você chama o comando `run`, o contêiner de execução é iniciado e expõe as portas, como definido pelo parâmetro `container-port-map`. O parâmetro `run-cmd` poderá ser usado para chamar o aplicativo se o Dockerfile do contêiner de execução não contiver um ponto de entrada para concluir essa etapa.
 
@@ -441,6 +463,8 @@ Há [parâmetros adicionais](#command-parameters) compartilhados com outros coma
 ## shell
 {: #shell}
 
+Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro ou mais recente.
+
 É possível abrir o shell dentro do contêiner de execução ou de ferramentas com o comando `shell`.
 
 Basta executar este comando
@@ -482,6 +506,8 @@ Por exemplo, é possível executar o comando `ls` do Linux dentro do shell do co
 ## status
 {: #status}
 
+Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro ou mais recente.
+
 É possível consultar o status dos contêineres que são usados pela CLI do
 {{site.data.keyword.dev_cli_short}}, conforme definido por `container-name-run` e
 por `container-name-tools`.
@@ -499,6 +525,8 @@ Ibmcloud dev status
 
 ## stop
 {: #stop}
+
+Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro ou mais recente.
 
 É possível parar seus contêineres por meio do comando `stop`.
 
@@ -532,6 +560,8 @@ Os parâmetros a seguir são usados para o comando `stop`. Há [parâmetros adic
 
 ## test
 {: #test}
+
+Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro ou mais recente.
 
 É possível testar o aplicativo por meio do comando `test`. Uma construção deve primeiro ser concluída com relação ao aplicativo, usando o comando `build --debug`. O contêiner de ferramentas é então usado para chamar o `test-cmd` para o aplicativo.
 
@@ -628,7 +658,7 @@ Todas as sinalizações deverão rastrear o comando final e serão aplicadas a t
 Estes são os comandos que podem ser usados com esse recurso:
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Se um comando falhar por qualquer motivo, os comandos subsequentes não serão executados. 
+Se um comando falhar por qualquer motivo, os comandos subsequentes não serão executados.
 
 Se quaisquer comandos seguirem `debug` ou `run`, a execução continuará somente se `debug` ou `run` for finalizado por um meio diferente do encerramento do processo na janela do terminal atual. `CTRL+C` encerrará o processo e não executará os comandos subsequentes. Por exemplo, é possível executar `ibmcloud dev stop` de outra janela do terminal para parar o contêiner em execução e continuar a execução para o próximo comando.
 

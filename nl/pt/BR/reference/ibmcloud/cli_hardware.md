@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando o  {{site.data.keyword.Bluemix_notm}}  Hardware de infraestrutura
+# Servidores bare metal de infraestrutura do {{site.data.keyword.Bluemix_notm}}
 
-<table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
-<caption>Tabela 1. {{site.data.keyword.Bluemix_notm}}  comandos de hardware de infraestrutura</caption>
- <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}}  comandos de hardware de infraestrutura</th>
- </thead>
+Use os comandos a seguir para gerenciar os servidores de hardware bare metal de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandos de servidor bare metal de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
  <tbody>
  <tr>
  <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>

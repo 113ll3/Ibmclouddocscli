@@ -5,20 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando  {{site.data.keyword.Bluemix_notm}}  Infraestrutura IPSec VPN
+# {{site.data.keyword.Bluemix_notm}}  infraestrutura IPSec VPN
 
-<table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
+Use os comandos a seguir para gerenciar um túnel VPN do IPSec no serviço VPN do IPSec de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
 
-<caption>Tabela 1. {{site.data.keyword.Bluemix_notm}}  Comandos de VPN IPSec de Infraestrutura</caption>
+<table summary="Comandos VPN do IPSec do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
  <thead>
- <th colspan="6">Comandos VPN de IPSec de infraestrutura do {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

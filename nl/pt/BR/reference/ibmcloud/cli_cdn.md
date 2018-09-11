@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando o  {{site.data.keyword.Bluemix_notm}}  CDN de infraestrutura
+# CDN de infraestrutura do {{site.data.keyword.Bluemix_notm}}
 
- <table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
-<caption>Tabela 1. {{site.data.keyword.Bluemix_notm}}  CDN de infraestrutura</caption>
+Use os comandos a seguir para gerenciar as contas no serviço CDN de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandos do CDN de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
  <thead>
- <th colspan="6">CDN de infraestrutura do {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

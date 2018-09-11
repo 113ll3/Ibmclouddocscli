@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -14,16 +14,16 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Introdução às ferramentas do desenvolvedor do  {{site.data.keyword.Bluemix_notm}}
+# Introdução à CLI do {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
 Nesse tutorial, você instala um conjunto de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}}, verifica a
 instalação e configura o seu ambiente. As ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}} oferecem uma
 abordagem de linha de comandos para criação, desenvolvimento e implementação de aplicativos da web, de dispositivos móveis e de
-microsserviço de ponta a ponta. 
+microsserviço de ponta a ponta.
 {:shortdesc}
 
-Com essa instalação, você obtém a CLI do {{site.data.keyword.Bluemix_notm}}, além das seguintes ferramentas: 
+Com essa instalação, você obterá a CLI do {{site.data.keyword.Bluemix_notm}} independente, mais as seguintes ferramentas:
 
 * `Homebrew` (somente Mac)
 * `Git`
@@ -45,8 +45,9 @@ Com essa instalação, você obtém a CLI do {{site.data.keyword.Bluemix_notm}},
 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e os seguintes
 requisitos do sistema:
 
-* Se você está usando o Microsoft Windows&trade;, deve usar o Windows 10 Pro ou mais recente.
-* Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1. 
+* Se estiver executando o Windows, alguma funcionalidade poderá não ser suportada se você não estiver executando o
+Windows 10 Pro.
+* Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1.
 
 ## Etapa 1. Execute o comando de instalação
 {: #step1}
@@ -54,11 +55,11 @@ requisitos do sistema:
 * Para Mac e Linux, execute o comando a seguir:
 
   ```
-  curl -sL http://ibm.biz/idt-installer | bash
+  curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-  
-* Para o Windows 10 Pro, execute o comando a seguir como um administrador:
+
+* Para o Windows, execute o comando a seguir como um administrador:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -68,8 +69,11 @@ requisitos do sistema:
   Clique com o botão direito no ícone do Windows PowerShell e selecione **Executar como
 administrador**.
   {: tip}
-  
-  Para obter instruções sobre como instalar essas ferramentas manualmente, veja [Reinstalando ferramentas](/docs/cli/ts_createapps.html#appendix).
+
+  Também é possível fazer download do script do instalador em nosso [repositório do GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+
+  Para obter as etapas para instalar essas ferramentas manualmente, consulte
+[Reinstalando as ferramentas](/docs/cli/ts_createapps.html#appendix).
 
 ## Etapa 2. Verificar a instalação
 {: #step2}
@@ -100,7 +104,7 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 	```
 	{: codeblock}
     <br>
-    
+
 	Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Consulte
 [Efetuando login com um ID federado](/docs/iam/login_fedid.html#federated_id) para obter mais detalhes.
 	{: tip}
@@ -111,17 +115,16 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 	ibmcloud target --cf
 	```
 	{: codeblock}
-	
+
 	Opcionalmente, é possível usar a saída do comando acima para configurar manualmente sua organização e o espaço com o comando a seguir:
 
 	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
-	
-Para relatar problemas ou fornecer feedback, é possível usar o [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com). Solicite acesso à equipe em [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Próximas Etapas
 {: #next-steps}
 
-Agora você está pronto para desenvolver e implementar o seu primeiro app! Consulte [Desenvolvendo e implementando seus apps](/docs/cli/idt/index.html) para obter mais informações.
+Agora você está pronto para desenvolver e implementar o seu primeiro aplicativo! Consulte
+[Criando e implementando os apps usando a CLI](/docs/apps/create-deploy-cli.html) para obter mais informações.

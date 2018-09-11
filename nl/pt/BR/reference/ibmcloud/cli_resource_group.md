@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando Grupos de Recursos e Recursos
+# Grupos de Recursos e Recursos
 {: #ibmcloud_commands_resource}
 
+Use os comandos a seguir para gerenciar os recursos e os grupos de recursos do {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
 <table summary="Comando ibmcloud que pode ser usado para gerenciar grupos de recursos e recursos.">
-  <caption>Tabela 1. Comandos para gerenciamento de recursos e grupos de recursos</caption>
   <thead>
-    <th colspan="5">Comandos para gerenciar recursos e grupos de recursos</th>
   </thead>
   <tbody>
     <tr>
@@ -33,7 +34,7 @@ lastupdated: "2018-08-21"
       <td>[ibmcloud resource service-instances](cli_resource_group.html#ibmcloud_resource_service_instances)</td>
       <td>[ibmcloud resource service-instance
 ](cli_resource_group.html#ibmcloud_resource_service_instance)</td>
-      <td>[ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
+      <td>[Ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
       <td>[ibmcloud resource service-instance-migrate](cli_resource_group.html#ibmcloud_resource_cf_service_instance_migrate)</td>
     </tr>  
     <tr>  
@@ -807,17 +808,20 @@ Ibmcloud resource service-alias-delete my-service-alias
 Procurar por recursos usando a sintaxe da consulta Lucene
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>Iniciando o número da posição de recursos</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>Número de recursos para retorno (máximo 10.000)</dd>
+  <dt>-s, -- sort-por</dt>
+  <dd>Propriedade a classificar por. Entradas aceitas são `name`, `family`,
+`region`, `type` e `crn`.</dd>
 </dl>
 
 <strong>Exemplos</strong>: procurar por aplicativos do Cloud Foundry cujo nome começa com um texto

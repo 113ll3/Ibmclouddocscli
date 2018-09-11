@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando os apps cf e os domínios, as rotas e os certificados relacionados ao app
+# Aplicativos Cloud Foundry
 {: #ibmcloud_commands_apps}
 
+Use os comandos a seguir para gerenciar os aplicativos, os domínios e as rotas do Cloud Foundry.
+{: shortdesc}
+
 <table summary="Comandos ibmcloud que podem ser usados para gerenciar apps cf e domínios, rotas e certificados relacionados ao app.">
-<caption>Tabela 1. Comandos para gerenciamento de apps cf e domínios relacionados a app, rotas e certificados</caption>
  <thead>
- <th colspan="5">Comandos para gerenciar apps cf e domínios, rotas e certificados relacionados aos apps</th>
  </thead>
  <tbody>
  <tr>

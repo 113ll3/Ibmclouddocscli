@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando a sub-rede de infraestrutura do {{site.data.keyword.Bluemix_notm}}
+# {{site.data.keyword.Bluemix_notm}}  Sub-rede de infraestrutura
 
-<table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
-<caption>Tabela 1. {{site.data.keyword.Bluemix_notm}} comandos de sub-rede de infraestrutura</caption>
+Use os comandos a seguir para gerenciar as sub-redes de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandos de sub-rede de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
  <thead>
- <th colspan="5">{{site.data.keyword.Bluemix_notm}} comandos de sub-rede de infraestrutura</th>
  </thead>
  <tbody>
  <tr>

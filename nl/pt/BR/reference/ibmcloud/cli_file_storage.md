@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando  {{site.data.keyword.Bluemix_notm}}  Armazenamento de arquivo de infraestrutura
+# {{site.data.keyword.Bluemix_notm}} File Storage de infraestrutura
 
-<table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
-<caption>Tabela 1. {{site.data.keyword.Bluemix_notm}}  Armazenamento de arquivo de infraestrutura</caption>
+Use os comandos a seguir para gerenciar um determinado volume no serviço File Storage da infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandos do File Storage da infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
  <thead>
- <th colspan="6">Armazenamento de arquivos de infraestrutura do {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

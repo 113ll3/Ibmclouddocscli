@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando o  {{site.data.keyword.Bluemix_notm}}  Balanceador de carga da
+# {{site.data.keyword.Bluemix_notm}}  Balanceador de Carga da
 
-<table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
-<caption>Tabela 1. {{site.data.keyword.Bluemix_notm}}  Comandos do balanceador de carga da infraestrutura</caption>
+Use os comandos a seguir para gerenciar um balanceador de carga usando o serviço Load Balancer de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandos do Load Balancer do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
  <thead>
- <th colspan="6">Comandos de balanceador de carga de infraestrutura do {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

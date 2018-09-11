@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gerenciando  {{site.data.keyword.Bluemix_notm}}  DNS de infraestrutura
+# {{site.data.keyword.Bluemix_notm}}  DNS da infraestrutura
 
-<table summary="Comandos de infraestrutura geral do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com links que trazem mais informações do comando">
-<caption>Tabela 1. Comandos DNS de infraestrutura do {{site.data.keyword.Bluemix_notm}}</caption>
- <thead>
- <th colspan="6">Comandos DNS de infraestrutura do {{site.data.keyword.Bluemix_notm}}</th>
- </thead>
+Use os comandos a seguir para gerenciar as zonas no serviço DNS de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Comandos do DNS de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
  <tbody>
  <tr>
  <td>[Sl dns import ibmcloud](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_import)</td>

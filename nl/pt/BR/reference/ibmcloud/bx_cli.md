@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 ---
 
 {:new_window: target="_blank"}
@@ -445,14 +445,15 @@ Atualizar ibmcloud [ -f ]
 {: #softlayer_cli}
 
 
-Use os comandos de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}} na interface da linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} para configurar e gerenciar os serviços do SoftLayer.
+Use os comandos de serviço de infraestrutura na interface da linha de comandos (CLI) do
+{{site.data.keyword.Bluemix_notm}} para configurar e gerenciar os serviços de infraestrutura.
 
 Os comandos a seguir são compatíveis. Use o comando `ibmcloud sl` para ver a lista de comandos disponíveis:
 
 <table summary="Comandos gerais ordenados alfabeticamente que possuem links que levam a mais informações sobre o comando">
-<caption>Tabela 1. Comandos gerais de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<caption>Tabela 1. Comandos gerais do serviço de infraestrutura</caption>
  <thead>
- <th colspan="6">Comandos gerais de infraestrutura {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Comandos do serviço de infraestrutura geral</th>
  </thead>
  <tbody>
  <tr>
