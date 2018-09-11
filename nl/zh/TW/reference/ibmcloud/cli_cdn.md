@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN
+# {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN
 
- <table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN</caption>
+請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN 服務中管理帳戶。
+{: shortdesc}
+
+<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN 指令，其鏈結提供指令的相關資訊">
  <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} 基礎架構 CDN</th>
  </thead>
  <tbody>
  <tr>

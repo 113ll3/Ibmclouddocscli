@@ -5,99 +5,109 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理帳戶、使用者及組織
+# 帳戶、使用者及組織
  {: #ibmcloud_commands_account}
 
-<table summary="您可以用來管理帳戶、組織、空間及角色的 ibmcloud 指令。">
-<caption>表 1. 用來管理帳戶、組織、空間及角色的指令</caption>
- <thead>
- <th colspan="5">用來管理帳戶、組織、空間及角色的指令</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
- <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
- <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
- <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
- <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
- </tr>
- <tr>
- <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
- <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
- <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
- <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
- <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
- <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
- <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
- <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
- <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
- <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
- <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
- <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
- <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-</tr>
- <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
- <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
- <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
- <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
- <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
- </tr>
- <tr>
-  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
-  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
- </tr>
- </tbody>
- </table>
+ 使用下列指令，可以管理帳戶、帳戶中的使用者，以及 Cloud Foundry 服務的組織、空間、角色及網域憑證。
+  {: shortdesc}
+
+  <table summary="您可以用來管理帳戶、組織、空間及角色的 ibmcloud 指令。">
+<thead>
+   </thead>
+   <tbody>
+   <tr>
+   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+   <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
+   <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
+   <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
+   <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+   <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
+   <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
+   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+   <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
+   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+   <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
+   <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
+  </tr>
+   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+   </tr>
+   <tr>
+    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+   </tr>
+   </tbody>
+   </table>
 
  ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
 
-列出所有組織
+列出所有組織。
 
 ```
-ibmcloud account orgs [-r REGION] [--guid]
+ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID] [-u ACCOUNT_OWNER]
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
    <dl>
-   <dt>-r <i>REGION</i>（選用）</dt>
-   <dd>顯示其組織資訊的地區。如果設為 'all'，則會列出所有地區中的所有組織。</dd>
-   <dt>--guid（選用）</dt>
-   <dd>顯示組織的 GUID。</dd>
+   <dt>-r REGION_NAME</dt>
+   <dd>地區名稱。列出指定地區中的組織。如果未指定，則預設為現行地區。如果設為 'all'，則列出所有地區中的組織。</dd>
+   <dt>--guid</dt>
+   <dd>顯示組織的 GUID。此選項與 '--output' 不能同時使用。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定輸出格式，目前只支援 JSON。此選項與 '--guid' 不能同時使用。</dd>
+   <dt>-c ACCOUNT_ID</dt>
+   <dd>帳戶 ID。列出給定帳戶下的組織。若未指定，則預設為現行帳戶。如果設為 'all'，則列出所有帳戶下的組織。此選項與 '-u' 不能同時使用。</dd>
+   <dt>-u ACCOUNT_OWNER</dt>
+   <dd>帳戶擁有者名稱。列出給定使用者所擁有之帳戶下的組織。若未指定，則預設為現行帳戶。如果設為 'all'，則列出所有帳戶下的組織。此選項與 '-c' 不能同時使用。</dd>
    </dl>
 
 <strong>範例</strong>：
 
-列出 `us-south` 地區中的所有組織，並顯示 GUID
+列出 `us-south` 地區中的所有組織，並顯示 GUID。
 
 ```
 ibmcloud account orgs -r us-south --guid
 ```
 
+以 JSON 格式列出所有組織。
+
+```
+ibmcloud account orgs --output JSON
+```
+
 ## ibmcloud account org
 {: #ibmcloud_account_org}
 
-顯示所指定組織的資訊。
+顯示指定組織的資訊。
 
 ```
-ibmcloud account org ORG_NAME [--guid]
+ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -106,13 +116,17 @@ ibmcloud account org ORG_NAME [--guid]
    <dl>
    <dt>ORG_NAME（必要）</dt>
    <dd>組織的名稱。</dd>
-   <dt>--guid（選用）</dt>
-   <dd>顯示組織的 GUID。</dd>
+   <dt>-r REGION</dt>
+   <dd>地區名稱。如果未指定，預設值為現行地區。如果設為 'all'，則會列出所有地區中具有給定名稱的組織。</dd>
+   <dt>--guid</dt>
+   <dd>擷取並顯示給定組織的 GUID。會抑制組織的所有其他輸出。此選項與 '--output' 不能同時使用。</dd>
+   <dt>--output REGION</dt>
+   <dd>指定輸出格式，目前只支援 JSON。此選項與 '--guid' 不能同時使用。</dd>
    </dl>
 
 <strong>範例</strong>：
 
-顯示 `IBM` 組織的資訊，並顯示 GUID
+顯示 `IBM` 組織的資訊，並顯示 GUID。
 
 ```
 ibmcloud account org IBM --guid
@@ -194,24 +208,88 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
 
-列出所有空間
+列出所有空間。
 
 ```
-ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
+ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 ```
+
+<strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
    <dl>
-   <dt>-o</dt>
+   <dt>-o ORG_NAME</dt>
    <dd>組織名稱。列出所指定組織下的空間。如果未指定，則預設為現行組織。</dd>
-   <dt>-r</dt>
+   <dt>-r REGION-NAM</dt>
    <dd>地區名稱。列出所指定地區下的空間。如果未指定，則預設為現行地區。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定輸出格式，目前只支援 JSON。</dd>
    </dl>
+
+<strong>範例</strong>：
+
+列出所有空間：
+
+```
+ibmcloud account spaces
+```
+
+以 JSON 格式列出組織 `org_example` 的所有空間：
+
+```
+ibmcloud account spaces -o org_example --output JSON
+```
 
 ## ibmcloud account space
 {: #ibmcloud_account_space}
 
-這個指令的功能及選項與 [cf space ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} 指令相同。
+顯示指定空間的資訊。
+
+```
+ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+   <dl>
+   <dt>SPACE_NAME（必要）</dt>
+   <dd>要顯示之空間的名稱。</dd>
+   <dt>-o ORG_NAME</dt>
+   <dd>組織名稱。如果未指定，則預設為現行組織。</dd>
+   <dt>--guid</dt>
+   <dd>擷取並顯示給定空間的 GUID。會抑制空間的所有其他輸出。此選項與 '--output' 不能同時使用。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定輸出格式，目前只支援 JSON。會抑制空間的所有其他輸出。此選項與 '--guid' 不能同時使用。</dd>
+   <dt>--security-group-rules</dt>
+   <dd>擷取所有與空間相關聯的安全群組的規則。</dd>
+   </dl>
+
+<strong>範例</strong>：
+
+顯示空間 `space_example` 的資訊：
+
+```
+ibmcloud account space space_example
+```
+
+顯示空間 `space_example` 的 GUID：
+
+```
+ibmcloud account space space_example --guid
+```
+
+以 JSON 格式顯示空間 `space_example` 的資訊：
+
+```
+ibmcloud account space space_example --output JSON
+```
+
+顯示空間 `space_example` 的安全群組規則：
+
+```
+ibmcloud account space space_example --security-group-rules
+```
 
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
@@ -261,7 +339,7 @@ ibmcloud account org-users ORG_NAME [-a]
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
-從組織移除使用者（僅限組織管理員或使用者自己）
+從組織移除使用者（僅限組織管理員或使用者自己）。
 
 ```
    ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
@@ -276,7 +354,7 @@ ibmcloud account org-users ORG_NAME [-a]
 ## ibmcloud account org-roles
 {: #ibmcloud_account_org_roles}
 
-取得現行使用者的所有組織角色
+取得現行使用者的所有組織角色。
 
 ```
 ibmcloud account org-roles [-u USER_ID]
@@ -459,7 +537,7 @@ ibmcloud account space-role-unset Mary IBM Cloud SpaceManager
 ## ibmcloud account list
 {: #ibmcloud_account_list}
 
-列出現行使用者的所有帳戶
+列出現行使用者的所有帳戶。
 
 ```
 ibmcloud account list
@@ -554,85 +632,3 @@ ibmcloud account user-reinvite USER_EMAIL
    <dt>USER_EMAIL（必要）</dt>
    <dd>所重新邀請之使用者的電子郵件</dd>
 </dl>
-
-## ibmcloud app domain-cert
-{: #ibmcloud_app_domain_cert}
-
-列出網域的憑證資訊。
-
-```
-ibmcloud app domain-cert DOMAIN_NAME
-```
-
-<strong>必要條件</strong>：端點、登入
-
-<strong>指令選項</strong>：
-<dl>
-<dt>DOMAIN_NAME（必要）</dt>
-<dd>管理憑證的網域。</dd>
-</dl>
-
-
-<strong>範例</strong>：
-
-檢視網域 `ibmcxo-eventconnect.com` 的憑證資訊：
-
-```
-ibmcloud app domain-cert ibmcxo-eventconnect.com
-```
-
-## ibmcloud app domain-cert-add
-{: #ibmcloud_app_domain_cert_add}
-
-將憑證新增到現行組織中的指定網域。
-
-```
-ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
-```
-
-<strong>必要條件</strong>：端點、登入、目標
-
-<strong>指令選項</strong>：
-   <dl>
-   <dt>DOMAIN（必要）</dt>
-   <dd>要新增憑證的網域。</dd>
-   <dt>-k <i>PRIVATE_KEY_FILE</i>（必要）</dt>
-   <dd>私密金鑰檔案路徑。</dd>
-   <dt>-c <i>CERT_FILE</i>（必要）</dt>
-   <dd>憑證檔案路徑。</dd>
-   <dt>-p <i>PASSWORD</i>（選用）</dt>
-   <dd>憑證的密碼。</dd>
-   <dt>-i <i>INTERMEDIATE_CERT_FILE</i>（選用）</dt>
-   <dd>中繼憑證檔案路徑。</dd>
-   <dt>-t <i>TRUST_STORE_FILE</i>（選用）</dt>
-   <dd>信任儲存庫檔案。</dd>
-   </dl>
-
-
-<strong>範例</strong>：
-
-將憑證新增到網域 `ibmcxo-eventconnect.com`：
-
-```
-ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
-```
-
-## ibmcloud app domain-cert-remove
-{: #ibmcloud_app_domain_cert_remove}
-
-從現行組織中的指定網域移除憑證。
-
-```
-ibmcloud app domain-cert-remove DOMAIN [-f]
-```
-
-<strong>必要條件</strong>：端點、登入、目標
-
-<strong>指令選項</strong>：
-
-   <dl>
-   <dt>DOMAIN（必要）</dt>
-   <dd>要從中移除憑證的網域。</dd>
-   <dt>-f（選用）</dt>
-   <dd>強制刪除，而不確認。</dd>
-   </dl>

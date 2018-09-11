@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-15"
 # 安裝獨立式 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI 提供指令行介面，以便在 {{site.data.keyword.Bluemix_notm}} 中管理資源。您仍可以使用 cf CLI 登入 {{site.data.keyword.Bluemix_notm}}，但它僅適用於 {{site.data.keyword.Bluemix_notm}} 中的 Cloud Foundry 服務。
+{{site.data.keyword.Bluemix_notm}} CLI 提供指令行介面，以便在 {{site.data.keyword.Bluemix_notm}} 中管理資源。您仍可以使用 cf CLI 登入 {{site.data.keyword.Bluemix_notm}}，但它僅適用於 {{site.data.keyword.Bluemix_notm}} 中的 Cloud Foundry 服務。 
 
 如果您想要安裝 {{site.data.keyword.Bluemix}} CLI 及其他建議外掛程式和工具來開發 {{site.data.keyword.Bluemix_notm}} 的應用程式，請遵循在[這裡](/docs/cli/index.html)說明的方法。
 {: tip}
@@ -32,9 +32,11 @@ lastupdated: "2018-08-15"
    Linux X86 64 位元：[安裝程式](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window}/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 位元 (ppc64le)：[安裝程式](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
+   若為 32 位元及更早版本，請移至[所有版本](/docs/cli/reference/ibmcloud/all_versions.html)頁面進行下載
+
 1. 執行安裝程式
    * 若為 macOS 及 Windows，僅執行安裝程式。
-   * 若為 Linux，擷取套件並執行 `install_bluemix_cli` Script。
+   * 若為 Linux，擷取套件並執行 `install` Script。
 
 1. 將目標設為 API 端點並登入 {{site.data.keyword.Bluemix_notm}}
 
@@ -168,9 +170,8 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## 可進一步探索 {{site.data.keyword.Bluemix_notm}} CLI 的其他鏈結
 
-* [使用外掛程式延伸 {{site.data.keyword.Bluemix_notm}} CLI 功能](/docs/cli/reference/bluemix_cli/extend_cli.html)
-* [一般 {{site.data.keyword.Bluemix_notm}} CLI 指令用法](/docs/cli/reference/bluemix_cli/bx_cli.html)
-* [一般 {{site.data.keyword.Bluemix_notm}} (ibmcloud sl) 指令用法](/docs/cli/reference/softlayer/index.html)
+* [使用外掛程式延伸 {{site.data.keyword.Bluemix_notm}} CLI 功能](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI 參考資料](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## 報告問題及提交意見
 {: #issues}

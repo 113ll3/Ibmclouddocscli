@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP の管理
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP コマンド</caption>
- <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP コマンド</th>
- </thead>
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP サービスのグローバル IP を管理します。
+{: shortdesc}
+
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP コマンド">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>

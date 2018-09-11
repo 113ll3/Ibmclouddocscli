@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS の管理
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS コマンド</caption>
- <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS コマンド</th>
- </thead>
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS サービスのゾーンを管理します。
+{: shortdesc}
+
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS コマンド">
  <tbody>
  <tr>
  <td>[ibmcloud sl dns import](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_import)</td>

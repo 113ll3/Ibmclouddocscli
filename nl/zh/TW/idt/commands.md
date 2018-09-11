@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -33,6 +33,7 @@ lastupdated: "2018-07-19"
 - [debug](#debug)：在本端容器中針對您的應用程式進行除錯
 - [delete](#delete)：從您的空間刪除應用程式
 - [deploy](#deploy)：將應用程式部署至 IBM Cloud
+- [diag](#diag)：顯示已安裝之相依關係的版本資訊
 - [edit](#edit)：在現有應用程式裡新增或移除服務
 - [enable](#enable)：更新現有應用程式以便搭配 IBM Cloud Developer Tools 使用
 - [get-credentials](#get-credentials)：取得應用程式所需的認證，以啟用連接之 IBM Cloud 服務的使用
@@ -50,6 +51,8 @@ lastupdated: "2018-07-19"
 
 ## build
 {: #build}
+
+如果您是使用 Windows&trade;，則必須執行 Windows 10 Pro 或更新版本。
 
 您可以使用 `build` 指令來建置應用程式。`test`、`debug` 和 `run` 指令預期會發現已編譯的應用程式，因此您必須先執行 `build` 作業。  
 
@@ -109,6 +112,8 @@ ibmcloud dev create
 
 ## debug
 {: #debug}
+
+如果您是使用 Windows&trade;，則必須執行 Windows 10 Pro 或更新版本。
 
 您可以透過 `debug` 指令，對您的應用程式進行除錯。必須先搭配使用 build 指令與 `--debug` 引數，針對應用程式完成建置。當您啟動 `debug` 指令時，會啟動容器，以提供 cli-config.yml 中 `container-port-map-debug` 值所定義或指令行上所指定的一個以上除錯埠。將您的最愛除錯工具連接至一個以上的埠，而且可以正常地對應用程式進行除錯。
 
@@ -181,7 +186,7 @@ ibmcloud dev delete <applicationName>
 
 將應用程式部署為容器之前，您必須在本端安裝 [Kubernetes](https://kubernetes.io/) 及 [Helm](https://github.com/kubernetes/helm)。請確定 Helm 用戶端版本未比 Helm 伺服器版本還要新。您可以執行 `helm version` 來尋找這兩項。建議使用 2.4.2 版作為用戶端版本。
 
-若要在 Kubernetes 上部署應用程式，您必須在 `cli-config.yml` 中指定 `deploy-target` 作為 `container`，或使用參數 `-t container`。 
+若要在 Kubernetes 上部署應用程式，您必須在 `cli-config.yml` 中指定 `deploy-target` 作為 `container`，或使用參數 `-t container`。
 
 配置 Kubernetes 部署所需的其他參數也可以指定於 `cli-config.yml`，如下所示，或是使用指令行引數。如果您未在 `cli-config.yml` 中定義這些參數，則必須使用 `-t container` 參數進行部署，而且系統會提示您輸入所有其他值。
 
@@ -256,6 +261,19 @@ ibmcloud dev deploy
 * 用法：`ibmcloud dev deploy --domain [domain]`
 
 
+## diag
+{: #diag}
+
+這個指令用來作為診斷，以顯示 {{site.data.keyword.dev_cli_notm}} CLI 之已安裝相依關係的版本資訊。這尤其有助於判斷您是否遺漏任何相依關係，或是協助進行問題除錯。
+
+執行下列指令，以顯示已安裝相依關係的版本：
+
+```
+ibmcloud dev diag
+```
+{: codeblock}
+
+
 ## edit
 {: #edit}
 
@@ -268,7 +286,7 @@ ibmcloud dev edit
 
 如果您在帳戶上沒有任何現有服務，這個指令將顯示服務群組的清單，供您選取要連接至應用程式的服務。
 
-不過，如果您在帳戶上有任何現有服務，這個指令將顯示那些服務的清單，以及每個服務是否連接至應用程式。 
+不過，如果您在帳戶上有任何現有服務，這個指令將顯示那些服務的清單，以及每個服務是否連接至應用程式。
 
 選取已連接的服務會讓您選擇是要從應用程式將服務中斷連線，還是從帳戶刪除服務，因而將它從已連接的所有應用程式中斷連線。
 
@@ -364,6 +382,8 @@ ibmcloud dev list
 ## run
 {: #run}
 
+如果您是使用 Windows&trade;，則必須執行 Windows 10 Pro 或更新版本。
+
 您可以透過 `run` 指令來執行您的應用程式。必須先使用 `build` 指令，針對應用程式完成建置。當您呼叫 `run` 指令時，會啟動 run 容器，並公開 `container-port-map` 參數所定義的埠。如果 run 容器 Dockerfile 未包含進入點以完成此步驟，則 `run-cmd` 參數可用來呼叫應用程式。
 
 若要使用多個容器執行，您的應用程式應該包含 [Compose](https://docs.docker.com/compose/overview/) 檔案（指定於 `cli-config.yml` 中），也可以使用 `dockerfile-run` 指令參數來提供檔案。如需相關資訊，請參閱 [Compose 檔案](/docs/apps/projects/compose_file.html)。
@@ -433,6 +453,8 @@ ibmcloud dev run
 ## shell
 {: #shell}
 
+如果您是使用 Windows&trade;，則必須執行 Windows 10 Pro 或更新版本。
+
 您可以使用 `shell` 指令，在 run 或 tools 容器內開啟 Shell。
 
 只要執行下列指令：
@@ -473,6 +495,8 @@ ibmcloud dev shell
 ## status
 {: #status}
 
+如果您是使用 Windows&trade;，則必須執行 Windows 10 Pro 或更新版本。
+
 您可以查詢 `container-name-run` 及 `container-name-tools` 所定義之 {{site.data.keyword.dev_cli_short}} CLI 所使用容器的狀態。
 
 在現行應用程式目錄中執行下列指令，以檢查容器狀態：
@@ -488,6 +512,8 @@ ibmcloud dev status
 
 ## stop
 {: #stop}
+
+如果您是使用 Windows&trade;，則必須執行 Windows 10 Pro 或更新版本。
 
 您可以透過 `stop` 指令來停止您的容器。
 
@@ -521,6 +547,8 @@ ibmcloud dev stop
 
 ## test
 {: #test}
+
+如果您是使用 Windows&trade;，則必須執行 Windows 10 Pro 或更新版本。
 
 您可以透過 `test` 指令來測試您的應用程式。必須先使用 `build --debug` 指令，針對應用程式完成建置。然後，會使用 tools 容器來為應用程式呼叫 `test-cmd`。
 
@@ -616,7 +644,7 @@ ibmcloud dev build/deploy/view -t container --trace
 
 這些指令可以與此特性搭配使用：`build、debug、deploy、get-credentials、run、stop、test、view`
 
-如果有一個指令因任何原因而失敗，則不會執行後續指令。 
+如果有一個指令因任何原因而失敗，則不會執行後續指令。
 
 如果 `debug` 或 `run` 後面有任何指令，則只有在透過從現行終端機視窗結束處理程序以外的方式終止 `debug` 或 `run` 時，才會繼續執行。`CTRL+C` 將會結束處理程序，而不會執行後續指令。例如，您可以從另一個終端機視窗執行 `ibmcloud dev stop`，以停止執行中容器並繼續執行到下一個指令。
 

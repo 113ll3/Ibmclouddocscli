@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理資源群組及資源
+# 資源群組及資源
 {: #ibmcloud_commands_resource}
 
+請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 資源群組及資源。
+{: shortdesc}
+
 <table summary="您可以用來管理資源群組及資源的 ibmcloud 指令。">
-  <caption>表 1. 用來管理資源群組及資源的指令</caption>
   <thead>
-    <th colspan="5">用來管理資源群組及資源的指令</th>
   </thead>
   <tbody>
     <tr>
@@ -790,17 +791,19 @@ ibmcloud resource service-alias-delete my-service-alias
 使用 Lucene 查詢語法來搜尋資源
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>開始的資源位置號碼</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>要傳回的資源數（上限為 10000）</dd>
+  <dt>-s, --sort-by</dt>
+  <dd>排序依據的內容。接受的輸入為 `name`、`family`、`region`、`type`、`crn`。</dd>
 </dl>
 
 <strong>範例</strong>：搜尋名稱開頭為指定文字的 Cloud Foundry 應用程式：

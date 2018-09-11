@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-15"
 # スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI のインストール
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} のリソースを管理するためのコマンド・ライン・インターフェースを提供します。引き続き cf CLI を使用して {{site.data.keyword.Bluemix_notm}} にログインすることもできますが、それは {{site.data.keyword.Bluemix_notm}} 内の Cloud Foundry サービスでのみ動作します。
+{{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} のリソースを管理するためのコマンド・ライン・インターフェースを提供します。 引き続き cf CLI を使用して {{site.data.keyword.Bluemix_notm}} にログインすることもできますが、それは {{site.data.keyword.Bluemix_notm}} 内の Cloud Foundry サービスでのみ動作します。 
 
 {{site.data.keyword.Bluemix}} CLI と、{{site.data.keyword.Bluemix_notm}} 用のアプリケーションを開発するための推奨されるその他のプラグインおよびツールの両方をインストールする場合は、[ここ](/docs/cli/index.html)で説明されている方法に従ってください。
 {: tip}
@@ -32,9 +32,11 @@ lastupdated: "2018-08-15"
    Linux X86 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 ビット (ppc64le): [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
+   32 ビットのバージョンおよび古いバージョンの場合、[すべてのバージョン](/docs/cli/reference/ibmcloud/all_versions.html)のページに移動してダウンロードしてください。
+
 1. インストーラーを実行します。
    * macOS および Windows の場合は、単純にインストーラーを実行します。
-   * Linux の場合は、パッケージを解凍し、`install_bluemix_cli` スクリプトを実行します。
+   * Linux の場合、パッケージを解凍し、`install` スクリプトを実行します。
 
 1. API エンドポイントをターゲットに指定し、{{site.data.keyword.Bluemix_notm}} にログインします。
 
@@ -168,9 +170,8 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## {{site.data.keyword.Bluemix_notm}} CLI をさらに探索するためのその他のリンク
 
-* [プラグインを使用した {{site.data.keyword.Bluemix_notm}} CLI 機能の拡張](/docs/cli/reference/bluemix_cli/extend_cli.html)
-* [一般的な {{site.data.keyword.Bluemix_notm}} CLI コマンド使用法](/docs/cli/reference/bluemix_cli/bx_cli.html)
-* [一般的な {{site.data.keyword.Bluemix_notm}} (ibmcloud sl) コマンド使用法](/docs/cli/reference/softlayer/index.html)
+* [プラグインを使用した {{site.data.keyword.Bluemix_notm}} CLI 機能の拡張](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI リファレンス](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## 問題の報告とフィードバックの送信
 {: #issues}

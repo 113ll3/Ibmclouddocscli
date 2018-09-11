@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理 cf 應用程式及應用程式相關網域、路徑及憑證
+# Cloud Foundry 應用程式
 {: #ibmcloud_commands_apps}
 
+請使用下列指令管理 Cloud Foundry 應用程式、網域及路徑。
+{: shortdesc}
+
 <table summary="您可以用來管理 cf 應用程式及應用程式相關網域、路徑和憑證的 ibmcloud 指令。">
-<caption>表 1. 用來管理 cf 應用程式及應用程式相關網域、路徑和憑證的指令</caption>
- <thead>
- <th colspan="5">用來管理 cf 應用程式及應用程式相關網域、路徑和憑證的指令</th>
+<thead>
  </thead>
  <tbody>
  <tr>

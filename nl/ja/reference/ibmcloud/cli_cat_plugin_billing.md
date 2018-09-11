@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# カタログ、プラグイン、および請求処理の設定の管理
+# カタログ、請求、および CLI プラグイン
 {: #ibmcloud_commands_settings}
 
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} カタログ、使用量/請求、および CLI プラグインを管理します。
+{: shortdesc}
+
 <table summary="{{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するために使用できる ibmcloud コマンド">
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</caption>
  <thead>
- <th colspan="5">{{site.data.keyword.Bluemix_notm}} カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -473,7 +474,7 @@ ibmcloud catalog runtimes -d
 現行アカウントの月々の使用量を表示します (アカウント管理者のみ)
 
 ```
-ibmcloud billing account-usage [-d YYYY-MM] [--json]
+ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -483,8 +484,8 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 <dl>
   <dt>-d MONTH_DATE (オプション)</dt>
   <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
-  <dt>--json (オプション)</dt>
-  <dd>使用量の結果を JSON 形式で表示します。</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -501,7 +502,7 @@ ibmcloud billing account-usage -d 2016-06
 組織の月々の使用量を表示します (アカウント管理者または組織の請求管理者のみ)
 
 ```
-ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -513,8 +514,8 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>組織の名前。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
   <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
-  <dt>--json (オプション)</dt>
-  <dd>使用量の結果を JSON 形式で表示します。</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 ## ibmcloud billing resource-group-usage
@@ -523,7 +524,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 リソース・グループの月々の使用量を表示します (アカウント管理者またはリソース・グループ管理者のみ)
 
 ```
-ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -535,8 +536,8 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>リソース・グループの名前。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
   <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
-  <dt>--json (オプション)</dt>
-  <dd>使用量の結果を JSON 形式で表示します。</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 ## ibmcloud billing resource-instances-usage
@@ -545,7 +546,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 現行アカウントの月次リソース・インスタンス使用量を表示します。
 
 ```
-ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
+ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -559,8 +560,8 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>リソース・グループを基準にしてインスタンスをフィルターに掛けます。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
   <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
-  <dt>--json (オプション)</dt>
-  <dd>使用量の結果を JSON 形式で表示します。</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 ## ibmcloud plugin repos

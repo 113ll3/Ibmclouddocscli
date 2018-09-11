@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理型錄、外掛程式及計費設定
+# 型錄、帳單及 CLI 外掛程式
 {: #ibmcloud_commands_settings}
 
+請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 型錄、用量/計費及 CLI 外掛程式。
+{: shortdesc}
+
 <table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} 型錄、外掛程式、帳單及安全設定的 ibmcloud 指令。">
-<caption>表 1. 用來管理 {{site.data.keyword.Bluemix_notm}} 型錄、外掛程式、帳單及安全設定的指令</caption>
- <thead>
- <th colspan="5">用來管理 {{site.data.keyword.Bluemix_notm}} 型錄、外掛程式、帳單及安全設定的指令</th>
+<thead>
  </thead>
  <tbody>
  <tr>
@@ -473,7 +474,7 @@ ibmcloud catalog runtimes -d
 顯示現行帳戶的每月用量（僅限帳戶管理者）
 
 ```
-ibmcloud billing account-usage [-d YYYY-MM] [--json]
+ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -483,8 +484,8 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 <dl>
   <dt>-d MONTH_DATE（選用）</dt>
   <dd>顯示使用 YYYY-MM 格式指定之月份和日期的資料。如果未指定，則會顯示現行月份的用量。</dd>
-  <dt>--json（選用）</dt>
-  <dd>以 JSON 格式顯示用量結果。</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -501,7 +502,7 @@ ibmcloud billing account-usage -d 2016-06
 顯示組織的每月用量（僅限帳戶管理者或組織帳單管理員）
 
 ```
-ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -513,8 +514,8 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>組織的名稱。</dd>
   <dt>-d MONTH_DATE（選用）</dt>
   <dd>顯示使用 YYYY-MM 格式指定之月份和日期的資料。如果未指定，則會顯示現行月份的用量。</dd>
-  <dt>--json（選用）</dt>
-  <dd>以 JSON 格式顯示用量結果。</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 ## ibmcloud billing resource-group-usage
@@ -523,7 +524,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 顯示資源群組的每月用量（僅帳戶管理者或資源群組管理者）
 
 ```
-ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -535,8 +536,8 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>資源群組的名稱。</dd>
   <dt>-d MONTH_DATE（選用）</dt>
   <dd>顯示使用 YYYY-MM 格式指定之月份和日期的資料。如果未指定，則會顯示現行月份的用量。</dd>
-  <dt>--json（選用）</dt>
-  <dd>以 JSON 格式顯示用量結果。</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 ## ibmcloud billing resource-instances-usage
@@ -545,7 +546,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 顯示現行帳戶下的每月資源實例用量。
 
 ```
-ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
+ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -559,8 +560,8 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>依資源群組過濾實例。</dd>
   <dt>-d MONTH_DATE（選用）</dt>
   <dd>顯示以 YYYY-MM 格式指定之月份和日期的資料。如果未指定，則會顯示現行月份的用量。</dd>
-  <dt>--json（選用）</dt>
-  <dd>以 JSON 格式顯示用量結果。</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 ## ibmcloud plugin repos

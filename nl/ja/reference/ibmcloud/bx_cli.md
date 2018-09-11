@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 ---
 
 {:new_window: target="_blank"}
@@ -446,14 +446,14 @@ ibmcloud update [-f]
 {: #softlayer_cli}
 
 
-{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) で {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンドを使用して、SoftLayer のサービスを管理および構成します。
+{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) でインフラストラクチャー・サービス・コマンドを使用して、インフラストラクチャー・サービスを構成および管理します。
 
 以下のコマンドがサポートされます。 使用可能なコマンドのリストを表示するには、`ibmcloud sl` コマンドを使用します。
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用コマンド">
-<caption>表 1. 汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド</caption>
+<caption>表 1. 汎用インフラストラクチャー・サービス・コマンド</caption>
  <thead>
- <th colspan="6">汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド</th>
+ <th colspan="6">汎用インフラストラクチャー・サービス・コマンド</th>
  </thead>
  <tbody>
  <tr>

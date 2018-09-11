@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CF アプリとアプリ関連ドメイン、経路、および証明書の管理
+# Cloud Foundry アプリケーション
 {: #ibmcloud_commands_apps}
 
+以下のコマンドを使用して、Cloud Foundry アプリケーション、ドメイン、および経路を管理します。
+{: shortdesc}
+
 <table summary="CF アプリとアプリ関連ドメイン、経路、および証明書を管理するために使用できる ibmcloud コマンド。">
-<caption>表 1. CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド</caption>
  <thead>
- <th colspan="5">CF アプリとアプリ関連ドメイン、経路、および証明書を管理するためのコマンド</th>
  </thead>
  <tbody>
  <tr>

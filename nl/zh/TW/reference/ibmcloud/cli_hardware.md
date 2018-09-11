@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構硬體
+# {{site.data.keyword.Bluemix_notm}} 基礎架構裸機伺服器
 
-<table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構 hardware 指令</caption>
- <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} 基礎架構 hardware 指令</th>
- </thead>
+請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構裸機硬體伺服器。
+{: shortdesc}
+
+<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構裸機伺服器指令，其鏈結提供指令的相關資訊">
  <tbody>
  <tr>
  <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>

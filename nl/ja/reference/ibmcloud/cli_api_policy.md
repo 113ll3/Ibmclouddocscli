@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# API キー、ID およびアクセス権限の管理
+# API キー、ID およびアクセス権限
 {: #ibmcloud_commands_iam}
 
+以下のコマンドを使用して、IAM の API キー、サービス ID、アクセス・グループ、およびアクセス・ポリシー/許可ポリシーを管理します。
+{: shortdesc}
+
 <table summary="API キーとポリシーを管理するために使用できる ibmcloud コマンド。">
- <caption>表 1. API キーとポリシーを管理するためのコマンド</caption>
   <thead>
-  <th colspan="5">API キーとポリシーを管理するためのコマンド</th>
   </thead>
   <tbody>
   <tr>
@@ -72,27 +73,27 @@ lastupdated: "2018-08-21"
   </tr>
   <tr>
    <td>[ibmcloud iam authorization-policies](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
-   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access-groups)</td>
-   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access-group)</td>
-   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access-group-create)</td>
-   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access-group-update)</td>
+   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access_groups)</td>
+   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access_group)</td>
+   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access_group_create)</td>
+   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access_group_update)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access-group-delete)</td>
-   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access-group-users)</td>
-   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access-group-user-add)</td>
-   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access-group-user-remove)</td>
-   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access-group-user-purge)</td>
+   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access_group_delete)</td>
+   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access_group_users)</td>
+   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access_group_user_add)</td>
+   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access_group_user_remove)</td>
+   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access_group_user_purge)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access-group-service-ids)</td>
-   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access-group-service-id-add)</td>
-   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access-group-service-id-remove)</td>
-   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access-group-service-id-purge)</td>
-   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access-group-policies)</td>
+   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access_group_service_ids)</td>
+   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access_group_service_id_add)</td>
+   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access_group_service_id_remove)</td>
+   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access_group_service_id_purge)</td>
+   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access_group_policies)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access-group-policy)</td>
+   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access_group_policy)</td>
    <td>[ibmcloud iam access-group-policy-create](cli_api_policy.html#ibmcloud_iam_access_group_policy_create)</td>
    <td>[ibmcloud iam access-group-policy-update](cli_api_policy.html#ibmcloud_iam_access_group_policy_update)</td>
    <td>[ibmcloud iam access-group-policy-delete](cli_api_policy.html#ibmcloud_iam_access_group_policy_delete)</td>
@@ -982,7 +983,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 指定したサービスのすべてのサービス・ポリシーをリストします
 
 ```
-ibmcloud iam service-policies SERVICE_ID [--json] [-f, --force]
+ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -991,9 +992,9 @@ ibmcloud iam service-policies SERVICE_ID [--json] [-f, --force]
 <dl>
   <dt>SERVICE_ID (必須)</dt>
   <dd>サービス ID の名前または UUID</dd>
-  <dt>-json</dt>
-  <dd>JSON フォーマットでポリシーを表示します</dd>
-  <dt>-f, --force</dt>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>サービス・ポリシーの出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+  <dt>-f, --force (オプション)</dt>
   <dd>確認を求めずにサービス・ポリシーを表示します</dd>
 </dl>
 
@@ -1016,7 +1017,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 サービス・ポリシーの詳細を表示します
 
 ```
-ibmcloud iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
+ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -1027,9 +1028,9 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
   <dd>サービス ID の名前または UUID</dd>
   <dt>POLICY_ID (必須)</dt>
   <dd>サービス・ポリシーの ID<dd>
-  <dt>-json</dt>
-  <dd>JSON フォーマットでポリシーを表示します</dd>
-  <dt>-f, --force</dt>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>サービス・ポリシーの出力形式を指定します。現在、JSON のみがサポートされています。</dd>
+  <dt>-f, --force (オプション)</dt>
   <dd>確認を求めずにサービス・ポリシーを表示します</dd>
 </dl>
 

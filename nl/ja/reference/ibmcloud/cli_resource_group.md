@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# リソース・グループとリソースの管理
+# リソース・グループとリソース
 {: #ibmcloud_commands_resource}
 
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} リソース・グループとリソースを管理します。
+{: shortdesc}
+
 <table summary="リソース・グループとリソースを管理するために使用できる ibmcloud コマンド。">
-  <caption>表 1. リソース・グループとリソースを管理するためのコマンド</caption>
   <thead>
-    <th colspan="5">リソース・グループとリソースを管理するためのコマンド</th>
   </thead>
   <tbody>
     <tr>
@@ -806,17 +807,19 @@ ibmcloud resource service-alias-delete my-service-alias
 Lucene 照会構文を使用してリソースを検索します
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>開始リソース位置番号</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>返されるリソースの数 (最大 10000)</dd>
+  <dt>-s, --sort-by</dt>
+  <dd>ソート基準のプロパティー。 受け入れられる入力は、`name`、`family`、`region`、`type`、`crn` です。</dd>
 </dl>
 
 <strong>例</strong>:

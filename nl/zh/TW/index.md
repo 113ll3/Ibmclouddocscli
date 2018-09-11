@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# 開始使用 {{site.data.keyword.Bluemix_notm}} Developer Tools
+# 開始使用 {{site.data.keyword.Bluemix_notm}} CLI
 {: #overview}
 
 在本指導教學中，您將安裝一組 {{site.data.keyword.Bluemix}} Developer Tools、驗證安裝，並配置您的環境。{{site.data.keyword.Bluemix}} Developer Tools 提供指令行方法，以建立、開發及部署端對端的 Web、行動及微服務應用程式。
 {:shortdesc}
 
-安裝之後，您會得到 {{site.data.keyword.Bluemix_notm}} CLI，以及下列工具： 
+安裝之後，您會得到獨立式 {{site.data.keyword.Bluemix_notm}} CLI，以及下列工具：
 
 * `Homebrew`（僅限 Mac）
 * `Git`
@@ -39,8 +39,8 @@ lastupdated: "2018-08-21"
 
 您需要 [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及下列系統需求：
 
-* 如果您是使用 Microsoft Windows&trade;，則必須使用 Windows 10 Pro 或更新版本。
-* 您必須使用適用於 Docker 的穩定通道，而最低版本為 1.13.1。 
+* 如果您執行 Windows，則在您不是執行 Windows 10 Pro 的情況下，可能不支援部分功能。
+* 您必須使用適用於 Docker 的穩定通道，而最低版本為 1.13.1。
 
 ## 步驟 1. 執行 install 指令
 {: #step1}
@@ -48,11 +48,11 @@ lastupdated: "2018-08-21"
 * 若為 Mac 和 Linux，請執行下列指令：
 
   ```
-  curl -sL http://ibm.biz/idt-installer | bash
+  curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-  
-* 若為 Windows 10 Pro，請以管理者身分執行下列指令：
+
+* 若為 Windows，請以管理者身分執行下列指令：
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -61,8 +61,10 @@ lastupdated: "2018-08-21"
 
     在 Windows PowerShell 圖示上按一下滑鼠右鍵，然後選取**以系統管理員身分執行**。
   {: tip}
-  
-  如需手動安裝這些工具的指示，請參閱[重新安裝工具](/docs/cli/ts_createapps.html#appendix)。
+
+  您也可以從 [GitHub 儲存庫](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)下載安裝程式 Script。
+
+  如需手動安裝這些工具的步驟，請參閱[重新安裝工具](/docs/cli/ts_createapps.html#appendix)。
 
 ## 步驟 2. 驗證安裝
 {: #step2}
@@ -93,7 +95,7 @@ ibmcloud dev help
 	```
 	{: codeblock}
     <br>
-    
+
 	如果您的認證遭到拒絕，您可能是使用聯合 ID。如需詳細資料，請參閱[使用聯合 ID 進行登入](/docs/iam/login_fedid.html#federated_id)。
 	{: tip}
 
@@ -103,17 +105,15 @@ ibmcloud dev help
 	ibmcloud target --cf
 	```
 	{: codeblock}
-	
+
 	您可以選擇性地使用來自上述指令的輸出，以下列指令手動設定您的組織及空間：
 
 	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
-	
-若要報告問題或提供意見，您可以使用 [IBM Cloud Tech 的 Slack - #developer-tools 頻道](https://ibm-cloud-tech.slack.com)。在 [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 要求團隊存取。
 
 ## 後續步驟
 {: #next-steps}
 
-您現在已準備好開始開發及部署您的第一個應用程式！如需相關資訊，請參閱[開發及部署應用程式](/docs/cli/idt/index.html)。
+您現在已準備好開始開發及部署您的第一個應用程式！如需相關資訊，請參閱[使用 CLI 建立及部署應用程式](/docs/apps/create-deploy-cli.html)。

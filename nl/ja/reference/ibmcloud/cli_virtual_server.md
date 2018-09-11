@@ -5,20 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー仮想サーバーの管理
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー仮想サーバー
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・コマンド">
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー仮想サーバーを管理します。
+{: shortdesc}
 
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} インフラストラクチャー仮想サーバー・コマンド</caption>
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー仮想サーバー・コマンド">
  <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} インフラストラクチャー仮想サーバー・コマンド</th>
  </thead>
  <tbody>
  <tr>

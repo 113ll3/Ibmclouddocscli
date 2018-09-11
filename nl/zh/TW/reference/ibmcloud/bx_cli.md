@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 ---
 
 {:new_window: target="_blank"}
@@ -446,14 +446,14 @@ ibmcloud update [-f]
 {: #softlayer_cli}
 
 
-在 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 中使用 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，以配置及管理 SoftLayer 服務。
+請在 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 中使用基礎架構服務指令，以配置及管理基礎架構服務。
 
 支援下列指令。使用 `ibmcloud sl` 指令，以查看可用的指令清單：
 
 <table summary="按字母順序排序的一般指令，其鏈結提供指令的相關資訊">
-<caption>表 1. 一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令</caption>
+<caption>表 1. 一般基礎架構服務指令</caption>
  <thead>
- <th colspan="6">一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令</th>
+ <th colspan="6">一般基礎架構服務指令</th>
  </thead>
  <tbody>
  <tr>

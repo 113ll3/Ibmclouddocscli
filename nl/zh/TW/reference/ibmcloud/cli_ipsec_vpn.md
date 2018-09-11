@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN
+# {{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN
 
-<table summary="按字母順序排序的一般 {{site.data.keyword.Bluemix_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN 指令</caption>
+請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN 服務中管理 IPSec VPN 通道。
+{: shortdesc}
+
+<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} IPSec VPN 指令，其鏈結提供指令的相關資訊">
  <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN 指令</th>
  </thead>
  <tbody>
  <tr>
