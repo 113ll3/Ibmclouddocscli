@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理目录、插件和帐单设置
+# 目录、帐单和 CLI 插件
 {: #ibmcloud_commands_settings}
 
+使用以下命令可管理 {{site.data.keyword.Bluemix_notm}}“目录”、使用情况/计费和 CLI 插件。
+{: shortdesc}
+
 <table summary="可用于管理 {{site.data.keyword.Bluemix_notm}} 目录、插件、帐单和安全设置的 ibmcloud 命令。">
-<caption>表 1. 用于管理 {{site.data.keyword.Bluemix_notm}} 目录、插件、帐单和安全设置的命令</caption>
- <thead>
- <th colspan="5">用于管理 {{site.data.keyword.Bluemix_notm}} 目录、插件、帐单和安全设置的命令</th>
+<thead>
  </thead>
  <tbody>
  <tr>
@@ -256,7 +257,7 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
   <dd>将帐户（或逗号分隔帐户列表）添加到“包含”列表，授予该条目可视性。可接受电子邮件或帐户 GUID</dd>
   <dt>--includes-remove</dt>
   <dd>从“包含”列表中除去帐户（或逗号分隔帐户列表），撤销该条目的可视性。可接受电子邮件或帐户 GUID</dd>  
-  <dt>--excludes-add</dt>
+  <dt>--excludes-add </dt>
   <dd>将帐户（或逗号分隔帐户列表）添加到“排除”列表。可接受电子邮件或帐户 GUID</dd>
   <dt>--excludes-remove</dt>
   <dd>从“排除”列表中除去帐户（或逗号分隔帐户列表），撤销该条目的可视性。如果帐户是由全局管理员设置的，那么帐户管理员无法除去该帐户。可接受电子邮件或帐户 GUID</dd>
@@ -471,7 +472,7 @@ ibmcloud catalog runtimes -d
 显示当前帐户的每月使用情况（仅限帐户管理员）
 
 ```
-ibmcloud billing account-usage [-d YYYY-MM] [--json]
+ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -481,8 +482,8 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 <dl>
   <dt>-d MONTH_DATE（可选）</dt>
   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
-  <dt>--json（可选）</dt>
-  <dd>以 JSON 格式显示使用情况结果。</dd>
+  <dt>--output FORMAT（可选）</dt>
+  <dd>指定输出格式，目前仅支持 JSON。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -499,7 +500,7 @@ ibmcloud billing account-usage -d 2016-06
 显示组织的每月使用情况（仅限帐户管理员或组织记帐管理员）
 
 ```
-ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -511,8 +512,8 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>组织的名称。</dd>
   <dt>-d MONTH_DATE（可选）</dt>
   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
-  <dt>--json（可选）</dt>
-  <dd>以 JSON 格式显示使用情况结果。</dd>
+  <dt>--output FORMAT（可选）</dt>
+  <dd>指定输出格式，目前仅支持 JSON。</dd>
 </dl>
 
 ## ibmcloud billing resource-group-usage
@@ -521,7 +522,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 显示资源组的每月使用情况（仅限帐户管理员或资源组管理员）
 
 ```
-ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -533,8 +534,8 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>资源组的名称。</dd>
   <dt>-d MONTH_DATE（可选）</dt>
   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
-  <dt>--json（可选）</dt>
-  <dd>以 JSON 格式显示使用情况结果。</dd>
+  <dt>--output FORMAT（可选）</dt>
+  <dd>指定输出格式，目前仅支持 JSON。</dd>
 </dl>
 
 ## ibmcloud billing resource-instances-usage
@@ -543,7 +544,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 显示当前帐户的每月资源实例使用情况。
 
 ```
-ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
+ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -557,8 +558,8 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>按资源组过滤实例。</dd>
   <dt>-d MONTH_DATE（可选）</dt>
   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
-  <dt>--json（可选）</dt>
-  <dd>以 JSON 格式显示使用情况结果。</dd>
+  <dt>--output FORMAT（可选）</dt>
+  <dd>指定输出格式，目前仅支持 JSON。</dd>
 </dl>
 
 ## ibmcloud plugin repos

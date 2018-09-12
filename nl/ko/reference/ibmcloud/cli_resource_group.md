@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 리소스 그룹 및 리소스 관리
+# 리소스 그룹 및 리소스
 {: #ibmcloud_commands_resource}
 
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 리소스 그룹 및 리소스를 관리하십시오.
+{: shortdesc}
+
 <table summary="리소스 그룹 및 리소스를 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
-  <caption>표 1. 리소스 그룹 및 리소스 관리를 위한 명령</caption>
   <thead>
-    <th colspan="5">리소스 그룹 및 리소스 관리를 위한 명령</th>
   </thead>
   <tbody>
     <tr>
@@ -807,17 +808,19 @@ ibmcloud resource service-alias-delete my-service-alias
 Lucene 조회 구문을 사용하여 리소스 검색
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>시작 리소스 위치 번호</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>리턴할 리소스의 수(최대 10000)</dd>
+  <dt>-s, --sort-by</dt>
+  <dd>정렬 기준 특성. 허용되는 입력은 `name`, `family`, `region`, `type`, `crn`입니다.</dd>
 </dl>
 
 <strong>예제</strong>:

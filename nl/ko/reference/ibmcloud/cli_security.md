@@ -5,20 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 보안 관리
+# {{site.data.keyword.Bluemix_notm}} 인프라 SSH 키 및 인증서
 
-<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.Bluemix_notm}} 인프라 명령">
-<caption>표 1. {{site.data.keyword.Bluemix_notm}} 인프라 보안 명령</caption>
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 SSH 키 및 인증서를 관리하십시오.
+{: shortdesc}
 
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 보안 명령">
  <thead>
- <th colspan="5">{{site.data.keyword.Bluemix_notm}} 인프라 보안 명령</th>
  </thead>
  <tbody>
  <tr>

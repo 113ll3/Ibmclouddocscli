@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -33,6 +33,7 @@ lastupdated: "2018-07-19"
 - [debug](#debug)：在本地容器中调试应用程序
 - [delete](#delete)：从空间中删除应用程序
 - [deploy](#deploy)：将应用程序部署到 IBM Cloud
+- [diag](#diag)：显示有关已安装依赖项的版本信息
 - [edit](#edit)：在现有应用程序中添加或除去服务
 - [enable](#enable)：更新现有应用程序以用于 IBM Cloud Developer Tools
 - [get-credentials](#get-credentials)：获取应用程序支持使用连接的 IBM Cloud 服务时所需的凭证
@@ -50,6 +51,8 @@ lastupdated: "2018-07-19"
 
 ## build
 {: #build}
+
+如果使用的是 Windows&trade;，那么必须运行的是 Windows 10 专业版或更高版本。
 
 可以使用 `build` 命令来构建应用程序。`test`、`debug` 和 `run` 命令需要查找已编译的应用程序，因此必须先运行 `build` 操作。  
 
@@ -109,6 +112,8 @@ ibmcloud dev create
 
 ## debug
 {: #debug}
+
+如果使用的是 Windows&trade;，那么必须运行的是 Windows 10 专业版或更高版本。
 
 可以通过 `debug` 命令来调试应用程序。在此之前，必须先使用带 `--debug` 自变量的 build 命令对应用程序完成构建。启动 `debug` 命令时，会启动一个容器，用于提供如 cli-config.yml 中的 `container-port-map-debug` 值所定义或如命令行上所指定的一个或多个调试端口。将您喜欢的调试工具连接到相应端口，然后可以如常调试应用程序。
 
@@ -181,7 +186,7 @@ ibmcloud dev delete <applicationName>
 
 将应用程序部署为容器之前，必须在本地安装 [Kubernetes](https://kubernetes.io/) 和 [Helm](https://github.com/kubernetes/helm)。确保 Helm 客户机版本不高于 Helm 服务器版本。可以通过运行 `helm version` 来找到这两者的版本。建议使用客户机版本 V2.4.2。
 
-要在 Kubernetes 上部署应用程序，必须在 `cli-config.yml` 中将 `deploy-target` 指定为 `container`，或者使用 `-t container` 参数。 
+要在 Kubernetes 上部署应用程序，必须在 `cli-config.yml` 中将 `deploy-target` 指定为 `container`，或者使用 `-t container` 参数。
 
 配置 Kubernetes 部署所需的其他参数还可以如下所示在 `cli-config.yml` 中指定，或者使用命令行自变量来指定。如果未在 `cli-config.yml` 中定义这些参数，那么必须使用 `-t container` 参数进行部署，并且系统将提示您输入其他所有值。
 
@@ -256,6 +261,19 @@ ibmcloud dev deploy
 * 用法：`ibmcloud dev deploy --domain [domain]`
 
 
+## diag
+{: #diag}
+
+此命令用作诊断功能，以显示 {{site.data.keyword.dev_cli_notm}} CLI 的已安装依赖项的版本信息。此命令对于确定是否缺少任何依赖项或帮助调试问题特别有帮助。
+
+运行以下命令以显示已安装依赖项的版本：
+
+```
+ibmcloud dev diag
+```
+{: codeblock}
+
+
 ## edit
 {: #edit}
 
@@ -268,7 +286,7 @@ ibmcloud dev edit
 
 如果您的帐户上没有现有服务，此命令将显示服务组列表，您可以从中选择要连接到应用程序的服务。
 
-但是，如果您的帐户上有任何现有服务，此命令将显示这些服务的列表以及每个服务是否已连接到应用程序。 
+但是，如果您的帐户上有任何现有服务，此命令将显示这些服务的列表以及每个服务是否已连接到应用程序。
 
 通过选择连接的服务，您可选择断开该服务与应用程序的连接或从帐户中删除该服务，从而使其与所连接的所有应用程序断开连接。
 
@@ -364,6 +382,8 @@ ibmcloud dev list
 ## run
 {: #run}
 
+如果使用的是 Windows&trade;，那么必须运行的是 Windows 10 专业版或更高版本。
+
 可以通过 `run` 命令来运行应用程序。在此之前，必须先使用 `build` 命令对应用程序完成构建。调用 `run` 命令时，将启动 run 容器，并按 `container-port-map` 参数所定义的方式公开端口。如果 run 容器 Dockerfile 不包含用于完成此步骤的入口点，那么可以使用 `run-cmd` 参数来调用应用程序。
 
 为了使用多个容器来运行，应用程序应包含 `cli-config.yml` 中指定的 [Compose](https://docs.docker.com/compose/overview/) 文件，或者您也可以使用 `dockerfile-run` 命令参数来提供 Compose 文件。有关更多信息，请参阅 [Compose 文件](/docs/apps/projects/compose_file.html)。
@@ -433,6 +453,8 @@ ibmcloud dev list
 ## shell
 {: #shell}
 
+如果使用的是 Windows&trade;，那么必须运行的是 Windows 10 专业版或更高版本。
+
 可以使用 `shell` 命令在 run 或 tools 容器内打开 shell。
 
 只需运行以下命令
@@ -473,6 +495,8 @@ ibmcloud dev shell
 ## status
 {: #status}
 
+如果使用的是 Windows&trade;，那么必须运行的是 Windows 10 专业版或更高版本。
+
 可以查询 {{site.data.keyword.dev_cli_short}} CLI 使用的容器（如 `container-name-run` 和 `container-name-tools` 所定义）的状态。
 
 在当前应用程序目录中运行以下命令来检查容器状态：
@@ -488,6 +512,8 @@ ibmcloud dev status
 
 ## stop
 {: #stop}
+
+如果使用的是 Windows&trade;，那么必须运行的是 Windows 10 专业版或更高版本。
 
 可以通过 `stop` 命令来停止容器。
 
@@ -521,6 +547,8 @@ ibmcloud dev stop
 
 ## test
 {: #test}
+
+如果使用的是 Windows&trade;，那么必须运行的是 Windows 10 专业版或更高版本。
 
 可以通过 `test` 命令来测试应用程序。在此之前，必须先使用 `build --debug` 命令对应用程序完成构建。然后，tools 容器用于对应用程序调用 `test-cmd`。
 
@@ -599,10 +627,10 @@ ibmcloud dev view
 * 用法：`ibmcloud dev view --ibm-cluster [cluster-name]`
 
 
-## 复合命令
+## compound 命令
 {: #compound}
 
-可以通过使用 `/` 定界符来分隔 {{site.data.keyword.Bluemix_notm}} Developer Tools 命令，从而在一个命令行语句中运行多个命令。在指定复合命令后，可以指定其他命令行标志。以下命令是可以如何使用复合命令的示例：
+可以通过使用 `/` 定界符来分隔 {{site.data.keyword.Bluemix_notm}} Developer Tools 命令，从而在一个命令行语句中运行多个命令。在指定 compound 命令后，可以指定其他命令行标志。以下命令是可以如何使用 compound 命令的示例：
 
 ```
 ibmcloud dev build/run
@@ -616,7 +644,7 @@ ibmcloud dev build/deploy/view -t container --trace
 
 下面是可用于此功能的命令：`build、debug、deploy、get-credentials、run、stop、test 和 view`
 
-如果某个命令出于任何原因而失败，那么不会执行后续命令。 
+如果某个命令出于任何原因而失败，那么不会执行后续命令。
 
 如果 `debug` 或 `run` 后跟任何命令，那么仅当 `debug` 或 `run` 以不同于在当前终端窗口中终止进程的方法来终止时，执行才会继续。`CTRL+C` 将终止该进程，而不会运行后续命令。例如，可以在其他终端窗口中执行 `ibmcloud dev stop` 以停止正在运行的容器，然后继续执行到下一个命令。
 

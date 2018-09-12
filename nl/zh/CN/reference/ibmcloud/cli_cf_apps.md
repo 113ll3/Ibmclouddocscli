@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理 CF 应用程序及与应用程序相关的域、路径和证书
+# Cloud Foundry 应用程序
 {: #ibmcloud_commands_apps}
 
+使用以下命令可管理 Cloud Foundry 应用程序、域和路径。
+{: shortdesc}
+
 <table summary="可用于管理 CF 应用程序及与应用程序相关的域、路径和证书的 ibmcloud 命令。">
-<caption>表 1. 用于管理 CF 应用程序及与应用程序相关的域、路径和证书的命令</caption>
- <thead>
- <th colspan="5">用于管理 CF 应用程序及与应用程序相关的域、路径和证书的命令</th>
+<thead>
  </thead>
  <tbody>
  <tr>

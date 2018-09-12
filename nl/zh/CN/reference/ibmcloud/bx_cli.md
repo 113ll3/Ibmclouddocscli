@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 ---
 
 {:new_window: target="_blank"}
@@ -445,14 +445,14 @@ ibmcloud update [-f]
 {: #softlayer_cli}
 
 
-使用 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 中的 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令来配置和管理 SoftLayer 服务。
+使用 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 中的基础架构服务命令可配置和管理基础架构服务。
 
 支持以下命令。使用 `ibmcloud sl` 命令可查看可用命令的列表：
 
 <table summary="按字母顺序排序的常规命令（命令带有可获取命令更多信息的链接）">
-<caption>表 1. 常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令</caption>
+<caption>表 1. 常规基础架构服务命令</caption>
  <thead>
- <th colspan="6">常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令</th>
+ <th colspan="6">常规基础架构服务命令</th>
  </thead>
  <tbody>
  <tr>
@@ -517,7 +517,7 @@ OK
 
 Targeted account example user's Account (65ce8074c6c62b5)
 
-API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)   
 Region:         us-south   
 User:           user@example.com   
 Account:        example user's Account (65ce8074c6c62b5)   

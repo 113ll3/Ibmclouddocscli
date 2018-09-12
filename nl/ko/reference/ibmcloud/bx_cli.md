@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 ---
 
 {:new_window: target="_blank"}
@@ -445,14 +445,14 @@ ibmcloud update [-f]
 {: #softlayer_cli}
 
 
-SoftLayer 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령을 사용하십시오.
+인프라 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 인프라 서비스 명령을 사용하십시오.
 
 다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 보려면 `ibmcloud sl` 명령을 사용하십시오.
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 명령">
-<caption>표 1. 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령</caption>
+<caption>표 1. 일반 인프라 서비스 명령</caption>
  <thead>
- <th colspan="6">일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령</th>
+ <th colspan="6">일반 인프라 서비스 명령</th>
  </thead>
  <tbody>
  <tr>

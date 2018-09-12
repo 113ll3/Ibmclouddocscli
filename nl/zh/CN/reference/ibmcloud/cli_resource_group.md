@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理资源组和资源
+# 资源组和资源
 {: #ibmcloud_commands_resource}
 
+使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 资源组和资源。
+{: shortdesc}
+
 <table summary="可用于管理资源组和资源的 ibmcloud 命令。">
-  <caption>表 1. 用于管理资源组和资源的命令</caption>
   <thead>
-    <th colspan="5">用于管理资源组和资源的命令</th>
   </thead>
   <tbody>
     <tr>
@@ -805,17 +806,19 @@ ibmcloud resource service-alias-delete my-service-alias
 使用 Lucene 查询语法搜索资源
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>起始资源位置编号</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>要返回的资源数（最多 10000 个）</dd>
+  <dt>-s, --sort-by</dt>
+  <dd>要作为排序依据的属性。接受的输入为 `name`、`family`、`region`、`type` 或 `crn`。</dd>
 </dl>
 
 <strong>示例</strong>：

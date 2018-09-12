@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# cf 앱 및 앱 관련 도메인, 라우트 및 인증서 관리
+# Cloud Foundry 애플리케이션
 {: #ibmcloud_commands_apps}
 
+다음 명령을 사용하여 Cloud Foundry 애플리케이션, 도메인 및 라우트를 관리하십시오.
+{: shortdesc}
+
 <table summary="cf 앱 및 앱 관련 도메인, 라우트, 인증서를 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
-<caption>표 1. 앱 및 앱 관련 도메인, 라우트 및 인증서 관리를 위한 명령</caption>
  <thead>
- <th colspan="5">cf 앱 및 앱 관련 도메인, 라우트 및 인증서 관리를 위한 명령</th>
  </thead>
  <tbody>
  <tr>

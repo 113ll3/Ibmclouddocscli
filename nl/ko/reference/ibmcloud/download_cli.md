@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-15"
 # 독립형 {{site.data.keyword.Bluemix_notm}} CLI 설치
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI에서는 {{site.data.keyword.Bluemix_notm}}에서 리소스를 관리하는 명령행 인터페이스를 제공합니다. 여전히 cf CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있지만 {{site.data.keyword.Bluemix_notm}}에서 Cloud Foundry 서비스와만 작동합니다.
+{{site.data.keyword.Bluemix_notm}} CLI에서는 {{site.data.keyword.Bluemix_notm}}에서 리소스를 관리하는 명령행 인터페이스를 제공합니다. 여전히 cf CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있지만 {{site.data.keyword.Bluemix_notm}}에서 Cloud Foundry 서비스와만 작동합니다. 
 
 {{site.data.keyword.Bluemix}} CLI와 {{site.data.keyword.Bluemix_notm}}용 애플리케이션을 개발하기 위해 권장되는 플러그인 및 도구를 모두 설치하려면 [여기](/docs/cli/index.html)에 설명된 방법을 따르십시오.
 {: tip}
@@ -32,9 +32,11 @@ lastupdated: "2018-08-15"
    Linux X86 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64비트(ppc64le): [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
+   32비트 이하 버전의 경우 [모든 버전](/docs/cli/reference/ibmcloud/all_versions.html) 페이지로 이동하여 다운로드하십시오.
+
 1. 설치 프로그램 실행
    * macOS 및 Windows의 경우 설치 프로그램을 실행하십시오.
-   * Linux의 경우 패키지의 압축을 풀고 `install_bluemix_cli` 스크립트를 실행하십시오.
+   * Linux의 경우 패키지의 압축을 풀고 `install` 스크립트를 실행하십시오.
 
 1. API 엔드포인트를 대상으로 지정 및 {{site.data.keyword.Bluemix_notm}}에 로그인
 
@@ -168,9 +170,8 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## {{site.data.keyword.Bluemix_notm}} CLI를 자세히 살펴보기 위한 기타 링크
 
-* [플러그인으로 {{site.data.keyword.Bluemix_notm}} CLI 기능 확장](/docs/cli/reference/bluemix_cli/extend_cli.html)
-* [일반 {{site.data.keyword.Bluemix_notm}} CLI 명령 사용법](/docs/cli/reference/bluemix_cli/bx_cli.html)
-* [일반 {{site.data.keyword.Bluemix_notm}} (ibmcloud sl) 명령 사용법](/docs/cli/reference/softlayer/index.html)
+* [플러그인으로 {{site.data.keyword.Bluemix_notm}} CLI 기능 확장](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI 참조](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## 문제 보고 및 피드백 제출
 {: #issues}

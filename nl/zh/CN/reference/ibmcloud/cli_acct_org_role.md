@@ -5,64 +5,62 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理帐户、用户和组织
+# 帐户、用户和组织
  {: #ibmcloud_commands_account}
 
-<table summary="可用于管理帐户、组织、空间和角色的 ibmcloud 命令。">
-<caption>表 1. 用于管理帐户、组织、空间和角色的命令</caption>
- <thead>
- <th colspan="5">用于管理帐户、组织、空间和角色的命令</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
- <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
- <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
- <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
- <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
- </tr>
- <tr>
- <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
- <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
- <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
- <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
- <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
- <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
- <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
- <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
- <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
- <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
- <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
- <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
- <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-</tr>
- <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
- <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
- <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
- <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
- <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
- </tr>
- <tr>
-  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
-  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
- </tr>
- </tbody>
- </table>
+ 使用以下命令可管理帐户、帐户中的用户以及 Cloud Foundry 服务的组织、空间、角色和域证书。
+  {: shortdesc}
+
+  <table summary="可用于管理帐户、组织、空间和角色的 ibmcloud 命令。">
+<thead>
+   </thead>
+   <tbody>
+   <tr>
+   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+   <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
+   <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
+   <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
+   <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+   <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
+   <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
+   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+   <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
+   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+   <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
+   <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
+  </tr>
+   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+   </tr>
+   <tr>
+    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+   </tr>
+   </tbody>
+   </table>
 
  ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
@@ -70,17 +68,23 @@ lastupdated: "2018-08-21"
 列出所有组织
 
 ```
-ibmcloud account orgs [-r REGION] [--guid]
+ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID] [-u ACCOUNT_OWNER]
 ```
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
    <dl>
-   <dt>-r <i>REGION</i>（可选）</dt>
-   <dd>显示其组织信息的区域。如果设置为“all”，将列出所有区域中的所有组织。</dd>
-   <dt>--guid（可选）</dt>
-   <dd>显示组织的 GUID。</dd>
+   <dt>-r REGION_NAME</dt>
+   <dd>区域名称。列出指定区域中的组织。如果未指定，将缺省为当前区域。如果设置为“all”，将列出所有区域中的组织。</dd>
+   <dt>--guid</dt>
+   <dd>显示组织的 GUID。此选项与“--output”互斥。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定输出格式，目前仅支持 JSON。此选项与“--guid”互斥。</dd>
+   <dt>-c ACCOUNT_ID</dt>
+   <dd>帐户标识。列出给定帐户下的组织。如果未指定，将缺省为当前帐户。如果设置为“all”，将列出所有帐户下的组织。此选项与“--u”互斥。</dd>
+   <dt>-u ACCOUNT_OWNER</dt>
+   <dd>帐户所有者名称。列出给定用户所拥有的帐户下的组织。如果未指定，将缺省为当前帐户。如果设置为“all”，将列出所有帐户下的组织。此选项与“-c”互斥。</dd>
    </dl>
 
 <strong>示例</strong>：
@@ -91,13 +95,19 @@ ibmcloud account orgs [-r REGION] [--guid]
 ibmcloud account orgs -r us-south --guid
 ```
 
+以 JSON 格式列出所有组织
+
+```
+ibmcloud account orgs --output JSON
+```
+
 ## ibmcloud account org
 {: #ibmcloud_account_org}
 
 显示指定组织的信息。
 
 ```
-ibmcloud account org ORG_NAME [--guid]
+ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -106,8 +116,12 @@ ibmcloud account org ORG_NAME [--guid]
    <dl>
    <dt>ORG_NAME（必需）</dt>
    <dd>组织的名称。</dd>
-   <dt>--guid（可选）</dt>
-   <dd>显示组织的 GUID。</dd>
+   <dt>-r REGION</dt>
+   <dd>区域名称。如果未指定，将缺省为当前区域。如果设置为“all”，将列出所有区域中给定名称的组织。</dd>
+   <dt>--guid</dt>
+   <dd>检索并显示给定组织的 GUID。将禁止组织的所有其他输出。此选项与“--output”互斥。</dd>
+   <dt>--output REGION</dt>
+   <dd>指定输出格式，目前仅支持 JSON。此选项与“--guid”互斥。</dd>
    </dl>
 
 <strong>示例</strong>：
@@ -197,21 +211,85 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 列出所有空间
 
 ```
-ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
+ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 ```
+
+<strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
    <dl>
-   <dt>-o </dt>
+   <dt>-o ORG_NAME</dt>
    <dd>组织名称。列出指定组织下的空间。如果未指定，将缺省为当前组织。</dd>
-   <dt>-r</dt>
+   <dt>-r REGION-NAM</dt>
    <dd>区域名称。列出指定区域下的空间。如果未指定，将缺省为当前区域。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定输出格式，目前仅支持 JSON。</dd>
    </dl>
+
+<strong>示例</strong>：
+
+列出所有空间：
+
+```
+ibmcloud account spaces
+```
+
+以 JSON 格式列出组织 `org_example` 的所有空间：
+
+```
+ibmcloud account spaces -o org_example --output JSON
+```
 
 ## ibmcloud account space
 {: #ibmcloud_account_space}
 
-此命令的功能和选项与 [cf space ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window} 命令的相同。
+显示指定空间的信息
+
+```
+ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+   <dl>
+   <dt>SPACE_NAME（必需）</dt>
+   <dd>要显示的空间的名称。</dd>
+   <dt>-o ORG_NAME</dt>
+   <dd>组织名称。如果未指定，将缺省为当前组织。</dd>
+   <dt>--guid</dt>
+   <dd>检索并显示给定空间的 GUID。将禁止空间的所有其他输出。此选项与“--output”互斥。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定输出格式，目前仅支持 JSON。将禁止空间的所有其他输出。此选项与“--guid”互斥。</dd>
+   <dt>--security-group-rules</dt>
+   <dd>检索与空间关联的所有安全组的规则。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+显示空间 `space_example` 的信息：
+
+```
+ibmcloud account space space_example
+```
+
+显示空间 `space_example` 的 GUID：
+
+```
+ibmcloud account space space_example --guid
+```
+
+以 JSON 格式显示空间 `space_example` 的信息：
+
+```
+ibmcloud account space space_example --output JSON
+```
+
+显示空间 `space_example` 的安全组规则：
+
+```
+ibmcloud account space space_example --security-group-rules
+```
 
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
@@ -308,8 +386,7 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME（必需）</dt>
    <dd>要将此用户分配到的组织的名称。</dd>
    <dt>ORG_ROLE（必需）</dt>
-   <dd>要将此用户分配到的组织角色的名称。例如：
-   <ul>
+   <dd>要将此用户分配到的组织角色的名称。例如：<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -345,8 +422,7 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME（必需）</dt>
    <dd>要将此用户从中除去的组织的名称。</dd>
    <dt>ORG_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的组织角色的名称。例如：
-   <ul>
+   <dd>要将此用户从中除去的组织角色的名称。例如：<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -402,8 +478,7 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户分配到的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户分配到的空间角色的名称。例如：
-   <ul>
+   <dd>要将此用户分配到的空间角色的名称。例如：<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -439,8 +514,7 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户从中除去的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的空间角色的名称。例如：
-   <ul>
+   <dd>要将此用户从中除去的空间角色的名称。例如：<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -554,85 +628,3 @@ ibmcloud account user-reinvite USER_EMAIL
    <dt>USER_EMAIL（必需）</dt>
    <dd>要重新邀请的用户的电子邮件。</dd>
 </dl>
-
-## ibmcloud app domain-cert
-{: #ibmcloud_app_domain_cert}
-
-列出域的证书信息。
-
-```
-ibmcloud app domain-cert DOMAIN_NAME
-```
-
-<strong>先决条件</strong>：端点和登录
-
-<strong>命令选项</strong>：
-<dl>
-<dt>DOMAIN_NAME（必需）</dt>
-<dd>托管证书的域。</dd>
-</dl>
-
-
-<strong>示例</strong>：
-
-查看域 `ibmcxo-eventconnect.com` 的证书信息：
-
-```
-ibmcloud app domain-cert ibmcxo-eventconnect.com
-```
-
-## ibmcloud app domain-cert-add
-{: #ibmcloud_app_domain_cert_add}
-
-将证书添加到当前组织中的指定域。
-
-```
-ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-   <dl>
-   <dt>DOMAIN（必需）</dt>
-   <dd>将证书添加到其中的域。</dd>
-   <dt>-k <i>PRIVATE_KEY_FILE</i>（必需）</dt>
-   <dd>专用密钥文件路径。</dd>
-   <dt>-c <i>CERT_FILE</i>（必需）</dt>
-   <dd>证书文件路径。</dd>
-   <dt>-p <i>PASSWORD</i>（可选）</dt>
-   <dd>证书的密码。</dd>
-   <dt>-i <i>INTERMEDIATE_CERT_FILE</i>（可选）</dt>
-   <dd>中间证书文件路径。</dd>
-   <dt>-t <i>TRUST_STORE_FILE</i>（可选）</dt>
-   <dd>信任库文件。</dd>
-   </dl>
-
-
-<strong>示例</strong>：
-
-将证书添加到域 `ibmcxo-eventconnect.com`：
-
-```
-ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
-```
-
-## ibmcloud app domain-cert-remove
-{: #ibmcloud_app_domain_cert_remove}
-
-从当前组织中的指定域除去证书。
-
-```
-ibmcloud app domain-cert-remove DOMAIN [-f]
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>DOMAIN（必需）</dt>
-   <dd>要从中除去证书的域。</dd>
-   <dt>-f（可选）</dt>
-   <dd>强制删除而不确认。</dd>
-   </dl>

@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构负载均衡器
+# {{site.data.keyword.Bluemix_notm}} 基础架构负载均衡器
 
-<table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构负载均衡器命令</caption>
+使用以下命令可通过 {{site.data.keyword.Bluemix_notm}} 基础架构负载均衡器服务管理负载均衡器。
+{: shortdesc}
+
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 负载均衡器命令（命令带有可获取命令更多信息的链接）">
  <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} 基础架构负载均衡器命令</th>
  </thead>
  <tbody>
  <tr>

@@ -5,20 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 管理 {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP
+# {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP
 
-<table summary="按字母顺序排序的常规 {{site.data.keyword.Bluemix_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
-<caption>表 1. {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP 命令</caption>
- <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}} 基础架构全局 IP 命令</th>
- </thead>
+使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP 服务中的全局 IP。
+{: shortdesc}
+
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP 命令（命令带有可获取命令更多信息的链接）">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>
