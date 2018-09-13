@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -33,7 +33,7 @@ To get started, install the {{site.data.keyword.Bluemix_notm}} CLI. See
 ibmcloud plugin uninstall private-network-peering
 ```
 ### Install locally
-Download the private network peering plug-in for your platform from [{{site.data.keyword.ibmcloud_notm}} CLI plug-in repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
+Download the private network peering plug-in for your platform from the [{{site.data.keyword.Bluemix_notm}} CLI plug-in repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
 
 Install the private network peering plug-in by using the following command:
 
@@ -63,11 +63,11 @@ ibmcloud plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Install from {{site.data.keyword.ibmcloud_notm}} repository
+### Install from the {{site.data.keyword.Bluemix_notm}} repository
 
-Follow these steps to install the plug-in from the {{site.data.keyword.ibmcloud_notm}} repository:
+Follow these steps to install the plug-in from the the {{site.data.keyword.Bluemix_notm}} repository:
 
-1. Add the {{site.data.keyword.ibmcloud_notm}} plug-in registry endpoint:
+1. Add the {{site.data.keyword.Bluemix_notm}} plug-in registry endpoint:
 	```
 	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
