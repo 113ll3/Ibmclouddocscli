@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CF-Apps sowie Domänen, Routen und Zertifikate für Apps verwalten
+# Cloud Foundry-Anwendungen
 {: #ibmcloud_commands_apps}
 
+Verwenden Sie die folgenden Befehle, um Cloud Foundry-Anwendungen, -Domänen und -Routen zu verwalten.
+{: shortdesc}
+
 <table summary="ibmcloud-Befehle zur Verwaltung von CF-Apps und von Domänen, Routen und Zertifikaten für Apps.">
-<caption>Tabelle 1. Befehle zur Verwaltung von CF-Apps und von Domänen, Routen und Zertifikaten für Apps</caption>
  <thead>
- <th colspan="5">Befehle zur Verwaltung von CF-Apps und von Domänen, Routen und Zertifikaten für Apps</th>
  </thead>
  <tbody>
  <tr>

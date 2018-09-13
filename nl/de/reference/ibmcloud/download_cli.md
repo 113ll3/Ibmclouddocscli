@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -32,9 +32,11 @@ Führen Sie zum Einrichten der eigenständigen {{site.data.keyword.Bluemix_notm}
    Linux X86 64 Bit: [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 Bit (ppc64le): [Installationsprogramm](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
+   Wählen Sie für 32-Bit-Versionen und ältere Versionen die Seite [Alle Versionen](/docs/cli/reference/ibmcloud/all_versions.html) aus, um sie herunterzuladen.
+
 1. Führen Sie das Installationsprogramm aus.
    * Für Mac OS und Windows führen Sie einfach das Installationsprogramm aus.
-   * Für Linux müssen Sie das Paket extrahieren und das Script `install_bluemix_cli` ausführen.
+   * Für Linux müssen Sie das Paket extrahieren und das Script `install` ausführen.
 
 1. Wählen Sie einen API-Endpunkt als Ziel aus und melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an.
 
@@ -168,9 +170,8 @@ Die folgenden Abschnitte enthalten Details zur Deinstallation der eigenständige
 
 ## Links mit weiterführenden Informationen zur {{site.data.keyword.Bluemix_notm}}-CLI
 
-* [{{site.data.keyword.Bluemix_notm}}-CLI-Funktionen mit Plug-ins erweitern](/docs/cli/reference/bluemix_cli/extend_cli.html)
-* [Allgemeine Syntax der {{site.data.keyword.Bluemix_notm}}-CLI-Befehle](/docs/cli/reference/bluemix_cli/bx_cli.html)
-* [Allgemeine Syntax der {{site.data.keyword.Bluemix_notm}}-Befehle (ibmcloud sl)](/docs/cli/reference/softlayer/index.html)
+* [{{site.data.keyword.Bluemix_notm}}-CLI-Funktionen mit Plug-ins erweitern](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [{{site.data.keyword.Bluemix_notm}}-CLI-Referenz](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## Probleme melden und Feedback abgeben
 {: #issues}

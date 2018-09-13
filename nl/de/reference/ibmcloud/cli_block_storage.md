@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Blockspeicher verwalten
+# Block Storage der {{site.data.keyword.Bluemix_notm}}-Infrastruktur
 
- <table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
-<caption>Tabelle 1. Blockspeicher der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</caption>
+Verwenden Sie die folgenden Befehle, um einen angegebenen Datenträger für den Block Storage-Service der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{: shortdesc}
+
+<table summary="Alphabetisch geordnete Block Storage-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
  <thead>
- <th colspan="6">Blockspeicher der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

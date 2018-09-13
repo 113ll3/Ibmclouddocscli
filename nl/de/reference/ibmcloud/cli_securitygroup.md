@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Sicherheitsgruppen verwalten
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Security Group
 
-<table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
-<caption>Tabelle 1. Befehle der Sicherheitsgruppe (securitygroup) der {{site.data.keyword.Bluemix_notm}}-Infrastruktur</caption>
+Verwenden Sie die folgenden Befehle, um eine Sicherheitsgruppe über den Service Security Group der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{: shortdesc}
+
+<table summary="Alphabetisch geordnete Security Group-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
  <thead>
- <th colspan="5">Befehle der Sicherheitsgruppe der {{site.data.keyword.Bluemix_notm}}-Infrastruktur</th>
  </thead>
  <tbody>
  <tr>

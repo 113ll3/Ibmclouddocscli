@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 ---
 
 {:new_window: target="_blank"}
@@ -445,14 +445,14 @@ ibmcloud update [-f]
 {: #softlayer_cli}
 
 
-Verwenden Sie die Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} in der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI), um die SoftLayer-Services zu konfigurieren und zu verwalten.
+Verwenden Sie die Befehle der Infrastrukturservices in der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI), um die Infrastrukturservices zu konfigurieren und zu verwalten.
 
 Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `ibmcloud sl`, um die Liste der verfügbaren Befehle anzuzeigen:
 
 <table summary="Allgemeine Befehle mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
-<caption>Tabelle 1. Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<caption>Tabelle 1. Allgemeine Befehle der Infrastrukturservices</caption>
  <thead>
- <th colspan="6">Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Allgemeine Befehle der Infrastrukturservices</th>
  </thead>
  <tbody>
  <tr>

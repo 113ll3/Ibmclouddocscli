@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Teilnetze verwalten
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Teilnetz
 
-<table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
-<caption>Tabelle 1. Teilnetzbefehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</caption>
+Verwenden Sie die folgenden Befehle, um die Teilnetze der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{: shortdesc}
+
+<table summary="Alphabetisch geordnete Teilnetzbefehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
  <thead>
- <th colspan="5">Infrastruktur für {{site.data.keyword.Bluemix_notm}} - Teilnetzbefehle (subnet)</th>
  </thead>
  <tbody>
  <tr>

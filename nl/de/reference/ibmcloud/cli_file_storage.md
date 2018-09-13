@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Dateispeicher verwalten
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - File Storage
 
-<table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
-<caption>Tabelle 1. Dateispeicher der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</caption>
+Verwenden Sie die folgenden Befehle, um einen angegebenen Datenträger für den File Storage-Service der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{: shortdesc}
+
+<table summary="Alphabetisch geordnete File Storage-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
  <thead>
- <th colspan="6">{{site.data.keyword.Bluemix_notm}}-Infrastruktur - Dateispeicher</th>
  </thead>
  <tbody>
  <tr>

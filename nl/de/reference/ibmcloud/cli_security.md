@@ -5,20 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Sicherheitsfunktion verwalten
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - SSH-Schlüssel und Zertifikate
 
-<table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
-<caption>Tabelle 1. Befehle für die Sicherheitsfunktion der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</caption>
+Verwenden Sie die folgenden Befehle, um SSH-Schlüssel und Zertifikate der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{: shortdesc}
 
+<table summary="Alphabetisch geordnete Sicherheitsbefehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
  <thead>
- <th colspan="5">Infrastruktur für {{site.data.keyword.Bluemix_notm}} - Sicherheitsbefehle</th>
  </thead>
  <tbody>
  <tr>

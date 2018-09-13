@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Ressourcengruppen und Ressourcen verwalten
+# Ressourcengruppen und Ressourcen
 {: #ibmcloud_commands_resource}
 
+Verwenden Sie die folgenden Befehle, um {{site.data.keyword.Bluemix_notm}}-Ressourcengruppen und -Ressourcen zu verwalten.
+{: shortdesc}
+
 <table summary="ibmcloud-Befehle zur Verwaltung von Ressourcengruppen und Ressourcen.">
-  <caption>Tabelle 1. Befehle zur Verwaltung von Ressourcengruppen und Ressourcen</caption>
   <thead>
-    <th colspan="5">Befehle zur Verwaltung von Ressourcengruppen und Ressourcen</th>
   </thead>
   <tbody>
     <tr>
@@ -806,17 +807,19 @@ ibmcloud resource service-alias-delete my-service-alias
 Mit der Lucene-Abfragesyntax nach Ressourcen suchen
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>Anfangspositionsnummer der Ressource</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>Anzahl zurückzugebender Ressourcen (maximal 10000)</dd>
+  <dt>-s, --sort-by</dt>
+  <dd>Für Sortierung zu verwendende Eigenschaft. Folgende Eingaben werden akzeptiert: `name`, `family`, `region`, `type`, `crn`.</dd>
 </dl>
 
 <strong>Beispiele</strong>:

@@ -5,21 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - VLANs verwalten
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - VLAN
 
-<table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
+Verwenden Sie die folgenden Befehle, um die VLANs der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{: shortdesc}
 
-<caption>Tabelle 1. VLAN-Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}}</caption>
-
+<table summary="Alphabetisch geordnete VLAN-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
  <thead>
- <th colspan="6">Infrastruktur für {{site.data.keyword.Bluemix_notm}} - VLAN-Befehle</th>
  </thead>
  <tbody>
  <tr>

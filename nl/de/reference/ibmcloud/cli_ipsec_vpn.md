@@ -5,20 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - IPSec VPN verwalten
+# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - IPSec VPN
 
-<table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
+Verwenden Sie die folgenden Befehle, um einen IPSec VPN-Tunnel im Service IPSec VPN der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{: shortdesc}
 
-<caption>Tabelle 1. IPSec-VPN-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur</caption>
+<table summary="Alphabetisch geordnete IPSec VPN-Befehle für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl">
  <thead>
- <th colspan="6">Infrastruktur für {{site.data.keyword.Bluemix_notm}} - IPSec-VPN-Befehle</th>
  </thead>
  <tbody>
  <tr>
