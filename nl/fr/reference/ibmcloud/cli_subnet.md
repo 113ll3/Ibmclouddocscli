@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestion du sous-réseau de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Sous-réseau de l'infrastructure {{site.data.keyword.Bluemix_notm}}
 
-<table summary="Commandes générales de l'infrastructure {{site.data.keyword.Bluemix_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
-<caption>Tableau 1. Commandes de sous-réseau de l'infrastructure {{site.data.keyword.Bluemix_notm}}</caption>
+Les commandes suivantes permettent de gérer les sous-réseaux de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Commandes de sous-réseau de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations sur la commande">
  <thead>
- <th colspan="5">Commandes de sous-réseau de l'infrastructure {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

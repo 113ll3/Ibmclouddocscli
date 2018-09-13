@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestion des applications cf et des domaines, des routes et des certificats liés aux applications
+# Applications Cloud Foundry
 {: #ibmcloud_commands_apps}
 
+Les commandes suivantes permettent de gérer les routes, les domaines et les applications Cloud Foundry.
+{: shortdesc}
+
 <table summary="Commandes ibmcloud que vous pouvez utiliser pour gérer les applications cf et les domaines, les routes et les certificats liés aux applications.">
-<caption>Tableau 1. Commandes de gestion des applications CF et des domaines, des routes et des certificats liés aux applications</caption>
  <thead>
- <th colspan="5">Commandes de gestion des applications CF et des domaines, des routes et des certificats liés aux applications</th>
  </thead>
  <tbody>
  <tr>

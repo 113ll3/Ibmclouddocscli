@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestion du groupe de sécurité de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Groupe de sécurité de l'infrastructure {{site.data.keyword.Bluemix_notm}}
 
-<table summary="Commandes générales de l'infrastructure {{site.data.keyword.Bluemix_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
-<caption>Tableau 1. Commandes securitygroup de l'infrastructure {{site.data.keyword.Bluemix_notm}}</caption>
+Les commandes suivantes permettent de gérer un groupe de sécurité à l'aide du service de groupe de sécurité de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Commandes du groupe de sécurité de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">
  <thead>
- <th colspan="5">Commandes securitygroup de l'infrastructure {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

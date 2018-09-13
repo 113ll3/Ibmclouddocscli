@@ -5,19 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestion du stockage par blocs de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Stockage par blocs de l'infrastructure {{site.data.keyword.Bluemix_notm}}
 
- <table summary="Commandes générales de l'infrastructure {{site.data.keyword.Bluemix_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
-<caption>Tableau 1. Stockage par blocs de l'infrastructure {{site.data.keyword.Bluemix_notm}}</caption>
+Les commandes suivantes permettent de gérer un volume donné pour le service de stockage par blocs de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
+<table summary="Commandes de stockage par blocs de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">
  <thead>
- <th colspan="6">Stockage par blocs de l'infrastructure {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

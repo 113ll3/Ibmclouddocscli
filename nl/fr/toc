@@ -28,13 +28,15 @@ IBM Cloud Developer Tools (Interface de ligne de commande et outils de développ
 
 	{: .navgroup id="reference"}
 	{: .topicgroup}
-	Commandes de l'interface de ligne de commande d'IBM Cloud (ibmcloud)
+	Commandes de l'interface CLI IBM Cloud (ibmcloud)
 		reference/ibmcloud/bx_cli.md
 		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_acct_org_role.md
 		reference/ibmcloud/cli_resource_group.md
 		reference/ibmcloud/cli_api_policy.md
 		reference/ibmcloud/cli_cat_plugin_billing.md
+		reference/ibmcloud/cli_cf_apps.md
+		reference/ibmcloud/cli_cf_services.md
 		reference/ibmcloud/cli_cfee.md
 		reference/ibmcloud/cli_block_storage.md
 		reference/ibmcloud/cli_cdn.md
@@ -54,7 +56,7 @@ IBM Cloud Developer Tools (Interface de ligne de commande et outils de développ
 	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
-	Plug-ins d'interface de ligne de commande IBM Cloud
+	Plug-in d'interface de ligne de commande IBM Cloud
 		plugins/api-management-cliplugin/
 		plugins/auto-scaling/index.md
 		[Interface CLI du registre de conteneurs](../services/Registry/registry_cli.html)
@@ -79,6 +81,6 @@ IBM Cloud Developer Tools (Interface de ligne de commande et outils de développ
 		sdk/sdk_network_request.md
 	{: .navgroup-end}
 
-        {: .navgroup id="help"}
+    {: .navgroup id="help"}
 	ts_createapps.md
-        {: .navgroup-end}
+    {: .navgroup-end}

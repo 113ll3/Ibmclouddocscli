@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestion des clés d'API, de l'identité et de l'accès
+# Identité, accès et clés d'API
 {: #ibmcloud_commands_iam}
 
+Les commandes suivantes permettent de gérer les clés d'API, les ID de service, les groupes d'accès et les règles d'accès/autorisation pour IAM.
+{: shortdesc}
+
 <table summary="Commandes ibmcloud que vous pouvez utiliser pour gérer les règles et les clés d'API.">
- <caption>Tableau 1. Commandes de gestion des règles et des clés d'API</caption>
   <thead>
-  <th colspan="5">Commandes de gestion des règles et des clés d'API</th>
   </thead>
   <tbody>
   <tr>
@@ -75,27 +76,27 @@ lastupdated: "2018-08-21"
   <tr>
    <td>[ibmcloud iam authorization-policies
 ](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
-   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access-groups)</td>
-   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access-group)</td>
-   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access-group-create)</td>
-   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access-group-update)</td>
+   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access_groups)</td>
+   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access_group)</td>
+   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access_group_create)</td>
+   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access_group_update)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access-group-delete)</td>
-   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access-group-users)</td>
-   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access-group-user-add)</td>
-   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access-group-user-remove)</td>
-   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access-group-user-purge)</td>
+   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access_group_delete)</td>
+   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access_group_users)</td>
+   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access_group_user_add)</td>
+   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access_group_user_remove)</td>
+   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access_group_user_purge)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access-group-service-ids)</td>
-   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access-group-service-id-add)</td>
-   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access-group-service-id-remove)</td>
-   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access-group-service-id-purge)</td>
-   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access-group-policies)</td>
+   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access_group_service_ids)</td>
+   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access_group_service_id_add)</td>
+   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access_group_service_id_remove)</td>
+   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access_group_service_id_purge)</td>
+   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access_group_policies)</td>
 </tr>
 <tr>
-   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access-group-policy)</td>
+   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access_group_policy)</td>
    <td>[ibmcloud iam access-group-policy-create](cli_api_policy.html#ibmcloud_iam_access_group_policy_create)</td>
    <td>[ibmcloud iam access-group-policy-update](cli_api_policy.html#ibmcloud_iam_access_group_policy_update)</td>
    <td>[ibmcloud iam access-group-policy-delete](cli_api_policy.html#ibmcloud_iam_access_group_policy_delete)</td>
@@ -141,9 +142,9 @@ ibmcloud iam service-id (NAME|UUID) [--uuid]
 <strong>Options de commande</strong> :
 <dl>
   <dt>NAME (obligatoire)</dt>
-  <dd>Nom du service, s'utilise exclusivement avec UUID</dd>
+  <dd>Nom du service, exclut UUID</dd>
   <dt>UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel du service, s'utilise exclusivement avec NAME</dd>
+  <dd>Identificateur unique universel du service, exclut NAME</dd>
   <dt>--uuid</dt>
   <dd>Afficher l'identificateur unique universel de l'ID de service</dd>
 </dl>
@@ -210,9 +211,9 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
 <strong>Options de commande</strong> :
 <dl>
   <dt>NAME (obligatoire)</dt>
-  <dd>Nom du service, s'utilise exclusivement avec UUID</dd>
+  <dd>Nom du service, exclut UUID</dd>
   <dt>UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel du service, s'utilise exclusivement avec NAME</dd>
+  <dd>Identificateur unique universel du service, exclut NAME</dd>
   <dt>-n, --name</dt>
   <dd>Nouveau nom du service</dd>
   <dt>-d, --description</dt>
@@ -255,9 +256,9 @@ ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 <strong>Options de commande</strong> :
 <dl>
   <dt>NAME (obligatoire)</dt>
-  <dd>Nom du service, s'utilise exclusivement avec UUID</dd>
+  <dd>Nom du service, exclut UUID</dd>
   <dt>UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel du service, s'utilise exclusivement avec NAME</dd>
+  <dd>Identificateur unique universel du service, exclut NAME</dd>
   <dt>-f, --force</dt>
   <dd>Supprimer sans confirmation</dd>
 </dl>
@@ -290,9 +291,9 @@ ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 <strong>Options de commande</strong> :
 <dl>
   <dt>NAME (obligatoire)</dt>
-  <dd>Nom du service, s'utilise exclusivement avec UUID</dd>
+  <dd>Nom du service, exclut UUID</dd>
   <dt>UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel du service, s'utilise exclusivement avec NAME</dd>
+  <dd>Identificateur unique universel du service, exclut NAME</dd>
   <dt>-f, --force</dt>
   <dd>Verrouiller sans confirmation</dd>
 </dl>
@@ -325,9 +326,9 @@ ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 <strong>Options de commande</strong> :
 <dl>
   <dt>NAME (obligatoire)</dt>
-  <dd>Nom du service, s'utilise exclusivement avec UUID</dd>
+  <dd>Nom du service, exclut UUID</dd>
   <dt>UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel du service, s'utilise exclusivement avec NAME</dd>
+  <dd>Identificateur unique universel du service, exclut NAME</dd>
   <dt>-f, --force</dt>
   <dd>Déverrouiller sans confirmation</dd>
 </dl>
@@ -408,9 +409,9 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 <strong>Options de commande</strong> :
 <dl>
 <dt>NAME (obligatoire)</dt>
-<dd>Ancien nom de la clé d'API à mettre à jour, s'utilise exclusivement avec UUID</dd>
+<dd>Ancien nom de la clé d'API à mettre à jour, exclut UUID</dd>
 <dt>UUID (obligatoire)</dt>
-<dd>Identificateur unique universel de la clé d'API à mettre à jour, s'utilise exclusivement avec NAME</dd>
+<dd>Identificateur unique universel de la clé d'API à mettre à jour, exclut NAME</dd>
 <dt>-n <i>NAME</i> (facultatif)</dt>
 <dd>Nouveau nom de la clé d'API</dd>
 <dt>-d <i>DESCRIPTION</i> (facultatif)</dt>
@@ -439,9 +440,9 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 <strong>Options de commande</strong> :
 <dl>
 <dt>NAME (obligatoire)</dt>
-<dd>Nom de la clé d'API à verrouiller, s'utilise exclusivement avec UUID</dd>
+<dd>Nom de la clé d'API à verrouiller, exclut UUID</dd>
 <dt>UUID (obligatoire)</dt>
-<dd>Identificateur unique universel de la clé d'API à supprimer, s'utilise exclusivement avec NAME</dd>
+<dd>Identificateur unique universel de la clé d'API à supprimer, exclut NAME</dd>
 <dt>-f, --force</dt>
 <dd>Force une suppression sans demander de confirmation.</dd>
 </dl>
@@ -460,9 +461,9 @@ ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 <strong>Options de commande</strong> :
 <dl>
 <dt>NAME (obligatoire)</dt>
-<dd>Nom de la clé d'API à verrouiller, s'utilise exclusivement avec UUID</dd>
+<dd>Nom de la clé d'API à verrouiller, exclut UUID</dd>
 <dt>UUID (obligatoire)</dt>
-<dd>Identificateur unique universel de la clé d'API à verrouiller, s'utilise exclusivement avec NAME</dd>
+<dd>Identificateur unique universel de la clé d'API à verrouiller, exclut NAME</dd>
 <dt>-f, --force</dt>
 <dd>Forcer le verrouillage sans confirmation.</dd>
 </dl>
@@ -495,9 +496,9 @@ ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 <strong>Options de commande</strong> :
 <dl>
 <dt>NAME (obligatoire)</dt>
-<dd>Nom de la clé d'API à déverrouiller, s'utilise exclusivement avec UUID</dd>
+<dd>Nom de la clé d'API à déverrouiller, exclut UUID</dd>
 <dt>UUID (obligatoire)</dt>
-<dd>Identificateur unique universel de la clé d'API à déverrouiller, s'utilise exclusivement avec NAME</dd>
+<dd>Identificateur unique universel de la clé d'API à déverrouiller, exclut NAME</dd>
 <dt>-f, --force</dt>
 <dd>Forcer le déverrouillage sans confirmation.</dd>
 </dl>
@@ -530,9 +531,9 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 <strong>Options de commande</strong> :
 <dl>
   <dt>SERVICE_ID_NAME (obligatoire)</dt>
-  <dd>Nom de l'ID de service, s'utilise exclusivement avec SERVICE_ID_UUID</dd>
+  <dd>Nom de l'ID de service, exclut SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de l'ID de service, s'utilise exclusivement avec SERVICE_ID_NAME</dd>
+  <dd>Identificateur unique universel de l'ID de service, exclut SERVICE_ID_NAME</dd>
   <dt>-f, --force</dt>
   <dd>Afficher les clés d'API de service sans confirmation</dd>
 </dl>
@@ -559,13 +560,13 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
 <strong>Options de commande</strong> :
 <dl>
   <dt>APIKEY_NAME (obligatoire)</dt>
-  <dd>Nom de la clé d'API, s'utilise exclusivement avec APIKEY_UUID</dd>
+  <dd>Nom de la clé d'API, exclut APIKEY_UUID</dd>
   <dt>APIKEY_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de la clé d'API, s'utilise exclusivement avec APIKEY_NAME</dd>
+  <dd>Identificateur unique universel de la clé d'API, exclut APIKEY_NAME</dd>
   <dt>SERVICE_ID_NAME (obligatoire)</dt>
-  <dd>Nom de l'ID de service, s'utilise exclusivement avec SERVICE_ID_UUID</dd>
+  <dd>Nom de l'ID de service, exclut SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de l'ID de service, s'utilise exclusivement avec SERVICE_ID_NAME</dd>
+  <dd>Identificateur unique universel de l'ID de service, exclut SERVICE_ID_NAME</dd>
   <dt>--uuid</dt>
   <dd>Afficher l'identificateur unique universel de la clé d'API de service</dd>
   <dt>-f, --force</dt>
@@ -596,9 +597,9 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>NAME (obligatoire)</dt>
   <dd>Nom de l'ID de service ou de la clé d'API de service nouvellement créée</dd>
   <dt>SERVICE_ID_NAME (obligatoire)</dt>
-  <dd>Nom de l'ID de service, s'utilise exclusivement avec SERVICE_ID_UUID</dd>
+  <dd>Nom de l'ID de service, exclut SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de l'ID de service, s'utilise exclusivement avec SERVICE_ID_NAME</dd>
+  <dd>Identificateur unique universel de l'ID de service, exclut SERVICE_ID_NAME</dd>
   <dt>-d, --description</dt>
   <dd>Description de la clé d'API</dd>
   <dt>--file</dt>
@@ -629,13 +630,13 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>Options de commande</strong> :
 <dl>
   <dt>APIKEY_NAME (obligatoire)</dt>
-  <dd>Nom de la clé d'API, s'utilise exclusivement avec APIKEY_UUID</dd>
+  <dd>Nom de la clé d'API, exclut APIKEY_UUID</dd>
   <dt>APIKEY_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de la clé d'API, s'utilise exclusivement avec APIKEY_NAME</dd>
+  <dd>Identificateur unique universel de la clé d'API, exclut APIKEY_NAME</dd>
   <dt>SERVICE_ID_NAME (obligatoire)</dt>
-  <dd>Nom de l'ID de service, s'utilise exclusivement avec SERVICE_ID_UUID</dd>
+  <dd>Nom de l'ID de service, exclut SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de l'ID de service, s'utilise exclusivement avec SERVICE_ID_NAME</dd>
+  <dd>Identificateur unique universel de l'ID de service, exclut SERVICE_ID_NAME</dd>
   <dt>-n, --name</dt>
   <dd>Nouveau nom de la clé d'API de service</dd>
   <dt>-d, --description</dt>
@@ -666,13 +667,13 @@ ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>Options de commande</strong> :
 <dl>
   <dt>APIKEY_NAME (obligatoire)</dt>
-  <dd>Nom de la clé d'API, s'utilise exclusivement avec APIKEY_UUID</dd>
+  <dd>Nom de la clé d'API, exclut APIKEY_UUID</dd>
   <dt>APIKEY_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de la clé d'API, s'utilise exclusivement avec APIKEY_NAME</dd>
+  <dd>Identificateur unique universel de la clé d'API, exclut APIKEY_NAME</dd>
   <dt>SERVICE_ID_NAME (obligatoire)</dt>
-  <dd>Nom de l'ID de service, s'utilise exclusivement avec SERVICE_ID_UUID</dd>
+  <dd>Nom de l'ID de service, exclut SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de l'ID de service, s'utilise exclusivement avec SERVICE_ID_NAME</dd>
+  <dd>Identificateur unique universel de l'ID de service, exclut SERVICE_ID_NAME</dd>
   <dt>-f, --force</dt>
   <dd>Supprimer sans confirmation</dd>
 </dl>
@@ -699,13 +700,13 @@ ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SER
 <strong>Options de commande</strong> :
 <dl>
   <dt>APIKEY_NAME (obligatoire)</dt>
-  <dd>Nom de la clé d'API, s'utilise exclusivement avec APIKEY_UUID</dd>
+  <dd>Nom de la clé d'API, exclut APIKEY_UUID</dd>
   <dt>APIKEY_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de la clé d'API, s'utilise exclusivement avec APIKEY_NAME</dd>
+  <dd>Identificateur unique universel de la clé d'API, exclut APIKEY_NAME</dd>
   <dt>SERVICE_ID_NAME (obligatoire)</dt>
-  <dd>Nom de l'ID de service, s'utilise exclusivement avec SERVICE_ID_UUID</dd>
+  <dd>Nom de l'ID de service, exclut SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de l'ID de service, s'utilise exclusivement avec SERVICE_ID_NAME</dd>
+  <dd>Identificateur unique universel de l'ID de service, exclut SERVICE_ID_NAME</dd>
   <dt>-f, --force</dt>
   <dd>Verrouiller sans confirmation</dd>
 </dl>
@@ -732,13 +733,13 @@ ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 <strong>Options de commande</strong> :
 <dl>
   <dt>APIKEY_NAME (obligatoire)</dt>
-  <dd>Nom de la clé d'API, s'utilise exclusivement avec APIKEY_UUID</dd>
+  <dd>Nom de la clé d'API, exclut APIKEY_UUID</dd>
   <dt>APIKEY_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de la clé d'API, s'utilise exclusivement avec APIKEY_NAME</dd>
+  <dd>Identificateur unique universel de la clé d'API, exclut APIKEY_NAME</dd>
   <dt>SERVICE_ID_NAME (obligatoire)</dt>
-  <dd>Nom de l'ID de service, s'utilise exclusivement avec SERVICE_ID_UUID</dd>
+  <dd>Nom de l'ID de service, exclut SERVICE_ID_UUID</dd>
   <dt>SERVICE_ID_UUID (obligatoire)</dt>
-  <dd>Identificateur unique universel de l'ID de service, s'utilise exclusivement avec SERVICE_ID_NAME</dd>
+  <dd>Identificateur unique universel de l'ID de service, exclut SERVICE_ID_NAME</dd>
   <dt>-f, --force</dt>
   <dd>Déverrouiller sans confirmation</dd>
 </dl>
@@ -821,21 +822,21 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dt>--file <i>FILE</i> (facultatif)</dt>
 <dd>Fichier JSON de définition de règle</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (facultatif)</dt>
-<dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option s'utilise exclusivement avec '--file'.</dd>
+<dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option exclut '--file'.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (facultatif)</dt>
-<dd>Nom de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Nom de service de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i> (facultatif)</dt>
-<dd>Identificateur global unique de l'instance de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Identificateur global unique de l'instance de service de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--region <i>REGION</i> (facultatif)</dt>
-<dd>Région de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Région de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (facultatif)</dt>
-<dd>Type de ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Type de ressource de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--resource <i>RESOURCE</i> (facultatif)</dt>
-<dd>Ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Ressource de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (facultatif)</dt>
-<dd>Nom du groupe de ressources. S'utilise exclusivement avec les options '--file', '--resource' et '--resource-group-id'.</dd>
+<dd>Nom du groupe de ressources. Exclut les options '--file', '--resource' et '--resource-group-id'.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (facultatif)</dt>
-<dd>ID du groupe de ressources. S'utilise exclusivement avec les options '--file', '--resource' et '--resource-group-name'.</dd>
+<dd>ID du groupe de ressources. Exclut les options '--file', '--resource' et '--resource-group-name'.</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -895,21 +896,21 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dt>--file <i>FILE</i> (facultatif)</dt>
 <dd>Fichier JSON de définition de règle</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (facultatif)</dt>
-<dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option s'utilise exclusivement avec '--file'.</dd>
+<dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option exclut '--file'.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (facultatif)</dt>
-<dd>Nom de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Nom de service de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i> (facultatif)</dt>
-<dd>Identificateur global unique de l'instance de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Identificateur global unique de l'instance de service de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--region <i>REGION</i> (facultatif)</dt>
-<dd>Région de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Région de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--resource-type <i>RESOURCE_TYPE</i> (facultatif)</dt>
-<dd>Type de ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Type de ressource de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--resource <i>RESOURCE</i> (facultatif)</dt>
-<dd>Ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+<dd>Ressource de la définition de règle. Exclut l'option '--file'.</dd>
 <dt>--resource-group-name <i>RESOURCE_GROUP_NAME</i> (facultatif)</dt>
-<dd>Nom du groupe de ressources. S'utilise exclusivement avec les options '--file', '--resource' et '--resource-group-id'.</dd>
+<dd>Nom du groupe de ressources. Exclut les options '--file', '--resource' et '--resource-group-id'.</dd>
 <dt>--resource-group-id <i>RESOURCE_GROUP_ID</i> (facultatif)</dt>
-<dd>ID du groupe de ressources. S'utilise exclusivement avec les options '--file', '--resource' et '--resource-group-name'.</dd>
+<dd>ID du groupe de ressources. Exclut les options '--file', '--resource' et '--resource-group-name'.</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -986,7 +987,7 @@ ibmcloud iam user-policy-delete name@example.com user-policy-id -f
 Répertorier toutes les règles de service du service spécifié
 
 ```
-ibmcloud iam service-policies SERVICE_ID [--json] [-f, --force]
+ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
@@ -995,9 +996,9 @@ ibmcloud iam service-policies SERVICE_ID [--json] [-f, --force]
 <dl>
   <dt>SERVICE_ID (obligatoire)</dt>
   <dd>Nom ou identificateur unique universel de l'ID de service</dd>
-  <dt>-json</dt>
-  <dd>Afficher la règle au format JSON</dd>
-  <dt>-f, --force</dt>
+  <dt>--output FORMAT (facultatif)</dt>
+  <dd>Indiquez un format de sortie pour les stratégies de service. Seul JSON est pris en charge pour l'instant.</dd>
+  <dt>-f, --force (facultatif)</dt>
   <dd>Afficher les règles de service sans confirmation</dd>
 </dl>
 
@@ -1020,7 +1021,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 Afficher les détails d'une règle de service
 
 ```
-ibmcloud iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
+ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
@@ -1031,9 +1032,9 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--json] [-f, --force]
   <dd>Nom ou identificateur unique universel de l'ID de service</dd>
   <dt>POLICY_ID (obligatoire)</dt>
   <dd>ID de la règle de service<dd>
-  <dt>-json</dt>
-  <dd>Afficher la règle au format JSON</dd>
-  <dt>-f, --force</dt>
+  <dt>--output FORMAT (facultatif)</dt>
+  <dd>Indiquez un format de sortie pour la stratégie de service. Seul JSON est pris en charge pour l'instant.</dd>
+  <dt>-f, --force (facultatif)</dt>
   <dd>Afficher la règle de service sans confirmation</dd>
 </dl>
 
@@ -1066,23 +1067,23 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dt>SERVICE_ID (obligatoire)</dt>
   <dd>Nom ou identificateur unique universel de l'ID de service</dd>
   <dt>--file</dt>
-  <dd>Fichier JSON de définition de règle. S'utilise exclusivement avec les options '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' et '--resource-group-id'.</dd>
+  <dd>Fichier JSON de définition de règle. Exclut les options '-r, --roles', '--service-name', '--service-instance', '--region', '--resource-type', '--resource', '--resource-group-name' et '--resource-group-id'.</dd>
   <dt>-r, --roles</dt>
-  <dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option exclut '--file'.</dd>
   <dt>--service-name</dt>
-  <dd>Nom de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Nom de service de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>--service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>Identificateur global unique de l'instance de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Identificateur global unique de l'instance de service de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>-region</dt>
-  <dd>Région de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Région de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>--resource-type</dt>
-  <dd>Type de ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Type de ressource de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>--resource</dt>
-  <dd>Ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Ressource de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>--resource-group-name</dt>
-  <dd>Nom du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-id'.</dd>
+  <dd>Nom du groupe de ressources. Exclut '--file' et '--resource-group-id'.</dd>
   <dt>--resource-group-id </dt>
-  <dd>ID du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-name'.</dd>
+  <dd>ID du groupe de ressources. Exclut '--file' et '--resource-group-name'.</dd>
   <dt>-f, --force</dt>
   <dd>Créer la règle de service sans confirmation</dd>
 </dl>
@@ -1118,23 +1119,23 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dt>POLICY_ID (obligatoire)</dt>
   <dd>ID de la règle de service<dd>
   <dt>--file</dt>
-  <dd>Fichier JSON de définition de règle. S'utilise exclusivement avec les options -r, --roles, --service-name, --service-instance, --region, --resource-type, --resource, resource-group-name et resource-group-id.</dd>
+  <dd>Fichier JSON de définition de règle. Exclut les options -r, --roles, --service-name, --service-instance, --region, --resource-type, --resource, resource-group-name et resource-group-id.</dd>
   <dt>-r, --roles</dt>
-  <dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option exclut '--file'.</dd>
   <dt>-service-name</dt>
-  <dd>Nom de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Nom de service de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>Identificateur global unique de l'instance de service de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Identificateur global unique de l'instance de service de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>-region</dt>
-  <dd>Région de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Région de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>-resource-type</dt>
-  <dd>Type de ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Type de ressource de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>-resource</dt>
-  <dd>Ressource de la définition de règle. S'utilise exclusivement avec l'option '--file'.</dd>
+  <dd>Ressource de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>--resource-group-name</dt>
-  <dd>Nom du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-id'.</dd>
+  <dd>Nom du groupe de ressources. Cette option exclut '--file' et '--resource-group-id'.</dd>
   <dt>--resource-group-id </dt>
-  <dd>ID du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-name'.</dd>
+  <dd>ID du groupe de ressources. Cette option exclut '--file' et '--resource-group-name'.</dd>
   <dt>-f, --force</dt>
   <dd>Mettre à jour la règle de service sans confirmation</dd>
 </dl>
@@ -1681,21 +1682,21 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dt>--file</dt>
   <dd>Fichier JSON de définition de règle</dd>
   <dt>-roles</dt>
-  <dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option exclut '--file'.</dd>
   <dt>-service-name</dt>
-  <dd>Nom de service de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Nom de service de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>Identificateur global unique de l'instance de service de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Identificateur global unique de l'instance de service de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-region</dt>
-  <dd>Région de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Région de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-resource-type</dt>
-  <dd>Type de ressource de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Type de ressource de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-resource</dt>
-  <dd>Ressource de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Ressource de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-resource-group-name</dt>
-  <dd>Nom du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-id'.</dd>
+  <dd>Nom du groupe de ressources. Cette option exclut '--file' et '--resource-group-id'.</dd>
   <dt>-resource-group-id</dt>
-  <dd>ID du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-name'.</dd>
+  <dd>ID du groupe de ressources. Cette option exclut '--file' et '--resource-group-name'.</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -1747,21 +1748,21 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dt>--file</dt>
   <dd>Fichier JSON de définition de règle</dd>
   <dt>--roles</dt>
-  <dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Noms de rôle de la définition de règle. Pour connaître les rôles pris en charge d'un service spécifique, exécutez 'ibmcloud iam roles --service SERVICE_NAME'. Cette option exclut '--file'.</dd>
   <dt>-service-name</dt>
-  <dd>Nom de service de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Nom de service de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-service-instance <i>SERVICE_INSTANCE_GUID</i></dt>
-  <dd>Identificateur global unique de l'instance de service de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Identificateur global unique de l'instance de service de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-region</dt>
-  <dd>Région de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Région de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-resource-type</dt>
-  <dd>Type de ressource de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Type de ressource de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-resource</dt>
-  <dd>Ressource de la définition de règle. Cette option s'utilise exclusivement avec '--file'.</dd>
+  <dd>Ressource de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-resource-group-name</dt>
-  <dd>Nom du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-id'.</dd>
+  <dd>Nom du groupe de ressources. Cette option exclut '--file' et '--resource-group-id'.</dd>
   <dt>-resource-group-id</dt>
-  <dd>ID du groupe de ressources. Cette option s'utilise exclusivement avec '--file' et '--resource-group-name'.</dd>
+  <dd>ID du groupe de ressources. Cette option exclut '--file' et '--resource-group-name'.</dd>
 </dl>
 
 <strong>Exemples</strong> :

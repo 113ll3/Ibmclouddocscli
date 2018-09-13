@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -33,6 +33,7 @@ Utilisez les commandes {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) sui
 - La commande [debug](#debug) permet de déboguer votre application dans un conteneur local.
 - La commande [delete](#delete) permet de supprimer une application de votre espace.
 - La commande [deploy](#deploy) permet de déployer une application sur IBM Cloud.
+- [diag](#diag) permet d'afficher les informations de version concernant les dépendances installées. 
 - La commande [edit](#edit) permet d'ajouter ou de retirer des services pour une application existante
 - La commande [enable](#enable) permet de mettre à jour une application existante à utiliser avec IBM Cloud Developer Tools
 - La commande [get-credentials](#get-credentials) permet d'obtenir les données d'identification requises par l'application pour activer l'utilisation de services IBM Cloud connectés.
@@ -50,6 +51,8 @@ Utilisez les commandes {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) sui
 
 ## Commande build
 {: #build}
+
+Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
 
 Vous pouvez générer votre application en utilisant la commande `build`. Les commandes `test`, `debug` et `run` s'attendent à trouver une application compilée, par conséquent, vous devez préalablement exécuter une opération `build`.  
 
@@ -69,7 +72,7 @@ ibmcloud dev build [--debug]
 ## Commande code
 {: #code}
 
-Utilisez la commande `code` pour télécharger une application précédemment créée avec le code de modèle d'application et les fichiers de configuration de {{site.data.keyword.Bluemix_notm}}. Cette commande est particulièrement utile lorsque vous devez extraire une deuxième copie d'une application que vous avez créée.
+Utilisez la commande `code` pour télécharger une application précédemment créée avec le code de modèle d'application et les fichiers de configuration de {{site.data.keyword.Bluemix_notm}}.  Cette commande est particulièrement utile lorsque vous devez extraire une deuxième copie d'une application que vous avez créée.
 
 Exécutez la commande suivante pour télécharger le code à partir d'une application spécifiée :
 
@@ -82,7 +85,7 @@ ibmcloud dev code <applicationName>
 ## Commande console
 {: #console}
 
-Utilisez la commande `console` pour ouvrir un navigateur Web dans la console Web de votre application sur IBM Cloud. Vous pouvez exécuter la commande `ibmcloud dev console` depuis votre dossier d'application, auquel cas l'interface de ligne de commande tente de trouver une application correspondante sur IBM Cloud portant le même ID d'application que le répertoire en cours. Si le système ne parvient pas à trouver de nom correspondant, il ouvre le tableau de bord Web et mobile sur IBM Cloud au lieu de l'application spécifique.
+Utilisez la commande `console` pour ouvrir un navigateur Web dans la console Web de votre application sur IBM Cloud.  Vous pouvez exécuter la commande `ibmcloud dev console` depuis votre dossier d'application, auquel cas l'interface de ligne de commande tente de trouver une application correspondante sur IBM Cloud portant le même ID d'application que le répertoire en cours. Si le système ne parvient pas à trouver de nom correspondant, il ouvre le tableau de bord Web et mobile sur IBM Cloud au lieu de l'application spécifique.
 
 Vous pouvez indiquer un nom d'application ; l'interface de ligne de commande ignore la mise en correspondance basée sur le nom de dossier/d'application. Dans ce cas, l'interface de ligne de commande ouvre la console de l'application nommée dans un navigateur Web.  
 
@@ -97,7 +100,7 @@ ibmcloud dev console [applicationName]
 ## Commande create
 {: #create}
 
-Créez une application en invitant à spécifier toutes les informations, notamment le type de ressource, le langage, le kit de démarrage et les options DevOps Toolchain. L'application est créée dans le répertoire de travail.
+Créer une application en invitant à spécifier toutes les informations, notamment le type de ressource, le langage, le kit de démarrage et les options DevOps Toolchain. L'application est créée dans le répertoire de travail.
 
 Pour créer une application dans le répertoire de travail et pour y associer des services, exécutez la commande suivante :
 
@@ -109,6 +112,8 @@ ibmcloud dev create
 
 ## Commande debug
 {: #debug}
+
+Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
 
 Vous pouvez déboguer votre application avec la commande `debug`. Une génération doit d'abord être effectuée pour l'application en utilisant la commande build avec l'argument `--debug`. Le lancement de la commande `debug` entraîne le démarrage d'un conteneur qui fournit un ou plusieurs ports de débogage définis par la valeur `container-port-map-debug` dans le fichier cli-config.yml ou spécifiés sur la ligne de commande. Connectez votre outil de débogage favori au port ou aux ports et vous pourrez déboguer votre application en mode normal.
 
@@ -186,7 +191,7 @@ Pour le déploiement en tant qu'application Cloud Foundry dans {{site.data.keywo
 
 Pour le déploiement d'une application en tant que conteneur, vous devez installer localement [Kubernetes](https://kubernetes.io/) et [Helm](https://github.com/kubernetes/helm). Assurez-vous que la version du client Helm n'est pas plus récente que la version du serveur Helm. Pour connaître ces informations, exécutez la commande `helm version`. Il est recommandé d'utiliser la version 2.4.2 pour la version du client.
 
-Pour déployer votre application sur Kubernetes, vous devez spécifier l'élément `deploy-target` en tant que `conteneur` dans le fichier `cli-config.yml` ou utiliser le paramètre `-t container`. 
+Pour déployer votre application sur Kubernetes, vous devez spécifier l'élément `deploy-target` en tant que `conteneur` dans le fichier `cli-config.yml` ou utiliser le paramètre `-t container`.
 
 D'autres paramètres requis pour la configuration du déploiement Kubernetes peuvent être spécifiés dans le fichier `cli-config.yml`, comme présenté ci-dessous, ou via des arguments de ligne de commande. Si vous ne définissez pas ces informations dans le fichier `cli-config.yml`, vous devez effectuer le déploiement avec le paramètre `-t container`. Vous êtes alors invité à spécifier toutes les autres valeurs.
 
@@ -261,6 +266,19 @@ Les paramètres ci-dessous peuvent être utilisés avec la commande `deploy` ou 
 * Syntaxe : `ibmcloud dev deploy --domain [domain]`
 
 
+## diag
+{: #diag}
+
+Cette commande est utilisée en tant que diagnostic pour afficher les informations de version concernant les dépendances installées pour l'interface de ligne de commande {{site.data.keyword.dev_cli_notm}}. Elle vous permet notamment de déterminer si des dépendances sont manquantes ou de déboguer plus facilement les problèmes.
+
+Exécutez la commande suivante pour afficher les versions de vos dépendances installées :
+
+```
+ibmcloud dev diag
+```
+{: codeblock}
+
+
 ## edit
 {: #edit}
 
@@ -273,7 +291,7 @@ ibmcloud dev edit
 
 Si vous n'avez aucun service existant dans votre compte, cette commande affiche une liste des groupes de services à partir desquels vous pouvez sélectionner un service à connecter à votre application.
 
-Cependant, si vous disposez de services existants dans votre compte, cette commande affiche une liste de ces services et indique si chaque service est connecté ou non à l'application. 
+Cependant, si vous disposez de services existants dans votre compte, cette commande affiche une liste de ces services et indique si chaque service est connecté ou non à l'application.
 
 La sélection d'un service connecté vous permet de déconnecter le service de votre application ou de supprimer le service de votre compte, et donc de le déconnecter de toutes les applications auxquelles il est connecté.
 
@@ -372,6 +390,8 @@ ibmcloud dev list
 ## Commande run
 {: #run}
 
+Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
+
 Vous pouvez exécuter votre application avec la commande `run`. Une génération doit d'abord être effectuée pour l'application à l'aide de la commande `build`. Lorsque vous appelez la commande `run`, le conteneur run est démarré et expose les ports tels qu'ils sont définis par le paramètre `container-port-map`. Le paramètre `run-cmd` peut être utilisé pour appeler l'application si le conteneur run Dockerfile ne contient pas de point d'entrée pour effectuer cette étape.
 
 Pour une exécution avec plusieurs conteneurs, votre application doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/), spécifié dans le fichier `cli-config.yml`, ou vous pouvez utiliser le paramètre de commande `dockerfile-run` pour en indiquer un. Pour plus d'informations, voir [Fichier Compose](/docs/apps/projects/compose_file.html).
@@ -445,6 +465,8 @@ paramètre si votre image démarre votre application.
 ## Commande shell
 {: #shell}
 
+Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
+
 Vous pouvez ouvrir l'interpréteur de commandes au sein du conteneur run ou tools à l'aide de la commande `shell`.
 
 Pour cela, il vous suffit d'exécuter la commande suivante :
@@ -485,6 +507,8 @@ Par exemple, vous pouvez exécuter la commande Linux `ls` depuis l'interpréteur
 ## Commande status
 {: #status}
 
+Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
+
 Vous pouvez effectuer une requête relative au statut des conteneurs qui sont utilisés par l'interface de ligne de commande {{site.data.keyword.dev_cli_short}}, comme défini par `container-name-run` et `container-name-tools`.
 
 Exécutez la commande suivante dans votre répertoire d'application en cours pour vérifier le statut du conteneur :
@@ -500,6 +524,8 @@ ibmcloud dev status
 
 ## Commande stop
 {: #stop}
+
+Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
 
 Vous pouvez arrêter vos conteneurs avec la commande `stop`.
 
@@ -538,6 +564,8 @@ Les paramètres ci-après sont utilisés pour la commande `stop`. Des [paramètr
 
 ## Commande test
 {: #test}
+
+Si vous utilisez Windows, vous devez exécuter Windows 10 Pro ou une version ultérieure.
 
 Vous pouvez tester votre application avec la commande `test`. Une génération doit d'abord être effectuée pour l'application à l'aide de la commande `build --debug`. Le conteneur tools est ensuite utilisé afin d'appeler `test-cmd` pour l'application.
 
@@ -635,7 +663,7 @@ Toutes les options doivent suivre la commande finale et seront appliquées à to
 Voici les commandes qui peuvent être utilisées avec cette fonction :
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Si l'une des commandes échoue pour une raison quelconque, aucune autre commande ne sera exécutée. 
+Si l'une des commandes échoue pour une raison quelconque, aucune autre commande ne sera exécutée.
 
 Si des commandes sont spécifiées après la commande `debug` ou`run`, l'exécution ne se poursuivra que si la commande `debug` ou `run` est terminée par un autre moyen que l'arrêt du processus à partir de la fenêtre de terminal en cours. La combinaison de touches `CTRL+C` permet d'arrêter le processus et de ne pas exécuter les commandes suivantes. Par exemple, vous pouvez exécuter `ibmcloud dev stop` à partir d'une autre fenêtre de terminal afin d'arrêter le conteneur actif et de poursuivre l'exécution avec la commande suivante.
 

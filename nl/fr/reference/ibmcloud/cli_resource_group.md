@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestion des ressources et des groupes de ressources
+# Groupes de ressources et ressources
 {: #ibmcloud_commands_resource}
 
+Les commandes suivantes permettent de gérer les ressources et les groupes de ressources {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
 <table summary="Commandes ibmcloud que vous pouvez utiliser pour gérer les groupes de ressources et les ressources.">
-  <caption>Tableau 1. Commandes de gestion des groupes de ressources et des ressources</caption>
   <thead>
-    <th colspan="5">Commandes de gestion des groupes de ressources et des ressources</th>
   </thead>
   <tbody>
     <tr>
@@ -258,9 +259,9 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
   <dt>SERVICE_INSTANCE_NAME ou SERVICE_INSTANCE_ID (obligatoire)</dt>
   <dd>Nom ou ID de l'instance de service</dd>
   <dt>--resource-group-name</dt>
-  <dd>Nom du groupe de ressources. Cette option s'utilise exclusivement avec '--resource-group-id'. Si aucun de ces éléments n'est indiqué, le groupe de ressources actuellement ciblé est utilisé par défaut.</dd>
+  <dd>Nom du groupe de ressources. Cette option exclut '--resource-group-id'. Si aucun de ces éléments n'est indiqué, le groupe de ressources actuellement ciblé est utilisé par défaut.</dd>
   <dt>--resource-group-id</dt>
-  <dd>ID du groupe de ressources. Cette option s'utilise exclusivement avec '--resource-group-name'. Si aucun de ces éléments n'est indiqué, le groupe de ressources actuellement ciblé est utilisé par défaut.</dd>
+  <dd>ID du groupe de ressources. Cette option exclut '--resource-group-name'. Si aucun de ces éléments n'est indiqué, le groupe de ressources actuellement ciblé est utilisé par défaut.</dd>
   <dt>-f, --force</dt>
   <dd>Migrer sans confirmation</dd>
 </dl>
@@ -307,9 +308,9 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
 
 <strong>Options de commande</strong> :
 <dl>
-  <dt>NAME (obligatoire), s'utilise exclusivement avec ID</dt>
+  <dt>NAME (obligatoire), exclut ID</dt>
   <dd>Nom de l'instance de service</dd>
-  <dt>ID (obligatoire), s'utilise exclusivement avec NAME</dt>
+  <dt>ID (obligatoire), exclut NAME</dt>
   <dd>ID de l'instance de service</dd>
   <dt>--location</dt>
   <dd>Filtrer par emplacement</dd>
@@ -375,9 +376,9 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, -
 <strong>Options de commande</strong> :
 <dl>
   <dt>Name (obligatoire)</dt>
-  <dd>Nom de l'instance de service, s'utilise exclusivement avec ID</dd>
+  <dd>Nom de l'instance de service, exclut ID</dd>
   <dt>ID (obligatoire)</dt>
-  <dd>ID de l'instance de service, s'utilise exclusivement avec NAME</dd>
+  <dd>ID de l'instance de service, exclut NAME</dd>
   <dt>-n, --name</dt>
   <dd>Nouveau nom de l'instance de service</dd>
   <dt>-t, --tags</dt>
@@ -409,9 +410,9 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 <strong>Options de commande</strong> :
 <dl>
   <dt>Name (obligatoire)</dt>
-  <dd>Nom de l'instance de service, s'utilise exclusivement avec ID</dd>
+  <dd>Nom de l'instance de service, exclut ID</dd>
   <dt>ID (obligatoire)</dt>
-  <dd>ID de l'instance de service, s'utilise exclusivement avec NAME</dd>
+  <dd>ID de l'instance de service, exclut NAME</dd>
   <dt>-f, --force</dt>
   <dd>Forcer la suppression sans confirmation</dd>
   <dt>--recursive</dt>
@@ -807,17 +808,19 @@ ibmcloud resource service-alias-delete my-service-alias
 Rechercher des ressources à l'aide de la syntaxe de requête Lucene
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion
 
 <strong>Options de commande</strong> :
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>Numéro de position de ressource de début</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>Nombre de ressources à renvoyer (10000 au maximum)</dd>
+  <dt>-s, --sort-by</dt>
+  <dd>Propriété à utiliser pour le tri. Les entrées acceptées sont les suivantes : `name`, `family`, `region`, `type` et `crn`.</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -936,9 +939,9 @@ ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 <strong>Options de commande</strong> :
 <dl>
   <dt>--tag-name (obligatoire)</dt>
-  <dd>Nom d'étiquette, s'utilise exclusivement avec --tag-crn</dd>
+  <dd>Nom d'étiquette, exclut --tag-crn</dd>
   <dt>--tag-crn (obligatoire)</dt>
-  <dd>Nom de ressource de cloud de l'étiquette, s'utilise exclusivement avec --tag-name</dd>
+  <dd>Nom de ressource de cloud de l'étiquette, exclut --tag-name</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -1008,9 +1011,9 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 <strong>Options de commande</strong> :
 <dl>
   <dt>--tag-name (obligatoire)</dt>
-  <dd>Nom d'étiquette, s'utilise exclusivement avec --tag-crn</dd>
+  <dd>Nom d'étiquette, exclut --tag-crn</dd>
   <dt>--tag-crn (obligatoire)</dt>
-  <dd>Nom de ressource de cloud de l'étiquette, s'utilise exclusivement avec --tag-name</dd>
+  <dd>Nom de ressource de cloud de l'étiquette, exclut --tag-name</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -1035,9 +1038,9 @@ ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resour
 <strong>Options de commande</strong> :
 <dl>
   <dt>--tag-name (obligatoire)</dt>
-  <dd>Nom d'étiquette, s'utilise exclusivement avec --tag-crn</dd>
+  <dd>Nom d'étiquette, exclut --tag-crn</dd>
   <dt>--tag-crn (obligatoire)</dt>
-  <dd>Nom de ressource de cloud de l'étiquette, s'utilise exclusivement avec --tag-name</dd>
+  <dd>Nom de ressource de cloud de l'étiquette, exclut --tag-name</dd>
   <dt>--resource-crn (obligatoire)</dt>
   <dd>Nom de ressource de cloud de la ressource</dd>
 </dl>
@@ -1064,9 +1067,9 @@ ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RE
 <strong>Options de commande</strong> :
 <dl>
   <dt>--tag-name (obligatoire)</dt>
-  <dd>Nom d'étiquette, s'utilise exclusivement avec --tag-crn</dd>
+  <dd>Nom d'étiquette, exclut --tag-crn</dd>
   <dt>--tag-crn (obligatoire)</dt>
-  <dd>Nom de ressource de cloud de l'étiquette, s'utilise exclusivement avec --tag-name</dd>
+  <dd>Nom de ressource de cloud de l'étiquette, exclut --tag-name</dd>
   <dt>--resource-crn (obligatoire)</dt>
   <dd>Nom de ressource de cloud de la ressource</dd>
 </dl>
@@ -1093,9 +1096,9 @@ ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYP
 <strong>Options de commande</strong> :
 <dl>
   <dt>--tag-name (obligatoire)</dt>
-  <dd>Nom d'étiquette, s'utilise exclusivement avec --tag-crn</dd>
+  <dd>Nom d'étiquette, exclut --tag-crn</dd>
   <dt>--tag-crn (obligatoire)</dt>
-  <dd>Nom de ressource de cloud de l'étiquette, s'utilise exclusivement avec --tag-name</dd>
+  <dd>Nom de ressource de cloud de l'étiquette, exclut --tag-name</dd>
   <dt>--tag-type (obligatoire)</dt>
   <dd>Type d'étiquette</dd>
 </dl>
