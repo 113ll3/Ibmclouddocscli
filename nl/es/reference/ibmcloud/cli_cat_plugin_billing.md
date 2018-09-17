@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestión de los valores de catálogo, plug-ins y facturación
+# Plugins de catálogo, facturas y CLI
 {: #ibmcloud_commands_settings}
 
+Utilice los mandatos siguientes para gestionar los plugins de catálogo, uso/facturación y CLI de {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
 <table summary="mandatos ibmcloud que puede utilizar para gestionar los valores de catálogo, plug-ins, facturación y seguridad de {{site.data.keyword.Bluemix_notm}}.">
-<caption>Tabla 1. Mandatos para gestionar los valores de catálogo, plug-ins, facturación y seguridad de {{site.data.keyword.Bluemix_notm}}</caption>
  <thead>
- <th colspan="5">Mandatos para gestionar los valores de catálogo, plug-ins, facturación y seguridad de {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -471,7 +472,7 @@ ibmcloud catalog runtimes -d
 Mostrar el uso mensual de la cuenta actual (solo el administrador de la cuenta)
 
 ```
-ibmcloud billing account-usage [-d YYYY-MM] [--json]
+ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -481,8 +482,8 @@ ibmcloud billing account-usage [-d YYYY-MM] [--json]
 <dl>
   <dt>-d MONTH_DATE (opcional)</dt>
   <dd>Mostrar datos para el mes y la fecha especificados utilizando el formato AAAA-MM. Si no se especifica, se muestra el uso en el mes actual.</dd>
-  <dt>--json (opcional)</dt>
-  <dd>Mostrar el resultado del uso en formato JSON.</dd>
+  <dt>--output FORMAT (opcional)</dt>
+  <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -499,7 +500,7 @@ ibmcloud billing account-usage -d 2016-06
 Mostrar el uso mensual de una organización (solo el administrador de la cuenta o el gestor de facturación de la organización)
 
 ```
-ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -511,8 +512,8 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>Nombre de la organización.</dd>
   <dt>-d MONTH_DATE (opcional)</dt>
   <dd>Mostrar datos para el mes y la fecha especificados utilizando el formato AAAA-MM. Si no se especifica, se muestra el uso en el mes actual.</dd>
-  <dt>--json (opcional)</dt>
-  <dd>Mostrar el resultado del uso en formato JSON.</dd>
+  <dt>--output FORMAT (opcional)</dt>
+  <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
 </dl>
 
 ## ibmcloud billing resource-group-usage
@@ -521,7 +522,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--json]
 Mostrar el uso mensual de un grupo de recursos (solo el administrador de la cuenta o el administrado del grupo de recursos)
 
 ```
-ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -533,8 +534,8 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
   <dd>Nombre del grupo de recursos.</dd>
   <dt>-d MONTH_DATE (opcional)</dt>
   <dd>Mostrar datos para el mes y la fecha especificados utilizando el formato AAAA-MM. Si no se especifica, se muestra el uso en el mes actual.</dd>
-  <dt>--json (opcional)</dt>
-  <dd>Mostrar el resultado del uso en formato JSON.</dd>
+  <dt>--output FORMAT (opcional)</dt>
+  <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
 </dl>
 
 ## ibmcloud billing resource-instances-usage
@@ -543,7 +544,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 Mostrar el uso mensual de las instancias de recurso de la cuenta actual.
 
 ```
-ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
+ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -557,8 +558,8 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dd>Filtrar instancia por grupo de recursos.</dd>
   <dt>-d MONTH_DATE (opcional)</dt>
   <dd>Mostrar datos para el mes y la fecha especificados utilizando el formato AAAA-MM. Si no se especifica, se muestra el uso en el mes actual.</dd>
-  <dt>--json (opcional)</dt>
-  <dd>Mostrar el resultado del uso en formato JSON.</dd>
+  <dt>--output FORMAT (opcional)</dt>
+  <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
 </dl>
 
 ## ibmcloud plugin repos

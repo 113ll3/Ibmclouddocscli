@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IAM API キー、ID およびアクセス権限
+# API キー、ID およびアクセス権限
 {: #ibmcloud_commands_iam}
 
 以下のコマンドを使用して、IAM の API キー、サービス ID、アクセス・グループ、およびアクセス・ポリシー/許可ポリシーを管理します。

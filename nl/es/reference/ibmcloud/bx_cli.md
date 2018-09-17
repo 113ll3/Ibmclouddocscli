@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-28"
 ---
 
 {:new_window: target="_blank"}
@@ -445,14 +445,14 @@ ibmcloud update [-f]
 {: #softlayer_cli}
 
 
-Utilice los mandatos de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}} en la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} para configurar y gestionar los servicios de SoftLayer.
+Utilice los mandatos de servicio de la infraestructura en la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} para configurar y gestionar los servicios de infraestructura.
 
 Se da soporte a los mandatos siguientes. Utilice el mandato `ibmcloud sl` para ver la lista de mandatos disponibles:
 
 <table summary="Mandatos ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 1. Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<caption>Tabla 1. Mandatos de servicio de infraestructura general</caption>
  <thead>
- <th colspan="6">Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Mandatos de servicio de infraestructura general</th>
  </thead>
  <tbody>
  <tr>

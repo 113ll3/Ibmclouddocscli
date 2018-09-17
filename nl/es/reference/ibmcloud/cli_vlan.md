@@ -5,21 +5,20 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestión de VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}
 
-<table summary="Mandatos de infraestructura generales de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+Utilice los mandatos siguientes para gestionar VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
 
-<caption>Tabla 1. Mandatos de VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}</caption>
-
+<table summary="Mandatos VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
  <thead>
- <th colspan="6">Mandatos VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}</th>
  </thead>
  <tbody>
  <tr>

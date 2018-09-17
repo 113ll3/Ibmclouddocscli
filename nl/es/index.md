@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Iniciación a las herramientas de desarrollador de {{site.data.keyword.Bluemix_notm}}
+# Iniciación a la CLI de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-En esta guía de aprendizaje, instalará un conjunto de herramientas de desarrollador de {{site.data.keyword.Bluemix}}, verificará la instalación y configurará el entorno. Las herramientas de desarrollador de {{site.data.keyword.Bluemix}} permite una aproximación mediante la interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones web de principio a fin, móviles y de microservicios. 
+En esta guía de aprendizaje, instalará un conjunto de herramientas de desarrollador de {{site.data.keyword.Bluemix}}, verificará la instalación y configurará el entorno. Las herramientas de desarrollador de {{site.data.keyword.Bluemix}} permite una aproximación mediante la interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones web de principio a fin, móviles y de microservicios.
 {:shortdesc}
 
-Con está instalación, obtendrá la CLI de {{site.data.keyword.Bluemix_notm}}, además de las herramientas siguientes: 
+Con está instalación, obtendrá la CLI de {{site.data.keyword.Bluemix_notm}} autónoma:
 
 * `Homebrew` (solo Mac)
 * `Git`
@@ -39,8 +39,8 @@ Con está instalación, obtendrá la CLI de {{site.data.keyword.Bluemix_notm}}, 
 
 Necesita una cuenta de [{{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y los siguientes requisitos del sistema:
 
-* Si está utilizando Microsoft Windows &trade;, debe utilizar Windows 10 Pro o posterior.
-* Debe utilizar el canal estable para Docker con una versión mínima de 1.13.1. 
+* Si ejecuta Windows, es posible que algunas funciones no estén soportadas si no se trata de Windows 10 Pro.
+* Debe utilizar el canal estable para Docker con una versión mínima de 1.13.1.
 
 ## Paso 1. Ejecutar el mandato de instalación
 {: #step1}
@@ -48,11 +48,11 @@ Necesita una cuenta de [{{site.data.keyword.Bluemix_notm}} ](https://console.blu
 * Para Mac y Linux, ejecute el mandato siguiente:
 
   ```
-  curl -sL http://ibm.biz/idt-installer | bash
+  curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
-  
-* Para Windows 10 Pro, ejecute el mandato siguiente como administrador:
+
+* Para Windows, ejecute el mandato siguiente como administrador:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -61,8 +61,10 @@ Necesita una cuenta de [{{site.data.keyword.Bluemix_notm}} ](https://console.blu
 
   Pulse con el botón derecho del ratón el icono de Windows PowerShell y seleccione **Ejecutar como administrador**.
   {: tip}
-  
-  Para obtener instrucciones sobre la instalación manual de estas herramientas, consulte [Reinstalación de herramientas](/docs/cli/ts_createapps.html#appendix).
+
+  También puede descargar el script del instalador desde nuestro [repositorio de GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+
+  Para ver los pasos necesarios para instalar estas herramientas manualmente, consulte [Reinstalación de herramientas](/docs/cli/ts_createapps.html#appendix).
 
 ## Paso 2. Verificar la instalación
 {: #step2}
@@ -79,7 +81,7 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 ## Paso 3. Configurar el entorno
 {: #step3}
 
-1. Conéctese a un punto final de API en su región de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la región de {{site.data.keyword.Bluemix_notm}} EE.UU. Sur:
+1. Conéctese a un punto final de API en su región de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la región EE.UU. sur de {{site.data.keyword.Bluemix_notm}}:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -93,7 +95,7 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 	```
 	{: codeblock}
     <br>
-    
+
 	Si se rechazan sus credenciales, puede que esté utilizando un ID federado. Consulte [Inicio de sesión con un ID federado](/docs/iam/login_fedid.html#federated_id) para obtener más detalles.
 	{: tip}
 
@@ -103,17 +105,15 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 	ibmcloud target --cf
 	```
 	{: codeblock}
-	
+
 	Opcionalmente, puede utilizar la salida del mandato anterior para establecer manualmente su organización y espacio con el siguiente mandato:
 
 	```
 	ibmcloud target -o <value> -s <value>
 	```
 	{: codeblock}
-	
-Para informar de problemas o enviar comentarios, puede utilizar [Slack de IBM Cloud Tech - canal #developer-tools](https://ibm-cloud-tech.slack.com).  Solicite acceso de equipo en [https://slack-invite-ibm-cloud-tech.mybluemix.net/](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Pasos siguientes
 {: #next-steps}
 
-Ahora está listo para desarrollar y desplegar su primera app. Consulte [Despliegue y desarrollo de apps](/docs/cli/idt/index.html) para obtener más información.
+Ahora está listo para desarrollar y desplegar su primera aplicación. Consulte [Creación y despliegue de apps mediante la CLI](/docs/apps/create-deploy-cli.html) para obtener más información.

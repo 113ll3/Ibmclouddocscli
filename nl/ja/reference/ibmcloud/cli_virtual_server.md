@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 仮想サーバー
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー仮想サーバー
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー仮想サーバーを管理します。
 {: shortdesc}

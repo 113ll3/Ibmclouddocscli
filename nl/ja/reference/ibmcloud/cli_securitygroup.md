@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# セキュリティー・グループ
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・セキュリティー・グループ
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・セキュリティー・グループ・サービスを使用してセキュリティー・グループを管理します。
 {: shortdesc}

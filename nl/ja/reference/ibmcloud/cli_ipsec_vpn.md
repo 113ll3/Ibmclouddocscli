@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IPSec VPN
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー IPSec VPN
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー IPSec VPN サービスの IPSec VPN トンネルを管理します。
 {: shortdesc}

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# ファイル・ストレージ
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ファイル・ストレージ
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ファイル・ストレージ・サービスの指定されたボリュームを管理します。
 {: shortdesc}

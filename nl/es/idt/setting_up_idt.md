@@ -65,7 +65,7 @@ La sección [Reinstalación de herramientas](/docs/troubleshoot/ts_createapps.ht
 ## Configure su entorno
 {: #configure-environment}
 
-1. Conéctese a un punto final de API en su región de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la región de {{site.data.keyword.Bluemix_notm}} EE.UU. Sur:
+1. Conéctese a un punto final de API en su región de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la región EE.UU. sur de {{site.data.keyword.Bluemix_notm}}:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net

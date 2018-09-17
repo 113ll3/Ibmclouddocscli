@@ -830,7 +830,7 @@ ibmcloud account orgs [-r REGION] [--guid]
    <dt>-r <i>REGION</i> (opcional)</dt>
    <dd>Indica para qué región se muestra información sobre la organización. Si se establece en 'all', se listan todas las organizaciones de todas las regiones.</dd>
    <dt>--guid (opcional)</dt>
-   <dd>Muestra el GUID de las organizaciones.</dd>
+   <dd>Mostrar el GUID de las organizaciones.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:

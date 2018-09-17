@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestión de apps cf y dominios, rutas y certificados relacionados con las apps
+# Aplicaciones de Cloud Foundry
 {: #ibmcloud_commands_apps}
 
+Utilice los mandatos siguientes para gestionar aplicaciones, dominios y rutas de Cloud Foundry.
+{: shortdesc}
+
 <table summary="mandatos de ibmcloud que sirven para gestionar apps cf y dominios, rutas y certificados relacionados con las apps.">
-<caption>Tabla 1. Mandatos para gestionar apps cf y dominios, rutas y certificados relacionados con las apps</caption>
  <thead>
- <th colspan="5">Mandatos para gestionar apps cf y dominios, rutas y certificados relacionados con las apps</th>
  </thead>
  <tbody>
  <tr>

@@ -5,20 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestión de grupos de recursos y recursos
+# Recursos y grupos de recursos
 {: #ibmcloud_commands_resource}
 
+Utilice los mandatos siguientes para gestionar recursos y grupos de recursos de {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
+
 <table summary="Mandato de Bluemix que puede utilizar para gestionar grupos de recursos y recursos.">
-  <caption>Tabla 1. Mandatos para gestionar grupos de recursos y recursos</caption>
   <thead>
-    <th colspan="5">Mandatos para gestionar grupos de recursos y recursos</th>
   </thead>
   <tbody>
     <tr>
@@ -806,17 +807,19 @@ ibmcloud resource service-alias-delete my-service-alias
 Buscar recursos utilizando la sintaxis de consultas de Lucene
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
 <dl>
-  <dt>-offset, --o</dt>
+  <dt>-o, -offset</dt>
   <dd>Número de posición del recurso inicial</dd>
-  <dt>-limit, --l</dt>
+  <dt>-l, -limit</dt>
   <dd>Número de recursos que se deben devolver (máximo 10000)</dd>
+  <dt>-s, --sort-by</dt>
+  <dd>Propiedad por la que ordenar. Las entradas aceptadas son `name`, `family`, `region`, `type`, `crn`.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:

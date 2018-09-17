@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-31"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -116,4 +116,4 @@ ibmcloud dev help
 ## 次のステップ
 {: #next-steps}
 
-これで、最初のアプリケーションを開発してデプロイする準備ができました。
+これで、最初のアプリケーションを開発してデプロイする準備ができました。 詳しくは、[CLI を使用したアプリの作成およびデプロイ](/docs/apps/create-deploy-cli.html)を参照してください。

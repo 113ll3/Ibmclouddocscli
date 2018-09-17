@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -33,6 +33,7 @@ Utilice los siguientes mandatos de CLI de {{site.data.keyword.dev_cli_notm}} (ib
 - [debug](#debug): Depura aplicaciones en un contenedor local
 - [delete](#delete): Suprime una aplicación del espacio
 - [deploy](#deploy): Despliega aplicaciones en IBM Cloud
+- [diag](#diag): Muestra información de versión sobre las dependencias instaladas
 - [edit](#edit): Añadir o eliminar servicios desde una aplicación existente
 - [enable](#enable): Actualizar una aplicación existente para utilizarla con IBM Cloud Developer Tools
 - [get-credentials](#get-credentials): Obtiene las credenciales que necesita la aplicación para habilitar el uso de los servicios de IBM Cloud conectados
@@ -50,6 +51,8 @@ Utilice los siguientes mandatos de CLI de {{site.data.keyword.dev_cli_notm}} (ib
 
 ## build
 {: #build}
+
+Si utiliza Windows &trade;, debe ejecutar Windows 10 Pro o posterior.
 
 Compile su aplicación con el mandato `build`. Los mandatos `test`, `debug` y `run` esperan encontrar una aplicación compilada, de forma que deba ejecutar una operación `build` con anterioridad.  
 
@@ -109,6 +112,8 @@ ibmcloud dev create
 
 ## debug
 {: #debug}
+
+Si utiliza Windows &trade;, debe ejecutar Windows 10 Pro o posterior.
 
 Puede depurar la aplicación a través del mandato `debug`. Primero es necesario completar una compilación con relación a la aplicación utilizando el mandato build con el argumento `--debug`. Cuando se inicia el mandato `debug`, se inicia un contenedor que proporciona uno o varios puertos de depuración tal como se defina en el valor `container-port-map-debug` en cli-config.yml o tal como se especifique en la línea de mandatos. Conecte su herramienta de depuración preferida al puerto o puertos y podrá depurar su aplicación como siempre.
 
@@ -181,7 +186,7 @@ Antes de desplegar como una aplicación Cloud Foundry en {{site.data.keyword.Blu
 
 Antes de desplegar una aplicación como un contenedor, debe instalar [Kubernetes](https://kubernetes.io/) y [Helm](https://github.com/kubernetes/helm) localmente. Asegúrese de que la versión del cliente Helm no es más reciente que la versión del servidor de Helm. Puede encontrar ambas versiones ejecutando `helm versión`. La versión recomendada del cliente es v2.4.2.
 
-Para desplegar la aplicación en Kubernetes, debe especificar `deploy-target` como `container` en `cli-config.yml` o utilizar el parámetro `-t container`. 
+Para desplegar la aplicación en Kubernetes, debe especificar `deploy-target` como `container` en `cli-config.yml` o utilizar el parámetro `-t container`.
 
 Otros parámetros necesarios para configurar el despliegue de Kubernetes también se pueden especificar en `cli-config.yml` tal como se ve a continuación o utilizando los argumentos de línea de mandatos. Si no los define en `cli-config.yml`, debe desplegar con el parámetro `-t container` y se le solicitarán el resto de los valores.
 
@@ -256,6 +261,19 @@ Los siguientes parámetros se pueden utilizar con el mandato `deploy` o actualiz
 * Uso `ibmcloud dev deploy --domain [domain]`
 
 
+## diag
+{: #diag}
+
+Este mandato se utiliza como un diagnóstico para visualizar la información de versión de las dependencias instaladas para la CLI de {{site.data.keyword.dev_cli_notm}}. Esto resultará especialmente útil para determinar si le faltan dependencias o para ayudar a depurar problemas.
+
+Ejecute el mandato siguiente para visualizar las versiones de las dependencias instaladas:
+
+```
+ibmcloud dev diag
+```
+{: codeblock}
+
+
 ## editar
 {: #edit}
 
@@ -268,7 +286,7 @@ ibmcloud dev edit
 
 Si no dispone de servicios existentes en su cuenta, este mandato le mostrará una lista de los grupos de servicios desde los que puede seleccionar un servicio para conectarse a su aplicación.
 
-Sin embargo, si tiene algún servicio existente en su cuenta, este mandato le mostrará una lista de estos servicios y si cada servicio está conectado a la aplicación o no. 
+Sin embargo, si tiene algún servicio existente en su cuenta, este mandato le mostrará una lista de estos servicios y si cada servicio está conectado a la aplicación o no.
 
 La selección de un servicio conectado le proporciona opciones para desconectar el servicio de la aplicación o para suprimir el servicio de su cuenta, desconectándola de todas las aplicaciones a las que está conectada.
 
@@ -364,6 +382,8 @@ ibmcloud dev list
 ## run
 {: #run}
 
+Si utiliza Windows &trade;, debe ejecutar Windows 10 Pro o posterior.
+
 Puede ejecutar la aplicación mediante el mandato `run`. Se debe completar primero una compilación sobre la aplicación utilizando el mandato `build`. Al invocar el mandato `run`, se inicia el contenedor de ejecución y expone los puertos tal y como se define en el parámetro `container-port-map`. El parámetro `run-cmd` se puede utilizar para invocar la aplicación si el contenedor de ejecución Dockerfile no contiene un punto de entrada para completar este paso.
 
 Para poder ejecutar varios contenedores, la aplicación debería contener un archivo [Compose](https://docs.docker.com/compose/overview/), especificado en `cli-config.yml`, o bien debería utilizar el parámetro de mandato `dockerfile-run` para especificar uno. Consulte [Archivo Compose](/docs/apps/projects/compose_file.html) para obtener más información.
@@ -434,6 +454,8 @@ Hay [parámetros adicionales](#command-parameters) compartidos con otros mandato
 ## shell
 {: #shell}
 
+Si utiliza Windows &trade;, debe ejecutar Windows 10 Pro o posterior.
+
 Puede abrir el shell dentro del contenedor de herramientas o de ejecución con el mandato `shell`.
 
 Simplemente ejecute este mandato
@@ -474,6 +496,8 @@ Por ejemplo, puede ejecutar el mandato Linux `ls` dentro del contenedor shell in
 ## status
 {: #status}
 
+Si utiliza Windows &trade;, debe ejecutar Windows 10 Pro o posterior.
+
 Puede consultar el estado de los contenedores que utiliza la CLI de {{site.data.keyword.dev_cli_short}}, tal y como se define en `container-name-run` y `container-name-tools`.
 
 Ejecute el mandato siguiente en el directorio de aplicación actual para comprobar el estado del contenedor:
@@ -489,6 +513,8 @@ ibmcloud dev status
 
 ## stop
 {: #stop}
+
+Si utiliza Windows &trade;, debe ejecutar Windows 10 Pro o posterior.
 
 Puede detener sus contenedores mediante el mandato `stop`.
 
@@ -522,6 +548,8 @@ Los parámetros siguientes se utilizan para el mandato `stop`. Hay [parámetros 
 
 ## test
 {: #test}
+
+Si utiliza Windows &trade;, debe ejecutar Windows 10 Pro o posterior.
 
 Puede probar la aplicación a través del mandato `test`. Se debe completar primero una compilación sobre la aplicación utilizando el mandato `build --debug`. A continuación, el contenedor de herramientas se utiliza para invocar `test-cmd` para la aplicación.
 
@@ -618,7 +646,7 @@ Todos los distintivos deben estar al final del mandato y se aplicarán a todos l
 Los mandatos que se pueden utilizar con esta característica son:
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Si un mandato falla por algún motivo, los mandatos subsiguientes no se ejecutarán. 
+Si un mandato falla por algún motivo, los mandatos subsiguientes no se ejecutarán.
 
 Si hay más mandatos que sigan a `debug` o `run`, la ejecución solo continuará si `debug` o `run` son interrumpidos por cualquier forma que no sea interrumpir el proceso desde la ventana de terminal actual. `Control+C` interrumpirá el proceso y los mandatos subsiguientes no se ejecutarán. Por ejemplo, puede ejecutar `ibmcloud dev stop` desde otra ventana de terminal para detener el contenedor en ejecución y continuar la ejecución del siguiente mandato.
 

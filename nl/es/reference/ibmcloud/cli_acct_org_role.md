@@ -5,64 +5,62 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestión de cuentas, usuarios y organizaciones
+# Cuentas, usuarios y organizaciones
  {: #ibmcloud_commands_account}
 
-<table summary="Mandatos de Bluemix que puede utilizar para gestionar las cuentas, las organizaciones, los espacios y los roles.">
-<caption>Tabla 1. Mandatos para gestionar cuentas, organizaciones y roles</caption>
- <thead>
- <th colspan="5">Mandatos para gestionar cuentas, organizaciones, espacios y roles</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
- <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
- <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
- <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
- <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
- </tr>
- <tr>
- <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
- <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
- <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
- <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
- <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
- <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
- <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
- <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
- <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
- <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
- <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
- <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
- <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-</tr>
- <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
- <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
- <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
- <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
- <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
- </tr>
- <tr>
-  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
-  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
- </tr>
- </tbody>
- </table>
+ Utilice los mandatos siguientes para gestionar las cuentas, los usuarios en una cuenta y los certificados de organización, espacio, roles y dominio de los servicios de Cloud Foundry.
+  {: shortdesc}
+
+  <table summary="Mandatos de Bluemix que puede utilizar para gestionar las cuentas, las organizaciones, los espacios y los roles.">
+   <thead>
+   </thead>
+   <tbody>
+   <tr>
+   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+   <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
+   <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
+   <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
+   <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+   <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
+   <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
+   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+   </tr>
+   <tr>
+   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+   <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
+   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+   <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
+   <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
+  </tr>
+   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+   </tr>
+   <tr>
+    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+   </tr>
+   </tbody>
+   </table>
 
  ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
@@ -70,17 +68,23 @@ lastupdated: "2018-08-21"
 Listar todas las organizaciones
 
 ```
-ibmcloud account orgs [-r REGION] [--guid]
+ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID] [-u ACCOUNT_OWNER]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
-   <dt>-r <i>REGION</i> (opcional)</dt>
-   <dd>Indica para qué región se muestra información sobre la organización. Si se establece en 'all', se listan todas las organizaciones de todas las regiones.</dd>
-   <dt>--guid (opcional)</dt>
-   <dd>Muestra el GUID de las organizaciones.</dd>
+   <dt>-r REGION_NAME</dt>
+   <dd>Nombre de región. Lista las organizaciones en la región especificada. Si no se especifica, el valor predeterminado es la región actual. Si se establece en 'all', se listan las organizaciones de todas las regiones.</dd>
+   <dt>--guid</dt>
+   <dd>Mostrar el GUID de las organizaciones. Esta opción es exclusiva con '--output'.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Especificar el formato de salida; actualmente solo se admite JSON. Esta opción es exclusiva con '--guid'.</dd>
+   <dt>-c ACCOUNT_ID</dt>
+   <dd>ID de cuenta. Lista las organizaciones bajo la cuenta dada. Si no se especifica, el valor predeterminado es la cuenta actual. Si se establece en 'all', se listan las organizaciones de todas las cuentas. Esta opción es exclusiva con '-u'.</dd>
+   <dt>-u ACCOUNT_OWNER</dt>
+   <dd>Nombre del propietario de la cuenta. Lista las organizaciones bajo las cuentas propiedad del usuario dado. Si no se especifica, el valor predeterminado es la cuenta actual. Si se establece en 'all', se listan las organizaciones de todas las cuentas. Esta opción es exclusiva con '-c'.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:
@@ -91,13 +95,19 @@ Listar todas las organizaciones de la región: `us-south` con GUID visualizado
 ibmcloud account orgs -r us-south --guid
 ```
 
+Listar todas las organizaciones en formato JSON
+
+```
+ibmcloud account orgs --output JSON
+```
+
 ## ibmcloud account org
 {: #ibmcloud_account_org}
 
-Mostrar la información para la organización especificada.
+Mostrar la información de la organización especificada.
 
 ```
-ibmcloud account org ORG_NAME [--guid]
+ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -106,8 +116,12 @@ ibmcloud account org ORG_NAME [--guid]
    <dl>
    <dt>ORG_NAME (necesario)</dt>
    <dd>Nombre de la organización.</dd>
-   <dt>--guid (opcional)</dt>
-   <dd>Muestra el GUID de la organización.</dd>
+   <dt>-r REGION</dt>
+   <dd>Nombre de región. Si no se especifica, el valor predeterminado es la región actual. Si se establece en 'all', se listarán las organizaciones con el nombre proporcionado de todas las regiones.</dd>
+   <dt>--guid</dt>
+   <dd>Recuperar y visualizar el guid de la organización determinada. Se suprimirá el resto de la salida de la organización. Esta opción es exclusiva con '--output'.</dd>
+   <dt>--output REGION</dt>
+   <dd>Especificar el formato de salida; actualmente solo se admite JSON. Esta opción es exclusiva con '--guid'.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:
@@ -197,21 +211,85 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 Listar todos los espacios
 
 ```
-ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME]
+ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 ```
+
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
 
 <strong>Opciones de mandato</strong>:
    <dl>
-   <dt>-o</dt>
+   <dt>-o ORG_NAME</dt>
    <dd>Nombre de la organización. Lista los espacios en la organización especificada. Si no se especifica, el valor predeterminado es la organización actual.</dd>
-   <dt>-r</dt>
+   <dt>-r REGION-NAM</dt>
    <dd>Nombre de región. Lista los espacios en la región especificada. Si no se especifica, el valor predeterminado es la región actual.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Especificar el formato de salida; actualmente solo se admite JSON.</dd>
    </dl>
+
+<strong>Ejemplos</strong>:
+
+Listar todos los espacios:
+
+```
+ibmcloud account spaces
+```
+
+Listar todos los espacios de la organización `org_example` en formato JSON:
+
+```
+ibmcloud account spaces -o org_example --output JSON
+```
 
 ## ibmcloud account space
 {: #ibmcloud_account_space}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato [cf space ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/space.html){: new_window}.
+Mostrar la información del espacio especificado
+
+```
+ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
+```
+
+<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
+
+<strong>Opciones de mandato</strong>:
+   <dl>
+   <dt>SPACE_NAME (necesario)</dt>
+   <dd>Nombre del espacio que se va a mostrar.</dd>
+   <dt>-o ORG_NAME</dt>
+   <dd>Nombre de la organización. Si no se especifica, el valor predeterminado es la organización actual.</dd>
+   <dt>--guid</dt>
+   <dd>Recuperar y visualizar el guid del espacio predeterminado. Se suprimirá el resto de la salida del espacio. Esta opción es exclusiva con '--output'.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Especificar el formato de salida; actualmente solo se admite JSON. Se suprimirá el resto de la salida del espacio. Esta opción es exclusiva con '--guid'.</dd>
+   <dt>--security-group-rules</dt>
+   <dd>Recuperar las reglas para todos los grupos de seguridad asociados con este espacio.</dd>
+   </dl>
+
+<strong>Ejemplos</strong>:
+
+Mostrar la información del espacio `space_example`:
+
+```
+ibmcloud account space space_example
+```
+
+Mostrar la GUID del espacio `space_example`:
+
+```
+ibmcloud account space space_example --guid
+```
+
+Mostrar la información del espacio `space_example` en formato JSON:
+
+```
+ibmcloud account space space_example --output JSON
+```
+
+Mostrar las reglas de grupo de seguridad del espacio `space_example`:
+
+```
+ibmcloud account space space_example --security-group-rules
+```
 
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
@@ -555,85 +633,3 @@ ibmcloud account user-reinvite USER_EMAIL
    <dt>USER_EMAIL (necesario)</dt>
    <dd>Correo electrónico del usuario al que se vuelve a invitar.</dd>
 </dl>
-
-## ibmcloud app domain-cert
-{: #ibmcloud_app_domain_cert}
-
-Liste la información de certificado de un dominio.
-
-```
-ibmcloud app domain-cert DOMAIN_NAME
-```
-
-<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
-
-<strong>Opciones de mandato</strong>:
-<dl>
-<dt>DOMAIN_NAME (necesario)</dt>
-<dd>Nombre del dominio que aloja el certificado.</dd>
-</dl>
-
-
-<strong>Ejemplos</strong>:
-
-Ver la información de certificado del dominio `ibmcxo-eventconnect.com`:
-
-```
-ibmcloud app domain-cert ibmcxo-eventconnect.com
-```
-
-## ibmcloud app domain-cert-add
-{: #ibmcloud_app_domain_cert_add}
-
-Añadir un certificado para el dominio especificado en la organización actual.
-
-```
-ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
-```
-
-<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
-
-<strong>Opciones de mandato</strong>:
-   <dl>
-   <dt>DOMAIN (necesario)</dt>
-   <dd>Dominio al que se añade el certificado.</dd>
-   <dt>-k <i>PRIVATE_KEY_FILE</i> (necesario)</dt>
-   <dd>Vía de acceso del archivo de claves privado.</dd>
-   <dt>-c <i>CERT_FILE</i> (necesario)</dt>
-   <dd>Vía de acceso del archivo de certificado.</dd>
-   <dt>-p <i>PASSWORD</i> (opcional)</dt>
-   <dd>Contraseña del certificado.</dd>
-   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (opcional)</dt>
-   <dd>Vía de acceso del archivo de certificado intermedio.</dd>
-   <dt>-t <i>TRUST_STORE_FILE</i> (opcional)</dt>
-   <dd>Archivo del almacén de confianza.</dd>
-   </dl>
-
-
-<strong>Ejemplos</strong>:
-
-Añadir un certificado al dominio `ibmcxo-eventconnect.com`:
-
-```
-ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
-```
-
-## ibmcloud app domain-cert-remove
-{: #ibmcloud_app_domain_cert_remove}
-
-Eliminar un certificado del dominio especificado en la organización actual.
-
-```
-ibmcloud app domain-cert-remove DOMAIN [-f]
-```
-
-<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
-
-<strong>Opciones de mandato</strong>:
-
-   <dl>
-   <dt>DOMAIN (necesario)</dt>
-   <dd>Dominio a eliminar del certificado.</dd>
-   <dt>-f  (opcional)</dt>
-   <dd>Forzar la eliminación sin confirmación.</dd>
-   </dl>
