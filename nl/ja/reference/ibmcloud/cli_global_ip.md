@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP
+# グローバル IP
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP サービスのグローバル IP を管理します。
 {: shortdesc}
