@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-06-21"
 ibmcloud plugin uninstall private-network-peering
 ```
 ### 本地安装
-从 [{{site.data.keyword.ibmcloud_notm}} CLI Plugin Repository ![外部链接图标](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window} 下载适用于您的平台的专用网络对等连接插件。
+从 [{{site.data.keyword.Bluemix_notm}} CLI 插件存储库 ![外部链接图标](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window} 中下载适用于您的平台的专用网络对等连接插件。
 
 使用以下命令来安装专用网络对等连接插件：
 
@@ -62,11 +62,11 @@ ibmcloud plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### 从 {{site.data.keyword.ibmcloud_notm}} 存储库进行安装
+### 从 {{site.data.keyword.Bluemix_notm}} 存储库中进行安装
 
-执行以下步骤以从 {{site.data.keyword.ibmcloud_notm}} 存储库安装插件：
+要从 {{site.data.keyword.Bluemix_notm}} 存储库中安装插件，请执行以下操作：
 
-1. 添加 {{site.data.keyword.ibmcloud_notm}} 插件注册表端点：
+1. 添加 {{site.data.keyword.Bluemix_notm}} 插件注册表端点：
 	```
 	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```

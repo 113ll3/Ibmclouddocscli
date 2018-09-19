@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-06-21"
 ibmcloud plugin uninstall private-network-peering
 ```
 ### ローカル・インストール
-ご使用のプラットフォーム用のプライベート・ネットワーク・ピアリング・プラグインを [{{site.data.keyword.ibmcloud_notm}} CLI プラグイン・リポジトリー![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}からダウンロードします。
+ご使用のプラットフォーム用のプライベート・ネットワーク・ピアリング・プラグインを [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}からダウンロードします。
 
 以下のコマンドを使用して、プライベート・ネットワーク・ピアリング・プラグインをインストールします。
 
@@ -62,11 +62,11 @@ ibmcloud plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### {{site.data.keyword.ibmcloud_notm}} リポジトリーからのインストール
+### {{site.data.keyword.Bluemix_notm}} リポジトリーからのインストール
 
-以下のステップに従って、{{site.data.keyword.ibmcloud_notm}} リポジトリーからプラグインをインストールします。
+以下のステップに従って、{{site.data.keyword.Bluemix_notm}} リポジトリーからプラグインをインストールします。
 
-1. 以下のように、{{site.data.keyword.ibmcloud_notm}} プラグイン・レジストリー・エンドポイントを追加します。
+1. 以下のように、{{site.data.keyword.Bluemix_notm}} プラグイン・レジストリー・エンドポイントを追加します。
 	```
 	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
