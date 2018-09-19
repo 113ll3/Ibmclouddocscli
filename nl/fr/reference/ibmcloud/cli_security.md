@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Certificats et clés SSH de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Sécurité
 
 Les commandes suivantes permettent de gérer les certificats et les clés SSH de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

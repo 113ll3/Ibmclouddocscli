@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Almacenamiento en bloque de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Almacenamiento en bloque
 
 Utilice los mandatos siguientes para gestionar un volumen determinado para el servicio de almacenamiento en bloque de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

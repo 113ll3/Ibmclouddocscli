@@ -12,10 +12,10 @@ lastupdated: "2018-08-30"
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Plugins de catálogo, facturas y CLI
+# Catálogo, facturas y plugins de CLI
 {: #ibmcloud_commands_settings}
 
-Utilice los mandatos siguientes para gestionar los plugins de catálogo, uso/facturación y CLI de {{site.data.keyword.Bluemix_notm}}.
+Utilice los mandatos siguientes para gestionar el catálogo, uso/facturación y los plugins de CLI de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="mandatos ibmcloud que puede utilizar para gestionar los valores de catálogo, plug-ins, facturación y seguridad de {{site.data.keyword.Bluemix_notm}}.">

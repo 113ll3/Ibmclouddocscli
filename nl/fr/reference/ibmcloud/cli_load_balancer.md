@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Equilibreur de charge de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Equilibreur de charge
 
 Les commandes suivantes permettent de gérer un équilibreur de charge à l'aide du service d'équilibreur de charge de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

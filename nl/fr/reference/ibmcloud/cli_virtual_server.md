@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Serveur virtuel de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Virtual Server
 
 Les commandes suivantes permettent de gérer les serveurs virtuels de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

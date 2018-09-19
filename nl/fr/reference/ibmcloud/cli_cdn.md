@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CDN de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# CDN
 
 Les commandes suivantes permettent de gérer les comptes dans le service CDN de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

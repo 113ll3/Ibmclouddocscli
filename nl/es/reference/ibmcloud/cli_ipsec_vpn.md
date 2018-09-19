@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VPN de IPSec de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# IPSec VPN
 
 Utilice los mandatos siguientes para gestionar un túnel VPN de IPSec en el servicio de VPN de IPSec de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

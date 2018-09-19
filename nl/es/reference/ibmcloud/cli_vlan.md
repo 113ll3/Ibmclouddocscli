@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# VLAN
 
 Utilice los mandatos siguientes para gestionar VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

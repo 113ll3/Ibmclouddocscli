@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Certificados y claves SSH de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Seguridad
 
 Utilice los mandatos siguientes para gestionar certificados y claves SSH de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

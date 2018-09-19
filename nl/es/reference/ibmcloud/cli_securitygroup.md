@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Grupo de seguridad de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Grupo de seguridad
 
 Utilice los mandatos siguientes para gestionar un grupo de seguridad mediante el servicio Security Group de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

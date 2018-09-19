@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-08-31"
 
 ---
 
@@ -116,4 +116,4 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 ## Etapes suivantes
 {: #next-steps}
 
-Vous êtes maintenant prêt à développer et déployer votre première application ! Pour plus d'informations, voir la section relative à la [création et au déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps/create-deploy-cli.html).
+Vous êtes maintenant prêt à développer et déployer votre première application !

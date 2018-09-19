@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Réseau privé virtuel IPSec de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# VPN IPSec
 
 Les commandes suivantes permettent de gérer un tunnel VPN IPSec dans le service VPN IPSec de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

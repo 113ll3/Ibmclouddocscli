@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-08-30"
 # Comptes, utilisateurs et organisations
  {: #ibmcloud_commands_account}
 
- Les commandes suivantes permettent de gérer les comptes, les utilisateurs d'un compte ainsi que l'organisation, l'espace, les rôles et les certificats de domaine des services Cloud Foundry.
+ Les commandes suivantes permettent de gérer les comptes, les utilisateurs d'un compte ainsi que l'organisation, l'espace et les rôles.
   {: shortdesc}
 
   <table summary="Commandes ibmcloud que vous pouvez utiliser pour gérer les comptes, les organisations , les espaces et les rôles.">

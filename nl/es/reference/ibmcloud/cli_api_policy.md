@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Claves de API, identidad y acceso
+# Claves de API IAM, identidad y acceso
 {: #ibmcloud_commands_iam}
 
 Utilice los mandatos siguientes para gestionar las claves de API, los ID de servicio, los grupos de acceso y las políticas de acceso/autorización para IAM.

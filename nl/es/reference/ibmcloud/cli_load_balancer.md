@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Load Balancer de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# Equilibrador de carga
 
 Utilice los mandatos siguientes para gestionar un equilibrador de carga mediante el servicio Load Balancer de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

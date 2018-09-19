@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Almacenamiento de archivos de la infraestructura de {{site.data.keyword.Bluemix_notm}}
+# File Storage
 
 Utilice los mandatos siguientes para gestionar un volumen determinado en el servicio de almacenamiento de archivos de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

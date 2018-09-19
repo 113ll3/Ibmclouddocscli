@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Adresse IP globale de l'infrastructure {{site.data.keyword.Bluemix_notm}}
+# Adresse IP globale
 
 Les commandes suivantes permettent de gérer une adresse IP globale dans le service d'adresse IP globale de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

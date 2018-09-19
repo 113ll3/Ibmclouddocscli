@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Identité, accès et clés d'API
+# Identité, accès et clés d'API IAM
 {: #ibmcloud_commands_iam}
 
 Les commandes suivantes permettent de gérer les clés d'API, les ID de service, les groupes d'accès et les règles d'accès/autorisation pour IAM.
