@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-08-30"
 # Account, utenti e organizzazioni
  {: #ibmcloud_commands_account}
 
- Utilizza i seguenti comandi per gestire gli account, gli utenti in un account, l'organizzazione, lo spazio, i ruoli e i certificati del dominio dei servizi Cloud Foundry.
+ Utilizza i seguenti comandi per gestire gli account, gli utenti in un account, l'organizzazione, lo spazio e i ruoli.
   {: shortdesc}
 
   <table summary="Comandi ibmcloud che puoi utilizzare per gestire account, organizzazioni, spazi e ruoli.">
@@ -78,9 +78,9 @@ ibmcloud account orgs [-r NOME_REGIONE] [--guid | --output FORMATO] [-c ID_ACCOU
    <dt>-r NOME_REGIONE</dt>
    <dd>Nome della regione. Elenca le organizzazioni nella regione specificata. Se non specificato, il valore predefinito è la regione corrente. Se impostato su 'all', elenca le organizzazioni in tutte le regioni.</dd>
    <dt>--guid</dt>
-   <dd>Visualizza il guid delle organizzazioni. Questa opzione è esclusiva con '--output'. </dd>
+   <dd>Visualizza il guid delle organizzazioni. Questa opzione è esclusiva con '--output'.</dd>
    <dt>--output FORMATO</dt>
-   <dd>Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--guid'. </dd>
+   <dd>Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--guid'.</dd>
    <dt>-c ID_ACCOUNT</dt>
    <dd>ID account. Elenca le organizzazioni nell'account fornito. Se non specificato, il valore predefinito è l'account corrente. Se impostato su 'all', elenca le organizzazioni in tutti gli account. Questa opzione è esclusiva con '-u'.</dd>
    <dt>-u PROPRIETARIO_ACCOUNT</dt>
@@ -119,9 +119,9 @@ ibmcloud account org NOME_ORGANIZZAZIONE [-r REGIONE] [--guid | --output REGIONE
    <dt>-r REGIONE</dt>
    <dd>Nome della regione. Se non specificato, il valore predefinito è la regione corrente. Se impostato su 'all', vengono elencate le organizzazioni con il nome indicato di tutte le regioni.</dd>
    <dt>--guid</dt>
-   <dd>Richiama e visualizza il guid dell'organizzazione specificata. Tutti gli altri output per l'organizzazione vengono eliminati. Questa opzione è esclusiva con '--output'. </dd>
+   <dd>Richiama e visualizza il guid dell'organizzazione specificata. Tutti gli altri output per l'organizzazione vengono eliminati. Questa opzione è esclusiva con '--output'.</dd>
    <dt>--output REGIONE</dt>
-   <dd>Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--guid'. </dd>
+   <dd>Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--guid'.</dd>
    </dl>
 
 <strong>Esempi</strong>:
@@ -223,7 +223,7 @@ ibmcloud account spaces [-o NOME_ORGANIZZAZIONE] [-r NOME-REGIONE] [--output FOR
    <dt>-r NOME-REGIONE</dt>
    <dd>Nome della regione. Elenca gli spazi nella regione specificata. Se non specificato, il valore predefinito è la regione corrente.</dd>
    <dt>--output FORMATO</dt>
-   <dd>Specifica il formato di output, al momento è supportato solo JSON. </dd>
+   <dd>Specifica il formato di output, al momento è supportato solo JSON.</dd>
    </dl>
 
 <strong>Esempi</strong>:
@@ -258,9 +258,9 @@ ibmcloud account space NOME_SPAZIO [-o NOME_ORGANIZZAZIONE] [--guid | --output F
    <dt>-o NOME_ORGANIZZAZIONE</dt>
    <dd>Nome dell'organizzazione. Se non specificato, il valore predefinito è l'organizzazione corrente.</dd>
    <dt>--guid</dt>
-   <dd>Richiama e visualizza il guid dello spazio specificato. Tutti gli altri output per lo spazio vengono eliminati. Questa opzione è esclusiva con '--output'. </dd>
+   <dd>Richiama e visualizza il guid dello spazio specificato. Tutti gli altri output per lo spazio vengono eliminati. Questa opzione è esclusiva con '--output'.</dd>
    <dt>--output FORMATO</dt>
-   <dd>Specifica il formato di output, al momento è supportato solo JSON. Tutti gli altri output per lo spazio vengono eliminati. Questa opzione è esclusiva con '--guid'. </dd>
+   <dd>Specifica il formato di output, al momento è supportato solo JSON. Tutti gli altri output per lo spazio vengono eliminati. Questa opzione è esclusiva con '--guid'.</dd>
    <dt>--security-group-rules</dt>
    <dd>Richiama le regole di tutti i gruppi di sicurezza associati allo spazio.</dd>
    </dl>

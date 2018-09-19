@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Chiavi API, identità e accesso
+# Chiavi API IAM, identità e accesso
 {: #ibmcloud_commands_iam}
 
 Utilizza i seguenti comandi per gestire le chiavi API, gli ID servizio, i gruppi di accesso e le politiche di accesso/autorizzazione per IAM.
@@ -997,7 +997,7 @@ ibmcloud iam service-policies ID_SERVIZIO [--output FORMATO] [-f, --force]
   <dt>ID_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o UUID dell'ID del servizio</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>Specifica il formato di output delle politiche del servizio, al momento è supportato solo JSON. </dd>
+  <dd>Specifica il formato di output delle politiche del servizio, al momento è supportato solo JSON.</dd>
   <dt>-f, --force (facoltativo)</dt>
   <dd>Visualizza le politiche di servizio senza conferma</dd>
 </dl>
@@ -1033,7 +1033,7 @@ ibmcloud iam service-policy ID_SERVIZIO ID_POLITICA [--output FORMATO] [-f, --fo
   <dt>ID_POLITICA (obbligatorio)</dt>
   <dd>ID della politica di servizio<dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>Specifica il formato di output della politica del servizio, al momento è supportato solo JSON. </dd>
+  <dd>Specifica il formato di output della politica del servizio, al momento è supportato solo JSON.</dd>
   <dt>-f, --force (facoltativo)</dt>
   <dd>Visualizza la politica di servizio senza conferma</dd>
 </dl>

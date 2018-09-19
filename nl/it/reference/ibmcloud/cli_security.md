@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Certificati e chiavi SSH dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
+# Sicurezza
 
 Utilizza i seguenti comandi per gestire i certificati e le chiavi SSH dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

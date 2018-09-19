@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-08-31"
 
 ---
 
@@ -116,4 +116,4 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 ## Passi successivi
 {: #next-steps}
 
-Sei ora pronto per sviluppare e distribuire la tua prima applicazione. Per ulteriori informazioni, consulta [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps/create-deploy-cli.html).
+Sei ora pronto per sviluppare e distribuire la tua prima applicazione.

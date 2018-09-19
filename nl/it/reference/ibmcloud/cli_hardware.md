@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Server bare metal dell'infrastruttura {{site.data.keyword.Bluemix_notm}} 
+# Hardware
 
 Utilizza i seguenti comandi per gestire i server hardware bare metal dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
