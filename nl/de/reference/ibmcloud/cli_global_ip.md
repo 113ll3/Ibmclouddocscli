@@ -5,16 +5,16 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Infrastruktur - Globales IP
+# Globale IP
 
-Verwenden Sie die folgenden Befehle, um ein globales IP für den Global IP-Service der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+Verwenden Sie die folgenden Befehle, um eine globale IP für den Global IP-Service der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete Global IP-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

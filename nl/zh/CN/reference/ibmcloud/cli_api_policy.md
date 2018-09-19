@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# API 密钥、身份和访问权
+# IAM API 密钥、身份和访问权
 {: #ibmcloud_commands_iam}
 
 使用以下命令可管理 IAM 的 API 密钥、服务标识、访问组和访问权/授权策略。

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-08-30"
 # 帐户、用户和组织
  {: #ibmcloud_commands_account}
 
- 使用以下命令可管理帐户、帐户中的用户以及 Cloud Foundry 服务的组织、空间、角色和域证书。
+ 使用以下命令可管理帐户、帐户中的用户以及组织、空间和角色。
   {: shortdesc}
 
   <table summary="可用于管理帐户、组织、空间和角色的 ibmcloud 命令。">

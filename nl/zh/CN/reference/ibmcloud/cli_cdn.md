@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 基础架构 CDN
+# CDN
 
 使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构 CDN 服务中的帐户。
 {: shortdesc}

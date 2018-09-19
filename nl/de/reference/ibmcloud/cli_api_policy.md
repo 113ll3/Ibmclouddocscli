@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# API-Schlüssel, Identität und Zugriff
+# IAM-API-Schlüssel, Identität und Zugriff
 {: #ibmcloud_commands_iam}
 
 Verwenden Sie die folgenden Befehle, um API-Schlüssel, Service-IDs, Zugriffsgruppen und Zugriffs-/Berechtigungsrichtlinien für IAM zu verwalten.

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 基础架构虚拟服务器
+# 虚拟服务器
 
 使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构虚拟服务器。
 {: shortdesc}

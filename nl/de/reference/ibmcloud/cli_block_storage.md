@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Block Storage der {{site.data.keyword.Bluemix_notm}}-Infrastruktur
+# Block Storage
 
 Verwenden Sie die folgenden Befehle, um einen angegebenen Datenträger für den Block Storage-Service der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}
