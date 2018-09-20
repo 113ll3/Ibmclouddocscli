@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Armazenamento de bloco de infraestrutura do {{site.data.keyword.Bluemix_notm}}
+# Block Storage
 
 Use os comandos a seguir para gerenciar um determinado volume para o serviço Block Storage de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

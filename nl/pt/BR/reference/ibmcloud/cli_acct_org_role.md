@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
@@ -15,8 +15,7 @@ lastupdated: "2018-08-30"
 # Contas, Usuários e Orgs
  {: #ibmcloud_commands_account}
 
- Use os comandos a seguir para gerenciar as contas, os usuários em uma conta, a organização, o espaço, as funções e os
-certificados de domínio dos serviços do Cloud Foundry.
+ Use os comandos a seguir para gerenciar as contas, os usuários em uma conta, a organização, os espaços e as funções.
   {: shortdesc}
 
   <table summary="Comandos ibmcloud que podem ser usados para gerenciar contas, organizações, espaços e funções.">
@@ -24,46 +23,46 @@ certificados de domínio dos serviços do Cloud Foundry.
    </thead>
    <tbody>
    <tr>
-   <td>[Ibmcloud conta organizações](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
-   <td>[conta ibmcloud org](cli_acct_org_role.html#ibmcloud_account_org)</td>
-   <td>[conta ibmcloud org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
-   <td>[conta ibmcloud org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
-   <td>[conta ibmcloud org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
    </tr>
    <tr>
-   <td>[ibmcloud Espaços de conta](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
    <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
    <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
    <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
    <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
    </tr>
    <tr>
-   <td>[Os usuários da organização da conta ibmcloud](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
    <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
    <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
-   <td>[ibmcloud account org-funções](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
-   <td>[conta ibmcloud org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
    </tr>
    <tr>
-   <td>[conta ibmcloud org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
    <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
-   <td>[ibmcloud account space-funções](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
    <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
    <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
   </tr>
-   <td>[Lista conta ibmcloud](cli_acct_org_role.html#ibmcloud_account_list)</td>
-   <td>[conta ibmcloud org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
-   <td>[usuários da conta ibmcloud](cli_acct_org_role.html#ibmcloud_account_users)</td>
-   <td>[account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
-   <td>[conta ibmcloud user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
    </tr>
    <tr>
-    <td>[conta ibmcloud user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
    </tr>
    </tbody>
    </table>
 
- ## Ibmcloud conta organizações
+ ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
 
 Liste todas as organizações
@@ -87,8 +86,7 @@ como 'all', lista as organizações em todas as regiões.</dd>
    <dd>ID da conta. Lista as organizações na conta fornecida. Usa como padrão a conta atual, se não especificado. Se configurado como
 'all', lista as organizações em todas as contas. Essa opção é exclusiva com '-u'.</dd>
    <dt>-u ACCOUNT_OWNER</dt>
-   <dd>Nome do proprietário da conta. Lista as organizações nas contas pertencentes ao usuário fornecido. Usa como padrão a conta atual, se não especificado. 
-Se configurado como 'all', lista as organizações em todas as contas. Essa opção é exclusiva com '-c'.</dd>
+   <dd>Nome do proprietário da conta. Lista as organizações nas contas pertencentes ao usuário fornecido. Usa como padrão a conta atual, se não especificado. Se configurado como 'all', lista as organizações em todas as contas. Essa opção é exclusiva com '-c'.</dd>
    </dl>
 
 <strong>Exemplos</strong>:
@@ -96,16 +94,16 @@ Se configurado como 'all', lista as organizações em todas as contas. Essa opç
 Liste todas as organizações na região: `us-south` com o GUID exibido
 
 ```
-Ibmcloud conta orgs -r us-south -- guid
+ibmcloud account orgs -r us-south --guid
 ```
 
 Listar todas as organizações no formato JSON
 
 ```
-Orgs da conta ibmcloud -- JSON de saída
+ibmcloud account orgs --output JSON
 ```
 
-## Account org ibmcloud
+## ibmcloud account org
 {: #ibmcloud_account_org}
 
 Mostrar as informações da org especificada.
@@ -134,16 +132,16 @@ especificado em todas as regiões serão listadas.</dd>
 Mostre as informações da organização `IBM` com o GUID exibido
 
 ```
-Account org ibmcloud IBM -- guid
+ibmcloud account org IBM --guid
 ```
 
-## Create-org conta ibmcloud
+## ibmcloud account org-create
 {: #ibmcloud_account_org_create}
 
 Criar uma nova organização. Essa operação pode ser executada somente pelo proprietário da conta.
 
 ```
-Ibmcloud account org-create ORG_NAME [ -f ]
+ibmcloud account org-create ORG_NAME [-f]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -161,7 +159,7 @@ Ibmcloud account org-create ORG_NAME [ -f ]
 Crie uma organização denominada `IBM`.
 
 ```
-Ibmcloud account org-create IBM
+ibmcloud account org-create IBM
 ```
 
 ## ibmcloud account org-replicate
@@ -170,7 +168,7 @@ Ibmcloud account org-create IBM
 Replique uma organização a partir da região atual para outra região.
 
 ```
--org conta replicate ORG_NAME REGION_NAME ibmcloud
+ibmcloud account org-replicate ORG_NAME REGION_NAME
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -188,10 +186,10 @@ Replique uma organização a partir da região atual para outra região.
 Replique a organização `myorg` para a região `eu-gb`:
 
 ```
-Ibmcloud conta org-replicate myorg eu-gb
+ibmcloud account org-replicate myorg eu-gb
 ```
 
-## Rename-org conta ibmcloud
+## ibmcloud account org-rename
 {: #ibmcloud_account_org_rename}
 
 Renomeie uma organização. Essa operação pode ser executada somente por um gerenciador de organização.
@@ -210,7 +208,7 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dd>O novo nome da organização para o qual ela é renomeada.</dd>
    </dl>
 
-## Espaços conta ibmcloud
+## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
 
 Listar todos os espaços
@@ -228,7 +226,7 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
    <dt>-r REGION-NAM</dt>
    <dd>Nome da região. Listar os espaços sob a região especificada. Padrão para região atual, se não especificado.</dd>
    <dt>-- FORMATO de saída</dt>
-   <dd>Especifica o formato de saída. Apenas JSON é suportado agora. </dd>
+   <dd>Especifica o formato de saída. Apenas JSON é suportado agora.</dd>
    </dl>
 
 <strong>Exemplos</strong>:
@@ -236,7 +234,7 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
 Listar todos os espaços:
 
 ```
-Espaços conta ibmcloud
+ibmcloud account spaces
 ```
 
 Listar todos os espaços da organização `org_example` no formato JSON:
@@ -245,7 +243,7 @@ Listar todos os espaços da organização `org_example` no formato JSON:
 ibmcloud account spaces -o org_example --output JSON
 ```
 
-## Espaço conta ibmcloud
+## ibmcloud account space
 {: #ibmcloud_account_space}
 
 Mostrar as informações do espaço especificado
@@ -272,54 +270,54 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
 
 <strong>Exemplos</strong>:
 
-Mostrar as informações do espaço  ` space_exemplo `:
+Mostrar as informações do espaço `space_example`:
 
 ```
-space_exemplo de espaço da conta ibmcloud
+ibmcloud account space space_example
 ```
 
-Mostrar o GUID do espaço  ` space_exemplo `:
+Mostrar o GUID do espaço `space_example`:
 
 ```
-space_exemplo de espaço da conta ibmcloud -- guid
+ibmcloud account space space_example --guid
 ```
 
 Mostrar as informações do espaço `space_example` no formato JSON:
 
 ```
-ibmcloud space space space_exemplo -- saída JSON
+ibmcloud account space space_example --output JSON
 ```
 
 Mostrar as regras do grupo de segurança do espaço `space_example`:
 
 ```
-ibmcloud space space space_exemplo--security-group-rules
+ibmcloud account space space_example --security-group-rules
 ```
 
-## Create-space conta ibmcloud
+## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
 
 Esse comando tem a mesma função e opções que o comando [cf create-space ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window}.
 
-## Account space-rename ibmcloud
+## ibmcloud account space-rename
 {: #ibmcloud_account_space_rename}
 
 
 Esse comando tem a mesma função e opções que o comando [cf rename-space ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window}.
 
-## Account space-delete ibmcloud
+## ibmcloud account space-delete
 {: #ibmcloud_account_space_delete}
 
 
 Esse comando tem a mesma função e opções que o comando [cf delete-space ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window}.
 
-## Os usuários da organização da conta ibmcloud
+## ibmcloud account org-users
 {: #ibmcloud_account_org_users}
 
 Exiba usuários na organização especificada por função.
 
 ```
-Os usuários da organização da conta ibmcloud ORG_NAME [ -a ]
+ibmcloud account org-users ORG_NAME [-a]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -332,16 +330,16 @@ Os usuários da organização da conta ibmcloud ORG_NAME [ -a ]
 <dd>Liste todos os usuários na organização especificada, não agrupados por função.</dd>
 </dl>
 
-## Conta-org-user-add
+## ibmcloud account org-user-add
 {: #ibmcloud_account_org_user_add}
 
 Inclua um usuário na organização (gerenciador de organização requerido).
 
 ```
- Ibmcloud account org-user-add USER_NAME ORG
+ ibmcloud account org-user-add USER_NAME ORG
 ```
 
-## Ibmcloud account org-user-remove
+## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
 Remova um usuário da organização (gerente da organização ou o próprio usuário somente)
@@ -362,7 +360,7 @@ Remova um usuário da organização (gerente da organização ou o próprio usu�
 Obtenha todas as funções de organização do usuário atual
 
 ```
-Ibmcloud conta org-roles [-u USER_ID ]
+ibmcloud account org-roles [-u USER_ID]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -373,13 +371,13 @@ Ibmcloud conta org-roles [-u USER_ID ]
    <dd>ID do usuário. Se não especificado, o padrão será o usuário atual.</dd>
   </dl>
 
-## Set-ibmcloud account org-role
+## ibmcloud account org-role-set
 {: #ibmcloud_account_org_role_set}
 
 Designe uma função de organização a um usuário. Essa operação pode ser executada somente por um gerenciador de organização.
 
 ```
-Ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -405,19 +403,19 @@ Ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 Designe o usuário `Mary` à organização do `IBM` como função `OrgManager`:
 
 ```
-Ibmcloud conta org-role-set Mary IBM OrgManager
+ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
 **Nota**: é possível configurar as funções de organização/espaço usando a CLI, mas se você desejar configurar as outras permissões, precisará usar a UI. Para obter detalhes adicionais, veja [Designando o acesso de usuário](/docs/iam/assignaccess.html#assignaccess).
 <!-- Begin Staging URL vs Prod URL -->
 
-## Ibmcloud account org-role-unset
+## ibmcloud account org-role-unset
 {: #ibmcloud_account_org_role_unset}
 
 Remover uma função de organização de um usuário. Essa operação pode ser executada somente por um gerenciador de organização.
 
 ```
-Ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
+ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -443,7 +441,7 @@ Ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
 Remova o usuário `Mary` da organização `IBM` como função `OrgManager`:
 
 ```
-Ibmcloud account org-role-unset Mary IBM OrgManager
+ibmcloud account org-role-unset Mary IBM OrgManager
 ```
 
 ## Os usuários do espaço conta ibmcloud
@@ -465,7 +463,7 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
    <dd>O nome do espaço.</dd>
    </dl>
 
-## Conta-space-role-set
+## ibmcloud account space-role-set
 {: #ibmcloud_account_space_role_set}
 
 Designe uma função de espaço a um usuário. Essa operação pode ser executada somente por um gerenciador de espaço.
@@ -502,7 +500,7 @@ Designe o usuário `Mary` à organização `IBM` e espaço `Cloud` como função
 ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ```
 
-## Ibmcloud account space-role-unset
+## ibmcloud account space-role-unset
 {: #ibmcloud_account_space_role_unset}
 
 Remova uma função de espaço de um usuário. Essa operação pode ser executada somente por um gerenciador de espaço.
@@ -551,13 +549,13 @@ ibmcloud account list
 
 <strong>Pré-requisitos</strong>: Terminal, Login
 
-## Account org-account ibmcloud
+## ibmcloud account org-account
 {: #ibmcloud_account_org_account}
 
 Exibir a conta da organização especificada (usuário da organização necessário)
 
 ```
-Ibmcloud account org-account ORG_NAME [ -- guid ]
+ibmcloud account org-account ORG_NAME [--guid]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -577,7 +575,7 @@ Exibe os usuários associados à conta. Essa operação pode ser executada somen
 ibmcloud account users
 ```
 
-## Remove-ibmcloud conta do usuário
+## ibmcloud account user-remove
 {: #ibmcloud_account_user_remove}
 
 Remover um usuário de uma conta (somente o proprietário da conta)
@@ -598,7 +596,7 @@ ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
 <dd>Forçar a remoção sem confirmação.</dd>
 </dl>
 
-## Account user-invite ibmcloud
+## ibmcloud account user-invite
 {: #ibmcloud_account_user_invite}
 
 Convidar um usuário para a conta
@@ -615,22 +613,22 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dd>O e-mail do usuário que está sendo convidado.</dd>
    <dt>-o ORG</dt>
    <dd>Organização para convidar usuário</dd>
-   <dt>-- org-role ORG_ROLE</dt>
+   <dt>--org-role ORG_ROLE</dt>
    <dd>Função organizacional. As entradas válidas são: OrgManager, BillingManager, OrgAuditor e OrgUser. Se omitida, a função
 OrgUser será configurada.</dd>
    <dt>-s SPACE</dt>
    <dd>Espaço de convidar usuário</dd>
-   <dt>-- SPACE_ROLE space-role</dt>
+   <dt>--space-role SPACE_ROLE</dt>
    <dd>Função de Espaço. As entradas válidas são: SpaceManager, SpaceDeveloper e SpaceAuditor.</dd>
 </dl>
 
-## Ibmcloud account user-reinvite
+## ibmcloud account user-reinvite
 {: #ibmcloud_account_user_reinvite}
 
 Reenviar o convite a um usuário (administrador de conta)
 
 ```
-Ibmcloud account user-reinvite USER_EMAIL
+ibmcloud account user-reinvite USER_EMAIL
 ```
 <strong>Pré-requisitos</strong>: Terminal, Login
 

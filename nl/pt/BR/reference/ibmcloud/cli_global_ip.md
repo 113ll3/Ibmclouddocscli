@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} Infra-estrutura IP Global
+# IP Global
 
 Use os comandos a seguir para gerenciar um IP global no serviço IP global de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} File Storage de infraestrutura
+# File Storage
 
 Use os comandos a seguir para gerenciar um determinado volume no serviço File Storage da infraestrutura do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

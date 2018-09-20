@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Chaves de API, Identidade e Acesso
+# Chaves de API do IAM, Identidade e Acesso
 {: #ibmcloud_commands_iam}
 
 Use os comandos a seguir para gerenciar as chaves API, os IDs de serviço, os grupos de acesso e as políticas de
