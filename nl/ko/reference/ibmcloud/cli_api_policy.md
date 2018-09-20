@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# API 키, ID 및 액세스
+# IAM API 키, ID 및 액세스
 {: #ibmcloud_commands_iam}
 
 다음 명령을 사용하여 API 키, 서비스 ID, 액세스 그룹 및 IAM의 액세스/권한 부여 정책을 관리하십시오.

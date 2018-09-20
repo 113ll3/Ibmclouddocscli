@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-08-31"
 
 ---
 
@@ -96,7 +96,7 @@ ibmcloud dev help
 	{: codeblock}
     <br>
 
-	신임 정보가 거부되면 연합 ID를 사용할 수 있습니다. 자세한 사항은 [연합 ID로 로그인](/docs/iam/login_fedid.html#federated_id)을 참조하십시오.
+	인증 정보가 거부되면 연합 ID를 사용할 수 있습니다. 자세한 사항은 [연합 ID로 로그인](/docs/iam/login_fedid.html#federated_id)을 참조하십시오.
 	{: tip}
 
 3. 조직 및 영역을 설정하십시오.
@@ -116,4 +116,4 @@ ibmcloud dev help
 ## 다음 단계
 {: #next-steps}
 
-이제 첫 번째 애플리케이션을 개발하고 배치할 준비가 되었습니다! 자세한 정보는 [CLI를 사용하여 앱 작성 및 배치](/docs/apps/create-deploy-cli.html)를 참조하십시오.
+이제 첫 번째 애플리케이션을 개발하고 배치할 준비가 되었습니다!

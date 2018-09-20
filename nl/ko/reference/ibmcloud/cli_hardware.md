@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 베어메탈 서버
+# 하드웨어
 
 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 베어메탈 하드웨어 서버를 관리하십시오.
 {: shortdesc}
@@ -125,7 +125,7 @@ ibmcloud sl hardware create-options
 ## ibmcloud sl hardware credentials
 {: #sl_hardware_credentials}
 
-하드웨어 서버 신임 정보를 나열합니다.
+하드웨어 서버 인증 정보를 나열합니다.
 ```
 ibmcloud sl hardware credentials IDENTIFIER
 ```

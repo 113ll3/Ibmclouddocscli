@@ -30,23 +30,25 @@ IBM Cloud Developer Tools(CLI 및 개발 도구)
 	{: .topicgroup}
 	IBM Cloud CLI(ibmcloud) 명령
 		reference/ibmcloud/bx_cli.md
-		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_acct_org_role.md
-		reference/ibmcloud/cli_resource_group.md
-		reference/ibmcloud/cli_api_policy.md
-		reference/ibmcloud/cli_cat_plugin_billing.md
+		reference/ibmcloud/cli_billing.md
+		reference/ibmcloud/cli_block_storage.md
+		reference/ibmcloud/cli_catalog.md
+		reference/ibmcloud/cli_cdn.md
+		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_cf_apps.md
 		reference/ibmcloud/cli_cf_services.md
 		reference/ibmcloud/cli_cfee.md
-		reference/ibmcloud/cli_block_storage.md
-		reference/ibmcloud/cli_cdn.md
 		reference/ibmcloud/cli_dns.md
 		reference/ibmcloud/cli_file_storage.md
 		reference/ibmcloud/cli_global_ip.md
 		reference/ibmcloud/cli_hardware.md
+		reference/ibmcloud/cli_api_policy.md
 		reference/ibmcloud/cli_image.md
 		reference/ibmcloud/cli_ipsec_vpn.md
 		reference/ibmcloud/cli_load_balancer.md
+		reference/ibmcloud/cli_plugin.md
+		reference/ibmcloud/cli_resource_group.md
 		reference/ibmcloud/cli_security.md
 		reference/ibmcloud/cli_securitygroup.md
 		reference/ibmcloud/cli_subnet.md

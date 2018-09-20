@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 인프라 VLAN
+# VLAN
 
 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 VLAN을 관리하십시오.
 {: shortdesc}
