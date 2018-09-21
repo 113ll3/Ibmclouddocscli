@@ -52,7 +52,7 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
   ```
   {: codeblock}
 
-* For Windows, run the following command as an administrator:
+* For Windows 10 Pro, run the following command as an administrator:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
