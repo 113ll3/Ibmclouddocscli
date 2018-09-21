@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -373,7 +373,7 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>-d <i>DESCRIPTION</i> (optional)</dt>
 <dd>Description of the API key</dd>
 <dt>--file <i>FILE</i></dt>
-<dd>Save API key information to specified file. If not set, the JSON content will be displayed.</dd>
+<dd>Save API key information to the specified file.</dd>
 <dt>--lock</dt>
 <dd>Lock the API key when being created</dd>
 </dl>
@@ -600,7 +600,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>-d, --description</dt>
   <dd>Description of the API key</dd>
   <dt>--file</dt>
-  <dd>Save API key information to specified file. If not set, the JSON content will be displayed.</dd>
+  <dd>Save API key information to the specified file.</dd>
   <dt>-f, --force</dt>
   <dd>Force creation without confirmation</dd>
 </dl>
