@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloud-cli" audience="platform" arm="" href="/docs/cli/index.html"}
-IBM Cloud CLI 및 Developer Tools
+IBM Cloud Developer Tools(CLI 및 개발 도구)
 
 	{: .navgroup id="learn"}
 	index.md
