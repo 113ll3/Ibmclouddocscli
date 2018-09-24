@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloud-cli" audience="platform" arm="" href="/docs/cli/index.html"}
-IBM Cloud Developer Tools (CLI e strumenti di sviluppo)
+CLI IBM Cloud e Developer Tools
 
 	{: .navgroup id="learn"}
 	index.md
