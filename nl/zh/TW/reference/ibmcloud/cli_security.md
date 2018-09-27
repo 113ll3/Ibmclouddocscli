@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 基礎架構 SSH 金鑰及憑證
+# 安全
 
 請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 SSH 金鑰及憑證。
 {: shortdesc}

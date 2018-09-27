@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-06"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 基礎架構裸機伺服器
+# 硬體
 
 請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構裸機硬體伺服器。
 {: shortdesc}
@@ -258,7 +258,7 @@ ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>--hard</dt>
-<dd>執行正常重新開機。</dd>
+<dd>執行強迫重新開機。</dd>
 <dt>--soft</dt>
 <dd>執行正常重新開機。</dd>
 <dt>-f, --force</dt>
