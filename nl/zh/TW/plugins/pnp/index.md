@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-06-21"
 ibmcloud plugin uninstall private-network-peering
 ```
 ### 在本端安裝
-從 [{{site.data.keyword.ibmcloud_notm}} CLI 外掛程式儲存庫 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window} 中，下載您平台的專用網路對等作業外掛程式。
+從 [{{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}，下載您平台的專用網路對等作業外掛程式。
 
 使用下列指令，以安裝專用網路對等作業外掛程式：
 
@@ -62,11 +62,11 @@ ibmcloud plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### 從 {{site.data.keyword.ibmcloud_notm}} 儲存庫安裝
+### 從 {{site.data.keyword.Bluemix_notm}} 儲存庫安裝
 
-遵循下列步驟，以從 {{site.data.keyword.ibmcloud_notm}} 儲存庫安裝外掛程式：
+遵循下列步驟，以從 {{site.data.keyword.Bluemix_notm}} 儲存庫安裝外掛程式：
 
-1. 新增 {{site.data.keyword.ibmcloud_notm}} 外掛程式登錄端點：
+1. 新增 {{site.data.keyword.Bluemix_notm}} 外掛程式登錄端點：
 	```
 	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
