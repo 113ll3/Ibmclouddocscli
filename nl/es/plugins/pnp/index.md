@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -32,7 +32,7 @@ Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Para obtener
 ibmcloud plugin uninstall private-network-peering
 ```
 ### Instalar localmente
-Descargue el plug-in de igualdad de red privada para la plataforma desde [Repositorio de plug-ins de la CLI de {{site.data.keyword.ibmcloud_notm}}![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
+Descargue el plug-in de igualdad de red privada para la plataforma desde el [{{site.data.keyword.Bluemix_notm}}Repositorio de plug-ins de la CLI de ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
 
 Instale el plug-in de igualdad de red privada utilizando el mandato siguiente:
 
@@ -62,11 +62,11 @@ ibmcloud plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Instalar desde el repositorio de {{site.data.keyword.ibmcloud_notm}}
+### Instalar desde el repositorio de {{site.data.keyword.Bluemix_notm}}
 
-Siga estos pasos para instalar el plug-in desde el repositorio de {{site.data.keyword.ibmcloud_notm}}:
+Siga estos pasos para instalar el plug-in desde el repositorio de {{site.data.keyword.Bluemix_notm}}:
 
-1. Añada el punto final de registro del plug-in de {{site.data.keyword.ibmcloud_notm}}:
+1. Añada el punto final de registro del plug-in de {{site.data.keyword.Bluemix_notm}}:
 	```
 	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
