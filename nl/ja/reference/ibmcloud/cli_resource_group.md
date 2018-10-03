@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -300,7 +300,7 @@ ibmcloud resource service-instances --service-name test-service
 サービス・インスタンスの詳細を表示します
 
 ```
-ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
+ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -315,6 +315,8 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
   <dd>場所を基準にフィルター操作します</dd>
   <dt>--id</dt>
   <dd>サービス・インスタンスの ID を表示します</dd>
+  <dt>--output</dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、「--id」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:

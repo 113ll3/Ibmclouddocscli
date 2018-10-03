@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -48,8 +48,6 @@ ibmcloud sl vlan create [OPTIONS]
 <dd>ルーターのホスト名。</dd>
 <dt>-d, --datacenter</dt>
 <dd>データ・センターの短縮名。</dd>
-<dt>-s, --size</dt>
-<dd>サブネットのサイズ。オプションは、8 (5 個の使用可能な IP)、16 (13 個の使用可能な IP)、または 32 (29 個の使用可能な IP) です。</dd>
 <dt>-n, --name</dt>
 <dd>VLAN の名前。</dd>
 <dt>-f, --force</dt>
