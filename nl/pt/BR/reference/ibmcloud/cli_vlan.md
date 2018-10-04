@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -49,8 +49,6 @@ Sl vlan create ibmcloud [ OPTIONS ]
 <dd>O nome do host do roteador.</dd>
 <dt>-d, --datacenter</dt>
 <dd>O nome abreviado do data center.</dd>
-<dt>-s, --size</dt>
-<dd>O tamanho das sub-redes, as opções são: 8 (5 IPs utilizáveis) ou 16 (13 IPs utilizáveis) ou 32 (29 IPs utilizáveis).</dd>
 <dt>-n, --name</dt>
 <dd>O nome da VLAN.</dd>
 <dt>-f, --force</dt>

@@ -59,7 +59,7 @@ Windows 10 Pro.
   ```
   {: codeblock}
 
-* Para o Windows, execute o comando a seguir como um administrador:
+* Para o Windows 10 Pro, execute o comando a seguir como um administrador:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
