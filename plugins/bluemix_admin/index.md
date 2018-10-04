@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -38,20 +38,20 @@ Complete the following steps to add the repository and install the plug-in:
 <ol>
 <li>To add the {{site.data.keyword.Bluemix_notm}} admin plug-in repository, run the following command:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>To install the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, run the following command:<br/><br/>
 <code>
-cf install-plugin BluemixAdminCLI -r BluemixAdmin
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
 </code>
 </li>
 </ol>
 
 If you need to uninstall the plug-in, you can use the following commands, then you can add the updated repository and install the latest plug-in:
 
-* Uninstall the plug-in: `cf uninstall-plugin BluemixAdminCLI`
-* Remove the plug-in repository: `cf remove-plugin-repo BluemixAdmin`
+* Uninstall the plug-in: `cf uninstall-plugin IBMCloudAdminCLI`
+* Remove the plug-in repository: `cf remove-plugin-repo IBMCloudAdmin`
 
 
 ## Using the {{site.data.keyword.Bluemix_notm}} Admin CLI Plug-in
@@ -393,7 +393,7 @@ cf ba set-quota <organization> <plan>
 To find the quota for containers for an organization, use the following command:
 
 ```
-cf bluemix-admin containers-quota <organization>
+cf ibmcloud-admin containers-quota <organization>
 ```
 {: codeblock}
 
@@ -403,7 +403,7 @@ cf bluemix-admin containers-quota <organization>
 </dl>
 
 **Tip:** You can also use **ba cq** as an alias for the longer
-**bluemix-admin containers-quota** command name.
+**ibmcloud-admin containers-quota** command name.
 
 ### Setting container quotas for an organization
 {: #admin_set_containquotas}
@@ -411,7 +411,7 @@ cf bluemix-admin containers-quota <organization>
 To set the quota for containers in an organization, use the following command with at least one of the options included:
 
 ```
-cf bluemix-admin set-containers-quota <organization> <options>
+cf ibmcloud-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -450,7 +450,7 @@ options names:
 Optionally, you can provide a file that contains specific configuration parameters in a valid JSON object. If you use the **-file** option, it takes precedence and the other options are ignored. To provide a file instead of setting the options, use the following command:
 
 ```
-cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -468,7 +468,7 @@ The JSON file should have the format that is shown in the following example:
 {: codeblock}
 
 **Tip:** You can also use **ba scq** as an alias for the longer
-**bluemix-admin set-containers-quota** command name.
+**ibmcloud-admin set-containers-quota** command name.
 
 ## Administering spaces
 {: #admin_spaces}
@@ -478,7 +478,7 @@ The JSON file should have the format that is shown in the following example:
 To add a space in the organization, use the following command:
 
 ```
-cf bluemix-admin create-space <organization> <space_name>
+cf ibmcloud-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -498,7 +498,7 @@ cf bluemix-admin create-space <organization> <space_name>
 To remove a space from the organization, use the following command:
 
 ```
-cf bluemix-admin delete-space <organization> <space_name>
+cf ibmcloud-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -518,7 +518,7 @@ cf bluemix-admin delete-space <organization> <space_name>
 To create a user in a space with a specified role, use the following command:
 
 ```
-cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -545,7 +545,7 @@ descriptions in a space.</dd>
 To remove the role of a user in a space, use the following command:
 
 ```
-cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -792,10 +792,10 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Examples&gt;</dt>
-<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 
