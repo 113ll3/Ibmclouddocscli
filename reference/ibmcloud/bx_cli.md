@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -30,13 +30,13 @@ The following lists detailed commands that are supported by {{site.data.keyword.
 
 <dl>
 <dt>Endpoint</dt>
-<dd>An API endpoint must be set through the <code>bluemix api</code> before using the command.</dd>
+<dd>An API endpoint must be set through the <code>ibmcloud api</code> before using the command.</dd>
 <dt>Login</dt>
-<dd>Login by using the <code>bluemix login</code> command is required before using this command.
+<dd>Login by using the <code>ibmcloud login</code> command is required before using this command.
 If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key. Go to {{site.data.keyword.Bluemix_notm}} console **Manage** &gt; **Security** &gt; **Platform API keys** to create API keys.
 </dd>
 <dt>Target</dt>
-<dd>The <code>bluemix target</code> command must be used to set an org and space before using this command.</dd>
+<dd>The <code>ibmcloud target</code> command must be used to set an org and space before using this command.</dd>
 <dt>Docker</dt>
 <dd>The Docker CLI (docker) must be installed to run this command.</dd>
 </dl>
