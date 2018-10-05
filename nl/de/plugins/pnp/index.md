@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -32,7 +32,7 @@ Zu Beginn installieren Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilens
 ibmcloud plugin uninstall private-network-peering
 ```
 ### Lokal installieren
-Laden Sie das Plug-in für privates Netzpeering für Ihre Plattform aus dem [{{site.data.keyword.ibmcloud_notm}}-CLI-Plug-in-Repository ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window} herunter.
+Laden Sie das Plug-in für privates Netzpeering für Ihre Plattform aus dem [{{site.data.keyword.Bluemix_notm}}-CLI-Plug-in-Repository ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window} herunter. 
 
 Installieren Sie das Plug-in für privates Netzpeering mit dem folgenden Befehl:
 
@@ -62,11 +62,11 @@ ibmcloud plugin install private-network-peering-linux-amd64
 chmod a+x ./private-network-peering-linux-amd64
 ```
 
-### Aus dem {{site.data.keyword.ibmcloud_notm}}-Repository installieren
+### Aus dem {{site.data.keyword.Bluemix_notm}}-Repository installieren
 
-Befolgen Sie diese Schritte, um das Plug-in aus dem {{site.data.keyword.ibmcloud_notm}}-Repository zu installieren:
+Befolgen Sie diese Schritte, um das Plug-in aus dem {{site.data.keyword.Bluemix_notm}}-Repository zu installieren:
 
-1. Fügen Sie den Registry-Endpunkt für das {{site.data.keyword.ibmcloud_notm}}-Plug-in hinzu:
+1. Fügen Sie den Registry-Endpunkt für das {{site.data.keyword.Bluemix_notm}}-Plug-in hinzu:
 	```
 	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
@@ -80,7 +80,7 @@ Befolgen Sie diese Schritte, um das Plug-in aus dem {{site.data.keyword.ibmcloud
 ## Liste der Befehle für das private Netzpeering
 Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `ibmcloud network`, um die Liste der verfügbaren Befehle anzuzeigen:
 
-| Befehl     | Beschreibung                                    |
+| Befehl      | Beschreibung                                   |
 |-------------|------------------------------------------------|
 | pnp-routers | Führt alle verfügbaren Router für das Peering auf.        |
 | pnp-create  | Erstellt eine Verbindung für das private Netzpeering.   |
@@ -147,7 +147,7 @@ Zum Anzeigen ausführlicher Netzinformationen zu allen Routern:
 	...
 
 
-#### Erstellen eines privaten Netzpeerings unter Verwendung der IP-Adressen
+#### Erstellen einer privaten Netzpeeringverbindung unter Verwendung der IP-Adressen
 ```
 ibmcloud network pnp-create <router_ip> <router_ip> <name>
 ```
