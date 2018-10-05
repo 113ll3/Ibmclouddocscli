@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -300,7 +300,7 @@ ibmcloud resource service-instances --service-name test-service
 Details einer Serviceinstanz anzeigen
 
 ```
-ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
+ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -315,6 +315,8 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
   <dd>Nach Position filtern</dd>
   <dt>--id</dt>
   <dd>ID der Serviceinstanz anzeigen</dd>
+  <dt>--output</dt>
+  <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. Diese Option ist gegenseitig ausschließend mit '--id'.</dd>
 </dl>
 
 <strong>Beispiele</strong>:

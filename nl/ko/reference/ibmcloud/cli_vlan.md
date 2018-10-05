@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -49,8 +49,6 @@ ibmcloud sl vlan create [OPTIONS]
 <dd>라우터의 호스트 이름.</dd>
 <dt>-d, --datacenter</dt>
 <dd>데이터 센터의 짧은 이름.</dd>
-<dt>-s, --size</dt>
-<dd>서브넷의 크기. 옵션: 8(사용 가능한 5개의 IP), 16(사용 가능한 13개의 IP) 또는 32(사용 가능한 29개의 IP).</dd>
 <dt>-n, --name</dt>
 <dd>VLAN의 이름.</dd>
 <dt>-f, --force</dt>

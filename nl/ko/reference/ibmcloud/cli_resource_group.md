@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -301,7 +301,7 @@ ibmcloud resource service-instances --service-name test-service
 서비스 인스턴스의 세부사항 표시
 
 ```
-ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
+ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -316,6 +316,8 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
   <dd>위치별 필터링</dd>
   <dt>--id</dt>
   <dd>서비스 인스턴스의 ID 표시</dd>
+  <dt>--output</dt>
+  <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다. </dd>
 </dl>
 
 <strong>예제</strong>:

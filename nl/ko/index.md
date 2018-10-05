@@ -52,7 +52,7 @@ curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
 
-* Windows의 경우 관리자로서 다음 명령을 실행하십시오.
+* Windows 10 Pro의 경우 관리자로 다음 명령을 실행하십시오. 
 
   ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')

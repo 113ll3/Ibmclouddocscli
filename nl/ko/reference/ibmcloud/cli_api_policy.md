@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -376,7 +376,7 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
 <dd>API 키의 설명</dd>
 <dt>--file <i>FILE</i></dt>
-<dd>지정된 파일에 API 키 정보를 저장합니다. 설정하지 않으면 JSON 컨텐츠가 표시됩니다.</dd>
+<dd>지정된 파일에 API 키 정보를 저장합니다. </dd>
 <dt>--lock</dt>
 <dd>작성 시 API 키 잠금</dd>
 </dl>
@@ -603,7 +603,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>-d, --description</dt>
   <dd>API 키의 설명</dd>
   <dt>--file</dt>
-  <dd>지정된 파일에 API 키 정보를 저장합니다. 설정하지 않으면 JSON 컨텐츠가 표시됩니다.</dd>
+  <dd>지정된 파일에 API 키 정보를 저장합니다. </dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 작성</dd>
 </dl>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -48,8 +48,6 @@ ibmcloud sl vlan create [OPTIONS]
 <dd>路由器的主機名稱。</dd>
 <dt>-d, --datacenter</dt>
 <dd>資料中心的簡稱。</dd>
-<dt>-s, --size</dt>
-<dd>子網路的大小，選項包含：8（5 個可用的 IP）或 16（13 個可用的 IP）或 32（29 個可用的 IP）。</dd>
 <dt>-n, --name</dt>
 <dd>VLAN 的名稱。</dd>
 <dt>-f, --force</dt>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -376,7 +376,7 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>-d <i>DESCRIPTION</i>（選用）</dt>
 <dd>API 金鑰的說明</dd>
 <dt>--file <i>FILE</i></dt>
-<dd>將 API 金鑰資訊儲存至指定的檔案。如果未設定，則會顯示 JSON 內容。</dd>
+<dd>將 API 金鑰資訊儲存至指定的檔案。</dd>
 <dt>--lock</dt>
 <dd>建立時鎖定 API 金鑰</dd>
 </dl>
@@ -603,7 +603,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>-d, --description</dt>
   <dd>API 金鑰的說明</dd>
   <dt>--file</dt>
-  <dd>將 API 金鑰資訊儲存至指定的檔案。如果未設定，則會顯示 JSON 內容。</dd>
+  <dd>將 API 金鑰資訊儲存至指定的檔案。</dd>
   <dt>-f, --force</dt>
   <dd>強制建立，而不進行確認</dd>
 </dl>

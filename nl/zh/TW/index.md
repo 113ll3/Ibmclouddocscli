@@ -52,7 +52,7 @@ lastupdated: "2018-08-31"
   ```
   {: codeblock}
 
-* 若為 Windows，請以管理者身分執行下列指令：
+* 若為 Windows 10 Pro，請以管理者身分執行下列指令：
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
