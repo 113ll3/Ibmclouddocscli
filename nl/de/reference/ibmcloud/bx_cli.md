@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -30,13 +30,13 @@ In der nachfolgenden Liste finden Sie detaillierte Angaben zu den von der {{site
 
 <dl>
 <dt>Endpunkt</dt>
-<dd>Vor dem Verwenden des Befehls muss ein API-Endpunkt durch Absetzen des Befehls <code>bluemix api</code> definiert werden.</dd>
+<dd>Vor der Verwendung des Befehls muss mittels <code>ibmcloud api</code> ein API-Endpunkt festgelegt werden.</dd>
 <dt>Anmeldung</dt>
-<dd>Vor der Verwendung des Befehls ist die Anmeldung über den Befehl <code>bluemix login</code> erforderlich.
+<dd>Vor der Verwendung dieses Befehls ist die Anmeldung über den Befehl <code>ibmcloud login</code> erforderlich.
 Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode oder verwenden Sie die Option '--apikey' für die Authentifizierung mit einem API-Schlüssel. Wechseln Sie in der {{site.data.keyword.Bluemix_notm}}-Konsole zum Erstellen von API-Schlüsseln zu **Verwalten** &gt; **Sicherheit** &gt; **Plattform-API-Schlüssel**.
 </dd>
 <dt>Ziel</dt>
-<dd>Vor dem Verwenden des Befehls muss der Befehl <code>bluemix target</code> zum Definieren einer Organisation und eines Bereichs ausgeführt werden.</dd>
+<dd>Vor der Verwendung dieses Befehls muss der Befehl <code>ibmcloud target</code> zum Festlegen einer Organisation oder eines Bereichs verwendet werden.</dd>
 <dt>Docker</dt>
 <dd>Die Docker-CLI (docker) muss installiert werden, um diesen Befehl auszuführen.</dd>
 </dl>

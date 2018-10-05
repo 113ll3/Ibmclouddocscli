@@ -18,7 +18,6 @@ IBM Cloud-Befehlszeilenschnittstelle und Entwicklertools
 	IBM Cloud Developer Tools IDE Extensions
 		idt/vscode.md
 		idt/jetbrains.md
-		deploy_eclipsetools.md
 		[Anwendungen mit IBM Eclipse Tools for IBM Cloud bereitstellen](../manageapps/eclipsetools/eclipsetools.html)
 
 	{: topicgroup}
