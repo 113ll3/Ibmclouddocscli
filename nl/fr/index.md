@@ -52,7 +52,7 @@ Vous devez avoir un compte [{{site.data.keyword.Bluemix_notm}} ](https://console
   ```
   {: codeblock}
 
-* Pour Windows, exécutez la commande suivante en tant qu'administrateur :
+* Pour Windows 10 Pro, exécutez la commande suivante en tant qu'administrateur :
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')

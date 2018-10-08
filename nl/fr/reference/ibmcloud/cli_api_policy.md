@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -376,7 +376,7 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>-d <i>DESCRIPTION</i> (facultatif)</dt>
 <dd>Description de la clé d'API</dd>
 <dt>--file <i>FILE</i></dt>
-<dd>Sauvegarder les informations de clé d'API dans le fichier spécifié. Si cette option n'est pas spécifiée, le contenu JSON s'affiche.</dd>
+<dd>Sauvegarder les informations de clé d'API dans le fichier spécifié. </dd>
 <dt>--lock</dt>
 <dd>Verrouiller la clé d'API lors de la création</dd>
 </dl>
@@ -603,7 +603,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>-d, --description</dt>
   <dd>Description de la clé d'API</dd>
   <dt>--file</dt>
-  <dd>Sauvegarder les informations de clé d'API dans le fichier spécifié. Si cette option n'est pas spécifiée, le contenu JSON s'affiche.</dd>
+  <dd>Sauvegarder les informations de clé d'API dans le fichier spécifié. </dd>
   <dt>-f, --force</dt>
   <dd>Forcer la création sans confirmation</dd>
 </dl>
@@ -1133,9 +1133,9 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dt>-resource</dt>
   <dd>Ressource de la définition de règle. Exclut l'option '--file'.</dd>
   <dt>--resource-group-name</dt>
-  <dd>Nom du groupe de ressources. Cette option exclut '--file' et '--resource-group-id'.</dd>
+  <dd>Nom du groupe de ressources. Exclut '--file' et '--resource-group-id'.</dd>
   <dt>--resource-group-id </dt>
-  <dd>ID du groupe de ressources. Cette option exclut '--file' et '--resource-group-name'.</dd>
+  <dd>ID du groupe de ressources. Exclut '--file' et '--resource-group-name'.</dd>
   <dt>-f, --force</dt>
   <dd>Mettre à jour la règle de service sans confirmation</dd>
 </dl>
@@ -1694,9 +1694,9 @@ ibmcloud iam access-group-policy-create GROUP_NAME {--file @JSON_FILE | --roles 
   <dt>-resource</dt>
   <dd>Ressource de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-resource-group-name</dt>
-  <dd>Nom du groupe de ressources. Cette option exclut '--file' et '--resource-group-id'.</dd>
+  <dd>Nom du groupe de ressources. Exclut '--file' et '--resource-group-id'.</dd>
   <dt>-resource-group-id</dt>
-  <dd>ID du groupe de ressources. Cette option exclut '--file' et '--resource-group-name'.</dd>
+  <dd>ID du groupe de ressources. Exclut '--file' et '--resource-group-name'.</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -1760,9 +1760,9 @@ ibmcloud iam access-group-policy-update GROUP_NAME POLICY_ID {--file JSON_FILE |
   <dt>-resource</dt>
   <dd>Ressource de la définition de règle. Cette option exclut '--file'.</dd>
   <dt>-resource-group-name</dt>
-  <dd>Nom du groupe de ressources. Cette option exclut '--file' et '--resource-group-id'.</dd>
+  <dd>Nom du groupe de ressources. Exclut '--file' et '--resource-group-id'.</dd>
   <dt>-resource-group-id</dt>
-  <dd>ID du groupe de ressources. Cette option exclut '--file' et '--resource-group-name'.</dd>
+  <dd>ID du groupe de ressources. Exclut '--file' et '--resource-group-name'.</dd>
 </dl>
 
 <strong>Exemples</strong> :

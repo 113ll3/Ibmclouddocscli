@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -48,8 +48,6 @@ ibmcloud sl vlan create [OPTIONS]
 <dd>Nom d'hôte du routeur.</dd>
 <dt>-d, --datacenter</dt>
 <dd>Nom abrégé du centre de données.</dd>
-<dt>-s, --size</dt>
-<dd>Taille des sous-réseaux. Options possibles : 8 (5 adresses IP utilisables) ou 16 (13 adresses IP utilisables) ou 32 (29 adresses IP utilisables).</dd>
 <dt>-n, --name</dt>
 <dd>Nom du réseau local virtuel.</dd>
 <dt>-f, --force</dt>
