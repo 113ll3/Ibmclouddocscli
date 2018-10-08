@@ -2115,8 +2115,8 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dd>Nombre de la clave de API a crear.</dd>
 <dt>-d <i>DESCRIPTION</i> (opcional)</dt>
 <dd>Descripción de la clave de API</dd>
-<dt>--file <i>ARCHIVO</i></dt>
-<dd>Guarda la información de la clave de API en un archivo especificado. Si no se establece, se visualiza el contenido JSON.</dd>
+<dt>--file <i>FILE</i></dt>
+<dd>Guarda la información de la clave de API en el archivo especificado. Si no se establece, se visualiza el contenido JSON.</dd>
 <dt>--lock</dt>
 <dd>Bloquear la clave de API cuando se cree</dd>
 </dl>
@@ -2343,7 +2343,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>-d, --description</dt>
   <dd>Descripción de la clave de API</dd>
   <dt>--file</dt>
-  <dd>Guarda la información de la clave de API en un archivo especificado. Si no se establece, se visualiza el contenido JSON.</dd>
+  <dd>Guarda la información de la clave de API en el archivo especificado. Si no se establece, se visualiza el contenido JSON.</dd>
   <dt>-f, --force</dt>
   <dd>Forzar la creación sin confirmación</dd>
 </dl>
@@ -2559,7 +2559,7 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dl>
 <dt>USER_NAME (necesario)</dt>
 <dd>Nombre de usuario al que pertenece la política</dd>
-<dt>--file <i>ARCHIVO</i> (opcional)</dt>
+<dt>--file <i>FILE</i> (opcional)</dt>
 <dd>Archivo JSON de definición de política</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (opcional)</dt>
 <dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opción y el distintivo '--file' son mutuamente excluyentes.</dd>
@@ -2633,7 +2633,7 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dd>Nombre de usuario al que pertenece la política</dd>
 <dt>POLICY_ID (necesario)</dt>
 <dd>ID de la política a actualizar</dd>
-<dt>--file <i>ARCHIVO</i> (opcional)</dt>
+<dt>--file <i>FILE</i> (opcional)</dt>
 <dd>Archivo JSON de definición de política</dd>
 <dt>--roles <i>ROLE_NAME1,ROLE_NAME2...</i> (opcional)</dt>
 <dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opción y el distintivo '--file' son mutuamente excluyentes.</dd>

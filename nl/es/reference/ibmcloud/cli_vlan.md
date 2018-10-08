@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -48,8 +48,6 @@ ibmcloud sl vlan create [OPTIONS]
 <dd>El nombre de host del direccionador.</dd>
 <dt>-d, --datacenter</dt>
 <dd>El nombre abreviado del centro de datos.</dd>
-<dt>-s, --size</dt>
-<dd>El tamaño de las subredes, las opciones son: 8 (5 IP utilizables) o 16 (13 IP utilizables) o 32 (29 IP utilizables).</dd>
 <dt>-n, --name</dt>
 <dd>El nombre de la VLAN.</dd>
 <dt>-f, --force</dt>

@@ -52,7 +52,7 @@ Necesita una cuenta de [{{site.data.keyword.Bluemix_notm}} ](https://console.blu
   ```
   {: codeblock}
 
-* Para Windows, ejecute el mandato siguiente como administrador:
+* Para Windows 10 Pro, ejecute el mandato siguiente como administrador:
 
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
