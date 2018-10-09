@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -372,7 +372,7 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>-d <i>DESCRIPTION</i>（可选）</dt>
 <dd>API 密钥的描述</dd>
 <dt>--file <i>FILE</i></dt>
-<dd>将 API 密钥信息保存到指定的文件。如果未设置，将显示 JSON 内容。</dd>
+<dd>将 API 密钥信息保存到指定的文件。</dd>
 <dt>--lock</dt>
 <dd>锁定创建的 API 密钥</dd>
 </dl>
@@ -599,7 +599,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>-d, --description</dt>
   <dd>API 密钥的描述</dd>
   <dt>--file</dt>
-  <dd>将 API 密钥信息保存到指定的文件。如果未设置，将显示 JSON 内容。</dd>
+  <dd>将 API 密钥信息保存到指定的文件。</dd>
   <dt>-f, --force</dt>
   <dd>强制创建而不确认</dd>
 </dl>

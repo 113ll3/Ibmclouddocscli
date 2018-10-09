@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -49,8 +49,6 @@ ibmcloud sl vlan create [OPZIONI]
 <dd>Il nome host del router.</dd>
 <dt>-d, --datacenter</dt>
 <dd>Il nome breve del datacenter.</dd>
-<dt>-s, --size</dt>
-<dd>La dimensione delle sottoreti, le opzioni sono: 8 (5 IP utilizzabili), 16 (13 IP utilizzabili) o 32 (29 IP utilizzabili).</dd>
 <dt>-n, --name</dt>
 <dd>Il nome della VLAN.</dd>
 <dt>-f, --force</dt>

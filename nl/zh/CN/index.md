@@ -52,11 +52,11 @@ curl -sL https://ibm.biz/idt-installer | bash
 ```
   {: codeblock}
 
-* 对于 Windows，请以管理员身份运行以下命令：
+* 对于 Windows 10 专业版，请以管理员身份运行以下命令：
 
   ```
-Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
-```
+  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  ```
   {: codeblock}
 
     右键单击 Windows PowerShell 图标，并选择**以管理员身份运行**。

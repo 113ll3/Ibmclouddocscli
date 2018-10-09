@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-21"
 ---
 
 {:new_window: target="_blank"}
@@ -299,7 +299,7 @@ ibmcloud resource service-instances --service-name test-service
 显示服务实例的详细信息
 
 ```
-ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
+ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -314,6 +314,8 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id]
   <dd>按位置过滤</dd>
   <dt>--id</dt>
   <dd>显示服务实例的标识</dd>
+  <dt>--output</dt>
+  <dd>指定输出格式，目前仅支持 JSON。此选项与“--id”互斥。</dd>
 </dl>
 
 <strong>示例</strong>：
