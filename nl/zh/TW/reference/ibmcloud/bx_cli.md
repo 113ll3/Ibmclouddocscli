@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -30,12 +30,12 @@ lastupdated: "2018-08-28"
 
 <dl>
 <dt>端點</dt>
-<dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能使用這個指令。</dd>
+<dd>必須透過 <code>ibmcloud api</code> 設定 API 端點後，才能使用這個指令。</dd>
 <dt>登入</dt>
-<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用這個指令。如果是使用聯合 ID 進行登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。移至 {{site.data.keyword.Bluemix_notm}} 主控台**管理** &gt; **安全** &gt; **平台 API 金鑰**，以建立 API 金鑰。
+<dd>需要使用 <code>ibmcloud login</code> 指令進行登入後，才能使用這個指令。如果是使用聯合 ID 進行登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。移至 {{site.data.keyword.Bluemix_notm}} 主控台**管理** &gt; **安全** &gt; **平台 API 金鑰**，以建立 API 金鑰。
 </dd>
 <dt>目標</dt>
-<dd>必須使用 <code>bluemix target</code> 指令來設定組織及空間後，才能使用這個指令。</dd>
+<dd>必須使用 <code>ibmcloud target</code> 指令來設定組織及空間後，才能使用這個指令。</dd>
 <dt>Docker</dt>
 <dd>必須先安裝 Docker CLI (docker)，才能執行這個指令。</dd>
 </dl>

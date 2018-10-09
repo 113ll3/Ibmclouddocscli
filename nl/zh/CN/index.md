@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-31"
+lastupdated: "2018-010-03"
 
 ---
 
@@ -116,4 +116,4 @@ ibmcloud dev help
 ## 后续步骤
 {: #next-steps}
 
-现在，您已准备好开发和部署第一个应用程序！
+现在，您已准备好开发和部署第一个应用程序。有关更多信息，请参阅[使用 CLI 创建和部署应用程序](/docs/apps/create-deploy-cli.html)。

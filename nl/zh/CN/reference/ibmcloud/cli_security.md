@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -82,11 +82,9 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 
 **示例**：
 ```
-ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
+ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-此命令更新标识为 12345678 的 SSH 密钥，并将标签设置为“Bluemix”，注释设置为“testing”。
-
-
+此命令更新标识为 12345678 的 SSH 密钥，并将标签设置为“ibmcloud”，注释设置为“testing”。
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}

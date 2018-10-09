@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-31"
+lastupdated: "2018-010-03"
 
 ---
 
@@ -116,4 +116,4 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Nächste Schritte
 {: #next-steps}
 
-Sie sind jetzt bereit, um Ihre erste Anwendung zu entwickeln und bereitstellen.
+Sie sind jetzt bereit, Ihre erste Anwendung zu entwickeln und bereitstellen. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps/create-deploy-cli.html).
