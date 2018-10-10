@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-31"
+lastupdated: "2018-010-03"
 
 ---
 
@@ -126,4 +126,5 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 ## Próximas Etapas
 {: #next-steps}
 
-Agora você está pronto para desenvolver e implementar o seu primeiro aplicativo!
+Você agora está pronto para desenvolver e implementar o seu primeiro aplicativo. Consulte
+[Criando e implementando os apps usando a CLI](/docs/apps/create-deploy-cli.html) para obter mais informações.

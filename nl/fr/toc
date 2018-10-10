@@ -18,7 +18,6 @@ Interface de ligne de commande IBM Cloud et Developer Tools
 	Extensions IDE IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
-		deploy_eclipsetools.md
 		[Déploiement d'applications avec IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
 
 	{: topicgroup}

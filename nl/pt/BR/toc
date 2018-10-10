@@ -15,10 +15,9 @@ CLI e Ferramentas do desenvolvedor do IBM Cloud
 	idt/index.md
 
 	{: .topicgroup}
-	Extensões IDE do IBM Cloud Developer Tools
+	Extensões IDE das ferramentas do IBM Cloud Developer
 		idt/vscode.md
 		idt/jetbrains.md
-		deploy_eclipsetools.md
 		[Implementando apps com o IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
 
 	{: topicgroup}

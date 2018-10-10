@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -30,13 +30,13 @@ A seguir são listados os comandos detalhados que são suportados pelo {{site.da
 
 <dl>
 <dt>Nó de Extremidade</dt>
-<dd>Um terminal de API deve ser configurado por meio de <code>bluemix api</code> antes de usar o comando.</dd>
+<dd>Um terminal de API deve ser configurado por meio de <code>ibmcloud api</code> antes de usar o comando.</dd>
 <dt>Login</dt>
-<dd>É necessário efetuar login usando o comando <code>bluemix login</code> antes de usar esse comando.
+<dd>Efetuar login usando o comando <code>ibmcloud login</code> é necessário antes de usar esse comando.
 Se estiver efetuando login com o ID federado, use a opção '--sso' para se autenticar com uma senha única ou use '--apikey' para se autenticar com a chave API. Acesse o console do {{site.data.keyword.Bluemix_notm}} **Gerenciar** &gt; **Segurança** &gt; **Chaves API da plataforma** para criar chaves API.
 </dd>
 <dt>Destino</dt>
-<dd>O comando <code>bluemix target</code> deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
+<dd>O comando <code>ibmcloud target</code> deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
 <dt>Docker</dt>
 <dd>A CLI do Docker (docker) deve estar instalada para executar esse comando.</dd>
 </dl>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -30,13 +30,13 @@ Les listes ci-dessous répertorient les commandes prises en charge par l'interfa
 
 <dl>
 <dt>Noeud final</dt>
-<dd>Un noeud final d'API doit être défini via <code>bluemix api</code> avant l'utilisation de la commande.</dd>
+<dd>Un noeud final d'API doit être défini via <code>ibmcloud api</code> avant l'utilisation de la commande.</dd>
 <dt>Connexion</dt>
-<dd>La connexion avec la commande <code>bluemix login</code> est requise avant l'utilisation de cette commande.
+<dd>La connexion avec la commande <code>ibmcloud login</code> est requise avant d'utiliser cette commande.
 Si vous vous connectez avec un ID fédéré, utilisez l'option '--sso' pour vous authentifier avec un code d'accès unique ou utilisez l'option '--apikey' pour vous authentifier avec une clé d'API. Dans la console {{site.data.keyword.Bluemix_notm}} sélectionnez **Gérer** &gt; **Sécurité** &gt; **Clés d'API de la plateforme** pour créer des clés d'API.
 </dd>
 <dt>Cible</dt>
-<dd>La commande <code>bluemix target</code> doit être utilisée pour définir une organisation et un espace avant l'utilisation de cette commande.</dd>
+<dd>La commande <code>ibmcloud target</code> doit être utilisée pour configurer une organisation et un espace avant d'appeler cette commande.</dd>
 <dt>Docker</dt>
 <dd>L'interface de ligne de commande Docker (docker) doit être installée pour que vous puissiez exécuter cette commande.</dd>
 </dl>
