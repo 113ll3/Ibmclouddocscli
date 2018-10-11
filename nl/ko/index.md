@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-31"
+lastupdated: "2018-010-03"
 
 ---
 
@@ -52,7 +52,7 @@ curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
 
-* Windows 10 Pro의 경우 관리자로 다음 명령을 실행하십시오. 
+* Windows 10 Pro의 경우 관리자로 다음 명령을 실행하십시오.
 
   ```
 Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
@@ -116,4 +116,4 @@ ibmcloud dev help
 ## 다음 단계
 {: #next-steps}
 
-이제 첫 번째 애플리케이션을 개발하고 배치할 준비가 되었습니다!
+이제 첫 번째 애플리케이션을 개발하고 배치할 준비가 되었습니다. 자세한 정보는 [CLI를 사용하여 앱 작성 및 배치](/docs/apps/create-deploy-cli.html)를 참조하십시오.

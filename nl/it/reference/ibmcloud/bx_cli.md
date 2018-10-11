@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -30,13 +30,13 @@ Di seguito sono elencati in dettaglio i comandi supportati dalla CLI {{site.data
 
 <dl>
 <dt>Endpoint</dt>
-<dd>Un endpoint API deve essere impostato mediante <code>bluemix api</code> prima di utilizzare il comando.</dd>
+<dd>Un endpoint API deve essere impostato mediante <code>ibmcloud api</code> prima di utilizzare il comando.</dd>
 <dt>Accesso</dt>
-<dd>L'accesso utilizzando il comando <code>bluemix login</code> è richiesto prima di utilizzare questo comando.
+<dd>È necessario accedere utilizzando il comando <code>ibmcloud login</code> prima di utilizzare questo comando.
 Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per autenticarti con il passcode monouso o utilizza '--apikey' per autenticarti con la chiave API. Vai alla console {{site.data.keyword.Bluemix_notm}} e fai clic su **Gestisci ** &gt; **Sicurezza** &gt; **Chiavi API della piattaforma** per creare le chiavi API.
 </dd>
 <dt>Destinazione</dt>
-<dd>Il comando <code>bluemix target</code> deve essere utilizzato per impostare un'organizzazione e uno spazio prima di utilizzare questo comando.</dd>
+<dd>È necessario utilizzare il comando <code>ibmcloud target</code> per impostare un'organizzazione e uno spazio prima di utilizzare questo comando.</dd>
 <dt>Docker</dt>
 <dd>Per poter eseguire questo comando, è necessario che la CLI Docker (docker) sia installata.</dd>
 </dl>
@@ -452,7 +452,7 @@ Sono supportati i seguenti comandi. Utilizza il comando `ibmcloud sl` per visual
 <table summary="Comandi generali riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
 <caption>Tabella 1. Comandi del servizio dell'infrastruttura generali</caption>
  <thead>
- <th colspan="6">Comandi del servizio dell'infrastruttura generali </th>
+ <th colspan="6">Comandi del servizio dell'infrastruttura generali</th>
  </thead>
  <tbody>
  <tr>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -80,9 +80,9 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 
 **예제**:
 ```
-ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
+ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-이 명령은 ID가 12345678인 SSH 키를 업데이트하고 레이블을 "Bluemix"로 설정하고 참고를 "testing"으로 설정합니다.
+이 명령은 ID가 12345678인 SSH 키를 업데이트하고 레이블을 "ibmcloud"로 설정하며 참고를 "testing"으로 설정합니다.
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}

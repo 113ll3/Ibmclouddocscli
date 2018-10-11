@@ -18,8 +18,7 @@ CLI IBM Cloud e Developer Tools
 	Estensioni IDE di IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
-		deploy_eclipsetools.md
-		[Distribuzione di applicazioni con IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
+		[Deploying apps with IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
 
 	{: topicgroup}
 	Debug

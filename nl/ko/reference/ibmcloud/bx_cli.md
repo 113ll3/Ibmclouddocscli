@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -30,13 +30,13 @@ lastupdated: "2018-08-28"
 
 <dl>
 <dt>엔드포인트</dt>
-<dd>명령을 사용하기 전에 <code>bluemix api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
+<dd>명령을 사용하기 전에 <code>ibmcloud api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
 <dt>로그인</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다.
+<dd>이 명령을 사용하기 전에 <code>ibmcloud login</code> 명령을 사용하여 로그인해야 합니다.
  연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여 API 키로 인증하십시오. API 키를 작성하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **플랫폼 API 키**로 이동하십시오.
 </dd>
 <dt>대상</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
+<dd>이 명령을 사용하기 전에 <code>ibmcloud target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
 <dt>Docker</dt>
 <dd>이 명령을 실행하려면 Docker CLI(docker)가 설치되어 있어야 합니다.</dd>
 </dl>

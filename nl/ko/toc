@@ -18,7 +18,6 @@ IBM Cloud CLI 및 Developer Tools
 	IBM Cloud Developer Tools IDE 확장
 		idt/vscode.md
 		idt/jetbrains.md
-		deploy_eclipsetools.md
 		[IBM Eclipse Tools for IBM Cloud로 앱 배치](../manageapps/eclipsetools/eclipsetools.html)
 
 	{: topicgroup}
