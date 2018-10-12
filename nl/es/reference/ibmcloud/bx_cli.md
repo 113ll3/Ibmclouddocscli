@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -30,13 +30,13 @@ A continuación se enumeran los mandatos detallados que están soportados por la
 
 <dl>
 <dt>Punto final</dt>
-<dd>Un punto final de API se debe establecer por medio de la <code>bluemix api</code> antes de utilizar el mandato.</dd>
+<dd>Un punto final de API se debe establecer por medio de la <code>ibmcloud api</code> antes de utilizar el mandato.</dd>
 <dt>Login</dt>
-<dd>El inicio de sesión que utiliza el mandato <code>bluemix login</code> es necesario antes de utilizar este mandato.
+<dd>El inicio de sesión que utiliza el mandato <code>ibmcloud login</code> es necesario antes de utilizar este mandato.
 Si inicia sesión con un ID federado, utilice la opción '--sso' para autenticarse con un código de acceso de una sola vez o utilice '--apikey' para realizar la autenticación con una clave de API. Vaya a la consola de {{site.data.keyword.Bluemix_notm}} **Gestionar** &gt; **Seguridad** &gt; **Claves de API de plataforma** para crear claves de API.
 </dd>
 <dt>Target</dt>
-<dd>El mandato <code>bluemix target</code> debe utilizarse para establecer un punto de extensión org y un espacio antes de utilizar este mandato.</dd>
+<dd>El mandato <code>ibmcloud target</code> debe utilizarse para establecer un punto de extensión org y un espacio antes de utilizar este mandato.</dd>
 <dt>Docker</dt>
 <dd>La CLI de Docker CLI (docker) debe estar instalada para poder ejecutar este mandato.</dd>
 </dl>

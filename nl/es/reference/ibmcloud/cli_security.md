@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -80,9 +80,9 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 
 **Ejemplos**:
 ```
-ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
+ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-Este mandato actualiza la clave SSH con el ID 12345678 y establece la etiqueta en "Bluemix" y la nota en "testing".
+Este mandato actualiza la clave SSH con el ID 12345678 y establece la etiqueta en "ibmcloud" y la nota en "testing".
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
