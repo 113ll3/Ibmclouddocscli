@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 {:new_window: target="_blank"}
@@ -50,21 +50,21 @@ lastupdated: "2018-06-21"
    * 使用以下命令安装 govendor。
 
       ```
-            go get -u github.com/kardianos/govendor
+      go get -u github.com/kardianos/govendor
       ```
       {: codeblock}
 
    * 使用以下命令对项目目录上的 `govendor` 进行初始化。
 
       ```
-            govendor init
+      govendor init
       ```
       {: codeblock}
 
    * 使用以下命令将 `$GOPATH` 中的依赖关系添加到供应商目录。
 
       ```
-            govendor add +local
+      govendor add +local
       ```
       {: codeblock}
 
@@ -75,21 +75,21 @@ lastupdated: "2018-06-21"
    * 使用以下命令安装 `ginkgo`。
 
       ```
-            go get -u github.com/onsi/ginkgo/ginkgo
+      go get -u github.com/onsi/ginkgo/ginkgo
       ```
       {: codeblock}
 
    * 使用以下命令安装 `gomega`。
 
       ```
-            go get -u github.com/onsi/gomega
+      go get -u github.com/onsi/gomega
       ```
       {: codeblock}
 
    * 使用以下命令运行单元测试。
 
       ```
-      ginkgo -r
+ginkgo -r
 ```
       {: codeblock}
 
@@ -98,7 +98,7 @@ lastupdated: "2018-06-21"
    * 要获取易用 HTML 形式的代码覆盖范围，请使用以下命令。
 
       ```
-            go tool -html={package}.coverprofile
+      go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
@@ -111,14 +111,14 @@ lastupdated: "2018-06-21"
    * 使用以下命令安装 `go-i18n`。
 
       ```
-            go get -u github.com/nicksnyder/go-i18n/goi18n
+      go get -u github.com/nicksnyder/go-i18n/goi18n
       ```
       {: codeblock}
 
    * 使用以下命令安装 `go-bindata`。
 
       ```
-            go get -u github/com/jteeuwen/go-bindata/go-bindata
+      go get -u github/com/jteeuwen/go-bindata/go-bindata
       ```
       {: codeblock}
 
@@ -129,7 +129,7 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
    * 使用以下命令安装 `delve`。
 
       ```
-            go get -u github.com/derekparker/delve/cmd/dlv
+      go get -u github.com/derekparker/delve/cmd/dlv
       ```
       {: codeblock}
 
@@ -146,7 +146,7 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
 
 未列出嵌套依赖关系。
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
+* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
 
    {{site.data.keyword.Bluemix_notm}} CLI 插件 SDK，提供用于开发 {{site.data.keyword.Bluemix_notm}} CLI 插件的基础架构。
 
@@ -181,7 +181,7 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
    ```
    import (
       ...
-      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +189,9 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
 * 克隆存储库。
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,13 +202,13 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
 通过选择以下任一命令来构建插件。
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}

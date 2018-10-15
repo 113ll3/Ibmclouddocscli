@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -74,10 +74,10 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 
 <strong>範例</strong>：
 
-將 {{site.data.keyword.Bluemix_notm}} CLI 的正式外掛程式儲存庫新增為 `bluemix-repo`：
+將 {{site.data.keyword.Bluemix_notm}} CLI 的正式外掛程式儲存庫新增為 `IBM Cloud-repo`：
 
 ```
-ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
+ibmcloud plugin repo-add IBM Cloud-repo http://plugins.ng.bluemix.net
 ```
 
 ## ibmcloud plugin repo-remove
@@ -99,10 +99,10 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>範例</strong>：
 
-從 {{site.data.keyword.Bluemix_notm}} CLI 移除 `bluemix-repo` 儲存庫：
+從 {{site.data.keyword.Bluemix_notm}} CLI 移除 `IBM Cloud-repo` 儲存庫：
 
 ```
-ibmcloud plugin repo-remove bluemix-repo
+ibmcloud plugin repo-remove IBM Cloud-repo
 ```
 
 ## ibmcloud plugin repo-plugins
@@ -131,10 +131,10 @@ ibmcloud plugin repo-plugins [-r REPO_NAME]
 ibmcloud plugin repo-plugins
 ```
 
-列出 `bluemix-repo` 儲存庫中的所有外掛程式：
+列出 `IBm Cloud-repo` 儲存庫中的所有外掛程式：
 
 ```
-ibmcloud plugin repo-plugins -r bluemix-repo
+ibmcloud plugin repo-plugins -r IBM Cloud-repo
 ```
 
 ## ibmcloud plugin repo-plugin
@@ -204,7 +204,7 @@ ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
-如果未指定儲存庫，則指令會使用預設的外掛程式儲存庫 'Bluemix'。如果未指定版本，則指令會選取最新可用的版本來進行安裝。
+如果未指定儲存庫，則指令會使用預設的外掛程式儲存庫 'IBM Cloud'。如果未指定版本，則指令會選取最新可用的版本來進行安裝。
 
 <strong>必要條件</strong>：無
 
@@ -214,8 +214,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
    <dt>PLUGIN_PATH|PLUGIN_NAME（必要）</dt>
    <dd>如果未指定 -r <i>REPO_NAME</i>，則會從指定的本端路徑或遠端 URL 來安裝外掛程式。</dd>
    <dt>-r <i>REPO_NAME</i>（選用）</dt>
-   <dd>外掛程式二進位檔所在儲存庫的名稱。如果未指定儲存庫，則指令會使用預設的外掛程式儲存庫 'Bluemix'。
-</dd>
+   <dd>外掛程式二進位檔所在儲存庫的名稱。如果未指定儲存庫，則指令會使用預設的外掛程式儲存庫 'IBM Cloud'。</dd>
    <dt>-v <i>VERSION</i>（選用）</dt>
    <dd>要安裝之外掛程式的版本。如果未提供，將安裝最新版本的外掛程式。只有從儲存庫安裝外掛程式時，此選項才有效。</dd>
    <dt>-f</dt>
@@ -223,7 +222,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
     </dl>
 
 
-{{site.data.keyword.Bluemix_notm}} CLI 具有的正式儲存庫名稱為 `Bluemix`。
+{{site.data.keyword.Bluemix_notm}} CLI 的正式儲存庫名稱為 `IBM Cloud`。
 
 <strong>範例</strong>：
 
@@ -239,10 +238,10 @@ ibmcloud plugin install /downloads/new_plugin
 ibmcloud plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-從 'Bluemix' 儲存庫安裝最新版本的 'container-service' 外掛程式：
+從 'IBM Cloud' 儲存庫安裝最新版本的 'container-service' 外掛程式：
 
 ```
-ibmcloud plugin install container-service -r Bluemix
+ibmcloud plugin install container-service -r IBM Cloud
 ```
 
 還是只用：
@@ -266,7 +265,7 @@ ibmcloud plugin install container-service -v 0.1.425
 ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
-如果未指定儲存庫，則指令會使用預設的外掛程式儲存庫 'Bluemix'。如果未指定版本，則指令會選取最新可用的版本來進行安裝。
+如果未指定儲存庫，則指令會使用預設的外掛程式儲存庫 'IBM Cloud'。如果未指定版本，則指令會選取最新可用的版本來進行安裝。
 
 <strong>必要條件</strong>：無
 
@@ -275,7 +274,7 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>要更新之外掛程式的名稱。如果未指定，則這個指令會檢查所有已安裝外掛程式的升級。</dd>
  <dt>-r REPO_NAME</dt>
- <dd>外掛程式二進位檔所在儲存庫的名稱。如果未指定，則指令會使用預設的外掛程式儲存庫 'Bluemix'。</dd>
+ <dd>外掛程式二進位檔所在儲存庫的名稱。如果未指定，則指令會使用預設的外掛程式儲存庫 'IBM Cloud'。</dd>
  <dt>-v <i>VERSION</i>（選用）</dt>
  <dd>外掛程式要更新到的目標版本。如果未提供，便將外掛程式更新至最新的可用版本。</dd>
  <dt>--all</dt>
@@ -284,10 +283,10 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 <strong>範例</strong>：
 
-檢查正式外掛程式儲存庫 'Bluemix' 中的所有可用升級：
+檢查正式外掛程式儲存庫 'IBM Cloud' 中的所有可用升級：
 
 ```
-ibmcloud plugin update -r Bluemix
+ibmcloud plugin update -r IBM Cloud
 ```
 
 還是只用：

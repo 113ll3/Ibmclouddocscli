@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -63,12 +63,12 @@ cf uninstall-plugin vpn
 1. 将 {{site.data.keyword.Bluemix_notm}} 存储库添加到 Cloud Foundry CLI 存储库中。请使用以下命令：
 
 	```
-	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
+	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
 	```
 2. 运行以下命令：
 
 	```
-	cf install-plugin vpn -r bluemix
+	cf install-plugin vpn -r IBM Cloud
 	```
 ##列出 VPN 服务命令
 

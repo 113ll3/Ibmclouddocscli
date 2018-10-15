@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-06-21"
 {:shortdesc: .shortdesc}
 
 
-# VPN-CLI-Plug-in für die Befehlszeilenschnittstelle 'cf' 
+# VPN-CLI-Plug-in für die Befehlszeilenschnittstelle 'cf'
 {: #vpn_cli_for_cf}
 
 
@@ -63,12 +63,12 @@ cf uninstall-plugin vpn
 1. Fügen Sie das {{site.data.keyword.Bluemix_notm}}-Repository zu den Cloud Foundry-CLI-Repositorys hinzu. Verwenden Sie den folgenden Befehl:
 
 	```
-	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
+	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
 	```
 2. Führen Sie den folgenden Befehl aus:
 
 	```
-	cf install-plugin vpn -r bluemix
+	cf install-plugin vpn -r IBM Cloud
 	```
 ##Liste der Befehle des VPN-Service
 
@@ -85,7 +85,7 @@ cf vpn-create connection <Verbindungsname> -g <Gateway-Name> -k <vorab_verteilte
 **Verbindungsname:**
 Der Name der Verbindung.
 
-**-g:**
+**Gateway-Name:**
 Der Name des Gateways.
 
 **-k:**
@@ -189,7 +189,7 @@ cf vpn-create gateway <Gateway-Name> -t <Typ> -gateway_ip <IP-Adresse> -subnets 
 #### Parameter
 {: #p4}
 
-**-g:**
+**Gateway-Name:**
 Der Name des Gateways.
 
 **-t:** Die Container, für die der Service aktiviert werden soll. Werte: allSingleContainers; allContainerGroups; allContainers. Kein Standardwert; Sie müssen einen Typ angeben.
@@ -376,7 +376,7 @@ cf vpn-update ipsec <Richtlinienname> -g <Gateway-Name> -d <Beschreibung> -pfs <
 ##### Optionale Parameter:
 {: #op7}
 
-**-g:**
+**Gateway-Name:**
 Der Name des Gateways.
 
 **-d:** Die Beschreibung der angegebenen Parameter.

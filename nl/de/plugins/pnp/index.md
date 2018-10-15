@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-09-13"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -32,7 +32,7 @@ Zu Beginn installieren Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilens
 ibmcloud plugin uninstall private-network-peering
 ```
 ### Lokal installieren
-Laden Sie das Plug-in für privates Netzpeering für Ihre Plattform aus dem [{{site.data.keyword.Bluemix_notm}}-CLI-Plug-in-Repository ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window} herunter. 
+Laden Sie das Plug-in für privates Netzpeering für Ihre Plattform aus dem [{{site.data.keyword.Bluemix_notm}}-CLI-Plug-in-Repository ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window} herunter.
 
 Installieren Sie das Plug-in für privates Netzpeering mit dem folgenden Befehl:
 
@@ -68,19 +68,19 @@ Befolgen Sie diese Schritte, um das Plug-in aus dem {{site.data.keyword.Bluemix_
 
 1. Fügen Sie den Registry-Endpunkt für das {{site.data.keyword.Bluemix_notm}}-Plug-in hinzu:
 	```
-	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
+	ibmcloud plugin repo-add IBM Cloud http://plugins.ng.bluemix.net
 	```
 
 2. Führen Sie den folgenden Befehl aus:
 
 	```
-	ibmcloud plugin install private-network-peering -r bluemix-bx
+	ibmcloud plugin install private-network-peering -r IBM Cloud
 	```
 
 ## Liste der Befehle für das private Netzpeering
 Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `ibmcloud network`, um die Liste der verfügbaren Befehle anzuzeigen:
 
-| Befehl      | Beschreibung                                   |
+| Befehl     | Beschreibung                                    |
 |-------------|------------------------------------------------|
 | pnp-routers | Führt alle verfügbaren Router für das Peering auf.        |
 | pnp-create  | Erstellt eine Verbindung für das private Netzpeering.   |

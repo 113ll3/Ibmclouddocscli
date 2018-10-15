@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 {:new_window: target="_blank"}
@@ -50,7 +50,7 @@ lastupdated: "2018-06-21"
    * 使用下列指令進行安裝。
 
       ```
-      go get -u github.com/kardianos/govendor
+go get -u github.com/kardianos/govendor
       ```
       {: codeblock}
 
@@ -146,7 +146,7 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
 
 未列出巢狀相依關係。
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
+* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
 
    {{site.data.keyword.Bluemix_notm}} CLI 外掛程式 SDK，提供開發 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式的基礎架構。
 
@@ -181,7 +181,7 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
    ```
    import (
       ...
-      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +189,9 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
 * 複製儲存庫。
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,13 +202,13 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
 請選擇下列一個指令，以建置外掛程式。
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}

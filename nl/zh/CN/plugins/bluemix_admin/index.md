@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -36,20 +36,20 @@ lastupdated: "2018-08-15"
 <ol>
 <li>要添加 {{site.data.keyword.Bluemix_notm}} 管理插件存储库，请运行以下命令：<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>要安装 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>
 <code>
-cf install-plugin BluemixAdminCLI -r BluemixAdmin
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
 </code>
 </li>
 </ol>
 
 如果需要卸载插件，那么可以使用以下命令，然后可以添加更新的存储库并安装最新的插件：
 
-* 卸载插件：`cf uninstall-plugin BluemixAdminCLI`
-* 除去插件存储库：`cf remove-plugin-repo BluemixAdmin`
+* 卸载插件：`cf uninstall-plugin IBMCloudAdminCLI`
+* 除去插件存储库：`cf remove-plugin-repo IBMCloudAdmin`
 
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
@@ -366,7 +366,7 @@ cf ba set-quota <organization> <plan>
 要查找组织的容器配额，请使用以下命令：
 
 ```
-cf bluemix-admin containers-quota <organization>
+cf ibmcloud-admin containers-quota <organization>
 ```
 {: codeblock}
 
@@ -375,7 +375,7 @@ cf bluemix-admin containers-quota <organization>
 <dd class="pd">IBM Cloud 中组织的名称或标识。此参数是必需的。</dd>
 </dl>
 
-**提示：****bluemix-admin containers-quota** 命令名较长，您还可以使用 **ba cq** 作为其别名。
+**提示：****ibmcloud-admin containers-quota** 命令名较长，您还可以使用 **ba cq** 作为其别名。
 
 ### 设置组织的容器配额
 {: #admin_set_containquotas}
@@ -383,7 +383,7 @@ cf bluemix-admin containers-quota <organization>
 要设置组织中容器的配额，请使用以下命令并至少包含其中一个选项：
 
 ```
-cf bluemix-admin set-containers-quota <organization> <options>
+cf ibmcloud-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -420,7 +420,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 （可选）可以提供一个在有效 JSON 对象中包含特定配置参数的文件。如果使用 **-file** 选项，那么会优先使用此选项并忽略其他选项。要提供文件，而不设置选项，请使用以下命令：
 
 ```
-cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -437,7 +437,7 @@ JSON 文件的格式应该如以下示例中所示：
 ```
 {: codeblock}
 
-**提示：****bluemix-admin set-containers-quota** 命令名较长，您还可以使用 **ba scq** 作为其别名。
+**提示：****ibmcloud-admin set-containers-quota** 命令名较长，您还可以使用 **ba scq** 作为其别名。
 
 ## 管理空间
 {: #admin_spaces}
@@ -447,7 +447,7 @@ JSON 文件的格式应该如以下示例中所示：
 要在组织中添加空间，请使用以下命令：
 
 ```
-cf bluemix-admin create-space <organization> <space_name>
+cf ibmcloud-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -466,7 +466,7 @@ cf bluemix-admin create-space <organization> <space_name>
 要从组织中除去空间，请使用以下命令：
 
 ```
-cf bluemix-admin delete-space <organization> <space_name>
+cf ibmcloud-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -485,7 +485,7 @@ cf bluemix-admin delete-space <organization> <space_name>
 要在空间中创建具有指定角色的用户，请使用以下命令：
 
 ```
-cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -509,7 +509,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 要除去空间中用户的角色，请使用以下命令：
 
 ```
-cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -731,10 +731,10 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;示例&gt;</dt>
-<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 

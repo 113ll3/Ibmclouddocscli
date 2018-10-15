@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -43,20 +43,20 @@ Führen Sie die folgenden Schritte aus, um das Repository hinzuzufügen und das 
 <ol>
 <li>Führen Sie den folgenden Befehl aus, um das Repository für das {{site.data.keyword.Bluemix_notm}}-Administrator-Plug-in hinzuzufügen:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>Führen Sie den folgenden Befehl aus, um das Plug-in für die {{site.data.keyword.Bluemix_notm}}-Administrator-CLI zu installieren:<br/><br/>
 <code>
-cf install-plugin BluemixAdminCLI -r BluemixAdmin
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
 </code>
 </li>
 </ol>
 
 Wenn Sie das Plug-in deinstallieren müssen, können Sie die folgenden Befehle verwenden. Anschließend können Sie das aktualisierte Repository hinzufügen und das neueste Plug-in installieren.
 
-* Plug-in deinstallieren: `cf uninstall-plugin BluemixAdminCLI`
-* Plug-in-Repository entfernen: `cf remove-plugin-repo BluemixAdmin`
+* Plug-in deinstallieren: `cf uninstall-plugin IBMCloudAdminCLI`
+* Plug-in-Repository entfernen: `cf remove-plugin-repo IBMCloudAdmin`
 
 
 ## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwenden
@@ -381,7 +381,7 @@ cf ba set-quota <organization> <plan>
 Verwenden Sie den folgenden Befehl, um das Kontingent für Container einer Organisation zu ermitteln:
 
 ```
-cf bluemix-admin containers-quota <organization>
+cf ibmcloud-admin containers-quota <organization>
 ```
 {: codeblock}
 
@@ -390,7 +390,8 @@ cf bluemix-admin containers-quota <organization>
 <dd class="pd">Der Name oder die ID der Organisation in IBM Cloud. Dieser Parameter ist erforderlich.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba cq** als Alias für den längeren Befehlsnamen **bluemix-admin containers-quota** verwenden.
+**Tipp:** Sie können auch **ba cq** als Alias für den längeren
+Befehlsnamen **ibmcloud-admin containers-quota** verwenden.
 
 ### Containerkontingente für eine Organisation festlegen
 {: #admin_set_containquotas}
@@ -398,7 +399,7 @@ cf bluemix-admin containers-quota <organization>
 Verwenden Sie den folgenden Befehl mit mindestens einer der Optionen, um das Kontingent für Container in einer Organisation festzulegen:
 
 ```
-cf bluemix-admin set-containers-quota <organization> <options>
+cf ibmcloud-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -436,7 +437,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 Optional können Sie eine Datei angeben, die bestimmte Konfigurationsparameter in einem gültigen JSON-Objekt enthält. Falls Sie die Option **-file** verwenden, hat diese Option Vorrang und die anderen Optionen werden ignoriert. Verwenden Sie den folgenden Befehl, um eine Datei bereitzustellen, anstatt die Optionen festzulegen:
 
 ```
-cf bluemix-admin set-containers-quota <Organisation> <-Dateipfad zur JSON-Datei>
+cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -453,7 +454,8 @@ Das Format der JSON-Datei sollte dem folgenden Beispiel entsprechen:
 ```
 {: codeblock}
 
-**Tipp:** Sie können auch **ba scq** als Alias für den längeren Befehlsnamen **bluemix-admin set-containers-quota** verwenden.
+**Tipp:** Sie können auch **ba scq** als Alias für den längeren
+Befehlsnamen **ibmcloud-admin set-containers-quota** verwenden.
 
 ## Bereiche verwalten
 {: #admin_spaces}
@@ -463,7 +465,7 @@ Das Format der JSON-Datei sollte dem folgenden Beispiel entsprechen:
 Verwenden Sie den folgenden Befehl, um einen Bereich in der Organisation hinzuzufügen:
 
 ```
-cf bluemix-admin create-space <organization> <space_name>
+cf ibmcloud-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -483,7 +485,7 @@ Befehlsnamen **ba create-space** verwenden.
 Verwenden Sie den folgenden Befehl, um einen Bereich aus der Organisation zu entfernen:
 
 ```
-cf bluemix-admin delete-space <organization> <space_name>
+cf ibmcloud-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -503,7 +505,7 @@ Befehlsnamen **ba delete-space** verwenden.
 Verwenden Sie den folgenden Befehl, um einen Benutzer in einem Bereich mit einer angegebenen Rolle zu erstellen:
 
 ```
-cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -513,7 +515,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 <dd class="pd">Der Name oder die GUID der Organisation, der der Benutzer hinzugefügt werden soll.</dd>
 <dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Der Name des Bereichs, dem der Benutzer hinzugefügt werden soll.</dd>
-<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Der Name des Benutzers, der hinzugefügt werden soll.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Die Rolle des Benutzers, die zugewiesen werden soll. Gültige Werte: Manager, Developer oder Auditor. Beschreibungen von {{site.data.keyword.Bluemix_notm}}-Benutzerrollen in einem Bereich finden Sie unter [Rollen zuweisen](/docs/admin/users_roles.html).</dd>
@@ -528,7 +530,7 @@ Befehlsnamen **ba set-space** verwenden.
 Verwenden Sie den folgenden Befehl, um die Rolle eines Benutzers in einem Bereich zu entfernen:
 
 ```
-cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -764,10 +766,10 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Beispiele&gt;</dt>
-<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 
