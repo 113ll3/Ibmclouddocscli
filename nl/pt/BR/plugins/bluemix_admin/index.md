@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -45,20 +45,19 @@ Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
 <ol>
 <li>Para incluir o repositório do plug-in de administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/  </code><br/><br/>
+cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/  </code><br/><br/>
 </li>
 <li>Para instalar o plug-in da CLI do Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
 <code>
-cf install-plugin BluemixAdminCLI -r BluemixAdmin
-</code>
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin  </code>
 </li>
 </ol>
 
 Se você precisar desinstalar o plug-in, será possível usar os comandos a seguir; em
 seguida, poderá incluir o repositório atualizado e instalar o plug-in mais recente:
 
-* Desinstalar o plug-in: `cf uninstall-plugin BluemixAdminCLI`
-* Remova o repositório de plug-in: `cf remove-plugin-repo BluemixAdmin`
+* Desinstale o plug-in:  ` cf uninstall-plugin IBMCloudAdminCLI `
+* Remova o repositório de plug-in: `cf remove-plugin-repo IBMCloudAdmin`
 
 
 ## Usando o plug-in da CLI do administrador do {{site.data.keyword.Bluemix_notm}}
@@ -398,7 +397,7 @@ cf ba set-quota <organization> <plan>
 Para localizar a cota para contêineres para uma organização, use o comando a seguir:
 
 ```
-cf bluemix-admin containers-quota <organization>
+cf ibmcloud-admin containers-quota <organization>
 ```
 {: codeblock}
 
@@ -408,8 +407,8 @@ cf bluemix-admin containers-quota <organization>
 é obrigatório.</dd>
 </dl>
 
-**Dica:** também é possível usar **ba cq** como um alias para o nome mais longo
-do comando **bluemix-admin containers-quota**.
+**Dica:** também é possível usar **ba cq** como um alias para o nome
+de comando mais longo **ibmcloud-admin containers-quota**.
 
 ### Configurando cotas de contêiner para uma organização
 {: #admin_set_containquotas}
@@ -417,7 +416,7 @@ do comando **bluemix-admin containers-quota**.
 Para configurar a cota para contêineres em uma organização, use o comando a seguir com pelo menos uma das opções incluídas:
 
 ```
-cf bluemix-admin set-containers-quota <organization> <options>
+cf ibmcloud-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -458,7 +457,7 @@ Opcionalmente, é possível fornecer um arquivo que contém parâmetros de confi
 fornecer um arquivo em vez de configurar as opções, use o comando a seguir:
 
 ```
-cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -475,8 +474,8 @@ O arquivo JSON deve ter o formato que é mostrado no exemplo a seguir:
 ```
 {: codeblock}
 
-**Dica:** também é possível usar **ba scq** como um alias para o nome mais longo
-do comando **bluemix-admin set-containers-quota**.
+**Dica:** também é possível usar **ba scq** como um alias para o nome
+de comando mais longo **ibmcloud-admin set-containers-quota**.
 
 ## Administrando Espaços
 {: #admin_spaces}
@@ -486,7 +485,7 @@ do comando **bluemix-admin set-containers-quota**.
 Para incluir um espaço na organização, use o comando a seguir:
 
 ```
-cf bluemix-admin create-space <organization> <space_name>
+cf ibmcloud-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -506,7 +505,7 @@ do comando mais longo **ba create-space**.
 Para remover um espaço da organização, use o comando a seguir:
 
 ```
-cf bluemix-admin delete-space <organization> <space_name>
+cf ibmcloud-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -526,7 +525,7 @@ do comando mais longo **ba delete-space**.
 Para criar um usuário em um espaço com uma função especificada, use o comando a seguir:
 
 ```
-cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -553,7 +552,7 @@ do comando mais longo **ba set-space**.
 Para remover a função de um usuário em um espaço, use o comando a seguir:
 
 ```
-cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -797,10 +796,10 @@ encerramento para por hora (o formato deve ser mm-dd-aaaa hh:mm:ss fuso horário
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Exemplos&gt;</dt>
-<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk -- start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history -- monthly -- memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 

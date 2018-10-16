@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 
 ---
@@ -33,12 +33,12 @@ o plug-in:
 1. Para incluir o repositório de plug-in da CLI do {{site.data.keyword.Bluemix_notm}},
 execute o comando a seguir:
 ```
-Ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add IBM Cloud-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Para instalar o plug-in da CLI do {{site.data.keyword.autoscaling}}, execute o
 comando a seguir:
 ```
-Ibmcloud plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r IBM Cloud
 ```
 
 ## Anexando uma política de ajuste automático de escala

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -32,13 +32,13 @@ Para obter mais comandos para gerenciar plug-ins, execute `ibmcloud plugin` para
 ### Etapa 1: procurar o plug-in
 
 1. Use o comando `ibmcloud plugin repo-plugins -r REPO_NAME` para procurar um plug-in no repositório.
-2. A CLI do {{site.data.keyword.Bluemix_notm}} tem o repositório oficial com o nome 'Bluemix'. É possível procurar os plug-ins oficiais conforme mostrado no exemplo a seguir:
+2. A CLI do {{site.data.keyword.Bluemix_notm}} tem o repositório oficial com o nome 'IBM Cloud'. É possível procurar os plug-ins oficiais conforme mostrado no exemplo a seguir:
 
   ```
-  $ ibmcloud plugin repo-plugins -r Bluemix
-  Getting plug-ins from repository 'Bluemix'...
+  $ ibmcloud plugin repo-plugins -r IBM Cloud
+  Getting plug-ins from repository 'IBM Cloud'...
 
-  Repository: Bluemix
+  Repository: IBM Cloud
   Name           Description                                    Versions
   auto-scaling   IBM Cloud CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
   nsg            IBM Cloud Network Security Group plugin          0.1.1
@@ -47,20 +47,20 @@ Para obter mais comandos para gerenciar plug-ins, execute `ibmcloud plugin` para
 
 ### Etapa 2: instalar o plug-in
 
-Use o comando `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` para instalar o plug-in. Por exemplo, use o comando a seguir para instalar um plug-in por meio do repositório de plug-in oficial da IBM 'Bluemix':
+Use o comando `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` para instalar o plug-in. Por exemplo, use o seguinte comando para instalar um plug-in do repositório de plug-in oficial da IBM 'IBM Cloud':
 
   ```
-  $ ibmcloud plugin install auto-scaling -r Bluemix
-  Looking up 'auto-scaling' from repository 'Bluemix'...
+  $ ibmcloud plugin install auto-scaling -r IBM Cloud
+  Looking up 'auto-scaling' from repository 'IBM Cloud'...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCLoudFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
 
 ## Instalar um plug-in localmente
 
-Use o comando `ibmcloud plugin install LOCAL_FILE_NAME` para instalar um binário de plug-in em sua máquina local.  Por exemplo:
+Use o comando `ibmcloud plugin install LOCAL_FILE_NAME` para instalar um binário de plug-in em sua máquina local. Por exemplo:
 
   ```
   $ ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.2
@@ -78,7 +78,7 @@ Use o comando `ibmcloud plugin install URL` para instalar um plug-in diretamente
   ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
   Attempting to download the binary file...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCloudFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$

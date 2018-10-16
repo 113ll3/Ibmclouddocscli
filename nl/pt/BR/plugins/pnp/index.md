@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-09-13"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -70,13 +70,13 @@ Siga essas etapas para instalar o plug-in usando o repositório do {{site.data.k
 
 1. Inclua o terminal de registro do plug-in do {{site.data.keyword.Bluemix_notm}}:
 	```
-	Ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
+	ibmcloud plugin repo-add IBM Cloud http://plugins.ng.bluemix.net
 	```
 
 2. Execute o seguinte comando:
 
 	```
-	Ibmcloud plugin install private-network-peering -r bluemix-bx
+	ibmcloud plugin install private-network-peering -r IBM Cloud
 	```
 
 ## Lista de comandos de peering de rede privada

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -67,12 +67,12 @@ cf uninstall-plugin vpn
 1. Inclua o repositório do {{site.data.keyword.Bluemix_notm}} nos repositórios do Cloud Foundry CLI. Utilize o seguinte comando:
 
 	```
-	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
+	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
 	```
 2. Execute o seguinte comando:
 
 	```
-	cf install-plugin vpn -r bluemix
+	cf install-plugin vpn -r IBM Cloud
 	```
 ##Lista de comandos de serviço da VPN
 
@@ -115,8 +115,7 @@ endereço IP do terminal remoto do túnel VPN.
 
 **-i:** Estado do inicializador. Valor padrão: bi-directional.
 
-**-dpd-timeout:** valor do tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. Valor padrão: 120 segundos. 
-O valor do tempo limite keep-alive deve ser maior que o valor do intervalo keep-alive.
+**-dpd-timeout:** valor do tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. Valor padrão: 120 segundos. O valor do tempo limite keep-alive deve ser maior que o valor do intervalo keep-alive.
 
 **-dpd-interval:** Intervalo keep-alive em segundos. Envie mensagens keep-alive no intervalo configurado para verificar se o peer está ativo. Intervalo: 5 a 86399 segundos. Valor padrão: 15 segundos
 
