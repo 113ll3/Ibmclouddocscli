@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -165,7 +165,7 @@ module.js:597
   return process.dlopen(module, path._makeLong(filename));
                  ^
 
-Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
+Error: /app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
     at Error (native)
     at Object.Module._extensions..node (module.js:597:18)
     at Module.load (module.js:487:32)
@@ -174,7 +174,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
     at Function.Module._load (module.js:438:3)
     at Module.require (module.js:497:17)
     at require (internal/module.js:20:19)
-    at Object.<anonymous> (/app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
+    at Object.<anonymous> (/app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
@@ -257,9 +257,9 @@ ibmcloud cr namespaces
 
 ほとんどのユーザー向けにすべての前提条件がプラットフォーム・インストーラーを使用してインストールされます。 いずれかのコンポーネントを手動でインストールする必要がある場合の手順を以下に示します。
 
-開発プラグインをインストールするには、最初に [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) をインストールする必要があります。
+開発プラグインをインストールするには、最初に [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) をインストールする必要があります。
 
-開発プラグイン自体を使用するには、`ibmcloud plugin install dev -r Bluemix` コマンドを実行してそれをインストールする必要があります。
+開発プラグイン自体を使用するには、`ibmcloud plugin install dev -r IBM Cloud` コマンドを実行してそれをインストールする必要があります。
 
 アプリをローカルに実行およびデバッグするには、[Docker](https://www.docker.com/get-docker) もインストールする必要があります。
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 
 ---
@@ -31,11 +31,11 @@ lastupdated: "2018-06-21"
 以下のステップを実行して、リポジトリーを追加し、プラグインをインストールします。
 1. {{site.data.keyword.Bluemix_notm}} CLI プラグインのリポジトリーを追加するため、以下のコマンドを実行します。
 ```
-ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add IBM Cloud-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. {{site.data.keyword.autoscaling}} CLI プラグインをインストールするため、以下のコマンドを実行します。
 ```
-ibmcloud plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r IBM Cloud
 ```
 
 ## Auto-Scaling ポリシーの添付

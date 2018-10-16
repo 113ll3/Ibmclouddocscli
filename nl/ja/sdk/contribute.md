@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 {:new_window: target="_blank"}
@@ -146,7 +146,7 @@ Go は、堅固な依存関係マネージャーを提供していないので�
 
 ネストされた依存関係はリストされていません。
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
+* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
 
    {{site.data.keyword.Bluemix_notm}} CLI プラグイン SDK は、{{site.data.keyword.Bluemix_notm}} CLI プラグインを開発するためのインフラストラクチャーを提供します。
 
@@ -181,7 +181,7 @@ Go は、堅固な依存関係マネージャーを提供していないので�
    ```
    import (
       ...
-      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +189,9 @@ Go は、堅固な依存関係マネージャーを提供していないので�
 * リポジトリーを複製します。
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,13 +202,13 @@ Go は、堅固な依存関係マネージャーを提供していないので�
 以下のいずれかのコマンドを選択してプラグインをビルドします。
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}

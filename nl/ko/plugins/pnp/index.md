@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-09-13"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-09-13"
 ibmcloud plugin uninstall private-network-peering
 ```
 ### 로컬로 설치
-[{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}에서 플랫폼에 대한 사설 네트워크 피어링 플러그인을 다운로드하십시오. 
+[{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}에서 플랫폼에 대한 사설 네트워크 피어링 플러그인을 다운로드하십시오.
 
 다음 명령을 사용하여 사설 네트워크 피어링 플러그인을 설치하십시오.
 
@@ -69,13 +69,13 @@ chmod a+x ./private-network-peering-linux-amd64
 
 1. {{site.data.keyword.Bluemix_notm}} 플러그인 저장소 엔드포인트를 추가하십시오.
 	```
-	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
+	ibmcloud plugin repo-add IBM Cloud http://plugins.ng.bluemix.net
 	```
 
 2. 다음 명령을 실행하십시오.
 
 	```
-	ibmcloud plugin install private-network-peering -r bluemix-bx
+	ibmcloud plugin install private-network-peering -r IBM Cloud
 	```
 
 ## 사설 네트워크 피어링 명령의 목록

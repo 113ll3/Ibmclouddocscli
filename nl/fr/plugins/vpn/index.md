@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -63,12 +63,12 @@ cf uninstall-plugin vpn
 1. Ajoutez le référentiel {{site.data.keyword.Bluemix_notm}} aux référentiels de l'interface de ligne de commande Cloud Foundry. Exécutez la commandes suivante :
 
 	```
-	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
+	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
 	```
 2. Exécutez la commande suivante :
 
 	```
-	cf install-plugin vpn -r bluemix
+	cf install-plugin vpn -r IBM Cloud
 	```
 ##Liste des commandes de service VPN
 
@@ -107,7 +107,7 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 
 **-i :** état de l'initiateur. Valeur par défaut : bi-directional.
 
-**-dpd-timeout :** valeur de délai d'attente (en secondes) au bout duquel la session est terminée.  Plage : 6 à 86400 secondes. Valeur par défaut : 120 secondes. La valeur du délai d'attente de l'intervalle de signal de présence doit être supérieure à la valeur de l'intervalle de signal de présence.
+**-dpd-timeout :** valeur de délai d'attente (en secondes) au bout duquel la session est terminée. Plage : 6 à 86400 secondes. Valeur par défaut : 120 secondes. La valeur du délai d'attente de l'intervalle de signal de présence doit être supérieure à la valeur de l'intervalle de signal de présence.
 
 **-dpd-interval :** intervalle de signal de présence, en secondes. Envoyez des messages d'état actif à la fréquence
 configurée afin de vérifier l'état opérationnel de l'homologue. Plage : 5 à 86399 secondes. Valeur par défaut : 15 secondes
@@ -307,7 +307,7 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 
 **-i :** état de l'initiateur. Valeur par défaut : bi-directional.
 
-**-dpd-timeout :** valeur de délai d'attente (en secondes) au bout duquel la session est terminée.  Plage : 6 à 86400 secondes. Valeur par défaut : 120
+**-dpd-timeout :** valeur de délai d'attente (en secondes) au bout duquel la session est terminée. Plage : 6 à 86400 secondes. Valeur par défaut : 120
 secondes
 
 **-dpd-interval :** intervalle de signal de présence, en secondes. Envoyez des messages d'état actif à la fréquence

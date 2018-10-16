@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -36,21 +36,21 @@ Cloud Foundry コマンド・ライン・インターフェースのインスト
 <ol>
 <li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>{{site.data.keyword.Bluemix_notm}} 管理
 CLI プラグインをインストールするには、以下のコマンドを実行します。<br/><br/>
 <code>
-cf install-plugin BluemixAdminCLI -r BluemixAdmin
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
 </code>
 </li>
 </ol>
 
 プラグインをアンインストールする必要がある場合は、以下のコマンドを使用できます。その後、更新されたリポジトリーを追加して、最新のプラグインをインストールできます。
 
-* プラグインのアンインストール: `cf uninstall-plugin BluemixAdminCLI`
-* プラグイン・リポジトリーの削除: `cf remove-plugin-repo BluemixAdmin`
+* プラグインのアンインストール: `cf uninstall-plugin IBMCloudAdminCLI`
+* プラグイン・リポジトリーの削除: `cf remove-plugin-repo IBMCloudAdmin`
 
 
 ## {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインの使用
@@ -368,7 +368,7 @@ cf ba set-quota <organization> <plan>
 組織のコンテナーの割り当て量を判別するには、以下のコマンドを使用します。
 
 ```
-cf bluemix-admin containers-quota <organization>
+cf ibmcloud-admin containers-quota <organization>
 ```
 {: codeblock}
 
@@ -377,7 +377,7 @@ cf bluemix-admin containers-quota <organization>
 <dd class="pd">IBM Cloud 内の組織の名前または ID。 このパラメーターは必須です。</dd>
 </dl>
 
-**ヒント:** **bluemix-admin containers-quota** という長いコマンド名の別名として **ba cq** を使用することもできます。
+**ヒント:** **ibmcloud-admin containers-quota** という長いコマンド名の別名として **ba cq** を使用することもできます。
 
 ### 組織のコンテナー割り当て量の設定
 {: #admin_set_containquotas}
@@ -385,7 +385,7 @@ cf bluemix-admin containers-quota <organization>
 組織のコンテナーの割り当て量を設定するには、少なくとも 1 つのオプションを含めて以下のコマンドを使用します。
 
 ```
-cf bluemix-admin set-containers-quota <organization> <options>
+cf ibmcloud-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -423,7 +423,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 オプションで、有効な JSON オブジェクトに固有の構成パラメーターを含むファイルを指定できます。 **-file** オプションを使用すると、それが優先され、他のオプションは無視されます。 オプションを設定する代わりにファイルを指定する場合は、以下のコマンドを使用します。
 
 ```
-cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -440,7 +440,7 @@ JSON ファイルには、以下の例に示したフォーマットが含まれ
 ```
 {: codeblock}
 
-**ヒント:** **bluemix-admin set-containers-quota** という長いコマンド名の別名として **ba scq** を使用することもできます。
+**ヒント:** **ibmcloud-admin set-containers-quota** という長いコマンド名の別名として **ba scq** を使用することもできます。
 
 ## スペースの管理
 {: #admin_spaces}
@@ -450,7 +450,7 @@ JSON ファイルには、以下の例に示したフォーマットが含まれ
 組織でスペースを追加するには、以下のコマンドを使用します。
 
 ```
-cf bluemix-admin create-space <organization> <space_name>
+cf ibmcloud-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -469,7 +469,7 @@ cf bluemix-admin create-space <organization> <space_name>
 組織からスペースを削除するには、以下のコマンドを使用します。
 
 ```
-cf bluemix-admin delete-space <organization> <space_name>
+cf ibmcloud-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -488,7 +488,7 @@ cf bluemix-admin delete-space <organization> <space_name>
 指定した役割を持つユーザーをスペースに作成するには、以下のコマンドを使用します。
 
 ```
-cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -512,7 +512,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 スペース内のユーザーの役割を削除するには、以下のコマンドを使用します。
 
 ```
-cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -734,10 +734,10 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Examples&gt;</dt>
-<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 

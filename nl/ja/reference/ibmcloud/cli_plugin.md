@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-04"
 ---
 
 {:new_window: target="_blank"}
@@ -74,10 +74,10 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 
 <strong>例</strong>:
 
-{{site.data.keyword.Bluemix_notm}} CLI の公式プラグイン・リポジトリーを `bluemix-repo` として追加します。
+{{site.data.keyword.Bluemix_notm}} CLI の公式プラグイン・リポジトリーを `IBM Cloud-repo` として追加します。
 
 ```
-ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
+ibmcloud plugin repo-add IBM Cloud-repo http://plugins.ng.bluemix.net
 ```
 
 ## ibmcloud plugin repo-remove
@@ -99,10 +99,10 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>例</strong>:
 
-{{site.data.keyword.Bluemix_notm}} CLI から `bluemix-repo` リポジトリーを削除します。
+{{site.data.keyword.Bluemix_notm}} CLI から `IBM Cloud-repo` リポジトリーを削除します。
 
 ```
-ibmcloud plugin repo-remove bluemix-repo
+ibmcloud plugin repo-remove IBM Cloud-repo
 ```
 
 ## ibmcloud plugin repo-plugins
@@ -131,10 +131,10 @@ ibmcloud plugin repo-plugins [-r REPO_NAME]
 ibmcloud plugin repo-plugins
 ```
 
-`bluemix-repo` リポジトリー内のすべてのプラグインをリストします。
+`IBM Cloud-repo` リポジトリー内のすべてのプラグインをリストします。
 
 ```
-ibmcloud plugin repo-plugins -r bluemix-repo
+ibmcloud plugin repo-plugins -r IBM Cloud-repo
 ```
 
 ## ibmcloud plugin repo-plugin
@@ -204,8 +204,7 @@ ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
-リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。
-バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
+リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「IBM Cloud」を使用します。バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
 
 <strong>前提条件</strong>: なし
 
@@ -215,7 +214,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
    <dt>PLUGIN_PATH|PLUGIN_NAME (必須)</dt>
    <dd>「-r <i>REPO_NAME</i>」が指定されない場合、指定されたローカル・パスまたはリモート URL からプラグインがインストールされます。</dd>
    <dt>-r <i>REPO_NAME</i> (オプション)</dt>
-   <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。</dd>
+   <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「IBM Cloud」を使用します。</dd>
    <dt>-v <i>VERSION</i> (オプション)</dt>
    <dd>インストールするプラグインのバージョン。 指定されていない場合は、最新バージョンのプラグインがインストールされます。 このオプションは、リポジトリーからプラグインをインストールする場合にのみ有効です。</dd>
    <dt>-f </dt>
@@ -223,7 +222,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
     </dl>
 
 
-{{site.data.keyword.Bluemix_notm}} CLI の公式リポジトリー名は、`Bluemix` です。
+{{site.data.keyword.Bluemix_notm}} CLI の公式リポジトリー名は、`IBM Cloud` です。
 
 <strong>例</strong>:
 
@@ -239,10 +238,10 @@ ibmcloud plugin install /downloads/new_plugin
 ibmcloud plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-最新バージョンの「container-service」プラグインを「Bluemix」リポジトリーからインストールするには、以下のように指定します。
+最新バージョンの「container-service」プラグインを「IBM Cloud」リポジトリーからインストールするには、以下のように指定します。
 
 ```
-ibmcloud plugin install container-service -r Bluemix
+ibmcloud plugin install container-service -r IBM Cloud
 ```
 
 あるいは、簡単に以下のように指定します。
@@ -266,8 +265,7 @@ ibmcloud plugin install container-service -v 0.1.425
 ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
-リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。
-バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
+リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「IBM Cloud」を使用します。バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
 
 <strong>前提条件</strong>: なし
 
@@ -276,7 +274,7 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>更新するプラグインの名前。 指定されない場合、コマンドは、インストールされているすべてのプラグインのアップグレードを確認します。</dd>
  <dt>-r REPO_NAME</dt>
- <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。</dd>
+ <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「IBM Cloud」を使用します。</dd>
  <dt>-v <i>VERSION</i> (オプション)</dt>
  <dd>更新するプラグインのバージョン。 表示されない場合、プラグインを入手可能な最新バージョンに更新してください。</dd>
  <dt>--all</dt>
@@ -285,10 +283,10 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 <strong>例</strong>:
 
-公式プラグイン・リポジトリー「Bluemix」内のすべての使用可能アップグレードを確認するには、以下のように指定します。
+公式プラグイン・リポジトリー「IBM Cloud」内の使用可能なすべてのアップグレードを確認するには、以下のように指定します。
 
 ```
-ibmcloud plugin update -r Bluemix
+ibmcloud plugin update -r IBM Cloud
 ```
 
 あるいは、簡単に以下のように指定します。

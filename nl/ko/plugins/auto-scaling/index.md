@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 
 ---
@@ -31,11 +31,11 @@ lastupdated: "2018-06-21"
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 1. {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.
 ```
-ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add IBM Cloud-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. {{site.data.keyword.autoscaling}} CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.
 ```
-ibmcloud plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r IBM Cloud
 ```
 
 ## Auto-Scaling 정책 연결

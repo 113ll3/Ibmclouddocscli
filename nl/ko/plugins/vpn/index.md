@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -63,12 +63,12 @@ cf uninstall-plugin vpn
 1. Cloud Foundry CLI 저장소에 {{site.data.keyword.Bluemix_notm}} 저장소를 추가하십시오. 다음 명령을 사용하십시오.
 
 	```
-	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
+	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
 	```
 2. 다음 명령을 실행하십시오.
 
 	```
-	cf install-plugin vpn -r bluemix
+	cf install-plugin vpn -r IBM Cloud
 	```
 ##VPN 서비스 명령의 목록
 
@@ -112,7 +112,7 @@ VPN 터널의 원격 엔드포인트 IP 주소입니다.
 
 **-i:** 개시자의 상태입니다. 기본값: 양방향.
 
-**-dpd-timeout:** 세션이 종료되는 제한시간 값(초)입니다.  범위: 6 - 86400초. 기본값: 120초. 활성 상태 지속 제한시간 값은 활성 상태 지속 간격 값보다 커야 합니다.
+**-dpd-timeout:** 세션이 종료되는 제한시간 값(초)입니다. 범위: 6 - 86400초. 기본값: 120초. 활성 상태 지속 제한시간 값은 활성 상태 지속 간격 값보다 커야 합니다.
 
 **-dpd-interval:** 활성 상태 지속 간격(초)입니다. 구성된 간격으로 킵얼라이브 메시지를 전송하여 피어가 작동 중인지 확인하십시오. 범위: 5-86399초. 기본값: 15초
 
@@ -322,7 +322,7 @@ CIDR 형식의 서브넷 주소입니다.
 
 **-i:** 개시자의 상태입니다. 기본값: 양방향.
 
-**-dpd-timeout:** 세션이 종료되는 제한시간 값(초)입니다.  범위: 6 - 86400초. 기본값: 120초
+**-dpd-timeout:** 세션이 종료되는 제한시간 값(초)입니다. 범위: 6 - 86400초. 기본값: 120초
 
 **-dpd-interval:** 활성 상태 지속 간격(초)입니다. 구성된 간격으로 킵얼라이브 메시지를 전송하여 피어가 작동 중인지 확인하십시오. 범위: 5-86399초. 기본값: 15초
 

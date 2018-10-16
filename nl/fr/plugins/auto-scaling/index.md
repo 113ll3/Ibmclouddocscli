@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 
 ---
@@ -31,11 +31,11 @@ Une fois l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ins
 Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 1. Pour ajouter le référentiel de plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :
 ```
-ibmcloud plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
+ibmcloud plugin repo-add IBM Cloud-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Pour installer le plug-in de l'interface de ligne de commande {{site.data.keyword.autoscaling}}, exécutez la commande suivante :
 ```
-ibmcloud plugin install auto-scaling -r Bluemix
+ibmcloud plugin install auto-scaling -r IBM Cloud
 ```
 
 ## Association d'une règle de mise à l'échelle automatique

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -39,20 +39,20 @@ Cloud Foundry 명령행 인터페이스가 설치된 후에 {{site.data.keyword.
 <ol>
 <li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
-cf install-plugin BluemixAdminCLI -r BluemixAdmin
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
 </code>
 </li>
 </ol>
 
 플러그인을 설치 제거해야 하는 경우 다음 명령을 사용한 후 업데이트된 저장소를 추가하고 최신 플러그인을 설치할 수 있습니다.
 
-* 플러그인 설치 제거: `cf uninstall-plugin BluemixAdminCLI`
-* 플러그인 저장소 제거: `cf remove-plugin-repo BluemixAdmin`
+* 플러그인 설치 제거: `cf uninstall-plugin IBMCloudAdminCLI`
+* 플러그인 저장소 제거: `cf remove-plugin-repo IBMCloudAdmin`
 
 
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 사용
@@ -395,7 +395,7 @@ cf ba set-quota <organization> <plan>
 조직의 컨테이너 할당량을 찾으려면 다음 명령을 사용하십시오.
 
 ```
-cf bluemix-admin containers-quota <organization>
+cf ibmcloud-admin containers-quota <organization>
 ```
 {: codeblock}
 
@@ -404,8 +404,7 @@ cf bluemix-admin containers-quota <organization>
 <dd class="pd">IBM Cloud의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 </dl>
 
-**팁:** 긴 **bluemix-admin containers-quota** 명령어의 별명으로
-**ba cq**를 사용할 수도 있습니다.
+**팁:** 긴 **ibmcloud-admin containers-quota** 명령어의 별명으로 **ba cq**를 사용할 수도 있습니다.
 
 ### 조직의 컨테이너 할당량 설정
 {: #admin_set_containquotas}
@@ -413,7 +412,7 @@ cf bluemix-admin containers-quota <organization>
 조직의 컨테이너 할당량을 설정하려면 하나 이상의 옵션을 포함하여 다음 명령을 사용하십시오.
 
 ```
-cf bluemix-admin set-containers-quota <organization> <options>
+cf ibmcloud-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -452,7 +451,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 선택적으로 올바른 JSON 오브젝트에 특정 구성 매개변수를 포함하는 파일을 제공할 수 있습니다. **-file** 옵션을 사용하면 이 옵션이 우선 적용되고 다른 옵션은 무시됩니다. 옵션을 설정하는 대신에 파일을 제공하려면 다음 명령을 사용하십시오.
 
 ```
-cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -469,8 +468,7 @@ JSON 파일의 형식은 다음 예제와 같습니다.
 ```
 {: codeblock}
 
-**팁:** 긴 **bluemix-admin set-containers-quota** 명령어의 별명으로
-**ba scq**를 사용할 수도 있습니다.
+**팁:** 긴 **ibmcloud-admin set-containers-quota** 명령어의 별명으로 **ba scq**를 사용할 수도 있습니다.
 
 ## 영역 관리
 {: #admin_spaces}
@@ -480,7 +478,7 @@ JSON 파일의 형식은 다음 예제와 같습니다.
 조직에 영역을 추가하려면 다음 명령을 사용하십시오.
 
 ```
-cf bluemix-admin create-space <organization> <space_name>
+cf ibmcloud-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -500,7 +498,7 @@ cf bluemix-admin create-space <organization> <space_name>
 조직에서 영역을 삭제하려면 다음 명령을 사용하십시오.
 
 ```
-cf bluemix-admin delete-space <organization> <space_name>
+cf ibmcloud-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -520,7 +518,7 @@ cf bluemix-admin delete-space <organization> <space_name>
 지정된 역할과 함께 영역에 사용자를 작성하려면 다음 명령을 사용하십시오.
 
 ```
-cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -547,7 +545,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 영역에서 사용자 역할을 제거하려면 다음 명령을 사용하십시오.
 
 ```
-cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -794,10 +792,10 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;예제&gt;</dt>
-<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 {:new_window: target="_blank"}
@@ -50,21 +50,21 @@ lastupdated: "2018-06-21"
    * 다음 명령을 사용하여 이를 설치하십시오.
 
       ```
-            go get -u github.com/kardianos/govendor
+      go get -u github.com/kardianos/govendor
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 프로젝트 디렉토리에서 `govendor`를 초기화하십시오.
 
       ```
-            govendor init
+      govendor init
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 `$GOPATH`의 종속 항목을 공급업체 디렉토리에 추가하십시오.
 
       ```
-            govendor add +local
+      govendor add +local
       ```
       {: codeblock}
 
@@ -75,21 +75,21 @@ lastupdated: "2018-06-21"
    * 다음 명령을 사용하여 `ginkgo`를 설치하십시오.
 
       ```
-            go get -u github.com/onsi/ginkgo/ginkgo
+      go get -u github.com/onsi/ginkgo/ginkgo
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 `gomega`를 설치하십시오.
 
       ```
-            go get -u github.com/onsi/gomega
+      go get -u github.com/onsi/gomega
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 단위 테스트를 실행하십시오.
 
       ```
-      ginkgo -r
+ginkgo -r
       ```
       {: codeblock}
 
@@ -98,7 +98,7 @@ lastupdated: "2018-06-21"
    * 익숙한 HTML 양식의 코드 적용 범위를 얻으려면 다음 명령을 사용하십시오.
 
       ```
-            go tool -html={package}.coverprofile
+      go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
@@ -111,14 +111,14 @@ lastupdated: "2018-06-21"
    * 다음 명령을 사용하여 `go-i18n`을 설치하십시오.
 
       ```
-            go get -u github.com/nicksnyder/go-i18n/goi18n
+      go get -u github.com/nicksnyder/go-i18n/goi18n
       ```
       {: codeblock}
 
    * 다음 명령을 사용하여 `go-bindata`를 설치하십시오.
 
       ```
-            go get -u github/com/jteeuwen/go-bindata/go-bindata
+      go get -u github/com/jteeuwen/go-bindata/go-bindata
       ```
       {: codeblock}
 
@@ -129,7 +129,7 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
    * 다음 명령을 사용하여 `delve`를 설치하십시오.
 
       ```
-            go get -u github.com/derekparker/delve/cmd/dlv
+      go get -u github.com/derekparker/delve/cmd/dlv
       ```
       {: codeblock}
 
@@ -146,7 +146,7 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 
 중첩된 종속 항목은 나열되지 않습니다.
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
+* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
 
    {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 개발하기 위한 인프라를 제공하는 {{site.data.keyword.Bluemix_notm}} CLI 플러그인 SDK.
 
@@ -156,7 +156,7 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 
 * [github.com/asaskevich/govalidator ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/asaskevich/govalidator)
 
-   이 패키지는 문자열, 구조체 및 콜렉션을 위한 다수의 유효성 검증기 및 무결 처리기를 제공합니다. 자체 유효성 검증기를 구현하는 대신 이 패키지를 사용하십시오.
+   이 패키지는 문자열, 구조체 및 콜렉션을 위한 다수의 유효성 검증기 및 무결 처리기를 제공합니다. 고유 유효성 검증기를 구현하는 대신 이 패키지를 사용하십시오.
 
 * [github.com/parnurzeal/gorequest ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/parnurzeal/gorequest)
 
@@ -181,7 +181,7 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
    ```
    import (
       ...
-      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +189,9 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 * 저장소를 복제하십시오.
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,13 +202,13 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 다음 명령 중 하나를 선택하여 플러그인을 빌드하십시오.
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}

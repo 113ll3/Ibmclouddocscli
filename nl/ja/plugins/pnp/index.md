@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-09-13"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -68,13 +68,13 @@ chmod a+x ./private-network-peering-linux-amd64
 
 1. 以下のように、{{site.data.keyword.Bluemix_notm}} プラグイン・レジストリー・エンドポイントを追加します。
 	```
-	ibmcloud plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
+	ibmcloud plugin repo-add IBM Cloud http://plugins.ng.bluemix.net
 	```
 
 2. 次のコマンドを実行します。
 
 	```
-	ibmcloud plugin install private-network-peering -r bluemix-bx
+	ibmcloud plugin install private-network-peering -r IBM Cloud
 	```
 
 ## プライベート・ネットワーク・ピアリング・コマンドのリスト

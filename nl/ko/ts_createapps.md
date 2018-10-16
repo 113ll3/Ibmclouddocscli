@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -114,7 +114,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 {: codeblock}
 {: tsSymptoms}
 
-이 오류는 무료 {{site.data.keyword.objectstorageshort}} 사용제의 1개 인스턴스만 제공하는 {{site.data.keyword.objectstorageshort}} 서비스로 인해 발생합니다.
+이 오류는 무료 {{site.data.keyword.objectstorageshort}} 플랜의 1개 인스턴스만 제공하는 {{site.data.keyword.objectstorageshort}} 서비스로 인해 발생합니다.
 {: tsCauses}
 
 이 오류를 피하기 위해 다른 플랜을 선택하라는 프롬프트가 표시됩니다.
@@ -165,7 +165,7 @@ module.js:597
   return process.dlopen(module, path._makeLong(filename));
                  ^
 
-Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
+Error: /app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
     at Error (native)
     at Object.Module._extensions..node (module.js:597:18)
     at Module.load (module.js:487:32)
@@ -174,7 +174,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
     at Function.Module._load (module.js:438:3)
     at Module.require (module.js:497:17)
     at require (internal/module.js:20:19)
-    at Object.<anonymous> (/app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
+    at Object.<anonymous> (/app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
@@ -257,9 +257,9 @@ ibmcloud cr namespaces
 
 대부분의 사용자를 위해 플랫폼 설치 프로그램을 사용하여 모든 필수 소프트웨어가 설치됩니다. 컴포넌트를 수동으로 설치해야 하는 경우 다음 지시사항을 따르십시오.
 
-dev 플러그인을 설치하려면 먼저 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started)를 설치해야 합니다.
+dev 플러그인을 설치하려면 먼저 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)를 설치해야 합니다.
 
-dev 플러그인 자체를 사용하려면 `ibmcloud plugin install dev -r Bluemix` 명령을 실행하여 설치해야 합니다.
+dev 플러그인 자체를 사용하려면 `ibmcloud plugin install dev -r IBM Cloud` 명령을 실행하여 설치해야 합니다.
 
 앱을 로컬로 실행하고 디버깅하려면 [Docker](https://www.docker.com/get-docker)도 설치해야 합니다.
 
