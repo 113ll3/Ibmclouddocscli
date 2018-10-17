@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-15"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-15"
 # Resource groups and resources
 {: #ibmcloud_commands_resource}
 
-Use the following commands to manage {{site.data.keyword.Bluemix_notm}} resource groups and resources.
+A resource group is a way for you to organize your account resources in customizable groupings. Use the following commands to manage {{site.data.keyword.Bluemix}} resource groups and resources in a resource group.
 {: shortdesc}
 
 <table summary="ibmcloud command that you can use to manage resource groups and resources.">
