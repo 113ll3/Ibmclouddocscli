@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Load Balancer
 
-Use the following commands to manage a load balancer using the {{site.data.keyword.Bluemix_notm}} infrastructure Load Balancer service.
+The {{site.data.keyword.Bluemix}} Load Balancer service helps improve availability of your business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only.
+
+Use the following commands to manage load balancers in  {{site.data.keyword.Bluemix_notm}} infrastructure Load Balancer service.
 {: shortdesc}
 
 <table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} Load Balancer commands that have links that bring you to more info for the command">
