@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Global IP
 
-Use the following commands to manage a global IP in the {{site.data.keyword.Bluemix_notm}} infrastructure Global IP service.
+A Global IP address is a specialized static secondary subnet. It is delivered to you as a /32 subnet (in other words, a single IP address) that can be routed to any other IP address on your account.
+
+Use the following commands to manage a global IP in the {{site.data.keyword.Bluemix}} infrastructure Global IP service.
 {: shortdesc}
 
 <table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Global IP commands that have links that bring you to more info for the command">
