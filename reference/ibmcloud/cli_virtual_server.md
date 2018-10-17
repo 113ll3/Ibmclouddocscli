@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Virtual Server
 
-Use the following commands to manage {{site.data.keyword.Bluemix_notm}} infrastructure virtual servers.
+{{site.data.keyword.BluVirtServers}} are scalable virtual servers that are purchased with dedicated cores and memory allocations. They are a great option if you are looking for compute resources, that can be added in minutes, with access to features like image templates. 
+
+Use the following commands to manage {{site.data.keyword.Bluemix}} infrastructure virtual servers.
 {: shortdesc}
 
 <table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Virtual Server commands that have links that bring you to more info for the command">
