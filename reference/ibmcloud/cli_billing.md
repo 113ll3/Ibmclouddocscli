@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Billing 
 {: #ibmcloud_billing}
 
-Use the following commands to manage {{site.data.keyword.Bluemix_notm}} billing and usage.
+Use the following commands to retrieve resource usage and billing information.
 {: shortdesc}
 
 <table summary="ibmcloud commands that you can use to manage {{site.data.keyword.Bluemix_notm}} billing and usage.">
