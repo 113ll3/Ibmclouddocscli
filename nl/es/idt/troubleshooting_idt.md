@@ -324,7 +324,7 @@ Para instalar el plug-in de desarrollo, primero debe estar instalada la [CLI de 
 
 Para utilizar el plug-in de desarrollo, debe instalarlo ejecutando el mandato siguiente: `ibmcloud plugin install dev -r Bluemix`
 
-Para ejecutar y depurar aplicaciones localmente, también debe instalar el [Docker ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.docker.com/get-docker).
+Para ejecutar y depurar aplicaciones localmente, también debe instalar [Docker ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.docker.com/get-docker).
 
 Para desplegar una aplicación como un contenedor, también deberá instalar `Kubernetes`, `Helm` y los siguientes plug-ins de la CLI de IBM Cloud:
 

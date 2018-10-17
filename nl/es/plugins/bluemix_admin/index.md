@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -37,20 +37,20 @@ Siga estos pasos para añadir el repositorio e instalar el plug-in:
 <ol>
 <li>Para añadir el repositorio de plugins de administración de {{site.data.keyword.Bluemix_notm}}, ejecute el siguiente mandato:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
 </code><br/><br/>
 </li>
 <li>Para instalar el plugin de CLI de administración de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato siguiente:<br/><br/>
 <code>
-cf install-plugin BluemixAdminCLI -r BluemixAdmin
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
 </code>
 </li>
 </ol>
 
 Si necesita desinstalar el plug-in, puede utilizar los mandatos siguientes y, a continuación, puede añadir el repositorio actualizado e instalar el plug-in más reciente:
 
-* Desinstale el plug-in: `cf uninstall-plugin BluemixAdminCLI`
-* Elimine el repositorio de plugin: `cf remove-plugin-repo BluemixAdmin`
+* Desinstale el plug-in: `cf uninstall-plugin IBMCloudAdminCLI`
+* Elimine el repositorio de plugin: `cf remove-plugin-repo IBMCloudAdmin`
 
 
 ## Utilización del plug-in de la CLI de administración de {{site.data.keyword.Bluemix_notm}}
@@ -194,7 +194,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 Para establecer permisos para un usuario especificado, utilice el siguiente mandato:
 
 ```
-cf ba set-permissions <nombre_usuario> <permisos> <acceso>
+cf ba set-permissions <nombre_usuario> <permiso> <acceso>
 ```
 {: codeblock}
 
@@ -385,7 +385,7 @@ cf ba set-quota <organización> <plan>
 Para buscar la cuota de contenedores para una organización, utilice el siguiente mandato:
 
 ```
-cf bluemix-admin containers-quota <organization>
+cf ibmcloud-admin containers-quota <organización>
 ```
 {: codeblock}
 
@@ -395,8 +395,7 @@ cf bluemix-admin containers-quota <organization>
 parámetro es obligatorio.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba cq** como alias para el nombre de mandato
-**bluemix-admin containers-quota** más largo.
+**Sugerencia:** También puede usar **ba cq** como alias para el nombre de mandato **ibmcloud-admin containers-quota** más largo.
 
 ### Configuración de cuotas de contenedor para una organización
 {: #admin_set_containquotas}
@@ -404,7 +403,7 @@ parámetro es obligatorio.</dd>
 Para definir la cuota de contenedores para una organización, utilice el siguiente mandato con al menos una de las opciones que se incluyen:
 
 ```
-cf bluemix-admin set-containers-quota <organization> <options>
+cf ibmcloud-admin set-containers-quota <organización> <opciones>
 ```
 {: codeblock}
 
@@ -414,36 +413,36 @@ cf bluemix-admin set-containers-quota <organization> <options>
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o ID de la organización en IBM Cloud. Este
 parámetro es obligatorio.</dd>
-<dt class="pt dlterm">&lt;options&gt;</dt>
+<dt class="pt dlterm">&lt;opciones&gt;</dt>
 <dd class="pd">Incluya una o varias de las opciones siguientes en las que el valor debe ser un entero:
 <ul>
-<li>floating-ips-max &lt;value&gt;</li>
-<li>floating-ips-space-default &lt;value&gt;</li>
-<li>memory-max &lt;value&gt;</li>
-<li>memory-space-default &lt;value&gt;</li>
-<li>image-limit &lt;value&gt;</li>
+<li>floating-ips-max &lt;valor&gt;</li>
+<li>floating-ips-space-default &lt;valor&gt;</li>
+<li>memory-max &lt;valor&gt;</li>
+<li>memory-space-default &lt;valor&gt;</li>
+<li>image-limit &lt;valor&gt;</li>
 </ul>
 </dd>
 </dl>
 
 **Consejo:** También puede utilizar los siguientes nombres abreviados como alias de nombres de opciones más largos:
 <dl class="parml">
-<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dt class="pt dlterm">floating-ips-max &lt;valor&gt;</dt>
 <dd class="pd"><strong>fim</strong></dd>
-<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dt class="pt dlterm">floating-ips-space-default &lt;valor&gt;</dt>
 <dd class="pd"><strong>fisd</strong></dd>
-<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dt class="pt dlterm">memory-max &lt;valor&gt;</dt>
 <dd class="pd"><strong>mm</strong></dd>
-<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dt class="pt dlterm">memory-space-default &lt;valor&gt;</dt>
 <dd class="pd"><strong>msd</strong></dd>
-<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dt class="pt dlterm">image-limit &lt;valor&gt;</dt>
 <dd class="pd"><strong>il</strong></dd>
 </dl>
 
 Opcionalmente, puede proporcionar un archivo que contenga parámetros de configuración específicos en un objeto JSON válido. Si utiliza la opción **-file**, esta prevalece y las otras opciones se pasan por alto. Para proporcionar un archivo en lugar de definir las opciones, utilice el siguiente mandato:
 
 ```
-cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf ibmcloud-admin set-containers-quota <organización> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -460,8 +459,7 @@ El archivo JSON debe tener el formato que se muestra en el siguiente ejemplo:
 ```
 {: codeblock}
 
-**Sugerencia:** También puede usar **ba scq** como alias para el nombre de mandato
-**bluemix-admin set-containers-quota** más largo.
+**Sugerencia:** También puede usar **ba scq** como alias para el nombre de mandato **ibmcloud-admin set-containers-quota** más largo.
 
 ## Administración de espacios
 {: #admin_spaces}
@@ -471,7 +469,7 @@ El archivo JSON debe tener el formato que se muestra en el siguiente ejemplo:
 Para añadir un espacio a la organización, utilice el mandato siguiente:
 
 ```
-cf bluemix-admin create-space <organización> <nombre_espacio>
+cf ibmcloud-admin create-space <organización> <nombre_espacio>
 ```
 
 {: codeblock}
@@ -491,7 +489,7 @@ cf bluemix-admin create-space <organización> <nombre_espacio>
 Para eliminar un espacio de la organización, utilice el mandato siguiente:
 
 ```
-cf bluemix-admin delete-space <organización> <nombre_espacio>
+cf ibmcloud-admin delete-space <organización> <nombre_espacio>
 ```
 
 {: codeblock}
@@ -511,7 +509,7 @@ cf bluemix-admin delete-space <organización> <nombre_espacio>
 Para crear un usuario en un espacio con un rol específico, utilice el mandato siguiente:
 
 ```
-cf bluemix-admin set-space <organización> <nombre_espacio> <nombre_usuario> <rol>
+cf ibmcloud-admin set-space <organización> <nombre_espacio> <nombre_usuario> <rol>
 ```
 
 {: codeblock}
@@ -529,8 +527,7 @@ roles de usuario y descripciones de {{site.data.keyword.Bluemix_notm}}
 en un espacio.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba ss** como alias para el nombre de mandato
-**ba set-space** más largo.
+**Sugerencia:** También puede usar **ba ss** como alias para el nombre de mandato **ba set-space** más largo.
 
 
 ### Eliminar el rol de un usuario en un espacio
@@ -538,7 +535,7 @@ en un espacio.</dd>
 Para eliminar el rol de un usuario en un espacio, utilice el mandato siguiente:
 
 ```
-cf bluemix-admin unset-space <organización> <nombre_espacio> <nombre_usuario> <rol>
+cf ibmcloud-admin unset-space <organización> <nombre_espacio> <nombre_usuario> <rol>
 ```
 
 {: codeblock}
@@ -556,8 +553,7 @@ roles de usuario y descripciones de {{site.data.keyword.Bluemix_notm}}
 en un espacio.</dd>
 </dl>
 
-**Sugerencia:** También puede usar **ba us** como alias para el nombre de mandato
-**ba unset-space** más largo.
+**Sugerencia:** También puede usar **ba us** como alias para el nombre de mandato **ba unset-space** más largo.
 
 ## Administrar el catálogo
 {: #admin_catalog}
@@ -772,10 +768,10 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Ejemplos&gt;</dt>
-<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 

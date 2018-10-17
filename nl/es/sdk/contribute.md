@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 {:new_window: target="_blank"}
@@ -146,7 +146,7 @@ Las bibliotecas de tiempo de ejecución necesarias están gestionadas bajo el di
 
 Las dependencias anidadas no están listadas.
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
+* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
 
    El plugin de SDK de CLI de {{site.data.keyword.Bluemix_notm}}, que proporciona la infraestructura para desarrollar plugins de CLI de {{site.data.keyword.Bluemix_notm}}.
 
@@ -181,7 +181,7 @@ Este [repositorio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono
    ```
    import (
       ...
-      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +189,9 @@ Este [repositorio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono
 * Clone el repositorio.
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
-   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
+   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,13 +202,13 @@ Este [repositorio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono
 Compile el plugin eligiendo uno de los mandatos siguientes.
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}
