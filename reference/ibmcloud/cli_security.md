@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-10-04"
 
 # Security
 
-Use the following commands to manage {{site.data.keyword.Bluemix_notm}} infrastructure SSH Keys and Certificates.
+SSH keys allow access to a device without using a password from corresponding clients for each public key that is implemented on the device. By adding an SSH key to a device, the device that was provided with the SSH key accesses the device for the corresponding key without the use of a password.
+
+SSL certificates are enabled by websites as a security measure to protect the user. They are generally used when you are required to transmit confidential information to a website.
+
+Use the following commands to manage {{site.data.keyword.Bluemix}} infrastructure SSH Keys and Certificates.
 {: shortdesc}
 
 <table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Security commands that have links that bring you to more info for the command">
