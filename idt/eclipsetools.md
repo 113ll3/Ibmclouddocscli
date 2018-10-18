@@ -15,10 +15,10 @@ lastupdated: "2018-10-18"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Deploying apps with IBM Eclipse Tools for IBM Cloud
+# Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #deploying-apps-with-ibm-eclipse-tools-for-ibm-cloud}
 
-IBM® Eclipse Tools for {{site.data.keyword.Bluemix_notm}} provides plug-ins that can be installed into an existing Eclipse environment to assist in integrating the developer's integrated development environment (IDE) with Bluemix®. The tools allow you to deploy your JavaScript, WAR (web archive) and EAR (enterprise archive) files, and Liberty Profile packaged servers to the Cloud server right from your Eclipse IDE, or WebSphere® Application Server Developer Tools (WDT).  The tools also allow you to create and link services to your application and define environment variables as part of the deployment.
+IBM® Eclipse Tools for {{site.data.keyword.Bluemix}} provides plug-ins that can be installed into an existing Eclipse environment to assist in integrating the developer's integrated development environment (IDE) with Bluemix®. The tools allow you to deploy your JavaScript, WAR (web archive) and EAR (enterprise archive) files, and Liberty Profile packaged servers to the Cloud server right from your Eclipse IDE, or WebSphere® Application Server Developer Tools (WDT).  The tools also allow you to create and link services to your application and define environment variables as part of the deployment.
 
 If you already have your application running in Eclipse using Websphere Application Developer Tools with Liberty Profile, you can install these tools on top of the running program.  You can deploy your applications by adding the application to the Cloud server in the workbench.  Thanks to the unique features of the Liberty buildpack for packaged server support, you also have an option to deploy the entire Liberty Profile server to Cloud.  You can also deploy Node.js JavaScript applications to Cloud.
 
