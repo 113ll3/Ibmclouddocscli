@@ -18,15 +18,15 @@ lastupdated: "2018-10-18"
 # Deploying apps with IBM Eclipse Tools for IBM Cloud
 {: #deploying-apps-with-ibm-eclipse-tools-for-ibm-cloud}
 
-IBM® Eclipse Tools for IBM Cloud provides plug-ins that can be installed into an existing Eclipse environment to assist in integrating the developer's integrated development environment (IDE) with Bluemix®. The tools allow you to deploy your JavaScript, WAR (web archive) and EAR (enterprise archive) files, and Liberty Profile packaged servers to the Cloud server right from your Eclipse IDE, or WebSphere® Application Server Developer Tools (WDT).  The tools also allow you to create and link services to your application and define environment variables as part of the deployment.
+IBM® Eclipse Tools for {{site.data.keyword.Bluemix_notm}} provides plug-ins that can be installed into an existing Eclipse environment to assist in integrating the developer's integrated development environment (IDE) with Bluemix®. The tools allow you to deploy your JavaScript, WAR (web archive) and EAR (enterprise archive) files, and Liberty Profile packaged servers to the Cloud server right from your Eclipse IDE, or WebSphere® Application Server Developer Tools (WDT).  The tools also allow you to create and link services to your application and define environment variables as part of the deployment.
 
 If you already have your application running in Eclipse using Websphere Application Developer Tools with Liberty Profile, you can install these tools on top of the running program.  You can deploy your applications by adding the application to the Cloud server in the workbench.  Thanks to the unique features of the Liberty buildpack for packaged server support, you also have an option to deploy the entire Liberty Profile server to Cloud.  You can also deploy Node.js JavaScript applications to Cloud.
 
 ## Installing the Eclipse Tools
 
-Learn to install the IBM Eclipse Tools for IBM Cloud. A Java™ 1.7 or later Execution Environment is required.
+Learn to install the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. A Java™ 1.7 or later Execution Environment is required.
 
-There are multiple ways to install the IBM Eclipse Tools for IBM Cloud, including:
+There are multiple ways to install the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, including:
 * Installing from the Marketplace.
 * Installing from WASDev.
 * Downloading from the IBM WebSphere Application Server Developer Tools (WDT) Installer.
@@ -47,19 +47,19 @@ Then, follow the instructions here: [https://marketplace.eclipse.org/content/ibm
 ### Downloading from the IBM WebSphere Application Server Developer Tools (WDT) Installer
 
 1. Open **Help > Install WebSphere Software**. Search for Cloud
-2. Select the `IBM Eclipse Tools for IBM Cloud` entry and click **Install**.
+2. Select the `IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}` entry and click **Install**.
 3. By default, there are features that are selected for you. Click **Confirm**.
 4. Accept the license agreement and click **Finish**.
 
 ## Packaged server support
 
-With IBM Eclipse Tools for IBM Cloud, there are multiple scenarios for pushing a Liberty server or a packaged server to Cloud and confirming the deployment.
+With IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, there are multiple scenarios for pushing a Liberty server or a packaged server to Cloud and confirming the deployment.
 
 * Create the Cloud server.
 * Create a Liberty Profile server with a WAR or EAR file.
 * Stop the server.
 
-Using the IBM Eclipse Tools for IBM Cloud for packaged server support, there are multiple scenarios for:
+Using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} for packaged server support, there are multiple scenarios for:
 
 * Pushing a Liberty server to Cloud.
 * Pushing a Liberty packaged server to Cloud.
@@ -87,11 +87,11 @@ Scenario 1 described how you can add and remove Liberty Server modules. This can
 
 ### Scenario 3 - Run a packaged server to Cloud
 
-The context menu of the Liberty Profile service instance includes a Package Server action. This action packages the server into an archive file. In the Cloud, a new action has been added to package the server into a compressed file and deploy it to IBM Eclipse Tools for IBM Cloud.
+The context menu of the Liberty Profile service instance includes a Package Server action. This action packages the server into an archive file. In the Cloud, a new action has been added to package the server into a compressed file and deploy it to IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 
 1. If continuing from Scenario 1 or 2, remove the Liberty Server module from the Cloud server.
 2. Right-click the Liberty Profile server instance in the Servers view.
-3. Under the Utilities menu, select **Package Server to IBM Cloud**.
+3. Under the Utilities menu, select **Package Server to {{site.data.keyword.Bluemix_notm}}**.
 4. In the dialogue box, choose the Cloud server where you want to deploy the application.
 5. Click **OK**. The Application Dialogue window appears.
 6. Follow steps 5-10 from Scenario 1.
@@ -115,7 +115,7 @@ The previous scenarios describe how to work with existing Liberty Server instanc
 
 ## Pushing an EAR file
 
-Use the IBM Eclipse Tools for IBM Cloud to push an EAR to Cloud.
+Use the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} to push an EAR to Cloud.
 
 Define a new server.
 
@@ -134,7 +134,7 @@ Import an EAR file
 1. Right-click and select **Import**.
 2. Search for EAR file.
 3. Browse for the EAR file you wish to import.
-4. Ensure that the Target runtime is set to IBM Cloud Runtime.
+4. Ensure that the Target runtime is set to {{site.data.keyword.Bluemix_notm}} Runtime.
 
 Deploy your application.
 
@@ -150,7 +150,7 @@ Deploy your application.
 10. To save the settings and variables that you specified, select the **Save to the manifest file** checkbox in the Application details window.
 
 ## Deploying a Node.js application
-Use the IBM Eclipse Tools for IBM Cloud to deploy an existing or new Node.js project onto Cloud, set application deployment details, and verify the results in a browser.
+Use the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} to deploy an existing or new Node.js project onto Cloud, set application deployment details, and verify the results in a browser.
 
 If you do not already have an existing Node.js application, begin with Step 1. If you already have an existing Node.js application, begin with Step 7.
 
@@ -265,7 +265,7 @@ Cached modes: After restarting the workbench, if the application was in developm
 
 ## Connecting to a remote Liberty server
 
-Learn to use IBM Eclipse Tools for IBM Cloud to connect to a remote Liberty server. You can connect to a remote Liberty server that runs WebSphere Application Server as a service.
+Learn to use IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} to connect to a remote Liberty server. You can connect to a remote Liberty server that runs WebSphere Application Server as a service.
 
 To connect to a remote Liberty server, Liberty Tools must be installed. You must also create a WebSphere Application Server service on Cloud.
 
@@ -287,33 +287,33 @@ To connect to a remote Liberty server, Liberty Tools must be installed. You must
 
 6. Click **Finish**.
 
-You connected to a remote Liberty server by using IBM Eclipse Tools for IBM Cloud.
+You connected to a remote Liberty server by using IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 
 ## Enabling Cloud Foundry Diego on Cloud Applications
 
-Enable the Diego architecture function from within IBM Eclipse Tools for IBM Cloud. To enable Diego, you need a Cloud server that is defined in the Servers view.
+Enable the Diego architecture function from within IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. To enable Diego, you need a Cloud server that is defined in the Servers view.
 
 Diego is a new Cloud Foundry architecture that Cloud Foundry instances use to manage running application containers. Diego architecture replaces the Droplet Execution Agents (DEA) architecture that Cloud Foundry previously used. Cloud Foundry installations are going to be moved to Diego, and user applications automatically and transparently switch to the new architecture.
 
-IBM Eclipse Tools for IBM Cloud support Diego and DEA. You can publish applications, enable incremental application publishing, and debug applications. Diego also allows IBM Eclipse Tools for IBM Cloud to create Secure Shell (SSH) tunnels into deployed Cloud applications, which allows faster and more reliable connections to Cloud applications while debugging. You can also enable SSH so that you can create your own tunnels to access application resources.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} support Diego and DEA. You can publish applications, enable incremental application publishing, and debug applications. Diego also allows IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} to create Secure Shell (SSH) tunnels into deployed Cloud applications, which allows faster and more reliable connections to Cloud applications while debugging. You can also enable SSH so that you can create your own tunnels to access application resources.
 
 Complete the following steps to use the Diego architecture for your applications before Cloud switches to deploying with Diego by default:
 
 1. Right-click on the deployed application in the Servers view.
 2. If Diego is supported on your Cloud server, and your application is not already deployed with Diego, select **Enable Diego** from the menu.
-3. If the server supports SSH tunneling, the program asks if you want to enable SSH for your application. SSH tunnels are a more reliable mechanism for communicating with your application. However, if you select **No**, functions in IBM Eclipse Tools for IBM Cloud continue to work by using a mechanism that does not require SSH tunneling.
+3. If the server supports SSH tunneling, the program asks if you want to enable SSH for your application. SSH tunnels are a more reliable mechanism for communicating with your application. However, if you select **No**, functions in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} continue to work by using a mechanism that does not require SSH tunneling.
 
 The application then redeploys by using Diego architecture.
 
 ## Creating a server with Cloud Enterprise Federation
 
-IBM Eclipse Tools for IBM Cloud support Cloud Enterprise Federation, a single sign-on service that enables users to securely access cloud services. With Cloud Enterprise Federation, you can enable a custom third-party authentication that is provided by your own organization, without the standard login authentication, for other users to securely access applications.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} support Cloud Enterprise Federation, a single sign-on service that enables users to securely access cloud services. With Cloud Enterprise Federation, you can enable a custom third-party authentication that is provided by your own organization, without the standard login authentication, for other users to securely access applications.
 
 Cloud Enterprise Federation authenticates a set of users to access cloud services. After you enable Cloud Enterprise Federation, your users receive authentication for cloud-enabled applications through the single sign-on option. Users must select the single sign-on option to create a server in the Eclipse workbench and log-in with the organization log-in and password. After you enable Cloud Enterprise Federation, the traditional Cloud User ID and password in Eclipse Tools is no longer used to authenticate users.
 
-1. In IBM Eclipse Tools for IBM Cloud, select **File > New > Other...**.
+1. In IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, select **File > New > Other...**.
 2. Select **Server > Server > Next**.
-3. From the tree, select **IBM > IBM Cloud > Next**.
+3. From the tree, select **IBM > {{site.data.keyword.Bluemix_notm}} > Next**.
 4. Select the **Use a one-time password to log in (SSO)** check box.
 5. A hyperlink appears in the log-in dialog. Click the hyperlink to open the Cloud authentication page.
 6. Enter your email address and your intended password.
