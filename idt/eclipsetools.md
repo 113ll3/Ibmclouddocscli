@@ -18,7 +18,7 @@ lastupdated: "2018-10-18"
 # Deploying apps with IBM Eclipse Tools for IBM Cloud
 {: #deploying-apps-with-ibm-eclipse-tools-for-ibm-cloud}
 
-IBM® Eclipse Tools for IBM Cloud provides plug-ins that can be installed into an existing Eclipse environment to assist in integrating the developer's integrated development environment (IDE) with Bluemix®. The tools allows you to deploy your JavaScript, WAR (web archive) and EAR (enterprise archive) files, and Liberty Profile packaged servers to the Cloud server right from your Eclipse IDE, or WebSphere® Application Server Developer Tools (WDT).  The tools also allow you to create and link services to your application and define environment variables as part of the deployment.
+IBM® Eclipse Tools for IBM Cloud provides plug-ins that can be installed into an existing Eclipse environment to assist in integrating the developer's integrated development environment (IDE) with Bluemix®. The tools allow you to deploy your JavaScript, WAR (web archive) and EAR (enterprise archive) files, and Liberty Profile packaged servers to the Cloud server right from your Eclipse IDE, or WebSphere® Application Server Developer Tools (WDT).  The tools also allow you to create and link services to your application and define environment variables as part of the deployment.
 
 If you already have your application running in Eclipse using Websphere Application Developer Tools with Liberty Profile, you can install these tools on top of the running program.  You can deploy your applications by adding the application to the Cloud server in the workbench.  Thanks to the unique features of the Liberty buildpack for packaged server support, you also have an option to deploy the entire Liberty Profile server to Cloud.  You can also deploy Node.js JavaScript applications to Cloud.
 
@@ -41,14 +41,14 @@ Then, follow the instructions here: [https://marketplace.eclipse.org/content/ibm
 
 1. Open the [Download](https://developer.ibm.com/wasdev/downloads/) page in WASDev.
 2. Drag the `Install` icon to the toolbar in Eclipse.
-3. By default, there are features selected for you. Click **Confirm**.
+3. By default, there are features that are selected for you. Click **Confirm**.
 4. Accept the license agreement and click **Finish**.
 
 ### Downloading from the IBM WebSphere Application Server Developer Tools (WDT) Installer
 
 1. Open **Help > Install WebSphere Software**. Search for Cloud
 2. Select the `IBM Eclipse Tools for IBM Cloud` entry and click **Install**.
-3. By default, there are features selected for you. Click **Confirm**.
+3. By default, there are features that are selected for you. Click **Confirm**.
 4. Accept the license agreement and click **Finish**.
 
 ## Packaged server support
@@ -134,7 +134,7 @@ Import an EAR file
 1. Right-click and select **Import**.
 2. Search for EAR file.
 3. Browse for the EAR file you wish to import.
-4. Ensure the Target runtime is set to IBM Cloud Runtime.
+4. Ensure that the Target runtime is set to IBM Cloud Runtime.
 
 Deploy your application.
 
@@ -215,7 +215,7 @@ Once development mode is enabled, use the incremental publish function:
 
 3. Right-click on the Cloud server and select **Publish**.
 
-Cached modes: After restarting the workbench, if the application was in development mode or debug mode, you see a progress window that says, "Retrieving development and debug states". After the progress finishes, development mode and debug mode are refreshed accordingly.
+Cached modes: After restarting the workbench, if the application was in development mode or debug mode, you see a progress window that says, "Retrieving development and debug states". Accordingly, after the progress finishes, development mode and debug mode are refreshed.
 
 ## Remote Debug
 
@@ -253,7 +253,7 @@ If development mode remains running, the application shows that it is `Developin
 
 ### Enable Debug of Node.js applications
 
-**Note:** Before completing the following steps, ensure that you have an existing JavaScript application deployed to Cloud. See previous steps for more information on deploying a JavaScript application.
+**Note:** Before completing the following steps, ensure that you have an existing JavaScript application that is deployed to Cloud. See previous steps for more information on deploying a JavaScript application.
 
 1. In the Servers view, right-click the Node.js application and select **Open** JavaScript Debugger. A dialog box appears and asks if you want to increase the memory limit of the application.
 2. Click Yes. Enabling JavaScript Debugging increases the application memory requirements, and the application restarts more quickly with the updated memory limit.
@@ -295,7 +295,7 @@ Enable the Diego architecture function from within IBM Eclipse Tools for IBM Clo
 
 Diego is a new Cloud Foundry architecture that Cloud Foundry instances use to manage running application containers. Diego architecture replaces the Droplet Execution Agents (DEA) architecture that Cloud Foundry previously used. Cloud Foundry installations are going to be moved to Diego, and user applications automatically and transparently switch to the new architecture.
 
-IBM Eclipse Tools for IBM Cloud supports Diego and DEA. You can publish applications, enable incremental application publishing, and debug applications. Diego also allows IBM Eclipse Tools for IBM Cloud to create Secure Shell (SSH) tunnels into deployed Cloud applications, which allows faster and more reliable connections to Cloud applications while debugging. You can also enable SSH so that you can create your own tunnels to access application resources.
+IBM Eclipse Tools for IBM Cloud support Diego and DEA. You can publish applications, enable incremental application publishing, and debug applications. Diego also allows IBM Eclipse Tools for IBM Cloud to create Secure Shell (SSH) tunnels into deployed Cloud applications, which allows faster and more reliable connections to Cloud applications while debugging. You can also enable SSH so that you can create your own tunnels to access application resources.
 
 Complete the following steps to use the Diego architecture for your applications before Cloud switches to deploying with Diego by default:
 
@@ -307,14 +307,14 @@ The application then redeploys by using Diego architecture.
 
 ## Creating a server with Cloud Enterprise Federation
 
-IBM Eclipse Tools for IBM Cloud supports Cloud Enterprise Federation, a single sign-on service that enables users to securely access cloud services. With Cloud Enterprise Federation, you can enable a custom third-party authentication that is provided by your own organization, without the standard login authentication, for other users to securely access applications.
+IBM Eclipse Tools for IBM Cloud support Cloud Enterprise Federation, a single sign-on service that enables users to securely access cloud services. With Cloud Enterprise Federation, you can enable a custom third-party authentication that is provided by your own organization, without the standard login authentication, for other users to securely access applications.
 
 Cloud Enterprise Federation authenticates a set of users to access cloud services. After you enable Cloud Enterprise Federation, your users receive authentication for cloud-enabled applications through the single sign-on option. Users must select the single sign-on option to create a server in the Eclipse workbench and log-in with the organization log-in and password. After you enable Cloud Enterprise Federation, the traditional Cloud User ID and password in Eclipse Tools is no longer used to authenticate users.
 
 1. In IBM Eclipse Tools for IBM Cloud, select **File > New > Other...**.
 2. Select **Server > Server > Next**.
 3. From the tree, select **IBM > IBM Cloud > Next**.
-4. Select the **Use a one-time password to login (SSO)** check box.
+4. Select the **Use a one-time password to log in (SSO)** check box.
 5. A hyperlink appears in the log-in dialog. Click the hyperlink to open the Cloud authentication page.
 6. Enter your email address and your intended password.
 7. After a successful log-in, you are provided with a one-time passcode. Copy this passcode into the Passcode: field of Eclipse Tools for Cloud New Server dialog.
