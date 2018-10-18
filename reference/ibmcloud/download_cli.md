@@ -137,7 +137,7 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
    * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
    * For shell autocompletion support (MacOS and Linux only), refer to [this guide](enable_cli_autocompletion.html).
    
-## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
+<!-- ## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
 
 The following sections provide details on how to uninstall the stand-alone {{site.data.keyword.Bluemix_notm}} CLI on specific platforms.
 
@@ -165,7 +165,7 @@ The following sections provide details on how to uninstall the stand-alone {{sit
 
 1. Open a terminal, and run the following command:
   * `/usr/local/ibmcloud/uninstall`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
+2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html). -->
 
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
