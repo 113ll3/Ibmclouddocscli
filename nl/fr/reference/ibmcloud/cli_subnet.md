@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # Sous-réseau
 
-Les commandes suivantes permettent de gérer les sous-réseaux de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+Un sous-réseau est une partition logique d'un réseau IP dans plusieurs segments de réseau plus petits. Les commandes suivantes permettent de gérer les sous-réseaux de l'infrastructure {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Commandes de sous-réseau de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations sur la commande">

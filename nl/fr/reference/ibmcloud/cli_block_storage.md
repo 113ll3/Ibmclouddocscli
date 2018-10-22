@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Stockage par blocs
+
+Les stockage par blocs {{site.data.keyword.Bluemix}} est un stockage iSCSI hautes performances persistant qui est mis à disposition et géré indépendamment des instances de calcul. Des LUN de stockage par blocs basées sur iSCSI sont connectées à des unités autorisées via des connexions d'E-S multi-accès redondantes.  
 
 Les commandes suivantes permettent de gérer un volume donné pour le service de stockage par blocs de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

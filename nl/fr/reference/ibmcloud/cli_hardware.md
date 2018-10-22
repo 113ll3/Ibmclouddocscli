@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Configuration matérielle
 
-Les commandes suivantes permettent de gérer les serveurs matériels bare metal de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+Les serveurs bare metal sont des serveurs physiques à service exclusif offrant performances et contrôle avec un accès de bas niveau aux ressources matériel. Les serveurs bare metal fournissent la puissance brute dont vous avez besoin pour vos charges de travail exigeantes en termes de processeur et d'entrée-sortie de disque. Ces serveurs sont fournis avec le package le plus complet de services et fonctions standard.
+
+Les commandes suivantes permettent de gérer les serveurs matériels bare metal de l'infrastructure {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Commandes de serveur bare metal de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">

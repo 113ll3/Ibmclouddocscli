@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Stockage de fichier
+
+{{site.data.keyword.filestorage_full}} est un {{site.data.keyword.filestorage_short}} basé sur NFS, persistant, rapide et connecté au réseau de façon flexible. Cet environnement NAS vous permet d'avoir un contrôle total des fonctions et des performances de vos partages de fichiers.
 
 Les commandes suivantes permettent de gérer un volume spécifique dans le service de stockage de fichier de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

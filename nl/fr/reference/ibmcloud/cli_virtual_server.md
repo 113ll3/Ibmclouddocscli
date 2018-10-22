@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Virtual Server
 
-Les commandes suivantes permettent de gérer les serveurs virtuels de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+Les serveurs {{site.data.keyword.BluVirtServers}} sont des serveurs virtuels évolutifs qui sont achetés avec des coeurs dédiés et des allocations de mémoire. Ils constituent un très bon choix si vous recherchez des ressources de calcul, qui peuvent être ajoutées en quelques minutes, avec un accès à des fonctions telles que des modèles d'image. 
+
+Les commandes suivantes permettent de gérer les serveurs virtuels de l'infrastructure {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Commandes de serveur virtuel de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">

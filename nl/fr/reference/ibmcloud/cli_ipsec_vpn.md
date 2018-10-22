@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # VPN IPSec
 
-Les commandes suivantes permettent de gérer un tunnel VPN IPSec dans le service VPN IPSec de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+L'accès VPN {{site.data.keyword.Bluemix}} permet aux utilisateurs de gérer tous les serveurs à distance et en toute sécurité sur le réseau privé {{site.data.keyword.Bluemix_notm}}. Une connexion VPN de votre site vers le réseau privé permet une gestion externe et la récupération de serveurs via un tunnel VPN chiffré.
+
+Les commandes suivantes permettent de gérer les tunnels VPN IPSec dans le service VPN IPSec d'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Commandes VPN IPSec {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">

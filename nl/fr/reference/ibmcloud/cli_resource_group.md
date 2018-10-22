@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # Groupes de ressources et ressources
 {: #ibmcloud_commands_resource}
 
-Les commandes suivantes permettent de gérer les ressources et les groupes de ressources {{site.data.keyword.Bluemix_notm}}.
+Un groupe de ressources permet d'organiser vos ressources de compte en regroupements personnalisables. Les commandes suivantes permettent de gérer les ressources et les groupes de ressources {{site.data.keyword.Bluemix}} dans un groupe de ressources.
 {: shortdesc}
 
 <table summary="Commandes ibmcloud que vous pouvez utiliser pour gérer les groupes de ressources et les ressources.">
@@ -773,7 +773,7 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 </dl>
 
 <strong>Exemples</strong> :
-Mettre à jour l'alias de service `my-service-alias`  et remplacer son nom par `new-service-alias` :
+Mettre à jour l'alias de service `my-service-alias` et remplacer son nom par `new-service-alias` :
 
 ```
 ibmcloud resource service-alias-update my-service-alias -n new-service-alias

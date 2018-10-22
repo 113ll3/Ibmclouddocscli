@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Adresse IP globale
 
-Les commandes suivantes permettent de gérer une adresse IP globale dans le service d'adresse IP globale de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+Une adresse IP globale est un sous-réseau secondaire statique spécialisé. Il vous est distribué en tant que sous-réseau /32 (en d'autres termes, une seule adresse IP) qui peut être routé vers n'importe quelle autre adresse IP sur votre compte. 
+
+Les commandes suivantes permettent de gérer une adresse IP globale dans le service d'adresse IP globale de l'infrastructure {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Commandes d'adresse IP globale de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">

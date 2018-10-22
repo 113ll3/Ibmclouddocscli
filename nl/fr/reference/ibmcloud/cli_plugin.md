@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-04"
 # Plug-in
 {: #ibmcloud_commands_settings}
 
-Les commandes suivantes permettent de gérer les plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.Bluemix}} prend en charge une infrastructure de plug-in permettant d'étendre sa capacité. Les commandes suivantes permettent de gérer les plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Commandes ibmcloud permettant de gérer les plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.">

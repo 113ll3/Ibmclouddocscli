@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # Identité, accès et clés d'API IAM
 {: #ibmcloud_commands_iam}
 
-Les commandes suivantes permettent de gérer les clés d'API, les ID de service, les groupes d'accès et les règles d'accès/autorisation pour IAM.
+Les commandes suivantes permettent de gérer des clés d'API, des ID de service, des groupes d'accès et des règles d'accès/autorisation pour des utilisateurs, des services et des groupes d'accès.
 {: shortdesc}
 
 <table summary="Commandes ibmcloud que vous pouvez utiliser pour gérer les règles et les clés d'API.">
@@ -376,7 +376,7 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>-d <i>DESCRIPTION</i> (facultatif)</dt>
 <dd>Description de la clé d'API</dd>
 <dt>--file <i>FILE</i></dt>
-<dd>Sauvegarder les informations de clé d'API dans le fichier spécifié. </dd>
+<dd>Sauvegarder les informations de clé d'API dans le fichier spécifié.</dd>
 <dt>--lock</dt>
 <dd>Verrouiller la clé d'API lors de la création</dd>
 </dl>
@@ -603,7 +603,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>-d, --description</dt>
   <dd>Description de la clé d'API</dd>
   <dt>--file</dt>
-  <dd>Sauvegarder les informations de clé d'API dans le fichier spécifié. </dd>
+  <dd>Sauvegarder les informations de clé d'API dans le fichier spécifié.</dd>
   <dt>-f, --force</dt>
   <dd>Forcer la création sans confirmation</dd>
 </dl>

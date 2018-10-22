@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Catalogue
 {: #ibmcloud_catalog}
 
-Les commandes suivantes permettent de gérer le catalogue {{site.data.keyword.Bluemix_notm}}.
+Les commandes suivantes permettent de gérer les entrées de catalogue {{site.data.keyword.Bluemix}}, les modèles de requête, les contextes d'exécution et les géolocalisations de centres de données.
 {: shortdesc}
 
 <table summary="Commandes ibmcloud permettant de gérer le catalogue {{site.data.keyword.Bluemix_notm}}.">

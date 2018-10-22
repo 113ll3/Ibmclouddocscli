@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # Image
 
-Les commandes suivantes permettent de gérer les images de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+Les commandes suivantes permettent de gérer les images de calcul {{site.data.keyword.Bluemix}} :
 {: shortdesc}
 
 <table summary="Commandes d'image de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">

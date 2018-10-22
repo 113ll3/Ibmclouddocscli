@@ -5,17 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Environnements CFEE (Cloud Foundry Enterprise Environment) (bêta)
+# Environnements CFEE (Cloud Foundry Enterprise Environment)
 {: #ibmcloud_commands_cfee}
 
-Les commandes suivantes permettent de gérer les rôles, les utilisateurs, les espaces et les organisations CFEE.
+{{site.data.keyword.cfee_full}} (CFEE) vous permet d'instancier à la demande plusieurs plateformes Cloud Foundry d'entreprise isolées. Les instances du service IBM Cloud Foundry Enterprise s'exécutent dans votre propre compte dans IBM Cloud. L'environnement est déployé sur du matériel isolé (clusters Kubernetes). Vous avez le contrôle complet de l'environnement, y compris le contrôle d'accès, la capacité, les mises à jour de version, l'utilisation et la surveillance des ressources. 
+
+Les commandes suivantes permettent de gérer les environnements, les organisations, les espaces, les utilisateurs et les rôles CFEE.
 {: shortdesc}
 
 <table summary="Gestion des services Cloud Foundry Enterprise Environment (expérimental)">
@@ -112,7 +114,7 @@ ibmcloud cfee orgs [--env ENV]
 <strong>Options de commande</strong> :
   <dl>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -145,9 +147,9 @@ ibmcloud cfee org ORG [--guid] [--env ENV]
    <dt>ORG (obligatoire)</dt>
    <dd>Nom de l'organisation.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
    <dt>--guid</dt>
-   <dd>Afficher l'identificateur global unique de l'organisation uniquement. Toute autre sortie relative à l'organisation est supprimée. </dd>
+   <dd>Afficher l'identificateur global unique de l'organisation uniquement. Toute autre sortie relative à l'organisation est supprimée.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -186,7 +188,7 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
    <dt>ORG (obligatoire)</dt>
    <dd>Nom de l'organisation à créer.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
    <dt>-q, --quota QUOTA</dt>
    <dd>Quota à affecter à l'organisation nouvellement créée (utilisez le quota par défaut si aucun n'est indiqué)</dd>
   </dl>
@@ -227,7 +229,7 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
    <dt>ORG (obligatoire)</dt>
    <dd>Nom de l'organisation à supprimer.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
    <dt>-f, --force</dt>
    <dd>Forcer la suppression sans confirmation</dd>
   </dl>
@@ -270,7 +272,7 @@ ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
    <dt>-a, --all</dt>
    <dd>Répertorier tous les utilisateurs de l'organisation indiquée</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun élément n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -319,7 +321,7 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
    </ul>
    </dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -362,7 +364,7 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
    </ul>
    </dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -395,7 +397,7 @@ ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
    <dt>-o, --org ORG</dt>
    <dd>Nom de l'organisation. L'organisation actuelle constitue la valeur par défaut si aucune valeur n'est indiquée.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -428,7 +430,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
    <dt>SPACE (obligatoire)</dt>
    <dd>Nom de l'espace à afficher.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
    <dt>--guid</dt>
    <dd>Extraire et afficher l'identificateur global unique de l'espace donné. Toute autre sortie pour l'espace est supprimée.</dd>
    <dt>-o, --org ORG</dt>
@@ -479,7 +481,7 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
    <dt>SPACE (obligatoire)</dt>
    <dd>Nom de l'espace à créer.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
    <dt>-o, --org ORG</dt>
    <dd>Nom de l'organisation. L'organisation actuelle constitue la valeur par défaut si aucune valeur n'est indiquée.</dd>
   </dl>
@@ -516,7 +518,7 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
    <dt>NEW_NAME (obligatoire)</dt>
    <dd>Nouveau nom à affecter à l'espace.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
    <dt>-o, --org ORG</dt>
    <dd>Nom de l'organisation. L'organisation actuelle constitue la valeur par défaut si aucune valeur n'est indiquée.</dd>
   </dl>
@@ -551,7 +553,7 @@ ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
    <dt>SPACE (obligatoire)</dt>
    <dd>Nom de l'espace à afficher.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
    <dt>-f, --force</dt>
    <dd>Force une suppression sans demander de confirmation.</dd>
    <dt>-o, --org ORG</dt>
@@ -599,7 +601,7 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <li>SpaceAuditor : ce rôle peut consulter les journaux, les rapports, et les paramètres de l'espace.</li>
    </ul></dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -643,7 +645,7 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <li>SpaceAuditor : ce rôle peut consulter les journaux, les rapports, et les paramètres de l'espace.</li>
    </ul></dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -676,7 +678,7 @@ ibmcloud cfee space-roles ORG [--env ENV]
    <dt>ORG (obligatoire)</dt>
    <dd>Nom de l'organisation.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -711,7 +713,7 @@ ibmcloud cfee space-users ORG SPACE [--env ENV]
    <dt>SPACE (obligatoire)</dt>
    <dd>Nom de l'espace.</dd>
    <dt>--env ENV</dt>
-   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE actuel si aucun autre n'a été spécifié.</dd>
+   <dd>Nom de l'environnement CFEE. Par défaut, environnement CFEE en cours si aucun élément n'a été spécifié.</dd>
   </dl>
 
 <strong>Exemples</strong> :

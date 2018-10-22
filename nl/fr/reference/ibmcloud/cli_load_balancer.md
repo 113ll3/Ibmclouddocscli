@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Equilibreur de charge
 
-Les commandes suivantes permettent de gérer un équilibreur de charge à l'aide du service d'équilibreur de charge de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+Le service d'équilibrage de charge {{site.data.keyword.Bluemix}} vous permet d'améliorer la disponibilité de vos applications stratégiques en distribuant le trafic entre plusieurs instances de serveur d'application et en acheminant le trafic uniquement vers des instances saines. 
+
+Les commandes suivantes vous permettent de gérer les équilibreurs de charge dans le service d'équilibrage de charge de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Commandes d'équilibreur de charge {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">
