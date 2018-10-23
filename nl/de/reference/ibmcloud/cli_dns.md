@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # DNS (Domain Name Server)
 
-Verwenden Sie die folgenden Befehle, um Zonen für den DNS-Service in der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{{site.data.keyword.Bluemix}} Domain Name Service (DNS) bietet Kunden einen zentralen Ausgangspunkt zur Anzeige und Verwaltung ihrer Domänen über die DNS-Basismanagementschnittstelle sowie die Option, Reverse DNS und Secondary DNS über denselben Ausgangspunkt kostenfrei zu verwalten. 
+
+Verwenden Sie die folgenden Befehle, um den DNS-Service in der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete DNS-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

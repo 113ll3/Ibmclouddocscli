@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # DNS
 
-Utilice los mandatos siguientes para gestionar las zonas del servicio DNS de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+Domain Name Service (DNS) de {{site.data.keyword.Bluemix}} proporciona a los clientes una ubicación central para ver y gestionar sus dominios a través de la interfaz de gestión de DNS básica y también ofrece a los usuarios la opción de gestionar DNS inverso y secundario en la misma ubicación de forma gratuita.
+
+Utilice los mandatos siguientes para gestionar el servicio de DNS de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Mandatos DNS de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">

@@ -37,7 +37,7 @@ Puede llevar a cabo las siguientes tareas con la CLI de dev_mode:
 
 Utilice uno de los siguientes métodos para instalar la herramienta de línea de mandatos dev_mode:
 - Instale localmente.
-  1. Descargue el plug-in dev_mode para su plataforma desde el repositorio de plug-ins de la CLI [{{site.data.keyword.Bluemix_notm}} Repositorio de plug-ins de la CLI ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+  1. Descargue el plug-in dev_mode para su plataforma desde el [repositorio de plug-ins de CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
   2. Vaya a la carpeta en la que se ha guardado el complemento dev_mode e instale dicho complemento utilizando el mandato cf install-plugin. Por ejemplo:
 
         ```

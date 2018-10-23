@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Facturación 
 {: #ibmcloud_billing}
 
-Utilice los mandatos siguientes para gestionar el uso y la facturación de {{site.data.keyword.Bluemix_notm}}.
+Utilice los mandatos siguientes para recuperar el uso de recursos y la información de facturación.
 {: shortdesc}
 
 <table summary="mandatos ibmcloud que puede utilizar para gestionar el uso y la facturación de {{site.data.keyword.Bluemix_notm}}.">

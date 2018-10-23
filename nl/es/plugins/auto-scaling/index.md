@@ -51,7 +51,7 @@ ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">El nombre de la app a la que desea adjuntar una política de escalado automático.</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
-<dd class="pd">El nombre del archivo JSON que describe la política de escalado automático. Consulte el <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">{{site.data.keyword.autoscaling}} documento de la API RESTful</a> para obtener más detalles.</dd>
+<dd class="pd">El nombre del archivo JSON que describe la política de escalado automático. Consulte el <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">documento de la API RESTful de {{site.data.keyword.autoscaling}}</a> para obtener más detalles.</dd>
 </dl>
 
 
@@ -138,6 +138,6 @@ ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-da
 {: rellinks}
 ## general
 {: general}
-* [{{site.data.keyword.autoscaling}} servicio](/docs/services/Auto-Scaling/index.html)
+* [Servicio {{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)
 * [CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [Formatos estándar de fecha y hora W3C ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Lastausgleichsfunktion
+
+Der {{site.data.keyword.Bluemix}} Load Balancer-Service unterstützt die Verbesserung der Verfügbarkeit ihrer geschäftskritischen Anwendungen; dazu wird der Datenverkehr auf mehrere Anwendungsserverinstanzen verteilt und ausschließlich an ordnungsgemäß funktionierende Instanzen weitergeleitet.
 
 Verwenden Sie die folgenden Befehle, um eine Lastausgleichsfunktion über den Service Load Balancer der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-04"
 # Plugin
 {: #ibmcloud_commands_settings}
 
-Utilice los mandatos siguientes para gestionar los plug-ins CLI de {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.Bluemix}} da soporte a una infraestructura de plug-in para ampliar su capacidad. Utilice los mandatos siguientes para gestionar los plug-ins CLI de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="mandatos ibmcloud que puede utilizar para gestionar los plug-ins de CLI de {{site.data.keyword.Bluemix_notm}}.">

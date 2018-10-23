@@ -5,17 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry Enterprise Environments (CFEE) (Beta)
+# Cloud Foundry Enterprise Environments (CFEE)
 {: #ibmcloud_commands_cfee}
 
-Verwenden Sie die folgenden Befehle, um CFEE-Organisationen, -Bereiche, -Benutzer und -Rollen zu verwalten.
+Mit {{site.data.keyword.cfee_full}} (CFEE) können Sie mehrere isolierte und auf Unternehmen abgestimmte Cloud Foundry-Plattformen bedarfsgesteuert instanziieren. Instanzen des IBM Cloud Foundry Enterprise-Service werden im eigenen Konto in IBM Cloud ausgeführt. Die Umgebung wird auf isolierter Hardware (Kubernetes-Cluster) bereitgestellt. Sie haben volle Kontrolle über die Umgebung, einschließlich Zugriffssteuerung, Kapazitätsmanagement, Versionsaktualisierungen, Ressourcennutzung und Überwachung.
+
+Verwenden Sie die folgenden Befehle, um CFEE-Umgebungen, -Organisationen, -Bereiche, -Benutzer und -Rollen zu verwalten.
 {: shortdesc}
 
 <table summary="Cloud Foundry-Unternehmensumgebungen verwalten (experimentell)">
@@ -309,7 +311,7 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
    <dt>USER_EMAIL (erforderlich)</dt>
    <dd>Die E-Mail-Adresse des Benutzers, der zugewiesen wird.</dd>
    <dt>ORG (erforderlich)</dt>
-   <dd>Der Name der Organisation, der dieser Benutzer zugeordnet wird.</dd>
+   <dd>Der Name der Organisation, der dieser Benutzer zugewiesen wird.</dd>
    <dt>ROLE (erforderlich)</dt>
    <dd>Der Name der Organisationsrolle, der dieser Benutzer zugeordnet wird. Beispiel:
    <ul>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # IP global
 
-Utilice los mandatos siguientes para gestionar una IP global en el servicio de IP global de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+Una dirección IP global es una subred secundaria estática especializada. Se le entrega como una subred /32 (en otras palabras, una dirección IP única) que se puede direccionar a cualquier otra dirección IP de su cuenta.
+
+Utilice los mandatos siguientes para gestionar una IP global en el servicio de IP global de la infraestructura de {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Mandatos Global IP de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">

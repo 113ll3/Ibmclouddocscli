@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Catalog
 {: #ibmcloud_catalog}
 
-Utilice los mandatos siguientes para gestionar el catálogo de {{site.data.keyword.Bluemix_notm}}.
+Utilice los mandatos siguientes para gestionar las entradas de catálogo de {{site.data.keyword.Bluemix}}, las plantillas de consulta, los tiempos de ejecución y las geolocalizaciones de centros de datos.
 {: shortdesc}
 
 <table summary="mandatos de ibmcloud que puede utilizar para gestionar el catálogo de {{site.data.keyword.Bluemix_notm}}.">

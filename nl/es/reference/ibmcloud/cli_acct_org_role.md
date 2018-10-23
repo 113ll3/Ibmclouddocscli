@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +13,10 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Cuentas, usuarios y organizaciones
- {: #ibmcloud_commands_account}
+{: #ibmcloud_commands_account}
 
- Utilice los mandatos siguientes para gestionar cuentas, usuario de una cuenta y la organización, espacio y roles.
-  {: shortdesc}
+Utilice los mandatos siguientes para gestionar cuentas, usuarios de una cuenta y la organización, el espacio y los roles de los entornos de Cloud Foundry públicos.
+{: shortdesc}
 
   <table summary="Mandatos de Bluemix que puede utilizar para gestionar las cuentas, las organizaciones, los espacios y los roles.">
    <thead>

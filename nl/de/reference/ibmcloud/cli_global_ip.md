@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Globale IP
 
-Verwenden Sie die folgenden Befehle, um eine globale IP für den Global IP-Service der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+Eine globale IP-Adresse ist ein spezialisiertes, statisches, sekundäres Teilnetz. Sie wird als /32-Teilnetz (sozusagen als eine einzelne IP-Adresse) bereitgestellt, die an jede andere IP-Adresse Ihres Kontos weitergeleitet werden kann.
+
+Verwenden Sie die folgenden Befehle, um eine globale IP für den Global IP-Service der {{site.data.keyword.Bluemix}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete Global IP-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

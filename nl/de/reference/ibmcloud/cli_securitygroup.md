@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Sicherheitsgruppe
 
-Verwenden Sie die folgenden Befehle, um eine Sicherheitsgruppe über den Service Security Group der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+Eine Sicherheitsgruppe ist eine Gruppe aus IP-Filterregeln, von denen definiert wird, wie eingehender (Ingress) und ausgehender (Egress) Datenverkehr an öffentliche und private Schnittstellen einer Instanz eines virtuellen Servers verarbeitet werden soll. Die Regeln, die Sie zu einer Sicherheitsgruppe hinzufügen, werden als Sicherheitsgruppenregeln bezeichnet.
+
+Verwenden Sie die folgenden Befehle, um eine Sicherheitsgruppe über den Service Security Group der {{site.data.keyword.Bluemix}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete Security Group-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

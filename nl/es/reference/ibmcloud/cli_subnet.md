@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # Subred
 
-Utilice los mandatos siguientes para gestionar las subredes de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+Una subred es una partición lógica de una red de IP en varios segmentos de red más pequeños. Utilice los mandatos siguientes para gestionar las subredes de la infraestructura de {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Mandatos Subnet de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">

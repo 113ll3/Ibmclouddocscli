@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # Teilnetz
 
-Verwenden Sie die folgenden Befehle, um die Teilnetze der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+Ein Teilnetz ist eine logische Aufteilung eines IP-Netzes, das aus mehreren, kleineren Netzsegmenten besteht. Verwenden Sie die folgenden Befehle, um die Teilnetze der {{site.data.keyword.Bluemix}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete Teilnetzbefehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

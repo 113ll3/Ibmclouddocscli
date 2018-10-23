@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # File Storage
+
+{{site.data.keyword.filestorage_full}} ist ein persistenter, schneller und flexibler, NFS-basierter NAS-{{site.data.keyword.filestorage_short}}. In dieser NAS-Umgebung (NAS - Network-Attached Storage) verfügen Sie über die vollständige Kontrolle über die Dateifreigabefunktion und die Leistung.
 
 Verwenden Sie die folgenden Befehle, um einen angegebenen Datenträger für den File Storage-Service der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}

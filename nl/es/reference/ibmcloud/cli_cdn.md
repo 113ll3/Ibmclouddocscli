@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # CDN
 
-Utilice los mandatos siguientes para gestionar las cuentas del servicio CDN de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+El servicio de Red de entrega de contenido (CDN) distribuye el contenido en el lugar en el que se necesita. La primera vez que se solicita contenido, se obtiene del servidor host a la red y permanece allí para que otros usuarios puedan acceder al mismo.
+
+Utilice los mandatos siguientes para gestionar el servicio de CDN de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Mandatos CDN de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">

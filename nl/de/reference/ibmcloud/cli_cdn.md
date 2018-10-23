@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # CDN (Content Delivery Network)
 
-Verwenden Sie die folgenden Befehle, um Konten für den CDN-Service (CDN = Content Delivery Network) in der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+Vom Service 'Content Delivery Network' (CDN) wird Inhalt an die Positionen verteilt, an denen er benötigt wird. Wenn der Inhalt zum ersten Mal benötigt wird, wird er vom Host-Server in das Netz abgerufen und bleibt dort, damit andere Benutzer auf ihn zugreifen können.
+
+Verwenden Sie die folgenden Befehle, um den CDN-Service (CDN = Content Delivery Network) in der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete CDN-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

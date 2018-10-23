@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-04"
 # Plug-in
 {: #ibmcloud_commands_settings}
 
-Verwenden Sie die folgenden Befehle, um die Plug-ins der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle zu verwalten.
+{{site.data.keyword.Bluemix}} unterstützt ein Plug-in-Framework zur Erweiterung der verfügbaren Funktionalität. Verwenden Sie die folgenden Befehle, um die Plug-ins der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle zu verwalten.
 {: shortdesc}
 
 <table summary="ibmcloud-Befehle, die Sie zur Verwaltung der Plug-ins der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden können.">

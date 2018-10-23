@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # File Storage
+
+{{site.data.keyword.filestorage_full}} es una {{site.data.keyword.filestorage_short}} basada en NFS persistente, rápida y flexible conectada a la red. En este entorno de almacenamiento adjunto de red (NAS), tiene un control total sobre la función y el rendimiento de las comparticiones de archivos.
 
 Utilice los mandatos siguientes para gestionar un volumen determinado en el servicio de almacenamiento de archivos de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

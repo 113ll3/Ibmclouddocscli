@@ -100,7 +100,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-Cree una aplicación, solicitando toda la información, incluido el tipo de recurso, el idioma, el kit de iniciación y las opciones de la cadena de herramientas de DevOps. La aplicación se crea en el directorio actual.
+Cree una aplicación, solicitando toda la información, incluido el tipo de recurso, el idioma, el kit de inicio y las opciones de la cadena de herramientas de DevOps. La aplicación se crea en el directorio actual.
 
 Para crear una aplicación en el directorio actual y para asociar servicios con ella, ejecute el mandato siguiente:
 

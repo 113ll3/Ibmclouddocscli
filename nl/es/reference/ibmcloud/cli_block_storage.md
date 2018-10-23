@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Almacenamiento en bloque
+
+El almacenamiento en bloque de {{site.data.keyword.Bluemix}} es un almacenamiento iSCSI persistente y de alto rendimiento que se suministra y se gestiona de forma independiente de las instancias de cálculo. Los LUN de almacenamiento en bloque basados en iSCSI están conectados a dispositivos autorizados a través de conexiones de E/S de varias vías de acceso (MPIO) redundantes. 
 
 Utilice los mandatos siguientes para gestionar un volumen determinado para el servicio de almacenamiento en bloque de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

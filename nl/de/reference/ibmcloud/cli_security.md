@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-10-04"
 
 # Sicherheit
 
-Verwenden Sie die folgenden Befehle, um SSH-Schlüssel und Zertifikate der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+SSH-Schlüssel ermöglichen den Zugriff auf ein Gerät ohne Verwendung eines Kennworts der entsprechenden Clients für jeden öffentlichen Schlüssel, der auf dem Gerät bereitgestellt wird. Durch das Hinzufügen eines SSH-Schlüssels zu einer Einheit greift die Einheit, der der SSH-Schlüssel bereitgestellt wird, auf die Einheit für den entsprechenden Schlüssel ohne Verwendung eines Kennworts zu.
+
+SSL-Zertifikate werden von Websites als Sicherheitsmaßnahme zum Schutz des Benutzers aktiviert. Sie werden in der Regel verwendet, wenn Sie vertrauliche Informationen an eine Website übertragen müssen.
+
+Verwenden Sie die folgenden Befehle, um SSH-Schlüssel und Zertifikate der {{site.data.keyword.Bluemix}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete Sicherheitsbefehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

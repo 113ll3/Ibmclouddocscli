@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Abrechnung 
 {: #ibmcloud_billing}
 
-Verwenden Sie die folgenden Befehle, um die {{site.data.keyword.Bluemix_notm}}-Abrechnung und -Nutzung zu verwalten.
+Verwenden Sie die folgenden Befehle, um Ressourcennutzungs- und Abrechnungsdaten abzurufen.
 {: shortdesc}
 
 <table summary="ibmcloud-Befehle zur Verwaltung der {{site.data.keyword.Bluemix_notm}}-Abrechnung und -Nutzung.">

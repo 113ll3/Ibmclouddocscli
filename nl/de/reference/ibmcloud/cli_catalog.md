@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Catalog
 {: #ibmcloud_catalog}
 
-Verwenden Sie die folgenden Befehle, um den {{site.data.keyword.Bluemix_notm}}-Katalog zu verwalten.
+Verwenden Sie die folgenden Befehle, um die {{site.data.keyword.Bluemix}}-Katalogeinträge, -Abfragevorlagen, -Laufzeiten und -Geoortungen in Rechenzentren zu verwalten.
 {: shortdesc}
 
 <table summary="ibmcloud-Befehle zur Verwaltung des {{site.data.keyword.Bluemix_notm}}-Katalogs.">

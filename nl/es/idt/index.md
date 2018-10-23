@@ -29,7 +29,7 @@ El desarrollo de apps nativas de nube con la CLI de {{site.data.keyword.dev_cli_
 Existen varias maneras en las que crear una app de nube.
 - [Consola web de App Services](https://console.bluemix.net/developer/appservice) para microservicios y apps web genéricas
 - [Watson Dashboard](https://console.bluemix.net/dashboard/watson) para crear apps iniciadoras habilitando una funcionalidad basada en Watson.
-    - Hay disponibles paneles de control basados en otras tecnologías y sectores en el icono de menú en la página de inicio de {{site.data.keyword.Bluemix_notm}}. Todos ellos siguen un enfoque similar a los kits de iniciación para crear nuevas apps.
+    - Hay disponibles paneles de control basados en otras tecnologías y sectores en el icono de menú en la página de inicio de {{site.data.keyword.Bluemix_notm}}. Todos ellos siguen un enfoque similar a los kits de inicio para crear nuevas apps.
 - El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`ibmcloud dev create`](./commands.html#create) para crear una nueva app.
 - El mandato de la CLI de {{site.data.keyword.dev_cli_notm}} [`ibmcloud dev enable`](./commands.html#enable) para habilitar rápidamente la nube en una app existente del lado del servidor.
 

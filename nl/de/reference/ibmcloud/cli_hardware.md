@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Hardware
 
-Verwenden Sie die folgenden Befehle, um Bare Metal Server-Hardware der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{{site.data.keyword.baremetal_long}} sind physische Single-Tenant-Server, von denen Leistung und Steuerung mit Low-Level-Zugriff auf die Hardwareressourcen bereitgestellt wird. Bare-Metal-Server bieten die reine Leistung, die Sie für Ihre prozessorintensiven und Platten-E/A-intensiven Workloads benötigen. Mit diesen Servern steht Ihnen das umfassendste Paket mit Standardfeatures und -services zur Verfügung.
+
+Verwenden Sie die folgenden Befehle, um Bare Metal Server-Hardware der {{site.data.keyword.Bluemix}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete Bare Metal Server-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

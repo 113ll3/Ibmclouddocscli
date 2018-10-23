@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # IPSec VPN
 
-Verwenden Sie die folgenden Befehle, um einen IPSec VPN-Tunnel im Service IPSec VPN der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+Der Zugriff auf das VPN von {{site.data.keyword.Bluemix}} ermöglicht den Benutzern, alle Server remote und sicher über das private Netz von {{site.data.keyword.Bluemix_notm}} zu verwalten. Die VPN-Verbindung von Ihrem Standort zum privaten Netz ermöglicht Out-of-band-Management und Serverrettung über einen verschlüsselten VPN-Tunnel.
+
+Verwenden Sie die folgenden Befehle, um IPSec VPN-Tunnel im Service IPSec VPN der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete IPSec VPN-Befehle für {{site.data.keyword.Bluemix_notm}} mit Links zu weiteren Informationen über den Befehl">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # Ressourcengruppen und Ressourcen
 {: #ibmcloud_commands_resource}
 
-Verwenden Sie die folgenden Befehle, um {{site.data.keyword.Bluemix_notm}}-Ressourcengruppen und -Ressourcen zu verwalten.
+Eine Ressourcengruppe bietet Ihnen die Möglichkeit, Ihre Kontoressourcen in anpassbaren Gruppierungen zu organisieren. Verwenden Sie die folgenden Befehle, um {{site.data.keyword.Bluemix}}-Ressourcengruppen und -Ressourcen in einer Ressourcengruppe zu verwalten.
 {: shortdesc}
 
 <table summary="ibmcloud-Befehle zur Verwaltung von Ressourcengruppen und Ressourcen.">

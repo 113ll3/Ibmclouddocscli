@@ -29,12 +29,12 @@ Para utilizar la extensión de herramientas de desarrollador de {{site.data.keyw
 ## Instalación
 {: #installation}
 
-La forma más sencilla de instalar la extensión de herramientas de desarrollador de {{site.data.keyword.Bluemix_notm}} para un IDE de Jetbrains es ir a la página [{{site.data.keyword.Bluemix_notm}} repositorio de Github de herramientas de desarrollador de jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) y seguir las instrucciones.
+La forma más sencilla de instalar la extensión de herramientas de desarrollador de {{site.data.keyword.Bluemix_notm}} para un IDE de Jetbrains es ir a la página del [repositorio de Github de herramientas de desarrollador de jetbrains de {{site.data.keyword.Bluemix_notm}}](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) y seguir las instrucciones.
 
 ## Uso
 {: #usage}
 
-Puede empezar con una app existente del lado del servidor, y habilitarla para {{site.data.keyword.Bluemix_notm}}, o utilizar la CLI de {{site.data.keyword.dev_cli_notm}} para crear una nueva app desde un kit de iniciación (ibmcloud dev create). Una vez haya creado su proyecto de app, ábralo en su IDE de JetBrains.
+Puede empezar con una app existente del lado del servidor, y habilitarla para {{site.data.keyword.Bluemix_notm}}, o utilizar la CLI de {{site.data.keyword.dev_cli_notm}} para crear una nueva app desde un kit de inicio (ibmcloud dev create). Una vez haya creado su proyecto de app, ábralo en su IDE de JetBrains.
 
 Si tiene una app genérica del lado del servidor, seleccione Herramientas > IBM Cloud Developer Tools > Habilitar app para IBM Cloud. Se comprobarán todos los archivos necesarios y se añadirán los que falten, lo que permitirá crear la app localmente, así como desplegarla en {{site.data.keyword.Bluemix_notm}} utilizando una app de Cloud Foundry, o dentro de un clúster de Kubernetes.
 

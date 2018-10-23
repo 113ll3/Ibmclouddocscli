@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Equilibrador de carga
 
-Utilice los mandatos siguientes para gestionar un equilibrador de carga mediante el servicio Load Balancer de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+El servicio de Equilibrador de carga de {{site.data.keyword.Bluemix}} ayuda a mejorar la disponibilidad de las aplicaciones más importantes de negocio distribuyendo el tráfico entre varias instancias del servidor de aplicaciones, y reenviando el tráfico únicamente a instancias en buen estado.
+
+Utilice los mandatos siguientes para gestionar los equilibradores de carga en el servicio de Equilibrador de carga de infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Mandatos Load Balancer de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">

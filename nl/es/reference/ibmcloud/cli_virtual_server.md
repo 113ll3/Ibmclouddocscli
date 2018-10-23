@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Servidor Virtual
 
-Utilice los mandatos siguientes para gestionar servidores virtuales de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+Los {{site.data.keyword.BluVirtServers}} son servidores virtuales escalables que se adquieren con núcleos dedicados y asignaciones de memoria. Constituyen una opción ideal si necesita recursos de cálculo, que se pueden añadir en cuestión de minutos, con acceso a características como plantillas de imágenes. 
+
+Utilice los mandatos siguientes para gestionar servidores virtuales de la infraestructura de {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Mandatos de servidor virtual de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Virtual Server
 
-Verwenden Sie die folgenden Befehle, um Virtual Server-Instanzen der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+{{site.data.keyword.BluVirtServers}} sind skalierbare virtuelle Server, die mit dedizierten Cores und Hauptspeicherzuordnungen gekauft werden. Sie sind eine hervorragende Möglichkeit, wenn Sie Rechenressourcen benötigen, die in wenigen Minuten mit Funktionen wie Imagevorlagen hinzugefügt werden können. 
+
+Verwenden Sie die folgenden Befehle, um Virtual Server-Instanzen der {{site.data.keyword.Bluemix}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete Virtual Server-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">

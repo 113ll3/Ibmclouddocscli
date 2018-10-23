@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # Claves de API IAM, identidad y acceso
 {: #ibmcloud_commands_iam}
 
-Utilice los mandatos siguientes para gestionar las claves de API, los ID de servicio, los grupos de acceso y las políticas de acceso/autorización para IAM.
+Utilice los mandatos siguientes para gestionar las claves de API, los ID de servicio, los grupos de acceso y las políticas de acceso/autorización para usuarios, servicios y grupos de acceso.
 {: shortdesc}
 
 <table summary="Mandatos de Bluemix que puede utilizar para gestionar claves de API y políticas.">

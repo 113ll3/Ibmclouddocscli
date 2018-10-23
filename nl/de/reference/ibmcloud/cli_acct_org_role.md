@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +13,10 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Konten, Benutzer und Organisationen
- {: #ibmcloud_commands_account}
+{: #ibmcloud_commands_account}
 
- Verwenden Sie die folgenden Befehle, um Konten, Benutzer in einem Konto und die Organisationen, Bereiche und Rollen zu verwalten.
-  {: shortdesc}
+Verwenden Sie die folgenden Befehle, um Konten, Benutzer in einem Konto und die Organisationen, Bereiche und Rollen von öffentlichen Cloud Foundry-Umgebungen zu verwalten.
+{: shortdesc}
 
   <table summary="ibmcloud-Befehle zur Verwaltung von Konten, Organisationen, Bereichen und Rollen.">
    <thead>

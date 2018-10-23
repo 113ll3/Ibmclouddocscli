@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # Image
 
-Verwenden Sie die folgenden Befehle, um Images der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+Verwenden Sie die folgenden Befehle, um Images der {{site.data.keyword.Bluemix}}-Berechnungen zu verwalten.
 {: shortdesc}
 
 <table summary="Alphabetisch geordnete Image-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
