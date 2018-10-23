@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # CDN
 
-請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN 服務中管理帳戶。
+Content Delivery Network (CDN) 服務會將內容分散在需要內容之處。第一次要求內容時，會將內容從主伺服器取回到網路，然後留在那裡供其他使用者存取。
+
+請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN 服務。
 {: shortdesc}
 
 <table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN 指令，其鏈結提供指令的相關資訊">

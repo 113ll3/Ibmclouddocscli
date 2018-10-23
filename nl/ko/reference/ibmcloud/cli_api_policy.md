@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # IAM API 키, ID 및 액세스
 {: #ibmcloud_commands_iam}
 
-다음 명령을 사용하여 API 키, 서비스 ID, 액세스 그룹 및 IAM의 액세스/권한 부여 정책을 관리하십시오.
+다음 명령을 사용하여 API 키, 서비스 ID, 액세스 그룹 및 사용자, 서비스, 액세스 그룹에 대한 액세스/권한 정책을 관리하십시오.
 {: shortdesc}
 
 <table summary="API 키 및 정책을 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
@@ -376,7 +376,7 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
 <dd>API 키의 설명</dd>
 <dt>--file <i>FILE</i></dt>
-<dd>지정된 파일에 API 키 정보를 저장합니다. </dd>
+<dd>지정된 파일에 API 키 정보를 저장합니다.</dd>
 <dt>--lock</dt>
 <dd>작성 시 API 키 잠금</dd>
 </dl>
@@ -603,7 +603,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>-d, --description</dt>
   <dd>API 키의 설명</dd>
   <dt>--file</dt>
-  <dd>지정된 파일에 API 키 정보를 저장합니다. </dd>
+  <dd>지정된 파일에 API 키 정보를 저장합니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 작성</dd>
 </dl>

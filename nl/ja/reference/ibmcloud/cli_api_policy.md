@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # IAM API キー、ID およびアクセス権限
 {: #ibmcloud_commands_iam}
 
-以下のコマンドを使用して、IAM の API キー、サービス ID、アクセス・グループ、およびアクセス・ポリシー/許可ポリシーを管理します。
+以下のコマンドを使用して、API キー、サービス ID、アクセス・グループ、ならびにユーザー、サービス、およびアクセス・グループのアクセス・ポリシー/許可ポリシーを管理します。
 {: shortdesc}
 
 <table summary="API キーとポリシーを管理するために使用できる ibmcloud コマンド。">

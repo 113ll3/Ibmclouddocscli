@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # ファイル・ストレージ
+
+{{site.data.keyword.filestorage_full}} は、永続的で高速、柔軟な、NFS ベースのネットワーク接続型の {{site.data.keyword.filestorage_short}} です。 この Network Attached Storage (NAS) 環境では、ファイル共有機能とパフォーマンスを完全に制御できます。
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ファイル・ストレージ・サービスの指定されたボリュームを管理します。
 {: shortdesc}

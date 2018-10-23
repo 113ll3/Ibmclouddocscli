@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Fatturazione 
 {: #ibmcloud_billing}
 
-Utilizza i seguenti comandi per gestire l'utilizzo e la fatturazione {{site.data.keyword.Bluemix_notm}}.
+Utilizza i seguenti comandi per richiamare le informazioni sull'utilizzo delle risorse e sulla fatturazione.
 {: shortdesc}
 
 <table summary="Comandi ibmcloud che puoi utilizzare per gestire l'utilizzo e la fatturazione {{site.data.keyword.Bluemix_notm}}.">

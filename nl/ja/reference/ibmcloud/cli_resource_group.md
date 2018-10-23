@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # リソース・グループとリソース
 {: #ibmcloud_commands_resource}
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} リソース・グループとリソースを管理します。
+リソース・グループは、アカウント・リソースをカスタマイズ可能なグループに編成するための方法です。 以下のコマンドを使用して、{{site.data.keyword.Bluemix}} リソース・グループとリソース・グループ内のリソースを管理します。
 {: shortdesc}
 
 <table summary="リソース・グループとリソースを管理するために使用できる ibmcloud コマンド。">

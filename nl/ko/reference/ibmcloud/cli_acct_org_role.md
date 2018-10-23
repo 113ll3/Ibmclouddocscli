@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +13,10 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # 계정, 사용자 및 조직
- {: #ibmcloud_commands_account}
+{: #ibmcloud_commands_account}
 
- 다음 명령을 사용하여 계정, 계정의 사용자 및 조직, 영역과 역할을 관리하십시오.
-  {: shortdesc}
+다음 명령을 사용하여 계정, 계정의 사용자 및 퍼블릭 Cloud Foundry 환경의 조직, 공간 및 역할을 관리하십시오.
+{: shortdesc}
 
   <table summary="계정, 조직, 영역 및 역할을 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
    <thead>

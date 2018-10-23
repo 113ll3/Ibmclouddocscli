@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-21"
 {:tip: .tip}
 
 # VLAN
+
+{{site.data.keyword.cloud}} は、パブリック・ネットワークとプライベート・ネットワーク上のブロードキャスト・トラフィックを分離するために、仮想ローカル・エリア・ネットワーク (VLAN) を使用します。 VLAN は、他のオファリングを実現するために必要に応じて割り当てられます。
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー VLAN を管理します。
 {: shortdesc}

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # 映像檔
 
-請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構映像檔。
+請使用下列指令管理 {{site.data.keyword.Bluemix}} 運算映像檔。
 {: shortdesc}
 
 <table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構映像檔指令，其鏈結提供指令的相關資訊">

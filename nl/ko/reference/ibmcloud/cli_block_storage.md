@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Block Storage
+
+{{site.data.keyword.Bluemix}} 블록 스토리지는 컴퓨팅 인스턴스와 독립적으로 프로비저닝되고 관리되는 지속적인 고성능 iSCSI 스토리지입니다. iSCSI 기반 Block Storage LUN은 중복된 다중 경로 I/O(MPIO) 연결을 통해 권한이 부여된 디바이스에 연결됩니다. 
 
 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 블록 스토리지 서비스에서 지정된 볼륨을 관리하십시오.
 {: shortdesc}

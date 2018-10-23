@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-04"
 # 플러그인
 {: #ibmcloud_commands_settings}
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 관리하십시오.
+{{site.data.keyword.Bluemix}}는 해당 기능을 확장하도록 플러그인 프레임워크를 지원합니다. 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 관리하십시오.
 {: shortdesc}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} CLI 플러그인을 관리하는 데 사용할 수 있는 ibmcloud 명령.">

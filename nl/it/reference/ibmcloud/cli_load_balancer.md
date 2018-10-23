@@ -5,16 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Load Balancer
+# Load Balancer (Programma di bilanciamento del carico)
 
-Utilizza i seguenti comandi per gestire un programma di bilanciamento del carico che utilizza il servizio Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+Il servizio Load Balancer (Programma di bilanciamento del carico) di {{site.data.keyword.Bluemix}} aiuta a migliorare la disponibilità delle tue applicazioni business-critical distribuendo il traffico tra più istanze del server delle applicazioni oppure inoltrando il traffico solo a istanze integre.
+
+Utilizza i seguenti comandi per gestire i programmi di bilanciamento del carico nel servizio Load Balancer dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Comandi Load Balancer {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">

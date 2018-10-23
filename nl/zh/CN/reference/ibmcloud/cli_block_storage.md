@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # 块存储器
+
+{{site.data.keyword.Bluemix}} Block Storage 是一种持久的高性能 iSCSI 存储器，可独立于计算实例进行供应和管理。基于 iSCSI 的块存储器 LUN 通过冗余多路径 I/O (MPIO) 连接来连接到授权设备。 
 
 使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构块存储器服务的给定卷。
 {: shortdesc}

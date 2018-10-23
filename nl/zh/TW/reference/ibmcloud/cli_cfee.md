@@ -5,17 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry Enterprise Environment (CFEE)（測試版）
+# Cloud Foundry Enterprise Environment (CFEE)
 {: #ibmcloud_commands_cfee}
 
-請使用下列指令管理 CFEE 組織、空間、使用者和角色。
+使用 {{site.data.keyword.cfee_full}} (CFEE)，您可以隨需應變實例化多個隔離的企業級 Cloud Foundry 平台。IBM Cloud Foundry Enterprise 服務的實例會在您自己的帳戶內執行於 IBM Cloud 上。環境會部署在隔離的硬體上（Kubernetes 叢集）。您可以完整控制該環境，包括存取控制、容量、版本更新、資源使用和監視。
+
+請使用下列指令管理 CFEE 環境、組織、空間、使用者和角色。
 {: shortdesc}
 
 <table summary="管理 Cloud Foundry Enterprise Environment（實驗性）">

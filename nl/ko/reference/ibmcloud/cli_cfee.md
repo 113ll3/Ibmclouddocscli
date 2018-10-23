@@ -5,17 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry Enterprise Environments(CFEE)(베타)
+# Cloud Foundry Enterprise Environments(CFEE)
 {: #ibmcloud_commands_cfee}
 
-다음 명령을 사용하여 CFEE 조직, 영역, 사용자 및 역할을 관리하십시오.
+{{site.data.keyword.cfee_full}}(CFEE)를 사용하여 격리된 여러 엔터프라이즈급 Cloud Foundry 플랫폼을 요청 시 인스턴스화할 수 있습니다. IBM Cloud Foundry Enterprise 서비스의 인스턴스는 IBM Cloud의 고유 계정 내에서 실행됩니다. 환경은 격리된 하드웨어(Kubernetes 클러스터)에 배치됩니다. 액세스 제어, 용량, 버전 업데이트, 리소스 사용 및 모니터링을 포함하여 환경을 완벽히 제어할 수 있습니다. 
+
+다음 명령을 사용하여 CFEE 환경, 조직, 영역, 사용자 및 역할을 관리하십시오.
 {: shortdesc}
 
 <table summary="Cloud Foundry Enterprise Environments 관리(시범)">
@@ -430,7 +432,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
    <dt>--env ENV</dt>
    <dd>CFEE 환경 이름입니다. 지정되지 않은 경우 현재 CFEE 환경으로 기본값이 지정됩니다.</dd>
    <dt>--guid</dt>
-   <dd>지정된 영역의 GUID를 검색하고 표시합니다. 영역의 다른 모든 출력은 억제됩니다. </dd>
+   <dd>지정된 영역의 GUID를 검색하고 표시합니다. 영역의 다른 모든 출력은 억제됩니다.</dd>
    <dt>-o, --org ORG</dt>
    <dd>조직 이름입니다. 지정되지 않은 경우 현재 조직으로 기본값이 지정됩니다.</dd>
    <dt>--security-group-rules</dt>

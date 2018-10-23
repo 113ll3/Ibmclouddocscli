@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +13,10 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # 帐户、用户和组织
- {: #ibmcloud_commands_account}
+{: #ibmcloud_commands_account}
 
- 使用以下命令可管理帐户、帐户中的用户以及组织、空间和角色。
-  {: shortdesc}
+使用以下命令可管理公共 Cloud Foundry 环境的帐户、帐户中的用户以及组织、空间和角色。
+{: shortdesc}
 
   <table summary="可用于管理帐户、组织、空间和角色的 ibmcloud 命令。">
 <thead>
@@ -386,7 +386,8 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME（必需）</dt>
    <dd>要将此用户分配到的组织的名称。</dd>
    <dt>ORG_ROLE（必需）</dt>
-   <dd>要将此用户分配到的组织角色的名称。例如：<ul>
+   <dd>要将此用户分配到的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -422,7 +423,8 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME（必需）</dt>
    <dd>要将此用户从中除去的组织的名称。</dd>
    <dt>ORG_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的组织角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -478,7 +480,8 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户分配到的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户分配到的空间角色的名称。例如：<ul>
+   <dd>要将此用户分配到的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -514,7 +517,8 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户从中除去的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的空间角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>

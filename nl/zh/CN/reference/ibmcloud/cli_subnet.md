@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # 子网
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构子网。
+子网是将 IP 网络分成多个较小网段的一种逻辑分区。使用以下命令可管理 {{site.data.keyword.Bluemix}} 基础架构子网。
 {: shortdesc}
 
 <table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构子网命令（命令带有可获取命令更多信息的链接）">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # ロード・バランサー
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ロード・バランサー・サービスを使用してロード・バランサーを管理します。
+{{site.data.keyword.Bluemix}} Load Balancer サービスは、複数のアプリケーション・サーバー・インスタンス間にトラフィックを分散し、正常なインスタンスのみにトラフィックを転送することにより、ビジネスに不可欠なアプリケーションの可用性の向上に役立ちます。
+
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ロード・バランサー・サービスでロード・バランサーを管理します。
 {: shortdesc}
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} ロード・バランサー・コマンド">

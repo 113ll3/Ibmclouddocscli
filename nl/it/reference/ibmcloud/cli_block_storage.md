@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Block Storage
+
+{{site.data.keyword.Bluemix}} Block Storage è uno storage iSCSI persistente e a elevate prestazioni di cui viene eseguito il provisioning e la gestione indipendentemente dalle istanze di calcolo. Le LUN Block Storage basate su iSCSI sono connesse ai dispositivi autorizzati tramite connessioni MPIO (multi-path I/O) ridondanti. 
 
 Utilizza i seguenti comandi per gestire un determinato volume per il servizio di archiviazione blocchi dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # Sottorete
 
-Utilizza i seguenti comandi per gestire le sottoreti dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+Una sottorete è una partizione logica di una rete IP in più segmenti di rete più piccoli. Utilizza i seguenti comandi per gestire le sottoreti dell'infrastruttura {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandi della sottorete dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">

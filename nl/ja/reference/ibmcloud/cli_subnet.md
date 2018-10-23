@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # サブネット
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・サブネットを管理します。
+サブネットは、IP ネットワークの論理区画であり、複数の小さいネットワーク・セグメントに分割されます。 以下のコマンドを使用して、{{site.data.keyword.Bluemix}} インフラストラクチャー・サブネットを管理します。
 {: shortdesc}
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・サブネット・コマンド">

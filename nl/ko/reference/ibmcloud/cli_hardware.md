@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # 하드웨어
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 베어메탈 하드웨어 서버를 관리하십시오.
+{{site.data.keyword.baremetal_long}}는 하드웨어 리소스에 대한 하위 레벨 액세스로 성능과 제어를 제공하는 단일 테넌트 실제 서버입니다. 베어메탈 서버는 그 자체로 강도 높은 워크로드가 요구되는 프로세서 및 디스크 I/O에 부합하는 뛰어난 성능을 제공합니다. 이러한 서버는 표준 기능 및 서비스가 포함된 가장 완벽한 패키지로 제공됩니다. 
+
+다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 인프라 베어메탈 하드웨어 서버를 관리하십시오.
 {: shortdesc}
 
 <table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 베어메탈 서버 명령">

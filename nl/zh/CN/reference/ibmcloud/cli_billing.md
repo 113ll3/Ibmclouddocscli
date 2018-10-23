@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # 计费 
 {: #ibmcloud_billing}
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 计费和使用情况。
+使用以下命令可检索资源使用情况和计费信息。
 {: shortdesc}
 
 <table summary="可用于管理 {{site.data.keyword.Bluemix_notm}} 计费和使用情况的 ibmcloud 命令。">

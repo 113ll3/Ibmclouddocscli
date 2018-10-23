@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-09-06"
 
 # セキュリティー
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー SSH 鍵および証明書を管理します。
+SSH 鍵は、デバイスで実装されている各公開鍵の、対応クライアントのパスワードを使用せずにデバイスへのアクセスを許可します。 SSH 鍵をデバイスに追加することにより、SSH 鍵を提供されたデバイスは、パスワードを使用せずに、対応する鍵のデバイスにアクセスします。
+
+SSL 証明書は、ユーザーを保護するためのセキュリティー手段として、Web サイトによって使用可能にされます。 通常、機密情報を Web サイトに送信する必要がある場合に使用されます。
+
+以下のコマンドを使用して、{{site.data.keyword.Bluemix}} インフラストラクチャー SSH 鍵および証明書を管理します。
 {: shortdesc}
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・セキュリティー・コマンド">
@@ -80,9 +84,9 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
+ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-このコマンドは、ID 12345678 の SSH 鍵を更新し、ラベルを「Bluemix」に設定し、メモを「testing」に設定します。
+このコマンドは、ID 12345678 の SSH 鍵を更新し、ラベルを「ibmcloud」に設定し、メモを「testing」に設定します。
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}

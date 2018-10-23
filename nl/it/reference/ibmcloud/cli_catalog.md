@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Catalogo
 {: #ibmcloud_catalog}
 
-Utilizza i seguenti comandi per gestire il catalogo {{site.data.keyword.Bluemix_notm}}.
+Utilizza i seguenti comandi per gestire le voci del catalogo {{site.data.keyword.Bluemix}}, i template di query, i runtime e le geolocalizzazioni dei data center.
 {: shortdesc}
 
 <table summary="Comandi ibmcloud che puoi utilizzare per gestire il catalogo {{site.data.keyword.Bluemix_notm}}.">

@@ -11,6 +11,7 @@ CLI IBM Cloud e Developer Tools
 	{: .navgroup id="howto"}
 	reference/ibmcloud/download_cli.md
 	reference/ibmcloud/extend_cli.md
+	reference/ibmcloud/cli_docker.md
 	reference/ibmcloud/enable_cli_autocompletion.md
 	idt/index.md
 
@@ -18,7 +19,7 @@ CLI IBM Cloud e Developer Tools
 	Estensioni IDE di IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
-		[Deploying apps with IBM Eclipse Tools for IBM Cloud](../manageapps/eclipsetools/eclipsetools.html)
+		idt/eclipsetools.md
 
 	{: topicgroup}
 	Debug

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # 硬件
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构裸机硬件服务器。
+{{site.data.keyword.baremetal_long}} 是单租户物理服务器，通过对硬件资源的低级别访问权为您提供性能和控制。Bare Metal Server 为处理器密集型和磁盘 I/O 密集型工作负载提供了所需的原始能力。这些服务器随附最完整的标准功能和服务包。
+
+使用以下命令可管理 {{site.data.keyword.Bluemix}} 基础架构裸机硬件服务器。
 {: shortdesc}
 
 <table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构裸机服务器命令（命令带有可获取命令更多信息的链接）">

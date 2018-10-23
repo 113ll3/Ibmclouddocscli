@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # IPSec VPN
+
+{{site.data.keyword.Bluemix}} VPN 存取容許使用者透過 {{site.data.keyword.Bluemix_notm}} 專用網路，由遠端安全地管理所有伺服器。從您的位置至專用網路的 VPN 連線，讓您能透過已加密的 VPN 通道進行頻外管理，以及伺服器救援。
 
 請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 IPSec VPN 服務中管理 IPSec VPN 通道。
 {: shortdesc}

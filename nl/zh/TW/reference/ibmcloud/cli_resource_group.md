@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # 資源群組及資源
 {: #ibmcloud_commands_resource}
 
-請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 資源群組及資源。
+資源群組可讓您在可自訂的分組中組織帳戶資源。請使用下列指令管理 {{site.data.keyword.Bluemix}} 資源群組以及資源群組中的資源。
 {: shortdesc}
 
 <table summary="您可以用來管理資源群組及資源的 ibmcloud 指令。">

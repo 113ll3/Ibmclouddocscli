@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # DNS
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS サービスのゾーンを管理します。
+{{site.data.keyword.Bluemix}} Domain Name Service (DNS) は、お客様が基本 DNS 管理インターフェースを使用して 1 カ所でドメインを表示したり管理したりできるようにします。また、同一の場所でリバース DNS と 2 次 DNS を管理するオプションも無料で提供しています。
+
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS サービスを管理します。
 {: shortdesc}
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS コマンド">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-04"
 # プラグイン
 {: #ibmcloud_commands_settings}
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} CLI プラグインを管理します。
+{{site.data.keyword.Bluemix}} は、機能を拡張するためにプラグイン・フレームワークをサポートしています。 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} CLI プラグインを管理します。
 {: shortdesc}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} CLI プラグインを管理するために使用できる ibmcloud コマンド。">
@@ -204,7 +204,8 @@ ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
-リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「IBM Cloud」を使用します。バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
+リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「IBM Cloud」を使用します。
+バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
 
 <strong>前提条件</strong>: なし
 
@@ -265,7 +266,8 @@ ibmcloud plugin install container-service -v 0.1.425
 ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
-リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「IBM Cloud」を使用します。バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
+リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「IBM Cloud」を使用します。
+バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
 
 <strong>前提条件</strong>: なし
 

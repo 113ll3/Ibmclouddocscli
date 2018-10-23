@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # 리소스 그룹 및 리소스
 {: #ibmcloud_commands_resource}
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 리소스 그룹 및 리소스를 관리하십시오.
+리소스 그룹은 사용자 정의할 수 있는 그룹화에서 계정 리소스를 구성하기 위한 방법입니다. 다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 리소스 그룹 및 리소스 그룹의 리소스를 관리하십시오.
 {: shortdesc}
 
 <table summary="리소스 그룹 및 리소스를 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
@@ -317,7 +317,7 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--out
   <dt>--id</dt>
   <dd>서비스 인스턴스의 ID 표시</dd>
   <dt>--output</dt>
-  <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다. </dd>
+  <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다.</dd>
 </dl>
 
 <strong>예제</strong>:

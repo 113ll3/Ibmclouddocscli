@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # カタログ
 {: #ibmcloud_catalog}
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} カタログを管理します。
+以下のコマンドを使用して、データ・センターの {{site.data.keyword.Bluemix}} カタログ・エントリー、照会テンプレート、ランタイム、および地理位置情報を管理します。
 {: shortdesc}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} カタログを管理するために使用できる ibmcloud コマンド。">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # Gruppi di risorse e risorse
 {: #ibmcloud_commands_resource}
 
-Utilizza i seguenti comandi per gestire i gruppi di risorse e le risorse {{site.data.keyword.Bluemix_notm}}.
+Un gruppo di risorse è un modo per organizzare le risorse dell'account in raggruppamenti personalizzabili. Utilizza i seguenti comandi per gestire i gruppi di risorse {{site.data.keyword.Bluemix}} e le risorse in un gruppo di risorse.
 {: shortdesc}
 
 <table summary="Comandi ibmcloud che puoi utilizzare per gestire i gruppi di risorse e le risorse.">
@@ -317,7 +317,7 @@ ibmcloud resource service-instance (NOME|ID) [--location UBICAZIONE] [--id] [--o
   <dt>--id</dt>
   <dd>Visualizza l'ID dell'istanza del servizio</dd>
   <dt>--output</dt>
-  <dd>Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'. </dd>
+  <dd>Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
 </dl>
 
 <strong>Esempi</strong>:

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +13,10 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Account, utenti e organizzazioni
- {: #ibmcloud_commands_account}
+{: #ibmcloud_commands_account}
 
- Utilizza i seguenti comandi per gestire gli account, gli utenti in un account, l'organizzazione, lo spazio e i ruoli.
-  {: shortdesc}
+Utilizza i seguenti comandi per gestire gli account, gli utenti in un account e l'organizzazione, lo spazio e i ruoli degli ambienti Cloud Foundry pubblici.
+{: shortdesc}
 
   <table summary="Comandi ibmcloud che puoi utilizzare per gestire account, organizzazioni, spazi e ruoli.">
    <thead>

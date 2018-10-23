@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # 비용 청구 
 {: #ibmcloud_billing}
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 비용 청구와 사용량을 관리하십시오.
+다음 명령을 사용하여 리소스 사용 및 비용 청구 정보를 검색하십시오.
 {: shortdesc}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} 비용 청구 및 사용량을 관리하는 데 사용할 수 있는 ibmcloud 명령.">

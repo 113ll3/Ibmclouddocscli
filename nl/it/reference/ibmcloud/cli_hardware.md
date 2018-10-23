@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Hardware
 
-Utilizza i seguenti comandi per gestire i server hardware bare metal dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.baremetal_long}} sono server fisici a singolo tenant che ti forniscono le prestazioni e il controllo con un accesso di basso livello alle risorse hardware. I server bare metal forniscono la potenza pura che richiedi per i tuoi carichi di lavoro che presentano un uso intensivo del processore e dell'I/O del disco. Questi server sono forniti con il pacchetto più completo di funzioni e servizi standard.
+
+Utilizza i seguenti comandi per gestire i server hardware bare metal dell'infrastruttura {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandi server bare metal dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">

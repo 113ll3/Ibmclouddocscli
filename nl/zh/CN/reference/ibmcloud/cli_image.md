@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # 映像
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构映像。
+使用以下命令可管理 {{site.data.keyword.Bluemix}} 计算映像。
 {: shortdesc}
 
 <table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构映像命令（命令带有可获取命令更多信息的链接）">

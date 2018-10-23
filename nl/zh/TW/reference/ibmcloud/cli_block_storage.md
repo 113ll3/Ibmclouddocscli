@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Block Storage
+
+{{site.data.keyword.Bluemix}} Block Storage 是持續性的高效能 iSCSI 儲存空間，其佈建及管理會獨立於運算實例。以 iSCSI 為基礎的 Block Storage LUN 會透過備援多路徑 I/O (MPIO) 連線連接至已授權的裝置。 
 
 請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 Block Storage 服務中管理給定磁區。
 {: shortdesc}

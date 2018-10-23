@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # 目录
 {: #ibmcloud_catalog}
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}}“目录”。
+使用以下命令可管理 {{site.data.keyword.Bluemix}}“目录”条目、查询模板、运行时和数据中心的地理位置。
 {: shortdesc}
 
 <table summary="可用于管理 {{site.data.keyword.Bluemix_notm}}“目录”的 ibmcloud 命令。">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # IPSec VPN
+
+{{site.data.keyword.Bluemix}} VPN 액세스를 통해 사용자는 {{site.data.keyword.Bluemix_notm}} 사설 네트워크에서 모든 서버를 안전하게 원격으로 관리할 수 있습니다. 사용자 위치에서 사설 네트워크로의 VPN을 연결하면 암호화된 VPN 터널을 통해 대역 외 관리 및 서버 복구를 지원할 수 있습니다. 
 
 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 IPSec VPN 서비스에서 IPSec VPN 터널을 관리하십시오.
 {: shortdesc}

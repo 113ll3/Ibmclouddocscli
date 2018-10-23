@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # 請求処理 
 {: #ibmcloud_billing}
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} の請求および使用量を管理します。
+以下のコマンドを使用して、リソース使用量と請求情報を入手します。
 {: shortdesc}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} の請求および使用量を管理するために使用できる ibmcloud コマンド。">

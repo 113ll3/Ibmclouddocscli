@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # 負載平衡器
+
+{{site.data.keyword.Bluemix}} Load Balancer 服務有助於改善企業關鍵應用程式的可用性，因為它會將資料流量分散在多個應用程式伺服器實例，以及只將資料流量轉遞到性能健全的實例。
 
 請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 Load Balancer 服務中管理負載平衡器。
 {: shortdesc}

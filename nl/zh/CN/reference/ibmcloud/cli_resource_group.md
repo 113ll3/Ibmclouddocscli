@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-21"
 # 资源组和资源
 {: #ibmcloud_commands_resource}
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 资源组和资源。
+资源组是在可定制的分组中组织帐户资源的一种方法。使用以下命令可管理 {{site.data.keyword.Bluemix}} 资源组及资源组中的资源。
 {: shortdesc}
 
 <table summary="可用于管理资源组和资源的 ibmcloud 命令。">

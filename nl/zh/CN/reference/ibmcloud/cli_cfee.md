@@ -5,17 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry Enterprise Environments (CFEE) (beta)
+# Cloud Foundry Enterprise Environments (CFEE)
 {: #ibmcloud_commands_cfee}
 
-使用以下命令可管理 CFEE 组织、空间、用户和角色。
+通过 {{site.data.keyword.cfee_full}} (CFEE)，您可以按需实例化多个隔离的企业级 Cloud Foundry 平台。IBM Cloud Foundry Enterprise 服务实例在 IBM Cloud 中您自己的帐户中运行。环境部署在隔离的硬件（Kubernetes 集群）上。您对环境具有完全控制权，包括访问控制、容量、版本更新、资源使用和监视。
+
+使用以下命令可管理 CFEE 环境、组织、空间、用户和角色。
 {: shortdesc}
 
 <table summary="管理 Cloud Foundry Enterprise Environments（试验性）">
@@ -311,7 +313,8 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
    <dt>ORG（必需）</dt>
    <dd>要将此用户分配到的组织的名称。</dd>
    <dt>ROLE（必需）</dt>
-   <dd>要将此用户分配到的组织角色的名称。例如：<ul>
+   <dd>要将此用户分配到的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -353,7 +356,8 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
    <dt>ORG（必需）</dt>
    <dd>要将此用户从中除去的组织的名称。</dd>
    <dt>ROLE（必需）</dt>
-   <dd>要将此用户从中除去的组织角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -590,7 +594,8 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>SPACE（必需）</dt>
    <dd>要将此用户分配到的空间的名称。</dd>
    <dt>ROLE（必需）</dt>
-   <dd>要将此用户分配到的空间角色的名称。例如：<ul>
+   <dd>要将此用户分配到的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -633,7 +638,8 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>SPACE（必需）</dt>
    <dd>要将此用户从中除去的空间的名称。</dd>
    <dt>ROLE（必需）</dt>
-   <dd>要将此用户从中除去的空间角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-21"
 {:tip: .tip}
 
 # VLAN
+
+VLAN(Virtual Local Area Network)은 퍼블릭 및 프라이빗 네트워크의 브로드캐스트 트래픽을 격리하기 위해 {{site.data.keyword.cloud}}에서 사용합니다. VLAN은 필요에 따라 기타 오퍼링을 수행하기 위해 지정됩니다. 
 
 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 VLAN을 관리하십시오.
 {: shortdesc}

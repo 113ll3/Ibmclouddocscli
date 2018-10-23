@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # 카탈로그
 {: #ibmcloud_catalog}
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 카탈로그를 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 카탈로그 항목, 조회 템플리트, 데이터 센터의 지리적 위치 및 런타임을 관리하십시오.
 {: shortdesc}
 
 <table summary="{{site.data.keyword.Bluemix_notm}} 카탈로그를 관리하는 데 사용할 수 있는 ibmcloud 명령.">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # ブロック・ストレージ
+
+{{site.data.keyword.Bluemix}} ブロック・ストレージは、コンピューティング・インスタンスから独立してプロビジョンおよび管理される、永続的で高性能な iSCSI ストレージです。 iSCSI ベースのブロック・ストレージ LUN は、冗長マルチパス入出力 (MPIO) 接続を介して、許可されたデバイスに接続されます。 
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ブロック・ストレージ・サービスの指定されたボリュームを管理します。
 {: shortdesc}

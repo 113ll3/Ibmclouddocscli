@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-21"
 {:tip: .tip}
 
 # VLAN
+
+{{site.data.keyword.cloud}} 使用虛擬區域網路 (VLAN) 來隔離公用及專用網路上的廣播資料流量。VLAN 會視需要指派，以實現其他供應項目。
 
 請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 VLAN。
 {: shortdesc}

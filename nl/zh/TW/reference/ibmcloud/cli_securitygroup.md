@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # 安全群組
 
-請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 Security Group 服務中管理安全群組。
+安全群組是一組 IP 過濾器規則，定義如何處理虛擬伺服器實例公用和專用介面的送入（進入）和送出（輸出）資料流量。您新增至安全群組的規則稱為「安全群組規則」。
+
+請使用下列指令在 {{site.data.keyword.Bluemix}} 基礎架構 Security Group 服務中管理安全群組。
 {: shortdesc}
 
 <table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構安全群組指令，其鏈結提供指令的相關資訊">

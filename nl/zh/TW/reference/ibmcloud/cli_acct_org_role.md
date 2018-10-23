@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +13,10 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # 帳戶、使用者及組織
- {: #ibmcloud_commands_account}
+{: #ibmcloud_commands_account}
 
- 使用下列指令來管理帳戶、帳戶中的使用者，以及組織、空間及角色。
-  {: shortdesc}
+請使用下列指令來管理帳戶、帳戶中的使用者，以及公用 Cloud Foundry 環境的組織、空間及角色。
+{: shortdesc}
 
   <table summary="您可以用來管理帳戶、組織、空間及角色的 ibmcloud 指令。">
 <thead>

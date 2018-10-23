@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # CDN
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー CDN サービスのアカウントを管理します。
+コンテンツ配信ネットワーク (CDN) サービスは、必要とされる場所にコンテンツを配信します。 コンテンツは、初めて要求されたときにホスト・サーバーからネットワークにプルされて、他のユーザーがアクセスできるようにネットワークに留まります。
+
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー CDN サービスを管理します。
 {: shortdesc}
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー CDN コマンド">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-10-04"
 
 # Sicurezza
 
-Utilizza i seguenti comandi per gestire i certificati e le chiavi SSH dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+Le chiavi SSH consentono l'accesso a un dispositivo senza utilizzare una password dai client corrispondenti per ogni chiave pubblica implementata sul dispositivo. Aggiungendo una chiave SSH a un dispositivo, il dispositivo a cui è stata fornita la chiave SSH accede al dispositivo per la chiave corrispondente senza l'utilizzo di una password.
+
+I certificati SSL sono abilitati dai siti web come una misura di sicurezza per proteggere l'utente. Sono generalmente utilizzati quando devi trasmettere informazioni riservate a un sito web.
+
+Utilizza i seguenti comandi per gestire i certificati e le chiavi SSH dell'infrastruttura {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandi di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # DNS
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 DNS 서비스에서 구역을 관리하십시오.
+{{site.data.keyword.Bluemix}} Domain Name Service(DNS)는 고객에게 기본 DNS 관리 인터페이스를 통해 고객의 도메인을 보고 관리할 수 있는 중심 위치를 제공하며, 동일한 위치에서 무료로 역방향 및 보조 DNS를 관리할 수 있는 옵션도 사용자에게 제공합니다. 
+
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 DNS 서비스를 관리하십시오.
 {: shortdesc}
 
 <table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 DNS 명령">

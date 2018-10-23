@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # CDN
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构 CDN 服务中的帐户。
+Content Delivery Network (CDN) 服务将内容分发到需要该内容的位置。首次收到内容请求时，该服务会将数据从主机服务器中拉取到网络并将其保留在网络中，以供其他用户访问。
+
+使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构 CDN 服务。
 {: shortdesc}
 
 <table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构 CDN 命令（命令带有可获取命令更多信息的链接）">

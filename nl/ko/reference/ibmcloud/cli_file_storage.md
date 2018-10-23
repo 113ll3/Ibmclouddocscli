@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # File Storage
+
+{{site.data.keyword.filestorage_full}}는 네트워크에 연결된 NFS 기반의 빠르고 지속적인 유연한 {{site.data.keyword.filestorage_short}}입니다. 이 NAS(Network-Attached Storage) 환경에서 파일 공유 기능 및 성능을 완전히 통제할 수 있습니다. 
 
 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 파일 스토리지 서비스에서 지정된 볼륨을 관리하십시오.
 {: shortdesc}

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # 글로벌 IP
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 글로벌 IP 서비스에서 글로벌 IP를 관리하십시오.
+글로벌 IP 주소는 전문화된 정적 보조 서브넷입니다. 사용자 계정의 다른 IP 주소로 라우팅할 수 있는 /32 서브넷(다시 말해, 단일 IP 주소)으로 제공됩니다. 
+
+다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 인프라 글로벌 IP 서비스에서 글로벌 IP를 관리하십시오.
 {: shortdesc}
 
 <table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 글로벌 IP 명령">

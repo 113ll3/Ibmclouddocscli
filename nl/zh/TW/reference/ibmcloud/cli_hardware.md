@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # 硬體
 
-請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構裸機硬體伺服器。
+{{site.data.keyword.baremetal_long}} 是單一承租戶的實體伺服器，可為您提供效能與控制，並且可以對硬體資源進行低階的存取。Bare Metal Server 為您的處理器密集與磁碟 I/O 密集的工作負載，提供您需要的原始馬力。這些伺服器具有標準特性及服務的最完整套件。
+
+請使用下列指令管理 {{site.data.keyword.Bluemix}} 基礎架構裸機硬體伺服器。
 {: shortdesc}
 
 <table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構裸機伺服器指令，其鏈結提供指令的相關資訊">
@@ -258,7 +260,7 @@ ibmcloud sl hardware reboot IDENTIFIER [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>--hard</dt>
-<dd>執行強迫重新開機。</dd>
+<dd>執行正常重新開機。</dd>
 <dt>--soft</dt>
 <dd>執行正常重新開機。</dd>
 <dt>-f, --force</dt>

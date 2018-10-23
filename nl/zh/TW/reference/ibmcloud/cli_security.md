@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-10-04"
 
 # 安全
 
-請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 SSH 金鑰及憑證。
+SSH 金鑰允許存取裝置，而不必針對裝置上實作的每個公開金鑰使用來自對應用戶端的密碼。藉由將 SSH 金鑰新增至裝置，被賦與 SSH 金鑰的裝置會存取裝置以取得對應金鑰，而不使用密碼。
+
+網站會啟用 SSL 憑證，作為保護使用者的安全措施。它們一般用於您必須將機密資訊傳輸到網站之時。
+
+請使用下列指令管理 {{site.data.keyword.Bluemix}} 基礎架構 SSH 金鑰及憑證。
 {: shortdesc}
 
 <table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構安全指令，其鏈結提供指令的相關資訊">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +13,10 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # アカウント、ユーザー、および組織
- {: #ibmcloud_commands_account}
+{: #ibmcloud_commands_account}
 
- 以下のコマンドを使用して、アカウント、アカウントに含まれるユーザー、組織、スペース、および役割を管理します。
-  {: shortdesc}
+以下のコマンドを使用して、パブリック Cloud Foundry 環境のアカウント、アカウントに含まれるユーザー、組織、スペース、および役割を管理します。
+{: shortdesc}
 
   <table summary="アカウント、組織、スペース、および役割を管理するために使用できる ibmcloud コマンド。">
    <thead>

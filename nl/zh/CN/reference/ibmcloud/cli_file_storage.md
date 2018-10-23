@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # 文件存储器
+
+{{site.data.keyword.filestorage_full}} 是一种网络连接的基于 NFS 的 {{site.data.keyword.filestorage_short}}，具有持久、快速、灵活的特点。在此网络连接的存储器 (NAS) 环境中，您对文件共享功能和性能具有完全控制权。
 
 使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构文件存储器服务中的给定卷。
 {: shortdesc}

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-04"
 # 外掛程式
 {: #ibmcloud_commands_settings}
 
-使用下列指令來管理 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。
+{{site.data.keyword.Bluemix}} 支援可延伸其功能的外掛程式架構。使用下列指令來管理 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。
 {: shortdesc}
 
 <table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式的 ibmcloud 指令。">

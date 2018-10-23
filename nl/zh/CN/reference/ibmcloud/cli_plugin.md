@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-04"
 # 插件
 {: #ibmcloud_commands_settings}
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} CLI 插件。
+{{site.data.keyword.Bluemix}} 支持通过插件框架来扩展其功能。使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} CLI 插件。
 {: shortdesc}
 
 <table summary="可用于管理 {{site.data.keyword.Bluemix_notm}} CLI 插件的 ibmcloud 命令。">

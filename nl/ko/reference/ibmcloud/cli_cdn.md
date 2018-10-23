@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # CDN
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 CDN 서비스에서 계정을 관리하십시오.
+Content Delivery Network(CDN) 서비스는 필요한 위치에 컨텐츠를 분배합니다. 처음으로 컨텐츠가 요청되면 호스트 서버에서 네트워크로 가져온 후 다른 사용자가 액세스할 수 있도록 네트워크에서 유지됩니다. 
+
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 CDN 서비스를 관리하십시오.
 {: shortdesc}
 
 <table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 CDN 명령">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # 計費 
 {: #ibmcloud_billing}
 
-使用下列指令來管理 {{site.data.keyword.Bluemix_notm}} 計費及用量。
+請使用下列指令擷取資源用量及計費資訊。
 {: shortdesc}
 
 <table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} 計費及用量的 ibmcloud 指令。">

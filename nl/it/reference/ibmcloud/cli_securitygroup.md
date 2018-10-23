@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Gruppo di sicurezza
 
-Utilizza i seguenti comandi per gestire un gruppo di sicurezza che utilizza il servizio Gruppo di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+Un gruppo di sicurezza è un insieme di regole di filtro IP che definiscono come gestire il traffico in entrata (ingress) e in uscita (egress) sia alle interfacce pubbliche che a quelle private di un'istanza del server virtuale. Le regole che aggiungi a un gruppo di sicurezza sono note come regole del gruppo di sicurezza.
+
+Utilizza i seguenti comandi per gestire un gruppo di sicurezza che utilizza il servizio Gruppo di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandi del gruppo di sicurezza dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">

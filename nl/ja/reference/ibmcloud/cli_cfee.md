@@ -5,17 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry エンタープライズ環境 (CFEE) (ベータ)
+# Cloud Foundry エンタープライズ環境 (CFEE)
 {: #ibmcloud_commands_cfee}
 
-以下のコマンドを使用して、CFEE 組織、スペース、ユーザー、および役割を管理します。
+{{site.data.keyword.cfee_full}} (CFEE) を使用して、オンデマンドで複数の分離したエンタープライズ・クラスの Cloud Foundry プラットフォームのインスタンスを生成できます。IBM Cloud Foundry Enterprise サービスのインスタンスは、IBM Cloud のお客様専用のアカウント内で実行されます。環境は、分離したハードウェア (Kubernetes クラスター) 上にデプロイされます。アクセス制御、キャパシティー、バージョンの更新、リソース使用量とモニターなど、環境を完全に制御できます。
+
+以下のコマンドを使用して、CFEE 環境、組織、スペース、ユーザー、および役割を管理します。
 {: shortdesc}
 
 <table summary="Cloud Foundry エンタープライズ環境の管理 (試験的)">
@@ -113,7 +115,7 @@ ibmcloud cfee orgs [--env ENV]
 <strong>コマンド・オプション</strong>:
   <dl>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -146,7 +148,7 @@ ibmcloud cfee org ORG [--guid] [--env ENV]
    <dt>ORG (必須)</dt>
    <dd>組織の名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>--guid</dt>
    <dd>組織 GUID のみを表示します。組織の他の出力はすべて抑制されます。</dd>
   </dl>
@@ -187,7 +189,7 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
    <dt>ORG (必須)</dt>
    <dd>作成される組織の名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>-q, --quota QUOTA</dt>
    <dd>新しく作成された組織に割り当てる割り当て量 (指定されなければ、デフォルトの割り当て量を使用)</dd>
   </dl>
@@ -228,7 +230,7 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
    <dt>ORG (必須)</dt>
    <dd>削除される組織の名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>-f, --force</dt>
    <dd>確認なしで削除を強制します</dd>
   </dl>
@@ -271,7 +273,7 @@ ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
    <dt>-a, --all</dt>
    <dd>指定された組織内のすべてのユーザーをリストします</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -320,7 +322,7 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
    </ul>
    </dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -363,7 +365,7 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
    </ul>
    </dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -396,7 +398,7 @@ ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
    <dt>-o, --org ORG</dt>
    <dd>組織名。 未指定の場合、デフォルトは現行組織です。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -429,7 +431,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
    <dt>SPACE (必須)</dt>
    <dd>表示するスペースの名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>--guid</dt>
    <dd>指定されたスペースの GUID を取得して表示します。 このスペースの他の出力はすべて抑制されます。</dd>
    <dt>-o, --org ORG</dt>
@@ -480,7 +482,7 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
    <dt>SPACE (必須)</dt>
    <dd>作成するスペースの名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>-o, --org ORG</dt>
    <dd>組織名。 未指定の場合、デフォルトは現行組織です。</dd>
   </dl>
@@ -517,7 +519,7 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
    <dt>NEW_NAME (必須)</dt>
    <dd>名前を変更するスペースの新しい名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>-o, --org ORG</dt>
    <dd>組織名。 未指定の場合、デフォルトは現行組織です。</dd>
   </dl>
@@ -552,7 +554,7 @@ ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
    <dt>SPACE (必須)</dt>
    <dd>削除するスペースの名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
    <dt>-f, --force</dt>
    <dd>確認なしで削除を強制します。</dd>
    <dt>-o, --org ORG</dt>
@@ -600,7 +602,7 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
    </ul></dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -644,7 +646,7 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
    </ul></dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -677,7 +679,7 @@ ibmcloud cfee space-roles ORG [--env ENV]
    <dt>ORG (必須)</dt>
    <dd>組織の名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -712,7 +714,7 @@ ibmcloud cfee space-users ORG SPACE [--env ENV]
    <dt>SPACE (必須)</dt>
    <dd>スペースの名前。</dd>
    <dt>--env ENV</dt>
-   <dd>CFEE 環境名。未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
+   <dd>CFEE 環境名。 未指定の場合、デフォルトは現行の CFEE 環境です。</dd>
   </dl>
 
 <strong>例</strong>:

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,8 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # File Storage
+
+{{site.data.keyword.filestorage_full}} 是持續性、快遞、連接彈性網路並以 NFS 為基礎的 {{site.data.keyword.filestorage_short}}。在這個網路連接儲存空間 (NAS) 環境中，您可以完全控制檔案共用功能及效能。
 
 請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 File Storage 服務中管理給定磁區。
 {: shortdesc}

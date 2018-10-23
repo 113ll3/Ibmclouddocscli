@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-10-04"
 
 # 보안
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 SSH 키 및 인증서를 관리하십시오.
+디바이스에서 구현되는 각 공개 키에 대한 해당 클라이언트의 비밀번호를 사용하지 않고 SSH 키를 통해 디바이스에 액세스할 수 있습니다. SSH 키를 디바이스에 추가하면, SSH 키와 함께 제공된 디바이스는 비밀번호를 사용하지 않고 해당 키의 디바이스에 액세스합니다. 
+
+SSL 인증서는 사용자를 보호하기 위한 보안 수단으로 웹 사이트에서 사용으로 설정합니다. 일반적으로 기밀 정보를 웹 사이트에 전송해야 하는 경우에 사용됩니다.
+
+다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 인프라 SSH 키 및 인증서를 관리하십시오.
 {: shortdesc}
 
 <table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 보안 명령">
