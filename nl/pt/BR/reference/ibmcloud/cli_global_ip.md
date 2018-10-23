@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,10 @@ lastupdated: "2018-09-06"
 
 # IP Global
 
-Use os comandos a seguir para gerenciar um IP global no serviço IP global de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Um endereço IP global é uma sub-rede secundária estática especializada. Ele é entregue como uma sub-rede
+/32 (em outras palavras, um endereço IP único) que pode ser roteado para qualquer outro endereço IP na conta.
+
+Use os comandos a seguir para gerenciar um IP global no serviço IP global de infraestrutura do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandos de IP global de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">

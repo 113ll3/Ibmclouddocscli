@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +13,11 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Contas, Usuários e Orgs
- {: #ibmcloud_commands_account}
+{: #ibmcloud_commands_account}
 
- Use os comandos a seguir para gerenciar as contas, os usuários em uma conta, a organização, os espaços e as funções.
-  {: shortdesc}
+Use os comandos a seguir para gerenciar as contas, os usuários em uma conta, a organização, o espaço e as funções
+dos ambientes públicos do Cloud Foundry.
+{: shortdesc}
 
   <table summary="Comandos ibmcloud que podem ser usados para gerenciar contas, organizações, espaços e funções.">
    <thead>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-09-04"
 # Faturamento 
 {: #ibmcloud_billing}
 
-Use os comandos a seguir para gerenciar o faturamento e o uso do {{site.data.keyword.Bluemix_notm}}.
+Use os comandos a seguir para recuperar as informações de uso de recurso e de faturamento.
 {: shortdesc}
 
 <table summary="Comandos ibmcloud que podem ser usados para gerenciar o faturamento e o uso do {{site.data.keyword.Bluemix_notm}}.">

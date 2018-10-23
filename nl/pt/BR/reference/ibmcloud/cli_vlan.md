@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,10 @@ lastupdated: "2018-09-21"
 {:tip: .tip}
 
 # VLAN
+
+As redes locais virtuais (VLANs) são usadas pelo {{site.data.keyword.cloud}} para isolar o tráfego
+de transmissão nas redes públicas e privadas. As VLANs são designadas conforme necessário para atenderem a outras
+ofertas.
 
 Use os comandos a seguir para gerenciar as VLANs de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

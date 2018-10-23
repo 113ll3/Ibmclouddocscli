@@ -5,17 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Grupos de Recursos e Recursos
+# Grupos de recursos e recursos
 {: #ibmcloud_commands_resource}
 
-Use os comandos a seguir para gerenciar os recursos e os grupos de recursos do {{site.data.keyword.Bluemix_notm}}.
+Um grupo de recursos é uma maneira para organizar os recursos da conta em agrupamentos customizáveis. Use os
+comandos a seguir para gerenciar os grupos de recursos e os recursos do {{site.data.keyword.Bluemix}} em um grupo de recursos.
 {: shortdesc}
 
 <table summary="Comando ibmcloud que pode ser usado para gerenciar grupos de recursos e recursos.">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # Sub-rede
 
-Use os comandos a seguir para gerenciar as sub-redes de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Uma sub-rede é uma partição lógica de uma rede IP em múltiplos segmentos de rede menores. Use os comandos a seguir para gerenciar as sub-redes de infraestrutura do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandos de sub-rede de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2018-09-06"
 
 # Virtual Server
 
-Use os comandos a seguir para gerenciar os servidores virtuais de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.BluVirtServers}} são servidores virtuais escaláveis que são comprados com núcleos dedicados e alocações de memória. Eles são uma boa opção caso você esteja procurando por recursos de cálculo, que podem ser incluídos em minutos, com acesso a recursos como modelos de imagem. 
+
+Use os comandos a seguir para gerenciar os servidores virtuais de infraestrutura do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandos do Virtual Server de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
@@ -358,11 +360,11 @@ Sl vs list ibmcloud [ OPTIONS ]
 <dt>-m, --memory</dt>
 <dd>Filtrar por memória em megabytes.</dd>
 <dt>-n, --network</dt>
-<dd>Filtre por velocidade de porta de rede em Mbps.</dd>
+<dd>Filtrar por velocidade de porta de rede em Mbps.</dd>
 <dt>-P, --public-ip</dt>
 <dd>Filtrar por endereços IP públicos.</dd>
 <dt>-p, --private-ip</dt>
-<dd>Filtre por endereços IP privados.</dd>
+<dd>Filtrar por endereços IP privados.</dd>
 <dt>--hourly</dt>
 <dd>Mostrar apenas instâncias de hora em hora.</dd>
 <dt>--monthly</dt>

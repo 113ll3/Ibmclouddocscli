@@ -5,17 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry Enterprise Environments (CFEE) (beta)
+# Cloud Foundry Enterprise Environments (CFEE)
 {: #ibmcloud_commands_cfee}
 
-Use os comandos a seguir para gerenciar as organizações, os espaços, os usuários e as funções do CFEE.
+Com o {{site.data.keyword.cfee_full}} (CFEE), é possível instanciar múltiplas plataformas Cloud Foundry isoladas e de classificação corporativa on-demand. As instâncias do serviço IBM Cloud Foundry Enterprise são executadas em sua própria conta no IBM Cloud. O ambiente é implementado em hardware isolado (clusters do Kubernetes). Você tem controle total sobre o ambiente, incluindo o controle de acesso, a capacidade, as atualizações de versão, o uso de recurso e o monitoramento.
+
+Use os comandos a seguir para gerenciar os ambientes CFEE, as organizações, os espaços, os usuários e as funções.
 {: shortdesc}
 
 <table summary="Gerenciar ambientes corporativos do Cloud Foundry (experimental)">
@@ -443,7 +445,7 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
 
 <strong>Exemplos</strong>:
 
-Mostrar as informações do espaço  ` space_exemplo `:
+Mostrar as informações do espaço `space_example`:
 
 ```
 space_exemplo do espaço cfee ibmcloud

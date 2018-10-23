@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,6 +13,11 @@ lastupdated: "2018-09-06"
 {:tip: .tip}
 
 # Block Storage
+
+O armazenamento de bloco do {{site.data.keyword.Bluemix}} é um armazenamento iSCSI
+de alto desempenho persistente que é fornecido e gerenciado independentemente das instâncias de cálculo. Os LUNs do
+Block Storage baseados em iSCSI são conectados aos dispositivos autorizados por meio de conexões redundantes de
+E/S de múltiplos caminhos (MPIO). 
 
 Use os comandos a seguir para gerenciar um determinado volume para o serviço Block Storage de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}

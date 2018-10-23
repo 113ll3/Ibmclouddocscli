@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-09-06"
 
 # VPN IPSec
 
-Use os comandos a seguir para gerenciar um túnel VPN do IPSec no serviço VPN do IPSec de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+O acesso à VPN do {{site.data.keyword.Bluemix}} permite que os usuários gerenciem todos os
+servidores remotamente e de forma segura por meio da rede privada do {{site.data.keyword.Bluemix_notm}}. Uma conexão de VPN de sua localização para a rede privada fornece a capacidade de gerenciamento fora da banda e de resgate do servidor por meio de um túnel VPN criptografado.
+
+Use os comandos a seguir para gerenciar os túneis VPN do Internet Protocol Security no serviço VPN de Internet
+Protocol Security da infraestrutura do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Comandos VPN do IPSec do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">

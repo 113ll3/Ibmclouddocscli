@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-09-06"
 
 # Imagem
 
-Use os comandos a seguir para gerenciar as imagens de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Use os comandos a seguir para gerenciar as imagens de cálculo do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandos de imagem de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">

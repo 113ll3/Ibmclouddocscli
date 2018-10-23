@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-09-06"
 
 # Grupo de Segurança
 
-Use os comandos a seguir para gerenciar um grupo de segurança usando o serviço de grupo de segurança da infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Um grupo de segurança é um conjunto de regras de filtro IP que definem como manipular o tráfego recebido
+(ingresso) e de saída (egresso) para as interfaces públicas e privadas de uma instância de servidor virtual. As regras que você inclui em um grupo de segurança são conhecidas como regras
+do grupo de segurança.
+
+Use os comandos a seguir para gerenciar um grupo de segurança usando o serviço Security Group da infraestrutura do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandos do grupo de segurança de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">

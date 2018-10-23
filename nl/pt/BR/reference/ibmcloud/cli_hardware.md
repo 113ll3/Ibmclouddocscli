@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,10 @@ lastupdated: "2018-09-06"
 
 # Hardware
 
-Use os comandos a seguir para gerenciar os servidores de hardware bare metal de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Os {{site.data.keyword.baremetal_long}} são servidores físicos de locatário único que fornecem desempenho e controle com
+acesso de baixo nível aos recursos de hardware. Os servidores bare metal fornecem a potência que você procura para suas cargas de trabalho intensivas de processador e de E/S de disco. Estes servidores vêm com o mais completo pacote de recursos e serviços padrão.
+
+Use os comandos a seguir para gerenciar os servidores de hardware bare metal de infraestrutura do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <table summary="Comandos de servidor bare metal de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
@@ -194,13 +197,13 @@ ibmcloud sl hardware list [OPTIONS]
 <dt>-m, --memory</dt>
 <dd>Filtrar por memória em gigabytes.</dd>
 <dt>-n, --network</dt>
-<dd>Filtre por velocidade de porta de rede em Mbps.</dd>
+<dd>Filtrar por velocidade de porta de rede em Mbps.</dd>
 <dt>-g, --tag</dt>
 <dd>Filtrar por tags, múltiplas ocorrências permitidas.</dd>
 <dt>-p, --public-ip</dt>
 <dd>Filtrar por endereços IP públicos.</dd>
 <dt>-v, --private-ip</dt>
-<dd>Filtre por endereços IP privados.</dd>
+<dd>Filtrar por endereços IP privados.</dd>
 <dt>-o, --order</dt>
 <dd>Filtrar por ID da ordem que comprou o servidor de hardware.</dd>
 <dt>--owner</dt>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,11 @@ lastupdated: "2018-09-06"
 
 # DNS
 
-Use os comandos a seguir para gerenciar as zonas no serviço DNS de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+O Domain Name Service (DNS) do {{site.data.keyword.Bluemix}} fornece aos clientes um local central para
+visualizar e gerenciar os domínios por meio da interface de gerenciamento básica de DNS e também fornece aos usuários
+a opção de gerenciar o DNS reverso e o secundário no mesmo local gratuitamente.
+
+Use os comandos a seguir para gerenciar o serviço de DNS de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Comandos do DNS de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">

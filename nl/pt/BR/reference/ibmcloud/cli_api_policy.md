@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2018-09-21"
 {: #ibmcloud_commands_iam}
 
 Use os comandos a seguir para gerenciar as chaves API, os IDs de serviço, os grupos de acesso e as políticas de
-acesso/autorização para o IAM.
+acesso/autorização para os usuários, os serviços e os grupos de acesso.
 {: shortdesc}
 
 <table summary="Comandos ibmcloud que podem ser usados para gerenciar chaves API e políticas.">
