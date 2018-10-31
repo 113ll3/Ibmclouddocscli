@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 The {{site.data.keyword.dev_cli_short}} CLI is a command line approach for creating, developing, and deploying applications for developers who want to use a command line to develop end-to-end web, mobile, and microservice applications. Quickly get started with the recommended toolset by running one of the following scripts.
 {: shortdesc}
 
-## Prerequisites for {{site.data.keyword.dev_cli_notm}}
+## Before you begin with {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
 Sign up for [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
@@ -28,7 +28,7 @@ Sign up for [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration
 
 * You must use the stable channel for Docker, with a minimum version of 1.13.1.
 
-## How to Install {{site.data.keyword.dev_cli_notm}}
+## How to install {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
 To install the toolset, you can run the relevant command to start the installer. This installs the following recommended tools for {{site.data.keyword.Bluemix_notm}} development (if not already installed): `Homebrew` (Mac only), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, {{site.data.keyword.Bluemix_notm}} CLI, {{site.data.keyword.dev_cli_notm}} plug-in, Cloud Functions plug-in, Container Registry plug-in, Container Service plug-in, and `sdk-gen` plug-in. To install, use these installation steps:
@@ -58,14 +58,14 @@ ibmcloud dev help
 ```
 {: codeblock}
 
-If installation was successful, the output should list usage instructions, the current version, and supported commands.
+If installation was successful, the output lists usage instructions, the current version, and supported commands.
 
 The [Reinstalling tools](/docs/troubleshoot/ts_createapps.html#appendix) section contains information to individually install all dependencies.
 
 ## Configure Your Environment
 {: #configure-environment}
 
-1. Connect to an API endpoint in your {{site.data.keyword.Bluemix_notm}} region. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} US South region:
+1. Connect to an API endpoint in your {{site.data.keyword.Bluemix_notm}} location. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} Dallas location:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -118,7 +118,7 @@ The following resources can be helpful when developing Cloud Native apps with th
 
 - [IBM Cloud Developer Tools main landing page](https://www.ibm.com/cloud/cli) - Main product page for IDT CLI
 - [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Public GitHub repo with detailed installation instructions
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud console page, which is a companion to the IDT tools to create and manage cloud native apps
+- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud console page that is a companion to the IDT tools to create and manage cloud native apps
 - [Report issues on GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
