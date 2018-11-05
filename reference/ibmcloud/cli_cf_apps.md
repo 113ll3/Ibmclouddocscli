@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -51,9 +51,9 @@ Use the following commands to manage Cloud Foundry applications, domains and rou
  <td>[ibmcloud app domain-cert](cli_cf_apps.html#ibmcloud_app_domain_cert)</td>
  </tr>
  <tr>
-  <td>[ibmcloud app domain-cert-add](cli_cf_apps.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_cf_apps.html#ibmcloud_app_domain_cert_remove)</td>
-  <td>[ibmcloud app domains](cli_cf_apps.html#ibmcloud_app_domains)</td>
+ <td>[ibmcloud app domain-cert-add](cli_cf_apps.html#ibmcloud_app_domain_cert_add)</td>
+ <td>[ibmcloud app domain-cert-remove](cli_cf_apps.html#ibmcloud_app_domain_cert_remove)</td>
+ <td>[ibmcloud app domains](cli_cf_apps.html#ibmcloud_app_domains)</td>
   <td>[ibmcloud app domain-create](cli_cf_apps.html#ibmcloud_app_domain_create)</td>
   <td>[ibmcloud app domain-delete](cli_cf_apps.html#ibmcloud_app_domain_delete)</td>
  </tr>
