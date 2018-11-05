@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -18,49 +18,52 @@ lastupdated: "2018-10-17"
 Use the following commands to manage accounts, users in an account, and the org, space, and roles of public Cloud Foundry environments.
 {: shortdesc}
 
-  <table summary="ibmcloud commands that you can use to manage accounts, orgs, spaces and roles.">
-   <thead>
-   </thead>
-   <tbody>
-   <tr>
-   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
-   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
-   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
-   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
-   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
-   <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
-   <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
-   <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
-   <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
-   <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
-   <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
-   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
-   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
-   <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
-   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
-   <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
-   <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-  </tr>
-   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
-   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
-   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
-   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
-   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
-   </tr>
-   <tr>
-    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-   </tr>
-   </tbody>
-   </table>
+<table summary="ibmcloud commands that you can use to manage accounts, orgs, spaces and roles.">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+ <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+ <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+ <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+ <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+ <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
+ <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
+ <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
+ <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+ <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
+ <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
+ <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+ <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+ <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
+ <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+ <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
+ <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
+</tr>
+ <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+ <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+ <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+ <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+ <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
+ </tr>
+ </tbody>
+ </table>
 
  ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
@@ -314,7 +317,7 @@ This command has the same function and options as the [cf delete-space ![Externa
 Display users in the specified organization by role.
 
 ```
-ibmcloud account org-users ORG_NAME [-a]
+ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
@@ -325,6 +328,8 @@ ibmcloud account org-users ORG_NAME [-a]
 <dd>The name of the organization.</dd>
 <dt>-a (optional)</dt>
 <dd>List all the users in the specified organization, not grouped by role.</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>--output value  Specify output format, only JSON is supported now.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -633,3 +638,85 @@ ibmcloud account user-reinvite USER_EMAIL
    <dt>USER_EMAIL (required)</dt>
    <dd>The email of the user being re-invited.</dd>
 </dl>
+
+## ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
+
+List the certificate information of a domain.
+
+```
+ibmcloud app domain-cert DOMAIN_NAME
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+<dt>DOMAIN_NAME (required)</dt>
+<dd>The domain that hosts the certificate.</dd>
+</dl>
+
+
+<strong>Examples</strong>:
+
+View the certificate information of the domain `ibmcxo-eventconnect.com`:
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+## ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+Add a certificate to the specified domain in the current org.
+
+```
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login, Target
+
+<strong>Command options</strong>:
+   <dl>
+   <dt>DOMAIN (required)</dt>
+   <dd>The domain that the certificate is added to.</dd>
+   <dt>-k <i>PRIVATE_KEY_FILE</i> (required)</dt>
+   <dd>The private key file path.</dd>
+   <dt>-c <i>CERT_FILE</i> (required)</dt>
+   <dd>The certificate file path.</dd>
+   <dt>-p <i>PASSWORD</i> (optional)</dt>
+   <dd>The password for the certificate.</dd>
+   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (optional)</dt>
+   <dd>The intermediate certificate file path.</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i> (optional)</dt>
+   <dd>The trust store file.</dd>
+   </dl>
+
+
+<strong>Examples</strong>:
+
+Add a certificate to the domain `ibmcxo-eventconnect.com`:
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+## ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+Remove a certificate from the specified domain in current org.
+
+```
+ibmcloud app domain-cert-remove DOMAIN [-f]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login, Target
+
+<strong>Command options</strong>:
+
+   <dl>
+   <dt>DOMAIN (required)</dt>
+   <dd>Domain to remove the certificate from.</dd>
+   <dt>-f  (optional)</dt>
+   <dd>Force deletion without confirmation.</dd>
+   </dl>
