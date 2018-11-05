@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ Use the following commands to manage the {{site.data.keyword.Bluemix}} catalog e
 Search catalog entries
 
 ```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -63,7 +63,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>-k, --kind</dt>
   <dd>Filter by kind of resources. Currently only "service-cf", "iaas", "runtime", "template", and "dashboard" are supported</dd>
   <dt>-p, --price</dt>
-  <dd>Filter by price. Currently only "free", "paygo", "bluemix-subscription" are supported</dd>
+  <dd>Filter by price. Currently only "free", "paygo", "ibmcloud-subscription" are supported</dd>
   <dt>-t, --tag</dt>
   <dd>Filter by tag.</dd>
   <dt>--sort-by</dt>
@@ -72,8 +72,8 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dd>Specify additional columns for the table. Currently "group", "provider", and "tags"</dd>
   <dt>--reverse</dt>
   <dd>Whether to reverse the sorting order</dd>
-  <dt>--json</dt>
-  <dd>Output original JSON response</dd>
+  <dt>--output TYPE (optional)</dt>
+  <dd>--output value  Specify output TYPE, only JSON is supported now. This option is exclusive with '--id'.</dd>
   <dt>--csv</dt>
   <dd>Output CSV file</dd>
   <dt>--global</dt>
@@ -94,7 +94,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 Get a catalog entry
 
 ```
-ibmcloud catalog entry ID [--global]
+ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -103,8 +103,8 @@ ibmcloud catalog entry ID [--global]
 <dl>
   <dt>--children</dt>
   <dd>Get all children for the catalog entry</dd>
-  <dt>--json</dt>
-  <dd>Output original JSON response</dd>
+  <dt>--output TYPE (optional)</dt>
+  <dd>--output value  Specify output TYPE, only JSON is supported now.</dd>
   <dt>--global</dt>
   <dd>Operate in global scope</dd>
 </dl>
@@ -199,7 +199,7 @@ ibmcloud catalog delete 'j402-dnf1i'
 Get the visibility for a catalog entry(catalog admin of an account only)
 
 ```
-ibmcloud catalog entry-visibility ID [--global]
+ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -208,6 +208,8 @@ ibmcloud catalog entry-visibility ID [--global]
 <dl>
   <dt>-json</dt>
   <dd>Output original JSON response</dd>
+  <dt>--output TYPE (optional)</dt>
+  <dd>--output value  Specify output TYPE, only JSON is supported now.</dd>
   <dt>-global</dt>
   <dd>Operate in global scope</dd>
 </dl>
@@ -385,7 +387,7 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 Get a choice subset of regions in your choice of format.
 
 ```
-ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```
 
 <strong>Command options</strong>:
@@ -397,8 +399,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>Get a list of entries for the specified kind.</dd>
   <dt>--col</dt>
   <dd>Specify additional columns for the table. Currently "group", "provider", and "tags".</dd>
-  <dt>--json</dt>
-  <dd>Output of the original JSON response.</dd>
+  <dt>--output TYPE (optional)</dt>
+  <dd>--output value  Specify output TYPE, only JSON is supported now. This option is exclusive with '--id'.</dd>
   <dt>--global</dt>
   <dd>Operate in a global scope.</dd>
   <dt>--csv</dt>
