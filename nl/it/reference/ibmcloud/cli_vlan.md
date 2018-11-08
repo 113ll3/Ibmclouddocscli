@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-10-21"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-10-17"
 
 # VLAN
 
-Le VLAN (Virtual Local Area Network) vengono utilizzate da {{site.data.keyword.cloud}} per isolare il traffico broadcast sulle reti pubbliche e private. Le VLAN vengono assegnate come necessario per soddisfare altre offerte.
+Le VLAN (Virtual Local Area Network) vengono utilizzate da {{site.data.keyword.cloud}} per isolare il traffico broadcast sulle reti pubbliche e private.
 
 Utilizza i seguenti comandi per gestire le VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
