@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-10-21"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-10-17"
 
 # VLAN
 
-{{site.data.keyword.cloud}} 使用虚拟局域网 (VLAN) 来隔离公用和专用网络上的广播流量。VLAN 可根据需要进行分配，以满足其他产品的要求。
+{{site.data.keyword.cloud}} 使用虚拟局域网 (VLAN) 来隔离公用和专用网络上的广播流量。
 
 使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构 VLAN。
 {: shortdesc}
