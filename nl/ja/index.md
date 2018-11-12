@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-08-31"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-08-31"
 
 [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") と以下のシステム要件が必要です。
 
-* Windows を実行しているが、Windows 10 Pro ではない場合、一部の機能はサポートされないことがあります。
+* Windows を実行している場合、一部の機能は、Windows 10 Pro を実行していないとサポートされません。
 * Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。
 
 ## ステップ 1. インストール・コマンドの実行
@@ -81,7 +81,7 @@ ibmcloud dev help
 ## ステップ 3. 環境の構成
 {: #step3}
 
-1. ご使用の {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、以下のコマンドを入力します。
+1. ご使用の {{site.data.keyword.Bluemix_notm}} ロケーションの API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} のダラス・ロケーションに接続するには、以下のコマンドを入力します。
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -116,4 +116,4 @@ ibmcloud dev help
 ## 次のステップ
 {: #next-steps}
 
-これで、最初のアプリケーションを開発してデプロイする準備ができました。
+最初のアプリケーションの開発およびデプロイに取り掛かることができます。 詳しくは、[CLI を使用したアプリの作成およびデプロイ](/docs/apps/create-deploy-cli.html)を参照してください。

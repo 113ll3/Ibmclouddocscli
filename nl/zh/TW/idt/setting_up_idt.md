@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 {{site.data.keyword.dev_cli_short}} CLI 是一種指令行方法，可針對想要使用指令行開發端對端 Web、行動及微服務應用程式的開發人員建立、開發及部署應用程式。執行下列其中一個 Script，以快速開始使用建議的工具集。
 {: shortdesc}
 
-## {{site.data.keyword.dev_cli_notm}} 的必要條件
+## 開始使用 {{site.data.keyword.dev_cli_notm}} 之前
 {: #prereq}
 
 註冊 [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration)。
@@ -58,14 +58,14 @@ ibmcloud dev help
 ```
 {: codeblock}
 
-如果安裝成功，輸出應該列出用法指令、現行版本，及支援的指令。
+如果安裝成功，輸出會列出用法指示、現行版本及支援的指令。
 
 [重新安裝工具](/docs/troubleshoot/ts_createapps.html#appendix)一節包含個別安裝所有相依關係的資訊。
 
 ## 配置環境
 {: #configure-environment}
 
-1. 連接至 {{site.data.keyword.Bluemix_notm}} 地區中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 美國南部地區：
+1. 連接至 {{site.data.keyword.Bluemix_notm}} 位置中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 達拉斯的位置：
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -118,7 +118,7 @@ ibmcloud dev help
 
 - [IBM Cloud Developer Tools 主要登陸頁面](https://www.ibm.com/cloud/cli) - IDT CLI 的主要產品頁面
 - [IBM Developer Tools 安裝程式](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - 具有詳細安裝指示的公用 GitHub 儲存庫
-- [IBM Cloud 應用程式服務](https://console.bluemix.net/developer/appservice) - IDT 工具隨附的 IBM Cloud 主控台頁面以建立及管理雲端原生應用程式
+- [IBM Cloud 應用程式服務](https://console.bluemix.net/developer/appservice) - IDT 工具隨附的 IBM Cloud 主控台頁面，用來建立及管理雲端原生應用程式
 - [在 GitHub 上報告問題](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech 的 Slack - #developer-tools 頻道](https://ibm-cloud-tech.slack.com) - 在[這裡](https://slack-invite-ibm-cloud-tech.mybluemix.net/)要求團隊存取
 

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 {{site.data.keyword.dev_cli_short}} CLI は、コマンド・ラインを使用して Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで開発することを希望する開発者に向けた、アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチです。 以下のいずれかのスクリプトを実行することによって、推奨ツール・セットの使用を素早く開始できます。
 {: shortdesc}
 
-## {{site.data.keyword.dev_cli_notm}} の前提条件
+## {{site.data.keyword.dev_cli_notm}} を開始する前に
 {: #prereq}
 
 [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration) に登録します。
@@ -58,14 +58,14 @@ ibmcloud dev help
 ```
 {: codeblock}
 
-インストールが成功していた場合、出力には、使用方法の説明、現行バージョン、およびサポートされるコマンドがリストされます。
+インストールが成功した場合、出力には、使用方法の説明、現行バージョン、およびサポートされるコマンドがリストされます。
 
 『[ツールの再インストール](/docs/troubleshoot/ts_createapps.html#appendix)』セクションに、すべての従属関係を個々にインストールするための説明があります。
 
 ## 環境の構成
 {: #configure-environment}
 
-1. ご使用の {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、以下のコマンドを入力します。
+1. ご使用の {{site.data.keyword.Bluemix_notm}} ロケーションの API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} のダラス・ロケーションに接続するには、以下のコマンドを入力します。
 
 	```
 	ibmcloud api https://api.ng.bluemix.net

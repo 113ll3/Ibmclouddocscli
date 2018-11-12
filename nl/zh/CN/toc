@@ -16,10 +16,9 @@ IBM Cloud CLI 和 Developer Tools
 	idt/index.md
 
 	{: .topicgroup}
-	IBM Cloud Developer Tools IDE Extensions
+	IBM Cloud Developer Tools IDE 扩展
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/eclipsetools.md
 
 	{: topicgroup}
 	调试

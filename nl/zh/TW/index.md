@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-010-03"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -39,10 +39,10 @@ lastupdated: "2018-010-03"
 
 您需要 [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及下列系統需求：
 
-* 如果您執行 Windows，則在您不是執行 Windows 10 Pro 的情況下，可能不支援部分功能。
+* 如果您執行 Windows，則在您不是執行 Windows 10 Pro 的情況下，不支援部分功能。
 * 您必須使用適用於 Docker 的穩定通道，而最低版本為 1.13.1。
 
-## 步驟 1. 執行 install 指令
+## 步驟 1. 執行安裝指令
 {: #step1}
 
 * 若為 Mac 和 Linux，請執行下列指令：
@@ -81,7 +81,7 @@ ibmcloud dev help
 ## 步驟 3. 配置環境
 {: #step3}
 
-1. 連接至 {{site.data.keyword.Bluemix_notm}} 地區中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 美國南部地區：
+1. 連接至 {{site.data.keyword.Bluemix_notm}} 位置中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 達拉斯的位置：
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -106,7 +106,7 @@ ibmcloud dev help
 	```
 	{: codeblock}
 
-	您可以選擇性地使用來自上述指令的輸出，以下列指令手動設定您的組織及空間：
+	您可以選擇使用前一個指令的輸出，以下列指令手動設定您的組織及空間：
 
 	```
 	ibmcloud target -o <value> -s <value>
@@ -116,4 +116,4 @@ ibmcloud dev help
 ## 後續步驟
 {: #next-steps}
 
-您現在已準備好開始開發及部署您的第一個應用程式。如需相關資訊，請參閱[使用 CLI 建立及部署應用程式](/docs/apps/create-deploy-cli.html)。
+您現在已準備好開始開發及部署您的第一個應用程式！如需相關資訊，請參閱[使用 CLI 建立及部署應用程式](/docs/apps/create-deploy-cli.html)。

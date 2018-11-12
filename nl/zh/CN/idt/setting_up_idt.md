@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 {{site.data.keyword.dev_cli_short}} CLI 是一种命令行方法，用于为那些想要使用命令行来开发端到端 Web、移动和微服务应用程序的开发者创建、开发和部署应用程序。通过运行以下其中一个脚本来快速开始使用建议的工具集。
 {: shortdesc}
 
-## {{site.data.keyword.dev_cli_notm}} 的先决条件
+## 开始安装 {{site.data.keyword.dev_cli_notm}} 之前 
 {: #prereq}
 
 注册 [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration)。
@@ -58,14 +58,14 @@ ibmcloud dev help
 ```
 {: codeblock}
 
-如果安装成功，那么输出应该列出用法指示信息、当前版本和支持的命令。
+如果安装成功，那么输出信息将列出用法指示信息、当前版本和支持的命令。
 
 [重新安装工具](/docs/troubleshoot/ts_createapps.html#appendix)部分包含有关单独安装所有依赖项的信息。
 
 ## 配置环境
 {: #configure-environment}
 
-1. 连接到您的 {{site.data.keyword.Bluemix_notm}} 区域中的 API 端点。例如，输入以下命令来连接到 {{site.data.keyword.Bluemix_notm}} 美国南部区域：
+1. 连接到您的 {{site.data.keyword.Bluemix_notm}} 位置的 API 端点。例如，输入以下命令来连接到 {{site.data.keyword.Bluemix_notm}} 达拉斯位置：
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
