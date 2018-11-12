@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-10-21"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-10-17"
 
 # VLAN (réseau local virtuel)
 
-Les réseaux locaux virtuels (VLAN) sont utilisés par {{site.data.keyword.cloud}} pour isoler le trafic diffusé sur le réseau public et le réseau privé. Des réseaux locaux virtuels sont affectés si besoin pour satisfaire d'autres offres. 
+Les réseaux locaux virtuels (VLAN) sont utilisés par {{site.data.keyword.cloud}} pour isoler le trafic diffusé sur le réseau public et le réseau privé.
 
 Les commandes suivantes permettent de gérer les réseaux locaux virtuels de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
