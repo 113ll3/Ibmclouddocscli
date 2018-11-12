@@ -50,10 +50,10 @@ Use the following commands to manage CFEE environments, orgs, spaces, users and 
  <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
  <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
  <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
- </tr>
- <tr>
  <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
  <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
+ </tr>
+ <tr>
  <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
  <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
  <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
