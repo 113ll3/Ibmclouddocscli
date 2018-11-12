@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -21,7 +21,7 @@ criação, desenvolvimento e implementação de aplicativos para desenvolvedores
 comandos para desenvolver aplicativos da web, de dispositivos móveis e de microsserviço de ponta a ponta. Comece a usar rapidamente o conjunto de ferramentas recomendado executando um dos scripts a seguir.
 {: shortdesc}
 
-## Pré-requisitos para o {{site.data.keyword.dev_cli_notm}}
+## Antes de iniciar com o  {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
 Inscreva-se para o [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
@@ -61,14 +61,14 @@ ibmcloud dev help
 ```
 {: codeblock}
 
-Se a instalação for bem-sucedida, a saída deverá listar instruções de uso, a versão atual e os comandos suportados.
+Se a instalação tiver sido bem-sucedida, a saída listará as instruções de uso, a versão atual e os comandos suportados.
 
 A seção [Reinstalando ferramentas](/docs/troubleshoot/ts_createapps.html#appendix) contém informações para instalar todas as dependências individualmente.
 
 ## Configurar o seu ambiente
 {: #configure-environment}
 
-1. Conecte-se a um terminal de API em sua região do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à região Sul dos EUA {{site.data.keyword.Bluemix_notm}}:
+1. Conecte-se a um terminal da API em seu local do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à localização do {{site.data.keyword.Bluemix_notm}} em Dallas:
 
 	```
 	Ibmcloud api https://api.ng.bluemix.net
@@ -123,7 +123,8 @@ Os recursos a seguir podem ser úteis ao desenvolver aplicativos nativos em nuve
 
 - [Página de entrada principal do IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - página de produto principal para o IDT CLI
 - [Instalador do IBM Developer Tools](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - repositório GitHub público com instruções detalhadas de instalação
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - página do console do IBM Cloud, que é um complemento para as ferramentas IDT para criar e gerenciar aplicativos nativos em nuvem
+- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice): página do console
+do IBM Cloud que é um parceiro das ferramentas de IDT para criar e gerenciar aplicativos nativos em nuvem
 - [Relatar problemas no GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [Folga da Tecnologia do IBM Cloud - #canal de ferramentas do desenvolvedor](https://ibm-cloud-tech.slack.com) - Solicite o acesso da equipe [aqui](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
@@ -135,8 +136,7 @@ Os recursos a seguir podem ser úteis ao desenvolver aplicativos nativos em nuve
 
 **Blogs e tutoriais**
 
-- 
-[Implementando
+- [Implementando
 para o IBM Cloud Private com a CLI do IBM Cloud Developer Tools](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
 - [Ativar projetos existentes para o IBM Cloud com o IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
 - [Implementando para o Kubernetes no IBM Cloud com o IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)

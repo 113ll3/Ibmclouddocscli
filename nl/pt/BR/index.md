@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-010-03"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -45,8 +45,8 @@ Com essa instalação, você obterá a CLI do {{site.data.keyword.Bluemix_notm}}
 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e os seguintes
 requisitos do sistema:
 
-* Se estiver executando o Windows, alguma funcionalidade poderá não ser suportada se você não estiver executando o
-Windows 10 Pro.
+* Se você estiver executando o Windows, algumas funções não serão suportadas se o Windows 10 Pro não estiver em
+execução.
 * Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1.
 
 ## Etapa 1. Execute o comando de instalação
@@ -70,7 +70,8 @@ Windows 10 Pro.
 administrador**.
   {: tip}
 
-  Também é possível fazer download do script do instalador em nosso [repositório do GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+  Também é possível fazer download do script do instalador por meio do nosso
+[repositório GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
 
   Para obter as etapas para instalar essas ferramentas manualmente, consulte
 [Reinstalando as ferramentas](/docs/cli/ts_createapps.html#appendix).
@@ -90,7 +91,7 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 ## Etapa 3. Configure seu ambiente
 {: #step3}
 
-1. Conecte-se a um terminal de API em sua região do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à região Sul dos EUA {{site.data.keyword.Bluemix_notm}}:
+1. Conecte-se a um terminal da API em seu local do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à localização do {{site.data.keyword.Bluemix_notm}} em Dallas:
 
 	```
 	Ibmcloud api https://api.ng.bluemix.net
@@ -116,7 +117,8 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 	```
 	{: codeblock}
 
-	Opcionalmente, é possível usar a saída do comando acima para configurar manualmente sua organização e o espaço com o comando a seguir:
+	Opcionalmente, é possível usar a saída do comando anterior para configurar manualmente a organização e o espaço
+com o comando a seguir:
 
 	```
 	ibmcloud target -o <value> -s <value>
@@ -126,5 +128,5 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 ## Próximas Etapas
 {: #next-steps}
 
-Você agora está pronto para desenvolver e implementar o seu primeiro aplicativo. Consulte
+Agora você está pronto para desenvolver e implementar o seu primeiro aplicativo! Consulte
 [Criando e implementando os apps usando a CLI](/docs/apps/create-deploy-cli.html) para obter mais informações.
