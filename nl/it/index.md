@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-010-03"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -39,7 +39,7 @@ Con questa installazione, ottieni la CLI {{site.data.keyword.Bluemix_notm}} auto
 
 Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e dei seguenti requisiti di sistema:
 
-* Se stai utilizzando Windows, è possibile che alcune funzionalità non siano supportate se non stai utilizzando Windows 10 Pro.
+* Se stai utilizzando Windows, è possibile che alcune funzioni non sono supportate se non stai utilizzando Windows 10 Pro.
 * Devi utilizzare il canale stabile per Docker con una versione minima di 1.13.1.
 
 ## Passo 1. Esegui il comando di installazione
@@ -81,7 +81,7 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 ## Passo 3. Configura il tuo ambiente
 {: #step3}
 
-1. Stabilisci una connessione a un endpoint API nella tua regione {{site.data.keyword.Bluemix_notm}}. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione Stati Uniti Sud {{site.data.keyword.Bluemix_notm}}:
+1. Stabilisci una connessione a un endpoint API nella tua ubicazione {{site.data.keyword.Bluemix_notm}}. Ad esempio, immetti il seguente comando per stabilire una connessione nell'ubicazione Dallas {{site.data.keyword.Bluemix_notm}}:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -106,7 +106,7 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 	```
 	{: codeblock}
 
-	Facoltativamente, puoi utilizzare l'output del comando sopra riportato per impostare manualmente la tua organizzazione e il tuo spazio con il seguente comando:
+	Facoltativamente, puoi utilizzare l'output del precedente comando per impostare manualmente la tua organizzazione e il tuo spazio con il seguente comando:
 
 	```
 	ibmcloud target -o <value> -s <value>

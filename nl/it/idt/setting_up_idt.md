@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 La CLI {{site.data.keyword.dev_cli_short}} è un approccio della riga di comando per la creazione, lo sviluppo e la distribuzione delle applicazioni per gli sviluppatori che desiderano utilizzare una riga di comando per sviluppare le applicazioni web end-to-end, mobile e del microservizio. Inizia rapidamente a lavorare con l'insieme di strumenti consigliato eseguendo uno di questi script.
 {: shortdesc}
 
-## Prerequisiti per {{site.data.keyword.dev_cli_notm}}
+## Prima di iniziare con {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
 Registrati per [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
@@ -58,14 +58,14 @@ ibmcloud dev help
 ```
 {: codeblock}
 
-Se l'installazione ha avuto esito positivo, l'output dovrebbe elencare le istruzioni di utilizzo, la versione corrente e i comandi supportati.
+Se l'installazione ha avuto esito positivo, l'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supportati.
 
 La sezione [Reinstallazione degli strumenti](/docs/troubleshoot/ts_createapps.html#appendix) contiene informazioni per installare singolarmente tutte le dipendenze.
 
 ## Configura il tuo ambiente
 {: #configure-environment}
 
-1. Stabilisci una connessione a un endpoint API nella tua regione {{site.data.keyword.Bluemix_notm}}. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione Stati Uniti Sud {{site.data.keyword.Bluemix_notm}}:
+1. Stabilisci una connessione a un endpoint API nella tua ubicazione {{site.data.keyword.Bluemix_notm}}. Ad esempio, immetti il seguente comando per stabilire una connessione nell'ubicazione Dallas {{site.data.keyword.Bluemix_notm}}:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -118,7 +118,7 @@ Le seguenti risorse possono essere utili quando sviluppi le applicazioni native 
 
 - [Pagina di destinazione principale di IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Pagina del prodotto principale per la CLI IDT
 - [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Repository GitHub pubblico con le istruzioni di installazione dettagliate
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - Pagina della console IBM Cloud, che è complementare agli strumenti IDT per la creazione e gestione delle applicazioni native cloud
+- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - La pagina della console IBM Cloud che è complementare agli strumenti IDT di creazione e gestione delle applicazioni native cloud
 - [Segnala problemi su GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech's Slack - Canale #developer-tools](https://ibm-cloud-tech.slack.com) - Richiedi l'accesso al team [qui](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 

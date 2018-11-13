@@ -19,7 +19,6 @@ CLI IBM Cloud e Developer Tools
 	Estensioni IDE di IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/eclipsetools.md
 
 	{: topicgroup}
 	Debug
