@@ -19,7 +19,6 @@ IBM Cloud-Befehlszeilenschnittstelle und Entwicklertools
 	IDE-Erweiterungen für IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/eclipsetools.md
 
 	{: topicgroup}
 	Debugging

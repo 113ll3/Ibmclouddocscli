@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-010-03"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -39,7 +39,7 @@ Mit dieser Installation rufen Sie die eigenständige {{site.data.keyword.Bluemix
 
 Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und die folgenden Systemvoraussetzungen:
 
-* Wenn Sie Windows verwenden, werden einige Funktionen möglicherweise nicht unterstützt, wenn Sie nicht mit Windows 10 Pro arbeiten.
+* Unter Windows werden einige Funktionen möglicherweise nicht unterstützt, wenn Sie nicht mit Windows 10 Pro arbeiten.
 * Sie müssen den stabilen Kanal für Docker mit Version 1.13.1 oder höher verwenden.
 
 ## Schritt 1. Installationsbefehl ausführen
@@ -81,7 +81,7 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Schritt 3. Umgebung konfigurieren
 {: #step3}
 
-1. Stellen Sie eine Verbindung zu einem API-Endpunkt in Ihrer {{site.data.keyword.Bluemix_notm}}-Region her. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung mit der {{site.data.keyword.Bluemix_notm}}-Region 'Vereinigte Staaten (Süden)' herzustellen:
+1. Stellen Sie eine Verbindung zu einem API-Endpunkt an Ihrem {{site.data.keyword.Bluemix_notm}}-Standort her. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung zum {{site.data.keyword.Bluemix_notm}}-Standort Dallas herzustellen:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -106,7 +106,7 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 	```
 	{: codeblock}
 
-	Optional können Sie die Ausgabe des oben dargestellten Befehls verwenden, um Ihre Organisation und Ihren Bereich manuell mit dem folgenden Befehl festzulegen:
+	Optional können Sie die Ausgabe des vorigen Befehls verwenden, um Ihre Organisation und Ihren Bereich manuell mit dem folgenden Befehl festzulegen:
 
 	```
 	ibmcloud target -o <wert> -s <wert>
@@ -116,4 +116,4 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Nächste Schritte
 {: #next-steps}
 
-Sie sind jetzt bereit, Ihre erste Anwendung zu entwickeln und bereitstellen. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps/create-deploy-cli.html).
+Sie sind jetzt bereit, Ihre erste Anwendung zu entwickeln und bereitzustellen! Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps/create-deploy-cli.html).

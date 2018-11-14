@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-010-03"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -39,10 +39,10 @@ lastupdated: "2018-010-03"
 
 [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 다음 시스템 요구사항이 필요합니다.
 
-* Windows를 실행하는 경우 Windows 10 Pro를 실행하지 않으면 일부 기능이 지원되지 않을 수 있습니다.
+* Windows를 실행하는 경우 Windows 10 Pro를 실행하지 않으면 일부 기능이 지원되지 않습니다.
 * 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다.
 
-## 1단계. 설치 명령 실행
+## 1단계: 설치 명령 실행
 {: #step1}
 
 * Mac 및 Linux의 경우 다음 명령을 실행하십시오.
@@ -81,7 +81,7 @@ ibmcloud dev help
 ## 3단계. 환경 구성
 {: #step3}
 
-1. {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트에 연결하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 미국 남부 지역에 연결하십시오.
+1. {{site.data.keyword.Bluemix_notm}} 위치의 API 엔드포인트에 연결하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 댈러스 위치에 연결하십시오.
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -106,7 +106,7 @@ ibmcloud dev help
 	```
 	{: codeblock}
 
-	선택적으로 위 명령의 출력을 사용하여, 다음 명령을 통해 조직 및 영역을 수동으로 설정할 수 있습니다.
+	선택적으로 이전 명령의 출력을 사용하여, 다음 명령을 통해 조직 및 영역을 수동으로 설정할 수 있습니다.
 
 	```
 	ibmcloud target -o <value> -s <value>
@@ -116,4 +116,4 @@ ibmcloud dev help
 ## 다음 단계
 {: #next-steps}
 
-이제 첫 번째 애플리케이션을 개발하고 배치할 준비가 되었습니다. 자세한 정보는 [CLI를 사용하여 앱 작성 및 배치](/docs/apps/create-deploy-cli.html)를 참조하십시오.
+이제 첫 번째 애플리케이션을 개발하고 배치할 준비가 되었습니다! 자세한 정보는 [CLI를 사용하여 앱 작성 및 배치](/docs/apps/create-deploy-cli.html)를 참조하십시오.
