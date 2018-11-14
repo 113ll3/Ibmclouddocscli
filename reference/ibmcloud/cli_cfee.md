@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-08"
 ---
 
 {:new_window: target="_blank"}
@@ -50,6 +50,13 @@ Use the following commands to manage CFEE environments, orgs, spaces, users and 
  <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
  <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
  <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
+ <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
+ <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
+ <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
+ <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
  </tr>
  </tbody>
  </table>
@@ -729,3 +736,149 @@ Display all users in space `space_example` and org `org_example` and environment
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+
+## ibmcloud cfee create
+{: #ibmcloud_cfee_create}
+
+Make request to a create a new instance of Cloud Foundry Enterprise Environment
+
+```
+ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login, Target
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>NAME (required)</dt>
+   <dd>The name of the instance.</dd>
+   <dt>LOCATION (required)</dt>
+   <dd>The location to create the instance in.</dd>
+   <dt>--cells CELLS</dt>
+   <dd>Specify the number of cells for this CFEE. The default is 2, and minimum is 1. In a 1 cell CFEE, there cannot be high availability.</dd>
+   <dt>--isolation ISOLATION</dt>
+   <dd>Specifiy the isolation of the IBM Kubernetes cluster. Options are "dedicated" and "shared". The default is "shared", and a "dedicated" cluster does charge more.</dd>
+   <dt>--private-vlan ID</dt>
+   <dd>Specify ID of private VLAN. By default, we will find an available set of VLANs or create a pair for you.</dd>
+   <dt>--public-vlan ID</dt>
+   <dd>Specify ID of public VLAN. By default, we will find an available set of VLANs or create apair for you.</dd>
+   <dt>--plan ID</dt>
+   <dd>Specify ID of plan. By default, we will provision into Standard plan.</dd>
+  </dl>
+
+<strong>Examples</strong>:
+
+Create an instance named `test-cfee` in `dal10`:
+
+```
+ibmcloud cfee create test-cfee dal10
+```
+
+Create a `dedicated` instance named `test-cfee` in `dal10` with `4` cells:
+
+```
+ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
+```
+
+## ibmcloud cfee create-locations
+{: #ibmcloud_cfee_create_locations}
+
+Make request to get a list of available datacenters for the targeted regions
+
+```
+ibmcloud cfee create-locations
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+
+
+## ibmcloud cfee create-permission-get
+{: #ibmcloud_cfee_create_permission_get}
+
+Check if a user has all the permissions required to create a CFEE instance. The command checks the following access policies for the target user: Editor to the CFEE services, administrator role to the Kubernetes Service, editor platform role and manager service access role to the Cloud Object Storage service, and developer role to the current space in the current org for provisioning Compose for PostgreSQL
+
+```
+ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login, Target
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>USER_NAME (required)</dt>
+   <dd>The name of the user.</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>The name of the access group to check permissions in. The default access group is "cfee-provision-access-group".</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Specify permissions output format, only JSON is supported now.</dd>
+  </dl>
+  
+<strong>Examples</strong>:
+
+Check CFEE create permissions for user `name@example.com`:
+
+```
+ibmcloud cfee create-permission-get name@example.com
+```
+
+Check CFEE create permissions for user `name@example.com` and in access group `test-access-group`:
+
+```
+ibmcloud cfee create-permission-get name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-permission-set
+{: #ibmcloud_cfee_create_permission_set}
+
+Give user all the permissions required to create a CFEE instance. The command creates the following access policies for the target user:  Editor role to the CFEE service, administrator role to the Kubernetes service, editor platform role and manager service access role to the Cloud Object Storage service, and developer role to the current space in the current org for provisioning Compose for PostgreSQL
+
+```
+ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login, Target
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>USER_NAME (required)</dt>
+   <dd>The name of the user.</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>The name of the access group to give permissions in. The default access group is "cfee-provision-access-group".</dd>
+  </dl>
+  
+<strong>Examples</strong>:
+
+Give CFEE create permissions to user `name@example.com` via the default access group:
+
+```
+ibmcloud cfee create-permission-set name@example.com
+```
+
+Give CFEE create permissions to user `name@example.com` via access group `test-access-group`:
+
+```
+ibmcloud cfee create-permission-set name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-status
+{: #ibmcloud_cfee_create_status}
+
+Check the provisioning status of a CFEE instance
+
+```
+ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>NAME or ID (required)</dt>
+   <dd>The name or id of the CFEE instance.</dd>
+   <dt>--poll</dt>
+   <dd>Specify if you'd like to make this call recurring, to poll until in stable state</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Specify the status output format, only JSON is supported now.</dd>
+  </dl>
