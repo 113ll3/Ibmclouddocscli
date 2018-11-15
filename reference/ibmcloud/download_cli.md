@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -18,9 +18,9 @@ lastupdated: "2018-11-05"
 # Installing the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI provides the command line interface for managing resources in {{site.data.keyword.Bluemix_notm}}. You can still use the cf CLI to login to {{site.data.keyword.Bluemix_notm}}, but it only works with a Cloud Foundry service in {{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.Bluemix_notm}} CLI provides the command line interface for managing resources in {{site.data.keyword.Bluemix_notm}}. You can still use the `cf` CLI to log in to {{site.data.keyword.Bluemix_notm}}, but it only works with a Cloud Foundry service in {{site.data.keyword.Bluemix_notm}}. 
 
-If you want to install both the {{site.data.keyword.Bluemix}} CLI and other recommended plugins and tools for developing applications for {{site.data.keyword.Bluemix_notm}}, follow the method described [here](/docs/cli/index.html).
+If you want to install both the {{site.data.keyword.Bluemix}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.Bluemix_notm}}, follow the method described [here](/docs/cli/index.html).
 {: tip}
 
 Use the following steps to install the stand-alone {{site.data.keyword.Bluemix_notm}} CLI:
@@ -35,22 +35,22 @@ Use the following steps to install the stand-alone {{site.data.keyword.Bluemix_n
    For 32 bit and earlier versions, go to [all versions](/docs/cli/reference/ibmcloud/all_versions.html) page to download
 
 1. Run the installer
-   * For macOS and windows, just run the installer.
+   * For macOS and windows, run the installer.
    * For Linux, extract the package and run the `install` script.
 
-1. Target an API endpoint and login to {{site.data.keyword.Bluemix_notm}}
+1. Target an API endpoint and log in to {{site.data.keyword.Bluemix_notm}}
 
    ```
    ibmcloud login
    ```
    {: codeblock}
    
-Now you are ready to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `ibmcloud help` to see the command descriptions.
+Now you're ready to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `ibmcloud help` to see the command descriptions.
 
-If you are using a federated ID, follow the instructions [here](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) to log in with a one-time passcode or an API key.  
+If you're using a federated ID, follow the instructions [here](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) to log in with a one-time passcode or an API key.  
 {: tip}
 
-Besides installers, you can have other options to install the {{site.data.keyword.Bluemix_notm}} CLI:
+Other than installers, you can have other options to install the {{site.data.keyword.Bluemix_notm}} CLI:
 
 * Install from shell
 * Download binary package and install to a custom directory
@@ -87,7 +87,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## Install to a custom directory
 
-When you use installers or a shell script to install the {{site.data.keyword.Bluemix_notm}} CLI, the binaries will go to your system directories. If you want to specify a different directory, use the following steps.
+When you use installers or a shell script to install the {{site.data.keyword.Bluemix_notm}} CLI, the binaries go to your system directories. If you want to specify a different directory, use the following steps.
 
 ### Step 1: Download the binary package based on your OS by using the following links.
 
@@ -102,7 +102,7 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
 
 ### Step 2: Extract the package to a directory that you specify.
 
-   After extracting the package, the content will look like the following:
+   After you extract the package, the content will look like the following:
 
    For Linux and MacOS
 
@@ -135,7 +135,7 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
 ### Step 3: Add to the `PATH` environment variable and enable shell autocompletion.
 
    * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
-   * For shell autocompletion support (MacOS and Linux only), refer to [this guide](enable_cli_autocompletion.html).
+   * For shell autocompletion support (MacOS and Linux only), refer to [Enable CLI Autocompletion](enable_cli_autocompletion.html).
    
 ## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
 
@@ -146,8 +146,8 @@ The following sections provide details on how to uninstall the stand-alone {{sit
 1. Click the `Start` button, and then select `Control Panel`.
 2. In the pop-up window, click `Uninstall a program`.
 3. In the pop-up application list, locate `IBM Cloud Command Line Interface`.
-4. Right click `IBM Cloud Command Line Interface`, and select `Uninstall`.
-5. The uninstaller will be launched. Follow the instructions to finish the uninstallation.
+4. Right-click `IBM Cloud Command Line Interface`, and select `Uninstall`.
+5. The uninstaller is started. Follow the instructions to finish the uninstallation.
 
 ### Uninstalling on Linux/macOS
 
@@ -159,23 +159,23 @@ The following sections provide details on how to uninstall the stand-alone {{sit
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
+2. Clean up the autocompletion scripts, if you configured them. For more information, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
 
 #### Version `0.9.0` and later
 
 1. Open a terminal, and run the following command:
   * `/usr/local/ibmcloud/bin/uninstall`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
+2. Clean up the autocompletion scripts, if you configured them. For more information, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
 
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
 
-* [Extend {{site.data.keyword.Bluemix_notm}} CLI capabilities with plugins](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [Extend {{site.data.keyword.Bluemix_notm}} CLI capabilities with plug-ins](/docs/cli/reference/ibmcloud/extend_cli.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI reference](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## Report issues and submit feedback
 {: #issues}
 
 Use the following options to report issues or submit new feature requests:
- * Create issues in [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
+ * Create issues in [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
  * Leave messages in the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
