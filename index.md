@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -39,7 +39,7 @@ With this installation, you get the stand-alone {{site.data.keyword.Bluemix_notm
 
 You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and the following system requirements:
 
-* If you are running Windows, some functions are not be supported if you are not running Windows 10 Pro.
+* If you're running Windows, some functions aren't supported if you aren't running Windows 10 Pro.
 * You must use the stable channel for Docker with a minimum version of 1.13.1.
 
 ## Step 1. Run the installation command
@@ -116,4 +116,4 @@ The output lists the usage instructions, the current version, and the supported 
 ## Next steps
 {: #next-steps}
 
-You're now ready to develop and deploy your first application! See [Creating and deploying apps by using the CLI](/docs/apps/create-deploy-cli.html) for more information.
+You're now ready to develop and deploy your first application! For more information, see [Creating and deploying apps by using the CLI](/docs/apps/create-deploy-cli.html).
