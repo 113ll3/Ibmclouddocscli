@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-10-21"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2018-10-17"
 
 # VLAN
 
-Las redes de área local virtual (VLAN) son utilizadas por {{site.data.keyword.cloud}} para aislar el tráfico de difusión en las redes públicas y privadas. Las VLAN se asignan según sea necesario para satisfacer otras ofertas.
+Las redes de área local virtual (VLAN) son utilizadas por {{site.data.keyword.cloud}} para aislar el tráfico de difusión en las redes públicas y privadas.
 
 Utilice los mandatos siguientes para gestionar VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
