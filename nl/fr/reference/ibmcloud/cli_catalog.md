@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ Les commandes suivantes permettent de gérer les entrées de catalogue {{site.da
 Effectuer des recherches dans des entrées de catalogue
 
 ```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
@@ -63,7 +63,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>-k, --kind</dt>
   <dd>Filtrer par type de ressource. Actuellement, seules les options "service-cf", "iaas", "runtime", "template" et "dashboard" sont prises en charge.</dd>
   <dt>-p, --price</dt>
-  <dd>Filtrer par prix. Actuellement, seuls les options "free", "paygo", "bluemix-subscription" sont prises en charge.</dd>
+  <dd>Filtrer par prix. Actuellement, seules les options "free", "paygo", "ibmcloud-subscription" sont prises en charge. </dd>
   <dt>-t, --tag</dt>
   <dd>Filtrer par étiquette.</dd>
   <dt>--sort-by</dt>
@@ -72,8 +72,8 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dd>Spécifier des colonnes supplémentaires pour la table. En général, "groupe", "fournisseur" et "étiquettes"</dd>
   <dt>--reverse</dt>
   <dd>Inverser l'ordre de tri</dd>
-  <dt>--json</dt>
-  <dd>Imprimer la réponse JSON d'origine</dd>
+  <dt>--output TYPE (facultatif)</dt>
+  <dd>--output value  Indiquez un type de sortie. Seul JSON est actuellement pris en charge. Cette option exclut '--id'.</dd>
   <dt>--csv</dt>
   <dd>Fichier CSV de sortie</dd>
   <dt>--global</dt>
@@ -94,7 +94,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 Obtenir une entrée de catalogue
 
 ```
-ibmcloud catalog entry ID [--global]
+ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
@@ -103,8 +103,8 @@ ibmcloud catalog entry ID [--global]
 <dl>
   <dt>--children</dt>
   <dd>Obtenir tous les enfants de l'entrée de catalogue</dd>
-  <dt>--json</dt>
-  <dd>Imprimer la réponse JSON d'origine</dd>
+  <dt>--output TYPE (facultatif)</dt>
+  <dd>--output value  Indiquez un type de sortie. Seul JSON est actuellement pris en charge. </dd>
   <dt>--global</dt>
   <dd>Exploiter dans une portée globale</dd>
 </dl>
@@ -199,7 +199,7 @@ ibmcloud catalog delete 'j402-dnf1i'
 Obtenir la visibilité pour une entrée de catalogue (administrateur de catalogue d'un compte uniquement)
 
 ```
-ibmcloud catalog entry-visibility ID [--global]
+ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
@@ -208,6 +208,8 @@ ibmcloud catalog entry-visibility ID [--global]
 <dl>
   <dt>-json</dt>
   <dd>Imprimer la réponse JSON d'origine</dd>
+  <dt>--output TYPE (facultatif)</dt>
+  <dd>--output value  Indiquez un type de sortie. Seul JSON est actuellement pris en charge. </dd>
   <dt>-global</dt>
   <dd>Exploiter dans une portée globale</dd>
 </dl>
@@ -386,7 +388,7 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 Obtenir un sous-ensemble de choix de régions dans le format de votre choix.
 
 ```
-ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```
 
 <strong>Options de commande</strong> :
@@ -398,8 +400,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>Obtenir une liste d'entrées pour le type indiqué.</dd>
   <dt>--col</dt>
   <dd>Spécifier des colonnes supplémentaires pour la table. Actuellement "groupe", "fournisseur" et "balises".</dd>
-  <dt>--json</dt>
-  <dd>Sortie de la réponse JSON d'origine.</dd>
+  <dt>--output TYPE (facultatif)</dt>
+  <dd>--output value  Indiquez un type de sortie. Seul JSON est actuellement pris en charge. Cette option exclut '--id'.</dd>
   <dt>--global</dt>
   <dd>Exploiter dans une portée globale.</dd>
   <dt>--csv</dt>

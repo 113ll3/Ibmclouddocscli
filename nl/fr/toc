@@ -16,10 +16,9 @@ Interface de ligne de commande IBM Cloud et Developer Tools
 	idt/index.md
 
 	{: .topicgroup}
-	Extensions IBM Cloud Developer Tools IDE
+	Extensions IDE pour IBM Cloud Developer Tools
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/eclipsetools.md
 
 	{: topicgroup}
 	Débogage
@@ -28,7 +27,7 @@ Interface de ligne de commande IBM Cloud et Developer Tools
 
 	{: .navgroup id="reference"}
 	{: .topicgroup}
-	Commandes de l'interface de ligne de commande IBM Cloud (ibmcloud)
+	Commandes d'interface de ligne de commande IBM Cloud (ibmcloud)
 		reference/ibmcloud/bx_cli.md
 		reference/ibmcloud/cli_acct_org_role.md
 		reference/ibmcloud/cli_billing.md
@@ -47,6 +46,7 @@ Interface de ligne de commande IBM Cloud et Developer Tools
 		reference/ibmcloud/cli_image.md
 		reference/ibmcloud/cli_ipsec_vpn.md
 		reference/ibmcloud/cli_load_balancer.md
+		reference/ibmcloud/cli_order.md
 		reference/ibmcloud/cli_plugin.md
 		reference/ibmcloud/cli_resource_group.md
 		reference/ibmcloud/cli_security.md

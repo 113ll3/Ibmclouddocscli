@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018
-lastupdated: "2018-10-11"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -30,7 +30,7 @@ Le conteneur Docker {{site.data.keyword.dev_cli_notm}} vous permet d'obtenir l'i
 ## Avant de commencer
 {: #prereq}
 
-Vous devez avoir un [compte {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icône de lin externe](../../../icons/launch-glyph.svg "Icône de lien externe") et vous devez installer la dernière version Docker stable avant d'effectuer les étapes suivantes : 
+Vous devez avoir un [compte {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icône de lin externe](../../../icons/launch-glyph.svg "Icône de lien externe") et vous devez installer la dernière version Docker stable avant d'effectuer les étapes suivantes :
 
 ## Etape 1. Extraire l'image Docker du concentrateur Docker
 {: #step1}
@@ -62,4 +62,9 @@ ibmcloud login
 Si vos données d'identification sont rejetées, vous pouvez utiliser un ID fédéré. Pour plus de détails, voir [Connexion à l'aide d'un ID fédéré](/docs/iam/login_fedid.html#federated_id).
 {: tip}
 
-Vous êtes maintenant prêt à utiliser {{site.data.keyword.dev_cli_notm}} pour gérer des ressources {{site.data.keyword.Bluemix_notm}} et développer et déployer vos applications. 
+Le plug-in d'interface de ligne de commande {{site.data.keyword.dev_cli_long}} utilise deux conteneurs pour faciliter la génération et le test de votre application. Le premier est le conteneur tools, qui contient les utilitaires nécessaires pour générer et tester votre application. Le fichier `Dockerfile` pour ce conteneur est défini par le paramètre [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters). Vous pouvez le considérer comme un conteneur de développement car il contient les outils qui sont normalement utilisés pour le développement d'un environnement d'exécution particulier.
+
+Le second conteneur est le conteneur "run" qui reproduit fidèlement l'environnement d'exécution réel de votre application une fois celle-ci déployée sur le cloud. Il peut être déployé pour être utilisé dans {{site.data.keyword.Bluemix_notm}}, par exemple. Par conséquent, un point
+d'entrée démarrant votre application est défini. Lorsque vous choisissez d'exécuter votre application via le plug-in d'interface de ligne de commande {{site.data.keyword.dev_cli_long}},  ce conteneur est utilisé. Le fichier `Dockerfile` pour ce conteneur est défini par le paramètre [`dockerfile-run`](/docs/cli/idt/commands.html#run-parameters). 
+
+Vous êtes maintenant prêt à utiliser {{site.data.keyword.dev_cli_notm}} pour gérer des ressources {{site.data.keyword.Bluemix_notm}} et développer et déployer vos applications.

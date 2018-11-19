@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-10-18"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -137,35 +137,35 @@ Lorsque vous utilisez des programmes d'installation ou un script shell pour inst
    * Ajoutez `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` à la variable d'environnement `PATH`.
    * Pour le support de l'exécution automatique de shell (MacOS et Linux uniquement), consultez [ce guide](enable_cli_autocompletion.html).
    
-<!-- ## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
+## Désinstallation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} autonome
 
-The following sections provide details on how to uninstall the stand-alone {{site.data.keyword.Bluemix_notm}} CLI on specific platforms.
+Les sections ci-après contiennent des informations détaillées relatives à la désinstallation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} autonome sur certaines plateformes. 
 
-### Uninstalling on Windows
+### Désinstallation sous Windows
 
-1. Click the `Start` button, and then select `Control Panel`.
-2. In the pop-up window, click `Uninstall a program`.
-3. In the pop-up application list, locate `IBM Cloud Command Line Interface`.
-4. Right click `IBM Cloud Command Line Interface`, and select `Uninstall`.
-5. The uninstaller will be launched. Follow the instructions to finish the uninstallation.
+1. Cliquez sur le bouton `Démarrer`, puis sélectionnez `Panneau de configuration`.
+2. Dans la fenêtre en incrustation, cliquez sur `Désinstaller un programme`.
+3. Dans la liste d'applications en incrustation, recherchez `IBM Cloud Command Line Interface`.
+4. Cliquez à l'aide du bouton droit de la souris sur `IBM Cloud Command Line Interface` et sélectionnez `Désinstaller`.
+5. Le programme d'installation est alors lancé. Suivez les instructions pour mener à terme la désinstallation.
 
-### Uninstalling on Linux/macOS
+### Désinstallation sous Linux/macOS
 
-#### Prior to version `0.9.0`
+#### Avant la version `0.9.0`
 
-1. Open a terminal, and run the following commands:
+1. Ouvrez un terminal et exécutez les commandes suivantes :
   * `rm -rf /usr/local/ibmcloud`
   * `rm -f /usr/local/bin/ibmcloud`
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
+2. Nettoyez les scripts d'exécution automatique, si vous les avez configurés. Pour plus d'informations, voir [Activation de l'exécution automatique de l'interface de ligne de commande](enable_cli_autocompletion.html).
 
-#### Version `0.9.0` and later
+#### Version `0.9.0` et versions ultérieures
 
-1. Open a terminal, and run the following command:
-  * `/usr/local/ibmcloud/uninstall`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html). -->
+1. Ouvrez un terminal et exécutez la commande suivante :
+  * `/usr/local/ibmcloud/bin/uninstall`
+2. Nettoyez les scripts d'exécution automatique, si vous les avez configurés. Pour plus d'informations, voir [Activation de l'exécution automatique de l'interface de ligne de commande](enable_cli_autocompletion.html).
 
 
 ## Autres liens permettant d'explorer davantage l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}

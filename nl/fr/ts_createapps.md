@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -14,18 +14,20 @@ lastupdated: "2018-10-04"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note: .deprecated}
+{:note:.deprecated}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# Traitement des incidents liés au plug-in {{site.data.keyword.Bluemix_notm}} Developer Tools CLI
+# Traitement des incidents liés au plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} Developer Tools
 {: #troubleshoot}
 
-Les problèmes d'ordre général liés à l'utilisation de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour créer des applications peuvent inclure des échecs de déploiement ou l'échec de l'extraction du code lors de la création d'une application. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
+Les problèmes d'ordre général liés à l'utilisation de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour créer des applications peuvent inclure des échecs de déploiement ou l'échec de l'extraction du code. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
 {:shortdesc}
 
-## Erreur de nom d'hôte lors de la création d'une application avec un modèle non mobile
+## Pour quelle raison une erreur de nom d'hôte s'affiche-t-elle lors de la création d'une application avec un modèle non mobile ?
 {: #hostname-error}
+{: troubleshoot}
 
-L'erreur suivante peut s'afficher si vous utilisez l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour déployer une application sur Cloud Foundry. Si vous entrez un nom d'hôte que vous jugez unique, il se peut que le message suivant s'affiche tout de même :
+L'erreur suivante peut s'afficher si vous utilisez l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour déployer une application sur Cloud Foundry. Si vous entrez un nom d'hôte unique, il se peut que le message suivant s'affiche tout de même :
 
 ```
 The hostname <myHostname> is taken.
@@ -36,18 +38,18 @@ The hostname <myHostname> is taken.
 Cette erreur est provoquée par un jeton de connexion ayant expiré.
 {: tsCauses}
 
-Connectez-vous à nouveau.
-
+Reconnectez-vous à l'aide de la commande suivante :
 ```
 ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
 
-## Défaillances d'ordre général au niveau de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}}
+## Pour quelle raison des échecs de commande générale se produisent-ils ?
 {: #general}
+{: troubleshoot}
 
-L'erreur suivante peut s'afficher si vous utilisez les commandes de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} `create`, `delete`, `list` ou `code` :
+L'erreur suivante peut s'afficher si vous utilisez les commandes `create`, `delete`, `list` ou `code` :
 
 ```
 Failed to <command> application.
@@ -58,54 +60,51 @@ Failed to <command> application.
 Cette erreur est provoquée par un jeton de connexion ayant expiré.
 {: tsCauses}
 
-Connectez-vous à nouveau.
-
+Reconnectez-vous à l'aide de la commande suivante :
 ```
 ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
 
-## Erreur : aucune image de ce type lorsque vous exécutez une nouvelle application
+## Pour quelle raison l'image de ma nouvelle application n'est-elle pas reconnue ?
 {: #nosuchimage}
+{: troubleshoot}
 
-L'erreur suivante peut s'afficher lorsque vous exécutez une application alors que vous ne l'avez pas généré :
+L'erreur suivante peut s'afficher lorsque vous tentez d'exécuter une application sans l'avoir préalablement générée :
 
 ```
 $ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
-Creating image bx-dev-testProject based on Dockerfile...
-OK
+Creating image ibmcloud-dev-testProject based on Dockerfile...
+OK                    
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
-Error: No such image: bx-dev-testProject
+Error: No such image: ibmcloud-dev-testProject
 ```
 {: tsSymptoms}
 
-Vous devez générer une application avant de l'exécuter.
-{: tsCauses}
-
-Exécutez la commande suivante dans votre répertoire d'application en cours pour générer votre application :
-
+Vous devez générer une application avant de l'exécuter. Exécutez la commande suivante dans votre répertoire d'application en cours :
 ```
 ibmcloud dev build
 ```
 {: codeblock}
+{: tsCauses}
 
 Exécutez la commande suivante dans votre répertoire d'application en cours pour démarrer votre application :
-
 ```
 ibmcloud dev run
 ```
 {: tsResolve}
 
-## Erreur du courtier de services lorsque vous ajoutez la fonction {{site.data.keyword.objectstorageshort}}
+## Pour quelle raison une erreur de courtier de services s'affiche-t-elle lorsque j'ajoute la fonction {{site.data.keyword.objectstorageshort}} ?
 {: #os}
+{: troubleshoot}
 
-L'erreur suivante peut s'afficher si vous utilisez l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour créer deux applications avec la fonctionnalité {{site.data.keyword.objectstorageshort}} :
+L'erreur suivante peut s'afficher si vous utilisez l'interface de ligne de commande pour créer deux applications avec la fonctionnalité {{site.data.keyword.objectstorageshort}} :
 
 ```
 FAILED
@@ -117,13 +116,14 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 Cette erreur est liée au service {{site.data.keyword.objectstorageshort}}, qui ne fournit qu'une seule instance du plan {{site.data.keyword.objectstorageshort}} gratuit.
 {: tsCauses}
 
-Choisissez un autre plan pour éviter cette erreur.
+Sélectionnez un autre plan.
 {: tsResolve}
 
-## Echec de l'obtention du code lors de la création d'une application
+## Pour quelle raison mon code n'est-il pas extrait lorsque je crée une application ?
 {: #code}
+{: troubleshoot}
 
-L'erreur suivante peut s'afficher si vous utilisez l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour créer une application :
+L'erreur suivante peut s'afficher si vous utilisez l'interface de ligne de commande pour créer une application :
 
 ```
 FAILED                            
@@ -136,9 +136,9 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 Cette erreur est due à un dépassement de délai interne.
 {: tsCauses}
 
-Vous pouvez obtenir le code de l'une des façons suivantes :
+Procédez de l'une des façons suivantes pour obtenir le code :
 
-* Exécutez la commande suivante en utilisant l'interface de ligne de commande :
+* Exécutez la commande suivante :
 
    ```
    ibmcloud dev code <your-app-name>
@@ -152,20 +152,20 @@ Vous pouvez obtenir le code de l'une des façons suivantes :
 	1. Sélectionnez votre application [ ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/appservice/apps) dans {{site.data.keyword.dev_console}}.
 
 	2. Cliquez sur **Télécharger le code**.
-
 {: tsResolve}
 
-## Erreur lors de l'exécution de la commande `ibmcloud dev run` pour les applications Node.js
+## Pour quelle raison l'exécution de la commande `ibmcloud dev run` échoue-t-elle pour les applications Node.js ?
 {: #node}
+{: troubleshoot}
 
-L'erreur suivante peut s'afficher si vous exécutez `ibmcloud dev run` avec l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour des applications BFF ou Web Node.js :
+L'erreur suivante peut s'afficher si vous exécutez la commande `ibmcloud dev run` pour les applications Web Node.js ou BFF :
 
 ```
 module.js:597
   return process.dlopen(module, path._makeLong(filename));
                  ^
 
-Error: /app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
+Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
     at Error (native)
     at Object.Module._extensions..node (module.js:597:18)
     at Module.load (module.js:487:32)
@@ -174,7 +174,7 @@ Error: /app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/appm
     at Function.Module._load (module.js:438:3)
     at Module.require (module.js:497:17)
     at require (internal/module.js:20:19)
-    at Object.<anonymous> (/app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
+    at Object.<anonymous> (/app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
@@ -187,25 +187,25 @@ Cette erreur survient lorsque le module `appmetrics` est installé dans une arch
 Supprimez le dossier `node_modules` et exécutez à nouveau la commande `ibmcloud dev run`.
 {: tsResolve}
 
-## Echec du déploiement sur {{site.data.keyword.Bluemix_notm}}
+## Pour quelle raison ne puis-je pas déployer {{site.data.keyword.Bluemix_notm}} ?
+{: troubleshoot}
 
-Une défaillance se produit lorsque vous tentez d'effectuer un déploiement sur {{site.data.keyword.Bluemix_notm}} avec l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} mais aucune erreur ne s'affiche.
+Une erreur se produit lorsque vous tentez d'effectuer un déploiement sur {{site.data.keyword.Bluemix_notm}} et qu'aucune erreur ne s'affiche.
 {: tsSymptoms}
 
 Vous n'êtes peut-être pas connecté à votre compte.
 {: tsCauses}
 
-Connectez-vous et réessayez.
-
+Relancez l'exécution de la commande suivante pour vous connecter puis faites une nouvelle tentative.
 ```
 ibmcloud login
 ```
 {: tsResolve}
 
-## Echec du déploiement sur Kubernetes sur {{site.data.keyword.Bluemix_notm}}
+## Pour quelle raison ne puis-je pas effectuer un déploiement de Kubernetes sur {{site.data.keyword.Bluemix_notm}} ?
+{: troubleshoot}
 
 L'erreur suivante peut s'afficher après que vous avez entré votre nom de cluster :
-
 ```
 FAILED
 Failed to execute the action:  exit status 1:
@@ -216,23 +216,21 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 {: tsSymptoms}
 
 Cela est très probablement dû à un nom de cluster non valide. Vous pouvez confirmer la cause de cette erreur en exécutant la même commande avec l'option `--trace`, qui permet d'afficher les détails suivants dans la sortie d'erreur :
-
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 {: tsCauses}
 
 Assurez-vous que le cluster utilisé est correct et que vous l'avez bien configuré pour déploiement en exécutant la commande suivante :
-
 ```
 ibmcloud cs cluster-config <nom_cluster>
 ```
 {: tsResolve}
 
-## Echec du déploiement d'une cible d'image
+## Pour quelle raison ne puis-je pas déployer une cible d'image ?
+{: troubleshoot}
 
 L'erreur suivante peut s'afficher après que vous avez indiqué la cible d'image de déploiement :
-
 ```
 FAILED
 Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
@@ -244,47 +242,45 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-na
 {: tsSymptoms}
 
 Cela est très probablement dû à une cible d'image de déploiement non valide. Plus spécifiquement, l'espace de nom, qui est la valeur du milieu dans la cible d'image de déploiement, n'est peut-être pas valide.
+{: tsCauses}
 
-Assurez-vous que l'espace de nom dans la cible d'image de déploiement correspond à l'un des espaces de nom trouvé à l'issue de l'exécution de la commande suivante :
-
+Assurez-vous que l'espace de nom dans la cible d'image de déploiement correspond à l'un des espaces de nom affichés lorsque vous exécutez la commande suivante :
 ```
 ibmcloud cr namespaces
 ```
 {: tsResolve}
 
-## Réinstallation des outils
-{: #appendix}
+## Pour quelle raison la langue de mon application ne peut-elle pas être déterminée ?
+{: troubleshoot}
 
-Tous les composants prérequis sont installés pour la plupart des utilisateurs à l'aide des programmes d'installation de plateforme. Si vous devez installer manuellement des composants, suivez les instructions ci-dessous :
+L'erreur suivante peut s'afficher lorsque vous tentez de démarrer votre application :
+```
+FAILED
+Could not determine the language of your application.
 
-Pour installer le plug-in dev, vous devez d'abord installer l'[interface de ligne de commande IBM Cloud](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+Try using the --language flag to specify the language of your application 
+directly. 
+```
+{: tsSymptoms}
 
-Pour utiliser le plug-in dev proprement dit, vous devez l'installer en exécutant la commande suivante : `ibmcloud plugin install dev -r IBM Cloud`
+Cette erreur peut être due à l'une des causes suivantes :
+- Exécution de la commande [enable](/docs/cli/idt/commands.html#enable) à partir d'un répertoire qui n'est pas le répertoire source de votre application
+- Application de la commande [enable](/docs/cli/idt/commands.html#enable) pour une application pour une langue qui n'est pas reconnue pour l'instant.
+{: tsCauses}
 
-Pour exécuter et déboguer des applications localement, vous devez également installer [Docker](https://www.docker.com/get-docker).
+Prenez soin d'exécuter la commande à partir du répertoire d'application qui contient le code source pour l'application. Si cela ne résout pas le problème et que la langue figure parmi les [langues prises en charge](/docs/cli/idt/commands.html#enable-language-options), utilisez le paramètre `--language` pour spécifier cette langue.
+{: tsResolve}
 
-Pour déployer une application en tant que conteneur, vous devez également installer Kubernetes, Helm et les plug-in d'interface de ligne de commande IBM Cloud suivants :
+## Pour quelle raison ne puis-je pas générer ou exécuter une application qui a été activée pour le déploiement en cloud ?
+{: troubleshoot}
 
-Pour installer Kubernetes :
-* Utilisateurs Mac :
-`curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl`
+Vous risquez de rencontrer des erreurs lorsque vous tentez de [générer](/docs/cli/idt/commands.html#build) ou d'[exécuter](/docs/cli/idt/commands.html#run) une application qui a été activée.
+{: tsSymptoms}
 
-* Utilisateurs Linux :
-`curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl`
 
-* Utilisateurs Windows :
-`curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe`
+Les nombreuses causes possibles sont décrites dans chacun des liens suivants :
+{: tsCauses}
 
-Pour installer Helm :
-* Utilisateurs Mac et Linux :
-`export DESIRED_VERSION=v2.6.0`
-`curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash`
-
-* Utilisateurs Windows :
-Téléchargez et installez le fichier binaire depuis https://github.com/kubernetes/helm/releases/tag/v2.6.0
-
-Pour installer le plug-in container-registry, entrez la commande suivante :
-`ibmcloud plugin install container-registry`
-
-Pour installer le plug-in container-service, entrez la commande suivante :
-`ibmcloud plugin install container-service`
+- Pour plus d'informations sur la résolution de ce type de problème avec une application Spring, voir [Activation d'applications Spring Boot existantes pour le déploiement en cloud](/docs/java-spring/enable_existing.html#enable_existing).
+- Pour plus d'informations sur la résolution de ce type de problème avec une application `Node.js`, voir [Activation d'applications Node.js existantes pour le déploiement en cloud](/docs/node/enable_existing.html#enable_existing).
+{: tsResolve}
