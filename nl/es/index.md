@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-010-03"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -39,7 +39,7 @@ Con está instalación, obtendrá la CLI de {{site.data.keyword.Bluemix_notm}} a
 
 Necesita una cuenta de [{{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y los siguientes requisitos del sistema:
 
-* Si ejecuta Windows, es posible que algunas funciones no estén soportadas si no se trata de Windows 10 Pro.
+* Si ejecuta Windows, es posible que algunas funciones no reciban soporte si no utiliza Windows 10 Pro.
 * Debe utilizar el canal estable para Docker con una versión mínima de 1.13.1.
 
 ## Paso 1. Ejecutar el mandato de instalación
@@ -81,7 +81,7 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 ## Paso 3. Configurar el entorno
 {: #step3}
 
-1. Conéctese a un punto final de API en su región de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la región EE.UU. sur de {{site.data.keyword.Bluemix_notm}}:
+1. Conéctese a un punto final de API en su ubicación de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la ubicación Dallas de {{site.data.keyword.Bluemix_notm}}:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -106,7 +106,7 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 	```
 	{: codeblock}
 
-	Opcionalmente, puede utilizar la salida del mandato anterior para establecer manualmente su organización y espacio con el siguiente mandato:
+	Si lo desea, también puede utilizar la salida del mandato anterior para establecer manualmente su organización y espacio con el siguiente mandato:
 
 	```
 	ibmcloud target -o <value> -s <value>

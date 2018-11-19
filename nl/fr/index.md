@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-010-03"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -39,10 +39,10 @@ Avec cette installation, vous disposez de l'interface de ligne de commande {{sit
 
 Vous devez avoir un compte [{{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et la configuration système doit être respectée :
 
-* Si vous exécutez Windows, certaines fonctionnalités peuvent ne pas être prises en charge si vous n'utilisez pas Windows 10 Pro.
+* Sous Windows, certaines fonctions ne sont pas prises en charge si vous exécutez Windows 10 Pro.
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
-## Etape 1. Exécuter la commande install
+## Etape 1. Lancez la commande d'installation
 {: #step1}
 
 * Pour Mac et Linux, exécutez la commande suivante :
@@ -81,7 +81,7 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 ## Etape 3. Configurer votre environnement
 {: #step3}
 
-1. Connectez-vous à un noeud final d'API dans votre région {{site.data.keyword.Bluemix_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis :
+1. Connectez-vous à un noeud final d'API sur votre emplacement {{site.data.keyword.Bluemix_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à l'emplacement {{site.data.keyword.Bluemix_notm}}, Dallas :
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -106,7 +106,7 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 	```
 	{: codeblock}
 
-	Vous pouvez si vous le souhaitez utiliser la sortie de la commande ci-dessus pour définir manuellement votre organisation et votre espace à l'aide de la commande suivante :
+	Vous pouvez, si vous le souhaitez, utiliser la sortie de la commande précédente pour définir manuellement votre organisation et votre espace à l'aide de la commande suivante :
 
 	```
 	ibmcloud target -o <value> -s <value>
@@ -116,4 +116,4 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 ## Etapes suivantes
 {: #next-steps}
 
-Vous êtes maintenant prêt à développer et déployer votre première application. Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps/create-deploy-cli.html). 
+Vous êtes maintenant prêt à développer et déployer votre première application ! Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps/create-deploy-cli.html).

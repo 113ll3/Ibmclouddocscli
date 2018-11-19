@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 L'interface de ligne de commande {{site.data.keyword.dev_cli_short}} est un outil de création, de développement et de déploiement d'applications à l'aide d'une ligne de commande qui est utilisée par les développeurs souhaitant utiliser une ligne de commande pour développer des applications Web, mobiles et de microservice de bout en bout. Commencez rapidement avec un jeu d'outils recommandé en exécutant l'un des scripts ci-après.
 {: shortdesc}
 
-## Prérequis pour {{site.data.keyword.dev_cli_notm}}
+## Avant de commencer à utiliser {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
 Inscrivez-vous auprès de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
@@ -28,7 +28,7 @@ Inscrivez-vous auprès de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ib
 
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
-## Installation d'{{site.data.keyword.dev_cli_notm}}
+## Comment installer {{site.data.keyword.dev_cli_notm}}
 {: #installation}
 
 Pour installer le jeu d'outils, vous pouvez exécuter la commande appropriée afin de lancer le programme d'installation. Cette action entraîne l'installation des outils recommandés pour le développement d'{{site.data.keyword.Bluemix_notm}} (s'ils ne sont pas déjà installés) : `Homebrew` (Mac uniquement), `Git`, `Docker`, `Helm`, `kubectl`, `curl`, interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, plug-in {{site.data.keyword.dev_cli_notm}}, plug-in Cloud Functions, plug-in Container Registry, plug-in Container Service et plug-in `sdk-gen`. Pour lancer l'installation, procédez comme suit :
@@ -60,12 +60,12 @@ ibmcloud dev help
 
 Si l'installation a abouti, la sortie devrait indiquer les instructions d'utilisation, la version actuelle et les commandes prises en charge.
 
-La section [Réinstallation d'outils](/docs/troubleshoot/ts_createapps.html#appendix) contient des informations sur l'installation de toutes les dépendances une par une.
+La section [Réinstallation des outils](/docs/troubleshoot/ts_createapps.html#appendix) contient des informations sur l'installation individuelle des dépendances.
 
 ## Configuration de votre environnement
 {: #configure-environment}
 
-1. Connectez-vous à un noeud final d'API dans votre région {{site.data.keyword.Bluemix_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis :
+1. Connectez-vous à un noeud final d'API sur votre emplacement {{site.data.keyword.Bluemix_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à l'emplacement {{site.data.keyword.Bluemix_notm}}, Dallas :
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
@@ -118,9 +118,9 @@ Les ressources suivantes peuvent vous être utiles lorsque vous développez des 
 
 - [Principale page d'arrivée IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Page de produit principale pour l'interface de ligne de commande IDT
 - [Programme d'installation d'IBM Developer Tools](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Référentiel GitHub public contenant des instructions d'installation détaillées
-- [Service IBM Cloud App](https://console.bluemix.net/developer/appservice) - Page de console IBM Cloud qui accompagne les outils IDT pour créer et gérer les applications natives en cloud
+- [Service IBM Cloud App](https://console.bluemix.net/developer/appservice) - Page de la console IBM Cloud qui accompagne les outils IDT pour créer et gérer des applications cloud natives
 - [Signalement de problèmes sur GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
-- [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Demandez un accès par équipe en cliquant [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+- [Canal IBM Cloud Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com) - Pour demander l'accès à l'équipe, cliquez [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
 **Langage ciblé**
 

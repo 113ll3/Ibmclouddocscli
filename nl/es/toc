@@ -16,10 +16,9 @@ IBM Cloud CLI y Developer Tools
 	idt/index.md
 
 	{: .topicgroup}
-	Extensiones IDE de IBM Cloud Developer Tools
+	IBM Cloud Developer Tools IDE Extensions
 		idt/vscode.md
 		idt/jetbrains.md
-		idt/eclipsetools.md
 
 	{: topicgroup}
 	Depuración

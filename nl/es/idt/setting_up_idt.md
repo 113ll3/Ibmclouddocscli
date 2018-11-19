@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-21"
 La CLI de {{site.data.keyword.dev_cli_short}} permite una aproximación mediante la interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones para desarrolladores que desean utilizar una línea de mandatos para desarrollar aplicaciones web de principio a fin, móviles y de microservicios. Comience a trabajar rápidamente con el conjunto de herramientas recomendado ejecutando uno de los scripts siguientes.
 {: shortdesc}
 
-## Requisitos previos para {{site.data.keyword.dev_cli_notm}}
+## Antes de empezar con {{site.data.keyword.dev_cli_notm}}
 {: #prereq}
 
 Regístrese en [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/ibm-registration).
@@ -58,14 +58,14 @@ ibmcloud dev help
 ```
 {: codeblock}
 
-Si la instalación ha sido satisfactoria, la salida debe listar las instrucciones de uso, la versión actual y los mandatos soportados.
+Si la instalación ha sido satisfactoria, la salida muestra instrucciones de uso, la versión actual y los mandatos soportados.
 
 La sección [Reinstalación de herramientas](/docs/troubleshoot/ts_createapps.html#appendix) contiene información para instalar todas las dependencias individualmente.
 
 ## Configure su entorno
 {: #configure-environment}
 
-1. Conéctese a un punto final de API en su región de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la región EE.UU. sur de {{site.data.keyword.Bluemix_notm}}:
+1. Conéctese a un punto final de API en su ubicación de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la ubicación Dallas de {{site.data.keyword.Bluemix_notm}}:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
