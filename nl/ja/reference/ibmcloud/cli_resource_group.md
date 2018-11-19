@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -79,7 +79,7 @@ lastupdated: "2018-10-17"
 リソース・グループをリストします。
 
 ```
-ibmcloud resource groups [--default]
+ibmcloud resource groups [--default] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -88,6 +88,8 @@ ibmcloud resource groups [--default]
 <dl>
   <dt>--default</dt>
   <dd>現行アカウントのデフォルト・グループを取得します。</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -110,7 +112,7 @@ ibmcloud resource groups --default
 リソース・グループの詳細を表示します
 
 ```
-ibmcloud resource group NAME [--id]
+ibmcloud resource group NAME [--id] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -121,6 +123,8 @@ ibmcloud resource group NAME [--id]
   <dd>リソース・グループの名前</dd>
   <dt>--id</dt>
   <dd>ID のみを表示します</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -271,7 +275,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 サービス・インスタンスをリストします
 
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -284,6 +288,8 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
   <dd>場所を基準にフィルター操作します</dd>
   <dt>--long</dt>
   <dd>出力に追加フィールドを表示します</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。 </dd>
 </dl>
 
 <strong>例</strong>:
@@ -333,7 +339,7 @@ ibmcloud resource service-instance my-service-instance
 サービス・インスタンスの作成
 
 ```
-ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -348,8 +354,6 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dd>サービス・プランの名前または ID</dd>
   <dt>LOCATION</dt>
   <dd>サービス・インスタンスを作成するターゲットの場所または環境</dd>
-  <dt>-t, --tags</dt>
-  <dd>タグ</dd>
   <dt>-p, --parameters</dt>
   <dd>サービス・インスタンスを作成するパラメーターの JSON ファイルまたは JSON 文字列</dd>
   <dt>-d, --deployment</dt>
@@ -369,7 +373,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 サービス・インスタンスを更新します
 
 ```
-ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -382,10 +386,10 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, -
   <dd>サービス・インスタンスの ID。NAME と同時に指定することはできません。</dd>
   <dt>-n, --name</dt>
   <dd>新規サービス・インスタンス名</dd>
-  <dt>-t, --tags</dt>
-  <dd>新規タグ</dd>
   <dt>--service-plan-id</dt>
   <dd>新規サービス・プラン ID</dd>
+  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
+  <dd>サービス・インスタンスを作成するパラメーターの JSON ファイルまたは JSON 文字列</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新を強制します</dd>
 </dl>
@@ -433,7 +437,7 @@ ibmcloud resource service-instance-delete my-service-instance
 サービス別名へのバインディングを表示します
 
 ```
-ibmcloud resource service-bindings SERVICE_ALIAS
+ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -442,6 +446,8 @@ ibmcloud resource service-bindings SERVICE_ALIAS
 <dl>
   <dt>SERVICE_ALIAS (必須)</dt>
   <dd>サービス別名</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -457,7 +463,7 @@ ibmcloud resource bindings my-service-alias
 サービス・バインディングの詳細を表示します
 
 ```
-ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
+ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -469,7 +475,9 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
   <dt>APP_NAME</dt>
   <dd>CloudFoundry アプリケーション名</dd>
   <dt>--id</dt>
-  <dd>ID のみを表示します。 このサービス・バインディングの他の出力はすべて抑制されます。</dd>
+  <dd>ID のみを表示します。 このサービス・バインディングの他の出力はすべて抑制されます。 このオプションは、「--output」と同時に指定することはできません。</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、「--id」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -547,7 +555,7 @@ ibmcloud resource service-binding-delete my-service-alias my-app
 サービス・インスタンスまたはサービス別名のサービス・キーをリストします
 
 ```
-ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -562,13 +570,15 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
   <dd>サービス別名 ID</dd>
   <dt>--alias-name</dt>
   <dd>サービス別名</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
 サービス・インスタンス `my-service-instance` のサービス・キーをリストします
 
 ```
-ibmcloud resource service-keys --instance-name my-service-instance
+ibmcloud resource service-keys --instance-name my-service-instance  [--output FORMAT]
 ```
 
 ## ibmcloud resource service-key
@@ -588,6 +598,8 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dd>キーの名前</dd>
   <dt>--id</dt>
   <dd>サービス・キーの ID を表示します</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -643,15 +655,15 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 サービス・キーを削除します
 
 ```
-ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
+ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>KEY_NAME</dt>
-  <dd>キーの名前</dd>
+  <dt>KEY_NAME | KEY_ID</dt>
+  <dd>キーの名前または ID</dd>
   <dt>-f, --force</dt>
   <dd>確認なしで削除を強制します</dd>
 </dl>
@@ -669,7 +681,7 @@ ibmcloud resource service-key-delete my-service-key
 サービス・インスタンスの別名をリストします
 
 ```
-ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
+ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -680,6 +692,8 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
   <dd>従属サービス・インスタンスの ID</dd>
   <dt>--instance-name</dt>
   <dd>従属サービス・インスタンスの名前</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 <strong>例</strong>:
@@ -694,7 +708,7 @@ ibmcloud resource service-aliases my-service-instance
 サービス別名の詳細を表示します
 
 ```
-ibmcloud resource service-alias ALIAS_NAME [--id]
+ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -704,7 +718,9 @@ ibmcloud resource service-alias ALIAS_NAME [--id]
   <dt>ALIAS_NAME (必須)</dt>
   <dd>サービス別名の名前</dd>
   <dt>--id</dt>
-  <dd>指定されたサービス別名の ID のみを表示してください。 この別名の他の出力はすべて抑制されます。</dd>
+  <dd>指定されたサービス別名の ID のみを表示してください。 この別名の他の出力はすべて抑制されます。 このオプションは、「--output」と同時に指定することはできません。</dd>
+  <dt>--output FORMAT (オプション)</dt>
+  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、「--id」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:

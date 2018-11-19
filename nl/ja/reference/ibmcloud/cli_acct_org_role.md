@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -18,49 +18,52 @@ lastupdated: "2018-10-17"
 以下のコマンドを使用して、パブリック Cloud Foundry 環境のアカウント、アカウントに含まれるユーザー、組織、スペース、および役割を管理します。
 {: shortdesc}
 
-  <table summary="アカウント、組織、スペース、および役割を管理するために使用できる ibmcloud コマンド。">
-   <thead>
-   </thead>
-   <tbody>
-   <tr>
-   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
-   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
-   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
-   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
-   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
-   <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
-   <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
-   <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
-   <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
-   <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
-   <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
-   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
-   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
-   <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
-   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
-   <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
-   <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-  </tr>
-   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
-   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
-   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
-   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
-   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
-   </tr>
-   <tr>
-    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-   </tr>
-   </tbody>
-   </table>
+<table summary="アカウント、組織、スペース、および役割を管理するために使用できる ibmcloud コマンド。">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+ <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+ <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+ <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+ <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+ <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
+ <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
+ <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
+ <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+ <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
+ <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
+ <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+ <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+ <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
+ <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+ <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
+ <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
+</tr>
+ <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+ <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+ <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+ <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+ <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
+ </tr>
+ </tbody>
+ </table>
 
  ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
@@ -316,7 +319,7 @@ ibmcloud account space space_example --security-group-rules
 指定された組織内のユーザーを役割別に表示します
 
 ```
-ibmcloud account org-users ORG_NAME [-a]
+ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -327,6 +330,8 @@ ibmcloud account org-users ORG_NAME [-a]
 <dd>組織の名前。</dd>
 <dt>-a (オプション)</dt>
 <dd>指定された組織内のすべてのユーザーを、役割別にグループ化せずにリストします。</dd>
+<dt>--output FORMAT (オプション)</dt>
+<dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -635,3 +640,85 @@ ibmcloud account user-reinvite USER_EMAIL
    <dt>USER_EMAIL (必須)</dt>
    <dd>再度招待されるユーザーの E メール。</dd>
 </dl>
+
+## ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
+
+ドメインの証明書情報をリストします。
+
+```
+ibmcloud app domain-cert DOMAIN_NAME
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>DOMAIN_NAME (必須)</dt>
+<dd>証明書をホストするドメイン。</dd>
+</dl>
+
+
+<strong>例</strong>:
+
+ドメイン `ibmcxo-eventconnect.com` の証明書情報を表示するには、次のように指定します。
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+## ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+現在の組織内の、指定したドメインに証明書を追加します。
+
+```
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+   <dl>
+   <dt>DOMAIN (必須)</dt>
+   <dd>証明書を追加するドメイン。</dd>
+   <dt>-k <i>PRIVATE_KEY_FILE</i> (必須)</dt>
+   <dd>秘密鍵ファイル・パス。</dd>
+   <dt>-c <i>CERT_FILE</i> (必須)</dt>
+   <dd>証明書ファイル・パス。</dd>
+   <dt>-p <i>PASSWORD</i> (オプション)</dt>
+   <dd>証明書のパスワード。</dd>
+   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (オプション)</dt>
+   <dd>中間証明書ファイル・パス。</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i> (オプション)</dt>
+   <dd>トラストストア・ファイル。</dd>
+   </dl>
+
+
+<strong>例</strong>:
+
+ドメイン `ibmcxo-eventconnect.com` に証明書を追加するには、以下のように指定します。
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+## ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+現在の組織内の、指定したドメインから証明書を削除します。
+
+```
+ibmcloud app domain-cert-remove DOMAIN [-f]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+
+   <dl>
+   <dt>DOMAIN (必須)</dt>
+   <dd>証明書を削除するドメイン。</dd>
+   <dt>-f (オプション)</dt>
+   <dd>確認なしで削除を強制します。</dd>
+   </dl>

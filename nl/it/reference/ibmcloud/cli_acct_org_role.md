@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -18,49 +18,52 @@ lastupdated: "2018-10-17"
 Utilizza i seguenti comandi per gestire gli account, gli utenti in un account e l'organizzazione, lo spazio e i ruoli degli ambienti Cloud Foundry pubblici.
 {: shortdesc}
 
-  <table summary="Comandi ibmcloud che puoi utilizzare per gestire account, organizzazioni, spazi e ruoli.">
-   <thead>
-   </thead>
-   <tbody>
-   <tr>
-   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
-   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
-   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
-   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
-   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
-   <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
-   <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
-   <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
-   <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
-   <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
-   <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
-   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
-   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
-   <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
-   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
-   <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
-   <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-  </tr>
-   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
-   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
-   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
-   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
-   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
-   </tr>
-   <tr>
-    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-   </tr>
-   </tbody>
-   </table>
+<table summary="Comandi ibmcloud che puoi utilizzare per gestire account, organizzazioni, spazi e ruoli.">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+ <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+ <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+ <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+ <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+ <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
+ <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
+ <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
+ <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+ <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
+ <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
+ <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+ <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+ <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
+ <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+ <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
+ <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
+</tr>
+ <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+ <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+ <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+ <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+ <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
+ </tr>
+ </tbody>
+ </table>
 
  ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
@@ -314,7 +317,7 @@ Questo comando ha la stessa funzione e le stesse opzioni del comando [cf delete-
 Visualizza gli utenti nell'organizzazione specificata per il ruolo.
 
 ```
-ibmcloud account org-users NOME_ORGANIZZAZIONE [-a]
+ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
@@ -325,6 +328,8 @@ ibmcloud account org-users NOME_ORGANIZZAZIONE [-a]
 <dd>Il nome dell'organizzazione.</dd>
 <dt>-a (facoltativo)</dt>
 <dd>Elenca tutti gli utenti dell'organizzazione specificata, non raggruppati per ruolo.</dd>
+<dt>--output FORMATO (facoltativo)</dt>
+<dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -371,7 +376,7 @@ ibmcloud account org-roles [-u ID_UTENTE]
 ## ibmcloud account org-role-set
 {: #ibmcloud_account_org_role_set}
 
-Assegna un ruolo dell'organizzazione ad un utente. Questa operazione può essere eseguita solo da un gestore organizzazione.
+Assegna un ruolo dell'organizzazione a un utente. Questa operazione può essere eseguita solo da un gestore organizzazione.
 
 ```
 ibmcloud account org-role-set NOME_UTENTE NOME_ORGANIZZAZIONE RUOLO_ORGANIZZAZIONE
@@ -463,7 +468,7 @@ ibmcloud account space-users NOME_ORGANIZZAZIONE NOME_SPAZIO
 ## ibmcloud account space-role-set
 {: #ibmcloud_account_space_role_set}
 
-Assegna un ruolo dello spazio ad un utente. Questa operazione può essere eseguita solo da un gestore spazio.
+Assegna un ruolo dello spazio a un utente. Questa operazione può essere eseguita solo da un gestore spazio.
 
 ```
 ibmcloud account space-role-set NOME_UTENTE NOME_ORGANIZZAZIONE NOME_SPAZIO RUOLO_SPAZIO
@@ -633,3 +638,85 @@ ibmcloud account user-reinvite EMAIL_UTENTE
    <dt>EMAIL_UTENTE (obbligatorio)</dt>
    <dd>L'e-mail dell'utente che viene nuovamente invitato.</dd>
 </dl>
+
+## ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
+
+Elenca le informazioni sul certificato di un dominio.
+
+```
+ibmcloud app domain-cert NOME_DOMINIO
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso
+
+<strong>Opzioni del comando</strong>:
+<dl>
+<dt>NOME_DOMINIO (obbligatorio)</dt>
+<dd>Il dominio che ospita il certificato.</dd>
+</dl>
+
+
+<strong>Esempi</strong>:
+
+Visualizza le informazioni sul certificato del dominio `ibmcxo-eventconnect.com`:
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+## ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+Aggiunge un certificato al dominio specificato nell'organizzazione corrente.
+
+```
+ibmcloud app domain-cert-add DOMINIO -k FILE_CHIAVE PRIVATA -c FILE_CERTIFICATO [-p PASSWORD] [-i FILE_CERTIFICATO_INTERMEDIO] [-t FILE_TRUSTSTORE]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+   <dl>
+   <dt>DOMINIO (obbligatorio)</dt>
+   <dd>Il dominio a cui viene aggiunto il certificato.</dd>
+   <dt>-k <i>FILE_CHIAVE PRIVATA</i> (obbligatorio)</dt>
+   <dd>Il percorso del file della chiave privata.</dd>
+   <dt>-c <i>FILE_CERTIFICATO</i> (obbligatorio)</dt>
+   <dd>Il percorso del file del certificato.</dd>
+   <dt>-p <i>PASSWORD</i> (facoltativo)</dt>
+   <dd>La password per il certificato.</dd>
+   <dt>-i <i>FILE_CERTIFICATO_INTERMEDIO</i> (optional)</dt>
+   <dd>Il percorso del file di certificato intermedio.</dd>
+   <dt>-t <i>FILE_TRUSTSTORE</i> (facoltativo)</dt>
+   <dd>Il file truststore.</dd>
+   </dl>
+
+
+<strong>Esempi</strong>:
+
+Aggiunge un certificato al dominio `ibmcxo-eventconnect.com`:
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+## ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+Rimuove un certificato dal dominio specificato nell'organizzazione corrente.
+
+```
+ibmcloud app domain-cert-remove DOMINIO [-f]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt>DOMINIO (obbligatorio)</dt>
+   <dd>Il dominio da cui rimuovere il certificato.</dd>
+   <dt>-f (facoltativo)</dt>
+   <dd>Forza l'eliminazione senza conferma.</dd>
+   </dl>

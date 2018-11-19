@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -16,11 +16,13 @@ lastupdated: "2018-10-17"
 
 {{site.data.keyword.filestorage_full}} è un {{site.data.keyword.filestorage_short}} basato su NFS e collegato alla rete persistente, rapido e flessibile. In questo ambiente NAS (network-attached storage), hai un controllo totale sulla funzione e le prestazioni delle tue condivisioni di file.
 
-Utilizza i seguenti comandi per gestire un determinato volume nel servizio File Storage dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+Utilizza i seguenti comandi per gestire un determinato volume nel servizio File Storage dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Comandi File Storage dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 1. Archiviazione file dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
+ <th colspan="6">Archiviazione file dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -44,20 +46,24 @@ Utilizza i seguenti comandi per gestire un determinato volume nel servizio File 
   <td>[ibmcloud sl file snapshot-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_list)</td>
   <td>[ibmcloud sl file snapshot-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_order)</td>
   <td>[ibmcloud sl file snapshot-restore](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_restore)</td>
+  <td>[ibmcloud sl file snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_schedule_list)</td>
   <td>[ibmcloud sl file volume-cancel](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_cancel)</td>  
-  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
    </tr>
  <tr>
-   <td>[ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
-   <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
-   <td>[ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
-   <td>[ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
-   <td>[ibmcloud sl file volume-options
+  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
+  <td>[ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
+  <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
+  <td>[ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
+  <td>[ibmcloud sl file volume-modify](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_modify)</td>
+  <td>[ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl file volume-options
 ](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_options)</td>
  </tr>
    </tbody>
  </table>
-
+ 
  ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
@@ -394,6 +400,20 @@ ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 Questo comando ripristina il volume con ID 12345678 dall'istantanea con ID 87654321.
 
+## ibmcloud sl snapshot-schedule-list
+{: #sl_snapshot_schedule_list}
+
+Elenca le pianificazioni dell'istantanea per un volume selezionato
+```
+ibmcloud sl snapshot-schedule-list VOLUME_ID
+```
+
+**Esempi**:
+```
+ibmcloud sl file snapshot-schedule-list 12345678
+```
+Questo comando elenca le pianificazioni dell'istantanea dell'elenco comandi per il volume con ID 12345678
+
 ## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
@@ -538,6 +558,40 @@ ibmcloud sl file volume-order [OPZIONI]
 ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
 Questo comando ordina un volume delle prestazioni con dimensione di 1000GB, IOPS di 4000, ubicato in dal09.
+
+## ibmcloud sl file volume-modify
+{: #sl_file_volume_modify}
+
+Modifica un volume di archiviazione file esistente
+```
+ibmcloud sl file volume-modify ID_VOLUME [OPZIONI]
+```
+
+<strong>Opzioni del comando</strong>:
+<dl>
+<dt>-c, --new-size</dt>
+<dd>Nuova dimensione del volume del file in GB. ***Se non viene fornita alcuna dimensione, viene utilizzata la dimensione originale del volume.*** Dimensioni potenziali: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Minimo: [la dimensione originale del volume]</dd>
+<dt>-i, --new-iops</dt>
+<dd>IOPS archiviazione prestazioni, compreso tra 100 e 6000 in multipli di 100 [solo per i volumi delle prestazioni] ***Se non viene specificato alcun valore IOPS, sarà utilizzato il valore originale del volume.*** Requisiti: [Se l'IOPS/GB originale del volume è inferiore a 0.3, anche il nuovo IOPS/GB deve essere inferiore a 0.3. Se l'IOPS/GB del volume è maggiore di o uguale a 0.3, anche il nuovo IOPS/GB deve essere maggiore di o uguale a 0.3.]</dd>
+<dt>-t, --new-tier</dt>
+<dd>Livello archiviazione durata (IOPS per GB) [solo per i volumi di durata] ***Se non viene specificato un livello, sarà utilizzato quello originale del volume.***
+Requisiti: [Se l'IOPS/GB originale del volume è inferiore a 0.25, anche il nuovo IOPS/GB del volume deve essere 0.25. Se l'IOPS/GB del volume è maggiore di 0.25, anche il nuovo IOPS/GB deve essere maggiore di 0.25.]</dd>
+<dt>-f, --force</dt>
+<dd>Forza l'operazione senza conferma.</dd>
+</dl>
+
+**Esempi**:
+
+```
+ibmcloud sl file volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+Questo comando modifica un volume 12345678 con dimensione 1000GB, IOPS 4000.
+
+```
+ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
+```
+Questo comando modifica un volume 12345678 con dimensione 500GB, livello 4 IOPS per GB.
+
 
 ## ibmcloud sl file volume-options
 {: #sl_file_volume_options}

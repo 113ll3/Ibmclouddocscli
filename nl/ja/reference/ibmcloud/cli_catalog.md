@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ lastupdated: "2018-10-17"
 カタログ項目を検索します
 
 ```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -63,7 +63,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>-k, --kind</dt>
   <dd>リソースの種類を基準にしてフィルター操作します。 現在は、「service-cf」、「iaas」、「runtime」、「template」、および「dashboard」のみがサポートされています。</dd>
   <dt>-p, --price</dt>
-  <dd>価格を基準にしてフィルター操作します。 現在は、「free」、「paygo」、「bluemix-subscription」のみがサポートされています。</dd>
+  <dd>価格を基準にしてフィルター操作します。 現在は、「free」、「paygo」、「ibmcloud-subscription」のみがサポートされています。</dd>
   <dt>-t, --tag</dt>
   <dd>タグを基準にしてフィルター操作します。</dd>
   <dt>--sort-by</dt>
@@ -72,8 +72,8 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dd>表の追加列を指定します。 現在は、「group」、「provider」、および「 tags」です。</dd>
   <dt>--reverse</dt>
   <dd>ソート順序を反転するかどうか</dd>
-  <dt>--json</dt>
-  <dd>元の JSON 応答を出力します</dd>
+  <dt>--output TYPE (オプション)</dt>
+  <dd>--output value  出力タイプを指定します。現在は JSON のみがサポートされています。このオプションは、「--id」と同時に指定することはできません。</dd>
   <dt>--csv</dt>
   <dd>CSV ファイルを出力します</dd>
   <dt>--global</dt>
@@ -94,7 +94,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 カタログ項目を取得します
 
 ```
-ibmcloud catalog entry ID [--global]
+ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -103,8 +103,8 @@ ibmcloud catalog entry ID [--global]
 <dl>
   <dt>--children</dt>
   <dd>カタログ項目のすべての子を取得します</dd>
-  <dt>--json</dt>
-  <dd>元の JSON 応答を出力します</dd>
+  <dt>--output TYPE (オプション)</dt>
+  <dd>--output value  出力タイプを指定します。現在は JSON のみがサポートされています。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
@@ -199,7 +199,7 @@ ibmcloud catalog delete 'j402-dnf1i'
 カタログ項目の可視性を取得します (アカウントのカタログ管理者のみ)
 
 ```
-ibmcloud catalog entry-visibility ID [--global]
+ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -208,6 +208,8 @@ ibmcloud catalog entry-visibility ID [--global]
 <dl>
   <dt>-json</dt>
   <dd>元の JSON 応答を出力します</dd>
+  <dt>--output TYPE (オプション)</dt>
+  <dd>--output value  出力タイプを指定します。現在は JSON のみがサポートされています。</dd>
   <dt>-global</dt>
   <dd>グローバル・スコープで操作します</dd>
 </dl>
@@ -387,7 +389,7 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 選択されたフォーマットで地域の選択サブセットを取得します。
 
 ```
-ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -399,8 +401,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>指定した種類の項目のリストを取得します。</dd>
   <dt>--col</dt>
   <dd>表の追加列を指定します。 現在は、「group」、「provider」、および「tags」です。</dd>
-  <dt>--json</dt>
-  <dd>元の JSON 応答の出力。</dd>
+  <dt>--output TYPE (オプション)</dt>
+  <dd>--output value  出力タイプを指定します。現在は JSON のみがサポートされています。このオプションは、「--id」と同時に指定することはできません。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します。</dd>
   <dt>--csv</dt>

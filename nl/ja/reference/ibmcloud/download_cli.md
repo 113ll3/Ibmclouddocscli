@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-10-18"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -137,35 +137,35 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
    * `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` を `PATH` 環境変数に追加します。
    * shell オートコンプリート機能サポート (MacOS および Linux のみ) については、[このガイド](enable_cli_autocompletion.html)を参照してください。
    
-<!-- ## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
+## スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI のアンインストール
 
-The following sections provide details on how to uninstall the stand-alone {{site.data.keyword.Bluemix_notm}} CLI on specific platforms.
+以下のセクションでは、特定のプラットフォームでスタンドアロンの {{site.data.keyword.Bluemix_notm}} CLI をアンインストールする方法を詳しく説明します。
 
-### Uninstalling on Windows
+### Windows でのアンインストール
 
-1. Click the `Start` button, and then select `Control Panel`.
-2. In the pop-up window, click `Uninstall a program`.
-3. In the pop-up application list, locate `IBM Cloud Command Line Interface`.
-4. Right click `IBM Cloud Command Line Interface`, and select `Uninstall`.
-5. The uninstaller will be launched. Follow the instructions to finish the uninstallation.
+1. `「スタート」`ボタンをクリックし、`「コントロール パネル」`を選択します。
+2. ポップアップ・ウィンドウで、`「プログラムのアンインストール」`をクリックします。
+3. ポップアップしたアプリケーション・リストで、`「IBM Cloud コマンド・ライン・インターフェース」`を見つけます。
+4. `「IBM Cloud コマンド・ライン・インターフェース」`を右クリックして、`「アンインストール」`を選択します。
+5. アンインストーラーが起動します。 指示に従ってアンインストールを完了します。
 
-### Uninstalling on Linux/macOS
+### Linux/macOS でのアンインストール
 
-#### Prior to version `0.9.0`
+#### バージョン `0.9.0` より前
 
-1. Open a terminal, and run the following commands:
+1. 端末を開き、以下のコマンドを実行します。
   * `rm -rf /usr/local/ibmcloud`
   * `rm -f /usr/local/bin/ibmcloud`
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
+2. オートコンプリート機能スクリプトを構成している場合は、それをクリーンアップします。 詳しくは、[CLI オートコンプリート機能の有効化](enable_cli_autocompletion.html)を参照してください。
 
-#### Version `0.9.0` and later
+#### バージョン `0.9.0` 以降
 
-1. Open a terminal, and run the following command:
-  * `/usr/local/ibmcloud/uninstall`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html). -->
+1. 端末を開き、次のコマンドを実行します。
+  * `/usr/local/ibmcloud/bin/uninstall`
+2. オートコンプリート機能スクリプトを構成している場合は、それをクリーンアップします。 詳しくは、[CLI オートコンプリート機能の有効化](enable_cli_autocompletion.html)を参照してください。
 
 
 ## {{site.data.keyword.Bluemix_notm}} CLI をさらに探索するためのその他のリンク

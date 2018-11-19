@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -16,11 +16,13 @@ lastupdated: "2018-10-17"
 
 {{site.data.keyword.Bluemix}} ブロック・ストレージは、コンピューティング・インスタンスから独立してプロビジョンおよび管理される、永続的で高性能な iSCSI ストレージです。 iSCSI ベースのブロック・ストレージ LUN は、冗長マルチパス入出力 (MPIO) 接続を介して、許可されたデバイスに接続されます。 
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ブロック・ストレージ・サービスの指定されたボリュームを管理します。
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} classic インフラストラクチャー・ブロック・ストレージ・サービスのボリュームを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ブロック・ストレージ・コマンド">
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ブロック・ストレージ</caption>
  <thead>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ブロック・ストレージ</th>
  </thead>
  <tbody>
  <tr>
@@ -45,21 +47,24 @@ lastupdated: "2018-10-17"
   <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_list)</td>
   <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_order)</td>
   <td>[ibmcloud sl block snapshot-restore](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_restore)</td>
+  <td>[ibmcloud sl block snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_schedule_list)</td>
+</tr>
+<tr>
   <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_cancel)</td>
+  <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>
+  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
+  <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
+  <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
+  <td>[ibmcloud sl block volume-modify](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_modify)</td>
 </tr>
 <tr>
-   <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>    <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
-   <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
-   <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
-   <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
-   <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
-</tr>
-<tr>
-   <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
+  <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
+  <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
+  <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
 </tr>
 </tbody>
 </table>
-
+ 
 ## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
@@ -402,6 +407,20 @@ ibmcloud sl block snapshot-restore 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームを、ID 87654321 のスナップショットからリストアします。
 
+## ibmcloud sl block snapshot-schedule-list
+{: #sl_block_snapshot_schedule_list}
+
+指定されたボリュームのスナップショット・スケジュールをリストします
+```
+ibmcloud sl block snapshot-schedule-list VOLUME_ID
+```
+
+**例**:
+```
+ibmcloud sl block snapshot-schedule-list 12345678
+```
+このコマンドは、ID 12345678 のボリュームのスナップショット・スケジュールをリストします
+
 ## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
@@ -469,6 +488,39 @@ ibmcloud sl block volume-list [OPTIONS]
 ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 このコマンドは、dal09 にある、現行アカウントのすべてのエンデュランス・ボリュームをリストし、それらを容量によってソートします。
+
+## ibmcloud sl block volume-modify
+{: #sl_block_volume_modify}
+
+既存 Block Storage ボリュームを変更します
+```
+ibmcloud sl block volume-modify VOLUME_ID [OPTIONS]
+```
+
+<strong>コマンド・オプション</strong>:
+<dl>
+<dt>-c, --new-size</dt>
+<dd>ブロック・ボリュームの新しいサイズ (GB)。 ***サイズを指定しない場合、ボリュームの元のサイズが使用されます。*** 潜在的なサイズ: [20、40、80、100、250、500、1000、2000、4000、8000、12000]最小: [ボリュームの元のサイズ]</dd>
+<dt>-i, --new-iops</dt>
+<dd>パフォーマンス・ストレージ IOPS (100 から 6000 までの範囲内の 100 の倍数) [パフォーマンス・ボリュームに対してのみ] ***IOPS 値が指定されていない場合は、ボリュームの元の IOPS 値が使用されます。*** 要件: [ボリュームの元の IOPS/GB が 0.3 よりも小さい場合、新しい IOPS/GB も 0.3 よりも小さくなければなりません。 ボリュームの元の IOPS/GB が 0.3 以上の場合、ボリュームの新しい IOPS/GB も 0.3 以上でなければなりません。]</dd>
+<dt>-t, --new-tier</dt>
+<dd>エンデュランス・ストレージ・ティア (IOPS/GB) [エンデュランス・ボリュームに対してのみ] ***ティアが指定されていない場合は、ボリュームの元のティアが使用されます。***
+要件: [ボリュームの元の IOPS/GB が 0.25 の場合、ボリュームの新しい IOPS/GB も 0.25 でなければなりません。 ボリュームの元の IOPS/GB が 0.25 より大きい場合、ボリュームの新しい IOPS/GB も 0.25 より大きくなければなりません。]</dd>
+<dt>-f, --force</dt>
+<dd>確認なしで操作を強制します。</dd>
+</dl>
+
+**例**:
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+このコマンドは、ボリューム 12345678 のサイズを 1000 GB、IOPS を 4000 に変更します。
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4
+```
+このコマンドは、ボリューム 12345678 のサイズを 500 GB、ティア・レベルを 4 IOPS/GB に変更します。
 
 ## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}
