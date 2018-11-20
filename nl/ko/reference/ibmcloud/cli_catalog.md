@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ lastupdated: "2018-10-17"
 카탈로그 항목 검색
 
 ```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -63,7 +63,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>-k, --kind</dt>
   <dd>리소스 종류별 필터링. 현재 "service-cf", "iaas", "runtime", "template" 및 "dashboard"만 지원됨</dd>
   <dt>-p, --price</dt>
-  <dd>가격별 필터링. 현재 "free", "paygo", "bluemix-subscription"만 지원됨</dd>
+  <dd>가격별 필터링. 현재 "free", "paygo", "ibmcloud-subscription"만 지원됨</dd>
   <dt>-t, --tag</dt>
   <dd>태그별 필터링.</dd>
   <dt>--sort-by</dt>
@@ -72,8 +72,8 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dd>테이블의 추가 컬럼을 지정합니다. 현재 "group", "provider" 및 "tags"</dd>
   <dt>--reverse</dt>
   <dd>정렬 순서를 반대로 할지 여부</dd>
-  <dt>--json</dt>
-  <dd>원래 JSON 응답 출력</dd>
+  <dt>--output TYPE(선택사항)</dt>
+  <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다.</dd>
   <dt>--csv</dt>
   <dd>출력 CSV 파일</dd>
   <dt>--global</dt>
@@ -94,7 +94,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 카탈로그 항목 가져오기
 
 ```
-ibmcloud catalog entry ID [--global]
+ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -103,8 +103,8 @@ ibmcloud catalog entry ID [--global]
 <dl>
   <dt>--children</dt>
   <dd>카탈로그 항목의 모든 하위 가져오기</dd>
-  <dt>--json</dt>
-  <dd>원래 JSON 응답 출력</dd>
+  <dt>--output TYPE(선택사항)</dt>
+  <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다. </dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -132,7 +132,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
   <dt>-p, --parent</dt>
   <dd>오브젝트의 상위 ID</dd>
   <dt>-c</dt>
-  <dd>카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트(인라인 또는 파일로 제공됨). 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
+  <dd>인라인 또는 파일로 제공되는 카탈로그 특정 구성 매개변수를 포함하는 올바른 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -147,7 +147,7 @@ ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 
 ## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
-기존 카탈로그 항목 업데이트(계정의 카탈로그 관리자 또는 편집자만)
+카탈로그 항목 업데이트(카탈로그 관리자 또는 계정의 편집자 전용).
 
 ```
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
@@ -158,7 +158,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-c</dt>
-  <dd>카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트(인라인 또는 파일로 제공됨). 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
+  <dd>인라인 또는 파일로 제공되는 카탈로그 특정 구성 매개변수를 포함하는 올바른 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -199,7 +199,7 @@ ibmcloud catalog delete 'j402-dnf1i'
 카탈로그 항목의 가시성 가져오기(계정의 카탈로그 관리자만)
 
 ```
-ibmcloud catalog entry-visibility ID [--global]
+ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -208,6 +208,8 @@ ibmcloud catalog entry-visibility ID [--global]
 <dl>
   <dt>-json</dt>
   <dd>원래 JSON 응답 출력</dd>
+  <dt>--output TYPE(선택사항)</dt>
+  <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다. </dd>
   <dt>-global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -236,11 +238,11 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
   <dt>--includes-add</dt>
   <dd>계정(또는 쉼표로 구분된 계정의 목록)을 포함 목록에 추가하고 항목에 대한 가시성을 부여합니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--includes-remove</dt>
-  <dd>계정(또는 쉼표로 구분된 계정의 목록)을 포함 목록에서 제거하고 항목에 대한 가시성을 취소합니다. 이메일 또는 계정 GUID 허용</dd>  
+  <dd>포함 목록에서 계정(또는 쉼표로 구분된 계정)을 제거하여 항목에 대한 가시성을 제거합니다. 이메일 또는 계정 GUID 허용</dd>  
   <dt>--excludes-add</dt>
   <dd>계정(또는 쉼표로 구분된 계정의 목록)을 제외 목록에 추가합니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--excludes-remove</dt>
-  <dd>계정(또는 쉼표로 구분된 계정의 목록)을 제외 목록에서 제거하고 항목에 대한 가시성을 취소합니다. 글로벌 관리자가 계정을 설정한 경우, 계정 관리자는 계정을 제거할 수 없습니다. 이메일 또는 계정 GUID 허용</dd>
+  <dd>제외 목록에서 계정(또는 쉼표로 구분된 계정)을 제거하여 항목에 대한 가시성을 제거합니다. 글로벌 관리자가 계정을 설정한 경우, 계정 관리자는 계정을 제거할 수 없습니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--owner</dt>
   <dd>오브젝트의 소유자를 변경합니다. 이메일 또는 계정 GUID 허용</dd>
   <dt>--restrict</dt>
@@ -248,7 +250,7 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
   <dt>--unrestrict</dt>
   <dd>가시성 오브젝트의 제한을 '공용'으로 변경</dd>  
   <dt>-c</dt>
-  <dd>카탈로그 특정 구성 매개변수가 포함된 유효한 JSON 오브젝트(인라인 또는 파일로 제공됨). 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
+  <dd>인라인 또는 파일로 제공되는 카탈로그 특정 구성 매개변수를 포함하는 올바른 JSON 오브젝트입니다. 지원되는 구성 매개변수의 목록은 특정 카탈로그 항목에 대한 문서를 참조하십시오.</dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -385,7 +387,7 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 선택한 형식으로 지역의 선택 서브세트를 가져옵니다.
 
 ```
-ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```
 
 <strong>명령 옵션</strong>:
@@ -397,8 +399,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>지정된 유형에 대한 항목의 목록을 가져옵니다.</dd>
   <dt>--col</dt>
   <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다.</dd>
-  <dt>--json</dt>
-  <dd>원래 JSON 응답의 출력입니다.</dd>
+  <dt>--output TYPE(선택사항)</dt>
+  <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다.</dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동됩니다.</dd>
   <dt>--csv</dt>

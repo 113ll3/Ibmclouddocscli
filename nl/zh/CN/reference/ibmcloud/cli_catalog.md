@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ lastupdated: "2018-10-17"
 搜索目录条目
 
 ```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -63,7 +63,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>-k, --kind</dt>
   <dd>按资源种类过滤。目前仅支持“service-cf”、“iaas”、“runtime”、“template”和“dashboard”</dd>
   <dt>-p, --price</dt>
-  <dd>按价格过滤。目前仅支持“free”、“paygo”和“bluemix-subscription”</dd>
+  <dd>按价格过滤。目前仅支持“free”、“paygo”和“ibmcloud-subscription”</dd>
   <dt>-t, --tag</dt>
   <dd>按标记过滤。</dd>
   <dt>--sort-by</dt>
@@ -72,8 +72,8 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dd>指定表的其他列。目前有“group”、“provider”和“tags”</dd>
   <dt>--reverse</dt>
   <dd>是否反转排序顺序</dd>
-  <dt>--json</dt>
-  <dd>输出原始 JSON 响应</dd>
+  <dt>--output TYPE（可选）</dt>
+  <dd>--output value  指定输出类型，目前仅支持 JSON。此选项与“--id”互斥。</dd>
   <dt>--csv</dt>
   <dd>输出 CSV 文件</dd>
   <dt>--global</dt>
@@ -94,7 +94,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 获取目录条目
 
 ```
-ibmcloud catalog entry ID [--global]
+ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -103,8 +103,8 @@ ibmcloud catalog entry ID [--global]
 <dl>
   <dt>--children</dt>
   <dd>获取目录条目的所有子代</dd>
-  <dt>--json</dt>
-  <dd>输出原始 JSON 响应</dd>
+  <dt>--output TYPE（可选）</dt>
+  <dd>--output value  指定输出类型，目前仅支持 JSON。</dd>
   <dt>--global</dt>
   <dd>在全球范围运行</dd>
 </dl>
@@ -199,7 +199,7 @@ ibmcloud catalog delete 'j402-dnf1i'
 获取目录条目的可视性（仅限帐户的目录管理员）
 
 ```
-ibmcloud catalog entry-visibility ID [--global]
+ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -208,6 +208,8 @@ ibmcloud catalog entry-visibility ID [--global]
 <dl>
   <dt>-json</dt>
   <dd>输出原始 JSON 响应</dd>
+  <dt>--output TYPE（可选）</dt>
+  <dd>--output value  指定输出类型，目前仅支持 JSON。</dd>
   <dt>-global</dt>
   <dd>在全球范围运行</dd>
 </dl>
@@ -385,7 +387,7 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 以您选择的格式获取区域选项子集。
 
 ```
-ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```
 
 <strong>命令选项</strong>：
@@ -397,8 +399,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>获取指定种类的条目列表。</dd>
   <dt>--col</dt>
   <dd>指定表的其他列。目前有“group”、“provider”和“tags”。</dd>
-  <dt>--json</dt>
-  <dd>原始 JSON 响应的输出。</dd>
+  <dt>--output TYPE（可选）</dt>
+  <dd>--output value  指定输出类型，目前仅支持 JSON。此选项与“--id”互斥。</dd>
   <dt>--global</dt>
   <dd>在全球范围运行。</dd>
   <dt>--csv</dt>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -16,11 +16,13 @@ lastupdated: "2018-10-17"
 
 {{site.data.keyword.Bluemix}} Block Storage 是一种持久的高性能 iSCSI 存储器，可独立于计算实例进行供应和管理。基于 iSCSI 的块存储器 LUN 通过冗余多路径 I/O (MPIO) 连接来连接到授权设备。 
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构块存储器服务的给定卷。
+使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构块存储器服务的给定卷。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构块存储器命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 基础架构块存储器</caption>
  <thead>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构块存储器</th>
  </thead>
  <tbody>
  <tr>
@@ -45,21 +47,24 @@ lastupdated: "2018-10-17"
   <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_list)</td>
   <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_order)</td>
   <td>[ibmcloud sl block snapshot-restore](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_restore)</td>
+  <td>[ibmcloud sl block snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_schedule_list)</td>
+</tr>
+<tr>
   <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_cancel)</td>
+  <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>
+  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
+  <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
+  <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
+  <td>[ibmcloud sl block volume-modify](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_modify)</td>
 </tr>
 <tr>
-   <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>    <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
-   <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
-   <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
-   <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
-   <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
-</tr>
-<tr>
-   <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
+  <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
+  <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
+  <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
 </tr>
 </tbody>
 </table>
-
+ 
 ## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
@@ -432,6 +437,20 @@ ibmcloud sl block snapshot-restore 12345678 87654321
 
 
 
+## ibmcloud sl block snapshot-schedule-list
+{: #sl_block_snapshot_schedule_list}
+
+列出给定卷的快照安排
+```
+ibmcloud sl block snapshot-schedule-list VOLUME_ID
+```
+
+**示例**：
+```
+ibmcloud sl block snapshot-schedule-list 12345678
+```
+此命令列出标识为 12345678 的卷的快照安排
+
 ## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
@@ -504,6 +523,39 @@ ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 
 
 
+
+## ibmcloud sl block volume-modify
+{: #sl_block_volume_modify}
+
+修改现有块存储卷
+```
+ibmcloud sl block volume-modify VOLUME_ID [OPTIONS]
+```
+
+<strong>命令选项</strong>：
+<dl>
+<dt>-c, --new-size</dt>
+<dd>块卷的新大小，以 GB 为单位。***如果未给定大小，那么将使用卷的原始大小。***可能的大小为：[20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] 最小值为：[卷的原始大小]</dd>
+<dt>-i, --new-iops</dt>
+<dd>性能存储器 IOPS，介于 100 到 6000 之间，是 100 的倍数 [仅限性能卷] ***如果未指定 IOPS 值，那么将使用卷的原始 IOPS 值。*** 要求：[如果卷的原始 IOPS/GB 小于 0.3，那么新 IOPS/GB 必须也小于 0.3。如果卷的原始 IOPS/GB 大于或等于 0.3，那么卷的新 IOPS/GB 必须也大于或等于 0.3。]</dd>
+<dt>-t, --new-tier</dt>
+<dd>耐久性存储层 (IOPS/GB) [仅限耐久性卷] ***如果未指定任何层，那么将使用卷的原始层。***
+要求：[如果卷的原始 IOPS/GB 为 0.25，那么卷的新 IOPS/GB 必须也是 0.25。如果卷的原始 IOPS/GB 大于 0.25，那么卷的新 IOPS/GB 必须也大于 0.25。]</dd>
+<dt>-f, --force</dt>
+<dd>强制操作而不确认。</dd>
+</dl>
+
+**示例**：
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+此命令将卷 12345678 的大小修改为 1000GB，IOPS 修改为 4000。
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4
+```
+此命令将卷 12345678 的大小修改为 500GB，层级修改为 4 IOPS/GB。
 
 ## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}

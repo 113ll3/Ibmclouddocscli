@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -16,11 +16,13 @@ lastupdated: "2018-10-17"
 
 {{site.data.keyword.Bluemix}} 블록 스토리지는 컴퓨팅 인스턴스와 독립적으로 프로비저닝되고 관리되는 지속적인 고성능 iSCSI 스토리지입니다. iSCSI 기반 Block Storage LUN은 중복된 다중 경로 I/O(MPIO) 연결을 통해 권한이 부여된 디바이스에 연결됩니다. 
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 블록 스토리지 서비스에서 지정된 볼륨을 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 클래스 인프라 블록 스토리지 서비스에서 지정된 볼륨을 관리하십시오.
 {: shortdesc}
 
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 블록 스토리지 명령">
+<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+<caption>표 1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 블록 스토리지</caption>
  <thead>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 블록 스토리지</th>
  </thead>
  <tbody>
  <tr>
@@ -45,21 +47,24 @@ lastupdated: "2018-10-17"
   <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_list)</td>
   <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_order)</td>
   <td>[ibmcloud sl block snapshot-restore](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_restore)</td>
+  <td>[ibmcloud sl block snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_schedule_list)</td>
+</tr>
+<tr>
   <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_cancel)</td>
+  <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>
+  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
+  <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
+  <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
+  <td>[ibmcloud sl block volume-modify](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_modify)</td>
 </tr>
 <tr>
-   <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>    <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
-   <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
-   <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
-   <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
-   <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
-</tr>
-<tr>
-   <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
+  <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
+  <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
+  <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
 </tr>
 </tbody>
 </table>
-
+ 
 ## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
@@ -402,6 +407,20 @@ ibmcloud sl block snapshot-restore 12345678 87654321
 ```
 이 명령은 ID 87654321인 스냅샷에서 ID가 12345678인 볼륨을 복원합니다.
 
+## ibmcloud sl block snapshot-schedule-list
+{: #sl_block_snapshot_schedule_list}
+
+지정된 볼륨의 스냅샷 스케줄 나열
+```
+ibmcloud sl block snapshot-schedule-list VOLUME_ID
+```
+
+**예제**:
+```
+ibmcloud sl block snapshot-schedule-list 12345678
+```
+이 명령을 통해 ID가 12345678인 볼륨의 스냅샷 스케줄 나열
+
 ## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
@@ -469,6 +488,39 @@ ibmcloud sl block volume-list [OPTIONS]
 ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 이 명령은 dal09에 위치하는 현재 계정의 모든 endurance 볼륨을 나열하고 용량별로 정렬합니다.
+
+## ibmcloud sl block volume-modify
+{: #sl_block_volume_modify}
+
+기존 블록 스토리지 볼륨 수정
+```
+ibmcloud sl block volume-modify VOLUME_ID [OPTIONS]
+```
+
+<strong>명령 옵션</strong>:
+<dl>
+<dt>-c, --new-size</dt>
+<dd>블록 볼륨의 새 크기(GB)입니다. ***크기를 지정하지 않으면 볼륨의 원래 크기를 사용합니다.*** 잠재 크기: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] 최소: [볼륨의 원래 크기]</dd>
+<dt>-i, --new-iops</dt>
+<dd>100 - 6000의 100의 배수인 Performance Storage IOPS[성능 볼륨에만 해당] ***IOPS 값이 지정되지 않은 경우 볼륨의 원본 IOPS 값이 사용됩니다.*** 요구사항: [볼륨의 원본 IOPS/GB가 0.3 미만이면 새 IOPS/GB도 0.3 미만이어야 합니다. 볼륨의 원본 IOPS/GB가 0.3 이상이면 볼륨의 새 IOPS/GB도 0.3 이상이어야 합니다.]</dd>
+<dt>-t, --new-tier</dt>
+<dd>Endurance Storage Tier(GB당 IOPS)[Endurance 볼륨에만 해당] ***계층을 지정하지 않으면 볼륨의 원본 계층을 사용합니다.***
+요구사항: [볼륨의 원본 IOPS/GB가 0.25이면 볼륨의 새 IOPS/GB도 0.25이어야 합니다. 볼륨의 원본 IOPS/GB가 0.25보다 크면 볼륨의 새 IOPS/GB도 0.25보다 커야 합니다.]</dd>
+<dt>-f, --force</dt>
+<dd>확인 없이 조작 강제 실행.</dd>
+</dl>
+
+**예제**:
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+이 명령을 통해 크기가 1000GB이고 IOPS가 4000인 볼륨 12345678을 수정합니다.
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4
+```
+이 명령을 통해 크기가 500GB이고 계층 레벨이 GB당 4 IOPS인 볼륨 12345678을 수정합니다.
 
 ## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}

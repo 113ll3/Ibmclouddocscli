@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -51,9 +51,9 @@ lastupdated: "2018-08-30"
  <td>[ibmcloud app domain-cert](cli_cf_apps.html#ibmcloud_app_domain_cert)</td>
  </tr>
  <tr>
-  <td>[ibmcloud app domain-cert-add](cli_cf_apps.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_cf_apps.html#ibmcloud_app_domain_cert_remove)</td>
-  <td>[ibmcloud app domains](cli_cf_apps.html#ibmcloud_app_domains)</td>
+ <td>[ibmcloud app domain-cert-add](cli_cf_apps.html#ibmcloud_app_domain_cert_add)</td>
+ <td>[ibmcloud app domain-cert-remove](cli_cf_apps.html#ibmcloud_app_domain_cert_remove)</td>
+ <td>[ibmcloud app domains](cli_cf_apps.html#ibmcloud_app_domains)</td>
   <td>[ibmcloud app domain-create](cli_cf_apps.html#ibmcloud_app_domain_create)</td>
   <td>[ibmcloud app domain-delete](cli_cf_apps.html#ibmcloud_app_domain_delete)</td>
  </tr>
@@ -250,7 +250,7 @@ ibmcloud app domain-cert-remove DOMAIN [-f]
    <dt>DOMAIN(필수)</dt>
    <dd>인증서가 제거되는 도메인입니다.</dd>
    <dt>-f(선택사항)</dt>
-   <dd>확인 없이 강제 삭제합니다.</dd>
+   <dd>확인 없이 삭제 강제 실행합니다.</dd>
    </dl>
 
 ## ibmcloud app routes

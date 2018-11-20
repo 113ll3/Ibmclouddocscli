@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -80,7 +80,7 @@ lastupdated: "2018-10-17"
 리소스 그룹을 나열합니다.
 
 ```
-ibmcloud resource groups [--default]
+ibmcloud resource groups [--default] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -89,6 +89,8 @@ ibmcloud resource groups [--default]
 <dl>
   <dt>--default</dt>
   <dd>현재 계정의 기본 그룹을 가져옵니다.</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
 </dl>
 
 <strong>예제</strong>:
@@ -111,7 +113,7 @@ ibmcloud resource groups --default
 리소스 그룹의 세부사항 표시
 
 ```
-ibmcloud resource group NAME [--id]
+ibmcloud resource group NAME [--id] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -122,6 +124,8 @@ ibmcloud resource group NAME [--id]
   <dd>리소스 그룹의 이름</dd>
   <dt>--id</dt>
   <dd>ID만 표시</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
 </dl>
 
 <strong>예제</strong>:
@@ -179,7 +183,7 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
   <dt>-q, --quota</dt>
   <dd>새 할당량 정의의 이름</dd>
   <dt>-f</dt>
-  <dd>확인 없이 강제 업데이트</dd>
+  <dd>확인 없이 업데이트 강제 실행</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -259,9 +263,9 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
   <dt>SERVICE_INSTANCE_NAME 또는 SERVICE_INSTANCE_ID(필수)</dt>
   <dd>서비스 인스턴스의 이름 또는 ID</dd>
   <dt>--resource-group-name</dt>
-  <dd>리소스 그룹의 이름. 이 옵션은 '--resource-group-id'와 배타적입니다. 지정되지 않은 경우 현재 대상 지정된 리소스 그룹으로 기본값이 설정됩니다.</dd>
+  <dd>리소스 그룹의 이름. 이 옵션은 '--resource-group-id'와 배타적입니다. 이들이 지정되지 않은 경우에는 현재 대상 지정된 리소스 그룹으로 기본 설정됩니다.</dd>
   <dt>--resource-group-id</dt>
-  <dd>리소스 그룹의 ID. 이 옵션은 '--resource-group-name'과 배타적입니다. 지정되지 않은 경우 현재 대상 지정된 리소스 그룹으로 기본값이 설정됩니다.</dd>
+  <dd>리소스 그룹의 ID. 이 옵션은 '--resource-group-name'과 배타적입니다. 이들이 지정되지 않은 경우에는 현재 대상 지정된 리소스 그룹으로 기본 설정됩니다.</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 마이그레이션</dd>
 </dl>
@@ -272,7 +276,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 서비스 인스턴스 나열
 
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -280,11 +284,13 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 <strong>명령 옵션</strong>:
 <dl>
   <dt>--service-name</dt>
-  <dd>속해 있는 서비스의 이름</dd>
+  <dd>소속된 서비스의 이름</dd>
   <dt>--location</dt>
   <dd>위치별 필터링</dd>
   <dt>--long</dt>
   <dd>출력에 추가 필드 표시</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
 </dl>
 
 <strong>예제</strong>:
@@ -334,7 +340,7 @@ ibmcloud resource service-instance my-service-instance
 서비스 인스턴스 작성
 
 ```
-ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -349,8 +355,6 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dd>서비스 플랜의 이름 또는 ID</dd>
   <dt>LOCATION</dt>
   <dd>서비스 인스턴스를 작성하는 대상 위치 또는 환경</dd>
-  <dt>-t, --tags</dt>
-  <dd>태그</dd>
   <dt>-p, --parameters</dt>
   <dd>서비스 인스턴스를 작성하기 위한 매개변수의 JOSN 문자열 또는 JSON 파일</dd>
   <dt>-d, --deployment</dt>
@@ -370,7 +374,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 서비스 인스턴스 업데이트
 
 ```
-ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -383,12 +387,12 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, -
   <dd>서비스 인스턴스의 ID(NAME과 배타적)</dd>
   <dt>-n, --name</dt>
   <dd>새 서비스 인스턴스 이름</dd>
-  <dt>-t, --tags</dt>
-  <dd>새 태그</dd>
   <dt>--service-plan-id</dt>
   <dd>새 서비스 플랜 ID</dd>
+  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
+  <dd>서비스 인스턴스를 작성하기 위한 매개변수의 JOSN 문자열 또는 JSON 파일</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 업데이트</dd>
+  <dd>확인 없이 업데이트 강제 실행</dd>
 </dl>
 
 <strong>예</strong>:
@@ -416,9 +420,9 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
   <dt>ID(필수)</dt>
   <dd>서비스 인스턴스의 ID(NAME과 배타적)</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 삭제</dd>
+  <dd>확인 없이 삭제 강제 실행</dd>
   <dt>--recursive</dt>
-  <dd>속해 있는 모든 리소스 삭제</dd>
+  <dd>소속된 모든 리소스 삭제</dd>
 </dl>
 
 <strong>예</strong>:
@@ -434,7 +438,7 @@ ibmcloud resource service-instance-delete my-service-instance
 서비스 별명에 대한 바인딩 표시
 
 ```
-ibmcloud resource service-bindings SERVICE_ALIAS
+ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -443,6 +447,8 @@ ibmcloud resource service-bindings SERVICE_ALIAS
 <dl>
   <dt>SERVICE_ALIAS(필수)</dt>
   <dd>서비스 별명 이름</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
 </dl>
 
 <strong>예</strong>:
@@ -458,7 +464,7 @@ ibmcloud resource bindings my-service-alias
 서비스 바인딩의 세부사항 표시
 
 ```
-ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
+ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -470,7 +476,9 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 애플리케이션 이름</dd>
   <dt>--id</dt>
-  <dd>ID만 표시합니다. 서비스 바인딩의 기타 모든 출력은 표시되지 않습니다.</dd>
+  <dd>ID만 표시합니다. 서비스 바인딩의 기타 모든 출력은 표시되지 않습니다. 이 옵션은 '--output'과 배타적입니다.</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다.</dd>
 </dl>
 
 <strong>예</strong>:
@@ -504,7 +512,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>-p, --parameter</dt>
   <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 작성</dd>
+  <dd>확인 없이 작성 강제 실행</dd>
 </dl>
 
 <strong>예</strong>:
@@ -532,7 +540,7 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 애플리케이션 이름</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 삭제</dd>
+  <dd>확인 없이 삭제 강제 실행</dd>
 </dl>
 
 <strong>예</strong>:
@@ -548,7 +556,7 @@ ibmcloud resource service-binding-delete my-service-alias my-app
 서비스 별명 또는 서비스 인스턴스의 서비스 키 나열
 
 ```
-ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -563,13 +571,15 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
   <dd>서비스 별명 ID</dd>
   <dt>--alias-name</dt>
   <dd>서비스 별명 이름</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
 </dl>
 
 <strong>예</strong>:
 서비스 인스턴스 `my-service-instance`의 서비스 키 나열:
 
 ```
-ibmcloud resource service-keys --instance-name my-service-instance
+ibmcloud resource service-keys --instance-name my-service-instance  [--output FORMAT]
 ```
 
 ## ibmcloud resource service-key
@@ -589,6 +599,8 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dd>키의 이름</dd>
   <dt>--id</dt>
   <dd>서비스 키의 ID 표시</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
 </dl>
 
 <strong>예</strong>:
@@ -628,7 +640,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>-p, --parameters</dt>
   <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 작성</dd>
+  <dd>확인 없이 작성 강제 실행</dd>
 </dl>
 
 <strong>예</strong>:
@@ -644,17 +656,17 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 서비스 키 삭제
 
 ```
-ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
+ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
 <dl>
-  <dt>KEY_NAME</dt>
-  <dd>키의 이름</dd>
+  <dt>KEY_NAME | KEY_ID</dt>
+  <dd>키의 이름 또는 키의 ID</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 삭제</dd>
+  <dd>확인 없이 삭제 강제 실행</dd>
 </dl>
 
 <strong>예</strong>:
@@ -670,7 +682,7 @@ ibmcloud resource service-key-delete my-service-key
 서비스 인스턴스의 별명 나열
 
 ```
-ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
+ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -678,9 +690,11 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>--instance-id</dt>
-  <dd>속해 있는 서비스 인스턴스의 ID.</dd>
+  <dd>소속된 서비스 인스턴스의 ID.</dd>
   <dt>--instance-name</dt>
-  <dd>속해 있는 서비스 인스턴스의 이름.</dd>
+  <dd>소속된 서비스 인스턴스의 이름.</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
 </dl>
 
 <strong>예</strong>:
@@ -695,7 +709,7 @@ ibmcloud resource service-aliases my-service-instance
 서비스 별명의 세부사항 표시
 
 ```
-ibmcloud resource service-alias ALIAS_NAME [--id]
+ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -705,7 +719,9 @@ ibmcloud resource service-alias ALIAS_NAME [--id]
   <dt>ALIAS_NAME(필수)</dt>
   <dd>서비스 별명의 이름</dd>
   <dt>--id</dt>
-  <dd>제공된 서비스 별명의 ID만 표시합니다. 별명에 대한 다른 모든 출력은 표시되지 않습니다.</dd>
+  <dd>제공된 서비스 별명의 ID만 표시합니다. 별명에 대한 다른 모든 출력은 표시되지 않습니다. 이 옵션은 '--output'과 배타적입니다.</dd>
+  <dt>--output FORMAT(선택사항)</dt>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. 이 옵션은 '--id'와 배타적입니다.</dd>
 </dl>
 
 <strong>예</strong>:
@@ -730,9 +746,9 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
   <dt>ALIAS_NAME(필수)</dt>
   <dd>서비스 별명의 이름</dd>
   <dt>--instance-id</dt>
-  <dd>속해 있는 서비스 인스턴스의 ID.</dd>
+  <dd>소속된 서비스 인스턴스의 ID.</dd>
   <dt>--instance-name</dt>
-  <dd>속해 있는 서비스 인스턴스의 이름.</dd>
+  <dd>소속된 서비스 인스턴스의 이름.</dd>
   <dt>-s</dt>
   <dd>별명이 작성되는 영역의 이름. 기본값은 현재 영역입니다.</dd>
   <dt>-t, --tags</dt>
@@ -769,7 +785,7 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
   <dt>-p, --parameters</dt>
   <dd>매개변수 JSON 파일 또는 JSON 문자열</dd>
   <dt>-f, --force</dt>
-  <dd>사용자 확인 없이 강제 업데이트</dd>
+  <dd>사용자 확인 없이 업데이트 강제 실행</dd>
 </dl>
 
 <strong>예</strong>:
@@ -795,7 +811,7 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
   <dt>ALIAS_NAME(필수)</dt>
   <dd>서비스 별명의 이름</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 삭제</dd>
+  <dd>확인 없이 삭제 강제 실행</dd>
 </dl>
 
 <strong>예</strong>:
