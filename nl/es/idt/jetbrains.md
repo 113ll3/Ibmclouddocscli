@@ -24,7 +24,7 @@ La extensión de herramientas de desarrollador de {{site.data.keyword.Bluemix_no
 ## Dependencias
 {: #dependencies}
 
-Para utilizar la extensión de herramientas de desarrollador de {{site.data.keyword.Bluemix_notm}} para IDE basados en Jetbrains, también necesitará tener instalado [{{site.data.keyword.dev_cli_notm}} CLI](index.html) en su sistema.
+Para utilizar la extensión de herramientas de desarrollador de {{site.data.keyword.Bluemix_notm}} para IDE basados en Jetbrains, también necesitará tener instalada la [CLI de {{site.data.keyword.dev_cli_notm}}](index.html) en su sistema.
 
 ## Instalación
 {: #installation}

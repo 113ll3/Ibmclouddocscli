@@ -20,15 +20,15 @@ Si tiene una aplicación de servidor de Java, NodeJS o Swift, puede utilizar los
 ### SDK de {{site.data.keyword.appid_short}} Server
 {: #appid_sdk}
 
-- [{{site.data.keyword.appid_short}} Node.js Server SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-cloud-security/appid-serversdk-nodejs)
-- [{{site.data.keyword.appid_short}} Swift Server SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-cloud-security/appid-serversdk-swift)
+- [SDK de servidor de Node.js de {{site.data.keyword.appid_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-cloud-security/appid-serversdk-nodejs)
+- [SDK de servidor de Swift de {{site.data.keyword.appid_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-cloud-security/appid-serversdk-swift)
 
 ### SDK de {{site.data.keyword.mobilepushshort}} Server
 {: #push_sdk}
 
-- [{{site.data.keyword.mobilepushshort}} Node.js Server SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
-- [{{site.data.keyword.mobilepushshort}} Java Server SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java)
-- [{{site.data.keyword.mobilepushshort}} Swift Server SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift)
+- [SDK de servidor de Node.js de {{site.data.keyword.mobilepushshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
+- [SDK de servidor de Java de {{site.data.keyword.mobilepushshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java)
+- [SDK de servidor de Swift de {{site.data.keyword.mobilepushshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift)
 
 
 ## SDK de cliente
@@ -41,22 +41,22 @@ Puede utilizar los siguientes SDK en la aplicación móvil para utilizar las pre
 {: #android_sdk}
 
 - [Core SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
-- [{{site.data.keyword.appid_short}} SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-cloud-security/appid-clientsdk-android)
-- [{{site.data.keyword.mobileanalytics_short}} SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics)
-- [{{site.data.keyword.mobilepushshort}} SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push)
+- [SDK de {{site.data.keyword.appid_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-cloud-security/appid-clientsdk-android)
+- [SDK de {{site.data.keyword.mobileanalytics_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics)
+- [SDK de {{site.data.keyword.mobilepushshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push)
 
 
 ### SDK de iOS
 {: #ios_sdk}
 
 - [Core SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
-- [{{site.data.keyword.appid_short}} SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-cloud-security/appid-clientsdk-swift)
-- [{{site.data.keyword.mobileanalytics_short}} SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics)
-- [{{site.data.keyword.mobilepushshort}} SDK ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push)
+- [SDK de {{site.data.keyword.appid_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-cloud-security/appid-clientsdk-swift)
+- [SDK de {{site.data.keyword.mobileanalytics_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics)
+- [SDK de {{site.data.keyword.mobilepushshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push)
 
 
 ### Plugins de Cordova
 {: #cordova_plugin}
 
 - [Plug-in Core ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
-- Plug-in de [{{site.data.keyword.mobilepushshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+- [Plug-in de {{site.data.keyword.mobilepushshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)

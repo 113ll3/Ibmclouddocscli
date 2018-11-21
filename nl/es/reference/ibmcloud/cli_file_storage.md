@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -16,11 +16,13 @@ lastupdated: "2018-10-17"
 
 {{site.data.keyword.filestorage_full}} es una {{site.data.keyword.filestorage_short}} basada en NFS persistente, rápida y flexible conectada a la red. En este entorno de almacenamiento adjunto de red (NAS), tiene un control total sobre la función y el rendimiento de las comparticiones de archivos.
 
-Utilice los mandatos siguientes para gestionar un volumen determinado en el servicio de almacenamiento de archivos de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+Utilice los mandatos siguientes para gestionar un volumen determinado en el servicio de almacenamiento de archivos de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Mandatos de almacenamiento de archivos de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 1. Almacenamiento de archivos de infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
+ <th colspan="6">Almacenamiento de archivos de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -44,19 +46,23 @@ Utilice los mandatos siguientes para gestionar un volumen determinado en el serv
   <td>[ibmcloud sl file snapshot-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_list)</td>
   <td>[ibmcloud sl file snapshot-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_order)</td>
   <td>[ibmcloud sl file snapshot-restore](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_restore)</td>
+  <td>[ibmcloud sl file snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_schedule_list)</td>
   <td>[ibmcloud sl file volume-cancel](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_cancel)</td>  
-  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
    </tr>
  <tr>
-   <td>[ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
-   <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
-   <td>[ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
-   <td>[ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
-   <td>[ibmcloud sl file volume-options](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_options)</td>
+  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
+  <td>[ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
+  <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
+  <td>[ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
+  <td>[ibmcloud sl file volume-modify](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_modify)</td>
+  <td>[ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl file volume-options](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_options)</td>
  </tr>
    </tbody>
  </table>
-
+ 
  ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
@@ -393,6 +399,20 @@ ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 Este mandato restaura el volumen con el ID 12345678 a partir de la instantánea con el ID 87654321.
 
+## ibmcloud sl snapshot-schedule-list
+{: #sl_snapshot_schedule_list}
+
+Obtener una lista de planificaciones de instantáneas para un volumen determinado
+```
+ibmcloud sl snapshot-schedule-list VOLUME_ID
+```
+
+**Ejemplos**:
+```
+ibmcloud sl file snapshot-schedule-list 12345678
+```
+Este mandato muestra una lista de las planificaciones de instantáneas para el volumen con el ID 12345678
+
 ## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
@@ -537,6 +557,40 @@ ibmcloud sl file volume-order [OPTIONS]
 ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
 Este mandato solicita un volumen de rendimiento cuyo tamaño es 1000 GB, IOPS es 4000, ubicado en dal09.
+
+## ibmcloud sl file volume-modify
+{: #sl_file_volume_modify}
+
+Modificar un volumen de almacenamiento de archivos existente
+```
+ibmcloud sl file volume-modify VOLUME_ID [OPTIONS]
+```
+
+<strong>Opciones de mandato</strong>:
+<dl>
+<dt>-c, --new-size</dt>
+<dd>Nuevo tamaño de volumen de archivos en GB. ***Si no se proporciona ningún tamaño, se utiliza el tamaño original del volumen.*** Tamaños posibles: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Mínimo: [el tamaño original del volumen]</dd>
+<dt>-i, --new-iops</dt>
+<dd>IOPS de almacenamiento de rendimiento, entre 100 y 6000 en múltiplos de 100 [solo para volúmenes de rendimiento] ***Si no se especifica ningún valor de IOPS, se utiliza el valor de IOPS original del volumen. *** Requisitos: [Si el valor de IOPS/GB original del volumen es menor que 0,3, el nuevo valor de IOPS/GB del volumen también debe ser menor que 0,3. Si el valor de IOPS/GB original del volumen es mayor o igual que 0,3, el nuevo valor de IOPS/GB del volumen también debe ser mayor o igual que 0,3].</dd>
+<dt>-t, --new-tier</dt>
+<dd>Nivel de almacenamiento resistente (IOPS por GB) [solo para volúmenes de resistencia] ***Si no se especifica ningún nivel, se utiliza el nivel original del volumen.***
+Requisitos: [Si el valor de IOPS/GB original del volumen es 0,25, el nuevo valor de IOPS/GB del volumen también debe ser 0,25]. Si el valor de IOPS/GB original del volumen es mayor que 0,25, el nuevo valor de IOPS/GB del volumen también debe ser mayor que 0,25].</dd>
+<dt>-f, --force</dt>
+<dd>Forzar la operación sin confirmación.</dd>
+</dl>
+
+**Ejemplos**:
+
+```
+ibmcloud sl file volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+Este mandato modifica un volumen 12345678 con un tamaño de 1000 GB, IOPS es 4000.
+
+```
+ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
+```
+Este mandato modifica un volumen 12345678 con un tamaño de 500 GB, el nivel es 4 IOPS por GB.
+
 
 ## ibmcloud sl file volume-options
 {: #sl_file_volume_options}

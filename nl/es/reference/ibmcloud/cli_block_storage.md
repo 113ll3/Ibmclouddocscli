@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -16,11 +16,13 @@ lastupdated: "2018-10-17"
 
 El almacenamiento en bloque de {{site.data.keyword.Bluemix}} es un almacenamiento iSCSI persistente y de alto rendimiento que se suministra y se gestiona de forma independiente de las instancias de cálculo. Los LUN de almacenamiento en bloque basados en iSCSI están conectados a dispositivos autorizados a través de conexiones de E/S de varias vías de acceso (MPIO) redundantes. 
 
-Utilice los mandatos siguientes para gestionar un volumen determinado para el servicio de almacenamiento en bloque de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+Utilice los mandatos siguientes para gestionar un volumen determinado para el servicio de almacenamiento en bloque de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Mandatos de almacenamiento en bloque de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<caption>Tabla 1. Almacenamiento en bloque de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
+ <th colspan="6">Almacenamiento en bloque de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -45,21 +47,24 @@ Utilice los mandatos siguientes para gestionar un volumen determinado para el se
   <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_list)</td>
   <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_order)</td>
   <td>[ibmcloud sl block snapshot-restore](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_restore)</td>
+  <td>[ibmcloud sl block snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_schedule_list)</td>
+</tr>
+<tr>
   <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_cancel)</td>
+  <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>
+  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
+  <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
+  <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
+  <td>[ibmcloud sl block volume-modify](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_modify)</td>
 </tr>
 <tr>
-   <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>    <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
-   <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
-   <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
-   <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
-   <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
-</tr>
-<tr>
-   <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
+  <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
+  <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
+  <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
 </tr>
 </tbody>
 </table>
-
+ 
 ## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
@@ -402,6 +407,20 @@ ibmcloud sl block snapshot-restore 12345678 87654321
 ```
 Este mandato restaura el volumen con el ID 12345678 a partir de la instantánea con el ID 87654321.
 
+## ibmcloud sl block snapshot-schedule-list
+{: #sl_block_snapshot_schedule_list}
+
+Obtener una lista de planificaciones de instantáneas para un volumen determinado
+```
+ibmcloud sl block snapshot-schedule-list VOLUME_ID
+```
+
+**Ejemplos**:
+```
+ibmcloud sl block snapshot-schedule-list 12345678
+```
+Este mandato muestra una lista de las planificaciones de instantáneas para el volumen con el ID 12345678
+
 ## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
@@ -469,6 +488,39 @@ ibmcloud sl block volume-list [OPTIONS]
 ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Este mandato lista todos los volúmenes de resistencia en la cuenta actual que están ubicados en dal09, y los ordena por capacidad.
+
+## ibmcloud sl block volume-modify
+{: #sl_block_volume_modify}
+
+Modificar un volumen de almacenamiento en bloques existente
+```
+ibmcloud sl block volume-modify VOLUME_ID [OPTIONS]
+```
+
+<strong>Opciones de mandato</strong>:
+<dl>
+<dt>-c, --new-size</dt>
+<dd>Nuevo tamaño de volumen de bloques en GB. ***Si no se proporciona ningún tamaño, se utiliza el tamaño original del volumen.*** Tamaños posibles: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Mínimo: [el tamaño original del volumen]</dd>
+<dt>-i, --new-iops</dt>
+<dd>IOPS de almacenamiento de rendimiento, entre 100 y 6000 en múltiplos de 100 [solo para volúmenes de rendimiento] ***Si no se especifica ningún valor de IOPS, se utiliza el valor de IOPS original del volumen. *** Requisitos: [Si el valor de IOPS/GB original del volumen es menor que 0,3, el nuevo valor de IOPS/GB del volumen también debe ser menor que 0,3. Si el valor de IOPS/GB original del volumen es mayor o igual que 0,3, el nuevo valor de IOPS/GB del volumen también debe ser mayor o igual que 0,3].</dd>
+<dt>-t, --new-tier</dt>
+<dd>Nivel de almacenamiento resistente (IOPS por GB) [solo para volúmenes de resistencia] ***Si no se especifica ningún nivel, se utiliza el nivel original del volumen.***
+Requisitos: [Si el valor de IOPS/GB original del volumen es 0,25, el nuevo valor de IOPS/GB del volumen también debe ser 0,25]. Si el valor de IOPS/GB original del volumen es mayor que 0,25, el nuevo valor de IOPS/GB del volumen también debe ser mayor que 0,25].</dd>
+<dt>-f, --force</dt>
+<dd>Forzar la operación sin confirmación.</dd>
+</dl>
+
+**Ejemplos**:
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+Este mandato modifica un volumen 12345678 con un tamaño de 1000 GB, IOPS es 4000.
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4
+```
+Este mandato modifica un volumen 12345678 con un tamaño de 500 GB, el nivel es 4 IOPS por GB.
 
 ## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}

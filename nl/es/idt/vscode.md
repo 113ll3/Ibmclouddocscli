@@ -26,7 +26,7 @@ La extensión de IBM Cloud Developer Tools para el código de Visual Studio es u
 ## Dependencias
 {: #dependencies}
 
-Para utilizar la extensión de IBM Cloud Developer Tools para Visual Studio Code, necesita que en el sistema estén instalados [{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) y el plug-in [IBM Developer CLI](index.html).
+Para utilizar la extensión de IBM Cloud Developer Tools para Visual Studio Code, necesita que en el sistema estén instalados la [CLI de {{site.data.keyword.Bluemix_notm}}](https://plugins.ng.bluemix.net/ui/home.html) y el plug-in [IBM Developer CLI](index.html).
 
 ## Instalación
 {: #installation}
