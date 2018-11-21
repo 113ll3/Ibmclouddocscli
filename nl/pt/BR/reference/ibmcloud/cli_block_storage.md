@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -19,57 +19,61 @@ de alto desempenho persistente que é fornecido e gerenciado independentemente d
 Block Storage baseados em iSCSI são conectados aos dispositivos autorizados por meio de conexões redundantes de
 E/S de múltiplos caminhos (MPIO). 
 
-Use os comandos a seguir para gerenciar um determinado volume para o serviço Block Storage de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Use os comandos a seguir para gerenciar um determinado volume para o serviço de armazenamento de bloco de infraestrutura clássico do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Comandos do Block Storage de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
+<table summary="Comandos gerais de infraestrutura {{site.data.keyword.BluSoftlayer_notm}} em ordem alfabética que possuem links que levam você para mais informações sobre o comando">
+<caption>Tabela 1. Armazenamento de bloco da infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
+ <th colspan="6">Armazenamento de bloco de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
-  <td>[Ibmcloud sl block access-authorize](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_authorize)</td>
+  <td>[ibmcloud sl block access-authorize](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_authorize)</td>
   <td>[ibmcloud sl block access-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_list)</td>
   <td>[ibmcloud sl block access-password](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_password)</td>
-  <td>[Ibmcloud sl block access-revoke](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_revoke)</td>
-  <td>[Ibmcloud sl block replica-failback](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_failback)</td>
-  <td>[Ibmcloud sl block replica-failover](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_failover)</td>
+  <td>[ibmcloud sl block access-revoke](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_revoke)</td>
+  <td>[ibmcloud sl block replica-failback](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_failback)</td>
+  <td>[ibmcloud sl block replica-failover](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_failover)</td>
  </tr>
  <tr>
-  <td>[Ibmcloud sl block replica-locations](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_locations)</td>
-  <td>[Ibmcloud sl block replica-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_order)</td>
-  <td>[Ibmcloud sl block replica-partners](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_partners)</td>
-  <td>[Ibmcloud sl block snapshot-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_cancel)</td>
-  <td>[Ibmcloud sl block snapshot-create](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_create)</td>
-  <td>[Ibmcloud sl block snapshot-disable](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_disable)</td>
+  <td>[ibmcloud sl block replica-locations](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_locations)</td>
+  <td>[ibmcloud sl block replica-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_order)</td>
+  <td>[ibmcloud sl block replica-partners](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_partners)</td>
+  <td>[ibmcloud sl block snapshot-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_cancel)</td>
+  <td>[ibmcloud sl block snapshot-create](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_create)</td>
+  <td>[ibmcloud sl block snapshot-disable](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_disable)</td>
 </tr>
 <tr>
   <td>[ibmcloud sl block snapshot-enable](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_enable)</td>
-  <td>[Ibmcloud sl block snapshot-delete](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_delete)</td>
-  <td>[Ibmcloud sl block snapshot-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_list)</td>
-  <td>[Ibmcloud sl block snapshot-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_order)</td>
-  <td>[Ibmcloud sl block snapshot-restore](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_restore)</td>
-  <td>[Ibmcloud sl block volume-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_cancel)</td>
+  <td>[ibmcloud sl block snapshot-delete](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_delete)</td>
+  <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_list)</td>
+  <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_order)</td>
+  <td>[ibmcloud sl block snapshot-restore](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_restore)</td>
+  <td>[ibmcloud sl block snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_schedule_list)</td>
 </tr>
 <tr>
-   <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>    <td>[Ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
-   <td>[Ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
-   <td>[Ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
-   <td>[Ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
-   <td>[ibmcloud sl block volume-options
-](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
+  <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_cancel)</td>
+  <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>
+  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
+  <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
+  <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
+  <td>[ibmcloud sl block volume-modify](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_modify)</td>
 </tr>
 <tr>
-   <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
+  <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
+  <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
+  <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
 </tr>
 </tbody>
 </table>
-
-## Ibmcloud sl block access-authorize
+ 
+## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
 Autorizar hosts a acessar um determinado volume.
 ```
-Ibmcloud sl block access-authorize VOLUME_ID [ OPTIONS ]
+ibmcloud sl block access-authorize VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -95,7 +99,7 @@ Esse comando autoriza o servidor virtual com ID 87654321 a acessar o volume com 
 
 Listar ACLs.
 ```
-Ibmcloud sl block access-list VOLUME_ID [ OPTIONS ]
+ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -120,12 +124,12 @@ Muda uma senha para o acesso de um volume.
 ibmcloud sl block access-password ACCESS_ID PASSWORD
 ```
 
-## Ibmcloud sl block access-revoke
+## ibmcloud sl block access-revoke
 {: #sl_block_access_revoke}
 
 Revogar autorização para hosts que acessam um determinado volume.
 ```
-Ibmcloud sl block access-revoke VOLUME_ID [ OPTIONS ]
+ibmcloud sl block access-revoke VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -146,57 +150,57 @@ ibmcloud sl block access-revoke 12345678 --virtual-id 87654321
 ```
 Esse comando revoga o acesso do servidor virtual com ID 87654321 para o volume com ID 12345678.
 
-## Ibmcloud sl block replica-failback
+## ibmcloud sl block replica-failback
 {: #sl_block_replica_failback}
 
 Efetuar failback de um volume de bloco da réplica.
 ```
-Ibmcloud sl block replica-failback VOLUME_ID
+ibmcloud sl block replica-failback VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl block replica-failback 12345678
+ibmcloud sl block replica-failback 12345678
 ```
 Esse comando executa a operação de failback para o volume com ID 12345678.
 
-## Ibmcloud sl block replica-failover
+## ibmcloud sl block replica-failover
 {: #sl_block_replica_failover}
 
 Efetuar failover de um volume de bloco no volume de réplica especificado.
 ```
-Ibmcloud sl block replica-failover VOLUME_ID REPLICA_ID
+ibmcloud sl block replica-failover VOLUME_ID REPLICA_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl block replica-failover 12345678 87654321
+ibmcloud sl block replica-failover 12345678 87654321
 ```
 Esse comando executa a operação de failover do volume com ID 12345678 para o volume de réplica com ID 87654321.
 
-## Ibmcloud sl block replica-locations
+## ibmcloud sl block replica-locations
 {: #sl_block_replica_locations}
 
 Listar data centers de replicação adequados para o volume especificado.
 ```
-Ibmcloud sl block replica-locations VOLUME_ID
+ibmcloud sl block replica-locations VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl block replica-locations 12345678
+ibmcloud sl block replica-locations 12345678
 ```
 Esse comando lista os data centers de replicação adequados para o volume de bloco com ID 12345678.
 
-## Ibmcloud sl block replica-order
+## ibmcloud sl block replica-order
 {: #sl_block_replica_order}
 
 Pedir um volume de réplica de armazenamento de bloco.
 ```
-Ibmcloud sl block replica-order VOLUME_ID [ OPTIONS ]
+ibmcloud sl block replica-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -221,27 +225,27 @@ ibmcloud sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LI
 ```
 Esse comando pede uma réplica para o volume com ID 12345678, que executa a replicação DAILY, está localizado em dal09, o nível de camada é 4, o tipo de OS é Linux.
 
-## Ibmcloud sl block replica-partners
+## ibmcloud sl block replica-partners
 {: #sl_block_replica_partners}
 
 Listar volumes replicantes existentes para um volume de bloco.
 ```
-Ibmcloud sl block replica-partners VOLUME_ID [ OPTIONS ]
+ibmcloud sl block replica-partners VOLUME_ID [OPTIONS]
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl block replica-partners 12345678
+ibmcloud sl block replica-partners 12345678
 ```
 Esse comando lista volumes replicantes existentes para o volume de bloco com ID 12345678.
 
-## Ibmcloud sl block snapshot-cancel
+## ibmcloud sl block snapshot-cancel
 {: #sl_block_snapshot_cancel}
 
 Cancelar o espaço de captura instantânea existente para um determinado volume.
 ```
-Ibmcloud sl block snapshot-cancel SNAPSHOT_ID [ OPTIONS ]
+ibmcloud sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -260,12 +264,12 @@ ibmcloud sl block snapshot-cancel 12345678 --immediate -f
 ```
 Esse comando cancela a captura instantânea com ID 12345678 imediatamente sem pedir confirmação.
 
-## Ibmcloud sl block snapshot-create
+## ibmcloud sl block snapshot-create
 {: #sl_block_snapshot_create}
 
 Criar uma captura instantânea em um determinado volume.
 ```
-Ibmcloud sl block snapshot-create VOLUME_ID [ OPTIONS ]
+ibmcloud sl block snapshot-create VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -280,12 +284,12 @@ ibmcloud sl block snapshot-create 12345678 --note snapshotforibmcloud
 ```
 Esse comando cria uma captura instantânea para o volume com o ID 12345678 e com a nota de adição como snapshotforibmcloud.
 
-## Ibmcloud sl block snapshot-disable
+## ibmcloud sl block snapshot-disable
 {: #sl_block_snapshot_disable}
 
 Desativar capturas instantâneas no planejamento especificado para um determinado volume.
 ```
-Ibmcloud sl block snapshot-disable VOLUME_ID [ OPTIONS ]
+ibmcloud sl block snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -305,7 +309,7 @@ Esse comando desativa a captura instantânea diária para o volume com ID 123456
 
 Ativar capturas instantâneas para um determinado volume no planejamento especificado.
 ```
-Ibmcloud sl block snapshot-enable VOLUME_ID [ OPTIONS ]
+ibmcloud sl block snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -328,27 +332,27 @@ ibmcloud sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Esse comando ativa a captura instantânea para o volume com ID 12345678, a captura instantânea é tomada semanalmente todo domingo às 2h e até cinco capturas instantâneas são retidas.
 
-## Ibmcloud sl block snapshot-delete
+## ibmcloud sl block snapshot-delete
 {: #sl_block_snapshot_delete}
 
 Excluir uma captura instantânea em um determinado volume.
 ```
-Ibmcloud sl block snapshot-delete SNAPSHOT_ID
+ibmcloud sl block snapshot-delete SNAPSHOT_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl block snapshot-delete 12345678
+ibmcloud sl block snapshot-delete 12345678
 ```
 Esse comando exclui a captura instantânea com ID 12345678.
 
-## Ibmcloud sl block snapshot-list
+## ibmcloud sl block snapshot-list
 {: #sl_block_snapshot_list}
 
 Listar capturas instantâneas de armazenamento de bloco.
 ```
-Ibmcloud sl block snapshot-list VOLUME_ID [ OPTIONS ]
+ibmcloud sl block snapshot-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -363,12 +367,12 @@ ibmcloud sl block snapshot-list 12345678 --sortby id
 ```
 Esse comando lista todas as capturas instantâneas do volume com ID 12345678 e as classifica por ID.
 
-## Ibmcloud sl block snapshot-order
+## ibmcloud sl block snapshot-order
 {: #sl_block_snapshot_order}
 
 Pedir espaço de captura instantânea para um volume de armazenamento de bloco.
 ```
-Ibmcloud sl block snapshot-order VOLUME_ID [ OPTIONS ]
+ibmcloud sl block snapshot-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -396,22 +400,36 @@ Esse comando pede o espaço de captura instantânea para o volume com ID 1234567
 
 Restaurar volume de bloco usando uma captura instantânea especificada.
 ```
-Ibmcloud sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
+ibmcloud sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl block snapshot-restore 12345678 87654321
+ibmcloud sl block snapshot-restore 12345678 87654321
 ```
 Esse comando restaura o volume com ID 12345678 da captura instantânea com ID 87654321.
 
-## Ibmcloud sl block volume-cancel
+## ibmcloud sl block snapshot-schedule-list
+{: #sl_block_snapshot_schedule_list}
+
+Listar planejamentos de captura instantânea para um determinado volume
+```
+ibmcloud sl block snapshot-schedule-list VOLUME_ID
+```
+
+**Exemplos**:
+```
+ibmcloud sl block snapshot-schedule-list 12345678
+```
+Esse comando lista os planejamentos de captura instantânea para o volume com ID 12345678
+
+## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
 Cancelar um volume de armazenamento de bloco existente.
 ```
-Ibmcloud sl block volume-cancel VOLUME_ID [ OPTIONS ]
+ibmcloud sl block volume-cancel VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -444,12 +462,12 @@ ibmcloud sl block volume-count [OPTIONS]
 <dd>Filtrar pelo nome abreviado do data center.</dd>
 </dl>
 
-## Ibmcloud sl block volume-list
+## ibmcloud sl block volume-list
 {: #sl_block_volume_list}
 
 Listar armazenamento de bloco.
 ```
-Ibmcloud sl block volume-list [ OPTIONS ]
+ibmcloud sl block volume-list [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -474,6 +492,39 @@ ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Esse comando lista todos os volumes de resistência na conta atual que estão localizados em dal09 e os classifica por capacidade.
 
+## ibmcloud sl block volume-modify
+{: #sl_block_volume_modify}
+
+Modificar um volume de armazenamento de bloco existente
+```
+ibmcloud sl block volume-modify VOLUME_ID [OPTIONS]
+```
+
+<strong>Opções de comando</strong>:
+<dl>
+<dt>-c, --new-size</dt>
+<dd>Novo tamanho do volume de bloco em GB. ***Se nenhum tamanho for fornecido, o tamanho original do volume será usado.*** Tamanhos potenciais: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Mínimo: [o tamanho original do volume]</dd>
+<dt>-i, --new-iops</dt>
+<dd>IOPS de armazenamento de desempenho, entre 100 e 6.000 em múltiplos de 100 [somente para volumes de desempenho] ***Se nenhum valor de IOPS for especificado, o valor de IOPS original do volume será usado.*** Requisitos: [Se o IOPS/GB original para o volume for menor que 0,3, o novo IOPS/GB também deverá ser menor que 0,3. Se o IOPS/GB original para o volume for maior ou igual a 0,3, o novo IOPS/GB para o volume também deverá ser maior ou igual a 0,3.]</dd>
+<dt>-t, --new-tier</dt>
+<dd>Camada de armazenamento do Endurance (IOPS por GB) [somente para volumes do Endurance] ***Se nenhuma camada for especificada, a camada original do volume será usada.***
+Requisitos: [Se o IOPS/GB original para o volume for 0,25, o novo IOPS/GB para o volume também deverá ser 0,25. Se o IOPS/GB original para o volume for maior que 0,25, o novo IOPS/GB para o volume também deverá ser maior que 0,25.]</dd>
+<dt>-f, --force</dt>
+<dd>Forçar a operação sem confirmação.</dd>
+</dl>
+
+**Exemplos**:
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+Esse comando modifica um volume 12345678 com o tamanho 1000 GB, IOPS é 4000.
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4
+```
+Esse comando modifica um volume 12345678 com o tamanho 500 GB, o nível de camada é 4 IOPS por GB.
+
 ## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}
 
@@ -482,27 +533,27 @@ Configurar o ID de LUN em um volume de armazenamento de bloco existente.
 ibmcloud sl block volume-set-lun-id VOLUME_ID LUN_ID
 ```
 
-## Ibmcloud sl block volume-detail
+## ibmcloud sl block volume-detail
 {: #sl_block_volume_detail}
 
 Exibir detalhes para um volume especificado.
 ```
-Ibmcloud sl block volume-detail VOLUME_ID
+ibmcloud sl block volume-detail VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl block volume-detail 12345678
+ibmcloud sl block volume-detail 12345678
 ```
 Esse comando mostra os detalhes do volume com ID 12345678.
 
-## Ibmcloud sl block volume-duplicate
+## ibmcloud sl block volume-duplicate
 {: #sl_block_volume_duplicate}
 
 Pedir um volume de bloco duplicando um volume existente.
 ```
-Ibmcloud sl block volume-duplicate VOLUME_ID [ OPTIONS ]
+ibmcloud sl block volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -523,16 +574,16 @@ Ibmcloud sl block volume-duplicate VOLUME_ID [ OPTIONS ]
 
 **Exemplos**:
 ```
-Ibmcloud sl block volume-duplicate 12345678
+ibmcloud sl block volume-duplicate 12345678
 ```
 Esse comando mostra a ordem de um novo volume duplicando o volume com ID 12345678.
 
-## Ibmcloud sl block volume-order
+## ibmcloud sl block volume-order
 {: #sl_block_volume_order}
 
 Pedir um volume de armazenamento de bloco.
 ```
-Ibmcloud sl block volume-order [ OPTIONS ]
+ibmcloud sl block volume-order [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:

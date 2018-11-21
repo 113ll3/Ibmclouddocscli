@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -46,13 +46,13 @@ consulta, os tempos de execução e as localizações geográficas dos data cent
  </tbody>
  </table>
   
-  ## ibmcloud catalog search
+  ## Ibmcloud de procura de catálogo
 {: #ibmcloud_catalog_search}
 
 Procurar entradas no catálogo
 
 ```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -64,7 +64,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>-k, --kind</dt>
   <dd>Filtrar pelo tipo de recursos. Atualmente, apenas "service-cf", "iaas", "runtime", "template" e "dashboard" são suportados</dd>
   <dt>-p, --price</dt>
-  <dd>Filtrar pelo preço. Atualmente, apenas "free", "paygo", "bluemix-subscription" são suportados</dd>
+  <dd>Filtrar pelo preço. Atualmente, somente "free", "paygo" e "ibmcloud-subscription" são suportados</dd>
   <dt>-t, --tag</dt>
   <dd>Filtrar pela tag.</dd>
   <dt>--sort-by</dt>
@@ -73,8 +73,8 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dd>Especificar colunas adicionais para a tabela. Atualmente "grupo", "provedor" e "tags"</dd>
   <dt>--reverse</dt>
   <dd>Se a ordem de classificação deve ser revertida</dd>
-  <dt>--json</dt>
-  <dd>Resposta JSON original da saída</dd>
+  <dt>--output TYPE (opcional)</dt>
+  <dd>--output value  Especificar TYPE de saída, somente JSON é suportado agora. Essa opção é exclusiva com '--id'.</dd>
   <dt>--csv</dt>
   <dd>Arquivo CSV de saída</dd>
   <dt>--global</dt>
@@ -95,7 +95,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 Obter uma entrada no catálogo
 
 ```
-ibmcloud catalog entry ID [--global]
+ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -104,8 +104,8 @@ ibmcloud catalog entry ID [--global]
 <dl>
   <dt>--children</dt>
   <dd>Obter todos os filhos da entrada no catálogo</dd>
-  <dt>--json</dt>
-  <dd>Resposta JSON original da saída</dd>
+  <dt>--output TYPE (opcional)</dt>
+  <dd>--output value  Especificar TYPE de saída, somente JSON é suportado agora.</dd>
   <dt>--global</dt>
   <dd>Operar no escopo global</dd>
 </dl>
@@ -200,7 +200,7 @@ ibmcloud catalog delete 'j402-dnf1i'
 Obter a visibilidade de uma entrada no catálogo (administrador do catálogo de uma conta somente)
 
 ```
-ibmcloud catalog entry-visibility ID [--global]
+ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -209,6 +209,8 @@ ibmcloud catalog entry-visibility ID [--global]
 <dl>
   <dt>-json</dt>
   <dd>Resposta JSON original da saída</dd>
+  <dt>--output TYPE (opcional)</dt>
+  <dd>--output value  Especificar TYPE de saída, somente JSON é suportado agora.</dd>
   <dt>-global</dt>
   <dd>Operar no escopo global</dd>
 </dl>
@@ -308,7 +310,7 @@ ibmcloud catalog templates [-d]
    <dd>Se a opção <i>-d</i> for especificada, a descrição de cada modelo também será exibida. Caso contrário, somente o ID e o nome de cada modelo serão mostrados.</dd>
    </dl>
 
-## ibmcloud catalog template
+## Modelo do catálogo ibmcloud
 {: #ibmcloud_catalog_template}
 
 Visualize as informações detalhadas de um modelo de modelo especificado.
@@ -388,7 +390,7 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 Obter um subconjunto de opção das regiões em sua opção de formato.
 
 ```
-ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```
 
 <strong>Opções de comando</strong>:
@@ -400,8 +402,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>Obter uma lista de entradas para o tipo especificado.</dd>
   <dt>--col</dt>
   <dd>Especificar colunas adicionais para a tabela. Atualmente "grupo", "provedor" e "tags".</dd>
-  <dt>--json</dt>
-  <dd>Saída da resposta JSON original.</dd>
+  <dt>--output TYPE (opcional)</dt>
+  <dd>--output value  Especificar TYPE de saída, somente JSON é suportado agora. Essa opção é exclusiva com '--id'.</dd>
   <dt>--global</dt>
   <dd>Operar em um escopo global.</dd>
   <dt>--csv</dt>

@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -17,54 +17,59 @@ lastupdated: "2018-10-17"
 O {{site.data.keyword.filestorage_full}} é um {{site.data.keyword.filestorage_short}} baseado em
 NFS conectado à rede, persistente rápido e flexível. Nesse ambiente de armazenamento conectado à rede (NAS), você tem controle total sobre sua função de compartilhamentos de arquivo e sobre o desempenho.
 
-Use os comandos a seguir para gerenciar um determinado volume no serviço File Storage da infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Use os comandos a seguir para gerenciar um determinado volume no serviço File Storage da infraestrutura clássica do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Comandos do File Storage da infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
+<table summary="Comandos gerais de infraestrutura {{site.data.keyword.BluSoftlayer_notm}} em ordem alfabética que possuem links que levam você para mais informações sobre o comando">
+<caption>Tabela 1. Armazenamento de arquivo de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
+ <th colspan="6">Armazenamento de arquivos de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
-  <td>[Sl file access-authorize ibmcloud](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_authorize)</td>
-  <td>[Ibmcloud sl file access-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_list)</td>
-  <td>[Sl file access-revoke ibmcloud](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_revoke)</td>
-  <td>[Ibmcloud sl file replica-failback](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_failback)</td>
-  <td>[Ibmcloud sl file replica-failover](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_failover)</td>
-  <td>[Ibmcloud sl file replica-locations](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_locations)</td>
+  <td>[ibmcloud sl file access-authorize](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_authorize)</td>
+  <td>[ibmcloud sl file access-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_list)</td>
+  <td>[ibmcloud sl file access-revoke](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_revoke)</td>
+  <td>[ibmcloud sl file replica-failback](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_failback)</td>
+  <td>[ibmcloud sl file replica-failover](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_failover)</td>
+  <td>[ibmcloud sl file replica-locations](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_locations)</td>
    </tr>
  <tr>
   <td>[ibmcloud sl file replica-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_order)</td>
-  <td>[Ibmcloud sl file replica-partners](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_partners)</td>
-  <td>[Ibmcloud sl file snapshot-cancel](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_cancel)</td>
-  <td>[Ibmcloud sl file snapshot-create](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_create)</td>
-  <td>[Sl file snapshot-disable ibmcloud](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_disable)</td>
-  <td>[Sl file snapshot-enable ibmcloud](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_enable)</td>
+  <td>[ibmcloud sl file replica-partners](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_partners)</td>
+  <td>[ibmcloud sl file snapshot-cancel](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_cancel)</td>
+  <td>[ibmcloud sl file snapshot-create](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_create)</td>
+  <td>[ibmcloud sl file snapshot-disable](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_disable)</td>
+  <td>[ibmcloud sl file snapshot-enable](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_enable)</td>
   </tr>
  <tr>
-  <td>[Ibmcloud sl file snapshot-delete](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_delete)</td>
-  <td>[Ibmcloud sl file snapshot-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_list)</td>
-  <td>[Ibmcloud sl file snapshot-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_order)</td>
-  <td>[Ibmcloud sl file snapshot-restore](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_restore)</td>
+  <td>[ibmcloud sl file snapshot-delete](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_delete)</td>
+  <td>[ibmcloud sl file snapshot-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_list)</td>
+  <td>[ibmcloud sl file snapshot-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_order)</td>
+  <td>[ibmcloud sl file snapshot-restore](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_restore)</td>
+  <td>[ibmcloud sl file snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_schedule_list)</td>
   <td>[ibmcloud sl file volume-cancel](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_cancel)</td>  
-  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
    </tr>
  <tr>
-   <td>[Ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
-   <td>[Ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
-   <td>[Ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
-   <td>[Ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
-   <td>[ibmcloud sl file volume-options
-](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_options)</td>
+  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
+  <td>[ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
+  <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
+  <td>[ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
+  <td>[ibmcloud sl file volume-modify](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_modify)</td>
+  <td>[ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl file volume-options](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_options)</td>
  </tr>
    </tbody>
  </table>
-
- ## Sl file access-authorize ibmcloud
+ 
+ ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
 Autorizar hosts a acessar um determinado volume.
 ```
-Sl file access-ibmcloud authorize VOLUME_ID [ OPTIONS ]
+ibmcloud sl file access-authorize VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -87,7 +92,7 @@ ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
 Esse comando autoriza o servidor virtual com ID 87654321 a acessar o volume com ID 12345678.
 
-## Ibmcloud sl file access-list
+## ibmcloud sl file access-list
 {: #sl_file_access_list}
 
 Listar ACLs.
@@ -109,12 +114,12 @@ ibmcloud sl file access-list 12345678 --sortby id
 ```
 Esse comando lista todos os hosts que estão autorizados a acessar o volume com ID 12345678 e os classifica por ID.
 
-## Sl file access-revoke ibmcloud
+## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
 
 Revogar autorização para hosts que acessam um determinado volume.
 ```
-Sl file access-ibmcloud revoke VOLUME_ID [ OPTIONS ]
+ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -137,48 +142,48 @@ ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
 Esse comando revoga o acesso do servidor virtual com ID 87654321 para o volume com ID 12345678.
 
-## Ibmcloud sl file replica-failback
+## ibmcloud sl file replica-failback
 {: #sl_file_replica_failback}
 
 Efetuar failback de um volume de arquivo da réplica.
 ```
-Ibmcloud sl file replica-failback VOLUME_ID
+ibmcloud sl file replica-failback VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl file replica-failback 12345678
+ibmcloud sl file replica-failback 12345678
 ```
 Esse comando executa a operação de failback para o volume com ID 12345678.
 
-## Ibmcloud sl file replica-failover
+## ibmcloud sl file replica-failover
 {: #sl_file_replica_failover}
 
 Efetuar failover de um volume de arquivo no volume de réplica especificado.
 ```
-Ibmcloud sl file replica-failover VOLUME_ID REPLICA_ID
+ibmcloud sl file replica-failover VOLUME_ID REPLICA_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl file replica-failover 12345678 87654321
+ibmcloud sl file replica-failover 12345678 87654321
 ```
 Esse comando executa a operação de failover do volume com ID 12345678 para o volume de réplica com ID 87654321.
 
-## Ibmcloud sl file replica-locations
+## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
 
 Listar data centers de replicação adequados para o volume especificado.
 ```
-Ibmcloud sl file replica-locations VOLUME_ID
+ibmcloud sl file replica-locations VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl file replica-locations 12345678
+ibmcloud sl file replica-locations 12345678
 ```
 Esse comando lista data centers de replicação adequados para o volume de arquivo com ID 12345678.
 
@@ -210,27 +215,27 @@ ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 Esse comando pede uma réplica para o volume com ID 12345678, que executa a replicação DAILY, está localizado em dal09, o nível de camada é 4.
 
-## Ibmcloud sl file replica-partners
+## ibmcloud sl file replica-partners
 {: #sl_file_replica_partners}
 
 Listar volumes replicantes existentes para um volume de arquivo.
 ```
-Ibmcloud sl file replica-partners VOLUME_ID [ OPTIONS ]
+ibmcloud sl file replica-partners VOLUME_ID [OPTIONS]
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl file replica-partners 12345678
+ibmcloud sl file replica-partners 12345678
 ```
 Esse comando lista volumes replicantes existentes para o volume de arquivo com ID 12345678.
 
-## Ibmcloud sl file snapshot-cancel
+## ibmcloud sl file snapshot-cancel
 {: #sl_file_snapshot_cancel}
 
 Cancelar o espaço de captura instantânea existente para um determinado volume.
 ```
-Sl file snapshot-cancel SNAPSHOT_ID [ OPTIONS ]
+ibmcloud sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -249,12 +254,12 @@ ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 ```
 Esse comando cancela a captura instantânea com ID 12345678 imediatamente sem pedir confirmação.
 
-## Ibmcloud sl file snapshot-create
+## ibmcloud sl file snapshot-create
 {: #sl_file_snapshot_create}
 
 Criar uma captura instantânea em um determinado volume.
 ```
-Sl file snapshot-create VOLUME_ID [ OPTIONS ]
+ibmcloud sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -269,12 +274,12 @@ ibmcloud sl file snapshot-create 12345678 --note snapshotforibmcloud
 ```
 Esse comando cria uma captura instantânea para o volume com o ID 12345678 e com a nota de adição como snapshotforibmcloud.
 
-## Sl file snapshot-disable ibmcloud
+## ibmcloud sl file snapshot-disable
 {: #sl_file_snapshot_disable}
 
 Desativar capturas instantâneas no planejamento especificado para um determinado volume.
 ```
-Sl file snapshot-disable VOLUME_ID [ OPTIONS ]
+ibmcloud sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -289,7 +294,7 @@ ibmcloud sl file snapshot-disable 12345678 -s DAILY
 ```
 Esse comando desativa a captura instantânea diária para o volume com ID 12345678.
 
-## Sl file snapshot-enable ibmcloud
+## ibmcloud sl file snapshot-enable
 {: #sl_file_snapshot_enable}
 
 Ativar capturas instantâneas para um determinado volume no planejamento especificado.
@@ -317,27 +322,27 @@ ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Esse comando ativa a captura instantânea para o volume com ID 12345678, a captura instantânea é tomada semanalmente todo domingo às 2h e até cinco capturas instantâneas são retidas.
 
-## Ibmcloud sl file snapshot-delete
+## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
 Excluir uma captura instantânea em um determinado volume.
 ```
-Ibmcloud sl file snapshot-delete SNAPSHOT_ID
+ibmcloud sl file snapshot-delete SNAPSHOT_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl file snapshot-delete 12345678
+ibmcloud sl file snapshot-delete 12345678
 ```
 Esse comando exclui a captura instantânea com ID 12345678.
 
-## Ibmcloud sl file snapshot-list
+## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
 
 Listar capturas instantâneas do armazenamento de arquivo.
 ```
-Ibmcloud sl file snapshot-list VOLUME_ID [ OPTIONS ]
+ibmcloud sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -352,12 +357,12 @@ ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
 Esse comando lista todas as capturas instantâneas do volume com ID 12345678 e as classifica por ID.
 
-## Ibmcloud sl file snapshot-order
+## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
 
 Pedir espaço de captura instantânea para um volume de armazenamento de arquivo.
 ```
-Ibmcloud sl file snapshot-order VOLUME_ID [ OPTIONS ]
+ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -380,20 +385,34 @@ ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 Esse comando pede espaço de captura instantânea para o volume com ID 12345678, o tamanho é 1.000 GB, o nível de camada é 4 IOPS por GB.
 
-## Ibmcloud sl file snapshot-restore
+## ibmcloud sl file snapshot-restore
 {: #sl_file_snapshot_restore}
 
 Restaurar volume de arquivo usando uma captura instantânea especificada.
 ```
-Ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
+ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl file snapshot-restore 12345678 87654321
+ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 Esse comando restaura o volume com ID 12345678 da captura instantânea com ID 87654321.
+
+## ibmcloud sl snapshot-schedule-list
+{: #sl_snapshot_schedule_list}
+
+Listar planejamentos de captura instantânea para um determinado volume
+```
+ibmcloud sl snapshot-schedule-list VOLUME_ID
+```
+
+**Exemplos**:
+```
+ibmcloud sl file snapshot-schedule-list 12345678
+```
+Esse comando lista os planejamentos de captura instantânea para o volume com ID 12345678
 
 ## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
@@ -433,12 +452,12 @@ ibmcloud sl file volume-count [OPTIONS]
 <dd>Filtrar pelo nome abreviado do data center.</dd>
 </dl>
 
-## Ibmcloud sl file volume-list
+## ibmcloud sl file volume-list
 {: #sl_file_volume_list}
 
 Listar armazenamento de arquivo.
 ```
-Ibmcloud sl file volume-list [ OPTIONS ]
+ibmcloud sl file volume-list [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -463,27 +482,27 @@ ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Esse comando lista todos os volumes de resistência na conta atual que estão localizados em dal09 e os classifica por capacidade.
 
-## Ibmcloud sl file volume-detail
+## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
 
 Exibir detalhes para um volume especificado.
 ```
-Ibmcloud sl file volume-detail VOLUME_ID
+ibmcloud sl file volume-detail VOLUME_ID
 ```
 
 
 **Exemplos**:
 ```
-Ibmcloud sl file volume-detail 12345678
+ibmcloud sl file volume-detail 12345678
 ```
 Esse comando mostra os detalhes do volume com ID 12345678.
 
-## Ibmcloud sl file volume-duplicate
+## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
 
 Pedir um volume de arquivo duplicando um volume existente.
 ```
-Sl file volume-duplicate VOLUME_ID [ OPTIONS ]
+ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -504,16 +523,16 @@ Sl file volume-duplicate VOLUME_ID [ OPTIONS ]
 
 **Exemplos**:
 ```
-Ibmcloud sl file volume-duplicate 12345678
+ibmcloud sl file volume-duplicate 12345678
 ```
 Esse comando mostra a ordem de um novo volume duplicando o volume com ID 12345678.
 
-## Ibmcloud sl file volume-order
+## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
 
 Pedir um volume de armazenamento de arquivo.
 ```
-Ibmcloud sl file volume-order [ OPTIONS ]
+ibmcloud sl file volume-order [OPTIONS]
 ```
 
 <strong>Opções de comando</strong>:
@@ -539,6 +558,40 @@ Ibmcloud sl file volume-order [ OPTIONS ]
 ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
 Esse comando pede um volume de desempenho com o tamanho 1.000 GB, IOPS de 4.000, localizado em dal09.
+
+## ibmcloud sl file volume-modify
+{: #sl_file_volume_modify}
+
+Modificar um volume de armazenamento de arquivo existente
+```
+ibmcloud sl file volume-modify VOLUME_ID [OPTIONS]
+```
+
+<strong>Opções de comando</strong>:
+<dl>
+<dt>-c, --new-size</dt>
+<dd>Novo tamanho do volume de arquivo em GB. ***Se nenhum tamanho for fornecido, o tamanho original do volume será usado.*** Tamanhos potenciais: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Mínimo: [o tamanho original do volume]</dd>
+<dt>-i, --new-iops</dt>
+<dd>IOPS de armazenamento de desempenho, entre 100 e 6.000 em múltiplos de 100 [somente para volumes de desempenho] ***Se nenhum valor de IOPS for especificado, o valor de IOPS original do volume será usado.*** Requisitos: [Se o IOPS/GB original para o volume for menor que 0,3, o novo IOPS/GB também deverá ser menor que 0,3. Se o IOPS/GB original do volume for maior ou igual a 0,3, o novo IOPS/GB do volume também deverá ser maior ou igual a 0,3.]</dd>
+<dt>-t, --new-tier</dt>
+<dd>Camada de armazenamento do Endurance (IOPS por GB) [somente para volumes do Endurance] ***Se nenhuma camada for especificada, a camada original do volume será usada.***
+Requisitos: [Se o IOPS/GB original para o volume for 0,25, o novo IOPS/GB para o volume também deverá ser 0,25. Se o IOPS/GB original para o volume for maior que 0,25, o novo IOPS/GB para o volume também deverá ser maior que 0,25.]</dd>
+<dt>-f, --force</dt>
+<dd>Forçar a operação sem confirmação.</dd>
+</dl>
+
+**Exemplos**:
+
+```
+ibmcloud sl file volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+Esse comando modifica um volume 12345678 com o tamanho 1000 GB, IOPS é 4000.
+
+```
+ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
+```
+Esse comando modifica um volume 12345678 com o tamanho 500 GB, o nível de camada é 4 IOPS por GB.
+
 
 ## ibmcloud sl file volume-options
 {: #sl_file_volume_options}
