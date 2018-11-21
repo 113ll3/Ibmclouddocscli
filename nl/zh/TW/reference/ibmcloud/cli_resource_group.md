@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -80,7 +80,7 @@ lastupdated: "2018-10-17"
 列出資源群組。
 
 ```
-ibmcloud resource groups [--default]
+ibmcloud resource groups [--default] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -89,6 +89,8 @@ ibmcloud resource groups [--default]
 <dl>
   <dt>--default</dt>
   <dd>取得現行帳戶的預設群組。</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -111,7 +113,7 @@ ibmcloud resource groups --default
 顯示資源群組的詳細資料
 
 ```
-ibmcloud resource group NAME [--id]
+ibmcloud resource group NAME [--id] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -122,6 +124,8 @@ ibmcloud resource group NAME [--id]
   <dd>資源群組的名稱</dd>
   <dt>--id</dt>
   <dd>僅顯示 ID</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -271,7 +275,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 列出服務實例
 
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -284,6 +288,8 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
   <dd>依位置過濾</dd>
   <dt>--long</dt>
   <dd>顯示輸出中的其他欄位</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -333,7 +339,7 @@ ibmcloud resource service-instance my-service-instance
 建立服務實例
 
 ```
-ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -348,8 +354,6 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dd>服務方案的名稱或 ID</dd>
   <dt>LOCATION</dt>
   <dd>用於建立服務實例的目標位置或環境</dd>
-  <dt>-t, --tags</dt>
-  <dd>標籤</dd>
   <dt>-p, --parameters</dt>
   <dd>要建立服務實例之參數的 JSON 檔案或 JSON 字串</dd>
   <dt>-d, --deployment</dt>
@@ -368,7 +372,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 更新服務實例
 
 ```
-ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -381,10 +385,10 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, -
   <dd>服務實例的 ID，與 NAME 不能同時使用</dd>
   <dt>-n, --name</dt>
   <dd>新的服務實例名稱</dd>
-  <dt>-t, --tags</dt>
-  <dd>新標籤</dd>
   <dt>--service-plan-id</dt>
   <dd>新的服務方案 ID</dd>
+  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
+  <dd>要建立服務實例之參數的 JSON 檔案或 JSON 字串</dd>
   <dt>-f, --force</dt>
   <dd>強制更新，而不進行確認</dd>
 </dl>
@@ -430,7 +434,7 @@ ibmcloud resource service-instance-delete my-service-instance
 顯示與服務別名的連結
 
 ```
-ibmcloud resource service-bindings SERVICE_ALIAS
+ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -439,6 +443,8 @@ ibmcloud resource service-bindings SERVICE_ALIAS
 <dl>
   <dt>SERVICE_ALIAS（必要）</dt>
   <dd>服務別名</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：顯示與服務別名 `my-service-alias` 的資源連結：
@@ -453,7 +459,7 @@ ibmcloud resource bindings my-service-alias
 顯示服務連結的詳細資料
 
 ```
-ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
+ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -465,7 +471,9 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
   <dt>APP_NAME</dt>
   <dd>CloudFoundry 應用程式名稱</dd>
   <dt>--id</dt>
-  <dd>僅顯示 ID。會抑制服務連結的所有其他輸出。</dd>
+  <dd>僅顯示 ID。會抑制服務連結的所有其他輸出。此選項與 '--output' 不能同時使用。</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。此選項與 '--id' 不能同時使用。</dd>
 </dl>
 
 <strong>範例</strong>：顯示服務別名 `my-service-alias` 與應用程式 `my-app` 之間服務連結的詳細資料：
@@ -540,7 +548,7 @@ ibmcloud resource service-binding-delete my-service-alias my-app
 列出服務實例或服務別名的服務金鑰
 
 ```
-ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -555,12 +563,14 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
   <dd>服務別名 ID</dd>
   <dt>--alias-name</dt>
   <dd>服務別名</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：列出服務實例 `my-service-instance` 的服務金鑰：
 
 ```
-ibmcloud resource service-keys --instance-name my-service-instance
+ibmcloud resource service-keys --instance-name my-service-instance  [--output FORMAT]
 ```
 
 ## ibmcloud resource service-key
@@ -580,6 +590,8 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dd>索引鍵的名稱</dd>
   <dt>--id</dt>
   <dd>顯示服務金鑰的 ID</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：顯示服務金鑰 `my-service-key` 的詳細資料：
@@ -633,15 +645,15 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 刪除服務金鑰
 
 ```
-ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
+ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>KEY_NAME</dt>
-  <dd>索引鍵的名稱</dd>
+  <dt>KEY_NAME | KEY_ID</dt>
+  <dd>金鑰的名稱或金鑰的 ID</dd>
   <dt>-f, --force</dt>
   <dd>強制刪除，而不進行確認</dd>
 </dl>
@@ -658,7 +670,7 @@ ibmcloud resource service-key-delete my-service-key
 列出服務實例的別名
 
 ```
-ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
+ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -669,6 +681,8 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
   <dd>隸屬服務實例的 ID。</dd>
   <dt>--instance-name</dt>
   <dd>隸屬服務實例的名稱。</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：列出服務實例 `my-service-instance` 的服務別名：
@@ -682,7 +696,7 @@ ibmcloud resource service-aliases my-service-instance
 顯示服務別名的詳細資料
 
 ```
-ibmcloud resource service-alias ALIAS_NAME [--id]
+ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -692,7 +706,9 @@ ibmcloud resource service-alias ALIAS_NAME [--id]
   <dt>ALIAS_NAME（必要）</dt>
   <dd>服務別名的名稱</dd>
   <dt>--id</dt>
-  <dd>僅顯示給定服務別名的 ID。會抑制別名的所有其他輸出。</dd>
+  <dd>僅顯示給定服務別名的 ID。會抑制別名的所有其他輸出。此選項與 '--output' 不能同時使用。</dd>
+  <dt>--output FORMAT（選用）</dt>
+  <dd>--output value  指定輸出格式，目前只支援 JSON。此選項與 '--id' 不能同時使用。</dd>
 </dl>
 
 <strong>範例</strong>：顯示服務別名 `my-service-alias` 的詳細資料：

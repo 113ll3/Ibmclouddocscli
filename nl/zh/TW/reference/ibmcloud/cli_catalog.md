@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ lastupdated: "2018-10-17"
 搜尋型錄項目
 
 ```
-ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--json] [--csv] [--global]
+ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -63,7 +63,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>-k, --kind</dt>
   <dd>依資源類型過濾。目前僅支援 "service-cf"、"iaas"、"runtime"、"template" 及 "dashboard"</dd>
   <dt>-p, --price</dt>
-  <dd>依價格過濾。目前僅支援 "free"、"paygo" 及 "bluemix-subscription"</dd>
+  <dd>依價格過濾。目前僅支援 "free"、"paygo"、"ibmcloud-subscription"</dd>
   <dt>-t, --tag</dt>
   <dd>依標籤過濾。</dd>
   <dt>--sort-by</dt>
@@ -72,8 +72,8 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dd>指定表格的其他直欄。目前為 "group"、"provider" 及 "tags"</dd>
   <dt>--reverse</dt>
   <dd>是否反轉排序順序</dd>
-  <dt>--json</dt>
-  <dd>輸出原始 JSON 回應</dd>
+  <dt>--output TYPE（選用）</dt>
+  <dd>--output value  指定輸出 TYPE，目前只支援 JSON。此選項與 '--id' 不能同時使用。</dd>
   <dt>--csv</dt>
   <dd>輸出 CSV 檔案</dd>
   <dt>--global</dt>
@@ -94,7 +94,7 @@ ibmcloud catalog search -k service -q 'Automation test'
 取得型錄項目
 
 ```
-ibmcloud catalog entry ID [--global]
+ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -103,8 +103,8 @@ ibmcloud catalog entry ID [--global]
 <dl>
   <dt>--children</dt>
   <dd>取得型錄項目的所有子項</dd>
-  <dt>--json</dt>
-  <dd>輸出原始 JSON 回應</dd>
+  <dt>--output TYPE（選用）</dt>
+  <dd>--output value  指定輸出 TYPE，目前只支援 JSON。</dd>
   <dt>--global</dt>
   <dd>在廣域範圍中操作</dd>
 </dl>
@@ -199,7 +199,7 @@ ibmcloud catalog delete 'j402-dnf1i'
 取得型錄項目的可見性（僅限帳戶的型錄管理者）
 
 ```
-ibmcloud catalog entry-visibility ID [--global]
+ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -208,6 +208,8 @@ ibmcloud catalog entry-visibility ID [--global]
 <dl>
   <dt>-json</dt>
   <dd>輸出原始 JSON 回應</dd>
+  <dt>--output TYPE（選用）</dt>
+  <dd>--output value  指定輸出 TYPE，目前只支援 JSON。</dd>
   <dt>-global</dt>
   <dd>在廣域範圍中操作</dd>
 </dl>
@@ -385,7 +387,7 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 以您選擇的格式取得地區的選擇子集。
 
 ```
-ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
+ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```
 
 <strong>指令選項</strong>：
@@ -397,8 +399,8 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--js
   <dd>取得指定類型的項目清單。</dd>
   <dt>--col</dt>
   <dd>指定表格的其他直欄。目前為 "group"、"provider" 及 "tags"。</dd>
-  <dt>--json</dt>
-  <dd>原始 JSON 回應的輸出。</dd>
+  <dt>--output TYPE（選用）</dt>
+  <dd>--output value  指定輸出 TYPE，目前只支援 JSON。此選項與 '--id' 不能同時使用。</dd>
   <dt>--global</dt>
   <dd>在廣域範圍中操作。</dd>
   <dt>--csv</dt>

@@ -46,6 +46,7 @@ IBM Cloud CLI and Developer Tools
 		reference/ibmcloud/cli_image.md
 		reference/ibmcloud/cli_ipsec_vpn.md
 		reference/ibmcloud/cli_load_balancer.md
+		reference/ibmcloud/cli_order.md
 		reference/ibmcloud/cli_plugin.md
 		reference/ibmcloud/cli_resource_group.md
 		reference/ibmcloud/cli_security.md

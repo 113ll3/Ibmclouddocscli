@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -14,18 +14,20 @@ lastupdated: "2018-10-04"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note: .deprecated}
+{:note:.deprecated}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# Fehlerbehebung für das Plug-in der {{site.data.keyword.Bluemix_notm}} Developer Tools-Befehlszeilenschnittstelle
+# Fehlerbehebung für das Plug-in der {{site.data.keyword.Bluemix_notm}} Developer Tools-Befehlszeilenschnittstelle (CLI)
 {: #troubleshoot}
 
-Allgemeine Probleme bei Verwendung der {{site.data.keyword.dev_cli_short}}-CLI zum Erstellen von Apps sind beispielsweise Bereitstellungsfehler oder Code, der beim Erstellen eines Projekts nicht abgerufen werden kann. In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben.
+Allgemeine Probleme bei der Verwendung der {{site.data.keyword.dev_cli_short}}-Befehlszeilenschnittstelle (CLI) zum Erstellen von Apps sind beispielsweise Fehler bei der Bereitstellung oder Code, der nicht abgerufen werden kann. In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben.
 {:shortdesc}
 
-## Hostnamenfehler beim Erstellen einer App mit einem nicht mobilen Muster
+## Warum wird ein Hostnamenfehler gemeldet, wenn ich eine App mit einem nicht mobilen Muster erstelle?
 {: #hostname-error}
+{: troubleshoot}
 
-Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie eine App über die {{site.data.keyword.dev_cli_short}}-CLI in Cloud Foundry bereitstellen. Wenn Sie einen Hostnamen eingeben, den Sie für eindeutig halten, wird möglicherweise trotzdem diese Nachricht angezeigt.
+Wenn Sie eine App über die {{site.data.keyword.dev_cli_short}}-CLI in Cloud Foundry bereitstellen, wird möglicherweise der folgende Fehler angezeigt. Diese Meldung wird gegebenenfalls auch noch nach Eingabe eines eindeutigen Hostnamens angezeigt.
 
 ```
 The hostname <myHostname> is taken.
@@ -36,18 +38,18 @@ The hostname <myHostname> is taken.
 Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht.
 {: tsCauses}
 
-Melden Sie sich erneut an.
-
+Melden Sie sich durch Ausführen des folgenden Befehls erneut an:
 ```
 ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
 
-## Allgemeine Fehler mit der {{site.data.keyword.dev_cli_short}}-CLI
+## Warum wird das Fehlschlagen eines allgemeinen Befehls gemeldet?
 {: #general}
+{: troubleshoot}
 
-Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie die {{site.data.keyword.dev_cli_short}}-CLI-Befehle `create`, `delete`, `list` oder `code` verwenden:
+Wenn Sie den Befehl `create`, `delete`, `list` oder `code` verwenden, wird möglicherweise der folgende Fehler angezeigt:
 
 ```
 Failed to <befehl> application.
@@ -58,54 +60,51 @@ Failed to <befehl> application.
 Dieser Fehler wird durch ein abgelaufenes Anmeldetoken verursacht.
 {: tsCauses}
 
-Melden Sie sich erneut an.
-
+Melden Sie sich durch Ausführen des folgenden Befehls erneut an:
 ```
 ibmcloud login
 ```
 {: codeblock}
 {: tsResolve}
 
-## Fehler 'No such image', wenn Sie eine neue App ausführen
+## Warum wird das Image für meine neue App nicht erkannt?
 {: #nosuchimage}
+{: troubleshoot}
 
-Möglicherweise wird der folgende Fehler angezeigt, wenn Sie eine App ausführen, ohne sie zunächst zu erstellen.
+Wenn Sie versuchen, eine App auszuführen, ohne zuvor einen Build von ihr zu erstellen, wird möglicherweise der folgende Fehler angezeigt.
 
 ```
 $ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
-Creating image bx-dev-testProject based on Dockerfile...
-OK
+Creating image ibmcloud-dev-testProject based on Dockerfile...
+OK                    
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
-Error: No such image: bx-dev-testProject
+Error: No such image: ibmcloud-dev-testProject
 ```
 {: tsSymptoms}
 
-Sie müssen eine App erstellen, bevor Sie sie ausführen.
-{: tsCauses}
-
-Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um Ihre App zu erstellen:
-
+Sie müssen eine App erstellen, bevor Sie sie ausführen. Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus:
 ```
 ibmcloud dev build
 ```
 {: codeblock}
+{: tsCauses}
 
 Führen Sie den folgenden Befehl in Ihrem aktuellen App-Verzeichnis aus, um Ihre App zu starten:
-
 ```
 ibmcloud dev run
 ```
 {: tsResolve}
 
-## Service-Broker-Fehler beim Hinzufügen der {{site.data.keyword.objectstorageshort}}-Funktionalität
+## Warum wird ein Service-Broker-Fehler gemeldet, wenn ich die {{site.data.keyword.objectstorageshort}}-Funktion hinzufüge?
 {: #os}
+{: troubleshoot}
 
-Möglicherweise wird der folgende Fehler angezeigt, wenn Sie die {{site.data.keyword.dev_cli_short}}-CLI verwenden, um zwei Apps mit der {{site.data.keyword.objectstorageshort}}-Funktionalität zu erstellen:
+Wenn Sie die Befehlszeilenschnittstelle (CLI) verwenden, um zwei Apps mit der {{site.data.keyword.objectstorageshort}}-Funktion zu erstellen, wird möglicherweise der folgende Fehler angezeigt:
 
 ```
 FAILED
@@ -117,13 +116,14 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 Dieser Fehler wird vom {{site.data.keyword.objectstorageshort}}-Service verursacht, der nur eine Instanz des freien {{site.data.keyword.objectstorageshort}}-Plans bereitstellen kann.
 {: tsCauses}
 
-Sie werden aufgefordert, einen anderen Plan auszuwählen, um diesen Fehler zu vermeiden.
+Wählen Sie einen anderen Plan aus.
 {: tsResolve}
 
-## Fehler beim Abrufen des Codes während der Erstellung einer App
+## Warumg wird mein Code nicht abgerufen, wenn ich eine App erstelle?
 {: #code}
+{: troubleshoot}
 
-Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie die {{site.data.keyword.dev_cli_short}}-CLI verwenden, um eine App zu erstellen:
+Wenn Sie die Befehlszeilenschnittstelle (CLI) zum Erstellen einer App verwenden, wird möglicherweise der folgende Fehler angezeigt:
 
 ```
 FAILED                            
@@ -136,9 +136,9 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 Dieser Fehler wird durch eine interne Zeitlimitüberschreitung verursacht.
 {: tsCauses}
 
-Sie können den Code auf eine der folgenden Arten abrufen:
+Rufen Sie den Code auf eine der folgenden Arten ab:
 
-* Führen Sie den folgenden Befehl in der CLI aus:
+* Führen Sie den folgenden Befehl aus:
 
    ```
    ibmcloud dev code <your-app-name>
@@ -152,20 +152,20 @@ Sie können den Code auf eine der folgenden Arten abrufen:
 	1. Wählen Sie Ihre [App ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/appservice/apps) in der {{site.data.keyword.dev_console}} aus.
 
 	2. Klicken Sie auf **Code herunterladen**.
-
 {: tsResolve}
 
-## Fehler beim Ausführen von `ibmcloud dev run` für Node.js-Apps
+## Warum kann ich den Befehl `ibmcloud dev run` nicht für Node.js-Apps ausführen?
 {: #node}
+{: troubleshoot}
 
-Möglicherweise wird der folgende Fehler ausgegeben, wenn Sie `ibmcloud dev run` in der {{site.data.keyword.dev_cli_short}}-CLI für Web- oder BFF-Apps mit Node.js ausführen:
+Wenn Sie den Befehl `ibmcloud dev run` für Node.js-Web- oder BFF-Apps ausführen, wird möglicherweise der folgende Fehler angezeigt:
 
 ```
 module.js:597
   return process.dlopen(module, path._makeLong(filename));
                  ^
 
-Error: /app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
+Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appmetrics.node: invalid ELF header
     at Error (native)
     at Object.Module._extensions..node (module.js:597:18)
     at Module.load (module.js:487:32)
@@ -174,7 +174,7 @@ Error: /app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/appm
     at Function.Module._load (module.js:438:3)
     at Module.require (module.js:497:17)
     at require (internal/module.js:20:19)
-    at Object.<anonymous> (/app/node_modules/ibmcloud-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
+    at Object.<anonymous> (/app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/index.js:25:13)
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
@@ -187,25 +187,25 @@ Dieser Fehler tritt auf, wenn das Modul `appmetrics` in einer anderen Architektu
 Löschen Sie den Ordner `node_modules` und führen Sie den Befehl `ibmcloud dev run` erneut aus.
 {: tsResolve}
 
-## Fehler bei der Bereitstellung in {{site.data.keyword.Bluemix_notm}}
+## Warum gelingt mir die Bereitstellung auf {{site.data.keyword.Bluemix_notm}} nicht?
+{: troubleshoot}
 
-Es tritt ein Fehler auf, wenn Sie die Bereitstellung in {{site.data.keyword.Bluemix_notm}} über die {{site.data.keyword.dev_cli_short}}-CLI versuchen, aber es wird kein Fehler angezeigt.
+Der Versuch der Bereitstellung in {{site.data.keyword.Bluemix_notm}} schlägt fehl, aber es wird kein Fehler angezeigt.
 {: tsSymptoms}
 
 Möglicherweise sind Sie nicht bei Ihrem Konto angemeldet.
 {: tsCauses}
 
-Melden Sie sich an und versuchen Sie es erneut.
-
+Melden Sie sich durch Ausführen des folgenden Befehls an und wiederholen Sie den Versuch.
 ```
 ibmcloud login
 ```
 {: tsResolve}
 
-## Fehler bei der Bereitstellung in Kubernetes unter {{site.data.keyword.Bluemix_notm}}
+## Warum gelingt mir die Bereitstellung in Kubernetes auf {{site.data.keyword.Bluemix_notm}} nicht?
+{: troubleshoot}
 
-Möglicherweise wird der folgende Fehler angezeigt, nachdem Sie aufgefordert wurden, Ihren Clusternamen anzugeben.
-
+Nachdem Sie aufgefordert wurden, Ihren Clusternamen anzugeben, wird möglicherweise der folgende Fehler angezeigt:
 ```
 FAILED
 Failed to execute the action:  exit status 1:
@@ -216,23 +216,21 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 {: tsSymptoms}
 
 Dies liegt wahrscheinlich daran, dass der Clustername nicht gültig ist. Bestätigen Sie diese Annahme, indem Sie denselben Befehl mit `--trace` ausführen. Die folgenden Details können in der Fehlernachricht enthalten sein:
-
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
 {: tsCauses}
 
 Stellen Sie sicher, dass Sie den korrekten Cluster verwenden und dass Sie Ihren Cluster für die Bereitstellung konfiguriert haben, indem Sie den folgenden Befehl ausführen:
-
 ```
 ibmcloud cs cluster-config <cluster-name>
 ```
 {: tsResolve}
 
-## Fehler bei der Bereitstellung eines Imageziels
+## Warum kann ich kein Imageziel bereitstellen?
+{: troubleshoot}
 
-Möglicherweise wird der folgende Fehler angezeigt, nachdem Sie zur Angabe des Bereitstellungsimageziels aufgefordert wurden:
-
+Nachdem Sie zur Angabe des Bereitstellungsimageziels aufgefordert wurden, wird möglicherweise der folgende Fehler angezeigt:
 ```
 FAILED
 Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
@@ -244,45 +242,45 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-na
 {: tsSymptoms}
 
 Dies liegt wahrscheinlich daran, dass das Bereitstellungsimageziel nicht gültig ist. Genauer gesagt, ist wahrscheinlich der Namensbereich, bei dem es sich um den mittleren Wert im Bereitstellungsimageziel handelt, nicht gültig.
+{: tsCauses}
 
-Stellen Sie sicher, dass der Namensbereich im Bereitstellungsimageziel einem der Namensbereiche entspricht, die während der Ausführung des folgenden Befehls gefunden werden:
-
+Stellen Sie sicher, dass der Namespace im Implementierungsimageziel mit einem der Namensbereiche übereinstimmt, die angezeigt werden, wenn Sie den folgenden Befehl ausführen:
 ```
 ibmcloud cr namespaces
 ```
 {: tsResolve}
 
-## Tools erneut installieren
-{: #appendix}
+## Warum kann die Sprache für meine App nicht ermittelt werden?
+{: troubleshoot}
 
-Für die meisten Benutzer werden alle Voraussetzungen mithilfe der Plattforminstallationsprogramme installiert. Im Folgenden finden Sie Anweisungen, falls Sie weitere Komponenten manuell installieren müssen:
+Bei dem Versuch, Ihre App zu starten, wird möglicherweise der folgende Fehler angezeigt:
+```
+FAILED
+Could not determine the language of your application.
 
-Zum Installieren des Entwickler-Plug-ins müssen Sie zunächst die [IBM Cloud-CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) installieren.
+Try using the --language flag to specify the language of your application 
+directly. 
+```
+{: tsSymptoms}
 
-Zum Verwenden des Entwickler-Plug-ins müssen Sie es mithilfe dieses Befehls installieren: `ibmcloud plugin install dev -r IBM Cloud`
+Dieser Fehler kann eine der folgenden Ursachen haben:
+- Der Befehl [enable](/docs/cli/idt/commands.html#enable) wurde in einem Verzeichnis ausgeführt, das nicht das Quellenverzeichnis Ihrer Anwendung ist.
+- Der Befehl [enable](/docs/cli/idt/commands.html#enable) wurde für eine App einer Sprache ausgeführt, die zum gegenwärtigen Zeitpunkt nicht erkannt wird.
+{: tsCauses}
 
-Zum lokalen Ausführen und Debuggen von Apps müssen Sie auch [Docker](https://www.docker.com/get-docker) installieren.
+Stellen Sie sicher, dass Sie den Befehl in dem App-Verzeichnis ausführen, das den Quellcode für die App enthält. Wenn das Problem dadurch trotzdem nicht behoben werden kann und als Sprache eine der [unterstützten Sprachen](/docs/cli/idt/commands.html#enable-language-options) verwendet wird, verwenden Sie den Parameter `--language`, um die Sprache anzugeben.
+{: tsResolve}
 
-Zum Bereitstellen einer App als Container müssen Sie auch Kubernetes, Helm und die folgenden IBM Cloud-CLI-Plug-ins installieren:
+## Warum kann ich keine App erstellen oder ausführen, die für die Cloudbereitstellung aktiviert wurde?
+{: troubleshoot}
 
-Gehen Sie wie folgt vor, um Kubernetes zu installieren:
-* Mac-Benutzer:
-`curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl`
+Der Versuch, eine App, die entsprechend aktiviert wurde, mit [build](/docs/cli/idt/commands.html#build) zu erstellen oder mit [run](/docs/cli/idt/commands.html#run) auszuführen, führt möglicherweise zu mehreren Fehlschlägen.
+{: tsSymptoms}
 
-* Linux-Benutzer:
-`curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl`
 
-* Windows-Benutzer:
-`curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe`
+Die vielfältigen verschiedenen möglichen Ursachen sind jeweils unter den folgenden Links aufgeführt.
+{: tsCauses}
 
-Gehen Sie wie folgt vor, um Helm zu installieren:
-* Mac- und Linux-Benutzer:
-`export DESIRED_VERSION=v2.6.0`
-`curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash`
-
-* Windows-Benutzer:
-Binärdatei unter https://github.com/kubernetes/helm/releases/tag/v2.6.0 herunterladen und installieren
-
-Gehen Sie wie folgt vor, um das Plug-in 'container-registry' zu installieren: `ibmcloud plugin install container-registry`
-
-Gehen Sie wie folgt vor, um das Plug-in 'container-service' zu installieren: `ibmcloud plugin install container-service`
+- Weitere Informationen zum Beheben solcher Probleme bei einer Spring-App finden Sie in [Vorhandene Spring Boot-Anwendungen für die Cloudbereitstellung aktivieren](/docs/java-spring/enable_existing.html#enable_existing).
+- Weitere Informationen zum Beheben solcher Probleme bei einer `Node.js`-App finden Sie in [Vorhandene Node.js-Anwendungen für die Cloudbereitstellung aktivieren](/docs/node/enable_existing.html#enable_existing).
+{: tsResolve}

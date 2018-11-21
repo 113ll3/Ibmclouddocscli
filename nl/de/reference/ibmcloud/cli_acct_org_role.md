@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -18,49 +18,52 @@ lastupdated: "2018-10-17"
 Verwenden Sie die folgenden Befehle, um Konten, Benutzer in einem Konto und die Organisationen, Bereiche und Rollen von öffentlichen Cloud Foundry-Umgebungen zu verwalten.
 {: shortdesc}
 
-  <table summary="ibmcloud-Befehle zur Verwaltung von Konten, Organisationen, Bereichen und Rollen.">
-   <thead>
-   </thead>
-   <tbody>
-   <tr>
-   <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
-   <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
-   <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
-   <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
-   <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
-   <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
-   <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
-   <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
-   <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
-   <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
-   <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
-   <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
-   <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
-   </tr>
-   <tr>
-   <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
-   <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
-   <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
-   <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
-   <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-  </tr>
-   <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
-   <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
-   <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
-   <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
-   <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
-   </tr>
-   <tr>
-    <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-   </tr>
-   </tbody>
-   </table>
+<table summary="ibmcloud-Befehle zur Verwaltung von Konten, Organisationen, Bereichen und Rollen.">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
+ <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
+ <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
+ <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
+ <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
+ <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
+ <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
+ <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
+ <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
+ <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
+ <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
+ <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
+ <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
+ <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
+ <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
+ <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
+ <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
+</tr>
+ <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
+ <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+ <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
+ <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+ <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
+ </tr>
+ </tbody>
+ </table>
 
  ## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
@@ -80,7 +83,7 @@ ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID
    <dt>--guid</dt>
    <dd>GUID der Organisationen anzeigen. Diese Option ist gegenseitig ausschließend mit '--output'.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. Diese Option ist gegenseitig ausschließend mit '--guid'.</dd>
+   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.Diese Option ist gegenseitig ausschließend mit '--guid'.</dd>
    <dt>-c ACCOUNT_ID</dt>
    <dd>Konto-ID. Organisationen unter dem angegebenen Konto auflisten. Standardmäßig aktuelles Konto verwenden, falls keine Angabe gemacht wird. Wenn 'all' angegeben ist, werden die Organisationen unter allen Konten aufgelistet. Diese Option ist gegenseitig ausschließend mit '-u'.</dd>
    <dt>-u ACCOUNT_OWNER</dt>
@@ -121,7 +124,7 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
    <dt>--guid</dt>
    <dd>GUID einer angegebenen Organisation abrufen und anzeigen. Alle anderen Ausgaben für die Organisation werden unterdrückt. Diese Option ist gegenseitig ausschließend mit '--output'.</dd>
    <dt>--output REGION</dt>
-   <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. Diese Option ist gegenseitig ausschließend mit '--guid'.</dd>
+   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.Diese Option ist gegenseitig ausschließend mit '--guid'.</dd>
    </dl>
 
 <strong>Beispiele</strong>:
@@ -223,7 +226,7 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
    <dt>-r REGION-NAM</dt>
    <dd>Regionsname. Die Bereiche unter der angegebenen Region auflisten. Standardmäßig wird die aktuelle Region verwendet, wenn keine Angabe gemacht wurde.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
    </dl>
 
 <strong>Beispiele</strong>:
@@ -260,7 +263,7 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dt>--guid</dt>
    <dd>GUID eines angegebenen Bereichs abrufen und anzeigen. Alle anderen Ausgaben für den Bereich werden unterdrückt. Diese Option ist gegenseitig ausschließend mit '--output'.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. Alle anderen Ausgaben für den Bereich werden unterdrückt. Diese Option ist gegenseitig ausschließend mit '--guid'.</dd>
+   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.Alle anderen Ausgaben für den Bereich werden unterdrückt. Diese Option ist gegenseitig ausschließend mit '--guid'.</dd>
    <dt>--security-group-rules</dt>
    <dd>Regeln für alle Sicherheitsgruppen abrufen, die dem Bereich zugeordnet sind.</dd>
    </dl>
@@ -314,7 +317,7 @@ Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf de
 Benutzer in der angegebenen Organisation nach Rolle anzeigen
 
 ```
-ibmcloud account org-users ORG_NAME [-a]
+ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
@@ -325,6 +328,8 @@ ibmcloud account org-users ORG_NAME [-a]
 <dd>Der Name der Organisation.</dd>
 <dt>-a (optional)</dt>
 <dd>Alle Benutzer in der angegebenen Organisation auflisten (nicht nach Rolle gruppiert).</dd>
+<dt>--output FORMAT (optional)</dt>
+<dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -633,3 +638,85 @@ ibmcloud account user-reinvite USER_EMAIL
    <dt>USER_EMAIL (erforderlich)</dt>
    <dd>Die E-Mail-Adresse des Benutzers, der erneut eingeladen wird.</dd>
 </dl>
+
+## ibmcloud app domain-cert
+{: #ibmcloud_app_domain_cert}
+
+Die Zertifikatsinformationen für eine Domäne auflisten
+
+```
+ibmcloud app domain-cert DOMAIN_NAME
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
+
+<strong>Befehlsoptionen</strong>:
+<dl>
+<dt>DOMAIN_NAME (erforderlich)</dt>
+<dd>Die Domäne, in der das Zertifikat gehostet wird.</dd>
+</dl>
+
+
+<strong>Beispiele</strong>:
+
+Die Zertifikatsinformationen für die Domäne `ibmcxo-eventconnect.com` anzeigen:
+
+```
+ibmcloud app domain-cert ibmcxo-eventconnect.com
+```
+
+## ibmcloud app domain-cert-add
+{: #ibmcloud_app_domain_cert_add}
+
+Der angegebenen Domäne in der aktuellen Organisation ein Zertifikat hinzufügen.
+
+```
+ibmcloud app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+   <dl>
+   <dt>DOMAIN (erforderlich)</dt>
+   <dd>Die Domäne, der das Zertifikat hinzugefügt wird.</dd>
+   <dt>-k <i>PRIVATE_KEY_FILE</i> (erforderlich)</dt>
+   <dd>Der Pfad der Datei mit dem privaten Schlüssel.</dd>
+   <dt>-c <i>CERT_FILE</i> (erforderlich)</dt>
+   <dd>Der Pfad der Zertifikatsdatei.</dd>
+   <dt>-p <i>PASSWORD</i> (optional)</dt>
+   <dd>Das Kennwort für das Zertifikat.</dd>
+   <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (optional)</dt>
+   <dd>Der Pfad für die Zwischenzertifikatsdatei.</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i> (optional)</dt>
+   <dd>Die Truststore-Datei.</dd>
+   </dl>
+
+
+<strong>Beispiele</strong>:
+
+Zertifikat der Domäne `ibmcxo-eventconnect.com` hinzufügen:
+
+```
+ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+## ibmcloud app domain-cert-remove
+{: #ibmcloud_app_domain_cert_remove}
+
+Zertifikat aus der angegebenen Domäne in der aktuellen Organisation entfernen.
+
+```
+ibmcloud app domain-cert-remove DOMAIN [-f]
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+
+   <dl>
+   <dt>DOMAIN (erforderlich)</dt>
+   <dd>Die Domäne, aus der das Zertifikat entfernt werden soll.</dd>
+   <dt>-f  (optional)</dt>
+   <dd>Löschung ohne Bestätigung erzwingen.</dd>
+   </dl>

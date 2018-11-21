@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-10-18"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -137,35 +137,35 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
    * 將 `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` 新增至 `PATH` 環境變數。
    * 如需 Shell 自動完成支援（僅限 MacOS 及 Linux），請參閱[本手冊](enable_cli_autocompletion.html)。
    
-<!-- ## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
+## 解除安裝獨立式 {{site.data.keyword.Bluemix_notm}} CLI
 
-The following sections provide details on how to uninstall the stand-alone {{site.data.keyword.Bluemix_notm}} CLI on specific platforms.
+下節提供如何在特定平台上解除安裝獨立式 {{site.data.keyword.Bluemix_notm}} CLI 的詳細資料。
 
-### Uninstalling on Windows
+### 在 Windows 上解除安裝
 
-1. Click the `Start` button, and then select `Control Panel`.
-2. In the pop-up window, click `Uninstall a program`.
-3. In the pop-up application list, locate `IBM Cloud Command Line Interface`.
-4. Right click `IBM Cloud Command Line Interface`, and select `Uninstall`.
-5. The uninstaller will be launched. Follow the instructions to finish the uninstallation.
+1. 按一下`開始`按鈕，然後選取`控制台`。
+2. 在蹦現視窗中，按一下`解除安裝程式`。
+3. 在蹦現應用程式清單中，找到 `IBM Cloud Command Line Interface`。
+4. 在 `IBM Cloud Command Line Interface` 按一下滑鼠右鍵，然後選取`解除安裝`。
+5. 將會啟動解除安裝程式。遵循指示以完成解除安裝。
 
-### Uninstalling on Linux/macOS
+### 在 Linux/macOS 上解除安裝
 
-#### Prior to version `0.9.0`
+#### `0.9.0` 版之前
 
-1. Open a terminal, and run the following commands:
+1. 開啟終端機，然後執行下列指令：
   * `rm -rf /usr/local/ibmcloud`
   * `rm -f /usr/local/bin/ibmcloud`
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html).
+2. 清除自動完成 Script，如果已配置的話。如需詳細資料，請參閱[啟用 CLI 自動完成](enable_cli_autocompletion.html)。
 
-#### Version `0.9.0` and later
+#### `0.9.0` 版以及更新版本
 
-1. Open a terminal, and run the following command:
-  * `/usr/local/ibmcloud/uninstall`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enable CLI Autocompletion](enable_cli_autocompletion.html). -->
+1. 開啟終端機，然後執行下列指令：
+  * `/usr/local/ibmcloud/bin/uninstall`
+2. 清除自動完成 Script，如果已配置的話。如需詳細資料，請參閱[啟用 CLI 自動完成](enable_cli_autocompletion.html)。
 
 
 ## 可進一步探索 {{site.data.keyword.Bluemix_notm}} CLI 的其他鏈結

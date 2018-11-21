@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -79,7 +79,7 @@ Eine Ressourcengruppe bietet Ihnen die Möglichkeit, Ihre Kontoressourcen in anp
 Ressourcengruppen auflisten.
 
 ```
-ibmcloud resource groups [--default]
+ibmcloud resource groups [--default] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -88,6 +88,8 @@ ibmcloud resource groups [--default]
 <dl>
   <dt>--default</dt>
   <dd>Standardgruppe des aktuellen Kontos abrufen.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -110,7 +112,7 @@ ibmcloud resource groups --default
 Details einer Ressourcengruppe anzeigen
 
 ```
-ibmcloud resource group NAME [--id]
+ibmcloud resource group NAME [--id] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -121,6 +123,8 @@ ibmcloud resource group NAME [--id]
   <dd>Der Name der Ressourcengruppe</dd>
   <dt>--id</dt>
   <dd>Nur ID anzeigen</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -271,7 +275,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 Serviceinstanzen auflisten
 
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -284,6 +288,8 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
   <dd>Nach Position filtern</dd>
   <dt>--long</dt>
   <dd>Weitere Felder in Ausgabe anzeigen</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -316,7 +322,7 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--out
   <dt>--id</dt>
   <dd>ID der Serviceinstanz anzeigen</dd>
   <dt>--output</dt>
-  <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. Diese Option ist gegenseitig ausschließend mit '--id'.</dd>
+  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.Diese Option ist gegenseitig ausschließend mit '--id'.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -333,7 +339,7 @@ ibmcloud resource service-instance my-service-instance
 Serviceinstanz erstellen
 
 ```
-ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -348,8 +354,6 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dd>Der Name oder die ID des Serviceplans</dd>
   <dt>LOCATION</dt>
   <dd>Zielposition oder -umgebung zum Erstellen der Serviceinstanz</dd>
-  <dt>-t, --tags</dt>
-  <dd>Tags</dd>
   <dt>-p, --parameters</dt>
   <dd>Die JSON-Datei oder JSON-Zeichenfolge von Parametern zum Erstellen einer Serviceinstanz</dd>
   <dt>-d, --deployment</dt>
@@ -369,7 +373,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 Serviceinstanz aktualisieren
 
 ```
-ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -382,10 +386,10 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [-t, -
   <dd>ID der Serviceinstanz, gegenseitig ausschließend mit NAME</dd>
   <dt>-n, --name</dt>
   <dd>Der neue Name der Serviceinstanz</dd>
-  <dt>-t, --tags</dt>
-  <dd>Neue Tags</dd>
   <dt>--service-plan-id</dt>
   <dd>Die neue ID des Serviceplans</dd>
+  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
+  <dd>Die JSON-Datei oder JSON-Zeichenfolge von Parametern zum Erstellen einer Serviceinstanz</dd>
   <dt>-f, --force</dt>
   <dd>Aktualisierung ohne Bestätigung erzwingen</dd>
 </dl>
@@ -433,7 +437,7 @@ ibmcloud resource service-instance-delete my-service-instance
 Bindungen an Servicealias anzeigen
 
 ```
-ibmcloud resource service-bindings SERVICE_ALIAS
+ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -442,6 +446,8 @@ ibmcloud resource service-bindings SERVICE_ALIAS
 <dl>
   <dt>SERVICE_ALIAS (erforderlich)</dt>
   <dd>Der Servicealiasname</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -457,7 +463,7 @@ ibmcloud resource bindings my-service-alias
 Details einer Servicebindung anzeigen
 
 ```
-ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
+ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -469,7 +475,9 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id]
   <dt>APP_NAME</dt>
   <dd>Der Cloud Foundry-Anwendungsname</dd>
   <dt>--id</dt>
-  <dd>Nur die ID anzeigen. Alle anderen Ausgaben für diese Servicebindung werden unterdrückt.</dd>
+  <dd>Nur die ID anzeigen. Alle anderen Ausgaben für diese Servicebindung werden unterdrückt. Diese Option ist gegenseitig ausschließend mit '--output'.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. Diese Option ist gegenseitig ausschließend mit '--id'.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -547,7 +555,7 @@ ibmcloud resource service-binding-delete my-service-alias my-app
 Serviceschlüssel der Serviceinstanz oder des Servicealias auflisten
 
 ```
-ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ]
+ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -562,13 +570,15 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
   <dd>Die Servicealias-ID</dd>
   <dt>--alias-name</dt>
   <dd>Der Servicealiasname</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 Serviceschlüssel der Serviceinstanz `my-service-instance` auflisten:
 
 ```
-ibmcloud resource service-keys --instance-name my-service-instance
+ibmcloud resource service-keys --instance-name my-service-instance  [--output FORMAT]
 ```
 
 ## ibmcloud resource service-key
@@ -588,6 +598,8 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dd>Der Name des Schlüssels</dd>
   <dt>--id</dt>
   <dd>ID des Serviceschlüssels anzeigen</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -643,15 +655,15 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 Serviceschlüssel löschen
 
 ```
-ibmcloud resource service-key-delete KEY_NAME [-f, --forece]
+ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>KEY_NAME</dt>
-  <dd>Der Name des Schlüssels</dd>
+  <dt>KEY_NAME | KEY_ID</dt>
+  <dd>Name des Schlüssels oder ID des Schlüssels</dd>
   <dt>-f, --force</dt>
   <dd>Löschen ohne Bestätigung erzwingen</dd>
 </dl>
@@ -669,7 +681,7 @@ ibmcloud resource service-key-delete my-service-key
 Aliasnamen für eine Serviceinstanz auflisten
 
 ```
-ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
+ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -680,6 +692,8 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ]
   <dd>Die ID der zugehörigen Serviceinstanz.</dd>
   <dt>--instance-name</dt>
   <dd>Der Name der zugehörigen Serviceinstanz.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -694,7 +708,7 @@ ibmcloud resource service-aliases my-service-instance
 Details eines Servicealias anzeigen
 
 ```
-ibmcloud resource service-alias ALIAS_NAME [--id]
+ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -704,7 +718,9 @@ ibmcloud resource service-alias ALIAS_NAME [--id]
   <dt>ALIAS_NAME (erforderlich)</dt>
   <dd>Der Name des Servicealias</dd>
   <dt>--id</dt>
-  <dd>Nur die ID des angegebenen Servicealias anzeigen. Alle anderen Ausgaben für diesen Alias werden unterdrückt.</dd>
+  <dd>Nur die ID des angegebenen Servicealias anzeigen. Alle anderen Ausgaben für diesen Alias werden unterdrückt. Diese Option ist gegenseitig ausschließend mit '--output'.</dd>
+  <dt>--output FORMAT (optional)</dt>
+  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. Diese Option ist gegenseitig ausschließend mit '--id'.</dd>
 </dl>
 
 <strong>Beispiele</strong>:

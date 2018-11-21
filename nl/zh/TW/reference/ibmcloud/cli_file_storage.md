@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -16,11 +16,13 @@ lastupdated: "2018-10-17"
 
 {{site.data.keyword.filestorage_full}} 是持續性、快遞、連接彈性網路並以 NFS 為基礎的 {{site.data.keyword.filestorage_short}}。在這個網路連接儲存空間 (NAS) 環境中，您可以完全控制檔案共用功能及效能。
 
-請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 基礎架構 File Storage 服務中管理給定磁區。
+請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 標準基礎架構的 File Storage 服務中管理給定磁區。
 {: shortdesc}
 
-<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構 File Storage 指令，其鏈結提供指令的相關資訊">
+<table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 File Storage</caption>
  <thead>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 File Storage</th>
  </thead>
  <tbody>
  <tr>
@@ -44,20 +46,23 @@ lastupdated: "2018-10-17"
   <td>[ibmcloud sl file snapshot-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_list)</td>
   <td>[ibmcloud sl file snapshot-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_order)</td>
   <td>[ibmcloud sl file snapshot-restore](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_restore)</td>
+  <td>[ibmcloud sl file snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_schedule_list)</td>
   <td>[ibmcloud sl file volume-cancel](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_cancel)</td>  
-  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
    </tr>
  <tr>
-   <td>[ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
-   <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
-   <td>[ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
-   <td>[ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
-   <td>[ibmcloud sl file volume-options
-](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_options)</td>
+  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
+  <td>[ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
+  <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
+  <td>[ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
+  <td>[ibmcloud sl file volume-modify](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_modify)</td>
+  <td>[ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl file volume-options](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_options)</td>
  </tr>
    </tbody>
  </table>
-
+ 
  ## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
@@ -394,6 +399,20 @@ ibmcloud sl file snapshot-restore 12345678 87654321
 ```
 這個指令會從 ID 為 87654321 的 Snapshot 還原 ID 為 12345678 的磁區。
 
+## ibmcloud sl snapshot-schedule-list
+{: #sl_snapshot_schedule_list}
+
+列出給定磁區的 Snapshot 排程
+```
+ibmcloud sl snapshot-schedule-list VOLUME_ID
+```
+
+**範例**：
+```
+ibmcloud sl file snapshot-schedule-list 12345678
+```
+這個指令會針對 ID 為 12345678 的磁區列出 Snapshot 排程。
+
 ## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
 
@@ -538,6 +557,40 @@ ibmcloud sl file volume-order [OPTIONS]
 ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
 這個指令會訂購效能磁區：大小為 1000GB、IOPS 為 4000、位於 dal09。
+
+## ibmcloud sl file volume-modify
+{: #sl_file_volume_modify}
+
+修改現有的檔案儲存空間磁區
+```
+ibmcloud sl file volume-modify VOLUME_ID [OPTIONS]
+```
+
+<strong>指令選項</strong>：
+<dl>
+<dt>-c, --new-size</dt>
+<dd>檔案磁區的新大小（以 GB 為單位）。***如果未給定大小，則會使用磁區的原始大小。***可能大小：[20、40、80、100、250、500、1000、2000、4000、8000、12000] 最小：[磁區的原始大小]</dd>
+<dt>-i, --new-iops</dt>
+<dd>效能儲存空間 IOPS，此值為 100 的倍數，介於 100 與 6000 之間 [僅適用於效能磁區] ***如果未指定 IOPS 值，將會使用磁區的原始 IOPS 值。***需求：[如果磁區的原始 IOPS/GB 小於 0.3，新的 IOPS/GB 也必須小於 0.3。如果磁區的原始 IOPS/GB 大於或等於 0.3，磁區的新 IOPS/GB 也必須大於或等於 0.3。]</dd>
+<dt>-t, --new-tier</dt>
+<dd>耐久性儲存空間層級（每 GB 的 IOPS）[僅適用於耐久性磁區] ***如果未指定層級，將會使用磁區的原始層級。***
+需求：[如果磁區的原始 IOPS/GB 為 0.25，磁區的新 IOPS/GB 也必須是 0.25。如果磁區的原始 IOPS/GB 大於 0.25，磁區的新 IOPS/GB 也必須大於 0.25。]</dd>
+<dt>-f, --force</dt>
+<dd>強制執行作業，而不進行確認。</dd>
+</dl>
+
+**範例**：
+
+```
+ibmcloud sl file volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+這個指令會修改磁區 12345678：大小為 1000GB、IOPS 為 4000。
+
+```
+ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
+```
+這個指令會修改磁區 12345678：大小為 500GB、層級層次為每 GB 4 個 IOPS。
+
 
 ## ibmcloud sl file volume-options
 {: #sl_file_volume_options}

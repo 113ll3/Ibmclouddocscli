@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 ---
 
 {:new_window: target="_blank"}
@@ -16,11 +16,13 @@ lastupdated: "2018-10-17"
 
 Bei {{site.data.keyword.Bluemix}}-Blockspeicher handelt es sich um persistenten iSCSI-Speicher mit hoher Leistung, der unabhängig von Recheninstanzen bereitgestellt und verwaltet wird. iSCSI-basierte Blockspeicher-LUNs sind über MPIO-Verbindungen (MPIO - Multipath I/O) mit autorisierten Geräten verbunden. 
 
-Verwenden Sie die folgenden Befehle, um einen angegebenen Datenträger für den Block Storage-Service der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
+Verwenden Sie die folgenden Befehle, um einen angegebenen Datenträger für den Blockspeicherservice der klassischen {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
-<table summary="Alphabetisch geordnete Block Storage-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
+<table summary="Allgemeine Befehle der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}} mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
+<caption>Tabelle 1. Block Storage der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
+ <th colspan="6">Block Storage der Infrastruktur für {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -45,21 +47,24 @@ Verwenden Sie die folgenden Befehle, um einen angegebenen Datenträger für den 
   <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_list)</td>
   <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_order)</td>
   <td>[ibmcloud sl block snapshot-restore](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_restore)</td>
+  <td>[ibmcloud sl block snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_schedule_list)</td>
+</tr>
+<tr>
   <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_cancel)</td>
+  <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>
+  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
+  <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
+  <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
+  <td>[ibmcloud sl block volume-modify](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_modify)</td>
 </tr>
 <tr>
-   <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>    <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
-   <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
-   <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
-   <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
-   <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
-</tr>
-<tr>
-   <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
+  <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
+  <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
+  <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
 </tr>
 </tbody>
 </table>
-
+ 
 ## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
@@ -402,6 +407,20 @@ ibmcloud sl block snapshot-restore 12345678 87654321
 ```
 Dieser Befehl stellt den Datenträger mit der ID 12345678 aus dem Snapshot mit der ID 87654321 wieder her.
 
+## ibmcloud sl block snapshot-schedule-list
+{: #sl_block_snapshot_schedule_list}
+
+Snapshotzeitpläne für einen angegebenen Datenträger auflisten
+```
+ibmcloud sl block snapshot-schedule-list VOLUME_ID
+```
+
+**Beispiele**:
+```
+ibmcloud sl block snapshot-schedule-list 12345678
+```
+Mit diesem Befehl wird eine Liste der Snapshotzeitpläne für den Datenträger mit der ID 12345678 aufgelistet.
+
 ## ibmcloud sl block volume-cancel
 {: #sl_block_volume_cancel}
 
@@ -469,6 +488,39 @@ ibmcloud sl block volume-list [OPTIONEN]
 ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Dieser Befehl listet alle Endurance-Datenträger für das aktuelle Konto mit dem Ort 'dal09' auf und sortiert sie nach Kapazität.
+
+## ibmcloud sl block volume-modify
+{: #sl_block_volume_modify}
+
+Vorhandenen Blockspeicherdatenträger ändern
+```
+ibmcloud sl block volume-modify VOLUME_ID [OPTIONEN]
+```
+
+<strong>Befehlsoptionen</strong>:
+<dl>
+<dt>-c, --new-size</dt>
+<dd>Neue Größe von Blockdatenträger in GB. ***Ist keine Größe angegeben, wird die ursprüngliche Größe des Datenträgers verwendet.*** Mögliche Größen: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000]. Minimum: [ursprüngliche Größe des Datenträgers]</dd>
+<dt>-i, --new-iops</dt>
+<dd>E/A-Operationen pro Sekunde (IOPS) für Performance-Speicher, zwischen 100 und 6000 als Vielfaches von 100 [nur für Performance-Datenträger] ***Ist kein IOPS-Wert angegeben, wird der ursprüngliche IOPS-Wert des Datenträgers verwendet.*** Anforderungen: [Liegt der ursprüngliche Wert für IOPS/GB für den Datenträger unter 0,3, muss der neue Wert für IOPS/GB ebenfalls unter 0,3 liegen. Ist der ursprüngliche Wert für IOPS/GB für den Datenträger größer-gleich 0,3, muss der neue Wert für IOPS/GB ebenfalls größer-gleich 0,3 sein.]</dd>
+<dt>-t, --new-tier</dt>
+<dd>Endurance-Speichertier (E/A-Operationen pro Sekunde/GB) [nur für Endurance-Datenträger] ***Ist kein Tier angegeben, wird das ursprüngliche Tier des Datenträgers verwendet.***
+Anforderungen: [Beträgt der ursprüngliche IOPS/GB-Wert für den Datenträger 0,25, muss der neue IOPS/GB-Wert für den Datenträger ebenfalls 0,25 betragen. Liegt der ursprüngliche IOPS/GB-Wert für den Datenträger über 0,25, muss der neue IOPS/GB-Wert für den Datenträger ebenfalls über 0,25 liegen.]</dd>
+<dt>-f, --force</dt>
+<dd>Operation ohne Bestätigung erzwingen.</dd>
+</dl>
+
+**Beispiele**:
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 1000 --new-iops 4000
+```
+Mit diesem Befehl wird der Datenträger 12345678 geändert. Neue Größe: 1000 GB. Neuer Wert für IOPS: 4000.
+
+```
+ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4
+```
+Mit diesem Befehl wird der Datenträger 12345678 geändert. Neue Größe: 500 GB. Neue Tierebene: 4 IOPS pro GB.
 
 ## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}
