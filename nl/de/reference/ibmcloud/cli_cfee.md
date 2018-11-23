@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-08"
 ---
 
 {:new_window: target="_blank"}
@@ -50,6 +50,13 @@ Verwenden Sie die folgenden Befehle, um CFEE-Umgebungen, -Organisationen, -Berei
  <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
  <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
  <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
+ <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
+ <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
+ <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
+ <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
  </tr>
  </tbody>
  </table>
@@ -729,3 +736,149 @@ Alle Benutzer im Bereich `space_example` und der Organisation `org_example` und 
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+
+## ibmcloud cfee create
+{: #ibmcloud_cfee_create}
+
+Anforderung zum Erstellen einer neuen Instanz von Cloud Foundry Enterprise Environment
+
+```
+ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+  <dl>
+   <dt>NAME (erforderlich)</dt>
+   <dd>Der Name der Instanz.</dd>
+   <dt>LOCATION (erforderlich)</dt>
+   <dd>Die Position, an der die Instanz erstellt werden soll. </dd>
+   <dt>--cells CELLS</dt>
+   <dd>Geben Sie die Anzahl der Zellen für dieses CFEE an. Der Standardwert ist 2, und der Mindestwert ist 1. In einer 1-Zellen-CFEE kann es keine hohe Verfügbarkeit geben.</dd>
+   <dt>--isolation ISOLATION</dt>
+   <dd>Geben Sie die Isolation des IBM Kubernetes-Clusters an. Optionen sind "dediziert" und "freigegeben". Der Standardwert ist "freigegeben". Für einen "dedizierten" Cluster werden mehr Gebühren berechnet. </dd>
+   <dt>--private-vlan ID</dt>
+   <dd>Geben Sie die ID des privaten VLAN an. Standardmäßig finden wir eine verfügbare Gruppe von VLANS oder wir erstellen ein Paar für Sie. </dd>
+   <dt>--public-vlan ID</dt>
+   <dd>Geben Sie die ID des öffentlichen VLAN an. Standardmäßig finden wir eine verfügbare Gruppe von VLANS oder wir erstellen ein Paar für Sie. </dd>
+   <dt>--plan ID</dt>
+   <dd>Geben Sie die ID des Plans an. Standardmäßig erfolgt die Bereitstellung im Standardplan.</dd>
+  </dl>
+
+<strong>Beispiele</strong>:
+
+Erstellen Sie eine Instanz mit dem Namen `test-cfee` in `dal10`:
+
+```
+ibmcloud cfee create test-cfee dal10
+```
+
+Erstellen Sie eine `dedizierte` Instanz mit `4` Zellen mit dem Namen `test-cfee` in `dal10`:
+
+```
+ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
+```
+
+## ibmcloud cfee create-locations
+{: #ibmcloud_cfee_create_locations}
+
+Erstellen Sie eine Anforderung zum Abrufen einer Liste verfügbarer Rechenzentren für die Zielregionen. 
+
+```
+ibmcloud cfee create-locations
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
+
+<strong>Befehlsoptionen</strong>:
+
+
+## ibmcloud cfee create-permission-get
+{: #ibmcloud_cfee_create_permission_get}
+
+Überprüfen Sie, ob ein Benutzer über alle Berechtigungen verfügt, die zum Erstellen einer CFEE-Instanz erforderlich sind. Der Befehl überprüft die folgenden Zugriffsrichtlinien für den Zielbenutzer: Editor für die CFEE-Services, die Administratorrolle für den Kubernetes-Service, die Editorplattformrolle und die Managerservicezugriffsrolle für den Cloud Object Storage-Service und die Entwicklerrolle für den aktuellen Bereich in der aktuellen Organisation für die Bereitstellung von Compose for PostgreSQL.
+
+```
+ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+  <dl>
+   <dt>USER_NAME (erforderlich)</dt>
+   <dd>Der Name des Benutzers.</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>Der Name der Zugriffsgruppe, in der die Berechtigungen überprüft werden sollen. Die Standardzugriffsgruppe ist "cfee-provision-access-group".</dd>
+   <dt>--output FORMAT</dt>
+   <dd>Geben Sie das Ausgabeformat für Berechtigungen an. Momentan wird nur JSON unterstützt. </dd>
+  </dl>
+  
+<strong>Beispiele</strong>:
+
+Überprüfen Sie die CFEE-Erstellungsberechtigungen für den Benutzer `name@example.com`:
+
+```
+ibmcloud cfee create-permission-get name@example.com
+```
+
+Überprüfen Sie die CFEE-Erstellungsberechtigungen für den Benutzer `name@example.com` und in der Zugriffsgruppe `test-access-group`:
+
+```
+ibmcloud cfee create-permission-get name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-permission-set
+{: #ibmcloud_cfee_create_permission_set}
+
+Erteilen Sie dem Benutzer alle Berechtigungen, die zum Erstellen einer CFEE-Instanz erforderlich sind. Mit dem Befehl werden die folgenden Zugriffsrichtlinien für den Zielbenutzer erstellt: Editorrolle für den CFEE-Service, Administratorrolle für den Kubernetes-Service, Editorplattformrolle und Managerservicezugriffsrolle für den Cloud Object Storage-Service und Entwicklerrolle für den aktuellen Bereich in der aktuellen Organisation für die Bereitstellung von Compose for PostgreSQL
+
+```
+ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
+
+<strong>Befehlsoptionen</strong>:
+  <dl>
+   <dt>USER_NAME (erforderlich)</dt>
+   <dd>Der Name des Benutzers.</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>Der Name der Zugriffsgruppe, in der Berechtigungen erteilt werden sollen. Die Standardzugriffsgruppe ist "cfee-provision-access-group".</dd>
+  </dl>
+  
+<strong>Beispiele</strong>:
+
+Erteilen Sie dem Benutzer `name@example.com` CFEE-Erstellungsberechtigungen über die Standardzugriffsgruppe: 
+
+```
+ibmcloud cfee create-permission-set name@example.com
+```
+
+Erteilen Sie dem Benutzer `name@example.com` CFEE-Erstellungsberechtigungen über die Zugriffsgruppe `test-access-group`:
+
+```
+ibmcloud cfee create-permission-set name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-status
+{: #ibmcloud_cfee_create_status}
+
+Überprüfen Sie den Bereitstellungsstatus einer CFEE-Instanz
+
+```
+ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
+```
+
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
+
+<strong>Befehlsoptionen</strong>:
+  <dl>
+   <dt>NAME oder ID (erforderlich)</dt>
+   <dd>Der Name oder die ID der CFEE-Instanz.</dd>
+   <dt>--poll</dt>
+   <dd>Geben Sie an, ob dieser Aufruf wiederholt werden soll, damit die Abfrage so lange erfolgt, bis ein stabiler Zustand erreicht ist. </dd>
+   <dt>--output FORMAT</dt>
+   <dd>Geben Sie das Ausgabeformat an. Momentan wird nur JSON unterstützt. </dd>
+  </dl>

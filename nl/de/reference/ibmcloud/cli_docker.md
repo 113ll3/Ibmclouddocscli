@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -62,8 +62,8 @@ ibmcloud login
 Wenn Ihre Berechtigungsnachweise zurückgewiesen werden, verwenden Sie möglicherweise eine föderierte ID. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](/docs/iam/login_fedid.html#federated_id).
 {: tip}
 
-Das {{site.data.keyword.dev_cli_long}}-CLI-Plug-in verwendet zwei Container, um das Erstellen und Testen Ihrer Anwendung zu vereinfachen. Der erste ist der Container 'tools', der die erforderlichen Dienstprogramme zum Erstellen und Testen Ihrer Anwendung enthält. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters) definiert. Sie können ihn als Entwicklungscontainer ansehen, denn er enthält die Tools, die üblicherweise für die Entwicklung einer bestimmten Laufzeit verwendet werden.
+Das {{site.data.keyword.dev_cli_notm}}-CLI-Plug-in verwendet zwei Container, um das Erstellen und Testen Ihrer Anwendung zu vereinfachen. Der erste ist der Container 'tools', der die erforderlichen Dienstprogramme zum Erstellen und Testen Ihrer Anwendung enthält. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters) definiert. Sie können ihn als Entwicklungscontainer ansehen, denn er enthält die Tools, die üblicherweise für die Entwicklung einer bestimmten Laufzeit verwendet werden.
 
-Der zweite Container ist der Container 'run', der die tatsächliche Ausführungsumgebung Ihrer App genau abbildet, sobald sie in der Cloud bereitgestellt wurde. Dieser Container weist ein Format auf, das beispielsweise für die Bereitstellung zur Verwendung in {{site.data.keyword.Bluemix_notm}} geeignet ist. In der Folge wird ein Eingangspunkt definiert, der Ihre Anwendung startet. Wenn Sie entscheiden, dass Ihre Anwendung über die {{site.data.keyword.dev_cli_long}}-CLI ausgeführt werden soll, verwendet die Anwendung diesen Container. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-run`](/docs/cli/idt/commands.html#run-parameters) definiert.
+Der zweite Container ist der Container 'run', der die tatsächliche Ausführungsumgebung Ihrer App genau abbildet, sobald sie in der Cloud bereitgestellt wurde. Dieser Container weist ein Format auf, das beispielsweise für die Bereitstellung zur Verwendung in {{site.data.keyword.Bluemix_notm}} geeignet ist. In der Folge wird ein Eingangspunkt definiert, der Ihre Anwendung startet. Wenn Sie entscheiden, dass Ihre Anwendung über die {{site.data.keyword.dev_cli_notm}}-CLI ausgeführt werden soll, verwendet die Anwendung diesen Container. Die `Dockerfile` für diesen Container ist durch den Parameter [`dockerfile-run`](/docs/cli/idt/commands.html#run-parameters) definiert.
 
 Jetzt können Sie {{site.data.keyword.dev_cli_notm}} zum Verwalten der {{site.data.keyword.Bluemix_notm}}-Ressourcen sowie zum Entwickeln und Bereitstellen der Anwendungen verwenden.
