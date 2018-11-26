@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-08"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-17"
 # Cloud Foundry Enterprise Environments(CFEE)
 {: #ibmcloud_commands_cfee}
 
-{{site.data.keyword.cfee_full}}(CFEE)를 사용하여 격리된 여러 엔터프라이즈급 Cloud Foundry 플랫폼을 요청 시 인스턴스화할 수 있습니다. IBM Cloud Foundry Enterprise 서비스의 인스턴스는 IBM Cloud의 고유 계정 내에서 실행됩니다. 환경은 격리된 하드웨어(Kubernetes 클러스터)에 배치됩니다. 액세스 제어, 용량, 버전 업데이트, 리소스 사용 및 모니터링을 포함하여 환경을 완벽히 제어할 수 있습니다. 
+{{site.data.keyword.cfee_full}}(CFEE)를 사용하여 격리된 여러 엔터프라이즈급 Cloud Foundry 플랫폼을 요청 시 인스턴스화할 수 있습니다. IBM Cloud Foundry Enterprise 서비스의 인스턴스는 IBM Cloud의 고유 계정 내에서 실행됩니다. 환경은 격리된 하드웨어(Kubernetes 클러스터)에 배치됩니다. 액세스 제어, 용량, 버전 업데이트, 리소스 사용 및 모니터링을 포함하여 환경을 완벽히 제어할 수 있습니다.
 
 다음 명령을 사용하여 CFEE 환경, 조직, 영역, 사용자 및 역할을 관리하십시오.
 {: shortdesc}
@@ -50,6 +50,13 @@ lastupdated: "2018-10-17"
  <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
  <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
  <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
+ <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
+ <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
+ <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
+ <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
  </tr>
  </tbody>
  </table>
@@ -231,7 +238,7 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
    <dt>--env ENV</dt>
    <dd>CFEE 환경 이름입니다. 지정되지 않은 경우 현재 CFEE 환경으로 기본값이 지정됩니다.</dd>
    <dt>-f, --force</dt>
-   <dd>확인 없이 강제 삭제</dd>
+   <dd>확인 없이 삭제 강제 실행</dd>
   </dl>
 
 <strong>예제</strong>:
@@ -341,7 +348,7 @@ ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_
 ## ibmcloud cfee org-role-unset
 {: #ibmcloud_cfee_org_role_unset}
 
-사용자에서 조직 역할 제거(조직 관리자 또는 사용자 그/그녀 자신만 해당)
+사용자에서 조직 역할 제거(조직 관리자 또는 사용자 자신만)
 
 ```
 ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
@@ -432,11 +439,11 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
    <dt>--env ENV</dt>
    <dd>CFEE 환경 이름입니다. 지정되지 않은 경우 현재 CFEE 환경으로 기본값이 지정됩니다.</dd>
    <dt>--guid</dt>
-   <dd>지정된 영역의 GUID를 검색하고 표시합니다. 영역의 다른 모든 출력은 억제됩니다.</dd>
+   <dd>지정된 영역의 GUID를 검색하고 표시합니다. 영역의 기타 모든 출력은 억제됩니다.</dd>
    <dt>-o, --org ORG</dt>
    <dd>조직 이름입니다. 지정되지 않은 경우 현재 조직으로 기본값이 지정됩니다.</dd>
    <dt>--security-group-rules</dt>
-   <dd>영역과 연관된 모든 보안 그룹에 대한 규칙을 검색합니다.</dd>
+   <dd>영역과 연관된 모든 보안 그룹의 규칙을 검색합니다.</dd>
   </dl>
 
 <strong>예제</strong>:
@@ -555,7 +562,7 @@ ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
    <dt>--env ENV</dt>
    <dd>CFEE 환경 이름입니다. 지정되지 않은 경우 현재 CFEE 환경으로 기본값이 지정됩니다.</dd>
    <dt>-f, --force</dt>
-   <dd>확인 없이 강제 삭제합니다.</dd>
+   <dd>확인 없이 삭제 강제 실행합니다.</dd>
    <dt>-o, --org ORG</dt>
    <dd>조직 이름입니다. 지정되지 않은 경우 현재 조직으로 기본값이 지정됩니다.</dd>
   </dl>
@@ -729,3 +736,149 @@ ibmcloud cfee space-users org_example space_example
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+
+## ibmcloud cfee create
+{: #ibmcloud_cfee_create}
+
+Cloud Foundry Enterprise Environment의 새 인스턴스를 작성하도록 요청
+
+```
+ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+
+<strong>명령 옵션</strong>:
+  <dl>
+   <dt>NAME(필수)</dt>
+   <dd>인스턴스의 이름입니다.</dd>
+   <dt>LOCATION(필수)</dt>
+   <dd>인스턴스를 작성할 위치입니다.</dd>
+   <dt>--cells CELLS</dt>
+   <dd>이 CFEE의 셀 수를 지정합니다. 기본값은 2이고 최소값은 1입니다. 1개 셀 CFEE에서는 고가용성을 사용할 수 없습니다.</dd>
+   <dt>--isolation ISOLATION</dt>
+   <dd>IBM Kubernetes 클러스터에 대한 격리를 지정합니다. 선택사항은 "dedicated" 및 "shared"입니다. 기본값은 "shared"이고, "dedicated" 클러스터는 더 많은 비용이 청구됩니다.</dd>
+   <dt>--private-vlan ID</dt>
+   <dd>사설 VLAN의 ID를 지정합니다. 기본적으로 사용 가능한 VLAN 세트를 찾거나 사용자를 위해 쌍을 작성합니다.</dd>
+   <dt>--public-vlan ID</dt>
+   <dd>공용 VLAN의 ID를 지정합니다. 기본적으로 사용 가능한 VLAN 세트를 찾거나 사용자를 위해 쌍을 작성합니다.</dd>
+   <dt>--plan ID</dt>
+   <dd>플랜의 ID를 지정합니다. 기본적으로 표준 플랜으로 프로비저닝됩니다.</dd>
+  </dl>
+
+<strong>예제</strong>:
+
+`dal10`에 `test-cfee`라는 인스턴스 작성:
+
+```
+ibmcloud cfee create test-cfee dal10
+```
+
+`4`개의 셀이 있는 `dal10`에 `test-cfee`라는 `dedicated` 인스턴스 작성:
+
+```
+ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
+```
+
+## ibmcloud cfee create-locations
+{: #ibmcloud_cfee_create_locations}
+
+대상 지역에 사용 가능한 모든 데이터 센터 목록을 가져오도록 요청
+
+```
+ibmcloud cfee create-locations
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+
+
+## ibmcloud cfee create-permission-get
+{: #ibmcloud_cfee_create_permission_get}
+
+사용자가 CFEE 인스턴스를 작성하는 데 필요한 모든 권한을 가지고 있는지 확인하십시오. 이 명령은 대상 사용자에 대해 다음 액세스 정책을 확인합니다. CFEE 서비스에 대한 편집자, Kubernetes Service에 대한 관리자 역할, Cloud Object Storage 서비스에 대한 편집자 플랫폼 역할 및 관리자 서비스 액세스 역할 및 Compose for PostgreSQL 프로비저닝을 위한 현재 조직의 현재 영역에 대한 개발자 역할
+
+```
+ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+
+<strong>명령 옵션</strong>:
+  <dl>
+   <dt>USER_NAME(필수)</dt>
+   <dd>사용자의 이름입니다.</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>권한을 검사할 액세스 그룹의 이름입니다. 기본 액세스 그룹은 "cfee-provision-access-group"입니다.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>권한 출력 형식을 지정합니다. 현재 JSON만 지원됩니다.</dd>
+  </dl>
+  
+<strong>예제</strong>:
+
+사용자 `name@example.com`에 대한 CFEE 작성 권한 검사:
+
+```
+ibmcloud cfee create-permission-get name@example.com
+```
+
+사용자 `name@example.com` 및 액세스 그룹 `test-access-group`에 대한 CFEE 작성 권한 검사:
+
+```
+ibmcloud cfee create-permission-get name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-permission-set
+{: #ibmcloud_cfee_create_permission_set}
+
+CFEE 인스턴스를 작성하는 데 필요한 모든 권한을 사용자에게 부여합니다. 이 명령은 대상 사용자에 대해 다음 액세스 정책을 작성합니다. CFEE 서비스에 대한 편집자 역할, Kubernetes Service에 대한 관리자 역할, Cloud Object Storage 서비스에 대한 편집자 플랫폼 역할 및 관리자 서비스 액세스 역할 및 Compose for PostgreSQL 프로비저닝을 위한 현재 조직의 현재 영역에 대한 개발자 역할
+
+```
+ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+
+<strong>명령 옵션</strong>:
+  <dl>
+   <dt>USER_NAME(필수)</dt>
+   <dd>사용자의 이름입니다.</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>권한을 부여할 액세스 그룹의 이름입니다. 기본 액세스 그룹은 "cfee-provision-access-group"입니다.</dd>
+  </dl>
+  
+<strong>예제</strong>:
+
+기본 액세스 그룹을 사용하여 사용자 `name@example.com`에 CFEE 작성 권한 부여:
+
+```
+ibmcloud cfee create-permission-set name@example.com
+```
+
+액세스 그룹 `test-access-group`을 사용하여 사용자 `name@example.com`에 CFEE 작성 권한 부여:
+
+```
+ibmcloud cfee create-permission-set name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-status
+{: #ibmcloud_cfee_create_status}
+
+CFEE 인스턴스의 프로비저닝 상태 검사
+
+```
+ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+  <dl>
+   <dt>NAME 또는 ID(필수)</dt>
+   <dd>CFEE 인스턴스의 이름 또는 ID입니다.</dd>
+   <dt>--poll</dt>
+   <dd>이 호출을 반복하고 안정된 상태가 될 때까지 폴링할지 여부를 지정합니다.</dd>
+   <dt>--output FORMAT</dt>
+   <dd>상태 출력 형식을 지정합니다. 현재 JSON만 지원됩니다.</dd>
+  </dl>

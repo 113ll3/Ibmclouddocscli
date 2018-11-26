@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-08"
 ---
 
 {:new_window: target="_blank"}
@@ -50,6 +50,13 @@ lastupdated: "2018-10-17"
  <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
  <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
  <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
+ <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
+ <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
+ <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
+ <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
  </tr>
  </tbody>
  </table>
@@ -314,7 +321,7 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
    <dd>要将此用户分配到的组织的名称。</dd>
    <dt>ROLE（必需）</dt>
    <dd>要将此用户分配到的组织角色的名称。例如：
-<ul>
+        <ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -357,7 +364,7 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
    <dd>要将此用户从中除去的组织的名称。</dd>
    <dt>ROLE（必需）</dt>
    <dd>要将此用户从中除去的组织角色的名称。例如：
-<ul>
+        <ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -595,7 +602,7 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dd>要将此用户分配到的空间的名称。</dd>
    <dt>ROLE（必需）</dt>
    <dd>要将此用户分配到的空间角色的名称。例如：
-<ul>
+        <ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -639,7 +646,7 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dd>要将此用户从中除去的空间的名称。</dd>
    <dt>ROLE（必需）</dt>
    <dd>要将此用户从中除去的空间角色的名称。例如：
-<ul>
+        <ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -729,3 +736,149 @@ ibmcloud cfee space-users org_example space_example
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+
+## ibmcloud cfee create
+{: #ibmcloud_cfee_create}
+
+请求创建新的 Cloud Foundry Enterprise Environment 实例
+
+```
+ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+  <dl>
+   <dt>NAME（必需）</dt>
+   <dd>实例的名称。</dd>
+   <dt>LOCATION（必需）</dt>
+   <dd>创建实例的位置。</dd>
+   <dt>--cells CELLS</dt>
+   <dd>指定此 CFEE 的单元数。缺省值为 2，最小值为 1。在 1 个单元的 CFEE 中，无法获得高可用性。</dd>
+   <dt>--isolation ISOLATION</dt>
+   <dd>指定 IBM Kubernetes 集群的隔离方式。选项为“dedicated”和“shared”。缺省值为“shared”。“dedicated”集群的费用较高。</dd>
+   <dt>--private-vlan ID</dt>
+   <dd>指定专用 VLAN 的标识。缺省情况下，我们会找到一组可用的 VLAN 或为您创建一对 VLAN。</dd>
+   <dt>--public-vlan ID</dt>
+   <dd>指定公用 VLAN 的标识。缺省情况下，我们会找到一组可用的 VLAN 或为您创建一对 VLAN。</dd>
+   <dt>--plan ID</dt>
+   <dd>指定套餐的标识。缺省情况下，我们会供应到标准套餐中。</dd>
+  </dl>
+
+<strong>示例</strong>：
+
+在 `dal10` 中创建名为 `test-cfee` 的实例：
+
+```
+ibmcloud cfee create test-cfee dal10
+```
+
+在 `dal10` 中创建具有 `4` 个单元且名为 `test-cfee` 的 `dedicated` 实例：
+
+```
+ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
+```
+
+## ibmcloud cfee create-locations
+{: #ibmcloud_cfee_create_locations}
+
+请求获取目标区域的可用数据中心列表
+
+```
+ibmcloud cfee create-locations
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+
+
+## ibmcloud cfee create-permission-get
+{: #ibmcloud_cfee_create_permission_get}
+
+检查用户是否具有创建 CFEE 实例所需的所有许可权。该命令会检查目标用户的以下访问策略：CFEE 服务的编辑者角色、Kubernetes Service 的管理员角色、Cloud Object Storage 服务的平台编辑者角色和服务访问权管理者角色，以及当前组织中用于供应 Compose for PostgreSQL 的当前空间的开发者角色
+
+```
+ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+  <dl>
+   <dt>USER_NAME（必需）</dt>
+   <dd>用户的名称。</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>要在其中检查许可权的访问组的名称。缺省访问组为“cfee-provision-access-group”。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定许可权输出格式，现在仅支持 JSON。</dd>
+  </dl>
+  
+<strong>示例</strong>：
+
+检查用户 `name@example.com` 的 CFEE 创建许可权：
+
+```
+ibmcloud cfee create-permission-get name@example.com
+```
+
+在访问组 `test-access-group` 中检查用户 `name@example.com` 的 CFEE 创建许可权：
+
+```
+ibmcloud cfee create-permission-get name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-permission-set
+{: #ibmcloud_cfee_create_permission_set}
+
+授予用户创建 CFEE 实例所需的所有许可权。该命令会为目标用户创建以下访问策略：CFEE 服务的编辑者角色、Kubernetes Service 的管理员角色、Cloud Object Storage 服务的编辑者平台角色和管理者服务访问角色，以及当前组织中用于供应 Compose for PostgreSQL 的当前空间的开发者角色
+
+```
+ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+  <dl>
+   <dt>USER_NAME（必需）</dt>
+   <dd>用户的名称。</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>要在其中授予许可权的访问组的名称。缺省访问组为“cfee-provision-access-group”。</dd>
+  </dl>
+  
+<strong>示例</strong>：
+
+通过缺省访问组向用户 `name@example.com` 授予 CFEE 创建许可权：
+
+```
+ibmcloud cfee create-permission-set name@example.com
+```
+
+通过访问组 `test-access-group` 向用户 `name@example.com` 授予 CFEE 创建许可权：
+
+```
+ibmcloud cfee create-permission-set name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-status
+{: #ibmcloud_cfee_create_status}
+
+检查 CFEE 实例的供应状态
+
+```
+ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+  <dl>
+   <dt>NAME or ID（必需）</dt>
+   <dd>CFEE 实例的名称或标识。</dd>
+   <dt>--poll</dt>
+   <dd>指定是否要重复此调用来进行轮询，直到处于稳定状态</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定状态输出格式，现在仅支持 JSON。</dd>
+  </dl>

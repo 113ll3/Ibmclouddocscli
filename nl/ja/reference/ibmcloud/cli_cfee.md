@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-08"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-10-17"
 # Cloud Foundry エンタープライズ環境 (CFEE)
 {: #ibmcloud_commands_cfee}
 
-{{site.data.keyword.cfee_full}} (CFEE) を使用して、オンデマンドで複数の分離したエンタープライズ・クラスの Cloud Foundry プラットフォームのインスタンスを生成できます。IBM Cloud Foundry Enterprise サービスのインスタンスは、IBM Cloud のお客様専用のアカウント内で実行されます。環境は、分離したハードウェア (Kubernetes クラスター) 上にデプロイされます。アクセス制御、キャパシティー、バージョンの更新、リソース使用量とモニターなど、環境を完全に制御できます。
+{{site.data.keyword.cfee_full}} (CFEE) を使用して、オンデマンドで複数の分離したエンタープライズ・クラスの Cloud Foundry プラットフォームのインスタンスを生成できます。 IBM Cloud Foundry Enterprise サービスのインスタンスは、IBM Cloud のお客様専用のアカウント内で実行されます。 環境は、分離したハードウェア (Kubernetes クラスター) 上にデプロイされます。 アクセス制御、キャパシティー、バージョンの更新、リソース使用量とモニターなど、環境を完全に制御できます。
 
 以下のコマンドを使用して、CFEE 環境、組織、スペース、ユーザー、および役割を管理します。
 {: shortdesc}
@@ -51,6 +51,13 @@ lastupdated: "2018-10-17"
  <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
  <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
  <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
+ <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
+ <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
+ <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
+ <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
  </tr>
  </tbody>
  </table>
@@ -730,3 +737,149 @@ ibmcloud cfee space-users org_example space_example
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+
+## ibmcloud cfee create
+{: #ibmcloud_cfee_create}
+
+Cloud Foundry エンタープライズ環境の新規インスタンスの作成を要求します
+
+```
+ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+   <dt>NAME (必須)</dt>
+   <dd>インスタンスの名前。</dd>
+   <dt>LOCATION (必須)</dt>
+   <dd>インスタンスを作成する場所。</dd>
+   <dt>--cells CELLS</dt>
+   <dd>この CFEE 用のセルの数を指定します。デフォルトは 2、最小は 1 です。1 セル CFEE には高可用性は望めません。</dd>
+   <dt>--isolation ISOLATION</dt>
+   <dd>IBM Kubernetes クラスターの独立性を指定します。オプションは「dedicated」と「shared」です。デフォルトは「shared」です。「dedicated」クラスターの場合は課金が増えます。</dd>
+   <dt>--private-vlan ID</dt>
+   <dd>プライベート VLAN の ID を指定します。デフォルトでは、使用可能な VLAN のセットが検出されるか、ペアが作成されます。</dd>
+   <dt>--public-vlan ID</dt>
+   <dd>パブリック VLAN の ID を指定します。デフォルトでは、使用可能な VLAN のセットが検出されるか、ペアが作成されます。</dd>
+   <dt>--plan ID</dt>
+   <dd>プランの ID を指定します。デフォルトでは、標準プランにプロビジョンされます。</dd>
+  </dl>
+
+<strong>例</strong>:
+
+`test-cfee` という名前のインスタンスを `dal10` に作成します。
+
+```
+ibmcloud cfee create test-cfee dal10
+```
+
+`test-cfee` という名前の `dedicated` インスタンスを `dal10` に `4` 個のセルで作成します。
+
+```
+ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
+```
+
+## ibmcloud cfee create-locations
+{: #ibmcloud_cfee_create_locations}
+
+ターゲット地域の使用可能なデータ・センターのリストの取得を要求します
+
+```
+ibmcloud cfee create-locations
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+
+
+## ibmcloud cfee create-permission-get
+{: #ibmcloud_cfee_create_permission_get}
+
+CFEE インスタンスの作成に必要なすべての権限をユーザーが持っているかどうかを検査します。このコマンドは、ターゲット・ユーザーの次のアクセス・ポリシーを検査します。CFEE サービスに対するエディター役割、Kubernetes サービスに対する管理者役割、クラウド・オブジェクト・ストレージ・サービスに対するエディターのプラットフォーム役割および管理者のサービス・アクセス役割、および、Compose for PostgreSQL のプロビジョニング用の現行組織内の現行スペースに対する開発者役割
+
+```
+ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+   <dt>USER_NAME (必須)</dt>
+   <dd>ユーザーの名前。</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>権限を検査するアクセス・グループの名前。デフォルトのアクセス・グループは「cfee-provision-access-group」です。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>権限の出力形式を指定します。現在は JSON のみがサポートされています。</dd>
+  </dl>
+  
+<strong>例</strong>:
+
+ユーザー `name@example.com` の CFEE 作成権限を検査します。
+
+```
+ibmcloud cfee create-permission-get name@example.com
+```
+
+ユーザー `name@example.com` およびアクセス・グループ `test-access-group` の CFEE 作成権限を検査します。
+
+```
+ibmcloud cfee create-permission-get name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-permission-set
+{: #ibmcloud_cfee_create_permission_set}
+
+CFEE インスタンスを作成するために必要なすべての権限をユーザーに付与します。このコマンドは、ターゲット・ユーザーに対して次のアクセス・ポリシーを作成します。CFEE サービスに対するエディター役割、Kubernetes サービスに対する管理者役割、クラウド・オブジェクト・ストレージ・サービスに対するエディターのプラットフォーム役割および管理者のサービス・アクセス役割、および、Compose for PostgreSQL のプロビジョニング用の現行組織内の現行スペースに対する開発者役割
+
+```
+ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+   <dt>USER_NAME (必須)</dt>
+   <dd>ユーザーの名前。</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>権限を付与するアクセス・グループの名前。デフォルトのアクセス・グループは「cfee-provision-access-group」です。</dd>
+  </dl>
+  
+<strong>例</strong>:
+
+デフォルトのアクセス・グループを介して、ユーザー `name@example.com` に CFEE 作成権限を付与します。
+
+```
+ibmcloud cfee create-permission-set name@example.com
+```
+
+アクセス・グループ `test-access-group` を介して、ユーザー `name@example.com` に CFEE 作成権限を付与します。
+
+```
+ibmcloud cfee create-permission-set name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-status
+{: #ibmcloud_cfee_create_status}
+
+CFEE インスタンスのプロビジョニング状況を検査します
+
+```
+ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+   <dt>NAME または ID (必須)</dt>
+   <dd>CFEE インスタンスの名前または ID。</dd>
+   <dt>--poll</dt>
+   <dd>安定状態になるまでこの呼び出しを繰り返してポーリングするかどうかを指定します。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>状況の出力形式を指定します。現在は JSON のみがサポートされています。</dd>
+  </dl>

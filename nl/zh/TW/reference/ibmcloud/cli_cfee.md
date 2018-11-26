@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-08"
 ---
 
 {:new_window: target="_blank"}
@@ -50,6 +50,13 @@ lastupdated: "2018-10-17"
  <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
  <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
  <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
+ <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
+ <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
+ <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
+ <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
  </tr>
  </tbody>
  </table>
@@ -384,7 +391,7 @@ ibmcloud cfee org-role-unset tes@example.com org_example BillingManager --env en
 ## ibmcloud cfee spaces
 {: #ibmcloud_cfee_spaces}
 
-列出所有空間
+列出所有空間。
 
 ```
 ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
@@ -402,7 +409,7 @@ ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 
 <strong>範例</strong>：
 
-列出所有空間
+列出所有空間。
 
 ```
 ibmcloud cfee spaces
@@ -729,3 +736,149 @@ ibmcloud cfee space-users org_example space_example
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+
+## ibmcloud cfee create
+{: #ibmcloud_cfee_create}
+
+提出要求以建立 Cloud Foundry Enterprise Environment 的新實例。
+
+```
+ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
+```
+
+<strong>必要條件</strong>：端點、登入、目標
+
+<strong>指令選項</strong>：
+  <dl>
+   <dt>NAME（必要）</dt>
+   <dd>實例的名稱。</dd>
+   <dt>LOCATION（必要）</dt>
+   <dd>要在其中建立實例的位置。</dd>
+   <dt>--cells CELLS</dt>
+   <dd>指定此 CFEE 的 Cell 數目。預設值是 2，最小值是 1。在 1 個 Cell 的 CFEE 中，無法具有高可用性。</dd>
+   <dt>--isolation ISOLATION</dt>
+   <dd>指定 IBM Kubernetes 叢集的隔離。選項包括 "dedicated" 和 "shared"。預設值是 "shared"，"dedicated" 叢集的費用會較高。</dd>
+   <dt>--private-vlan ID</dt>
+   <dd>指定專用 VLAN 的 ID。依預設，我們將找到一組可用的 VLAN，或是為您建立一對。</dd>
+   <dt>--public-vlan ID</dt>
+   <dd>指定公用 VLAN 的 ID。依預設，我們將找到一組可用的 VLAN，或是為您建立一對。</dd>
+   <dt>--plan ID</dt>
+   <dd>指定方案的 ID。依預設，我們將佈建至標準方案。</dd>
+  </dl>
+
+<strong>範例</strong>：
+
+在 `dal10` 中建立名為 `test-cfee` 的實例：
+
+```
+ibmcloud cfee create test-cfee dal10
+```
+
+在 `dal10` 中建立名為 `test-cfee` 且具有 `4` 個 Cell 的 `dedicated` 實例：
+
+```
+ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
+```
+
+## ibmcloud cfee create-locations
+{: #ibmcloud_cfee_create_locations}
+
+提出要求以取得目錄地區的可用資料中心清單。
+
+```
+ibmcloud cfee create-locations
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+
+
+## ibmcloud cfee create-permission-get
+{: #ibmcloud_cfee_create_permission_get}
+
+檢查使用者是否已具有建立 CFEE 實例所需的所有許可權。指令會檢查目標使用者的下列存取原則：對 CFEE 服務的「編輯者」、對 Kubernetes Service 的管理者角色、對 Cloud Object Storage 服務的編輯者平台角色和管理員服務存取角色，以及對現行組織中現行空間的開發人員角色以便佈建 Compose for PostgreSQL。
+
+```
+ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
+```
+
+<strong>必要條件</strong>：端點、登入、目標
+
+<strong>指令選項</strong>：
+  <dl>
+   <dt>USER_NAME（必要）</dt>
+   <dd>使用者的名稱。</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>要在其中檢查許可權之存取群組的名稱。預設存取群組是 "cfee-provision-access-group"。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定許可權輸出格式，目前只支援 JSON。</dd>
+  </dl>
+  
+<strong>範例</strong>：
+
+檢查使用者 `name@example.com` 的 CFEE 建立許可權：
+
+```
+ibmcloud cfee create-permission-get name@example.com
+```
+
+檢查使用者 `name@example.com` 且在存取群組 `test-access-group` 中的 CFEE 建立許可權：
+
+```
+ibmcloud cfee create-permission-get name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-permission-set
+{: #ibmcloud_cfee_create_permission_set}
+
+提供使用者建立 CFEE 實例所需的所有許可權。指令會為目標使用者建立下列存取原則：對 CFEE 服務的「編輯者」角色、對 Kubernetes 服務的管理者角色、對 Cloud Object Storage 服務的編輯者平台角色和管理員服務存取角色，以及對現行組織中現行空間的開發人員角色以便佈建 Compose for PostgreSQL。
+
+```
+ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
+```
+
+<strong>必要條件</strong>：端點、登入、目標
+
+<strong>指令選項</strong>：
+  <dl>
+   <dt>USER_NAME（必要）</dt>
+   <dd>使用者的名稱。</dd>
+   <dt>--access-group GROUP_NAME</dt>
+   <dd>要在其中提供許可權之存取群組的名稱。預設存取群組是 "cfee-provision-access-group"。</dd>
+  </dl>
+  
+<strong>範例</strong>：
+
+透過預設存取群組提供使用者 `name@example.com` CFEE 建立許可權：
+
+```
+ibmcloud cfee create-permission-set name@example.com
+```
+
+透過存取群組 `test-access-group` 提供使用者 `name@example.com` CFEE 建立許可權：
+
+```
+ibmcloud cfee create-permission-set name@example.com -ag test-access-group
+```
+
+## ibmcloud cfee create-status
+{: #ibmcloud_cfee_create_status}
+
+檢查 CFEE 實例的佈建狀態
+
+```
+ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
+```
+
+<strong>必要條件</strong>：端點、登入
+
+<strong>指令選項</strong>：
+  <dl>
+   <dt>NAME 或 ID（必要）</dt>
+   <dd>CFEE 實例的名稱或 ID。</dd>
+   <dt>--poll</dt>
+   <dd>如果您要讓此呼叫重複出現，便指定以進行輪詢，直到處理穩定狀態為止。</dd>
+   <dt>--output FORMAT</dt>
+   <dd>指定狀態輸出格式，目前只支援 JSON。</dd>
+  </dl>
