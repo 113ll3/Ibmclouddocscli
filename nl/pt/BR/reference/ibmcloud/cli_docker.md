@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -67,9 +67,10 @@ Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federa
 [Efetuando login com um ID federado](/docs/iam/login_fedid.html#federated_id) para obter mais detalhes.
 {: tip}
 
-O {{site.data.keyword.dev_cli_long}} CLI Plug-in usa dois contêineres para facilitar a construção e o teste de seu aplicativo. O primeiro é o contêiner de ferramentas, que contém os utilitários necessários para construir e testar seu aplicativo. O `Dockerfile` para esse contêiner é definido pelo parâmetro [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters). Você pode considerá-lo como um contêiner de desenvolvimento, pois ele contém as ferramentas que normalmente são usadas para o desenvolvimento de um tempo de execução específico.
+O plug-in da CLI do {{site.data.keyword.dev_cli_notm}} usa dois contêineres para facilitar a construção e o teste do aplicativo. O primeiro é o contêiner de ferramentas, que contém os utilitários necessários para construir e testar seu aplicativo. O `Dockerfile` para esse contêiner é definido pelo parâmetro [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters). Você pode pensar nele como um contêiner de desenvolvimento, pois ele contém as ferramentas que são normalmente usadas para o desenvolvimento de um tempo de execução específico.
 
-O segundo contêiner é o contêiner de execução, que imita fielmente o ambiente de tempo de execução real de seu app uma vez que ele é implementado na nuvem. Esse contêiner está em um formato adequado para ser implementado para uso, por exemplo, no {{site.data.keyword.Bluemix_notm}}. Como resultado, um ponto de entrada que inicia seu aplicativo é definido. Quando você seleciona para executar seu aplicativo por meio da CLI do {{site.data.keyword.dev_cli_long}} CLI Plug-in, ele usa esse contêiner. O `Dockerfile` para esse contêiner é definido pelo parâmetro [`dockerfile-run`](/docs/cli/idt/commands.html#run-parameters).
+O segundo contêiner é o contêiner de execução, que imita de perto o ambiente de tempo de execução real do aplicativo, uma vez que ele é implementado para a nuvem. Esse contêiner está em um formato que é adequado para ser implementado para o uso no {{site.data.keyword.Bluemix_notm}}, por exemplo. Como resultado, um ponto de entrada que inicia seu aplicativo é definido. Ao selecionar a execução do aplicativo por meio do plug-in da CLI do {{site.data.keyword.dev_cli_notm}}, ele usa esse contêiner. O `Dockerfile` para esse contêiner é definido pelo parâmetro
+[`dockerfile-run`](/docs/cli/idt/commands.html#run-parameters).
 
 Agora você está pronto para usar o {{site.data.keyword.dev_cli_notm}} para gerenciar os recursos do
 {{site.data.keyword.Bluemix_notm}} e desenvolver e implementar os aplicativos.
