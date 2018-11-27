@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-27"
 
 ---
 
@@ -284,3 +284,9 @@ The many different possible causes can be found in each of the following links.
 - For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot applications for cloud deployment](/docs/java-spring/enable_existing.html#enable_existing).
 - For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js applications for cloud deployment](/docs/node/enable_existing.html#enable_existing).
 {: tsResolve}
+
+## How do I install the {{site.data.keyword.Bluemix_notm}} developer tools manually?
+{: #appendix}
+ All prerequisites install for most users by using the platform installers. If you need to manually install any components, here are the instructions:
+ To install the dev plug-in, you must first install the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+ To use the dev plug-in itself, you must install it by running the following command: `ibmcloud plugin install dev -r IBM Cloud`
