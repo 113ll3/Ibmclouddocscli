@@ -287,6 +287,61 @@ The many different possible causes can be found in each of the following links.
 
 ## How do I install the {{site.data.keyword.Bluemix_notm}} developer tools manually?
 {: #appendix}
- All prerequisites install for most users by using the platform installers. If you need to manually install any components, here are the instructions:
- To install the dev plug-in, you must first install the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
- To use the dev plug-in itself, you must install it by running the following command: `ibmcloud plugin install dev -r IBM Cloud`
+All prerequisites install for most users by using the platform installers. If you need to manually install any components, here are the instructions for each.
+To install the dev plug-in, you must first install the [IBM Cloud CLI] (https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+To use the dev plug-in itself, you must install it by running the following command: 
+```
+ibmcloud plugin install dev -r IBM Cloud
+```
+{: codeblock}
+ 
+For running and debugging apps locally, you must also install [Docker](https://www.docker.com/get-docker).
+ 
+For deploying an app as a container, you must also install Kubernetes, Helm, and the following IBM Cloud CLI plug-ins.
+ 
+### To install Kubernetes:
+- Mac users:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+- Linux users:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+- Windows users:
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### To install Helm:
+- Mac and Linux users:
+```
+export DESIRED_VERSION=v2.6.0
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+- Windows users:
+Download and install the [binary](https://github.com/kubernetes/helm/releases/tag/v2.6.0).
+
+### To install the container-registry plug-in:
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### To install the container-service plug-in:
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}
+
+
+ 
+ 
+ 
