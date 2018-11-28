@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -797,7 +797,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-檢查使用者是否已具有建立 CFEE 實例所需的所有許可權。指令會檢查目標使用者的下列存取原則：對 CFEE 服務的「編輯者」、對 Kubernetes Service 的管理者角色、對 Cloud Object Storage 服務的編輯者平台角色和管理員服務存取角色，以及對現行組織中現行空間的開發人員角色以便佈建 Compose for PostgreSQL。
+檢查使用者是否已具有建立 CFEE 實例所需的所有許可權。指令會檢查目標使用者的下列存取原則：對 CFEE 服務的「編輯者」、對 Kubernetes Service 的管理者角色、對平台角色的編輯者和對 Cloud Object Storage 服務的管理員服務存取角色，以及對現行組織中現行空間的開發人員角色以便佈建 Compose for PostgreSQL。
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -832,7 +832,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-提供使用者建立 CFEE 實例所需的所有許可權。指令會為目標使用者建立下列存取原則：對 CFEE 服務的「編輯者」角色、對 Kubernetes 服務的管理者角色、對 Cloud Object Storage 服務的編輯者平台角色和管理員服務存取角色，以及對現行組織中現行空間的開發人員角色以便佈建 Compose for PostgreSQL。
+提供使用者建立 CFEE 實例所需的所有許可權。指令會為目標使用者建立下列存取原則：對 CFEE 服務的「編輯者」角色、對 Kubernetes 服務的管理者角色、對平台角色的編輯者和對 Cloud Object Storage 服務的管理員服務存取角色，以及對現行組織中現行空間的開發人員角色以便佈建 Compose for PostgreSQL。
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
