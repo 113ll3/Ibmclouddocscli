@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -753,17 +753,17 @@ ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--pr
    <dt>NAME (obligatoire)</dt>
    <dd>Nom de l'instance.</dd>
    <dt>LOCATION (obligatoire)</dt>
-   <dd>Emplacement où créer l'instance. </dd>
+   <dd>Emplacement où créer l'instance.</dd>
    <dt>--cells CELLS</dt>
-   <dd>Spécifiez le nombre de cellules pour cette instance CFEE. La valeur par défaut est 2 et la valeur minimale est 1. Dans une instance CFEE comportant une cellule, la haute disponibilité n'est pas possible. </dd>
+   <dd>Spécifiez le nombre de cellules pour cette instance CFEE. La valeur par défaut est 2 et la valeur minimale est 1. Dans une instance CFEE comportant une cellule, la haute disponibilité n'est pas possible.</dd>
    <dt>--isolation ISOLATION</dt>
-   <dd>Spécifiez l'isolement du cluster IBM kubernetes. Les options sont "dédié" et "partagé". L'option par défaut est "partagé" ; un cluster "dédié" implique des frais supplémentaires. </dd>
+   <dd>Spécifiez l'isolement du cluster IBM kubernetes. Les options sont "dédié" et "partagé". L'option par défaut est "partagé" ; un cluster "dédié" implique des frais supplémentaires.</dd>
    <dt>--private-vlan ID</dt>
-   <dd>Spécifiez l'ID de VLAN privé. Par défaut, nous trouverons un ensemble de VLAN disponible ou nous créerons une paire pour vous. </dd>
+   <dd>Spécifiez l'ID de VLAN privé. Par défaut, nous trouverons un ensemble de VLAN disponible ou nous créerons une paire pour vous.</dd>
    <dt>--public-vlan ID</dt>
-   <dd>Spécifiez l'ID de VLAN public. Par défaut, nous trouverons un ensemble de VLAN disponible ou nous créerons une paire pour vous. </dd>
+   <dd>Spécifiez l'ID de VLAN public. Par défaut, nous trouverons un ensemble de VLAN disponible ou nous créerons une paire pour vous.</dd>
    <dt>--plan ID</dt>
-   <dd>Spécifiez l'ID de plan. Par défaut, nous mettrons à disposition un plan standard. </dd>
+   <dd>Spécifiez l'ID de plan. Par défaut, nous mettrons à disposition un plan standard.</dd>
   </dl>
 
 <strong>Exemples</strong> :
@@ -797,7 +797,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-Permet de vérifier si un utilisateur dispose de tous les droits nécessaires pour créer une instance CFEE. La commande recherche les règles d'accès suivantes pour l'utilisateur cible : rôle Editeur sur les services CFEE, rôle Administrateur sur Kubernetes Service, rôle d'éditeur de plateforme et rôle d'accès aux services de gestionnaire sur le service Cloud Object Storage, et rôle de développeur sur l'espace en cours dans l'organisation en cours pour la mise à disposition de Compose for PostgreSQL
+Permet de vérifier si un utilisateur dispose de tous les droits nécessaires pour créer une instance CFEE. La commande vérifie les règles d'accès suivantes pour l'utilisateur cible : éditeur sur les services CFEE, rôle d'administrateur sur le service Kubernetes, rôle d'éditeur de plateforme et gestionnaire pour le rôle d'accès au service Cloud Object Storage, et rôle de développeur sur l'espace en cours de l'organisation en cours pour la mise à disposition de Compose for PostgreSQL
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -832,7 +832,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-Permet d'accorder à l'utilisateur tous les droits nécessaires pour créer une instance CFEE. La commande crée les règles d'accès suivantes pour l'utilisateur cible : rôle Editeur sur les services CFEE, rôle Administrateur sur Kubernetes service, rôle d'éditeur de plateforme et rôle d'accès aux services de gestionnaire sur le service Cloud Object Storage, et rôle de développeur sur l'espace en cours dans l'organisation en cours pour la mise à disposition de Compose for PostgreSQL
+Permet d'accorder à l'utilisateur tous les droits nécessaires pour créer une instance CFEE. La commande crée les règles d'accès suivantes pour l'utilisateur cible : rôle d'éditeur sur le service CFEE, rôle d'administrateur pour le service Kubernetes, rôle d'éditeur de plateforme et de gestionnaire pour le rôle d'accès au service Cloud Object Storage, et rôle de développeur pour l'espace en cours de l'organisation en cours pour la mise à disposition de Compose for PostgreSQL
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
@@ -876,7 +876,7 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
 <strong>Options de commande</strong> :
   <dl>
    <dt>Nom ou ID (obligatoire)</dt>
-   <dd>Nom ou ID de l'instance CFEE. </dd>
+   <dd>Nom ou ID de l'instance CFEE.</dd>
    <dt>--poll</dt>
    <dd>Indiquez si vous souhaitez que cet appel soit récurrent, afin d'effectuer des interrogations jusqu'à obtenir un état stable</dd>
    <dt>--output FORMAT</dt>

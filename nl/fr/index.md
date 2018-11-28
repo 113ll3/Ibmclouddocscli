@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -39,7 +39,7 @@ Avec cette installation, vous disposez de l'interface de ligne de commande {{sit
 
 Vous devez avoir un compte [{{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et la configuration système doit être respectée :
 
-* Sous Windows, certaines fonctions ne sont pas prises en charge si vous exécutez Windows 10 Pro.
+* Sous Windows, certaines fonctions ne sont pas prises en charge si vous n'exécutez pas Windows 10 Pro.
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
 ## Etape 1. Lancez la commande d'installation
