@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-27"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -291,7 +291,7 @@ All prerequisites install for most users by using the platform installers. If yo
 To install the dev plug-in, you must first install the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
 To use the dev plug-in itself, you must install it by running the following command: 
 ```
-ibmcloud plugin install dev -r IBM Cloud
+ibmcloud plugin install dev
 ```
 {: codeblock}
  
@@ -321,13 +321,13 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/wi
 ### To install Helm:
 Mac and Linux users:
 ```
-export DESIRED_VERSION=v2.6.0
+export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 ```
 {: codeblock}
 
 Windows users:
-Download and install the [binary](https://github.com/kubernetes/helm/releases/tag/v2.6.0).
+Download and install the [binary](https://github.com/kubernetes/helm/releases/tag/v2.7.2).
 
 ### To install the container-registry plug-in:
 ```
