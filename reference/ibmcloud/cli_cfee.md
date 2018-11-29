@@ -12,7 +12,7 @@ lastupdated: "2018-11-29"
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Working with Cloud Foundry Enterprise Environment service
+# Working with the Cloud Foundry Enterprise Environment service
 {: #ibmcloud_commands_cfee}
 
 With {{site.data.keyword.cfee_full}} (CFEE) you can instantiate multiple, isolated, enterprise-grade Cloud Foundry platforms on-demand. Instances of the IBM Cloud Foundry Enterprise service run within your own account in the IBM Cloud. The environment is deployed on isolated hardware (Kubernetes clusters). You have full control over the environment, including access control, capacity, version updates, resource usage and monitoring.
