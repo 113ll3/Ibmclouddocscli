@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Plugin
+# Adding and removing IBM Cloud CLI plug-ins
 {: #ibmcloud_commands_settings}
 
 {{site.data.keyword.Bluemix}} supports a plug-in framework to extend its capability. Use the following commands to manage the {{site.data.keyword.Bluemix_notm}} CLI plug-ins.
