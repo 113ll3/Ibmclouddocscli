@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Global IP
+# Managing Global IPs
 
 A Global IP address is a specialized static secondary subnet. It is delivered to you as a /32 subnet (in other words, a single IP address) that can be routed to any other IP address on your account.
 
