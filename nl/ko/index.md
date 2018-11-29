@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-10-31"
 
 [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 다음 시스템 요구사항이 필요합니다.
 
-* Windows를 실행하는 경우 Windows 10 Pro를 실행하지 않으면 일부 기능이 지원되지 않습니다.
+* Windows를 실행하는 경우 Windows 10 Pro를 실행하고 있지 않으면 일부 기능은 지원되지 않습니다. 
 * 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다.
 
 ## 1단계: 설치 명령 실행

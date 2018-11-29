@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -753,15 +753,15 @@ ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--pr
    <dt>NAME (erforderlich)</dt>
    <dd>Der Name der Instanz.</dd>
    <dt>LOCATION (erforderlich)</dt>
-   <dd>Die Position, an der die Instanz erstellt werden soll. </dd>
+   <dd>Die Position, an der die Instanz erstellt werden soll.</dd>
    <dt>--cells CELLS</dt>
    <dd>Geben Sie die Anzahl der Zellen für dieses CFEE an. Der Standardwert ist 2, und der Mindestwert ist 1. In einer 1-Zellen-CFEE kann es keine hohe Verfügbarkeit geben.</dd>
    <dt>--isolation ISOLATION</dt>
-   <dd>Geben Sie die Isolation des IBM Kubernetes-Clusters an. Optionen sind "dediziert" und "freigegeben". Der Standardwert ist "freigegeben". Für einen "dedizierten" Cluster werden mehr Gebühren berechnet. </dd>
+   <dd>Geben Sie die Isolation des IBM Kubernetes-Clusters an. Optionen sind "dediziert" und "freigegeben". Der Standardwert ist "freigegeben". Für einen "dedizierten" Cluster werden mehr Gebühren berechnet.</dd>
    <dt>--private-vlan ID</dt>
-   <dd>Geben Sie die ID des privaten VLAN an. Standardmäßig finden wir eine verfügbare Gruppe von VLANS oder wir erstellen ein Paar für Sie. </dd>
+   <dd>Geben Sie die ID des privaten VLAN an. Standardmäßig finden wir eine verfügbare Gruppe von VLANS oder wir erstellen ein Paar für Sie.</dd>
    <dt>--public-vlan ID</dt>
-   <dd>Geben Sie die ID des öffentlichen VLAN an. Standardmäßig finden wir eine verfügbare Gruppe von VLANS oder wir erstellen ein Paar für Sie. </dd>
+   <dd>Geben Sie die ID des öffentlichen VLAN an. Standardmäßig finden wir eine verfügbare Gruppe von VLANS oder wir erstellen ein Paar für Sie.</dd>
    <dt>--plan ID</dt>
    <dd>Geben Sie die ID des Plans an. Standardmäßig erfolgt die Bereitstellung im Standardplan.</dd>
   </dl>
@@ -783,7 +783,7 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 ## ibmcloud cfee create-locations
 {: #ibmcloud_cfee_create_locations}
 
-Erstellen Sie eine Anforderung zum Abrufen einer Liste verfügbarer Rechenzentren für die Zielregionen. 
+Erstellen Sie eine Anforderung zum Abrufen einer Liste verfügbarer Rechenzentren für die Zielregionen.
 
 ```
 ibmcloud cfee create-locations
@@ -797,7 +797,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-Überprüfen Sie, ob ein Benutzer über alle Berechtigungen verfügt, die zum Erstellen einer CFEE-Instanz erforderlich sind. Der Befehl überprüft die folgenden Zugriffsrichtlinien für den Zielbenutzer: Editor für die CFEE-Services, die Administratorrolle für den Kubernetes-Service, die Editorplattformrolle und die Managerservicezugriffsrolle für den Cloud Object Storage-Service und die Entwicklerrolle für den aktuellen Bereich in der aktuellen Organisation für die Bereitstellung von Compose for PostgreSQL.
+Überprüfen Sie, ob ein Benutzer über alle Berechtigungen verfügt, die zum Erstellen einer CFEE-Instanz erforderlich sind. Der Befehl überprüft die folgenden Zugriffsrichtlinien für den Zielbenutzer: Editor für die CFEE-Services, die Administratorrolle für den Kubernetes-Service, die Rolle des Editors für die Plattform und die Rolle des Servicezugriffsmanagers für den Cloud Object Storage-Service und die Entwicklerrolle für den aktuellen Bereich in der aktuellen Organisation für die Bereitstellung von Compose for PostgreSQL.
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -812,7 +812,7 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
    <dt>--access-group GROUP_NAME</dt>
    <dd>Der Name der Zugriffsgruppe, in der die Berechtigungen überprüft werden sollen. Die Standardzugriffsgruppe ist "cfee-provision-access-group".</dd>
    <dt>--output FORMAT</dt>
-   <dd>Geben Sie das Ausgabeformat für Berechtigungen an. Momentan wird nur JSON unterstützt. </dd>
+   <dd>Geben Sie das Ausgabeformat für Berechtigungen an. Momentan wird nur JSON unterstützt.</dd>
   </dl>
   
 <strong>Beispiele</strong>:
@@ -832,7 +832,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-Erteilen Sie dem Benutzer alle Berechtigungen, die zum Erstellen einer CFEE-Instanz erforderlich sind. Mit dem Befehl werden die folgenden Zugriffsrichtlinien für den Zielbenutzer erstellt: Editorrolle für den CFEE-Service, Administratorrolle für den Kubernetes-Service, Editorplattformrolle und Managerservicezugriffsrolle für den Cloud Object Storage-Service und Entwicklerrolle für den aktuellen Bereich in der aktuellen Organisation für die Bereitstellung von Compose for PostgreSQL
+Erteilen Sie dem Benutzer alle Berechtigungen, die zum Erstellen einer CFEE-Instanz erforderlich sind. Mit dem Befehl werden die folgenden Zugriffsrichtlinien für den Zielbenutzer erstellt: Editorrolle für den CFEE-Service, Administratorrolle für den Kubernetes-Service, die Rolle des Editors für die Plattform und die Rolle des Servicezugriffsmanagers für den Cloud Object Storage-Service und Entwicklerrolle für den aktuellen Bereich in der aktuellen Organisation für die Bereitstellung von Compose for PostgreSQL.
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
@@ -850,7 +850,7 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
   
 <strong>Beispiele</strong>:
 
-Erteilen Sie dem Benutzer `name@example.com` CFEE-Erstellungsberechtigungen über die Standardzugriffsgruppe: 
+Erteilen Sie dem Benutzer `name@example.com` CFEE-Erstellungsberechtigungen über die Standardzugriffsgruppe:
 
 ```
 ibmcloud cfee create-permission-set name@example.com
@@ -878,7 +878,7 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dt>NAME oder ID (erforderlich)</dt>
    <dd>Der Name oder die ID der CFEE-Instanz.</dd>
    <dt>--poll</dt>
-   <dd>Geben Sie an, ob dieser Aufruf wiederholt werden soll, damit die Abfrage so lange erfolgt, bis ein stabiler Zustand erreicht ist. </dd>
+   <dd>Geben Sie an, ob dieser Aufruf wiederholt werden soll, damit die Abfrage so lange erfolgt, bis ein stabiler Zustand erreicht ist.</dd>
    <dt>--output FORMAT</dt>
-   <dd>Geben Sie das Ausgabeformat an. Momentan wird nur JSON unterstützt. </dd>
+   <dd>Geben Sie das Ausgabeformat an. Momentan wird nur JSON unterstützt.</dd>
   </dl>

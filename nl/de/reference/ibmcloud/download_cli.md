@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-05"
 # Eigenständige {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle installieren
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI stellt die Befehlszeilenschnittstelle für das Verwalten von Ressourcen in {{site.data.keyword.Bluemix_notm}} bereit. Sie können die Cloud Foundry-CLI (CF-CLI) weiterhin für die Anmeldung bei {{site.data.keyword.Bluemix_notm}} verwenden, sie kann in {{site.data.keyword.Bluemix_notm}} jedoch nur mit einem Cloud Foundry-Service eingesetzt werden. 
+{{site.data.keyword.Bluemix_notm}} CLI stellt die Befehlszeilenschnittstelle für das Verwalten von Ressourcen in {{site.data.keyword.Bluemix_notm}} bereit. Sie können die Cloud Foundry-CLI (`cf`-CLI) weiterhin für die Anmeldung bei {{site.data.keyword.Bluemix_notm}} verwenden, sie kann in {{site.data.keyword.Bluemix_notm}} jedoch nur mit einem Cloud Foundry-Service eingesetzt werden. 
 
 Wenn Sie sowohl die {{site.data.keyword.Bluemix}}-CLI als auch andere empfohlene Plug-ins und Tools für die Anwendungsentwicklung für {{site.data.keyword.Bluemix_notm}} installieren möchten, verwenden Sie die [hier](/docs/cli/index.html) beschriebene Methode.
 {: tip}
@@ -50,7 +50,7 @@ Jetzt können Sie {{site.data.keyword.Bluemix_notm}}-Ressourcen verwalten. Geben
 Wenn Sie eine föderierte ID verwenden, folgen Sie den [hier](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) angegebenen Anweisungen zur Anmeldung mit einem einmaligen Kenncode oder einem API-Schlüssel.  
 {: tip}
 
-Zusätzlich zu den Installationsprogrammen stehen weitere Optionen für die Installation der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle zur Verfügung:
+Neben den Installationsprogrammen stehen weitere Optionen für die Installation der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle zur Verfügung:
 
 * Installation über eine Shell
 * Download des Binärpakets und Installation in einem benutzerdefinierten Verzeichnis
@@ -135,7 +135,7 @@ Wenn für die Installation der {{site.data.keyword.Bluemix_notm}}-Befehlszeilens
 ### Schritt 3: Angabe zur Umgebungsvariablen `PATH` hinzufügen und automatische Vervollständigung für die Shell aktivieren.
 
    * Fügen Sie die Angabe `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` zur Umgebungsvariablen `PATH` hinzu.
-   * Informationen zur Unterstützung der automatischen Vervollständigung für die Shell (nur MacOS und Linux) finden Sie in [diesem Handbuch](enable_cli_autocompletion.html).
+   * Informationen zur Unterstützung der automatischen Vervollständigung für die Shell (nur MacOS und Linux) finden Sie in [Automatische Vervollständigung für die Befehlszeilenschnittstelle aktivieren](enable_cli_autocompletion.html).
    
 ## Eigenständige {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle deinstallieren
 
@@ -159,18 +159,18 @@ Die folgenden Abschnitte enthalten detaillierte Informationen dazu, wie Sie die 
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. Bereinigen Sie die Scripts für automatische Vervollständigung, sofern Sie diese konfiguriert haben. Weitere Details finden Sie in [Automatische Vervollständigung für die Befehlszeilenschnittstelle aktivieren](enable_cli_autocompletion.html).
+2. Bereinigen Sie die Scripts für automatische Vervollständigung, sofern Sie diese konfiguriert haben. Weitere Informationen finden Sie in [Automatische Vervollständigung für die Befehlszeilenschnittstelle aktivieren](enable_cli_autocompletion.html).
 
 #### Ab Version `0.9.0`
 
 1. Öffnen Sie ein Terminal und führen Sie den folgenden Befehl aus:
   * `/usr/local/ibmcloud/bin/uninstall`
-2. Bereinigen Sie die Scripts für automatische Vervollständigung, sofern Sie diese konfiguriert haben. Weitere Details finden Sie in [Automatische Vervollständigung für die Befehlszeilenschnittstelle aktivieren](enable_cli_autocompletion.html).
+2. Bereinigen Sie die Scripts für automatische Vervollständigung, sofern Sie diese konfiguriert haben. Weitere Informationen finden Sie in [Automatische Vervollständigung für die Befehlszeilenschnittstelle aktivieren](enable_cli_autocompletion.html).
 
 
 ## Links mit weiterführenden Informationen zur {{site.data.keyword.Bluemix_notm}}-CLI
 
-* [{{site.data.keyword.Bluemix_notm}}-CLI-Funktionen mit Plug-ins erweitern](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [Leistungsspektrum der {{site.data.keyword.Bluemix_notm}}-CLI mit Plug-ins erweitern](/docs/cli/reference/ibmcloud/extend_cli.html)
 * [{{site.data.keyword.Bluemix_notm}}-CLI-Referenz](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## Probleme melden und Feedback abgeben

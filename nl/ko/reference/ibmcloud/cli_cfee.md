@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -797,7 +797,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-사용자가 CFEE 인스턴스를 작성하는 데 필요한 모든 권한을 가지고 있는지 확인하십시오. 이 명령은 대상 사용자에 대해 다음 액세스 정책을 확인합니다. CFEE 서비스에 대한 편집자, Kubernetes Service에 대한 관리자 역할, Cloud Object Storage 서비스에 대한 편집자 플랫폼 역할 및 관리자 서비스 액세스 역할 및 Compose for PostgreSQL 프로비저닝을 위한 현재 조직의 현재 영역에 대한 개발자 역할
+사용자가 CFEE 인스턴스를 작성하는 데 필요한 모든 권한을 가지고 있는지 확인하십시오. 이 명령은 대상 사용자에 대해 다음 액세스 정책을 확인합니다. CFEE 서비스에 대한 편집자, Kubernetes Service에 대한 관리자 역할, Cloud Object Storage 서비스에 대한 플랫폼 역할의 편집자 및 서비스 액세스 역할의 관리자 및 Compose for PostgreSQL 프로비저닝을 위한 현재 조직의 현재 영역에 대한 개발자 역할
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -832,7 +832,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-CFEE 인스턴스를 작성하는 데 필요한 모든 권한을 사용자에게 부여합니다. 이 명령은 대상 사용자에 대해 다음 액세스 정책을 작성합니다. CFEE 서비스에 대한 편집자 역할, Kubernetes Service에 대한 관리자 역할, Cloud Object Storage 서비스에 대한 편집자 플랫폼 역할 및 관리자 서비스 액세스 역할 및 Compose for PostgreSQL 프로비저닝을 위한 현재 조직의 현재 영역에 대한 개발자 역할
+CFEE 인스턴스를 작성하는 데 필요한 모든 권한을 사용자에게 부여합니다. 이 명령은 대상 사용자에 대해 다음 액세스 정책을 작성합니다. CFEE 서비스에 대한 편집자 역할, Kubernetes service에 대한 관리자 역할, Cloud Object Storage 서비스에 대한 플랫폼 역할의 편집자 및 서비스 액세스 역할의 관리자 및 Compose for PostgreSQL 프로비저닝을 위한 현재 조직의 현재 영역에 대한 개발자 역할
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]

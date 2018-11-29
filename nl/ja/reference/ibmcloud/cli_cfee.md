@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -756,15 +756,15 @@ ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--pr
    <dt>LOCATION (必須)</dt>
    <dd>インスタンスを作成する場所。</dd>
    <dt>--cells CELLS</dt>
-   <dd>この CFEE 用のセルの数を指定します。デフォルトは 2、最小は 1 です。1 セル CFEE には高可用性は望めません。</dd>
+   <dd>この CFEE 用のセルの数を指定します。 デフォルトは 2、最小は 1 です。1 セル CFEE には高可用性は望めません。</dd>
    <dt>--isolation ISOLATION</dt>
-   <dd>IBM Kubernetes クラスターの独立性を指定します。オプションは「dedicated」と「shared」です。デフォルトは「shared」です。「dedicated」クラスターの場合は課金が増えます。</dd>
+   <dd>IBM Kubernetes クラスターの独立性を指定します。 オプションは「dedicated」と「shared」です。 デフォルトは「shared」です。「dedicated」クラスターの場合は課金が増えます。</dd>
    <dt>--private-vlan ID</dt>
-   <dd>プライベート VLAN の ID を指定します。デフォルトでは、使用可能な VLAN のセットが検出されるか、ペアが作成されます。</dd>
+   <dd>プライベート VLAN の ID を指定します。 デフォルトでは、使用可能な VLAN のセットが検出されるか、ペアが作成されます。</dd>
    <dt>--public-vlan ID</dt>
-   <dd>パブリック VLAN の ID を指定します。デフォルトでは、使用可能な VLAN のセットが検出されるか、ペアが作成されます。</dd>
+   <dd>パブリック VLAN の ID を指定します。 デフォルトでは、使用可能な VLAN のセットが検出されるか、ペアが作成されます。</dd>
    <dt>--plan ID</dt>
-   <dd>プランの ID を指定します。デフォルトでは、標準プランにプロビジョンされます。</dd>
+   <dd>プランの ID を指定します。 デフォルトでは、標準プランにプロビジョンされます。</dd>
   </dl>
 
 <strong>例</strong>:
@@ -798,7 +798,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-CFEE インスタンスの作成に必要なすべての権限をユーザーが持っているかどうかを検査します。このコマンドは、ターゲット・ユーザーの次のアクセス・ポリシーを検査します。CFEE サービスに対するエディター役割、Kubernetes サービスに対する管理者役割、クラウド・オブジェクト・ストレージ・サービスに対するエディターのプラットフォーム役割および管理者のサービス・アクセス役割、および、Compose for PostgreSQL のプロビジョニング用の現行組織内の現行スペースに対する開発者役割
+CFEE インスタンスの作成に必要なすべての権限をユーザーが持っているかどうかを検査します。 このコマンドは、ターゲット・ユーザーの次のアクセス・ポリシーを検査します。CFEE サービスに対するエディター役割、Kubernetes サービスに対する管理者役割、Cloud Object Storage サービスに対するプラットフォームのエディター役割とサービス・アクセスの管理者役割、および Compose for PostgreSQL のプロビジョニング用の現行組織内の現行スペースに対する開発者役割
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -811,7 +811,7 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
    <dt>USER_NAME (必須)</dt>
    <dd>ユーザーの名前。</dd>
    <dt>--access-group GROUP_NAME</dt>
-   <dd>権限を検査するアクセス・グループの名前。デフォルトのアクセス・グループは「cfee-provision-access-group」です。</dd>
+   <dd>権限を検査するアクセス・グループの名前。 デフォルトのアクセス・グループは「cfee-provision-access-group」です。</dd>
    <dt>--output FORMAT</dt>
    <dd>権限の出力形式を指定します。現在は JSON のみがサポートされています。</dd>
   </dl>
@@ -833,7 +833,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-CFEE インスタンスを作成するために必要なすべての権限をユーザーに付与します。このコマンドは、ターゲット・ユーザーに対して次のアクセス・ポリシーを作成します。CFEE サービスに対するエディター役割、Kubernetes サービスに対する管理者役割、クラウド・オブジェクト・ストレージ・サービスに対するエディターのプラットフォーム役割および管理者のサービス・アクセス役割、および、Compose for PostgreSQL のプロビジョニング用の現行組織内の現行スペースに対する開発者役割
+CFEE インスタンスを作成するために必要なすべての権限をユーザーに付与します。 このコマンドは、ターゲット・ユーザーの次のアクセス・ポリシーを作成します。CFEE サービスに対するエディター役割、Kubernetes サービスに対する管理者役割、Cloud Object Storage サービスに対するプラットフォームのエディター役割とサービス・アクセスの管理者役割、および Compose for PostgreSQL のプロビジョニング用の現在の組織の現在のスペースに対する開発者役割
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
@@ -846,7 +846,7 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
    <dt>USER_NAME (必須)</dt>
    <dd>ユーザーの名前。</dd>
    <dt>--access-group GROUP_NAME</dt>
-   <dd>権限を付与するアクセス・グループの名前。デフォルトのアクセス・グループは「cfee-provision-access-group」です。</dd>
+   <dd>権限を付与するアクセス・グループの名前。 デフォルトのアクセス・グループは「cfee-provision-access-group」です。</dd>
   </dl>
   
 <strong>例</strong>:
