@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Billing 
+# Viewing usage for accounts, orgs, resource groups, and resources 
 {: #ibmcloud_billing}
 
 Use the following commands to retrieve resource usage and billing information.
