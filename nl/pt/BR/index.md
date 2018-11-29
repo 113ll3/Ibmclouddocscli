@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -45,8 +45,7 @@ Com essa instalação, você obterá a CLI do {{site.data.keyword.Bluemix_notm}}
 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e os seguintes
 requisitos do sistema:
 
-* Se você estiver executando o Windows, algumas funções não serão suportadas se o Windows 10 Pro não estiver em
-execução.
+* Se você estiver executando o Windows, algumas funções não serão suportadas se você não estiver executando o Windows 10 Pro.
 * Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1.
 
 ## Etapa 1. Execute o comando de instalação
@@ -128,5 +127,4 @@ com o comando a seguir:
 ## Próximas Etapas
 {: #next-steps}
 
-Agora você está pronto para desenvolver e implementar o seu primeiro aplicativo! Consulte
-[Criando e implementando os apps usando a CLI](/docs/apps/create-deploy-cli.html) para obter mais informações.
+Agora você está pronto para desenvolver e implementar o seu primeiro aplicativo! Para obter mais informações, consulte [Criando e implementando aplicativos usando a CLI](/docs/apps/create-deploy-cli.html).

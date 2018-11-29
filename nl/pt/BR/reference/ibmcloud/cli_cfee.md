@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -811,11 +811,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-Verifique se um usuário tem todas as permissões necessárias para criar uma instância do CFEE. O comando verifica
-as seguintes políticas de acesso para o usuário de destino: função de editor para os serviços do CFEE, a função de
-administrador para o serviço do Kubernetes, a função de plataforma do editor e a função de acesso ao serviço do gerenciador
-para o serviço Cloud Object Storage e a função do desenvolvedor para o espaço atual na organização atual para
-o fornecimento do Compose for PostgreSQL
+Verifique se um usuário tem todas as permissões necessárias para criar uma instância do CFEE. O comando verifica as seguintes políticas de acesso para o usuário de destino: função de editor para os serviços do CFEE, função de administrador para o serviço do Kubernetes, função de editor para a plataforma e de gerenciador para o acesso de serviço para o serviço Cloud Object Storage e função do desenvolvedor para o espaço atual na organização atual para o fornecimento do Compose for PostgreSQL
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -850,11 +846,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-Forneça ao usuário todas as permissões necessárias para criar uma instância do CFEE. O comando cria as seguintes
-políticas de acesso para o usuário de destino: função de editor para o serviço do CFEE, a função de administrador para o
-serviço do Kubernetes, a função de plataforma do editor e a função de acesso de serviço do gerenciador para o serviço
-Cloud Object Storage e a função do desenvolvedor para o espaço atual na organização atual para o fornecimento do Compose for
-PostgreSQL
+Forneça ao usuário todas as permissões necessárias para criar uma instância do CFEE. O comando cria as seguintes políticas de acesso para o usuário de destino: função de editor para o serviço CFEE, função de administrador para o serviço do Kubernetes, função de editor para a plataforma e função de gerenciador para o acesso de serviço para o serviço Cloud Object Storage e a função de desenvolvedor para o espaço atual na organização atual para o fornecimento do Compose for PostgreSQL
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
