@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry Services
+# Creating, deleting, and binding Cloud Foundry services
 {: #ibmcloud_commands_services}
 
 Use the following commands to manage the service offerings, service instances, service bindings and keys for the {{site.data.keyword.Bluemix_notm}} Foundry service.
