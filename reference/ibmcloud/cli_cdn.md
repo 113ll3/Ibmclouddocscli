@@ -12,7 +12,7 @@ lastupdated: "2018-11-29"
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Working with CDN service
+# Working with the CDN service
 
 The Content Delivery Network (CDN) service distributes content where it is needed. The first time content is requested, it’s pulled from the host server to the network and stays there for other users to access it.
 
