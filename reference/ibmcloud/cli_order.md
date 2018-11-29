@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Order
+# Managing classic infrastructure orders and quotes
 
 <table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
  <caption>Table 1. {{site.data.keyword.BluSoftlayer_notm}} instrastructure orders</caption>
