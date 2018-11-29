@@ -12,7 +12,7 @@ lastupdated: "2018-11-29"
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Working with Block Storage service
+# Working with the {{site.data.keyword.blockstorageshort}} service
 
 {{site.data.keyword.Bluemix}} Block storage is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based Block Storage LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections. 
 
