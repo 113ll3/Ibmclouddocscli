@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IPSec VPN
+# Managing IPSec VPN tunnels
 
 {{site.data.keyword.Bluemix}} VPN access allows users to manage all servers remotely and securely over the {{site.data.keyword.Bluemix_notm}} private network. A VPN connection from your location to the private network gives you the capability for out-of-band management and server rescue through an encrypted VPN tunnel.
 
