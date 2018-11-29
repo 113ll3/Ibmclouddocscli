@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Accounts, Users, and Orgs
+# Managing accounts, users, and Cloud Foundry orgs
 {: #ibmcloud_commands_account}
 
 Use the following commands to manage accounts, users in an account, and the org, space, and roles of public Cloud Foundry environments.
