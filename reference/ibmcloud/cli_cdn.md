@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CDN
+# Working with CDN service
 
 The Content Delivery Network (CDN) service distributes content where it is needed. The first time content is requested, it’s pulled from the host server to the network and stays there for other users to access it.
 
