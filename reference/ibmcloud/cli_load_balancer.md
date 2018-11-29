@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Load Balancer
+# Working with the Load Balancer service
 
 The {{site.data.keyword.Bluemix}} Load Balancer service helps improve availability of your business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only.
 
