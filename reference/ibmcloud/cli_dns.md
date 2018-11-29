@@ -12,7 +12,7 @@ lastupdated: "2018-11-29"
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Managing domains with DNS service
+# Managing domains with the DNS service
 
 {{site.data.keyword.Bluemix}} Domain Name Service (DNS) provides customers with a central location to view and manage their domains through the basic DNS management interface and also gives users the option to manage reverse and secondary DNS in the same location for free of charge.
 
