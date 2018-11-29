@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Image
+# Creating, editing and deleting compute images
 
 Use the following commands to manage {{site.data.keyword.Bluemix}} compute images.
 {: shortdesc}
