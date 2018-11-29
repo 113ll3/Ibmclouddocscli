@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Catalog
+# Searching and managing catalog offerings
 {: #ibmcloud_catalog}
 
 Use the following commands to manage the {{site.data.keyword.Bluemix}} catalog entries, query templates, runtimes and geolocations of data centers.
