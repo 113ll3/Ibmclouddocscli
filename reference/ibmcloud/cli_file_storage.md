@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -19,10 +19,10 @@ lastupdated: "2018-11-29"
 Use the following commands to manage a given volume in the {{site.data.keyword.Bluemix_notm}} classic infrastructure File Storage service.
 {: shortdesc}
 
-<table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
-<caption>Table 1. {{site.data.keyword.BluSoftlayer_notm}} infrastructure File storage</caption>
+<table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} classic infrastructure commands that have links that bring you to more info for the command">
+<caption>Table 1. {{site.data.keyword.BluSoftlayer_notm}} classic infrastructure File storage</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure File storage</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} classic infrastructure File storage</th>
  </thead>
  <tbody>
  <tr>
@@ -472,7 +472,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Column to sort by, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,mount_addr.</dd>
 <dt>--columns</dt>
-<dd>Columns to display, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr.</dd>
+<dd>Columns to display, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr,notes.</dd>
 </dl>
 
 **Examples**:
@@ -548,6 +548,8 @@ ibmcloud sl file volume-order [OPTIONS]
 <dd>Required. Datacenter short name .</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Optional parameter for ordering snapshot space along with the volume.</dd>
+<dt>-b, --billing</dt>
+<dd>Optional parameter for Billing rate (default to monthly), options are: hourly, monthly.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
