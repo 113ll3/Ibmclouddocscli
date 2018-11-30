@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -18,10 +18,10 @@ SSH keys allow access to a device without using a password from corresponding cl
 
 SSL certificates are enabled by websites as a security measure to protect the user. They are generally used when you are required to transmit confidential information to a website.
 
-Use the following commands to manage {{site.data.keyword.Bluemix}} infrastructure SSH Keys and Certificates.
+Use the following commands to manage {{site.data.keyword.Bluemix}} classic infrastructure SSH Keys and Certificates.
 {: shortdesc}
 
-<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Security commands that have links that bring you to more info for the command">
+<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Security commands that have links that bring you to more info for the command">
  <thead>
  </thead>
  <tbody>
