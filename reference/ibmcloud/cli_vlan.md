@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -14,12 +14,12 @@ lastupdated: "2018-11-29"
 
 # Managing classic infrastructure VLANs
 
-Virtual Local Area Networks (VLANs) are used by {{site.data.keyword.cloud}} to isolate broadcast traffic on the public and private networks.
+Virtual Local Area Networks (VLANs) are used by {{site.data.keyword.cloud}} to isolate broadcast traffic on the public and private networks. VLANs are assigned as needed to fulfill other offerings.
 
-Use the following commands to manage {{site.data.keyword.Bluemix_notm}} infrastructure VLANs.
+Use the following commands to manage classic infrastructure VLANs.
 {: shortdesc}
 
-<table summary="Alphabetically ordered {{site.data.keyword.Bluemix_notm}} infrastructure VLAN commands that have links that bring you to more info for the command">
+<table summary="Alphabetically ordered {{site.data.keyword.Bluemix_notm}} classic infrastructure VLAN commands that have links that bring you to more info for the command">
  <thead>
  </thead>
  <tbody>
