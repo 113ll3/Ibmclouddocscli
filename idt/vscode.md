@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-29"
 # IBM Cloud Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-The IBM Cloud Developer Tools extension for Visual Studio code is an extension for the editor that provides access to capabilities from the IBM developer CLI directly within the Visual Studio Code editor’s command palette. It allows you to quickly access a subset of `ibmcloud dev` commands for both Docker and CloudFoundry workflows, including app deployment, starting/stopping/restarting apps on {{site.data.keyword.Bluemix_notm}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
+The IBM Cloud Developer Tools extension for Visual Studio code is an extension for the editor that provides access to capabilities from the IBM developer CLI directly within the Visual Studio Code editor’s command palette. It allows you to quickly access a subset of `ibmcloud dev` commands for both Docker and CloudFoundry workflows, including app deployment, starting/stopping/restarting apps on {{site.data.keyword.Bluemix}}, viewing remote app logs, and more – all without the need to leave the editor’s context.
 {:shortdesc}
 
 ![Screen capture of the IBM Developer Tools extension download screen.](vscode.png "Extension download screen within Visual Studio Code")
@@ -26,7 +26,7 @@ The IBM Cloud Developer Tools extension for Visual Studio code is an extension f
 ## Dependencies
 {: #dependencies}
 
-To use the IBM Cloud Developer Tools extension for Visual Studio Code, you need the [{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) and the [IBM Developer CLI](index.html) plug-in that is installed on your system.
+To use the IBM Cloud Developer Tools extension for Visual Studio Code, you need the [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview) and the {{site.data.keyword.Bluemix_notm}} CLI plug-in that is installed on your system.
 
 ## Installation
 {: #installation}
@@ -45,7 +45,7 @@ Alternatively, you can install the IBM Cloud Developer Tools extension through t
 1. Open the **Extensions** sidebar inside of the Visual Studio Code editor, and then search by using the string `publisher:IBM Developer`. The IBM Cloud Developer Tools extension is displayed in the search results.  
 2. Click the **Install** button to begin the installation.
 
-You can also access the [IBM Cloud Developer Tools extension directly within the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
+You can also access the [IBM Cloud Developer Tools extension directly within the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 ## Usage
 {: #usage}
@@ -65,11 +65,11 @@ Next, you enter or select the command that you want to start. You can type ‘ib
 You can get started with `ibmcloud dev` workflows in just a few steps:
 * Create a project by using one of the two following methods:
   * Use the [{{site.data.keyword.Bluemix_notm}} web console](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and download the generated code
-  * Use the [{{site.data.keyword.Bluemix_notm}} Developer CLI](index.html) and generate a project by using the `ibmcloud dev create` command
+  * Use the {{site.data.keyword.Bluemix_notm}} Developer Tools CLI Plug-in and generate a project by using the [ibmcloud dev create](/docs/cli/idt/commands.html#create) command.
 * Open the project’s folder locally in the Visual Studio Code editor
 * Use the `ibmcloud dev build` command to build the app into a Docker image
 * Use the `ibmcloud dev debug` command to run the app in local Docker for development
-> Note: To debug a Node.js application that is running inside the local Docker container, you need to [add a debug configuration for the local container](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
+> Note: To debug a Node.js application that is running inside the local Docker container, you need to [add a debug configuration for the local container](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 * Use the `ibmcloud dev run` command to run the app in local Docker in release mode
 * Use the `ibmcloud dev deploy` command to deploy the application to a Cloud Foundry runtime on {{site.data.keyword.Bluemix_notm}}
 
