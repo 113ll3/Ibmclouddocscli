@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2018-11-29"
 
 The Content Delivery Network (CDN) service distributes content where it is needed. The first time content is requested, it’s pulled from the host server to the network and stays there for other users to access it.
 
-Use the following commands to manage the {{site.data.keyword.Bluemix_notm}} infrastructure CDN service.
+Use the following commands to manage the {{site.data.keyword.Bluemix_notm}} classic infrastructure CDN service.
 {: shortdesc}
 
 <table summary="Alphabetically ordered {{site.data.keyword.Bluemix_notm}} infrastructure CDN commands that have links that bring you to more info for the command">
