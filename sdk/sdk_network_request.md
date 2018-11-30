@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # Making a network request
 {: #sdk-network-request}
@@ -18,7 +18,7 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 ## Android
 {: #request-android}
 
-1. Make sure that you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-android) in your Android application.
+1. Make sure you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-android) in your Android application.
 
 2. Make a network request.
 
@@ -50,7 +50,7 @@ The `Request` class is a simple way to make an HTTP request and get the response
 ## iOS
 {: #request-ios}
 
-1. Make sure that you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-ios) in your iOS application.
+1. Make sure you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-ios) in your iOS application.
 
 2. Create a network request.
 
@@ -94,13 +94,13 @@ The `Request` class is a simple way to make an HTTP request and get the response
 
 The `BMSURLSession` class is available for iOS only.
 
-For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core).
+For complete usage examples, see the `BMSCore` GitHub [README ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}.
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Make sure that you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-cordova) in your Cordova application.
+1. Make sure you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-cordova) in your Cordova application.
 
 2. Create a network request.
 
