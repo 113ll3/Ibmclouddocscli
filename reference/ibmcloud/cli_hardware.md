@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -16,10 +16,10 @@ lastupdated: "2018-11-29"
 
 {{site.data.keyword.baremetal_long}} are single-tenant physical servers that provide you performance and control with low-level access to the hardware resources. Bare metal servers provide the raw horsepower you demand for your processor-intensive and disk I/O-intensive workloads. These servers come with the most complete package of standard features and services.
 
-Use the following commands to manage {{site.data.keyword.Bluemix}} infrastructure Bare-metal hardware servers.
+Use the following commands to manage {{site.data.keyword.Bluemix}} classic infrastructure Bare-metal hardware servers.
 {: shortdesc}
 
-<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Bare-metal server commands that have links that bring you to more info for the command">
+<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Bare-metal server commands that have links that bring you to more info for the command">
  <tbody>
  <tr>
  <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>
