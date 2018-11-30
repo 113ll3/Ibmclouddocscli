@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2018-11-29"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
-
+{:note: .note}
 
 # Working with Cloud Foundry (cf commands)
 {: #cf}
@@ -23,11 +23,12 @@ lastupdated: "2018-11-29"
 The Cloud Foundry (cf) command line interface (CLI) provides a set of commands for managing your apps. The following information lists the cf commands used most commonly for managing apps and includes their names, options, usage, prerequisites, descriptions, and examples. To list all of the cf commands and associated help information, use `cf help`. Use `cf command_name -h` to view detailed help information for a particular command.
 {: shortdesc}
 
-For more details on getting started with the Cloud Foundry CLI, see [Getting Started](https://github.com/cloudfoundry/cli#getting-started).
+For more details on getting started with the Cloud Foundry CLI, see [Getting Started ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}.
 
 For a more detailed list of `cf CLI` commands, see the community [Cloud Foundry CLI Reference Guide ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}.
 
-**Note**: If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with an HTTP Proxy Server ![External link icon](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with a Proxy Server ![External link icon](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+{: note}
 
 
 ## Cloud Foundry CLI commands index
@@ -86,7 +87,7 @@ Use the index in the following table to refer to the frequently used Cloud Found
 ## cf api
 {: #cf_api}
 
-Use this command to display or specify the URL of the API endpoint of {{site.data.keyword.Bluemix_notm}}.
+Use this command to display or specify the URL of the API endpoint of {{site.data.keyword.Bluemix}}.
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
@@ -98,7 +99,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (optional)</dt>
-   <dd>The URL of the Bluemix API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is `https://api.{DomainName}`.
+   <dd>The URL of the {{site.data.keyword.Bluemix_notm}} API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is `https://api.{DomainName}`.
    If you want to display the URL of the API endpoint that you are currently using, you do not need to specify this parameter for the cf api command.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
@@ -392,9 +393,10 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Logs you in to {{site.data.keyword.Bluemix_notm}}. If you are logging in with a [federated ID](/docs/admin/account.html#signup), you must use the single sign-on (SSO) parameter to log in.
+Logs you in to {{site.data.keyword.Bluemix_notm}}. If you are logging in with a federated ID, you must use the single sign-on (SSO) parameter to log in.
 
-**Note**: You can also use a {{site.data.keyword.Bluemix_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password. For more information about creating an API key, see [Managing API keys](/docs/iam/apikeys.html).
+You can also use a {{site.data.keyword.Bluemix_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password. For more information about creating an API key, see [Understanding API keys](/docs/iam/apikeys.html).
+{: note}
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -816,10 +818,6 @@ cf -v
 ```
 {: codeblock}
 
-
-
-# Related Links
-{: #rellinks}
 
 ## Related Links
 {: #general}
