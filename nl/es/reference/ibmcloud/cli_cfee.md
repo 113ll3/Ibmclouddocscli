@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -757,11 +757,11 @@ ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--pr
    <dt>--cells CELLS</dt>
    <dd>Especifique el número de células para este CFEE. El valor predeterminado es 2 y el mínimo es 1. En una CFEE de 1 célula, no puede haber alta disponibilidad.</dd>
    <dt>--isolation ISOLATION</dt>
-   <dd>Especifique el aislamiento del clúster de IBM Kubernetes. Las opciones son "dedicated" y "shared". El valor predeterminado es "shared" y un clúster "dedicated" tiene un coste más alto. </dd>
+   <dd>Especifique el aislamiento del clúster de IBM Kubernetes. Las opciones son "dedicated" y "shared". El valor predeterminado es "shared" y un clúster "dedicated" tiene un coste más alto.</dd>
    <dt>--private-vlan ID</dt>
-   <dd>Especifique el ID de la VLAN privada. De forma predeterminada, encontraremos un conjunto disponible de VLAN o crearemos un par automáticamente. </dd>
+   <dd>Especifique el ID de la VLAN privada. De forma predeterminada, encontraremos un conjunto disponible de VLAN o crearemos un par automáticamente.</dd>
    <dt>--public-vlan ID</dt>
-   <dd>Especifique el ID de la VLAN pública. De forma predeterminada, encontraremos un conjunto disponible de VLAN o crearemos un par automáticamente. </dd>
+   <dd>Especifique el ID de la VLAN pública. De forma predeterminada, encontraremos un conjunto disponible de VLAN o crearemos un par automáticamente.</dd>
    <dt>--plan ID</dt>
    <dd>Especifique el ID del plan. De forma predeterminada, suministraremos la cuenta en el plan Estándar.</dd>
   </dl>
@@ -774,7 +774,7 @@ Crear una instancia denominada `test-cfee` en `dal10`:
 ibmcloud cfee create test-cfee dal10
 ```
 
-Crear una instancia `dedicate` denominada `test-cfee` en `dal10` con `4` células: 
+Crear una instancia `dedicate` denominada `test-cfee` en `dal10` con `4` células:
 
 ```
 ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
@@ -832,7 +832,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-Otorgar al usuario todos los permisos necesarios para crear una instancia de CFEE. El mandato crea las siguientes políticas de acceso para el usuario de destino: rol editor en los servicios CFEE, rol de administrador en el servicio Kubernetes, rol de editor de la plataforma y rol de gestor de acceso al servicio Cloud Object Storage y rol de desarrollador en el espacio actual de la organización actual para el suministro de Compose for PostgreSQL
+Otorgar al usuario todos los permisos necesarios para crear una instancia de CFEE. El mandato crea las siguientes políticas de acceso para el usuario de destino: rol de editor del servicio CFEE, rol de administrador en el servicio Kubernetes, rol de editor de la plataforma y rol de gestor de acceso al servicio Cloud Object Storage y rol de desarrollador en el espacio actual de la organización actual para el suministro de Compose for PostgreSQL
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
