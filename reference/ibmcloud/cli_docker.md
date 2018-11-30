@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -30,7 +30,7 @@ With the {{site.data.keyword.dev_cli_notm}} Docker Container, you get the {{site
 ## Before you begin
 {: #prereq}
 
-You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") and you must install the latest stable Docker version before taking the following steps.
+You need an [{{site.data.keyword.Bluemix_notm}} account](https://{DomainName}){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") and you must install the latest stable Docker version before taking the following steps.
 
 ## Step 1. Pull the Docker Image from the Docker hub.
 {: #step1}
@@ -62,8 +62,8 @@ ibmcloud login
 If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/iam/login_fedid.html#federated_id) for more details.
 {: tip}
 
-The {{site.data.keyword.dev_cli_notm}} CLI Plug-in uses two containers for building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your application. The `Dockerfile` for this container is defined by the [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters) parameter. You might think of it as a development container, as it contains the tools that are normally used for development of a particular runtime.
+The {{site.data.keyword.dev_cli_notm}} CLI Plug-in uses two containers to facilitate building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your application. The `Dockerfile` for this container is defined by the [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters) parameter. You might think of it as a development container, as it contains the tools that are normally used for development of a particular runtime.
 
-The second container is the run container, which closely mimics the actual runtime environment of your app when it's deployed to the cloud. This container is in a form that is suitable to be deployed for use, for example, in {{site.data.keyword.Bluemix_notm}}. As a result, an entry point is defined that starts your application. When you select to run your application through the {{site.data.keyword.dev_cli_notm}} CLI Plug-in CLI, it uses this container. The `Dockerfile` for this container is defined by the [`dockerfile-run`](/docs/cli/idt/commands.html#run-parameters) parameter.
+The second container is the run container, which closely mimics the actual runtime environment of your app once that it is deployed to the cloud. This container is in a form that is suitable to be deployed for use, for example, in {{site.data.keyword.Bluemix_notm}}. As a result, an entry point is defined that starts your application. When you select to run your application through the {{site.data.keyword.dev_cli_notm}} CLI Plug-in CLI, it uses this container. The `Dockerfile` for this container is defined by the [`dockerfile-run`](/docs/cli/idt/commands.html#run-parameters) parameter.
 
-Now you're ready to use the {{site.data.keyword.dev_cli_notm}} to manage {{site.data.keyword.Bluemix_notm}} resources and  develop and deploy your applications.
+Now you are ready to use the {{site.data.keyword.dev_cli_notm}} to manage {{site.data.keyword.Bluemix_notm}} resources and  develop and deploy your applications.
