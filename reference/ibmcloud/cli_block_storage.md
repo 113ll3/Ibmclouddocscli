@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -14,15 +14,15 @@ lastupdated: "2018-11-29"
 
 # Working with the {{site.data.keyword.blockstorageshort}} service
 
-{{site.data.keyword.Bluemix}} Block storage is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based Block Storage LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections. 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based {{site.data.keyword.blockstorageshort}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections. 
 
-Use the following commands to manage a given volume for the {{site.data.keyword.Bluemix_notm}} classic infrastructure Block storage service.
+Use the following commands to manage a given volume for the {{site.data.keyword.Bluemix_notm}} classic infrastructure {{site.data.keyword.blockstorageshort}} service.
 {: shortdesc}
 
-<table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
-<caption>Table 1. {{site.data.keyword.BluSoftlayer_notm}} infrastructure Block storage</caption>
+<table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} classic infrastructure commands that have links that bring you to more info for the command">
+<caption>Table 1. {{site.data.keyword.BluSoftlayer_notm}} classic infrastructure Block storage</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} infrastructure Block storage</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} classic infrastructure Block storage</th>
  </thead>
  <tbody>
  <tr>
@@ -480,7 +480,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Column to sort by, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,created_by.</dd>
 <dt>--columns</dt>
-<dd>Columns to display, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by.</dd>
+<dd>Columns to display, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 
 **Examples**:
@@ -599,6 +599,8 @@ ibmcloud sl block volume-order [OPTIONS]
 <dd>Required. Datacenter short name .</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Optional parameter for ordering snapshot space along with endurance block storage; specifies the size (in GB) of snapshot space to order.</dd>
+<dt>-b, --billing</dt>
+<dd>Optional parameter for Billing rate (default to monthly), options are: hourly, monthly.</dd>
 <dt>-f, --force</dt>
 <dd>Force operation without confirmation.</dd>
 </dl>
