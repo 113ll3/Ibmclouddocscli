@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -18,9 +18,9 @@ lastupdated: "2018-11-05"
 # 安装独立 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI 提供命令行界面用于管理 {{site.data.keyword.Bluemix_notm}} 中的资源。您仍可以使用 cf CLI 以登录到 {{site.data.keyword.Bluemix_notm}}，但是只能用于 {{site.data.keyword.Bluemix_notm}} 中的 Cloud Foundry 服务。 
+{{site.data.keyword.Bluemix_notm}} CLI 提供命令行界面用于管理 {{site.data.keyword.Bluemix_notm}} 中的资源。您依旧可以使用 `cf` CLI 登录到 {{site.data.keyword.Bluemix_notm}}，但这仅适用于 {{site.data.keyword.Bluemix_notm}} 中的 Cloud Foundry 服务。 
 
-如果要安装 {{site.data.keyword.Bluemix}} CLI 和其他建议插件及工具，以用于为 {{site.data.keyword.Bluemix_notm}} 开发应用程序，请遵循[此处](/docs/cli/index.html)描述的方法进行操作。
+如果要安装 {{site.data.keyword.Bluemix}} CLI 以及其他建议的插件和工具来开发 {{site.data.keyword.Bluemix_notm}} 应用程序，请按照[此处](/docs/cli/index.html)所述的方法来执行操作。
 {: tip}
 
 要安装独立 {{site.data.keyword.Bluemix_notm}} CLI，请执行以下操作：
@@ -35,23 +35,22 @@ lastupdated: "2018-11-05"
    对于 32 位和更早版本，请转至[所有版本](/docs/cli/reference/ibmcloud/all_versions.html)页面进行下载
 
 1. 运行安装程序
-   * 对于 macOS 和 Windows，只需运行安装程序即可。
+   * 对于 macOS 和 Windows，请运行安装程序。
    * 对于 Linux，请解压缩程序包，并运行 `install` 脚本。
 
-1. 将 API 端点定为目标并登录到 {{site.data.keyword.Bluemix_notm}}
+1. 将 API 端点定为目标，然后登录到 {{site.data.keyword.Bluemix_notm}}
 
    ```
 ibmcloud login
 ```
    {: codeblock}
    
-现在，您可以随时管理 {{site.data.keyword.Bluemix_notm}} 资源。输入 `ibmcloud help` 以查看命令描述。
+现在，您可以管理 {{site.data.keyword.Bluemix_notm}} 资源了。输入 `ibmcloud help` 以查看命令描述。
 
-如果要使用联合标识，请遵循[此处](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)的指示信息，以使用一次性密码或 API 密钥进行登录。
-  
+如果您使用的是联合标识，请按照[此处](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)的指示信息，使用一次性密码或 API 密钥进行登录。  
 {: tip}
 
-除了安装程序外，您还可以使用其他选项来安装 {{site.data.keyword.Bluemix_notm}} CLI：
+除了使用安装程序，您还可以使用其他选项来安装 {{site.data.keyword.Bluemix_notm}} CLI：
 
 * 从 shell 安装
 * 下载二进制文件包并将其安装到定制目录
@@ -88,7 +87,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## 安装到定制目录
 
-使用安装程序或 shell 脚本安装 {{site.data.keyword.Bluemix_notm}} CLI 时，二进制文件将转至系统目录。如果要指定其他目录，请使用以下步骤。
+使用安装程序或 shell 脚本来安装 {{site.data.keyword.Bluemix_notm}} CLI 时，二进制文件将位于系统目录中。如果要指定其他目录，请使用以下步骤。
 
 ### 步骤 1：使用以下链接，根据您的操作系统下载二进制文件包。
 
@@ -103,7 +102,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ### 步骤 2：将包解压缩到指定的目录。
 
-   解压缩包后，内容将如下所示：
+   解压缩包后，将会看到如下所示的内容：
 
    对于 Linux 和 MacOS
 
@@ -136,7 +135,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 ### 步骤 3：添加到 `PATH` 环境变量并启用 shell 自动完成。
 
    * 将 `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` 添加到 `PATH` 环境变量。
-   * 有关 shell 自动完成支持（仅限 MacOS 和 Linux）的信息，请参阅[本指南](enable_cli_autocompletion.html)。
+   * 有关 shell 自动完成支持（仅限 MacOS 和 Linux）的信息，请参阅[启用 CLI 自动完成](enable_cli_autocompletion.html)。
    
 ## 卸载独立 {{site.data.keyword.Bluemix_notm}} CLI
 
@@ -160,13 +159,13 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. 如果已配置自动完成脚本，请清除这些脚本。有关更多详细信息，请参阅[启用 CLI 自动完成](enable_cli_autocompletion.html)。
+2. 如果配置了自动完成脚本，请清除这些脚本。有关更多信息，请参阅[启用 CLI 自动完成](enable_cli_autocompletion.html)。
 
 #### V`0.9.0` 和更高版本
 
 1. 打开终端，然后运行以下命令：
   * `/usr/local/ibmcloud/bin/uninstall`
-2. 如果已配置自动完成脚本，请清除这些脚本。有关更多详细信息，请参阅[启用 CLI 自动完成](enable_cli_autocompletion.html)。
+2. 如果配置了自动完成脚本，请清除这些脚本。有关更多信息，请参阅[启用 CLI 自动完成](enable_cli_autocompletion.html)。
 
 
 ## 用于进一步探索 {{site.data.keyword.Bluemix_notm}} CLI 的其他链接
@@ -178,5 +177,5 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 {: #issues}
 
 使用以下选项来报告问题或提交新的功能请求：
- * 在 [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 中创建问题。
+ * 在 [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 中创建问题。
  * 在 [IBM Cloud Tech 的 Slack - #developer-tools 通道](https://ibm-cloud-tech.slack.com) - 请求团队访问[此处](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 中留言。

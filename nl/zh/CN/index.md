@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-10-31"
 
 您需要 [{{site.data.keyword.Bluemix_notm}} 帐户 ](https://console.bluemix.net/){: new_window}![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 并满足以下系统需求：
 
-* 如果您运行的是 Windows，但并不是 Windows 10 专业版，那么不支持某些功能。
+* 如果您运行的是 Windows，而不是 Windows 10 专业版，那么有些功能将不受支持。
 * 您必须使用 Docker 的稳定通道，最低版本为 1.13.1。
 
 ## 步骤 1. 运行安装命令

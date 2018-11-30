@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -797,7 +797,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-检查用户是否具有创建 CFEE 实例所需的所有许可权。该命令会检查目标用户的以下访问策略：CFEE 服务的编辑者角色、Kubernetes Service 的管理员角色、Cloud Object Storage 服务的平台编辑者角色和服务访问权管理者角色，以及当前组织中用于供应 Compose for PostgreSQL 的当前空间的开发者角色
+检查用户是否具有创建 CFEE 实例所需的所有许可权。该命令会检查目标用户的以下访问策略：CFEE 服务的编辑者角色、Kubernetes Service 的管理员角色、Cloud Object Storage 服务的平台编辑者角色和服务访问管理者角色，以及当前组织中用于供应 Compose for PostgreSQL 的当前空间的开发者角色
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -832,7 +832,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-授予用户创建 CFEE 实例所需的所有许可权。该命令会为目标用户创建以下访问策略：CFEE 服务的编辑者角色、Kubernetes Service 的管理员角色、Cloud Object Storage 服务的编辑者平台角色和管理者服务访问角色，以及当前组织中用于供应 Compose for PostgreSQL 的当前空间的开发者角色
+授予用户创建 CFEE 实例所需的所有许可权。该命令会为目标用户创建以下访问策略：CFEE 服务的编辑者角色、Kubernetes Service 的管理员角色、Cloud Object Storage 服务的平台编辑者角色和服务访问管理者角色，以及当前组织中用于供应 Compose for PostgreSQL 的当前空间的开发者角色
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
