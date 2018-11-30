@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -11,6 +11,7 @@ lastupdated: "2018-06-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Local application debugging for the {{site.data.keyword.dev_cli_notm}} CLI
 {: #local-debug}
@@ -38,8 +39,11 @@ ibmcloud dev debug
       		3. Specify the name of the java project that you imported.
       6. Set a breakpoint in the IDE.
       7. Run the debug configuration.
-      8. Access the endpoint with a browser to re-create the issue.  
-	   **Note**: The default port is 9080 for the Java basic Microservices endpoint.
+      8. Access the endpoint with a browser to recreate the issue.  
+	   
+	   The default port is 9080 for the Java basic Microservices endpoint.
+	   {: note}
+
 	* [IntelliJ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
 	* [VSCode ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
 	* JDK command line: `jdb -attach <host:port>`
@@ -49,7 +53,7 @@ ibmcloud dev debug
 
 Steps to enable the debugging tool for a Node.js application:
 
-1. From your application projects root directory run the following command:
+1. From your application project's root directory run the following command:
 
 ```
 ibmcloud dev debug
@@ -66,7 +70,7 @@ ibmcloud dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
+1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:
