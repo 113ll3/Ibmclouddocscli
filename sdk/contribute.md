@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-10-04"
+  years: 2017, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -10,8 +10,9 @@ lastupdated: "2018-10-04"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Contributing to the SDK Plug-in
+# Contributing to the SDK plug-in
 {: #contribute}
 
 Follow these guidelines to contribute to the {{site.data.keyword.Bluemix}} CLI SDK plug-in.
@@ -19,17 +20,15 @@ Follow these guidelines to contribute to the {{site.data.keyword.Bluemix}} CLI S
 ## Setting up your development environment
 {: #dev-env}
 
-* Cloud Foundry [CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli/releases)
+* Cloud Foundry [CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli/releases).
 
    The Cloud Foundry CLI is not required, but it helps to access {{site.data.keyword.Bluemix_notm}} from the Terminal.
 
-   For more information about the Cloud Foundry CLI, see the [documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/cfcommands/index.html){: new_window}.
+   For more information about the Cloud Foundry CLI, see the [documentation](/docs/cli/reference/cfcommands/index.html).
 
-* {{site.data.keyword.Bluemix_notm}} [CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://clis.{DomainName}/ui/home.html)
+* {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview).
 
    This plug-in installs into the {{site.data.keyword.Bluemix_notm}} CLI. The {{site.data.keyword.Bluemix_notm}} CLI also provides useful resources to access {{site.data.keyword.Bluemix_notm}} from the Terminal.
-
-   For more information about the {{site.data.keyword.Bluemix_notm}} CLI, see the [documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/bluemix_cli/index.html){: new_window}.
 
 * Go's [development environment ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://golang.org/doc/code.html)
 
@@ -102,7 +101,7 @@ The test framework is based on Ginkgo, a BDD testing framework for Go. It is use
       ```
       {: codeblock}
 
-      * You go to the directory where the `.coverprofile` file is located.
+      * You will go to the directory where the `.coverprofile` file is located.
 
 * Internationalization: [go-i18n ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/nicksnyder/go-i18n) and [go-bindata ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/jteeuwen/go-bindata)
 
@@ -146,7 +145,7 @@ The required runtime libraries are managed under the `vendor` directory and are 
 
 Nested dependencies are not listed.
 
-* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
    The {{site.data.keyword.Bluemix_notm}} CLI plug-in SDK, which provides infrastructure to develop {{site.data.keyword.Bluemix_notm}} CLI plug-ins.
 
@@ -170,18 +169,17 @@ Nested dependencies are not listed.
 
    This package is used to detect the current language of the operating system.
 
-
 ## Cloning the repository
 {: #clone-repo}
 
-This [repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/tree/compute) must be cloned into Go's [directory structure ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://golang.org/doc/code.html) because of how `govendor` works, which also follows Go's best practices.
+The repository must be cloned into Go's [directory structure ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://golang.org/doc/code.html) because of how `govendor` works, which also follows Go's best practices.
 
 * Import internal dependencies through a fully qualified package name.
 
    ```
    import (
       ...
-      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,31 +187,32 @@ This [repository ![External link icon](../../icons/launch-glyph.svg "External li
 * Clone the repository.
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
 
-## Building, testing, and installing the Plug-in
+## Building, testing, and installing the plug-in
 {: #build-plug-in}
 
 Build the plug-in by choosing either of the following commands.
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}
 
-**Note**: The build script also installs the plug-in to the {{site.data.keyword.Bluemix_notm}} CLI.
+The build script also installs the plug-in to the {{site.data.keyword.Bluemix_notm}} CLI.
+{: note}
 
 Test the plug-in by choosing either of the following commands.
 
