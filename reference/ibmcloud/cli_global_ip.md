@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -16,10 +16,10 @@ lastupdated: "2018-11-29"
 
 A Global IP address is a specialized static secondary subnet. It is delivered to you as a /32 subnet (in other words, a single IP address) that can be routed to any other IP address on your account.
 
-Use the following commands to manage a global IP in the {{site.data.keyword.Bluemix}} infrastructure Global IP service.
+Use the following commands to manage a global IP in the {{site.data.keyword.Bluemix}} classic infrastructure Global IP service.
 {: shortdesc}
 
-<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Global IP commands that have links that bring you to more info for the command">
+<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Global IP commands that have links that bring you to more info for the command">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>
