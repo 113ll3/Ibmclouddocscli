@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-28"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -128,7 +128,7 @@ The following error might be displayed when you use the CLI to create an app:
 ```
 FAILED                            
 Application created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -340,8 +340,3 @@ ibmcloud plugin install container-registry
 ibmcloud plugin install container-service
 ```
 {: codeblock}
-
-
- 
- 
- 
