@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -14,14 +14,15 @@ lastupdated: "2018-08-28"
 {:codeblock: .codeblock}  
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 
 # {{site.data.keyword.dev_cli_notm}} CLI Plug-in (ibmcloud dev) commands
 {: #idt-cli}
 
-Version: 1.2.0
-Released: Mar 8, 2018
+Version: 2.1.4
+Released: Aug 31, 2018
 
-As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However you can still use the `bluemix` and `bx` CLI commands until they are removed at a later date.
+As of May 2018 the {{site.data.keyword.Bluemix}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However you can still use the `bluemix` and `bx` CLI commands until they are removed at a later date.
 {: tip}
 
 Use the following {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) commands to create an application, manage, deploy, debug, and test it.
@@ -58,7 +59,7 @@ You can build your application by using the `build` command. The `test`, `debug`
 
 The `build-cmd-debug` configuration element is used to build the application for all uses except for `run`. You build your application for debugging by specifying the command line option `--debug`.  The `build-cmd-run` configuration element is used when you are building the application for use with the `run` command.
 
-To build with multiple containers, either your application must contain a [Compose](https://docs.docker.com/compose/overview/) file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one. See the [Compose File](/docs/apps/projects/compose_file.html) for more information.
+To build with multiple containers, either your application must contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one. See the [Compose File](/docs/apps/projects/compose_file.html) for more information.
 
 Run the following command in your current application directory to build your application:  
 
@@ -164,9 +165,9 @@ The following parameters are exclusive to the `debug` command and assist with de
 ## delete
 {: #delete}
 
-Use the `delete` command to remove applications from your {{site.data.keyword.Bluemix}} space. You can run the command without parameters to list available applications and select the application from the numbered list to delete. Application code and directories are not removed from your local disk space.
+Use the `delete` command to remove applications from your {{site.data.keyword.Bluemix_notm}} space. You can run the command without parameters to list available applications and select the application from the numbered list to delete. Application code and directories are not removed from your local disk space.
 
-Run the following command to delete your application from {{site.data.keyword.Bluemix}}:
+Run the following command to delete your application from {{site.data.keyword.Bluemix_notm}}:
 
 ```
 ibmcloud dev delete <applicationName>
@@ -174,17 +175,17 @@ ibmcloud dev delete <applicationName>
 {: codeblock}
 
 
-**Note:** {{site.data.keyword.Bluemix}} services are **not** removed.
-
+{{site.data.keyword.Bluemix_notm}} services are **not** removed.
+{: note}
 
 ## deploy
 {: #deploy}
 
 You can deploy an application as a Cloud Foundry application or as a container.
 
-Before deploying as a Cloud Foundry application to {{site.data.keyword.Bluemix}}, a `manifest.yml` file must be present in your application's root directory.
+Before deploying as a Cloud Foundry application to {{site.data.keyword.Bluemix_notm}}, a `manifest.yml` file must be present in your application's root directory.
 
-Before deploying an application as a container, you must locally install [Kubernetes](https://kubernetes.io/) and [Helm](https://github.com/kubernetes/helm). Be sure that the Helm client version is not newer than the Helm server version. You can find both of these by running `helm version`. We recommend using v2.4.2 for the client version.
+Before deploying an application as a container, you must locally install [Kubernetes](https://kubernetes.io/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and [Helm](https://github.com/kubernetes/helm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"). Be sure that the Helm client version is not newer than the Helm server version. You can find both of these by running `helm version`. We recommend using v2.4.2 for the client version.
 
 To deploy your application on Kubernetes, you must either specify the `deploy-target` as `container` in the `cli-config.yml` or use the parameter `-t container`.
 
@@ -200,9 +201,8 @@ Other parameters needed to configure Kubernetes deployment can also be specified
     ibm-cluster: "mycluster"
 ```
 
-In the `cli-config.yml`, you can choose to define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.Bluemix}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster you have created in {{site.data.keyword.Bluemix}} as described in the [Tutorial: Creating clusters](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
+In the `cli-config.yml`, you can choose to define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.Bluemix_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster you have created in {{site.data.keyword.Bluemix_notm}}.
 
-For more information on provisioning, configuring, and deploying to a Kubernetes cluster, see the [Deploy a scalable web application on Kubernetes](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes) tutorial.
 
 Run the following command in your current application directory to build your application:  
 
@@ -245,7 +245,7 @@ The following parameters can be used with the `deploy` command or by updating th
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Parameter optionally used to define the name of the Kubernetes cluster for a container deployment to {{site.data.keyword.Bluemix}}
+* Parameter optionally used to define the name of the Kubernetes cluster for a container deployment to {{site.data.keyword.Bluemix_notm}}
 * Usage `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
@@ -277,7 +277,7 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-Edit your application by adding new services, connecting and disconnecting existing services, or removing existing services. Run the following command in the root of an application directory:
+Edit your application with options such as connecting it with an application already in {{site.data.keyword.Bluemix_notm}}, managing the {{site.data.keyword.Bluemix_notm}} services of the application, and its {{site.data.keyword.Bluemix_notm}} Toolchain. With a local application that is connected to an application in {{site.data.keyword.Bluemix_notm}}, use `edit` to add new services, connect and disconnect existing services, or remove existing services from your account. Additionally, you can create or view an {{site.data.keyword.Bluemix_notm}} Toolchain for the application.  Run the following command in the root of your application directory:
 
 ```
 ibmcloud dev edit
@@ -292,7 +292,7 @@ Selecting a connected service gives you options to either disconnect the service
 
 Selecting a disconnected service gives you options to either connect that service to your application or delete the service from your account. Connecting an existing service will also download files such as credentials files or source code to begin using that service.
 
-You can also select the option to add a new service to your application. This will take you through service selection prompts and will download additional files such as credential files or source code to begin using the new service.
+You can also add a new service to your application. This guides you through service selection prompts and downloads additional files such as credential files or source code to begin using the new service.
 
 
 
@@ -301,7 +301,11 @@ You can also select the option to add a new service to your application. This wi
 
 Enable an existing application for {{site.data.keyword.Bluemix_notm}} deployment. The `enable` command attempts to automatically detect the language of an existing application and then prompt for necessary additional information. This generates and adds files that can be used for local Docker containers, CloudFoundry deployment, or Kubernetes/Container Deployment.
 
-Run the following command to enable an existing application in the current directory for {{site.data.keyword.Bluemix_notm}} deployment:
+When logged into {{site.data.keyword.Bluemix_notm}}, you can choose to connect this local application with an application that is already in {{site.data.keyword.Bluemix_notm}} or create a new {{site.data.keyword.Bluemix_notm}} application. To take advantage of {{site.data.keyword.Bluemix_notm}} features such as services and DevOps Toolchains, an application in {{site.data.keyword.Bluemix_notm}} is necessary. When an {{site.data.keyword.Bluemix_notm}} app is created for an app that is cloned from a git repository, the {{site.data.keyword.Bluemix_notm}} app will include this repository in its configuration. 
+
+`Enable` is a Beta feature, if you have trouble enabling your application, our [troubleshooting page](/docs/cli/ts_createapps.html#troubleshoot) has help for you. In particular, `enable` is not intended for mobile applications or frameworks. For complex applications that produce multiple deployable assets, each component of the application must be enabled, individually. 
+
+Run the following command to enable an existing application in the current directory:
 
 ```
 ibmcloud dev enable
@@ -318,6 +322,8 @@ The presence of necessary files provides application language detection for a va
 	* The presence of a `build.gradle` identifies a Gradle application.
 
 Optionally, you can also override the detected application language using the `--language` argument.  However, only valid and complete applications are supported. The enable command does not modify your source code.
+
+{: #enable-language-options}
 
 Language options include:
 * node
@@ -345,6 +351,12 @@ The following parameters can be used with the `enable` command or by updating th
 
 * Parameter used to force re-enabling an already enabled application.
 * Usage `ibmcloud dev enable -f|--force`
+
+#### `no-create`
+{: #enable-no-create}
+
+* Parameter to prevent creating an app in {{site.data.keyword.Bluemix_notm}} while creating the enablement files locally.
+* Usage `ibmcloud dev enable --no-create`
 
 
 ## get-credentials
@@ -386,7 +398,7 @@ If you are using Windows &trade;, you must be running Windows 10 Pro or later.
 
 You can run your application through the `run` command. A build must first be completed against the application by using the `build` command. When you invoke the `run` command, the run container is started and exposes the ports as defined by the `container-port-map` parameter. The `run-cmd` parameter can be used to invoke the application if the run container Dockerfile does not contain an entry point to complete this step.
 
-In order to run with multiple containers, either your application should contain a [Compose](https://docs.docker.com/compose/overview/) file, specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one. See the [Compose File](/docs/apps/projects/compose_file.html) for more information.
+In order to run with multiple containers, either your application should contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one. See the [Compose File](/docs/apps/projects/compose_file.html) for more information.
 
 First, compile your application:
 
@@ -465,7 +477,7 @@ By simply running this command
 ibmcloud dev shell
 ```
 
-the {{site.data.keyword.dev_cli_short}} CLI will open an interactive shell into the application's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command will target the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. See [this reference](https://docs.docker.com/engine/reference/builder/#workdir) for more information.
+the {{site.data.keyword.dev_cli_short}} CLI will open an interactive shell into the application's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command will target the `tools` container by default. The shell command opens the container to the directory specified by the `WORKDIR` instruction in the corresponding Dockerfile. If `WORKDIR` is not listed in the Dockerfile, the container root is used as the working directory. See [this reference](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") for more information.
 
 Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container will be brought up and the shell will be opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you wish to shell. However, this flag should be reserved for when no containers are running. The `run` and `tools` arguments are more flexible and allow you to switch between containers when one is currently running. For example, if the tools container is running and you execute `ibmcloud dev shell run`, the `tools` container will be stopped and the `run` container will be started, and vice versa.
 
@@ -588,7 +600,7 @@ You can view the URL to which your application is deployed through the `view` co
 
 For applications deployed to Cloud Foundry, the URL consists of the application's hostname and the application's domain.
 
-For applications deployed to Kubernetes, the URL consists of the IP address of the node to which it is deployed and the public port. If the command determines that the app was deployed to Kubernetes, the CLI tool will prompt for confirmation. If you specify that the application was not actually deployed to Kubernetes, then the Cloud Foundry URL is shown. If you expected the command to show the URL for a Kubernetes-deployed application and it did not, then either ensure that the `cli-config.yml` contains an entry for `chart-path` or supply it via command line as shown [here](#chart-path).
+For applications deployed to Kubernetes, the URL consists of the IP address of the node to which it is deployed and the public port. If the command determines that the application was deployed to Kubernetes, the CLI tool will prompt for confirmation. If you specify that the application was not actually deployed to Kubernetes, then the Cloud Foundry URL is shown. If you expected the command to show the URL for a Kubernetes-deployed application and it did not, then either ensure that the `cli-config.yml` contains an entry for `chart-path` or supply it via command line as shown [here](#chart-path).
 
 Run the following command to view your application:
 
@@ -618,7 +630,7 @@ The following parameters are exclusive to the `view` command.
 #### `web-app-root`
 {: #web-app-root}
 
-* Root of the project to append to the Cloud Foundry and Kubernetes app URL
+* Root of the project to append to the Cloud Foundry and Kubernetes application URL
 * Usage: `ibmcloud dev view --web-app-root [root]`
 
 
@@ -657,7 +669,8 @@ If any commands follow `debug` or `run`, execution will only continue if `debug`
 
 The following parameters can be used with the `build|debug|run|test` commands or by updating the application's `cli-config.yml` file directly. Extra parameters are available for the [`debug`](#debug-parameters) and [`run`](#run-parameters) commands.
 
-**Note**: Command parameters that are entered on the command line take precedence over the `cli-config.yml` configuration.
+Command parameters that are entered on the command line take precedence over the `cli-config.yml` configuration.
+{: note}
 
 #### `config-file`  
 {: #config-file}
