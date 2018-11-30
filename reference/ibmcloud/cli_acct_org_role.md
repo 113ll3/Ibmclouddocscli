@@ -5,12 +5,13 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 
 # Managing accounts, users, and Cloud Foundry orgs
 {: #ibmcloud_commands_account}
@@ -408,7 +409,8 @@ Assign user `Mary` to the organization `IBM` as `OrgManager` role:
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**Note**: You can set org/space roles using the CLI, but if you want to set the other permissions, you have to use the UI. For further details, see [Assigning user access](/docs/iam/assignaccess.html#assignaccess).
+You can set org/space roles using the CLI, but if you want to set the other permissions, you have to use the UI. For further details, see [Managing access to resources](/docs/iam/mngiam.html#iammanidaccser).
+{: note}
 <!-- Begin Staging URL vs Prod URL -->
 
 ## ibmcloud account org-role-unset
