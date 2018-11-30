@@ -3,15 +3,16 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-30"
 
 ---
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}  
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note: .note}
 
 # Setting up the {{site.data.keyword.dev_cli_notm}} CLI
 {: #add-cli}
@@ -50,6 +51,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+You can also download the installer script from our [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)
+
 ## Verify Installation
 To verify installation, run the `help` command:
 
@@ -79,7 +82,8 @@ The [Reinstalling tools](/docs/troubleshoot/ts_createapps.html#appendix) section
 	```
 	{: codeblock}
 
-	**Note:** If your credentials are rejected, you might be using a Federated ID. Follow these steps to authenticate by using a Federated ID.
+	If your credentials are rejected, you might be using a Federated ID. Follow these steps to authenticate by using a Federated ID.
+	{: note}
 
 	1. Log in to [{{site.data.keyword.iamshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.bluemix.net/iam/#/apikeys){: new_window}.
 	2. Select **Create API key**.
@@ -118,7 +122,7 @@ The following resources can be helpful when developing Cloud Native apps with th
 
 - [IBM Cloud Developer Tools main landing page](https://www.ibm.com/cloud/cli) - Main product page for IDT CLI
 - [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Public GitHub repo with detailed installation instructions
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud console page that is a companion to the IDT tools to create and manage cloud native apps
+- [IBM Cloud App Service](https://{DomainName}/developer/appservice) - IBM Cloud console page that is a companion to the IDT tools to create and manage cloud native apps
 - [Report issues on GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
