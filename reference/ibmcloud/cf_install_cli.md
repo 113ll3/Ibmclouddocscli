@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -27,6 +27,7 @@ lastupdated: "2018-05-24"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 {:tip: .tip}
+{:note: .note}
 
 # Download, modify, and redeploy your Cloud Foundry app with the command line interface
 
@@ -45,7 +46,8 @@ After you install the command line interface, you can get started:
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_starter-code.svg" alt="Download application code" /> </a>
 
-      **Note**: Bump the node version to `8.9.x` or the latest in the `package.json` file before proceeding.
+      Update the node version to `8.9.x` or the latest in the `package.json` file before proceeding.
+      {: note}
 
   2. Change to the directory where your code is located.
 
@@ -69,7 +71,8 @@ After you install the command line interface, you can get started:
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Note**: You must add single or double quotes around `username`, `org_name`, and  `space_name` if the value contains a space, for example, `-o "my org"`.
+  You must add single or double quotes around `username`, `org_name`, and  `space_name` if the value contains a space, for example, `-o "my org"`.
+  {: note}
 
   5. From <var class="keyword varname">your_new_directory</var>, redeploy your app to {{site.data.keyword.Bluemix_notm}} by using the `bluemix app push` command. For more information about the `bx app push` command, see [Uploading your application](/docs/starters/upload_app.html).
 
