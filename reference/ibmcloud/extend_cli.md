@@ -29,11 +29,11 @@ For more commands to manage plug-ins, run `ibmcloud plugin` to see the help mess
 
 ### Step 1: Search for the plug-in
 
-1. Use the command `ibmcloud plugin repo-plugins -r REPO_NAME` to look for a plug-in in the repository.
+1. Use the `ibmcloud plugin repo-plugins -r REPO_NAME` command to look for a plug-in in the repository.
 2. The {{site.data.keyword.Bluemix_notm}} CLI has the official repository with name 'IBM Cloud', you can search the official plug-ins as shown in the following example:
 
   ```
-  $ ibmcloud plugin repo-plugins -r "IBM Cloud"
+  $ ibmcloud plugin repo-plugins
   Getting plug-ins from repository 'IBM Cloud'...
 
   Repository: IBM Cloud
@@ -48,10 +48,10 @@ For more commands to manage plug-ins, run `ibmcloud plugin` to see the help mess
 Use the `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` command to install the plug-in. For example, use the following command to install a plug-in from the official IBM plug-in repo 'IBM Cloud':
 
   ```
-  $ ibmcloud plugin install auto-scaling -r "IBM Cloud"
+  $ ibmcloud plugin install auto-scaling 
   Looking up 'auto-scaling' from repository 'IBM Cloud'...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCLoudFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
@@ -76,7 +76,7 @@ Use the `ibmcloud plugin install URL` command to install a plug-in directly from
   ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
   Attempting to download the binary file...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCloudFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$
