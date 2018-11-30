@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -14,10 +14,10 @@ lastupdated: "2018-11-29"
 
 # Creating, canceling, and viewing subnets
 
-A subnet is a logical partition of an IP network into multiple, smaller network segments. Use the following commands to manage {{site.data.keyword.Bluemix}} infrastructure subnets.
+A subnet is a logical partition of an IP network into multiple, smaller network segments. Use the following commands to manage {{site.data.keyword.Bluemix}} classic infrastructure subnets.
 {: shortdesc}
 
-<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Subnet commands that have links that bring you to more info for the command">
+<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Subnet commands that have links that bring you to more info for the command">
  <thead>
  </thead>
  <tbody>
