@@ -59,18 +59,14 @@ IBM Cloud CLI and Developer Tools
 
 	{: .topicgroup}
 	IBM Cloud CLI plug-ins
-		plugins/api-management-cliplugin/
-		plugins/auto-scaling/index.md
-		[Container Registry CLI](../services/Registry/registry_cli.html)
-		[Container Service CLI](../containers/cs_cli_devtools.html)
-		plugins/pnp/index.md
-		plugins/bx_vpn/index.md
-		plugins/vpc/use-cli.md
-
-	{: .topicgroup}
-	Cloud Foundry CLI plug-ins
-		plugins/bluemix_admin/index.md
-		plugins/vpn/index.md
+		[IBM Cloud Analytics Engine](analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine)
+		[IBM Cloud Auto-Scaling](auto-scaling-cli-plugin/auto-scaling-cli-plugin-autoscalingcli)
+        [IBM Cloud Functions](cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions_cli)
+        [IBM Cloud Container Registry](container-registry-cli-plugin/container-registry-cli-plugin-containerregcli)
+		[IBM Cloud Kubernetes](container-service-cli-plugin/container-service-cli-plugin-kubernetes_service_plugin)
+		[IBM Cloud Machine Learning](machine-learning-cli-plugin/machine-learning-cli-plugin-machine-learning-cli)
+		[IBM Cloud Hyper Protect DBaaS](dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin)
+		[IBM Cloud CLI for VPC Reference](infrastructure-service-cli-plugin/infrastructure-service-cli-plugin-vpc-reference)
 
 	monitoring_logging.md
 
