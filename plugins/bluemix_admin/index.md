@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -287,6 +287,14 @@ cf ba create-org <organization> <manager>
 **Tip:** You can also use **ba co** as an alias for the longer
 **ba create-org** command name.
 
+### Deleting an organization
+{: #admin_delete_org}
+
+To delete an organization, use the following command:
+
+```
+cf ba delete-org <organization>
+```
 {: codeblock}
 
 <dl class="parml">
