@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-30"
+lastupdated: "2018-12-12"
 ---
 
 {:new_window: target="_blank"}
@@ -53,15 +53,19 @@ Use the following commands to manage accounts, users in an account, and the org,
 </tr>
  <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
  <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
+ <td>[ibmcloud account show](cli_acct_org_role.html#ibmcloud_account_show)</td>
+ <td>[ibmcloud account update](cli_acct_org_role.html#ibmcloud_account_update)</td>
  <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
- <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
- <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
  </tr>
  <tr>
-  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
-  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
+ <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
+ <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
+ <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
+ <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
+ <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
  </tr>
  </tbody>
  </table>
@@ -88,7 +92,7 @@ ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID
    <dt>-c ACCOUNT_ID</dt>
    <dd>Account ID. List the organizations under the given account. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with '-u'.</dd>
    <dt>-u ACCOUNT_OWNER</dt>
-   <dd>Account owner name. List the organizations under the accounts owned by the given user. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with '-c'.</dd>
+   <dd>Account owner name. List the organizations under the accounts that are owned by the given user. Default to current account if not specified. If set to 'all', list organizations under all accounts. This option is exclusive with '-c'.</dd>
    </dl>
 
 <strong>Examples</strong>:
@@ -206,7 +210,7 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dt>OLD_ORG_NAME (required)</dt>
    <dd>The old name of the org that is to be renamed.</dd>
    <dt>NEW_ORG_NAME (required)</dt>
-   <dd>The new name of the org that it is renamed to.</dd>
+   <dd>The new name of the org that it's renamed to.</dd>
    </dl>
 
 ## ibmcloud account spaces
@@ -409,7 +413,7 @@ Assign user `Mary` to the organization `IBM` as `OrgManager` role:
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-You can set org/space roles using the CLI, but if you want to set the other permissions, you have to use the UI. For further details, see [Managing access to resources](/docs/iam/mngiam.html#iammanidaccser).
+You can set org/space roles by using the CLI, but if you want to set the other permissions, you must use the UI. For further details, see [Managing access to resources](/docs/iam/mngiam.html#iammanidaccser).
 {: note}
 <!-- Begin Staging URL vs Prod URL -->
 
@@ -570,10 +574,58 @@ ibmcloud account org-account ORG_NAME [--guid]
   <dd>Display account ID only</dd>
 </dl>
 
+## ibmcloud account show
+{: #ibmcloud_account_show}
+
+Show account details
+
+```
+ibmcloud account show
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+</dl>
+
+<strong>Examples</strong>:
+
+Show details of currently targeted account:
+
+```
+ibmcloud account show
+```
+
+## ibmcloud account update
+{: #ibmcloud_account_update}
+
+Update target account
+
+```
+ibmcloud account update (--service-endpoint-enable true | false)
+```
+
+<strong>Prerequisites</strong>:  Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+  <dt>--service-endpoint-enable true | false</dt>
+  <dd>Enable or disable service endpoints connectivity for a Softlayer account.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Enable service endpoint connectivity for current account:
+
+```
+ibmcloud account update --service-endpoint-enable true
+```
+
 ## ibmcloud account users
 {: #ibmcloud_account_users}
 
-Displays users associated with the account. This operation can be performed only by the account owner.
+Displays users that are associated with the account. This operation can be performed only by the account owner.
 
 ```
 ibmcloud account users
@@ -618,11 +670,11 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dt>-o ORG</dt>
    <dd>Organization to invite user to</dd>
    <dt>--org-role ORG_ROLE</dt>
-   <dd>Organization role. Valid inputs are: OrgManager, BillingManager, OrgAuditor and OrgUser. If omitted, the OrgUser role will be set.</dd>
+   <dd>Organization role. Valid inputs are: OrgManager, BillingManager, OrgAuditor and OrgUser. If omitted, the OrgUser role is set.</dd>
    <dt>-s SPACE</dt>
    <dd>Space to invite user to</dd>
    <dt>--space-role SPACE_ROLE</dt>
-   <dd>Space role. Valid inputs are: SpaceManager, SpaceDeveloper and SpaceAuditor.</dd>
+   <dd>Space role. Valid inputs are: SpaceManager, SpaceDeveloper, and SpaceAuditor.</dd>
 </dl>
 
 ## ibmcloud account user-reinvite
@@ -638,7 +690,7 @@ ibmcloud account user-reinvite USER_EMAIL
 <strong>Command options</strong>:
 <dl>
    <dt>USER_EMAIL (required)</dt>
-   <dd>The email of the user being re-invited.</dd>
+   <dd>The email of the user being invited again.</dd>
 </dl>
 
 ## ibmcloud app domain-cert

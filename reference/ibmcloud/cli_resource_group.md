@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-30"
+lastupdated: "2018-12-12"
 ---
 
 {:new_window: target="_blank"}
@@ -51,20 +51,21 @@ A resource group is a way for you to organize your account resources in customiz
       <td>[ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-key-update](cli_resource_group.html#ibmcloud_resource_service_key_update)</td>
       <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
       <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
       <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
       <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
-      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
       <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
       <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
       <td>[ibmcloud resource tags](cli_resource_group.html#ibmcloud_resource_tags)</td>
       <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
-      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
       <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
       <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
       <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
@@ -84,7 +85,7 @@ ibmcloud resource groups [--default] [--output FORMAT]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--default</dt>
   <dd>Get the default group of the current account.</dd>
@@ -117,7 +118,7 @@ ibmcloud resource group NAME [--id] [--output FORMAT]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>NAME (required)</dt>
   <dd>Name of the resource group</dd>
@@ -147,19 +148,22 @@ ibmcloud resource group example-group --id
 Create a resource group
 
 ```
-ibmcloud resource group-create NAME QUOTA_NAME
+ibmcloud resource group-create NAME
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
+<dl>
+  <dt>NAME (required)</dt>
+  <dd>Name of the resource group</dd>
+</dl>
 
 <strong>Examples</strong>:
-
-Create a resource group `example-group` with quota `free`:
+Create a resource group `example-group`:
 
 ```
-ibmcloud resource group-create example-group free
+ibmcloud resource group-create example-group
 ```
 
 ## ibmcloud resource group-update
@@ -173,7 +177,7 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>NAME (required)</dt>
   <dd>Name of the target resource group</dd>
@@ -210,7 +214,7 @@ ibmcloud resource quotas
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
 </dl>
 
@@ -233,7 +237,7 @@ ibmcloud resource quota NAME
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>NAME (required)</dt>
   <dd>Name of the quota</dd>
@@ -249,7 +253,7 @@ ibmcloud resource quota free
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
-Migrate a Cloudfoundry service instance into resource group
+Migrate a Cloud foundry service instance into resource group
 
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
@@ -257,7 +261,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 
 <strong>Prerequisites</strong>: Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>SERVICE_INSTANCE_NAME or SERVICE_INSTANCE_ID (required)</dt>
   <dd>Name or ID of the service instance</dd>
@@ -280,7 +284,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--service-name</dt>
   <dd>Name of belonging service</dd>
@@ -311,7 +315,7 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--out
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>NAME (required), exclusive with ID</dt>
   <dd>Name of the service instance</dd>
@@ -344,7 +348,7 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>NAME (required)</dt>
   <dd>Name of the service instance</dd>
@@ -361,7 +365,7 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
 </dl>
 
 <strong>Examples</strong>:
-Create a service instance named `my-service-instance` using service plan `test-service-plan` of service `test-service` on location `eu-gb`:
+Create a service instance that is named `my-service-instance` using service plan `test-service-plan` of service `test-service` on location `eu-gb`:
 
 ```
 ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
@@ -378,7 +382,7 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>Name (required)</dt>
   <dd>Name of the service instance, exclusive with ID</dd>
@@ -412,7 +416,7 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>Name (required)</dt>
   <dd>Name of the service instance, exclusive with ID</dd>
@@ -442,7 +446,7 @@ ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>SERVICE_ALIAS (required)</dt>
   <dd>Service alias name</dd>
@@ -468,7 +472,7 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>ALIAS_NAME (required)</dt>
   <dd>Service alias name</dd>
@@ -498,7 +502,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>SERVICE_ALIAS_NAME (required)</dt>
   <dd>Service alias name</dd>
@@ -507,7 +511,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
   <dt>ROLE_NAME</dt>
   <dd>Name of the user role</dd>
   <dt>--service-id</dt>
-  <dd>Name or UUID of the service ID which the role belongs to</dd>
+  <dd>Name or UUID of the service ID, which the role belongs to</dd>
   <dt>-p, --parameter</dt>
   <dd>Parameters JSON file or JSON string</dd>
   <dt>-f, --force</dt>
@@ -515,7 +519,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 </dl>
 
 <strong>Examples</strong>:
-Create a service bindings between service alias `my-service-alias` and app `my-app` with role `Administrator`:
+Create a service binding between service alias `my-service-alias` and app `my-app` with role `Administrator`:
 
 ```
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
@@ -532,7 +536,7 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 
 <strong>Prerequisites</strong>: None
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>SERVICE_ALIAS_NAME (required)</dt>
   <dd>Service alias name</dd>
@@ -560,7 +564,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--instance-id</dt>
   <dd>Service Instance ID</dd>
@@ -592,7 +596,7 @@ ibmcloud resource service-key KEY_NAME [--id]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>KEY_NAME</dt>
   <dd>Name of the key</dd>
@@ -620,7 +624,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>NAME</dt>
   <dd>Name of the key</dd>
@@ -635,7 +639,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
   <dt>--alias-name</dt>
   <dd>Service Alias Name</dd>
   <dt>--service-id</dt>
-  <dd>Name or UUID of the service ID which the role belongs to</dd>
+  <dd>Name or UUID of the service ID, which the role belongs to</dd>
   <dt>-p, --parameters</dt>
   <dd>Parameters JSON file or JSON string</dd>
   <dt>-f, --force</dt>
@@ -649,6 +653,36 @@ Create a service key named `my-service-key` with role `Administrator` for servic
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
 
+## ibmcloud resource service-key-update
+{: #ibmcloud_resource_service_key_update}
+
+Update a service key
+
+```
+ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login, Target
+
+<strong>Command options</strong>:
+<dl>
+  <dt>NAME | ID</dt>
+  <dd>Name or ID of the key</dd>
+  <dt>-n, --name NEW_NAME</dt>
+  <dd>New name of the key</dd>
+  <dt>-g RESOURCE_GROUP</dt>
+  <dd>ID of the resource group to which the key belongs</dd>
+  <dt>-f, --force</dt>
+  <dd>Force update without confirmation</dd>
+</dl>
+
+<strong>Examples</strong>:
+Update a service key named `my-service-key`, give it a new name `my-service-key-2`:
+
+```
+ibmcloud resource service-key-update my-service-key -n my-service-key-2
+```
+
 ## ibmcloud resource service-key-delete
 {: #ibmcloud_resource_service_key_delete}
 
@@ -660,7 +694,7 @@ ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>KEY_NAME | KEY_ID</dt>
   <dd>Name of the key or the ID of the key</dd>
@@ -686,7 +720,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [-
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--instance-id</dt>
   <dd>ID of the belonging service instance.</dd>
@@ -713,7 +747,7 @@ ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>ALIAS_NAME (required)</dt>
   <dd>Name of the service alias</dd>
@@ -740,7 +774,7 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>ALIAS_NAME (required)</dt>
   <dd>Name of the service alias</dd>
@@ -765,7 +799,7 @@ ibmcloud resource service-alias-create my-service-alias --instance-name my-servi
 ## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
-Update an service alias
+Update a service alias
 
 ```
 ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
@@ -773,7 +807,7 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>ALIAS_NAME (required)</dt>
   <dd>Name of the service alias</dd>
@@ -805,7 +839,7 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>ALIAS_NAME (required)</dt>
   <dd>Name of the service alias</dd>
@@ -822,7 +856,7 @@ ibmcloud resource service-alias-delete my-service-alias
 
 ## ibmcloud resource search
 {: #ibmcloud_resource_search}
-Search resources using Lucene query syntax
+Search resources by using Lucene query syntax
 
 ```
 ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
@@ -830,7 +864,7 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>-o, -offset</dt>
   <dd>Starting resource position number</dd>
@@ -918,7 +952,7 @@ ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit 
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--tag-type</dt>
   <dd>Tag Type (supported values: user, restricted)</dd>
@@ -953,7 +987,7 @@ ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--tag-name (required)</dt>
   <dd>Tag Name, exclusive with --tag-crn</dd>
@@ -980,7 +1014,7 @@ ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--tag-name (required)</dt>
   <dd>Tag Name</dd>
@@ -1025,7 +1059,7 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--tag-name (required)</dt>
   <dd>Tag Name, exclusive with --tag-crn</dd>
@@ -1052,7 +1086,7 @@ ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resour
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--tag-name (required)</dt>
   <dd>Tag Name, exclusive with --tag-crn</dd>
@@ -1081,7 +1115,7 @@ ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RE
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--tag-name (required)</dt>
   <dd>Tag Name, exclusive with --tag-crn</dd>
@@ -1110,7 +1144,7 @@ ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYP
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
-<strong>Command Options</strong>:
+<strong>Command options</strong>:
 <dl>
   <dt>--tag-name (required)</dt>
   <dd>Tag Name, exclusive with --tag-crn</dd>
