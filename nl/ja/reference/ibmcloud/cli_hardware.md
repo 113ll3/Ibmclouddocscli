@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# ハードウェア
+# ベアメタル・サーバーの作成および操作
 
-{{site.data.keyword.baremetal_long}} は、ハードウェア・リソースへの下位レベルのアクセス権限でパフォーマンスと制御の機能を提供する、シングル・テナントの物理サーバーです。ベア・メタル・サーバーは、プロセッサー集中型およびディスク入出力集中型のワークロードに必要とされる強力なパワーを提供します。これらのサーバーには、標準の機能とサービスが含まれた、最も包括的なパッケージが付属しています。
+{{site.data.keyword.baremetal_long}} は、ハードウェア・リソースへの下位レベルのアクセス権限でパフォーマンスと制御の機能を提供する、シングル・テナントの物理サーバーです。 ベアメタル・サーバーは、プロセッサー集中型およびディスク入出力集中型のワークロードに必要とされる強力なパワーを提供します。 これらのサーバーには、標準の機能とサービスが含まれた、最も包括的なパッケージが付属しています。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix}} インフラストラクチャー・ベア・メタル・ハードウェア・サーバーを管理します。
+以下のコマンドを使用して、{{site.data.keyword.Bluemix}} クラシック・インフラストラクチャーのベア・メタル・ハードウェア・サーバーを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・ベア・メタル・サーバー・コマンド">
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのベア・メタル・サーバー・コマンド">
  <tbody>
  <tr>
  <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>

@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-06-21"
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # BMSClient 초기화
 {: #sdk_BMSClient}
@@ -41,7 +41,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 ## iOS 애플리케이션 초기화
 {: #init-BMSClient-ios}
 
-[CocoaPods](https://cocoapods.org){: new_window} 또는 [Carthage](https://github.com/Carthage/Carthage){: new_window}를 사용하여 `BMSCore` 패키지를 가져올 수 있습니다.
+[CocoaPods ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org){: new_window} 또는 [Carthage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage){: new_window}를 사용하여 `BMSCore` 패키지를 가져올 수 있습니다.
 
 1. CocoaPods를 사용하여 `BMSCore`를 설치하려면 Podfile에 다음 행을 추가하십시오. 프로젝트에 아직 Podfile이 없는 경우에는 `pod init` 명령을 사용하십시오.
 
@@ -63,7 +63,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
   1. Cartfile에 다음 행을 추가하십시오.
 
       ```
-            github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
+      github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
       ```
       {: codeblock}
 
@@ -118,6 +118,6 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 ## 관련 링크
 {: #general notoc}
 
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova 플러그인](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [BMSCore Android SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova 플러그인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -27,6 +27,7 @@ lastupdated: "2018-05-24"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 {:tip: .tip}
+{:note: .note}
 
 # コマンド・ライン・インターフェースを使用した Cloud Foundry アプリのダウンロード、変更、および再デプロイ
 
@@ -45,7 +46,8 @@ lastupdated: "2018-05-24"
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_starter-code.svg" alt="アプリケーション・コードのダウンロード" /> </a>
 
-      **注:** 処理を進める前に、ノードのバージョンを `8.9.x` または `package.json` ファイル内の最新のものに上げてください。
+      進める前に、ノードのバージョンを `8.9.x` または `package.json` ファイル内の最新のものに更新してください。
+      {: note}
 
   2. コードが置かれているディレクトリーに移動します。
 
@@ -69,7 +71,8 @@ lastupdated: "2018-05-24"
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **注**: `username`、`org_name`、および `space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
+  `username`、`org_name`、および `space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
+  {: note}
 
   5. `bluemix app push` コマンドを使用して、<var class="keyword varname">your_new_directory</var> からアプリを {{site.data.keyword.Bluemix_notm}} に再デプロイします。 `bx app push` コマンドについて詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。
 

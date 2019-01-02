@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -14,13 +14,13 @@ lastupdated: "2018-06-21"
 # SDK ジェネレーター
 {: #sdk-cli}
 
-{{site.data.keyword.IBM}} SDK ジェネレーター・プラグインは、[{{site.data.keyword.Bluemix_notm}} CLI ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/all_versions.html)にインストールできます。
+{{site.data.keyword.IBM}} SDK ジェネレーター・プラグインは、{{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview) にインストールできます。
 
 {{site.data.keyword.Bluemix_notm}} の開発者は、このプラグインを使用して[Open API Specification ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 準拠の REST API 定義から SDK を生成できます。 REST API 定義を変更する際、このプラグインを使用することで、プロジェクト全体を再生成する代わりに SDK のみを再生成することができます。
 
-特定のスペースの Cloud Foundry アプリに、SDK の生成に有効な REST API 定義が含まれているかどうかを確認することもできます。 最後に、{{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインを使用して、REST API 定義が SDK ジェネレーターの条件に準拠していることを確認することができます。
+特定のスペースの Cloud Foundry アプリに、SDK の生成に有効な REST API 定義が含まれているかどうかを確認することもできます。最後に、{{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインを使用して、REST API 定義が SDK ジェネレーターの条件に準拠していることを確認することができます。
 
-この {{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインによって、開発者は、生成済みの SDK を使用してバックエンド・サービスをアプリに簡単に統合することができます。 REST API に変更が生じた場合、SDK を再生成して古い SDK と置き換えることによって、SDK のアップグレードを行うことができます。 また、CLI を DevOps パイプラインに統合することによって、アプリをビルドするたびに、SDK が API スペックに常に整合していることを確認することができます。
+この {{site.data.keyword.IBM_notm}} SDK ジェネレーター・プラグインによって、開発者は、生成済みの SDK を使用してバックエンド・サービスをアプリに簡単に統合することができます。 REST API に変更が生じた場合、SDK を再生成して古い SDK と置き換えることによって、シームレスな SDK のアップグレードを行うことができます。また、CLI を devops パイプラインに統合することによって、アプリをビルドするたびに、SDK が API スペックに常に整合していることを確認することができます。
 
 REST API 定義は有効であり、かつ稼働中のサーバー・エンドポイントでホストするか、システム上のローカル・ファイルである必要があります。 REST API 定義がホストされている場合、`OPENAPI_SPEC` 環境変数に相対 URL を定義する必要があります。
 
@@ -30,16 +30,16 @@ REST API 定義は有効であり、かつ稼働中のサーバー・エンド�
 
 以下の要件を満たしていることを確認します。
 
-* [{{site.data.keyword.Bluemix_notm}}![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://bluemix.net) アカウントを持っている
-* [Open API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 仕様に準拠した有効な API 定義
+* [{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}) アカウントを持っている。
+* [Open API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 仕様に準拠した有効な API 定義。
 
 
 ## インストール
 {: #installation}
 
-1. [{{site.data.keyword.Bluemix}} CLI ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.ng.bluemix.net/ui/home.html)をインストールします。
+1. [{{site.data.keyword.Bluemix_notm}} CLI をインストールします](/docs/cli/index.html#overview)。
 
-2. [プラグイン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in)をインストールします。
+2. [プラグインをインストールします](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in)。
 
 	```
 	ibmcloud plugin install sdk-gen
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### アプリ (Cloud Foundry) のリスト
 {: #list-apps}
 
-アプリのリストおよび API スペックの検証には、次のコマンドを使用します: `ibmcloud sdk list [argument] [option]` `OPENAPI_SPEC` 環境変数が、スペックをホストしているパスの相対 URL に設定されている必要があります。
+アプリのリストおよび API スペックの検証には、次のコマンドを使用します: `ibmcloud sdk list [argument] [option]` `OPENAPI_SPEC` 環境変数が、スペックをホストしている相対 URL パスに設定されている必要があります。
 
 
 #### arguments

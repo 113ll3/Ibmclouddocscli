@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-16"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -16,20 +16,20 @@ lastupdated: "2018-07-16"
 # IBM Cloud Developer Tools para IDEs do Jetbrains
 {: #ibm-dev-tools-for-jetbrains}
 
-A extensão de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}} para IDEs do Jetbrains, que incluem `IntelliJ`, `WebStorm`, `Android Studio` e muito mais, fornece novas entradas de menu para acessar diretamente os comandos da CLI do {{site.data.keyword.dev_cli_notm}} de dentro do IDE. Isso permite acessar rapidamente um subconjunto de comandos `ibmcloud dev` para os fluxos de trabalho do Docker e CloudFoundry, incluindo a implementação do app, iniciando/parando/reiniciando apps no {{site.data.keyword.Bluemix_notm}}, visualizando logs de app remoto e muito mais, tudo sem a necessidade de deixar o contexto do editor.
+A extensão de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}} para IDEs do Jetbrains, que incluem `IntelliJ`, `WebStorm`, `Android Studio` e muito mais, fornece novas entradas de menu para acessar diretamente os comandos da CLI do {{site.data.keyword.dev_cli_notm}} de dentro do IDE. Isso permite acessar rapidamente um subconjunto de comandos `ibmcloud dev` para os fluxos de trabalho do Docker e CloudFoundry, incluindo a implementação do app, iniciando/parando/reiniciando apps no {{site.data.keyword.Bluemix_notm}}, visualizando logs de app remoto e muito mais, tudo sem a necessidade de deixar o contexto do editor.
 {:shortdesc}
 
-Exemplo de menu de ferramentas do desenvolvedor do ![Captura de tela do IBM Cloud Developer Tools em execução no WebStorm IDE.](jetbrains.png "{{site.data.keyword.Bluemix_notm}} en execução no WebStorm IDE")
+Exemplo de menu de ferramentas do desenvolvedor do ![Captura de tela do IBM Cloud Developer Tools em execução no WebStorm IDE.](jetbrains.png "{{site.data.keyword.Bluemix_notm}} em execução no WebStorm IDE")
 
 ## Dependências
 {: #dependencies}
 
-Para utilizar a extensão de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}} para IDEs baseados em Jetbrains, você também precisará da [CLI do {{site.data.keyword.dev_cli_notm}}](index.html) instalada em seu sistema.
+Para utilizar a extensão de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}} para IDEs baseados em Jetbrains, você também precisará da [CLI do {{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview) instalada em seu sistema.
 
 ## Instalação
 {: #installation}
 
-A maneira mais simples de instalar a extensão de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}} para IDE do Jetbrains é acessar a página [Jetbrains do repositório Github de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}}](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) e seguir as instruções.
+A maneira mais simples de instalar a extensão de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}} para IDE do Jetbrains, é acessar a página [Jetbrains do repositório GitHub das ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}}](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") e seguir as instruções.
 
 ## Uso
 {: #usage}

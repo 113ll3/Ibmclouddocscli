@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Aplicativos Cloud Foundry
+# Gerenciando aplicativos do Cloud Foundry
 {: #ibmcloud_commands_apps}
 
 Use os comandos a seguir para gerenciar os aplicativos, os domínios e as rotas do Cloud Foundry.
@@ -239,7 +239,7 @@ ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_fil
 Remova um certificado do domínio especificado na organização atual.
 
 ```
-ibmcloud app domain-cert-remove DOMAIN [-f]
+Ibmcloud app domain-cert-remove DOMAIN [ -f ]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino

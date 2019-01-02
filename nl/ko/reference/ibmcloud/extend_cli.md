@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-10-04"
 2. {{site.data.keyword.Bluemix_notm}} CLI에는 'IBM Cloud'라는 이름의 공식 저장소가 있으며, 사용자는 다음 예제에 표시된 대로 공식 플러그인을 검색할 수 있습니다.
 
   ```
-  $ ibmcloud plugin repo-plugins -r IBM Cloud
+  $ ibmcloud plugin repo-plugins
   Getting plug-ins from repository 'IBM Cloud'...
 
   Repository: IBM Cloud
@@ -48,10 +48,10 @@ lastupdated: "2018-10-04"
 `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` 명령을 사용하여 플러그인을 설치하십시오. 예를 들어, 공식 IBM 플러그인 저장소 'IBM Cloud'에서 플러그인을 설치하려면 다음 명령을 사용하십시오.
 
   ```
-  $ ibmcloud plugin install auto-scaling -r IBM Cloud
+  $ ibmcloud plugin install auto-scaling 
   Looking up 'auto-scaling' from repository 'IBM Cloud'...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCLoudFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
@@ -76,7 +76,7 @@ lastupdated: "2018-10-04"
   ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
   Attempting to download the binary file...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCloudFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$

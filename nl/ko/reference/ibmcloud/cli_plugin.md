@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 플러그인
+# {{site.data.keyword.Bluemix_notm}} CLI 플러그인 추가 및 제거
 {: #ibmcloud_commands_settings}
 
 {{site.data.keyword.Bluemix}}는 해당 기능을 확장하도록 플러그인 프레임워크를 지원합니다. 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 관리하십시오.
@@ -40,8 +40,8 @@ lastupdated: "2018-10-17"
 </tr>
  </tbody>
  </table>
-
-
+ 
+ 
  ## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
@@ -76,10 +76,10 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 
 <strong>예제</strong>:
 
-{{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소를 `IBM Cloud-repo`로 추가합니다.
+`bluemix-repo`로서 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소 추가:
 
 ```
-ibmcloud plugin repo-add IBM Cloud-repo http://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
 ## ibmcloud plugin repo-remove
@@ -101,10 +101,10 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>예제</strong>:
 
-{{site.data.keyword.Bluemix_notm}} CLI에서 `IBM Cloud-repo` 저장소를 제거합니다.
+{{site.data.keyword.Bluemix_notm}} CLI에서 `bluemix-repo` 저장소를 제거합니다.
 
 ```
-ibmcloud plugin repo-remove IBM Cloud-repo
+ibmcloud plugin repo-remove bluemix-repo
 ```
 
 ## ibmcloud plugin repo-plugins
@@ -133,10 +133,10 @@ ibmcloud plugin repo-plugins [-r REPO_NAME]
 ibmcloud plugin repo-plugins
 ```
 
-`IBm Cloud-repo` 저장소의 모든 플러그인을 나열합니다.
+`bluemix-repo` 저장소의 모든 플러그인 나열:
 
 ```
-ibmcloud plugin repo-plugins -r IBM Cloud-repo
+ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
 ## ibmcloud plugin repo-plugin
@@ -206,7 +206,7 @@ ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
-저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'IBM Cloud'를 사용합니다.
+저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
 버전이 지정되지 않은 경우 명령은 설치할 최신의 사용 가능한 버전을 선택합니다.
 
 <strong>전제조건</strong>: 없음
@@ -217,7 +217,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
    <dt>PLUGIN_PATH|PLUGIN_NAME(필수)</dt>
    <dd>-r <i>REPO_NAME</i>이 지정되지 않은 경우 플러그인은 지정된 로컬 경로 또는 원격 URL에서 설치됩니다.</dd>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
-   <dd>플러그인 2진이 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'IBM Cloud'를 사용합니다.</dd>
+   <dd>플러그인 2진이 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.</dd>
    <dt>-v <i>VERSION</i>(선택사항)</dt>
    <dd>설치될 플러그인의 버전입니다. 제공되지 않은 경우 최신 버전의 플러그인이 설치됩니다. 이 옵션은 저장소에서 플러그인을 설치하는 경우에만 유효합니다.</dd>
    <dt>-f </dt>
@@ -225,7 +225,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
     </dl>
 
 
-{{site.data.keyword.Bluemix_notm}} CLI의 공식 저장소 이름은 `IBM Cloud`입니다.
+{{site.data.keyword.Bluemix_notm}} CLI에 `Bluemix`의 공식 저장소 이름이 있습니다.
 
 <strong>예제</strong>:
 
@@ -241,10 +241,10 @@ ibmcloud plugin install /downloads/new_plugin
 ibmcloud plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-'IBM Cloud' 저장소에서 최신 버전의 'container-service' 플러그인을 설치합니다.
+'Bluemix' 저장소에서 최신 버전의 'container-service' 플러그인을 설치합니다.
 
 ```
-ibmcloud plugin install container-service -r IBM Cloud
+ibmcloud plugin install container-service -r Bluemix
 ```
 
 또는 단순히
@@ -268,7 +268,7 @@ ibmcloud plugin install container-service -v 0.1.425
 ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
-저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'IBM Cloud'를 사용합니다.
+저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
 버전이 지정되지 않은 경우 명령은 설치할 최신의 사용 가능한 버전을 선택합니다.
 
 <strong>전제조건</strong>: 없음
@@ -278,7 +278,7 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>업데이트할 플러그인의 이름입니다. 지정되지 않은 경우, 이 명령은 설치된 모든 플러그인의 업그레이드를 확인합니다.</dd>
  <dt>-r REPO_NAME</dt>
- <dd>플러그인 2진이 있는 저장소의 이름입니다. 지정되지 않은 경우 명령은 기본 플러그인 저장소 'IBM Cloud'를 사용합니다.</dd>
+ <dd>플러그인 2진이 있는 저장소의 이름입니다. 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.</dd>
  <dt>-v <i>VERSION</i>(선택사항)</dt>
  <dd>업데이트되는 플러그인의 버전입니다. 제공되지 않은 경우 최신 사용 가능 버전으로 플러그인을 업데이트합니다.</dd>
  <dt>--all</dt>
@@ -287,10 +287,10 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 <strong>예제</strong>:
 
-공식 플러그인 저장소 'IBM Cloud'에서 사용 가능한 모든 업그레이드 확인:
+공식 플러그인 저장소 'Bluemix'에서 사용 가능한 모든 업그레이드 확인:
 
 ```
-ibmcloud plugin update -r IBM Cloud
+ibmcloud plugin update -r Bluemix
 ```
 
 또는 단순히

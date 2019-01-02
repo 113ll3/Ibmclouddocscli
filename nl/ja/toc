@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html" path="cli"}
+{: .toc subcollection="cloud-cli" audience="platform" arm="" href="/docs/cli/index.html" path="cli"}
 IBM Cloud CLI および Developer Tools
 
 	{: .navgroup id="learn"}

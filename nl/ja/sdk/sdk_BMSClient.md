@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-06-21"
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # BMSClient の初期化
 {: #sdk_BMSClient}
@@ -41,7 +41,7 @@ lastupdated: "2018-06-21"
 ## iOS アプリケーションの初期化
 {: #init-BMSClient-ios}
 
-[CocoaPods](https://cocoapods.org){: new_window} または [Carthage](https://github.com/Carthage/Carthage){: new_window} を使用して `BMSCore` パッケージを取得することができます。
+[CocoaPods ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org){: new_window} または [Carthage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage){: new_window} を使用して、`BMSCore` パッケージを取得できます。
 
 1. CocoaPods を使用して `BMSCore` をインストールするには、以下の行を Podfile に追加します。 プロジェクトにまだ Podfile がない場合は、`pod init` コマンドを使用します。
 
@@ -118,6 +118,6 @@ lastupdated: "2018-06-21"
 ## 関連リンク
 {: #general notoc}
 
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova プラグイン](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [BMSCore Android SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova プラグイン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

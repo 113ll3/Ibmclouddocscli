@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# サブネット
+# サブネットの作成、取り消し、および表示
 
-サブネットは、IP ネットワークの論理区画であり、複数の小さいネットワーク・セグメントに分割されます。 以下のコマンドを使用して、{{site.data.keyword.Bluemix}} インフラストラクチャー・サブネットを管理します。
+サブネットは、IP ネットワークの論理区画であり、複数の小さいネットワーク・セグメントに分割されます。 以下のコマンドを使用して、{{site.data.keyword.Bluemix}} クラシック・インフラストラクチャーのサブネットを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・サブネット・コマンド">
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのサブネット・コマンド">
  <thead>
  </thead>
  <tbody>

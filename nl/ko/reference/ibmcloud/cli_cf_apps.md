@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry 애플리케이션
+# Cloud Foundry 애플리케이션 관리
 {: #ibmcloud_commands_apps}
 
 다음 명령을 사용하여 Cloud Foundry 애플리케이션, 도메인 및 라우트를 관리하십시오.

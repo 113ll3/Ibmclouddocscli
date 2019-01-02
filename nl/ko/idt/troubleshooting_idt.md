@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-06-21"
 {:pre: .pre}
 {:note:.deprecated}
 
-# IBM Cloud Developer 도구 문제점 해결
+# IBM Cloud Developer Tools 문제점 해결
 {: #ts}
 
 {{site.data.keyword.dev_cli_notm}}에 대한 일부 알려진 문제가 임시 해결책과 함께 문서화되어 있습니다.
@@ -55,6 +55,42 @@ ibmcloud login
 {: codeblock}
 
 
+### 앱의 언어를 인식하는 enable 명령에 대한 문제점
+{: #enable-unknown-language}
+
+```
+FAILED
+Could not determine the language of your application.
+
+Try using the --language flag to specify the language of your application 
+directly. 
+```
+#### 원인
+{: #enable-unknown-language-cause}
+
+이 오류는 다음으로 인해 발생할 수 있습니다.
+1. 애플리케이션의 소스 디렉토리가 아닌 디렉토리에서 [enable](commands.md#enable) 명령 실행.
+2. 현재 인식되지 않는 언어로 된 앱에 대해 [enable](commands.md#enable) 명령 실행.
+
+#### 해결책
+{: #enable-unknown-language-resolution}
+
+앱의 소스 코드를 포함하는 앱 디렉토리에서 명령이 실행되어야 합니다. 그래도 상태가 해결되지 않고 언어가 [지원되는 언어](commands.md#enable-language-options) 중 하나이면 `--language` 매개변수를 사용하여 언어를 지정하십시오.
+
+
+### 사용으로 설정된 앱 빌드 또는 실행 문제점
+{: #enable-build-run-failures}
+
+사용으로 설정된 앱을 [빌드](commands.md#build)하거나 [실행](commands.md#run)하려는 중에 다양한 실패가 발생할 수 있습니다.
+
+
+#### 해결책
+{: #enable-build-run-failures-resolution}
+
+Spring 앱에서 이러한 문제점을 해결하는 방법에 대한 안내는 이 [문서](/docs/java-spring/enable_existing.html#enable_existing)를 참조하십시오.
+
+Node.js 앱에서 이러한 문제점을 해결하는 방법에 대한 안내는 이 [문서](/docs/node/enable_existing.html#enable_existing)를 참조하십시오.
+
 ### {{site.data.keyword.dev_cli_short}}의 일반 장애
 {: #general}
 
@@ -83,7 +119,7 @@ ibmcloud login
 {: codeblock}
 
 
-### 오류: 새 프로젝트를 실행할 때 해당 이미지가 없음
+### 오류: 새 애플리케이션을 실행할 때 해당 이미지가 없음
 {: #nosuchimage}
 
 먼저 프로젝트를 빌드하지 않고 실행하면 다음 오류가 표시될 수 있습니다.
@@ -93,12 +129,12 @@ $ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
-Creating image bx-dev-testProject based on Dockerfile...
+Creating image ibmcloud-dev-testProject based on Dockerfile...
 OK                    
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
-Error: No such image: bx-dev-testProject
+Error: No such image: ibmcloud-dev-testProject
 ```
 
 
@@ -140,7 +176,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### 원인
 {: #os-cause}
 
-이 오류는 무료 {{site.data.keyword.objectstorageshort}} 사용제의 1개 인스턴스만 제공하는 {{site.data.keyword.objectstorageshort}} 서비스로 인해 발생합니다.
+이 오류는 무료 {{site.data.keyword.objectstorageshort}} 플랜의 1개 인스턴스만 제공하는 {{site.data.keyword.objectstorageshort}} 서비스로 인해 발생합니다.
 
 
 #### 해결책
@@ -149,7 +185,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 이 오류를 피하기 위해 다른 플랜을 선택하라는 프롬프트가 표시됩니다.
 
 
-### 프로젝트 작성 중에 코드 가져오기 실패
+### 앱 작성 중에 코드 가져오기 실패
 {: #code}
 
 프로젝트를 작성하기 위해 {{site.data.keyword.dev_cli_short}}을 사용하는 경우 다음 오류가 표시될 수 있습니다.
@@ -157,7 +193,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 ```
 FAILED                            
 Project created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 
@@ -184,7 +220,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 * {{site.data.keyword.dev_console}}을 사용하십시오.
 
-	1. {{site.data.keyword.dev_console}}에서 [프로젝트 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.{DomainName}/developer/projects)를 선택한 다음 **코드 가져오기**를 클릭하십시오.
+	1. {{site.data.keyword.dev_console}}에서 [프로젝트 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/projects)를 선택한 다음 **코드 가져오기**를 클릭하십시오.
 
 	2. **코드 생성**을 클릭하십시오.
 
@@ -318,7 +354,7 @@ ibmcloud cr namespaces
 ## 부록
 {: #appendix}
 
-모든 필수 소프트웨어는 플랫폼 설치 프로그램을 사용하는 대부분의 사용자를 위해 설치됩니다. 컴포넌트를 수동으로 설치해야 하는 경우 다음 지시사항을 따르십시오.
+이 페이지의 맨 위에 있는 플랫폼 설치 프로그램을 사용하여 대부분의 사용자를 위한 모든 필수 소프트웨어가 설치됩니다. 컴포넌트를 수동으로 설치해야 하는 경우 다음 지시사항을 따르십시오.
 
 dev 플러그인을 설치하려면 먼저 [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started)가 설치되어 있어야 합니다.
 
@@ -326,7 +362,7 @@ dev 플러그인 자체를 사용하려면 `ibmcloud plugin install dev -r Bluem
 
 애플리케이션을 로컬로 실행하고 디버깅하려면 [Docker ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.docker.com/get-docker)도 설치해야 합니다.
 
-애플리케이션을 컨테이너로서 배치하려면 `Kubernetes`, `Helm` 및 다음 IBM Cloud CLI 플러그인도 설치해야 합니다.
+애플리케이션을 컨테이너로 배치하려면 Kubernetes, Helm 및 다음 IBM Cloud CLI 플러그인도 설치해야 합니다.
 
 Kubernetes를 설치하려면 다음을 수행하십시오.
 * Mac 사용자:
@@ -364,7 +400,7 @@ container-service 플러그인을 설치하려면 다음을 수행하십시오.
 ## 도움 및 지원 받기
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 또는 {{site.data.keyword.dev_cli_notm}}에 대한 문제점이 발생하거나 질문이 있는 경우 정보를 검색하거나 포럼에 질문을 올려서 도움을 받으십시오. 지원 티켓을 열 수도 있습니다.
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 또는 {{site.data.keyword.dev_cli_notm}}에 대한 문제점이 발생하거나 질문이 있는 경우 정보를 검색하거나 포럼에 질문을 올려서 도움을 받으십시오. 지원 케이스를 열 수도 있습니다.
 
 포럼에 질문을 게시하는 경우 {{site.data.keyword.Bluemix_notm}} 개발 팀에서 알 수 있도록 질문에 태그를 지정할 수 있습니다.
 
@@ -383,6 +419,6 @@ container-service 플러그인을 설치하려면 다음을 수행하십시오.
 
 포럼 사용에 대한 자세한 정보는 [도움 받기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/support/index.html#getting-help)를 참조하십시오.
 
-{{site.data.keyword.IBM}} 지원 티켓 개설 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 팀에 문의 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/support/index.html#contacting-support)를 참조하십시오.
+{{site.data.keyword.IBM}} 지원 케이스 열기 또는 지원 레벨 및 케이스 심각도에 대한 정보는 [지원 팀에 문의 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/support/index.html#contacting-support)를 참조하십시오.
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->

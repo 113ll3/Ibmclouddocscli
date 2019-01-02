@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 보안 그룹
+# 가상 서버 트래픽에 대한 보안 그룹 관리
 
 보안 그룹은 가상 서버 인스턴스의 퍼블릭 및 프라이빗 인터페이스 둘 다에 대한 수신(ingress) 및 발신(egress) 트래픽의 처리 방법을 정의하는 IP 필터 규칙 세트입니다. 보안 그룹에 추가하는 규칙을 보안 그룹 규칙이라고 합니다.
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 인프라 보안 그룹 서비스를 사용하여 보안 그룹을 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 클래식 인프라 보안 그룹 서비스를 통해 보안 그룹을 관리하십시오.
 {: shortdesc}
 
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 보안 그룹 명령">
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 보안 그룹 명령">
  <thead>
  </thead>
  <tbody>

@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-08-28"
 {:codeblock: .codeblock}  
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 
 # Comandos do {{site.data.keyword.dev_cli_notm}}  Plug-in da CLI (ibmcloud dev)
 {: #idt-cli}
 
-Versão: 1.2.0
-Liberação: 08 de março de 2018
+Versão: 2.1.4 Liberação: 31 de agosto de 2018
 
-Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix_notm}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que sejam removidos em uma data posterior.
+Desde maio de 2018 comandos da CLI do {{site.data.keyword.Bluemix}} mudaram de `bluemix` e `bx` para `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que sejam removidos em uma data posterior.
 {: tip}
 
 Use os comandos da CLI do {{site.data.keyword.dev_cli_notm}} (ibmcloud dev) a seguir para criar um aplicativo, gerenciar, implementar, depurar e testá-lo.
@@ -59,7 +59,7 @@ Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro 
 O elemento de configuração `build-cmd-debug` é usado para construir o aplicativo para todos os usos, exceto para `run`. Você constrói seu aplicativo para depuração especificando a opção da linha de comandos `--debug`.  O elemento de configuração `build-cmd-run` é usado quando você
 está construindo o aplicativo para uso com o comando `run`.
 
-Para ser construído com múltiplos contêineres, o seu aplicativo deve conter um arquivo do [Compose](https://docs.docker.com/compose/overview/), que está especificado no `cli-config.yml`, ou é possível usar o parâmetro de comando `dockerfile-tools` para fornecer um. Consulte [Editar arquivo](/docs/apps/projects/compose_file.html) para obter mais informações.
+Para construir com múltiplos contêineres, o seu aplicativo deve conter um arquivo [Compose](https://docs.docker.com/compose/overview/){: new_window}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"), que é especificado no `cli-config.yml` ou é possível usar o parâmetro de comando `dockerfile-tools` para fornecer um. Consulte [Editar arquivo](/docs/apps/projects/compose_file.html) para obter mais informações.
 
 Execute o comando a seguir em seu diretório de aplicativo atual para construir seu aplicativo:  
 
@@ -169,9 +169,9 @@ ajudam na depuração de um aplicativo. Há [parâmetros adicionais](#command-pa
 ## excluir
 {: #delete}
 
-Use o comando `delete` para remover aplicativos de seu espaço do {{site.data.keyword.Bluemix}}. É possível executar o comando sem parâmetros para listar os aplicativos disponíveis e selecionar o aplicativo na lista numerada para excluir. O código do aplicativo e os diretórios não são removidos de seu espaço em disco local.
+Use o comando `delete` para remover aplicativos de seu espaço do {{site.data.keyword.Bluemix_notm}}. É possível executar o comando sem parâmetros para listar os aplicativos disponíveis e selecionar o aplicativo na lista numerada para excluir. O código do aplicativo e os diretórios não são removidos de seu espaço em disco local.
 
-Execute o comando a seguir para excluir seu aplicativo do {{site.data.keyword.Bluemix}}:
+Execute o comando a seguir para excluir seu aplicativo do {{site.data.keyword.Bluemix_notm}}:
 
 ```
 ibmcloud dev delete <applicationName>
@@ -179,17 +179,17 @@ ibmcloud dev delete <applicationName>
 {: codeblock}
 
 
-**Nota:** os serviços do {{site.data.keyword.Bluemix}} **não** são removidos.
-
+Os serviços do {{site.data.keyword.Bluemix_notm}} **não** são removidos.
+{: note}
 
 ## implementar
 {: #deploy}
 
 É possível implementar um aplicativo como um aplicativo Cloud Foundry ou como um contêiner.
 
-Antes de implementar como um aplicativo Cloud Foundry no {{site.data.keyword.Bluemix}}, um arquivo `manifest.yml` deve estar presente no diretório-raiz do seu aplicativo.
+Antes de implementar como um aplicativo Cloud Foundry no {{site.data.keyword.Bluemix_notm}}, um arquivo `manifest.yml` deve estar presente no diretório-raiz do seu aplicativo.
 
-Antes de implementar um aplicativo como um contêiner, deve-se instalar localmente o [Kubernetes](https://kubernetes.io/) e o [Helm](https://github.com/kubernetes/helm). A versão do cliente Helm não deve ser mais recente que a versão do servidor Helm. É possível localizar ambos executando `helm version`. Recomendamos usar v2.4.2 para a versão do cliente.
+Antes de implementar um aplicativo como um contêiner, deve-se instalar localmente o [Kubernetes](https://kubernetes.io/){: new_window}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") e o [Helm](https://github.com/kubernetes/helm){: new_window}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"). A versão do cliente Helm não deve ser mais recente que a versão do servidor Helm. É possível localizar ambos executando `helm version`. Recomendamos usar v2.4.2 para a versão do cliente.
 
 Para implementar seu aplicativo no Kubernetes, deve-se especificar o `deploy-target` como `container` no `cli-config.yml` ou usar o parâmetro `-t container`.
 
@@ -205,11 +205,8 @@ Outros parâmetros necessários para configurar a implementação do Kubernetes 
     ibm-cluster: "mycluster"
 ```
 
-No `cli-config.yml`, é possível escolher definir o local de um gráfico Helm na propriedade `chart-path` e configurar o `deploy-image-target` conforme mostrado no exemplo. O elemento `deploy-image-target` no `cli-config.yml` é usado em vez dos elementos `repository` e `tag` no arquivo `chart/values.yml`. Para
-implementar no {{site.data.keyword.Bluemix}} especificamente, configure o elemento de configuração `ibm-cluster` para o nome do cluster do Kubernetes que você criou no {{site.data.keyword.Bluemix}},
-conforme descrito no [Tutorial: criando clusters](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
+No `cli-config.yml`, é possível escolher definir o local de um gráfico Helm na propriedade `chart-path` e configurar o `deploy-image-target` conforme mostrado no exemplo. O elemento `deploy-image-target` no `cli-config.yml` é usado em vez dos elementos `repository` e `tag` no arquivo `chart/values.yml`. Para implementar no {{site.data.keyword.Bluemix_notm}} especificamente, configure o elemento de configuração `ibm-cluster` para o nome do cluster do Kubernetes que você criou no {{site.data.keyword.Bluemix_notm}}.
 
-Para obter mais informações sobre o fornecimento, configuração e implementação para um cluster do Kubernetes, consulte o tutorial [Implementar um aplicativo da web escalável no Kubernetes](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes).
 
 Execute o comando a seguir em seu diretório de aplicativo atual para construir seu aplicativo:  
 
@@ -252,7 +249,7 @@ Os parâmetros a seguir podem ser usados com o comando `deploy` ou atualizando o
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Parâmetro usado opcionalmente para definir o nome do cluster do Kubernetes para uma implementação de contêiner no {{site.data.keyword.Bluemix}}
+* Parâmetro usado opcionalmente para definir o nome do cluster do Kubernetes para uma implementação de contêiner no {{site.data.keyword.Bluemix_notm}}
 * Uso `ibmcloud dev deploy -- ibm-cluster [ cluster-name ]`
 
 #### `host `
@@ -271,8 +268,7 @@ Os parâmetros a seguir podem ser usados com o comando `deploy` ou atualizando o
 ## diag
 {: #diag}
 
-Esse comando é usado como um diagnóstico para exibir as informações da versão das dependências instaladas para a CLI do {{site.data.keyword.dev_cli_notm}}. 
-Isso será especialmente útil para determinar se alguma dependência está ausente ou ajudar na depuração de problemas.
+Esse comando é usado como um diagnóstico para exibir as informações da versão das dependências instaladas para a CLI do {{site.data.keyword.dev_cli_notm}}. Isso será especialmente útil para determinar se alguma dependência está ausente ou ajudar na depuração de problemas.
 
 Execute o comando a seguir para exibir as versões das dependências instaladas:
 
@@ -285,7 +281,7 @@ ibmcloud dev diag
 ## editar
 {: #edit}
 
-Edite seu aplicativo incluindo novos serviços, conectando e desconectando serviços existentes ou removendo serviços existentes. Execute o comando a seguir na raiz de um diretório de aplicativo:
+Edite seu aplicativo com as opções, como conectá-lo a um aplicativo já no {{site.data.keyword.Bluemix_notm}}, gerenciando os serviços do {{site.data.keyword.Bluemix_notm}} do aplicativo e sua cadeia de ferramentas do {{site.data.keyword.Bluemix_notm}}. Com um aplicativo local que está conectado a um aplicativo no {{site.data.keyword.Bluemix_notm}}, use `edit` para incluir novos serviços, conectar e desconectar os serviços existentes ou remover serviços existentes de sua conta. Além disso, é possível criar ou visualizar uma cadeia de ferramentas do {{site.data.keyword.Bluemix_notm}} para o aplicativo. Execute o comando a seguir na raiz do diretório de aplicativo:
 
 ```
 ibmcloud dev edit
@@ -300,7 +296,7 @@ Selecionar um serviço conectado fornece opções para desconectar o serviço de
 
 Selecionar um serviço desconectado fornece opções para conectar esse serviço ao seu aplicativo ou excluir o serviço de sua conta. Conectar um serviço existente também fará download de arquivos, como arquivos de credenciais ou código-fonte, para iniciar o uso desse serviço.
 
-Também é possível selecionar a opção para incluir um novo serviço em seu aplicativo. Isso conduzirá você pelos prompts de seleção de serviço e fará download de arquivos adicionais, como arquivos de credenciais ou código-fonte, para iniciar o uso do novo serviço.
+Também é possível incluir um novo serviço em seu aplicativo. Isso guia você através de avisos de seleção de serviço e faz download de arquivos adicionais, como arquivos de credenciais ou código-fonte, para iniciar o uso do novo serviço.
 
 
 
@@ -309,7 +305,11 @@ Também é possível selecionar a opção para incluir um novo serviço em seu a
 
 Ative um aplicativo existente para a implementação do  {{site.data.keyword.Bluemix_notm}} . O comando `enable` tenta detectar automaticamente a linguagem de um aplicativo existente e, em seguida, solicitar informações adicionais necessárias. Isso gera e inclui arquivos que podem ser usados para contêineres do Docker local, a implementação do CloudFoundry ou a implementação do Kubernetes/Contêiner.
 
-Execute o comando a seguir para ativar um aplicativo existente no diretório atual para a implementação do {{site.data.keyword.Bluemix_notm}}:
+Quando conectado ao {{site.data.keyword.Bluemix_notm}}, é possível optar por conectar esse aplicativo local a um aplicativo que já está no {{site.data.keyword.Bluemix_notm}} ou criar um novo aplicativo {{site.data.keyword.Bluemix_notm}}. Para aproveitar os recursos do {{site.data.keyword.Bluemix_notm}}, como serviços e cadeias de ferramentas do DevOps, um aplicativo no {{site.data.keyword.Bluemix_notm}} é necessário. Quando um app {{site.data.keyword.Bluemix_notm}} é criado para um app que é clonado por meio de um repositório Git, o app {{site.data.keyword.Bluemix_notm}} inclui esse repositório em sua configuração. 
+
+`Enable` é um recurso Beta. Se você tiver problemas ao ativar um aplicativo, nossa [página de resolução de problemas](/docs/cli/ts_createapps.html#troubleshoot) poderá ajudá-lo. Em particular, `enable` não é destinado a aplicativos móveis ou estruturas. Para aplicativos complexos que produzem vários ativos implementáveis, cada componente do aplicativo deve ser ativado, individualmente. 
+
+Execute o comando a seguir para ativar um aplicativo existente no diretório atual:
 
 ```
 Ibmcloud dev enable
@@ -326,6 +326,8 @@ A presença de arquivos necessários fornece detecção de idioma do aplicativo 
 	* A presença de um `build.gradle` identifica um aplicativo Gradle.
 
 Opcionalmente, também é possível substituir a linguagem do aplicativo detectado usando o argumento `--language`.  No entanto, somente aplicativos válidos e completos são suportados. O comando de ativação não modifica o seu código-fonte.
+
+{: #enable-language-options}
 
 As opções de linguagem incluem:
 * node
@@ -353,6 +355,12 @@ Os parâmetros a seguir podem ser usados com o comando `enable` ou atualizando o
 
 * Parâmetro usado para forçar a reativação de um aplicativo já ativado.
 * Uso `ibmcloud dev enable -f | -- force`
+
+#### `no-create`
+{: #enable-no-create}
+
+* Parâmetro para evitar a criação de um app no {{site.data.keyword.Bluemix_notm}} ao criar os arquivos de ativação localmente.
+* Uso `ibmcloud dev enable --no-create`
 
 
 ## get-credentials
@@ -394,7 +402,7 @@ Se você está usando o Windows &trade;, deve estar executando o Windows 10 Pro 
 
 É possível executar seu aplicativo por meio do comando `run`. Uma construção deve primeiro ser concluída com relação ao aplicativo, usando o comando `build`. Quando você chama o comando `run`, o contêiner de execução é iniciado e expõe as portas, como definido pelo parâmetro `container-port-map`. O parâmetro `run-cmd` poderá ser usado para chamar o aplicativo se o Dockerfile do contêiner de execução não contiver um ponto de entrada para concluir essa etapa.
 
-Para ser executado com múltiplos contêineres, seu aplicativo deve conter um arquivo do [Compose](https://docs.docker.com/compose/overview/), especificado no `cli-config.yml`, ou é possível usar o parâmetro de comando `dockerfile-run` para fornecer um. Consulte [Editar arquivo](/docs/apps/projects/compose_file.html) para obter mais informações.
+Para executar com múltiplos contêineres, seu aplicativo deve conter um arquivo [Compose](https://docs.docker.com/compose/overview/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"), especificado no parâmetro `cli-config.yml` ou é possível usar o parâmetro de comando `dockerfile-run` para fornecer um. Consulte [Editar arquivo](/docs/apps/projects/compose_file.html) para obter mais informações.
 
 Primeiro, compile seu aplicativo:
 
@@ -474,7 +482,7 @@ Ibmcloud dev shell
 ```
 
 A CLI do {{site.data.keyword.dev_cli_short}} abrirá um shell interativo no contêiner do
-docker do aplicativo. O contêiner de destino padrão para o comando shell é definido pelo valor `container-shell-target` no arquivo `cli-config.yml`, em que os valores válidos são `run` ou `tools`. Se esse valor não for definido ou um valor inválido for especificado, o comando `shell` direcionará para o contêiner `tools` por padrão. O comando shell abre o contêiner no diretório especificado pela instrução `WORKDIR` no Dockerfile correspondente. Se `WORKDIR` não estiver listado no Dockerfile, a raiz do contêiner será usada como o diretório ativo. Veja [esta referência](https://docs.docker.com/engine/reference/builder/#workdir) para obter mais informações.
+docker do aplicativo. O contêiner de destino padrão para o comando shell é definido pelo valor `container-shell-target` no arquivo `cli-config.yml`, em que os valores válidos são `run` ou `tools`. Se esse valor não for definido ou um valor inválido for especificado, o comando `shell` direcionará para o contêiner `tools` por padrão. O comando shell abre o contêiner no diretório especificado pela instrução `WORKDIR` no Dockerfile correspondente. Se `WORKDIR` não estiver listado no Dockerfile, a raiz do contêiner será usada como o diretório ativo. Consulte [esta referência](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") para obter mais informações.
 
 Como alternativa, é possível decidir passar `run` ou `tools` como um argumento para o comando e esse contêiner será trazido para cima e o shell será aberto para esse contêiner. De forma semelhante, é possível usar o parâmetro `container-name` para passar o nome do contêiner no qual você deseja executar o shell. No entanto, essa sinalização deve ser reservada para quando nenhum contêiner está em execução. Os argumentos `run` e `tools` são mais flexíveis e permitem que você alterne entre contêineres no momento em que um está em execução. Por exemplo, se o contêiner de ferramentas estiver em execução e você executar `ibmcloud dev shell run`, o contêiner `tools` será interrompido e o contêiner `run` será iniciado e vice-versa.
 
@@ -599,7 +607,7 @@ O parâmetro a seguir é exclusivo para o comando `test`.  Há [parâmetros adic
 
 Para aplicativos implementados no Cloud Foundry, a URL consiste no nome do host do aplicativo e no domínio do aplicativo.
 
-Para aplicativos implementados no Kubernetes, a URL consiste no endereço IP do nó no qual ele é implementado e na porta pública. Se o comando determinar que o app foi implementado no Kubernetes, a ferramenta CLI solicitará confirmação. Se você especificar que o aplicativo não foi, na realidade, implementado noo Kubernetes, a URL do Cloud Foundry será mostrada. Se você esperava que o comando mostrasse a URL para um aplicativo implementado pelo Kubernetes e isso não aconteceu, assegure-se que o `cli-config.yml` contenha uma entrada para `chart-path` ou forneça isso por meio da linha de comandos, como mostrado [aqui](#chart-path).
+Para aplicativos implementados no Kubernetes, a URL consiste no endereço IP do nó no qual ele é implementado e na porta pública. Se o comando determinar que o aplicativo foi implementado no Kubernetes, a ferramenta CLI solicitará confirmação. Se você especificar que o aplicativo não foi, na realidade, implementado noo Kubernetes, a URL do Cloud Foundry será mostrada. Se você esperava que o comando mostrasse a URL para um aplicativo implementado pelo Kubernetes e isso não aconteceu, assegure-se que o `cli-config.yml` contenha uma entrada para `chart-path` ou forneça isso por meio da linha de comandos, como mostrado [aqui](#chart-path).
 
 Execute o comando a seguir para visualizar seu aplicativo:
 
@@ -629,7 +637,7 @@ Os parâmetros a seguir são exclusivos para o comando `view`.
 #### `web-app-root`
 {: #web-app-root}
 
-* Raiz do projeto para anexar à URL dos apps Cloud Foundry e Kubernetes
+* Raiz do projeto para anexar à URL do aplicativo do Cloud Foundry e Kubernetes
 * Uso: `ibmcloud dev view--web-app-root [ root ]`
 
 
@@ -668,7 +676,8 @@ Se quaisquer comandos seguirem `debug` ou `run`, a execução continuará soment
 
 Os parâmetros a seguir podem ser usados com os comandos `build|debug|run|test` ou atualizando o arquivo `cli-config.yml` do aplicativo diretamente. Parâmetros extras estão disponíveis para os comandos [`debug`](#debug-parameters) e [`run`](#run-parameters).
 
-**Nota**: os parâmetros de comando que são inseridos na linha de comandos têm precedência sobre a configuração `cli-config.yml`.
+Os parâmetros de comando que são inseridos na linha de comandos têm precedência sobre a configuração `cli-config.yml`.
+{: note}
 
 #### `config-file`  
 {: #config-file}

@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -15,19 +15,22 @@ lastupdated: "2018-07-27"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
+{:note: .note}
 
-
-# Cloud Foundry(cf) 명령
+# Cloud Foundry(cf 명령)에 대한 작업
 {: #cf}
 
 Cloud Foundry(cf) 명령행 인터페이스(CLI)는 앱 관리를 위한 명령 세트를 제공합니다. 다음 정보는 앱 관리를 위해 가장 공통적으로 사용되는 cf 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다. cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 사용하십시오. `cf command_name -h`를 사용하면 특정 명령에 대한 자세한 도움말 정보를 볼 수 있습니다.
 {: shortdesc}
 
-Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기](https://github.com/cloudfoundry/cli#getting-started)를 참조하십시오. 
+Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}를 참조하십시오.
 
 `cf CLI` 명령의 더 자세한 목록은 커뮤니티 [Cloud Foundry CLI 참조서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}를 참조하십시오.
 
-**참고**: 네트워크에서 cf 명령을 실행하는 호스트와 Cloud Foundry API 엔드포인트 사이에 HTTP 프록시 서버가 있으면 `HTTP_PROXY` 환경 변수를 설정하여 프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 세부사항은 [Using the cf CLI with an HTTP Proxy Server ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}를 참조하십시오.
+네트워크에서 cf 명령을 실행하는 호스트와 Cloud Foundry API
+엔드포인트 사이에 HTTP 프록시 서버가 있으면 `HTTP_PROXY` 환경 변수를 설정하여
+프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 세부사항은 [Using the cf CLI with a Proxy Server ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}를 참조하십시오.
+{: note}
 
 
 ## Cloud Foundry CLI 명령 색인
@@ -86,7 +89,7 @@ Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기](https://
 ## cf api
 {: #cf_api}
 
-이 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}의 API 엔드포인트에 대한 URL을 표시하거나 지정합니다.
+이 명령을 사용하여 {{site.data.keyword.Bluemix}}의 API 엔드포인트에 대한 URL을 표시하거나 지정합니다.
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
@@ -98,7 +101,9 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL(선택사항)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 Bluemix API 엔드포인트의 URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
+   <dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때
+지정해야 하는 {{site.data.keyword.Bluemix_notm}} API 엔드포인트의
+URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
    현재 사용 중인 API 엔드포인트의 URL을 표시하려는 경우 cf api 명령에 이 매개변수를 지정할 필요가 없습니다.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다.</dd>
@@ -392,9 +397,10 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}}에 로그인합니다. [연합 ID](/docs/admin/account.html#signup)로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용해야 합니다.
+{{site.data.keyword.Bluemix_notm}}에 로그인합니다. 연합 ID로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용하여 로그인해야 합니다.
 
-**참고**: {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키를 사용하여 로그인할 수도 있습니다. `apikey`를 사용자 이름으로, API 키 값을 비밀번호로 사용하십시오. API 키 작성에 대한 자세한 정보는 [API 키 관리](/docs/iam/apikeys.html)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 플랫폼 API 키를 사용하여 로그인할 수도 있습니다. `apikey`를 사용자 이름으로, API 키 값을 비밀번호로 사용하십시오. API 키 작성에 대한 자세한 정보는 [API 키 이해](/docs/iam/apikeys.html)를 참조하십시오.
+{: note}
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -816,10 +822,6 @@ cf -v
 ```
 {: codeblock}
 
-
-
-# 관련 링크
-{: #rellinks}
 
 ## 관련 링크
 {: #general}

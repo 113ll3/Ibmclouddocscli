@@ -5,23 +5,23 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# セキュリティー
+# セキュリティー SSH 鍵および SSL 証明書の管理
 
 SSH 鍵は、デバイスで実装されている各公開鍵の、対応クライアントのパスワードを使用せずにデバイスへのアクセスを許可します。 SSH 鍵をデバイスに追加することにより、SSH 鍵を提供されたデバイスは、パスワードを使用せずに、対応する鍵のデバイスにアクセスします。
 
 SSL 証明書は、ユーザーを保護するためのセキュリティー手段として、Web サイトによって使用可能にされます。 通常、機密情報を Web サイトに送信する必要がある場合に使用されます。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix}} インフラストラクチャー SSH 鍵および証明書を管理します。
+以下のコマンドを使用して、{{site.data.keyword.Bluemix}} クラシック・インフラストラクチャーの SSH 鍵および証明書を管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・セキュリティー・コマンド">
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのセキュリティー・コマンド">
  <thead>
  </thead>
  <tbody>

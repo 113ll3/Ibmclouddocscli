@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry サービス
+# Cloud Foundry サービスの作成、削除、およびバインド
 {: #ibmcloud_commands_services}
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} Foundry サービスのサービス・オファリング、サービス・インスタンス、サービス・バインディング、およびキーを管理します。

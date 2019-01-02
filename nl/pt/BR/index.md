@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -40,12 +40,10 @@ Com essa instalação, você obterá a CLI do {{site.data.keyword.Bluemix_notm}}
 ## Antes de começar
 {: #prereq}
 
-É necessária uma
-[conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/){: new_window}
-![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e os seguintes
-requisitos do sistema:
+Você precisa de uma [conta do {{site.data.keyword.Bluemix_notm}}](https://{DomainName}){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e os requisitos do sistema a seguir:
 
-* Se você estiver executando o Windows, algumas funções não serão suportadas se você não estiver executando o Windows 10 Pro.
+* Se você estiver executando o Windows, algumas funções não serão suportadas se o Windows 10 Pro não estiver em
+execução.
 * Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1.
 
 ## Etapa 1. Execute o comando de instalação
@@ -69,11 +67,9 @@ requisitos do sistema:
 administrador**.
   {: tip}
 
-  Também é possível fazer download do script do instalador por meio do nosso
-[repositório GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+  Também é possível fazer download do script do instalador por meio do nosso [repositório do GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
-  Para obter as etapas para instalar essas ferramentas manualmente, consulte
-[Reinstalando as ferramentas](/docs/cli/ts_createapps.html#appendix).
+  Para obter as etapas para instalar essas ferramentas manualmente, consulte [Como instalo as ferramentas do desenvolvedor do IBM Cloud manualmente](/docs/cli/ts_createapps.html#appendix).
 
 ## Etapa 2. Verificar a instalação
 {: #step2}
@@ -127,4 +123,5 @@ com o comando a seguir:
 ## Próximas Etapas
 {: #next-steps}
 
-Agora você está pronto para desenvolver e implementar o seu primeiro aplicativo! Para obter mais informações, consulte [Criando e implementando aplicativos usando a CLI](/docs/apps/create-deploy-cli.html).
+Agora você está pronto para desenvolver e implementar o seu primeiro aplicativo! Consulte
+[Criando e implementando os apps usando a CLI](/docs/apps/create-deploy-cli.html) para obter mais informações.

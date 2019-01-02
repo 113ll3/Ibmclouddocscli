@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# オーダー
+# クラシック・インフラストラクチャーの注文および見積もりの管理
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
- <caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー注文</caption>
+ <caption>表 1. クラシック・インフラストラクチャー注文</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー注文</th>
+ <th colspan="6">クラシック・インフラストラクチャー注文</th>
  </thead>
  <tbody>
  <tr>

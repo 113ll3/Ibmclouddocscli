@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-10-04"
+  years: 2017, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # SDK プラグインへの寄与
 {: #contribute}
@@ -23,13 +24,11 @@ lastupdated: "2018-10-04"
 
    Cloud Foundry CLI は必須ではありませんが、端末から {{site.data.keyword.Bluemix_notm}} へのアクセスに役立ちます。
 
-   Cloud Foundry CLI について詳しくは、[資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/cfcommands/index.html){: new_window}を参照してください。
+   Cloud Foundry CLI について詳しくは、[資料](/docs/cli/reference/cfcommands/index.html)を参照してください。
 
-* {{site.data.keyword.Bluemix_notm}} [CLI ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.{DomainName}/ui/home.html)
+* {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview)
 
    このプラグインは、{{site.data.keyword.Bluemix_notm}} CLI にインストールされます。 {{site.data.keyword.Bluemix_notm}} CLI にも、端末から {{site.data.keyword.Bluemix_notm}} にアクセスするのに役立つリソースが用意されています。
-
-   {{site.data.keyword.Bluemix_notm}} CLI について詳しくは、[資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html){: new_window}を参照してください。
 
 * Go の[開発環境 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://golang.org/doc/code.html)
 
@@ -102,7 +101,7 @@ lastupdated: "2018-10-04"
       ```
       {: codeblock}
 
-      * `.coverprofile` ファイルが配置されたディレクトリーに移動します。
+      * `.coverprofile` ファイルがあるディレクトリーに移動します。
 
 * 国際化対応: [go-i18n ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/nicksnyder/go-i18n) および [go-bindata ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/jteeuwen/go-bindata)
 
@@ -146,7 +145,7 @@ Go は、堅固な依存関係マネージャーを提供していないので�
 
 ネストされた依存関係はリストされていません。
 
-* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
    {{site.data.keyword.Bluemix_notm}} CLI プラグイン SDK は、{{site.data.keyword.Bluemix_notm}} CLI プラグインを開発するためのインフラストラクチャーを提供します。
 
@@ -170,18 +169,17 @@ Go は、堅固な依存関係マネージャーを提供していないので�
 
    このパッケージは、オペレーティング・システムの現在の言語を検出するために使用されます。
 
-
 ## リポジトリーの複製
 {: #clone-repo}
 
-`govendor`の動作上、この[リポジトリー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/tree/compute)は、Go の [ディレクトリー構造![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://golang.org/doc/code.html)に複製する必要があります。これは、Go のベスト・プラクティスにも従っています。
+`govendor` が動作する仕組みのため、リポジトリーは、Go の[ディレクトリー構造 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://golang.org/doc/code.html) に複製する必要があります。これは、Go のベスト・プラクティスにも従っています。
 
 * 完全修飾パッケージ名により、内部依存関係をインポートします。
 
    ```
    import (
       ...
-      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +187,9 @@ Go は、堅固な依存関係マネージャーを提供していないので�
 * リポジトリーを複製します。
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,18 +200,19 @@ Go は、堅固な依存関係マネージャーを提供していないので�
 以下のいずれかのコマンドを選択してプラグインをビルドします。
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}
 
-**注**: ビルド・スクリプトは、プラグインを {{site.data.keyword.Bluemix_notm}} CLI にもインストールします。
+ビルド・スクリプトは、プラグインを {{site.data.keyword.Bluemix_notm}} CLI にもインストールします。
+{: note}
 
 以下のいずれかのコマンドを選択してプラグインをテストします。
 

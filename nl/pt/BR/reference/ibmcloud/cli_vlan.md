@@ -5,22 +5,22 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN
+# Gerenciando VLANs de infraestrutura clássica
 
 As redes locais virtuais (VLANs) são usadas pelo {{site.data.keyword.cloud}} para isolar o tráfego
-de transmissão nas redes públicas e privadas.
+de transmissão nas redes públicas e privadas. As VLANs são designadas conforme necessário para preencher outras ofertas.
 
-Use os comandos a seguir para gerenciar as VLANs de infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Use os comandos a seguir para gerenciar as VLANs de infraestrutura clássica.
 {: shortdesc}
 
-<table summary="Comandos de VLAN de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
+<table summary="Alphabetically ordered {{site.data.keyword.Bluemix_notm}} classic infrastructure VLAN commands that have links that bring you to more info for the command">
  <thead>
  </thead>
  <tbody>

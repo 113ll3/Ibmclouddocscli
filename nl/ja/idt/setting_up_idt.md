@@ -3,15 +3,16 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-30"
 
 ---
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}  
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note: .note}
 
 # {{site.data.keyword.dev_cli_notm}} CLI のセットアップ
 {: #add-cli}
@@ -50,6 +51,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+[GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools) からインストーラー・スクリプトをダウンロードすることもできます。
+
 ## インストールの検証
 インストールを検査するには、次の `help` コマンドを実行します。
 
@@ -79,7 +82,8 @@ ibmcloud dev help
 	```
 	{: codeblock}
 
-	**注:** 資格情報が拒否された場合、統合 ID を使用している可能性があります。 統合 ID を使用して認証を受けるには、以下のステップに従ってください。
+	資格情報が拒否された場合、統合 ID を使用している可能性があります。 統合 ID を使用して認証を受けるには、以下のステップに従ってください。
+	{: note}
 
 	1. [{{site.data.keyword.iamshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.bluemix.net/iam/#/apikeys){: new_window} にログインします。
 	2. **「API キーの作成」**を選択します。
@@ -118,7 +122,7 @@ IBM Developer Tools CLI を使用してクラウド・ネイティブ・アプ�
 
 - [IBM Cloud Developer Tools メイン・ランディング・ページ](https://www.ibm.com/cloud/cli) - IDT CLI のメイン製品ページ
 - [IBM Developer Tools インストーラー](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - 詳細なインストール指示を含むパブリック GitHub リポジトリー
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - クラウド・ネイティブ・アプリを作成および管理するときに、IDT ツールのガイドとなる IBM Cloud コンソール・ページ
+- [IBM Cloud App Service](https://{DomainName}/developer/appservice) - クラウド・ネイティブ・アプリを作成および管理するときに、IDT ツールのガイドとなる IBM Cloud コンソール・ページ
 - [Report issues on GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com) - [ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/)でチーム・アクセスを要求
 

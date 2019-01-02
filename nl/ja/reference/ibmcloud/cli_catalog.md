@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# カタログ
+# カタログ・オファリングの検索と管理
 {: #ibmcloud_catalog}
 
 以下のコマンドを使用して、データ・センターの {{site.data.keyword.Bluemix}} カタログ・エントリー、照会テンプレート、ランタイム、および地理位置情報を管理します。
@@ -73,7 +73,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>--reverse</dt>
   <dd>ソート順序を反転するかどうか</dd>
   <dt>--output TYPE (オプション)</dt>
-  <dd>--output value  出力タイプを指定します。現在は JSON のみがサポートされています。このオプションは、「--id」と同時に指定することはできません。</dd>
+  <dd>--output value  出力タイプを指定します。現在は JSON のみがサポートされています。 このオプションは、「--id」と同時に指定することはできません。</dd>
   <dt>--csv</dt>
   <dd>CSV ファイルを出力します</dd>
   <dt>--global</dt>
@@ -402,7 +402,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
   <dt>--col</dt>
   <dd>表の追加列を指定します。 現在は、「group」、「provider」、および「tags」です。</dd>
   <dt>--output TYPE (オプション)</dt>
-  <dd>--output value  出力タイプを指定します。現在は JSON のみがサポートされています。このオプションは、「--id」と同時に指定することはできません。</dd>
+  <dd>--output value  出力タイプを指定します。現在は JSON のみがサポートされています。 このオプションは、「--id」と同時に指定することはできません。</dd>
   <dt>--global</dt>
   <dd>グローバル・スコープで操作します。</dd>
   <dt>--csv</dt>

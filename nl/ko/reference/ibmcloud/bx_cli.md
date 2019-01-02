@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -26,14 +26,14 @@ lastupdated: "2018-10-04"
 다음에는 해당 이름, 인수, 옵션, 필수 소프트웨어, 설명 및 예제를 포함하여 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 자세한 명령이 나열되어 있습니다.
 {:shortdesc}
 
-**참고:** *전제조건*에는 명령을 사용하기 전에 필요한 조치가 설명되어 있습니다. 전제조건 조치가 없는 명령은 **없음**으로 표시됩니다. 그 밖의 경우에는 전제조건으로 다음과 같은 조치 중 하나 이상을 수행해야 할 수 있습니다.
+*전제조건*에는 명령을 사용하기 전에 필요한 조치가 나열되어 있습니다. 전제조건 조치가 없는 명령은 **없음**으로 표시됩니다. 그 밖의 경우에는 전제조건으로 다음과 같은 조치 중 하나 이상을 수행해야 할 수 있습니다.
 
 <dl>
 <dt>엔드포인트</dt>
 <dd>명령을 사용하기 전에 <code>ibmcloud api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
 <dt>로그인</dt>
 <dd>이 명령을 사용하기 전에 <code>ibmcloud login</code> 명령을 사용하여 로그인해야 합니다.
- 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여 API 키로 인증하십시오. API 키를 작성하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **플랫폼 API 키**로 이동하십시오.
+ 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여 API 키로 인증하십시오.
 </dd>
 <dt>대상</dt>
 <dd>이 명령을 사용하기 전에 <code>ibmcloud target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
@@ -282,7 +282,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -c <i>ACCOUNT_ID</i>(선택사항) </dt>
   <dd> 대상 계정의 ID입니다. 이 옵션은 --no-account와 배타적입니다.</dd>
   <dt> --no-account(선택사항) </dt>
-  <dd> 계정을 사용하지 않은 로그인을 강제합니다. 이 옵션은 권장되지 않습니다. 이 옵션은 -c와 배타적입니다.</dd>
+  <dd> 계정 없이 강제 로그인합니다. 이 옵션은 권장되지 않습니다. 이 옵션은 -c와 배타적입니다.</dd>
   <dt> -g <i>RESOURCE_GROUP</i>(선택사항) </dt>
   <dd> 대상 리소스 그룹의 이름</dd>
   <dt> -o <i>ORG</i>(선택사항)</dt>
@@ -441,18 +441,19 @@ ibmcloud update [-f]
 </dl>
 
 
-## 일반 CLI(ibmcloud sl) 명령
+## 일반 클래식 인프라 서비스 명령
 {: #softlayer_cli}
 
 
-인프라 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 인프라 서비스 명령을 사용하십시오.
+인프라 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 클래식 인프라 명령을 사용하십시오.
+
 
 다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 보려면 `ibmcloud sl` 명령을 사용하십시오.
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 명령">
-<caption>표 1. 일반 인프라 서비스 명령</caption>
+<caption>표 1. 일반 클래식 인프라 명령</caption>
  <thead>
- <th colspan="6">일반 인프라 서비스 명령</th>
+ <th colspan="6">일반 클래식 인프라 명령</th>
  </thead>
  <tbody>
  <tr>
@@ -466,7 +467,7 @@ ibmcloud update [-f]
  ## ibmcloud sl init
 {: #sl_init}
 
-{{site.data.keyword.BluSoftlayer_notm}} 인프라 환경에 연결하는 데 사용되는 구성 설정을 초기화하십시오. 구성에는 사용자 이름, API 키 또는 비밀번호, 계정 및 엔드포인트가 포함됩니다.
+클래식 인프라 환경에 연결하는 데 사용되는 구성 설정을 초기화하십시오. 구성에는 사용자 이름, API 키 또는 비밀번호, 계정 및 엔드포인트가 포함됩니다.
 ```
 ibmcloud sl init [OPTIONS]
 ```
@@ -474,7 +475,7 @@ ibmcloud sl init [OPTIONS]
 <strong>명령 옵션</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>{{site.data.keyword.BluSoftlayer_notm}} 인프라 API 엔드포인트 URL. 기본값: https://api.softlayer.com/rest/v3.1 (API 키 인증의 경우), https://api.softlayer.com/mobile/v3.1 (IBM ID 인증의 경우).</dd>
+<dd>클래식 인프라 API 엔드포인트 URL. 기본값: https://api.softlayer.com/rest/v3.1 (API 키 인증의 경우), https://api.softlayer.com/mobile/v3.1 (IBM ID 인증의 경우).</dd>
 <dt>-u, --sl-user</dt>
 <dd>Gen1 인프라 사용자 이름.</dd>
 <dt>-p, --sl-password</dt>
@@ -493,14 +494,14 @@ ibmcloud sl init [OPTIONS]
 <dd>전화 인증이 사용되는 경우 인증 토큰.</dd>
 </dl>
 
-예: {{site.data.keyword.BluSoftlayer_notm}} 인프라 사용자 이름 및 비밀번호/API 키로 로그인
+예: 클래식 인프라 사용자 이름 및 비밀번호/API 키로 로그인
 ```
 $ ibmcloud sl init
-Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
-1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+Choose how to configure classic infrastructure authentication:
+1. Login with your classic infrastructure user name and password/API key
 2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 Enter a number>1
-Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
+classic infrastructure API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
 Username: []> user@example.com
 API key or password: []> abcd
 
@@ -508,7 +509,7 @@ API endpoint:    https://api.softlayer.com/rest/v3.1
 User name:       user@example.com   
 API Key:         xxxxxxxxxx
 ```
-예: {{site.data.keyword.Bluemix_notm}} Single-Sign-On을 사용하여 Softlayer에 로그인
+예: {{site.data.keyword.Bluemix_notm}} Single-Sign-On을 사용하여 클래식 인프라에 로그인
 ```
 $ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
@@ -525,16 +526,16 @@ No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s
 
 
 $ ibmcloud sl init
-Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+Choose how to configure classic infrastructure authentication:
 
-1. Login with Softlayer user name and password/API key
+1. Login with your classic infrastructure user name and password/API key
 2. Use IBM Cloud Single-Sign-On
 Enter a number> 2
-{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
+classic infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
 Setting account to: 123456
 OK
 
-{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
+classic infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
 
 Account ID:                123456   
 User ID:                   user@example.com  
@@ -544,7 +545,7 @@ IMS token:                 xxxxxxxxxx
 ## ibmcloud sl help
 {: #sl_help}
 
-{{site.data.keyword.BluSoftlayer_notm}} 인프라 환경을 운영하기 위한 모든 명령에 대한 도움말 정보를 봅니다.
+클래식 인프라 환경을 운영하기 위한 모든 명령에 대한 도움말 정보를 봅니다.
 ```
 ibmcloud sl help
 ```

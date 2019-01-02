@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Virtual Server
+# 가상 서버 작성 및 작업
 
-{{site.data.keyword.BluVirtServers}}는 전용 코어와 메모리 할당을 포함하여 구매하는 확장 가능한 서버입니다. 컴퓨팅 리소스를 찾고 있다면 이미지 템플리트와 같은 기능에 액세스하여 몇 분 안에 추가할 수 있는 최고의 옵션입니다.  
+{{site.data.keyword.BluVirtServers}}는 전용 코어와 메모리 할당을 포함하여 구매하는 확장 가능한 서버입니다. 컴퓨팅 리소스를 찾고 있다면 이미지 템플리트와 같은 기능에 액세스하여 몇 분 안에 추가할 수 있는 최고의 옵션입니다. 
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 인프라 가상 서버를 관리하십시오.
+다음 명령을 사용하여 클래식 인프라 가상 서버를 관리하십시오.
 {: shortdesc}
 
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 가상 서버 명령">
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 가상 서버 명령">
  <thead>
  </thead>
  <tbody>
@@ -87,7 +87,7 @@ ibmcloud sl vs capture IDENTIFIER [OPTIONS]
 <dt>-n, --name</dt>
 <dd>필수. 이미지의 이름입니다.</dd>
 <dt>--all</dt>
-<dd>VS에 속해 있는 모든 디스크 캡처.</dd>
+<dd>VS에 소속된 모든 디스크 캡처.</dd>
 <dt>--note</dt>
 <dd>이미지와 연관시킬 참고 추가.</dd>
 </dl>
@@ -309,7 +309,7 @@ ibmcloud sl vs host-create [OPTIONS]
 <dt>-b, --billing</dt>
 <dd>청구 비율. 기본값: hourly. 옵션: hourly, monthly.</dd>
 <dt>-v, --vlan-private</dt>
-<dd>전용 호스트를 배치하려는 사설 VLAN ID. 'ibmcloud sl vlan list'를 참조하십시오.</dd>
+<dd>전용 호스트를 배치할 사설 VLAN ID. 'ibmcloud sl vlan list'를 참조하십시오.</dd>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>

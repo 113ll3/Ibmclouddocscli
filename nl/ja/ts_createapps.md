@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-11-05"
 {: #hostname-error}
 {: troubleshoot}
 
-{{site.data.keyword.dev_cli_short}} CLI を使用して Cloud Foundry にアプリをデプロイする場合、以下のエラーが表示されることがあります。固有のホスト名を入力してもこのメッセージが表示されることがあります。
+{{site.data.keyword.dev_cli_short}} CLI を使用して Cloud Foundry にアプリをデプロイする場合、以下のエラーが表示されることがあります。 固有のホスト名を入力してもこのメッセージが表示されることがあります。
 
 ```
 The hostname <myHostname> is taken.
@@ -128,7 +128,7 @@ CLI を使用してアプリを作成するときに、以下のエラーが表�
 ```
 FAILED                            
 Application created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -268,7 +268,7 @@ directly.
 - 現時点で認識されていない言語のアプリに対して [enable](/docs/cli/idt/commands.html#enable) コマンドを実行する。
 {: tsCauses}
 
-アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。これで問題が解決されず、言語が[サポートされる言語](/docs/cli/idt/commands.html#enable-language-options)のいずれかである場合は、`--language` パラメーターを使用して言語を指定してください。
+アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。 これで問題が解決されず、言語が[サポートされる言語](/docs/cli/idt/commands.html#enable-language-options)のいずれかである場合は、`--language` パラメーターを使用して言語を指定してください。
 {: tsResolve}
 
 ## クラウド・デプロイメントが有効になっているアプリをビルドまたは実行できないのはなぜですか?
@@ -284,3 +284,59 @@ directly.
 - Spring アプリでのそのような問題の解決について詳しくは、『[既存 Spring Boot アプリケーションでのクラウド・デプロイメントの有効化 (Enabling existing Spring Boot applications for cloud deployment)](/docs/java-spring/enable_existing.html#enable_existing)』を参照してください。
 - `Node.js` アプリでのそのような問題の解決について詳しくは、『[既存の Node.js アプリケーションでのクラウド・デプロイメントの有効化 (Enabling existing Node.js applications for cloud deployment)](/docs/node/enable_existing.html#enable_existing)』を参照してください。
 {: tsResolve}
+
+## {{site.data.keyword.Bluemix_notm}} 開発者ツールを手動でインストールするにはどのようにすればよいでしょうか?
+{: #appendix}
+ほとんどのユーザー向けにすべての前提条件がプラットフォーム・インストーラーを使用してインストールされます。 いずれかのコンポーネントを手動でインストールする必要がある場合のそれぞれの手順を以下に示します。
+開発プラグインをインストールするには、最初に [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) をインストールする必要があります。
+開発プラグイン自体を使用するには、以下のコマンドを実行してそれをインストールする必要があります。 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+アプリをローカルに実行およびデバッグするには、[Docker](https://www.docker.com/get-docker) もインストールする必要があります。
+ 
+アプリをコンテナーとしてデプロイするには、Kubernetes、Helm、および以下の IBM Cloud CLI プラグインもインストールする必要があります。
+ 
+### Kubernetes をインストールするには、次のようにします。
+Mac ユーザー:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+Linux ユーザー:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+Windows ユーザー:
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### Helm をインストールするには、次のようにします。
+Mac および Linux ユーザー:
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+Windows ユーザー:
+[バイナリー](https://github.com/kubernetes/helm/releases/tag/v2.7.2)をダウンロードしてインストールします。
+
+### container-registry プラグインをインストールするには、次のようにします。
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### container-service プラグインをインストールするには、次のようにします。
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

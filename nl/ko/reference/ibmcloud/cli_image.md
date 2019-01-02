@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 이미지
+# 컴퓨팅 이미지 작성, 편집 및 삭제
 
 다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 컴퓨팅 이미지를 관리하십시오.
 {: shortdesc}

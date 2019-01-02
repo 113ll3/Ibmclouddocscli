@@ -4,7 +4,7 @@ copyright:
 
    years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -14,14 +14,15 @@ lastupdated: "2018-08-28"
 {:codeblock: .codeblock}  
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 
 # {{site.data.keyword.dev_cli_notm}} CLI プラグイン (ibmcloud dev) コマンド
 {: #idt-cli}
 
-バージョン: 1.2.0
-リリース: 2018 年 3 月 8 日
+バージョン: 2.1.4
+リリース: 2018 年 8 月 31 日
 
-2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。 ただし、後日削除されるまで、`bluemix` および `bx` CLI CLI コマンドを引き続き使用できます。
+2018 年 5 月、{{site.data.keyword.Bluemix}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。 ただし、後日削除されるまで、`bluemix` および `bx` CLI CLI コマンドを引き続き使用できます。
 {: tip}
 
 以下の {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) コマンドを使用して、アプリケーションの作成、管理、デプロイ、デバッグ、およびテストを行います。
@@ -58,7 +59,7 @@ Windows &trade; を使用する場合、Windows 10 Pro 以降を実行する必�
 
 `run` を除くすべての用途に関して、アプリケーションをビルドするときは、`build-cmd-debug` 構成エレメントを使用します。 デバッグ用のアプリケーションをビルドする際は、コマンド・ライン・オプション `--debug` を指定します。  `run` コマンドで使用するためのアプリケーションをビルドするときは、`build-cmd-run` 構成エレメントを使用します。
 
-複数のコンテナーを使用してビルドするには、`cli-config.yml` で指定されている [Compose](https://docs.docker.com/compose/overview/) ファイルがアプリケーションに含まれているか、`dockerfile-tools` コマンド・パラメーターを使用して、このファイルを提供できなければなりません。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
+複数のコンテナーを使用してビルドするには、`cli-config.yml` で指定されている [Compose](https://docs.docker.com/compose/overview/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ファイルがアプリケーションに含まれているか、`dockerfile-tools` コマンド・パラメーターを使用して、このファイルを提供できなければなりません。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
 
 現行アプリケーション・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
 
@@ -164,9 +165,9 @@ ibmcloud dev debug
 ## delete
 {: #delete}
 
-`delete` コマンドを使用して、{{site.data.keyword.Bluemix}} スペースからアプリケーションを削除します。 パラメーターなしでコマンドを実行して、使用可能なアプリケーションをリストし、削除するアプリケーションを番号付きリストから選択できます。 アプリケーション・コードおよびディレクトリーはローカル・ディスク・スペースからは削除されません。
+`delete` コマンドを使用して、{{site.data.keyword.Bluemix_notm}} スペースからアプリケーションを削除します。 パラメーターなしでコマンドを実行して、使用可能なアプリケーションをリストし、削除するアプリケーションを番号付きリストから選択できます。 アプリケーション・コードおよびディレクトリーはローカル・ディスク・スペースからは削除されません。
 
-以下のコマンドを実行して、{{site.data.keyword.Bluemix}} からアプリケーションを削除します。
+以下のコマンドを実行して、{{site.data.keyword.Bluemix_notm}} からアプリケーションを削除します。
 
 ```
 ibmcloud dev delete <applicationName>
@@ -174,17 +175,17 @@ ibmcloud dev delete <applicationName>
 {: codeblock}
 
 
-**注:** {{site.data.keyword.Bluemix}} サービスは、削除**されません**。
-
+{{site.data.keyword.Bluemix_notm}} サービスは、削除**されません**。
+{: note}
 
 ## deploy
 {: #deploy}
 
 アプリケーションは、Cloud Foundry アプリケーションまたはコンテナーとしてデプロイできます。
 
-Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix}} にデプロイする前に、`manifest.yml` ファイルがアプリケーションのルート・ディレクトリーに存在する必要があります。
+Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix_notm}} にデプロイする前に、`manifest.yml` ファイルがアプリケーションのルート・ディレクトリーに存在する必要があります。
 
-アプリケーションをコンテナーとしてデプロイする前に、[Kubernetes](https://kubernetes.io/) と [Helm](https://github.com/kubernetes/helm) をローカルにインストールする必要があります。 Helm クライアント・バージョンが Helm サーバー・バージョンよりも新しくないことを確認してください。 `helm version` を実行することで、それら両方のバージョンを確認できます。 クライアント・バージョンには、v2.4.2 を使用することを推奨します。
+アプリケーションをコンテナーとしてデプロイする前に、[Kubernetes](https://kubernetes.io/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") と [Helm](https://github.com/kubernetes/helm){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") をローカルにインストールする必要があります。 Helm クライアント・バージョンが Helm サーバー・バージョンよりも新しくないことを確認してください。 `helm version` を実行することで、それら両方のバージョンを確認できます。 クライアント・バージョンには、v2.4.2 を使用することを推奨します。
 
 アプリケーションを Kubernetes にデプロイするには、 `cli-config.yml` 内で `deploy-target` に `container` を指定するか、パラメーター `-t container` を使用する必要があります。
 
@@ -200,9 +201,8 @@ Kubernetes デプロイメントの構成に必要なその他パラメーター
     ibm-cluster: "mycluster"
 ```
 
-以下の例に示すように、`cli-config.yml` 内で、Helm チャートの場所を `chart-path` プロパティーに定義し、`deploy-image-target` を構成するように選択できます。 `cli-config.yml` 内の `deploy-image-target` エレメントが、`chart/values.yml` ファイル内の `repository` エレメントおよび `tag` エレメントの代わりに使用されます。 具体的にデプロイ先を {{site.data.keyword.Bluemix}} にするには、構成エレメント `ibm-cluster` に、[チュートリアル: クラスターの作成](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)の説明に従って {{site.data.keyword.Bluemix}} 内に作成した Kubernetes クラスターの名前を設定します。
+以下の例に示すように、`cli-config.yml` 内で、Helm チャートの場所を `chart-path` プロパティーに定義し、`deploy-image-target` を構成するように選択できます。 `cli-config.yml` 内の `deploy-image-target` エレメントが、`chart/values.yml` ファイル内の `repository` エレメントおよび `tag` エレメントの代わりに使用されます。 具体的にデプロイ先を {{site.data.keyword.Bluemix_notm}} にするには、構成エレメント `ibm-cluster` に、{{site.data.keyword.Bluemix_notm}} 内に作成した Kubernetes クラスターの名前を設定します。
 
-プロビジョニング、構成、および Kubernetes クラスターへのデプロイについて詳しくは、[Deploy a scalable web application on Kubernetes](/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes) チュートリアルを参照してください。
 
 現行アプリケーション・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
 
@@ -245,7 +245,7 @@ ibmcloud dev deploy
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* {{site.data.keyword.Bluemix}} へのコンテナー・デプロイメントの場合に、Kubernetes クラスターの名前を定義するために使用されるオプションのパラメーター。
+* {{site.data.keyword.Bluemix_notm}} へのコンテナー・デプロイメントの場合に、Kubernetes クラスターの名前を定義するために使用されるオプションのパラメーター。
 * 使用法 `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
@@ -264,7 +264,7 @@ ibmcloud dev deploy
 ## diag
 {: #diag}
 
-このコマンドは、{{site.data.keyword.dev_cli_notm}} CLI のインストール済みの従属物のバージョン情報を表示するための診断として使用されます。これは、従属物が欠落しているかどうかの判別または問題のデバッグに特に役立ちます。
+このコマンドは、{{site.data.keyword.dev_cli_notm}} CLI のインストール済みの従属物のバージョン情報を表示するための診断として使用されます。 これは、従属物が欠落しているかどうかの判別または問題のデバッグに特に役立ちます。
 
 インストール済みの従属物のバージョンを表示するには、次のコマンドを実行します。
 
@@ -277,7 +277,7 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-新しいサービスを追加したり、既存のサービスを接続および切断したり、既存のサービスを削除したりして、アプリケーションを編集します。 アプリケーション・ディレクトリーのルートで次のコマンドを実行します。
+{{site.data.keyword.Bluemix_notm}} に既にあるアプリケーションへの接続、アプリケーションの {{site.data.keyword.Bluemix_notm}} サービスやアプリケーションの {{site.data.keyword.Bluemix_notm}} ツールチェーンの管理などのオプションを使用して、アプリケーションを編集します。{{site.data.keyword.Bluemix_notm}} 内のアプリケーションに接続されたローカル・アプリケーションについて、`edit` を使用して、新規サービスの追加、既存のサービスの接続と切断、またはアカウントからの既存のサービスの削除を行います。さらに、アプリケーションの {{site.data.keyword.Bluemix_notm}} ツールチェーンを作成または表示できます。アプリケーション・ディレクトリーのルートで次のコマンドを実行します。
 
 ```
 ibmcloud dev edit
@@ -292,7 +292,7 @@ ibmcloud dev edit
 
 切断されているサービスを選択すると、そのサービスをアプリケーションに接続するオプションと、アカウントからサービスを削除するオプションが示されます。 既存のサービスを接続すると、そのサービスの使用を開始するために、資格情報ファイルやソース・コードなどのファイルもダウンロードされます。
 
-また、アプリケーションに新しいサービスを追加するオプションを選択することもできます。 このオプションを選択すると、サービス選択のプロンプトが表示され、新しいサービスの使用を開始するために、資格情報ファイルやソース・コードなどの追加ファイルがダウンロードされます。
+新規サービスをアプリケーションに追加することもできます。これにより、サービス選択のプロンプトが表示され、新しいサービスの使用を開始するために、資格情報ファイルやソース・コードなどの追加ファイルがダウンロードされます。
 
 
 
@@ -301,7 +301,11 @@ ibmcloud dev edit
 
 既存のアプリケーションを {{site.data.keyword.Bluemix_notm}} デプロイメントに対応できるようにします。 `enable` コマンドは、既存アプリケーションの言語の自動検出を試み、その後、必要な追加情報を求めるプロンプトを出します。 これにより、ローカル Docker コンテナー、CloudFoundry デプロイメント、または Kubernetes/コンテナー・デプロイメントのために使用できるファイルが生成され、追加されます。
 
-以下のコマンドを実行して、現行ディレクトリー内の既存のアプリケーションを {{site.data.keyword.Bluemix_notm}} デプロイメントに対応できるようにします。
+{{site.data.keyword.Bluemix_notm}} にログインしている場合、当該ローカル・アプリケーションを、{{site.data.keyword.Bluemix_notm}} に既に存在しているアプリケーションに接続するか、新規 {{site.data.keyword.Bluemix_notm}} アプリケーションを作成することを選択できます。サービスや DevOps ツールチェーンなどの {{site.data.keyword.Bluemix_notm}} 機能を利用するには、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションが必要です。git リポジトリーから複製されたアプリケーションに対して {{site.data.keyword.Bluemix_notm}} アプリケーションが作成されると、{{site.data.keyword.Bluemix_notm}} アプリケーションはその構成にこのリポジトリーを組み込みます。 
+
+`enable` はベータ機能です。アプリケーションの有効化に問題がある場合は、[トラブルシューティング・ページ](/docs/cli/ts_createapps.html#troubleshoot)が役立ちます。特に、`enable` はモバイル・アプリケーションやフレームワーク向けではありません。複数のデプロイ可能な資産を生成する複雑なアプリケーションの場合、アプリケーションの各コンポーネントを個別に有効にする必要があります。 
+
+以下のコマンドを実行して、現行ディレクトリー内の既存のアプリケーションを有効にします。
 
 ```
 ibmcloud dev enable
@@ -318,6 +322,8 @@ ibmcloud dev enable
 	* `build.gradle` が存在すると、Gradle アプリケーションと識別されます。
 
 オプションで、検出されたアプリケーション言語を `--language` 引数を使用してオーバーライドすることもできます。  ただし、サポートされるのは有効かつ完全なアプリケーションのみです。 enable コマンドによってソース・コードが変更されることはありません。
+
+{: #enable-language-options}
 
 言語オプションは以下のとおりです。
 * node
@@ -345,6 +351,12 @@ ibmcloud dev enable
 
 * 既に使用可能になっているアプリケーションの再使用可能化を強制するために使用されるパラメーター。
 * 使用法 `ibmcloud dev enable -f|--force`
+
+#### `no-create`
+{: #enable-no-create}
+
+* 有効化ファイルをローカルに作成しながら、{{site.data.keyword.Bluemix_notm}} でアプリを作成しないようにするパラメーター。
+* 使用法 `ibmcloud dev enable --no-create`
 
 
 ## get-credentials
@@ -386,7 +398,7 @@ Windows &trade; を使用する場合、Windows 10 Pro 以降を実行する必�
 
 `run` コマンドによって、アプリケーションを実行できます。 まず、`build` コマンドを使用して、アプリケーションに対するビルドが実行される必要があります。 `run` コマンドを起動すると、実行コンテナーが開始され、`container-port-map` パラメーターで定義されたポートが公開されます。 このステップを実行するためのエントリー・ポイントが実行コンテナー Dockerfile に含まれていない場合は、`run-cmd` パラメーターを使用してアプリケーションを起動できます。
 
-複数のコンテナーを使用して実行するには、アプリケーションに [Compose](https://docs.docker.com/compose/overview/) ファイルが含まれているか (`cli-config.yml` 内に指定されているか)、`dockerfile-run` コマンド・パラメーターを使用して、このファイルを指定する必要があります。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
+複数のコンテナーを使用して実行するには、アプリケーションに [Compose](https://docs.docker.com/compose/overview/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ファイルが含まれているか (`cli-config.yml` 内に指定されているか)、`dockerfile-run` コマンド・パラメーターを使用して、このファイルを指定する必要があります。 詳しくは、[Compose ファイル](/docs/apps/projects/compose_file.html)を参照してください。
 
 まず、アプリケーションをコンパイルします。
 
@@ -465,7 +477,7 @@ Windows &trade; を使用する場合、Windows 10 Pro 以降を実行する必�
 ibmcloud dev shell
 ```
 
-そうすると、{{site.data.keyword.dev_cli_short}} CLI によって、対話式シェルがアプリケーションの Docker コンテナーに開かれます。 シェル・コマンドのデフォルトのターゲット・コンテナーは、`cli-config.yml` ファイルの `container-shell-target` 値によって定義され、有効な値は、`run` または `tools` です。 この値が定義されていない場合、または無効値が指定されている場合、`shell` コマンドは、デフォルトで `tools` コンテナーをターゲットとします。 シェル・コマンドは、対応する Dockerfile 内の `WORKDIR` 命令によって指定されたディレクトリーにコンテナーを開きます。 `WORKDIR` が Dockerfile 内にリストされていない場合、コンテナーのルートが作業ディレクトリーとして使用されます。 詳しくは、[このリファレンス](https://docs.docker.com/engine/reference/builder/#workdir)を参照してください。
+そうすると、{{site.data.keyword.dev_cli_short}} CLI によって、対話式シェルがアプリケーションの Docker コンテナーに開かれます。 シェル・コマンドのデフォルトのターゲット・コンテナーは、`cli-config.yml` ファイルの `container-shell-target` 値によって定義され、有効な値は、`run` または `tools` です。 この値が定義されていない場合、または無効値が指定されている場合、`shell` コマンドは、デフォルトで `tools` コンテナーをターゲットとします。 シェル・コマンドは、対応する Dockerfile 内の `WORKDIR` 命令によって指定されたディレクトリーにコンテナーを開きます。 `WORKDIR` が Dockerfile 内にリストされていない場合、コンテナーのルートが作業ディレクトリーとして使用されます。 詳しくは、[この資料](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 代わりの方法として、`run` または `tools` のいずれかを引数としてコマンドに渡すこともできます。そうすると、そのコンテナーが開始され、シェルはそのコンテナーに開かれます。 同様に、`container-name` パラメーターを使用して、シェルを開くコンテナーの名前を渡すことができます。 ただし、このフラグは、実行中のコンテナーがないときに限って使用するようにしてください。 `run` 引数および `tools` 引数のほうが柔軟性が高く、その時点でいずれかのコンテナーが実行中の場合、コンテナーの切り替えが可能です。 例えば、ツール・コンテナーが実行中の場合に `ibmcloud dev shell run` を実行すると、`tools` コンテナーは停止し、`run` コンテナーが開始されます。その逆も可能です。
 
@@ -588,7 +600,7 @@ ibmcloud dev test
 
 Cloud Foundry にデプロイされたアプリケーションの場合、URL は、アプリケーションのホスト名とドメインから構成されます。
 
-Kubernetes にデプロイされたアプリケーションの場合、URL は、デプロイ先のノードの IP アドレスとパブリック・ポートから構成されます。 コマンドが、アプリのデプロイ先が Kubernetes であると判断した場合、CLI ツールによって確認を求めるプロンプトが出されます。 アプリケーションの実際のデプロイ先が Kubernetes ではなかったことを指定すると、Cloud Foundry URL が表示されます。 Kubernetes にデプロイされたアプリケーションの URL が表示されることを予期していたときに、コマンドがそれを表示しなかった場合は、`cli-config.yml` に `chart-path` のエントリーが含まれていることを確認するか、[ここ](#chart-path)に示されているとおり、コマンド・ラインからエントリーを提供してください。
+Kubernetes にデプロイされたアプリケーションの場合、URL は、デプロイ先のノードの IP アドレスとパブリック・ポートから構成されます。 コマンドが、アプリケーションのデプロイ先が Kubernetes であると判断した場合、CLI ツールによって確認を求めるプロンプトが出されます。 アプリケーションの実際のデプロイ先が Kubernetes ではなかったことを指定すると、Cloud Foundry URL が表示されます。 Kubernetes にデプロイされたアプリケーションの URL が表示されることを予期していたときに、コマンドがそれを表示しなかった場合は、`cli-config.yml` に `chart-path` のエントリーが含まれていることを確認するか、[ここ](#chart-path)に示されているとおり、コマンド・ラインからエントリーを提供してください。
 
 以下のコマンドを実行して、アプリケーションの URL を表示します。
 
@@ -618,7 +630,7 @@ ibmcloud dev view
 #### `web-app-root`
 {: #web-app-root}
 
-* Cloud Foundry および Kubernetes アプリ URL に追加するプロジェクトのルート。
+* Cloud Foundry および Kubernetes アプリケーション URL に追加するプロジェクトのルート。
 * 使用法: `ibmcloud dev view --web-app-root [root]`
 
 
@@ -657,7 +669,8 @@ ibmcloud dev build/deploy/view -t container --trace
 
 以下のパラメーターを `build|debug|run|test` コマンドに指定して使用するか、アプリケーションの `cli-config.yml` ファイルを直接更新することで使用できます。 [`debug`](#debug-parameters) コマンドおよび [`run`](#run-parameters) コマンドでは、追加のパラメーターが使用可能です。
 
-**注**: コマンド・ラインで入力されたコマンド・パラメーターは、`cli-config.yml` 構成よりも優先されます。
+コマンド・ラインで入力されたコマンド・パラメーターは、`cli-config.yml` 構成よりも優先されます。
+{: note}
 
 #### `config-file`  
 {: #config-file}

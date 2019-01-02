@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Pedir
+# Gerenciando pedidos e cotações de infraestrutura clássica
 
 <table summary="Comandos gerais de infraestrutura {{site.data.keyword.BluSoftlayer_notm}} em ordem alfabética que possuem links que levam você para mais informações sobre o comando">
- <caption>Tabela 1. Pedidos de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <caption>Tabela 1. Pedidos de infraestrutura clássica</caption>
  <thead>
- <th colspan="6">Pedidos de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Pedidos de infraestrutura clássica</th>
  </thead>
  <tbody>
  <tr>

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Grupos de recursos e recursos
+# Trabalhando com recursos e grupos de recursos
 {: #ibmcloud_commands_resource}
 
 Um grupo de recursos é uma maneira para organizar os recursos da conta em agrupamentos customizáveis. Use os

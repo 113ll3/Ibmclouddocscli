@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -128,7 +128,7 @@ CLI를 사용하여 앱을 작성할 때 다음 오류가 표시될 수 있습�
 ```
 FAILED                            
 Application created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -284,3 +284,57 @@ directly.
 - Spring 앱에서 해당 문제점을 해결하는 데 관한 자세한 정보는 [클라우드 배치를 위해 기존 Spring 부트 애플리케이션 사용](/docs/java-spring/enable_existing.html#enable_existing)을 참조하십시오.
 - `Node.js` 앱에서 해당 문제점을 해결하는 데 관한 자세한 정보는 [클라우드 배치를 위해 기존 Node.js 애플리케이션 사용](/docs/node/enable_existing.html#enable_existing)을 참조하십시오.
 {: tsResolve}
+
+## 수동으로 {{site.data.keyword.Bluemix_notm}} 개발자 도구를 설치하는 방법
+{: #appendix}
+대부분의 사용자를 위해 플랫폼 설치 프로그램을 사용하여 모든 필수 소프트웨어가 설치됩니다. 컴포넌트를 수동으로 설치해야 하는 경우 각각에 대해 다음 지시사항을 따르십시오. dev 플러그인을 설치하려면 먼저 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)를 설치해야 합니다. dev 플러그인 자체를 사용하려면 다음 명령을 실행하여 설치해야 합니다. 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+앱을 로컬로 실행하고 디버깅하려면 [Docker](https://www.docker.com/get-docker)도 설치해야 합니다.
+ 
+앱을 컨테이너로 배치하려면 Kubernetes, Helm 및 다음 IBM Cloud CLI 플러그인도 설치해야 합니다.
+ 
+### Kubernetes를 설치하려면 다음을 수행하십시오.
+Mac 사용자:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+Linux 사용자:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+Windows 사용자:
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### Helm을 설치하려면 다음을 수행하십시오.
+Mac 및 Linux 사용자:
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+Windows 사용자:
+[2진](https://github.com/kubernetes/helm/releases/tag/v2.7.2)을 다운로드하여 설치하십시오.
+
+### container-registry 플러그인을 설치하려면 다음을 수행하십시오.
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### container-service 플러그인을 설치하려면 다음을 수행하십시오.
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

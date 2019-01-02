@@ -3,15 +3,16 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-30"
 
 ---
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}  
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note: .note}
 
 # {{site.data.keyword.dev_cli_notm}} CLI 설정
 {: #add-cli}
@@ -50,6 +51,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+[GitHub 저장소](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)에서 설치 프로그램 스크립트를 다운로드할 수도 있습니다.
+
 ## 설치 확인
 설치를 확인하려면 `help` 명령을 실행하십시오.
 
@@ -79,7 +82,8 @@ ibmcloud dev help
 	```
 	{: codeblock}
 
-	**참고:** 인증 정보가 거부되면 연합 ID를 사용할 수 있습니다. 연합 ID를 사용하여 인증하려면 다음 단계를 따르십시오.
+	인증 정보가 거부되는 경우 연합 ID를 사용 중일 수 있습니다. 연합 ID를 사용하여 인증하려면 다음 단계를 따르십시오.
+	{: note}
 
 	1. [{{site.data.keyword.iamshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.bluemix.net/iam/#/apikeys){: new_window}에 로그인하십시오.
 	2. **API 키 작성**을 선택하십시오.
@@ -118,7 +122,7 @@ ibmcloud dev help
 
 - [IBM Cloud Developer Tools 기본 시작 페이지](https://www.ibm.com/cloud/cli) - IDT CLI에 대한 기본 제품 페이지
 - [IBM Developer Tools 설치 프로그램](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - 자세한 설치 지시사항이 있는 공용 GitHub 저장소
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - 클라우드 네이티브 앱을 작성하고 관리하기 위한 IDT 도구의 컴패니온인 IBM Cloud 콘솔 페이지
+- [IBM Cloud App Service](https://{DomainName}/developer/appservice) - 클라우드 네이티브 앱을 작성하고 관리하기 위한 IDT 도구의 컴패니온인 IBM Cloud 콘솔 페이지
 - [GitHub에 문제 보고](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud 기술에 대한 Slack - #developer-tools 채널](https://ibm-cloud-tech.slack.com) - [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/)서 팀 액세스 권한 요청
 

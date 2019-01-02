@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# ファイル・ストレージ
+# ファイル・ストレージ・サービスの操作
 
 {{site.data.keyword.filestorage_full}} は、永続的で高速、柔軟な、NFS ベースのネットワーク接続型の {{site.data.keyword.filestorage_short}} です。 この Network Attached Storage (NAS) 環境では、ファイル共有機能とパフォーマンスを完全に制御できます。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} classic インフラストラクチャー・ファイル・ストレージ・サービスのボリュームを管理します。
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのファイル・ストレージ・サービスのボリュームを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ファイル・ストレージ</caption>
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} クラシック・インフラストラクチャー・コマンド">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} クラシック・インフラストラクチャーのファイル・ストレージ</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ファイル・ストレージ</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} クラシック・インフラストラクチャーのファイル・ストレージ</th>
  </thead>
  <tbody>
  <tr>
@@ -472,7 +472,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>ソートの基準にする列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions、mount_addr。</dd>
 <dt>--columns</dt>
-<dd>表示する列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr。</dd>
+<dd>表示する列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr、notes。</dd>
 </dl>
 
 **例**:
@@ -548,6 +548,8 @@ ibmcloud sl file volume-order [OPTIONS]
 <dd>必須。 データ・センターの短縮名。</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>ボリュームと共にスナップショット・スペースを注文するためのオプション・パラメーター。</dd>
+<dt>-b, --billing</dt>
+<dd>請求レートのオプション・パラメーター (デフォルトは monthly)。オプションは hourly、monthly です。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>

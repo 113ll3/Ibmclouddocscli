@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -35,7 +35,7 @@ Para obter mais comandos para gerenciar plug-ins, execute `ibmcloud plugin` para
 2. A CLI do {{site.data.keyword.Bluemix_notm}} tem o repositório oficial com o nome 'IBM Cloud'. É possível procurar os plug-ins oficiais conforme mostrado no exemplo a seguir:
 
   ```
-  $ ibmcloud plugin repo-plugins -r IBM Cloud
+  $ ibmcloud plugin repo-plugins
   Getting plug-ins from repository 'IBM Cloud'...
 
   Repository: IBM Cloud
@@ -50,10 +50,10 @@ Para obter mais comandos para gerenciar plug-ins, execute `ibmcloud plugin` para
 Use o comando `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` para instalar o plug-in. Por exemplo, use o seguinte comando para instalar um plug-in do repositório de plug-in oficial da IBM 'IBM Cloud':
 
   ```
-  $ ibmcloud plugin install auto-scaling -r IBM Cloud
+  $ ibmcloud plugin install auto-scaling 
   Looking up 'auto-scaling' from repository 'IBM Cloud'...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCLoudFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
@@ -78,7 +78,7 @@ Use o comando `ibmcloud plugin install URL` para instalar um plug-in diretamente
   ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
   Attempting to download the binary file...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCloudFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$

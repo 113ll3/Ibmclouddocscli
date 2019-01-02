@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -55,6 +55,40 @@ ibmcloud login
 {: codeblock}
 
 
+### アプリケーションの言語を認識する enable コマンドの問題
+{: #enable-unknown-language}
+
+```
+FAILED
+Could not determine the language of your application.
+
+Try using the --language flag to specify the language of your application 
+directly. 
+```
+#### 原因
+{: #enable-unknown-language-cause}
+
+このエラーの原因としては、以下が考えられます。
+1. アプリケーションのソース・ディレクトリーではないディレクトリーから [enable](commands.md#enable) コマンドを実行する。
+2. 現時点で認識されていない言語のアプリに対して [enable](commands.md#enable) コマンドを実行する。
+
+#### 解決策
+{: #enable-unknown-language-resolution}
+
+必ず、アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。これで状態が解決されず、言語が[サポートされる言語](commands.md#enable-language-options)のいずれかである場合は、`--language` パラメーターを使用して言語を指定してください。
+
+### 有効になっているアプリのビルドまたは実行時の問題
+{: #enable-build-run-failures}
+
+有効になっているアプリを[ビルド](commands.md#build)または[実行](commands.md#run)しようとしたときに、さまざまな失敗が発生することがあります。
+
+#### 解決策
+{: #enable-build-run-failures-resolution}
+
+Spring アプリでこのような問題を解決するためのガイドについては、この[記事](/docs/java-spring/enable_existing.html#enable_existing)を参照してください。
+
+Node.js アプリでこのような問題を解決するためのガイドについては、この[記事](/docs/node/enable_existing.html#enable_existing)を参照してください。
+
 ### {{site.data.keyword.dev_cli_short}} の一般障害
 {: #general}
 
@@ -83,7 +117,7 @@ ibmcloud login
 {: codeblock}
 
 
-### エラー: 新規プロジェクトを実行すると、「No such image」と表示される
+### エラー: 新規アプリケーションを実行すると、「No such image」と表示される
 {: #nosuchimage}
 
 ビルドをせずにプロジェクトを実行すると、以下のエラーが表示される場合があります。
@@ -93,12 +127,12 @@ $ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
-Creating image bx-dev-testProject based on Dockerfile...
+Creating image ibmcloud-dev-testProject based on Dockerfile...
 OK                    
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
-Error: No such image: bx-dev-testProject
+Error: No such image: ibmcloud-dev-testProject
 ```
 
 
@@ -149,7 +183,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 このエラーを回避するために、別のプランを選択するようプロンプトが出されます。
 
 
-### プロジェクト作成中にコードの取得に失敗する
+### アプリケーション作成中にコードの取得に失敗する
 {: #code}
 
 {{site.data.keyword.dev_cli_short}} を使用してプロジェクトを作成すると、以下のエラーが表示される場合があります。
@@ -157,7 +191,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 ```
 FAILED                            
 Project created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 
@@ -184,7 +218,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 * {{site.data.keyword.dev_console}}を使用します。
 
-	1. {{site.data.keyword.dev_console}}で、[プロジェクト![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/developer/projects)を選択し、**「コードの取得 (Get the Code)」**をクリックします。
+	1. {{site.data.keyword.dev_console}}で、[プロジェクト![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/projects)を選択し、**「コードの取得 (Get the Code)」**をクリックします。
 
 	2. **「コードの生成 (Generate Code)」**をクリックします。
 
@@ -318,7 +352,7 @@ ibmcloud cr namespaces
 ## 付録
 {: #appendix}
 
-プラットフォーム・インストーラーを使用するほとんどのユーザー用に、すべての前提条件がインストールされます。いずれかのコンポーネントを手動でインストールする必要がある場合の手順を以下に示します。
+すべての前提条件は、このページの上部にあるプラットフォーム・インストーラーを使用して、ほとんどのユーザーに対してインストールされます。いずれかのコンポーネントを手動でインストールする必要がある場合の手順を以下に示します。
 
 開発プラグインをインストールするには、まず [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started) をインストールする必要があります。
 
@@ -326,7 +360,7 @@ ibmcloud cr namespaces
 
 アプリケーションをローカルに実行およびデバッグするには、[Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker) もインストールする必要があります。
 
-アプリケーションをコンテナーとしてデプロイするには、`Kubernetes`、`Helm`、および以下の IBM Cloud CLI プラグインもインストールする必要があります。
+アプリケーションをコンテナーとしてデプロイするには、Kubernetes、Helm、および以下の IBM Cloud CLI プラグインもインストールする必要があります。
 
 Kubernetes をインストールするには、次のようにします。
 * Mac ユーザー:
@@ -364,7 +398,7 @@ container-service プラグインをインストールするには、次のよ�
 ## ヘルプおよびサポートの利用
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}または {{site.data.keyword.dev_cli_notm}} に関して問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。 サポート・チケットをオープンすることもできます。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}または {{site.data.keyword.dev_cli_notm}} に関して問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。 サポート・ケースをオープンすることもできます。
 
 フォーラムに投稿するときには、{{site.data.keyword.Bluemix_notm}} 開発チームに通知するために、質問にタグを付けることができます。
 
@@ -383,6 +417,6 @@ container-service プラグインをインストールするには、次のよ�
 
 これらのフォーラムの使用について詳しくは、『[ヘルプの取得![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#getting-help)』を参照してください。
 
-{{site.data.keyword.IBM}} サポート・チケットのオープン、またはサポート・レベルおよびチケットの重大度については、『[サポートへのお問い合わせ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#contacting-support)』を参照してください。
+{{site.data.keyword.IBM}} サポート・ケースのオープン、またはサポート・レベルおよびケースの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#contacting-support) を参照してください。
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->

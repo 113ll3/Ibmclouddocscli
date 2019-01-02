@@ -5,14 +5,15 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 
-# Contas, usuários e organizações
+# Gerenciando contas, usuários e organizações do Cloud Foundry
 {: #ibmcloud_commands_account}
 
 Use os comandos a seguir para gerenciar as contas, os usuários em uma conta, a organização, o espaço e as funções
@@ -89,8 +90,7 @@ como 'all', lista as organizações em todas as regiões.</dd>
    <dt>-c ACCOUNT_ID</dt>
    <dd>ID da conta. Lista as organizações na conta fornecida. Usa como padrão a conta atual, se não especificado. Se configurado como 'all', lista as organizações em todas as contas. Essa opção é exclusiva com '-u'.</dd>
    <dt>-u ACCOUNT_OWNER</dt>
-   <dd>Nome do proprietário da conta. Lista as organizações nas contas pertencentes ao usuário fornecido. Usa como padrão a conta atual, se não especificado. Se configurado como
-'all', lista as organizações em todas as contas. Essa opção é exclusiva com '-c'.</dd>
+   <dd>Nome do proprietário da conta. Lista as organizações nas contas pertencentes ao usuário fornecido. Usa como padrão a conta atual, se não especificado. Se configurado como 'all', lista as organizações em todas as contas. Essa opção é exclusiva com '-c'.</dd>
    </dl>
 
 <strong>Exemplos</strong>:
@@ -412,7 +412,8 @@ Designe o usuário `Mary` à organização do `IBM` como função `OrgManager`:
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**Nota**: é possível configurar as funções de organização/espaço usando a CLI, mas se você desejar configurar as outras permissões, precisará usar a UI. Para obter detalhes adicionais, veja [Designando o acesso de usuário](/docs/iam/assignaccess.html#assignaccess).
+É possível configurar funções de organização/espaço usando a CLI, mas se você desejar configurar as outras permissões, terá que usar a IU. Para obter detalhes adicionais, consulte [Gerenciando acesso a recursos](/docs/iam/mngiam.html#iammanidaccser).
+{: note}
 <!-- Begin Staging URL vs Prod URL -->
 
 ## ibmcloud account org-role-unset

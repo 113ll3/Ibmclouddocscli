@@ -5,14 +5,15 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 
-# 계정, 사용자 및 조직
+# 계정, 사용자 및 Cloud Foundry 조직 관리
 {: #ibmcloud_commands_account}
 
 다음 명령을 사용하여 계정, 계정의 사용자 및 퍼블릭 Cloud Foundry 환경의 조직, 공간 및 역할을 관리하십시오.
@@ -331,7 +332,7 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 <dt>-a(선택사항)</dt>
 <dd>지정된 조직의 모든 사용자를 나열하지만, 역할별로 그룹화하지는 않습니다.</dd>
 <dt>--output FORMAT(선택사항)</dt>
-<dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+<dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -410,7 +411,8 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**참고**: CLI를 사용하여 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](/docs/iam/assignaccess.html#assignaccess)을 참조하십시오.
+CLI를 사용하여 조직/영역 역할을 설정할 수 있지만 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 추가 세부사항은 [리소스에 대한 액세스 관리](/docs/iam/mngiam.html#iammanidaccser)를 참조하십시오.
+{: note}
 <!-- Begin Staging URL vs Prod URL -->
 
 ## ibmcloud account org-role-unset

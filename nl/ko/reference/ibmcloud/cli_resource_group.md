@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 리소스 그룹 및 리소스
+# 리소스 및 리소스 그룹에 대한 작업
 {: #ibmcloud_commands_resource}
 
 리소스 그룹은 사용자 정의할 수 있는 그룹화에서 계정 리소스를 구성하기 위한 방법입니다. 다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 리소스 그룹 및 리소스 그룹의 리소스를 관리하십시오.
@@ -90,7 +90,7 @@ ibmcloud resource groups [--default] [--output FORMAT]
   <dt>--default</dt>
   <dd>현재 계정의 기본 그룹을 가져옵니다.</dd>
   <dt>--output FORMAT(선택사항)</dt>
-  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -125,7 +125,7 @@ ibmcloud resource group NAME [--id] [--output FORMAT]
   <dt>--id</dt>
   <dd>ID만 표시</dd>
   <dt>--output FORMAT(선택사항)</dt>
-  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -448,7 +448,7 @@ ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
   <dt>SERVICE_ALIAS(필수)</dt>
   <dd>서비스 별명 이름</dd>
   <dt>--output FORMAT(선택사항)</dt>
-  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 <strong>예</strong>:
@@ -572,7 +572,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
   <dt>--alias-name</dt>
   <dd>서비스 별명 이름</dd>
   <dt>--output FORMAT(선택사항)</dt>
-  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 <strong>예</strong>:
@@ -600,7 +600,7 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dt>--id</dt>
   <dd>서비스 키의 ID 표시</dd>
   <dt>--output FORMAT(선택사항)</dt>
-  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 <strong>예</strong>:
@@ -694,7 +694,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [-
   <dt>--instance-name</dt>
   <dd>소속된 서비스 인스턴스의 이름.</dd>
   <dt>--output FORMAT(선택사항)</dt>
-  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 <strong>예</strong>:

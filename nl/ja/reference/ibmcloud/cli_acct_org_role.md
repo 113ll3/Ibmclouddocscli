@@ -5,14 +5,15 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 
-# アカウント、ユーザー、および組織
+# アカウント、ユーザー、および Cloud Foundry 組織の管理
 {: #ibmcloud_commands_account}
 
 以下のコマンドを使用して、パブリック Cloud Foundry 環境のアカウント、アカウントに含まれるユーザー、組織、スペース、および役割を管理します。
@@ -410,7 +411,8 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**注**: 組織/スペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。 詳細については、[ユーザー・アクセスの割り当て](/docs/iam/assignaccess.html#assignaccess)を参照してください。
+組織/スペースの役割は CLI を使用して設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。 詳しくは、[リソースに対するアクセス権限の管理](/docs/iam/mngiam.html#iammanidaccser)を参照してください。
+{: note}
 <!-- Begin Staging URL vs Prod URL -->
 
 ## ibmcloud account org-role-unset

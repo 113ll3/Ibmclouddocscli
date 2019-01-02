@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -27,6 +27,7 @@ lastupdated: "2018-05-24"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 {:tip: .tip}
+{:note: .note}
 
 # Faça download, modifique e reimplemente seu app Cloud Foundry com a interface da linha de comandos
 
@@ -45,7 +46,8 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_starter-code.svg" alt="Fazer download do código do aplicativo" /> </a>
 
-      **Nota**: coloque a versão do nó para `8.9.x` ou a mais recente no arquivo `package.json` antes de continuar.
+      Atualize a versão do nó para `8.9.x` ou a versão mais recente no arquivo `package.json` antes de continuar.
+      {: note}
 
   2. Mude para o diretório no qual o seu código está localizado.
 
@@ -69,7 +71,8 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Nota**: deve-se incluir aspas simples ou duplas ao redor de `username`, `org_name` e `space_name` no caso de o valor conter um espaço, por exemplo, `-o "my org"`.
+  Deve-se incluir aspas simples ou duplas ao redor de `username`, `org_name` e `space_name` se o valor contiver um espaço, por exemplo, `-o "my org"`.
+  {: note}
 
   5. Em <var class="keyword varname">your_new_directory</var>, reimplemente seu app no {{site.data.keyword.Bluemix_notm}} usando o comando `bluemix app push`. Para obter mais informações sobre o comando `bx app push`, veja [Fazendo upload de seu aplicativo](/docs/starters/upload_app.html).
 

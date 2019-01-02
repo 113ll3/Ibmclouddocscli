@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -15,19 +15,20 @@ lastupdated: "2018-07-27"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
+{:note: .note}
 
-
-# Cloud Foundry (cf) コマンド
+# Cloud Foundry での作業 (cf コマンド)
 {: #cf}
 
 Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は、アプリを管理するための一連のコマンドを提供します。 以下の情報では、アプリを管理するために最もよく使用される cf コマンドをリストし、コマンドの名前、オプション、使用法、前提条件、説明、および例を示します。 すべての cf コマンドと関連ヘルプ情報をリストするには、`cf help` を使用します。 特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
 {: shortdesc}
 
-Cloud Foundry CLI の開始について詳しくは、[Getting Started](https://github.com/cloudfoundry/cli#getting-started) を参照してください。
+Cloud Foundry CLI の開始について詳しくは、[Getting Started ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window} を参照してください。
 
 `cf CLI` コマンドのより詳細なリストについては、コミュニティー内の[Cloud Foundry CLI リファレンス・ガイド![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}を参照してください。
 
-**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、[Using the cf CLI with an HTTP Proxy Server ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} を参照してください。
+ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、『[Using the cf CLI with a Proxy Server ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}』を参照してください。
+{: note}
 
 
 ## Cloud Foundry CLI コマンドの索引
@@ -86,7 +87,7 @@ Cloud Foundry CLI の開始について詳しくは、[Getting Started](https://
 ## cf api
 {: #cf_api}
 
-このコマンドを使用して、{{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL を表示または指定します。
+このコマンドを使用して、{{site.data.keyword.Bluemix}} の API エンドポイントの URL を表示または指定します。
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
@@ -98,7 +99,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (オプション)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
+   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある {{site.data.keyword.Bluemix_notm}} API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
    現在使用している API エンドポイントの URL を表示したい場合、cf api
 コマンドにこのパラメーターを指定する必要はありません。</dd>
    <dt>* --skip-ssl-validation</dt>
@@ -393,9 +394,10 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}} にログインします。 [フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
+{{site.data.keyword.Bluemix_notm}} にログインします。 フェデレーテッド ID でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
 
-**注**: {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを使用してログインすることもできます。 ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。 API キーの作成について詳しくは、『[API キーの管理](/docs/iam/apikeys.html)』を参照してください。
+{{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを使用してログインすることもできます。 ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。 API キーの作成について詳しくは、『[API キーの処理](/docs/iam/apikeys.html)』を参照してください。
+{: note}
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -818,10 +820,6 @@ cf -v
 ```
 {: codeblock}
 
-
-
-# 関連リンク
-{: #rellinks}
 
 ## 関連リンク
 {: #general}

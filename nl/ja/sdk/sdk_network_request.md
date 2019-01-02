@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # ネットワーク要求を行う
 {: #sdk-network-request}
@@ -94,7 +94,7 @@ lastupdated: "2018-06-21"
 
 `BMSURLSession` クラスは、iOS のみで使用可能です。
 
-使用法の完全な例については、`BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core) を参照してください。
+使用法の完全な例については、`BMSCore` GitHub [README ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} を参照してください。
 
 
 ## Cordova

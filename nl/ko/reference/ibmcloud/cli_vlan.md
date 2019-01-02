@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN
+# 클래식 인프라 VLAN 관리
 
-VLAN(Virtual Local Area Network)은 퍼블릭 및 프라이빗 네트워크의 브로드캐스트 트래픽을 격리하기 위해 {{site.data.keyword.cloud}}에서 사용합니다.
+VLAN(Virtual Local Area Network)은 퍼블릭 및 프라이빗 네트워크의 브로드캐스트 트래픽을 격리하기 위해 {{site.data.keyword.cloud}}에서 사용합니다. VLAN은 필요에 따라 다른 오퍼링을 이행하기 위해 지정됩니다.
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라 VLAN을 관리하십시오.
+다음 명령을 사용하여 클래식 인프라 VLAN을 관리하십시오.
 {: shortdesc}
 
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 VLAN 명령">
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 VLAN 명령">
  <thead>
  </thead>
  <tbody>

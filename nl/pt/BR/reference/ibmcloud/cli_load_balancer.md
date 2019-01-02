@@ -5,18 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Load Balancer
+# Trabalhando com o serviço Load Balancer
 
 O serviço {{site.data.keyword.Bluemix}} Load Balancer ajuda a melhorar a disponibilidade dos aplicativos críticos para os negócios, distribuindo o tráfego entre as múltiplas instâncias do servidor de aplicativos e encaminhando-o somente para as instâncias funcionais.
 
-Use os comandos a seguir para gerenciar os balanceadores de carga no serviço Load Balancer da infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+Use os comandos a seguir para gerenciar os balanceadores de carga no serviço Load Balancer da infraestrutura clássica do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Comandos do Load Balancer do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">

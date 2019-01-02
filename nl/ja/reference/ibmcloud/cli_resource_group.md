@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# リソース・グループとリソース
+# リソースおよびリソース・グループの処理
 {: #ibmcloud_commands_resource}
 
 リソース・グループは、アカウント・リソースをカスタマイズ可能なグループに編成するための方法です。 以下のコマンドを使用して、{{site.data.keyword.Bluemix}} リソース・グループとリソース・グループ内のリソースを管理します。

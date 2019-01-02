@@ -5,25 +5,23 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Segurança
+# Gerenciando chaves SSH de segurança e certificados SSL
 
-As chaves SSH permitem acesso a um dispositivo sem usar uma senha de clientes correspondentes para cada
-chave pública que é implementada no dispositivo. Ao incluir uma chave SSH em um dispositivo, o dispositivo que foi fornecido com a chave SSH acessa o dispositivo da chave correspondente sem o uso de senha.
+As chaves SSH permitem acesso a um dispositivo sem usar uma senha de clientes correspondentes para cada chave pública que é implementada no dispositivo. Ao incluir uma chave SSH em um dispositivo, o dispositivo que foi fornecido com a chave SSH acessa o dispositivo da chave correspondente sem o uso de senha.
 
-Certificados SSL são ativados por websites como uma medida de segurança para proteger o usuário. Geralmente, eles
-são usados quando você é solicitado a transmitir informações confidenciais para um website.
+Certificados SSL são ativados por websites como uma medida de segurança para proteger o usuário. Geralmente, eles são usados quando você é solicitado a transmitir informações confidenciais para um website.
 
-Use os comandos a seguir para gerenciar as chaves SSH e os certificados de infraestrutura do {{site.data.keyword.Bluemix}}.
+Use os comandos a seguir para gerenciar chaves SSH e certificados de infraestrutura clássica do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Comandos de segurança de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
+<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Security commands that have links that bring you to more info for the command">
  <thead>
  </thead>
  <tbody>

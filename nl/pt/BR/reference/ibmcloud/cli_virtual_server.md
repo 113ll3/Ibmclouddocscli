@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Virtual Server
+# Criando e trabalhando com servidores virtuais
 
 {{site.data.keyword.BluVirtServers}} são servidores virtuais escaláveis que são comprados com núcleos dedicados e alocações de memória. Eles são uma boa opção caso você esteja procurando por recursos de cálculo, que podem ser incluídos em minutos, com acesso a recursos como modelos de imagem. 
 
-Use os comandos a seguir para gerenciar os servidores virtuais de infraestrutura do {{site.data.keyword.Bluemix}}.
+Use os comandos a seguir para gerenciar os servidores virtuais de infraestrutura clássica.
 {: shortdesc}
 
-<table summary="Comandos do Virtual Server de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
+<table summary="Alphabetically ordered {{site.data.keyword.Bluemix_notm}} classic infrastructure Virtual Server commands that have links that bring you to more info for the command">
  <thead>
  </thead>
  <tbody>

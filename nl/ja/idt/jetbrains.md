@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-16"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-16"
 # Jetbrains IDE 用 IBM Cloud Developer Tools
 {: #ibm-dev-tools-for-jetbrains}
 
-{{site.data.keyword.Bluemix_notm}} Developer Tools の Jetbrains IDE 用拡張機能には、`IntelliJ`、`WebStorm`、`Android Studio` などが含まれ、IDE 内から {{site.data.keyword.dev_cli_notm}} CLI コマンドに直接アクセスするための新しいメニュー項目が用意されています。これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを離れることなく、`ibmcloud dev` コマンドのサブセットに素早くアクセスすることができます。
+{{site.data.keyword.Bluemix}} Developer Tools の Jetbrains IDE 用拡張機能には、`IntelliJ`、`WebStorm`、`Android Studio` などが含まれ、IDE 内から {{site.data.keyword.dev_cli_notm}} CLI コマンドに直接アクセスするための新しいメニュー項目が用意されています。 これにより、アプリのデプロイメント、{{site.data.keyword.Bluemix_notm}} 上でのアプリの開始/停止/再始動、リモート・アプリ・ログの表示など、Docker と CloudFoundry の両方のワークフローで、エディターのコンテキストを離れることなく、`ibmcloud dev` コマンドのサブセットに素早くアクセスすることができます。
 {:shortdesc}
 
 ![WebStorm IDE 内で実行される IBM Cloud Developer Tools の画面キャプチャー。](jetbrains.png "WebStorm IDE 内で実行される {{site.data.keyword.Bluemix_notm}} Developer Tools のメニューの例")
@@ -24,12 +24,12 @@ lastupdated: "2018-07-16"
 ## 従属関係
 {: #dependencies}
 
-{{site.data.keyword.Bluemix_notm}} Developer Tools の Jetbrains ベースの IDE の拡張機能を使用するには、さらに [{{site.data.keyword.dev_cli_notm}} CLI](index.html) がシステムにインストールされている必要があります。
+{{site.data.keyword.Bluemix_notm}} Developer Tools の Jetbrains ベースの IDE の拡張機能を使用するには、さらに [{{site.data.keyword.dev_cli_notm}} CLI](/docs/cli/index.html#overview) がシステムにインストールされている必要があります。
 
 ## インストール
 {: #installation}
 
-{{site.data.keyword.Bluemix_notm}} Developer Tools の Jetbrains IDE 用の拡張機能をインストールする最も簡単な方法は、[{{site.data.keyword.Bluemix_notm}} Developer Tools Github リポジトリーの jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains)ページにアクセスし、そこにある説明に従うことです。
+{{site.data.keyword.Bluemix_notm}} Developer Tools の Jetbrains IDE 用の拡張機能をインストールする最も簡単な方法は、[{{site.data.keyword.Bluemix_notm}} Developer Tools Github リポジトリーの jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ページにアクセスし、そこにある説明に従うことです。
 
 ## 使用量
 {: #usage}

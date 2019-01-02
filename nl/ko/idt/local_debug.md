@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -11,6 +11,7 @@ lastupdated: "2018-06-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # {{site.data.keyword.dev_cli_notm}} CLI용 로컬 애플리케이션 디버깅
 {: #local-debug}
@@ -38,8 +39,11 @@ ibmcloud dev debug
       		3. 가져온 Java 프로젝트의 이름을 지정하십시오.
       6. IDE에 중단점을 설정하십시오.
       7. 디버그 구성을 실행하십시오.
-      8. 문제를 다시 생성하기 위해 브라우저에서 엔드포인트에 액세스하십시오.  
-	   **참고**: Java 기본 마이크로서비스 엔드포인트의 경우 기본 포트는 9080입니다.
+      8. 브라우저에서 엔드포인트에 액세스하여 문제를 다시 작성하십시오.  
+	   
+	   Java 기본 마이크로서비스 엔드포인트의 경우 기본 포트는 9080입니다.
+	   {: note}
+
 	* [IntelliJ ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
 	* [VSCode ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
 	* JDK 명령행: `jdb -attach <host:port>`
@@ -66,7 +70,7 @@ ibmcloud dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
+1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:

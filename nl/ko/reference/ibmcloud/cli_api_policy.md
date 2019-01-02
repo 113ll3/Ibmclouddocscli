@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IAM API 키, ID 및 액세스
+# IAM 액세스, API 키, 서비스 ID 및 액세스 그룹 관리
 {: #ibmcloud_commands_iam}
 
 다음 명령을 사용하여 API 키, 서비스 ID, 액세스 그룹 및 사용자, 서비스, 액세스 그룹에 대한 액세스/권한 정책을 관리하십시오.
@@ -180,7 +180,7 @@ ibmcloud iam service-id-create NAME [-d, --description DESCRIPTION] [--lock]
   <dt>-d, --description</dt>
   <dd>서비스 ID의 설명</dd>
   <dt>--lock</dt>
-  <dd>작성 시 서비스 ID 잠금</dd>
+  <dd>작성되는 동안 서비스 ID 잠금</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -378,7 +378,7 @@ ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
 <dt>--file <i>FILE</i></dt>
 <dd>지정된 파일에 API 키 정보를 저장합니다.</dd>
 <dt>--lock</dt>
-<dd>작성 시 API 키 잠금</dd>
+<dd>작성되는 동안 API 키 잠금</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -444,7 +444,7 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 <dt>UUID(필수)</dt>
 <dd>삭제할 API 키의 UUID(NAME과 배타적)</dd>
 <dt>-f, --force</dt>
-<dd>확인 없이 강제 삭제합니다.</dd>
+<dd>확인 없이 삭제 강제 실행합니다.</dd>
 </dl>
 
 ## ibmcloud api-key-lock
@@ -605,7 +605,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dt>--file</dt>
   <dd>지정된 파일에 API 키 정보를 저장합니다.</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 작성</dd>
+  <dd>확인 없이 작성 강제 실행</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1213,7 +1213,7 @@ ibmcloud iam oauth-tokens
 ## ibmcloud iam dedicated-id-disconnect
 {: #ibmcloud_iam_dedicated_id_disconnect}
 
-전용 비IBM ID와 공용 IBM ID의 연결 끊기
+공용 IBM ID와 전용 비IBM ID의 연결 끊기
 
 ```
 ibmcloud iam dedicated-id-disconnect [-f, --force]
@@ -1224,13 +1224,13 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 연결 끊기</dd>
+  <dd>확인 없이 연결 끊기 강제 실행</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-create
 {: #ibmcloud_iam_authorization_policy_create}
 
-다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용하기 위한 권한 부여 정책을 작성합니다.
+다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용할 권한 정책을 작성합니다.
 
 ```
 ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME]
@@ -1394,7 +1394,7 @@ ibmcloud iam access-group-update GROUP_NAME [-n, --name NEW_NAME] [-d, --descrip
   <dt>-d, --description</dt>
   <dd>새 설명</dd>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 업데이트</dd>
+  <dd>확인 없이 업데이트 강제 실행</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -1419,7 +1419,7 @@ ibmcloud iam access-group-delete GROUP_NAME [-f, --force] [-r, --recursive]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 삭제</dd>
+  <dd>확인 없이 삭제 강제 실행</dd>
   <dt>-r, --recursive</dt>
   <dd>액세스 그룹 및 해당 구성원 삭제</dd>
 </dl>
@@ -1811,7 +1811,7 @@ ibmcloud iam access-group-policy-delete GROUP_NAME POLICY_ID [-f, --force]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>확인 없이 강제 삭제</dd>
+  <dd>확인 없이 삭제 강제 실행</dd>
 </dl>
 
 <strong>예제</strong>:

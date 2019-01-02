@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -26,17 +26,17 @@ lastupdated: "2018-08-28"
 名前、引数、オプション、前提条件、説明、および例を含め、{{site.data.keyword.Bluemix_notm}} CLI でサポートされている詳細なコマンドを以下にリストします。
 {:shortdesc}
 
-**注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。 前提条件となるアクションのないコマンドでは、**なし**とリストされています。 それ以外の場合、前提条件には以下のアクションのうちの 1 つ以上が含まれます。
+*前提条件*には、コマンドを使用する前に必要なアクションがリストされています。 前提条件となるアクションのないコマンドでは、**なし**とリストされています。 それ以外の場合、前提条件には以下のアクションのうちの 1 つ以上が含まれます。
 
 <dl>
 <dt>エンドポイント</dt>
-<dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
+<dd>このコマンドを使用する前に、<code>ibmcloud api</code> を介して API エンドポイントを設定する必要があります。</dd>
 <dt>ログイン</dt>
-<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。
-フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します。 {{site.data.keyword.Bluemix_notm}} コンソールで**「管理」** &gt; **「セキュリティー」** &gt; **「プラットフォーム API キー」**に移動して、API キーを作成します。
+<dd>このコマンドを使用する前に、<code>ibmcloud login</code> コマンドを使用してログインする必要があります。
+フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します。
 </dd>
 <dt>ターゲット</dt>
-<dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
+<dd>このコマンドを使用する前に、<code>ibmcloud target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
 <dt>Docker</dt>
 <dd>このコマンドを実行するためには、Docker CLI (docker) がインストールされている必要があります。</dd>
 </dl>
@@ -442,18 +442,19 @@ ibmcloud update [-f]
 </dl>
 
 
-## 汎用 CLI (ibmcloud sl) コマンド
+## 汎用クラシック・インフラストラクチャーのサービス・コマンド
 {: #softlayer_cli}
 
 
-{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) でインフラストラクチャー・サービス・コマンドを使用して、インフラストラクチャー・サービスを構成および管理します。
+{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) でクラシック・インフラストラクチャー・コマンドを使用して、インフラストラクチャー・サービスを構成および管理します。
+
 
 以下のコマンドがサポートされます。 使用可能なコマンドのリストを表示するには、`ibmcloud sl` コマンドを使用します。
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用コマンド">
-<caption>表 1. 汎用インフラストラクチャー・サービス・コマンド</caption>
+<caption>表 1. 汎用クラシック・インフラストラクチャー・コマンド</caption>
  <thead>
- <th colspan="6">汎用インフラストラクチャー・サービス・コマンド</th>
+ <th colspan="6">汎用クラシック・インフラストラクチャー・コマンド</th>
  </thead>
  <tbody>
  <tr>
@@ -467,7 +468,7 @@ ibmcloud update [-f]
  ## ibmcloud sl init
 {: #sl_init}
 
-{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー環境への接続に使用される構成設定を初期化します。 この構成には、ユーザー名、API キーまたはパスワード、アカウント、およびエンドポイントが含まれます。
+クラシック・インフラストラクチャー環境への接続に使用される構成設定を初期化します。 この構成には、ユーザー名、API キーまたはパスワード、アカウント、およびエンドポイントが含まれます。
 ```
 ibmcloud sl init [OPTIONS]
 ```
@@ -475,7 +476,7 @@ ibmcloud sl init [OPTIONS]
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー API エンドポイント URL。デフォルトは、API キー認証の場合は https://api.softlayer.com/rest/v3.1、IBMid 認証の場合は https://api.softlayer.com/mobile/v3.1。</dd>
+<dd>クラシック・インフラストラクチャーの API エンドポイント URL。デフォルトは、API キー認証の場合は https://api.softlayer.com/rest/v3.1、IBMid 認証の場合は https://api.softlayer.com/mobile/v3.1。</dd>
 <dt>-u, --sl-user</dt>
 <dd>Gen1 インフラストラクチャー・ユーザー名。</dd>
 <dt>-p, --sl-password</dt>
@@ -494,14 +495,14 @@ ibmcloud sl init [OPTIONS]
 <dd>電話認証が有効な場合の認証トークン。</dd>
 </dl>
 
-例えば、{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーのユーザー名とパスワード/API キーを使用してログインします
+例えば、クラシック・インフラストラクチャーのユーザー名とパスワード/API キーを使用してログインします
 ```
 $ ibmcloud sl init
-Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
-1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+Choose how to configure classic infrastructure authentication:
+1. Login with your classic infrastructure user name and password/API key
 2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 Enter a number>1
-Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
+classic infrastructure API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
 Username: []> user@example.com
 API key or password: []> abcd
 
@@ -509,7 +510,7 @@ API endpoint:    https://api.softlayer.com/rest/v3.1
 User name:       user@example.com   
 API Key:         xxxxxxxxxx
 ```
-例えば、{{site.data.keyword.Bluemix_notm}} の Single-Sign-On を使用して Softlayer にログインします
+例えば、{{site.data.keyword.Bluemix_notm}} の Single-Sign-On を使用してクラシック・インフラストラクチャーにログインします
 ```
 $ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
@@ -526,16 +527,16 @@ No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s
 
 
 $ ibmcloud sl init
-Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+Choose how to configure classic infrastructure authentication:
 
-1. Login with Softlayer user name and password/API key
+1. Login with your classic infrastructure user name and password/API key
 2. Use IBM Cloud Single-Sign-On
 Enter a number> 2
-{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
+classic infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
 Setting account to: 123456
 OK
 
-{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
+classic infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
 
 Account ID:                123456   
 User ID:                   user@example.com  
@@ -545,7 +546,7 @@ IMS token:                 xxxxxxxxxx
 ## ibmcloud sl help
 {: #sl_help}
 
-{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー環境で作動するすべてのコマンドのヘルプ情報を表示します。
+クラシック・インフラストラクチャー環境で作動するすべてのコマンドのヘルプ情報を表示します。
 ```
 ibmcloud sl help
 ```

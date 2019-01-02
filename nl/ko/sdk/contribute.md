@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-10-04"
+  years: 2017, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # SDK 플러그인에 대한 컨트리뷰션
 {: #contribute}
@@ -19,17 +20,15 @@ lastupdated: "2018-10-04"
 ## 개발 환경 설정
 {: #dev-env}
 
-* Cloud Foundry [CLI ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/cli/releases)
+* Cloud Foundry [CLI ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/cli/releases).
 
    Cloud Foundry CLI는 필수는 아니지만 터미널에서 {{site.data.keyword.Bluemix_notm}}에 액세스하도록 도와줍니다.
 
-   Cloud Foundry CLI에 대한 자세한 정보는 [문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/cli/reference/cfcommands/index.html){: new_window}를 참조하십시오.
+   Cloud Foundry CLI에 대한 자세한 정보는 [문서](/docs/cli/reference/cfcommands/index.html)를 참조하십시오.
 
-* {{site.data.keyword.Bluemix_notm}} [CLI ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://clis.{DomainName}/ui/home.html)
+* {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview).
 
    이 플러그인은 {{site.data.keyword.Bluemix_notm}} CLI에 설치됩니다. {{site.data.keyword.Bluemix_notm}} CLI는 또한 터미널에서 {{site.data.keyword.Bluemix_notm}}에 액세스하기 위한 유용한 리소스를 제공합니다.
-
-   {{site.data.keyword.Bluemix_notm}} CLI에 대한 자세한 정보는 [문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/cli/reference/bluemix_cli/index.html){: new_window}를 참조하십시오.
 
 * [개발 환경 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://golang.org/doc/code.html)으로 이동하십시오.
 
@@ -146,7 +145,7 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 
 중첩된 종속 항목은 나열되지 않습니다.
 
-* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
    {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 개발하기 위한 인프라를 제공하는 {{site.data.keyword.Bluemix_notm}} CLI 플러그인 SDK.
 
@@ -170,18 +169,17 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 
    이 패키지는 운영 체제의 현재 언어를 발견하는 데 사용됩니다.
 
-
 ## 저장소 복제
 {: #clone-repo}
 
-이 [저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/tree/compute)는 Go의 우수 사례를 따르는 `govendor`의 작동 방식으로 인해 Go의 [디렉토리 구조 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://golang.org/doc/code.html)로 복제되어야 합니다.
+이 저장소는 Go의 우수 사례를 따르는 `govendor`의 작동 방식으로 인해 Go의 [디렉토리 구조 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://golang.org/doc/code.html)로 복제되어야 합니다.
 
 * 완전한 패키지 이름을 통해 내부 종속 항목을 가져오십시오.
 
    ```
    import (
       ...
-      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +187,9 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 * 저장소를 복제하십시오.
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,18 +200,19 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 다음 명령 중 하나를 선택하여 플러그인을 빌드하십시오.
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}
 
-**참고**: 빌드 스크립트는 플러그인을 {{site.data.keyword.Bluemix_notm}} CLI에도 설치합니다.
+빌드 스크립트는 플러그인을 {{site.data.keyword.Bluemix_notm}} CLI에도 설치합니다.
+{: note}
 
 다음 명령 중 하나를 선택하여 플러그인을 테스트하십시오.
 

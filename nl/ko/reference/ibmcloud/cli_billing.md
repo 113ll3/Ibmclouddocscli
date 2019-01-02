@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 비용 청구 
+# 계정, 조직, 리소스 그룹 및 리소스의 사용량 보기 
 {: #ibmcloud_billing}
 
 다음 명령을 사용하여 리소스 사용 및 비용 청구 정보를 검색하십시오.

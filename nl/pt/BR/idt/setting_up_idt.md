@@ -3,15 +3,16 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-30"
 
 ---
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}  
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note: .note}
 
 # Configurando a CLI do {{site.data.keyword.dev_cli_notm}}
 {: #add-cli}
@@ -53,6 +54,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+Também é possível fazer download do script do instalador por meio de nosso [repositório do GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)
+
 ## Verifique a instalação
 Para verificar a instalação, execute o comando `help`:
 
@@ -82,7 +85,8 @@ A seção [Reinstalando ferramentas](/docs/troubleshoot/ts_createapps.html#appen
 	```
 	{: codeblock}
 
-	**Nota:** se suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Siga essas etapas para autenticar usando o ID federado.
+	Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Siga essas etapas para autenticar usando o ID federado.
+	{: note}
 
 	1. Efetue login no [{{site.data.keyword.iamshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.bluemix.net/iam/#/apikeys){: new_window}.
 	2. Selecione **Criar chave API**.
@@ -123,7 +127,7 @@ Os recursos a seguir podem ser úteis ao desenvolver aplicativos nativos em nuve
 
 - [Página de entrada principal do IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - página de produto principal para o IDT CLI
 - [Instalador do IBM Developer Tools](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - repositório GitHub público com instruções detalhadas de instalação
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice): página do console
+- [IBM Cloud App Service](https://{DomainName}/developer/appservice): página do console
 do IBM Cloud que é um parceiro das ferramentas de IDT para criar e gerenciar aplicativos nativos em nuvem
 - [Relatar problemas no GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [Folga da Tecnologia do IBM Cloud - #canal de ferramentas do desenvolvedor](https://ibm-cloud-tech.slack.com) - Solicite o acesso da equipe [aqui](https://slack-invite-ibm-cloud-tech.mybluemix.net/)

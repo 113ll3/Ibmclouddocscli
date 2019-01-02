@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN
+# クラシック・インフラストラクチャー VLAN の管理
 
-{{site.data.keyword.cloud}} は、パブリック・ネットワークとプライベート・ネットワーク上のブロードキャスト・トラフィックを分離するために、仮想ローカル・エリア・ネットワーク (VLAN) を使用します。
+{{site.data.keyword.cloud}} は、パブリック・ネットワークとプライベート・ネットワーク上のブロードキャスト・トラフィックを分離するために、仮想ローカル・エリア・ネットワーク (VLAN) を使用します。 VLAN は、他のオファリングを実現するために必要に応じて割り当てられます。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー VLAN を管理します。
+以下のコマンドを使用して、クラシック・インフラストラクチャーの VLAN を管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー VLAN コマンド">
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーの VLAN コマンド">
  <thead>
  </thead>
  <tbody>

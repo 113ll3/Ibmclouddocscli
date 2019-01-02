@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -126,9 +126,9 @@ Selecione um plano diferente.
 O erro a seguir poderá ser exibido ao usar a CLI para criar um app:
 
 ```
-FAILED
-Application created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+COM FALHA
+Aplicativo criado, mas não foi possível obter código
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -259,7 +259,7 @@ FAILED
 Could not determine the language of your application.
 
 Try using the --language flag to specify the language of your application
-directly.
+directly. 
 ```
 {: tsSymptoms}
 
@@ -284,3 +284,58 @@ As diferentes causas possíveis podem ser localizadas em cada um dos links a seg
 - Para obter mais informações sobre como resolver esses problemas com um app Spring, consulte [Ativando aplicativos Spring Boot existentes para implementação na nuvem](/docs/java-spring/enable_existing.html#enable_existing).
 - Para obter mais informações sobre como resolver esses problemas com um app `Node.js`, consulte [Ativando aplicativos Node.js existentes para implementação na nuvem](/docs/node/enable_existing.html#enable_existing).
 {: tsResolve}
+
+## Como instalar as ferramentas do desenvolvedor do {{site.data.keyword.Bluemix_notm}} manualmente?
+{: #appendix}
+Todos os pré-requisitos são instalados para a maioria dos usuários usando os instaladores da plataforma. Se for necessário instalar manualmente quaisquer componentes, aqui estão as instruções para cada um. Para instalar o plug-in dev, deve-se primeiro instalar a [CLI do IBM Cloud](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+Para usar o próprio plug-in dev, deve-se instalá-lo, executando o comando a seguir: 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+Para executar e depurar apps localmente, deve-se também instalar o [Docker](https://www.docker.com/get-docker).
+ 
+Para implementar um app como um contêiner, deve-se também instalar o Kubernetes, o Helm e os plug-ins da CLI do IBM Cloud a seguir.
+ 
+### Para instalar o Kubernetes:
+Usuários do Mac:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+Usuários do Linux:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+Usuários do Windows:
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### Para instalar o Helm:
+Usuários do Mac e Linux:
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+Usuários do Windows:
+faça download e instale o [binário](https://github.com/kubernetes/helm/releases/tag/v2.7.2).
+
+### Para instalar o plug-in container-registry:
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### Para instalar o plug-in container-service:
+```
+Ibmcloud plugin install container-service
+```
+{: codeblock}

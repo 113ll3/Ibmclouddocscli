@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 주문
+# 클래식 인프라 주문 및 견적서 관리
 
 <table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
- <caption>표 1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 주문</caption>
+ <caption>표 1. 클래식 인프라 주문</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 주문</th>
+ <th colspan="6">클래식 인프라 주문</th>
  </thead>
  <tbody>
  <tr>
@@ -34,7 +34,7 @@ lastupdated: "2018-11-05"
 ## ibmcloud sl order package-locations
 {: #sl_order_category_list}
 
-패키지 카테고리 나열
+패키지의 카테고리 나열
 ```
 ibmcloud sl order package-locations [OPTIONS] PACKAGE_KEYNAME
 ```
@@ -64,7 +64,7 @@ ibmcloud sl order item-list [OPTIONS] PACKAGE_KEYNAME
 <dt>--keyword</dt>
 <dd>항목 이름을 필터링하는 데 사용한 단어(또는 문자열)</dd>
 <dt>--category</dt>
-<dd>기준에 따라 항목을 필터링하는 카테고리 코드</dd>
+<dd>항목의 필터링 기준이 되는 카테고리 코드</dd>
 </dl>
 
 **예제**:
@@ -84,7 +84,7 @@ ibmcloud sl order package-locations PACKAGE_KEYNAME
 ## ibmcloud sl order place
 {: #sl_order_place}
 
-주문하거나 주문 확인
+주문하기 또는 주문 확인
 ```
 ibmcloud sl order place PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,ORDER_ITEM3,ORDER_ITEM4... [OPTIONS]
 ```
@@ -92,17 +92,17 @@ ibmcloud sl order place PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,ORDER_I
 <strong>명령 옵션</strong>:
 <dl>
 <dt>--preset</dt>
-<dd>주문 사전 설정(패키지에서 필요한 경우)</dd>
+<dd>주문 사전 설정(패키지에 필요한 경우)</dd>
 <dt>--verify</dt>
 <dd>실제로 주문하지 않고 주문을 확인만 하는지 나타내는 플래그</dd>
 <dt>--billing</dt>
 <dd>청구 비율 [시간별|월별], [기본값: 시간별]</dd>
 <dt>--complex-type</dt>
-<dd>주문의 복합 유형입니다. 이 유형은 일반적으로 'SoftLayer_Container_Product_Order_'로 시작합니다.</dd>
+<dd>복합 유형의 주문입니다. 이 유형은 일반적으로 'SoftLayer_Container_Product_Order_'로 시작합니다.</dd>
 <dt>--extras</dt>
 <dd>주문과 함께 보내야 하는 추가 데이터를 나타내는 JSON 문자열</dd>
 <dt>-f, --force</dt>
-<dd>확인하지 않고 조작 강제 실행</dd>
+<dd>확인 없이 조작 강제 실행</dd>
 </dl>
 
 **예제**:
@@ -122,17 +122,17 @@ ibmcloud sl order place-quote PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,O
 <strong>명령 옵션</strong>:
 <dl>
 <dt>--preset</dt>
-<dd>주문 사전 설정(패키지에서 필요한 경우)</dd>
+<dd>주문 사전 설정(패키지에 필요한 경우)</dd>
 <dt>--verify</dt>
 <dd>실제로 주문하지 않고 주문을 확인만 하는지 나타내는 플래그</dd>
 <dt>--billing</dt>
 <dd>청구 비율 [시간별|월별], [기본값: 시간별]</dd>
 <dt>--complex-type</dt>
-<dd>주문의 복합 유형입니다. 이 유형은 일반적으로 'SoftLayer_Container_Product_Order_'로 시작합니다.</dd>
+<dd>복합 유형의 주문입니다. 이 유형은 일반적으로 'SoftLayer_Container_Product_Order_'로 시작합니다.</dd>
 <dt>--extras</dt>
 <dd>주문과 함께 보내야 하는 추가 데이터를 나타내는 JSON 문자열</dd>
 <dt>-f, --force</dt>
-<dd>확인하지 않고 조작 강제 실행</dd>
+<dd>확인 없이 조작 강제 실행</dd>
 </dl>
 
 **예제**:

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry アプリケーション
+# Cloud Foundry アプリケーションの管理
 {: #ibmcloud_commands_apps}
 
 以下のコマンドを使用して、Cloud Foundry アプリケーション、ドメイン、および経路を管理します。

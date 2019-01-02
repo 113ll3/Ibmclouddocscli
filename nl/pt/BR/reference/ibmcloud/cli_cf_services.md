@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Serviços do Cloud Foundry
+# Criando, excluindo e ligando os serviços do Cloud Foundry
 {: #ibmcloud_commands_services}
 
 Use os comandos a seguir para gerenciar as ofertas de serviços, as instâncias de serviço, as ligações de serviços e as chaves para o serviço do {{site.data.keyword.Bluemix_notm}} Foundry.

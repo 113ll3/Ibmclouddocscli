@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# ブロック・ストレージ
+# {{site.data.keyword.blockstorageshort}} サービスの操作
 
-{{site.data.keyword.Bluemix}} ブロック・ストレージは、コンピューティング・インスタンスから独立してプロビジョンおよび管理される、永続的で高性能な iSCSI ストレージです。 iSCSI ベースのブロック・ストレージ LUN は、冗長マルチパス入出力 (MPIO) 接続を介して、許可されたデバイスに接続されます。 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}}は、コンピューティング・インスタンスから独立してプロビジョンおよび管理される、永続的で高性能な iSCSI ストレージです。 iSCSI ベースの{{site.data.keyword.blockstorageshort}} LUN は、冗長マルチパス入出力 (MPIO) 接続を介して、許可されたデバイスに接続されます。 
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} classic インフラストラクチャー・ブロック・ストレージ・サービスのボリュームを管理します。
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーの{{site.data.keyword.blockstorageshort}}・サービスのボリュームを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ブロック・ストレージ</caption>
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用 {{site.data.keyword.BluSoftlayer_notm}} クラシック・インフラストラクチャー・コマンド">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} クラシック・インフラストラクチャーのブロック・ストレージ</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・ブロック・ストレージ</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} クラシック・インフラストラクチャーのブロック・ストレージ</th>
  </thead>
  <tbody>
  <tr>
@@ -480,7 +480,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>ソートの基準にする列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions、created_by。</dd>
 <dt>--columns</dt>
-<dd>表示する列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by。</dd>
+<dd>表示する列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by、notes。</dd>
 </dl>
 
 **例**:
@@ -599,6 +599,8 @@ ibmcloud sl block volume-order [OPTIONS]
 <dd>必須。 データ・センターの短縮名。</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>エンデュランス・ブロック・ストレージと共にスナップショット・スペースを注文するためのオプション・パラメーター。注文するスナップショット・スペースのサイズ (GB) を指定します。</dd>
+<dt>-b, --billing</dt>
+<dd>請求レートのオプション・パラメーター (デフォルトは monthly)。オプションは hourly、monthly です。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>

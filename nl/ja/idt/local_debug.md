@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -11,6 +11,7 @@ lastupdated: "2018-06-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # {{site.data.keyword.dev_cli_notm}} CLI のローカル・アプリケーションのデバッグ
 {: #local-debug}
@@ -39,7 +40,10 @@ ibmcloud dev debug
       6. IDE 内でブレークポイントを設定します。
       7. デバッグ構成を実行します。
       8. ブラウザーでエンドポイントにアクセスし、問題を再現します。  
-	   **注**: Java 基本マイクロサービス・エンドポイントのデフォルト・ポートは、9080 です。
+	   
+	   Java 基本マイクロサービス・エンドポイントのデフォルト・ポートは、9080 です。
+	   {: note}
+
 	* [IntelliJ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
 	* [VSCode ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
 	* JDK コマンド・ライン: `jdb -attach <host:port>`
@@ -66,7 +70,7 @@ ibmcloud dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
+1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:

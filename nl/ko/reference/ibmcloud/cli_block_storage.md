@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Block Storage
+# {{site.data.keyword.blockstorageshort}} 서비스에 대한 작업
 
-{{site.data.keyword.Bluemix}} 블록 스토리지는 컴퓨팅 인스턴스와 독립적으로 프로비저닝되고 관리되는 지속적인 고성능 iSCSI 스토리지입니다. iSCSI 기반 Block Storage LUN은 중복된 다중 경로 I/O(MPIO) 연결을 통해 권한이 부여된 디바이스에 연결됩니다. 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}}는 컴퓨팅 인스턴스와 독립적으로 프로비저닝되고 관리되는 지속적인 고성능 iSCSI 스토리지입니다. iSCSI 기반 {{site.data.keyword.blockstorageshort}} LUN은 중복된 다중 경로 I/O(MPIO) 연결을 통해 권한이 부여된 디바이스에 연결됩니다. 
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 클래스 인프라 블록 스토리지 서비스에서 지정된 볼륨을 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 클래스 인프라 {{site.data.keyword.blockstorageshort}} 서비스에 대해 지정된 볼륨을 관리하십시오.
 {: shortdesc}
 
-<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
-<caption>표 1. {{site.data.keyword.BluSoftlayer_notm}} 인프라 블록 스토리지</caption>
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 클래식 인프라 명령">
+<caption>표 1. {{site.data.keyword.BluSoftlayer_notm}} 클래식 인프라 블록 스토리지</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 인프라 블록 스토리지</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 클래식 인프라 블록 스토리지</th>
  </thead>
  <tbody>
  <tr>
@@ -480,7 +480,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>정렬 기준 열, 옵션: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
 <dt>--columns</dt>
-<dd>표시할 열, 옵션: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, created_by.</dd>
+<dd>표시할 열, 옵션: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 
 **예제**:
@@ -599,6 +599,8 @@ ibmcloud sl block volume-order [OPTIONS]
 <dd>필수. 데이터 센터의 짧은 이름.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Endurance 블록 스토리지와 함께 스냅샷 영역을 주문하기 위한 선택적 매개변수. 주문할 스냅샷 영역의 크기(GB)를 지정합니다.</dd>
+<dt>-b, --billing</dt>
+<dd>청구 비율에 대한 선택적 매개변수(기본값: monthly), 옵션: hourly, monthly.</dd>
 <dt>-f, --force</dt>
 <dd>확인 없이 조작 강제 실행.</dd>
 </dl>

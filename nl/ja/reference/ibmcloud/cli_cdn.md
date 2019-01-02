@@ -5,18 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CDN
+# CDN サービスの操作
 
 コンテンツ配信ネットワーク (CDN) サービスは、必要とされる場所にコンテンツを配信します。 コンテンツは、初めて要求されたときにホスト・サーバーからネットワークにプルされて、他のユーザーがアクセスできるようにネットワークに留まります。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー CDN サービスを管理します。
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーの CDN サービスを管理します。
 {: shortdesc}
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー CDN コマンド">

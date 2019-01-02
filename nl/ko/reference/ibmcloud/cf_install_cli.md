@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -27,13 +27,14 @@ lastupdated: "2018-05-24"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 {:tip: .tip}
+{:note: .note}
 
 # 명령행 인터페이스를 사용하여 Cloud Foundry 앱 다운로드, 수정 및 재배치
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용하여 Cloud Foundry 애플리케이션 및 서비스 인스턴스를 다운로드하고 수정하고 재배치하십시오.
 {:shortdesc}
 
-시작하기 전에 {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)를 다운로드하여 설치하십시오. 
+시작하기 전에 {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)를 다운로드하여 설치하십시오.
 
 
 **제한사항:** 명령행 도구는 Cygwin에서 지원되지 않습니다. Cygwin 명령행 창 이외의 명령행 창에서 도구를 사용하십시오.
@@ -45,7 +46,7 @@ lastupdated: "2018-05-24"
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_starter-code.svg" alt="애플리케이션 코드 다운로드" /> </a>
 
-      **참고**: 진행하기 전에 노드 버전을 `8.9.x` 또는 `package.json` 파일의 최신 버전으로 올리십시오.
+      진행하기 전에 노드 버전을 `8.9.x` 또는 `package.json` 파일의 최신 버전으로 업데이트하십시오. {: note}
 
   2. 코드가 있는 디렉토리로 변경하십시오.
 
@@ -69,7 +70,7 @@ lastupdated: "2018-05-24"
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **참고**: 값에 간격이 포함되어 있는 경우(예: `-o "my org"`), `username`, `org_name` 및 `space_name` 주위에 작은따옴표 또는 큰따옴표를 추가해야 합니다.
+  값에 간격이 포함되어 있는 경우(예: `-o "my org"`), `username`, `org_name` 및 `space_name` 주위에 작은따옴표 또는 큰따옴표를 추가해야 합니다.{: note}
 
   5. <var class="keyword varname">your_new_directory</var>에서 `bluemix app push` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 재배치하십시오. `bx app push` 명령에 대한 자세한 정보는 [애플리케이션 업로드](/docs/starters/upload_app.html)를 참조하십시오.
 

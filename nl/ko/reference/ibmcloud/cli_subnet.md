@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 서브넷
+# 서브넷 작성, 취소 및 보기
 
-서브넷은 더 작은 여러 네트워크 세그먼트 안에 IP 네트워크의 논리 파티션입니다. 다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 인프라 서브넷을 관리하십시오.
+서브넷은 더 작은 여러 네트워크 세그먼트 안에 IP 네트워크의 논리 파티션입니다. 다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 클래식 인프라 서브넷을 관리하십시오.
 {: shortdesc}
 
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 서브넷 명령">
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 서브넷 명령">
  <thead>
  </thead>
  <tbody>

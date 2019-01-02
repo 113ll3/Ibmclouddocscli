@@ -5,18 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IPSec VPN
+# IPSec VPN トンネルの管理
 
-{{site.data.keyword.Bluemix}} VPN アクセスにより、ユーザーは、すべてのサーバーを {{site.data.keyword.Bluemix_notm}} プライベート・ネットワーク経由でセキュアにリモート管理できます。 お客様のロケーションからプライベート・ネットワークへの VPN 接続により、暗号化された VPN トンネル経由でのアウト・オブ・バンド管理とサーバー・レスキューが可能になります。  
+{{site.data.keyword.Bluemix}} VPN アクセスにより、ユーザーは、すべてのサーバーを {{site.data.keyword.Bluemix_notm}} プライベート・ネットワーク経由でセキュアにリモート管理できます。 お客様のロケーションからプライベート・ネットワークへの VPN 接続により、暗号化された VPN トンネル経由でのアウト・オブ・バンド管理とサーバー・レスキューが可能になります。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} インフラストラクチャー IPSec VPN サービスの IPSec VPN トンネルを管理します。
+以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーの IPSec VPN サービスの IPSec VPN トンネルを管理します。
 {: shortdesc}
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} IPSec VPN コマンド">

@@ -5,27 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Block Storage
+# Trabalhando com o serviço {{site.data.keyword.blockstorageshort}}
 
-O armazenamento de bloco do {{site.data.keyword.Bluemix}} é um armazenamento iSCSI
-de alto desempenho persistente que é fornecido e gerenciado independentemente das instâncias de cálculo. Os LUNs do
-Block Storage baseados em iSCSI são conectados aos dispositivos autorizados por meio de conexões redundantes de
-E/S de múltiplos caminhos (MPIO). 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}} é um armazenamento iSCSI de alto desempenho persistente que é provisionado e gerenciado independentemente de instâncias de cálculo. Os LUNs do {{site.data.keyword.blockstorageshort}} baseados em iSCSI são conectados a dispositivos autorizados por meio de conexões Multi-path I/O (MPIO). 
 
-Use os comandos a seguir para gerenciar um determinado volume para o serviço de armazenamento de bloco de infraestrutura clássico do {{site.data.keyword.Bluemix_notm}}.
+Use os comandos a seguir para gerenciar um determinado volume para o serviço {{site.data.keyword.blockstorageshort}} de infraestrutura clássica do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Comandos gerais de infraestrutura {{site.data.keyword.BluSoftlayer_notm}} em ordem alfabética que possuem links que levam você para mais informações sobre o comando">
-<caption>Tabela 1. Armazenamento de bloco da infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} classic infrastructure commands that have links that bring you to more info for the command">
+<caption>Tabela 1. Armazenamento de bloco de infraestrutura clássica do {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Armazenamento de bloco de infraestrutura do {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Armazenamento de bloco de infraestrutura clássica do {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -483,7 +480,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Coluna pela qual classificar, as opções são: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
 <dt>--columns</dt>
-<dd>Colunas para exibição, as opções são: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, created_by.</dd>
+<dd>Colunas a serem exibidas, as opções são: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, created_by, notes.</dd>
 </dl>
 
 **Exemplos**:
@@ -505,7 +502,7 @@ ibmcloud sl block volume-modify VOLUME_ID [OPTIONS]
 <dt>-c, --new-size</dt>
 <dd>Novo tamanho do volume de bloco em GB. ***Se nenhum tamanho for fornecido, o tamanho original do volume será usado.*** Tamanhos potenciais: [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Mínimo: [o tamanho original do volume]</dd>
 <dt>-i, --new-iops</dt>
-<dd>IOPS de armazenamento de desempenho, entre 100 e 6.000 em múltiplos de 100 [somente para volumes de desempenho] ***Se nenhum valor de IOPS for especificado, o valor de IOPS original do volume será usado.*** Requisitos: [Se o IOPS/GB original para o volume for menor que 0,3, o novo IOPS/GB também deverá ser menor que 0,3. Se o IOPS/GB original para o volume for maior ou igual a 0,3, o novo IOPS/GB para o volume também deverá ser maior ou igual a 0,3.]</dd>
+<dd>IOPS de armazenamento de desempenho, entre 100 e 6.000 em múltiplos de 100 [somente para volumes de desempenho] ***Se nenhum valor de IOPS for especificado, o valor de IOPS original do volume será usado.*** Requisitos: [Se o IOPS/GB original para o volume for menor que 0,3, o novo IOPS/GB também deverá ser menor que 0,3. Se o IOPS/GB original do volume for maior ou igual a 0,3, o novo IOPS/GB do volume também deverá ser maior ou igual a 0,3.]</dd>
 <dt>-t, --new-tier</dt>
 <dd>Camada de armazenamento do Endurance (IOPS por GB) [somente para volumes do Endurance] ***Se nenhuma camada for especificada, a camada original do volume será usada.***
 Requisitos: [Se o IOPS/GB original para o volume for 0,25, o novo IOPS/GB para o volume também deverá ser 0,25. Se o IOPS/GB original para o volume for maior que 0,25, o novo IOPS/GB para o volume também deverá ser maior que 0,25.]</dd>
@@ -602,6 +599,8 @@ ibmcloud sl block volume-order [OPTIONS]
 <dd>Requerido. Nome abreviado do data center.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Parâmetro opcional para pedir espaço de captura instantânea junto ao armazenamento de bloco de resistência; especifica o tamanho (em GB) do espaço de captura instantânea a ser pedido.</dd>
+<dt>-b, --billing</dt>
+<dd>Parâmetro opcional para taxa de Faturamento (padrão para mensal); as opções são: por hora, mensalmente.</dd>
 <dt>-f, --force</dt>
 <dd>Forçar a operação sem confirmação.</dd>
 </dl>

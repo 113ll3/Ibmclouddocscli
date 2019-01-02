@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -29,11 +29,11 @@ lastupdated: "2018-10-04"
 
 ### ステップ 1: プラグインの検索
 
-1. リポジトリーでプラグインを探すには、コマンド `ibmcloud plugin repo-plugins -r REPO_NAME` を使用します。
+1. リポジトリーでプラグインを探すには、`ibmcloud plugin repo-plugins -r REPO_NAME` コマンドを使用します。
 2. {{site.data.keyword.Bluemix_notm}} CLI には、「IBM Cloud」という名前の公式リポジトリーがあります。以下の例に示すように、この公式プラグインを検索できます。
 
   ```
-  $ ibmcloud plugin repo-plugins -r IBM Cloud
+  $ ibmcloud plugin repo-plugins
   Getting plug-ins from repository 'IBM Cloud'...
 
   Repository: IBM Cloud
@@ -48,10 +48,10 @@ lastupdated: "2018-10-04"
 プラグインをインストールするには、`ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` コマンドを使用します。 例えば、公式 IBM プラグイン・リポジトリー「IBM Cloud」からプラグインをインストールするには、次のコマンドを使用します。
 
   ```
-  $ ibmcloud plugin install auto-scaling -r IBM Cloud
+  $ ibmcloud plugin install auto-scaling 
   Looking up 'auto-scaling' from repository 'IBM Cloud'...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCLoudFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
@@ -76,7 +76,7 @@ Web URL から直接プラグインをインストールするには、`ibmcloud
   ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
   Attempting to download the binary file...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCloudFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$

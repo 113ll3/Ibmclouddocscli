@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 請求処理 
+# アカウント、組織、リソース・グループ、およびリソースの使用量の表示 
 {: #ibmcloud_billing}
 
 以下のコマンドを使用して、リソース使用量と請求情報を入手します。

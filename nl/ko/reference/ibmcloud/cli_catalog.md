@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 카탈로그
+# 카탈로그 오퍼링 검색 및 관리
 {: #ibmcloud_catalog}
 
 다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 카탈로그 항목, 조회 템플리트, 데이터 센터의 지리적 위치 및 런타임을 관리하십시오.
@@ -104,7 +104,7 @@ ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
   <dt>--children</dt>
   <dd>카탈로그 항목의 모든 하위 가져오기</dd>
   <dt>--output TYPE(선택사항)</dt>
-  <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다.</dd>
   <dt>--global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>
@@ -147,7 +147,7 @@ ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 
 ## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
-카탈로그 항목 업데이트(카탈로그 관리자 또는 계정의 편집자 전용).
+기존 카탈로그 항목 업데이트(카탈로그 관리자 또는 계정의 편집자 전용).
 
 ```
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
@@ -209,7 +209,7 @@ ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
   <dt>-json</dt>
   <dd>원래 JSON 응답 출력</dd>
   <dt>--output TYPE(선택사항)</dt>
-  <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다. </dd>
+  <dd>--output value  출력 유형을 지정합니다. 이제 JSON만 지원됩니다.</dd>
   <dt>-global</dt>
   <dd>글로벌 범위에서 작동</dd>
 </dl>

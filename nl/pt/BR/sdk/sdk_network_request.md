@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # Fazendo uma solicitação de rede
 {: #sdk-network-request}
@@ -18,8 +18,7 @@ Também é possível usar o SDK `BMSCore` para fazer solicitações de rede para
 ## Android
 {: #request-android}
 
-1. Certifique-se de que você tenha [importado o
-SDK do Client e o inicializado](sdk_BMSClient.html#init-BMSClient-android) em seu aplicativo Android.
+1. Certifique-se de que você tenha [importado o Client SDK e inicializado](sdk_BMSClient.html#init-BMSClient-android) em seu aplicativo Android.
 
 2. Faça uma solicitação de rede.
 
@@ -52,15 +51,15 @@ de obter a resposta após a solicitação ser concluída. Se você estiver fazen
 ## iOS
 {: #request-ios}
 
-1. Certifique-se de que você tenha [importado o SDK
-do Client e o inicializado](sdk_BMSClient.html#init-BMSClient-ios) em seu aplicativo iOS.
+1. Certifique-se de que você tenha [importado o Client SDK e inicializado](sdk_BMSClient.html#init-BMSClient-ios) em seu aplicativo iOS.
 
 2. Crie uma solicitação de rede.
 
 	### Swift 3.0
 	{: #ios-swift3 notoc}
 
-	```Swift 	let customResourceURL = "<your resource URL>" 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	```Swift
+	let customResourceURL = "<your resource URL>" 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
@@ -73,7 +72,8 @@ do Client e o inicializado](sdk_BMSClient.html#init-BMSClient-ios) em seu aplica
 	### Swift 2.2
 	{: #ios-swift22 notoc}
 
-	```Swift 	let customResourceURL = "<your resource URL>" 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	```Swift
+	let customResourceURL = "<your resource URL>" 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
@@ -92,14 +92,13 @@ escolher manipuladores ou delegados de conclusão.
 
 A classe `BMSURLSession` está disponível somente para iOS.
 
-Para concluir os exemplos a seguir, consulte o GitHub `BMSCore` [LEIA-ME](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core).
+Para obter exemplos de uso completos, consulte o [LEIA-ME do GitHub do `BMSCore` ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}.
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Certifique-se de que você tenha [importado o
-SDK do Client e o inicializado](sdk_BMSClient.html#init-BMSClient-cordova) em seu aplicativo Cordova.
+1. Certifique-se de ter [importado o SDK do Cliente e de tê-lo inicializado](sdk_BMSClient.html#init-BMSClient-cordova) em seu aplicativo Cordova.
 
 2. Crie uma solicitação de rede.
 

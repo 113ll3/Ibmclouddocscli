@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# グローバル IP
+# グローバル IP の管理
 
 グローバル IP アドレスは、特殊な静的 2 次サブネットです。 これは、アカウントの他の任意の IP アドレスにルーティングできる /32 サブネット (つまり、単一の IP アドレス) としてお客様に配信されます。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix}} インフラストラクチャー・グローバル IP サービスのグローバル IP を管理します。
+以下のコマンドを使用して、{{site.data.keyword.Bluemix}} クラシック・インフラストラクチャーのグローバル IP サービスのグローバル IP を管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・グローバル IP コマンド">
+<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのグローバル IP コマンド">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# イメージ
+# コンピュート・イメージの作成、編集、および削除
 
 以下のコマンドを使用して、{{site.data.keyword.Bluemix}} コンピュート・イメージを管理します。
 {: shortdesc}

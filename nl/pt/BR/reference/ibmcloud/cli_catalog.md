@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Catálogo
+# Procurando e gerenciando ofertas de catálogo
 {: #ibmcloud_catalog}
 
 Use os comandos a seguir para gerenciar as entradas do catálogo, os modelos de

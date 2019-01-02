@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Sub-rede
+# Criando, cancelando e visualizando sub-redes
 
-Uma sub-rede é uma partição lógica de uma rede IP em múltiplos segmentos de rede menores. Use os comandos a seguir para gerenciar as sub-redes de infraestrutura do {{site.data.keyword.Bluemix}}.
+Uma sub-rede é uma partição lógica de uma rede IP em múltiplos segmentos de rede menores. Use os comandos a seguir para gerenciar sub-redes de infraestrutura clássica do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Comandos de sub-rede de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
+<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Subnet commands that have links that bring you to more info for the command">
  <thead>
  </thead>
  <tbody>
