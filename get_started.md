@@ -36,7 +36,7 @@ To get started with just the {{site.data.keyword.Bluemix_notm}} CLI:
    Linux X86 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64-bit (ppc64le): [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
-   **32-bit releases and previous versions can be found [here](all_versions.html)
+   **32-bit releases and previous versions can be found [here](/docs/cli/reference/ibmcloud/all_versions.html)
 
 1. Run the installer
    * For macOS and windows, run the installer.
@@ -55,7 +55,7 @@ If you are using a federated ID, follow the instructions [here](https://console.
 
 * [More options to download and install {{site.data.keyword.Bluemix_notm}} CLI](download_cli.html)
 * [Extend {{site.data.keyword.Bluemix_notm}} CLI capabilities with plug-ins](extend_cli.html)
-* [All versions of {{site.data.keyword.Bluemix_notm}} CLI and release notes](all_versions.html)
+* [All versions of {{site.data.keyword.Bluemix_notm}} CLI and release notes](/docs/cli/reference/ibmcloud/all_versions.html)
 * [Document of {{site.data.keyword.Bluemix_notm}} CLI commands usage](bx_cli.html)
 
 
