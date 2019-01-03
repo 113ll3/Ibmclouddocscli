@@ -2,10 +2,10 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
@@ -65,7 +65,7 @@ Use the following commands to manage the {{site.data.keyword.Bluemix_notm}} cata
  </tbody>
  </table>
 
- ## ibmcloud catalog search
+## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
 Search catalog entries
