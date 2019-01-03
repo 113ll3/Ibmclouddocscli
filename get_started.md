@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-06-21"
+  years: 2015, 2019
+lastupdated: "2019-01-03"
 
 ---
 
@@ -48,15 +48,15 @@ To get started with just the {{site.data.keyword.Bluemix_notm}} CLI:
 
 Now you are ready to manage {{site.data.keyword.Bluemix_notm}} resouces. Type `ibmcloud help` to see the command descriptions.
 
-If you are using a federated ID, follow the instructions [here](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) to log in with a one-time passcode or an API key.
+If you are using a federated ID, follow the instructions [here](/docs/iam/login_fedid.html#federated_id) to log in with a one-time passcode or an API key.
 {: tip}
 
 ## Other links to further explore {{site.data.keyword.Bluemix_notm}} CLI
 
-* [More options to download and install {{site.data.keyword.Bluemix_notm}} CLI](download_cli.html)
-* [Extend {{site.data.keyword.Bluemix_notm}} CLI capabilities with plug-ins](extend_cli.html)
+* [More options to download and install {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
+* [Extend {{site.data.keyword.Bluemix_notm}} CLI capabilities with plug-ins](/docs/cli/reference/ibmcloud/extend_cli.html)
 * [All versions of {{site.data.keyword.Bluemix_notm}} CLI and release notes](/docs/cli/reference/ibmcloud/all_versions.html)
-* [Document of {{site.data.keyword.Bluemix_notm}} CLI commands usage](bx_cli.html)
+* [Document of {{site.data.keyword.Bluemix_notm}} CLI commands usage](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 
 ## Report issues and submit feedback
