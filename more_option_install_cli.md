@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2018
-lastupdated: "2018-07-12"
+  years: 2018, 2019
+lastupdated: "2019-02-03"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-07-12"
 # More options to install the {{site.data.keyword.Bluemix_notm}} CLI
 {: #more_options_install}
 
-Besides [installers](install_use_cli.html#getting_started), you can have other options to install the {{site.data.keyword.Bluemix_notm}} CLI:
+Besides [installers](/docs/cli/reference/ibmcloud/download_cli.html#install_use), you can have other options to install the {{site.data.keyword.Bluemix_notm}} CLI:
 
 * Install from shell
 * Download binary package and install to a custom directory
