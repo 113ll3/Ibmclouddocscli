@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-04"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-11-30"
 # Installing the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI provides the command line interface for managing resources in {{site.data.keyword.Bluemix_notm}}. You can still use the cf CLI to login to {{site.data.keyword.Bluemix_notm}}, but it only works with a Cloud Foundry service in {{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.Bluemix}} CLI provides the command-line interface for managing resources in {{site.data.keyword.Bluemix_notm}}. You can still use the cf CLI to log in to {{site.data.keyword.Bluemix_notm}}, but it only works with a Cloud Foundry service in {{site.data.keyword.Bluemix_notm}}. 
 
-If you want to install both the {{site.data.keyword.Bluemix}} CLI and other recommended plugins and tools for developing applications for {{site.data.keyword.Bluemix_notm}}, follow the method described [here](/docs/cli/index.html).
+If you want to install both the {{site.data.keyword.Bluemix}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.Bluemix_notm}}, see [Getting started with the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html).
 {: tip}
 
 Use the following steps to install the stand-alone {{site.data.keyword.Bluemix_notm}} CLI:
 
-1. Select the installer of your OS to download
+1. Select the installer of your OS to download.
 
    Mac OS X 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
