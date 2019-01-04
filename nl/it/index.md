@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -39,7 +39,7 @@ Con questa installazione, ottieni la CLI {{site.data.keyword.Bluemix_notm}} auto
 
 Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e dei seguenti requisiti di sistema:
 
-* Se stai utilizzando Windows, è possibile che alcune funzioni non sono supportate se non stai utilizzando Windows 10 Pro.
+* Se utilizzi Windows, alcune funzioni non sono supportate se non stai usando Windows 10 Pro.
 * Devi utilizzare il canale stabile per Docker con una versione minima di 1.13.1.
 
 ## Passo 1. Esegui il comando di installazione
@@ -116,4 +116,4 @@ L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supp
 ## Passi successivi
 {: #next-steps}
 
-Sei ora pronto per sviluppare e distribuire la tua prima applicazione. Per ulteriori informazioni, consulta [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps/create-deploy-cli.html).
+Sei ora pronto per sviluppare e distribuire la tua prima applicazione. Per ulteriori informazioni, vedi [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps/create-deploy-cli.html).

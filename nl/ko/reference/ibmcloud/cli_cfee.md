@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry Enterprise Environment 서비스에 대한 작업
+# Cloud Foundry Enterprise Environments(CFEE)
 {: #ibmcloud_commands_cfee}
 
 {{site.data.keyword.cfee_full}}(CFEE)를 사용하여 격리된 여러 엔터프라이즈급 Cloud Foundry 플랫폼을 요청 시 인스턴스화할 수 있습니다. IBM Cloud Foundry Enterprise 서비스의 인스턴스는 IBM Cloud의 고유 계정 내에서 실행됩니다. 환경은 격리된 하드웨어(Kubernetes 클러스터)에 배치됩니다. 액세스 제어, 용량, 버전 업데이트, 리소스 사용 및 모니터링을 포함하여 환경을 완벽히 제어할 수 있습니다.
@@ -865,7 +865,7 @@ ibmcloud cfee create-permission-set name@example.com -ag test-access-group
 ## ibmcloud cfee create-status
 {: #ibmcloud_cfee_create_status}
 
-CFEE 인스턴스의 프로비저닝 상태 확인
+CFEE 인스턴스의 프로비저닝 상태 검사
 
 ```
 ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]

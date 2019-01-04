@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-11-30"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-30"
 # スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI のインストール
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} のリソースを管理するためのコマンド・ライン・インターフェースを提供します。 引き続き cf CLI を使用して {{site.data.keyword.Bluemix_notm}} にログインすることもできますが、それは {{site.data.keyword.Bluemix_notm}} 内の Cloud Foundry サービスでのみ動作します。 
+{{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} のリソースを管理するためのコマンド・ライン・インターフェースを提供します。 引き続き `cf` CLI を使用して {{site.data.keyword.Bluemix_notm}} にログインすることもできますが、それは {{site.data.keyword.Bluemix_notm}} 内の Cloud Foundry サービスでのみ動作します。 
 
 {{site.data.keyword.Bluemix}} CLI と、{{site.data.keyword.Bluemix_notm}} 用のアプリケーションを開発するための推奨されるその他のプラグインおよびツールの両方をインストールする場合は、[ここ](/docs/cli/index.html)で説明されている方法に従ってください。
 {: tip}
@@ -32,11 +32,11 @@ lastupdated: "2018-11-30"
    Linux X86 64 ビット: [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 ビット (ppc64le): [インストーラー](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
-   32 ビットのバージョンおよび古いバージョンの場合、[{{site.data.keyword.Bluemix_notm}} CLI リリース](/docs/cli/reference/ibmcloud/all_versions.html)のページに移動してダウンロードしてください。
+   32 ビットのバージョンおよび古いバージョンの場合、[すべてのバージョン](/docs/cli/reference/ibmcloud/all_versions.html)のページに移動してダウンロードしてください。
 
 1. インストーラーを実行します。
-   * macOS および Windows の場合は、単純にインストーラーを実行します。
-   * Linux の場合は、パッケージを解凍し、`install` スクリプトを実行します。
+   * macOS および Windows の場合は、インストーラーを実行します。
+   * Linux の場合、パッケージを解凍し、`install` スクリプトを実行します。
 
 1. API エンドポイントをターゲットに指定し、{{site.data.keyword.Bluemix_notm}} にログインします。
 
@@ -47,7 +47,8 @@ lastupdated: "2018-11-30"
    
 これで、{{site.data.keyword.Bluemix_notm}} リソースを管理する準備ができました。 コマンド説明を表示するには、`ibmcloud help` と入力します。
 
-フェデレーテッド ID を使用する場合は、[ここ](/docs/iam/login_fedid.html#federated_id)で説明する手順に従って、ワンタイム・パスコードまたは API キーを使用してログインします。  
+フェデレーテッド ID を使用する場合は、[ここ](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id)で説明する手順に従って、ワンタイム・パスコードまたは API キーを使用してログインします。
+  
 {: tip}
 
 インストーラー以外にも、{{site.data.keyword.Bluemix_notm}} CLI をインストールするためのオプションがあります。
@@ -78,7 +79,7 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 
 ### Windows PowerShell
 
-以下のコマンドを [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) 端末コンソールにコピー・アンド・ペーストし、実行します。
+以下のコマンドを [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} 端末コンソールにコピー・アンド・ペーストし、実行します。
 
 ```
 iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
@@ -87,7 +88,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 
 ## カスタム・ディレクトリーへのインストール
 
-インストーラーまたは shell スクリプトを使用して {{site.data.keyword.Bluemix_notm}} CLI をインストールすると、バイナリーがシステム・ディレクトリーに移動します。 別のディレクトリーを指定する場合は、以下の手順を実行します。
+インストーラーまたは shell スクリプトを使用して {{site.data.keyword.Bluemix_notm}} CLI をインストールすると、バイナリーがシステム・ディレクトリーに移動します。別のディレクトリーを指定する場合は、以下の手順を実行します。
 
 ### ステップ 1: 使用している OS に基づいたバイナリー・パッケージを、以下のリンクを使用してダウンロードします。
 
@@ -135,7 +136,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 ### ステップ 3: `PATH` 環境変数に追加し、shell オートコンプリート機能を有効にします。
 
    * `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` を `PATH` 環境変数に追加します。
-   * shell オートコンプリート機能サポート (MacOS および Linux のみ) については、[このガイド](enable_cli_autocompletion.html)を参照してください。
+   * shell オートコンプリート機能サポート (MacOS および Linux のみ) については、[CLI オートコンプリート機能の有効化](enable_cli_autocompletion.html)を参照してください。
    
 ## スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI のアンインストール
 
@@ -147,7 +148,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
 2. ポップアップ・ウィンドウで、`「プログラムのアンインストール」`をクリックします。
 3. ポップアップしたアプリケーション・リストで、`「IBM Cloud コマンド・ライン・インターフェース」`を見つけます。
 4. `「IBM Cloud コマンド・ライン・インターフェース」`を右クリックして、`「アンインストール」`を選択します。
-5. アンインストーラーが起動します。 指示に従ってアンインストールを完了します。
+5. アンインストーラーが開始します。指示に従ってアンインストールを完了します。
 
 ### Linux/macOS でのアンインストール
 
@@ -159,23 +160,23 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。詳しくは、『[IBM Cloud CLI の shell オートコンプリート機能の有効化 (Linux/MacOS のみ)](enable_cli_autocompletion.html)』を参照してください。
+2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。詳しくは、[CLI オートコンプリート機能の有効化](enable_cli_autocompletion.html)を参照してください。
 
 #### バージョン `0.9.0` 以降
 
 1. 端末を開き、次のコマンドを実行します。
   * `/usr/local/ibmcloud/bin/uninstall`
-2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。詳しくは、『[IBM Cloud CLI の shell オートコンプリート機能の有効化 (Linux/MacOS のみ)](enable_cli_autocompletion.html)』を参照してください。
+2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。詳しくは、[CLI オートコンプリート機能の有効化](enable_cli_autocompletion.html)を参照してください。
 
 
 ## {{site.data.keyword.Bluemix_notm}} CLI をさらに探索するためのその他のリンク
 
-* [プラグインによる {{site.data.keyword.Bluemix_notm}} CLI の拡張](/docs/cli/reference/ibmcloud/extend_cli.html)
-* [汎用 CLI (ibmcloud) コマンド](/docs/cli/reference/ibmcloud/bx_cli.html)
+* [プラグインを使用した {{site.data.keyword.Bluemix_notm}} CLI 機能の拡張](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI リファレンス](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## 問題の報告とフィードバックの送信
 {: #issues}
 
 問題を報告したり新しいフィーチャーの要求を送信したりするには、以下のオプションを使用してください。
- * [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) で問題を作成する。
+ * [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) で問題を作成する。
  * [IBM Cloud Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com)にメッセージを残す。‐ [ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg) でチーム・アクセスを要求。

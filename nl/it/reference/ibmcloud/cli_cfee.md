@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 ---
 
 {:new_window: target="_blank"}
@@ -798,7 +798,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-Controlla se un utente dispone di tutte le autorizzazioni richieste per creare un'istanza CFEE. Il comando controlla le seguenti politiche di accesso per l'utente di destinazione: editor per i servizi CFEE, ruolo di amministratore per il servizio gestore Kubernetes, ruolo di editor della piattaforma e ruolo di gestore per l'accesso ai servizi per il servizio Cloud Object Storage e ruolo di sviluppatore per lo spazio corrente nell'organizzazione corrente per il provisioning di Compose for PostgreSQL
+Controlla se un utente dispone di tutte le autorizzazioni richieste per creare un'istanza CFEE. Il comando controlla le seguenti politiche di accesso per l'utente di destinazione: editor per i servizi CFEE, ruolo di amministratore per il servizio Kubernetes, editor per il ruolo di piattaforma e gestore per il ruolo di accesso al servizio per il servizio Cloud Object Storage e il ruolo di sviluppatore per lo spazio corrente nell'organizzazione attuale per il provisioning di Compose for PostgreSQL
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -833,7 +833,7 @@ ibmcloud cfee create-permission-get name@example.com -ag test-access-group
 ## ibmcloud cfee create-permission-set
 {: #ibmcloud_cfee_create_permission_set}
 
-Assegna all'utente tutte le autorizzazioni necessarie per creare un'istanza CFEE. Il comando crea le seguenti politiche di accesso per l'utente di destinazione: editor per il servizio CFEE, ruolo di amministratore per il servizio gestore Kubernetes, ruolo di editor della piattaforma e ruolo di gestore per l'accesso ai servizi per il servizio Cloud Object Storage e ruolo di sviluppatore per lo spazio corrente nell'organizzazione corrente per il provisioning di Compose for PostgreSQL
+Assegna all'utente tutte le autorizzazioni necessarie per creare un'istanza CFEE. Il comando crea le seguenti politiche di accesso per l'utente di destinazione: ruolo di editor per il servizio CFEE, ruolo di amministratore per il servizio Kubernetes, editor per il ruolo di piattaforma e gestore per il ruolo di accesso al servizio per il servizio Cloud Object Storage e il ruolo di sviluppatore per lo spazio corrente nell'organizzazione attuale per il provisioning di Compose for PostgreSQL
 
 ```
 ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
