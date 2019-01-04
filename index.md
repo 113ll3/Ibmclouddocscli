@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2018
+  years: 2015, 2019
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-01-04"
 
 ---
 
@@ -64,7 +64,7 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://{DomainName}){:
 
   You can also download the installer script from our [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
-  For the steps to install these tools manually, see [How do I install the IBM Cloud developer tools manually](/docs/cli/ts_createapps.html#appendix).
+  See [How do I install the IBM Cloud developer tools manually?](/docs/cli/ts_createapps.html#appendix) for the steps to install these tools manually.
 
 ## Step 2. Verify the installation
 {: #step2}
