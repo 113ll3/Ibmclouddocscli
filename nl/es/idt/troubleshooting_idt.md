@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -55,6 +55,40 @@ ibmcloud login
 {: codeblock}
 
 
+### Problemas con el mandato enable, al reconocer el idioma de una app
+{: #enable-unknown-language}
+
+```
+FAILED
+Could not determine the language of your application.
+
+Try using the --language flag to specify the language of your application
+directly. 
+```
+#### Causa
+{: #enable-unknown-language-cause}
+
+Este error puede ser debido a lo siguiente:
+1. Se ha ejecutado el mandato [enable](commands.md#enable) desde un directorio que no es el directorio de origen de la aplicación.
+2. Se ha ejecutado el mandato [enable](commands.md#enable) para una app de un idioma que no se reconoce en este momento.
+
+#### Resolución
+{: #enable-unknown-language-resolution}
+
+Asegúrese de que el mandato se ejecuta desde el directorio de la app que contiene el código fuente de la app. Si esto no resuelve el problema y el idioma es uno de los [idiomas soportados](commands.md#enable-language-options), utilice el parámetro `--language` para especificar el idioma.
+
+### Problemas al crear o al ejecutar una app que se ha habilitado
+{: #enable-build-run-failures}
+
+Es posible que se produzcan varias anomalías al intentar [crear](commands.md#build) o [ejecutar](commands.md#run) una app que se ha habilitado.
+
+#### Resolución
+{: #enable-build-run-failures-resolution}
+
+Para obtener instrucciones sobre cómo resolver estos problemas con una app Spring, consulte este [artículo](/docs/java-spring/enable_existing.html#enable_existing).
+
+Para obtener instrucciones sobre cómo resolver estos problemas con una app Node.js, consulte este [artículo](/docs/node/enable_existing.html#enable_existing).
+
 ### Anomalías generales con {{site.data.keyword.dev_cli_short}}
 {: #general}
 
@@ -83,7 +117,7 @@ ibmcloud login
 {: codeblock}
 
 
-### Error de que no existe la imagen cuando se ejecuta un proyecto nuevo
+### Error: No existe la imagen cuando ejecuta una aplicación nueva
 {: #nosuchimage}
 
 Es posible que le aparezca el siguiente error cuando ejecute un proyecto sin compilarlo con anterioridad.
@@ -93,12 +127,12 @@ $ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
-Creating image bx-dev-testProject based on Dockerfile...
+Creating image ibmcloud-dev-testProject based on Dockerfile...
 OK
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
-Error: No such image: bx-dev-testProject
+Error: No such image: ibmcloud-dev-testProject
 ```
 
 
@@ -149,15 +183,15 @@ Este error se debe al servicio {{site.data.keyword.objectstorageshort}}, que sol
 Se le solicitará que elija otro plan para evitar este error.
 
 
-### Erro al obtener el código durante la creación del proyecto
+### Erro al obtener el código durante la creación de la app
 {: #code}
 
 Es posible que le aparezca el siguiente error si utiliza {{site.data.keyword.dev_cli_short}} para crear un proyecto:
 
 ```
-FAILED                            
+FAILED
 Project created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 
@@ -184,7 +218,7 @@ Puede obtener el código de una de las siguientes formas:
 
 * Utilice la {{site.data.keyword.dev_console}}.
 
-	1. Seleccione el [proyecto ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.{DomainName}/developer/projects) en la {{site.data.keyword.dev_console}} y pulse **Obtener el código**.
+	1. Seleccione el [proyecto ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/projects) en la {{site.data.keyword.dev_console}} y pulse **Obtener el código**.
 
 	2. Pulse **Generar código**.
 
@@ -307,7 +341,7 @@ Lo más probable es que esto se deba a un destino de imagen de despliegue. Más 
 #### Resolución
 {: #resolution3}
 
-Asegúrese de que el espacio de nombres en el destino de imagen de despliegue coincide con uno de los espacios de nombres que se ha encontrado en la ejecución
+Asegúrese de que el espacio de nombres en el destino de imagen de despliegue coincide con uno de los espacios de nombres encontrados en la ejecución
 
 ```
 ibmcloud cr namespaces
@@ -318,15 +352,15 @@ ibmcloud cr namespaces
 ## APÉNDICE
 {: #appendix}
 
-Se han instalado todos los requisitos previos para la mayoría de los usuarios que están ejecutando los instaladores de la plataforma. Si necesita instalar cualquier componente manualmente, aquí encontrará las instrucciones:
+Todos los requisitos previos se instalarán para la mayoría de los usuarios que utilizan instaladores sobre esta página. Si necesita instalar cualquier componente manualmente, aquí encontrará las instrucciones:
 
-Para instalar el plug-in de desarrollo, primero debe estar instalada la [CLI de IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
+Para instalar el plugin de desarrollo, primero debe estar instalada la [CLI de IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
 
-Para utilizar el plug-in de desarrollo, debe instalarlo ejecutando el mandato siguiente: `ibmcloud plugin install dev -r Bluemix`
+Para utilizar el propio plugin de desarrollo, debe instalarlo ejecutando el mandato siguiente: `ibmcloud plugin install dev -r Bluemix`
 
 Para ejecutar y depurar aplicaciones localmente, también debe instalar [Docker ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.docker.com/get-docker).
 
-Para desplegar una aplicación como un contenedor, también deberá instalar `Kubernetes`, `Helm` y los siguientes plug-ins de la CLI de IBM Cloud:
+Para desplegar una aplicación como contenedor, también debe instalar Kubernetes, Helm y los siguientes plugins de la CLI de IBM Cloud:
 
 Para instalar Kubernetes:
 * Usuarios de Mac:
@@ -346,10 +380,10 @@ Para instalar Helm:
 * Usuarios de Windows:
 Descargue e instale el binario de https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Para instalar el plug-in container-registry:
+Para instalar el plugin container-registry:
 `ibmcloud plugin install container-registry`
 
-Para instalar el plug-in container-service:
+Para instalar el plugin container-service:
 `ibmcloud plugin install container-service`
 
 
@@ -364,7 +398,7 @@ Para instalar el plug-in container-service:
 ## Obtención de ayuda y soporte
 {: #gettinghelp}
 
-Si tiene problemas o preguntas sobre la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.dev_cli_notm}}, obtenga ayuda buscando información o formulando preguntas a través de un foro. También puede abrir una incidencia de soporte.
+Si tiene problemas o preguntas sobre la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.dev_cli_notm}}, obtenga ayuda buscando información o formulando preguntas a través de un foro. También puede abrir un caso de soporte.
 
 Cuando publique en foros, puede etiquetar sus preguntas para que se notifique a los equipos de desarrollo de {{site.data.keyword.Bluemix_notm}}.
 
@@ -383,6 +417,6 @@ Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con 
 
 Consulte [Obtención de ayuda ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/support/index.html#getting-help) para obtener más información detallada sobre el uso de los foros.
 
-Para obtener información sobre cómo abrir una incidencia de soporte de {{site.data.keyword.IBM}}, o sobre los niveles de soporte y gravedades de las incidencias, consulte [Cómo obtener soporte ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/support/index.html#contacting-support).
+Para obtener información sobre cómo abrir un caso de soporte de {{site.data.keyword.IBM}}, o sobre los niveles de soporte y gravedades de los casos, consulte [Cómo obtener soporte ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/support/index.html#contacting-support).
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->

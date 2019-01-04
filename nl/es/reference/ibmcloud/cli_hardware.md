@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Hardware
+# Cómo crear y trabajar con servidores nativos
 
 {{site.data.keyword.baremetal_long}} son servidores físicos de un solo arrendatario que le proporcionan rendimiento y control con acceso de bajo nivel a los recursos de hardware. Los servidores nativos ofrecen la potencia que necesita para sus cargas de trabajo de uso intensivo de E/S de disco y de procesador. Estos servidores incluyen el paquete más completo de características y servicios.
 
-Utilice los mandatos siguientes para gestionar servidores de hardware nativos de la infraestructura de {{site.data.keyword.Bluemix}}.
+Utilice los mandatos siguientes para gestionar servidores de hardware nativos de la infraestructura clásica de {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Mandatos de servidor nativo de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<table summary="Mandatos de servidor nativo de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente con enlaces que le llevan a más información sobre el mandato">
  <tbody>
  <tr>
  <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>

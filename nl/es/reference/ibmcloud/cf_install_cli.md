@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -27,6 +27,7 @@ lastupdated: "2018-05-24"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 {:tip: .tip}
+{:note: .note}
 
 # Descargue, modifique y vuelva a desplegar apps Cloud Foundry con la interfaz de línea de mandatos
 
@@ -45,7 +46,8 @@ Tras instalar la interfaz de línea de mandatos, ya puede empezar:
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código de aplicación" /> </a>
 
-      **Nota**: Aumente la versión del nodo a `8.9.x` o a la más reciente en el archivo `package.json` antes de continuar.
+      Actualice la versión del nodo a `8.9.x` o a la más reciente en el archivo `package.json` antes de continuar.
+      {: note}
 
   2. Cambie al directorio donde se encuentra el código.
 
@@ -72,7 +74,8 @@ asignación de memoria, el número de instancias y otros parámetros cruciales. 
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">nombre_organización</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var> -sso</code></pre>
 
-  **Nota**: Debe añadir comillas simples o dobles alrededor de `nombre de usuario`, `nombre_org` y `nombre_espacio` si el valor contiene un espacio, por ejemplo, `-o "my org"`.
+  Debe añadir comillas simples o dobles alrededor de `nombre de usuario`, `nombre_org` y `nombre_espacio` si el valor contiene un espacio, por ejemplo, `-o "my org"`.
+  {: note}
 
   5. Desde <var class="keyword varname">nuevo_directorio</var>, vuelva a desplegar la app en {{site.data.keyword.Bluemix_notm}} mediante el mandato `bluemix app push`. Para obtener más información sobre el mandato `bx app push`, consulte [Carga de una aplicación](/docs/starters/upload_app.html).
 

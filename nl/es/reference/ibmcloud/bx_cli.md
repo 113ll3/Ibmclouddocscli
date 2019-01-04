@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -26,14 +26,14 @@ A partir de mayo de 2018, los mandatos de CLI de {{site.data.keyword.Bluemix_not
 A continuación se enumeran los mandatos detallados que están soportados por la CLI de {{site.data.keyword.Bluemix_notm}}, incluidos sus nombres, argumentos, opciones, requisitos previos, descripciones y ejemplos.
 {:shortdesc}
 
-**Nota:** *Requisitos previos* lista las acciones que son necesarias antes de utilizar el mandato. Los mandatos que no tienen acciones de requisito previo listan **Ninguno**. De lo contrario, los requisitos previos pueden incluir una o varias de las acciones siguientes:
+*Requisitos previos* lista las acciones que son necesarias antes de utilizar el mandato. Los mandatos que no tienen acciones de requisito previo listan **Ninguno**. De lo contrario, los requisitos previos pueden incluir una o varias de las acciones siguientes:
 
 <dl>
 <dt>Punto final</dt>
 <dd>Un punto final de API se debe establecer por medio de la <code>ibmcloud api</code> antes de utilizar el mandato.</dd>
 <dt>Login</dt>
 <dd>El inicio de sesión que utiliza el mandato <code>ibmcloud login</code> es necesario antes de utilizar este mandato.
-Si inicia sesión con un ID federado, utilice la opción '--sso' para autenticarse con un código de acceso de una sola vez o utilice '--apikey' para realizar la autenticación con una clave de API. Vaya a la consola de {{site.data.keyword.Bluemix_notm}} **Gestionar** &gt; **Seguridad** &gt; **Claves de API de plataforma** para crear claves de API.
+Si inicia sesión con un ID federado, utilice la opción '--sso' para autenticarse con un código de acceso de una sola vez o utilice '--apikey' para realizar la autenticación con una clave de API.
 </dd>
 <dt>Target</dt>
 <dd>El mandato <code>ibmcloud target</code> debe utilizarse para establecer un punto de extensión org y un espacio antes de utilizar este mandato.</dd>
@@ -441,18 +441,19 @@ ibmcloud update [-f]
 </dl>
 
 
-## Mandatos de CLI generales (ibmcloud sl)
+## Mandatos generales de servicio de la infraestructura clásica
 {: #softlayer_cli}
 
 
-Utilice los mandatos de servicio de la infraestructura en la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} para configurar y gestionar los servicios de infraestructura.
+Utilice los mandatos de la infraestructura clásica en la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} para configurar y gestionar los servicios de infraestructura.
+
 
 Se da soporte a los mandatos siguientes. Utilice el mandato `ibmcloud sl` para ver la lista de mandatos disponibles:
 
 <table summary="Mandatos ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 1. Mandatos de servicio de infraestructura general</caption>
+<caption>Tabla 1. Mandatos generales de la infraestructura clásica</caption>
  <thead>
- <th colspan="6">Mandatos de servicio de infraestructura general</th>
+ <th colspan="6">Mandatos generales de la infraestructura clásica</th>
  </thead>
  <tbody>
  <tr>
@@ -466,7 +467,7 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `ibmcloud sl` para v
  ## ibmcloud sl init
 {: #sl_init}
 
-Inicialice los valores de configuración que se utilizan para conectarse al entorno de infraestructura de {{site.data.keyword.BluSoftlayer_notm}}. La configuración incluye nombre de usuario, contraseña o una clave de API, cuenta y punto final.
+Inicialice los valores de configuración que se utilizan para conectar con el entorno de la infraestructura clásica. La configuración incluye nombre de usuario, contraseña o una clave de API, cuenta y punto final.
 ```
 ibmcloud sl init [OPTIONS]
 ```
@@ -474,7 +475,7 @@ ibmcloud sl init [OPTIONS]
 <strong>Opciones de mandato</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>URL de punto final de API de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}, el valor predeterminado es: https://api.softlayer.com/rest/v3.1 para la autenticación de claves de API, https://api.softlayer.com/mobile/v3.1 para la autenticación de IBMid.</dd>
+<dd>URL de punto final de API de la infraestructura clásica, el valor predeterminado es: https://api.softlayer.com/rest/v3.1 para la autenticación de claves de API, https://api.softlayer.com/mobile/v3.1 para la autenticación de IBMid.</dd>
 <dt>-u, --sl-user</dt>
 <dd>Nombre de usuario de infraestructura Gen1.</dd>
 <dt>-p, --sl-password</dt>
@@ -493,14 +494,14 @@ ibmcloud sl init [OPTIONS]
 <dd>Señal de autenticación cuando se habilita la autenticación telefónica.</dd>
 </dl>
 
-Por ejemplo, inicie la sesión con nombre de usuario y contraseña/clave de API de {{site.data.keyword.BluSoftlayer_notm}}
+Por ejemplo, inicie la sesión con su nombre de usuario y contraseña y contraseña o clave de API de la infraestructura clásica
 ```
 $ ibmcloud sl init
-Elija cómo configurar la autenticación de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}:
-1. Iniciar sesión con nombre de usuario y contraseña/clave de API de {{site.data.keyword.BluSoftlayer_notm}}
-2. Utilizar inicio de sesión único de {{site.data.keyword.Bluemix_notm}}
+Elija cómo configurar la autenticación de la infraestructura clásica:
+1. Inicie una sesión con su nombre de usuario y contraseña o clave de API de la infraestructura clásica
+2. Utilice el inicio de sesión único de {{site.data.keyword.Bluemix_notm}}
 Escriba un número>1
-URL de punto final de API de Softlayer: [https://api.softlayer.com/rest/v3.1]>
+URL de punto final de API de la infraestructura clásica: [https://api.softlayer.com/rest/v3.1]>
 Nombre de usuario: []> user@example.com
 Clave de API o contraseña: []> abcd
 
@@ -508,7 +509,7 @@ Punto final de API:    https://api.softlayer.com/rest/v3.1
 Nombre de usuario:       user@example.com
 Clave de API:         xxxxxxxxxx
 ```
-Por ejemplo, utilice el inicio de sesión único de {{site.data.keyword.Bluemix_notm}} para iniciar la sesión en Softlayer
+Por ejemplo, utilice el inicio de sesión único de {{site.data.keyword.Bluemix_notm}} para iniciar la sesión en la infraestructura clásica
 ```
 $ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
 Punto final de API: api.ng.bluemix.net
@@ -525,16 +526,16 @@ Ninguna organización ni espacio de destino. Utilice 'ibmcloud target --cf o ibm
 
 
 $ ibmcloud sl init
-Elija cómo configurar la autenticación de infraestructura de {{site.data.keyword.BluSoftlayer_notm}}:
+Elija cómo configurar la autenticación de la infraestructura clásica:
 
-1. Iniciar sesión con nombre de usuario y contraseña/clave de API de Softlayer
-2. Utilice inicio de sesión único de IBM Cloud
-Especifique un número> 2
-URL de punto final de API de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}: [https://api.softlayer.com/mobile/v3.1]>
+1. Inicie una sesión con su nombre de usuario y contraseña o clave de API de la infraestructura clásica
+2. Utilice el inicio de sesión único de IBM Cloud
+Escriba un número> 2
+URL de punto final de API de la infraestructura clásica: [https://api.softlayer.com/mobile/v3.1]>
 Estableciendo la cuenta en: 123456
-OK
+Correcto
 
-Punto final de API de {{site.data.keyword.BluSoftlayer_notm}}:    https://api.softlayer.com/mobile/v3.1   
+Punto final de API de la infraestructura clásica:    https://api.softlayer.com/mobile/v3.1   
 
 ID de cuenta:                123456
 ID de usuario:                   user@example.com
@@ -544,7 +545,7 @@ Señal de IMS:                 xxxxxxxxxx
 ## ibmcloud sl help
 {: #sl_help}
 
-Ver la información de ayuda para que todos los mandatos operen en el entorno de {{site.data.keyword.BluSoftlayer_notm}}.
+Ver la información de ayuda para todos los mandatos que funcionan en el entorno de la infraestructura clásica.
 ```
 ibmcloud sl help
 ```

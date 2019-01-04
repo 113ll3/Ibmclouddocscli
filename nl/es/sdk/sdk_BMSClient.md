@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-06-21"
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # Inicialización de BMSClient
 {: #sdk_BMSClient}
@@ -41,7 +41,7 @@ Puede descargar e importar el paquete `BMSCore` en su proyecto Android Studio o 
 ## Inicialización de la aplicación iOS
 {: #init-BMSClient-ios}
 
-Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](https://github.com/Carthage/Carthage){: new_window} para obtener el paquete `BMSCore`.
+Puede utilizar [CocoaPods ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cocoapods.org){: new_window} o [Carthage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/Carthage/Carthage){: new_window} para obtener el paquete `BMSCore`.
 
 1. Para instalar `BMSCore` mediante CocoaPods, añada las siguientes líneas a Podfile. Si el proyecto aún no tiene un Podfile, utilice el mandato `pod init`.
 
@@ -95,7 +95,7 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
 ## Inicialización de la aplicación Cordova
 {: #init-BMSClient-cordova}
 
-1. Añada el plug-in Cordova ejecutando el mandato siguiente desde el directorio raíz de la aplicación Cordova:
+1. Añada el plugin Cordova ejecutando el mandato siguiente desde el directorio raíz de la aplicación Cordova:
 
   ```
   cordova plugin add bms-core
@@ -118,6 +118,6 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
 ## Enlaces relacionados
 {: #general notoc}
 
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [Plugu_in de Cordova BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [SDK BMSCore Android ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [SDK BMSCore iOS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [Plugin BMSCore Cordova ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

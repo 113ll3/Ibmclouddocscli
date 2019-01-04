@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Catalog
+# Búsqueda y gestión de ofertas del catálogo
 {: #ibmcloud_catalog}
 
 Utilice los mandatos siguientes para gestionar las entradas de catálogo de {{site.data.keyword.Bluemix}}, las plantillas de consulta, los tiempos de ejecución y las geolocalizaciones de centros de datos.
@@ -104,7 +104,7 @@ ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
   <dt>--children</dt>
   <dd>Obtener todos los hijos para la entrada de catálogo</dd>
   <dt>--output TYPE (opcional)</dt>
-  <dd>--output value  Especifique el tipo de salida, ahora solo se da soporte a JSON. </dd>
+  <dd>--output value  Especifique el tipo de salida, ahora solo se da soporte a JSON.</dd>
   <dt>--global</dt>
   <dd>Operar en ámbito global</dd>
 </dl>
@@ -209,7 +209,7 @@ ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
   <dt>-json</dt>
   <dd>Respuesta JSON original de la salida</dd>
   <dt>--output TYPE (opcional)</dt>
-  <dd>--output value  Especifique el tipo de salida, ahora solo se da soporte a JSON. </dd>
+  <dd>--output value  Especifique el tipo de salida, ahora solo se da soporte a JSON.</dd>
   <dt>-global</dt>
   <dd>Operar en ámbito global</dd>
 </dl>

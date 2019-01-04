@@ -5,18 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CDN
+# Cómo trabajar con el servicio CDN
 
 El servicio de Red de entrega de contenido (CDN) distribuye el contenido en el lugar en el que se necesita. La primera vez que se solicita contenido, se obtiene del servidor host a la red y permanece allí para que otros usuarios puedan acceder al mismo.
 
-Utilice los mandatos siguientes para gestionar el servicio de CDN de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+Utilice los mandatos siguientes para gestionar el servicio de CDN de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Mandatos CDN de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">

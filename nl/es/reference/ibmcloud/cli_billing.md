@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Facturación 
+# Visualización del uso de cuentas, organizaciones, grupos de recursos y recursos 
 {: #ibmcloud_billing}
 
 Utilice los mandatos siguientes para recuperar el uso de recursos y la información de facturación.

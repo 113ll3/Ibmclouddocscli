@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN
+# Gestión de las VLAN de la infraestructura clásica
 
-Las redes de área local virtual (VLAN) son utilizadas por {{site.data.keyword.cloud}} para aislar el tráfico de difusión en las redes públicas y privadas.
+Las redes de área local virtual (VLAN) son utilizadas por {{site.data.keyword.cloud}} para aislar el tráfico de difusión en las redes públicas y privadas. Las VLAN se asignan a medida que se necesitan para dar servicio a otras ofertas.
 
-Utilice los mandatos siguientes para gestionar VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}}.
+Utilice los mandatos siguientes para gestionar las VLAN de la infraestructura clásica.
 {: shortdesc}
 
-<table summary="Mandatos VLAN de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<table summary="Mandatos de VLAN de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente con enlaces que le llevan a más información sobre el mandato">
  <thead>
  </thead>
  <tbody>

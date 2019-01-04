@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Recursos y grupos de recursos
+# Cómo trabajar con recursos y grupos de recursos
 {: #ibmcloud_commands_resource}
 
 Un grupo de recursos es una manera de organizar sus recursos de cuenta en agrupaciones personalizables. Utilice los mandatos siguientes para gestionar los recursos y grupos de recursos de {{site.data.keyword.Bluemix}} en un grupo de recursos.
@@ -89,7 +89,7 @@ ibmcloud resource groups [--default] [--output FORMAT]
   <dt>--default</dt>
   <dd>Obtener el grupo predeterminado de la cuenta actual.</dd>
   <dt>--output FORMAT (opcional)</dt>
-  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON. </dd>
+  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -124,7 +124,7 @@ ibmcloud resource group NAME [--id] [--output FORMAT]
   <dt>--id</dt>
   <dd>Mostrar solo ID</dd>
   <dt>--output FORMAT (opcional)</dt>
-  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON. </dd>
+  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -447,7 +447,7 @@ ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
   <dt>SERVICE_ALIAS (necesario)</dt>
   <dd>Nombre de alias de servicio</dd>
   <dt>--output FORMAT (opcional)</dt>
-  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON. </dd>
+  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -571,7 +571,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
   <dt>--alias-name</dt>
   <dd>Nombre de alias de servicio</dd>
   <dt>--output FORMAT (opcional)</dt>
-  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON. </dd>
+  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -599,7 +599,7 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dt>--id</dt>
   <dd>Mostrar el ID de la clave de servicio</dd>
   <dt>--output FORMAT (opcional)</dt>
-  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON. </dd>
+  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -693,7 +693,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [-
   <dt>--instance-name</dt>
   <dd>Nombre de la instancia de servicio de pertenencia.</dd>
   <dt>--output FORMAT (opcional)</dt>
-  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON. </dd>
+  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -30,7 +30,7 @@ Con el contenedor de Docker de {{site.data.keyword.dev_cli_notm}}, obtiene la CL
 ## Antes de empezar
 {: #prereq}
 
-Necesita una [cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") y debe instalar la última versión de Docker estable antes de realizar los pasos siguientes.
+Necesita una [cuenta de {{site.data.keyword.Bluemix_notm}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") y debe instalar la versión estable más reciente de Docker antes de seguir los pasos siguientes.
 
 ## Paso 1. Extraer la imagen de Docker del concentrador de Docker.
 {: #step1}
@@ -62,7 +62,7 @@ ibmcloud login
 Si se rechazan sus credenciales, puede que esté utilizando un ID federado. Consulte [Inicio de sesión con un ID federado](/docs/iam/login_fedid.html#federated_id) para obtener más detalles.
 {: tip}
 
-El plugin de CLI de {{site.data.keyword.dev_cli_notm}} utiliza dos contenedores para crear y probar su aplicación. El primero es el contenedor de herramientas que contiene los programas de utilidad necesarios para crear y probar la aplicación. El `Dockerfile` correspondiente a este contenedor se define mediante el parámetro [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters). Podría considerarlo como un contenedor de desarrollo, ya que contiene las herramientas que normalmente se utilizan para el desarrollo de un tiempo de ejecución concreto.
+El plugin de CLI de {{site.data.keyword.dev_cli_notm}} utiliza dos contenedores para facilitar la creación y la realización de pruebas de su aplicación. El primero es el contenedor de herramientas que contiene los programas de utilidad necesarios para crear y probar la aplicación. El `Dockerfile` correspondiente a este contenedor se define mediante el parámetro [`dockerfile-tools`](/docs/cli/idt/commands.html#command-parameters). Podría considerarlo como un contenedor de desarrollo, ya que contiene las herramientas que normalmente se utilizan para el desarrollo de un tiempo de ejecución concreto.
 
 El segundo contenedor es el contenedor de ejecución, que imita casi exactamente el entorno de tiempo de ejecución real de la app cuando se ha desplegado en la nube. El formato de este contenedor es adecuado para desplegarlo y utilizarlo en, por ejemplo, {{site.data.keyword.Bluemix_notm}}. Como resultado, se define un punto de entrada que inicia su aplicación. Al seleccionar ejecutar la aplicación a través del plugin de CLI de {{site.data.keyword.dev_cli_notm}}, utiliza este contenedor. El `Dockerfile` correspondiente a este contenedor se define mediante el parámetro [`dockerfile-run`](/docs/cli/idt/commands.html#run-parameters).
 

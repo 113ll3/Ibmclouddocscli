@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-19"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Entornos de empresa de Cloud Foundry (CFEE)
+# Cómo trabajar con el servicio Cloud Foundry Enterprise Environment
 {: #ibmcloud_commands_cfee}
 
 Con {{site.data.keyword.cfee_full}} (CFEE), puede crear instancias de varias plataformas de Cloud Foundry aisladas y de nivel empresarial a petición. Las instancias del servicio de IBM Cloud Foundry Enterprise se ejecutan dentro de su propia cuenta en IBM Cloud. El entorno se despliega en hardware aislado (clústeres de Kubernetes). Tiene un control completo sobre el entorno, que incluye el control de accesos, la capacidad, las actualizaciones de versiones, el uso de recursos y la supervisión.

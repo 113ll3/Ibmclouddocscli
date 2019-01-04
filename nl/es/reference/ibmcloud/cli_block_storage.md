@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Almacenamiento en bloque
+# Cómo trabajar con el servicio {{site.data.keyword.blockstorageshort}}
 
-El almacenamiento en bloque de {{site.data.keyword.Bluemix}} es un almacenamiento iSCSI persistente y de alto rendimiento que se suministra y se gestiona de forma independiente de las instancias de cálculo. Los LUN de almacenamiento en bloque basados en iSCSI están conectados a dispositivos autorizados a través de conexiones de E/S de varias vías de acceso (MPIO) redundantes. 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}} es un almacenamiento iSCSI persistente y de alto rendimiento que se suministra y se gestiona de forma independiente de las instancias de cálculo. Los LUN de {{site.data.keyword.blockstorageshort}} basados en iSCSI están conectados a dispositivos autorizados a través de conexiones de E/S de varias vías de acceso (MPIO) redundantes. 
 
-Utilice los mandatos siguientes para gestionar un volumen determinado para el servicio de almacenamiento en bloque de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}}.
+Utilice los mandatos siguientes para gestionar un volumen determinado para el servicio {{site.data.keyword.blockstorageshort}} de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 1. Almacenamiento en bloque de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<table summary="Mandatos generales de la infraestructura clásica de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente con enlaces que le llevan a más información sobre el mandato">
+<caption>Tabla 1. Almacenamiento en bloque de la infraestructura clásica de {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Almacenamiento en bloque de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Almacenamiento en bloque de la infraestructura clásica de {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -480,7 +480,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Columna para ordenar por las siguientes opciones: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
 <dt>--columns</dt>
-<dd>Columnas por visualizar, las opciones son: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, created_by.</dd>
+<dd>Columnas que se deben visualizar. Las opciones son: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 
 **Ejemplos**:
@@ -599,6 +599,8 @@ ibmcloud sl block volume-order [OPTIONS]
 <dd>Obligatorio. Nombre abreviado del centro de datos.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Parámetro opcional para solicitar espacio de instantáneas junto con almacenamiento en bloque de resistencia; especifica el tamaño (en GB) del espacio de instantáneas que se debe solicitar.</dd>
+<dt>-b, --billing</dt>
+<dd>Parámetro opcional para tasa de facturación (el valor predeterminado es monthly). Las opciones son hourly, monthly.</dd>
 <dt>-f, --force</dt>
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>

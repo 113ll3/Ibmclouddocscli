@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # Cómo realizar una solicitud de red
 {: #sdk-network-request}
@@ -94,13 +94,13 @@ La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y
 
 La clase `BMSURLSession` solo está disponible para iOS.
 
-Para ver ejemplos de uso completos, consulte archivo [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core) de `BMSCore` GitHub.
+Para ver ejemplos de uso completos, consulte el archivo [README de `BMSCore` GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}.
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Asegúrese de haber [importado e inicializado el SDK del cliente](sdk_BMSClient.html#init-BMSClient-cordova) en la aplicación Cordova.
+1. Asegúrese de que ha [importado el SDK de cliente y lo ha inicializado](sdk_BMSClient.html#init-BMSClient-cordova) en su aplicación Cordova.
 
 2. Cree una solicitud de red.
 

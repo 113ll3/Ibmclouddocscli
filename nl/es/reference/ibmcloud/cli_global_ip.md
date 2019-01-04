@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IP global
+# Gestión de IP globales
 
 Una dirección IP global es una subred secundaria estática especializada. Se le entrega como una subred /32 (en otras palabras, una dirección IP única) que se puede direccionar a cualquier otra dirección IP de su cuenta.
 
-Utilice los mandatos siguientes para gestionar una IP global en el servicio de IP global de la infraestructura de {{site.data.keyword.Bluemix}}.
+Utilice los mandatos siguientes para gestionar una IP global en el servicio de IP global de la infraestructura clásica de {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Mandatos Global IP de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<table summary="Mandatos de IP globales de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le llevan a más información sobre el mandato">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>

@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -15,19 +15,21 @@ lastupdated: "2018-07-27"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
+{:note: .note}
 
-
-# Mandatos de Cloud Foundry (cf)
+# Cómo trabajar con Cloud Foundry (mandatos cf)
 {: #cf}
 
 La interfaz de línea de mandatos (CLI) de Cloud Foundry (cf) proporciona un conjunto de mandatos para gestionar las apps. En la siguiente información se indican los mandatos cf más comúnmente utilizados para gestionar apps e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Para ver una lista de todos los mandatos cf y su información de ayuda asociada, utilice `cf help`. Utilice `cf nombre_mandato -h` para ver información de ayuda detallada sobre un determinado mandato.
 {: shortdesc}
 
-Para obtener más detalles sobre cómo empezar con la CLI de Cloud Foundry, consulte [Cómo empezar](https://github.com/cloudfoundry/cli#getting-started).
+Para obtener más información sobre cómo comenzar a trabajar con la CLI de Cloud Foundry, consulte [Iniciación ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}.
 
 Para obtener una lista más detallada de mandatos `cf CLI`, consulte la [Guía de referencia de Cloud Foundry CLI ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} de la comunidad.
 
-**Nota**: Si la red contiene un servidor proxy HTTP entre el host que ejecuta los mandatos cf y el punto final de la API de Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para obtener detalles, consulte [Utilización de la CLI cf con un servidor proxy HTTP ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+Si la red contiene un servidor proxy HTTP entre el host que ejecuta los mandatos cf y el punto final de la API de
+Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para obtener detalles, consulte [Utilización de la CLI cf con un servidor proxy ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+{: note}
 
 
 ## Índice de mandatos de CLI de Cloud Foundry
@@ -86,7 +88,7 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
 ## cf api
 {: #cf_api}
 
-Utilice este mandato para visualizar o especificar el URL del punto final de la API de {{site.data.keyword.Bluemix_notm}}.
+Utilice este mandato para visualizar o especificar el URL del punto final de la API de {{site.data.keyword.Bluemix}}.
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
@@ -98,7 +100,8 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (opcional)</dt>
-   <dd>El URL del punto final API de Bluemix que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es `https://api.{DomainName}`.
+   <dd>El URL del punto final API de {{site.data.keyword.Bluemix_notm}}
+que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es `https://api.{DomainName}`.
    Si desea visualizar el URL del punto final API que está utilizando actualmente no tiene que especificar este parámetro para el mandato cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Inhabilita el proceso de validación de SSL. El uso de este parámetro puede ocasionar problemas de seguridad.</dd>
@@ -393,9 +396,10 @@ cf help events
 {: #cf_login}
 
 Se inicia la sesión
-en {{site.data.keyword.Bluemix_notm}}. Si va a iniciar sesión con un [ID federado](/docs/admin/account.html#signup), debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión.
+en {{site.data.keyword.Bluemix_notm}}. Si va a iniciar sesión con un ID federado, debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión.
 
-**Nota**: También puede utilizar una clave de una API de la plataforma de {{site.data.keyword.Bluemix_notm}} para iniciar una sesión. Utilice el nombre de usuario `apikey` y su valor de clave de API como contraseña. Para obtener más información sobre la creación de claves de API, consulte [Gestión de claves de API](/docs/iam/apikeys.html).
+También puede utilizar una clave de una API de la plataforma de {{site.data.keyword.Bluemix_notm}} para iniciar una sesión. Utilice el nombre de usuario `apikey` y su valor de clave de API como contraseña. Para obtener más información sobre la creación de claves de API, consulte [Visión general de las claves de API](/docs/iam/apikeys.html).
+{: note}
 
 ```
 cf login [-a url] [-u nombre_usuario] [-p contraseña] [-sso] [-o nombre_organización] [-s nombre_espacio] [--skip-ssl-validation]
@@ -826,10 +830,6 @@ cf -v
 ```
 {: codeblock}
 
-
-
-# Enlaces relacionados
-{: #rellinks}
 
 ## Enlaces relacionados
 {: #general}

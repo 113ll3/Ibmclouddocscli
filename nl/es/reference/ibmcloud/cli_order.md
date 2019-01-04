@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Pedido
+# Gestión de pedidos y presupuestos de la infraestructura clásica
 
 <table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
- <caption>Tabla 1. Pedidos de infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+ <caption>Tabla 1. Pedidos de la infraestructura clásica</caption>
  <thead>
- <th colspan="6">Pedidos de infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Pedidos de la infraestructura clásica</th>
  </thead>
  <tbody>
  <tr>

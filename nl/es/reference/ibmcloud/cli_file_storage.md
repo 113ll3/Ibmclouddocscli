@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# File Storage
+# Cómo trabajar con el servicio de almacenamiento de archivos
 
 {{site.data.keyword.filestorage_full}} es una {{site.data.keyword.filestorage_short}} basada en NFS persistente, rápida y flexible conectada a la red. En este entorno de almacenamiento adjunto de red (NAS), tiene un control total sobre la función y el rendimiento de las comparticiones de archivos.
 
 Utilice los mandatos siguientes para gestionar un volumen determinado en el servicio de almacenamiento de archivos de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Mandatos de infraestructura generales de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
-<caption>Tabla 1. Almacenamiento de archivos de infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<table summary="Mandatos generales de la infraestructura clásica de {{site.data.keyword.BluSoftlayer_notm}} ordenados alfabéticamente con enlaces que le llevan a más información sobre el mandato">
+<caption>Tabla 1. Almacenamiento de archivos de la infraestructura clásica de {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Almacenamiento de archivos de la infraestructura de {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Almacenamiento de archivos de la infraestructura clásica de {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -472,7 +472,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Columna por la que se debe ordenar. Las opciones son: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,mount_addr.</dd>
 <dt>--columns</dt>
-<dd>Columnas que se deben visualizar. Las opciones son: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr.</dd>
+<dd>Columnas que se deben visualizar. Las opciones son: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr,notes.</dd>
 </dl>
 
 **Ejemplos**:
@@ -548,6 +548,8 @@ ibmcloud sl file volume-order [OPTIONS]
 <dd>Obligatorio. Nombre abreviado del centro de datos.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Parámetro opcional para solicitar espacio de instantáneas junto con el volumen.</dd>
+<dt>-b, --billing</dt>
+<dd>Parámetro opcional para tasa de facturación (el valor predeterminado es monthly). Las opciones son hourly, monthly.</dd>
 <dt>-f, --force</dt>
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>

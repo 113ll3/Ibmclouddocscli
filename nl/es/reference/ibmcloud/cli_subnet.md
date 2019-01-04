@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Subred
+# Creación, cancelación y visualización de subredes
 
-Una subred es una partición lógica de una red de IP en varios segmentos de red más pequeños. Utilice los mandatos siguientes para gestionar las subredes de la infraestructura de {{site.data.keyword.Bluemix}}.
+Una subred es una partición lógica de una red de IP en varios segmentos de red más pequeños. Utilice los mandatos siguientes para gestionar las subredes de la infraestructura clásica de {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Mandatos Subnet de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<table summary="Mandatos de subred de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente con enlaces que le llevan a más información sobre el mandato">
  <thead>
  </thead>
  <tbody>

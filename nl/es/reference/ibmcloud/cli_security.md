@@ -5,23 +5,23 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Seguridad
+# Gestión de claves SSH de seguridad y de certificados SSL
 
 Las claves SSH permiten el acceso a un dispositivo sin utilizar una contraseña de los clientes correspondientes para cada clave pública que se implementa en el dispositivo. Al añadir una clave SSH a un dispositivo, el dispositivo que se proporciona con la clave SSH accede al dispositivo para la clave correspondiente sin el uso de una contraseña.
 
 Los certificados de SSL están habilitados por los sitios web como medida de seguridad para proteger al usuario. Generalmente se utilizan cuando se le pide que transmita información confidencial a un sitio web.
 
-Utilice los mandatos siguientes para gestionar certificados y claves SSH de la infraestructura de {{site.data.keyword.Bluemix}}.
+Utilice los mandatos siguientes para gestionar certificados y claves SSH de la infraestructura clásica de {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Mandatos security de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<table summary="Mandatos de seguridad de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente con enlaces que le llevan a más información sobre el mandato">
  <thead>
  </thead>
  <tbody>

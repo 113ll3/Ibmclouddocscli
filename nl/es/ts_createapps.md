@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -87,7 +87,7 @@ Error: No such image: ibmcloud-dev-testProject
 ```
 {: tsSymptoms}
 
-Debe crear una app antes de ejecutarla. Ejecute el mandato siguiente en el directorio de la app actual: 
+Debe crear una app antes de ejecutarla. Ejecute el mandato siguiente en el directorio de la app actual:
 ```
 ibmcloud dev build
 ```
@@ -126,9 +126,9 @@ Seleccione otro plan.
 Es posible que se muestre el siguiente error cuando se utiliza la CLI para crear una app:
 
 ```
-FAILED                            
+FAILED
 Application created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -158,7 +158,7 @@ Utilice uno de los métodos siguientes para obtener el código:
 {: #node}
 {: troubleshoot}
 
-Es posible que se muestre el siguiente error si ejecuta el mandato `ibmcloud dev run` para apps web Node.js o BFF: 
+Es posible que se muestre el siguiente error si ejecuta el mandato `ibmcloud dev run` para apps web Node.js o BFF:
 
 ```
 module.js:597
@@ -244,7 +244,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-na
 La causa más probable es que la imagen de destino de despliegue no sea válida. Más concretamente, el espacio de nombres, que se encuentra en medio en el destino de imagen de despliegue, podría no ser válido.
 {: tsCauses}
 
-Asegúrese de que el espacio de nombres en el destino de la imagen de despliegue coincide con uno de los espacios de nombres que se muestran cuando ejecuta el siguiente mandato: 
+Asegúrese de que el espacio de nombres en el destino de la imagen de despliegue coincide con uno de los espacios de nombres que se muestran cuando ejecuta el siguiente mandato:
 ```
 ibmcloud cr namespaces
 ```
@@ -259,12 +259,12 @@ FAILED
 Could not determine the language of your application.
 
 Try using the --language flag to specify the language of your application
-directly.
+directly. 
 ```
 {: tsSymptoms}
 
 Este error puede deberse a una de las causas siguientes:
-- Se ha ejecutado el mandato [enable](/docs/cli/idt/commands.html#enable) desde un directorio que no es el directorio de origen de la aplicación. 
+- Se ha ejecutado el mandato [enable](/docs/cli/idt/commands.html#enable) desde un directorio que no es el directorio de origen de la aplicación.
 - Se ha ejecutado el mandato [enable](/docs/cli/idt/commands.html#enable) para una app de un idioma que no se reconoce en este momento.
 {: tsCauses}
 
@@ -284,3 +284,59 @@ En los siguientes enlaces encontrará muchas de las posibles causas.
 - Para obtener más información sobre cómo resolver estos problemas con una app Spring, consulte [Habilitación de aplicaciones Spring Boot existentes para el despliegue en la nube](/docs/java-spring/enable_existing.html#enable_existing).
 - Para obtener más información sobre cómo resolver estos problemas con una app `Node.js`, consulte [Habilitación de aplicaciones Node.js existentes para el despliegue en la nube](/docs/node/enable_existing.html#enable_existing).
 {: tsResolve}
+
+## ¿Cómo se instalan manualmente las herramientas de desarrollador de {{site.data.keyword.Bluemix_notm}}?
+{: #appendix}
+Todos los requisitos previos se instalan para la mayoría utilizando los instaladores de la plataforma. Si necesita instalar cualquier componente manualmente, aquí encontrará las instrucciones para cada uno.
+Para instalar el plugin de desarrollo, primero debe instalar la [CLI de IBM Cloud](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+Para utilizar el propio plugin de desarrollo, debe instalarlo ejecutando el mandato siguiente: 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+Para ejecutar y depurar apps localmente, también debe instalar [Docker](https://www.docker.com/get-docker).
+ 
+Para desplegar una app como contenedor, también debe instalar Kubernetes, Helm y los siguientes plugins de la CLI de IBM Cloud.
+ 
+### Para instalar Kubernetes:
+Usuarios de Mac:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+Usuarios de Linux:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+Usuarios de Windows:
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### Para instalar Helm:
+Usuarios de Mac y Linux:
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+Usuarios de Windows:
+Descargue e instale el archivo [binario](https://github.com/kubernetes/helm/releases/tag/v2.7.2).
+
+### Para instalar el plugin container-registry:
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### Para instalar el plugin container-service:
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

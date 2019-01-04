@@ -5,14 +5,15 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 
-# Cuentas, usuarios y organizaciones
+# Gestión de cuentas, usuarios y organizaciones de Cloud Foundry
 {: #ibmcloud_commands_account}
 
 Utilice los mandatos siguientes para gestionar cuentas, usuarios de una cuenta y la organización, el espacio y los roles de los entornos de Cloud Foundry públicos.
@@ -329,7 +330,7 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 <dt>-a (opcional)</dt>
 <dd>Lista todos los usuarios de la organización especificada, no agrupada por rol.</dd>
 <dt>--output FORMAT (opcional)</dt>
-<dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON. </dd>
+<dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -408,7 +409,8 @@ Asigne el usuario `Mary` a la organización `IBM` como el rol de `OrgManager`:
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**Nota**: Establezca roles de espacios/organizaciones utilizando la interfaz de línea de mandatos, sin embargo, si desea establecer otros permisos, utilice la interfaz de usuario. Para obtener más información, consulte [Asignación de acceso de usuarios](/docs/iam/assignaccess.html#assignaccess).
+Establezca roles de espacios/organizaciones utilizando la interfaz de línea de mandatos, sin embargo, si desea establecer otros permisos, utilice la interfaz de usuario. Para obtener más información, consulte [Gestión del acceso a recursos](/docs/iam/mngiam.html#iammanidaccser).
+{: note}
 <!-- Begin Staging URL vs Prod URL -->
 
 ## ibmcloud account org-role-unset

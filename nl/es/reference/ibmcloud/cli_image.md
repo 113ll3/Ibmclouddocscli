@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Imagen
+# Creación, edición y supresión de imágenes de cálculo
 
 Utilice los mandatos siguientes para gestionar las imágenes de cálculo de {{site.data.keyword.Bluemix}}.
 {: shortdesc}

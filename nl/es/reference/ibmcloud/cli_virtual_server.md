@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Servidor Virtual
+# Cómo crear y trabajar con servidores virtuales
 
 Los {{site.data.keyword.BluVirtServers}} son servidores virtuales escalables que se adquieren con núcleos dedicados y asignaciones de memoria. Constituyen una opción ideal si necesita recursos de cálculo, que se pueden añadir en cuestión de minutos, con acceso a características como plantillas de imágenes. 
 
-Utilice los mandatos siguientes para gestionar servidores virtuales de la infraestructura de {{site.data.keyword.Bluemix}}.
+Utilice los mandatos siguientes para gestionar servidores virtuales de la infraestructura clásica.
 {: shortdesc}
 
-<table summary="Mandatos de servidor virtual de la infraestructura de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le proporcionan más información del mandato">
+<table summary="Mandatos del servidor virtual de la infraestructura clásica de {{site.data.keyword.Bluemix_notm}} ordenados alfabéticamente que tienen enlaces que le dan acceso a más información sobre el mandato">
  <thead>
  </thead>
  <tbody>

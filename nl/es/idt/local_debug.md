@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -11,6 +11,7 @@ lastupdated: "2018-06-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Depuración de aplicaciones locales para la CLI de {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
@@ -39,7 +40,10 @@ ibmcloud dev debug
       6. Defina un punto de interrupción en el IDE.
       7. Ejecute la configuración de depuración.
       8. Acceda al punto final con un navegador para recrear el problema.  
-	   **Nota**: el puerto predeterminado es 9080 para el punto final de Java Basic Microservices.
+	   
+	   El puerto predeterminado es 9080 para el punto final de Java Basic Microservices.
+	   {: note}
+
 	* [IntelliJ ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
 	* [VSCode ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
 	* Línea de mandatos JDK: `jdb -attach <host:port>`
@@ -49,7 +53,7 @@ ibmcloud dev debug
 
 Pasos para habilitar la herramienta de depuración para una aplicación Node.js:
 
-1. Desde el directorio raíz del proyecto de aplicación ejecute el mandato siguiente:
+1. Desde el directorio raíz del proyecto de aplicación, ejecute el mandato siguiente:
 
 ```
 ibmcloud dev debug
@@ -66,7 +70,7 @@ ibmcloud dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
+1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:
