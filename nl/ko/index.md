@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -37,9 +37,9 @@ lastupdated: "2018-11-15"
 ## 시작하기 전에
 {: #prereq}
 
-[{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 다음 시스템 요구사항이 필요합니다.
+[{{site.data.keyword.Bluemix_notm}} 계정](https://{DomainName}){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 다음 시스템 요구사항이 필요합니다.
 
-* Windows를 실행하는 경우 Windows 10 Pro를 실행하고 있지 않으면 일부 기능은 지원되지 않습니다. 
+* Windows를 실행하는 경우 Windows 10 Pro를 실행 중이지 않으면 일부 기능이 지원되지 않습니다. 
 * 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다.
 
 ## 1단계: 설치 명령 실행
@@ -62,9 +62,9 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
     Windows PowerShell 아이콘을 마우스 오른쪽 단추로 클릭한 후 **관리자로 실행**을 선택하십시오.
   {: tip}
 
-  또한 [GitHub 저장소](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)에서 설치 프로그램 스크립트를 다운로드할 수 있습니다.
+  [GitHub 저장소](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 설치 프로그램 스크립트를 다운로드할 수도 있습니다.
 
-  이러한 도구를 수동으로 설치하는 단계는 [도구 재설치](/docs/cli/ts_createapps.html#appendix)를 참조하십시오.
+  이러한 도구를 수동으로 설치하는 단계는 [수동으로 IBM Cloud 개발자 도구를 설치하는 방법](/docs/cli/ts_createapps.html#appendix)을 참조하십시오.
 
 ## 2단계. 설치 확인
 {: #step2}
@@ -96,7 +96,7 @@ ibmcloud dev help
 	{: codeblock}
     <br>
 
-	인증 정보가 거부되면 연합 ID를 사용할 수 있습니다. 자세한 사항은 [연합 ID로 로그인](/docs/iam/login_fedid.html#federated_id)을 참조하십시오.
+	인증 정보가 거부되는 경우 연합 ID를 사용 중일 수 있습니다. 자세한 사항은 [연합 ID로 로그인](/docs/iam/login_fedid.html#federated_id)을 참조하십시오.
 	{: tip}
 
 3. 조직 및 영역을 설정하십시오.
