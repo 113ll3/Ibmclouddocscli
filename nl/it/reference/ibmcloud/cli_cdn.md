@@ -5,18 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# CDN
+# Gestione del servizio CDN
 
 Il servizio CDN (Content Delivery Network) distribuisce il contenuto dove è necessario. La prima volta che viene richiesto il contenuto, viene trasmesso dal server host alla rete e rimane lì in modo che altri utenti possano accedervi.
 
-Utilizza i seguenti comandi per gestire il servizio CDN dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+Utilizza i seguenti comandi per gestire il servizio CDN dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Comandi CDN dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">

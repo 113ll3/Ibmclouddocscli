@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # Effettuazione di una richiesta di rete
 {: #sdk-network-request}
@@ -94,7 +94,7 @@ La classe `Request` rappresenta un metodo semplice per effettuare una richiesta 
 
 La classe `BMSURLSession` è disponibile solo per iOS.
 
-Per esempi di utilizzo completi, consulta `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core).
+Per degli esempi di utilizzo completi, vedi il `BMSCore` GitHub [README ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}.
 
 
 ## Cordova

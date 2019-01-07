@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Sottorete
+# Creazione, annullamento e visualizzazione di sottoreti
 
-Una sottorete è una partizione logica di una rete IP in più segmenti di rete più piccoli. Utilizza i seguenti comandi per gestire le sottoreti dell'infrastruttura {{site.data.keyword.Bluemix}}.
+Una sottorete è una partizione logica di una rete IP in più segmenti di rete più piccoli. Utilizza i seguente comandi per gestire le sottoreti dell'infrastruttura classica {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Comandi della sottorete dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+<table summary="Comandi delle sottoreti dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}} ordinati alfabeticamente che presentano dei link che ti portano a ulteriori informazioni per il comando">
  <thead>
  </thead>
  <tbody>

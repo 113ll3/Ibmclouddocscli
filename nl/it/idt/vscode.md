@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-30"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-07-12"
 # IBM Cloud Developer Tools per Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-L'estensione IBM Cloud Developer Tools per Visual Studio Code è un'estensione per l'editor che fornisce l'accesso alle funzionalità dalla CLI IBM Developer direttamente all'interno della tavolozza dei comandi dell'editor Visual Studio Code. Ti consente di accedere rapidamente a un sottoinsieme di comandi `ibmcloud dev` sia per i flussi di lavoro Docker che per quelli Cloud Foundry, che includono la distribuzione dell'applicazione, l'avvio/arresto/riavvio di applicazioni su {{site.data.keyword.Bluemix_notm}}, la visualizzazione dei log di applicazioni remote e altro ancora, il tutto senza la necessità di uscire dal contesto dell'editor.
+L'estensione IBM Cloud Developer Tools per Visual Studio Code è un'estensione per l'editor che fornisce l'accesso alle funzionalità dalla CLI IBM Developer direttamente all'interno della tavolozza dei comandi dell'editor Visual Studio Code. Ti consente di accedere rapidamente a un sottoinsieme di comandi `ibmcloud dev` sia per i flussi di lavoro Docker che per quelli Cloud Foundry, che includono la distribuzione dell'applicazione, l'avvio/arresto/riavvio di applicazioni su {{site.data.keyword.Bluemix}}, la visualizzazione dei log di applicazioni remote e altro ancora, il tutto senza la necessità di uscire dal contesto dell'editor.
 {:shortdesc}
 
 ![Acquisizione della schermata di download dell'estensione IBM Developer Tools.](vscode.png "Schermata di download dell'estensione in Visual Studio Code")
@@ -26,7 +26,7 @@ L'estensione IBM Cloud Developer Tools per Visual Studio Code è un'estensione p
 ## Dipendenze
 {: #dependencies}
 
-Per utilizzare l'estensione IBM Cloud Developer Tools per Visual Studio Code, sul tuo sistema devi installare il plug-in della [CLI {{site.data.keyword.Bluemix_notm}}](https://plugins.ng.bluemix.net/ui/home.html) e della [CLI IBM Developer](index.html).
+Per utilizzare l'estensione IBM Cloud Developer Tools per Visual Studio Code, hai bisogno della [CLI di {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview) e del plug-in della CLI {{site.data.keyword.Bluemix_notm}} installato sul tuo sistema.
 
 ## Installazione
 {: #installation}
@@ -45,7 +45,7 @@ In alternativa, puoi installare l'estensione IBM Cloud Developer Tools attravers
 1. Apri la barra laterale **Extensions** nell'editor Visual Studio Code ed effettua la ricerca utilizzando la stringa `publisher:IBM Developer`. L'estensione IBM Cloud Developer Tools viene visualizzata nei risultati della ricerca.  
 2. Fai clic sul pulsante **Install** per avviare l'installazione.
 
-Puoi anche accedere all'[estensione IBM Cloud Developer Tools direttamente da Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
+Puoi anche accedere all'[estensione IBM Cloud Developer Tools direttamente all'interno di Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
 
 ## Utilizzo
 {: #usage}
@@ -64,12 +64,12 @@ Successivamente, immetti o seleziona il comando da avviare. Puoi digitare 'ibmcl
 
 Puoi iniziare a utilizzare i flussi di lavoro `ibmcloud dev` in pochi passi:
 * Crea un progetto utilizzando uno dei due seguenti metodi:
-  * Utilizza la [console web {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/developer/getting-started/) e scarica il codice generato
-  * Utilizza la [CLI {{site.data.keyword.Bluemix_notm}} Developer](index.html) e genera un progetto usando il comando `ibmcloud dev create`
+  * Utilizza la [console web {{site.data.keyword.Bluemix_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") e scarica il codice generato
+  * Utilizza il plug-in della CLI {{site.data.keyword.Bluemix_notm}} Developer Tools e genera un progetto utilizzando il comando [ibmcloud dev create](/docs/cli/idt/commands.html#create).
 * Apri la cartella del progetto in locale nell'editor Visual Studio Code
 * Utilizza il comando `ibmcloud dev build` per creare l'applicazione in un'immagine Docker
 * Utilizza il comando `ibmcloud dev debug` per eseguire l'applicazione nel Docker locale per lo sviluppo
-> Nota: per eseguire il debug di un'applicazione Node.js in esecuzione nel contenitore Docker locale, devi [aggiungere una configurazione di debug per il contenitore locale](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
+> Nota: per eseguire il debug di un'applicazione Node.js in esecuzione all'interno del contenitore Docker locale, hai bisogno di [aggiungere una configurazione di debug per il contenitore locale](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
 * Utilizza il comando `ibmcloud dev run` per eseguire l'applicazione nel Docker locale in modalità di rilascio
 * Utilizza il comando `ibmcloud dev deploy` per distribuire l'applicazione a un runtime Cloud Foundry su {{site.data.keyword.Bluemix_notm}}
 
@@ -80,7 +80,7 @@ Per gli utenti che attualmente distribuiscono le applicazioni ai runtime Cloud F
 
 Puoi iniziare a utilizzare i flussi di lavoro CloudFoundry in pochi passi
 * Crea una nuova applicazione CloudFoundry
-  * Utilizza la [console web](https://console.ng.bluemix.net/dashboard/cf-apps) e scarica il codice di starter
+  * Utilizza la [console web {{site.data.keyword.Bluemix_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") e scarica il codice starter.
   * Crea una nuova applicazione CloudFoundry manualmente
 * Apri la cartella del progetto in locale nell'editor Visual Studio Code
 * Utilizza `ibmcloud cf apps` per elencare tutte le tue applicazioni

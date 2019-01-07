@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Fatturazione 
+# Visualizzazione dell'utilizzo per gli account, le organizzazioni, i gruppi di risorse e le risorse 
 {: #ibmcloud_billing}
 
 Utilizza i seguenti comandi per richiamare le informazioni sull'utilizzo delle risorse e sulla fatturazione.

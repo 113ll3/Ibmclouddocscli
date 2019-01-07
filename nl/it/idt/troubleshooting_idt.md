@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -55,6 +55,41 @@ ibmcloud login
 {: codeblock}
 
 
+### Problemi con il comando enable relativi al riconoscimento del linguaggio per un'applicazione
+{: #enable-unknown-language}
+
+```
+FAILED
+Could not determine the language of your application.
+
+Try using the --language flag to specify the language of your application 
+directly. 
+```
+#### Causa
+{: #enable-unknown-language-cause}
+
+Questo errore può essere dovuto a:
+1. Un'esecuzione del comando [enable](commands.md#enable) da una directory che non è la directory di origine della tua applicazione.
+2. Un'esecuzione del comando [enable](commands.md#enable) per un'applicazione di un linguaggio che non è riconosciuto, al momento.
+
+#### Risoluzione
+{: #enable-unknown-language-resolution}
+
+Assicurati che il comando sia eseguito dalla directory dell'applicazione che contiene il codice sorgente per l'applicazione. Se questo non risolve il problema e il linguaggio è uno dei [linguaggi supportati](commands.md#enable-language-options), utilizza il parametro `--language` per specificare il linguaggio.
+
+
+### Problemi di creazione o esecuzione di un'applicazione che è stata abilitata
+{: #enable-build-run-failures}
+
+Potresti riscontrare diversi errori durante il tentativo di [creare](commands.md#build) o [eseguire](commands.md#run) un'applicazione che è stata abilitata.
+
+#### Risoluzione
+{: #enable-build-run-failures-resolution}
+
+Per indicazioni sulla risoluzione di problemi di questo tipo con un'applicazione Spring, consulta questo [articolo](/docs/java-spring/enable_existing.html#enable_existing).
+
+Per indicazioni sulla risoluzione di problemi di questo tipo con un'applicazione Node.js, consulta questo [articolo](/docs/node/enable_existing.html#enable_existing).
+
 ### Errori generali con la {{site.data.keyword.dev_cli_short}}
 {: #general}
 
@@ -83,7 +118,7 @@ ibmcloud login
 {: codeblock}
 
 
-### Errore: Nessuna immagine quando esegui un nuovo progetto
+### Errore: nessuna immagine di questo tipo quando esegui una nuova applicazione
 {: #nosuchimage}
 
 Potresti visualizzare il seguente errore quando esegui un progetto senza prima crearlo.
@@ -93,12 +128,12 @@ $ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
-Creating image bx-dev-testProject based on Dockerfile...
-OK                    
+Creating image ibmcloud-dev-testProject based on Dockerfile...
+OK
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
-Error: No such image: bx-dev-testProject
+Error: No such image: ibmcloud-dev-testProject
 ```
 
 
@@ -149,15 +184,15 @@ Questo errore è dovuto al servizio {{site.data.keyword.objectstorageshort}} che
 Per evitare questo errore ti viene richiesto di scegliere un piano diverso.
 
 
-### Impossibile ottenere il codice durante la creazione del progetto
+### Errore di ottenimento del codice durante la creazione di un'applicazione
 {: #code}
 
 Potresti visualizzare il seguente errore se utilizzi la {{site.data.keyword.dev_cli_short}} per creare un progetto:
 
 ```
-FAILED                            
+FAILED
 Project created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 
@@ -184,11 +219,11 @@ Puoi ottenere il codice in uno dei seguenti modi:
 
 * Utilizza la {{site.data.keyword.dev_console}}.
 
-	1. Seleziona il tuo progetto [ ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/developer/projects) nella {{site.data.keyword.dev_console}} e fai clic su **Ottieni codice**.
+	1. Seleziona il tuo [progetto ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/projects) nella {{site.data.keyword.dev_console}} e fai clic su **Get the Code**.
 
-	2. Fai clic su **Genera codice**.
+	2. Fai clic su **Generate Code**.
 
-	3. Dopo aver generato il codice, fai clic su **Scarica codice**.
+	3. Dopo aver generato il codice, fai clic su **Download Code**.
 
 
 ### Errore durante l'esecuzione di `ibmcloud dev run` per i progetti Node.js
@@ -253,7 +288,7 @@ ibmcloud login
 ### Impossibile distribuire a Kubernetes in {{site.data.keyword.Bluemix_notm}}
 {: #failuretodeploytokube}
 
-Potresti vedere questo errore dopo il prompt iniziale per il nome del tuo cluster:
+Puoi vedere questo errore dopo il prompt iniziale per il tuo nome cluster:
 
 ```
 FAILED
@@ -267,7 +302,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 #### Causa
 {: #cause2}
 
-Molto probabilmente questo è dovuto a un nome cluster non valido, cosa che può essere confermata eseguendo lo stesso comando con `--trace`; nell'output dell'errore potresti vedere quanto segue:
+Molto probabilmente la causa è un nome cluster non valido, cosa che può essere confermata eseguendo lo stesso comando con `--trace`; nell'output dell'errore potresti vedere quanto segue:
 
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
@@ -286,7 +321,7 @@ ibmcloud cs cluster-config <cluster-name>
 
 ### Impossibile distribuire a Kubernetes in {{site.data.keyword.Bluemix_notm}}
 
-Potresti vedere questo errore dopo il prompt per la destinazione dell'immagine da distribuire:
+Puoi vedere questo errore dopo il prompt per la destinazione dell'immagine da distribuire:
 
 ```
 FAILED
@@ -318,15 +353,15 @@ ibmcloud cr namespaces
 ## APPENDICE
 {: #appendix}
 
-Tutti i prerequisiti vengono installati per la maggior parte degli utenti che utilizzano i programmi di installazione della piattaforma. Se devi installare manualmente qualche componente, ecco le istruzioni:
+Tutti i prerequisiti verranno installati per la maggior parte degli utenti utilizzando i programmi di installazione della piattaforma nella parte superiore di questa pagina. Se devi installare manualmente qualche componente, ecco le istruzioni:
 
-Per installare il plug-in di sviluppo, è necessario prima installare la [CLI IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
+Per installare il plugin di sviluppo, è necessario che venga prima installata la [CLI IBM Cloud](../reference/bluemix_cli/get_started.md#getting-started).
 
 Per utilizzare il plugin di sviluppo stesso, devi installarlo eseguendo questo comando: `ibmcloud plugin install dev -r Bluemix`
 
 Per l'esecuzione e il debug di applicazioni in locale, devi anche installare [Docker ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.docker.com/get-docker).
 
-Per la distribuzione di un'applicazione come contenitore, devi anche installare `Kubernetes`, `Helm` e i seguenti plug-in della CLI IBM Cloud:
+Per la distribuzione di un'applicazione come un contenitore, devi anche installare Kubernetes, Helm e i seguenti plugin CLI IBM Cloud:
 
 Per installare Kubernetes:
 * Utenti Mac:
@@ -346,10 +381,10 @@ Per installare Helm:
 * Utenti Windows:
 Scarica e installa il file binario all'indirizzo https://github.com/kubernetes/helm/releases/tag/v2.6.0
 
-Per installare il plug-in container-registry:
+Per installare il plugin container-registry:
 `ibmcloud plugin install container-registry`
 
-Per installare il plug-in container-service:
+Per installare il plugin container-service:
 `ibmcloud plugin install container-service`
 
 
@@ -364,7 +399,7 @@ Per installare il plug-in container-service:
 ## Come ottenere aiuto e supporto
 {: #gettinghelp}
 
-Se hai problemi o domande sulla {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} o sulla {{site.data.keyword.dev_cli_notm}}, ottieni assistenza cercando informazioni o facendo domande tramite un forum. Puoi anche aprire un ticket di supporto.
+Se hai problemi o domande sulla {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} o sulla {{site.data.keyword.dev_cli_notm}}, ottieni assistenza cercando informazioni o facendo domande tramite un forum. Puoi anche aprire un caso di supporto.
 
 Quando pubblichi nei forum, puoi contrassegnare le tue domande con delle tag in modo che i team di sviluppo di {{site.data.keyword.Bluemix_notm}} ricevano una notifica.
 
@@ -383,6 +418,6 @@ Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con
 
 Consulta la sezione relativa a [come ottenere supporto ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#getting-help) per ulteriori dettagli sull'utilizzo dei forum.
 
-Per informazioni sull'apertura di un ticket di supporto {{site.data.keyword.IBM}} o sui livelli di supporto e le severità dei ticket, consulta la sezione relativa a [come contattare il supporto ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-support).
+Per informazioni sull'apertura di un caso di supporto {{site.data.keyword.IBM}} o sui livelli di supporto e le gravità dei casi, vedi [Come contattare il supporto ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-support).
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->

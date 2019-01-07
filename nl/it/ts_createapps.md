@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -128,7 +128,7 @@ Il seguente errore potrebbe essere visualizzato quando utilizzi la CLI per crear
 ```
 FAILED
 Application created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -190,7 +190,7 @@ Elimina la cartella `node_modules` ed esegui nuovamente il comando `ibmcloud dev
 ## Perché non posso distribuire a {{site.data.keyword.Bluemix_notm}}?
 {: troubleshoot}
 
-Si è verificato un errore durante la distribuzione a {{site.data.keyword.Bluemix_notm}}, ma non viene visualizzato alcun errore.
+Si è verificato un errore durante la distribuzione a {{site.data.keyword.Bluemix_notm}} ma non viene visualizzato alcun errore.
 {: tsSymptoms}
 
 Potresti non essere collegato al tuo account.
@@ -268,7 +268,7 @@ Questo errore potrebbe essere dovuto a una delle seguenti cause:
 - Esecuzione del comando [enable](/docs/cli/idt/commands.html#enable) per un'applicazione di una lingua che non è riconosciuta in questo momento.
 {: tsCauses}
 
-Assicurati di eseguire il comando dalla directory dell'applicazione che contiene il codice di origine dell'applicazione. Se questo non risolve il problema e la lingua è una delle [lingue supportate](/docs/cli/idt/commands.html#enable-language-options), utilizza il parametro `--language` per specificare la lingua.
+Assicurati di eseguire il comando dalla directory dell'applicazione che contiene il codice sorgente dell'applicazione. Se questo non risolve il problema e il linguaggio è uno dei [linguaggi supportati](/docs/cli/idt/commands.html#enable-language-options), utilizza il parametro `--language` per specificare il linguaggio.
 {: tsResolve}
 
 ## Perché non posso creare o eseguire un'applicazione che è stata abilitata per la distribuzione cloud?
@@ -284,3 +284,59 @@ Le molte possibili cause differenti possono essere trovate in ognuno dei seguent
 - Per ulteriori informazioni sulla risoluzione di tali problemi con un'applicazione Spring, consulta [Abilitazione delle applicazioni Spring Boot esistenti per la distribuzione cloud](/docs/java-spring/enable_existing.html#enable_existing).
 - Per ulteriori informazioni sulla risoluzione di tali problemi con un'applicazione `Node.js`, consulta [Abilitazione delle applicazioni Node.js esistenti per la distribuzione cloud](/docs/node/enable_existing.html#enable_existing).
 {: tsResolve}
+
+## Come installo {{site.data.keyword.Bluemix_notm}} Developer Tools manualmente?
+{: #appendix}
+Tutti i prerequisiti vengono installati per la maggior parte degli utenti utilizzando i programmi di installazione della piattaforma. Se devi installare manualmente qualche componente, sono qui riportate le istruzioni per ciascuno di essi.
+Per installare il plug-in di sviluppo, devi prima installare la [CLI IBM Cloud](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+Per utilizzare il plug-in di sviluppo stesso, devi installarlo eseguendo questo comando: 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+Per l'esecuzione e il debug di applicazioni in locale, devi anche installare [Docker](https://www.docker.com/get-docker).
+ 
+Per distribuire un'applicazione come un contenitore, devi anche installare Kubernetes, Helm e i seguenti plug-in della CLI di IBM Cloud.
+ 
+### Per installare Kubernetes:
+Utenti Mac:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+Utenti Linux:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+Utenti Windows:
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### Per installare Helm:
+Utenti Mac e Linux:
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+Utenti Windows:
+scarica e installa il [file binario](https://github.com/kubernetes/helm/releases/tag/v2.7.2).
+
+### Per installare il plug-in container-registry:
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### Per installare il plug-in container-service:
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

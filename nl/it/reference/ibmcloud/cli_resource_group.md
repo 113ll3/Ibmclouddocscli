@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gruppi di risorse e risorse
+# Gestione di risorse e gruppi di risorse
 {: #ibmcloud_commands_resource}
 
 Un gruppo di risorse è un modo per organizzare le risorse dell'account in raggruppamenti personalizzabili. Utilizza i seguenti comandi per gestire i gruppi di risorse {{site.data.keyword.Bluemix}} e le risorse in un gruppo di risorse.
@@ -663,7 +663,7 @@ ibmcloud resource service-key-delete ( NOME_CHIAVE | ID_CHIAVE ) [-f, --forece]
 
 <strong>Opzioni del comando</strong>:
 <dl>
-  <dt>NOME_CHIAVE | ID_CHIAVE </dt>
+  <dt>NOME_CHIAVE | ID_CHIAVE</dt>
   <dd>Il nome o l'ID della chiave</dd>
   <dt>-f, --force</dt>
   <dd>Forza l'eliminazione senza conferma</dd>

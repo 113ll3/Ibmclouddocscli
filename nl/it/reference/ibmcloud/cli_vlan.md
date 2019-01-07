@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN
+# Gestione delle VLAN dell'infrastruttura classica
 
-Le VLAN (Virtual Local Area Network) vengono utilizzate da {{site.data.keyword.cloud}} per isolare il traffico broadcast sulle reti pubbliche e private.
+Le VLAN (Virtual Local Area Network) vengono utilizzate da {{site.data.keyword.cloud}} per isolare il traffico broadcast sulle reti pubbliche e private. Le VLAN vengono assegnate come necessario per soddisfare altre offerte.
 
-Utilizza i seguenti comandi per gestire le VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}}.
+Utilizza i seguenti comandi per gestire le VLAN dell'infrastruttura classica.
 {: shortdesc}
 
-<table summary="Comandi della VLAN dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+<table summary="Comandi delle VLAN dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}} ordinati alfabeticamente che presentano dei link che ti portano a ulteriori informazioni per il comando">
  <thead>
  </thead>
  <tbody>

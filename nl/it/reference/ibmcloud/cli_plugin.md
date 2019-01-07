@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Plugin
+# Aggiunta e rimozione di plug-in della CLI {{site.data.keyword.Bluemix_notm}}
 {: #ibmcloud_commands_settings}
 
 {{site.data.keyword.Bluemix}} supporta un framework di plug-in per estendere la sua funzionalità. Utilizza i seguenti comandi per gestire i plugin della CLI {{site.data.keyword.Bluemix_notm}}.
@@ -27,21 +27,19 @@ lastupdated: "2018-10-17"
   <td>[ibmcloud plugin repo-remove](cli_plugin.html#ibmcloud_plugin_repo_remove)</td>
   <td>[ibmcloud plugin repo-plugins](cli_plugin.html#ibmcloud_plugin_repo_plugins)</td>
   <td>[ibmcloud plugin repo-plugin](cli_plugin.html#ibmcloud_plugin_repo_plugin)</td>
-  <td>[ibmcloud plugin list
-](cli_plugin.html#ibmcloud_plugin_list)</td>
+  <td>[ibmcloud plugin list](cli_plugin.html#ibmcloud_plugin_list)</td>
 </tr>
 <tr>
   <td>[ibmcloud plugin show](cli_plugin.html#ibmcloud_plugin_show)</td>
   <td>[ibmcloud plugin install](cli_plugin.html#ibmcloud_plugin_install)</td>
   <td>[ibmcloud plugin uninstall](cli_plugin.html#ibmcloud_plugin_uninstall)</td>
-  <td>[ibmcloud plugin update
-](cli_plugin.html#ibmcloud_plugin_update)</td>
+  <td>[ibmcloud plugin update](cli_plugin.html#ibmcloud_plugin_update)</td>
   <td>[ibmcloud plugin repos](cli_plugin.html#ibmcloud_plugin_repos)</td>
 </tr>
  </tbody>
  </table>
-
-
+ 
+ 
  ## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
@@ -76,10 +74,10 @@ ibmcloud plugin repo-add NOME_REPOSITORY URL_REPOSITORY
 
 <strong>Esempi</strong>:
 
-Aggiungi il repository di plug-in ufficiale della CLI {{site.data.keyword.Bluemix_notm}} come `IBM Cloud-repo`:
+Aggiungi il repository di plug-in ufficiale della CLI {{site.data.keyword.Bluemix_notm}} come `bluemix-repo`:
 
 ```
-ibmcloud plugin repo-add IBM Cloud-repo http://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
 ## ibmcloud plugin repo-remove
@@ -101,10 +99,10 @@ ibmcloud plugin repo-remove NOME_REPOSITORY
 
 <strong>Esempi</strong>:
 
-Rimuovi il repository `IBM Cloud-repo` dalla CLI {{site.data.keyword.Bluemix_notm}}:
+Rimuove il repository `bluemix-repo` dalla CLI {{site.data.keyword.Bluemix_notm}}:
 
 ```
-ibmcloud plugin repo-remove IBM Cloud-repo
+ibmcloud plugin repo-remove bluemix-repo
 ```
 
 ## ibmcloud plugin repo-plugins
@@ -133,10 +131,10 @@ Elenca tutti i plug-in in tutti i repository aggiunti:
 ibmcloud plugin repo-plugins
 ```
 
-Elenca tutti i plug-in nel repository `IBM Cloud-repo`:
+Elenca tutti i plug-in nel repository `bluemix-repo`:
 
 ```
-ibmcloud plugin repo-plugins -r IBM Cloud-repo
+ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
 ## ibmcloud plugin repo-plugin
@@ -206,7 +204,7 @@ ibmcloud plugin install PERCORSO_PLUGIN|NOME_PLUGIN [-r NOME_REPOSITORY] [-v VER
 ibmcloud plugin install PERCORSO-LOCALE/A/PLUGIN | URL [-f]
 ```
 
-Se non viene specificato alcun repository, il comando utilizza il repository di plug-in predefinito 'IBM Cloud'.
+Se non viene specificato alcun repository, il comando utilizza il repository di plug-in predefinito 'Bluemix'.
 Se non viene specificata alcuna versione, il comando seleziona l'ultima versione disponibile da installare.
 
 <strong>Prerequisiti</strong>:  Nessuno
@@ -217,7 +215,7 @@ Se non viene specificata alcuna versione, il comando seleziona l'ultima versione
    <dt>PERCORSO_PLUGIN|NOME_PLUGIN (obbligatorio)</dt>
    <dd>Se -r <i>NOME_REPOSITORY</i> non viene specificato, il plug-in viene installato dal percorso locale o dall'URL remoto specificato.</dd>
    <dt>-r <i>NOME_REPOSITORY</i> (facoltativo)</dt>
-   <dd>Il nome del repository in cui si trova il file binario del plug-in. Se non viene specificato alcun repository, il comando utilizza il repository di plug-in predefinito 'IBM Cloud'.</dd>
+   <dd>Il nome del repository in cui si trova il file binario del plug-in. Se non viene specificato alcun repository, il comando utilizza il repository di plug-in predefinito 'Bluemix'.</dd>
    <dt>-v <i>VERSIONE</i> (facoltativo)</dt>
    <dd>La versione del plug-in da installare. Se non fornita, viene installata l'ultima versione del plug-in. Questa opzione è valida solo quando si installa il plug-in dal repository.</dd>
    <dt>-f </dt>
@@ -225,7 +223,7 @@ Se non viene specificata alcuna versione, il comando seleziona l'ultima versione
     </dl>
 
 
-La CLI {{site.data.keyword.Bluemix_notm}} ha il nome repository ufficiale di `IBM Cloud`.
+La CLI {{site.data.keyword.Bluemix_notm}} ha il nome repository ufficiale di `Bluemix`.
 
 <strong>Esempi</strong>:
 
@@ -241,10 +239,10 @@ Installa un plug-in dall'URL remoto:
 ibmcloud plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-Installa il plug-in 'container-service' dell'ultima versione dal repository 'IBM Cloud':
+Installa il plug-in 'container-service' dell'ultima versione dal repository 'Bluemix':
 
 ```
-ibmcloud plugin install container-service -r IBM Cloud
+ibmcloud plugin install container-service -r Bluemix
 ```
 
 o semplicemente:
@@ -268,7 +266,7 @@ Aggiorna il plug-in da un repository.
 ibmcloud plugin update [NOME PLUGIN] [-r NOME_REPOSITORY] [-v VERSIONE] [--all]
 ```
 
-Se non viene specificato alcun repository, il comando utilizza il repository di plug-in predefinito 'IBM Cloud'.
+Se non viene specificato alcun repository, il comando utilizza il repository di plug-in predefinito 'Bluemix'.
 Se non viene specificata alcuna versione, il comando seleziona l'ultima versione disponibile da installare.
 
 <strong>Prerequisiti</strong>:  Nessuno
@@ -278,7 +276,7 @@ Se non viene specificata alcuna versione, il comando seleziona l'ultima versione
  <dt>NOME PLUGIN</dt>
  <dd>Nome del plug-in da aggiornare. Se non specificato, il comando ricerca gli aggiornamenti per tutti i plug-in installati.</dd>
  <dt>-r NOME_REPOSITORY</dt>
- <dd>Il nome del repository in cui si trova il file binario del plug-in. Se non specificato, il comando utilizza il repository di plugin predefinito 'IBM Cloud'.</dd>
+ <dd>Il nome del repository in cui si trova il file binario del plug-in. Se non specificato, il comando utilizza il repository di plugin predefinito 'Bluemix'.</dd>
  <dt>-v <i>VERSIONE</i> (facoltativo)</dt>
  <dd>La versione a cui aggiornare il plug-in. Se non viene fornita, aggiorna il plug-in all'ultima versione disponibile.</dd>
  <dt>--all</dt>
@@ -287,10 +285,10 @@ Se non viene specificata alcuna versione, il comando seleziona l'ultima versione
 
 <strong>Esempi</strong>:
 
-controlla tutti gli aggiornamenti disponibili nel repository di plugin 'IBM Cloud':
+controlla tutti gli aggiornamenti disponibili nel repository di plugin 'Bluemix':
 
 ```
-ibmcloud plugin update -r IBM Cloud
+ibmcloud plugin update -r Bluemix
 ```
 
 o semplicemente:

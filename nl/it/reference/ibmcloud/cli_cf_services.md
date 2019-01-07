@@ -5,17 +5,17 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Servizi Cloud Foundry
+# Creazione, eliminazione e associazione mediante bind dei servizi Cloud Foundry
 {: #ibmcloud_commands_services}
 
-Utilizza i seguenti comandi per gestire le offerte del servizio, le istanze del servizio, le associazioni dei servizi e le chiavi per il servizio {{site.data.keyword.Bluemix_notm}} Foundry.
+Utilizza i seguenti comandi per gestire le offerte del servizio, le istanze del servizio, le associazioni mediante bind dei servizi e le chiavi per il servizio {{site.data.keyword.Bluemix_notm}} Foundry.
 {: shortdesc}
 
 <table summary="Comandi ibmcloud che puoi utilizzare per gestire i servizi {{site.data.keyword.Bluemix_notm}} Cloud Foundry.">

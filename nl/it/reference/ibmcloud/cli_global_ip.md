@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IP globale
+# Gestione degli IP globali
 
 Un indirizzo IP globale è una sottorete secondaria statica specializzata. Ti viene fornito come una sottorete /32 (in altre parole, un singolo indirizzo IP) che può essere instradato a qualsiasi altro indirizzo IP sul tuo account.
 
-Utilizza i seguenti comandi per gestire un IP globale nel servizio IP globale dell'infrastruttura {{site.data.keyword.Bluemix}}.
+Utilizza i seguenti comandi per gestire un IP globale nel servizio IP globale dell'infrastruttura classica {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Comandi IP globale dell'infrastruttura {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+<table summary="Comandi degli IP globali dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}} ordinati alfabeticamente che presentano dei link che ti portano a ulteriori informazioni per il comando">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>

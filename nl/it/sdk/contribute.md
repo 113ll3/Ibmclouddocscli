@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-10-04"
+  years: 2017, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Contributo al plugin SDK
 {: #contribute}
@@ -19,17 +20,15 @@ Segui queste linee guida per contribuire al plugin SDK della CLI {{site.data.key
 ## Impostazione dell'ambiente di sviluppo
 {: #dev-env}
 
-* CLI [Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/cloudfoundry/cli/releases)
+* [CLI Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/cloudfoundry/cli/releases).
 
    La CLI Cloud Foundry non è obbligatoria, ma aiuta ad accedere a {{site.data.keyword.Bluemix_notm}} dal terminale.
 
-   Per ulteriori informazioni sulla CLI Cloud Foundry, consulta la [documentazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/cli/reference/cfcommands/index.html){: new_window}.
+   Per ulteriori informazioni sulla CLI Cloud Foundry, consulta la [documentazione](/docs/cli/reference/cfcommands/index.html).
 
-* {{site.data.keyword.Bluemix_notm}} [CLI ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://clis.{DomainName}/ui/home.html)
+* [CLI](/docs/cli/index.html#overview) {{site.data.keyword.Bluemix_notm}}.
 
    Questo plugin installa la CLI {{site.data.keyword.Bluemix_notm}}. La CLI {{site.data.keyword.Bluemix_notm}} fornisce anche risorse utili per accedere a {{site.data.keyword.Bluemix_notm}} dal terminale.
-
-   Per ulteriori informazioni sulla CLI {{site.data.keyword.Bluemix_notm}}, consulta la [documentazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/cli/reference/bluemix_cli/index.html){: new_window}.
 
 * Ambiente di sviluppo di [Go ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://golang.org/doc/code.html)
 
@@ -102,7 +101,7 @@ Il framework di test si basa su Ginkgo, un framework di test BDD per Go. Viene u
       ```
       {: codeblock}
 
-      * Passa alla directory in cui si trova il file `.coverprofile`.
+      * Passerai alla directory in cui è ubicato il file `.coverprofile`.
 
 * Internazionalizzazione: [go-i18n ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/nicksnyder/go-i18n) e [go-bindata ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/jteeuwen/go-bindata)
 
@@ -146,7 +145,7 @@ Le librerie di runtime obbligatorie sono gestite nella directory `vendor` e ne v
 
 Le dipendenze nidificate non sono elencate.
 
-* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
    SDK plugin CLI {{site.data.keyword.Bluemix_notm}}, che fornisce l'infrastruttura per sviluppare i plugin CLI {{site.data.keyword.Bluemix_notm}}.
 
@@ -170,18 +169,17 @@ Le dipendenze nidificate non sono elencate.
 
    Questo pacchetto viene utilizzato per rilevare il linguaggio corrente del sistema operativo.
 
-
 ## Clonazione del repository
 {: #clone-repo}
 
-Questo [repository ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/tree/compute) deve essere clonato nella [struttura della directory di Go ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://golang.org/doc/code.html) in modo che `govendor` funzioni, che segue inoltre le procedure consigliate di Go.
+Questo repository deve essere clonato nella [struttura di directory di Go ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://golang.org/doc/code.html) a causa della modalità di funzionamento di `govendor`, che segue anch'essa le prassi ottimali di Go.
 
 * Importa le dipendenze interne tramite un nome pacchetto completo.
 
    ```
    import (
       ...
-      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +187,9 @@ Questo [repository ![Icona link esterno](../../icons/launch-glyph.svg "Icona lin
 * Clona il repository.
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,18 +200,19 @@ Questo [repository ![Icona link esterno](../../icons/launch-glyph.svg "Icona lin
 Crea il plug-in scegliendo uno dei seguenti comandi.
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}
 
-**Nota**: lo script di build installa anche il plugin nella CLI {{site.data.keyword.Bluemix_notm}}.
+Lo script di build installa anche il plug-in nella CLI {{site.data.keyword.Bluemix_notm}}.
+{: note}
 
 Verifica il plug-in scegliendo uno dei seguenti comandi.
 

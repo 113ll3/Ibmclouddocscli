@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Catalogo
+# Ricerca e gestione delle offerte di catalogo
 {: #ibmcloud_catalog}
 
 Utilizza i seguenti comandi per gestire le voci del catalogo {{site.data.keyword.Bluemix}}, i template di query, i runtime e le geolocalizzazioni dei data center.
@@ -104,7 +104,7 @@ ibmcloud catalog entry ID [--children] [--output TIPO] [--global]
   <dt>--children</dt>
   <dd>Ottieni tutti gli elementi secondari per la voce di catalogo</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON. </dd>
+  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
   <dt>--global</dt>
   <dd>Opera in ambito globale</dd>
 </dl>
@@ -209,7 +209,7 @@ ibmcloud catalog entry-visibility ID  [--output TIPO] [--global]
   <dt>-json</dt>
   <dd>Genera in output la risposta JSON originale</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON. </dd>
+  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
   <dt>-global</dt>
   <dd>Opera in ambito globale</dd>
 </dl>

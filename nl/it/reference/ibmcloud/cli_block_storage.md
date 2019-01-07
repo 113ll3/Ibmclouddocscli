@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Block Storage
+# Gestione del servizio {{site.data.keyword.blockstorageshort}}
 
-{{site.data.keyword.Bluemix}} Block Storage è uno storage iSCSI persistente e a elevate prestazioni di cui viene eseguito il provisioning e la gestione indipendentemente dalle istanze di calcolo. Le LUN Block Storage basate su iSCSI sono connesse ai dispositivi autorizzati tramite connessioni MPIO (multi-path I/O) ridondanti. 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}} è un'archiviazione iSCSI persistente e a elevate prestazioni di cui viene eseguito il provisioning e la gestione indipendentemente dalle istanze di calcolo. Le LUN {{site.data.keyword.blockstorageshort}} basate su iSCSI sono connesse ai dispositivi autorizzati tramite connessioni MPIO (multi-path I/O) ridondanti. 
 
-Utilizza i seguenti comandi per gestire un determinato volume per il servizio di archiviazione blocchi dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}}.
+Utilizza i seguenti comandi per gestire un determinato volume per il servizio {{site.data.keyword.blockstorageshort}} dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Archiviazione blocchi dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<table summary="Comandi dell'infrastruttura classica {{site.data.keyword.BluSoftlayer_notm}} generali ordinati alfabeticamente che presentano dei link che ti portano a ulteriori informazioni per il comando">
+<caption>Tabella 1. Archiviazione blocchi dell'infrastruttura classica {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Archiviazione blocchi dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Archiviazione blocchi dell'infrastruttura classica {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -481,7 +481,7 @@ ibmcloud sl block volume-list [OPZIONI]
 <dt>--sortby</dt>
 <dd>Colonna da ordinare, le opzioni sono: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
 <dt>--columns</dt>
-<dd>Colonne da visualizzare, le opzioni sono: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, created_by.</dd>
+<dd>Colonne da visualizzare; le opzioni sono: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 
 **Esempi**:
@@ -600,6 +600,8 @@ ibmcloud sl block volume-order [OPZIONI]
 <dd>Obbligatorio. Nome breve del datacenter.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Parametro facoltativo per l'ordinamento dello spazio dell'istantanea insieme all'archiviazione blocchi della durata; specifica la dimensione (in GB) dello spazio dell'istantanea da ordinare.</dd>
+<dt>-b, --billing</dt>
+<dd>Parametro facoltativo per la frequenza di fatturazione; le opzioni sono: hourly, monthly.</dd>
 <dt>-f, --force</dt>
 <dd>Forza l'operazione senza conferma.</dd>
 </dl>

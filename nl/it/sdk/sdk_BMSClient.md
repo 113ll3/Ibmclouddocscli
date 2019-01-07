@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-06-21"
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # Inizializzazione di BMSClient
 {: #sdk_BMSClient}
@@ -41,7 +41,7 @@ Puoi sia scaricare che importare il pacchetto `BMSCore` del tuo progetto Android
 ## Inizializzazione della tua applicazione iOS
 {: #init-BMSClient-ios}
 
-Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](https://github.com/Carthage/Carthage){: new_window} per ottenere il pacchetto `BMSCore`.
+Puoi utilizzare [CocoaPods ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cocoapods.org){: new_window} oppure [Carthage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/Carthage/Carthage){: new_window} per ottenere il pacchetto `BMSCore`.
 
 1. Per installare `BMSCore` utilizzando CocoaPods, aggiungi le seguenti linee al tuo Podfile. Se il tuo progetto non dispone ancora di un Podfile, utilizza il comando `pod init`.
 
@@ -54,7 +54,7 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
   ```
   {: codeblock}
 
-  Quindi, esegui il comando `pod install` e apri il file `.xcworkspace` generato. Per l'aggiornamento a una release più recente di `BMSCore`, utilizza `pod update BMSCore`.
+  Quindi esegui il comando `pod install` e apri il file `.xcworkspace` generato. Per l'aggiornamento a una release più recente di `BMSCore`, utilizza `pod update BMSCore`.
 
   Per ulteriori informazioni sull'utilizzo di CocoaPods, consulta [CocoaPods Guides ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://guides.cocoapods.org/using/index.html){: new_window}.
 
@@ -80,7 +80,7 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
   ```
   {: codeblock}
 
-4. Inizializza la classe `BMSClient` utilizzando il seguente codice.
+4. Inizializza la classe `BMSClient`, utilizzando il seguente codice.
 
   Posiziona il codice di inizializzazione nel metodo `application(_:didFinishLaunchingWithOptions:)` nel tuo delegato dell'applicazione o in un'ubicazione che ritieni più adatta per il tuo progetto.
 
@@ -95,7 +95,7 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
 ## Inizializzazione della tua applicazione Cordova
 {: #init-BMSClient-cordova}
 
-1. Aggiungi il plug-in Cordova eseguendo questo comando dalla directory root della tua applicazione Cordova:
+1. Aggiungi il plugin Cordova eseguendo questo comando dalla directory root della tua applicazione Cordova:
 
   ```
   cordova plugin add bms-core
@@ -118,6 +118,6 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
 ## Link correlati
 {: #general notoc}
 
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [Plug-in BMSCore Cordova](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [BMSCore Android SDK ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova Plugin ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

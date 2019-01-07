@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -15,19 +15,22 @@ lastupdated: "2018-07-27"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
+{:note: .note}
 
-
-# Comandi Cloud Foundry (cf)
+# Gestione di Cloud Foundry (comandi cf)
 {: #cf}
 
 L'interfaccia di riga comando (CLI) Cloud Foundry (cf) fornisce una serie di comandi per gestire le tue applicazioni. Le seguenti informazioni elencano i comandi cf più utilizzati per la gestione delle applicazioni e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi. Per elencare tutti i comandi cf e le informazioni di guida associate, utilizza `cf help`. Utilizza `cf nome_comando -h` per visualizzare delle informazioni di guida dettagliate per uno specifico comando.
 {: shortdesc}
 
-Per ulteriori dettagli sull'introduzione alla CLI di Cloud Foundry, consulta [Getting Started](https://github.com/cloudfoundry/cli#getting-started).
+Per ulteriori dettagli sull'introduzione alla CLI Cloud Foundry, vedi [Getting Started ![Icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}.
 
 Per un elenco più dettagliato di comandi `cf CLI`, consulta la community [Cloud Foundry CLI Reference Guide ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}.
 
-**Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli,vedi [Utilizzo della CLI cf con un server proxy HTTP ![Icona link esterno](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+se la tua rete contiene un server proxy HTTP tra l'host
+che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome
+host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli, vedi [Using the cf CLI with a Proxy Server ![Icona link esterno](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+{: note}
 
 
 ## Indice dei comandi della CLI Cloud Foundry
@@ -86,7 +89,7 @@ Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud F
 ## cf api
 {: #cf_api}
 
-Utilizza questo comando per visualizzare o specificare l'URL dell'endpoint API di {{site.data.keyword.Bluemix_notm}}.
+Utilizza questo comando per visualizzare o specificare l'URL dell'endpoint API di {{site.data.keyword.Bluemix}}.
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
@@ -98,7 +101,8 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (facoltativo)</dt>
-   <dd>L'URL dell'endpoint API Bluemix che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Solitamente, questo URL è `https://api.{DomainName}`.
+   <dd>L'URL dell'endpoint API {{site.data.keyword.Bluemix_notm}}
+che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Solitamente, questo URL è `https://api.{DomainName}`.
    Se vuoi visualizzare l'URL dell'endpoint API che stai attualmente utilizzando, non hai bisogno di specificare questo parametro per il comando cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
@@ -398,12 +402,13 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Ti fa accedere a {{site.data.keyword.Bluemix_notm}}. Se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere.
+Ti fa accedere a {{site.data.keyword.Bluemix_notm}}. Se stai eseguendo l'accesso con un ID federato, devi utilizzare il parametro SSO (single sign-on) per accedere.
 
-**Nota**: per accedere, puoi anche utilizzare una chiave API della piattaforma {{site.data.keyword.Bluemix_notm}}. Utilizza il nome utente `apikey` e il valore della tua chiave API come password. Per ulteriori informazioni sulla creazione di una chiave API, vedi [Gestione delle chiavi API](/docs/iam/apikeys.html).
+Per accedere, puoi anche utilizzare una chiave API {{site.data.keyword.Bluemix_notm}} Platform. Utilizza il nome utente `apikey` e il valore della tua chiave API come password. Per ulteriori informazioni sulla creazione di una chiave API, vedi [Descrizione delle chiavi API](/docs/iam/apikeys.html).
+{: note}
 
 ```
-cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
+cf login [-a url] [-u nome_utente] [-p password] [-sso] [-o nome_organizzazione] [-s nome_spazio] [--skip-ssl-validation]
 ```
 
 <strong>Prerequisiti</strong>: Nessuno.
@@ -524,7 +529,7 @@ cf marketplace
 Distribuisce una nuova applicazione a {{site.data.keyword.Bluemix_notm}} oppure aggiorna un'applicazione esistente in {{site.data.keyword.Bluemix_notm}}.
 
 ```
-cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
+cf push appname [-b nome_pacchettodibuild] [-c start_command] [-f percorso_manifest] [-i numero_istanze] [-k limite_dico] [-m limite_memoria] [-n nome_host] [-p percorso_applicazione] [-s nome_stack] [-t lunghezza_timeout] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
 ```
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
@@ -542,7 +547,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dd>Il percorso al file manifest. Il file manifest predefinito è manifest.yml sotto la directory root della tua applicazione.</dd>
 <dt>*-i* numero_istanze (facoltativo)</dt>
 <dd>Il numero di istanze.</dd>
-<dt>*-k* limite_dico (facoltativo)</dt>
+<dt>*-k* limite_disco (facoltativo)</dt>
 <dd>Il limite di disco per l'applicazione. I valori possibili sono *256M*, *1024M* o *1G*.</dd>
 <dt>*-m* limite_memoria (facoltativo)</dt>
 <dd>Il limite di memoria per l'applicazione. I valori possibili sono *256M*, *1024M* o *1G*.</dd>
@@ -588,7 +593,7 @@ cf push `my_app` -c "bash ./<run.sh>"
 Visualizza o modifica il numero di istanze, il limite di spazio su disco e il limite di memoria per un'applicazione.
 
 ```
-cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
+cf scale appname [-i numero_istanze] [-k limite_disco] [-m limite_memoria] [-f]
 ```
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
@@ -780,7 +785,7 @@ cf stop my_app
 Imposta o visualizza l'organizzazione o spazio di destinazione
 
 ```
-cf target [-o org_name] [-s space_name]
+cf target [-o nome_organizzazione] [-s nome_spazio]
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
@@ -822,10 +827,6 @@ cf -v
 ```
 {: codeblock}
 
-
-
-# Link correlati
-{: #rellinks}
 
 ## Link correlati
 {: #general}

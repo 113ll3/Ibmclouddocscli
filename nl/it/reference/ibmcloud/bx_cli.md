@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -26,14 +26,14 @@ A partire da maggio 2018, i comandi della CLI {{site.data.keyword.Bluemix_notm}}
 Di seguito sono elencati in dettaglio i comandi supportati dalla CLI {{site.data.keyword.Bluemix_notm}}, compresi i loro nomi, argomenti, opzioni, prerequisiti, descrizioni ed esempi.
 {:shortdesc}
 
-**Nota:** i *Prerequisiti* elencano quali azioni sono richieste prima di utilizzare il comando. I comandi che non hanno azioni prerequisite elencano **Nessuno**. Altrimenti, i prerequisiti possono includere una o più delle seguenti azioni:
+I *Prerequisiti* elencano quali azioni sono richieste prima di utilizzare il comando. I comandi che non hanno azioni prerequisite elencano **Nessuno**. Altrimenti, i prerequisiti possono includere una o più delle seguenti azioni:
 
 <dl>
 <dt>Endpoint</dt>
 <dd>Un endpoint API deve essere impostato mediante <code>ibmcloud api</code> prima di utilizzare il comando.</dd>
 <dt>Accesso</dt>
 <dd>È necessario accedere utilizzando il comando <code>ibmcloud login</code> prima di utilizzare questo comando.
-Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per autenticarti con il passcode monouso o utilizza '--apikey' per autenticarti con la chiave API. Vai alla console {{site.data.keyword.Bluemix_notm}} e fai clic su **Gestisci ** &gt; **Sicurezza** &gt; **Chiavi API della piattaforma** per creare le chiavi API.
+Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per autenticarti con il passcode monouso o utilizza '--apikey' per autenticarti con la chiave API.
 </dd>
 <dt>Destinazione</dt>
 <dd>È necessario utilizzare il comando <code>ibmcloud target</code> per impostare un'organizzazione e uno spazio prima di utilizzare questo comando.</dd>
@@ -441,18 +441,19 @@ ibmcloud update [-f]
 </dl>
 
 
-## Comandi generali della CLI (ibmcloud sl)
+## Comandi del servizio dell'infrastruttura classica generali 
 {: #softlayer_cli}
 
 
-Utilizza i comandi del servizio dell'infrastruttura nella CLI (command line interface) {{site.data.keyword.Bluemix_notm}} per configurare e gestire i servizi dell'infrastruttura.
+Utilizza i comandi dell'infrastruttura classica nella CLI (command line interface) {{site.data.keyword.Bluemix_notm}} per configurare e gestire i servizi dell'infrastruttura.
+
 
 Sono supportati i seguenti comandi. Utilizza il comando `ibmcloud sl` per visualizzare l'elenco di comandi disponibili:
 
 <table summary="Comandi generali riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Comandi del servizio dell'infrastruttura generali</caption>
+<caption>Tabella 1. Comandi dell'infrastruttura classica generali</caption>
  <thead>
- <th colspan="6">Comandi del servizio dell'infrastruttura generali</th>
+ <th colspan="6">Comandi dell'infrastruttura classica generali</th>
  </thead>
  <tbody>
  <tr>
@@ -467,7 +468,7 @@ Sono supportati i seguenti comandi. Utilizza il comando `ibmcloud sl` per visual
  ## ibmcloud sl init
 {: #sl_init}
 
-Inizializza le impostazioni di configurazione utilizzate per connettersi all'ambiente dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}. La configurazione include nome utente, chiave API o password, account ed endpoint.
+Inizializza le impostazioni di configurazione utilizzate per connettersi all'ambiente dell'infrastruttura classica. La configurazione include nome utente, chiave API o password, account ed endpoint.
 ```
 ibmcloud sl init [OPZIONI]
 ```
@@ -475,7 +476,7 @@ ibmcloud sl init [OPZIONI]
 <strong>Opzioni del comando</strong>:
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>URL dell'endpoint API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}, il valore predefinito è: https://api.softlayer.com/rest/v3.1 per l'autenticazione con chiave API, https://api.softlayer.com/mobile/v3.1 per l'autenticazione con ID IBM.</dd>
+<dd>URL dell'endpoint API dell'infrastruttura classica; il valore predefinito è: https://api.softlayer.com/rest/v3.1 per l'autenticazione con chiave API, https://api.softlayer.com/mobile/v3.1 per l'autenticazione con ID IBM.</dd>
 <dt>-u, --sl-user</dt>
 <dd>Nome utente infrastruttura Gen1.</dd>
 <dt>-p, --sl-password</dt>
@@ -494,58 +495,58 @@ ibmcloud sl init [OPZIONI]
 <dd>Token di autenticazione quando è abilitata l'autenticazione tramite telefono.</dd>
 </dl>
 
-Ad esempio, accedi con nome utente e password o chiave API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
+Ad esempio, accedi con i tuoi nome utente e password/chiave API dell'infrastruttura classica
 ```
 $ ibmcloud sl init
-Scegli come configurare l'autenticazione dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}:
-1. Accedi con nome utente e password/chiave API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}
-2. Utilizza SSO (Single-Sign-On) {{site.data.keyword.Bluemix_notm}}
-Immetti un numero>1
-URL endpoint API Softlayer: [https://api.softlayer.com/rest/v3.1]>
-Nome utente: []> user@example.com
-Chiave API o password: []> abcd
+Choose how to configure classic infrastructure authentication:
+1. Login with your classic infrastructure user name and password/API key
+2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
+Enter a number>1
+classic infrastructure API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
+Username: []> user@example.com
+API key or password: []> abcd
 
-Endpoint API:    https://api.softlayer.com/rest/v3.1
-Nome utente:       user@example.com
-Chiave API:         xxxxxxxxxx
+API endpoint:    https://api.softlayer.com/rest/v3.1
+User name:       user@example.com
+API Key:         xxxxxxxxxx
 ```
-Ad esempio, utilizza SSO (Single-Sign-On) {{site.data.keyword.Bluemix_notm}} per accedere a Softlayer
+Ad esempio, utilizza SSO (Single Sign-On) {{site.data.keyword.Bluemix_notm}} per accedere all'infrastruttura classica
 ```
 $ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
-Endpoint API: api.ng.bluemix.net
-Autenticazione in corso...
+API endpoint: api.ng.bluemix.net
+Authenticating...
 OK
 
-Account utente di esempio con account specificato (65ce8074c6c62b5)
+Targeted account example user's Account (65ce8074c6c62b5)
 
-Endpoint API:   https://api.ng.bluemix.net (API version: 2.54.0)   
-Regione:         us-south
-Utente:           user@example.com
-Account:        Account utente di esempio (65ce8074c6c62b5)   
-Nessuna organizzazione o nessuno spazio di destinazione; usa 'ibmcloud target --cf oppure ibmcloud target -o ORGANIZZAZIONE -s SPAZIO'
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
+Region:         us-south
+User:           user@example.com
+Account:        example user's Account (65ce8074c6c62b5)
+No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
 
 
 $ ibmcloud sl init
-Scegli come configurare l'autenticazione dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}:
+Choose how to configure classic infrastructure authentication:
 
-1. Accedi con nome utente e password/chiave API Softlayer
-2. Utilizza SSO (Single-Sign-On) IBM Cloud
-Immetti un numero> 2
-URL endpoint API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}: [https://api.softlayer.com/mobile/v3.1]>
-Impostazione dell'account su: 123456
+1. Login with your classic infrastructure user name and password/API key
+2. Use IBM Cloud Single-Sign-On
+Enter a number> 2
+classic infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
+Setting account to: 123456
 OK
 
-Endpoint API dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} :    https://api.softlayer.com/mobile/v3.1   
+classic infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1
 
-ID account:                123456
-ID utente:                   user@example.com
-Token IMS:                 xxxxxxxxxx
+Account ID:                123456
+User ID:                   user@example.com
+IMS token:                 xxxxxxxxxx
 ```
 
 ## ibmcloud sl help
 {: #sl_help}
 
-Visualizza le informazioni della guida per tutti i comandi per gestire l'ambiente dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}}.
+Visualizza le informazioni di guida per tutti i comandi per gestire l'ambiente dell'infrastruttura classica.
 ```
 ibmcloud sl help
 ```

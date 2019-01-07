@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Ordine
+# Gestione degli ordini e dei preventivi dell'infrastruttura classica
 
 <table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
- <caption>Tabella 1. Ordini dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} </caption>
+ <caption>Tabella 1. Ordini dell'infrastruttura classica</caption>
  <thead>
- <th colspan="6">Ordini dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} </th>
+ <th colspan="6">Ordini dell'infrastruttura classica</th>
  </thead>
  <tbody>
  <tr>
