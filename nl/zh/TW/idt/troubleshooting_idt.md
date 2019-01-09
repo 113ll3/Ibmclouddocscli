@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -55,6 +55,43 @@ ibmcloud login
 {: codeblock}
 
 
+### 啟用指令在辨識應用程式的語言時發生問題
+{: #enable-unknown-language}
+
+```
+FAILED
+Could not determine the language of your application.
+
+Try using the --language flag to specify the language of your application 
+directly. 
+```
+#### 原因
+{: #enable-unknown-language-cause}
+
+此錯誤的原因可能是：
+1. 從不是應用程式來源目錄的目錄中執行 [enable](commands.md#enable) 指令。
+2. 針對目前無法辨識其語言的應用程式執行 [enable](commands.md#enable) 指令。
+
+
+#### 解決方法
+{: #enable-unknown-language-resolution}
+
+請確定是從包含應用程式原始碼的應用程式目錄中執行這個指令。如果這麼做無法解決此狀況，且語言是其中一種[支援的語言](commands.md#enable-language-options)，請使用 `--language` 參數來指定語言。
+
+
+### 建置或執行已啟用的應用程式時發生問題
+{: #enable-build-run-failures}
+
+您在嘗試 [build](commands.md#build)（建置）或 [run](commands.md#run)（執行）已啟用的應用程式時，可能會遇到各種失敗狀況。
+
+
+#### 解決方法
+{: #enable-build-run-failures-resolution}
+
+如需解決 Spring 應用程式這類問題的相關指引，請參閱這篇[文章](/docs/java-spring/enable_existing.html#enable_existing)。
+
+如需解決 Node.js 應用程式這類問題的相關指引，請參閱這篇[文章](/docs/node/enable_existing.html#enable_existing)。
+
 ### {{site.data.keyword.dev_cli_short}} 的一般失敗
 {: #general}
 
@@ -83,7 +120,7 @@ ibmcloud login
 {: codeblock}
 
 
-### 錯誤：當您執行新專案時，沒有這類映像檔
+### 錯誤：當您執行新的應用程式時，沒有這類映像檔
 {: #nosuchimage}
 
 當您執行專案而未先進行建置時，可能會看到下列錯誤。
@@ -93,12 +130,12 @@ $ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
-Creating image bx-dev-testProject based on Dockerfile...
+Creating image ibmcloud-dev-testProject based on Dockerfile...
 OK                    
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
-Error: No such image: bx-dev-testProject
+Error: No such image: ibmcloud-dev-testProject
 ```
 
 
@@ -151,15 +188,15 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 
 
 
-### 建立專案期間無法取得程式碼
+### 建立應用程式期間無法取得程式碼
 {: #code}
 
 如果您使用 {{site.data.keyword.dev_cli_short}} 建立專案，則可能會看到下列錯誤：
 
 ```
-FAILED                            
+FAILED
 Project created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 
@@ -187,7 +224,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 * 使用 {{site.data.keyword.dev_console}}。
 
-	1. 在 {{site.data.keyword.dev_console}} 中選取[專案 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.{DomainName}/developer/projects)，然後按一下**取得程式碼**。
+	1. 在 {{site.data.keyword.dev_console}} 中選取[專案 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/projects)，然後按一下**取得程式碼**。
 
 	2. 按一下**產生程式碼**。
 
@@ -323,7 +360,7 @@ ibmcloud cr namespaces
 ## 附錄
 {: #appendix}
 
-會為大部分正在使用平台安裝程式的使用者，安裝所有必要條件。如果您需要手動安裝任何元件，以下是其指示：
+全部必要條件會使用本頁面頂端的平台安裝程式，為大部分使用者安裝。如果您需要手動安裝任何元件，以下是其指示：
 
 若要安裝 dev 外掛程式，必須先安裝 [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started)。
 
@@ -331,7 +368,7 @@ ibmcloud cr namespaces
 
 若要在本端執行和除錯應用程式，您也必須安裝 [Docker ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.docker.com/get-docker)。
 
-若要將應用程式部署為容器，您還必須安裝 `Kubernetes`、`Helm` 及下列 IBM Cloud CLI 外掛程式：
+若要將應用程式部署為容器，您還必須安裝 Kubernetes、Helm 及下列 IBM Cloud CLI 外掛程式：
 
 若要安裝 Kubernetes：
 * Mac 使用者：
@@ -369,7 +406,7 @@ ibmcloud cr namespaces
 ## 取得協助及支援
 {: #gettinghelp}
 
-如果您對 {{site.data.keyword.Bluemix_notm}}{{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 有問題或疑問，請搜尋資訊或透過討論區提問來取得協助。您也可以開立支援問題單。
+如果您對 {{site.data.keyword.Bluemix_notm}}{{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 有問題或疑問，請搜尋資訊或透過討論區提問來取得協助。您也可以開啟支援案例。
 
 在討論區中張貼時，您可以標記您的問題，以通知 {{site.data.keyword.Bluemix_notm}} 開發團隊。
 
@@ -388,6 +425,6 @@ ibmcloud cr namespaces
 
 如需使用討論區的詳細資料，請參閱[取得協助 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#getting-help)。
 
-如需開立 {{site.data.keyword.IBM}} 支援問題單的相關資訊，或支援層次及問題單嚴重性的相關資訊，請參閱[與支援中心聯絡 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#contacting-support)。
+如需開啟 {{site.data.keyword.IBM}} 支援案例的相關資訊，或支援層次及案例嚴重性的相關資訊，請參閱[與支援中心聯絡 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#contacting-support)。
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->

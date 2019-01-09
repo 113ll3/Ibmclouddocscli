@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN
+# 管理標準基礎架構 VLAN
 
-{{site.data.keyword.cloud}} 使用虛擬區域網路 (VLAN) 來隔離公用及專用網路上的廣播資料流量。
+{{site.data.keyword.cloud}} 使用虛擬區域網路 (VLAN) 來隔離公用及專用網路上的廣播資料流量。VLAN 會視需要指派，以實現其他供應項目。
 
-請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 VLAN。
+請使用下列指令來管理標準基礎架構 VLAN。
 {: shortdesc}
 
-<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構 VLAN 指令，其鏈結提供指令的相關資訊">
+<table summary="按字母順序排列的 {{site.data.keyword.Bluemix_notm}} 標準基礎架構 VLAN 指令，其鏈結提供指令的相關資訊">
  <thead>
  </thead>
  <tbody>

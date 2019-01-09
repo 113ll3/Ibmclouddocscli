@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -27,6 +27,7 @@ lastupdated: "2018-05-24"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 {:tip: .tip}
+{:note: .note}
 
 # 使用指令行介面下載、修改及重新部署 Cloud Foundry 應用程式
 
@@ -45,7 +46,8 @@ lastupdated: "2018-05-24"
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_starter-code.svg" alt="下載應用程式碼" /> </a>
 
-      **附註**：繼續之前，請先將 node 版本升級至 `8.9.x` 或 `package.json` 檔中的最新版本。
+      請先將 node 版本升級至 `8.9.x` 或 `package.json` 檔中的最新版本，然後再繼續進行。
+      {: note}
 
   2. 切換至您程式碼所在的目錄。
 
@@ -69,7 +71,8 @@ lastupdated: "2018-05-24"
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **附註**：如果值包含空格，您必須在 `username`、`org_name` 和 `space_name` 週圍加上單引號或雙引號，例如 `-o "my org"`。
+  如果 `username`、`org_name` 和 `space_name` 的值包含空格，您必須用單引號或雙引號將其括住，例如 `-o "my org"`。
+  {: note}
 
   5. 從 <var class="keyword varname">your_new_directory</var> 中，使用 `bluemix app push` 指令以將應用程式重新部署至 {{site.data.keyword.Bluemix_notm}}。如需 `bx app push` 指令的相關資訊，請參閱[上傳應用程式](/docs/starters/upload_app.html)。
 

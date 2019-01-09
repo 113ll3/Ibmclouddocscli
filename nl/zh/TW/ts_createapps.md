@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -127,9 +127,9 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 如果您使用 CLI 來建立應用程式，則可能會顯示下列錯誤：
 
 ```
-FAILED                            
+FAILED
 Application created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -269,7 +269,7 @@ directly.
 - 針對目前無法辨識其語言的應用程式執行 [enable](/docs/cli/idt/commands.html#enable) 指令。
 {: tsCauses}
 
-請務必從包含應用程式原始碼的應用程式目錄中執行此指令。如果這無法解決問題，且語言是其中一種[支援的語言](/docs/cli/idt/commands.html#enable-language-options)，請使用 `--language` 參數來指定語言。
+請務必從包含應用程式原始碼的應用程式目錄中執行這個指令。如果這無法解決問題，且語言是其中一種[支援的語言](/docs/cli/idt/commands.html#enable-language-options)，請使用 `--language` 參數來指定語言。
 {: tsResolve}
 
 ## 為何無法建置或執行已針對雲端部署啟用的應用程式？
@@ -285,3 +285,57 @@ directly.
 - 如需解決 Spring 應用程式這類問題的相關資訊，請參閱[啟用現有的 Spring Boot 應用程式以進行雲端部署](/docs/java-spring/enable_existing.html#enable_existing)。
 - 如需解決 `Node.js` 應用程式這類問題的相關資訊，請參閱[啟用現有的 Node.js 應用程式以進行雲端部署](/docs/node/enable_existing.html#enable_existing)。
 {: tsResolve}
+
+## 如何手動安裝 {{site.data.keyword.Bluemix_notm}} 開發人員工具？
+{: #appendix}
+全部必要條件會使用平台安裝程式針對大部分使用者安裝。如果您需要手動安裝任何元件，這裡提供各元件的指示。若要安裝 dev 外掛程式，您必須先安裝 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)。若要使用 dev 外掛程式本身，您必須執行下列指令來安裝它： 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+若要在本端執行和除錯應用程式，您也必須安裝 [Docker](https://www.docker.com/get-docker)。
+ 
+若要將應用程式部署為容器，您還必須安裝 Kubernetes、Helm 及下列 IBM Cloud CLI 外掛程式。
+ 
+### 若要安裝 Kubernetes：
+Mac 使用者：
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+Linux 使用者：
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+Windows 使用者：
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### 若要安裝 Helm：
+Mac 和 Linux 使用者：
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+Windows 使用者：
+下載並安裝[二進位檔](https://github.com/kubernetes/helm/releases/tag/v2.7.2)。
+
+### 若要安裝 container-registry 外掛程式：
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### 若要安裝 container-service 外掛程式：
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

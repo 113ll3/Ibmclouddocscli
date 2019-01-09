@@ -5,7 +5,7 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -26,14 +26,13 @@ lastupdated: "2018-10-04"
 以下列出 {{site.data.keyword.Bluemix_notm}} CLI 所支援的詳細指令，包括其名稱、引數、選項、必要條件、說明及範例。
 {:shortdesc}
 
-**附註：***必要條件* 列出使用指令之前需要哪些動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
+*必要條件* 列出使用指令之前所需的動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
 
 <dl>
 <dt>端點</dt>
 <dd>必須透過 <code>ibmcloud api</code> 設定 API 端點後，才能使用這個指令。</dd>
 <dt>登入</dt>
-<dd>需要使用 <code>ibmcloud login</code> 指令進行登入後，才能使用這個指令。如果是使用聯合 ID 進行登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。移至 {{site.data.keyword.Bluemix_notm}} 主控台**管理** &gt; **安全** &gt; **平台 API 金鑰**，以建立 API 金鑰。
-</dd>
+<dd>需要使用 <code>ibmcloud login</code> 指令進行登入後，才能使用這個指令。如果是使用聯合 ID 進行登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。</dd>
 <dt>目標</dt>
 <dd>必須使用 <code>ibmcloud target</code> 指令來設定組織及空間後，才能使用這個指令。</dd>
 <dt>Docker</dt>
@@ -349,7 +348,7 @@ CLI 接著會提供 URL 鏈結，並要求密碼：
 一次性密碼（從 https://URL_Link_To_Obtain_Passcode 取得）：
 ```
 
-在瀏覽器中開啟鏈結，這會引導您取得密碼。在主控台中鍵入給定的密碼，您應該就可以登入。
+在瀏覽器中開啟鏈結，這會引導您取得密碼。在主控台鍵入給定的密碼，您應該就可以登入。
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
@@ -442,18 +441,19 @@ ibmcloud update [-f]
 </dl>
 
 
-## 一般 CLI (ibmcloud sl) 指令
+## 一般標準基礎架構服務指令
 {: #softlayer_cli}
 
 
-請在 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 中使用基礎架構服務指令，以配置及管理基礎架構服務。
+請在 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 中使用標準基礎架構指令，以配置及管理基礎架構服務。
+
 
 支援下列指令。使用 `ibmcloud sl` 指令，以查看可用的指令清單：
 
 <table summary="按字母順序排序的一般指令，其鏈結提供指令的相關資訊">
-<caption>表 1. 一般基礎架構服務指令</caption>
+<caption>表 1. 一般標準基礎架構指令</caption>
  <thead>
- <th colspan="6">一般基礎架構服務指令</th>
+ <th colspan="6">一般標準基礎架構指令</th>
  </thead>
  <tbody>
  <tr>
@@ -467,7 +467,7 @@ ibmcloud update [-f]
  ## ibmcloud sl init
 {: #sl_init}
 
-起始設定用來連接至 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構環境的配置設定。配置包括使用者名稱、API 金鑰或密碼、帳戶及端點。
+起始設定用來連接至標準基礎架構環境的配置設定。配置包括使用者名稱、API 金鑰或密碼、帳戶及端點。
 ```
 ibmcloud sl init [OPTIONS]
 ```
@@ -475,7 +475,7 @@ ibmcloud sl init [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>-a, --api-endpoint</dt>
-<dd>{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 API 端點 URL，預設值為：https://api.softlayer.com/rest/v3.1（適用於 API 金鑰鑑別）、https://api.softlayer.com/mobile/v3.1（適用於 IBM ID 鑑別）。</dd>
+<dd>標準基礎架構 API 端點 URL，預設值為：https://api.softlayer.com/rest/v3.1（適用於 API 金鑰鑑別）、https://api.softlayer.com/mobile/v3.1（適用於 IBM ID 鑑別）。</dd>
 <dt>-u, --sl-user</dt>
 <dd>Gen1 基礎架構使用者名稱。</dd>
 <dt>-p, --sl-password</dt>
@@ -494,14 +494,14 @@ ibmcloud sl init [OPTIONS]
 <dd>啟用電話鑑別時的鑑別記號。</dd>
 </dl>
 
-例如，使用 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構使用者名稱及密碼/API 金鑰登入
+例如，使用您的標準基礎架構使用者名稱和密碼/API 金鑰來登入
 ```
 $ ibmcloud sl init
-Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
-1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
+Choose how to configure classic infrastructure authentication:
+1. Login with your classic infrastructure user name and password/API key
 2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
 Enter a number>1
-Softlayer API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
+classic infrastructure API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
 Username: []> user@example.com
 API key or password: []> abcd
 
@@ -509,7 +509,7 @@ API endpoint:    https://api.softlayer.com/rest/v3.1
 User name:       user@example.com   
 API Key:         xxxxxxxxxx
 ```
-例如，使用 {{site.data.keyword.Bluemix_notm}} Single-Sign-On 登入 Softlayer
+例如，使用 {{site.data.keyword.Bluemix_notm}} Single-Sign-On 登入標準基礎架構
 ```
 $ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
@@ -525,16 +525,16 @@ Account:        example user's Account (65ce8074c6c62b5)
 No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
 
 $ ibmcloud sl init
-Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
+Choose how to configure classic infrastructure authentication:
 
-1. Login with Softlayer user name and password/API key
+1. Login with your classic infrastructure user name and password/API key
 2. Use IBM Cloud Single-Sign-On
 Enter a number> 2
-{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
+classic infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
 Setting account to: 123456
 OK
 
-{{site.data.keyword.BluSoftlayer_notm}} infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
+classic infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
 
 Account ID:                123456   
 User ID:                   user@example.com  
@@ -544,7 +544,7 @@ IMS token:                 xxxxxxxxxx
 ## ibmcloud sl help
 {: #sl_help}
 
-檢視運作 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構環境的所有指令說明資訊。
+檢視用來操作標準基礎架構環境之所有指令的說明資訊。
 ```
 ibmcloud sl help
 ```

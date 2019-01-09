@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 訂購
+# 管理標準基礎架構訂單和報價
 
 <table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構訂購</caption>
+<caption>表 1. 標準基礎架構訂單</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構訂購</th>
+ <th colspan="6">標準基礎架構訂單</th>
  </thead>
  <tbody>
  <tr>

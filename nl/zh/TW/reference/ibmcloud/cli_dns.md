@@ -5,18 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# DNS
+# 使用 DNS 服務來管理網域
 
 {{site.data.keyword.Bluemix}} 網域名稱服務 (DNS) 提供客戶一個集中位置，可以透過基本 DNS 管理介面檢視和管理他們的網域，另外也讓使用者能選擇在相同的位置免費管理反向和次要 DNS。
 
-請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} 基礎架構 DNS 服務。
+請使用下列指令來管理 {{site.data.keyword.Bluemix_notm}} 標準基礎架構 DNS 服務。
 {: shortdesc}
 
 <table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構 DNS 指令，其鏈結提供指令的相關資訊">

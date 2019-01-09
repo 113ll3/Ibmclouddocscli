@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 廣域 IP
+# 管理廣域 IP
 
 廣域 IP 位址是特殊化的靜態次要子網路。它以 /32 子網路（換句話說，單一 IP 位址）的形式交付給您，可以遞送至您帳戶上的任何其他 IP 位址。
 
-請使用下列指令在 {{site.data.keyword.Bluemix}} 基礎架構 Global IP 服務中管理廣域 IP。
+請使用下列指令在 {{site.data.keyword.Bluemix}} 標準基礎架構 Global IP 服務中管理廣域 IP。
 {: shortdesc}
 
-<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構 Global IP 指令，其鏈結提供指令的相關資訊">
+<table summary="按字母順序排列的 {{site.data.keyword.Bluemix_notm}} 標準基礎架構廣域 IP 指令，其鏈結提供指令的相關資訊">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>

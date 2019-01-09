@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 映像檔
+# 建立、編輯及刪除運算映像檔
 
 請使用下列指令管理 {{site.data.keyword.Bluemix}} 運算映像檔。
 {: shortdesc}

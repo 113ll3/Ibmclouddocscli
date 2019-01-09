@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 虛擬伺服器
+# 建立及使用虛擬伺服器
 
-{{site.data.keyword.BluVirtServers}} 是與專用核心及記憶體配置一起購買的可擴充虛擬伺服器。如果您要尋找可立即新增的計算資源，並存取映像檔範本這類特性，則它們是不錯的選項。 
+{{site.data.keyword.BluVirtServers}} 是與專用核心及記憶體配置一起購買的可擴充虛擬伺服器。如果您要尋找可立即新增的運算資源，並存取映像檔範本這類特性，則它們是不錯的選項。 
 
-請使用下列指令管理 {{site.data.keyword.Bluemix}} 基礎架構虛擬伺服器。
+請使用下列指令來管理標準基礎架構虛擬伺服器。
 {: shortdesc}
 
-<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構虛擬伺服器指令，其鏈結提供指令的相關資訊">
+<table summary="按字母順序排列的 {{site.data.keyword.Bluemix_notm}} 標準基礎架構虛擬伺服器指令，其鏈結提供指令的相關資訊">
  <thead>
  </thead>
  <tbody>

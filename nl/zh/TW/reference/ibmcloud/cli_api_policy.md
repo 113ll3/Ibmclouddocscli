@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IAM API 金鑰、身分及存取
+# 管理 IAM 存取、API 金鑰、服務 ID 及存取群組
 {: #ibmcloud_commands_iam}
 
 請使用下列指令管理使用者、服務及存取群組的 API 金鑰、服務 ID、存取群組及存取/授權原則。

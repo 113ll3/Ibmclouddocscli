@@ -12,14 +12,14 @@ lastupdated: "2018-11-30"
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 로드 밸런서 서비스에 대한 작업
+# Load Balancer 서비스에 대한 작업
 
 {{site.data.keyword.Bluemix}} Load Balancer 서비스는 여러 애플리케이션 서버 인스턴스 간에 트래픽을 분배하고 정상 인스턴스로만 트래픽을 전달하여 주요 비즈니스 애플리케이션의 가용성을 향상시키는 데 도움을 줍니다.
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 로드 밸런서 서비스의 로드 밸런서를 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 Load Balancer 서비스의 로드 밸런서를 관리하십시오.
 {: shortdesc}
 
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 로드 밸런서 명령">
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} Load Balancer 명령">
  <thead>
  </thead>
  <tbody>

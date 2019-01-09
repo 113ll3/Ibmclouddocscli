@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 型錄
+# 搜尋及管理型錄供應項目
 {: #ibmcloud_catalog}
 
 請使用下列指令管理 {{site.data.keyword.Bluemix}} 型錄項目、查詢範本、運行環境及資料中心的地理位置。

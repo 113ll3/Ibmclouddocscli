@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-10-04"
+  years: 2017, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # 提出至 SDK 外掛程式
 {: #contribute}
@@ -19,17 +20,15 @@ lastupdated: "2018-10-04"
 ## 設定開發環境
 {: #dev-env}
 
-* Cloud Foundry [CLI ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/cli/releases)
+* Cloud Foundry [CLI ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/cli/releases)。
 
    Cloud Foundry CLI 不是必要項目，但它有助於從「終端機」存取 {{site.data.keyword.Bluemix_notm}}。
 
-   如需 Cloud Foundry CLI 的相關資訊，請參閱[文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/cfcommands/index.html){: new_window}。
+   如需 Cloud Foundry CLI 的相關資訊，請參閱[文件](/docs/cli/reference/cfcommands/index.html)。
 
-* {{site.data.keyword.Bluemix_notm}} [CLI ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://clis.{DomainName}/ui/home.html)
+* {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview)。
 
    此外掛程式會安裝至 {{site.data.keyword.Bluemix_notm}} CLI。{{site.data.keyword.Bluemix_notm}} CLI 也會提供有用的資源，以從「終端機」存取 {{site.data.keyword.Bluemix_notm}}。
-
-   如需 {{site.data.keyword.Bluemix_notm}} CLI 的相關資訊，請參閱[文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/bluemix_cli/index.html){: new_window}。
 
 * Go 的[開發環境 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://golang.org/doc/code.html)
 
@@ -50,7 +49,7 @@ lastupdated: "2018-10-04"
    * 使用下列指令進行安裝。
 
       ```
-go get -u github.com/kardianos/govendor
+      go get -u github.com/kardianos/govendor
       ```
       {: codeblock}
 
@@ -102,7 +101,7 @@ go get -u github.com/kardianos/govendor
       ```
       {: codeblock}
 
-      * 移至 `.coverprofile` 檔案所在的目錄。
+      * 您將移至 `.coverprofile` 檔案所在的目錄。
 
 * 國際化：[go-i18n ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/nicksnyder/go-i18n) 及 [go-bindata ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/jteeuwen/go-bindata)
 
@@ -146,7 +145,7 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
 
 未列出巢狀相依關係。
 
-* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
    {{site.data.keyword.Bluemix_notm}} CLI 外掛程式 SDK，提供開發 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式的基礎架構。
 
@@ -170,18 +169,17 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
 
    此套件用來偵測作業系統的現行語言。
 
-
 ## 複製儲存庫
 {: #clone-repo}
 
-此[儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/tree/compute) 必須複製至 Go 的[目錄結構 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://golang.org/doc/code.html)，因為 `govendor` 的運作方式，這也遵循 Go 的最佳作法。
+基於 `govendor` 的運作方式（這也遵循 Go 的最佳作法），必須將儲存庫複製到 Go 的[目錄結構 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://golang.org/doc/code.html)。
 
 * 透過完整的套件名稱匯入內部相依關係。
 
    ```
    import (
       ...
-      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +187,9 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
 * 複製儲存庫。
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,18 +200,19 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外�
 請選擇下列一個指令，以建置外掛程式。
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}
 
-**附註**：建置 Script 也會將外掛程式安裝至 {{site.data.keyword.Bluemix_notm}} CLI。
+建置 Script 也會將外掛程式安裝至 {{site.data.keyword.Bluemix_notm}} CLI。
+{: note}
 
 請選擇下列一個指令，以測試外掛程式。
 

@@ -5,14 +5,15 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 
-# 帳戶、使用者及組織
+# 管理帳戶、使用者和 Cloud Foundry 組織
 {: #ibmcloud_commands_account}
 
 請使用下列指令來管理帳戶、帳戶中的使用者，以及公用 Cloud Foundry 環境的組織、空間及角色。
@@ -408,7 +409,9 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**附註**：您可以使用 CLI 設定組織/空間角色，但如果您要設定其他許可權，則必須利用使用者介面。如需進一步詳細資料，請參閱[指派使用者存取權](/docs/iam/assignaccess.html#assignaccess)。<!-- Begin Staging URL vs Prod URL -->
+您可以使用 CLI 來設定組織/空間角色，但如果要設定其他許可權，則必須透過使用者介面。如需進一步詳細資料，請參閱[管理對資源的存取權](/docs/iam/mngiam.html#iammanidaccser)。
+{: note}
+<!-- Begin Staging URL vs Prod URL -->
 
 ## ibmcloud account org-role-unset
 {: #ibmcloud_account_org_role_unset}

@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# File Storage
+# 使用 File Storage 服務
 
 {{site.data.keyword.filestorage_full}} 是持續性、快遞、連接彈性網路並以 NFS 為基礎的 {{site.data.keyword.filestorage_short}}。在這個網路連接儲存空間 (NAS) 環境中，您可以完全控制檔案共用功能及效能。
 
 請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 標準基礎架構的 File Storage 服務中管理給定磁區。
 {: shortdesc}
 
-<table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 File Storage</caption>
+<table summary="按字母順序排列的一般 {{site.data.keyword.BluSoftlayer_notm}} 標準基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 標準基礎架構 File Storage</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 File Storage</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 標準基礎架構 File Storage</th>
  </thead>
  <tbody>
  <tr>
@@ -472,7 +472,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>直欄排序方式，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions、mount_addr。</dd>
 <dt>--columns</dt>
-<dd>要顯示的直欄，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr。</dd>
+<dd>要顯示的直欄，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr、notes。</dd>
 </dl>
 
 **範例**：
@@ -548,6 +548,8 @@ ibmcloud sl file volume-order [OPTIONS]
 <dd>必要。資料中心簡稱。</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>隨磁區訂購 Snapshot 空間的選用參數。</dd>
+<dt>-b, --billing</dt>
+<dd>計費頻率的選用參數（預設為 monthly），選項包含：hourly、monthly。</dd>
 <dt>-f, --force</dt>
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>

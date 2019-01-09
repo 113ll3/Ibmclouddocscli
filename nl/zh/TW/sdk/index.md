@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -14,13 +14,13 @@ lastupdated: "2018-06-21"
 # SDK 產生器
 {: #sdk-cli}
 
-{{site.data.keyword.IBM}} SDK 產生器外掛程式可以安裝在 [{{site.data.keyword.Bluemix_notm}} CLI ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/bluemix_cli/all_versions.html)。
+「{{site.data.keyword.IBM}} SDK 產生器」外掛程式可以安裝在 {{site.data.keyword.Bluemix_notm}} [ CLI](/docs/cli/index.html#overview) 中。
 
 作為 {{site.data.keyword.Bluemix_notm}} 的開發人員，您可以使用此外掛程式，從遵循 [開放式 API 規格 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.openapis.org/) 的 REST API 定義產生 SDK。當您變更 REST API 定義時，可以使用此外掛程式只重新產生 SDK，而不必重新產生整個專案。
 
-您也可以查看特定空間中的 Cloud Foundry 應用程式是否具有可用於 SDK 產生的 REST API 定義。最後，您可以使用 {{site.data.keyword.IBM_notm}} SDK 產生器外掛程式來驗證任何 REST API 定義，以確保它們遵守 SDK 產生器的要求。
+您也可以查看給定空間中的 Cloud Foundry 應用程式是否具有可用於 SDK 產生的 REST API 定義。最後，您可以使用 {{site.data.keyword.IBM_notm}} SDK 產生器外掛程式來驗證任何 REST API 定義，以確保它們遵守 SDK 產生器的要求。
 
-這個 {{site.data.keyword.IBM_notm}} SDK 產生器外掛程式，容許您使用產生的 SDK 輕鬆地將後端服務整合到您的應用程式。當 REST API 發生變更時，您可以重新產生 SDK 並取代舊的，以進行 SDK 升級。您也可以將 CLI 整合至 DevOps 管線，並確保每次建置應用程式時，SDK 永遠與 API 規格一致。
+這個 {{site.data.keyword.IBM_notm}} SDK 產生器外掛程式，容許您使用產生的 SDK 輕鬆地將後端服務整合到您的應用程式。當 REST API 發生變更時，您可以重新產生 SDK 並取代舊的，以進行無縫 SDK 升級。您也可以將 CLI 整合至 DevOps 管線，並確保每次建置應用程式時，SDK 永遠與 API 規格一致。
 
 REST API 定義必須有效，且在即時伺服器端點上或您系統的本端檔案上管理。如果 REST API 定義已管理，相對 URL 必須定義在 `OPENAPI_SPEC` 環境變數中。
 
@@ -30,16 +30,16 @@ REST API 定義必須有效，且在即時伺服器端點上或您系統的本�
 
 請確定您滿足下列需求。
 
-* 您有 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://bluemix.net) 帳戶
-* 符合[開放式 API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.openapis.org/) 規格的有效 API 定義
+* 您有 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}) 帳戶。
+* 符合[開放式 API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.openapis.org/) 規格的有效 API 定義。
 
 
 ## 安裝
 {: #installation}
 
-1. [安裝 {{site.data.keyword.Bluemix}} CLI ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://clis.ng.bluemix.net/ui/home.html)。
+1. [安裝 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview)。
 
-2. [安裝外掛程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in)。
+2. [安裝外掛程式](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in)。
 
 	```
 	ibmcloud plugin install sdk-gen
@@ -63,7 +63,7 @@ REST API 定義必須有效，且在即時伺服器端點上或您系統的本�
 {: #gen-args}
 
 * `APP_NAME` - 您現行空間中 Cloud Foundry 應用程式的名稱
-* `OPENAPI_DOC_LOCATION` - 原始 REST API 定義 JSON 或 yaml 的 URL 或相對檔案路徑
+* `OPENAPI_DOC_LOCATION` - 原始 REST API 定義 JSON 或 Yaml 的 URL 或相對檔案路徑
 * `GENERATED_SDK_NAME`（選用）- 所產生 SDK 的名稱
 
 
@@ -94,7 +94,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-若要從開放式 API 定義檔或是本端 JSON 或 yaml 檔案的 URL 產生 SDK，請使用下列指令。
+若要從開放式 API 定義檔或是本端 JSON 或 Yaml 檔案的 URL 產生 SDK，請使用下列指令。
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -112,7 +112,7 @@ ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 {: #val-args}
 
 * `APP_NAME` - 您現行空間中 Cloud Foundry 應用程式的名稱
-* `OPENAPI_DOC_LOCATION` - 原始 REST API 定義 JSON 或 yaml 的 URL 或相對檔案路徑
+* `OPENAPI_DOC_LOCATION` - 原始 REST API 定義 JSON 或 Yaml 的 URL 或相對檔案路徑
 
 
 #### 用法
@@ -125,7 +125,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-若要從 API 規格文件或是本端 JSON 或 yaml 檔案的 URL 驗證 SDK，請使用下列指令。
+若要從 API 規格文件或是本端 JSON 或 Yaml 檔案的 URL 驗證 SDK，請使用下列指令。
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### 列出應用程式 (Cloud Foundry)
 {: #list-apps}
 
-使用 `ibmcloud sdk list [argument] [option]` 來列出應用程式，以及驗證 API 規格。您必須將 `OPENAPI_SPEC` 環境變數設為管理規格之路徑的相對 URL。
+使用 `ibmcloud sdk list [argument] [option]` 來列出應用程式，以及驗證 API 規格。您必須將 `OPENAPI_SPEC` 環境變數設為管理規格的相對 URL 路徑。
 
 
 #### 引數

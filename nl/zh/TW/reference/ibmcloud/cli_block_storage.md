@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Block Storage
+# 使用 {{site.data.keyword.blockstorageshort}} 服務
 
-{{site.data.keyword.Bluemix}} Block Storage 是持續性的高效能 iSCSI 儲存空間，其佈建及管理會獨立於運算實例。以 iSCSI 為基礎的 Block Storage LUN 會透過備援多路徑 I/O (MPIO) 連線連接至已授權的裝置。 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}} 是持續性的高效能 iSCSI 儲存空間，其佈建及管理會獨立於運算實例。iSCSI 型 {{site.data.keyword.blockstorageshort}} LUN 會透過備用的多路徑 I/O (MPIO) 連線連接至授權的裝置。 
 
-請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 標準基礎架構的 Block Storage 服務中管理給定磁區。
+請使用下列指令來管理 {{site.data.keyword.Bluemix_notm}} 標準基礎架構 {{site.data.keyword.blockstorageshort}} 服務的給定磁區。
 {: shortdesc}
 
-<table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 基礎架構 Block Storage</caption>
+<table summary="按字母順序排列的一般 {{site.data.keyword.BluSoftlayer_notm}} 標準基礎架構指令，其鏈結提供指令的相關資訊">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 標準基礎架構 Block Storage</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基礎架構 Block Storage</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 標準基礎架構 Block Storage</th>
  </thead>
  <tbody>
  <tr>
@@ -480,7 +480,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>直欄排序方式，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions、created_by。</dd>
 <dt>--columns</dt>
-<dd>要顯示的直欄，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by。</dd>
+<dd>要顯示的直欄，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by、notes。</dd>
 </dl>
 
 **範例**：
@@ -599,6 +599,8 @@ ibmcloud sl block volume-order [OPTIONS]
 <dd>必要。資料中心簡稱。</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>隨耐久性區塊儲存空間訂購 Snapshot 空間的選用參數；指定要訂購的 Snapshot 空間大小（以 GB 為單位）。</dd>
+<dt>-b, --billing</dt>
+<dd>計費頻率的選用參數（預設為 monthly），選項包含：hourly、monthly。</dd>
 <dt>-f, --force</dt>
 <dd>強制執行作業，而不進行確認。</dd>
 </dl>

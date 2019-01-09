@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 計費 
+# 檢視帳戶、組織、資源群組和資源的使用情形 
 {: #ibmcloud_billing}
 
 請使用下列指令擷取資源用量及計費資訊。

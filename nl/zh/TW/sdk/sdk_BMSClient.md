@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-06-21"
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # 起始設定 BMSClient
 {: #sdk_BMSClient}
@@ -41,7 +41,7 @@ lastupdated: "2018-06-21"
 ## 起始設定 iOS 應用程式
 {: #init-BMSClient-ios}
 
-您可以使用 [CocoaPods](https://cocoapods.org){: new_window} 或 [Carthage](https://github.com/Carthage/Carthage){: new_window} 來取得 `BMSCore` 套件。
+您可以使用 [CocoaPods ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org){: new_window} 或 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage){: new_window} 來取得 `BMSCore` 套件。
 
 1. 若要使用 CocoaPods 來安裝 `BMSCore`，請在 Podfile 中新增下列數行。如果您的專案還沒有 Podfile，則請使用 `pod init` 指令。
 
@@ -63,7 +63,7 @@ lastupdated: "2018-06-21"
   1. 將下行新增至 Cartfile：
 
       ```
-            github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
+      github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
       ```
       {: codeblock}
 
@@ -118,6 +118,6 @@ lastupdated: "2018-06-21"
 ## 相關鏈結
 {: #general notoc}
 
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova 外掛程式](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [BMSCore Android SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova 外掛程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

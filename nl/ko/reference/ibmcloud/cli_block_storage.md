@@ -150,7 +150,7 @@ ibmcloud sl block access-revoke 12345678 --virtual-id 87654321
 ## ibmcloud sl block replica-failback
 {: #sl_block_replica_failback}
 
-복제본에서 블록 볼륨을 장애 복구합니다.
+복제본에서 블록 볼륨을 장애 조치합니다.
 ```
 ibmcloud sl block replica-failback VOLUME_ID
 ```
@@ -160,7 +160,7 @@ ibmcloud sl block replica-failback VOLUME_ID
 ```
 ibmcloud sl block replica-failback 12345678
 ```
-이 명령은 ID가 12345678인 볼륨에 대해 장애 복구 조작을 수행합니다.
+이 명령은 ID가 12345678인 볼륨에 대해 장애 조치 조작을 수행합니다.
 
 ## ibmcloud sl block replica-failover
 {: #sl_block_replica_failover}

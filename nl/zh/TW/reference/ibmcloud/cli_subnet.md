@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 子網路
+# 建立、取消及檢視子網路
 
-子網路是將 IP 網路分成多個較小網路區段的邏輯分割區。請使用下列指令管理 {{site.data.keyword.Bluemix}} 基礎架構子網路。
+子網路是將 IP 網路分成多個較小網路區段的邏輯分割區。請使用下列指令來管理 {{site.data.keyword.Bluemix}} 標準基礎架構子網路。
 {: shortdesc}
 
-<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構子網路指令，其鏈結提供指令的相關資訊">
+<table summary="按字母順序排列的 {{site.data.keyword.Bluemix_notm}} 標準基礎架構子網路指令，其鏈結提供指令的相關資訊">
  <thead>
  </thead>
  <tbody>

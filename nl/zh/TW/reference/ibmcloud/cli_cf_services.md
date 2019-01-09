@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry 服務
+# 建立、刪除及連結 Cloud Foundry 服務
 {: #ibmcloud_commands_services}
 
 請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} Foundry 服務的服務供應項目、服務實例、服務連結及金鑰。
