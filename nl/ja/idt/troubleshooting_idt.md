@@ -398,7 +398,7 @@ container-service プラグインをインストールするには、次のよ�
 ## ヘルプおよびサポートの利用
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}または {{site.data.keyword.dev_cli_notm}} に関して問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。 サポート・ケースをオープンすることもできます。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}または {{site.data.keyword.dev_cli_notm}} に関して問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。 サポート Case をオープンすることもできます。
 
 フォーラムに投稿するときには、{{site.data.keyword.Bluemix_notm}} 開発チームに通知するために、質問にタグを付けることができます。
 
@@ -417,6 +417,6 @@ container-service プラグインをインストールするには、次のよ�
 
 これらのフォーラムの使用について詳しくは、『[ヘルプの取得![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#getting-help)』を参照してください。
 
-{{site.data.keyword.IBM}} サポート・ケースのオープン、またはサポート・レベルおよびケースの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#contacting-support) を参照してください。
+{{site.data.keyword.IBM}} サポート Case のオープン、またはサポート・レベルおよび Case の重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#contacting-support) を参照してください。
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->
