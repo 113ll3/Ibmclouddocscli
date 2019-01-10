@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -126,9 +126,9 @@ Sélectionnez un autre plan.
 L'erreur suivante peut s'afficher si vous utilisez l'interface de ligne de commande pour créer une application :
 
 ```
-FAILED                            
+FAILED
 Application created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -223,7 +223,7 @@ Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"T
 
 Assurez-vous que le cluster utilisé est correct et que vous l'avez bien configuré pour déploiement en exécutant la commande suivante :
 ```
-ibmcloud cs cluster-config <nom_cluster>
+ibmcloud cs cluster-config <cluster-name>
 ```
 {: tsResolve}
 
@@ -250,7 +250,7 @@ ibmcloud cr namespaces
 ```
 {: tsResolve}
 
-## Pour quelle raison la langue de mon application ne peut-elle pas être déterminée ?
+## Pour quelle raison le langage de mon application ne peut-il pas être déterminé ?
 {: troubleshoot}
 
 L'erreur suivante peut s'afficher lorsque vous tentez de démarrer votre application :
@@ -265,10 +265,10 @@ directly.
 
 Cette erreur peut être due à l'une des causes suivantes :
 - Exécution de la commande [enable](/docs/cli/idt/commands.html#enable) à partir d'un répertoire qui n'est pas le répertoire source de votre application
-- Application de la commande [enable](/docs/cli/idt/commands.html#enable) pour une application pour une langue qui n'est pas reconnue pour l'instant.
+- Application de la commande [enable](/docs/cli/idt/commands.html#enable) pour une application pour un langage qui n'est pas reconnu pour l'instant.
 {: tsCauses}
 
-Prenez soin d'exécuter la commande à partir du répertoire d'application qui contient le code source pour l'application. Si cela ne résout pas le problème et que la langue figure parmi les [langues prises en charge](/docs/cli/idt/commands.html#enable-language-options), utilisez le paramètre `--language` pour spécifier cette langue.
+Prenez soin d'exécuter la commande à partir du répertoire d'application qui contient le code source pour l'application. Si cela ne résout pas le problème et que le langage figure parmi les [langages pris en charge](/docs/cli/idt/commands.html#enable-language-options), utilisez le paramètre `--language` pour spécifier ce langage.
 {: tsResolve}
 
 ## Pour quelle raison ne puis-je pas générer ou exécuter une application qui a été activée pour le déploiement en cloud ?
@@ -284,3 +284,59 @@ Les nombreuses causes possibles sont décrites dans chacun des liens suivants :
 - Pour plus d'informations sur la résolution de ce type de problème avec une application Spring, voir [Activation d'applications Spring Boot existantes pour le déploiement en cloud](/docs/java-spring/enable_existing.html#enable_existing).
 - Pour plus d'informations sur la résolution de ce type de problème avec une application `Node.js`, voir [Activation d'applications Node.js existantes pour le déploiement en cloud](/docs/node/enable_existing.html#enable_existing).
 {: tsResolve}
+
+## Comment installer manuellement {{site.data.keyword.Bluemix_notm}} Developer Tools ?
+{: #appendix}
+Tous les composants prérequis sont installés pour la plupart des utilisateurs à l'aide des programmes d'installation de plateforme. Pour installer manuellement des composants, suivez les instructions ci-dessous.
+Pour installer le plug-in dev, vous devez tout d'abord installer l'interface [CLI IBM Cloud](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+Pour utiliser le plug-in dev proprement dit, vous devez l'installer en exécutant la commande suivante : 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+Pour exécuter et déboguer des applications localement, vous devez également installer [Docker](https://www.docker.com/get-docker).
+ 
+Pour déployer une application en tant que conteneur, vous devez également installer Kubernetes, Helm et les plug-in d'interface de ligne de commande IBM Cloud suivants. 
+ 
+### Installation de Kubernetes 
+Utilisateurs Mac :
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+Utilisateurs Linux :
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+Utilisateurs Windows :
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### Installation de Helm 
+Utilisateurs Mac et Linux :
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+Utilisateurs Windows :
+Téléchargez et installez le [fichier binaire](https://github.com/kubernetes/helm/releases/tag/v2.7.2).
+
+### Installation du plug-in container-registry 
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### Installation du plug-in container-service 
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

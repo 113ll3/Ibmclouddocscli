@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Sous-réseau
+# Création, annulation et affichage de sous-réseaux
 
-Un sous-réseau est une partition logique d'un réseau IP dans plusieurs segments de réseau plus petits. Les commandes suivantes permettent de gérer les sous-réseaux de l'infrastructure {{site.data.keyword.Bluemix}}.
+Un sous-réseau est une partition logique d'un réseau IP dans plusieurs segments de réseau plus petits. Les commandes suivantes permettent de gérer les sous-réseaux de l'infrastructure classique {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Commandes de sous-réseau de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations sur la commande">
+<table summary="Commandes Subnet de l'infrastructure classique {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
  <thead>
  </thead>
  <tbody>

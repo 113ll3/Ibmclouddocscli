@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN
+# 管理经典基础架构 VLAN
 
-{{site.data.keyword.cloud}} 使用虚拟局域网 (VLAN) 来隔离公用和专用网络上的广播流量。
+{{site.data.keyword.cloud}} 使用虚拟局域网 (VLAN) 来隔离公用和专用网络上的广播流量。VLAN 可根据需要进行分配，以满足其他产品的要求。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构 VLAN。
+使用以下命令可管理经典基础架构 VLAN。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构 VLAN 命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构 VLAN 命令（带有可获取命令的更多信息的链接）">
  <thead>
  </thead>
  <tbody>

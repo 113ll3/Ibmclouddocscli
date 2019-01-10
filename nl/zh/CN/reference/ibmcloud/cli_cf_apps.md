@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry 应用程序
+# 管理 Cloud Foundry 应用程序
 {: #ibmcloud_commands_apps}
 
 使用以下命令可管理 Cloud Foundry 应用程序、域和路径。

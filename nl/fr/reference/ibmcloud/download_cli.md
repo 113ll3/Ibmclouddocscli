@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-15"
 # Installation de l'interface de ligne de commande autonome {{site.data.keyword.Bluemix_notm}}
 {: #install_use}
 
-L'interface CLI {{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande pour gérer les ressources dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez continuer à utiliser l'interface de ligne de commande `cf` pour vous connecter à {{site.data.keyword.Bluemix_notm}}, mais elle ne fonctionne qu'avec un service Cloud Foundry dans {{site.data.keyword.Bluemix_notm}}. 
+L'interface CLI {{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande pour gérer les ressources dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez toujours utiliser l'interface de ligne de commande cf pour vous connecter à {{site.data.keyword.Bluemix_notm}}, mais elle fonctionne uniquement avec un service Cloud Foundry dans {{site.data.keyword.Bluemix_notm}}. 
 
 Si vous souhaitez installer l'interface de ligne de commande {{site.data.keyword.Bluemix}} ainsi que d'autres outils et plug-in recommandés pour le développement d'applications pour {{site.data.keyword.Bluemix_notm}}, suivez la méthode décrite [ici](/docs/cli/index.html).
 {: tip}
@@ -32,11 +32,11 @@ Pour installer l'interface de ligne de commande autonome {{site.data.keyword.Blu
    Linux X86 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 bits (ppc64le) : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
-   Pour les versions 32 bits et les versions antérieures, accédez à la page répertoriant [toutes les versions](/docs/cli/reference/ibmcloud/all_versions.html) pour effectuer un téléchargement
+   Pour les versions 32 bits et les versions antérieures, accédez à la page répertoriant [{{site.data.keyword.Bluemix_notm}}les éditions d'interface CLI](/docs/cli/reference/ibmcloud/all_versions.html) à télécharger.
 
 1. Exécutez le programme d'installation
-   * Pour Mac OS et Windows, exécutez le programme d'installation.
-   * Pour Linux, extrayez le package et exécutez le script `install`.
+   * Pour Mac OS et Windows, exécutez simplement le programme d'installation.
+   * Pour Linux, extrayez le package et exécutez le script `install`. 
 
 1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}}
 
@@ -47,7 +47,7 @@ Pour installer l'interface de ligne de commande autonome {{site.data.keyword.Blu
    
 Vous êtes maintenant prêt à gérer des ressources {{site.data.keyword.Bluemix_notm}}. Entrez `ibmcloud help` pour examiner les descriptions des commandes.
 
-Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](https://console.bluemix.net/docs/iam/login_fedid.html#federated_id) pour vous connecter avec un code d'accès unique ou une clé d'API.  
+Si vous utilisez un ID fédéré, suivez les instructions décrites [ici](/docs/iam/login_fedid.html#federated_id) pour vous connecter avec un code d'accès unique ou une clé d'API.  
 {: tip}
 
 Outre les programmes d'installation, vous disposez d'autres options pour installer l'interface CLI {{site.data.keyword.Bluemix_notm}} :
@@ -78,7 +78,7 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 
 ### Windows PowerShell
 
-Copiez et collez la commande suivante dans une console de terminal [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} et exécutez-la :
+Copiez et collez la commande suivante dans une console de terminal [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg) et exécutez-la :
 
 ```
 iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
@@ -135,7 +135,7 @@ Lorsque vous utilisez des programmes d'installation ou un script shell pour inst
 ### Etape 3 : Ajout à la variable d'environnement `PATH` et activation de l'exécution automatique de shell
 
    * Ajoutez `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` à la variable d'environnement `PATH`.
-   * Pour obtenir des informations sur la prise en charge de l'exécution automatique de shell (MacOS et Linux uniquement), consultez [Activation de l'exécution automatique de l'interface CLI](enable_cli_autocompletion.html).
+   * Pour le support de l'exécution automatique de shell (MacOS et Linux uniquement), consultez [ce guide](enable_cli_autocompletion.html).
    
 ## Désinstallation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} autonome
 
@@ -147,7 +147,7 @@ Les sections ci-après contiennent des informations détaillées relatives à la
 2. Dans la fenêtre en incrustation, cliquez sur `Désinstaller un programme`.
 3. Dans la liste d'applications en incrustation, recherchez `IBM Cloud Command Line Interface`.
 4. Avec le bouton droit de la souris, cliquez sur `IBM Cloud Command Line Interface` et sélectionnez `Désinstaller`.
-5. Le programme de désinstallation démarre. Suivez les instructions pour mener à terme la désinstallation.
+5. Le programme d'installation est alors lancé. Suivez les instructions pour mener à terme la désinstallation.
 
 ### Désinstallation sous Linux/macOS
 
@@ -159,23 +159,23 @@ Les sections ci-après contiennent des informations détaillées relatives à la
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. Nettoyez les scripts d'exécution automatique, si vous les avez configurés. Pour plus d'informations, voir [Activation de l'exécution automatique de l'interface CLI](enable_cli_autocompletion.html).
+2. Nettoyez les scripts d'exécution automatique si vous les avez configurés. Pour plus de détails, voir [Activation de l'exécution automatique de shell pour l'interface CLI IBM Cloud (Linux/MacOS uniquement)](enable_cli_autocompletion.html).
 
 #### Version `0.9.0` et versions ultérieures
 
 1. Ouvrez un terminal et exécutez la commande suivante :
   * `/usr/local/ibmcloud/bin/uninstall`
-2. Nettoyez les scripts d'exécution automatique, si vous les avez configurés. Pour plus d'informations, voir [Activation de l'exécution automatique de l'interface CLI](enable_cli_autocompletion.html).
+2. Nettoyez les scripts d'exécution automatique si vous les avez configurés. Pour plus de détails, voir [Activation de l'exécution automatique de shell pour l'interface CLI IBM Cloud (Linux/MacOS uniquement)](enable_cli_autocompletion.html).
 
 
 ## Autres liens permettant d'explorer davantage l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
-* [Extension des fonctions de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des plug-in](/docs/cli/reference/ibmcloud/extend_cli.html)
-* [Référence de l'interface CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/bx_cli.html)
+* [Extension de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des plug-in](/docs/cli/reference/ibmcloud/extend_cli.html)
+* [Commandes générales de l'interface CLI (ibmcloud)](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 ## Signaler des problèmes et soumettre des commentaires en retour
 {: #issues}
 
 Utilisez les options suivantes pour signaler des problèmes ou soumettre des demandes de nouvelle fonction :
- * Créez des problèmes dans [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg).
+ * Créez des problèmes dans [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg).
  * Laissez des messages dans le [canal IBM Cloud Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com). Pour demander l'accès à l'équipe, cliquez [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg).

@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 插件
+# 添加和除去 {{site.data.keyword.Bluemix_notm}} CLI 插件
 {: #ibmcloud_commands_settings}
 
 {{site.data.keyword.Bluemix}} 支持通过插件框架来扩展其功能。使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} CLI 插件。
@@ -38,8 +38,8 @@ lastupdated: "2018-10-17"
 </tr>
  </tbody>
  </table>
-
-
+ 
+ 
  ## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
@@ -74,10 +74,10 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
 
 <strong>示例</strong>：
 
-将 {{site.data.keyword.Bluemix_notm}} CLI 的官方插件存储库添加为 `IBM Cloud-repo`：
+将 {{site.data.keyword.Bluemix_notm}} CLI 的官方插件存储库添加为 `bluemix-repo`：
 
 ```
-ibmcloud plugin repo-add IBM Cloud-repo http://plugins.ng.bluemix.net
+ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
 ## ibmcloud plugin repo-remove
@@ -99,10 +99,10 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>示例</strong>：
 
-从 {{site.data.keyword.Bluemix_notm}} CLI 中除去 `IBM Cloud-repo` 存储库：
+从 {{site.data.keyword.Bluemix_notm}} CLI 中除去 `bluemix-repo` 存储库：
 
 ```
-ibmcloud plugin repo-remove IBM Cloud-repo
+ibmcloud plugin repo-remove bluemix-repo
 ```
 
 ## ibmcloud plugin repo-plugins
@@ -131,10 +131,10 @@ ibmcloud plugin repo-plugins [-r REPO_NAME]
 ibmcloud plugin repo-plugins
 ```
 
-列出 `IBM Cloud-repo` 存储库中的所有插件：
+列出 `bluemix-repo` 存储库中的所有插件：
 
 ```
-ibmcloud plugin repo-plugins -r IBM Cloud-repo
+ibmcloud plugin repo-plugins -r bluemix-repo
 ```
 
 ## ibmcloud plugin repo-plugin
@@ -204,7 +204,7 @@ ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 ```
 
-如果未指定存储库，此命令将使用缺省插件存储库“IBM Cloud”。如果未指定版本，此命令将选择可用的最新版本进行安装。
+如果未指定存储库，此命令将使用缺省插件存储库“Bluemix”。如果未指定版本，此命令将选择可用的最新版本进行安装。
 
 <strong>先决条件</strong>：无
 
@@ -214,7 +214,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
    <dt>PLUGIN_PATH|PLUGIN_NAME（必需）</dt>
    <dd>如果未指定 -r <i>REPO_NAME</i>，那么将从指定的本地路径或远程 URL 安装插件。</dd>
    <dt>-r <i>REPO_NAME</i>（可选）</dt>
-   <dd>插件二进制文件所在的存储库的名称。如果未指定存储库，此命令将使用缺省插件存储库“IBM Cloud”。</dd>
+   <dd>插件二进制文件所在的存储库的名称。如果未指定存储库，此命令将使用缺省插件存储库“Bluemix”。</dd>
    <dt>-v <i>VERSION</i>（可选）</dt>
    <dd>要安装的插件的版本。如果未提供，将安装插件的最新版本。此选项仅对从存储库安装插件有效。</dd>
    <dt>-f</dt>
@@ -222,7 +222,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
     </dl>
 
 
-{{site.data.keyword.Bluemix_notm}} CLI 采用官方存储库名称 `IBM Cloud`。
+{{site.data.keyword.Bluemix_notm}} CLI 具有官方存储库名称 `Bluemix`。
 
 <strong>示例</strong>：
 
@@ -238,10 +238,10 @@ ibmcloud plugin install /downloads/new_plugin
 ibmcloud plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-从“IBM Cloud”存储库安装最新版本的“container-service”插件：
+从“Bluemix”存储库安装最新版本的“container-service”插件：
 
 ```
-ibmcloud plugin install container-service -r IBM Cloud
+ibmcloud plugin install container-service -r Bluemix
 ```
 
 或者简单地指定为：
@@ -265,7 +265,7 @@ ibmcloud plugin install container-service -v 0.1.425
 ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
 
-如果未指定存储库，此命令将使用缺省插件存储库“IBM Cloud”。如果未指定版本，此命令将选择可用的最新版本进行安装。
+如果未指定存储库，此命令将使用缺省插件存储库“Bluemix”。如果未指定版本，此命令将选择可用的最新版本进行安装。
 
 <strong>先决条件</strong>：无
 
@@ -274,7 +274,7 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>要更新的插件的名称。如果未指定，此命令将检查安装的所有插件的升级。</dd>
  <dt>-r REPO_NAME</dt>
- <dd>插件二进制文件所在的存储库的名称。如果未指定，此命令将使用缺省插件存储库“IBM Cloud”。</dd>
+ <dd>插件二进制文件所在的存储库的名称。如果未指定，此命令将使用缺省插件存储库“Bluemix”。</dd>
  <dt>-v <i>VERSION</i>（可选）</dt>
  <dd>要更新到的插件版本。如果未提供，那么将插件更新到最新可用版本。</dd>
  <dt>--all</dt>
@@ -283,10 +283,10 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 <strong>示例</strong>：
 
-检查官方插件存储库“IBM Cloud”中所有可用的升级：
+检查官方插件存储库“Bluemix”中所有可用的升级：
 
 ```
-ibmcloud plugin update -r IBM Cloud
+ibmcloud plugin update -r Bluemix
 ```
 
 或者简单地指定为：

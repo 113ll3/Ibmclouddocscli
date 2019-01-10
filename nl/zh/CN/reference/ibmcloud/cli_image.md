@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 映像
+# 创建、编辑和删除计算映像
 
 使用以下命令可管理 {{site.data.keyword.Bluemix}} 计算映像。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构映像命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构映像命令（带有可获取命令的更多信息的链接）">
  <tbody>
  <tr>
  <td>[ibmcloud sl image delete](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_delete)</td>

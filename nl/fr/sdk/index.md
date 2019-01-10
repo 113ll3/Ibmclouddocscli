@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -14,19 +14,17 @@ lastupdated: "2018-06-21"
 # Générateur de SDK
 {: #sdk-cli}
 
-Le plug-in de générateur de SDK {{site.data.keyword.IBM}} peut être installé dans l'[interface de ligne de commande {{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/cli/reference/bluemix_cli/all_versions.html).
+Le plug-in {{site.data.keyword.IBM}} SDK Generator peut être installé dans [l'interface CLI](/docs/cli/index.html#overview) {{site.data.keyword.Bluemix_notm}}.
 
 En tant que développeur sous {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser ce plug-in pour générer des SDK depuis votre définition d'API REST conforme à la [spécification Open API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.openapis.org/). Lorsque vous apportez des modifications à votre définition d'API REST, vous pouvez utiliser ce plug-in pour ne régénérer que le SDK au lieu de régénérer l'ensemble du projet.
 
-Vous pouvez aussi voir si vos applications Cloud Foundry dans un espace donné
-disposent
-de définitions d'API REST valides pour la génération de SDK. Enfin, vous pouvez
+Vous pouvez aussi voir si vos applications Cloud Foundry dans un espace donné disposent de définitions d'API REST valides pour la génération de SDK. Enfin, vous pouvez
 utiliser le plug-in de générateur de SDK {{site.data.keyword.IBM_notm}} pour
 valider les définitions d'API REST afin de vous assurer qu'elles sont conformes aux
 exigences du générateur de SDK.
 
 Ce plug-in de générateur de SDK {{site.data.keyword.IBM_notm}}
-vous permet d'intégrer facilement vos services de back end à votre application avec un SDK généré. Lorsqu'un changement se produit dans une API REST, vous pouvez générer à nouveau le SDK et remplacer l'ancien pour une mise à niveau transparente du SDK. Vous pouvez aussi intégrer l'interface de ligne de commande dans un pipeline DevOps et vous assurer que le SDK est toujours cohérent avec la spécification d'API chaque fois que l'application est générée.
+vous permet d'intégrer facilement vos services de back end à votre application avec un SDK généré. Lorsqu'un changement se produit dans une API REST, vous pouvez générer à nouveau le SDK et remplacer l'ancien pour une mise à niveau transparente du SDK. Vous pouvez également intégrer l'interface de ligne de commande dans un pipeline devops et vous assurer que le SDK est toujours cohérent avec la spécification d'API chaque fois que l'application est générée.
 
 La définition d'API REST doit être valide et hébergée sur un noeud final de serveur opérationnel de votre système. Si la définition d'API REST est hébergée, l'URL relative doit être définie dans la variable d'environnement `OPENAPI_SPEC`.
 
@@ -36,16 +34,16 @@ La définition d'API REST doit être valide et hébergée sur un noeud final de 
 
 Vérifiez que vous répondez bien aux exigences suivantes :
 
-* Vous disposez d'un compte [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://bluemix.net)
-* Vous disposez d'une définition d'API valide conforme à la spécification [Open API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.openapis.org/)
+* Vous disposez d'un compte [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}).
+* Vous disposez d'une définition d'API valide conforme à la spécification [Open API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.openapis.org/).
 
 
 ## Installation
 {: #installation}
 
-1. [Installez l'interface de ligne de commande {{site.data.keyword.Bluemix}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://clis.ng.bluemix.net/ui/home.html).
+1. [Installez l'interface CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview).
 
-2. [Installez le plug-in ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in).
+2. [Installez le plug-in](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in).
 
 	```
 	ibmcloud plugin install sdk-gen
@@ -70,7 +68,7 @@ Utilisez `ibmcloud sdk generate [arguments...] [command options]`.
 
 * `APP_NAME` - nom de l'application Cloud Foundry dans votre
 espace en cours
-* `OPENAPI_DOC_LOCATION` - URL ou chemin d'accès relatif au fichier de définition d'API REST brut JSON ou yaml
+* `OPENAPI_DOC_LOCATION` - URL ou chemin d'accès relatif au fichier de définition d'API REST brut JSON ou Yaml
 * `GENERATED_SDK_NAME` (facultatif) - nom du SDK généré
 
 
@@ -122,7 +120,7 @@ Utilisez `ibmcloud sdk validate [argument]`.
 
 * `APP_NAME` - nom de l'application Cloud Foundry dans votre
 espace en cours
-* `OPENAPI_DOC_LOCATION` - URL ou chemin d'accès relatif au fichier de définition d'API REST brut JSON ou yaml
+* `OPENAPI_DOC_LOCATION` - URL ou chemin d'accès relatif au fichier de définition d'API REST brut JSON ou Yaml
 
 
 #### Syntaxe
@@ -147,7 +145,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### Liste des applications (Cloud Foundry)
 {: #list-apps}
 
-Utilisez `ibmcloud sdk list [argument] [option]` pour répertorier les applications et valider les spécifications d'API. La variable d'environnement `OPENAPI_SPEC` doit être définie par rapport à l'URL relative du chemin qui héberge votre spécification.
+Utilisez `ibmcloud sdk list [argument] [option]` pour répertorier les applications et valider les spécifications d'API. La variable d'environnement `OPENAPI_SPEC` doit être définie par rapport au chemin de l'URL relative hébergeant votre spécification.
 
 
 #### Arguments

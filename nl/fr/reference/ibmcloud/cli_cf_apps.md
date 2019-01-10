@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Applications Cloud Foundry
+# Gestion des applications Cloud Foundry
 {: #ibmcloud_commands_apps}
 
 Les commandes suivantes permettent de gérer les routes, les domaines et les applications Cloud Foundry.

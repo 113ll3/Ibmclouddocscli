@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 全局 IP
+# 管理全局 IP
 
 全局 IP 地址是专用的静态辅助子网。全局 IP 地址作为 /32 子网（即，单个 IP 地址）交付给您，可以路由到您帐户上的其他任何 IP 地址。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix}} 基础架构全局 IP 服务中的全局 IP。
+使用以下命令可管理 {{site.data.keyword.Bluemix}} 经典基础架构全局 IP 服务中的全局 IP。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构全局 IP 命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构全局 IP 命令（带有可获取命令的更多信息的链接）">
  <tbody>
  <tr>
   <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>

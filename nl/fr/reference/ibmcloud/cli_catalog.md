@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Catalogue
+# Recherche et gestion des offres de catalogue
 {: #ibmcloud_catalog}
 
 Les commandes suivantes permettent de gérer les entrées de catalogue {{site.data.keyword.Bluemix}}, les modèles de requête, les contextes d'exécution et les géolocalisations de centres de données.
@@ -63,7 +63,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>-k, --kind</dt>
   <dd>Filtrer par type de ressource. Actuellement, seules les options "service-cf", "iaas", "runtime", "template" et "dashboard" sont prises en charge.</dd>
   <dt>-p, --price</dt>
-  <dd>Filtrer par prix. Actuellement, seules les options "free", "paygo", "ibmcloud-subscription" sont prises en charge. </dd>
+  <dd>Filtrer par prix. Actuellement, seules les options "free", "paygo", "ibmcloud-subscription" sont prises en charge.</dd>
   <dt>-t, --tag</dt>
   <dd>Filtrer par étiquette.</dd>
   <dt>--sort-by</dt>
@@ -104,7 +104,7 @@ ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
   <dt>--children</dt>
   <dd>Obtenir tous les enfants de l'entrée de catalogue</dd>
   <dt>--output TYPE (facultatif)</dt>
-  <dd>--output value  Indiquez un type de sortie. Seul JSON est actuellement pris en charge. </dd>
+  <dd>--output value  Indiquez un type de sortie. Seul JSON est actuellement pris en charge.</dd>
   <dt>--global</dt>
   <dd>Exploiter dans une portée globale</dd>
 </dl>
@@ -209,7 +209,7 @@ ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
   <dt>-json</dt>
   <dd>Imprimer la réponse JSON d'origine</dd>
   <dt>--output TYPE (facultatif)</dt>
-  <dd>--output value  Indiquez un type de sortie. Seul JSON est actuellement pris en charge. </dd>
+  <dd>--output value  Indiquez un type de sortie. Seul JSON est actuellement pris en charge.</dd>
   <dt>-global</dt>
   <dd>Exploiter dans une portée globale</dd>
 </dl>

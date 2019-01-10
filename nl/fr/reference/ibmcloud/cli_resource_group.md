@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Groupes de ressources et ressources
+# Utilisation de ressources et de groupes de ressources
 {: #ibmcloud_commands_resource}
 
 Un groupe de ressources permet d'organiser vos ressources de compte en regroupements personnalisables. Les commandes suivantes permettent de gérer les ressources et les groupes de ressources {{site.data.keyword.Bluemix}} dans un groupe de ressources.
@@ -290,7 +290,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
   <dt>--long</dt>
   <dd>Afficher des zones supplémentaires dans la sortie</dd>
   <dt>--output FORMAT (facultatif)</dt>
-  <dd>--output value  Indiquez un format de sortie. Seul JSON est pris en charge pour l'instant.</dd>
+  <dd>--output value  Indiquez un format de sortie. Seul JSON est pris en charge pour l'instant. </dd>
 </dl>
 
 <strong>Exemples</strong> :

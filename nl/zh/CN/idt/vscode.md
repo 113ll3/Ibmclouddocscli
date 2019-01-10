@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-30"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-07-12"
 # IBM Cloud Developer Tools for Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-针对 Visual Studio Code 的 IBM Cloud Developer Tools 扩展是一个编辑器扩展，可用于直接在 Visual Studio Code 编辑器的命令选用板内访问 IBM 开发者 CLI 中的功能。它支持快速访问适用于 Docker 和 CloudFoundry 工作流的 `ibmcloud dev` 命令子集，包括应用程序部署、在 {{site.data.keyword.Bluemix_notm}} 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需离开编辑器的上下文。
+针对 Visual Studio Code 的 IBM Cloud Developer Tools 扩展是一个编辑器扩展，可用于直接在 Visual Studio Code 编辑器的命令选用板内访问 IBM 开发者 CLI 中的功能。它支持快速访问适用于 Docker 和 CloudFoundry 工作流的 `ibmcloud dev` 命令子集，包括应用程序部署、在 {{site.data.keyword.Bluemix}} 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需离开编辑器的上下文。
 {:shortdesc}
 
 ![IBM Developer Tools 扩展下载屏幕的截屏。](vscode.png "Visual Studio Code 中的扩展下载屏幕")
@@ -26,7 +26,7 @@ lastupdated: "2018-07-12"
 ## 依赖项
 {: #dependencies}
 
-要使用针对 Visual Studio Code 的 IBM Cloud Developer Tools 扩展，您需要 [{{site.data.keyword.Bluemix_notm}} CLI](https://plugins.ng.bluemix.net/ui/home.html) 以及系统上安装的 [IBM Developer CLI](index.html) 插件。
+要使用针对 Visual Studio Code 的 IBM Cloud Developer Tools 扩展，您需要 [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview) 以及系统上安装的 {{site.data.keyword.Bluemix_notm}} CLI 插件。
 
 ## 安装
 {: #installation}
@@ -45,7 +45,7 @@ lastupdated: "2018-07-12"
 1. 打开 Visual Studio Code 编辑器内部的**扩展**侧边栏，然后使用字符串 `publisher:IBM Developer` 进行搜索。IBM Cloud Developer Tools 扩展将显示在搜索结果中。  
 2. 单击**安装**按钮以开始安装。
 
-您还可以[直接在 Visual Studio Code 的 Marketplace 中访问 IBM Cloud Developer Tools 扩展](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer)。
+您还可以[直接在 Visual Studio Code 的 Marketplace 中访问 IBM Cloud Developer Tools 扩展](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
 
 ## 用法
 {: #usage}
@@ -64,12 +64,12 @@ lastupdated: "2018-07-12"
 
 只需几个步骤即可开始使用 `ibmcloud dev` 工作流：
 * 使用以下两种方法之一来创建项目：
-  * 使用 [{{site.data.keyword.Bluemix_notm}} Web 控制台](https://console.ng.bluemix.net/developer/getting-started/)并下载生成的代码
-  * 使用 [{{site.data.keyword.Bluemix_notm}} Developer CLI](index.html)，并使用 `ibmcloud dev create` 命令生成项目
+  * 使用 [{{site.data.keyword.Bluemix_notm}} Web 控制台](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 并下载生成的代码
+  * 使用 {{site.data.keyword.Bluemix_notm}} Developer Tools CLI 插件，并使用 [ibmcloud dev create](/docs/cli/idt/commands.html#create) 命令生成项目。
 * 在 Visual Studio Code 编辑器本地打开项目的文件夹
 * 使用 `ibmcloud dev build` 命令将应用程序构建到 Docker 映像中
 * 使用 `ibmcloud dev debug` 命令在本地 Docker 中运行应用程序以进行开发
-> 注：要调试在本地 Docker 容器内运行的 Node.js 应用程序，需要[为本地容器添加调试配置](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container)。
+> 注：要调试在本地 Docker 容器内运行的 Node.js 应用程序，需要[为本地容器添加调试配置](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
 * 使用 `ibmcloud dev run` 命令在本地 Docker 中以发布方式运行应用程序
 * 使用 `ibmcloud dev deploy` 命令将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 上的 Cloud Foundry 运行时
 
@@ -80,7 +80,7 @@ lastupdated: "2018-07-12"
 
 只需几个步骤即可开始使用 CloudFoundry 工作流：
 * 创建新的 CloudFoundry 应用程序
-  * 使用 [Web 控制台](https://console.ng.bluemix.net/dashboard/cf-apps)并下载入门模板代码
+  * 使用 [{{site.data.keyword.Bluemix_notm}} Web 控制台](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 并下载入门模板代码
   * 手动创建新的 CloudFoundry 应用程序
 * 在 Visual Studio Code 编辑器本地打开项目文件夹
 * 使用 `ibmcloud cf apps` 列出所有应用程序

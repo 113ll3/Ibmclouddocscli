@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Services Cloud Foundry
+# Création, suppression et liaison de services Cloud Foundry
 {: #ibmcloud_commands_services}
 
 Les commandes suivantes permettent de gérer les offres, les instances, les liaisons et les clés de service pour le service {{site.data.keyword.Bluemix_notm}} Foundry.

@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # Elaboration d'une demande de réseau
 {: #sdk-network-request}
@@ -18,7 +18,7 @@ Vous pouvez également utiliser le SDK `BMSCore` pour effectuer des demandes de 
 ## Android
 {: #request-android}
 
-1. Vérifiez que vous avez bien [importé et initialisé le SDK client](sdk_BMSClient.html#init-BMSClient-android) dans votre application Android.
+1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](sdk_BMSClient.html#init-BMSClient-android) dans votre application Android.
 
 2. Faites une demande de réseau.
 
@@ -56,7 +56,7 @@ de l'envoi ou de la réception par téléchargement, créez un élément
 ## iOS
 {: #request-ios}
 
-1. Vérifiez que vous avez bien [importé et initialisé le SDK client](sdk_BMSClient.html#init-BMSClient-ios) dans votre application iOS.
+1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](sdk_BMSClient.html#init-BMSClient-ios) dans votre application iOS.
 
 2. Créez une demande de réseau.
 
@@ -103,15 +103,13 @@ demandes. Pour obtenir les réponses, vous pouvez choisir des gestionnaires d'ex
 
 La classe `BMSURLSession` n'est disponible que pour iOS.
 
-Pour des exemples d'utilisation complets, voir le
-[fichier
-Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core) du GitHub BMSCore.
+Pour accéder à des exemples d'utilisation complets, consultez le fichier [README `BMSCore` GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}.
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Vérifiez que vous avez bien [importé et initialisé le SDK client](sdk_BMSClient.html#init-BMSClient-cordova) dans votre application Cordova.
+1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](sdk_BMSClient.html#init-BMSClient-cordova) dans votre application Cordova.
 
 2. Créez une demande de réseau.
 

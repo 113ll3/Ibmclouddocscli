@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Stockage de fichier
+# Utilisation du service File Storage
 
 {{site.data.keyword.filestorage_full}} est un {{site.data.keyword.filestorage_short}} basé sur NFS, persistant, rapide et connecté au réseau de façon flexible. Cet environnement NAS vous permet d'avoir un contrôle total des fonctions et des performances de vos partages de fichiers.
 
 Les commandes suivantes permettent de gérer un volume spécifique dans le service de stockage de fichier de l'infrastructure {{site.data.keyword.Bluemix_notm}} classique.
 {: shortdesc}
 
-<table summary="Commandes générales de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
-<caption>Tableau 1. Stockage de fichier de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<table summary="Commandes générales de l'infrastructure classique {{site.data.keyword.BluSoftlayer_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
+<caption>Tableau 1. Stockage par blocs de l'infrastructure classique {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Stockage de fichier de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Stockage de fichier de l'infrastructure classique {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -473,7 +473,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Options de tri des colonnes : id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,mount_addr.</dd>
 <dt>--columns</dt>
-<dd>Options d'affichage des colonnes : id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr.</dd>
+<dd>Les options d'affichage des colonnes sont les suivantes : id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, mount_addr, notes.</dd>
 </dl>
 
 **Exemples** :
@@ -549,6 +549,8 @@ ibmcloud sl file volume-order [OPTIONS]
 <dd>Obligatoire. Nom abrégé de centre de données.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Paramètre facultatif pour la commande d'espace d'image instantanée avec le volume.</dd>
+<dt>-b, --billing</dt>
+<dd>Paramètre facultatif pour le taux de facturation (facturation mensuelle par défaut). La facturation peut être effectuée toutes les heures ou tous les mois.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -572,9 +574,10 @@ ibmcloud sl file volume-modify VOLUME_ID [OPTIONS]
 <dt>-c, --new-size</dt>
 <dd>Nouvelle taille du volume de fichiers en Go. ***Si aucune taille n'est indiquée, la taille d'origine du volume est utilisée.*** Tailles potentielles : [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Taille minimale : [taille d'origine du volume]</dd>
 <dt>-i, --new-iops</dt>
-<dd>Niveau IOPS/Go du stockage de type performance, compris entre 100 et 6000 en multiples de 100 [uniquement pour les volumes de performance] ***Si aucune valeur IOPS n'est spécifiée, la valeur IOPS d'origine sera utilisée.***Exigences : [Si la valeur IOPS/Go d'origine pour le volume est inférieure à 0,3, la nouvelle valeur IOPS/Go doit également être inférieure à 0,3. Si la valeur IOPS/Go d'origine pour le volume est supérieure ou égale à 0,3, la nouvelle valeur IOPS/Go pour le volume doit également être supérieure ou égale à 0,3.]</dd>
+<dd>Niveau IOPS/Go du stockage de type performance, compris entre 100 et 6000 en multiples de 100 [uniquement pour les volumes de performance] ***Si aucune valeur IOPS n'est spécifiée, la valeur IOPS d'origine sera utilisée.*** Exigences : [Si la valeur IOPS/Go d'origine pour le volume est inférieure à 0,3, la nouvelle valeur IOPS/Go doit également être inférieure à 0,3. Si la valeur IOPS/Go d'origine pour le volume est supérieure ou égale à 0,3, la nouvelle valeur IOPS/Go pour le volume doit également être supérieure ou égale à 0,3.]</dd>
 <dt>-t, --new-tier</dt>
-<dd>Niveau de stockage d'endurance (IOPS/Go) [uniquement pour les volumes de performance] ***Si aucun niveau n'est spécifié, le niveau d'origine du volume sera utilisé.*** Exigences : [Si le niveau IOPS/Go d'origine pour le volume est égal à 0,25, le nouveau niveau IOPS/Go pour le volume doit aussi être égal à 0,25. Si le niveau IOPS/Go pour le volume est supérieur à 0,25, les nouveaux niveaux IOPS pour le volume doit également être supérieur à 0,25.]</dd>
+<dd>Niveau de stockage d'endurance (IOPS/Go) [uniquement pour les volumes de performance] ***Si aucun niveau n'est spécifié, le niveau d'origine du volume sera utilisé.***
+Exigences : [Si le niveau IOPS/Go d'origine pour le volume est égal à 0,25, le nouveau niveau IOPS/Go pour le volume doit aussi être égal à 0,25. Si le niveau IOPS/Go pour le volume est supérieur à 0,25, les nouveaux niveaux IOPS pour le volume doit également être supérieur à 0,25.]</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -589,7 +592,7 @@ Cette commande permet de modifier un volume 12345678 d'une taille de 1 000 Go et
 ```
 ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
 ```
-Cette commande permet de modifier un volume 12345678 d'une taille de 500 Go et dont le niveau est 4 IOPS/Go. 
+Cette commande permet de modifier un volume 12345678 d'une taille de 500 Go et dont le niveau est 4 IOPS/Go.
 
 
 ## ibmcloud sl file volume-options

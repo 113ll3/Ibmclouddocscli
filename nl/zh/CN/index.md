@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -37,9 +37,9 @@ lastupdated: "2018-11-15"
 ## 开始之前
 {: #prereq}
 
-您需要 [{{site.data.keyword.Bluemix_notm}} 帐户 ](https://console.bluemix.net/){: new_window}![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 并满足以下系统需求：
+您需要 [{{site.data.keyword.Bluemix_notm}} 帐户 ](https://{DomainName}){: new_window}![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 并满足以下系统需求：
 
-* 如果您运行的是 Windows，而不是 Windows 10 专业版，那么有些功能将不受支持。
+* 如果您运行的是 Windows，但并不是 Windows 10 专业版，那么不支持某些功能。
 * 您必须使用 Docker 的稳定通道，最低版本为 1.13.1。
 
 ## 步骤 1. 运行安装命令
@@ -55,16 +55,16 @@ curl -sL https://ibm.biz/idt-installer | bash
 * 对于 Windows 10 专业版，请以管理员身份运行以下命令：
 
   ```
-  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
-  ```
+Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+```
   {: codeblock}
 
     右键单击 Windows PowerShell 图标，并选择**以管理员身份运行**。
   {: tip}
 
-  您还可以从 [GitHub 存储库](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)下载安装程序脚本。
+  您还可以从 [GitHub 存储库](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 下载安装程序脚本。
 
-  有关手动安装这些工具的步骤，请参阅[重新安装工具](/docs/cli/ts_createapps.html#appendix)。
+  有关手动安装这些工具的步骤，请参阅[如何手动安装 IBM Cloud Developer Tools](/docs/cli/ts_createapps.html#appendix)。
 
 ## 步骤 2. 验证安装
 {: #step2}

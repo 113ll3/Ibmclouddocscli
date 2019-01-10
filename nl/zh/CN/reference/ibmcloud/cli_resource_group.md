@@ -5,17 +5,17 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 资源组和资源
+# 使用资源和资源组
 {: #ibmcloud_commands_resource}
 
-资源组是在可定制的分组中组织帐户资源的一种方法。使用以下命令可管理 {{site.data.keyword.Bluemix}} 资源组及资源组中的资源。
+资源组是一种使用可定制的分组来组织帐户资源的方法。使用以下命令可管理 {{site.data.keyword.Bluemix}} 资源组及资源组中的资源。
 {: shortdesc}
 
 <table summary="可用于管理资源组和资源的 ibmcloud 命令。">
@@ -379,9 +379,9 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>Name（必填）</dt>
+  <dt>Name（必需）</dt>
   <dd>服务实例的名称，与 ID 互斥 </dd>
-  <dt>ID（必填）</dt>
+  <dt>ID（必需）</dt>
   <dd>服务实例的 ID，与 NAME 互斥 </dd>
   <dt>-n, --name</dt>
   <dd>新服务实例名称</dd>
@@ -413,9 +413,9 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>Name（必填）</dt>
+  <dt>Name（必需）</dt>
   <dd>服务实例的名称，与 ID 互斥 </dd>
-  <dt>ID（必填）</dt>
+  <dt>ID（必需）</dt>
   <dd>服务实例的 ID，与 NAME 互斥 </dd>
   <dt>-f, --force</dt>
   <dd>强制删除而不确认</dd>
@@ -954,9 +954,9 @@ ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>--tag-name（必填）</dt>
+  <dt>--tag-name（必需）</dt>
   <dd>标记名称，与 --tag-crn 互斥 </dd>
-  <dt>--tag-crn（必填）</dt>
+  <dt>--tag-crn（必需）</dt>
   <dd>标记 CRN，与 --tag-name 互斥 </dd>
 </dl>
 
@@ -981,7 +981,7 @@ ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>--tag-name（必填）</dt>
+  <dt>--tag-name（必需）</dt>
   <dd>标记名称</dd>
   <dt>--tag-type</dt>
   <dd>标记类型（支持的值：user、restricted；缺省值为 user）</dd>
@@ -1026,9 +1026,9 @@ ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>--tag-name（必填）</dt>
+  <dt>--tag-name（必需）</dt>
   <dd>标记名称，与 --tag-crn 互斥 </dd>
-  <dt>--tag-crn（必填）</dt>
+  <dt>--tag-crn（必需）</dt>
   <dd>标记 CRN，与 --tag-name 互斥 </dd>
 </dl>
 
@@ -1053,11 +1053,11 @@ ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resour
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>--tag-name（必填）</dt>
+  <dt>--tag-name（必需）</dt>
   <dd>标记名称，与 --tag-crn 互斥 </dd>
-  <dt>--tag-crn（必填）</dt>
+  <dt>--tag-crn（必需）</dt>
   <dd>标记 CRN，与 --tag-name 互斥 </dd>
-  <dt>--resource-crn（必填）</dt>
+  <dt>--resource-crn（必需）</dt>
   <dd>资源 CRN</dd>
 </dl>
 
@@ -1082,11 +1082,11 @@ ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RE
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>--tag-name（必填）</dt>
+  <dt>--tag-name（必需）</dt>
   <dd>标记名称，与 --tag-crn 互斥 </dd>
-  <dt>--tag-crn（必填）</dt>
+  <dt>--tag-crn（必需）</dt>
   <dd>标记 CRN，与 --tag-name 互斥 </dd>
-  <dt>--resource-crn（必填）</dt>
+  <dt>--resource-crn（必需）</dt>
   <dd>资源 CRN</dd>
 </dl>
 
@@ -1111,11 +1111,11 @@ ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYP
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>--tag-name（必填）</dt>
+  <dt>--tag-name（必需）</dt>
   <dd>标记名称，与 --tag-crn 互斥 </dd>
-  <dt>--tag-crn（必填）</dt>
+  <dt>--tag-crn（必需）</dt>
   <dd>标记 CRN，与 --tag-name 互斥 </dd>
-  <dt>--tag-type（必填）</dt>
+  <dt>--tag-type（必需）</dt>
   <dd>标记类型</dd>
 </dl>
 

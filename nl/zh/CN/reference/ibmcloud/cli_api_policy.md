@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IAM API 密钥、身份和访问权
+# 管理 IAM 访问权、API 密钥、服务标识和访问组
 {: #ibmcloud_commands_iam}
 
 使用以下命令可管理用户、服务和访问组的 API 密钥、服务标识、访问组和访问权/授权策略。
@@ -139,7 +139,7 @@ ibmcloud iam service-id (NAME|UUID) [--uuid]
 <dl>
   <dt>NAME（必需）</dt>
   <dd>服务的名称，与 UUID 互斥</dd>
-  <dt>UUID（必填）</dt>
+  <dt>UUID（必需）</dt>
   <dd>服务的 UUID，与 NAME 互斥</dd>
   <dt>--uuid</dt>
   <dd>显示服务标识的 UUID</dd>
@@ -208,7 +208,7 @@ ibmcloud iam service-id-update (NAME|UUID) [-n, --name NEW_NAME] [-d, --descript
 <dl>
   <dt>NAME（必需）</dt>
   <dd>服务的名称，与 UUID 互斥</dd>
-  <dt>UUID（必填）</dt>
+  <dt>UUID（必需）</dt>
   <dd>服务的 UUID，与 NAME 互斥</dd>
   <dt>-n, --name</dt>
   <dd>服务的新名称</dd>
@@ -253,7 +253,7 @@ ibmcloud iam service-id-delete (NAME|UUID) [-f, --force]
 <dl>
   <dt>NAME（必需）</dt>
   <dd>服务的名称，与 UUID 互斥</dd>
-  <dt>UUID（必填）</dt>
+  <dt>UUID（必需）</dt>
   <dd>服务的 UUID，与 NAME 互斥</dd>
   <dt>-f, --force</dt>
   <dd>删除而不确认</dd>
@@ -288,7 +288,7 @@ ibmcloud iam service-id-lock (NAME|UUID) [-f, --force]
 <dl>
   <dt>NAME（必需）</dt>
   <dd>服务的名称，与 UUID 互斥</dd>
-  <dt>UUID（必填）</dt>
+  <dt>UUID（必需）</dt>
   <dd>服务的 UUID，与 NAME 互斥</dd>
   <dt>-f, --force</dt>
   <dd>锁定而不确认</dd>
@@ -323,7 +323,7 @@ ibmcloud iam service-id-unlock (NAME|UUID) [-f, --force]
 <dl>
   <dt>NAME（必需）</dt>
   <dd>服务的名称，与 UUID 互斥</dd>
-  <dt>UUID（必填）</dt>
+  <dt>UUID（必需）</dt>
   <dd>服务的 UUID，与 NAME 互斥</dd>
   <dt>-f, --force</dt>
   <dd>解锁而不确认</dd>
@@ -406,7 +406,7 @@ ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
 <dl>
 <dt>NAME（必需）</dt>
 <dd>要更新的 API 密钥的旧名称，与 UUID 互斥</dd>
-<dt>UUID（必填）</dt>
+<dt>UUID（必需）</dt>
 <dd>要更新的 API 密钥的 UUID，与 NAME 互斥</dd>
 <dt>-n <i>NAME</i>（可选）</dt>
 <dd>API 密钥的新名称</dd>
@@ -437,7 +437,7 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 <dl>
 <dt>NAME（必需）</dt>
 <dd>要删除的 API 密钥的名称，与 UUID 互斥</dd>
-<dt>UUID（必填）</dt>
+<dt>UUID（必需）</dt>
 <dd>要删除的 API 密钥的 UUID，与 NAME 互斥</dd>
 <dt>-f, --force</dt>
 <dd>强制删除而不确认。</dd>
@@ -458,7 +458,7 @@ ibmcloud iam api-key-lock (NAME|UUID) [-f, --force]
 <dl>
 <dt>NAME（必需）</dt>
 <dd>要锁定的 API 密钥的名称，与 UUID 互斥</dd>
-<dt>UUID（必填）</dt>
+<dt>UUID（必需）</dt>
 <dd>要锁定的 API 密钥的 UUID，与 NAME 互斥</dd>
 <dt>-f, --force</dt>
 <dd>强制锁定而不确认。</dd>
@@ -493,7 +493,7 @@ ibmcloud iam api-key-unlock (NAME|UUID) [-f, --force]
 <dl>
 <dt>NAME（必需）</dt>
 <dd>要解锁的 API 密钥的名称，与 UUID 互斥</dd>
-<dt>UUID（必填）</dt>
+<dt>UUID（必需）</dt>
 <dd>要解锁的 API 密钥的 UUID，与 NAME 互斥</dd>
 <dt>-f, --force</dt>
 <dd>强制解锁而不确认。</dd>
@@ -528,7 +528,7 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 <dl>
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
-  <dt>SERVICE_ID_UUID（必填）</dt>
+  <dt>SERVICE_ID_UUID（必需）</dt>
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
   <dt>-f, --force</dt>
   <dd>显示服务 API 密钥而不确认</dd>
@@ -555,13 +555,13 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>APIKEY_NAME（必填）</dt>
+  <dt>APIKEY_NAME（必需）</dt>
   <dd>API 密钥的名称，与 APIKEY_UUID 互斥 </dd>
-  <dt>APIKEY_UUID（必填）</dt>
+  <dt>APIKEY_UUID（必需）</dt>
   <dd>API 密钥的 UUID，与 APIKEY_NAME 互斥 </dd>
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
-  <dt>SERVICE_ID_UUID（必填）</dt>
+  <dt>SERVICE_ID_UUID（必需）</dt>
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
   <dt>--uuid</dt>
   <dd>显示服务 API 密钥的 UUID</dd>
@@ -594,7 +594,7 @@ ibmcloud iam service-api-key-create NAME (SERVICE_ID_NAME|SERVICE_ID_UUID) [-d, 
   <dd>服务标识的名称或新创建的服务 API 密钥的名称</dd>
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
-  <dt>SERVICE_ID_UUID（必填）</dt>
+  <dt>SERVICE_ID_UUID（必需）</dt>
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
   <dt>-d, --description</dt>
   <dd>API 密钥的描述</dd>
@@ -625,13 +625,13 @@ ibmcloud iam service-api-key-update (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>APIKEY_NAME（必填）</dt>
+  <dt>APIKEY_NAME（必需）</dt>
   <dd>API 密钥的名称，与 APIKEY_UUID 互斥 </dd>
-  <dt>APIKEY_UUID（必填）</dt>
+  <dt>APIKEY_UUID（必需）</dt>
   <dd>API 密钥的 UUID，与 APIKEY_NAME 互斥 </dd>
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
-  <dt>SERVICE_ID_UUID（必填）</dt>
+  <dt>SERVICE_ID_UUID（必需）</dt>
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
   <dt>-n, --name</dt>
   <dd>服务 API 密钥的新名称</dd>
@@ -662,13 +662,13 @@ ibmcloud iam service-api-key-delete (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>APIKEY_NAME（必填）</dt>
+  <dt>APIKEY_NAME（必需）</dt>
   <dd>API 密钥的名称，与 APIKEY_UUID 互斥 </dd>
-  <dt>APIKEY_UUID（必填）</dt>
+  <dt>APIKEY_UUID（必需）</dt>
   <dd>API 密钥的 UUID，与 APIKEY_NAME 互斥 </dd>
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
-  <dt>SERVICE_ID_UUID（必填）</dt>
+  <dt>SERVICE_ID_UUID（必需）</dt>
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
   <dt>-f, --force</dt>
   <dd>删除而不确认</dd>
@@ -695,13 +695,13 @@ ibmcloud iam service-api-key-lock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SER
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>APIKEY_NAME（必填）</dt>
+  <dt>APIKEY_NAME（必需）</dt>
   <dd>API 密钥的名称，与 APIKEY_UUID 互斥 </dd>
-  <dt>APIKEY_UUID（必填）</dt>
+  <dt>APIKEY_UUID（必需）</dt>
   <dd>API 密钥的 UUID，与 APIKEY_NAME 互斥 </dd>
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
-  <dt>SERVICE_ID_UUID（必填）</dt>
+  <dt>SERVICE_ID_UUID（必需）</dt>
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
   <dt>-f, --force</dt>
   <dd>锁定而不确认</dd>
@@ -728,13 +728,13 @@ ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>APIKEY_NAME（必填）</dt>
+  <dt>APIKEY_NAME（必需）</dt>
   <dd>API 密钥的名称，与 APIKEY_UUID 互斥 </dd>
-  <dt>APIKEY_UUID（必填）</dt>
+  <dt>APIKEY_UUID（必需）</dt>
   <dd>API 密钥的 UUID，与 APIKEY_NAME 互斥 </dd>
   <dt>SERVICE_ID_NAME（必需）</dt>
   <dd>服务标识的名称，与 SERVICE_ID_UUID 互斥 </dd>
-  <dt>SERVICE_ID_UUID（必填）</dt>
+  <dt>SERVICE_ID_UUID（必需）</dt>
   <dd>服务标识的 UUID，与 SERVICE_ID_NAME 互斥 </dd>
   <dt>-f, --force</dt>
   <dd>解锁而不确认</dd>

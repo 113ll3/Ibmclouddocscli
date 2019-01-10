@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -15,19 +15,20 @@ lastupdated: "2018-07-27"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
+{:note: .note}
 
-
-# Commandes Cloud Foundry (cf)
+# Utilisation de Cloud Foundry (commandes cf)
 {: #cf}
 
 L'interface de ligne de commande Cloud Foundry (cf) fournit un ensemble de commandes permettant de gérer vos applications. Les informations ci-après répertorient les commandes cf le plus souvent utilisées pour gérer les applications avec leurs noms, leurs options, leur syntaxe, les éléments prérequis, leur description et des exemples. Pour afficher toutes les commandes cf et les informations d'aide associées, entrez `cf help`. Entrez `cf nom_commande -h` afin d'afficher des informations d'aide détaillées pour une commande particulière.
 {: shortdesc}
 
-Pour apprendre à utiliser l'interface CLI Cloud Foundry, voir [Getting Started](https://github.com/cloudfoundry/cli#getting-started).
+Pour apprendre à utiliser l'interface CLI Cloud Foundry, voir [Getting Started ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}.
 
 Pour obtenir une liste plus détaillée de commandes `cf CLI`, voir le document [Cloud Foundry CLI Reference Guide ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} de la communauté.
 
-**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement `HTTP_PROXY`. Pour plus d'informations, voir [Using the cf CLI with an HTTP Proxy Server ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+Sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement `HTTP_PROXY`. Pour plus de détails, voir [Using the cf CLI with a Proxy Server ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+{: note}
 
 
 ## Index des commandes de l'interface de ligne de commande Cloud Foundry
@@ -86,10 +87,10 @@ Utilisez l'index du tableau suivant pour consulter les commandes Cloud Foundry f
 ## cf api
 {: #cf_api}
 
-Utiliser cette commande pour afficher ou spécifier l'adresse URL du noeud final d'API de {{site.data.keyword.Bluemix_notm}}.
+Utiliser cette commande pour afficher ou spécifier l'adresse URL du noeud final d'API de {{site.data.keyword.Bluemix}}.
 
 ```
-cf api [URL_serveur_Bluemix] [--skip-ssl-validation] [--unset]
+cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
 
 <strong>Prérequis</strong> : aucun.
@@ -98,7 +99,7 @@ cf api [URL_serveur_Bluemix] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>URL_serveur_Bluemix (facultatif)</dt>
-   <dd>Adresse URL du noeud final d'API Bluemix que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En général, il s'agit de `https://api.{NomDomaine}`.
+   <dd>Adresse URL du noeud final de l'API {{site.data.keyword.Bluemix_notm}} que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En général, il s'agit de `https://api.{NomDomaine}`.
    Si vous voulez afficher l'adresse URL du noeud final de l'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la commande cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Désactive le processus de validation SSL. L'utilisation de ce paramètre peut entraîner des problèmes de sécurité.</dd>
@@ -397,9 +398,10 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Vous connecte à {{site.data.keyword.Bluemix_notm}}. Si vous êtes connecté à l'aide d'un [ID fédéré](/docs/admin/account.html#signup), vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter.
+Vous connecte à {{site.data.keyword.Bluemix_notm}}. Si vous êtes connecté à l'aide d'un ID fédéré, vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter.
 
-**Remarque** : vous pouvez aussi utiliser une clé d'API de plateforme {{site.data.keyword.Bluemix_notm}} pour vous connecter. Servez-vous du nom d'utilisateur `apikey` et de la valeur de votre clé d'API comme mot de passe. Pour plus d'informations sur la création d'une clé d'API, voir [Gestion des clés d'API](/docs/iam/apikeys.html).
+Vous pouvez également utiliser une clé d'API de plateforme {{site.data.keyword.Bluemix_notm}} pour vous connecter. Servez-vous du nom d'utilisateur `apikey` et de la valeur de votre clé d'API comme mot de passe. Pour plus d'informations sur la création d'une clé d'API, voir [Description des clés d'API](/docs/iam/apikeys.html).
+{: note}
 
 ```
 cf login [-a url] [-u nom_utilisateur] [-p mot_de_passe] [-sso] [-o nom_organisation] [-s nom_espace] [--skip-ssl-validation]
@@ -838,10 +840,6 @@ cf -v
 ```
 {: codeblock}
 
-
-
-# Liens connexes
-{: #rellinks}
 
 ## Liens connexes
 {: #general}

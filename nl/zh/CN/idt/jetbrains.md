@@ -4,7 +4,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-16"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-16"
 # 用于 Jetbrains IDE 的 IBM Cloud Developer Tools
 {: #ibm-dev-tools-for-jetbrains}
 
-用于 Jetbrains IDE（包括 `IntelliJ`、`WebStorm` 和 `Android Studio` 等）的 {{site.data.keyword.Bluemix_notm}} Developer Tools 扩展提供了用于从 IDE 中直接访问 {{site.data.keyword.dev_cli_notm}} CLI 命令的新菜单项。它支持快速访问适用于 Docker 和 CloudFoundry 工作流的 `ibmcloud dev` 命令子集，包括应用程序部署、在 {{site.data.keyword.Bluemix_notm}} 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需离开编辑器的上下文。
+用于 Jetbrains IDE（包括 `IntelliJ`、`WebStorm` 和 `Android Studio` 等）的 {{site.data.keyword.Bluemix}} Developer Tools 扩展提供了用于从 IDE 中直接访问 {{site.data.keyword.dev_cli_notm}} CLI 命令的新菜单项。它支持快速访问适用于 Docker 和 CloudFoundry 工作流的 `ibmcloud dev` 命令子集，包括应用程序部署、在 {{site.data.keyword.Bluemix_notm}} 上启动/停止/重新启动应用程序、查看远程应用程序日志等等，这一切操作都无需离开编辑器的上下文。
 {:shortdesc}
 
 ![在 WebStorm IDE 中运行的 IBM Cloud Developer Tools 的截屏。](jetbrains.png "在 WebStorm IDE 中运行的 {{site.data.keyword.Bluemix_notm}} Developer Tools 菜单示例")
@@ -24,12 +24,12 @@ lastupdated: "2018-07-16"
 ## 依赖项
 {: #dependencies}
 
-要利用用于基于 Jetbrains 的 IDE 的 {{site.data.keyword.Bluemix_notm}} Developer Tools 扩展，您还需要在系统上安装 [{{site.data.keyword.dev_cli_notm}} CLI](index.html)。
+要利用用于基于 Jetbrains 的 IDE 的 {{site.data.keyword.Bluemix_notm}} Developer Tools 扩展，您还需要在系统上安装 [{{site.data.keyword.dev_cli_notm}} CLI](/docs/cli/index.html#overview)。
 
 ## 安装
 {: #installation}
 
-安装用于 Jetbrains IDE 的 {{site.data.keyword.Bluemix_notm}} Developer Tools 扩展的最简单方法是转至 [{{site.data.keyword.Bluemix_notm}} Developer Tools Github 存储库的 Jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains) 页面，并遵循相关指示信息进行操作。
+安装用于 Jetbrains IDE 的 {{site.data.keyword.Bluemix_notm}} Developer Tools 扩展的最简单方法是转至 [{{site.data.keyword.Bluemix_notm}} Developer Tools Github 存储库的 Jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 页面，并遵循相关指示信息进行操作。
 
 ## 用法
 {: #usage}

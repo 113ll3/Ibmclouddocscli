@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Configuration matérielle
+# Création et utilisation de serveurs bare metal
 
 Les serveurs bare metal sont des serveurs physiques à service exclusif offrant performances et contrôle avec un accès de bas niveau aux ressources matériel. Les serveurs bare metal fournissent la puissance brute dont vous avez besoin pour vos charges de travail exigeantes en termes de processeur et d'entrée-sortie de disque. Ces serveurs sont fournis avec le package le plus complet de services et fonctions standard.
 
-Les commandes suivantes permettent de gérer les serveurs matériels bare metal de l'infrastructure {{site.data.keyword.Bluemix}}.
+Les commandes suivantes permettent de gérer les serveurs matériels bare metal de l'infrastructure classique {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Commandes de serveur bare metal de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">
+<table summary="Commandes de serveur bare metal d'infrastructure classique {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
  <tbody>
  <tr>
  <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>

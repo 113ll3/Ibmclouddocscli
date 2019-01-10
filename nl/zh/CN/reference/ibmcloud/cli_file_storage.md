@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 文件存储器
+# 使用 File Storage 服务
 
 {{site.data.keyword.filestorage_full}} 是一种网络连接的基于 NFS 的 {{site.data.keyword.filestorage_short}}，具有持久、快速、灵活的特点。在此网络连接的存储器 (NAS) 环境中，您对文件共享功能和性能具有完全控制权。
 
 使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构文件存储器服务中的给定卷。
 {: shortdesc}
 
-<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 基础架构文件存储器</caption>
+<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 经典基础架构命令（带有可获取命令的更多信息的链接）">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 经典基础架构文件存储器</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构文件存储器</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 经典基础架构文件存储器</th>
  </thead>
  <tbody>
  <tr>
@@ -504,7 +504,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>要作为排序依据的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions 或 mount_addr。</dd>
 <dt>--columns</dt>
-<dd>要显示的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr 或 mount_addr。</dd>
+<dd>要显示的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr 或 notes。</dd>
 </dl>
 
 **示例**：
@@ -587,6 +587,8 @@ ibmcloud sl file volume-order [OPTIONS]
 <dd>必需。数据中心短名称。</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>用于订购快照空间和卷的可选参数。</dd>
+<dt>-b, --billing</dt>
+<dd>计费费率的可选参数（缺省值为 monthly），选项为：hourly 或 monthly。</dd>
 <dt>-f, --force</dt>
 <dd>强制操作而不确认。</dd>
 </dl>

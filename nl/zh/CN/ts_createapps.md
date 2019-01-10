@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-11-05"
 如果使用 {{site.data.keyword.dev_cli_short}} CLI 将应用程序部署到 Cloud Foundry，那么可能会显示以下错误。即使您输入的主机名是唯一的，也仍然可能会看到此消息。
 
 ```
-主机名 <myHostname> 已占用。
+主机名 <myHostname> 已采用。
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -127,9 +127,9 @@ ibmcloud dev run
 如果使用 CLI 来创建应用程序，那么可能会显示以下错误：
 
 ```
-失败
-应用程序已创建，但无法获取代码
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+FAILED                            
+Application created, but could not get code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -285,3 +285,57 @@ ibmcloud cr namespaces
 - 有关如何使用 Spring 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Spring Boot 应用程序](/docs/java-spring/enable_existing.html#enable_existing)。
 - 有关如何使用 `Node.js` 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Node.js 应用程序](/docs/node/enable_existing.html#enable_existing)。
 {: tsResolve}
+
+## 如何手动安装 {{site.data.keyword.Bluemix_notm}} Developer Tools？
+{: #appendix}
+对于大多数用户，所有必备软件都是使用平台安装程序安装的。如果需要手动安装任何组件，请按以下每个组件的指示信息进行操作。要安装 dev 插件，必须先安装 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)。要使用 dev 插件本身，必须运行以下命令来安装该插件： 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+要在本地运行和调试应用程序，还必须安装 [Docker](https://www.docker.com/get-docker)。
+ 
+要将应用程序部署为容器，还必须安装 Kubernetes、Helm 和以下 IBM Cloud CLI 插件。
+ 
+### 安装 Kubernetes：
+Mac 用户：
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
+
+Linux 用户：
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
+
+Windows 用户：
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
+
+### 安装 Helm：
+Mac 和 Linux 用户：
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
+
+Windows 用户：
+下载并安装[二进制文件](https://github.com/kubernetes/helm/releases/tag/v2.7.2)。
+
+### 要安装 container-registry 插件，请运行以下命令：
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### 要安装 container-service 插件，请运行以下命令：
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-10-04"
+  years: 2017, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # 帮助改进 SDK 插件
 {: #contribute}
@@ -19,17 +20,15 @@ lastupdated: "2018-10-04"
 ## 设置开发环境
 {: #dev-env}
 
-* Cloud Foundry [CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/cli/releases)
+* Cloud Foundry [CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/cli/releases)。
 
    Cloud Foundry CLI 不是必需的，但它有助于通过终端访问 {{site.data.keyword.Bluemix_notm}}。
 
-   有关 Cloud Foundry CLI 的更多信息，请参阅[文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/cfcommands/index.html){: new_window}。
+   有关 Cloud Foundry CLI 的更多信息，请参阅[文档](/docs/cli/reference/cfcommands/index.html)。
 
-* {{site.data.keyword.Bluemix_notm}} [CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://clis.{DomainName}/ui/home.html)
+* {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview)。
 
    此插件会安装到 {{site.data.keyword.Bluemix_notm}} CLI 中。{{site.data.keyword.Bluemix_notm}} CLI 还提供了用于通过终端访问 {{site.data.keyword.Bluemix_notm}} 的有用资源。
-
-   有关 {{site.data.keyword.Bluemix_notm}} CLI 的更多信息，请参阅[文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html){: new_window}。
 
 * Go 的[开发环境 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://golang.org/doc/code.html)
 
@@ -89,8 +88,8 @@ lastupdated: "2018-10-04"
    * 使用以下命令运行单元测试。
 
       ```
-ginkgo -r
-```
+      ginkgo -r
+      ```
       {: codeblock}
 
       * 要添加代码覆盖范围，请在命令后面附加 `-cover`。
@@ -146,7 +145,7 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
 
 未列出嵌套依赖关系。
 
-* [github.com/IBM-Cloud/ibm-cloud-cli-sdk ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Cloud/ibm-cloud-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
    {{site.data.keyword.Bluemix_notm}} CLI 插件 SDK，提供用于开发 {{site.data.keyword.Bluemix_notm}} CLI 插件的基础架构。
 
@@ -170,18 +169,17 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
 
    此软件包用于检测操作系统的当前语言。
 
-
 ## 克隆存储库
 {: #clone-repo}
 
-由于 `govendor` 的工作方式，此[存储库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/tree/compute) 必须克隆到 Go 的[目录结构 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://golang.org/doc/code.html)，这还将遵循 Go 的最佳实践。
+由于 `govendor` 的工作方式（同样遵循 Go 的最佳实践），此存储库必须克隆到 Go 的[目录结构 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://golang.org/doc/code.html)。
 
 * 通过标准软件包名称导入内部依赖关系。
 
    ```
    import (
       ...
-      "github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
+      "github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin/plugin"
    )
    ```
    {: codeblock}
@@ -189,9 +187,9 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
 * 克隆存储库。
 
    ```
-   mkdir -p $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services
-   git clone https://github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
+   mkdir -p $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   cd $GOPATH/src/github.ibm.com/bluemix-mobile-services
+   git clone https://github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin.git -b compute
    ```
    {: codeblock}
 
@@ -202,18 +200,19 @@ Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ![外�
 通过选择以下任一命令来构建插件。
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
 ```
 {: codeblock}
 
 ```
-cd $GOPATH/src/github.ibm.com/ibm-cloud-mobile-services/bmd-codegen-sdkgen-cli-plugin
+cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 sh bin/build.sh
 ```
 {: codeblock}
 
-**注**：构建脚本还会将插件安装到 {{site.data.keyword.Bluemix_notm}} CLI。
+构建脚本还会将插件安装到 {{site.data.keyword.Bluemix_notm}} CLI。
+{: note}
 
 通过选择以下任一命令来测试插件。
 

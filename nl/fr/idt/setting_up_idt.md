@@ -3,15 +3,16 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-30"
 
 ---
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}  
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note: .note}
 
 # Configuration de l'interface de ligne de commande d'{{site.data.keyword.dev_cli_notm}}
 {: #add-cli}
@@ -50,6 +51,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+Vous pouvez également télécharger le script du programme d'installation à partir de notre [référentiel GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+
 ## Vérification de l'installation
 Pour vérifier l'installation, exécutez la commande `help` :
 
@@ -79,7 +82,8 @@ La section [Réinstallation des outils](/docs/troubleshoot/ts_createapps.html#ap
 	```
 	{: codeblock}
 
-	**Remarque :** si vos données d'identification sont rejetées, vous utilisez peut-être un ID fédéré. Procédez comme suit pour vous authentifier en utilisant un ID fédéré.
+	Si vos données d'identification sont rejetées, il est possible que vous utilisiez un ID fédéré. Procédez comme suit pour vous authentifier en utilisant un ID fédéré.
+	{: note}
 
 	1. Connectez-vous à [{{site.data.keyword.iamshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.bluemix.net/iam/#/apikeys){: new_window}.
 	2. Sélectionnez **Créer une clé d'API**.
@@ -118,7 +122,7 @@ Les ressources suivantes peuvent vous être utiles lorsque vous développez des 
 
 - [Principale page d'arrivée IBM Cloud Developer Tools](https://www.ibm.com/cloud/cli) - Page de produit principale pour l'interface de ligne de commande IDT
 - [Programme d'installation d'IBM Developer Tools](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Référentiel GitHub public contenant des instructions d'installation détaillées
-- [Service IBM Cloud App](https://console.bluemix.net/developer/appservice) - Page de la console IBM Cloud qui accompagne les outils IDT pour créer et gérer des applications cloud natives
+- [Service IBM Cloud App](https://{DomainName}/developer/appservice) - Page de la console IBM Cloud qui accompagne les outils IDT pour créer et gérer des applications cloud natives
 - [Signalement de problèmes sur GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [Canal IBM Cloud Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com) - Pour demander l'accès à l'équipe, cliquez [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 

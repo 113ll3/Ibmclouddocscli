@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-06-21"
 如果使用 {{site.data.keyword.dev_cli_short}} 通过 Web 应用程序、BFF 或微服务模式来创建项目，那么可能会看到以下错误：
 
 ```
-主机名 <myHostname> 已占用。
+主机名 <myHostname> 已采用。
 ```
 {: codeblock}
 
@@ -54,6 +54,41 @@ ibmcloud login
 ```
 {: codeblock}
 
+
+### 用于识别应用程序语言的 enable 命令发生问题
+{: #enable-unknown-language}
+
+```
+失败
+无法确定应用程序的语言。
+
+请尝试使用 --language 标志直接指定应用程序的语言。
+
+```
+#### 原因
+{: #enable-unknown-language-cause}
+
+导致此错误的原因可能是：
+1. 从不是应用程序源目录的目录中运行 [enable](commands.md#enable) 命令。
+2. 对目前尚无法识别其语言的应用程序运行 [enable](commands.md#enable) 命令。
+
+
+#### 解决方法
+{: #enable-unknown-language-resolution}
+
+确保是从包含应用程序源代码的应用程序目录中运行的该命令。如果仍未解决此情况，而该语言是其中一种[受支持的语言](commands.md#enable-language-options)，请使用 `--language` 参数指定语言。
+
+### 构建或运行已启用的应用程序时发生问题
+{: #enable-build-run-failures}
+
+尝试[构建](commands.md#build)或[运行](commands.md#run)已启用的应用程序时，可能会遇到各种故障。
+
+#### 解决方法
+{: #enable-build-run-failures-resolution}
+
+有关如何解决使用 Spring 应用程序时发生的此类问题的指导信息，请参阅此[文章](/docs/java-spring/enable_existing.html#enable_existing)。
+
+有关如何解决使用 Node.js 应用程序时发生的此类问题的指导信息，请参阅此[文章](/docs/node/enable_existing.html#enable_existing)。
 
 ### 有关 {{site.data.keyword.dev_cli_short}} 的一般故障
 {: #general}
@@ -83,7 +118,7 @@ ibmcloud login
 {: codeblock}
 
 
-### 运行新项目时发生错误：没有此类映像
+### 运行新应用程序时遇到“错误：没有此类映像”
 {: #nosuchimage}
 
 未首先构建项目就运行项目时，可能会看到以下错误。
@@ -93,12 +128,12 @@ $ ibmcloud dev run testProject
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
-Creating image bx-dev-testProject based on Dockerfile...
-OK
+Creating image ibmcloud-dev-testProject based on Dockerfile...
+OK                    
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
-Error: No such image: bx-dev-testProject
+Error: No such image: ibmcloud-dev-testProject
 ```
 
 
@@ -151,15 +186,15 @@ ibmcloud dev run
 
 
 
-### 创建项目期间获取代码失败
+### 创建应用程序期间获取代码失败
 {: #code}
 
 如果使用 {{site.data.keyword.dev_cli_short}} 来创建项目，那么可能会看到以下错误：
 
 ```
-FAILED
+FAILED                            
 Project created, but could not get code
-https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
+https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: codeblock}
 
@@ -187,7 +222,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 * 使用 {{site.data.keyword.dev_console}}。
 
-	1. 在 {{site.data.keyword.dev_console}} 中选择[项目 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/developer/projects)，然后单击**获取代码**。
+	1. 在 {{site.data.keyword.dev_console}} 中选择[项目 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/projects)，然后单击**获取代码**。
 
 	2. 单击**生成代码**。
 
@@ -272,7 +307,7 @@ ibmcloud login
 #### 原因
 {: #cause2}
 
-导致此错误的最可能的原因是集群名称无效，您可以通过运行带有 `--trace` 的相同命令来进行确认，此时可能会看到以下错误输出：
+导致此错误的最可能的原因是集群名称无效，您可以通过运行带有 `--trace` 的相同命令来进行确认，此时可能会在错误输出中看到以下信息：
 
 ```
 失败，错误为：{"incidentID":"<id-number>","code":"E0008","description":"找不到指定的集群。","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"正在供应"}
@@ -298,8 +333,8 @@ ibmcloud cs cluster-config <cluster-name>
 无法执行操作：退出状态 1：已拒绝：请求对资源的访问被拒绝
 
 
-FAILED
-Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<project-name>:0.0.1' to the Docker registry due to: exit status 1
+失败
+未能将标记为“registry.ng.bluemix.net/<namespace>/<project-name>:0.0.1”的 Run 映像推送到 Docker 注册表，原因：退出状态 1
 ```
 
 
@@ -312,7 +347,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<projec
 #### 解决方法
 {: #resolution3}
 
-确保部署映像目标中的名称空间与通过运行以下命令而找到的其中一个名称空间相匹配：
+确保部署映像目标中的名称空间与通过运行以下命令而找到的其中一个名称空间相匹配。
 
 ```
 ibmcloud cr namespaces
@@ -323,7 +358,7 @@ ibmcloud cr namespaces
 ## 附录
 {: #appendix}
 
-对于使用平台安装程序的大多数用户，将安装所有必备软件。如果需要手动安装任何组件，请按以下指示信息进行操作：
+对于大多数用户，所有必备软件都将使用此页面顶部的平台安装程序进行安装。如果需要手动安装任何组件，请按以下指示信息进行操作：
 
 要安装 dev 插件，必须先安装 [IBM Cloud CLI](../reference/bluemix_cli/get_started.md#getting-started)。
 
@@ -331,7 +366,7 @@ ibmcloud cr namespaces
 
 要在本地运行和调试应用程序，还必须安装 [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker)。
 
-要将应用程序部署为容器，还必须安装 `Kubernetes`、`Helm` 和以下 IBM Cloud CLI 插件：
+要将应用程序部署为容器，还必须安装 Kubernetes、Helm 和以下 IBM Cloud CLI 插件：
 
 安装 Kubernetes：
 * Mac 用户：
@@ -369,8 +404,7 @@ ibmcloud cr namespaces
 ## 获取帮助与支持
 {: #gettinghelp}
 
-有关 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 的问题或疑问，您可以通过在论坛中搜索信息或提问来获取帮助。您还可以开具支持凭单。
-
+有关 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 的问题或疑问，您可以通过在论坛中搜索信息或提问来获取帮助。还可以打开一个支持案例。
 
 在论坛中提问时，可以为问题加上标记，以便通知 {{site.data.keyword.Bluemix_notm}} 开发团队。
 
@@ -389,6 +423,6 @@ ibmcloud cr namespaces
 
 有关使用这些论坛的更多详细信息，请参阅[获取帮助 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#getting-help)。
 
-有关开具 {{site.data.keyword.IBM}} 支持凭单的信息，或有关支持级别和凭单严重性的信息，请参阅[联系支持人员 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#contacting-support)。
+有关打开一个 {{site.data.keyword.IBM}} 支持案例的信息，或有关支持级别和案例严重性的信息，请参阅[联系支持人员 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#contacting-support)。
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->

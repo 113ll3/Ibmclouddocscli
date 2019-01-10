@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Stockage par blocs
+# Utilisation du service {{site.data.keyword.blockstorageshort}}
 
-Les stockage par blocs {{site.data.keyword.Bluemix}} est un stockage iSCSI hautes performances persistant qui est mis à disposition et géré indépendamment des instances de calcul. Des LUN de stockage par blocs basées sur iSCSI sont connectées à des unités autorisées via des connexions d'E-S multi-accès redondantes. 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}} est un stockage iSCSI hautes performances persistant qui est mis à disposition et géré indépendamment des instances de calcul. Les numéros d'unité logique {{site.data.keyword.blockstorageshort}} basés sur iSCSI sont connectés à des périphériques autorisés via des connexions en E-S multi-accès (MPIO) redondantes. 
 
-Les commandes suivantes permettent de gérer un volume donné pour le service de stockage par blocs de l'infrastructure {{site.data.keyword.Bluemix_notm}} classique.
+Les commandes suivantes permettent de gérer un volume donné pour le service {{site.data.keyword.blockstorageshort}} de l'infrastructure classique {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-<table summary="Commandes générales de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
-<caption>Tableau 1. Stockage par blocs de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}</caption>
+<table summary="Commandes générales de l'infrastructure classique {{site.data.keyword.BluSoftlayer_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
+<caption>Tableau 1. Stockage par blocs de l'infrastructure classique {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">Stockage par blocs de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">Stockage par blocs de l'infrastructure classique {{site.data.keyword.BluSoftlayer_notm}}</th>
  </thead>
  <tbody>
  <tr>
@@ -480,7 +480,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Les options de tri des colonnes sont les suivantes : id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
 <dt>--columns</dt>
-<dd>Les options d'affichage des colonnes sont les suivantes : id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, created_by.</dd>
+<dd>Les options d'affichage des colonnes sont les suivantes : id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, created_by, notes.</dd>
 </dl>
 
 **Exemples** :
@@ -502,9 +502,10 @@ ibmcloud sl block volume-modify VOLUME_ID [OPTIONS]
 <dt>-c, --new-size</dt>
 <dd>Nouvelle taille du volume de blocs en Go. ***Si aucune taille n'est indiquée, la taille d'origine du volume est utilisée.*** Tailles potentielles : [20, 40, 80, 100, 250, 500, 1000, 2000, 4000, 8000, 12000] Taille minimale : [taille d'origine du volume]</dd>
 <dt>-i, --new-iops</dt>
-<dd>Niveau IOPS/Go du stockage de type performance, compris entre 100 et 6000 en multiples de 100 [uniquement pour les volumes de performance] ***Si aucune valeur IOPS n'est spécifiée, la valeur IOPS d'origine sera utilisée.***Exigences : [Si la valeur IOPS/Go d'origine pour le volume est inférieure à 0,3, la nouvelle valeur IOPS/Go doit également être inférieure à 0,3. Si la valeur IOPS/Go d'origine pour le volume est supérieure ou égale à 0,3, la nouvelle valeur IOPS/Go pour le volume doit également être supérieure ou égale à 0,3.]</dd>
+<dd>Niveau IOPS/Go du stockage de type performance, compris entre 100 et 6000 en multiples de 100 [uniquement pour les volumes de performance] ***Si aucune valeur IOPS n'est spécifiée, la valeur IOPS d'origine sera utilisée.*** Exigences : [Si la valeur IOPS/Go d'origine pour le volume est inférieure à 0,3, la nouvelle valeur IOPS/Go doit également être inférieure à 0,3. Si la valeur IOPS/Go d'origine pour le volume est supérieure ou égale à 0,3, la nouvelle valeur IOPS/Go pour le volume doit également être supérieure ou égale à 0,3.]</dd>
 <dt>-t, --new-tier</dt>
-<dd>Niveau de stockage d'endurance (IOPS/Go) [uniquement pour les volumes de performance] ***Si aucun niveau n'est spécifié, le niveau d'origine du volume sera utilisé.*** Exigences : [Si le niveau IOPS/Go d'origine pour le volume est égal à 0,25, le nouveau niveau IOPS/Go pour le volume doit aussi être égal à 0,25. Si le niveau IOPS/Go pour le volume est supérieur à 0,25, les nouveaux niveaux IOPS pour le volume doit également être supérieur à 0,25.]</dd>
+<dd>Niveau de stockage d'endurance (IOPS/Go) [uniquement pour les volumes de performance] ***Si aucun niveau n'est spécifié, le niveau d'origine du volume sera utilisé.***
+Exigences : [Si le niveau IOPS/Go d'origine pour le volume est égal à 0,25, le nouveau niveau IOPS/Go pour le volume doit aussi être égal à 0,25. Si le niveau IOPS/Go pour le volume est supérieur à 0,25, les nouveaux niveaux IOPS pour le volume doit également être supérieur à 0,25.]</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
@@ -519,7 +520,7 @@ Cette commande permet de modifier un volume 12345678 d'une taille de 1 000 Go et
 ```
 ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4
 ```
-Cette commande permet de modifier un volume 12345678 d'une taille de 500 Go et dont le niveau est 4 IOPS/Go. 
+Cette commande permet de modifier un volume 12345678 d'une taille de 500 Go et dont le niveau est 4 IOPS/Go.
 
 ## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}
@@ -598,6 +599,8 @@ ibmcloud sl block volume-order [OPTIONS]
 <dd>Obligatoire. Nom abrégé de centre de données.</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>Paramètre facultatif pour la commande d'espace d'image instantanée avec un stockage par blocs de type endurance ; indique la taille (en Go) de l'espace d'image instantanée à commander.</dd>
+<dt>-b, --billing</dt>
+<dd>Paramètre facultatif pour le taux de facturation (facturation mensuelle par défaut). La facturation peut être effectuée toutes les heures ou tous les mois.</dd>
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>

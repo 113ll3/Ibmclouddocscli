@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-06-21"
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # Initialisation de BMSClient
 {: #sdk_BMSClient}
@@ -42,7 +42,7 @@ Vous pouvez soit télécharger et importer le package `BMSCore` dans votre proje
 ## Initialisation de votre application iOS
 {: #init-BMSClient-ios}
 
-Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Carthage](https://github.com/Carthage/Carthage){: new_window} pour obtenir le package `BMSCore`.
+Vous pouvez utiliser [CocoaPods ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cocoapods.org){: new_window} ou [Carthage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/Carthage/Carthage){: new_window} pour vous procurer le package `BMSCore`.
 
 1. Pour installer `BMSCore` à l'aide de CocoaPods, ajoutez les lignes ci-après à votre fichier Pod. Si votre projet ne comporte pas de fichier Pod, utilisez la commande `pod init`.
 
@@ -81,7 +81,7 @@ Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Cartha
   ```
   {: codeblock}
 
-4. Initialisez la classe `BMSClient` à l'aide du code suivant :
+4. Initialisez la classe `BMSClient` à l'aide du code suivant.
 
   Placez le code d'initialisation dans la méthode `application(_:didFinishLaunchingWithOptions:)` de votre délégué d'application ou dans un endroit particulièrement approprié pour votre projet.
 
@@ -96,7 +96,7 @@ Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Cartha
 ## Initialisation de votre application Cordova
 {: #init-BMSClient-cordova}
 
-1. Ajoutez le plug-in Cordova en exécutant la commande suivante depuis le répertoire racine de votre application Cordova :
+1. Ajoutez le plugin Cordova en exécutant la commande suivante depuis le répertoire racine de votre application Cordova :
 
   ```
   cordova plugin add bms-core
@@ -120,6 +120,6 @@ dans le fichier JavaScript principal ou à l'emplacement le plus approprié pour
 ## Liens connexes
 {: #general notoc}
 
-* [SDK BMSCore pour Android](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [SDK BMSCore pour iOS](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [Plug-in BMSCore pour Cordova](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [BMSCore Android SDK ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova Plugin ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

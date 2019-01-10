@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -14,13 +14,13 @@ lastupdated: "2018-06-21"
 # SDK Generator
 {: #sdk-cli}
 
-可以在 [{{site.data.keyword.Bluemix_notm}} CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/all_versions.html) 中安装 {{site.data.keyword.IBM}} SDK Generator 插件。
+可以在 {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview) 中安装 {{site.data.keyword.IBM}} SDK Generator 插件。
 
 作为 {{site.data.keyword.Bluemix_notm}} 上的开发者，您可以使用此插件通过符合 [Open API 规范 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/) 的 REST API 定义来生成 SDK。对 REST API 定义进行更改后，可以使用此插件来仅重新生成 SDK，而不重新生成整个项目。
 
-您还可以查看特定空间中的 Cloud Foundry 应用程序是否具有对于生成 SDK 有效的 REST API 定义。最后，您可以使用 {{site.data.keyword.IBM_notm}} SDK Generator 插件来验证任何 REST API 定义，以确保这些定义符合 SDK Generator 的需求。
+您还可以查看给定空间中的 Cloud Foundry 应用程序是否具有可有效用于生成 SDK 的 REST API 定义。最后，您可以使用 {{site.data.keyword.IBM_notm}} SDK Generator 插件来验证任何 REST API 定义，以确保这些定义符合 SDK Generator 的需求。
 
-通过此 {{site.data.keyword.IBM_notm}} SDK Generator 插件，您可以轻松将应用程序的后端服务与生成的 SDK 集成在一起。对 REST API 进行更改后，可以重新生成 SDK，并替换旧的 SDK，以实现 SDK 升级。还可以将 CLI 集成到 DevOps 管道中，并确保每次构建应用程序时，SDK 始终与 API 规范一致。
+通过此 {{site.data.keyword.IBM_notm}} SDK Generator 插件，您可以轻松将应用程序的后端服务与生成的 SDK 集成在一起。对 REST API 进行更改后，可以重新生成 SDK，并替换旧的 SDK，以实现无缝 SDK 升级。还可以将 CLI 集成到 DevOps 管道中，并确保每次构建应用程序时，SDK 始终与 API 规范一致。
 
 REST API 定义必须有效，并且在实时服务器端点上或在系统上的本地文件中托管。如果托管了 REST API 定义，那么必须在 `OPENAPI_SPEC` 环境变量中定义相对 URL。
 
@@ -30,16 +30,16 @@ REST API 定义必须有效，并且在实时服务器端点上或在系统上�
 
 确保满足以下需求。
 
-* 您具有 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://bluemix.net) 帐户
-* 符合 [Open API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/) 规范的有效 API 定义
+* 您具有 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}) 帐户。
+* 符合 [Open API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/) 规范的有效 API 定义。
 
 
 ## 安装
 {: #installation}
 
-1. [安装 {{site.data.keyword.Bluemix}} CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://clis.ng.bluemix.net/ui/home.html)。
+1. [安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview)。
 
-2. [安装插件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in)。
+2. [安装插件](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in)。
 
 	```
 	ibmcloud plugin install sdk-gen
@@ -63,7 +63,7 @@ REST API 定义必须有效，并且在实时服务器端点上或在系统上�
 {: #gen-args}
 
 * `APP_NAME` - 当前空间中 Cloud Foundry 应用程序的名称
-* `OPENAPI_DOC_LOCATION` - 原始 REST API 定义 JSON 或 YAML 的 URL 或相对文件路径
+* `OPENAPI_DOC_LOCATION` - 原始 REST API 定义 JSON 或 Yaml 的 URL 或相对文件路径
 * `GENERATED_SDK_NAME`（可选）- 生成的 SDK 的名称
 
 
@@ -94,7 +94,7 @@ ibmcloud sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
-要通过指向 Open API 定义文件或者本地 JSON 或 YAML 文件的 URL 生成 SDK，请使用以下命令。
+要通过指向 Open API 定义文件或者本地 JSON 或 Yaml 文件的 URL 生成 SDK，请使用以下命令。
 
 ```
 ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
@@ -112,7 +112,7 @@ ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 {: #val-args}
 
 * `APP_NAME` - 当前空间中 Cloud Foundry 应用程序的名称
-* `OPENAPI_DOC_LOCATION` - 原始 REST API 定义 JSON 或 YAML 的 URL 或相对文件路径
+* `OPENAPI_DOC_LOCATION` - 原始 REST API 定义 JSON 或 Yaml 的 URL 或相对文件路径
 
 
 #### 用法
@@ -125,7 +125,7 @@ ibmcloud sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
-要通过指向 API 规范文档或者本地 JSON 或 YAML 文件的 URL 验证 SDK，请使用以下命令。
+要通过指向 API 规范文档或者本地 JSON 或 Yaml 文件的 URL 验证 SDK，请使用以下命令。
 
 ```
 ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
@@ -137,7 +137,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### 列出应用程序 (Cloud Foundry)
 {: #list-apps}
 
-使用 `ibmcloud sdk list [argument] [option]` 可列出应用程序并验证 API 规范。必须将 `OPENAPI_SPEC` 环境变量设置为托管规范的路径的相对 URL。
+使用 `ibmcloud sdk list [argument] [option]` 可列出应用程序并验证 API 规范。必须将 `OPENAPI_SPEC` 环境变量设置为托管规范的相对 URL 路径。
 
 
 #### 自变量

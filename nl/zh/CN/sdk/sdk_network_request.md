@@ -2,13 +2,13 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # 发出网络请求
 {: #sdk-network-request}
@@ -25,6 +25,8 @@ lastupdated: "2018-06-21"
 	```Java
 	String customResourceURL = "<your resource URL>";
 	Request request = new Request(customResourceURL, "GET");
+
+	
 
 	ResponseListener listener = new ResponseListener() {
 		@Override
@@ -63,6 +65,8 @@ lastupdated: "2018-06-21"
 	let customResourceURL = "<your resource URL>"
 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
+	
+
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
 		if error == nil {
 			print ("Response: \(response?.responseText), no error")
@@ -81,6 +85,8 @@ lastupdated: "2018-06-21"
 	let customResourceURL = "<your resource URL>"
 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
+	
+
 	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
 		if error == nil {
 			print ("Response: \(response?.responseText), no error")
@@ -96,7 +102,7 @@ lastupdated: "2018-06-21"
 
 `BMSURLSession` 类仅可用于 iOS。
 
-有关完整用法示例，请参阅 `BMSCore` GitHub [自述文件](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)。
+有关完整用法示例，请参阅 `BMSCore` GitHub [README ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}。
 
 
 ## Cordova

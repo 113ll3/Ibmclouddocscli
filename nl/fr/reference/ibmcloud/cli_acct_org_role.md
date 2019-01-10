@@ -5,14 +5,15 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 
-# Comptes, utilisateurs et organisations
+# Gestion des comptes, des utilisateurs et des organisations Cloud Foundry
 {: #ibmcloud_commands_account}
 
 Les commandes suivantes permettent de gérer des comptes, les utilisateurs d'un compte, ainsi que l'organisation, l'espace et les rôles des environnements Cloud Foundry publics.
@@ -410,7 +411,8 @@ Affectez l'utilisatrice `Mary` à l'organisation `IBM` sous le rôle `OrgManager
 ibmcloud account org-role-set Mary IBM OrgManager
 ```
 <!-- Begin Staging URL vs Prod URL -->
-**Remarque **: vous pouvez définir des rôles d'organisation ou d'espace via l'interface CLI, mais pour les autres autorisations, il vous utiliser l'interface utilisateur. Pour plus d'informations, voir [Octroi d'un accès utilisateur](/docs/iam/assignaccess.html#assignaccess).
+Vous pouvez définir des rôles d'organisation ou d'espace via l'interface CLI, mais pour les autres autorisations, vous devez utiliser l'interface utilisateur. Pour plus d'informations, voir [Gestion de l'accès aux ressources](/docs/iam/mngiam.html#iammanidaccser).
+{: note}
 <!-- Begin Staging URL vs Prod URL -->
 
 ## ibmcloud account org-role-unset

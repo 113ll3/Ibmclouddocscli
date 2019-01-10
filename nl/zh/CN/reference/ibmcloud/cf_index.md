@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -15,19 +15,20 @@ lastupdated: "2018-07-27"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
+{:note: .note}
 
-
-# Cloud Foundry (cf) 命令
+# 使用 Cloud Foundry（cf 命令）
 {: #cf}
 
 Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序的命令。以下信息列出了管理应用程序最常用的 cf 命令，并包含命令名称、选项、用法、先决条件、描述和示例。要列出所有 cf 命令及其关联的帮助信息，请使用 `cf help`。使用 `cf command_name -h` 可查看特定命令的详细帮助信息。
 {: shortdesc}
 
-有关 Cloud Foundry CLI 入门的更多详细信息，请参阅[入门](https://github.com/cloudfoundry/cli#getting-started)。
+有关 Cloud Foundry CLI 入门的更多详细信息，请参阅[入门 ![外部链接图标](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}。
 
 有关 `cf CLI` 命令的更详细列表，请参阅社区的 [Cloud Foundry CLI Reference Guide ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}。
 
-**注**：如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须通过设置 `HTTP_PROXY` 环境变量来指定该代理服务器的主机名或 IP 地址。有关详细信息，请参阅 [Using the cf CLI with an HTTP Proxy Server ![外部链接图标](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
+如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须指定该代理服务器的主机名或 IP 地址，方法是设置 `HTTP_PROXY` 环境变量。有关详细信息，请参阅 [Using the cf CLI with a Proxy Server ![外部链接图标](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
+{: note}
 
 
 ## Cloud Foundry CLI 命令索引
@@ -85,7 +86,7 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
 ## cf api
 {: #cf_api}
 
-使用此命令可显示或指定 {{site.data.keyword.Bluemix_notm}} API 端点的 URL。
+使用此命令可显示或指定 {{site.data.keyword.Bluemix}} API 端点的 URL。
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
@@ -97,7 +98,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL（可选）</dt>
-   <dd>Bluemix API 端点的 URL，必须指定该 URL 才能连接到 {{site.data.keyword.Bluemix_notm}}。通常，此 URL 为 `https://api.{DomainName}`。
+   <dd>连接到 {{site.data.keyword.Bluemix_notm}} 时必须指定的 {{site.data.keyword.Bluemix_notm}} API 端点的 URL。通常，此 URL 为 `https://api.{DomainName}`。
    如果您想显示当前正在使用的 API 端点的 URL，那么不需要为 cf api 命令指定此参数。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>禁用 SSL 验证过程。使用此参数可能会导致安全性问题。</dd>
@@ -396,9 +397,10 @@ cf help events
 {: #cf_login}
 
 登录到 {{site.data.keyword.Bluemix_notm}}。
-如果您使用[联合标识](/docs/admin/account.html#signup)登录，那么必须使用单点登录 (SSO) 参数才能登录。
+如果您使用联合标识登录，那么必须使用单点登录 (SSO) 参数才能登录。
 
-**注**：您还可以使用 {{site.data.keyword.Bluemix_notm}} Platform API 密钥来登录。请使用用户名 `apikey` 并将 API 密钥值作为密码。有关创建 API 密钥的更多信息，请参阅[管理 API 密钥](/docs/iam/apikeys.html)。
+您还可以使用 {{site.data.keyword.Bluemix_notm}} Platform API 密钥来登录。请使用用户名 `apikey` 并将 API 密钥值作为密码。有关创建 API 密钥的更多信息，请参阅[了解 API 密钥](/docs/iam/apikeys.html)。
+{: note}
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -827,10 +829,6 @@ cf -v
 ```
 {: codeblock}
 
-
-
-# 相关链接
-{: #rellinks}
 
 ## 相关链接
 {: #general}

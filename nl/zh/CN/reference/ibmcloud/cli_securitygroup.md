@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 安全组
+# 管理虚拟服务器流量的安全组
 
 安全组是一组 IP 过滤规则，用于定义如何处理虚拟服务器实例的公共和专用接口的传入（流入）和传出（流出）流量。向安全组中添加的规则称为安全组规则。
 
-使用以下命令可通过 {{site.data.keyword.Bluemix}} 基础架构安全组服务来管理安全组。
+使用以下命令可通过 {{site.data.keyword.Bluemix}} 经典基础架构安全组服务来管理安全组。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构安全组命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构安全组命令（带有可获取命令的更多信息的链接）">
  <thead>
  </thead>
  <tbody>

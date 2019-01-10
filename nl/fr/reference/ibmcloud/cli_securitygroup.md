@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Groupe de sécurité
+# Gestion des groupes de sécurité pour le trafic de serveur virtuel
 
-Un groupe de sécurité est un ensemble de règles de filtrage d'adresses IP qui détermine la manière de gérer le trafic entrant (ingress) et sortant (egress) tant au niveau des interfaces publiques qu'au niveau des interfaces privées d'une instance de serveur virtuel. Les règles que vous ajoutez à un groupe de sécurité sont dénommées règles de groupe de sécurité. 
+Un groupe de sécurité est un ensemble de règles de filtrage d'adresses IP qui détermine la manière de gérer le trafic entrant (ingress) et sortant (egress) tant au niveau des interfaces publiques qu'au niveau des interfaces privées d'une instance de serveur virtuel. Les règles que vous ajoutez à un groupe de sécurité sont dénommées règles de groupe de sécurité.
 
-Les commandes suivantes permettent de gérer un groupe de sécurité à l'aide du service de groupe de sécurité de l'infrastructure {{site.data.keyword.Bluemix}}.
+Les commandes suivantes permettent de gérer un groupe de sécurité à l'aide du service Security Group de l'infrastructure classique {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Commandes du groupe de sécurité de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">
+<table summary="Commandes Security Group de l'infrastructure classique {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
  <thead>
  </thead>
  <tbody>

@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2018-06-21"
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock: .codeblock}
+{:codeblock:.codeblock}
 
 # 初始化 BMSClient
 {: #sdk_BMSClient}
@@ -41,7 +41,7 @@ lastupdated: "2018-06-21"
 ## 初始化 iOS 应用程序
 {: #init-BMSClient-ios}
 
-可以使用 [CocoaPods](https://cocoapods.org){: new_window} 或 [Carthage](https://github.com/Carthage/Carthage){: new_window} 来获取 `BMSCore` 软件包。
+您可以使用 [CocoaPods ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org){: new_window} 或 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage){: new_window} 来获取 `BMSCore` 软件包。
 
 1. 要使用 CocoaPods 来安装 `BMSCore`，请向 Podfile 添加以下行。如果项目尚未有 Podfile，请使用 `pod init` 命令。
 
@@ -63,7 +63,7 @@ lastupdated: "2018-06-21"
   1. 向 Cartfile 添加以下行：
 
       ```
-            github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
+      github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
       ```
       {: codeblock}
 
@@ -118,6 +118,6 @@ lastupdated: "2018-06-21"
 ## 相关链接
 {: #general notoc}
 
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova 插件](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [BMSCore Android SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova Plugin ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

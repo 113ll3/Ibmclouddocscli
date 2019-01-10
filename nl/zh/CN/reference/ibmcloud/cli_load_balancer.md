@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 负载均衡器
+# 使用 LoadBalancer 服务
 
 {{site.data.keyword.Bluemix}} LoadBalancer 服务通过在多个应用程序服务器实例之间分配流量，以及仅将流量转发到运行正常的实例，从而帮助提高业务关键型应用程序的可用性。
 
-使用以下命令可在 {{site.data.keyword.Bluemix_notm}} 基础架构 LoadBalancer 服务中管理负载均衡器。
+使用以下命令可在 {{site.data.keyword.Bluemix_notm}} 经典基础架构 LoadBalancer 服务中管理负载均衡器。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 负载均衡器命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 负载均衡器命令（带有可获取命令的更多信息的链接）">
  <thead>
  </thead>
  <tbody>

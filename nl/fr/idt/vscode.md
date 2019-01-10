@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-30"
 
 
 
@@ -18,7 +18,7 @@ lastupdated: "2018-07-12"
 # IBM Cloud Developer Tools pour Visual Studio Code
 {: #ibm-dev-tools-for-vscode}
 
-L'extension IBM Cloud Developer Tools pour Visual Studio Code est une extension de l'éditeur qui permet d'accéder aux fonctions de l'interface de ligne de commande (CLI) IBM Developer directement depuis la palette de commandes de l'éditeur Visual Studio Code. Elle vous permet d'accéder rapidement à un sous-ensemble de commandes `ibmcloud dev` pour les flux de travail Docker et Cloud Foundry, y compris le déploiement d'application, le démarrage/l'arrêt/le redémarrage d'applications sur {{site.data.keyword.Bluemix_notm}}, la visualisation de journaux d'applications distants, etc., le tout sans avoir à quitter le contexte de votre éditeur.
+L'extension IBM Cloud Developer Tools pour Visual Studio Code est une extension de l'éditeur qui permet d'accéder aux fonctions de l'interface de ligne de commande (CLI) IBM Developer directement depuis la palette de commandes de l'éditeur Visual Studio Code. Elle vous permet d'accéder rapidement à un sous-ensemble de commandes `ibmcloud dev` pour les flux de travail Docker et Cloud Foundry, y compris le déploiement d'application, le démarrage/l'arrêt/le redémarrage d'applications sur {{site.data.keyword.Bluemix}}, la visualisation de journaux d'applications distants, etc., le tout sans avoir à quitter le contexte de votre éditeur.
 {:shortdesc}
 
 ![Capture d'écran de l'écran de téléchargement de l'extension IBM Developer Tools.](vscode.png "Ecran de téléchargement d'extension dans Visual Studio Code")
@@ -26,7 +26,7 @@ L'extension IBM Cloud Developer Tools pour Visual Studio Code est une extension 
 ## Dépendances
 {: #dependencies}
 
-Pour utiliser l'extension IBM Cloud Developer Tools pour Visual Studio Code, l'interface CLI [{{site.data.keyword.Bluemix_notm}}](https://plugins.ng.bluemix.net/ui/home.html) et le plug-in [IBM Developer CLI](index.html) doivent être installés sur votre système.
+Pour utiliser l'extension IBM Cloud Developer Tools pour Visual Studio Code, l'interface CLI [{{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview) et le plug-in {{site.data.keyword.Bluemix_notm}} CLI doivent être installés sur votre système.
 
 ## Installation
 {: #installation}
@@ -45,7 +45,7 @@ Vous pouvez également installer l'extension IBM Cloud Developer Tools via la fe
 1. Ouvrez la barre d'options latérale **Extensions** dans l'éditeur Visual Studio Code, puis lancez une recherche sur la chaîne `publisher:IBM Developer`. L'extension IBM Cloud Developer Tools apparaît dans les résultats de la recherche.  
 2. Cliquez sur le bouton **Install** pour lancer l'installation.
 
-Vous pouvez également accéder à l'extension [IBM Developer Cloud Tools directement à partir de Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer).
+Vous pouvez également accéder à l'extension [IBM Cloud Developer Tools directement à partir de Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Syntaxe
 {: #usage}
@@ -64,12 +64,12 @@ Ensuite, entrez ou sélectionnez la commande que vous souhaitez lancer. Vous pou
 
 Vous pouvez commencer à utiliser les flux de travaux `ibmcloud dev` en quelques étapes seulement :
 * Créez un projet en utilisant l'une des deux méthodes suivantes :
-  * Utilisez la [console Web {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/developer/getting-started/) et téléchargez le code généré.
-  * Utilisez l'[interface de ligne de commande d'{{site.data.keyword.Bluemix_notm}} Developer](index.html) et générez un projet à l'aide de la commande `ibmcloud dev create`.
+  * Utilisez la console Web [{{site.data.keyword.Bluemix_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et téléchargez le code généré. 
+  * Utilisez le plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} Developer Tools et générez un projet en utilisant la commande [ibmcloud dev create](/docs/cli/idt/commands.html#create).
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `ibmcloud dev build` pour générer l'application dans une image Docker.
 * Utilisez la commande `ibmcloud dev debug` pour exécuter l'application dans un conteneur Docker local à des fins de développement.
-> Remarque : pour déboguer une application Node.js qui s'exécute dans le conteneur Docker local, vous devez [ajouter une configuration de débogage pour le conteneur local](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container).
+> Remarque : pour déboguer une application Node.js qui s'exécute dans le conteneur Docker local, vous devez [ajouter une configuration de débogage pour le conteneur local](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
 * Utilisez la commande `ibmcloud dev run` pour exécuter l'application dans un conteneur Docker local en mode édition.
 * Utilisez la commande `ibmcloud dev deploy` pour déployer l'application dans un environnement d'exécution Cloud Foundry sur {{site.data.keyword.Bluemix_notm}}.
 
@@ -80,7 +80,7 @@ Pour les utilisateurs qui déploient actuellement des applications dans des envi
 
 Vous pouvez démarrer les flux de travail CloudFoundry en quelques étapes seulement :
 * Créez une nouvelle application CloudFoundry.
-  * Utilisez la [console Web](https://console.ng.bluemix.net/dashboard/cf-apps) et téléchargez le code de démarrage..
+  * Utilisez la [console Web{{site.data.keyword.Bluemix_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et téléchargez le code de démarrage. 
   * Créez manuellement une nouvelle application CloudFoundry.
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `ibmcloud cf apps` pour répertorier toutes vos applications.

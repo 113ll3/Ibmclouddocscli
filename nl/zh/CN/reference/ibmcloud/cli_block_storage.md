@@ -5,24 +5,24 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 块存储器
+# 使用 {{site.data.keyword.blockstorageshort}} 服务
 
-{{site.data.keyword.Bluemix}} Block Storage 是一种持久的高性能 iSCSI 存储器，可独立于计算实例进行供应和管理。基于 iSCSI 的块存储器 LUN 通过冗余多路径 I/O (MPIO) 连接来连接到授权设备。 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}} 是一种持久的高性能 iSCSI 存储器，可独立于计算实例进行供应和管理。基于 iSCSI 的 {{site.data.keyword.blockstorageshort}} LUN 通过冗余多路径 I/O (MPIO) 连接来连接到授权设备。 
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构块存储器服务的给定卷。
+使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构 {{site.data.keyword.blockstorageshort}} 服务的给定卷。
 {: shortdesc}
 
-<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 基础架构块存储器</caption>
+<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 经典基础架构命令（带有可获取命令的更多信息的链接）">
+<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 经典基础架构块存储器</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构块存储器</th>
+ <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 经典基础架构块存储器</th>
  </thead>
  <tbody>
  <tr>
@@ -512,7 +512,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dt>--sortby</dt>
 <dd>要按其排序的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions 或 created_by。</dd>
 <dt>--columns</dt>
-<dd>要显示的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr 或 created_by。</dd>
+<dd>要显示的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by 或 notes。</dd>
 </dl>
 
 **示例**：
@@ -638,6 +638,8 @@ ibmcloud sl block volume-order [OPTIONS]
 <dd>必需。数据中心短名称。</dd>
 <dt>-n, --snapshot-size</dt>
 <dd>用于随耐久性块存储器一起订购快照空间的可选参数；指定要订购的快照空间大小（以 GB 为单位）。</dd>
+<dt>-b, --billing</dt>
+<dd>计费费率的可选参数（缺省值为 monthly），选项为：hourly 或 monthly。</dd>
 <dt>-f, --force</dt>
 <dd>强制操作而不确认。</dd>
 </dl>

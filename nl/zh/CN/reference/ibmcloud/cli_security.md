@@ -5,23 +5,23 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 安全性
+# 管理安全性 SSH 密钥和 SSL 证书
 
 利用 SSH 密钥，无需使用密码即可从在设备上实现的每个公用密钥所对应的客户机来访问设备。通过向设备添加 SSH 密钥，随 SSH 密钥一起提供的设备无需使用密码即可访问该设备以获取相应的密钥。
 
 SSL 证书是 Web 站点启用的一种安全措施，用来保护用户。需要将机密信息传输到 Web 站点时，通常会使用 SSL 证书。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix}} 基础架构 SSH 密钥和证书。
+使用以下命令可管理 {{site.data.keyword.Bluemix}} 经典基础架构 SSH 密钥和证书。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构安全命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构安全性命令（带有可获取命令的更多信息的链接）">
  <thead>
  </thead>
  <tbody>

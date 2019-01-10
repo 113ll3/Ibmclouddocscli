@@ -5,19 +5,19 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 订单
+# 管理经典基础架构订购和报价
 
-<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（命令带有可获取命令更多信息的链接）">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 基础架构订单</caption>
+<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（带有可获取命令的更多信息的链接）">
+<caption>表 1. 经典基础架构订购</caption>
  <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 基础架构订单</th>
+ <th colspan="6">经典基础架构订购</th>
  </thead>
  <tbody>
  <tr>

@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -27,6 +27,7 @@ lastupdated: "2018-05-24"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 {:tip: .tip}
+{:note: .note}
 
 # Téléchargement, modification et redéploiement de votre application Cloud Foundry à l'aide de l'interface de ligne de commande
 
@@ -45,7 +46,8 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_starter-code.svg" alt="Télécharger le code de l'application" /> </a>
 
-      **Remarque **: élevez la version de noeud à `8.9.x` (ou la version plus récente) dans le fichier `package.json` avant de continuer.
+      Mettez à jour la version de noeud afin d'utiliser la version `8.9.x` (ou la dernière version) dans le fichier `package.json` avant de continuer.
+      {: note}
 
   2. Placez-vous dans le répertoire dans lequel se trouve votre code.
 
@@ -71,7 +73,8 @@ documentation Cloud Foundry.
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Remarque **: vous devez ajouter des apostrophes ou des guillemets autour de `username`, `org_name` et `space_name`, si cette valeur contient un espace. Par exemple, `-o "my org"`.
+  Vous devez ajouter des apostrophes ou des guillemets autour des éléments `username`, `org_name` et `space_name`, si cette valeur contient un espace. Par exemple, `-o "my org"`.
+  {: note}
 
   5. A partir de <var class="keyword varname">votre_nouveau_répertoire</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bluemix app push`. Pour plus d'informations sur la commande `bx app push`, voir [Téléchargement de votre application](/docs/starters/upload_app.html).
 

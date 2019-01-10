@@ -3,15 +3,16 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-30"
 
 ---
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}  
 {:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}  
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note: .note}
 
 # 设置 {{site.data.keyword.dev_cli_notm}} CLI
 {: #add-cli}
@@ -50,6 +51,8 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
 ```
 {: codeblock}
 
+您还可以从 [GitHub 存储库](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)下载安装程序脚本。
+
 ## 验证安装
 要验证安装，请运行 `help` 命令：
 
@@ -79,8 +82,8 @@ ibmcloud dev help
 	```
 	{: codeblock}
 
-	**注：**如果凭证被拒绝，说明您可能使用的是联合标识。请执行以下步骤来使用联合标识进行认证。
-
+	如果凭证被拒绝，说明您可能使用的是联合标识。请执行以下步骤来使用联合标识进行认证。
+	{: note}
 
 	1. 登录到 [{{site.data.keyword.iamshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.bluemix.net/iam/#/apikeys){: new_window}。
 	2. 选择**创建 API 密钥**。
@@ -119,7 +122,7 @@ ibmcloud dev help
 
 - [IBM Cloud Developer Tools 主登录页面](https://www.ibm.com/cloud/cli) - IDT CLI 的主产品页面
 - [IBM Developer Tools 安装程序](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - 包含详细安装指示信息的公共 GitHub 存储库
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud 控制台页面，是 IDT 工具用于创建和管理云本机应用程序的指南
+- [IBM Cloud App Service](https://{DomainName}/developer/appservice) - IBM Cloud 控制台页面，是 IDT 工具用于创建和管理云本机应用程序的指南
 - [在 GitHub 上报告问题](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/issues)
 - [IBM Cloud Tech 的 Slack - #developer-tools 频道](https://ibm-cloud-tech.slack.com) - 请求团队访问[此处](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 

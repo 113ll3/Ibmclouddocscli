@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-11-30"
 
 
 ---
@@ -11,6 +11,7 @@ lastupdated: "2018-06-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Débogage d'application locale pour l'interface de ligne de commande {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
@@ -39,7 +40,10 @@ ibmcloud dev debug
       6. Définissez un point d'arrêt dans l'environnement de développement intégré.
       7. Exécutez la configuration de débogage.
       8. Accédez au noeud final avec un navigateur pour recréer le problème.  
-	   **Remarque** : le port par défaut est 9080 pour le noeud final de base Microservices Java.
+	   
+	   Le port par défaut est 9080 pour le noeud final de base Microservices Java.
+	   {: note}
+
 	* [IntelliJ ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
 	* [VSCode ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
 	* Ligne de commande du kit JDK : `jdb -attach <host:port>`
@@ -66,7 +70,7 @@ ibmcloud dev debug
 
 Steps to enable debug for a Swift application:  
 
-1. On the App server (or system where the Swift application will run), you must start the 'lldb server':
+1. On the App server (or system where the Swift application will execute), you should start the 'lldb server':
  - `lldb-server platform -->
 <!-- listen <port number>`
 2. On the App server, build the Kitura-based server application using the debug configuration:

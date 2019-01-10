@@ -5,18 +5,18 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# DNS
+# Gestion des domaines avec le service DNS
 
-{{site.data.keyword.Bluemix}} Domain Name Service (DNS) fournit aux clients un emplacement central leur permettant d'afficher et de gérer leurs domaines via l'interface de gestion DNS de base et offre aux utilisateurs la possibilité de gérer gratuitement un serveur de noms de domaine inversé et secondaire au même emplacement. 
+{{site.data.keyword.Bluemix}} Domain Name Service (DNS) fournit aux clients un emplacement central leur permettant d'afficher et de gérer leurs domaines via l'interface de gestion DNS de base et offre aux utilisateurs la possibilité de gérer gratuitement un serveur de noms de domaine inversé et secondaire au même emplacement.
 
-Les commandes suivantes permettent de gérer le service DNS de l'infrastructure {{site.data.keyword.Bluemix_notm}} :
+Utilisez les commandes suivantes pour gérer le service DNS de l'infrastructure classique {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 <table summary="Commandes DNS de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">

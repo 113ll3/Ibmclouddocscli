@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# VLAN (réseau local virtuel)
+# Gestion des réseaux locaux virtuels (VLAN) de l'infrastructure classique
 
-Les réseaux locaux virtuels (VLAN) sont utilisés par {{site.data.keyword.cloud}} pour isoler le trafic diffusé sur le réseau public et le réseau privé.
+Les réseaux locaux virtuels (VLAN) sont utilisés par {{site.data.keyword.cloud}} pour isoler le trafic diffusé sur le réseau public et le réseau privé. Ces réseaux sont affectés en fonction des besoins des autres offres.
 
-Les commandes suivantes permettent de gérer les réseaux locaux virtuels de l'infrastructure {{site.data.keyword.Bluemix_notm}}.
+Les commandes suivantes permettent de gérer les réseaux locaux virtuels de l'infrastructure classique.
 {: shortdesc}
 
-<table summary="Commandes de réseau local virtuel de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">
+<table summary="Commandes de réseau local virtuel de l'infrastructure classique {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
  <thead>
  </thead>
  <tbody>

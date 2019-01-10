@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# DNS
+# 使用 DNS 服务管理域
 
 {{site.data.keyword.Bluemix}} 域名服务 (DNS) 为客户提供了一个中心位置，可通过基本 DNS 管理界面来查看和管理自己的域，此外还为用户提供了用于免费管理同一位置中的逆向和辅助 DNS 的选项。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构 DNS 服务。
+使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构 DNS 服务。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构 DNS 命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构 DNS 命令（带有可获取命令的更多信息的链接）">
  <tbody>
  <tr>
  <td>[ibmcloud sl dns import](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_import)</td>

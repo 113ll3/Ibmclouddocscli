@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 虚拟服务器
+# 创建和使用虚拟服务器
 
 {{site.data.keyword.BluVirtServers}} 是可扩展的虚拟服务器，随专用核心和内存分配一起购买。如果您要寻找的是能在几分钟内完成添加且有权访问映像模板等功能的计算资源，那么这是不错的选择。 
 
-使用以下命令可管理 {{site.data.keyword.Bluemix}} 基础架构虚拟服务器。
+使用以下命令可管理经典基础架构虚拟服务器。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构虚拟服务器命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构虚拟服务器命令（带有可获取命令的更多信息的链接）">
  <thead>
  </thead>
  <tbody>

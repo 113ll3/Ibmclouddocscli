@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -33,7 +33,7 @@ Pour explorer d'autres commandes de gestion de plug-in, exécutez `ibmcloud plug
 2. Le référentiel officiel de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} est nommé IBM Cloud ; vous pouvez rechercher les plug-in officiels comme indiqué dans l'exemple suivant :
 
   ```
-  $ ibmcloud plugin repo-plugins -r IBM Cloud
+  $ ibmcloud plugin repo-plugins
   Getting plug-ins from repository 'IBM Cloud'...
 
   Repository: IBM Cloud
@@ -48,10 +48,10 @@ Pour explorer d'autres commandes de gestion de plug-in, exécutez `ibmcloud plug
 Utilisez la commande `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` pour installer le plug-in. Par exemple, utilisez la commande suivante pour installer un plug-in à partir du référentiel de plug-in IBM officiel 'IBM Cloud' :
 
   ```
-  $ ibmcloud plugin install auto-scaling -r IBM Cloud
+  $ ibmcloud plugin install auto-scaling 
   Looking up 'auto-scaling' from repository 'IBM Cloud'...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCLoudFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
@@ -76,7 +76,7 @@ Utilisez la commande `ibmcloud plugin install URL` pour installer un plug-in dir
   ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
   Attempting to download the binary file...
   9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/IBMCloudFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
   OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ~$

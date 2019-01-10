@@ -5,21 +5,21 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IPSec VPN
+# 管理 IPSec VPN 隧道
 
 {{site.data.keyword.Bluemix}} VPN 访问允许用户通过 {{site.data.keyword.Bluemix_notm}} 专用网络远程安全地管理所有服务器。通过建立从您的位置到专用网络的 VPN 连接，您可以使用加密的 VPN 隧道进行带外管理和服务器急救。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 基础架构 IPSec VPN 服务中的 IPSec VPN 隧道。
+使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构 IPSec VPN 服务中的 IPSec VPN 隧道。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} IPSec VPN 命令（命令带有可获取命令更多信息的链接）">
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} IPSec VPN 命令（带有可获取命令的更多信息的链接）">
  <thead>
  </thead>
  <tbody>

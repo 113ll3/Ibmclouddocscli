@@ -5,14 +5,14 @@ copyright:
   years: 2018
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 计费 
+# 查看帐户、组织、资源组和资源的使用情况 
 {: #ibmcloud_billing}
 
 使用以下命令可检索资源使用情况和计费信息。
