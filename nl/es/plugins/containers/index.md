@@ -312,7 +312,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <ul>
    <li><i>VOLUME</i>: El nombre o ID de volumen.</li>
    <li><i>CONTAINER_PATH</i>: La vía de acceso absoluta al volumen en el contenedor.</li>
-   <li>ro: opcional. Si se especifica <i>ro</i>, el volumen será de solo lectura, en lugar de tomar el valor predeterminado (lectura/grabación).</li></ul>
+   <li>ro: opcional. Si se especifica <i>ro</i>, el volumen será de solo lectura, en lugar de tomar el valor predeterminado (lectura/escritura).</li></ul>
    </dd>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i> (opcional)</dt>
    <dd>Exponer el puerto para el tráfico HTTP. Los contenedores de su grupo deben atender a su puerto HTTP. No se pueden hacer solicitudes HTTPS. Para grupos de contenedor, no puede incluir varios puertos. <br><br>Cuando especifique un puerto, haga que su app esté disponible para el equilibrador de carga de {{site.data.keyword.Bluemix_notm}} o los contenedores que intentan establecer contacto con el host en el mismo espacio de {{site.data.keyword.Bluemix_notm}}. A continuación, los contenedores y el equilibrador de carga de {{site.data.keyword.Bluemix_notm}} pueden utilizar el puerto para alcanzar el host y la app en el mismo espacio de {{site.data.keyword.Bluemix_notm}}. Si especifica un puerto en el archivo de Docker para la imagen que está utilizando, incluya dicho puerto. <br>
@@ -892,7 +892,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 Volver a crear el servicio IBM Containers en el espacio de {{site.data.keyword.Bluemix_notm}} en el que ha iniciado la sesión. La cuota original del espacio se mantiene.
 
-<strong>Importante</strong>: al ejecutar este mandato, no se migrará ninguno de los contenedores individuales y grupos de este espacio al espacio que se ha vuelto a aprovisionar y se eliminarán durante el proceso de migración.
+<strong>Importante</strong>: al ejecutar este mandato, no se migrará ninguno de los contenedores individuales y grupos de este espacio al espacio que se ha vuelto a suministrar y se eliminarán durante el proceso de migración.
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
@@ -1134,7 +1134,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    <ul>
    <li><i>VOLUME</i>: El nombre o ID de volumen.</li>
    <li><i>CONTAINER_PATH</i>: La vía de acceso absoluta al volumen en el contenedor.</li>
-   <li>ro: opcional. Si se especifica <i>ro</i>, el volumen será de solo lectura, en lugar de tomar el valor predeterminado (lectura/grabación).</li></ul>
+   <li>ro: opcional. Si se especifica <i>ro</i>, el volumen será de solo lectura, en lugar de tomar el valor predeterminado (lectura/escritura).</li></ul>
    </dd>
    <dt>-n <i>NAME</i>|--name <i>NAME</i> (necesario)</dt>
    <dd>Asigne un nombre al contenedor. <br> <strong>Sugerencia:</strong> el nombre de contenedor debe empezar por una letra. El nombre puede incluir letras en mayúsculas y minúscula, números, puntos (.), caracteres de subrayado (_) o guiones (-).</dd>

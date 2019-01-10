@@ -415,7 +415,7 @@ cf login [-a url] [-u nombre_usuario] [-p contraseña] [-sso] [-o nombre_organiz
 <dd>Debe utilizar la opción de inicio de sesión único (SSO) al iniciar sesión con un ID federado. Esto no es necesario al iniciar sesión con un IBMid. Si intenta iniciar sesión con un ID federado y no especifica el parámetro SSO, se le solicitará que lo incluya. Al utilizar el parámetro SSO se le solicitará que especifique el código de acceso de una sola vez tras iniciar la sesión.</dd>
 <dt>*-o* nombre_organización</dt>
 <dd>El nombre de la organización en la que desea iniciar sesión.</dd>
-<dt>*-s*nombre_espacios</dt>
+<dt>*-s* nombre_espacio</dt>
 <dd>El nombre del espacio en el que desea iniciar sesión.</dd>
 <dt>*--skip-ssl-validation* (opcional)</dt>
 <dd>Inhabilita el proceso de validación de SSL. El uso de este parámetro puede ocasionar problemas de seguridad.</dd>
@@ -479,7 +479,7 @@ cf logs appname [--recent]
 
 <strong>Ejemplos</strong>:
 
-Visualizar las secuencias de registro para una aplicación que se denomina ` mi_app `.
+Visualizar las secuencias de registro para una aplicación que se denomina `my_app`.
 ```
 cf logs my_app
 ```

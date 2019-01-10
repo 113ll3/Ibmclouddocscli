@@ -12,7 +12,7 @@ lastupdated: "2018-11-29"
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestión de acceso a IAM, claves de API, ID de servicio y grupos de acceso
+# Gestión de acceso de IAM, claves de API, ID de servicio y grupos de acceso
 {: #ibmcloud_commands_iam}
 
 Utilice los mandatos siguientes para gestionar las claves de API, los ID de servicio, los grupos de acceso y las políticas de acceso/autorización para usuarios, servicios y grupos de acceso.

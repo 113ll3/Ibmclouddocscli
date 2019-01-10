@@ -59,9 +59,9 @@ Los proyectos creados o habilitados para ser utilizados con la herramienta viene
 
 Aquí podrá encontrar más detalles sobre las estructuras de los proyectos:
 - [Proyectos Java](/docs/apps/projects/java_project_contents.html)
-- [Proyectos NodeJS ](/docs/apps/projects/node_project_contents.html)
-- [Proyectos Python ](/docs/apps/projects/python_project_contents.html)
-- [Proyectos Swift ](/docs/apps/projects/swift_project_contents.html)
+- [Proyectos NodeJS](/docs/apps/projects/node_project_contents.html)
+- [Proyectos Python](/docs/apps/projects/python_project_contents.html)
+- [Proyectos Swift](/docs/apps/projects/swift_project_contents.html)
 
 
 ### Vídeos y blogs de referencia
