@@ -2,10 +2,10 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-12-12"
+lastupdated: "2019-01-14"
 ---
 
 {:new_window: target="_blank"}
@@ -588,7 +588,7 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 ## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
-Show details of a service key
+Displays the details of any number of service keys, where the first *n* characters of the service key name matches the supplied KEY_NAME.
 
 ```
 ibmcloud resource service-key KEY_NAME [--id]
@@ -601,9 +601,9 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dt>KEY_NAME</dt>
   <dd>Name of the key</dd>
   <dt>--id</dt>
-  <dd>Display the ID of service key</dd>
+  <dd>Displays the IDs of any keys, where the first *n* characters of the service key name matches the supplied KEY_NAME and *n* is the length of the supplied KEY_NAME.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now.</dd>
+  <dd>Specify the output format. Only JSON is currently supported.</dd>
 </dl>
 
 <strong>Examples</strong>:
