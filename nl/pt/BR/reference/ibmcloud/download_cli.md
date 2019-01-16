@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-04"
 
 ---
 
@@ -18,16 +18,14 @@ lastupdated: "2018-11-30"
 # Instalando a CLI  {{site.data.keyword.Bluemix_notm}}  Independente
 {: #install_use}
 
-A CLI do {{site.data.keyword.Bluemix_notm}} fornece a interface da linha de comandos para gerenciar recursos no {{site.data.keyword.Bluemix_notm}}. Ainda é possível usar o cf CLI para efetuar login no {{site.data.keyword.Bluemix_notm}}, mas ele funciona apenas com um serviço Cloud Foundry no {{site.data.keyword.Bluemix_notm}}. 
+A CLI do {{site.data.keyword.Bluemix}} fornece a interface da linha de comandos para gerenciar recursos no {{site.data.keyword.Bluemix_notm}}. Ainda é possível usar o cf CLI para efetuar login no {{site.data.keyword.Bluemix_notm}}, mas ele só funciona com um serviço do Cloud Foundry no {{site.data.keyword.Bluemix_notm}}. 
 
-Se você desejar instalar a CLI do {{site.data.keyword.Bluemix}} e outros plug-ins e ferramentas recomendadas para
-desenvolver aplicativos para o {{site.data.keyword.Bluemix_notm}}, siga o método descrito
-[aqui](/docs/cli/index.html).
+Se desejar instalar a CLI do {{site.data.keyword.Bluemix}} e outros plug-ins e ferramentas recomendados para desenvolver aplicativos para o {{site.data.keyword.Bluemix_notm}}, consulte [Introdução à CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
 {: tip}
 
 Use as etapas a seguir para instalar a CLI do {{site.data.keyword.Bluemix_notm}} independente:
 
-1. Selecione o instalador do OS para download
+1. Selecione o instalador de seu S.O. para download.
 
    Mac OS X de 64 bits:
 [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} /
@@ -118,12 +116,12 @@ Ao usar os instaladores ou um shell script para instalar a CLI do {{site.data.ke
 
    ```
    IBM_Cloud_CLI
-   ├── LICENSE
-   ├── NOTICE
+   UNK -- LICENSE
+   UNK -- NOTICE
    ├── autocomplete
    │   ├── bash_autocomplete
    │   └── zsh_autocomplete
-   ├── cfcli
+   UNK -- cfcli
    │   └── cf
    ├── ibmcloud
    └── ibmcloud-analytics
