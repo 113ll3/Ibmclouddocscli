@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-04"
 
 ---
 
@@ -18,9 +18,9 @@ lastupdated: "2018-11-30"
 # スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI のインストール
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} のリソースを管理するためのコマンド・ライン・インターフェースを提供します。 引き続き cf CLI を使用して {{site.data.keyword.Bluemix_notm}} にログインすることもできますが、それは {{site.data.keyword.Bluemix_notm}} 内の Cloud Foundry サービスでのみ動作します。 
+{{site.data.keyword.Bluemix}} CLI は、{{site.data.keyword.Bluemix_notm}} のリソースを管理するためのコマンド・ライン・インターフェースを提供します。 引き続き cf CLI を使用して {{site.data.keyword.Bluemix_notm}} にログインすることもできますが、それは {{site.data.keyword.Bluemix_notm}} 内の Cloud Foundry サービスでのみ動作します。 
 
-{{site.data.keyword.Bluemix}} CLI と、{{site.data.keyword.Bluemix_notm}} 用のアプリケーションを開発するための推奨されるその他のプラグインおよびツールの両方をインストールする場合は、[ここ](/docs/cli/index.html)で説明されている方法に従ってください。
+{{site.data.keyword.Bluemix}} CLI と、{{site.data.keyword.Bluemix_notm}} 用のアプリケーションを開発するための推奨されるその他のプラグインおよびツールの両方をインストールする場合は、[{{site.data.keyword.Bluemix_notm}} CLI の概説](/docs/cli/index.html)を参照してください。
 {: tip}
 
 スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI をインストールするには、次の手順を実行します。
@@ -159,13 +159,13 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/instal
   * `rm -f /usr/local/bin/bluemix`
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
-2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。詳しくは、『[IBM Cloud CLI の shell オートコンプリート機能の有効化 (Linux/MacOS のみ)](enable_cli_autocompletion.html)』を参照してください。
+2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。 詳しくは、『[IBM Cloud CLI の shell オートコンプリート機能の有効化 (Linux/MacOS のみ)](enable_cli_autocompletion.html)』を参照してください。
 
 #### バージョン `0.9.0` 以降
 
 1. 端末を開き、次のコマンドを実行します。
   * `/usr/local/ibmcloud/bin/uninstall`
-2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。詳しくは、『[IBM Cloud CLI の shell オートコンプリート機能の有効化 (Linux/MacOS のみ)](enable_cli_autocompletion.html)』を参照してください。
+2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。 詳しくは、『[IBM Cloud CLI の shell オートコンプリート機能の有効化 (Linux/MacOS のみ)](enable_cli_autocompletion.html)』を参照してください。
 
 
 ## {{site.data.keyword.Bluemix_notm}} CLI をさらに探索するためのその他のリンク

@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-04"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-11-30"
 # Instalación de la CLI de {{site.data.keyword.Bluemix_notm}} autónoma
 {: #install_use}
 
-La CLI de {{site.data.keyword.Bluemix_notm}} proporciona la interfaz de línea de mandatos para gestionar recursos en {{site.data.keyword.Bluemix_notm}}. Puede seguir utilizando la CLI cf para iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, pero solo funciona con un servicio de Cloud Foundry en {{site.data.keyword.Bluemix_notm}}. 
+La CLI de {{site.data.keyword.Bluemix}} proporciona la interfaz de línea de mandatos para gestionar recursos en {{site.data.keyword.Bluemix_notm}}. Puede seguir utilizando la CLI cf para iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, pero solo funciona con un servicio de Cloud Foundry en {{site.data.keyword.Bluemix_notm}}. 
 
-Si desea instalar tanto la CLI de {{site.data.keyword.Bluemix}} como otros plug-ins y herramientas recomendados para el desarrollo de aplicaciones de {{site.data.keyword.Bluemix_notm}}, siga el método descrito [aquí](/docs/cli/index.html).
+Si desea instalar tanto la CLI de {{site.data.keyword.Bluemix}} como otros plugins y herramientas recomendados para desarrollar aplicaciones para {{site.data.keyword.Bluemix_notm}}, consulte [Iniciación a la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
 {: tip}
 
 Efectúe los pasos siguientes para instalar la CLI de {{site.data.keyword.Bluemix_notm}} autónoma:
 
-1. Seleccione el instalador de su SO para descargar
+1. Seleccione el instalador de su SO para descargarlo.
 
    Mac OS X de 64 bits: [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows de 64 bits: [instalador](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
@@ -47,7 +47,7 @@ Efectúe los pasos siguientes para instalar la CLI de {{site.data.keyword.Bluemi
    
 Ahora está listo para gestionar recursos de {{site.data.keyword.Bluemix_notm}}. Escriba `ibmcloud help` para ver las descripciones de mandatos.
 
-Si está utilizando un ID federado, siga las instrucciones [aquí](/docs/iam/login_fedid.html#federated_id) para iniciar sesión con un código de acceso de una sola vez o una clave de API.  
+Si está utilizando un ID federado, siga las instrucciones [aquí](/docs/iam/login_fedid.html#federated_id) para iniciar sesión con un código de acceso de un solo uso o una clave de API.  
 {: tip}
 
 Además de los instaladores, puede tener otras opciones para instalar la CLI de {{site.data.keyword.Bluemix_notm}}:

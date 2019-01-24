@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-04"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-11-30"
 # 安裝獨立式 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI 提供指令行介面，以便在 {{site.data.keyword.Bluemix_notm}} 中管理資源。您仍可以使用 cf CLI 登入 {{site.data.keyword.Bluemix_notm}}，但它僅適用於 {{site.data.keyword.Bluemix_notm}} 中的 Cloud Foundry 服務。 
+{{site.data.keyword.Bluemix}} CLI 提供指令行介面，以便在 {{site.data.keyword.Bluemix_notm}} 中管理資源。您仍可以使用 cf CLI 登入 {{site.data.keyword.Bluemix_notm}}，但它僅適用於 {{site.data.keyword.Bluemix_notm}} 中的 Cloud Foundry 服務。 
 
-如果您想要安裝 {{site.data.keyword.Bluemix}} CLI 及其他建議外掛程式和工具來開發 {{site.data.keyword.Bluemix_notm}} 的應用程式，請遵循在[這裡](/docs/cli/index.html)說明的方法。
+如果您想要安裝 {{site.data.keyword.Bluemix}} CLI 及其他建議外掛程式和工具來開發 {{site.data.keyword.Bluemix_notm}} 的應用程式，請參閱[開始使用 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html)。
 {: tip}
 
 請使用下列步驟，以安裝獨立式 {{site.data.keyword.Bluemix_notm}} CLI：
 
-1. 選取要下載的 OS 安裝程式
+1. 選取要下載的 OS 安裝程式。
 
    Mac OS X 64 位元：[安裝程式](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window}/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows 64 位元：[安裝程式](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window}/[sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>

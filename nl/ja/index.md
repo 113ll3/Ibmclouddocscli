@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-11-30"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-11-30"
 ## 始める前に
 {: #prereq}
 
-[{{site.data.keyword.Bluemix_notm}} アカウント](https://{DomainName}){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") と以下のシステム要件が必要です。
+[{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") と以下のシステム要件が必要です。
 
 * Windows を実行している場合、一部の機能は、Windows 10 Pro を実行していないとサポートされません。
 * Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。
@@ -62,9 +62,9 @@ lastupdated: "2018-11-30"
   Windows PowerShell アイコンを右クリックして、**「管理者として実行」**を選択します。
   {: tip}
 
-  [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") からインストーラー・スクリプトをダウンロードすることもできます。
+  [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools) からインストーラー・スクリプトをダウンロードすることもできます。
 
-  これらのツールを手動でインストールする手順については、『[IBM Cloud 開発者ツールを手動でインストールする方法](/docs/cli/ts_createapps.html#appendix)』を参照してください。
+  これらのツールを手動でインストールする手順については、『[ツールの再インストール](/docs/cli/ts_createapps.html#appendix)』を参照してください。
 
 ## ステップ 2. インストールの検証
 {: #step2}

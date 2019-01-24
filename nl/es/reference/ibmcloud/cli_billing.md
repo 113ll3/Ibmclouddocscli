@@ -2,10 +2,10 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
@@ -32,7 +32,7 @@ Utilice los mandatos siguientes para recuperar el uso de recursos y la informaci
  </table>
  
  
- ## ibmcloud billing account-usage
+## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
 Mostrar el uso mensual de la cuenta actual (solo el administrador de la cuenta)

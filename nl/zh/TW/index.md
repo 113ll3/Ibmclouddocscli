@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-11-30"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-11-30"
 ## 開始之前
 {: #prereq}
 
-您需要 [{{site.data.keyword.Bluemix_notm}} 帳戶](https://{DomainName}){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及下列系統需求：
+您需要 [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及下列系統需求：
 
 * 如果您執行 Windows，則在您不是執行 Windows 10 Pro 的情況下，不支援部分功能。
 * 您必須使用適用於 Docker 的穩定通道，而最低版本為 1.13.1。
@@ -62,9 +62,9 @@ lastupdated: "2018-11-30"
     在 Windows PowerShell 圖示上按一下滑鼠右鍵，然後選取**以系統管理員身分執行**。
   {: tip}
 
-  您也可以從我們的 [GitHub 儲存庫](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window}下載安裝程式 Script ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+  您也可以從我們的 [GitHub 儲存庫](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)下載安裝程式 Script。
 
-  如需手動安裝這些工具的步驟，請參閱[如何手動安裝 IBM Cloud 開發人員工具](/docs/cli/ts_createapps.html#appendix)。
+  如需手動安裝這些工具的步驟，請參閱[重新安裝工具](/docs/cli/ts_createapps.html#appendix)。
 
 ## 步驟 2. 驗證安裝
 {: #step2}
