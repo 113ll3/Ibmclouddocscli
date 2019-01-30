@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2018
-
-lastupdated: "2018-10-31"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,13 +12,13 @@ lastupdated: "2018-10-31"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Getting started with the {{site.data.keyword.Bluemix_notm}} CLI
+# Getting started with the {{site.data.keyword.cloud_notm}} CLI
 {: #overview}
 
-In this tutorial, you install a set of {{site.data.keyword.Bluemix}} developer tools, verify the installation, and configure your environment. {{site.data.keyword.Bluemix}} developer tools offer a command-line approach to creating, developing, and deploying end-to-end web, mobile, and microservice applications.
-{:shortdesc}
+In this tutorial, you install a set of {{site.data.keyword.cloud}} Developer tools, verify the installation, and configure the environment. {{site.data.keyword.cloud_notm}} Developer tools offer a command line approach to creating, developing, and deploying web, mobile, and microservice applications.
+{: shortdesc}
 
-With this installation, you get the stand-alone {{site.data.keyword.Bluemix_notm}} CLI, plus the following tools:
+With this installation, you get the stand-alone {{site.data.keyword.cloud_notm}} CLI, plus the following tools:
 
 * `Homebrew` (Mac only)
 * `Git`
@@ -37,9 +35,9 @@ With this installation, you get the stand-alone {{site.data.keyword.Bluemix_notm
 ## Before you begin
 {: #prereq}
 
-You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and the following system requirements:
+You need an [{{site.data.keyword.cloud_notm}} account](https://console.bluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and the following system requirements:
 
-* If you are running Windows, some functions are not be supported if you are not running Windows 10 Pro.
+* If you are running Windows, some functions are not supported unless you are not running Windows 10 Pro.
 * You must use the stable channel for Docker with a minimum version of 1.13.1.
 
 ## Step 1. Run the installation command
@@ -62,14 +60,14 @@ You need an [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix
   Right-click the Windows PowerShell icon, and select **Run as administrator**.
   {: tip}
 
-  You can also download the installer script from our [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+  You can also download the installer script from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
 
   For the steps to install these tools manually, see [Reinstalling tools](/docs/cli/ts_createapps.html#appendix).
 
 ## Step 2. Verify the installation
 {: #step2}
 
-To verify that the CLI and developer tools were installed successfully, run the `help` command:
+To verify that the CLI and Developer tools were installed successfully, run the `help` command:
 
 ```
 ibmcloud dev help
@@ -81,14 +79,14 @@ The output lists the usage instructions, the current version, and the supported 
 ## Step 3. Configure your environment
 {: #step3}
 
-1. Connect to an API endpoint in your {{site.data.keyword.Bluemix_notm}} location. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} Dallas location:
+1. Connect to an API endpoint in your {{site.data.keyword.cloud_notm}} location. For example, enter the following command to connect to the {{site.data.keyword.cloud_notm}} Dallas location:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
-2. Log in to {{site.data.keyword.Bluemix_notm}} with your IBMid.
+2. Log in to {{site.data.keyword.cloud_notm}} with your IBMid.
 
 	```
 	ibmcloud login
