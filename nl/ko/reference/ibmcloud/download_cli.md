@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-04"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-11-30"
 # 독립형 {{site.data.keyword.Bluemix_notm}} CLI 설치
 {: #install_use}
 
-{{site.data.keyword.Bluemix_notm}} CLI에서는 {{site.data.keyword.Bluemix_notm}}에서 리소스를 관리하는 명령행 인터페이스를 제공합니다. 여전히 cf CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있지만 {{site.data.keyword.Bluemix_notm}}에서는 Cloud Foundry 서비스와만 작동합니다. 
+{{site.data.keyword.Bluemix}} CLI는 {{site.data.keyword.Bluemix_notm}}에서 리소스를 관리하기 위한 명령행 인터페이스를 제공합니다. 여전히 cf CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있지만, 이는 {{site.data.keyword.Bluemix_notm}}의 Cloud Foundry 서비스에서만 작동됩니다.  
 
-{{site.data.keyword.Bluemix}} CLI와 {{site.data.keyword.Bluemix_notm}}용 애플리케이션을 개발하기 위해 권장되는 플러그인 및 도구를 모두 설치하려면 [여기](/docs/cli/index.html)에 설명된 방법을 따르십시오.
+{{site.data.keyword.Bluemix}} CLI 및 {{site.data.keyword.Bluemix_notm}}용 애플리케이션 개발을 위한 기타 권장 플러그인과 도구를 모두 설치하려면 [{{site.data.keyword.Bluemix_notm}} CLI 시작하기](/docs/cli/index.html)를 참조하십시오.
 {: tip}
 
 독립형 {{site.data.keyword.Bluemix_notm}} CLI를 설치하려면 다음 단계를 사용하십시오.
 
-1. 다운로드할 OS의 설치 프로그램 선택
+1. 다운로드할 OS의 설치 프로그램을 선택하십시오. 
 
    Mac OS X 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows 64비트: [설치 프로그램](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>

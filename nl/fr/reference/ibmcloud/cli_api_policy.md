@@ -2,17 +2,17 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Gestion de l'accès IAM, des clés d'API, des ID de service et des groupes d'accès 
+# Gestion de l'accès IAM, des clés d'API, des ID de service et des groupes d'accès
 {: #ibmcloud_commands_iam}
 
 Les commandes suivantes permettent de gérer des clés d'API, des ID de service, des groupes d'accès et des règles d'accès/autorisation pour des utilisateurs, des services et des groupes d'accès.
@@ -104,7 +104,7 @@ Les commandes suivantes permettent de gérer des clés d'API, des ID de service,
   </tbody>
   </table>
 
-  ## ibmcloud iam service-ids
+## ibmcloud iam service-ids
 {: #ibmcloud_iam_service_ids}
 
 Répertorier tous les ID de service

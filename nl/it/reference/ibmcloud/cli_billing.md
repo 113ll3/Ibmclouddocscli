@@ -2,10 +2,10 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
@@ -32,7 +32,7 @@ Utilizza i seguenti comandi per richiamare le informazioni sull'utilizzo delle r
  </table>
  
  
- ## ibmcloud billing account-usage
+## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
 Mostra l'utilizzo mensile dell'account corrente (solo amministratore dell'account)
@@ -43,7 +43,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--output FORMATO]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
   <dt>-d DATA_MESE (facoltativo)</dt>
@@ -71,7 +71,7 @@ ibmcloud billing org-usage NOME_ORGANIZZAZIONE [-d YYYY-MM] [--output FORMATO]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
   <dt>NOME_ORGANIZZAZIONE (obbligatorio)</dt>
@@ -93,7 +93,7 @@ ibmcloud billing resource-group-usage NOME_GRUPPO [-d YYYY-MM] [--output FORMATO
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
   <dt>NOME_GRUPPO (obbligatorio)</dt>
@@ -115,7 +115,7 @@ ibmcloud billing resource-instances-usage [-o ORGANIZZAZIONE] [-g GRUPPO_RISORSE
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
   <dt>-o NOME_ORGANIZZAZIONE (facoltativo)</dt>

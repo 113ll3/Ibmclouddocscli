@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-04"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-11-30"
 # Installation de l'interface de ligne de commande autonome {{site.data.keyword.Bluemix_notm}}
 {: #install_use}
 
-L'interface CLI {{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande pour gérer les ressources dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez toujours utiliser l'interface de ligne de commande cf pour vous connecter à {{site.data.keyword.Bluemix_notm}}, mais elle fonctionne uniquement avec un service Cloud Foundry dans {{site.data.keyword.Bluemix_notm}}. 
+L'interface CLI {{site.data.keyword.Bluemix}} fournit une interface de ligne de commande permettant de gérer les ressources dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez toujours utiliser l'interface de ligne de commande cf pour vous connecter à {{site.data.keyword.Bluemix_notm}}, mais elle fonctionne uniquement avec un service Cloud Foundry dans {{site.data.keyword.Bluemix_notm}}. 
 
-Si vous souhaitez installer l'interface de ligne de commande {{site.data.keyword.Bluemix}} ainsi que d'autres outils et plug-in recommandés pour le développement d'applications pour {{site.data.keyword.Bluemix_notm}}, suivez la méthode décrite [ici](/docs/cli/index.html).
+Si vous souhaitez installer l'interface de ligne de commande {{site.data.keyword.Bluemix}} ainsi que d'autres outils et plug-in recommandés pour le développement d'applications pour {{site.data.keyword.Bluemix_notm}}, voir [Initiation à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
 {: tip}
 
 Pour installer l'interface de ligne de commande autonome {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 
-1. Sélectionnez le programme d'installation de votre système d'exploitation afin de le télécharger
+1. Sélectionnez le programme d'installation de votre système d'exploitation à télécharger.
 
    Mac OS X 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows 64 bits : [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
@@ -36,7 +36,7 @@ Pour installer l'interface de ligne de commande autonome {{site.data.keyword.Blu
 
 1. Exécutez le programme d'installation
    * Pour Mac OS et Windows, exécutez simplement le programme d'installation.
-   * Pour Linux, extrayez le package et exécutez le script `install`. 
+   * Pour Linux, extrayez le package et exécutez le script `install`.
 
 1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}}
 

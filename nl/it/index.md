@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-11-30"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -37,7 +37,7 @@ Con questa installazione, ottieni la CLI {{site.data.keyword.Bluemix_notm}} auto
 ## Prima di iniziare
 {: #prereq}
 
-Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}}](https://{DomainName}){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e dei seguenti requisiti di sistema:
+Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e dei seguenti requisiti di sistema:
 
 * Se stai utilizzando Windows, è possibile che alcune funzioni non sono supportate se non stai utilizzando Windows 10 Pro.
 * Devi utilizzare il canale stabile per Docker con una versione minima di 1.13.1.
@@ -62,9 +62,9 @@ Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}}](https://{DomainNa
   Fai clic con il tasto destro del mouse sull'icona Windows PowerShell e seleziona **Run as administrator**.
   {: tip}
 
-  Puoi anche scaricare lo script del programma di installazione dal nostro [repository GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+  Puoi inoltre scaricare lo script del programma di installazione dal nostro [repo GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
 
-  Per la procedura per installare questi strumenti manualmente, vedi il documento relativo alla [modalità di installazione manuale di IBM Cloud Developer Tools](/docs/cli/ts_createapps.html#appendix).
+  Per la procedura di installazione manuale di questi strumenti, consulta [Reinstallazione degli strumenti](/docs/cli/ts_createapps.html#appendix).
 
 ## Passo 2. Verifica l'installazione
 {: #step2}

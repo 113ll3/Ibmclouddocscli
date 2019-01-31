@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-04"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-11-30"
 # Installazione della CLI {{site.data.keyword.Bluemix_notm}} autonoma
 {: #install_use}
 
-La CLI {{site.data.keyword.Bluemix_notm}} fornisce l'interfaccia riga di comando per la gestione delle risorse in {{site.data.keyword.Bluemix_notm}}. Puoi ancora utilizzare la CLI cf per accedere a {{site.data.keyword.Bluemix_notm}} ma funziona solo con un servizio Cloud Foundry in {{site.data.keyword.Bluemix_notm}}. 
+La CLI {{site.data.keyword.Bluemix}} fornisce l'interfaccia della riga di comando per la gestione delle risorse in {{site.data.keyword.Bluemix_notm}}. Puoi ancora utilizzare la CLI cf per accedere a {{site.data.keyword.Bluemix_notm}}, ma funziona solo con un servizio Cloud Foundry in {{site.data.keyword.Bluemix_notm}}. 
 
-Se vuoi installare la CLI {{site.data.keyword.Bluemix}} e altri plug-in e strumenti consigliati per lo sviluppo di applicazioni per {{site.data.keyword.Bluemix_notm}}, segui il metodo descritto [qui](/docs/cli/index.html).
+Se vuoi installare sia la CLI {{site.data.keyword.Bluemix}} che altri plug-in e strumenti consigliati per lo sviluppo di applicazioni per {{site.data.keyword.Bluemix_notm}}, vedi [Introduzione alla CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
 {: tip}
 
 Utilizza la seguente procedura per installare la CLI {{site.data.keyword.Bluemix_notm}} autonoma:
 
-1. Seleziona il programma di installazione del tuo sistema operativo per il download
+1. Seleziona il programma di installazione del tuo sistema operativo da scaricare.
 
    Mac OS X a 64 bit: [programma di installazione](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
    Windows a 64 bit: [programma di installazione](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
