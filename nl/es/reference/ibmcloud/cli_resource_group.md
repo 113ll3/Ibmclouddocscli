@@ -2,10 +2,10 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-01-14"
 ---
 
 {:new_window: target="_blank"}
@@ -51,20 +51,21 @@ Un grupo de recursos es una manera de organizar sus recursos de cuenta en agrupa
       <td>[ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-key-update](cli_resource_group.html#ibmcloud_resource_service_key_update)</td>
       <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
       <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
       <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
       <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
-      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
       <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
       <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
       <td>[ibmcloud resource tags](cli_resource_group.html#ibmcloud_resource_tags)</td>
       <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
-      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
       <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
       <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
       <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
@@ -147,19 +148,22 @@ ibmcloud resource group example-group --id
 Crear un grupo de recursos
 
 ```
-ibmcloud resource group-create NAME QUOTA_NAME
+ibmcloud resource group-create NAME
 ```
 
 <strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
+<dl>
+  <dt>NAME (necesario)</dt>
+  <dd>Nombre del grupo de recursos</dd>
+</dl>
 
 <strong>Ejemplos</strong>:
-
-Crear un grupo de recursos `example-group` con la cuota `free`:
+Crear un grupo de recursos `example-group`:
 
 ```
-ibmcloud resource group-create example-group free
+ibmcloud resource group-create example-group
 ```
 
 ## ibmcloud resource group-update
@@ -249,7 +253,7 @@ ibmcloud resource quota free
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
-Migrar una instancia de servicio Cloudfoundry en un grupo de recursos
+Migrar una instancia de servicio de Cloud Foundry a un grupo de recursos
 
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
@@ -361,7 +365,7 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
 </dl>
 
 <strong>Ejemplos</strong>:
-Crear una instancia de servicio llamada `my-service-instance` utilizando el plan de servicio `test-service-plan` del servicio `test-service` en la ubicación `eu-gb`:
+Crear una instancia de servicio llamada `my-service-instance` que utilice el plan de servicio `test-service-plan` del servicio `test-service` en la ubicación `eu-gb`:
 
 ```
 ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
@@ -515,7 +519,7 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 </dl>
 
 <strong>Ejemplos</strong>:
-Crear enlaces de servicio entre el alias de servicio `my-service-alias` y la app `my-app` con el rol `Administrator`:
+Crear un enlace de servicio entre el alias `my-service-alias` y la app `my-app` con el rol de `Administrador`:
 
 ```
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
@@ -584,7 +588,7 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 ## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
-Mostrar detalles de una clave de servicio
+Muestra los detalles de las claves de servicio, donde los *n* primeros caracteres del nombre de la clave de servicio coinciden con el valor proporcionado de KEY_NAME.
 
 ```
 ibmcloud resource service-key KEY_NAME [--id]
@@ -597,9 +601,9 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dt>KEY_NAME</dt>
   <dd>Nombre de la clave</dd>
   <dt>--id</dt>
-  <dd>Mostrar el ID de la clave de servicio</dd>
+  <dd>Muestra los ID de las claves, donde los *n* primeros caracteres del nombre de la clave de servicio coinciden con el valor de KEY_NAME especificado y *n* es la longitud del KEY_NAME suministrado.</dd>
   <dt>--output FORMAT (opcional)</dt>
-  <dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
+  <dd>Especificar el formato de salida. Actualmente solo se da soporte a JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -647,6 +651,36 @@ Crear una clave de servicio llamada `my-service-key` con el rol `Administrator` 
 
 ```
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
+```
+
+## ibmcloud resource service-key-update
+{: #ibmcloud_resource_service_key_update}
+
+Actualizar una clave de servicio
+
+```
+ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
+```
+
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
+
+<strong>Opciones de mandato</strong>:
+<dl>
+  <dt>NAME | ID</dt>
+  <dd>Nombre o ID de la clave</dd>
+  <dt>-n, --name NEW_NAME</dt>
+  <dd>Nuevo nombre de la clave</dd>
+  <dt>-g RESOURCE_GROUP</dt>
+  <dd>ID del grupo de recursos al que pertenece la clave</dd>
+  <dt>-f, --force</dt>
+  <dd>Forzar actualización sin confirmación</dd>
+</dl>
+
+<strong>Ejemplos</strong>:
+Actualizar una clave de servicio llamada `my-service-key` y asignarle el nuevo nombre `my-service-key-2`:
+
+```
+ibmcloud resource service-key-update my-service-key -n my-service-key-2
 ```
 
 ## ibmcloud resource service-key-delete

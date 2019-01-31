@@ -347,7 +347,7 @@ ibmcloud iam service-id-unlock ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976
 ## ibmcloud iam api-keys
 {: #ibmcloud_iam_api_keys}
 
-Lista todas las claves de API de la plataforma de {{site.data.keyword.Bluemix_notm}}
+Listar todas las claves de API de la plataforma {{site.data.keyword.Bluemix_notm}}
 
 ```
 ibmcloud iam api-keys
@@ -358,7 +358,7 @@ ibmcloud iam api-keys
 ## ibmcloud iam api-key-create
 {: #ibmcloud_iam_api_key_create}
 
-Crear una nueva clave de API de la plataforma de {{site.data.keyword.Bluemix_notm}}
+Crear una nueva clave de API de la plataforma {{site.data.keyword.Bluemix_notm}}
 
 ```
 ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE] [--lock]
@@ -395,7 +395,7 @@ ibmcloud iam api-key-create test-key --lock
 ## ibmcloud iam api-key-update
 {: #ibmcloud_iam_api_key_update}
 
-Actualizar una clave de API de la plataforma de {{site.data.keyword.Bluemix_notm}}
+Actualizar una clave de API de la plataforma {{site.data.keyword.Bluemix_notm}}
 
 ```
 ibmcloud iam api-key-update (NAME|UUID) [-n name] [-d description]
@@ -426,7 +426,7 @@ ibmcloud iam api-key-update MyKey -d "la nueva descripción de mi clave"
 ## ibmcloud api-key-delete
 {: #ibmcloud_iam_api_key_delete}
 
-Suprimir una clave de API de la plataforma de {{site.data.keyword.Bluemix_notm}}
+Suprimir una clave de API de la plataforma {{site.data.keyword.Bluemix_notm}}
 
 ```
 ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
@@ -441,7 +441,7 @@ ibmcloud iam api-key-delete (NAME|UUID) [-f, --force]
 <dt>UUID (necesario)</dt>
 <dd>UUID de la clave de API a suprimir, exclusivo con NAME</dd>
 <dt>-f, --force</dt>
-<dd>Forzar la eliminación sin confirmación.</dd>
+<dd>Forzar la supresión sin confirmación.</dd>
 </dl>
 
 ## ibmcloud api-key-lock
@@ -1265,7 +1265,7 @@ ibmcloud iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
   <dt>AUTHORIZATION_POLICY_ID</dt>
   <dd>ID de la política de autorización que se va a suprimir.</dd>
   <dt>-f, --force</dt>
-  <dd>Forzar la eliminación sin confirmación.</dd>
+  <dd>Forzar la supresión sin confirmación.</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy

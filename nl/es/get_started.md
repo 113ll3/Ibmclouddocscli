@@ -56,7 +56,7 @@ Si está utilizando un ID federado, siga las instrucciones [aquí](/docs/iam/log
 * [Más opciones para descargar e instalar la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Extend {{site.data.keyword.Bluemix_notm}} Prestaciones de la CLI con plug-ins](/docs/cli/reference/ibmcloud/extend_cli.html)
 * [Todas las versiones de la CLI de {{site.data.keyword.Bluemix_notm}} y las notas de release](/docs/cli/reference/ibmcloud/all_versions.html)
-* [Documento sobre el {{site.data.keyword.Bluemix_notm}}uso de mandatos de CLI](/docs/cli/reference/ibmcloud/bx_cli.html)
+* [Documento sobre el uso de mandatos de CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/bx_cli.html)
 
 
 ## Informar de problemas y enviar comentarios

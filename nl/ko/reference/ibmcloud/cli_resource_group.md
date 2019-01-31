@@ -2,10 +2,10 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-01-14"
 ---
 
 {:new_window: target="_blank"}
@@ -51,21 +51,22 @@ lastupdated: "2018-11-30"
       <td>[ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-key-update](cli_resource_group.html#ibmcloud_resource_service_key_update)</td>
       <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
       <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
       <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
       <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
-      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
       <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
       <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
       <td>[ibmcloud resource tags 
 ](cli_resource_group.html#ibmcloud_resource_tags)</td>
       <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
-      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
       <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
       <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
       <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
@@ -148,19 +149,22 @@ ibmcloud resource group example-group --id
 리소스 그룹 작성
 
 ```
-ibmcloud resource group-create NAME QUOTA_NAME
+ibmcloud resource group-create NAME
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
 
 <strong>명령 옵션</strong>:
+<dl>
+  <dt>NAME(필수)</dt>
+  <dd>리소스 그룹의 이름</dd>
+</dl>
 
-<strong>예제</strong>:
-
-할당량이 `free`인 리소스 그룹 `example-group` 작성:
+<strong>예</strong>:
+`example-group` 리소스 그룹 작성:
 
 ```
-ibmcloud resource group-create example-group free
+ibmcloud resource group-create example-group
 ```
 
 ## ibmcloud resource group-update
@@ -250,7 +254,7 @@ ibmcloud resource quota free
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
-Cloudfoundry 서비스 인스턴스를 리소스 그룹으로 마이그레이션
+Cloud foundry 서비스 인스턴스를 리소스 그룹으로 마이그레이션
 
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
@@ -585,7 +589,7 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 ## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
-서비스 키의 세부사항 표시
+임의 수의 서비스 키에 관한 세부사항을 표시합니다. 여기서 서비스 키 이름의 처음 *n*개의 문자는 제공된 KEY_NAME과 일치합니다.
 
 ```
 ibmcloud resource service-key KEY_NAME [--id]
@@ -598,9 +602,9 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dt>KEY_NAME</dt>
   <dd>키의 이름</dd>
   <dt>--id</dt>
-  <dd>서비스 키의 ID 표시</dd>
+  <dd>임의 키의 ID를 표시합니다. 여기서 서비스 키 이름의 처음 *n*개의 문자는 제공된 KEY_NAME과 일치하고 *n*은 제공된 KEY_NAME의 길이입니다.</dd>
   <dt>--output FORMAT(선택사항)</dt>
-  <dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
+  <dd>결과 형식을 지정합니다. 현재 JSON만 지원됩니다.</dd>
 </dl>
 
 <strong>예</strong>:
@@ -648,6 +652,36 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
 
 ```
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
+```
+
+## ibmcloud resource service-key-update
+{: #ibmcloud_resource_service_key_update}
+
+서비스 키 업데이트
+
+```
+ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+
+<strong>명령 옵션</strong>:
+<dl>
+  <dt>NAME | ID</dt>
+  <dd>키의 이름 또는 ID</dd>
+  <dt>-n, --name NEW_NAME</dt>
+  <dd>키의 새 이름</dd>
+  <dt>-g RESOURCE_GROUP</dt>
+  <dd>키가 속한 리소스 그룹의 ID</dd>
+  <dt>-f, --force</dt>
+  <dd>확인 없이 업데이트 강제 실행</dd>
+</dl>
+
+<strong>예</strong>:
+`my-service-key`라는 서비스 키를 업데이트하고 새로운 이름 `my-service-key-2`를 지정하십시오.
+
+```
+ibmcloud resource service-key-update my-service-key -n my-service-key-2
 ```
 
 ## ibmcloud resource service-key-delete
