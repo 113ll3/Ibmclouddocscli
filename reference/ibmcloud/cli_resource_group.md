@@ -30,7 +30,7 @@ A resource group is a way for you to organize your account resources in customiz
       <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quotas)</td>
     </tr>
     <tr>
-      <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quota)</td>
+      <td>[ibmcloud resource quota](cli_resource_group.html#ibmcloud_resource_quota)</td>
       <td>[ibmcloud resource service-instances](cli_resource_group.html#ibmcloud_resource_service_instances)</td>
       <td>[ibmcloud resource service-instance](cli_resource_group.html#ibmcloud_resource_service_instance)</td>
       <td>[ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
