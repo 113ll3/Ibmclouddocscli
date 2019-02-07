@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# Resolución de problemas del plugin de CLI de herramientas del desarrollador de {{site.data.keyword.Bluemix_notm}}
+# Resolución de problemas del plugin de CLI de herramientas del desarrollador de {{site.data.keyword.cloud_notm}}
 {: #troubleshoot}
 
 Los problemas más habituales al utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_short}} para crear apps pueden incluir anomalías en el despliegue o en el código que no es posible recuperar. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
-{:shortdesc}
+{: shortdesc}
 
 ## ¿Por qué recibo un error de nombre de host cuando creo una app con un patrón no móvil?
 {: #hostname-error}
@@ -32,7 +32,7 @@ Es posible que aparezca el siguiente error si utiliza la CLI de {{site.data.keyw
 ```
 The hostname <myHostname> is taken.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Este error viene originado por una señal de inicio de sesión caducada.
@@ -54,7 +54,7 @@ Es posible que se muestre el siguiente error si utiliza los mandatos `create`, `
 ```
 Failed to <command> application.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Este error viene originado por una señal de inicio de sesión caducada.
@@ -71,20 +71,20 @@ ibmcloud login
 {: #nosuchimage}
 {: troubleshoot}
 
-Cuando intenta ejecutar una app sin antes compilarla, es posible que se muestre el error siguiente.
+Cuando intenta ejecutar una app con `ibmcloud dev run` sin antes compilarla, es posible que se muestre el error siguiente.
 
 ```
-$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
 Creating image ibmcloud-dev-testProject based on Dockerfile...
-OK
+OK                    
 Creating a container named 'testProject' from that image...
 FAILED
 Container 'testProject' could not be created:
 Error: No such image: ibmcloud-dev-testProject
 ```
+{: screen}
 {: tsSymptoms}
 
 Debe crear una app antes de ejecutarla. Ejecute el mandato siguiente en el directorio de la app actual:
@@ -110,7 +110,7 @@ Es posible que se visualice el siguiente error si utiliza la CLI para crear dos 
 FAILED
 Service broker error: {"description"=>"You can not create this Object Storage instance. Each organization using the Object Storage service is limited to one instance of the Free plan."}
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Este error se debe al servicio {{site.data.keyword.objectstorageshort}}, que solo proporciona una instancia del plan gratuito de {{site.data.keyword.objectstorageshort}}.
@@ -130,7 +130,7 @@ FAILED
 Application created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Este error se debe a un tiempo de espera interno excedido.
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux.
@@ -187,10 +187,10 @@ Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arq
 Suprima la carpeta `node_modules` y ejecute de nuevo el mandato `ibmcloud dev run`.
 {: tsResolve}
 
-## ¿Por qué no puedo realizar el despliegue en {{site.data.keyword.Bluemix_notm}}?
+## ¿Por qué no puedo realizar el despliegue en {{site.data.keyword.cloud_notm}}?
 {: troubleshoot}
 
-Se produce una anomalía cuando intenta realizar el despliegue en {{site.data.keyword.Bluemix_notm}}, pero no se muestra ningún error.
+Se produce una anomalía cuando intenta realizar el despliegue en {{site.data.keyword.cloud_notm}}, pero no se muestra ningún error.
 {: tsSymptoms}
 
 Es posible que no haya iniciado una sesión con su cuenta.
@@ -202,7 +202,7 @@ ibmcloud login
 ```
 {: tsResolve}
 
-## ¿Por qué no puedo realizar el despliegue en Kubernetes en {{site.data.keyword.Bluemix_notm}}?
+## ¿Por qué no puedo realizar el despliegue en Kubernetes en {{site.data.keyword.cloud_notm}}?
 {: troubleshoot}
 
 Se podría visualizar la siguiente anomalía después de que se le solicitase el nombre de su clúster:
@@ -213,18 +213,21 @@ Failed to execute the action:  exit status 1:
 FAILED
 Failed to configure deployment with cluster '<cluster-name>' due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 La causa más probable es que el nombre del clúster no sea válido. Lo puede confirmar ejecutando el mismo mandato con `-- trace`. Los siguientes detalles podría incluirse en la salida del error:
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
+{: screen}
 {: tsCauses}
 
-Asegúrese de que utiliza el clúster correcto y de que ha configurado el clúster para el despliegue ejecutando:
+Asegúrese de que utiliza el clúster correcto y de que está configurado para el despliegue ejecutando:
 ```
 ibmcloud cs cluster-config <cluster-name>
 ```
+{: codeblock}
 {: tsResolve}
 
 ## ¿Por qué no puedo desplegar un destino de imagen?
@@ -239,6 +242,7 @@ Failed to execute the action:  exit status 1:denied: requested access to the res
 FAILED
 Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 La causa más probable es que la imagen de destino de despliegue no sea válida. Más concretamente, el espacio de nombres, que se encuentra en medio en el destino de imagen de despliegue, podría no ser válido.
@@ -248,6 +252,7 @@ Asegúrese de que el espacio de nombres en el destino de la imagen de despliegue
 ```
 ibmcloud cr namespaces
 ```
+{: codeblock}
 {: tsResolve}
 
 ## ¿Por qué no se puede determinar el idioma de mi app?
@@ -261,11 +266,12 @@ Could not determine the language of your application.
 Try using the --language flag to specify the language of your application
 directly. 
 ```
+{: screen}
 {: tsSymptoms}
 
 Este error puede deberse a una de las causas siguientes:
 - Se ha ejecutado el mandato [enable](/docs/cli/idt/commands.html#enable) desde un directorio que no es el directorio de origen de la aplicación.
-- Se ha ejecutado el mandato [enable](/docs/cli/idt/commands.html#enable) para una app de un idioma que no se reconoce en este momento.
+- Se ha ejecutado el mandato [enable](/docs/cli/idt/commands.html#enable) para una app de un idioma que no se reconoce.
 {: tsCauses}
 
 Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si esto no resuelve el problema y el idioma es uno de los [idiomas soportados](/docs/cli/idt/commands.html#enable-language-options), utilice el parámetro `--language` para especificar el idioma.
