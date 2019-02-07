@@ -1,16 +1,10 @@
 ---
 
-
-
 copyright:
-
-  years: 2016, 2018
-
-lastupdated: "2018-11-30"
-
+  years: 2016, 2019
+lastupdated: "2019-02-07"
 
 ---
-
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -29,7 +23,6 @@ For a more detailed list of `cf CLI` commands, see the community [Cloud Foundry 
 
 If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with a Proxy Server ![External link icon](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 {: note}
-
 
 ## Cloud Foundry CLI commands index
 {: #CLIname_commands_index}
@@ -52,7 +45,6 @@ Use the index in the following table to refer to the frequently used Cloud Found
  </tr>
    </tbody>
  </table>
-
 
 <table summary="Alphabetically ordered commands for managing apps, spaces, and services. Each command has a link that brings you to more info for the command.">
 <caption>Table 2. Commands for managing apps, spaces, and services</caption>
@@ -87,7 +79,7 @@ Use the index in the following table to refer to the frequently used Cloud Found
 ## cf api
 {: #cf_api}
 
-Use this command to display or specify the URL of the API endpoint of {{site.data.keyword.Bluemix}}.
+Use this command to display or specify the URL of the API endpoint of {{site.data.keyword.cloud}}.
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
@@ -99,13 +91,13 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (optional)</dt>
-   <dd>The URL of the {{site.data.keyword.Bluemix_notm}} API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is `https://api.{DomainName}`.
-   If you want to display the URL of the API endpoint that you are currently using, you do not need to specify this parameter for the cf api command.</dd>
+   <dd>The URL of the {{site.data.keyword.cloud_notm}} API endpoint that you must specify when you connect to {{site.data.keyword.cloud_notm}}. Typically, this URL is `https://api.{DomainName}`.
+   If you want to display the URL of the API endpoint that you're currently using, you don't need to specify this parameter for the cf api command.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
    <dt>* --unset</dt>
    <dd>Removes connection information for all API endpoints.</dd>
-    </dl>
+   </dl>
 
 <strong>Examples</strong>:
 
@@ -115,32 +107,31 @@ cf api
 ```
 {: codeblock}
 
-Remove connection to all API endpoints for api.ng.bluemix.net
+Remove connection to all API endpoints for api.us-south.cf.cloud.ibm.com
 ```
-cf api api.ng.bluemix.net --unset
-```
-{: codeblock}
-
-Disable the SSL validation process for api.ng.bluemix.network
-```
-cf api api.ng.bluemix.net --skip-ssl-validation
+cf api api.us-south.cf.cloud.ibm.com --unset
 ```
 {: codeblock}
 
+Disable the SSL validation process for api.us-south.cf.cloud.ibm.com
+```
+cf api api.us-south.cf.cloud.ibm.com --skip-ssl-validation
+```
+{: codeblock}
 
 ## cf apps
 {: #cf_apps}
 
 Lists all of the applications that you deployed in the current space. The status of each application is also displayed.
 
-Assume that you have one instance for an app, in the instances column of the response from the cf apps command, you see 1/1 if your app is up and 0/1 if your app is down. If you see ?/1, which indicates that the app instance state is unknown, you can copy the app URL to your browser to check whether your app responds, or you can tail the log by the `cf logs appname` command to see if the app is generating log content.
+Assume that you have one instance for an app, in the instances column of the response from the cf apps command, you see 1/1 if your app is up and 0/1 if your app is down. If you see ?/1, which indicates that the app instance state is unknown, you can copy the app URL to your browser to check whether your app responds, or you can tail the log by the `cf logs appname` command to see whether the app is generating log content.
 
 ```
 cf apps
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
-
 
 ## cf bind-service
 {: #cf_bind-service}
@@ -150,6 +141,7 @@ Binds an existing service instance to your application.
 ```
 cf bind-service appname service_instance
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
@@ -179,6 +171,7 @@ Creates a service instance.
 ```
 cf create-service service_name service_plan service_instance
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
@@ -257,7 +250,7 @@ cf delete appname [-f] [-r]
 
 <strong>Examples</strong>:
 
-Deletes an application named `my_app` (will require confirmation).
+Deletes an application that is named `my_app` (requires confirmation).
 ```
 cf delete my_app
 ```
@@ -301,11 +294,11 @@ cf delete-space space_name [-f]
    <dt>*-f* (optional)</dt>
    <dd>Forces deletion of the space without any confirmation.</dd>
    *Note:* Deleting a space is an irreversible operation.
-    </dl>
+   </dl>
 
 <strong>Examples</strong>:
 
-Deletes an application named `my_app` (will require confirmation).
+Deletes an application that is named `my_app` (requires confirmation).
 ```
 cf delete my_app
 ```
@@ -323,7 +316,7 @@ cf delete my_app -r
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app` without requiring confirmation.
+Deletes an application that is named `my_app` and all domain names associated with `my_app` without requiring confirmation.
 ```
 cf delete my_app -f -r
 ```
@@ -338,6 +331,7 @@ Displays runtime events that are related to an application.
 ```
 cf events [appname]
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
@@ -365,6 +359,7 @@ Displays help information for all cf commands or for a specific cf command.
 ```
 cf help [command_name]
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>: None.
 
@@ -393,9 +388,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Logs you in to {{site.data.keyword.Bluemix_notm}}. If you are logging in with a federated ID, you must use the single sign-on (SSO) parameter to log in.
+Logs you in to {{site.data.keyword.cloud_notm}}. If you're logging in with a federated ID, you must use the single sign-on (SSO) parameter to log in.
 
-You can also use a {{site.data.keyword.Bluemix_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password. For more information about creating an API key, see [Understanding API keys](/docs/iam/apikeys.html).
+You can also use a {{site.data.keyword.cloud_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password. For more information about creating an API key, see [Understanding API keys](/docs/iam/apikeys.html).
 {: note}
 
 ```
@@ -408,14 +403,14 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <dl>
 <dt>*-a* https://api.{DomainName} (optional)</dt>
-<dd>The URL of the API endpoint of {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>The URL of the API endpoint of {{site.data.keyword.cloud_notm}}.</dd>
 <dt>*-u* user_name (optional)</dt>
 <dd>Your user name.</dd>
 <dt>*-p* password (optional)</dt>
 <dd>Your password.</dd>
 <dd>*Important:* If you provide your password by using the *-p* parameter on the command line interface, the password might be recorded in the command line history. For security reasons, avoid providing the password by using the -p parameter. Instead, enter the password when the command line interface prompts you.</dd>
 <dt>*-sso*</dt>
-<dd>You must use the single sign-on option (SSO) when logging in with a federated ID. This is not required when logging in with an IBMid. If you try to sign in with a federated ID, and you do not specify the SSO parameter, you will be prompted to include it. Using the SSO parameter prompts you to enter the one-time passcode upon login.</dd>
+<dd>You must use the single sign-on option (SSO) when logging in with a federated ID. This isn't required when logging in with an IBMid. If you try to sign in with a federated ID, and you don't specify the SSO parameter, you'll be prompted to include it. Using the SSO parameter prompts you to enter the one-time passcode upon login.</dd>
 <dt>*-o* organization_name</dt>
 <dd>The name of the organization that you want to log in to.</dd>
 <dt>*-s* space_name</dt>
@@ -428,33 +423,33 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>Examples</strong>:
 
-Log in to {{site.data.keyword.Bluemix_notm}}.
+Log in to {{site.data.keyword.cloud_notm}}.
 ```
 cf login
 ```
 {: codeblock}
 
-Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net`.
+Log in to {{site.data.keyword.cloud_notm}} with a defined endpoint of `https://api.us-south.cf.cloud.ibm.com`.
 ```
-cf login -a https://api.ng.bluemix.net
-```
-{: codeblock}
-
-Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net`, a user name of `user_name`, and no specified password for security reasons.
-```
-cf login -a https://api.ng.bluemix.net -u user_name
+cf login -a https://api.us-south.cf.cloud.ibm.com
 ```
 {: codeblock}
 
-Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net`, a user name of `user_name`, no specified password for security reasons, and an organization name of `org_name` and space name of `space_name`.
+Log in to {{site.data.keyword.cloud_notm}} with a defined endpoint of `https://api.us-south.cf.cloud.ibm.com`, a user name of `user_name`, and no specified password for security reasons.
 ```
-cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name
 ```
 {: codeblock}
 
-Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net` using an API key. Use `apikey` as the user name and the actual API key as the password.
+Log in to {{site.data.keyword.cloud_notm}} with a defined endpoint of `https://api.us-south.cf.cloud.ibm.com`, a user name of `user_name`, no specified password for security reasons, and an organization name of `org_name` and space name of `space_name`.
 ```
-cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
+cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+Log in to {{site.data.keyword.cloud_notm}} with a defined endpoint of `https://api.us-south.cf.cloud.ibm.com` by using an API key. Use `apikey` as the user name and the actual API key as the password.
+```
+cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 
@@ -496,7 +491,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Lists all of the services that are available in the marketplace. The services listed by this command are also shown in the {{site.data.keyword.Bluemix_notm}} Catalog.
+Lists all of the services that are available in the marketplace. The services listed by this command are also shown in the {{site.data.keyword.cloud_notm}} Catalog.
 
 ```
 cf marketplace
@@ -517,7 +512,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-Deploys a new application to {{site.data.keyword.Bluemix_notm}}, or updates an existing application in {{site.data.keyword.Bluemix_notm}}.
+Deploys a new application to {{site.data.keyword.cloud_notm}}, or updates an existing application in {{site.data.keyword.cloud_notm}}.
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
@@ -551,13 +546,13 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-t* timeout (optional)</dt>
 <dd>Maximum time in seconds for the application to start. Other server-side timeouts might override this value.</dd>
 <dt>*--no-hostname* (optional)</dt>
-<dd>Maps the {{site.data.keyword.Bluemix_notm}} system domain to this application.</dd>
+<dd>Maps the {{site.data.keyword.cloud_notm}} system domain to this application.</dd>
 <dt>*--no-manifest* (optional)</dt>
 <dd>Ignores the default manifest file.</dd>
 <dt>*--no-route* (optional)</dt>
-<dd>Does not map a route to this application.</dd>
+<dd>Doesn't map a route to this application.</dd>
 <dt>*--no-start* (optional)</dt>
-<dd>Does not start the application after the application is deployed.</dd>
+<dd>Doesn't start the application after the application is deployed.</dd>
 <dt>*--random-route* (optional)</dt>
 <dd>Creates a random route for the application.</dd>
 </dl>
@@ -680,7 +675,7 @@ cf ssh
 ```
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
-By default, SSH access is enabled for Diego applications. You can use the `cf ssh-enabled` command to verify if SSH access is enabled or the `cf enable-ssh` command to enable the access if it was disabled.
+By default, SSH access is enabled for Diego applications. You can use the `cf ssh-enabled` command to verify whether SSH access is enabled or the `cf enable-ssh` command to enable the access if it was disabled.
 
 <strong>Command options</strong>:
 
@@ -694,7 +689,7 @@ By default, SSH access is enabled for Diego applications. You can use the `cf ss
 <dt>-L</dt>
 <dd>Enables local port forwarding, which binds an output port on your machine to an input port on the application VM.</dd>
 <dt>-N</dt>
-<dd>Do not run a remote command.</dd>
+<dd>Don't run a remote command.</dd>
 <dt>-t, -tt, or -T</dt>
 <dd>Enables you to run an SSH session in pseudo-tty mode rather than generate terminal line output.<dd>
 </dl>
@@ -820,7 +815,7 @@ cf -v
 
 
 ## Related Links
-{: #general}
+{: #cf-related}
 
 * [Download Cloud Foundry CLI ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
