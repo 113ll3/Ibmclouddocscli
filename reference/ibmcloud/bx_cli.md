@@ -1,11 +1,8 @@
 ---
 
 copyright:
-
-  years: 2018
-
-
-lastupdated: "2018-12-12"
+  years: 2018, 2019
+lastupdated: "2019-02-07"
 
 ---
 
@@ -16,16 +13,15 @@ lastupdated: "2018-12-12"
 # General CLI (ibmcloud) commands
 {: #ibmcloud_cli}
 
+The {{site.data.keyword.cloud_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.cloud_notm}}.
 
-The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.cloud_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, don't use both {{site.data.keyword.cloud_notm}} CLI commands `ibmcloud [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `ibmcloud cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.cloud_notm}} CLI context. Note that `ibmcloud cf api/login/logout/target` isn't allowed, and you must use `ibmcloud api/login/logout/target` instead.
 
-{{site.data.keyword.Bluemix_notm}} command line client bundles a Cloud Foundry command line client in its installation. If you have your own cf cli installed, don't use both {{site.data.keyword.Bluemix_notm}} CLI commands `ibmcloud [command]` and Cloud Foundry CLI commands `cf [command]` of your own installation in the same context. Instead, use `ibmcloud cf [command]` if you want to use cf cli to manage Cloud Foundry resources in {{site.data.keyword.Bluemix_notm}} CLI context.  Note that `ibmcloud cf api/login/logout/target` isn't allowed, and you must use `ibmcloud api/login/logout/target` instead.
-
-As of May 2018 the {{site.data.keyword.Bluemix_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However, you can still use the `bluemix` and `bx` CLI commands until they're removed later.
+As of May 2018 the {{site.data.keyword.cloud_notm}} CLI commands have changed from `bluemix` and `bx` to `ibmcloud`. However, you can still use the `bluemix` and `bx` CLI commands until they're removed later.
 {: tip}
 
-The following lists detailed commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, including their names, arguments, options, prerequisites, descriptions, and examples.
-{:shortdesc}
+The following lists detailed commands that are supported by {{site.data.keyword.cloud_notm}} CLI, including their names, arguments, options, prerequisites, descriptions, and examples.
+{: shortdesc}
 
 *Prerequisites* list which actions are required before using the command. Commands that have no prerequisite actions list **None**. Otherwise, prerequisites might include one or more of the following actions:
 
@@ -42,38 +38,10 @@ If logging in with federated ID, use '--sso' option to authenticate with one tim
 <dd>The Docker CLI (docker) must be installed to run this command.</dd>
 </dl>
 
-
-Use the indexes in the following table to refer to the frequently used ibmcloud commands.
-
-## General ibmcloud commands
-{: #ibmcloud_commands_index}
-
-<table summary="General ibmcloud commands.">
-<caption>Table 1. General ibmcloud commands</caption>
- <thead>
- <th colspan="5">General ibmcloud commands</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud help](bx_cli.html#ibmcloud_help)</td>
- <td>[ibmcloud api](bx_cli.html#ibmcloud_api)</td>
- <td>[ibmcloud config](bx_cli.html#ibmcloud_config)</td>
- <td>[ibmcloud info](bx_cli.html#ibmcloud_info)</td>
- <td>[ibmcloud cf](bx_cli.html#ibmcloud_cf)</td>
- </tr>
- <tr>
- <td>[ibmcloud login](bx_cli.html#ibmcloud_login) </td>
- <td>[ibmcloud logout](bx_cli.html#ibmcloud_logout) </td>
- <td>[ibmcloud regions](bx_cli.html#ibmcloud_regions)</td>
- <td>[ibmcloud target](bx_cli.html#ibmcloud_target)</td>
- <td>[ibmcloud update](bx_cli.html#ibmcloud_update)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud help
+## ibmcloud help
 {: #ibmcloud_help}
-Display the general help for first-level built-in commands and supported namespaces of {{site.data.keyword.Bluemix_notm}} CLI, or the help for a specific built-in command or namespace.
+
+Display the general help for first-level built-in commands and supported namespaces of {{site.data.keyword.cloud_notm}} CLI, or the help for a specific built-in command or namespace.
 
 ```
 ibmcloud help [COMMAND|NAMESPACE]
@@ -88,26 +56,24 @@ ibmcloud help [COMMAND|NAMESPACE]
    <dd>The command or namespace that help is displayed for. If not specified, the general help for {{site.data.keyword.Bluemix_notm}} CLI is shown.</dd>
    </dl>
 
-
-
 <strong>Examples</strong>:
 
-Display general help for {{site.data.keyword.Bluemix_notm}} CLI:
-
+Display general help for {{site.data.keyword.cloud_notm}} CLI:
 ```
 ibmcloud help
 ```
+{: codeblock}
 
 Display help for the `info` command:
-
 ```
 ibmcloud help info
 ```
+{: codeblock}
 
 ## ibmcloud api
 {: #ibmcloud_api}
-Set or view the {{site.data.keyword.Bluemix_notm}} API endpoint.
 
+Set or view the {{site.data.keyword.cloud_notm}} API endpoint.
 ```
 ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 ```
@@ -117,7 +83,7 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 <strong>Command options</strong>:
    <dl>
    <dt>API_ENDPOINT (optional)</dt>
-   <dd>The API endpoint that is targeted, for example, `https://api.chinabluemix.net`. If both *API_ENDPOINT* and `--unset` options aren't specified, the current API endpoint is displayed.</dd>
+   <dd>The API endpoint that is targeted, for example, `https://api.us-south.cf.cloud.ibm.com`. If both *API_ENDPOINT* and `--unset` options aren't specified, the current API endpoint is displayed.</dd>
    <dt>--unset (optional)</dt>
    <dd>Remove the API endpoint setting.</dd>
    <dt>--skip-ssl-validation (optional)</dt>
@@ -125,31 +91,31 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
    </dl>
 <strong>Examples</strong>:
 
-Set the API endpoint to api.chinabluemix.net:
+Set the API endpoint to api.us-south.cf.cloud.ibm.com:
+```
+ibmcloud api api.us-south.cf.cloud.ibm.com
+```
+{: codeblock}
 
 ```
-ibmcloud api api.chinabluemix.net
+ibmcloud api https://api.us-south.cf.cloud.ibm.com --skip-ssl-validation
 ```
-
-```
-ibmcloud api https://api.chinabluemix.net --skip-ssl-validation
-```
+{: codeblock}
 
 View the current API endpoint:
-
 ```
 ibmcloud api
 ```
+{: codeblock}
 
 Unset the API endpoint:
-
 ```
 ibmcloud api --unset
 ```
+{: codeblock}
 
 ## ibmcloud config
 {: #ibmcloud_config}
-
 
 Write default values to the configuration file.
 
@@ -178,49 +144,49 @@ Only one of these options can be specified at a time.
 <strong>Examples</strong>:
 
 Set HTTP request timeout to 30 seconds:
-
 ```
 ibmcloud config --http-timeout 30
 ```
+{: codeblock}
 
 Enable trace output for HTTP requests:
-
 ```
 ibmcloud config --trace true
 ```
+{: codeblock}
 
 Trace HTTP requests to a specified file */home/usera/my_trace*:
-
 ```
 ibmcloud config --trace /home/usera/my_trace
 ```
+{: codeblock}
 
 Disable color output:
-
 ```
 ibmcloud config --color false
 ```
+{: codeblock}
 
 Set the locale to zh_Hans:
-
 ```
 ibmcloud config --locale zh_Hans
 ```
+{: codeblock}
 
 Clear the locale settings:
-
 ```
 ibmcloud config --locale CLEAR
 ```
+{: codeblock}
 
 ## ibmcloud info
 {: #ibmcloud_info}
 
 View the basic {{site.data.keyword.Bluemix_notm}} information, including the current region, the cloud controller version, and some useful endpoints, such as endpoints for log in and exchanging access token.
-
 ```
 ibmcloud info
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>:  Endpoint
 
@@ -271,7 +237,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 <strong>Command options</strong>:
 <dl>
   <dt> -a <i>API_ENDPOINT</i> (optional)</dt>
-  <dd> API endpoint (For example: api.ng.bluemix.net)</dd>
+  <dd> API endpoint (For example: api.us-south.cf.cloud.ibm.com)</dd>
   <dt> --apikey <i>API_KEY or @API_KEY_FILE_PATH</i>
   <dd> API key content or the path of an API key file that is indicated by @</dd>
   <dt> --sso (optional) </dt>
@@ -342,7 +308,7 @@ ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
-<strong>Note:</strong> If the API Key has an associated account, switching to another account is not allowed.
+<strong>Note:</strong> If the API Key has an associated account, switching to another account isn't allowed.
 
 ### Use one time passcode
 
@@ -350,12 +316,12 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login -u UserID --sso
 ```
 
-Then, the CLI will provide a URL link and ask for passcode:
+Then, the CLI provides a URL link and ask for passcode:
 ```
 One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
 
-Open the link in browser, which will guide you to get the passcode. Type in the given passcode in console, and you can log in.
+Open the link in browser, to get a passcode. Type in the given passcode in console, and you can log in.
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
@@ -497,16 +463,16 @@ ibmcloud sl init [OPTIONS]
 
 <strong>Examples:</strong>
 
-Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On to log in classic infrastructure
+Use {{site.data.keyword.cloud_notm}} Single-Sign-On to log in classic infrastructure
 ```
-$ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
-API endpoint: api.ng.bluemix.net
+$ ibmcloud login -a api.us-south.cf.cloud.ibm.com -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
+API endpoint: api.us-south.cf.cloud.ibm.com
 Authenticating...
 OK
 
 Targeted account example user's Account (65ce8074c6c62b5)
 
-API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)   
+API endpoint:   https://api.us-south.cf.cloud.ibm.com (API version: 2.54.0)   
 Region:         us-south   
 User:           user@example.com   
 Account:        example user's Account (65ce8074c6c62b5)   
@@ -531,3 +497,4 @@ View help information for all commands to operate the classic infrastructure env
 ```
 ibmcloud sl help
 ```
+{: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-07"
 
 ---
 
@@ -82,7 +82,7 @@ The output lists the usage instructions, the current version, and the supported 
 1. Connect to an API endpoint in your {{site.data.keyword.cloud_notm}} location. For example, enter the following command to connect to the {{site.data.keyword.cloud_notm}} Dallas location:
 
 	```
-	ibmcloud api https://api.ng.bluemix.net
+	ibmcloud api https://api.us-south.cf.cloud.ibm.com
 	```
 	{: codeblock}
 
