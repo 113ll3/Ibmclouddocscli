@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2018
-
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,13 +12,13 @@ lastupdated: "2018-11-15"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Einführung in die {{site.data.keyword.Bluemix_notm}}-CLI
+# Einführung in die {{site.data.keyword.cloud_notm}}-CLI
 {: #overview}
 
-In diesem Lernprogramm installieren Sie eine Reihe von {{site.data.keyword.Bluemix}}-Entwicklertools, überprüfen die Installation und konfigurieren Ihre Umgebung. {{site.data.keyword.Bluemix}}-Entwicklertools bieten eine Befehlszeilenmethode zum Erstellen, Entwickeln und Bereitstellen von End-to-End-Webanwendungen, -Mobilanwendungen und -Mikroserviceanwendungen
-{:shortdesc}
+In diesem Lernprogramm installieren Sie eine Reihe von {{site.data.keyword.cloud}}-Entwicklertools, überprüfen die Installation und konfigurieren die Umgebung. {{site.data.keyword.cloud_notm}}-Entwicklertools bieten eine Befehlszeilenmethode zum Erstellen, Entwickeln und Bereitstellen von Webanwendungen, Mobilanwendungen und Mikroserviceanwendungen.
+{: shortdesc}
 
-Mit dieser Installation rufen Sie die eigenständige {{site.data.keyword.Bluemix_notm}}-CLI sowie folgende Tools ab:
+Mit dieser Installation rufen Sie die eigenständige {{site.data.keyword.cloud_notm}}-CLI sowie folgende Tools ab:
 
 * `Homebrew` (nur Mac)
 * `Git`
@@ -37,9 +35,9 @@ Mit dieser Installation rufen Sie die eigenständige {{site.data.keyword.Bluemix
 ## Vorbereitende Schritte
 {: #prereq}
 
-Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und die folgenden Systemvoraussetzungen:
+Sie benötigen ein [{{site.data.keyword.cloud_notm}}-Konto](https://console.bluemix.net/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und die folgenden Systemvoraussetzungen:
 
-* Unter Windows werden einige Funktionen möglicherweise nicht unterstützt, wenn Sie nicht mit Windows 10 Pro arbeiten.
+* Unter Windows werden einige Funktionen nicht unterstützt, wenn Sie nicht mit Windows 10 Pro arbeiten.
 * Sie müssen den stabilen Kanal für Docker mit Version 1.13.1 oder höher verwenden.
 
 ## Schritt 1. Installationsbefehl ausführen
@@ -64,7 +62,7 @@ Sie benötigen ein [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bl
 
   Das Installationsscript kann auch aus dem [GitHub-Repository](https://github.com/IBM-Cloud/ibm-cloud-developer-tools) heruntergeladen werden.
 
-  Die Schritte zur manuellen Installation dieser Tools finden Sie unter [Tools erneut installieren](/docs/cli/ts_createapps.html#appendix).
+  Die Schritte zur manuellen Installation dieser Tools sind im Abschnitt [Tools erneut installieren](/docs/cli/ts_createapps.html#appendix) beschrieben.
 
 ## Schritt 2. Installation verifizieren
 {: #step2}
@@ -81,14 +79,14 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Schritt 3. Umgebung konfigurieren
 {: #step3}
 
-1. Stellen Sie eine Verbindung zu einem API-Endpunkt an Ihrem {{site.data.keyword.Bluemix_notm}}-Standort her. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung zum {{site.data.keyword.Bluemix_notm}}-Standort Dallas herzustellen:
+1. Stellen Sie eine Verbindung zu einem API-Endpunkt an Ihrem {{site.data.keyword.cloud_notm}}-Standort her. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung zum {{site.data.keyword.cloud_notm}}-Standort Dallas herzustellen:
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
-2. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} mit Ihrer IBMid an.
+2. Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit Ihrer IBMid an.
 
 	```
 	ibmcloud login
@@ -96,7 +94,7 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 	{: codeblock}
     <br>
 
-	Wenn Ihre Berechtigungsnachweise zurückgewiesen werden, verwenden Sie möglicherweise eine föderierte ID. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](/docs/iam/login_fedid.html#federated_id).
+	Wenn Ihre Berechtigungsnachweise zurückgewiesen werden, verwenden Sie möglicherweise eine föderierte ID. Weitere Informationen finden Sie unter [Mit föderierter ID anmelden](/docs/iam/login_fedid.html#federated_id).
 	{: tip}
 
 3. Legen Sie Ihre Organisation (org) und Ihren Bereich (space) fest.
@@ -116,4 +114,4 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Nächste Schritte
 {: #next-steps}
 
-Sie sind jetzt bereit, Ihre erste Anwendung zu entwickeln und bereitzustellen! Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps/create-deploy-cli.html).
+Sie sind jetzt bereit, Ihre erste Anwendung zu entwickeln und bereitzustellen! Weitere Informationen finden Sie unter [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps/create-deploy-cli.html).
