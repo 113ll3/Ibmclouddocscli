@@ -5,7 +5,7 @@ copyright:
   years: 2018, 2019
 
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-02-08"
 ---
 
 {:new_window: target="_blank"}
@@ -944,220 +944,87 @@ ibmcloud resource search "tags:\"mykey:myvalue\""
 ## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
-List all tags
+List all tags in your billing account
 
 ```
-ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true]
 ```
-
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--tag-type</dt>
-  <dd>Tag Type (supported values: user, restricted)</dd>
-  <dt>-o, --offset</dt>
-  <dd>Starting resource position number (default: 0)</dd>
-  <dt>-l, --limit</dt>
-  <dd>Number of resources to return (maximum 10000) (default: 10000)</dd>
+  <dt>-o, -offset</dt>
+  <dd>Starting tag position number</dd>
+  <dt>-l, -limit</dt>
+  <dd>Number of tags to return (maximum 10000)</dd>
+  <dt>-p; --provider</dt> 
+  <dd>Specify classic-infrastructure when searching for classic infrastructure tags</dd>
+  <dt>-d, --details</dt>
+  <dd>Show the number of tagged resources.</dd>
 </dl>
 
-<strong>Examples</strong>:
 
-List all tags
-
-```
-ibmcloud resource tags
-```
-
-List all restricted tags
-
-```
-ibmcloud resource tags --tag-type restricted
-```
-
-## ibmcloud resource tag
-{: #ibmcloud_resource_tag}
-
-Show details of a tag
-
-```
-ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
-```
-
-<strong>Prerequisites</strong>: Endpoint, Login
-
-<strong>Command options</strong>:
-<dl>
-  <dt>--tag-name (required)</dt>
-  <dd>Tag Name, exclusive with --tag-crn</dd>
-  <dt>--tag-crn (required)</dt>
-  <dd>Tag CRN, exclusive with --tag-name</dd>
-</dl>
-
-<strong>Examples</strong>:
-
-Show details of tag "Ray Brown"
-
-```
-ibmcloud resource tag --tag-name "Ray Brown"
-```
-
-## ibmcloud resource tag-create
-{: #ibmcloud_resource_tag_create}
-
-Create a tag
-
-```
-ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
-```
-
-<strong>Prerequisites</strong>: Endpoint, Login
-
-<strong>Command options</strong>:
-<dl>
-  <dt>--tag-name (required)</dt>
-  <dd>Tag Name</dd>
-  <dt>--tag-type</dt>
-  <dd>Tag type (supported values: user, restricted; default: user)</dd>
-</dl>
-
-<strong>Examples</strong>:
-
-Create a user tag with name think:2018
-
-```
-ibmcloud resource tag-create --tag-name think:2018
-```
-
-Create a restricted tag with name department:marketing
-
-```
-ibmcloud resource tag-create --tag-name "department:marketing" --tag-type restricted
-```
-
-Create a user tag with name "Ray Brown"
-
-```
-ibmcloud resource tag-create --tag-name "Ray Brown"
-```
-
-Create a restricted tag with name "environment:My Development"
-
-```
-ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
-```
-
-## ibmcloud resource tag-delete
-{: #ibmcloud_resource_tag_delete}
-
-Delete a tag
-
-```
-ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
-```
-
-<strong>Prerequisites</strong>: Endpoint, Login
-
-<strong>Command options</strong>:
-<dl>
-  <dt>--tag-name (required)</dt>
-  <dd>Tag Name, exclusive with --tag-crn</dd>
-  <dt>--tag-crn (required)</dt>
-  <dd>Tag CRN, exclusive with --tag-name</dd>
-</dl>
-
-<strong>Examples</strong>:
-
-Deletag tag "Ray Brown"
-
-```
-ibmcloud resource tag-delete --tag-name "Ray Brown"
-```
 
 ## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
 
-Add a tag to a resource
+Attach one or more tags to a resource
 
 ```
-ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resource-crn RESOURCE_CRN
+ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
 ```
-
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--tag-name (required)</dt>
-  <dd>Tag Name, exclusive with --tag-crn</dd>
-  <dt>--tag-crn (required)</dt>
-  <dd>Tag CRN, exclusive with --tag-name</dd>
-  <dt>--resource-crn (required)</dt>
-  <dd>Resource CRN</dd>
+  <dt>--tag-names(required)</dt>
+  <dd>Comma separated list of tag names</dd>
+  <dt>--resource-id</dt>
+  <dd>The CRN of the resource to which the tags are going to be attached; for classic infrastructure resources, it is the ID of the resource</dd>
+  <dt>--resource-type</dt>
+  <dd>The resource type of the classic infrastructure resource to which the tags are going to be attached; this parameter is required if attaching a tag to a classic infrastructure resource. ossible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
 </dl>
-
-<strong>Examples</strong>:
-
-Add tag "Ray Brown" to resource whose crn is resource_example_crn.
-
-```
-ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
-```
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
-Remove a tag from a resource
+Detaching one or more tags from a resource
 
 ```
-ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RESOURCE_CRN
-```
-
-<strong>Prerequisites</strong>: Endpoint, Login
-
-<strong>Command options</strong>:
-<dl>
-  <dt>--tag-name (required)</dt>
-  <dd>Tag Name, exclusive with --tag-crn</dd>
-  <dt>--tag-crn (required)</dt>
-  <dd>Tag CRN, exclusive with --tag-name</dd>
-  <dt>--resource-crn (required)</dt>
-  <dd>Resource CRN</dd>
-</dl>
-
-<strong>Examples</strong>:
-
-Remove tag "Ray Brown" from resource whose crn is resource_example_crn.
-
-```
-ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
-```
-
-## ibmcloud resource tag-update
-{: #ibmcloud_resource_tag_update}
-
-Switch user tag to restricted tag and vice versa
-
-```
-ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
+ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--tag-name (required)</dt>
-  <dd>Tag Name, exclusive with --tag-crn</dd>
-  <dt>--tag-crn (required)</dt>
-  <dd>Tag CRN, exclusive with --tag-name</dd>
-  <dt>--tag-type (required)</dt>
-  <dd>Tag type</dd>
+  <dt>--tag-names(required)</dt>
+  <dd>Comma separated list of tag names</dd>
+  <dt>--resource-id</dt>
+  <dd>The CRN of the resource from which the tags are going to be detached; for classic infrastructure resources, it is the ID of the resource</dd>
+  <dt>--resource-type</dt>
+  <dd>The resource type of the classic infrastructure resource from which the tags are going to be detached; this parameter is required if attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
 </dl>
 
-<strong>Examples</strong>:
 
-Switch tag "Ray Brown" to restricted tag
+
+## ibmcloud resource tag-delete
+{: #ibmcloud_resource_tag_delete}
+
+Deleting a tag
 
 ```
-ibmcloud tag-update --tag-name "Ray Brown"  --tag-type restricted
+ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
 ```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command options</strong>:
+<dl>
+  <dt>--tag-name(required)</dt>
+  <dd>The name of the tag to be deleted.</dd>
+  <dt>-p; --provider</dt> 
+  <dd>Specify classic-infrastructure when deleting a classic infrastructure tag</dd>
+</dl>
+
+A tag can be deleted only if it is not attached to any resource.
