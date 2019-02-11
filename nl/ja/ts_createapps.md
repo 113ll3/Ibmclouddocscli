@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# {{site.data.keyword.Bluemix_notm}} Developer Tools CLI プラグインのトラブルシューティング
+# {{site.data.keyword.cloud_notm}} Developer Tools CLI プラグインのトラブルシューティング
 {: #troubleshoot}
 
 {{site.data.keyword.dev_cli_short}} コマンド・ライン・インターフェース (CLI) を使用してアプリを作成する際の一般的な問題には、デプロイメントの失敗や、コードを取得できないなどが含まれます。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
-{:shortdesc}
+{: shortdesc}
 
 ## 非モバイル・パターンでアプリを作成するとホスト名エラーになるのはなぜですか?
 {: #hostname-error}
@@ -32,7 +32,7 @@ lastupdated: "2018-11-30"
 ```
 The hostname <myHostname> is taken.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 このエラーの原因は、ログイン・トークンが有効期限切れになったことです。
@@ -54,7 +54,7 @@ ibmcloud login
 ```
 Failed to <command> application.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 このエラーの原因は、ログイン・トークンが有効期限切れになったことです。
@@ -71,10 +71,9 @@ ibmcloud login
 {: #nosuchimage}
 {: troubleshoot}
 
-最初にビルドせずにアプリを実行しようとすると、以下のエラーが表示されることがあります。
+最初にビルドせずにアプリに対して `ibmcloud dev run` を実行しようとすると、以下のエラーが表示されることがあります。
 
 ```
-$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -85,6 +84,7 @@ FAILED
 Container 'testProject' could not be created:
 Error: No such image: ibmcloud-dev-testProject
 ```
+{: screen}
 {: tsSymptoms}
 
 アプリは、実行する前にビルドする必要があります。 現行アプリ・ディレクトリー内で以下のコマンドを実行します。
@@ -110,7 +110,7 @@ CLI を使用して、{{site.data.keyword.objectstorageshort}} 機能を持つ 2
 FAILED
 Service broker error: {"description"=>"You can not create this Object Storage instance. Each organization using the Object Storage service is limited to one instance of the Free plan."}
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 このエラーの原因は、{{site.data.keyword.objectstorageshort}} サービスが、フリー {{site.data.keyword.objectstorageshort}} プランの 1 つのインスタンスのみ提供していることです。
@@ -130,7 +130,7 @@ FAILED
 Application created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 このエラーの原因は、内部タイムアウトです。
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 このエラーは、`appmetrics` モジュールが別のアーキテクチャーにインストールされている場合に発生します。 1 つのアーキテクチャーにインストールされているネイティブ NPM モジュールは、別のアーキテクチャーでは機能しません。 付属の Docker イメージは、Linux カーネルに基づいています。
@@ -187,10 +187,10 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 `node_modules` フォルダーを削除してから、`ibmcloud dev run` コマンドを再度実行します。
 {: tsResolve}
 
-## {{site.data.keyword.Bluemix_notm}} にデプロイできないのはなぜですか?
+## {{site.data.keyword.cloud_notm}} にデプロイできないのはなぜですか?
 {: troubleshoot}
 
-{{site.data.keyword.Bluemix_notm}} へデプロイしようとすると、失敗しますが、エラーは表示されません。
+{{site.data.keyword.cloud_notm}} へデプロイしようとすると、失敗しますが、表示されるエラーはありません。
 {: tsSymptoms}
 
 アカウントにログインしていない可能性があります。
@@ -202,7 +202,7 @@ ibmcloud login
 ```
 {: tsResolve}
 
-## {{site.data.keyword.Bluemix_notm}} 上の Kubernetes にデプロイできないのはなぜですか?
+## {{site.data.keyword.cloud_notm}} 上の Kubernetes にデプロイできないのはなぜですか?
 {: troubleshoot}
 
 クラスター名のプロンプトが出された後、以下の失敗が表示される場合があります。
@@ -213,18 +213,21 @@ Failed to execute the action:  exit status 1:
 FAILED
 Failed to configure deployment with cluster '<cluster-name>' due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 これは、ほとんどの場合、無効のクラスター名が原因です。 同じコマンドに `--trace` を付けて実行することによって、原因を確認することができます。エラー出力には、以下の詳細が含まれる場合があります。
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
+{: screen}
 {: tsCauses}
 
-正しいクラスターを使用していて、かつクラスターがデプロイメント用に構成済みであることを確認するために、以下を実行します。
+正しいクラスターを使用していて、かつクラスターがデプロイメント用に構成されていることを確認するために、以下を実行します。
 ```
 ibmcloud cs cluster-config <cluster-name>
 ```
+{: codeblock}
 {: tsResolve}
 
 ## イメージ・ターゲットをデプロイできないのはなぜですか?
@@ -239,15 +242,17 @@ Failed to execute the action:  exit status 1:denied: requested access to the res
 FAILED
 Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 これは、ほとんどの場合、無効のデプロイ用イメージ・ターゲットが原因です。 具体的には、デプロイ用イメージ・ターゲットの中間値である名前空間が無効である可能性があります。
 {: tsCauses}
 
-デプロイ用イメージ・ターゲット内の名前空間が、以下のコマンドを実行して表示される名前空間のいずれかと一致していることを確認してください。
+デプロイ用イメージ・ターゲット内の名前空間が、次のコマンドを実行して表示される名前空間のいずれかと一致していることを確認してください。
 ```
 ibmcloud cr namespaces
 ```
+{: codeblock}
 {: tsResolve}
 
 ## アプリの言語を判別できないのはなぜですか?
@@ -261,14 +266,15 @@ Could not determine the language of your application.
 Try using the --language flag to specify the language of your application 
 directly. 
 ```
+{: screen}
 {: tsSymptoms}
 
 このエラーの原因は、以下のいずれかである可能性があります。
 - アプリケーションのソース・ディレクトリーではないディレクトリーから [enable](/docs/cli/idt/commands.html#enable) コマンドを実行する。
-- 現時点で認識されていない言語のアプリに対して [enable](/docs/cli/idt/commands.html#enable) コマンドを実行する。
+- 認識されていない言語のアプリに対して [enable](/docs/cli/idt/commands.html#enable) コマンドを実行する。
 {: tsCauses}
 
-アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。 これで問題が解決されず、言語が[サポートされる言語](/docs/cli/idt/commands.html#enable-language-options)のいずれかである場合は、`--language` パラメーターを使用して言語を指定してください。
+必ず、アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。これで問題が解決されず、言語が[サポートされる言語](/docs/cli/idt/commands.html#enable-language-options)のいずれかである場合は、`--language` パラメーターを使用して言語を指定してください。
 {: tsResolve}
 
 ## クラウド・デプロイメントが有効になっているアプリをビルドまたは実行できないのはなぜですか?
