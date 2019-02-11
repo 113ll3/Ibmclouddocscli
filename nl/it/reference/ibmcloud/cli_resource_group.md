@@ -2,10 +2,10 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-01-14"
 ---
 
 {:new_window: target="_blank"}
@@ -51,21 +51,22 @@ Un gruppo di risorse è un modo per organizzare le risorse dell'account in raggr
       <td>[ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-key-update](cli_resource_group.html#ibmcloud_resource_service_key_update)</td>
       <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
       <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
       <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
       <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
-      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
       <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
       <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
       <td>[ibmcloud resource tags 
 ](cli_resource_group.html#ibmcloud_resource_tags)</td>
       <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
-      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
       <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
       <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
       <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
@@ -85,12 +86,12 @@ ibmcloud resource groups [--default] [--output FORMATO]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--default</dt>
   <dd>Richiama il gruppo predefinito dell'account corrente.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -118,14 +119,14 @@ ibmcloud resource group NOME [--id] [--output FORMATO]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del gruppo di risorse</dd>
   <dt>--id</dt>
   <dd>Mostra solo l'ID</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -148,19 +149,22 @@ ibmcloud resource group example-group --id
 Crea un gruppo di risorse
 
 ```
-ibmcloud resource group-create NOME NOME_QUOTA
+ibmcloud resource group-create NOME
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
+<dl>
+  <dt>NOME (obbligatorio)</dt>
+  <dd>Nome del gruppo di risorse</dd>
+</dl>
 
 <strong>Esempi</strong>:
-
-Crea un gruppo di risorse `example-group` con quota `free`:
+Crea un gruppo di risorse `example-group`:
 
 ```
-ibmcloud resource group-create example-group free
+ibmcloud resource group-create example-group
 ```
 
 ## ibmcloud resource group-update
@@ -174,7 +178,7 @@ ibmcloud resource group-update NOME [-n, --name NUOVO_NOME] [-q, --quota NOME_NU
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome del gruppo di risorse di destinazione</dd>
@@ -211,7 +215,7 @@ ibmcloud resource quotas
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
 </dl>
 
@@ -234,7 +238,7 @@ ibmcloud resource quota NOME
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome della quota</dd>
@@ -250,7 +254,7 @@ ibmcloud resource quota free
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
-Migra una istanza del servizio Cloudfoundry nel gruppo di risorse
+Migra un'istanza del servizio Cloud Foundry nel gruppo di risorse
 
 ```
 ibmcloud resource cf-service-instance-migrate (NOME_ISTANZA_SERVIZIO | ID_ISTANZA_SERVIZIO) [--resource-group-name NOME_GRUPPO_RISORSE | --resource-group-id ID_GRUPPO_RISORSE] [-f, --force]
@@ -258,7 +262,7 @@ ibmcloud resource cf-service-instance-migrate (NOME_ISTANZA_SERVIZIO | ID_ISTANZ
 
 <strong>Prerequisiti</strong>: Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_ISTANZA_SERVIZIO o ID_ISTANZA_SERVIZIO (obbligatorio)</dt>
   <dd>Nome o ID dell'istanza del servizio</dd>
@@ -281,7 +285,7 @@ ibmcloud resource service-instances [--service-name NOME_SERVIZIO] [--location U
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--service-name</dt>
   <dd>Nome del servizio di appartenenza</dd>
@@ -290,7 +294,7 @@ ibmcloud resource service-instances [--service-name NOME_SERVIZIO] [--location U
   <dt>--long</dt>
   <dd>Mostra dei campi aggiuntivi nell'output</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON. </dd>
+  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -312,7 +316,7 @@ ibmcloud resource service-instance (NOME|ID) [--location UBICAZIONE] [--id] [--o
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME (obbligatorio), esclusivo con ID</dt>
   <dd>Nome dell'istanza del servizio</dd>
@@ -345,7 +349,7 @@ ibmcloud resource service-instance-create NOME NOME_SERVIZIO|ID_SERVIZIO NOME_PI
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME (obbligatorio)</dt>
   <dd>Nome dell'istanza del servizio</dd>
@@ -362,7 +366,7 @@ ibmcloud resource service-instance-create NOME NOME_SERVIZIO|ID_SERVIZIO NOME_PI
 </dl>
 
 <strong>Esempi</strong>:
-Crea un'istanza del servizio denominata `my-service-instance` che utilizza il piano di servizio `test-service-plan` del servizio `test-service` nell'ubicazione `eu-gb`:
+Crea un'istanza del servizio denominata `my-service-instance` utilizzando il piano di servizio `test-service-plan` del servizio `test-service` nell'ubicazione `eu-gb`:
 
 ```
 ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
@@ -379,7 +383,7 @@ ibmcloud resource service-instance-update (NOME|ID) [-n, --name NUOVO_NOME] [--s
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>Nome (obbligatorio)</dt>
   <dd>Nome dell'istanza del servizio, esclusivo con ID</dd>
@@ -413,7 +417,7 @@ ibmcloud resource service-instance-delete (NOME|ID) [-f, --force] [--recursive]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>Nome (obbligatorio)</dt>
   <dd>Nome dell'istanza del servizio, esclusivo con ID</dd>
@@ -443,12 +447,12 @@ ibmcloud resource service-bindings ALIAS_SERVIZIO [--output FORMATO]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>ALIAS_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -469,7 +473,7 @@ ibmcloud resource service-binding NOME_ALIAS NOME_APPLICAZIONE [--id] [--output 
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -478,7 +482,7 @@ ibmcloud resource service-binding NOME_ALIAS NOME_APPLICAZIONE [--id] [--output 
   <dt>--id</dt>
   <dd>Visualizza solo l'ID. Tutto l'altro output per il bind del servizio viene eliminato. Questa opzione è esclusiva con '--output'.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
+  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -499,7 +503,7 @@ ibmcloud resource service-binding-create NOME_ALIAS_SERVIZIO NOME_APPLICAZIONE N
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_ALIAS_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -508,7 +512,7 @@ ibmcloud resource service-binding-create NOME_ALIAS_SERVIZIO NOME_APPLICAZIONE N
   <dt>NOME_RUOLO</dt>
   <dd>Nome del ruolo utente</dd>
   <dt>--service-id</dt>
-  <dd>Nome o UUID dell'ID del servizio a cui appartiene il ruolo</dd>
+  <dd>Nome o UUID dell'ID servizio a cui appartiene il ruolo.</dd>
   <dt>-p, --parameter</dt>
   <dd>File JSON o stringa JSON dei parametri</dd>
   <dt>-f, --force</dt>
@@ -516,7 +520,7 @@ ibmcloud resource service-binding-create NOME_ALIAS_SERVIZIO NOME_APPLICAZIONE N
 </dl>
 
 <strong>Esempi</strong>:
-Crea un bind del servizio tra l'alias di servizio `my-service-alias` e l'applicazione `my-app` con i ruolo `Administrator`:
+Crea un bind del servizio tra l'alias di servizio `my-service-alias` e l'applicazione `my-app` con il ruolo `Administrator`:
 
 ```
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
@@ -533,7 +537,7 @@ ibmcloud resource service-binding-delete ALIAS_SERVIZIO NOME_APPLICAZIONE [-f, -
 
 <strong>Prerequisiti</strong>:  Nessuno
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_ALIAS_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -561,7 +565,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NOME | --ali
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--instance-id</dt>
   <dd>ID istanza del servizio</dd>
@@ -572,7 +576,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NOME | --ali
   <dt>--alias-name</dt>
   <dd>Nome alias del servizio</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -585,7 +589,7 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 ## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
-Mostra i dettagli di una chiave del servizio
+Visualizza i dettagli di qualsiasi numero di chiavi di servizio, dove i primi *n* caratteri del nome della chiave del servizio corrispondono al NOME_CHIAVE fornito.
 
 ```
 ibmcloud resource service-key NOME_CHIAVE [--id]
@@ -593,14 +597,14 @@ ibmcloud resource service-key NOME_CHIAVE [--id]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_CHIAVE</dt>
   <dd>Nome della chiave</dd>
   <dt>--id</dt>
-  <dd>Visualizza l'ID della chiave del servizio</dd>
+  <dd>Visualizza gli ID di qualsiasi chiave, dove i primi *n* caratteri del nome della chiave del servizio corrispondono al NOME_CHIAVE fornito e *n* è la lunghezza del NOME_CHIAVE fornito.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>Specifica il formato dell'output. Attualmente è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -621,7 +625,7 @@ ibmcloud resource service-key-create NOME NOME_RUOLO ( --instance-id ID_ISTANZA_
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME</dt>
   <dd>Nome della chiave</dd>
@@ -636,7 +640,7 @@ ibmcloud resource service-key-create NOME NOME_RUOLO ( --instance-id ID_ISTANZA_
   <dt>--alias-name</dt>
   <dd>Nome alias del servizio</dd>
   <dt>--service-id</dt>
-  <dd>Nome o UUID dell'ID del servizio a cui appartiene il ruolo</dd>
+  <dd>Nome o UUID dell'ID servizio a cui appartiene il ruolo.</dd>
   <dt>-p, --parameters</dt>
   <dd>File JSON o stringa JSON dei parametri</dd>
   <dt>-f, --force</dt>
@@ -650,6 +654,36 @@ Crea una chiave del servizio denominata `my-service-key` con il ruolo `Administr
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
 
+## ibmcloud resource service-key-update
+{: #ibmcloud_resource_service_key_update}
+
+Aggiorna una chiave del servizio
+
+```
+ibmcloud resource service-key-update ( NOME | ID ) [-n, --name NUOVO_NOME] [-g GRUPPO_RISORSE] [-f, --force]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni comando</strong>:
+<dl>
+  <dt>NOME | ID</dt>
+  <dd>Nome o ID della chiave</dd>
+  <dt>-n, --name NUOVO_NOME</dt>
+  <dd>Nuovo nome della chiave</dd>
+  <dt>-g GRUPPO_RISORSE</dt>
+  <dd>ID del gruppo di risorse a cui appartiene la chiave</dd>
+  <dt>-f, --force</dt>
+  <dd>Forza l'aggiornamento senza conferma</dd>
+</dl>
+
+<strong>Esempi</strong>:
+Aggiorna una chiave di servizio denominata `my-service-key`, dalle un nuovo nome `my-service-key-2`:
+
+```
+ibmcloud resource service-key-update my-service-key -n my-service-key-2
+```
+
 ## ibmcloud resource service-key-delete
 {: #ibmcloud_resource_service_key_delete}
 
@@ -661,10 +695,10 @@ ibmcloud resource service-key-delete ( NOME_CHIAVE | ID_CHIAVE ) [-f, --forece]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_CHIAVE | ID_CHIAVE</dt>
-  <dd>Il nome o l'ID della chiave</dd>
+  <dd>Nome della chiave o l'ID della chiave</dd>
   <dt>-f, --force</dt>
   <dd>Forza l'eliminazione senza conferma</dd>
 </dl>
@@ -687,14 +721,14 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NOME ] [-
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--instance-id</dt>
   <dd>ID dell'istanza del servizio di appartenenza.</dd>
   <dt>--instance-name</dt>
   <dd>Nome dell'istanza del servizio di appartenenza.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -714,14 +748,14 @@ ibmcloud resource service-alias NOME_ALIAS [--id] [--output FORMATO]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
   <dt>--id</dt>
   <dd>Visualizza solo l'ID dell'alias del servizio fornito. Tutto l'altro output per l'alias viene eliminato. Questa opzione è esclusiva con '--output'.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
+  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -741,7 +775,7 @@ ibmcloud resource service-alias-create NOME_ALIAS ( --instance-id ID | --instanc
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -774,7 +808,7 @@ ibmcloud resource service-alias-update NOME_ALIAS [-n, --name NUOVO_NOME] [-t, -
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -806,7 +840,7 @@ ibmcloud resource service-alias-delete NOME_ALIAS [-f, --force]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_ALIAS (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
@@ -826,12 +860,12 @@ ibmcloud resource service-alias-delete my-service-alias
 Ricerca le risorse utilizzando la sintassi di query Lucene
 
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
+ibmcloud search QUERY_LUCENE [-o, --offset OFFSET] [-l, --limit LIMITE] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>-o, -offset</dt>
   <dd>Avvio numero posizione risorsa</dd>
@@ -919,7 +953,7 @@ ibmcloud resource tags [--tag-type TIPO_TAG] [-o, --offset OFFSET] [-l, --limit 
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--tag-type</dt>
   <dd>Il tipo di tag (valori supportati: user, restricted)</dd>
@@ -954,7 +988,7 @@ ibmcloud resource tag (--tag-name NOME_TAG | --tag-crn CRN_TAG)
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -981,7 +1015,7 @@ ibmcloud resource tag-create --tag-name NOME_TAG [--tag-type TIPO_TAG]
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag</dd>
@@ -1026,7 +1060,7 @@ ibmcloud resource tag-delete (--tag-name NOME_TAG | --tag-crn CRN_TAG)
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -1053,7 +1087,7 @@ ibmcloud resource tag-attach (--tag-name NOME_TAG | --tag-crn CRN_TAG ) --resour
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -1082,7 +1116,7 @@ ibmcloud  tag-detach (--tag-name NOME_TAG | --tag-crn CRN_TAG) --resource-crn CR
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>
@@ -1111,7 +1145,7 @@ ibmcloud tag-update (--tag-name NOME_TAG | --tag-crn CRN_TAG) --tag-type TIPO_TA
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 <dl>
   <dt>--tag-name (obbligatorio)</dt>
   <dd>Nome tag, esclusivo con --tag-crn</dd>

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# {{site.data.keyword.Bluemix_notm}} Developer Tools CLI 플러그인의 문제점 해결
+# {{site.data.keyword.cloud_notm}} Developer Tools CLI 플러그인의 문제점 해결
 {: #troubleshoot}
 
 {{site.data.keyword.dev_cli_short}} 명령행 인터페이스(CLI)를 사용하여 앱을 작성하는 데 관련된 일반적인 문제점에는 배치 실패 또는 검색할 수 없는 코드가 포함될 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
-{:shortdesc}
+{: shortdesc}
 
 ## 비모바일 패턴으로 앱을 작성할 때 호스트 이름 오류가 발생하는 이유
 {: #hostname-error}
@@ -32,7 +32,7 @@ lastupdated: "2018-11-30"
 ```
 The hostname <myHostname> is taken.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 이 오류는 로그인 토큰이 만료되어 발생합니다.
@@ -54,7 +54,7 @@ ibmcloud login
 ```
 Failed to <command> application.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 이 오류는 로그인 토큰이 만료되어 발생합니다.
@@ -71,10 +71,9 @@ ibmcloud login
 {: #nosuchimage}
 {: troubleshoot}
 
-앱을 먼저 빌드하지 않고 실행하려고 하면 다음 오류가 표시될 수 있습니다.
+앱을 먼저 빌드하지 않고 `ibmcloud dev run`하려고 시도하면 다음 오류가 표시될 수 있습니다.
 
 ```
-$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -85,6 +84,7 @@ FAILED
 Container 'testProject' could not be created:
 Error: No such image: ibmcloud-dev-testProject
 ```
+{: screen}
 {: tsSymptoms}
 
 앱을 실행하기 전에 먼저 빌드해야 합니다. 현재 앱 디렉토리에서 다음 명령을 실행하십시오.
@@ -110,7 +110,7 @@ CLI를 사용하여 {{site.data.keyword.objectstorageshort}} 기능으로 두 �
 FAILED
 Service broker error: {"description"=>"You can not create this Object Storage instance. Each organization using the Object Storage service is limited to one instance of the Free plan."}
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 이 오류는 무료 {{site.data.keyword.objectstorageshort}} 플랜의 1개 인스턴스만 제공하는 {{site.data.keyword.objectstorageshort}} 서비스로 인해 발생합니다.
@@ -130,7 +130,7 @@ FAILED
 Application created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 이 오류는 내부 제한시간 초과로 인한 것입니다.
@@ -154,7 +154,7 @@ https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/co
 	2. **코드 다운로드**를 클릭하십시오.
 {: tsResolve}
 
-## Node.js 앱에 대해 `ibmcloud dev run` 명령을 실행할 수 없는 이유
+## Node.js 앱에 대해 `ibmcloud dev run` 명령을 실행할 수 없는 이유는 무엇입니까?
 {: #node}
 {: troubleshoot}
 
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 이 오류는 `appmetrics` 모듈이 다른 아키텍처에 설치될 때 발생할 수 있습니다. 한 아키텍처에 설치된 기본 npm 모듈은 다른 아키텍처에서 작동하지 않습니다. 포함된 Docker 이미지는 Linux 커널을 기반으로 합니다.
@@ -187,10 +187,10 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 `node_modules` 폴더를 삭제하고 `ibmcloud dev run` 명령을 다시 실행하십시오.
 {: tsResolve}
 
-## {{site.data.keyword.Bluemix_notm}}에 배치할 수 없는 이유
+## {{site.data.keyword.cloud_notm}}에 배치할 수 없는 이유
 {: troubleshoot}
 
-{{site.data.keyword.Bluemix_notm}}에 배치하려고 할 때 실패가 발생하지만 오류가 표시되지 않습니다.
+{{site.data.keyword.cloud_notm}}에 배치하려고 시도하는 경우 실패가 발생하지만 오류는 표시되지 않습니다.
 {: tsSymptoms}
 
 사용자의 계정에 로그인하지 못할 수도 있습니다.
@@ -202,7 +202,7 @@ ibmcloud login
 ```
 {: tsResolve}
 
-## {{site.data.keyword.Bluemix_notm}}의 Kubernetes에 배치할 수 없는 이유
+## {{site.data.keyword.cloud_notm}}의 Kubernetes에 배치할 수 없는 이유
 {: troubleshoot}
 
 다음 장애는 클러스터 이름을 입력하라는 프롬프트가 표시된 후에 나타날 수 있습니다.
@@ -213,18 +213,21 @@ Failed to execute the action:  exit status 1:
 FAILED
 Failed to configure deployment with cluster '<cluster-name>' due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 이는 올바르지 않은 클러스터 이름 때문일 가능성이 높습니다. 동일한 명령을 `--trace`와 함께 실행하여 원인을 확인할 수 있으며 다음 세부사항이 오류 출력에 포함될 수 있습니다.
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
+{: screen}
 {: tsCauses}
 
-올바른 클러스터를 사용 중인지 확인하고 다음을 실행하여 배치에 대해 클러스터를 구성했는지 확인하십시오.
+다음을 실행하여 올바른 클러스터를 사용 중이며 배치에 대해 구성되어 있는지 확인하십시오.
 ```
 ibmcloud cs cluster-config <cluster-name>
 ```
+{: codeblock}
 {: tsResolve}
 
 ## 이미지 대상을 배치할 수 없는 이유
@@ -239,15 +242,17 @@ Failed to execute the action:  exit status 1:denied: requested access to the res
 FAILED
 Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 이는 올바르지 않은 배치 이미지 대상 때문일 가능성이 높습니다. 보다 구체적으로 배치 이미지 대상의 중간 값인 네임스페이스가 올바르지 않을 수 있습니다.
 {: tsCauses}
 
-배치 이미지 대상의 네임스페이스가 다음 명령을 실행할 때 표시되는 네임스페이스 중 하나와 일치하는지 확인하십시오.
+배치 이미지 대상의 네임스페이스가 다음 명령을 실행하면 표시되는 네임스페이스 중 하나와 일치하는지 확인하십시오.
 ```
 ibmcloud cr namespaces
 ```
+{: codeblock}
 {: tsResolve}
 
 ## 내 앱의 언어를 판별할 수 없는 이유
@@ -261,14 +266,15 @@ Could not determine the language of your application.
 Try using the --language flag to specify the language of your application 
 directly. 
 ```
+{: screen}
 {: tsSymptoms}
 
 이 오류의 원인은 다음 중 하나일 수 있습니다.
 - 애플리케이션의 소스 디렉토리가 아닌 디렉토리에서 [enable](/docs/cli/idt/commands.html#enable) 명령 실행.
-- 현재 인식되지 않는 언어로 된 앱에 대해 [enable](/docs/cli/idt/commands.html#enable) 명령 실행.
+- 인식되지 않는 언어로 된 앱에 대해 [enable](/docs/cli/idt/commands.html#enable) 명령 실행.
 {: tsCauses}
 
-앱의 소스 코드를 포함하는 앱 디렉토리에서 명령을 실행하십시오. 그래도 문제점이 해결되지 않고 언어가 [지원되는 언어](/docs/cli/idt/commands.html#enable-language-options) 중 하나이면 `--language` 매개변수를 사용하여 언어를 지정하십시오.
+앱의 소스 코드를 포함하는 앱 디렉토리에서 명령을 실행하는지 확인하십시오. 그래도 문제점이 해결되지 않고 언어가 [지원되는 언어](/docs/cli/idt/commands.html#enable-language-options) 중 하나이면 `--language` 매개변수를 사용하여 언어를 지정하십시오.
 {: tsResolve}
 
 ## 클라우드 배치에 사용된 앱을 빌드하거나 실행할 수 없는 이유
@@ -285,9 +291,11 @@ directly.
 - `Node.js` 앱에서 해당 문제점을 해결하는 데 관한 자세한 정보는 [클라우드 배치를 위해 기존 Node.js 애플리케이션 사용](/docs/node/enable_existing.html#enable_existing)을 참조하십시오.
 {: tsResolve}
 
-## 수동으로 {{site.data.keyword.Bluemix_notm}} 개발자 도구를 설치하는 방법
+## {{site.data.keyword.Bluemix_notm}} 개발자 도구를 수동으로 설치하는 방법은 무엇입니까?
 {: #appendix}
-대부분의 사용자를 위해 플랫폼 설치 프로그램을 사용하여 모든 필수 소프트웨어가 설치됩니다. 컴포넌트를 수동으로 설치해야 하는 경우 각각에 대해 다음 지시사항을 따르십시오. dev 플러그인을 설치하려면 먼저 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)를 설치해야 합니다. dev 플러그인 자체를 사용하려면 다음 명령을 실행하여 설치해야 합니다. 
+대부분의 사용자를 위해 플랫폼 설치 프로그램을 사용하여 모든 필수 소프트웨어가 설치됩니다. 컴포넌트를 수동으로 설치해야 하는 경우 각각에 대해 다음 지시사항을 따르십시오.
+dev 플러그인을 설치하려면 먼저 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)를 설치해야 합니다.
+dev 플러그인 자체를 사용하려면 다음 명령을 실행하여 설치해야 합니다. 
 ```
 ibmcloud plugin install dev
 ```
