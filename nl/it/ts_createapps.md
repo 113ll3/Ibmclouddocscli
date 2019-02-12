@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# Risoluzione dei problemi relativi al plugin della CLI {{site.data.keyword.Bluemix_notm}} Developer Tools
+# Risoluzione dei problemi relativi al plugin della CLI {{site.data.keyword.cloud_notm}} Developer Tools
 {: #troubleshoot}
 
 I problemi generali quando si utilizza l'interfaccia riga di comando (CLI) {{site.data.keyword.dev_cli_short}} per creare le applicazioni potrebbero includere degli errori di distribuzione oppure l'impossibilità di richiamare il codice. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
-{:shortdesc}
+{: shortdesc}
 
 ## Perché ricevo un errore di nome host quando creo un'applicazione con un modello non mobile?
 {: #hostname-error}
@@ -32,7 +32,7 @@ Il seguente errore potrebbe essere visualizzato se utilizzi la CLI {{site.data.k
 ```
 The hostname <myHostname> is taken.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Questo errore è causato da un token di accesso scaduto.
@@ -54,7 +54,7 @@ Il seguente errore potrebbe essere visualizzato quando utilizzi i comandi `creat
 ```
 Failed to <command> application.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Questo errore è causato da un token di accesso scaduto.
@@ -71,10 +71,9 @@ ibmcloud login
 {: #nosuchimage}
 {: troubleshoot}
 
-Quando tenti di eseguire un'applicazione senza prima crearla, potrebbe essere visualizzato il seguente errore.
+Quando tenti di eseguire `ibmcloud dev run` per un'applicazione senza prima crearla, potrebbe essere visualizzato il seguente errore.
 
 ```
-$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -85,6 +84,7 @@ FAILED
 Container 'testProject' could not be created:
 Error: No such image: ibmcloud-dev-testProject
 ```
+{: screen}
 {: tsSymptoms}
 
 Devi creare un'applicazione prima di eseguirla. Esegui il seguente comando nella tua directory dell'applicazione corrente:
@@ -110,7 +110,7 @@ Il seguente errore potrebbe essere visualizzato se utilizzi la CLI per creare du
 FAILED
 Service broker error: {"description"=>"You can not create this Object Storage instance. Each organization using the Object Storage service is limited to one instance of the Free plan."}
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Questo errore è dovuto al servizio {{site.data.keyword.objectstorageshort}} che fornisce solo un'istanza del piano {{site.data.keyword.objectstorageshort}} gratuito.
@@ -130,7 +130,7 @@ FAILED
 Application created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Questo errore è dovuto a un timeout interno.
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 Questo errore si verifica quando il modulo `appmetrics` viene installato su un'architettura diversa. I moduli npm nativi installati su un'architettura non funzionano su un'altra. Le immagini Docker incluse si basano sul kernel Linux.
@@ -187,10 +187,10 @@ Questo errore si verifica quando il modulo `appmetrics` viene installato su un'a
 Elimina la cartella `node_modules` ed esegui nuovamente il comando `ibmcloud dev run`.
 {: tsResolve}
 
-## Perché non posso distribuire a {{site.data.keyword.Bluemix_notm}}?
+## Perché non posso distribuire a {{site.data.keyword.cloud_notm}}?
 {: troubleshoot}
 
-Si è verificato un errore durante la distribuzione a {{site.data.keyword.Bluemix_notm}} ma non viene visualizzato alcun errore.
+Si è verificato un errore durante la distribuzione a {{site.data.keyword.cloud_notm}} ma non viene visualizzato alcun errore.
 {: tsSymptoms}
 
 Potresti non essere collegato al tuo account.
@@ -202,7 +202,7 @@ ibmcloud login
 ```
 {: tsResolve}
 
-## Perché non posso distribuire a Kubernetes su {{site.data.keyword.Bluemix_notm}}?
+## Perché non posso distribuire a Kubernetes su {{site.data.keyword.cloud_notm}}?
 {: troubleshoot}
 
 Il seguente errore potrebbe essere visualizzato dopo che ti viene richiesto il tuo nome del cluster:
@@ -213,18 +213,21 @@ Failed to execute the action:  exit status 1:
 FAILED
 Failed to configure deployment with cluster '<cluster-name>' due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 Molto probabilmente è causato da un nome del cluster non valido. Puoi confermare la causa eseguendo lo stesso comando con `--trace` e i seguenti dettagli potrebbero essere inclusi nell'output dell'errore:
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
+{: screen}
 {: tsCauses}
 
-Assicurati di stare utilizzando il cluster corretto e di aver configurato il tuo cluster per la distribuzione eseguendo:
+Assicurati di stare utilizzando il cluster corretto e di averlo configurato per la distribuzione eseguendo:
 ```
 ibmcloud cs cluster-config <cluster-name>
 ```
+{: codeblock}
 {: tsResolve}
 
 ## Perché non posso distribuire una destinazione dell'immagine?
@@ -239,6 +242,7 @@ Failed to execute the action:  exit status 1:denied: requested access to the res
 FAILED
 Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 Molto probabilmente è causato da una destinazione dell'immagine da distribuire non valida. Nello specifico, lo spazio dei nomi, che è il valore intermedio nella destinazione dell'immagine da distribuire, potrebbe non essere valido.
@@ -248,6 +252,7 @@ Assicurati che lo spazio dei nomi nella destinazione dell'immagine da distribuir
 ```
 ibmcloud cr namespaces
 ```
+{: codeblock}
 {: tsResolve}
 
 ## Perché non posso determinare la lingua per la mia applicazione?
@@ -261,11 +266,12 @@ Could not determine the language of your application.
 Try using the --language flag to specify the language of your application 
 directly. 
 ```
+{: screen}
 {: tsSymptoms}
 
 Questo errore potrebbe essere dovuto a una delle seguenti cause:
 - Esecuzione del comando [enable](/docs/cli/idt/commands.html#enable) da una directory che non è la directory di origine della tua applicazione.
-- Esecuzione del comando [enable](/docs/cli/idt/commands.html#enable) per un'applicazione di una lingua che non è riconosciuta in questo momento.
+- Esecuzione del comando [enable](/docs/cli/idt/commands.html#enable) per un'applicazione di una lingua che non è riconosciuta.
 {: tsCauses}
 
 Assicurati di eseguire il comando dalla directory dell'applicazione che contiene il codice sorgente dell'applicazione. Se questo non risolve il problema e il linguaggio è uno dei [linguaggi supportati](/docs/cli/idt/commands.html#enable-language-options), utilizza il parametro `--language` per specificare il linguaggio.
