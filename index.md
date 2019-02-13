@@ -82,7 +82,7 @@ The output lists the usage instructions, the current version, and the supported 
   ```
   {: codeblock}
   
-  If your credentials are rejected, you might be using a federated ID. See [Logging in with a federated ID](/docs/iam/login_fedid.html#federated_id) for more details.
+  If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam/login_fedid.html#federated_id) for more details.
   {: tip}
 
 2. To use Cloud Foundry services, target an org and space.
