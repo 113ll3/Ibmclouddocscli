@@ -84,7 +84,7 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 <strong>Command options</strong>:
    <dl>
    <dt>API_ENDPOINT (optional)</dt>
-   <dd>The API endpoint that is targeted, for example, `https://api.us-south.cf.cloud.ibm.com`. If both *API_ENDPOINT* and `--unset` options aren't specified, the current API endpoint is displayed.</dd>
+   <dd>The API endpoint that is targeted, for example, `https://cloud.ibm.com`. If both *API_ENDPOINT* and `--unset` options aren't specified, the current API endpoint is displayed.</dd>
    <dt>--unset (optional)</dt>
    <dd>Remove the API endpoint setting.</dd>
    <dt>--skip-ssl-validation (optional)</dt>
@@ -92,14 +92,14 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
    </dl>
 <strong>Examples</strong>:
 
-Set the API endpoint to api.us-south.cf.cloud.ibm.com:
+Set the API endpoint to cloud.ibm.com:
 ```
-ibmcloud api api.us-south.cf.cloud.ibm.com
+ibmcloud api cloud.ibm.com
 ```
 {: codeblock}
 
 ```
-ibmcloud api https://api.us-south.cf.cloud.ibm.com --skip-ssl-validation
+ibmcloud api https://cloud.ibm.com --skip-ssl-validation
 ```
 {: codeblock}
 
@@ -236,7 +236,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 <strong>Command options</strong>:
 <dl>
   <dt> -a <i>API_ENDPOINT</i> (optional)</dt>
-  <dd> API endpoint (For example: api.us-south.cf.cloud.ibm.com)</dd>
+  <dd> API endpoint (For example: cloud.ibm.com)</dd>
   <dt> --apikey <i>API_KEY or @API_KEY_FILE_PATH</i>
   <dd> API key content or the path of an API key file that is indicated by @</dd>
   <dt> --sso (optional) </dt>
@@ -283,8 +283,6 @@ Log in with one time passcode and set target account, org, and space
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
-
-Log in with API key and set targets:
 
 ### API key has account that is associated
 
