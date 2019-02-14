@@ -2,13 +2,14 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-07"
+lastupdated: "2019-02-14"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
 
 # General CLI (ibmcloud) commands
 {: #ibmcloud_cli}
@@ -194,7 +195,6 @@ ibmcloud info
 {: #ibmcloud_cf}
 
 Invoke embedded CF CLI
-
 ```
 ibmcloud [-q, --quiet] cf COMMAND...
 ```
@@ -216,16 +216,15 @@ ibmcloud cf apps
 ```
 
 List cf services without message "Invoking cf command...":
-
 ```
 ibmcloud -q cf services
 ```
+{: codeblock}
 
 ## ibmcloud login
 {: #ibmcloud_login}
 
 Log in user.
-
 ```
 ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-r REGION | --no-region] [-o ORG] [-s SPACE]
 ```
@@ -273,15 +272,14 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 ```
 ibmcloud login
 ```
+{: codeblock}
 
 Log in with user name and password, and set target account, org, and space:
-
 ```
 ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 
 Log in with one time passcode and set target account, org, and space
-
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
@@ -311,15 +309,16 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 <strong>Note:</strong> If the API Key has an associated account, switching to another account isn't allowed.
 
 ### Use one time passcode
-
 ```
 ibmcloud login -u UserID --sso
 ```
+{: codeblock}
 
 Then, the CLI provides a URL link and ask for passcode:
 ```
 One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
+{: screen}
 
 Open the link in browser, to get a passcode. Type in the given passcode in console, and you can log in.
 
@@ -327,10 +326,10 @@ Open the link in browser, to get a passcode. Type in the given passcode in conso
 {: #ibmcloud_logout}
 
 Log out user.
-
 ```
 ibmcloud logout
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>:  None
 
@@ -338,10 +337,10 @@ ibmcloud logout
 {: #ibmcloud_regions}
 
 View the information for all regions on {{site.data.keyword.Bluemix_notm}}.
-
 ```
 ibmcloud regions
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>:  Endpoint
 
@@ -350,7 +349,6 @@ ibmcloud regions
 
 
 Set or view the target account, region, organization, or space.
-
 ```
 ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
@@ -379,28 +377,27 @@ If none of the options are specified, the current account, region, org, and spac
 <strong>Examples</strong>:
 
 Set the current account, organization, and space:
-
 ```
 ibmcloud target -c MyAccountID -o MyOrg -s MySpace
 ```
+{: codeblock}
 
 Switch to a new region:
-
 ```
 ibmcloud target -r eu-gb
 ```
+{: codeblock}
 
 View the current account, region, org, and space:
-
 ```
 ibmcloud target
 ```
+{: codeblock}
 
 ## ibmcloud update
 {: #ibmcloud_update}
 
 Update the CLI to the latest version.
-
 ```
 ibmcloud update [-f]
 ```
@@ -417,78 +414,43 @@ ibmcloud update [-f]
 ## General classic infrastructure service commands
 {: #softlayer_cli}
 
+Use classic infrastructure commands in the {{site.data.keyword.cloud_notm}} command line interface (CLI) to configure and manage Infrastructure services.
 
-Use classic infrastructure commands in the {{site.data.keyword.Bluemix_notm}} command line interface (CLI) to configure and manage Infrastructure services.
-
-
-The following commands are supported. Use the `ibmcloud sl` command to see the list of available commands:
-
-<table summary="Alphabetically ordered general commands that have links that bring you to more info for the command">
-<caption>Table 1. General classic infrastructure commands</caption>
- <thead>
- <th colspan="6">General classic infrastructure commands</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl init](/docs/cli/reference/ibmcloud/bx_cli.html#sl_init)</td>
- <td>[ibmcloud sl help](/docs/cli/reference/ibmcloud/bx_cli.html#sl_help)</td>
-   </tbody>
- </table>
-
- To view help information for the commands, run: `ibmcloud sl [command] -h`
-
- ## ibmcloud sl init
-{: #sl_init}
-
-Initialize the configuration settings that are used to connect to the classic infrastructure environment. The configuration includes user name, API key or password, account and endpoint.
+Run the `ibmcloud sl` command to see the list of available commands:
 ```
-ibmcloud sl init [OPTIONS]
+USAGE:
+   bx sl command [arguments...] [options...]
+
+COMMANDS:
+   block           Gen1 infrastructure Block Storage
+   cdn             Gen1 infrastructure Content Delivery Network
+   file            Gen1 infrastructure File Storage
+   dns             Gen1 infrastructure Domain Name System
+   globalip        Gen1 infrastructure Global IP addresses
+   hardware        Gen1 infrastructure hardware servers
+   image           Gen1 infrastructure Compute images
+   ipsec           Gen1 infrastructure IPSEC VPN
+   loadbal         Gen1 infrastructure Load balancers
+   security        Gen1 infrastructure SSH Keys and SSL Certificates
+   securitygroup   Gen1 infrastructure network security groups
+   subnet          Gen1 infrastructure Network subnets
+   ticket          Gen1 infrastructure Manage Tickets
+   vlan            Gen1 infrastructure Network VLANs
+   vs              Gen1 infrastructure Virtual Servers
+   order           Gen1 infrastructure Orders
+   user            Gen1 infrastructure Manage Users
+   call-api        Call arbitrary API endpoints.
+   help            Print command usage message
+```
+{: screen}
+
+To view help information about a command, run:
+```
+ibmcloud sl [command] -h
 ```
 
-<strong>Command options</strong>:
-<dl>
-<dt>-a, --api-endpoint</dt>
-<dd>The classic infrastructure API endpoint URL, default is: https://api.softlayer.com/rest/v3.1 for API key authentication, https://api.softlayer.com/mobile/v3.1 for IBMid authentication.</dd>
-<dt>-q, --security-question-id</dt>
-<dd>Security question Id used to authenticate, ask your account owner if you don't know.</dd>
-<dt>-w, --security-question-answer</dt>
-<dd>Security question answer used to authenticate, ask your account owner if you don't know.</dd>
-<dt>-s, --security-code</dt>
-<dd>Security code generated by security vendor when 2-factor authentication is enabled.</dd>
-<dt>-v, --security-vendor</dt>
-<dd>Security vendor that provides security code for authentication, options are: VERISIGN,TOTP,PHONE_FACTOR.</dd>
-<dt>-t, --auth-token</dt>
-<dd>Authentication token when phone authentication is enabled.</dd>
-</dl>
-
-<strong>Examples:</strong>
-
-Use {{site.data.keyword.cloud_notm}} Single-Sign-On to log in classic infrastructure
-```
-$ ibmcloud login -a api.us-south.cf.cloud.ibm.com -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
-API endpoint: api.us-south.cf.cloud.ibm.com
-Authenticating...
-OK
-
-Targeted account example user's Account (65ce8074c6c62b5)
-
-API endpoint:   https://api.us-south.cf.cloud.ibm.com (API version: 2.54.0)   
-Region:         us-south   
-User:           user@example.com   
-Account:        example user's Account (65ce8074c6c62b5)   
-No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
-
-
-$ ibmcloud sl init
-API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
-Setting account to: 123456
-OK
-
-API endpoint:   https://api.softlayer.com/mobile/v3.1
-Account ID:                123456   
-User ID:                   user@example.com  
-IMS token:                 xxxxxxxxxx 
-```
+The `ibmcloud sl init` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+{: note}
 
 ## ibmcloud sl help
 {: #sl_help}
@@ -498,3 +460,4 @@ View help information for all commands to operate the classic infrastructure env
 ibmcloud sl help
 ```
 {: codeblock}
+
