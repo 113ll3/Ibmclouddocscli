@@ -183,13 +183,8 @@ ibmcloud config --locale CLEAR
 ## ibmcloud info
 {: #ibmcloud_info}
 
-View the basic {{site.data.keyword.Bluemix_notm}} information, including the current region, the cloud controller version, and some useful endpoints, such as endpoints for log in and exchanging access token.
-```
-ibmcloud info
-```
-{: codeblock}
-
-<strong>Prerequisites</strong>:  Endpoint
+The `ibmcloud info` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+{: note}
 
 ## ibmcloud cf
 {: #ibmcloud_cf}
