@@ -10,6 +10,7 @@ lastupdated: "2019-02-14"
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:note: .note}
+{:codeblock: .codeblock}
 
 # General CLI (ibmcloud) commands
 {: #ibmcloud_cli}
