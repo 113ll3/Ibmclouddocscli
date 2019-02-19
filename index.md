@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-19"
 
 ---
 
@@ -37,7 +37,7 @@ With this installation, you get the stand-alone {{site.data.keyword.cloud_notm}}
 
 You need an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and the following system requirements:
 
-* If you are running Windows, some functions are not supported unless you are not running Windows 10 Pro.
+* If you are running Windows, some functions are not supported unless you are running Windows 10 Pro.
 * You must use the stable channel for Docker with a minimum version of 1.13.1.
 
 ## Step 1. Run the installation command
