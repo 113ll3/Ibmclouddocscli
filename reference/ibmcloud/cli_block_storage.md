@@ -1,11 +1,9 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-14"
 
-  years: 2018
-
-
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,58 +11,13 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # Working with the {{site.data.keyword.blockstorageshort}} service
+{: #sl-block-storage}
 
-{{site.data.keyword.Bluemix}} {{site.data.keyword.blockstorageshort}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based {{site.data.keyword.blockstorageshort}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections. 
+{{site.data.keyword.cloud}} {{site.data.keyword.blockstorageshort}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based {{site.data.keyword.blockstorageshort}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections. 
 
-Use the following commands to manage a given volume for the {{site.data.keyword.Bluemix_notm}} classic infrastructure {{site.data.keyword.blockstorageshort}} service.
+Use the following commands to manage a given volume for the {{site.data.keyword.cloud_notm}} classic infrastructure {{site.data.keyword.blockstorageshort}} service.
 {: shortdesc}
 
-<table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} classic infrastructure commands that have links that bring you to more info for the command">
-<caption>Table 1. {{site.data.keyword.BluSoftlayer_notm}} classic infrastructure Block storage</caption>
- <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} classic infrastructure Block storage</th>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl block access-authorize](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_authorize)</td>
-  <td>[ibmcloud sl block access-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_list)</td>
-  <td>[ibmcloud sl block access-password](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_password)</td>
-  <td>[ibmcloud sl block access-revoke](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_access_revoke)</td>
-  <td>[ibmcloud sl block replica-failback](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_failback)</td>
-  <td>[ibmcloud sl block replica-failover](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_failover)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl block replica-locations](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_locations)</td>
-  <td>[ibmcloud sl block replica-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_order)</td>
-  <td>[ibmcloud sl block replica-partners](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_replica_partners)</td>
-  <td>[ibmcloud sl block snapshot-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_cancel)</td>
-  <td>[ibmcloud sl block snapshot-create](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_create)</td>
-  <td>[ibmcloud sl block snapshot-disable](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_disable)</td>
-</tr>
-<tr>
-  <td>[ibmcloud sl block snapshot-enable](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_enable)</td>
-  <td>[ibmcloud sl block snapshot-delete](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_delete)</td>
-  <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_list)</td>
-  <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_order)</td>
-  <td>[ibmcloud sl block snapshot-restore](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_restore)</td>
-  <td>[ibmcloud sl block snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_snapshot_schedule_list)</td>
-</tr>
-<tr>
-  <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_cancel)</td>
-  <td>[ibmcloud sl block volume-count](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_count)</td>
-  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_detail)</td>
-  <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_duplicate)</td>
-  <td>[ibmcloud sl block volume-list](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_list)</td>
-  <td>[ibmcloud sl block volume-modify](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_modify)</td>
-</tr>
-<tr>
-  <td>[ibmcloud sl block volume-order](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_order)</td>
-  <td>[ibmcloud sl block volume-options](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_options)</td>
-  <td>[ibmcloud sl block volume-set-lun-id](/docs/cli/reference/ibmcloud/cli_block_storage.html#sl_block_volume_set_lun_id)</td>  
-</tr>
-</tbody>
-</table>
- 
 ## ibmcloud sl block access-authorize
 {: #sl_block_access_authorize}
 
@@ -89,7 +42,8 @@ ibmcloud sl block access-authorize VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl block access-authorize 12345678 --virtual-id 87654321
 ```
-This command authorizes virtual server with ID 87654321 to access volume with ID 12345678.
+
+This command authorizes virtual server with ID `87654321` to access volume with ID `12345678`.
 
 ## ibmcloud sl block access-list
 {: #sl_block_access_list}

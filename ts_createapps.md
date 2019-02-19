@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -24,7 +24,7 @@ General problems with using the {{site.data.keyword.dev_cli_short}} command-line
 {: shortdesc}
 
 ## Why do I get a host name error when I create an app with a non-mobile pattern?
-{: #hostname-error}
+{: #ts-cli-hostname-error}
 {: troubleshoot}
 
 The following error might be displayed if you use the {{site.data.keyword.dev_cli_short}} CLI to deploy an app to Cloud Foundry. If you enter a unique host name, you might still see this message.
@@ -46,7 +46,7 @@ ibmcloud login
 {: tsResolve}
 
 ## Why do I get general command failures?
-{: #general}
+{: #ts-cli-general-failures}
 {: troubleshoot}
 
 The following error might be displayed if you use the `create`, `delete`, `list`, or `code` commands:
@@ -68,7 +68,7 @@ ibmcloud login
 {: tsResolve}
 
 ## Why is the image for my new app not recognized?
-{: #nosuchimage}
+{: #ts-cli-nosuchimage}
 {: troubleshoot}
 
 When you try to `ibmcloud dev run` an app without building it first, the following error might be displayed.
@@ -101,7 +101,7 @@ ibmcloud dev run
 {: tsResolve}
 
 ## Why do I get a service broker error when I add the {{site.data.keyword.objectstorageshort}} capability?
-{: #os}
+{: #ts-cli-object-storage}
 {: troubleshoot}
 
 The following error might be displayed if you use the CLI to create two apps with the {{site.data.keyword.objectstorageshort}} capability:
@@ -120,11 +120,10 @@ Select a different plan.
 {: tsResolve}
 
 ## Why isn't my code retrieved when I create an app?
-{: #code}
+{: #retrieve-code-error}
 {: troubleshoot}
 
 The following error might be displayed when you use the CLI to create an app:
-
 ```
 FAILED                            
 Application created, but could not get code
@@ -149,13 +148,13 @@ Use one of the following ways to get the code:
 
 * Use the {{site.data.keyword.dev_console}}.
 
-	1. Select your [app ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appservice/apps) in the {{site.data.keyword.dev_console}}.
+	1. Select your [app ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/resources) in the {{site.data.keyword.dev_console}}.
 
 	2. Click **Download Code**.
 {: tsResolve}
 
 ## Why can't I run the `ibmcloud dev run` command for Node.js apps?
-{: #node}
+{: #ts-cli-node}
 {: troubleshoot}
 
 The following error might be displayed if you run the `ibmcloud dev run` command for Node.js web or BFF apps:
@@ -188,6 +187,7 @@ Delete the `node_modules` folder and run the `ibmcloud dev run` command again.
 {: tsResolve}
 
 ## Why can't I deploy to {{site.data.keyword.cloud_notm}}?
+{: #ts-cli-deploy-issues}
 {: troubleshoot}
 
 A failure occurs when you try to deploy to {{site.data.keyword.cloud_notm}}, but there is no error that is displayed.
@@ -203,6 +203,7 @@ ibmcloud login
 {: tsResolve}
 
 ## Why can't I deploy to Kubernetes on {{site.data.keyword.cloud_notm}}?
+{: #ts-cli-kube-deploy}
 {: troubleshoot}
 
 The following failure might be displayed after you're prompted for your cluster name:
@@ -231,6 +232,7 @@ ibmcloud cs cluster-config <cluster-name>
 {: tsResolve}
 
 ## Why can't I deploy an image target?
+{: #ts-deploy-image-target}
 {: troubleshoot}
 
 The following failure might be displayed after you're prompted for the deploy image target:
@@ -256,6 +258,7 @@ ibmcloud cr namespaces
 {: tsResolve}
 
 ## Why can't the language for my app be determined?
+{: #ts-cli-determine-language}
 {: troubleshoot}
 
 The following failure might be displayed when trying to start your app:
@@ -278,11 +281,11 @@ Be sure that you run the command from the app directory that contains source cod
 {: tsResolve}
 
 ## Why can't I build or run an app that has been enabled for cloud deployment?
+{: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
 You might encounter various failures attempting to [build](/docs/cli/idt/commands.html#build) or [run](/docs/cli/idt/commands.html#run) an app that has been enabled.
 {: tsSymptoms}
-
 
 The many different possible causes can be found in each of the following links.
 {: tsCauses}
@@ -291,58 +294,9 @@ The many different possible causes can be found in each of the following links.
 - For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js applications for cloud deployment](/docs/node/enable_existing.html#enable_existing).
 {: tsResolve}
 
-## How do I install the {{site.data.keyword.Bluemix_notm}} Developer tools manually?
-{: #appendix}
-All prerequisites install for most users by using the platform installers. If you need to manually install any components, here are the instructions for each.
-To install the dev plug-in, you must first install the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
-To use the dev plug-in itself, you must install it by running the following command: 
-```
-ibmcloud plugin install dev
-```
-{: codeblock}
- 
-For running and debugging apps locally, you must also install [Docker](https://www.docker.com/get-docker).
- 
-For deploying an app as a container, you must also install Kubernetes, Helm, and the following IBM Cloud CLI plug-ins.
- 
-### To install Kubernetes:
-Mac users:
-```
-curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
-```
-{: codeblock}
+## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
+{: #ts-cli-install-devtools-manually}
+{: troubleshoot}
 
-Linux users:
-```
-curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-```
-{: codeblock}
+To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli/install-devtools-manually.html#install-devtools-manually).
 
-Windows users:
-```
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
-```
-{: codeblock}
-
-### To install Helm:
-Mac and Linux users:
-```
-export DESIRED_VERSION=v2.7.2
-curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
-```
-{: codeblock}
-
-Windows users:
-Download and install the [binary](https://github.com/kubernetes/helm/releases/tag/v2.7.2).
-
-### To install the container-registry plug-in:
-```
-ibmcloud plugin install container-registry
-```
-{: codeblock}
-
-### To install the container-service plug-in:
-```
-ibmcloud plugin install container-service
-```
-{: codeblock}

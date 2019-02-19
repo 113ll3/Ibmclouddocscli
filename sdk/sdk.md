@@ -1,21 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-21"
+  years: 2015, 2019
+lastupdated: "2019-02-14"
 
 ---
+
 # Available Mobile SDKs
 {: #sdk}
 
-To add {{site.data.keyword.Bluemix}} Web and Mobile services SDKs to your app, choose the SDKs that you want to use and configure your dependency manager to pull the SDKs into your app.
-
+To add {{site.data.keyword.cloud}} Web and Mobile services SDKs to your app, choose the SDKs that you want to use and configure your dependency manager to pull the SDKs into your app.
 
 ## Server SDKs
 {: #server_sdk}
 
 If you have a Java, NodeJS, or Swift server application, you can use the following SDKs to communicate with the respective services.
-
 
 ### {{site.data.keyword.appid_short}} Server SDKs
 {: #appid_sdk}
@@ -30,12 +29,10 @@ If you have a Java, NodeJS, or Swift server application, you can use the followi
 - [{{site.data.keyword.mobilepushshort}} Java Server SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java)
 - [{{site.data.keyword.mobilepushshort}} Swift Server SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift)
 
-
 ## Client SDKs
 {: #client_sdk}
 
 You can use the following SDKs in your mobile application to use the respective capabilities.
-
 
 ### Android SDKs
 {: #android_sdk}
@@ -45,7 +42,6 @@ You can use the following SDKs in your mobile application to use the respective 
 - [{{site.data.keyword.mobileanalytics_short}} SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics)
 - [{{site.data.keyword.mobilepushshort}} SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push)
 
-
 ### iOS SDKs
 {: #ios_sdk}
 
@@ -53,7 +49,6 @@ You can use the following SDKs in your mobile application to use the respective 
 - [{{site.data.keyword.appid_short}} SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-cloud-security/appid-clientsdk-swift)
 - [{{site.data.keyword.mobileanalytics_short}} SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics)
 - [{{site.data.keyword.mobilepushshort}} SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push)
-
 
 ### Cordova Plug-ins
 {: #cordova_plugin}

@@ -1,20 +1,18 @@
 ---
 
 copyright:
-
-  years: 2015, 2017
-
-lastupdated: "2018-10-04"
+  years: 2015, 2019
+lastupdated: "2019-02-19"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-
+{:codeblock: .codeblock}
+{:note: .note}
 
 # VPN CLI Plug-in for cf CLI
 {: #vpn_cli_for_cf}
-
 
 You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.Bluemix}} CLI plug-in. Both versions of the plug-in provide the same functionality.
 {:shortdesc}
@@ -24,61 +22,74 @@ The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and L
 The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the {{site.data.keyword.Bluemix_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
 
 ## Install the cf CLI Plug-in
+{: #install-cf-cli-plugin}
+
 Before you begin, install the cf CLI. See [Cloud Foundry command line interface ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window} for details.
 
 ## Install the VPN CLI Plug-in
-**Note:** If you have a previous version of the {{site.data.keyword.vpn_short}} CLI plug-in that is installed, you must first uninstall it. Use the command:
+{: #install-vpn-cli-plugin}
+
+If you have a previous version of the {{site.data.keyword.vpn_short}} CLI plug-in that is installed, you must first uninstall it. Use the command:
+{: note}
 
 ```
 cf uninstall-plugin vpn
 ```
+{: codeblock}
 
 ### Install locally
 
 1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [ {{site.data.keyword.Bluemix_notm}} CLI Plug-in Repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
+
 2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:
-**Note:** Either switch to the location of the {{site.data.keyword.vpn_short}} plug-in or specify the path to the plug-in location.
+
+	Either switch to the location of the {{site.data.keyword.vpn_short}} plug-in or specify the path to the plug-in location.
+	{: note}
 
 	- For MS Windows OS:
-
 	```
 	cf install-plugin vpn_windows64.exe
 	```
+	{: codeblock}
 
 	- For Apple MAC OS:
-
 	```
 	cf install-plugin vpn_mac_os_amd64
 	```
+	{: codeblock}
 
 	- For Linux OS:
-
 	```
 	cf install-plugin vpn_linuxamd64
 	```
+	{: codeblock}
 
+### Install from {{site.data.keyword.cloud_notm}} repository
+{: #install-from-ibm-repo}
 
-### Install from {{site.data.keyword.Bluemix_notm}} repository
-
-1. Add the {{site.data.keyword.Bluemix_notm}} repository into the Cloud Foundry CLI repositories. Use the following command:
-
+1. Add the {{site.data.keyword.cloud_notm}} repository into the Cloud Foundry CLI repositories. Use the following command:
 	```
-	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
+	cf add-plugin-repo IBM Cloud http://plugins.ng.bluemix.net
 	```
+	{: codeblock}
+
 2. Run the following command:
-
 	```
 	cf install-plugin vpn -r IBM Cloud
 	```
+	{: codeblock}
+
 ##List of VPN service commands
+{: #list-vpn-cli-commands}
 
 ### cf vpn-create connection
+{: #cli-vpn-create-connection}
 
 Creates a VPN connection.
-
 ```
 cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> -subnets ["<subnet/mask>"] -cip <customer gateway IP address> -d <description> -peer_id <peer ID> -admin_state <admin state> -dpd-action <action> -gateway_ip <IP address> -i <initiator state> -dpd-timeout <value> -dpd-interval <value> -ike <name> -ipsec <name>
 ```
+
 #### Parameters
 {: #p1}
 
@@ -122,12 +133,13 @@ Remote endpoint IP address of the VPN tunnel.
 
 
 ### cf vpn-create ike
+{: #cf-vpn-create}
 
 Creates an IKE policy.
-
 ```
 cf vpn-create ike <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
 ```
+
 #### Parameters
 {: #p2}
 
@@ -150,14 +162,14 @@ Name of the gateway.
 
 **-auth:** Authorization algorithm. Values: sha1 or sha256
 
-
 ### cf vpn-create ipsec
+{: #cf-vpn-create-ipsec}
 
 Creates an IPSec policy.
-
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
 ```
+
 #### Parameters
 {: #p3}
 
@@ -205,95 +217,114 @@ IP address of the gateway.
 Subnet address in CIDR format.
 
 ### cf vpn-show gateways
+{: #cf-vpn-show-gateways}
 
 Displays information about the current gateways.
-
 ```
 cf vpn-show gateways
 ```
+{: codeblock}
+
 ### cf vpn-show ikes
+{: #cf-vpn-show-ikes}
 
 Displays information about the current IKE connections.
-
 ```
 cf vpn-show ikes
 ```
+{: codeblock}
+
 ### cf vpn-show ipsecs
+{: #cf-vpn-show-ipsecs}
 
 Displays information about the current IPSec connections.
-
 ```
 cf vpn-show ipsecs
 ```
+{: codeblock}
+
 ### cf vpn-show connections
+{: #cf-vpn-show-connections}
 
 Displays information about all the current connections.
-
 ```
 cf vpn-show connections
 ```
+{: codeblock}
+
 ### cf vpn-show ike
+{: #cf-vpn-show-ike}
 
 Displays information about an IKE connection.
-
 ```
 cf vpn-show ike <policy name>
 ```
+{: codeblock}
+
 ### cf vpn-show ipsec
+{: #cf-vpn-show-ipsec}
 
 Displays information about an IPSec connection.
-
 ```
 cf vpn-show ipsec <policy name>
 ```
+{: codeblock}
+
 ### cf vpn-show gateway
+{: #cf-vpn-show-gateway}
 
 Displays connection information about a gateway.
-
 ```
 cf vpn-show gateway <gateway name>
 ```
+{: codeblock}
+
 ### cf vpn-show connection
+{: #cf-vpn-show-connection}
 
 Displays all information about a particular connection.
-
 ```
 cf vpn-show connection <connection name>
 ```
+{: codeblock}
+
 ### cf vpn-delete
+{: #cf-vpn-delete}
 
 Deletes an existing connection, policy, or gateway.
-
 ```
 cf vpn-delete ike <policy name>
 ```
+{: codeblock}
 
 ```
 cf vpn-delete ipsec <policy name>
 ```
+{: codeblock}
 
 ```
 cf vpn-delete connection <connection name>
 ```
+{: codeblock}
 
 ```
 cf vpn-delete gateway <gateway name>
 ```
-
+{: codeblock}
 
 ### cf vpn-update connection
+{: #cf-vpn-update-connection}
 
 Updates an existing VPN connection.
-
 ```
 cf vpn-update connection <connection name> -g <gateway name> -cip <customer gateway IP address> -subnets ["<subnet/mask>"] -k <preshared key> -d <description> -peer_id <peer ID> -admin_state <admin state> -dpd-action <action> -gateway_ip <IP address> -i <initiator state> -dpd-timeout <value> -dpd-interval <value> -ike <name> -ipsec <name>
 ```
+
 #### Parameters
 {: #p5}
 
 **connection name:**
 Name of the connection.
-
 
 ##### Optional Parameters:
 {: #op5}
@@ -330,14 +361,14 @@ Preshared key.
 
 **-ipsec:** Name of the IPSec policy.
 
-
 ### cf vpn-update ike
+{: #cf-vpn-update-ike}
 
 Updates an IKE policy.
-
 ```
 cf vpn-update ike <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
 ```
+
 #### Parameters
 {: #p6}
 
@@ -359,20 +390,19 @@ Name of the IKE policy.
 
 **-auth:** Authorization algorithm. Values: sha1 or sha256
 
-
 ### cf vpn-update ipsec
+{: #cf-vpn-update-ipsec}
 
 Updates an IPSec policy.
-
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
 ```
+
 #### Parameters
 {: #p7}
 
 **policy name:**
 Name of the IPSec policy.
-
 
 ##### Optional Parameters:
 {: #op7}
@@ -391,9 +421,9 @@ Name of the gateway.
 **-auth:** Authorization algorithm. Values: sha1 or sha256
 
 ### cf vpn-update gateway
+{: #cf-vpn-update-gateway}
 
 Updates an existing VPN gateway.
-
 ```
 cf vpn-update gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets <subnet address>
 ```
@@ -414,8 +444,3 @@ IP address of the gateway.
 **-subnets:**
 Subnet address in CIDR format.
 
-# rellinks
-## general
-{: #general}
-* [IBM VPN service](/docs/services/vpn/index.html)
-* [Cloud Foundry CLI ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

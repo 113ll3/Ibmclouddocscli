@@ -1,11 +1,9 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-14"
 
-  years: 2018
-
-
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,32 +11,20 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # Managing Global IPs
+{: #sl-manage-global-ip}
 
 A Global IP address is a specialized static secondary subnet. It is delivered to you as a /32 subnet (in other words, a single IP address) that can be routed to any other IP address on your account.
 
 Use the following commands to manage a global IP in the {{site.data.keyword.Bluemix}} classic infrastructure Global IP service.
 {: shortdesc}
 
-<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Global IP commands that have links that bring you to more info for the command">
- <tbody>
- <tr>
-  <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>
-  <td>[ibmcloud sl globalip cancel](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_cancel)</td>
-  <td>[ibmcloud sl globalip create](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_create)</td>
- <td>[ibmcloud sl globalip list](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_list)</td>
- <td>[ibmcloud sl globalip unassign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_unassign)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl globalip assign
+## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 Assign a global IP to a target router or device.
 ```
 ibmcloud sl globalip assign IDENTIFIER TARGET
 ```
-
 
 **Examples**:
 ```

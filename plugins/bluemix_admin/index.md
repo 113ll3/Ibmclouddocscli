@@ -31,7 +31,7 @@ Cygwin. Use the Cloud Foundry command line interface in a command line window ot
 
 After the Cloud Foundry command line interface is installed, you can add the {{site.data.keyword.Bluemix_notm}} admin CLI plug-in.
 
-**Note**: If you have previously installed the {{site.data.keyword.Bluemix_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
+**Note**: If you've previously installed the {{site.data.keyword.Bluemix_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
 
 Complete the following steps to add the repository and install the plug-in:
 
@@ -70,7 +70,7 @@ For more help for a command, use the `-help` option.
 ### Connecting and Logging in to {{site.data.keyword.Bluemix_notm}}
 
 Before you can use the Admin CLI plug-in, you must connect and log in, if
-you are not already.
+you aren't already.
 
 <ol>
 <li>To connect to the {{site.data.keyword.Bluemix_notm}} API endpoint, run the following command:<br/><br/>
@@ -107,7 +107,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**Note**: To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you are an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command. For more information, see [Enabling managers to add users](index.html#clius_emau).
+**Note**: To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you're an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command. For more information, see [Enabling managers to add users](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -149,7 +149,7 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ### Listing users who are invited from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-If you have invited Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} account with the [`invite-users-to-public` command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users that have an existing IBMid has a status of `ACTIVE`. Invited users that did not have an existing IBMid has a status of either `PENDING` or `ACTIVE` depending on whether or not they have accepted the invitation to the account yet. To list the users in your {{site.data.keyword.Bluemix_notm}} account:
+If you've invited Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} account with the [`invite-users-to-public` command](#admin_dedicated_invite_public), you can list the users in your account to see their invite status. Invited users that have an existing IBMid has a status of `ACTIVE`. Invited users that didn't have an existing IBMid has a status of either `PENDING` or `ACTIVE` depending on whether they've accepted the invitation to the account yet. To list the users in your {{site.data.keyword.Bluemix_notm}} account:
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
@@ -181,11 +181,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">The permission assigned to the user. The available permissions are:  admin (or superuser), login (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. For more information about assigned user permissions, see [Permissions](/docs/admin/index.html#permissions). You cannot use this parameter with the organization parameter in the same query. </dd>
+<dd class="pd">The permission that is assigned to the user. The available permissions are:  admin (or superuser), login (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. For more information about assigned user permissions, see [Permissions](/docs/admin/index.html#permissions). You can't use this parameter with the organization parameter in the same query. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">The organization name that the user belongs to. You cannot use this parameter with the permission parameter in the same query.</dd>
+<dd class="pd">The organization name that the user belongs to. You can't use this parameter with the permission parameter in the same query.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">The organization role assigned to the user. The available roles are: 'auditors', 'managers', and 'billing_managers'. You must specify the organization with this parameter.</dd>
+<dd class="pd">The organization role that is assigned to the user. The available roles are: 'auditors', 'managers', and 'billing_managers'. You must specify the organization with this parameter.</dd>
 
 </dl>
 
@@ -591,7 +591,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name,  select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service. </dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted with service plans to choose from. To identify a service plan name,  select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service. </dd>
 </dl>
 
 **Tip:** You can also use **ba esp** as an alias for the longer
@@ -610,7 +610,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 </dl>
 
 **Tip:** You can also use **ba dsp** as an alias for the longer
@@ -629,7 +629,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add to the service's visibility list.</dd>
 </dl>
@@ -652,7 +652,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">TThe name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
+<dd class="pd">TThe name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to remove from the service's visibility list.</dd>
 </dl>
@@ -676,7 +676,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you are prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add visibility for. You can enable visibility of the service for more than
 one organization by entering more organization names or GUIDs in the command.</dd>
@@ -702,7 +702,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">The category for the report. If there is a space in the name, use quotation marks around the
+<dd class="pd">The category for the report. If there's a space in the name, use quotation marks around the
 name.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd">The report date in the format <samp class="ph codeph">YYYYMMDD</samp>.</dd>
@@ -728,7 +728,7 @@ cf ba delete-report <category> <date> <name>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">The category for the report. If there is a space in the name, use quotation marks around the
+<dd class="pd">The category for the report. If there's a space in the name, use quotation marks around the
 name.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd">The report date in the format <samp class="ph codeph">YYYYMMDD</samp>.</dd>

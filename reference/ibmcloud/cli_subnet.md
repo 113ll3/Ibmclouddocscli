@@ -1,37 +1,23 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-14"
 
-  years: 2018
-
-
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Creating, canceling, and viewing subnets
+{: #sl-manage-subnets}
 
-A subnet is a logical partition of an IP network into multiple, smaller network segments. Use the following commands to manage {{site.data.keyword.Bluemix}} classic infrastructure subnets.
+A subnet is a logical partition of an IP network into multiple, smaller network segments. Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure subnets.
 {: shortdesc}
 
-<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Subnet commands that have links that bring you to more info for the command">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl subnet cancel](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_cancel)</td>
- <td>[ibmcloud sl subnet create](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_create)</td>
- <td>[ibmcloud sl subnet detail](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_detail)</td>
- <td>[ibmcloud sl subnet list](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_list)</td>
- <td>[ibmcloud sl subnet lookup](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_lookup)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl subnet cancel
+## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 Cancel a subnet.
@@ -73,7 +59,9 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 ibmcloud sl subnet create public 16 567
 ```
-This command creates a public subnet with 16 IP v4 addresses and places it on vlan with ID 567.
+{: codeblock}
+
+This command creates a public subnet with 16 IP v4 addresses and places it on vlan with ID `567`.
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
@@ -95,7 +83,9 @@ ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet detail 12345678
 ```
-This command shows detailed information about subnet with ID 12345678, including virtual servers and hardware servers information.
+{: codeblock}
+
+This command shows detailed information about subnet with ID `12345678`, including virtual servers and hardware servers information.
 
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
@@ -129,6 +119,8 @@ ibmcloud sl subnet list [OPTIONS]
 ```
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
+{: codeblock}
+
 This command lists IP V4 subnets on current account filtering by datacenter is dal09, subnet type is PRIMARY, and network space is PUBLIC.
 
 ## ibmcloud sl subnet lookup
@@ -139,9 +131,10 @@ Find an IP address and display its subnet and device information.
 ibmcloud sl subnet lookup IP_ADDRESS
 ```
 
-
 **Examples**:
 ```
 ibmcloud sl subnet lookup 9.125.235.255
 ```
-This command finds the IP address record with address 9.125.235.255 and display its subnet and device information.
+{: codeblock}
+
+This command finds the IP address record with IP address `9.125.235.255` and display its subnet and device information.

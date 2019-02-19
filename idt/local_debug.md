@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
-
+  years: 2017, 2019
+lastupdated: "2019-02-06"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -23,11 +23,12 @@ There are tools to help you debug your application in Java and Node.js in {{site
 
 Steps to enable the debugging tool for a Java application:
 
-1. From the root directory of your application project run the following command:
+1. From the root directory of your application project, run the following command:
 
-```
-ibmcloud dev debug
-```
+  ```
+  ibmcloud dev debug
+  ```
+  {: codeblock}
 
 2. Connecting the debugger to your application:
 
@@ -36,10 +37,10 @@ ibmcloud dev debug
       2. Create a [Java remote application ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) debug configuration.
       		1. Enter the IP address or `localhost:<port>`  
       		2. Enter `7777` for port number.
-      		3. Specify the name of the java project that you imported.
+      		3. Specify the name of the Java project that you imported.
       6. Set a breakpoint in the IDE.
       7. Run the debug configuration.
-      8. Access the endpoint with a browser to recreate the issue.  
+      8. Access the endpoint with a browser to re-create the issue.  
 	   
 	   The default port is 9080 for the Java basic Microservices endpoint.
 	   {: note}
@@ -49,15 +50,15 @@ ibmcloud dev debug
 	* JDK command line: `jdb -attach <host:port>`
 
 ## Node.js application debugging
-{: #node}
+{: #idt-node-debug}
 
 Steps to enable the debugging tool for a Node.js application:
 
-1. From your application project's root directory run the following command:
-
-```
-ibmcloud dev debug
-```
+1. From your application project's root directory, run the following command:
+  ```
+  ibmcloud dev debug
+  ```
+  {: codeblock}
 
 2. Connecting the debugger to your application:
 	* [VSCode ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://blog.docker.com/2016/07/live-debugging-docker/)

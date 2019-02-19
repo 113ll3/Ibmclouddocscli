@@ -1,11 +1,9 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-06"
 
-  years: 2018
-
-
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -18,63 +16,7 @@ lastupdated: "2018-11-29"
 Use the following commands to manage Cloud Foundry applications, domains and routes.
 {: shortdesc}
 
-<table summary="ibmcloud commands that you can use to manage cf apps and app related domains, routes and certificates.">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud app push](cli_cf_apps.html#ibmcloud_app_push)</td>
- <td>[ibmcloud app list](cli_cf_apps.html#ibmcloud_app_list)</td>
- <td>[ibmcloud app show](cli_cf_apps.html#ibmcloud_app_show)</td>
- <td>[ibmcloud app delete](cli_cf_apps.html#ibmcloud_app_delete)</td>
- <td>[ibmcloud app rename](cli_cf_apps.html#ibmcloud_app_rename)</td>
- </tr>
- <tr>
- <td>[ibmcloud app start](cli_cf_apps.html#ibmcloud_app_start)</td>
- <td>[ibmcloud app stop](cli_cf_apps.html#ibmcloud_app_stop)</td>
- <td>[ibmcloud app restart](cli_cf_apps.html#ibmcloud_app_restart)</td>
- <td>[ibmcloud app restage](cli_cf_apps.html#ibmcloud_app_restage)</td>
- <td>[ibmcloud app instance-restart](cli_cf_apps.html#ibmcloud_app_instance_restart)</td>
- </tr>
- <tr>
- <td>[ibmcloud app events](cli_cf_apps.html#ibmcloud_app_events)</td>
- <td>[ibmcloud app files](cli_cf_apps.html#ibmcloud_app_files)</td>
- <td>[ibmcloud app logs](cli_cf_apps.html#ibmcloud_app_logs)</td>
- <td>[ibmcloud app env](cli_cf_apps.html#ibmcloud_app_env)</td>
- <td>[ibmcloud app env-set](cli_cf_apps.html#ibmcloud_app_env_set)</td>
- </tr>
- <tr>
- <td>[ibmcloud app env-unset](cli_cf_apps.html#ibmcloud_app_env_unset)</td>
- <td>[ibmcloud app stacks](cli_cf_apps.html#ibmcloud_app_stacks)</td>
- <td>[ibmcloud app stack-show](cli_cf_apps.html#ibmcloud_app_stack_show)</td>
- <td>[ibmcloud app manifest-create](cli_cf_apps.html#ibmcloud_app_manifest_create)</td>
- <td>[ibmcloud app domain-cert](cli_cf_apps.html#ibmcloud_app_domain_cert)</td>
- </tr>
- <tr>
- <td>[ibmcloud app domain-cert-add](cli_cf_apps.html#ibmcloud_app_domain_cert_add)</td>
- <td>[ibmcloud app domain-cert-remove](cli_cf_apps.html#ibmcloud_app_domain_cert_remove)</td>
- <td>[ibmcloud app domains](cli_cf_apps.html#ibmcloud_app_domains)</td>
-  <td>[ibmcloud app domain-create](cli_cf_apps.html#ibmcloud_app_domain_create)</td>
-  <td>[ibmcloud app domain-delete](cli_cf_apps.html#ibmcloud_app_domain_delete)</td>
- </tr>
- <tr>
-  <td>[ibmcloud app shared-domain-create](cli_cf_apps.html#ibmcloud_app_shared_domain_create)</td>
-  <td>[ibmcloud app shared-domain-delete](cli_cf_apps.html#ibmcloud_app_shared_domain_delete)</td>
-  <td>[ibmcloud app routes](cli_cf_apps.html#ibmcloud_app_routes)</td>
-  <td>[ibmcloud app route-check](cli_cf_apps.html#ibmcloud_app_route_check)</td>
-  <td>[ibmcloud app route-map](cli_cf_apps.html#ibmcloud_app_route_map)</td>
- </tr>
- <tr>
-  <td>[ibmcloud app route-unmap](cli_cf_apps.html#ibmcloud_app_route_unmap)</td>
-  <td>[ibmcloud app route-create](cli_cf_apps.html#ibmcloud_app_route_create)</td>
-  <td>[ibmcloud app route-delete](cli_cf_apps.html#ibmcloud_app_route_delete)</td>
-  <td>[ibmcloud app orphaned-routes-delete](cli_cf_apps.html#ibmcloud_app_orphaned_routes_delete)</td>
-  <td></td>
- </tr>
-  </tbody>
- </table>
-
- ## ibmcloud app push
+## ibmcloud app push
 {: #ibmcloud_app_push}
 
 This command has the same function and options as the [cf push ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/push.html){: new_window} command.
@@ -117,12 +59,10 @@ This command has the same function and options as the [cf restart ![External lin
 ## ibmcloud app restage
 {: #ibmcloud_app_restage}
 
-
 This command has the same function and options as the [cf restage ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restage.html){: new_window} command.
 
 ## ibmcloud app instance-restart
 {: #ibmcloud_app_instance_restart}
-
 
 This command has the same function and options as the [cf restart-app-instance ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/restart-app-instance.html){: new_window} command.
 
@@ -172,7 +112,7 @@ This command has the same function and options as the [cf stack ![External link 
 This command has the same function and options as the [cf create-app-manifest ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-app-manifest.html){: new_window} command.
 
 ## ibmcloud app domain-cert
-{: #ibmcloud_app_domain_cert}
+{: #cf-list-domain-cert}
 
 List the certificate information of a domain.
 
@@ -198,7 +138,7 @@ ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
 ## ibmcloud app domain-cert-add
-{: #ibmcloud_app_domain_cert_add}
+{: #cf-add-domain-cert}
 
 Add a certificate to the specified domain in the current org.
 
@@ -234,7 +174,7 @@ ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_fil
 ```
 
 ## ibmcloud app domain-cert-remove
-{: #ibmcloud_app_domain_cert_remove}
+{: #cf-remove-domain-cert}
 
 Remove a certificate from the specified domain in current org.
 

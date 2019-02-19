@@ -1,11 +1,9 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-14"
 
-  years: 2018
-
-
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -13,32 +11,24 @@ lastupdated: "2018-11-29"
 {:tip: .tip}
 
 # Creating, editing and deleting compute images
+{: #sl-manage-compute-images}
 
 Use the following commands to manage {{site.data.keyword.Bluemix}} compute images.
 {: shortdesc}
 
-<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} infrastructure Image commands that have links that bring you to more info for the command">
- <tbody>
- <tr>
- <td>[ibmcloud sl image delete](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_delete)</td>
- <td>[ibmcloud sl image detail](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_detail)</td>
- <td>[ibmcloud sl image edit](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_edit)</td>
- <td>[ibmcloud sl image list](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_list)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl image delete
+## ibmcloud sl image delete
 {: #sl_image_delete}
 
 Delete an image.
 ```
 ibmcloud sl image delete IDENTIFIER
 ```
+
 **Examples**:
 ```
-   ibmcloud sl image delete 12345678
+ibmcloud sl image delete 12345678
 ```
+
 This command deletes image with ID `12345678`.
 
 ## ibmcloud sl image detail

@@ -1,20 +1,20 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-30"
+  years: 2016, 2019
+lastupdated: "2019-02-19"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
 # Initializing BMSClient
 {: #sdk_BMSClient}
 
 `BMSCore` provides the HTTP infrastructure that the other {{site.data.keyword.Bluemix}} Web and Mobile services client SDKs use to communicate with their corresponding {{site.data.keyword.Bluemix_notm}} services.
-
 
 ## Initializing your Android application
 {: #init-BMSClient-android}
@@ -43,7 +43,7 @@ You can either download and import the `BMSCore` package to your Android Studio 
 
 You can use [CocoaPods ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cocoapods.org){: new_window} or [Carthage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Carthage/Carthage){: new_window} to get the `BMSCore` package.
 
-1. To install `BMSCore` by using CocoaPods, add the following lines to your Podfile. If your project does not have a Podfile yet, use the `pod init` command.
+1. To install `BMSCore` by using CocoaPods, add the following lines to your Podfile. If your project doesn't have a Podfile yet, use the `pod init` command.
 
   ```Swift
   use_frameworks!
@@ -89,7 +89,7 @@ You can use [CocoaPods ![External link icon](../../icons/launch-glyph.svg "Exter
   ```
   {: codeblock}
 
-  You must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
+  You must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you're using, for example, `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
 
 
 ## Initializing your Cordova application
@@ -109,14 +109,11 @@ You can use [CocoaPods ![External link icon](../../icons/launch-glyph.svg "Exter
   ```
   {: codeblock}
 
-  You must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
+  You must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you're using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
 
-
-# Related Links
-{: #rellinks notoc}
 
 ## Related Links
-{: #general notoc}
+{: #BMSClient-rellinks notoc}
 
 * [BMSCore Android SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
 * [BMSCore iOS SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}

@@ -184,7 +184,7 @@ ibmcloud config --locale CLEAR
 ## ibmcloud info
 {: #ibmcloud_info}
 
-The `ibmcloud info` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+The `ibmcloud info` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html#install-ibmcloud-cli}).
 {: note}
 
 ## ibmcloud cf
@@ -443,7 +443,7 @@ To view help information about a command, run:
 ibmcloud sl [command] -h
 ```
 
-The `ibmcloud sl init` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+The `ibmcloud sl init` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html#install-ibmcloud-cli}).
 {: note}
 
 ## ibmcloud sl help

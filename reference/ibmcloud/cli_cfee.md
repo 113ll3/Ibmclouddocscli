@@ -1,74 +1,32 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-14"
 
-  years: 2018
-
-
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Working with the Cloud Foundry Enterprise Environment service
 {: #ibmcloud_commands_cfee}
 
-With {{site.data.keyword.cfee_full}} (CFEE) you can instantiate multiple, isolated, enterprise-grade Cloud Foundry platforms on-demand. Instances of the IBM Cloud Foundry Enterprise service run within your own account in the IBM Cloud. The environment is deployed on isolated hardware (Kubernetes clusters). You have full control over the environment, including access control, capacity, version updates, resource usage and monitoring.
+With {{site.data.keyword.cfee_full}} (CFEE) you can instantiate multiple, isolated, enterprise-grade Cloud Foundry platforms on-demand. Instances of the IBM Cloud Foundry Enterprise service run within your own account in the {{site.data.keyword.cloud_notm}}. The environment is deployed on isolated hardware (Kubernetes clusters). You have full control over the environment, including access control, capacity, version updates, resource usage, and monitoring.
 
-Use the following commands to manage CFEE environments, orgs, spaces, users and roles.
+Use the following commands to manage CFEE environments, orgs, spaces, users, and roles.
 {: shortdesc}
 
-<table summary="Manage Cloud Foundry Enterprise Environments (experimental)">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud cfee environments](cli_cfee.html#ibmcloud_cfee_environments)</td>
- <td>[ibmcloud cfee environment](cli_cfee.html#ibmcloud_cfee_environment)</td>
- <td>[ibmcloud cfee orgs](cli_cfee.html#ibmcloud_cfee_orgs)</td>
- <td>[ibmcloud cfee org](cli_cfee.html#ibmcloud_cfee_org)</td>
- <td>[ibmcloud cfee org-create](cli_cfee.html#ibmcloud_cfee_org_create)</td>
- </tr>
- <tr>
- <td>[ibmcloud cfee org-delete](cli_cfee.html#ibmcloud_cfee_org_delete)</td>
- <td>[ibmcloud cfee org-users](cli_cfee.html#ibmcloud_cfee_org_users)</td>
- <td>[ibmcloud cfee org-role-set](cli_cfee.html#ibmcloud_cfee_org_role_set)</td>
- <td>[ibmcloud cfee org-role-unset](cli_cfee.html#ibmcloud_cfee_org_role_unset)</td>
- <td>[ibmcloud cfee spaces](cli_cfee.html#ibmcloud_cfee_spaces)</td>
- </tr>
-<tr>
- <td>[ibmcloud cfee space](cli_cfee.html#ibmcloud_cfee_space)</td>
- <td>[ibmcloud cfee space-create](cli_cfee.html#ibmcloud_cfee_space_create)</td>
- <td>[ibmcloud cfee space-rename](cli_cfee.html#ibmcloud_cfee_space_rename)</td>
- <td>[ibmcloud cfee space-delete](cli_cfee.html#ibmcloud_cfee_space_delete)</td>
- <td>[ibmcloud cfee space-role-set](cli_cfee.html#ibmcloud_cfee_space_role_set)</td>
- </tr>
- <tr>
-
- <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
- <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
- <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
- <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
- <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
- </tr>
- <tr>
- <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
- <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
- <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud cfee environments
+## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
-List CFEE environments.
-
+List CFEE environments:
 ```
 ibmcloud cfee environments
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
@@ -77,8 +35,7 @@ ibmcloud cfee environments
 ## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
-Show details of a CFEE environment
-
+Show details of a CFEE environment:
 ```
 ibmcloud cfee environment NAME [--id]
 ```
@@ -96,22 +53,21 @@ ibmcloud cfee environment NAME [--id]
 <strong>Examples</strong>:
 
 Show details of a CFEE environment `env_example`:
-
 ```
 ibmcloud cfee environment env_example
 ```
+{: codeblock}
 
 Show id of a CFEE environment `env_example`:
-
 ```
 ibmcloud cfee environment env_example --id
 ```
+{: codeblock}
 
 ## ibmcloud cfee orgs
 {: #ibmcloud_cfee_orgs}
 
-List all orgs
-
+List all orgs:
 ```
 ibmcloud cfee orgs [--env ENV]
 ```
@@ -127,22 +83,21 @@ ibmcloud cfee orgs [--env ENV]
 <strong>Examples</strong>:
 
 List all orgs:
-
 ```
 ibmcloud cfee orgs
 ```
+{: codeblock}
 
 List all orgs of CFEE environment `env_example`:
-
 ```
 ibmcloud cfee orgs --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org
 {: #ibmcloud_cfee_org}
 
-Display details of an org
-
+Display details of an org:
 ```
 ibmcloud cfee org ORG [--guid] [--env ENV]
 ```
@@ -162,28 +117,27 @@ ibmcloud cfee org ORG [--guid] [--env ENV]
 <strong>Examples</strong>:
 
 Show details of a CFEE org `org_example`:
-
 ```
 ibmcloud cfee org org_example
 ```
+{: codeblock}
 
 Show details of a CFEE org `org_example` of CFEE environment `env_example`:
-
 ```
 ibmcloud cfee org org_example --env env_example
 ```
+{: codeblock}
 
 Show GUID of a CFEE org `org_example`:
-
 ```
 ibmcloud cfee org org_example --guid
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-create
 {: #ibmcloud_cfee_org_create}
 
-Create an org
-
+Create an org:
 ```
 ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 ```
@@ -203,28 +157,27 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 <strong>Examples</strong>:
 
 Create a CFEE org `org_example`:
-
 ```
 ibmcloud cfee org-create org_example
 ```
+{: codeblock}
 
 Create a CFEE org `org_example` of CFEE environment `env_example`:
-
 ```
 ibmcloud cfee org-create org_example --env env_example
 ```
+{: codeblock}
 
 Create a CFEE org `org_example` with quota `quote_example`:
-
 ```
 ibmcloud cfee org org-create org_example --quota quota_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-delete
 {: #ibmcloud_cfee_org_delete}
 
-Delete an org
-
+Delete an org:
 ```
 ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 ```
@@ -244,28 +197,27 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 <strong>Examples</strong>:
 
 Delete a CFEE org `org_example`:
-
 ```
 ibmcloud cfee org-delete org_example
 ```
+{: codeblock}
 
 Delete a CFEE org `org_example` of CFEE environment `env_example`:
-
 ```
 ibmcloud cfee org-delete org_example --env env_example
 ```
+{: codeblock}
 
 Delete a CFEE org `org_example` without confirmation:
-
 ```
 ibmcloud cfee org org-delete org_example -f
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-users
 {: #ibmcloud_cfee_org_users}
 
-Display users in specified organization by role
-
+Display users in specified organization by role:
 ```
 ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 ```
@@ -285,28 +237,27 @@ ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 <strong>Examples</strong>:
 
 Display users in CFEE org `org_example`:
-
 ```
 ibmcloud cfee org-users org_example
 ```
+{: codeblock}
 
 Display users in CFEE org `org_example` of CFEE environment `env_example`:
-
 ```
 ibmcloud cfee org-users org_example --env env_example
 ```
+{: codeblock}
 
 List all users in CFEE org `org_example`:
-
 ```
 ibmcloud cfee org-users org_example -a
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-role-set
 {: #ibmcloud_cfee_org_role_set}
 
 Assign an org role to a user (org manager required)
-
 ```
 ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -334,22 +285,21 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 <strong>Examples</strong>:
 
 Assign role `BillingManager` to user `test@exmaple.com` in org `org_example`:
-
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager
 ```
+{: codeblock}
 
 Assign role `BillingManager` to user `test@exmaple.com` in org `org_example` of CFEE environment `env_example`:
-
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-role-unset
 {: #ibmcloud_cfee_org_role_unset}
 
-Remove an org role from a user (org manager or user him/herself only)
-
+Remove an org role from a user (org manager or user only):
 ```
 ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -377,22 +327,21 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 <strong>Examples</strong>:
 
 Remove role `BillingManager` of user `test@exmaple.com` from org `org_example`:
-
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager
 ```
+{: codeblock}
 
 Remove role `BillingManager` of user `test@exmaple.com` from org `org_example` of CFEE environment `env_example`:
-
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee spaces
 {: #ibmcloud_cfee_spaces}
 
-List all spaces
-
+List all spaces:
 ```
 ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 ```
@@ -409,23 +358,22 @@ ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 
 <strong>Examples</strong>:
 
-List all spaces
-
+List all spaces:
 ```
 ibmcloud cfee spaces
 ```
+{: codeblock}
 
 List all spaces of org `org_example` and CFEE environment `env_example`
-
 ```
 ibmcloud cfee spaces -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space
 {: #ibmcloud_cfee_space}
 
 Show the info of specified space
-
 ```
 ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--env ENV]
 ```
@@ -449,34 +397,33 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
 <strong>Examples</strong>:
 
 Show the info of space `space_example`:
-
 ```
 ibmcloud cfee space space_example
 ```
+{: codeblock}
 
 Retrieve and display the guid of space `space_example`:
-
 ```
 ibmcloud cfee space space_example --guid
 ```
+{: codeblock}
 
 Show the rules for all the security groups associated with space `space_example`:
-
 ```
 ibmcloud cfee space space_example --security-group-rules
 ```
+{: codeblock}
 
 Show the info of space `space_example` of org `org_example` and CFEE environment `env_example`:
-
 ```
 ibmcloud cfee space space_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-create
 {: #ibmcloud_cfee_space_create}
 
 Create a new space
-
 ```
 ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 ```
@@ -496,22 +443,21 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 <strong>Examples</strong>:
 
 Create a new space `space_example`:
-
 ```
 ibmcloud cfee space-create space_example
 ```
+{: codeblock}
 
 Create a new space `space_example` under org `org_example` and CFEE environment `env_example`:
-
 ```
 ibmcloud cfee space-create space_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-rename
 {: #ibmcloud_cfee_space_rename}
 
-Rename a space
-
+Rename a space:
 ```
 ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 ```
@@ -523,7 +469,7 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
    <dt>OLD_NAME (required)</dt>
    <dd>The old name of the space that is to be renamed.</dd>
    <dt>NEW_NAME (required)</dt>
-   <dd>The new name of the space that it is renamed to.</dd>
+   <dd>The new name of the space that it's renamed to.</dd>
    <dt>--env ENV</dt>
    <dd>CFEE environment name. Default to current CFEE environment if not specified.</dd>
    <dt>-o, --org ORG</dt>
@@ -533,22 +479,21 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 <strong>Examples</strong>:
 
 Rename space `space_example` to `new_pace_example`:
-
 ```
 ibmcloud cfee space-rename space_example new_pace_example
 ```
+{: codeblock}
 
 Rename space `space_example` to `new_pace_example` under org `org_example` and CFEE environment `env_example`:
-
 ```
 ibmcloud cfee space-rename space_example new_pace_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-delete
 {: #ibmcloud_cfee_space_delete}
 
-Delete a space
-
+Delete a space:
 ```
 ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 ```
@@ -570,22 +515,21 @@ ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 <strong>Examples</strong>:
 
 Delete space `space_example`:
-
 ```
 ibmcloud cfee space-delete space_example
 ```
+{: codeblock}
 
 Delete space `space_example` under org `org_example` and CFEE environment `env_example` without confirmation:
-
 ```
 ibmcloud cfee space-delete space_example new_pace_example -f -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-role-set
 {: #ibmcloud_cfee_space_role_set}
 
 Assign a space role to a user
-
 ```
 ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -614,22 +558,21 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>Examples</strong>:
 
 Assign user `test@exmaple.com` to org `org_example` and space `space_example` as `SpaceManager` role:
-
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager
 ```
+{: codeblock}
 
 Assign user `test@exmaple.com` to org `org_example` and space `space_example` as `SpaceManager` role under environment `env_example`:
-
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-role-unset
 {: #ibmcloud_cfee_space_role_unset}
 
 Remove a space role from a user
-
 ```
 ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -658,16 +601,16 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>Examples</strong>:
 
 Remove user `test@exmaple.com` to org `org_example` and space `space_example` as `SpaceManager` role:
-
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager
 ```
+{: codeblock}
 
 Remove user `test@exmaple.com` to org `org_example` and space `space_example` as `SpaceManager` role under environment `env_example`:
-
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-roles
 {: #ibmcloud_cfee_space_roles}
@@ -691,22 +634,21 @@ ibmcloud cfee space-roles ORG [--env ENV]
 <strong>Examples</strong>:
 
 Get all space roles of current user under org `org_example`:
-
 ```
 ibmcloud cfee space-roles org_example
 ```
+{: codeblock}
 
 Get all space roles of current user under org `org_example` and environment `env_example`:
-
 ```
 ibmcloud cfee space-roles org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-users
 {: #ibmcloud_cfee_space_users}
 
 Display users in specified space by role
-
 ```
 ibmcloud cfee space-users ORG SPACE [--env ENV]
 ```
@@ -726,22 +668,21 @@ ibmcloud cfee space-users ORG SPACE [--env ENV]
 <strong>Examples</strong>:
 
 Display all users in space `space_example` and org `org_example`:
-
 ```
 ibmcloud cfee space-users org_example space_example
 ```
+{: codeblock}
 
 Display all users in space `space_example` and org `org_example` and environment `env_example`:
-
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee create
 {: #ibmcloud_cfee_create}
 
-Make request to a create a new instance of Cloud Foundry Enterprise Environment
-
+Make request to a create a new instance of Cloud Foundry Enterprise Environment:
 ```
 ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
 ```
@@ -755,7 +696,7 @@ ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--pr
    <dt>LOCATION (required)</dt>
    <dd>The location to create the instance in.</dd>
    <dt>--cells CELLS</dt>
-   <dd>Specify the number of cells for this CFEE. The default is 2, and minimum is 1. In a 1 cell CFEE, there cannot be high availability.</dd>
+   <dd>Specify the number of cells for this CFEE. The default is 2, and minimum is 1. In a 1 cell CFEE, there can't be high availability.</dd>
    <dt>--isolation ISOLATION</dt>
    <dd>Specifiy the isolation of the IBM Kubernetes cluster. Options are "dedicated" and "shared". The default is "shared", and a "dedicated" cluster does charge more.</dd>
    <dt>--private-vlan ID</dt>
@@ -784,10 +725,10 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 {: #ibmcloud_cfee_create_locations}
 
 Make request to get a list of available datacenters for the targeted regions
-
 ```
 ibmcloud cfee create-locations
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
@@ -797,7 +738,7 @@ ibmcloud cfee create-locations
 ## ibmcloud cfee create-permission-get
 {: #ibmcloud_cfee_create_permission_get}
 
-Check if a user has all the permissions required to create a CFEE instance. The command checks the following access policies for the target user: Editor to the CFEE services, administrator role to the Kubernetes Service, editor for the platform role and manager for the service access role to the Cloud Object Storage service, and developer role to the current space in the current org for provisioning Compose for PostgreSQL
+Check if a user has all the permissions that are required to create a CFEE instance. The command checks the following access policies for the target user: Editor to the CFEE services, administrator role to the Kubernetes Service, editor for the platform role and manager for the service access role to the Cloud Object Storage service, and developer role to the current space in the current org for provisioning Compose for PostgreSQL
 
 ```
 ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [--output FORMAT]
@@ -851,22 +792,21 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
 <strong>Examples</strong>:
 
 Give CFEE create permissions to user `name@example.com` via the default access group:
-
 ```
 ibmcloud cfee create-permission-set name@example.com
 ```
+{: codeblock}
 
 Give CFEE create permissions to user `name@example.com` via access group `test-access-group`:
-
 ```
 ibmcloud cfee create-permission-set name@example.com -ag test-access-group
 ```
+{: codeblock}
 
 ## ibmcloud cfee create-status
 {: #ibmcloud_cfee_create_status}
 
-Check the provisioning status of a CFEE instance
-
+Check the provisioning status of a CFEE instance:
 ```
 ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
 ```

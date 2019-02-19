@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-13"
 {:new_window: target="_blank"}
 
 # Getting started with the {{site.data.keyword.cloud_notm}} CLI
-{: #overview}
+{: #ibmcloud-cli}
 
 In this tutorial, you install a set of {{site.data.keyword.cloud}} Developer tools, verify the installation, and configure the environment. {{site.data.keyword.cloud_notm}} Developer tools offer a command line approach to creating, developing, and deploying web, mobile, and microservice applications.
 {: shortdesc}
@@ -60,7 +60,7 @@ You need an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){:
 
   You can also download the installer script from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
 
-  For the steps to install these tools manually, see [Reinstalling tools](/docs/cli/ts_createapps.html#appendix).
+  For the steps to install these tools manually, see [Reinstalling tools](/docs/cli/install_devtools_manually#install-devtools-manually).
 
 ## Step 2. Verify the installation
 {: #step2-verify-idt}

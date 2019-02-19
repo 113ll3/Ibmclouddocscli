@@ -1,55 +1,54 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-17"
+  years: 2015, 2019
+lastupdated: "2019-02-06"
 
 ---
-
-
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-
-# Debugging cf apps for {{site.data.keyword.Bluemix_notm}}
+# Debugging cf apps for {{site.data.keyword.cloud_notm}}
 {: #debugging}
 
-If you experience problems with {{site.data.keyword.Bluemix}}, you can view the log files to investigate the problems and debug the errors.
+If you experience problems with {{site.data.keyword.cloud}}, you can view the log files to investigate the problems and debug the errors.
 {:shortdesc}
 
 Logs provide information such as whether a job runs successfully, or whether it fails. They also provide relevant information that can be used to debug and determine the cause of a problem.
 
 Logs are in a fixed format. For verbose logs, you can filter the logs or use external logging hosts to store and process the logs. For more information about log formats, viewing and filtering logs, and configuring external logging, see [Logging for apps that are running on Cloud Foundry ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/monitor_log/logging.html#logging){: new_window}.
 
-
 ## Debugging staging errors
 {: #debugging-staging-errors}
-You might experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}. If your app fails to stage, you can search and review staging (STG) logs to determine what has happened during the app deployment and to recover from the problem. For more information about the methods of viewing logs for {{site.data.keyword.Bluemix}} apps, see [viewing logs ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}.  
 
-To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need to know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For more information, see [Application deployment ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
+You might experience problems when you stage your applications on {{site.data.keyword.cloud_notm}}. If your app fails to stage, you can search and review staging (STG) logs to determine what has happened during the app deployment and to recover from the problem. For more information about the methods of viewing logs for {{site.data.keyword.cloud_notm}} apps, see [viewing logs ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana){: new_window}.  
 
+To understand why your app might be failing on {{site.data.keyword.cloud_notm}}, you need to know how an app is deployed to {{site.data.keyword.cloud_notm}} and runs on it. For more information, see [Application deployment ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cfapps/depapps.html#appdeploy){: new_window}.
 
-The following procedure shows how you can use the `cf logs` command to debug errors. Before you take the following steps, ensure that you have installed the Cloud Foundry command line interface. For more information about installing the Cloud Foundry command line interface, see [Installing the Cloud Foundry command line interface ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/starters/install_cli.html){: new_window}.
+The following procedure shows how you can use the `cf logs` command to debug errors. Before you take the following steps, ensure that you've installed the Cloud Foundry command line interface. For more information about installing the Cloud Foundry command line interface, see [Installing the Cloud Foundry command line interface ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/starters/install_cli.html){: new_window}.
 
-  1. Connect to {{site.data.keyword.Bluemix_notm}} by entering the following code in the Cloud Foundry command line interface:
-     ```
-	 cf api https://api.ng.bluemix.net
-	 ```
+  1. Connect to {{site.data.keyword.cloud_notm}} by entering the following code in the Cloud Foundry command line interface:
+    ```
+	  cf api https://api.ng.bluemix.net
+	  ```
+    {: codeblock}
 
-  2. Log in to {{site.data.keyword.Bluemix_notm}} by entering `cf login`.
+  2. Log in to {{site.data.keyword.cloud_notm}} by entering `cf login`.
 
   3. Retrieve recent logs by entering `cf logs appname --recent`. If you want to filter a verbose log, use the `grep` option. For example, you can enter the following code to display only the [STG] logs:
     ```
-	cf logs appname --recent | grep '\[STG\]'
-	```
+	  cf logs appname --recent | grep '\[STG\]'
+	  ```
+    {: codeblock}
+
   4. View the first error that is displayed in the log.
 
-If you use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} plug-in to deploy applications, in the **Console** tab of the Eclipse tool, you can see logs that are similar to the cf logs output. You can also open a separate Eclipse window to track `the logs` when you deploy the application.
+If you use the IBM Eclipse tools for {{site.data.keyword.cloud_notm}} plug-in to deploy applications, in the **Console** tab of the Eclipse tool, you can see logs that are similar to the cf logs output. You can also open a separate Eclipse window to track `the logs` when you deploy the application.
 
-In addition to the `cf logs` command, in {{site.data.keyword.Bluemix_notm}} you can also use the {{site.data.keyword.loganalysisshort}} service to collect the log details.
+In addition to the `cf logs` command, in {{site.data.keyword.cloud_notm}} you can also use the {{site.data.keyword.loganalysisshort}} service to collect the log details.
 
 ### Debugging staging errors for a Node.js application
 
@@ -104,7 +103,7 @@ You can see that a comma is placed at the end of line 17, therefore, a key-value
 {: #debugging-runtime-errors}
 If you experience problems with your application at run time, application logs can help to pinpoint the cause of the error and recover from that problem.
 
-Specifically, logging to stdout and stderr can be enabled. For more information about how to configure the log files for applications that are deployed by using the {{site.data.keyword.Bluemix_notm}} built-in buildpacks, see the following list:
+Specifically, logging to stdout and stderr can be enabled. For more information about how to configure the log files for applications that are deployed by using the {{site.data.keyword.cloud_notm}} built-in buildpacks, see the following list:
 
   * For Liberty for Java™ applications, see [Liberty: Logging and Trace ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}.
   * For Node.js applications, see [Node.js debugging starts with better logging! ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/03/node-js-better-logging/){: new_window}.
@@ -120,10 +119,10 @@ When you enter `cf logs appname --recent` in the Cloud Foundry command line inte
 <dt><strong>Third-party tools</strong></dt>
 <dd>You can collect and export the logs from your application to an external log host. For more information, see <a href="/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov" target="_blank">Configuring external logging</a>.</dd>
 <dt><strong>Scripts to collect and export the logs </strong></dt>
-<dd>To use a script to automatically collect and export the logs to an external file, you must connect to the {{site.data.keyword.Bluemix_notm}} console from your computer, and you must have enough space on your computer to download the logs. For more information, see <a href="/docs/get-support/quicktickresp.html#collecting-diagnostic-information" target="_blank">Collecting diagnostic information</a>. </dd>
+<dd>To use a script to automatically collect and export the logs to an external file, you must connect to the {{site.data.keyword.cloud_notm}} console from your computer, and you must have enough space on your computer to download the logs. For more information, see <a href="/docs/get-support/quicktickresp.html#collecting-diagnostic-information" target="_blank">Collecting diagnostic information</a>. </dd>
 </dl>
 
-The `stdout.log` and `stderr.log` files were previously accessible, by default, through the application view in the {{site.data.keyword.Bluemix_notm}} console under **Files** > **logs**. However, that application logging is no longer available with the current version of Cloud Foundry where {{site.data.keyword.Bluemix_notm}} is hosted. To keep the stdout and stderr application logging accessible through the {{site.data.keyword.Bluemix_notm}} console under **Files** > **logs**, you can redirect the logging to other files in the {{site.data.keyword.Bluemix_notm}} file system, depending on the runtime that you are using.
+The `stdout.log` and `stderr.log` files were previously accessible, by default, through the application view in the {{site.data.keyword.cloud_notm}} console under **Files** > **logs**. However, that application logging is no longer available with the current version of Cloud Foundry where {{site.data.keyword.cloud_notm}} is hosted. To keep the stdout and stderr application logging accessible through the {{site.data.keyword.cloud_notm}} console under **Files** > **logs**, you can redirect the logging to other files in the {{site.data.keyword.cloud_notm}} file system, depending on the runtime that you're using.
 
   * For Liberty for Java applications, output directed to stdout and stderr is already contained in the `messages.log` file in the logs directory. Look for entries that are prefixed with SystemOut and SystemErr.
   * For Node.js applications, you can override the console.log function to explicitly write to a file in the logs directory.
@@ -135,10 +134,10 @@ The `stdout.log` and `stderr.log` files were previously accessible, by default, 
 ### Debugging code changes
 {: #debug_code_changes}
 
-If you are making code changes to an app that is already deployed and working, yet your code changes aren't being reflected in {{site.data.keyword.Bluemix_notm}}, you can debug by using the logs. Whether or not your app is running, you can check the logs that are generated during the app deployment or runtime to debug why the new code isn't working.
+If you are making code changes to an app that is already deployed and working, yet your code changes aren't being reflected in {{site.data.keyword.cloud_notm}}, you can debug by using the logs. Whether or not your app is running, you can check the logs that are generated during the app deployment or runtime to debug why the new code isn't working.
 
 Depending on the way the new code is deployed, choose one of the following methods to debug the code changes:
 
   * For new code that is deployed from the cf command line, check the output from the *cf push* command. In addition, you can use the *cf logs* command to find more clues for solving the problem. For more information about how to use the *cf logs* command, see [viewing logs from the command line interface](/docs/services/CloudLogAnalysis/manage_logs.html#manage_logs).
 
-  * For new code that is deployed from a GUI such as the {{site.data.keyword.Bluemix_notm}} console, DevOps Delivery Pipeline, or Travis-CI, you can check the logs from the interface. For example, if you deploy the new code from {{site.data.keyword.Bluemix_notm}} console, you can go to Dashboard, find your app, and then view logs for clues.   For more information about how to view logs from the {{site.data.keyword.Bluemix_notm}} console, see [Viewing logs from {{site.data.keyword.Bluemix}} Dashboard](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana).
+  * For new code that is deployed from a GUI such as the {{site.data.keyword.cloud_notm}} console, DevOps Delivery Pipeline, or Travis-CI, you can check the logs from the interface. For example, if you deploy the new code from {{site.data.keyword.cloud_notm}} console, you can go to Dashboard, find your app, and then view logs for clues. For more information about how to view logs from the {{site.data.keyword.cloud_notm}} console, see [Viewing logs from {{site.data.keyword.cloud}} Dashboard](/docs/services/CloudLogAnalysis/kibana/analyzing_logs_Kibana.html#analyzing_logs_Kibana).

@@ -1,10 +1,11 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-30"
+  years: 2016, 2019
+lastupdated: "2019-02-14"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -18,7 +19,7 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 ## Android
 {: #request-android}
 
-1. Make sure you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-android) in your Android application.
+1. Make sure you've [imported the Client SDK and initialized it](/docs/cli/sdk/sdk_BMSClient.html#init-BMSClient-android) in your Android application.
 
 2. Make a network request.
 
@@ -42,7 +43,7 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	```
 	{: codeblock}
 
-The `Request` class is a simple way to make an HTTP request and get the response after the request is completed. If you are downloading or uploading large files or large bodies of data, you can use the `Request` `download` or `upload` methods. To monitor the progress of the download or upload, create a custom `ProgressListener` and pass it to the `download` or `upload` methods.
+The `Request` class is a simple way to make an HTTP request and get the response after the request is completed. If you're downloading or uploading large files or large bodies of data, you can use the `Request` `download` or `upload` methods. To monitor the progress of the download or upload, create a custom `ProgressListener` and pass it to the `download` or `upload` methods.
 
 <!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
 
@@ -50,7 +51,7 @@ The `Request` class is a simple way to make an HTTP request and get the response
 ## iOS
 {: #request-ios}
 
-1. Make sure you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-ios) in your iOS application.
+1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk/sdk_BMSClient.html#init-BMSClient-ios) in your iOS application.
 
 2. Create a network request.
 
@@ -90,7 +91,7 @@ The `Request` class is a simple way to make an HTTP request and get the response
 	```
 	{: codeblock}
 
-The `Request` class is a simple way to make an HTTP request and get the response after the request is completed. If you want more flexibility and control than what you can get from the `Request` class, you can use the `BMSURLSession` class. Some features of the `BMSURLSession` class include monitoring progress of uploads, and pausing or canceling requests. To get the responses, you have the option to choose either completion handlers or delegates.
+The `Request` class is a simple way to make an HTTP request and get the response after the request is completed. If you want more flexibility and control than what you can get from the `Request` class, you can use the `BMSURLSession` class. Some features of the `BMSURLSession` class include monitoring progress of uploads, and pausing or canceling requests. To get the responses, you can choose either completion handlers or delegates.
 
 The `BMSURLSession` class is available for iOS only.
 
@@ -100,7 +101,7 @@ For complete usage examples, see the `BMSCore` GitHub [README ![External link ic
 ## Cordova
 {: #request-cordova}
 
-1. Make sure you have [imported the Client SDK and initialized it](sdk_BMSClient.html#init-BMSClient-cordova) in your Cordova application.
+1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk/sdk_BMSClient.html#init-BMSClient-cordova) in your Cordova application.
 
 2. Create a network request.
 

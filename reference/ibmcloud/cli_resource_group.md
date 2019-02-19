@@ -2,12 +2,13 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-14"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Working with resources and resource groups
@@ -85,10 +86,11 @@ ibmcloud resource group example-group --id
 ## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
-Create a resource group
+Create a resource group:
 ```
 ibmcloud resource group-create NAME
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
@@ -134,11 +136,13 @@ Rename resource group `example-group` to `trial-group`:
 ```
 ibmcloud resource group-update example-group -n trial-group
 ```
+{: codeblock}
 
 Change the quota of resource group `example-group` to `free`:
 ```
 ibmcloud resource group-update example-group -q free
 ```
+{: codeblock}
 
 ## ibmcloud resource quotas
 {: #ibmcloud_resource_quotas}
@@ -156,11 +160,12 @@ ibmcloud resource quotas
 </dl>
 
 <strong>Examples</strong>:
-List all quota definitions:
 
+List all quota definitions:
 ```
 ibmcloud resource quotas
 ```
+{: codeblock}
 
 ## ibmcloud resource quota
 {: #ibmcloud_resource_quota}
@@ -169,6 +174,7 @@ Show details of a quota definition.
 ```
 ibmcloud resource quota NAME
 ```
+{: codeblock}
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
@@ -184,6 +190,7 @@ Show details of quota `free`:
 ```
 ibmcloud resource quota free
 ```
+{: codeblock}
 
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
@@ -235,6 +242,7 @@ List service instances of service `test-service`:
 ```
 ibmcloud resource service-instances --service-name test-service
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance
 {: #ibmcloud_resource_service_instance}
@@ -267,6 +275,7 @@ Show details of service instance `my-service-instance`:
 ```
 ibmcloud resource service-instance my-service-instance
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
@@ -283,7 +292,7 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dt>NAME (required)</dt>
   <dd>Name of the service instance</dd>
   <dt>SERVICE_NAME or SERVICE_ID (required)</dt>
-  <dd>Name or ID of the service</dd>
+  <dd>Name or ID of the service. To list service offerings, use the `ibmcloud catalog service-marketplace`[command](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace).</dd>
   <dt>SERVICE_PLAN_NAME or SERVICE_PLAN_ID (required)</dt>
   <dd>Name or ID of the service plan</dd>
   <dt>LOCATION</dt>
@@ -300,6 +309,7 @@ Create a service instance that is named `my-service-instance` using service plan
 ```
 ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance-update
 {: #ibmcloud_resource_service_instance_update}
@@ -362,6 +372,7 @@ Delete resource service-instance `my-service-instance`:
 ```
 ibmcloud resource service-instance-delete my-service-instance
 ```
+{: codeblock}
 
 ## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
@@ -416,6 +427,7 @@ Show details of service binding between service alias `my-service-alias` and app
 ```
 ibmcloud resource bindings my-service-alias my-app
 ```
+{: codeblock}
 
 ## ibmcloud resource service-binding-create
 {: #ibmcloud_resource_service_binding_create}
@@ -449,6 +461,7 @@ Create a service binding between service alias `my-service-alias` and app `my-ap
 ```
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
+{: codeblock}
 
 ## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
@@ -475,6 +488,7 @@ Delete the service binding between service alias `my-service-alias` and app `my-
 ```
 ibmcloud resource service-binding-delete my-service-alias my-app
 ```
+{: codeblock}
 
 ## ibmcloud resource service-keys
 {: #ibmcloud_resource_service_keys}
@@ -512,13 +526,19 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 
 Displays the details of any number of service keys, where the first *n* characters of the service key name matches the supplied KEY_NAME.
 ```
-ibmcloud resource service-key (NAME|ID) [-g RESOURCE_GROUP] [--id] [--output FORMAT]
+ibmcloud resource service-key (NAME | ID) [-g RESOURCE_GROUP] [--id] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
+  <dt>NAME</dt>
+  <dd>Name of the key</dd>
+  <dt>ID</dt>
+  <dd>ID of the key</dd>
+  <dt>-g</dt>
+  <dd>Resource group name</dd>
   <dt>--id</dt>
   <dd>Display the ID of service key. This option is exclusive with '--output'.</dd>
   <dt>-g RESOURCE_GROUP</dt>
@@ -851,7 +871,7 @@ ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-
 ```
 
 Search for resources whose name contains the word dev in the Cloud Foundry space with the specified ID:
-```            
+```
 ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
 ```
 
@@ -884,17 +904,19 @@ Search for a resource with the specified tag:
 ```
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
+{: codeblock}
 
 Search for Classic Infrastructure Virtual Guest resource with the specified id (only with -p classic-infrastructure):
 ```
 ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
 ```
+{: codeblock}
 
 Search for Classic Infrastructure Hardware resource with the specified tag name (only with -p classic-infrastructure):
 ```
 ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
 ```
-
+{: codeblock}
 
 ## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
@@ -919,12 +941,10 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
 </dl>
 
 
-
 ## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
 
-Attach one or more tags to a resource
-
+Attach one or more tags to a resource:
 ```
 ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
 ```
@@ -943,8 +963,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
-Detaching one or more tags from a resource
-
+Detaching one or more tags from a resource:
 ```
 ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
 ```
@@ -962,12 +981,10 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
 </dl>
 
 
-
 ## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
 
-Deleting a tag
-
+Deleting a tag:
 ```
 ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
 ```

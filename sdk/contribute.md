@@ -1,10 +1,11 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2019
+lastupdated: "2019-02-14"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -15,18 +16,18 @@ lastupdated: "2018-11-30"
 # Contributing to the SDK plug-in
 {: #contribute}
 
-Follow these guidelines to contribute to the {{site.data.keyword.Bluemix}} CLI SDK plug-in.
+Follow these guidelines to contribute to the {{site.data.keyword.cloud}} CLI SDK plug-in.
 
 ## Setting up your development environment
 {: #dev-env}
 
 * Cloud Foundry [CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli/releases).
 
-   The Cloud Foundry CLI is not required, but it helps to access {{site.data.keyword.Bluemix_notm}} from the Terminal.
+   The Cloud Foundry CLI isn't required, but it helps to access {{site.data.keyword.cloud_notm}} from the Terminal.
 
-   For more information about the Cloud Foundry CLI, see the [documentation](/docs/cli/reference/cfcommands/index.html).
+   For more information about the Cloud Foundry CLI, see the [documentation](/docs/cli/reference/ibmcloud/cf_index.html#cf).
 
-* {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview).
+* {{site.data.keyword.cloud_notm}} [CLI](/docs/cli/index.html#ibmcloud-cli).
 
    This plug-in installs into the {{site.data.keyword.Bluemix_notm}} CLI. The {{site.data.keyword.Bluemix_notm}} CLI also provides useful resources to access {{site.data.keyword.Bluemix_notm}} from the Terminal.
 
@@ -44,7 +45,7 @@ Follow these guidelines to contribute to the {{site.data.keyword.Bluemix}} CLI S
 
 * Dependency manager: [govendor ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/kardianos/govendor)
 
-   The `govendor` tool creates and manages the Go dependencies. You do not need it unless you plan to update the vendor directory.
+   The `govendor` tool creates and manages the Go dependencies. You don't need it unless you plan to update the vendor directory.
 
    * Install it by using the following command.
 
@@ -69,7 +70,7 @@ Follow these guidelines to contribute to the {{site.data.keyword.Bluemix}} CLI S
 
 * BDD test framework: [Ginkgo ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://onsi.github.io/ginkgo/)
 
-The test framework is based on Ginkgo, a BDD testing framework for Go. It is used with [Gomega ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://onsi.github.io/gomega/), which is a matcher and assertion library for Ginkgo.
+The test framework is based on Ginkgo, a BDD testing framework for Go. It's used with [Gomega ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://onsi.github.io/gomega/), which is a matcher and assertion library for Ginkgo.
 
    * Install `ginkgo` by using the following command.
 
@@ -101,7 +102,7 @@ The test framework is based on Ginkgo, a BDD testing framework for Go. It is use
       ```
       {: codeblock}
 
-      * You will go to the directory where the `.coverprofile` file is located.
+      * You'll go to the directory where the `.coverprofile` file is located.
 
 * Internationalization: [go-i18n ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/nicksnyder/go-i18n) and [go-bindata ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/jteeuwen/go-bindata)
 
@@ -138,12 +139,12 @@ Delve is a debugger for the Go programming language, and is used by [Visual Stud
 ## Required runtime libraries
 {: #runtime-libs}
 
-The required runtime libraries are managed under the `vendor` directory and are committed to the Git repository to ensure stability, as Go does not provide a robust dependency manager.
+The required runtime libraries are managed under the `vendor` directory and are committed to the Git repository to ensure stability, as Go doesn't provide a robust dependency manager.
 
 ### Runtime dependencies
 {: #runtime-dependencies}
 
-Nested dependencies are not listed.
+Nested dependencies aren't listed.
 
 * [github.ibm.com/Bluemix/bluemix-cli-sdk ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
@@ -198,7 +199,6 @@ The repository must be cloned into Go's [directory structure ![External link ico
 {: #build-plug-in}
 
 Build the plug-in by choosing either of the following commands.
-
 ```
 cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
@@ -215,7 +215,6 @@ The build script also installs the plug-in to the {{site.data.keyword.Bluemix_no
 {: note}
 
 Test the plug-in by choosing either of the following commands.
-
 ```
 ginkgo -r
 ```
@@ -227,21 +226,18 @@ go test ./plugin/...
 {: codeblock}
 
 Run integration tests with unit tests and coverage.
-
 ```
 sh bin/testAll.sh
 ```
 {: codeblock}
 
 Run the plug-in as a stand-alone CLI.
-
 ```
 ./main
 ```
 {: codeblock}
 
-Install and invoke the plug-in as a {{site.data.keyword.Bluemix_notm}} CLI by choosing either of the following commands.
-
+Install and invoke the plug-in as a {{site.data.keyword.cloud_notm}} CLI by choosing either of the following commands.
 ```
 ibmcloud plugin install main
 ibmcloud help sdk

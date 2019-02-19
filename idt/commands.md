@@ -23,7 +23,7 @@ Released: 31 August 2018
 As of May 2018, the {{site.data.keyword.cloud}} CLI commands `bluemix` and `bx` are now `ibmcloud`. However, you can still use the `bluemix` and `bx` CLI commands until they're removed later.
 {: tip}
 
-Use the following {{site.data.keyword.dev_cli_notm}} CLI (ibmcloud dev) commands to create an application, manage, deploy, debug, and test it.
+Use the following {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) commands to create an application, manage, deploy, debug, and test it.
 
 - [build](#build): Build the application in a local container.
 - [code](#code): Download the code for an application.
@@ -55,7 +55,7 @@ You can build your application by using the `build` command. The `test`, `debug`
 
 The `build-cmd-debug` configuration element is used to build the application for all uses except for `run`. You build your application for debugging by specifying the command line option `--debug`. The `build-cmd-run` configuration element is used when you're building the application for use with the `run` command.
 
-To build with multiple containers, your application must have a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one. For more information, see the [Compose File](/docs/apps/projects/compose_file.html).
+To build with multiple containers, your application must have a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one.
 
 Run the following command in your current application directory to build your application:  
 ```
@@ -367,7 +367,7 @@ If you're using Windows&trade;, you must run Windows&trade; 10 Pro or later.
 
 You can run your application through the `run` command. A build must first be completed against the application by using the `build` command. When you run the `run` command, the run container starts and exposes the ports as defined by the `container-port-map` parameter. The `run-cmd` parameter is used to invoke the application if the run container `Dockerfile` doesn't contain an entry point to complete this step.
 
-In order to run with multiple containers, either your application must contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one. For more information, see [Compose File](/docs/apps/projects/compose_file.html).
+In order to run with multiple containers, either your application must contain a [Compose](https://docs.docker.com/compose/overview/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") file, which is specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one.
 
 First, compile your application:
 ```

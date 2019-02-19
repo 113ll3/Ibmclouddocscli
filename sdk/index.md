@@ -1,10 +1,11 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2019
+lastupdated: "2019-02-14"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -14,9 +15,9 @@ lastupdated: "2018-11-30"
 # SDK Generator
 {: #sdk-cli}
 
-The {{site.data.keyword.IBM}} SDK Generator plug-in can be installed in the {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview).
+The {{site.data.keyword.IBM}} SDK Generator plug-in can be installed in the {{site.data.keyword.cloud_notm}} [CLI](/docs/cli/index.html#ibmcloud-cli).
 
-As a developer on {{site.data.keyword.Bluemix_notm}}, you can use this plug-in to generate SDKs from your [Open API Specification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/) compliant REST API definition. As you make changes to your REST API definition, you can use this plug-in to regenerate only the SDK instead of regenerating the entire project.
+As a developer on {{site.data.keyword.cloud_notm}}, you can use this plug-in to generate SDKs from your [Open API Specification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/) compliant REST API definition. As you make changes to your REST API definition, you can use this plug-in to regenerate only the SDK instead of regenerating the entire project.
 
 You can also see if your Cloud Foundry apps in a given space have REST API definitions that are valid for SDK generation. Finally, you can use the {{site.data.keyword.IBM_notm}} SDK Generator plug-in to validate any REST API definitions to ensure that they comply with the SDK generator requirements.
 
@@ -24,40 +25,28 @@ This {{site.data.keyword.IBM_notm}} SDK Generator plug-in allows you to easily i
 
 The REST API definition must be valid and either hosted on a live server endpoint or a local file on your system. If the REST API definition is hosted, the relative URL must be defined in the `OPENAPI_SPEC` environment variable.
 
-
 ## Requirements
 {: #prereqs}
 
 Ensure that you satisfy the following requirements.
 
-* You have an [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}) account.
+* You have an [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}) account.
 * A valid API definition that conforms to the [Open API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/) specification.
 
-
 ## Installation
-{: #installation}
+{: #sdk-installation}
 
-1. [Install the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview).
-
-2. [Install the plug-in](/docs/cli/reference/bluemix_cli/all_versions.html#install_plug-in).
-
-	```
-	ibmcloud plugin install sdk-gen
-	```
-	{: codeblock}
-
+Install the [{{site.data.keyword.cloud_notm}} developer tools](/docs/cli/index.html#ibmcloud-cli).
 
 ## Commands
 {: #commands}
 
 Use the following commands to generate an SDK, validate Open API definition files, or list Cloud Foundry apps.
 
-
 ### Generating an SDK
 {: #gen}
 
 Use `ibmcloud sdk generate [arguments...] [command options]`.
-
 
 #### Arguments
 {: #gen-args}

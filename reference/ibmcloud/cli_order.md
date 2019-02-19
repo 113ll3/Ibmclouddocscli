@@ -1,11 +1,9 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-14"
 
-  years: 2018
-
-
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,23 +11,9 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # Managing classic infrastructure orders and quotes
+{: #sl-manage-classic-orders}
 
-<table summary="Alphabetically ordered general {{site.data.keyword.BluSoftlayer_notm}} infrastructure commands that have links that bring you to more info for the command">
- <caption>Table 1. Classic instrastructure orders</caption>
- <thead>
- <th colspan="6">Classic instrastructure orders</th>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_category_list)</td>
-  <td>[ibmcloud sl order item-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_item_list)</td>
-  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_package_locations)</td>
-  <td>[ibmcloud sl order place](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place)</td>
-  <td>[ibmcloud sl order place-quote](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place_quote)</td>
-  <td>[ibmcloud sl order preset-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_preset_list)</td>
- </tr>
- </tbody>
-</table>
+Use the following commands to manage orders and quotes in your classic infrastructure.
 
 ## ibmcloud sl order package-locations
 {: #sl_order_category_list}

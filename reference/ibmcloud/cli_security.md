@@ -1,48 +1,27 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-14"
 
-  years: 2018
-
-
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Managing security SSH keys and SSL certificates
+{: #sl-manage-security-keys}
 
 SSH keys allow access to a device without using a password from corresponding clients for each public key that is implemented on the device. By adding an SSH key to a device, the device that was provided with the SSH key accesses the device for the corresponding key without the use of a password.
 
 SSL certificates are enabled by websites as a security measure to protect the user. They are generally used when you are required to transmit confidential information to a website.
 
-Use the following commands to manage {{site.data.keyword.Bluemix}} classic infrastructure SSH Keys and Certificates.
+Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure SSH Keys and Certificates.
 {: shortdesc}
 
-<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Security commands that have links that bring you to more info for the command">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl security sshkey-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_add)</td>
-  <td>[ibmcloud sl security sshkey-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_edit)</td>
-  <td>[ibmcloud sl security sshkey-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_list)</td>
-  <td>[ibmcloud sl security sshkey-print](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_print)</td>
-  <td>[ibmcloud sl security sshkey-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_remove)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl security cert-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_add)</td>
-  <td>[ibmcloud sl security cert-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_edit)</td>
-  <td>[ibmcloud sl security cert-download](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_download)</td>
-  <td>[ibmcloud sl security cert-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_list)</td>
-  <td>[ibmcloud sl security cert-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_remove)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl security sshkey-add
+## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 Add a new SSH key.
@@ -64,6 +43,8 @@ ibmcloud sl security sshkey-add LABEL [OPTIONS]
 ```
 ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
+{: codeblock}
+
 This command adds a SSH key from file: ~/.ssh/id_rsa.pub with a note "mykey".
 
 ## ibmcloud sl security sshkey-edit
@@ -86,7 +67,9 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-This command updates the SSH key with ID 12345678 and sets label to "ibmcloud" and note to "testing".
+{: codeblock}
+
+This command updates the SSH key with ID `12345678` and sets label to `ibmcloud` and note to `testing`.
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
@@ -106,6 +89,8 @@ ibmcloud sl security sshkey-list [OPTIONS]
 ```
 ibmcloud sl security sshkey-list --sortby label
 ```
+{: codeblock}
+
 This command lists all SSH keys on current account and sorts them by label.
 
 ## ibmcloud sl security sshkey-print
@@ -126,6 +111,8 @@ ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
+{: codeblock}
+
 This command shows the ID, label and notes of SSH key with ID 12345678 and write the public key to file: ~/mykey.pub.
 
 ## ibmcloud sl security sshkey-remove
@@ -146,7 +133,9 @@ ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-remove 12345678 -f
 ```
-This command removes the SSH key with ID 12345678 without asking for confirmation.
+{: codeblock}
+
+This command removes the SSH key with ID `12345678` without asking for confirmation.
 
 ## ibmcloud sl security cert-add
 {: #sl_security_cert_add}
