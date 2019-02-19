@@ -64,7 +64,6 @@ IBM Cloud CLI and Developer Tools
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
 		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
-		/containers/containers-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-plugin-ibm-watson-trade-machine-learning-cli
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
