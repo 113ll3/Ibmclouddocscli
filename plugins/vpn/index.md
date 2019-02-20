@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-19"
+lastupdated: "2019-02-20"
 
 ---
 
@@ -14,12 +14,12 @@ lastupdated: "2019-02-19"
 # VPN CLI Plug-in for cf CLI
 {: #vpn_cli_for_cf}
 
-You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.Bluemix}} CLI plug-in. Both versions of the plug-in provide the same functionality.
+You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.cloud}} CLI plug-in. Both versions of the plug-in provide the same functionality.
 {:shortdesc}
 
 The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
-The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the {{site.data.keyword.Bluemix_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
+The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the {{site.data.keyword.cloud_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.cloud_notm}} CLI ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
 
 ## Install the cf CLI Plug-in
 {: #install-cf-cli-plugin}
@@ -39,7 +39,7 @@ cf uninstall-plugin vpn
 
 ### Install locally
 
-1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [ {{site.data.keyword.Bluemix_notm}} CLI Plug-in Repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
+1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [ {{site.data.keyword.cloud_notm}} CLI Plug-in Repository ![External link icon](../../../icons/launch-glyph.svg)](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window}.
 
 2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:
 
@@ -69,7 +69,7 @@ cf uninstall-plugin vpn
 
 1. Add the {{site.data.keyword.cloud_notm}} repository into the Cloud Foundry CLI repositories. Use the following command:
 	```
-	cf add-plugin-repo IBM Cloud http://plugins.ng.bluemix.net
+	cf add-plugin-repo "IBM Cloud" http://plugins.cloud.ibm.com
 	```
 	{: codeblock}
 
