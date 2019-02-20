@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2018
-
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-02-20"
 
 ---
 
@@ -13,35 +11,35 @@ lastupdated: "2018-12-12"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} admin CLI
+# {{site.data.keyword.cloud_notm}} admin CLI
 {: #bluemixadmincli}
 
 
-You can manage your {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by using the Cloud Foundry command line interface with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For example, you can add users from an LDAP registry. For information about managing your {{site.data.keyword.Bluemix_notm}} Public account, see [administering](/docs/admin/adminpublic.html#administer).
+You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface with the {{site.data.keyword.cloud_notm}} Admin CLI plug-in. For example, you can add users from an LDAP registry. For information about managing your {{site.data.keyword.cloud_notm}} Public account, see [administering](/docs/admin/adminpublic.html#administer).
 
-Before you begin, install the Cloud Foundry command line interface. The {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
+Before you begin, install the Cloud Foundry command line interface. The {{site.data.keyword.cloud_notm}} Admin CLI plug-in
 requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restriction:** The Cloud Foundry command line interface is not supported by
 Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin command line window.
 
-**Note**: {{site.data.keyword.Bluemix_notm}} admin CLI is only used for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated environment. It is not supported by {{site.data.keyword.Bluemix_notm}} Public.
+**Note**: {{site.data.keyword.cloud_notm}} admin CLI is only used for {{site.data.keyword.cloud_notm}} Local and {{site.data.keyword.cloud_notm}} Dedicated environment. It is not supported by {{site.data.keyword.cloud_notm}} Public.
 
-## Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI Plug-in
+## Adding the {{site.data.keyword.cloud_notm}} Admin CLI Plug-in
 
-After the Cloud Foundry command line interface is installed, you can add the {{site.data.keyword.Bluemix_notm}} admin CLI plug-in.
+After the Cloud Foundry command line interface is installed, you can add the {{site.data.keyword.cloud_notm}} admin CLI plug-in.
 
-**Note**: If you've previously installed the {{site.data.keyword.Bluemix_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
+**Note**: If you've previously installed the {{site.data.keyword.cloud_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
 
 Complete the following steps to add the repository and install the plug-in:
 
 <ol>
-<li>To add the {{site.data.keyword.Bluemix_notm}} admin plug-in repository, run the following command:<br/><br/>
+<li>To add the {{site.data.keyword.cloud_notm}} admin plug-in repository, run the following command:<br/><br/>
 <code>
-cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
 </code><br/><br/>
 </li>
-<li>To install the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, run the following command:<br/><br/>
+<li>To install the {{site.data.keyword.cloud_notm}} Admin CLI plug-in, run the following command:<br/><br/>
 <code>
 cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
 </code>
@@ -54,9 +52,9 @@ If you need to uninstall the plug-in, you can use the following commands, then y
 * Remove the plug-in repository: `cf remove-plugin-repo IBMCloudAdmin`
 
 
-## Using the {{site.data.keyword.Bluemix_notm}} Admin CLI Plug-in
+## Using the {{site.data.keyword.cloud_notm}} Admin CLI Plug-in
 
-You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks.
+You can use the {{site.data.keyword.cloud_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks.
 
 To see a list of commands, run the following command:
 
@@ -67,26 +65,26 @@ cf plugins
 
 For more help for a command, use the `-help` option.
 
-### Connecting and Logging in to {{site.data.keyword.Bluemix_notm}}
+### Connecting and Logging in to {{site.data.keyword.cloud_notm}}
 
 Before you can use the Admin CLI plug-in, you must connect and log in, if
 you aren't already.
 
 <ol>
-<li>To connect to the {{site.data.keyword.Bluemix_notm}} API endpoint, run the following command:<br/><br/>
+<li>To connect to the {{site.data.keyword.cloud_notm}} API endpoint, run the following command:<br/><br/>
 <code>
-cf ba api https://console.&lt;subdomain&gt;.bluemix.net
+cf api api.ng.bluemix.net
 </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance.<br />
+<dd class="pd">Subdomain of the URL for your {{site.data.keyword.cloud_notm}} instance.<br />
 </dd>
 </dl>
 <p>You can check the Admin Console Resources and information page for the
 correct URL. The URL is shown in the API information section in the **API URL**
 field.</p>
 </li>
-<li>Log in to {{site.data.keyword.Bluemix_notm}} with the following command:<br/><br/>
+<li>Log in to {{site.data.keyword.cloud_notm}} with the following command:<br/><br/>
 <code>
 cf login
 </code>
@@ -99,7 +97,7 @@ cf login
 ### Adding a user
 {: #admin_add_user}
 
-To add a user to your {{site.data.keyword.Bluemix_notm}} environment from the
+To add a user to your {{site.data.keyword.cloud_notm}} environment from the
 user registry for your environment, use the following command:
 
 ```
