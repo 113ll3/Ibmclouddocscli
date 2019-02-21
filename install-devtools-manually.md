@@ -2,7 +2,11 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-21"
+
+keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
+
+subcollection: cloud-cli
 
 ---
 
@@ -16,23 +20,23 @@ lastupdated: "2019-02-18"
 # Installing the {{site.data.keyword.cloud_notm}} Developer tools CLI plug-in components manually
 {: #install-devtools-manually}
 
-All prerequisites are installed for most users by using the [platform installers](/docs/cli/index.html#step1-install-idt). If you need to manually install any components, see the following instructions.
+All prerequisites are installed for most users by using the [platform installers](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt). If you need to manually install any components, see the following instructions.
 
 ## Installing the {{site.data.keyword.cloud_notm}} Developer tools CLI plug-in
 {: #install-devtools-idt}
 
-To install the dev plug-in, you must first install the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli/reference/ibmcloud/download_cli.html#install-ibmcloud-cli).
+1. To install the `dev` plug-in, you must first install the [{{site.data.keyword.cloud}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
 
-To use the dev plug-in, you must install it by running the following command: 
-```
-ibmcloud plugin install dev
-```
-{: codeblock}
+2. You can now install the `dev` plug-in by running the following command: 
+  ```
+  ibmcloud plugin install dev
+  ```
+  {: codeblock}
 
 ## Installing Docker
 {: #install-devtools-docker}
 
-For running and debugging apps locally, you must install [Docker](https://www.docker.com/get-docker).
+For running and debugging apps locally, you must install [Docker](https://www.docker.com/get-docker){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
  
 ## Installing Kubernetes:
 {: #idt-install-kube}
@@ -67,7 +71,7 @@ For supporting container deployments, you must install Kubernetes.
   ```
   {: codeblock}
 
-* Windows&trade; users can download and install the Helm [binary](https://github.com/kubernetes/helm/releases/tag/v2.7.2).
+* Windows&trade; users can download and install the Helm [binary](https://github.com/kubernetes/helm/releases/tag/v2.7.2){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Installing container plug-ins:
 {: #idt-install-container-registry}

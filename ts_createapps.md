@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-21"
+
+keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
+
+subcollection: cloud-cli
 
 ---
 
@@ -28,7 +32,6 @@ General problems with using the {{site.data.keyword.dev_cli_short}} command-line
 {: troubleshoot}
 
 The following error might be displayed if you use the {{site.data.keyword.dev_cli_short}} CLI to deploy an app to Cloud Foundry. If you enter a unique host name, you might still see this message.
-
 ```
 The hostname <myHostname> is taken.
 ```
@@ -50,7 +53,6 @@ ibmcloud login
 {: troubleshoot}
 
 The following error might be displayed if you use the `create`, `delete`, `list`, or `code` commands:
-
 ```
 Failed to <command> application.
 ```
@@ -72,7 +74,6 @@ ibmcloud login
 {: troubleshoot}
 
 When you try to `ibmcloud dev run` an app without building it first, the following error might be displayed.
-
 ```
 The run-cmd option was not specified
 Stopping the 'testProject' container...
@@ -273,30 +274,30 @@ directly.
 {: tsSymptoms}
 
 This error might be due to one of the following causes:
-- Running the [enable](/docs/cli/idt/commands.html#enable) command from a directory that is not the source directory of your application.
-- Running the [enable](/docs/cli/idt/commands.html#enable) command for an app of a language that is not recognized.
+- Running the [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command from a directory that is not the source directory of your application.
+- Running the [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command for an app of a language that is not recognized.
 {: tsCauses}
 
-Be sure that you run the command from the app directory that contains source code for the app. If this does not solve the problem and the language is one of the [supported languages](/docs/cli/idt/commands.html#enable-language-options), use the `--language` parameter to specify the language.
+Be sure that you run the command from the app directory that contains source code for the app. If this does not solve the problem and the language is one of the [supported languages](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), use the `--language` parameter to specify the language.
 {: tsResolve}
 
 ## Why can't I build or run an app that has been enabled for cloud deployment?
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-You might encounter various failures attempting to [build](/docs/cli/idt/commands.html#build) or [run](/docs/cli/idt/commands.html#run) an app that has been enabled.
+You might encounter various failures attempting to [build](/docs/cli/idt?topic=cloud-cli-idt-cli#build) or [run](/docs/cli/idt?topic=cloud-cli-idt-cli#run) an app that has been enabled.
 {: tsSymptoms}
 
 The many different possible causes can be found in each of the following links.
 {: tsCauses}
 
-- For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot applications for cloud deployment](/docs/java-spring/enable_existing.html#enable_existing).
-- For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js applications for cloud deployment](/docs/node/enable_existing.html#enable_existing).
+- For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot applications for cloud deployment](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
+- For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js applications for cloud deployment](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
 ## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
 {: #ts-cli-install-devtools-manually}
 {: troubleshoot}
 
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli/install-devtools-manually.html#install-devtools-manually).
+To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-19"
+lastupdated: "2019-02-21"
+
+keywords: IBM Cloud Developer Tools CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
+
+subcollection: cloud-cli
 
 ---
 
@@ -58,9 +62,9 @@ You need an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){:
   Right-click the Windows PowerShell icon, and select **Run as administrator**.
   {: tip}
 
-  You can also download the installer script from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+  You can also download the installer script from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
-  For the steps to install these tools manually, see [Reinstalling tools](/docs/cli/install_devtools_manually#install-devtools-manually).
+  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 
 ## Step 2. Verify the installation
 {: #step2-verify-idt}
@@ -82,7 +86,7 @@ The output lists the usage instructions, the current version, and the supported 
   ```
   {: codeblock}
   
-  If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam/login_fedid.html#federated_id) for more details.
+  If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam/federated_id?topic=iam-federated_id#federated_id) for more details.
   {: tip}
 
 2. To use Cloud Foundry services, target an org and space.
@@ -100,4 +104,4 @@ The output lists the usage instructions, the current version, and the supported 
 ## Next steps
 {: #next-steps}
 
-You're now ready to develop and deploy your first application! See [Creating and deploying apps by using the CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli) for more information.
+You're now ready to develop and deploy your first application! For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli).
