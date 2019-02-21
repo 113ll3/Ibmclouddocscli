@@ -295,9 +295,13 @@ The many different possible causes can be found in each of the following links.
 - For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js applications for cloud deployment](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
+<!--
 ## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
 {: #ts-cli-install-devtools-manually}
 {: troubleshoot}
 
 To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
+
+
 
