@@ -64,7 +64,9 @@ You need an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){:
 
   You can also download the installer script from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
+<!--Uncomment when the linked topic goes to prod
   For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
 ## Step 2. Verify the installation
 {: #step2-verify-idt}
