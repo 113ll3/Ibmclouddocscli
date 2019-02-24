@@ -413,7 +413,7 @@ Use classic infrastructure commands in the {{site.data.keyword.cloud_notm}} comm
 Run the `ibmcloud sl` command to see the list of available commands:
 ```
 USAGE:
-   bx sl command [arguments...] [options...]
+   ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
    block           Gen1 infrastructure Block Storage
