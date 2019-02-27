@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
+
+subcollection: cloud-cli
 
 ---
 

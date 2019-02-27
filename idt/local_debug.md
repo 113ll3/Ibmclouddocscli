@@ -2,7 +2,11 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-27"
+
+keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+
+subcollection: cloud-cli
 
 ---
 
@@ -34,7 +38,7 @@ Steps to enable the debugging tool for a Java application:
 
 	* Eclipse
       1. Import the **Existing maven project** into Eclipse.
-      2. Create a [Java remote application ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) debug configuration.
+      2. Create a [Java remote application](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") debug configuration.
       		1. Enter the IP address or `localhost:<port>`  
       		2. Enter `7777` for port number.
       		3. Specify the name of the Java project that you imported.
@@ -45,8 +49,8 @@ Steps to enable the debugging tool for a Java application:
 	   The default port is 9080 for the Java basic Microservices endpoint.
 	   {: note}
 
-	* [IntelliJ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
+	* [IntelliJ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+	* [VSCode](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 	* JDK command line: `jdb -attach <host:port>`
 
 ## Node.js application debugging
@@ -61,8 +65,8 @@ Steps to enable the debugging tool for a Node.js application:
   {: codeblock}
 
 2. Connecting the debugger to your application:
-	* [VSCode ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+	* [WebStorm](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
 
 <!--

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-07"
+lastupdated: "2019-02-26"
+
+keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+
+subcollection: cloud-cli
 
 ---
 
@@ -17,11 +21,11 @@ lastupdated: "2019-02-07"
 The Cloud Foundry (cf) command line interface (CLI) provides a set of commands for managing your apps. The following information lists the cf commands used most commonly for managing apps and includes their names, options, usage, prerequisites, descriptions, and examples. To list all of the cf commands and associated help information, use `cf help`. Use `cf command_name -h` to view detailed help information for a particular command.
 {: shortdesc}
 
-For more details on getting started with the Cloud Foundry CLI, see [Getting Started ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}.
+For more details on getting started with the Cloud Foundry CLI, see [Getting Started](https://github.com/cloudfoundry/cli#getting-started){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
-For a more detailed list of `cf CLI` commands, see the community [Cloud Foundry CLI Reference Guide ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}.
+For a more detailed list of `cf CLI` commands, see the community [Cloud Foundry CLI Reference Guide](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
-If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with a Proxy Server ![External link icon](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with a Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 {: note}
 
 ## Cloud Foundry CLI commands index
@@ -36,12 +40,12 @@ Use the index in the following table to refer to the frequently used Cloud Found
  </thead>
  <tbody>
  <tr>
- <td>[api](/docs/cli/reference/ibmcloud/cf_index.html#cf_api)</td>
- <td>[help](/docs/cli/reference/ibmcloud/cf_index.html#cf_help)</td>
- <td>[login](/docs/cli/reference/ibmcloud/cf_index.html#cf_login)</td>
- <td>[stacks](/docs/cli/reference/ibmcloud/cf_index.html#cf_stacks)</td>
- <td>[target](/docs/cli/reference/ibmcloud/cf_index.html#cf_target)</td>
- <td>[-v](/docs/cli/reference/ibmcloud/cf_index.html#cf_v)</td>
+ <td>[api](#cf_api)</td>
+ <td>[help](#cf_help)</td>
+ <td>[login](#cf_login)</td>
+ <td>[stacks](#cf_stacks)</td>
+ <td>[target](#cf_target)</td>
+ <td>[-v](#cf_v)</td>
  </tr>
    </tbody>
  </table>
@@ -53,25 +57,25 @@ Use the index in the following table to refer to the frequently used Cloud Found
  </thead>
  <tbody>
  <tr>
- <td>[apps](/docs/cli/reference/ibmcloud/cf_index.html#cf_apps)</td>
- <td>[bind-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_bind-service)</td>
- <td>[create-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-service)</td>
- <td>[create-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-space)</td>
- <td>[delete](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete)</td>
+ <td>[apps](#cf_apps)</td>
+ <td>[bind-service](#cf_bind-service)</td>
+ <td>[create-service](#cf_create-service)</td>
+ <td>[create-space](#cf_create-space)</td>
+ <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete-space)</td>
- <td>[events](/docs/cli/reference/ibmcloud/cf_index.html#cf_events)</td>
- <td>[logs](/docs/cli/reference/ibmcloud/cf_index.html#cf_logs)</td>
- <td>[marketplace](/docs/cli/reference/ibmcloud/cf_index.html#cf_marketplace)</td>
- <td>[push](/docs/cli/reference/ibmcloud/cf_index.html#cf_push)</td>
+ <td>[delete-space](/#cf_delete-space)</td>
+ <td>[events](#cf_events)</td>
+ <td>[logs](#cf_logs)</td>
+ <td>[marketplace](#cf_marketplace)</td>
+ <td>[push](#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](/docs/cli/reference/ibmcloud/cf_index.html#cf_scale)</td>
- <td>[services](/docs/cli/reference/ibmcloud/cf_index.html#cf_services)
- <td>[set-env](/docs/cli/reference/ibmcloud/cf_index.html#cf_set-env)</td>
- <td>[ssh](/docs/cli/reference/ibmcloud/cf_index.html#cf_ssh)</td>
- <td>[stop](/docs/cli/reference/ibmcloud/cf_index.html#cf_stop)</td>
+ <td>[scale](#cf_scale)</td>
+ <td>[services](#cf_services)
+ <td>[set-env](#cf_set-env)</td>
+ <td>[ssh](#cf_ssh)</td>
+ <td>[stop](#cf_stop)</td>
  </tr>
  </tbody>
  </table>
@@ -80,7 +84,6 @@ Use the index in the following table to refer to the frequently used Cloud Found
 {: #cf_api}
 
 Use this command to display or specify the URL of the API endpoint of {{site.data.keyword.cloud}}.
-
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
@@ -107,13 +110,13 @@ cf api
 ```
 {: codeblock}
 
-Remove connection to all API endpoints for api.us-south.cf.cloud.ibm.com
+Remove connection to all API endpoints for api.us-south.cf.cloud.ibm.com:
 ```
 cf api api.us-south.cf.cloud.ibm.com --unset
 ```
 {: codeblock}
 
-Disable the SSL validation process for api.us-south.cf.cloud.ibm.com
+Disable the SSL validation process for api.us-south.cf.cloud.ibm.com:
 ```
 cf api api.us-south.cf.cloud.ibm.com --skip-ssl-validation
 ```
@@ -279,7 +282,6 @@ cf delete my_app -f -r
 {: #cf_delete-space}
 
 Deletes a space.
-
 ```
 cf delete-space space_name [-f]
 ```
@@ -390,7 +392,7 @@ cf help events
 
 Logs you in to {{site.data.keyword.cloud_notm}}. If you're logging in with a federated ID, you must use the single sign-on (SSO) parameter to log in.
 
-You can also use a {{site.data.keyword.cloud_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password. For more information about creating an API key, see [Understanding API keys](/docs/iam/apikeys.html).
+You can also use a {{site.data.keyword.cloud_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password. For more information about creating an API key, see [Understanding API keys](/docs/iam?topic=iam-manapikey#manapikey).
 {: note}
 
 ```
@@ -817,7 +819,5 @@ cf -v
 ## Related Links
 {: #cf-related}
 
-* [Download Cloud Foundry CLI ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
-{: new_window}
-* [Quick Reference Card - cf commands ![External link icon](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{: new_window}
+* [Download Cloud Foundry CLI](https://github.com/cloudfoundry/cli/releases){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon")
+* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon")

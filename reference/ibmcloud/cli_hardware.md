@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+
+subcollection: cloud-cli
 
 ---
 

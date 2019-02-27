@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
+
+subcollection: cloud-cli
 
 ---
 
@@ -15,7 +19,7 @@ lastupdated: "2019-02-14"
 
 The Content Delivery Network (CDN) service distributes content where it's needed. The first time content is requested, it’s pulled from the host server to the network and stays there for other users to access it.
 
-Use the following commands to manage the {{site.data.keyword.Bluemix_notm}} classic infrastructure CDN service.
+Use the following commands to manage the {{site.data.keyword.cloud_notm}} classic infrastructure CDN service.
 {: shortdesc}
 
 ## ibmcloud sl cdn cancel

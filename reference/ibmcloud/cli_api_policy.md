@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-26"
+
+keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids
+
+subcollection: cloud-cli
 
 ---
 
@@ -13,7 +17,7 @@ lastupdated: "2019-01-23"
 # Managing IAM access, API keys, service IDs, and access groups
 {: #ibmcloud_commands_iam}
 
-Use the following commands to manage API keys, service IDs, access groups, and access/authorization policies for users, services and access groups.
+Use the following commands to manage API keys, service IDs, access groups, and authorization policies for users, services and access groups.
 {: shortdesc}
 
 ## ibmcloud iam service-ids

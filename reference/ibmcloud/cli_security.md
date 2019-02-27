@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: manage security, ssh keys, ssl certificates, ibmcloud sl security, certificate, ibmcloud sl, sshkey-add
+
+subcollection: cloud-cli
 
 ---
 

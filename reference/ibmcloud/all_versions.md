@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-27"
+
+keywords: cli releases, cli versions, download cli, win32, win64, linux32, win64, macos, linux64, ppc64le, ibm cloud cli release, latest cli, newest cli version
+
+subcollection: cloud-cli
 
 ---
 

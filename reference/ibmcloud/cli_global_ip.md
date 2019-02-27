@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: classic infrastructure, ibmcloud sl globalip, globalip, global ip addresses, assign global ip
+
+subcollection: cloud-cli
 
 ---
 
@@ -30,7 +34,8 @@ ibmcloud sl globalip assign IDENTIFIER TARGET
 ```
 ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
-This command assigns IP address with ID 12345678 to a target device whose IP address is 9.111.123.456.
+
+This command assigns IP address with ID `12345678` to a target device whose IP address is `9.111.123.456`.
 
 ## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
@@ -50,7 +55,8 @@ ibmcloud sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl globalip cancel 12345678
 ```
-This command cancels IP address with ID 12345678.
+
+This command cancels IP address with ID `12345678`.
 
  ## ibmcloud sl globalip create
 {: #sl_globalip_create}
@@ -74,6 +80,7 @@ ibmcloud sl globalip create [OPTIONS]
 ```
 ibmcloud sl globalip create --v6
 ```
+
 This command creates an IP V6 address.
 
 ## ibmcloud sl globalip list
@@ -98,6 +105,7 @@ ibmcloud sl globalip list [OPTIONS]
 ```
 ibmcloud sl globalip list --v4
 ```
+
 This command lists all IP V4 addresses on current account.
 
 ## ibmcloud sl globalip unassign
@@ -113,4 +121,5 @@ ibmcloud sl globalip unassign IDENTIFIER
 ```
 ibmcloud sl globalip unassign 12345678
 ```
-This command unassigns IP address with ID 12345678 from target device.
+
+This command unassigns IP address with ID `12345678` from target device.

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+
+subcollection: cloud-cli
 
 ---
 
@@ -184,7 +188,7 @@ ibmcloud config --locale CLEAR
 ## ibmcloud info
 {: #ibmcloud_info}
 
-The `ibmcloud info` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html#install-ibmcloud-cli}).
+The `ibmcloud info` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
 {: note}
 
 ## ibmcloud cf
@@ -443,7 +447,7 @@ To view help information about a command, run:
 ibmcloud sl [command] -h
 ```
 
-The `ibmcloud sl init` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html#install-ibmcloud-cli}).
+The `ibmcloud sl init` command is no longer available as of CLI version `0.14`. To install the latest CLI version, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
 {: note}
 
 ## ibmcloud sl help

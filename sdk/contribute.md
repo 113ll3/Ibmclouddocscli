@@ -2,7 +2,11 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+
+subcollection: cloud-cli
 
 ---
 
@@ -21,17 +25,17 @@ Follow these guidelines to contribute to the {{site.data.keyword.cloud}} CLI SDK
 ## Setting up your development environment
 {: #dev-env}
 
-* Cloud Foundry [CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli/releases).
+* Cloud Foundry [CLI](https://github.com/cloudfoundry/cli/releases){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
    The Cloud Foundry CLI isn't required, but it helps to access {{site.data.keyword.cloud_notm}} from the Terminal.
 
-   For more information about the Cloud Foundry CLI, see the [documentation](/docs/cli/reference/ibmcloud/cf_index.html#cf).
+   For more information about the Cloud Foundry CLI, see the [documentation](/docs/cli?topic=cloud-cli-cf#cf).
 
-* {{site.data.keyword.cloud_notm}} [CLI](/docs/cli/index.html#ibmcloud-cli).
+* {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
-   This plug-in installs into the {{site.data.keyword.Bluemix_notm}} CLI. The {{site.data.keyword.Bluemix_notm}} CLI also provides useful resources to access {{site.data.keyword.Bluemix_notm}} from the Terminal.
+   This plug-in installs into the {{site.data.keyword.cloud_notm}} CLI. The {{site.data.keyword.cloud_notm}} CLI also provides useful resources to access {{site.data.keyword.cloud_notm}} from the Terminal.
 
-* Go's [development environment ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://golang.org/doc/code.html)
+* Go's [development environment](https://golang.org/doc/code.html){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
    Go is strict with regards to package locations, so your source must be defined within the `$GOPATH` directory structure. Ensure that you define your `$GOPATH` and `$GOROOT` variables and that you include `$GOPATH/bin` in your `$PATH` environment variable, which can be done by editing your `~/.bash_profile` configuration file (on Mac OS).
 
@@ -43,7 +47,7 @@ Follow these guidelines to contribute to the {{site.data.keyword.cloud}} CLI SDK
    ```
    {: codeblock}
 
-* Dependency manager: [govendor ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/kardianos/govendor)
+* Dependency manager: [govendor](https://github.com/kardianos/govendor){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
    The `govendor` tool creates and manages the Go dependencies. You don't need it unless you plan to update the vendor directory.
 
@@ -68,9 +72,9 @@ Follow these guidelines to contribute to the {{site.data.keyword.cloud}} CLI SDK
       ```
       {: codeblock}
 
-* BDD test framework: [Ginkgo ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://onsi.github.io/ginkgo/)
+* BDD test framework: [Ginkgo](http://onsi.github.io/ginkgo/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-The test framework is based on Ginkgo, a BDD testing framework for Go. It's used with [Gomega ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://onsi.github.io/gomega/), which is a matcher and assertion library for Ginkgo.
+The test framework is based on Ginkgo, a BDD testing framework for Go. It's used with [Gomega](http://onsi.github.io/gomega/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), which is a matcher and assertion library for Ginkgo.
 
    * Install `ginkgo` by using the following command.
 
@@ -104,9 +108,9 @@ The test framework is based on Ginkgo, a BDD testing framework for Go. It's used
 
       * You'll go to the directory where the `.coverprofile` file is located.
 
-* Internationalization: [go-i18n ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/nicksnyder/go-i18n) and [go-bindata ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/jteeuwen/go-bindata)
+* Internationalization: [go-i18n](https://github.com/nicksnyder/go-i18n){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and [go-bindata](https://github.com/jteeuwen/go-bindata){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-Internationalization is based on go-i18n, which is a package and command-line tool that provides support to translate a Go application into multiple languages. Translation bundles are pre-processed by go-bindata, which is a command that converts any input file into manageable Go source code.
+Internationalization is based on `go-i18n`, which is a package and command-line tool that provides support to translate a Go application into multiple languages. Translation bundles are pre-processed by `go-bindata`, which is a command that converts any input file into manageable Go source code.
 
    * Install `go-i18n` by using the following command.
 
@@ -122,9 +126,9 @@ Internationalization is based on go-i18n, which is a package and command-line to
       ```
       {: codeblock}
 
-* Debugging: [delve ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/derekparker/delve)
+* Debugging: [delve](https://github.com/derekparker/delve){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-Delve is a debugger for the Go programming language, and is used by [Visual Studio Code ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://code.visualstudio.com/).
+Delve is a debugger for the Go programming language, and is used by [Visual Studio Code](https://code.visualstudio.com/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
    * Install `delve` by using the following command.
 
@@ -133,7 +137,7 @@ Delve is a debugger for the Go programming language, and is used by [Visual Stud
       ```
       {: codeblock}
 
-      * For Mac OS, follow the [instructions ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://blog.ralch.com/tutorial/golang-debug-with-delve/) to create the required self-signed certificate.
+      * For Mac OS, follow the [instructions](http://blog.ralch.com/tutorial/golang-debug-with-delve/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") to create the required self-signed certificate.
 
 
 ## Required runtime libraries
@@ -146,34 +150,34 @@ The required runtime libraries are managed under the `vendor` directory and are 
 
 Nested dependencies aren't listed.
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk](https://github.ibm.com/Bluemix/bluemix-cli-sdk){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-   The {{site.data.keyword.Bluemix_notm}} CLI plug-in SDK, which provides infrastructure to develop {{site.data.keyword.Bluemix_notm}} CLI plug-ins.
+   The {{site.data.keyword.cloud_notm}} CLI plug-in SDK, which provides infrastructure to develop {{site.data.keyword.cloud_notm}} CLI plug-ins.
 
-* [github.com/urfave/cli ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/urfave/cli)
+* [github.com/urfave/cli](https://github.com/urfave/cli){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-   This package provides infrastructure to build command-line apps in Go. The {{site.data.keyword.Bluemix_notm}} CLI plugin relies on an older version of this library (github.com/codegangsta/cli).
+   This package provides infrastructure to build command-line apps in Go. The {{site.data.keyword.cloud_notm}} CLI plugin relies on an older version of this library (github.com/codegangsta/cli).
 
-* [github.com/asaskevich/govalidator ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/asaskevich/govalidator)
+* [github.com/asaskevich/govalidator](https://github.com/asaskevich/govalidator){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
    This package provides a number of validators and sanitizers for strings, structs, and collections. Use this package instead of implementing our own validators.
 
-* [github.com/parnurzeal/gorequest ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/parnurzeal/gorequest)
+* [github.com/parnurzeal/gorequest](https://github.com/parnurzeal/gorequest){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
    This package implements a simplified HTTP client to help handle HTTP requests and responses.
 
-* [github.com/briandowns/spinner ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/briandowns/spinner)
+* [github.com/briandowns/spinner](https://github.com/briandowns/spinner){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
    This package implements a CLI spinner to provide user feedback while long operations, such as SDK generation, are being processed.
 
-* [github.com/cloudfoundry-attic/jibber_jabber ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry-attic/jibber_jabber)
+* [github.com/cloudfoundry-attic/jibber_jabber](https://github.com/cloudfoundry-attic/jibber_jabber){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
    This package is used to detect the current language of the operating system.
 
 ## Cloning the repository
 {: #clone-repo}
 
-The repository must be cloned into Go's [directory structure ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://golang.org/doc/code.html) because of how `govendor` works, which also follows Go's best practices.
+The repository must be cloned into Go's [directory structure](https://golang.org/doc/code.html){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") because of how `govendor` works, which also follows Go's best practices.
 
 * Import internal dependencies through a fully qualified package name.
 

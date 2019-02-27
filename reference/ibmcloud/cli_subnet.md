@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
+
+subcollection: cloud-cli
 
 ---
 
@@ -35,7 +39,7 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-This command cancels subnet with ID 12345678 without asking for confirmation.
+This command cancels subnet with ID `12345678` without asking for confirmation.
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -121,7 +125,7 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 {: codeblock}
 
-This command lists IP V4 subnets on current account filtering by datacenter is dal09, subnet type is PRIMARY, and network space is PUBLIC.
+This command lists IP V4 subnets on current account filtering by datacenter is `dal09`, subnet type is `PRIMARY`, and network space is `PUBLIC`.
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}

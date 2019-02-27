@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-21"
+
+keywords: bmscore, bmscore sdk, network request, ios, android, cordova
+
+subcollection: cloud-cli
 
 ---
 
@@ -19,7 +23,7 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 ## Android
 {: #request-android}
 
-1. Make sure you've [imported the Client SDK and initialized it](/docs/cli/sdk/sdk_BMSClient.html#init-BMSClient-android) in your Android application.
+1. Make sure you've [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) in your Android application.
 
 2. Make a network request.
 
@@ -51,7 +55,7 @@ The `Request` class is a simple way to make an HTTP request and get the response
 ## iOS
 {: #request-ios}
 
-1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk/sdk_BMSClient.html#init-BMSClient-ios) in your iOS application.
+1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) in your iOS application.
 
 2. Create a network request.
 
@@ -95,13 +99,13 @@ The `Request` class is a simple way to make an HTTP request and get the response
 
 The `BMSURLSession` class is available for iOS only.
 
-For complete usage examples, see the `BMSCore` GitHub [README ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}.
+For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk/sdk_BMSClient.html#init-BMSClient-cordova) in your Cordova application.
+1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) in your Cordova application.
 
 2. Create a network request.
 

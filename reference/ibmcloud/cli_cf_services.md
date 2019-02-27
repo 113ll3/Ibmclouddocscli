@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-26"
+
+keywords: cloud foundry services, ibmcloud service, offerings, service list, service show, service create, service bind, service unbind, unbind service, service keys
+
+subcollection: cloud-cli
 
 ---
 

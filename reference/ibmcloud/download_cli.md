@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: stand-alone cli, install cli, uninstall cli, cli, plugin, plug-in, command line, command-line, windows powershell, linux, macos, installer
+
+subcollection: cloud-cli
 
 ---
 
@@ -14,25 +18,25 @@ lastupdated: "2019-02-14"
 # Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI
 {: #install-ibmcloud-cli}
 
-{{site.data.keyword.cloud}} CLI provides the command-line interface for managing resources in {{site.data.keyword.cloud_notm}}. You can still use the cf CLI to log in to {{site.data.keyword.cloud_notm}}, but it works with a Cloud Foundry service in {{site.data.keyword.cloud_notm}}. 
+{{site.data.keyword.cloud}} CLI provides the command-line interface for managing resources in {{site.data.keyword.cloud_notm}}. You can still use the `cf` CLI to log in to {{site.data.keyword.cloud_notm}}, but it works with a Cloud Foundry service in {{site.data.keyword.cloud_notm}}. 
 
-If you want to install both the {{site.data.keyword.cloud}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#ibmcloud-cli).
+If you want to install both the {{site.data.keyword.cloud}} CLI and other recommended plug-ins and tools for developing applications for {{site.data.keyword.cloud_notm}}, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 {: tip}
 
 Use the following steps to install the stand-alone {{site.data.keyword.cloud_notm}} CLI:
 
 1. Select the installer of your OS to download.
 
-   Mac OS X 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
-   Windows 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
-   Linux X86 64 bit: [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
-   Linux LE 64-bit (ppc64le): [installer](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
+   Mac OS X 64 bit: [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
+   Windows 64 bit: [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
+   Linux X86 64 bit: [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
+   Linux LE 64-bit (ppc64le): [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
-   For 32 bit and earlier versions, go to the [{{site.data.keyword.cloud_notm}} CLI releases](/docs/cli/reference/ibmcloud/all_versions.html#cli-releases) page to download.
+   For 32 bit and earlier versions, go to the [{{site.data.keyword.cloud_notm}} CLI releases](/docs/cli/reference/ibmcloud?topic=cloud-cli-cli-releases#cli-releases) page to download.
 
 2. Run the installer
-   * For macOS and windows, run the installer.
-   * For Linux, extract the package and run `install` script
+   * For MacOS and Windows&trade;, run the installer.
+   * For Linux&trade;, extract the package and run `install` script
 
 3. Target an API endpoint and login to {{site.data.keyword.cloud_notm}}:
    ```
@@ -42,7 +46,7 @@ Use the following steps to install the stand-alone {{site.data.keyword.cloud_not
    
 Now, you're ready to manage {{site.data.keyword.cloud_notm}} resources. Type `ibmcloud help` to see the command descriptions.
 
-If you're using a federated ID, follow the instructions [here](/docs/iam/login_fedid.html#federated_id) to log in with a one-time passcode or an API key.  
+If you're using a federated ID, follow the instructions [here](/docs/iam?topic=iam-federated_id#federated_id) to log in with a one-time passcode or an API key.  
 {: tip}
 
 Besides installers, you can have other options to install the {{site.data.keyword.cloud_notm}} CLI:
@@ -53,30 +57,30 @@ Besides installers, you can have other options to install the {{site.data.keywor
 ## Install from shell
 {: #shell_install}
 
-### MacOS
+### macOS
 {: #shell-install-macos}
 
 Copy and paste the following command to a terminal of your Mac OS and run it:
 ```
-curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
+curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
 ```
 {: codeblock}
 
 ### Linux
 {: #shell-install-linux}
 
-Copy and paste the following command to a terminal of your Linux OS and run it:
+Copy and paste the following command to a terminal of your Linux&trade; OS and run it:
 ```
-curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
+curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
 ```
 {: codeblock}
 
 ### Windows PowerShell
 {: #shell-install-windows}
 
-Copy and paste the following command into a [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![External link icon](../../../icons/launch-glyph.svg) terminal console and run it:
+Copy and paste the following command into a [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") terminal console and run it:
 ```
-iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')
+iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
 ```
 {: codeblock}
 
@@ -90,19 +94,19 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
 
 | Platform | Downloads | Checksum |
 |---------|----------|---------|
-| macOS | [tgz](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/archive) | [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/osx/archive/checksum) |
-| linux32 | [tgz](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux32/archive) | [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux32/archive/checksum) |
-| linux64 | [tgz](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/archive) | [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/linux64/archive/checksum) |
-| ppc64le | [tgz](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/archive) | [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/ppc64le/archive/checksum) |
-| win32 | [zip](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win32/archive) | [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win32/archive/checksum) |
-| win64 | [zip](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/archive) | [sha1sums](https://clis.ng.bluemix.net/download/bluemix-cli/latest/win64/archive/checksum) |
+| macOS | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive/checksum) |
+| linux32 | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive/checksum) |
+| linux64 | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive/checksum) |
+| ppc64le | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive/checksum) |
+| win32 | [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive/checksum) |
+| win64 | [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive/checksum) |
 
 ### Step 2: Extract the package to a directory that you specify.
 {: #step2-custom-dir}
 
-   After extracting the package, the content will look like the following:
+   After extracting the package, you can see the following content:
 
-   For Linux and MacOS
+   For Linux&trade; and macOS:
 
    ```
    IBM_Cloud_CLI
@@ -135,12 +139,12 @@ When you use installers or a shell script to install the {{site.data.keyword.Blu
 {: #step3-custom-dir}
 
    * Add the `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` to the `PATH` environment variable.
-   * For shell autocompletion support (MacOS and Linux only), refer to [this guide](enable_cli_autocompletion.html).
+   * For shell autocompletion support (MacOS and Linux&trade; only), refer to [this guide](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
-## Uninstalling the stand-alone {{site.data.keyword.Bluemix_notm}} CLI
+## Uninstalling the stand-alone {{site.data.keyword.cloud_notm}} CLI
 {: #uninstall-ibmcloud-cli}
 
-The following sections provide details on how to uninstall the stand-alone {{site.data.keyword.Bluemix_notm}} CLI on specific platforms.
+The following sections provide details on how to uninstall the stand-alone {{site.data.keyword.cloud_notm}} CLI on specific platforms.
 
 ### Uninstalling on Windows
 {: #uninstall-cli-windows}
@@ -149,12 +153,12 @@ The following sections provide details on how to uninstall the stand-alone {{sit
 2. In the pop-up window, click `Uninstall a program`.
 3. In the pop-up application list, locate `IBM Cloud Command Line Interface`.
 4. Right click `IBM Cloud Command Line Interface`, and select `Uninstall`.
-5. The uninstaller will launch. Follow the instructions to finish the uninstallation.
+5. The uninstaller is started. Follow the instructions to finish the uninstallation.
 
-### Uninstalling on Linux/macOS
+### Uninstalling on Linux and macOS
 {: #uninstall-cli-linux-macos}
 
-#### Prior to version `0.9.0`
+#### Versions earlier than `0.9.0`
 
 1. Open a terminal, and run the following commands:
   * `rm -rf /usr/local/ibmcloud`
@@ -163,23 +167,23 @@ The following sections provide details on how to uninstall the stand-alone {{sit
   * `rm -f /usr/local/bin/bx`
   * `rm -f /usr/local/bin/ibmcloud-analytics`
 
-2. Clean up the autocompletion scripts, if you configured them. For more details, see [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux/MacOS only)](/docs/cli/reference/ibmcloud/enable_cli_autocompletion.html#shell-autocomplete).
+2. Clean up the autocompletion scripts, if you configured them. For more details, see [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux and macOS only)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 #### Version `0.9.0` and later
 
 1. Open a terminal, and run the following command:
   * `/usr/local/ibmcloud/bin/uninstall`
-2. Clean up the autocompletion scripts, if you've configured them. For more details, see [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux/MacOS only)](/docs/cli/reference/ibmcloud/enable_cli_autocompletion.html#shell-autocomplete).
+2. Clean up any custom autocompletion scripts. For more details, see [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux and macOS only)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 ## Other links to further explore {{site.data.keyword.cloud_notm}} CLI
 {: #other-cli-links}
 
-* [Extend {{site.data.keyword.cloud_notm}} CLI with plug-ins](/docs/cli/reference/ibmcloud/extend_cli.html#plug-ins)
-* [General CLI (ibmcloud) commands](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_cli)
+* [Extend {{site.data.keyword.cloud_notm}} CLI with plug-ins](/docs/cli/reference/ibmcloud?topic=cloud-cli-plug-ins#plug-ins)
+* [General CLI (ibmcloud) commands](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_cli)
 
 ## Report issues and submit feedback
 {: #issues}
 
 Use the following options to report issues or submit new feature requests:
-* Create issues in [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
-* Leave messages in the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
+* Create issues in [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+* Leave messages in the [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").

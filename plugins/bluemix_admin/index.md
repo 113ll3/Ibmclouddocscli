@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-02-27"
+
+keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+
+subcollection: cloud-cli
 
 ---
 
@@ -10,26 +14,29 @@ lastupdated: "2019-02-20"
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:note: .note}
+{:tip: .tip}
 
 # {{site.data.keyword.cloud_notm}} admin CLI
 {: #bluemixadmincli}
 
-
-You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface with the {{site.data.keyword.cloud_notm}} Admin CLI plug-in. For example, you can add users from an LDAP registry. For information about managing your {{site.data.keyword.cloud_notm}} Public account, see [administering](/docs/admin/adminpublic.html#administer).
+You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface with the {{site.data.keyword.cloud_notm}} Admin CLI plug-in. For example, you can add users from an LDAP registry. For information about managing your {{site.data.keyword.cloud_notm}} Public account, see [administering](/docs/account?topic=account-accounts#accounts).
 
 Before you begin, install the Cloud Foundry command line interface. The {{site.data.keyword.cloud_notm}} Admin CLI plug-in
-requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
+requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon")
 
 **Restriction:** The Cloud Foundry command line interface is not supported by
 Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin command line window.
 
-**Note**: {{site.data.keyword.cloud_notm}} admin CLI is only used for {{site.data.keyword.cloud_notm}} Local and {{site.data.keyword.cloud_notm}} Dedicated environment. It is not supported by {{site.data.keyword.cloud_notm}} Public.
+{{site.data.keyword.cloud_notm}} admin CLI is only used for {{site.data.keyword.cloud_notm}} Local and {{site.data.keyword.cloud_notm}} Dedicated environment. It is not supported by {{site.data.keyword.cloud_notm}} Public.
+{: note}
 
 ## Adding the {{site.data.keyword.cloud_notm}} Admin CLI Plug-in
 
 After the Cloud Foundry command line interface is installed, you can add the {{site.data.keyword.cloud_notm}} admin CLI plug-in.
 
-**Note**: If you've previously installed the {{site.data.keyword.cloud_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
+If you've previously installed the {{site.data.keyword.cloud_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
+{: tip}
 
 Complete the following steps to add the repository and install the plug-in:
 
@@ -51,13 +58,11 @@ If you need to uninstall the plug-in, you can use the following commands, then y
 * Uninstall the plug-in: `cf uninstall-plugin IBMCloudAdminCLI`
 * Remove the plug-in repository: `cf remove-plugin-repo IBMCloudAdmin`
 
-
 ## Using the {{site.data.keyword.cloud_notm}} Admin CLI Plug-in
 
 You can use the {{site.data.keyword.cloud_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks.
 
 To see a list of commands, run the following command:
-
 ```
 cf plugins
 ```
@@ -99,39 +104,36 @@ cf login
 
 To add a user to your {{site.data.keyword.cloud_notm}} environment from the
 user registry for your environment, use the following command:
-
 ```
 cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**Note**: To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you're an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command. For more information, see [Enabling managers to add users](index.html#clius_emau).
+To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you're an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command. For more information, see [Enabling managers to add users](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">The name of the user in the LDAP registry.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add the user to.</dd>
+<dd class="pd">The name or GUID of the {{site.data.keyword.cloud_notm}} org to add the user to.</dd>
 <dt class="pt dlterm">&lt;first_name&gt;</dt>
 <dd class="pd">The first name of the user to be added to the organization.</dd>
 <dt class="pt dlterm">&lt;last_name&gt;</dt>
 <dd class="pd">The last name of the user to be added to the organization.</dd>
 </dl>
 
-**Tip:** You can also use **ba au** as an alias for the longer
-**ba add-user** command name.
+**Tip:** You can also use **ba au** as an alias for the longer **ba add-user** command name.
 
 ### Inviting a user from {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
 
-Each {{site.data.keyword.Bluemix_dedicated_notm}} environment has a public, client-owned, corporate account in {{site.data.keyword.Bluemix_notm}}. In order for users in the Dedicated environment to create clusters with the {{site.data.keyword.containershort}}, the administrator must add the users to this public corporate account. Once the users are added to the public corporate account, their Dedicated and public accounts are linked together. Users can then use their IBMid to log in to both Dedicated and public simultaneously, and can create resources in the public account from the Dedicated interface. For more information, see [Setting up IBM Cloud Container Service on Dedicated](/docs/containers/cs_dedicated.html#dedicated_setup). To invite Dedicated users to the public account:
-
+Each {{site.data.keyword.Bluemix_dedicated_notm}} environment has a public, client-owned, corporate account in {{site.data.keyword.cloud_notm}}. In order for users in the Dedicated environment to create clusters with the {{site.data.keyword.containershort}}, the administrator must add the users to this public corporate account. Once the users are added to the public corporate account, their Dedicated and public accounts are linked together. Users can then use their IBMid to log in to both Dedicated and public simultaneously, and can create resources in the public account from the Dedicated interface. For more information, see [Setting up IBM Cloud Container Service on Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). To invite Dedicated users to the public account:
 ```
 cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
 ```
 {: pre}
 
-**Note**: To add Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} public account, you must be an **Admin** of the Dedicated account.
+To add Dedicated environment users to your {{site.data.keyword.cloud_notm}} public account, you must be an **Admin** of the Dedicated account.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_email&gt;</dt>
@@ -154,7 +156,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 ```
 {: pre}
 
-**Note**: To add Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} public account, you must be an **Admin** of the Dedicated account.
+To add Dedicated environment users to your {{site.data.keyword.Bluemix_notm}} public account, you must be an **Admin** of the Dedicated account.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
@@ -179,7 +181,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">The permission that is assigned to the user. The available permissions are:  admin (or superuser), login (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. For more information about assigned user permissions, see [Permissions](/docs/admin/index.html#permissions). You can't use this parameter with the organization parameter in the same query. </dd>
+<dd class="pd">The permission that is assigned to the user. The available permissions are:  admin (or superuser), login (or basic), catalog.read, catalog.write, reports.read, reports.write, users.read, or users.write. You can't use this parameter with the organization parameter in the same query. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">The organization name that the user belongs to. You can't use this parameter with the permission parameter in the same query.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
@@ -187,20 +189,18 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 
 </dl>
 
-**Tip:** You can also use **ba su** as an alias for the longer
-**ba search-users** command name.
+**Tip:** You can also use **ba su** as an alias for the longer **ba search-users** command name.
 
 ### Setting permissions for a user
 {: #admin_setperm_user}
 
 To set permissions for a specified user, use the following command:
-
 ```
 cf ba set-permissions <user_name> <permission> <access>
 ```
 {: codeblock}
 
-**Note**: You can set one permission at a time.
+You can set one permission at a time.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -211,8 +211,7 @@ cf ba set-permissions <user_name> <permission> <access>
 <dd class="pd">For Catalog, Reports, or Users permissions, you must also set the level of access as <code>read</code> or <code>write</code>.</dd>
 </dl>
 
-**Tip:** You can also use **ba sp** as an alias for the longer
-**ba set-permissions** command name.
+**Tip:** You can also use **ba sp** as an alias for the longer **ba set-permissions** command name.
 
 <!-- staging-only commands end -->
 
@@ -233,8 +232,7 @@ cf ba remove-user <user_name>
 
 </dl>
 
-**Tip:** You can also use **ba ru** as an alias for the longer
-**ba remove-user** command name.
+**Tip:** You can also use **ba ru** as an alias for the longer **ba remove-user** command name.
 
 ### Enabling Managers to add users
 {: #clius_emau}
@@ -246,8 +244,7 @@ cf ba enable-managers-add-users
 ```
 {: codeblock}
 
-**Tip:** You can also use **ba emau** as an alias for the longer
-**ba enable-managers-add-users** command name.
+**Tip:** You can also use **ba emau** as an alias for the longer **ba enable-managers-add-users** command name.
 
 ### Disabling Managers from adding users
 {: #clius_dmau}
@@ -259,8 +256,7 @@ cf ba disable-managers-add-users
 ```
 {: codeblock}
 
-**Tip:** You can also use **ba dmau** as an alias for the longer
-**ba disable-managers-add-users** command name.
+**Tip:** You can also use **ba dmau** as an alias for the longer **ba disable-managers-add-users** command name.
 
 ## Administering organizations
 {: #admin_orgs}
@@ -297,16 +293,15 @@ cf ba delete-org <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to delete.</dd>
+<dd class="pd">The name or GUID of the {{site.data.keyword.cloud_notm}} org to delete.</dd>
 </dl>
 
-**Tip:** You can also use **ba do** as an alias for the longer
-**ba delete-org** command name.
+**Tip:** You can also use **ba do** as an alias for the longer **ba delete-org** command name.
 
 ### Assigning a user to an organization
 {: #admin_ass_user_org}
 
-To assign a user in your {{site.data.keyword.Bluemix_notm}} environment to a
+To assign a user in your {{site.data.keyword.cloud_notm}} environment to a
 particular organization, use the following command:
 
 ```
@@ -316,22 +311,21 @@ cf ba set-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd class="pd">The name of the user in {{site.data.keyword.cloud_notm}}.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
+<dd class="pd">The name or GUID of the {{site.data.keyword.cloud_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Roles](/docs/admin/users_roles.html) for
-{{site.data.keyword.Bluemix_notm}} user roles and
+<dd class="pd">See [Roles](/docs/iam?topic=iam-userroles#userroles) for
+{{site.data.keyword.cloud_notm}} user roles and
 descriptions.</dd>
 </dl>
 
-**Tip:** You can also use **ba so** as an alias for the longer
-**ba set-org** command name.
+**Tip:** You can also use **ba so** as an alias for the longer **ba set-org** command name.
 
 ### Unassigning a user from an organization
 {: #admin_unass_user_org}
 
-To unassign a user in your {{site.data.keyword.Bluemix_notm}} environment from a
+To unassign a user in your {{site.data.keyword.cloud_notm}} environment from a
 particular organization, use the following command:
 
 ```
@@ -341,17 +335,16 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd class="pd">The name of the user in {{site.data.keyword.cloud_notm}}.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
+<dd class="pd">The name or GUID of the {{site.data.keyword.cloud_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Assigning roles](/docs/admin/users_roles.html) for
-{{site.data.keyword.Bluemix_notm}} user roles and
+<dd class="pd">See [Assigning roles](/docs/iam?topic=iam-userroles#userroles) for
+{{site.data.keyword.cloud_notm}} user roles and
 descriptions.</dd>
 </dl>
 
-**Tip:** You can also use **ba uo** as an alias for the longer
-**ba unset-org** command name.
+**Tip:** You can also use **ba uo** as an alias for the longer **ba unset-org** command name.
 
 #### Assigning roles
 
@@ -389,8 +382,7 @@ cf ba set-quota <organization> <plan>
 <dd class="pd">The quota plan for an organization.</dd>
 </dl>
 
-**Tip:** You can also use **ba sq** as an alias for the longer
-**ba set-quota** command name.
+**Tip:** You can also use **ba sq** as an alias for the longer **ba set-quota** command name.
 
 
 ### Finding container quotas for an organization
@@ -408,8 +400,7 @@ cf ibmcloud-admin containers-quota <organization>
 <dd class="pd">The name or ID of the organization in IBM Cloud. This parameter is required.</dd>
 </dl>
 
-**Tip:** You can also use **ba cq** as an alias for the longer
-**ibmcloud-admin containers-quota** command name.
+**Tip:** You can also use **ba cq** as an alias for the longer **ibmcloud-admin containers-quota** command name.
 
 ### Setting container quotas for an organization
 {: #admin_set_containquotas}
@@ -473,8 +464,7 @@ The JSON file should have the format that is shown in the following example:
 ```
 {: codeblock}
 
-**Tip:** You can also use **ba scq** as an alias for the longer
-**ibmcloud-admin set-containers-quota** command name.
+**Tip:** You can also use **ba scq** as an alias for the longer **ibmcloud-admin set-containers-quota** command name.
 
 ## Administering spaces
 {: #admin_spaces}
@@ -496,8 +486,7 @@ cf ibmcloud-admin create-space <organization> <space_name>
 <dd class="pd">The name of the space that is to be created in the organization.</dd>
 </dl>
 
-**Tip:** You can also use **ba cs** as an alias for the longer
-**ba create-space** command name.
+**Tip:** You can also use **ba cs** as an alias for the longer **ba create-space** command name.
 
 ### Deleting a space from the organization
 
@@ -516,8 +505,7 @@ cf ibmcloud-admin delete-space <organization> <space_name>
 <dd class="pd">The name of the space that is to be removed from the organization.</dd>
 </dl>
 
-**Tip:** You can also use **ba cs** as an alias for the longer
-**ba delete-space** command name.
+**Tip:** You can also use **ba cs** as an alias for the longer **ba delete-space** command name.
 
 ### Adding a user to a space with a role
 
@@ -537,13 +525,12 @@ cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 <dt class="pt dlterm">&lt;user_anme&gt;</dt>
 <dd class="pd">The name of the user that is to be added.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">The role of the user that is to be assigned. The value can be Manager, Developer, or Auditor. See [Assigning roles](/docs/admin/users_roles.html) for
+<dd class="pd">The role of the user that is to be assigned. The value can be Manager, Developer, or Auditor. See [Assigning roles](/docs/iam?topic=iam-userroles#userroles) for
 {{site.data.keyword.Bluemix_notm}} user roles and
 descriptions in a space.</dd>
 </dl>
 
-**Tip:** You can also use **ba ss** as an alias for the longer
-**ba set-space** command name.
+**Tip:** You can also use **ba ss** as an alias for the longer **ba set-space** command name.
 
 
 ### Removing the role of a user in a space
@@ -564,13 +551,12 @@ cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 <dt class="pt dlterm">&lt;user_anme&gt;</dt>
 <dd class="pd">The name of the user that is to be added.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">The role of the user that is to be assigned. The value can be Manager, Developer, or Auditor. See [Assigning roles](/docs/admin/users_roles.html) for
-{{site.data.keyword.Bluemix_notm}} user roles and
+<dd class="pd">The role of the user that is to be assigned. The value can be Manager, Developer, or Auditor. See [Assigning roles](/docs/iam?topic=iam-userroles#userroles) for
+{{site.data.keyword.cloud_notm}} user roles and
 descriptions in a space.</dd>
 </dl>
 
-**Tip:** You can also use **ba us** as an alias for the longer
-**ba unset-space** command name.
+**Tip:** You can also use **ba us** as an alias for the longer **ba unset-space** command name.
 
 ## Administering catalog
 {: #admin_catalog}
@@ -579,7 +565,7 @@ descriptions in a space.</dd>
 {: #admin_ena_service_org}
 
 To enable a service to be displayed in the
-{{site.data.keyword.Bluemix_notm}} catalog for all
+{{site.data.keyword.cloud_notm}} catalog for all
 organizations, use the following command:
 
 ```
@@ -592,8 +578,7 @@ cf ba enable-service-plan <plan_identifier>
 <dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted with service plans to choose from. To identify a service plan name,  select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service. </dd>
 </dl>
 
-**Tip:** You can also use **ba esp** as an alias for the longer
-**ba enable-service-plan** command name.
+**Tip:** You can also use **ba esp** as an alias for the longer **ba enable-service-plan** command name.
 
 ### Disabling services for all organizations
 {: #admin_dis_service_org}
@@ -611,8 +596,7 @@ cf ba disable-service-plan <plan_identifier>
 <dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service plan name, for example "Standard" or "Basic," you're prompted with service plans to choose from. To identify a service plan name, select the service category from the home page, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view the names of the service plans that are available for that service.</dd>
 </dl>
 
-**Tip:** You can also use **ba dsp** as an alias for the longer
-**ba disable-service-plan** command name.
+**Tip:** You can also use **ba dsp** as an alias for the longer **ba disable-service-plan** command name.
 
 ### Adding service visibility for organizations
 {: #admin_addvis_service_org}
@@ -632,8 +616,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add to the service's visibility list.</dd>
 </dl>
 
-**Tip:** You can also use **ba aspv** as an alias for the longer
-**ba add-service-plan-visibility** command name.
+**Tip:** You can also use **ba aspv** as an alias for the longer **ba add-service-plan-visibility** command name.
 
 ### Removing service visibility for organizations
 {: #admin_remvis_service_org}
@@ -655,8 +638,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to remove from the service's visibility list.</dd>
 </dl>
 
-**Tip:** You can also use **ba rspv** as an alias for the longer
-**ba remove-service-plan-visibility** command name.
+**Tip:** You can also use **ba rspv** as an alias for the longer **ba remove-service-plan-visibility** command name.
 
 ### Editing service visibility for organizations
 {: #admin_editvis_service_org}
@@ -670,7 +652,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 ```
 {: codeblock}
 
-**Note:** This command replaces existing visible services for the specified organizations with the service that you specify in the command.
+This command replaces existing visible services for the specified organizations with the service that you specify in the command.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
@@ -680,8 +662,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 one organization by entering more organization names or GUIDs in the command.</dd>
 </dl>
 
-**Tip:** You can also use **ba espv** as an alias for the longer
-**ba edit-service-plan-visibility** command name.
+**Tip:** You can also use **ba espv** as an alias for the longer **ba edit-service-plan-visibility** command name.
 
 ## Administering reports
 {: #admin_add_report}
@@ -696,7 +677,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-**Note**: If you have write access for the reports permission, you can create a new category and add a report in any of the accepted formats for your users. Enter the new category name for the `category` parameter, or add your new report to an existing category.
+If you have write access for the reports permission, you can create a new category and add a report in any of the accepted formats for your users. Enter the new category name for the `category` parameter, or add your new report to an existing category.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
@@ -711,8 +692,7 @@ name.</dd>
 you included a path to the report PDF. The RTF version is used for indexing and searching.</dd>
 </dl>
 
-**Tip:** You can also use **ba ar** as an alias for the longer
-**ba add-report** command name.
+**Tip:** You can also use **ba ar** as an alias for the longer **ba add-report** command name.
 
 ### Deleting reports
 {: #admin_del_report}
@@ -734,8 +714,7 @@ name.</dd>
 <dd class="pd">The name of the report.</dd>
 </dl>
 
-**Tip:** You can also use **ba dr** as an alias for the longer
-**ba delete-report** command name.
+**Tip:** You can also use **ba dr** as an alias for the longer **ba delete-report** command name.
 
 ### Retrieving reports
 {: #admin_retr_report}
@@ -764,8 +743,7 @@ You can view resource metric information, including memory, disk, and CPU usage.
 cf ba resource-metrics
 ```
 
-**Tip:** You can also use **ba rsm** as an alias for the longer
-**ba resource-metrics** command name.
+**Tip:** You can also use **ba rsm** as an alias for the longer **ba resource-metrics** command name.
 
 ## Viewing resource metric history
 {: #cliresourceusagehistory}
@@ -811,8 +789,7 @@ You can view the previous list of command parameters and examples by using the f
 cf ba resource-metrics-history -help
 ```
 
-**Tip:** You can also use **ba rsmh** as an alias for the longer
-**ba resource-metrics-history** command name.
+**Tip:** You can also use **ba rsmh** as an alias for the longer **ba resource-metrics-history** command name.
 
 ## Administering service brokers
 {: #admin_servbro}
@@ -827,15 +804,14 @@ cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-**Note**: To list all service brokers, enter the command without the `broker_name` parameter.
+To list all service brokers, enter the command without the `broker_name` parameter.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>
 <dd class="pd">Optional: The name of the custom service broker. Use this parameter, if you want to get information for a specific service broker.</dd>
 </dl>
 
-**Tip:** You can also use **ba sb** as an alias for the longer
-**ba service-brokers** command name.
+**Tip:** You can also use **ba sb** as an alias for the longer **ba service-brokers** command name.
 
 ### Adding a service broker
 {: #cliaddservbro}
@@ -859,8 +835,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 <dd class="pd">The URL for the service broker.</dd>
 </dl>
 
-**Tip:** You can also use **ba asb** as an alias for the longer
-**ba add-service-broker** command name.
+**Tip:** You can also use **ba asb** as an alias for the longer **ba add-service-broker** command name.
 
 ### Deleting a service broker
 {: #clidelservbro}
@@ -878,8 +853,7 @@ cf ba delete-service-broker <service_broker>
 <dd class="pd">The name or guid of the custom service broker.</dd>
 </dl>
 
-**Tip:** You can also use **ba dsb** as an alias for the longer
-**ba delete-service-broker** command name.
+**Tip:** You can also use **ba dsb** as an alias for the longer **ba delete-service-broker** command name.
 
 ### Updating a service broker
 {: #cliupdservbro}
@@ -902,9 +876,7 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 <dd class="pd">The URL for the service broker.</dd>
 </dl>
 
-**Tip:** You can also use **ba usb** as an alias for the longer
-**ba update-service-broker** command name.
-
+**Tip:** You can also use **ba usb** as an alias for the longer **ba update-service-broker** command name.
 
 ## Administering application security groups
 {: #admin_secgro}
@@ -913,12 +885,12 @@ To work with application security groups (ASGs), you must be a full access admin
 
 ASGs function as virtual firewalls that control outbound traffic from the applications in your {{site.data.keyword.Bluemix_notm}} environment. Each ASG consists of a list of rules that allow specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set, for example a group set that is used for applying global access, or you can bind to spaces within an organization in your {{site.data.keyword.Bluemix_notm}} environment.
 
-{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 **WARNING**: Unbinding the **Default Staging** or **Default Running** group sets from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network. Use unbinding with caution and awareness of its potential impact on the running and staging applications in your environment.
 
-
-**Note**: The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+{: note}
 
 ### Listing security groups
 {: #clilissecgro}
@@ -930,8 +902,7 @@ cf ba security-groups
 ```
 {: codeblock}
 
-**Tip:** You can also use **ba sgs** as an alias for the longer
-**ba security-groups** command name.
+**Tip:** You can also use **ba sgs** as an alias for the longer **ba security-groups** command name.
 
 * To display details for a specific security group, use the following command:
 
@@ -945,17 +916,14 @@ cf ba security-groups <security-group>
 <dd class="pd">Name of the security group</dd>
 </dl>
 
-**Tip:** You can also use **ba sg** as an alias for the longer
-**ba security-groups** command name with the `security-group` parameter.
-
+**Tip:** You can also use **ba sg** as an alias for the longer **ba security-groups** command name with the `security-group` parameter.
 
 ### Creating a security group
 {: #clicreasecgro}
 
-For more information about creating security groups and the rules that define outgoing traffic, see [Creating Application Security Groups ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+For more information about creating security groups and the rules that define outgoing traffic, see [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 To create a security group, use the following command:
-
 ```
 cf ba create-security-group <security-group> <path-to-rules-file>
 ```
@@ -970,8 +938,7 @@ Each security group that you create has the prefix `adminconsole_` added to the 
 <dd class="pd">Absolute or relative path to a rules file</dd>
 </dl>
 
-**Tip:** You can also use **ba csg** as an alias for the longer
-**ba create-security-group** command name.
+**Tip:** You can also use **ba csg** as an alias for the longer **ba create-security-group** command name.
 
 ### Updating a security group
 {: #cliupdsecgro}
@@ -990,14 +957,12 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 <dd class="pd">Absolute or relative path to a rules file</dd>
 </dl>
 
-**Tip:** You can also use **ba usg** as an alias for the longer
-**ba update-security-group** command name.
+**Tip:** You can also use **ba usg** as an alias for the longer **ba update-security-group** command name.
 
 ### Deleting a security group
 {: #clidelsecgro}
 
 To delete a security group, use the following command:
-
 ```
 cf ba delete-security-group <security-group>
 ```
@@ -1008,14 +973,12 @@ cf ba delete-security-group <security-group>
 <dd class="pd">Name of your security group</dd>
 </dl>
 
-**Tip:** You can also use **ba dsg** as an alias for the longer
-**ba delete-security-group** command name.
-
+**Tip:** You can also use **ba dsg** as an alias for the longer **ba delete-security-group** command name.
 
 ### Binding security groups
 {: #clibindsecgro}
 
-For more information about binding security groups, see [Binding Application Security Groups ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+For more information about binding security groups, see [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 * To bind to the Default Staging security group set, use the following command:
 
@@ -1029,8 +992,7 @@ cf ba bind-staging-security-group <security-group>
 <dd class="pd">Name of your security group</dd>
 </dl>
 
-**Tip:** You can also use **ba bssg** as an alias for the longer
-**ba bind-staging-security-group** command name.
+**Tip:** You can also use **ba bssg** as an alias for the longer **ba bind-staging-security-group** command name.
 
 * To bind to the Default Running security group set, use the following command:
 
@@ -1044,8 +1006,7 @@ cf ba bind-running-security-group <security-group>
 <dd class="pd">Name of your security group</dd>
 </dl>
 
-**Tip:** You can also use **ba brsg** as an alias for the longer
-**ba bind-running-security-group** command name.
+**Tip:** You can also use **ba brsg** as an alias for the longer **ba bind-running-security-group** command name.
 
 * To bind a security group to a space, use the following command:
 
@@ -1063,13 +1024,12 @@ cf ba bind-security-group <security-group> <org> <space>
 <dd class="pd">Name of the space within the organization to bind the security group to</dd>
 </dl>
 
-**Tip:** You can also use **ba bsg** as an alias for the longer
-**ba bind-security-group** command name.
+**Tip:** You can also use **ba bsg** as an alias for the longer **ba bind-security-group** command name.
 
 ### Unbinding security groups
 {: #cliunbindsecgro}
 
-For more information about unbinding security groups, see [Unbinding Application Security Groups ![External link icon](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
+For more information about unbinding security groups, see [Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 * To unbind from a Default Staging security group set, use the following command:
 
@@ -1085,8 +1045,7 @@ cf ba unbind-staging-security-group <security-group>
 
 **Warning**: Unbinding the **Default Staging** group set from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network and must be used with caution and understanding of the ramifications it has on all staging applications in your environment.
 
-**Tip:** You can also use **ba ussg** as an alias for the longer
-**ba unbind-staging-security-group** command name.
+**Tip:** You can also use **ba ussg** as an alias for the longer **ba unbind-staging-security-group** command name.
 
 * To unbind from a Default Running security group set, use the following command:
 
@@ -1102,8 +1061,7 @@ cf ba unbind-running-security-group <security-group>
 
 **Warning**: Unbinding the **Default Running** group set from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network and must be used with caution and understanding of the ramifications it has on all running applications in your environment.
 
-**Tip:** You can also use **ba brsg** as an alias for the longer
-**ba unbind-running-security-group** command name.
+**Tip:** You can also use **ba brsg** as an alias for the longer **ba unbind-running-security-group** command name.
 
 * To unbind a security group to a space, use the following command:
 
@@ -1121,8 +1079,7 @@ cf ba unbind-security-group <security-group> <org> <space>
 <dd class="pd">Name of the space within the organization to bind the security group to</dd>
 </dl>
 
-**Tip:** You can also use **ba usg** as an alias for the longer
-**ba unbind-staging-security-group** command name.
+**Tip:** You can also use **ba usg** as an alias for the longer **ba unbind-staging-security-group** command name.
 
 ## Administering Buildpacks
 {: #admin_buildpack}
@@ -1142,8 +1099,7 @@ cf ba buildpacks <buildpack_name>
 <dd class="pd">An optional parameter to specify a particular buildpack to view.</dd>
 </dl>
 
-**Tip:** You can also use **ba lb** as an alias for the longer
-**ba buildpacks** command name.
+**Tip:** You can also use **ba lb** as an alias for the longer **ba buildpacks** command name.
 
 ### Creating and uploading a Buildpack
 {: #clicreupbuildpack}
@@ -1164,14 +1120,12 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 <dd class="pd">The order in which the buildpacks are checked during buildpack auto-detection.</dd>
 </dl>
 
-**Tip:** You can also use **ba cb** as an alias for the longer
-**ba create-buildpack** command name.
+**Tip:** You can also use **ba cb** as an alias for the longer **ba create-buildpack** command name.
 
 ### Updating a Buildpack
 {: #cliupdabuildpack}
 
 If you have the apps catalog write permissions, you can update an existing buildpack. To update a buildpack, use the following command:
-
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ```
@@ -1188,14 +1142,12 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 <dd class="pd">Indicates whether the buildpack is locked to prevent updates.</dd>
 </dl>
 
-**Tip:** You can also use **ba ub** as an alias for the longer
-**ba update-buildpack** command name.
+**Tip:** You can also use **ba ub** as an alias for the longer **ba update-buildpack** command name.
 
 ### Deleting a Buildpack
 {: #clidelbuildpack}
 
 If you have the apps catalog write permissions, you can delete an existing buildpack. To delete a buildpack, use the following command:
-
 ```
 cf ba delete-buildpack <buildpack_name>
 ```
@@ -1206,5 +1158,4 @@ cf ba delete-buildpack <buildpack_name>
 <dd class="pd">The name of the buildpack to delete.</dd>
 </dl>
 
-**Tip:** You can also use **ba db** as an alias for the longer
-**ba delete-buildpack** command name.
+**Tip:** You can also use **ba db** as an alias for the longer **ba delete-buildpack** command name.

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-02-27"
+
+keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
+
+subcollection: cloud-cli
 
 ---
 
@@ -19,12 +23,10 @@ You can use the command line interface (CLI) to configure and manage your {{site
 
 The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
-The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the {{site.data.keyword.cloud_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.cloud_notm}} CLI ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
-
 ## Install the cf CLI Plug-in
 {: #install-cf-cli-plugin}
 
-Before you begin, install the cf CLI. See [Cloud Foundry command line interface ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window} for details.
+Before you begin, install the cf CLI. See [Cloud Foundry command line interface](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) for details.
 
 ## Install the VPN CLI Plug-in
 {: #install-vpn-cli-plugin}
@@ -39,7 +41,7 @@ cf uninstall-plugin vpn
 
 ### Install locally
 
-1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [ {{site.data.keyword.cloud_notm}} CLI Plug-in Repository ![External link icon](../../../icons/launch-glyph.svg)](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window}.
+1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from the [{{site.data.keyword.cloud_notm}} CLI Plug-in Repository](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
+
+subcollection: cloud-cli
 
 ---
 
@@ -19,7 +23,7 @@ lastupdated: "2019-02-14"
 
 {{site.data.keyword.cloud}} CLI supports a plug-in framework to extend its capability. You can install a plug-in from a repository, a web URL, or install a plug-in binary locally.
 
-[{{site.data.keyword.cloud_notm}} CLI plug-ins repository](https://tools.ng.bluemix.net){: new_window} ![External link icon](../../../icons/launch-glyph.svg) is the official repository where plug-ins are hosted.
+[{{site.data.keyword.cloud_notm}} CLI plug-ins repository](https://plugins.cloud.ibm.com/ui/repository.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg) is the official repository where plug-ins are hosted.
 
 For more commands to manage plug-ins, run `ibmcloud plugin` to see the help messages.
 {: tip}
@@ -74,7 +78,7 @@ Use the `ibmcloud plugin install LOCAL_FILE_NAME` command to install a plug-in b
 ## Install a plug-in from a web URL
 {: install-plugin-from-url}
 
-Use the `ibmcloud plugin install URL` command to install a plug-in directly from a web URL. For example
+Use the `ibmcloud plugin install URL` command to install a plug-in directly from a web URL. For example:
 
   ```
   ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2

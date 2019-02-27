@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: domain management, dns service, ibmcloud sl dns, classic infrastructure, management interface, dns, dns cli
+
+subcollection: cloud-cli
 
 ---
 

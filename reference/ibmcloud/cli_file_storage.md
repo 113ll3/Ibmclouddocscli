@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter
+
+subcollection: cloud-cli
 
 ---
 
@@ -44,7 +48,8 @@ ibmcloud sl file access-authorize VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
-This command authorizes virtual server with ID 87654321 to access volume with ID 12345678.
+
+This command authorizes virtual server with ID `87654321` to access volume with ID `12345678`.
 
 ## ibmcloud sl file access-list
 {: #sl_file_access_list}
@@ -66,7 +71,8 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file access-list 12345678 --sortby id
 ```
-This command lists all hosts that are authorized to access volume with ID 12345678 and sorts them by ID.
+
+This command lists all hosts that are authorized to access volume with ID `12345678` and sorts them by ID.
 
 ## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
@@ -94,7 +100,8 @@ ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
-This command revokes access of virtual server with ID 87654321 to volume with ID `12345678`.
+
+This command revokes access of virtual server with ID `87654321` to volume with ID `12345678`.
 
 ## ibmcloud sl file replica-failback
 {: #sl_file_replica_failback}
@@ -123,7 +130,7 @@ ibmcloud sl file replica-failover VOLUME_ID REPLICA_ID
 ```
 ibmcloud sl file replica-failover 12345678 87654321
 ```
-This command performs failover operation for volume with ID `12345678` to replica volume with ID 87654321.
+This command performs failover operation for volume with ID `12345678` to replica volume with ID `87654321`.
 
 ## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
@@ -138,7 +145,7 @@ ibmcloud sl file replica-locations VOLUME_ID
 ```
 ibmcloud sl file replica-locations 12345678
 ```
-This command lists suitable replication data centers for file volume with ID 12345678.
+This command lists suitable replication data centers for file volume with ID `12345678`.
 
 ## ibmcloud sl file replica-order
 {: #sl_file_replica_order}
@@ -166,7 +173,8 @@ ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
-This command orders a replica for volume with ID `12345678`, which performs DAILY replication, is located at dal09, tier level is 4.
+
+This command orders a replica for volume with ID `12345678`, which performs DAILY replication, is located at `dal09`, tier level is 4.
 
 ## ibmcloud sl file replica-partners
 {: #sl_file_replica_partners}
@@ -181,6 +189,7 @@ ibmcloud sl file replica-partners VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file replica-partners 12345678
 ```
+
 This command lists existing replicant volumes for file volume with ID `12345678`.
 
 ## ibmcloud sl file snapshot-cancel
@@ -205,7 +214,8 @@ ibmcloud sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 ```
-This command cancels snapshot with ID 12345678 immediately without asking for confirmation.
+
+This command cancels snapshot with ID `12345678` immediately without asking for confirmation.
 
 ## ibmcloud sl file snapshot-create
 {: #sl_file_snapshot_create}
@@ -225,7 +235,7 @@ ibmcloud sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-create 12345678 --note snapshotforibmcloud
 ```
-This command creates a snapshot for volume with ID 12345678 and with addition note as snapshotforibmcloud.
+This command creates a snapshot for volume with ID `12345678` and with addition note as `snapshotforibmcloud`.
 
 ## ibmcloud sl file snapshot-disable
 {: #sl_file_snapshot_disable}
@@ -245,7 +255,8 @@ ibmcloud sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-disable 12345678 -s DAILY
 ```
-This command disables daily snapshot for volume with ID 12345678.
+
+This command disables daily snapshot for volume with ID `12345678`.
 
 ## ibmcloud sl file snapshot-enable
 {: #sl_file_snapshot_enable}
@@ -273,7 +284,8 @@ ibmcloud sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
-This command enables snapshot for volume with ID 12345678, snapshot is taken weekly on every Sunday at 2:00, and up to 5 snapshots are retained.
+
+This command enables snapshot for volume with ID `12345678`, snapshot is taken weekly on every Sunday at 2:00, and up to 5 snapshots are retained.
 
 ## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
@@ -287,7 +299,8 @@ ibmcloud sl file snapshot-delete SNAPSHOT_ID
 ```
 ibmcloud sl file snapshot-delete 12345678
 ```
-This command deletes snapshot with ID 12345678.
+
+This command deletes snapshot with ID `12345678`.
 
 ## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
@@ -307,7 +320,8 @@ ibmcloud sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
-This command lists all snapshots of volume with ID 12345678 and sorts them by ID.
+
+This command lists all snapshots of volume with ID `12345678` and sorts them by ID.
 
 ## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
@@ -349,7 +363,8 @@ ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 ibmcloud sl file snapshot-restore 12345678 87654321
 ```
-This command restores volume with ID 12345678 from snapshot with ID 87654321.
+
+This command restores volume with ID `12345678` from snapshot with ID `87654321`.
 
 ## ibmcloud sl snapshot-schedule-list
 {: #sl_snapshot_schedule_list}
@@ -363,7 +378,8 @@ ibmcloud sl snapshot-schedule-list VOLUME_ID
 ```
 ibmcloud sl file snapshot-schedule-list 12345678
 ```
-This command list snapshot schedules for volume with ID 12345678
+
+This command list snapshot schedules for volume with ID `12345678`.
 
 ## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
@@ -387,7 +403,8 @@ ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file volume-cancel 12345678 --immediate -f
 ```
-This command cancels volume with ID 12345678 immediately and without asking for confirmation.
+
+This command cancels volume with ID `12345678` immediately and without asking for confirmation.
 
 ## ibmcloud sl file volume-count
 {: #sl_file_volume_count}
@@ -431,7 +448,8 @@ ibmcloud sl file volume-list [OPTIONS]
 ```
 ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
-This command lists all endurance volumes on current account that are located at dal09, and sorts them by capacity.
+
+This command lists all endurance volumes on current account that are located at `dal09`, and sorts them by capacity.
 
 ## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
@@ -446,7 +464,8 @@ ibmcloud sl file volume-detail VOLUME_ID
 ```
 ibmcloud sl file volume-detail 12345678
 ```
-This command shows details of volume with ID 12345678.
+
+This command shows details of volume with ID `12345678`.
 
 ## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
@@ -476,7 +495,8 @@ ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file volume-duplicate 12345678
 ```
-This command shows order a new volume by duplicating the volume with ID 12345678.
+
+This command shows order a new volume by duplicating the volume with ID `12345678`.
 
 ## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
@@ -510,7 +530,8 @@ ibmcloud sl file volume-order [OPTIONS]
 ```
 ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
-This command orders a performance volume with size is 1000GB, IOPS is 4000, located at dal09.
+
+This command orders a performance volume with size is 1000GB, IOPS is 4000, located at `dal09`.
 
 ## ibmcloud sl file volume-modify
 {: #sl_file_volume_modify}
@@ -538,12 +559,14 @@ Requirements: [If original IOPS/GB for the volume is 0.25, new IOPS/GB for the v
 ```
 ibmcloud sl file volume-modify 12345678 --new-size 1000 --new-iops 4000
 ```
-This command modify a volume 12345678 with size is 1000GB, IOPS is 4000.
+
+This command modify a volume `12345678` with size is 1000GB, IOPS is 4000.
 
 ```
 ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
 ```
-This command modify a volume 12345678 with size is 500GB, tier level is 4 IOPS per GB.
+
+This command modify a volume `12345678` with size is 500GB, tier level is 4 IOPS per GB.
 
 
 ## ibmcloud sl file volume-options

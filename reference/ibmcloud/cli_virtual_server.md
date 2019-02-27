@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+
+subcollection: cloud-cli
 
 ---
 
@@ -145,7 +149,7 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ```
 {: codeblock}
 
-This command orders a virtual server instance with hostname is myvsi, domain is ibm.com, 4 cpu cores, 4096M memory, located at datacenter: dal10,
+This command orders a virtual server instance with hostname is myvsi, domain is ibm.com, 4 cpu cores, 4096M memory, located at datacenter `dal10`,
 
 ## ibmcloud sl vs options
 {: #sl_vs_options}
@@ -263,7 +267,7 @@ ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 1000
 ```
-This command updates virtual server instance with ID 12345678 and set its domain to be "ibm.com", hostname to "myapp", tag to "testcli",
+This command updates virtual server instance with ID `12345678` and set its domain to be "ibm.com", hostname to "myapp", and tag to "testcli".
 
 ## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
@@ -378,7 +382,7 @@ ibmcloud sl vs pause IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs pause 12345678 -f
 ```
-This command pauses virtual server instance with ID 12345678 without asking for confirmation.
+This command pauses virtual server instance with ID `12345678` without asking for confirmation.
 
 ## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
@@ -402,7 +406,7 @@ ibmcloud sl vs power-off IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs power-off 12345678 --soft
 ```
-This command performs a soft power off for virtual server instance with ID 12345678.
+This command performs a soft power off for virtual server instance with ID `12345678`.
 
 ## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
@@ -498,7 +502,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs reload 12345678
 ```
-This command reloads current operating system for virtual server instance with ID 12345678.
+This command reloads current operating system for virtual server instance with ID `12345678`.
 
 ## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
@@ -518,7 +522,7 @@ ibmcloud sl vs rescue IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs rescue 12345678
 ```
-This command reboots virtual server instance with ID 12345678 into a rescue image.
+This command reboots virtual server instance with ID `12345678` into a rescue image.
 
 ## ibmcloud sl vs resume
 {: #sl_vs_resume}
@@ -538,7 +542,7 @@ ibmcloud sl vs resume IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs resume 12345678
 ```
-This command resumes virtual server instance with ID 12345678.
+This command resumes virtual server instance with ID `12345678`.
 
 ## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}

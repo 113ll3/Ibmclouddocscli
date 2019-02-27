@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-26"
+
+keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
+
+subcollection: cloud-cli
 
 ---
 
@@ -249,19 +253,19 @@ ibmcloud account space space_example --security-group-rules
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
 
-This command has the same function and options as the [cf create-space ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} command.
+This command has the same function and options as the [cf create-space](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
 
 ## ibmcloud account space-rename
 {: #ibmcloud_account_space_rename}
 
 
-This command has the same function and options as the [cf rename-space ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} command.
+This command has the same function and options as the [cf rename-space](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
 
 ## ibmcloud account space-delete
 {: #ibmcloud_account_space_delete}
 
 
-This command has the same function and options as the [cf delete-space ![External link icon](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} command.
+This command has the same function and options as the [cf delete-space](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") command.
 
 ## ibmcloud account org-users
 {: #ibmcloud_account_org_users}

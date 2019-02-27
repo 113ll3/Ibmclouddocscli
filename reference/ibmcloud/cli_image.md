@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+keywords: classic infrastructure, ibmcloud sl image, manage compute images, ibmcloud sl
+
+subcollection: cloud-cli
 
 ---
 
@@ -13,7 +17,7 @@ lastupdated: "2019-02-14"
 # Creating, editing and deleting compute images
 {: #sl-manage-compute-images}
 
-Use the following commands to manage {{site.data.keyword.Bluemix}} compute images.
+Use the following commands to manage {{site.data.keyword.cloud}} compute images.
 {: shortdesc}
 
 ## ibmcloud sl image delete
@@ -38,11 +42,13 @@ Get details for an image.
 ```
 ibmcloud sl image detail IDENTIFIER
 ```
+
 **Examples**:
 ```
  ibmcloud sl image detail 12345678
 ```
-This command gets details for image with ID 12345678.
+
+This command gets details for image with ID `12345678`.
 
 ## ibmcloud sl image edit
 {: #sl_image_edit}
@@ -66,6 +72,7 @@ ibmcloud sl image edit IDENTIFIER [OPTIONS]
 ```  
 ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
+
 This command edits image with ID `12345678` and set its name to `ubuntu16`, note to `testing`, and tag to `staging`.
 
 ## ibmcloud sl image list
