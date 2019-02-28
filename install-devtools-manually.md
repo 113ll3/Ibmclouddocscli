@@ -112,12 +112,12 @@ ibmcloud plugin install cloud-functions
 
 For more information, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk/bluemix_cli.html#cloudfunctions_cli).
 
-## Step 6. Installing the SDK Generator
+## Step 6. Installing the SDK Generator CLI plug-in
 {: #idt-install-sdk-gen}
 
 As a developer on {{site.data.keyword.cloud_notm}}, you can use this plug-in to generate SDKs from your [Open API Specification](https://www.openapis.org/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") compliant REST API definition. As you make changes to your REST API definition, you can use this plug-in to regenerate only the SDK instead of regenerating the entire project.
 
-Install the SDK Generator plug-in:
+Install the SDK Generator CLI plug-in:
 ```
 ibmcloud plugin install sdk-gen
 ```
