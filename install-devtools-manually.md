@@ -27,7 +27,7 @@ If you prefer more granular control for installing developer tools components, y
 {: cli-before-you-begin}
 
 * Install the stand-alone [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) so you can support installing command line plug-ins for `ibmcloud`.
-* Install the [curl](https://curl.haxx.se/download.html) command for downloading packages through the command line.
+* Install the [curl](https://curl.haxx.se/download.html){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") command for downloading packages through the command line.
 
 ## Step 1. Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in
 {: #install-devtools-idt}
@@ -87,7 +87,7 @@ To manage Kubernetes deployments from the command line, install the following co
   ```
   {: codeblock}
 
-For more information, see [Setting up the CLI and API](/docs/containers/cs_cli_install.html#cs_cli_install).
+For more information, see [Setting up the CLI and API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
 
 ## Step 5. Installing Helm:
 {: #idt-install-helm}
@@ -114,7 +114,7 @@ ibmcloud plugin install cloud-functions
 ```
 {: codeblock}
 
-For more information, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk/bluemix_cli.html#cloudfunctions_cli).
+For more information, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli).
 
 ## Step 7. Installing the SDK Generator CLI plug-in
 {: #idt-install-sdk-gen}
@@ -127,4 +127,4 @@ ibmcloud plugin install sdk-gen
 ```
 {: codeblock}
 
-For more information, see [SDK Generator](/docs/cli/sdk/index.html#sdk-cli).
+For more information, see [SDK Generator](/docs/cli/sdk?topic=cloud-cli-sdk-cli#sdk-cli).
