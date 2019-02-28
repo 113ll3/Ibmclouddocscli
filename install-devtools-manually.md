@@ -51,53 +51,53 @@ For running and debugging apps locally, install [Docker](https://www.docker.com/
 Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
 
 1. To support containerized deployments, install Kubernetes for your platform:
-  * MacOS:
-    ```
-    curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
-    ```
-    {: codeblock}
+   MacOS:
+   ```
+   curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+   ```
+   {: codeblock}
 
-  * Linux&trade;:
-    ```
-    curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-    ```
-    {: codeblock}
+  Linux&trade;:
+  ```
+  curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  ```
+  {: codeblock}
 
-  * Windows&trade;:
-    ```
-    curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
-    ```
-    {: codeblock}
+  Windows&trade;:
+  ```
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+  ```
+  {: codeblock}
 
 2. To manage Kubernetes deployments from the command line, install the following container plug-ins:
 
-  * Install the `container-registry` plug-in:
-    ```
-    ibmcloud plugin install container-registry
-    ```
-    {: codeblock}
+   Install the `container-registry` plug-in:
+   ```
+   ibmcloud plugin install container-registry
+   ```
+   {: codeblock}
 
-  * Install the `container-service` plug-in:
-    ```
-    ibmcloud plugin install container-service
-    ```
-    {: codeblock}
+   Install the `container-service` plug-in:
+   ```
+   ibmcloud plugin install container-service
+   ```
+   {: codeblock}
 
-    For more information, see [Setting up the CLI and API](/docs/containers/cs_cli_install.html#cs_cli_install).
+   For more information, see [Setting up the CLI and API](/docs/containers/cs_cli_install.html#cs_cli_install).
 
 ## Step 4. Installing Helm:
 {: #idt-install-helm}
 
 Install [Helm](https://helm.sh/docs/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), which is a Kubernetes-based package manager.
 
-* MacOS and Linux&trade; users, run the following commands:
+MacOS and Linux&trade; users, run the following commands:
   ```
   export DESIRED_VERSION=v2.7.2
   curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
   ```
   {: codeblock}
 
-* Windows&trade; users can download and install the Helm [binary](https://github.com/kubernetes/helm/releases/tag/v2.7.2){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+Windows&trade; users can download and install the Helm [binary](https://github.com/kubernetes/helm/releases/tag/v2.7.2){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Step 5. Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in
 {: #idt-install-functions}
