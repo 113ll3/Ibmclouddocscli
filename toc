@@ -23,6 +23,7 @@ IBM Cloud CLI and Developer Tools
 	{: topicgroup}
 	Debugging
 		idt/local_debug.md
+		enable_existing_python.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
