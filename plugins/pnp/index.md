@@ -1,82 +1,84 @@
 ---
 
 copyright:
-
   years: 2016, 2018
-
-lastupdated: "2018-10-04"
+lastupdated: "2019-03-26"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:tip: .tip}
+{:new_window: target="_blank"}
 
-# Private network peering Plug-in for {{site.data.keyword.Bluemix_notm}} CLI
+# Private network peering Plug-in for {{site.data.keyword.cloud_notm}} CLI
 {: #private_network_cli}
 
-Use the private network peering command line interface (CLI) to configure and manage private network peering between two {{site.data.keyword.Bluemix}} spaces. Private network peering is supported for IBM Containers (docker containers). The {{site.data.keyword.Bluemix_notm}} spaces can be located in different availability zones in the same region or can be located in the different regions. The private network peering CLI plug-in is available for use with the {{site.data.keyword.Bluemix_notm}} CLI plug-in.
+Use the private network peering command line interface (CLI) to configure and manage private network peering between two {{site.data.keyword.cloud}} spaces. Private network peering is supported for IBM Containers (docker containers). The {{site.data.keyword.cloud_notm}} spaces can be located in different availability zones in the same region or can be located in the different regions. The private network peering CLI plug-in is available for use with the {{site.data.keyword.cloud_notm}} CLI plug-in.
 
 The private network peering CLI plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the plug-in that is applicable to you.
 
-Before you begin, create {{site.data.keyword.Bluemix_notm}} spaces. Ensure that each container in a space has an IP address from a different network.
+Before you begin, create {{site.data.keyword.cloud_notm}} spaces. Ensure that each container in a space has an IP address from a different network.
 
-**Note:** After you use the private network peering with a {{site.data.keyword.Bluemix_notm}} space, if you need to delete the space, first delete the private network peering connections in that space.
+**Note:** After you use the private network peering with a {{site.data.keyword.cloud_notm}} space, if you need to delete the space, first delete the private network peering connections in that space.
 
-To get started, install the {{site.data.keyword.Bluemix_notm}} CLI. See
-[IBM Cloud CLI](http://clis.ng.bluemix.net/ui/home.html) for details.
+To get started, install the {{site.data.keyword.cloud_notm}} CLI. See [IBM Cloud CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) for details.
 
 ## Install the private network peering CLI Plug-in
 
 **Note**: If you have a previous version of the plug-in that is installed, you need to uninstall it. Use the following command to uninstall the plug-in:
-
 ```
 ibmcloud plugin uninstall private-network-peering
 ```
+{: codeblock}
+
 ### Install locally
-Download the private network peering plug-in for your platform from the [{{site.data.keyword.Bluemix_notm}} CLI plug-in repository ![External link icon](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
+Download the private network peering plug-in for your platform from the [{{site.data.keyword.cloud_notm}} CLI plug-in repository](https://plugins.cloud.ibm.com/ui/repository.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 Install the private network peering plug-in by using the following command:
 
 **Note**: Either switch to the location of the plug-in or specify the path to the plug-in location.
 
 * For Microsoft Windows OS:
-
 ```
 ibmcloud plugin install private-network-peering-windows-amd64.exe
 ```
+{: codeblock}
 
 * For Apple MAC OS:
-
 ```
 ibmcloud plugin install private-network-peering-darwin-amd64
 ```
+{: codeblock}
 
 * For Linux OS:
-
 ```
 ibmcloud plugin install private-network-peering-linux-amd64
 ```
+{: codeblock}
 
 **Note**: While you are installing the plug-in for Linux OS, if you see an error message that shows permission is denied, then run the following command and change the permissions:
-
 ```
 chmod a+x ./private-network-peering-linux-amd64
 ```
+{: codeblock}
 
-### Install from the {{site.data.keyword.Bluemix_notm}} repository
+### Install from the {{site.data.keyword.cloud_notm}} repository
 
-Follow these steps to install the plug-in from the the {{site.data.keyword.Bluemix_notm}} repository:
+Follow these steps to install the plug-in from the the {{site.data.keyword.cloud_notm}} repository:
 
-1. Add the {{site.data.keyword.Bluemix_notm}} plug-in registry endpoint:
+1. Add the {{site.data.keyword.cloud_notm}} plug-in registry endpoint:
 	```
-	ibmcloud plugin repo-add IBM Cloud http://plugins.ng.bluemix.net
+	ibmcloud plugin repo-add IBMCloud http://plugins.cloud.ibm.com
 	```
+	{: codeblock}
 
 2. Run the following command:
-
 	```
-	ibmcloud plugin install private-network-peering -r IBM Cloud
+	ibmcloud plugin install private-network-peering -r IBMCloud
 	```
+	{: codeblock}
 
 ## List of private network peering commands
 The following commands are supported. Use the `ibmcloud network` command to see the list of available commands:
@@ -108,44 +110,41 @@ ibmcloud network pnp-routers [--verbose (or -v)]
 
 To view network information about all routers:
 
-	$ ibmcloud network pnp-routers
-	Listing available routers ...
-	OK
+$ ibmcloud network pnp-routers
+Listing available routers ...
+OK
 
-	IP              NAME            COMPUTE    REGION          ORGANIZATION    SPACE
-	129.41.234.246  default-router  Container  US-South        ywu@us.ibm.com  demo1
-	129.41.237.172  default-router  Container  US-South        ywu@us.ibm.com  demo2
-	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
-
+IP              NAME            COMPUTE    REGION          ORGANIZATION    SPACE
+129.41.234.246  default-router  Container  US-South        ywu@us.ibm.com  demo1
+129.41.237.172  default-router  Container  US-South        ywu@us.ibm.com  demo2
+129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 To view detailed network information about all routers:
 
+$ ibmcloud network pnp-routers -v
+Listing available routers ...
+OK
 
-	$ ibmcloud network pnp-routers -v
-	Listing available routers ...
-	OK
+Router 'bce1aa25-bad0-4cf1-a831-d53c16463d06':
+FIELD          VALUE
+IP             129.41.234.246
+Name           default-router
+Compute        Container
+Region         US-South
+Organization   ywu@us.ibm.com
+Space          demo1
+Networks       172.31.0.0/16
 
-	Router 'bce1aa25-bad0-4cf1-a831-d53c16463d06':
-	FIELD          VALUE
-	IP             129.41.234.246
-	Name           default-router
-	Compute        Container
-	Region         US-South
-	Organization   ywu@us.ibm.com
-	Space          demo1
-	Networks       172.31.0.0/16
-
-	Router '9ea160f2-1a30-44cd-bd25-794d441b274b':
-	FIELD          VALUE
-	IP             129.41.237.172
-	Name           default-router
-	Compute        Container
-	Region         US-South
-	Organization   ywu@us.ibm.com
-	Space          demo2
-	Networks       172.25.0.0/16
-
-	...
+Router '9ea160f2-1a30-44cd-bd25-794d441b274b':
+FIELD          VALUE
+IP             129.41.237.172
+Name           default-router
+Compute        Container
+Region         US-South
+Organization   ywu@us.ibm.com
+Space          demo2
+Networks       172.25.0.0/16
+...
 
 
 #### Create a private network peering connection by using the IP Addresses
@@ -162,12 +161,12 @@ ibmcloud network pnp-create <router_ip> <router_ip> <name>
 ######Command example
 {: #ex2}
 
-	$ ibmcloud network pnp-create 129.41.234.246 129.41.237.172 demo
-	Creating private network peering connection 'demo' ...
-	Connecting 'default-router(129.41.234.246)' and 'default-router(129.41.237.172)' ...
-	OK
+$ ibmcloud network pnp-create 129.41.234.246 129.41.237.172 demo
+Creating private network peering connection 'demo' ...
+Connecting 'default-router(129.41.234.246)' and 'default-router(129.41.237.172)' ...
+OK
 
-	Private network peering connection 'demo' created.
+Private network peering connection 'demo' created.
 
 
 ####Create a private network peering connection by using the connection name
@@ -185,22 +184,22 @@ ibmcloud network pnp-create -i <name>
 ######Command example
 {: #ex3}
 
-	$ ibmcloud network pnp-create -i demo
-	Creating private network peering connection 'demo' ...
-	List of available routers (select TWO for peering):
+$ ibmcloud network pnp-create -i demo
+Creating private network peering connection 'demo' ...
+List of available routers (select TWO for peering):
 
-	#  ROUTER                          COMPUTE    REGION          ORGANIZATION    SPACE
-	1  default-router(129.41.234.246)  Container  US-South        ywu@us.ibm.com  demo1
-	2  default-router(129.41.237.172)  Container  US-South        ywu@us.ibm.com  demo2
-	3  default-router(129.41.238.212)  Container  United-Kingdom  ywu@us.ibm.com  demo3
+#  ROUTER                          COMPUTE    REGION          ORGANIZATION    SPACE
+1  default-router(129.41.234.246)  Container  US-South        ywu@us.ibm.com  demo1
+2  default-router(129.41.237.172)  Container  US-South        ywu@us.ibm.com  demo2
+3  default-router(129.41.238.212)  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
-	Select first router for peering> 1
-	Select second router for peering> 2
+Select first router for peering> 1
+Select second router for peering> 2
 
-	Connecting 'default-router(129.41.234.246)' and 'default-router(129.41.237.172)' ...
-	OK
+Connecting 'default-router(129.41.234.246)' and 'default-router(129.41.237.172)' ...
+OK
 
-	Private network peering connection 'demo' created.
+Private network peering connection 'demo' created.
 
 
 #### List all private network peering connections
@@ -218,30 +217,28 @@ ibmcloud network pnp-show [--verbose (or -v)]
 
 View basic information:
 
-	$ ibmcloud network pnp-show
-	Listing private network peering connections ...
-	OK
+$ ibmcloud network pnp-show
+Listing private network peering connections ...
+OK
 
-	ID                                    NAME  STATUS  ROUTER1                         ROUTER2
-	17b1c3c7-d614-4fc5-9afe-961e38ee79f8  demo  Active  default-router(129.41.234.246)  default-router(129.41.237.172)
+ID                                    NAME  STATUS  ROUTER1                         ROUTER2
+17b1c3c7-d614-4fc5-9afe-961e38ee79f8  demo  Active  default-router(129.41.234.246)  default-router(129.41.237.172)
 
 View detailed information:
 
-	$ ibmcloud network pnp-show -v
-	Listing private network peering connections ...
-	OK
+$ ibmcloud network pnp-show -v
+Listing private network peering connections ...
+OK
 
-	Connection 'bedbc077-8040-41cc-a4aa-d9ce09a2e8ec':
-	FIELD              VALUE
-	Name               demo
-	Status             Active
-	Router1 Name       default-router
-	Router1 IP         129.41.234.246
-	Router1 Networks   172.31.0.0/16
-	Router2 Name       default-router
-	Router2 IP         129.41.237.172
-	Router2 Networks   172.25.0.0/16
-
+Connection 'bedbc077-8040-41cc-a4aa-d9ce09a2e8ec':
+FIELD              VALUE
+Name               demo
+Status             Active
+Router1 IP         129.41.234.246
+Router1 Networks   172.31.0.0/16
+Router2 Name       default-router
+Router2 IP         129.41.237.172
+Router2 Networks   172.25.0.0/16
 
 #### Delete a private network peering connection
 ```
@@ -261,18 +258,16 @@ ibmcloud network pnp-delete [--force (or -f)] <connection_id>
 
 Delete a connection:
 
-	$ ibmcloud network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
-	Warning: deleted connections cannot be restored.
-	Are you sure you want to delete the connection? (yes/no)> yes
+$ ibmcloud network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
+Warning: deleted connections cannot be restored.
+Are you sure you want to delete the connection? (yes/no)> yes
 
-	Deleting private network peering connection '17b1c3c7-d614-4fc5-9afe-961e38ee79f8' ...
-	OK
+Deleting private network peering connection '17b1c3c7-d614-4fc5-9afe-961e38ee79f8' ...
+OK
 
-	Private network peering connection '17b1c3c7-d614-4fc5-9afe-961e38ee79f8' deleted.
-
+Private network peering connection '17b1c3c7-d614-4fc5-9afe-961e38ee79f8' deleted.
 
 Delete multiple connections:
-
 ```
 ibmcloud network pnp-delete [-f] <connection_id>,<connection_id>,<connection_id>
 ```
