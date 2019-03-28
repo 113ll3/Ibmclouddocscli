@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-27"
 
-keywords: classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter
+keywords: classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # Working with the File Storage service
 {: #sl-file-storage-service}

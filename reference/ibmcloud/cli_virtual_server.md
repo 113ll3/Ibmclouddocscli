@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-27"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 

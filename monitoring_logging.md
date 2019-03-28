@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-27"
 
-keywords: monitoring, logging, cloud logging, metrics
+keywords: monitoring, logging, cloud logging, metrics, monitor cpu, monitor usage, memory utilization, runtime logging
 
 subcollection: cloud-cli
 

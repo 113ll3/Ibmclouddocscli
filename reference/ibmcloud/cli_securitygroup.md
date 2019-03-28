@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-27"
 
-keywords: manage security groups, ingress, egress, traffic, virtual server, classic infrastructure, securitygroup, ibmcloud sl securitygroup
+keywords: manage security groups, ingress, egress, traffic, virtual server cli, classic infrastructure cli, securitygroup, ibmcloud sl securitygroup, security group cli
 
 subcollection: cloud-cli
 
