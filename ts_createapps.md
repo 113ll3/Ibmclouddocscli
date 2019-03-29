@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-28"
 
-keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
+keywords: troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
 subcollection: cloud-cli
 
@@ -54,7 +54,7 @@ ibmcloud login
 
 The following error might be displayed if you use the `create`, `delete`, `list`, or `code` commands:
 ```
-Failed to <command> application.
+Failed to <command> app.
 ```
 {: screen}
 {: tsSymptoms}
@@ -127,7 +127,7 @@ Select a different plan.
 The following error might be displayed when you use the CLI to create an app:
 ```
 FAILED                            
-Application created, but could not get code
+App created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: screen}
@@ -149,7 +149,7 @@ Use one of the following ways to get the code:
 
 * Use the {{site.data.keyword.dev_console}}.
 
-	1. Select your [app ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/resources) in the {{site.data.keyword.dev_console}}.
+	1. Select your [app](https://cloud.ibm.com/resources){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") in the {{site.data.keyword.dev_console}}.
 
 	2. Click **Download Code**.
 {: tsResolve}
@@ -265,9 +265,9 @@ ibmcloud cr namespaces
 The following failure might be displayed when trying to start your app:
 ```
 FAILED
-Could not determine the language of your application.
+Could not determine the language of your app.
 
-Try using the --language flag to specify the language of your application 
+Try using the --language flag to specify the language of your app 
 directly. 
 ```
 {: screen}
@@ -295,13 +295,95 @@ The many different possible causes can be found in each of the following links.
 - For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js applications for cloud deployment](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
-<!--
 ## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
 {: #ts-cli-install-devtools-manually}
 {: troubleshoot}
 
 To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
 
+## Why can't I build the Docker image?
+{: $ts-cli-docker}
+{: troubleshoot}
 
+If you see the following the error: 
+```
+FAILED
+An error exit status 1 was encountered while building the Docker 
+image.
+```
+{: screen}
 
+This error might be due to one of the following causes:
+- Docker is not installed.
+- The Docker daemon is not running.
+{: tsCauses}
+
+Be sure that you have Docker installed and running:
+- To install or start [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+- To install or start [Docker for Windows](https://docs.docker.com/docker-for-windows/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+- To install or start [Docker for Linux](https://docs.docker.com/v17.12/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+{: tsResolve}
+
+## How to resolve incompatible helm versions?
+{: ts-cli-helm}
+{: troubleshoot}
+
+If the client and server helm versions are not in sync, you might see the following errors:
+```
+FAILED
+Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
+configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
+cannot list resource "configmaps" in API group "" in the namespace 
+"kube-system"
+```
+{: screen}
+
+```
+FAILED
+The 'helm upgrade ' command failed to complete due to: exit status 1
+```
+{: screen}
+
+To resolve the issue, set the client's version to the same as the cluster's version. For example, to install the 2.8.1 helm version, run the following commands:
+{: tsResolve}
+
+* For Mac and Linux, run the following commands:
+  ```
+  export DESIRED_VERSION=v2.8.1
+
+  curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+  export HELM_HOME=~/.helm
+  ```
+
+* For Windows, do the following as administrator:
+  Download and install the `helm` binary at [https://github.com/kubernetes/helm/releases/tag/v2.8.1](https://github.com/kubernetes/helm/releases/tag/v2.9.1){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+  
+  From the PowerShell terminal, use the following commands:
+  ```
+  Set-Location Env:
+  Set-Item HELM_HOME C:\.helm\
+  ```
+
+## Why is ibmcloud dev build failing with a username that includes "@"?
+{: ts-cli-username}
+{: troubleshoot}
+During the image build process, your username is used for the user in the Docker tools image. If the username contains any special characters like '@' or '-', then the Docker image build process fails and the following error may occur:
+```
+Image will have user johnsmith@acme.com with id 501 added
+
+Executing docker image build  --file Dockerfile-tools --tag pythonmicroservicewithflaskfnzat-flask-tools --rm --pull --build-arg bx_dev_userid=501 --build-arg bx_dev_user=johnsmith@acme.com .
+
+FAILED
+An error exit status 1 was encountered while building the Docker image.
+
+Dumping output from the command:
+```
+{: screen}
+
+To resolve the issue, change your username to not include any special characters, or specify the following flag to use the root user instead:
+```
+ibmcloud dev build --use-root-user-tools
+```
+{: codeblock}
+{: tsResolve}
