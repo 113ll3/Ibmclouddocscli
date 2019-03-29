@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-02-28"
+lastupdated: "2019-03-29"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -17,40 +17,38 @@ subcollection: cloud-cli
 {:pre: .pre}
 {:note: .deprecated}
 
-# Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually
+# Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in manually
 {: #install-devtools-manually}
 
-If you prefer more granular control for installing developer tools components, you can manually install them by using the following steps. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
+You can manually install the {{site.data.keyword.cloud}} developer tools command-line interface (CLI) plug-in if you prefer more granular control for installing the components. Otherwise, all prerequisites are automatically installed for most users by using the [platform installers](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
 {: shortdesc}
 
 ## Before you begin
 {: cli-before-you-begin}
 
-* Install the stand-alone [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) so you can support installing command line plug-ins for `ibmcloud`.
+* Install the stand-alone [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli) to get support for installing command line plug-ins for {{site.data.keyword.cloud_notm}}.
 * Install the [curl](https://curl.haxx.se/download.html){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") command for downloading packages through the command line.
 
-## Step 1. Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in
+## Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in
 {: #install-devtools-idt}
 
-You can use the {{site.data.keyword.cloud_notm}} developer tools CLI (ibmcloud dev) commands to create an application, manage, deploy, debug, and test it.
+You can use the {{site.data.keyword.cloud_notm}} developer tools CLI commands to create an application, manage, deploy, debug, and test it.
 
-Install the `dev` plug-in by running the following command: 
+To install the {{site.data.keyword.cloud_notm}} developer tools plug-in, run the following command: 
 ```
 ibmcloud plugin install dev
 ```
 {: codeblock}
 
-## Step 2. Installing Docker
+## Installing Docker
 {: #install-devtools-docker}
 
 For running and debugging apps locally, install [Docker](https://www.docker.com/get-docker){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
-## Step 3. Installing Kubernetes:
+## Installing the Kubernetes command line tool
 {: #idt-install-kube}
 
-Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
-
-To support containerized deployments, install Kubernetes for your platform:
+To view a local version of the Kubernetes dashboard and to deploy apps into your clusters install the [Kubernetes command line tool](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for your platform:
 
 * MacOS:
   ```
@@ -70,26 +68,35 @@ To support containerized deployments, install Kubernetes for your platform:
   ```
   {: codeblock}
 
-## Step 4. Installing Kubernetes CLI plug-ins
-{: #idt-install-kubernetes-cli-plugins}
+The prefix for running commands by using the Kubernetes command line tool is `kubectl`. For more information, see [Setting up the CLI and API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
 
-To manage Kubernetes deployments from the command line, install the following container plug-ins:
+## Installing {{site.data.keyword.registrylong_notm}} CLI plug-in
+{: #idt-install-container-registry-cli-plugin}
 
-* Install the `container-registry` plug-in:
+You can use the `container-registry` CLI plug-in to set up your own image namespace in an IBM-hosted and managed private registry where you can store and share Docker images with all users in your {{site.data.keyword.cloud_notm}} account.
+
+* To install the {{site.data.keyword.registrylong}} plug-in, run the following command:
   ```
   ibmcloud plugin install container-registry
   ```
   {: codeblock}
 
-* Install the `container-service` plug-in:
+For more information, see the [{{site.data.keyword.registrylong}} command reference](/docs/services/Registry?topic=registry-registry_cli_reference).
+
+## Installing {{site.data.keyword.containerlong_notm}} CLI plug-in
+{: #idt-install-kubernetes-cli-plugin}
+
+To create and manage Kubernetes clusters in {{site.data.keyword.containerlong}}:
+
+* To install the {{site.data.keyword.registryshort_notm}} plug-in, run the following command:
   ```
   ibmcloud plugin install container-service
   ```
   {: codeblock}
 
-For more information, see [Setting up the CLI and API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
+For more information, see the [{{site.data.keyword.registryshort_notm}} command reference](/docs/containers-cli-plugin?topic=containers-cli-plugin-cs_cli_reference).
 
-## Step 5. Installing Helm:
+## Installing Helm
 {: #idt-install-helm}
 
 Install [Helm](https://helm.sh/docs/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), which is a Kubernetes-based package manager.
@@ -103,10 +110,10 @@ Install [Helm](https://helm.sh/docs/){: new_window} ![External link icon](../ico
 
 * Windows&trade; users can download and install the Helm [binary](https://github.com/kubernetes/helm/releases/tag/v2.7.2){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
-## Step 6. Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in
+## Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in
 {: #idt-install-functions}
 
-You can use the {{site.data.keyword.openwhisk}} CLI plug-in to manage your code snippets in actions, create triggers and rules to enable your actions to respond to events, and bundle actions into packages.
+You can use the {{site.data.keyword.openwhisk}} CLI plug-in to manage your code snippets in actions, bundle actions into packages, and create triggers and rules to enable your actions to respond to events.
 
 To install the {{site.data.keyword.openwhisk_short}} CLI plug-in, run the following command:
 ```
@@ -116,12 +123,12 @@ ibmcloud plugin install cloud-functions
 
 For more information, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI plug-in](/docs/openwhisk?topic=cloud-functions-cloudfunctions_cli#cloudfunctions_cli).
 
-## Step 7. Installing the SDK Generator CLI plug-in
+## Installing the SDK Generator CLI plug-in
 {: #idt-install-sdk-gen}
 
-As a developer on {{site.data.keyword.cloud_notm}}, you can use this plug-in to generate SDKs from your [Open API Specification](https://www.openapis.org/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") compliant REST API definition. As you make changes to your REST API definition, you can use this plug-in to regenerate only the SDK instead of regenerating the entire project.
+As a developer on {{site.data.keyword.cloud_notm}}, you can use this plug-in to generate SDKs from your [Open API Specification](https://www.openapis.org/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")-compliant REST API definition. As you make changes to your REST API definition, you can use this plug-in to regenerate only the SDK instead of regenerating the entire project.
 
-Install the SDK Generator CLI plug-in:
+To install the SDK Generator CLI plug-in, run the following command:
 ```
 ibmcloud plugin install sdk-gen
 ```
