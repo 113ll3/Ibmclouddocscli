@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-21"
+
+keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
+
+subcollection: cloud-cli
 
 ---
 
@@ -24,11 +28,10 @@ lastupdated: "2019-01-30"
 {: shortdesc}
 
 ## 非モバイル・パターンでアプリを作成するとホスト名エラーになるのはなぜですか?
-{: #hostname-error}
+{: #ts-cli-hostname-error}
 {: troubleshoot}
 
 {{site.data.keyword.dev_cli_short}} CLI を使用して Cloud Foundry にアプリをデプロイする場合、以下のエラーが表示されることがあります。 固有のホスト名を入力してもこのメッセージが表示されることがあります。
-
 ```
 The hostname <myHostname> is taken.
 ```
@@ -46,11 +49,10 @@ ibmcloud login
 {: tsResolve}
 
 ## 汎用コマンドが失敗するのはなぜですか?
-{: #general}
+{: #ts-cli-general-failures}
 {: troubleshoot}
 
 `create`、`delete`、 `list`、または `code` のコマンドを使用すると、以下のエラーが表示される場合があります。
-
 ```
 Failed to <command> application.
 ```
@@ -68,11 +70,10 @@ ibmcloud login
 {: tsResolve}
 
 ## 新しいアプリのイメージが認識されないのはなぜですか?
-{: #nosuchimage}
+{: #ts-cli-nosuchimage}
 {: troubleshoot}
 
 最初にビルドせずにアプリに対して `ibmcloud dev run` を実行しようとすると、以下のエラーが表示されることがあります。
-
 ```
 The run-cmd option was not specified
 Stopping the 'testProject' container...
@@ -101,7 +102,7 @@ ibmcloud dev run
 {: tsResolve}
 
 ## {{site.data.keyword.objectstorageshort}} 機能を追加するとサービス・ブローカー・エラーになるのはなぜですか?
-{: #os}
+{: #ts-cli-object-storage}
 {: troubleshoot}
 
 CLI を使用して、{{site.data.keyword.objectstorageshort}} 機能を持つ 2 つのアプリを作成すると、以下のエラーが表示される場合があります。
@@ -120,11 +121,10 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 {: tsResolve}
 
 ## アプリの作成時にコードが取得されないのはなぜですか?
-{: #code}
+{: #retrieve-code-error}
 {: troubleshoot}
 
 CLI を使用してアプリを作成するときに、以下のエラーが表示されることがあります。
-
 ```
 FAILED                            
 Application created, but could not get code
@@ -149,13 +149,13 @@ https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/co
 
 * {{site.data.keyword.dev_console}}を使用します。
 
-	1. {{site.data.keyword.dev_console}}で、[アプリ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/appservice/apps)を選択します。
+	1. {{site.data.keyword.dev_console}}で、[アプリ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/resources)を選択します。
 
 	2. **「コードのダウンロード」**をクリックします。
 {: tsResolve}
 
 ## Node.js アプリに対して `ibmcloud dev run` コマンドを実行できないのはなぜですか?
-{: #node}
+{: #ts-cli-node}
 {: troubleshoot}
 
 Node.js Web アプリまたは BFF アプリに対して `ibmcloud dev run` コマンドを実行する場合、以下のエラーが表示されることがあります。
@@ -188,6 +188,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: tsResolve}
 
 ## {{site.data.keyword.cloud_notm}} にデプロイできないのはなぜですか?
+{: #ts-cli-deploy-issues}
 {: troubleshoot}
 
 {{site.data.keyword.cloud_notm}} へデプロイしようとすると、失敗しますが、表示されるエラーはありません。
@@ -203,6 +204,7 @@ ibmcloud login
 {: tsResolve}
 
 ## {{site.data.keyword.cloud_notm}} 上の Kubernetes にデプロイできないのはなぜですか?
+{: #ts-cli-kube-deploy}
 {: troubleshoot}
 
 クラスター名のプロンプトが出された後、以下の失敗が表示される場合があります。
@@ -231,6 +233,7 @@ ibmcloud cs cluster-config <cluster-name>
 {: tsResolve}
 
 ## イメージ・ターゲットをデプロイできないのはなぜですか?
+{: #ts-deploy-image-target}
 {: troubleshoot}
 
 デプロイ用イメージ・ターゲットのプロンプトが出された後、以下の失敗が表示される場合があります。
@@ -256,6 +259,7 @@ ibmcloud cr namespaces
 {: tsResolve}
 
 ## アプリの言語を判別できないのはなぜですか?
+{: #ts-cli-determine-language}
 {: troubleshoot}
 
 アプリを開始しようとしたときに、以下の失敗が表示されることがあります。
@@ -270,79 +274,34 @@ directly.
 {: tsSymptoms}
 
 このエラーの原因は、以下のいずれかである可能性があります。
-- アプリケーションのソース・ディレクトリーではないディレクトリーから [enable](/docs/cli/idt/commands.html#enable) コマンドを実行する。
-- 認識されていない言語のアプリに対して [enable](/docs/cli/idt/commands.html#enable) コマンドを実行する。
+- アプリケーションのソース・ディレクトリーではないディレクトリーから [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) コマンドを実行する。
+- 認識されていない言語のアプリに対して [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) コマンドを実行する。
 {: tsCauses}
 
-必ず、アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。これで問題が解決されず、言語が[サポートされる言語](/docs/cli/idt/commands.html#enable-language-options)のいずれかである場合は、`--language` パラメーターを使用して言語を指定してください。
+必ず、アプリのソース・コードを含んでいるアプリ・ディレクトリーからコマンドを実行してください。 これで問題が解決されず、言語が[サポートされる言語](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options)のいずれかである場合は、`--language` パラメーターを使用して言語を指定してください。
 {: tsResolve}
 
 ## クラウド・デプロイメントが有効になっているアプリをビルドまたは実行できないのはなぜですか?
+{: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-有効になっているアプリを[ビルド](/docs/cli/idt/commands.html#build)または[実行](/docs/cli/idt/commands.html#run)しようとしたときに、さまざまな失敗が発生することがあります。
+有効になっているアプリを[ビルド](/docs/cli/idt?topic=cloud-cli-idt-cli#build)または[実行](/docs/cli/idt?topic=cloud-cli-idt-cli#run)しようとしたときに、さまざまな失敗が発生することがあります。
 {: tsSymptoms}
-
 
 多くの考えられる原因が以下の各リンクに記載されています。
 {: tsCauses}
 
-- Spring アプリでのそのような問題の解決について詳しくは、『[既存 Spring Boot アプリケーションでのクラウド・デプロイメントの有効化 (Enabling existing Spring Boot applications for cloud deployment)](/docs/java-spring/enable_existing.html#enable_existing)』を参照してください。
-- `Node.js` アプリでのそのような問題の解決について詳しくは、『[既存の Node.js アプリケーションでのクラウド・デプロイメントの有効化 (Enabling existing Node.js applications for cloud deployment)](/docs/node/enable_existing.html#enable_existing)』を参照してください。
+- Spring アプリでのそのような問題の解決について詳しくは、『[既存 Spring Boot アプリケーションでのクラウド・デプロイメントの有効化 (Enabling existing Spring Boot applications for cloud deployment)](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)』を参照してください。
+- `Node.js` アプリでのそのような問題の解決について詳しくは、『[既存の Node.js アプリケーションでのクラウド・デプロイメントの有効化 (Enabling existing Node.js applications for cloud deployment)](/docs/node?topic=nodejs-enable_existing#enable_existing)』を参照してください。
 {: tsResolve}
 
-## {{site.data.keyword.Bluemix_notm}} 開発者ツールを手動でインストールするにはどのようにすればよいでしょうか?
-{: #appendix}
-ほとんどのユーザー向けにすべての前提条件がプラットフォーム・インストーラーを使用してインストールされます。 いずれかのコンポーネントを手動でインストールする必要がある場合のそれぞれの手順を以下に示します。
-開発プラグインをインストールするには、最初に [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) をインストールする必要があります。
-開発プラグイン自体を使用するには、以下のコマンドを実行してそれをインストールする必要があります。 
-```
-ibmcloud plugin install dev
-```
-{: codeblock}
- 
-アプリをローカルに実行およびデバッグするには、[Docker](https://www.docker.com/get-docker) もインストールする必要があります。
- 
-アプリをコンテナーとしてデプロイするには、Kubernetes、Helm、および以下の IBM Cloud CLI プラグインもインストールする必要があります。
- 
-### Kubernetes をインストールするには、次のようにします。
-Mac ユーザー:
-```
-curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
-```
-{: codeblock}
+<!--
+## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
+{: #ts-cli-install-devtools-manually}
+{: troubleshoot}
 
-Linux ユーザー:
-```
-curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-```
-{: codeblock}
+To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
-Windows ユーザー:
-```
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
-```
-{: codeblock}
 
-### Helm をインストールするには、次のようにします。
-Mac および Linux ユーザー:
-```
-export DESIRED_VERSION=v2.7.2
-curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
-```
-{: codeblock}
 
-Windows ユーザー:
-[バイナリー](https://github.com/kubernetes/helm/releases/tag/v2.7.2)をダウンロードしてインストールします。
-
-### container-registry プラグインをインストールするには、次のようにします。
-```
-ibmcloud plugin install container-registry
-```
-{: codeblock}
-
-### container-service プラグインをインストールするには、次のようにします。
-```
-ibmcloud plugin install container-service
-```
-{: codeblock}

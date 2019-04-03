@@ -1,16 +1,14 @@
 ---
 
-
-
 copyright:
+  years: 2016, 2019
+lastupdated: "2019-02-26"
 
-  years: 2016, 2018
+keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
-lastupdated: "2018-11-30"
-
+subcollection: cloud-cli
 
 ---
-
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -23,13 +21,12 @@ lastupdated: "2018-11-30"
 Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は、アプリを管理するための一連のコマンドを提供します。 以下の情報では、アプリを管理するために最もよく使用される cf コマンドをリストし、コマンドの名前、オプション、使用法、前提条件、説明、および例を示します。 すべての cf コマンドと関連ヘルプ情報をリストするには、`cf help` を使用します。 特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
 {: shortdesc}
 
-Cloud Foundry CLI の開始について詳しくは、[Getting Started ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window} を参照してください。
+Cloud Foundry CLI の開始について詳しくは、[Getting Started ](https://github.com/cloudfoundry/cli#getting-started){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
-`cf CLI` コマンドのより詳細なリストについては、コミュニティー内の[Cloud Foundry CLI リファレンス・ガイド![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}を参照してください。
+`cf CLI` コマンドのより詳細なリストについては、コミュニティー内の[Cloud Foundry CLI リファレンス・ガイド](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
-ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、『[Using the cf CLI with a Proxy Server ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}』を参照してください。
+ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、『[Using the cf CLI with a Proxy Server ](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")』を参照してください。
 {: note}
-
 
 ## Cloud Foundry CLI コマンドの索引
 {: #CLIname_commands_index}
@@ -43,16 +40,15 @@ Cloud Foundry CLI の開始について詳しくは、[Getting Started ![外部�
  </thead>
  <tbody>
  <tr>
- <td>[api](/docs/cli/reference/ibmcloud/cf_index.html#cf_api)</td>
- <td>[help](/docs/cli/reference/ibmcloud/cf_index.html#cf_help)</td>
- <td>[login](/docs/cli/reference/ibmcloud/cf_index.html#cf_login)</td>
- <td>[stacks](/docs/cli/reference/ibmcloud/cf_index.html#cf_stacks)</td>
- <td>[target](/docs/cli/reference/ibmcloud/cf_index.html#cf_target)</td>
- <td>[-v ](/docs/cli/reference/ibmcloud/cf_index.html#cf_v)</td>
+ <td>[api](#cf_api)</td>
+ <td>[help](#cf_help)</td>
+ <td>[login](#cf_login)</td>
+ <td>[stacks](#cf_stacks)</td>
+ <td>[target](#cf_target)</td>
+ <td>[-v ](#cf_v)</td>
  </tr>
    </tbody>
  </table>
-
 
 <table summary="アプリ、スペース、およびサービスを管理するためのアルファベット順のコマンド。各コマンドには、コマンドの詳細を表示するリンクが含まれています。">
 <caption>表 2. アプリ、スペース、およびサービスを管理するためのコマンド</caption>
@@ -61,25 +57,25 @@ Cloud Foundry CLI の開始について詳しくは、[Getting Started ![外部�
  </thead>
  <tbody>
  <tr>
- <td>[apps](/docs/cli/reference/ibmcloud/cf_index.html#cf_apps)</td>
- <td>[bind-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_bind-service)</td>
- <td>[create-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-service)</td>
- <td>[create-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-space)</td>
- <td>[delete](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete)</td>
+ <td>[apps](#cf_apps)</td>
+ <td>[bind-service](#cf_bind-service)</td>
+ <td>[create-service](#cf_create-service)</td>
+ <td>[create-space](#cf_create-space)</td>
+ <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete-space)</td>
- <td>[events](/docs/cli/reference/ibmcloud/cf_index.html#cf_events)</td>
- <td>[logs](/docs/cli/reference/ibmcloud/cf_index.html#cf_logs)</td>
- <td>[marketplace](/docs/cli/reference/ibmcloud/cf_index.html#cf_marketplace)</td>
- <td>[push](/docs/cli/reference/ibmcloud/cf_index.html#cf_push)</td>
+ <td>[delete-space](/#cf_delete-space)</td>
+ <td>[events](#cf_events)</td>
+ <td>[logs](#cf_logs)</td>
+ <td>[marketplace](#cf_marketplace)</td>
+ <td>[push](#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](/docs/cli/reference/ibmcloud/cf_index.html#cf_scale)</td>
- <td>[services](/docs/cli/reference/ibmcloud/cf_index.html#cf_services)
- <td>[set-env](/docs/cli/reference/ibmcloud/cf_index.html#cf_set-env)</td>
- <td>[ssh](/docs/cli/reference/ibmcloud/cf_index.html#cf_ssh)</td>
- <td>[stop](/docs/cli/reference/ibmcloud/cf_index.html#cf_stop)</td>
+ <td>[scale](#cf_scale)</td>
+ <td>[services](#cf_services)
+ <td>[set-env](#cf_set-env)</td>
+ <td>[ssh](#cf_ssh)</td>
+ <td>[stop](#cf_stop)</td>
  </tr>
  </tbody>
  </table>
@@ -87,8 +83,7 @@ Cloud Foundry CLI の開始について詳しくは、[Getting Started ![外部�
 ## cf api
 {: #cf_api}
 
-このコマンドを使用して、{{site.data.keyword.Bluemix}} の API エンドポイントの URL を表示または指定します。
-
+このコマンドを使用して、{{site.data.keyword.cloud}} の API エンドポイントの URL を表示または指定します。
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
@@ -99,14 +94,13 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (オプション)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある {{site.data.keyword.Bluemix_notm}} API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
-   現在使用している API エンドポイントの URL を表示したい場合、cf api
-コマンドにこのパラメーターを指定する必要はありません。</dd>
+   <dd>{{site.data.keyword.cloud_notm}} に接続するときに指定する必要のある {{site.data.keyword.cloud_notm}} API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
+   現在使用している API エンドポイントの URL を表示したい場合、cf api コマンドにこのパラメーターを指定する必要はありません。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>SSL 検証プロセスを使用不可にします。 このパラメーターを使用すると、セキュリティーの問題が起きる可能性があります。</dd>
    <dt>* --unset</dt>
    <dd>すべての API エンドポイントの接続情報を削除します。</dd>
-    </dl>
+   </dl>
 
 <strong>例</strong>:
 
@@ -116,18 +110,17 @@ cf api
 ```
 {: codeblock}
 
-api.ng.bluemix.net のすべての API エンドポイントへの接続を削除します。
+api.us-south.cf.cloud.ibm.com のすべての API エンドポイントへの接続を削除します。
 ```
-cf api api.ng.bluemix.net --unset
-```
-{: codeblock}
-
-api.ng.bluemix.network の SSL 検証プロセスを無効にします。
-```
-cf api api.ng.bluemix.net --skip-ssl-validation
+cf api api.us-south.cf.cloud.ibm.com --unset
 ```
 {: codeblock}
 
+api.us-south.cf.cloud.ibm.com の SSL 検証プロセスを無効にします。
+```
+cf api api.us-south.cf.cloud.ibm.com --skip-ssl-validation
+```
+{: codeblock}
 
 ## cf apps
 {: #cf_apps}
@@ -139,9 +132,9 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 ```
 cf apps
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
-
 
 ## cf bind-service
 {: #cf_bind-service}
@@ -151,6 +144,7 @@ cf apps
 ```
 cf bind-service appname service_instance
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
@@ -180,6 +174,7 @@ cf bind-service my_app my_dataworks
 ```
 cf create-service service_name service_plan service_instance
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
@@ -287,7 +282,6 @@ cf delete my_app -f -r
 {: #cf_delete-space}
 
 スペースを削除します。
-
 ```
 cf delete-space space_name [-f]
 ```
@@ -302,7 +296,7 @@ cf delete-space space_name [-f]
    <dt>*-f* (オプション)</dt>
    <dd>確認を行わずに、スペースを強制的に削除します。</dd>
    *注:* スペースの削除は、元に戻すことのできない操作です。
-    </dl>
+   </dl>
 
 <strong>例</strong>:
 
@@ -339,6 +333,7 @@ cf delete my_app -f -r
 ```
 cf events [appname]
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
@@ -366,6 +361,7 @@ cf events my_app
 ```
 cf help [command_name]
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: なし。
 
@@ -394,9 +390,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}} にログインします。 フェデレーテッド ID でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
+{{site.data.keyword.cloud_notm}} にログインします。 フェデレーテッド ID でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
 
-{{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを使用してログインすることもできます。 ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。 API キーの作成について詳しくは、『[API キーの処理](/docs/iam/apikeys.html)』を参照してください。
+{{site.data.keyword.cloud_notm}} プラットフォーム API キーを使用してログインすることもできます。 ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。 API キーの作成について詳しくは、『[API キーの処理](/docs/iam?topic=iam-manapikey#manapikey)』を参照してください。
 {: note}
 
 ```
@@ -409,14 +405,14 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <dl>
 <dt>*-a* https://api.{DomainName} (オプション)</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL。</dd>
+<dd>{{site.data.keyword.cloud_notm}} の API エンドポイントの URL。</dd>
 <dt>*-u* user_name (オプション)</dt>
 <dd>自分のユーザー名。</dd>
 <dt>*-p* password (オプション)</dt>
 <dd>自分のパスワード。</dd>
 <dd>*重要:* コマンド・ライン・インターフェースで *-p* パラメーターを使用してパスワードを指定すると、パスワードがコマンド・ライン履歴に記録される可能性があります。 セキュリティー上の理由から、パスワードの指定には -p パラメーターを使用しないようにしてください。 代わりに、コマンド・ライン・インターフェースでプロンプトが出された場合にパスワードを入力します。</dd>
 <dt>*-sso*</dt>
-<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。 IBM ID でログインする場合は、その必要はありません。 フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。 SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
+<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。 IBMid でログインする場合は、その必要はありません。 フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。 SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
 <dt>*-o*organization_name</dt>
 <dd>ログイン先の組織の名前。</dd>
 <dt>*-s*space_name</dt>
@@ -429,33 +425,33 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>例</strong>:
 
-{{site.data.keyword.Bluemix_notm}} にログインします。
+{{site.data.keyword.cloud_notm}} にログインします。
 ```
 cf login
 ```
 {: codeblock}
 
-定義されているエンドポイント `https://api.ng.bluemix.net` を使用して {{site.data.keyword.Bluemix_notm}} にログインします。
+定義されているエンドポイント `https://api.us-south.cf.cloud.ibm.com` を使用して {{site.data.keyword.cloud_notm}} にログインします。
 ```
-cf login -a https://api.ng.bluemix.net
-```
-{: codeblock}
-
-定義されているエンドポイント `https://api.ng.bluemix.net` およびユーザー名 `user_name` を使用し、セキュリティーのためのパスワードを指定せずに、{{site.data.keyword.Bluemix_notm}} にログインします。
-```
-cf login -a https://api.ng.bluemix.net -u user_name
+cf login -a https://api.us-south.cf.cloud.ibm.com
 ```
 {: codeblock}
 
-定義されているエンドポイント `https://api.ng.bluemix.net`、ユーザー名 `user_name`、組織名 `org_name`、およびスペース名 `space_name` を使用し、セキュリティーのためのパスワードを指定せずに、{{site.data.keyword.Bluemix_notm}} にログインします。
+定義されているエンドポイント `https://api.us-south.cf.cloud.ibm.com` およびユーザー名 `user_name` を使用し、セキュリティーのためのパスワードを指定せずに、{{site.data.keyword.cloud_notm}} にログインします。
 ```
-cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name
 ```
 {: codeblock}
 
-定義されているエンドポイント `https://api.ng.bluemix.net` を使用し、API キーを使用して {{site.data.keyword.Bluemix_notm}} にログインします。 `apikey` をユーザー名として使用し、実際の API キーをパスワードとして使用します。
+定義されているエンドポイント `https://api.us-south.cf.cloud.ibm.com`、ユーザー名 `user_name`、組織名 `org_name`、およびスペース名 `space_name` を使用し、セキュリティーのためのパスワードを指定せずに、{{site.data.keyword.cloud_notm}} にログインします。
 ```
-cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
+cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+定義されているエンドポイント `https://api.us-south.cf.cloud.ibm.com` を使用し、API キーを使用して {{site.data.keyword.cloud_notm}} にログインします。 `apikey` をユーザー名として使用し、実際の API キーをパスワードとして使用します。
+```
+cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 
@@ -498,7 +494,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-マーケットプレイスで提供されているすべてのサービスをリストします。 このコマンドによってリストされるサービスは、{{site.data.keyword.Bluemix_notm}} カタログにも表示されます。
+マーケットプレイスで提供されているすべてのサービスをリストします。 このコマンドによってリストされるサービスは、{{site.data.keyword.cloud_notm}} カタログにも表示されます。
 
 ```
 cf marketplace
@@ -519,7 +515,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-新規アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするか、{{site.data.keyword.Bluemix_notm}} 内の既存のアプリケーションを更新します。
+新規アプリケーションを {{site.data.keyword.cloud_notm}} にデプロイするか、{{site.data.keyword.cloud_notm}} 内の既存のアプリケーションを更新します。
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
@@ -553,13 +549,13 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-t* timeout (オプション)</dt>
 <dd>アプリケーションが開始するための最大時間 (秒単位)。 他のサーバー・サイドのタイムアウトがこの値をオーバーライドする場合があります。</dd>
 <dt>*--no-hostname* (オプション)</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} システム・ドメインをこのアプリケーションにマップします。</dd>
+<dd>{{site.data.keyword.cloud_notm}} システム・ドメインをこのアプリケーションにマップします。</dd>
 <dt>*--no-manifest* (オプション)</dt>
 <dd>デフォルトのマニフェスト・ファイルを無視します。</dd>
 <dt>*--no-route* (オプション)</dt>
 <dd>経路をこのアプリケーションにマップしません。</dd>
 <dt>*--no-start* (オプション)</dt>
-<dd>アプリケーションがデプロイされた後にアプリケーションを開始しません。</dd>
+<dd>　アプリケーションがデプロイされた後にアプリケーションを開始しません。</dd>
 <dt>*--random-route* (オプション)</dt>
 <dd>アプリケーションのランダムな経路を作成します。</dd>
 </dl>
@@ -822,9 +818,7 @@ cf -v
 
 
 ## 関連リンク
-{: #general}
+{: #cf-related}
 
-* [Cloud Foundry CLI のダウンロード ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
-{: new_window}
-* [クイック・リファレンス・カード - cf コマンド ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{: new_window}
+* [Cloud Foundry CLI のダウンロード ](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")
+* [クイック・リファレンス・カード - cf コマンド](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")

@@ -1,37 +1,27 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # サブネットの作成、取り消し、および表示
+{: #sl-manage-subnets}
 
-サブネットは、IP ネットワークの論理区画であり、複数の小さいネットワーク・セグメントに分割されます。 以下のコマンドを使用して、{{site.data.keyword.Bluemix}} クラシック・インフラストラクチャーのサブネットを管理します。
+サブネットは、IP ネットワークの論理区画であり、複数の小さいネットワーク・セグメントに分割されます。 以下のコマンドを使用して、{{site.data.keyword.cloud}} クラシック・インフラストラクチャーのサブネットを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのサブネット・コマンド">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl subnet cancel](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_cancel)</td>
- <td>[ibmcloud sl subnet create](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_create)</td>
- <td>[ibmcloud sl subnet detail](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_detail)</td>
- <td>[ibmcloud sl subnet list](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_list)</td>
- <td>[ibmcloud sl subnet lookup](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_lookup)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl subnet cancel
+## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 サブネットを取り消します。
@@ -49,7 +39,7 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-このコマンドは、ID 12345678 のサブネットを、確認を求めずに取り消します。
+このコマンドは、ID `12345678` のサブネットを、確認を求めずに取り消します。
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -73,7 +63,9 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 ibmcloud sl subnet create public 16 567
 ```
-このコマンドは、16 個の IPv4 アドレスを持つパブリック・サブネットを作成し、ID 567 の VLAN に配置します。
+{: codeblock}
+
+このコマンドは、16 個の IPv4 アドレスを持つパブリック・サブネットを作成し、ID `567` の VLAN に配置します。
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
@@ -95,7 +87,9 @@ ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet detail 12345678
 ```
-このコマンドは、仮想サーバーおよびハードウェア・サーバーの情報を含め、ID 12345678 のサブネットに関する詳細情報を表示します。
+{: codeblock}
+
+このコマンドは、仮想サーバーおよびハードウェア・サーバーの情報を含め、ID `12345678` のサブネットに関する詳細情報を表示します。
 
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
@@ -129,7 +123,9 @@ ibmcloud sl subnet list [OPTIONS]
 ```
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
-このコマンドは、現行アカウントの IP V4 サブネットをリストします。フィルター基準のデータ・センターは dal09、サブネット・タイプは PRIMARY、およびネットワーク・スペースは PUBLIC です。
+{: codeblock}
+
+このコマンドは、現行アカウントの IP V4 サブネットをリストします。フィルター基準のデータ・センターは `dal09`、サブネット・タイプは `PRIMARY`、およびネットワーク・スペースは `PUBLIC` です。
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
@@ -139,9 +135,10 @@ IP アドレスを検出し、そのサブネットとデバイスの情報を�
 ibmcloud sl subnet lookup IP_ADDRESS
 ```
 
-
 **例**:
 ```
 ibmcloud sl subnet lookup 9.125.235.255
 ```
-このコマンドは、アドレス 9.125.235.255 の IP アドレス・レコードを検出し、そのサブネットとデバイスの情報を表示します。
+{: codeblock}
+
+このコマンドは、IP アドレス `9.125.235.255` の IP アドレス・レコードを検出し、そのサブネットとデバイスの情報を表示します。

@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-30"
+  years: 2016, 2019
+lastupdated: "2019-02-21"
+
+keywords: bmscore, bmscore sdk, network request, ios, android, cordova
+
+subcollection: cloud-cli
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -18,7 +23,7 @@ lastupdated: "2018-11-30"
 ## Android
 {: #request-android}
 
-1. Android アプリケーションに [Client SDK をインポートして初期化](sdk_BMSClient.html#init-BMSClient-android)しておくようにしてください。
+1. Android アプリケーションに [Client SDK をインポートして初期化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android)しておくようにしてください。
 
 2. ネットワーク要求を行います。
 
@@ -50,7 +55,7 @@ lastupdated: "2018-11-30"
 ## iOS
 {: #request-ios}
 
-1. iOS アプリケーションに [Client SDK をインポートして初期化](sdk_BMSClient.html#init-BMSClient-ios)しておくようにしてください。
+1. iOS アプリケーションに [Client SDK をインポートして初期化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)しておくようにしてください。
 
 2. ネットワーク要求を作成します。
 
@@ -94,13 +99,13 @@ lastupdated: "2018-11-30"
 
 `BMSURLSession` クラスは、iOS のみで使用可能です。
 
-使用法の完全な例については、`BMSCore` GitHub [README ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} を参照してください。
+使用法の完全な例については、`BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Cordova アプリケーションに [Client SDK をインポートして初期化](sdk_BMSClient.html#init-BMSClient-cordova)しておくようにしてください。
+1. Cordova アプリケーションに [Client SDK をインポートして初期化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)しておくようにしてください。
 
 2. ネットワーク要求を作成します。
 

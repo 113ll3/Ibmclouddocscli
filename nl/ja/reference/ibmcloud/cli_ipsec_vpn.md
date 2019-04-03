@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, ipsec, vpn, ibmcloud sl ipsec, tunnel, vpn access, datacenter, encryption
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,35 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # IPSec VPN トンネルの管理
+{: #sl-manage-ipsec-vpn-tunnels}
 
-{{site.data.keyword.Bluemix}} VPN アクセスにより、ユーザーは、すべてのサーバーを {{site.data.keyword.Bluemix_notm}} プライベート・ネットワーク経由でセキュアにリモート管理できます。 お客様のロケーションからプライベート・ネットワークへの VPN 接続により、暗号化された VPN トンネル経由でのアウト・オブ・バンド管理とサーバー・レスキューが可能になります。
+{{site.data.keyword.cloud}} VPN アクセスにより、ユーザーは、すべてのサーバーを {{site.data.keyword.cloud_notm}} プライベート・ネットワーク経由でセキュアにリモート管理できます。 お客様のロケーションからプライベート・ネットワークへの VPN 接続により、暗号化された VPN トンネル経由でのアウト・オブ・バンド管理とサーバー・レスキューが可能になります。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーの IPSec VPN サービスの IPSec VPN トンネルを管理します。
+以下のコマンドを使用して、{{site.data.keyword.cloud_notm}} クラシック・インフラストラクチャーの IPSec VPN サービスの IPSec VPN トンネルを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} IPSec VPN コマンド">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl ipsec cancel](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_cancel)</td>
- <td>[ibmcloud sl ipsec config](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_config)</td>
- <td>[ibmcloud sl ipsec detail](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_detail)</td>
- <td>[ibmcloud sl ipsec list](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_list)</td>
- <td>[ibmcloud sl ipsec order](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_order)</td>
- <td>[ibmcloud sl ipsec subnet-add](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_subnet_add)</td>
- </tr>
- <tr>
- <td>[ibmcloud sl ipsec subnet-remove](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_subnet_remove)</td>
- <td>[ibmcloud sl ipsec translation-add](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_add)</td>
- <td>[ibmcloud sl ipsec translation-remove](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_remove)</td>
- <td>[ibmcloud sl ipsec translation-update](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_update)</td>
- <td>[ibmcloud sl ipsec update](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_update)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl ipsec cancel
+## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 IPSec VPN トンネル・コンテキストを取り消します。

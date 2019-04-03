@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -19,54 +21,7 @@ lastupdated: "2018-11-30"
 以下のコマンドを使用して、パブリック Cloud Foundry 環境のアカウント、アカウントに含まれるユーザー、組織、スペース、および役割を管理します。
 {: shortdesc}
 
-<table summary="アカウント、組織、スペース、および役割を管理するために使用できる ibmcloud コマンド。">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
- <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
- <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
- <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
- <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
- </tr>
- <tr>
- <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
- <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
- <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
- <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
- <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
- <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
- <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
- <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
- <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
- <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
- <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
- <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
- <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-</tr>
- <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
- <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
- <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
- <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
- <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
- </tr>
- <tr>
-  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
-  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud account orgs
+## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
 
 すべての組織をリストします。
@@ -131,8 +86,7 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 
 <strong>例</strong>:
 
-組織 `IBM`
-の情報を、GUID の出力と共に表示します
+組織 `IBM` の情報を、GUID の出力と共に表示します。
 
 ```
 ibmcloud account org IBM --guid
@@ -214,7 +168,7 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
 
-すべてのスペースをリストします
+すべてのアカウント・スペースをリストします。
 
 ```
 ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
@@ -249,7 +203,7 @@ ibmcloud account spaces -o org_example --output JSON
 ## ibmcloud account space
 {: #ibmcloud_account_space}
 
-指定されたスペースの情報を表示します
+特定のスペースの情報を表示します。
 
 ```
 ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
@@ -300,19 +254,19 @@ ibmcloud account space space_example --security-group-rules
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
 
-このコマンドの機能とオプションは [cf create-space![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} コマンドと同じです。
+このコマンドの機能とオプションは [cf create-space](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
 
 ## ibmcloud account space-rename
 {: #ibmcloud_account_space_rename}
 
 
-このコマンドの機能とオプションは [cf rename-space![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} コマンドと同じです。
+このコマンドの機能とオプションは [cf rename-space](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
 
 ## ibmcloud account space-delete
 {: #ibmcloud_account_space_delete}
 
 
-このコマンドの機能とオプションは [cf delete-space![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} コマンドと同じです。
+このコマンドの機能とオプションは [cf delete-space](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") コマンドと同じです。
 
 ## ibmcloud account org-users
 {: #ibmcloud_account_org_users}
@@ -347,10 +301,10 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
-組織からユーザーを削除します (組織管理者またはユーザー本人のみ)
+組織からユーザーを削除します (組織管理者またはユーザー本人のみ)。
 
 ```
-   ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
+ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -362,7 +316,7 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ## ibmcloud account org-roles
 {: #ibmcloud_account_org_roles}
 
-現行ユーザーのすべての組織の役割を取得します
+現行ユーザーのすべての組織の役割を取得します。
 
 ```
 ibmcloud account org-roles [-u USER_ID]
@@ -572,6 +526,54 @@ ibmcloud account org-account ORG_NAME [--guid]
   <dd>アカウント ID のみを表示します</dd>
 </dl>
 
+## ibmcloud account show
+{: #ibmcloud_account_show}
+
+アカウントの詳細を表示します。
+
+```
+ibmcloud account show
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+</dl>
+
+<strong>例</strong>:
+
+現在のターゲット・アカウントの詳細を表示します
+
+```
+ibmcloud account show
+```
+
+## ibmcloud account update
+{: #ibmcloud_account_update}
+
+特定のアカウントを更新します。
+
+```
+ibmcloud account update (--service-endpoint-enable true | false)
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--service-endpoint-enable true | false</dt>
+  <dd>SoftLayer アカウントのサービス・エンドポイント接続を有効または無効にします。</dd>
+</dl>
+
+<strong>例</strong>:
+
+現行アカウントのサービス・エンドポイント接続を有効にします。
+
+```
+ibmcloud account update --service-endpoint-enable true
+```
+
 ## ibmcloud account users
 {: #ibmcloud_account_users}
 
@@ -584,7 +586,7 @@ ibmcloud account users
 ## ibmcloud account user-remove
 {: #ibmcloud_account_user_remove}
 
-アカウントからユーザーを削除します (アカウント所有者のみ)
+アカウントからユーザーを削除します (アカウント所有者のみ)。
 
 ```
 ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
@@ -630,7 +632,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
 ## ibmcloud account user-reinvite
 {: #ibmcloud_account_user_reinvite}
 
-ユーザーに招待を再送信します (アカウント管理者)
+ユーザーに招待を再送信します (アカウント管理者)。
 
 ```
 ibmcloud account user-reinvite USER_EMAIL
@@ -644,7 +646,7 @@ ibmcloud account user-reinvite USER_EMAIL
 </dl>
 
 ## ibmcloud app domain-cert
-{: #ibmcloud_app_domain_cert}
+{: #accounts-list-domain-cert}
 
 ドメインの証明書情報をリストします。
 
@@ -670,7 +672,7 @@ ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
 ## ibmcloud app domain-cert-add
-{: #ibmcloud_app_domain_cert_add}
+{: #accounts-add-domain-cert}
 
 現在の組織内の、指定したドメインに証明書を追加します。
 
@@ -706,7 +708,7 @@ ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_fil
 ```
 
 ## ibmcloud app domain-cert-remove
-{: #ibmcloud_app_domain_cert_remove}
+{: #accounts-remove-domain-cert}
 
 現在の組織内の、指定したドメインから証明書を削除します。
 

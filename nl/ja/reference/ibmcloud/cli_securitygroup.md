@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage security groups, ingress, egress, traffic, virtual server, classic infrastructure, securitygroup, ibmcloud sl securitygroup
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,38 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # 仮想サーバー・トラフィックのセキュリティー・グループの管理
+{: #sl-manage-securitygroups}
 
 セキュリティー・グループとは、仮想サーバー・インスタンスのパブリック・インターフェースとプライベート・インターフェースの両方について、入力 (ingress) および出力 (egress) トラフィックを処理する方法を定義する一連の IP フィルター・ルールです。 セキュリティー・グループに追加するルールをセキュリティー・グループ・ルールと呼びます。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix}} クラシック・インフラストラクチャーのセキュリティー・グループ・サービスを使用してセキュリティー・グループを管理します。
+以下のコマンドを使用して、{{site.data.keyword.cloud}} クラシック・インフラストラクチャーのセキュリティー・グループ・サービスを使用してセキュリティー・グループを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのセキュリティー・グループ・コマンド">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl securitygroup create](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_create)</td>
-  <td>[ibmcloud sl securitygroup delete](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_delete)</td>
-  <td>[ibmcloud sl securitygroup detail](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_detail)</td>
-  <td>[ibmcloud sl securitygroup edit](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_edit)</td>   
-  <td>[ibmcloud sl securitygroup interface-add](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interface_add)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl securitygroup interface-list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interace_list)</td>
-  <td>[ibmcloud sl securitygroup interface-remove](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interface_remove)</td>
-  <td>[ibmcloud sl securitygroup list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_list)</td>
-  <td>[ibmcloud sl securitygroup rule-add](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_add)</td>
-  <td>[ibmcloud sl securitygroup rule-edit](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_edit)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl securitygroup rule-list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_list)</td>
-  <td>[ibmcloud sl securitygroup rule-remove](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_remove)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl securitygroup create
+## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 セキュリティー・グループを作成します。

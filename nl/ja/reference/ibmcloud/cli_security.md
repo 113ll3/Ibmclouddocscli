@@ -1,48 +1,31 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage security, ssh keys, ssl certificates, ibmcloud sl security, certificate, ibmcloud sl, sshkey-add
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # セキュリティー SSH 鍵および SSL 証明書の管理
+{: #sl-manage-security-keys}
 
 SSH 鍵は、デバイスで実装されている各公開鍵の、対応クライアントのパスワードを使用せずにデバイスへのアクセスを許可します。 SSH 鍵をデバイスに追加することにより、SSH 鍵を提供されたデバイスは、パスワードを使用せずに、対応する鍵のデバイスにアクセスします。
 
 SSL 証明書は、ユーザーを保護するためのセキュリティー手段として、Web サイトによって使用可能にされます。 通常、機密情報を Web サイトに送信する必要がある場合に使用されます。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix}} クラシック・インフラストラクチャーの SSH 鍵および証明書を管理します。
+以下のコマンドを使用して、{{site.data.keyword.cloud}} クラシック・インフラストラクチャーの SSH 鍵および証明書を管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのセキュリティー・コマンド">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl security sshkey-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_add)</td>
-  <td>[ibmcloud sl security sshkey-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_edit)</td>
-  <td>[ibmcloud sl security sshkey-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_list)</td>
-  <td>[ibmcloud sl security sshkey-print](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_print)</td>
-  <td>[ibmcloud sl security sshkey-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_remove)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl security cert-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_add)</td>
-  <td>[ibmcloud sl security cert-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_edit)</td>
-  <td>[ibmcloud sl security cert-download](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_download)</td>
-  <td>[ibmcloud sl security cert-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_list)</td>
-  <td>[ibmcloud sl security cert-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_remove)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl security sshkey-add
+## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 新規の SSH 鍵を追加します。
@@ -64,6 +47,8 @@ ibmcloud sl security sshkey-add LABEL [OPTIONS]
 ```
 ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
+{: codeblock}
+
 このコマンドは、ファイル ~/.ssh/id_rsa.pub から SSH 鍵を、メモ「mykey」を付けて追加します。
 
 ## ibmcloud sl security sshkey-edit
@@ -86,7 +71,9 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-このコマンドは、ID 12345678 の SSH 鍵を更新し、ラベルを「ibmcloud」に設定し、メモを「testing」に設定します。
+{: codeblock}
+
+このコマンドは、ID `12345678` の SSH 鍵を更新し、ラベルを `ibmcloud` に設定し、メモを `testing` に設定します。
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
@@ -106,6 +93,8 @@ ibmcloud sl security sshkey-list [OPTIONS]
 ```
 ibmcloud sl security sshkey-list --sortby label
 ```
+{: codeblock}
+
 このコマンドは、現行アカウントのすべての SSH 鍵をリストし、それらをラベルによってソートします。
 
 ## ibmcloud sl security sshkey-print
@@ -126,6 +115,8 @@ ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
+{: codeblock}
+
 このコマンドは、ID 12345678 の SSH 鍵の ID、ラベル、およびメモを表示し、公開鍵をファイル ~/mykey.pub に書き込みます。
 
 ## ibmcloud sl security sshkey-remove
@@ -146,7 +137,9 @@ ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-remove 12345678 -f
 ```
-このコマンドは、ID 12345678 の SSH 鍵を、確認を求めずに削除します。
+{: codeblock}
+
+このコマンドは、ID `12345678` の SSH 鍵を、確認を求めずに削除します。
 
 ## ibmcloud sl security cert-add
 {: #sl_security_cert_add}

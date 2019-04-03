@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,39 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # ベアメタル・サーバーの作成および操作
+{: #sl-manage-bare-metal}
 
 {{site.data.keyword.baremetal_long}} は、ハードウェア・リソースへの下位レベルのアクセス権限でパフォーマンスと制御の機能を提供する、シングル・テナントの物理サーバーです。 ベアメタル・サーバーは、プロセッサー集中型およびディスク入出力集中型のワークロードに必要とされる強力なパワーを提供します。 これらのサーバーには、標準の機能とサービスが含まれた、最も包括的なパッケージが付属しています。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix}} クラシック・インフラストラクチャーのベア・メタル・ハードウェア・サーバーを管理します。
+以下のコマンドを使用して、{{site.data.keyword.cloud}} クラシック・インフラストラクチャーのベア・メタル・ハードウェア・サーバーを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーのベア・メタル・サーバー・コマンド">
- <tbody>
- <tr>
- <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>
- <td>[ibmcloud sl hardware cancel-reasons](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel_reasons)</td>
- <td>[ibmcloud sl hardware create](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_create)</td>
- <td>[ibmcloud sl hardware create-options](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_create_options)</td>
- <td>[ibmcloud sl hardware credentials](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_credentials)</td>
- <td>[ibmcloud sl hardware detail](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_detail)</td>
- </tr>
-<tr>
- <td>[ibmcloud sl hardware edit](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_edit)</td>
- <td>[ibmcloud sl hardware list](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_list)</td>
- <td>[ibmcloud sl hardware power-cycle](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_cycle)</td>
- <td>[ibmcloud sl hardware power-off](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_off)</td>
- <td>[ibmcloud sl hardware power-on](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_on)</td>
- <td>[ibmcloud sl hardware reboot](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_reboot)</td>
- </tr>
-<tr>
- <td>[ibmcloud sl hardware reload](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_reload)</td>
- <td>[ibmcloud sl hardware rescue](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_rescue)</td>
- <td>[ibmcloud sl hardware update-firmware](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_update_firmware)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl hardware cancel
+## ibmcloud sl hardware cancel
 {: #sl_hardware_cancel}
 
 ハードウェア・サーバーを取り消します。

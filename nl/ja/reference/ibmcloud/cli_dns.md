@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: domain management, dns service, ibmcloud sl dns, classic infrastructure, management interface, dns, dns cli
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,29 +15,12 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # DNS サービスを使用したドメインの管理
+{: #sl-manage-domains}
 
-{{site.data.keyword.Bluemix}} Domain Name Service (DNS) は、お客様が基本 DNS 管理インターフェースを使用して 1 カ所でドメインを表示したり管理したりできるようにします。また、同一の場所でリバース DNS と 2 次 DNS を管理するオプションも無料で提供しています。
+{{site.data.keyword.cloud}} Domain Name Service (DNS) は、お客様が基本 DNS 管理インターフェースを使用して 1 カ所でドメインを表示したり管理したりできるようにします。また、同一の場所でリバース DNS と 2 次 DNS を管理するオプションも無料で提供しています。
 
-以下のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーの DNS サービスを管理します。
+以下のコマンドを使用して、{{site.data.keyword.cloud_notm}} クラシック・インフラストラクチャーの DNS サービスを管理します。
 {: shortdesc}
-
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} インフラストラクチャー DNS コマンド">
- <tbody>
- <tr>
- <td>[ibmcloud sl dns import](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_import)</td>
- <td>[ibmcloud sl dns record-add](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_add)</td>
- <td>[ibmcloud sl dns record-edit](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_edit)</td>
- <td>[ibmcloud sl dns record-list](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_list)</td>
- <td>[ibmcloud sl dns record-remove](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_remove)</td>
- <td>[ibmcloud sl dns zone-create](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_create)</td>
- </tr>
- <tr>
-   <td>[ibmcloud sl dns zone-delete](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_delete)</td>
-   <td>[ibmcloud sl dns zone-list](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_list)</td>
-   <td>[ibmcloud sl dns zone-print](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_print)</td>
- </tr>
-   </tbody>
- </table>
 
 ## ibmcloud sl dns import
 {: #sl_dns_import}
@@ -57,6 +42,7 @@ ibmcloud sl dns import ~/ibm.com.txt
 ```
 このコマンドは、ファイル ~/ibm.com.txt からゾーンとそのリソース・レコードをインポートします。
 
+
 ## ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
@@ -76,6 +62,7 @@ ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
 このコマンドは、A レコードをゾーン ibm.com に追加します。ホストは「ftp」、データは「127.0.0.1」、および ttl は 86400 秒です。
+
 
 ## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
@@ -103,6 +90,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 このコマンドは、ゾーン ibm.com のレコードを編集します。ID は 12345678 です。データを「127.0.0.2」に設定し、ttl を 3600 に設定します。
 
+
 ## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
@@ -129,6 +117,7 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
 このコマンドは、ゾーン ibm.com のすべての A レコードをリストします。フィルター基準ホストは elasticsearch で TTL は 900 秒です。
 
+
 ## ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
@@ -137,12 +126,12 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ibmcloud sl dns record-remove RECORD_ID
 ```
 
-
 **例**:
 ```
 ibmcloud sl dns record-remove 12345678
 ```
 このコマンドは、ID 12345678 のリソース・レコードを削除します。
+
 
 ## ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
@@ -152,12 +141,12 @@ ibmcloud sl dns record-remove 12345678
 ibmcloud sl dns zone-create ZONE
 ```
 
-
 **例**:
 ```
 ibmcloud sl dns zone-create ibm.com
 ```
 このコマンドは、ibm.com という名前のゾーンを作成します。
+
 
 ## ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
@@ -167,12 +156,12 @@ ibmcloud sl dns zone-create ibm.com
 ibmcloud sl dns zone-delete ZONE
 ```
 
-
 **例**:
 ```
 ibmcloud sl dns zone-delete ibm.com
 ```
 このコマンドは、ibm.com という名前のゾーンを削除します。
+
 
 ## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
@@ -182,12 +171,12 @@ ibmcloud sl dns zone-delete ibm.com
 ibmcloud sl dns zone-list
 ```
 
-
 **例**:
 ```
 ibmcloud sl dns zone-list
 ```
 このコマンドは、現行アカウントにあるすべてのゾーンをリストします。
+
 
 ## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
@@ -196,7 +185,6 @@ ibmcloud sl dns zone-list
 ```
 ibmcloud sl dns zone-print ZONE
 ```
-
 
 **例**:
 ```

@@ -1,60 +1,29 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 仮想サーバーの作成および操作
+{: #cli-virtual-servers}
 
-{{site.data.keyword.BluVirtServers}} は、専用のコアおよびメモリー割り振りと共に購入される拡張が容易な仮想サーバーです。 数分で追加が可能で、イメージ・テンプレートのような機能も利用できる計算リソースをお探しであれば、これは優れた選択肢です。 
+{{site.data.keyword.BluVirtServers}} は、専用のコアおよびメモリー割り振りと共に購入される拡張が容易な仮想サーバーです。 数分で追加が可能で、イメージ・テンプレートのような機能も利用できるコンピュート・リソースをお探しであれば、これは優れた選択肢です。 
 
 以下のコマンドを使用して、クラシック・インフラストラクチャーの仮想サーバーを管理します。
 {: shortdesc}
 
-<table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の {{site.data.keyword.Bluemix_notm}} クラシック・インフラストラクチャーの仮想サーバー・コマンド">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl vs cancel](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_cancel)</td>
- <td>[ibmcloud sl vs capture](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_capture)</td>
- <td>[ibmcloud sl vs create](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_create)</td>
- <td>[ibmcloud sl vs options](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_options)</td>
- <td>[ibmcloud sl vs credentials](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_credentials)</td>
- <td>[ibmcloud sl vs detail](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_detail)</td>
- </tr>
- <tr>
- <td>[ibmcloud sl vs dns-sync](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_dns_sync)</td>
- <td>[ibmcloud sl vs edit](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_edit)</td>
- <td>[ibmcloud sl vs host-create](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_host_create)</td>
- <td>[ibmcloud sl vs host-list](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_host_list)</td>
- <td>[ibmcloud sl vs list](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_list)</td>
- <td>[ibmcloud sl vs pause](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_pause)</td>
- </tr>
- <tr>
- <td>[ibmcloud sl vs power-off](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_power_off)</td>
- <td>[ibmcloud sl vs power-on](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_power_on)
- <td>[ibmcloud sl vs ready](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_ready)</td>
- <td>[ibmcloud sl vs reboot](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_reboot)</td>
- <td>[ibmcloud sl vs reload](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_reload)</td>
- <td>[ibmcloud sl vs rescue](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_rescue)</td>
- </tr>
- <tr>
- <td>[ibmcloud sl vs resume](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_resume)</td>
- <td>[ibmcloud sl vs upgrade](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_upgrade)</td>
-</tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl vs cancel
+## ibmcloud sl vs cancel
 {: #sl_vs_cancel}
 
 仮想サーバー・インスタンスを取り消します。
@@ -72,7 +41,9 @@ ibmcloud sl vs cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs cancel 12345678
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスを取り消します。
+{: codeblock}
+
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスを取り消します。
 
 ## ibmcloud sl vs capture
 {: #sl_vs_capture}
@@ -96,7 +67,9 @@ ibmcloud sl vs capture IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs capture 12345678 -n mycloud --all --note testing
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスをすべてのディスクと共に、「mycloud」という名前のイメージに、「testing」というメモを付けて取り込みます。
+{: codeblock}
+
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスをすべてのディスクと共に、`mycloud` という名前のイメージに、`testing` というメモを付けて取り込みます。
 
 ## ibmcloud sl vs create
 {: #sl_vs_create}
@@ -174,7 +147,9 @@ ibmcloud sl vs create [OPTIONS]
 ```
 ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
-このコマンドは、ホスト名 myvsi、ドメイン ibm.com、cpu コア x 4、4096M メモリー、データ・センター dal10 で仮想サーバー・インスタンスを注文します。
+{: codeblock}
+
+このコマンドは、ホスト名 myvsi、ドメイン ibm.com、cpu コア x 4、4096M メモリー、データ・センター `dal10` で仮想サーバー・インスタンスを注文します。
 
 ## ibmcloud sl vs options
 {: #sl_vs_options}
@@ -184,11 +159,12 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ibmcloud sl vs options [OPTIONS]
 ```
 
-
 **例**:
 ```
 ibmcloud sl vs options
 ```
+{: codeblock}
+
 このコマンドは、仮想サーバー・インスタンス (例えば、データ・センター、CPU、メモリー、OS、ディスク、ネットワーク速度など) を作成するためのすべてのオプションをリストします。
 
 ## ibmcloud sl vs credentials
@@ -199,12 +175,13 @@ ibmcloud sl vs options
 ibmcloud sl vs credentials IDENTIFIER [OPTIONS]
 ```
 
-
 **例**:
 ```
 ibmcloud sl vs credentials 12345678
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスのユーザー名とパスワードのすべてのペアをリストします。
+{: codeblock}
+
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスのユーザー名とパスワードのすべてのペアをリストします。
 
 ## ibmcloud sl vs detail
 {: #sl_vs_detail}
@@ -226,7 +203,9 @@ ibmcloud sl vs detail IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs details 12345678
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスに関する詳細情報をリストします。
+{: codeblock}
+
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスに関する詳細情報をリストします。
 
 ## ibmcloud sl vs dns-sync
 {: #sl_vs_dns_sync}
@@ -254,7 +233,9 @@ ibmcloud sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスの A レコード (IP V4 アドレス) を DNS サーバーに同期し、この A レコードの TTL を 3600 に設定します。
+{: codeblock}
+
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスの A レコード (IP V4 アドレス) を DNS サーバーに同期し、この A レコードの TTL を 3600 に設定します。
 
 ## ibmcloud sl vs edit
 {: #sl_vs_edit}
@@ -286,7 +267,7 @@ ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 1000
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスを更新し、ドメインを「ibm.com」、ホスト名を「myapp」、タグを「testcli」に設定します。
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスを更新し、ドメインを「ibm.com」、ホスト名を「myapp」、タグを「testcli」に設定します。
 
 ## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
@@ -401,7 +382,7 @@ ibmcloud sl vs pause IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs pause 12345678 -f
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスを、確認を求めずに一時停止します。
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスを、確認を求めずに一時停止します。
 
 ## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
@@ -425,7 +406,7 @@ ibmcloud sl vs power-off IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs power-off 12345678 --soft
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスのソフト・パワーオフを実行します。
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスのソフト・パワーオフを実行します。
 
 ## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
@@ -445,7 +426,9 @@ ibmcloud sl vs power-on IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs power-on 12345678
 ```
-このコマンドは、ID 12345678 の仮想サーバーのパワーオンを実行します。
+{: codeblock}
+
+このコマンドは、ID `12345678` の仮想サーバーのパワーオンを実行します。
 
 ## ibmcloud sl vs ready
 {: #sl_vs_ready}
@@ -465,7 +448,7 @@ ibmcloud sl vs ready IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs ready 12345678 --wait 30
 ```
-このコマンドは、ID 12345678 の仮想サーバーの状況をチェックして、そのインスタンスが、連続して使用する準備ができているかどうか確認し、最大 30 秒待機します。
+このコマンドは、ID `12345678` の仮想サーバーの状況をチェックして、そのインスタンスが、連続して使用する準備ができているかどうか確認し、最大 30 秒待機します。
 
 ## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
@@ -489,7 +472,9 @@ ibmcloud sl vs reboot IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs reboot 12345678 --hard
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスのハード・リブートを実行します。
+{: codeblock}
+
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスのハード・リブートを実行します。
 
 ## ibmcloud sl vs reload
 {: #sl_vs_reload}
@@ -517,7 +502,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs reload 12345678
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスの現行オペレーティング・システムを再ロードします。
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスの現行オペレーティング・システムを再ロードします。
 
 ## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
@@ -537,7 +522,7 @@ ibmcloud sl vs rescue IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs rescue 12345678
 ```
-このコマンドは、ID 12345678 の仮想サーバーをレスキュー・イメージでリブートします。
+このコマンドは、ID `12345678` の仮想サーバーをレスキュー・イメージでリブートします。
 
 ## ibmcloud sl vs resume
 {: #sl_vs_resume}
@@ -557,7 +542,7 @@ ibmcloud sl vs resume IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs resume 12345678
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスを再開します。
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスを再開します。
 
 ## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}
@@ -585,4 +570,6 @@ ibmcloud sl vs upgrade IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスをアップグレードし、CPU コア数を 8、メモリーを 8192 M、ネットワーク・ポート速度を 1000 Mbps に設定します。
+{: codeblock}
+
+このコマンドは、ID `12345678` の仮想サーバー・インスタンスをアップグレードし、CPU コア数を 8、メモリーを 8192 M、ネットワーク・ポート速度を 1000 Mbps に設定します。

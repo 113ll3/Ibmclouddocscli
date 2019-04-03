@@ -1,75 +1,36 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Cloud Foundry Enterprise Environment サービスの操作
 {: #ibmcloud_commands_cfee}
 
-{{site.data.keyword.cfee_full}} (CFEE) を使用して、オンデマンドで複数の分離したエンタープライズ・クラスの Cloud Foundry プラットフォームのインスタンスを生成できます。 IBM Cloud Foundry Enterprise サービスのインスタンスは、IBM Cloud のお客様専用のアカウント内で実行されます。 環境は、分離したハードウェア (Kubernetes クラスター) 上にデプロイされます。 アクセス制御、キャパシティー、バージョンの更新、リソース使用量とモニターなど、環境を完全に制御できます。
+{{site.data.keyword.cfee_full}} (CFEE) を使用して、オンデマンドで複数の分離したエンタープライズ・クラスの Cloud Foundry プラットフォームのインスタンスを生成できます。 IBM Cloud Foundry Enterprise サービスのインスタンスは、{{site.data.keyword.cloud_notm}} のお客様専用のアカウント内で実行されます。 環境は、分離したハードウェア (Kubernetes クラスター) 上にデプロイされます。 アクセス制御、キャパシティー、バージョンの更新、リソース使用量とモニターなど、環境を完全に制御できます。
 
 以下のコマンドを使用して、CFEE 環境、組織、スペース、ユーザー、および役割を管理します。
 {: shortdesc}
 
-<table summary="Cloud Foundry エンタープライズ環境の管理 (試験的)">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud cfee environments](cli_cfee.html#ibmcloud_cfee_environments)</td>
- <td>[ibmcloud cfee environment](cli_cfee.html#ibmcloud_cfee_environment)</td>
- <td>[ibmcloud cfee orgs
-](cli_cfee.html#ibmcloud_cfee_orgs)</td>
- <td>[ibmcloud cfee org](cli_cfee.html#ibmcloud_cfee_org)</td>
- <td>[ibmcloud cfee org-create](cli_cfee.html#ibmcloud_cfee_org_create)</td>
- </tr>
- <tr>
- <td>[ibmcloud cfee org-delete](cli_cfee.html#ibmcloud_cfee_org_delete)</td>
- <td>[ibmcloud cfee org-users](cli_cfee.html#ibmcloud_cfee_org_users)</td>
- <td>[ibmcloud cfee org-role-set](cli_cfee.html#ibmcloud_cfee_org_role_set)</td>
- <td>[ibmcloud cfee org-role-unset](cli_cfee.html#ibmcloud_cfee_org_role_unset)</td>
- <td>[ibmcloud cfee spaces](cli_cfee.html#ibmcloud_cfee_spaces)</td>
- </tr>
-<tr>
- <td>[ibmcloud cfee space](cli_cfee.html#ibmcloud_cfee_space)</td>
- <td>[ibmcloud cfee space-create](cli_cfee.html#ibmcloud_cfee_space_create)</td>
- <td>[ibmcloud cfee space-rename](cli_cfee.html#ibmcloud_cfee_space_rename)</td>
- <td>[ibmcloud cfee space-delete](cli_cfee.html#ibmcloud_cfee_space_delete)</td>
- <td>[ibmcloud cfee space-role-set](cli_cfee.html#ibmcloud_cfee_space_role_set)</td>
- </tr>
- <tr>
-
- <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
- <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
- <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
- <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
- <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
- </tr>
- <tr>
- <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
- <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
- <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud cfee environments
+## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
 CFEE 環境をリストします。
-
 ```
 ibmcloud cfee environments
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -78,8 +39,7 @@ ibmcloud cfee environments
 ## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
-CFEE 環境の詳細を表示します
-
+CFEE 環境の詳細を表示します。
 ```
 ibmcloud cfee environment NAME [--id]
 ```
@@ -97,22 +57,21 @@ ibmcloud cfee environment NAME [--id]
 <strong>例</strong>:
 
 CFEE 環境 `env_example` の詳細を表示します。
-
 ```
 ibmcloud cfee environment env_example
 ```
+{: codeblock}
 
 CFEE 環境 `env_example` の ID を表示します。
-
 ```
 ibmcloud cfee environment env_example --id
 ```
+{: codeblock}
 
 ## ibmcloud cfee orgs
 {: #ibmcloud_cfee_orgs}
 
-すべての組織をリストします
-
+すべての組織をリストします。
 ```
 ibmcloud cfee orgs [--env ENV]
 ```
@@ -128,22 +87,21 @@ ibmcloud cfee orgs [--env ENV]
 <strong>例</strong>:
 
 すべての組織をリストします。
-
 ```
 ibmcloud cfee orgs
 ```
+{: codeblock}
 
 CFEE 環境 `env_example` のすべての組織をリストします。
-
 ```
 ibmcloud cfee orgs --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org
 {: #ibmcloud_cfee_org}
 
-組織の詳細を表示します
-
+組織の詳細を表示します。
 ```
 ibmcloud cfee org ORG [--guid] [--env ENV]
 ```
@@ -163,28 +121,27 @@ ibmcloud cfee org ORG [--guid] [--env ENV]
 <strong>例</strong>:
 
 CFEE 組織 `org_example` の詳細を表示します。
-
 ```
 ibmcloud cfee org org_example
 ```
+{: codeblock}
 
 CFEE 環境 `env_example` の CFEE 組織 `org_example` の詳細を表示します。
-
 ```
 ibmcloud cfee org org_example --env env_example
 ```
+{: codeblock}
 
 CFEE 組織 `org_example` の GUID を表示します。
-
 ```
 ibmcloud cfee org org_example --guid
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-create
 {: #ibmcloud_cfee_org_create}
 
-組織を作成します
-
+組織を作成します。
 ```
 ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 ```
@@ -204,28 +161,27 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 <strong>例</strong>:
 
 CFEE 組織 `org_example` を作成します。
-
 ```
 ibmcloud cfee org-create org_example
 ```
+{: codeblock}
 
 CFEE 環境 `env_example` の CFEE 組織 `org_example` を作成します。
-
 ```
 ibmcloud cfee org-create org_example --env env_example
 ```
+{: codeblock}
 
 CFEE 組織 `org_example` を割り当て量 `quote_example` で作成します。
-
 ```
 ibmcloud cfee org org-create org_example --quota quota_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-delete
 {: #ibmcloud_cfee_org_delete}
 
-組織を削除します
-
+組織を削除します。
 ```
 ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 ```
@@ -245,28 +201,27 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 <strong>例</strong>:
 
 CFEE 組織 `org_example` を削除します。
-
 ```
 ibmcloud cfee org-delete org_example
 ```
+{: codeblock}
 
 CFEE 環境 `env_example` の CFEE 組織 `org_example` を削除します。
-
 ```
 ibmcloud cfee org-delete org_example --env env_example
 ```
+{: codeblock}
 
 確認なしで CFEE 組織 `org_example` を削除します。
-
 ```
 ibmcloud cfee org org-delete org_example -f
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-users
 {: #ibmcloud_cfee_org_users}
 
-指定された組織内のユーザーを役割別に表示します
-
+指定された組織内のユーザーを役割別に表示します。
 ```
 ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 ```
@@ -286,28 +241,27 @@ ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 <strong>例</strong>:
 
 CFEE 組織 `org_example` 内のユーザーを表示します。
-
 ```
 ibmcloud cfee org-users org_example
 ```
+{: codeblock}
 
 CFEE 環境 `env_example` の CFEE 組織 `org_example` 内のユーザーを表示します。
-
 ```
 ibmcloud cfee org-users org_example --env env_example
 ```
+{: codeblock}
 
 CFEE 組織 `org_example` 内のすべてのユーザーをリストします。
-
 ```
 ibmcloud cfee org-users org_example -a
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-role-set
 {: #ibmcloud_cfee_org_role_set}
 
 ユーザーに組織の役割を割り当てます (組織管理者が必要)
-
 ```
 ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -335,22 +289,21 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 <strong>例</strong>:
 
 組織 `org_example` 内のユーザー `test@exmaple.com` に役割 `BillingManager` を割り当てます。
-
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager
 ```
+{: codeblock}
 
 CFEE 環境 `env_example` の組織 `org_example` 内のユーザー `test@exmaple.com` に役割 `BillingManager` を割り当てます。
-
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-role-unset
 {: #ibmcloud_cfee_org_role_unset}
 
-ユーザーから組織の役割を削除します (組織管理者またはユーザー本人のみ)
-
+ユーザーから組織の役割を削除します (組織管理者またはユーザーのみ)。
 ```
 ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -378,22 +331,21 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 <strong>例</strong>:
 
 組織 `org_example` からユーザー `test@exmaple.com` の役割 `BillingManager` を削除します。
-
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager
 ```
+{: codeblock}
 
 CFEE 環境 `env_example` の組織 `org_example` から、ユーザー `test@exmaple.com` の役割 `BillingManager` を削除します。
-
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee spaces
 {: #ibmcloud_cfee_spaces}
 
 すべてのスペースをリストします
-
 ```
 ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 ```
@@ -411,22 +363,21 @@ ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 <strong>例</strong>:
 
 すべてのスペースをリストします
-
 ```
 ibmcloud cfee spaces
 ```
+{: codeblock}
 
 組織 `org_example` および CFEE 環境 `env_example` のすべてのスペースをリストします
-
 ```
 ibmcloud cfee spaces -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space
 {: #ibmcloud_cfee_space}
 
 指定されたスペースの情報を表示します
-
 ```
 ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--env ENV]
 ```
@@ -450,34 +401,33 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
 <strong>例</strong>:
 
 スペース `space_example` の情報を表示します。
-
 ```
 ibmcloud cfee space space_example
 ```
+{: codeblock}
 
 スペース `space_example` の guid を取得して表示します。
-
 ```
 ibmcloud cfee space space_example --guid
 ```
+{: codeblock}
 
 スペース `space_example` と関連付けられたすべてのセキュリティー・グループのルールを表示します。
-
 ```
 ibmcloud cfee space space_example --security-group-rules
 ```
+{: codeblock}
 
 組織 `org_example` および CFEE 環境 `env_example` のスペース `space_example` の情報を表示します。
-
 ```
 ibmcloud cfee space space_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-create
 {: #ibmcloud_cfee_space_create}
 
 新規スペースを作成します
-
 ```
 ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 ```
@@ -497,22 +447,21 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 <strong>例</strong>:
 
 新規スペース `space_example` を作成します。
-
 ```
 ibmcloud cfee space-create space_example
 ```
+{: codeblock}
 
 組織 `org_example` および CFEE 環境 `env_example` の下に新規スペース `space_example` を作成します。
-
 ```
 ibmcloud cfee space-create space_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-rename
 {: #ibmcloud_cfee_space_rename}
 
-スペースを名前変更します
-
+スペースを名前変更します。
 ```
 ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 ```
@@ -534,22 +483,21 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 <strong>例</strong>:
 
 スペース `space_example` を `new_pace_example` に名前変更します。
-
 ```
 ibmcloud cfee space-rename space_example new_pace_example
 ```
+{: codeblock}
 
 組織 `org_example` および CFEE 環境 `env_example` の下でスペース `space_example` を `new_pace_example` に名前変更します。
-
 ```
 ibmcloud cfee space-rename space_example new_pace_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-delete
 {: #ibmcloud_cfee_space_delete}
 
-スペースを削除します
-
+スペースを削除します。
 ```
 ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 ```
@@ -571,22 +519,21 @@ ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 <strong>例</strong>:
 
 スペース `space_example` を削除します。
-
 ```
 ibmcloud cfee space-delete space_example
 ```
+{: codeblock}
 
 組織 `org_example` および CFEE 環境 `env_example` の下のスペース `space_example` を確認なしで削除します。
-
 ```
 ibmcloud cfee space-delete space_example new_pace_example -f -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-role-set
 {: #ibmcloud_cfee_space_role_set}
 
 スペースの役割をユーザーに割り当てます
-
 ```
 ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -615,22 +562,21 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>例</strong>:
 
 ユーザー `test@exmaple.com` を、`SpaceManager` 役割として組織 `org_example` およびスペース `space_example` に割り当てます。
-
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager
 ```
+{: codeblock}
 
 ユーザー `test@exmaple.com` を、環境 `env_example` の下で、`SpaceManager` 役割として組織 `org_example` およびスペース `space_example` に割り当てます。
-
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-role-unset
 {: #ibmcloud_cfee_space_role_unset}
 
 スペースの役割をユーザーから削除します
-
 ```
 ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -659,16 +605,16 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>例</strong>:
 
 ユーザー `test@exmaple.com` から、組織 `org_example` およびスペース `space_example` の `SpaceManager` としての役割を削除します。
-
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager
 ```
+{: codeblock}
 
 ユーザー `test@exmaple.com` から、組織 `org_example` およびスペース `space_example` の環境 `env_example` の下での `SpaceManager` としての役割を削除します。
-
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-roles
 {: #ibmcloud_cfee_space_roles}
@@ -692,22 +638,21 @@ ibmcloud cfee space-roles ORG [--env ENV]
 <strong>例</strong>:
 
 組織 `org_example` の現行ユーザーのすべてのスペースの役割を取得します。
-
 ```
 ibmcloud cfee space-roles org_example
 ```
+{: codeblock}
 
 組織 `org_example` および環境 `env_example` の現行ユーザーのすべてのスペースの役割を取得します。
-
 ```
 ibmcloud cfee space-roles org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-users
 {: #ibmcloud_cfee_space_users}
 
 指定されたスペース内のユーザーを役割別に表示します
-
 ```
 ibmcloud cfee space-users ORG SPACE [--env ENV]
 ```
@@ -727,22 +672,21 @@ ibmcloud cfee space-users ORG SPACE [--env ENV]
 <strong>例</strong>:
 
 スペース `space_example` および組織 `org_example` 内のすべてのユーザーを表示します。
-
 ```
 ibmcloud cfee space-users org_example space_example
 ```
+{: codeblock}
 
 スペース `space_example`、組織 `org_example`、環境 `env_example` 内のすべてのユーザーを表示します。
-
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee create
 {: #ibmcloud_cfee_create}
 
-Cloud Foundry エンタープライズ環境の新規インスタンスの作成を要求します
-
+Cloud Foundry エンタープライズ環境の新規インスタンスの作成を要求します。
 ```
 ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
 ```
@@ -785,10 +729,10 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 {: #ibmcloud_cfee_create_locations}
 
 ターゲット地域の使用可能なデータ・センターのリストの取得を要求します
-
 ```
 ibmcloud cfee create-locations
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -852,22 +796,21 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
 <strong>例</strong>:
 
 デフォルトのアクセス・グループを介して、ユーザー `name@example.com` に CFEE 作成権限を付与します。
-
 ```
 ibmcloud cfee create-permission-set name@example.com
 ```
+{: codeblock}
 
 アクセス・グループ `test-access-group` を介して、ユーザー `name@example.com` に CFEE 作成権限を付与します。
-
 ```
 ibmcloud cfee create-permission-set name@example.com -ag test-access-group
 ```
+{: codeblock}
 
 ## ibmcloud cfee create-status
 {: #ibmcloud_cfee_create_status}
 
-CFEE インスタンスのプロビジョニング状況を検査します
-
+CFEE インスタンスのプロビジョニング状況を検査します。
 ```
 ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
 ```

@@ -1,11 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2019
+lastupdated: "2019-02-27"
 
+keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+
+subcollection: cloud-cli
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -23,17 +27,18 @@ lastupdated: "2018-11-30"
 
 Java アプリケーション用のデバッグ・ツールを使用可能にするためのステップは以下のとおりです。
 
-1. アプリケーション・プロジェクトのルート・ディレクトリーから以下のコマンドを実行します。
+1. アプリケーション・プロジェクトのルート・ディレクトリーから、以下のコマンドを実行します。
 
-```
-ibmcloud dev debug
-```
+  ```
+  ibmcloud dev debug
+  ```
+  {: codeblock}
 
 2. デバッガーをアプリケーションに接続します。
 
 	* Eclipse
       1. **既存の maven プロジェクト**を Eclipse にインポートします。
-      2. [Java リモート・アプリケーション![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) のデバッグ構成を作成します。
+      2. [Java リモート・アプリケーション](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") のデバッグ構成を作成します。
       		1. IP アドレスまたは `localhost:<port> を入力します。`  
       		2. ポート番号に `7777` を入力します。
       		3. インポートした Java プロジェクトの名前を指定します。
@@ -44,24 +49,24 @@ ibmcloud dev debug
 	   Java 基本マイクロサービス・エンドポイントのデフォルト・ポートは、9080 です。
 	   {: note}
 
-	* [IntelliJ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
+	* [IntelliJ ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
+	* [VSCode ](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
 	* JDK コマンド・ライン: `jdb -attach <host:port>`
 
 ## Node.js アプリケーションのデバッグ
-{: #node}
+{: #idt-node-debug}
 
 Node.js アプリケーション用のデバッグ・ツールを使用可能にするためのステップは以下のとおりです。
 
 1. アプリケーション・プロジェクトのルート・ディレクトリーから、以下のコマンドを実行します。
-
-```
-ibmcloud dev debug
-```
+  ```
+  ibmcloud dev debug
+  ```
+  {: codeblock}
 
 2. デバッガーをアプリケーションに接続します。
-	* [VSCode ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
+	* [WebStorm ](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
 
 
 <!--
