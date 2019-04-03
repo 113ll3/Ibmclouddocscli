@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-27"
 
-keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas
+keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
 subcollection: cloud-cli
 
@@ -223,21 +223,25 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 
 List service instances.
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP] [--long] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
-  <dt>--service-name</dt>
+  <dt>--service-name <i>SERVICE_NAME</i></dt>
   <dd>Name of belonging service</dd>
-  <dt>--location</dt>
+  <dt>--location <i>LOCATION</i></dt>
   <dd>Filter by location</dd>
+  <dt>--type <i>INSTANCE_TYPE</i></dt>
+  <dd>Type of instances. `service_instance` type is used if not specified, use all to list all types of instances.</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Resource group name</dd>
   <dt>--long</dt>
   <dd>Show additional fields in output</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Specify output format, only JSON is supported now. </dd>
+  <dt>--output <i>FORMAT</i></dt>
+  <dd>Specify output format, only JSON is supported now. </dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -286,7 +290,7 @@ ibmcloud resource service-instance my-service-instance
 
 Create a service instance.
 ```
-ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVICE_PLAN_NAME LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -299,12 +303,16 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dd>Name or ID of the service. To list service offerings, use the `ibmcloud catalog service-marketplace`[command](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace).</dd>
   <dt>SERVICE_PLAN_NAME or SERVICE_PLAN_ID (required)</dt>
   <dd>Name or ID of the service plan</dd>
-  <dt>LOCATION</dt>
+  <dt>LOCATION (required)</dt>
   <dd>Target location or environment to create the service instance</dd>
-  <dt>-p, --parameters</dt>
-  <dd>JSON file or JSON string of parameters to create service instance</dd>
-  <dt>-d, --deployment</dt>
+  <dt>-d, --deployment <i>DEPLOYMENT_NAME</i></dt>
   <dd>Name of the deployment</dd>
+  <dt>-p, --parameters <i>@JSONFILE or JSON_STRING</i></dt>
+  <dd>JSON file or JSON string of parameters to create service instance</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Resource group name</dd>
+  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
+  <dd>Types of the service endpoints</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -320,7 +328,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 
 Update service instance.
 ```
-ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
+ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -331,12 +339,16 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
   <dd>Name of the service instance, exclusive with ID</dd>
   <dt>ID (required)</dt>
   <dd>ID of the service instance, exclusive with NAME</dd>
-  <dt>-n, --name</dt>
+  <dt>-n, --name <i>NEW_NAME</i></dt>
   <dd>New service instance name</dd>
-  <dt>--service-plan-id</dt>
+  <dt>--service-plan-id <i>SERVICE_PLAN_ID</i></dt>
   <dd>New Service Plan ID</dd>
-  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_STRING<i></dt>
   <dd>JSON file or JSON string of parameters to create service instance</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Resource group name</dd>
+  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
+  <dd>Types of the service endpoints</dd>
   <dt>-f, --force</dt>
   <dd>Force update without confirmation</dd>
 </dl>
@@ -438,7 +450,7 @@ ibmcloud resource bindings my-service-alias my-app
 
 Create a service binding.
 ```
-ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
+ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-n BINDING_NAME] [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
@@ -447,14 +459,16 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 <dl>
   <dt>SERVICE_ALIAS_NAME (required)</dt>
   <dd>Service alias name</dd>
-  <dt>APP_NAME</dt>
+  <dt>APP_NAME (required)</dt>
   <dd>CloudFoundry application name</dd>
-  <dt>ROLE_NAME</dt>
+  <dt>ROLE_NAME (required)</dt>
   <dd>Name of the user role</dd>
-  <dt>--service-id</dt>
+  <dt>--service-id <i>SERVICE_ID</i></dt>
   <dd>Name or UUID of the service ID, which the role belongs to</dd>
-  <dt>-p, --parameter</dt>
+  <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>Parameters JSON file or JSON string</dd>
+  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
+  <dd>Type of the service endpoint</dd>
   <dt>-f, --force</dt>
   <dd>Force creation without confirmation</dd>
 </dl>
@@ -569,29 +583,33 @@ ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/5
 
 Create a service key.
 ```
-ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
+ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>Prerequisites</strong>: Endpoint, Login, Target
 
 <strong>Command options</strong>:
 <dl>
-  <dt>NAME</dt>
+  <dt>NAME (required)</dt>
   <dd>Name of the key</dd>
-  <dt>ROLE_NAME</dt>
+  <dt>ROLE_NAME (required)</dt>
   <dd>Name of the user role</dd>
-  <dt>--instance-id</dt>
+  <dt>--instance-id <i>SERVICE_INSTANCE_ID</i></dt>
   <dd>Service Instance ID</dd>
-  <dt>--instance-name</dt>
+  <dt>--instance-name <i>SERVICE_INSTANCE_NAME</i></dt>
   <dd>Service Instance Name</dd>
-  <dt>--alias-id</dt>
+  <dt>--alias-id <i>SERVICE_ALIAS_ID</i></dt>
   <dd>Service Alias ID</dd>
-  <dt>--alias-name</dt>
+  <dt>--alias-name <i>SERVICE_ALIAS_NAME</i></dt>
   <dd>Service Alias Name</dd>
-  <dt>--service-id</dt>
+  <dt>--service-id <i>SERVICE_ID</i></dt>
   <dd>Name or UUID of the service ID, which the role belongs to</dd>
-  <dt>-p, --parameters</dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>Parameters JSON file or JSON string</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Resource group name</dd>
+  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
+  <dd>Type of the service endpoint</dd>
   <dt>-f, --force</dt>
   <dd>Force creation without confirmation</dd>
 </dl>

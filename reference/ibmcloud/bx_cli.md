@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-26"
 
 keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -284,6 +284,20 @@ Log in with one time passcode and set target account, org, and space
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
+### To use Cloud Foundry services
+
+To use Cloud Foundry services, you must target a Cloud Foundry org and space. You can run the following command to interactively choose the org and space:
+```
+ibmcloud target --cf
+```
+{: codeblock}
+
+Optionally, you can use the output from the previous command to manually set your org and space with the following command:
+```
+ibmcloud target -o <value> -s <value>
+```
+{: codeblock}
+
 ### API key has account that is associated
 
 ```
@@ -348,28 +362,34 @@ ibmcloud regions
 
 Set or view the target account, region, organization, or space.
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
-   <dl>
-   <dt>-r <i>REGION_NAME</i> (optional)</dt>
-   <dd>Name of the region to be switched to, such as 'us-south' or 'eu-gb'.</dd>
-   <dt>--unset-region</dt>
-   <dd>Unset targeted region</dd>
+<dl>
    <dt>-c <i>ACCOUNT_ID</i> (optional)</dt>
    <dd>The ID of the account to be targeted.</dd>
+   <dt>-r <i>REGION_NAME</i> (optional)</dt>
+   <dd>Name of the region to be switched to, such as 'us-south' or 'eu-gb'.</dd>
    <dt>-g <i>RESOURCE_GROUP</i> (optional)</dt>
    <dd>Name of resource group</dd>
    <dt>--cf</dt>
    <dd>Interactively select the target organization and space</dd>
+   <dt>--cf-api</dt>
+   <dd>Cloud Foundry API endpoint</dd>
    <dt>-o <i>ORG_NAME</i> (optional)</dt>
    <dd>The name of the organization to be targeted.</dd>
    <dt>-s <i>SPACE_NAME</i> (optional)</dt>
    <dd>The name of the space to be targeted.</dd>
-   </dl>
+   <dt>--unset-region</dt>
+   <dd>Unset targeted region</dd>
+   <dt>--unset-resource-group</dt>
+   <dd>Unset targeted resource group</dd>
+   <dt>--output <i>FORMAT</i></dt>
+   <dd>Specify output format, only JSON is supported now.</dd>
+</dl>
 If none of the options are specified, the current account, region, org, and space are displayed.
 
 <strong>Examples</strong>:
