@@ -2,9 +2,9 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-03-27"
+lastupdated: "2019-04-03"
 
-keywords: ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
+keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
 subcollection: cloud-cli
 

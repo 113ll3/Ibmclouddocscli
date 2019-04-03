@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
 subcollection: cloud-cli
 
@@ -455,6 +455,15 @@ cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAP
 ```
 {: codeblock}
 
+You can log in to the following regional Cloud Foundry API endpoints:
+* api.us-south.cf.cloud.ibm.com  (previously api.ng.bluemix.net)
+* api.eu-gb.cf.cloud.ibm.com     (previously api.eu-gb.bluemix.net)
+* api.us-east.cf.cloud.ibm.com   (previously api.us-east.bluemix.net)
+* api.eu-de.cf.cloud.ibm.com     (previously api.eu-de.bluemix.net)
+* api.au-syd.cf.cloud.ibm.com    (previously api.au-syd.bluemix.net)
+
+The legacy "api.<region>.bluemix.net" Cloud Foundry API endpoints are still valid but are soon to be deprecated.
+{: note}
 
 ## cf logs
 {: #cf_logs}

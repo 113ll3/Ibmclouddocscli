@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-03"
 
-keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
 subcollection: cloud-cli
 
@@ -70,7 +70,7 @@ cf plugins
 
 For more help for a command, use the `-help` option.
 
-### Connecting and Logging in to {{site.data.keyword.cloud_notm}}
+### Connecting and logging in to {{site.data.keyword.cloud_notm}}
 
 Before you can use the Admin CLI plug-in, you must connect and log in, if
 you aren't already.
@@ -78,7 +78,7 @@ you aren't already.
 <ol>
 <li>To connect to the {{site.data.keyword.cloud_notm}} API endpoint, run the following command:<br/><br/>
 <code>
-cf api api.ng.bluemix.net
+cf api api.us-south.cf.cloud.ibm.com
 </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
@@ -95,6 +95,16 @@ cf login
 </code>
 </li>
 </ol>
+
+You can log in to the following regional Cloud Foundry API endpoints:
+* api.us-south.cf.cloud.ibm.com  (previously api.ng.bluemix.net)
+* api.eu-gb.cf.cloud.ibm.com     (previously api.eu-gb.bluemix.net)
+* api.us-east.cf.cloud.ibm.com   (previously api.us-east.bluemix.net)
+* api.eu-de.cf.cloud.ibm.com     (previously api.eu-de.bluemix.net)
+* api.au-syd.cf.cloud.ibm.com    (previously api.au-syd.bluemix.net)
+
+The legacy "api.<region>.bluemix.net" Cloud Foundry API endpoints are still valid but are soon to be deprecated.
+{: note}
 
 ## Administering users
 {: #admin_users}
