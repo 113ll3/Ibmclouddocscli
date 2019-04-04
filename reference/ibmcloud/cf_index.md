@@ -94,7 +94,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (optional)</dt>
-   <dd>The URL of the {{site.data.keyword.cloud_notm}} API endpoint that you must specify when you connect to {{site.data.keyword.cloud_notm}}. Typically, this URL is `https://api.{DomainName}`.
+   <dd>The URL of the {{site.data.keyword.cloud_notm}} API endpoint that you must specify when you connect to {{site.data.keyword.cloud_notm}}. Typically, this URL is `https://api.<REGION>.cf.{DomainName}`.
    If you want to display the URL of the API endpoint that you're currently using, you don't need to specify this parameter for the cf api command.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
@@ -104,7 +104,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>Examples</strong>:
 
-View the current API endpoint
+To view the current API endpoint:
 ```
 cf api
 ```
@@ -404,7 +404,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <strong>Command options</strong>:
 
 <dl>
-<dt>*-a* https://api.{DomainName} (optional)</dt>
+<dt>*-a* https://api.<REGION>.cf.{DomainName} (optional)</dt>
 <dd>The URL of the API endpoint of {{site.data.keyword.cloud_notm}}.</dd>
 <dt>*-u* user_name (optional)</dt>
 <dd>Your user name.</dd>
@@ -462,7 +462,7 @@ You can log in to the following regional Cloud Foundry API endpoints:
 * api.eu-de.cf.cloud.ibm.com     (previously api.eu-de.bluemix.net)
 * api.au-syd.cf.cloud.ibm.com    (previously api.au-syd.bluemix.net)
 
-The legacy "api.<region>.bluemix.net" Cloud Foundry API endpoints are still valid but are soon to be deprecated.
+The legacy "api.<REGION>.bluemix.net" Cloud Foundry API endpoints are still valid but are soon to be deprecated.
 {: note}
 
 ## cf logs
