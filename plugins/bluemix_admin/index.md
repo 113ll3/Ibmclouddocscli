@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-04"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -119,7 +119,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you're an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command. For more information, see [Enabling managers to add users](index.html#clius_emau).
+To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you're an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command. For more information, see [Enabling managers to add users](#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -895,11 +895,11 @@ To work with application security groups (ASGs), you must be a full access admin
 
 ASGs function as virtual firewalls that control outbound traffic from the applications in your {{site.data.keyword.Bluemix_notm}} environment. Each ASG consists of a list of rules that allow specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set, for example a group set that is used for applying global access, or you can bind to spaces within an organization in your {{site.data.keyword.Bluemix_notm}} environment.
 
-{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 **WARNING**: Unbinding the **Default Staging** or **Default Running** group sets from the two IBM-created security groups, `public_networks` and `dns` disables global access to the outside network. Use unbinding with caution and awareness of its potential impact on the running and staging applications in your environment.
 
-The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 {: note}
 
 ### Listing security groups
@@ -931,7 +931,7 @@ cf ba security-groups <security-group>
 ### Creating a security group
 {: #clicreasecgro}
 
-For more information about creating security groups and the rules that define outgoing traffic, see [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+For more information about creating security groups and the rules that define outgoing traffic, see [Creating Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 To create a security group, use the following command:
 ```
@@ -988,7 +988,7 @@ cf ba delete-security-group <security-group>
 ### Binding security groups
 {: #clibindsecgro}
 
-For more information about binding security groups, see [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+For more information about binding security groups, see [Binding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 * To bind to the Default Staging security group set, use the following command:
 
@@ -1039,7 +1039,7 @@ cf ba bind-security-group <security-group> <org> <space>
 ### Unbinding security groups
 {: #cliunbindsecgro}
 
-For more information about unbinding security groups, see [Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+For more information about unbinding security groups, see [Unbinding Application Security Groups](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
 * To unbind from a Default Staging security group set, use the following command:
 

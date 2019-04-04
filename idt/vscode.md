@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-04"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -69,7 +69,7 @@ You can get started with `ibmcloud dev` workflows in just a few steps:
 * Open the project’s folder locally in the Visual Studio Code editor
 * Use the `ibmcloud dev build` command to build the app into a Docker image
 * Use the `ibmcloud dev debug` command to run the app in local Docker for development
-> Note: To debug a Node.js application that is running inside the local Docker container, you need to [add a debug configuration for the local container](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
+> Note: To debug a Node.js application that is running inside the local Docker container, you need to [add a debug configuration for the local container](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 * Use the `ibmcloud dev run` command to run the app in local Docker in release mode
 * Use the `ibmcloud dev deploy` command to deploy the application to a Cloud Foundry runtime on {{site.data.keyword.cloud_notm}}
 

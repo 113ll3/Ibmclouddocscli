@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-04"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -72,7 +72,7 @@ Once your project is created, it's up to you to craft it into something useful. 
 
 You're free to use whatever IDE or editor you prefer to code up your application. We offer an extension for the Microsoft Visual Studio Code (VSCode) editor that enables you to access all the IDE commands from directly within the editor.
 
-When the project is built, run your app using [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) or [`ibmcloud dev debug`](/docs/cli/iddt/commands.html#debug). This runs the app within the proper container. Some apps' patterns support multiple containers external to your apps. These automatically start and configure during run or debug. There's also a [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) command that runs any test cases that are associated with the app.
+When the project is built, run your app using [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) or [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug). This runs the app within the proper container. Some apps' patterns support multiple containers external to your apps. These automatically start and configure during run or debug. There's also a [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) command that runs any test cases that are associated with the app.
 
 ### How local containers are used
 {: #local-containers}

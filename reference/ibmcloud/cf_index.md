@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-04"
 
 keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
@@ -25,7 +25,7 @@ For more details on getting started with the Cloud Foundry CLI, see [Getting Sta
 
 For a more detailed list of `cf CLI` commands, see the community [Cloud Foundry CLI Reference Guide](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 
-If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with a Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
+If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with a Proxy Server](https://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon").
 {: note}
 
 ## Cloud Foundry CLI commands index
@@ -64,7 +64,7 @@ Use the index in the following table to refer to the frequently used Cloud Found
  <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/#cf_delete-space)</td>
+ <td>[delete-space](#cf_delete-space)</td>
  <td>[events](#cf_events)</td>
  <td>[logs](#cf_logs)</td>
  <td>[marketplace](#cf_marketplace)</td>
@@ -537,7 +537,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname (required)</dt>
 <dd>The name of the application.</dd>
 <dt>*-b* buildpack_name (optional)</dt>
-<dd>The name of the buildpack. The buildpack_name can be a custom buildpack by name (for example liberty-for-java), or a Git URL (for example https://github.com/cloudfoundry/java-buildpack.git), or a Git URL with a branch or tag (for example, https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 for the v3.3.0 tag).</dd>
+<dd>The name of the buildpack. The buildpack_name can be a custom buildpack by name (for example liberty-for-java), or a Git URL (for example https://github.com/cloudfoundry/java-buildpack), or a Git URL with a branch or tag (for example, https://github.com/cloudfoundry/java-buildpack#v3.3.0 for the v3.3.0 tag).</dd>
 <dt>*-c* start_command (optional)</dt>
 <dd>The start command of your application. To use the default start command, specify a value of null for this option. </dd>
 <dt>*-f* manifest_path (optional)</dt>

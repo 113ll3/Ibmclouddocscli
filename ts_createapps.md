@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-04"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -357,7 +357,7 @@ To resolve the issue, set the client's version to the same as the cluster's vers
   ```
 
 * For Windows, do the following as administrator:
-  Download and install the `helm` binary at [https://github.com/kubernetes/helm/releases/tag/v2.8.1](https://github.com/kubernetes/helm/releases/tag/v2.9.1){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+  Download and install the `helm` binary at [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
   
   From the PowerShell terminal, use the following commands:
   ```

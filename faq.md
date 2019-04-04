@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-04"
 
 keywords: cli, cli faq, debug cli, cli help, ibmcloud cli help, ibmcloud help
 
@@ -43,9 +43,9 @@ To deploy an existing codebase, follow these steps to enable your app[enable you
 ### Videos
 {: #cli-videos}
 
-- [How to deploy to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://youtu.be/mh_XBn_eV_8)
-- [How to deploy existing projects to {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://youtu.be/-NP5ZEZE1dY)
-- [Create, debug, and deploy a Node.js app with the {{site.data.keyword.dev_cli_long}} CLI Plug-in and VSCode](https://youtu.be/z-ByHuI41dU)
+- [How to deploy to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://www.youtube.com/watch?v=mh_XBn_eV_8&feature=youtu.be)
+- [How to deploy existing projects to {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://www.youtube.com/watch?v=-NP5ZEZE1dY&feature=youtu.be)
+- [Create, debug, and deploy a Node.js app with the {{site.data.keyword.dev_cli_long}} CLI Plug-in and VSCode](https://www.youtube.com/watch?v=z-ByHuI41dU&feature=youtu.be)
 
 ### Documentation and tutorials
 - [Continuous Deployment to Kubernetes](/docs/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes)

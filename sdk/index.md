@@ -34,7 +34,7 @@ The REST API definition must be valid and either hosted on a live server endpoin
 
 Ensure that you satisfy the following requirements.
 
-* You have an [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") account.
+* You have an [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") account.
 * A valid API definition that conforms to the [Open API](https://www.openapis.org/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") specification.
 
 ## Installation

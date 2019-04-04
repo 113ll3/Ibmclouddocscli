@@ -126,7 +126,7 @@ Internationalization is based on `go-i18n`, which is a package and command-line 
       ```
       {: codeblock}
 
-* Debugging: [delve](https://github.com/derekparker/delve){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* Debugging: [delve](https://github.com/go-delve/delve){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
 Delve is a debugger for the Go programming language, and is used by [Visual Studio Code](https://code.visualstudio.com/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 

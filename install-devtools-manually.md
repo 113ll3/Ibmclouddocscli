@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-04"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -43,7 +43,7 @@ ibmcloud plugin install dev
 ## Installing Docker
 {: #install-devtools-docker}
 
-For running and debugging apps locally, install [Docker](https://www.docker.com/get-docker){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+For running and debugging apps locally, install [Docker](https://www.docker.com/get-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Installing the Kubernetes command line tool
 {: #idt-install-kube}
@@ -108,7 +108,7 @@ Install [Helm](https://helm.sh/docs/){: new_window} ![External link icon](../ico
   ```
   {: codeblock}
 
-* Windows&trade; users can download and install the Helm [binary](https://github.com/kubernetes/helm/releases/tag/v2.7.2){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+* Windows&trade; users can download and install the Helm [binary](https://github.com/helm/helm/releases/tag/v2.7.2){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Installing the {{site.data.keyword.openwhisk_short}} CLI plug-in
 {: #idt-install-functions}

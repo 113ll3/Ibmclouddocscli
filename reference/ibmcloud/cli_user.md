@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-04"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Managing classic infrastructure users
 {: #manage-sl-users}
 
-Use the following commands to manage {{site.data.keyword.Bluemix}} classic infrastructure users.
+Use the following commands to manage {{site.data.keyword.cloud}} classic infrastructure users.
 {: shortdesc}
 
 ## ibmcloud sl user create 
@@ -38,7 +38,7 @@ ibmcloud sl user create [OPTIONS] USERNAME
 <dt>--from-user</dt>
 <dd>Base user to use as a template for creating this user. The default is to use the user that is running this command. Information provided in --template supersedes this template.</dd>
 <dt>--template</dt>
-<dd>A JSON string that describes https://softlayer.github.io/reference/datatypes/SoftLayer_User_Customer/.</dd>
+<dd>A JSON string that describes https://sldn.softlayer.com/reference/datatypes/SoftLayer_User_Customer/.</dd>
 <dt>--api-key</dt>
 <dd>Create an API key for this user.</dd>
 <dt>-f, --force</dt>
@@ -95,7 +95,7 @@ ibmcloud sl user edit-details [OPTIONS] IDENTIFIER
 <strong>Command options</strong>:
 <dl>
 <dt>--template</dt>
-<dd>A JSON string that describes https://softlayer.github.io/reference/datatypes/SoftLayer_User_Customer/.</dd>
+<dd>A JSON string that describes https://sldn.softlayer.com/reference/datatypes/SoftLayer_User_Customer/.</dd>
 </dl>
 
 ## ibmcloud sl user edit-permissions 

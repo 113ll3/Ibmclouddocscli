@@ -169,7 +169,7 @@ You can deploy an application as a Cloud Foundry application or as a container.
 
 Before you deploy a Cloud Foundry application to {{site.data.keyword.cloud_notm}}, a `manifest.yml` file must be present in your application's root directory.
 
-Before you deploy an application as a container, you must locally install [Kubernetes](https://kubernetes.io/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and [Helm](https://github.com/kubernetes/helm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"). The Helm client version must not be newer than the Helm server version. You can find both by running `helm version`. It is recommended to use v2.4.2 for the client version.
+Before you deploy an application as a container, you must locally install [Kubernetes](https://kubernetes.io/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and [Helm](https://github.com/helm/helm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"). The Helm client version must not be newer than the Helm server version. You can find both by running `helm version`. It is recommended to use v2.4.2 for the client version.
 
 To deploy your application on Kubernetes, you must either specify the `deploy-target` as `container` in the `cli-config.yml` or use the parameter `-t container`.
 
