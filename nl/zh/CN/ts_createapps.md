@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# 有关 {{site.data.keyword.Bluemix_notm}} Developer Tools CLI 插件的故障诊断
+# 有关 {{site.data.keyword.cloud_notm}} Developer Tools CLI 插件的故障诊断
 {: #troubleshoot}
 
 使用 {{site.data.keyword.dev_cli_short}} 命令行界面 (CLI) 创建应用程序的常见问题可能包括部署失败或者无法检索的代码。在许多情况下，只需执行几个简单的步骤即可解决这些问题。
-{:shortdesc}
+{: shortdesc}
 
 ## 我使用非移动模式创建应用程序时，为什么会收到主机名错误？
 {: #hostname-error}
@@ -32,7 +32,7 @@ lastupdated: "2018-11-30"
 ```
 主机名 <myHostname> 已采用。
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 导致此错误的原因是登录令牌已到期。
@@ -54,7 +54,7 @@ ibmcloud login
 ```
 对应用程序执行 <command> 失败。
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 导致此错误的原因是登录令牌已到期。
@@ -71,20 +71,20 @@ ibmcloud login
 {: #nosuchimage}
 {: troubleshoot}
 
-如果没有先构建应用程序就尝试运行该应用程序，那么可能会显示以下错误。
+如果没有先构建应用程序就尝试对其运行 `ibmcloud dev run`，那么可能会显示以下错误。
 
 ```
-$ ibmcloud dev run
 未指定 run-cmd 选项
 正在停止“testProject”容器...
 找不到“testProject”容器
 正在基于 Dockerfile 创建映像 ibmcloud-dev-testProject...
-确定
-正在从该映像创建名为“testProject”的容器...
+正常
+正在基于该映像创建名为“testProject”的容器...
 失败
 无法创建“testProject”容器：
 错误：没有此类映像：ibmcloud-dev-testProject
 ```
+{: screen}
 {: tsSymptoms}
 
 必须先构建应用程序，然后才能运行应用程序。
@@ -111,7 +111,7 @@ ibmcloud dev run
 失败
 代理程序错误：{"description"=>"无法创建此 Object Storage 实例。每个使用 Object Storage 服务的组织在免费套餐中只能使用一个实例。"}
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 导致此错误的原因是 {{site.data.keyword.objectstorageshort}} 服务仅在免费套餐中提供一个 {{site.data.keyword.objectstorageshort}} 实例。
@@ -131,7 +131,7 @@ FAILED
 Application created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 导致此错误的原因是内部超时。
@@ -179,7 +179,7 @@ module.js:597
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 `appmetrics` 模块安装在其他体系结构上时，会发生此错误。安装在一个体系结构上的本机 npm 模块不能在另一个体系结构上运行。包含的 Docker 映像基于 Linux 内核。
@@ -188,10 +188,10 @@ module.js:597
 删除 `node_modules` 文件夹，然后再次运行 `ibmcloud dev run` 命令。
 {: tsResolve}
 
-## 为什么无法部署到 {{site.data.keyword.Bluemix_notm}}？
+## 为什么无法部署到 {{site.data.keyword.cloud_notm}}？
 {: troubleshoot}
 
-尝试部署到 {{site.data.keyword.Bluemix_notm}} 时失败，但未显示任何错误。
+尝试部署到 {{site.data.keyword.cloud_notm}} 时失败，但未显示任何错误。
 {: tsSymptoms}
 
 您可能未登录到帐户。
@@ -203,7 +203,7 @@ ibmcloud login
 ```
 {: tsResolve}
 
-## 为什么无法在 {{site.data.keyword.Bluemix_notm}} 上部署 Kubernetes？
+## 为什么无法在 {{site.data.keyword.cloud_notm}} 上部署 Kubernetes？
 {: troubleshoot}
 
 在提示您输入集群名称后，可能会显示以下故障：
@@ -214,18 +214,21 @@ ibmcloud login
 失败
 未能配置对集群“<cluster-name>”的部署，原因是：退出状态 1
 ```
+{: screen}
 {: tsSymptoms}
 
 最有可能导致此错误的原因是集群名称无效。可以通过运行带 `--trace` 的相同命令来确认原因，并且错误输出中可能包含以下详细信息：
 ```
 失败，错误为：{"incidentID":"<id-number>","code":"E0008","description":"找不到指定的集群。","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"正在供应"}
 ```
+{: screen}
 {: tsCauses}
 
-确保使用的是正确集群，并且已通过运行以下命令将集群配置为用于部署：
+确保使用的是正确集群，并且已通过运行以下命令将该集群配置用于部署：
 ```
 ibmcloud cs cluster-config <cluster-name>
 ```
+{: codeblock}
 {: tsResolve}
 
 ## 为什么我无法部署映像目标？
@@ -240,15 +243,17 @@ ibmcloud cs cluster-config <cluster-name>
 失败
 将标记为“registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1”的 Run 映像推送到 Docker 注册表时失败，原因：退出状态 1
 ```
+{: screen}
 {: tsSymptoms}
 
 最有可能导致此错误的原因是部署映像目标无效。更具体地说，名称空间（即部署映像目标中的中间值）可能无效。
 {: tsCauses}
 
-确保部署映像目标中的名称空间与在运行以下命令时显示的名称空间之一相匹配：
+确保部署映像目标中的名称空间与在运行以下命令时显示的其中一个名称空间相匹配：
 ```
 ibmcloud cr namespaces
 ```
+{: codeblock}
 {: tsResolve}
 
 ## 为什么无法确定我的应用程序的语言？
@@ -262,11 +267,12 @@ ibmcloud cr namespaces
 请尝试使用 --language 标志直接指定应用程序的语言。
 
 ```
+{: screen}
 {: tsSymptoms}
 
 此错误可能是以下某个原因导致的：
 - 从不是应用程序源目录的目录中运行 [enable](/docs/cli/idt/commands.html#enable) 命令。
-- 对目前尚无法识别其语言的应用程序运行 [enable](/docs/cli/idt/commands.html#enable) 命令。
+- 对无法识别其语言的应用程序运行 [enable](/docs/cli/idt/commands.html#enable) 命令。
 {: tsCauses}
 
 请确保从包含应用程序源代码的应用程序目录中运行该命令。如果仍未解决此问题，而该语言是[受支持的语言](/docs/cli/idt/commands.html#enable-language-options)，请使用 `--language` 参数指定语言。
