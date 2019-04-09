@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2018
+  years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2016-06-20"
 
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2018-06-21"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Plug-in da VPN para a CLI do {{site.data.keyword.Bluemix_notm}}
+# Plug-in do VPN para a CLI do {{site.data.keyword.Bluemix_notm}}
 
 *Versão:* 1.4.0
 
@@ -28,28 +28,25 @@ O plug-in do VPN está disponível para os sistemas operacionais Windows, MAC e 
 As instruções a seguir são para trabalhar com o plug-in da CLI do {{site.data.keyword.Bluemix_notm}}. Para usar o plug-in com o plug-in da CLI do Cloud Foundry (cf), veja [Plug-in da CLI do VPN para a CLI cf](../vpn/index.html).
 
 
-As informações a seguir listam todos os comandos que são suportados pelo plug-in VPN para
-a CLI do {{site.data.keyword.Bluemix_notm}} e incluem seus nomes, opções, uso, pré-requisitos,
-descrições e exemplos. Consulte [Estender a sua interface da linha de comandos do
-IBM Cloud](../../index.html#cli_bluemix_ext) sobre como instalar o plug-in da VPN.
+As informações a seguir listam todos os comandos que são suportados pelo plug-in VPN para a CLI do Bluemix e inclui seus nomes, opções, uso, pré-requisitos, descrições e exemplos. Consulte [Estender a sua interface de linha de comandos do Bluemix](../../index.html#cli_bluemix_ext) sobre como instalar o plug-in de vpn.
 
 **Nota:** *Pré-requisitos* listam quais ações são necessárias antes de usar o comando. Os pré-requisitos podem incluir uma ou mais das ações a seguir:
 <dl>
 <dt>**      Nó de Extremidade
 **</dt>
-<dd>Um terminal de API deve ser configurado por meio de `ibmcloud api` antes de usar o comando.</dd>
+<dd>Um terminal de API deve ser configurado por meio de `bluemix api` antes de usar o comando.</dd>
 <dt>**Login**</dt>
-<dd>O login usando o comando `ibmcloud login` é necessário antes de usar esse comando.</dd>
+<dd>É necessário efetuar login usando o comando `bluemix login` antes de usar esse comando.</dd>
 <dt>**Destino **</dt>
-<dd>O comando `ibmcloud target` deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
+<dd>O comando `bluemix target` deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
 </dl>
 
 
-## Criar conexão vpn ibmcloud
+## bluemix vpn connection-create
 Cria uma conexão VPN.
 
 ```
-ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -78,7 +75,7 @@ ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY 
 
 -i *INITIATOR_STATE* (opcional): estado do iniciador. O valor padrão é `bi-directional`.
 
--dpd-timeout *VALUE* (opcional): valor do tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. O valor padrão é `120` segundos.
+-dpd-timeout *VALUE* (opcional): o valor de tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos. O valor padrão é `120` segundos.
 
 -dpd-interval *VALUE* (opcional): intervalo keep-alive em segundos. Envie mensagens keep-alive no intervalo configurado para verificar se o peer está ativo. Intervalo: 5 a 86399 segundos. O valor padrão é `15` segundos.
 
@@ -90,15 +87,15 @@ ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY 
 
 Crie uma nova conexão vpn com o nome `my_connection`:
 ```
-ibmcloud vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
+bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
 
 
-## Create-ike vpn ibmcloud
+## bluemix vpn ike-create
 Cria uma política IKE.
 
 ```
-ibmcloud vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -121,15 +118,15 @@ ibmcloud vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP
 
 Crie uma nova política IKE com o nome `my_ike`:
 ```
-Ibmcloud vpn ike-create my_ike -g my_gateway
+bluemix vpn ike-create my_ike -g my_gateway
 ```
 
 
-## Create-ibmcloud vpn ipsec
+## bluemix vpn ipsec-create
 Cria uma política IPSec.
 
 ```
-ibmcloud vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -152,15 +149,15 @@ ibmcloud vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GRO
 
 Criar uma política IPSec com o nome `my_policy`:
 ```
-Ibmcloud vpn ipsec-create my_policy -g my_gateway
+bluemix vpn ipsec-create my_policy -g my_gateway
 ```
 
 
-## ibmcloud vpn gateway-create
+## bluemix vpn gateway-create
 Cria um gateway VPN.
 
 ```
-ibmcloud vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -179,55 +176,55 @@ ibmcloud vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subn
 
 Crie um gateway com o nome `my_gateway` e digite `allContainerGroups`:
 ```
-Ibmcloud vpn gateway-create my_gateway -t allContainerGroups
+bluemix vpn gateway-create my_gateway -t allContainerGroups
 ```
 
 
-## ibmcloud vpn connections
+## bluemix vpn connections
 Exibe informações sobre todas as conexões atuais.
 
 ```
-ibmcloud vpn connections
+bluemix vpn connections
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
 
 
-## ibmcloud vpn ikes
+## bluemix vpn ikes
 Exibe informações sobre as conexões IKE atuais.
 
 ```
-ibmcloud vpn ikes
+bluemix vpn ikes
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
 
 
-## ibmcloud vpn ipsecs
+## bluemix vpn ipsecs
 Exibe informações sobre as conexões IPSec atuais.
 
 ```
-ibmcloud vpn ipsecs
+bluemix vpn ipsecs
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
 
 
-## ibmcloud vpn gateways
+## bluemix vpn gateways
 Exibe informações sobre os gateways atuais.
 
 ```
-ibmcloud vpn gateways
+bluemix vpn gateways
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
 
 
-## Conexão vpn ibmcloud
+## bluemix vpn connection
 Exibe todas as informações sobre uma determinada conexão.
 
 ```
-ibmcloud vpn connection CONNECTION_NAME
+bluemix vpn connection CONNECTION_NAME
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -237,11 +234,11 @@ ibmcloud vpn connection CONNECTION_NAME
 *CONNECTION_NAME* (obrigatório): nome da conexão a ser exibida.
 
 
-## Ibmcloud vpn ike
+## bluemix vpn ike
 Exibe informações sobre uma conexão IKE.
 
 ```
-Vpn ike POLICY_NAME ibmcloud
+bluemix vpn ike POLICY_NAME
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -251,11 +248,11 @@ Vpn ike POLICY_NAME ibmcloud
 *POLICY_NAME* (obrigatório): nome da política IKE a ser exibida.
 
 
-## Ibmcloud vpn ipsec
+## bluemix vpn ipsec
 Exibe informações sobre uma conexão IPSec.
 
 ```
-Vpn ipsec POLICY_NAME ibmcloud
+bluemix vpn ipsec POLICY_NAME
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -265,11 +262,11 @@ Vpn ipsec POLICY_NAME ibmcloud
 *POLICY_NAME* (obrigatório): nome da política IPSec a ser exibida.
 
 
-## Ibmcloud vpn gateway
+## bluemix vpn gateway
 Exibe informações de conexão de um gateway.
 
 ```
-Vpn gateway GATEWAY_NAME ibmcloud
+bluemix vpn gateway GATEWAY_NAME
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -279,11 +276,11 @@ Vpn gateway GATEWAY_NAME ibmcloud
 *GATEWAY_NAME* (obrigatório): nome do gateway a ser exibido.
 
 
-## Delete-conexão vpn ibmcloud
+## bluemix vpn connection-delete
 Exclui uma conexão existente.
 
 ```
-Ibmcloud vpn connection-delete CONNECTION_NAME
+bluemix vpn connection-delete CONNECTION_NAME
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -293,11 +290,11 @@ Ibmcloud vpn connection-delete CONNECTION_NAME
 *CONNECTION_NAME* (obrigatório): nome da conexão a ser excluída.
 
 
-## Delete-ike vpn ibmcloud
+## bluemix vpn ike-delete
 Exclui uma política IKE existente.
 
 ```
-ibmcloud vpn ike-delete POLICY_NAME
+bluemix vpn ike-delete POLICY_NAME
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -307,11 +304,11 @@ ibmcloud vpn ike-delete POLICY_NAME
 *POLICY_NAME* (obrigatório): nome da política IKE a ser excluída.
 
 
-## Delete-ibmcloud vpn ipsec
+## bluemix vpn ipsec-delete
 Exclui uma política IPSec existente.
 
 ```
-Ibmcloud vpn ipsec-delete POLICY_NAME
+bluemix vpn ipsec-delete POLICY_NAME
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -321,11 +318,11 @@ Ibmcloud vpn ipsec-delete POLICY_NAME
 *POLICY_NAME* (obrigatório): nome da política IPSec a ser excluída.
 
 
-## Delete-gateway vpn ibmcloud
+## bluemix vpn gateway-delete
 Exclui um gateway existente.
 
 ```
-Ibmcloud vpn gateway-delete GATEWAY_NAME
+bluemix vpn gateway-delete GATEWAY_NAME
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -335,11 +332,11 @@ Ibmcloud vpn gateway-delete GATEWAY_NAME
 *GATEWAY_NAME* (obrigatório): nome do gateway a ser excluído.
 
 
-## Update-conexão vpn ibmcloud
+## bluemix vpn connection-update
 Atualiza uma conexão VPN existente.
 
 ```
-ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -368,7 +365,7 @@ ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_K
 
 -i *INITIATOR_STATE* (opcional): estado do iniciador.
 
--dpd-timeout *VALUE* (opcional): valor do tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos.
+-dpd-timeout *VALUE* (opcional): o valor de tempo limite em segundos após o qual a sessão é finalizada. Intervalo: 6 a 86400 segundos.
 
 -dpd-interval *VALUE* (opcional): intervalo keep-alive em segundos. Envie mensagens keep-alive no intervalo configurado para verificar se o peer está ativo. Intervalo: 5 a 86399 segundos.
 
@@ -377,11 +374,11 @@ ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_K
 -ipsec *NAME* (opcional): nome da política IPSec.
 
 
-## Update-ike vpn ibmcloud
+## bluemix vpn ike-update
 Atualiza uma política IKE.
 
 ```
-ibmcloud vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -401,11 +398,11 @@ ibmcloud vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GRO
 -lv *LIFETIME_VALUE* (opcional): valor de tempo de vida da associação de segurança IKE. Intervalo: 60 a 86400 segundos.
 
 
-## Update-ibmcloud vpn ipsec
+## bluemix vpn ipsec-update
 Atualiza uma política IPSec.
 
 ```
-ibmcloud vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino
@@ -425,11 +422,11 @@ ibmcloud vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs G
 -lv *LIFETIME_VALUE* (opcional): valor de tempo de vida da associação de segurança. Intervalo: 60 a 86400 segundos.
 
 
-## Update-ibmcloud vpn gateway
+## bluemix vpn gateway-update
 Atualiza um gateway VPN existente.
 
 ```
-ibmcloud vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **Pré-requisitos**: Terminal, Login, Destino

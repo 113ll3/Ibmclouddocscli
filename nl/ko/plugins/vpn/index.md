@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-10-04"
 이어지는 지시사항은 Cloud Foundry(cf) CLI 플러그인으로 작업하기에 대한 것입니다. {{site.data.keyword.Bluemix_notm}} CLI 플러그인과 함께 플러그인을 사용하려면 [{{site.data.keyword.Bluemix_notm}} CLI용 {{site.data.keyword.vpn_short}} 플러그인![참조 링크 아이콘](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}을 참조하십시오.
 
 ## cf CLI 플러그인 설치
-시작하기 전에 cf CLI를 설치하십시오. 세부사항은 [Cloud Foundry 명령행 인터페이스![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}를 참조하십시오.
+시작하기 전에 cf CLI를 설치하십시오. 세부사항은 [Cloud Foundry 명령행 인터페이스![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}를 참조하십시오. 
 
 ## VPN CLI 플러그인 설치
 **참고:** 설치된 {{site.data.keyword.vpn_short}} CLI 플러그인의 이전 버전이 설치되어 있는 경우 우선 이를 삭제해야 합니다. 다음 명령을 사용하십시오.
@@ -35,7 +35,7 @@ cf uninstall-plugin vpn
 
 ### 로컬로 설치
 
-1. [ {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}에서 플랫폼에 대한 {{site.data.keyword.vpn_short}} 플러그인을 다운로드하십시오.
+1. [ {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}에서 플랫폼에 대한 {{site.data.keyword.vpn_short}} 플러그인을 다운로드하십시오.  
 2. 다음 명령을 사용하여 {{site.data.keyword.vpn_short}} 플러그인을 설치하십시오.
 **참고:** {{site.data.keyword.vpn_short}} 플러그인의 위치를 전환하거나 플러그인 위치로 경로를 지정하십시오.
 
@@ -63,12 +63,12 @@ cf uninstall-plugin vpn
 1. Cloud Foundry CLI 저장소에 {{site.data.keyword.Bluemix_notm}} 저장소를 추가하십시오. 다음 명령을 사용하십시오.
 
 	```
-	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
+	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
 	```
 2. 다음 명령을 실행하십시오.
 
 	```
-	cf install-plugin vpn -r IBM Cloud
+	cf install-plugin vpn -r bluemix
 	```
 ##VPN 서비스 명령의 목록
 
@@ -112,13 +112,13 @@ VPN 터널의 원격 엔드포인트 IP 주소입니다.
 
 **-i:** 개시자의 상태입니다. 기본값: 양방향.
 
-**-dpd-timeout:** 세션이 종료되는 제한시간 값(초)입니다. 범위: 6 - 86400초. 기본값: 120초. 활성 상태 지속 제한시간 값은 활성 상태 지속 간격 값보다 커야 합니다.
+**-dpd-timeout:** 세션이 종료되는 제한시간 값(초)입니다.  범위: 6 - 86400초. 기본값: 120초. 활성 상태 지속 제한시간 값은 활성 상태 지속 간격 값보다 커야 합니다.
 
 **-dpd-interval:** 활성 상태 지속 간격(초)입니다. 구성된 간격으로 킵얼라이브 메시지를 전송하여 피어가 작동 중인지 확인하십시오. 범위: 5-86399초. 기본값: 15초
 
 **-ike:** IKE 정책의 이름입니다.
 
-**-ipsec:** IPSec 정책의 이름입니다.
+**-ipsec:** IPsec 정책의 이름입니다.
 
 
 ### cf vpn-create ike
@@ -153,7 +153,7 @@ IKE 정책의 이름입니다.
 
 ### cf vpn-create ipsec
 
-IPSec 정책을 작성합니다.
+IPsec 정책을 작성합니다.
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -162,7 +162,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p3}
 
 **policy name:**
-IPSec 정책의 이름입니다.
+IPsec 정책의 이름입니다.
 
 **gateway name:**
 게이트웨이 이름입니다.
@@ -220,7 +220,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-현재 IPSec 연결에 대한 정보를 표시합니다.
+현재 IPsec 연결에 대한 정보를 표시합니다.
 
 ```
 cf vpn-show ipsecs
@@ -241,7 +241,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-IPSec 연결에 대한 정보를 표시합니다.
+IPsec 연결에 대한 정보를 표시합니다.
 
 ```
 cf vpn-show ipsec <policy name>
@@ -328,7 +328,7 @@ CIDR 형식의 서브넷 주소입니다.
 
 **-ike:** IKE 정책의 이름입니다.
 
-**-ipsec:** IPSec 정책의 이름입니다.
+**-ipsec:** IPsec 정책의 이름입니다.
 
 
 ### cf vpn-update ike
@@ -362,7 +362,7 @@ IKE 정책의 이름입니다.
 
 ### cf vpn-update ipsec
 
-IPSec 정책을 업데이트합니다.
+IPsec 정책을 업데이트합니다.
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -371,7 +371,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p7}
 
 **policy name:**
-IPSec 정책의 이름입니다.
+IPsec 정책의 이름입니다.
 
 
 ##### 선택적 매개변수:

@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -22,8 +22,6 @@ lastupdated: "2018-06-21"
 
 Die Befehlszeilenschnittstelle (CLI) von Cloud Foundry (cf) stellt Befehle bereit, mit denen Sie Ihre Apps verwalten können. In der nachfolgenden Liste sind die für die App-Verwaltung am häufigsten verwendeten cf-Befehle mit Namen, Optionen, Nutzungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Um alle cf-Befehle und die zugehörigen Hilfeinformationen aufzulisten, verwenden Sie `cf help`. Mit dem Befehl `cf command_name -h` können Sie detaillierte Hilfeinformationen zu einem bestimmten Befehl anzeigen.
 {: shortdesc}
-
-Eine detailliertere Liste von `cf CLI`-Befehlen finden Sie in der Community im [Cloud Foundry CLI Reference Guide ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}.
 
 **Hinweis:** Wenn sich in Ihrem Netz zwischen dem Host, auf dem die cf-Befehle ausgeführt werden, und dem Cloud Foundry-API-Endpunkt ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers durch Festlegung der Umgebungsvariablen `HTTP_PROXY` angeben. Details hierzu finden Sie unter [Using the cf CLI with an HTTP Proxy Server ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
@@ -96,7 +94,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (optional)</dt>
-   <dd>Die URL des IBM Cloud-API-Endpunkts, die Sie für das Herstellen der Verbindung zu {{site.data.keyword.Bluemix_notm}} angeben müssen. In der Regel ist diese URL `https://api.{DomainName}`.
+   <dd>Die URL des Bluemix-API-Endpunkts, die Sie für das Herstellen einer Verbindung zu {{site.data.keyword.Bluemix_notm}} angeben müssen. In der Regel ist diese URL `https://api.{DomainName}`.
    Wenn Sie die URL des API-Endpunkts anzeigen möchten, den Sie zurzeit verwenden, müssen Sie diesen Parameter für den Befehl 'cf api' nicht angeben.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Inaktiviert den Prozess der SSL-Validierung. Die Verwendung dieses Parameters kann zu Sicherheitsproblemen führen.</dd>
@@ -171,7 +169,7 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-Erstellen einer Serviceinstanz.
+Erstellt eine Serviceinstanz
 
 ```
 cf create-service service_name service_plan service_instance
@@ -192,7 +190,7 @@ cf create-service service_name service_plan service_instance
 
 <strong>Beispiele</strong>:
 
-Erstellen einer Instanz des {{site.data.keyword.dataworks_short}}-Service mit einem `kostenfreien` Plan.
+Erstellen einer Instanz des {{site.data.keyword.dataworks_short}}-Service mit einem `kostenlosen` Plan.
 ```
 cf create-service DataWorks free my_dataworks
 ```
@@ -254,25 +252,25 @@ cf delete appname [-f] [-r]
 
 <strong>Beispiele</strong>:
 
-Löscht eine Anwendung mit dem Namen `my_app` (erfordert eine Bestätigung).
+Löschen einer Anwendung mit dem Namen `my_app` (erfordert eine Bestätigung).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app`, ohne eine Bestätigung anzufordern.
+Löschen einer Anwendung mit dem Namen `my_app` ohne erforderliche Bestätigung.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app` und alle Domänennamen, die `my_app` zugeordnet sind.
+Löschen einer Anwendung mit dem Namen `my_app` und aller Domänennamen, die `my_app` zugeordnet sind.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app` und alle Domänennamen, die `my_app` zugeordnet sind, ohne eine Bestätigung anzufordern.
+Löschen einer Anwendung mit dem Namen `my_app` und aller Domänennamen, die `my_app` zugeordnet sind, ohne erforderliche Bestätigung.
 ```
 cf delete my_app -f -r
 ```
@@ -302,25 +300,25 @@ cf delete-space space_name [-f]
 
 <strong>Beispiele</strong>:
 
-Löscht eine Anwendung mit dem Namen `my_app` (erfordert eine Bestätigung).
+Löschen einer Anwendung mit dem Namen `my_app` (erfordert eine Bestätigung).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app`, ohne eine Bestätigung anzufordern.
+Löschen einer Anwendung mit dem Namen `my_app` ohne erforderliche Bestätigung.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app` und alle Domänennamen, die `my_app` zugeordnet sind.
+Löschen einer Anwendung mit dem Namen `my_app` und aller Domänennamen, die `my_app` zugeordnet sind.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app` und alle Domänennamen, die `my_app` zugeordnet sind, ohne eine Bestätigung anzufordern.
+Löschen einer Anwendung mit dem Namen `my_app` und aller Domänennamen, die `my_app` zugeordnet sind, ohne erforderliche Bestätigung.
 ```
 cf delete my_app -f -r
 ```
@@ -347,7 +345,7 @@ cf events [appname]
 
 <strong>Beispiele</strong>:
 
-Zeigt die Ereignisse für eine Anwendung mit dem Namen `my_app` an.
+Anzeigen der Ereignisse für eine Anwendung mit dem Namen `my_app`.
 ```
 cf events my_app
 ```
@@ -390,7 +388,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Hiermit melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an. Wenn Sie sich mit einer [eingebundenen ID](/docs/admin/account.html#signup) anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden.
+Hiermit melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an. Wenn Sie sich mit einer [eingebundenen ID](/docs/admin/account.html#signup) anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden. 
 
 **Hinweis**: Sie können für die Anmeldung auch einen API-Schlüssel für die {{site.data.keyword.Bluemix_notm}}-Plattform verwenden. Verwenden Sie den Benutzernamen `apikey` und Ihren API-Schlüsselwert als Kennwort. Weitere Informationen zum Erstellen eines API-Schlüssels finden Sie im Abschnitt [API-Schlüssel verwalten](/docs/iam/apikeys.html).
 
@@ -560,13 +558,13 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>Beispiele</strong>:
 
-Starten einer Anwendung mit dem Namen `my_app` mit dem Standardstartbefehl.
+Starten einer Anwendung mit dem Namen `my_app` mit dem Standard-Startbefehl.
 ```
 cf push `my_app` -c null
 ```
 {: codeblock}
 
-Starten einer Anwendung mit dem Namen `my_app` mit der Option, eine Scriptdatei mit dem Namen `run.sh` auszuführen.
+Starten einer Anwendung mit dem Namen `my_app` und der Option, eine Scriptdatei mit dem Namen `run.sh` auszuführen.
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -602,7 +600,7 @@ cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 
 <strong>Beispiele</strong>:
 
-Anzeigen der Anzahl der Instanzen, der Platten- und Speicherbegrenzung für eine Anwendung mit dem Namen `my_app`.
+Anzeigen der Anzahl der Instanzen, der Platten- und der Speicherbegrenzung für eine Anwendung mit dem Namen `my_app`.
 ```
 cf scale my_app
 ```
@@ -676,7 +674,7 @@ cf ssh
 ```
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
 
-Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können den Befehl `cf ssh-enabled` verwenden, um zu überprüfen, ob der SSH-Zugriff für den Befehl `cf enable-ssh` aktiviert ist, oder Sie können diesen Zugriff aktivieren, falls er inaktiviert wurde.
+Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können den Befehl `cf ssh-enabled` verwenden, um sicherzustellen, dass der SSH-Zugriff aktiviert ist, oder Sie können den Befehl `cf enable-ssh` verwenden, um den Zugriff zu aktivieren, falls er inaktiviert war. 
 
 <strong>Befehlsoptionen</strong>:
 
@@ -797,7 +795,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Anzeigen der Version der Cloud Foundry-Befehlszeilenschnittstelle.
+Zeigt die Version der Befehlszeilenschnittstelle 'cf' an.
 
 ```
 cf -v
@@ -808,7 +806,7 @@ cf -v
 
 <strong>Beispiele</strong>:
 
-Anzeigen der Version der Cloud Foundry-Befehlszeilenschnittstelle.
+Anzeigen der Version der cf-Befehlszeilenschnittstelle.
 ```
 cf -v
 ```

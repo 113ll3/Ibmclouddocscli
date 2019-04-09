@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-01-12"
 
 
 
@@ -150,7 +150,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expand</dt>
-   <dd>指出是否必須從 .zip 檔案擷取上傳的檔案。</dd>
+   <dd>指出是否必須從 zip 檔案擷取上傳的檔案。</dd>
    <dt>restart</dt>
    <dd>檔案更新之後，重新啟動應用程式運行環境。</dd>
    </dl>

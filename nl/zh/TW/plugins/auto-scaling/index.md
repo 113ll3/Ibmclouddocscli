@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2018
+  years: 2015，2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-11-16"
 
 
 ---
@@ -30,12 +30,14 @@ lastupdated: "2018-10-04"
 
 完成下列步驟以新增儲存庫並安裝外掛程式：
 1. 若要新增 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫，請執行下列指令：
+
 ```
-ibmcloud plugin repo-add IBM Cloud-plugin-repo https://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. 若要安裝 {{site.data.keyword.autoscaling}} CLI 外掛程式，請執行下列指令：
+
 ```
-ibmcloud plugin install auto-scaling -r IBM Cloud
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## 附加自動擴充原則
@@ -43,7 +45,7 @@ ibmcloud plugin install auto-scaling -r IBM Cloud
 您可以將自動擴充原則附加至特定應用程式。請執行下列指令：
 
 ```
-ibmcloud as policy-attach <APP_NAME> -p <policy_file>
+bx as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -60,7 +62,7 @@ ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 您可以透過在指令行介面上回答問題來產生自動擴充原則。視您的輸入而定，會以您輸入的名稱儲存一個包含自動擴充原則定義的 JSON 檔案。如果您未輸入檔名，原則內容會直接列印至指令行，而不會將它儲存至檔案。請執行下列指令：
 
 ```
-ibmcloud as policy-create
+bx as policy-create
 ```
 {: codeblock}
 
@@ -70,7 +72,8 @@ ibmcloud as policy-create
 您可以顯示應用程式的自動擴充原則。原則的內容會直接列印至指令行。請執行下列指令：
 
 ```
-ibmcloud as policy-show <APP_NAME> [--json]
+
+bx as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -87,7 +90,7 @@ ibmcloud as policy-show <APP_NAME> [--json]
 您可以從應用程式移除自動擴充原則。請執行下列指令：
 
 ```
-ibmcloud as policy-detach <APP_NAME>
+bx as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -102,7 +105,7 @@ ibmcloud as policy-detach <APP_NAME>
 您可以啟用或停用特定應用程式的自動擴充原則。請執行下列指令：
 
 ```
-ibmcloud as policy-enable|policy-disable <APP_NAME>
+bx as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -117,7 +120,8 @@ ibmcloud as policy-enable|policy-disable <APP_NAME>
 您可以顯示特定應用程式之自動擴充活動的歷程。自動擴充歷程記錄的表格會顯示在指令行介面中。
 
 ```
-ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 

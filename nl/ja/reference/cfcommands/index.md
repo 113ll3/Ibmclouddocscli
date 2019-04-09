@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -23,9 +23,7 @@ lastupdated: "2018-06-21"
 Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は、アプリを管理するための一連のコマンドを提供します。 以下の情報では、アプリを管理するために最もよく使用される cf コマンドをリストし、コマンドの名前、オプション、使用法、前提条件、説明、および例を示します。 すべての cf コマンドと関連ヘルプ情報をリストするには、`cf help` を使用します。 特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
 {: shortdesc}
 
-`cf CLI` コマンドのより詳細なリストについては、コミュニティー内の[Cloud Foundry CLI リファレンス・ガイド![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}を参照してください。
-
-**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、[Using the cf CLI with an HTTP Proxy Server ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} を参照してください。
+**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、[Using the cf CLI with an HTTP Proxy Server ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} を参照してください。
 
 
 ## Cloud Foundry CLI コマンドの索引
@@ -96,7 +94,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (オプション)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある IBM Cloud API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
+   <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
    現在使用している API エンドポイントの URL を表示したい場合、cf api
 コマンドにこのパラメーターを指定する必要はありません。</dd>
    <dt>* --skip-ssl-validation</dt>
@@ -391,7 +389,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}} にログインします。 [フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
+{{site.data.keyword.Bluemix_notm}} にログインします。 [フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。 
 
 **注**: {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを使用してログインすることもできます。 ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。 API キーの作成について詳しくは、『[API キーの管理](/docs/iam/apikeys.html)』を参照してください。
 
@@ -484,7 +482,7 @@ cf logs my_app
 ```
 {: codeblock}
 
-`my_app` という名前のアプリケーションのログ・ストリームを表示します。
+`my_app` という名前のアプリケーションの最近のログ・ストリームを表示します。
 ```
 cf logs my_app --recent
 ```
@@ -678,7 +676,7 @@ cf ssh
 ```
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
-デフォルトでは、Diego アプリケーションには SSH アクセスが有効になります。 `cf ssh-enabled` コマンドを使用して SSH アクセスが有効かどうかを検証することができ、アクセスが無効であった場合は `cf enable-ssh` コマンドを使用して有効にすることができます。
+デフォルトでは、Diego アプリケーションには SSH アクセスが有効になります。 `cf ssh-enabled` コマンドを使用して SSH アクセスが有効かどうかを検証することができ、アクセスが無効であった場合は `cf enable-ssh` コマンドを使用して有効にすることができます。 
 
 <strong>コマンド・オプション</strong>:
 
@@ -799,7 +797,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Cloud Foundry コマンド・ライン・インターフェースのバージョンを表示します。
+cf コマンド・ライン・インターフェースのバージョンを表示します。
 
 ```
 cf -v
@@ -810,7 +808,7 @@ cf -v
 
 <strong>例</strong>:
 
-Cloud Foundry コマンド・ライン・インターフェースのバージョンを表示します。
+cf コマンド・ライン・インターフェースのバージョンを表示します。
 ```
 cf -v
 ```
@@ -824,7 +822,7 @@ cf -v
 ## 関連リンク
 {: #general}
 
-* [Cloud Foundry CLI のダウンロード ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+* [Cloud Foundry CLI のダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
-* [クイック・リファレンス・カード - cf コマンド ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+* [クイック・リファレンス・カード - cf コマンド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}

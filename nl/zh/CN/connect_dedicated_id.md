@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-12-08"
 
 ---
 
@@ -23,11 +23,11 @@ lastupdated: "2018-06-21"
 
 
 ```
-  $ ibmcloud login -a https://api.{dedicated_env}.bluemix.net
+  $ bluemix login -a https://api.{dedicated_env}.bluemix.net
   API endpoint: https://api.{dedicated_env}.bluemix.net
 
   Public IAM token service is available in the dedicated environment.
-  Log in with your public IBMid, or use '--no-iam' to log in as a dedicated user only.
+  Login with your public IBMid, or use '--no-iam' to login as a dedicated user only.
 
   Email>
 ```
@@ -41,10 +41,10 @@ Authenticating...
   Connected to dedicated user my_dedicated_id
 ```
 
-但是，如果您的专用标识尚未连接到公共 IBM 标识，那么系统将提示您手动连接到公共 IBM 标识：
+但是，如果您的专用标识尚未连接到公共 IBM 标识，那么将提示您手动连接到公共 IBM 标识：
 
 ```
-  You are logging in with an IBMid that is not associated with any dedicated user.
+  You are logging with an IBMid that does not associated with any dedicated user.
   To set up the connection, input the credentials of the dedicated user.
 
   Choose a credential type:
@@ -60,15 +60,15 @@ Authenticating...
 要强制使用专用标识登录到 UAA 服务器，请在 `bluemix login` 命令中指定 `--no-iam` 选项：
 
 ```
-  $ ibmcloud login --no-iam
+  $ bluemix login --no-iam
 ```
 
-## 断开专用标识与公共 IBM 标识的连接
+## 断开专用标识与公共 IBM 标识的连接 
 
-可以使用 `ibmcloud iam dedicated-id-disconnect` 来断开公共 IBM 标识与所连接专用标识的连接。
+可以使用 `bluemix iam dedicated-id-disconnect` 来断开公共 IBM 标识与所连接专用标识的连接。
 
 ```
-  $ ibmcloud iam dedicated-id-disconnect
+  $ bluemix iam dedicated-id-disconnect
   Do you really want to disconnect my_dedicated_id from public IBMid? (Y/N)> y
   Disconnecting dedicated user my_dedicated_id from public IBMid...
   OK
@@ -76,3 +76,4 @@ Authenticating...
   Logging out...
   OK
 ```
+

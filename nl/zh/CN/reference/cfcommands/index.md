@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -20,10 +20,8 @@ lastupdated: "2018-06-21"
 # Cloud Foundry (cf) 命令
 {: #cf}
 
-Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序的命令。以下信息列出了最常用于管理应用程序的 cf 命令，并包含命令名称、选项、用法、先决条件、描述和示例。要列出所有 cf 命令及其关联的帮助信息，请使用 `cf help`。使用 `cf command_name -h` 可查看特定命令的详细帮助信息。
+Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序的命令。以下信息列出了管理应用程序最常用的 cf 命令，并包含命令名称、选项、用法、先决条件、描述和示例。要列出所有 cf 命令及其关联的帮助信息，请使用 `cf help`。使用 `cf command_name -h` 可查看特定命令的详细帮助信息。
 {: shortdesc}
-
-有关 `cf CLI` 命令的更详细列表，请参阅社区的 [Cloud Foundry CLI Reference Guide ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}。
 
 **注**：如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须通过设置 `HTTP_PROXY` 环境变量来指定该代理服务器的主机名或 IP 地址。有关详细信息，请参阅 [Using the cf CLI with an HTTP Proxy Server ![外部链接图标](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
 
@@ -95,7 +93,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL（可选）</dt>
-   <dd>IBM Cloud API 端点的 URL，必须指定该 URL 才能连接到 {{site.data.keyword.Bluemix_notm}}。通常，此 URL 为 `https://api.{DomainName}`。
+   <dd>Bluemix API 端点的 URL，必须指定该 URL 才能连接到 {{site.data.keyword.Bluemix_notm}}。通常，此 URL 为 `https://api.{DomainName}`。
    如果您想显示当前正在使用的 API 端点的 URL，那么不需要为 cf api 命令指定此参数。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>禁用 SSL 验证过程。使用此参数可能会导致安全性问题。</dd>
@@ -171,7 +169,7 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-创建服务实例。
+创建服务实例
 
 ```
 cf create-service service_name service_plan service_instance
@@ -394,7 +392,7 @@ cf help events
 {: #cf_login}
 
 登录到 {{site.data.keyword.Bluemix_notm}}。
-如果您使用[联合标识](/docs/admin/account.html#signup)登录，那么必须使用单点登录 (SSO) 参数才能登录。
+如果您使用[联合标识](/docs/admin/account.html#signup)登录，那么必须使用单点登录 (SSO) 参数才能登录。 
 
 **注**：您还可以使用 {{site.data.keyword.Bluemix_notm}} Platform API 密钥来登录。请使用用户名 `apikey` 并将 API 密钥值作为密码。有关创建 API 密钥的更多信息，请参阅[管理 API 密钥](/docs/iam/apikeys.html)。
 
@@ -415,7 +413,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>您的密码。</dd>
 <dd>*重要信息：*如果在命令行界面上使用 *-p* 参数来提供密码，那么密码可能会记录在命令行历史记录中。出于安全考虑，请避免使用 -p 参数来提供密码。请改为在命令行界面提示您时输入密码。</dd>
 <dt>*-sso*</dt>
-<dd>使用联合标识登录时，必须使用单点登录选项 (SSO)。使用 IBM 标识登录时则无需如此。如果您尝试使用联合标识登录，但未指定 SSO 参数，系统将提示您包含该参数。使用 SSO 参数会在登录时提示您输入一次性密码。</dd>
+<dd>使用联合标识登录时，必须使用单点登录选项 (SSO)。使用 IBM 标识登录时则无需如此。如果您尝试使用联合标识登录，但未指定 SSO 参数，系统将提示您使用该参数。使用 SSO 参数会在登录时提示您输入一次性密码。</dd>
 <dt>*-o* organization_name</dt>
 <dd>您要登录的组织的名称。</dd>
 <dt>*-s* space_name</dt>
@@ -623,7 +621,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 
 
 ## cf services
-  
+
 {: #cf_services}
 
 列出当前空间中可用的所有服务。
@@ -631,7 +629,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 
 ```
 cf services
-  ```
+```
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
 <strong>命令选项</strong>：无。
@@ -641,7 +639,7 @@ cf services
 列出当前空间中的所有服务。
 ```
 cf services
-  ```
+```
 {: codeblock}
 
 
@@ -685,7 +683,7 @@ cf ssh
 ```
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
-缺省情况下，Diego 应用程序已启用 SSH 访问。可以使用 `cf ssh-enabled` 命令来验证是否启用了 SSH 访问，或者使用 `cf enable-ssh` 命令来启用 SSH 访问（如果已禁用）。
+缺省情况下，Diego 应用程序已启用 SSH 访问。可以使用 `cf ssh-enabled` 命令来验证是否启用了 SSH 访问，或者使用 `cf enable-ssh` 命令来启用 SSH 访问（如果已禁用）。 
 
 <strong>命令选项</strong>：
 
@@ -808,7 +806,8 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-显示 Cloud Foundry 命令行界面的版本。
+显示 cf 命令行界面的版本。
+
 
 ```
 cf -v
@@ -819,7 +818,7 @@ cf -v
 
 <strong>示例</strong>：
 
-显示 Cloud Foundry 命令行界面的版本。
+显示 cf 命令行界面的版本。
 ```
 cf -v
 ```

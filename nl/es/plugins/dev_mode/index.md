@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-01-12"
 
 
 
@@ -37,7 +37,7 @@ Puede llevar a cabo las siguientes tareas con la CLI de dev_mode:
 
 Utilice uno de los siguientes métodos para instalar la herramienta de línea de mandatos dev_mode:
 - Instale localmente.
-  1. Descargue el plug-in dev_mode para su plataforma desde el [repositorio de plug-ins de CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+  1. Descargue el plug-in de dev_mode para su plataforma desde el [Repositorio de plug-ins de CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
   2. Vaya a la carpeta en la que se ha guardado el complemento dev_mode e instale dicho complemento utilizando el mandato cf install-plugin. Por ejemplo:
 
         ```
@@ -150,7 +150,7 @@ cf update-file <vía_acceso_remota> <vía_acceso_local> [opciones_mandato]
 
    <dl>
    <dt>expand</dt>
-   <dd>Indica si los archivos cargados deben extraerse del archivo .zip.</dd>
+   <dd>Indica si los archivos cargados se deben extraer del archivo zip.</dd>
    <dt>restart</dt>
    <dd>Reinicia el tiempo de ejecución de la app después de que se hayan actualizado los archivos.</dd>
    </dl>

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-01-12"
 
 
 
@@ -40,7 +40,8 @@ Vous pouvez effectuer les tâches suivantes à l'aide de l'interface de ligne de
 
 Utilisez l'une des méthodes suivantes pour installer l'outil de ligne de commande dev_mode :
 - Installation locale
-  1. Téléchargez le plug-in dev_mode correspondant à votre plateforme depuis le [référentiel de plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+  1. Téléchargez le plug-in dev_mode correspondant à votre plateforme depuis le [référentiel de plug-in
+de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
   2. Accédez au dossier dans lequel le plug-in dev_mode est enregistré et installez ce plug-in via la commande cf install-plugin. Par exemple :
 
         ```
@@ -153,7 +154,7 @@ cf update-file <chemin_distant> <chemin_local> [options_commande]
 
    <dl>
    <dt>expand</dt>
-   <dd>Indiquez si les fichiers téléchargés doivent être extraits du fichier .zip.</dd>
+   <dd>Indiquez si les fichiers téléchargés doivent être extraits du fichier zip.</dd>
    <dt>restart</dt>
    <dd>Redémarrez l'exécution de l'application une fois les fichiers mis à jour.</dd>
    </dl>

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-01-12"
 
 
 
@@ -40,9 +40,7 @@ detalhes.
 
 Use um dos métodos a seguir para instalar a ferramenta de linha de comandos dev_mode:
 - Instalar localmente.
-  1. Faça download do plug-in dev_mode para a sua plataforma no Repositório de plug-ins da CLI do
-[{{site.data.keyword.Bluemix_notm}}
-![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+  1. Faça download do plug-in dev_mode para sua plataforma do Repositório de plug-ins do [{{site.data.keyword.Bluemix_notm}} CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
   2. Acesse a pasta em que o plug-in dev_mode está salvo e instale o plug-in dev_mode usando o comando cf install-plugin. Por
 exemplo:
 
@@ -156,7 +154,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expandir</dt>
-   <dd>Indicar se os arquivos transferidos por upload devem ser extraídos do arquivo zip.</dd>
+   <dd>Indica se os arquivos transferidos por upload devem ou não ser extraídos do arquivo zip.</dd>
    <dt>reinício</dt>
    <dd>Reinicializa o tempo de execução do app depois que os arquivos são atualizados.</dd>
    </dl>

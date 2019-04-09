@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2018
+  years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2016-06-20"
 
 
 ---
@@ -27,434 +27,434 @@ Le plug-in VPN est disponible pour les systèmes d'exploitation Windows, MAC et 
 Les instructions qui suivent s'appliquent au plug-in CLI {{site.data.keyword.Bluemix_notm}}. Pour utiliser le plug-in avec le plug-in d'interface de ligne de commande Cloud Foundry (cf), voir [Plug-in d'interface de ligne de commande VPN pour l'interface de ligne de commande cf](../vpn/index.html).
 
 
-Vous trouverez ci-après la liste de toutes les commandes qui sont prises en charge par le plug-in VPN pour l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, ainsi que leurs noms, leurs options, leur syntaxe, leurs prérequis, leurs descriptions et des exemples. Pour savoir comment installer le plug-in VPN, voir la section présentant comment [étendre l'interface de ligne de commande IBM Cloud](../../index.html#cli_bluemix_ext).
+Vous trouverez ci-après la liste de toutes les commandes qui sont prises en charge par le plug-in VPN pour l'interface de ligne de commande Bluemix, ainsi que leurs noms, leurs options, leur syntaxe, leurs prérequis, leurs descriptions et des exemples. Pour savoir comment installer le plug-in VPN, voir [Etendez votre interface de ligne de commande Bluemix](../../index.html#cli_bluemix_ext).
 
 **Remarque :** la zone *Prérequis* répertorie les actions qui sont requises avant l'utilisation de la commande. Il
 peut s'agir d'une ou de plusieurs des actions suivantes :
 <dl>
 <dt>**Noeud final**</dt>
-<dd>Un noeud final d'API doit être défini via `ibmcloud api` avant l'utilisation de la commande.</dd>
+<dd>Un noeud final d'API doit être défini via `bluemix api` avant l'utilisation de la commande.</dd>
 <dt>**Connexion**</dt>
-<dd>Vous devez vous connecter avec la commande `ibmcloud login` avant d'utiliser cette commande.</dd>
+<dd>La connexion avec la commande `bluemix login` est requise avant l'utilisation de cette commande.</dd>
 <dt>**Cible**</dt>
-<dd>La commande `ibmcloud target` doit être utilisée pour configurer une organisation et un espace avant d'appeler cette commande.</dd>
+<dd>La commande `bluemix target` doit être utilisée pour définir une organisation et un espace avant l'utilisation de cette commande.</dd>
 </dl>
 
 
-## ibmcloud vpn connection-create
+## bluemix vpn connection-create
 Crée une connexion de réseau privé virtuel.
 
 ```
-ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+bluemix vpn connection-create NOM_CONNEXION -g NOM_PASSERELLE -k CLE_PRE-PARTAGEE -subnets "SOUS-RESEAU/MASQUE" -cip ADRESSE_IP_PASSERELLE_CLIENT [-d DESCRIPTION] [-peer_id ID_HOMOLOGUE] [-admin_state ETAT_ADMIN] [-dpd-action ACTION] [-gateway_ip ADRESSE_IP] [-i ETAT_INITIATEUR] [-dpd-timeout VALEUR] [-dpd-interval VALEUR] [-ike NOM] [-ipsec NOM]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*CONNECTION_NAME* (requis) : nom de la connexion.
+*NOM_CONNEXION* (requis) : nom de la connexion.
 
--g *GATEWAY_NAME* (requis) : nom de la passerelle.
+-g *NOM_PASSERELLE* (requis) : nom de la passerelle.
 
--k *PRESHARED_KEY* (requis) : clé pré-partagée.
+-k *CLE_PRE-PARTAGEE* (requis) : clé pré-partagée.
 
--subnets "*SUBNET*/*MASK*" (requis) : adresse de sous-réseau distant au format CIDR.
+-subnets "*SOUS-RESEAU*/*MASQUE*" (requis) : adresse de sous-réseau distant au format CIDR.
 
--cip *CUSTOMER_GATEWAY_IP_ADDRESS* (requis) : adresse IP de noeud final distant du tunnel VPN.
+-cip *ADRESSE_IP_PASSERELLE_CLIENT* (requis) : adresse IP de noeud final distant du tunnel VPN.
 
 -d *DESCRIPTION* (facultatif) : description des paramètres spécifiés.
 
--peer_id *PEER_ID* (facultatif) : ID de l'homologue distant. Autre noeud final du tunnel VPN.
+-peer_id *ID_HOMOLOGUE* (facultatif) : ID de l'homologue distant. Autre noeud final du tunnel VPN.
 
--admin_state *ADMIN_STATE* (facultatif) : statut de la connexion de réseau privé virtuel. Les valeurs admises sont `UP`
+-admin_state *ETAT_ADMIN* (facultatif) : statut de la connexion de réseau privé virtuel. Les valeurs admises sont `UP`
 et `DOWN`.
 
 -dpd-action *ACTION*  (facultatif) :  action à effectuer lorsque l'homologue est identifié comme non opérationnel. Les valeurs admises sont
 `hold`, `clear`, `disabled`, `restart` et `restart-by-peer`. La
 valeur par défaut est `hold`.
 
--gateway_ip *IP_ADDRESS* (facultatif) : adresse IP du noeud final de tunnel VPN local.
+-gateway_ip *ADRESSE_IP* (facultatif) : adresse IP du noeud final de tunnel VPN local.
 
--i *INITIATOR_STATE* (facultatif) : état de l'initiateur. La valeur par défaut est `bi-directional`.
+-i *ETAT_INITIATEUR* (facultatif) : état de l'initiateur. La valeur par défaut est `bi-directional`.
 
--dpd-timeout *VALUE* (facultatif) : valeur de délai en secondes au bout duquel la session est terminée. Plage : 6 à 86400 secondes. La
+-dpd-timeout *VALEUR* (facultatif) : valeur de délai en secondes au bout duquel la session est terminée. Plage : 6 à 86400 secondes. La
 valeur par défaut est `120` secondes.
 
--dpd-interval *VALUE* (facultatif) : intervalle de signal de présence en secondes. Envoyez des messages d'état actif à la fréquence
+-dpd-interval *VALEUR* (facultatif) : intervalle de signal de présence en secondes. Envoyez des messages d'état actif à la fréquence
 configurée afin de vérifier l'état opérationnel de l'homologue. Plage : 5 à 86399 secondes. La valeur par défaut est `15` secondes.
 
--ike *NAME* (facultatif) : nom de la règle IKE (Internet Key Exchange).
+-ike *NOM* (facultatif) : nom de la règle IKE (Internet Key Exchange).
 
--ipsec *NAME* (facultatif) : nom de la règle IPSec (Internet Protocol Security).
+-ipsec *NOM* (facultatif) : nom de la règle IPSec (Internet Protocol Security).
 
 **Exemples** :
 
 Créez une connexion de réseau privé virtuel dont le nom est `ma_connexion` :
 ```
-ibmcloud vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
+bluemix vpn connection-create ma_connexion -g ma_passerelle -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
 
 
-## ibmcloud vpn ike-create
+## bluemix vpn ike-create
 Crée une règle IKE (Internet Key Exchange).
 
 ```
-ibmcloud vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-create NOM_REGLE -g NOM_PASSERELLE [-d DESCRIPTION] [-pfs GROUPE] [-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*POLICY_NAME* (requis) : nom de la règle IKE (Internet Key Exchange).
+*NOM_REGLE* (requis) : nom de la règle IKE (Internet Key Exchange).
 
--g *GATEWAY_NAME* (requis) : nom de la passerelle.
+-g *NOM_PASSERELLE* (requis) : nom de la passerelle.
 
 -d *DESCRIPTION* (facultatif) : description des paramètres spécifiés.
 
--pfs *GROUP* (facultatif) : identificateur de groupe Diffie-Hellman (DH). Les valeurs admises sont `Group2`,
+-pfs *GROUPE* (facultatif) : identificateur de groupe Diffie-Hellman (DH). Les valeurs admises sont `Group2`,
 `Group5` et `Group14`. La valeur par défaut est `Group2`.
 
--e *ENCRYPTION_ALGORITHM* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
+-e *ALGORITHME_CHIFFREMENT* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
 `aes-192`, `aes-256` et `3des`. La valeur par défaut est `aes-128`.
 
--lv *LIFETIME_VALUE* (facultatif) : valeur de durée de vie de l'association de sécurité IKE (Internet Key Exchange). Plage : 60 à 86400 secondes. La valeur par défaut est `86400` secondes.
+-lv *VALEUR_DUREE_VIE* (facultatif) : valeur de durée de vie de l'association de sécurité IKE (Internet Key Exchange). Plage : 60 à 86400 secondes. La valeur par défaut est `86400` secondes.
 
 **Exemples** :
 
 Créez une règle IKE (Internet Key Exchange) dont le nom est `mon_ike` :
 ```
-ibmcloud vpn ike-create my_ike -g my_gateway
+bluemix vpn ike-create mon_ike -g ma_passerelle
 ```
 
 
-## ibmcloud vpn ipsec-create
+## bluemix vpn ipsec-create
 Crée une règle IPSec (Internet Protocol Security).
 
 ```
-ibmcloud vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-create NOM_REGLE -g NOM_PASSERELLE [-d DESCRIPTION] [-pfs GROUPE] [-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*POLICY_NAME* (requis) : nom de la règle IPSec (Internet Protocol Security).
+*NOM_REGLE* (requis) : nom de la règle IPSec (Internet Protocol Security).
 
--g *GATEWAY_NAME* (requis) : nom de la passerelle.
+-g *NOM_PASSERELLE* (requis) : nom de la passerelle.
 
 -d *DESCRIPTION* (facultatif) : description des paramètres spécifiés.
 
--pfs *GROUP* (facultatif) : identificateur de groupe Diffie-Hellman (DH). Les valeurs admises sont `Group2`,
+-pfs *GROUPE* (facultatif) : identificateur de groupe Diffie-Hellman (DH). Les valeurs admises sont `Group2`,
 `Group5` et `Group14`. La valeur par défaut est `Group2`.
 
--e *ENCRYPTION_ALGORITHM* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
+-e *ALGORITHME_CHIFFREMENT* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
 `aes-192`, `aes-256` et `3des`. La valeur par défaut est `aes-128`.
 
--lv *LIFETIME_VALUE* (facultatif) : valeur de durée de vie de l'association de sécurité. Plage : 60 à 86400 secondes. La valeur par
+-lv *VALEUR_DUREE_VIE* (facultatif) : valeur de durée de vie de l'association de sécurité. Plage : 60 à 86400 secondes. La valeur par
 défaut est `3600` secondes.
 
 **Exemples** :
 
 Créez une règle IPSec (Internet Protocol Security) dont le nom est `ma_règle` :
 ```
-ibmcloud vpn ipsec-create my_policy -g my_gateway
+bluemix vpn ipsec-create ma_règle -g ma_passerelle
 ```
 
 
-## ibmcloud vpn gateway-create
+## bluemix vpn gateway-create
 Crée une passerelle de réseau privé virtuel.
 
 ```
-ibmcloud vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-create NOM_PASSERELLE -t TYPE [-gateway_ip ADRESSE_IP] [-subnets ADRESSE_SOUS-RESEAU]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*GATEWAY_NAME* (requis) : nom de la passerelle.
+*NOM_PASSERELLE* (requis) : nom de la passerelle.
 
 -t *TYPE* (requis) : conteneurs pour lesquels activer le service. Les valeurs admises sont `allSingleContainers`,
 `allContainerGroups` et `allContainers`. Aucune valeur par défaut ; vous devez spécifier un type.
 
--gateway_ip *IP_ADDRESS* (facultatif) : adresse IP de la passerelle.
+-gateway_ip *ADRESSE_IP* (facultatif) : adresse IP de la passerelle.
 
--subnets *SUBNET_ADDRESS* (facultatif) : adresse de sous-réseau au format CIDR.
+-subnets *ADRESSE_SOUS-RESEAU* (facultatif) : adresse de sous-réseau au format CIDR.
 
 **Exemples** :
 
 Créez une passerelle dont le nom est `ma_passerelle` et le type `allContainerGroups` :
 ```
-ibmcloud vpn gateway-create my_gateway -t allContainerGroups
+bluemix vpn gateway-create ma_passerelle -t allContainerGroups
 ```
 
 
-## ibmcloud vpn connections
+## bluemix vpn connections
 Affiche des informations sur toutes les connexions en cours.
 
 ```
-ibmcloud vpn connections
+bluemix vpn connections
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 
-## ibmcloud vpn ikes
+## bluemix vpn ikes
 Affiche des informations sur les connexions IKE (Internet Key Exchange) en cours.
 
 ```
-ibmcloud vpn ikes
+bluemix vpn ikes
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 
-## ibmcloud vpn ipsecs
+## bluemix vpn ipsecs
 Affiche des informations sur les connexions IPSec (Internet Protocol Security) en cours.
 
 ```
-ibmcloud vpn ipsecs
+bluemix vpn ipsecs
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 
-## ibmcloud vpn gateways
+## bluemix vpn gateways
 Affiche des informations sur les passerelles en cours.
 
 ```
-ibmcloud vpn gateways
+bluemix vpn gateways
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 
-## ibmcloud vpn connection
+## bluemix vpn connection
 Affiche toutes les informations sur une connexion particulière.
 
 ```
-ibmcloud vpn connection CONNECTION_NAME
+bluemix vpn connection NOM_CONNEXION
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*CONNECTION_NAME* (requis) : nom de la connexion à afficher.
+*NOM_CONNEXION* (requis) : nom de la connexion à afficher.
 
 
-## ibmcloud vpn ike
+## bluemix vpn ike
 Affiche des informations sur une connexion IKE (Internet Key Exchange).
 
 ```
-ibmcloud vpn ike POLICY_NAME
+bluemix vpn ike NOM_REGLE
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*POLICY_NAME* (requis) : nom de la règle IKE (Internet Key Exchange) à afficher.
+*NOM_REGLE* (requis) : nom de la règle IKE (Internet Key Exchange) à afficher.
 
 
-## ibmcloud vpn ipsec
+## bluemix vpn ipsec
 Affiche des informations sur une connexion IPSec (Internet Protocol Security).
 
 ```
-ibmcloud vpn ipsec POLICY_NAME
+bluemix vpn ipsec NOM_REGLE
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*POLICY_NAME* (requis) : nom de la règle IPSec (Internet Protocol Security) à afficher.
+*NOM_REGLE* (requis) : nom de la règle IPSec (Internet Protocol Security) à afficher.
 
 
-## ibmcloud vpn gateway
+## bluemix vpn gateway
 Affiche les informations de connexion d'une passerelle.
 
 ```
-ibmcloud vpn gateway GATEWAY_NAME
+bluemix vpn gateway NOM_PASSERELLE
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*GATEWAY_NAME* (requis) : nom de la passerelle à afficher.
+*NOM_PASSERELLE* (requis) : nom de la passerelle à afficher.
 
 
-## ibmcloud vpn connection-delete
+## bluemix vpn connection-delete
 Supprime une connexion existante.
 
 ```
-ibmcloud vpn connection-delete CONNECTION_NAME
+bluemix vpn connection-delete NOM_CONNEXION
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*CONNECTION_NAME* (requis) : nom de la connexion à supprimer.
+*NOM_CONNEXION* (requis) : nom de la connexion à supprimer.
 
 
-## ibmcloud vpn ike-delete
+## bluemix vpn ike-delete
 Supprime une règle IKE (Internet Key Exchange) existante.
 
 ```
-ibmcloud vpn ike-delete POLICY_NAME
+bluemix vpn ike-delete NOM_REGLE
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*POLICY_NAME* (requis) : nom de la règle IKE (Internet Key Exchange) à supprimer.
+*NOM_REGLE* (requis) : nom de la règle IKE (Internet Key Exchange) à supprimer.
 
 
-## ibmcloud vpn ipsec-delete
+## bluemix vpn ipsec-delete
 Supprime une règle IPSec (Internet Protocol Security) existante.
 
 ```
-ibmcloud vpn ipsec-delete POLICY_NAME
+bluemix vpn ipsec-delete NOM_REGLE
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*POLICY_NAME* (requis) : nom de la règle IPSec (Internet Protocol Security) à supprimer.
+*NOM_REGLE* (requis) : nom de la règle IPSec (Internet Protocol Security) à supprimer.
 
 
-## ibmcloud vpn gateway-delete
+## bluemix vpn gateway-delete
 Supprime une passerelle existante.
 
 ```
-ibmcloud vpn gateway-delete GATEWAY_NAME
+bluemix vpn gateway-delete NOM_PASSERELLE
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*GATEWAY_NAME* (requis) : nom de la passerelle à supprimer.
+*NOM_PASSERELLE* (requis) : nom de la passerelle à supprimer.
 
 
-## ibmcloud vpn connection-update
+## bluemix vpn connection-update
 Met à jour une connexion de réseau privé virtuel existante.
 
 ```
-ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+bluemix vpn connection-update NOM_CONNEXION [-g NOM_PASSERELLE] [-k CLE_PRE-PARTAGEE] [-subnets "SOUS-RESEAU/MASQUE"] [-cip ADRESSE_IP_PASSERELLE_CLIENT] [-d DESCRIPTION] [-peer_id ID_HOMOLOGUE] [-admin_state ETAT_ADMIN] [-dpd-action ACTION] [-gateway_ip ADRESSE_IP] [-i ETAT_INITIATEUR] [-dpd-timeout VALEUR] [-dpd-interval VALEUR] [-ike NOM] [-ipsec NOM]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*CONNECTION_NAME* (requis) : nom de la connexion.
+*NOM_CONNEXION* (requis) : nom de la connexion.
 
--g *GATEWAY_NAME* (facultatif) : nom de la passerelle.
+-g *NOM_PASSERELLE* (facultatif) : nom de la passerelle.
 
--k *PRESHARED_KEY* (facultatif) : clé pré-partagée.
+-k *CLE_PRE-PARTAGEE* (facultatif) : clé pré-partagée.
 
--subnets "*SUBNET*/*MASQUE*" (facultatif) : adresse de sous-réseau au format CIDR.
+-subnets "*SOUS-RESEAU*/*MASQUE*" (facultatif) : adresse de sous-réseau au format CIDR.
 
--cip *CUSTOMER_GATEWAY_IP_ADDRESS* (facultatif) : adresse IP de noeud final distant du tunnel VPN.
+-cip *ADRESSE_IP_PASSERELLE_CLIENT* (facultatif) : adresse IP de noeud final distant du tunnel VPN.
 
 -d *DESCRIPTION* (facultatif) : description des paramètres spécifiés.
 
--peer_id *PEER_ID* (facultatif) : ID de l'homologue distant. Autre noeud final du tunnel VPN.
+-peer_id *ID_HOMOLOGUE* (facultatif) : ID de l'homologue distant. Autre noeud final du tunnel VPN.
 
--admin_state *ADMIN_STATE* (facultatif) : statut de la connexion de réseau privé virtuel. Les valeurs admises sont `UP`
+-admin_state *ETAT_ADMIN* (facultatif) : statut de la connexion de réseau privé virtuel. Les valeurs admises sont `UP`
 et `DOWN`.
 
 -dpd-action *ACTION*  (facultatif) :  action à effectuer lorsque l'homologue est identifié comme non opérationnel. Les valeurs admises sont
 `hold`, `clear`, `disabled`, `restart` et `restart-by-peer`.
 
--gateway_ip *IP_ADDRESS* (facultatif) : adresse IP du noeud final de tunnel VPN local.
+-gateway_ip *ADRESSE_IP* (facultatif) : adresse IP du noeud final de tunnel VPN local.
 
--i *INITIATOR_STATE* (facultatif) : état de l'initiateur.
+-i *ETAT_INITIATEUR* (facultatif) : état de l'initiateur.
 
--dpd-timeout *VALUE* (facultatif) : valeur de délai en secondes au bout duquel la session est terminée. Plage : 6 à 86400 secondes.
+-dpd-timeout *VALEUR* (facultatif) : valeur de délai en secondes au bout duquel la session est terminée. Plage : 6 à 86400 secondes.
 
--dpd-interval *VALUE* (facultatif) : intervalle de signal de présence en secondes. Envoyez des messages d'état actif à la fréquence
+-dpd-interval *VALEUR* (facultatif) : intervalle de signal de présence en secondes. Envoyez des messages d'état actif à la fréquence
 configurée afin de vérifier l'état opérationnel de l'homologue. Plage : 5 à 86399 secondes.
 
--ike *NAME* (facultatif) : nom de la règle IKE (Internet Key Exchange).
+-ike *NOM* (facultatif) : nom de la règle IKE (Internet Key Exchange).
 
--ipsec *NAME* (facultatif) : nom de la règle IPSec (Internet Protocol Security).
+-ipsec *NOM* (facultatif) : nom de la règle IPSec (Internet Protocol Security).
 
 
-## ibmcloud vpn ike-update
+## bluemix vpn ike-update
 Met à jour une règle IKE (Internet Key Exchange).
 
 ```
-ibmcloud vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-update NOM_REGLE [-g NOM_PASSERELLE] [-d DESCRIPTION] [-pfs GROUP] [-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*POLICY_NAME* (requis) : nom de la règle IKE (Internet Key Exchange).
+*NOM_REGLE* (requis) : nom de la règle IKE (Internet Key Exchange).
 
--g *GATEWAY_NAME* (facultatif) : nom de la passerelle.
+-g *NOM_PASSERELLE* (facultatif) : nom de la passerelle.
 
 -d *DESCRIPTION* (facultatif) : description des paramètres spécifiés.
 
--pfs *GROUP* (facultatif) : identificateur de groupe Diffie-Hellman (DH). Les valeurs admises sont `Group2`,
+-pfs *GROUPE* (facultatif) : identificateur de groupe Diffie-Hellman (DH). Les valeurs admises sont `Group2`,
 `Group5` et `Group14`.
 
--e *ENCRYPTION_ALGORITHM* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
+-e *ALGORITHME_CHIFFREMENT* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
 `aes-192`, `aes-256` et `3des`.
 
--lv *LIFETIME_VALUE* (facultatif) : valeur de durée de vie de l'association de sécurité IKE (Internet Key Exchange). Plage : 60 à 86400 secondes.
+-lv *VALEUR_DUREE_VIE* (facultatif) : valeur de durée de vie de l'association de sécurité IKE (Internet Key Exchange). Plage : 60 à 86400 secondes.
 
 
-## ibmcloud vpn ipsec-update
+## bluemix vpn ipsec-update
 Met à jour une règle IPSec (Internet Protocol Security).
 
 ```
-ibmcloud vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-update NOM_REGLE [-g NOM_PASSERELLE] [-d DESCRIPTION] [-pfs GROUPE] [-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*POLICY_NAME* (requis) : nom de la règle IPSec (Internet Protocol Security).
+*NOM_REGLE* (requis) : nom de la règle IPSec (Internet Protocol Security).
 
--g *GATEWAY_NAME* (facultatif) : nom de la passerelle.
+-g *NOM_PASSERELLE* (facultatif) : nom de la passerelle.
 
 -d *DESCRIPTION* (facultatif) : description des paramètres spécifiés.
 
--pfs *GROUP* (facultatif) : identificateur de groupe Diffie-Hellman (DH). Les valeurs admises sont `Group2`,
+-pfs *GROUPE* (facultatif) : identificateur de groupe Diffie-Hellman (DH). Les valeurs admises sont `Group2`,
 `Group5` et `Group14`.
 
--e *ENCRYPTION_ALGORITHM* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
+-e *ALGORITHME_CHIFFREMENT* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
 `aes-192`, `aes-256` et `3des`.
 
--lv *LIFETIME_VALUE* (facultatif) : valeur de durée de vie de l'association de sécurité. Plage : 60 à 86400 secondes.
+-lv *VALEUR_DUREE_VIE* (facultatif) : valeur de durée de vie de l'association de sécurité. Plage : 60 à 86400 secondes.
 
 
-## ibmcloud vpn gateway-update
+## bluemix vpn gateway-update
 Met à jour une passerelle de réseau privé virtuel existante.
 
 ```
-ibmcloud vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-update NOM_PASSERELLE [-t TYPE] [-gateway_ip ADRESSE_IP] [-subnets ADRESSE_SOUS-RESEAU]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*GATEWAY_NAME* (requis) : nom de la passerelle.
+*NOM_PASSERELLE* (requis) : nom de la passerelle.
 
 -t *TYPE* (facultatif) : conteneurs pour lesquels activer le service. Les valeurs admises sont `allSingleContainers`,
 `allContainerGroups` et `allContainers`.
 
--gateway_ip *IP_ADDRESS* (facultatif) : adresse IP de la passerelle.
+-gateway_ip *ADRESSE_IP* (facultatif) : adresse IP de la passerelle.
 
--subnets *SUBNET_ADDRESS* (facultatif) : adresse de sous-réseau au format CIDR.
+-subnets *ADRESSE_SOUS-RESEAU* (facultatif) : adresse de sous-réseau au format CIDR.

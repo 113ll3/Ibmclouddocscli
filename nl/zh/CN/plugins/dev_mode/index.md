@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-01-12"
 
 
 
@@ -37,30 +37,30 @@ lastupdated: "2018-06-21"
 
 使用以下其中一种方法来安装 dev_mode 命令行工具：
 - 本地安装。
-  1. 从 [{{site.data.keyword.Bluemix_notm}} CLI 插件存储库 ![外部链接图标](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} 下载适用于您的平台的 dev_mode 插件。
+  1. 从 [{{site.data.keyword.Bluemix_notm}} CLI Plugin Repository ![外部链接图标](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} 下载适用于您的平台的 dev_mode 插件。
   2. 转至保存 dev_mode 插件的文件夹，并使用 cf install-plugin 命令安装 dev_mode 插件。例如：
 
         ```
-        cf install-plugin dev_mode-linux64
+cf install-plugin dev_mode-linux64
         ```
 
 - 从 {{site.data.keyword.Bluemix_notm}} CLI 存储库进行安装。
   1. 通过使用以下命令将 bluemix-repo 存储库添加到 Cloud Foundry CLI 存储库：
 
         ```
-        cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. 输入 cf repo-plugins。dev_mode 插件会显示在 bluemix-repo 存储库中。
 
 		```
-        cf repo-plugins
+cf repo-plugins
         ```
 
   3. 通过使用以下命令将 dev_mode 插件安装到 Cloud Foundry CLI 插件：
 
         ```
-        cf install-plugin dev_mode -r bluemix-repo
+cf install-plugin dev_mode -r bluemix-repo
         ```
 
 ## 查看 dev_mo {{site.data.keyword.Bluemix_notm}}  
@@ -151,7 +151,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expand</dt>
-   <dd>指示上传的文件是否必须从 .zip 文件中解压缩。</dd>
+   <dd>指示上传的文件是否必须从 zip 文件中解压缩。</dd>
    <dt>restart</dt>
    <dd>文件更新后，重新启动应用程序运行时。</dd>
    </dl>

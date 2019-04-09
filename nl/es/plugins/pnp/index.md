@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -18,21 +18,22 @@ Utilice la interfaz de línea de mandatos (CLI) de igualdad de red privada para 
 
 El plug-in de la CLI de igualdad de red privada está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el plug-in aplicable a su caso.
 
-Antes de empezar, cree los espacios de {{site.data.keyword.Bluemix_notm}}. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta.
+Antes de empezar, cree los espacios de {{site.data.keyword.Bluemix_notm}}. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. Para obtener detalles, consulte [Uso de direcciones IP privadas ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
 
 **Nota:** después de utilizar la igualdad de red privada con un espacio de {{site.data.keyword.Bluemix_notm}}, si necesita suprimir el espacio, suprima en primer lugar las conexiones de la igualdad de red privada en dicho espacio.
 
-Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Para obtener detalles, consulte [CLI de IBM Cloud](http://clis.ng.bluemix.net/ui/home.html).
+Para empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte
+[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html) para obtener más información.
 
 ## Instale el plug-in de la CLI de igualdad de red privada
 
 **Nota**: si tiene una versión anterior del plug-in que se instala, tendrá que desinstalarla. Utilice el mandato siguiente para desinstalar el plug-in:
 
 ```
-ibmcloud plugin uninstall private-network-peering
+bluemix plugin uninstall private-network-peering
 ```
 ### Instalar localmente
-Descargue el plug-in de igualdad de red privada para la plataforma desde el [repositorio de plug-ins de CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
+Descargue el plug-in de igualdad de red privada para la plataforma desde [Repositorio de plug-ins de la CLI de {{site.data.keyword.Bluemix_notm}}![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
 
 Instale el plug-in de igualdad de red privada utilizando el mandato siguiente:
 
@@ -41,19 +42,19 @@ Instale el plug-in de igualdad de red privada utilizando el mandato siguiente:
 * Para sistemas operativos Microsoft Windows:
 
 ```
-ibmcloud plugin install private-network-peering-windows-amd64.exe
+bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
 * Para Apple MAC OS:
 
 ```
-ibmcloud plugin install private-network-peering-darwin-amd64
+bluemix plugin install private-network-peering-darwin-amd64
 ```
 
 * Para sistemas operativos Linux:
 
 ```
-ibmcloud plugin install private-network-peering-linux-amd64
+bluemix plugin install private-network-peering-linux-amd64
 ```
 
 **Nota**: mientras esté instalando el plug-in para Linux OS, si ve un mensaje de error que muestra que el permiso está denegado, ejecute el siguiente mandato y cambie los permisos:
@@ -68,17 +69,17 @@ Siga estos pasos para instalar el plug-in desde el repositorio de {{site.data.ke
 
 1. Añada el punto final de registro del plug-in de {{site.data.keyword.Bluemix_notm}}:
 	```
-	ibmcloud plugin repo-add IBM Cloud http://plugins.ng.bluemix.net
+	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
 
 2. Ejecute el mandato siguiente:
 
 	```
-	ibmcloud plugin install private-network-peering -r IBM Cloud
+	bluemix plugin install private-network-peering -r bluemix-bx
 	```
 
 ## Lista de mandatos de igualdad de red privada
-Se da soporte a los mandatos siguientes. Utilice el mandato `ibmcloud network` para ver la lista de mandatos disponibles:
+Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix network` para ver la lista de mandatos disponibles:
 
 | Mandato     | Descripción                                    |
 |-------------|------------------------------------------------|
@@ -90,11 +91,11 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `ibmcloud network` p
 
 
 ### Utilización del mandato
-Para ver la información de ayuda para los mandatos, ejecute: `ibmcloud network [command] -h`.
+Para ver la información de ayuda para los mandatos, ejecute: `bluemix network [command] -h`.
 
 #### Listar todos los direccionadores disponibles para la interconexión
 ```
-ibmcloud network pnp-routers [--verbose (o -v)]
+bluemix network pnp-routers [--verbose (o -v)]
 ```
 
 #####Parámetros opcionales
@@ -107,7 +108,7 @@ ibmcloud network pnp-routers [--verbose (o -v)]
 
 Para ver la información de red sobre todos los direccionadores:
 
-	$ ibmcloud network pnp-routers
+	$ bluemix network pnp-routers
 	Listando direccionadores disponibles...
 	OK
 
@@ -120,7 +121,7 @@ Para ver la información de red sobre todos los direccionadores:
 Para ver la información de red detallada sobre todos los direccionadores:
 
 
-	$ ibmcloud network pnp-routers -v
+	$ bluemix network pnp-routers -v
 	Listando direccionadores disponibles...
 	OK
 
@@ -149,19 +150,19 @@ Para ver la información de red detallada sobre todos los direccionadores:
 
 #### Crear una conexión de igualdad de red privada utilizando las direcciones IP
 ```
-ibmcloud network pnp-create <ip_direccionador> <ip_direccionador> <nombre>
+bluemix network pnp-create <ip_direccionador> <ip_direccionador> <nombre>
 ```
 
 #####Parámetros
 {: #p1}
 
-* **ip_direccionador**: direcciones IP de los dos direccionadores que desea conectar. Puede encontrar las direcciones IP utilizando el mandato: `ibmcloud network pnp-routers`
+* **ip_direccionador**: direcciones IP de los dos direccionadores que desea conectar. Puede encontrar las direcciones IP utilizando el mandato: `bluemix network pnp-routers`
 * **nombre**: nombre de la conexión de igualdad de red privada.
 
 ######Ejemplo de mandato
 {: #ex2}
 
-	$ ibmcloud network pnp-create 129.41.234.246 129.41.237.172 demo
+	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
 	Creando conexión de igualdad de red privada 'demo'...
 	Conectando 'default-router(129.41.234.246)' y 'default-router(129.41.237.172)'...
 	OK
@@ -172,7 +173,7 @@ ibmcloud network pnp-create <ip_direccionador> <ip_direccionador> <nombre>
 ####Crear una conexión de igualdad de red privada utilizando el nombre de la conexión
 
 ```
-ibmcloud network pnp-create -i <nombre>
+bluemix network pnp-create -i <nombre>
 ```
 
 #####Parámetros
@@ -184,7 +185,7 @@ ibmcloud network pnp-create -i <nombre>
 ######Ejemplo de mandato
 {: #ex3}
 
-	$ ibmcloud network pnp-create -i demo
+	$ bluemix network pnp-create -i demo
 	Creando la conexión de igualdad de red privada 'demo'...
 	Lista de direccionadores disponibles (seleccionar DOS para la interconexión):
 
@@ -204,7 +205,7 @@ ibmcloud network pnp-create -i <nombre>
 
 #### Listar todas las conexiones de igualdad de red privada
 ```
-ibmcloud network pnp-show [--verbose (o -v)]
+bluemix network pnp-show [--verbose (o -v)]
 ```
 
 #####Parámetros opcionales
@@ -217,7 +218,7 @@ ibmcloud network pnp-show [--verbose (o -v)]
 
 Ver información básica:
 
-	$ ibmcloud network pnp-show
+	$ bluemix network pnp-show
 	Listando conexiones de igualdad de red privada...
 	OK
 
@@ -226,7 +227,7 @@ Ver información básica:
 
 Ver información detallada:
 
-	$ ibmcloud network pnp-show -v
+	$ bluemix network pnp-show -v
 	Listando conexiones de igualdad de red privada...
 	OK
 
@@ -244,7 +245,7 @@ Ver información detallada:
 
 #### Suprimir una conexión de igualdad de red privada
 ```
-ibmcloud network pnp-delete [--force (o -f)] <id_conexión>
+bluemix network pnp-delete [--force (o -f)] <id_conexión>
 ```
 #####Parámetros
 {: #p3}
@@ -260,7 +261,7 @@ ibmcloud network pnp-delete [--force (o -f)] <id_conexión>
 
 Suprimir una conexión:
 
-	$ ibmcloud network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
+	$ bluemix network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
 	Aviso: las conexiones suprimidas no se podrán restaurar.
 	¿Está seguro de que desea suprimir la conexión? (sí/no)> sí
 
@@ -273,5 +274,5 @@ Suprimir una conexión:
 Suprimir varias conexiones:
 
 ```
-ibmcloud network pnp-delete [-f] <id_conexión>,<id_conexión>,<id_conexión>
+bluemix network pnp-delete [-f] <id_conexión>,<id_conexión>,<id_conexión>
 ```

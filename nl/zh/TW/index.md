@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-31"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -14,106 +14,33 @@ lastupdated: "2018-10-31"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# 開始使用 {{site.data.keyword.Bluemix_notm}} CLI
+# CLI 及工具概觀
 {: #overview}
 
-在本指導教學中，您將安裝一組 {{site.data.keyword.Bluemix}} Developer Tools、驗證安裝，並配置您的環境。{{site.data.keyword.Bluemix}} Developer Tools 提供指令行方法，以建立、開發及部署端對端的 Web、行動及微服務應用程式。
+{{site.data.keyword.Bluemix_notm}} 提供一個健全的 CLI，以及與 CLI 整合的外掛程式。
+
+## {{site.data.keyword.Bluemix_notm}} CLI
+{: #cli}
+
+{{site.data.keyword.Bluemix}} CLI 提供指令行體驗來管理 {{site.data.keyword.Bluemix_notm}} 環境中的資源。它也會在其安裝中包括 Cloud Foundry 指令行介面 cf，用來管理 Cloud Foundry 應用程式及服務。
 {:shortdesc}
 
-安裝之後，您會得到獨立式 {{site.data.keyword.Bluemix_notm}} CLI，以及下列工具：
+按一下選項以開始使用：
 
-* `Homebrew`（僅限 Mac）
-* `Git`
-* `Docker`
-* `Helm`
-* `kubectl`
-* `curl`
-* {{site.data.keyword.dev_cli_notm}} 外掛程式
-* {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} 外掛程式
-* {{site.data.keyword.registrylong_notm}} 外掛程式
-* {{site.data.keyword.containerlong_notm}} 外掛程式
-* `sdk-gen` 外掛程式
+<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="按一下圖示，以快速開始使用 {{site.data.keyword.Bluemix_notm}} CLI。" style="width:440px;" />
+<map name="home_map" id="home_map">
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="下載 {{site.data.keyword.Bluemix_notm}} CLI" title="下載" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="開始使用。" title="開始使用" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="檢視文件" title="檢視文件" shape="rect" coords="326, -10, 448, 218" />
+</map>
 
-## 開始之前
-{: #prereq}
+## {{site.data.keyword.dev_cli_notm}}
+{: #idt}
 
-您需要 [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及下列系統需求：
+{{site.data.keyword.dev_cli_long}} (IDT) 提供 {{site.data.keyword.Bluemix}} CLI 的開發人員特定延伸規格 (`bx dev`)，以建立、建置及部署雲端原生應用程式。IDT 安裝包括基礎 {{site.data.keyword.Bluemix_notm}} CLI、數個延伸規格及所有系統必要條件。
+{:shortdesc}
 
-* 如果您執行 Windows，則在您不是執行 Windows 10 Pro 的情況下，不支援部分功能。
-* 您必須使用適用於 Docker 的穩定通道，而最低版本為 1.13.1。
-
-## 步驟 1. 執行安裝指令
-{: #step1}
-
-* 若為 Mac 和 Linux，請執行下列指令：
-
-  ```
-  curl -sL https://ibm.biz/idt-installer | bash
-  ```
-  {: codeblock}
-
-* 若為 Windows 10 Pro，請以管理者身分執行下列指令：
-
-  ```
-  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
-  ```
-  {: codeblock}
-
-    在 Windows PowerShell 圖示上按一下滑鼠右鍵，然後選取**以系統管理員身分執行**。
-  {: tip}
-
-  您也可以從我們的 [GitHub 儲存庫](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)下載安裝程式 Script。
-
-  如需手動安裝這些工具的步驟，請參閱[重新安裝工具](/docs/cli/ts_createapps.html#appendix)。
-
-## 步驟 2. 驗證安裝
-{: #step2}
-
-若要驗證是否已順利安裝 CLI 及開發人員工具，請執行 `help` 指令：
-
-```
-ibmcloud dev help
-```
-{: codeblock}
-<br>
-輸出會列出用法指示、現行版本及支援的指令。
-
-## 步驟 3. 配置環境
-{: #step3}
-
-1. 連接至 {{site.data.keyword.Bluemix_notm}} 位置中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 達拉斯的位置：
-
-	```
-	ibmcloud api https://api.ng.bluemix.net
-	```
-	{: codeblock}
-
-2. 使用 IBM ID 登入 {{site.data.keyword.Bluemix_notm}}。
-
-	```
-	ibmcloud login
-	```
-	{: codeblock}
-    <br>
-
-	如果您的認證遭到拒絕，您可能是使用聯合 ID。如需詳細資料，請參閱[使用聯合 ID 進行登入](/docs/iam/login_fedid.html#federated_id)。
-	{: tip}
-
-3. 設定您的組織及空間。
-
-	```
-	ibmcloud target --cf
-	```
-	{: codeblock}
-
-	您可以選擇使用前一個指令的輸出，以下列指令手動設定您的組織及空間：
-
-	```
-	ibmcloud target -o <value> -s <value>
-	```
-	{: codeblock}
-
-## 後續步驟
-{: #next-steps}
-
-您現在已準備好開始開發及部署您的第一個應用程式！如需相關資訊，請參閱[使用 CLI 建立及部署應用程式](/docs/apps/create-deploy-cli.html)。
+- [概觀及安裝](/docs/cloudnative/idt/index.html) <br>
+- [開始使用](/docs/cloudnative/idt/index.html) <br>
+- [指令](/docs/cloudnative/idt/commands.html) <br>
+- [雲端原生開發](/docs/cloudnative/index.html) <br>

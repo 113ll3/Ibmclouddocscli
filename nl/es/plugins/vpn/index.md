@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -16,17 +16,17 @@ lastupdated: "2018-10-04"
 {: #vpn_cli_for_cf}
 
 
-Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestionar su servicio {{site.data.keyword.vpn_full}}. El plug-in de CLI de {{site.data.keyword.vpn_short}} está disponible en dos versiones: una para su uso con el plug-in de CLI de Cloud Foundry y la otra para su uso con el plug-in de CLI de {{site.data.keyword.Bluemix}}. Ambas versiones del plugin proporcionan las mismas funciones.
+Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestionar su servicio de {{site.data.keyword.vpn_full}}. El plug-in de CLI de {{site.data.keyword.vpn_short}} está disponible en dos versiones: una para su uso con el plug-in de CLI de Cloud Foundry y la otra para su uso con el plug-in de CLI de {{site.data.keyword.Bluemix}}. Ambas versiones del plugin proporcionan las mismas funciones.
 {:shortdesc}
 
 El plug-in de {{site.data.keyword.vpn_short}} está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el aplicable a su caso.
 
 A continuación se muestran instrucciones para trabajar con el plugin de CLI de Cloud Foundry (cf). Para utilizar el plugin con el plugin de CLI de {{site.data.keyword.Bluemix_notm}}, consulte [Plug-in de {{site.data.keyword.vpn_short}} para la CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
 
-## Instalar el plug-in de la CLI cf
+## Instalar el plug-in de CLI cf
 Antes de empezar, instale la CLI cf. Consulte [Interfaz de línea de mandatos de Cloud Foundry ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window} para obtener detalles.
 
-## Instalar el plug-in de la CLI de VPN
+## Instalar el plug-in de CLI de VPN
 **Nota:** si tiene una versión anterior del plug-in de CLI de {{site.data.keyword.vpn_short}} instalada, primero debe desinstalarla. Utilice el mandato:
 
 ```
@@ -35,7 +35,7 @@ cf uninstall-plugin vpn
 
 ### Instalar localmente
 
-1. Descargue el plug-in de {{site.data.keyword.vpn_short}} para su plataforma desde el [ {{site.data.keyword.Bluemix_notm}} Repositorio de plug-ins de la CLI ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
+1. Descargue el plug-in de {{site.data.keyword.vpn_short}} para la plataforma de [Repositorio de plug-ins de CLI de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
 2. Instale el plug-in de {{site.data.keyword.vpn_short}} utilizando el siguiente mandato:
 **Nota:** conmute a la ubicación del plug-in de {{site.data.keyword.vpn_short}} o especifique la vía de acceso a la ubicación de plug-in.
 
@@ -63,12 +63,12 @@ cf uninstall-plugin vpn
 1. Añada el repositorio de {{site.data.keyword.Bluemix_notm}} en los repositorios de CLI de Cloud Foundry. Utilice el siguiente mandato:
 
 	```
-	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
+	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
 	```
 2. Ejecute el mandato siguiente:
 
 	```
-	cf install-plugin vpn -r IBM Cloud
+	cf install-plugin vpn -r bluemix
 	```
 ##Lista de mandatos del servicio VPN
 
@@ -107,14 +107,14 @@ cf vpn-create connection <nombre de conexión> -g <nombre de pasarela> -k <clave
 
 **-i:** estado del iniciador. Valor predeterminado: bidireccional.
 
-**-dpd-timeout:** valor de tiempo de espera en segundos tras el cual la sesión se termina. Rango: 6 - 86400 segundos. Valor predeterminado: 120 segundos. El valor de intervalo de estado activo debe ser superior que el valor de intervalo de estado activo.
+**-dpd-timeout:** valor de tiempo de espera en segundos tras el cual la sesión se termina.  Rango: 6 - 86400 segundos. Valor predeterminado: 120 segundos. El valor de intervalo de estado activo debe ser superior que el valor de intervalo de estado activo.
 
 **-dpd-interval:** intervalo de estado activo en segundos. Enviar mensajes de estado activo
 en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-86399 segundos. Valor predeterminado: 15 segundos.
 
 **-ike:** nombre de la política IKE.
 
-**-ipsec:** Nombre de la política IPSec.
+**-ipsec:** nombre de la política IPsec.
 
 
 ### cf vpn-create ike
@@ -147,7 +147,7 @@ cf vpn-create ike <nombre de política> -g <nombre de pasarela> -d <descripción
 
 ### cf vpn-create ipsec
 
-Crea una política IPSec.
+Crea una política IPsec.
 
 ```
 cf vpn-create ipsec <nombre de política> -g <nombre de pasarela> -d <descripción> -pfs <grupo> -e <algoritmo de cifrado> -lv <valor de duración> -auth <algoritmo de autorización>
@@ -155,8 +155,7 @@ cf vpn-create ipsec <nombre de política> -g <nombre de pasarela> -d <descripci�
 #### Parámetros
 {: #p3}
 
-**nombre de política:**
-Nombre de la política IPSec.
+**nombre de política:** nombre de la política IPsec.
 
 **nombre de pasarela:** nombre de la pasarela.
 
@@ -210,7 +209,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-Muestra información sobre las conexiones IPSec actuales.
+Muestra información sobre las conexiones IPsec actuales.
 
 ```
 cf vpn-show ipsecs
@@ -231,7 +230,7 @@ cf vpn-show ike <nombre de política>
 ```
 ### cf vpn-show ipsec
 
-Muestra información sobre una conexión IPSec.
+Muestra información sobre una conexión IPsec.
 
 ```
 cf vpn-show ipsec <nombre de política>
@@ -314,7 +313,7 @@ en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-
 
 **-ike:** nombre de la política IKE.
 
-**-ipsec:** Nombre de la política IPSec.
+**-ipsec:** nombre de la política IPsec.
 
 
 ### cf vpn-update ike
@@ -347,7 +346,7 @@ cf vpn-update ike <nombre de política> -g <nombre de pasarela> -d <descripción
 
 ### cf vpn-update ipsec
 
-Actualiza una política IPSec.
+Actualiza una política IPsec.
 
 ```
 cf vpn-update ipsec <nombre de política> -g <nombre de pasarela> -d <descripción> -pfs <grupo> -e <algoritmo de cifrado> -lv <valor de duración> -auth <algoritmo de autorización>
@@ -355,8 +354,7 @@ cf vpn-update ipsec <nombre de política> -g <nombre de pasarela> -d <descripci�
 #### Parámetros
 {: #p7}
 
-**nombre de política:**
-Nombre de la política IPSec.
+**nombre de política:** nombre de la política IPsec.
 
 
 ##### Parámetros opcionales:

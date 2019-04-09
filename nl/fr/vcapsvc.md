@@ -30,5 +30,5 @@ instance de service dans {{site.data.keyword.Bluemix_notm}}. Ces informations in
 
 La valeur de la variable d'environnement VCAP_SERVICES n'est disponible que lorsque vous liez une instance de service à votre application. Vous pouvez afficher les variables d'environnement de l'application avec la commande suivante :
 ```
-cf env APP_NAME
+cf env NOM_APP
 ```

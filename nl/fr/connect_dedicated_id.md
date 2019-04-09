@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-12-08"
 
 ---
 
@@ -19,11 +19,11 @@ lastupdated: "2018-06-21"
 # Connexion d'un ID dédié à votre IBMid public
 {: #connect_dedicated_id}
 
-Pour une connexion à un cloud dédié sur lequel un service IAM public est disponible, l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} exige que vous vous connectiez avec votre IBMid public plutôt que via l'ID dédié.
+Pour une connexion à un cloud dédié sur lequel un service IAM public est disponible, l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} vous demande de vous connecter avec votre IBMid public plutôt que via l'ID dédié.
 
 
 ```
-  $ ibmcloud login -a https://api.{dedicated_env}.bluemix.net
+  $ bluemix login -a https://api.{dedicated_env}.bluemix.net
   Noeud final d'API : https://api.{dedicated_env}.bluemix.net
 
   Le service de jeton IAM public est disponible dans l'environnement dédié.
@@ -57,22 +57,23 @@ Sélectionnez une option pour l'entrée des données d'identification pour l'ID 
 
 ## Comment forcer une connexion au serveur UAA local ?
 
-Pour forcer une connexion au serveur UAA avec un ID dédié, spécifiez l'option `--no-iam` dans la commande `ibmcloud login` :
+Pour forcer une connexion au serveur UAA avec un ID dédié, spécifiez l'option `--no-iam` dans la commande `bluemix login` :
 
 ```
-  $ ibmcloud login --no-iam
+  $ bluemix login --no-iam
 ```
 
-## Déconnexion de votre ID dédié depuis l'IBMid public
+## Déconnexion de votre ID dédié depuis l'IBMid public 
 
-Vous pouvez utiliser la commande `ibmcloud iam dedicated-id-disconnect` pour déconnecter l'IBMid public avec l'ID dédié connecté.
+Vous pouvez utiliser `bluemix iam dedicated-id-disconnect` pour déconnecter l'IBMid public de l'ID dédié connecté.
 
 ```
-  $ ibmcloud iam dedicated-id-disconnect
-  Do you really want to disconnect my_dedicated_id from public IBMid? (Y/N)> y
-  Disconnecting dedicated user my_dedicated_id from public IBMid...
+  $ bluemix iam dedicated-id-disconnect
+  Voulez-vous vraiment déconnecter my_dedicated_id de l'IBMid public ? (O/N)> y
+  Déconnexion de l'utilisateur dédié my_dedicated_id de l'IBMid public...
   OK
 
-  Logging out...
+  Déconnexion...
   OK
 ```
+

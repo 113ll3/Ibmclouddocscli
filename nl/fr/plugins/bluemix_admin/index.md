@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -17,9 +17,9 @@ lastupdated: "2018-10-04"
 {: #bluemixadmincli}
 
 
-Vous pouvez gérer votre environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié en utilisant l'interface de ligne de commande Cloud Foundry avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis un registre LDAP. Pour plus d'informations sur la gestion de votre compte {{site.data.keyword.Bluemix_notm}} public, voir [Administration](/docs/admin/adminpublic.html#administer).
+Vous pouvez gérer votre environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié en utilisant l'interface de ligne de commande Cloud Foundry avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis un registre LDAP. Pour des informations sur la gestion de votre compte {{site.data.keyword.Bluemix_notm}} public, voir [Administration](/docs/admin/adminpublic.html#administer).
 
-Avant de commencer, installez l'interface de ligne de commande Cloud Foundry. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry ![icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
+Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry ![icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restriction :** l'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez-la dans une fenêtre de ligne de commande autre que Cygwin.
 
@@ -27,9 +27,7 @@ Avant de commencer, installez l'interface de ligne de commande Cloud Foundry. Le
 
 ## Ajout du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}
 
-Une fois l'interface de ligne de commande Cloud Foundry installée, vous pouvez ajouter
-le plug-in d'interface de ligne de commande d'administration
-{{site.data.keyword.Bluemix_notm}}.
+Une fois l'interface de ligne de commande cf installée, vous pouvez ajouter le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}.
 
 **Remarque** : si vous avez déjà installé le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, il peut être nécessaire de le désinstaller, de supprimer le référentiel, puis de réinstaller le plug-in afin de bénéficier des mises à jour les plus récentes.
 
@@ -38,23 +36,24 @@ Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 <ol>
 <li>Pour ajouter le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/>
 <code>
-cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 </li>
 <li>Pour installer le plug-in de l'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/>
 <code>
-cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
 
 Si vous devez désinstaller le plug-in, vous pouvez utiliser les commandes suivantes, puis vous pouvez ajouter le référentiel mis à jour et installer la dernière version du plug-in :
 
-* Désinstallez le plug-in : `cf uninstall-plugin IBMCloudAdminCLI`
-* Retirez le référentiel de plug-in : `cf remove-plugin-repo IBMCloudAdmin`
+* Désinstallez le plug-in : `cf uninstall-plugin BluemixAdminCLI`
+* Retirez le référentiel de plug-in : `cf remove-plugin-repo BluemixAdmin`
 
 
-## Utilisation du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}
+## Utilisation du plug-in d'interface de ligne de commande
+d'administration {{site.data.keyword.Bluemix_notm}}
 
 Vous pouvez utiliser le plug-in d'interface de ligne de commande d'administration
 {{site.data.keyword.Bluemix_notm}} pour ajouter ou retirer des utilisateurs, affecter des
@@ -84,8 +83,8 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 <dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}.<br />
 </dd>
 </dl>
-<p>Vous trouverez l'adresse URL correcte dans la page des informations et des ressources de la console d'administration. L'adresse URL est affichée dans la section Informations sur
-l'API, dans la zone **URL de l'API**.</p>
+<p>Vous trouverez l'adresse URL correcte dans la page des informations sur les ressources de la console d'administration. L'adresse URL est affichée dans la section API Information, dans la zone **API
+URL**.</p>
 </li>
 <li>Connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de la commande suivante :<br/><br/>
 <code>
@@ -108,7 +107,7 @@ cf ba add-user <user_name> <organisation> <prénom> <nom>
 ```
 {: codeblock}
 
-**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur** disposant du droit **users.write** (ou **Superuser**). Si vous êtes un responsable de l'organisation, vous pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande **enable-managers-add-users**. Pour plus d'informations, voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau).
+**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur** disposant du droit **users.write** (ou **Superuser**). Si vous êtes un responsable de l'organisation, vous pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande **enable-managers-add-users**.  Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour plus d'informations.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -150,7 +149,7 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ### Etablissement de la liste des utilisateurs invités depuis {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Si vous avez invité des utilisateurs d'un environnement dédié dans votre compte {{site.data.keyword.Bluemix_notm}} avec la [commande `invite-users-to-public`](#admin_dedicated_invite_public), vous pouvez répertorier les utilisateurs de votre compte pour voir leur statut d'invitation. Les utilisateurs invités qui ont un IBMid existant ont un statut `ACTIF`. Les utilisateurs invités ne disposant pas d'un IBMid existant ont le statut `EN ATTENTE` ou `ACTIF` selon qu'ils aient ou non déjà accepté l'invitation au compte. Pour répertorier les utilisateurs de votre compte {{site.data.keyword.Bluemix_notm}} :
+Si vous avez invité des utilisateurs d'un environnement dédié dans votre compte {{site.data.keyword.Bluemix_notm}} avec la [commande `invite-users-to-public`](#admin_dedicated_invite_public), vous pouvez répertorier les utilisateurs de votre compte pour voir leur statut d'invitation. Les utilisateurs invités qui ont un IBMid existant ont un statut `ACTIF`. Les utilisateurs invités ne disposant pas d'un IBMid existant ont un statut de `EN ATTENTE` ou `ACTIF` selon qu'ils aient ou non déjà accepté l'invitation au compte. Pour répertorier les utilisateurs de votre compte {{site.data.keyword.Bluemix_notm}} :
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
@@ -169,7 +168,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 ### Recherche d'un utilisateur
 {: #admin_search_user}
 
-Pour rechercher un utilisateur, entrez la commande suivante avec les paramètres de filtre de recherche facultatifs (name, permission, organization et role) :
+Pour rechercher un utilisateur, entrez la commande suivante en conjonction avec les paramètres de filtre de recherche facultatifs (name, permission, organization et role) :
 
 ```
 cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
@@ -250,7 +249,7 @@ cf ba enable-managers-add-users
 ### Empêcher les responsables d'ajouter des utilisateurs
 {: #clius_dmau}
 
-Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit **Superuser**, vous pouvez supprimer cette capacité. Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
+Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit **Superuser**, vous pouvez supprimer cette capacité.  Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
 
 ```
 cf ba disable-managers-add-users
@@ -379,17 +378,16 @@ pour laquelle définir le quota.</dd>
 Pour rechercher le quota de conteneur d'une organisation, utilisez la commande suivante :
 
 ```
-cf ibmcloud-admin containers-quota <organisation>
+cf bluemix-admin containers-quota <organisation>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organisation&gt;</dt>
-<dd class="pd">Nom ou ID de l'organisation dans IBM Cloud. Ce paramètre est obligatoire.</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Nom ou ID de l'organisation dans Bluemix. Ce paramètre est obligatoire.</dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba cq** comme alias pour le nom de commande
-plus long **ibmcloud-admin containers-quota**.
+**Astuce :** vous pouvez aussi utiliser **ba cq** comme alias pour le nom de commande plus long **bluemix-admin containers-quota**.
 
 ### Définition des quotas de conteneur pour une organisation
 {: #admin_set_containquotas}
@@ -397,7 +395,7 @@ plus long **ibmcloud-admin containers-quota**.
 Pour définir le quota de conteneur d'une organisation, utilisez la commande suivante avec au moins une des options :
 
 ```
-cf ibmcloud-admin set-containers-quota <organisation> <options>
+cf bluemix-admin set-containers-quota <organisation> <options>
 ```
 {: codeblock}
 
@@ -405,7 +403,7 @@ cf ibmcloud-admin set-containers-quota <organisation> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Nom ou ID de l'organisation dans IBM Cloud. Ce paramètre est obligatoire.</dd>
+<dd class="pd">Nom ou ID de l'organisation dans Bluemix. Ce paramètre est obligatoire.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">Incluez au moins l'une des options suivantes, dont la valeur doit être un entier :
 <ul>
@@ -435,7 +433,7 @@ cf ibmcloud-admin set-containers-quota <organisation> <options>
 Vous pouvez, si vous le souhaitez, fournir un fichier contenant des paramètres de configuration spécifiques dans un objet JSON valide. Si vous utilisez l'option **-file**, elle prévaut sur les autres options qui sont ignorées. Pour indiquer un fichier au lieu des options, entrez la commande suivante :
 
 ```
-cf ibmcloud-admin set-containers-quota <organisation> <-file file_path_JSON>
+cf bluemix-admin set-containers-quota <organisation> <-file file_path_JSON>
 ```
 {: codeblock}
 
@@ -452,8 +450,7 @@ Le fichier JSON doit être au format indiqué dans l'exemple suivant :
 ```
 {: codeblock}
 
-**Astuce :** vous pouvez aussi utiliser **ba scq** comme alias pour le nom de commande
-plus long **ibmcloud-admin set-containers-quota**.
+**Astuce :** vous pouvez aussi utiliser **ba scq** comme alias pour le nom de commande plus long **bluemix-admin set-containers-quota**.
 
 ## Administration d'espaces
 {: #admin_spaces}
@@ -463,7 +460,7 @@ plus long **ibmcloud-admin set-containers-quota**.
 Pour ajouter un espace à l'organisation, utilisez la commande suivante :
 
 ```
-cf ibmcloud-admin create-space <organisation> <nom_espace>
+cf bluemix-admin create-space <organisation> <nom_espace>
 ```
 
 {: codeblock}
@@ -482,7 +479,7 @@ cf ibmcloud-admin create-space <organisation> <nom_espace>
 Pour retirer un espace de l'organisation, utilisez la commande suivante :
 
 ```
-cf ibmcloud-admin delete-space <organisation> <nom_espace>
+cf bluemix-admin delete-space <organisation> <nom_espace>
 ```
 
 {: codeblock}
@@ -501,7 +498,7 @@ cf ibmcloud-admin delete-space <organisation> <nom_espace>
 Pour créer un utilisateur dans un espace en le dotant d'un rôle spécifié, utilisez le commande suivante :
 
 ```
-cf ibmcloud-admin set-space <organisation> <nom_espace> <nom_utilisateur> <rôle>
+cf bluemix-admin set-space <organisation> <nom_espace> <user_name> <rôle>
 ```
 
 {: codeblock}
@@ -525,7 +522,7 @@ cf ibmcloud-admin set-space <organisation> <nom_espace> <nom_utilisateur> <rôle
 Pour retirer le rôle d'un utilisateur dans un espace, utilisez la commande suivante :
 
 ```
-cf ibmcloud-admin unset-space <organisation> <nom_espace> <nom_utilisateur> <rôle>
+cf bluemix-admin unset-space <organisation> <nom_espace> <user_name> <rôle>
 ```
 
 {: codeblock}
@@ -558,7 +555,8 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service sur la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
+parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba esp** comme alias pour le nom de commande plus long **ba enable-service-plan**.
@@ -575,7 +573,9 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service sur la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
+parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba dsp** comme alias pour le nom de commande plus long **ba
@@ -584,7 +584,10 @@ disable-service-plan**.
 ### Ajout de la visibilité d'un service pour les organisations
 {: #admin_addvis_service_org}
 
-Vous pouvez ajouter une organisation dans la liste des organisations pouvant voir un service spécifique dans le catalogue {{site.data.keyword.Bluemix_notm}}. Pour permettre à une organisation de voir un service spécifique dans le catalogue {{site.data.keyword.Bluemix_notm}}, entrez la commande suivante :
+Vous pouvez ajouter une organisation dans la liste des organisations pouvant afficher un service spécifique dans le catalogue
+{{site.data.keyword.Bluemix_notm}}. Pour permettre à une organisation
+d'afficher un service spécifique dans le catalogue
+{{site.data.keyword.Bluemix_notm}}, entrez la commande suivante :
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organisation>
@@ -593,7 +596,9 @@ cf ba add-service-plan-visibility <plan_identifier> <organisation>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service sur la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
+parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à ajouter à la liste de visibilité du service.</dd>
@@ -605,7 +610,11 @@ add-service-plan-visibility**.
 ### Suppression de la visibilité d'un service pour les organisations
 {: #admin_remvis_service_org}
 
-Vous pouvez retirer une organisation de la liste des organisations pouvant voir un service spécifique dans le catalogue {{site.data.keyword.Bluemix_notm}}. Afin de supprimer la visibilité d'un service dans le catalogue {{site.data.keyword.Bluemix_notm}} pour une organisation, entrez la commande suivante :
+Vous pouvez supprimer une organisation de la liste des
+organisations pouvant afficher un service spécifique dans le catalogue
+{{site.data.keyword.Bluemix_notm}}. Afin de supprimer la visibilité
+d'un service dans le catalogue {{site.data.keyword.Bluemix_notm}} pour
+une organisation, entrez la commande suivante :
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organisation>
@@ -614,7 +623,9 @@ cf ba remove-service-plan-visibility <plan_identifier> <organisation>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
+parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à retirer de la liste de visibilité du service.</dd>
@@ -626,7 +637,9 @@ remove-service-plan-visibility**.
 ### Edition de la visibilité d'un service pour les organisations
 {: #admin_editvis_service_org}
 
-Vous pouvez modifier et remplacer la liste des services que des organisations spécifiques peuvent voir dans le catalogue {{site.data.keyword.Bluemix_notm}}. Afin de remplacer tous les services visibles existants pour une organisation ou plusieurs organisations, entrez la commande suivante :
+Vous pouvez éditer et remplacer la liste des services que des
+organisations spécifiques peuvent afficher dans le catalogue
+{{site.data.keyword.Bluemix_notm}}. Afin de remplacer tous les services visibles existants pour une organisation ou plusieurs organisations, entrez la commande suivante :
 
 ```
 cf ba edit-service-plan-visibilities <plan_identifier> <organisation_1> <organisation_2_facultative>
@@ -638,10 +651,13 @@ indiquez dans la commande.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à effectuer une sélection parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service sur la page d'accueil, puis **Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de plan de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
+parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
-pour laquelle ajouter la visibilité. Vous pouvez activer la visibilité du service pour plusieurs organisations en entrant des noms ou des identificateurs globaux uniques supplémentaires dans la commande.</dd>
+pour laquelle ajouter la visibilité. Vous pouvez activer la visibilité du service pour plusieurs organisations en entrant des noms ou des identificateurs
+globaux uniques supplémentaires dans la commande.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba espv** comme alias pour le nom de commande plus long **ba
@@ -734,7 +750,7 @@ cf ba resource-metrics
 ## Affichage de l'historique relatif aux mesures des ressources
 {: #cliresourceusagehistory}
 
-Vous pouvez obtenir l'historique des mesures de ressources à des fins d'utilisation de la mémoire et du disque. Les valeurs renvoyées incluent la quantité de ressources utilisées par rapport à la quantité totale disponible, à la fois pour les ressources physiques et les ressources réservées. Les données d'historique relatives à l'utilisation de la mémoire et du disque peuvent être affichées sur une base horaire, quotidienne ou mensuelle. Indiquez une date de début et une date de fin pour extraire les données d'une période donnée. Lorsque aucune date n'est spécifiée, les données d'historique par défaut sont les données mémoire horaires des dernières 48 heures. Les données sont affichées par ordre décroissant, les dates les plus récentes en premier. Pour afficher les informations d'historique relatives aux mesures des ressources, entrez la commande suivante :
+Vous pouvez obtenir l'historique des mesures de ressources à des fins d'utilisation de la mémoire et du disque. Les valeurs renvoyées incluent la quantité de ressources utilisées par rapport à la quantité totale disponible, à la fois pour les ressources physiques et les ressources réservées. Les données d'historique relatives à l'utilisation de la mémoire et du disque peuvent être affichées sur une base horaire, quotidienne ou mensuelle.  Indiquez une date de début et une date de fin pour extraire les données d'une période donnée. Lorsque aucune date n'est spécifiée, les données d'historique par défaut sont les données mémoire horaires des dernières 48 heures. Les données sont affichées par ordre décroissant, les dates les plus récentes en premier.   Pour afficher les informations d'historique relatives aux mesures des ressources, entrez la commande suivante :
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -762,14 +778,14 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Examples&gt;</dt>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 
-Vous pouvez afficher la liste précédente des paramètres de commande et des exemples en utilisant la commande suivante :
+Vous pouvez afficher la liste précédente des paramètres et exemples en utilisant la commande suivante :
 
 ```
 cf ba resource-metrics-history -help
@@ -827,7 +843,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### Suppression d'un courtier de services
 {: #clidelservbro}
 
-Pour supprimer un courtier de services qui retire le service personnalisé de votre catalogue {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
+Pour supprimer un courtier de services afin de retirer un service personnalisé de votre catalogue {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -1116,7 +1132,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 ### Mise à jour d'un pack de construction
 {: #cliupdabuildpack}
 
-Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez mettre à jour un pack de construction existant. Pour mettre à jour un pack de construction, utilisez la commande suivante :
+Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez mettre à jour un pack de construction existant.  Pour mettre à jour un pack de construction, utilisez la commande suivante :
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -1139,7 +1155,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ### Suppression d'un pack de construction
 {: #clidelbuildpack}
 
-Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez supprimer un pack de construction existant. Pour supprimer un pack de construction, utilisez la commande suivante :
+Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez supprimer un pack de construction existant.  Pour supprimer un pack de construction, utilisez la commande suivante :
 
 ```
 cf ba delete-buildpack <buildpack_name>

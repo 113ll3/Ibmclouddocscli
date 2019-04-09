@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-06"
+
+  years: 2015, 2018
+
+lastupdated: "2018-01-10"
 
 ---
 
@@ -12,106 +14,33 @@ lastupdated: "2019-02-06"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}
+# Présentation de l'interface de ligne de commande et des outils
 {: #overview}
 
-En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.cloud}} Developer Tools, vérifier l'installation et configurer l'environnement. {{site.data.keyword.cloud_notm}} Developer Tools propose une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice.
-{: shortdesc}
+{{site.data.keyword.Bluemix_notm}} fournit une interface de ligne de commande robuste ainsi que des plug-in qui s'intègrent à l'interface CLI.
 
-Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} autonome et des outils suivants :
+## Interface de ligne de commande d'{{site.data.keyword.Bluemix_notm}}
+{: #cli}
 
-* `Homebrew` (Mac uniquement)
-* `Git`
-* `Docker`
-* `Helm`
-* `kubectl`
-* `curl`
-* Plug-in {{site.data.keyword.dev_cli_notm}}
-* Plug-in {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
-* Plug-in {{site.data.keyword.registrylong_notm}}
-* Plug-in {{site.data.keyword.containerlong_notm}}
-* Plug-in `sdk-gen`
+L'interface CLI {{site.data.keyword.Bluemix}} fournit une expérience de ligne de commande vous permettant de gérer les ressources de votre environnement {{site.data.keyword.Bluemix_notm}}. Elle inclut également une interface de ligne de commande Cloud Foundry, cf, dans son installation, pour la gestion des applications et des services Cloud Foundry.
+{:shortdesc}
 
-## Avant de commencer
-{: #prereq}
+Cliquez sur une option pour commencer :
 
-Vous devez avoir un [compte {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et la configuration système suivante doit être respectée :
+<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="Cliquez sur une icône pour débuter rapidement avec l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}." style="width:440px;" />
+<map name="home_map" id="home_map">
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Télécharger l'interface CLI {{site.data.keyword.Bluemix_notm}} " title="Télécharger" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Commencer" title="Commencer" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Afficher les documents" title="Afficher les documents" shape="rect" coords="326, -10, 448, 218" />
+</map>
 
-* Sous Windows 10 Pro, certaines fonctions ne sont pas prises en charge (contrairement aux autres versions de Windows).
-* Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
+## {{site.data.keyword.dev_cli_notm}}
+{: #idt}
 
-## Etape 1. Lancez la commande d'installation
-{: #step1}
+{{site.data.keyword.dev_cli_long}} (IDT) fournit une extension spécifique aux développement à l'interface CLI {{site.data.keyword.Bluemix}} (`bx dev`) pour permettre de créer, générer et déployer des applications natives. L'installation de l'outil IDT inclut l'interface CLI {{site.data.keyword.Bluemix_notm}} de base, plusieurs extensions, ainsi que tous les prérequis système.
+{:shortdesc}
 
-* Pour Mac et Linux, exécutez la commande suivante :
-
-  ```
-  curl -sL https://ibm.biz/idt-installer | bash
-  ```
-  {: codeblock}
-
-* Pour Windows 10 Pro, exécutez la commande suivante en tant qu'administrateur :
-
-  ```
-  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
-  ```
-  {: codeblock}
-
-  Cliquez avec le bouton droit de la souris sur l'icône Windows PowerShell et sélectionnez **Exécuter en tant qu'administrateur**.
-  {: tip}
-
-  Vous pouvez également télécharger le script du programme d'installation à partir de ce [référentiel GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
-
-  Pour savoir comment installer manuellement ces outils, voir [Installation des outils](/docs/cli/ts_createapps.html#appendix).
-
-## Etape 2. Vérifier l'installation
-{: #step2}
-
-Pour vérifier que l'installation de l'interface CLI et de Developer Tools a abouti, exécutez la commande `help` :
-
-```
-ibmcloud dev help
-```
-{: codeblock}
-<br>
-La sortie inclut les instructions d'utilisation, la version actuelle et les commandes prises en charge.
-
-## Etape 3. Configurer votre environnement
-{: #step3}
-
-1. Connectez-vous à un noeud final d'API sur votre emplacement {{site.data.keyword.cloud_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à l'emplacement {{site.data.keyword.cloud_notm}}, Dallas :
-
-	```
-	ibmcloud api https://api.ng.bluemix.net
-	```
-	{: codeblock}
-
-2. Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de votre IBMid.
-
-	```
-	ibmcloud login
-	```
-	{: codeblock}
-    <br>
-
-	Si vos données d'identification sont rejetées, vous pouvez utiliser un ID fédéré. Pour plus de détails, voir [Connexion à l'aide d'un ID fédéré](/docs/iam/login_fedid.html#federated_id).
-	{: tip}
-
-3. Définissez votre organisation et votre espace.
-
-	```
-	ibmcloud target --cf
-	```
-	{: codeblock}
-
-	Vous pouvez, si vous le souhaitez, utiliser la sortie de la commande précédente pour définir manuellement votre organisation et votre espace à l'aide de la commande suivante :
-
-	```
-	ibmcloud target -o <value> -s <value>
-	```
-	{: codeblock}
-
-## Etapes suivantes
-{: #next-steps}
-
-Vous êtes maintenant prêt à développer et déployer votre première application ! Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps/create-deploy-cli.html).
+- [Présentation et installation](/docs/cloudnative/idt/index.html) <br>
+- [Initiation](/docs/cloudnative/idt/index.html) <br>
+- [Commandes](/docs/cloudnative/idt/commands.html) <br>
+- [Développement natif cloud](/docs/cloudnative/index.html) <br>

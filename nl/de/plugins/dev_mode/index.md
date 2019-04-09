@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-01-12"
 
 
 
@@ -37,7 +37,7 @@ Mit der CLI 'dev_mode' können Sie die folgenden Tasks ausführen:
 
 Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Methoden:
 - Lokale Installation.
-  1. Laden Sie das Plug-in 'dev_mode' für Ihre Plattform aus dem Plug-in-Repository der [{{site.data.keyword.Bluemix_notm}}-CLI herunter ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window}.
+  1. Laden Sie das dev_mode-Plug-in für Ihre Plattform aus dem [{{site.data.keyword.Bluemix_notm}} CLI-Plug-in-Repository![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} herunter.
   2. Wechseln Sie zu dem Ordner mit dem dev_mode-Plug-in und installieren Sie das Plug-in mithilfe des Befehls 'cf install-plugin'. Beispiel:
 
         ```
@@ -150,7 +150,7 @@ cf update-file <ferner Pfad> <localPath> [Befehlsoptionen]
 
    <dl>
    <dt>expand</dt>
-   <dd>Gibt an, ob die hochgeladenen Dateien aus einer ZIP-Datei extrahiert werden müssen.</dd>
+   <dd>Gibt an, ob die hochgeladenen Dateien aus der ZIP-Datei extrahiert werden müssen.</dd>
    <dt>restart</dt>
    <dd>Die App-Laufzeit wird nach der Dateiaktualisierung neu gestartet.</dd>
    </dl>

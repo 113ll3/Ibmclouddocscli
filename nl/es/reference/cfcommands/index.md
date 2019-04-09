@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -22,8 +22,6 @@ lastupdated: "2018-06-21"
 
 La interfaz de línea de mandatos (CLI) de Cloud Foundry (cf) proporciona un conjunto de mandatos para gestionar las apps. En la siguiente información se indican los mandatos cf más comúnmente utilizados para gestionar apps e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Para ver una lista de todos los mandatos cf y su información de ayuda asociada, utilice `cf help`. Utilice `cf nombre_mandato -h` para ver información de ayuda detallada sobre un determinado mandato.
 {: shortdesc}
-
-Para obtener una lista más detallada de mandatos `cf CLI`, consulte la [Guía de referencia de Cloud Foundry CLI ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} de la comunidad.
 
 **Nota**: Si la red contiene un servidor proxy HTTP entre el host que ejecuta los mandatos cf y el punto final de la API de Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para obtener detalles, consulte [Utilización de la CLI cf con un servidor proxy HTTP ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
@@ -96,7 +94,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (opcional)</dt>
-   <dd>El URL del punto final API de IBM Cloud que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es `https://api.{DomainName}`.
+   <dd>El URL del punto final API de Bluemix que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es `https://api.{DomainName}`.
    Si desea visualizar el URL del punto final API que está utilizando actualmente no tiene que especificar este parámetro para el mandato cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Inhabilita el proceso de validación de SSL. El uso de este parámetro puede ocasionar problemas de seguridad.</dd>
@@ -106,7 +104,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>Ejemplos</strong>:
 
-Visualizar el punto final de la API actual
+Visualice el punto final de la API actual
 ```
 cf api
 ```
@@ -128,7 +126,7 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 ## cf apps
 {: #cf_apps}
 
-Lista todas las aplicaciones desplegadas en el espacio actual. También se visualiza el estado de cada aplicación.
+Lista todas las apps desplegadas en el espacio actual. También se visualiza el estado de cada app.
 
 Suponga que tiene una instancia para una app, en la columna instancias de la respuesta desde el mandato cf apps, verá 1/1 si la app está activa y 0/1 si la app está desactivada. Si ve ?/1, lo que indica que el estado de la instancia de la app es desconocido, puede copiar el URL de la app en su navegador para comprobar si la app responde, o puede poner el registro en cola mediante el mandato `cf logs nombre_app` para ver si la app está generando contenido de registro.
 
@@ -142,7 +140,7 @@ cf apps
 ## cf bind-service
 {: #cf_bind-service}
 
-Enlaza una instancia de servicio existente a su aplicación.
+Enlaza una instancia de servicio existente a su app.
 
 ```
 cf bind-service nombre_app instancia_servicio
@@ -154,14 +152,14 @@ cf bind-service nombre_app instancia_servicio
 
    <dl>
    <dt>appname (necesario)</dt>
-   <dd>El nombre de la aplicación.</dd>
+   <dd>El nombre de la app.</dd>
    <dt>service_instance (necesario)</dt>
    <dd>El nombre de la instancia de servicio existente.</dd>
     </dl>
 
 <strong>Ejemplos</strong>:
 
-Enlace una instancia de servicio que se denomina `my_dataworks` a su app denominada `my_app`.
+Enlace una instancia de servicio denominada `my_dataworks` a su app denominada `my_app`.
 ```
 cf bind-service my_app my_dataworks
 ```
@@ -171,7 +169,7 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-Crea una instancia de servicio.
+Crea una instancia de servicio
 
 ```
 cf create-service nombre_servicio plan_servicio instancia_servicio
@@ -192,7 +190,7 @@ cf create-service nombre_servicio plan_servicio instancia_servicio
 
 <strong>Ejemplos</strong>:
 
-Crear una instancia del servicio de {{site.data.keyword.dataworks_short}} con un plan `free`.
+Cree una instancia del servicio de {{site.data.keyword.dataworks_short}} con un plan `free`.
 ```
 cf create-service DataWorks free my_dataworks
 ```
@@ -223,7 +221,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>Ejemplos</strong>:
 
-Crear un espacio que se denomina new_space
+Crear un espacio denominado new_space
 ```
 cf create-space new_space
 ```
@@ -245,34 +243,34 @@ cf delete appname [-f] [-r]
 
    <dl>
    <dt>appname (necesario)</dt>
-   <dd>El nombre de la aplicación.</dd>
+   <dd>El nombre de la app.</dd>
    <dt>*-f* (opcional)</dt>
-   <dd>Fuerza la supresión de la aplicación sin ninguna confirmación.</dd>
+   <dd>Fuerza la supresión de la app sin ninguna confirmación.</dd>
    <dt>*-r* (opcional)</dt>
-   <dd>Suprime todos los nombres de dominio asociados a la aplicación. </dd>
+   <dd>Suprime todos los nombres de dominio asociados a la app. </dd>
     </dl>
 
 <strong>Ejemplos</strong>:
 
-Suprime una aplicación que se denomina `my_app` (se requiere confirmación).
+Suprime una aplicación denominada `my_app` (se requiere confirmación).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Suprime una aplicación que se denomina `my_app`, sin exigir confirmación.
+Suprime una aplicación denominada `my_app` sin exigir confirmación.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Suprime una aplicación que se denomina `my_app` y todos los nombres de dominio asociados con `my_app`.
+Suprime una aplicación llamada `my_app` y todos los nombres de dominio asociados con `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Suprime una aplicación que se denomina `my_app` y todos los nombres de dominio asociados con `my_app` sin exigir información.
+Suprime una aplicación denominada `my_app` y todos los nombres de dominio asociados con `my_app` sin exigir confirmación.
 ```
 cf delete my_app -f -r
 ```
@@ -302,25 +300,25 @@ cf delete-space space_name [-f]
 
 <strong>Ejemplos</strong>:
 
-Suprime una aplicación que se denomina `my_app` (se requiere confirmación).
+Suprime una aplicación denominada `my_app` (se requiere confirmación).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Suprime una aplicación que se denomina `my_app`, sin exigir confirmación.
+Suprime una aplicación denominada `my_app` sin exigir confirmación.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Suprime una aplicación que se denomina `my_app` y todos los nombres de dominio asociados con `my_app`.
+Suprime una aplicación llamada `my_app` y todos los nombres de dominio asociados con `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Suprime una aplicación que se denomina `my_app` y todos los nombres de dominio asociados con `my_app` sin exigir información.
+Suprime una aplicación denominada `my_app` y todos los nombres de dominio asociados con `my_app` sin exigir confirmación.
 ```
 cf delete my_app -f -r
 ```
@@ -330,7 +328,7 @@ cf delete my_app -f -r
 ## cf events
 {: #cf_events}
 
-Muestra los sucesos de tiempo de ejecución relacionados con una aplicación.
+Muestra los sucesos de tiempo de ejecución relacionados con una app.
 
 ```
 cf events [appname]
@@ -342,12 +340,12 @@ cf events [appname]
 
    <dl>
    <dt>nombre_app</dt>
-   <dd>El nombre de la aplicación.</dd>
+   <dd>El nombre de la app.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:
 
-Visualizar los sucesos para una aplicación denominada `my_app`.
+Muestra los sucesos para una aplicación denominada `my_app`.
 ```
 cf events my_app
 ```
@@ -357,7 +355,7 @@ cf events my_app
 ## cf help
 {: #cf_help}
 
-Visualizar información de ayuda para todos los mandatos cf o para un mandato cf específico.
+Muestra información de ayuda para todos los mandatos cf o para un mandato cf específico.
 
 ```
 cf help [command_name]
@@ -380,7 +378,7 @@ cf help
 ```
 {: codeblock}
 
-Visualizar la información de ayuda para el mandato events.
+Muestra la información de ayuda para el mandato events.
 ```
 cf help events
 ```
@@ -391,7 +389,7 @@ cf help events
 {: #cf_login}
 
 Se inicia la sesión
-en {{site.data.keyword.Bluemix_notm}}. Si va a iniciar sesión con un [ID federado](/docs/admin/account.html#signup), debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión.
+en {{site.data.keyword.Bluemix_notm}}. Si va a iniciar sesión con un [ID federado](/docs/admin/account.html#signup), debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión. 
 
 **Nota**: También puede utilizar una clave de una API de la plataforma de {{site.data.keyword.Bluemix_notm}} para iniciar una sesión. Utilice el nombre de usuario `apikey` y su valor de clave de API como contraseña. Para obtener más información sobre la creación de claves de API, consulte [Gestión de claves de API](/docs/iam/apikeys.html).
 
@@ -412,10 +410,10 @@ cf login [-a url] [-u nombre_usuario] [-p contraseña] [-sso] [-o nombre_organiz
 <dd>Su contraseña.</dd>
 <dd>*Importante:* Si especifica la contraseña con el parámetro *-p* en la interfaz de línea de mandatos, es posible que la contraseña quede registrada en el historial de línea de mandatos. Por motivos de seguridad, evite especificar la contraseña con el parámetro -p. Escriba en su lugar la contraseña cuando se lo solicite la interfaz de línea de mandatos.</dd>
 <dt>*-sso*</dt>
-<dd>Debe utilizar la opción de inicio de sesión único (SSO) al iniciar sesión con un ID federado. Esto no es necesario al iniciar sesión con un IBMid. Si intenta iniciar sesión con un ID federado y no especifica el parámetro SSO, se le solicitará que lo incluya. Al utilizar el parámetro SSO se le solicitará que especifique el código de acceso de una sola vez tras iniciar la sesión.</dd>
+<dd>Debe utilizar la opción de inicio de sesión único (SSO) al iniciar sesión con un ID federado. Esto no es necesario al iniciar sesión con un ID de IBM. Si intenta iniciar sesión con un ID federado y no especifica el parámetro SSO, se le solicitará que lo incluya. Al utilizar el parámetro SSO se le solicitará que especifique el código de acceso de una sola vez tras iniciar la sesión.</dd>
 <dt>*-o* nombre_organización</dt>
 <dd>El nombre de la organización en la que desea iniciar sesión.</dd>
-<dt>*-s* nombre_espacio</dt>
+<dt>*-s*nombre_espacios</dt>
 <dd>El nombre del espacio en el que desea iniciar sesión.</dd>
 <dt>*--skip-ssl-validation* (opcional)</dt>
 <dd>Inhabilita el proceso de validación de SSL. El uso de este parámetro puede ocasionar problemas de seguridad.</dd>
@@ -426,31 +424,31 @@ y lo vean otros usuarios del sistema operativo local.
 
 <strong>Ejemplos</strong>:
 
-Iniciar sesión en {{site.data.keyword.Bluemix_notm}}.
+Inicie una sesión en {{site.data.keyword.Bluemix_notm}}.
 ```
 cf login
 ```
 {: codeblock}
 
-Iniciar sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`.
+Inicie sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`.
 ```
 cf login -a https://api.ng.bluemix.net
 ```
 {: codeblock}
 
-Iniciar sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `nombre_usuario`, y sin contraseña especificada por motivos de seguridad.
+Inicie sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `nombre_usuario`, y sin contraseña especificada por motivos de seguridad.
 ```
 cf login -a https://api.ng.bluemix.net -u nombre_usuario
 ```
 {: codeblock}
 
-Iniciar sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `user_name`, sin contraseña especificada por motivos de seguridad, y un nombre de organización de `nombre_org` y un nombre de espacio de `nombre_espacio`.
+Inicie sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `user_name`, sin contraseña especificada por motivos de seguridad, y un nombre de organización de `nombre_org` y un nombre de espacio de `nombre_espacio`.
 ```
 cf login -a https://api.ng.bluemix.net -u nombre_usuario -o nombre_org -s nombre_espacio
 ```
 {: codeblock}
 
-Iniciar una sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net` utilizando una clave de API. Utilice `apikey` como el nombre de usuario y la clave de API real como contraseña.
+Inicie una sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net` utilizando una clave de API. Utilice `apikey` como el nombre de usuario y la clave de API real como contraseña.
 ```
 cf login -a https://api.ng.bluemix.net -u apikey -p EsteValorEsSuClaveAPI
 ```
@@ -460,8 +458,8 @@ cf login -a https://api.ng.bluemix.net -u apikey -p EsteValorEsSuClaveAPI
 ## cf logs
 {: #cf_logs}
 
-Visualizar las
-corrientes de anotaciones cronológicas STDOUT y STDERR de una aplicación.
+Visualiza las
+corrientes de anotaciones cronológicas STDOUT y STDERR de una app.
 
 ```
 cf logs appname [--recent]
@@ -472,20 +470,20 @@ cf logs appname [--recent]
 
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>*--recent* (opcional)</dt>
 <dd>Recupera los registros recientes.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
 
-Visualizar las secuencias de registro para una aplicación que se denomina `my_app`.
+Visualizar las corrientes de registros para una aplicación denominada `my_app`.
 ```
 cf logs my_app
 ```
 {: codeblock}
 
-Visualizar las corrientes de registros de una aplicación que se denomina `my_app`.
+Visualizar las corrientes de registros recientes para una aplicación denominada `my_app`.
 ```
 cf logs my_app --recent
 ```
@@ -496,7 +494,7 @@ cf logs my_app --recent
 {: #cf_marketplace}
 
 Lista todos los
-servicios disponibles en el mercado. Los servicios que aparecen en la lista de este mandato también se pueden ver en el catálogo {{site.data.keyword.Bluemix_notm}}.
+servicios disponibles en el mercado. Los servicios que muestra este mandato también se pueden ver en el catálogo de {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
@@ -517,7 +515,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-Desplegar una aplicación nueva
+Despliega una aplicación nueva
 en {{site.data.keyword.Bluemix_notm}}
 o actualiza una aplicación existente en {{site.data.keyword.Bluemix_notm}}.
 
@@ -531,14 +529,14 @@ cf push appname [-b nombre_paquete_compilación] [-c mandato_inicio] [-f vía_ac
 
 <dl>
 <dt>appname (necesario)</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>*-b* nombre_paquete_compilación (opcional)</dt>
 <dd>El nombre del paquete de compilación. El nombre_paquete_compilación puede ser un paquete de compilación personalizado por nombre (por ejemplo liberty-for-java), un URL de Git (por ejemplo https://github.com/cloudfoundry/java-buildpack.git) o un URL de Git con una ramificación o etiqueta (por ejemplo https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 para la etiqueta v3.3.0).</dd>
 <dt>*-c* mandato_inicio (opcional)</dt>
-<dd>El mandato de inicio de la aplicación. Para utilizar el mandato de inicio predeterminado
+<dd>El mandato de inicio de la app. Para utilizar el mandato de inicio predeterminado
 debe especificar un valor null para esta opción. </dd>
 <dt>*-f* vía_acceso_manifiesto (opcional)</dt>
-<dd>La vía de acceso al archivo de manifiesto. El archivo de manifiesto predeterminado es manifest.yml y se encuentra en el directorio raíz de la aplicación.</dd>
+<dd>La vía de acceso al archivo de manifiesto. El archivo de manifiesto predeterminado es manifest.yml y se encuentra en el directorio raíz de la app.</dd>
 <dt>*-i* número_instancia (opcional)</dt>
 <dd>El número de instancias.</dd>
 <dt>*-k* límite_disco (opcional)</dt>
@@ -546,13 +544,13 @@ debe especificar un valor null para esta opción. </dd>
 <dt>*-m* límite_memoria (opcional)</dt>
 <dd>El límite de memoria para la aplicación. Los valores posibles son *256M*, *1024M* o *1G*.</dd>
 <dt>*-n* nombre_host (opcional)</dt>
-<dd>El nombre de host de la aplicación, como por ejemplo *mi-subdominio*.</dd>
+<dd>El nombre de host de la app, como por ejemplo *mi-subdominio*.</dd>
 <dt>*-p* vía_acceso_app (opcional)</dt>
-<dd>La vía de acceso al directorio de la aplicación o el archivo de archivado de la aplicación.</dd>
+<dd>La vía de acceso al directorio de la app o el archivo de archivado de la app.</dd>
 <dt>*-s* nombre_pila (opcional)</dt>
 <dd>La pila para ejecutar las apps. Una pila es un sistema de archivos preconstruido, incluido el sistema operativo. Utilice `cf stacks` para ver las pilas disponibles en {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-t* tiempo_espera (opcional)</dt>
-<dd>Tiempo máximo en segundos para que se inicie la aplicación. Es posible que otros tiempos de espera de lado del servidor
+<dd>Tiempo máximo en segundos para que se inicie la app. Es posible que otros tiempos de espera de lado del servidor
 sustituyan este valor.</dd>
 <dt>*--no-hostname* (opcional)</dt>
 <dd>Correlaciona el dominio de sistema de {{site.data.keyword.Bluemix_notm}}
@@ -560,22 +558,22 @@ a esta aplicación.</dd>
 <dt>*--no-manifest* (opcional)</dt>
 <dd>Ignora el archivo de manifiesto predeterminado.</dd>
 <dt>*--no-route* (opcional)</dt>
-<dd>No correlaciona ninguna ruta a esta aplicación.</dd>
+<dd>No correlaciona ninguna ruta a esta app.</dd>
 <dt>*--no-start* (opcional)</dt>
-<dd>No inicia la aplicación tras desplegarse.</dd>
+<dd>No inicia la app tras desplegarse.</dd>
 <dt>*--random-route* (opcional)</dt>
-<dd>Crea una ruta aleatoria para la aplicación.</dd>
+<dd>Crea una ruta aleatoria para la app.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
 
-Iniciar una aplicación que se denomine `my_app` con el mandato de iniciar predeterminado.
+Iniciar una aplicación denominada `my_app` con el mandato de inicio predeterminado.
 ```
 cf push `my_app` -c null
 ```
 {: codeblock}
 
-Iniciar una aplicación que se denomina `my_app` con la opción de ejecutar un archivo de script denominado `run.sh`.
+Iniciar una aplicación denominada `my_app` con la opción para ejecutar un archivo de script denominada `run.sh`.
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -586,7 +584,7 @@ cf push `my_app` -c "bash ./<run.sh>"
 ## cf scale
 {: #cf_scale}
 
-Mostrar o cambiar el número de instancia, el límite de espacio de disco y el límite de memoria de una aplicación.
+Muestra o cambia el número de instancia, el límite de espacio de disco y el límite de memoria de una app.
 
 ```
 cf scale appname [-i número_instancia] [-k límite_disco] [-m límite_memoria] [-f]
@@ -598,20 +596,20 @@ cf scale appname [-i número_instancia] [-k límite_disco] [-m límite_memoria] 
 
 <dl>
 <dt>appname (necesario)</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>*-i* número_instancia (opcional)</dt>
 <dd>El número de instancias</dd>
 <dt>*-k* límite_disco (opcional)</dt>
-<dd>El límite de disco de la aplicación; los valores posibles son `256M`, `1024M`, o `1G`.</dd>
+<dd>El límite de disco de la app; los valores posibles son `256M`, `1024M`, o `1G`.</dd>
 <dt>*-m* límite_memoria (opcional)</dt>
 <dd>El límite de memoria para la aplicación; los valores posibles son `256M`, `1024M` o `1G`.</dd>
 <dt>*-f* (opcional)</dt>
-<dd>Fuerza el reinicio de la aplicación sin ninguna solicitud.</dd>
+<dd>Fuerza el reinicio de la app sin ninguna solicitud.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
 
-Mostrar el número de instancia, el límite de espacio de disco y el límite de memoria de una aplicación que se denomina `my_app`.
+Mostrar el número de instancia, el límite de espacio de disco y el límite de memoria para una aplicación denominada `my_app`.
 ```
 cf scale my_app
 ```
@@ -660,7 +658,7 @@ cf set-env nombre_app nombre_variable valor_variable
 
 <dl>
 <dt>appname (necesario)</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>nombre_variable (necesario)</dt>
 <dd>El nombre de la variable de entorno.</dd>
 <dt>valor_variable (necesario)</dt>
@@ -669,7 +667,7 @@ cf set-env nombre_app nombre_variable valor_variable
 
 <strong>Ejemplos</strong>:
 
-Definir una variable de entorno que se denomine `variable_a` con un valor de `123` para la aplicación denominada `my_app`.
+Defina una variable de entorno denominada `variable_a` con un valor de `123` para la aplicación denominada `my_app`.
 ```
 cf set-env my_app variable_a 123
 ```
@@ -686,13 +684,13 @@ cf ssh
 ```
 <strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
 
-De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego. Puede utilizar el mandato `cf ssh-enabled` para verificar si se ha habilitado el acceso SSH o el mandato `cf enable-ssh` para habilitar el acceso, en caso de que estuviese inhabilitado.
+De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego. Puede utilizar el mandato `cf ssh-enabled` para verificar si el acceso SSH está habilitado o el mandato `cf enable-ssh` para habilitar el acceso si está inhabilitado. 
 
 <strong>Opciones de mandato</strong>:
 
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>-c</dt>
 <dd>Especifica el mandato remoto que se va a ejecutar.</dd>
 <dt>-i</dt>
@@ -723,7 +721,7 @@ Transferencia de un solo archivo desde la instancia del contenedor de aplicacion
 $ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Configuración del reenvío de puertos del puerto 7777 de la máquina local al puerto 8888 de la instancia de contenedor de aplicaciones `my_app`.
+Configuración del reenvío de puertos del puerto 7777 de la máquina local al puerto 8888 de la instancia del contenedor de aplicaciones `my_app`.
 ```
 $ cf ssh -N -T -L 7777:localhost:8888 my_app
 
@@ -764,12 +762,12 @@ cf stop nombre_app
 
 <dl>
 <dt>appname (necesario)</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
 
-Detener la aplicación que se denomina `my_app`.
+Detener la aplicación denominada `my_app`.
 ```
 cf stop my_app
 ```
@@ -797,7 +795,7 @@ cf target [-o nombre_org] [-s nombre_espacio]
 
 <strong>Ejemplos</strong>:
 
-Establecer el destino en la organización denominada "my_org" y el espacio denominado "my_space".
+Establezca el destino en la organización denominada "my_org" y el espacio denominado "my_space".
 ```
 cf target -o my_org -s my_space
 ```
@@ -807,7 +805,8 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Muestra la versión de la interfaz de línea de mandatos de Cloud Foundry.
+Muestra
+la versión de la interfaz de línea de mandatos cf.
 
 ```
 cf -v
@@ -818,7 +817,7 @@ cf -v
 
 <strong>Ejemplos</strong>:
 
-Visualice la versión de la interfaz de línea de mandatos de Cloud Foundry.
+Mostrar la versión de la interfaz de línea de mandatos cf.
 ```
 cf -v
 ```

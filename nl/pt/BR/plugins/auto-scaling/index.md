@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2018
+  years: 2015，2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-11-16"
 
 
 ---
@@ -24,21 +24,19 @@ lastupdated: "2018-10-04"
 
 Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Veja [Fazer download da CLI do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obter instruções.
 
-## Incluindo o plug-in da CLI do {{site.data.keyword.Bluemix_notm}}
+## Incluindo o plug-in do {{site.data.keyword.Bluemix_notm}} CLI
 
 Após o {{site.data.keyword.Bluemix_notm}} CLI ser instalado, é possível incluir o plug-in {{site.data.keyword.autoscaling}} CLI.
 
 Conclua as etapas a seguir para incluir o repositório e instalar
 o plug-in:
-1. Para incluir o repositório de plug-in da CLI do {{site.data.keyword.Bluemix_notm}},
-execute o comando a seguir:
+1. Para incluir o repositório do plug-in {{site.data.keyword.Bluemix_notm}} CLI, execute o comando a seguir:
 ```
-ibmcloud plugin repo-add IBM Cloud-plugin-repo https://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
-2. Para instalar o plug-in da CLI do {{site.data.keyword.autoscaling}}, execute o
-comando a seguir:
+2. Para instalar o plug-in {{site.data.keyword.autoscaling}} CLI, execute o comando a seguir:
 ```
-ibmcloud plugin install auto-scaling -r IBM Cloud
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## Anexando uma política de ajuste automático de escala
@@ -46,7 +44,7 @@ ibmcloud plugin install auto-scaling -r IBM Cloud
 É possível anexar uma política de ajuste automático de escala a um app específico. Execute o seguinte comando:
 
 ```
-ibmcloud as policy-attach <APP_NAME> -p <policy_file>
+bx as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -63,7 +61,7 @@ ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 É possível gerar uma política de ajuste automático de escala respondendo às perguntas na interface de linha de comandos. Dependendo de sua entrada, um arquivo JSON que contém a definição da política de ajuste automático de escala é salvo com o nome que você inserir. Se não inserir o nome do arquivo, o conteúdo da política será impresso na linha de comandos diretamente sem que seja salvo em um arquivo. Execute o seguinte comando:
 
 ```
-Ibmcloud como criar política
+bx as policy-create
 ```
 {: codeblock}
 
@@ -73,7 +71,7 @@ Ibmcloud como criar política
 É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso na linha de comandos diretamente. Execute o seguinte comando:
 
 ```
-Ibmcloud como política-show < APP_NAME> [ -- json ]
+bx as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -90,7 +88,7 @@ Ibmcloud como política-show < APP_NAME> [ -- json ]
 É possível remover uma política de ajuste automático de escala de um app. Execute o seguinte comando:
 
 ```
-ibmcloud as policy-detach <APP_NAME>
+bx as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -105,7 +103,7 @@ ibmcloud as policy-detach <APP_NAME>
 É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o seguinte comando:
 
 ```
-ibmcloud as policy-enable|policy-disable <APP_NAME>
+bx as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -120,7 +118,7 @@ ibmcloud as policy-enable|policy-disable <APP_NAME>
 É possível mostrar o histórico da atividade de ajuste automático de escala de um app específico. Uma tabela de registros de histórico de ajuste automático de escala é exibida na interface de linha de comandos.
 
 ```
-ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 
@@ -139,7 +137,7 @@ ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-da
 
 # rellinks
 {: rellinks}
-## general
+## gerais
 {: general}
 * [{{site.data.keyword.autoscaling}} serviço](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}

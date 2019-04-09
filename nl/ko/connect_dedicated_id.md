@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-12-08"
 
 ---
 
@@ -19,20 +19,20 @@ lastupdated: "2018-06-21"
 # 공용 IBM ID에 데디케이티드 ID 연결
 {: #connect_dedicated_id}
 
-공용 IAM 서비스가 사용 가능한 데디케이티드 클라우드에 로그인하려면 {{site.data.keyword.Bluemix_notm}} CLI에서 데디케이티드 ID 대신 공용 IBM ID로 로그인해야 합니다.
+공용 IAM 서비스가 사용 가능한 데디케이티드 클라우드에 로그인할 수 있도록 {{site.data.keyword.Bluemix_notm}} CLI에서는 데디케이티드 ID 대신 공용 IBM ID로 로그인하도록 요구합니다.
 
 
 ```
-  $ ibmcloud login -a https://api.{dedicated_env}.bluemix.net
+  $ bluemix login -a https://api.{dedicated_env}.bluemix.net
   API endpoint: https://api.{dedicated_env}.bluemix.net
 
   Public IAM token service is available in the dedicated environment.
-  Log in with your public IBMid, or use '--no-iam' to log in as a dedicated user only.
+  Login with your public IBMid, or use '--no-iam' to login as a dedicated user only.
 
   Email>
 ```
 
-데디케이티드 ID가 공용 IBM ID에 이미 연결되어 있는 경우 다음과 같이 인증하고 로그인합니다.
+데디케이티드 ID가 공용 IBM ID에 이미 연결되어 있는 경우 다음과 같이 인증되고 로그인됩니다.
 
 ```
   Authenticating...
@@ -44,7 +44,7 @@ lastupdated: "2018-06-21"
 하지만 데디케이티드 ID가 공용 IBM ID에 연결되지 않은 경우 다음과 같이 공용 IBM ID에 수동으로 연결하도록 프롬프트가 표시됩니다.
 
 ```
-  You are logging in with an IBMid that is not associated with any dedicated user.
+  You are logging with an IBMid that does not associated with any dedicated user.
   To set up the connection, input the credentials of the dedicated user.
 
   Choose a credential type:
@@ -57,18 +57,18 @@ lastupdated: "2018-06-21"
 
 ## 로컬 UAA 서버에 강제 로그인
 
-UAA 서버에 대한, 데디케이티드 ID를 사용한 로그인을 강제하려면 `ibmcloud login` 명령에 `--no-iam` 옵션을 지정하십시오.
+데디케이티드 ID로 UAA 서버에 강제로 로그인하려면 `bluemix login` 명령에 `--no-iam` 옵션을 지정하십시오.
 
 ```
-  $ ibmcloud login --no-iam
+  $ bluemix login --no-iam
 ```
 
-## 공용 IBM ID에서 데디케이티드 ID 연결 끊기
+## 공용 IBM ID에서 데디케이티드 ID 연결 끊기 
 
-`ibmcloud iam dedicated-id-disconnect`를 사용하여 공용 IBM ID와 연결된 데디케이티드 ID의 연결을 끊을 수 있습니다.
+`bluemix iam dedicated-id-disconnect`를 사용하여 데디케이티드 ID와 공용 IBM ID의 연결을 끊으십시오.
 
 ```
-  $ ibmcloud iam dedicated-id-disconnect
+  $ bluemix iam dedicated-id-disconnect
   Do you really want to disconnect my_dedicated_id from public IBMid? (Y/N)> y
   Disconnecting dedicated user my_dedicated_id from public IBMid...
   OK
@@ -76,3 +76,4 @@ UAA 서버에 대한, 데디케이티드 ID를 사용한 로그인을 강제하�
   Logging out...
   OK
 ```
+

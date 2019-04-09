@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-01-12"
 
 
 
@@ -37,7 +37,7 @@ lastupdated: "2018-06-21"
 
 dev_mode コマンド・ライン・ツールのインストールには、以下の方法のいずれかを使用します。
 - ローカルでインストールする。
-  1. [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
+  1. [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net){: new_window} から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
   2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。 例えば次のようにします。
 
         ```
@@ -150,7 +150,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expand</dt>
-   <dd>.zip ファイルを解凍して、アップロードしたファイルを取り出す必要があるかどうかを示します。</dd>
+   <dd>zip ファイルを解凍して、アップロードしたファイルを抜き出す必要があるかどうかを示します。</dd>
    <dt>restart</dt>
    <dd>ファイルの更新後にアプリ・ランタイムを再始動します。</dd>
    </dl>
@@ -210,5 +210,5 @@ cf restart-inplace <appName>
 
 ## 関連リンク
 {: #general}
-* [開発モード CLI ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps Web IDE ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}
+* [開発モード CLI ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [DevOps Web IDE ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

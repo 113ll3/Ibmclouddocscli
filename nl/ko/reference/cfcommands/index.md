@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -22,8 +22,6 @@ lastupdated: "2018-06-21"
 
 Cloud Foundry(cf) 명령행 인터페이스(CLI)는 앱 관리를 위한 명령 세트를 제공합니다. 다음 정보는 앱 관리를 위해 가장 공통적으로 사용되는 cf 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다. cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 사용하십시오. `cf command_name -h`를 사용하면 특정 명령에 대한 자세한 도움말 정보를 볼 수 있습니다.
 {: shortdesc}
-
-`cf CLI` 명령의 더 자세한 목록은 커뮤니티 [Cloud Foundry CLI 참조서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}를 참조하십시오.
 
 **참고**: 네트워크에서 cf 명령을 실행하는 호스트와 Cloud Foundry API 엔드포인트 사이에 HTTP 프록시 서버가 있으면 `HTTP_PROXY` 환경 변수를 설정하여 프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 세부사항은 [Using the cf CLI with an HTTP Proxy Server ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}를 참조하십시오.
 
@@ -96,7 +94,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL(선택사항)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 IBM Cloud API 엔드포인트의 URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
+   <dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 Bluemix API 엔드포인트의 URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
    현재 사용 중인 API 엔드포인트의 URL을 표시하려는 경우 cf api 명령에 이 매개변수를 지정할 필요가 없습니다.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다.</dd>
@@ -254,7 +252,7 @@ cf delete appname [-f] [-r]
 
 <strong>예제</strong>:
 
-`my_app`이라는 애플리케이션을 삭제합니다(확인 필요).
+`my_app`(확인 필수)이라는 애플리케이션을 삭제합니다.
 ```
 cf delete my_app
 ```
@@ -302,7 +300,7 @@ cf delete-space space_name [-f]
 
 <strong>예제</strong>:
 
-`my_app`이라는 애플리케이션을 삭제합니다(확인 필요).
+`my_app`(확인 필수)이라는 애플리케이션을 삭제합니다.
 ```
 cf delete my_app
 ```
@@ -390,7 +388,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}}에 로그인합니다. [연합 ID](/docs/admin/account.html#signup)로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용해야 합니다.
+{{site.data.keyword.Bluemix_notm}}에 로그인합니다. [연합 ID](/docs/admin/account.html#signup)로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용해야 합니다. 
 
 **참고**: {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키를 사용하여 로그인할 수도 있습니다. `apikey`를 사용자 이름으로, API 키 값을 비밀번호로 사용하십시오. API 키 작성에 대한 자세한 정보는 [API 키 관리](/docs/iam/apikeys.html)를 참조하십시오.
 
@@ -492,7 +490,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스는 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다.
+Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스가 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다.
 
 ```
 cf marketplace
@@ -527,7 +525,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname(필수)</dt>
 <dd>애플리케이션 이름입니다.</dd>
 <dt>*-b* buildpack_name(선택사항)</dt>
-<dd>빌드팩 이름입니다. buildpack_name은 이름(예: liberty-for-java)별 사용자 정의 빌드팩이거나 Git URL(예: https://github.com/cloudfoundry/java-buildpack.git) 또는 분기나 태그가 포함된 Git URL(예: v3.3.0 태그의 경우 https://github.com/cloudfoundry/java-buildpack.git#v3.3.0) 중 하나입니다.</dd>
+<dd>빌드팩 이름입니다. buildpack_name은 이름(예: liberty-for-java)별 사용자 정의 빌드팩이거나 Git URL(예: https://github.com/cloudfoundry/java-buildpack.git) 또는 분기나 태그가 포함된 Git URL(예: v3.3.0 태그의 경우 https://github.com/cloudfoundry/java-buildpack.git#v3.3.0)일 수 있습니다.</dd>
 <dt>*-c* start_command(선택사항)</dt>
 <dd>애플리케이션의 시작 명령입니다. 기본 시작 명령을 사용하려면 이 옵션에 대해 null 값을 지정하십시오. </dd>
 <dt>*-f* manifest_path(선택사항)</dt>
@@ -566,7 +564,7 @@ cf push `my_app` -c null
 ```
 {: codeblock}
 
-옵션을 사용하여 `my_app`이라는 애플리케이션을 시작하여 `run.sh`라는 스크립트 파일을 실행합니다.
+옵션을 사용하여 `my_app`이라는 애플리케이션을 시작하여 `run.sh` 이라는 스크립트 파일을 실행합니다.
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -676,7 +674,7 @@ cf ssh
 ```
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
-기본적으로, SSH 액세스는 Diego 애플리케이션에 대해 사용 가능하도록 설정되어 있습니다. `cf ssh-enabled` 명령을 사용하여 SSH 액세스가 사용 가능하도록 설정되어 있는지 확인하거나, 사용 안함으로 설정되어 있는 경우 `cf enable-ssh` 명령을 사용하여 액세스를 사용으로 설정할 수 있습니다.
+기본적으로, SSH 액세스는 Diego 애플리케이션에 대해 사용 가능하도록 설정되어 있습니다. `cf ssh-enabled` 명령을 사용하여 SSH 액세스가 사용 가능하도록 설정되어 있는지 확인하거나, 사용 안함으로 설정되어 있는 경우 `cf enable-ssh` 명령을 사용하여 액세스를 사용으로 설정할 수 있습니다. 
 
 <strong>명령 옵션</strong>:
 
@@ -797,7 +795,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Cloud Foundry 명령행 인터페이스의 버전을 표시합니다. 
+명령행 인터페이스의 버전을 표시합니다.
 
 ```
 cf -v
@@ -808,7 +806,7 @@ cf -v
 
 <strong>예제</strong>:
 
-Cloud Foundry 명령행 인터페이스의 버전을 표시합니다. 
+명령행 인터페이스의 버전을 표시합니다.
 ```
 cf -v
 ```

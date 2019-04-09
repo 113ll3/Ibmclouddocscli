@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -18,21 +18,21 @@ Utilisez l'interface de ligne de commande d'appairage de réseau privé pour con
 
 Le plug-in d'interface de ligne de commande d'appairage de réseau privé est disponible pour les systèmes d'exploitation Windows, MAC et Linux. Assurez-vous d'utiliser le plug-in qui vous convient.
 
-Avant de commencer, créez des espaces {{site.data.keyword.Bluemix_notm}}. Assurez-vous que chaque conteneur dans un espace dispose d'une adresse IP provenant d'un réseau différent.
+Avant de commencer, créez des espaces {{site.data.keyword.Bluemix_notm}}. Assurez-vous que chaque conteneur dans un espace dispose d'une adresse IP provenant d'un réseau différent. Pour plus d'informations, voir [Using your own private IP address ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}.
 
 **Remarque :** si vous avez utilisé l'appairage de réseau privé avec un espace {{site.data.keyword.Bluemix_notm}} et que vous devez supprimer l'espace, supprimez d'abord les connexions d'appairage de réseau privé dans cet espace.
 
-Pour commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Interface de ligne de commande IBM Cloud](http://clis.ng.bluemix.net/ui/home.html).
+Pour commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir [Interface de ligne de commande Bluemix](http://clis.ng.bluemix.net/ui/home.html) pour des détails.
 
 ## Installation du plug-in d'interface de ligne de commande d'appairage de réseau privé
 
 **Remarque** : si une version précédente du plug-in est installée, vous devez la désinstaller. Utilisez la commande suivante pour désinstaller le plug-in :
 
 ```
-ibmcloud plugin uninstall private-network-peering
+bluemix plugin uninstall private-network-peering
 ```
 ### Installation locale
-Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande{{site.data.keyword.ibmcloud_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.ibmcloud.net/ui/repository.html#ibmcloud-plugins){: new_window}.
+Téléchargez le plug-in d'appairage de réseau privé pour votre plateforme depuis le [référentiel de plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}.
 
 Installez le plug-in d'appairage de réseau privé avec la commande suivante :
 
@@ -41,19 +41,19 @@ Installez le plug-in d'appairage de réseau privé avec la commande suivante :
 * Pour le système d'exploitation Microsoft Windows :
 
 ```
-ibmcloud plugin install private-network-peering-windows-amd64.exe
+bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
 * Pour le système d'exploitation MAC OS :
 
 ```
-ibmcloud plugin install private-network-peering-darwin-amd64
+bluemix plugin install private-network-peering-darwin-amd64
 ```
 
 * Pour le système d'exploitation Linux :
 
 ```
-ibmcloud plugin install private-network-peering-linux-amd64
+bluemix plugin install private-network-peering-linux-amd64
 ```
 
 **Remarque** : lorsque vous installez le plug-in pour le système d'exploitation Linux, si un message d'erreur signale que vous ne disposez pas des droits appropriés, exécutez la commande suivante et changez les droits :
@@ -68,17 +68,17 @@ Pour installer le plug-in depuis le référentiel {{site.data.keyword.Bluemix_no
 
 1. Ajoutez le noeud final de registre de plug-in {{site.data.keyword.Bluemix_notm}} :
 	```
-	ibmcloud plugin repo-add IBM Cloud http://plugins.ng.bluemix.net
+	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```
 
 2. Exécutez la commande suivante :
 
 	```
-	ibmcloud plugin install private-network-peering -r IBM Cloud
+	bluemix plugin install private-network-peering -r bluemix-bx
 	```
 
 ## Liste des commandes d'appairage de réseau privé
-Les commandes ci-après sont prises en charge. Utilisez la commande `ibmcloud network` pour consulter la liste des commandes disponibles :
+Les commandes ci-après sont prises en charge. Utilisez la commande `bluemix network` pour afficher la liste des commandes disponibles :
 
 | Commande     | Description                                    |
 |-------------|------------------------------------------------|
@@ -90,11 +90,11 @@ Les commandes ci-après sont prises en charge. Utilisez la commande `ibmcloud ne
 
 
 ### Syntaxe de la commande
-Pour afficher les informations d'aide sur les commandes, exécutez : `ibmcloud network [commande] -h`.
+Afin d'afficher les informations d'aide pour les commandes, exécutez : `bluemix network [commande] -h`.
 
 #### Liste de tous les routeurs disponibles pour l'appairage
 ```
-ibmcloud network pnp-routers [--verbose (ou -v)]
+bluemix network pnp-routers [--verbose (ou -v)]
 ```
 
 #####Paramètres facultatifs
@@ -107,7 +107,7 @@ ibmcloud network pnp-routers [--verbose (ou -v)]
 
 Afin d'afficher les informations réseau pour tous les routeurs :
 
-	$ ibmcloud network pnp-routers
+	$ bluemix network pnp-routers
 	Listing available routers ...
 	OK
 
@@ -120,7 +120,7 @@ Afin d'afficher les informations réseau pour tous les routeurs :
 Afin d'afficher les informations réseau détaillées pour tous les routeurs :
 
 
-	$ ibmcloud network pnp-routers -v
+	$ bluemix network pnp-routers -v
 	Listing available routers ...
 	OK
 
@@ -147,21 +147,21 @@ Afin d'afficher les informations réseau détaillées pour tous les routeurs :
 	...
 
 
-#### Création d'une connexion d'appairage de réseau privé en utilisant les adresses IP
+#### Création d'une connexion d'appairage de réseau privé avec les adresses IP
 ```
-ibmcloud network pnp-create <router_ip> <router_ip> <name>
+bluemix network pnp-create <ip_routeur> <ip_routeur> <nom>
 ```
 
 #####Paramètres
 {: #p1}
 
-* **router_ip** : adresses IP des deux routeurs à connecter. Vous pouvez les identifier avec la commande suivante : `ibmcloud network pnp-routers`
+* **ip_routeur** : adresses IP des deux routeurs à connecter. Vous pouvez les identifier avec la commande suivante : `bluemix network pnp-routers`
 * **nom** : nom de la connexion d'appairage de réseau privé.
 
 ######Exemple de commande
 {: #ex2}
 
-	$ ibmcloud network pnp-create 129.41.234.246 129.41.237.172 demo
+	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
 	Creating private network peering connection 'demo' ...
 	Connecting 'default-router(129.41.234.246)' and 'default-router(129.41.237.172)' ...
 	OK
@@ -172,7 +172,7 @@ ibmcloud network pnp-create <router_ip> <router_ip> <name>
 ####Création d'une connexion d'appairage de réseau privé avec le nom de connexion
 
 ```
-ibmcloud network pnp-create -i <nom>
+bluemix network pnp-create -i <nom>
 ```
 
 #####Paramètres
@@ -184,7 +184,7 @@ ibmcloud network pnp-create -i <nom>
 ######Exemple de commande
 {: #ex3}
 
-	$ ibmcloud network pnp-create -i demo
+	$ bluemix network pnp-create -i demo
 	Creating private network peering connection 'demo' ...
 	List of available routers (select TWO for peering):
 
@@ -204,7 +204,7 @@ ibmcloud network pnp-create -i <nom>
 
 #### Liste de toutes les connexions d'appairage de réseau privé
 ```
-ibmcloud network pnp-show [--verbose (ou -v)]
+bluemix network pnp-show [--verbose (ou -v)]
 ```
 
 #####Paramètres facultatifs
@@ -217,7 +217,7 @@ ibmcloud network pnp-show [--verbose (ou -v)]
 
 Affichez les informations de base :
 
-	$ ibmcloud network pnp-show
+	$ bluemix network pnp-show
 	Listing private network peering connections ...
 	OK
 
@@ -226,7 +226,7 @@ Affichez les informations de base :
 
 Affichez les informations détaillées :
 
-	$ ibmcloud network pnp-show -v
+	$ bluemix network pnp-show -v
 	Listing private network peering connections ...
 	OK
 
@@ -244,11 +244,11 @@ Affichez les informations détaillées :
 
 #### Suppression d'une connexion d'appairage de réseau privé
 ```
-ibmcloud network pnp-delete [--force (or -f)] <connection_id>
+bluemix network pnp-delete [--force (ou -f)] <id_connexion>
 ```
 #####Paramètres
 {: #p3}
-* **connection_id** : un ou plusieurs ID de connexion séparés par une virgule.
+* **id_connexion** : un ou plusieurs ID de connexion séparés par une virgule.
 
 #####Paramètres facultatifs
 {: #op3}
@@ -260,7 +260,7 @@ ibmcloud network pnp-delete [--force (or -f)] <connection_id>
 
 Supprimez une connexion :
 
-	$ ibmcloud network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
+	$ bluemix network pnp-delete 17b1c3c7-d614-4fc5-9afe-961e38ee79f8
 	Warning: deleted connections cannot be restored.
 	Are you sure you want to delete the connection? (yes/no)> yes
 
@@ -273,5 +273,5 @@ Supprimez une connexion :
 Supprimez plusieurs connexions :
 
 ```
-ibmcloud network pnp-delete [-f] <connection_id>,<connection_id>,<connection_id>
+bluemix network pnp-delete [-f] <id_connexion>,<id_connexion>,<id_connexion>
 ```

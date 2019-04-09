@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2018
+  years: 2015，2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-11-16"
 
 
 ---
@@ -31,11 +31,11 @@ lastupdated: "2018-10-04"
 以下のステップを実行して、リポジトリーを追加し、プラグインをインストールします。
 1. {{site.data.keyword.Bluemix_notm}} CLI プラグインのリポジトリーを追加するため、以下のコマンドを実行します。
 ```
-ibmcloud plugin repo-add IBM Cloud-plugin-repo https://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. {{site.data.keyword.autoscaling}} CLI プラグインをインストールするため、以下のコマンドを実行します。
 ```
-ibmcloud plugin install auto-scaling -r IBM Cloud
+bluemix plugin install auto-scaling -r Bluemix
 ```
 
 ## Auto-Scaling ポリシーの添付
@@ -43,7 +43,7 @@ ibmcloud plugin install auto-scaling -r IBM Cloud
 Auto-Scaling ポリシーを特定のアプリに添付することができます。 次のコマンドを実行します。
 
 ```
-ibmcloud as policy-attach <APP_NAME> -p <policy_file>
+bx as policy-attach <APP_NAME> -p <policy_file>
 ```
 {: codeblock}
 
@@ -60,7 +60,7 @@ ibmcloud as policy-attach <APP_NAME> -p <policy_file>
 Auto-Scaling ポリシーは、コマンド・ライン・インターフェースで質問に答えていけば生成できます。 入力内容によっては、Auto-Scaling ポリシーの定義が含まれた JSON ファイルは、ユーザーが入力する名前を付けて保存されます。 ファイル名を入力しなければ、ポリシーのコンテンツは直接コマンド・ラインに表示され、ファイルには保存されません。 次のコマンドを実行します。
 
 ```
-ibmcloud as policy-create
+bx as policy-create
 ```
 {: codeblock}
 
@@ -70,7 +70,7 @@ ibmcloud as policy-create
 アプリの Auto-Scaling ポリシーを表示することができます。 ポリシーのコンテンツは直接コマンド・ラインに表示されます。 次のコマンドを実行します。
 
 ```
-ibmcloud as policy-show <APP_NAME> [--json]
+bx as policy-show <APP_NAME> [--json]
 ```
 {: codeblock}
 
@@ -87,7 +87,7 @@ ibmcloud as policy-show <APP_NAME> [--json]
 Auto-Scaling ポリシーをアプリから削除することができます。 次のコマンドを実行します。
 
 ```
-ibmcloud as policy-detach <APP_NAME>
+bx as policy-detach <APP_NAME>
 ```
 {: codeblock}
 
@@ -102,7 +102,7 @@ ibmcloud as policy-detach <APP_NAME>
 特定のアプリの Auto-Scaling ポリシーを有効にしたり無効にしたりできます。 次のコマンドを実行します。
 
 ```
-ibmcloud as policy-enable|policy-disable <APP_NAME>
+bx as policy-enable|policy-disable <APP_NAME>
 ```
 {: codeblock}
 
@@ -117,7 +117,7 @@ ibmcloud as policy-enable|policy-disable <APP_NAME>
 特定のアプリの Auto-Scaling アクティビティー履歴を表示することができます。 Auto-Scaling 履歴レコードの表がコマンド・ライン・インターフェースに表示されます。
 
 ```
-ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
 {: codeblock}
 
@@ -139,5 +139,5 @@ ibmcloud as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-da
 ## 一般
 {: general}
 * [{{site.data.keyword.autoscaling}} サービス](/docs/services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [W3C Date and Time Formats standard ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [W3C Date and Time Formats standard ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

@@ -5,33 +5,28 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-06-08"
+lastupdated: "2017-12-08"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:tip: .tip}
 
-# {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー (ibmcloud sl) コマンド
+# {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー (bluemix sl) コマンド
 {: #softlayer_cli}
 
 {{site.data.keyword.BluSoftlayer}} プラグインは、{{site.data.keyword.Bluemix_notm}} CLI にマージされました。 このプラグインのインストールは必要なくなりました。
-{: tip}
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) で {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンドを使用して、SoftLayer のサービスを管理および構成します。
 
-2018 年 5 月、{{site.data.keyword.Bluemix_notm}} CLI コマンドは `bluemix` および `bx` から `ibmcloud` に変更されました。 ただし、後日削除されるまで、`bluemix` および `bx` CLI CLI コマンドを引き続き使用できます。
-{: tip}
 
+まず、IBM {{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[Bluemix CLI ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}』を参照してください。
 
-まず、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。 詳しくは、『[IBM Cloud CLI ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){: new_window}』を参照してください。
-
-{{site.data.keyword.Bluemix_notm}} CLI コマンドの完全リストについては、[{{site.data.keyword.Bluemix_notm}} (ibmcloud) コマンド](docs/cli/reference/bluemix_cli/bx_cli.html#ibmcloud_cli)を参照してください。
+{{site.data.keyword.Bluemix_notm}} コマンドの完全リストについては、[{{site.data.keyword.Bluemix_notm}} (bx) コマンド](docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)を参照してください。
 
 
 ## 汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド
 
-以下のコマンドがサポートされます。 使用可能なコマンドのリストを表示するには、`ibmcloud sl` コマンドを使用します。
+以下のコマンドがサポートされます。 使用可能なコマンドのリストを表示するには、`bluemix sl` コマンドを使用します。
 
 <table summary="コマンドの詳細情報を表示するリンクが含まれたアルファベット順の汎用コマンド">
 <caption>表 1. 汎用 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー・コマンド</caption>
@@ -40,8 +35,8 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud sl init](/docs/cli/reference/softlayer/index.html#sl_init)</td>
- <td>[ibmcloud sl help](/docs/cli/reference/softlayer/index.html#sl_help)</td>
+ <td>[bluemix sl init](/docs/cli/reference/softlayer/index.html#sl_init)</td>
+ <td>[bluemix sl help](/docs/cli/reference/softlayer/index.html#sl_help)</td>
    </tbody>
  </table>
 
@@ -55,34 +50,34 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
-  <td>[ibmcloud sl block access-authorize](/docs/cli/reference/softlayer/index.html#sl_block_access_authorize)</td>
-  <td>[ibmcloud sl block access-list](/docs/cli/reference/softlayer/index.html#sl_block_access_list)</td>
-  <td>[ibmcloud sl block access-revoke](/docs/cli/reference/softlayer/index.html#sl_block_access_revoke)</td>
-  <td>[ibmcloud sl block replica-failback](/docs/cli/reference/softlayer/index.html#sl_block_replica_failback)</td>
-  <td>[ibmcloud sl block replica-failover](/docs/cli/reference/softlayer/index.html#sl_block_replica_failover)</td>
-  <td>[ibmcloud sl block replica-locations](/docs/cli/reference/softlayer/index.html#sl_block_replica_locations)</td>
+  <td>[bluemix sl block access-authorize](/docs/cli/reference/softlayer/index.html#sl_block_access_authorize)</td>
+  <td>[bluemix sl block access-list](/docs/cli/reference/softlayer/index.html#sl_block_access_list)</td>
+  <td>[bluemix sl block access-revoke](/docs/cli/reference/softlayer/index.html#sl_block_access_revoke)</td>
+  <td>[bluemix sl block replica-failback](/docs/cli/reference/softlayer/index.html#sl_block_replica_failback)</td>
+  <td>[bluemix sl block replica-failover](/docs/cli/reference/softlayer/index.html#sl_block_replica_failover)</td>
+  <td>[bluemix sl block replica-locations](/docs/cli/reference/softlayer/index.html#sl_block_replica_locations)</td>
    </tr>
  <tr>
-  <td>[ibmcloud sl block replica-order](/docs/cli/reference/softlayer/index.html#sl_block_replica_order)</td>
-  <td>[ibmcloud sl block replica-partners](/docs/cli/reference/softlayer/index.html#sl_block_replica_partners)</td>
-  <td>[ibmcloud sl block snapshot-cancel](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_cancel)</td>
-  <td>[ibmcloud sl block snapshot-create](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_create)</td>
-  <td>[ibmcloud sl block snapshot-disable](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_disable)</td>
-  <td>[ibmcloud sl block snapshot-enable](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_enable)</td>
+  <td>[bluemix sl block replica-order](/docs/cli/reference/softlayer/index.html#sl_block_replica_order)</td>
+  <td>[bluemix sl block replica-partners](/docs/cli/reference/softlayer/index.html#sl_block_replica_partners)</td>
+  <td>[bluemix sl block snapshot-cancel](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_cancel)</td>
+  <td>[bluemix sl block snapshot-create](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_create)</td>
+  <td>[bluemix sl block snapshot-disable](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_disable)</td>
+  <td>[bluemix sl block snapshot-enable](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_enable)</td>
   </tr>
  <tr>
-  <td>[ibmcloud sl block snapshot-delete](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_delete)</td>
-  <td>[ibmcloud sl block snapshot-list](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_list)</td>
-  <td>[ibmcloud sl block snapshot-order](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_order)</td>
-  <td>[ibmcloud sl block snapshot-restore](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_restore)</td>
-  <td>[ibmcloud sl block volume-cancel](/docs/cli/reference/softlayer/index.html#sl_block_volume_cancel)</td>  
-  <td>[ibmcloud sl block volume-detail](/docs/cli/reference/softlayer/index.html#sl_block_volume_detail)</td>
+  <td>[bluemix sl block snapshot-delete](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_delete)</td>
+  <td>[bluemix sl block snapshot-list](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_list)</td>
+  <td>[bluemix sl block snapshot-order](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_order)</td>
+  <td>[bluemix sl block snapshot-restore](/docs/cli/reference/softlayer/index.html#sl_block_snapshot_restore)</td>
+  <td>[bluemix sl block volume-cancel](/docs/cli/reference/softlayer/index.html#sl_block_volume_cancel)</td>  
+  <td>[bluemix sl block volume-detail](/docs/cli/reference/softlayer/index.html#sl_block_volume_detail)</td>
    </tr>
  <tr>
-   <td>[ibmcloud sl block volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_block_volume_duplicate)</td>
-   <td>[ibmcloud sl block volume-list](/docs/cli/reference/softlayer/index.html#sl_block_volume_list)</td>
-   <td>[ibmcloud sl block volume-order](/docs/cli/reference/softlayer/index.html#sl_block_volume_order)</td>
-   <td>[ibmcloud sl block volume-options](/docs/cli/reference/softlayer/index.html#sl_block_volume_options)</td>
+   <td>[bluemix sl block volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_block_volume_duplicate)</td>
+   <td>[bluemix sl block volume-list](/docs/cli/reference/softlayer/index.html#sl_block_volume_list)</td>
+   <td>[bluemix sl block volume-order](/docs/cli/reference/softlayer/index.html#sl_block_volume_order)</td>
+   <td>[bluemix sl block volume-options](/docs/cli/reference/softlayer/index.html#sl_block_volume_options)</td>
  </tr>
    </tbody>
  </table>
@@ -96,19 +91,19 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
-  <td>[ibmcloud sl cdn cancel](/docs/cli/reference/softlayer/index.html#sl_cdn_cancel)</td>
-  <td>[ibmcloud sl cdn detail](/docs/cli/reference/softlayer/index.html#sl_cdn_detail)</td>
-  <td>[ibmcloud sl cdn list](/docs/cli/reference/softlayer/index.html#sl_cdn_list)</td>
-  <td>[ibmcloud sl cdn load](/docs/cli/reference/softlayer/index.html#sl_cdn_load)</td>
-  <td>[ibmcloud sl cdn order](/docs/cli/reference/softlayer/index.html#sl_cdn_order)</td>
-  <td>[ibmcloud sl cdn options
+  <td>[bluemix sl cdn cancel](/docs/cli/reference/softlayer/index.html#sl_cdn_cancel)</td>
+  <td>[bluemix sl cdn detail](/docs/cli/reference/softlayer/index.html#sl_cdn_detail)</td>
+  <td>[bluemix sl cdn list](/docs/cli/reference/softlayer/index.html#sl_cdn_list)</td>
+  <td>[bluemix sl cdn load](/docs/cli/reference/softlayer/index.html#sl_cdn_load)</td>
+  <td>[bluemix sl cdn order](/docs/cli/reference/softlayer/index.html#sl_cdn_order)</td>
+  <td>[bluemix sl cdn options
 ](/docs/cli/reference/softlayer/index.html#sl_cdn_options)</td>
    </tr>
  <tr>
-  <td>[ibmcloud sl cdn origin-add](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_add)</td>
-  <td>[ibmcloud sl cdn origin-list](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_list)</td>
-  <td>[ibmcloud sl cdn origin-remove](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_remove)</td>
-  <td>[ibmcloud sl cdn purge](/docs/cli/reference/softlayer/index.html#sl_cdn_purge)</td>
+  <td>[bluemix sl cdn origin-add](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_add)</td>
+  <td>[bluemix sl cdn origin-list](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_list)</td>
+  <td>[bluemix sl cdn origin-remove](/docs/cli/reference/softlayer/index.html#sl_cdn_origin_remove)</td>
+  <td>[bluemix sl cdn purge](/docs/cli/reference/softlayer/index.html#sl_cdn_purge)</td>
   </tr>
    </tbody>
  </table>
@@ -122,34 +117,34 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
-  <td>[ibmcloud sl file access-authorize](/docs/cli/reference/softlayer/index.html#sl_file_access_authorize)</td>
-  <td>[ibmcloud sl file access-list](/docs/cli/reference/softlayer/index.html#sl_file_access_list)</td>
-  <td>[ibmcloud sl file access-revoke](/docs/cli/reference/softlayer/index.html#sl_file_access_revoke)</td>
-  <td>[ibmcloud sl file replica-failback](/docs/cli/reference/softlayer/index.html#sl_file_replica_failback)</td>
-  <td>[ibmcloud sl file replica-failover](/docs/cli/reference/softlayer/index.html#sl_file_replica_failover)</td>
-  <td>[ibmcloud sl file replica-locations](/docs/cli/reference/softlayer/index.html#sl_file_replica_locations)</td>
+  <td>[bluemix sl file access-authorize](/docs/cli/reference/softlayer/index.html#sl_file_access_authorize)</td>
+  <td>[bluemix sl file access-list](/docs/cli/reference/softlayer/index.html#sl_file_access_list)</td>
+  <td>[bluemix sl file access-revoke](/docs/cli/reference/softlayer/index.html#sl_file_access_revoke)</td>
+  <td>[bluemix sl file replica-failback](/docs/cli/reference/softlayer/index.html#sl_file_replica_failback)</td>
+  <td>[bluemix sl file replica-failover](/docs/cli/reference/softlayer/index.html#sl_file_replica_failover)</td>
+  <td>[bluemix sl file replica-locations](/docs/cli/reference/softlayer/index.html#sl_file_replica_locations)</td>
    </tr>
  <tr>
-  <td>[ibmcloud sl file replica-order](/docs/cli/reference/softlayer/index.html#sl_file_replica_order)</td>
-  <td>[ibmcloud sl file replica-partners](/docs/cli/reference/softlayer/index.html#sl_file_replica_partners)</td>
-  <td>[ibmcloud sl file snapshot-cancel](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_cancel)</td>
-  <td>[ibmcloud sl file snapshot-create](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_create)</td>
-  <td>[ibmcloud sl file snapshot-disable](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_disable)</td>
-  <td>[ibmcloud sl file snapshot-enable](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_enable)</td>
+  <td>[bluemix sl file replica-order](/docs/cli/reference/softlayer/index.html#sl_file_replica_order)</td>
+  <td>[bluemix sl file replica-partners](/docs/cli/reference/softlayer/index.html#sl_file_replica_partners)</td>
+  <td>[bluemix sl file snapshot-cancel](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_cancel)</td>
+  <td>[bluemix sl file snapshot-create](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_create)</td>
+  <td>[bluemix sl file snapshot-disable](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_disable)</td>
+  <td>[bluemix sl file snapshot-enable](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_enable)</td>
   </tr>
  <tr>
-  <td>[ibmcloud sl file snapshot-delete](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_delete)</td>
-  <td>[ibmcloud sl file snapshot-list](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_list)</td>
-  <td>[ibmcloud sl file snapshot-order](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_order)</td>
-  <td>[ibmcloud sl file snapshot-restore](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_restore)</td>
-  <td>[ibmcloud sl file volume-cancel](/docs/cli/reference/softlayer/index.html#sl_file_volume_cancel)</td>  
-  <td>[ibmcloud sl file volume-detail](/docs/cli/reference/softlayer/index.html#sl_file_volume_detail)</td>
+  <td>[bluemix sl file snapshot-delete](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_delete)</td>
+  <td>[bluemix sl file snapshot-list](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_list)</td>
+  <td>[bluemix sl file snapshot-order](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_order)</td>
+  <td>[bluemix sl file snapshot-restore](/docs/cli/reference/softlayer/index.html#sl_file_snapshot_restore)</td>
+  <td>[bluemix sl file volume-cancel](/docs/cli/reference/softlayer/index.html#sl_file_volume_cancel)</td>  
+  <td>[bluemix sl file volume-detail](/docs/cli/reference/softlayer/index.html#sl_file_volume_detail)</td>
    </tr>
  <tr>
-   <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate)</td>
-   <td>[ibmcloud sl file volume-list](/docs/cli/reference/softlayer/index.html#sl_file_volume_list)</td>
-   <td>[ibmcloud sl file volume-order](/docs/cli/reference/softlayer/index.html#sl_file_volume_order)</td>
-   <td>[ibmcloud sl file volume-options
+   <td>[bluemix sl file volume-duplicate](/docs/cli/reference/softlayer/index.html#sl_file_volume_duplicate</td>
+   <td>[bluemix sl file volume-list](/docs/cli/reference/softlayer/index.html#sl_file_volume_list)</td>
+   <td>[bluemix sl file volume-order](/docs/cli/reference/softlayer/index.html#sl_file_volume_order)</td>
+   <td>[bluemix sl file volume-options
 ](/docs/cli/reference/softlayer/index.html#sl_file_volume_options)</td>
  </tr>
    </tbody>
@@ -164,17 +159,17 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud sl dns import](/docs/cli/reference/softlayer/index.html#sl_dns_import)</td>
- <td>[ibmcloud sl dns record-add](/docs/cli/reference/softlayer/index.html#sl_dns_record_add)</td>
- <td>[ibmcloud sl dns record-edit](/docs/cli/reference/softlayer/index.html#sl_dns_record_edit)</td>
- <td>[ibmcloud sl dns record-list](/docs/cli/reference/softlayer/index.html#sl_dns_record_list)</td>
- <td>[ibmcloud sl dns record-remove](/docs/cli/reference/softlayer/index.html#sl_dns_record_remove)</td>
- <td>[ibmcloud sl dns zone-create](/docs/cli/reference/softlayer/index.html#sl_dns_zone_create)</td>
+ <td>[bluemix sl dns import](/docs/cli/reference/softlayer/index.html#sl_dns_import)</td>
+ <td>[bluemix sl dns record-add](/docs/cli/reference/softlayer/index.html#sl_dns_record_add)</td>
+ <td>[bluemix sl dns record-edit](/docs/cli/reference/softlayer/index.html#sl_dns_record_edit)</td>
+ <td>[bluemix sl dns record-list](/docs/cli/reference/softlayer/index.html#sl_dns_record_list)</td>
+ <td>[bluemix sl dns record-remove](/docs/cli/reference/softlayer/index.html#sl_dns_record_remove)</td>
+ <td>[bluemix sl dns zone-create](/docs/cli/reference/softlayer/index.html#sl_dns_zone_create)</td>
  </tr>
  <tr>
-   <td>[ibmcloud sl dns zone-delete](/docs/cli/reference/softlayer/index.html#sl_dns_zone_delete)</td>
-   <td>[ibmcloud sl dns zone-list](/docs/cli/reference/softlayer/index.html#sl_dns_zone_list)</td>
-   <td>[ibmcloud sl dns zone-print](/docs/cli/reference/softlayer/index.html#sl_dns_zone_print)</td>
+   <td>[bluemix sl dns zone-delete](/docs/cli/reference/softlayer/index.html#sl_dns_zone_delete)</td>
+   <td>[bluemix sl dns zone-list](/docs/cli/reference/softlayer/index.html#sl_dns_zone_list)</td>
+   <td>[bluemix sl dns zone-print](/docs/cli/reference/softlayer/index.html#sl_dns_zone_print)</td>
  </tr>
    </tbody>
  </table>
@@ -187,11 +182,11 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
-  <td>[ibmcloud sl globalip assign](/docs/cli/reference/softlayer/index.html#sl_globalip_assign)</td>
-  <td>[ibmcloud sl globalip cancel](/docs/cli/reference/softlayer/index.html#sl_globalip_cancel)</td>
-  <td>[ibmcloud sl globalip create](/docs/cli/reference/softlayer/index.html#sl_globalip_create)</td>
- <td>[ibmcloud sl globalip list](/docs/cli/reference/softlayer/index.html#sl_globalip_list)</td>
- <td>[ibmcloud sl globalip unassign](/docs/cli/reference/softlayer/index.html#sl_globalip_cancel)</td>
+  <td>[bluemix sl globalip assign](/docs/cli/reference/softlayer/index.html#sl_globalip_assign)</td>
+  <td>[bluemix sl globalip cancel](/docs/cli/reference/softlayer/index.html#sl_globalip_cancel)</td>
+  <td>[bluemix sl globalip create](/docs/cli/reference/softlayer/index.html#sl_globalip_create)</td>
+ <td>[bluemix sl globalip list](/docs/cli/reference/softlayer/index.html#sl_globalip_list)</td>
+ <td>[bluemix sl globalip unassign](/docs/cli/reference/softlayer/index.html#sl_globalip_cancel)</td>
  </tr>
    </tbody>
  </table>
@@ -205,10 +200,10 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud sl image delete](/docs/cli/reference/softlayer/index.html#sl_image_delete)</td>
- <td>[ibmcloud sl image detail](/docs/cli/reference/softlayer/index.html#sl_image_detail)</td>
- <td>[ibmcloud sl image edit](/docs/cli/reference/softlayer/index.html#sl_image_edit)</td>
- <td>[ibmcloud sl image list](/docs/cli/reference/softlayer/index.html#sl_image_list)</td>
+ <td>[bluemix sl image delete](/docs/cli/reference/softlayer/index.html#sl_image_delete)</td>
+ <td>[bluemix sl image detail](/docs/cli/reference/softlayer/index.html#sl_image_detail)</td>
+ <td>[bluemix sl image edit](/docs/cli/reference/softlayer/index.html#sl_image_edit)</td>
+ <td>[bluemix sl image list](/docs/cli/reference/softlayer/index.html#sl_image_list)</td>
  </tr>
    </tbody>
  </table>
@@ -222,19 +217,19 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud sl ipsec cancel](/docs/cli/reference/softlayer/index.html#sl_ipsec_cancel)</td>
- <td>[ibmcloud sl ipsec config](/docs/cli/reference/softlayer/index.html#sl_ipsec_config)</td>
- <td>[ibmcloud sl ipsec detail](/docs/cli/reference/softlayer/index.html#sl_ipsec_detail)</td>
- <td>[ibmcloud sl ipsec list](/docs/cli/reference/softlayer/index.html#sl_ipsec_list)</td>
- <td>[ibmcloud sl ipsec order](/docs/cli/reference/softlayer/index.html#sl_ipsec_order)</td>
- <td>[ibmcloud sl ipsec subnet-add](/docs/cli/reference/softlayer/index.html#sl_ipsec_subnet_add)</td>
+ <td>[bluemix sl ipsec cancel](/docs/cli/reference/softlayer/index.html#sl_ipsec_cancel)</td>
+ <td>[bluemix sl ipsec config](/docs/cli/reference/softlayer/index.html#sl_ipsec_config)</td>
+ <td>[bluemix sl ipsec detail](/docs/cli/reference/softlayer/index.html#sl_ipsec_detail)</td>
+ <td>[bluemix sl ipsec list](/docs/cli/reference/softlayer/index.html#sl_ipsec_list)</td>
+ <td>[bluemix sl ipsec order](/docs/cli/reference/softlayer/index.html#sl_ipsec_order)</td>
+ <td>[bluemix sl ipsec subnet-add](/docs/cli/reference/softlayer/index.html#sl_ipsec_subnet_add)</td>
  </tr>
  <tr>
- <td>[ibmcloud sl ipsec subnet-remove](/docs/cli/reference/softlayer/index.html#sl_ipsec_subnet_remove)</td>
- <td>[ibmcloud sl ipsec translation-add](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_add)</td>
- <td>[ibmcloud sl ipsec translation-remove](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_remove)</td>
- <td>[ibmcloud sl ipsec translation-update](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_update)</td>
- <td>[ibmcloud sl ipsec update](/docs/cli/reference/softlayer/index.html#sl_ipsec_update)</td>
+ <td>[bluemix sl ipsec subnet-remove](/docs/cli/reference/softlayer/index.html#sl_ipsec_subnet_remove)</td>
+ <td>[bluemix sl ipsec translation-add](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_add)</td>
+ <td>[bluemix sl ipsec translation-remove](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_remove)</td>
+ <td>[bluemix sl ipsec translation-update](/docs/cli/reference/softlayer/index.html#sl_ipsec_translation_update)</td>
+ <td>[bluemix sl ipsec update](/docs/cli/reference/softlayer/index.html#sl_ipsec_update)</td>
  </tr>
    </tbody>
  </table>
@@ -248,31 +243,31 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud sl loadbal cancel](/docs/cli/reference/softlayer/index.html#sl_loadbal_cancel)</td>
- <td>[ibmcloud sl loadbal create](/docs/cli/reference/softlayer/index.html#sl_loadbal_create)</td>
- <td>[ibmcloud sl loadbal create-options
+ <td>[bluemix sl loadbal cancel](/docs/cli/reference/softlayer/index.html#sl_loadbal_cancel)</td>
+ <td>[bluemix sl loadbal create](/docs/cli/reference/softlayer/index.html#sl_loadbal_create)</td>
+ <td>[bluemix sl loadbal create-options
 ](/docs/cli/reference/softlayer/index.html#sl_loadbal_create_options)</td>
- <td>[ibmcloud sl loadbal detail](/docs/cli/reference/softlayer/index.html#sl_loadbal_detail)</td>
- <td>[ibmcloud sl loadbal group-add](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_add)</td>
- <td>[ibmcloud sl loadbal group-delete](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_delete)</td>
+ <td>[bluemix sl loadbal detail](/docs/cli/reference/softlayer/index.html#sl_loadbal_detail)</td>
+ <td>[bluemix sl loadbal group-add](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_add)</td>
+ <td>[bluemix sl loadbal group-delete](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_delete)</td>
  </tr>
  <tr>
- <td>[ibmcloud sl loadbal group-edit](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_edit)</td>
- <td>[ibmcloud sl loadbal group-reset](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_reset)</td>
- <td>[ibmcloud sl loadbal health-checks
+ <td>[bluemix sl loadbal group-edit](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_edit)</td>
+ <td>[bluemix sl loadbal group-reset](/docs/cli/reference/softlayer/index.html#sl_loadbal_group_reset)</td>
+ <td>[bluemix sl loadbal health-checks
 ](/docs/cli/reference/softlayer/index.html#sl_loadbal_health_checks)</td>
- <td>[ibmcloud sl loadbal list
+ <td>[bluemix sl loadbal list
 ](/docs/cli/reference/softlayer/index.html#sl_loadbal_list)</td>
- <td>[ibmcloud sl loadbal routing-methods
+ <td>[bluemix sl loadbal routing-methods
 ](/docs/cli/reference/softlayer/index.html#sl_loadbal_routing_methods)</td>
- <td>[ibmcloud sl loadbal routing-types
+ <td>[bluemix sl loadbal routing-types
 ](/docs/cli/reference/softlayer/index.html#sl_loadbal_routing_types)</td>
  </tr>
  <tr>
- <td>[ibmcloud sl loadbal service-add](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_add)</td>
- <td>[ibmcloud sl loadbal service-delete](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_delete)</td>
- <td>[ibmcloud sl loadbal service-edit](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_edit)</td>
- <td>[ibmcloud sl loadbal service-toggle](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_toggle)</td>
+ <td>[bluemix sl loadbal service-add](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_add)</td>
+ <td>[bluemix sl loadbal service-delete](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_delete)</td>
+ <td>[bluemix sl loadbal service-edit](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_edit)</td>
+ <td>[bluemix sl loadbal service-toggle](/docs/cli/reference/softlayer/index.html#sl_loadbal_service_toggle)</td>
  </tr>
 </tbody>
  </table>
@@ -286,18 +281,18 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
-  <td>[ibmcloud sl security sshkey-add](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_add)</td>
-  <td>[ibmcloud sl security sshkey-edit](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_edit)</td>
-  <td>[ibmcloud sl security sshkey-list](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_list)</td>
-  <td>[ibmcloud sl security sshkey-print](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_print)</td>   
-  <td>[ibmcloud sl security sshkey-remove](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_remove)</td>
+  <td>[bluemix sl security sshkey-add](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_add)</td>
+  <td>[bluemix sl security sshkey-edit](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_edit)</td>
+  <td>[bluemix sl security sshkey-list](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_list)</td>
+  <td>[bluemix sl security sshkey-print](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_print)</td>   
+  <td>[bluemix sl security sshkey-remove](/docs/cli/reference/softlayer/index.html#sl_security_sshkey_remove)</td>
  </tr>
  <tr>
-  <td>[ibmcloud sl security cert-add](/docs/cli/reference/softlayer/index.html#sl_security_cert_add)</td>
-  <td>[ibmcloud sl security cert-edit](/docs/cli/reference/softlayer/index.html#sl_security_cert_edit)</td>
-  <td>[ibmcloud sl security cert-download](/docs/cli/reference/softlayer/index.html#sl_security_cert_download)</td>
-  <td>[ibmcloud sl security cert-list](/docs/cli/reference/softlayer/index.html#sl_security_cert_list)</td>
-  <td>[ibmcloud sl security cert-remove](/docs/cli/reference/softlayer/index.html#sl_security_cert_remove)</td>
+  <td>[bluemix sl security cert-add](/docs/cli/reference/softlayer/index.html#sl_security_cert_add)</td>
+  <td>[bluemix sl security cert-edit](/docs/cli/reference/softlayer/index.html#sl_security_cert_edit)</td>
+  <td>[bluemix sl security cert-download](/docs/cli/reference/softlayer/index.html#sl_security_cert_download)</td>
+  <td>[bluemix sl security cert-list](/docs/cli/reference/softlayer/index.html#sl_security_cert_list)</td>
+  <td>[bluemix sl security cert-remove](/docs/cli/reference/softlayer/index.html#sl_security_cert_remove)</td>
  </tr>
    </tbody>
  </table>
@@ -311,11 +306,11 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud sl subnet cancel](/docs/cli/reference/softlayer/index.html#sl_subnet_cancel)</td>
- <td>[ibmcloud sl subnet create](/docs/cli/reference/softlayer/index.html#sl_subnet_create)</td>
- <td>[ibmcloud sl subnet detail](/docs/cli/reference/softlayer/index.html#sl_subnet_detail)</td>
- <td>[ibmcloud sl subnet list](/docs/cli/reference/softlayer/index.html#sl_subnet_list)</td>
- <td>[ibmcloud sl subnet lookup](/docs/cli/reference/softlayer/index.html#sl_subnet_lookup)</td>
+ <td>[bluemix sl subnet cancel](/docs/cli/reference/softlayer/index.html#sl_subnet_cancel)</td>
+ <td>[bluemix sl subnet create](/docs/cli/reference/softlayer/index.html#sl_subnet_create)</td>
+ <td>[bluemix sl subnet detail](/docs/cli/reference/softlayer/index.html#sl_subnet_detail)</td>
+ <td>[bluemix sl subnet list](/docs/cli/reference/softlayer/index.html#sl_subnet_list)</td>
+ <td>[bluemix sl subnet lookup](/docs/cli/reference/softlayer/index.html#sl_subnet_lookup)</td>
  </tr>
    </tbody>
  </table>
@@ -329,26 +324,26 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud sl vs cancel](/docs/cli/reference/softlayer/index.html#sl_vs_cancel)</td>
- <td>[ibmcloud sl vs capture](/docs/cli/reference/softlayer/index.html#sl_vs_capture)</td>
- <td>[ibmcloud sl vs create](/docs/cli/reference/softlayer/index.html#sl_vs_create)</td>
- <td>[ibmcloud sl vs options](/docs/cli/reference/softlayer/index.html#sl_vs_options)</td>
- <td>[ibmcloud sl vs credentials](/docs/cli/reference/softlayer/index.html#sl_vs_credentials)</td>
- <td>[ibmcloud sl vs detail](/docs/cli/reference/softlayer/index.html#sl_vs_detail)</td>
+ <td>[bluemix sl vs cancel](/docs/cli/reference/softlayer/index.html#sl_vs_cancel)</td>
+ <td>[bluemix sl vs capture](/docs/cli/reference/softlayer/index.html#sl_vs_capture)</td>
+ <td>[bluemix sl vs create](/docs/cli/reference/softlayer/index.html#sl_vs_create)</td>
+ <td>[bluemix sl vs options](/docs/cli/reference/softlayer/index.html#sl_vs_options)</td>
+ <td>[bluemix sl vs credentials](/docs/cli/reference/softlayer/index.html#sl_vs_credentials)</td>
+ <td>[bluemix sl vs detail](/docs/cli/reference/softlayer/index.html#sl_vs_detail)</td>
  </tr><tr>
- <td>[ibmcloud sl vs dns-sync](/docs/cli/reference/softlayer/index.html#sl_vs_dns_sync)</td>
- <td>[ibmcloud sl vs edit](/docs/cli/reference/softlayer/index.html#sl_vs_edit)</td>
- <td>[ibmcloud sl vs list](/docs/cli/reference/softlayer/index.html#sl_vs_list)</td>
- <td>[ibmcloud sl vs pause](/docs/cli/reference/softlayer/index.html#sl_vs_pause)</td>
- <td>[ibmcloud sl vs power-off](/docs/cli/reference/softlayer/index.html#sl_vs_power_off)</td>
- <td>[ibmcloud sl vs power-on](/docs/cli/reference/softlayer/index.html#sl_vs_power_on)
+ <td>[bluemix sl vs dns-sync](/docs/cli/reference/softlayer/index.html#sl_vs_dns_sync)</td>
+ <td>[bluemix sl vs edit](/docs/cli/reference/softlayer/index.html#sl_vs_edit)</td>
+ <td>[bluemix sl vs list](/docs/cli/reference/softlayer/index.html#sl_vs_list)</td>
+ <td>[bluemix sl vs pause](/docs/cli/reference/softlayer/index.html#sl_vs_pause)</td>
+ <td>[bluemix sl vs power-off](/docs/cli/reference/softlayer/index.html#sl_vs_power_off)</td>
+ <td>[bluemix sl vs power-on](/docs/cli/reference/softlayer/index.html#sl_vs_power_on)
  </tr><tr>
- <td>[ibmcloud sl vs ready](/docs/cli/reference/softlayer/index.html#sl_vs_ready)</td>
- <td>[ibmcloud sl vs reboot](/docs/cli/reference/softlayer/index.html#sl_vs_reboot)</td>
- <td>[ibmcloud sl vs reload](/docs/cli/reference/softlayer/index.html#sl_vs_reload)</td>
- <td>[ibmcloud sl vs rescure](/docs/cli/reference/softlayer/index.html#sl_vs_rescure)</td>
- <td>[ibmcloud sl vs resume](/docs/cli/reference/softlayer/index.html#sl_vs_resume)</td>
- <td>[ibmcloud sl vs upgrade](/docs/cli/reference/softlayer/index.html#sl_vs_upgrade)</td>
+ <td>[bluemix sl vs ready](/docs/cli/reference/softlayer/index.html#sl_vs_ready)</td>
+ <td>[bluemix sl vs reboot](/docs/cli/reference/softlayer/index.html#sl_vs_reboot)</td>
+ <td>[bluemix sl vs reload](/docs/cli/reference/softlayer/index.html#sl_vs_reload)</td>
+ <td>[bluemix sl vs rescure](/docs/cli/reference/softlayer/index.html#sl_vs_rescure)</td>
+ <td>[bluemix sl vs resume](/docs/cli/reference/softlayer/index.html#sl_vs_resume)</td>
+ <td>[bluemix sl vs upgrade](/docs/cli/reference/softlayer/index.html#sl_vs_upgrade)</td>
  </tr>
    </tbody>
  </table>
@@ -362,25 +357,25 @@ lastupdated: "2018-06-08"
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud sl vlan create](/docs/cli/reference/softlayer/index.html#sl_vlan_create)</td>
- <td>[ibmcloud sl vlan cancel](/docs/cli/reference/softlayer/index.html#sl_vlan_cancel)</td>
- <td>[ibmcloud sl vlan detail](/docs/cli/reference/softlayer/index.html#sl_vlan_detail)</td>
- <td>[ibmcloud sl vlan edit](/docs/cli/reference/softlayer/index.html#sl_vlan_edite)</td>
- <td>[ibmcloud sl vlan list](/docs/cli/reference/softlayer/index.html#sl_vlan_list)</td>
- <td>[ibmcloud sl vlan options](/docs/cli/reference/softlayer/index.html#sl_vlan_options)</td>
+ <td>[bluemix sl vlan create](/docs/cli/reference/softlayer/index.html#sl_vlan_create)</td>
+ <td>[bluemix sl vlan cancel](/docs/cli/reference/softlayer/index.html#sl_vlan_cancel)</td>
+ <td>[bluemix sl vlan detail](/docs/cli/reference/softlayer/index.html#sl_vlan_detail)</td>
+ <td>[bluemix sl vlan edit](/docs/cli/reference/softlayer/index.html#sl_vlan_edite)</td>
+ <td>[bluemix sl vlan list](/docs/cli/reference/softlayer/index.html#sl_vlan_list)</td>
+ <td>[bluemix sl vlan options](/docs/cli/reference/softlayer/index.html#sl_vlan_options)</td>
  </tr>
    </tbody>
  </table>
 
 ### コマンドの使用法
-コマンドのヘルプ情報を表示するには、`ibmcloud sl [command] -h` を実行します。
+コマンドのヘルプ情報を表示するには、`bluemix sl [command] -h` を実行します。
 
-### ibmcloud sl init
+### bluemix sl init
 {: #sl_init}
 
-{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー環境への接続に使用される構成設定を初期化します。 この構成には、ユーザー名、API キーまたはパスワード、アカウント、およびエンドポイントが含まれます。
+{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー環境への接続に使用される構成設定を初期化します。この構成には、ユーザー名、API キーまたはパスワード、アカウント、およびエンドポイントが含まれます。
 ```
-ibmcloud sl init [OPTIONS]
+bluemix sl init [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -407,7 +402,7 @@ ibmcloud sl init [OPTIONS]
 
 例えば、{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーのユーザー名とパスワード/API キーを使用してログインします
 ```
-$ ibmcloud sl config
+$ bluemix sl config
 Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
 1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
 2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
@@ -423,7 +418,7 @@ API Key:                   xxxxxxxxxx
 ```
 例えば、{{site.data.keyword.Bluemix_notm}} の Single-Sign-On を使用して Softlayer にログインします
 ```
-$ ibmcloud login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
+$ bx login -a api.ng.bluemix.net -u wangjunl@cn.ibm.com -p xxxxxxx -c 65ce8074c6c62b5
 API endpoint: api.ng.bluemix.net
 Authenticating...
 OK
@@ -434,43 +429,41 @@ API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
 Region:         us-south   
 User:           wangjunl@cn.ibm.com   
 Account:        Wilma's Account (65ce8074c6c62b5)   
-No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
+No org or space targeted, use 'bx target --cf or bx target -o ORG -s SPACE'
 
-Tip: use 'ibmcloud cf <command>' to run the Cloud Foundry CLI with {{site.data.keyword.Bluemix_notm}} CLI context.
+Tip: use 'bx cf <command>' to run the Cloud Foundry CLI with {{site.data.keyword.Bluemix_notm}} CLI context.
 ```
 
-```
-$ ibmcloud sl init
-Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
-1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
-2. {{site.data.keyword.Bluemix_notm}} Single-Sign-On を使用します
-
-Enter a number: 2
-Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]
+$ bx sl init
+{{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー認証の構成方法を以下から選択します。
+1. {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャーのユーザー名とパスワード/API キーを使用してログインする
+2. {{site.data.keyword.Bluemix_notm}} のシングル・サインオンを使用する
+数値を入力してください> 2
+Softlayer API エンドポイント URL: [https://api.softlayer.com/mobile/v3.1]> 
 Setting account to: 278444
 OK
-
-Softlayer API endpoint:    https://api.softlayer.com/mobile/v3.1   
+                              
+Softlayer API エンドポイント:    https://api.softlayer.com/mobile/v3.1   
 Account ID:                278444   
 User ID:                   12345678   
 IMS token:                 xxxxxxxxxx
 ```
 
-### ibmcloud sl help
+### bluemix sl help
 {: #sl_help}
 
 {{site.data.keyword.BluSoftlayer_notm}} インフラストラクチャー環境で作動するすべてのコマンドのヘルプ情報を表示します。
 ```
-ibmcloud sl help
+bluemix sl help
 
 ```
 
-### ibmcloud sl block access-authorize
+### bluemix sl block access-authorize
 {: #sl_block_access_authorize}
 
 指定されたボリュームへのホストのアクセスを許可します。
 ```
-ibmcloud sl block access-authorize VOLUME_ID [OPTIONS]
+bluemix sl block access-authorize VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -487,16 +480,16 @@ ibmcloud sl block access-authorize VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block access-authorize 12345678 --virtual-id 87654321
+bluemix sl block access-authorize 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーが、ID 12345678 のボリュームにアクセスすることを許可します。
 
-### ibmcloud sl block access-list
+### bluemix sl block access-list
 {: #sl_block_access_list}
 
 ACL をリストします。
 ```
-ibmcloud sl block access-list VOLUME_ID [OPTIONS]
+bluemix sl block access-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -509,16 +502,16 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block access-list 12345678 --sortby id
+bluemix sl block access-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームへのアクセスを許可されているすべてのホストをリストし、それらを ID によってソートします。
 
-### ibmcloud sl block access-revoke
+### bluemix sl block access-revoke
 {: #sl_block_access_revoke}
 
 指定されたボリュームにアクセスするホストの許可を取り消します。
 ```
-ibmcloud sl block access-revoke VOLUME_ID [OPTIONS]
+bluemix sl block access-revoke VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -535,61 +528,61 @@ ibmcloud sl block access-revoke VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block access-revoke 12345678 --virtual-id 87654321
+bluemix sl block access-revoke 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーの、ID 12345678 のボリュームへのアクセスを取り消します。
 
-### ibmcloud sl block replica-failback
+### bluemix sl block replica-failback
 {: #sl_block_replica_failback}
 
 レプリカからブロック・ボリュームをフェイルバックします。
 ```
-ibmcloud sl block replica-failback VOLUME_ID
+bluemix sl block replica-failback VOLUME_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl block replica-failback 12345678
+bluemix sl block replica-failback 12345678
 ```
 このコマンドは、ID 12345678 のボリュームのフェイルバック操作を実行します。
 
-### ibmcloud sl block replica-failover
+### bluemix sl block replica-failover
 {: #sl_block_replica_failover}
 
 ブロック・ボリュームを、指定されたレプリカ・ボリュームにフェイルオーバーします。
 ```
-ibmcloud sl block replica-failover VOLUME_ID REPLICA_ID
+bluemix sl block replica-failover VOLUME_ID REPLICA_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl block replica-failover 12345678 87654321
+bluemix sl block replica-failover 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームの、ID 87654321 のレプリカ・ボリュームへのフェイルオーバー操作を実行します。
 
-### ibmcloud sl block replica-locations
+### bluemix sl block replica-locations
 {: #sl_block_replica_locations}
 
 指定されたボリュームに適切な複製データ・センターをリストします。
 ```
-ibmcloud sl block replica-locations VOLUME_ID
+bluemix sl block replica-locations VOLUME_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl block replica-locations 12345678
+bluemix sl block replica-locations 12345678
 ```
 このコマンドは、ID 12345678 のブロック・ボリュームの適切な複製データ・センターをリストします。
 
-### ibmcloud sl block replica-order
+### bluemix sl block replica-order
 {: #sl_block_replica_order}
 
 ブロック・ストレージ・レプリカ・ボリュームを注文します。
 ```
-ibmcloud sl block replica-order VOLUME_ID [OPTIONS]
+bluemix sl block replica-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -610,31 +603,31 @@ ibmcloud sl block replica-order VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LINUX
+bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LINUX
 ```
 このコマンドは、ID 12345678 のボリュームのレプリカを注文します。このレプリカは、毎日の複製を実行し、dal09 にあり、層レベルは 4、OS タイプは Linux です。
 
-### ibmcloud sl block replica-partners
+### bluemix sl block replica-partners
 {: #sl_block_replica_partners}
 
 ブロック・ボリュームの既存のレプリカ・ボリュームをリストします。
 ```
-ibmcloud sl block replica-partners VOLUME_ID [OPTIONS]
+bluemix sl block replica-partners VOLUME_ID [OPTIONS]
 ```
 
 
 **例**:
 ```
-ibmcloud sl block replica-partners 12345678
+bluemix sl block replica-partners 12345678
 ```
 このコマンドは、ID 12345678 のブロック・ボリュームの既存のレプリカ・ボリュームをリストします。
 
-### ibmcloud sl block snapshot-cancel
+### bluemix sl block snapshot-cancel
 {: #sl_block_snapshot_cancel}
 
 指定されたボリュームの既存のスナップショット・スペースを取り消します。
 ```
-ibmcloud sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
+bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -649,16 +642,16 @@ ibmcloud sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block snapshot-cancel 12345678 --immediate -f
+bluemix sl block snapshot-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のスナップショットを、確認を要求せず、即時に取り消します。
 
-### ibmcloud sl block snapshot-create
+### bluemix sl block snapshot-create
 {: #sl_block_snapshot_create}
 
 指定されたボリュームにスナップショットを作成します。
 ```
-ibmcloud sl block snapshot-create VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -669,16 +662,16 @@ ibmcloud sl block snapshot-create VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block snapshot-create 12345678 --note snapshotforbluemix
+bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを、snapshotforbluemix の追加メモと共に作成します。
 
-### ibmcloud sl block snapshot-disable
+### bluemix sl block snapshot-disable
 {: #sl_block_snapshot_disable}
 
 指定されたスケジュールでの指定されたボリュームのスナップショットを無効にします。
 ```
-ibmcloud sl block snapshot-disable VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -689,16 +682,16 @@ ibmcloud sl block snapshot-disable VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block snapshot-disable 12345678 -s DAILY
+bluemix sl block snapshot-disable 12345678 -s DAILY
 ```
 このコマンドは、ID 12345678 のボリュームの毎日のスナップショットを無効にします。
 
-### ibmcloud sl block snapshot-enable
+### bluemix sl block snapshot-enable
 {: #sl_block_snapshot_enable}
 
 指定されたスケジュールで指定されたボリュームのスナップショットを有効にします。
 ```
-ibmcloud sl block snapshot-enable VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -717,31 +710,31 @@ ibmcloud sl block snapshot-enable VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
+bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを有効にします。スナップショットは、毎週日曜日の 2:00 に取られ、最高 5 個のスナップショットが保持されます。
 
-### ibmcloud sl block snapshot-delete
+### bluemix sl block snapshot-delete
 {: #sl_block_snapshot_delete}
 
 指定されたボリュームのスナップショットを削除します。
 ```
-ibmcloud sl block snapshot-delete SNAPSHOT_ID
+bluemix sl block snapshot-delete SNAPSHOT_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl block snapshot-delete 12345678
+bluemix sl block snapshot-delete 12345678
 ```
 このコマンドは、ID 12345678 のスナップショットを削除します。
 
-### ibmcloud sl block snapshot-list
+### bluemix sl block snapshot-list
 {: #sl_block_snapshot_list}
 
 ブロック・ストレージ・スナップショットをリストします。
 ```
-ibmcloud sl block snapshot-list VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -752,16 +745,16 @@ ibmcloud sl block snapshot-list VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block snapshot-list 12345678 --sortby id
+bluemix sl block snapshot-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームのすべてのスナップショットをリストし、それらを ID によってソートします。
 
-### ibmcloud sl block snapshot-order
+### bluemix sl block snapshot-order
 {: #sl_block_snapshot_order}
 
 ブロック・ストレージ・ボリュームのスナップショット・スペースを注文します。
 ```
-ibmcloud sl block snapshot-order VOLUME_ID [OPTIONS]
+bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -780,31 +773,31 @@ ibmcloud sl block snapshot-order VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block snapshot-order 12345678 -s 1000 -t 4
+bluemix sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショット・スペースを注文します。サイズは 1000 GB、階層レベルは 1 GB 当たり 4 IOPS です。
 
-### ibmcloud sl block snapshot-restore
+### bluemix sl block snapshot-restore
 {: #sl_block_snapshot_restore}
 
 指定されたスナップショットを使用してブロック・ボリュームをリストアします。
 ```
-ibmcloud sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
+bluemix sl block snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl block snapshot-restore 12345678 87654321
+bluemix sl block snapshot-restore 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームを、ID 87654321 のスナップショットからリストアします。
 
-### ibmcloud sl block volume-cancel
+### bluemix sl block volume-cancel
 {: #sl_block_volume_cancel}
 
 既存のブロック・ストレージ・ボリュームを取り消します。
 ```
-ibmcloud sl block volume-cancel VOLUME_ID [OPTIONS]
+bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -819,16 +812,16 @@ ibmcloud sl block volume-cancel VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block volume-cancel 12345678 --immediate -f
+bluemix sl block volume-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のボリュームを、確認を要求せず、即時に取り消します。
 
-### ibmcloud sl block volume-list
+### bluemix sl block volume-list
 {: #sl_block_volume_list}
 
 ブロック・ストレージをリストします。
 ```
-ibmcloud sl block volume-list [OPTIONS]
+bluemix sl block volume-list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -849,31 +842,31 @@ ibmcloud sl block volume-list [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
+bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 このコマンドは、dal09 にある、現行アカウントのすべてのエンデュランス・ボリュームをリストし、それらを容量によってソートします。
 
-### ibmcloud sl block volume-detail
+### bluemix sl block volume-detail
 {: #sl_block_volume_detail}
 
 指定されたボリュームの詳細を表示します。
 ```
-ibmcloud sl block volume-detail VOLUME_ID
+bluemix sl block volume-detail VOLUME_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl block volume-detail 12345678
+bluemix sl block volume-detail 12345678
 ```
 このコマンドは、ID 12345678 のボリュームの詳細を表示します。
 
-### ibmcloud sl block volume-duplicate
+### bluemix sl block volume-duplicate
 {: #sl_block_volume_duplicate}
 
 既存のボリュームを複写してブロック・ボリュームを注文します。
 ```
-ibmcloud sl block volume-duplicate VOLUME_ID [OPTIONS]
+bluemix sl block volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -894,16 +887,16 @@ ibmcloud sl block volume-duplicate VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block volume-duplicate 12345678
+bluemix sl block volume-duplicate 12345678
 ```
 このコマンドは、ID 12345678 のボリュームを複写して新規ボリュームを注文します。
 
-### ibmcloud sl block volume-order
+### bluemix sl block volume-order
 {: #sl_block_volume_order}
 
 ブロック・ストレージ・ボリュームを注文します。
 ```
-ibmcloud sl block volume-order [OPTIONS]
+bluemix sl block volume-order [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -928,31 +921,31 @@ ibmcloud sl block volume-order [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
+bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000 --os-type LINUX -d dal09
 ```
 このコマンドは、サイズが 1000 GB、IOPS が 4000、OS タイプが LINUX、ロケーションが dal09 のパフォーマンス・ボリュームを注文します。
 
-### ibmcloud sl block volume-options
+### bluemix sl block volume-options
 {: #sl_block_volume_options}
 
 ブロック・ストレージの注文に関するすべてのオプションをリストします。
 ```
-ibmcloud sl block volume-options
+bluemix sl block volume-options
 ```
 
 
 **例**:
 ```
-ibmcloud sl block volume-options
+bluemix sl block volume-options
 ```
 このコマンドは、ブロック・ストレージ・ボリュームの作成に関するすべてのオプション (ストレージ・タイプ、ボリューム・サイズ、OS タイプ、IOPS、階層レベル、データ・センター、およびスナップショット・サイズ) をリストします。
 
-### ibmcloud sl cdn cancel
+### bluemix sl cdn cancel
 {: #sl_cdn_cancel}
 
 CDN アカウントを取り消します。
 ```
-ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONS]
+bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -960,20 +953,20 @@ ibmcloud sl cdn cancel ACCOUNT_ID [OPTIONS]
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
-### ibmcloud sl cdn detail
+### bluemix sl cdn detail
 {: #sl_cdn_detail}
 
 CDN アカウントの詳細を表示します。
 ```
-ibmcloud sl cdn detail ACCOUNT_ID
+bluemix sl cdn detail ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn list
+### bluemix sl cdn list
 {: #sl_cdn_list}
 
 すべての CDN アカウントをリストします。
 ```
-ibmcloud sl cdn list [OPTIONS]
+bluemix sl cdn list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -983,20 +976,20 @@ ibmcloud sl cdn list [OPTIONS]
 <dt>--order</dt>
 <dd>注文 ID でフィルター操作します。</dd>
 </dl>
-### ibmcloud sl cdn load
+### bluemix sl cdn load
 {: #sl_cdn_load}
 
 すべてのエッジ・ノード上で 1 つ以上のファイルをキャッシュに入れます。
 ```
-ibmcloud sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
+bluemix sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### ibmcloud sl cdn order
+### bluemix sl cdn order
 {: #sl_cdn_order}
 
 CDN アカウントを注文します。
 ```
-ibmcloud sl cdn order [OPTIONS]
+bluemix sl cdn order [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1008,20 +1001,20 @@ ibmcloud sl cdn order [OPTIONS]
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
-### ibmcloud sl cdn options
+### bluemix sl cdn options
 {: #sl_cdn_options}
 
 CDN アカウントを注文する際の処理能力とストレージのオプション。
 ```
-ibmcloud sl cdn options
+bluemix sl cdn options
 ```
 
-### ibmcloud sl cdn origin-add
+### bluemix sl cdn origin-add
 {: #sl_cdn_origin_add}
 
 Origin Pull マッピングを作成します。
 ```
-ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
+bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1031,20 +1024,20 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dt>-c, --cname</dt>
 <dd>マッピングに付加する CNAME (オプション)。</dd>
 </dl>
-### ibmcloud sl cdn origin-list
+### bluemix sl cdn origin-list
 {: #sl_cdn_origin_list}
 
 Origin Pull マッピングをリストします。
 ```
-ibmcloud sl cdn origin-list ACCOUNT_ID
+bluemix sl cdn origin-list ACCOUNT_ID
 ```
 
-### ibmcloud sl cdn origin-remove
+### bluemix sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
 Origin Pull マッピングを削除します。
 ```
-ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
+bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1052,12 +1045,12 @@ ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
-### ibmcloud sl cdn purge
+### bluemix sl cdn purge
 {: #sl_cdn_purge}
 
 すべてのエッジ・ノードからキャッシュされているファイルをパージします。
 ```
-ibmcloud sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
+bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...][OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1065,12 +1058,12 @@ ibmcloud sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
-### ibmcloud sl file access-authorize
+### bluemix sl file access-authorize
 {: #sl_file_access_authorize}
 
 指定されたボリュームへのホストのアクセスを許可します。
 ```
-ibmcloud sl file access-authorize VOLUME_ID [OPTIONS]
+bluemix sl file access-authorize VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1089,16 +1082,16 @@ ibmcloud sl file access-authorize VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
+bluemix sl file access-authorize 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーが、ID 12345678 のボリュームにアクセスすることを許可します。
 
-### ibmcloud sl file access-list
+### bluemix sl file access-list
 {: #sl_file_access_list}
 
 ACL をリストします。
 ```
-ibmcloud sl file access-list VOLUME_ID [OPTIONS]
+bluemix sl file access-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1111,16 +1104,16 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file access-list 12345678 --sortby id
+bluemix sl file access-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームへのアクセスを許可されているすべてのホストをリストし、それらを ID によってソートします。
 
-### ibmcloud sl file access-revoke
+### bluemix sl file access-revoke
 {: #sl_file_access_revoke}
 
 指定されたボリュームにアクセスするホストの許可を取り消します。
 ```
-ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
+bluemix sl file access-revoke VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1139,61 +1132,61 @@ ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
+bluemix sl file access-revoke 12345678 --virtual-id 87654321
 ```
 このコマンドは、ID 87654321 の仮想サーバーの、ID 12345678 のボリュームへのアクセスを取り消します。
 
-### ibmcloud sl file replica-failback
+### bluemix sl file replica-failback
 {: #sl_file_replica_failback}
 
 レプリカからファイル・ボリュームをフェイルバックします。
 ```
-ibmcloud sl file replica-failback VOLUME_ID
+bluemix sl file replica-failback VOLUME_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl file replica-failback 12345678
+bluemix sl file replica-failback 12345678
 ```
 このコマンドは、ID 12345678 のボリュームのフェイルバック操作を実行します。
 
-### ibmcloud sl file replica-failover
+### bluemix sl file replica-failover
 {: #sl_file_replica_failover}
 
 ファイル・ボリュームを、指定されたレプリカ・ボリュームにフェイルオーバーします。
 ```
-ibmcloud sl file replica-failover VOLUME_ID REPLICA_ID
+bluemix sl file replica-failover VOLUME_ID REPLICA_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl file replica-failover 12345678 87654321
+bluemix sl file replica-failover 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームの、ID 87654321 のレプリカ・ボリュームへのフェイルオーバー操作を実行します。
 
-### ibmcloud sl file replica-locations
+### bluemix sl file replica-locations
 {: #sl_file_replica_locations}
 
 指定されたボリュームに適切な複製データ・センターをリストします。
 ```
-ibmcloud sl file replica-locations VOLUME_ID
+bluemix sl file replica-locations VOLUME_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl file replica-locations 12345678
+bluemix sl file replica-locations 12345678
 ```
 このコマンドは、ID 12345678 のファイル・ボリュームの適切な複製データ・センターをリストします。
 
-### ibmcloud sl file replica-order
+### bluemix sl file replica-order
 {: #sl_file_replica_order}
 
 ファイル・ストレージ・レプリカ・ボリュームを注文します。
 ```
-ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
+bluemix sl file replica-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1212,31 +1205,31 @@ ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
+bluemix sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 このコマンドは、ID 12345678 のボリュームのレプリカを注文します。このレプリカは、毎日の複製を実行し、dal09 にあり、層レベルは 4 です。
 
-### ibmcloud sl file replica-partners
+### bluemix sl file replica-partners
 {: #sl_file_replica_partners}
 
 ファイル・ボリュームの既存のレプリカ・ボリュームをリストします。
 ```
-ibmcloud sl file replica-partners VOLUME_ID [OPTIONS]
+bluemix sl file replica-partners VOLUME_ID [OPTIONS]
 ```
 
 
 **例**:
 ```
-ibmcloud sl file replica-partners 12345678
+bluemix sl file replica-partners 12345678
 ```
 このコマンドは、ID 12345678 のファイル・ボリュームの既存のレプリカ・ボリュームをリストします。
 
-### ibmcloud sl file snapshot-cancel
+### bluemix sl file snapshot-cancel
 {: #sl_file_snapshot_cancel}
 
 指定されたボリュームの既存のスナップショット・スペースを取り消します。
 ```
-ibmcloud sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
+bluemix sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1251,16 +1244,16 @@ ibmcloud sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file snapshot-cancel 12345678 --immediate -f
+bluemix sl file snapshot-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のスナップショットを、確認を要求せず、即時に取り消します。
 
-### ibmcloud sl file snapshot-create
+### bluemix sl file snapshot-create
 {: #sl_file_snapshot_create}
 
 指定されたボリュームにスナップショットを作成します。
 ```
-ibmcloud sl file snapshot-create VOLUME_ID [OPTIONS]
+bluemix sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1271,16 +1264,16 @@ ibmcloud sl file snapshot-create VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file snapshot-create 12345678 --note snapshotforbluemix
+bluemix sl file snapshot-create 12345678 --note snapshotforbluemix
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを、snapshotforbluemix の追加メモと共に作成します。
 
-### ibmcloud sl file snapshot-disable
+### bluemix sl file snapshot-disable
 {: #sl_file_snapshot_disable}
 
 指定されたスケジュールでの指定されたボリュームのスナップショットを無効にします。
 ```
-ibmcloud sl file snapshot-disable VOLUME_ID [OPTIONS]
+bluemix sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1291,16 +1284,16 @@ ibmcloud sl file snapshot-disable VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file snapshot-disable 12345678 -s DAILY
+bluemix sl file snapshot-disable 12345678 -s DAILY
 ```
 このコマンドは、ID 12345678 のボリュームの毎日のスナップショットを無効にします。
 
-### ibmcloud sl file snapshot-enable
+### bluemix sl file snapshot-enable
 {: #sl_file_snapshot_enable}
 
 指定されたスケジュールで指定されたボリュームのスナップショットを有効にします。
 ```
-ibmcloud sl file snapshot-enable VOLUME_ID [OPTIONS]
+bluemix sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1319,31 +1312,31 @@ ibmcloud sl file snapshot-enable VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
+bluemix sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショットを有効にします。スナップショットは、毎週日曜日の 2:00 に取られ、最高 5 個のスナップショットが保持されます。
 
-### ibmcloud sl file snapshot-delete
+### bluemix sl file snapshot-delete
 {: #sl_file_snapshot_delete}
 
 指定されたボリュームのスナップショットを削除します。
 ```
-ibmcloud sl file snapshot-delete SNAPSHOT_ID
+bluemix sl file snapshot-delete SNAPSHOT_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl file snapshot-delete 12345678
+bluemix sl file snapshot-delete 12345678
 ```
 このコマンドは、ID 12345678 のスナップショットを削除します。
 
-### ibmcloud sl file snapshot-list
+### bluemix sl file snapshot-list
 {: #sl_file_snapshot_list}
 
 ファイル・ストレージ・スナップショットをリストします。
 ```
-ibmcloud sl file snapshot-list VOLUME_ID [OPTIONS]
+bluemix sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1354,16 +1347,16 @@ ibmcloud sl file snapshot-list VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file snapshot-list 12345678 --sortby id
+bluemix sl file snapshot-list 12345678 --sortby id
 ```
 このコマンドは、ID 12345678 のボリュームのすべてのスナップショットをリストし、それらを ID によってソートします。
 
-### ibmcloud sl file snapshot-order
+### bluemix sl file snapshot-order
 {: #sl_file_snapshot_order}
 
 ファイル・ストレージ・ボリュームのスナップショット・スペースを注文します。
 ```
-ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
+bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1382,31 +1375,31 @@ ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
+bluemix sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 このコマンドは、ID 12345678 のボリュームのスナップショット・スペースを注文します。サイズは 1000 GB、階層レベルは 1 GB 当たり 4 IOPS です。
 
-### ibmcloud sl file snapshot-restore
+### bluemix sl file snapshot-restore
 {: #sl_file_snapshot_restore}
 
 指定されたスナップショットを使用してファイル・ボリュームをリストアします。
 ```
-ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
+bluemix sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl file snapshot-restore 12345678 87654321
+bluemix sl file snapshot-restore 12345678 87654321
 ```
 このコマンドは、ID 12345678 のボリュームを、ID 87654321 のスナップショットからリストアします。
 
-### ibmcloud sl file volume-cancel
+### bluemix sl file volume-cancel
 {: #sl_file_volume_cancel}
 
 既存のファイル・ストレージ・ボリュームを取り消します。
 ```
-ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
+bluemix sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1421,16 +1414,16 @@ ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file volume-cancel 12345678 --immediate -f
+bluemix sl file volume-cancel 12345678 --immediate -f
 ```
 このコマンドは、ID 12345678 のボリュームを、確認を要求せず、即時に取り消します。
 
-### ibmcloud sl file volume-list
+### bluemix sl file volume-list
 {: #sl_file_volume_list}
 
 ファイル・ストレージをリストします。
 ```
-ibmcloud sl file volume-list [OPTIONS]
+bluemix sl file volume-list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1451,31 +1444,31 @@ ibmcloud sl file volume-list [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
+bluemix sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 このコマンドは、dal09 にある、現行アカウントのすべてのエンデュランス・ボリュームをリストし、それらを容量によってソートします。
 
-### ibmcloud sl file volume-detail
+### bluemix sl file volume-detail
 {: #sl_file_volume_detail}
 
 指定されたボリュームの詳細を表示します。
 ```
-ibmcloud sl file volume-detail VOLUME_ID
+bluemix sl file volume-detail VOLUME_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl file volume-detail 12345678
+bluemix sl file volume-detail 12345678
 ```
 このコマンドは、ID 12345678 のボリュームの詳細を表示します。
 
-### ibmcloud sl file volume-duplicate
+### bluemix sl file volume-duplicate
 {: #sl_file_volume_duplicate}
 
 既存のボリュームを複写してファイル・ボリュームを注文します。
 ```
-ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
+bluemix sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1496,16 +1489,16 @@ ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file volume-duplicate 12345678
+bluemix sl file volume-duplicate 12345678
 ```
 このコマンドは、ID 12345678 のボリュームを複写して新規ボリュームを注文します。
 
-### ibmcloud sl file volume-order
+### bluemix sl file volume-order
 {: #sl_file_volume_order}
 
 ファイル・ストレージ・ボリュームを注文します。
 ```
-ibmcloud sl file volume-order [OPTIONS]
+bluemix sl file volume-order [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1528,31 +1521,31 @@ ibmcloud sl file volume-order [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
+bluemix sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
 このコマンドは、サイズが 1000 GB、IOPS が 4000、ロケーションが dal09 のパフォーマンス・ボリュームを注文します。
 
-### ibmcloud sl file volume-options
+### bluemix sl file volume-options
 {: #sl_file_volume_options}
 
 ファイル・ストレージの注文に関するすべてのオプションをリストします。
 ```
-ibmcloud sl file volume-options
+bluemix sl file volume-options
 ```
 
 
 **例**:
 ```
-ibmcloud sl file volume-options
+bluemix sl file volume-options
 ```
 このコマンドは、ファイル・ストレージ・ボリュームの作成に関するすべてのオプション (ストレージ・タイプ、ボリューム・サイズ、IOPS、層レベル、データ・センター、およびスナップショット・サイズ) をリストします。
 
-### ibmcloud sl dns import
+### bluemix sl dns import
 {: #sl_dns_import}
 
 BIND ゾーン・ファイルに基づいてゾーンをインポートします。
 ```
-ibmcloud sl dns import ZONEFILE [OPTIONS]
+bluemix sl dns import ZONEFILE [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1563,16 +1556,16 @@ ibmcloud sl dns import ZONEFILE [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl dns import ~/blumix.net.txt
+bluemix sl dns import ~/blumix.net.txt
 ```
 このコマンドは、ファイル ~/blumix.net.txt からゾーンとそのリソース・レコードをインポートします。
 
-### ibmcloud sl dns record-add
+### bluemix sl dns record-add
 {: #sl_dns_record_add}
 
 ゾーン内のリソース・レコードを追加します。
 ```
-ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
+bluemix sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1583,16 +1576,16 @@ ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
+bluemix sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
 ```
 このコマンドは、A レコードをゾーン bluemix.net に追加します。ホストは「ftp」、データは「127.0.0.1」、および ttl は 86400 秒です。
 
-### ibmcloud sl dns record-edit
+### bluemix sl dns record-edit
 {: #sl_dns_record_edit}
 
 ゾーン内のリソース・レコードを更新します
 ```
-ibmcloud sl dns record-edit ZONE [OPTIONS]
+bluemix sl dns record-edit ZONE [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1609,16 +1602,16 @@ ibmcloud sl dns record-edit ZONE [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
+bluemix sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 このコマンドは、ゾーン bluemix.net のレコードを編集します。ID は 12345678 です。データを「127.0.0.2」に設定し、ttl を 3600 に設定します。
 
-### ibmcloud sl dns record-list
+### bluemix sl dns record-list
 {: #sl_dns_record_list}
 
 ゾーン内のすべてのリソース・レコードをリストします。
 ```
-ibmcloud sl dns record-list ZONE [OPTIONS]
+bluemix sl dns record-list ZONE [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1635,91 +1628,91 @@ ibmcloud sl dns record-list ZONE [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
+bluemix sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
 ```
 このコマンドは、ゾーン bluemix.net のすべての A レコードをリストします。フィルター基準ホストは elasticsearch で TTL は 900 秒です。
 
-### ibmcloud sl dns record-remove
+### bluemix sl dns record-remove
 {: #sl_dns_record_remove}
 
 ゾーンからリソース・レコードを削除します。
 ```
-ibmcloud sl dns record-remove RECORD_ID
+bluemix sl dns record-remove RECORD_ID
 ```
 
 
 **例**:
 ```
-ibmcloud sl dns record-remove 12345678
+bluemix sl dns record-remove 12345678
 ```
 このコマンドは、ID 12345678 のリソース・レコードを削除します。
 
-### ibmcloud sl dns zone-create
+### bluemix sl dns zone-create
 {: #sl_dns_zone_create}
 
 ゾーンを作成します。
 ```
-ibmcloud sl dns zone-create ZONE
+bluemix sl dns zone-create ZONE
 ```
 
 
 **例**:
 ```
-ibmcloud sl dns zone-create bluemix.net
+bluemix sl dns zone-create bluemix.net
 ```
 このコマンドは、bluemix.net という名前のゾーンを作成します。
 
-### ibmcloud sl dns zone-delete
+### bluemix sl dns zone-delete
 {: #sl_dns_zone_delete}
 
 ゾーンを削除します。
 ```
-ibmcloud sl dns zone-delete ZONE
+bluemix sl dns zone-delete ZONE
 ```
 
 
 **例**:
 ```
-ibmcloud sl dns zone-delete bluemix.net
+bluemix sl dns zone-delete bluemix.net
 ```
 このコマンドは、bluemix.net という名前のゾーンを削除します。
 
-### ibmcloud sl dns zone-list
+### bluemix sl dns zone-list
 {: #sl_dns_zone_list}
 
 ユーザーのアカウントのすべてのゾーンをリストします。
 ```
-ibmcloud sl dns zone-list
+bluemix sl dns zone-list
 ```
 
 
 **例**:
 ```
-ibmcloud sl dns zone-list
+bluemix sl dns zone-list
 ```
 このコマンドは、現行アカウントにあるすべてのゾーンをリストします。
 
-### ibmcloud sl dns zone-print
+### bluemix sl dns zone-print
 {: #sl_dns_zone_print}
 
 ゾーンおよびリソース・レコードを BIND フォーマットで出力します。
 ```
-ibmcloud sl dns zone-print ZONE
+bluemix sl dns zone-print ZONE
 ```
 
 
 **例**:
 ```
-ibmcloud sl dns zone-print bluemix.net
+bluemix sl dns zone-print bluemix.net
 ```
 このコマンドは、bluemix.net という名前のゾーンを BIND フォーマットで出力します。
 
-### ibmcloud sl globalip create
+### bluemix sl globalip create
 {: #sl_globalip_create}
 
 グローバル IP を作成します。
 ```
-ibmcloud sl globalip create [OPTIONS]
+bluemix sl globalip create [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1734,31 +1727,31 @@ ibmcloud sl globalip create [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl globalip create --v6
+bluemix sl globalip create --v6
 ```
 このコマンドは、IP V6 アドレスを作成します。
 
-### ibmcloud sl globalip assign
+### bluemix sl globalip assign
 {: #sl_globalip_assign}
 
 グローバル IP をターゲットのルーターまたはデバイスに割り当てます。
 ```
-ibmcloud sl globalip assign IDENTIFIER TARGET
+bluemix sl globalip assign IDENTIFIER TARGET
 ```
 
 
 **例**:
 ```
-ibmcloud sl globalip assign 12345678 9.111.123.456
+bluemix sl globalip assign 12345678 9.111.123.456
 ```
 このコマンドは、ID 12345678 の IP アドレスを、IP アドレス 9.111.123.456 のターゲット・デバイスに割り当てます。
 
-### ibmcloud sl globalip cancel
+### bluemix sl globalip cancel
 {: #sl_globalip_cancel}
 
 グローバル IP を取り消します。
 ```
-ibmcloud sl globalip cancel IDENTIFIER [OPTIONS]
+bluemix sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1769,16 +1762,16 @@ ibmcloud sl globalip cancel IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl globalip cancel 12345678
+bluemix sl globalip cancel 12345678
 ```
 このコマンドは、ID 12345678 の IP アドレスを取り消します。
 
-### ibmcloud sl globalip list
+### bluemix sl globalip list
 {: #sl_globalip_list}
 
 アカウントのすべてのグローバル IP をリストします。
 ```
-ibmcloud sl globalip list [OPTIONS]
+bluemix sl globalip list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1793,57 +1786,57 @@ ibmcloud sl globalip list [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl globalip list --v4
+bluemix sl globalip list --v4
 ```
 このコマンドは、現行アカウントのすべての IP V4 アドレスをリストします。
 
-### ibmcloud sl globalip unassign
+### bluemix sl globalip unassign
 {: #sl_globalip_unassign}
 
 ターゲットのルーターまたはデバイスからグローバル IP を割り当て解除します。
 ```
-ibmcloud sl globalip unassign IDENTIFIER
+bluemix sl globalip unassign IDENTIFIER
 ```
 
 
 **例**:
 ```
-ibmcloud sl globalip unassign 12345678
+bluemix sl globalip unassign 12345678
 ```
 このコマンドは、ID 12345678 の IP アドレスをターゲット・デバイスから割り当て解除します。
 
-### ibmcloud sl image delete
+### bluemix sl image delete
 {: #sl_image_delete}
 
 イメージを削除します。
 ```
-ibmcloud sl image delete IDENTIFIER
+bluemix sl image delete IDENTIFIER
 ```
 **例**:
 ```
-   ibmcloud sl image delete 12345678
+   bluemix sl image delete 12345678
 ```
-このコマンドは、ID `12345678` のイメージを削除します。
+このコマンドは、ID「12345678」のイメージを削除します。
 
-### ibmcloud sl image detail
+### bluemix sl image detail
 {: #sl_image_detail}
 
 イメージの詳細を取得します。
 ```
-ibmcloud sl image detail IDENTIFIER
+bluemix sl image detail IDENTIFIER
 ```
 **例**:
 ```
- ibmcloud sl image detail 12345678
+ bluemix sl image detail 12345678
 ```
 このコマンドは、ID 12345678 のイメージの詳細を取得します。
 
-### ibmcloud sl image edit
+### bluemix sl image edit
 {: #sl_image_edit}
 
 イメージの詳細を編集します。
 ```
-ibmcloud sl image edit IDENTIFIER [OPTIONS]
+bluemix sl image edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1858,16 +1851,16 @@ ibmcloud sl image edit IDENTIFIER [OPTIONS]
 
 *例**:
 ```  
-ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
+bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
-このコマンドは、ID `12345678` のイメージを編集し、名前を「`ubuntu16`」に設定し、メモを「`testing`」に設定し、タグを「`staging`」に設定します。
+このコマンドは、ID「12345678」のイメージを編集し、名前を「ubuntu16」に設定し、メモを「testing」に設定し、タグを「staging」に設定します。
 
-### ibmcloud sl image list
+### bluemix sl image list
 {: #sl_image_list}
 
 ご使用のアカウントのすべてのイメージをリストします。
 ```
-ibmcloud sl image list [OPTIONS]
+bluemix sl image list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1880,12 +1873,12 @@ ibmcloud sl image list [OPTIONS]
 <dd>プライベート・イメージのみを表示します。</dd>
 </dl>
 
-### ibmcloud sl ipsec cancel
+### bluemix sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 IPSec VPN トンネル・コンテキストを取り消します。
 ```
-ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
+bluemix sl ipsec cancel CONTEXT_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1898,20 +1891,20 @@ ibmcloud sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl ipsec config
+### bluemix sl ipsec config
 {: #sl_ipsec_config}
 
 トンネル・コンテキストの構成を要求します。
 ```
-ibmcloud sl ipsec config CONTEXT_ID [OPTIONS]
+bluemix sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec detail
+### bluemix sl ipsec detail
 {: #sl_ipsec_detail}
 
 IPSec VPN トンネル・コンテキストの詳細をリストします。
 ```
-ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
+bluemix sl ipsec detail CONTEXT_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1919,12 +1912,12 @@ ibmcloud sl ipsec detail CONTEXT_ID [OPTIONS]
 <dt>-i, --include</dt>
 <dd>追加リソースを組み込みます。オプション: at、is、rs、sr、ss。</dd>
 </dl>
-### ibmcloud sl ipsec list
+### bluemix sl ipsec list
 {: #sl_ipsec_list}
 
 IPSec VPN トンネル・コンテキストをリストします。
 ```
-ibmcloud sl ipsec list [OPTIONS]
+bluemix sl ipsec list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1932,12 +1925,12 @@ ibmcloud sl ipsec list [OPTIONS]
 <dt>--order</dt>
 <dd>IPSEC を購入した注文の ID を基準にフィルター操作します。</dd>
 </dl>
-### ibmcloud sl ipsec order
+### bluemix sl ipsec order
 {: #sl_ipsec_order}
 
 IPSec VPN トンネルを注文します。
 ```
-ibmcloud sl ipsec order [OPTIONS]
+bluemix sl ipsec order [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1946,12 +1939,12 @@ ibmcloud sl ipsec order [OPTIONS]
 <dd>必須。 IPSEC 用のデータ・センターの短縮名。例えば、dal09 など。</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-add
+### bluemix sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
 IPSec トンネル・コンテキストにサブネットを追加します。
 ```
-ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
+bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1964,20 +1957,20 @@ ibmcloud sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>作成するサブネット・ネットワーク ID。</dd>
 </dl>
 
-### ibmcloud sl ipsec subnet-remove
+### bluemix sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
 IPSEC トンネル・コンテキストからサブネットを削除します。
 ```
-ibmcloud sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
+bluemix sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-add
+### bluemix sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
 IPSec トンネルにアドレス変換を追加します。
 ```
-ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
+bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -1989,20 +1982,20 @@ ibmcloud sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dt>-n, --note</dt>
 <dd>注。</dd>
 </dl>
-### ibmcloud sl ipsec translation-remove
+### bluemix sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
 IPSec から変換入力を削除します。
 ```
-ibmcloud sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
+bluemix sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### ibmcloud sl ipsec translation-update
+### bluemix sl ipsec translation-update
 {: #sl_ipsec_translation_update}
 
 IPSec のアドレス変換を更新します。
 ```
-ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
+bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2014,12 +2007,12 @@ ibmcloud sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dt>-n, --note</dt>
 <dd>注。</dd>
 </dl>
-### ibmcloud sl ipsec update
+### bluemix sl ipsec update
 {: #sl_ipsec_update}
 
 トンネル・コンテキストのプロパティーを更新します。
 ```
-ibmcloud sl ipsec update CONTEXT_ID [OPTIONS]
+bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2050,12 +2043,12 @@ ibmcloud sl ipsec update CONTEXT_ID [OPTIONS]
 <dd>フェーズ 2 鍵存続時間。範囲: 120-172800。</dd>
 </dl>
 
-### ibmcloud sl loadbal cancel
+### bluemix sl loadbal cancel
 {: #sl_loadbal_cancel}
 
 既存のロード・バランサーを取り消します。
 ```
-ibmcloud sl loadbal cancel LOADBAL_ID [OPTIONS]
+bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2064,12 +2057,12 @@ ibmcloud sl loadbal cancel LOADBAL_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl loadbal create
+### bluemix sl loadbal create
 {: #sl_loadbal_create}
 
 create-options から返された ID を指定してロード・バランサーを追加します。
 ```
-ibmcloud sl loadbal create PRICE_ID LOCATION [OPTIONS]
+bluemix sl loadbal create PRICE_ID LOCATION [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2078,28 +2071,28 @@ ibmcloud sl loadbal create PRICE_ID LOCATION [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl loadbal create-options
+### bluemix sl loadbal create-options
 {: #sl_loadbal_create_options}
 
 ロード・バランサーの作成に使用する価格オプションを取得します。
 ```
-ibmcloud sl loadbal create-options
+bluemix sl loadbal create-options
 ```
 
-### ibmcloud sl loadbal detail
+### bluemix sl loadbal detail
 {: #sl_loadbal_detail}
 
 ロード・バランサーの詳細を取得します。
 ```
-ibmcloud sl loadbal detail LOADBAL_ID
+bluemix sl loadbal detail LOADBAL_ID
 ```
 
-### ibmcloud sl loadbal group-add
+### bluemix sl loadbal group-add
 {: #sl_loadbal_group_add}
 
 新規ロード・バランサー・サービスを追加します。
 ```
-ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
+bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2109,17 +2102,17 @@ ibmcloud sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>必須。 ポート番号。</dd>
 <dt>-t, --routing-type</dt>
-<dd>必須。 ルーティング・タイプの ID。 ID を検出するには、「ibmcloud sl loadbal routing-types」を実行します。</dd>
+<dd>必須。 ルーティング・タイプの ID。 ID を検出するには、「bluemix sl loadbal routing-types」を実行します。</dd>
 <dt>-m, --routing-method</dt>
-<dd>必須。 ルーティング・メソッドの ID。 ID を検出するには、「ibmcloud sl loadbal routing-methods」を実行します。</dd>
+<dd>必須。 ルーティング・メソッドの ID。 ID を検出するには、「bluemix sl loadbal routing-methods」を実行します。</dd>
 </dl>
 
-### ibmcloud sl loadbal group-delete
+### bluemix sl loadbal group-delete
 {: #sl_loadbal_group_delete}
 
 既存のロード・バランサー・サービス・グループを削除します。
 ```
-ibmcloud sl loadbal group-delete GROUP_ID [OPTIONS]
+bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2128,12 +2121,12 @@ ibmcloud sl loadbal group-delete GROUP_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl loadbal group-edit
+### bluemix sl loadbal group-edit
 {: #sl_loadbal_group_edit}
 
 既存のロード・バランサー・サービス・グループを編集します。
 ```
-ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
+bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2143,33 +2136,33 @@ ibmcloud sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dt>-p, --port</dt>
 <dd>ポート番号を変更します。</dd>
 <dt>-t, --routing-type</dt>
-<dd>ルーティング・タイプの ID を変更します。 ID を検出するには、「ibmcloud sl loadbal routing-types」を実行します。</dd>
+<dd>ルーティング・タイプの ID を変更します。 ID を検出するには、「bluemix sl loadbal routing-types」を実行します。</dd>
 <dt>-m, --routing-method</dt>
-<dd>ルーティング方式の ID を変更します。 ID を検出するには、「ibmcloud sl loadbal routing-methods」を実行します。</dd>
+<dd>ルーティング方式の ID を変更します。 ID を検出するには、「bluemix sl loadbal routing-methods」を実行します。</dd>
 </dl>
 
-### ibmcloud sl loadbal group-reset
+### bluemix sl loadbal group-reset
 {: #sl_loadbal_group_reset}
 
 特定のサービス・グループでの接続をリセットします。
 ```
-ibmcloud sl loadbal group-reset LOADBAL_ID GROUP_ID
+bluemix sl loadbal group-reset LOADBAL_ID GROUP_ID
 ```
 
-### ibmcloud sl loadbal health-checks
+### bluemix sl loadbal health-checks
 {: #sl_loadbal_health_checks}
 
 ヘルス・チェック・タイプをリストします。
 ```
-ibmcloud sl loadbal health-checks
+bluemix sl loadbal health-checks
 ```
 
-### ibmcloud sl loadbal list
+### bluemix sl loadbal list
 {: #sl_loadbal_list}
 
 アクティブなロード・バランサーをリストします。
 ```
-ibmcloud sl loadbal list
+bluemix sl loadbal list
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2181,28 +2174,28 @@ ibmcloud sl loadbal list
 <dt>-p, --ip-address</dt>
 <dd>IP アドレスを基準にしてフィルター操作します。</dd>
 </dl>
-### ibmcloud sl loadbal routing-methods
+### bluemix sl loadbal routing-methods
 {: #sl_loadbal_routing_methods}
 
 ルーティング・メソッドをリストします。
 ```
-ibmcloud sl loadbal routing-methods
+bluemix sl loadbal routing-methods
 ```
 
-### ibmcloud sl loadbal routing-types
+### bluemix sl loadbal routing-types
 {: #sl_loadbal_routing_types}
 
 ルーティング・タイプをリストします。
 ```
-ibmcloud sl loadbal routing-types
+bluemix sl loadbal routing-types
 ```
 
-### ibmcloud sl loadbal service-add
+### bluemix sl loadbal service-add
 {: #sl_loadbal_service_add}
 
 新規のロード・バランサー・サービスを追加します。
 ```
-ibmcloud sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
+bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2219,12 +2212,12 @@ ibmcloud sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 <dd>必須。 サービスの IP アドレス。</dd>
 </dl>
 
-### ibmcloud sl loadbal service-delete
+### bluemix sl loadbal service-delete
 {: #sl_loadbal_service_delete}
 
 既存のロード・バランサー・サービスを削除します。
 ```
-ibmcloud sl loadbal service-delete SERVICE_ID [OPTIONS]
+bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2233,12 +2226,12 @@ ibmcloud sl loadbal service-delete SERVICE_ID [OPTIONS]
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl loadbal service-edit
+### bluemix sl loadbal service-edit
 {: #sl_loadbal_service_edit}
 
 サービス・グループのプロパティーを編集します。
 ```
-ibmcloud sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
+bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2257,12 +2250,12 @@ ibmcloud sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 <dd>サービスの IP アドレスを変更します。</dd>
 </dl>
 
-### ibmcloud sl loadbal service-toggle
+### bluemix sl loadbal service-toggle
 {: #sl_loadbal_service_toggle}
 
 既存のロード・バランサー・サービスの状況を切り替えます。
 ```
-ibmcloud sl loadbal service-toggle SERVICE_ID
+bluemix sl loadbal service-toggle SERVICE_ID
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2271,12 +2264,12 @@ ibmcloud sl loadbal service-toggle SERVICE_ID
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
-### ibmcloud sl security sshkey-add
+### bluemix sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 新規の SSH 鍵を追加します。
 ```
-ibmcloud sl security sshkey-add LABEL [OPTIONS]
+bluemix sl security sshkey-add LABEL [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2291,16 +2284,16 @@ ibmcloud sl security sshkey-add LABEL [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
+bluemix sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 このコマンドは、ファイル ~/.ssh/id_rsa.pub から SSH 鍵を、メモ「mykey」を付けて追加します。
 
-### ibmcloud sl security sshkey-edit
+### bluemix sl security sshkey-edit
 {: #sl_security_sshkey_edit}
 
 SSH 鍵を編集します。
 ```
-ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
+bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2313,16 +2306,16 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security sshkey-edit 12345678 --label Bluemix --note testing
+bluemix sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
 このコマンドは、ID 12345678 の SSH 鍵を更新し、ラベルを「Bluemix」に設定し、メモを「testing」に設定します。
 
-### ibmcloud sl security sshkey-list
+### bluemix sl security sshkey-list
 {: #sl_security_sshkey_list}
 
 ご使用のアカウントの SSH 鍵をリストします。
 ```
-ibmcloud sl security sshkey-list [OPTIONS]
+bluemix sl security sshkey-list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2333,16 +2326,16 @@ ibmcloud sl security sshkey-list [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security sshkey-list --sortby label
+bluemix sl security sshkey-list --sortby label
 ```
 このコマンドは、現行アカウントのすべての SSH 鍵をリストし、それらをラベルによってソートします。
 
-### ibmcloud sl security sshkey-print
+### bluemix sl security sshkey-print
 {: #sl_security_sshkey_print}
 
 SSH 鍵を画面に出力します。
 ```
-ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
+bluemix sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2353,16 +2346,16 @@ ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
+bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 このコマンドは、ID 12345678 の SSH 鍵の ID、ラベル、およびメモを表示し、公開鍵をファイル ~/mykey.pub に書き込みます。
 
-### ibmcloud sl security sshkey-remove
+### bluemix sl security sshkey-remove
 {: #sl_security_sshkey_remove}
 
 SSH 鍵を永久に削除します。
 ```
-ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
+bluemix sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2373,16 +2366,16 @@ ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security sshkey-remove 12345678 -f
+bluemix sl security sshkey-remove 12345678 -f
 ```
 このコマンドは、ID 12345678 の SSH 鍵を、確認を求めずに削除します。
 
-### ibmcloud sl security cert-add
+### bluemix sl security cert-add
 {: #sl_security_cert_add}
 
 SSL 証明書の詳細を追加してアップロードします。
 ```
-ibmcloud sl security cert-add [OPTIONS]
+bluemix sl security cert-add [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2401,16 +2394,16 @@ ibmcloud sl security cert-add [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key
+bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key
 ```
 このコマンドは、ドメイン bluemix.net の証明書ファイル ~/bluemix.net.cert と秘密鍵ファイル ~/bluemix.net.key を追加します。
 
-### ibmcloud sl security cert-edit
+### bluemix sl security cert-edit
 {: #sl_security_cert_edit}
 
 SSL 証明書を編集します。
 ```
-ibmcloud sl security cert-edit IDENTIFIER [OPTIONS]
+bluemix sl security cert-edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2429,31 +2422,31 @@ ibmcloud sl security cert-edit IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security cert-edit 12345678 --key ~/bluemix.net.key
+bluemix sl security cert-edit 12345678 --key ~/bluemix.net.key
 ```
 このコマンドは、ID 12345678 の証明書を編集し、ファイル ~/bluemix.net.key でその秘密鍵を更新します。
 
-### ibmcloud sl security cert-download
+### bluemix sl security cert-download
 {: #sl_security_cert_download}
 
 SSL 証明書および鍵ファイルをダウンロードします。
 ```
-ibmcloud sl security cert-download IDENTIFIER
+bluemix sl security cert-download IDENTIFIER
 ```
 
 
 **例**:
 ```
-ibmcloud sl security cert-download 12345678
+bluemix sl security cert-download 12345678
 ```
 このコマンドは、現行ディレクトリーに ID 12345678 の証明書に関する 4 つのファイルをダウンロードします。 4 つのファイルというのは、証明書ファイル、証明書署名要求ファイル、中間証明書ファイル、および秘密鍵ファイルです。
 
-### ibmcloud sl security cert-list
+### bluemix sl security cert-list
 {: #sl_security_cert_list}
 
 ご使用のアカウントの SSL 証明書をリストします。
 ```
-ibmcloud sl security cert-list [OPTIONS]
+bluemix sl security cert-list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2466,16 +2459,16 @@ ibmcloud sl security cert-list [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security cert-list --status valid --sortby days_until_expire
+bluemix sl security cert-list --status valid --sortby days_until_expire
 ```
 このコマンドは、現行アカウントのすべての有効な証明書をリストし、それらを有効期限日によってソートします。
 
-### ibmcloud sl security cert-remove
+### bluemix sl security cert-remove
 {: #sl_security_cert_remove}
 
 SSL 証明書を削除します。
 ```
-ibmcloud sl security cert-remove IDENTIFIER [OPTIONS]
+bluemix sl security cert-remove IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2486,16 +2479,16 @@ ibmcloud sl security cert-remove IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl security cert-remove 12345678
+bluemix sl security cert-remove 12345678
 ```
 このコマンドは、ID 12345678 の証明書を削除します。
 
-### ibmcloud sl subnet cancel
+### bluemix sl subnet cancel
 {: #sl_subnet_cancel}
 
 サブネットを取り消します。
 ```
-ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
+bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2506,16 +2499,16 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl subnet cancel 12345678 -f
+bluemix sl subnet cancel 12345678 -f
 ```
 このコマンドは、ID 12345678 のサブネットを、確認を求めずに取り消します。
 
-### ibmcloud sl subnet create
+### bluemix sl subnet create
 {: #sl_subnet_create}
 
 ご使用のアカウントに新規サブネットを追加します。
 ```
-ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
+bluemix sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2530,16 +2523,16 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl subnet create public 16 567
+bluemix sl subnet create public 16 567
 ```
 このコマンドは、16 個の IPv4 アドレスを持つパブリック・サブネットを作成し、ID 567 の VLAN に配置します。
 
-### ibmcloud sl subnet detail
+### bluemix sl subnet detail
 {: #sl_subnet_detail}
 
 サブネットの詳細を取得します。
 ```
-ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
+bluemix sl subnet detail IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2552,16 +2545,16 @@ ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl subnet detail 12345678
+bluemix sl subnet detail 12345678
 ```
 このコマンドは、仮想サーバーおよびハードウェア・サーバーの情報を含め、ID 12345678 のサブネットに関する詳細情報を表示します。
 
-### ibmcloud sl subnet list
+### bluemix sl subnet list
 {: #sl_subnet_list}
 
 ご使用のアカウントのすべてのサブネットをリストします。
 ```
-ibmcloud sl subnet list [OPTIONS]
+bluemix sl subnet list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2586,31 +2579,31 @@ ibmcloud sl subnet list [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
+bluemix sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 このコマンドは、現行アカウントの IP V4 サブネットをリストします。フィルター基準のデータ・センターは dal09、サブネット・タイプは PRIMARY、およびネットワーク・スペースは PUBLIC です。
 
-### ibmcloud sl subnet lookup
+### bluemix sl subnet lookup
 {: #sl_subnet_lookup}
 
 IP アドレスを検出し、そのサブネットとデバイスの情報を表示します。
 ```
-ibmcloud sl subnet lookup IP_ADDRESS
+bluemix sl subnet lookup IP_ADDRESS
 ```
 
 
 **例**:
 ```
-ibmcloud sl subnet lookup 9.125.235.255
+bluemix sl subnet lookup 9.125.235.255
 ```
 このコマンドは、アドレス 9.125.235.255 の IP アドレス・レコードを検出し、そのサブネットとデバイスの情報を表示します。
 
-### ibmcloud sl vlan create
+### bluemix sl vlan create
 {: #sl_vlan_create}
 
 新規 VLAN を作成します。
 ```
-ibmcloud sl vlan create [OPTIONS]
+bluemix sl vlan create [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2631,16 +2624,16 @@ ibmcloud sl vlan create [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
+bluemix sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 このコマンドは、データ・センター dal09 に、16 個の IP アドレスを持ち、myvlan という名前のパブリック VLAN を作成します。
 
-### ibmcloud sl vlan cancel
+### bluemix sl vlan cancel
 {: #sl_vlan_cancel}
 
 VLAN を取り消します。
 ```
-ibmcloud sl vlan cancel IDENTIFIER [OPTIONS]
+bluemix sl vlan cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2651,16 +2644,16 @@ ibmcloud sl vlan cancel IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vlan cancel 12345678 -f
+bluemix sl vlan cancel 12345678 -f
 ```
 このコマンドは、ID 12345678 の VLAN を、確認を求めずに取り消します。
 
-### ibmcloud sl vlan detail
+### bluemix sl vlan detail
 {: #sl_vlan_detail}
 
 VLAN についての詳細を取得します。
 ```
-ibmcloud sl vlan detail IDENTIFIER [OPTIONS]
+bluemix sl vlan detail IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2673,16 +2666,16 @@ ibmcloud sl vlan detail IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
+bluemix sl vlan detail 12345678  --no-vs --no-hardware
 ```
 このコマンドは、ID 12345678 の VLAN の詳細を表示し、仮想サーバーおよびハードウェア・サーバーをリストしません。
 
-### ibmcloud sl vlan edit
+### bluemix sl vlan edit
 {: #sl_vlan_edit}
 
 VLAN についての詳細を編集します。
 ```
-ibmcloud sl vlan edit IDENTIFIER [OPTIONS]
+bluemix sl vlan edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2693,16 +2686,16 @@ ibmcloud sl vlan edit IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vlan edit 12345678 -n myvlan-rename
+bluemix sl vlan edit 12345678 -n myvlan-rename
 ```
 このコマンドは、ID 12345678 の VLAN を更新し、それに新しい名前「myvlan-rename」を付けます。
 
-### ibmcloud sl vlan list
+### bluemix sl vlan list
 {: #sl_vlan_list}
 
 ご使用のアカウントのすべての VLAN をリストします。
 ```
-ibmcloud sl vlan list [OPTIONS]
+bluemix sl vlan list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2721,31 +2714,31 @@ ibmcloud sl vlan list [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vlan list -d dal09 --sortby number
+bluemix sl vlan list -d dal09 --sortby number
 ```
 このコマンドは、現行アカウントのすべての VLAN をリストします。フィルター基準のデータ・センターは dal09 で、VLAN 番号によってソートします。
 
-### ibmcloud sl vlan options
+### bluemix sl vlan options
 {: #sl_vlan_options}
 
 VLAN の作成に関するすべてのオプションをリストします。
 ```
-ibmcloud sl vlan options
+bluemix sl vlan options
 ```
 
 
 **例**:
 ```
-ibmcloud sl vlan options
+bluemix sl vlan options
 ```
 このコマンドは、VLAN を作成するためのすべてのオプション (例えば、VLAN タイプ、データ・センター、サブネット・サイズ、ルーターなど) をリストします。
 
-### ibmcloud sl vs cancel
+### bluemix sl vs cancel
 {: #sl_vs_cancel}
 
 仮想サーバー・インスタンスを取り消します。
 ```
-ibmcloud sl vs cancel IDENTIFIER [OPTIONS]
+bluemix sl vs cancel IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2756,16 +2749,16 @@ ibmcloud sl vs cancel IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs cancel 12345678
+bluemix sl vs cancel 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスを取り消します。
 
-### ibmcloud sl vs capture
+### bluemix sl vs capture
 {: #sl_vs_capture}
 
 仮想サーバー・インスタンスをイメージに取り込みます。
 ```
-ibmcloud sl vs capture IDENTIFIER [OPTIONS]
+bluemix sl vs capture IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2780,16 +2773,16 @@ ibmcloud sl vs capture IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs capture 12345678 -n mybluemix --all --note testing
+bluemix sl vs capture 12345678 -n mybluemix --all --note testing
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスをすべてのディスクと共に、「mybluemix」という名前のイメージに、「testing」というメモを付けて取り込みます。
 
-### ibmcloud sl vs create
+### bluemix sl vs create
 {: #sl_vs_create}
 
 仮想サーバー・インスタンスを作成します。
 ```
-ibmcloud sl vs create [OPTIONS]
+bluemix sl vs create [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2807,7 +2800,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-o, --os</dt>
 <dd>OS インストール・コード。 ヒント: <OS>_LATEST を指定できます。</dd>
 <dt>--image</dt>
-<dd>イメージ ID。 「ibmcloud sl image list」を参照してください。</dd>
+<dd>イメージ ID。 「bluemix sl image list」を参照してください。</dd>
 <dt>--billing</dt>
 <dd>請求レート。 デフォルトは hourly です。 オプション: hourly、monthly。</dd>
 <dt>--dedicated</dt>
@@ -2850,46 +2843,46 @@ ibmcloud sl vs create [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
+bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
 このコマンドは、ホスト名 myvsi、ドメイン bluemix.net、cpu コア x 4、4096M メモリー、データ・センター dal10 で仮想サーバー・インスタンスを注文します。
 
-### ibmcloud sl vs options
+### bluemix sl vs options
 {: #sl_vs_options}
 
 仮想サーバー・インスタンスの作成に関するオプションをリストします。
 ```
-ibmcloud sl vs options [OPTIONS]
+bluemix sl vs options [OPTIONS]
 ```
 
 
 **例**:
 ```
-ibmcloud sl vs options
+bluemix sl vs options
 ```
-このコマンドは、仮想サーバー・インスタンス (例えば、データ・センター、CPU、メモリー、OS、ディスク、ネットワーク速度など) を作成するためのすべてのオプションをリストします。
+This command lists all the options for creating a virtual server instance, eg.datacenters, cpu, memory, os, disk, network speed, etc.
 
-### ibmcloud sl vs credentials
+### bluemix sl vs credentials
 {: #sl_vs_credentials}
 
 仮想サーバー・インスタンスの資格情報をリストします。
 ```
-ibmcloud sl vs credentials IDENTIFIER [OPTIONS]
+bluemix sl vs credentials IDENTIFIER [OPTIONS]
 ```
 
 
 **例**:
 ```
-ibmcloud sl vs credentials 12345678
+bluemix sl vs credentials 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスのユーザー名とパスワードのすべてのペアをリストします。
 
-### ibmcloud sl vs detail
+### bluemix sl vs detail
 {: #sl_vs_detail}
 
 仮想サーバー・インスタンスの詳細を取得します。
 ```
-ibmcloud sl vs detail IDENTIFIER [OPTIONS]
+bluemix sl vs detail IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2902,16 +2895,16 @@ ibmcloud sl vs detail IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs details 12345678
+bluemix sl vs details 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスに関する詳細情報をリストします。
 
-### ibmcloud sl vs dns-sync
+### bluemix sl vs dns-sync
 {: #sl_vs_dns_sync}
 
 仮想サーバー・インスタンスの DNS レコードを同期します。
 ```
-ibmcloud sl vs dns-sync IDENTIFIER [OPTIONS]
+bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2930,16 +2923,16 @@ ibmcloud sl vs dns-sync IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
+bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスの A レコード (IP V4 アドレス) を DNS サーバーに同期し、この A レコードの TTL を 3600 に設定します。
 
-### ibmcloud sl vs edit
+### bluemix sl vs edit
 {: #sl_vs_edit}
 
 仮想サーバー・インスタンスの詳細を編集します。
 ```
-ibmcloud sl vs edit IDENTIFIER [OPTIONS]
+bluemix sl vs edit IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -2962,16 +2955,16 @@ ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
+bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed 1000
 ```
-このコマンドは、ID 12345678 の仮想サーバー・インスタンスを更新し、ドメインを「bluemix.net」、ホスト名を「myapp」、タグを「testcli」に設定します。
+このコマンドは、ID 12345678 の仮想サーバー・インスタンスを更新し、ドメインを「bluemix.net」、ホスト名を「myapp」、タグを 「testcli」に設定します。
 
-### ibmcloud sl vs list
+### bluemix sl vs list
 {: #sl_vs_list}
 
 ご使用のアカウントの仮想サーバー・インスタンスをリストします。
 ```
-ibmcloud sl vs list [OPTIONS]
+bluemix sl vs list [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3002,16 +2995,16 @@ ibmcloud sl vs list [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs list --domain bluemix.net --hourly --sortby memory
+bluemix sl vs list --domain bluemix.net --hourly --sortby memory
 ```
 このコマンドは、現行アカウントの、時間ごとに請求されるすべての仮想サーバー・インスタンスをリストします。フィルター基準のドメインは「bluemix.net」で、それらをメモリーによってソートします。
 
-### ibmcloud sl vs pause
+### bluemix sl vs pause
 {: #sl_vs_pause}
 
 アクティブな仮想サーバー・インスタンスを一時停止します。
 ```
-ibmcloud sl vs pause IDENTIFIER [OPTIONS]
+bluemix sl vs pause IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3022,16 +3015,16 @@ ibmcloud sl vs pause IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs pause 12345678 -f
+bluemix sl vs pause 12345678 -f
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスを、確認を求めずに一時停止します。
 
-### ibmcloud sl vs power-off
+### bluemix sl vs power-off
 {: #sl_vs_power_off}
 
 アクティブな仮想サーバー・インスタンスをパワーオフします。
 ```
-ibmcloud sl vs power-off IDENTIFIER [OPTIONS]
+bluemix sl vs power-off IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3046,16 +3039,16 @@ ibmcloud sl vs power-off IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs power-off 12345678 --soft
+bluemix sl vs power-off 12345678 --soft
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスのソフト・パワーオフを実行します。
 
-### ibmcloud sl vs power-on
+### bluemix sl vs power-on
 {: #sl_vs_power_on}
 
 仮想サーバー・インスタンスをパワーオンします。
 ```
-ibmcloud sl vs power-on IDENTIFIER [OPTIONS]
+bluemix sl vs power-on IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3066,16 +3059,16 @@ ibmcloud sl vs power-on IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs power-on 12345678
+bluemix sl vs power-on 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバーのパワーオンを実行します。
 
-### ibmcloud sl vs ready
+### bluemix sl vs ready
 {: #sl_vs_ready}
 
 仮想サーバー・インスタンスの使用準備ができているかどうかをチェックします。
 ```
-ibmcloud sl vs ready IDENTIFIER [OPTIONS]
+bluemix sl vs ready IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3086,16 +3079,16 @@ ibmcloud sl vs ready IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs ready 12345678 --wait 30
+bluemix sl vs ready 12345678 --wait 30
 ```
 このコマンドは、ID 12345678 の仮想サーバーの状況をチェックして、そのインスタンスが、連続して使用する準備ができているかどうか確認し、最大 30 秒待機します。
 
-### ibmcloud sl vs reboot
+### bluemix sl vs reboot
 {: #sl_vs_reboot}
 
 アクティブな仮想サーバー・インスタンスをリブートします。
 ```
-ibmcloud sl vs reboot IDENTIFIER [OPTIONS]
+bluemix sl vs reboot IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3103,23 +3096,23 @@ ibmcloud sl vs reboot IDENTIFIER [OPTIONS]
 <dt>--hard</dt>
 <dd>ハード・リブートを実行します。</dd>
 <dt>--soft</dt>
-<dd>ソフト・リブートを実行します。</dd>
+<dd>ハード・リブートを実行します。</dd>
 <dt>-f, --force</dt>
 <dd>確認なしで操作を強制します。</dd>
 </dl>
 
 **例**:
 ```
-ibmcloud sl vs reboot 12345678 --hard
+bluemix sl vs reboot 12345678 --hard
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスのハード・リブートを実行します。
 
-### ibmcloud sl vs reload
+### bluemix sl vs reload
 {: #sl_vs_reload}
 
 仮想サーバー・インスタンス上でオペレーティング・システムを再ロードします。
 ```
-ibmcloud sl vs reload IDENTIFIER [OPTIONS]
+bluemix sl vs reload IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3129,7 +3122,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 <dt>--image</dt>
 <dd>イメージ ID。 デフォルトは、現行オペレーティング・システムを使用することです。</dd>
 <dt>以下を参照してください。</dt>
-<dd>「ibmcloud sl image list」。</dd>
+<dd>「bluemix sl image list」。</dd>
 <dt>-k, --key</dt>
 <dd>root ユーザーに追加する SSH 鍵の ID (複数のオカレンスが許可されます)。</dd>
 <dt>-f, --force</dt>
@@ -3138,16 +3131,16 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs reload 12345678
+bluemix sl vs reload 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスの現行オペレーティング・システムを再ロードします。
 
-### ibmcloud sl vs rescue
+### bluemix sl vs rescue
 {: #sl_vs_rescue}
 
 仮想サーバー・インスタンスをレスキュー・イメージでリブートします。
 ```
-ibmcloud sl vs rescue IDENTIFIER [OPTIONS]
+bluemix sl vs rescue IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3158,16 +3151,16 @@ ibmcloud sl vs rescue IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs rescue 12345678
+bluemix sl vs rescue 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバーをレスキュー・イメージでリブートします。
 
-### ibmcloud sl vs resume
+### bluemix sl vs resume
 {: #sl_vs_resume}
 
 一時停止された仮想サーバー・インスタンスを再開します。
 ```
-ibmcloud sl vs resume IDENTIFIER [OPTIONS]
+bluemix sl vs resume IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3178,16 +3171,16 @@ ibmcloud sl vs resume IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs resume 12345678
+bluemix sl vs resume 12345678
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスを再開します。
 
-### ibmcloud sl vs upgrade
+### bluemix sl vs upgrade
 {: #sl_vs_upgrade}
 
 仮想サーバー・インスタンスを更新します。
 ```
-ibmcloud sl vs upgrade IDENTIFIER [OPTIONS]
+bluemix sl vs upgrade IDENTIFIER [OPTIONS]
 ```
 
 <strong>コマンド・オプション</strong>:
@@ -3206,6 +3199,7 @@ ibmcloud sl vs upgrade IDENTIFIER [OPTIONS]
 
 **例**:
 ```
-ibmcloud sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
+bluemix sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
 このコマンドは、ID 12345678 の仮想サーバー・インスタンスをアップグレードし、CPU コア数を 8、メモリーを 8192 M、ネットワーク・ポート速度を 1000 Mbps に設定します。
+

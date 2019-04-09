@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -22,8 +22,6 @@ lastupdated: "2018-06-21"
 
 Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令。下列資訊列出最常用來管理應用程式的 cf 指令，並且包括其名稱、選項、用法、必要條件、說明及範例。若要列出所有 cf 指令及關聯的說明資訊，請使用 `cf help`。使用 `cf command_name -h` 可檢視特定指令的詳細說明資訊。
 {: shortdesc}
-
-如需 `cf CLI` 指令的更詳細清單，請參閱社群 [Cloud Foundry CLI Reference Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}。
 
 **附註**：如果您的網路在執行 cf 指令的主機與 Cloud Foundry API 端點之間包含 HTTP Proxy 伺服器，則必須設定 `HTTP_PROXY` 環境變數來指定 Proxy 伺服器的主機名稱或 IP 位址。如需詳細資料，請參閱 [Using the cf CLI with an HTTP Proxy Server ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
 
@@ -95,7 +93,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL（選用）</dt>
-   <dd>IBM Cloud API 端點的 URL，您在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。這個 URL 通常是 `https://api.{DomainName}`。
+   <dd>Bluemix API 端點的 URL，您在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。這個 URL 通常是 `https://api.{DomainName}`。
    如果您要顯示目前所使用 API 端點的 URL，則不需要針對 cf api 指令指定此參數。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
@@ -161,7 +159,7 @@ cf bind-service appname service_instance
 
 <strong>範例</strong>：
 
-將名為 `my_dataworks` 的服務實例連結至 `my_app` 應用程式。
+將 `my_dataworks` 服務實例連結至 `my_app` 應用程式。
 ```
 cf bind-service my_app my_dataworks
 ```
@@ -171,7 +169,7 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-建立服務實例。
+建立服務實例
 
 ```
 cf create-service service_name service_plan service_instance
@@ -224,7 +222,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>範例</strong>：
 
-建立名為 new_space 的空間
+建立 new_space 空間
 ```
 cf create-space new_space
 ```
@@ -256,25 +254,25 @@ cf delete appname [-f] [-r]
 
 <strong>範例</strong>：
 
-刪除名為 `my_app` 的應用程式（將需要確認）。
+刪除 `my_app` 應用程式（將需要確認）。
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-刪除名為 `my_app` 的應用程式，不需要進行確認。
+刪除 `my_app` 應用程式，不需要進行確認。
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱。
+刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱。
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
+刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
 ```
 cf delete my_app -f -r
 ```
@@ -305,25 +303,25 @@ cf delete-space space_name [-f]
 
 <strong>範例</strong>：
 
-刪除名為 `my_app` 的應用程式（將需要確認）。
+刪除 `my_app` 應用程式（將需要確認）。
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-刪除名為 `my_app` 的應用程式，不需要進行確認。
+刪除 `my_app` 應用程式，不需要進行確認。
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱。
+刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱。
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
+刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
 ```
 cf delete my_app -f -r
 ```
@@ -350,7 +348,7 @@ cf events [appname]
 
 <strong>範例</strong>：
 
-顯示名為 `my_app` 之應用程式的事件。
+顯示 `my_app` 應用程式的事件。
 ```
 cf events my_app
 ```
@@ -394,7 +392,7 @@ cf help events
 {: #cf_login}
 
 讓您登入 {{site.data.keyword.Bluemix_notm}}。
-如果您是使用[聯合 ID](/docs/admin/account.html#signup) 登入，則必須使用單一登入 (SSO) 參數來登入。
+如果您是使用[聯合 ID](/docs/admin/account.html#signup) 登入，則必須使用單一登入 (SSO) 參數來登入。 
 
 **附註**：您也可以使用「{{site.data.keyword.Bluemix_notm}} 平台」API 金鑰來登入。以使用者名稱 `apikey` 及 API 金鑰值作為密碼。如需建立 API 金鑰的相關資訊，請參閱[管理 API 金鑰](/docs/iam/apikeys.html)。
 
@@ -415,7 +413,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>您的密碼。</dd>
 <dd>*重要事項：*如果您在指令行介面上使用 *-p* 參數提供密碼，密碼可能會記錄在指令行歷程中。為了安全因素，請避免使用 -p 參數提供密碼。請改為在指令行介面提示您時再輸入密碼。</dd>
 <dt>*-sso*</dt>
-<dd>以聯合 ID 進行登入時，必須使用單一登入選項 (SSO)。以 IBM ID 進行登入時，則不需要這麼做。如果您嘗試使用聯合 ID 來登入，而沒有指定 SSO 參數，系統會提示您將其包含在內。使用 SSO 參數時，系統會提示您在登入時輸入一次性密碼。</dd>
+<dd>以聯合 ID 登入時，必須使用單一登入選項 (SSO)。以 IBM ID 登入時，則不需要這麼做。如果您嘗試使用聯合 ID 來登入，而沒有指定 SSO 參數，系統會提示您將其包含在內。使用 SSO 參數時，系統會提示您在登入時輸入一次性密碼。</dd>
 <dt>*-o* organization_name</dt>
 <dd>您要登入的組織名稱。</dd>
 <dt>*-s* space_name</dt>
@@ -481,13 +479,13 @@ cf logs appname [--recent]
 
 <strong>範例</strong>：
 
-顯示名為 `my_app` 之應用程式的日誌串流。
+顯示 `my_app` 應用程式的日誌串流。
 ```
 cf logs my_app
 ```
 {: codeblock}
 
-顯示名為 `my_app` 之應用程式的最近日誌串流。
+顯示 `my_app` 應用程式的最近日誌串流。
 ```
 cf logs my_app --recent
 ```
@@ -497,7 +495,8 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-列出 Marketplace 中可用的所有服務。這個指令所列出的服務也會顯示在 {{site.data.keyword.Bluemix_notm}} 型錄中。
+列出 Marketplace 中可用的所有服務。這個指令所列出的服務也會顯示在 {{site.data.keyword.Bluemix_notm}}「型錄」中。
+
 
 ```
 cf marketplace
@@ -565,13 +564,13 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>範例</strong>：
 
-使用預設啟動指令，以啟動名為 `my_app` 的應用程式。
+使用預設啟動指令，以啟動 `my_app` 應用程式。
 ```
 cf push `my_app` -c null
 ```
 {: codeblock}
 
-使用執行 Script 檔 `run.sh` 的選項，以啟動名為 `my_app` 的應用程式。
+使用執行 Script 檔 `run.sh` 的選項，以啟動 `my_app` 應用程式。
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -608,7 +607,7 @@ cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 
 <strong>範例</strong>：
 
-顯示名為 `my_app` 之應用程式的實例數目、磁碟空間限制及記憶體限制。
+顯示 `my_app` 應用程式的實例數目、磁碟空間限制及記憶體限制。
 ```
 cf scale my_app
 ```
@@ -666,7 +665,7 @@ cf set-env appname var_name var_value
 
 <strong>範例</strong>：
 
-針對名為 `my_app` 的應用程式，設定值為 `123` 且名為 `variable_a` 的環境變數。
+針對 `my_app` 應用程式，設定值為 `123` 的 `variable_a` 環境變數。
 ```
 cf set-env my_app variable_a 123
 ```
@@ -683,7 +682,7 @@ cf ssh
 ```
 <strong>必要條件</strong>：`cf api`、`cf login`、`cf target`
 
-依預設，會啟用 Diego 應用程式的 SSH 存取。您可以使用 `cf ssh-enabled` 指令，驗證是否已啟用 SSH 存取，或是使用 `cf enable-ssh` 指令來啟用已停用的存取。
+依預設，會啟用 Diego 應用程式的 SSH 存取。您可以使用 `cf ssh-enabled` 指令，驗證是否已啟用 SSH 存取，或是使用 `cf enable-ssh` 指令來啟用已停用的存取。 
 
 <strong>指令選項</strong>：
 
@@ -767,7 +766,7 @@ cf stop appname
 
 <strong>範例</strong>：
 
-停止名為 `my_app` 的應用程式。
+停止 `my_app` 應用程式。
 ```
 cf stop my_app
 ```
@@ -805,7 +804,8 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-顯示 Cloud Foundry 指令行介面的版本。
+顯示 cf 指令行介面的版本。
+
 
 ```
 cf -v
@@ -816,7 +816,7 @@ cf -v
 
 <strong>範例</strong>：
 
-顯示 Cloud Foundry 指令行介面的版本。
+顯示 cf 指令行介面的版本。
 ```
 cf -v
 ```

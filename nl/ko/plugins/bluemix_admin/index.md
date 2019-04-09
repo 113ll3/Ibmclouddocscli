@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-04"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -17,9 +17,9 @@ lastupdated: "2018-10-04"
 {: #bluemixadmincli}
 
 
-{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인에 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 로컬 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경을 관리할 수 있습니다. 예를 들어, LDAP 레지스트리에서 사용자를 추가할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭의 계정 관리에 대한 정보는 [관리](/docs/admin/adminpublic.html#administer)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인에 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 로컬 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경을 관리할 수 있습니다. 예를 들어, LDAP 레지스트리에서 사용자를 추가할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭 계정 관리에 대한 정보를 찾는 경우 [관리](/docs/admin/adminpublic.html#administer)를 참조하십시오.
 
-시작하기 전에 Cloud Foundry 명령행 인터페이스를 설치하십시오. {{site.data.keyword.Bluemix_notm}} 관리
+시작하기 전에 cf 명령행 인터페이스를 설치하십시오. {{site.data.keyword.Bluemix_notm}} 관리
 CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다. [Cloud Foundry 명령행 인터페이스 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **제한사항:** Cloud Foundry 명령행 인터페이스는
@@ -30,29 +30,31 @@ Cygwin에서는 지원되지 않습니다. Cygwin 명령행 창 외의
 
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 추가
 
-Cloud Foundry 명령행 인터페이스가 설치된 후에 {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 추가할 수 있습니다.
+cf 명령행 인터페이스가 설치된 후에
+{{site.data.keyword.Bluemix_notm}} 관리 CLI
+플러그인을 추가할 수 있습니다.
 
-**참고**: 이전에 {{site.data.keyword.Bluemix_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 다시 설치해야 합니다.
+**참고**: 이전에 {{site.data.keyword.Bluemix_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 다시 설치해야 할 수도 있습니다.
 
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 
 <ol>
 <li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
-cf add-plugin-repo IBMCloudAdmin https://tools.ng.bluemix.net/
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 </li>
 <li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
-cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
 
 플러그인을 설치 제거해야 하는 경우 다음 명령을 사용한 후 업데이트된 저장소를 추가하고 최신 플러그인을 설치할 수 있습니다.
 
-* 플러그인 설치 제거: `cf uninstall-plugin IBMCloudAdminCLI`
-* 플러그인 저장소 제거: `cf remove-plugin-repo IBMCloudAdmin`
+* 플러그인 설치 제거: `cf uninstall-plugin BluemixAdminCLI`
+* 플러그인 저장소 제거: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 사용
@@ -67,7 +69,7 @@ cf plugins
 ```
 {: codeblock}
 
-명령에 대한 도움말을 보려면 `-help` 옵션을 사용하십시오.
+명령에 대한 추가 도움말을 보려면 `-help` 옵션을 사용하십시오.
 
 ### {{site.data.keyword.Bluemix_notm}}에 연결 및 로그인
 
@@ -109,7 +111,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**참고**: 특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다. 자세한 정보는 [관리자가 사용자를 추가하도록 설정](index.html#clius_emau)을 참조하십시오.
+**참고**: 특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다.  자세한 정보는 [관리자를 사용하여 사용자 추가](index.html#clius_emau)를 참조하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -128,7 +130,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ### {{site.data.keyword.Bluemix_dedicated_notm}}에서 사용자 초대
 {: #admin_dedicated_invite_public}
 
-각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.Bluemix_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [IBM Cloud Container Service on Dedicated 설정](/docs/containers/cs_dedicated.html#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
+각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.Bluemix_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [데디케이티드에 IBM Cloud Container 서비스 설정](/docs/containers/cs_dedicated.html#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
 
 ```
 cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
@@ -240,10 +242,10 @@ cf ba remove-user <user_name>
 **팁:** 긴 **ba remove-user** 명령어에 대한
 별명으로 **ba ru**를 사용할 수도 있습니다.
 
-### 관리자가 사용자를 추가할 수 있도록 설정
+### 관리자가 사용자를 추가하도록 설정
 {: #clius_emau}
 
-{{site.data.keyword.Bluemix_notm}} 환경에 **수퍼유저** 권한이 있는 경우 조직 관리자가 자신이 관리하는 조직에 사용자를 추가할 수 있도록 설정할 수 있습니다. 관리자가 사용자를 추가할 수 있도록 하려면 다음 명령을 사용하십시오.
+{{site.data.keyword.Bluemix_notm}} 환경에 **수퍼유저** 권한이 있는 경우 조직 관리자가 관리하는 조직에 사용자를 추가하도록 설정할 수 있습니다. 관리자가 사용자를 추가할 수 있도록 하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba enable-managers-add-users
@@ -253,10 +255,10 @@ cf ba enable-managers-add-users
 **팁:** 긴 **ba enable-managers-add-users** 명령어의
 별명으로 **ba emau**를 사용할 수도 있습니다.
 
-### 관리자가 사용자를 추가할 수 없도록 설정
+### 관리자가 사용자를 추가하도록 설정 제거
 {: #clius_dmau}
 
-조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 자신이 관리하는 조직에 사용자를 추가할 수 있도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다. 관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
+조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 관리하는 조직에 사용자를 추가하도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다.  관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba disable-managers-add-users
@@ -395,16 +397,17 @@ cf ba set-quota <organization> <plan>
 조직의 컨테이너 할당량을 찾으려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin containers-quota <organization>
+cf bluemix-admin containers-quota <organization>
 ```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">IBM Cloud의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
+<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 </dl>
 
-**팁:** 긴 **ibmcloud-admin containers-quota** 명령어의 별명으로 **ba cq**를 사용할 수도 있습니다.
+**팁:** 긴 **bluemix-admin containers-quota** 명령어의 별명으로
+**ba cq**를 사용할 수도 있습니다.
 
 ### 조직의 컨테이너 할당량 설정
 {: #admin_set_containquotas}
@@ -412,7 +415,7 @@ cf ibmcloud-admin containers-quota <organization>
 조직의 컨테이너 할당량을 설정하려면 하나 이상의 옵션을 포함하여 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin set-containers-quota <organization> <options>
+cf bluemix-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -420,7 +423,7 @@ cf ibmcloud-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">IBM Cloud의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
+<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">값이 정수여야 하는 다음 옵션 중 하나 이상을 포함합니다.
 <ul>
@@ -451,7 +454,7 @@ cf ibmcloud-admin set-containers-quota <organization> <options>
 선택적으로 올바른 JSON 오브젝트에 특정 구성 매개변수를 포함하는 파일을 제공할 수 있습니다. **-file** 옵션을 사용하면 이 옵션이 우선 적용되고 다른 옵션은 무시됩니다. 옵션을 설정하는 대신에 파일을 제공하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -468,7 +471,8 @@ JSON 파일의 형식은 다음 예제와 같습니다.
 ```
 {: codeblock}
 
-**팁:** 긴 **ibmcloud-admin set-containers-quota** 명령어의 별명으로 **ba scq**를 사용할 수도 있습니다.
+**팁:** 긴 **bluemix-admin set-containers-quota** 명령어의 별명으로
+**ba scq**를 사용할 수도 있습니다.
 
 ## 영역 관리
 {: #admin_spaces}
@@ -478,7 +482,7 @@ JSON 파일의 형식은 다음 예제와 같습니다.
 조직에 영역을 추가하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin create-space <organization> <space_name>
+cf bluemix-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -498,7 +502,7 @@ cf ibmcloud-admin create-space <organization> <space_name>
 조직에서 영역을 삭제하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin delete-space <organization> <space_name>
+cf bluemix-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -518,7 +522,7 @@ cf ibmcloud-admin delete-space <organization> <space_name>
 지정된 역할과 함께 영역에 사용자를 작성하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -545,7 +549,7 @@ cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 영역에서 사용자 역할을 제거하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -764,7 +768,7 @@ cf ba resource-metrics
 ## 리소스 메트릭 히스토리 보기
 {: #cliresourceusagehistory}
 
-메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다. 시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다. 리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
+메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다.  시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다.   리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -792,14 +796,14 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;예제&gt;</dt>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 
-다음 명령을 사용하여 이전 명령 매개변수 및 예제의 목록을 볼 수 있습니다.
+다음 명령을 사용하여 이전 명령 매개변수 및 예제의 목록을 볼 수 있습니다. 
 
 ```
 cf ba resource-metrics-history -help
@@ -858,8 +862,8 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### 서비스 브로커 삭제
 {: #clidelservbro}
 
-{{site.data.keyword.Bluemix_notm}} 카탈로그에서
-사용자 정의 서비스를 제거하는 서비스 브로커를 삭제하려면 다음 명령을 사용하십시오.
+서비스 브로커를 삭제하여 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
+사용자 정의 서비스를 제거하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -1162,7 +1166,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 ### 빌드팩 업데이트
 {: #cliupdabuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 업데이트할 수 있습니다. 빌드팩을 업데이트하려면 다음 명령을 사용하십시오.
+앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 업데이트할 수 있습니다.  빌드팩을 업데이트하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -1186,7 +1190,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ### 빌드팩 삭제
 {: #clidelbuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 삭제할 수 있습니다. 빌드팩을 삭제하려면 다음 명령을 사용하십시오.
+앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 삭제할 수 있습니다.  빌드팩을 삭제하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba delete-buildpack <buildpack_name>

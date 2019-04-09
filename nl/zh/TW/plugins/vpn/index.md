@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -62,12 +62,12 @@ cf uninstall-plugin vpn
 1. 將 {{site.data.keyword.Bluemix_notm}} 儲存庫新增至 Cloud Foundry CLI 儲存庫。使用下列指令：
 
 	```
-	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
+	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
 	```
 2. 請執行下列指令：
 
 	```
-	cf install-plugin vpn -r IBM Cloud
+	cf install-plugin vpn -r bluemix
 	```
 ##VPN 服務指令清單
 
@@ -112,7 +112,7 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 
 **-ike**：IKE 原則的名稱。
 
-**-ipsec：**IPSec 原則的名稱。
+**-ipsec**：IPsec 原則的名稱。
 
 
 ### cf vpn-create ike
@@ -153,7 +153,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### 參數
 {: #p3}
 
-**policy name**：IPSec 原則的名稱。
+**policy name**：IPsec 原則的名稱。
 
 **gateway name**：閘道的名稱。
 
@@ -207,7 +207,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-顯示現行 IPSec 連線的相關資訊。
+顯示現行 IPsec 連線的相關資訊。
 
 ```
 cf vpn-show ipsecs
@@ -228,7 +228,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-顯示 IPSec 連線的相關資訊。
+顯示 IPsec 連線的相關資訊。
 
 ```
 cf vpn-show ipsec <policy name>
@@ -310,7 +310,7 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 
 **-ike**：IKE 原則的名稱。
 
-**-ipsec：**IPSec 原則的名稱。
+**-ipsec**：IPsec 原則的名稱。
 
 
 ### cf vpn-update ike
@@ -351,7 +351,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### 參數
 {: #p7}
 
-**policy name**：IPSec 原則的名稱。
+**policy name**：IPsec 原則的名稱。
 
 
 ##### 選用性參數：

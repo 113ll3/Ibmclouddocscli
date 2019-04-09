@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -63,12 +63,12 @@ cf uninstall-plugin vpn
 1. 将 {{site.data.keyword.Bluemix_notm}} 存储库添加到 Cloud Foundry CLI 存储库中。请使用以下命令：
 
 	```
-	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
+	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
 	```
 2. 运行以下命令：
 
 	```
-	cf install-plugin vpn -r IBM Cloud
+	cf install-plugin vpn -r bluemix
 	```
 ##列出 VPN 服务命令
 
@@ -113,7 +113,7 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 
 **-ike：**IKE 策略的名称。
 
-**-ipsec：**IPSec 策略的名称。
+**-ipsec：**IPsec 策略的名称。
 
 
 ### cf vpn-create ike
@@ -146,7 +146,7 @@ cf vpn-create ike <policy name> -g <gateway name> -d <description> -pfs <group> 
 
 ### cf vpn-create ipsec
 
-创建 IPSec 策略。
+创建 IPsec 策略。
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -154,7 +154,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### 参数
 {: #p3}
 
-**policy name：**IPSec 策略的名称。
+**policy name：**IPsec 策略的名称。
 
 **gateway name：**网关的名称。
 
@@ -208,7 +208,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-显示有关当前 IPSec 连接的信息。
+显示有关当前 IPsec 连接的信息。
 
 ```
 cf vpn-show ipsecs
@@ -229,7 +229,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-显示有关 IPSec 连接的信息。
+显示有关 IPsec 连接的信息。
 
 ```
 cf vpn-show ipsec <policy name>
@@ -311,7 +311,7 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 
 **-ike：**IKE 策略的名称。
 
-**-ipsec：**IPSec 策略的名称。
+**-ipsec：**IPsec 策略的名称。
 
 
 ### cf vpn-update ike
@@ -344,7 +344,7 @@ cf vpn-update ike <policy name> -g <gateway name> -d <description> -pfs <group> 
 
 ### cf vpn-update ipsec
 
-更新 IPSec 策略。
+更新 IPsec 策略。
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -352,7 +352,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### 参数
 {: #p7}
 
-**policy name：**IPSec 策略的名称。
+**policy name：**IPsec 策略的名称。
 
 
 ##### 可选参数：
