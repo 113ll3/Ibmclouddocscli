@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2019
+lastupdated: "2019-02-26"
+
+keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+
+subcollection: cloud-cli
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -15,22 +20,22 @@ lastupdated: "2018-11-30"
 # SDK 플러그인에 대한 컨트리뷰션
 {: #contribute}
 
-다음 가이드라인에 따라 {{site.data.keyword.Bluemix}} CLI SDK 플러그인에 컨트리뷰션하십시오.
+다음 가이드라인에 따라 {{site.data.keyword.cloud}} CLI SDK 플러그인에 컨트리뷰션하십시오.
 
 ## 개발 환경 설정
 {: #dev-env}
 
-* Cloud Foundry [CLI ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/cli/releases).
+* Cloud Foundry [CLI ](https://github.com/cloudfoundry/cli/releases){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘").
 
-   Cloud Foundry CLI는 필수는 아니지만 터미널에서 {{site.data.keyword.Bluemix_notm}}에 액세스하도록 도와줍니다.
+   Cloud Foundry CLI는 필수는 아니지만 터미널에서 {{site.data.keyword.cloud_notm}}에 액세스하도록 도와줍니다.
 
-   Cloud Foundry CLI에 대한 자세한 정보는 [문서](/docs/cli/reference/cfcommands/index.html)를 참조하십시오.
+   Cloud Foundry CLI에 대한 자세한 정보는 [문서](/docs/cli?topic=cloud-cli-cf#cf)를 참조하십시오.
 
-* {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview).
+* {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
-   이 플러그인은 {{site.data.keyword.Bluemix_notm}} CLI에 설치됩니다. {{site.data.keyword.Bluemix_notm}} CLI는 또한 터미널에서 {{site.data.keyword.Bluemix_notm}}에 액세스하기 위한 유용한 리소스를 제공합니다.
+   이 플러그인은 {{site.data.keyword.cloud_notm}} CLI에 설치됩니다. {{site.data.keyword.cloud_notm}} CLI는 또한 터미널에서 {{site.data.keyword.cloud_notm}}에 액세스하기 위한 유용한 리소스를 제공합니다.
 
-* [개발 환경 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://golang.org/doc/code.html)으로 이동하십시오.
+* [개발 환경 ](https://golang.org/doc/code.html){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")으로 이동하십시오.
 
    Go는 패키지 위치와 관련하여 엄격하게 처리되므로 소스를 `$GOPATH` 디렉토리 구조에 정의해야 합니다. `$GOPATH` 및 `$GOROOT` 변수를 정의하고 `$GOPATH/bin`을 `$PATH` 환경에 포함하십시오. Mac OS에서 `~/.bash_profile` 구성 파일을 편집하여 이를 수행할 수 있습니다.
 
@@ -42,7 +47,7 @@ lastupdated: "2018-11-30"
    ```
    {: codeblock}
 
-* 종속성 관리자: [govendor ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/kardianos/govendor)
+* 종속성 관리자: [govendor ](https://github.com/kardianos/govendor){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
    `govendor` 도구는 Go 종속 항목을 작성하고 관리합니다. 공급업체 디렉토리를 업데이트할 계획이 아니라면 이 도구가 필요하지 않습니다.
 
@@ -67,9 +72,9 @@ lastupdated: "2018-11-30"
       ```
       {: codeblock}
 
-* BDD 테스트 프레임워크: [Ginkgo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://onsi.github.io/ginkgo/)
+* BDD 테스트 프레임워크: [Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-테스트 프레임워크는 Go를 위한 BDD 테스트 프레임워크인 Ginkgo를 기반으로 합니다. 이는 Ginkgo를 위한 매처(matcher) 및 어설션 라이브러리인 [Gomega ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://onsi.github.io/gomega/)와 함께 사용됩니다.
+테스트 프레임워크는 Go를 위한 BDD 테스트 프레임워크인 Ginkgo를 기반으로 합니다. 이는 Ginkgo를 위한 매처(matcher) 및 어설션 라이브러리인 [Gomega ](http://onsi.github.io/gomega/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")와 함께 사용됩니다.
 
    * 다음 명령을 사용하여 `ginkgo`를 설치하십시오.
 
@@ -103,9 +108,9 @@ ginkgo -r
 
       * `.coverprofile` 파일이 있는 디렉토리로 이동합니다.
 
-* 국제화: [go-i18n ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/nicksnyder/go-i18n) 및 [go-bindata ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/jteeuwen/go-bindata)
+* 국제화: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 및 [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-국제화는 Go 애플리케이션을 여러 언어로 번역하도록 지원하는 명령행 도구이자 패키지인 go-i18n을 기반으로 합니다. 번역 번들은 입력 파일을 관리 가능한 Go 소스 코드로 변환하는 명령인 go-bindata로 사전 처리됩니다.
+국제화는 Go 애플리케이션을 여러 언어로 번역하도록 지원하는 명령행 도구이자 패키지인 `go-i18n`을 기반으로 합니다. 번역 번들은 입력 파일을 관리 가능한 Go 소스 코드로 변환하는 명령인 `go-bindata`로 사전 처리됩니다.
 
    * 다음 명령을 사용하여 `go-i18n`을 설치하십시오.
 
@@ -121,9 +126,9 @@ ginkgo -r
       ```
       {: codeblock}
 
-* 디버깅: [delve ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/derekparker/delve)
+* 디버깅: [delve ](https://github.com/derekparker/delve){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://code.visualstudio.com/)에서 사용됩니다.
+Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 ](https://code.visualstudio.com/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에서 사용됩니다.
 
    * 다음 명령을 사용하여 `delve`를 설치하십시오.
 
@@ -132,7 +137,7 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
       ```
       {: codeblock}
 
-      * Mac OS의 경우 [지시사항 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://blog.ralch.com/tutorial/golang-debug-with-delve/)에 따라 필수 자체 서명 인증서를 작성하십시오.
+      * Mac OS의 경우 [지시사항 ](http://blog.ralch.com/tutorial/golang-debug-with-delve/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에 따라 필수 자체 서명 인증서를 작성하십시오.
 
 
 ## 필수 런타임 라이브러리
@@ -145,34 +150,34 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 
 중첩된 종속 항목은 나열되지 않습니다.
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ](https://github.ibm.com/Bluemix/bluemix-cli-sdk){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-   {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 개발하기 위한 인프라를 제공하는 {{site.data.keyword.Bluemix_notm}} CLI 플러그인 SDK.
+   {{site.data.keyword.cloud_notm}} CLI 플러그인을 개발하기 위한 인프라를 제공하는 {{site.data.keyword.cloud_notm}} CLI 플러그인 SDK.
 
-* [github.com/urfave/cli ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/urfave/cli)
+* [github.com/urfave/cli ](https://github.com/urfave/cli){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-   이 패키지는 Go에서 명령행 앱을 빌드하기 위한 인프라를 제공합니다. {{site.data.keyword.Bluemix_notm}} CLI 플러그인은 이 라이브러리의 이전 버전(github.com/codegangsta/cli)에 의존합니다.
+   이 패키지는 Go에서 명령행 앱을 빌드하기 위한 인프라를 제공합니다. {{site.data.keyword.cloud_notm}} CLI 플러그인은 이 라이브러리의 이전 버전(github.com/codegangsta/cli)에 의존합니다.
 
-* [github.com/asaskevich/govalidator ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/asaskevich/govalidator)
+* [github.com/asaskevich/govalidator ](https://github.com/asaskevich/govalidator){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
    이 패키지는 문자열, 구조체 및 콜렉션을 위한 다수의 유효성 검증기 및 무결 처리기를 제공합니다. 고유 유효성 검증기를 구현하는 대신 이 패키지를 사용하십시오.
 
-* [github.com/parnurzeal/gorequest ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/parnurzeal/gorequest)
+* [github.com/parnurzeal/gorequest ](https://github.com/parnurzeal/gorequest){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
    이 패키지는 HTTP 요청 및 응답을 처리하는 데 도움을 주는 단순한 HTTP 클라이언트를 구현합니다.
 
-* [github.com/briandowns/spinner ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/briandowns/spinner)
+* [github.com/briandowns/spinner ](https://github.com/briandowns/spinner){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
    이 패키지는 SDK 생성과 같이 긴 오퍼레이션이 처리되는 동안 사용자 피드백을 제공하기 위한 CLI 스피너를 구현합니다.
 
-* [github.com/cloudfoundry-attic/jibber_jabber ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry-attic/jibber_jabber)
+* [github.com/cloudfoundry-attic/jibber_jabber ](https://github.com/cloudfoundry-attic/jibber_jabber){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
    이 패키지는 운영 체제의 현재 언어를 발견하는 데 사용됩니다.
 
 ## 저장소 복제
 {: #clone-repo}
 
-이 저장소는 Go의 우수 사례를 따르는 `govendor`의 작동 방식으로 인해 Go의 [디렉토리 구조 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://golang.org/doc/code.html)로 복제되어야 합니다.
+이 저장소는 Go의 우수 사례를 따르는 `govendor`의 작동 방식으로 인해 Go의 [디렉토리 구조 ](https://golang.org/doc/code.html){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")로 복제되어야 합니다.
 
 * 완전한 패키지 이름을 통해 내부 종속 항목을 가져오십시오.
 
@@ -198,7 +203,6 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 {: #build-plug-in}
 
 다음 명령 중 하나를 선택하여 플러그인을 빌드하십시오.
-
 ```
 cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
@@ -215,7 +219,6 @@ sh bin/build.sh
 {: note}
 
 다음 명령 중 하나를 선택하여 플러그인을 테스트하십시오.
-
 ```
 ginkgo -r
 ```
@@ -227,21 +230,18 @@ go test ./plugin/...
 {: codeblock}
 
 단위 테스트 및 적용 범위로 통합 테스트를 실행하십시오.
-
 ```
 sh bin/testAll.sh
 ```
 {: codeblock}
 
 독립형 CLI로 플러그인을 실행하십시오.
-
 ```
 ./main
 ```
 {: codeblock}
 
-다음 명령 중 하나를 선택하여 {{site.data.keyword.Bluemix_notm}} CLI로 플러그인을 설치 및 호출하십시오.
-
+다음 명령 중 하나를 선택하여 {{site.data.keyword.cloud_notm}} CLI로 플러그인을 설치 및 호출하십시오.
 ```
 ibmcloud plugin install main
 ibmcloud help sdk

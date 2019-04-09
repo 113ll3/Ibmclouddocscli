@@ -1,86 +1,30 @@
 ---
 
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-02-26"
 
+keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas
 
-lastupdated: "2019-01-14"
+subcollection: cloud-cli
+
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Trabalhando com recursos e grupos de recursos
 {: #ibmcloud_commands_resource}
 
-Um grupo de recursos é uma maneira para organizar os recursos da conta em agrupamentos customizáveis. Use os
-comandos a seguir para gerenciar os grupos de recursos e os recursos do {{site.data.keyword.Bluemix}} em um grupo de recursos.
+Um grupo de recursos é uma maneira para organizar os recursos da conta em agrupamentos customizáveis. Use os comandos a seguir para gerenciar recurso e recursos do {{site.data.keyword.cloud}} em um grupo de recursos.
 {: shortdesc}
-
-<table summary="Comando ibmcloud que pode ser usado para gerenciar grupos de recursos e recursos.">
-  <thead>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[ibmcloud resource groups](cli_resource_group.html#ibmcloud_resource_groups)</td>
-      <td>[ibmcloud resource group](cli_resource_group.html#ibmcloud_resource_group)</td>
-      <td>[ibmcloud resource group-create](cli_resource_group.html#ibmcloud_resource_group_create)</td>
-      <td>[ibmcloud resource group-update](cli_resource_group.html#ibmcloud_resource_group_update)</td>
-      <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quotas)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud cota de recursos](cli_resource_group.html#ibmcloud_resource_quota)</td>
-      <td>[ibmcloud resource service-instances](cli_resource_group.html#ibmcloud_resource_service_instances)</td>
-      <td>[ibmcloud resource service-instance
-](cli_resource_group.html#ibmcloud_resource_service_instance)</td>
-      <td>[Ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
-      <td>[ibmcloud resource service-instance-migrate](cli_resource_group.html#ibmcloud_resource_cf_service_instance_migrate)</td>
-    </tr>  
-    <tr>  
-      <td>[ibmcloud resource service-instance-update](cli_resource_group.html#ibmcloud_resource_service_instance_update)</td>
-      <td>[ibmcloud resource service-instance-delete](cli_resource_group.html#ibmcloud_resource_service_instance_delete)</td>
-      <td>[ibmcloud resource service-bindings](cli_resource_group.html#ibmcloud_resource_service_bindings)</td>
-      <td>[ibmcloud resource service-binding](cli_resource_group.html#ibmcloud_resource_service_binding)</td>
-      <td>[ibmcloud resource service-binding-create](cli_resource_group.html#ibmcloud_resource_service_binding_create)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource service-binding-delete](cli_resource_group.html#ibmcloud_resource_service_binding_delete)</td>
-      <td>[ibmcloud cota de recursos](cli_resource_group.html#ibmcloud_resource_quota)</td>
-      <td>[ibmcloud resource service-keys](cli_resource_group.html#ibmcloud_resource_service_keys)</td>
-      <td>[ibmcloud resource service-key](cli_resource_group.html#ibmcloud_resource_service_key)</td>
-      <td>[Ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource service-key-update](cli_resource_group.html#ibmcloud_resource_service_key_update)</td>
-      <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
-      <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
-      <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
-      <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
-      <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
-      <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
-      <td>[ibmcloud resource tags](cli_resource_group.html#ibmcloud_resource_tags)</td>
-      <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
-      <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
-      <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
-      <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
-      <td>[ibmcloud resource tag-update](cli_resource_group.html#ibmcloud_resource_tag_update)</td>
-    </tr>
-  </tbody>
-</table>
 
 ## ibmcloud resource groups
 {: #ibmcloud_resource_groups}
 
 Listar grupos de recursos.
-
 ```
 ibmcloud resource groups [--default] [--output FORMAT]
 ```
@@ -98,22 +42,21 @@ ibmcloud resource groups [--default] [--output FORMAT]
 <strong>Exemplos</strong>:
 
 Listar todos os grupos de recursos sob a conta destinada atualmente:
-
 ```
 ibmcloud resource groups
 ```
+{: codeblock}
 
 Listar grupo padrão da conta destinada atualmente:
-
 ```
 ibmcloud resource groups --default
 ```
+{: codeblock}
 
 ## ibmcloud resource group
 {: #ibmcloud_resource_group}
 
 Mostrar detalhes de um grupo de recursos
-
 ```
 ibmcloud resource group NAME [--id] [--output FORMAT]
 ```
@@ -133,25 +76,25 @@ ibmcloud resource group NAME [--id] [--output FORMAT]
 <strong>Exemplos</strong>:
 
 Mostre o grupo de recursos `example-group`:
-
 ```
 ibmcloud resource group example-group
 ```
+{: codeblock}
 
 Mostre apenas o ID do grupo de recursos `example-group`:
-
 ```
 ibmcloud resource group example-group --id
 ```
+{: codeblock}
 
 ## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
-Crie um grupo de recursos
-
+Crie um grupo de recursos:
 ```
 ibmcloud resource group-create NAME
 ```
+{: codeblock}
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
@@ -162,17 +105,17 @@ ibmcloud resource group-create NAME
 </dl>
 
 <strong>Exemplos</strong>:
-Crie um grupo de recursos `example-group`:
 
+Crie um grupo de recursos  ` exemplo-group `:
 ```
 ibmcloud resource group-create example-group
 ```
+{: codeblock}
 
 ## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
 Atualizar um grupo de recursos existente
-
 ```
 ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
@@ -194,25 +137,25 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 <strong>Exemplos</strong>:
 
 Renomeie o grupo de recursos `example-group` para `trial-group`:
-
 ```
 ibmcloud resource group-update example-group -n trial-group
 ```
+{: codeblock}
 
 Mude a cota do grupo de recursos `example-group` para `free`:
-
 ```
 ibmcloud resource group-update example-group -q free
 ```
+{: codeblock}
 
 ## ibmcloud resource quotas
 {: #ibmcloud_resource_quotas}
 
-Listar todas as definições de cota
-
+Listar todas as definições de cota.
 ```
 ibmcloud resource quotas
 ```
+{: codeblock}
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
@@ -223,19 +166,19 @@ ibmcloud resource quotas
 <strong>Exemplos</strong>:
 
 Liste todas as definições de cota:
-
 ```
 ibmcloud resource quotas
 ```
+{: codeblock}
 
 ## Cota de recurso ibmcloud
 {: #ibmcloud_resource_quota}
 
-Mostrar detalhes de uma definição de cota
-
+Mostrar detalhes de uma definição de cota.
 ```
 ibmcloud resource quota NAME
 ```
+{: codeblock}
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
@@ -246,17 +189,17 @@ ibmcloud resource quota NAME
 </dl>
 
 <strong>Exemplos</strong>:
-mostre detalhes da cota `free`:
 
+Mostrar detalhes da cota  ` free `:
 ```
 ibmcloud resource quota free
 ```
+{: codeblock}
 
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
 Migrar uma instância de serviço do Cloud Foundry para o grupo de recursos
-
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
 ```
@@ -278,8 +221,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 ## ibmcloud resource service-instances
 {: #ibmcloud_resource_service_instances}
 
-Listar instâncias de serviço
-
+Listar instâncias de serviço.
 ```
 ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
 ```
@@ -301,15 +243,15 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 <strong>Exemplos</strong>:
 
 Liste instâncias de serviço do serviço `test-service`:
-
 ```
 ibmcloud resource service-instances --service-name test-service
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance
 {: #ibmcloud_resource_service_instance}
 
-Mostrar detalhes de uma instância de serviço
+Mostrar detalhes de uma instância de serviço.
 
 ```
 ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--output FORMAT]
@@ -334,16 +276,15 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--out
 <strong>Exemplos</strong>:
 
 Mostrar detalhes de serviço da instância `my-service-instance`:
-
 ```
 ibmcloud resource service-instance my-service-instance
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
 
-Criar uma instância de serviço
-
+Crie uma instância de serviço.
 ```
 ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
@@ -355,7 +296,7 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dt>NAME (necessário)</dt>
   <dd>Nome da instância de serviço</dd>
   <dt>SERVICE_NAME ou SERVICE_ID (necessário)</dt>
-  <dd>Nome ou ID do serviço</dd>
+  <dd>Nome ou ID do serviço. Para listar ofertas de serviços, use o comando `ibmcloud catalog service-marketplace`[](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace).</dd>
   <dt>SERVICE_PLAN_NAME ou SERVICE_PLAN_ID (necessário)</dt>
   <dd>Nome ou ID do plano de serviço</dd>
   <dt>LOCALIDADE</dt>
@@ -367,18 +308,17 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
 </dl>
 
 <strong>Exemplos</strong>:
-Crie uma instância de serviço denominada `my-service-instance` usando o plano de serviço
-`test-service-plan` do serviço `test-service` na localização `eu-gb`:
 
+Crie uma instância de serviço que seja denominada `my-service-instance` usando o plano de serviço `test-service-plan` do serviço `test-service` no local `eu-gb`:
 ```
 ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance-update
 {: #ibmcloud_resource_service_instance_update}
 
-Atualizar a instância de serviço
-
+Atualizar instância de serviço.
 ```
 ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
@@ -402,8 +342,8 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
 </dl>
 
 <strong>Exemplos</strong>:
-atualize a instância de serviço `my-service-instance`, mude seu nome para `new-service-instance`:
 
+Atualize a instância de serviço `my-service-instance`, mude o seu nome para `new-service-instance`:
 ```
 ibmcloud resource service-instance-update my-service-instance -n new-service-instance
 ```
@@ -411,8 +351,7 @@ ibmcloud resource service-instance-update my-service-instance -n new-service-ins
 ## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
-Excluir instância de serviço
-
+Excluir instância de serviço.
 ```
 ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
@@ -432,17 +371,17 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 </dl>
 
 <strong>Exemplos</strong>:
-Exclua a instância de serviço do recurso `my-service-instance`:
 
+Excluir instância de serviço de recurso-instância  ` my-service-instance `:
 ```
 ibmcloud resource service-instance-delete my-service-instance
 ```
+{: codeblock}
 
 ## As ligações de serviço do recurso ibmcloud
 {: #ibmcloud_resource_service_bindings}
 
-Mostrar ligações para o alias do serviço
-
+Mostrar ligações para o alias de serviço.
 ```
 ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 ```
@@ -458,8 +397,8 @@ ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 </dl>
 
 <strong>Exemplos</strong>:
-Mostre ligações de recursos para o alias do serviço `my-service-alias`:
 
+Mostre ligações de recursos para o alias de serviço `my-service-alias`:
 ```
 ibmcloud resource bindings my-service-alias
 ```
@@ -467,8 +406,7 @@ ibmcloud resource bindings my-service-alias
 ## ibmcloud resource service-binding
 {: #ibmcloud_resource_service_binding}
 
-Mostrar detalhes de uma ligação de serviços
-
+Mostre detalhes de uma ligação de serviços.
 ```
 ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 ```
@@ -488,17 +426,17 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 </dl>
 
 <strong>Exemplos</strong>:
-mostre detalhes da ligação de serviços entre o alias do serviço `my-service-alias` e o app `my-app`:
 
+Mostre detalhes da ligação de serviços entre o alias de serviço `my-service-alias` e o app `my-app`:
 ```
 ibmcloud resource bindings my-service-alias my-app
 ```
+{: codeblock}
 
 ## ibmcloud resource service-binding-create
 {: #ibmcloud_resource_service_binding_create}
 
-Criar uma ligação de serviços
-
+Crie uma ligação de serviços.
 ```
 ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
@@ -522,19 +460,17 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 </dl>
 
 <strong>Exemplos</strong>:
-Crie uma ligação de serviços entre o alias do serviço
-`my-service-alias` e o aplicativo `my-app`
-com função de `Administrador`:
 
+Crie uma ligação de serviços entre o alias de serviço `my-service-alias` e o app `my-app` com a função `Administrator`:
 ```
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
+{: codeblock}
 
 ## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
 
-Excluir uma ligação de serviços
-
+Excluir uma ligação de serviço.
 ```
 ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
@@ -553,16 +489,15 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 
 <strong>Exemplos</strong>:
 Exclua a ligação de serviços entre o alias do serviço `my-service-alias` e o app `my-app`:
-
 ```
 ibmcloud resource service-binding-delete my-service-alias my-app
 ```
+{: codeblock}
 
 ## ibmcloud resource service-keys
 {: #ibmcloud_resource_service_keys}
 
-Listar chaves de serviço da instância de serviço ou do alias do serviço
-
+Liste chaves de serviço da instância de serviço ou do alias de serviço.
 ```
 ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ] [--output FORMAT]
 ```
@@ -584,8 +519,8 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 </dl>
 
 <strong>Exemplos</strong>:
-liste as chaves de serviço da instância de serviço `my-service-instance`:
 
+Liste chaves de serviço da instância de serviço `my-service-instance`:
 ```
 ibmcloud resource service-keys --instance-name my-service-instance  [--output FORMAT]
 ```
@@ -595,36 +530,45 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 
 Exibe os detalhes de qualquer número de chaves de serviço, em que os primeiros *n* caracteres do nome
 da chave de serviço correspondem ao KEY_NAME fornecido.
-
 ```
-ibmcloud resource service-key KEY_NAME [--id]
+ibmcloud resource service-key (NAME | ID) [-g RESOURCE_GROUP] [--id] [--output FORMAT]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>KEY_NAME</dt>
+  <dt>NOME</dt>
   <dd>Nome da chave</dd>
+  <dt>ID</dt>
+  <dd>ID da chave</dd>
+  <dt>-g</dt>
+  <dd>Nome do grupo de recursos</dd>
   <dt>--id</dt>
-  <dd>Exibe os IDs de quaisquer chaves, em que os primeiros *n* caracteres do nome da chave de serviço
-correspondem ao KEY_NAME fornecido e *n* é o comprimento do KEY_NAME fornecido.</dd>
+  <dd>Exibir o ID da chave de serviço. Essa opção é exclusiva com '-- output'.</dd>
+  <dt>-g RESOURCE_GROUP</dt>
+  <dd>Nome do grupo de recursos</dd>
   <dt>-- output FORMAT (opcional)</dt>
-  <dd>Especifique o formato de saída. Somente JSON é suportado atualmente.</dd>
+  <dd>Especifica o formato de saída. Apenas JSON é suportado agora. Essa opção é exclusiva com '--id'.</dd>
 </dl>
 
 <strong>Exemplos</strong>:
-mostrar detalhes das chaves de serviço `my-service-key`:
+
+Mostrar detalhes das chaves de serviço  ` my-service-key `:
+```
+Ibmcloud resource service-key my-service-key
+```
+<strong>Exemplos</strong>:
+mostre detalhes da chave de serviço com ID `crn:v1:bluemix:public:cloudantnosqldb:us-south:a/537860630a5ba7115be954e8d5aa5689:cc2a6d6c-8f5e-4038-b975-b09b51d1d8dc:resource-key:9057f12e-fbf5-421d-8865-764422217a79`:
 
 ```
-ibmcloud resource service-key my-service-key
+ibmcloud resource service-key crn:v1 :bluemix:public:cloudantnosqldb:us-south:a/537860630a5ba711589 :cc2a6d6c-8f5e-4038-b975-b09b51d1d8dc:resource-key: 9057f12e-fbf5-421d-8865-76442221722217217a79
 ```
 
 ## ibmcloud resource service-key-create
 {: #ibmcloud_resource_service_key_create}
 
-Criar uma chave de serviço
-
+Crie uma chave de serviço.
 ```
 ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
@@ -654,8 +598,8 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
 </dl>
 
 <strong>Exemplos</strong>:
-crie uma chave de serviço chamada `my-service-key` com a função `Administrator` para a instância de serviço `my-service-instance`:
 
+Crie uma chave de serviço denominada `my-service-key` com a função `Administrator` para a instância de serviço `my-service-instance`:
 ```
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
@@ -663,8 +607,7 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 ## ibmcloud resource service-key-update
 {: #ibmcloud_resource_service_key_update}
 
-Atualizar uma chave de serviço
-
+Atualizar uma chave de serviço.
 ```
 ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
 ```
@@ -684,8 +627,8 @@ ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RES
 </dl>
 
 <strong>Exemplos</strong>:
-Atualize uma chave de serviço denominada `my-service-key` e dê a ela um novo nome `my-service-key-2`:
 
+Atualize uma chave de serviço denominada `my-service-key`, dê a ela um novo nome `my-service-key-2`:
 ```
 ibmcloud resource service-key-update my-service-key -n my-service-key-2
 ```
@@ -693,8 +636,7 @@ ibmcloud resource service-key-update my-service-key -n my-service-key-2
 ## ibmcloud resource service-key-delete
 {: #ibmcloud_resource_service_key_delete}
 
-Excluir uma chave de serviço
-
+Excluir uma chave de serviço.
 ```
 ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 ```
@@ -710,8 +652,8 @@ ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 </dl>
 
 <strong>Exemplos</strong>:
-exclua a chave de serviço `my-service-key`:
 
+Exclua a chave de serviço `my-service-key`:
 ```
 ibmcloud resource service-key-delete my-service-key
 ```
@@ -719,8 +661,7 @@ ibmcloud resource service-key-delete my-service-key
 ## ibmcloud resource service-aliases
 {: #ibmcloud_resource_service_aliases}
 
-Listar aliases para uma instância de serviço
-
+Listar aliases para uma instância de serviço.
 ```
 ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [--output FORMAT]
 ```
@@ -738,7 +679,8 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [-
 </dl>
 
 <strong>Exemplos</strong>:
-liste os aliases de serviço para a instância de serviço `my-service-instance`:
+
+Liste aliases de serviço para a instância de serviço `my-service-instance`:
 ```
 ibmcloud resource service-aliases my-service-instance
 ```
@@ -746,8 +688,7 @@ ibmcloud resource service-aliases my-service-instance
 ## ibmcloud resource service-alias
 {: #ibmcloud_resource_service_alias}
 
-Mostrar detalhes de um alias do serviço
-
+Mostrar detalhes de um alias de serviço.
 ```
 ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 ```
@@ -765,7 +706,8 @@ ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 </dl>
 
 <strong>Exemplos</strong>:
-mostre os detalhes do alias do serviço `my-service-alias`:
+
+Mostrar detalhes do alias de serviço  ` my-service-alias `:
 ```
 ibmcloud resource service-alias  my-service-alias
 ```
@@ -773,8 +715,7 @@ ibmcloud resource service-alias  my-service-alias
 ## ibmcloud resource service-alias-create
 {: #ibmcloud_resource_service_alias_create}
 
-Criar um alias de uma instância de serviço
-
+Crie um alias de uma instância de serviço.
 ```
 ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
@@ -798,7 +739,8 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
 </dl>
 
 <strong>Exemplos</strong>:
-crie um alias de serviço chamado `my-service-alias` da instância de serviço `my-service-instance`:
+
+Crie um alias de serviço denominado `my-service-alias` da instância de serviço `my-service-instance`:
 ```
 ibmcloud resource service-alias-create my-service-alias --instance-name my-service-instance
 ```
@@ -806,8 +748,7 @@ ibmcloud resource service-alias-create my-service-alias --instance-name my-servi
 ## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
-Atualizar um alias de serviço
-
+Atualize um alias de serviço.
 ```
 ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
@@ -829,8 +770,8 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 </dl>
 
 <strong>Exemplos</strong>:
-atualize o alias do serviço `my-service-alias`, mude seu nome para `new-service-alias`:
 
+Atualize o alias de serviço `my-service-alias`, mude o seu nome para `new-service-alias`:
 ```
 ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ```
@@ -838,8 +779,7 @@ ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ## ibmcloud resource service-alias-delete
 {: #ibmcloud_resource_service_alias_delete}
 
-Excluir um alias do serviço
-
+Excluir um alias de serviço.
 ```
 ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
@@ -855,18 +795,18 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 </dl>
 
 <strong>Exemplos</strong>:
-excluir o alias do serviço `my-service-alias`:
 
+Excluir alias de serviço  ` my-service-alias `:
 ```
 ibmcloud resource service-alias-delete my-service-alias
 ```
 
 ## ibmcloud resource search
 {: #ibmcloud_resource_search}
-Procurar recursos usando a sintaxe da consulta Lucene
 
+Procure recursos usando a sintaxe de consulta do Lucene.
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -880,246 +820,180 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
   <dt>-s, -- sort-por</dt>
   <dd>Propriedade a classificar por. Entradas aceitas são `name`, `family`,
 `region`, `type` e `crn`.</dd>
+  <dt>-p, -- provider</dt>
+  <dd>Exibir os recursos da infraestrutura clássica. O único valor permitido é: classic-infrastructure</dd>
 </dl>
 
-<strong>Exemplos</strong>: procurar por aplicativos do Cloud Foundry cujo nome começa com um texto
-especificado:
+<strong>Atributos procuráveis</strong>:
+é possível procurar os atributos a seguir:
 
+<dl>
+  <dt>Nome</dt>
+  <dd>O nome definido pelo usuário do recurso.</dd>
+  <dt>região</dt>
+  <dd>A localização geográfica na qual o recurso é provisionado. Por exemplo: us-south, us-east, au-syd, eu-gb, eu-de e jp-tok.</dd>
+  <dt>nome_do_serviço</dt>
+  <dd>O nome do serviço como aparece na coluna Nome da saída de 'ibmcloud catalog service-marketplace'.</dd>
+  <dt>família</dt>
+  <dd>O componente de nuvem ao qual seu recurso pertence. Os valores permitidos são cloud_foundry, containers, resource_controller, vmware ou ims.</dd>
+  <dt>organization_id</dt>
+  <dd>O GUID da organização do Cloud Foundry.</dd>
+  <dt>doc.space_id</dt>
+  <dd>O GUID do espaço do Cloud Foundry.</dd>
+  <dt>doc.resource_group_id</dt>
+  <dd>O ID do grupo de recursos.</dd>
+  <dt>type</dt>
+  <dd>O tipo de recurso. Os valores permitidos são k8-cluster, cf-service-instance, cf-user-provided-service-instance, cf-organization, cf-service-binding, cf-space, cf-application, resource-instance, resource-alias, resource-binding, resource-group, vmware-solutions, cloud-objects-storage-infrastructure, block-storage, file-storage, cloud-backup.</dd>
+  <dt>creation_date</dt>
+  <dd>A data na qual o recurso é criado.</dd>
+  <dt>modification_date</dt>
+  <dd>A data da última modificação do recurso. Ele está no formato yyyy-mm-ddThh:mm:ssZ </dd>
+  <dt>_objectType</dt>
+  <dd>O tipo do recurso de infraestrutura clássica. Os valores permitidos são SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall e SoftLayer_Virtual_Guest. </dd>
+  <dt>tags, tagReferences.tag.name</dt>
+  <dd>A tag anexada a um recurso. Use tagReferences.tag.name ao procurar tags anexadas aos recursos de infraestrutura clássica </dd> 
+</dl>
+
+<strong>Exemplos</strong>:
+
+Procure aplicativos do Cloud Foundry cujo nome inicia com um texto especificado:
 ```
 ibmcloud resource search 'name:my* AND type:cf-application'
 ```
 
 Procurar por instâncias de serviço do Cloud Foundry do nome do serviço especificado:
-
 ```
 ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
 ```
 
 Procurar por ligações de serviço do Cloud Foundry na organização com o ID especificado:
-
 ```
 ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
 ```
 
 Procurar por espaços do Cloud Foundry com o nome especificado e localizado em uma das duas regiões
 especificadas:
-
 ```
 ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
 ```
 
 Procurar por recursos cujo nome contenha a palavra dev no espaço do Cloud Foundry com o ID especificado:
-
-```            
+```
 ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
 ```
 
 Procurar por recursos do Resource Controller no local especificado (ou seja, na região us-south):
-
 ```
 ibmcloud resource search 'region:us-south AND family:resource_controller'
 ```
 
 Procurar por recursos ou aliases no grupo de recursos com o ID especificado:
-
 ```
 ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
 ```
 
 Procurar por grupos de recursos com o nome padrão:
-
 ```
 ibmcloud resource search 'name:default AND type:resource-group'
 ```
 
 Procurar por ligações de recurso para o nome do serviço especificado:
-
 ```
 ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
 ```
 
 Procurar por um recurso com o Cloud Resource Name (CRN) especificado:
-
 ```
 ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 Procurar por um recurso com a tag especificada:
-
 ```
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
+{: codeblock}
+
+Procure o recurso de Guest virtual de infraestrutura clássica com o ID especificado (somente com infraestrutura clássica -p):
+```
+ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
+```
+{: codeblock}
+
+Procure o recurso de Hardware de infraestrutura clássica com o nome de tag especificado (somente com infraestrutura clássica -p):
+```
+ibmcloud resource search 'tagReferences.tag.name:name _objectType: SoftLayer_Hardware'
+```
+{: codeblock}
 
 ## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
-Listar todas as tags
+Liste todas as tags em sua conta de faturamento
 
 ```
-ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true]
 ```
-
 <strong>Pré-requisitos</strong>: Terminal, Login
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>-- tag tipo</dt>
-  <dd>Tipo de Tag (valores suportados: usuário, restrito)</dd>
-  <dt>-o, -- offset</dt>
-  <dd>Iniciando o número da posição de recursos (padrão: 0)</dd>
-  <dt>-l, --limit</dt>
-  <dd>Número de recursos a serem retornados (máximo 10000) (padrão: 10000)</dd>
+  <dt>-o, -offset</dt>
+  <dd>Número da posição de tag inicial</dd>
+  <dt>-l, -limit</dt>
+  <dd>Número de tags a serem retornadas (máximo de 10000)</dd>
+  <dt>-p; --provider</dt> 
+  <dd>Especifique a infraestrutura clássica ao procurar tags de infraestrutura clássica</dd>
+  <dt>-d, --details</dt>
+  <dd>Mostrar o número de recursos identificados.</dd>
 </dl>
 
-<strong>Exemplos</strong>:
-
-Listar todas as tags
-
-```
-ibmcloud resource tags
-```
-
-Liste todas as tags restritos
-
-```
-ibmcloud resource tags --tag-type restricted
-```
-
-## Tag de recurso ibmcloud
-{: #ibmcloud_resource_tag}
-
-Mostrar detalhes de uma tag
-
-```
-ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
-```
-
-<strong>Pré-requisitos</strong>: Terminal, Login
-
-<strong>Opções de comando</strong>:
-<dl>
-  <dt>-- tag-name (necessário)</dt>
-  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
-  <dt>-- tag-crn (obrigatório)</dt>
-  <dd>Tag CRN, exclusivo com -- tag-name</dd>
-</dl>
-
-<strong>Exemplos</strong>:
-
-Mostrar detalhes da tag "Ray Brown"
-
-```
-ibmcloud resource tag --tag-name "Ray Brown"
-```
-
-## ibmcloud resource tag-create
-{: #ibmcloud_resource_tag_create}
-
-Crie uma tag
-
-```
-ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
-```
-
-<strong>Pré-requisitos</strong>: Terminal, Login
-
-<strong>Opções de comando</strong>:
-<dl>
-  <dt>-- tag-name (necessário)</dt>
-  <dd>Nome de tag</dd>
-  <dt>-- tag tipo</dt>
-  <dd>Tipo de tag (valores suportados: user, restricted; padrão: user)</dd>
-</dl>
-
-<strong>Exemplos</strong>:
-
-Criar uma tag de usuário com o nome think:2018
-
-```
-ibmcloud resource tag-create --tag-name think:2018
-```
-
-Criar uma tag restrita com o nome department:marketing
-
-```
-ibmcloud resource tag-create --tag-name "department:marketing" --tag-type restricted
-```
-
-Criar uma tag de usuário com o nome "Ray Brown"
-
-```
-ibmcloud resource tag-create --tag-name "Ray Brown"
-```
-
-Criar uma tag restrita com o nome "environment:My Development"
-
-```
-ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
-```
-
-## ibmcloud resource tag-delete
-{: #ibmcloud_resource_tag_delete}
-
-Excluir uma tag
-
-```
-ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
-```
-
-<strong>Pré-requisitos</strong>: Terminal, Login
-
-<strong>Opções de comando</strong>:
-<dl>
-  <dt>-- tag-name (necessário)</dt>
-  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
-  <dt>-- tag-crn (obrigatório)</dt>
-  <dd>Tag CRN, exclusivo com -- tag-name</dd>
-</dl>
-
-<strong>Exemplos</strong>:
-
-Deletag tag "Ray Brown"
-
-```
-ibmcloud resource tag-delete --tag-name "Ray Brown"
-```
 
 ## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
 
-Inclua uma tag para um recurso
-
+Conecte uma ou mais tags a um recurso:
 ```
-ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resource-crn RESOURCE_CRN
+ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
 ```
-
 <strong>Pré-requisitos</strong>: Terminal, Login
 
 <strong>Opções de comando</strong>:
 <dl>
-  <dt>-- tag-name (necessário)</dt>
-  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
-  <dt>-- tag-crn (obrigatório)</dt>
-  <dd>Tag CRN, exclusivo com -- tag-name</dd>
-  <dt>-- resource-crn (obrigatório)</dt>
-  <dd>Recursos CRN</dd>
+  <dt>--tag-names (necessários)</dt>
+  <dd>Lista separada por vírgulas de nomes de tag</dd>
+  <dt>--resource-id</dt>
+  <dd>O CRN do recurso ao qual as tags serão anexadas; para recursos de infraestrutura clássica, ele é o ID do recurso</dd>
+  <dt>--resource-type</dt>
+  <dd>O tipo de recurso de infraestrutura clássica ao qual as tags serão anexadas; esse parâmetro será necessário se estiver anexando uma tag a um recurso de infraestrutura clássica. Os valores possíveis para --resource-type são: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall e SoftLayer_Virtual_Guest. </dd>
 </dl>
-
-<strong>Exemplos</strong>:
-
-Incluir a tag "Ray Brown" no recurso cujo crn é resource_example_crn.
-
-```
-ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
-```
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
-Remover uma tag de um recurso
-
+Desconectando uma ou mais tags de um recurso:
 ```
-ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RESOURCE_CRN
+ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>--tag-names (necessários)</dt>
+  <dd>Lista separada por vírgulas de nomes de tag</dd>
+  <dt>--resource-id</dt>
+  <dd>O CRN do recurso por meio do qual as tags serão desanexadas; para recursos de infraestrutura clássica, ele é o ID do recurso</dd>
+  <dt>--resource-type</dt>
+  <dd>O tipo de recurso de infraestrutura clássica por meio do qual as tags serão desconectadas; esse parâmetro será necessário se estiver anexando uma tag a um recurso de infraestrutura clássica. Os valores possíveis para --resource-type são: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall e SoftLayer_Virtual_Guest. </dd>
+</dl>
+
+
+## ibmcloud resource tag-delete
+{: #ibmcloud_resource_tag_delete}
+
+Excluindo uma tag:
+```
+ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -1127,46 +1001,9 @@ ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RE
 <strong>Opções de comando</strong>:
 <dl>
   <dt>-- tag-name (necessário)</dt>
-  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
-  <dt>-- tag-crn (obrigatório)</dt>
-  <dd>Tag CRN, exclusivo com -- tag-name</dd>
-  <dt>-- resource-crn (obrigatório)</dt>
-  <dd>Recursos CRN</dd>
+  <dd>O nome da tag a ser excluída.</dd>
+  <dt>-p; --provider</dt> 
+  <dd>Especifique a infraestrutura clássica ao excluir uma tag de infraestrutura clássica</dd>
 </dl>
 
-<strong>Exemplos</strong>:
-
-Remover a tag "Ray Brown" do recurso cujo crn é resource_example_crn.
-
-```
-ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
-```
-
-## ibmcloud resource tag-update
-{: #ibmcloud_resource_tag_update}
-
-Alternar a tag de usuário para a tag restrita e vice-versa
-
-```
-ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
-```
-
-<strong>Pré-requisitos</strong>: Terminal, Login
-
-<strong>Opções de comando</strong>:
-<dl>
-  <dt>-- tag-name (necessário)</dt>
-  <dd>Nome da Tag, exclusivo com -- tag-crn</dd>
-  <dt>-- tag-crn (obrigatório)</dt>
-  <dd>Tag CRN, exclusivo com -- tag-name</dd>
-  <dt>--tag-type (obrigatório)</dt>
-  <dd>Tipo de tag</dd>
-</dl>
-
-<strong>Exemplos</strong>:
-
-Alternar a tag "Ray Brown" para a tag restrita
-
-```
-ibmcloud tag-update --tag-name "Ray Brown"  --tag-type restricted
-```
+Uma tag poderá ser excluída apenas se ela não estiver anexada a nenhum recurso.

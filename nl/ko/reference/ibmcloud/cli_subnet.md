@@ -1,37 +1,27 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 서브넷 작성, 취소 및 보기
+{: #sl-manage-subnets}
 
-서브넷은 더 작은 여러 네트워크 세그먼트 안에 IP 네트워크의 논리 파티션입니다. 다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 클래식 인프라 서브넷을 관리하십시오.
+서브넷은 더 작은 여러 네트워크 세그먼트 안에 IP 네트워크의 논리 파티션입니다. 다음 명령을 사용하여 {{site.data.keyword.cloud}} 클래식 인프라 서브넷을 관리하십시오.
 {: shortdesc}
 
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 서브넷 명령">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl subnet cancel](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_cancel)</td>
- <td>[ibmcloud sl subnet create](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_create)</td>
- <td>[ibmcloud sl subnet detail](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_detail)</td>
- <td>[ibmcloud sl subnet list](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_list)</td>
- <td>[ibmcloud sl subnet lookup](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_lookup)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl subnet cancel
+## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 서브넷을 취소합니다.
@@ -49,7 +39,7 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-이 명령은 확인 요청 없이 ID가 12345678인 서브넷을 취소합니다.
+이 명령은 확인을 요청하지 않고 ID가 `12345678`인 서브넷을 취소합니다.
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -73,7 +63,9 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 ibmcloud sl subnet create public 16 567
 ```
-이 명령은 16개의 IP v4 주소를 사용하여 공인 서브넷을 작성하고 ID 567인 VLAN에 배치합니다.
+{: codeblock}
+
+이 명령은 16개의 IP v4 주소를 사용하여 공인 서브넷을 작성하고 ID가 `567`인 VLAN에 배치합니다.
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
@@ -95,7 +87,9 @@ ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet detail 12345678
 ```
-이 명령은 가상 서버 및 하드웨어 서버 정보를 포함하여 ID가 12345678인 서브넷에 대한 자세한 정보를 표시합니다.
+{: codeblock}
+
+이 명령은 가상 서버 및 하드웨어 서버 정보를 포함하여 ID가 `12345678`인 서브넷에 대한 자세한 정보를 표시합니다.
 
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
@@ -129,7 +123,9 @@ ibmcloud sl subnet list [OPTIONS]
 ```
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
-이 명령은 현재 계정의 IP V4 서브넷을 나열합니다. 데이터 센터 기준 필터링은 dal09이고, 서브넷 유형은 PRIMARY이며 네트워크 영역은 PUBLIC입니다.
+{: codeblock}
+
+이 명령은 현재 계정의 IP V4 서브넷을 나열합니다. 데이터 센터 기준 필터링은 `dal09`이고, 서브넷 유형은 `PRIMARY`이며 네트워크 영역은 `PUBLIC`입니다.
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
@@ -139,9 +135,10 @@ IP 주소를 찾고 해당 서브넷 및 디바이스 정보를 표시합니다.
 ibmcloud sl subnet lookup IP_ADDRESS
 ```
 
-
 **예제**:
 ```
 ibmcloud sl subnet lookup 9.125.235.255
 ```
-이 명령은 주소가 9.125.235.255인 IP 주소 레코드를 찾고 해당 서브넷과 디바이스 정보를 표시합니다.
+{: codeblock}
+
+이 명령은 IP 주소가 `9.125.235.255`인 IP 주소 레코드를 찾고 해당 서브넷과 디바이스 정보를 표시합니다.

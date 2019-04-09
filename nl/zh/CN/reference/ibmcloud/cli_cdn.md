@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,34 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # 使用 CDN 服务
+{: #sl-cdn-service}
 
-Content Delivery Network (CDN) 服务将内容分发到需要该内容的位置。首次收到内容请求时，该服务会将数据从主机服务器中拉取到网络并将其保留在网络中，以供其他用户访问。
+内容交付网络 (CDN) 服务会将内容分发到需要该内容的位置。首次收到内容请求时，该服务会将数据从主机服务器中拉取到网络并将其保留在网络中，以供其他用户访问。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构 CDN 服务。
+使用以下命令可管理 {{site.data.keyword.cloud_notm}} 经典基础架构 CDN 服务。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构 CDN 命令（带有可获取命令的更多信息的链接）">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl cdn cancel](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_cancel)</td>
-  <td>[ibmcloud sl cdn detail](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_detail)</td>
-  <td>[ibmcloud sl cdn list](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_list)</td>
-  <td>[ibmcloud sl cdn load](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_load)</td>
-  <td>[ibmcloud sl cdn order](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_order)</td>
-  <td>[ibmcloud sl cdn options](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_options)</td>
-   </tr>
- <tr>
-  <td>[ibmcloud sl cdn origin-add](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_add)</td>
-  <td>[ibmcloud sl cdn origin-list](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_list)</td>
-  <td>[ibmcloud sl cdn origin-remove](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_remove)</td>
-  <td>[ibmcloud sl cdn purge](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_purge)</td>
-  </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl cdn cancel
+## ibmcloud sl cdn cancel
 {: #sl_cdn_cancel}
 
 取消 CDN 帐户。
@@ -97,9 +79,9 @@ ibmcloud sl cdn order [OPTIONS]
 <strong>命令选项</strong>：
 <dl>
 <dt>-b, --bandwidth</dt>
-<dd>CDN 带宽，如果未指定，将使用“现买现付”价格。</dd>
+<dd>CDN 带宽，如果未指定，将使用“现收现付”价格。</dd>
 <dt>-s, --storage</dt>
-<dd>CDN 存储器，如果未指定，将使用“现买现付”价格。</dd>
+<dd>CDN 存储器，如果未指定，将使用“现收现付”价格。</dd>
 <dt>-f, --force</dt>
 <dd>强制操作而不确认。</dd>
 </dl>

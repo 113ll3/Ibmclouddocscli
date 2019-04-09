@@ -1,16 +1,14 @@
 ---
 
-
-
 copyright:
+  years: 2016, 2019
+lastupdated: "2019-02-26"
 
-  years: 2016, 2018
+keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
-lastupdated: "2018-11-30"
-
+subcollection: cloud-cli
 
 ---
-
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -23,15 +21,14 @@ lastupdated: "2018-11-30"
 Cloud Foundry(cf) 명령행 인터페이스(CLI)는 앱 관리를 위한 명령 세트를 제공합니다. 다음 정보는 앱 관리를 위해 가장 공통적으로 사용되는 cf 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다. cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 사용하십시오. `cf command_name -h`를 사용하면 특정 명령에 대한 자세한 도움말 정보를 볼 수 있습니다.
 {: shortdesc}
 
-Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}를 참조하십시오.
+Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기](https://github.com/cloudfoundry/cli#getting-started){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
-`cf CLI` 명령의 더 자세한 목록은 커뮤니티 [Cloud Foundry CLI 참조서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}를 참조하십시오.
+`cf CLI` 명령의 더 자세한 목록은 커뮤니티 [Cloud Foundry CLI 참조서](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")를 참고하십시오.
 
 네트워크에서 cf 명령을 실행하는 호스트와 Cloud Foundry API
 엔드포인트 사이에 HTTP 프록시 서버가 있으면 `HTTP_PROXY` 환경 변수를 설정하여
-프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 세부사항은 [Using the cf CLI with a Proxy Server ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}를 참조하십시오.
+프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 세부사항은 [Using the cf CLI with a Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 {: note}
-
 
 ## Cloud Foundry CLI 명령 색인
 {: #CLIname_commands_index}
@@ -45,16 +42,15 @@ Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기 ![외부 
  </thead>
  <tbody>
  <tr>
- <td>[api](/docs/cli/reference/ibmcloud/cf_index.html#cf_api)</td>
- <td>[help](/docs/cli/reference/ibmcloud/cf_index.html#cf_help)</td>
- <td>[login](/docs/cli/reference/ibmcloud/cf_index.html#cf_login)</td>
- <td>[stacks](/docs/cli/reference/ibmcloud/cf_index.html#cf_stacks)</td>
- <td>[target](/docs/cli/reference/ibmcloud/cf_index.html#cf_target)</td>
- <td>[-v](/docs/cli/reference/ibmcloud/cf_index.html#cf_v)</td>
+ <td>[api](#cf_api)</td>
+ <td>[help](#cf_help)</td>
+ <td>[login](#cf_login)</td>
+ <td>[stacks](#cf_stacks)</td>
+ <td>[target](#cf_target)</td>
+ <td>[-v](#cf_v)</td>
  </tr>
    </tbody>
  </table>
-
 
 <table summary="알파벳순으로 표시된 앱, 영역 및 서비스 관리를 위한 명령입니다. 각 명령에는 명령에 대한 세부 정보를 제공하는 링크가 포함되어 있습니다.">
 <caption>표 2. 앱, 영역 및 서비스 관리를 위한 명령</caption>
@@ -63,25 +59,25 @@ Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기 ![외부 
  </thead>
  <tbody>
  <tr>
- <td>[apps](/docs/cli/reference/ibmcloud/cf_index.html#cf_apps)</td>
- <td>[bind-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_bind-service)</td>
- <td>[create-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-service)</td>
- <td>[create-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-space)</td>
- <td>[delete](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete)</td>
+ <td>[apps](#cf_apps)</td>
+ <td>[bind-service](#cf_bind-service)</td>
+ <td>[create-service](#cf_create-service)</td>
+ <td>[create-space](#cf_create-space)</td>
+ <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete-space)</td>
- <td>[events](/docs/cli/reference/ibmcloud/cf_index.html#cf_events)</td>
- <td>[logs](/docs/cli/reference/ibmcloud/cf_index.html#cf_logs)</td>
- <td>[marketplace](/docs/cli/reference/ibmcloud/cf_index.html#cf_marketplace)</td>
- <td>[push](/docs/cli/reference/ibmcloud/cf_index.html#cf_push)</td>
+ <td>[delete-space](/#cf_delete-space)</td>
+ <td>[ 이벤트](#cf_events)</td>
+ <td>[logs](#cf_logs)</td>
+ <td>[marketplace](#cf_marketplace)</td>
+ <td>[푸시(push)](#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](/docs/cli/reference/ibmcloud/cf_index.html#cf_scale)</td>
- <td>[services](/docs/cli/reference/ibmcloud/cf_index.html#cf_services)
- <td>[set-env](/docs/cli/reference/ibmcloud/cf_index.html#cf_set-env)</td>
- <td>[ssh](/docs/cli/reference/ibmcloud/cf_index.html#cf_ssh)</td>
- <td>[stop](/docs/cli/reference/ibmcloud/cf_index.html#cf_stop)</td>
+ <td>[스케일링(scale)](#cf_scale)</td>
+ <td>[services](#cf_services)
+ <td>[set-env](#cf_set-env)</td>
+ <td>[ssh](#cf_ssh)</td>
+ <td>[stop](#cf_stop)</td>
  </tr>
  </tbody>
  </table>
@@ -89,8 +85,7 @@ Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기 ![외부 
 ## cf api
 {: #cf_api}
 
-이 명령을 사용하여 {{site.data.keyword.Bluemix}}의 API 엔드포인트에 대한 URL을 표시하거나 지정합니다.
-
+이 명령을 사용하여 {{site.data.keyword.cloud}}의 API 엔드포인트에 대한 URL을 표시하거나 지정합니다.
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
@@ -101,15 +96,15 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL(선택사항)</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때
-지정해야 하는 {{site.data.keyword.Bluemix_notm}} API 엔드포인트의
+   <dd>{{site.data.keyword.cloud_notm}}에 연결할 때
+지정해야 하는 {{site.data.keyword.cloud_notm}} API 엔드포인트의
 URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
    현재 사용 중인 API 엔드포인트의 URL을 표시하려는 경우 cf api 명령에 이 매개변수를 지정할 필요가 없습니다.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다.</dd>
    <dt>* --unset</dt>
    <dd>모든 API 엔드포인트에 대한 연결 정보를 제거합니다.</dd>
-    </dl>
+   </dl>
 
 <strong>예제</strong>:
 
@@ -119,18 +114,17 @@ cf api
 ```
 {: codeblock}
 
-api.ng.bluemix.net의 모든 API 엔드포인트에 대한 연결을 제거합니다.
+api.us-south.cf.cloud.ibm.com의 모든 API 엔드포인트에 대한 연결을 제거합니다.
 ```
-cf api api.ng.bluemix.net --unset
-```
-{: codeblock}
-
-api.ng.bluemix.network의 SSL 유효성 검증 프로세스를 사용하지 않습니다.
-```
-cf api api.ng.bluemix.net --skip-ssl-validation
+cf api api.us-south.cf.cloud.ibm.com --unset
 ```
 {: codeblock}
 
+api.us-south.cf.cloud.ibm.com의 SSL 유효성 검증 프로세스를 사용하지 않습니다.
+```
+cf api api.us-south.cf.cloud.ibm.com --skip-ssl-validation
+```
+{: codeblock}
 
 ## cf apps
 {: #cf_apps}
@@ -142,9 +136,9 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 ```
 cf apps
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
-
 
 ## cf bind-service
 {: #cf_bind-service}
@@ -154,6 +148,7 @@ cf apps
 ```
 cf bind-service appname service_instance
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
@@ -183,6 +178,7 @@ cf bind-service my_app my_dataworks
 ```
 cf create-service service_name service_plan service_instance
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
@@ -261,7 +257,7 @@ cf delete appname [-f] [-r]
 
 <strong>예제</strong>:
 
-`my_app`(확인 필수)이라는 애플리케이션을 삭제합니다.
+`my_app`이라는 애플리케이션을 삭제합니다(확인 필요).
 ```
 cf delete my_app
 ```
@@ -290,7 +286,6 @@ cf delete my_app -f -r
 {: #cf_delete-space}
 
 영역을 삭제합니다.
-
 ```
 cf delete-space space_name [-f]
 ```
@@ -305,11 +300,11 @@ cf delete-space space_name [-f]
    <dt>*-f*(선택사항)</dt>
    <dd>확인 없이 영역을 강제로 삭제합니다.</dd>
    *참고:* 영역을 삭제하면 되돌릴 수 없습니다.
-    </dl>
+   </dl>
 
 <strong>예제</strong>:
 
-`my_app`(확인 필수)이라는 애플리케이션을 삭제합니다.
+`my_app`이라는 애플리케이션을 삭제합니다(확인 필요).
 ```
 cf delete my_app
 ```
@@ -342,6 +337,7 @@ cf delete my_app -f -r
 ```
 cf events [appname]
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
@@ -369,6 +365,7 @@ cf events my_app
 ```
 cf help [command_name]
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: 없음
 
@@ -397,9 +394,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}}에 로그인합니다. 연합 ID로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용하여 로그인해야 합니다.
+{{site.data.keyword.cloud_notm}}에 로그인합니다. 연합 ID로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용하여 로그인해야 합니다.
 
-{{site.data.keyword.Bluemix_notm}} 플랫폼 API 키를 사용하여 로그인할 수도 있습니다. `apikey`를 사용자 이름으로, API 키 값을 비밀번호로 사용하십시오. API 키 작성에 대한 자세한 정보는 [API 키 이해](/docs/iam/apikeys.html)를 참조하십시오.
+{{site.data.keyword.cloud_notm}} 플랫폼 API 키를 사용하여 로그인할 수도 있습니다. `apikey`를 사용자 이름으로, API 키 값을 비밀번호로 사용하십시오. API 키 작성에 대한 자세한 정보는 [API 키 이해](/docs/iam?topic=iam-manapikey#manapikey)를 참조하십시오.
 {: note}
 
 ```
@@ -412,7 +409,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <dl>
 <dt>*-a* https://api.{DomainName}(선택사항)</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} API 엔드포인트의 URL입니다.</dd>
+<dd>{{site.data.keyword.cloud_notm}} API 엔드포인트의 URL입니다.</dd>
 <dt>*-u* user_name(선택사항)</dt>
 <dd>사용자 이름입니다.</dd>
 <dt>*-p* password(선택사항)</dt>
@@ -432,33 +429,33 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>예제</strong>:
 
-{{site.data.keyword.Bluemix_notm}}에 로그인하십시오.
+{{site.data.keyword.cloud_notm}}에 로그인하십시오.
 ```
 cf login
 ```
 {: codeblock}
 
-`https://api.ng.bluemix.net`의 정의된 엔드포인트를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인합니다.
+`https://api.us-south.cf.cloud.ibm.com`의 정의된 엔드포인트를 사용하여 {{site.data.keyword.cloud_notm}}에 로그인합니다.
 ```
-cf login -a https://api.ng.bluemix.net
-```
-{: codeblock}
-
-`https://api.ng.bluemix.net`의 정의된 엔드포인트, `user_name`의 사용자 이름 및 보안상의 이유로 지정되지 않은 비밀번호를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인합니다.
-```
-cf login -a https://api.ng.bluemix.net -u user_name
+    cf login -a https://api.us-south.cf.cloud.ibm.com
 ```
 {: codeblock}
 
-`https://api.ng.bluemix.net`의 정의된 엔드포인트, `user_name`의 사용자 이름, 보안상의 이유로 지정되지 않은 비밀번호, `org_name`의 조직 이름 및 `space_name`의 영역 이름을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인합니다.
+`https://api.us-south.cf.cloud.ibm.com`의 정의된 엔드포인트, `user_name`의 사용자 이름 및 보안상의 이유로 지정되지 않은 비밀번호를 사용하여 {{site.data.keyword.cloud_notm}}에 로그인합니다.
 ```
-cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name
 ```
 {: codeblock}
 
-API 키를 사용하여 `https://api.ng.bluemix.net`의 정의된 엔드포인트로 {{site.data.keyword.Bluemix_notm}}에 로그인합니다. `apikey`를 사용자 이름으로 사용하고 실제 API 키를 비밀번호로 사용하십시오.
+`https://api.us-south.cf.cloud.ibm.com`의 정의된 엔드포인트, `user_name`의 사용자 이름, 보안상의 이유로 지정되지 않은 비밀번호, `org_name`의 조직 이름 및 `space_name`의 영역 이름을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인합니다.
 ```
-cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
+cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+API 키를 사용하여 `https://api.us-south.cf.cloud.ibm.com`의 정의된 엔드포인트로 {{site.data.keyword.cloud_notm}}에 로그인합니다. `apikey`를 사용자 이름으로 사용하고 실제 API 키를 비밀번호로 사용하십시오.
+```
+cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 
@@ -500,7 +497,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스가 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다.
+Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스가 {{site.data.keyword.cloud_notm}} 카탈로그에도 표시됩니다.
 
 ```
 cf marketplace
@@ -521,7 +518,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-새 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하거나, {{site.data.keyword.Bluemix_notm}}에서 기존 애플리케이션을 업데이트합니다.
+새 애플리케이션을 {{site.data.keyword.cloud_notm}}에 배치하거나, {{site.data.keyword.cloud_notm}}에서 기존 애플리케이션을 업데이트합니다.
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
@@ -555,7 +552,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-t* timeout(선택사항)</dt>
 <dd>애플리케이션 시작에 걸리는 최대 시간(초)입니다. 다른 서버 측 제한시간이 이 값을 대체할 수 있습니다.</dd>
 <dt>*--no-hostname*(선택사항)</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 시스템 도메인을 이 애플리케이션에 맵핑합니다.</dd>
+<dd>{{site.data.keyword.cloud_notm}} 시스템 도메인을 이 애플리케이션에 맵핑합니다.</dd>
 <dt>*--no-manifest*(선택사항)</dt>
 <dd>기본 Manifest 파일을 무시합니다.</dd>
 <dt>*--no-route*(선택사항)</dt>
@@ -824,9 +821,7 @@ cf -v
 
 
 ## 관련 링크
-{: #general}
+{: #cf-related}
 
-* [Cloud Foundry CLI 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
-{: new_window}
-* [빠른 참조 카드 - cf 명령 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{: new_window}
+* [Cloud Foundry CLI 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")
+* [빠른 참조 카드 - cf 명령](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")

@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: domain management, dns service, ibmcloud sl dns, classic infrastructure, management interface, dns, dns cli
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,29 +15,12 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # DNS 서비스로 도메인 관리
+{: #sl-manage-domains}
 
-{{site.data.keyword.Bluemix}} Domain Name Service(DNS)는 고객에게 기본 DNS 관리 인터페이스를 통해 고객의 도메인을 보고 관리할 수 있는 중심 위치를 제공하며, 동일한 위치에서 무료로 역방향 및 보조 DNS를 관리할 수 있는 옵션도 사용자에게 제공합니다.
+{{site.data.keyword.cloud}} Domain Name Service(DNS)는 고객에게 기본 DNS 관리 인터페이스를 통해 고객의 도메인을 보고 관리할 수 있는 중심 위치를 제공하며, 동일한 위치에서 무료로 역방향 및 보조 DNS를 관리할 수 있는 옵션도 사용자에게 제공합니다.
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 DNS 서비스를 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.cloud_notm}} 클래식 인프라 DNS 서비스를 관리하십시오.
 {: shortdesc}
-
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 DNS 명령">
- <tbody>
- <tr>
- <td>[ibmcloud sl dns import](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_import)</td>
- <td>[ibmcloud sl dns record-add](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_add)</td>
- <td>[ibmcloud sl dns record-edit](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_edit)</td>
- <td>[ibmcloud sl dns record-list](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_list)</td>
- <td>[ibmcloud sl dns record-remove](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_remove)</td>
- <td>[ibmcloud sl dns zone-create](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_create)</td>
- </tr>
- <tr>
-   <td>[ibmcloud sl dns zone-delete](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_delete)</td>
-   <td>[ibmcloud sl dns zone-list](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_list)</td>
-   <td>[ibmcloud sl dns zone-print](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_print)</td>
- </tr>
-   </tbody>
- </table>
 
 ## ibmcloud sl dns import
 {: #sl_dns_import}
@@ -57,6 +42,7 @@ ibmcloud sl dns import ~/ibm.com.txt
 ```
 이 명령은 ~/ibm.com.txt 파일에서 구역 및 해당 리소스 레코드를 가져옵니다.
 
+
 ## ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
@@ -76,6 +62,7 @@ ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
 이 명령은 A 레코드를 ibm.com 구역에 추가합니다. 해당 호스트는 "ftp"이고, 데이터는 "127.0.0.1"이며 ttl은 86400초입니다.
+
 
 ## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
@@ -103,6 +90,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 이 명령은 ID가 12345678인 ibm.com 구역 아래의 레코드를 편집하고, 해당 데이터는 "127.0.0.2"로 설정하고 ttl은 3600으로 설정합니다.
 
+
 ## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
@@ -129,6 +117,7 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
 이 명령은 ibm.com 구역 아래의 모든 A 레코드를 나열합니다. 호스트 기준 필터링은 elasticsearch이고 ttl은 900초입니다.
 
+
 ## ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
@@ -137,12 +126,12 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ibmcloud sl dns record-remove RECORD_ID
 ```
 
-
 **예제**:
 ```
 ibmcloud sl dns record-remove 12345678
 ```
 이 명령은 ID가 12345678인 리소스 레코드를 제거합니다.
+
 
 ## ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
@@ -152,12 +141,12 @@ ibmcloud sl dns record-remove 12345678
 ibmcloud sl dns zone-create ZONE
 ```
 
-
 **예제**:
 ```
 ibmcloud sl dns zone-create ibm.com
 ```
 이 명령은 이름이 ibm.com인 구역을 작성합니다.
+
 
 ## ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
@@ -167,12 +156,12 @@ ibmcloud sl dns zone-create ibm.com
 ibmcloud sl dns zone-delete ZONE
 ```
 
-
 **예제**:
 ```
 ibmcloud sl dns zone-delete ibm.com
 ```
 이 명령은 이름이 ibm.com인 구역을 삭제합니다.
+
 
 ## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
@@ -182,12 +171,12 @@ ibmcloud sl dns zone-delete ibm.com
 ibmcloud sl dns zone-list
 ```
 
-
 **예제**:
 ```
 ibmcloud sl dns zone-list
 ```
 이 명령은 현재 계정 아래의 모든 구역을 나열합니다.
+
 
 ## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
@@ -196,7 +185,6 @@ BIND 형식으로 구역 및 리소스 레코드를 인쇄합니다.
 ```
 ibmcloud sl dns zone-print ZONE
 ```
-
 
 **예제**:
 ```

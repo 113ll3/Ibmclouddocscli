@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage security groups, ingress, egress, traffic, virtual server, classic infrastructure, securitygroup, ibmcloud sl securitygroup
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,38 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # 管理虛擬伺服器資料流量的安全群組
+{: #sl-manage-securitygroups}
 
 安全群組是一組 IP 過濾器規則，定義如何處理虛擬伺服器實例公用和專用介面的送入（進入）和送出（輸出）資料流量。您新增至安全群組的規則稱為「安全群組規則」。
 
-請使用下列指令來管理採用 {{site.data.keyword.Bluemix}} 標準基礎架構 Security Group 服務的安全群組。
+請使用下列指令來管理採用 {{site.data.keyword.cloud}} 標準基礎架構 Security Group 服務的安全群組。
 {: shortdesc}
 
-<table summary="按字母順序排列的 {{site.data.keyword.Bluemix_notm}} 標準基礎架構安全群組指令，其鏈結提供指令的相關資訊">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl securitygroup create](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_create)</td>
-  <td>[ibmcloud sl securitygroup delete](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_delete)</td>
-  <td>[ibmcloud sl securitygroup detail](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_detail)</td>
-  <td>[ibmcloud sl securitygroup edit](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_edit)</td>   
-  <td>[ibmcloud sl securitygroup interface-add](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interface_add)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl securitygroup interface-list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interace_list)</td>
-  <td>[ibmcloud sl securitygroup interface-remove](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interface_remove)</td>
-  <td>[ibmcloud sl securitygroup list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_list)</td>
-  <td>[ibmcloud sl securitygroup rule-add](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_add)</td>
-  <td>[ibmcloud sl securitygroup rule-edit](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_edit)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl securitygroup rule-list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_list)</td>
-  <td>[ibmcloud sl securitygroup rule-remove](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_remove)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl securitygroup create
+## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 建立安全群組。

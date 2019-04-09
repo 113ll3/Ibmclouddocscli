@@ -1,20 +1,24 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-30"
+  years: 2016, 2019
+lastupdated: "2019-02-26"
+
+keywords: bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
+
+subcollection: cloud-cli
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
 # BMSClient 초기화
 {: #sdk_BMSClient}
 
-`BMSCore`는 다른 {{site.data.keyword.Bluemix}} 웹 및 모바일 서비스 클라이언트 SDK가 해당 {{site.data.keyword.Bluemix_notm}} 서비스와 통신하는 데 사용하는 HTTP 인프라를 제공합니다.
-
+`BMSCore`는 다른 {{site.data.keyword.cloud}} 웹 및 모바일 서비스 클라이언트 SDK가 해당 {{site.data.keyword.cloud_notm}} 서비스와 통신하는 데 사용하는 HTTP 인프라를 제공합니다.
 
 ## Android 애플리케이션 초기화
 {: #init-BMSClient-android}
@@ -30,7 +34,7 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 
 2. Android 애플리케이션의 기본 활동의 `onCreate` 메소드 내 또는 프로젝트에 가장 적합한 위치에 초기화 코드를 추가하여 Android 애플리케이션에서 `BMSClient` SDK를 초기화하십시오.
 
-  ```Java
+  ```java
   BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
   ```
   {: codeblock}
@@ -41,11 +45,11 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 ## iOS 애플리케이션 초기화
 {: #init-BMSClient-ios}
 
-[CocoaPods ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org){: new_window} 또는 [Carthage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage){: new_window}를 사용하여 `BMSCore` 패키지를 가져올 수 있습니다.
+[CocoaPods ](https://cocoapods.org){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 또는 [Carthage ](https://github.com/Carthage/Carthage){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 사용하여 `BMSCore` 패키지를 가져올 수 있습니다.
 
 1. CocoaPods를 사용하여 `BMSCore`를 설치하려면 Podfile에 다음 행을 추가하십시오. 프로젝트에 아직 Podfile이 없는 경우에는 `pod init` 명령을 사용하십시오.
 
-  ```Swift
+  ```swift
   use_frameworks!
 
   target 'MyApp' do
@@ -56,9 +60,9 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 
   그런 다음 `pod install` 명령을 실행하고 생성된 `.xcworkspace` 파일을 여십시오. `BMSCore`의 최신 릴리스를 업데이트하려면 `pod update BMSCore`를 사용하십시오.
 
-  CocoaPods 사용에 대한 자세한 정보는 [CocoaPods 안내서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://guides.cocoapods.org/using/index.html){: new_window}를 참조하십시오.
+  CocoaPods 사용에 대한 자세한 정보는 [CocoaPods 안내서 ](https://guides.cocoapods.org/using/index.html){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
-2. Carthage를 사용하여 `BMSCore`를 설치하려면 다음 [지시사항 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#getting-started){: new_window}을 참조하십시오.
+2. Carthage를 사용하여 `BMSCore`를 설치하려면 다음 [지시사항 ](https://github.com/Carthage/Carthage#getting-started){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 
   1. Cartfile에 다음 행을 추가하십시오.
 
@@ -69,13 +73,13 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 
   2. `carthage update` 명령을 실행하십시오.
 
-  3. 빌드가 완료된 후 Carthage 지시사항의 [3단계 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#getting-started)를 수행하여 프로젝트에 `BMSCore.framework`를 추가하십시오.
+  3. 빌드가 완료된 후 Carthage 지시사항의 [3단계 ](https://github.com/Carthage/Carthage#getting-started){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 수행하여 프로젝트에 `BMSCore.framework`를 추가하십시오.
 
       Swift 2.3으로 빌드된 애플리케이션의 경우, `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 명령을 사용하십시오. 그 외에는 `carthage update` 명령을 사용하십시오.
 
-3. 모듈을 가져오십시오.
+3. `BMSCore` 모듈을 가져오십시오.
 
-  ```Swift
+  ```swift
   import BMSCore
   ```
   {: codeblock}
@@ -84,13 +88,12 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 
   애플리케이션 위임에 관한 `application(_:didFinishLaunchingWithOptions:)` 메소드나 프로젝트에 가장 적합한 위치에 초기화 코드를 넣으십시오.
 
-  ```Swift
+  ```swift
   BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
   ```
   {: codeblock}
 
   **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`).
-
 
 ## Cordova 애플리케이션 초기화
 {: #init-BMSClient-cordova}
@@ -111,13 +114,9 @@ Android Studio 프로젝트에 `BMSCore` 패키지를 다운로드하고 가져�
 
   **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`).
 
-
-# 관련 링크
-{: #rellinks notoc}
-
 ## 관련 링크
-{: #general notoc}
+{: #BMSClient-rellinks notoc}
 
-* [BMSCore Android SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova 플러그인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [BMSCore Android SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
+* [BMSCore iOS SDK ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
+* [BMSCore Cordova 플러그인 ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")

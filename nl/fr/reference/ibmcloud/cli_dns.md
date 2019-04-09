@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: domain management, dns service, ibmcloud sl dns, classic infrastructure, management interface, dns, dns cli
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,30 +15,12 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # Gestion des domaines avec le service DNS
+{: #sl-manage-domains}
 
-{{site.data.keyword.Bluemix}} Domain Name Service (DNS) fournit aux clients un emplacement central leur permettant d'afficher et de gérer leurs domaines via l'interface de gestion DNS de base et offre aux utilisateurs la possibilité de gérer gratuitement un serveur de noms de domaine inversé et secondaire au même emplacement.
+{{site.data.keyword.cloud}} Domain Name Service (DNS) fournit aux clients un emplacement central leur permettant d'afficher et de gérer leurs domaines via l'interface de gestion DNS de base et offre aux utilisateurs la possibilité de gérer gratuitement un serveur de noms de domaine inversé et secondaire au même emplacement.
 
-Utilisez les commandes suivantes pour gérer le service DNS de l'infrastructure classique {{site.data.keyword.Bluemix_notm}}.
+Utilisez les commandes suivantes pour gérer le service DNS de l'infrastructure classique {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
-
-<table summary="Commandes DNS de l'infrastructure {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">
- <tbody>
- <tr>
- <td>[ibmcloud sl dns import](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_import)</td>
- <td>[ibmcloud sl dns record-add](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_add)</td>
- <td>[ibmcloud sl dns record-edit](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_edit)</td>
- <td>[ibmcloud sl dns record-list](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_list)</td>
- <td>[ibmcloud sl dns record-remove](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_remove)</td>
- <td>[ibmcloud sl dns zone-create](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_create)</td>
- </tr>
- <tr>
-   <td>[ibmcloud sl dns zone-delete](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_delete)</td>
-   <td>[ibmcloud sl dns zone-list
-](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_list)</td>
-   <td>[ibmcloud sl dns zone-print](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_print)</td>
- </tr>
-   </tbody>
- </table>
 
 ## ibmcloud sl dns import
 {: #sl_dns_import}
@@ -58,6 +42,7 @@ ibmcloud sl dns import ~/ibm.com.txt
 ```
 Cette commande importe une zone et ses enregistrements de ressource à partir du fichier ~/ibm.com.txt.
 
+
 ## ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
@@ -77,6 +62,7 @@ ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
 Cette commande ajoute un enregistrement A à la zone ibm.com. Son hôte est "ftp", ses données sont "127.0.0.1" et la valeur de durée de vie est de 86400 secondes.
+
 
 ## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
@@ -104,6 +90,7 @@ ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
 Cette commande modifie des enregistrements sous la zone ibm.com dont l'ID est 12345678, et affecte la valeur "127.0.0.2" au paramètre de données et la valeur 3600 au paramètre de durée de vie.
 
+
 ## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
@@ -130,6 +117,7 @@ ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
 Cette commande répertorie tous les enregistrements A sous la zone ibm.com. La valeur du paramètre de filtrage par hôte est elasticsearch et la valeur du paramètre de durée de vie est 900 secondes.
 
+
 ## ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
@@ -138,12 +126,12 @@ Permet de retirer un enregistrement de ressource d'une zone.
 ibmcloud sl dns record-remove RECORD_ID
 ```
 
-
 **Exemples** :
 ```
 ibmcloud sl dns record-remove 12345678
 ```
 Cette commande retire l'enregistrement de ressource portant l'ID 12345678.
+
 
 ## ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
@@ -153,12 +141,12 @@ Permet de créer une zone.
 ibmcloud sl dns zone-create ZONE
 ```
 
-
 **Exemples** :
 ```
 ibmcloud sl dns zone-create ibm.com
 ```
 Cette commande crée une zone nommée ibm.com.
+
 
 ## ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
@@ -168,12 +156,12 @@ Permet de supprimer une zone.
 ibmcloud sl dns zone-delete ZONE
 ```
 
-
 **Exemples** :
 ```
 ibmcloud sl dns zone-delete ibm.com
 ```
 Cette commande supprime une zone nommée ibm.com.
+
 
 ## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
@@ -183,12 +171,12 @@ Permet de répertorier toutes les zones sur votre compte.
 ibmcloud sl dns zone-list
 ```
 
-
 **Exemples** :
 ```
 ibmcloud sl dns zone-list
 ```
 Cette commande répertorie toutes les zones sous le compte en cours.
+
 
 ## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
@@ -197,7 +185,6 @@ Permet d'imprimer les enregistrements de ressource et de zone au format BIND.
 ```
 ibmcloud sl dns zone-print ZONE
 ```
-
 
 **Exemples** :
 ```

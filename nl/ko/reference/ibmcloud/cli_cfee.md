@@ -1,74 +1,36 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Cloud Foundry Enterprise Environment 서비스에 대한 작업
 {: #ibmcloud_commands_cfee}
 
-{{site.data.keyword.cfee_full}}(CFEE)를 사용하여 격리된 여러 엔터프라이즈급 Cloud Foundry 플랫폼을 요청 시 인스턴스화할 수 있습니다. IBM Cloud Foundry Enterprise 서비스의 인스턴스는 IBM Cloud의 고유 계정 내에서 실행됩니다. 환경은 격리된 하드웨어(Kubernetes 클러스터)에 배치됩니다. 액세스 제어, 용량, 버전 업데이트, 리소스 사용 및 모니터링을 포함하여 환경을 완벽히 제어할 수 있습니다.
+{{site.data.keyword.cfee_full}}(CFEE)를 사용하여 격리된 여러 엔터프라이즈급 Cloud Foundry 플랫폼을 요청 시 인스턴스화할 수 있습니다. IBM Cloud Foundry Enterprise 서비스의 인스턴스는 {{site.data.keyword.cloud_notm}}의 고유 계정 내에서 실행됩니다. 환경은 격리된 하드웨어(Kubernetes 클러스터)에 배치됩니다. 액세스 제어, 용량, 버전 업데이트, 리소스 사용 및 모니터링을 포함하여 환경을 완벽히 제어할 수 있습니다.
 
 다음 명령을 사용하여 CFEE 환경, 조직, 영역, 사용자 및 역할을 관리하십시오.
 {: shortdesc}
 
-<table summary="Cloud Foundry Enterprise Environments 관리(시범)">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud cfee environments](cli_cfee.html#ibmcloud_cfee_environments)</td>
- <td>[ibmcloud cfee environment](cli_cfee.html#ibmcloud_cfee_environment)</td>
- <td>[ibmcloud cfee orgs](cli_cfee.html#ibmcloud_cfee_orgs)</td>
- <td>[ibmcloud cfee org](cli_cfee.html#ibmcloud_cfee_org)</td>
- <td>[ibmcloud cfee org-create](cli_cfee.html#ibmcloud_cfee_org_create)</td>
- </tr>
- <tr>
- <td>[ibmcloud cfee org-delete](cli_cfee.html#ibmcloud_cfee_org_delete)</td>
- <td>[ibmcloud cfee org-users](cli_cfee.html#ibmcloud_cfee_org_users)</td>
- <td>[ibmcloud cfee org-role-set](cli_cfee.html#ibmcloud_cfee_org_role_set)</td>
- <td>[ibmcloud cfee org-role-unset](cli_cfee.html#ibmcloud_cfee_org_role_unset)</td>
- <td>[ibmcloud cfee spaces](cli_cfee.html#ibmcloud_cfee_spaces)</td>
- </tr>
-<tr>
- <td>[ibmcloud cfee space](cli_cfee.html#ibmcloud_cfee_space)</td>
- <td>[ibmcloud cfee space-create](cli_cfee.html#ibmcloud_cfee_space_create)</td>
- <td>[ibmcloud cfee space-rename](cli_cfee.html#ibmcloud_cfee_space_rename)</td>
- <td>[ibmcloud cfee space-delete](cli_cfee.html#ibmcloud_cfee_space_delete)</td>
- <td>[ibmcloud cfee space-role-set](cli_cfee.html#ibmcloud_cfee_space_role_set)</td>
- </tr>
- <tr>
-
- <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
- <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
- <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
- <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
- <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
- </tr>
- <tr>
- <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
- <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
- <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud cfee environments
+## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
-CFEE 환경을 나열합니다.
-
+CFEE 환경 나열:
 ```
 ibmcloud cfee environments
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
@@ -77,8 +39,7 @@ ibmcloud cfee environments
 ## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
-CFEE 환경의 세부사항 표시
-
+CFEE 환경의 세부사항 표시:
 ```
 ibmcloud cfee environment NAME [--id]
 ```
@@ -96,22 +57,21 @@ ibmcloud cfee environment NAME [--id]
 <strong>예제</strong>:
 
 CFEE 환경 `env_example`의 세부사항 표시:
-
 ```
 ibmcloud cfee environment env_example
 ```
+{: codeblock}
 
 CFEE 환경 `env_example`의 ID 표시:
-
 ```
 ibmcloud cfee environment env_example --id
 ```
+{: codeblock}
 
 ## ibmcloud cfee orgs
 {: #ibmcloud_cfee_orgs}
 
-모든 조직 나열
-
+모든 조직 나열:
 ```
 ibmcloud cfee orgs [--env ENV]
 ```
@@ -127,22 +87,21 @@ ibmcloud cfee orgs [--env ENV]
 <strong>예제</strong>:
 
 모든 조직 나열:
-
 ```
 ibmcloud cfee orgs
 ```
+{: codeblock}
 
 CFEE 환경 `env_example`의 모든 조직 나열:
-
 ```
 ibmcloud cfee orgs --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org
 {: #ibmcloud_cfee_org}
 
-조직의 세부사항 표시
-
+조직의 세부사항 표시:
 ```
 ibmcloud cfee org ORG [--guid] [--env ENV]
 ```
@@ -162,28 +121,27 @@ ibmcloud cfee org ORG [--guid] [--env ENV]
 <strong>예제</strong>:
 
 CFEE 조직 `org_example`의 세부사항 표시:
-
 ```
 ibmcloud cfee org org_example
 ```
+{: codeblock}
 
 CFEE 환경 `env_example`의 CFEE 조직 `org_example` 세부사항 표시:
-
 ```
 ibmcloud cfee org org_example --env env_example
 ```
+{: codeblock}
 
 CFEE 조직 `org_example`의 GUID 표시:
-
 ```
 ibmcloud cfee org org_example --guid
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-create
 {: #ibmcloud_cfee_org_create}
 
-조직 작성
-
+조직 작성:
 ```
 ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 ```
@@ -203,28 +161,27 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 <strong>예제</strong>:
 
 CFEE 조직 `org_example` 작성:
-
 ```
 ibmcloud cfee org-create org_example
 ```
+{: codeblock}
 
 CFEE 환경 `env_example`의 CFEE 조직 `org_example` 작성:
-
 ```
 ibmcloud cfee org-create org_example --env env_example
 ```
+{: codeblock}
 
 할당량이 `quote_example`인 CFEE 조직 `org_example` 작성:
-
 ```
 ibmcloud cfee org org-create org_example --quota quota_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-delete
 {: #ibmcloud_cfee_org_delete}
 
-조직 삭제
-
+조직 삭제:
 ```
 ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 ```
@@ -244,28 +201,27 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 <strong>예제</strong>:
 
 CFEE 조직 `org_example` 삭제:
-
 ```
 ibmcloud cfee org-delete org_example
 ```
+{: codeblock}
 
 CFEE 환경 `env_example`의 CFEE 조직 `org_example` 삭제:
-
 ```
 ibmcloud cfee org-delete org_example --env env_example
 ```
+{: codeblock}
 
 확인 없이 CFEE 조직 `org_example` 삭제:
-
 ```
 ibmcloud cfee org org-delete org_example -f
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-users
 {: #ibmcloud_cfee_org_users}
 
-지정된 조직의 사용자를 역할순으로 표시
-
+지정된 조직의 사용자를 역할순으로 표시:
 ```
 ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 ```
@@ -285,28 +241,27 @@ ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 <strong>예제</strong>:
 
 CFEE 조직 `org_example`의 사용자 표시:
-
 ```
 ibmcloud cfee org-users org_example
 ```
+{: codeblock}
 
 CFEE 환경 `env_example`의 CFEE 조직 `org_example`에 있는 사용자 표시:
-
 ```
 ibmcloud cfee org-users org_example --env env_example
 ```
+{: codeblock}
 
 CFEE 조직 `org_example`의 모든 사용자 나열:
-
 ```
 ibmcloud cfee org-users org_example -a
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-role-set
 {: #ibmcloud_cfee_org_role_set}
 
 사용자에게 조직 역할 지정(조직 관리자 필요)
-
 ```
 ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -334,22 +289,21 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 <strong>예제</strong>:
 
 `org_example` 조직에 있는 `test@exmaple.com` 사용자에게 `BillingManager` 역할 지정:
-
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager
 ```
+{: codeblock}
 
 CFEE 환경 `env_example`의 `org_example` 조직에 있는 `test@exmaple.com` 사용자에게 `BillingManager` 역할 지정:
-
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-role-unset
 {: #ibmcloud_cfee_org_role_unset}
 
-사용자에서 조직 역할 제거(조직 관리자 또는 사용자 자신만)
-
+사용자에서 조직 역할 제거(조직 관리자 또는 사용자만):
 ```
 ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -377,22 +331,21 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 <strong>예제</strong>:
 
 `org_example` 조직에서 `test@exmaple.com` 사용자의 `BillingManager` 역할 제거:
-
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager
 ```
+{: codeblock}
 
 CFEE 환경 `env_example`의 `org_example` 조직에서 `test@exmaple.com` 사용자의 `BillingManager` 역할 제거:
-
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee spaces
 {: #ibmcloud_cfee_spaces}
 
-모든 영역 나열
-
+모든 영역 나열:
 ```
 ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 ```
@@ -409,23 +362,22 @@ ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 
 <strong>예제</strong>:
 
-모든 영역 나열
-
+모든 영역 나열:
 ```
 ibmcloud cfee spaces
 ```
+{: codeblock}
 
 조직 `org_example` 및 CFEE 환경 `env_example`의 모든 영역 나열
-
 ```
 ibmcloud cfee spaces -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space
 {: #ibmcloud_cfee_space}
 
 지정된 영역의 정보 표시
-
 ```
 ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--env ENV]
 ```
@@ -449,34 +401,33 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
 <strong>예제</strong>:
 
 `space_example` 영역의 정보 표시:
-
 ```
 ibmcloud cfee space space_example
 ```
+{: codeblock}
 
 `space_example` 영역의 GUID 검색 및 표시:
-
 ```
 ibmcloud cfee space space_example --guid
 ```
+{: codeblock}
 
 `space_example` 영역과 연관된 모든 보안 그룹에 대한 규칙 표시:
-
 ```
 ibmcloud cfee space space_example --security-group-rules
 ```
+{: codeblock}
 
 조직 `org_example` 및 CFEE 환경 `env_example`의 영역 `space_example`에 대한 정보 표시:
-
 ```
 ibmcloud cfee space space_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-create
 {: #ibmcloud_cfee_space_create}
 
 새 영역 작성
-
 ```
 ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 ```
@@ -496,22 +447,21 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 <strong>예제</strong>:
 
 새 영역 `space_example` 작성:
-
 ```
 ibmcloud cfee space-create space_example
 ```
+{: codeblock}
 
 조직 `org_example` 및 CFEE 환경 `env_example`에 새 영역 `space_example` 작성:
-
 ```
 ibmcloud cfee space-create space_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-rename
 {: #ibmcloud_cfee_space_rename}
 
-영역 이름 바꾸기
-
+영역 이름 바꾸기:
 ```
 ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 ```
@@ -523,7 +473,7 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
    <dt>OLD_NAME(필수)</dt>
    <dd>이름을 바꿀 영역의 이전 이름입니다.</dd>
    <dt>NEW_NAME(필수)</dt>
-   <dd>이름을 바꿀 영역의 새 이름입니다.</dd>
+   <dd>이름이 변경될 대상 영역의 새 이름입니다.</dd>
    <dt>--env ENV</dt>
    <dd>CFEE 환경 이름입니다. 지정되지 않은 경우 현재 CFEE 환경으로 기본값이 지정됩니다.</dd>
    <dt>-o, --org ORG</dt>
@@ -533,22 +483,21 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 <strong>예제</strong>:
 
 영역 이름 `space_example`을 `new_pace_example`로 바꾸기:
-
 ```
 ibmcloud cfee space-rename space_example new_pace_example
 ```
+{: codeblock}
 
 조직 `org_example` 및 CFEE 환경 `env_example`에서 영역 이름 `space_example`을 `new_pace_example`로 바꾸기:
-
 ```
 ibmcloud cfee space-rename space_example new_pace_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-delete
 {: #ibmcloud_cfee_space_delete}
 
-영역 삭제
-
+영역 삭제:
 ```
 ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 ```
@@ -570,22 +519,21 @@ ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 <strong>예제</strong>:
 
 영역 `space_example` 삭제:
-
 ```
 ibmcloud cfee space-delete space_example
 ```
+{: codeblock}
 
 확인 없이 조직 `org_example` 및 CFEE 환경 `env_example`에 영역 `space_example` 삭제:
-
 ```
 ibmcloud cfee space-delete space_example new_pace_example -f -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-role-set
 {: #ibmcloud_cfee_space_role_set}
 
 사용자에게 영역 역할 지정
-
 ```
 ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -614,22 +562,21 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>예제</strong>:
 
 조직 `org_example` 및 영역 `space_example`에 대한 사용자 `test@exmaple.com`을 `SpaceManager` 역할로 지정:
-
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager
 ```
+{: codeblock}
 
 환경 `env_example`에서 조직 `org_example` 및 영역 `space_example`에 대한 사용자 `test@exmaple.com`을 `SpaceManager` 역할로 지정:
-
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-role-unset
 {: #ibmcloud_cfee_space_role_unset}
 
 사용자에게서 영역 역할 제거
-
 ```
 ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -658,16 +605,16 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>예제</strong>:
 
 조직 `org_example` 및 영역 `space_example`에 대한 `SpaceManager` 역할의 사용자 `test@exmaple.com` 제거:
-
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager
 ```
+{: codeblock}
 
 환경 `env_example`에서 조직 `org_example` 및 영역 `space_example`에 대한 `SpaceManager` 역할의 사용자 `test@exmaple.com` 제거:
-
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-roles
 {: #ibmcloud_cfee_space_roles}
@@ -691,22 +638,21 @@ ibmcloud cfee space-roles ORG [--env ENV]
 <strong>예제</strong>:
 
 조직 `org_example` 아래에 있는 현재 사용자의 모든 영역 역할 가져오기:
-
 ```
 ibmcloud cfee space-roles org_example
 ```
+{: codeblock}
 
 조직 `org_example` 및 환경 `env_example` 아래에 있는 현재 사용자의 모든 영역 역할 가져오기:
-
 ```
 ibmcloud cfee space-roles org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-users
 {: #ibmcloud_cfee_space_users}
 
 지정된 영역의 사용자를 역할순으로 표시
-
 ```
 ibmcloud cfee space-users ORG SPACE [--env ENV]
 ```
@@ -726,22 +672,21 @@ ibmcloud cfee space-users ORG SPACE [--env ENV]
 <strong>예제</strong>:
 
 영역 `space_example` 및 조직 `org_example`의 모든 사용자 표시:
-
 ```
 ibmcloud cfee space-users org_example space_example
 ```
+{: codeblock}
 
 영역 `space_example` 및 조직 `org_example` 및 환경 `env_example`의 모든 사용자 표시:
-
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee create
 {: #ibmcloud_cfee_create}
 
-Cloud Foundry Enterprise Environment의 새 인스턴스를 작성하도록 요청
-
+Cloud Foundry Enterprise Environment의 새 인스턴스를 작성하도록 요청:
 ```
 ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
 ```
@@ -784,10 +729,10 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 {: #ibmcloud_cfee_create_locations}
 
 대상 지역에 사용 가능한 모든 데이터 센터 목록을 가져오도록 요청
-
 ```
 ibmcloud cfee create-locations
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
@@ -851,22 +796,21 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
 <strong>예제</strong>:
 
 기본 액세스 그룹을 사용하여 사용자 `name@example.com`에 CFEE 작성 권한 부여:
-
 ```
 ibmcloud cfee create-permission-set name@example.com
 ```
+{: codeblock}
 
 액세스 그룹 `test-access-group`을 사용하여 사용자 `name@example.com`에 CFEE 작성 권한 부여:
-
 ```
 ibmcloud cfee create-permission-set name@example.com -ag test-access-group
 ```
+{: codeblock}
 
 ## ibmcloud cfee create-status
 {: #ibmcloud_cfee_create_status}
 
-CFEE 인스턴스의 프로비저닝 상태 확인
-
+CFEE 인스턴스의 프로비저닝 상태 확인:
 ```
 ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
 ```

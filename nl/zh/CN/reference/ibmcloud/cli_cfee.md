@@ -1,74 +1,36 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 使用 Cloud Foundry Enterprise Environment 服务
 {: #ibmcloud_commands_cfee}
 
-通过 {{site.data.keyword.cfee_full}} (CFEE)，您可以按需实例化多个隔离的企业级 Cloud Foundry 平台。IBM Cloud Foundry Enterprise 服务实例在 IBM Cloud 中您自己的帐户中运行。环境部署在隔离的硬件（Kubernetes 集群）上。您对环境具有完全控制权，包括访问控制、容量、版本更新、资源使用和监视。
+通过 {{site.data.keyword.cfee_full}} (CFEE)，您可以按需实例化多个隔离的企业级 Cloud Foundry 平台。IBM Cloud Foundry Enterprise 服务实例在 {{site.data.keyword.cloud_notm}} 中您自己的帐户下运行。环境部署在隔离的硬件（Kubernetes 集群）上。您拥有对环境的完全控制权，包括访问控制、容量、版本更新、资源使用和监视。
 
 使用以下命令可管理 CFEE 环境、组织、空间、用户和角色。
 {: shortdesc}
 
-<table summary="管理 Cloud Foundry Enterprise Environments（试验性）">
-<thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud cfee environments](cli_cfee.html#ibmcloud_cfee_environments)</td>
- <td>[ibmcloud cfee environment](cli_cfee.html#ibmcloud_cfee_environment)</td>
- <td>[ibmcloud cfee orgs](cli_cfee.html#ibmcloud_cfee_orgs)</td>
- <td>[ibmcloud cfee org](cli_cfee.html#ibmcloud_cfee_org)</td>
- <td>[ibmcloud cfee org-create](cli_cfee.html#ibmcloud_cfee_org_create)</td>
- </tr>
- <tr>
- <td>[ibmcloud cfee org-delete](cli_cfee.html#ibmcloud_cfee_org_delete)</td>
- <td>[ibmcloud cfee org-users](cli_cfee.html#ibmcloud_cfee_org_users)</td>
- <td>[ibmcloud cfee org-role-set](cli_cfee.html#ibmcloud_cfee_org_role_set)</td>
- <td>[ibmcloud cfee org-role-unset](cli_cfee.html#ibmcloud_cfee_org_role_unset)</td>
- <td>[ibmcloud cfee spaces](cli_cfee.html#ibmcloud_cfee_spaces)</td>
- </tr>
-<tr>
- <td>[ibmcloud cfee space](cli_cfee.html#ibmcloud_cfee_space)</td>
- <td>[ibmcloud cfee space-create](cli_cfee.html#ibmcloud_cfee_space_create)</td>
- <td>[ibmcloud cfee space-rename](cli_cfee.html#ibmcloud_cfee_space_rename)</td>
- <td>[ibmcloud cfee space-delete](cli_cfee.html#ibmcloud_cfee_space_delete)</td>
- <td>[ibmcloud cfee space-role-set](cli_cfee.html#ibmcloud_cfee_space_role_set)</td>
- </tr>
- <tr>
-
- <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
- <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
- <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
- <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
- <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
- </tr>
- <tr>
- <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
- <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
- <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud cfee environments
+## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
-列出 CFEE 环境。
-
+列出 CFEE 环境：
 ```
 ibmcloud cfee environments
 ```
+{: codeblock}
 
 <strong>先决条件</strong>：端点和登录
 
@@ -77,8 +39,7 @@ ibmcloud cfee environments
 ## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
-显示 CFEE 环境的详细信息
-
+显示 CFEE 环境的详细信息：
 ```
 ibmcloud cfee environment NAME [--id]
 ```
@@ -96,22 +57,21 @@ ibmcloud cfee environment NAME [--id]
 <strong>示例</strong>：
 
 显示 CFEE 环境 `env_example` 的详细信息：
-
 ```
 ibmcloud cfee environment env_example
 ```
+{: codeblock}
 
 显示 CFEE 环境 `env_example` 的标识：
-
 ```
 ibmcloud cfee environment env_example --id
 ```
+{: codeblock}
 
 ## ibmcloud cfee orgs
 {: #ibmcloud_cfee_orgs}
 
-列出所有组织
-
+列出所有组织：
 ```
 ibmcloud cfee orgs [--env ENV]
 ```
@@ -127,22 +87,21 @@ ibmcloud cfee orgs [--env ENV]
 <strong>示例</strong>：
 
 列出所有组织：
-
 ```
 ibmcloud cfee orgs
 ```
+{: codeblock}
 
 列出 CFEE 环境 `env_example` 的所有组织：
-
 ```
 ibmcloud cfee orgs --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org
 {: #ibmcloud_cfee_org}
 
-显示组织的详细信息
-
+显示组织的详细信息：
 ```
 ibmcloud cfee org ORG [--guid] [--env ENV]
 ```
@@ -162,28 +121,27 @@ ibmcloud cfee org ORG [--guid] [--env ENV]
 <strong>示例</strong>：
 
 显示 CFEE 组织 `org_example` 的详细信息：
-
 ```
 ibmcloud cfee org org_example
 ```
+{: codeblock}
 
 显示 CFEE 环境 `env_example` 的 CFEE 组织 `org_example` 的详细信息：
-
 ```
 ibmcloud cfee org org_example --env env_example
 ```
+{: codeblock}
 
 显示 CFEE 组织 `org_example` 的 GUID：
-
 ```
 ibmcloud cfee org org_example --guid
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-create
 {: #ibmcloud_cfee_org_create}
 
-创建组织
-
+创建组织：
 ```
 ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 ```
@@ -203,28 +161,27 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env ENV]
 <strong>示例</strong>：
 
 创建 CFEE 组织 `org_example`：
-
 ```
 ibmcloud cfee org-create org_example
 ```
+{: codeblock}
 
 创建 CFEE 环境 `env_example` 的 CFEE 组织 `org_example`：
-
 ```
 ibmcloud cfee org-create org_example --env env_example
 ```
+{: codeblock}
 
 创建配额为 `quote_example` 的 CFEE 组织 `org_example`：
-
 ```
 ibmcloud cfee org org-create org_example --quota quota_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-delete
 {: #ibmcloud_cfee_org_delete}
 
-删除组织
-
+删除组织：
 ```
 ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 ```
@@ -244,28 +201,27 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 <strong>示例</strong>：
 
 删除 CFEE 组织 `org_example`：
-
 ```
 ibmcloud cfee org-delete org_example
 ```
+{: codeblock}
 
 删除 CFEE 环境 `env_example` 的 CFEE 组织 `org_example`：
-
 ```
 ibmcloud cfee org-delete org_example --env env_example
 ```
+{: codeblock}
 
 删除 CFEE 组织 `org_example` 而不确认：
-
 ```
 ibmcloud cfee org org-delete org_example -f
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-users
 {: #ibmcloud_cfee_org_users}
 
-按角色显示指定组织中的用户
-
+按角色显示指定组织中的用户：
 ```
 ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 ```
@@ -285,28 +241,27 @@ ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 <strong>示例</strong>：
 
 显示 CFEE 组织 `org_example` 中的用户：
-
 ```
 ibmcloud cfee org-users org_example
 ```
+{: codeblock}
 
 显示 CFEE 环境 `env_example` 的 CFEE 组织 `org_example` 中的用户：
-
 ```
 ibmcloud cfee org-users org_example --env env_example
 ```
+{: codeblock}
 
 列出 CFEE 组织 `org_example` 中的所有用户：
-
 ```
 ibmcloud cfee org-users org_example -a
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-role-set
 {: #ibmcloud_cfee_org_role_set}
 
-向用户分配组织角色（必须是组织管理员）
-
+向用户分配组织角色（必须是组织管理者）
 ```
 ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -320,9 +275,10 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
    <dt>ORG（必需）</dt>
    <dd>要将此用户分配到的组织的名称。</dd>
    <dt>ROLE（必需）</dt>
-   <dd>要将此用户分配到的组织角色的名称。例如：<ul>
+   <dd>要将此用户分配到的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
-   <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
+   <li>BillingManager：此角色可以创建和管理计费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
    </ul>
    </dd>
@@ -333,22 +289,21 @@ ibmcloud cfee org-role-set USER_EMAIL ORG ROLE [--env ENV]
 <strong>示例</strong>：
 
 将角色 `BillingManager` 分配给组织 `org_example` 中的用户 `test@example.com`：
-
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager
 ```
+{: codeblock}
 
 将角色 `BillingManager` 分配给 CFEE 环境 `env_example` 的组织 `org_example` 中的用户 `test@example.com`：
-
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee org-role-unset
 {: #ibmcloud_cfee_org_role_unset}
 
-除去用户的组织角色（仅限组织管理员或用户自己）
-
+除去用户的组织角色（仅限组织管理者或用户自己）
 ```
 ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -362,9 +317,10 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
    <dt>ORG（必需）</dt>
    <dd>要将此用户从中除去的组织的名称。</dd>
    <dt>ROLE（必需）</dt>
-   <dd>要将此用户从中除去的组织角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
-   <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
+   <li>BillingManager：此角色可以创建和管理计费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
    </ul>
    </dd>
@@ -375,22 +331,21 @@ ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 <strong>示例</strong>：
 
 从组织 `org_example` 中除去用户 `test@example.com` 的角色 `BillingManager`：
-
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager
 ```
+{: codeblock}
 
 从 CFEE 环境 `env_example` 的组织 `org_example` 中除去用户 `test@example.com` 的角色 `BillingManager`：
-
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee spaces
 {: #ibmcloud_cfee_spaces}
 
-列出所有空间
-
+列出所有空间：
 ```
 ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 ```
@@ -407,23 +362,22 @@ ibmcloud cfee spaces [-o,--org ORG] [--env ENV]
 
 <strong>示例</strong>：
 
-列出所有空间
-
+列出所有空间：
 ```
 ibmcloud cfee spaces
 ```
+{: codeblock}
 
 列出组织 `org_example` 和 CFEE 环境 `env_example` 的所有空间
-
 ```
 ibmcloud cfee spaces -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space
 {: #ibmcloud_cfee_space}
 
 显示指定空间的信息
-
 ```
 ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--env ENV]
 ```
@@ -447,34 +401,33 @@ ibmcloud cfee space SPACE [--guid] [--security-group-rules] [-o,--org ORG] [--en
 <strong>示例</strong>：
 
 显示空间 `space_example` 的信息：
-
 ```
 ibmcloud cfee space space_example
 ```
+{: codeblock}
 
 检索并显示空间 `space_example` 的 GUID：
-
 ```
 ibmcloud cfee space space_example --guid
 ```
+{: codeblock}
 
 显示与空间 `space_example` 关联的所有安全组的规则：
-
 ```
 ibmcloud cfee space space_example --security-group-rules
 ```
+{: codeblock}
 
 显示组织 `org_example` 和 CFEE 环境 `env_example` 的空间 `space_example` 的信息：
-
 ```
 ibmcloud cfee space space_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-create
 {: #ibmcloud_cfee_space_create}
 
 创建新空间
-
 ```
 ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 ```
@@ -494,22 +447,21 @@ ibmcloud cfee space-create SPACE [-o, --org ORG] [--env ENV]
 <strong>示例</strong>：
 
 创建新空间 `space_example`：
-
 ```
 ibmcloud cfee space-create space_example
 ```
+{: codeblock}
 
 在组织 `org_example` 和 CFEE 环境 `env_example` 下创建新空间 `space_example`：
-
 ```
 ibmcloud cfee space-create space_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-rename
 {: #ibmcloud_cfee_space_rename}
 
-重命名空间
-
+重命名空间：
 ```
 ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 ```
@@ -531,22 +483,21 @@ ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 <strong>示例</strong>：
 
 将空间 `space_example` 重命名为 `new_pace_example`：
-
 ```
 ibmcloud cfee space-rename space_example new_pace_example
 ```
+{: codeblock}
 
 将组织 `org_example` 和 CFEE 环境 `env_example` 下的空间 `space_example` 重命名为 `new_pace_example`：
-
 ```
 ibmcloud cfee space-rename space_example new_pace_example -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-delete
 {: #ibmcloud_cfee_space_delete}
 
-删除空间
-
+删除空间：
 ```
 ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 ```
@@ -568,22 +519,21 @@ ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 <strong>示例</strong>：
 
 删除空间 `space_example`：
-
 ```
 ibmcloud cfee space-delete space_example
 ```
+{: codeblock}
 
 删除组织 `org_example` 和 CFEE 环境 `env_example` 下的空间 `space_example` 而不确认：
-
 ```
 ibmcloud cfee space-delete space_example new_pace_example -f -o org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-role-set
 {: #ibmcloud_cfee_space_role_set}
 
 向用户分配空间角色
-
 ```
 ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -599,7 +549,8 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>SPACE（必需）</dt>
    <dd>要将此用户分配到的空间的名称。</dd>
    <dt>ROLE（必需）</dt>
-   <dd>要将此用户分配到的空间角色的名称。例如：<ul>
+   <dd>要将此用户分配到的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -611,22 +562,21 @@ ibmcloud cfee space-role-set USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>示例</strong>：
 
 为组织 `org_example` 和空间 `space_example` 的用户 `test@example.com` 分配 `SpaceManager` 角色：
-
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager
 ```
+{: codeblock}
 
 为环境 `env_example` 下的组织 `org_example` 和空间 `space_example` 的用户 `test@example.com` 分配 `SpaceManager` 角色：
-
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-role-unset
 {: #ibmcloud_cfee_space_role_unset}
 
 除去用户的空间角色
-
 ```
 ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 ```
@@ -642,7 +592,8 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
    <dt>SPACE（必需）</dt>
    <dd>要将此用户从中除去的空间的名称。</dd>
    <dt>ROLE（必需）</dt>
-   <dd>要将此用户从中除去的空间角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -654,16 +605,16 @@ ibmcloud cfee space-role-unset USER_EMAIL ORG SPACE ROLE [--env ENV]
 <strong>示例</strong>：
 
 除去组织 `org_example` 和空间 `space_example` 的用户 `test@example.com` 的 `SpaceManager` 角色：
-
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager
 ```
+{: codeblock}
 
 除去环境 `env_example` 下组织 `org_example` 和空间 `space_example` 的用户 `test@example.com` 的 `SpaceManager` 角色：
-
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-roles
 {: #ibmcloud_cfee_space_roles}
@@ -687,22 +638,21 @@ ibmcloud cfee space-roles ORG [--env ENV]
 <strong>示例</strong>：
 
 获取组织 `org_example` 下当前用户的所有空间角色：
-
 ```
 ibmcloud cfee space-roles org_example
 ```
+{: codeblock}
 
 获取组织 `org_example` 和环境 `env_example` 下当前用户的所有空间角色：
-
 ```
 ibmcloud cfee space-roles org_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee space-users
 {: #ibmcloud_cfee_space_users}
 
 按角色显示指定空间中的用户
-
 ```
 ibmcloud cfee space-users ORG SPACE [--env ENV]
 ```
@@ -722,22 +672,21 @@ ibmcloud cfee space-users ORG SPACE [--env ENV]
 <strong>示例</strong>：
 
 显示空间 `space_example` 和组织 `org_example` 中的所有用户：
-
 ```
 ibmcloud cfee space-users org_example space_example
 ```
+{: codeblock}
 
 显示空间 `space_example`、组织 `org_example` 和环境 `env_example` 中的所有用户：
-
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
+{: codeblock}
 
 ## ibmcloud cfee create
 {: #ibmcloud_cfee_create}
 
-请求创建新的 Cloud Foundry Enterprise Environment 实例
-
+请求创建新的 Cloud Foundry Enterprise Environment 实例：
 ```
 ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
 ```
@@ -780,10 +729,10 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 {: #ibmcloud_cfee_create_locations}
 
 请求获取目标区域的可用数据中心列表
-
 ```
 ibmcloud cfee create-locations
 ```
+{: codeblock}
 
 <strong>先决条件</strong>：端点和登录
 
@@ -847,22 +796,21 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
 <strong>示例</strong>：
 
 通过缺省访问组向用户 `name@example.com` 授予 CFEE 创建许可权：
-
 ```
 ibmcloud cfee create-permission-set name@example.com
 ```
+{: codeblock}
 
 通过访问组 `test-access-group` 向用户 `name@example.com` 授予 CFEE 创建许可权：
-
 ```
 ibmcloud cfee create-permission-set name@example.com -ag test-access-group
 ```
+{: codeblock}
 
 ## ibmcloud cfee create-status
 {: #ibmcloud_cfee_create_status}
 
-检查 CFEE 实例的供应状态
-
+检查 CFEE 实例的供应状态：
 ```
 ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
 ```

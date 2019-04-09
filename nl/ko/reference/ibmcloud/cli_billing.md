@@ -1,11 +1,13 @@
 ---
 
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-02-26"
 
+keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
-lastupdated: "2019-01-03"
+subcollection: cloud-cli
+
 ---
 
 {:new_window: target="_blank"}
@@ -17,26 +19,11 @@ lastupdated: "2019-01-03"
 
 다음 명령을 사용하여 리소스 사용 및 비용 청구 정보를 검색하십시오.
 {: shortdesc}
-
-<table summary="{{site.data.keyword.Bluemix_notm}} 비용 청구 및 사용량을 관리하는 데 사용할 수 있는 ibmcloud 명령.">
- <thead>
- </thead>
- <tbody>
-<tr>
-  <td>[ibmcloud billing account-usage](cli_billing.html#ibmcloud_billing_account_usage)</td>
-  <td>[ibmcloud billing org-usage](cli_billing.html#ibmcloud_billing_org_usage)</td>
-  <td>[ibmcloud billing resource-group-usage](cli_billing.html#ibmcloud_billing_resource_group_usage)</td>
-  <td>[ibmcloud billing resource-instances-usage](cli_billing.html#ibmcloud_billing_resource_instances_usage)</td>
- </tr>
- </tbody>
- </table>
- 
  
 ## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
-현재 계정의 월별 사용량 표시(계정 관리자만)
-
+현재 계정의 월별 사용량 표시(계정 관리자만):
 ```
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
@@ -63,8 +50,7 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-조직의 월별 사용량 표시(계정 관리자 또는 조직 청구 관리자만)
-
+조직의 월별 사용량 표시(계정 관리자 또는 조직 청구 관리자만):
 ```
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -85,8 +71,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
-리소스 그룹의 월별 사용량 표시(계정 관리자 또는 리소스 그룹 관리자만)
-
+리소스 그룹의 월별 사용량 표시(계정 관리자 또는 리소스 그룹 관리자만):
 ```
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -107,8 +92,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
-현재 계정의 월별 리소스 인스턴스 사용량을 표시합니다.
-
+현재 계정의 월별 리소스 인스턴스 사용량 표시:
 ```
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```

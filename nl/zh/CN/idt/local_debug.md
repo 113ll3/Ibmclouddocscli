@@ -1,11 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2019
+lastupdated: "2019-02-27"
 
+keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+
+subcollection: cloud-cli
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -23,17 +27,18 @@ lastupdated: "2018-11-30"
 
 为 Java 应用程序启用调试工具的步骤：
 
-1. 从应用程序项目的根目录，运行以下命令：
+1. 从应用程序项目的根目录中，运行以下命令：
 
-```
+  ```
 ibmcloud dev debug
 ```
+  {: codeblock}
 
 2. 将调试器连接到应用程序：
 
 	* Eclipse
       1. 将**现有 Maven 项目**导入到 Eclipse 中。
-      2. 创建 [Java 远程应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) 调试配置。
+      2. 创建 [Java 远程应用程序 ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 调试配置。
       		1. 输入 IP 地址或 `localhost:<port>`  
       		2. 输入 `7777` 作为端口号。
       		3. 指定已导入的 Java 项目的名称。
@@ -44,24 +49,24 @@ ibmcloud dev debug
 	   对于 Java 基本微服务端点，缺省端口是 9080。
 	   {: note}
 
-	* [IntelliJ ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
+	* [IntelliJ ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
+	* [VSCode ](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 	* JDK 命令行：`jdb -attach <host:port>`
 
 ## Node.js 应用程序调试
-{: #node}
+{: #idt-node-debug}
 
 为 Node.js 应用程序启用调试工具的步骤：
 
-1. 从应用程序项目的根目录，运行以下命令：
-
-```
+1. 从应用程序项目的根目录中，运行以下命令：
+  ```
 ibmcloud dev debug
 ```
+  {: codeblock}
 
 2. 将调试器连接到应用程序：
-	* [VSCode ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
+	* [WebStorm ](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
 
 <!--

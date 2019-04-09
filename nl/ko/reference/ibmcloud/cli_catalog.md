@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -15,41 +17,13 @@ lastupdated: "2018-11-29"
 # 카탈로그 오퍼링 검색 및 관리
 {: #ibmcloud_catalog}
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 카탈로그 항목, 조회 템플리트, 데이터 센터의 지리적 위치 및 런타임을 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.cloud}} 카탈로그 항목, 조회 템플리트, 데이터 센터의 지리적 위치 및 런타임을 관리하십시오.
 {: shortdesc}
-
-<table summary="{{site.data.keyword.Bluemix_notm}} 카탈로그를 관리하는 데 사용할 수 있는 ibmcloud 명령.">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud catalog search](cli_catalog.html#ibmcloud_catalog_search)</td>
-  <td>[ibmcloud catalog entry](cli_catalog.html#ibmcloud_catalog_entry)</td>
-  <td>[ibmcloud catalog entry-create](cli_catalog.html#ibmcloud_catalog_entry_create)</td>
-  <td>[ibmcloud catalog entry-update](cli_catalog.html#ibmcloud_catalog_entry_update)</td>
-  <td>[ibmcloud catalog entry-delete](cli_catalog.html#ibmcloud_catalog_entry_delete)</td>
- </tr>
- <tr>
-  <td>[ibmcloud catalog entry-visibility](cli_catalog.html#ibmcloud_catalog_entry_visibility)</td>
-  <td>[ibmcloud catalog service-marketplace](cli_catalog.html#ibmcloud_catalog_service_marketplace)</td>
-  <td>[ibmcloud catalog entry-visibility-set](cli_catalog.html#ibmcloud_catalog_entry_visibility_set)</td>
-  <td>[ibmcloud catalog templates](cli_catalog.html#ibmcloud_catalog_templates)</td>
-  <td>[ibmcloud catalog template](cli_catalog.html#ibmcloud_catalog_template)</td>
- </tr>
- <tr>
-  <td>[ibmcloud catalog template-run](cli_catalog.html#ibmcloud_catalog_template_run)</td>
-  <td>[ibmcloud catalog locations](cli_catalog.html#ibmcloud_catalog_locations)</td>
-  <td>[ibmcloud catalog runtime](cli_catalog.html#ibmcloud_catalog_runtime)</td>
-  <td>[ibmcloud catalog runtimes](cli_catalog.html#ibmcloud_catalog_runtimes)</td>
-</tr>
- </tbody>
- </table>
   
-  ## ibmcloud catalog search
+## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
-카탈로그 항목 검색
-
+카탈로그 항목 검색:
 ```
 ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
@@ -69,7 +43,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --p
   <dt>--sort-by</dt>
   <dd>정렬 기준 특성</dd>
   <dt>--col</dt>
-  <dd>테이블의 추가 컬럼을 지정합니다. 현재 "group", "provider" 및 "tags"</dd>
+  <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다.</dd>
   <dt>--reverse</dt>
   <dd>정렬 순서를 반대로 할지 여부</dd>
   <dt>--output TYPE(선택사항)</dt>
@@ -112,15 +86,14 @@ ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 <strong>예제</strong>:
 
 ID가 `a0ef1-d3b4j0`인 항목 가져오기:
-
 ```
 ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
-새 카탈로그 항목 작성(계정의 카탈로그 관리자만)
 
+새 카탈로그 항목 작성(계정의 카탈로그 관리자만):
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -140,15 +113,14 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 <strong>예제</strong>:
 
 상위 ID가 `a0ef1-d3b4j0`인 JSON 파일에서 리소스 작성:
-
 ```
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
 ## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
-기존 카탈로그 항목 업데이트(카탈로그 관리자 또는 계정의 편집자 전용).
 
+기존 카탈로그 항목 업데이트(카탈로그 관리자 또는 계정의 편집자 전용):
 ```
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
@@ -166,7 +138,6 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 <strong>예제</strong>:
 
 JSON 파일에서 리소스 `j402-dnf1i` 업데이트:
-
 ```
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
@@ -189,15 +160,14 @@ ibmcloud catalog entry-delete ID [--global]
 <strong>예제</strong>:
 
 리소스 `j402-dnf1i` 삭제:
-
 ```
 ibmcloud catalog delete 'j402-dnf1i'
 ```
 
 ## ibmcloud catalog entry-visibility
 {: #ibmcloud_catalog_entry_visibility}
-카탈로그 항목의 가시성 가져오기(계정의 카탈로그 관리자만)
 
+카탈로그 항목의 가시성 가져오기(계정의 카탈로그 관리자만)
 ```
 ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
@@ -224,8 +194,8 @@ ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 
 ## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
-기존 카탈로그 항목의 가시성 업데이트(계정의 카탈로그 관리자만)
 
+기존 카탈로그 항목의 가시성 업데이트(계정의 카탈로그 관리자만):
 ```
 ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
@@ -258,15 +228,14 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 <strong>예제</strong>:
 
 JSON 파일에서 리소스 `j402-dnf1i`의 가시성 설정:
-
 ```
 ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
 ## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
-마켓플레이스의 서비스 오퍼링 나열
 
+마켓플레이스의 서비스 오퍼링 나열:
 ```
 ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
@@ -286,7 +255,6 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 <strong>예제</strong>:
 
 글로벌 범위의 서비스 오퍼링 표시:
-
 ```
 ibmcloud catalog service-marketplace --global
 ```
@@ -294,8 +262,7 @@ ibmcloud catalog service-marketplace --global
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
-{{site.data.keyword.Bluemix_notm}}에서 표준 유형 템플리트를 확인합니다.
-
+{{site.data.keyword.cloud_notm}}에서 표준 유형 템플리트를 확인합니다.
 ```
 ibmcloud catalog templates [-d]
 ```
@@ -313,7 +280,6 @@ ibmcloud catalog templates [-d]
 {: #ibmcloud_catalog_template}
 
 지정된 표준 유형 템플리트의 자세한 정보를 봅니다.
-
 ```
 ibmcloud catalog template TEMPLATE_ID
 ```
@@ -330,7 +296,6 @@ ibmcloud catalog template TEMPLATE_ID
 <strong>예제</strong>:
 
 `mobileBackendStarter` 템플리트의 세부사항을 봅니다.
-
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
@@ -349,7 +314,7 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] 
 <strong>명령 옵션</strong>:
    <dl>
    <dt>TEMPLATE_ID(필수)</dt>
-   <dd>애플리케이션을 작성할 때 이의 기반이 되는 템플리트입니다. 모든 템플리트의 ID를 보려면 <i>ibmcloud templates</i>를 사용하십시오.</dd>
+   <dd>애플리케이션이 작성될 때 기반으로 하는 템플리트입니다. 모든 템플리트의 ID를 보려면 <i>ibmcloud templates</i>를 사용하십시오.</dd>
    <dt>CF_APP_NAME(필수)</dt>
    <dd>작성되는 cf 애플리케이션의 이름입니다.</dd>
    <dt>-u <i>URL</i>(선택사항)</dt>
@@ -357,26 +322,23 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] 
    <dt>-d <i>DESCRIPTION</i>(선택사항)</dt>
    <dd>애플리케이션에 대한 설명입니다.</dd>
    <dt>--no-start(선택사항)</dt>
-   <dd>애플리케이션을 작성한 후에 이를 자동으로 시작하지 않습니다. 값을 지정하지 않으면 애플리케이션이 작성 후 자동으로 시작됩니다.</dd>
+   <dd>애플리케이션이 작성된 후에 자동으로 시작되지 않습니다. 지정하지 않으면 애플리케이션이 작성된 후 자동으로 시작됩니다.</dd>
    </dl>
 
 
 <strong>예제</strong>:
 
 `javaHelloWorld` 템플리트를 기반으로 cf 애플리케이션 `my-app`을 작성합니다.
-
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
 라우트가 `myrubyapp.chinabluemix.net`이고 설명이 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`인 `rubyHelloWorld` 템플리트를 기반으로 `my-ruby-app` 애플리케이션을 작성합니다.
-
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
 ```
 
 자동 시작 없이 `pythonHelloWorld` 템플리트를 기반으로 `my-python-app` 애플리케이션을 작성합니다.
-
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
@@ -411,7 +373,6 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 {: #ibmcloud_catalog_runtime}
 
 런타임의 세부사항을 봅니다. 이 명령은 퍼블릭 클라우에서만 사용할 수 있습니다.
-
 ```
 ibmcloud catalog runtime RUNTIME_ID
 ```
@@ -419,7 +380,6 @@ ibmcloud catalog runtime RUNTIME_ID
 <strong>예제</strong>:
 
 "nodejsHelloWorld" 런타임의 세부사항 표시:
-
 ```
 catalog runtime nodejsHelloWorld
 ```
@@ -428,7 +388,6 @@ catalog runtime nodejsHelloWorld
 {: #ibmcloud_catalog_runtimes}
 
 모든 런타임을 나열합니다. 이 명령은 퍼블릭 클라우에서만 사용할 수 있습니다.
-
 ```
 ibmcloud catalog runtimes [-d]
 ```
@@ -443,7 +402,6 @@ ibmcloud catalog runtimes [-d]
 <strong>예제</strong>:
 
 모든 런타임을 설명과 함께 나열:
-
 ```
 ibmcloud catalog runtimes -d
 ```

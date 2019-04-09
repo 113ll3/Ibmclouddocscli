@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,35 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # CDN 서비스에 대한 작업
+{: #sl-cdn-service}
 
 Content Delivery Network(CDN) 서비스는 필요한 위치에 컨텐츠를 분배합니다. 처음으로 컨텐츠가 요청되면 호스트 서버에서 네트워크로 가져온 후 다른 사용자가 액세스할 수 있도록 네트워크에서 유지됩니다.
 
-다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 CDN 서비스를 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.cloud_notm}} 클래식 인프라 CDN 서비스를 관리하십시오.
 {: shortdesc}
 
-<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 CDN 명령">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl cdn cancel](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_cancel)</td>
-  <td>[ibmcloud sl cdn detail](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_detail)</td>
-  <td>[ibmcloud sl cdn list](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_list)</td>
-  <td>[ibmcloud sl cdn load](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_load)</td>
-  <td>[ibmcloud sl cdn order](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_order)</td>
-  <td>[ibmcloud sl cdn options
-](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_options)</td>
-   </tr>
- <tr>
-  <td>[ibmcloud sl cdn origin-add](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_add)</td>
-  <td>[ibmcloud sl cdn origin-list](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_list)</td>
-  <td>[ibmcloud sl cdn origin-remove](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_remove)</td>
-  <td>[ibmcloud sl cdn purge](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_purge)</td>
-  </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl cdn cancel
+## ibmcloud sl cdn cancel
 {: #sl_cdn_cancel}
 
 CDN 계정을 취소합니다.

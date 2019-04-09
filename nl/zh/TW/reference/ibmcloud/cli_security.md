@@ -1,48 +1,31 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage security, ssh keys, ssl certificates, ibmcloud sl security, certificate, ibmcloud sl, sshkey-add
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 管理安全 SSH 金鑰和 SSL 憑證
+{: #sl-manage-security-keys}
 
 SSH 金鑰允許存取裝置，而不必針對裝置上實作的每個公開金鑰使用來自對應用戶端的密碼。藉由將 SSH 金鑰新增至裝置，被賦與 SSH 金鑰的裝置會存取裝置以取得對應金鑰，而不使用密碼。
 
 網站會啟用 SSL 憑證，作為保護使用者的安全措施。它們一般用於您必須將機密資訊傳輸到網站之時。
 
-請使用下列指令來管理 {{site.data.keyword.Bluemix}} 標準基礎架構 SSH 金鑰及憑證。
+請使用下列指令來管理 {{site.data.keyword.cloud}} 標準基礎架構 SSH 金鑰及憑證。
 {: shortdesc}
 
-<table summary="按字母順序排列的 {{site.data.keyword.Bluemix_notm}} 標準基礎架構安全指令，其鏈結提供指令的相關資訊">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl security sshkey-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_add)</td>
-  <td>[ibmcloud sl security sshkey-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_edit)</td>
-  <td>[ibmcloud sl security sshkey-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_list)</td>
-  <td>[ibmcloud sl security sshkey-print](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_print)</td>
-  <td>[ibmcloud sl security sshkey-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_remove)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl security cert-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_add)</td>
-  <td>[ibmcloud sl security cert-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_edit)</td>
-  <td>[ibmcloud sl security cert-download](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_download)</td>
-  <td>[ibmcloud sl security cert-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_list)</td>
-  <td>[ibmcloud sl security cert-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_remove)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl security sshkey-add
+## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 新增 SSH 金鑰。
@@ -64,6 +47,8 @@ ibmcloud sl security sshkey-add LABEL [OPTIONS]
 ```
 ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
+{: codeblock}
+
 這個指令會從檔案 ~/.ssh/id_rsa.pub 新增 SSH 金鑰及附註 "mykey"。
 
 
@@ -87,7 +72,9 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-這個指令會更新 ID 為 12345678 的 SSH 金鑰、將標籤設為 "ibmcloud"，並將附註設為 "testing"。
+{: codeblock}
+
+這個指令會更新 ID 為 `12345678` 的 SSH 金鑰、將標籤設為 `ibmcloud`，並將附註設為 `testing`。
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
@@ -107,6 +94,8 @@ ibmcloud sl security sshkey-list [OPTIONS]
 ```
 ibmcloud sl security sshkey-list --sortby label
 ```
+{: codeblock}
+
  這個指令會列出現行帳戶上的所有 SSH 金鑰，並依標籤排序。
 
 ## ibmcloud sl security sshkey-print
@@ -127,6 +116,8 @@ ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
+{: codeblock}
+
 這個指令會顯示 ID 為 12345678 的 SSH 金鑰的 ID、標籤及附註，並將公開金鑰寫入檔案：~/mykey.pub。
 
 ## ibmcloud sl security sshkey-remove
@@ -147,7 +138,9 @@ ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-remove 12345678 -f
 ```
- 這個指令會移除 ID 為 12345678 的 SSH 金鑰，而不要求確認。
+{: codeblock}
+
+這個指令會移除 ID 為 `12345678` 的 SSH 金鑰，而不要求確認。
 
 ## ibmcloud sl security cert-add
 {: #sl_security_cert_add}

@@ -1,84 +1,30 @@
 ---
 
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-02-26"
 
+keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas
 
-lastupdated: "2019-01-14"
+subcollection: cloud-cli
+
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # リソースおよびリソース・グループの処理
 {: #ibmcloud_commands_resource}
 
-リソース・グループは、アカウント・リソースをカスタマイズ可能なグループに編成するための方法です。 以下のコマンドを使用して、{{site.data.keyword.Bluemix}} リソース・グループとリソース・グループ内のリソースを管理します。
+リソース・グループは、アカウント・リソースをカスタマイズ可能なグループに編成するための方法です。 以下のコマンドを使用して、{{site.data.keyword.cloud}} リソースとリソース・グループ内のリソースを管理します。
 {: shortdesc}
-
-<table summary="リソース・グループとリソースを管理するために使用できる ibmcloud コマンド。">
-  <thead>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[ibmcloud resource groups](cli_resource_group.html#ibmcloud_resource_groups)</td>
-      <td>[ibmcloud resource group](cli_resource_group.html#ibmcloud_resource_group)</td>
-      <td>[ibmcloud resource group-create](cli_resource_group.html#ibmcloud_resource_group_create)</td>
-      <td>[ibmcloud resource group-update](cli_resource_group.html#ibmcloud_resource_group_update)</td>
-      <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quotas)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource quota](cli_resource_group.html#ibmcloud_resource_quota)</td>
-      <td>[ibmcloud resource service-instances](cli_resource_group.html#ibmcloud_resource_service_instances)</td>
-      <td>[ibmcloud resource service-instance](cli_resource_group.html#ibmcloud_resource_service_instance)</td>
-      <td>[ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
-      <td>[ibmcloud resource service-instance-migrate](cli_resource_group.html#ibmcloud_resource_cf_service_instance_migrate)</td>
-    </tr>  
-    <tr>  
-      <td>[ibmcloud resource service-instance-update](cli_resource_group.html#ibmcloud_resource_service_instance_update)</td>
-      <td>[ibmcloud resource service-instance-delete](cli_resource_group.html#ibmcloud_resource_service_instance_delete)</td>
-      <td>[ibmcloud resource service-bindings](cli_resource_group.html#ibmcloud_resource_service_bindings)</td>
-      <td>[ibmcloud resource service-binding](cli_resource_group.html#ibmcloud_resource_service_binding)</td>
-      <td>[ibmcloud resource service-binding-create](cli_resource_group.html#ibmcloud_resource_service_binding_create)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource service-binding-delete](cli_resource_group.html#ibmcloud_resource_service_binding_delete)</td>
-      <td>[ibmcloud resource quota](cli_resource_group.html#ibmcloud_resource_quota)</td>
-      <td>[ibmcloud resource service-keys](cli_resource_group.html#ibmcloud_resource_service_keys)</td>
-      <td>[ibmcloud resource service-key](cli_resource_group.html#ibmcloud_resource_service_key)</td>
-      <td>[ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource service-key-update](cli_resource_group.html#ibmcloud_resource_service_key_update)</td>
-      <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
-      <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
-      <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
-      <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
-      <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
-      <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
-      <td>[ibmcloud resource tags](cli_resource_group.html#ibmcloud_resource_tags)</td>
-      <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
-    </tr>
-    <tr>
-      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
-      <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
-      <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
-      <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
-      <td>[ibmcloud resource tag-update](cli_resource_group.html#ibmcloud_resource_tag_update)</td>
-    </tr>
-  </tbody>
-</table>
 
 ## ibmcloud resource groups
 {: #ibmcloud_resource_groups}
 
 リソース・グループをリストします。
-
 ```
 ibmcloud resource groups [--default] [--output FORMAT]
 ```
@@ -96,22 +42,21 @@ ibmcloud resource groups [--default] [--output FORMAT]
 <strong>例</strong>:
 
 現在のターゲット・アカウントのすべてのリソース・グループをリストします
-
 ```
 ibmcloud resource groups
 ```
+{: codeblock}
 
 現在のターゲット・アカウントのデフォルト・グループをリストします
-
 ```
 ibmcloud resource groups --default
 ```
+{: codeblock}
 
 ## ibmcloud resource group
 {: #ibmcloud_resource_group}
 
 リソース・グループの詳細を表示します
-
 ```
 ibmcloud resource group NAME [--id] [--output FORMAT]
 ```
@@ -131,25 +76,25 @@ ibmcloud resource group NAME [--id] [--output FORMAT]
 <strong>例</strong>:
 
 リソース・グループ `example-group` を表示します
-
 ```
 ibmcloud resource group example-group
 ```
+{: codeblock}
 
 リソース・グループ `example-group` の ID のみを表示します
-
 ```
 ibmcloud resource group example-group --id
 ```
+{: codeblock}
 
 ## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
-リソース・グループを作成します
-
+リソース・グループを作成します。
 ```
 ibmcloud resource group-create NAME
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -160,17 +105,17 @@ ibmcloud resource group-create NAME
 </dl>
 
 <strong>例</strong>:
-リソース・グループ `example-group` を作成します
 
+リソース・グループ `example-group` を作成します
 ```
 ibmcloud resource group-create example-group
 ```
+{: codeblock}
 
 ## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
 既存のリソース・グループを更新します
-
 ```
 ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
@@ -192,25 +137,25 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 <strong>例</strong>:
 
 リソース・グループ `example-group` を `trial-group` に名前変更します
-
 ```
 ibmcloud resource group-update example-group -n trial-group
 ```
+{: codeblock}
 
 リソース・グループ `example-group` の割り当て量を `free` に変更します
-
 ```
 ibmcloud resource group-update example-group -q free
 ```
+{: codeblock}
 
 ## ibmcloud resource quotas
 {: #ibmcloud_resource_quotas}
 
-すべての割り当て量定義をリストします
-
+すべての割り当て量定義をリストします。
 ```
 ibmcloud resource quotas
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -221,19 +166,19 @@ ibmcloud resource quotas
 <strong>例</strong>:
 
 すべての割り当て量定義をリストします
-
 ```
 ibmcloud resource quotas
 ```
+{: codeblock}
 
 ## ibmcloud resource quota
 {: #ibmcloud_resource_quota}
 
-割り当て量定義の詳細を表示します
-
+割り当て量定義の詳細を表示します。
 ```
 ibmcloud resource quota NAME
 ```
+{: codeblock}
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -244,17 +189,17 @@ ibmcloud resource quota NAME
 </dl>
 
 <strong>例</strong>:
-割り当て量 `free` の詳細を表示します
 
+割り当て量 `free` の詳細を表示します
 ```
 ibmcloud resource quota free
 ```
+{: codeblock}
 
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
 Cloud Foundry サービス・インスタンスをリソース・グループにマイグレーションします
-
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
 ```
@@ -276,8 +221,7 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 ## ibmcloud resource service-instances
 {: #ibmcloud_resource_service_instances}
 
-サービス・インスタンスをリストします
-
+サービス・インスタンスをリストします。
 ```
 ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
 ```
@@ -299,15 +243,15 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 <strong>例</strong>:
 
 サービス `test-service` のサービス・インスタンスをリストします。
-
 ```
 ibmcloud resource service-instances --service-name test-service
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance
 {: #ibmcloud_resource_service_instance}
 
-サービス・インスタンスの詳細を表示します
+サービス・インスタンスの詳細を表示します。
 
 ```
 ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--output FORMAT]
@@ -332,16 +276,15 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--out
 <strong>例</strong>:
 
 サービス・インスタンス `my-service-instance` の詳細を表示します
-
 ```
 ibmcloud resource service-instance my-service-instance
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
 
-サービス・インスタンスの作成
-
+サービス・インスタンスを作成します。
 ```
 ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
@@ -353,7 +296,7 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dt>NAME (必須)</dt>
   <dd>サービス・インスタンスの名前</dd>
   <dt>SERVICE_NAME または SERVICE_ID (必須)</dt>
-  <dd>サービスの名前または ID</dd>
+  <dd>サービスの名前または ID。 サービス・オファリングをリストするには、`ibmcloud catalog service-marketplace`[コマンド](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)を使用します。</dd>
   <dt>SERVICE_PLAN_NAME または SERVICE_PLAN_ID (必須)</dt>
   <dd>サービス・プランの名前または ID</dd>
   <dt>LOCATION</dt>
@@ -365,17 +308,17 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
 </dl>
 
 <strong>例</strong>:
-場所 `eu-gb` にサービス `test-service` のサービス・プラン `test-service-plan` を使用してサービス・インスタンス `my-service-instance` を作成します。
 
+場所 `eu-gb` にサービス `test-service` のサービス・プラン `test-service-plan` を使用してサービス・インスタンス `my-service-instance` を作成します。
 ```
 ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
+{: codeblock}
 
 ## ibmcloud resource service-instance-update
 {: #ibmcloud_resource_service_instance_update}
 
-サービス・インスタンスを更新します
-
+サービス・インスタンスを更新します。
 ```
 ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
@@ -399,8 +342,8 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
 </dl>
 
 <strong>例</strong>:
-サービス・インスタンス `my-service-instance` を更新し、その名前を `new-service-instance` に変更します
 
+サービス・インスタンス `my-service-instance` を更新し、その名前を `new-service-instance` に変更します
 ```
 ibmcloud resource service-instance-update my-service-instance -n new-service-instance
 ```
@@ -408,8 +351,7 @@ ibmcloud resource service-instance-update my-service-instance -n new-service-ins
 ## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
-サービス・インスタンスを削除します
-
+サービス・インスタンスを削除します。
 ```
 ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
@@ -429,17 +371,17 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 </dl>
 
 <strong>例</strong>:
-リソース・サービス・インスタンス `my-service-instance` を削除します
 
+リソース・サービス・インスタンス `my-service-instance` を削除します
 ```
 ibmcloud resource service-instance-delete my-service-instance
 ```
+{: codeblock}
 
 ## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
 
-サービス別名へのバインディングを表示します
-
+サービス別名へのバインディングを表示します。
 ```
 ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 ```
@@ -455,8 +397,8 @@ ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 </dl>
 
 <strong>例</strong>:
-サービス別名 `my-service-alias` へのリソース・バインディングを表示します
 
+サービス別名 `my-service-alias` へのリソース・バインディングを表示します
 ```
 ibmcloud resource bindings my-service-alias
 ```
@@ -464,8 +406,7 @@ ibmcloud resource bindings my-service-alias
 ## ibmcloud resource service-binding
 {: #ibmcloud_resource_service_binding}
 
-サービス・バインディングの詳細を表示します
-
+サービス・バインディングの詳細を表示します。
 ```
 ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 ```
@@ -485,17 +426,17 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 </dl>
 
 <strong>例</strong>:
-サービス別名 `my-service-alias` とアプリ `my-app` の間のサービス・バインディングの詳細を表示します
 
+サービス別名 `my-service-alias` とアプリ `my-app` の間のサービス・バインディングの詳細を表示します
 ```
 ibmcloud resource bindings my-service-alias my-app
 ```
+{: codeblock}
 
 ## ibmcloud resource service-binding-create
 {: #ibmcloud_resource_service_binding_create}
 
-サービス・バインディングの作成
-
+サービス・バインディングを作成します。
 ```
 ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
@@ -519,17 +460,17 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 </dl>
 
 <strong>例</strong>:
-`Administrator` の役割によってサービス別名 `my-service-alias` とアプリ `my-app` の間のサービス・バインディングを作成します
 
+`Administrator` の役割によってサービス別名 `my-service-alias` とアプリ `my-app` の間のサービス・バインディングを作成します
 ```
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
+{: codeblock}
 
 ## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
 
-サービス・バインディングの削除
-
+サービス・バインディングを削除します。
 ```
 ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
@@ -548,16 +489,15 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 
 <strong>例</strong>:
 サービス別名 `my-service-alias` とアプリ `my-app` の間のサービス・バインディングを削除します
-
 ```
 ibmcloud resource service-binding-delete my-service-alias my-app
 ```
+{: codeblock}
 
 ## ibmcloud resource service-keys
 {: #ibmcloud_resource_service_keys}
 
-サービス・インスタンスまたはサービス別名のサービス・キーをリストします
-
+サービス・インスタンスまたはサービス別名のサービス・キーをリストします。
 ```
 ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ] [--output FORMAT]
 ```
@@ -579,8 +519,8 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 </dl>
 
 <strong>例</strong>:
-サービス・インスタンス `my-service-instance` のサービス・キーをリストします
 
+サービス・インスタンス `my-service-instance` のサービス・キーをリストします
 ```
 ibmcloud resource service-keys --instance-name my-service-instance  [--output FORMAT]
 ```
@@ -589,35 +529,45 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 {: #ibmcloud_resource_service_key}
 
 サービス・キー名の最初の *n* 文字が、指定された KEY_NAME と一致する、任意の数のサービス・キーの詳細を表示します。
-
 ```
-ibmcloud resource service-key KEY_NAME [--id]
+ibmcloud resource service-key (NAME | ID) [-g RESOURCE_GROUP] [--id] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>KEY_NAME</dt>
+  <dt>NAME</dt>
   <dd>キーの名前</dd>
+  <dt>ID</dt>
+  <dd>キーの ID</dd>
+  <dt>-g</dt>
+  <dd>リソース・グループ名</dd>
   <dt>--id</dt>
-  <dd>サービス・キー名の最初の *n* 文字が、指定された KEY_NAME と一致するキーの ID を表示します。*n* は指定された KEY_NAME の長さです。</dd>
+  <dd>サービス・キーの ID を表示します。 このオプションは、「--output」と同時に指定することはできません。</dd>
+  <dt>-g RESOURCE_GROUP</dt>
+  <dd>リソース・グループ名</dd>
   <dt>--output FORMAT (オプション)</dt>
-  <dd>出力形式を指定します。 現在サポートされているのは JSON のみです。</dd>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。 このオプションは、「--id」と同時に指定することはできません。</dd>
 </dl>
 
 <strong>例</strong>:
-サービス・キー `my-service-key` の詳細を表示します
 
+サービス・キー `my-service-key` の詳細を表示します
 ```
 ibmcloud resource service-key my-service-key
+```
+<strong>例</strong>:
+ID `crn:v1:bluemix:public:cloudantnosqldb:us-south:a/537860630a5ba7115be954e8d5aa5689:cc2a6d6c-8f5e-4038-b975-b09b51d1d8dc:resource-key:9057f12e-fbf5-421d-8865-764422217a79` のサービス・キーの詳細を表示します。
+
+```
+ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/537860630a5ba7115be954e8d5aa5689:cc2a6d6c-8f5e-4038-b975-b09b51d1d8dc:resource-key:9057f12e-fbf5-421d-8865-764422217a79
 ```
 
 ## ibmcloud resource service-key-create
 {: #ibmcloud_resource_service_key_create}
 
-サービス・キーを作成します
-
+サービス・キーを作成します。
 ```
 ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
@@ -647,8 +597,8 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
 </dl>
 
 <strong>例</strong>:
-役割 `Administrator` を使用して、サービス・インスタンス `my-service-instance` に対して `my-service-key` という名前のサービス・キーを作成します。
 
+役割 `Administrator` を使用して、サービス・インスタンス `my-service-instance` に対して `my-service-key` という名前のサービス・キーを作成します。
 ```
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
@@ -656,8 +606,7 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 ## ibmcloud resource service-key-update
 {: #ibmcloud_resource_service_key_update}
 
-サービス・キーを更新します
-
+サービス・キーを更新します。
 ```
 ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
 ```
@@ -677,8 +626,8 @@ ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RES
 </dl>
 
 <strong>例</strong>:
-`my-service-key` という名前のサービス・キーを更新し、新しい名前 `my-service-key-2` を付けます
 
+`my-service-key` という名前のサービス・キーを更新し、新しい名前 `my-service-key-2` を付けます
 ```
 ibmcloud resource service-key-update my-service-key -n my-service-key-2
 ```
@@ -686,8 +635,7 @@ ibmcloud resource service-key-update my-service-key -n my-service-key-2
 ## ibmcloud resource service-key-delete
 {: #ibmcloud_resource_service_key_delete}
 
-サービス・キーを削除します
-
+サービス・キーを削除します。
 ```
 ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 ```
@@ -703,8 +651,8 @@ ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 </dl>
 
 <strong>例</strong>:
-サービス・キー `my-service-key` を削除します
 
+サービス・キー `my-service-key` を削除します
 ```
 ibmcloud resource service-key-delete my-service-key
 ```
@@ -712,8 +660,7 @@ ibmcloud resource service-key-delete my-service-key
 ## ibmcloud resource service-aliases
 {: #ibmcloud_resource_service_aliases}
 
-サービス・インスタンスの別名をリストします
-
+サービス・インスタンスの別名をリストします。
 ```
 ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [--output FORMAT]
 ```
@@ -731,6 +678,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [-
 </dl>
 
 <strong>例</strong>:
+
 サービス・インスタンス `my-service-instance` のサービス別名をリストします
 ```
 ibmcloud resource service-aliases my-service-instance
@@ -739,8 +687,7 @@ ibmcloud resource service-aliases my-service-instance
 ## ibmcloud resource service-alias
 {: #ibmcloud_resource_service_alias}
 
-サービス別名の詳細を表示します
-
+サービス別名の詳細を表示します。
 ```
 ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 ```
@@ -758,6 +705,7 @@ ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 </dl>
 
 <strong>例</strong>:
+
 サービス別名 `my-service-alias` の詳細を表示します
 ```
 ibmcloud resource service-alias  my-service-alias
@@ -766,8 +714,7 @@ ibmcloud resource service-alias  my-service-alias
 ## ibmcloud resource service-alias-create
 {: #ibmcloud_resource_service_alias_create}
 
-サービス・インスタンスの別名を作成します
-
+サービス・インスタンスの別名を作成します。
 ```
 ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
@@ -791,6 +738,7 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
 </dl>
 
 <strong>例</strong>:
+
 サービス・インスタンス `my-service-instance` のサービス別名 `my-service-alias` を作成します。
 ```
 ibmcloud resource service-alias-create my-service-alias --instance-name my-service-instance
@@ -799,8 +747,7 @@ ibmcloud resource service-alias-create my-service-alias --instance-name my-servi
 ## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
-サービス別名を更新します
-
+サービス別名を更新します。
 ```
 ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
@@ -822,8 +769,8 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 </dl>
 
 <strong>例</strong>:
-サービス別名 `my-service-alias` を更新し、その名前を `new-service-alias` に変更します
 
+サービス別名 `my-service-alias` を更新し、その名前を `new-service-alias` に変更します
 ```
 ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ```
@@ -831,8 +778,7 @@ ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ## ibmcloud resource service-alias-delete
 {: #ibmcloud_resource_service_alias_delete}
 
-サービス別名を削除します
-
+サービス別名を削除します。
 ```
 ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
@@ -848,18 +794,18 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 </dl>
 
 <strong>例</strong>:
-サービス別名 `my-service-alias` を削除します
 
+サービス別名 `my-service-alias` を削除します
 ```
 ibmcloud resource service-alias-delete my-service-alias
 ```
 
 ## ibmcloud resource search
 {: #ibmcloud_resource_search}
-Lucene 照会構文を使用してリソースを検索します
 
+Lucene 照会構文を使用してリソースを検索します。
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -872,245 +818,179 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
   <dd>返されるリソースの数 (最大 10000)</dd>
   <dt>-s, --sort-by</dt>
   <dd>ソート基準のプロパティー。 受け入れられる入力は、`name`、`family`、`region`、`type`、`crn` です。</dd>
+  <dt>-p, --provider</dt>
+  <dd>クラシック・インフラストラクチャー・リソースを表示します (許可される値は classic-infrastructure のみです)</dd>
+</dl>
+
+<strong>検索できる属性</strong>:
+以下の属性を検索できます。
+
+<dl>
+  <dt>name</dt>
+  <dd>リソースのユーザー定義名。</dd>
+  <dt>地域 (region)</dt>
+  <dd>リソースがプロビジョンされている地理的位置。 例: us-south、us-east、au-syd、eu-gb、eu-de、jp-tok。</dd>
+  <dt>service_name</dt>
+  <dd>「ibmcloud catalog service-marketplace」の出力の名前列に表示されるサービスの名前。</dd>
+  <dt>family</dt>
+  <dd>リソースが属するクラウド・コンポーネント。 許可される値は、cloud_foundry、containers、resource_controller、vmware、ims です。</dd>
+  <dt>organization_id</dt>
+  <dd>Cloud Foundry 組織 GUID。</dd>
+  <dt>doc.space_id</dt>
+  <dd>Cloud Foundry スペース GUID。</dd>
+  <dt>doc.resource_group_id</dt>
+  <dd>リソース・グループの ID。</dd>
+  <dt>type</dt>
+  <dd>リソース・タイプ。 許可される値は、k8-cluster、cf-service-instance、cf-user-provided-service-instance、cf-organization、cf-service-binding、cf-space、cf-application、resource-instance、resource-alias、resource-binding、resource-group、vmware-solutions、cloud-objects-storage-infrastructure、block-storage、file-storage、cloud-backup です。</dd>
+  <dt>creation_date</dt>
+  <dd>リソースが作成された日付。</dd>
+  <dt>modification_date</dt>
+  <dd>リソースの最終変更日。 形式は、yyyy-mm-ddThh:mm:ssZ です。</dd>
+  <dt>_objectType</dt>
+  <dd>クラシック・インフラストラクチャー・リソースのタイプ。 許可される値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。</dd>
+  <dt>tags, tagReferences.tag.name</dt>
+  <dd>リソースにアタッチされているタグ。 クラシック・インフラストラクチャー・リソースにアタッチされているタグを検索する場合は、tagReferences.tag.name を使用します。</dd> 
 </dl>
 
 <strong>例</strong>:
-指定したテキストで始まる名前の Cloud Foundry アプリケーションを検索します。
 
+指定したテキストで始まる名前の Cloud Foundry アプリケーションを検索します。
 ```
 ibmcloud resource search 'name:my* AND type:cf-application'
 ```
 
 指定したサービス名の Cloud Foundry サービス・インスタンスを検索します。
-
 ```
 ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
 ```
 
 指定した ID を持つ組織内の Cloud Foundry サービス・バインディングを検索します。
-
 ```
 ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
 ```
 
 指定した 2 つの地域のどちらかにある、指定した名前の Cloud Foundry スペースを検索します。
-
 ```
 ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
 ```
 
 指定した ID の Cloud Foundry スペースの中で、名前に dev が入ったリソースを検索します。
-
-```            
+```
 ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
 ```
 
 指定した場所 (つまり us-south 地域) で、リソース・コントローラーのリソースを検索します。
-
 ```
 ibmcloud resource search 'region:us-south AND family:resource_controller'
 ```
 
 指定した ID を持つリソース・グループ内のリソースまたは別名を検索します。
-
 ```
 ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
 ```
 
 デフォルトの名前を持つリソース・グループを検索します。
-
 ```
 ibmcloud resource search 'name:default AND type:resource-group'
 ```
 
 指定したサービス名のリソース・バインディングを検索します。
-
 ```
 ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
 ```
 
 指定したクラウド・リソース名 (CRN) を持つリソースを検索します。
-
 ```
 ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 指定したタグを持つリソースを検索します。
-
 ```
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
+{: codeblock}
+
+指定した ID を持つクラシック・インフラストラクチャー仮想ゲスト・リソースを検索します (-p classic-infrastructure が指定されている場合のみ)。
+```
+ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
+```
+{: codeblock}
+
+指定したタグ名を持つクラシック・インフラストラクチャー・ハードウェア・リソースを検索します (-p classic-infrastructure が指定されている場合のみ)。
+```
+ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
+```
+{: codeblock}
 
 ## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
-すべてのタグをリストします
+ご使用の請求処理アカウントのすべてのタグをリストします
 
 ```
-ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit LIMIT]
+ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true]
 ```
-
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>--tag-type</dt>
-  <dd>タグ・タイプ (サポートされる値: user、restricted)</dd>
-  <dt>-o, --offset</dt>
-  <dd>開始リソース位置番号 (デフォルト: 0)</dd>
-  <dt>-l, --limit</dt>
-  <dd>返されるリソースの数 (最大 10000) (デフォルト: 10000)</dd>
+  <dt>-o, -offset</dt>
+  <dd>開始タグ位置番号</dd>
+  <dt>-l, -limit</dt>
+  <dd>返されるタグの数 (最大 10000)</dd>
+  <dt>-p; --provider</dt> 
+  <dd>クラシック・インフラストラクチャーのタグを検索する場合は、classic-infrastructure を指定します</dd>
+  <dt>-d, --details</dt>
+  <dd>タグ付きリソースの数を表示します。</dd>
 </dl>
 
-<strong>例</strong>:
-
-すべてのタグをリストします
-
-```
-ibmcloud resource tags
-```
-
-すべての制限付きタグをリストします
-
-```
-ibmcloud resource tags --tag-type restricted
-```
-
-## ibmcloud resource tag
-{: #ibmcloud_resource_tag}
-
-タグの詳細を表示します
-
-```
-ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン
-
-<strong>コマンド・オプション</strong>:
-<dl>
-  <dt>--tag-name (必須)</dt>
-  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
-  <dt>--tag-crn (必須)</dt>
-  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
-</dl>
-
-<strong>例</strong>:
-
-タグ "Ray Brown" の詳細を表示します
-
-```
-ibmcloud resource tag --tag-name "Ray Brown"
-```
-
-## ibmcloud resource tag-create
-{: #ibmcloud_resource_tag_create}
-
-タグを作成します
-
-```
-ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン
-
-<strong>コマンド・オプション</strong>:
-<dl>
-  <dt>--tag-name (必須)</dt>
-  <dd>タグ名</dd>
-  <dt>--tag-type</dt>
-  <dd>タグ・タイプ (サポートされる値: user、restricted。デフォルト: user)</dd>
-</dl>
-
-<strong>例</strong>:
-
-think:2018 という名前のユーザー・タグを作成します
-
-```
-ibmcloud resource tag-create --tag-name think:2018
-```
-
-department:marketing という名前の制限付きタグを作成します
-
-```
-ibmcloud resource tag-create --tag-name "department:marketing" --tag-type restricted
-```
-
-"Ray Brown" という名前のユーザー・タグを作成します
-
-```
-ibmcloud resource tag-create --tag-name "Ray Brown"
-```
-
-"environment:My Development" という名前の制限付きタグを作成します
-
-```
-ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
-```
-
-## ibmcloud resource tag-delete
-{: #ibmcloud_resource_tag_delete}
-
-タグを削除します
-
-```
-ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン
-
-<strong>コマンド・オプション</strong>:
-<dl>
-  <dt>--tag-name (必須)</dt>
-  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
-  <dt>--tag-crn (必須)</dt>
-  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
-</dl>
-
-<strong>例</strong>:
-
-タグ "Ray Brown" を削除します
-
-```
-ibmcloud resource tag-delete --tag-name "Ray Brown"
-```
 
 ## ibmcloud resource tag-attach
 {: #ibmcloud_resource_tag_attach}
 
-タグをリソースに追加します
-
+1 つ以上のタグをリソースにアタッチします。
 ```
-ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resource-crn RESOURCE_CRN
+ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
 ```
-
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>--tag-name (必須)</dt>
-  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
-  <dt>--tag-crn (必須)</dt>
-  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
-  <dt>--resource-crn (必須)</dt>
-  <dd>リソース CRN</dd>
+  <dt>--tag-names(必須)</dt>
+  <dd>タグ名のコンマ区切りリスト</dd>
+  <dt>--resource-id</dt>
+  <dd>タグをアタッチするリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。</dd>
+  <dt>--resource-type</dt>
+  <dd>タグをアタッチするクラシック・インフラストラクチャー・リソースのリソース・タイプ。クラシック・インフラストラクチャー・リソースにタグをアタッチする場合、このパラメーターは必須です。--resource-type に指定できる値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。</dd>
 </dl>
-
-<strong>例</strong>:
-
-CRN が resource_example_crn であるリソースにタグ "Ray Brown" を追加します。
-
-```
-ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
-```
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
 
-リソースからタグを削除します
-
+1 つ以上のタグをリソースから切り離します。
 ```
-ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RESOURCE_CRN
+ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+  <dt>--tag-names(必須)</dt>
+  <dd>タグ名のコンマ区切りリスト</dd>
+  <dt>--resource-id</dt>
+  <dd>タグを切り離すリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。</dd>
+  <dt>--resource-type</dt>
+  <dd>タグを切り離すクラシック・インフラストラクチャー・リソースのリソース・タイプ。クラシック・インフラストラクチャー・リソースからタグを切り離す場合、このパラメーターは必須です。--resource-type に指定できる値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。</dd>
+</dl>
+
+
+## ibmcloud resource tag-delete
+{: #ibmcloud_resource_tag_delete}
+
+タグを削除します。
+```
+ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -1118,46 +998,9 @@ ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RE
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>--tag-name (必須)</dt>
-  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
-  <dt>--tag-crn (必須)</dt>
-  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
-  <dt>--resource-crn (必須)</dt>
-  <dd>リソース CRN</dd>
+  <dd>削除するタグの名前。</dd>
+  <dt>-p; --provider</dt> 
+  <dd>クラシック・インフラストラクチャーのタグを削除する場合は、classic-infrastructure を指定します</dd>
 </dl>
 
-<strong>例</strong>:
-
-CRN が resource_example_crn であるリソースからタグ "Ray Brown" を削除します。
-
-```
-ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
-```
-
-## ibmcloud resource tag-update
-{: #ibmcloud_resource_tag_update}
-
-ユーザー・タグと制限付きタグを切り替えます
-
-```
-ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン
-
-<strong>コマンド・オプション</strong>:
-<dl>
-  <dt>--tag-name (必須)</dt>
-  <dd>タグ名。--tag-crn と同時に指定することはできません。</dd>
-  <dt>--tag-crn (必須)</dt>
-  <dd>タグ CRN。--tag-name と同時に指定することはできません。</dd>
-  <dt>--tag-type (必須)</dt>
-  <dd>タグ・タイプ</dd>
-</dl>
-
-<strong>例</strong>:
-
-タグ "Ray Brown" を制限付きタグに切り替えます
-
-```
-ibmcloud tag-update --tag-name "Ray Brown"  --tag-type restricted
-```
+タグは、リソースにアタッチされていない場合にのみ削除できます。

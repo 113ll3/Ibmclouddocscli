@@ -1,30 +1,33 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
+{:codeblock: .codeblock}
 
 # 一般 CLI (ibmcloud) 指令
 {: #ibmcloud_cli}
 
+{{site.data.keyword.cloud_notm}} 指令行介面 (CLI) 提供一組依名稱空間分組的指令，讓使用者與 {{site.data.keyword.cloud_notm}} 互動。
 
-{{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 提供一組依名稱空間分組的指令，讓使用者與 {{site.data.keyword.Bluemix_notm}} 互動。
+{{site.data.keyword.cloud_notm}} 指令行用戶端已將 Cloud Foundry 指令行用戶端搭載在其安裝中。如果您已安裝自己的 cf cli，請不要在相同環境定義中使用自己的安裝的 {{site.data.keyword.cloud_notm}} CLI 指令 `ibmcloud [command]` 及 Cloud Foundry CLI 指令 `cf [command]`。如果您要使用 cf cli 來管理 {{site.data.keyword.cloud_notm}} CLI 環境定義中的 Cloud Foundry 資源，請改為使用 `ibmcloud cf [command]`。請注意，不容許 `ibmcloud cf api/login/logout/target`，必須改為使用 `ibmcloud api/login/logout/target`。
 
-{{site.data.keyword.Bluemix_notm}} 指令行用戶端已將 Cloud Foundry 指令行用戶端搭載在其安裝中。如果您已安裝自己的 cf cli，請不要在相同環境定義中使用自己的安裝的 {{site.data.keyword.Bluemix_notm}} CLI 指令 `ibmcloud [command]` 及 Cloud Foundry CLI 指令 `cf [command]`。如果您要使用 cf cli 來管理 {{site.data.keyword.Bluemix_notm}} CLI 環境定義中的 Cloud Foundry 資源，請改為使用 `ibmcloud cf [command]`。請注意，不容許 `ibmcloud cf api/login/logout/target`，必須改為使用 `ibmcloud api/login/logout/target`。
-
-到 2018 年五月為止，{{site.data.keyword.Bluemix_notm}} CLI 指令已從 `bluemix` 和 `bx` 變更為 `ibmcloud`。不過，您仍然可以使用 `bluemix` 和 `bx` CLI 指令，直到未來移除它們為止。
+到 2018 年五月為止，{{site.data.keyword.cloud_notm}} CLI 指令已從 `bluemix` 和 `bx` 變更為 `ibmcloud`。不過，您仍然可以使用 `bluemix` 及 `bx` CLI 指令，直到未來移除它們為止。
 {: tip}
 
-以下列出 {{site.data.keyword.Bluemix_notm}} CLI 所支援的詳細指令，包括其名稱、引數、選項、必要條件、說明及範例。
-{:shortdesc}
+以下列出 {{site.data.keyword.cloud_notm}} CLI 所支援的詳細指令，包括其名稱、引數、選項、必要條件、說明及範例。
+{: shortdesc}
 
 *必要條件* 列出使用指令之前所需的動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
 
@@ -39,38 +42,10 @@ lastupdated: "2018-11-30"
 <dd>必須先安裝 Docker CLI (docker)，才能執行這個指令。</dd>
 </dl>
 
-
-請使用下表中的索引來參照常用的 ibmcloud 指令。
-
-## 一般 ibmcloud 指令
-{: #ibmcloud_commands_index}
-
-<table summary="一般 ibmcloud 指令。">
-<caption>表 1. 一般 ibmcloud 指令</caption>
- <thead>
- <th colspan="5">一般 ibmcloud 指令</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud help](bx_cli.html#ibmcloud_help)</td>
- <td>[ibmcloud api](bx_cli.html#ibmcloud_api)</td>
- <td>[ibmcloud config](bx_cli.html#ibmcloud_config)</td>
- <td>[ibmcloud info](bx_cli.html#ibmcloud_info)</td>
- <td>[ibmcloud cf](bx_cli.html#ibmcloud_cf)</td>
- </tr>
- <tr>
- <td>[ibmcloud login](bx_cli.html#ibmcloud_login) </td>
- <td>[ibmcloud logout](bx_cli.html#ibmcloud_logout) </td>
- <td>[ibmcloud regions](bx_cli.html#ibmcloud_regions)</td>
- <td>[ibmcloud target](bx_cli.html#ibmcloud_target)</td>
- <td>[ibmcloud update](bx_cli.html#ibmcloud_update)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud help
+## ibmcloud help
 {: #ibmcloud_help}
-顯示 {{site.data.keyword.Bluemix_notm}} CLI 之第一層內建指令及所支援名稱空間的一般說明，或特定內建指令或名稱空間的說明。
+
+顯示 {{site.data.keyword.cloud_notm}} CLI 之第一層內建指令及所支援名稱空間的一般說明，或特定內建指令或名稱空間的說明。
 
 ```
 ibmcloud help [COMMAND|NAMESPACE]
@@ -85,26 +60,24 @@ ibmcloud help [COMMAND|NAMESPACE]
    <dd>顯示其說明的指令或名稱空間。如果未指定，則會顯示 {{site.data.keyword.Bluemix_notm}} CLI 的一般說明。</dd>
    </dl>
 
-
-
 <strong>範例</strong>：
 
-顯示 {{site.data.keyword.Bluemix_notm}} CLI 的一般說明：
-
+顯示 {{site.data.keyword.cloud_notm}} CLI 的一般說明：
 ```
 ibmcloud help
 ```
+{: codeblock}
 
 顯示 `info` 指令的說明：
-
 ```
 ibmcloud help info
 ```
+{: codeblock}
 
 ## ibmcloud api
 {: #ibmcloud_api}
-設定或檢視 {{site.data.keyword.Bluemix_notm}} API 端點。
 
+設定或檢視 {{site.data.keyword.cloud_notm}} API 端點。
 ```
 ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 ```
@@ -114,7 +87,7 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 <strong>指令選項</strong>：
    <dl>
    <dt>API_ENDPOINT（選用）</dt>
-   <dd>設為目標的 API 端點，例如 `https://api.chinabluemix.net`。 如果未同時指定 *API_ENDPOINT* 及 `--unset` 選項，則會顯示現行 API 端點。</dd>
+   <dd>設為目標的 API 端點，例如 `https://cloud.ibm.com`。如果未同時指定 *API_ENDPOINT* 及 `--unset` 選項，則會顯示現行 API 端點。</dd>
    <dt>--unset（選用）</dt>
    <dd>移除 API 端點設定。</dd>
    <dt>--skip-ssl-validation（選用）</dt>
@@ -122,31 +95,31 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
    </dl>
 <strong>範例</strong>：
 
-將 API 端點設為 api.chinabluemix.net：
+將 API 端點設為 cloud.ibm.com：
+```
+ibmcloud api cloud.ibm.com
+```
+{: codeblock}
 
 ```
-ibmcloud api api.chinabluemix.net
+ibmcloud api https://cloud.ibm.com --skip-ssl-validation
 ```
-
-```
-ibmcloud api https://api.chinabluemix.net --skip-ssl-validation
-```
+{: codeblock}
 
 檢視現行 API 端點：
-
 ```
 ibmcloud api
 ```
+{: codeblock}
 
 取消設定 API 端點：
-
 ```
 ibmcloud api --unset
 ```
+{: codeblock}
 
 ## ibmcloud config
 {: #ibmcloud_config}
-
 
 將預設值寫入配置檔。
 
@@ -175,57 +148,51 @@ ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/
 <strong>範例</strong>：
 
 將 HTTP 要求逾時值設為 30 秒：
-
 ```
 ibmcloud config --http-timeout 30
 ```
+{: codeblock}
 
 啟用 HTTP 要求的追蹤輸出：
-
 ```
 ibmcloud config --trace true
 ```
+{: codeblock}
 
 追蹤對指定檔案 */home/usera/my_trace* 的 HTTP 要求：
-
 ```
 ibmcloud config --trace /home/usera/my_trace
 ```
+{: codeblock}
 
 停用彩色輸出：
-
 ```
 ibmcloud config --color false
 ```
+{: codeblock}
 
 將語言環境設為 zh_Hans：
-
 ```
 ibmcloud config --locale zh_Hans
 ```
+{: codeblock}
 
 清除語言環境設定：
-
 ```
 ibmcloud config --locale CLEAR
 ```
+{: codeblock}
 
 ## ibmcloud info
 {: #ibmcloud_info}
 
-檢視基本 {{site.data.keyword.Bluemix_notm}} 資訊，包括現行地區、雲端控制器版本以及部分有用端點（例如用於登入及交換存取記號的端點）。
-
-```
-ibmcloud info
-```
-
-<strong>必要條件</strong>：端點
+自 CLI `0.14` 版開始，無法再使用 `ibmcloud info` 指令。若要安裝最新 CLI 版本，請參閱[安裝獨立式 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)。
+{: note}
 
 ## ibmcloud cf
 {: #ibmcloud_cf}
 
 呼叫內嵌的 CF CLI
-
 ```
 ibmcloud [-q, --quiet] cf COMMAND...
 ```
@@ -247,18 +214,17 @@ ibmcloud cf apps
 ```
 
 列出 cf 服務，但沒有「呼叫 cf 指令...」訊息：
-
 ```
 ibmcloud -q cf services
 ```
+{: codeblock}
 
 ## ibmcloud login
 {: #ibmcloud_login}
 
 登入使用者。
-
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-r REGION | --no-region] [-o ORG] [-s SPACE]
 ```
 
 <strong>必要條件</strong>：無
@@ -268,7 +234,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 <strong>指令選項</strong>：
 <dl>
   <dt> -a <i>API_ENDPOINT</i>（選用）</dt>
-  <dd> API 端點（例如：api.ng.bluemix.net）</dd>
+  <dd> API 端點（例如：cloud.ibm.com）</dd>
   <dt> --apikey <i>API_KEY 或 @API_KEY_FILE_PATH</i>
   <dd> API 金鑰內容，或透過 @ 指出的 API 金鑰檔案的路徑</dd>
   <dt> --sso（選用）</dt>
@@ -278,11 +244,15 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> -p <i>PASSWORD</i>（選用）</dt>
   <dd> 密碼</dd>
   <dt> -c <i>ACCOUNT_ID</i>（選用）</dt>
-  <dd> 目標帳戶的 ID。此選項與 '--no-account' 不能同時使用。</dd>
+  <dd> 目標帳戶的 ID。此選項與 --no-account 不能同時使用。</dd>
   <dt> --no-account（選用）</dt>
-  <dd> 強制以不使用帳戶的方式登入。不建議使用這個選項。此選項與 '-c' 不能同時使用。</dd>
-  <dt> -g <i>RESOURCE_GROUP</i> (optional)</dt>
+  <dd> 強制以不使用帳戶的方式登入。不建議使用這個選項。此選項與 -c 不能同時使用。</dd>
+  <dt> -g <i>RESOURCE_GROUP</i>（選用）</dt>
   <dd> 目標資源群組的名稱</dd>
+  <dt> -r REGION</dt>
+  <dd> 地區的名稱，例如 'us-south' 或 'eu-gb'</dt>
+  <dt> --no-region</dt>
+  <dd> 強制以將地區設為目標的方式登入。</dd>
   <dt> -o <i>ORG</i>（選用）</dt>
   <dd> 目標組織的名稱（已淘汰，請使用 'ibmcloud target -o ORG'）</dd>
   <dt> -s <i>SPACE</i>（選用）</dt>
@@ -300,20 +270,17 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 ```
 ibmcloud login
 ```
+{: codeblock}
 
 以使用者名稱及密碼登入，並設定目標帳戶、組織及空間：
-
 ```
 ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 
 以一次性密碼登入，並設定目標帳戶、組織及空間：
-
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
-
-以 API 金鑰登入，並設定目標：
 
 ### API 金鑰具有關聯的帳戶
 
@@ -338,26 +305,27 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 <strong>附註：</strong>如果 API 金鑰具有關聯的帳戶，則不容許切換至另一個帳戶。
 
 ### 使用一次性密碼
-
 ```
 ibmcloud login -u UserID --sso
 ```
+{: codeblock}
 
 CLI 接著會提供 URL 鏈結，並要求密碼：
 ```
 一次性密碼（從 https://URL_Link_To_Obtain_Passcode 取得）：
 ```
+{: screen}
 
-在瀏覽器中開啟鏈結，這會引導您取得密碼。在主控台鍵入給定的密碼，您應該就可以登入。
+在瀏覽器中開啟鏈結，以取得密碼。在主控台中鍵入給定的密碼，您就可以登入。
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
 
 登出使用者。
-
 ```
 ibmcloud logout
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：無
 
@@ -365,10 +333,10 @@ ibmcloud logout
 {: #ibmcloud_regions}
 
 檢視 {{site.data.keyword.Bluemix_notm}} 上所有地區的資訊。
-
 ```
 ibmcloud regions
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：端點
 
@@ -377,9 +345,8 @@ ibmcloud regions
 
 
 設定或檢視目標帳戶、地區、組織或空間。
-
 ```
-ibmcloud target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -388,6 +355,8 @@ ibmcloud target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o 
    <dl>
    <dt>-r <i>REGION_NAME</i>（選用）</dt>
    <dd>要切換至的地區名稱，例如 'us-south' 或 'eu-gb'。</dd>
+   <dt>--unset-region</dt>
+   <dd>取消設定已設定目標的地區</dd>
    <dt>-c <i>ACCOUNT_ID</i>（選用）</dt>
    <dd>要設為目標的帳戶 ID。</dd>
    <dt>-g <i>RESOURCE_GROUP</i>（選用）</dt>
@@ -401,33 +370,30 @@ ibmcloud target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o 
    </dl>
 如果未指定選項，則會顯示現行帳戶、地區、組織及空間。
 
-
-
 <strong>範例</strong>：
 
 設定現行帳戶、組織及空間：
-
 ```
 ibmcloud target -c MyAccountID -o MyOrg -s MySpace
 ```
+{: codeblock}
 
 切換至新的地區：
-
 ```
 ibmcloud target -r eu-gb
 ```
+{: codeblock}
 
 檢視現行帳戶、地區、組織及空間：
-
 ```
 ibmcloud target
 ```
+{: codeblock}
 
 ## ibmcloud update
 {: #ibmcloud_update}
 
 將 CLI 更新為最新版本。
-
 ```
 ibmcloud update [-f]
 ```
@@ -444,102 +410,43 @@ ibmcloud update [-f]
 ## 一般標準基礎架構服務指令
 {: #softlayer_cli}
 
+請在 {{site.data.keyword.cloud_notm}} 指令行介面 (CLI) 中使用標準基礎架構指令，以配置及管理基礎架構服務。
 
-請在 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 中使用標準基礎架構指令，以配置及管理基礎架構服務。
-
-
-支援下列指令。使用 `ibmcloud sl` 指令，以查看可用的指令清單：
-
-<table summary="按字母順序排序的一般指令，其鏈結提供指令的相關資訊">
-<caption>表 1. 一般標準基礎架構指令</caption>
- <thead>
- <th colspan="6">一般標準基礎架構指令</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl init](/docs/cli/reference/ibmcloud/bx_cli.html#sl_init)</td>
- <td>[ibmcloud sl help](/docs/cli/reference/ibmcloud/bx_cli.html#sl_help)</td>
-   </tbody>
- </table>
-
- 若要檢視指令的說明資訊，請執行：`ibmcloud sl [command] -h`
-
- ## ibmcloud sl init
-{: #sl_init}
-
-起始設定用來連接至標準基礎架構環境的配置設定。配置包括使用者名稱、API 金鑰或密碼、帳戶及端點。
+執行 `ibmcloud sl` 指令，以查看可用的指令清單：
 ```
-ibmcloud sl init [OPTIONS]
+USAGE:
+   bx sl command [arguments...] [options...]
+
+COMMANDS:
+   block           Gen1 infrastructure Block Storage
+   cdn             Gen1 infrastructure Content Delivery Network
+   file            Gen1 infrastructure File Storage
+   dns             Gen1 infrastructure Domain Name System
+   globalip        Gen1 infrastructure Global IP addresses
+   hardware        Gen1 infrastructure hardware servers
+   image           Gen1 infrastructure Compute images
+   ipsec           Gen1 infrastructure IPSEC VPN
+   loadbal         Gen1 infrastructure Load balancers
+   security        Gen1 infrastructure SSH Keys and SSL Certificates
+   securitygroup   Gen1 infrastructure network security groups
+   subnet          Gen1 infrastructure Network subnets
+   ticket          Gen1 infrastructure Manage Tickets
+   vlan            Gen1 infrastructure Network VLANs
+   vs              Gen1 infrastructure Virtual Servers
+   order           Gen1 infrastructure Orders
+   user            Gen1 infrastructure Manage Users
+   call-api        Call arbitrary API endpoints.
+   help            Print command usage message
+```
+{: screen}
+
+若要檢視指令的說明資訊，請執行下列指令：
+```
+ibmcloud sl [command] -h
 ```
 
-<strong>指令選項</strong>：
-<dl>
-<dt>-a, --api-endpoint</dt>
-<dd>標準基礎架構 API 端點 URL，預設值為：https://api.softlayer.com/rest/v3.1（適用於 API 金鑰鑑別）、https://api.softlayer.com/mobile/v3.1（適用於 IBM ID 鑑別）。</dd>
-<dt>-u, --sl-user</dt>
-<dd>Gen1 基礎架構使用者名稱。</dd>
-<dt>-p, --sl-password</dt>
-<dd>密碼或 API 金鑰。</dd>
-<dt>-c, --account-id</dt>
-<dd>帳戶 ID。</dd>
-<dt>-q, --security-question-id</dt>
-<dd>用來鑑別的安全問題 ID，如果您不知道，請詢問帳戶擁有者。</dd>
-<dt>-w, --security-question-answer</dt>
-<dd>用來鑑別的安全問題回答，如果您不知道，請詢問帳戶擁有者。</dd>
-<dt>-s, --security-code</dt>
-<dd>啟用雙因子鑑別時，安全供應商所產生的安全程式碼。</dd>
-<dt>-v, --security-vendor</dt>
-<dd>提供安全程式碼以進行鑑別的安全供應商，選項包含：VERISIGN、TOTP、PHONE_FACTOR。</dd>
-<dt>-t, --auth-token</dt>
-<dd>啟用電話鑑別時的鑑別記號。</dd>
-</dl>
-
-例如，使用您的標準基礎架構使用者名稱和密碼/API 金鑰來登入
-```
-$ ibmcloud sl init
-Choose how to configure classic infrastructure authentication:
-1. Login with your classic infrastructure user name and password/API key
-2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
-Enter a number>1
-classic infrastructure API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
-Username: []> user@example.com
-API key or password: []> abcd
-
-API endpoint:    https://api.softlayer.com/rest/v3.1   
-User name:       user@example.com   
-API Key:         xxxxxxxxxx
-```
-例如，使用 {{site.data.keyword.Bluemix_notm}} Single-Sign-On 登入標準基礎架構
-```
-$ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
-API endpoint: api.ng.bluemix.net
-Authenticating...
-OK
-
-Targeted account example user's Account (65ce8074c6c62b5)
-
-API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)   
-Region:         us-south   
-User:           user@example.com   
-Account:        example user's Account (65ce8074c6c62b5)   
-No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
-
-$ ibmcloud sl init
-Choose how to configure classic infrastructure authentication:
-
-1. Login with your classic infrastructure user name and password/API key
-2. Use IBM Cloud Single-Sign-On
-Enter a number> 2
-classic infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
-Setting account to: 123456
-OK
-
-classic infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
-
-Account ID:                123456   
-User ID:                   user@example.com  
-IMS token:                 xxxxxxxxxx
-```
+自 CLI `0.14` 版開始，無法再使用 `ibmcloud sl init` 指令。若要安裝最新 CLI 版本，請參閱[安裝獨立式 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)。
+{: note}
 
 ## ibmcloud sl help
 {: #sl_help}
@@ -548,3 +455,5 @@ IMS token:                 xxxxxxxxxx
 ```
 ibmcloud sl help
 ```
+{: codeblock}
+

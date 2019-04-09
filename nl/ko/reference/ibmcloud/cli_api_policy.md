@@ -1,11 +1,13 @@
 ---
 
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-02-26"
 
+keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids
 
-lastupdated: "2019-01-03"
+subcollection: cloud-cli
+
 ---
 
 {:new_window: target="_blank"}
@@ -15,94 +17,8 @@ lastupdated: "2019-01-03"
 # IAM 액세스, API 키, 서비스 ID 및 액세스 그룹 관리
 {: #ibmcloud_commands_iam}
 
-다음 명령을 사용하여 API 키, 서비스 ID, 액세스 그룹 및 사용자, 서비스, 액세스 그룹에 대한 액세스/권한 정책을 관리하십시오.
+다음 명령을 사용하여 API 키, 서비스 ID, 액세스 그룹 및 사용자, 서비스, 액세스 그룹에 대한 권한 정책을 관리하십시오.
 {: shortdesc}
-
-<table summary="API 키 및 정책을 관리하는 데 사용할 수 있는 ibmcloud 명령입니다. ">
-  <thead>
-  </thead>
-  <tbody>
-  <tr>
-   <td>[ibmcloud iam service-ids](cli_api_policy.html#ibmcloud_iam_service_ids)</td>
-   <td>[ibmcloud iam service-id](cli_api_policy.html#ibmcloud_iam_service_id)</td>
-   <td>[ibmcloud iam service-id-create](cli_api_policy.html#ibmcloud_iam_service_id_create)</td>
-   <td>[ibmcloud iam service-id-update](cli_api_policy.html#ibmcloud_iam_service_id_update)</td>
-   <td>[ibmcloud iam service-id-delete](cli_api_policy.html#ibmcloud_iam_service_id_delete)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam service-id-lock](cli_api_policy.html#ibmcloud_iam_service_id_lock)</td>
-   <td>[ibmcloud iam service-id-unlock](cli_api_policy.html#ibmcloud_iam_service_id_unlock)</td>
-   <td>[ibmcloud iam api-keys
-](cli_api_policy.html#ibmcloud_iam_api_keys)</td>
-   <td>[ibmcloud iam api-key-create](cli_api_policy.html#ibmcloud_iam_api_key_create)</td>
-   <td>[ibmcloud iam api-key-delete](cli_api_policy.html#ibmcloud_iam_api_key_delete)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam api-key-update](cli_api_policy.html#ibmcloud_iam_api_key_update)</td>
-   <td>[ibmcloud iam api-key-lock](cli_api_policy.html#ibmcloud_iam_api_key_lock)</td>
-   <td>[ibmcloud iam api-key-unlock](cli_api_policy.html#ibmcloud_iam_api_key_unlock)</td>
-   <td>[ibmcloud iam service-api-keys](cli_api_policy.html#ibmcloud_iam_service_api_keys)</td>
-   <td>[ibmcloud iam service-api-key](cli_api_policy.html#ibmcloud_iam_service_api_key)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam service-api-key-create](cli_api_policy.html#ibmcloud_iam_service_api_key_create)</td>
-   <td>[ibmcloud iam service-api-key-update](cli_api_policy.html#ibmcloud_iam_service_api_key_update)</td>
-   <td>[ibmcloud iam service-api-key-delete](cli_api_policy.html#ibmcloud_iam_service_api_key_delete)</td>
-   <td>[ibmcloud iam service-api-key-lock](cli_api_policy.html#ibmcloud_iam_service_api_key_lock)</td>
-   <td>[ibmcloud iam service-api-key-unlock](cli_api_policy.html#ibmcloud_iam_service_api_key_unlock)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam service-policies](cli_api_policy.html#ibmcloud_iam_service_policies)</td>
-   <td>[ibmcloud iam service-policy](cli_api_policy.html#ibmcloud_iam_service_policy)</td>
-   <td>[ibmcloud iam service-policy-create](cli_api_policy.html#ibmcloud_iam_service_policy_create)</td>
-   <td>[ibmcloud iam service-policy-update](cli_api_policy.html#ibmcloud_iam_service_policy_update)</td>
-   <td>[ibmcloud iam service-policy-delete](cli_api_policy.html#ibmcloud_iam_service_policy_delete)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam user-policies](cli_api_policy.html#ibmcloud_iam_user_policies)</td>
-   <td>[ibmcloud iam user-policy](cli_api_policy.html#ibmcloud_iam_user_policy)</td>
-   <td>[ibmcloud iam user-policy-create](cli_api_policy.html#ibmcloud_iam_user_policy_create)</td>
-   <td>[ibmcloud iam user-policy-update](cli_api_policy.html#ibmcloud_iam_user_policy_update)</td>
-   <td>[ibmcloud iam user-policy-delete](cli_api_policy.html#ibmcloud_iam_user_policy_delete)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam oauth-tokens
-](cli_api_policy.html#ibmcloud_iam_oauth_tokens)</td>
-   <td>[ibmcloud iam dedicated-id-disconnect](cli_api_policy.html#ibmcloud_iam_dedicated_id_disconnect)</td>
-   <td>[ibmcloud iam authorization-policy-create](cli_api_policy.html#ibmcloud_iam_authorization_policy_create)</td>
-   <td>[ibmcloud iam authorization-policy-delete](cli_api_policy.html#ibmcloud_iam_authorization_policy_delete)</td>
-   <td>[ibmcloud iam authorization-policy](cli_api_policy.html#ibmcloud_iam_authorization_policy)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam authorization-policies
-](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
-   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access_groups)</td>
-   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access_group)</td>
-   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access_group_create)</td>
-   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access_group_update)</td>
-</tr>
-<tr>
-   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access_group_delete)</td>
-   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access_group_users)</td>
-   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access_group_user_add)</td>
-   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access_group_user_remove)</td>
-   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access_group_user_purge)</td>
-</tr>
-<tr>
-   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access_group_service_ids)</td>
-   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access_group_service_id_add)</td>
-   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access_group_service_id_remove)</td>
-   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access_group_service_id_purge)</td>
-   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access_group_policies)</td>
-</tr>
-<tr>
-   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access_group_policy)</td>
-   <td>[ibmcloud iam access-group-policy-create](cli_api_policy.html#ibmcloud_iam_access_group_policy_create)</td>
-   <td>[ibmcloud iam access-group-policy-update](cli_api_policy.html#ibmcloud_iam_access_group_policy_update)</td>
-   <td>[ibmcloud iam access-group-policy-delete](cli_api_policy.html#ibmcloud_iam_access_group_policy_delete)</td>
-  </tr>
-  </tbody>
-  </table>
 
 ## ibmcloud iam service-ids
 {: #ibmcloud_iam_service_ids}
@@ -1057,7 +973,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 서비스 정책 작성
 
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -1084,6 +1000,8 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dd>리소스 그룹의 이름. 이 옵션은 '--file' 및 '--resource-group-id'와 배타적입니다.</dd>
   <dt>--resource-group-id </dt>
   <dd>리소스 그룹의 ID. 이 옵션은 '--file' 및 '--resource-group-name'과 배타적입니다.</dd>
+  <dt>--account-management(선택사항)</dt>
+  <dd>모든 계정 관리 서비스에 대해 액세스 부여</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 서비스 정책 작성</dd>
 </dl>
@@ -1101,13 +1019,25 @@ ibmcloud iam service-policy-create test --file @policy.json
 ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
+모든 계정 관리 서비스에 대해 `Administrator` 역할에 서비스 `test` 부여:
+
+```
+ibmcloud iam service-policy-create test --roles Administrator --account-management
+```
+
+계정 내의 모든 리소스에 대해 `Viewer` 역할에 서비스 `test` 부여:
+
+```
+ibmcloud iam service-policy-create test --roles Viewer
+```
+
 ## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
 서비스 정책 업데이트
 
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -1136,6 +1066,8 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dd>리소스 그룹의 이름. 이 옵션은 '--file' 및 '--resource-group-id'와 배타적입니다.</dd>
   <dt>--resource-group-id </dt>
   <dd>리소스 그룹의 ID. 이 옵션은 '--file' 및 '--resource-group-name'과 배타적입니다.</dd>
+  <dt>--account-management(선택사항)</dt>
+  <dd>모든 계정 관리 서비스에 대해 액세스 부여</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 서비스 정책 업데이트</dd>
 </dl>
@@ -1147,10 +1079,23 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
-서비스 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`에 대해 JSON 파일에서 서비스 정책 `140798e2-8ea7db3` 업데이트:
+
+서비스 `test`에 대해 JSON 파일에서 서비스 정책 `140798e2-8ea7db3` 업데이트:
 
 ```
-ibmcloud iam service-policy-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3 --file @policy.json
+ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
+```
+
+모든 계정 관리 서비스에 대해 `Administrator` 역할에 서비스 `test`를 부여하도록 서비스 정책 `140798e2-8ea7db3`을 업데이트합니다.
+
+```
+ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Administrator --account-management
+```
+
+계정 내의 모든 리소스에 대해 `Viewer` 역할에 서비스 `test`를 부여하도록 서비스 정책 `140798e2-8ea7db3`을 업데이트합니다.
+
+```
+ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
 ```
 
 ## ibmcloud iam service-policy-delete
@@ -1233,7 +1178,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용할 권한 정책을 작성합니다.
 
 ```
-ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME]
+ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME] [--target-resource-type RESOURCE_TYPE | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 로그인, 대상
@@ -1246,10 +1191,18 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>소스 서비스의 액세스 권한이 부여될 수 있는 대상 서비스입니다.</dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>소스 서비스에 대한 액세스 권한을 제공하는 역할입니다.</dd>  
-  <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>소스 서비스의 모든 인스턴스의 액세스 권한이 부여될 소스 서비스 인스턴스 이름(지정되지 않은 경우)입니다.</dd>
-  <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>대상 서비스의 모든 인스턴스의 액세스 권한이 부여될 대상 서비스 인스턴스 이름(지정되지 않은 경우)입니다.</dd>
+  <dt>--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME</dt>
+  <dd>소스 서비스 인스턴스 이름이며 `--source-service-instance-id`와 상호 배타적입니다. 지정되지 않은 경우에는 소스 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
+  <dt>--source-service-instance-id SOURCE_SERVICE_INSTANCE_ID</dt>
+  <dd>소스 서비스 instanceid이며 `--source-service-instance-name`과 상호 배타적입니다. 지정되지 않은 경우에는 소스 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
+  <dt>--source-resource-type</dt>
+  <dd>소스 서비스의 리소스 유형입니다.</dd>
+  <dt>--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME</dt>
+  <dd>대상 서비스 인스턴스 이름이며 `--target-service-instance-id`와 상호 배타적입니다. 지정되지 않은 경우에는 대상 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
+  <dt>--target-service-instance-id TARGET_SERVICE_INSTANCE_ID</dt>
+  <dd>대상 서비스 인스턴스 ID이며 `--target-service-instance-name`과 상호 배타적입니다. 지정되지 않은 경우에는 대상 서비스의 모든 인스턴스에 액세스 권한이 부여됩니다.</dd>
+  <dt>--target-resource-type</dt>
+  <dd>대상 서비스의 리소스 유형입니다.</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-delete

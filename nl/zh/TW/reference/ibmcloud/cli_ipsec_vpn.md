@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, ipsec, vpn, ibmcloud sl ipsec, tunnel, vpn access, datacenter, encryption
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,35 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # 管理 IPSec VPN 通道
+{: #sl-manage-ipsec-vpn-tunnels}
 
-{{site.data.keyword.Bluemix}} VPN 存取容許使用者透過 {{site.data.keyword.Bluemix_notm}} 專用網路，由遠端安全地管理所有伺服器。從您的位置至專用網路的 VPN 連線，讓您能透過已加密的 VPN 通道進行頻外管理，以及伺服器救援。
+{{site.data.keyword.cloud}} VPN 存取容許使用者透過 {{site.data.keyword.cloud_notm}} 專用網路，由遠端安全地管理所有伺服器。從您的位置至專用網路的 VPN 連線，讓您能透過已加密的 VPN 通道進行頻外管理，以及伺服器救援。
 
-請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 標準基礎架構 IPSec VPN 服務中管理 IPSec VPN 通道。
+請使用下列指令在 {{site.data.keyword.cloud_notm}} 標準基礎架構 IPSec VPN 服務中管理 IPSec VPN 通道。
 {: shortdesc}
 
-<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} IPSec VPN 指令，其鏈結提供指令的相關資訊">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl ipsec cancel](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_cancel)</td>
- <td>[ibmcloud sl ipsec config](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_config)</td>
- <td>[ibmcloud sl ipsec detail](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_detail)</td>
- <td>[ibmcloud sl ipsec list](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_list)</td>
- <td>[ibmcloud sl ipsec order](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_order)</td>
- <td>[ibmcloud sl ipsec subnet-add](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_subnet_add)</td>
- </tr>
- <tr>
- <td>[ibmcloud sl ipsec subnet-remove](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_subnet_remove)</td>
- <td>[ibmcloud sl ipsec translation-add](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_add)</td>
- <td>[ibmcloud sl ipsec translation-remove](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_remove)</td>
- <td>[ibmcloud sl ipsec translation-update](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_update)</td>
- <td>[ibmcloud sl ipsec update](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_update)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl ipsec cancel
+## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 取消 IPSec VPN 通道環境定義。
@@ -92,7 +73,7 @@ ibmcloud sl ipsec list [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>--order</dt>
-<dd>依購買 IPSEC 的訂單 ID 過濾。</dd>
+<dd>依購買 IPSEC 的訂單 ID 進行過濾。</dd>
 </dl>
 
 ## ibmcloud sl ipsec order

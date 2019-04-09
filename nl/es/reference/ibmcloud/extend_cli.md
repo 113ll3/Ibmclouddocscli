@@ -1,9 +1,12 @@
 ---
 
 copyright:
+  years: 2015, 2019
+lastupdated: "2019-02-26"
 
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
+
+subcollection: cloud-cli
 
 ---
 
@@ -15,22 +18,24 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 {:download: .download}
 
-# Ampliación de la CLI de {{site.data.keyword.Bluemix_notm}} con plug-ins
+# Ampliación de la CLI de {{site.data.keyword.cloud_notm}} con plug-ins
 {: #plug-ins}
 
-La CLI de {{site.data.keyword.Bluemix_notm}} da soporte a una infraestructura de plug-in para ampliar su capacidad. Puede instalar un plug-in desde un repositorio, un URL web, o instalar un binario del plug-in de forma local.
+La CLI de {{site.data.keyword.cloud}} da soporte a una infraestructura de plug-in para ampliar su capacidad. Puede instalar un plug-in desde un repositorio, un URL web, o instalar un binario del plug-in de forma local.
 
-[Repositorio de plugins de CLI de {{site.data.keyword.Bluemix_notm}}](https://tools.ng.bluemix.net){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg) es el repositorio oficial donde se alojan los plug-ins.
+[Repositorio de plugins de CLI de {{site.data.keyword.cloud_notm}}](https://plugins.cloud.ibm.com/ui/repository.html){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg) es el repositorio oficial donde se alojan los plugins.
 
 Para obtener más mandatos para gestionar plug-ins, ejecute `ibmcloud plugin` para ver los mensajes de ayuda.
 {: tip}
 
-## Instalar un plugin desde el repositorio de la CLI de {{site.data.keyword.Bluemix_notm}}
+## Instalar un plugin desde el repositorio de la CLI de {{site.data.keyword.cloud_notm}}
+{: #install-from-repo}
 
 ### Paso 1: Busque el plugin
+{: #step1-search-plugin}
 
 1. Utilice el mandato `ibmcloud plugin repo-plugins -r REPO_NAME` para buscar un plug-in en el repositorio.
-2. La CLI de {{site.data.keyword.Bluemix_notm}} tiene el repositorio oficial con el nombre 'IBM Cloud', puede buscar los plug-ins oficiales como se muestra en el ejemplo siguiente:
+2. La CLI de {{site.data.keyword.cloud_notm}} tiene el repositorio oficial con el nombre 'IBM Cloud', puede buscar los plug-ins oficiales como se muestra en el ejemplo siguiente:
 
   ```
   $ ibmcloud plugin repo-plugins
@@ -44,6 +49,7 @@ Para obtener más mandatos para gestionar plug-ins, ejecute `ibmcloud plugin` pa
   ```
 
 ### Paso 2: Instale el plugin
+{: step2-install-plugin}
 
 Utilice el mandato `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` para instalar el plug-in. Por ejemplo, utilice el mandato siguiente para instalar un plug-in desde el repositorio oficial de plugins de IBM 'IBM Cloud':
 
@@ -57,6 +63,7 @@ Utilice el mandato `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` para insta
   ```
 
 ## Instale un plug-in de forma local
+{: #install-plugin-locally}
 
 Utilice el mandato `ibmcloud plugin install LOCAL_FILE_NAME` para instalar el binario de un plugin en su máquina local. Por ejemplo:
 
@@ -69,6 +76,7 @@ Utilice el mandato `ibmcloud plugin install LOCAL_FILE_NAME` para instalar el bi
   ```
 
 ## Instalar un plugin desde un URL de web
+{: install-plugin-from-url}
 
 Utilice el mandato `ibmcloud plugin install URL` para instalar un plug-in directamente desde el URL de una web. Por ejemplo:
 

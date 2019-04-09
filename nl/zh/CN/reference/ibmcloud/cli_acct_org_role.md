@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -19,57 +21,10 @@ lastupdated: "2018-11-30"
 使用以下命令可管理公共 Cloud Foundry 环境的帐户、帐户中的用户以及组织、空间和角色。
 {: shortdesc}
 
-<table summary="可用于管理帐户、组织、空间和角色的 ibmcloud 命令。">
-<thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud account orgs](cli_acct_org_role.html#ibmcloud_account_orgs)</td>
- <td>[ibmcloud account org](cli_acct_org_role.html#ibmcloud_account_org)</td>
- <td>[ibmcloud account org-create](cli_acct_org_role.html#ibmcloud_account_org_create)</td>
- <td>[ibmcloud account org-replicate](cli_acct_org_role.html#ibmcloud_account_org_replicate)</td>
- <td>[ibmcloud account org-rename](cli_acct_org_role.html#ibmcloud_account_org_rename)</td>
- </tr>
- <tr>
- <td>[ibmcloud account spaces](cli_acct_org_role.html#ibmcloud_account_spaces)</td>
- <td>[ibmcloud account space](cli_acct_org_role.html#ibmcloud_account_space)</td>
- <td>[ibmcloud account space-create](cli_acct_org_role.html#ibmcloud_account_space_create)</td>
- <td>[ibmcloud account space-rename](cli_acct_org_role.html#ibmcloud_account_space_rename)</td>
- <td>[ibmcloud account space-delete](cli_acct_org_role.html#ibmcloud_account_space_delete)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-users](cli_acct_org_role.html#ibmcloud_account_org_users)</td>
- <td>[ibmcloud account org-user-add](cli_acct_org_role.html#ibmcloud_account_org_user_add)</td>
- <td>[ibmcloud account org-user-remove](cli_acct_org_role.html#ibmcloud_account_org_user_remove)</td>
- <td>[ibmcloud account org-roles](cli_acct_org_role.html#ibmcloud_account_org_roles)</td>
- <td>[ibmcloud account org-role-set](cli_acct_org_role.html#ibmcloud_account_org_role_set)</td>
- </tr>
- <tr>
- <td>[ibmcloud account org-role-unset](cli_acct_org_role.html#ibmcloud_account_org_role_unset)</td>
- <td>[ibmcloud account space-users](cli_acct_org_role.html#ibmcloud_account_space_users)</td>
- <td>[ibmcloud account space-roles](cli_acct_org_role.html#ibmcloud_account_space_roles)</td>
- <td>[ibmcloud account space-role-set](cli_acct_org_role.html#ibmcloud_account_space_role_set)</td>
- <td>[ibmcloud account space-role-unset](cli_acct_org_role.html#ibmcloud_account_space_role_unset)</td>
-</tr>
- <td>[ibmcloud account list](cli_acct_org_role.html#ibmcloud_account_list)</td>
- <td>[ibmcloud account org-account](cli_acct_org_role.html#ibmcloud_account_org_account)</td>
- <td>[ibmcloud account users](cli_acct_org_role.html#ibmcloud_account_users)</td>
- <td>[ibmcloud account user-remove](cli_acct_org_role.html#ibmcloud_account_user_remove)</td>
- <td>[ibmcloud account user-invite](cli_acct_org_role.html#ibmcloud_account_user_invite)</td>
- </tr>
- <tr>
-  <td>[ibmcloud account user-reinvite](cli_acct_org_role.html#ibmcloud_account_user_reinvite)</td>
-  <td>[ibmcloud app domain-cert](cli_acct_org_role.html#ibmcloud_app_domain_cert)</td>
-  <td>[ibmcloud app domain-cert-add](cli_acct_org_role.html#ibmcloud_app_domain_cert_add)</td>
-  <td>[ibmcloud app domain-cert-remove](cli_acct_org_role.html#ibmcloud_app_domain_cert_remove)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud account orgs
+## ibmcloud account orgs
 {: #ibmcloud_account_orgs}
 
-列出所有组织
+列出所有组织。
 
 ```
 ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID] [-u ACCOUNT_OWNER]
@@ -130,7 +85,7 @@ ibmcloud account org ORG_NAME [-r REGION] [--guid | --output REGION]
 
 <strong>示例</strong>：
 
-显示组织 `IBM` 的信息并显示 GUID
+显示组织 `IBM` 的信息并显示 GUID。
 
 ```
 ibmcloud account org IBM --guid
@@ -193,7 +148,7 @@ ibmcloud account org-replicate myorg eu-gb
 ## ibmcloud account org-rename
 {: #ibmcloud_account_org_rename}
 
-重命名组织。此操作只能由组织管理员执行。
+重命名组织。此操作只能由组织管理者执行。
 
 ```
 ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
@@ -212,7 +167,7 @@ ibmcloud account org-rename OLD_ORG_NAME NEW_ORG_NAME
 ## ibmcloud account spaces
 {: #ibmcloud_account_spaces}
 
-列出所有空间
+列出所有帐户空间。
 
 ```
 ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
@@ -247,7 +202,7 @@ ibmcloud account spaces -o org_example --output JSON
 ## ibmcloud account space
 {: #ibmcloud_account_space}
 
-显示指定空间的信息
+显示特定空间的信息。
 
 ```
 ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--security-group-rules]
@@ -298,19 +253,19 @@ ibmcloud account space space_example --security-group-rules
 ## ibmcloud account space-create
 {: #ibmcloud_account_space_create}
 
-此命令的功能和选项与 [cf create-space ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} 命令的相同。
+此命令的功能和选项与 [cf create-space](http://cli.cloudfoundry.org/en-US/cf/create-space.html){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 命令的相同。
 
 ## ibmcloud account space-rename
 {: #ibmcloud_account_space_rename}
 
 
-此命令的功能和选项与 [cf rename-space ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} 命令的相同。
+此命令的功能和选项与 [cf rename-space](http://cli.cloudfoundry.org/en-US/cf/rename-space.html){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 命令的相同。
 
 ## ibmcloud account space-delete
 {: #ibmcloud_account_space_delete}
 
 
-此命令的功能和选项与 [cf delete-space ![外部链接图标](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} 命令的相同。
+此命令的功能和选项与 [cf delete-space](http://cli.cloudfoundry.org/en-US/cf/delete-space.html){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 命令的相同。
 
 ## ibmcloud account org-users
 {: #ibmcloud_account_org_users}
@@ -336,7 +291,7 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ## ibmcloud account org-user-add
 {: #ibmcloud_account_org_user_add}
 
-将用户添加到组织（需要组织管理员）。
+将用户添加到组织（需要组织管理者）。
 
 ```
  ibmcloud account org-user-add USER_NAME ORG
@@ -345,7 +300,7 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
-从组织除去用户（仅限组织管理员或用户自己）
+从组织除去用户（仅限组织管理者或用户自己）。
 
 ```
    ibmcloud account org-user-remove USER_NAME ORG [-f, --force]
@@ -360,7 +315,7 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ## ibmcloud account org-roles
 {: #ibmcloud_account_org_roles}
 
-获取当前用户的所有组织角色
+获取当前用户的所有组织角色。
 
 ```
 ibmcloud account org-roles [-u USER_ID]
@@ -377,7 +332,7 @@ ibmcloud account org-roles [-u USER_ID]
 ## ibmcloud account org-role-set
 {: #ibmcloud_account_org_role_set}
 
-向用户分配组织角色。此操作只能由组织管理员执行。
+向用户分配组织角色。此操作只能由组织管理者执行。
 
 ```
 ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
@@ -392,9 +347,10 @@ ibmcloud account org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME（必需）</dt>
    <dd>要将此用户分配到的组织的名称。</dd>
    <dt>ORG_ROLE（必需）</dt>
-   <dd>要将此用户分配到的组织角色的名称。例如：<ul>
+   <dd>要将此用户分配到的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
-   <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
+   <li>BillingManager：此角色可以创建和管理计费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
    </ul>
    </dd>
@@ -415,7 +371,7 @@ ibmcloud account org-role-set Mary IBM OrgManager
 ## ibmcloud account org-role-unset
 {: #ibmcloud_account_org_role_unset}
 
-除去用户的组织角色。此操作只能由组织管理员执行。
+除去用户的组织角色。此操作只能由组织管理者执行。
 
 ```
 ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
@@ -430,9 +386,10 @@ ibmcloud account org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME（必需）</dt>
    <dd>要将此用户从中除去的组织的名称。</dd>
    <dt>ORG_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的组织角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
-   <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
+   <li>BillingManager：此角色可以创建和管理计费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
    </ul>
    </dd>
@@ -468,7 +425,7 @@ ibmcloud account space-users ORG_NAME SPACE_NAME
 ## ibmcloud account space-role-set
 {: #ibmcloud_account_space_role_set}
 
-向用户分配空间角色。此操作只能由空间管理员执行。
+向用户分配空间角色。此操作只能由空间管理者执行。
 
 ```
 ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -486,7 +443,8 @@ ibmcloud account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户分配到的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户分配到的空间角色的名称。例如：<ul>
+   <dd>要将此用户分配到的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -504,7 +462,7 @@ ibmcloud account space-role-set Mary IBM Cloud SpaceManager
 ## ibmcloud account space-role-unset
 {: #ibmcloud_account_space_role_unset}
 
-除去用户的空间角色。此操作只能由空间管理员执行。
+除去用户的空间角色。此操作只能由空间管理者执行。
 
 ```
 ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
@@ -522,7 +480,8 @@ ibmcloud account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户从中除去的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的空间角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -552,7 +511,7 @@ ibmcloud account list
 ## ibmcloud account org-account
 {: #ibmcloud_account_org_account}
 
-显示指定组织的帐户（需要组织用户）
+显示指定组织的帐户（需要组织用户）。
 
 ```
 ibmcloud account org-account ORG_NAME [--guid]
@@ -566,10 +525,58 @@ ibmcloud account org-account ORG_NAME [--guid]
   <dd>仅显示帐户标识</dd>
 </dl>
 
+## ibmcloud account show
+{: #ibmcloud_account_show}
+
+显示帐户详细信息
+
+```
+ibmcloud account show
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+</dl>
+
+<strong>示例</strong>：
+
+显示当前目标帐户的详细信息：
+
+```
+ibmcloud account show
+```
+
+## ibmcloud account update
+{: #ibmcloud_account_update}
+
+更新特定帐户。
+
+```
+ibmcloud account update (--service-endpoint-enable true | false)
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--service-endpoint-enable true | false</dt>
+  <dd>启用或禁用 Softlayer 帐户的服务端点连接。</dd>
+</dl>
+
+<strong>示例</strong>：
+
+为当前帐户启用服务端点连接：
+
+```
+ibmcloud account update --service-endpoint-enable true
+```
+
 ## ibmcloud account users
 {: #ibmcloud_account_users}
 
-显示与帐户关联的用户。此操作只能由帐户所有者执行。
+显示与帐户相关联的用户。此操作只能由帐户所有者执行。
 
 ```
 ibmcloud account users
@@ -578,7 +585,7 @@ ibmcloud account users
 ## ibmcloud account user-remove
 {: #ibmcloud_account_user_remove}
 
-从帐户中除去用户（仅帐户所有者）
+从帐户中除去用户（仅限帐户所有者）。
 
 ```
 ibmcloud account user-remove USER_ID [-c ACCOUNT_ID] [-f, --force]
@@ -614,7 +621,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
    <dt>-o ORG</dt>
    <dd>邀请用户加入的组织</dd>
    <dt>--org-role ORG_ROLE</dt>
-   <dd>组织角色。有效输入为：OrgManager、BillingManager、OrgAuditor 和 OrgUser。如果省略，将设置 OrgUser 角色。</dd>
+   <dd>组织角色。有效输入为：OrgManager、BillingManager、OrgAuditor 和 OrgUser。如果省略，会设置 OrgUser 角色。</dd>
    <dt>-s SPACE</dt>
    <dd>邀请用户加入的空间</dd>
    <dt>--space-role SPACE_ROLE</dt>
@@ -624,7 +631,7 @@ ibmcloud account user-invite USER_EMAIL [-o ORG [--org-role ORG_ROLE] [-s SPACE,
 ## ibmcloud account user-reinvite
 {: #ibmcloud_account_user_reinvite}
 
-向用户重新发送邀请（帐户管理员）
+向用户重新发送邀请（帐户管理员）。
 
 ```
 ibmcloud account user-reinvite USER_EMAIL
@@ -634,11 +641,11 @@ ibmcloud account user-reinvite USER_EMAIL
 <strong>命令选项</strong>：
 <dl>
    <dt>USER_EMAIL（必需）</dt>
-   <dd>要重新邀请的用户的电子邮件。</dd>
+   <dd>要再次邀请的用户的电子邮件。</dd>
 </dl>
 
 ## ibmcloud app domain-cert
-{: #ibmcloud_app_domain_cert}
+{: #accounts-list-domain-cert}
 
 列出域的证书信息。
 
@@ -664,7 +671,7 @@ ibmcloud app domain-cert ibmcxo-eventconnect.com
 ```
 
 ## ibmcloud app domain-cert-add
-{: #ibmcloud_app_domain_cert_add}
+{: #accounts-add-domain-cert}
 
 将证书添加到当前组织中的指定域。
 
@@ -700,7 +707,7 @@ ibmcloud app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_fil
 ```
 
 ## ibmcloud app domain-cert-remove
-{: #ibmcloud_app_domain_cert_remove}
+{: #accounts-remove-domain-cert}
 
 从当前组织中的指定域除去证书。
 

@@ -1,54 +1,28 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# 使用 LoadBalancer 服务
+# 使用 Load Balancer 服务
+{: #sl-load-balancer-service}
 
-{{site.data.keyword.Bluemix}} LoadBalancer 服务通过在多个应用程序服务器实例之间分配流量，以及仅将流量转发到运行正常的实例，从而帮助提高业务关键型应用程序的可用性。
+{{site.data.keyword.cloud}} Load Balancer 服务通过在多个应用程序服务器实例之间分配流量，以及仅将流量转发到运行正常的实例，从而帮助提高业务关键型应用程序的可用性。
 
-使用以下命令可在 {{site.data.keyword.Bluemix_notm}} 经典基础架构 LoadBalancer 服务中管理负载均衡器。
+使用以下命令可在 {{site.data.keyword.cloud_notm}} 经典基础架构 Load Balancer 服务中管理负载均衡器。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 负载均衡器命令（带有可获取命令的更多信息的链接）">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl loadbal cancel](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_cancel)</td>
- <td>[ibmcloud sl loadbal create](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_create)</td>
- <td>[ibmcloud sl loadbal create-options](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_create_options)</td>
- <td>[ibmcloud sl loadbal detail](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_detail)</td>
- <td>[ibmcloud sl loadbal group-add](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_add)</td>
- <td>[ibmcloud sl loadbal group-delete](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_delete)</td>
- </tr>
- <tr>
- <td>[ibmcloud sl loadbal group-edit](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_edit)</td>
- <td>[ibmcloud sl loadbal group-reset](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_reset)</td>
- <td>[ibmcloud sl loadbal health-checks](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_health_checks)</td>
- <td>[ibmcloud sl loadbal list](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_list)</td>
- <td>[ibmcloud sl loadbal routing-methods](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_routing_methods)</td>
- <td>[ibmcloud sl loadbal routing-types](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_routing_types)</td>
- </tr>
- <tr>
- <td>[ibmcloud sl loadbal service-add](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_add)</td>
- <td>[ibmcloud sl loadbal service-delete](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_delete)</td>
- <td>[ibmcloud sl loadbal service-edit](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_edit)</td>
- <td>[ibmcloud sl loadbal service-toggle](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_toggle)</td>
- </tr>
-</tbody>
- </table>
-
- ## ibmcloud sl loadbal cancel
+## ibmcloud sl loadbal cancel
 {: #sl_loadbal_cancel}
 
 取消现有负载均衡器。

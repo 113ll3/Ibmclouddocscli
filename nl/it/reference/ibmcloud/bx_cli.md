@@ -1,30 +1,33 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:note: .note}
+{:codeblock: .codeblock}
 
 # Comandi generali della CLI (ibmcloud)
 {: #ibmcloud_cli}
 
+L'interfaccia di riga comando (CLI) {{site.data.keyword.cloud_notm}} fornisce una serie di comandi che vengono raggruppati in base allo spazio dei nomi per consentire agli utenti di interagire con {{site.data.keyword.cloud_notm}}.
 
-L'interfaccia di riga comando (CLI) {{site.data.keyword.Bluemix_notm}} fornisce una serie di comandi che vengono raggruppati in base allo spazio dei nomi per consentire agli utenti di interagire con {{site.data.keyword.Bluemix_notm}}.
+Il client riga di comando {{site.data.keyword.cloud_notm}} include un client riga di comando Cloud Foundry nella sua installazione. Se hai la tua propria CLI cf installata, non utilizzare sia i comandi della CLI {{site.data.keyword.cloud_notm}} `ibmcloud [comando]` sia i comandi della CLI Cloud Foundry `cf [comando]` della tua propria installazione nello stesso contesto. Utilizza invece `ibmcloud cf [comando]` se vuoi utilizzare la CLI cf per gestire le risorse Cloud Foundry nel contesto della CLI {{site.data.keyword.cloud_notm}}. Nota che `ibmcloud cf api/login/logout/target` non è consentito e devi utilizzare invece `ibmcloud api/login/logout/target`.
 
-Il client riga di comando {{site.data.keyword.Bluemix_notm}} include un client riga di comando Cloud Foundry nella sua installazione. Se hai la tua propria CLI cf installata, non utilizzare i comandi della CLI {{site.data.keyword.Bluemix_notm}} `ibmcloud [comando]` e i comandi della CLI Cloud Foundry `cf [comando]` della tua propria installazione nello stesso contesto. Utilizza invece `ibmcloud cf [comando]` se vuoi utilizzare la CLI cf per gestire le risorse Cloud Foundry nel contesto della CLI {{site.data.keyword.Bluemix_notm}}.  Nota che `ibmcloud cf api/login/logout/target` non è consentito e devi utilizzare invece `ibmcloud api/login/logout/target`.
-
-A partire da maggio 2018, i comandi della CLI {{site.data.keyword.Bluemix_notm}} sono stati modificati da `bluemix` e `bx` a `ibmcloud`. Tuttavia, puoi ancora utilizzare i comandi della CLI `bluemix` e `bx` finché non vengono rimossi in una data successiva.
+A partire da maggio 2018, i comandi della CLI {{site.data.keyword.cloud_notm}} sono stati modificati da `bluemix` e `bx` a `ibmcloud`. Tuttavia, puoi ancora utilizzare i comandi della CLI `bluemix` e `bx` finché non vengono successivamente rimossi.
 {: tip}
 
-Di seguito sono elencati in dettaglio i comandi supportati dalla CLI {{site.data.keyword.Bluemix_notm}}, compresi i loro nomi, argomenti, opzioni, prerequisiti, descrizioni ed esempi.
-{:shortdesc}
+Di seguito sono elencati in dettaglio i comandi supportati dalla CLI {{site.data.keyword.cloud_notm}}, compresi i loro nomi, argomenti, opzioni, prerequisiti, descrizioni ed esempi.
+{: shortdesc}
 
 I *Prerequisiti* elencano quali azioni sono richieste prima di utilizzare il comando. I comandi che non hanno azioni prerequisite elencano **Nessuno**. Altrimenti, i prerequisiti possono includere una o più delle seguenti azioni:
 
@@ -32,7 +35,7 @@ I *Prerequisiti* elencano quali azioni sono richieste prima di utilizzare il com
 <dt>Endpoint</dt>
 <dd>Un endpoint API deve essere impostato mediante <code>ibmcloud api</code> prima di utilizzare il comando.</dd>
 <dt>Accesso</dt>
-<dd>È necessario accedere utilizzando il comando <code>ibmcloud login</code> prima di utilizzare questo comando.
+<dd>È necessario accedere mediante il comando <code>ibmcloud login</code> prima di utilizzare questo comando.
 Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per autenticarti con il passcode monouso o utilizza '--apikey' per autenticarti con la chiave API.
 </dd>
 <dt>Destinazione</dt>
@@ -41,38 +44,10 @@ Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per au
 <dd>Per poter eseguire questo comando, è necessario che la CLI Docker (docker) sia installata.</dd>
 </dl>
 
-
-Utilizza gli indici nella seguente tabella per fare riferimento ai comandi ibmcloud usati di frequente.
-
-## Comandi ibmcloud generali
-{: #ibmcloud_commands_index}
-
-<table summary="Comandi ibmcloud generali.">
-<caption>Tabella 1. Comandi ibmcloud generali</caption>
- <thead>
- <th colspan="5">Comandi ibmcloud generali</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud help](bx_cli.html#ibmcloud_help)</td>
- <td>[ibmcloud api](bx_cli.html#ibmcloud_api)</td>
- <td>[ibmcloud config](bx_cli.html#ibmcloud_config)</td>
- <td>[ibmcloud info](bx_cli.html#ibmcloud_info)</td>
- <td>[ibmcloud cf](bx_cli.html#ibmcloud_cf)</td>
- </tr>
- <tr>
- <td>[ibmcloud login](bx_cli.html#ibmcloud_login) </td>
- <td>[ibmcloud logout](bx_cli.html#ibmcloud_logout) </td>
- <td>[ibmcloud regions](bx_cli.html#ibmcloud_regions)</td>
- <td>[ibmcloud target](bx_cli.html#ibmcloud_target)</td>
- <td>[ibmcloud update](bx_cli.html#ibmcloud_update)</td>
- </tr>
- </tbody>
- </table>
-
- ## ibmcloud help
+## ibmcloud help
 {: #ibmcloud_help}
-Visualizza la guida generale per i comandi integrati di primo livello e gli spazi dei nomi supportati della CLI {{site.data.keyword.Bluemix_notm}} oppure la guida per un comando o uno spazio dei nomi integrati specifici.
+
+Visualizza la guida generale per i comandi integrati di primo livello e gli spazi dei nomi supportati della CLI {{site.data.keyword.cloud_notm}} oppure la guida per un comando o uno spazio dei nomi integrati specifici.
 
 ```
 ibmcloud help [COMANDO|SPAZIONOMI]
@@ -87,26 +62,24 @@ ibmcloud help [COMANDO|SPAZIONOMI]
    <dd>Il comando o lo spazio dei nomi per cui viene visualizzata la guida. Se non viene specificata, viene visualizzata la guida generale per la CLI {{site.data.keyword.Bluemix_notm}}.</dd>
    </dl>
 
-
-
 <strong>Esempi</strong>:
 
-Visualizza la guida generale per la CLI {{site.data.keyword.Bluemix_notm}}:
-
+Visualizza la guida generale per la CLI {{site.data.keyword.cloud_notm}}:
 ```
 ibmcloud help
 ```
+{: codeblock}
 
 Visualizza la guida per il comando `info`:
-
 ```
 ibmcloud help info
 ```
+{: codeblock}
 
 ## ibmcloud api
 {: #ibmcloud_api}
-Imposta o visualizza l'endpoint API {{site.data.keyword.Bluemix_notm}}.
 
+Imposta o visualizza l'endpoint API {{site.data.keyword.cloud_notm}}.
 ```
 ibmcloud api [ENDPOINT_API] [--unset] [--skip-ssl-validation]
 ```
@@ -116,7 +89,7 @@ ibmcloud api [ENDPOINT_API] [--unset] [--skip-ssl-validation]
 <strong>Opzioni del comando</strong>:
    <dl>
    <dt>ENDPOINT_API (facoltativo)</dt>
-   <dd>L'endpoint API di destinazione, ad esempio `https://api.chinabluemix.net`. Se non vengono specificate entrambe le opzioni *ENDPOINT_API* e `--unset`, viene visualizzato l'endpoint API corrente.</dd>
+   <dd>L'endpoint API di destinazione, ad esempio `https://cloud.ibm.com`. Se non vengono specificate entrambe le opzioni *ENDPOINT_API* e `--unset`, viene visualizzato l'endpoint API corrente.</dd>
    <dt>--unset (facoltativo)</dt>
    <dd>Rimuove l'impostazione di endpoint API.</dd>
    <dt>--skip-ssl-validation (facoltativo)</dt>
@@ -124,36 +97,36 @@ ibmcloud api [ENDPOINT_API] [--unset] [--skip-ssl-validation]
    </dl>
 <strong>Esempi</strong>:
 
-Imposta l'endpoint API su api.chinabluemix.net:
+Imposta l'endpoint API su cloud.ibm.com:
+```
+ibmcloud api cloud.ibm.com
+```
+{: codeblock}
 
 ```
-ibmcloud api api.chinabluemix.net
+ibmcloud api https://cloud.ibm.com --skip-ssl-validation
 ```
-
-```
-ibmcloud api https://api.chinabluemix.net --skip-ssl-validation
-```
+{: codeblock}
 
 Visualizza l'endpoint API corrente:
-
 ```
 ibmcloud api
 ```
+{: codeblock}
 
 Annulla l'impostazione dell'endpoint API:
-
 ```
 ibmcloud api --unset
 ```
+{: codeblock}
 
 ## ibmcloud config
 {: #ibmcloud_config}
 
-
 Scrive i valori predefiniti nel file di configurazione.
 
 ```
-ibmcloud config --http-timeout TIMEOUT_IN_SECONDI | --trace (true|false|path/to/file) | --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
+ibmcloud config --http-timeout TIMEOUT_IN_SECONDI | --trace (true|false|percorso/a/file) | --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
 ```
 
 <strong>Prerequisiti</strong>:  Nessuno
@@ -177,57 +150,51 @@ ibmcloud config --http-timeout TIMEOUT_IN_SECONDI | --trace (true|false|path/to/
 <strong>Esempi</strong>:
 
 Imposta il timeout della richiesta HTTP su 30 secondi:
-
 ```
 ibmcloud config --http-timeout 30
 ```
+{: codeblock}
 
 Abilita l'output di traccia per le richieste HTTP:
-
 ```
 ibmcloud config --trace true
 ```
+{: codeblock}
 
 Traccia le richieste HTTP in un file specificato */home/usera/my_trace*:
-
 ```
 ibmcloud config --trace /home/usera/my_trace
 ```
+{: codeblock}
 
 Disabilita l'output a colori:
-
 ```
 ibmcloud config --color false
 ```
+{: codeblock}
 
 Imposta la locale su zh_Hans:
-
 ```
 ibmcloud config --locale zh_Hans
 ```
+{: codeblock}
 
 Cancella le impostazioni della locale:
-
 ```
 ibmcloud config --locale CLEAR
 ```
+{: codeblock}
 
 ## ibmcloud info
 {: #ibmcloud_info}
 
-Visualizza le informazioni su {{site.data.keyword.Bluemix_notm}} di base, compresi la regione corrente, la versione controller cloud e alcuni utili endpoint, quali gli endpoint per l'accesso e per lo scambio di token di accesso.
-
-```
-ibmcloud info
-```
-
-<strong>Prerequisiti</strong>:  Endpoint
+Il comando `ibmcloud info` non è più disponibile a partire dalla versione della CLI `0.14`. Per installare la versione della CLI più recente, vedi [Installazione della CLI {{site.data.keyword.cloud_notm}} autonoma](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
+{: note}
 
 ## ibmcloud cf
 {: #ibmcloud_cf}
 
 Richiama la CLI CF integrata
-
 ```
 ibmcloud [-q, --quiet] cf COMANDO...
 ```
@@ -249,18 +216,17 @@ ibmcloud cf apps
 ```
 
 Elenca i servizi cf senza messaggio "Richiamo di comando cf...":
-
 ```
 ibmcloud -q cf services
 ```
+{: codeblock}
 
 ## ibmcloud login
 {: #ibmcloud_login}
 
 Esegue l'accesso dell'utente.
-
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey CHIAVE | @FILE_CHIAVI] [--no-iam] [-c ID_ACCOUNT | --no-account] [-g GRUPPO_RISORSE] [-o ORG] [-s SPAZIO]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey CHIAVE | @FILE_CHIAVI] [--no-iam] [-c ID_ACCOUNT | --no-account] [-g GRUPPO_RISORSE] [-r REGIONE | --no-region] [-o ORG] [-s SPAZIO]
 ```
 
 <strong>Prerequisiti</strong>:  Nessuno
@@ -270,7 +236,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey
 <strong>Opzioni del comando</strong>:
 <dl>
   <dt> -a <i>ENDPOINT_API</i> (facoltativo)</dt>
-  <dd> Endpoint API (ad esempio: api.ng.bluemix.net)</dd>
+  <dd> Endpoint API (ad esempio: cloud.ibm.com)</dd>
   <dt> --apikey <i>CHIAVE_API o @PERCORSO_FILE_CHIAVI_API</i>
   <dd> Contenuto della chiave API o percorso del file della chiave API indicato da @</dd>
   <dt> --sso (facoltativo) </dt>
@@ -285,6 +251,10 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey
   <dd> Forza l'accesso senza account. Questa opzione non è consigliata. Questa opzione è esclusiva con -c.</dd>
   <dt> -g <i>GRUPPO_RISORSE</i> (facoltativo) </dt>
   <dd> Nome del gruppo di risorse di destinazione</dd>
+  <dt> -r REGIONE</dt>
+  <dd> Il nome della regione, ad esempio 'us-south' o 'eu-gb'</dt>
+  <dt> --no-region</dt>
+  <dd> Forza l'accesso senza indicare come destinazione una regione.</dd>
   <dt> -o <i>ORGANIZZAZIONE</i> (facoltativo)</dt>
   <dd> Nome dell'organizzazione di destinazione (obsoleto, utilizza 'ibmcloud target -o ORGANIZZAZIONE')</dd>
   <dt> -s <i>SPAZIO</i> (facoltativo) </dt>
@@ -302,20 +272,17 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u NOMEUTENTE] [-p PASSWORD] [--apikey
 ```
 ibmcloud login
 ```
+{: codeblock}
 
-Accesso con nome utente e password e imposta l'account, l'organizzazione e lo spazio di destinazione:
-
+Accedi con nome utente e password e imposta l'account, l'organizzazione e lo spazio di destinazione:
 ```
 ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Accesso con il passcode monouso e imposta l'account, l'organizzazione e lo spazio di destinazione
-
+Accedi con il passcode monouso e imposta l'account, l'organizzazione e lo spazio di destinazione
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
-
-Accesso con la chiave API e imposta le destinazioni:
 
 ### La chiave API ha un account associato
 
@@ -340,26 +307,27 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 <strong>Nota:</strong> se la chiave API ha un account associato, il passaggio a un altro account non è consentito.
 
 ### Utilizza un passcode monouso
-
 ```
 ibmcloud login -u UserID --sso
 ```
+{: codeblock}
 
-La CLI fornirà un link all'URL e richiederà il passcode:
+La CLI fornisce quindi un link dell'URL e richiede il passcode:
 ```
 Codice monouso (Ottienine uno in https://Link_URL_per_ottenere_il_passcode):
 ```
+{: screen}
 
-Apri il link in un browser per ottenere il passcode. Digita il passcode fornito nella console e dovresti essere in grado di accedere.
+Apri il link nel browser per ottenere un passcode. Digita il passcode fornito nella console e potrai accedere.
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
 
 Disconnette l'utente.
-
 ```
 ibmcloud logout
 ```
+{: codeblock}
 
 <strong>Prerequisiti</strong>:  Nessuno
 
@@ -367,10 +335,10 @@ ibmcloud logout
 {: #ibmcloud_regions}
 
 Visualizza le informazioni per tutte le regioni su {{site.data.keyword.Bluemix_notm}}.
-
 ```
 ibmcloud regions
 ```
+{: codeblock}
 
 <strong>Prerequisiti</strong>:  Endpoint
 
@@ -379,9 +347,8 @@ ibmcloud regions
 
 
 Imposta o visualizza l'account, la regione, l'organizzazione o lo spazio di destinazione.
-
 ```
-ibmcloud target [-r NOME_REGIONE] [-c ID_ACCOUNT] [-g GRUPPO_RISORSE] [--cf] [-o ORGANIZZAZIONE] [-s SPAZIO]
+ibmcloud target [-r NOME_REGIONE] | --unset-region] [-c ID_ACCOUNT] [-g GRUPPO_RISORSE] [--cf] [-o ORGANIZZAZIONE] [-s SPAZIO]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
@@ -390,6 +357,8 @@ ibmcloud target [-r NOME_REGIONE] [-c ID_ACCOUNT] [-g GRUPPO_RISORSE] [--cf] [-o
    <dl>
    <dt>-r <i>NOME_REGIONE</i> (facoltativo)</dt>
    <dd>Nome della regione a cui essere passati, come 'us-south' o 'eu-gb'.</dd>
+   <dt>--unset-region</dt>
+   <dd>Annulla l'impostazione della regione indicata come destinazione</dd>
    <dt>-c <i>ID_ACCOUNT</i> (facoltativo)</dt>
    <dd>L'ID dell'account di destinazione.</dd>
    <dt>-g <i>GRUPPO_RISORSE</i> (facoltativo)</dt>
@@ -406,28 +375,27 @@ Se nessuna delle opzioni viene specificata, vengono visualizzati l'account, la r
 <strong>Esempi</strong>:
 
 Imposta l'account, l'organizzazione e lo spazio correnti:
-
 ```
 ibmcloud target -c MyAccountID -o MyOrg -s MySpace
 ```
+{: codeblock}
 
 Passa a una nuova regione:
-
 ```
 ibmcloud target -r eu-gb
 ```
+{: codeblock}
 
 Visualizza l'account, la regione, l'organizzazione e lo spazio correnti:
-
 ```
 ibmcloud target
 ```
+{: codeblock}
 
 ## ibmcloud update
 {: #ibmcloud_update}
 
 Aggiorna la CLI alla versione più recente.
-
 ```
 ibmcloud update [-f]
 ```
@@ -441,107 +409,46 @@ ibmcloud update [-f]
 </dl>
 
 
-## Comandi del servizio dell'infrastruttura classica generali 
+## Comandi del servizio dell'infrastruttura classica generali
 {: #softlayer_cli}
 
+Utilizza i comandi dell'infrastruttura classica nella CLI (command line interface) {{site.data.keyword.cloud_notm}} per configurare e gestire i servizi dell'infrastruttura.
 
-Utilizza i comandi dell'infrastruttura classica nella CLI (command line interface) {{site.data.keyword.Bluemix_notm}} per configurare e gestire i servizi dell'infrastruttura.
-
-
-Sono supportati i seguenti comandi. Utilizza il comando `ibmcloud sl` per visualizzare l'elenco di comandi disponibili:
-
-<table summary="Comandi generali riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
-<caption>Tabella 1. Comandi dell'infrastruttura classica generali</caption>
- <thead>
- <th colspan="6">Comandi dell'infrastruttura classica generali</th>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl init](/docs/cli/reference/ibmcloud/bx_cli.html#sl_init)</td>
- <td>[ibmcloud sl help
-](/docs/cli/reference/ibmcloud/bx_cli.html#sl_help)</td>
-   </tbody>
- </table>
-
- Per visualizzare le informazioni della guida per i comandi, esegui: `ibmcloud sl [command] -h`
-
- ## ibmcloud sl init
-{: #sl_init}
-
-Inizializza le impostazioni di configurazione utilizzate per connettersi all'ambiente dell'infrastruttura classica. La configurazione include nome utente, chiave API o password, account ed endpoint.
+Esegui il comando `ibmcloud sl` per visualizzare l'elenco di comandi disponibili:
 ```
-ibmcloud sl init [OPZIONI]
+USAGE:
+   bx sl command [arguments...] [options...]
+
+COMMANDS:
+   block           Gen1 infrastructure Block Storage
+   cdn             Gen1 infrastructure Content Delivery Network
+   file            Gen1 infrastructure File Storage
+   dns             Gen1 infrastructure Domain Name System
+   globalip        Gen1 infrastructure Global IP addresses
+   hardware        Gen1 infrastructure hardware servers
+   image           Gen1 infrastructure Compute images
+   ipsec           Gen1 infrastructure IPSEC VPN
+   loadbal         Gen1 infrastructure Load balancers
+   security        Gen1 infrastructure SSH Keys and SSL Certificates
+   securitygroup   Gen1 infrastructure network security groups
+   subnet          Gen1 infrastructure Network subnets
+   ticket          Gen1 infrastructure Manage Tickets
+   vlan            Gen1 infrastructure Network VLANs
+   vs              Gen1 infrastructure Virtual Servers
+   order           Gen1 infrastructure Orders
+   user            Gen1 infrastructure Manage Users
+   call-api        Call arbitrary API endpoints.
+   help            Print command usage message
+```
+{: screen}
+
+Per visualizzare le informazioni di guida relative a un comando, esegui:
+```
+ibmcloud sl [command] -h
 ```
 
-<strong>Opzioni del comando</strong>:
-<dl>
-<dt>-a, --api-endpoint</dt>
-<dd>URL dell'endpoint API dell'infrastruttura classica; il valore predefinito è: https://api.softlayer.com/rest/v3.1 per l'autenticazione con chiave API, https://api.softlayer.com/mobile/v3.1 per l'autenticazione con ID IBM.</dd>
-<dt>-u, --sl-user</dt>
-<dd>Nome utente infrastruttura Gen1.</dd>
-<dt>-p, --sl-password</dt>
-<dd>Password o chiave API.</dd>
-<dt>-c, --account-id</dt>
-<dd>ID account.</dd>
-<dt>-q, --security-question-id</dt>
-<dd>ID della domanda di sicurezza utilizzato per l'autenticazione; chiedi al tuo proprietario dell'account se non lo conosci.</dd>
-<dt>-w, --security-question-answer</dt>
-<dd>Risposta alla domanda di sicurezza utilizzata per l'autenticazione; chiedi al tuo proprietario dell'account se non la conosci.</dd>
-<dt>-s, --security-code</dt>
-<dd>Codice di sicurezza generato dal fornitore della sicurezza quando è abilitata l'autenticazione a 2 fattori.</dd>
-<dt>-v, --security-vendor</dt>
-<dd>Fornitore della sicurezza che fornisce il codice di sicurezza per l'autenticazione; le opzioni sono: VERISIGN,TOTP,PHONE_FACTOR.</dd>
-<dt>-t, --auth-token</dt>
-<dd>Token di autenticazione quando è abilitata l'autenticazione tramite telefono.</dd>
-</dl>
-
-Ad esempio, accedi con i tuoi nome utente e password/chiave API dell'infrastruttura classica
-```
-$ ibmcloud sl init
-Choose how to configure classic infrastructure authentication:
-1. Login with your classic infrastructure user name and password/API key
-2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
-Enter a number>1
-classic infrastructure API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
-Username: []> user@example.com
-API key or password: []> abcd
-
-API endpoint:    https://api.softlayer.com/rest/v3.1
-User name:       user@example.com
-API Key:         xxxxxxxxxx
-```
-Ad esempio, utilizza SSO (Single Sign-On) {{site.data.keyword.Bluemix_notm}} per accedere all'infrastruttura classica
-```
-$ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
-API endpoint: api.ng.bluemix.net
-Authenticating...
-OK
-
-Targeted account example user's Account (65ce8074c6c62b5)
-
-API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
-Region:         us-south
-User:           user@example.com
-Account:        example user's Account (65ce8074c6c62b5)
-No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
-
-
-$ ibmcloud sl init
-Choose how to configure classic infrastructure authentication:
-
-1. Login with your classic infrastructure user name and password/API key
-2. Use IBM Cloud Single-Sign-On
-Enter a number> 2
-classic infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
-Setting account to: 123456
-OK
-
-classic infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1
-
-Account ID:                123456
-User ID:                   user@example.com
-IMS token:                 xxxxxxxxxx
-```
+Il comando `ibmcloud sl init` non è più disponibile a partire dalla versione della CLI `0.14`. Per installare la versione della CLI più recente, vedi [Installazione della CLI {{site.data.keyword.cloud_notm}} autonoma](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
+{: note}
 
 ## ibmcloud sl help
 {: #sl_help}
@@ -550,3 +457,5 @@ Visualizza le informazioni di guida per tutti i comandi per gestire l'ambiente d
 ```
 ibmcloud sl help
 ```
+{: codeblock}
+

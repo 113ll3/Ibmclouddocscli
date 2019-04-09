@@ -1,50 +1,89 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
-CLI 和开发工具
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html" path="cli"}
+IBM Cloud CLI 和 Developer Tools
 
 	{: .navgroup id="learn"}
 	index.md
-	reference/bluemix_cli/get_started.md
-	[CF CLI 入门](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
-	
+
+	{: .navgroup id="howto"}
+	reference/ibmcloud/download_cli.md
+	reference/ibmcloud/extend_cli.md
+	reference/ibmcloud/cli_docker.md
+	reference/ibmcloud/enable_cli_autocompletion.md
+	idt/index.md
+
+	{: .topicgroup}
+	IBM Cloud Developer Tools IDE 扩展
+		idt/vscode.md
+		idt/jetbrains.md
+
+	{: topicgroup}
+	调试
+		idt/local_debug.md
+	{: .navgroup-end}
+
 	{: .navgroup id="reference"}
-	reference/bluemix_cli/bx_cli.md
-	reference/bluemix_cli/all_versions.md
-	[IBM Cloud 开发者工具命令](../cloudnative/idt/commands.html)
-	reference/softlayer/index.md
-	reference/cfcommands/index.md
+	{: .topicgroup}
+	IBM Cloud CLI (ibmcloud) 命令
+		reference/ibmcloud/bx_cli.md
+		reference/ibmcloud/cli_acct_org_role.md
+		reference/ibmcloud/cli_billing.md
+		reference/ibmcloud/cli_block_storage.md
+		reference/ibmcloud/cli_catalog.md
+		reference/ibmcloud/cli_cdn.md
+		reference/ibmcloud/cf_index.md
+		reference/ibmcloud/cli_cf_apps.md
+		reference/ibmcloud/cli_cf_services.md
+		reference/ibmcloud/cli_cfee.md
+		reference/ibmcloud/cli_dns.md
+		reference/ibmcloud/cli_file_storage.md
+		reference/ibmcloud/cli_global_ip.md
+		reference/ibmcloud/cli_hardware.md
+		reference/ibmcloud/cli_api_policy.md
+		reference/ibmcloud/cli_image.md
+		reference/ibmcloud/cli_ipsec_vpn.md
+		reference/ibmcloud/cli_load_balancer.md
+		reference/ibmcloud/cli_order.md
+		reference/ibmcloud/cli_plugin.md
+		reference/ibmcloud/cli_resource_group.md
+		reference/ibmcloud/cli_security.md
+		reference/ibmcloud/cli_securitygroup.md
+		reference/ibmcloud/cli_subnet.md
+		reference/ibmcloud/cli_virtual_server.md
+		reference/ibmcloud/cli_vlan.md
+	idt/commands.md
+	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
 	IBM Cloud CLI 插件
-		plugins/api-management-cliplugin/
-		plugins/auto-scaling/index.md
-		plugins/registry/index.md
-		[Container Service](../containers/cs_cli_devtools.html)
-		[IBM Developer](../cloudnative/idt/index.html)
- 		plugins/pnp/index.md
-		[IBM SDK Generator](../cloudnative/sdk/index.html)
-		[Schematics](../services/schematics/schematics_reference.html)
-		plugins/bx_vpn/index.md
-	
+		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
+		/auto-scaling-cli-plugin/auto-scaling-cli-plugin-autoscalingcli
+		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
+		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
+		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
+		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
+		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
+		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
+
 	{: .topicgroup}
-	Cloud Foundry CLI plug-ins
+	Cloud Foundry CLI 插件
 		plugins/bluemix_admin/index.md
-		plugins/dev_mode/index.md
 		plugins/vpn/index.md
-	
+
+	monitoring_logging.md
+
 	{: .topicgroup}
-	建议的开发开发
-		[使用 Eclipse Tools 开发](../starters/deploy_eclipsetools.html)
-		[IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
-		[IBM Developer Tools for JetBrains](../cloudnative/idt/jetbrains.html)
+	SDKs for Mobile
+		sdk/index.md
+		sdk/contribute.md
+		sdk/sdk.md
+		sdk/sdk_BMSClient.md
+		sdk/sdk_network_request.md
 	{: .navgroup-end}
-	
-	{: .navgroup id="howto"}
-	reference/bluemix_cli/download_cli.md
-	reference/bluemix_cli/extend_cli.md
-	<link toc="../monitor_log/toc.xml"/>
-	<link toc="../debug/toc.xml"/>
-	{: .navgroup-end}
+
+    {: .navgroup id="help"}
+	ts_createapps.md
+    {: .navgroup-end}

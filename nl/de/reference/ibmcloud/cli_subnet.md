@@ -1,37 +1,27 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
 
+subcollection: cloud-cli
 
-lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
-# Teilnetz
+# Teilnetze erstellen, löschen und anzeigen
+{: #sl-manage-subnets}
 
-Ein Teilnetz ist eine logische Aufteilung eines IP-Netzes, das aus mehreren, kleineren Netzsegmenten besteht. Verwenden Sie die folgenden Befehle, um die Teilnetze der {{site.data.keyword.Bluemix}}-Infrastruktur zu verwalten.
+Ein Teilnetz ist eine logische Aufteilung eines IP-Netzes, das aus mehreren, kleineren Netzsegmenten besteht. Verwenden Sie die folgenden Befehle, um die Teilnetze der klassischen {{site.data.keyword.cloud}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
-<table summary="Alphabetisch geordnete Teilnetzbefehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl subnet cancel](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_cancel)</td>
- <td>[ibmcloud sl subnet create](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_create)</td>
- <td>[ibmcloud sl subnet detail](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_detail)</td>
- <td>[ibmcloud sl subnet list](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_list)</td>
- <td>[ibmcloud sl subnet lookup](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_lookup)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl subnet cancel
+## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 Abbruch für Teilnetz.
@@ -49,7 +39,7 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONEN]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-Dieser Befehl bricht das Teilnetz mit der ID 12345678 ab, ohne zu einer Bestätigung aufzufordern
+Dieser Befehl bricht das Teilnetz mit der ID `12345678` ab, ohne zu einer Bestätigung aufzufordern. 
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -73,7 +63,9 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONEN]
 ```
 ibmcloud sl subnet create public 16 567
 ```
-Dieser Befehl erstellt ein öffentliches Teilnetz mit 16 IPv4-Adressen und ordnet es im VLAN mit der ID 567 an.
+{: codeblock}
+
+Dieser Befehl erstellt ein öffentliches Teilnetz mit 16 IPv4-Adressen und ordnet es im VLAN mit der ID `567` an.
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
@@ -95,7 +87,9 @@ ibmcloud sl subnet detail IDENTIFIER [OPTIONEN]
 ```
 ibmcloud sl subnet detail 12345678
 ```
-Dieser Befehl zeigt Detailinformationen zum Teilnetz mit der ID 12345678 an, einschließlich Informationen zu virtuellen Servern und Hardware-Servern.
+{: codeblock}
+
+Dieser Befehl zeigt detaillierte Informationen zum Teilnetz mit der ID `12345678` an, einschließlich Informationen zu virtuellen Servern und Hardware-Servern. 
 
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
@@ -129,7 +123,9 @@ ibmcloud sl subnet list [OPTIONEN]
 ```
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
-Dieser Befehl listet IPv4-Teilnetze für das aktuelle Konto auf, gefiltert nach Rechenzentrum; Ort 'dal09', Teilnetztyp PRIMARY und Netzbereich PUBLIC.
+{: codeblock}
+
+Dieser Befehl listet IPv4-Teilnetze für das aktuelle Konto auf, gefiltert nach Rechenzentrum, Ort `dal09`, Teilnetztyp `PRIMARY` und Netzbereich `PUBLIC`.
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
@@ -139,9 +135,10 @@ IP-Adresse suchen und ihr Teilnetz sowie Gerätedaten anzeigen.
 ibmcloud sl subnet lookup IP_ADDRESS
 ```
 
-
 **Beispiele**:
 ```
 ibmcloud sl subnet lookup 9.125.235.255
 ```
-Dieser Befehl sucht nach dem IP-Adressdatensatz mit der Adresse 9.125.235.255 und zeigt sein Teilnetz und die Gerätedaten an.
+{: codeblock}
+
+Dieser Befehl sucht nach dem IP-Adressdatensatz mit der Adresse `9.125.235.255` und zeigt sein Teilnetz und die Gerätedaten an. 

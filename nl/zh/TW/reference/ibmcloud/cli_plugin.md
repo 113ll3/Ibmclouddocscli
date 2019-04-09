@@ -1,61 +1,41 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
-# 新增及移除 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式
+# 新增及移除 {{site.data.keyword.cloud_notm}} CLI 外掛程式
 {: #ibmcloud_commands_settings}
 
-{{site.data.keyword.Bluemix}} 支援可延伸其功能的外掛程式架構。使用下列指令來管理 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。
+{{site.data.keyword.cloud}} 支援可延伸其功能的外掛程式架構。使用下列指令來管理 {{site.data.keyword.cloud_notm}} CLI 外掛程式。
 {: shortdesc}
 
-<table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式的 ibmcloud 指令。">
- <thead>
- </thead>
- <tbody>
-<tr>
-  <td>[ibmcloud plugin repo-add](cli_plugin.html#ibmcloud_plugin_repo_add)</td>
-  <td>[ibmcloud plugin repo-remove](cli_plugin.html#ibmcloud_plugin_repo_remove)</td>
-  <td>[ibmcloud plugin repo-plugins](cli_plugin.html#ibmcloud_plugin_repo_plugins)</td>
-  <td>[ibmcloud plugin repo-plugin](cli_plugin.html#ibmcloud_plugin_repo_plugin)</td>
-  <td>[ibmcloud plugin list](cli_plugin.html#ibmcloud_plugin_list)</td>
-</tr>
-<tr>
-  <td>[ibmcloud plugin show](cli_plugin.html#ibmcloud_plugin_show)</td>
-  <td>[ibmcloud plugin install](cli_plugin.html#ibmcloud_plugin_install)</td>
-  <td>[ibmcloud plugin uninstall](cli_plugin.html#ibmcloud_plugin_uninstall)</td>
-  <td>[ibmcloud plugin update](cli_plugin.html#ibmcloud_plugin_update)</td>
-  <td>[ibmcloud plugin repos](cli_plugin.html#ibmcloud_plugin_repos)</td>
-</tr>
- </tbody>
- </table>
- 
- 
- ## ibmcloud plugin repos
+## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
-列出 {{site.data.keyword.Bluemix_notm}} CLI 中登錄的所有外掛程式儲存庫。
-
+列出 {{site.data.keyword.cloud_notm}} CLI 中登錄的所有外掛程式儲存庫。
 ```
 ibmcloud plugin repos
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：無
 
 ## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
 
-將新的外掛程式儲存庫新增至 {{site.data.keyword.Bluemix_notm}} CLI。
-
+將新的外掛程式儲存庫新增至 {{site.data.keyword.cloud_notm}} CLI。
 ```
 ibmcloud plugin repo-add REPO_NAME REPO_URL
 ```
@@ -68,26 +48,26 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME（必要）</dt>
    <dd>要新增之儲存庫的名稱。您可以自行為每一個儲存庫定義名稱。</dd>
    <dt>REPO_URL（必要）</dt>
-   <dd>要新增之儲存庫的 URL。儲存庫 URL 必須包含通訊協定（例如，http://plugins.ng.bluemix.net 而非 plugins.ng.bluemix.net）。http://plugins.ng.bluemix.net 是 {{site.data.keyword.Bluemix_notm}} CLI 的正式外掛程式儲存庫。</dd>
+   <dd>要新增之儲存庫的 URL。儲存庫 URL 必須包含通訊協定（例如，http://plugins.ng.bluemix.net 而非 plugins.ng.bluemix.net）。http://plugins.ng.bluemix.net 是 {{site.data.keyword.cloud_notm}} CLI 的正式外掛程式儲存庫。</dd>
     </dl>
 
 
 <strong>範例</strong>：
 
 將 {{site.data.keyword.Bluemix_notm}} CLI 的正式外掛程式儲存庫新增為 `bluemix-repo`：
-
 ```
 ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
+{: codeblock}
 
 ## ibmcloud plugin repo-remove
 {: #ibmcloud_plugin_repo_remove}
 
-從 {{site.data.keyword.Bluemix_notm}} CLI 移除外掛程式儲存庫。
-
+從 {{site.data.keyword.cloud_notm}} CLI 移除外掛程式儲存庫。
 ```
 ibmcloud plugin repo-remove REPO_NAME
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：無
 
@@ -99,17 +79,16 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>範例</strong>：
 
-從 {{site.data.keyword.Bluemix_notm}} CLI 移除 `bluemix-repo` 儲存庫：
-
+從 {{site.data.keyword.cloud_notm}} CLI 移除 `bluemix-repo` 儲存庫：
 ```
 ibmcloud plugin repo-remove bluemix-repo
 ```
+{: codeblock}
 
 ## ibmcloud plugin repo-plugins
 {: #ibmcloud_plugin_repo_plugins}
 
 列出所有已新增之儲存庫或特定儲存庫中的所有可用外掛程式。
-
 ```
 ibmcloud plugin repo-plugins [-r REPO_NAME]
 ```
@@ -163,7 +142,7 @@ ibmcloud plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-列出預設儲存庫中外掛程式 "IBM-Containers" 的詳細資料
+列出預設儲存庫中外掛程式 "IBM-Containers" 的詳細資料。
 
 ```
 ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
@@ -173,10 +152,10 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 {: #ibmcloud_plugin_list}
 
 列出 {{site.data.keyword.Bluemix_notm}} CLI 中的所有已安裝外掛程式。
-
 ```
 ibmcloud plugin list
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：無
 
@@ -184,7 +163,6 @@ ibmcloud plugin list
 {: #ibmcloud_plugin_show}
 
 顯示已安裝外掛程式的詳細資料。
-
 ```
 ibmcloud plugin show PLUGIN-NAME
 ```
@@ -195,7 +173,6 @@ ibmcloud plugin show PLUGIN-NAME
 {: #ibmcloud_plugin_install}
 
 從指定的路徑或儲存庫，將特定版本的外掛程式安裝到 {{site.data.keyword.Bluemix_notm}} CLI 中。
-
 ```
 ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
@@ -279,7 +256,7 @@ ibmcloud plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>-v <i>VERSION</i>（選用）</dt>
  <dd>外掛程式要更新到的目標版本。如果未提供，便將外掛程式更新至最新的可用版本。</dd>
  <dt>--all</dt>
- <dd>更新所有可用的外掛程式</dd>
+ <dd>更新所有可用的外掛程式。</dd>
 </dl>
 
 <strong>範例</strong>：

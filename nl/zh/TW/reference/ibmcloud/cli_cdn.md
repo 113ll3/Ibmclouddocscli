@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,35 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # 使用 CDN 服務
+{: #sl-cdn-service}
 
 Content Delivery Network (CDN) 服務會將內容分散在需要內容之處。第一次要求內容時，會將內容從主伺服器取回到網路，然後留在那裡供其他使用者存取。
 
-請使用下列指令來管理 {{site.data.keyword.Bluemix_notm}} 標準基礎架構 CDN 服務。
+請使用下列指令來管理 {{site.data.keyword.cloud_notm}} 標準基礎架構 CDN 服務。
 {: shortdesc}
 
-<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構 CDN 指令，其鏈結提供指令的相關資訊">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl cdn cancel](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_cancel)</td>
-  <td>[ibmcloud sl cdn detail](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_detail)</td>
-  <td>[ibmcloud sl cdn list](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_list)</td>
-  <td>[ibmcloud sl cdn load](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_load)</td>
-  <td>[ibmcloud sl cdn order](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_order)</td>
-  <td>[ibmcloud sl cdn options
-](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_options)</td>
-   </tr>
- <tr>
-  <td>[ibmcloud sl cdn origin-add](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_add)</td>
-  <td>[ibmcloud sl cdn origin-list](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_list)</td>
-  <td>[ibmcloud sl cdn origin-remove](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_remove)</td>
-  <td>[ibmcloud sl cdn purge](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_purge)</td>
-  </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl cdn cancel
+## ibmcloud sl cdn cancel
 {: #sl_cdn_cancel}
 
 取消 CDN 帳戶。
@@ -76,7 +57,7 @@ ibmcloud sl cdn list [OPTIONS]
 <dt>--sortby</dt>
 <dd>直欄排序方式，選項包含：id、name、type、created。</dd>
 <dt>--order</dt>
-<dd>依訂單 ID 過濾。</dd>
+<dd>依訂單 ID 進行過濾。</dd>
 </dl>
 
 ## ibmcloud sl cdn load
