@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-30"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:note: .deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-# {{site.data.keyword.Bluemix_notm}} Developer Tools CLI 外掛程式的疑難排解
+# {{site.data.keyword.cloud_notm}} Developer Tools CLI 外掛程式的疑難排解
 {: #troubleshoot}
 
 使用 {{site.data.keyword.dev_cli_short}} 指令行介面 (CLI) 建立應用程式的一般問題可能包括部署失敗或無法擷取程式碼。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
-{:shortdesc}
+{: shortdesc}
 
 ## 當我使用非行動模式建立應用程式時，為何會收到主機名稱錯誤？
 {: #hostname-error}
@@ -32,7 +32,7 @@ lastupdated: "2018-11-30"
 ```
 The hostname <myHostname> is taken.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 此錯誤是過期登入記號所造成。
@@ -54,7 +54,7 @@ ibmcloud login
 ```
 Failed to <command> application.
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 此錯誤是過期登入記號所造成。
@@ -71,10 +71,9 @@ ibmcloud login
 {: #nosuchimage}
 {: troubleshoot}
 
-當您嘗試執行應用程式而未先進行建置時，可能會顯示下列錯誤。
+當您嘗試 `ibmcloud dev run` 某個應用程式而未先進行建置時，可能會顯示下列錯誤。
 
 ```
-$ ibmcloud dev run
 The run-cmd option was not specified
 Stopping the 'testProject' container...
 The 'testProject' container was not found
@@ -85,10 +84,10 @@ FAILED
 Container 'testProject' could not be created:
 Error: No such image: ibmcloud-dev-testProject
 ```
+{: screen}
 {: tsSymptoms}
 
-您必須先建置應用程式，才能執行它。
-在現行應用程式目錄中執行下列指令：
+您必須先建置應用程式，才能執行它。在現行應用程式目錄中執行下列指令：
 ```
 ibmcloud dev build
 ```
@@ -111,7 +110,7 @@ ibmcloud dev run
 FAILED
 Service broker error: {"description"=>"You can not create this Object Storage instance. Each organization using the Object Storage service is limited to one instance of the Free plan."}
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 此錯誤是 {{site.data.keyword.objectstorageshort}} 服務所造成，而此服務只提供免費 {{site.data.keyword.objectstorageshort}} 方案的一個實例。
@@ -131,7 +130,7 @@ FAILED
 Application created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 此錯誤是內部逾時所造成。
@@ -179,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
 ```
-{: codeblock}
+{: screen}
 {: tsSymptoms}
 
 `appmetrics` 模組安裝在不同的架構上時，會發生此錯誤。安裝在某個架構上的原生 mpm 模組無法在另一個架構上運作。所包括的 Docker 映像檔是以 Linux Kernel 為基礎。
@@ -188,10 +187,10 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 刪除 `node_modules` 資料夾，並重新執行 `ibmcloud dev run` 指令。
 {: tsResolve}
 
-## 為何無法部署至 {{site.data.keyword.Bluemix_notm}}？
+## 為何無法部署至 {{site.data.keyword.cloud_notm}}？
 {: troubleshoot}
 
-當您嘗試部署至 {{site.data.keyword.Bluemix_notm}} 時失敗，但未顯示任何錯誤。
+當您嘗試部署至 {{site.data.keyword.cloud_notm}} 時失敗，但未顯示任何錯誤。
 {: tsSymptoms}
 
 您可能未登入您的帳戶。
@@ -203,7 +202,7 @@ ibmcloud login
 ```
 {: tsResolve}
 
-## 為何無法部署至 {{site.data.keyword.Bluemix_notm}} 上的 Kubernetes？
+## 為何無法部署至 {{site.data.keyword.cloud_notm}} 上的 Kubernetes？
 {: troubleshoot}
 
 系統提示您輸入叢集名稱之後，可能會顯示下列失敗：
@@ -214,18 +213,21 @@ Failed to execute the action:  exit status 1:
 FAILED
 Failed to configure deployment with cluster '<cluster-name>' due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 這最可能是叢集名稱無效所造成。您可以執行與 `--trace` 相同的指令來確認原因，而錯誤輸出中可能會包含下列詳細資料：
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
+{: screen}
 {: tsCauses}
 
-請確定您使用的是正確叢集，而且您已透過執行下列指令來配置要進行部署的叢集：
+請確定您使用的是正確叢集，而且已透過執行下列指令，將它配置為要進行部署的叢集：
 ```
 ibmcloud cs cluster-config <cluster-name>
 ```
+{: codeblock}
 {: tsResolve}
 
 ## 為何無法部署映像檔目標？
@@ -240,6 +242,7 @@ Failed to execute the action:  exit status 1:denied: requested access to the res
 FAILED
 Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
+{: screen}
 {: tsSymptoms}
 
 這最可能是部署映像檔目標無效所造成。更具體來說，名稱空間（即部署映像檔目標中的中間值）可能無效。
@@ -249,6 +252,7 @@ Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-na
 ```
 ibmcloud cr namespaces
 ```
+{: codeblock}
 {: tsResolve}
 
 ## 為何無法判定應用程式的語言？
@@ -262,11 +266,12 @@ Could not determine the language of your application.
 Try using the --language flag to specify the language of your application 
 directly. 
 ```
+{: screen}
 {: tsSymptoms}
 
 此錯誤可能是由下列其中一個原因所造成：
 - 從不是應用程式來源目錄的目錄中執行 [enable](/docs/cli/idt/commands.html#enable) 指令。
-- 針對目前無法辨識其語言的應用程式執行 [enable](/docs/cli/idt/commands.html#enable) 指令。
+- 針對無法辨識其語言的應用程式執行 [enable](/docs/cli/idt/commands.html#enable) 指令。
 {: tsCauses}
 
 請務必從包含應用程式原始碼的應用程式目錄中執行這個指令。如果這無法解決問題，且語言是其中一種[支援的語言](/docs/cli/idt/commands.html#enable-language-options)，請使用 `--language` 參數來指定語言。
@@ -286,7 +291,7 @@ directly.
 - 如需解決 `Node.js` 應用程式這類問題的相關資訊，請參閱[啟用現有的 Node.js 應用程式以進行雲端部署](/docs/node/enable_existing.html#enable_existing)。
 {: tsResolve}
 
-## 如何手動安裝 {{site.data.keyword.Bluemix_notm}} 開發人員工具？
+## 如何手動安裝 {{site.data.keyword.Bluemix_notm}} Developer Tools？
 {: #appendix}
 全部必要條件會使用平台安裝程式針對大部分使用者安裝。如果您需要手動安裝任何元件，這裡提供各元件的指示。若要安裝 dev 外掛程式，您必須先安裝 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)。若要使用 dev 外掛程式本身，您必須執行下列指令來安裝它： 
 ```

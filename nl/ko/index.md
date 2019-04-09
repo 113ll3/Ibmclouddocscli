@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2018
-
-lastupdated: "2018-10-31"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,13 +12,13 @@ lastupdated: "2018-10-31"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI 시작하기
+# {{site.data.keyword.cloud_notm}} CLI 시작하기
 {: #overview}
 
-이 튜토리얼에서 사용자는 {{site.data.keyword.Bluemix}} 개발자 도구를 설치하고, 설치를 확인하며, 환경을 구성합니다. {{site.data.keyword.Bluemix}} 개발자 도구는 엔드 투 엔드 웹, 모바일 및 마이크로서비스 애플리케이션을 작성하고, 개발하고, 배치할 수 있는 명령행 접근 방법을 제공합니다.
-{:shortdesc}
+이 튜토리얼에서는 {{site.data.keyword.cloud}} 개발자 도구 세트를 설치하고, 설치를 확인하고, 환경을 구성합니다. {{site.data.keyword.cloud_notm}} 개발자 도구는 웹, 모바일, 마이크로서비스 애플리케이션의 작성, 개발, 배치를 위한 명령행 접근 방식을 제공합니다.
+{: shortdesc}
 
-이 설치를 통해 독립형 {{site.data.keyword.Bluemix_notm}} CLI 및 다음 도구를 얻을 수 있습니다.
+이 설치를 통해 독립형 {{site.data.keyword.cloud_notm}} CLI 및 다음 도구를 얻을 수 있습니다.
 
 * `Homebrew`(Mac 전용)
 * `Git`
@@ -37,9 +35,9 @@ lastupdated: "2018-10-31"
 ## 시작하기 전에
 {: #prereq}
 
-[{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 다음 시스템 요구사항이 필요합니다.
+[{{site.data.keyword.cloud_notm}} 계정](https://console.bluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 다음 시스템 요구사항이 필요합니다.
 
-* Windows를 실행하는 경우 Windows 10 Pro를 실행 중이지 않으면 일부 기능이 지원되지 않습니다.
+* Windows를 실행 중인 경우 Windows 10 Pro를 실행하면 동일한 기능은 지원되지 않습니다. 
 * 최소 버전 1.13.1의 안정된 Docker 채널을 사용해야 합니다.
 
 ## 1단계: 설치 명령 실행
@@ -62,9 +60,9 @@ Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('
     Windows PowerShell 아이콘을 마우스 오른쪽 단추로 클릭한 후 **관리자로 실행**을 선택하십시오.
   {: tip}
 
-  [GitHub 저장소](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)에서 설치 프로그램 스크립트를 다운로드할 수도 있습니다. 
+  이 [GitHub 저장소](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)에서 설치 프로그램 스크립트를 다운로드할 수도 있습니다.
 
-  이러한 도구를 수동으로 설치하는 단계는 [도구 재설치](/docs/cli/ts_createapps.html#appendix)를 참조하십시오. 
+  이러한 도구를 수동으로 설치하는 단계는 [도구 재설치](/docs/cli/ts_createapps.html#appendix)를 참조하십시오.
 
 ## 2단계. 설치 확인
 {: #step2}
@@ -81,14 +79,14 @@ ibmcloud dev help
 ## 3단계. 환경 구성
 {: #step3}
 
-1. {{site.data.keyword.Bluemix_notm}} 위치의 API 엔드포인트에 연결하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 댈러스 위치에 연결하십시오.
+1. {{site.data.keyword.cloud_notm}} 위치의 API 엔드포인트에 연결하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.cloud_notm}} 댈러스 위치에 연결하십시오.
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
-2. IBM ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.
+2. IBM ID를 사용하여 {{site.data.keyword.cloud_notm}}에 로그인하십시오.
 
 	```
 	ibmcloud login

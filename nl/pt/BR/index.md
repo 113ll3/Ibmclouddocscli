@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2018
-
-lastupdated: "2018-10-31"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,16 +12,13 @@ lastupdated: "2018-10-31"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Introdução à CLI do {{site.data.keyword.Bluemix_notm}}
+# Introdução à CLI do {{site.data.keyword.cloud_notm}}
 {: #overview}
 
-Nesse tutorial, você instala um conjunto de ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}}, verifica a
-instalação e configura o seu ambiente. As ferramentas do desenvolvedor do {{site.data.keyword.Bluemix}} oferecem uma
-abordagem de linha de comandos para criação, desenvolvimento e implementação de aplicativos da web, de dispositivos móveis e de
-microsserviço de ponta a ponta.
-{:shortdesc}
+Neste tutorial, você instala um conjunto de ferramentas do Desenvolvedor do {{site.data.keyword.cloud}}, verifica a instalação e configura o ambiente. As ferramentas do Desenvolvedor do {{site.data.keyword.cloud_notm}} oferecem uma abordagem de linha de comandos para criar, desenvolver e implementar aplicativos da web, de dispositivo móvel e de microsserviço.
+{: shortdesc}
 
-Com essa instalação, você obterá a CLI do {{site.data.keyword.Bluemix_notm}} independente, mais as seguintes ferramentas:
+Com essa instalação, você obterá a CLI do {{site.data.keyword.cloud_notm}} independente, mais as seguintes ferramentas:
 
 * `Homebrew` (somente Mac)
 * `Git`
@@ -40,13 +35,9 @@ Com essa instalação, você obterá a CLI do {{site.data.keyword.Bluemix_notm}}
 ## Antes de começar
 {: #prereq}
 
-É necessária uma
-[conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/){: new_window}
-![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e os seguintes
-requisitos do sistema:
+Você precisa de uma [conta do {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e dos requisitos do sistema a seguir:
 
-* Se você estiver executando o Windows, algumas funções não serão suportadas se o Windows 10 Pro não estiver em
-execução.
+* Se você estiver executando o Windows, algumas funções não serão suportadas, a menos que não esteja executando o Windows 10 Pro.
 * Deve-se usar o canal estável para o Docker com uma versão mínima de 1.13.1.
 
 ## Etapa 1. Execute o comando de instalação
@@ -70,8 +61,7 @@ execução.
 administrador**.
   {: tip}
 
-  Também é possível fazer download do script do instalador por meio do nosso
-[repositório GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+  Também é possível fazer download do script do instalador neste [repositório do GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
 
   Para obter as etapas para instalar essas ferramentas manualmente, consulte
 [Reinstalando as ferramentas](/docs/cli/ts_createapps.html#appendix).
@@ -79,7 +69,7 @@ administrador**.
 ## Etapa 2. Verificar a instalação
 {: #step2}
 
-Para verificar se a CLI e as ferramentas do desenvolvedor foram instalados com êxito, execute o comando `help`:
+Para verificar se a CLI e as ferramentas do Desenvolvedor foram instaladas com êxito, execute o comando `help`:
 
 ```
 ibmcloud dev help
@@ -91,14 +81,14 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 ## Etapa 3. Configure seu ambiente
 {: #step3}
 
-1. Conecte-se a um terminal da API em seu local do {{site.data.keyword.Bluemix_notm}}. Por exemplo, insira o comando a seguir para se conectar à localização do {{site.data.keyword.Bluemix_notm}} em Dallas:
+1. Conecte-se a um terminal da API em seu local do {{site.data.keyword.cloud_notm}}. Por exemplo, insira o comando a seguir para se conectar à localização do {{site.data.keyword.cloud_notm}} em Dallas:
 
 	```
 	Ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
-2. Efetue login no {{site.data.keyword.Bluemix_notm}} com seu IBMid.
+2. Efetue login no {{site.data.keyword.cloud_notm}} com seu IBMid.
 
 	```
 	ibmcloud login

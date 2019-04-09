@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2018
-
-lastupdated: "2018-10-31"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,13 +12,13 @@ lastupdated: "2018-10-31"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI の概説
+# {{site.data.keyword.cloud_notm}} CLI の概説
 {: #overview}
 
-このチュートリアルでは、一連の {{site.data.keyword.Bluemix}} 開発者ツールをインストールし、インストールを検証して、ご使用の環境を構成します。 {{site.data.keyword.Bluemix}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。
-{:shortdesc}
+このチュートリアルでは、一連の {{site.data.keyword.cloud}} 開発者ツールをインストールし、インストールを検証して、環境を構成します。{{site.data.keyword.cloud_notm}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。
+{: shortdesc}
 
-このインストールによって、スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI および以下のツールを取得できます。
+このインストールによって、スタンドアロン {{site.data.keyword.cloud_notm}} CLI および以下のツールを取得できます。
 
 * `Homebrew` (Mac のみ)
 * `Git`
@@ -37,7 +35,7 @@ lastupdated: "2018-10-31"
 ## 始める前に
 {: #prereq}
 
-[{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") と以下のシステム要件が必要です。
+[{{site.data.keyword.cloud_notm}} アカウント](https://console.bluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") と以下のシステム要件が必要です。
 
 * Windows を実行している場合、一部の機能は、Windows 10 Pro を実行していないとサポートされません。
 * Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。
@@ -62,7 +60,7 @@ lastupdated: "2018-10-31"
   Windows PowerShell アイコンを右クリックして、**「管理者として実行」**を選択します。
   {: tip}
 
-  [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools) からインストーラー・スクリプトをダウンロードすることもできます。
+  この [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools) からインストーラー・スクリプトをダウンロードすることもできます。
 
   これらのツールを手動でインストールする手順については、『[ツールの再インストール](/docs/cli/ts_createapps.html#appendix)』を参照してください。
 
@@ -81,14 +79,14 @@ ibmcloud dev help
 ## ステップ 3. 環境の構成
 {: #step3}
 
-1. ご使用の {{site.data.keyword.Bluemix_notm}} ロケーションの API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} のダラス・ロケーションに接続するには、以下のコマンドを入力します。
+1. ご使用の {{site.data.keyword.cloud_notm}} ロケーションの API エンドポイントに接続します。 例えば、{{site.data.keyword.cloud_notm}} のダラス・ロケーションに接続するには、以下のコマンドを入力します。
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
-2. IBM ID を使用して {{site.data.keyword.Bluemix_notm}} にログインします。
+2. IBM ID を使用して {{site.data.keyword.cloud_notm}} にログインします。
 
 	```
 	ibmcloud login
