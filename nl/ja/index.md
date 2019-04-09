@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-01-30"
 # {{site.data.keyword.cloud_notm}} CLI の概説
 {: #overview}
 
-このチュートリアルでは、一連の {{site.data.keyword.cloud}} 開発者ツールをインストールし、インストールを検証して、環境を構成します。{{site.data.keyword.cloud_notm}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。
+このチュートリアルでは、一連の {{site.data.keyword.cloud}} 開発者ツールをインストールし、インストールを検証して、環境を構成します。 {{site.data.keyword.cloud_notm}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。
 {: shortdesc}
 
 このインストールによって、スタンドアロン {{site.data.keyword.cloud_notm}} CLI および以下のツールを取得できます。

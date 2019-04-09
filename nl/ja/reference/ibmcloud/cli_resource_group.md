@@ -30,7 +30,7 @@ lastupdated: "2019-01-14"
       <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quotas)</td>
     </tr>
     <tr>
-      <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quota)</td>
+      <td>[ibmcloud resource quota](cli_resource_group.html#ibmcloud_resource_quota)</td>
       <td>[ibmcloud resource service-instances](cli_resource_group.html#ibmcloud_resource_service_instances)</td>
       <td>[ibmcloud resource service-instance](cli_resource_group.html#ibmcloud_resource_service_instance)</td>
       <td>[ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
@@ -603,7 +603,7 @@ ibmcloud resource service-key KEY_NAME [--id]
   <dt>--id</dt>
   <dd>サービス・キー名の最初の *n* 文字が、指定された KEY_NAME と一致するキーの ID を表示します。*n* は指定された KEY_NAME の長さです。</dd>
   <dt>--output FORMAT (オプション)</dt>
-  <dd>出力形式を指定します。現在サポートされているのは JSON のみです。</dd>
+  <dd>出力形式を指定します。 現在サポートされているのは JSON のみです。</dd>
 </dl>
 
 <strong>例</strong>:

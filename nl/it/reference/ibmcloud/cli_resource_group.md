@@ -30,7 +30,7 @@ Un gruppo di risorse è un modo per organizzare le risorse dell'account in raggr
       <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quotas)</td>
     </tr>
     <tr>
-      <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quota)</td>
+      <td>[ibmcloud resource quota](cli_resource_group.html#ibmcloud_resource_quota)</td>
       <td>[ibmcloud resource service-instances](cli_resource_group.html#ibmcloud_resource_service_instances)</td>
       <td>[ibmcloud resource service-instance](cli_resource_group.html#ibmcloud_resource_service_instance)</td>
       <td>[ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
@@ -91,7 +91,7 @@ ibmcloud resource groups [--default] [--output FORMATO]
   <dt>--default</dt>
   <dd>Richiama il gruppo predefinito dell'account corrente.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -126,7 +126,7 @@ ibmcloud resource group NOME [--id] [--output FORMATO]
   <dt>--id</dt>
   <dd>Mostra solo l'ID</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -149,7 +149,7 @@ ibmcloud resource group example-group --id
 Crea un gruppo di risorse
 
 ```
-ibmcloud resource group-create NOME
+ibmcloud resource group-create NAME
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
@@ -254,7 +254,7 @@ ibmcloud resource quota free
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
-Migra un'istanza del servizio Cloud Foundry nel gruppo di risorse
+Migrazione di un'istanza del servizio Cloud foundry in un gruppo di risorse
 
 ```
 ibmcloud resource cf-service-instance-migrate (NOME_ISTANZA_SERVIZIO | ID_ISTANZA_SERVIZIO) [--resource-group-name NOME_GRUPPO_RISORSE | --resource-group-id ID_GRUPPO_RISORSE] [-f, --force]
@@ -294,7 +294,7 @@ ibmcloud resource service-instances [--service-name NOME_SERVIZIO] [--location U
   <dt>--long</dt>
   <dd>Mostra dei campi aggiuntivi nell'output</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON. </dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -452,7 +452,7 @@ ibmcloud resource service-bindings ALIAS_SERVIZIO [--output FORMATO]
   <dt>ALIAS_SERVIZIO (obbligatorio)</dt>
   <dd>Nome dell'alias del servizio</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -482,7 +482,7 @@ ibmcloud resource service-binding NOME_ALIAS NOME_APPLICAZIONE [--id] [--output 
   <dt>--id</dt>
   <dd>Visualizza solo l'ID. Tutto l'altro output per il bind del servizio viene eliminato. Questa opzione è esclusiva con '--output'.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
+  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -512,7 +512,7 @@ ibmcloud resource service-binding-create NOME_ALIAS_SERVIZIO NOME_APPLICAZIONE N
   <dt>NOME_RUOLO</dt>
   <dd>Nome del ruolo utente</dd>
   <dt>--service-id</dt>
-  <dd>Nome o UUID dell'ID servizio a cui appartiene il ruolo.</dd>
+  <dd>Nome o UUID dell'ID servizio a cui appartiene il ruolo</dd>
   <dt>-p, --parameter</dt>
   <dd>File JSON o stringa JSON dei parametri</dd>
   <dt>-f, --force</dt>
@@ -576,7 +576,7 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NOME | --ali
   <dt>--alias-name</dt>
   <dd>Nome alias del servizio</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -589,7 +589,7 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 ## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
-Visualizza i dettagli di qualsiasi numero di chiavi di servizio, dove i primi *n* caratteri del nome della chiave del servizio corrispondono al NOME_CHIAVE fornito.
+Visualizza i dettagli di qualsiasi numero di chiavi di servizio, dove i primi *n* caratteri del nome della chiave del servizio corrispondono al NOME_CHIAVE fornito. 
 
 ```
 ibmcloud resource service-key NOME_CHIAVE [--id]
@@ -602,9 +602,9 @@ ibmcloud resource service-key NOME_CHIAVE [--id]
   <dt>NOME_CHIAVE</dt>
   <dd>Nome della chiave</dd>
   <dt>--id</dt>
-  <dd>Visualizza gli ID di qualsiasi chiave, dove i primi *n* caratteri del nome della chiave del servizio corrispondono al NOME_CHIAVE fornito e *n* è la lunghezza del NOME_CHIAVE fornito.</dd>
+  <dd>Visualizza gli ID di qualsiasi chiave, dove i primi *n* caratteri del nome della chiave del servizio corrispondono al NOME_CHIAVE fornito e *n* è la lunghezza del NOME_CHIAVE fornito. </dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>Specifica il formato dell'output. Attualmente è supportato solo JSON.</dd>
+  <dd>Specifica il formato dell'output. Attualmente è supportato solo JSON. </dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -640,7 +640,7 @@ ibmcloud resource service-key-create NOME NOME_RUOLO ( --instance-id ID_ISTANZA_
   <dt>--alias-name</dt>
   <dd>Nome alias del servizio</dd>
   <dt>--service-id</dt>
-  <dd>Nome o UUID dell'ID servizio a cui appartiene il ruolo.</dd>
+  <dd>Nome o UUID dell'ID servizio a cui appartiene il ruolo</dd>
   <dt>-p, --parameters</dt>
   <dd>File JSON o stringa JSON dei parametri</dd>
   <dt>-f, --force</dt>
@@ -657,10 +657,10 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 ## ibmcloud resource service-key-update
 {: #ibmcloud_resource_service_key_update}
 
-Aggiorna una chiave del servizio
+Aggiorna una chiave del servizio 
 
 ```
-ibmcloud resource service-key-update ( NOME | ID ) [-n, --name NUOVO_NOME] [-g GRUPPO_RISORSE] [-f, --force]
+ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NUOVO_NOME] [-g GRUPPO_RISORSE] [-f, --force]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
@@ -672,13 +672,13 @@ ibmcloud resource service-key-update ( NOME | ID ) [-n, --name NUOVO_NOME] [-g G
   <dt>-n, --name NUOVO_NOME</dt>
   <dd>Nuovo nome della chiave</dd>
   <dt>-g GRUPPO_RISORSE</dt>
-  <dd>ID del gruppo di risorse a cui appartiene la chiave</dd>
+  <dd>ID del gruppo di risorse a cui appartiene la chiave </dd>
   <dt>-f, --force</dt>
   <dd>Forza l'aggiornamento senza conferma</dd>
 </dl>
 
 <strong>Esempi</strong>:
-Aggiorna una chiave di servizio denominata `my-service-key`, dalle un nuovo nome `my-service-key-2`:
+Aggiorna una chiave di servizio denominata `my-service-key`, dalle un nuovo nome `my-service-key-2`: 
 
 ```
 ibmcloud resource service-key-update my-service-key -n my-service-key-2
@@ -698,7 +698,7 @@ ibmcloud resource service-key-delete ( NOME_CHIAVE | ID_CHIAVE ) [-f, --forece]
 <strong>Opzioni comando</strong>:
 <dl>
   <dt>NOME_CHIAVE | ID_CHIAVE</dt>
-  <dd>Nome della chiave o l'ID della chiave</dd>
+  <dd>Il nome o l'ID della chiave</dd>
   <dt>-f, --force</dt>
   <dd>Forza l'eliminazione senza conferma</dd>
 </dl>
@@ -728,7 +728,7 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NOME ] [-
   <dt>--instance-name</dt>
   <dd>Nome dell'istanza del servizio di appartenenza.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -755,7 +755,7 @@ ibmcloud resource service-alias NOME_ALIAS [--id] [--output FORMATO]
   <dt>--id</dt>
   <dd>Visualizza solo l'ID dell'alias del servizio fornito. Tutto l'altro output per l'alias viene eliminato. Questa opzione è esclusiva con '--output'.</dd>
   <dt>--output FORMATO (facoltativo)</dt>
-  <dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
+  <dd>--output value  Specifica il formato di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
 </dl>
 
 <strong>Esempi</strong>:
@@ -800,7 +800,7 @@ ibmcloud resource service-alias-create my-service-alias --instance-name my-servi
 ## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
-Aggiorna un alias del servizio
+Aggiorna un alias del servizio 
 
 ```
 ibmcloud resource service-alias-update NOME_ALIAS [-n, --name NUOVO_NOME] [-t, --tags TAG] [-p, --parameters @FILE_JSON | STRINGA_JSON ][-f, --force]
@@ -857,10 +857,10 @@ ibmcloud resource service-alias-delete my-service-alias
 
 ## ibmcloud resource search
 {: #ibmcloud_resource_search}
-Ricerca le risorse utilizzando la sintassi di query Lucene
+Ricerca le risorse utilizzando la sintassi di query Lucene 
 
 ```
-ibmcloud search QUERY_LUCENE [-o, --offset OFFSET] [-l, --limit LIMITE] [-s, --sort-by (name, family, region, type, crn)]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
