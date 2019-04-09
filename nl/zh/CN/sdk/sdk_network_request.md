@@ -1,15 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-21"
-
-keywords: bmscore, bmscore sdk, network request, ios, android, cordova
-
-subcollection: cloud-cli
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +18,7 @@ subcollection: cloud-cli
 ## Android
 {: #request-android}
 
-1. 确保已在 Android 应用程序中[导入客户机 SDK 并对其进行初始化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android)。
+1. 确保已在 Android 应用程序中[导入客户机 SDK 并对其进行初始化](sdk_BMSClient.html#init-BMSClient-android)。
 
 2. 发出网络请求。
 
@@ -59,7 +54,7 @@ subcollection: cloud-cli
 ## iOS
 {: #request-ios}
 
-1. 确保已在 iOS 应用程序中[导入客户机 SDK 并对其进行初始化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)。
+1. 确保已在 iOS 应用程序中[导入客户机 SDK 并对其进行初始化](sdk_BMSClient.html#init-BMSClient-ios)。
 
 2. 创建网络请求。
 
@@ -107,13 +102,13 @@ subcollection: cloud-cli
 
 `BMSURLSession` 类仅可用于 iOS。
 
-有关完整用法示例，请参阅 `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
+有关完整用法示例，请参阅 `BMSCore` GitHub [README ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}。
 
 
 ## Cordova
 {: #request-cordova}
 
-1. 确保已在 Cordova 应用程序中[导入客户机 SDK 并对其进行初始化](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)。
+1. 确保已在 Cordova 应用程序中[导入客户机 SDK 并对其进行初始化](sdk_BMSClient.html#init-BMSClient-cordova)。
 
 2. 创建网络请求。
 

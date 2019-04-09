@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, orders, quotes, ibmcloud sl order, item-list, package-locations
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,9 +13,23 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # 管理经典基础架构订购和报价
-{: #sl-manage-classic-orders}
 
-使用以下命令可管理经典基础架构订购和报价。
+<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 基础架构命令（带有可获取命令的更多信息的链接）">
+<caption>表 1. 经典基础架构订购</caption>
+ <thead>
+ <th colspan="6">经典基础架构订购</th>
+ </thead>
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_category_list)</td>
+  <td>[ibmcloud sl order item-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_item_list)</td>
+  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_package_locations)</td>
+  <td>[ibmcloud sl order place](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place)</td>
+  <td>[ibmcloud sl order place-quote](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place_quote)</td>
+  <td>[ibmcloud sl order preset-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_preset_list)</td>
+ </tr>
+ </tbody>
+</table>
 
 ## ibmcloud sl order package-locations
 {: #sl_order_category_list}

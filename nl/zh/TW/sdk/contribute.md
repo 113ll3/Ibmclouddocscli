@@ -1,15 +1,10 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-02-26"
-
-keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
-
-subcollection: cloud-cli
+  years: 2017, 2018
+lastupdated: "2018-11-30"
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -20,22 +15,22 @@ subcollection: cloud-cli
 # 提出至 SDK 外掛程式
 {: #contribute}
 
-請遵循下列準則來提出至 {{site.data.keyword.cloud}} CLI SDK 外掛程式。
+請遵循下列準則來提出至 {{site.data.keyword.Bluemix}} CLI SDK 外掛程式。
 
 ## 設定開發環境
 {: #dev-env}
 
-* Cloud Foundry [CLI ](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
+* Cloud Foundry [CLI ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/cli/releases)。
 
-   Cloud Foundry CLI 不是必要項目，但它有助於從「終端機」存取 {{site.data.keyword.cloud_notm}}。
+   Cloud Foundry CLI 不是必要項目，但它有助於從「終端機」存取 {{site.data.keyword.Bluemix_notm}}。
 
-   如需 Cloud Foundry CLI 的相關資訊，請參閱[文件](/docs/cli?topic=cloud-cli-cf#cf)。
+   如需 Cloud Foundry CLI 的相關資訊，請參閱[文件](/docs/cli/reference/cfcommands/index.html)。
 
-* {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
+* {{site.data.keyword.Bluemix_notm}} [CLI](/docs/cli/index.html#overview)。
 
-   此外掛程式會安裝至 {{site.data.keyword.cloud_notm}} CLI。{{site.data.keyword.cloud_notm}} CLI 也會提供有用的資源，以從「終端機」存取 {{site.data.keyword.cloud_notm}}。
+   此外掛程式會安裝至 {{site.data.keyword.Bluemix_notm}} CLI。{{site.data.keyword.Bluemix_notm}} CLI 也會提供有用的資源，以從「終端機」存取 {{site.data.keyword.Bluemix_notm}}。
 
-* Go 的[開發環境 ](https://golang.org/doc/code.html){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* Go 的[開發環境 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://golang.org/doc/code.html)
 
    Go 嚴格遵守包裝位置，因此您的來源必須定義在 `$GOPATH` 目錄結構內。請確定已定義 `$GOPATH` 及 `$GOROOT` 變數，而且您在 `$PATH` 環境變數中包含 `$GOPATH/bin`，這只要編輯 `~/.bash_profile` 配置檔就能做到（在 Mac OS 上）。
 
@@ -47,7 +42,7 @@ subcollection: cloud-cli
    ```
    {: codeblock}
 
-* 相依關係管理員：[govendor ](https://github.com/kardianos/govendor){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* 相依關係管理員：[govendor ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/kardianos/govendor)
 
    `govendor` 工具會建立及管理 Go 相依關係。除非您計劃更新供應商目錄，否則不需要它。
 
@@ -72,9 +67,9 @@ subcollection: cloud-cli
       ```
       {: codeblock}
 
-* BDD 測試架構：[Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* BDD 測試架構：[Ginkgo ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://onsi.github.io/ginkgo/)
 
-測試架構是以 Ginkgo 為基礎（Go 的 BDD 測試架構）。它是與 [Gomega ](http://onsi.github.io/gomega/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 搭配使用，後者是 Ginkgo 的配對器及主張程式庫。
+測試架構是以 Ginkgo 為基礎（Go 的 BDD 測試架構）。它是與 [Gomega ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://onsi.github.io/gomega/) 搭配使用，後者是 Ginkgo 的配對器及主張程式庫。
 
    * 使用下列指令，安裝 `ginkgo`。
 
@@ -108,9 +103,9 @@ subcollection: cloud-cli
 
       * 您將移至 `.coverprofile` 檔案所在的目錄。
 
-* 國際化：[go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 及 [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* 國際化：[go-i18n ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/nicksnyder/go-i18n) 及 [go-bindata ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/jteeuwen/go-bindata)
 
-國際化是以 `go-i18n` 為基礎，它是一個套件及指令行工具，支援將 Go 應用程式翻譯為多種語言。翻譯軟體組是由 `go-bindata` 預先處理，它是將任何輸入檔轉換成可管理 Go 原始碼的指令。
+國際化是以 go-i18n 為基礎，它是一個套件及指令行工具，支援將 Go 應用程式翻譯為多種語言。翻譯軟體組是由 go-bindata 預先處理，它是將任何輸入檔轉換成可管理 Go 原始碼的指令。
 
    * 使用下列指令，安裝 `go-i18n`。
 
@@ -126,9 +121,9 @@ subcollection: cloud-cli
       ```
       {: codeblock}
 
-* 除錯：[delve ](https://github.com/derekparker/delve){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* 除錯：[delve ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/derekparker/delve)
 
-Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ](https://code.visualstudio.com/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 使用。
+Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://code.visualstudio.com/) 使用。
 
    * 使用下列指令，安裝 `delve`。
 
@@ -137,7 +132,7 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ](https
       ```
       {: codeblock}
 
-      * 若為 Mac OS，請遵循[指示 ](http://blog.ralch.com/tutorial/golang-debug-with-delve/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 來建立所需的自簽憑證。
+      * 若為 Mac OS，請遵循[指示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://blog.ralch.com/tutorial/golang-debug-with-delve/) 來建立所需的自簽憑證。
 
 
 ## 必要運行環境程式庫
@@ -150,34 +145,34 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ](https
 
 未列出巢狀相依關係。
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ](https://github.ibm.com/Bluemix/bluemix-cli-sdk){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
 
-   {{site.data.keyword.cloud_notm}} CLI 外掛程式 SDK，提供開發 {{site.data.keyword.cloud_notm}} CLI 外掛程式的基礎架構。
+   {{site.data.keyword.Bluemix_notm}} CLI 外掛程式 SDK，提供開發 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式的基礎架構。
 
-* [github.com/urfave/cli ](https://github.com/urfave/cli){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* [github.com/urfave/cli ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/urfave/cli)
 
-   此套件提供在 Go 中建置指令行應用程式的基礎架構。{{site.data.keyword.cloud_notm}} CLI 外掛程式依賴此程式庫的較舊版本 (github.com/codegangsta/cli)。
+   此套件提供在 Go 中建置指令行應用程式的基礎架構。{{site.data.keyword.Bluemix_notm}} CLI 外掛程式依賴此程式庫的較舊版本 (github.com/codegangsta/cli)。
 
-* [github.com/asaskevich/govalidator ](https://github.com/asaskevich/govalidator){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* [github.com/asaskevich/govalidator ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/asaskevich/govalidator)
 
    此套件提供一些用於字串、結構及集合的驗證器和消毒器。請使用此套件，而不要實作我們自己的驗證器。
 
-* [github.com/parnurzeal/gorequest ](https://github.com/parnurzeal/gorequest){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* [github.com/parnurzeal/gorequest ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/parnurzeal/gorequest)
 
    此套件實作簡化的 HTTP 用戶端，以協助處理 HTTP 要求及回應。
 
-* [github.com/briandowns/spinner ](https://github.com/briandowns/spinner){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* [github.com/briandowns/spinner ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/briandowns/spinner)
 
    此套件實作 CLI 微調按鈕，以在處理 SDK 產生這類長時間作業時提供使用者意見。
 
-* [github.com/cloudfoundry-attic/jibber_jabber ](https://github.com/cloudfoundry-attic/jibber_jabber){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* [github.com/cloudfoundry-attic/jibber_jabber ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry-attic/jibber_jabber)
 
    此套件用來偵測作業系統的現行語言。
 
 ## 複製儲存庫
 {: #clone-repo}
 
-基於 `govendor` 的運作方式（這也遵循 Go 的最佳作法），必須將儲存庫複製到 Go 的[目錄結構 ](https://golang.org/doc/code.html){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
+基於 `govendor` 的運作方式（這也遵循 Go 的最佳作法），必須將儲存庫複製到 Go 的[目錄結構 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://golang.org/doc/code.html)。
 
 * 透過完整的套件名稱匯入內部相依關係。
 
@@ -203,6 +198,7 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ](https
 {: #build-plug-in}
 
 請選擇下列一個指令，以建置外掛程式。
+
 ```
 cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
@@ -219,6 +215,7 @@ sh bin/build.sh
 {: note}
 
 請選擇下列一個指令，以測試外掛程式。
+
 ```
 ginkgo -r
 ```
@@ -230,18 +227,21 @@ go test ./plugin/...
 {: codeblock}
 
 使用單元測試及涵蓋面來執行整合測試。
+
 ```
 sh bin/testAll.sh
 ```
 {: codeblock}
 
 將外掛程式當成獨立式 CLI 來執行。
+
 ```
 ./main
 ```
 {: codeblock}
 
-請選擇下列一個指令，以安裝及呼叫外掛程式作為 {{site.data.keyword.cloud_notm}} CLI。
+請選擇下列一個指令，以安裝及呼叫外掛程式作為 {{site.data.keyword.Bluemix_notm}} CLI。
+
 ```
 ibmcloud plugin install main
 ibmcloud help sdk

@@ -2,11 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-21"
-
-keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
-
-subcollection: cloud-cli
+lastupdated: "2019-01-30"
 
 ---
 
@@ -28,10 +24,11 @@ Los problemas más habituales al utilizar la interfaz de línea de mandatos (CLI
 {: shortdesc}
 
 ## ¿Por qué recibo un error de nombre de host cuando creo una app con un patrón no móvil?
-{: #ts-cli-hostname-error}
+{: #hostname-error}
 {: troubleshoot}
 
 Es posible que aparezca el siguiente error si utiliza la CLI de {{site.data.keyword.dev_cli_short}} para desplegar una app en Cloud Foundry. Aunque especifique un nombre de host exclusivo, es posible que siga viendo el mensaje.
+
 ```
 The hostname <myHostname> is taken.
 ```
@@ -49,10 +46,11 @@ ibmcloud login
 {: tsResolve}
 
 ## ¿Por qué se producen errores de mandatos generales?
-{: #ts-cli-general-failures}
+{: #general}
 {: troubleshoot}
 
 Es posible que se muestre el siguiente error si utiliza los mandatos `create`, `delete`, `list` o `code`:
+
 ```
 Failed to <command> application.
 ```
@@ -70,10 +68,11 @@ ibmcloud login
 {: tsResolve}
 
 ## ¿Por qué no se reconoce la imagen de mi nueva app?
-{: #ts-cli-nosuchimage}
+{: #nosuchimage}
 {: troubleshoot}
 
 Cuando intenta ejecutar una app con `ibmcloud dev run` sin antes compilarla, es posible que se muestre el error siguiente.
+
 ```
 The run-cmd option was not specified
 Stopping the 'testProject' container...
@@ -102,7 +101,7 @@ ibmcloud dev run
 {: tsResolve}
 
 ## ¿Por qué recibo un error de intermediario de servicio cuando añado la función {{site.data.keyword.objectstorageshort}}?
-{: #ts-cli-object-storage}
+{: #os}
 {: troubleshoot}
 
 Es posible que se visualice el siguiente error si utiliza la CLI para crear dos apps con la función {{site.data.keyword.objectstorageshort}}:
@@ -121,10 +120,11 @@ Seleccione otro plan.
 {: tsResolve}
 
 ## ¿Por qué no se recupera mi código cuando creo una app?
-{: #retrieve-code-error}
+{: #code}
 {: troubleshoot}
 
 Es posible que se muestre el siguiente error cuando se utiliza la CLI para crear una app:
+
 ```
 FAILED
 Application created, but could not get code
@@ -149,13 +149,13 @@ Utilice uno de los métodos siguientes para obtener el código:
 
 * Utilice la {{site.data.keyword.dev_console}}.
 
-	1. Seleccione la [app ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/resources) en la {{site.data.keyword.dev_console}}.
+	1. Seleccione la [app ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appservice/apps) en la {{site.data.keyword.dev_console}}.
 
 	2. Pulse **Descargar código**.
 {: tsResolve}
 
 ## ¿Por qué no puedo ejecutar el mandato `ibmcloud dev run` para las apps Node.js?
-{: #ts-cli-node}
+{: #node}
 {: troubleshoot}
 
 Es posible que se muestre el siguiente error si ejecuta el mandato `ibmcloud dev run` para apps web Node.js o BFF:
@@ -188,7 +188,6 @@ Suprima la carpeta `node_modules` y ejecute de nuevo el mandato `ibmcloud dev ru
 {: tsResolve}
 
 ## ¿Por qué no puedo realizar el despliegue en {{site.data.keyword.cloud_notm}}?
-{: #ts-cli-deploy-issues}
 {: troubleshoot}
 
 Se produce una anomalía cuando intenta realizar el despliegue en {{site.data.keyword.cloud_notm}}, pero no se muestra ningún error.
@@ -204,7 +203,6 @@ ibmcloud login
 {: tsResolve}
 
 ## ¿Por qué no puedo realizar el despliegue en Kubernetes en {{site.data.keyword.cloud_notm}}?
-{: #ts-cli-kube-deploy}
 {: troubleshoot}
 
 Se podría visualizar la siguiente anomalía después de que se le solicitase el nombre de su clúster:
@@ -233,7 +231,6 @@ ibmcloud cs cluster-config <cluster-name>
 {: tsResolve}
 
 ## ¿Por qué no puedo desplegar un destino de imagen?
-{: #ts-deploy-image-target}
 {: troubleshoot}
 
 Se podría visualizar la siguiente anomalía después de que se le solicitase el destino de imagen de despliegue:
@@ -259,7 +256,6 @@ ibmcloud cr namespaces
 {: tsResolve}
 
 ## ¿Por qué no se puede determinar el idioma de mi app?
-{: #ts-cli-determine-language}
 {: troubleshoot}
 
 Es posible que se muestre el siguiente error al intentar iniciar la app:
@@ -274,34 +270,79 @@ directly.
 {: tsSymptoms}
 
 Este error puede deberse a una de las causas siguientes:
-- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) desde un directorio que no es el directorio de origen de la aplicación.
-- Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para una app de un idioma que no se reconoce.
+- Se ha ejecutado el mandato [enable](/docs/cli/idt/commands.html#enable) desde un directorio que no es el directorio de origen de la aplicación.
+- Se ha ejecutado el mandato [enable](/docs/cli/idt/commands.html#enable) para una app de un idioma que no se reconoce.
 {: tsCauses}
 
-Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si esto no resuelve el problema y el idioma es uno de los [idiomas soportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilice el parámetro `--language` para especificar el idioma.
+Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si esto no resuelve el problema y el idioma es uno de los [idiomas soportados](/docs/cli/idt/commands.html#enable-language-options), utilice el parámetro `--language` para especificar el idioma.
 {: tsResolve}
 
 ## ¿Por qué no puedo crear o ejecutar una app que se ha habilitado para el despliegue en la nube?
-{: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-Es posible que se produzcan varias anomalías al intentar [crear](/docs/cli/idt?topic=cloud-cli-idt-cli#build) o [ejecutar](/docs/cli/idt?topic=cloud-cli-idt-cli#run) una app que se ha habilitado.
+Es posible que se produzcan varias anomalías al intentar [crear](/docs/cli/idt/commands.html#build) o [ejecutar](/docs/cli/idt/commands.html#run) una app que se ha habilitado.
 {: tsSymptoms}
+
 
 En los siguientes enlaces encontrará muchas de las posibles causas.
 {: tsCauses}
 
-- Para obtener más información sobre cómo resolver estos problemas con una app Spring, consulte [Habilitación de aplicaciones Spring Boot existentes para el despliegue en la nube](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
-- Para obtener más información sobre cómo resolver estos problemas con una app `Node.js`, consulte [Habilitación de aplicaciones Node.js existentes para el despliegue en la nube](/docs/node?topic=nodejs-enable_existing#enable_existing).
+- Para obtener más información sobre cómo resolver estos problemas con una app Spring, consulte [Habilitación de aplicaciones Spring Boot existentes para el despliegue en la nube](/docs/java-spring/enable_existing.html#enable_existing).
+- Para obtener más información sobre cómo resolver estos problemas con una app `Node.js`, consulte [Habilitación de aplicaciones Node.js existentes para el despliegue en la nube](/docs/node/enable_existing.html#enable_existing).
 {: tsResolve}
 
-<!--
-## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
-{: #ts-cli-install-devtools-manually}
-{: troubleshoot}
+## ¿Cómo se instalan manualmente las herramientas de desarrollador de {{site.data.keyword.Bluemix_notm}}?
+{: #appendix}
+Todos los requisitos previos se instalan para la mayoría utilizando los instaladores de la plataforma. Si necesita instalar cualquier componente manualmente, aquí encontrará las instrucciones para cada uno.
+Para instalar el plugin de desarrollo, primero debe instalar la [CLI de IBM Cloud](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use).
+Para utilizar el propio plugin de desarrollo, debe instalarlo ejecutando el mandato siguiente: 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+Para ejecutar y depurar apps localmente, también debe instalar [Docker](https://www.docker.com/get-docker).
+ 
+Para desplegar una app como contenedor, también debe instalar Kubernetes, Helm y los siguientes plugins de la CLI de IBM Cloud.
+ 
+### Para instalar Kubernetes:
+Usuarios de Mac:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
 
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
+Usuarios de Linux:
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
 
+Usuarios de Windows:
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
 
+### Para instalar Helm:
+Usuarios de Mac y Linux:
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
 
+Usuarios de Windows:
+Descargue e instale el archivo [binario](https://github.com/kubernetes/helm/releases/tag/v2.7.2).
+
+### Para instalar el plugin container-registry:
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### Para instalar el plugin container-service:
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

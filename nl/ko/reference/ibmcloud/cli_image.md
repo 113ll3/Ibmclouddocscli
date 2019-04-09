@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ibmcloud sl image, manage compute images, ibmcloud sl
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -15,24 +13,32 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # 컴퓨팅 이미지 작성, 편집 및 삭제
-{: #sl-manage-compute-images}
 
-다음 명령을 사용하여 {{site.data.keyword.cloud}} 컴퓨팅 이미지를 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 컴퓨팅 이미지를 관리하십시오.
 {: shortdesc}
 
-## ibmcloud sl image delete
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 인프라 이미지 명령">
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl image delete](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_delete)</td>
+ <td>[ibmcloud sl image detail](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_detail)</td>
+ <td>[ibmcloud sl image edit](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_edit)</td>
+ <td>[ibmcloud sl image list](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_list)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 이미지를 삭제합니다.
 ```
 ibmcloud sl image delete IDENTIFIER
 ```
-
 **예제**:
 ```
    ibmcloud sl image delete 12345678
 ```
-
 이 명령은 ID가 `12345678`인 이미지를 삭제합니다.
 
 ## ibmcloud sl image detail
@@ -42,13 +48,11 @@ ibmcloud sl image delete IDENTIFIER
 ```
 ibmcloud sl image detail IDENTIFIER
 ```
-
 **예제**:
 ```
  ibmcloud sl image detail 12345678
 ```
-
-이 명령은 ID가 `12345678`인 이미지의 세부사항을 가져옵니다.
+이 명령은 ID가 12345678인 이미지의 세부사항을 가져옵니다.
 
 ## ibmcloud sl image edit
 {: #sl_image_edit}
@@ -72,7 +76,6 @@ ibmcloud sl image edit IDENTIFIER [OPTIONS]
 ```  
 ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
-
 이 명령은 ID가 `12345678`인 이미지를 편집하고 해당 이름을 `ubuntu16`, 참고를 `testing`, 태그를 `staging`으로 설정합니다.
 
 ## ibmcloud sl image list

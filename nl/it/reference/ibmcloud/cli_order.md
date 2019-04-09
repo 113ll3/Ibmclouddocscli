@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, orders, quotes, ibmcloud sl order, item-list, package-locations
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,9 +13,23 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # Gestione degli ordini e dei preventivi dell'infrastruttura classica
-{: #sl-manage-classic-orders}
 
-Utilizza i seguenti comandi per gestire gli ordini e i preventivi nella tua infrastruttura classica.
+<table summary="Comandi generali dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+ <caption>Tabella 1. Ordini dell'infrastruttura classica</caption>
+ <thead>
+ <th colspan="6">Ordini dell'infrastruttura classica</th>
+ </thead>
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_category_list)</td>
+  <td>[ibmcloud sl order item-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_item_list)</td>
+  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_package_locations)</td>
+  <td>[ibmcloud sl order place](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place)</td>
+  <td>[ibmcloud sl order place-quote](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place_quote)</td>
+  <td>[ibmcloud sl order preset-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_preset_list)</td>
+ </tr>
+ </tbody>
+</table>
 
 ## ibmcloud sl order package-locations
 {: #sl_order_category_list}

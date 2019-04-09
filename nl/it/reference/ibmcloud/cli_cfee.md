@@ -1,36 +1,75 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Gestione del servizio Cloud Foundry Enterprise Environment
 {: #ibmcloud_commands_cfee}
 
-Con CFEE ({{site.data.keyword.cfee_full}}) puoi istanziare più piattaforme Cloud Foundry isolate e di livello aziendale su richiesta. Le istanze del servizio IBM Cloud Foundry Enterprise vengono eseguite all'interno del tuo account in {{site.data.keyword.cloud_notm}}. L'ambiente viene distribuito su hardware isolato (cluster Kubernetes). Hai un completo controllo sull'ambiente, compresi il controllo degli accessi, la capacità, gli aggiornamenti delle versioni e l'utilizzo e il monitoraggio delle risorse.
+Con CFEE ({{site.data.keyword.cfee_full}}) puoi istanziare più piattaforme Cloud Foundry isolate e di livello aziendale su richiesta. Le istanze del servizio IBM Cloud Foundry Enterprise vengono eseguite all'interno del tuo account in IBM Cloud. L'ambiente viene distribuito su hardware isolato (cluster Kubernetes). Hai un completo controllo sull'ambiente, compresi il controllo degli accessi, la capacità, gli aggiornamenti delle versioni e l'utilizzo e il monitoraggio delle risorse.
 
 Utilizza i seguenti comandi per gestire i ruoli, gli utenti, gli spazi, le organizzazioni e gli ambienti CFEE.
 {: shortdesc}
 
-## ibmcloud cfee environments
+<table summary="Gestisci i Cloud Foundry Enterprise Environment (sperimentale)">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud cfee environments
+](cli_cfee.html#ibmcloud_cfee_environments)</td>
+ <td>[ibmcloud cfee environment](cli_cfee.html#ibmcloud_cfee_environment)</td>
+ <td>[ibmcloud cfee orgs](cli_cfee.html#ibmcloud_cfee_orgs)</td>
+ <td>[ibmcloud cfee org](cli_cfee.html#ibmcloud_cfee_org)</td>
+ <td>[ibmcloud cfee org-create](cli_cfee.html#ibmcloud_cfee_org_create)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud cfee org-delete](cli_cfee.html#ibmcloud_cfee_org_delete)</td>
+ <td>[ibmcloud cfee org-users](cli_cfee.html#ibmcloud_cfee_org_users)</td>
+ <td>[ibmcloud cfee org-role-set](cli_cfee.html#ibmcloud_cfee_org_role_set)</td>
+ <td>[ibmcloud cfee org-role-unset](cli_cfee.html#ibmcloud_cfee_org_role_unset)</td>
+ <td>[ibmcloud cfee spaces](cli_cfee.html#ibmcloud_cfee_spaces)</td>
+ </tr>
+<tr>
+ <td>[ibmcloud cfee space](cli_cfee.html#ibmcloud_cfee_space)</td>
+ <td>[ibmcloud cfee space-create](cli_cfee.html#ibmcloud_cfee_space_create)</td>
+ <td>[ibmcloud cfee space-rename](cli_cfee.html#ibmcloud_cfee_space_rename)</td>
+ <td>[ibmcloud cfee space-delete](cli_cfee.html#ibmcloud_cfee_space_delete)</td>
+ <td>[ibmcloud cfee space-role-set](cli_cfee.html#ibmcloud_cfee_space_role_set)</td>
+ </tr>
+ <tr>
+
+ <td>[ibmcloud cfee space-role-unset](cli_cfee.html#ibmcloud_cfee_space_role_unset)</td>
+ <td>[ibmcloud cfee space-roles](cli_cfee.html#ibmcloud_cfee_space_roles)</td>
+ <td>[ibmcloud cfee space-users](cli_cfee.html#ibmcloud_cfee_space_users)</td>
+ <td>[ibmcloud cfee create](cli_cfee.html#ibmcloud_cfee_create)</td>
+ <td>[ibmcloud cfee create-locations](cli_cfee.html#ibmcloud_cfee_create_locations)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud cfee create-permission-get](cli_cfee.html#ibmcloud_create_permission_get)</td>
+ <td>[ibmcloud cfee create-permission-set](cli_cfee.html#ibmcloud_create_permission_set)</td>
+ <td>[ibmcloud cfee create-status](cli_cfee.html#ibmcloud_create_status)</td>
+ </tr>
+ </tbody>
+ </table>
+
+ ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
-Elenca gli ambienti CFEE:
+Elenca gli ambienti CFEE.
+
 ```
 ibmcloud cfee environments
 ```
-{: codeblock}
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
@@ -39,7 +78,8 @@ ibmcloud cfee environments
 ## ibmcloud cfee environment
 {: #ibmcloud_cfee_environment}
 
-Mostra i dettagli di un ambiente CFEE:
+Mostra i dettagli di un ambiente CFEE
+
 ```
 ibmcloud cfee environment NOME [--id]
 ```
@@ -57,21 +97,22 @@ ibmcloud cfee environment NOME [--id]
 <strong>Esempi</strong>:
 
 Mostra i dettagli di un ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee environment env_example
 ```
-{: codeblock}
 
 Mostra l'ID di un ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee environment env_example --id
 ```
-{: codeblock}
 
 ## ibmcloud cfee orgs
 {: #ibmcloud_cfee_orgs}
 
-Elenca tutte le organizzazioni:
+Elenca tutte le organizzazioni
+
 ```
 ibmcloud cfee orgs [--env AMBIENTE]
 ```
@@ -87,21 +128,22 @@ ibmcloud cfee orgs [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Elenca tutte le organizzazioni:
+
 ```
 ibmcloud cfee orgs
 ```
-{: codeblock}
 
 Elenca tutte le organizzazioni dell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee orgs --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee org
 {: #ibmcloud_cfee_org}
 
-Visualizza i dettagli di un'organizzazione:
+Visualizza i dettagli di un'organizzazione
+
 ```
 ibmcloud cfee org ORG [--guid] [--env AMBIENTE]
 ```
@@ -121,27 +163,28 @@ ibmcloud cfee org ORG [--guid] [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Mostra i dettagli di un'organizzazione CFEE `org_example`:
+
 ```
 ibmcloud cfee org org_example
 ```
-{: codeblock}
 
 Visualizza i dettagli di un'organizzazione CFEE `org_example` dell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee org org_example --env env_example
 ```
-{: codeblock}
 
 Mostra il GUID di un'organizzazione CFEE `org_example`:
+
 ```
 ibmcloud cfee org org_example --guid
 ```
-{: codeblock}
 
 ## ibmcloud cfee org-create
 {: #ibmcloud_cfee_org_create}
 
-Crea un'organizzazione:
+Crea un'organizzazione
+
 ```
 ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env AMBIENTE]
 ```
@@ -161,27 +204,28 @@ ibmcloud cfee org-create ORG [-q, --quota QUOTA] [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Crea un'organizzazione CFEE `org_example`:
+
 ```
 ibmcloud cfee org-create org_example
 ```
-{: codeblock}
 
 Crea un'organizzazione CFEE `org_example` dell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee org-create org_example --env env_example
 ```
-{: codeblock}
 
 Crea un'organizzazione CFEE `org_example` con la quota `quote_example`:
+
 ```
 ibmcloud cfee org org-create org_example --quota quota_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee org-delete
 {: #ibmcloud_cfee_org_delete}
 
-Elimina un'organizzazione:
+Elimina un'organizzazione
+
 ```
 ibmcloud cfee org-delete ORG [-f, --force] [--env AMBIENTE]
 ```
@@ -201,27 +245,28 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Elimina un'organizzazione CFEE `org_example`:
+
 ```
 ibmcloud cfee org-delete org_example
 ```
-{: codeblock}
 
 Elimina un'organizzazione CFEE `org_example` dell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee org-delete org_example --env env_example
 ```
-{: codeblock}
 
 Elimina un'organizzazione CFEE `org_example` senza conferma:
+
 ```
 ibmcloud cfee org org-delete org_example -f
 ```
-{: codeblock}
 
 ## ibmcloud cfee org-users
 {: #ibmcloud_cfee_org_users}
 
-Visualizza gli utenti nell'organizzazione specificata in base al ruolo:
+Visualizza gli utenti nell'organizzazione specificata in base al ruolo
+
 ```
 ibmcloud cfee org-users ORG [-a, --all] [--env AMBIENTE]
 ```
@@ -241,27 +286,28 @@ ibmcloud cfee org-users ORG [-a, --all] [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Visualizza gli utenti nell'organizzazione CFEE `org_example`:
+
 ```
 ibmcloud cfee org-users org_example
 ```
-{: codeblock}
 
 Visualizza gli utenti nell'organizzazione CFEE `org_example` dell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee org-users org_example --env env_example
 ```
-{: codeblock}
 
 Elenca tutti gli utenti nell'organizzazione CFEE `org_example`:
+
 ```
 ibmcloud cfee org-users org_example -a
 ```
-{: codeblock}
 
 ## ibmcloud cfee org-role-set
 {: #ibmcloud_cfee_org_role_set}
 
 Assegna un ruolo dell'organizzazione a un utente (è richiesto un gestore organizzazione)
+
 ```
 ibmcloud cfee org-role-set EMAIL_UTENTE ORG RUOLO [--env AMBIENTE]
 ```
@@ -289,21 +335,22 @@ ibmcloud cfee org-role-set EMAIL_UTENTE ORG RUOLO [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Assegna il ruolo `BillingManager` all'utente `test@exmaple.com` nell'organizzazione `org_example`:
+
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager
 ```
-{: codeblock}
 
 Assegna il ruolo `BillingManager` all'utente `test@exmaple.com` nell'organizzazione `org_example` dell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee org-role-unset
 {: #ibmcloud_cfee_org_role_unset}
 
-Rimuove un ruolo organizzazione da un utente (gestore dell'organizzazione o solo l'utente):
+Rimuovi un ruolo organizzazione da un utente (gestore dell'organizzazione o solo l'utente)
+
 ```
 ibmcloud cfee org-role-unset EMAIL_UTENTE ORG RUOLO [--env AMBIENTE]
 ```
@@ -331,21 +378,22 @@ ibmcloud cfee org-role-unset EMAIL_UTENTE ORG RUOLO [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Rimuove il ruolo `BillingManager` dell'utente `test@exmaple.com` dall'organizzazione `org_example`:
+
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager
 ```
-{: codeblock}
 
 Rimuove il ruolo `BillingManager` dell'utente `test@exmaple.com` dall'organizzazione `org_example` dell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee org-role-unset tes@example.com org_example BillingManager --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee spaces
 {: #ibmcloud_cfee_spaces}
 
-Elenca tutti gli spazi:
+Elenca tutti gli spazi
+
 ```
 ibmcloud cfee spaces [-o,--org ORG] [--env AMBIENTE]
 ```
@@ -362,22 +410,23 @@ ibmcloud cfee spaces [-o,--org ORG] [--env AMBIENTE]
 
 <strong>Esempi</strong>:
 
-Elenca tutti gli spazi:
+Elenca tutti gli spazi
+
 ```
 ibmcloud cfee spaces
 ```
-{: codeblock}
 
 Elenca tutti gli spazi dell'organizzazione `org_example` e dell'ambiente CFEE `env_example`
+
 ```
 ibmcloud cfee spaces -o org_example --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee space
 {: #ibmcloud_cfee_space}
 
 Mostra le informazioni dello spazio specificato
+
 ```
 ibmcloud cfee space SPAZIO [--guid] [--security-group-rules] [-o,--org ORG] [--env AMBIENTE]
 ```
@@ -401,33 +450,34 @@ ibmcloud cfee space SPAZIO [--guid] [--security-group-rules] [-o,--org ORG] [--e
 <strong>Esempi</strong>:
 
 Mostra le informazioni dello spazio `space_example`:
+
 ```
 ibmcloud cfee space space_example
 ```
-{: codeblock}
 
 Richiama e visualizza il GUID dello spazio `space_example`:
+
 ```
 ibmcloud cfee space space_example --guid
 ```
-{: codeblock}
 
 Mostra le regole di tutti i gruppi di sicurezza associati allo spazio `space_example`:
+
 ```
 ibmcloud cfee space space_example --security-group-rules
 ```
-{: codeblock}
 
 Mostra le informazioni dello spazio `space_example` dell'organizzazione `org_example` e dell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee space space_example -o org_example --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee space-create
 {: #ibmcloud_cfee_space_create}
 
 Crea un nuovo spazio
+
 ```
 ibmcloud cfee space-create SPAZIO [-o, --org ORG] [--env AMBIENTE]
 ```
@@ -447,21 +497,22 @@ ibmcloud cfee space-create SPAZIO [-o, --org ORG] [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Crea un nuovo spazio `space_example`:
+
 ```
 ibmcloud cfee space-create space_example
 ```
-{: codeblock}
 
 Crea un nuovo spazio `space_example` nell'organizzazione `org_example` e nell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee space-create space_example -o org_example --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee space-rename
 {: #ibmcloud_cfee_space_rename}
 
-Rinomina uno spazio:
+Ridenomina uno spazio
+
 ```
 ibmcloud cfee space-rename NOME_PRECEDENTE NUOVO_NOME [-o, --org ORG] [--env AMBIENTE]
 ```
@@ -483,21 +534,22 @@ ibmcloud cfee space-rename NOME_PRECEDENTE NUOVO_NOME [-o, --org ORG] [--env AMB
 <strong>Esempi</strong>:
 
 Ridenomina lo spazio `space_example` con `new_pace_example`:
+
 ```
 ibmcloud cfee space-rename space_example new_pace_example
 ```
-{: codeblock}
 
 Ridenomina lo spazio `space_example` con `new_pace_example` nell'organizzazione `org_example` e nell'ambiente CFEE `env_example`:
+
 ```
 ibmcloud cfee space-rename space_example new_pace_example -o org_example --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee space-delete
 {: #ibmcloud_cfee_space_delete}
 
-Elimina uno spazio:
+Elimina uno spazio
+
 ```
 ibmcloud cfee space-delete SPAZIO [-f, --force] [-o, --org ORG] [--env AMBIENTE]
 ```
@@ -519,21 +571,22 @@ ibmcloud cfee space-delete SPAZIO [-f, --force] [-o, --org ORG] [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Elimina lo spazio `space_example`:
+
 ```
 ibmcloud cfee space-delete space_example
 ```
-{: codeblock}
 
 Elimina lo spazio `space_example` nell'organizzazione `org_example` e nell'ambiente CFEE `env_example` senza conferma:
+
 ```
 ibmcloud cfee space-delete space_example new_pace_example -f -o org_example --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee space-role-set
 {: #ibmcloud_cfee_space_role_set}
 
 Assegna un ruolo dello spazio ad un utente
+
 ```
 ibmcloud cfee space-role-set EMAIL_UTENTE ORG SPAZIO RUOLO [--env AMBIENTE]
 ```
@@ -562,21 +615,22 @@ ibmcloud cfee space-role-set EMAIL_UTENTE ORG SPAZIO RUOLO [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Assegna l'utente `test@exmaple.com` all'organizzazione `org_example` e lo spazio `space_example` come ruolo `SpaceManager`:
+
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager
 ```
-{: codeblock}
 
 Assegna l'utente `test@exmaple.com` all'organizzazione `org_example` e lo spazio `space_example` come ruolo `SpaceManager` nell'ambiente `env_example`:
+
 ```
 ibmcloud cfee space-role-set tes@example.com org_example space_example SpaceManager --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee space-role-unset
 {: #ibmcloud_cfee_space_role_unset}
 
 Rimuove un ruolo dello spazio da un utente
+
 ```
 ibmcloud cfee space-role-unset EMAIL_UTENTE ORG SPAZIO RUOLO [--env AMBIENTE]
 ```
@@ -605,16 +659,16 @@ ibmcloud cfee space-role-unset EMAIL_UTENTE ORG SPAZIO RUOLO [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Rimuove l'utente `test@exmaple.com` dall'organizzazione `org_example` e dallo spazio `space_example` come ruolo `SpaceManager`:
+
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager
 ```
-{: codeblock}
 
 Rimuove l'utente `test@exmaple.com` dall'organizzazione `org_example` e dallo spazio `space_example` come ruolo `SpaceManager` nell'ambiente `env_example`:
+
 ```
 ibmcloud cfee space-role-unset tes@example.com org_example space_example SpaceManager --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee space-roles
 {: #ibmcloud_cfee_space_roles}
@@ -638,21 +692,22 @@ ibmcloud cfee space-roles ORG [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Ottiene tutti i ruoli dello spazio dell'utente corrente nell'organizzazione `org_example`:
+
 ```
 ibmcloud cfee space-roles org_example
 ```
-{: codeblock}
 
 Ottiene tutti i ruoli dello spazio dell'utente corrente nell'organizzazione `org_example` e nell'ambiente `env_example`:
+
 ```
 ibmcloud cfee space-roles org_example --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee space-users
 {: #ibmcloud_cfee_space_users}
 
 Visualizza gli utenti nello spazio specificato in base al ruolo
+
 ```
 ibmcloud cfee space-users ORG SPAZIO [--env AMBIENTE]
 ```
@@ -672,21 +727,22 @@ ibmcloud cfee space-users ORG SPAZIO [--env AMBIENTE]
 <strong>Esempi</strong>:
 
 Visualizza tutti gli utenti nello spazio `space_example` e nell'organizzazione `org_example`:
+
 ```
 ibmcloud cfee space-users org_example space_example
 ```
-{: codeblock}
 
 Visualizza tutti gli utenti nello spazio `space_example`, nell'organizzazione `org_example` e nell'ambiente `env_example`:
+
 ```
 ibmcloud cfee space-users org_example space_example --env env_example
 ```
-{: codeblock}
 
 ## ibmcloud cfee create
 {: #ibmcloud_cfee_create}
 
-Fai una richiesta di creazione di una nuova istanza di Cloud Foundry Enterprise Environment:
+Fai una richiesta di creazione di una nuova istanza di Cloud Foundry Enterprise Environment
+
 ```
 ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--private-vlan ID, --public-vlan ID] [--plan ID]
 ```
@@ -729,10 +785,10 @@ ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated
 {: #ibmcloud_cfee_create_locations}
 
 Effettua una richiesta per ottenere un elenco dei data center disponibili per le regioni di destinazione
+
 ```
 ibmcloud cfee create-locations
 ```
-{: codeblock}
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
@@ -796,21 +852,22 @@ ibmcloud cfee create-permission-set USER_NAME [-ag, --access-group GROUP_NAME]
 <strong>Esempi</strong>:
 
 Assegna le autorizzazioni di creazione CFEE all'utente `name@example.com` tramite il gruppo di accesso predefinito:
+
 ```
 ibmcloud cfee create-permission-set name@example.com
 ```
-{: codeblock}
 
 Assegna le autorizzazioni di creazione CFEE all'utente `name@example.com` tramite il gruppo di accesso `test-access-group`:
+
 ```
 ibmcloud cfee create-permission-set name@example.com -ag test-access-group
 ```
-{: codeblock}
 
 ## ibmcloud cfee create-status
 {: #ibmcloud_cfee_create_status}
 
-Controlla lo stato di provisioning di un'istanza CFEE:
+Controlla lo stato di provisioning di un'istanza CFEE
+
 ```
 ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
 ```

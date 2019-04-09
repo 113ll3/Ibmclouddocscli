@@ -1,29 +1,40 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, vlan, classic vlan, ibmcloud sl vlan, ibmcloud sl
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-10-21"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
-# VLANs der klassischen Infrastruktur verwalten
-{: #manage-classic-vlans}
+# VLAN
 
-Virtual Local Area Networks (VLANs) werden von {{site.data.keyword.cloud}} zum Isolieren von Broadcast-Datenverkehr in öffentlichen und privaten Netzen verwendet. VLANs werden so hinzugefügt, wie es für andere Angebote erforderlich ist.
+Virtual Local Area Networks (VLANs) werden von {{site.data.keyword.cloud}} zum Isolieren von Broadcast-Datenverkehr in öffentlichen und privaten Netzen verwendet.
 
-Verwenden Sie die nachfolgend aufgeführten Befehle zum Verwalten von VLANs der klassischen Infrastruktur.
+Verwenden Sie die folgenden Befehle, um die VLANs der {{site.data.keyword.Bluemix_notm}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
-## ibmcloud sl vlan create
+<table summary="Alphabetisch geordnete VLAN-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl vlan create](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_create)</td>
+ <td>[ibmcloud sl vlan cancel](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_cancel)</td>
+ <td>[ibmcloud sl vlan detail](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_detail)</td>
+ <td>[ibmcloud sl vlan edit](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_edit)</td>
+ <td>[ibmcloud sl vlan list](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_list)</td>
+ <td>[ibmcloud sl vlan options](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_options)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl vlan create
 {: #sl_vlan_create}
 
 Neues VLAN erstellen.
@@ -49,14 +60,12 @@ ibmcloud sl vlan create [OPTIONEN]
 ```
 ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
-{: codeblock}
-
-Dieser Befehl erstellt ein öffentliches VLAN im Rechenzentrum `dal09` mit 16 IP-Adressen und dem Namen `myvlan`.
+Dieser Befehl erstellt ein öffentliches VLAN in Rechenzentrum dal09 mit 16 IP-Adressen und dem Namen myvlan.
 
 ## ibmcloud sl vlan cancel
 {: #sl_vlan_cancel}
 
-VLAN abbrechen
+Abbruch für VLAN.
 ```
 ibmcloud sl vlan cancel IDENTIFIER [OPTIONEN]
 ```
@@ -71,9 +80,7 @@ ibmcloud sl vlan cancel IDENTIFIER [OPTIONEN]
 ```
 ibmcloud sl vlan cancel 12345678 -f
 ```
-{: codeblock}
-
-Dieser Befehl bricht das VLAN mit der ID `12345678` ab, ohne zu einer Bestätigung aufzufordern. 
+Dieser Befehl bricht das VLAN mit der ID 12345678 ab, ohne zu einer Bestätigung aufzufordern.
 
 ## ibmcloud sl vlan detail
 {: #sl_vlan_detail}
@@ -95,9 +102,7 @@ ibmcloud sl vlan detail IDENTIFIER [OPTIONEN]
 ```
 ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 ```
-{: codeblock}
-
-Dieser Befehl zeigt Details zum VLAN mit der ID `12345678` an, ohne virtuelle Server oder Hardware-Server aufzulisten. 
+Dieser Befehl zeigt Details zum VLAN mit der ID 12345678 an, ohne virtuelle Server oder Hardware-Server aufzulisten.
 
 ## ibmcloud sl vlan edit
 {: #sl_vlan_edit}
@@ -117,9 +122,7 @@ ibmcloud sl vlan edit IDENTIFIER [OPTIONEN]
 ```
 ibmcloud sl vlan edit 12345678 -n myvlan-rename
 ```
-{: codeblock}
-
-Dieser Befehl aktualisiert das VLAN mit der ID `12345678` und benennt es in `myvlan-rename` um.
+Dieser Befehl aktualisiert das VLAN mit der ID 12345678 und benennt es in "myvlan-rename" um.
 
 ## ibmcloud sl vlan list
 {: #sl_vlan_list}
@@ -147,7 +150,7 @@ ibmcloud sl vlan list [OPTIONEN]
 ```
 ibmcloud sl vlan list -d dal09 --sortby number
 ```
-Dieser Befehl listet alle VLANs für das aktuelle Konto, gefiltert nach 'Rechenzentrum gleich `dal09`' auf und sortiert sie nach VLAN-Nummer.
+Dieser Befehl listet alle VLANs für das aktuelle Konto, gefiltert nach Rechenzentrum gleich dal09, und sortiert sie nach VLAN-Nummer.
 
 ## ibmcloud sl vlan options
 {: #sl_vlan_options}
@@ -156,12 +159,10 @@ Alle Optionen für die VLAN-Erstellung auflisten.
 ```
 ibmcloud sl vlan options
 ```
-{: codeblock}
+
 
 **Beispiele**:
 ```
 ibmcloud sl vlan options
 ```
-{: codeblock}
-
 Dieser Befehl listet alle Optionen für die VLAN-Erstellung auf, z. B. VLAN-Typ, Rechenzentren, Teilnetzgröße, Router usw.

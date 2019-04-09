@@ -1,31 +1,48 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: manage security, ssh keys, ssl certificates, ibmcloud sl security, certificate, ibmcloud sl, sshkey-add
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 보안 SSH 키 및 SSL 인증서 관리
-{: #sl-manage-security-keys}
 
 디바이스에서 구현되는 각 공개 키에 대한 해당 클라이언트의 비밀번호를 사용하지 않고 SSH 키를 통해 디바이스에 액세스할 수 있습니다. SSH 키를 디바이스에 추가하면, SSH 키와 함께 제공된 디바이스는 비밀번호를 사용하지 않고 해당 키의 디바이스에 액세스합니다.
 
 SSL 인증서는 사용자를 보호하기 위한 보안 수단으로 웹 사이트에서 사용으로 설정합니다. 일반적으로 기밀 정보를 웹 사이트에 전송해야 하는 경우에 사용됩니다.
 
-다음 명령을 사용하여 {{site.data.keyword.cloud}} 클래식 인프라 SSH 키 및 인증서를 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 클래식 인프라 SSH 키 및 인증서를 관리하십시오.
 {: shortdesc}
 
-## ibmcloud sl security sshkey-add
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 보안 명령">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl security sshkey-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_add)</td>
+  <td>[ibmcloud sl security sshkey-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_edit)</td>
+  <td>[ibmcloud sl security sshkey-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_list)</td>
+  <td>[ibmcloud sl security sshkey-print](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_print)</td>
+  <td>[ibmcloud sl security sshkey-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_remove)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl security cert-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_add)</td>
+  <td>[ibmcloud sl security cert-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_edit)</td>
+  <td>[ibmcloud sl security cert-download](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_download)</td>
+  <td>[ibmcloud sl security cert-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_list)</td>
+  <td>[ibmcloud sl security cert-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_remove)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 새 SSH 키를 추가합니다.
@@ -47,8 +64,6 @@ ibmcloud sl security sshkey-add LABEL [OPTIONS]
 ```
 ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
-{: codeblock}
-
 이 명령은 ~/.ssh/id_rsa.pub 파일에서 "mykey" 참고가 지정된 SSH 키를 추가합니다.
 
 ## ibmcloud sl security sshkey-edit
@@ -71,9 +86,7 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-{: codeblock}
-
-이 명령은 ID가 `12345678`인 SSH 키를 업데이트하고 레이블을 `ibmcloud`로 설정하고 참고를 `testing`으로 설정합니다.
+이 명령은 ID가 12345678인 SSH 키를 업데이트하고 레이블을 "ibmcloud"로 설정하며 참고를 "testing"으로 설정합니다.
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
@@ -93,8 +106,6 @@ ibmcloud sl security sshkey-list [OPTIONS]
 ```
 ibmcloud sl security sshkey-list --sortby label
 ```
-{: codeblock}
-
 이 명령은 현재 계정의 모든 SSH 키를 나열하고 레이블별로 정렬합니다.
 
 ## ibmcloud sl security sshkey-print
@@ -115,8 +126,6 @@ ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
-{: codeblock}
-
 이 명령은 ID와 레이블 그리고 ID가 12345678인 SSH 키의 참고를 표시하고 공개 키를 ~/mykey.pub 파일에 작성합니다.
 
 ## ibmcloud sl security sshkey-remove
@@ -137,9 +146,7 @@ ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-remove 12345678 -f
 ```
-{: codeblock}
-
-이 명령은 확인 요청 없이 ID가 `12345678`인 SSH 키를 제거합니다.
+이 명령은 확인 요청 없이 ID가 12345678인 SSH 키를 제거합니다.
 
 ## ibmcloud sl security cert-add
 {: #sl_security_cert_add}

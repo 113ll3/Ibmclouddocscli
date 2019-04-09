@@ -161,7 +161,7 @@ ibmcloud catalog entry-delete ID [--global]
 
 リソース `j402-dnf1i` を削除します
 ```
-ibmcloud catalog delete 'j402-dnf1i'
+ibmcloud catalog delete `j402-dnf1i`
 ```
 
 ## ibmcloud catalog entry-visibility
@@ -187,7 +187,6 @@ ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 <strong>例</strong>:
 
 グローバル・スコープでリソース `j402-dnf1i` の可視性を取得します
-
 ```
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
@@ -308,7 +307,7 @@ ibmcloud catalog template mobileBackendStarter
 指定されたテンプレートをベースにした、指定された URL と説明を持つ cf アプリケーションを作成します。 デフォルトでは、この新規アプリケーションは自動的に開始されます。
 
 ```
-ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
+ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNAME] [-desc DESCRIPTION] [--no-start]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -319,9 +318,11 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTI
    <dd>アプリケーションの作成時にアプリケーションの基となるテンプレート。 すべてのテンプレートの ID を表示するには、<i>ibmcloud templates</i> を使用します。</dd>
    <dt>CF_APP_NAME (必須)</dt>
    <dd>作成される cf アプリケーションの名前。</dd>
-   <dt>-u <i>URL</i> (オプション)</dt>
-   <dd>アプリケーションの経路。 指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.Bluemix_notm}} によって自動的に設定されます。</dd>
-   <dt>-d <i>DESCRIPTION</i> (オプション)</dt>
+   <dt>-n<i>HOSTNAME</i></dt>
+   <dd>CF アプリケーションのホスト名。 指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
+   <dt>-d<i>DOMAINNAME</i></dt>
+   <dd>CF アプリケーションのドメイン。指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
+   <dt>--desc <i>DESCRIPTION</i> (オプション)</dt>
    <dd>アプリケーションの説明。</dd>
    <dt>--no-start (オプション)</dt>
    <dd>アプリケーションが作成された後、アプリケーションを自動的に開始しません。 指定されない場合、アプリケーションは作成された後で自動的に開始されます。</dd>
@@ -335,11 +336,9 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTI
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
-`rubyHelloWorld` テンプレートに基づき、経路 `myrubyapp.chinabluemix.net` と説明 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.` を使用してアプリケーション `my-ruby-app` を作成するには、以下のように指定します。
-```
-ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
-```
-
+`rubyHelloWorld` テンプレートに基づき、
+```ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud"
+``` という記述を使用して、アプリケーション `my-ruby-app` を作成します。
 `pythonHelloWorld` テンプレートをベースにして、自動開始なしでアプリケーション `my-python-app` を作成します。
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
@@ -349,7 +348,6 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 {: #ibmcloud_catalog_locations}
 
 選択されたフォーマットで地域の選択サブセットを取得します。
-
 ```
 ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```

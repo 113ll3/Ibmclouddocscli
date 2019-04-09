@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ibmcloud sl globalip, globalip, global ip addresses, assign global ip
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,14 +13,25 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # Gestion des adresses IP globales
-{: #sl-manage-global-ip}
 
 Une adresse IP globale est un sous-réseau secondaire statique spécialisé. Il vous est distribué en tant que sous-réseau /32 (en d'autres termes, une seule adresse IP) qui peut être routé vers n'importe quelle autre adresse IP sur votre compte.
 
 Les commandes suivantes permettent de gérer une adresse IP globale dans le service Global IP de l'infrastructure classique {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-## ibmcloud sl globalip assign
+<table summary="Commandes Global IP de l'infrastructure classique {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>
+  <td>[ibmcloud sl globalip cancel](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_cancel)</td>
+  <td>[ibmcloud sl globalip create](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_create)</td>
+ <td>[ibmcloud sl globalip list](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_list)</td>
+ <td>[ibmcloud sl globalip unassign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_unassign)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 Permet d'affecter une adresse IP globale à un routeur ou un périphérique cible.
@@ -30,12 +39,12 @@ Permet d'affecter une adresse IP globale à un routeur ou un périphérique cibl
 ibmcloud sl globalip assign IDENTIFIER TARGET
 ```
 
+
 **Exemples** :
 ```
 ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
-
-Cette commande affecte une adresse IP portant l'ID `12345678` à une unité cible dont l'adresse IP est `9.111.123.456`.
+Cette commande affecte une adresse IP portant l'ID 12345678 à une unité cible dont l'adresse IP est 9.111.123.456.
 
 ## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
@@ -55,8 +64,7 @@ ibmcloud sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl globalip cancel 12345678
 ```
-
-Cette commande annule une adresse IP portant l'ID `12345678`.
+Cette commande annule une adresse IP portant l'ID 12345678.
 
  ## ibmcloud sl globalip create
 {: #sl_globalip_create}
@@ -80,7 +88,6 @@ ibmcloud sl globalip create [OPTIONS]
 ```
 ibmcloud sl globalip create --v6
 ```
-
 Cette commande crée une adresse IP V6.
 
 ## ibmcloud sl globalip list
@@ -105,7 +112,6 @@ ibmcloud sl globalip list [OPTIONS]
 ```
 ibmcloud sl globalip list --v4
 ```
-
 Cette commande répertorie toutes les adresses IP V4 sur le compte en cours.
 
 ## ibmcloud sl globalip unassign
@@ -121,5 +127,4 @@ ibmcloud sl globalip unassign IDENTIFIER
 ```
 ibmcloud sl globalip unassign 12345678
 ```
-
-Cette commande annule l'affectation à l'unité cible d'une adresse IP portant l'ID `12345678`.
+Cette commande annule l'affectation d'une adresse IP portant l'ID 12345678 à partir de l'unité cible.

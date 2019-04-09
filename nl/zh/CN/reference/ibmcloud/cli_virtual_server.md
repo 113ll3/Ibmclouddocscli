@@ -1,29 +1,60 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 创建和使用虚拟服务器
-{: #cli-virtual-servers}
 
-{{site.data.keyword.BluVirtServers}} 是可缩放的虚拟服务器，随专用核心和内存分配一起购买。如果您要寻找的是能在几分钟内完成添加且有权访问映像模板等功能的计算资源，那么这是不错的选择。 
+{{site.data.keyword.BluVirtServers}} 是可扩展的虚拟服务器，随专用核心和内存分配一起购买。如果您要寻找的是能在几分钟内完成添加且有权访问映像模板等功能的计算资源，那么这是不错的选择。 
 
 使用以下命令可管理经典基础架构虚拟服务器。
 {: shortdesc}
 
-## ibmcloud sl vs cancel
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构虚拟服务器命令（带有可获取命令的更多信息的链接）">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl vs cancel](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_cancel)</td>
+ <td>[ibmcloud sl vs capture](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_capture)</td>
+ <td>[ibmcloud sl vs create](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_create)</td>
+ <td>[ibmcloud sl vs options](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_options)</td>
+ <td>[ibmcloud sl vs credentials](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_credentials)</td>
+ <td>[ibmcloud sl vs detail](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_detail)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs dns-sync](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_dns_sync)</td>
+ <td>[ibmcloud sl vs edit](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_edit)</td>
+ <td>[ibmcloud sl vs host-create](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_host_create)</td>
+ <td>[ibmcloud sl vs host-list](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_host_list)</td>
+ <td>[ibmcloud sl vs list](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_list)</td>
+ <td>[ibmcloud sl vs pause](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_pause)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs power-off](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_power_off)</td>
+ <td>[ibmcloud sl vs power-on](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_power_on)
+ <td>[ibmcloud sl vs ready](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_ready)</td>
+ <td>[ibmcloud sl vs reboot](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_reboot)</td>
+ <td>[ibmcloud sl vs reload](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_reload)</td>
+ <td>[ibmcloud sl vs rescue](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_rescue)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs resume](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_resume)</td>
+ <td>[ibmcloud sl vs upgrade](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_upgrade)</td>
+</tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl vs cancel
 {: #sl_vs_cancel}
 
 取消虚拟服务器实例。
@@ -41,9 +72,10 @@ ibmcloud sl vs cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs cancel 12345678
 ```
-{: codeblock}
+此命令取消标识为 12345678 的虚拟服务器实例。
 
-此命令取消标识为 `12345678` 的虚拟服务器实例。
+
+
 
 ## ibmcloud sl vs capture
 {: #sl_vs_capture}
@@ -67,9 +99,7 @@ ibmcloud sl vs capture IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs capture 12345678 -n mycloud --all --note testing
 ```
-{: codeblock}
-
-此命令将标识为 `12345678` 的虚拟服务器实例的所有磁盘捕获到名为 `mycloud` 的映像中，注释为 `testing`。
+此命令将标识为 12345678 的虚拟服务器实例中的所有磁盘捕获到名为“mycloud”的映像中，注释为“testing”。
 
 ## ibmcloud sl vs create
 {: #sl_vs_create}
@@ -90,7 +120,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-m, --memory</dt>
 <dd>必需。内存（以兆字节为单位）。</dd>
 <dt>--flavor</dt>
-<dd>Public Virtual Server 类型模板键名。</dd>
+<dd>公共虚拟服务器类型模板键名。</dd>
 <dt>-d, --datacenter</dt>
 <dd>必需。数据中心短名称。</dd>
 <dt>-o, --os</dt>
@@ -102,7 +132,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>--dedicated</dt>
 <dd>创建专用虚拟服务器（专用节点）。</dd>
 <dt>--host-id</dt>
-<dd>要将 Dedicated Virtual Server 供应到的主机标识。</dd>
+<dd>要将专用虚拟服务器供应到的主机标识。</dd>
 <dt>--san</dt>
 <dd>使用 SAN 存储器（而非本地磁盘）。</dd>
 <dt>--test</dt>
@@ -130,7 +160,7 @@ ibmcloud sl vs create [OPTIONS]
 <dt>-F, --userfile</dt>
 <dd>从文件中读取用户数据。</dd>
 <dt>--vlan-public</dt>
-<dd>要将虚拟服务器放到其中的公用 VLAN 的标识。</dd>
+<dd>要将虚拟服务器放到其中的公共 VLAN 的标识。</dd>
 <dt>--vlan-private</dt>
 <dd>要将虚拟服务器放到其中的专用 VLAN 的标识。</dd>
 <dt>-S, --public-security-group</dt>
@@ -147,9 +177,7 @@ ibmcloud sl vs create [OPTIONS]
 ```
 ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
-{: codeblock}
-
-此命令订购虚拟服务器实例，其主机名为 myvsi，域为 ibm.com，4 个 CPU 核心，4096 M 内存，位于数据中心 `dal10`。
+此命令订购虚拟服务器实例，其主机名为 myvsi，域为 ibm.com，4 个 CPU 核心，4096M 内存，位于数据中心 dal10。
 
 ## ibmcloud sl vs options
 {: #sl_vs_options}
@@ -159,12 +187,11 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ibmcloud sl vs options [OPTIONS]
 ```
 
+
 **示例**：
 ```
 ibmcloud sl vs options
 ```
-{: codeblock}
-
 此命令列出用于创建虚拟服务器实例的所有选项，例如，数据中心、CPU、内存、操作系统、磁盘、网络速度等。
 
 
@@ -179,13 +206,14 @@ ibmcloud sl vs options
 ibmcloud sl vs credentials IDENTIFIER [OPTIONS]
 ```
 
+
 **示例**：
 ```
 ibmcloud sl vs credentials 12345678
 ```
-{: codeblock}
+此命令列出标识为 12345678 的虚拟服务器实例的所有用户名和密码对。
 
-此命令列出标识为 `12345678` 的虚拟服务器实例的所有用户名和密码对。
+
 
 ## ibmcloud sl vs detail
 {: #sl_vs_detail}
@@ -207,9 +235,10 @@ ibmcloud sl vs detail IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs details 12345678
 ```
-{: codeblock}
+此命令列出有关标识为 12345678 的虚拟服务器实例的详细信息。
 
-此命令列出有关标识为 `12345678` 的虚拟服务器实例的详细信息。
+
+
 
 ## ibmcloud sl vs dns-sync
 {: #sl_vs_dns_sync}
@@ -237,9 +266,8 @@ ibmcloud sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
-{: codeblock}
+此命令将标识为 12345678 的虚拟服务器实例的 A 记录（IP V4 地址）与 DNS 服务器同步，并将此 A 记录的 ttl 设置为 3600。
 
-此命令将标识为 `12345678` 的虚拟服务器实例的 A 记录（IP V4 地址）与 DNS 服务器同步，并将此 A 记录的 TTL 设置为 3600。
 
 ## ibmcloud sl vs edit
 {: #sl_vs_edit}
@@ -271,7 +299,7 @@ ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 1000
 ```
-此命令更新标识为 `12345678` 的虚拟服务器实例，并将其域设置为“ibm.com”，主机名设置为“myapp”，标记设置为“testcli”。
+此命令更新标识为 12345678 的虚拟服务器实例，并将其域设置为“ibm.com”，主机名设置为“myapp”，标记设置为“testcli”。
 
 ## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
@@ -386,7 +414,11 @@ ibmcloud sl vs pause IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs pause 12345678 -f
 ```
-此命令暂停标识为 `12345678` 的虚拟服务器实例，而不要求确认。
+此命令暂停标识为 12345678 的虚拟服务器实例，而不要求确认。
+
+
+
+
 
 ## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
@@ -410,7 +442,9 @@ ibmcloud sl vs power-off IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs power-off 12345678 --soft
 ```
-此命令对标识为 `12345678` 的虚拟服务器实例执行软电源关闭操作。
+此命令对标识为 12345678 的虚拟服务器实例执行软电源关闭操作。
+
+
 
 ## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
@@ -430,9 +464,10 @@ ibmcloud sl vs power-on IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs power-on 12345678
 ```
-{: codeblock}
+此命令对标识为 12345678 的虚拟服务器实例执行打开电源操作。
 
-此命令对标识为 `12345678` 的虚拟服务器实例执行打开电源操作。
+
+
 
 ## ibmcloud sl vs ready
 {: #sl_vs_ready}
@@ -452,7 +487,9 @@ ibmcloud sl vs ready IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs ready 12345678 --wait 30
 ```
-此命令检查标识为 `12345678` 的虚拟服务器实例的状态以确定其是否准备就绪可供持续使用，并且最多等待 30 秒。
+此命令检查标识为 12345678 的虚拟服务器实例的状态以确定其是否准备就绪可持续使用，并且最长等待 30 秒。
+
+
 
 ## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
@@ -476,9 +513,11 @@ ibmcloud sl vs reboot IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs reboot 12345678 --hard
 ```
-{: codeblock}
+此命令对标识为 12345678 的虚拟服务器实例执行硬重新引导。
 
-此命令对标识为 `12345678` 的虚拟服务器实例执行硬重新引导。
+
+
+
 
 ## ibmcloud sl vs reload
 {: #sl_vs_reload}
@@ -506,12 +545,13 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs reload 12345678
 ```
-此命令为标识为 `12345678` 的虚拟服务器实例重新装入当前操作系统。
+此命令为标识为 12345678 的虚拟服务器实例重新装入当前操作系统。
+
 
 ## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
 
-将虚拟服务器实例重新引导至急救映像。
+将虚拟服务器实例重新引导至拯救映像。
 ```
 ibmcloud sl vs rescue IDENTIFIER [OPTIONS]
 ```
@@ -526,7 +566,10 @@ ibmcloud sl vs rescue IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs rescue 12345678
 ```
-此命令将标识为 `12345678` 的虚拟服务器实例重新引导到急救映像。
+此命令将标识为 12345678 的虚拟服务器实例重新引导到拯救映像。
+
+
+
 
 ## ibmcloud sl vs resume
 {: #sl_vs_resume}
@@ -546,7 +589,10 @@ ibmcloud sl vs resume IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs resume 12345678
 ```
-此命令恢复标识为 `12345678` 的虚拟服务器实例。
+此命令恢复标识为 12345678 的虚拟服务器实例。
+
+
+
 
 ## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}
@@ -574,6 +620,4 @@ ibmcloud sl vs upgrade IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
-{: codeblock}
-
-此命令升级标识为 `12345678` 的虚拟服务器实例，并将 CPU 核心数设置为 8，内存设置为 8192 M，网络端口速度设置为 1000 Mbps。
+此命令升级标识为 12345678 的虚拟服务器实例，并将 CPU 核心数设置为 8，内存设置为 8192M，网络端口速度设置为 1000 Mbps。

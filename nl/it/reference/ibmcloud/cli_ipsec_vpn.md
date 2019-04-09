@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ipsec, vpn, ibmcloud sl ipsec, tunnel, vpn access, datacenter, encryption
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,14 +13,35 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # Gestione dei tunnel VPN IPSec
-{: #sl-manage-ipsec-vpn-tunnels}
 
-L'accesso VPN {{site.data.keyword.cloud}} consente agli utenti di gestire tutti i server in remoto e in modo sicuro sulla rete privata {{site.data.keyword.cloud_notm}}. Una connessione VPN dalla tua ubicazione alla rete privata ti offre la possibilità di gestione fuori banda e di recupero del server tramite un tunnel VPN crittografato.
+L'accesso VPN {{site.data.keyword.Bluemix}} consente agli utenti di gestire tutti i server in remoto e in modo sicuro sulla rete privata {{site.data.keyword.Bluemix_notm}}. Una connessione VPN dalla tua ubicazione alla rete privata ti offre la possibilità di gestione fuori banda e di recupero del server tramite un tunnel VPN crittografato.
 
-Utilizza i seguenti comandi per gestire i tunnel VPN IPSec nel servizio VPN IPSec dell'infrastruttura classica {{site.data.keyword.cloud_notm}}.
+Utilizza i seguenti comandi per gestire i tunnel VPN IPSec nel servizio VPN IPSec dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-## ibmcloud sl ipsec cancel
+<table summary="Comandi VPN IPSec {{site.data.keyword.Bluemix_notm}} riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl ipsec cancel](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_cancel)</td>
+ <td>[ibmcloud sl ipsec config](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_config)</td>
+ <td>[ibmcloud sl ipsec detail](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_detail)</td>
+ <td>[ibmcloud sl ipsec list](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_list)</td>
+ <td>[ibmcloud sl ipsec order](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_order)</td>
+ <td>[ibmcloud sl ipsec subnet-add](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_subnet_add)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl ipsec subnet-remove](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_subnet_remove)</td>
+ <td>[ibmcloud sl ipsec translation-add](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_add)</td>
+ <td>[ibmcloud sl ipsec translation-remove](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_remove)</td>
+ <td>[ibmcloud sl ipsec translation-update](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_update)</td>
+ <td>[ibmcloud sl ipsec update](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_update)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 Annulla un contesto tunnel VPN IPSec.
@@ -43,7 +62,7 @@ ibmcloud sl ipsec cancel ID_CONTESTO [OPZIONI]
 ## ibmcloud sl ipsec config
 {: #sl_ipsec_config}
 
-Richiede la configurazione di un contesto tunnel.
+Richiedi configurazione di un contesto tunnel.
 ```
 ibmcloud sl ipsec config ID_CONTESTO [OPZIONI]
 ```
@@ -93,7 +112,7 @@ ibmcloud sl ipsec order [OPZIONI]
 ## ibmcloud sl ipsec subnet-add
 {: #sl_ipsec_subnet_add}
 
-Aggiunge una sottorete a un contesto tunnel IPSec.
+Aggiungi una sottorete a un contesto tunnel IPSec.
 ```
 ibmcloud sl ipsec subnet-add ID_CONTESTO [OPZIONI]
 ```
@@ -111,7 +130,7 @@ ibmcloud sl ipsec subnet-add ID_CONTESTO [OPZIONI]
 ## ibmcloud sl ipsec subnet-remove
 {: #sl_ipsec_subnet_remove}
 
-Rimuove una sottorete da un contesto tunnel IPSEC.
+Rimuovi una sottorete da un contesto tunnel IPSEC.
 ```
 ibmcloud sl ipsec subnet-remove ID_CONTESTO ID_SOTTORETE TIPO_SOTTORETE [OPZIONI]
 ```
@@ -119,7 +138,7 @@ ibmcloud sl ipsec subnet-remove ID_CONTESTO ID_SOTTORETE TIPO_SOTTORETE [OPZIONI
 ## ibmcloud sl ipsec translation-add
 {: #sl_ipsec_translation_add}
 
-Aggiunge una traduzione di indirizzo a un tunnel IPSec.
+Aggiungi una traduzione di indirizzo a un tunnel IPSec.
 ```
 ibmcloud sl ipsec translation-add ID_CONTESTO [OPZIONI]
 ```
@@ -137,7 +156,7 @@ ibmcloud sl ipsec translation-add ID_CONTESTO [OPZIONI]
 ## ibmcloud sl ipsec translation-remove
 {: #sl_ipsec_translation_remove}
 
-Rimuove una voce di traduzione da un IPSec.
+Rimuovi una voce di traduzione da un IPSec.
 ```
 ibmcloud sl ipsec translation-remove ID_CONTESTO ID_CONVERSIONE [OPZIONI]
 ```

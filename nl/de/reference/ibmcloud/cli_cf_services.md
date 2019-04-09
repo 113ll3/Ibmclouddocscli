@@ -1,27 +1,54 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: cloud foundry services, ibmcloud service, offerings, service list, service show, service create, service bind, service unbind, unbind service, service keys
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-08-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Cloud Foundry-Services erstellen, löschen und binden
+# Cloud-Foundry-Services
 {: #ibmcloud_commands_services}
 
-Verwenden Sie die folgenden Befehle, um die Serviceangebote, Serviceinstanzen, Servicebindungen und Schlüssel für den {{site.data.keyword.Bluemix_notm}} Cloud Foundry-Service zu  verwalten.
+Verwenden Sie die folgenden Befehle, um die Serviceangebote, Serviceinstanzen, Servicebindungen und Schlüssel für den {{site.data.keyword.Bluemix_notm}}-Foundry-Service zu verwalten.
 {: shortdesc}
 
-## ibmcloud service offerings
+<table summary="Zum Verwalten der {{site.data.keyword.Bluemix_notm}}-Cloud Foundry-Services verwendbare ibmcloud-Befehle">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud service offerings](cli_cf_services.html#ibmcloud_service_offerings)</td>
+ <td>[ibmcloud service list](cli_cf_services.html#ibmcloud_service_list)</td>
+ <td>[ibmcloud service show](cli_cf_services.html#ibmcloud_service_show)</td>
+ <td>[ibmcloud service create](cli_cf_services.html#ibmcloud_service_create)</td>
+ <td>[ibmcloud service update](cli_cf_services.html#ibmcloud_service_update)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud service delete](cli_cf_services.html#ibmcloud_service_delete)</td>
+ <td>[ibmcloud service rename](cli_cf_services.html#ibmcloud_service_rename)</td>
+ <td>[ibmcloud service bind](cli_cf_services.html#ibmcloud_service_bind)</td>
+ <td>[ibmcloud service unbind](cli_cf_services.html#ibmcloud_service_unbind)</td>
+ <td>[ibmcloud service key-create](cli_cf_services.html#ibmcloud_service_key_create)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud service key-delete](cli_cf_services.html#ibmcloud_service_key_delete)</td>
+ <td>[ibmcloud service keys](cli_cf_services.html#ibmcloud_service_keys)</td>
+ <td>[ibmcloud service key-show](cli_cf_services.html#ibmcloud_service_key_show)</td>
+ <td>[ibmcloud service user-provided-create](cli_cf_services.html#ibmcloud_service_user_provided_create)</td>
+ <td>[ibmcloud service user-provided-update](cli_cf_services.html#ibmcloud_service_user_provided_update)</td>
+ </tr>
+  </tbody>
+ </table>
+
+ ## ibmcloud service offerings
 {: #ibmcloud_service_offerings}
+
 
 Dieser Befehl hat dieselbe Funktion und dieselben Optionen wie der Befehl [cf marketplace ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window}.
 

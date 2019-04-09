@@ -1,81 +1,84 @@
 ---
 
+
+
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-26"
 
-keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+  years: 2016, 2018
 
-subcollection: cloud-cli
+lastupdated: "2018-07-27"
+
 
 ---
+
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
-{:note: .note}
 
-# Mit cf-Befehlen arbeiten
+
+# Cloud Foundry-Befehle (cf-Befehle)
 {: #cf}
 
-Die Befehlszeilenschnittstelle (CLI) von Cloud Foundry (CF) stellt Befehle bereit, mit denen Sie Ihre Apps verwalten können. In der nachfolgenden Liste sind die für die App-Verwaltung am häufigsten verwendeten cf-Befehle mit Namen, Optionen, Nutzungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Um alle cf-Befehle und die zugehörigen Hilfeinformationen aufzulisten, verwenden Sie `cf help`. Mit dem Befehl `cf command_name -h` können Sie detaillierte Hilfeinformationen zu einem bestimmten Befehl anzeigen.
+Die Befehlszeilenschnittstelle (CLI) von Cloud Foundry (cf) stellt Befehle bereit, mit denen Sie Ihre Apps verwalten können. In der nachfolgenden Liste sind die für die App-Verwaltung am häufigsten verwendeten cf-Befehle mit Namen, Optionen, Nutzungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Um alle cf-Befehle und die zugehörigen Hilfeinformationen aufzulisten, verwenden Sie `cf help`. Mit dem Befehl `cf command_name -h` können Sie detaillierte Hilfeinformationen zu einem bestimmten Befehl anzeigen.
 {: shortdesc}
 
-Weitere Informationen zum Einstieg in die Cloud Foundry-CLI finden Sie in [Getting Started](https://github.com/cloudfoundry/cli#getting-started){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link").
+Weitere Details zur Einführung in die Cloud Foundry-Befehlszeilenschnittstelle finden Sie in [Einführung](https://github.com/cloudfoundry/cli#getting-started).
 
-Eine detailliertere Liste von `cf CLI`-Befehlen finden Sie in der Community im [Cloud Foundry CLI Reference Guide](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link").
+Eine detailliertere Liste von `cf CLI`-Befehlen finden Sie in der Community im [Cloud Foundry CLI Reference Guide ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}.
 
-Wenn sich in Ihrem Netz zwischen dem Host, auf dem die cf-Befehle ausgeführt werden, und dem Cloud Foundry-API-Endpunkt ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers durch Festlegung der Umgebungsvariablen `HTTP_PROXY` angeben. Details finden Sie in [Using the cf CLI with a Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link").
-{: note}
+**Hinweis:** Wenn sich in Ihrem Netz zwischen dem Host, auf dem die cf-Befehle ausgeführt werden, und dem Cloud Foundry-API-Endpunkt ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers durch Festlegung der Umgebungsvariablen `HTTP_PROXY` angeben. Details hierzu finden Sie unter [Using the cf CLI with an HTTP Proxy Server ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+
 
 ## Index für Befehle der Cloud Foundry-CLI
 {: #CLIname_commands_index}
 
 Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig verwendeten Cloud Foundry-Befehle:
 
-<table summary="Allgemeine Cloud Foundry-Befehle in alphabetischer Reihenfolge mit Links zu näheren Befehlsinformationen">
+<table summary="Allgemeine Cloud Foundry-Befehle mit Links zu weiteren Informationen über den Befehl, in alphabetischer Reihenfolge">
 <caption>Tabelle 1. Allgemeine Cloud Foundry-Befehle</caption>
  <thead>
  <th colspan="6">Allgemeine Cloud Foundry-Befehle</th>
  </thead>
  <tbody>
  <tr>
- <td>[api](#cf_api)</td>
- <td>[help](#cf_help)</td>
- <td>[login](#cf_login)</td>
- <td>[stacks](#cf_stacks)</td>
- <td>[target](#cf_target)</td>
- <td>[-v ](#cf_v)</td>
+ <td>[api](/docs/cli/reference/ibmcloud/cf_index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/ibmcloud/cf_index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/ibmcloud/cf_index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/ibmcloud/cf_index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/ibmcloud/cf_index.html#cf_target)</td>
+ <td>[-v ](/docs/cli/reference/ibmcloud/cf_index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
 
-<table summary="Befehle zur Verwaltung von Apps, Bereichen und Services in alphabetischer Reihenfolge. Jeder Befehl verfügt über einen Link, der Ihnen weitere Informationen zu dem Befehl gibt.">
+
+<table summary="Alphabetisch geordnete Befehle zur Verwaltung von Apps, Bereichen und Services. Jeder Befehl verfügt über einen Link, der Ihnen weitere Informationen zu dem Befehl gibt.">
 <caption>Tabelle 2. Befehle zur Verwaltung von Apps, Bereichen und Services</caption>
  <thead>
  <th colspan="5">Befehle zur Verwaltung von Apps, Bereichen und Services</th>
  </thead>
  <tbody>
  <tr>
- <td>[apps](#cf_apps)</td>
- <td>[bind-service](#cf_bind-service)</td>
- <td>[create-service](#cf_create-service)</td>
- <td>[create-space](#cf_create-space)</td>
- <td>[delete](#cf_delete)</td>
+ <td>[apps](/docs/cli/reference/ibmcloud/cf_index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-space)</td>
+ <td>[delete](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/#cf_delete-space)</td>
- <td>[events](#cf_events)</td>
- <td>[Protokolle](#cf_logs)</td>
- <td>[marketplace](#cf_marketplace)</td>
- <td>[Push-Operation](#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete-space)</td>
+ <td>[events](/docs/cli/reference/ibmcloud/cf_index.html#cf_events)</td>
+ <td>[Protokolle](/docs/cli/reference/ibmcloud/cf_index.html#cf_logs)</td>
+ <td>[marketplace](/docs/cli/reference/ibmcloud/cf_index.html#cf_marketplace)</td>
+ <td>[Push-Operation](/docs/cli/reference/ibmcloud/cf_index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](#cf_scale)</td>
- <td>[services](#cf_services)
- <td>[set-env](#cf_set-env)</td>
- <td>[ssh](#cf_ssh)</td>
- <td>[stop](#cf_stop)</td>
+ <td>[scale](/docs/cli/reference/ibmcloud/cf_index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/ibmcloud/cf_index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/ibmcloud/cf_index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/ibmcloud/cf_index.html#cf_ssh)</td>
+ <td>[stop](/docs/cli/reference/ibmcloud/cf_index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
@@ -83,7 +86,8 @@ Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig v
 ## cf api
 {: #cf_api}
 
-Verwenden Sie diesen Befehl, um die URL des API-Endpunkts von {{site.data.keyword.cloud}} anzuzeigen oder anzugeben.
+Verwenden Sie diesen Befehl, um die URL des API-Endpunkts von {{site.data.keyword.Bluemix_notm}} anzuzeigen oder anzugeben.
+
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
@@ -94,13 +98,13 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (optional)</dt>
-   <dd>Die URL des {{site.data.keyword.cloud_notm}}-API-Endpunkts, die Sie für das Herstellen einer Verbindung zu {{site.data.keyword.cloud_notm}} angeben müssen. In der Regel ist diese URL `https://api.{DomainName}`.
+   <dd>Die URL des Bluemix-API-Endpunkts, die Sie für das Herstellen einer Verbindung zu {{site.data.keyword.Bluemix_notm}} angeben müssen. In der Regel ist diese URL `https://api.{DomainName}`.
    Wenn Sie die URL des API-Endpunkts anzeigen möchten, den Sie zurzeit verwenden, müssen Sie diesen Parameter für den Befehl 'cf api' nicht angeben.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Inaktiviert den Prozess der SSL-Validierung. Die Verwendung dieses Parameters kann zu Sicherheitsproblemen führen.</dd>
    <dt>* --unset</dt>
    <dd>Entfernt Verbindungsinformationen für alle API-Endpunkte.</dd>
-   </dl>
+    </dl>
 
 <strong>Beispiele</strong>:
 
@@ -110,17 +114,18 @@ cf api
 ```
 {: codeblock}
 
-Verbindung zu allen API-Endpunkten für api.us-south.cf.cloud.ibm.com entfernen:
+Verbindung zu allen API-Endpunkten für api.ng.bluemix.net entfernen
 ```
-cf api api.us-south.cf.cloud.ibm.com --unset
+cf api api.ng.bluemix.net --unset
 ```
 {: codeblock}
 
-SSL-Validierungsprozess für api.us-south.cf.cloud.ibm.com inaktivieren:
+SSL-Validierungsprozess für api.ng.bluemix.network inaktivieren
 ```
-cf api api.us-south.cf.cloud.ibm.com --skip-ssl-validation
+cf api api.ng.bluemix.net --skip-ssl-validation
 ```
 {: codeblock}
+
 
 ## cf apps
 {: #cf_apps}
@@ -132,9 +137,9 @@ Nehmen Sie an, dass Sie über eine einzige Instanz für eine App verfügen und i
 ```
 cf apps
 ```
-{: codeblock}
 
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
+
 
 ## cf bind-service
 {: #cf_bind-service}
@@ -144,7 +149,6 @@ Bindet eine vorhandene Serviceinstanz an Ihre Anwendung.
 ```
 cf bind-service appname service_instance
 ```
-{: codeblock}
 
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
 
@@ -174,7 +178,6 @@ Erstellen einer Serviceinstanz.
 ```
 cf create-service service_name service_plan service_instance
 ```
-{: codeblock}
 
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
 
@@ -253,7 +256,7 @@ cf delete appname [-f] [-r]
 
 <strong>Beispiele</strong>:
 
-Löscht eine Anwendung mit dem Namen `my_app` (erfordert eine Bestätigung).
+Löschen einer Anwendung mit dem Namen `my_app` (erfordert eine Bestätigung).
 ```
 cf delete my_app
 ```
@@ -282,6 +285,7 @@ cf delete my_app -f -r
 {: #cf_delete-space}
 
 Löscht einen Bereich.
+
 ```
 cf delete-space space_name [-f]
 ```
@@ -296,11 +300,11 @@ cf delete-space space_name [-f]
    <dt>*-f* (optional)</dt>
    <dd>Erzwingt die Löschung des Bereichs ohne Bestätigung.</dd>
    *Hinweis:* Das Löschen eines Bereichs ist eine Operation, die nicht rückgängig gemacht werden kann.
-   </dl>
+    </dl>
 
 <strong>Beispiele</strong>:
 
-Löscht eine Anwendung mit dem Namen `my_app` (erfordert eine Bestätigung).
+Löschen einer Anwendung mit dem Namen `my_app` (erfordert eine Bestätigung).
 ```
 cf delete my_app
 ```
@@ -318,7 +322,7 @@ cf delete my_app -r
 ```
 {: codeblock}
 
-Löscht eine Anwendung mit dem Namen `my_app` und alle Domänen, die `my_app` zugeordnet sind, ohne erforderliche Bestätigung.
+Löschen einer Anwendung mit dem Namen `my_app` und aller Domänennamen, die `my_app` zugeordnet sind, ohne erforderliche Bestätigung.
 ```
 cf delete my_app -f -r
 ```
@@ -333,7 +337,6 @@ Zeigt Laufzeitereignisse an, die sich auf eine Anwendung beziehen.
 ```
 cf events [appname]
 ```
-{: codeblock}
 
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
 
@@ -361,7 +364,6 @@ Anzeigen von Hilfeinformationen für alle cf-Befehle oder für einen bestimmten 
 ```
 cf help [command_name]
 ```
-{: codeblock}
 
 <strong>Voraussetzungen</strong>: keine.
 
@@ -390,10 +392,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Hiermit melden Sie sich bei {{site.data.keyword.cloud_notm}} an. Wenn Sie sich mit einer föderierten ID anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden. 
+Hiermit melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an. Wenn Sie sich mit einer [eingebundenen ID](/docs/admin/account.html#signup) anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden.
 
-Sie können für die Anmeldung auch einen API-Schlüssel für die {{site.data.keyword.cloud_notm}}-Plattform verwenden. Verwenden Sie den Benutzernamen `apikey` und Ihren API-Schlüsselwert als Kennwort. Weitere Informationen zum Erstellen eines API-Schlüssels finden Sie im Abschnitt mit [Informationen zu API-Schlüsseln](/docs/iam?topic=iam-manapikey#manapikey).
-{: note}
+**Hinweis**: Sie können für die Anmeldung auch einen API-Schlüssel für die {{site.data.keyword.Bluemix_notm}}-Plattform verwenden. Verwenden Sie den Benutzernamen `apikey` und Ihren API-Schlüsselwert als Kennwort. Weitere Informationen zum Erstellen eines API-Schlüssels finden Sie im Abschnitt [API-Schlüssel verwalten](/docs/iam/apikeys.html).
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -405,14 +406,14 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <dl>
 <dt>*-a* https://api.{DomainName} (optional)</dt>
-<dd>Die URL des API-Endpunkts von {{site.data.keyword.cloud_notm}}.</dd>
+<dd>Die URL des API-Endpunkts von {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-u* user_name (optional)</dt>
 <dd>Ihr Benutzername.</dd>
 <dt>*-p* password (optional)</dt>
 <dd>Ihr Kennwort.</dd>
 <dd>*Wichtig* Wenn Sie Ihr Kennwort mithilfe des Parameters *-p* in der Befehlszeilenschnittstelle angeben, wird es möglicherweise im Befehlszeilenprotokoll aufgezeichnet. Sie sollten aus Sicherheitsgründen das Kennwort nicht mithilfe des Parameters -p angeben. Geben Sie stattdessen das Kennwort ein, wenn Sie in der Befehlszeilenschnittstelle dazu aufgefordert werden.</dd>
 <dt>*-sso*</dt>
-<dd>Sie müssen die SSO-Option (SSO - Single Sign-on) verwenden, wenn Sie sich mit einer föderierten ID anmelden. Dies ist nicht erforderlich, wenn Sie sich mit einer IBMid anmelden. Wenn Sie versuchen, sich mit einer föderierten ID anzumelden und dabei keinen SSO-Parameter angeben, werden Sie aufgefordert, den Parameter anzugeben. Bei Verwendung des SSO-Parameters werden Sie aufgefordert, beim Anmelden den einmaligen Kenncode einzugeben.</dd>
+<dd>Sie müssen die SSO-Option (SSO - Single Sign-on) verwenden, wenn Sie sich mit einer eingebundenen ID anmelden. Dies ist nicht erforderlich, wenn Sie sich mit einer IBMid anmelden. Wenn Sie versuchen, sich mit einer eingebundenen ID anzumelden und dabei keinen SSO-Parameter angeben, werden Sie aufgefordert, den Parameter anzugeben. Bei Verwendung des SSO-Parameters werden Sie aufgefordert, beim Anmelden den einmaligen Kenncode einzugeben.</dd>
 <dt>*-o* organization_name</dt>
 <dd>Der Name der Organisation, bei der Sie sich anmelden möchten.</dd>
 <dt>*-s* space_name</dt>
@@ -425,33 +426,33 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>Beispiele</strong>:
 
-Melden Sie sich bei {{site.data.keyword.cloud_notm}} an.
+Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an.
 ```
 cf login
 ```
 {: codeblock}
 
-Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit dem definierten Endpunkt `https://api.us-south.cf.cloud.ibm.com` an.
+Anmeldung bei {{site.data.keyword.Bluemix_notm}} mit dem definierten Endpunkt `https://api.ng.bluemix.net`.
 ```
-cf login -a https://api.us-south.cf.cloud.ibm.com
-```
-{: codeblock}
-
-Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit dem definierten Endpunkt `https://api.us-south.cf.cloud.ibm.com`, dem Benutzernamen `user_name` und aus Sicherheitsgründen ohne Angabe eines Kennworts an.
-```
-cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name
+cf login -a https://api.ng.bluemix.net
 ```
 {: codeblock}
 
-Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit dem definierten Endpunkt `https://api.us-south.cf.cloud.ibm.com`, dem Benutzernamen `user_name` (aus Sicherheitsgründen ohne Angabe des Kennworts), dem Organisationsnamen `org_name` und dem Bereichsnamen `space_name` an.
+Anmeldung bei {{site.data.keyword.Bluemix_notm}} mit dem definierten Endpunkt`https://api.ng.bluemix.net`, dem Benutzernamen`user_name` und aus Sicherheitsgründen ohne Angabe eines Kennworts.
 ```
-cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name -o org_name -s space_name
+cf login -a https://api.ng.bluemix.net -u user_name
 ```
 {: codeblock}
 
-Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit dem definierten Endpunkt `https://api.us-south.cf.cloud.ibm.com` unter Verwendung eines API-Schlüssels an. Verwenden Sie `apikey` als Benutzernamen und den tatsächlichen API-Schlüssel als Kennwort.
+Anmeldung bei {{site.data.keyword.Bluemix_notm}} mit dem definierten Endpunkt `https://api.ng.bluemix.net`, dem Benutzernamen `user_name`, aus Sicherheitsgründen ohne Kennwortangabe, mit dem Organisationsnamen `org_name` und dem Bereichsnamen `space_name`.
 ```
-cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAPIKey
+cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+Anmeldung bei {{site.data.keyword.Bluemix_notm}} mit dem definierten Endpunkt `https://api.ng.bluemix.net` unter Verwendung eines API-Schlüssels. Verwenden Sie `apikey` als Benutzernamen und den tatsächlichen API-Schlüssel als Kennwort.
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 
@@ -493,7 +494,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Listet alle Services auf, die im Marktplatz verfügbar sind. Die von diesem Befehl aufgeführten Services werden auch im {{site.data.keyword.cloud_notm}}-Katalog angezeigt.
+Listet alle Services auf, die im Marktplatz verfügbar sind. Die von diesem Befehl aufgeführten Services werden auch im {{site.data.keyword.Bluemix_notm}}-Katalog angezeigt.
 
 ```
 cf marketplace
@@ -514,7 +515,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-Bereitstellen einer neuen Anwendung in {{site.data.keyword.cloud_notm}} oder Aktualisieren einer vorhandenen Anwendung in {{site.data.keyword.cloud_notm}}.
+Bereitstellen einer neuen Anwendung in {{site.data.keyword.Bluemix_notm}} oder Aktualisieren einer vorhandenen Anwendung in {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
@@ -548,11 +549,11 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-t* timeout (optional)</dt>
 <dd>Die maximale Zeit für den Start der Anwendung in Sekunden. Möglicherweise wird dieser Wert durch andere serverseitige Zeitlimits überschrieben.</dd>
 <dt>*--no-hostname* (optional)</dt>
-<dd>Ordnet dieser Anwendung die {{site.data.keyword.cloud_notm}}-Systemdomäne zu.</dd>
+<dd>Ordnet dieser Anwendung die {{site.data.keyword.Bluemix_notm}}-Systemdomäne zu.</dd>
 <dt>*--no-manifest* (optional)</dt>
 <dd>Führt dazu, dass die Standardmanifestdatei ignoriert wird.</dd>
 <dt>*--no-route* (optional)</dt>
-<dd>Keine Route zu dieser Anwendung zuordnen.</dd>
+<dd>Führt dazu, dass dieser Anwendung keine Route zugeordnet wird.</dd>
 <dt>*--no-start* (optional)</dt>
 <dd>Verhindert, dass die Anwendung nach der Bereitstellung gestartet wird.</dd>
 <dt>*--random-route* (optional)</dt>
@@ -677,7 +678,7 @@ cf ssh
 ```
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
 
-Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können den Befehl `cf ssh-enabled` verwenden, um zu überprüfen, ob der SSH-Zugriff für den Befehl `cf enable-ssh` aktiviert ist, oder Sie können diesen Zugriff aktivieren, falls er inaktiviert wurde.
+Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können den Befehl `cf ssh-enabled` verwenden, um sicherzustellen, dass der SSH-Zugriff aktiviert ist, oder Sie können den Befehl `cf enable-ssh` verwenden, um den Zugriff zu aktivieren, falls er inaktiviert war.
 
 <strong>Befehlsoptionen</strong>:
 
@@ -816,8 +817,14 @@ cf -v
 {: codeblock}
 
 
-## Zugehörige Links
-{: #cf-related}
 
-* [Cloud Foundry-CLI herunterladen](https://github.com/cloudfoundry/cli/releases){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")
-* [Referenzkarte - cf-Befehle](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")
+# Zugehörige Links
+{: #rellinks}
+
+## Zugehörige Links
+{: #general}
+
+* [Cloud Foundry-CLI herunterladen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+{: new_window}
+* [Referenzkarte - cf-Befehle ![Symbol für externen Link](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{: new_window}

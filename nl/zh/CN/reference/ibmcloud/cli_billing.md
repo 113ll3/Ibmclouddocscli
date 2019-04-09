@@ -1,13 +1,11 @@
 ---
 
 copyright:
+
   years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
-subcollection: cloud-cli
-
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
@@ -19,11 +17,26 @@ subcollection: cloud-cli
 
 使用以下命令可检索资源使用情况和计费信息。
 {: shortdesc}
+
+<table summary="可用于管理 {{site.data.keyword.Bluemix_notm}} 计费和使用情况的 ibmcloud 命令。">
+ <thead>
+ </thead>
+ <tbody>
+<tr>
+  <td>[ibmcloud billing account-usage](cli_billing.html#ibmcloud_billing_account_usage)</td>
+  <td>[ibmcloud billing org-usage](cli_billing.html#ibmcloud_billing_org_usage)</td>
+  <td>[ibmcloud billing resource-group-usage](cli_billing.html#ibmcloud_billing_resource_group_usage)</td>
+  <td>[ibmcloud billing resource-instances-usage](cli_billing.html#ibmcloud_billing_resource_instances_usage)</td>
+ </tr>
+ </tbody>
+ </table>
+ 
  
 ## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
-显示当前帐户的每月使用情况（仅限帐户管理员）：
+显示当前帐户的每月使用情况（仅限帐户管理员）
+
 ```
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
@@ -50,7 +63,8 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-显示组织的每月使用情况（仅限帐户管理员或组织记帐管理员）：
+显示组织的每月使用情况（仅限帐户管理员或组织记帐管理员）
+
 ```
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -71,7 +85,8 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
-显示资源组的每月使用情况（仅限帐户管理员或资源组管理员）：
+显示资源组的每月使用情况（仅限帐户管理员或资源组管理员）
+
 ```
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -92,7 +107,8 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
-显示当前帐户的每月资源实例使用情况：
+显示当前帐户的每月资源实例使用情况。
+
 ```
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```

@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ibmcloud sl image, manage compute images, ibmcloud sl
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -15,24 +13,32 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # 建立、編輯及刪除運算映像檔
-{: #sl-manage-compute-images}
 
-請使用下列指令管理 {{site.data.keyword.cloud}} 運算映像檔。
+請使用下列指令管理 {{site.data.keyword.Bluemix}} 運算映像檔。
 {: shortdesc}
 
-## ibmcloud sl image delete
+<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 基礎架構映像檔指令，其鏈結提供指令的相關資訊">
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl image delete](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_delete)</td>
+ <td>[ibmcloud sl image detail](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_detail)</td>
+ <td>[ibmcloud sl image edit](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_edit)</td>
+ <td>[ibmcloud sl image list](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_list)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 刪除映像檔。
 ```
 ibmcloud sl image delete IDENTIFIER
 ```
-
 **範例**：
 ```
    ibmcloud sl image delete 12345678
 ```
-
 這個指令會刪除 ID 為 `12345678` 的映像檔。
 
 
@@ -43,13 +49,11 @@ ibmcloud sl image delete IDENTIFIER
 ```
 ibmcloud sl image detail IDENTIFIER
 ```
-
 **範例**：
 ```
  ibmcloud sl image detail 12345678
 ```
-
-這個指令會取得 ID 為 `12345678` 的映像檔的詳細資料。
+這個指令會取得 ID 為 12345678 的映像檔的詳細資料。
 
 ## ibmcloud sl image edit
 {: #sl_image_edit}
@@ -73,7 +77,6 @@ ibmcloud sl image edit IDENTIFIER [OPTIONS]
 ```  
 ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
-
 這個指令會編輯 ID 為 `12345678` 的映像檔、將名稱設為 `ubuntu16`、將附註設為 `testing`，並將標籤設為 `staging`。
 
 
@@ -88,7 +91,7 @@ ibmcloud sl image list [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>--name</dt>
-<dd>依映像檔名稱進行過濾。</dd>
+<dd>依映像檔名稱過濾。</dd>
 <dt>--public</dt>
 <dd>僅顯示公用映像檔。</dd>
 <dt>--private</dt>

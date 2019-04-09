@@ -1,12 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-26"
 
-keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
-
-subcollection: cloud-cli
+  years: 2015, 2018
+lastupdated: "2018-11-30"
 
 ---
 
@@ -18,24 +15,22 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:download: .download}
 
-# 使用外掛程式延伸 {{site.data.keyword.cloud_notm}} CLI
+# 使用外掛程式延伸 {{site.data.keyword.Bluemix_notm}} CLI
 {: #plug-ins}
 
-{{site.data.keyword.cloud}} CLI 支援可延伸其功能的外掛程式架構。您可以從儲存庫或 Web URL 安裝外掛程式，或者在本端安裝外掛程式二進位檔。
+{{site.data.keyword.Bluemix_notm}} CLI 支援可延伸其功能的外掛程式架構。您可以從儲存庫或 Web URL 安裝外掛程式，或者在本端安裝外掛程式二進位檔。
 
-[{{site.data.keyword.cloud_notm}} CLI 外掛程式儲存庫](https://plugins.cloud.ibm.com/ui/repository.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 是管理外掛程式的正式儲存庫。
+[{{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫](https://tools.ng.bluemix.net){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg) 是管理外掛程式的正式儲存庫。
 
 如需其他可管理外掛程式的指令，請執行 `ibmcloud plugin` 以查看說明訊息。
 {: tip}
 
-## 從 {{site.data.keyword.cloud_notm}} CLI 儲存庫安裝外掛程式
-{: #install-from-repo}
+## 從 {{site.data.keyword.Bluemix_notm}} CLI 儲存庫安裝外掛程式
 
 ### 步驟 1：搜尋外掛程式
-{: #step1-search-plugin}
 
 1. 使用 `ibmcloud plugin repo-plugins -r REPO_NAME` 指令來尋找儲存庫中的外掛程式。
-2. {{site.data.keyword.cloud_notm}} CLI 具有名稱為 'IBM Cloud' 的正式儲存庫，您可以搜尋正式外掛程式，如下列範例中所示：
+2. {{site.data.keyword.Bluemix_notm}} CLI 具有名稱為 'IBM Cloud' 的正式儲存庫，您可以搜尋正式外掛程式，如下列範例中所示：
 
   ```
   $ ibmcloud plugin repo-plugins
@@ -49,7 +44,6 @@ subcollection: cloud-cli
   ```
 
 ### 步驟 2：安裝外掛程式
-{: step2-install-plugin}
 
 使用 `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` 指令來安裝外掛程式。例如，使用下列指令，從正式 IBM 外掛程式儲存庫 'IBM Cloud' 安裝外掛程式：
 
@@ -63,10 +57,8 @@ subcollection: cloud-cli
   ```
 
 ## 在本端安裝外掛程式
-{: #install-plugin-locally}
 
 使用 `ibmcloud plugin install LOCAL_FILE_NAME` 指令，將外掛程式二進位檔安裝至本端機器。例如：
-
 
   ```
   $ ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.2
@@ -77,10 +69,8 @@ subcollection: cloud-cli
   ```
 
 ## 從 Web URL 安裝外掛程式
-{: install-plugin-from-url}
 
 使用 `ibmcloud plugin install URL` 指令，直接從 Web URL 安裝外掛程式。例如：
-
 
   ```
   ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2

@@ -1,33 +1,30 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:note: .note}
-{:codeblock: .codeblock}
 
 # 일반 CLI(ibmcloud) 명령
 {: #ibmcloud_cli}
 
-{{site.data.keyword.cloud_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.cloud_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다.
 
-{{site.data.keyword.cloud_notm}} 명령행 클라이언트는 Cloud Foundry 명령행 클라이언트를 해당 설치에서 번들화합니다. 자신에게 직접 설치한 cf cli가 있는 경우에는 {{site.data.keyword.cloud_notm}} CLI 명령 `ibmcloud [command]`와 해당 설치의 Cloud Foundry CLI 명령 `cf [command]`를 동일한 컨텍스트에서 함께 사용하지 마십시오. cf cli를 사용하여 {{site.data.keyword.cloud_notm}} CLI 컨텍스트에서 Cloud Foundry 리소스를 관리하려면 `ibmcloud cf [command]`를 대신 사용하십시오. `ibmcloud cf api/login/logout/target`은 허용되지 않으며 대신 `ibmcloud api/login/logout/target`을 사용해야 한다는 점을 참고하십시오.
+{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다.
 
-2018년 5월부터 {{site.data.keyword.cloud_notm}} CLI 명령은 `bluemix` 및 `bx`에서 `ibmcloud`로 변경되었습니다. 그러나 나중에 제거되기 전까지는 여전히 `bluemix` 및 `bx` CLI 명령을 사용할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 명령행 클라이언트는 Cloud Foundry 명령행 클라이언트를 해당 설치에서 번들화합니다. 자신에게 직접 설치한 cf cli가 있는 경우에는 {{site.data.keyword.Bluemix_notm}} CLI 명령 `ibmcloud [command]`와 해당 설치의 Cloud Foundry CLI 명령 `cf [command]`를 동일한 컨텍스트에서 함께 사용하지 마십시오. cf cli를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 컨텍스트에서 Cloud Foundry 리소스를 관리하려면 `ibmcloud cf [command]`를 대신 사용하십시오.  `ibmcloud cf api/login/logout/target`은 허용되지 않으며 대신 `ibmcloud api/login/logout/target`을 사용해야 한다는 점을 참고하십시오.
+
+2018년 5월부터 {{site.data.keyword.Bluemix_notm}} CLI 명령은 `bluemix` 및 `bx`에서 `ibmcloud`로 변경되었습니다. 하지만 `bluemix` 및 `bx` CLI 명령은 나중에 제거할 때까지 사용할 수 있습니다.
 {: tip}
 
-다음에는 해당 이름, 인수, 옵션, 필수 소프트웨어, 설명 및 예제를 포함하여 {{site.data.keyword.cloud_notm}} CLI에서 지원하는 자세한 명령이 나열되어 있습니다.
-{: shortdesc}
+다음에는 해당 이름, 인수, 옵션, 필수 소프트웨어, 설명 및 예제를 포함하여 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 자세한 명령이 나열되어 있습니다.
+{:shortdesc}
 
 *전제조건*에는 명령을 사용하기 전에 필요한 조치가 나열되어 있습니다. 전제조건 조치가 없는 명령은 **없음**으로 표시됩니다. 그 밖의 경우에는 전제조건으로 다음과 같은 조치 중 하나 이상을 수행해야 할 수 있습니다.
 
@@ -44,10 +41,38 @@ subcollection: cloud-cli
 <dd>이 명령을 실행하려면 Docker CLI(docker)가 설치되어 있어야 합니다.</dd>
 </dl>
 
-## ibmcloud help
-{: #ibmcloud_help}
 
-첫 번째 레벨 기본 제공 명령 및 지원되는 {{site.data.keyword.cloud_notm}} CLI 네임스페이스에 대한 일반 도움말 또는 특정 기본 제공 명령 또는 네임스페이스의 도움말을 표시합니다.
+자주 사용되는 ibmcloud 명령을 참조하려면 다음 표의 색인을 사용하십시오.
+
+## 일반 ibmcloud 명령
+{: #ibmcloud_commands_index}
+
+<table summary="일반 ibmcloud 명령입니다. ">
+<caption>표 1. 일반 ibmcloud 명령</caption>
+ <thead>
+ <th colspan="5">일반 ibmcloud 명령</th>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud help](bx_cli.html#ibmcloud_help)</td>
+ <td>[ibmcloud api](bx_cli.html#ibmcloud_api)</td>
+ <td>[ibmcloud config](bx_cli.html#ibmcloud_config)</td>
+ <td>[ibmcloud info](bx_cli.html#ibmcloud_info)</td>
+ <td>[ibmcloud cf](bx_cli.html#ibmcloud_cf)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud login](bx_cli.html#ibmcloud_login) </td>
+ <td>[ibmcloud logout](bx_cli.html#ibmcloud_logout) </td>
+ <td>[ibmcloud regions](bx_cli.html#ibmcloud_regions)</td>
+ <td>[ibmcloud target](bx_cli.html#ibmcloud_target)</td>
+ <td>[ibmcloud update](bx_cli.html#ibmcloud_update)</td>
+ </tr>
+ </tbody>
+ </table>
+
+ ## ibmcloud help
+{: #ibmcloud_help}
+첫 번째 레벨 기본 제공 명령 및 지원되는 {{site.data.keyword.Bluemix_notm}} CLI 네임스페이스에 대한 일반 도움말 또는 특정 기본 제공 명령 또는 네임스페이스의 도움말을 표시합니다.
 
 ```
 ibmcloud help [COMMAND|NAMESPACE]
@@ -62,24 +87,26 @@ ibmcloud help [COMMAND|NAMESPACE]
    <dd>해당 도움말이 표시되는 명령 또는 네임스페이스입니다. 값을 지정하지 않으면 {{site.data.keyword.Bluemix_notm}} CLI의 일반 도움말이 표시됩니다.</dd>
    </dl>
 
+
+
 <strong>예제</strong>:
 
-{{site.data.keyword.cloud_notm}} CLI의 일반 도움말을 표시합니다.
+{{site.data.keyword.Bluemix_notm}} CLI의 일반 도움말을 표시합니다.
+
 ```
 ibmcloud help
 ```
-{: codeblock}
 
 `info` 명령의 도움말을 표시합니다.
+
 ```
 ibmcloud help info
 ```
-{: codeblock}
 
 ## ibmcloud api
 {: #ibmcloud_api}
+{{site.data.keyword.Bluemix_notm}} API 엔드포인트를 설정하거나 확인합니다.
 
-{{site.data.keyword.cloud_notm}} API 엔드포인트를 설정하거나 확인합니다.
 ```
 ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 ```
@@ -89,7 +116,7 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 <strong>명령 옵션</strong>:
    <dl>
    <dt>API_ENDPOINT(선택사항)</dt>
-   <dd>대상으로 지정된 API 엔드포인트입니다(예: `https://cloud.ibm.com`). *API_ENDPOINT* 및 `--unset` 옵션 중 하나를 지정하지 않으면 현재 API 엔드포인트가 표시됩니다.</dd>
+   <dd>대상으로 지정된 API 엔드포인트입니다(예: `https://api.chinabluemix.net`). *API_ENDPOINT* 및 `--unset` 옵션 중 하나를 지정하지 않으면 현재 API 엔드포인트가 표시됩니다.</dd>
    <dt>--unset(선택사항)</dt>
    <dd>API 엔드포인트 설정을 제거합니다.</dd>
    <dt>--skip-ssl-validation(선택사항)</dt>
@@ -97,31 +124,31 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
    </dl>
 <strong>예제</strong>:
 
-API 엔드포인트를 cloud.ibm.com으로 설정합니다.
-```
-ibmcloud api cloud.ibm.com
-```
-{: codeblock}
+API 엔드포인트를 api.chinabluemix.net으로 설정합니다.
 
 ```
-ibmcloud api https://cloud.ibm.com --skip-ssl-validation
+ibmcloud api api.chinabluemix.net
 ```
-{: codeblock}
+
+```
+ibmcloud api https://api.chinabluemix.net --skip-ssl-validation
+```
 
 현재 API 엔드포인트를 확인합니다.
+
 ```
 ibmcloud api
 ```
-{: codeblock}
 
 API 엔드포인트를 설정 해제합니다.
+
 ```
 ibmcloud api --unset
 ```
-{: codeblock}
 
 ## ibmcloud config
 {: #ibmcloud_config}
+
 
 구성 파일에 기본값을 작성합니다.
 
@@ -150,51 +177,57 @@ ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/
 <strong>예제</strong>:
 
 HTTP 요청 제한시간을 30초로 설정합니다.
+
 ```
 ibmcloud config --http-timeout 30
 ```
-{: codeblock}
 
 HTTP 요청에 대한 추적 출력을 사용하도록 설정합니다.
+
 ```
 ibmcloud config --trace true
 ```
-{: codeblock}
 
 지정된 파일 */home/usera/my_trace*에 대한 HTTP 요청 추적:
+
 ```
 ibmcloud config --trace /home/usera/my_trace
 ```
-{: codeblock}
 
 색상 출력을 사용하지 않도록 설정합니다.
+
 ```
 ibmcloud config --color false
 ```
-{: codeblock}
 
 로케일을 zh_Hans로 설정합니다.
+
 ```
 ibmcloud config --locale zh_Hans
 ```
-{: codeblock}
 
 로케일 설정을 지웁니다.
+
 ```
 ibmcloud config --locale CLEAR
 ```
-{: codeblock}
 
 ## ibmcloud info
 {: #ibmcloud_info}
 
-`ibmcloud info` 명령이 CLI 버전 `0.14`에서 더 이상 사용 가능하지 않습니다. 최신 CLI 버전을 설치하려면 [독립형 {{site.data.keyword.cloud_notm}} CLI 설치](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)를 참조하십시오.
-{: note}
+현재 지역, 클라우드 제어기 버전, 로그인과 교환 액세스 토큰의 엔드포인트 같은 유용한 엔드포인트 등 기본 {{site.data.keyword.Bluemix_notm}} 정보를 확인합니다.
+
+```
+ibmcloud info
+```
+
+<strong>전제조건</strong>: 엔드포인트
 
 ## ibmcloud cf
 {: #ibmcloud_cf}
 
 임베디드 CF CLI 호출
+
 ```
 ibmcloud [-q, --quiet] cf COMMAND...
 ```
@@ -216,17 +249,18 @@ ibmcloud cf apps
 ```
 
 메시지 "cf 명령 호출 중..." 없이 cf 서비스 나열:
+
 ```
 ibmcloud -q cf services
 ```
-{: codeblock}
 
 ## ibmcloud login
 {: #ibmcloud_login}
 
 사용자가 로그인됩니다.
+
 ```
-ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-r REGION | --no-region] [-o ORG] [-s SPACE]
+ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] [--no-iam] [-c ACCOUNT_ID | --no-account] [-g RESOURCE_GROUP] [-o ORG] [-s SPACE]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -236,11 +270,11 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 <strong>명령 옵션</strong>:
 <dl>
   <dt> -a <i>API_ENDPOINT</i>(선택사항)</dt>
-  <dd> API 엔드포인트(예: cloud.ibm.com)</dd>
+  <dd> API 엔드포인트(예: api.ng.bluemix.net)</dd>
   <dt> --apikey <i>API_KEY 또는 @API_KEY_FILE_PATH</i>
   <dd> API 키 컨텐츠 또는 @로 표시되는 API 키 파일의 경로</dd>
   <dt> --sso(선택사항) </dt>
-  <dd> 일회성 패스코드를 사용하여 로그인</dd>
+  <dd> 일회성 패스코드를 사용하여 로그인 </dd>
   <dt> -u <i>USERNAME</i>(선택사항)</dt>
   <dd> 사용자 이름</dd>
   <dt> -p <i>PASSWORD</i>(선택사항)</dt>
@@ -251,10 +285,6 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dd> 계정 없이 강제 로그인합니다. 이 옵션은 권장되지 않습니다. 이 옵션은 -c와 배타적입니다.</dd>
   <dt> -g <i>RESOURCE_GROUP</i>(선택사항) </dt>
   <dd> 대상 리소스 그룹의 이름</dd>
-  <dt> -r REGION</dt>
-  <dd> 지역 이름, 예를 들어 'us-south' 또는 'eu-gb'</dt>
-  <dt> --no-region</dt>
-  <dd> 지역을 대상으로 지정하지 않고 강제로 로그인합니다.</dd>
   <dt> -o <i>ORG</i>(선택사항)</dt>
   <dd> 대상 조직의 이름(더 이상 사용되지 않음, 'ibmcloud target -o ORG' 사용)</dd>
   <dt> -s <i>SPACE</i>(선택사항) </dt>
@@ -272,17 +302,20 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
 ```
 ibmcloud login
 ```
-{: codeblock}
 
 사용자 이름과 비밀번호로 로그인하고 대상 계정, 조직 및 영역을 설정하십시오.
+
 ```
 ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ```
 
 일회성 패스코드로 로그인하고 대상 계정, 조직 및 영역을 설정하십시오.
+
 ```
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
+
+API 키로 로그인하고 대상을 설정하십시오.
 
 ### API 키에 계정이 연관되어 있음
 
@@ -307,27 +340,26 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 <strong>참고:</strong> API 키에 연관된 계정이 있는 경우, 다른 계정으로 전환이 허용되지 않습니다.
 
 ### 일회성 패스코드 사용
+
 ```
 ibmcloud login -u UserID --sso
 ```
-{: codeblock}
 
 그러면 CLI에서 URL 링크를 제공하고 패스코드를 요청합니다.
 ```
 One Time Code (Get one at https://URL_Link_To_Obtain_Passcode):
 ```
-{: screen}
 
-브라우저에서 링크를 열어서 패스코드를 가져오십시오. 콘솔에서 제공된 패스코드를 입력하면 로그인할 수 있습니다.
+브라우저에서 링크를 열면 패스코드를 가져오도록 안내를 받게 됩니다. 콘솔에서 제공된 패스코드를 입력하면 로그인할 수 있어야 합니다.
 
 ## ibmcloud logout
 {: #ibmcloud_logout}
 
 사용자가 로그아웃됩니다.
+
 ```
 ibmcloud logout
 ```
-{: codeblock}
 
 <strong>전제조건</strong>: 없음
 
@@ -335,10 +367,10 @@ ibmcloud logout
 {: #ibmcloud_regions}
 
 {{site.data.keyword.Bluemix_notm}}의 모든 지역에 대한 정보를 확인합니다.
+
 ```
 ibmcloud regions
 ```
-{: codeblock}
 
 <strong>전제조건</strong>: 엔드포인트
 
@@ -347,8 +379,9 @@ ibmcloud regions
 
 
 대상 계정, 지역, 조직 또는 영역을 설정하거나 보십시오.
+
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -357,8 +390,6 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
    <dl>
    <dt>-r <i>REGION_NAME</i>(선택사항)</dt>
    <dd>전환할 지역의 이름입니다(예: 'us-south' 또는 'eu-gb').</dd>
-   <dt>--unset-region</dt>
-   <dd>대상 지역 설정 취소</dd>
    <dt>-c <i>ACCOUNT_ID</i>(선택사항)</dt>
    <dd>대상으로 지정된 계정의 ID입니다.</dd>
    <dt>-g <i>RESOURCE_GROUP</i>(선택사항)</dt>
@@ -375,27 +406,28 @@ ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_G
 <strong>예제</strong>:
 
 현재 계정, 조직 및 영역 설정하기:
+
 ```
 ibmcloud target -c MyAccountID -o MyOrg -s MySpace
 ```
-{: codeblock}
 
 새 지역으로 전환하기:
+
 ```
 ibmcloud target -r eu-gb
 ```
-{: codeblock}
 
 현재 계정, 지역, 조직 및 영역 보기:
+
 ```
 ibmcloud target
 ```
-{: codeblock}
 
 ## ibmcloud update
 {: #ibmcloud_update}
 
 최신 버전으로 CLI를 업데이트합니다.
+
 ```
 ibmcloud update [-f]
 ```
@@ -412,43 +444,103 @@ ibmcloud update [-f]
 ## 일반 클래식 인프라 서비스 명령
 {: #softlayer_cli}
 
-인프라 서비스를 구성하고 관리하려면 {{site.data.keyword.cloud_notm}} 명령행 인터페이스(CLI)에서 클래식 인프라 명령을 사용하십시오.
 
-사용 가능한 명령의 목록을 보려면 `ibmcloud sl` 명령을 실행하십시오.
-```
-USAGE:
-   bx sl command [arguments...] [options...]
+인프라 서비스를 구성하고 관리하려면 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)에서 클래식 인프라 명령을 사용하십시오.
 
-COMMANDS:
-   block           Gen1 infrastructure Block Storage
-   cdn             Gen1 infrastructure Content Delivery Network
-   file            Gen1 infrastructure File Storage
-   dns             Gen1 infrastructure Domain Name System
-   globalip        Gen1 infrastructure Global IP addresses
-   hardware        Gen1 infrastructure hardware servers
-   image           Gen1 infrastructure Compute images
-   ipsec           Gen1 infrastructure IPSEC VPN
-   loadbal         Gen1 infrastructure Load balancers
-   security        Gen1 infrastructure SSH Keys and SSL Certificates
-   securitygroup   Gen1 infrastructure network security groups
-   subnet          Gen1 infrastructure Network subnets
-   ticket          Gen1 infrastructure Manage Tickets
-   vlan            Gen1 infrastructure Network VLANs
-   vs              Gen1 infrastructure Virtual Servers
-   order           Gen1 infrastructure Orders
-   user            Gen1 infrastructure Manage Users
-   call-api        Call arbitrary API endpoints.
-   help            Print command usage message
-```
-{: screen}
 
-명령에 대한 도움말 정보를 보려면 다음을 실행하십시오.
+다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 보려면 `ibmcloud sl` 명령을 사용하십시오.
+
+<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 명령">
+<caption>표 1. 일반 클래식 인프라 명령</caption>
+ <thead>
+ <th colspan="6">일반 클래식 인프라 명령</th>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl init](/docs/cli/reference/ibmcloud/bx_cli.html#sl_init)</td>
+ <td>[ibmcloud sl help](/docs/cli/reference/ibmcloud/bx_cli.html#sl_help)</td>
+   </tbody>
+ </table>
+
+ 명령에 대한 도움말 정보를 보려면 `ibmcloud sl [command] -h`를 실행하십시오.
+
+ ## ibmcloud sl init
+{: #sl_init}
+
+클래식 인프라 환경에 연결하는 데 사용되는 구성 설정을 초기화하십시오. 구성에는 사용자 이름, API 키 또는 비밀번호, 계정 및 엔드포인트가 포함됩니다.
 ```
-ibmcloud sl [command] -h
+ibmcloud sl init [OPTIONS]
 ```
 
-`ibmcloud sl init` 명령이 CLI 버전 `0.14`에서 더 이상 사용 가능하지 않습니다. 최신 CLI 버전을 설치하려면 [독립형 {{site.data.keyword.cloud_notm}} CLI 설치](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)를 참조하십시오.
-{: note}
+<strong>명령 옵션</strong>:
+<dl>
+<dt>-a, --api-endpoint</dt>
+<dd>클래식 인프라 API 엔드포인트 URL. 기본값: https://api.softlayer.com/rest/v3.1 (API 키 인증의 경우), https://api.softlayer.com/mobile/v3.1 (IBM ID 인증의 경우).</dd>
+<dt>-u, --sl-user</dt>
+<dd>Gen1 인프라 사용자 이름.</dd>
+<dt>-p, --sl-password</dt>
+<dd>비밀번호 또는 API 키.</dd>
+<dt>-c, --account-id</dt>
+<dd>계정 ID.</dd>
+<dt>-q, --security-question-id</dt>
+<dd>인증에 사용되는 보안 질문 ID. 모르는 경우 계정 소유자에게 문의하십시오.</dd>
+<dt>-w, --security-question-answer</dt>
+<dd>인증에 사용되는 보안 질문의 대답. 모르는 경우 계정 소유자에게 문의하십시오.</dd>
+<dt>-s, --security-code</dt>
+<dd>2단계 인증이 사용되는 경우 보안 공급업체에서 생성한 보안 코드.</dd>
+<dt>-v, --security-vendor</dt>
+<dd>인증을 위해 보안 코드를 제공하는 보안 공급업체. 옵션: VERISIGN,TOTP,PHONE_FACTOR.</dd>
+<dt>-t, --auth-token</dt>
+<dd>전화 인증이 사용되는 경우 인증 토큰.</dd>
+</dl>
+
+예: 클래식 인프라 사용자 이름 및 비밀번호/API 키로 로그인
+```
+$ ibmcloud sl init
+Choose how to configure classic infrastructure authentication:
+1. Login with your classic infrastructure user name and password/API key
+2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
+Enter a number>1
+classic infrastructure API endpoint URL: [https://api.softlayer.com/rest/v3.1]>
+Username: []> user@example.com
+API key or password: []> abcd
+
+API endpoint:    https://api.softlayer.com/rest/v3.1   
+User name:       user@example.com   
+API Key:         xxxxxxxxxx
+```
+예: {{site.data.keyword.Bluemix_notm}} Single-Sign-On을 사용하여 클래식 인프라에 로그인
+```
+$ ibmcloud login -a api.ng.bluemix.net -u user@example.com -p xxxxxxx -c 65ce8074c6c62b5
+API endpoint: api.ng.bluemix.net
+Authenticating...
+OK
+
+Targeted account example user's Account (65ce8074c6c62b5)
+
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)   
+Region:         us-south   
+User:           user@example.com   
+Account:        example user's Account (65ce8074c6c62b5)   
+No org or space targeted, use 'ibmcloud target --cf or ibmcloud target -o ORG -s SPACE'
+
+
+$ ibmcloud sl init
+Choose how to configure classic infrastructure authentication:
+
+1. Login with your classic infrastructure user name and password/API key
+2. Use IBM Cloud Single-Sign-On
+Enter a number> 2
+classic infrastructure API endpoint URL: [https://api.softlayer.com/mobile/v3.1]>
+Setting account to: 123456
+OK
+
+classic infrastructure API endpoint:    https://api.softlayer.com/mobile/v3.1   
+
+Account ID:                123456   
+User ID:                   user@example.com  
+IMS token:                 xxxxxxxxxx
+```
 
 ## ibmcloud sl help
 {: #sl_help}
@@ -457,5 +549,3 @@ ibmcloud sl [command] -h
 ```
 ibmcloud sl help
 ```
-{: codeblock}
-

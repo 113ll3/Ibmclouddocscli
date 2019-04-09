@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,14 +13,40 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # Création et utilisation de serveurs bare metal
-{: #sl-manage-bare-metal}
 
 Les serveurs bare metal sont des serveurs physiques à service exclusif offrant performances et contrôle avec un accès de bas niveau aux ressources matériel. Les serveurs bare metal fournissent la puissance brute dont vous avez besoin pour vos charges de travail exigeantes en termes de processeur et d'entrée-sortie de disque. Ces serveurs sont fournis avec le package le plus complet de services et fonctions standard.
 
-Les commandes suivantes permettent de gérer les serveurs matériels bare metal de l'infrastructure classique {{site.data.keyword.cloud}}.
+Les commandes suivantes permettent de gérer les serveurs matériels bare metal de l'infrastructure classique {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-## ibmcloud sl hardware cancel
+<table summary="Commandes de serveur bare metal d'infrastructure classique {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>
+ <td>[ibmcloud sl hardware cancel-reasons
+](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel_reasons)</td>
+ <td>[ibmcloud sl hardware create](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_create)</td>
+ <td>[ibmcloud sl hardware create-options](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_create_options)</td>
+ <td>[ibmcloud sl hardware credentials](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_credentials)</td>
+ <td>[ibmcloud sl hardware detail](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_detail)</td>
+ </tr>
+<tr>
+ <td>[ibmcloud sl hardware edit](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_edit)</td>
+ <td>[ibmcloud sl hardware list](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_list)</td>
+ <td>[ibmcloud sl hardware power-cycle](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_cycle)</td>
+ <td>[ibmcloud sl hardware power-off](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_off)</td>
+ <td>[ibmcloud sl hardware power-on](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_on)</td>
+ <td>[ibmcloud sl hardware reboot](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_reboot)</td>
+ </tr>
+<tr>
+ <td>[ibmcloud sl hardware reload](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_reload)</td>
+ <td>[ibmcloud sl hardware rescue](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_rescue)</td>
+ <td>[ibmcloud sl hardware update-firmware](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_update_firmware)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl hardware cancel
 {: #sl_hardware_cancel}
 
 Annuler un serveur matériel

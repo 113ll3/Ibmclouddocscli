@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: cloud foundry services, ibmcloud service, offerings, service list, service show, service create, service bind, service unbind, unbind service, service keys
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -20,8 +18,37 @@ subcollection: cloud-cli
 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} Foundry 서비스에 대한 서비스 오퍼링, 서비스 인스턴스, 서비스 바인딩 및 키를 관리하십시오.
 {: shortdesc}
 
-## ibmcloud service offerings
+<table summary="{{site.data.keyword.Bluemix_notm}} Cloud Foundry 서비스를 관리하는 데 사용할 수 있는 ibmcloud 명령입니다.">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud service offerings](cli_cf_services.html#ibmcloud_service_offerings)</td>
+ <td>[ibmcloud service list](cli_cf_services.html#ibmcloud_service_list)</td>
+ <td>[ibmcloud service show](cli_cf_services.html#ibmcloud_service_show)</td>
+ <td>[ibmcloud service create](cli_cf_services.html#ibmcloud_service_create)</td>
+ <td>[ibmcloud service update](cli_cf_services.html#ibmcloud_service_update)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud service delete](cli_cf_services.html#ibmcloud_service_delete)</td>
+ <td>[ibmcloud service rename](cli_cf_services.html#ibmcloud_service_rename)</td>
+ <td>[ibmcloud service bind](cli_cf_services.html#ibmcloud_service_bind)</td>
+ <td>[ibmcloud service unbind](cli_cf_services.html#ibmcloud_service_unbind)</td>
+ <td>[ibmcloud service key-create](cli_cf_services.html#ibmcloud_service_key_create)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud service key-delete](cli_cf_services.html#ibmcloud_service_key_delete)</td>
+ <td>[ibmcloud service keys](cli_cf_services.html#ibmcloud_service_keys)</td>
+ <td>[ibmcloud service key-show](cli_cf_services.html#ibmcloud_service_key_show)</td>
+ <td>[ibmcloud service user-provided-create](cli_cf_services.html#ibmcloud_service_user_provided_create)</td>
+ <td>[ibmcloud service user-provided-update](cli_cf_services.html#ibmcloud_service_user_provided_update)</td>
+ </tr>
+  </tbody>
+ </table>
+
+ ## ibmcloud service offerings
 {: #ibmcloud_service_offerings}
+
 
 이 명령은 [cf marketplace ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window} 명령과 동일한 기능 및 옵션을 가집니다.
 

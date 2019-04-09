@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: manage security groups, ingress, egress, traffic, virtual server, classic infrastructure, securitygroup, ibmcloud sl securitygroup
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,14 +13,38 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # 가상 서버 트래픽에 대한 보안 그룹 관리
-{: #sl-manage-securitygroups}
 
 보안 그룹은 가상 서버 인스턴스의 퍼블릭 및 프라이빗 인터페이스 둘 다에 대한 수신(ingress) 및 발신(egress) 트래픽의 처리 방법을 정의하는 IP 필터 규칙 세트입니다. 보안 그룹에 추가하는 규칙을 보안 그룹 규칙이라고 합니다.
 
-다음 명령을 사용하여 {{site.data.keyword.cloud}} 클래식 인프라 보안 그룹 서비스를 통해 보안 그룹을 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix}} 클래식 인프라 보안 그룹 서비스를 통해 보안 그룹을 관리하십시오.
 {: shortdesc}
 
-## ibmcloud sl securitygroup create
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 보안 그룹 명령">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl securitygroup create](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_create)</td>
+  <td>[ibmcloud sl securitygroup delete](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_delete)</td>
+  <td>[ibmcloud sl securitygroup detail](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_detail)</td>
+  <td>[ibmcloud sl securitygroup edit](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_edit)</td>   
+  <td>[ibmcloud sl securitygroup interface-add](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interface_add)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl securitygroup interface-list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interace_list)</td>
+  <td>[ibmcloud sl securitygroup interface-remove](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interface_remove)</td>
+  <td>[ibmcloud sl securitygroup list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_list)</td>
+  <td>[ibmcloud sl securitygroup rule-add](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_add)</td>
+  <td>[ibmcloud sl securitygroup rule-edit](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_edit)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl securitygroup rule-list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_list)</td>
+  <td>[ibmcloud sl securitygroup rule-remove](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_remove)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 보안 그룹을 작성합니다.

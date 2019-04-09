@@ -1,30 +1,84 @@
 ---
 
 copyright:
+
   years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas
 
-subcollection: cloud-cli
-
+lastupdated: "2019-01-14"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 使用资源和资源组
 {: #ibmcloud_commands_resource}
 
-资源组是一种使用可定制的分组来组织帐户资源的方法。使用以下命令可管理 {{site.data.keyword.cloud}} 资源及资源组中的资源。
+资源组是一种使用可定制的分组来组织帐户资源的方法。使用以下命令可管理 {{site.data.keyword.Bluemix}} 资源组及资源组中的资源。
 {: shortdesc}
+
+<table summary="可用于管理资源组和资源的 ibmcloud 命令。">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[ibmcloud resource groups](cli_resource_group.html#ibmcloud_resource_groups)</td>
+      <td>[ibmcloud resource group](cli_resource_group.html#ibmcloud_resource_group)</td>
+      <td>[ibmcloud resource group-create](cli_resource_group.html#ibmcloud_resource_group_create)</td>
+      <td>[ibmcloud resource group-update](cli_resource_group.html#ibmcloud_resource_group_update)</td>
+      <td>[ibmcloud resource quotas](cli_resource_group.html#ibmcloud_resource_quotas)</td>
+    </tr>
+    <tr>
+      <td>[ibmcloud resource quota](cli_resource_group.html#ibmcloud_resource_quota)</td>
+      <td>[ibmcloud resource service-instances](cli_resource_group.html#ibmcloud_resource_service_instances)</td>
+      <td>[ibmcloud resource service-instance](cli_resource_group.html#ibmcloud_resource_service_instance)</td>
+      <td>[ibmcloud resource service-instance-create](cli_resource_group.html#ibmcloud_resource_service_instance_create)
+      <td>[ibmcloud resource service-instance-migrate](cli_resource_group.html#ibmcloud_resource_cf_service_instance_migrate)</td>
+    </tr>  
+    <tr>  
+      <td>[ibmcloud resource service-instance-update](cli_resource_group.html#ibmcloud_resource_service_instance_update)</td>
+      <td>[ibmcloud resource service-instance-delete](cli_resource_group.html#ibmcloud_resource_service_instance_delete)</td>
+      <td>[ibmcloud resource service-bindings](cli_resource_group.html#ibmcloud_resource_service_bindings)</td>
+      <td>[ibmcloud resource service-binding](cli_resource_group.html#ibmcloud_resource_service_binding)</td>
+      <td>[ibmcloud resource service-binding-create](cli_resource_group.html#ibmcloud_resource_service_binding_create)</td>
+    </tr>
+    <tr>
+      <td>[ibmcloud resource service-binding-delete](cli_resource_group.html#ibmcloud_resource_service_binding_delete)</td>
+      <td>[ibmcloud resource quota](cli_resource_group.html#ibmcloud_resource_quota)</td>
+      <td>[ibmcloud resource service-keys](cli_resource_group.html#ibmcloud_resource_service_keys)</td>
+      <td>[ibmcloud resource service-key](cli_resource_group.html#ibmcloud_resource_service_key)</td>
+      <td>[ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
+    </tr>
+    <tr>
+      <td>[ibmcloud resource service-key-update](cli_resource_group.html#ibmcloud_resource_service_key_update)</td>
+      <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
+      <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
+      <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
+      <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
+    </tr>
+    <tr>
+      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
+      <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
+      <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
+      <td>[ibmcloud resource tags](cli_resource_group.html#ibmcloud_resource_tags)</td>
+      <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
+    </tr>
+    <tr>
+      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
+      <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
+      <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
+      <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
+      <td>[ibmcloud resource tag-update](cli_resource_group.html#ibmcloud_resource_tag_update)</td>
+    </tr>
+  </tbody>
+</table>
 
 ## ibmcloud resource groups
 {: #ibmcloud_resource_groups}
 
 列出资源组。
+
 ```
 ibmcloud resource groups [--default] [--output FORMAT]
 ```
@@ -42,21 +96,22 @@ ibmcloud resource groups [--default] [--output FORMAT]
 <strong>示例</strong>：
 
 列出当前目标帐户下的所有资源组：
+
 ```
 ibmcloud resource groups
 ```
-{: codeblock}
 
 列出当前目标帐户的缺省组：
+
 ```
 ibmcloud resource groups --default
 ```
-{: codeblock}
 
 ## ibmcloud resource group
 {: #ibmcloud_resource_group}
 
 显示资源组的详细信息
+
 ```
 ibmcloud resource group NAME [--id] [--output FORMAT]
 ```
@@ -76,25 +131,25 @@ ibmcloud resource group NAME [--id] [--output FORMAT]
 <strong>示例</strong>：
 
 显示资源组 `example-group`：
+
 ```
 ibmcloud resource group example-group
 ```
-{: codeblock}
 
 仅显示资源组 `example-group` 的标识：
+
 ```
 ibmcloud resource group example-group --id
 ```
-{: codeblock}
 
 ## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
-创建资源组：
+创建资源组
+
 ```
 ibmcloud resource group-create NAME
 ```
-{: codeblock}
 
 <strong>先决条件</strong>：端点、登录和目标
 
@@ -105,17 +160,17 @@ ibmcloud resource group-create NAME
 </dl>
 
 <strong>示例</strong>：
-
 创建资源组 `example-group`：
+
 ```
 ibmcloud resource group-create example-group
 ```
-{: codeblock}
 
 ## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
 更新现有资源组
+
 ```
 ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
@@ -137,25 +192,25 @@ ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA
 <strong>示例</strong>：
 
 将资源组 `example-group` 重命名为 `trial-group`：
+
 ```
 ibmcloud resource group-update example-group -n trial-group
 ```
-{: codeblock}
 
 将资源组 `example-group` 的配额更改为 `free`：
+
 ```
 ibmcloud resource group-update example-group -q free
 ```
-{: codeblock}
 
 ## ibmcloud resource quotas
 {: #ibmcloud_resource_quotas}
 
-列出所有配额定义。
+列出所有配额定义
+
 ```
 ibmcloud resource quotas
 ```
-{: codeblock}
 
 <strong>先决条件</strong>：端点、登录和目标
 
@@ -166,19 +221,19 @@ ibmcloud resource quotas
 <strong>示例</strong>：
 
 列出所有配额定义：
+
 ```
 ibmcloud resource quotas
 ```
-{: codeblock}
 
 ## ibmcloud resource quota
 {: #ibmcloud_resource_quota}
 
-显示配额定义的详细信息。
+显示配额定义的详细信息
+
 ```
 ibmcloud resource quota NAME
 ```
-{: codeblock}
 
 <strong>先决条件</strong>：端点、登录和目标
 
@@ -188,18 +243,17 @@ ibmcloud resource quota NAME
   <dd>配额的名称</dd>
 </dl>
 
-<strong>示例</strong>：
+<strong>示例</strong>：显示配额 `free` 的详细信息：
 
-显示配额 `free` 的详细信息：
 ```
 ibmcloud resource quota free
 ```
-{: codeblock}
 
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
 将 Cloud Foundry 服务实例迁移到资源组
+
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
 ```
@@ -221,7 +275,8 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 ## ibmcloud resource service-instances
 {: #ibmcloud_resource_service_instances}
 
-列出服务实例。
+列出服务实例
+
 ```
 ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
 ```
@@ -243,16 +298,16 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
 <strong>示例</strong>：
 
 列出服务 `test-service` 的服务实例：
+
 ```
 ibmcloud resource service-instances --service-name test-service
 ```
-{: codeblock}
 
 ## ibmcloud resource service-instance
 
 {: #ibmcloud_resource_service_instance}
 
-显示服务实例的详细信息。
+显示服务实例的详细信息
 
 ```
 ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--output FORMAT]
@@ -277,15 +332,16 @@ ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--out
 <strong>示例</strong>：
 
 显示服务实例 `my-service-instance` 的详细信息：
+
 ```
 ibmcloud resource service-instance my-service-instance
 ```
-{: codeblock}
 
 ## ibmcloud resource service-instance-create
 {: #ibmcloud_resource_service_instance_create}
 
-创建服务实例。
+创建服务实例
+
 ```
 ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
 ```
@@ -297,7 +353,7 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dt>NAME（必需）</dt>
   <dd>服务实例的名称</dd>
   <dt>SERVICE_NAME 或 SERVICE_ID（必需）</dt>
-  <dd>服务的名称或标识。要列出服务产品，请使用 `ibmcloud catalog service-marketplace` [命令](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)。</dd>
+  <dd>服务的名称或标识</dd>
   <dt>SERVICE_PLAN_NAME 或 SERVICE_PLAN_ID（必需）</dt>
   <dd>服务套餐的名称或标识</dd>
   <dt>LOCATION</dt>
@@ -309,17 +365,17 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
 </dl>
 
 <strong>示例</strong>：
-
 使用服务 `test-service` 的服务套餐 `test-service-plan` 在位置 `eu-gb` 中创建名为 `my-service-instance` 的服务实例：
+
 ```
 ibmcloud resource service-instance-create my-service-instance test-service test-service-plan eu-gb
 ```
-{: codeblock}
 
 ## ibmcloud resource service-instance-update
 {: #ibmcloud_resource_service_instance_update}
 
-更新服务实例。
+更新服务实例
+
 ```
 ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
@@ -343,8 +399,8 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
 </dl>
 
 <strong>示例</strong>：
-
 更新服务实例 `my-service-instance`，将其名称更改为 `new-service-instance`：
+
 ```
 ibmcloud resource service-instance-update my-service-instance -n new-service-instance
 ```
@@ -352,7 +408,8 @@ ibmcloud resource service-instance-update my-service-instance -n new-service-ins
 ## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
-删除服务实例。
+删除服务实例
+
 ```
 ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
@@ -372,17 +429,17 @@ ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 </dl>
 
 <strong>示例</strong>：
-
 删除资源服务实例 `my-service-instance`：
+
 ```
 ibmcloud resource service-instance-delete my-service-instance
 ```
-{: codeblock}
 
 ## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
 
-显示与服务别名的绑定。
+显示与服务别名的绑定
+
 ```
 ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 ```
@@ -398,8 +455,8 @@ ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 </dl>
 
 <strong>示例</strong>：
-
 显示与服务别名 `my-service-alias` 的资源绑定：
+
 ```
 ibmcloud resource bindings my-service-alias
 ```
@@ -407,7 +464,8 @@ ibmcloud resource bindings my-service-alias
 ## ibmcloud resource service-binding
 {: #ibmcloud_resource_service_binding}
 
-显示服务绑定的详细信息。
+显示服务绑定的详细信息
+
 ```
 ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 ```
@@ -427,17 +485,17 @@ ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 </dl>
 
 <strong>示例</strong>：
-
 显示服务别名 `my-service-alias` 和应用程序 `my-app` 之间的服务绑定的详细信息：
+
 ```
 ibmcloud resource bindings my-service-alias my-app
 ```
-{: codeblock}
 
 ## ibmcloud resource service-binding-create
 {: #ibmcloud_resource_service_binding_create}
 
-创建服务绑定。
+创建服务绑定
+
 ```
 ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
 ```
@@ -461,17 +519,17 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 </dl>
 
 <strong>示例</strong>：
-
 使用角色 `Administrator` 创建服务别名 `my-service-alias` 和应用程序 `my-app` 之间的服务绑定：
+
 ```
 ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ```
-{: codeblock}
 
 ## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
 
-删除服务绑定。
+删除服务绑定
+
 ```
 ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
@@ -490,15 +548,16 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 
 <strong>示例</strong>：
 删除服务别名 `my-service-alias` 和应用程序 `my-app` 之间的服务绑定：
+
 ```
 ibmcloud resource service-binding-delete my-service-alias my-app
 ```
-{: codeblock}
 
 ## ibmcloud resource service-keys
 {: #ibmcloud_resource_service_keys}
 
-列出服务实例或服务别名的服务密钥。
+列出服务实例或服务别名的服务密钥
+
 ```
 ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --alias-id ID | --alias-name NAME ] [--output FORMAT]
 ```
@@ -520,8 +579,8 @@ ibmcloud resource service-keys [ --instance-id ID | --instance-name NAME | --ali
 </dl>
 
 <strong>示例</strong>：
-
 列出服务实例 `my-service-instance` 的服务密钥：
+
 ```
 ibmcloud resource service-keys --instance-name my-service-instance  [--output FORMAT]
 ```
@@ -530,45 +589,35 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 {: #ibmcloud_resource_service_key}
 
 显示任意数量的服务密钥的详细信息，其中服务密钥名称的前 *n* 个字符与所提供的 KEY_NAME 相匹配。
+
 ```
-ibmcloud resource service-key (NAME | ID) [-g RESOURCE_GROUP] [--id] [--output FORMAT]
+ibmcloud resource service-key KEY_NAME [--id]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>NAME</dt>
+  <dt>KEY_NAME</dt>
   <dd>密钥的名称</dd>
-  <dt>ID</dt>
-  <dd>密钥的标识</dd>
-  <dt>-g</dt>
-  <dd>资源组名称</dd>
   <dt>--id</dt>
-  <dd>显示服务密钥的标识。此选项与“--output”互斥。</dd>
-  <dt>-g RESOURCE_GROUP</dt>
-  <dd>资源组名称</dd>
+  <dd>显示任意密钥的标识，其中服务密钥名称的前 *n* 个字符与所提供的 KEY_NAME 相匹配，*n* 代表所提供 KEY_NAME 的长度。</dd>
   <dt>--output FORMAT（可选）</dt>
-  <dd>指定输出格式，目前仅支持 JSON。此选项与“--id”互斥。</dd>
+  <dd>指定输出格式。当前仅支持 JSON。</dd>
 </dl>
 
 <strong>示例</strong>：
-
 显示服务密钥 `my-service-key` 的详细信息：
+
 ```
 ibmcloud resource service-key my-service-key
-```
-<strong>示例</strong>：
-显示标识为 `crn:v1:bluemix:public:cloudantnosqldb:us-south:a/537860630a5ba7115be954e8d5aa5689:cc2a6d6c-8f5e-4038-b975-b09b51d1d8dc:resource-key:9057f12e-fbf5-421d-8865-764422217a79` 的服务密钥的详细信息：
-
-```
-ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/537860630a5ba7115be954e8d5aa5689:cc2a6d6c-8f5e-4038-b975-b09b51d1d8dc:resource-key:9057f12e-fbf5-421d-8865-764422217a79
 ```
 
 ## ibmcloud resource service-key-create
 {: #ibmcloud_resource_service_key_create}
 
-创建服务密钥。
+创建服务密钥
+
 ```
 ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
@@ -598,8 +647,8 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
 </dl>
 
 <strong>示例</strong>：
-
 使用角色 `Administrator` 为服务实例 `my-service-instance` 创建名为 `my-service-key` 的服务密钥：
+
 ```
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
@@ -607,7 +656,8 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 ## ibmcloud resource service-key-update
 {: #ibmcloud_resource_service_key_update}
 
-更新服务密钥。
+更新服务密钥
+
 ```
 ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
 ```
@@ -627,8 +677,8 @@ ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RES
 </dl>
 
 <strong>示例</strong>：
-
 更新名为 `my-service-key` 的服务密钥，为其指定新名称 `my-service-key-2`：
+
 ```
 ibmcloud resource service-key-update my-service-key -n my-service-key-2
 ```
@@ -636,7 +686,8 @@ ibmcloud resource service-key-update my-service-key -n my-service-key-2
 ## ibmcloud resource service-key-delete
 {: #ibmcloud_resource_service_key_delete}
 
-删除服务密钥。
+删除服务密钥
+
 ```
 ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 ```
@@ -652,8 +703,8 @@ ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 </dl>
 
 <strong>示例</strong>：
-
 删除服务密钥 `my-service-key`：
+
 ```
 ibmcloud resource service-key-delete my-service-key
 ```
@@ -661,7 +712,8 @@ ibmcloud resource service-key-delete my-service-key
 ## ibmcloud resource service-aliases
 {: #ibmcloud_resource_service_aliases}
 
-列出服务实例的别名。
+列出服务实例的别名
+
 ```
 ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [--output FORMAT]
 ```
@@ -679,7 +731,6 @@ ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [-
 </dl>
 
 <strong>示例</strong>：
-
 列出服务实例 `my-service-instance` 的服务别名：
 ```
 ibmcloud resource service-aliases my-service-instance
@@ -688,7 +739,8 @@ ibmcloud resource service-aliases my-service-instance
 ## ibmcloud resource service-alias
 {: #ibmcloud_resource_service_alias}
 
-显示服务别名的详细信息。
+显示服务别名的详细信息
+
 ```
 ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 ```
@@ -706,7 +758,6 @@ ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 </dl>
 
 <strong>示例</strong>：
-
 显示服务别名 `my-service-alias` 的详细信息：
 ```
 ibmcloud resource service-alias  my-service-alias
@@ -715,7 +766,8 @@ ibmcloud resource service-alias  my-service-alias
 ## ibmcloud resource service-alias-create
 {: #ibmcloud_resource_service_alias_create}
 
-创建服务实例的别名。
+创建服务实例的别名
+
 ```
 ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
@@ -739,7 +791,6 @@ ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instanc
 </dl>
 
 <strong>示例</strong>：
-
 创建服务实例 `my-service-instance` 的服务别名 `my-service-alias`：
 ```
 ibmcloud resource service-alias-create my-service-alias --instance-name my-service-instance
@@ -748,7 +799,8 @@ ibmcloud resource service-alias-create my-service-alias --instance-name my-servi
 ## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
-更新服务别名。
+更新服务别名
+
 ```
 ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
@@ -770,8 +822,8 @@ ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --t
 </dl>
 
 <strong>示例</strong>：
-
 更新服务别名 `my-service-alias`，将其名称更改为 `new-service-alias`：
+
 ```
 ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ```
@@ -779,7 +831,8 @@ ibmcloud resource service-alias-update my-service-alias -n new-service-alias
 ## ibmcloud resource service-alias-delete
 {: #ibmcloud_resource_service_alias_delete}
 
-删除服务别名。
+删除服务别名
+
 ```
 ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 ```
@@ -795,18 +848,18 @@ ibmcloud resource service-alias-delete ALIAS_NAME [-f, --force]
 </dl>
 
 <strong>示例</strong>：
-
 删除服务别名 `my-service-alias`：
+
 ```
 ibmcloud resource service-alias-delete my-service-alias
 ```
 
 ## ibmcloud resource search
 {: #ibmcloud_resource_search}
+使用 Lucene 查询语法搜索资源
 
-使用 Lucene 查询语法搜索资源。
 ```
-ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER]
+ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -819,179 +872,117 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
   <dd>要返回的资源数（最多 10000 个）</dd>
   <dt>-s, --sort-by</dt>
   <dd>要作为排序依据的属性。接受的输入为 `name`、`family`、`region`、`type` 或 `crn`。</dd>
-  <dt>-p, --provider</dt>
-  <dd>显示经典基础架构资源，唯一允许的值为：classic-infrastructure</dd>
-</dl>
-
-<strong>可搜索的属性</strong>：
-您可以搜索以下属性：
-
-<dl>
-  <dt>name</dt>
-  <dd>用户定义的资源名称。</dd>
-  <dt>区域 (region)</dt>
-  <dd>供应资源的地理位置。例如：us-south、us-east、au-syd、eu-gb、eu-de 和 jp-tok。</dd>
-  <dt>service_name</dt>
-  <dd>在“ibmcloud catalog service-marketplace”的输出的 Name 列中显示的服务名称。</dd>
-  <dt>family</dt>
-  <dd>资源所属的云组件。允许的值为 cloud_foundry、containers、resource_controller、vmware 或 ims。</dd>
-  <dt>organization_id</dt>
-  <dd>Cloud Foundry 组织 GUID。</dd>
-  <dt>doc.space_id</dt>
-  <dd>Cloud Foundry 空间 GUID。</dd>
-  <dt>doc.resource_group_id</dt>
-  <dd>资源组的标识。</dd>
-  <dt>type</dt>
-  <dd>资源类型。允许的值为 k8-cluster、cf-service-instance、cf-user-provided-service-instance、cf-organization、cf-service-binding、cf-space、cf-application、resource-instance、resource-alias、resource-binding、resource-group、vmware-solutions、cloud-objects-storage-infrastructure、block-storage、file-storage 和 cloud-backup。</dd>
-  <dt>creation_date</dt>
-  <dd>创建资源的日期。</dd>
-  <dt>modification_date</dt>
-  <dd>上次修改资源的日期。格式为 yyyy-mm-ddThh:mm:ssZ</dd>
-  <dt>_objectType</dt>
-  <dd>经典基础架构资源的类型。允许的值为 SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall 和 SoftLayer_Virtual_Guest。</dd>
-  <dt>tags, tagReferences.tag.name</dt>
-  <dd>附加到资源的标记。搜索附加到经典基础架构资源的标记时，请使用 tagReferences.tag.name。</dd> 
 </dl>
 
 <strong>示例</strong>：
+搜索其名称以指定文本开头的 Cloud Foundry 应用程序：
 
-搜索名称以指定文本开头的 Cloud Foundry 应用程序：
 ```
 ibmcloud resource search 'name:my* AND type:cf-application'
 ```
 
 搜索指定服务名称的 Cloud Foundry 服务实例：
+
 ```
 ibmcloud resource search 'service_name:messagehub AND type:cf-service-instance'
 ```
 
 在具有指定标识的组织中搜索 Cloud Foundry 服务绑定：
+
 ```
 ibmcloud resource search 'organization_guid:5b82c134-afb3-4f69-b1e0-3cbe4a13a205 AND type:cf-service-binding'
 ```
 
 搜索具有指定名称且位于两个指定区域之一内的 Cloud Foundry 空间：
+
 ```
 ibmcloud resource search 'name:dev AND type:cf-space AND region:(us-south OR eu-gb)'
 ```
 
 在具有指定标识的 Cloud Foundry 空间中搜索其名称中包含文字 dev 的资源：
-```
+
+```            
 ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
 ```
 
 在指定位置中（即，在 us-south 区域中）搜索资源控制器资源：
+
 ```
 ibmcloud resource search 'region:us-south AND family:resource_controller'
 ```
 
 在具有指定标识的资源组中搜索资源或别名：
+
 ```
 ibmcloud resource search '(type:resource-instance OR type:resource-alias) AND (doc.resource_group_id:c900d9671b235c00461c5e311a8aeced)'
 ```
 
 搜索名称为 default 的资源组：
+
 ```
 ibmcloud resource search 'name:default AND type:resource-group'
 ```
 
 搜索指定服务名称的资源绑定：
+
 ```
 ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-binding'
 ```
 
 搜索具有指定云资源名称 (CRN) 的资源：
+
 ```
 ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 搜索具有指定标记的资源：
+
 ```
 ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
-{: codeblock}
-
-搜索具有指定标识的经典基础架构虚拟访客资源（仅使用 -p classic-infrastructure）：
-```
-ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
-```
-{: codeblock}
-
-搜索具有指定标记名称的经典基础架构硬件资源（仅使用 -p classic-infrastructure）：
-```
-ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
-```
-{: codeblock}
 
 ## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
-列出计费帐户中的所有标记
+列出所有标记
 
 ```
-ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true]
-```
-<strong>先决条件</strong>：端点和登录
-
-<strong>命令选项</strong>：
-<dl>
-  <dt>-o, -offset</dt>
-  <dd>起始标记位置编号</dd>
-  <dt>-l, -limit</dt>
-  <dd>要返回的标记数（最多 10000 个）</dd>
-  <dt>-p; --provider</dt> 
-  <dd>搜索经典基础架构标记时，请指定 classic-infrastructure</dd>
-  <dt>-d, --details</dt>
-  <dd>显示已标记资源的数量。</dd>
-</dl>
-
-
-## ibmcloud resource tag-attach
-{: #ibmcloud_resource_tag_attach}
-
-将一个或多个标记附加到资源：
-```
-ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
-```
-<strong>先决条件</strong>：端点和登录
-
-<strong>命令选项</strong>：
-<dl>
-  <dt>--tag-names（必需）</dt>
-  <dd>以逗号分隔的标记名称的列表</dd>
-  <dt>--resource-id</dt>
-  <dd>要对其附加标记的资源的 CRN；对于经典基础架构资源而言，它是资源的标识</dd>
-  <dt>--resource-type</dt>
-  <dd>要对其附加标记的经典基础架构资源的资源类型；要将标记附加到经典基础架构资源时，此参数是必需的。--resource-type 的可能值为：SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall 和 SoftLayer_Virtual_Guest。</dd>
-</dl>
-
-## ibmcloud resource tag-detach
-{: #ibmcloud_resource_tag_detach}
-
-从资源中分离一个或多个标记：
-```
-ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--resource-type RESOURCE_TYPE]
+ibmcloud resource tags [--tag-type TAG_TYPE] [-o, --offset OFFSET] [-l, --limit LIMIT]
 ```
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
 <dl>
-  <dt>--tag-names（必需）</dt>
-  <dd>以逗号分隔的标记名称的列表</dd>
-  <dt>--resource-id</dt>
-  <dd>要从中分离标记的资源的 CRN；对于经典基础架构资源而言，它是资源的标识</dd>
-  <dt>--resource-type</dt>
-  <dd>要从中分离标记的经典基础架构资源的资源类型；要从经典基础架构资源中分离标记，此参数是必需的。--resource-type 的可能值为：SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall 和 SoftLayer_Virtual_Guest。</dd>
+  <dt>--tag-type</dt>
+  <dd>标记类型（支持的值：user、restricted）</dd>
+  <dt>-o, --offset</dt>
+  <dd>起始资源位置编号（缺省值：0）</dd>
+  <dt>-l, --limit</dt>
+  <dd>要返回的资源数（最多 10000 个）（缺省值：10000）</dd>
 </dl>
 
+<strong>示例</strong>：
 
-## ibmcloud resource tag-delete
-{: #ibmcloud_resource_tag_delete}
+列出所有标记
 
-删除标记：
 ```
-ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
+ibmcloud resource tags 
+```
+
+列出所有 restricted 标记
+
+```
+ibmcloud resource tags --tag-type restricted
+```
+
+## ibmcloud resource tag
+{: #ibmcloud_resource_tag}
+
+显示标记详细信息
+
+```
+ibmcloud resource tag (--tag-name TAG_NAME | --tag-crn TAG_CRN)
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -999,9 +990,174 @@ ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
 <strong>命令选项</strong>：
 <dl>
   <dt>--tag-name（必需）</dt>
-  <dd>要删除的标记的名称。</dd>
-  <dt>-p; --provider</dt> 
-  <dd>删除经典基础架构标记时，请指定 classic-infrastructure</dd>
+  <dd>标记名称，与 --tag-crn 互斥 </dd>
+  <dt>--tag-crn（必需）</dt>
+  <dd>标记 CRN，与 --tag-name 互斥 </dd>
 </dl>
 
-只能删除未附加到任何资源的标记。
+<strong>示例</strong>：
+
+显示标记“Ray Brown”的详细信息
+
+```
+ibmcloud resource tag --tag-name "Ray Brown"
+```
+
+## ibmcloud resource tag-create
+{: #ibmcloud_resource_tag_create}
+
+创建标记
+
+```
+ibmcloud resource tag-create --tag-name TAG_NAME [--tag-type TAG_TYPE]
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--tag-name（必需）</dt>
+  <dd>标记名称</dd>
+  <dt>--tag-type</dt>
+  <dd>标记类型（支持的值：user、restricted；缺省值为 user）</dd>
+</dl>
+
+<strong>示例</strong>：
+
+创建名称为 think:2018 的 user 标记
+
+```
+ibmcloud resource tag-create --tag-name think:2018
+```
+
+创建名称为 department:marketing 的 restricted 标记
+
+```
+ibmcloud resource tag-create --tag-name "department:marketing" --tag-type restricted
+```
+
+创建名称为“Ray Brown”的 user 标记
+
+```
+ibmcloud resource tag-create --tag-name "Ray Brown"
+```
+
+创建名称为“environment:My Development”的 restricted 标记
+
+```
+ibmcloud resource tag-create --tag-name "environment:My Development" --tag-type restricted
+```
+
+## ibmcloud resource tag-delete
+{: #ibmcloud_resource_tag_delete}
+
+删除标记
+
+```
+ibmcloud resource tag-delete (--tag-name TAG_NAME | --tag-crn TAG_CRN)
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--tag-name（必需）</dt>
+  <dd>标记名称，与 --tag-crn 互斥 </dd>
+  <dt>--tag-crn（必需）</dt>
+  <dd>标记 CRN，与 --tag-name 互斥 </dd>
+</dl>
+
+<strong>示例</strong>：
+
+删除标记“Ray Brown”
+
+```
+ibmcloud resource tag-delete --tag-name "Ray Brown"
+```
+
+## ibmcloud resource tag-attach
+{: #ibmcloud_resource_tag_attach}
+
+向资源添加标记
+
+```
+ibmcloud resource tag-attach (--tag-name TAG_NAME | --tag-crn TAG_CRN ) --resource-crn RESOURCE_CRN
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--tag-name（必需）</dt>
+  <dd>标记名称，与 --tag-crn 互斥 </dd>
+  <dt>--tag-crn（必需）</dt>
+  <dd>标记 CRN，与 --tag-name 互斥 </dd>
+  <dt>--resource-crn（必需）</dt>
+  <dd>资源 CRN</dd>
+</dl>
+
+<strong>示例</strong>：
+
+向 crn 为 resource_example_crn 的资源添加标记“Ray Brown”。
+
+```
+ibmcloud resource tag-attach --tag-name "Ray Brown" --resource-crn resource_example_crn
+```
+
+## ibmcloud resource tag-detach
+{: #ibmcloud_resource_tag_detach}
+
+从资源除去标记
+
+```
+ibmcloud  tag-detach (--tag-name TAG_NAME | --tag-crn TAG_CRN) --resource-crn RESOURCE_CRN
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--tag-name（必需）</dt>
+  <dd>标记名称，与 --tag-crn 互斥 </dd>
+  <dt>--tag-crn（必需）</dt>
+  <dd>标记 CRN，与 --tag-name 互斥 </dd>
+  <dt>--resource-crn（必需）</dt>
+  <dd>资源 CRN</dd>
+</dl>
+
+<strong>示例</strong>：
+
+除去 crn 为 resource_example_crn 的资源的标记“Ray Brown”。
+
+```
+ibmcloud resource tag-detach --tag-name "Ray Brown" --resource-crn resource_example_crn
+```
+
+## ibmcloud resource tag-update
+{: #ibmcloud_resource_tag_update}
+
+从 user 标记切换到 restricted 标记，反之亦然
+
+```
+ibmcloud tag-update (--tag-name TAG_NAME | --tag-crn TAG_CRN) --tag-type TAG_TYPE
+```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>--tag-name（必需）</dt>
+  <dd>标记名称，与 --tag-crn 互斥 </dd>
+  <dt>--tag-crn（必需）</dt>
+  <dd>标记 CRN，与 --tag-name 互斥 </dd>
+  <dt>--tag-type（必需）</dt>
+  <dd>标记类型</dd>
+</dl>
+
+<strong>示例</strong>：
+
+从标记“Ray Brown”切换到 restricted 标记
+
+```
+ibmcloud tag-update --tag-name "Ray Brown"  --tag-type restricted
+```

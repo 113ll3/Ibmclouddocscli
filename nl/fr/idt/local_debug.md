@@ -1,15 +1,11 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-02-27"
+  years: 2017, 2018
+lastupdated: "2018-11-30"
 
-keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
-
-subcollection: cloud-cli
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -27,21 +23,20 @@ Il existe des outils vous permettant de déboguer votre application Java et Node
 
 Etapes permettant d'activer l'outil de débogage pour une application Java :
 
-1. Depuis le répertoire racine de votre projet d'application, exécutez la commande suivante :
+1. Depuis le répertoire principal de votre projet d'application, exécutez la commande suivante :
 
-  ```
-  ibmcloud dev debug
-  ```
-  {: codeblock}
+```
+ibmcloud dev debug
+```
 
 2. Connectez le débogueur à votre application :
 
 	* Eclipse
       1. Importez le **projet maven existant** dans Eclipse.
-      2. Créez une configuration de débogage d'[application distante Java ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
+      2. Créez une configuration de débogage d'[application distante Java ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm).
       		1. Entrez l'adresse IP ou `localhost:<port>`  
       		2. Entrez `7777` comme numéro de port.
-      		3. Spécifiez le nom du projet Java que vous avez importé.
+      		3. Spécifiez le nom du projet java que vous avez importé.
       6. Définissez un point d'arrêt dans l'environnement de développement intégré.
       7. Exécutez la configuration de débogage.
       8. Accédez au noeud final avec un navigateur pour recréer le problème.  
@@ -49,24 +44,24 @@ Etapes permettant d'activer l'outil de débogage pour une application Java :
 	   Le port par défaut est 9080 pour le noeud final de base Microservices Java.
 	   {: note}
 
-	* [IntelliJ ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
-	* [VSCode ](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
+	* [IntelliJ ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
+	* [VSCode ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
 	* Ligne de commande du kit JDK : `jdb -attach <host:port>`
 
 ## Débogage d'une application Node.js
-{: #idt-node-debug}
+{: #node}
 
 Etapes permettant d'activer l'outil de débogage pour une application Node.js :
 
-1. Depuis le répertoire racine de votre projet d'application, exécutez la commande suivante :
-  ```
-  ibmcloud dev debug
-  ```
-  {: codeblock}
+1. Depuis le répertoire racine de vos projets d'application, exécutez la commande suivante :
+
+```
+ibmcloud dev debug
+```
 
 2. Connectez le débogueur à votre application :
-	* [VSCode ](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
-	* [WebStorm ](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
+	* [VSCode ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://blog.docker.com/2016/07/live-debugging-docker/)
+	* [WebStorm ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
 
 
 <!--

@@ -1,12 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-27"
 
-keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+  years: 2015, 2018
 
-subcollection: cloud-cli
+lastupdated: "2018-01-08"
 
 ---
 
@@ -14,84 +12,85 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
-{:note: .note}
-{:tip: .tip}
 
-# {{site.data.keyword.cloud_notm}} 관리 CLI
+# {{site.data.keyword.Bluemix_notm}} 관리 CLI
 {: #bluemixadmincli}
 
-{{site.data.keyword.cloud_notm}} 관리 CLI 플러그인에 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.cloud_notm}} 로컬 또는 {{site.data.keyword.cloud_notm}} 데디케이티드 환경을 관리할 수 있습니다. 예를 들어, LDAP 레지스트리에서 사용자를 추가할 수 있습니다. {{site.data.keyword.cloud_notm}} 퍼블릭의 계정 관리에 대한 정보는 [관리](/docs/account?topic=account-accounts#accounts)를 참조하십시오.
 
-시작하기 전에 Cloud Foundry 명령행 인터페이스를 설치하십시오. {{site.data.keyword.cloud_notm}} 관리
-CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다. [Cloud Foundry 명령행 인터페이스 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")
+{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인에 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 로컬 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경을 관리할 수 있습니다. 예를 들어, LDAP 레지스트리에서 사용자를 추가할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭 계정 관리에 대한 정보를 찾는 경우 [관리](/docs/admin/adminpublic.html#administer)를 참조하십시오.
+
+시작하기 전에 cf 명령행 인터페이스를 설치하십시오. {{site.data.keyword.Bluemix_notm}} 관리
+CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다. [Cloud Foundry 명령행 인터페이스 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **제한사항:** Cloud Foundry 명령행 인터페이스는
 Cygwin에서는 지원되지 않습니다. Cygwin 명령행 창 외의
 명령행 창에서 Cloud Foundry 명령행 인터페이스를 사용하십시오.
 
-{{site.data.keyword.cloud_notm}} 관리 CLI는 {{site.data.keyword.cloud_notm}} 로컬 및 {{site.data.keyword.cloud_notm}} 데디케이티드 환경에만 사용됩니다. {{site.data.keyword.cloud_notm}} 퍼블릭에서 지원되지 않습니다.
-{: note}
+**참고**: {{site.data.keyword.Bluemix_notm}} 관리 CLI는 {{site.data.keyword.Bluemix_notm}} 로컬 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에만 사용됩니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 지원되지 않습니다.
 
-## {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인 추가
+## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 추가
 
-Cloud Foundry 명령행 인터페이스가 설치된 후에 {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인을 추가할 수 있습니다.
+cf 명령행 인터페이스가 설치된 후에
+{{site.data.keyword.Bluemix_notm}} 관리 CLI
+플러그인을 추가할 수 있습니다.
 
-이전에 {{site.data.keyword.cloud_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 다시 설치해야 합니다.
-{: tip}
+**참고**: 이전에 {{site.data.keyword.Bluemix_notm}} 관리 플러그인을 설치한 경우, 최신 업데이트를 가져오려면 이 플러그인을 설치 제거하고 저장소를 삭제한 후 다시 설치해야 할 수도 있습니다.
 
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 
 <ol>
-<li>{{site.data.keyword.cloud_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.<br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
-cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 </li>
-<li>{{site.data.keyword.cloud_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.<br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
-cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
 
 플러그인을 설치 제거해야 하는 경우 다음 명령을 사용한 후 업데이트된 저장소를 추가하고 최신 플러그인을 설치할 수 있습니다.
 
-* 플러그인 설치 제거: `cf uninstall-plugin IBMCloudAdminCLI`
-* 플러그인 저장소 제거: `cf remove-plugin-repo IBMCloudAdmin`
+* 플러그인 설치 제거: `cf uninstall-plugin BluemixAdminCLI`
+* 플러그인 저장소 제거: `cf remove-plugin-repo BluemixAdmin`
 
-## {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인 사용
 
-{{site.data.keyword.cloud_notm}} 관리 CLI 플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다.
+## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 사용
+
+{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다.
 
 명령 목록을 보려면 다음 명령을
 실행하십시오.
+
 ```
 cf plugins
 ```
 {: codeblock}
 
-명령에 대한 도움말을 보려면 `-help` 옵션을 사용하십시오.
+명령에 대한 추가 도움말을 보려면 `-help` 옵션을 사용하십시오.
 
-### {{site.data.keyword.cloud_notm}}에 연결 및 로그인
+### {{site.data.keyword.Bluemix_notm}}에 연결 및 로그인
 
 관리 CLI 플러그인을 사용하려면 (아직 그렇게 하지 않은 경우) 먼저 연결하여
 로그인해야 합니다.
 
 <ol>
-<li>{{site.data.keyword.cloud_notm}} API 엔드포인트에 연결하려면 다음 명령을 실행하십시오.<br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} API 엔드포인트에 연결하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
-cf api api.ng.bluemix.net
+cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.cloud_notm}} 인스턴스 URL의 하위 도메인입니다.<br />
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 인스턴스 URL의 하위 도메인입니다.<br />
 </dd>
 </dl>
 <p>관리 콘솔의 리소스 및 정보 페이지에서 올바른 URL을 확인할 수
 있습니다. URL은 **API URL** 필드의 API 정보 섹션에
 표시됩니다.</p>
 </li>
-<li>다음 명령으로 {{site.data.keyword.cloud_notm}}에 로그인하십시오.<br/><br/>
+<li>다음 명령으로 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.<br/><br/>
 <code>
 cf login
 </code>
@@ -104,20 +103,21 @@ cf login
 ### 사용자 추가
 {: #admin_add_user}
 
-사용자 환경의 사용자 레지스트리에서 {{site.data.keyword.cloud_notm}} 환경에 사용자를 추가하려면
+사용자 환경의 사용자 레지스트리에서 {{site.data.keyword.Bluemix_notm}} 환경에 사용자를 추가하려면
 다음 명령을 사용하십시오.
+
 ```
 cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다. 자세한 정보는 [관리자가 사용자를 추가하도록 설정](index.html#clius_emau)을 참조하십시오.
+**참고**: 특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다.  자세한 정보는 [관리자를 사용하여 사용자 추가](index.html#clius_emau)를 참조하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">LDAP 레지스트리 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">사용자를 추가할 {{site.data.keyword.cloud_notm}} 조직의 이름 또는 GUID입니다.</dd>
+<dd class="pd">사용자를 추가할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 <dt class="pt dlterm">&lt;first_name&gt;</dt>
 <dd class="pd">조직에 추가할 사용자의 이름입니다.</dd>
 <dt class="pt dlterm">&lt;last_name&gt;</dt>
@@ -130,13 +130,14 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ### {{site.data.keyword.Bluemix_dedicated_notm}}에서 사용자 초대
 {: #admin_dedicated_invite_public}
 
-각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.cloud_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [IBM Cloud Container Service on Dedicated 설정](/docs/containers?topic=containers-dedicated#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
+각 {{site.data.keyword.Bluemix_dedicated_notm}} 환경에 {{site.data.keyword.Bluemix_notm}}의 클라이언트 소유의 공용 회사 계정이 있습니다. 데디케이티드 환경의 사용자가 {{site.data.keyword.containershort}}에서 클러스터를 작성하려면 관리자가 이 공용 회사 계정에 사용자를 추가해야 합니다. 사용자가 공용 회사 계정에 추가되면 해당 데디케이티드 계정과 공용 계정이 함께 연결됩니다. 그러면 사용자는 IBM ID를 사용하여 데디케이티드와 공용 모두에 동시에 로그인할 수 있으며 데디케이티드 인터페이스를 통해 공용 계정에서 리소스를 작성할 수 있습니다. 자세한 정보는 [데디케이티드에 IBM Cloud Container 서비스 설정](/docs/containers/cs_dedicated.html#dedicated_setup)을 참조하십시오. 데디케이티드 사용자를 공용 계정으로 초대하려면 다음을 수행하십시오.
+
 ```
 cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
 ```
 {: pre}
 
-{{site.data.keyword.cloud_notm}} 공용 계정에 데디케이티드 환경 사용자를 추가하려면 데디케이티드 계정의 **관리자**여야 합니다.
+**참고**: {{site.data.keyword.Bluemix_notm}} 공용 계정에 데디케이티드 환경 사용자를 추가하려면 데디케이티드 계정의 **관리자**여야 합니다.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_email&gt;</dt>
@@ -159,7 +160,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 ```
 {: pre}
 
-{{site.data.keyword.Bluemix_notm}} 공용 계정에 데디케이티드 환경 사용자를 추가하려면 데디케이티드 계정의 **관리자**여야 합니다.
+**참고**: {{site.data.keyword.Bluemix_notm}} 공용 계정에 데디케이티드 환경 사용자를 추가하려면 데디케이티드 계정의 **관리자**여야 합니다.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
@@ -184,7 +185,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">사용자에게 지정된 권한입니다. 사용 가능한 권한은 admin(또는 superuser), login(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다.</dd>
+<dd class="pd">사용자에게 지정된 권한입니다. 사용 가능한 권한은 admin(또는 superuser), login(또는 basic), catalog.read, catalog.write, reports.read, reports.write, users.read 또는 users.write입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](/docs/admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">사용자가 속한 조직 이름입니다. 동일한 조회에 권한 매개변수가 있으면 이 매개변수를 사용할 수 없습니다.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
@@ -199,12 +200,13 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 {: #admin_setperm_user}
 
 지정된 사용자의 권한을 설정하려면 다음 명령을 사용하십시오.
+
 ```
 cf ba set-permissions <user_name> <permission> <access>
 ```
 {: codeblock}
 
-한 번에 하나의 권한만 설정할 수 있습니다.
+**참고**: 한 번에 하나의 권한을 설정할 수 있습니다.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -240,10 +242,10 @@ cf ba remove-user <user_name>
 **팁:** 긴 **ba remove-user** 명령어에 대한
 별명으로 **ba ru**를 사용할 수도 있습니다.
 
-### 관리자가 사용자를 추가할 수 있도록 설정
+### 관리자가 사용자를 추가하도록 설정
 {: #clius_emau}
 
-{{site.data.keyword.Bluemix_notm}} 환경에 **수퍼유저** 권한이 있는 경우 조직 관리자가 자신이 관리하는 조직에 사용자를 추가할 수 있도록 설정할 수 있습니다. 관리자가 사용자를 추가할 수 있도록 하려면 다음 명령을 사용하십시오.
+{{site.data.keyword.Bluemix_notm}} 환경에 **수퍼유저** 권한이 있는 경우 조직 관리자가 관리하는 조직에 사용자를 추가하도록 설정할 수 있습니다. 관리자가 사용자를 추가할 수 있도록 하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba enable-managers-add-users
@@ -253,10 +255,10 @@ cf ba enable-managers-add-users
 **팁:** 긴 **ba enable-managers-add-users** 명령어의
 별명으로 **ba emau**를 사용할 수도 있습니다.
 
-### 관리자가 사용자를 추가할 수 없도록 설정
+### 관리자가 사용자를 추가하도록 설정 제거
 {: #clius_dmau}
 
-조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 자신이 관리하는 조직에 사용자를 추가할 수 있도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다. 관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
+조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 관리하는 조직에 사용자를 추가하도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다.  관리자가 사용자를 추가할 수 없도록 하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba disable-managers-add-users
@@ -289,19 +291,11 @@ cf ba create-org <organization> <manager>
 **팁:** 긴 **ba create-org** 명령어에 대한
 별명으로 **ba co**를 사용할 수도 있습니다.
 
-### 조직 삭제
-{: #admin_delete_org}
-
-조직을 삭제하려면 다음 명령을 사용하십시오.
-
-```
-cf ba delete-org <organization>
-```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">삭제할 {{site.data.keyword.cloud_notm}} 조직의 이름 또는 GUID입니다.</dd>
+<dd class="pd">삭제할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 </dl>
 
 **팁:** 긴 **ba delete-org** 명령어에 대한
@@ -310,7 +304,7 @@ cf ba delete-org <organization>
 ### 조직에 사용자 지정
 {: #admin_ass_user_org}
 
-{{site.data.keyword.cloud_notm}} 환경에 있는 사용자를 특정 조직에 지정하려면
+{{site.data.keyword.Bluemix_notm}} 환경에 있는 사용자를 특정 조직에 지정하려면
 다음 명령을 사용하십시오.
 
 ```
@@ -320,12 +314,12 @@ cf ba set-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.cloud_notm}} 내의 사용자 이름입니다.</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">사용자를 지정할 {{site.data.keyword.cloud_notm}} 조직의 이름 또는 GUID입니다.</dd>
+<dd class="pd">사용자를 지정할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.cloud_notm}}
-사용자 역할 및 설명에 대해서는 [역할](/docs/iam?topic=iam-userroles#userroles)을
+<dd class="pd">{{site.data.keyword.Bluemix_notm}}
+사용자 역할 및 설명에 대해서는 [역할](/docs/admin/users_roles.html)을
 참조하십시오.</dd>
 </dl>
 
@@ -335,7 +329,7 @@ cf ba set-org <user_name> <organization> [<role>]
 ### 조직에서 사용자 지정 취소
 {: #admin_unass_user_org}
 
-{{site.data.keyword.cloud_notm}} 환경에 있는 사용자를 특정 조직에서 지정 취소하려면
+{{site.data.keyword.Bluemix_notm}} 환경에 있는 사용자를 특정 조직에서 지정 취소하려면
 다음 명령을 사용하십시오.
 
 ```
@@ -345,12 +339,12 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.cloud_notm}} 내의 사용자 이름입니다.</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">사용자를 지정할 {{site.data.keyword.cloud_notm}} 조직의 이름 또는 GUID입니다.</dd>
+<dd class="pd">사용자를 지정할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.cloud_notm}} 사용자 역할 및 설명에 대해서는
-[역할 지정](/docs/iam?topic=iam-userroles#userroles)을
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 사용자 역할 및 설명에 대해서는
+[역할 지정](/docs/admin/users_roles.html)을
 참조하십시오.</dd>
 </dl>
 
@@ -403,16 +397,17 @@ cf ba set-quota <organization> <plan>
 조직의 컨테이너 할당량을 찾으려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin containers-quota <organization>
+cf bluemix-admin containers-quota <organization>
 ```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">IBM Cloud의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
+<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 </dl>
 
-**팁:** 긴 **ibmcloud-admin containers-quota** 명령어의 별명으로 **ba cq**를 사용할 수도 있습니다.
+**팁:** 긴 **bluemix-admin containers-quota** 명령어의 별명으로
+**ba cq**를 사용할 수도 있습니다.
 
 ### 조직의 컨테이너 할당량 설정
 {: #admin_set_containquotas}
@@ -420,7 +415,7 @@ cf ibmcloud-admin containers-quota <organization>
 조직의 컨테이너 할당량을 설정하려면 하나 이상의 옵션을 포함하여 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin set-containers-quota <organization> <options>
+cf bluemix-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -428,7 +423,7 @@ cf ibmcloud-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">IBM Cloud의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
+<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">값이 정수여야 하는 다음 옵션 중 하나 이상을 포함합니다.
 <ul>
@@ -459,7 +454,7 @@ cf ibmcloud-admin set-containers-quota <organization> <options>
 선택적으로 올바른 JSON 오브젝트에 특정 구성 매개변수를 포함하는 파일을 제공할 수 있습니다. **-file** 옵션을 사용하면 이 옵션이 우선 적용되고 다른 옵션은 무시됩니다. 옵션을 설정하는 대신에 파일을 제공하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -476,7 +471,8 @@ JSON 파일의 형식은 다음 예제와 같습니다.
 ```
 {: codeblock}
 
-**팁:** 긴 **ibmcloud-admin set-containers-quota** 명령어의 별명으로 **ba scq**를 사용할 수도 있습니다.
+**팁:** 긴 **bluemix-admin set-containers-quota** 명령어의 별명으로
+**ba scq**를 사용할 수도 있습니다.
 
 ## 영역 관리
 {: #admin_spaces}
@@ -486,7 +482,7 @@ JSON 파일의 형식은 다음 예제와 같습니다.
 조직에 영역을 추가하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin create-space <organization> <space_name>
+cf bluemix-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -506,7 +502,7 @@ cf ibmcloud-admin create-space <organization> <space_name>
 조직에서 영역을 삭제하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin delete-space <organization> <space_name>
+cf bluemix-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -526,7 +522,7 @@ cf ibmcloud-admin delete-space <organization> <space_name>
 지정된 역할과 함께 영역에 사용자를 작성하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -540,7 +536,7 @@ cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 <dd class="pd">추가할 사용자의 이름입니다.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">지정할 사용자의 역할입니다. 값은 관리자, 개발자 또는 감사자입니다. 영역의
-{{site.data.keyword.Bluemix_notm}} 사용자 역할 및 설명은 [역할 지정](/docs/iam?topic=iam-userroles#userroles)을
+{{site.data.keyword.Bluemix_notm}} 사용자 역할 및 설명은 [역할 지정](/docs/admin/users_roles.html)을
 참조하십시오.</dd>
 </dl>
 
@@ -553,7 +549,7 @@ cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 영역에서 사용자 역할을 제거하려면 다음 명령을 사용하십시오.
 
 ```
-cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -567,7 +563,7 @@ cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 <dd class="pd">추가할 사용자의 이름입니다.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">지정할 사용자의 역할입니다. 값은 관리자, 개발자 또는 감사자입니다. 영역의
-{{site.data.keyword.cloud_notm}} 사용자 역할 및 설명은 [역할 지정](/docs/iam?topic=iam-userroles#userroles)을
+{{site.data.keyword.Bluemix_notm}} 사용자 역할 및 설명은 [역할 지정](/docs/admin/users_roles.html)을
 참조하십시오.</dd>
 </dl>
 
@@ -581,7 +577,7 @@ cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 {: #admin_ena_service_org}
 
 모든 조직에 대해
-{{site.data.keyword.cloud_notm}} 카탈로그에
+{{site.data.keyword.Bluemix_notm}} 카탈로그에
 서비스를 표시하도록 설정하려면 다음 명령을 사용하십시오.
 
 ```
@@ -672,7 +668,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 ```
 {: codeblock}
 
-이 명령은 지정된 조직에 대해 표시되는 기존 서비스를 명령에서 지정하는 서비스로 대체합니다.
+**참고:** 이 명령은 지정된 조직에 대해 표시되는 기존 서비스를 명령에서 지정하는 서비스로 대체합니다.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
@@ -698,7 +694,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-보고서 권한에 대해 쓰기 액세스 권한이 있는 경우, 새 카테고리를 작성하고 사용자에 대한 허용된 형식으로 보고서를 추가할 수 있습니다. `category` 매개변수에 대해 새 카테고리 이름을 입력하거나 새 보고서를 기존 카테고리에 추가하십시오.
+**참고**: 보고서 권한에 대해 쓰기 액세스 권한이 있는 경우, 새 카테고리를 작성하고 사용자에 대한 허용된 형식으로 보고서를 추가할 수 있습니다. `category` 매개변수에 대해 새 카테고리 이름을 입력하거나 새 보고서를 기존 카테고리에 추가하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
@@ -772,7 +768,7 @@ cf ba resource-metrics
 ## 리소스 메트릭 히스토리 보기
 {: #cliresourceusagehistory}
 
-메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다. 시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다. 리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
+메모리 및 디스크 사용량의 리소스 메트릭 히스토리를 검색할 수 있습니다. 리턴된 메트릭에는 실제 및 예약된 리소스에 사용할 수 있는 총계 중에서 사용된 리소스의 양이 포함되어 있습니다. 메모리 및 디스크 사용량의 히스토리 데이터는 시간별, 일별 또는 월별로 표시할 수 있습니다.  시작 및 종료 날짜를 지정하여 특정 데이터 범위에서 데이터를 검색할 수 있습니다. 날짜가 지정되지 않은 경우 기본 히스토리 데이터는 최근 48시간 동안의 시간별 메모리 데이터입니다. 데이터는 내림차순으로 가장 최근 날짜가 먼저 표시됩니다.   리소스 메트릭 히스토리 정보를 보려면 다음 명령을 사용하십시오.
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -800,10 +796,10 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;예제&gt;</dt>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 
@@ -828,7 +824,7 @@ cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-모든 서비스 브로커를 나열하려면 `broker_name` 매개변수 없이 명령을 입력하십시오.
+**참고**: 모든 서비스 브로커를 나열하려면 `broker_name` 매개변수 없이 명령을 입력하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>
@@ -866,8 +862,8 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### 서비스 브로커 삭제
 {: #clidelservbro}
 
-{{site.data.keyword.Bluemix_notm}} 카탈로그에서
-사용자 정의 서비스를 제거하는 서비스 브로커를 삭제하려면 다음 명령을 사용하십시오.
+서비스 브로커를 삭제하여 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
+사용자 정의 서비스를 제거하려면 다음 명령을 사용하십시오.
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -906,6 +902,7 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 **팁:** 긴 **ba update-service-broker** 명령어에 대한
 별명으로 **ba usb**를 사용할 수도 있습니다.
 
+
 ## 애플리케이션 보안 그룹 관리
 {: #admin_secgro}
 
@@ -913,12 +910,12 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 
 ASG는 {{site.data.keyword.Bluemix_notm}} 환경에서 애플리케이션의 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다. 각 ASG는 네트워크 안팎으로 특정 트래픽과 통신을 허용하는 규칙의 목록으로 구성됩니다. 하나 이상의 ASG를 특정 보안 그룹 세트(예: 글로벌 액세스를 적용하는 데 사용되는 그룹 세트)에 바인딩하거나 {{site.data.keyword.Bluemix_notm}} 환경에서 조직 내의 영역에 바인딩할 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}을 참조하십시오.
 
 **경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 스테이징** 또는 **기본 실행** 그룹 세트의 바인드를 해제하면, `public_networks` 및 `dns`에서 외부 네트워크에 대한 글로벌 액세스를 사용 안함으로 설정합니다. 바인드 해제를 사용할 때는 환경에 있는 실행 및 스테이징 애플리케이션에 대한 잠재적 영향을 이해하고 주의를 기울이십시오.
 
-보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 필수 필드 및 선택 필드를 포함하여 자세한 정보는 [애플리케이션 보안 그룹 작성 ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 Cloud Foundry 정보를 참조하십시오.
-{: note}
+
+**참고**: 보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 필수 필드 및 선택 필드를 포함하여 자세한 정보는 [애플리케이션 보안 그룹 작성 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}에 대한 Cloud Foundry 정보를 참조하십시오.
 
 ### 보안 그룹 나열
 {: #clilissecgro}
@@ -948,12 +945,14 @@ cf ba security-groups <security-group>
 **팁:** `security-group` 매개변수가 있는 긴 **ba security-groups**
 명령어의 별명으로 **ba sg**를 사용할 수도 있습니다.
 
+
 ### 보안 그룹 작성
 {: #clicreasecgro}
 
-보안 그룹 및 출력 트래픽을 정의하는 규칙 작성에 대한 자세한 정보는 [애플리케이션 보안 그룹 작성](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+보안 그룹 및 출력 트래픽을 정의하는 규칙 작성에 대한 자세한 정보는 [애플리케이션 보안 그룹 작성 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}을 참조하십시오.
 
 보안 그룹을 작성하려면 다음 명령을 사용하십시오.
+
 ```
 cf ba create-security-group <security-group> <path-to-rules-file>
 ```
@@ -995,6 +994,7 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 {: #clidelsecgro}
 
 보안 그룹을 삭제하려면 다음 명령을 사용하십시오.
+
 ```
 cf ba delete-security-group <security-group>
 ```
@@ -1008,10 +1008,11 @@ cf ba delete-security-group <security-group>
 **팁:** 긴 **ba delete-security-group** 명령어의
 별명으로 **ba dsg**를 사용할 수도 있습니다.
 
+
 ### 보안 그룹 바인딩
 {: #clibindsecgro}
 
-보안 그룹 바인딩에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+보안 그룹 바인딩에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}을 참조하십시오.
 
 * 기본 스테이징 보안 그룹 세트를 바인드하려면 다음 명령을 사용하십시오.
 
@@ -1065,7 +1066,7 @@ cf ba bind-security-group <security-group> <org> <space>
 ### 보안 그룹 바인드 해제
 {: #cliunbindsecgro}
 
-보안 그룹 바인딩 해제에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 해제](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+보안 그룹 바인딩 해제에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 해제 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}를 참조하십시오.
 
 * 기본 스테이징 보안 그룹 세트에서 바인드 해제하려면 다음 명령을 사용하십시오.
 
@@ -1165,7 +1166,8 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 ### 빌드팩 업데이트
 {: #cliupdabuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 업데이트할 수 있습니다. 빌드팩을 업데이트하려면 다음 명령을 사용하십시오.
+앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 업데이트할 수 있습니다.  빌드팩을 업데이트하려면 다음 명령을 사용하십시오.
+
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ```
@@ -1188,7 +1190,8 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ### 빌드팩 삭제
 {: #clidelbuildpack}
 
-앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 삭제할 수 있습니다. 빌드팩을 삭제하려면 다음 명령을 사용하십시오.
+앱 카탈로그 쓰기 권한이 있는 경우, 기존 빌드팩을 삭제할 수 있습니다.  빌드팩을 삭제하려면 다음 명령을 사용하십시오.
+
 ```
 cf ba delete-buildpack <buildpack_name>
 ```

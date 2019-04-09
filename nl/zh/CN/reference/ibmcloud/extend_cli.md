@@ -1,12 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-26"
 
-keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
-
-subcollection: cloud-cli
+  years: 2015, 2018
+lastupdated: "2018-11-30"
 
 ---
 
@@ -18,24 +15,22 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:download: .download}
 
-# 使用插件扩展 {{site.data.keyword.cloud_notm}} CLI
+# 使用插件扩展 {{site.data.keyword.Bluemix_notm}} CLI
 {: #plug-ins}
 
-{{site.data.keyword.cloud}} CLI 支持通过插件框架来扩展其功能。您可以从存储库或 Web URL 安装插件，也可以在本地安装插件二进制文件。
+{{site.data.keyword.Bluemix_notm}} CLI 支持通过插件框架来扩展其功能。您可以从存储库或 Web URL 安装插件，也可以在本地安装插件二进制文件。
 
-[{{site.data.keyword.cloud_notm}} CLI 插件存储库](https://plugins.cloud.ibm.com/ui/repository.html){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 是用于托管插件的官方存储库。
+[{{site.data.keyword.Bluemix_notm}} CLI 插件存储库](https://tools.ng.bluemix.net){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 是用于托管插件的官方存储库。
 
 有关管理插件的更多命令，请运行 `ibmcloud plugin` 以查看帮助消息。
 {: tip}
 
-## 从 {{site.data.keyword.cloud_notm}} CLI 存储库安装插件
-{: #install-from-repo}
+## 从 {{site.data.keyword.Bluemix_notm}} CLI 存储库安装插件
 
 ### 步骤 1：搜索插件
-{: #step1-search-plugin}
 
 1. 使用 `ibmcloud plugin repo-plugins -r REPO_NAME` 命令在存储库中查找插件。
-2. {{site.data.keyword.cloud_notm}} CLI 具有名称为“IBM Cloud”的官方存储库，您可以搜索官方插件，如以下示例所示：
+2. {{site.data.keyword.Bluemix_notm}} CLI 具有名称为“IBM Cloud”的官方存储库，您可以搜索官方插件，如以下示例所示：
 
   ```
   $ ibmcloud plugin repo-plugins
@@ -49,7 +44,6 @@ subcollection: cloud-cli
   ```
 
 ### 步骤 2：安装插件
-{: step2-install-plugin}
 
 使用 `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` 命令安装插件。例如，使用以下命令安装官方 IBM 插件存储库“IBM Cloud”中的插件：
 
@@ -62,8 +56,7 @@ subcollection: cloud-cli
   Plugin 'auto-scaling 0.2.2' was successfully installed.
   ```
 
-## 在本地安装插件
-{: #install-plugin-locally}
+## 本地安装插件
 
 使用 `ibmcloud plugin install LOCAL_FILE_NAME` 命令在本地计算机上安装插件二进制文件。例如：
 
@@ -76,7 +69,6 @@ subcollection: cloud-cli
   ```
 
 ## 通过 Web URL 安装插件
-{: install-plugin-from-url}
 
 使用 `ibmcloud plugin install URL` 命令直接通过 Web URL 安装插件。例如：
 

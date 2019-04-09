@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ibmcloud sl globalip, globalip, global ip addresses, assign global ip
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +13,6 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # Gerenciando IPs globais
-{: #sl-manage-global-ip}
 
 Um endereço IP global é uma sub-rede secundária estática especializada. Ele é entregue como uma sub-rede
 /32 (em outras palavras, um endereço IP único) que pode ser roteado para qualquer outro endereço IP na conta.
@@ -23,7 +20,19 @@ Um endereço IP global é uma sub-rede secundária estática especializada. Ele 
 Use os comandos a seguir para gerenciar um IP global no serviço de IP global da infraestrutura clássica do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-## ibmcloud sl globalip assign
+<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Global IP commands that have links that bring you to more info for the command">
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>
+  <td>[Sl globalip cancel ibmcloud](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_cancel)</td>
+  <td>[Ibmcloud sl globalip create](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_create)</td>
+ <td>[Sl globalip list ibmcloud](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_list)</td>
+ <td>[Sl globalip unassign ibmcloud](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_unassign)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 Designar um IP global a um roteador ou dispositivo de destino.
@@ -31,12 +40,12 @@ Designar um IP global a um roteador ou dispositivo de destino.
 ibmcloud sl globalip assign IDENTIFIER TARGET
 ```
 
+
 **Exemplos**:
 ```
 Ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
-
-Esse comando designa o endereço IP com ID `12345678` para um dispositivo de destino cujo endereço IP é `9.111.123.456`.
+Esse comando designa um endereço IP com ID 12345678 a um dispositivo de destino cujo endereço IP é 9.111.123.456.
 
 ## Sl globalip cancel ibmcloud
 {: #sl_globalip_cancel}
@@ -56,8 +65,7 @@ ibmcloud sl globalip cancel IDENTIFIER [OPTIONS]
 ```
 Ibmcloud sl globalip cancel 12345678
 ```
-
-Esse comando cancela o endereço IP com ID `12345678`.
+Esse comando cancela o endereço IP com ID 12345678.
 
  ## Ibmcloud sl globalip create
 {: #sl_globalip_create}
@@ -81,7 +89,6 @@ Ibmcloud sl globalip create [ OPTIONS ]
 ```
 Sl globalip create ibmcloud -- v6
 ```
-
 Esse comando cria um endereço IP V6.
 
 ## Sl globalip list ibmcloud
@@ -106,7 +113,6 @@ Sl globalip list ibmcloud [ OPTIONS ]
 ```
 Sl globalip list ibmcloud -- v4
 ```
-
 Esse comando lista todos os endereços IP V4 na conta atual.
 
 ## Sl globalip unassign ibmcloud
@@ -122,5 +128,4 @@ Ibmcloud sl globalip unassign IDENTIFIER
 ```
 Ibmcloud sl globalip unassign 12345678
 ```
-
-Esse comando remove a designação do endereço IP com ID `12345678` do dispositivo de destino.
+Esse comando remove a designação do endereço IP com ID 12345678 do dispositivo de destino.

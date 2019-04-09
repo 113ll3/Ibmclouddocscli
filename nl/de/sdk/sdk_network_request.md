@@ -1,19 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-21"
-
-keywords: bmscore, bmscore sdk, network request, ios, android, cordova
-
-subcollection: cloud-cli
+  years: 2016, 2018
+lastupdated: "2018-06-21"
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # Netzanforderung stellen
 {: #sdk-network-request}
@@ -23,12 +18,12 @@ Sie können das `BMSCore`-SDK auch verwenden, um Netzanforderungen an Ressourcen
 ## Android
 {: #request-android}
 
-1. Stellen Sie sicher, dass Sie in Ihrer Android-Anwendung das [Client-SDK importiert und initialisiert](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) haben.
+1. Stellen Sie sicher, dass Sie in Ihrer Android-Anwendung das [Client-SDK importiert und initialisiert](sdk_BMSClient.html#init-BMSClient-android) haben.
 
 2. Geben Sie eine Netzanforderung aus.
 
 	```Java
-	String customResourceURL = "<Ihre Ressourcen-URL>";
+	String customResourceURL = "<Ressourcen-URL>";
 	Request request = new Request(customResourceURL, "GET");
 
 	ResponseListener listener = new ResponseListener() {
@@ -55,7 +50,7 @@ Die Klasse `Request` ist ein einfacher Weg, eine HTTP-Anforderung auszugeben und
 ## iOS
 {: #request-ios}
 
-1. Stellen Sie sicher, dass Sie in Ihrer iOS-Anwendung das [Client-SDK importiert und initialisiert](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) haben.
+1. Stellen Sie sicher, dass Sie in Ihrer iOS-Anwendung das [Client-SDK importiert und initialisiert](sdk_BMSClient.html#init-BMSClient-ios) haben.
 
 2. Erstellen Sie eine neue Netzanforderung.
 
@@ -63,7 +58,7 @@ Die Klasse `Request` ist ein einfacher Weg, eine HTTP-Anforderung auszugeben und
 	{: #ios-swift3 notoc}
 
 	```Swift
-	let customResourceURL = "<Ihre Ressourcen-URL>"
+	let customResourceURL = "<Ressourcen-URL>"
 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
@@ -81,7 +76,7 @@ Die Klasse `Request` ist ein einfacher Weg, eine HTTP-Anforderung auszugeben und
 	{: #ios-swift22 notoc}
 
 	```Swift
-	let customResourceURL = "<Ihre Ressourcen-URL>"
+	let customResourceURL = "<Ressourcen-URL>"
 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
@@ -99,13 +94,13 @@ Die Klasse `Request` ist ein einfacher Weg, eine HTTP-Anforderung auszugeben und
 
 Die Klasse `BMSURLSession` ist nur für iOS verfügbar.
 
-Vollständige Verwendungsbeispiele finden Sie in der GitHub-[README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") zu `BMSCore`.
+Vollständige Verwendungsbeispiele finden Sie in der GitHub-[README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core) zu `BMSCore`.
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Stellen Sie sicher, dass Sie in Ihrer Cordova-Anwendung das [Client-SDK importiert und initialisiert](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) haben.
+1. Stellen Sie sicher, dass Sie in Ihrer Cordova-Anwendung das [Client-SDK importiert und initialisiert](sdk_BMSClient.html#init-BMSClient-cordova) haben.
 
 2. Erstellen Sie eine neue Netzanforderung.
 
@@ -116,7 +111,7 @@ Vollständige Verwendungsbeispiele finden Sie in der GitHub-[README ](https://gi
 	var failure = function(error)
 		{console.log("failure", error);
 	}
-	var request = new BMSRequest("<Ihre Anwendungsroute>", BMSRequest.GET);
+	var request = new BMSRequest("<Anwendungsroutine>", BMSRequest.GET);
 	request.send(success, failure);
 	```
 	{: codeblock}

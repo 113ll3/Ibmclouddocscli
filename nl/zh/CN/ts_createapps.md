@@ -2,11 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-21"
-
-keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
-
-subcollection: cloud-cli
+lastupdated: "2019-01-30"
 
 ---
 
@@ -28,10 +24,11 @@ subcollection: cloud-cli
 {: shortdesc}
 
 ## 我使用非移动模式创建应用程序时，为什么会收到主机名错误？
-{: #ts-cli-hostname-error}
+{: #hostname-error}
 {: troubleshoot}
 
 如果使用 {{site.data.keyword.dev_cli_short}} CLI 将应用程序部署到 Cloud Foundry，那么可能会显示以下错误。即使您输入的主机名是唯一的，也仍然可能会看到此消息。
+
 ```
 主机名 <myHostname> 已采用。
 ```
@@ -49,10 +46,11 @@ ibmcloud login
 {: tsResolve}
 
 ## 为什么我会收到一般命令故障？
-{: #ts-cli-general-failures}
+{: #general}
 {: troubleshoot}
 
 如果使用 `create`、`delete`、`list` 或 `code` 命令，那么可能会显示以下错误：
+
 ```
 对应用程序执行 <command> 失败。
 ```
@@ -70,10 +68,11 @@ ibmcloud login
 {: tsResolve}
 
 ## 为什么无法识别新应用程序的映像？
-{: #ts-cli-nosuchimage}
+{: #nosuchimage}
 {: troubleshoot}
 
 如果没有先构建应用程序就尝试对其运行 `ibmcloud dev run`，那么可能会显示以下错误。
+
 ```
 未指定 run-cmd 选项
 正在停止“testProject”容器...
@@ -103,7 +102,7 @@ ibmcloud dev run
 {: tsResolve}
 
 ## 为什么我在添加 {{site.data.keyword.objectstorageshort}} 功能时收到了服务代理程序错误？
-{: #ts-cli-object-storage}
+{: #os}
 {: troubleshoot}
 
 如果使用 CLI 来创建具有 {{site.data.keyword.objectstorageshort}} 功能的两个应用程序，那么可能会显示以下错误：
@@ -122,10 +121,11 @@ ibmcloud dev run
 {: tsResolve}
 
 ## 为什么在我创建应用程序时未检索我的代码？
-{: #retrieve-code-error}
+{: #code}
 {: troubleshoot}
 
 如果使用 CLI 来创建应用程序，那么可能会显示以下错误：
+
 ```
 FAILED                            
 Application created, but could not get code
@@ -150,13 +150,13 @@ https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/co
 
 * 使用 {{site.data.keyword.dev_console}}。
 
-	1. 在 {{site.data.keyword.dev_console}} 中选择您的[应用程序 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/resources)。
+	1. 在 {{site.data.keyword.dev_console}} 中选择您的[应用程序 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/developer/appservice/apps)。
 
 	2. 单击**下载代码**。
 {: tsResolve}
 
 ## 为什么不能对 Node.js 应用程序运行 `ibmcloud dev run` 命令？
-{: #ts-cli-node}
+{: #node}
 {: troubleshoot}
 
 如果对 Node.js Web 或 BFF 应用程序运行 `ibmcloud dev run` 命令，那么可能会显示以下错误：
@@ -189,7 +189,6 @@ module.js:597
 {: tsResolve}
 
 ## 为什么无法部署到 {{site.data.keyword.cloud_notm}}？
-{: #ts-cli-deploy-issues}
 {: troubleshoot}
 
 尝试部署到 {{site.data.keyword.cloud_notm}} 时失败，但未显示任何错误。
@@ -205,7 +204,6 @@ ibmcloud login
 {: tsResolve}
 
 ## 为什么无法在 {{site.data.keyword.cloud_notm}} 上部署 Kubernetes？
-{: #ts-cli-kube-deploy}
 {: troubleshoot}
 
 在提示您输入集群名称后，可能会显示以下故障：
@@ -234,7 +232,6 @@ ibmcloud cs cluster-config <cluster-name>
 {: tsResolve}
 
 ## 为什么我无法部署映像目标？
-{: #ts-deploy-image-target}
 {: troubleshoot}
 
 在系统提示您提供部署映像目标后，可能会显示以下故障：
@@ -260,7 +257,6 @@ ibmcloud cr namespaces
 {: tsResolve}
 
 ## 为什么无法确定我的应用程序的语言？
-{: #ts-cli-determine-language}
 {: troubleshoot}
 
 在尝试启动应用程序时，可能会显示以下故障：
@@ -275,34 +271,77 @@ ibmcloud cr namespaces
 {: tsSymptoms}
 
 此错误可能是以下某个原因导致的：
-- 从不是应用程序源目录的目录中运行 [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 命令。
-- 对无法识别其语言的应用程序运行 [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 命令。
+- 从不是应用程序源目录的目录中运行 [enable](/docs/cli/idt/commands.html#enable) 命令。
+- 对无法识别其语言的应用程序运行 [enable](/docs/cli/idt/commands.html#enable) 命令。
 {: tsCauses}
 
-请确保从包含应用程序源代码的应用程序目录中运行该命令。如果仍未解决此问题，而该语言是[受支持的语言](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options)，请使用 `--language` 参数指定语言。
+请确保从包含应用程序源代码的应用程序目录中运行该命令。如果仍未解决此问题，而该语言是[受支持的语言](/docs/cli/idt/commands.html#enable-language-options)，请使用 `--language` 参数指定语言。
 {: tsResolve}
 
 ## 为什么我无法构建或运行已针对云部署启用的应用程序？
-{: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-尝试[构建](/docs/cli/idt?topic=cloud-cli-idt-cli#build)或[运行](/docs/cli/idt?topic=cloud-cli-idt-cli#run)已启用的应用程序时，可能会遇到各种故障。
+尝试[构建](/docs/cli/idt/commands.html#build)或[运行](/docs/cli/idt/commands.html#run)已启用的应用程序时，可能会遇到各种故障。
 {: tsSymptoms}
+
 
 在以下每个链接中，可以找到多种不同的可能原因。
 {: tsCauses}
 
-- 有关如何使用 Spring 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Spring Boot 应用程序](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)。
-- 有关如何使用 `Node.js` 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Node.js 应用程序](/docs/node?topic=nodejs-enable_existing#enable_existing)。
+- 有关如何使用 Spring 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Spring Boot 应用程序](/docs/java-spring/enable_existing.html#enable_existing)。
+- 有关如何使用 `Node.js` 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Node.js 应用程序](/docs/node/enable_existing.html#enable_existing)。
 {: tsResolve}
 
-<!--
-## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
-{: #ts-cli-install-devtools-manually}
-{: troubleshoot}
+## 如何手动安装 {{site.data.keyword.Bluemix_notm}} Developer Tools？
+{: #appendix}
+对于大多数用户，所有必备软件都是使用平台安装程序安装的。如果需要手动安装任何组件，请按以下每个组件的指示信息进行操作。要安装 dev 插件，必须先安装 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)。要使用 dev 插件本身，必须运行以下命令来安装该插件： 
+```
+ibmcloud plugin install dev
+```
+{: codeblock}
+ 
+要在本地运行和调试应用程序，还必须安装 [Docker](https://www.docker.com/get-docker)。
+ 
+要将应用程序部署为容器，还必须安装 Kubernetes、Helm 和以下 IBM Cloud CLI 插件。
+ 
+### 安装 Kubernetes：
+Mac 用户：
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+```
+{: codeblock}
 
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
+Linux 用户：
+```
+curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+```
+{: codeblock}
 
+Windows 用户：
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+```
+{: codeblock}
 
+### 安装 Helm：
+Mac 和 Linux 用户：
+```
+export DESIRED_VERSION=v2.7.2
+curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+```
+{: codeblock}
 
+Windows 用户：
+下载并安装[二进制文件](https://github.com/kubernetes/helm/releases/tag/v2.7.2)。
+
+### 要安装 container-registry 插件，请运行以下命令：
+```
+ibmcloud plugin install container-registry
+```
+{: codeblock}
+
+### 要安装 container-service 插件，请运行以下命令：
+```
+ibmcloud plugin install container-service
+```
+{: codeblock}

@@ -1,29 +1,60 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 建立及使用虛擬伺服器
-{: #cli-virtual-servers}
 
 {{site.data.keyword.BluVirtServers}} 是與專用核心及記憶體配置一起購買的可擴充虛擬伺服器。如果您要尋找可立即新增的運算資源，並存取映像檔範本這類特性，則它們是不錯的選項。 
 
 請使用下列指令來管理標準基礎架構虛擬伺服器。
 {: shortdesc}
 
-## ibmcloud sl vs cancel
+<table summary="按字母順序排列的 {{site.data.keyword.Bluemix_notm}} 標準基礎架構虛擬伺服器指令，其鏈結提供指令的相關資訊">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl vs cancel](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_cancel)</td>
+ <td>[ibmcloud sl vs capture](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_capture)</td>
+ <td>[ibmcloud sl vs create](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_create)</td>
+ <td>[ibmcloud sl vs options](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_options)</td>
+ <td>[ibmcloud sl vs credentials](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_credentials)</td>
+ <td>[ibmcloud sl vs detail](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_detail)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs dns-sync](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_dns_sync)</td>
+ <td>[ibmcloud sl vs edit](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_edit)</td>
+ <td>[ibmcloud sl vs host-create](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_host_create)</td>
+ <td>[ibmcloud sl vs host-list](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_host_list)</td>
+ <td>[ibmcloud sl vs list](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_list)</td>
+ <td>[ibmcloud sl vs pause](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_pause)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs power-off](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_power_off)</td>
+ <td>[ibmcloud sl vs power-on](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_power_on)
+ <td>[ibmcloud sl vs ready](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_ready)</td>
+ <td>[ibmcloud sl vs reboot](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_reboot)</td>
+ <td>[ibmcloud sl vs reload](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_reload)</td>
+ <td>[ibmcloud sl vs rescue](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_rescue)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs resume](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_resume)</td>
+ <td>[ibmcloud sl vs upgrade](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_upgrade)</td>
+</tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl vs cancel
 {: #sl_vs_cancel}
 
 取消虛擬伺服器實例。
@@ -41,9 +72,8 @@ ibmcloud sl vs cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs cancel 12345678
 ```
-{: codeblock}
+這個指令會取消 ID 為 12345678 的虛擬伺服器實例。
 
-這個指令會取消 ID 為 `12345678` 的虛擬伺服器實例。
 
 ## ibmcloud sl vs capture
 {: #sl_vs_capture}
@@ -67,9 +97,7 @@ ibmcloud sl vs capture IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs capture 12345678 -n mycloud --all --note testing
 ```
-{: codeblock}
-
-這個指令會將 ID 為 `12345678` 的虛擬伺服器實例及其所有磁碟都擷取至名為 `mycloud` 且附註為 `testing` 的映像檔。
+這個指令會將 ID 為 12345678 的虛擬伺服器實例及其所有磁碟都擷取至名為 "mycloud" 且附註為 "testing" 的映像檔。
 
 ## ibmcloud sl vs create
 {: #sl_vs_create}
@@ -147,9 +175,7 @@ ibmcloud sl vs create [OPTIONS]
 ```
 ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
-{: codeblock}
-
-這個指令會訂購虛擬伺服器實例，其主機名稱為 myvsi、網域為 ibm.com、有 4 個 CPU 核心及 4096M 的記憶體，位於資料中心 `dal10`。
+這個指令會訂購虛擬伺服器實例，其主機名稱為 myvsi、網域為 ibm.com、有 4 個 CPU 核心及 4096M 的記憶體，位於資料中心：dal10。
 
 ## ibmcloud sl vs options
 {: #sl_vs_options}
@@ -159,12 +185,11 @@ ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 
 ibmcloud sl vs options [OPTIONS]
 ```
 
+
 **範例**：
 ```
 ibmcloud sl vs options
 ```
-{: codeblock}
-
 這個指令會列出用來建立虛擬伺服器實例的所有選項，例如資料中心、CPU、記憶體、OS、磁碟、網路速度等等。
 
 ## ibmcloud sl vs credentials
@@ -175,13 +200,12 @@ ibmcloud sl vs options
 ibmcloud sl vs credentials IDENTIFIER [OPTIONS]
 ```
 
+
 **範例**：
 ```
 ibmcloud sl vs credentials 12345678
 ```
-{: codeblock}
-
-這個指令會列出 ID 為 `12345678` 的虛擬伺服器實例的所有使用者名稱及密碼配對。
+這個指令會列出 ID 為 12345678 的虛擬伺服器實例的所有使用者名稱及密碼配對。
 
 ## ibmcloud sl vs detail
 {: #sl_vs_detail}
@@ -203,9 +227,7 @@ ibmcloud sl vs detail IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs details 12345678
 ```
-{: codeblock}
-
-這個指令會列出 ID 為 `12345678` 的虛擬伺服器實例的詳細資訊。
+這個指令會列出 ID 為 12345678 的虛擬伺服器實例的詳細資訊。
 
 ## ibmcloud sl vs dns-sync
 {: #sl_vs_dns_sync}
@@ -233,9 +255,7 @@ ibmcloud sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
-{: codeblock}
-
-這個指令會將 ID 為 `12345678` 的虛擬伺服器實例的 A 記錄（IP V4 位址）同步至 DNS 伺服器，並將這個 A 記錄的 TTL 設為 3600。
+這個指令會將 ID 為 12345678 的虛擬伺服器實例的 A 記錄（IP V4 位址）同步至 DNS 伺服器，並將這個 A 記錄的 ttl 設為 3600。
 
 ## ibmcloud sl vs edit
 {: #sl_vs_edit}
@@ -267,7 +287,7 @@ ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 1000
 ```
-這個指令會更新 ID 為 `12345678` 的虛擬伺服器實例，並且將其網域設為 "ibm.com"、將主機名稱設為 "myapp"、將標籤設為 "testcli"。
+這個指令會更新 ID 為 12345678 的虛擬伺服器實例，並將其網域設為 "ibm.com"、將主機名稱設為 "myapp"、將標籤設為 "testcli"。
 
 ## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
@@ -307,13 +327,13 @@ ibmcloud sl vs host-list [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>-n, --name</dt>
-<dd>依專用主機的名稱進行過濾。</dd>
+<dd>依專用主機的名稱過濾。</dd>
 <dt>-d, --datacenter</dt>
-<dd>依專用主機的資料中心進行過濾。</dd>
+<dd>依專用主機的資料中心過濾。</dd>
 <dt>--owner</dt>
-<dd>依專用主機的擁有者進行過濾。</dd>
+<dd>依專用主機的擁有者過濾。</dd>
 <dt>--order</dt>
-<dd>依購買此專用主機的訂單 ID 進行過濾。</dd>
+<dd>依購買此專用主機的訂單 ID 過濾。</dd>
 </dl>
 
 ## ibmcloud sl vs list
@@ -327,31 +347,31 @@ ibmcloud sl vs list [OPTIONS]
 <strong>指令選項</strong>：
 <dl>
 <dt>-c, --cpu</dt>
-<dd>依 CPU 核心數目進行過濾。</dd>
+<dd>依 CPU 核心數目過濾。</dd>
 <dt>-D, --domain</dt>
-<dd>依 FQDN 的網域部分進行過濾。</dd>
+<dd>依 FQDN 的網域部分過濾。</dd>
 <dt>-d, --datacenter</dt>
-<dd>依資料中心簡稱進行過濾。</dd>
+<dd>依資料中心簡稱過濾。</dd>
 <dt>-H, --hostname</dt>
-<dd>依 FQDN 的主機部分進行過濾。</dd>
+<dd>依 FQDN 的主機部分過濾。</dd>
 <dt>-m, --memory</dt>
-<dd>依記憶體進行過濾（以 MB 為單位）。</dd>
+<dd>依記憶體過濾（以 MB 為單位）。</dd>
 <dt>-n, --network</dt>
-<dd>依網路埠速度進行過濾（以 Mbps 為單位）。</dd>
+<dd>依網路埠速度過濾（以 Mbps 為單位）。</dd>
 <dt>-P, --public-ip</dt>
-<dd>依公用 IP 位址進行過濾。</dd>
+<dd>依公用 IP 位址過濾。</dd>
 <dt>-p, --private-ip</dt>
-<dd>依專用 IP 位址進行過濾。</dd>
+<dd>依專用 IP 位址過濾。</dd>
 <dt>--hourly</dt>
 <dd>僅顯示按小時計費的實例。</dd>
 <dt>--monthly</dt>
 <dd>僅顯示按月計費的實例。</dd>
 <dt>-g, --tag</dt>
-<dd>依標籤進行過濾（允許指定多次）。</dd>
+<dd>依標籤過濾（允許指定多次）。</dd>
 <dt>-o, --order</dt>
-<dd>依購買此實例的訂單 ID 進行過濾。</dd>
+<dd>依購買此實例的訂單 ID 過濾。</dd>
 <dt>--owner</dt>
-<dd>依擁有實例的使用者 ID 進行過濾。</dd>
+<dd>依擁有實例的使用者 ID 過濾。</dd>
 <dt>--sortby</dt>
 <dd>直欄排序方式，預設值為：hostname，選項包含：id、hostname、domain、datacenter、cpu、memory、public_ip、private_ip。</dd>
 <dt>--columns</dt>
@@ -382,7 +402,7 @@ ibmcloud sl vs pause IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs pause 12345678 -f
 ```
-這個指令會暫停 ID 為 `12345678` 的虛擬伺服器實例，而不要求確認。
+這個指令會暫停 ID 為 12345678 的虛擬伺服器實例，而不要求確認。
 
 ## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
@@ -406,7 +426,7 @@ ibmcloud sl vs power-off IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs power-off 12345678 --soft
 ```
-這個指令會針對 ID 為 `12345678` 的虛擬伺服器實例執行正常關機。
+這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行正常關機。
 
 ## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
@@ -426,9 +446,7 @@ ibmcloud sl vs power-on IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs power-on 12345678
 ```
-{: codeblock}
-
-這個指令會針對 ID 為 `12345678` 的虛擬伺服器實例執行開機作業。
+這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行開機作業。
 
 ## ibmcloud sl vs ready
 {: #sl_vs_ready}
@@ -448,7 +466,7 @@ ibmcloud sl vs ready IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs ready 12345678 --wait 30
 ```
-這個指令會檢查 ID 為 `12345678` 的虛擬伺服器實例狀態，以查看它是否準備好可繼續使用，最多等待 30 秒。
+這個指令會檢查 ID 為 12345678 的虛擬伺服器實例狀態，以查看它是否準備好可繼續使用，最多等待 30 秒。
 
 ## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
@@ -472,9 +490,7 @@ ibmcloud sl vs reboot IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs reboot 12345678 --hard
 ```
-{: codeblock}
-
-這個指令會針對 ID 為 `12345678` 的虛擬伺服器實例執行強迫重新開機。
+這個指令會針對 ID 為 12345678 的虛擬伺服器實例執行強迫重新開機。
 
 ## ibmcloud sl vs reload
 {: #sl_vs_reload}
@@ -502,7 +518,7 @@ ibmcloud sl vs reload IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs reload 12345678
 ```
-這個指令會針對 ID 為 `12345678` 的虛擬伺服器實例重新載入現行作業系統。
+這個指令會針對 ID 為 12345678 的虛擬伺服器實例重新載入現行作業系統。
 
 ## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
@@ -522,7 +538,7 @@ ibmcloud sl vs rescue IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs rescue 12345678
 ```
-這個指令會將 ID 為 `12345678` 的虛擬伺服器實例重新開機至救援映像檔。
+這個指令會將 ID 為 12345678 的虛擬伺服器實例重新開機至救援映像檔。
 
 ## ibmcloud sl vs resume
 {: #sl_vs_resume}
@@ -542,7 +558,7 @@ ibmcloud sl vs resume IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs resume 12345678
 ```
-這個指令會繼續 ID 為 `12345678` 的虛擬伺服器實例。
+這個指令會繼續 ID 為 12345678 的虛擬伺服器實例。
 
 ## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}
@@ -570,6 +586,4 @@ ibmcloud sl vs upgrade IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
-{: codeblock}
-
-這個指令會升級 ID 為 `12345678` 的虛擬伺服器實例，並將 CPU 核心數目設為 8、將記憶體設為 8192M、將網路埠速度設為 1000 Mbps。
+這個指令會升級 ID 為 12345678 的虛擬伺服器實例，並將 CPU 核心數目設為 8、將記憶體設為 8192M、將網路埠速度設為 1000 Mbps。

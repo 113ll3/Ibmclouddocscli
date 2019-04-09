@@ -1,28 +1,50 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: manage security groups, ingress, egress, traffic, virtual server, classic infrastructure, securitygroup, ibmcloud sl securitygroup
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Sicherheitsgruppen für Datenverkehr mit virtuellen Servern verwalten
-{: #sl-manage-securitygroups}
+# Sicherheitsgruppe
 
 Eine Sicherheitsgruppe ist eine Gruppe aus IP-Filterregeln, von denen definiert wird, wie eingehender (Ingress) und ausgehender (Egress) Datenverkehr an öffentliche und private Schnittstellen einer Instanz eines virtuellen Servers verarbeitet werden soll. Die Regeln, die Sie zu einer Sicherheitsgruppe hinzufügen, werden als Sicherheitsgruppenregeln bezeichnet.
 
-Verwenden Sie die folgenden Befehle, um eine Sicherheitsgruppe über den Service für Sicherheitsgruppen der klassischen {{site.data.keyword.cloud}}-Infrastruktur zu verwalten.
+Verwenden Sie die folgenden Befehle, um eine Sicherheitsgruppe über den Service Security Group der {{site.data.keyword.Bluemix}}-Infrastruktur zu verwalten.
 {: shortdesc}
 
-## ibmcloud sl securitygroup create
+<table summary="Alphabetisch geordnete Security Group-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl securitygroup create](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_create)</td>
+  <td>[ibmcloud sl securitygroup delete](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_delete)</td>
+  <td>[ibmcloud sl securitygroup detail](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_detail)</td>
+  <td>[ibmcloud sl securitygroup edit](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_edit)</td>   
+  <td>[ibmcloud sl securitygroup interface-add](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interface_add)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl securitygroup interface-list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interace_list)</td>
+  <td>[ibmcloud sl securitygroup interface-remove](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_interface_remove)</td>
+  <td>[ibmcloud sl securitygroup list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_list)</td>
+  <td>[ibmcloud sl securitygroup rule-add](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_add)</td>
+  <td>[ibmcloud sl securitygroup rule-edit](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_edit)</td>
+ </tr>
+ <tr>
+  <td>[ibmcloud sl securitygroup rule-list](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_list)</td>
+  <td>[ibmcloud sl securitygroup rule-remove](/docs/cli/reference/ibmcloud/cli_securitygroup.html#sl_securitygroup_rule_remove)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl securitygroup create
 {: #sl_securitygroup_create}
 
 Eine Sicherheitsgruppe erstellen.

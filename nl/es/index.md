@@ -2,11 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-01"
-
-keywords: IBM Cloud Developer Tools CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
-
-subcollection: cloud-cli
+lastupdated: "2019-02-06"
 
 ---
 
@@ -17,7 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 
 # Iniciación a la CLI de {{site.data.keyword.cloud_notm}}
-{: #ibmcloud-cli}
+{: #overview}
 
 En esta guía de aprendizaje, instalará un conjunto de herramientas de desarrollador de {{site.data.keyword.cloud}}, verificará la instalación y configurará el entorno. Las herramientas de desarrollador de {{site.data.keyword.cloud_notm}} incluyen una interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones web, móviles y de microservicios.
 {: shortdesc}
@@ -37,23 +33,25 @@ Con está instalación, obtendrá la CLI de {{site.data.keyword.cloud_notm}} aut
 * Plug-in `sdk-gen`
 
 ## Antes de empezar
-{: #idt-prereq}
+{: #prereq}
 
-Necesita una [cuenta de {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y los siguientes requisitos del sistema:
+Necesita una [cuenta de {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y los siguientes requisitos del sistema:
 
 * Si ejecuta Windows, algunas funciones no reciben soporte a menos que utilice Windows 10 Pro.
 * Debe utilizar el canal estable para Docker con una versión mínima de 1.13.1.
 
 ## Paso 1. Ejecutar el mandato de instalación
-{: #step1-install-idt}
+{: #step1}
 
 * Para Mac y Linux, ejecute el mandato siguiente:
+
   ```
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
 
 * Para Windows 10 Pro, ejecute el mandato siguiente como administrador:
+
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
@@ -62,49 +60,58 @@ Necesita una [cuenta de {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/
   Pulse con el botón derecho del ratón el icono de Windows PowerShell y seleccione **Ejecutar como administrador**.
   {: tip}
 
-  También puede descargar el script del instalador desde este [repositorio de GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+  También puede descargar el script del instalador desde este [repositorio de GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
 
-<!--Uncomment when this linked topic goes to prod.
-  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
+  Para ver los pasos necesarios para instalar estas herramientas manualmente, consulte [Reinstalación de herramientas](/docs/cli/ts_createapps.html#appendix).
 
 ## Paso 2. Verificar la instalación
-{: #step2-verify-idt}
+{: #step2}
 
 Para verificar que las herramientas de desarrollador y la CLI se han instalado correctamente, ejecute el mandato `help`:
+
 ```
 ibmcloud dev help
 ```
 {: codeblock}
-
+<br>
 La salida lista las instrucciones de uso, la versión actual y los mandatos admitidos.
 
 ## Paso 3. Configurar el entorno
-{: #step3-configure-idt-env}
+{: #step3}
 
-1. Inicie una sesión en {{site.data.keyword.cloud_notm}} con su IBMid. Si tiene varias cuentas, se le solicitará que seleccione qué cuenta desea utilizar. Si no especifica una región con el distintivo `-r`, también deberá seleccionar una región.
-  ```
-  ibmcloud login
-  ```
-  {: codeblock}
-  
-  Si se rechazan sus credenciales, puede que esté utilizando un ID federado. Para iniciar sesión con un ID federado, utilice el distintivo
-`--sso`. Consulte [Inicio de sesión con un ID federado](/docs/iam/federated_id?topic=iam-federated_id#federated_id) para obtener más detalles.
-  {: tip}
+1. Conéctese a un punto final de API en su ubicación de {{site.data.keyword.cloud_notm}}. Por ejemplo, escriba el siguiente mandato para conectar con la ubicación Dallas de {{site.data.keyword.cloud_notm}}:
 
-2. Para utilizar servicios de Cloud Foundry, defina una organización y un espacio como objetivo.
-  ```
-  ibmcloud target --cf
-  ```
-  {: codeblock}
+	```
+	ibmcloud api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 
-  Si lo desea, también puede utilizar la salida del mandato anterior para establecer manualmente su organización y espacio con el siguiente mandato:
-  ```
-  ibmcloud target -o <value> -s <value>
-  ```
-  {: codeblock}
+2. Inicie una sesión en {{site.data.keyword.cloud_notm}} con su IBMid.
+
+	```
+	ibmcloud login
+	```
+	{: codeblock}
+    <br>
+
+	Si se rechazan sus credenciales, puede que esté utilizando un ID federado. Consulte [Inicio de sesión con un ID federado](/docs/iam/login_fedid.html#federated_id) para obtener más detalles.
+	{: tip}
+
+3. Establezca su organización y espacio.
+
+	```
+	ibmcloud target --cf
+	```
+	{: codeblock}
+
+	Si lo desea, también puede utilizar la salida del mandato anterior para establecer manualmente su organización y espacio con el siguiente mandato:
+
+	```
+	ibmcloud target -o <value> -s <value>
+	```
+	{: codeblock}
 
 ## Pasos siguientes
 {: #next-steps}
 
-Ahora está listo para desarrollar y desplegar su primera aplicación. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli) para obtener más información.
+Ahora está listo para desarrollar y desplegar su primera aplicación. Consulte [Creación y despliegue de apps mediante la CLI](/docs/apps/create-deploy-cli.html) para obtener más información.

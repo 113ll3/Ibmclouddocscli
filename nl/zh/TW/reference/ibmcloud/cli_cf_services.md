@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: cloud foundry services, ibmcloud service, offerings, service list, service show, service create, service bind, service unbind, unbind service, service keys
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -20,8 +18,37 @@ subcollection: cloud-cli
 請使用下列指令管理 {{site.data.keyword.Bluemix_notm}} Foundry 服務的服務供應項目、服務實例、服務連結及金鑰。
 {: shortdesc}
 
-## ibmcloud service offerings
+<table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 服務的 ibmcloud 指令。">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud service offerings](cli_cf_services.html#ibmcloud_service_offerings)</td>
+ <td>[ibmcloud service list](cli_cf_services.html#ibmcloud_service_list)</td>
+ <td>[ibmcloud service show](cli_cf_services.html#ibmcloud_service_show)</td>
+ <td>[ibmcloud service create](cli_cf_services.html#ibmcloud_service_create)</td>
+ <td>[ibmcloud service update](cli_cf_services.html#ibmcloud_service_update)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud service delete](cli_cf_services.html#ibmcloud_service_delete)</td>
+ <td>[ibmcloud service rename](cli_cf_services.html#ibmcloud_service_rename)</td>
+ <td>[ibmcloud service bind](cli_cf_services.html#ibmcloud_service_bind)</td>
+ <td>[ibmcloud service unbind](cli_cf_services.html#ibmcloud_service_unbind)</td>
+ <td>[ibmcloud service key-create](cli_cf_services.html#ibmcloud_service_key_create)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud service key-delete](cli_cf_services.html#ibmcloud_service_key_delete)</td>
+ <td>[ibmcloud service keys](cli_cf_services.html#ibmcloud_service_keys)</td>
+ <td>[ibmcloud service key-show](cli_cf_services.html#ibmcloud_service_key_show)</td>
+ <td>[ibmcloud service user-provided-create](cli_cf_services.html#ibmcloud_service_user_provided_create)</td>
+ <td>[ibmcloud service user-provided-update](cli_cf_services.html#ibmcloud_service_user_provided_update)</td>
+ </tr>
+  </tbody>
+ </table>
+
+ ## ibmcloud service offerings
 {: #ibmcloud_service_offerings}
+
 
 這個指令的功能及選項與 [cf marketplace ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://cli.cloudfoundry.org/en-US/cf/marketplace.html){: new_window} 指令相同。
 

@@ -1,27 +1,37 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Criando, cancelando e visualizando sub-redes
-{: #sl-manage-subnets}
 
-Uma sub-rede é uma partição lógica de uma rede IP em múltiplos segmentos de rede menores. Use os comandos a seguir para gerenciar sub-redes de infraestrutura clássica do {{site.data.keyword.cloud}}.
+Uma sub-rede é uma partição lógica de uma rede IP em múltiplos segmentos de rede menores. Use os comandos a seguir para gerenciar sub-redes de infraestrutura clássica do {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-## ibmcloud sl subnet cancel
+<table summary="Alphabetically ordered  {{site.data.keyword.Bluemix_notm}} classic infrastructure Subnet commands that have links that bring you to more info for the command">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl subnet cancel](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_cancel)</td>
+ <td>[Ibmcloud sl subnet create](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_create)</td>
+ <td>[Sl subnet detail ibmcloud](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_detail)</td>
+ <td>[Sl subnet list ibmcloud](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_list)</td>
+ <td>[Sl subnet lookup ibmcloud](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_lookup)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 Cancelar uma sub-rede.
@@ -39,7 +49,7 @@ Ibmcloud sl subnet cancel IDENTIFIER [ OPTIONS ]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-Esse comando cancela a sub-rede com o ID `12345678` sem solicitar confirmação.
+Esse comando cancela a sub-rede com ID 12345678 sem solicitar confirmação.
 
 ## Ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -63,9 +73,7 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 ibmcloud sl subnet create public 16 567
 ```
-{: codeblock}
-
-Esse comando cria uma sub-rede pública com 16 endereços IP v4 e a coloca na vlan com o ID `567`.
+Esse comando cria uma sub-rede pública com 16 endereços IP v4 e a coloca na vlan com ID 567.
 
 ## Sl subnet detail ibmcloud
 {: #sl_subnet_detail}
@@ -87,9 +95,7 @@ Sl subnet detail IDENTIFIER ibmcloud [ OPTIONS ]
 ```
 Ibmcloud sl subnet detail 12345678
 ```
-{: codeblock}
-
-Esse comando mostra informações detalhadas sobre a sub-rede com ID `12345678`, incluindo informações de servidores virtuais e de servidores de hardware.
+Esse comando mostra informações detalhadas sobre a sub-rede com ID 12345678, incluindo informações de servidores virtuais e de hardware.
 
 ## Sl subnet list ibmcloud
 {: #sl_subnet_list}
@@ -123,9 +129,7 @@ Sl subnet list ibmcloud [ OPTIONS ]
 ```
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
-{: codeblock}
-
-Esse comando lista as sub-redes IP V4 na filtragem de conta atual por data center `dal09`, o tipo de sub-rede é `PRIMARY` e o espaço de rede é `PUBLIC`.
+Esse comando lista sub-redes IP V4 na conta atual filtrando pelo data center dal09, tipo de sub-rede PRIMARY e espaço de rede PUBLIC.
 
 ## Sl subnet lookup ibmcloud
 {: #sl_subnet_lookup}
@@ -135,10 +139,9 @@ Localizar um endereço IP e exibir suas informações de sub-rede e dispositivo.
 Ibmcloud sl subnet lookup IP_ADDRESS
 ```
 
+
 **Exemplos**:
 ```
 Ibmcloud sl subnet lookup 9.125.235.255
 ```
-{: codeblock}
-
-Esse comando localiza o registro de endereço IP com o endereço IP `9.125.235.255` e exibe as suas informações de sub-rede e de dispositivo.
+Esse comando localiza o registro de endereço IP com endereço 9.125.235.255 e exibe suas informações sobre a sub-rede e o dispositivo.

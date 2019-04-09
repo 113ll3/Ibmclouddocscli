@@ -1,13 +1,11 @@
 ---
 
 copyright:
+
   years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
-subcollection: cloud-cli
-
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
@@ -19,18 +17,33 @@ subcollection: cloud-cli
 
 Utilizza i seguenti comandi per richiamare le informazioni sull'utilizzo delle risorse e sulla fatturazione.
 {: shortdesc}
+
+<table summary="Comandi ibmcloud che puoi utilizzare per gestire l'utilizzo e la fatturazione {{site.data.keyword.Bluemix_notm}}.">
+ <thead>
+ </thead>
+ <tbody>
+<tr>
+  <td>[ibmcloud billing account-usage](cli_billing.html#ibmcloud_billing_account_usage)</td>
+  <td>[ibmcloud billing org-usage](cli_billing.html#ibmcloud_billing_org_usage)</td>
+  <td>[ibmcloud billing resource-group-usage](cli_billing.html#ibmcloud_billing_resource_group_usage)</td>
+  <td>[ibmcloud billing resource-instances-usage](cli_billing.html#ibmcloud_billing_resource_instances_usage)</td>
+ </tr>
+ </tbody>
+ </table>
+ 
  
 ## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
-Mostra l'utilizzo mensile dell'account corrente (solo amministratore dell'account):
+Mostra l'utilizzo mensile dell'account corrente (solo amministratore dell'account)
+
 ```
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMATO]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
   <dt>-d DATA_MESE (facoltativo)</dt>
@@ -50,14 +63,15 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-Mostra l'utilizzo mensile di un'organizzazione (solo il gestore della fatturazione dell'organizzazione o l'amministratore dell'account):
+Mostra l'utilizzo mensile di un'organizzazione (solo il gestore della fatturazione dell'organizzazione o l'amministratore dell'account)
+
 ```
 ibmcloud billing org-usage NOME_ORGANIZZAZIONE [-d YYYY-MM] [--output FORMATO]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
   <dt>NOME_ORGANIZZAZIONE (obbligatorio)</dt>
@@ -71,14 +85,15 @@ ibmcloud billing org-usage NOME_ORGANIZZAZIONE [-d YYYY-MM] [--output FORMATO]
 ## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
-Mostra l'utilizzo mensile di un gruppo di risorse (solo l'amministratore del gruppo di risorse o l'amministratore dell'account):
+Mostra l'utilizzo mensile di un gruppo di risorse (solo l'amministratore del gruppo di risorse o l'amministratore dell'account)
+
 ```
 ibmcloud billing resource-group-usage NOME_GRUPPO [-d YYYY-MM] [--output FORMATO]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
   <dt>NOME_GRUPPO (obbligatorio)</dt>
@@ -92,14 +107,15 @@ ibmcloud billing resource-group-usage NOME_GRUPPO [-d YYYY-MM] [--output FORMATO
 ## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
-Mostra l'utilizzo mensile delle istanze della risorsa nell'account corrente:
+Mostra l'utilizzo mensile delle istanze della risorsa nell'account corrente.
+
 ```
 ibmcloud billing resource-instances-usage [-o ORGANIZZAZIONE] [-g GRUPPO_RISORSE] [-d YYYY-MM] [--output FORMATO]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
   <dt>-o NOME_ORGANIZZAZIONE (facoltativo)</dt>

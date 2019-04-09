@@ -1,14 +1,16 @@
 ---
 
+
+
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-26"
 
-keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+  years: 2016, 2018
 
-subcollection: cloud-cli
+lastupdated: "2018-11-30"
+
 
 ---
+
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -21,14 +23,15 @@ subcollection: cloud-cli
 A interface da linha de comandos (CLI) do Cloud Foundry (cf) fornece um conjunto de comandos para gerenciar seus apps. As informações a seguir listam os comandos cf usados mais comumente para gerenciar apps e inclui seus nomes, opções, uso, pré-requisitos, descrições e exemplos. Para listar todos os comandos cf e informações de ajuda associadas, use `cf help`. Use `cf command_name -h` para visualizar informações detalhadas da ajuda para um comando específico.
 {: shortdesc}
 
-Para obter mais detalhes sobre como começar com a CLI do Cloud Foundry, consulte [Introdução](https://github.com/cloudfoundry/cli#getting-started){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
+Para obter mais detalhes sobre como iniciar com a CLI do Cloud Foundry, consulte [Introdução ao ![Ícone de link externo](../../../icons/launch-glyph.svg) ](https://github.com/cloudfoundry/cli#getting-started){: new_window}.
 
-Para obter uma lista mais detalhada de comandos `cf CLI`, consulte a comunidade [Guia de referência da CLI do Cloud Foundry](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
+Para obter uma lista mais detalhada de comandos `cf CLI`, veja o [Guia de referência da CLI do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} da comunidade.
 
 Se a sua rede contém um servidor proxy HTTP entre o host que executa os comandos cf e o terminal de API Cloud Foundry,
 deve-se especificar o nome do host ou endereço IP do servidor proxy, configurando a variável de ambiente
-`HTTP_PROXY`. Para obter detalhes, consulte [Usando a CLI do cf com um servidor proxy](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
+`HTTP_PROXY`. Para obter detalhes, consulte [Usando a CLI cf com um Servidor proxy ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 {: note}
+
 
 ## Índice de comandos da CLI do Cloud Foundry
 {: #CLIname_commands_index}
@@ -43,15 +46,16 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
  <tbody>
  <tr>
  <td>[api
-](#cf_api)</td>
- <td>[help](#cf_help)</td>
- <td>[login](#cf_login)</td>
- <td>[stacks](#cf_stacks)</td>
- <td>[target](#cf_target)</td>
- <td>[ -v ](#cf_v)</td>
+](/docs/cli/reference/ibmcloud/cf_index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/ibmcloud/cf_index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/ibmcloud/cf_index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/ibmcloud/cf_index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/ibmcloud/cf_index.html#cf_target)</td>
+ <td>[ -v ](/docs/cli/reference/ibmcloud/cf_index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
+
 
 <table summary="Comandos ordenados alfabeticamente para gerenciar apps, espaços e serviços. Cada comando tem um link que leva a mais informações sobre ele.">
 <caption>Tabela 2. Comandos para gerenciar apps, espaços e serviços</caption>
@@ -61,25 +65,25 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
  <tbody>
  <tr>
  <td>[aplicativos
-](#cf_apps)</td>
- <td>[bind-service](#cf_bind-service)</td>
- <td>[create-service](#cf_create-service)</td>
- <td>[create-space](#cf_create-space)</td>
- <td>[excluir](#cf_delete)</td>
+](/docs/cli/reference/ibmcloud/cf_index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-space)</td>
+ <td>[excluir](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/#cf_delete-space)</td>
- <td>[eventos](#cf_events)</td>
- <td>[Registros do](#cf_logs)</td>
- <td>[mercado de trabalho](#cf_marketplace)</td>
- <td>[push](#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete-space)</td>
+ <td>[eventos](/docs/cli/reference/ibmcloud/cf_index.html#cf_events)</td>
+ <td>[Registros do](/docs/cli/reference/ibmcloud/cf_index.html#cf_logs)</td>
+ <td>[mercado de trabalho](/docs/cli/reference/ibmcloud/cf_index.html#cf_marketplace)</td>
+ <td>[push](/docs/cli/reference/ibmcloud/cf_index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[escalar](#cf_scale)</td>
- <td>[services](#cf_services)
- <td>[set-env](#cf_set-env)</td>
- <td>[ssh](#cf_ssh)</td>
- <td>[stop](#cf_stop)</td>
+ <td>[scale](/docs/cli/reference/ibmcloud/cf_index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/ibmcloud/cf_index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/ibmcloud/cf_index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/ibmcloud/cf_index.html#cf_ssh)</td>
+ <td>[stop](/docs/cli/reference/ibmcloud/cf_index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
@@ -87,7 +91,8 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
 ## cf api
 {: #cf_api}
 
-Use este comando para exibir ou especificar a URL do terminal de API do {{site.data.keyword.cloud}}.
+Use este comando para exibir ou especificar a URL do terminal de API do {{site.data.keyword.Bluemix}}.
+
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
@@ -98,13 +103,13 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL (opcional)</dt>
-   <dd>A URL do terminal da API do {{site.data.keyword.cloud_notm}} que você deve especificar quando se conectar ao {{site.data.keyword.cloud_notm}}. Normalmente, esta URL é `https://api.{DomainName}`.
-   Se você desejar exibir a URL do terminal de API que está usando atualmente, não será necessário especificar esse parâmetro para o comando cf api.</dd>
+   <dd>A URL do terminal da API do {{site.data.keyword.Bluemix_notm}} que você deve especificar quando se conectar ao {{site.data.keyword.Bluemix_notm}}. Normalmente, esta URL é `https://api.{DomainName}`.
+   Se você deseja exibir a URL do terminal da API que estiver usando atualmente, não será necessário especificar esse parâmetro para o comando cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Desativa o processo de validação SSL. O uso desse parâmetro pode causar problemas de segurança.</dd>
    <dt>* --unset</dt>
    <dd>Remove as informações de conexão para todos os terminais API.</dd>
-   </dl>
+    </dl>
 
 <strong>Exemplos</strong>:
 
@@ -114,17 +119,18 @@ cf api
 ```
 {: codeblock}
 
-Remova a conexão com todos os terminais de API para api.us-south.cf.cloud.ibm.com:
+Remover a conexão com todos os terminais de API para api.ng.bluemix.net
 ```
-cf api api.us-south.cf.cloud.ibm.com -- unset
+cf api api.ng.bluemix.net --unset
 ```
 {: codeblock}
 
-Desative o processo de validação de SSL para api.us-south.cf.cloud.ibm.com:
+Desativar o processo de validação SSL para api.ng.bluemix.network
 ```
-cf api api.us-south.cf.cloud.ibm.com --skip-ssl-validation
+cf api api.ng.bluemix.net --skip-ssl-validation
 ```
 {: codeblock}
+
 
 ## cf apps
 {: #cf_apps}
@@ -132,16 +138,14 @@ cf api api.us-south.cf.cloud.ibm.com --skip-ssl-validation
 Lista todos os aplicativos que você implementou no espaço atual. O
 status de cada aplicativo também é exibido.
 
-Suponha que tenha uma instância para um app, na coluna de instâncias da resposta do comando cf apps, você verá 1/1 se seu app estiver ativo e 0/1 se seu app estiver inativo. Se você vir ?/1, que indica que o estado da instância do app é desconhecido, será possível copiar a URL do app para o seu navegador
-para verificar se o app responde ou acompanhar o log pelo comando `cf logs appname` para ver se o app
-está gerando conteúdo de log.
+Suponha que tenha uma instância para um app, na coluna de instâncias da resposta do comando cf apps, você verá 1/1 se seu app estiver ativo e 0/1 se seu app estiver inativo. Se você vir ?/1, que indica que o estado da instância do app é desconhecido, será possível copiar a URL do app e colar em seu navegador para verificar se o app responde ou acompanhar o log pelo comando `cf logs appname` para ver se o app está gerando conteúdo de log.
 
 ```
 cf apps
 ```
-{: codeblock}
 
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
+
 
 ## cf bind-service
 {: #cf_bind-service}
@@ -151,7 +155,6 @@ Liga uma instância de serviço existente ao seu aplicativo.
 ```
 cf bind-service appname service_instance
 ```
-{: codeblock}
 
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
 
@@ -181,7 +184,6 @@ Cria uma instância de serviço.
 ```
 cf create-service service_name service_plan service_instance
 ```
-{: codeblock}
 
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
 
@@ -260,7 +262,7 @@ cf delete appname [-f] [-r]
 
 <strong>Exemplos</strong>:
 
-Exclui um aplicativo que é denominado `my_app` (requer confirmação).
+Exclui um aplicativo chamado `my_app` (requererá confirmação).
 ```
 cf delete my_app
 ```
@@ -289,6 +291,7 @@ cf delete my_app -f -r
 {: #cf_delete-space}
 
 Exclui um espaço.
+
 ```
 cf delete-space space_name [-f]
 ```
@@ -303,11 +306,11 @@ cf delete-space space_name [-f]
    <dt>*-f* (opcional)</dt>
    <dd>Força a exclusão do espaço sem nenhuma confirmação.</dd>
    *Nota:* A exclusão de um espaço é uma operação irreversível.
-   </dl>
+    </dl>
 
 <strong>Exemplos</strong>:
 
-Exclui um aplicativo que é denominado `my_app` (requer confirmação).
+Exclui um aplicativo chamado `my_app` (requererá confirmação).
 ```
 cf delete my_app
 ```
@@ -325,7 +328,7 @@ cf delete my_app -r
 ```
 {: codeblock}
 
-Exclui um aplicativo que é denominado `my_app` e todos os nomes de domínio associados a `my_app` sem requerer confirmação.
+Exclui um aplicativo chamado `my_app` e todos os nomes de domínio associados a `my_app` sem requerer confirmação.
 ```
 cf delete my_app -f -r
 ```
@@ -340,7 +343,6 @@ Exibe eventos de tempo de execução que estão relacionados a um aplicativo.
 ```
 cf events [appname]
 ```
-{: codeblock}
 
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
 
@@ -368,7 +370,6 @@ Exibe informações da ajuda para todos os comandos cf ou para um comando cf esp
 ```
 cf help [command_name]
 ```
-{: codeblock}
 
 <strong>Pré-requisitos</strong>: nenhum.
 
@@ -397,9 +398,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Efetua seu login no {{site.data.keyword.cloud_notm}}. Se você estiver efetuando login com um ID federado, deverá usar o parâmetro de conexão única (SSO) para efetuar login.
+Efetua seu login no {{site.data.keyword.Bluemix_notm}}. Se você estiver efetuando login com um ID federado, deverá usar o parâmetro de conexão única (SSO) para efetuar login.
 
-Também é possível usar uma chave de API da Plataforma do {{site.data.keyword.cloud_notm}} para efetuar login. Use o nome de usuário `apikey` e seu valor de chave API como a senha. Para obter mais informações sobre como criar uma chave de API, consulte [Entendendo chaves API](/docs/iam?topic=iam-manapikey#manapikey).
+Também é possível usar uma chave de API da Plataforma do {{site.data.keyword.Bluemix_notm}} para efetuar login. Use o nome de usuário `apikey` e seu valor de chave API como a senha. Para obter mais informações sobre como criar uma chave de API, consulte [Entendendo chaves API](/docs/iam/apikeys.html).
 {: note}
 
 ```
@@ -412,14 +413,14 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <dl>
 <dt>*-a* https://api.{DomainName} (opcional)</dt>
-<dd>A URL do terminal da API do {{site.data.keyword.cloud_notm}}.</dd>
+<dd>A URL do terminal da API do {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-u* user_name (opcional)</dt>
 <dd>Seu nome de usuário.</dd>
 <dt>*-p* password (opcional)</dt>
 <dd>Sua senha.</dd>
 <dd>*Importante:* Se você fornecer sua senha usando o parâmetro *-p* na interface de linha de comandos, a senha poderá ser registrada no histórico da linha de comandos. Por motivos de segurança, evite fornecer a senha usando o parâmetro -p. Em vez disso, insira a senha quando a interface da linha de comandos solicitar.</dd>
 <dt>*-sso*</dt>
-<dd>Deve-se usar a opção de conexão única (SSO) ao efetuar login com um ID federado. Isso não é necessário ao efetuar login com um IBMid. Se você tentar se conectar com um ID federado e não especificar o parâmetro de SSO, será solicitado em um prompt que o inclua. Usar o parâmetro SSO solicita que você insira a senha descartável após o login.</dd>
+<dd>Deve-se usar a opção de conexão única (SSO) ao efetuar login com um ID federado. Isso não será necessário ao efetuar login com um ID IBM. Se você tentar efetuar sign in com um ID federado e não especificar o parâmetro SSO, será solicitado que o inclua. Usar o parâmetro SSO solicita que você insira a senha descartável após o login.</dd>
 <dt>*-o* organization_name</dt>
 <dd>O nome da organização na qual você deseja efetuar login.</dd>
 <dt>*-s* space_name</dt>
@@ -432,33 +433,33 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>Exemplos</strong>:
 
-Efetue login no {{site.data.keyword.cloud_notm}}.
+Efetue login no {{site.data.keyword.Bluemix_notm}}.
 ```
 cf login
 ```
 {: codeblock}
 
-Efetue login no {{site.data.keyword.cloud_notm}} com um terminal definido de `https://api.us-south.cf.cloud.ibm.com`.
+Efetue login no {{site.data.keyword.Bluemix_notm}} com um terminal definido de `https://api.ng.bluemix.net`.
 ```
-cf login -a https://api.us-south.cf.cloud.ibm.com
-```
-{: codeblock}
-
-Efetue login no {{site.data.keyword.cloud_notm}} com um terminal definido de `https://api.us-south.cf.cloud.ibm.com`, um nome do usuário de `user_name` e nenhuma senha especificada por razões de segurança.
-```
-cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name
+cf login -a https://api.ng.bluemix.net
 ```
 {: codeblock}
 
-Efetue login no {{site.data.keyword.cloud_notm}} com um terminal definido de `https://api.us-south.cf.cloud.ibm.com`, um nome do usuário de `user_name`, nenhuma senha especificada por motivos de segurança e um nome de organização de `org_name` e o nome de espaço de `space_name`.
+Efetue login no {{site.data.keyword.Bluemix_notm}} com um terminal definido de `https://api.ng.bluemix.net`, um nome de usuário de `user_name` e nenhuma senha especificada por motivos de segurança.
 ```
-cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name -o org_name -s space_name
+cf login -a https://api.ng.bluemix.net -u user_name
 ```
 {: codeblock}
 
-Efetue login no {{site.data.keyword.cloud_notm}} com um terminal definido de `https://api.us-south.cf.cloud.ibm.com` usando uma chave de API. Use `apikey` como o nome do usuário e a chave API real como a senha.
+Efetue login no {{site.data.keyword.Bluemix_notm}} com um terminal definido de `https://api.ng.bluemix.net`, um nome de usuário de `user_name`, nenhuma senha especificada por motivos de segurança, um nome da organização de `org_name` e o nome do espaço de `space_name`.
 ```
-cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAPIKey
+cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+Efetue login no {{site.data.keyword.Bluemix_notm}} com um terminal definido de `https://api.ng.bluemix.net` usando uma chave API. Use `apikey` como o nome do usuário e a chave API real como a senha.
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 
@@ -500,7 +501,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Lista todos os serviços que estão disponíveis no mercado. Os serviços listados por esse comando também são mostrados no Catálogo do {{site.data.keyword.cloud_notm}}.
+Lista todos os serviços que estão disponíveis no mercado. Os serviços listados por esse comando também são mostrados no Catálogo do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
@@ -521,8 +522,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-Implementa um novo aplicativo para
-{{site.data.keyword.cloud_notm}} ou atualiza um aplicativo existente no {{site.data.keyword.cloud_notm}}.
+Implementa um novo aplicativo para {{site.data.keyword.Bluemix_notm}} ou atualiza um aplicativo existente no {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
@@ -556,13 +556,13 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-t* tempo limite (opcional)</dt>
 <dd>Tempo máximo, em segundos, para o aplicativo iniciar. Outros tempos-limite do lado do servidor podem substituir esse valor.</dd>
 <dt>*--no-hostname* (opcional)</dt>
-<dd>Mapeia o domínio do sistema {{site.data.keyword.cloud_notm}} para esse aplicativo.</dd>
+<dd>Mapeia o domínio do sistema {{site.data.keyword.Bluemix_notm}} para esse aplicativo.</dd>
 <dt>*--no-manifest* (opcional)</dt>
 <dd>Ignora o arquivo de manifesto padrão.</dd>
 <dt>*--no-route* (opcional)</dt>
-<dd>Não mapeia uma rota para este aplicativo.</dd>
+<dd>Não mapeia uma rota para esse aplicativo.</dd>
 <dt>*--no-start* (opcional)</dt>
-<dd>Não inicia o aplicativo depois que o aplicativo é implementado.</dd>
+<dd>Não inicia o aplicativo após sua implementação.</dd>
 <dt>*--random-route* (opcional)</dt>
 <dd>Cria uma rota aleatória para o aplicativo.</dd>
 </dl>
@@ -685,8 +685,7 @@ cf ssh
 ```
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
 
-Por padrão, o acesso SSH fica ativado para aplicativos Diego. É possível usar o comando `cf ssh-enabled` para
-verificar se o acesso SSH está ativado ou o comando `cf enable-ssh` para ativar o acesso se foi desativado.
+Por padrão, o acesso SSH fica ativado para aplicativos Diego. É possível usar o comando `cf ssh-enabled` para verificar se o acesso SSH está ativado ou o comando `cf enable-ssh` para ativar o acesso no caso de ter sido desativado.
 
 <strong>Opções de comando</strong>:
 
@@ -700,7 +699,7 @@ verificar se o acesso SSH está ativado ou o comando `cf enable-ssh` para ativar
 <dt>-L</dt>
 <dd>Ativa o encaminhamento de porta local, que liga uma porta de saída em sua máquina a uma porta de entrada na VM do aplicativo.</dd>
 <dt>-N</dt>
-<dd>Não executa um comando remoto.</dd>
+<dd>Não executar um comando remoto.</dd>
 <dt>-t, -tt ou -T</dt>
 <dd>Permite executar uma sessão SSH no modo pseudo-tty em vez de gerar a saída de linha de terminal.<dd>
 </dl>
@@ -826,7 +825,9 @@ cf -v
 
 
 ## Links Relacionados
-{: #cf-related}
+{: #general}
 
-* [Download da CLI do Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")
-* [Cartão de referência rápida - comandos cf](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")
+* [Fazer download da CLI do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+{: new_window}
+* [Cartão de referência rápida - comandos cf ![Ícone de link externo](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{: new_window}

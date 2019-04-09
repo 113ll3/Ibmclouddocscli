@@ -1,38 +1,44 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ibmcloud sl image, manage compute images, ibmcloud sl
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Datenverarbeitungsimages erstellen, bearbeiten und löschen
-{: #sl-manage-compute-images}
+# Image
 
-Verwenden Sie die folgenden Befehle, um {{site.data.keyword.cloud}}-Datenverarbeitungsimages zu verwalten.
+Verwenden Sie die folgenden Befehle, um Images der {{site.data.keyword.Bluemix}}-Berechnungen zu verwalten.
 {: shortdesc}
 
-## ibmcloud sl image delete
+<table summary="Alphabetisch geordnete Image-Befehle der {{site.data.keyword.Bluemix_notm}}-Infrastruktur mit Links zu weiteren Informationen über den Befehl">
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl image delete](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_delete)</td>
+ <td>[ibmcloud sl image detail](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_detail)</td>
+ <td>[ibmcloud sl image edit](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_edit)</td>
+ <td>[ibmcloud sl image list](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_list)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl image delete
 {: #sl_image_delete}
 
 Image löschen.
 ```
 ibmcloud sl image delete IDENTIFIER
 ```
-
 **Beispiele**:
 ```
-ibmcloud sl image delete 12345678
+   ibmcloud sl image delete 12345678
 ```
-
 Dieser Befehl löscht das Image mit der ID `12345678`.
 
 ## ibmcloud sl image detail
@@ -42,13 +48,11 @@ Details zu einem Image abrufen.
 ```
 ibmcloud sl image detail IDENTIFIER
 ```
-
 **Beispiele**:
 ```
  ibmcloud sl image detail 12345678
 ```
-
-Dieser Befehl ruft Details zu dem Image mit der ID `12345678` ab.
+Dieser Befehl ruft Details zu dem Image mit der ID 12345678 ab.
 
 ## ibmcloud sl image edit
 {: #sl_image_edit}
@@ -72,7 +76,6 @@ ibmcloud sl image edit IDENTIFIER [OPTIONEN]
 ```  
 ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
-
 Dieser Befehl bearbeitet ein Image mit der ID `12345678` und legt den Namen auf `ubuntu16`, die Anmerkung auf `testing` und den Tag auf `staging` fest.
 
 ## ibmcloud sl image list

@@ -55,7 +55,7 @@ Windows&trade; を使用する場合、Windows&trade; 10 Pro 以降を実行す�
 
 `run` を除くすべての用途に関して、アプリケーションをビルドするときは、`build-cmd-debug` 構成エレメントを使用します。 デバッグ用のアプリケーションをビルドする際は、コマンド・ライン・オプション `--debug` を指定します。 `run` コマンドで使用するためのアプリケーションをビルドするときは、`build-cmd-run` 構成エレメントを使用します。
 
-複数のコンテナーを使用してビルドするには、`cli-config.yml` で指定されている [Compose](https://docs.docker.com/compose/overview/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ファイルがアプリケーションに含まれているか、`dockerfile-tools` コマンド・パラメーターを使用して、このファイルを指定する必要があります。 
+複数のコンテナーを使用してビルドするには、`cli-config.yml` で指定されている [Compose](https://docs.docker.com/compose/overview/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ファイルがアプリケーションに含まれているか、`dockerfile-tools` コマンド・パラメーターを使用して、このファイルを指定する必要があります。
 
 現行アプリケーション・ディレクトリー内で以下のコマンドを実行して、アプリケーションをビルドします。  
 ```
@@ -255,7 +255,7 @@ ibmcloud dev diag
 ## edit
 {: #edit}
 
-{{site.data.keyword.cloud_notm}} 内に既にあるアプリケーションへの接続、アプリケーションの {{site.data.keyword.cloud_notm}} サービスの管理、および IBM Cloud Kubernetes、Cloud Foundry、または Cloud Foundry エンタープライズ環境にデプロイするアプリケーションの {{site.data.keyword.cloud_notm}} ツールチェーンなどのオプションを使用して、アプリケーションを編集します。{{site.data.keyword.cloud_notm}} 内のアプリケーションに接続されたローカル・アプリケーションについて、`edit` を使用して、新規サービスの追加、既存のサービスの接続と切断、またはアカウントからの既存のサービスの削除を行います。 さらに、アプリケーションの {{site.data.keyword.cloud_notm}} ツールチェーンを作成または表示できます。 アプリケーション・ディレクトリーのルートで次のコマンドを実行します。
+{{site.data.keyword.cloud_notm}} 内に既にあるアプリケーションへの接続、アプリケーションの {{site.data.keyword.cloud_notm}} サービスの管理、および IBM Cloud Kubernetes、Cloud Foundry、または Cloud Foundry エンタープライズ環境にデプロイするアプリケーションの {{site.data.keyword.cloud_notm}} ツールチェーンなどのオプションを使用して、アプリケーションを編集します。 {{site.data.keyword.cloud_notm}} 内のアプリケーションに接続されたローカル・アプリケーションについて、`edit` を使用して、新規サービスの追加、既存のサービスの接続と切断、またはアカウントからの既存のサービスの削除を行います。 さらに、アプリケーションの {{site.data.keyword.cloud_notm}} ツールチェーンを作成または表示できます。 アプリケーション・ディレクトリーのルートで次のコマンドを実行します。
 ```
 ibmcloud dev edit
 ```
@@ -274,7 +274,7 @@ ibmcloud dev edit
 ## enable
 {: #enable}
 
-既存のアプリケーションを {{site.data.keyword.cloud_notm}} デプロイメントに対応できるようにします。 `enable` コマンドは、既存アプリケーションの言語の自動検出を試み、その後、必要な追加情報を求めるプロンプトを出します。 これにより、ローカル Docker コンテナー、Cloud Foundry デプロイメント、Cloud Foundry エンタープライズ環境デプロイメント、または Kubernetes コンテナー・デプロイメントに使用できるファイルが生成され、追加されます。すべてのデプロイメント環境は、手動での `deploy` によって、または DevOps ツールチェーンを使用することによって利用できます。
+既存のアプリケーションを {{site.data.keyword.cloud_notm}} デプロイメントに対応できるようにします。 `enable` コマンドは、既存アプリケーションの言語の自動検出を試み、その後、必要な追加情報を求めるプロンプトを出します。 これにより、ローカル Docker コンテナー、Cloud Foundry デプロイメント、Cloud Foundry エンタープライズ環境デプロイメント、または Kubernetes コンテナー・デプロイメントに使用できるファイルが生成され、追加されます。 すべてのデプロイメント環境は、手動での `deploy` によって、または DevOps ツールチェーンを使用することによって利用できます。
 
 {{site.data.keyword.cloud_notm}} にログインしている場合、当該ローカル・アプリケーションを、{{site.data.keyword.cloud_notm}} に既に存在しているアプリケーションに接続するか、新規 {{site.data.keyword.cloud_notm}} アプリケーションを作成することを選択できます。 サービスや DevOps ツールチェーンなどの {{site.data.keyword.cloud_notm}} 機能を利用するには、{{site.data.keyword.cloud_notm}} 内のアプリケーションが必要です。 Git リポジトリーから複製されたアプリケーションに対して {{site.data.keyword.cloud_notm}} アプリケーションが作成されると、{{site.data.keyword.cloud_notm}} アプリケーションはその構成にこのリポジトリーを組み込みます。 
 

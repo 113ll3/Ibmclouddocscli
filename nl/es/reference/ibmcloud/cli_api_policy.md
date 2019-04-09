@@ -1,13 +1,11 @@
 ---
 
 copyright:
+
   years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids
 
-subcollection: cloud-cli
-
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
@@ -17,8 +15,91 @@ subcollection: cloud-cli
 # Gestión de acceso de IAM, claves de API, ID de servicio y grupos de acceso
 {: #ibmcloud_commands_iam}
 
-Utilice los mandatos siguientes para gestionar las claves de API, los ID de servicio, los grupos de acceso y las políticas de autorización para usuarios, servicios y grupos de acceso.
+Utilice los mandatos siguientes para gestionar las claves de API, los ID de servicio, los grupos de acceso y las políticas de acceso/autorización para usuarios, servicios y grupos de acceso.
 {: shortdesc}
+
+<table summary="Mandatos de Bluemix que puede utilizar para gestionar claves de API y políticas.">
+  <thead>
+  </thead>
+  <tbody>
+  <tr>
+   <td>[ibmcloud iam service-ids](cli_api_policy.html#ibmcloud_iam_service_ids)</td>
+   <td>[ibmcloud iam service-id](cli_api_policy.html#ibmcloud_iam_service_id)</td>
+   <td>[ibmcloud iam service-id-create](cli_api_policy.html#ibmcloud_iam_service_id_create)</td>
+   <td>[ibmcloud iam service-id-update](cli_api_policy.html#ibmcloud_iam_service_id_update)</td>
+   <td>[ibmcloud iam service-id-delete](cli_api_policy.html#ibmcloud_iam_service_id_delete)</td>
+  </tr>
+  <tr>
+   <td>[ibmcloud iam service-id-lock](cli_api_policy.html#ibmcloud_iam_service_id_lock)</td>
+   <td>[ibmcloud iam service-id-unlock](cli_api_policy.html#ibmcloud_iam_service_id_unlock)</td>
+   <td>[ibmcloud iam api-keys](cli_api_policy.html#ibmcloud_iam_api_keys)</td>
+   <td>[ibmcloud iam api-key-create](cli_api_policy.html#ibmcloud_iam_api_key_create)</td>
+   <td>[ibmcloud iam api-key-delete](cli_api_policy.html#ibmcloud_iam_api_key_delete)</td>
+  </tr>
+  <tr>
+   <td>[ibmcloud iam api-key-update](cli_api_policy.html#ibmcloud_iam_api_key_update)</td>
+   <td>[ibmcloud iam api-key-lock](cli_api_policy.html#ibmcloud_iam_api_key_lock)</td>
+   <td>[ibmcloud iam api-key-unlock](cli_api_policy.html#ibmcloud_iam_api_key_unlock)</td>
+   <td>[ibmcloud iam service-api-keys](cli_api_policy.html#ibmcloud_iam_service_api_keys)</td>
+   <td>[ibmcloud iam service-api-key](cli_api_policy.html#ibmcloud_iam_service_api_key)</td>
+  </tr>
+  <tr>
+   <td>[ibmcloud iam service-api-key-create](cli_api_policy.html#ibmcloud_iam_service_api_key_create)</td>
+   <td>[ibmcloud iam service-api-key-update](cli_api_policy.html#ibmcloud_iam_service_api_key_update)</td>
+   <td>[ibmcloud iam service-api-key-delete](cli_api_policy.html#ibmcloud_iam_service_api_key_delete)</td>
+   <td>[ibmcloud iam service-api-key-lock](cli_api_policy.html#ibmcloud_iam_service_api_key_lock)</td>
+   <td>[ibmcloud iam service-api-key-unlock](cli_api_policy.html#ibmcloud_iam_service_api_key_unlock)</td>
+  </tr>
+  <tr>
+   <td>[ibmcloud iam service-policies](cli_api_policy.html#ibmcloud_iam_service_policies)</td>
+   <td>[ibmcloud iam service-policy](cli_api_policy.html#ibmcloud_iam_service_policy)</td>
+   <td>[ibmcloud iam service-policy-create](cli_api_policy.html#ibmcloud_iam_service_policy_create)</td>
+   <td>[ibmcloud iam service-policy-update](cli_api_policy.html#ibmcloud_iam_service_policy_update)</td>
+   <td>[ibmcloud iam service-policy-delete](cli_api_policy.html#ibmcloud_iam_service_policy_delete)</td>
+  </tr>
+  <tr>
+   <td>[ibmcloud iam user-policies](cli_api_policy.html#ibmcloud_iam_user_policies)</td>
+   <td>[ibmcloud iam user-policy](cli_api_policy.html#ibmcloud_iam_user_policy)</td>
+   <td>[ibmcloud iam user-policy-create](cli_api_policy.html#ibmcloud_iam_user_policy_create)</td>
+   <td>[ibmcloud iam user-policy-update](cli_api_policy.html#ibmcloud_iam_user_policy_update)</td>
+   <td>[ibmcloud iam user-policy-delete](cli_api_policy.html#ibmcloud_iam_user_policy_delete)</td>
+  </tr>
+  <tr>
+   <td>[ibmcloud iam oauth-tokens](cli_api_policy.html#ibmcloud_iam_oauth_tokens)</td>
+   <td>[ibmcloud iam dedicated-id-disconnect](cli_api_policy.html#ibmcloud_iam_dedicated_id_disconnect)</td>
+   <td>[ibmcloud iam authorization-policy-create](cli_api_policy.html#ibmcloud_iam_authorization_policy_create)</td>
+   <td>[ibmcloud iam authorization-policy-delete](cli_api_policy.html#ibmcloud_iam_authorization_policy_delete)</td>
+   <td>[ibmcloud iam authorization-policy](cli_api_policy.html#ibmcloud_iam_authorization_policy)</td>
+  </tr>
+  <tr>
+   <td>[ibmcloud iam authorization-policies](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
+   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access_groups)</td>
+   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access_group)</td>
+   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access_group_create)</td>
+   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access_group_update)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access_group_delete)</td>
+   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access_group_users)</td>
+   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access_group_user_add)</td>
+   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access_group_user_remove)</td>
+   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access_group_user_purge)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access_group_service_ids)</td>
+   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access_group_service_id_add)</td>
+   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access_group_service_id_remove)</td>
+   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access_group_service_id_purge)</td>
+   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access_group_policies)</td>
+</tr>
+<tr>
+   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access_group_policy)</td>
+   <td>[ibmcloud iam access-group-policy-create](cli_api_policy.html#ibmcloud_iam_access_group_policy_create)</td>
+   <td>[ibmcloud iam access-group-policy-update](cli_api_policy.html#ibmcloud_iam_access_group_policy_update)</td>
+   <td>[ibmcloud iam access-group-policy-delete](cli_api_policy.html#ibmcloud_iam_access_group_policy_delete)</td>
+  </tr>
+  </tbody>
+  </table>
 
 ## ibmcloud iam service-ids
 {: #ibmcloud_iam_service_ids}
@@ -973,7 +1054,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 Crear una política de servicio
 
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
@@ -1000,8 +1081,6 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dd>Nombre del grupo de recursos. Esta opción y los distintivos '--file' y '--resource-group-id' son mutuamente excluyentes.</dd>
   <dt>--resource-group-id </dt>
   <dd>ID del grupo de recursos. Esta opción y los distintivos '--file' y '--resource-group-name' son mutuamente excluyentes.</dd>
-  <dt>--account-management (opcional)</dt>
-  <dd>Proporcionar acceso a todos los servicios de gestión de cuentas</dd>
   <dt>-f, --force</dt>
   <dd>Crear la política de servicios sin confirmación</dd>
 </dl>
@@ -1019,25 +1098,13 @@ Crear una política de servicio desde el archivo JSON para el servicio `ServiceI
 ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
-Otorgar al servicio `test` el rol `Administrator` para todos los servicios de gestión de cuentas:
-
-```
-ibmcloud iam service-policy-create test --roles Administrator --account-management
-```
-
-Otorgar al servicio `test` el rol `Viewer` para todos los recursos de la cuenta:
-
-```
-ibmcloud iam service-policy-create test --roles Viewer
-```
-
 ## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
 Actualizar una política de servicio
 
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 
 <strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
@@ -1066,8 +1133,6 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dd>Nombre del grupo de recursos. Esta opción y los distintivos '--file' y '--resource-group-id' son mutuamente excluyentes.</dd>
   <dt>--resource-group-id </dt>
   <dd>ID del grupo de recursos. Esta opción y los distintivos '--file' y '--resource-group-name' son mutuamente excluyentes.</dd>
-  <dt>--account-management (opcional)</dt>
-  <dd>Proporcionar acceso a todos los servicios de gestión de cuentas</dd>
   <dt>-f, --force</dt>
   <dd>Actualizar la política de servicios sin confirmación</dd>
 </dl>
@@ -1079,25 +1144,10 @@ Actualizar la política de servicio `140798e2-8ea7db3` desde el archivo JSON par
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
-
-Actualizar la política de servicio `140798e2-8ea7db3` desde el archivo JSON para el servicio `test`:
-
-```
-ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
-```
-
-Actualizar la política de servicio `140798e2-8ea7db3` para otorgar al servicio `test` el rol
-`Administrator` para todos los servicios de gestión de cuentas:
+Actualizar la política de servicio `140798e2-8ea7db3` desde un archivo JSON para el servicio `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976`:
 
 ```
-ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Administrator --account-management
-```
-
-Actualizar la política de servicio `140798e2-8ea7db3` para otorgar al servicio `test` el rol
-`Viewer` para todos los recursos de la cuenta:
-
-```
-ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
+ibmcloud iam service-policy-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3 --file @policy.json
 ```
 
 ## ibmcloud iam service-policy-delete
@@ -1180,7 +1230,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 Crear una política de autorización para permitir a una instancia de servicio acceder a otra instancia de servicio.
 
 ```
-ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME] [--target-resource-type RESOURCE_TYPE | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--output FORMAT]
+ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME]
 ```
 
 <strong>Requisitos previos</strong>: Inicio de sesión, destino
@@ -1193,18 +1243,10 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>Servicio de destino al que el servicio de origen está autorizado para acceder.</dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>Los roles que dan acceso al servicio de origen.</dd>  
-  <dt>--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>Nombre de instancia de servicio de origen, mutuamente excluyente con `--source-service-instance-id`. Si no se especifica, todas las instancias de servicio de origen estarán autorizadas para acceder.</dd>
-  <dt>--source-service-instance-id SOURCE_SERVICE_INSTANCE_ID</dt>
-  <dd>ID de instancia de servicio de origen, mutuamente excluyente con `--source-service-instance-name`. Si no se especifica, todas las instancias de servicio de origen estarán autorizadas para acceder.</dd>
-  <dt>--source-resource-type</dt>
-  <dd>Tipo de recurso del servicio de origen</dd>
-  <dt>--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>Nombre de instancia de servicio de destino, mutuamente excluyente con `--target-service-instance-id`. Si no se especifica, todas las instancias de servicio de destino estarán autorizadas para acceder.</dd>
-  <dt>--target-service-instance-id TARGET_SERVICE_INSTANCE_ID</dt>
-  <dd>ID de instancia de servicio de destino, mutuamente excluyente con `--target-service-instance-name`. Si no se especifica, todas las instancias de servicio de destino estarán autorizadas para acceder.</dd>
-  <dt>--target-resource-type</dt>
-  <dd>Tipo de recurso del servicio de destino</dd>
+  <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
+  <dd>Nombre de instancia de servicio de origen; si no se especifica, todas las instancias de servicio de origen estarán autorizadas para acceder.</dd>
+  <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
+  <dd>Nombre de instancia de servicio de destino; si no se especifica, todas las instancias de servicio de destino estarán autorizadas para acceder.</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-delete

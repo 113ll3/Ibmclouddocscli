@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,14 +13,39 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # 创建和使用裸机服务器
-{: #sl-manage-bare-metal}
 
-{{site.data.keyword.baremetal_long}} 是单租户物理服务器，通过对硬件资源的低级别访问权为您提供性能和控制。Bare Metal Server 为处理器密集型和磁盘 I/O 密集型工作负载提供了所需的强大动力。这些服务器随附最完整的标准功能和服务包。
+{{site.data.keyword.baremetal_long}} 是单租户物理服务器，通过对硬件资源的低级别访问权为您提供性能和控制。Bare Metal Server 为处理器密集型和磁盘 I/O 密集型工作负载提供了所需的原始能力。这些服务器随附最完整的标准功能和服务包。
 
-使用以下命令可管理 {{site.data.keyword.cloud}} 经典基础架构裸机硬件服务器。
+使用以下命令可管理 {{site.data.keyword.Bluemix}} 经典基础架构裸机硬件服务器。
 {: shortdesc}
 
-## ibmcloud sl hardware cancel
+<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构裸机服务器命令（带有可获取命令的更多信息的链接）">
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl hardware cancel](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel)</td>
+ <td>[ibmcloud sl hardware cancel-reasons](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_cancel_reasons)</td>
+ <td>[ibmcloud sl hardware create](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_create)</td>
+ <td>[ibmcloud sl hardware create-options](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_create_options)</td>
+ <td>[ibmcloud sl hardware credentials](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_credentials)</td>
+ <td>[ibmcloud sl hardware detail](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_detail)</td>
+ </tr>
+<tr>
+ <td>[ibmcloud sl hardware edit](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_edit)</td>
+ <td>[ibmcloud sl hardware list](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_list)</td>
+ <td>[ibmcloud sl hardware power-cycle](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_cycle)</td>
+ <td>[ibmcloud sl hardware power-off](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_off)</td>
+ <td>[ibmcloud sl hardware power-on](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_power_on)</td>
+ <td>[ibmcloud sl hardware reboot](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_reboot)</td>
+ </tr>
+<tr>
+ <td>[ibmcloud sl hardware reload](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_reload)</td>
+ <td>[ibmcloud sl hardware rescue](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_rescue)</td>
+ <td>[ibmcloud sl hardware update-firmware](/docs/cli/reference/ibmcloud/cli_hardware.html#sl_hardware_update_firmware)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl hardware cancel
 {: #sl_hardware_cancel}
 
 取消硬件服务器。
@@ -267,7 +290,7 @@ ibmcloud sl hardware reload IDENTIFIER [OPTIONS]
 ## ibmcloud sl hardware rescue
 {: #sl_hardware_rescue}
 
-将服务器重新引导至急救映像。
+将服务器重新引导至拯救映像。
 ```
 ibmcloud sl hardware rescue IDENTIFIER [OPTIONS]
 ```

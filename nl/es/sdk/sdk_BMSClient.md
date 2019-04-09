@@ -1,24 +1,20 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-26"
-
-keywords: bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
-
-subcollection: cloud-cli
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Inicialización de BMSClient
 {: #sdk_BMSClient}
 
-`BMSCore` proporciona la infraestructura HTTP que utilizan los otros SDK de cliente de servicios de web y móviles de {{site.data.keyword.cloud}} con sus correspondientes servicios de {{site.data.keyword.cloud_notm}}.
+`BMSCore` proporciona la infraestructura HTTP que utilizan los otros SDK de cliente de servicios de web y móviles de {{site.data.keyword.Bluemix}} con sus correspondientes servicios de {{site.data.keyword.Bluemix_notm}}.
+
 
 ## Inicialización de la aplicación Android
 {: #init-BMSClient-android}
@@ -34,7 +30,7 @@ Puede descargar e importar el paquete `BMSCore` en su proyecto Android Studio o 
 
 2. Inicialice el SDK `BMSClient` en la aplicación Android añadiendo el código de inicialización del método `onCreate` de la actividad principal a la aplicación Android o en la ubicación que mejor se ajuste a su proyecto.
 
-  ```java
+  ```Java
   BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Asegúrese de que apunte a su región
   ```
   {: codeblock}
@@ -45,11 +41,11 @@ Puede descargar e importar el paquete `BMSCore` en su proyecto Android Studio o 
 ## Inicialización de la aplicación iOS
 {: #init-BMSClient-ios}
 
-Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") o [Carthage](https://github.com/Carthage/Carthage){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") para obtener el paquete `BMSCore`.
+Puede utilizar [CocoaPods ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cocoapods.org){: new_window} o [Carthage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/Carthage/Carthage){: new_window} para obtener el paquete `BMSCore`.
 
-1. Para instalar `BMSCore` mediante CocoaPods, añada las siguientes líneas a Podfile. Si el proyecto no tiene todavía un Podfile, utilice el mandato `pod init`.
+1. Para instalar `BMSCore` mediante CocoaPods, añada las siguientes líneas a Podfile. Si el proyecto aún no tiene un Podfile, utilice el mandato `pod init`.
 
-  ```swift
+  ```Swift
   use_frameworks!
 
   target 'MyApp' do
@@ -60,9 +56,9 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} ![Icono de enlac
 
   A continuación, ejecute el mandato `pod install` y abra el archivo `.xcworkspace` generado. Para actualizar a un release posterior de `BMSCore`, utilice `pod update BMSCore`.
 
-  Para obtener más información sobre cómo utilizar CocoaPods, consulte las [Guías de CocoaPods](https://guides.cocoapods.org/using/index.html){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+  Para obtener más información sobre cómo utilizar CocoaPods, consulte las [Guías de CocoaPods ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://guides.cocoapods.org/using/index.html){: new_window}.
 
-2. Para instalar `BMSCore` mediante Carthage, siga estas [instrucciones](https://github.com/Carthage/Carthage#getting-started){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+2. Para instalar `BMSCore` mediante Carthage, siga estas [instrucciones ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/Carthage/Carthage#getting-started){: new_window}.
 
   1. Añada la siguiente línea a Cartfile:
 
@@ -73,27 +69,28 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} ![Icono de enlac
 
   2. Ejecute el mandato `carthage update`.
 
-  3. Una vez finalizada la compilación, añada `BMSCore.framework` al proyecto siguiendo el [Paso 3](https://github.com/Carthage/Carthage#getting-started){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") en las instrucciones de Carthage.
+  3. Una vez finalizada la compilación, añada `BMSCore.framework` al proyecto siguiendo el [Paso 3 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/Carthage/Carthage#getting-started) en las instrucciones de Carthage.
 
       Para aplicaciones compiladas con Swift 2.3, utilice el mandato `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. De lo contrario, utilice el mandato `carthage update`.
 
-3. Importe el módulo `BMSCore`.
+3. Importe el módulo.
 
-  ```swift
+  ```Swift
   import BMSCore
   ```
   {: codeblock}
 
-4. Inicialice la clase `BMSClient` utilizando el código siguiente.
+4. Inicialice la clase `BMSClient` con el código siguiente.
 
   Coloque el código de inicialización en el método `application(_:didFinishLaunchingWithOptions:)` de delegado de la aplicación o en la ubicación que mejor se ajuste a su proyecto.
 
-  ```swift
+  ```Swift
   BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Asegúrese de que apunte a su región
   ```
   {: codeblock}
 
   Debe inicializar `BMSClient` con el parámetro **bluemixRegion**. En el inicializador, el valor **bluemixRegion** especifica el despliegue de {{site.data.keyword.Bluemix_notm}} que está utilizando, por ejemplo `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.
+
 
 ## Inicialización de la aplicación Cordova
 {: #init-BMSClient-cordova}
@@ -114,9 +111,13 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} ![Icono de enlac
 
   Debe inicializar `BMSClient` con el parámetro **bluemixRegion**. En el inicializador, el valor **bluemixRegion** especifica el despliegue de {{site.data.keyword.Bluemix_notm}} que está utilizando, por ejemplo `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`.
 
-## Enlaces relacionados
-{: #BMSClient-rellinks notoc}
 
-* [SDK BMSCore Android](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-* [SDK BMSCore iOS](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-* [Plugin BMSCore Cordova](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+# Enlaces relacionados
+{: #rellinks notoc}
+
+## Enlaces relacionados
+{: #general notoc}
+
+* [SDK BMSCore Android ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [SDK BMSCore iOS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [Plugin BMSCore Cordova ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

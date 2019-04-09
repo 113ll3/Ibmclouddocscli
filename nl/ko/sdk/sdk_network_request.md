@@ -1,15 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-21"
-
-keywords: bmscore, bmscore sdk, network request, ios, android, cordova
-
-subcollection: cloud-cli
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +18,7 @@ subcollection: cloud-cli
 ## Android
 {: #request-android}
 
-1. Android 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android)했는지 확인하십시오.
+1. Android 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](sdk_BMSClient.html#init-BMSClient-android)했는지 확인하십시오.
 
 2. 네트워크 요청을 작성하십시오.
 
@@ -55,7 +50,7 @@ subcollection: cloud-cli
 ## iOS
 {: #request-ios}
 
-1. iOS 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)했는지 확인하십시오.
+1. iOS 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](sdk_BMSClient.html#init-BMSClient-ios)했는지 확인하십시오.
 
 2. 네트워크 요청을 작성하십시오.
 
@@ -95,17 +90,17 @@ subcollection: cloud-cli
 	```
 	{: codeblock}
 
-`Request` 클래스는 요청을 작성하고 요청이 완료된 후에 응답을 가져오는 간단한 방법입니다. `Request` 클래스보다 더 많은 유연성과 제어 기능을 원하는 경우, `BMSURLSession` 클래스를 사용할 수 있습니다. `BMSURLSession` 클래스의 일부 기능으로는 업로드 프로세스 모니터링과 요청 일시정지 또는 취소가 있습니다. 응답을 가져오기 위해 완료 핸들러 또는 위임 중 하나를 선택할 수 있습니다.
+`Request` 클래스는 요청을 작성하고 요청이 완료된 후에 응답을 가져오는 간단한 방법입니다. `Request` 클래스보다 더 많은 유연성과 제어 기능을 원하는 경우, `BMSURLSession` 클래스를 사용할 수 있습니다. `BMSURLSession` 클래스의 일부 기능으로는 업로드 프로세스 모니터링과 요청 일시정지 또는 취소가 있습니다. 응답을 가져오는 옵션으로 완료 핸들러 또는 위임 중 하나를 선택할 수 있습니다.
 
 `BMSURLSession` 클래스는 iOS용으로만 사용 가능합니다.
 
-전체 사용 예제는 `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
+전체 사용 예제는 `BMSCore` GitHub [README ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}를 참조하십시오.
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Cordova 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)했는지 확인하십시오.
+1. Cordova 애플리케이션에서 [클라이언트 SDK를 가져와서 초기화](sdk_BMSClient.html#init-BMSClient-cordova)했는지 확인하십시오.
 
 2. 네트워크 요청을 작성하십시오.
 

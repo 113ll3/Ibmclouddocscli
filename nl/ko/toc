@@ -1,89 +1,50 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html" path="cli"}
-IBM Cloud CLI 및 Developer Tools
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html"}
+CLI 및 개발 도구
 
 	{: .navgroup id="learn"}
 	index.md
+	reference/bluemix_cli/get_started.md
+	[CF CLI 시작하기](https://github.com/cloudfoundry/cli#getting-started)
 	{: .navgroup-end}
-
-	{: .navgroup id="howto"}
-	reference/ibmcloud/download_cli.md
-	reference/ibmcloud/extend_cli.md
-	reference/ibmcloud/cli_docker.md
-	reference/ibmcloud/enable_cli_autocompletion.md
-	idt/index.md
-
-	{: .topicgroup}
-	IBM Cloud Developer Tools IDE 확장
-		idt/vscode.md
-		idt/jetbrains.md
-
-	{: topicgroup}
-	디버깅
-		idt/local_debug.md
-	{: .navgroup-end}
-
+	
 	{: .navgroup id="reference"}
-	{: .topicgroup}
-	IBM Cloud CLI(ibmcloud) 명령
-		reference/ibmcloud/bx_cli.md
-		reference/ibmcloud/cli_acct_org_role.md
-		reference/ibmcloud/cli_billing.md
-		reference/ibmcloud/cli_block_storage.md
-		reference/ibmcloud/cli_catalog.md
-		reference/ibmcloud/cli_cdn.md
-		reference/ibmcloud/cf_index.md
-		reference/ibmcloud/cli_cf_apps.md
-		reference/ibmcloud/cli_cf_services.md
-		reference/ibmcloud/cli_cfee.md
-		reference/ibmcloud/cli_dns.md
-		reference/ibmcloud/cli_file_storage.md
-		reference/ibmcloud/cli_global_ip.md
-		reference/ibmcloud/cli_hardware.md
-		reference/ibmcloud/cli_api_policy.md
-		reference/ibmcloud/cli_image.md
-		reference/ibmcloud/cli_ipsec_vpn.md
-		reference/ibmcloud/cli_load_balancer.md
-		reference/ibmcloud/cli_order.md
-		reference/ibmcloud/cli_plugin.md
-		reference/ibmcloud/cli_resource_group.md
-		reference/ibmcloud/cli_security.md
-		reference/ibmcloud/cli_securitygroup.md
-		reference/ibmcloud/cli_subnet.md
-		reference/ibmcloud/cli_virtual_server.md
-		reference/ibmcloud/cli_vlan.md
-	idt/commands.md
-	reference/ibmcloud/all_versions.md
+	reference/bluemix_cli/bx_cli.md
+	reference/bluemix_cli/all_versions.md
+	[IBM Cloud 개발자 도구 명령](../cloudnative/idt/commands.html)
+	reference/softlayer/index.md
+	reference/cfcommands/index.md
 
 	{: .topicgroup}
-	IBM Cloud CLI plug-ins
-		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
-		/auto-scaling-cli-plugin/auto-scaling-cli-plugin-autoscalingcli
-		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
-		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
-		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
-		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
-		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
-		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
-
+	IBM Cloud CLI 플러그인
+		plugins/api-management-cliplugin/
+		plugins/auto-scaling/index.md
+		plugins/registry/index.md
+		[Container 서비스](../containers/cs_cli_devtools.html)
+		[IBM Developer](../cloudnative/idt/index.html)
+ 		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk/index.html)
+		[Schematics](../services/schematics/schematics_reference.html)
+		plugins/bx_vpn/index.md
+	
 	{: .topicgroup}
 	Cloud Foundry CLI 플러그인
 		plugins/bluemix_admin/index.md
+		plugins/dev_mode/index.md
 		plugins/vpn/index.md
-
-	monitoring_logging.md
-
+	
 	{: .topicgroup}
-	모바일용 SDK
-		sdk/index.md
-		sdk/contribute.md
-		sdk/sdk.md
-		sdk/sdk_BMSClient.md
-		sdk/sdk_network_request.md
+	권장 개발 환경
+		[Eclipse Tools로 개발](../starters/deploy_eclipsetools.html)
+		[VSCode용 IBM Developer Tools](../cloudnative/idt/vscode.html)
+		[JetBrains용 IBM Developer Tools](../cloudnative/idt/jetbrains.html)
 	{: .navgroup-end}
-
-    {: .navgroup id="help"}
-	ts_createapps.md
-    {: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	reference/bluemix_cli/download_cli.md
+	reference/bluemix_cli/extend_cli.md
+	<link toc="../monitor_log/toc.xml"/>
+	<link toc="../debug/toc.xml"/>
+	{: .navgroup-end}

@@ -1,41 +1,61 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
-# 添加和除去 {{site.data.keyword.cloud_notm}} CLI 插件
+# 添加和除去 {{site.data.keyword.Bluemix_notm}} CLI 插件
 {: #ibmcloud_commands_settings}
 
-{{site.data.keyword.cloud}} 支持通过插件框架来扩展其功能。使用以下命令可管理 {{site.data.keyword.cloud_notm}} CLI 插件。
+{{site.data.keyword.Bluemix}} 支持通过插件框架来扩展其功能。使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} CLI 插件。
 {: shortdesc}
 
-## ibmcloud plugin repos
+<table summary="可用于管理 {{site.data.keyword.Bluemix_notm}} CLI 插件的 ibmcloud 命令。">
+ <thead>
+ </thead>
+ <tbody>
+<tr>
+  <td>[ibmcloud plugin repo-add](cli_plugin.html#ibmcloud_plugin_repo_add)</td>
+  <td>[ibmcloud plugin repo-remove](cli_plugin.html#ibmcloud_plugin_repo_remove)</td>
+  <td>[ibmcloud plugin repo-plugins](cli_plugin.html#ibmcloud_plugin_repo_plugins)</td>
+  <td>[ibmcloud plugin repo-plugin](cli_plugin.html#ibmcloud_plugin_repo_plugin)</td>
+  <td>[ibmcloud plugin list](cli_plugin.html#ibmcloud_plugin_list)</td>
+</tr>
+<tr>
+  <td>[ibmcloud plugin show](cli_plugin.html#ibmcloud_plugin_show)</td>
+  <td>[ibmcloud plugin install](cli_plugin.html#ibmcloud_plugin_install)</td>
+  <td>[ibmcloud plugin uninstall](cli_plugin.html#ibmcloud_plugin_uninstall)</td>
+  <td>[ibmcloud plugin update](cli_plugin.html#ibmcloud_plugin_update)</td>
+  <td>[ibmcloud plugin repos](cli_plugin.html#ibmcloud_plugin_repos)</td>
+</tr>
+ </tbody>
+ </table>
+ 
+ 
+ ## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
-列出 {{site.data.keyword.cloud_notm}} CLI 中注册的所有插件存储库。
+列出 {{site.data.keyword.Bluemix_notm}} CLI 中注册的所有插件存储库。
+
 ```
 ibmcloud plugin repos
 ```
-{: codeblock}
 
 <strong>先决条件</strong>：无
 
 ## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
 
-将新的插件存储库添加到 {{site.data.keyword.cloud_notm}} CLI 中。
+将新的插件存储库添加到 {{site.data.keyword.Bluemix_notm}} CLI 中。
+
 ```
 ibmcloud plugin repo-add REPO_NAME REPO_URL
 ```
@@ -48,26 +68,26 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME（必需）</dt>
    <dd>要添加的存储库的名称。可以为每个存储库定义您自己的名称。</dd>
    <dt>REPO_URL（必需）</dt>
-   <dd>要添加的存储库的 URL。存储库 URL 必须包含协议（例如，http://plugins.ng.bluemix.net，而不是 plugins.ng.bluemix.net）。http://plugins.ng.bluemix.net 是 {{site.data.keyword.cloud_notm}} CLI 的官方插件存储库。</dd>
+   <dd>要添加的存储库的 URL。存储库 URL 必须包含协议（例如，http://plugins.ng.bluemix.net，而不是 plugins.ng.bluemix.net）。http://plugins.ng.bluemix.net 是 {{site.data.keyword.Bluemix_notm}} CLI 的官方插件存储库。</dd>
     </dl>
 
 
 <strong>示例</strong>：
 
 将 {{site.data.keyword.Bluemix_notm}} CLI 的官方插件存储库添加为 `bluemix-repo`：
+
 ```
 ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
-{: codeblock}
 
 ## ibmcloud plugin repo-remove
 {: #ibmcloud_plugin_repo_remove}
 
-从 {{site.data.keyword.cloud_notm}} CLI 中除去插件存储库。
+从 {{site.data.keyword.Bluemix_notm}} CLI 中除去插件存储库。
+
 ```
 ibmcloud plugin repo-remove REPO_NAME
 ```
-{: codeblock}
 
 <strong>先决条件</strong>：无
 
@@ -79,16 +99,17 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>示例</strong>：
 
-从 {{site.data.keyword.cloud_notm}} CLI 中除去 `bluemix-repo` 存储库：
+从 {{site.data.keyword.Bluemix_notm}} CLI 中除去 `bluemix-repo` 存储库：
+
 ```
 ibmcloud plugin repo-remove bluemix-repo
 ```
-{: codeblock}
 
 ## ibmcloud plugin repo-plugins
 {: #ibmcloud_plugin_repo_plugins}
 
 列出所有添加的存储库或特定存储库中的所有可用插件。
+
 ```
 ibmcloud plugin repo-plugins [-r REPO_NAME]
 ```
@@ -152,10 +173,10 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 {: #ibmcloud_plugin_list}
 
 列出 {{site.data.keyword.Bluemix_notm}} CLI 中的所有已安装插件。
+
 ```
 ibmcloud plugin list
 ```
-{: codeblock}
 
 <strong>先决条件</strong>：无
 
@@ -163,6 +184,7 @@ ibmcloud plugin list
 {: #ibmcloud_plugin_show}
 
 显示已安装插件的详细信息。
+
 ```
 ibmcloud plugin show PLUGIN-NAME
 ```
@@ -173,6 +195,7 @@ ibmcloud plugin show PLUGIN-NAME
 {: #ibmcloud_plugin_install}
 
 从指定的路径或存储库将特定版本的插件安装到 {{site.data.keyword.Bluemix_notm}} CLI 中。
+
 ```
 ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```

@@ -1,27 +1,37 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
-# Creazione, annullamento e visualizzazione di sottorete
-{: #sl-manage-subnets}
+# Creazione, annullamento e visualizzazione di sottoreti
 
-Una sottorete è una partizione logica di una rete IP in più segmenti di rete più piccoli. Utilizza i seguente comandi per gestire le sottoreti dell'infrastruttura classica {{site.data.keyword.cloud}}.
+Una sottorete è una partizione logica di una rete IP in più segmenti di rete più piccoli. Utilizza i seguente comandi per gestire le sottoreti dell'infrastruttura classica {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-## ibmcloud sl subnet cancel
+<table summary="Comandi delle sottoreti dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}} ordinati alfabeticamente che presentano dei link che ti portano a ulteriori informazioni per il comando">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl subnet cancel](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_cancel)</td>
+ <td>[ibmcloud sl subnet create](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_create)</td>
+ <td>[ibmcloud sl subnet detail](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_detail)</td>
+ <td>[ibmcloud sl subnet list](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_list)</td>
+ <td>[ibmcloud sl subnet lookup](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_lookup)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 Annulla una sottorete.
@@ -39,7 +49,7 @@ ibmcloud sl subnet cancel IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-Questo comando annulla la sottorete con ID `12345678` senza richiedere conferma.
+Questo comando annulla la sottorete con ID 12345678 senza richiedere conferma.
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -63,9 +73,7 @@ ibmcloud sl subnet create QUANTITÀ RETE ID_VLAN [OPZIONI]
 ```
 ibmcloud sl subnet create public 16 567
 ```
-{: codeblock}
-
-Questo comando crea una sottorete pubblica con 16 indirizzi IP v4 e la colloca nella vlan con ID `567`.
+Questo comando crea una sottorete pubblica con 16 indirizzi IP v4 e la posiziona nella vlan con ID 567.
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
@@ -87,9 +95,7 @@ ibmcloud sl subnet detail IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl subnet detail 12345678
 ```
-{: codeblock}
-
-Questo comando mostra informazioni dettagliate sulla sottorete con ID `12345678`, incluse le informazioni sui server virtuali e sui server hardware.
+Questo comando mostra informazioni dettagliate sulla sottorete con ID 12345678, incluse le informazioni sui server virtuali e i server hardware.
 
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
@@ -123,9 +129,7 @@ ibmcloud sl subnet list [OPZIONI]
 ```
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
-{: codeblock}
-
-Questo comando elenca le sottoreti IP V4 sull'account corrente eseguendo il filtro per il datacenter `dal09`, il tipo di sottorete è `PRIMARY` e lo spazio di rete è `PUBLIC`.
+Questo comando elenca le sottoreti IP V4 sull'account corrente eseguendo il filtro per il datacenter dal09, il tipo di sottorete è PRIMARY e lo spazio di rete è PUBLIC.
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
@@ -135,10 +139,9 @@ Trova un indirizzo IP e visualizzane le informazioni su sottorete e dispositivo.
 ibmcloud sl subnet lookup INDIRIZZO_IP
 ```
 
+
 **Esempi**:
 ```
 ibmcloud sl subnet lookup 9.125.235.255
 ```
-{: codeblock}
-
-Questo comando trova il record dell'indirizzo IP con l'indirizzo IP `9.125.235.255` e visualizza le relative informazioni su sottorete e dispositivo.
+Questo comando trova il record dell'indirizzo IP con indirizzo 9.125.235.255 e ne visualizza le informazioni su sottorete e dispositivo.

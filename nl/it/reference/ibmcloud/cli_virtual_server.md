@@ -1,29 +1,60 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Creazione e gestione di server virtuali
-{: #cli-virtual-servers}
 
 I {{site.data.keyword.BluVirtServers}} sono server virtuali scalabili acquistati con allocazioni di memoria e core dedicati. Sono una opzione molto valida se stai cercando risorse di calcolo che è possibile aggiungere in pochi minuti, con accesso a funzioni come i template immagine. 
 
 Utilizza i seguenti comandi per gestire i server virtuali dell'infrastruttura classica.
 {: shortdesc}
 
-## ibmcloud sl vs cancel
+<table summary="Comandi del Virtual Server dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}} ordinati alfabeticamente che presentano dei link a ulteriori informazioni per il comando">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl vs cancel](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_cancel)</td>
+ <td>[ibmcloud sl vs capture](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_capture)</td>
+ <td>[ibmcloud sl vs create](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_create)</td>
+ <td>[ibmcloud sl vs options](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_options)</td>
+ <td>[ibmcloud sl vs credentials](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_credentials)</td>
+ <td>[ibmcloud sl vs detail](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_detail)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs dns-sync](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_dns_sync)</td>
+ <td>[ibmcloud sl vs edit](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_edit)</td>
+ <td>[ibmcloud sl vs host-create](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_host_create)</td>
+ <td>[ibmcloud sl vs host-list](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_host_list)</td>
+ <td>[ibmcloud sl vs list](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_list)</td>
+ <td>[ibmcloud sl vs pause](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_pause)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs power-off](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_power_off)</td>
+ <td>[ibmcloud sl vs power-on](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_power_on)
+ <td>[ibmcloud sl vs ready](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_ready)</td>
+ <td>[ibmcloud sl vs reboot](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_reboot)</td>
+ <td>[ibmcloud sl vs reload](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_reload)</td>
+ <td>[ibmcloud sl vs rescue](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_rescue)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl vs resume](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_resume)</td>
+ <td>[ibmcloud sl vs upgrade](/docs/cli/reference/ibmcloud/cli_virtual_server.html#sl_vs_upgrade)</td>
+</tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl vs cancel
 {: #sl_vs_cancel}
 
 Annulla l'istanza del server virtuale.
@@ -41,9 +72,7 @@ ibmcloud sl vs cancel IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs cancel 12345678
 ```
-{: codeblock}
-
-Questo comando annulla l'istanza del server virtuale con ID `12345678`.
+Questo comando annulla l'istanza del server virtuale con ID 12345678.
 
 ## ibmcloud sl vs capture
 {: #sl_vs_capture}
@@ -67,9 +96,7 @@ ibmcloud sl vs capture IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs capture 12345678 -n mycloud --all --note testing
 ```
-{: codeblock}
-
-Questo comando acquisisce l'istanza del server virtuale con ID `12345678` con tutti i dischi in un'immagine denominata `mycloud` con la nota `testing`.
+Questo comando acquisisce l'istanza del server virtuale con ID 12345678 con tutti i dischi in un'immagine denominata "mycloud" con la nota "testing".
 
 ## ibmcloud sl vs create
 {: #sl_vs_create}
@@ -108,7 +135,7 @@ ibmcloud sl vs create [OPZIONI]
 <dt>--test</dt>
 <dd>Non creare effettivamente il server virtuale.</dd>
 <dt>--export</dt>
-<dd>Esporta le opzioni in un file template.</dd>
+<dd>Esporta le opzioni in un file modello.</dd>
 <dt>-i, --postinstall</dt>
 <dd>Script di post installazione da scaricare.</dd>
 <dt>-k, --key</dt>
@@ -124,7 +151,7 @@ ibmcloud sl vs create [OPZIONI]
 <dt>-g, --tag</dt>
 <dd>Tag da aggiungere all'istanza (più ricorrenze consentite).</dd>
 <dt>-t, --template</dt>
-<dd>Un file template che specifica i valori predefiniti delle opzioni della riga di comando.</dd>
+<dd>Un file modello che specifica i valori predefiniti delle opzioni della riga di comando.</dd>
 <dt>-u, --userdata</dt>
 <dd>Stringa di metadati definita dall'utente.</dd>
 <dt>-F, --userfile</dt>
@@ -147,9 +174,7 @@ ibmcloud sl vs create [OPZIONI]
 ```
 ibmcloud sl vs create -H myvsi -D ibm.com -c 4 -m 4096 -d dal10 -o UBUNTU_16_64 --disk 100 --disk 1000 --vlan-public 413
 ```
-{: codeblock}
-
-Questo comando ordina un'istanza del server virtuale con nome host myvsi, dominio ibm.com, 4 core della cpu, 4096M di memoria, ubicata nel datacenter: `dal10`,
+Questo comando ordina un'istanza del server virtuale con nome host myvsi, dominio ibm.com, 4 core della cpu, 4096M di memoria, ubicata nel datacenter: dal10,
 
 ## ibmcloud sl vs options
 {: #sl_vs_options}
@@ -159,12 +184,11 @@ Elenca le opzioni per la creazione dell'istanza del server virtuale.
 ibmcloud sl vs options [OPZIONI]
 ```
 
+
 **Esempi**:
 ```
 ibmcloud sl vs options
 ```
-{: codeblock}
-
 Questo comando elenca tutte le opzioni per la creazione di un'istanza del server virtuale, ad es. datacenter, cpu, memoria, so, disco, velocità di rete, ecc.
 
 ## ibmcloud sl vs credentials
@@ -175,13 +199,12 @@ Elenca le credenziali dell'istanza del server virtuale.
 ibmcloud sl vs credentials IDENTIFICATIVO [OPZIONI]
 ```
 
+
 **Esempi**:
 ```
 ibmcloud sl vs credentials 12345678
 ```
-{: codeblock}
-
-Questo comando elenca tutte le coppie di nome utente e password dell'istanza del server virtuale con ID `12345678`.
+Questo comando elenca tutte le coppie di nome utente e password dell'istanza del server virtuale con ID 12345678.
 
 ## ibmcloud sl vs detail
 {: #sl_vs_detail}
@@ -203,9 +226,7 @@ ibmcloud sl vs detail IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs details 12345678
 ```
-{: codeblock}
-
-Questo comando elenca informazioni dettagliate sull'istanza del server virtuale con ID `12345678`.
+Questo comando elenca informazioni dettagliate sull'istanza del server virtuale con ID 12345678.
 
 ## ibmcloud sl vs dns-sync
 {: #sl_vs_dns_sync}
@@ -233,9 +254,7 @@ ibmcloud sl vs dns-sync IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
-{: codeblock}
-
-Questo comando sincronizza il record A (indirizzo IP V4) dell'istanza del server virtuale con ID `12345678` con il server DNS e imposta il TTL di questo record A su 3600.
+Questo comando sincronizza il record A (indirizzo IP V4) dell'istanza del server virtuale con ID 12345678 con il server DNS e imposta il ttl di questo record A su 3600.
 
 ## ibmcloud sl vs edit
 {: #sl_vs_edit}
@@ -267,7 +286,7 @@ ibmcloud sl vs edit IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 1000
 ```
-Questo comando aggiorna l'istanza del server virtuale con ID `12345678` e imposta il suo dominio su "ibm.com", il nome host su "myapp" e la tag su "testcli".
+Questo comando aggiorna l'istanza del server virtuale con ID 12345678 e ne imposta il dominio su "ibm.com", il nome host su "myapp" e la tag su "testcli",
 
 ## ibmcloud sl vs host-create
 {: #sl_vs_host_create}
@@ -382,7 +401,7 @@ ibmcloud sl vs pause IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs pause 12345678 -f
 ```
-Questo comando mette in pausa l'istanza del server virtuale con ID `12345678` senza richiedere conferma.
+Questo comando mette in pausa l'istanza del server virtuale con ID 12345678 senza richiedere conferma.
 
 ## ibmcloud sl vs power-off
 {: #sl_vs_power_off}
@@ -406,7 +425,7 @@ ibmcloud sl vs power-off IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs power-off 12345678 --soft
 ```
-Questo comando esegue un arresto non forzato per l'istanza del server virtuale con ID `12345678`.
+Questo comando esegue un arresto semplice dell'istanza del server virtuale con ID 12345678.
 
 ## ibmcloud sl vs power-on
 {: #sl_vs_power_on}
@@ -426,9 +445,7 @@ ibmcloud sl vs power-on IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs power-on 12345678
 ```
-{: codeblock}
-
-Questo comando esegue un'accensione per l'istanza del server virtuale con ID `12345678`.
+Questo comando esegue un avvio dell'istanza del server virtuale con ID 12345678.
 
 ## ibmcloud sl vs ready
 {: #sl_vs_ready}
@@ -448,7 +465,7 @@ ibmcloud sl vs ready IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs ready 12345678 --wait 30
 ```
-Questo comando controlla lo stato dell'istanza del server virtuale con ID `12345678` per appurare se è pronta per l'utilizzo in modo continuo e attende fino a 30 secondi.
+Questo comando verifica lo stato dell'istanza del server virtuale con ID 12345678 per vedere se è pronta per l'utilizzo continuo e attende fino a 30 secondi.
 
 ## ibmcloud sl vs reboot
 {: #sl_vs_reboot}
@@ -472,9 +489,7 @@ ibmcloud sl vs reboot IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs reboot 12345678 --hard
 ```
-{: codeblock}
-
-Questo comando esegue un riavvio forzato per l'istanza del server virtuale con ID `12345678`.
+Questo comando esegue un riavvio forzato dell'istanza del server virtuale con ID 12345678.
 
 ## ibmcloud sl vs reload
 {: #sl_vs_reload}
@@ -502,7 +517,7 @@ ibmcloud sl vs reload IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs reload 12345678
 ```
-Questo comando ricarica il sistema operativo corrente per l'istanza del server virtuale con ID `12345678`.
+Questo comando ricarica il sistema operativo corrente per l'istanza del server virtuale con ID 12345678.
 
 ## ibmcloud sl vs rescue
 {: #sl_vs_rescue}
@@ -522,7 +537,7 @@ ibmcloud sl vs rescue IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs rescue 12345678
 ```
-Questo comando riavvia l'istanza del server virtuale con ID `12345678` in un'immagine di salvataggio.
+Questo comando riavvia l'istanza del server virtuale con ID 12345678 in un'immagine di salvataggio.
 
 ## ibmcloud sl vs resume
 {: #sl_vs_resume}
@@ -542,7 +557,7 @@ ibmcloud sl vs resume IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs resume 12345678
 ```
-Questo comando riprende l'istanza del server virtuale con ID `12345678`.
+Questo comando riprende l'istanza del server virtuale con ID 12345678.
 
 ## ibmcloud sl vs upgrade
 {: #sl_vs_upgrade}
@@ -570,6 +585,4 @@ ibmcloud sl vs upgrade IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vs upgrade 12345678 -c 8 -m 8192 --network 1000
 ```
-{: codeblock}
-
-Questo comando esegue l'upgrade dell'istanza del server virtuale con ID `12345678`e imposta il numero di core della CPU su 8, la memoria su 8192M e la velocità della porta di rete su 1000 Mbps.
+Questo comando aggiorna l'istanza del server virtuale con ID 12345678 e imposta il numero di core della CPU su 8, la memoria su 8192M e la velocità della porta di rete su 1000 Mbps.

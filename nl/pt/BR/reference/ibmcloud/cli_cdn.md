@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: content delivery network, cdn service, cdn, classic infrastructure, ibmcloud sl cdn
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,15 +13,36 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # Trabalhando com o serviço CDN
-{: #sl-cdn-service}
 
-O serviço do Content Delivery Network (CDN) distribui conteúdo no local em que ele é necessário. Na primeira vez em que o
+O serviço do Content Delivery Network (CDN) distribui o conteúdo onde ele é necessário. Na primeira vez em que o
 conteúdo é solicitado, ele é retirado do servidor host para a rede e permanece lá para que outros usuários o acessem.
 
-Use os comandos a seguir para gerenciar o serviço CDN da infraestrutura clássica do {{site.data.keyword.cloud_notm}}.
+Use os comandos a seguir para gerenciar o serviço CDN da infraestrutura clássica do {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-## Sl cdn cancel ibmcloud
+<table summary="Comandos do CDN de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+  <td>[Sl cdn cancel ibmcloud](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_cancel)</td>
+  <td>[Sl cdn detail ibmcloud](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_detail)</td>
+  <td>[Sl cdn list ibmcloud](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_list)</td>
+  <td>[Sl cdn load ibmcloud](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_load)</td>
+  <td>[Ordem ibmcloud sl cdn](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_order)</td>
+  <td>[ibmcloud sl cdn options
+](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_options)</td>
+   </tr>
+ <tr>
+  <td>[ibmcloud sl cdn origin-add](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_add)</td>
+  <td>[Ibmcloud sl cdn origin-list](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_list)</td>
+  <td>[Ibmcloud sl cdn origin-remove](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_origin_remove)</td>
+  <td>[Sl cdn purge ibmcloud](/docs/cli/reference/ibmcloud/cli_cdn.html#sl_cdn_purge)</td>
+  </tr>
+   </tbody>
+ </table>
+
+ ## Sl cdn cancel ibmcloud
 {: #sl_cdn_cancel}
 
 Cancelar uma conta do CDN.

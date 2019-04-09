@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,14 +13,46 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # 使用 Load Balancer 服務
-{: #sl-load-balancer-service}
 
-{{site.data.keyword.cloud}} Load Balancer 服務有助於改善企業關鍵應用程式的可用性，因為它會將資料流量分散在多個應用程式伺服器實例，以及只將資料流量轉遞到性能健全的實例。
+{{site.data.keyword.Bluemix}} Load Balancer 服務有助於改善企業關鍵應用程式的可用性，因為它會將資料流量分散在多個應用程式伺服器實例，以及只將資料流量轉遞到性能健全的實例。
 
-請使用下列指令在 {{site.data.keyword.cloud_notm}} 標準基礎架構 Load Balancer 服務中管理負載平衡器。
+請使用下列指令在 {{site.data.keyword.Bluemix_notm}} 標準基礎架構 Load Balancer 服務中管理負載平衡器。
 {: shortdesc}
 
-## ibmcloud sl loadbal cancel
+<table summary="按字母順序排序的 {{site.data.keyword.Bluemix_notm}} 負載平衡器指令，其鏈結提供指令的相關資訊">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl loadbal cancel](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_cancel)</td>
+ <td>[ibmcloud sl loadbal create](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_create)</td>
+ <td>[ibmcloud sl loadbal create-options
+](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_create_options)</td>
+ <td>[ibmcloud sl loadbal detail](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_detail)</td>
+ <td>[ibmcloud sl loadbal group-add](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_add)</td>
+ <td>[ibmcloud sl loadbal group-delete](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_delete)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl loadbal group-edit](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_edit)</td>
+ <td>[ibmcloud sl loadbal group-reset](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_reset)</td>
+ <td>[ibmcloud sl loadbal health-checks
+](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_health_checks)</td>
+ <td>[ibmcloud sl loadbal list](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_list)</td>
+ <td>[ibmcloud sl loadbal routing-methods
+](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_routing_methods)</td>
+ <td>[ibmcloud sl loadbal routing-types
+](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_routing_types)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl loadbal service-add](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_add)</td>
+ <td>[ibmcloud sl loadbal service-delete](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_delete)</td>
+ <td>[ibmcloud sl loadbal service-edit](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_edit)</td>
+ <td>[ibmcloud sl loadbal service-toggle](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_toggle)</td>
+ </tr>
+</tbody>
+ </table>
+
+ ## ibmcloud sl loadbal cancel
 {: #sl_loadbal_cancel}
 
 取消現有負載平衡器。
@@ -147,11 +177,11 @@ ibmcloud sl loadbal list
 <strong>指令選項</strong>：
 <dl>
 <dt>-d, --datacenter</dt>
-<dd>依資料中心簡稱進行過濾。</dd>
+<dd>依資料中心簡稱過濾。</dd>
 <dt>-o, --order</dt>
-<dd>依購買負載平衡器的訂單 ID 進行過濾。</dd>
+<dd>依購買負載平衡器的訂單 ID 過濾。</dd>
 <dt>-p, --ip-address</dt>
-<dd>依 IP 位址進行過濾。</dd>
+<dd>依 IP 位址過濾。</dd>
 </dl>
 
 ## ibmcloud sl loadbal routing-methods

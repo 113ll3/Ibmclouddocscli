@@ -1,27 +1,37 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Création, annulation et affichage de sous-réseaux
-{: #sl-manage-subnets}
 
-Un sous-réseau est une partition logique d'un réseau IP dans plusieurs segments de réseau plus petits. Les commandes suivantes permettent de gérer les sous-réseaux de l'infrastructure classique {{site.data.keyword.cloud}}.
+Un sous-réseau est une partition logique d'un réseau IP dans plusieurs segments de réseau plus petits. Les commandes suivantes permettent de gérer les sous-réseaux de l'infrastructure classique {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-## ibmcloud sl subnet cancel
+<table summary="Commandes Subnet de l'infrastructure classique {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires pour la commande">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl subnet cancel](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_cancel)</td>
+ <td>[ibmcloud sl subnet create](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_create)</td>
+ <td>[ibmcloud sl subnet detail](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_detail)</td>
+ <td>[ibmcloud sl subnet list](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_list)</td>
+ <td>[ibmcloud sl subnet lookup](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_lookup)</td>
+ </tr>
+   </tbody>
+ </table>
+
+ ## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 Permet d'annuler un sous-réseau.
@@ -39,7 +49,7 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-Cette commande annule le sous-réseau portant l'ID `12345678` sans demander de confirmation.
+Cette commande annule le sous-réseau portant l'ID 12345678 sans demander de confirmation.
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -63,9 +73,7 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 ibmcloud sl subnet create public 16 567
 ```
-{: codeblock}
-
-Cette commande crée un sous-réseau public avec 16 adresses IPv4 et le place sur le réseau local virtuel portant l'ID `567`.
+Cette commande crée un sous-réseau public avec 16 adresses IPv4 et le place sur le réseau local virtuel portant l'ID 567.
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
@@ -87,9 +95,7 @@ ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet detail 12345678
 ```
-{: codeblock}
-
-Cette commande affiche des informations détaillées sur le sous-réseau portant l'ID `12345678`, y compris les informations sur les serveurs virtuels et les serveurs matériels.
+Cette commande affiche des informations détaillées sur le sous-réseau portant l'ID 12345678, y compris les informations sur les serveurs virtuels et les serveurs matériels.
 
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
@@ -123,9 +129,7 @@ ibmcloud sl subnet list [OPTIONS]
 ```
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
-{: codeblock}
-
-Cette commande répertorie les sous-réseaux IPv4 sur le compte en cours avec le centre de données `dal09`, le type de sous-réseau `PRIMARY` et l'espace de sous-réseau `PUBLIC`.
+Cette commande répertorie les sous-réseaux IPv4 sur le compte en cours avec le centre de données dal09, le type de sous-réseau PRIMARY et l'espace de sous-réseau PUBLIC.
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
@@ -135,10 +139,9 @@ Permet de rechercher une adresse IP et afficher les informations relatives au so
 ibmcloud sl subnet lookup IP_ADDRESS
 ```
 
+
 **Exemples** :
 ```
 ibmcloud sl subnet lookup 9.125.235.255
 ```
-{: codeblock}
-
-Cette commande recherche l'enregistrement d'adresse IP portant l'adresse IP `9.125.235.255` et affiche ses informations de sous-réseau et d'unité.
+Cette commande recherche l'enregistrement d'adresse IP portant l'adresse 9.125.235.255 et affiche ses informations de sous-réseau et d'unité.

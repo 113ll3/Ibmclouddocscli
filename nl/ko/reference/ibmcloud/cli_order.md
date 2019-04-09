@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, orders, quotes, ibmcloud sl order, item-list, package-locations
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,9 +13,23 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # 클래식 인프라 주문 및 견적서 관리
-{: #sl-manage-classic-orders}
 
-다음 명령을 사용하여 클래식 인프라에서 주문 및 견적서를 관리하십시오.
+<table summary="해당 명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 일반 {{site.data.keyword.BluSoftlayer_notm}} 인프라 명령">
+ <caption>표 1. 클래식 인프라 주문</caption>
+ <thead>
+ <th colspan="6">클래식 인프라 주문</th>
+ </thead>
+ <tbody>
+ <tr>
+  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_category_list)</td>
+  <td>[ibmcloud sl order item-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_item_list)</td>
+  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_package_locations)</td>
+  <td>[ibmcloud sl order place](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place)</td>
+  <td>[ibmcloud sl order place-quote](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place_quote)</td>
+  <td>[ibmcloud sl order preset-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_preset_list)</td>
+ </tr>
+ </tbody>
+</table>
 
 ## ibmcloud sl order package-locations
 {: #sl_order_category_list}

@@ -1,15 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-21"
-
-keywords: bmscore, bmscore sdk, network request, ios, android, cordova
-
-subcollection: cloud-cli
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +18,7 @@ También puede utilizar el SDK `BMSCore` para realizar solicitudes de red a cual
 ## Android
 {: #request-android}
 
-1. Asegúrese de haber [importado el SDK de cliente y lo ha inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) en su aplicación Android.
+1. Asegúrese de que ha [importado el SDK de cliente y lo ha inicializado](sdk_BMSClient.html#init-BMSClient-android) en su aplicación Android.
 
 2. Realice una solicitud de red.
 
@@ -55,7 +50,7 @@ La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y
 ## iOS
 {: #request-ios}
 
-1. Asegúrese de que ha [importado el SDK de cliente y lo ha inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) en su aplicación iOS.
+1. Asegúrese de que ha [importado el SDK de cliente y lo ha inicializado](sdk_BMSClient.html#init-BMSClient-ios) en su aplicación iOS.
 
 2. Cree una solicitud de red.
 
@@ -99,13 +94,13 @@ La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y
 
 La clase `BMSURLSession` solo está disponible para iOS.
 
-Para ver ejemplos de uso completos, consulte el archivo [README de `BMSCore` GitHub](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
+Para ver ejemplos de uso completos, consulte el archivo [README de `BMSCore` GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}.
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Asegúrese de que ha [importado el SDK de cliente y lo ha inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) en su aplicación Cordova.
+1. Asegúrese de que ha [importado el SDK de cliente y lo ha inicializado](sdk_BMSClient.html#init-BMSClient-cordova) en su aplicación Cordova.
 
 2. Cree una solicitud de red.
 

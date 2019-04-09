@@ -67,6 +67,6 @@ ibmcloud login
 
 {{site.data.keyword.dev_cli_notm}} CLI Plug-in は、アプリケーションのビルドとテストを容易にする 2 つのコンテナーを使用します。 1 つはツール・コンテナーであり、ここには、アプリケーションをビルドおよびテストするために必要なユーティリティーが含まれています。 このコンテナーの `Dockerfile` は、[`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) パラメーターで定義されます。 このコンテナーには特定のランタイムの開発に通常使用されるツールが含まれるため、開発コンテナーと見なすことができます。
 
-2 つ目のコンテナーは実行コンテナーであり、クラウドにデプロイされた際のアプリの実際のランタイム環境に近い環境を再現します。このコンテナーは、例えば {{site.data.keyword.cloud_notm}} で使用するためなどにデプロイするのに適した形式になっています。 このため、アプリケーションを開始するエントリー・ポイントが定義されています。 {{site.data.keyword.dev_cli_notm}} CLI プラグインからアプリケーションを実行することを選択すると、このコンテナーが使用されます。 このコンテナーの `Dockerfile` は、[`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) パラメーターで定義されます。
+2 つ目のコンテナーは実行コンテナーであり、クラウドにデプロイされた際のアプリの実際のランタイム環境に近い環境を再現します。 このコンテナーは、例えば {{site.data.keyword.cloud_notm}} で使用するためなどにデプロイするのに適した形式になっています。 このため、アプリケーションを開始するエントリー・ポイントが定義されています。 {{site.data.keyword.dev_cli_notm}} CLI プラグインからアプリケーションを実行することを選択すると、このコンテナーが使用されます。 このコンテナーの `Dockerfile` は、[`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) パラメーターで定義されます。
 
 これで、{{site.data.keyword.dev_cli_notm}} を使用して {{site.data.keyword.cloud_notm}} リソースを管理し、アプリケーションを開発およびデプロイする準備ができました。

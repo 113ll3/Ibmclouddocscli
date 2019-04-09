@@ -1,12 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-26"
 
-keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
-
-subcollection: cloud-cli
+  years: 2015, 2018
+lastupdated: "2018-11-30"
 
 ---
 
@@ -18,24 +15,22 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:download: .download}
 
-# Extension de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} avec des plug-in
+# Extension de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des plug-in
 {: #plug-ins}
 
-L'interface de ligne de commande {{site.data.keyword.cloud}} prend en charge une structure de plug-in destinée à étendre ses fonctionnalités. Vous pouvez installer un plug-in depuis un référentiel, une URL WEB, ou installer localement un fichier binaire de plug-in.
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} prend en charge une structure de plug-in destinée à étendre ses fonctionnalités. Vous pouvez installer un plug-in depuis un référentiel, une URL WEB, ou installer localement un fichier binaire de plug-in.
 
-Le [{{site.data.keyword.cloud_notm}} référentiel de plug-in d'interface de ligne de commande](https://plugins.cloud.ibm.com/ui/repository.html){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg) est le référentiel officiel d'hébergement des plug-in.
+Le [{{site.data.keyword.Bluemix_notm}} référentiel de plug-in d'interface de ligne de commande](https://tools.ng.bluemix.net){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg) est le référentiel officiel d'hébergement des plug-in.
 
 Pour explorer d'autres commandes de gestion de plug-in, exécutez `ibmcloud plugin` afin d'afficher les messages d'aide.
 {: tip}
 
-## Installation d'un plug-in à partir du référentiel de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}
-{: #install-from-repo}
+## Installation d'un plug-in à partir du référentiel de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
 ### Etape 1 : Rechercher le plug-in
-{: #step1-search-plugin}
 
 1. Utilisez la commande `ibmcloud plugin repo-plugins -r REPO_NAME` pour rechercher un plug-in dans le référentiel.
-2. Le référentiel officiel de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} est nommé IBM Cloud ; vous pouvez rechercher les plug-in officiels comme indiqué dans l'exemple suivant :
+2. Le référentiel officiel de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} est nommé IBM Cloud ; vous pouvez rechercher les plug-in officiels comme indiqué dans l'exemple suivant :
 
   ```
   $ ibmcloud plugin repo-plugins
@@ -49,7 +44,6 @@ Pour explorer d'autres commandes de gestion de plug-in, exécutez `ibmcloud plug
   ```
 
 ### Etape 2 : Installer le plug-in
-{: step2-install-plugin}
 
 Utilisez la commande `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` pour installer le plug-in. Par exemple, utilisez la commande suivante pour installer un plug-in à partir du référentiel de plug-in IBM officiel 'IBM Cloud' :
 
@@ -63,7 +57,6 @@ Utilisez la commande `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` pour ins
   ```
 
 ## Installation locale d'un plug-in
-{: #install-plugin-locally}
 
 Utilisez la commande `ibmcloud plugin install LOCAL_FILE_NAME` pour installer un fichier binaire de plug-in sur votre poste local. Par exemple :
 
@@ -76,7 +69,6 @@ Utilisez la commande `ibmcloud plugin install LOCAL_FILE_NAME` pour installer un
   ```
 
 ## Installation d'un plug-in à partir d'une URL Web
-{: install-plugin-from-url}
 
 Utilisez la commande `ibmcloud plugin install URL` pour installer un plug-in directement à partir d'une URL Web. Par exemple :
 

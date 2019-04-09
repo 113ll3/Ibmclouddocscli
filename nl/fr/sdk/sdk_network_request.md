@@ -1,15 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-21"
-
-keywords: bmscore, bmscore sdk, network request, ios, android, cordova
-
-subcollection: cloud-cli
+  years: 2016, 2018
+lastupdated: "2018-11-30"
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +18,7 @@ Vous pouvez également utiliser le SDK `BMSCore` pour effectuer des demandes de 
 ## Android
 {: #request-android}
 
-1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android) dans votre application Android.
+1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](sdk_BMSClient.html#init-BMSClient-android) dans votre application Android.
 
 2. Faites une demande de réseau.
 
@@ -47,7 +42,13 @@ Vous pouvez également utiliser le SDK `BMSCore` pour effectuer des demandes de 
 	```
 	{: codeblock}
 
-La classe `Request` est un moyen simple d'effectuer une demande HTTP et d'obtenir une réponse une fois la demande effectuée. Si vous envoyez ou recevez par téléchargement des fichiers volumineux ou de grands ensembles de données, vous pouvez utiliser la méthode `Request` `download` ou `upload`. Pour surveiller la progression de l'envoi ou de la réception par téléchargement, créez un élément `ProgressListener` personnalisé et transmettez-le à la méthode `download` ou `upload`.
+La classe `Request` est un moyen simple d'effectuer une demande HTTP et d'obtenir une réponse une fois la demande effectuée. Si
+vous envoyez ou recevez par téléchargement des fichiers volumineux ou de grands ensembles
+de données, vous pouvez utiliser la méthode `Request`
+`download` ou `upload`. Pour surveiller la progression
+de l'envoi ou de la réception par téléchargement, créez un élément
+`ProgressListener` personnalisé et transmettez-le à la méthode
+`download` ou `upload`.
 
 <!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
 
@@ -55,7 +56,7 @@ La classe `Request` est un moyen simple d'effectuer une demande HTTP et d'obteni
 ## iOS
 {: #request-ios}
 
-1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) dans votre application iOS.
+1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](sdk_BMSClient.html#init-BMSClient-ios) dans votre application iOS.
 
 2. Créez une demande de réseau.
 
@@ -102,13 +103,13 @@ demandes. Pour obtenir les réponses, vous pouvez choisir des gestionnaires d'ex
 
 La classe `BMSURLSession` n'est disponible que pour iOS.
 
-Pour accéder à des exemples d'utilisation complets, consultez le fichier [README `BMSCore` GitHub ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
+Pour accéder à des exemples d'utilisation complets, consultez le fichier [README `BMSCore` GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}.
 
 
 ## Cordova
 {: #request-cordova}
 
-1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) dans votre application Cordova. 
+1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](sdk_BMSClient.html#init-BMSClient-cordova) dans votre application Cordova.
 
 2. Créez une demande de réseau.
 

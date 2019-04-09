@@ -1,13 +1,11 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+  years: 2018
 
-subcollection: cloud-cli
 
+lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -15,14 +13,46 @@ subcollection: cloud-cli
 {:tip: .tip}
 
 # Load Balancer 서비스에 대한 작업
-{: #sl-load-balancer-service}
 
-{{site.data.keyword.cloud}} Load Balancer 서비스는 여러 애플리케이션 서버 인스턴스 간에 트래픽을 분배하고 정상 인스턴스로만 트래픽을 전달하여 주요 비즈니스 애플리케이션의 가용성을 향상시키는 데 도움을 줍니다.
+{{site.data.keyword.Bluemix}} Load Balancer 서비스는 여러 애플리케이션 서버 인스턴스 간에 트래픽을 분배하고 정상 인스턴스로만 트래픽을 전달하여 주요 비즈니스 애플리케이션의 가용성을 향상시키는 데 도움을 줍니다.
 
-다음 명령을 사용하여 {{site.data.keyword.cloud_notm}} 클래식 인프라 Load Balancer 서비스의 로드 밸런서를 관리하십시오.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 클래식 인프라 Load Balancer 서비스의 로드 밸런서를 관리하십시오.
 {: shortdesc}
 
-## ibmcloud sl loadbal cancel
+<table summary="명령에 대한 자세한 정보를 제공하는 링크가 있는 알파벳순으로 정렬된 {{site.data.keyword.Bluemix_notm}} Load Balancer 명령">
+ <thead>
+ </thead>
+ <tbody>
+ <tr>
+ <td>[ibmcloud sl loadbal cancel](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_cancel)</td>
+ <td>[ibmcloud sl loadbal create](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_create)</td>
+ <td>[ibmcloud sl loadbal create-options](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_create_options)</td>
+ <td>[ibmcloud sl loadbal detail](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_detail)</td>
+ <td>[ibmcloud sl loadbal group-add](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_add)</td>
+ <td>[ibmcloud sl loadbal group-delete](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_delete)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl loadbal group-edit](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_edit)</td>
+ <td>[ibmcloud sl loadbal group-reset](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_reset)</td>
+ <td>[ibmcloud sl loadbal health-checks
+](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_health_checks)</td>
+ <td>[ibmcloud sl loadbal list
+](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_list)</td>
+ <td>[ibmcloud sl loadbal routing-methods
+](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_routing_methods)</td>
+ <td>[ibmcloud sl loadbal routing-types
+](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_routing_types)</td>
+ </tr>
+ <tr>
+ <td>[ibmcloud sl loadbal service-add](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_add)</td>
+ <td>[ibmcloud sl loadbal service-delete](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_delete)</td>
+ <td>[ibmcloud sl loadbal service-edit](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_edit)</td>
+ <td>[ibmcloud sl loadbal service-toggle](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_toggle)</td>
+ </tr>
+</tbody>
+ </table>
+
+ ## ibmcloud sl loadbal cancel
 {: #sl_loadbal_cancel}
 
 기존 로드 밸런서를 취소합니다.

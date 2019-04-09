@@ -1,12 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-27"
 
-keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+  years: 2015, 2018
 
-subcollection: cloud-cli
+lastupdated: "2018-01-08"
 
 ---
 
@@ -14,87 +12,88 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
-{:note: .note}
-{:tip: .tip}
 
-# CLI do administrador do {{site.data.keyword.cloud_notm}}
+# CLI do administrador do {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-É possível gerenciar o seu ambiente do {{site.data.keyword.cloud_notm}} Local ou do {{site.data.keyword.cloud_notm}} Dedicated
-usando a interface de linha de comandos do Cloud Foundry com o plug-in da CLI do Administrador do {{site.data.keyword.cloud_notm}}. Por
-exemplo, é possível incluir usuários a partir de um registro LDAP. Para obter informações sobre como gerenciar a sua conta do
-{{site.data.keyword.cloud_notm}} Public, consulte
-[administrando](/docs/account?topic=account-accounts#accounts).
 
-Antes de iniciar, instale a interface da linha de comandos Cloud Foundry. O plug-in da CLI Admin do {{site.data.keyword.cloud_notm}}
-requer o cf versão 6.11.2 ou posterior. [Fazer download da interface da linha de comandos do Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")
+É possível gerenciar o seu ambiente do {{site.data.keyword.Bluemix_notm}} Local ou do {{site.data.keyword.Bluemix_notm}} Dedicated
+usando a interface de linha de comandos do Cloud Foundry com o plug-in da CLI do Administrador do {{site.data.keyword.Bluemix_notm}}. Por
+exemplo, é possível incluir usuários a partir de um registro LDAP. Se estiver procurando informações sobre como gerenciar sua conta do {{site.data.keyword.Bluemix_notm}} Public, consulte [Administrando](/docs/admin/adminpublic.html#administer).
+
+Antes de iniciar, instale a interface de linha de comandos do cf. O plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
+requer o cf versão 6.11.2 ou posterior. [Fazer download da interface da linha de comandos do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restrição:** A interface de linha de
 comandos do Cloud Foundry não é suportada por Cygwin. Use a interface de linha de comandos do Cloud Foundry
 em uma janela de linha de comandos diferente da janela de linha de comandos do Cygwin.
 
-A CLI do administrador do {{site.data.keyword.cloud_notm}} é usada apenas para o {{site.data.keyword.cloud_notm}} Local e o ambiente do {{site.data.keyword.cloud_notm}} Dedicated. Ele não é suportado pelo {{site.data.keyword.cloud_notm}} Public.
-{: note}
+**Observação**: a CLI do administrador do {{site.data.keyword.Bluemix_notm}} é usada somente para o ambiente {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated. Ele não é suportado pelo {{site.data.keyword.Bluemix_notm}} Public.
 
-## Incluindo o plug-in da CLI do administrador do {{site.data.keyword.cloud_notm}}
+## Incluindo o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 
-Após a interface da linha de comandos do Cloud Foundry ser instalada, será possível incluir o plug-in da CLI do administrador do {{site.data.keyword.cloud_notm}}.
+Após a interface de linha de comandos do cf ser instalada, é possível
+incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
 
-Se você tiver instalado anteriormente o plug-in do Administrador do {{site.data.keyword.cloud_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e, em seguida, reinstalar para obter as atualizações mais recentes.
-{: tip}
+**Nota**: se você tiver instalado anteriormente o plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
 
-Conclua as etapas a seguir para incluir o repositório e instalar
-o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
 
 <ol>
-<li>Para incluir o repositório do plug-in de administrador do {{site.data.keyword.cloud_notm}}, execute o comando a seguir:<br/><br/>
+<li>Para incluir o repositório do plug-in de administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
 <code>
-cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com  </code><br/><br/>
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+</code><br/><br/>
 </li>
-<li>Para instalar o plug-in da CLI do Administrador do {{site.data.keyword.cloud_notm}}, execute o comando a seguir:<br/><br/>
+<li>Para instalar o plug-in da CLI do Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
 <code>
-cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin  </code>
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
+</code>
 </li>
 </ol>
 
 Se você precisar desinstalar o plug-in, será possível usar os comandos a seguir; em
 seguida, poderá incluir o repositório atualizado e instalar o plug-in mais recente:
 
-* Desinstale o plug-in:  ` cf uninstall-plugin IBMCloudAdminCLI `
-* Remova o repositório de plug-in: `cf remove-plugin-repo IBMCloudAdmin`
+* Desinstalar o plug-in: `cf uninstall-plugin BluemixAdminCLI`
+* Remover o repositório de plug-in: `cf remove-plugin-repo BluemixAdmin`
 
-## Usando o plug-in da CLI do administrador do {{site.data.keyword.cloud_notm}}
 
-É possível usar o plug-in da CLI Admin do {{site.data.keyword.cloud_notm}} para incluir ou remover usuários, designar ou remover designação de usuários de organizações e
+## Usando o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
+
+É possível usar o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}} para incluir ou remover usuários, designar ou remover designação de usuários de organizações e
 executar outras tarefas de gerenciamento.
 
 Para ver uma lista de comandos, execute o comando
 a seguir:
+
 ```
 cf plugins
 ```
 {: codeblock}
 
-Para obter mais ajuda para um comando, use a opção `-help`.
+Para obter ajuda adicional para um comando, use a opção `-help`.
 
-### Conectando e efetuando login no {{site.data.keyword.cloud_notm}}
+### Conectando e efetuando login no {{site.data.keyword.Bluemix_notm}}
 
-Antes de poder usar o plug-in da CLI do Administrador, você deverá se conectar e efetuar login, se
-ainda não tiver feito isso.
+Antes de poder usar o plug-in da CLI do Administrador, deverá conectar e efetuar login, se
+ainda não fez isso.
 
 <ol>
-<li>Para conectar-se ao terminal da API do {{site.data.keyword.cloud_notm}}, execute o comando a seguir:<br/><br/>
+<li>Para conectar-se ao terminal da API do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
 <code>
-cf api api.ng.bluemix.net  </code>
+cf ba api https://console.&lt;subdomain&gt;.bluemix.net
+</code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.cloud_notm}}.<br />
+<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}.<br />
 </dd>
 </dl>
-<p>É possível verificar a página Recursos e informações do console do administrador para obter a URL
-correta. A URL é mostrada na seção Informações da API no campo **URL da API**.</p>
+<p>É possível verificar a página Recursos e informações do Console
+administrativo para a URL correta. A URL é mostrada
+na seção Informações da API no campo **URL da API**.</p>
 </li>
-<li>Efetue login no {{site.data.keyword.cloud_notm}} com o comando a seguir:<br/><br/>
+<li>Efetue login no {{site.data.keyword.Bluemix_notm}} com o comando a seguir:<br/><br/>
 <code>
 cf login
 </code>
@@ -107,20 +106,21 @@ cf login
 ### Incluindo um usuário
 {: #admin_add_user}
 
-Para incluir um usuário em seu ambiente do {{site.data.keyword.cloud_notm}} a partir do
+Para incluir um usuário em seu ambiente do {{site.data.keyword.Bluemix_notm}} a partir do
 registro do usuário de seu ambiente, use o comando a seguir:
+
 ```
 cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-Para incluir um usuário em uma organização específica, deve-se ser um **Administrador** com a permissão **users.write** (ou **Superusuário**). Se você for um gerenciador de organização, também poderá ser fornecido a você o recurso para incluir usuários em sua organização por um Superusuário que executa o comando **enable-managers-add-users**. Para obter mais informações, consulte [Ativando gerenciadores para incluir usuários](index.html#clius_emau).
+**Observação**: para incluir um usuário em uma organização específica, deve-se ser um **Administrador** com a permissão **users.write** (ou **Super usuário**). Se você for um gerenciador de organização, também poderá receber a capacidade de incluir usuários em sua organização por um Super usuário que executa o comando **enable-managers-add-users**.  Consulte [Ativando gerenciadores para incluir usuários](index.html#clius_emau) para obter mais informações.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">O nome do usuário no registro LDAP.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">O nome ou GUID da organização do {{site.data.keyword.cloud_notm}} na qual incluir o usuário.</dd>
+<dd class="pd">O nome ou GUID da organização do {{site.data.keyword.Bluemix_notm}} na qual incluir o usuário.</dd>
 <dt class="pt dlterm">&lt;first_name&gt;</dt>
 <dd class="pd">O nome do usuário a ser incluído na organização.</dd>
 <dt class="pt dlterm">&lt;last_name&gt;</dt>
@@ -132,13 +132,14 @@ Para incluir um usuário em uma organização específica, deve-se ser um **Admi
 ### Convidando um usuário do {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_invite_public}
 
-Cada ambiente do {{site.data.keyword.Bluemix_dedicated_notm}} tem uma conta pública, corporativa ou de propriedade do cliente no {{site.data.keyword.cloud_notm}}. Para que os usuários no ambiente Dedicated criem clusters com o {{site.data.keyword.containershort}}, o administrador deve incluir os usuários nessa conta corporativa pública. Quando os usuários são incluídos na conta corporativa pública, suas contas Dedicated e públicas são vinculadas. Os usuários podem então usar seu IBMid para efetuar login no Dedicated ou público simultaneamente e podem criar recursos na conta pública da interface Dedicated. Para obter mais informações, veja [Configurando o IBM Cloud Container Service no Dedicated](/docs/containers?topic=containers-dedicated#dedicated_setup). Para convidar usuários do Dedicated para a conta pública:
+Cada ambiente do {{site.data.keyword.Bluemix_dedicated_notm}} tem uma conta pública, corporativa ou de propriedade do cliente no {{site.data.keyword.Bluemix_notm}}. Para que os usuários no ambiente Dedicated criem clusters com o {{site.data.keyword.containershort}}, o administrador deve incluir os usuários nessa conta corporativa pública. Quando os usuários são incluídos na conta corporativa pública, suas contas Dedicated e públicas são vinculadas. Os usuários podem então usar seu IBMid para efetuar login no Dedicated ou público simultaneamente e podem criar recursos na conta pública da interface Dedicated. Para obter mais informações, veja [Configurando o IBM Cloud Container Service no Dedicated](/docs/containers/cs_dedicated.html#dedicated_setup). Para convidar usuários do Dedicated para a conta pública:
+
 ```
 cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
 ```
 {: pre}
 
-Para incluir usuários do ambiente Dedicado em sua conta pública do {{site.data.keyword.cloud_notm}}, deve-se ser um **Administrador** da conta Dedicada.
+**Nota**: para incluir usuários de ambientes dedicados à sua conta pública do {{site.data.keyword.Bluemix_notm}}, deve-se ser um **Administrador** da conta dedicada.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_email&gt;</dt>
@@ -151,17 +152,17 @@ Para incluir usuários do ambiente Dedicado em sua conta pública do {{site.data
 <dd class="pd">O ID da organização da conta pública para qual você está convidando usuários.</dd>
 </dl>
 
-### Listando usuários que são convidados do {{site.data.keyword.Bluemix_dedicated_notm}}
+### Listando usuários convidados do {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #admin_dedicated_list}
 
-Se você convidou usuários do ambiente Dedicado para a sua conta do {{site.data.keyword.Bluemix_notm}} com o comando [`invite-users-to-public`](#admin_dedicated_invite_public), será possível listar os usuários em sua conta para verem o seu status de convite. Os usuários convidados que têm um IBMid existente têm um status de `ACTIVE`. Os usuários convidados que não tinham um IBMid existente têm um status de `PENDING` ou `ACTIVE` dependendo de se eles já aceitaram o convite para a conta. Para listar os usuários em sua conta do {{site.data.keyword.Bluemix_notm}}:
+Se você tiver convidado usuários do ambiente Dedicated para a sua conta do {{site.data.keyword.Bluemix_notm}} com o [comando `invite-users-to-public`](#admin_dedicated_invite_public), será possível listar os usuários em sua conta para ver o status do convite. Os usuários convidados que têm um IBMid existente terão um status de `ACTIVE`. Os usuários convidados que não têm um IBMid existente terão um status de `PENDING` ou `ACTIVE`, dependendo se eles já aceitaram o convite para a conta ou não. Para listar os usuários em sua conta do {{site.data.keyword.Bluemix_notm}}:
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
 ```
 {: pre}
 
-Para incluir usuários do ambiente Dedicado em sua conta pública do {{site.data.keyword.Bluemix_notm}}, deve-se ser um **Administrador** da conta Dedicada.
+**Nota**: para incluir usuários do ambiente Dedicated em sua conta pública do {{site.data.keyword.Bluemix_notm}}, deve-se ser um **Administrador** da conta Dedicated.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
@@ -173,8 +174,8 @@ Para incluir usuários do ambiente Dedicado em sua conta pública do {{site.data
 ### Procurando um usuário
 {: #admin_search_user}
 
-Para procurar um usuário, use o comando a seguir com os parâmetros de filtro de procura opcionais (nome, permissão,
-organização e função):
+Para procurar um usuário, use o comando a seguir em conjunção com os parâmetros de filtro de procura opcionais
+(nome, permissão, organização e função):
 
 ```
 cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
@@ -186,11 +187,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">O nome do usuário no {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">A permissão que é designada ao usuário. As permissões disponíveis são: administrador (ou superusuário), login (ou básico), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta. </dd>
+<dd class="pd">A permissão designada ao usuário. As permissões disponíveis são: administrador (ou superusuário), login (ou básico), catalog.read, catalog.write, reports.read, reports.write, users.read ou users.write. Para obter mais informações sobre permissões de usuário designadas, veja [Permissões](/docs/admin/index.html#permissions). Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">O nome da organização à qual o usuário pertence. Não é possível usar esse parâmetro com o parâmetro de permissão na mesma consulta.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">A função de organização que é designada ao usuário. As funções disponíveis são: 'auditors', 'managers' e 'billing_managers'. Deve-se especificar a organização com esse parâmetro.</dd>
+<dd class="pd">A função de organização designada ao usuário. As funções disponíveis são: 'auditors', 'managers' e 'billing_managers'. Deve-se especificar a organização com esse parâmetro.</dd>
 
 </dl>
 
@@ -200,12 +201,13 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 {: #admin_setperm_user}
 
 Para configurar permissões para um usuário especificado, use o comando a seguir:
+
 ```
 cf ba set-permissions <user_name> <permission> <access>
 ```
 {: codeblock}
 
-É possível configurar uma permissão de cada vez.
+**Nota**: é possível configurar uma permissão por vez.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -259,7 +261,7 @@ cf ba enable-managers-add-users
 {: #clius_dmau}
 
 Se os gerenciadores de organização foram ativados para incluir usuários em organizações que eles gerenciam em seu ambiente do {{site.data.keyword.Bluemix_notm}} com o comando **enable-managers-add-users** e se você tiver a permissão **Super usuário**,
-será possível remover essa configuração. Para desativar os usuários de incluírem usuários, use o comando a seguir:
+será possível remover essa configuração.  Para desativar os usuários de incluírem usuários, use o comando a seguir:
 
 ```
 cf ba disable-managers-add-users
@@ -292,19 +294,11 @@ cf ba create-org <organization> <manager>
 **Dica:** também é possível usar **ba co** como um alias para o nome
 do comando mais longo **ba create-org**.
 
-### Excluindo uma Organização
-{: #admin_delete_org}
-
-Para excluir uma organização, use o comando a seguir:
-
-```
-cf ba delete-org <organization>
-```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">O nome ou o GUID da organização {{site.data.keyword.cloud_notm}} a ser excluída.</dd>
+<dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} a ser excluída.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba do** como um alias para o nome
@@ -313,7 +307,7 @@ do comando mais longo **ba delete-org**.
 ### Designando um usuário a uma organização
 {: #admin_ass_user_org}
 
-Para designar um usuário em seu ambiente do {{site.data.keyword.cloud_notm}} para uma
+Para designar um usuário em seu ambiente do {{site.data.keyword.Bluemix_notm}} para uma
 determinada organização, use o comando a seguir:
 
 ```
@@ -323,12 +317,12 @@ cf ba set-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">O nome do usuário no {{site.data.keyword.cloud_notm}}.</dd>
+<dd class="pd">O nome do usuário no {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">O nome ou GUID da organização do {{site.data.keyword.cloud_notm}} para a qual designar o usuário.</dd>
+<dd class="pd">O nome ou GUID da organização do {{site.data.keyword.Bluemix_notm}} para a qual designar o usuário.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">Consulte [Funções](/docs/iam?topic=iam-userroles#userroles) para obter
-funções e descrições do usuário do {{site.data.keyword.cloud_notm}}.</dd>
+<dd class="pd">Consulte [Funções](/docs/admin/users_roles.html) para obter
+funções e descrições do usuário do {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba so** como um alias para o nome do comando mais longo **ba set-org**.
@@ -336,7 +330,7 @@ funções e descrições do usuário do {{site.data.keyword.cloud_notm}}.</dd>
 ### Removendo a designação de um usuário de uma organização
 {: #admin_unass_user_org}
 
-Para remover a designação de um usuário em seu ambiente do {{site.data.keyword.cloud_notm}} de
+Para remover a designação de um usuário em seu ambiente do {{site.data.keyword.Bluemix_notm}} de
 uma determinada organização, use o comando a seguir:
 
 ```
@@ -346,12 +340,12 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">O nome do usuário no {{site.data.keyword.cloud_notm}}.</dd>
+<dd class="pd">O nome do usuário no {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">O nome ou GUID da organização do {{site.data.keyword.cloud_notm}} para a qual designar o usuário.</dd>
+<dd class="pd">O nome ou GUID da organização do {{site.data.keyword.Bluemix_notm}} para a qual designar o usuário.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">Consulte [Atribuindo funções](/docs/iam?topic=iam-userroles#userroles) para
-obter funções de usuário e descrições do {{site.data.keyword.cloud_notm}}.</dd>
+<dd class="pd">Consulte [Atribuindo funções](/docs/admin/users_roles.html) para
+obter funções de usuário e descrições do {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba uo** como um alias para o nome do comando mais longo **ba unset-org**.
@@ -401,18 +395,18 @@ cf ba set-quota <organization> <plan>
 Para localizar a cota para contêineres para uma organização, use o comando a seguir:
 
 ```
-cf ibmcloud-admin containers-quota <organization>
+cf bluemix-admin containers-quota <organization>
 ```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">O nome ou o ID da organização no IBM Cloud. Esse parâmetro
+<dd class="pd">O nome ou ID da organização no Bluemix. Esse parâmetro
 é obrigatório.</dd>
 </dl>
 
-**Dica:** também é possível usar **ba cq** como um alias para o nome
-de comando mais longo **ibmcloud-admin containers-quota**.
+**Dica:** também é possível usar **ba cq** como um alias para o nome mais longo
+do comando **bluemix-admin containers-quota**.
 
 ### Configurando cotas de contêiner para uma organização
 {: #admin_set_containquotas}
@@ -420,7 +414,7 @@ de comando mais longo **ibmcloud-admin containers-quota**.
 Para configurar a cota para contêineres em uma organização, use o comando a seguir com pelo menos uma das opções incluídas:
 
 ```
-cf ibmcloud-admin set-containers-quota <organization> <options>
+cf bluemix-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -428,7 +422,7 @@ cf ibmcloud-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">O nome ou o ID da organização no IBM Cloud. Esse parâmetro
+<dd class="pd">O nome ou ID da organização no Bluemix. Esse parâmetro
 é obrigatório.</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">Inclua uma ou mais das opções a seguir em que o valor deve ser um número inteiro:
@@ -457,15 +451,15 @@ mais longos de opções:
 <dd class="pd"><strong>il</strong></dd>
 </dl>
 
-Opcionalmente, é possível fornecer um arquivo que contém parâmetros de configuração específicos em um objeto JSON válido. Se você usar a opção **-file**, ela terá precedência e as outras opções serão ignoradas. Para
+Opcionalmente, é possível fornecer um arquivo contendo parâmetros de configuração específicos em um objeto JSON válido. Se você usar a opção **-file**, ela terá precedência e as outras opções serão ignoradas. Para
 fornecer um arquivo em vez de configurar as opções, use o comando a seguir:
 
 ```
-cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
-O arquivo JSON deve ter o formato que é mostrado no exemplo a seguir:
+O arquivo JSON deve ter o formato mostrado no exemplo a seguir:
 
 ```
 {
@@ -478,8 +472,8 @@ O arquivo JSON deve ter o formato que é mostrado no exemplo a seguir:
 ```
 {: codeblock}
 
-**Dica:** também é possível usar **ba scq** como um alias para o nome
-de comando mais longo **ibmcloud-admin set-containers-quota**.
+**Dica:** também é possível usar **ba scq** como um alias para o nome mais longo
+do comando **bluemix-admin set-containers-quota**.
 
 ## Administrando Espaços
 {: #admin_spaces}
@@ -489,7 +483,7 @@ de comando mais longo **ibmcloud-admin set-containers-quota**.
 Para incluir um espaço na organização, use o comando a seguir:
 
 ```
-cf ibmcloud-admin create-space <organization> <space_name>
+cf bluemix-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -509,7 +503,7 @@ do comando mais longo **ba create-space**.
 Para remover um espaço da organização, use o comando a seguir:
 
 ```
-cf ibmcloud-admin delete-space <organization> <space_name>
+cf bluemix-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -529,7 +523,7 @@ do comando mais longo **ba delete-space**.
 Para criar um usuário em um espaço com uma função especificada, use o comando a seguir:
 
 ```
-cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -542,7 +536,7 @@ cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 <dt class="pt dlterm">&lt;user_anme&gt;</dt>
 <dd class="pd">O nome do usuário que deve ser incluído.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">A função do usuário que deve ser designada. O valor pode ser Gerenciador, Desenvolvedor ou Auditor. Veja [Designando funções](/docs/iam?topic=iam-userroles#userroles) para
+<dd class="pd">A função do usuário que deve ser designada. O valor pode ser Gerenciador, Desenvolvedor ou Auditor. Veja [Designando funções](/docs/admin/users_roles.html) para
 funções de usuário e descrições
 do {{site.data.keyword.Bluemix_notm}} em um espaço.</dd>
 </dl>
@@ -556,7 +550,7 @@ do comando mais longo **ba set-space**.
 Para remover a função de um usuário em um espaço, use o comando a seguir:
 
 ```
-cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -569,9 +563,9 @@ cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 <dt class="pt dlterm">&lt;user_anme&gt;</dt>
 <dd class="pd">O nome do usuário que deve ser incluído.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">A função do usuário que deve ser designada. O valor pode ser Gerenciador, Desenvolvedor ou Auditor. Veja [Designando funções](/docs/iam?topic=iam-userroles#userroles) para
+<dd class="pd">A função do usuário que deve ser designada. O valor pode ser Gerenciador, Desenvolvedor ou Auditor. Veja [Designando funções](/docs/admin/users_roles.html) para
 funções de usuário e descrições
-do {{site.data.keyword.cloud_notm}} em um espaço.</dd>
+do {{site.data.keyword.Bluemix_notm}} em um espaço.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba us** como um alias para o nome
@@ -583,7 +577,8 @@ do comando mais longo **ba unset-space**.
 ### Ativando serviços para todas as organizações
 {: #admin_ena_service_org}
 
-Para ativar um serviço para ser exibido no catálogo do {{site.data.keyword.cloud_notm}} para todas as
+Para ativar um serviço para ser exibido no Catálogo do
+{{site.data.keyword.Bluemix_notm}} para todas as
 organizações, use o comando a seguir:
 
 ```
@@ -593,7 +588,10 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você inserir um nome do plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico," serão solicitados os planos de serviço dos quais escolher. Para identificar um nome de plano de serviço, selecione a categoria do serviço na página inicial, em seguida, selecione **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de serviços
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de serviços
 que estão disponíveis para esse serviço. </dd>
 </dl>
 
@@ -602,8 +600,8 @@ que estão disponíveis para esse serviço. </dd>
 ### Desativando serviços para todas as organizações
 {: #admin_dis_service_org}
 
-Para desativar um serviço de ficar visível no catálogo do {{site.data.keyword.Bluemix_notm}} para todas as
-organizações, use o comando a seguir:
+Para desativar um serviço de ficar visível no Catálogo do {{site.data.keyword.Bluemix_notm}} para todas
+as organizações, use o comando a seguir:
 
 ```
 cf ba disable-service-plan <plan_identifier>
@@ -612,7 +610,10 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você inserir um nome do plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico," serão solicitados os planos de serviço dos quais escolher. Para identificar um nome de plano de serviço, selecione a categoria do serviço na página inicial, em seguida, selecione **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 </dl>
 
@@ -621,8 +622,8 @@ serviços que estão disponíveis para esse serviço.</dd>
 ### Incluindo a visibilidade de serviço para organizações
 {: #admin_addvis_service_org}
 
-É possível incluir uma organização da lista de organizações que podem ver um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}}. Para permitir que uma organização visualize um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}},
-use o comando a seguir:
+É possível incluir uma organização da lista de organizações que podem ver um serviço específico no Catálogo do {{site.data.keyword.Bluemix_notm}}. Para permitir que uma organização visualize um serviço específico no
+Catálogo do {{site.data.keyword.Bluemix_notm}}, use o comando a seguir:
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
@@ -631,7 +632,10 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você inserir um nome do plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico," serão solicitados os planos de serviço dos quais escolher. Para identificar um nome de plano de serviço, selecione a categoria do serviço na página inicial, em seguida, selecione **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} a ser incluída na lista de visibilidade do serviço.</dd>
@@ -642,8 +646,9 @@ serviços que estão disponíveis para esse serviço.</dd>
 ### Removendo a visibilidade de serviço para organizações
 {: #admin_remvis_service_org}
 
-É possível remover uma organização da lista de organizações que podem ver um serviço específico no catálogo do {{site.data.keyword.Bluemix_notm}}. Para remover a visibilidade de um serviço no catálogo do {{site.data.keyword.Bluemix_notm}} para uma organização,
-use o comando a seguir:
+É possível remover uma organização da lista de organizações que podem ver um
+serviço específico no Catálogo do {{site.data.keyword.Bluemix_notm}}. Para remover a visibilidade de um serviço no
+Catálogo do {{site.data.keyword.Bluemix_notm}} para uma organização, use o comando a seguir:
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -652,7 +657,10 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você inserir um nome do plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico," serão solicitados os planos de serviço dos quais escolher. Para identificar um nome de plano de serviço, selecione a categoria do serviço na página inicial, em seguida, selecione **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} a ser removida da
@@ -664,23 +672,29 @@ lista de visibilidade do serviço.</dd>
 ### Editando a visibilidade de serviço para organizações
 {: #admin_editvis_service_org}
 
-É possível editar e substituir a lista de serviços que as organizações específicas podem ver no catálogo do {{site.data.keyword.Bluemix_notm}}. Para substituir todos os serviços visíveis existentes para uma organização ou múltiplas organizações, use o comando a seguir:
+É possível editar e substituir a lista de serviços que as organizações
+específicas podem ver no Catálogo do {{site.data.keyword.Bluemix_notm}}. Para substituir todos os serviços visíveis existentes para uma organização ou múltiplas organizações, use o comando a seguir:
 
 ```
 cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
 ```
 {: codeblock}
 
-Esse
-comando substitui os serviços visíveis existentes para as organizações especificadas pelo serviço que você especifica no comando.
+**Nota:** Esse comando substitui os serviços
+visíveis existentes para as organizações especificadas pelo serviço
+que você especifica no comando.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você inserir um nome do plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico," serão solicitados os planos de serviço dos quais escolher. Para identificar um nome de plano de serviço, selecione a categoria do serviço na página inicial, em seguida, selecione **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} para a qual incluir a visibilidade. É
-possível ativar a visibilidade do serviço para mais de uma organização, inserindo mais nomes da organização ou GUIDs no comando.</dd>
+possível ativar a visibilidade do serviço para mais de uma organização, inserindo GUIDs ou nomes adicionais da
+organização no comando.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba espv** como um alias para o nome do comando mais longo **ba edit-service-plan-visibility**.
@@ -698,12 +712,12 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-Se você tiver acesso de gravação para a permissão de relatórios, será possível criar uma nova categoria e incluir um relatório em qualquer um dos formatos aceitos para os seus usuários. Insira
+**Nota**: Se você tiver acesso de gravação para a permissão de relatórios, poderá criar uma nova categoria e incluir um relatório em qualquer um dos formatos aceitos para seus usuários. Insira
 o novo nome da categoria para o parâmetro `category` ou inclua o seu novo relatório em uma categoria existente.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">A categoria para o relatório. Se houver um espaço no nome, use aspas em torno do nome.</dd>
+<dd class="pd">A categoria para o relatório. Se houver um espaço no nome, use as aspas em torno do nome.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd">A data do relatório no formato <samp class="ph codeph">YYYYMMDD</samp>.</dd>
 <dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
@@ -727,7 +741,7 @@ cf ba delete-report <category> <date> <name>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">A categoria para o relatório. Se houver um espaço no nome, use aspas em torno do nome.</dd>
+<dd class="pd">A categoria para o relatório. Se houver um espaço no nome, use as aspas em torno do nome.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd">A data do relatório no formato <samp class="ph codeph">YYYYMMDD</samp>.</dd>
 <dt class="pt dlterm">&lt;name&gt;</dt>
@@ -768,8 +782,7 @@ do comando **ba resource-metrics**.
 ## Visualizando o histórico de métrica de recurso
 {: #cliresourceusagehistory}
 
-É possível recuperar o histórico de métrica de recurso para uso de memória e disco. As métricas retornadas incluem a quantia
-de recursos que são usados fora do total disponível para ambos os recursos, físico e reservado. Os dados históricos para uso de memória e disco podem ser exibidos por hora, diariamente ou mensalmente. É possível especificar datas de início e de encerramento para recuperar dados dentro de um intervalo de data específico. Os dados históricos padrão, quando nenhuma data é especificada, são dados de memória por hora para as últimas 48 horas. Os dados são exibidos em ordem decrescente, com as datas mais recentes mostradas primeiro. Para visualizar as informações de histórico de métrica de recurso, use o comando a seguir:
+É possível recuperar o histórico de métrica de recurso para uso de memória e disco. As métricas retornadas incluem a quantia de recursos usados do total disponível para ambos os recursos, físico e reservado. Os dados históricos para uso de memória e disco podem ser exibidos por hora, diariamente ou mensalmente.  É possível especificar datas de início e de encerramento para recuperar dados dentro de um intervalo de data específico. Os dados históricos padrão, quando nenhuma data é especificada, são dados de memória por hora para as últimas 48 horas. Os dados são exibidos em ordem decrescente, com datas mais recentes mostradas primeiro.   Para visualizar as informações de histórico de métrica de recurso, use o comando a seguir:
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -789,20 +802,19 @@ padrão.</dd>
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">Visualize o disco Reservado e Físico usado e total.</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">Especifique uma data de início para diário ou mensal (o formato deve ser mm-dd-aaaa) ou uma data e hora de início para por hora (o formato deve ser mm-dd-aaaa hh:mm:ss fuso horário) </dd>
+<dd class="pd">Especifique uma data de início para diário ou mensal (o formato deve ser mm-dd-aaaa) ou uma data e hora de início para por hora (o formato deve ser o fuso horário mm-dd-aaaa hh:mm:ss) </dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">Especifique uma data de encerramento para diário ou mensal (o formato deve ser mm-dd-aaaa) ou uma data e hora de
-encerramento para por hora (o formato deve ser mm-dd-aaaa hh:mm:ss fuso horário) </dd>
+<dd class="pd">Especifique uma data de encerramento para diário ou mensal (o formato deve ser mm-dd-aaaa) ou uma data e hora de encerramento para por hora (o formato deve ser o fuso horário mm-dd-aaaa hh:mm:ss) </dd>
 </dl>
 
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Exemplos&gt;</dt>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk -- start=07-04-2017</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history -- monthly -- memory</dd>
-<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 
@@ -828,7 +840,7 @@ cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-Para listar todos os brokers de serviço, insira o comando sem o parâmetro `broker_name`.
+**Nota**: para listar todos os brokers de serviço, insira o comando sem o parâmetro `broker_name`.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nome_do_servidor_intermediário&gt;</dt>
@@ -840,8 +852,8 @@ Para listar todos os brokers de serviço, insira o comando sem o parâmetro `bro
 ### Incluindo um broker de serviço
 {: #cliaddservbro}
 
-Para incluir um broker de serviço, de maneira que seja possível incluir um serviço customizado em seu catálogo do
-{{site.data.keyword.Bluemix_notm}}, use o comando a seguir:
+Para incluir um broker de serviço, de maneira que você possa incluir um serviço customizado em seu
+Catálogo do {{site.data.keyword.Bluemix_notm}}, use o comando a seguir:
 
 ```
 cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
@@ -864,8 +876,8 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### Excluindo um broker de serviço
 {: #clidelservbro}
 
-Para excluir um broker de serviço que remove o serviço customizado do seu catálogo do {{site.data.keyword.Bluemix_notm}},
-use o comando a seguir:
+Para excluir um broker de serviço, para remover o serviço customizado de seu
+Catálogo do {{site.data.keyword.Bluemix_notm}}, use o comando a seguir:
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -902,6 +914,7 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 
 **Dica:** também é possível usar **ba usb** como um alias para o nome do comando mais longo **ba update-service-broker**.
 
+
 ## Administrando grupos de segurança do aplicativo
 {: #admin_secgro}
 
@@ -929,14 +942,13 @@ para aplicar acesso global são **Preparação padrão** e
 permitir o tráfego para todos os apps em execução ou todos os apps de preparação. Se você
 não desejar ligar a esses dois conjuntos grupos de segurança, poderá desvincular dos
 conjuntos de grupos do Cloud Foundry e depois ligar o grupo de segurança a um espaço
-específico. Para obter mais informações, consulte [Ligando grupos de segurança do aplicativo](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
+específico. Para obter mais informações, veja [Ligando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**AVISO**: desvincular os conjuntos de grupos **Preparação padrão** ou
-**Execução padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e
-`dns`, desativa o acesso global à rede externa. Use a desvinculação com cuidado e reconhecimento do seu potencial impacto nos aplicativos em execução e de preparação em seu ambiente.
+**AVISO**: desvinculando os conjuntos de grupos **Preparação padrão** ou **Execução padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns` desativarão o acesso global à rede externa. Use a desvinculação com cuidado e reconhecimento do seu potencial impacto nos aplicativos em execução e de preparação em seu ambiente.
 
-Os comandos a seguir que permitem que você trabalhe com grupos de segurança são baseados na versão 1.6 do Cloud Foundry. Para obter mais informações, incluindo campos obrigatórios e opcionais, consulte as informações do Cloud Foundry sobre [Criando grupos de segurança do aplicativo](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
-{: note}
+
+**Nota**: Os comandos a seguir que permitem trabalhar com
+grupos de segurança são baseadas na versão do Cloud Foundry 1.6. Para obter mais informações, incluindo campos obrigatórios e opcionais, veja as informações do Cloud Foundry sobre [Como criar Grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 ### Listando grupos de segurança
 {: #clilissecgro}
@@ -967,12 +979,14 @@ cf ba security-groups <security-group>
 como alias para o nome de comando mais longo **ba security-groups**
 com o parâmetro `security-group`.
 
+
 ### Criando um Grupo de Segurança
 {: #clicreasecgro}
 
-Para obter mais informações sobre a criação de grupos de segurança e as regras que definem o tráfego de saída, consulte [Criando grupos de segurança do aplicativo](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
+Para obter mais informações sobre como criar grupos de segurança e as regras que definem o tráfego de saída, veja [Criando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 Para criar um grupo de segurança, use o comando a seguir:
+
 ```
 cf ba create-security-group <security-group> <path-to-rules-file>
 ```
@@ -1017,6 +1031,7 @@ como alias para o nome de comando mais longo **ba update-security-group**.
 {: #clidelsecgro}
 
 Para excluir um grupo de segurança, use o comando a seguir:
+
 ```
 cf ba delete-security-group <security-group>
 ```
@@ -1031,10 +1046,11 @@ cf ba delete-security-group <security-group>
 como alias para o nome de comando maior
 **ba delete-security-group**.
 
+
 ### Ligando grupos de segurança
 {: #clibindsecgro}
 
-Para obter mais informações sobre como ligar grupos de segurança, consulte [Ligando grupos de segurança do aplicativo](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
+Para obter mais informações sobre como ligar grupos de segurança, veja [Ligando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
 * Para ligar ao conjunto de grupos de segurança de Preparação padrão, use o comando a seguir:
 
@@ -1090,7 +1106,7 @@ como alias para o nome de comando mais longo **ba bind-security-group**.
 ### Desvinculando grupos de segurança
 {: #cliunbindsecgro}
 
-Para obter mais informações sobre a desvinculação de grupos de segurança, consulte [Desvinculando grupos de segurança do aplicativo](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo").
+Para obter mais informações sobre como desvincular grupos de segurança, veja [Desvinculando grupos de segurança do aplicativo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
 * Para desvincular de um conjunto de grupos de segurança de Preparação padrão, use o comando a seguir:
 
@@ -1104,9 +1120,7 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">Nome do grupo de segurança</dd>
 </dl>
 
-**Aviso**: desvincular o conjunto de grupos **Preparação padrão** dos dois grupos de
-segurança criados pela IBM, `public_networks` e `dns`, desativa o acesso global à rede externa e
-deve ser usado com cuidado e compreensão das ramificações que ele tem em todos os aplicativos de preparação em seu ambiente.
+**Aviso**: a desvinculação do conjunto de grupos **Preparação padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns`, desativará o acesso global à rede externa e deve ser usada com cuidado e entendimento das ramificações que ele tem em todos os aplicativos de preparação em seu ambiente.
 
 **Dica:** também é possível usar **ba ussg**
 como alias para o nome de comando mais longo **ba
@@ -1124,9 +1138,7 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">Nome do grupo de segurança</dd>
 </dl>
 
-**Aviso**: desvincular o conjunto de grupos **Execução padrão** dos
-dois grupos de segurança criados pela IBM, `public_networks` e `dns`, desativa o acesso global à
-rede externa e deve ser usado com cuidado e compreensão das ramificações que ele tem em todos os aplicativos em execução em seu ambiente.
+**Aviso**: a desvinculação do conjunto de grupos **Execução padrão** dos dois grupos de segurança criados pela IBM, `public_networks` e `dns`, desativará o acesso global à rede externa e deve ser usada com cuidado e entendimento das ramificações que ele tem em todos os aplicativos de execução em seu ambiente.
 
 **Dica:** também é possível usar **ba brsg** como alias para o
 nome do comando mais longo **ba unbind-running-security-group**.
@@ -1199,8 +1211,9 @@ comando **ba create-buildpack**.
 ### Atualizando um buildpack
 {: #cliupdabuildpack}
 
-Se você tiver as permissões de gravação do catálogo de apps, será possível atualizar um buildpack existente. Para atualizar um buildpack, use o comando a
+Se você tiver as permissões de gravação do catálogo de apps, será possível atualizar um buildpack existente.  Para atualizar um buildpack, use o comando a
 seguir:
+
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ```
@@ -1223,7 +1236,8 @@ comando **ba update-buildpack**.
 ### Excluindo um buildpack
 {: #clidelbuildpack}
 
-Se você tiver as permissões de gravação do catálogo de apps, será possível excluir um buildpack existente. Para excluir um buildpack, use o comando a seguir:
+Se você tiver as permissões de gravação do catálogo de apps, será possível excluir um buildpack existente.  Para excluir um buildpack, use o comando a seguir:
+
 ```
 cf ba delete-buildpack <buildpack_name>
 ```
