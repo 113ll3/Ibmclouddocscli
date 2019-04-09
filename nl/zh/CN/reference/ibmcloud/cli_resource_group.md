@@ -2,10 +2,10 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-01-14"
 ---
 
 {:new_window: target="_blank"}
@@ -51,20 +51,21 @@ lastupdated: "2018-11-30"
       <td>[ibmcloud resource service-key-create](cli_resource_group.html#ibmcloud_resource_service_key_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-key-update](cli_resource_group.html#ibmcloud_resource_service_key_update)</td>
       <td>[ibmcloud resource service-key-delete](cli_resource_group.html#ibmcloud_resource_service_key_delete)</td>
       <td>[ibmcloud resource service-aliases](cli_resource_group.html#ibmcloud_resource_service_aliases)</td>
       <td>[ibmcloud resource service-alias](cli_resource_group.html#ibmcloud_resource_service_alias)</td>
       <td>[ibmcloud resource service-alias-create](cli_resource_group.html#ibmcloud_resource_service_alias_create)</td>
-      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource service-alias-update](cli_resource_group.html#ibmcloud_resource_service_alias_update)</td>
       <td>[ibmcloud resource service-alias-delete](cli_resource_group.html#ibmcloud_resource_service_alias_delete)</td>
       <td>[ibmcloud resource search](cli_resource_group.html#ibmcloud_resource_search)</td>
       <td>[ibmcloud resource tags](cli_resource_group.html#ibmcloud_resource_tags)</td>
       <td>[ibmcloud resource tag](cli_resource_group.html#ibmcloud_resource_tag)</td>
-      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
     </tr>
     <tr>
+      <td>[ibmcloud resource tag-create](cli_resource_group.html#ibmcloud_resource_tag_create)</td>
       <td>[ibmcloud resource tag-delete](cli_resource_group.html#ibmcloud_resource_tag_delete)</td>
       <td>[ibmcloud resource tag-attach](cli_resource_group.html#ibmcloud_resource_tag_attach)</td>
       <td>[ibmcloud resource tag-detach](cli_resource_group.html#ibmcloud_resource_tag_detach)</td>
@@ -147,19 +148,22 @@ ibmcloud resource group example-group --id
 创建资源组
 
 ```
-ibmcloud resource group-create NAME QUOTA_NAME
+ibmcloud resource group-create NAME
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
 
 <strong>命令选项</strong>：
+<dl>
+  <dt>NAME（必需）</dt>
+  <dd>资源组的名称</dd>
+</dl>
 
 <strong>示例</strong>：
-
-创建配额为 `free` 的资源组 `example-group`：
+创建资源组 `example-group`：
 
 ```
-ibmcloud resource group-create example-group free
+ibmcloud resource group-create example-group
 ```
 
 ## ibmcloud resource group-update
@@ -248,7 +252,7 @@ ibmcloud resource quota free
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
-将 Cloudfoundry 服务实例迁移到资源组
+将 Cloud Foundry 服务实例迁移到资源组
 
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
@@ -300,6 +304,7 @@ ibmcloud resource service-instances --service-name test-service
 ```
 
 ## ibmcloud resource service-instance
+
 {: #ibmcloud_resource_service_instance}
 
 显示服务实例的详细信息
@@ -583,7 +588,7 @@ ibmcloud resource service-keys --instance-name my-service-instance  [--output FO
 ## ibmcloud resource service-key
 {: #ibmcloud_resource_service_key}
 
-显示服务密钥的详细信息
+显示任意数量的服务密钥的详细信息，其中服务密钥名称的前 *n* 个字符与所提供的 KEY_NAME 相匹配。
 
 ```
 ibmcloud resource service-key KEY_NAME [--id]
@@ -594,11 +599,11 @@ ibmcloud resource service-key KEY_NAME [--id]
 <strong>命令选项</strong>：
 <dl>
   <dt>KEY_NAME</dt>
-  <dd>键的名称</dd>
+  <dd>密钥的名称</dd>
   <dt>--id</dt>
-  <dd>显示服务密钥的标识</dd>
+  <dd>显示任意密钥的标识，其中服务密钥名称的前 *n* 个字符与所提供的 KEY_NAME 相匹配，*n* 代表所提供 KEY_NAME 的长度。</dd>
   <dt>--output FORMAT（可选）</dt>
-  <dd>--output value  指定输出格式，目前仅支持 JSON。</dd>
+  <dd>指定输出格式。当前仅支持 JSON。</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -622,7 +627,7 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
 <strong>命令选项</strong>：
 <dl>
   <dt>NAME</dt>
-  <dd>键的名称</dd>
+  <dd>密钥的名称</dd>
   <dt>ROLE_NAME</dt>
   <dd>用户角色的名称</dd>
   <dt>--instance-id</dt>
@@ -648,6 +653,36 @@ ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INST
 ibmcloud resource service-key-create my-service-key Administrator --instance-name my-service-instance
 ```
 
+## ibmcloud resource service-key-update
+{: #ibmcloud_resource_service_key_update}
+
+更新服务密钥
+
+```
+ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+<dl>
+  <dt>NAME | ID</dt>
+  <dd>密钥的名称或标识</dd>
+  <dt>-n, --name NEW_NAME</dt>
+  <dd>密钥的新名称</dd>
+  <dt>-g RESOURCE_GROUP</dt>
+  <dd>密钥所属的资源组的标识</dd>
+  <dt>-f, --force</dt>
+  <dd>强制更新而不确认</dd>
+</dl>
+
+<strong>示例</strong>：
+更新名为 `my-service-key` 的服务密钥，为其指定新名称 `my-service-key-2`：
+
+```
+ibmcloud resource service-key-update my-service-key -n my-service-key-2
+```
+
 ## ibmcloud resource service-key-delete
 {: #ibmcloud_resource_service_key_delete}
 
@@ -662,7 +697,7 @@ ibmcloud resource service-key-delete ( KEY_NAME | KEY_ID ) [-f, --forece]
 <strong>命令选项</strong>：
 <dl>
   <dt>KEY_NAME | KEY_ID</dt>
-  <dd>键的名称或键的标识</dd>
+  <dd>密钥的名称或密钥的标识</dd>
   <dt>-f, --force</dt>
   <dd>强制删除而不确认</dd>
 </dl>
