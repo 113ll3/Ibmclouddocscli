@@ -5,12 +5,13 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2017-08-20"
+lastupdated: "2018-02-14"
 
 ---
 
 
 {:shortdesc: .shortdesc}
+{:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
 
 
@@ -33,9 +34,10 @@ lastupdated: "2017-08-20"
    * 若為 macOS 及 Windows，僅執行安裝程式。
    * 若為 Linux，擷取套件並執行 `install_bluemix_cli` Script
 
-1. 將目標設為 API 端點並登入 {{site.data.keyword.Bluemix_notm}}
+1. 將目標設為 API 端點並使用 `bx login` 指令登入 {{site.data.keyword.Bluemix_notm}}。
+  
 
-  ![範例](example.gif)
+  ![範例](example.gif){: gif}
 
 現在，您已準備好管理 {{site.data.keyword.Bluemix_notm}} 資源。鍵入 `bluemix help` 或 `bx help` 以查看指令說明。 
 

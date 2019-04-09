@@ -137,7 +137,7 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 
 # rellinks
 {: rellinks}
-## gerais
+## general
 {: general}
 * [{{site.data.keyword.autoscaling}} serviço](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}

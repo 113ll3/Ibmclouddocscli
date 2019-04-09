@@ -5,12 +5,13 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2017-08-20"
+lastupdated: "2018-02-14"
 
 ---
 
 
 {:shortdesc: .shortdesc}
+{:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
 
 
@@ -33,9 +34,10 @@ Para empezar con la CLI de {{site.data.keyword.Bluemix_notm}}:
    * Para macOS y Windows, simplemente ejecute el instalador.
    * Para Linux, extraiga el paquete y ejecute el script `install_bluemix_cli`
 
-1. Establezca como destino un punto final de API e inicie sesión en {{site.data.keyword.Bluemix_notm}}
+1. Establezca como destino un punto final de API e inicie sesión en {{site.data.keyword.Bluemix_notm}} con el mandato `bx login`.
+  
 
-  ![Ejemplo](example.gif)
+  ![Ejemplo](example.gif){: gif}
 
 Ahora está listo para gestionar recursos de {{site.data.keyword.Bluemix_notm}}. Escriba `bluemix help` o `bx help` para ver las descripciones de mandatos. 
 

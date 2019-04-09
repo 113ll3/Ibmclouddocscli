@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-12-08"
 
 ---
 
@@ -19,11 +19,11 @@ lastupdated: "2018-06-21"
 # Connessione di un ID dedicato al tuo ID IBM pubblico
 {: #connect_dedicated_id}
 
-Per accedere a un cloud dedicato in cui è disponibile il servizio IAM pubblico, la CLI {{site.data.keyword.Bluemix_notm}} richiede che accedi con il tuo ID IBM pubblico invece del tuo ID dedicato.
+Per accedere a un cloud dedicato in cui è disponibile il servizio IAM pubblico, la CLI {{site.data.keyword.Bluemix_notm}} ti richidere di accedere con il tuo ID IBM pubblico invece del tuo ID dedicato.
 
 
 ```
-  $ ibmcloud login -a https://api.{dedicated_env}.bluemix.net
+  $ bluemix login -a https://api.{dedicated_env}.bluemix.net
   Endpoint API: https://api.{dedicated_env}.bluemix.net
 
   Il servizio del token IAM pubblico è disponibile nell'ambiente dedicato.
@@ -32,7 +32,7 @@ Per accedere a un cloud dedicato in cui è disponibile il servizio IAM pubblico,
   Email>
 ```
 
-Se il tuo ID dedicato è già stato connesso all'ID IBM pubblico, esegue l'autenticazione e l'accesso:
+Se il tuo ID dedicato è già stato connesso all'ID IBM pubblico, eseguirà l'autenticazione e l'accesso:
 
 ```
   Autenticazione in corso...
@@ -41,7 +41,7 @@ Se il tuo ID dedicato è già stato connesso all'ID IBM pubblico, esegue l'auten
   Connesso all'utente dedicato my_dedicated_id
 ```
 
-Tuttavia, se il tuo ID dedicato non è stato connesso all'ID IBM pubblico, ti viene richiesto di connetterti manualmente all'ID IBM pubblico:
+Tuttavia, se il tuo ID dedicato non è stato connesso all'ID IBM pubblico, ti verrà richiesto di connetterti manualmente all'ID IBM pubblico:
 
 ```
   Stai eseguendo l'accesso con un ID IBM non associato ad alcun utente dedicato.
@@ -57,18 +57,18 @@ Seleziona un'opzione per immettere le credenziali per l'ID dedicato. Dopo aver e
 
 ## Forza l'accesso al server UAA locale
 
-Per forzare l'accesso al server UAA con un ID dedicato, specifica l'opzione `--no-iam` nel comando `ibmcloud login`:
+Per forzare l'accesso al server UAA con un ID dedicato, specifica l'opzione `--no-iam` nel comando `bluemix login`:
 
 ```
-  $ ibmcloud login --no-iam
+  $ bluemix login --no-iam
 ```
 
-## Disconnetti il tuo ID dedicato dall'ID IBM pubblico
+## Disconnetti il tuo ID dedicato dall'ID IBM pubblico 
 
-Puoi utilizzare `ibmcloud iam dedicated-id-disconnect` per disconnettere l'ID IBM pubblico dall'ID dedicato.
+Puoi utilizzare `bluemix iam dedicated-id-disconnect` per disconnettere l'ID IBM pubblico dall'ID dedicato.
 
 ```
-  $ ibmcloud iam dedicated-id-disconnect
+  $ bluemix iam dedicated-id-disconnect
   Desideri veramente disconnettere my_dedicated_id dall'ID IBM pubblico? (S/N)> s
   Disconnessione utente dedicato my_dedicated_id dall'ID IBM pubblico...
   OK
@@ -76,3 +76,4 @@ Puoi utilizzare `ibmcloud iam dedicated-id-disconnect` per disconnettere l'ID IB
   Disconnessione in corso...
   OK
 ```
+

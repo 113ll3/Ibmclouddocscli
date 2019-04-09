@@ -621,7 +621,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 
 
 ## cf services
-
+  
 {: #cf_services}
 
 列出当前空间中可用的所有服务。
@@ -629,7 +629,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 
 ```
 cf services
-```
+  ```
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
 <strong>命令选项</strong>：无。
@@ -639,7 +639,7 @@ cf services
 列出当前空间中的所有服务。
 ```
 cf services
-```
+  ```
 {: codeblock}
 
 

@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2015, 2017
-lastupdated: "2017-10-20"
+  years: 2015, 2018
+lastupdated: "2018-02-05"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2017-10-20"
 ### 步骤 1：搜索插件
 
 1. 使用 `bluemix plugin repo-plugins -r REPO_NAME` 命令在存储库中查找插件。
-2. 缺省情况下，{{site.data.keyword.Bluemix_notm}} CLI 会使用名称 `Bluemix`。可以列出官方 `Bluemix` 存储库中的插件。例如：
+2. {{site.data.keyword.Bluemix_notm}} CLI 具有名称为 `Bluemix` 的官方存储库，您可以搜索官方插件，如以下示例所示：
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -45,7 +45,7 @@ lastupdated: "2017-10-20"
 
 ### 步骤 2：安装插件
 
-使用 `bx plugin install PLUGIN_NAME -r REPO_NAME` 命令安装插件。例如：
+使用 `bx plugin install PLUGIN_NAME -r REPO_NAME` 命令安装插件。例如，使用以下命令从官方 IBM 插件存储库 `Bluemix` 安装插件：
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix

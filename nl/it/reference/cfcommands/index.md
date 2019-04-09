@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -22,8 +22,6 @@ lastupdated: "2018-06-21"
 
 L'interfaccia di riga comando (CLI) Cloud Foundry (cf) fornisce una serie di comandi per gestire le tue applicazioni. Le seguenti informazioni elencano i comandi cf più utilizzati per la gestione delle applicazioni e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi. Per elencare tutti i comandi cf e le informazioni di guida associate, utilizza `cf help`. Utilizza `cf nome_comando -h` per visualizzare delle informazioni di guida dettagliate per uno specifico comando.
 {: shortdesc}
-
-Per un elenco più dettagliato di comandi `cf CLI`, consulta la community [Cloud Foundry CLI Reference Guide ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}.
 
 **Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli,vedi [Utilizzo della CLI cf con un server proxy HTTP ![Icona link esterno](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
@@ -92,11 +90,11 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>BluemixServerURL (facoltativo)</dt>
-   <dd>L'URL dell'endpoint API IBM Cloud che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Solitamente, questo URL è `https://api.{DomainName}`.
+   <dd>L'URL dell'endpoint API Bluemix che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Solitamente, questo URL è `https://api.{DomainName}`.
    Se vuoi visualizzare l'URL dell'endpoint API che stai attualmente utilizzando, non hai bisogno di specificare questo parametro per il comando cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
@@ -152,7 +150,7 @@ cf bind-service nome_applicazione istanza_servizio
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>nome_applicazione (obbligatorio)</dt>
@@ -173,8 +171,7 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-Crea un'istanza
-del servizio.
+Crea un'istanza del servizio
 
 ```
 cf create-service nome_servizio piano_servizio istanza_servizio
@@ -182,7 +179,7 @@ cf create-service nome_servizio piano_servizio istanza_servizio
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>nome_servizio (obbligatorio)</dt>
@@ -214,7 +211,7 @@ cf create-space nome_spazio [-o] [-q]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>nome_spazio (obbligatorio)</dt>
@@ -246,7 +243,7 @@ cf delete nome_applicazione [-f] [-r]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>nome_applicazione (obbligatorio)</dt>
@@ -295,7 +292,7 @@ cf delete-space nome_spazio [-f]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>nome_spazio (obbligatorio)</dt>
@@ -344,7 +341,7 @@ cf events [nomeapplicazione]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>nomeapplicazione</dt>
@@ -371,7 +368,7 @@ cf help [nome_comando]
 
 <strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>nome_comando (facoltativo)</dt>
@@ -396,7 +393,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Ti fa accedere a {{site.data.keyword.Bluemix_notm}}. Se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere.
+Ti fa accedere a {{site.data.keyword.Bluemix_notm}}. Se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere. 
 
 **Nota**: per accedere, puoi anche utilizzare una chiave API della piattaforma {{site.data.keyword.Bluemix_notm}}. Utilizza il nome utente `apikey` e il valore della tua chiave API come password. Per ulteriori informazioni sulla creazione di una chiave API, vedi [Gestione delle chiavi API](/docs/iam/apikeys.html).
 
@@ -406,7 +403,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
 <dt>*-a* https://api.{DomainName} (facoltativo)</dt>
@@ -415,9 +412,10 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>Il tuo nome utente.</dd>
 <dt>*-p* password (facoltativo)</dt>
 <dd>La tua password.</dd>
-<dd>*Importante:* se fornisci la tua password utilizzando il parametro *-p* sull'interfaccia riga di comando, la password potrebbe essere registrata nella cronologia della riga di comando. Per motivi di sicurezza, evita di fornire la password utilizzando il parametro -p. Immetti invece la password quando te lo chiede l'interfaccia riga di comando.</dd>
+<dd>*Importante:* se fornisci la tua password utilizzando il parametro *-p* sull'interfaccia riga di comando, la password potrebbe essere registrata nella cronologia della riga di comando. Per motivi di sicurezza, evita di fornire la password utilizzando il parametro
+-p. Immetti invece la password quando te lo chiede l'interfaccia riga di comando.</dd>
 <dt>*-sso*</dt>
-<dd>Devi utilizzare l'opzione SSO (single sign-on ) quando accedi con un ID federato. Non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti viene richiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere il passcode monouso all'accesso.</dd>
+<dd>Devi utilizzare l'opzione SSO (single sign-on ) quando accedi con un ID federato. Non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti verrà richiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere il passcode monouso all'accesso.</dd>
 <dt>*-o*nome_organizzazione</dt>
 <dd>Il nome dell'organizzazione alla quale desideri effettuare l'accesso.</dd>
 <dt>*-s*nome_spazio</dt>
@@ -464,14 +462,15 @@ cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ## cf logs
 {: #cf_logs}
 
-Visualizza i flussi di log STDOUT e STDERR di un'applicazione.
+Visualizza i flussi di log
+STDOUT e STDERR di un'applicazione.
 
 ```
 cf logs nomeapplicazione [--recent]
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
 <dt>nomeapplicazione</dt>
@@ -498,7 +497,8 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Elenca tutti i servizi disponibili nel marketplace. I servizi elencati da questo comando sono mostrati anche nel catalogo {{site.data.keyword.Bluemix_notm}}.
+Elenca tutti
+i servizi disponibili nel marketplace. I servizi elencati da questo comando sono visualizzati anche nel catalogo {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
@@ -527,7 +527,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
 <dt>nome_applicazione (obbligatorio)</dt>
@@ -551,7 +551,8 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-s* nome_stack (facoltativo)</dt>
 <dd>Lo stack per l'esecuzione delle applicazioni. Uno stack è un file system precostruito che include il sistema operativo. Utilizza `cf stacks` per visualizzare gli stack disponibili in {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-t* timeout (facoltativo)</dt>
-<dd>Il tempo massimo in secondi per l'avvio dell'applicazione. Altri timeout lato server potrebbero sovrascrivere questo valore.</dd>
+<dd>Il tempo massimo in secondi per l'avvio dell'applicazione. Altri timeout lato server potrebbero
+sovrascrivere questo valore.</dd>
 <dt>*--no-hostname* (facoltativo)</dt>
 <dd>Associa il dominio di sistema {{site.data.keyword.Bluemix_notm}} a questa applicazione.</dd>
 <dt>*--no-manifest* (facoltativo)</dt>
@@ -583,7 +584,8 @@ cf push `my_app` -c "bash ./<run.sh>"
 ## cf scale
 {: #cf_scale}
 
-Visualizza o modifica il numero di istanze, il limite di spazio su disco e il limite di memoria per un'applicazione.
+Visualizza o modifica il numero di istanze,
+il limite di spazio su disco e il limite di memoria per un'applicazione.
 
 ```
 cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
@@ -591,7 +593,7 @@ cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
 <dt>nome_applicazione (obbligatorio)</dt>
@@ -624,7 +626,8 @@ cf scale appname -i 1234 -k 1G -m 1G
 ## cf services
 {: #cf_services}
 
-Elenca tutti i servizi disponibili nello spazio corrente.
+Elenca tutti i servizi
+disponibili nello spazio corrente.
 
 ```
 cf services
@@ -652,7 +655,7 @@ cf set-env nomeapplicazione nome_var valore_var
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
 <dt>nome_applicazione (obbligatorio)</dt>
@@ -665,7 +668,7 @@ cf set-env nomeapplicazione nome_var valore_var
 
 <strong>Esempi</strong>:
 
-Imposta una variabile di ambiente denominata `variable_a` con il valore `123` per l'applicazione denominata `my_app`.
+Imposta una variabile di ambiente denominata `variable_a` con un valore `123` per l'applicazione denominata `my_app`.
 ```
 cf set-env my_app variable_a 123
 ```
@@ -682,9 +685,9 @@ cf ssh
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-Per impostazione predefinita, l'accesso SSH è abilitato per le applicazioni Diego. Puoi utilizzare il comando `cf ssh-enabled` per verificare se l'accesso SSH è abilitato o il comando `cf enable-ssh` per abilitare l'accesso se è stato disabilitato.
+Per impostazione predefinita, l'accesso SSH è abilitato per le applicazioni Diego. Puoi utilizzare il comando `cf ssh-enabled` per verificare se l'accesso SSH è abilitato o il comando `cf enable-ssh` per abilitarlo se è disabilitato. 
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
 <dt>nomeapplicazione</dt>
@@ -728,7 +731,9 @@ $ cf ssh -N -T -L 7777:localhost:8888 my_app
 ## cf stacks
 {: #cf_stacks}
 
-Elenca tutti gli stack. Uno stack è un file system precostruito, compreso un sistema operativo che può eseguire le applicazioni.
+Elenca tutti
+gli stack. Uno stack è un file system precostruito, compreso un sistema operativo che può eseguire
+le applicazioni.
 
 ```
 cf stacks
@@ -756,7 +761,7 @@ cf stop nome_applicazione
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
 <dt>nome_applicazione (obbligatorio)</dt>
@@ -782,7 +787,7 @@ cf target [-o org_name] [-s space_name]
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
 <dl>
 <dt>-o *nome_organizzazione* (facoltativo)</dt>
@@ -803,7 +808,8 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Visualizza la versione dell'interfaccia riga di comando (CLI) Cloud Foundry.
+Visualizza la versione
+dell'interfaccia riga di comando cf.
 
 ```
 cf -v
@@ -814,7 +820,7 @@ cf -v
 
 <strong>Esempi</strong>:
 
-Visualizzare la versione dell'interfaccia riga di comando (CLI) Cloud Foundry.
+Visualizza la versione dell'interfaccia riga di comando cf.
 ```
 cf -v
 ```

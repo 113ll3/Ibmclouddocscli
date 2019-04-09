@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2018-10-04"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -63,12 +63,12 @@ cf uninstall-plugin vpn
 1. Aggiungi il repository {{site.data.keyword.Bluemix_notm}} nei repository della CLI Cloud Foundry. Utilizza il seguente comando:
 
 	```
-	cf add-plugin-repo IBm Cloud http://plugins.ng.bluemix.net
+	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
 	```
 2. Immetti il seguente comando:
 
 	```
-	cf install-plugin vpn -r IBM Cloud
+	cf install-plugin vpn -r bluemix
 	```
 ##Elenco di comandi del servizio VPN
 
@@ -112,13 +112,13 @@ Indirizzo IP endpoint remoto del tunnel VPN.
 
 **-i:** Stato dell'iniziatore. Valore predefinito: bi-directional.
 
-**-dpd-timeout:** Valore di timeout, espresso in secondi, dopo il quale la sessione viene terminata. Intervallo: 6 - 86400 secondi. Valore predefinito: 120 secondi. Il valore di timeout keepalive deve essere maggiore del valore di intervallo keepalive.
+**-dpd-timeout:** Valore di timeout in secondi dopo il quale la sessione viene terminata.  Intervallo: 6 - 86400 secondi. Valore predefinito: 120 secondi. Il valore di timeout keepalive deve essere maggiore del valore dell'intervallo keepalive.
 
 **-dpd-interval:** Intervallo keepalive in secondi. Invia dei messaggi keepalive all'intervallo configurato per verificare lo stato di attività del peer. Intervallo: 5-86399 secondi. Valore predefinito: 15 secondi
 
 **-ike:** Nome della politica IKE.
 
-**-ipsec:** Nome della politica IPSec.
+**-ipsec:** Nome della politica IPsec.
 
 
 ### cf vpn-create ike
@@ -153,7 +153,7 @@ Nome del gateway.
 
 ### cf vpn-create ipsec
 
-Crea una politica IPSec.
+Crea una politica IPsec.
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -162,7 +162,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p3}
 
 **policy name:**
-Nome della politica IPSec.
+Nome della politica IPsec.
 
 **gateway name:**
 Nome del gateway.
@@ -220,7 +220,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-Visualizza le informazioni sulle connessioni IPSec correnti.
+Visualizza le informazioni sulle connessioni IPsec correnti.
 
 ```
 cf vpn-show ipsecs
@@ -241,7 +241,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-Visualizza le informazioni su una connessione IPSec.
+Visualizza le informazioni su una connessione IPsec.
 
 ```
 cf vpn-show ipsec <policy name>
@@ -322,13 +322,13 @@ Chiave precondivisa.
 
 **-i:** Stato dell'iniziatore. Valore predefinito: bi-directional.
 
-**-dpd-timeout:** Valore di timeout, espresso in secondi, dopo il quale la sessione viene terminata. Intervallo: 6 - 86400 secondi. Valore predefinito: 120 secondi
+**-dpd-timeout:** Valore di timeout in secondi dopo il quale la sessione viene terminata. Intervallo: 6 - 86400 secondi. Valore predefinito: 120 secondi
 
 **-dpd-interval:** Intervallo keepalive in secondi. Invia dei messaggi keepalive all'intervallo configurato per verificare lo stato di attività del peer. Intervallo: 5-86399 secondi. Valore predefinito: 15 secondi
 
 **-ike:** Nome della politica IKE.
 
-**-ipsec:** Nome della politica IPSec.
+**-ipsec:** Nome della politica IPsec.
 
 
 ### cf vpn-update ike
@@ -362,7 +362,7 @@ Nome della politica IKE.
 
 ### cf vpn-update ipsec
 
-Aggiorna una politica IPSec.
+Aggiorna una politica IPsec.
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -371,7 +371,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p7}
 
 **policy name:**
-Nome della politica IPSec.
+Nome della politica IPsec.
 
 
 ##### Parametri facoltativi:

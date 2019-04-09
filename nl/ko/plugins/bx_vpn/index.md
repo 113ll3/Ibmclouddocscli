@@ -47,7 +47,7 @@ VPN 연결을 작성합니다.
 bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -96,7 +96,7 @@ IKE 정책을 작성합니다.
 bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -127,7 +127,7 @@ IPSec 정책을 작성합니다.
 bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -158,7 +158,7 @@ VPN 게이트웨이를 작성합니다.
 bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -185,7 +185,7 @@ bluemix vpn gateway-create my_gateway -t allContainerGroups
 bluemix vpn connections
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 
 ## bluemix vpn ikes
@@ -195,7 +195,7 @@ bluemix vpn connections
 bluemix vpn ikes
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 
 ## bluemix vpn ipsecs
@@ -205,7 +205,7 @@ bluemix vpn ikes
 bluemix vpn ipsecs
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 
 ## bluemix vpn gateways
@@ -215,7 +215,7 @@ bluemix vpn ipsecs
 bluemix vpn gateways
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 
 ## bluemix vpn connection
@@ -225,7 +225,7 @@ bluemix vpn gateways
 bluemix vpn connection CONNECTION_NAME
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -239,7 +239,7 @@ IKE 연결에 대한 정보를 표시합니다.
 bluemix vpn ike POLICY_NAME
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -253,7 +253,7 @@ IPSec 연결에 대한 정보를 표시합니다.
 bluemix vpn ipsec POLICY_NAME
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -267,7 +267,7 @@ bluemix vpn ipsec POLICY_NAME
 bluemix vpn gateway GATEWAY_NAME
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -281,7 +281,7 @@ bluemix vpn gateway GATEWAY_NAME
 bluemix vpn connection-delete CONNECTION_NAME
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -295,7 +295,7 @@ bluemix vpn connection-delete CONNECTION_NAME
 bluemix vpn ike-delete POLICY_NAME
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -309,7 +309,7 @@ bluemix vpn ike-delete POLICY_NAME
 bluemix vpn ipsec-delete POLICY_NAME
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -323,7 +323,7 @@ bluemix vpn ipsec-delete POLICY_NAME
 bluemix vpn gateway-delete GATEWAY_NAME
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -337,7 +337,7 @@ bluemix vpn gateway-delete GATEWAY_NAME
 bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -379,7 +379,7 @@ IKE 정책을 업데이트합니다.
 bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -403,7 +403,7 @@ IPSec 정책을 업데이트합니다.
 bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 
@@ -427,7 +427,7 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GR
 bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
-**전제조건**:  엔드포인트, 로그인, 대상 설정
+**전제조건**:  엔드포인트, 로그인, 대상
 
 **명령 옵션**:
 

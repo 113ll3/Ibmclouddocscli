@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2018-06-21"
+lastupdated: "2017-01-12"
 
 
 
@@ -116,7 +116,7 @@ Modifica la modalità dell'applicazione.
 ```
 cf mode <appName> <dev|normal>
 ```
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>dev</dt>
@@ -146,11 +146,11 @@ cf update-file <percorsoRemoto> <percorsoLocale> [opzioni_comando]
 ```
 
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
 
    <dl>
    <dt>expand</dt>
-   <dd>Indica se i file caricati devono essere estratti dal file .zip.</dd>
+   <dd>Indica se i file caricati devono essere estratti dal file zip.</dd>
    <dt>restart</dt>
    <dd>Riavvia il runtime dell'applicazione dopo che i file sono stati aggiornati.</dd>
    </dl>
@@ -167,7 +167,7 @@ cf delete-file <percorsoRemoto> [opzioni_comando]
 ```
 
 
-<strong>Opzioni del comando</strong>:
+<strong>Opzioni comando</strong>:
  <dl>
    <dt>restart</dt>
    <dd>Riavvia il runtime dell'applicazione dopo che i file sono stati aggiornati.</dd>
