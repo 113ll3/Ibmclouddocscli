@@ -2,17 +2,17 @@
 
 copyright:
 
-  years: 2018
+  years: 2018, 2019
 
 
-lastupdated: "2018-10-17"
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# IAM-API-Schlüssel, Identität und Zugriff
+# IAM-Zugriff, API-Schlüssel, Service-IDs und Zugriffsgruppen verwalten
 {: #ibmcloud_commands_iam}
 
 Verwenden Sie die folgenden Befehle, um API-Schlüssel, Service-IDs, Zugriffsgruppen und Zugriffs-/Berechtigungsrichtlinien für Benutzer, Services und Zugriffsgruppen zu verwalten.
@@ -101,7 +101,7 @@ Verwenden Sie die folgenden Befehle, um API-Schlüssel, Service-IDs, Zugriffsgru
   </tbody>
   </table>
 
-  ## ibmcloud iam service-ids
+## ibmcloud iam service-ids
 {: #ibmcloud_iam_service_ids}
 
 Alle Service-IDs auflisten
@@ -994,7 +994,7 @@ ibmcloud iam service-policies SERVICE_ID [--output FORMAT] [-f, --force]
   <dt>SERVICE_ID (erforderlich)</dt>
   <dd>Der Name oder die UUID der Service-ID</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>Ausgabeformat für Servicerichtlinien angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt</dd>
+  <dd>Ausgabeformat für Servicerichtlinien angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt</dd>
   <dt>-f, --force (optional)</dt>
   <dd>Die Servicerichtlinien ohne Bestätigung anzeigen</dd>
 </dl>
@@ -1030,7 +1030,7 @@ ibmcloud iam service-policy SERVICE_ID POLICY_ID [--output FORMAT] [-f, --force]
   <dt>POLICY_ID (erforderlich)</dt>
   <dd>Die ID der Servicerichtlinie<dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>Ausgabeformat für Servicerichtlinie angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt</dd>
+  <dd>Ausgabeformat für Servicerichtlinie angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt</dd>
   <dt>-f, --force (optional)</dt>
   <dd>Die Servicerichtlinie ohne Bestätigung anzeigen</dd>
 </dl>
