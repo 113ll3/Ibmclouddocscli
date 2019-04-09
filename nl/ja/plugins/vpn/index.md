@@ -60,7 +60,7 @@ cf uninstall-plugin vpn
 
 ### {{site.data.keyword.Bluemix_notm}} リポジトリーからのインストール
 
-1. {{site.data.keyword.Bluemix_notm}} リポジトリーを Cloud Foundry CLI のリポジトリーに追加します。 次のコマンドを使用します。
+1. {{site.data.keyword.Bluemix_notm}} リポジトリーを Cloud Foundry CLI のリポジトリーに追加します。次のコマンドを使用します。
 
 	```
 	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net

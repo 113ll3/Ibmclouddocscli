@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -29,9 +29,9 @@ Clique em uma opção para começar:
 
 <img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="Clique em um ícone para começar a usar rapidamente a CLI do {{site.data.keyword.Bluemix_notm}}." style="width:440px;" />
 <map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Fazer download da CLI do {{site.data.keyword.Bluemix_notm}} (Abre nova página)" title="Fazer download" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Introdução (Abre nova página)" title="Introdução" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Visualizar docs (Abre nova página)" title="Visualizar docs" shape="rect" coords="326, -10, 448, 218" />
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Fazer download da CLI do {{site.data.keyword.Bluemix_notm}}" title="Download" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Introdução." title="Introdução" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Visualizar docs" title="Visualizar docs" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
 ## {{site.data.keyword.dev_cli_notm}}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2017
 
-lastupdated: "2018-02-15"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-02-15"
 
 사설 네트워크 피어링 CLI 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 플러그인을 사용해야 합니다.
 
-시작하기 전에 {{site.data.keyword.Bluemix_notm}} 영역을 작성하십시오. 영역의 각 컨테이너에 다른 네트워크에서의 IP 주소가 있는지 확인하십시오.
+시작하기 전에 {{site.data.keyword.Bluemix_notm}} 영역을 작성하십시오. 영역의 각 컨테이너에 다른 네트워크에서의 IP 주소가 있는지 확인하십시오. 세부사항은 [자체 사설 IP 주소 사용 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip){: new_window}을 참조하십시오.
 
 **참고:** {{site.data.keyword.Bluemix_notm}} 영역에서 사설 네트워크 피어링을 사용한 후에 해당 영역을 삭제해야 하는 경우에는 우선 해당 영역에서 사설 네트워크 피어링 연결을 삭제하십시오.
 

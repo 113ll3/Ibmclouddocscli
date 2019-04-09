@@ -38,8 +38,8 @@ CLI 및 개발 도구
 	{: .topicgroup}
 	권장 개발 환경
 		[Eclipse Tools로 개발](../starters/deploy_eclipsetools.html)
-		[VSCode용 IBM Developer Tools](../cloudnative/idt/vscode.html)
-		[JetBrains용 IBM Developer Tools](../cloudnative/idt/jetbrains.html)
+		[IBM Developer Tools for VSCode](../cloudnative/idt/vscode.html)
+		[IBM Developer Tools for JetBrains](../cloudnative/idt/jetbrains.html)
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}

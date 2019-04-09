@@ -5,13 +5,13 @@ copyright:
   years: 2016,2018
 
 
-lastupdated: "2018-02-01"
+lastupdated: "2017-12-08"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Commandes de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl)
+# Commandes de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}} (bluemix sl) 
 {: #softlayer_cli}
 
 Le plug-in {{site.data.keyword.BluSoftlayer}} a été fusionné dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Vous n'avez plus besoin d'installer le plug-in.
@@ -88,7 +88,7 @@ Les commandes ci-après sont prises en charge. Utilisez la commande `bluemix sl`
  <table summary="Commandes générales de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}, classées par ordre alphabétique avec des liens vers des informations supplémentaires">
 <caption>Tableau 3. Commandes CDN de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}</caption>
  <thead>
- <th colspan="6">CDN de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}</th>
+ <th colspan="6">CDN de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}} </th>
  </thead>
  <tbody>
  <tr>
@@ -428,20 +428,19 @@ En l'absence d'organisation ou d'espace ciblé, utilisez 'bx target --cf ou bx t
 Astuce : utilisez 'bx cf <command>' pour exécuter l'interface CLI Cloud Foundry avec le contexte d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 ```
 
-```
 $ bx sl init
-Choose how to configure {{site.data.keyword.BluSoftlayer_notm}} infrastructure authentication:
-1. Login with {{site.data.keyword.BluSoftlayer_notm}} infrastructure user name and password/API key
-2. Use {{site.data.keyword.Bluemix_notm}} Single-Sign-On
-
-Enter a number: 2
-Softlayer API endpoint URL: [https://api.softlayer.com/mobile/v3.1]
-Setting account to: 278444 OK
-
-Softlayer API endpoint:    https://api.softlayer.com/mobile/v3.1
-Account ID:                278444
-User ID:                   12345678
-IMS token:                 xxxxxxxxxx
+Choisissez comment configurer l'infrastructure de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}} :
+1. Connexion à l'aide du nom d'utilisateur et du mot de passe ou de la clé d'API de l'infrastructure {{site.data.keyword.BluSoftlayer_notm}}
+2. Utilisation de la fonction {{site.data.keyword.Bluemix_notm}} Single-Sign-On
+Entrez un nombre> 2
+URL de point d'extrémité d'API Softlayer : [https://api.softlayer.com/mobile/v3.1]> 
+Compte : 278444
+OK
+                              
+Point d'extrémité d'API Softlayer : https://api.softlayer.com/mobile/v3.1   
+ID de compte :             278444   
+ID utilisateur :           12345678   
+Jeton IMS :                xxxxxxxxxx
 ```
 
 ### bluemix sl help
@@ -453,8 +452,8 @@ bluemix sl help
 
 ```
 
-### bluemix sl block access-authorize 
-{: #sl_block_access_authorize} 
+### bluemix sl block access-authorize
+{: #sl_block_access_authorize}
 
 Permet d'autoriser les hôtes à accéder à un volume donné.
 ```
@@ -479,10 +478,10 @@ bluemix sl block access-authorize 12345678 --virtual-id 87654321
 ```
 Cette commande autorise le serveur virtuel portant l'ID 87654321 à accéder au volume portant l'ID 12345678.
 
-### bluemix sl block access-list 
-{: #sl_block_access_list} 
+### bluemix sl block access-list
+{: #sl_block_access_list}
 
-Permet de répertorier les ACL.
+Permet de répertorier les listes de contrôle d'accès.
 ```
 bluemix sl block access-list VOLUME_ID [OPTIONS]
 ```
@@ -501,8 +500,8 @@ bluemix sl block access-list 12345678 --sortby id
 ```
 Cette commande répertorie tous les hôtes qui sont autorisés à accéder au volume portant l'ID 12345678 et les trie par ID.
 
-### bluemix sl block access-revoke 
-{: #sl_block_access_revoke} 
+### bluemix sl block access-revoke
+{: #sl_block_access_revoke}
 
 Permet de révoquer l'autorisation des hôtes à accéder à un volume donné.
 ```
@@ -527,8 +526,8 @@ bluemix sl block access-revoke 12345678 --virtual-id 87654321
 ```
 Cette commande révoque l'accès du serveur virtuel portant l'ID 87654321 au volume portant l'ID 12345678.
 
-### bluemix sl block replica-failback 
-{: #sl_block_replica_failback} 
+### bluemix sl block replica-failback
+{: #sl_block_replica_failback}
 
 Permet d'effectuer une opération de reprise par restauration d'un volume de blocs à partir d'une réplique.
 ```
@@ -542,8 +541,8 @@ bluemix sl block replica-failback 12345678
 ```
 Cette commande effectue une opération de reprise par restauration du volume portant l'ID 12345678.
 
-### bluemix sl block replica-failover 
-{: #sl_block_replica_failover} 
+### bluemix sl block replica-failover
+{: #sl_block_replica_failover}
 
 Permet d'effectuer une opération de reprise en ligne d'un volume de blocs vers le volume de réplique donné.
 ```
@@ -557,8 +556,8 @@ bluemix sl block replica-failover 12345678 87654321
 ```
 Cette commande effectue une opération de reprise en ligne du volume portant l'ID 12345678 vers le volume de réplique portant l'ID 87654321.
 
-### bluemix sl block replica-locations 
-{: #sl_block_replica_locations} 
+### bluemix sl block replica-locations
+{: #sl_block_replica_locations}
 
 Permet de répertorier les centres de données de réplication appropriés pour le volume indiqué.
 ```
@@ -572,10 +571,10 @@ bluemix sl block replica-locations 12345678
 ```
 Cette commande répertorie les centres de données de réplication appropriés pour le volume de blocs portant l'ID 12345678.
 
-### bluemix sl block replica-order 
-{: #sl_block_replica_order} 
+### bluemix sl block replica-order
+{: #sl_block_replica_order}
 
-Permet de commander un volume de réplique de stockage par blocs. 
+Permet de commander un volume de réplique de stockage par blocs.
 ```
 bluemix sl block replica-order VOLUME_ID [OPTIONS]
 ```
@@ -602,8 +601,8 @@ bluemix sl block replica-order 12345678 -s DAILY -d dal09 --tier 4 --os-type LIN
 ```
 Cette commande permet de commander une réplique pour le volume portant l'ID 12345678. Il s'agit d'une réplication quotidienne (option DAILY), située sur dal09 avec le niveau 4 et le type de système d'exploitation Linux.
 
-### bluemix sl block replica-partners 
-{: #sl_block_replica_partners} 
+### bluemix sl block replica-partners
+{: #sl_block_replica_partners}
 
 Permet de répertorier les volumes réplicants existants pour un volume de blocs.
 ```
@@ -617,10 +616,10 @@ bluemix sl block replica-partners 12345678
 ```
 Cette commande répertorie les volumes réplicants existants pour le volume de blocs portant l'ID 12345678.
 
-### bluemix sl block snapshot-cancel 
-{: #sl_block_snapshot_cancel} 
+### bluemix sl block snapshot-cancel
+{: #sl_block_snapshot_cancel}
 
-Permet d'annuler l'espace d'image instantanée d'un volume donné. 
+Permet d'annuler l'espace d'image instantanée d'un volume donné.
 ```
 bluemix sl block snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
@@ -641,10 +640,10 @@ bluemix sl block snapshot-cancel 12345678 --immediate -f
 ```
 Cette commande annule immédiatement l'image instantanée portant l'ID 12345678 sans demander de confirmation.
 
-### bluemix sl block snapshot-create 
-{: #sl_block_snapshot_create} 
+### bluemix sl block snapshot-create
+{: #sl_block_snapshot_create}
 
-Permet de créer une image instantanée sur un volume donné. 
+Permet de créer une image instantanée sur un volume donné.
 ```
 bluemix sl block snapshot-create VOLUME_ID [OPTIONS]
 ```
@@ -661,8 +660,8 @@ bluemix sl block snapshot-create 12345678 --note snapshotforbluemix
 ```
 Cette commande crée une image instantanée pour un volume portant l'ID 12345678 et avec la note d'ajout snapshotforbluemix.
 
-### bluemix sl block snapshot-disable 
-{: #sl_block_snapshot_disable} 
+### bluemix sl block snapshot-disable
+{: #sl_block_snapshot_disable}
 
 Permet de désactiver les images instantanées sur le planning spécifié pour un volume donné.
 ```
@@ -681,8 +680,8 @@ bluemix sl block snapshot-disable 12345678 -s DAILY
 ```
 Cette commande désactive la prise d'image instantanée quotidienne pour le volume portant l'ID 12345678.
 
-### bluemix sl block snapshot-enable 
-{: #sl_block_snapshot_enable} 
+### bluemix sl block snapshot-enable
+{: #sl_block_snapshot_enable}
 
 Permet d'activer les images instantanées sur le planning spécifié pour un volume donné.
 ```
@@ -709,10 +708,10 @@ bluemix sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Cette commande active la prise d'image instantanée pour le volume portant l'ID 12345678. L'image instantanée est prise à 2 heures tous les dimanches, et jusqu'à 5 images instantanées sont retenues.
 
-### bluemix sl block snapshot-delete 
-{: #sl_block_snapshot_delete} 
+### bluemix sl block snapshot-delete
+{: #sl_block_snapshot_delete}
 
-Permet de supprimer une image instantanée sur un volume donné. 
+Permet de supprimer une image instantanée sur un volume donné.
 ```
 bluemix sl block snapshot-delete SNAPSHOT_ID
 ```
@@ -724,10 +723,10 @@ bluemix sl block snapshot-delete 12345678
 ```
 Cette commande supprime une image instantanée portant l'ID 12345678.
 
-### bluemix sl block snapshot-list 
-{: #sl_block_snapshot_list} 
+### bluemix sl block snapshot-list
+{: #sl_block_snapshot_list}
 
-Permet de répertorier les images instantanées de stockage par blocs. 
+Permet de répertorier les images instantanées de stockage par blocs.
 ```
 bluemix sl block snapshot-list VOLUME_ID [OPTIONS]
 ```
@@ -744,10 +743,10 @@ bluemix sl block snapshot-list 12345678 --sortby id
 ```
 Cette commande répertorie toutes les images instantanées du volume portant l'ID 12345678 et les trie par ID.
 
-### bluemix sl block snapshot-order 
-{: #sl_block_snapshot_order} 
+### bluemix sl block snapshot-order
+{: #sl_block_snapshot_order}
 
-Permet de commander l'espace d'image instantanée pour un volume de stockage par blocs. 
+Permet de commander l'espace d'image instantanée pour un volume de stockage par blocs.
 ```
 bluemix sl block snapshot-order VOLUME_ID [OPTIONS]
 ```
@@ -772,8 +771,8 @@ bluemix sl block snapshot-order 12345678 -s 1000 -t 4
 ```
 Cette commande permet de commander de l'espace d'image instantanée pour le volume portant l'ID 12345678. La taille est de 1000 Go et le niveau est de 4 IOPS par Go.
 
-### bluemix sl block snapshot-restore 
-{: #sl_block_snapshot_restore} 
+### bluemix sl block snapshot-restore
+{: #sl_block_snapshot_restore}
 
 Permet de restaurer le volume de blocs à l'aide d'une image instantanée donnée.
 ```
@@ -787,10 +786,10 @@ bluemix sl block snapshot-restore 12345678 87654321
 ```
 Cette commande restaure un volume portant l'ID 12345678 à partir d'une image instantanée portant l'ID 87654321.
 
-### bluemix sl block volume-cancel 
-{: #sl_block_volume_cancel} 
+### bluemix sl block volume-cancel
+{: #sl_block_volume_cancel}
 
-Permet d'annuler un volume de stockage par blocs existant. 
+Permet d'annuler un volume de stockage par blocs existant.
 ```
 bluemix sl block volume-cancel VOLUME_ID [OPTIONS]
 ```
@@ -811,10 +810,10 @@ bluemix sl block volume-cancel 12345678 --immediate -f
 ```
 Cette commande annule immédiatement le volume portant l'ID 12345678 sans demander de confirmation.
 
-### bluemix sl block volume-list 
-{: #sl_block_volume_list} 
+### bluemix sl block volume-list
+{: #sl_block_volume_list}
 
-Permet de répertorier le stockage par blocs. 
+Permet de répertorier le stockage par blocs.
 ```
 bluemix sl block volume-list [OPTIONS]
 ```
@@ -841,10 +840,10 @@ bluemix sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Cette commande répertorie tous les volumes d'endurance pour le compte en cours qui se trouvent sur dal09, et les trie par capacité.
 
-### bluemix sl block volume-detail 
-{: #sl_block_volume_detail} 
+### bluemix sl block volume-detail
+{: #sl_block_volume_detail}
 
-Permet d'afficher les détails relatifs à un volume spécifié. 
+Permet d'afficher les détails d'un volume spécifié.
 ```
 bluemix sl block volume-detail VOLUME_ID
 ```
@@ -856,8 +855,8 @@ bluemix sl block volume-detail 12345678
 ```
 Cette commande affiche les détails relatifs au volume portant l'ID 12345678.
 
-### bluemix sl block volume-duplicate 
-{: #sl_block_volume_duplicate} 
+### bluemix sl block volume-duplicate
+{: #sl_block_volume_duplicate}
 
 Permet de commander un volume de blocs en dupliquant un volume existant.
 ```
@@ -886,10 +885,10 @@ bluemix sl block volume-duplicate 12345678
 ```
 Cette commande permet d'afficher la commande d'un nouveau volume en dupliquant le volume portant l'ID 12345678.
 
-### bluemix sl block volume-order 
-{: #sl_block_volume_order} 
+### bluemix sl block volume-order
+{: #sl_block_volume_order}
 
-Permet de commander un volume de stockage par blocs. 
+Permet de commander un volume de stockage par blocs.
 ```
 bluemix sl block volume-order [OPTIONS]
 ```
@@ -920,8 +919,8 @@ bluemix sl block volume-order --storage-type performance --size 1000 --iops 4000
 ```
 Cette commande permet de commander un volume de performance d'une taille de 1000 Go, dont le niveau IOPS est 4000, le type de système d'exploitation LINUX, et qui se trouve sur dal09.
 
-### bluemix sl block volume-options 
-{: #sl_block_volume_options} 
+### bluemix sl block volume-options
+{: #sl_block_volume_options}
 
 Permet de répertorier toutes les options pour la commande d'un stockage par blocs.
 ```
@@ -935,10 +934,10 @@ bluemix sl block volume-options
 ```
 Cette commande répertorie toutes les options relatives à la création d'un volume de stockage par blocs, y compris le type de stockage, la taille de volume, le type de système d'exploitation, la valeur IOPS, le niveau, le centre de données et la taille d'image instantanée.
 
-### bluemix sl cdn cancel 
-{: #sl_cdn_cancel} 
+### bluemix sl cdn cancel
+{: #sl_cdn_cancel}
 
-Permet d'annuler un compte CDN. 
+Permet d'annuler un compte CDN.
 ```
 bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
 ```
@@ -948,18 +947,18 @@ bluemix sl cdn cancel ACCOUNT_ID [OPTIONS]
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
-### bluemix sl cdn detail 
-{: #sl_cdn_detail} 
+### bluemix sl cdn detail
+{: #sl_cdn_detail}
 
-Permet d'afficher les détails d'un compte CDN. 
+Permet d'afficher les détails d'un compte CDN.
 ```
 bluemix sl cdn detail ACCOUNT_ID
 ```
 
-### bluemix sl cdn list 
-{: #sl_cdn_list} 
+### bluemix sl cdn list
+{: #sl_cdn_list}
 
-Permet de répertorier tous les comptes CDN. 
+Permet de répertorier tous les comptes CDN.
 ```
 bluemix sl cdn list [OPTIONS]
 ```
@@ -971,18 +970,18 @@ bluemix sl cdn list [OPTIONS]
 <dt>--order</dt>
 <dd>Filtrer par ID de commande.</dd>
 </dl>
-### bluemix sl cdn load 
-{: #sl_cdn_load} 
+### bluemix sl cdn load
+{: #sl_cdn_load}
 
 Permet de mettre en cache un ou plusieurs fichiers sur tous les noeuds périphériques.
 ```
 bluemix sl cdn load ACCOUNT_ID CONTENT_URL [CONTENT_URL...]
 ```
 
-### bluemix sl cdn order 
-{: #sl_cdn_order} 
+### bluemix sl cdn order
+{: #sl_cdn_order}
 
-Permet de commander un compte CDN. 
+Permet de commander un compte CDN.
 ```
 bluemix sl cdn order [OPTIONS]
 ```
@@ -996,18 +995,18 @@ bluemix sl cdn order [OPTIONS]
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
-### bluemix sl cdn options 
-{: #sl_cdn_options} 
+### bluemix sl cdn options
+{: #sl_cdn_options}
 
 Options de bande passante et de stockage pour la commande d'un compte CDN.
 ```
 bluemix sl cdn options
 ```
 
-### bluemix sl cdn origin-add 
-{: #sl_cdn_origin_add} 
+### bluemix sl cdn origin-add
+{: #sl_cdn_origin_add}
 
-Permet de créer un mappage d'extraction d'origine. 
+Permet de créer un mappage d'extraction d'origine.
 ```
 bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ```
@@ -1019,18 +1018,18 @@ bluemix sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 <dt>-c, --cname</dt>
 <dd>Type d'enregistrement CNAME facultatif à joindre au mappage.</dd>
 </dl>
-### bluemix sl cdn origin-list 
-{: #sl_cdn_origin_list} 
+### bluemix sl cdn origin-list
+{: #sl_cdn_origin_list}
 
-Permet de répertorier les mappages d'extraction d'origine. 
+Permet de répertorier les mappages d'extraction d'origine.
 ```
 bluemix sl cdn origin-list ACCOUNT_ID
 ```
 
-### bluemix sl cdn origin-remove 
-{: #sl_cdn_origin_remove} 
+### bluemix sl cdn origin-remove
+{: #sl_cdn_origin_remove}
 
-Permet de retirer un mappage d'extraction d'origine. 
+Permet de retirer un mappage d'extraction d'origine.
 ```
 bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ```
@@ -1040,12 +1039,12 @@ bluemix sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
-### bluemix sl cdn purge 
-{: #sl_cdn_purge} 
+### bluemix sl cdn purge
+{: #sl_cdn_purge}
 
-Permet de purger les fichiers mis en cache depuis tous les noeuds périphériques. 
+Permet de purger les fichiers mis en cache depuis tous les noeuds périphériques.
 ```
-bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
+bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...][OPTIONS]
 ```
 
 <strong>Options de commande</strong> :
@@ -1053,8 +1052,8 @@ bluemix sl cdn purge ACCOUNT_ID CONTENT_URL [CONTENT_URL...] [OPTIONS]
 <dt>-f, --force</dt>
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
-### bluemix sl file access-authorize 
-{: #sl_file_access_authorize} 
+### bluemix sl file access-authorize
+{: #sl_file_access_authorize}
 
 Permet d'autoriser les hôtes à accéder à un volume donné.
 ```
@@ -1081,10 +1080,10 @@ bluemix sl file access-authorize 12345678 --virtual-id 87654321
 ```
 Cette commande autorise le serveur virtuel portant l'ID 87654321 à accéder au volume portant l'ID 12345678.
 
-### bluemix sl file access-list 
-{: #sl_file_access_list} 
+### bluemix sl file access-list
+{: #sl_file_access_list}
 
-Permet de répertorier les ACL.
+Permet de répertorier les listes de contrôle d'accès.
 ```
 bluemix sl file access-list VOLUME_ID [OPTIONS]
 ```
@@ -1103,8 +1102,8 @@ bluemix sl file access-list 12345678 --sortby id
 ```
 Cette commande répertorie tous les hôtes qui sont autorisés à accéder au volume portant l'ID 12345678 et les trie par ID.
 
-### bluemix sl file access-revoke 
-{: #sl_file_access_revoke} 
+### bluemix sl file access-revoke
+{: #sl_file_access_revoke}
 
 Permet de révoquer l'autorisation des hôtes à accéder à un volume donné.
 ```
@@ -1131,8 +1130,8 @@ bluemix sl file access-revoke 12345678 --virtual-id 87654321
 ```
 Cette commande révoque l'accès du serveur virtuel portant l'ID 87654321 au volume portant l'ID 12345678.
 
-### bluemix sl file replica-failback 
-{: #sl_file_replica_failback} 
+### bluemix sl file replica-failback
+{: #sl_file_replica_failback}
 
 Permet d'effectuer une reprise par restauration d'un volume de fichier depuis une réplique.
 ```
@@ -1146,8 +1145,8 @@ bluemix sl file replica-failback 12345678
 ```
 Cette commande effectue une opération de reprise par restauration du volume portant l'ID 12345678.
 
-### bluemix sl file replica-failover 
-{: #sl_file_replica_failover} 
+### bluemix sl file replica-failover
+{: #sl_file_replica_failover}
 
 Permet d'effectuer un basculement d'un volume de fichier dans le volume de réplique donné.
 ```
@@ -1161,8 +1160,8 @@ bluemix sl file replica-failover 12345678 87654321
 ```
 Cette commande effectue une opération de reprise en ligne du volume portant l'ID 12345678 vers le volume de réplique portant l'ID 87654321.
 
-### bluemix sl file replica-locations 
-{: #sl_file_replica_locations} 
+### bluemix sl file replica-locations
+{: #sl_file_replica_locations}
 
 Permet de répertorier les centres de données de réplication appropriés pour le volume indiqué.
 ```
@@ -1176,10 +1175,10 @@ bluemix sl file replica-locations 12345678
 ```
 Cette commande répertorie les centres de données de réplication appropriés pour le volume de fichier portant l'ID 12345678.
 
-### bluemix sl file replica-order 
-{: #sl_file_replica_order} 
+### bluemix sl file replica-order
+{: #sl_file_replica_order}
 
-Permet de commander un volume de réplique de stockage par blocs. 
+Permet de commander un volume de réplique de stockage par blocs.
 ```
 bluemix sl file replica-order VOLUME_ID [OPTIONS]
 ```
@@ -1204,10 +1203,10 @@ bluemix sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
 Cette commande permet de commander une réplique pour le volume portant l'ID 12345678. Il s'agit d'une réplication quotidienne (option DAILY), située sur dal09 avec le niveau 4.
 
-### bluemix sl file replica-partners 
-{: #sl_file_replica_partners} 
+### bluemix sl file replica-partners
+{: #sl_file_replica_partners}
 
-Permet de répertorier les volumes réplicants existants pour un volume de blocs. 
+Permet de répertorier les volumes réplicants existants pour un volume de blocs.
 ```
 bluemix sl file replica-partners VOLUME_ID [OPTIONS]
 ```
@@ -1219,10 +1218,10 @@ bluemix sl file replica-partners 12345678
 ```
 Cette commande répertorie les volumes réplicants existants pour le volume de fichier portant l'ID 12345678.
 
-### bluemix sl file snapshot-cancel 
-{: #sl_file_snapshot_cancel} 
+### bluemix sl file snapshot-cancel
+{: #sl_file_snapshot_cancel}
 
-Permet d'annuler l'espace d'image instantanée d'un volume donné. 
+Permet d'annuler l'espace d'image instantanée d'un volume donné.
 ```
 bluemix sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
@@ -1243,10 +1242,10 @@ bluemix sl file snapshot-cancel 12345678 --immediate -f
 ```
 Cette commande annule immédiatement l'image instantanée portant l'ID 12345678 sans demander de confirmation.
 
-### bluemix sl file snapshot-create 
-{: #sl_file_snapshot_create} 
+### bluemix sl file snapshot-create
+{: #sl_file_snapshot_create}
 
-Permet de créer une image instantanée sur un volume donné. 
+Permet de créer une image instantanée sur un volume donné.
 ```
 bluemix sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
@@ -1263,8 +1262,8 @@ bluemix sl file snapshot-create 12345678 --note snapshotforbluemix
 ```
 Cette commande crée une image instantanée pour un volume portant l'ID 12345678 et avec la note d'ajout snapshotforbluemix.
 
-### bluemix sl file snapshot-disable 
-{: #sl_file_snapshot_disable} 
+### bluemix sl file snapshot-disable
+{: #sl_file_snapshot_disable}
 
 Permet de désactiver les images instantanées sur le planning spécifié pour un volume donné.
 ```
@@ -1283,8 +1282,8 @@ bluemix sl file snapshot-disable 12345678 -s DAILY
 ```
 Cette commande désactive la prise d'image instantanée quotidienne pour le volume portant l'ID 12345678.
 
-### bluemix sl file snapshot-enable 
-{: #sl_file_snapshot_enable} 
+### bluemix sl file snapshot-enable
+{: #sl_file_snapshot_enable}
 
 Permet d'activer les images instantanées sur le planning spécifié pour un volume donné.
 ```
@@ -1311,10 +1310,10 @@ bluemix sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 Cette commande active la prise d'image instantanée pour le volume portant l'ID 12345678. L'image instantanée est prise à 2 heures tous les dimanches, et jusqu'à 5 images instantanées sont retenues.
 
-### bluemix sl file snapshot-delete 
-{: #sl_file_snapshot_delete} 
+### bluemix sl file snapshot-delete
+{: #sl_file_snapshot_delete}
 
-Permet de supprimer une image instantanée sur un volume donné. 
+Permet de supprimer une image instantanée sur un volume donné.
 ```
 bluemix sl file snapshot-delete SNAPSHOT_ID
 ```
@@ -1326,10 +1325,10 @@ bluemix sl file snapshot-delete 12345678
 ```
 Cette commande supprime une image instantanée portant l'ID 12345678.
 
-### bluemix sl file snapshot-list 
-{: #sl_file_snapshot_list} 
+### bluemix sl file snapshot-list
+{: #sl_file_snapshot_list}
 
-Permet de répertorier les images instantanées de stockage de fichier. 
+Permet de répertorier les images instantanées de stockage de fichier.
 ```
 bluemix sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
@@ -1346,10 +1345,10 @@ bluemix sl file snapshot-list 12345678 --sortby id
 ```
 Cette commande répertorie toutes les images instantanées du volume portant l'ID 12345678 et les trie par ID.
 
-### bluemix sl file snapshot-order 
-{: #sl_file_snapshot_order} 
+### bluemix sl file snapshot-order
+{: #sl_file_snapshot_order}
 
-Permet de commander l'espace d'image instantanée pour un volume de stockage de fichiers. 
+Permet de commander l'espace d'image instantanée pour un volume de stockage de fichiers.
 ```
 bluemix sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
@@ -1374,8 +1373,8 @@ bluemix sl file snapshot-order 12345678 -s 1000 -t 4
 ```
 Cette commande permet de commander de l'espace d'image instantanée pour le volume portant l'ID 12345678. La taille est de 1000 Go et le niveau est de 4 IOPS par Go.
 
-### bluemix sl file snapshot-restore 
-{: #sl_file_snapshot_restore} 
+### bluemix sl file snapshot-restore
+{: #sl_file_snapshot_restore}
 
 Permet de restaurer le volume de fichier à l'aide d'une image instantanée donnée.
 ```
@@ -1389,10 +1388,10 @@ bluemix sl file snapshot-restore 12345678 87654321
 ```
 Cette commande restaure un volume portant l'ID 12345678 à partir d'une image instantanée portant l'ID 87654321.
 
-### bluemix sl file volume-cancel 
-{: #sl_file_volume_cancel} 
+### bluemix sl file volume-cancel
+{: #sl_file_volume_cancel}
 
-Permet d'annuler un volume de stockage de fichiers existant. 
+Permet d'annuler un volume de stockage de fichiers existant.
 ```
 bluemix sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
@@ -1413,10 +1412,10 @@ bluemix sl file volume-cancel 12345678 --immediate -f
 ```
 Cette commande annule immédiatement le volume portant l'ID 12345678 sans demander de confirmation.
 
-### bluemix sl file volume-list 
-{: #sl_file_volume_list} 
+### bluemix sl file volume-list
+{: #sl_file_volume_list}
 
-Permet de répertorier le stockage de fichiers. 
+Permet de répertorier le stockage de fichiers.
 ```
 bluemix sl file volume-list [OPTIONS]
 ```
@@ -1443,10 +1442,10 @@ bluemix sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 Cette commande répertorie tous les volumes d'endurance pour le compte en cours qui se trouvent sur dal09, et les trie par capacité.
 
-### bluemix sl file volume-detail 
-{: #sl_file_volume_detail} 
+### bluemix sl file volume-detail
+{: #sl_file_volume_detail}
 
-Permet d'afficher les détails relatifs à un volume spécifié. 
+Permet d'afficher les détails relatifs à un volume spécifié.
 ```
 bluemix sl file volume-detail VOLUME_ID
 ```
@@ -1458,8 +1457,8 @@ bluemix sl file volume-detail 12345678
 ```
 Cette commande affiche les détails relatifs au volume portant l'ID 12345678.
 
-### bluemix sl file volume-duplicate 
-{: #sl_file_volume_duplicate} 
+### bluemix sl file volume-duplicate
+{: #sl_file_volume_duplicate}
 
 Permet de commander un volume de fichiers en dupliquant un volume existant.
 ```
@@ -1488,10 +1487,10 @@ bluemix sl file volume-duplicate 12345678
 ```
 Cette commande permet d'afficher la commande d'un nouveau volume en dupliquant le volume portant l'ID 12345678.
 
-### bluemix sl file volume-order 
-{: #sl_file_volume_order} 
+### bluemix sl file volume-order
+{: #sl_file_volume_order}
 
-Permet de commander un volume de stockage de fichiers. 
+Permet de commander un volume de stockage de fichiers.
 ```
 bluemix sl file volume-order [OPTIONS]
 ```
@@ -1520,10 +1519,10 @@ bluemix sl file volume-order --storage-type performance --size 1000 --iops 4000 
 ```
 Cette commande permet de commander un volume de performance d'une taille de 1000 Go, dont le niveau IOPS est 4000, et qui se trouve sur dal09.
 
-### bluemix sl file volume-options 
-{: #sl_file_volume_options} 
+### bluemix sl file volume-options
+{: #sl_file_volume_options}
 
-Permet de répertorier toutes les options pour la commande d'un stockage par blocs. 
+Permet de répertorier toutes les options pour la commande d'un stockage par blocs.
 ```
 bluemix sl file volume-options
 ```
@@ -1535,8 +1534,8 @@ bluemix sl file volume-options
 ```
 Cette commande répertorie toutes les options relatives à la création d'un volume de stockage de fichiers, y compris le type de stockage, la taille de volume, la valeur IOPS, le niveau, le centre de données et la taille d'image instantanée.
 
-### bluemix sl dns import 
-{: #sl_dns_import} 
+### bluemix sl dns import
+{: #sl_dns_import}
 
 Permet d'importer une zone basée sur un fichier de zone BIND.
 ```
@@ -1555,8 +1554,8 @@ bluemix sl dns import ~/blumix.net.txt
 ```
 Cette commande importe une zone et ses enregistrements de ressource à partir d'un fichier : ~/blumix.net.txt.
 
-### bluemix sl dns record-add 
-{: #sl_dns_record_add} 
+### bluemix sl dns record-add
+{: #sl_dns_record_add}
 
 Permet d'ajouter un enregistrement de ressource dans une zone.
 ```
@@ -1575,8 +1574,8 @@ bluemix sl dns record-add bluemix.net ftp A 127.0.0.1 --ttl 86400
 ```
 Cette commande ajoute un enregistrement A à la zone bluemix.net. Son hôte est "ftp", ses données sont "127.0.0.1" et la valeur de durée de vie est de 86400 secondes.
 
-### bluemix sl dns record-edit 
-{: #sl_dns_record_edit} 
+### bluemix sl dns record-edit
+{: #sl_dns_record_edit}
 
 Permet de mettre à jour des enregistrements de ressource dans une zone.
 ```
@@ -1601,10 +1600,10 @@ bluemix sl dns record-edit bluemix.net --by-id 12345678 --data 127.0.0.2 --ttl 3
 ```
 Cette commande édite des enregistrements sous la zone bluemix.net dont l'ID est 12345678, et affecte la valeur "127.0.0.2" au paramètre de données et la valeur 3600 au paramètre de durée de vie.
 
-### bluemix sl dns record-list 
-{: #sl_dns_record_list} 
+### bluemix sl dns record-list
+{: #sl_dns_record_list}
 
-Permet de répertorier tous les enregistrements de ressource d'une zone. 
+Permet de répertorier tous les enregistrements de ressource d'une zone.
 ```
 bluemix sl dns record-list ZONE [OPTIONS]
 ```
@@ -1627,10 +1626,10 @@ bluemix sl dns record-list bluemix.net --record elasticsearch --type A --ttl 900
 ```
 Cette commande répertorie tous les enregistrements A sous la zone bluemix.net. La valeur du paramètre de filtrage par hôte est elasticsearch et la valeur du paramètre de durée de vie est 900 secondes.
 
-### bluemix sl dns record-remove 
-{: #sl_dns_record_remove} 
+### bluemix sl dns record-remove
+{: #sl_dns_record_remove}
 
-Permet de retirer un enregistrement de ressource d'une zone. 
+Permet de retirer un enregistrement de ressource d'une zone.
 ```
 bluemix sl dns record-remove RECORD_ID
 ```
@@ -1642,10 +1641,10 @@ bluemix sl dns record-remove 12345678
 ```
 Cette commande retire l'enregistrement de ressource portant l'ID 12345678.
 
-### bluemix sl dns zone-create 
-{: #sl_dns_zone_create} 
+### bluemix sl dns zone-create
+{: #sl_dns_zone_create}
 
-Permet de créer une zone. 
+Permet de créer une zone.
 ```
 bluemix sl dns zone-create ZONE
 ```
@@ -1657,10 +1656,10 @@ bluemix sl dns zone-create bluemix.net
 ```
 Cette commande crée une zone nommée bluemix.net.
 
-### bluemix sl dns zone-delete 
-{: #sl_dns_zone_delete} 
+### bluemix sl dns zone-delete
+{: #sl_dns_zone_delete}
 
-Permet de supprimer une zone. 
+Permet de supprimer une zone.
 ```
 bluemix sl dns zone-delete ZONE
 ```
@@ -1672,10 +1671,10 @@ bluemix sl dns zone-delete bluemix.net
 ```
 Cette commande supprime une zone nommée bluemix.net.
 
-### bluemix sl dns zone-list 
-{: #sl_dns_zone_list} 
+### bluemix sl dns zone-list
+{: #sl_dns_zone_list}
 
-Permet de répertorier toutes les zones sur votre compte. 
+Permet de répertorier toutes les zones sur votre compte.
 ```
 bluemix sl dns zone-list
 ```
@@ -1687,10 +1686,10 @@ bluemix sl dns zone-list
 ```
 Cette commande répertorie toutes les zones sous le compte en cours.
 
-### bluemix sl dns zone-print 
-{: #sl_dns_zone_print} 
+### bluemix sl dns zone-print
+{: #sl_dns_zone_print}
 
-Permet d'imprimer les enregistrements de ressource et de zone au format BIND. 
+Permet d'imprimer les enregistrements de ressource et de zone au format BIND.
 ```
 bluemix sl dns zone-print ZONE
 ```
@@ -1702,10 +1701,10 @@ bluemix sl dns zone-print bluemix.net
 ```
 Cette commande imprime une zone nommée bluemix.net au format BIND.
 
-### bluemix sl globalip create 
-{: #sl_globalip_create} 
+### bluemix sl globalip create
+{: #sl_globalip_create}
 
-Permet de créer une adresse IP globale. 
+Permet de créer une adresse IP globale.
 ```
 bluemix sl globalip create [OPTIONS]
 ```
@@ -1726,8 +1725,8 @@ bluemix sl globalip create --v6
 ```
 Cette commande crée une adresse IP V6.
 
-### bluemix sl globalip assign 
-{: #sl_globalip_assign} 
+### bluemix sl globalip assign
+{: #sl_globalip_assign}
 
 Permet d'affecter une adresse IP globale à un routeur ou un périphérique cible.
 ```
@@ -1741,10 +1740,10 @@ bluemix sl globalip assign 12345678 9.111.123.456
 ```
 Cette commande affecte une adresse IP portant l'ID 12345678 à une unité cible dont l'adresse IP est 9.111.123.456.
 
-### bluemix sl globalip cancel 
-{: #sl_globalip_cancel} 
+### bluemix sl globalip cancel
+{: #sl_globalip_cancel}
 
-Permet d'annuler une adresse IP globale. 
+Permet d'annuler une adresse IP globale.
 ```
 bluemix sl globalip cancel IDENTIFIER [OPTIONS]
 ```
@@ -1761,10 +1760,10 @@ bluemix sl globalip cancel 12345678
 ```
 Cette commande annule une adresse IP portant l'ID 12345678.
 
-### bluemix sl globalip list 
-{: #sl_globalip_list} 
+### bluemix sl globalip list
+{: #sl_globalip_list}
 
-Permet de répertorier toutes les adresses IP globale sur votre compte. 
+Permet de répertorier toutes les adresses IP globale sur votre compte.
 ```
 bluemix sl globalip list [OPTIONS]
 ```
@@ -1785,8 +1784,8 @@ bluemix sl globalip list --v4
 ```
 Cette commande répertorie toutes les adresses IP V4 sur le compte en cours.
 
-### bluemix sl globalip unassign 
-{: #sl_globalip_unassign} 
+### bluemix sl globalip unassign
+{: #sl_globalip_unassign}
 
 Permet d'annuler l'affectation d'une adresse IP globale à partir d'un routeur ou d'un périphérique cible.
 ```
@@ -1800,10 +1799,10 @@ bluemix sl globalip unassign 12345678
 ```
 Cette commande annule l'affectation d'une adresse IP portant l'ID 12345678 à partir de l'unité cible.
 
-### bluemix sl image delete 
-{: #sl_image_delete} 
+### bluemix sl image delete
+{: #sl_image_delete}
 
-Permet de supprimer une image. 
+Permet de supprimer une image.
 ```
 bluemix sl image delete IDENTIFIER
 ```
@@ -1811,10 +1810,10 @@ bluemix sl image delete IDENTIFIER
 ```
    bluemix sl image delete 12345678
 ```
-Cette commande supprime l'image portant l'ID `12345678`.
+Cette commande supprime l'image portant l'ID 12345678.
 
-### bluemix sl image detail 
-{: #sl_image_detail} 
+### bluemix sl image detail
+{: #sl_image_detail}
 
 Permet d'obtenir les détails relatifs à une image.
 ```
@@ -1826,8 +1825,8 @@ bluemix sl image detail IDENTIFIER
 ```
 Cette commande permet d'obtenir les détails relatifs à l'image portant l'ID 12345678.
 
-### bluemix sl image edit 
-{: #sl_image_edit} 
+### bluemix sl image edit
+{: #sl_image_edit}
 
 Permet d'éditer les détails relatifs à une image.
 ```
@@ -1848,12 +1847,12 @@ bluemix sl image edit IDENTIFIER [OPTIONS]
 ```  
 bluemix sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
-Cette commande édite l'image portant l'ID `12345678` en la nommant `ubuntu16` et en lui affectant la note `testing` ainsi que l'étiquette `staging`.
+Cette commande édite l'image portant l'ID '12345678' en la nommant 'ubuntu16' et en lui affectant la note 'testing' et l'étiquette 'staging'.
 
-### bluemix sl image list 
-{: #sl_image_list} 
+### bluemix sl image list
+{: #sl_image_list}
 
-Permet de répertorier toutes les images de votre compte.
+Permet de répertorier toutes les images sur votre compte.
 ```
 bluemix sl image list [OPTIONS]
 ```
@@ -1868,8 +1867,8 @@ bluemix sl image list [OPTIONS]
 <dd>Afficher uniquement les images privées.</dd>
 </dl>
 
-### bluemix sl ipsec cancel 
-{: #sl_ipsec_cancel} 
+### bluemix sl ipsec cancel
+{: #sl_ipsec_cancel}
 
 Permet d'annuler un contexte de tunnel VPN IPSec.
 ```
@@ -1886,16 +1885,16 @@ bluemix sl ipsec cancel CONTEXT_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### bluemix sl ipsec config 
-{: #sl_ipsec_config} 
+### bluemix sl ipsec config
+{: #sl_ipsec_config}
 
 Permet de demander la configuration d'un contexte de tunnel.
 ```
 bluemix sl ipsec config CONTEXT_ID [OPTIONS]
 ```
 
-### bluemix sl ipsec detail 
-{: #sl_ipsec_detail} 
+### bluemix sl ipsec detail
+{: #sl_ipsec_detail}
 
 Permet de répertorier les détails relatifs à un contexte de tunnel VPN IPSec.
 ```
@@ -1907,10 +1906,10 @@ bluemix sl ipsec detail CONTEXT_ID [OPTIONS]
 <dt>-i, --include</dt>
 <dd>Permet d'ajouter des ressources supplémentaires. Les options possibles sont les suivantes : at,is,rs,sr,ss.</dd>
 </dl>
-### bluemix sl ipsec list 
-{: #sl_ipsec_list} 
+### bluemix sl ipsec list
+{: #sl_ipsec_list}
 
-Permet de répertorier les contextes de tunnel VPN IPSec. 
+Permet de répertorier les contextes de tunnel VPN IPSec.
 ```
 bluemix sl ipsec list [OPTIONS]
 ```
@@ -1920,10 +1919,10 @@ bluemix sl ipsec list [OPTIONS]
 <dt>--order</dt>
 <dd>Filtrer par ID de commande utilisé pour acheter le contexte IPSec.</dd>
 </dl>
-### bluemix sl ipsec order 
-{: #sl_ipsec_order} 
+### bluemix sl ipsec order
+{: #sl_ipsec_order}
 
-Permet de commander un tunnel VPN IPSec. 
+Permet de commander un tunnel VPN IPSec.
 ```
 bluemix sl ipsec order [OPTIONS]
 ```
@@ -1934,10 +1933,10 @@ bluemix sl ipsec order [OPTIONS]
 <dd>Obligatoire. Nom abrégé du centre de données pour IPSec, par exemple, dal09.</dd>
 </dl>
 
-### bluemix sl ipsec subnet-add 
-{: #sl_ipsec_subnet_add} 
+### bluemix sl ipsec subnet-add
+{: #sl_ipsec_subnet_add}
 
-Permet d'ajouter un sous-réseau à un contexte de tunnel IPSEC. 
+Permet d'ajouter un sous-réseau à un contexte de tunnel IPSEC.
 ```
 bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 ```
@@ -1952,16 +1951,16 @@ bluemix sl ipsec subnet-add CONTEXT_ID [OPTIONS]
 <dd>Identificateur de sous-réseau à créer.</dd>
 </dl>
 
-### bluemix sl ipsec subnet-remove 
-{: #sl_ipsec_subnet_remove} 
+### bluemix sl ipsec subnet-remove
+{: #sl_ipsec_subnet_remove}
 
-Permet de retirer un sous-réseau d'un contexte de tunnel IPSEC. 
+Permet de retirer un sous-réseau d'un contexte de tunnel IPSEC.
 ```
 bluemix sl ipsec subnet-remove CONTEXT_ID SUBNET_ID SUBNET_TYPE [OPTIONS]
 ```
 
-### bluemix sl ipsec translation-add 
-{: #sl_ipsec_translation_add} 
+### bluemix sl ipsec translation-add
+{: #sl_ipsec_translation_add}
 
 Permet d'ajouter une conversion d'adresse à un tunnel IPSec.
 ```
@@ -1977,16 +1976,16 @@ bluemix sl ipsec translation-add CONTEXT_ID [OPTIONS]
 <dt>-n, --note</dt>
 <dd>Remarque.</dd>
 </dl>
-### bluemix sl ipsec translation-remove 
-{: #sl_ipsec_translation_remove} 
+### bluemix sl ipsec translation-remove
+{: #sl_ipsec_translation_remove}
 
-Permet de retirer une entrée de conversion d'un tunnel IPSec. 
+Permet de retirer une entrée de conversion d'un tunnel IPSec.
 ```
 bluemix sl ipsec translation-remove CONTEXT_ID TRANSLATION_ID [OPTIONS]
 ```
 
-### bluemix sl ipsec translation-update 
-{: #sl_ipsec_translation_update} 
+### bluemix sl ipsec translation-update
+{: #sl_ipsec_translation_update}
 
 Permet de mettre à jour une conversion d'adresse pour un tunnel IPSec.
 ```
@@ -2002,10 +2001,10 @@ bluemix sl ipsec translation-update CONTEXT_ID TRANSLATION_ID [OPTIONS]
 <dt>-n, --note</dt>
 <dd>Remarque.</dd>
 </dl>
-### bluemix sl ipsec update 
-{: #sl_ipsec_update} 
+### bluemix sl ipsec update
+{: #sl_ipsec_update}
 
-Permet de mettre à jour des propriétés de contexte de tunnel. 
+Permet de mettre à jour des propriétés de contexte de tunnel.
 ```
 bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 ```
@@ -2038,10 +2037,10 @@ bluemix sl ipsec update CONTEXT_ID [OPTIONS]
 <dd>Durée de vie de la clé phase 2. Les valeurs possibles sont comprises entre 120 et 172800.</dd>
 </dl>
 
-### bluemix sl loadbal cancel 
-{: #sl_loadbal_cancel} 
+### bluemix sl loadbal cancel
+{: #sl_loadbal_cancel}
 
-Permet d'annuler un équilibreur de charge existant. 
+Permet d'annuler un équilibreur de charge existant.
 ```
 bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
 ```
@@ -2052,8 +2051,8 @@ bluemix sl loadbal cancel LOADBAL_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### bluemix sl loadbal create 
-{: #sl_loadbal_create} 
+### bluemix sl loadbal create
+{: #sl_loadbal_create}
 
 Permet d'ajouter un équilibreur de charge en fonction de l'id renvoyé par create-options.
 ```
@@ -2066,26 +2065,26 @@ bluemix sl loadbal create PRICE_ID LOCATION [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### bluemix sl loadbal create-options 
-{: #sl_loadbal_create_options} 
+### bluemix sl loadbal create-options
+{: #sl_loadbal_create_options}
 
 Permet d'obtenir les options tarifaires afin de créer un équilibreur de charge.
 ```
 bluemix sl loadbal create-options
 ```
 
-### bluemix sl loadbal detail 
-{: #sl_loadbal_detail} 
+### bluemix sl loadbal detail
+{: #sl_loadbal_detail}
 
-Permet d'obtenir les détails relatifs à un équilibreur de charge. 
+Permet d'obtenir les détails relatifs à un équilibreur de charge.
 ```
 bluemix sl loadbal detail LOADBAL_ID
 ```
 
-### bluemix sl loadbal group-add 
-{: #sl_loadbal_group_add} 
+### bluemix sl loadbal group-add
+{: #sl_loadbal_group_add}
 
-Permet d'ajouter un nouveau service load_balancer. 
+Permet d'ajouter un nouveau service load_balancer.
 ```
 bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 ```
@@ -2102,10 +2101,10 @@ bluemix sl loadbal group-add LOADBAL_ID [OPTIONS]
 <dd>Obligatoire. ID de la méthode de routage. Exécutez 'bluemix sl loadbal routing-methods' pour rechercher un ID.</dd>
 </dl>
 
-### bluemix sl loadbal group-delete 
-{: #sl_loadbal_group_delete} 
+### bluemix sl loadbal group-delete
+{: #sl_loadbal_group_delete}
 
-Permet de supprimer un groupe de services d'équilibreur de charge existant. 
+Permet de supprimer un groupe de services d'équilibreur de charge existant.
 ```
 bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 ```
@@ -2116,10 +2115,10 @@ bluemix sl loadbal group-delete GROUP_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### bluemix sl loadbal group-edit 
-{: #sl_loadbal_group_edit} 
+### bluemix sl loadbal group-edit
+{: #sl_loadbal_group_edit}
 
-Permet d'éditer un groupe de services d'équilibreur de charge existant. 
+Permet d'éditer un groupe de services d'équilibreur de charge existant.
 ```
 bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 ```
@@ -2136,26 +2135,26 @@ bluemix sl loadbal group-edit LOADBAL_ID GROUP_ID [OPTIONS]
 <dd>Modifiez l'ID de la méthode de routage. Exécutez 'bluemix sl loadbal routing-methods' pour rechercher un ID.</dd>
 </dl>
 
-### bluemix sl loadbal group-reset 
-{: #sl_loadbal_group_reset} 
+### bluemix sl loadbal group-reset
+{: #sl_loadbal_group_reset}
 
-Permet de réinitialiser des connexions sur un groupe de services donné. 
+Permet de réinitialiser des connexions sur un groupe de services donné.
 ```
 bluemix sl loadbal group-reset LOADBAL_ID GROUP_ID
 ```
 
-### bluemix sl loadbal health-checks 
-{: #sl_loadbal_health_checks} 
+### bluemix sl loadbal health-checks
+{: #sl_loadbal_health_checks}
 
-Permet de répertorier les types de diagnostic d'intégrité. 
+Permet de répertorier les types de diagnostic d'intégrité.
 ```
 bluemix sl loadbal health-checks
 ```
 
-### bluemix sl loadbal list 
-{: #sl_loadbal_list} 
+### bluemix sl loadbal list
+{: #sl_loadbal_list}
 
-Permet de répertorier les équilibreurs de charge actifs. 
+Permet de répertorier les équilibreurs de charge actifs.
 ```
 bluemix sl loadbal list
 ```
@@ -2169,26 +2168,26 @@ bluemix sl loadbal list
 <dt>-p, --ip-address</dt>
 <dd>Filtrer par adresse IP.</dd>
 </dl>
-### bluemix sl loadbal routing-methods 
-{: #sl_loadbal_routing_methods} 
+### bluemix sl loadbal routing-methods
+{: #sl_loadbal_routing_methods}
 
-Permet de répertorier les méthodes de routage. 
+Permet de répertorier les méthodes de routage.
 ```
 bluemix sl loadbal routing-methods
 ```
 
-### bluemix sl loadbal routing-types 
-{: #sl_loadbal_routing_types} 
+### bluemix sl loadbal routing-types
+{: #sl_loadbal_routing_types}
 
-Permet de répertorier les types de routage. 
+Permet de répertorier les types de routage.
 ```
 bluemix sl loadbal routing-types
 ```
 
-### bluemix sl loadbal service-add 
-{: #sl_loadbal_service_add} 
+### bluemix sl loadbal service-add
+{: #sl_loadbal_service_add}
 
-Permet d'ajouter un nouveau service d'équilibreur de charge. 
+Permet d'ajouter un nouveau service d'équilibreur de charge.
 ```
 bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 ```
@@ -2207,10 +2206,10 @@ bluemix sl loadbal service-add LOADBAL_ID GROUP_ID [OPTIONS]
 <dd>Obligatoire. Adresse IP du service.</dd>
 </dl>
 
-### bluemix sl loadbal service-delete 
-{: #sl_loadbal_service_delete} 
+### bluemix sl loadbal service-delete
+{: #sl_loadbal_service_delete}
 
-Permet de supprimer un service d'équilibreur de charge existant. 
+Permet de supprimer un service d'équilibreur de charge existant.
 ```
 bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 ```
@@ -2221,10 +2220,10 @@ bluemix sl loadbal service-delete SERVICE_ID [OPTIONS]
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### bluemix sl loadbal service-edit 
-{: #sl_loadbal_service_edit} 
+### bluemix sl loadbal service-edit
+{: #sl_loadbal_service_edit}
 
-Permet d'éditer les propriétés d'un groupe de services. 
+Permet d'éditer les propriétés d'un groupe de services.
 ```
 bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 ```
@@ -2245,10 +2244,10 @@ bluemix sl loadbal service-edit LOADBAL_ID SERVICE_ID [OPTIONS]
 <dd>Modifiez l'adresse IP du service.</dd>
 </dl>
 
-### bluemix sl loadbal service-toggle 
-{: #sl_loadbal_service_toggle} 
+### bluemix sl loadbal service-toggle
+{: #sl_loadbal_service_toggle}
 
-Permet de basculer le statut d'un service d'équilibreur de charge existant. 
+Permet de basculer le statut d'un service d'équilibreur de charge existant.
 ```
 bluemix sl loadbal service-toggle SERVICE_ID
 ```
@@ -2259,10 +2258,10 @@ bluemix sl loadbal service-toggle SERVICE_ID
 <dd>Forcer l'opération sans qu'aucune confirmation ne soit demandée.</dd>
 </dl>
 
-### bluemix sl security sshkey-add 
-{: #sl_security_sshkey_add} 
+### bluemix sl security sshkey-add
+{: #sl_security_sshkey_add}
 
-Permet d'ajouter une nouvelle clé SSH. 
+Permet d'ajouter une nouvelle clé SSH.
 ```
 bluemix sl security sshkey-add LABEL [OPTIONS]
 ```
@@ -2283,10 +2282,10 @@ bluemix sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
 Cette commande ajoute une clé SSH à partir d'un fichier : ~/.ssh/id_rsa.pub with a note "mykey".
 
-### bluemix sl security sshkey-edit 
-{: #sl_security_sshkey_edit} 
+### bluemix sl security sshkey-edit
+{: #sl_security_sshkey_edit}
 
-Permet d'éditer une clé SSH. 
+Permet d'éditer une clé SSH.
 ```
 bluemix sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
@@ -2305,10 +2304,10 @@ bluemix sl security sshkey-edit 12345678 --label Bluemix --note testing
 ```
 Cette commande met à jour la clé SSH portant l'ID 12345678 et lui affecte le libellé "Bluemix" et la note "testing".
 
-### bluemix sl security sshkey-list 
-{: #sl_security_sshkey_list} 
+### bluemix sl security sshkey-list
+{: #sl_security_sshkey_list}
 
-Permet de répertorier les clés SSH sur votre compte. 
+Permet de répertorier les clés SSH sur votre compte.
 ```
 bluemix sl security sshkey-list [OPTIONS]
 ```
@@ -2325,8 +2324,8 @@ bluemix sl security sshkey-list --sortby label
 ```
 Cette commande répertorie toutes les clés SSH sur le compte en cours et les trie par libellé.
 
-### bluemix sl security sshkey-print 
-{: #sl_security_sshkey_print} 
+### bluemix sl security sshkey-print
+{: #sl_security_sshkey_print}
 
 Permet d'imprimer une clé SSH sur l'écran.
 ```
@@ -2345,10 +2344,10 @@ bluemix sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
 Cette commande affiche l'ID, le libellé et les notes de la clé SSH portant l'ID 12345678 et écrit la clé publique dans le fichier : ~/mykey.pub.
 
-### bluemix sl security sshkey-remove 
-{: #sl_security_sshkey_remove} 
+### bluemix sl security sshkey-remove
+{: #sl_security_sshkey_remove}
 
-Permet de retirer définitivement une clé SSH. 
+Permet de retirer définitivement une clé SSH.
 ```
 bluemix sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
@@ -2365,8 +2364,8 @@ bluemix sl security sshkey-remove 12345678 -f
 ```
 Cette commande retire la clé SSH portant l'ID 12345678 sans demander de confirmation.
 
-### bluemix sl security cert-add 
-{: #sl_security_cert_add} 
+### bluemix sl security cert-add
+{: #sl_security_cert_add}
 
 Permet d'ajouter et de télécharger les détails relatifs au certificat SSL.
 ```
@@ -2393,10 +2392,10 @@ bluemix sl security cert-add --crt ~/bluemix.net.cert --key ~/bluemix.net.key
 ```
 Cette commande ajoute le fichier certificat ~/bluemix.net.cert et le fichier de clé privée ~/bluemix.net.key pour le domaine bluemix.net.
 
-### bluemix sl security cert-edit 
-{: #sl_security_cert_edit} 
+### bluemix sl security cert-edit
+{: #sl_security_cert_edit}
 
-Permet d'éditer un certificat SSL. 
+Permet d'éditer un certificat SSL.
 ```
 bluemix sl security cert-edit IDENTIFIER [OPTIONS]
 ```
@@ -2421,8 +2420,8 @@ bluemix sl security cert-edit 12345678 --key ~/bluemix.net.key
 ```
 Cette commande édite le certificat portant l'ID 12345678 et met à jour sa clé privée avec le fichier ~/bluemix.net.key.
 
-### bluemix sl security cert-download 
-{: #sl_security_cert_download} 
+### bluemix sl security cert-download
+{: #sl_security_cert_download}
 
 Permet de télécharger des fichiers de certificat et de clé SSL.
 ```
@@ -2436,10 +2435,10 @@ bluemix sl security cert-download 12345678
 ```
 Cette commande télécharge 4 fichiers sur le répertoire de travail pour le certificat portant l'ID 12345678. Ces 4 fichiers sont : le fichier certificat, le fichier de demande de signature de certificat, le fichier de certificat intermédiaire et le fichier de clé privée.
 
-### bluemix sl security cert-list 
-{: #sl_security_cert_list} 
+### bluemix sl security cert-list
+{: #sl_security_cert_list}
 
-Permet de répertorier les certificats SSL présents sur votre compte. 
+Permet de répertorier les certificats SSL présents sur votre compte.
 ```
 bluemix sl security cert-list [OPTIONS]
 ```
@@ -2458,10 +2457,10 @@ bluemix sl security cert-list --status valid --sortby days_until_expire
 ```
 Cette commande répertorie tous les certificats valides sur le compte en cours et les trie par jours de validité.
 
-### bluemix sl security cert-remove 
-{: #sl_security_cert_remove} 
+### bluemix sl security cert-remove
+{: #sl_security_cert_remove}
 
-Permet de retirer un certificat SSL. 
+Permet de retirer un certificat SSL.
 ```
 bluemix sl security cert-remove IDENTIFIER [OPTIONS]
 ```
@@ -2478,10 +2477,10 @@ bluemix sl security cert-remove 12345678
 ```
 Cette commande retire le certificat portant l'ID 12345678.
 
-### bluemix sl subnet cancel 
-{: #sl_subnet_cancel} 
+### bluemix sl subnet cancel
+{: #sl_subnet_cancel}
 
-Permet d'annuler un sous-réseau. 
+Permet d'annuler un sous-réseau.
 ```
 bluemix sl subnet cancel IDENTIFIER [OPTIONS]
 ```
@@ -2498,10 +2497,10 @@ bluemix sl subnet cancel 12345678 -f
 ```
 Cette commande annule le sous-réseau portant l'ID 12345678 sans demander de confirmation.
 
-### bluemix sl subnet create 
-{: #sl_subnet_create} 
+### bluemix sl subnet create
+{: #sl_subnet_create}
 
-Permet d'ajouter un nouveau sous-réseau à votre compte. 
+Permet d'ajouter un nouveau sous-réseau à votre compte.
 ```
 bluemix sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
@@ -2522,10 +2521,10 @@ bluemix sl subnet create public 16 567
 ```
 Cette commande crée un sous-réseau public avec 16 adresses IPv4 et le place sur le réseau local virtuel portant l'ID 567.
 
-### bluemix sl subnet detail 
-{: #sl_subnet_detail} 
+### bluemix sl subnet detail
+{: #sl_subnet_detail}
 
-Permet d'obtenir les détails relatifs à un sous-réseau. 
+Permet d'obtenir les détails relatifs à un sous-réseau.
 ```
 bluemix sl subnet detail IDENTIFIER [OPTIONS]
 ```
@@ -2544,10 +2543,10 @@ bluemix sl subnet detail 12345678
 ```
 Cette commande affiche des informations détaillées sur le sous-réseau portant l'ID 12345678, y compris les informations sur les serveurs virtuels et les serveurs matériels.
 
-### bluemix sl subnet list 
-{: #sl_subnet_list} 
+### bluemix sl subnet list
+{: #sl_subnet_list}
 
-Permet de répertorier tous les sous-réseaux présents sur votre compte. 
+Permet de répertorier tous les sous-réseaux présents sur votre compte.
 ```
 bluemix sl subnet list [OPTIONS]
 ```
@@ -2578,8 +2577,8 @@ bluemix sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
 Cette commande répertorie les sous-réseaux IPv4 sur le compte en cours avec le centre de données dal09, le type de sous-réseau PRIMARY et l'espace de sous-réseau PUBLIC.
 
-### bluemix sl subnet lookup 
-{: #sl_subnet_lookup} 
+### bluemix sl subnet lookup
+{: #sl_subnet_lookup}
 
 Permet de rechercher une adresse IP et afficher les informations relatives au sous-réseau et aux périphériques associés.
 ```
@@ -2593,10 +2592,10 @@ bluemix sl subnet lookup 9.125.235.255
 ```
 Cette commande recherche l'enregistrement d'adresse IP portant l'adresse 9.125.235.255 et affiche ses informations de sous-réseau et d'unité.
 
-### bluemix sl vlan create 
-{: #sl_vlan_create} 
+### bluemix sl vlan create
+{: #sl_vlan_create}
 
-Permet de créer un nouveau réseau local virtuel. 
+Permet de créer un nouveau réseau local virtuel.
 ```
 bluemix sl vlan create [OPTIONS]
 ```
@@ -2623,10 +2622,10 @@ bluemix sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
 Cette commande crée un réseau local virtuel public sur le centre de données dal09 avec 16 adresses IP, et lui affecte le nom myvlan.
 
-### bluemix sl vlan cancel 
-{: #sl_vlan_cancel} 
+### bluemix sl vlan cancel
+{: #sl_vlan_cancel}
 
-Permet d'annuler un réseau local virtuel. 
+Permet d'annuler un réseau local virtuel.
 ```
 bluemix sl vlan cancel IDENTIFIER [OPTIONS]
 ```
@@ -2643,10 +2642,10 @@ bluemix sl vlan cancel 12345678 -f
 ```
 Cette commande annule le réseau local virtuel portant l'ID 12345678 sans demander de confirmation.
 
-### bluemix sl vlan detail 
-{: #sl_vlan_detail} 
+### bluemix sl vlan detail
+{: #sl_vlan_detail}
 
-Permet d'obtenir les détails relatifs à un réseau local virtuel. 
+Permet d'obtenir les détails relatifs à un réseau local virtuel.
 ```
 bluemix sl vlan detail IDENTIFIER [OPTIONS]
 ```
@@ -2665,10 +2664,10 @@ bluemix sl vlan detail 12345678  --no-vs --no-hardware
 ```
 Cette commande affiche les détails relatifs au réseau local virtuel portant l'ID 12345678 mais n'indique pas le serveur virtuel ou le serveur matériel.
 
-### bluemix sl vlan edit 
-{: #sl_vlan_edit} 
+### bluemix sl vlan edit
+{: #sl_vlan_edit}
 
-Permet d'éditer les détails relatifs à un réseau local virtuel. 
+Permet d'éditer les détails relatifs à un réseau local virtuel.
 ```
 bluemix sl vlan edit IDENTIFIER [OPTIONS]
 ```
@@ -2685,10 +2684,10 @@ bluemix sl vlan edit 12345678 -n myvlan-rename
 ```
 Cette commande met à jour le réseau local virtuel portant l'ID 12345678 et lui affecte le nouveau nom "myvlan-rename".
 
-### bluemix sl vlan list 
-{: #sl_vlan_list} 
+### bluemix sl vlan list
+{: #sl_vlan_list}
 
-Permet de répertorier tous les réseaux locaux virtuels présents sur votre compte. 
+Permet de répertorier tous les réseaux locaux virtuels présents sur votre compte.
 ```
 bluemix sl vlan list [OPTIONS]
 ```
@@ -2713,10 +2712,10 @@ bluemix sl vlan list -d dal09 --sortby number
 ```
 Cette commande répertorie tous les réseaux locaux virtuels sur le compte en cours pour le centre de données dal09, et les trie par numéro de réseau local virtuel.
 
-### bluemix sl vlan options 
-{: #sl_vlan_options} 
+### bluemix sl vlan options
+{: #sl_vlan_options}
 
-Permet de répertorier toutes les options de création de réseau local virtuel. 
+Permet de répertorier toutes les options de création de réseau local virtuel.
 ```
 bluemix sl vlan options
 ```
@@ -2726,12 +2725,12 @@ bluemix sl vlan options
 ```
 bluemix sl vlan options
 ```
-Cette commande répertorie toutes les options de création d'un réseau local virtuel, par exemple, type de réseau local virtuel, centre de données, taille de sous-réseau, routeurs, etc. 
+Cette commande répertorie toutes les options de création d'un réseau local virtuel, par exemple, type de réseau local virtuel, centre de données, taille de sous-réseau, routeurs, etc.
 
-### bluemix sl vs cancel 
-{: #sl_vs_cancel} 
+### bluemix sl vs cancel
+{: #sl_vs_cancel}
 
-Permet d'annuler une instance de serveur virtuel. 
+Permet d'annuler une instance de serveur virtuel.
 ```
 bluemix sl vs cancel IDENTIFIER [OPTIONS]
 ```
@@ -2748,8 +2747,8 @@ bluemix sl vs cancel 12345678
 ```
 Cette commande annule l'instance de serveur virtuel portant l'ID 12345678.
 
-### bluemix sl vs capture 
-{: #sl_vs_capture} 
+### bluemix sl vs capture
+{: #sl_vs_capture}
 
 Permet de capturer une instance de serveur virtuel dans une image.
 ```
@@ -2772,10 +2771,10 @@ bluemix sl vs capture 12345678 -n mybluemix --all --note testing
 ```
 Cette commande capture l'instance de serveur virtuel portant l'ID 12345678 avec tous les disques dans une image nommée "mybluemix" et la note "testing".
 
-### bluemix sl vs create 
-{: #sl_vs_create} 
+### bluemix sl vs create
+{: #sl_vs_create}
 
-Permet de créer une instance de serveur virtuel. 
+Permet de créer une instance de serveur virtuel.
 ```
 bluemix sl vs create [OPTIONS]
 ```
@@ -2842,10 +2841,10 @@ bluemix sl vs create -H myvsi -D bluemix.net -c 4 -m 4096 -d dal10 -o UBUNTU_16_
 ```
 Cette commande permet de commander une instance de serveur virtuel dont le nom d'hôte (hostname) est myvsi, le domaine (domain) bluemix.net, qui comporte 4 coeurs d'UC, 4096 Mo de mémoire, qui se trouve sur le centre de données dal10
 
-### bluemix sl vs options 
-{: #sl_vs_options} 
+### bluemix sl vs options
+{: #sl_vs_options}
 
-Permet de répertorier les options de création de l'instance de serveur virtuel. 
+Permet de répertorier les options de création de l'instance de serveur virtuel.
 ```
 bluemix sl vs options [OPTIONS]
 ```
@@ -2855,12 +2854,12 @@ bluemix sl vs options [OPTIONS]
 ```
 bluemix sl vs options
 ```
-Cette commande répertorie toutes les options de création d'une instance de serveur virtuel, par exemple, datacenters, cpu, memory, os, disk, network speed, etc. 
+Cette commande répertorie toutes les options de création d'une instance de serveur virtuel, par exemple, datacenters, cpu, memory, os, disk, network speed, etc.
 
-### bluemix sl vs credentials 
-{: #sl_vs_credentials} 
+### bluemix sl vs credentials
+{: #sl_vs_credentials}
 
-Permet de répertorier les données d'identification de l'instance de serveur virtuel. 
+Permet de répertorier les données d'identification de l'instance de serveur virtuel.
 ```
 bluemix sl vs credentials IDENTIFIER [OPTIONS]
 ```
@@ -2872,10 +2871,10 @@ bluemix sl vs credentials 12345678
 ```
 Cette commande répertorie toutes les paires nom d'utilisateur-mot de passe d'une instance de serveur virtuel portant l'ID 12345678.
 
-### bluemix sl vs detail 
-{: #sl_vs_detail} 
+### bluemix sl vs detail
+{: #sl_vs_detail}
 
-Permet d'obtenir les détails relatifs à une instance de serveur virtuel. 
+Permet d'obtenir les détails relatifs à une instance de serveur virtuel.
 ```
 bluemix sl vs detail IDENTIFIER [OPTIONS]
 ```
@@ -2894,10 +2893,10 @@ bluemix sl vs details 12345678
 ```
 Cette commande répertorie des informations détaillées sur l'instance de serveur virtuel portant l'ID 12345678.
 
-### bluemix sl vs dns-sync 
-{: #sl_vs_dns_sync} 
+### bluemix sl vs dns-sync
+{: #sl_vs_dns_sync}
 
-Permet de synchroniser les enregistrements DNS pour une instance de serveur virtuel. 
+Permet de synchroniser les enregistrements DNS pour une instance de serveur virtuel.
 ```
 bluemix sl vs dns-sync IDENTIFIER [OPTIONS]
 ```
@@ -2922,10 +2921,10 @@ bluemix sl vs dns-sync 12345678 --a-record --ttl 3600
 ```
 Cette commande synchronise l'enregistrement A (adresse IPv4) de l'instance de serveur virtuel portant l'ID 12345678 avec le serveur DNS et affecte la valeur 3600 au paramètre de durée de vie de cet enregistrement A.
 
-### bluemix sl vs edit 
-{: #sl_vs_edit} 
+### bluemix sl vs edit
+{: #sl_vs_edit}
 
-Permet d'éditer les détails relatifs à une instance de serveur virtuel. 
+Permet d'éditer les détails relatifs à une instance de serveur virtuel.
 ```
 bluemix sl vs edit IDENTIFIER [OPTIONS]
 ```
@@ -2954,10 +2953,10 @@ bluemix sl vs edit 12345678 -D bluemix.net -H myapp --tag testcli --public-speed
 ```
 Cette commande met à jour l'instance de serveur virtuel portant l'ID 12345678 et lui affecte la valeur "bluemix.net" comme domaine, la valeur "myapp" comme nom d'hôte et la valeur "testcli" comme étiquette
 
-### bluemix sl vs list 
-{: #sl_vs_list} 
+### bluemix sl vs list
+{: #sl_vs_list}
 
-Permet de répertorier les instances de serveur virtuel sur votre compte. 
+Permet de répertorier les instances de serveur virtuel sur votre compte.
 ```
 bluemix sl vs list [OPTIONS]
 ```
@@ -2994,10 +2993,10 @@ bluemix sl vs list --domain bluemix.net --hourly --sortby memory
 ```
 Cette commande répertorie toutes les instances de serveur virtuel facturées à l'heure sur le compte en cours, avec comme nom de domaine "bluemix.net", et les trie par mémoire.
 
-### bluemix sl vs pause 
-{: #sl_vs_pause} 
+### bluemix sl vs pause
+{: #sl_vs_pause}
 
-Permet de mettre en pause une instance de serveur virtuel active. 
+Permet de mettre en pause une instance de serveur virtuel active.
 ```
 bluemix sl vs pause IDENTIFIER [OPTIONS]
 ```
@@ -3014,10 +3013,10 @@ bluemix sl vs pause 12345678 -f
 ```
 Cette commande met en pause l'instance de serveur virtuel portant l'ID 12345678 sans demander de confirmation.
 
-### bluemix sl vs power-off 
-{: #sl_vs_power_off} 
+### bluemix sl vs power-off
+{: #sl_vs_power_off}
 
-Permet de mettre hors tension une instance de serveur virtuel active. 
+Permet de mettre hors tension une instance de serveur virtuel active.
 ```
 bluemix sl vs power-off IDENTIFIER [OPTIONS]
 ```
@@ -3038,10 +3037,10 @@ bluemix sl vs power-off 12345678 --soft
 ```
 Cette commande effectue une mise hors tension graduelle pour l'instance de serveur virtuel portant l'ID 12345678.
 
-### bluemix sl vs power-on 
-{: #sl_vs_power_on} 
+### bluemix sl vs power-on
+{: #sl_vs_power_on}
 
-Permet de mettre sous tension une instance de serveur virtuel. 
+Permet de mettre sous tension une instance de serveur virtuel.
 ```
 bluemix sl vs power-on IDENTIFIER [OPTIONS]
 ```
@@ -3058,8 +3057,8 @@ bluemix sl vs power-on 12345678
 ```
 Cette commande effectue une mise sous tension pour l'instance de serveur virtuel portant l'ID 12345678.
 
-### bluemix sl vs ready 
-{: #sl_vs_ready} 
+### bluemix sl vs ready
+{: #sl_vs_ready}
 
 Permet de vérifier si une instance de serveur virtuel est prête à être utilisée.
 ```
@@ -3078,10 +3077,10 @@ bluemix sl vs ready 12345678 --wait 30
 ```
 Cette commande vérifie le statut de l'instance de serveur virtuel portant l'ID 12345678 pour voir si elle est prête pour une utilisation en continu, et attend pendant 30 secondes au maximum.
 
-### bluemix sl vs reboot 
-{: #sl_vs_reboot} 
+### bluemix sl vs reboot
+{: #sl_vs_reboot}
 
-Permet de réamorcer une instance de serveur virtuel active. 
+Permet de réamorcer une instance de serveur virtuel active.
 ```
 bluemix sl vs reboot IDENTIFIER [OPTIONS]
 ```
@@ -3102,10 +3101,10 @@ bluemix sl vs reboot 12345678 --hard
 ```
 Cette commande effectue un réamorçage immédiat pour l'instance de serveur virtuel portant l'ID 12345678.
 
-### bluemix sl vs reload 
-{: #sl_vs_reload} 
+### bluemix sl vs reload
+{: #sl_vs_reload}
 
-Permet de recharger le système d'exploitation sur une instance de serveur virtuel. 
+Permet de recharger le système d'exploitation sur une instance de serveur virtuel.
 ```
 bluemix sl vs reload IDENTIFIER [OPTIONS]
 ```
@@ -3130,8 +3129,8 @@ bluemix sl vs reload 12345678
 ```
 Cette commande recharge le système d'exploitation en cours pour l'instance de serveur virtuel portant l'ID 12345678.
 
-### bluemix sl vs rescue 
-{: #sl_vs_rescue} 
+### bluemix sl vs rescue
+{: #sl_vs_rescue}
 
 Permet de réamorcer une instance de serveur serveur dans une image de secours.
 ```
@@ -3150,10 +3149,10 @@ bluemix sl vs rescue 12345678
 ```
 Cette commande réamorce l'instance de serveur virtuel portant l'ID 12345678 dans une image de secours.
 
-### bluemix sl vs resume 
-{: #sl_vs_resume} 
+### bluemix sl vs resume
+{: #sl_vs_resume}
 
-Permet de reprendre une instance de serveur virtuel mise en pause. 
+Permet de reprendre une instance de serveur virtuel mise en pause.
 ```
 bluemix sl vs resume IDENTIFIER [OPTIONS]
 ```
@@ -3170,10 +3169,10 @@ bluemix sl vs resume 12345678
 ```
 Cette commande effectue la reprise de l'instance de serveur virtuel portant l'ID 12345678.
 
-### bluemix sl vs upgrade 
-{: #sl_vs_upgrade} 
+### bluemix sl vs upgrade
+{: #sl_vs_upgrade}
 
-Permet de mettre à niveau une instance de serveur virtuel. 
+Permet de mettre à niveau une instance de serveur virtuel.
 ```
 bluemix sl vs upgrade IDENTIFIER [OPTIONS]
 ```

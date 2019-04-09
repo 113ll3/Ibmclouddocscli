@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -29,9 +29,9 @@ Cliquez sur une option pour commencer :
 
 <img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="Cliquez sur une icône pour débuter rapidement avec l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}." style="width:440px;" />
 <map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} (S'ouvre dans une nouvelle page)" title="Télécharger" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Initiation (S'ouvre dans une nouvelle page)" title="Initiation" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Afficher la documentation (S'ouvre dans une nouvelle page)" title="Afficher la documentation" shape="rect" coords="326, -10, 448, 218" />
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Télécharger l'interface CLI {{site.data.keyword.Bluemix_notm}} " title="Télécharger" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Commencer" title="Commencer" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Afficher les documents" title="Afficher les documents" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
 ## {{site.data.keyword.dev_cli_notm}}

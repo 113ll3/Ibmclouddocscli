@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2017-010-13"
 
 ---
 
@@ -34,7 +34,6 @@ Linux の場合は、インストーラー・パッケージをダウンロー�
   $ sudo ./install_bluemix_cli
 
   ```
-  {: codeblock}
   
 ## shell からのインストール
 {: #shell_install}

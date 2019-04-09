@@ -803,7 +803,7 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 </dl>
 
 
-다음 명령을 사용하여 이전 명령 매개변수 및 예제의 목록을 볼 수 있습니다.
+다음 명령을 사용하여 이전 명령 매개변수 및 예제의 목록을 볼 수 있습니다. 
 
 ```
 cf ba resource-metrics-history -help

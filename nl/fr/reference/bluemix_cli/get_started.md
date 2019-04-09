@@ -5,13 +5,12 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2017-08-20"
 
 ---
 
 
 {:shortdesc: .shortdesc}
-{:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
 
 
@@ -32,12 +31,11 @@ Pour vous initier à l'interface de ligne de commande {{site.data.keyword.Bluemi
 
 1. Exécutez le programme d'installation
    * Pour Mac OS et Windows, exécutez simplement le programme d'installation.
-   * Pour Linux, procédez à l'extraction du package et exécutez le script `install_bluemix_cli`.
+   * Pour Linux, procédez à l'extraction du package et exécutez le script `install_bluemix_cli`. 
 
-1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bx login`.
-  
+1. Ciblez un noeud final d'API et connectez-vous à {{site.data.keyword.Bluemix_notm}}
 
-  ![Exemple](example.gif){: gif}
+  ![Exemple](example.gif)
 
 Vous êtes maintenant prêt à gérer des ressources {{site.data.keyword.Bluemix_notm}}. Tapez `bluemix help` ou `bx help` pour voir les descriptions de commande. 
 

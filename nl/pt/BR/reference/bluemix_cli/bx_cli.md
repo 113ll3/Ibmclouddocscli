@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-02-14"
 # Comandos do {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Versão: 0.6.5
+Versão: 0.6.4
 
 A interface de linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} fornece um conjunto de comandos que são agrupados por namespace para que os usuários interajam com o {{site.data.keyword.Bluemix_notm}}.
 
@@ -204,11 +204,11 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
    <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service_policies)</td>
   </tr>
   <tr>
-   <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
-   <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
-   <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
-   <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
-   <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
+    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
+    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
+    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
+    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
+    <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
   </tr>
   <tr>
    <td>[bluemix iam user-policy](bx_cli.html#bluemix_iam_user_policy)</td>
@@ -216,14 +216,7 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
    <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
-  </tr>
-   <tr>
    <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
-   <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
-   <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
-   <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
-   <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
-  </tr>
 
   </tr>
   </tbody>
@@ -348,16 +341,16 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
-  <td>[bluemix catalog locations](bx_cli.html#bluemix_catalog_locations)</td>
-  <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
+  <td>[bluemix plugin repos
+](bx_cli.html#bluemix_plugin_repos)</td>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
   <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
  </tr>
  <tr>
   <td>[bluemix plugin repo-plugin](bx_cli.html#bluemix_plugin_repo_plugin)</td>
-  <td>[bluemix plugin list](bx_cli.html#bluemix_plugin_list)</td>
+  <td>[bluemix plugin list
+](bx_cli.html#bluemix_plugin_list)</td>
   <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
   <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
   <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
@@ -365,8 +358,7 @@ Os comandos para gerenciar a infraestrutura do {{site.data.keyword.BluSoftlayer_
  <tr>
   <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
-  <td>[bluemix billing resource-group-usage](bx_cli.html#bluemix_resource_group_usage)</td>
-  <td>[bluemix billing resource-instances-usage](bx_cli.html#bluemix_resource_instances_usage)</td>
+  <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  </tr>
  </tbody>
  </table>
@@ -583,7 +575,7 @@ bluemix login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KE
   <dt> --sso (opcional) </dt>
   <dd> Use uma senha única para efetuar login </dd>
   <dt> -u <i>USERNAME</i> (opcional)</dt>
-  <dd> Nome do usuário</dd>
+  <dd> Username</dd>
   <dt> -p <i>PASSWORD</i> (opcional)</dt>
   <dd> Senha</dd>
   <dt> -c <i>ACCOUNT_ID</i> (opcional) </dt>
@@ -685,7 +677,7 @@ bluemix regions
 Configure ou visualize a conta de destino, região, organização ou espaço.
 
 ```
-bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -696,8 +688,6 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
    <dd>Nome da região a ser alternada, como 'us-south' ou 'eu-gb'.</dd>
    <dt>-c <i>ACCOUNT_ID</i> (opcional)</dt>
    <dd>O ID da conta que será o destino.</dd>
-   <dt>-g <i>RESOURCE_GROUP</i> (opcional)</dt>
-   <dd>Nome do grupo de recursos.</dd>
    <dt>--cf</dt>
    <dd>Selecione de forma interativa o espaço e a organização de destino</dd>
    <dt>-o <i>ORG_NAME</i> (opcional)</dt>
@@ -1203,7 +1193,7 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 <strong>Opções de comando</strong>:
 <dl>
 <dt>USERNAME (necessário)</dt>
-<dd>Nome do usuário</dd>
+<dd>Username</dd>
 <dt>-c ACCOUNT_ID</dt>
 <dd>ID da conta. Se não especificado, o padrão será a conta atual.</dd>
 <dt>--force, -f (opcional)</dt>
@@ -1213,28 +1203,60 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix account user-invite
 {: #bluemix_account_user_invite}
 
-Convida um usuário para a conta. Essa operação pode ser executada somente pelo proprietário da conta.
+Convida um usuário para a conta com uma função de organização e espaço já configurada. Essa operação pode ser executada somente pelo proprietário da conta.
 
 ```
-bluemix account user-invite USER_EMAIL
+bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
 ```
+
+<strong>Pré-requisitos</strong>: Terminal, Login
+
+<strong>Opções de comando</strong>:
+<dl>
+   <dt>USER_NAME ((necessário))</dt>
+   <dd>O nome do usuário que está sendo convidado.</dd>
+   <dt>ORG_NAME (necessário)</dt>
+   <dd>O nome da organização para a qual esse usuário é convidado.</dd>
+   <dt>ORG_ROLE (necessário)</dt>
+   <dd>O nome da função de organização para a qual esse usuário é convidado. Por
+exemplo:
+   <ul>
+  <li>OrgManager: essa função pode convidar e gerenciar usuários, selecionar e mudar planos e configurar limites de gastos.</li>
+  <li>BillingManager: essa função pode criar e gerenciar a conta de cobrança e informações de pagamento.</li>
+  <li>OrgAuditor: essa função possui acesso somente leitura para informações e relatórios da organização.</li>
+  </ul> </dd>
+   <dt>SPACE_NAME (necessário)</dt>
+   <dd>O nome do espaço para o qual esse usuário é convidado.</dd>
+   <dt>SPACE_ROLE (necessário)</dt>
+   <dd>O nome do espaço para o qual esse usuário é convidado. O nome da função do espaço para o qual esse usuário é convidado. Por
+exemplo:
+   <ul>
+<li>SpaceManager: essa função pode convidar e gerenciar usuários e ativar recursos para um determinado espaço.</li>
+<li>SpaceDeveloper: essa função pode criar e gerenciar aplicativos e serviços, bem como ver logs e relatórios.</li>
+<li>SpaceAuditor: essa função pode visualizar logs, relatórios e configurações para o espaço.</li>
+</ul>
+</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Convide o usuário `Mary` para a organização `IBM` como função `OrgManager` e o espaço `Cloud` como função `SpaceAuditor`:
+
+```
+bluemix account user-invite Mary IBM OrgManager Cloud SpaceAuditor
+```
+<!-- Begin Staging URL vs Prod URL -->
+**Nota**: é possível configurar as funções de organização/espaço durante o convite usando a CLI, mas se você desejar configurar as outras permissões, precisará usar a UI. Para obter detalhes adicionais, veja [Designando o acesso de usuário](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess).
+<!-- End Staging URL vs Prod URL -->
 
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
 
-Reenviar o convite a um usuário (o proprietário da conta é necessário).
+Reenviar o convite a um usuário (é necessário ser o gerente da organização ou o proprietário da conta)
 
 ```
-bluemix account user-reinvite USER_EMAIL
+bluemix account user-reinvite USER_EMAIL ORG_NAME
 ```
-
-<strong>Pré-requisitos</strong>: Terminal, Login
-  
- <strong>Opções de comando</strong>:
- <dl>
-   <dt>USER_EMAIL (necessário)</dt>
-   <dd>O e-mail do usuário que está sendo convidado novamente.</dd>
- </dl>
 
 
 
@@ -2000,7 +2022,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 ## bluemix iam oauth-tokens
 {: #bluemix_iam_oauth_tokens}
 
-Recuperar e exibir os tokens OAuth para a sessão atual.
+Recuperar e exibir os tokens OAuth da sessão atual
 
 ```
 bluemix iam oauth-tokens
@@ -2014,7 +2036,7 @@ bluemix iam oauth-tokens
 
 <strong>Exemplos</strong>:
 
-Atualizar e exibir tokens OAuth.
+Atualizar e exibir tokens OAuth
 
 ```
 bluemix iam oauth-tokens
@@ -2023,7 +2045,7 @@ bluemix iam oauth-tokens
 ## bluemix iam dedicated-id-disconnect
 {: #bluemix_iam_dedicated_id_disconnect}
 
-Desconectar o IBMid público com o não IBMid dedicado.
+Desconectar o IBMid público com um não IBMid dedicado
 
 ```
 bluemix iam dedicated-id-disconnect [-f, --force]
@@ -2034,86 +2056,13 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 <strong>Opções de comando</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>Forçar desconexão sem confirmação.</dd>
+  <dd>Forçar desconexão sem confirmação</dd>
 </dl>
-
-## bluemix iam authorization-policy-create
-{: #bluemix_iam_authorization_policy_create}
- 
-Criar uma política de autorização para permitir que uma instância de serviço acesse outra instância de serviço.
-
-```
-bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
-```
-
-<strong>Pré-requisitos</strong>: Login, Destino
-
-<strong>Opções de comando</strong>:
-<dl>
-  <dt>SOURCE_SERVICE_NAME</dt>
-  <dd>Serviço de origem que pode ser autorizado para acesso.</dd>
-  <dt>TARGET_SERVICE_NAME</dt>
-  <dd>Serviço de destino que o serviço de origem pode ser autorizado a acessar.</dd>
-  <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>Nome da instância de serviço de origem, se não especificado, todas as instâncias do serviço de origem terão o acesso autorizado.</dd>
-  <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>Nome da instância de serviço de destino, se não especificado, todas as instâncias do serviço de destino terão o acesso autorizado.</dd>
-  <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>As funções que fornecem acesso para o serviço de origem.</dd>  
-</dl>
-
-## bluemix iam authorization-policy-delete
-{: #bluemix_iam_authorization_policy_delete}
-
-Excluir uma política de autorização.
-
-```
-bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
-```
-
-<strong>Pré-requisitos</strong>: Login, Destino
-
-<strong>Opções de comando</strong>:
-<dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>ID da política de autorização a ser excluído.</dd> 
- <dt>-f, --force</dt>
- <dd>Forçar exclusão sem confirmação.</dd> 
-</dl>
-
-## bluemix iam authorization-policy
-{: #bluemix_iam_authorization_policy}
-
-Mostrar os detalhes de uma política de autorização.
-
-```
-bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
-```
-
-<strong>Pré-requisitos</strong>: Login, Destino
-
-<strong>Opções de comando</strong>:
-<dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>ID da política de autorização a ser mostrado.</dd> 
-</dl>
-
-
-## bluemix iam authorization-policies
-{: #bluemix_iam_authorization_policies}
-
-Listar políticas de autorização sob a conta atual.
-
-```
-bluemix iam authorization-policies
-```
-
-<strong>Pré-requisitos</strong>: Login, Destino
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
 
-Listar grupos de recursos.
+Listar grupos de recursos
 
 ```
 bluemix resource groups [--default]
@@ -2124,12 +2073,12 @@ bluemix resource groups [--default]
 <strong>Opções de comando</strong>:
 <dl>
   <dt>--default</dt>
-  <dd>Obter grupo padrão da conta atual.</dd>
+  <dd>Obter grupo padrão da conta atual</dd>
 </dl>
 
 <strong>Exemplos</strong>:
 
-Listar todos os grupos de recursos sob a conta destinada atualmente:
+Liste todos os grupos de recursos sob a conta destinada atualmente:
 
 ```
 bluemix resource groups
@@ -2144,7 +2093,7 @@ bluemix resource groups --default
 ## bluemix resource group
 {: #bluemix_resource_group}
 
-Mostrar detalhes de um grupo de recursos.
+Mostrar detalhes de um grupo de recursos
 
 ```
 bluemix resource group NAME [--id]
@@ -2155,7 +2104,7 @@ bluemix resource group NAME [--id]
 <strong>Opções de comando</strong>:
 <dl>
   <dt>NAME (necessário)</dt>
-  <dd>Nome do grupo de recursos.</dd>
+  <dd>Nome do grupo de recursos</dd>
   <dt>--id</dt>
   <dd>Mostrar somente o ID</dd>
 </dl>
@@ -2171,14 +2120,14 @@ bluemix resource group example-group
 Mostre apenas o ID do grupo de recursos `example-group`:
 
 ```
-bluemix resource group example-group --id
+bluemix resourxce group example-group --id
 ```
 
 
 ## bluemix resource group-update
 {: #bluemix_resource_group_update}
 
-Atualizar um grupo de recursos existente.
+Atualizar um grupo de recursos existente
 
 ```
 bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
@@ -2189,13 +2138,13 @@ bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_
 <strong>Opções de comando</strong>:
 <dl>
   <dt>NAME (necessário)</dt>
-  <dd>Nome do grupo de recursos de destino.</dd>
+  <dd>Nome do grupo de recursos de destino</dd>
   <dt>-n, --name</dt>
-  <dd>Novo nome do grupo de recursos.</dd>
+  <dd>Novo nome do grupo de recursos</dd>
   <dt>-q, --quota</dt>
-  <dd>Nome da nova definição de cota.</dd>
+  <dd>Nome da nova definição de cota</dd>
   <dt>-f</dt>
-  <dd>Forçar atualização sem confirmação.</dd>
+  <dd>Forçar atualização sem confirmação</dd>
 </dl>
 
 <strong>Exemplos</strong>:
@@ -2215,7 +2164,7 @@ bluemix resource group-update example-group -q free
 ## bluemix resource quotas
 {: #bluemix_resource_quotas}
 
-Listar todas as definições de cota.
+Listar todas as definições de cota
 
 ```
 bluemix resource quotas
@@ -2779,7 +2728,7 @@ bluemix resource service-instance-create my-service-instance test-service test-s
 Atualizar a instância de serviço
 
 ```
-bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login, Destino
@@ -2794,6 +2743,8 @@ bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_N
   <dd>Novas tags</dd>
   <dt>--service-plan-id</dt>
   <dd>Novo ID do plano de serviço</dd>
+  <dt>--update-time</dt>
+  <dd>Tempo em segundos desde a época em que o registro debitável deve entrar em vigor</dd>
   <dt>-f, --force</dt>
   <dd>Forçar atualização sem confirmação</dd>
 </dl>
@@ -3228,7 +3179,7 @@ bluemix catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --pr
   <dt>--sort-by</dt>
   <dd>Propriedade pela qual classificar</dd>
   <dt>--col</dt>
-  <dd>Especificar colunas adicionais para a tabela. Atualmente "grupo", "provedor" e "tags"</dd>
+  <dd>Especifique colunas adicionais para a tabela. Atualmente "grupo", "provedor" e "tags"</dd>
   <dt>--reverse</dt>
   <dd>Se a ordem de classificação deve ser revertida</dd>
   <dt>--json</dt>
@@ -3548,36 +3499,10 @@ Crie um aplicativo `my-python-app` baseado no modelo `pythonHelloWorld` sem iní
 bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-## bluemix catalog locations
-{: #bluemix_catalog_locations}
-
-Obter um subconjunto de opção das regiões em sua opção de formato.
-
-```
-bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
-```
-
-<strong>Opções de comando</strong>:
-
-<dl>
-  <dt>-i, --id</dt>
-  <dd>Especificar geografia por ID.</dd>
-  <dt>-k, --kind</dt>
-  <dd>Obter uma lista de entradas para o tipo especificado.</dd>
-  <dt>--col</dt>
-  <dd>Especificar colunas adicionais para a tabela. Atualmente "grupo", "provedor" e "tags".</dd>
-  <dt>--json</dt>
-  <dd>Saída da resposta JSON original.</dd>
-  <dt>--global</dt>
-  <dd>Operar em um escopo global.</dd>
-  <dt>--csv</dt>
-  <dd>Arquivo CSV de saída</dd>
-</dl>
-
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-Mostrar o uso e os custos mensais da conta atual.
+Mostrar o uso mensal e os custos de sua conta.
 
 ```
 bluemix billing account-usage [-d YYYY-MM] [--json]
@@ -3589,14 +3514,14 @@ bluemix billing account-usage [-d YYYY-MM] [--json]
 
 <dl>
   <dt>-d MONTH_DATE (opcional)</dt>
-  <dd>Exibir dados para o mês e a data especificados usando o formato AAAA-MM. Se não especificado, o uso do mês atual será mostrado.</dd>
+  <dd>Exibir dados para mês e especificando data usando o formato AAAA-MM. Se não especificado, o uso do mês atual será mostrado.</dd>
   <dt>--json (opcional)</dt>
   <dd>Exibir o resultado de uso em formato JSON.</dd>
 </dl>
 
 <strong>Exemplos</strong>:
 
-Mostrar o relatório de uso e de custo da conta atual em 2016-06:
+Mostrar o uso da minha conta e relatório de custo em 06/2016:
 
 ```
 bluemix billing account-usage -d 2016-06
@@ -3605,10 +3530,10 @@ bluemix billing account-usage -d 2016-06
 ## bluemix billing org-usage
 {: #bluemix_billing_org_usage}
 
-Mostrar o uso mensal de uma organização. Essa operação pode ser executada pelo proprietário da conta ou pelo gerenciador de faturamento da organização.
+Mostrar detalhes de uso mensal de uma organização. Essa operação pode ser executada somente por um gerente de faturamento da organização.
 
 ```
-bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+bluemix billing org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -3619,20 +3544,22 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dt>ORG_NAME (necessário)</dt>
   <dd>Nome da organização.</dd>
   <dt>-d MONTH_DATE (opcional)</dt>
-  <dd>Exibir dados para o mês e a data especificados usando o formato AAAA-MM. Se não especificado, o uso do mês atual será mostrado.</dd>
+  <dd>Exibir dados para mês e data especificada usando o formato AAAA-MM. Se não especificado, o uso do mês atual será mostrado.</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>Nome da região que hospeda a organização. Se configurado como 'all', o uso da organização em todas as regiões será mostrado.</dd>
   <dt>--json (opcional)</dt>
   <dd>Exibir o resultado de uso em formato JSON.</dd>
 </dl>
 
 
 
-## bluemix billing resource-group-usage
-{: #bluemix_billing_resource_group_usage}
+## bluemix billing orgs-usage-summary
+{: #bluemix_billing_orgs_usage_summary}
 
-Mostrar o uso mensal de um grupo de recursos. Essa operação pode ser executada pelo proprietário da conta ou pelo gerenciador de faturamento do grupo de recursos.
+Mostrar o resumo de uso mensal para organizações na minha conta.
 
 ```
-bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+bluemix billing orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -3640,43 +3567,19 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 <strong>Opções de comando</strong>:
 
 <dl>
-  <dt>GROUP_NAME (obrigatório)</dt>
-  <dd>Nome do grupo de recursos.</dd>
   <dt>-d MONTH_DATE (opcional)</dt>
-  <dd>Exibir dados para o mês e a data especificados usando o formato AAAA-MM. Se não especificado, o uso do mês atual será mostrado.</dd>
+  <dd>Exibir dados para mês e data especificada usando o formato AAAA-MM. Se não especificado, o uso do mês atual será mostrado.</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>Nome da região que hospeda as organizações. Se configurado como 'all', o resumo de uso das organizações em todas as regiões será mostrado.</dd>
   <dt>--json (opcional)</dt>
   <dd>Exibir o resultado de uso em formato JSON.</dd>
 </dl>
-
-## bluemix billing resource-instances-usage
-{: #bluemix_billing_resource_instances_usage}
- 
- Mostrar o uso mensal das instâncias de recursos sob a conta atual
- 
- ```
- bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
- ```
- 
- <strong>Pré-requisitos</strong>: Terminal, Login
- 
- <strong>Opções de comando</strong>:
- 
- <dl>
-   <dt>-o ORG_NAME (opcional)</dt>
-   <dd>Filtrar instâncias por organização.</dd>
-   <dt>-g GROUP_NAME</dt>
-   <dd>Filtrar instância por grupo de recursos.</dd>
-   <dt>-d MONTH_DATE (opcional)</dt>
-   <dd>Exibir dados para mês e data especificada usando o formato AAAA-MM. Se não especificado, o uso do mês atual será mostrado.</dd>
-   <dt>--json (opcional)</dt>
-   <dd>Exibir o resultado de uso em formato JSON.</dd>
- </dl>
 
 
 ## bluemix plugin repos
 {: #bluemix_plugin_repos}
 
-Listar todos os repositórios de plug-in que estão registrados na CLI do {{site.data.keyword.Bluemix_notm}}.
+Liste todos os repositórios de plug-in que estão registrados na CLI do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix plugin repos
@@ -3688,7 +3591,7 @@ bluemix plugin repos
 ## bluemix plugin repo-add
 {: #bluemix_plugin_repo_add}
 
-Incluir um novo repositório de plug-in na CLI do {{site.data.keyword.Bluemix_notm}}.
+Inclua um novo repositório de plug-in na CLI do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix plugin repo-add REPO_NAME REPO_URL
@@ -3708,7 +3611,7 @@ bluemix plugin repo-add REPO_NAME REPO_URL
 
 <strong>Exemplos</strong>:
 
-Incluir o repositório de plug-in oficial da CLI do {{site.data.keyword.Bluemix_notm}} como `bluemix-repo`:
+Inclua o repositório de plug-in oficial do {{site.data.keyword.Bluemix_notm}} CLI como `bluemix-repo`:
 
 ```
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
@@ -3718,7 +3621,7 @@ bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ## bluemix plugin repo-remove
 {: #bluemix_plugin_repo_remove}
 
-Remover um repositório de plug-in da CLI do {{site.data.keyword.Bluemix_notm}}.
+Remova um repositório de plug-in da CLI do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix plugin repo-remove REPO_NAME
@@ -3744,7 +3647,7 @@ bluemix plugin repo-remove bluemix-repo
 ## bluemix plugin repo-plugins
 {: #bluemix_plugin_repo_plugins}
 
-Listar todos os plug-ins disponíveis em todos os repositórios incluídos ou em um repositório específico.
+Liste todos os plug-ins disponíveis em todos os repositórios incluídos ou um repositório específico.
 
 ```
 bluemix plugin repo-plugins [-r REPO_NAME]
@@ -3756,18 +3659,18 @@ bluemix plugin repo-plugins [-r REPO_NAME]
 
    <dl>
    <dt>-r <i>REPO_NAME</i> (opcional)</dt>
-   <dd>Listar apenas os plug-ins no repositório especificado.</dd>
+   <dd>Liste somente os plug-ins no repositório especificado.</dd>
    </dl>
 
 <strong>Exemplos</strong>:
 
-Listar todos os plug-ins em todos os repositórios incluídos:
+Liste todos os plug-ins em todos os repositórios incluídos:
 
 ```
 bluemix plugin repo-plugins
 ```
 
-Listar todos os plug-ins no repositório `bluemix-repo`:
+Liste todos os plug-ins no repositório `bluemix-repo`:
 
 ```
 bluemix plugin repo-plugins -r bluemix-repo
@@ -3793,23 +3696,23 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
 <strong>Exemplos</strong>:
 
-Listar detalhes do plug-in "container-service" no repositório 'Bluemix':
+Liste detalhes do plug-in "IBM-Containers" no repositório "sample-repo":
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-Listar detalhes do plug-in "container-service" no repositório padrão, 'Bluemix'
+Listar detalhes do plug-in "IBM-Containers" no repositório padrão
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
 
 ## bluemix plugin list
 {: #bluemix_plugin_list}
 
-Listar todos os plug-ins instalados na CLI do {{site.data.keyword.Bluemix_notm}}.
+Liste todos os plug-ins instalados na CLI do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix plugin list
@@ -3832,18 +3735,11 @@ bluemix plugin show PLUGIN-NAME
 ## bluemix plugin install
 {: #bluemix_plugin_install}
 
-Instalar a versão específica de plug-in na CLI do {{site.data.keyword.Bluemix_notm}} por meio do caminho ou do repositório especificado.
+Instale a versão específica de plug-in na CLI do {{site.data.keyword.Bluemix_notm}} a partir do caminho ou repositório especificado.
 
 ```
 bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
-
-```
-bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
-```
-
-Se nenhum repositório for especificado, o comando usará o repositório de plug-in padrão, 'Bluemix'.
-Se nenhuma versão for especificada, o comando selecionará a versão mais recente disponível para instalação.
 
 <strong>Pré-requisitos</strong>: Nenhum
 
@@ -3851,54 +3747,46 @@ Se nenhuma versão for especificada, o comando selecionará a versão mais recen
 
    <dl>
    <dt>PLUGIN_PATH|PLUGIN_NAME (obrigatório)</dt>
-   <dd>Se -r <i>REPO_NAME</i> não for especificado, o plug-in será instalado por meio do caminho local ou da URL remota especificada.</dd>
+   <dd>Se -r <i>REPO_NAME</i> não for especificado, o plug-in será instalado a partir do caminho local especificado ou da URL remota.</dd>
    <dt>-r <i>REPO_NAME</i> (opcional)</dt>
-   <dd>O nome do repositório no qual o binário do plug-in está localizado. Se nenhum repositório for especificado, o comando usará o repositório de plug-in padrão, 'Bluemix'.</dd>
+   <dd>O nome do repositório no qual o binário do plug-in está localizado. Se nenhum repositório for especificado, o comando usará o repositório de plug-in padrão.</dd>
    <dt>-v <i>VERSION</i> (opcional)</dt>
-   <dd>A versão do plug-in a ser instalado. Se não fornecida, a versão mais recente do plug-in será instalada. Essa opção é válida somente quando você instala o plug-in por meio do repositório.</dd>
-   <dt>-f </dt>
-   <dd>Forçar instalação do plug-in sem confirmação.</dd>
+   <dd>A versão do plug-in a ser instalado. Se ela não for fornecida, a versão mais recente do plug-in será instalada. Essa opção é válida somente quando você instala o plug-in a partir do repositório.</dd>
     </dl>
-    
-    
-A CLI do {{site.data.keyword.Bluemix_notm}} possui o nome do repositório oficial de 'Bluemix'.    
 
 <strong>Exemplos</strong>:
 
-Instalar um plug-in por meio do arquivo local:
+Instale um plug-in a partir do arquivo local:
 
 ```
 bluemix plugin install /downloads/new_plugin
 ```
 
-Instalar um plug-in por meio da URL remota:
+Instale um plug-in a partir da URL remota:
 
 ```
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-Instalar o plug-in 'container-service' da versão mais recente por meio do repositório 'Bluemix':
+Instale o plug-in `IBM-Containers` da versão mais recente do repositório `bluemix-repo`:
 
 ```
-bluemix plugin install container-service -r Bluemix
+bluemix plugin install IBM-Containers -r bluemix-repo
 ```
-Instalar o plug-in 'container-service' com a versão '0.1.425' do repositório de plug-in oficial:
+Instale o plug-in `IBM-Containers` com a versão `0.5.800` do repositório `bluemix-repo`:
 
 ```
-bluemix plugin install container-service -v 0.1.425
+bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 ## bluemix plugin update
 {: #bluemix_plugin_update}
 
-Fazer upgrade do plug-in por meio de um repositório.
+Faça upgrade do plug-in de um repositório
 
 ```
 bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
-
-Se nenhum repositório for especificado, o comando usará o repositório de plug-in padrão 'Bluemix'.
-Se nenhuma versão for especificada, o comando selecionará a versão mais recente disponível para instalação.
 
 <strong>Pré-requisitos</strong>: Nenhum
 
@@ -3907,37 +3795,37 @@ Se nenhuma versão for especificada, o comando selecionará a versão mais recen
  <dt>PLUGIN NAME</dt>
  <dd>Nome do plug-in a ser atualizado. Se não especificado, o comando verificará os upgrades de todos os plug-ins instalados.</dd>
  <dt>-r REPO_NAME</dt>
- <dd>O nome do repositório no qual o binário do plug-in está localizado. Se não especificado, o comando usará o repositório de plug-in padrão, 'Bluemix'.</dd>
+ <dd>O nome do repositório no qual o binário do plug-in está localizado. Se não especificado, o comando usará o repositório de plug-in padrão.</dd>
  <dt>-v <i>VERSION</i> (opcional)</dt>
- <dd>A versão para a qual o plug-in será atualizado. Se não fornecida, atualize o plug-in para a versão mais recente disponível.</dd>
+ <dd>A versão do plug-in para a qual ele será atualizado. Se não fornecida, atualize o plug-in para a versão mais recente disponível.</dd>
  <dt>--all</dt>
  <dd>Atualizar todos os plug-ins disponíveis</dd>
 </dl>
 
 <strong>Exemplos</strong>:
 
-Verificar todos os upgrades disponíveis no repositório de plug-in oficial 'Bluemix':
+Procure todos os upgrades disponíveis no repositório de plug-in "My-Repo":
 
 ```
-bluemix plugin update -r Bluemix
+bluemix plugin update -r My-Repo
 ```
 
-Fazer upgrade do plug-in 'container-service' no repositório de plug-in oficial para o mais recente:
+Faça upgrade do plug-in "plugin-echo" no repositório "My-Repo" para o mais recente:
 
 ```
-bluemix plugin update container-service
+bluemix plugin update -r My-Repo plugin-echo
 ```
 
-Atualizar o plug-in 'container-service' no repositório de plug-in oficial para a versão '0.1.440':
+Atualize o plug-in "plugin-echo" no repositório "My-Repo" para a versão "1.0.1":
 
 ```
-bluemix plugin update container-service -v 0.1.440
+bluemix plugin update -r My-Repo plugin-echo -v 1.0.1
 ```
 
 ## bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
-Desinstalar o plug-in especificado da CLI do {{site.data.keyword.Bluemix_notm}}.
+Desinstale o plug-in especificado a partir da CLI do {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix plugin uninstall PLUGIN_NAME
@@ -3954,8 +3842,8 @@ bluemix plugin uninstall PLUGIN_NAME
 
 <strong>Exemplos</strong>:
 
-Desinstalar o plug-in 'container-service' que foi instalado anteriormente:
+Desinstale o plug-in `IBM-Containers` que foi instalado anteriormente:
 
 ```
-bluemix plugin uninstall container-service
+bluemix plugin uninstall IBM-Containers
 ```

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2017-010-13"
 
 ---
 
@@ -34,7 +34,6 @@ Linux의 경우 설치 프로그램 패키지를 다운로드한 후 압축을 �
   $ sudo ./install_bluemix_cli
 
   ```
-  {: codeblock}
   
 ## 쉘에서 설치
 {: #shell_install}

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-02-14"
 # {{site.data.keyword.Bluemix_notm}} (bx) コマンド
 {: #bluemix_cli}
 
-バージョン: 0.6.5
+バージョン: 0.6.4
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 
@@ -203,11 +203,11 @@ lastupdated: "2018-02-14"
    <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service_policies)</td>
   </tr>
   <tr>
-   <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
-   <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
-   <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
-   <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
-   <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
+    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
+    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
+    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
+    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
+    <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
   </tr>
   <tr>
    <td>[bluemix iam user-policy](bx_cli.html#bluemix_iam_user_policy)</td>
@@ -215,14 +215,7 @@ lastupdated: "2018-02-14"
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
    <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
-  </tr>
-   <tr>
    <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
-   <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
-   <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
-   <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
-   <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
-  </tr>
 
   </tr>
   </tbody>
@@ -347,8 +340,6 @@ lastupdated: "2018-02-14"
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
-  <td>[bluemix catalog locations](bx_cli.html#bluemix_catalog_locations)</td>
   <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
@@ -364,8 +355,7 @@ lastupdated: "2018-02-14"
  <tr>
   <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
-  <td>[bluemix billing resource-group-usage](bx_cli.html#bluemix_resource_group_usage)</td>
-  <td>[bluemix billing resource-instances-usage](bx_cli.html#bluemix_resource_instances_usage)</td>
+  <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  </tr>
  </tbody>
  </table>
@@ -684,7 +674,7 @@ bluemix regions
 ターゲット・アカウント、地域、組織、またはスペースを設定するか表示します。
 
 ```
-bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -695,8 +685,6 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
    <dd>切り替え先の地域の名前。例えば、「us-south」または「eu-gb」など。</dd>
    <dt>-c <i>ACCOUNT_ID</i> (オプション)</dt>
    <dd>ターゲットとなるアカウントの ID。</dd>
-   <dt>-g <i>RESOURCE_GROUP</i> (オプション)</dt>
-   <dd>リソース・グループの名前。</dd>
    <dt>--cf</dt>
    <dd>ターゲットの組織およびスペースを対話式に選択します</dd>
    <dt>-o <i>ORG_NAME</i> (オプション)</dt>
@@ -705,6 +693,8 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
    <dd>ターゲットとなるスペースの名前。</dd>
    </dl>
 どのオプションも指定されていない場合、現行のアカウント、地域、組織、およびスペースが表示されます。
+
+
 
 <strong>例</strong>:
 
@@ -1210,28 +1200,58 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix account user-invite
 {: #bluemix_account_user_invite}
 
-ユーザーをアカウントに招待します。この操作は、アカウントの所有者のみが実行できます。
+組織とスペースの役割が既に設定されているアカウントにユーザーを招待します。 この操作は、アカウントの所有者のみが実行できます。
 
 ```
-bluemix account user-invite USER_EMAIL
+bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
 ```
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+<dl>
+   <dt>USER_NAME (必須)</dt>
+   <dd>招待されるユーザーの名前。</dd>
+   <dt>ORG_NAME (必須)</dt>
+   <dd>このユーザーの招待先の組織の名前。</dd>
+   <dt>ORG_ROLE (必須)</dt>
+   <dd>このユーザーの招待先の組織内での役割の名前。 以下に例を示します。
+   <ul>
+  <li>OrgManager: この役割は、ユーザーの招待と管理、プランの選択と変更、支払上限の設定を行います。</li>
+  <li>BillingManager: この役割は、請求アカウントと支払い情報の作成および管理を行えます。</li>
+  <li>OrgAuditor: この役割は、組織の情報とレポートに読み取りアクセスだけが可能です。</li>
+  </ul> </dd>
+   <dt>SPACE_NAME (必須)</dt>
+   <dd>このユーザーの招待先のスペースの名前。</dd>
+   <dt>SPACE_ROLE (必須)</dt>
+   <dd>このユーザーの招待先のスペースの名前。 このユーザーの招待先のスペース内での役割の名前。 以下に例を示します。
+   <ul>
+<li>SpaceManager: この役割は、ユーザーの招待と管理を行い、特定のスペースに対してフィーチャーを有効にします。</li>
+<li>SpaceDeveloper: この役割は、アプリとサービスを作成して管理し、ログとレポートを表示します。</li>
+<li>SpaceAuditor: この役割は、ログ、レポート、スペースの設定を表示できます。</li>
+</ul>
+</dd>
+</dl>
+
+<strong>例</strong>:
+
+ユーザー `Mary` を組織 `IBM` に役割 `OrgManager` として招待し、スペース `Cloud` に役割 `SpaceAuditor` として招待するには、次のように指定します。
+
+```
+bluemix account user-invite Mary IBM OrgManager Cloud SpaceAuditor
+```
+<!-- Begin Staging URL vs Prod URL -->
+**注**: 組織/スペースの役割は、CLI を使用して招待中に設定できますが、その他の許可を設定したい場合は、UI を使用する必要があります。 詳細については、[ユーザー・アクセスの割り当て](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)を参照してください。
+<!-- End Staging URL vs Prod URL -->
 
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
 
-ユーザーに招待を再送信します (アカウント所有者が必要)。
+ユーザーに招待を再送信します (組織管理者かアカウント所有者が必要)
 
 ```
-bluemix account user-reinvite USER_EMAIL
+bluemix account user-reinvite USER_EMAIL ORG_NAME
 ```
-
-<strong>前提条件</strong>: エンドポイント、ログイン
-  
- <strong>コマンド・オプション</strong>:
- <dl>
-   <dt>USER_EMAIL (必須)</dt>
-   <dd>再度招待されるユーザーの E メール。</dd>
- </dl>
 
 
 
@@ -1997,7 +2017,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 ## bluemix iam oauth-tokens
 {: #bluemix_iam_oauth_tokens}
 
-現行セッションの OAuth トークンを取得して表示します。
+現行セッションの OAuth トークンを取得して表示します
 
 ```
 bluemix iam oauth-tokens
@@ -2011,7 +2031,7 @@ bluemix iam oauth-tokens
 
 <strong>例</strong>:
 
-OAuth トークンを更新して表示します。
+OAuth トークンを更新して表示します
 
 ```
 bluemix iam oauth-tokens
@@ -2020,7 +2040,7 @@ bluemix iam oauth-tokens
 ## bluemix iam dedicated-id-disconnect
 {: #bluemix_iam_dedicated_id_disconnect}
 
-パブリック IBM ID を専用の非 IBM ID から切断します。
+パブリック IBM ID を専用の非 IBM ID から切断します
 
 ```
 bluemix iam dedicated-id-disconnect [-f, --force]
@@ -2031,86 +2051,13 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>確認なしで切断を強制します。</dd>
+  <dd>確認なしで切断を強制します</dd>
 </dl>
-
-## bluemix iam authorization-policy-create
-{: #bluemix_iam_authorization_policy_create}
- 
-特定のサービス・インスタンスが別のサービス・インスタンスへアクセスできるようにするための許可ポリシーを作成します。
-
-```
-bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
-```
-
-<strong>前提条件</strong>: ログイン、ターゲット
-
-<strong>コマンド・オプション</strong>:
-<dl>
-  <dt>SOURCE_SERVICE_NAME</dt>
-  <dd>アクセスを許可されるソース・サービス。</dd>
-  <dt>TARGET_SERVICE_NAME</dt>
-  <dd>ソース・サービスがアクセスを許可されるターゲット・サービス。</dd>
-  <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>ソース・サービスのインスタンス名。指定されない場合、ソース・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
-  <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>ターゲット・サービスのインスタンス名。指定されない場合、ターゲット・サービスのすべてのインスタンスがアクセスを許可されます。</dd>
-  <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>ソース・サービスのアクセス権限を提供する役割。</dd>  
-</dl>
-
-## bluemix iam authorization-policy-delete
-{: #bluemix_iam_authorization_policy_delete}
-
-許可ポリシーを削除します。
-
-```
-bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
-```
-
-<strong>前提条件</strong>: ログイン、ターゲット
-
-<strong>コマンド・オプション</strong>:
-<dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>削除する許可ポリシーの ID。</dd> 
- <dt>-f, --force</dt>
- <dd>確認なしで削除を強制します。</dd> 
-</dl>
-
-## bluemix iam authorization-policy
-{: #bluemix_iam_authorization_policy}
-
-許可ポリシーの詳細を表示します。
-
-```
-bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
-```
-
-<strong>前提条件</strong>: ログイン、ターゲット
-
-<strong>コマンド・オプション</strong>:
-<dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>表示する許可ポリシーの ID。</dd> 
-</dl>
-
-
-## bluemix iam authorization-policies
-{: #bluemix_iam_authorization_policies}
-
-現行アカウントの許可ポリシーをリストします。
-
-```
-bluemix iam authorization-policies
-```
-
-<strong>前提条件</strong>: ログイン、ターゲット
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
 
-リソース・グループをリストします。
+リソース・グループをリストします
 
 ```
 bluemix resource groups [--default]
@@ -2121,7 +2068,7 @@ bluemix resource groups [--default]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>--default</dt>
-  <dd>現行アカウントのデフォルト・グループを取得します。</dd>
+  <dd>現行アカウントのデフォルト・グループを取得します</dd>
 </dl>
 
 <strong>例</strong>:
@@ -2141,7 +2088,7 @@ bluemix resource groups --default
 ## bluemix resource group
 {: #bluemix_resource_group}
 
-リソース・グループの詳細を表示します。
+リソース・グループの詳細を表示します
 
 ```
 bluemix resource group NAME [--id]
@@ -2152,7 +2099,7 @@ bluemix resource group NAME [--id]
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>NAME (必須)</dt>
-  <dd>リソース・グループの名前。</dd>
+  <dd>リソース・グループの名前</dd>
   <dt>--id</dt>
   <dd>ID のみを表示します</dd>
 </dl>
@@ -2168,14 +2115,14 @@ bluemix resource group example-group
 リソース・グループ `example-group` の ID のみを表示します
 
 ```
-bluemix resource group example-group --id
+bluemix resourxce group example-group --id
 ```
 
 
 ## bluemix resource group-update
 {: #bluemix_resource_group_update}
 
-既存のリソース・グループを更新します。
+既存のリソース・グループを更新します
 
 ```
 bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
@@ -2186,13 +2133,13 @@ bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_
 <strong>コマンド・オプション</strong>:
 <dl>
   <dt>NAME (必須)</dt>
-  <dd>ターゲット・リソース・グループの名前。</dd>
+  <dd>ターゲット・リソース・グループの名前</dd>
   <dt>-n, --name</dt>
-  <dd>リソース・グループの新しい名前。</dd>
+  <dd>リソース・グループの新しい名前</dd>
   <dt>-q, --quota</dt>
-  <dd>新規割り当て量定義の名前。</dd>
+  <dd>新規割り当て量定義の名前</dd>
   <dt>-f</dt>
-  <dd>確認を求めずに更新を強制します。</dd>
+  <dd>確認を求めずに更新を強制します</dd>
 </dl>
 
 <strong>例</strong>:
@@ -2212,7 +2159,7 @@ bluemix resource group-update example-group -q free
 ## bluemix resource quotas
 {: #bluemix_resource_quotas}
 
-すべての割り当て量定義をリストします。
+すべての割り当て量定義をリストします
 
 ```
 bluemix resource quotas
@@ -2777,7 +2724,7 @@ bluemix resource service-instance-create my-service-instance test-service test-s
 サービス・インスタンスを更新します
 
 ```
-bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -2792,6 +2739,8 @@ bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_N
   <dd>新規タグ</dd>
   <dt>--service-plan-id</dt>
   <dd>新規サービス・プラン ID</dd>
+  <dt>--update-time</dt>
+  <dd>有料の記録が有効になってからの時間 (秒)</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新を強制します</dd>
 </dl>
@@ -3546,36 +3495,10 @@ bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemi
 bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-## bluemix catalog locations
-{: #bluemix_catalog_locations}
-
-選択されたフォーマットで地域の選択サブセットを取得します。
-
-```
-bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
-```
-
-<strong>コマンド・オプション</strong>:
-
-<dl>
-  <dt>-i, --id</dt>
-  <dd>ID でジオグラフィーを指定します。</dd>
-  <dt>-k, --kind</dt>
-  <dd>指定した種類の項目のリストを取得します。</dd>
-  <dt>--col</dt>
-  <dd>表の追加列を指定します。 現在は、「group」、「provider」、および「tags」です。</dd>
-  <dt>--json</dt>
-  <dd>元の JSON 応答の出力。</dd>
-  <dt>--global</dt>
-  <dd>グローバル・スコープで操作します。</dd>
-  <dt>--csv</dt>
-  <dd>CSV ファイルを出力します</dd>
-</dl>
-
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-現行アカウントの月次使用量とコストを表示します。
+アカウントの月次使用量とコストを表示します。
 
 ```
 bluemix billing account-usage [-d YYYY-MM] [--json]
@@ -3587,14 +3510,14 @@ bluemix billing account-usage [-d YYYY-MM] [--json]
 
 <dl>
   <dt>-d MONTH_DATE (オプション)</dt>
-  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
+  <dd>YYYY-MM 形式を使用して指定する日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
   <dt>--json (オプション)</dt>
   <dd>使用量の結果を JSON 形式で表示します。</dd>
 </dl>
 
 <strong>例</strong>:
 
-2016 年 6 月の現行アカウントの使用量とコストのレポートを表示します。
+2016 年 6 月のマイ・アカウントの使用量とコストのレポートを表示します。
 
 ```
 bluemix billing account-usage -d 2016-06
@@ -3603,10 +3526,10 @@ bluemix billing account-usage -d 2016-06
 ## bluemix billing org-usage
 {: #bluemix_billing_org_usage}
 
-組織の月次使用量を表示します。この操作を実行できるのは、アカウント所有者または組織の請求処理管理者のみになります。
+組織の月次使用量の詳細を表示します。この操作は、組織の請求管理者のみ実行できます。
 
 ```
-bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+bluemix billing org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -3618,19 +3541,21 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>組織の名前。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
   <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>組織をホストする地域の名前。「all」に設定されている場合、すべての地域の組織の使用量が表示されます。</dd>
   <dt>--json (オプション)</dt>
   <dd>使用量の結果を JSON 形式で表示します。</dd>
 </dl>
 
 
 
-## bluemix billing resource-group-usage
-{: #bluemix_billing_resource_group_usage}
+## bluemix billing orgs-usage-summary
+{: #bluemix_billing_orgs_usage_summary}
 
-リソース・グループの月次使用量を表示します。この操作を実行できるのは、アカウント所有者または組織の請求処理管理者のみになります。
+マイ・アカウント内の組織の月次使用量サマリーを表示します。
 
 ```
-bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+bluemix billing orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -3638,37 +3563,13 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 <strong>コマンド・オプション</strong>:
 
 <dl>
-  <dt>GROUP_NAME (必須)</dt>
-  <dd>リソース・グループの名前。</dd>
   <dt>-d MONTH_DATE (オプション)</dt>
   <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>組織をホストする地域の名前。 「all」に設定されている場合、すべての地域の組織の使用量サマリーが表示されます。</dd>
   <dt>--json (オプション)</dt>
   <dd>使用量の結果を JSON 形式で表示します。</dd>
 </dl>
-
-## bluemix billing resource-instances-usage
-{: #bluemix_billing_resource_instances_usage}
- 
- 現行アカウントの月次リソース・インスタンス使用量を表示します。
- 
- ```
- bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
- ```
- 
- <strong>前提条件</strong>: エンドポイント、ログイン
- 
- <strong>コマンド・オプション</strong>:
- 
- <dl>
-   <dt>-o ORG_NAME (オプション)</dt>
-   <dd>組織を基準にしてインスタンスをフィルターに掛けます。</dd>
-   <dt>-g GROUP_NAME</dt>
-   <dd>リソース・グループを基準にしてインスタンスをフィルターに掛けます。</dd>
-   <dt>-d MONTH_DATE (オプション)</dt>
-   <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。 指定されていない場合、今月の使用量が表示されます。</dd>
-   <dt>--json (オプション)</dt>
-   <dd>使用量の結果を JSON 形式で表示します。</dd>
- </dl>
 
 
 ## bluemix plugin repos
@@ -3791,16 +3692,16 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
 <strong>例</strong>:
 
-リポジトリー「Bluemix」内のプラグイン「container-service」の詳細をリストするには、以下のように指定します。
+リポジトリー「sample-repo」内のプラグイン「IBM-Containers」の詳細をリストします
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-デフォルト・リポジトリー「Bluemix」内のプラグイン「container-service」の詳細をリストします。
+デフォルト・リポジトリー内のプラグイン「IBM-Containers」の詳細をリストします
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
 
@@ -3836,30 +3737,19 @@ bluemix plugin show PLUGIN-NAME
 bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
 
-```
-bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
-```
-
-リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。
-バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
-
 <strong>前提条件</strong>: なし
 
 <strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>PLUGIN_PATH|PLUGIN_NAME (必須)</dt>
-   <dd>「-r <i>REPO_NAME</i>」が指定されない場合、指定されたローカル・パスまたはリモート URL からプラグインがインストールされます。</dd>
+   <dd>「-r <i>REPO_NAME</i>」が指定されない場合、指定されたローカル
+・パスまたはリモート URL からプラグインがインストールされます。</dd>
    <dt>-r <i>REPO_NAME</i> (オプション)</dt>
-   <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。</dd>
+   <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します。</dd>
    <dt>-v <i>VERSION</i> (オプション)</dt>
    <dd>インストールするプラグインのバージョン。 指定されていない場合は、最新バージョンのプラグインがインストールされます。 このオプションは、リポジトリーからプラグインをインストールする場合にのみ有効です。</dd>
-   <dt>-f </dt>
-   <dd>確認なしでプラグインのインストールを強制します。</dd>
     </dl>
-    
-    
-{{site.data.keyword.Bluemix_notm}} CLI の公式リポジトリー名は、「Bluemix」です。    
 
 <strong>例</strong>:
 
@@ -3875,28 +3765,27 @@ bluemix plugin install /downloads/new_plugin
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-最新バージョンの「container-service」プラグインを「Bluemix」リポジトリーからインストールするには、以下のように指定します。
+最新バージョンの `IBM-Containers` プラグインを `bluemix-repo` リポジトリーからインストールするには、以下のように指定します。
 
 ```
-bluemix plugin install container-service -r Bluemix
+bluemix plugin install IBM-Containers -r bluemix-repo
 ```
-公式プラグイン・リポジトリーから、バージョン「0.1.425」の「container-service」プラグインをインストールするには、以下のように指定します。
+バージョン `0.5.800` の `IBM-Containers` プラグインを `bluemix-repo` リポジトリーからインストールするには、以下のように指定します。
+
+
 
 ```
-bluemix plugin install container-service -v 0.1.425
+bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 ## bluemix plugin update
 {: #bluemix_plugin_update}
 
-リポジトリーからプラグインをアップグレードします。
+リポジトリーからプラグインをアップグレードします
 
 ```
 bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
-
-リポジトリーが指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。
-バージョンが指定されない場合、コマンドは、インストール可能な最新バージョンを選択します。
 
 <strong>前提条件</strong>: なし
 
@@ -3905,7 +3794,7 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>更新するプラグインの名前。 指定されない場合、コマンドは、インストールされているすべてのプラグインのアップグレードを確認します。</dd>
  <dt>-r REPO_NAME</dt>
- <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリー「Bluemix」を使用します。</dd>
+ <dd>プラグインのバイナリーが配置されているリポジトリーの名前。 指定されない場合、コマンドは、デフォルトのプラグイン・リポジトリーを使用します。</dd>
  <dt>-v <i>VERSION</i> (オプション)</dt>
  <dd>更新するプラグインのバージョン。 表示されない場合、プラグインを入手可能な最新バージョンに更新してください。</dd>
  <dt>--all</dt>
@@ -3914,22 +3803,22 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 <strong>例</strong>:
 
-公式プラグイン・リポジトリー「Bluemix」内のすべての使用可能アップグレードを確認するには、以下のように指定します。
+プラグイン・リポジトリー「My-Repo」で使用可能なすべてのアップグレードを確認します。
 
 ```
-bluemix plugin update -r Bluemix
+bluemix plugin update -r My-Repo
 ```
 
-公式プラグイン・リポジトリー内のプラグイン「container-service」を最新にアップグレードするには、以下のように指定します。
+リポジトリー「My-Repo」内のプラグイン「plugin-echo」を最新にアップグレードします。
 
 ```
-bluemix plugin update container-service
+bluemix plugin update -r My-Repo plugin-echo
 ```
 
-公式プラグイン・リポジトリー内のプラグイン「container-service」をバージョン「0.1.440」に更新するには、以下のように指定します。
+リポジトリー「My-Repo」内のプラグイン「plugin-echo」をバージョン「1.0.1」に更新します。
 
 ```
-bluemix plugin update container-service -v 0.1.440
+bluemix plugin update -r My-Repo plugin-echo -v 1.0.1
 ```
 
 ## bluemix plugin uninstall
@@ -3952,8 +3841,8 @@ bluemix plugin uninstall PLUGIN_NAME
 
 <strong>例</strong>:
 
-前にインストールされた「container-service」プラグインをアンインストールします。
+前にインストールされた `IBM-Containers` プラグインをアンインストールします。
 
 ```
-bluemix plugin uninstall container-service
+bluemix plugin uninstall IBM-Containers
 ```

@@ -24,7 +24,7 @@ Le plug-in {{site.data.keyword.vpn_short}} est disponible pour les systèmes d'e
 Les instructions qui suivent s'appliquent au plug-in d'interface de ligne de commande Cloud Foundry (cf). Pour utiliser le plug-in avec le plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, voir [Plug-in {{site.data.keyword.vpn_short}} pour l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
 
 ## Installation du plug-in d'interface de ligne de commande cf
-Avant de commencer, installez l'interface de ligne de commande cf. Voir [Plug-in de l'interface de ligne de commande Cloud Foundry ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window} pour plus de détails.
+Avant de commencer, installez l'interface de ligne de commande cf. Voir [Plug-in de l'interface de ligne de commande Cloud Foundry ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window} pour plus de détails. 
 
 ## Installation du plug-in d'interface de ligne de commande VPN
 **Remarque :** si une version précédente du plug-in d'interface de ligne de commande {{site.data.keyword.vpn_short}} est installée, vous devez la désinstaller. Utilisez la commande suivante :
@@ -70,7 +70,7 @@ cf uninstall-plugin vpn
 	```
 	cf install-plugin vpn -r bluemix
 	```
-##Liste des commandes de service VPN
+##Liste des commandes de service VPN 
 
 ### cf vpn-create connection
 

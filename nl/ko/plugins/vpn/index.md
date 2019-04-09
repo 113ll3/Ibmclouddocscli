@@ -24,7 +24,7 @@ lastupdated: "2017-01-12"
 이어지는 지시사항은 Cloud Foundry(cf) CLI 플러그인으로 작업하기에 대한 것입니다. {{site.data.keyword.Bluemix_notm}} CLI 플러그인과 함께 플러그인을 사용하려면 [{{site.data.keyword.Bluemix_notm}} CLI용 {{site.data.keyword.vpn_short}} 플러그인![참조 링크 아이콘](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}을 참조하십시오.
 
 ## cf CLI 플러그인 설치
-시작하기 전에 cf CLI를 설치하십시오. 세부사항은 [Cloud Foundry 명령행 인터페이스![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}를 참조하십시오.
+시작하기 전에 cf CLI를 설치하십시오. 세부사항은 [Cloud Foundry 명령행 인터페이스![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}를 참조하십시오. 
 
 ## VPN CLI 플러그인 설치
 **참고:** 설치된 {{site.data.keyword.vpn_short}} CLI 플러그인의 이전 버전이 설치되어 있는 경우 우선 이를 삭제해야 합니다. 다음 명령을 사용하십시오.
@@ -35,7 +35,7 @@ cf uninstall-plugin vpn
 
 ### 로컬로 설치
 
-1. [ {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}에서 플랫폼에 대한 {{site.data.keyword.vpn_short}} 플러그인을 다운로드하십시오.
+1. [ {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}에서 플랫폼에 대한 {{site.data.keyword.vpn_short}} 플러그인을 다운로드하십시오.  
 2. 다음 명령을 사용하여 {{site.data.keyword.vpn_short}} 플러그인을 설치하십시오.
 **참고:** {{site.data.keyword.vpn_short}} 플러그인의 위치를 전환하거나 플러그인 위치로 경로를 지정하십시오.
 

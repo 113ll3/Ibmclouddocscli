@@ -39,12 +39,12 @@
      id="namedview32"
      showgrid="false"
      inkscape:zoom="5.866966"
-     inkscape:cx="71.107881"
-     inkscape:cy="14.801601"
+     inkscape:cx="89.000746"
+     inkscape:cy="13.530783"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Page-1" />
+     inkscape:current-layer="svg30" />
   <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
   <title
      id="title2">Slice 1</title>
@@ -105,22 +105,22 @@
        id="Get-Started"
        font-size="10"
        font-weight="300"
-       style="font-weight:300;font-size:10px;font-family:HelveticaNeue-Light, 'Helvetica Neue';fill:#1d3649"
-       x="-8">
+       style="font-weight:300;font-size:10px;font-family:HelveticaNeue-Light, 'Helvetica Neue';fill:#1d3649">
       <tspan
-         x="53"
+         x="61"
          y="37"
-         id="tspan23">Introduzione</tspan>
+         id="tspan23">Inizia</tspan>
     </text>
     <text
        id="View-Docs"
        font-size="10"
        font-weight="300"
-       style="font-weight:300;font-size:10px;font-family:HelveticaNeue-Light, 'Helvetica Neue';fill:#1d3649">
+       style="font-weight:300;font-size:10px;font-family:HelveticaNeue-Light, 'Helvetica Neue';fill:#1d3649"
+       x="-26">
       <tspan
-         x="129"
+         x="103"
          y="37"
-         id="tspan26">Vis. Doc.</tspan>
+         id="tspan26">Visualizza Doc</tspan>
     </text>
   </g>
 </svg>

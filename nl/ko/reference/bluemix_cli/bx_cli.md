@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-02-14"
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
 
-버전: 0.6.5
+버전: 0.6.4
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다.
 
@@ -204,11 +204,11 @@ lastupdated: "2018-02-14"
    <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service_policies)</td>
   </tr>
   <tr>
-   <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
-   <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
-   <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
-   <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
-   <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
+    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
+    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
+    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
+    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
+    <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
   </tr>
   <tr>
    <td>[bluemix iam user-policy](bx_cli.html#bluemix_iam_user_policy)</td>
@@ -216,14 +216,7 @@ lastupdated: "2018-02-14"
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
    <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
-  </tr>
-   <tr>
    <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
-   <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
-   <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
-   <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
-   <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
-  </tr>
 
   </tr>
   </tbody>
@@ -348,8 +341,6 @@ lastupdated: "2018-02-14"
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
-  <td>[bluemix catalog locations](bx_cli.html#bluemix_catalog_locations)</td>
   <td>[bluemix plugin repos
 ](bx_cli.html#bluemix_plugin_repos)</td>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
@@ -367,8 +358,7 @@ lastupdated: "2018-02-14"
  <tr>
   <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
-  <td>[bluemix billing resource-group-usage](bx_cli.html#bluemix_resource_group_usage)</td>
-  <td>[bluemix billing resource-instances-usage](bx_cli.html#bluemix_resource_instances_usage)</td>
+  <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  </tr>
  </tbody>
  </table>
@@ -687,7 +677,7 @@ bluemix regions
 대상 계정, 지역, 조직 또는 영역을 설정하거나 보십시오.
 
 ```
-bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -698,8 +688,6 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
    <dd>전환할 지역의 이름입니다(예: 'us-south' 또는 'eu-gb').</dd>
    <dt>-c <i>ACCOUNT_ID</i>(선택사항)</dt>
    <dd>대상으로 지정된 계정의 ID입니다.</dd>
-   <dt>-g <i>RESOURCE_GROUP</i>(선택사항)</dt>
-   <dd>리소스 그룹의 이름입니다. </dd>
    <dt>--cf</dt>
    <dd>대상 조직 및 영역을 대화식으로 선택합니다.</dd>
    <dt>-o <i>ORG_NAME</i>(선택사항)</dt>
@@ -1211,28 +1199,58 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix account user-invite
 {: #bluemix_account_user_invite}
 
-사용자를 계정에 초대합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
+조직 및 영역 역할이 이미 설정된 계정으로 사용자를 초대합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
 
 ```
-bluemix account user-invite USER_EMAIL
+bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
 ```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+<dl>
+   <dt>USER_NAME(필수)</dt>
+   <dd>초대되는 사용자의 이름입니다.</dd>
+   <dt>ORG_NAME(필수)</dt>
+   <dd>이 사용자가 초대되는 조직의 이름입니다.</dd>
+   <dt>ORG_ROLE(필수)</dt>
+   <dd>이 사용자가 초대되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
+   <ul>
+  <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
+  <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다.</li>
+  <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다.</li>
+  </ul> </dd>
+   <dt>SPACE_NAME(필수)</dt>
+   <dd>이 사용자가 초대되는 영역의 이름입니다.</dd>
+   <dt>SPACE_ROLE(필수)</dt>
+   <dd>이 사용자가 초대되는 영역의 이름입니다. 이 사용자가 초대되는 영역 역할의 이름입니다. 예를 들어, 다음과 같습니다.
+   <ul>
+<li>SpaceManager: 이 역할은 사용자를 초대 및 관리하고 제공된 영역에 대한 기능을 사용할 수 있습니다.</li>
+<li>SpaceDeveloper: 이 역할은 앱 및 서비스를 작성 및 관리하며 로그 및 보고서를 볼 수 있습니다.</li>
+<li>SpaceAuditor: 이 역할은 영역에 대한 설정 및 로그, 보고서를 볼 수 있습니다.</li>
+</ul>
+</dd>
+</dl>
+
+<strong>예제</strong>:
+
+사용자 `Mary`를 `IBM` 조직에 `OrgManager` 역할로 초대하고 `Cloud` 영역에 `SpaceAuditor` 역할로 초대합니다.
+
+```
+bluemix account user-invite Mary IBM OrgManager Cloud SpaceAuditor
+```
+<!-- Begin Staging URL vs Prod URL -->
+**참고**: CLI를 사용하여 초대 중에 조직/영역 역할을 설정할 수 있으나, 그 외의 권한을 설정하려는 경우에는 UI를 사용해야 합니다. 세부사항은 [사용자 액세스 지정](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)을 참조하십시오.
+<!-- End Staging URL vs Prod URL -->
 
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
 
-사용자에게 초대를 재전송합니다(계정 소유자 필요). 
+사용자에게 초대 재전송(조직 관리자 또는 계정 소유자 필요)
 
 ```
-bluemix account user-reinvite USER_EMAIL
+bluemix account user-reinvite USER_EMAIL ORG_NAME
 ```
-
-<strong>전제조건</strong>: 엔드포인트, 로그인
-  
- <strong>명령 옵션</strong>:
- <dl>
-   <dt>USER_EMAIL(필수)</dt>
-   <dd>다시 초대되는 사용자의 이메일입니다.</dd>
- </dl>
 
 
 
@@ -1998,7 +2016,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 ## bluemix iam oauth-tokens
 {: #bluemix_iam_oauth_tokens}
 
-현재 세션에 대한 OAuth 토큰을 검색하고 표시합니다. 
+현재 세션에 대한 OAuth 토큰 검색 및 표시
 
 ```
 bluemix iam oauth-tokens
@@ -2012,7 +2030,7 @@ bluemix iam oauth-tokens
 
 <strong>예제</strong>:
 
-OAuth 토큰을 새로 고치고 표시합니다. 
+OAuth 토큰 새로 고치기 및 표시
 
 ```
 bluemix iam oauth-tokens
@@ -2021,7 +2039,7 @@ bluemix iam oauth-tokens
 ## bluemix iam dedicated-id-disconnect
 {: #bluemix_iam_dedicated_id_disconnect}
 
-전용 비-IBM ID와 공용 IBM ID 간의 연결을 끊습니다. 
+전용 비IBM ID와 공용 IBM ID의 연결 끊기
 
 ```
 bluemix iam dedicated-id-disconnect [-f, --force]
@@ -2032,86 +2050,13 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-f, --force</dt>
-  <dd>확인 없이 연결 끊기를 강제 실행합니다.</dd>
+  <dd>확인 없이 강제 연결 끊기</dd>
 </dl>
-
-## bluemix iam authorization-policy-create
-{: #bluemix_iam_authorization_policy_create}
- 
-다른 서비스 인스턴스에 대한 서비스 인스턴스 액세스를 허용하기 위한 권한 부여 정책을 작성합니다. 
-
-```
-bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
-```
-
-<strong>전제조건</strong>: 로그인, 대상
-
-<strong>명령 옵션</strong>:
-<dl>
-  <dt>SOURCE_SERVICE_NAME</dt>
-  <dd>액세스 권한이 부여될 수 있는 소스 서비스입니다. </dd>
-  <dt>TARGET_SERVICE_NAME</dt>
-  <dd>소스 서비스의 액세스 권한이 부여될 수 있는 대상 서비스입니다. </dd>
-  <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>소스 서비스의 모든 인스턴스의 액세스 권한이 부여될 소스 서비스 인스턴스 이름(지정되지 않은 경우)입니다. </dd>
-  <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>대상 서비스의 모든 인스턴스의 액세스 권한이 부여될 대상 서비스 인스턴스 이름(지정되지 않은 경우)입니다. </dd>
-  <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>소스 서비스에 대한 액세스 권한을 제공하는 역할입니다. </dd>  
-</dl>
-
-## bluemix iam authorization-policy-delete
-{: #bluemix_iam_authorization_policy_delete}
-
-권한 부여 정책을 삭제합니다. 
-
-```
-bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
-```
-
-<strong>전제조건</strong>: 로그인, 대상
-
-<strong>명령 옵션</strong>:
-<dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>삭제될 권한 부여 정책의 ID입니다. </dd> 
- <dt>-f, --force</dt>
- <dd>확인 없이 삭제를 강제 실행합니다.</dd> 
-</dl>
-
-## bluemix iam authorization-policy
-{: #bluemix_iam_authorization_policy}
-
-권한 부여 정책의 세부사항을 표시합니다. 
-
-```
-bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
-```
-
-<strong>전제조건</strong>: 로그인, 대상
-
-<strong>명령 옵션</strong>:
-<dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>표시할 권한 부여 정책의 ID입니다. </dd> 
-</dl>
-
-
-## bluemix iam authorization-policies
-{: #bluemix_iam_authorization_policies}
-
-현재 계정의 권한 부여 정책을 나열합니다. 
-
-```
-bluemix iam authorization-policies
-```
-
-<strong>전제조건</strong>: 로그인, 대상
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
 
-리소스 그룹을 나열합니다. 
+리소스 그룹 나열
 
 ```
 bluemix resource groups [--default]
@@ -2122,12 +2067,12 @@ bluemix resource groups [--default]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>--default</dt>
-  <dd>현재 계정의 기본 그룹을 가져옵니다. </dd>
+  <dd>현재 계정의 기본 그룹 가져오기</dd>
 </dl>
 
 <strong>예제</strong>:
 
-현재 대상 계정의 모든 리소스 그룹을 나열합니다. 
+현재 대상으로 지정된 계정 아래에 모든 리소스 그룹 나열:
 
 ```
 bluemix resource groups
@@ -2142,7 +2087,7 @@ bluemix resource groups --default
 ## bluemix resource group
 {: #bluemix_resource_group}
 
-리소스 그룹의 세부사항을 표시합니다. 
+리소스 그룹의 세부사항 표시
 
 ```
 bluemix resource group NAME [--id]
@@ -2153,7 +2098,7 @@ bluemix resource group NAME [--id]
 <strong>명령 옵션</strong>:
 <dl>
   <dt>NAME(필수)</dt>
-  <dd>리소스 그룹의 이름.</dd>
+  <dd>리소스 그룹의 이름</dd>
   <dt>--id</dt>
   <dd>ID만 표시</dd>
 </dl>
@@ -2169,14 +2114,14 @@ bluemix resource group example-group
 리소스 그룹 `example-group`의 ID만 표시:
 
 ```
-bluemix resource group example-group --id
+bluemix resourxce group example-group --id
 ```
 
 
 ## bluemix resource group-update
 {: #bluemix_resource_group_update}
 
-기존 리소스 그룹을 업데이트합니다. 
+기존 리소스 그룹 업데이트
 
 ```
 bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
@@ -2187,13 +2132,13 @@ bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_
 <strong>명령 옵션</strong>:
 <dl>
   <dt>NAME(필수)</dt>
-  <dd>대상 리소스 그룹의 이름입니다. </dd>
+  <dd>대상 리소스 그룹의 이름</dd>
   <dt>-n, --name</dt>
-  <dd>리소스 그룹의 새 이름입니다. </dd>
+  <dd>리소스 그룹의 새 이름</dd>
   <dt>-q, --quota</dt>
-  <dd>새 할당량 정의의 이름입니다. </dd>
+  <dd>새 할당량 정의의 이름</dd>
   <dt>-f</dt>
-  <dd>확인 없이 업데이트를 강제 실행합니다.</dd>
+  <dd>확인 없이 강제 업데이트</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -2213,7 +2158,7 @@ bluemix resource group-update example-group -q free
 ## bluemix resource quotas
 {: #bluemix_resource_quotas}
 
-모든 할당량 정의를 나열합니다. 
+모든 할당량 정의 나열
 
 ```
 bluemix resource quotas
@@ -2408,7 +2353,7 @@ bluemix app domain-cert ibmcxo-eventconnect.com
 bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
-<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
    <dl>
@@ -2444,7 +2389,7 @@ bluemix app domain-cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file
 bluemix app domain-cert-remove DOMAIN [-f]
 ```
 
-<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
 
@@ -2476,7 +2421,7 @@ bluemix app domain-cert-remove DOMAIN [-f]
 bluemix app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
 
@@ -2513,7 +2458,7 @@ bluemix app route-map my-container-group chinabluemix.net -n abc
 bluemix app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
 
@@ -2777,7 +2722,7 @@ bluemix resource service-instance-create my-service-instance test-service test-s
 서비스 인스턴스 업데이트
 
 ```
-bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인, 대상
@@ -2792,6 +2737,8 @@ bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_N
   <dd>새 태그</dd>
   <dt>--service-plan-id</dt>
   <dd>새 서비스 플랜 ID</dd>
+  <dt>--update-time</dt>
+  <dd>청구 레코드가 적용되는 epoch 이후 시간(초)</dd>
   <dt>-f, --force</dt>
   <dd>확인 없이 강제 업데이트</dd>
 </dl>
@@ -3507,7 +3454,7 @@ bluemix catalog template mobileBackendStarter
 bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
 ```
 
-<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
    <dl>
@@ -3544,36 +3491,10 @@ bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemi
 bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-## bluemix catalog locations
-{: #bluemix_catalog_locations}
-
-선택한 형식으로 지역의 선택 서브세트를 가져옵니다. 
-
-```
-bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
-```
-
-<strong>명령 옵션</strong>:
-
-<dl>
-  <dt>-i, --id</dt>
-  <dd>id에 의해 지역을 지정합니다. </dd>
-  <dt>-k, --kind</dt>
-  <dd>지정된 유형에 대한 항목의 목록을 가져옵니다. </dd>
-  <dt>--col</dt>
-  <dd>테이블의 추가 컬럼을 지정합니다. 현재는 "group", "provider" 및 "tags"입니다. </dd>
-  <dt>--json</dt>
-  <dd>원래 JSON 응답의 출력입니다. </dd>
-  <dt>--global</dt>
-  <dd>글로벌 범위에서 작동됩니다. </dd>
-  <dt>--csv</dt>
-  <dd>출력 CSV 파일</dd>
-</dl>
-
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-현재 계정의 월별 사용량 및 비용을 표시합니다. 
+계정의 월별 사용량 및 비용을 표시하십시오.
 
 ```
 bluemix billing account-usage [-d YYYY-MM] [--json]
@@ -3585,14 +3506,14 @@ bluemix billing account-usage [-d YYYY-MM] [--json]
 
 <dl>
   <dt>-d MONTH_DATE(선택사항)</dt>
-  <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시합니다. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dd>YYYY-MM 형식을 사용하여 월 및 날짜 지정에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
   <dt>--json(선택사항)</dt>
   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
 </dl>
 
 <strong>예제</strong>:
 
-2016년 6월에 현재 계정의 사용량 및 비용 보고서를 표시합니다. 
+2016-06의 내 계정 사용량 및 비용 보고서 표시:
 
 ```
 bluemix billing account-usage -d 2016-06
@@ -3601,10 +3522,10 @@ bluemix billing account-usage -d 2016-06
 ## bluemix billing org-usage
 {: #bluemix_billing_org_usage}
 
-조직의 월별 사용량을 표시합니다. 계정 소유자 또는 조직 청구 관리자만 이 조작을 수행할 수 있습니다. 
+조직의 월별 사용량 세부사항을 표시하십시오. 이 오퍼레이션은 조직의 청구 관리자만 완료할 수 있습니다.
 
 ```
-bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+bluemix billing org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -3615,20 +3536,22 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dt>ORG_NAME(필수)</dt>
   <dd>조직의 이름입니다.</dd>
   <dt>-d MONTH_DATE(선택사항)</dt>
-  <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시합니다. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>조직을 호스트하는 지역의 이름입니다. 'all'로 설정되면 모든 지역의 조직 사용량이 표시됩니다.</dd>
   <dt>--json(선택사항)</dt>
   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
 </dl>
 
 
 
-## bluemix billing resource-group-usage
-{: #bluemix_billing_resource_group_usage}
+## bluemix billing orgs-usage-summary
+{: #bluemix_billing_orgs_usage_summary}
 
-리소스 그룹의 월별 사용량을 표시합니다. 계정 소유자 또는 리소스 그룹 청구 관리자만 이 조작을 수행할 수 있습니다. 
+내 계정에서 조직에 대한 월별 사용량 요약을 표시하십시오.
 
 ```
-bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+bluemix billing orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -3636,43 +3559,19 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 <strong>명령 옵션</strong>:
 
 <dl>
-  <dt>GROUP_NAME(필수)</dt>
-  <dd>리소스 그룹의 이름.</dd>
   <dt>-d MONTH_DATE(선택사항)</dt>
-  <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시합니다. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>조직을 호스트하는 지역의 이름입니다. 'all'로 설정되면 모든 지역에 있는 조직의 사용량 요약이 표시됩니다.</dd>
   <dt>--json(선택사항)</dt>
   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
 </dl>
-
-## bluemix billing resource-instances-usage
-{: #bluemix_billing_resource_instances_usage}
- 
- 현재 계정의 월별 리소스 인스턴스 사용량을 표시합니다. 
- 
- ```
- bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
- ```
- 
- <strong>전제조건</strong>: 엔드포인트, 로그인
- 
- <strong>명령 옵션</strong>:
- 
- <dl>
-   <dt>-o ORG_NAME(선택사항)</dt>
-   <dd>조직으로 인스턴스를 필터링합니다. </dd>
-   <dt>-g GROUP_NAME</dt>
-   <dd>리소스 그룹으로 인스턴스를 필터링합니다. </dd>
-   <dt>-d MONTH_DATE(선택사항)</dt>
-   <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
-   <dt>--json(선택사항)</dt>
-   <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
- </dl>
 
 
 ## bluemix plugin repos
 {: #bluemix_plugin_repos}
 
-{{site.data.keyword.Bluemix_notm}} CLI에 등록된 모든 플러그인 저장소를 나열합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI에 등록된 모든 플러그인 저장소를 나열합니다.
 
 ```
 bluemix plugin repos
@@ -3684,7 +3583,7 @@ bluemix plugin repos
 ## bluemix plugin repo-add
 {: #bluemix_plugin_repo_add}
 
-{{site.data.keyword.Bluemix_notm}} CLI에 새 플러그인 저장소를 추가합니다. 
+새 플러그인 저장소를 {{site.data.keyword.Bluemix_notm}} CLI에 추가합니다.
 
 ```
 bluemix plugin repo-add REPO_NAME REPO_URL
@@ -3698,13 +3597,13 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME(필수)</dt>
    <dd>추가되는 저장소의 이름입니다. 각 저장소의 고유 이름을 정의할 수 있습니다.</dd>
    <dt>REPO_URL(필수)</dt>
-   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net은 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소입니다. </dd>
+   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net은 {{site.data.keyword.Bluemix_notm}} CLI공식 플러그인 저장소입니다.</dd>
     </dl>
 
 
 <strong>예제</strong>:
 
-`bluemix-repo`로서 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소 추가: 
+{{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소를 `bluemix-repo`로 추가:
 
 ```
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
@@ -3714,7 +3613,7 @@ bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ## bluemix plugin repo-remove
 {: #bluemix_plugin_repo_remove}
 
-{{site.data.keyword.Bluemix_notm}} CLI에서 플러그인 저장소를 제거합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI에서 플러그인 저장소를 제거합니다.
 
 ```
 bluemix plugin repo-remove REPO_NAME
@@ -3740,7 +3639,7 @@ bluemix plugin repo-remove bluemix-repo
 ## bluemix plugin repo-plugins
 {: #bluemix_plugin_repo_plugins}
 
-추가된 모든 저장소 또는 특정 저장소에서 사용 가능한 모든 플러그인을 나열합니다. 
+모든 추가된 저장소 또는 특정 저장소에서 사용 가능한 모든 플러그인을 나열합니다.
 
 ```
 bluemix plugin repo-plugins [-r REPO_NAME]
@@ -3752,18 +3651,18 @@ bluemix plugin repo-plugins [-r REPO_NAME]
 
    <dl>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
-   <dd>지정된 저장소의 플러그인만 나열합니다. </dd>
+   <dd>지정된 저장소의 플러그인만 나열합니다.</dd>
    </dl>
 
 <strong>예제</strong>:
 
-추가된 모든 저장소의 모든 플러그인 나열: 
+모든 추가된 저장소의 플러그인을 나열합니다.
 
 ```
 bluemix plugin repo-plugins
 ```
 
-`bluemix-repo` 저장소의 모든 플러그인 나열: 
+`bluemix-repo` 저장소의 모든 플러그인을 나열합니다.
 
 ```
 bluemix plugin repo-plugins -r bluemix-repo
@@ -3789,23 +3688,23 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
 <strong>예제</strong>:
 
-저장소 'Bluemix'의 플러그인 "container-service"의 세부사항 나열: 
+"sample-repo" 저장소의 "IBM-Containers" 플러그인 세부사항 나열:
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-기본 저장소 'Bluemix'의 플러그인 "container-service"의 세부사항을 나열합니다. 
+기본 저장소의 "IBM-Containers" 플러그인 세부사항 나열
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
 
 ## bluemix plugin list
 {: #bluemix_plugin_list}
 
-{{site.data.keyword.Bluemix_notm}} CLI의 설치된 모든 플러그인을 나열합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI에 설치된 모든 플러그인을 나열합니다.
 
 ```
 bluemix plugin list
@@ -3828,18 +3727,11 @@ bluemix plugin show PLUGIN-NAME
 ## bluemix plugin install
 {: #bluemix_plugin_install}
 
-지정된 경로 또는 저장소의 {{site.data.keyword.Bluemix_notm}} CLI에 특정 버전의 플러그인을 설치합니다. 
+지정된 경로 또는 저장소에서 {{site.data.keyword.Bluemix_notm}} CLI에 특정 버전의 플러그인을 설치합니다.
 
 ```
 bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
-
-```
-bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
-```
-
-저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
-버전이 지정되지 않은 경우 명령은 설치할 최신의 사용 가능한 버전을 선택합니다. 
 
 <strong>전제조건</strong>: 없음
 
@@ -3847,54 +3739,46 @@ bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
 
    <dl>
    <dt>PLUGIN_PATH|PLUGIN_NAME(필수)</dt>
-   <dd>-r <i>REPO_NAME</i>이 지정되지 않은 경우 플러그인은 지정된 로컬 경로 또는 원격 URL에서 설치됩니다. </dd>
+   <dd>-r <i>REPO_NAME</i>을 지정하지 않으면 지정된 로컬 경로 또는 원격 URL에서 플러그인이 설치됩니다.</dd>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
-   <dd>플러그인 2진이 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다. </dd>
+   <dd>플러그인 바이너리가 있는 저장소의 이름입니다. 저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소를 사용합니다.</dd>
    <dt>-v <i>VERSION</i>(선택사항)</dt>
-   <dd>설치될 플러그인의 버전입니다. 제공되지 않은 경우 최신 버전의 플러그인이 설치됩니다. 이 옵션은 저장소에서 플러그인을 설치하는 경우에만 유효합니다. </dd>
-   <dt>-f </dt>
-   <dd>확인 없이 플러그인 설치를 강제 실행합니다.</dd>
+   <dd>설치되는 플러그인의 버전입니다. 값을 지정하지 않으면 최신 버전의 플러그인이 설치됩니다. 이 옵션은 저장소에서 플러그인을 설치하는 경우에만 유효합니다.</dd>
     </dl>
-    
-    
-{{site.data.keyword.Bluemix_notm}} CLI의 공식 저장소 이름은 'Bluemix'입니다.     
 
 <strong>예제</strong>:
 
-로컬 파일에서 플러그인 설치:
+로컬 파일에서 플러그인을 설치합니다.
 
 ```
 bluemix plugin install /downloads/new_plugin
 ```
 
-원격 URL에서 플러그인 설치:
+원격 URL에서 플러그인을 설치합니다.
 
 ```
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-'Bluemix' 저장소에서 최신 버전의 'container-service' 플러그인을 설치합니다. 
+`bluemix-repo` 저장소에서 최신 버전의 `IBM-Containers` 플러그인을 설치합니다.
 
 ```
-bluemix plugin install container-service -r Bluemix
+bluemix plugin install IBM-Containers -r bluemix-repo
 ```
-공식 플러그인 저장소에서 버전 '0.1.425'의 'container-service' 플러그인 설치: 
+`bluemix-repo` 저장소에서 버전 `0.5.800`인 `IBM-Containers` 플러그인을 설치합니다.
 
 ```
-bluemix plugin install container-service -v 0.1.425
+bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 ## bluemix plugin update
 {: #bluemix_plugin_update}
 
-저장소에서 플러그인을 업그레이드합니다. 
+저장소에서 플러그인 업그레이드
 
 ```
 bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
-
-저장소가 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다.
-버전이 지정되지 않은 경우 명령은 설치할 최신의 사용 가능한 버전을 선택합니다. 
 
 <strong>전제조건</strong>: 없음
 
@@ -3903,37 +3787,37 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>업데이트할 플러그인의 이름입니다. 지정되지 않은 경우, 이 명령은 설치된 모든 플러그인의 업그레이드를 확인합니다.</dd>
  <dt>-r REPO_NAME</dt>
- <dd>플러그인 2진이 있는 저장소의 이름입니다. 지정되지 않은 경우 명령은 기본 플러그인 저장소 'Bluemix'를 사용합니다. </dd>
+ <dd>플러그인 바이너리가 있는 저장소의 이름입니다. 지정되지 않은 경우, 이 명령은 기본 플러그인 저장소를 사용합니다.</dd>
  <dt>-v <i>VERSION</i>(선택사항)</dt>
- <dd>업데이트되는 플러그인의 버전입니다. 제공되지 않은 경우 최신 사용 가능 버전으로 플러그인을 업데이트합니다. </dd>
+ <dd>업데이트할 플러그인의 버전입니다. 제공하지 않은 경우, 최신 사용 가능 버전으로 플러그인을 업데이트하십시오.</dd>
  <dt>--all</dt>
  <dd>사용 가능한 플러그인 모두 업데이트</dd>
 </dl>
 
 <strong>예제</strong>:
 
-공식 플러그인 저장소 'Bluemix'에서 사용 가능한 모든 업그레이드 확인: 
+플러그인 저장소 "My-Repo"에서 사용 가능한 모든 업그레이드 확인:
 
 ```
-bluemix plugin update -r Bluemix
+bluemix plugin update -r My-Repo
 ```
 
-공식 플러그인 저장소의 플러그인 'container-service'를 최신으로 업그레이드: 
+저장소 "My-Repo"의 플러그인 "plugin-echo"를 최신 상태로 업그레이드:
 
 ```
-bluemix plugin update container-service
+bluemix plugin update -r My-Repo plugin-echo
 ```
 
-공식 플러그인 저장소의 플러그인 'container-service'를 버전 '0.1.440'으로 업데이트: 
+저장소 "My-Repo"의 플러그인 "plugin-echo"를 버전 "1.0.1"로 업데이트:
 
 ```
-bluemix plugin update container-service -v 0.1.440
+bluemix plugin update -r My-Repo plugin-echo -v 1.0.1
 ```
 
 ## bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
-{{site.data.keyword.Bluemix_notm}} CLI에서 지정된 플러그인을 설치 제거합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI에서 지정된 플러그인을 설치 제거합니다.
 
 ```
 bluemix plugin uninstall PLUGIN_NAME
@@ -3945,13 +3829,13 @@ bluemix plugin uninstall PLUGIN_NAME
 
    <dl>
    <dt>PLUGIN_NAME(필수)</dt>
-   <dd>설치 제거될 플러그인의 이름입니다. </dd>
+   <dd>설치 제거되는 플러그인의 이름입니다.</dd>
     </dl>
 
 <strong>예제</strong>:
 
-이전에 설치된 'container-service' 플러그인 설치 제거: 
+이전에 설치한 `IBM-Containers` 플러그인을 설치 제거합니다.
 
 ```
-bluemix plugin uninstall container-service
+bluemix plugin uninstall IBM-Containers
 ```

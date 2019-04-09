@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -29,9 +29,9 @@ lastupdated: "2018-01-29"
 
 <img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="单击某个图标可快速开始使用 {{site.data.keyword.Bluemix_notm}} CLI。" style="width:440px;" />
 <map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="下载 {{site.data.keyword.Bluemix_notm}} CLI（打开新页面）" title="下载" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="入门（打开新页面）" title="入门" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="查看文档（打开新页面）" title="查看文档" shape="rect" coords="326, -10, 448, 218" />
+<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="下载 {{site.data.keyword.Bluemix_notm}} CLI" title="下载" shape="rect" coords="-7, -8, 108, 211" />
+<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="入门。" title="入门" shape="rect" coords="155, -1, 289, 210" />
+<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="查看文档" title="查看文档" shape="rect" coords="326, -10, 448, 218" />
 </map>
 
 ## {{site.data.keyword.dev_cli_notm}}

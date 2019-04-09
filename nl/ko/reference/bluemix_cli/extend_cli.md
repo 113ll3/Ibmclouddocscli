@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-02-05"
+  years: 2015, 2017
+lastupdated: "2017-10-20"
 
 ---
 
@@ -29,8 +29,8 @@ lastupdated: "2018-02-05"
 
 ### 1단계: 플러그인 검색
 
-1. `bluemix plugin repo-plugins -r REPO_NAME` 명령을 사용하여 저장소의 플러그인을 찾으십시오. 
-2. {{site.data.keyword.Bluemix_notm}} CLI에는 `Bluemix`라는 이름의 공식 저장소가 있으며, 사용자는 다음 예제에 표시된 대로 공식 플러그인을 검색할 수 있습니다. 
+1. `bluemix plugin repo-plugins -r REPO_NAME` 명령을 사용하여 저장소에서 플러그인을 찾으십시오.
+2. {{site.data.keyword.Bluemix_notm}} CLI는 기본적으로 `Bluemix`라는 이름을 사용합니다. 공식 `Bluemix` 저장소에서 플러그인을 나열할 수 있습니다. 예를 들어, 다음과 같습니다.
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -45,7 +45,7 @@ lastupdated: "2018-02-05"
 
 ### 2단계: 플러그인 설치
 
-`bx plugin install PLUGIN_NAME -r REPO_NAME` 명령을 사용하여 플러그인을 설치하십시오. 예를 들어, 다음 명령을 사용하여 공식 IBM 플러그인 저장소 `Bluemix`에서 플러그인을 설치하십시오. 
+`bx plugin install PLUGIN_NAME -r REPO_NAME` 명령을 사용하여 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다.
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix

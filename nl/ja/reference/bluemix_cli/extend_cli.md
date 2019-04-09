@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2015, 2018
-lastupdated: "2018-02-05"
+  years: 2015, 2017
+lastupdated: "2017-10-20"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-02-05"
 ### ステップ 1: プラグインの検索
 
 1. リポジトリーでプラグインを探すには、コマンド `bluemix plugin repo-plugins -r REPO_NAME` を使用します。
-2. {{site.data.keyword.Bluemix_notm}} CLI には、`Bluemix` という名前の公式リポジトリーがあります。以下の例に示すように、この公式プラグインを検索できます。
+2. {{site.data.keyword.Bluemix_notm}} CLI は、デフォルトで `Bluemix` という名前を使用します。 公式の `Bluemix` リポジトリー内のプラグインをリストすることができます。 例えば次のようにします。
   
   ```
   $ bluemix plugin repo-plugins -r Bluemix
@@ -45,7 +45,7 @@ lastupdated: "2018-02-05"
 
 ### ステップ 2: プラグインのインストール
 
-プラグインをインストールするには、`bx plugin install PLUGIN_NAME -r REPO_NAME` コマンドを使用します。 例えば、公式 IBM プラグイン・リポジトリー `Bluemix` からプラグインをインストールするには、以下のコマンドを使用します。
+プラグインをインストールするには、`bx plugin install PLUGIN_NAME -r REPO_NAME` コマンドを使用します。 例えば次のようにします。
 
   ```
   $ bluemix plugin install auto-scaling -r Bluemix

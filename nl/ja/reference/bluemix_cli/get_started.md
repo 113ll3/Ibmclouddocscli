@@ -5,13 +5,12 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2017-08-20"
 
 ---
 
 
 {:shortdesc: .shortdesc}
-{:gif: data-image-type='gif'}
 {:new_window: target="_blank"}
 
 
@@ -34,10 +33,9 @@ lastupdated: "2018-02-14"
    * macOS および Windows の場合は、単純にインストーラーを実行します。
    * Linux の場合、パッケージを解凍し、`install_bluemix_cli` スクリプトを実行します。
 
-1. API エンドポイントをターゲットに指定し、`bx login` コマンドを使用して {{site.data.keyword.Bluemix_notm}} にログインします。
-  
+1. API エンドポイントをターゲットに指定し、{{site.data.keyword.Bluemix_notm}} にログインします。
 
-  ![例](example.gif){: gif}
+  ![例](example.gif)
 
 これで、{{site.data.keyword.Bluemix_notm}} リソースを管理する準備ができました。 コマンド説明を表示するには、`bluemix help` または `bx help` と入力します。 
 

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2017-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-02-14"
 # {{site.data.keyword.Bluemix_notm}} (bx) 命令
 {: #bluemix_cli}
 
-版本：0.6.5
+版本：0.6.4
 
 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 提供了一组按名称空间分组的命令，供用户用于与 {{site.data.keyword.Bluemix_notm}} 进行交互。
 
@@ -200,11 +200,11 @@ lastupdated: "2018-02-14"
    <td>[bluemix iam service-policies](bx_cli.html#bluemix_iam_service_policies)</td>
   </tr>
   <tr>
-   <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
-   <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
-   <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
-   <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
-   <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
+    <td>[bluemix iam service-policy](bx_cli.html#bluemix_iam_service_policy)</td>
+    <td>[bluemix iam service-policy-create](bx_cli.html#bluemix_iam_service_policy_create)</td>
+    <td>[bluemix iam service-policy-update](bx_cli.html#bluemix_iam_service_policy_update)</td>
+    <td>[bluemix iam service-policy-delete](bx_cli.html#bluemix_iam_service_policy_delete)</td>
+    <td>[bluemix iam user-policies](bx_cli.html#bluemix_iam_user_policies)</td>
   </tr>
   <tr>
    <td>[bluemix iam user-policy](bx_cli.html#bluemix_iam_user_policy)</td>
@@ -212,14 +212,7 @@ lastupdated: "2018-02-14"
    <td>[bluemix iam user-policy-update](bx_cli.html#bluemix_iam_user_policy_update)</td>
    <td>[bluemix iam user-policy-delete](bx_cli.html#bluemix_iam_user_policy_delete)</td>
    <td>[bluemix iam oauth-tokens](bx_cli.html#bluemix_iam_oauth_tokens)</td>
-  </tr>
-   <tr>
    <td>[bluemix iam dedicated-id-disconnect](bx_cli.html#bluemix_iam_dedicated_id_disconnect)</td>
-   <td>[bluemix iam authorization-policy-create](bx_cli.html#bluemix_iam_authorization_policy_create)</td>
-   <td>[bluemix iam authorization-policy-delete](bx_cli.html#bluemix_iam_authorization_policy_delete)</td>
-   <td>[bluemix iam authorization-policy](bx_cli.html#bluemix_iam_authorization_policy)</td>
-   <td>[bluemix iam authorization-policies](bx_cli.html#bluemix_iam_authorization_policies)</td>
-  </tr>
 
   </tr>
   </tbody>
@@ -344,8 +337,6 @@ lastupdated: "2018-02-14"
   <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
  </tr>
  <tr>
-  <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
-  <td>[bluemix catalog locations](bx_cli.html#bluemix_catalog_locations)</td>
   <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
   <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
   <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
@@ -361,8 +352,7 @@ lastupdated: "2018-02-14"
  <tr>
   <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
   <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
-  <td>[bluemix billing resource-group-usage](bx_cli.html#bluemix_resource_group_usage)</td>
-  <td>[bluemix billing resource-instances-usage](bx_cli.html#bluemix_resource_instances_usage)</td>
+  <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  </tr>
  </tbody>
  </table>
@@ -681,7 +671,7 @@ bluemix regions
 设置或查看目标帐户、区域、组织或空间。
 
 ```
-bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -692,8 +682,6 @@ bluemix target [-r REGION_NAME] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o O
    <dd>要切换到的区域的名称，例如“us-south”或“eu-gb”。</dd>
    <dt>-c <i>ACCOUNT_ID</i>（可选）</dt>
    <dd>要作为目标的帐户的标识。</dd>
-   <dt>-g <i>RESOURCE_GROUP</i>（可选）</dt>
-   <dd>资源组的名称。</dd>
    <dt>--cf</dt>
    <dd>以交互方式选择目标组织和空间</dd>
    <dt>-o <i>ORG_NAME</i>（可选）</dt>
@@ -993,7 +981,8 @@ bluemix account org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME（必需）</dt>
    <dd>要将此用户分配到的组织的名称。</dd>
    <dt>ORG_ROLE（必需）</dt>
-   <dd>要将此用户分配到的组织角色的名称。例如：<ul>
+   <dd>要将此用户分配到的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -1029,7 +1018,8 @@ bluemix account org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME（必需）</dt>
    <dd>要将此用户从中除去的组织的名称。</dd>
    <dt>ORG_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的组织角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的组织角色的名称。例如：
+<ul>
    <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
    <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
    <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
@@ -1086,7 +1076,8 @@ bluemix account space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户分配到的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户分配到的空间角色的名称。例如：<ul>
+   <dd>要将此用户分配到的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -1122,7 +1113,8 @@ bluemix account space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME（必需）</dt>
    <dd>要将此用户从中除去的空间的名称。</dd>
    <dt>SPACE_ROLE（必需）</dt>
-   <dd>要将此用户从中除去的空间角色的名称。例如：<ul>
+   <dd>要将此用户从中除去的空间角色的名称。例如：
+<ul>
    <li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
    <li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
    <li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
@@ -1201,28 +1193,57 @@ bluemix account user-delete USERNAME [-c ACCOUNT_ID] [-f]
 ## bluemix account user-invite
 {: #bluemix_account_user_invite}
 
-邀请用户加入帐户。此操作只能由帐户所有者执行。
+邀请用户加入已设置组织和空间角色的帐户。此操作只能由帐户所有者执行。
 
 ```
-bluemix account user-invite USER_EMAIL
+bluemix account user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
 ```
+
+<strong>先决条件</strong>：端点和登录
+
+<strong>命令选项</strong>：
+<dl>
+   <dt>USER_NAME（必需）</dt>
+   <dd>要邀请的用户的名称。</dd>
+   <dt>ORG_NAME（必需）</dt>
+   <dd>要邀请此用户加入的组织的名称。</dd>
+   <dt>ORG_ROLE（必需）</dt>
+   <dd>要邀请此用户加入的组织角色的名称。例如：
+<ul>
+  <li>OrgManager：此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</li>
+  <li>BillingManager：此角色可以创建和管理缴费帐户和付款信息。</li>
+  <li>OrgAuditor：此角色具有对组织信息和报告的只读访问权。</li>
+  </ul> </dd>
+   <dt>SPACE_NAME（必需）</dt>
+   <dd>要邀请此用户加入的空间的名称。</dd>
+   <dt>SPACE_ROLE（必需）</dt>
+   <dd>要邀请此用户加入的空间的名称。要邀请此用户加入的空间角色的名称。例如：
+<ul>
+<li>SpaceManager：此角色可以邀请和管理用户，以及启用给定空间的功能。</li>
+<li>SpaceDeveloper：此角色可以创建和管理应用程序与服务，以及查看日志和报告。</li>
+<li>SpaceAuditor：此角色可以查看空间的日志、报告和设置。</li>
+</ul>
+</dd>
+</dl>
+
+<strong>示例</strong>：
+
+邀请用户 `Mary` 以 `OrgManager` 角色加入组织 `IBM`，并以 `SpaceAuditor` 角色加入空间 `Cloud`：
+
+```
+bluemix account user-invite Mary IBM OrgManager Cloud SpaceAuditor
+```
+<!-- Begin Staging URL vs Prod URL -->
+**注**：您可以在邀请期间使用 CLI 设置组织/空间角色，但是如果您想要设置其他许可权，那么必须使用 UI。有关进一步的详细信息，请参阅[分配用户访问权](https://console.stage1.bluemix.net/docs/iam/assignaccess.html#assignaccess)。<!-- End Staging URL vs Prod URL -->
 
 ## bluemix account user-reinvite
 {: #bluemix_account_user_reinvite}
 
-向用户重新发送邀请（需要帐户所有者）。
+向用户重新发送邀请（必须是组织管理员或帐户所有者）
 
 ```
-bluemix account user-reinvite USER_EMAIL
+bluemix account user-reinvite USER_EMAIL ORG_NAME
 ```
-
-<strong>先决条件</strong>：端点和登录
-  
- <strong>命令选项</strong>：
- <dl>
-   <dt>USER_EMAIL（必需）</dt>
-   <dd>要重新邀请的用户的电子邮件。</dd>
- </dl>
 
 
 
@@ -1987,7 +2008,7 @@ bluemix iam service-policy-delete test 140798e2-8ea7db3
 ## bluemix iam oauth-tokens
 {: #bluemix_iam_oauth_tokens}
 
-检索并显示当前会话的 OAuth 令牌。
+检索并显示当前会话的 OAuth 令牌
 
 ```
 bluemix iam oauth-tokens
@@ -2001,7 +2022,7 @@ bluemix iam oauth-tokens
 
 <strong>示例</strong>：
 
-刷新并显示 OAuth 令牌。
+刷新并显示 OAuth 令牌
 
 ```
 bluemix iam oauth-tokens
@@ -2010,7 +2031,7 @@ bluemix iam oauth-tokens
 ## bluemix iam dedicated-id-disconnect
 {: #bluemix_iam_dedicated_id_disconnect}
 
-断开公共 IBM 标识与专用非 IBM 标识的连接。
+断开公共 IBM 标识与专用非 IBM 标识的连接
 
 ```
 bluemix iam dedicated-id-disconnect [-f, --force]
@@ -2021,86 +2042,13 @@ bluemix iam dedicated-id-disconnect [-f, --force]
 <strong>命令选项</strong>：
 <dl>
   <dt>-f, --force</dt>
-  <dd>强制断开连接而不确认。</dd>
+  <dd>强制断开连接而不确认</dd>
 </dl>
-
-## bluemix iam authorization-policy-create
-{: #bluemix_iam_authorization_policy_create}
- 
-创建授权策略以允许服务实例访问其他服务实例。
-
-```
-bluemix iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME] ROLE_NAME1,ROLE_NAME2...
-```
-
-<strong>先决条件</strong>：登录和目标
-
-<strong>命令选项</strong>：
-<dl>
-  <dt>SOURCE_SERVICE_NAME</dt>
-  <dd>可对其授予访问权的源服务。</dd>
-  <dt>TARGET_SERVICE_NAME</dt>
-  <dd>可授权源服务访问的目标服务。</dd>
-  <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>源服务实例名称，如果未指定该名称，将对源服务的所有实例授予访问权。</dd>
-  <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>目标服务实例名称，如果未指定该名称，将对目标服务的所有实例授予访问权。</dd>
-  <dt>ROLE_NAME1,ROLE_NAME2...</dt>
-  <dd>为源服务提供访问权的角色。</dd>  
-</dl>
-
-## bluemix iam authorization-policy-delete
-{: #bluemix_iam_authorization_policy_delete}
-
-删除授权策略。
-
-```
-bluemix iam authorization-policy-delete AUTHORIZATION_POLICY_ID [-f, --force]
-```
-
-<strong>先决条件</strong>：登录和目标
-
-<strong>命令选项</strong>：
-<dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>要删除的授权策略的标识。</dd> 
- <dt>-f, --force</dt>
- <dd>强制删除而不确认。</dd> 
-</dl>
-
-## bluemix iam authorization-policy
-{: #bluemix_iam_authorization_policy}
-
-显示授权策略的详细信息。
-
-```
-bluemix iam authorization-policy AUTHORIZATION_POLICY_ID
-```
-
-<strong>先决条件</strong>：登录和目标
-
-<strong>命令选项</strong>：
-<dl>
- <dt>AUTHORIZATION_POLICY_ID</dt>
- <dd>要显示的授权策略的标识。</dd> 
-</dl>
-
-
-## bluemix iam authorization-policies
-{: #bluemix_iam_authorization_policies}
-
-列出当前帐户下的授权策略。
-
-```
-bluemix iam authorization-policies
-```
-
-<strong>先决条件</strong>：登录和目标
 
 ## bluemix resource groups
 {: #bluemix_resource_groups}
 
-列出资源组。
+列出资源组
 
 ```
 bluemix resource groups [--default]
@@ -2111,7 +2059,7 @@ bluemix resource groups [--default]
 <strong>命令选项</strong>：
 <dl>
   <dt>--default</dt>
-  <dd>获取当前帐户的缺省组。</dd>
+  <dd>获取当前帐户的缺省组</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -2131,7 +2079,7 @@ bluemix resource groups --default
 ## bluemix resource group
 {: #bluemix_resource_group}
 
-显示资源组的详细信息。
+显示资源组的详细信息
 
 ```
 bluemix resource group NAME [--id]
@@ -2142,7 +2090,7 @@ bluemix resource group NAME [--id]
 <strong>命令选项</strong>：
 <dl>
   <dt>NAME（必需）</dt>
-  <dd>资源组的名称。</dd>
+  <dd>资源组的名称</dd>
   <dt>--id</dt>
   <dd>仅显示标识</dd>
 </dl>
@@ -2158,14 +2106,14 @@ bluemix resource group example-group
 仅显示资源组 `example-group` 的标识：
 
 ```
-bluemix resource group example-group --id
+bluemix resourxce group example-group --id
 ```
 
 
 ## bluemix resource group-update
 {: #bluemix_resource_group_update}
 
-更新现有资源组。
+更新现有资源组
 
 ```
 bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
@@ -2176,13 +2124,13 @@ bluemix resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_
 <strong>命令选项</strong>：
 <dl>
   <dt>NAME（必需）</dt>
-  <dd>目标资源组的名称。</dd>
+  <dd>目标资源组的名称</dd>
   <dt>-n, --name</dt>
-  <dd>资源组的新名称。</dd>
+  <dd>资源组的新名称</dd>
   <dt>-q, --quota</dt>
-  <dd>新配额定义的名称。</dd>
+  <dd>新配额定义的名称</dd>
   <dt>-f</dt>
-  <dd>强制更新而不确认。</dd>
+  <dd>强制更新而不确认</dd>
 </dl>
 
 <strong>示例</strong>：
@@ -2202,7 +2150,7 @@ bluemix resource group-update example-group -q free
 ## bluemix resource quotas
 {: #bluemix_resource_quotas}
 
-列出所有配额定义。
+列出所有配额定义
 
 ```
 bluemix resource quotas
@@ -2765,7 +2713,7 @@ bluemix resource service-instance-create my-service-instance test-service test-s
 更新服务实例
 
 ```
-bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [-f, --force]
+bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [--service-plan-id SERVICE_PLAN_ID] [--update-time UPDATE_TIME] [-f, --force]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -2780,6 +2728,8 @@ bluemix resource service-instance-update SERVICE_INSTANCE_NAME [-n, --name NEW_N
   <dd>新标记</dd>
   <dt>--service-plan-id</dt>
   <dd>新服务套餐标识</dd>
+  <dt>--update-time</dt>
+  <dd>从可收费记录应生效时起到现在的时间（以秒计）</dd>
   <dt>-f, --force</dt>
   <dd>强制更新而不确认</dd>
 </dl>
@@ -3532,36 +3482,10 @@ bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemi
 bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
-## bluemix catalog locations
-{: #bluemix_catalog_locations}
-
-以您选择的格式获取区域选项子集。
-
-```
-bluemix catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--json] [--global] [--csv]
-```
-
-<strong>命令选项</strong>：
-
-<dl>
-  <dt>-i, --id</dt>
-  <dd>按标识指定地理位置。</dd>
-  <dt>-k, --kind</dt>
-  <dd>获取指定种类的条目列表。</dd>
-  <dt>--col</dt>
-  <dd>指定表的其他列。目前有“group”、“provider”和“tags”。</dd>
-  <dt>--json</dt>
-  <dd>原始 JSON 响应的输出。</dd>
-  <dt>--global</dt>
-  <dd>在全球范围运行。</dd>
-  <dt>--csv</dt>
-  <dd>输出 CSV 文件</dd>
-</dl>
-
 ## bluemix billing account-usage
 {: #bluemix_billing_account_usage}
 
-显示当前帐户的每月使用情况和成本。
+显示帐户的每月使用情况和成本。
 
 ```
 bluemix billing account-usage [-d YYYY-MM] [--json]
@@ -3580,7 +3504,7 @@ bluemix billing account-usage [-d YYYY-MM] [--json]
 
 <strong>示例</strong>：
 
-显示 2016 年 6 月当前帐户的使用情况和成本报告：
+显示 2016 年 6 月我的帐户的使用情况和成本报告：
 
 ```
 bluemix billing account-usage -d 2016-06
@@ -3589,10 +3513,10 @@ bluemix billing account-usage -d 2016-06
 ## bluemix billing org-usage
 {: #bluemix_billing_org_usage}
 
-显示组织的每月使用情况。此操作只能由帐户所有者或组织记帐管理员执行。
+显示组织的每月使用情况详细信息。此操作只能由组织的记帐管理员执行。
 
 ```
-bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
+bluemix billing org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -3604,19 +3528,21 @@ bluemix billing org-usage ORG_NAME [-d YYYY-MM] [--json]
   <dd>组织的名称。</dd>
   <dt>-d MONTH_DATE（可选）</dt>
   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>托管组织的区域名称。如果设置为“all”，那么会显示所有区域中的组织使用情况。</dd>
   <dt>--json（可选）</dt>
   <dd>以 JSON 格式显示使用情况结果。</dd>
 </dl>
 
 
 
-## bluemix billing resource-group-usage
-{: #bluemix_billing_resource_group_usage}
+## bluemix billing orgs-usage-summary
+{: #bluemix_billing_orgs_usage_summary}
 
-显示资源组的每月使用情况。此操作只能由帐户所有者或资源组记帐管理员执行。
+显示我的帐户中组织的每月使用情况摘要。
 
 ```
-bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
+bluemix billing orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 ```
 
 <strong>先决条件</strong>：端点和登录
@@ -3624,37 +3550,13 @@ bluemix billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--json]
 <strong>命令选项</strong>：
 
 <dl>
-  <dt>GROUP_NAME（必需）</dt>
-  <dd>资源组的名称。</dd>
   <dt>-d MONTH_DATE（可选）</dt>
   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>托管组织的区域的名称。如果设置为“all”，那么会显示所有区域中组织的使用情况摘要。</dd>
   <dt>--json（可选）</dt>
   <dd>以 JSON 格式显示使用情况结果。</dd>
 </dl>
-
-## bluemix billing resource-instances-usage
-{: #bluemix_billing_resource_instances_usage}
- 
- 显示当前帐户下的每月资源实例使用情况。
- 
- ```
- bluemix billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--json]
- ```
- 
- <strong>先决条件</strong>：端点和登录
- 
- <strong>命令选项</strong>：
- 
- <dl>
-   <dt>-o ORG_NAME（可选）</dt>
-   <dd>按组织过滤实例。</dd>
-   <dt>-g GROUP_NAME</dt>
-   <dd>按资源组过滤实例。</dd>
-   <dt>-d MONTH_DATE（可选）</dt>
-   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
-   <dt>--json（可选）</dt>
-   <dd>以 JSON 格式显示使用情况结果。</dd>
- </dl>
 
 
 ## bluemix plugin repos
@@ -3777,16 +3679,16 @@ bluemix plugin repo-plugin PLUGIN_NAME [-r REPO_NAME]
 
 <strong>示例</strong>：
 
-列出存储库“Bluemix”中的插件“container-service”的详细信息：
+列出存储库“sample-repo”中插件“IBM-Containers”的详细信息：
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
-列出缺省存储库“Bluemix”中的插件“container-service”的详细信息
+列出缺省存储库中插件“IBM-Containers”的详细信息
 
 ```
-bluemix plugin repo-plugin container-service -r Bluemix
+bluemix plugin repo-plugin IBM-Containers -r sample-repo
 ```
 
 
@@ -3822,12 +3724,6 @@ bluemix plugin show PLUGIN-NAME
 bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
 
-```
-bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
-```
-
-如果未指定存储库，此命令将使用缺省插件存储库“Bluemix”。如果未指定版本，此命令将选择可用的最新版本进行安装。
-
 <strong>先决条件</strong>：无
 
 <strong>命令选项</strong>：
@@ -3836,15 +3732,10 @@ bluemix plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
    <dt>PLUGIN_PATH|PLUGIN_NAME（必需）</dt>
    <dd>如果未指定 -r <i>REPO_NAME</i>，那么将从指定的本地路径或远程 URL 安装插件。</dd>
    <dt>-r <i>REPO_NAME</i>（可选）</dt>
-   <dd>插件二进制文件所在的存储库的名称。如果未指定存储库，此命令将使用缺省插件存储库“Bluemix”。</dd>
+   <dd>插件二进制文件所在的存储库的名称。如果未指定存储库，此命令将使用缺省插件存储库。</dd>
    <dt>-v <i>VERSION</i>（可选）</dt>
    <dd>要安装的插件的版本。如果未提供，将安装插件的最新版本。此选项仅对从存储库安装插件有效。</dd>
-   <dt>-f</dt>
-   <dd>强制安装插件而不确认。</dd>
     </dl>
-    
-    
-{{site.data.keyword.Bluemix_notm}} CLI 具有官方存储库名称“Bluemix”。    
 
 <strong>示例</strong>：
 
@@ -3860,27 +3751,27 @@ bluemix plugin install /downloads/new_plugin
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-从“Bluemix”存储库安装最新版本的“container-service”插件：
+从 `bluemix-repo` 存储库安装最新版本的 `IBM-Containers` 插件：
 
 ```
-bluemix plugin install container-service -r Bluemix
+bluemix plugin install IBM-Containers -r bluemix-repo
 ```
-从官方插件存储库安装版本“0.1.425”的“container-service”插件：
+从 `bluemix-repo` 存储库安装版本为 `0.5.800` 的 `IBM-Containers` 插件：
+
+
 
 ```
-bluemix plugin install container-service -v 0.1.425
+bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 ## bluemix plugin update
 {: #bluemix_plugin_update}
 
-从存储库升级插件。
+升级存储库中的插件
 
 ```
 bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 ```
-
-如果未指定存储库，此命令将使用缺省插件存储库“Bluemix”。如果未指定版本，此命令将选择可用的最新版本进行安装。
 
 <strong>先决条件</strong>：无
 
@@ -3889,7 +3780,7 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
  <dt>PLUGIN NAME</dt>
  <dd>要更新的插件的名称。如果未指定，此命令将检查安装的所有插件的升级。</dd>
  <dt>-r REPO_NAME</dt>
- <dd>插件二进制文件所在的存储库的名称。如果未指定，此命令将使用缺省插件存储库“Bluemix”。</dd>
+ <dd>插件二进制文件所在的存储库的名称。如果未指定，此命令将使用缺省插件存储库。</dd>
  <dt>-v <i>VERSION</i>（可选）</dt>
  <dd>要更新到的插件版本。如果未提供，那么将插件更新到最新可用版本。</dd>
  <dt>--all</dt>
@@ -3898,22 +3789,22 @@ bluemix plugin update [PLUGIN NAME] [-r REPO_NAME] [-v VERSION] [--all]
 
 <strong>示例</strong>：
 
-检查官方插件存储库“Bluemix”中的所有可用升级：
+检查插件存储库“My-Repo”中所有可用的升级：
 
 ```
-bluemix plugin update -r Bluemix
+bluemix plugin update -r My-Repo
 ```
 
-将官方插件存储库中的插件“container-service”升级到最新版本：
+将存储库“My-Repo”中的插件“plugin-echo”升级到最新版本：
 
 ```
-bluemix plugin update container-service
+bluemix plugin update -r My-Repo plugin-echo
 ```
 
-将官方插件存储库中的插件“container-service”更新到版本“0.1.440”：
+将存储库“My-Repo”中的插件“plugin-echo”升级到版本“1.0.1”：
 
 ```
-bluemix plugin update container-service -v 0.1.440
+bluemix plugin update -r My-Repo plugin-echo -v 1.0.1
 ```
 
 ## bluemix plugin uninstall
@@ -3936,8 +3827,8 @@ bluemix plugin uninstall PLUGIN_NAME
 
 <strong>示例</strong>：
 
-卸载先前安装的“container-service”插件：
+卸载先前安装的 `IBM-Containers` 插件：
 
 ```
-bluemix plugin uninstall container-service
+bluemix plugin uninstall IBM-Containers
 ```

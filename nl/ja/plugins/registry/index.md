@@ -133,13 +133,16 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 **パラメーター**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。 
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。
+
+ 
 
 詳しくは、[{{site.data.keyword.registrylong_notm}} コマンドの CLI 出力のフォーマット設定およびフィルター操作](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)を参照してください。
 
 </dd>
 <dt>IMAGE</dt>
 <dd>レポートを取得するイメージの名前。 このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージを検査できます。
+
 
 <p>イメージの名前を調べるには、`bx cr image-list` を実行します。 リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。 イメージ名にタグが指定されていない場合、`latest` というタグが付いたイメージが検査されます。 </p> 
 
@@ -164,7 +167,9 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE...]
 <dt>--no-trunc</dt>
 <dd>(オプション) イメージ・ダイジェストを切り捨てません。</dd>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。 
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。
+
+ 
 
 詳しくは、[{{site.data.keyword.registrylong_notm}} コマンドの CLI 出力のフォーマット設定およびフィルター操作](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)を参照してください。
 
@@ -193,6 +198,7 @@ bx cr image-rm IMAGE [IMAGE...]
 <dl>
 <dt>IMAGE</dt>
 <dd>レポートを取得するイメージの名前。 このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージを同時に削除できます。
+
 
 <p>イメージの名前を調べるには、`bx cr image-list` を実行します。 リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。 イメージ名にタグが指定されていない場合、`latest` とタグ付けされたイメージはデフォルトで削除されます。</p> 
 
@@ -342,7 +348,9 @@ bx cr region-set [REGION]
 **パラメーター**
 <dl>
 <dt>REGION</dt>
-<dd>(オプション) ターゲット地域の名前。例えば、`us-south` などです。 
+<dd>(オプション) ターゲット地域の名前。例えば、`us-south` などです。
+
+ 
 
 詳しくは、『[地域](../../../services/Registry/registry_overview.html#registry_regions)』を参照してください。
 
@@ -406,7 +414,9 @@ bx cr token-list --format FORMAT
 **パラメーター**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。 
+<dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。
+
+ 
 
 詳しくは、[{{site.data.keyword.registrylong_notm}} コマンドの CLI 出力のフォーマット設定およびフィルター操作](../../../services/Registry/registry_cli_reference.html#registry_cli_listing)を参照してください。
 
@@ -446,9 +456,12 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 <dt>IMAGE</dt>
 <dd>レポートを取得するイメージの名前。 このレポートは、イメージに、既知のパッケージ脆弱性があるかどうかを報告します。 このコマンドでは、それぞれのイメージを、名前の間をスペースで区切ってリストすることにより、複数のイメージのレポートを同時に要求できます。
 
+
 <p>イメージの名前を調べるには、`bx cr image-list` を実行します。 リポジトリー列とタグ列のコンテンツを組み合わせて、イメージ名を `repository:tag` の形式で作成します。 イメージ名にタグが指定されていない場合、レポートは `latest` というタグが付いたイメージを評価します。 </p> 
 
 <p>以下のオペレーティング・システムがサポートされています。
+
+
 
 <ul>
 
@@ -466,6 +479,8 @@ bx cr vulnerability-assessment [--extended | -e] [--vulnerabilities | -v] [--con
 </dd>
 <dt>--output FORMAT、-o FORMAT</dt>
 <dd>(オプション) コマンド出力は選択された形式で返されます。 デフォルトの形式は `text` です。 以下の形式がサポートされています。
+
+
 
 <ul>
 
