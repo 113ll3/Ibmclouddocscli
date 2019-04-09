@@ -2,17 +2,17 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018
 
 
-lastupdated: "2019-01-03"
+lastupdated: "2018-10-17"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Nutzungsinformationen für Konten, Organisationen, Ressourcengruppen und Ressourcen anzeigen 
+# Abrechnung 
 {: #ibmcloud_billing}
 
 Verwenden Sie die folgenden Befehle, um Ressourcennutzungs- und Abrechnungsdaten abzurufen.
@@ -32,7 +32,7 @@ Verwenden Sie die folgenden Befehle, um Ressourcennutzungs- und Abrechnungsdaten
  </table>
  
  
-## ibmcloud billing account-usage
+ ## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
 Monatliche Nutzungsinformationen des aktuellen Kontos anzeigen (nur Kontoadministrator)
@@ -49,7 +49,7 @@ ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Daten für den angegebenen Monat und das angegebene Datum unter Verwendung des Formats JJJJ-MM anzeigen. Wird keine Angabe gemacht, wird die Nutzung des aktuellen Monats angezeigt.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+  <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -79,7 +79,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Daten für den angegebenen Monat und das angegebene Datum unter Verwendung des Formats JJJJ-MM anzeigen. Wird keine Angabe gemacht, wird die Nutzung des aktuellen Monats angezeigt.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+  <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 ## ibmcloud billing resource-group-usage
@@ -101,7 +101,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Daten für den angegebenen Monat und das angegebene Datum unter Verwendung des Formats JJJJ-MM anzeigen. Wird keine Angabe gemacht, wird die Nutzung des aktuellen Monats angezeigt.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+  <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
 
 ## ibmcloud billing resource-instances-usage
@@ -125,5 +125,5 @@ ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-
   <dt>-d MONTH_DATE (optional)</dt>
   <dd>Daten für Monat und Datum durch Angeben des Formats JJJJ-MM anzeigen. Wird keine Angabe gemacht, wird die Nutzung des aktuellen Monats angezeigt.</dd>
   <dt>--output FORMAT (optional)</dt>
-  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
+  <dd>Ausgabeformat angeben, zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
 </dl>
