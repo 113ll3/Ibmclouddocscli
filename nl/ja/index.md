@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -14,33 +14,106 @@ lastupdated: "2018-01-29"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# CLI およびツールの概要
+# {{site.data.keyword.Bluemix_notm}} CLI の概説
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} には、堅固な CLI、および CLI と統合されるプラグインが用意されています。
-
-## {{site.data.keyword.Bluemix_notm}} CLI
-{: #cli}
-
-{{site.data.keyword.Bluemix}} CLI は、{{site.data.keyword.Bluemix_notm}} 環境内のリソースを管理するためのコマンド・ライン・エクスペリエンスを提供します。 また、Cloud Foundry アプリケーションとサービスを管理するための Cloud Foundry コマンド・ライン・インターフェースである cf が、そのインストール済み環境に組み込まれています。
+このチュートリアルでは、一連の {{site.data.keyword.Bluemix}} 開発者ツールをインストールし、インストールを検証して、ご使用の環境を構成します。 {{site.data.keyword.Bluemix}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションをエンドツーエンドで作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。
 {:shortdesc}
 
-開始するには、以下のいずれかのオプションをクリックします。
+このインストールによって、スタンドアロン {{site.data.keyword.Bluemix_notm}} CLI および以下のツールを取得できます。
 
-<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="アイコンをクリックして、{{site.data.keyword.Bluemix_notm}} CLI を即時に開始する。" style="width:440px;" />
-<map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="{{site.data.keyword.Bluemix_notm}} CLI のダウンロード (新規ページを開く)" title="ダウンロード" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="開始 (新規ページを開く)" title="開始" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="資料の表示 (新規ページを開く)" title="資料の表示" shape="rect" coords="326, -10, 448, 218" />
-</map>
+* `Homebrew` (Mac のみ)
+* `Git`
+* `Docker`
+* `Helm`
+* `kubectl`
+* `curl`
+* {{site.data.keyword.dev_cli_notm}} プラグイン
+* {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} プラグイン
+* {{site.data.keyword.registrylong_notm}} プラグイン
+* {{site.data.keyword.containerlong_notm}} プラグイン
+* `sdk-gen` プラグイン
 
-## {{site.data.keyword.dev_cli_notm}}
-{: #idt}
+## 始める前に
+{: #prereq}
 
-{{site.data.keyword.dev_cli_long}} (IDT) は、クラウド・ネイティブ・アプリを作成、ビルド、およびデプロイするための、{{site.data.keyword.Bluemix}} CLI に対する開発者固有の拡張機能 (`bx dev`) を提供します。 IDT のインストールには、基本の {{site.data.keyword.Bluemix_notm}} CLI、複数の拡張機能、およびすべてのシステムの前提条件が含まれます。
-{:shortdesc}
+[{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") と以下のシステム要件が必要です。
 
-- [概要とインストール](/docs/cloudnative/idt/index.html) <br>
-- [開始](/docs/cloudnative/idt/index.html) <br>
-- [コマンド](/docs/cloudnative/idt/commands.html) <br>
-- [クラウド・ネイティブの開発](/docs/cloudnative/index.html) <br>
+* Windows を実行している場合、一部の機能は、Windows 10 Pro を実行していないとサポートされません。
+* Docker の Stable チャネル (安定版) を使用する必要があり、バージョン 1.13.1 以上が必要です。
+
+## ステップ 1. インストール・コマンドの実行
+{: #step1}
+
+* Mac および Linux の場合、次のコマンドを実行します。
+
+  ```
+  curl -sL https://ibm.biz/idt-installer | bash
+  ```
+  {: codeblock}
+
+* Windows 10 Pro の場合、管理者として次のコマンドを実行します。
+
+  ```
+  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  ```
+  {: codeblock}
+
+  Windows PowerShell アイコンを右クリックして、**「管理者として実行」**を選択します。
+  {: tip}
+
+  [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools) からインストーラー・スクリプトをダウンロードすることもできます。
+
+  これらのツールを手動でインストールする手順については、『[ツールの再インストール](/docs/cli/ts_createapps.html#appendix)』を参照してください。
+
+## ステップ 2. インストールの検証
+{: #step2}
+
+CLI と開発者ツールが正常にインストールされたことを検証するには、`help` コマンドを実行します。
+
+```
+ibmcloud dev help
+```
+{: codeblock}
+<br>
+出力には、使用方法の説明、現行バージョン、およびサポートされるコマンドがリストされます。
+
+## ステップ 3. 環境の構成
+{: #step3}
+
+1. ご使用の {{site.data.keyword.Bluemix_notm}} ロケーションの API エンドポイントに接続します。 例えば、{{site.data.keyword.Bluemix_notm}} のダラス・ロケーションに接続するには、以下のコマンドを入力します。
+
+	```
+	ibmcloud api https://api.ng.bluemix.net
+	```
+	{: codeblock}
+
+2. IBM ID を使用して {{site.data.keyword.Bluemix_notm}} にログインします。
+
+	```
+	ibmcloud login
+	```
+	{: codeblock}
+    <br>
+
+	資格情報が拒否された場合、統合 ID を使用している可能性があります。 詳しくは、[フェデレーテッド ID を使用したログイン](/docs/iam/login_fedid.html#federated_id)を参照してください。
+	{: tip}
+
+3. 組織とスペースを設定します。
+
+	```
+	ibmcloud target --cf
+	```
+	{: codeblock}
+
+	オプションで、上記のコマンドの出力を使用して、次のコマンドで組織とスペースを手動で設定することができます。
+
+	```
+	ibmcloud target -o <value> -s <value>
+	```
+	{: codeblock}
+
+## 次のステップ
+{: #next-steps}
+
+最初のアプリケーションの開発およびデプロイに取り掛かることができます。 詳しくは、『[CLI を使用したアプリの作成およびデプロイ](/docs/apps/create-deploy-cli.html)』を参照してください。

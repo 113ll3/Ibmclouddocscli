@@ -178,4 +178,4 @@ En las secciones siguientes se ofrecen detalles sobre cómo desinstalar la CLI d
 
 Utilice las opciones siguientes para informar de problemas o enviar nuevas solicitudes de características:
  * Cree problemas en [Github](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg).
- * Deje los mensajes en el [Canal #developer-tools de Slack de IBM Cloud Tech](https://ibm-cloud-tech.slack.com) - Solicite acceso de equipo [aquí](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg).
+ * Deje los mensajes en el [IBM Cloud Tech's Slack - canal #developer-tools](https://ibm-cloud-tech.slack.com) - Solicitar acceso de equipo [aquí](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg).

@@ -1,13 +1,11 @@
 ---
 
 copyright:
+
   years: 2018, 2019
-lastupdated: "2019-02-26"
 
-keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
-subcollection: cloud-cli
-
+lastupdated: "2019-01-03"
 ---
 
 {:new_window: target="_blank"}
@@ -19,11 +17,26 @@ subcollection: cloud-cli
 
 以下のコマンドを使用して、リソース使用量と請求情報を入手します。
 {: shortdesc}
+
+<table summary="{{site.data.keyword.Bluemix_notm}} の請求および使用量を管理するために使用できる ibmcloud コマンド。">
+ <thead>
+ </thead>
+ <tbody>
+<tr>
+  <td>[ibmcloud billing account-usage](cli_billing.html#ibmcloud_billing_account_usage)</td>
+  <td>[ibmcloud billing org-usage](cli_billing.html#ibmcloud_billing_org_usage)</td>
+  <td>[ibmcloud billing resource-group-usage](cli_billing.html#ibmcloud_billing_resource_group_usage)</td>
+  <td>[ibmcloud billing resource-instances-usage](cli_billing.html#ibmcloud_billing_resource_instances_usage)</td>
+ </tr>
+ </tbody>
+ </table>
+ 
  
 ## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
-現行アカウントの月々の使用量を表示します (アカウント管理者のみ)。
+現行アカウントの月々の使用量を表示します (アカウント管理者のみ)
+
 ```
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
@@ -50,7 +63,8 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-組織の月々の使用量を表示します (アカウント管理者または組織の請求管理者のみ)。
+組織の月々の使用量を表示します (アカウント管理者または組織の請求管理者のみ)
+
 ```
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -71,7 +85,8 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
-リソース・グループの月々の使用量を表示します (アカウント管理者またはリソース・グループ管理者のみ)。
+リソース・グループの月々の使用量を表示します (アカウント管理者またはリソース・グループ管理者のみ)
+
 ```
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -92,7 +107,8 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
-現行アカウントの月々のリソース・インスタンス使用量を表示します。
+現行アカウントの月次リソース・インスタンス使用量を表示します。
+
 ```
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```

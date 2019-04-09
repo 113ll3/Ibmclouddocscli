@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -14,33 +14,106 @@ lastupdated: "2018-01-29"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Panoramica della CLI e degli strumenti
+# Introduzione alla CLI {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-{{site.data.keyword.Bluemix_notm}} fornisce una solida CLI e plug-in che si integrano con la CLI.
-
-## {{site.data.keyword.Bluemix_notm}}CLI
-{: #cli}
-
-La CLI {{site.data.keyword.Bluemix}} offre un'esperienza della riga di comando per gestire le risorse nel tuo ambiente {{site.data.keyword.Bluemix_notm}}. Con la sua installazione è inclusa inoltre un'interfaccia riga di comando Cloud Foundry, denominata cf, per la gestione delle applicazioni e dei servizi Cloud Foundry.
+In questa esercitazione, vengono forniti i passi per installare una serie di strumenti per sviluppatori {{site.data.keyword.Bluemix}}, verificare l'installazione e configurare il tuo ambiente. Gli strumenti per sviluppatori {{site.data.keyword.Bluemix}} offrono un approccio da riga di comando per la creazione, lo sviluppo e la distribuzione di applicazioni web, mobili e di microservizio end-to-end.
 {:shortdesc}
 
-Fai clic su un'opzione per iniziare:
+Con questa installazione, ottieni la CLI {{site.data.keyword.Bluemix_notm}} autonoma, oltre ai seguenti strumenti:
 
-<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/cli-image.svg" width="440" alt="Fai clic su un'icona per iniziare rapidamente con la CLI {{site.data.keyword.Bluemix_notm}}." style="width:440px;" />
-<map name="home_map" id="home_map">
-<area href="/docs/cli/reference/bluemix_cli/all_versions.html" alt="Scarica la CLI {{site.data.keyword.Bluemix_notm}} (Apre una nuova pagina)" title="Scarica" shape="rect" coords="-7, -8, 108, 211" />
-<area href="/docs/cli/reference/bluemix_cli/get_started.html" alt="Introduzione (Apre una nuova pagina)" title="Introduzione" shape="rect" coords="155, -1, 289, 210" />
-<area href="/docs/cli/reference/bluemix_cli/bx_cli.html" alt="Visualizza documenti (Apre una nuova pagina)" title="Visualizza documenti" shape="rect" coords="326, -10, 448, 218" />
-</map>
+* `Homebrew` (solo Mac)
+* `Git`
+* `Docker`
+* `Helm`
+* `kubectl`
+* `curl`
+* Plug-in {{site.data.keyword.dev_cli_notm}}
+* Plug-in {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
+* Plug-in {{site.data.keyword.registrylong_notm}}
+* Plug-in {{site.data.keyword.containerlong_notm}}
+* Plug-in `sdk-gen`
 
-## {{site.data.keyword.dev_cli_notm}}
-{: #idt}
+## Prima di iniziare
+{: #prereq}
 
-{{site.data.keyword.dev_cli_long}} (IDT) fornisce un'estensione specifica per sviluppatori alla CLI {{site.data.keyword.Bluemix}} (`bx dev`) per creare, compilare e distribuire applicazioni native cloud. L'installazione di IDT include la CLI {{site.data.keyword.Bluemix_notm}} di base, diverse estensioni e tutti i prerequisiti di sistema.
-{:shortdesc}
+Hai bisogno di un [account {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e dei seguenti requisiti di sistema:
 
-- [Panoramica e installazione](/docs/cloudnative/idt/index.html) <br>
-- [Introduzione](/docs/cloudnative/idt/index.html) <br>
-- [Comandi](/docs/cloudnative/idt/commands.html) <br>
-- [Sviluppo nativo cloud](/docs/cloudnative/index.html) <br>
+* Se stai utilizzando Windows, è possibile che alcune funzioni non sono supportate se non stai utilizzando Windows 10 Pro.
+* Devi utilizzare il canale stabile per Docker con una versione minima di 1.13.1.
+
+## Passo 1. Esegui il comando di installazione
+{: #step1}
+
+* Per Mac e Linux, immetti il seguente comando:
+
+  ```
+  curl -sL https://ibm.biz/idt-installer | bash
+  ```
+  {: codeblock}
+
+* Per Windows 10 Pro, esegui il seguente comando come amministratore:
+
+  ```
+  Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+  ```
+  {: codeblock}
+
+  Fai clic con il tasto destro del mouse sull'icona Windows PowerShell e seleziona **Run as administrator**.
+  {: tip}
+
+  Puoi inoltre scaricare lo script del programma di installazione dal nostro [repo GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+
+  Per la procedura di installazione manuale di questi strumenti, consulta [Reinstallazione degli strumenti](/docs/cli/ts_createapps.html#appendix).
+
+## Passo 2. Verifica l'installazione
+{: #step2}
+
+Per verificare che la CLI e gli strumenti per sviluppatori siano stati installati correttamente, esegui il comando `help`:
+
+```
+ibmcloud dev help
+```
+{: codeblock}
+<br>
+L'output elenca le istruzioni di utilizzo, la versione corrente e i comandi supportati.
+
+## Passo 3. Configura il tuo ambiente
+{: #step3}
+
+1. Stabilisci una connessione a un endpoint API nella tua ubicazione {{site.data.keyword.Bluemix_notm}}. Ad esempio, immetti il seguente comando per stabilire una connessione nell'ubicazione Dallas {{site.data.keyword.Bluemix_notm}}:
+
+	```
+	ibmcloud api https://api.ng.bluemix.net
+	```
+	{: codeblock}
+
+2. Accedi a {{site.data.keyword.Bluemix_notm}} con il tuo ID IBM.
+
+	```
+	ibmcloud login
+	```
+	{: codeblock}
+    <br>
+
+	Se le tue credenziali vengono rifiutate, è possibile che tu stia utilizzando un ID federato. Per ulteriori dettagli, vedi [Accesso con un ID federato](/docs/iam/login_fedid.html#federated_id).
+	{: tip}
+
+3. Imposta la tua organizzazione e il tuo spazio.
+
+	```
+	ibmcloud target --cf
+	```
+	{: codeblock}
+
+	Facoltativamente, puoi utilizzare l'output del precedente comando per impostare manualmente la tua organizzazione e il tuo spazio con il seguente comando:
+
+	```
+	ibmcloud target -o <value> -s <value>
+	```
+	{: codeblock}
+
+## Passi successivi
+{: #next-steps}
+
+Sei ora pronto per sviluppare e distribuire la tua prima applicazione. Per ulteriori informazioni, vedi [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps/create-deploy-cli.html).
