@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-01-30"
+
+  years: 2015, 2018
+
+lastupdated: "2018-10-31"
 
 ---
 
@@ -12,13 +14,13 @@ lastupdated: "2019-01-30"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# 開始使用 {{site.data.keyword.cloud_notm}} CLI
+# 開始使用 {{site.data.keyword.Bluemix_notm}} CLI
 {: #overview}
 
-在本指導教學中，您將安裝一組 {{site.data.keyword.cloud}} Developer Tools、驗證安裝，並配置環境。{{site.data.keyword.cloud_notm}} Developer Tools 提供指令行方法，以建立、開發及部署 Web、行動及微服務應用程式。
-{: shortdesc}
+在本指導教學中，您將安裝一組 {{site.data.keyword.Bluemix}} Developer Tools、驗證安裝，並配置您的環境。{{site.data.keyword.Bluemix}} Developer Tools 提供指令行方法，以建立、開發及部署端對端的 Web、行動及微服務應用程式。
+{:shortdesc}
 
-安裝之後，您會得到獨立式 {{site.data.keyword.cloud_notm}} CLI，以及下列工具：
+安裝之後，您會得到獨立式 {{site.data.keyword.Bluemix_notm}} CLI，以及下列工具：
 
 * `Homebrew`（僅限 Mac）
 * `Git`
@@ -35,9 +37,9 @@ lastupdated: "2019-01-30"
 ## 開始之前
 {: #prereq}
 
-您需要 [{{site.data.keyword.cloud_notm}} 帳戶](https://console.bluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及下列系統需求：
+您需要 [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及下列系統需求：
 
-* 如果您執行 Windows，則除非您不是執行 Windows 10 Pro，否則不支援部分功能。
+* 如果您執行 Windows，則在您不是執行 Windows 10 Pro 的情況下，不支援部分功能。
 * 您必須使用適用於 Docker 的穩定通道，而最低版本為 1.13.1。
 
 ## 步驟 1. 執行安裝指令
@@ -60,14 +62,14 @@ lastupdated: "2019-01-30"
     在 Windows PowerShell 圖示上按一下滑鼠右鍵，然後選取**以系統管理員身分執行**。
   {: tip}
 
-  您也可以從這個 [GitHub 儲存庫](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)下載安裝程式 Script。
+  您也可以從我們的 [GitHub 儲存庫](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)下載安裝程式 Script。
 
   如需手動安裝這些工具的步驟，請參閱[重新安裝工具](/docs/cli/ts_createapps.html#appendix)。
 
 ## 步驟 2. 驗證安裝
 {: #step2}
 
-若要驗證是否已順利安裝 CLI 及 Developer Tools，請執行 `help` 指令：
+若要驗證是否已順利安裝 CLI 及開發人員工具，請執行 `help` 指令：
 
 ```
 ibmcloud dev help
@@ -79,14 +81,14 @@ ibmcloud dev help
 ## 步驟 3. 配置環境
 {: #step3}
 
-1. 連接至 {{site.data.keyword.cloud_notm}} 位置中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.cloud_notm}} 達拉斯的位置：
+1. 連接至 {{site.data.keyword.Bluemix_notm}} 位置中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 達拉斯的位置：
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
-2. 使用 IBM ID 登入 {{site.data.keyword.cloud_notm}}。
+2. 使用 IBM ID 登入 {{site.data.keyword.Bluemix_notm}}。
 
 	```
 	ibmcloud login

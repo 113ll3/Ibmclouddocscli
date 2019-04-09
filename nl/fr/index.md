@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-01-30"
+
+  years: 2015, 2018
+
+lastupdated: "2018-10-31"
 
 ---
 
@@ -12,13 +14,13 @@ lastupdated: "2019-01-30"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}
+# Initiation à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.cloud}} Developer Tools, vérifier l'installation et configurer l'environnement. {{site.data.keyword.cloud_notm}} Developer Tools propose une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice.
-{: shortdesc}
+En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.Bluemix}} Developer Tools, vérifier l'installation et configurer votre environnement. Les outils {{site.data.keyword.Bluemix}} Developer Tools offrent une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice de bout en bout.
+{:shortdesc}
 
-Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} autonome et des outils suivants :
+Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} autonome et des outils suivants :
 
 * `Homebrew` (Mac uniquement)
 * `Git`
@@ -35,9 +37,9 @@ Avec cette installation, vous disposez de l'interface de ligne de commande {{sit
 ## Avant de commencer
 {: #prereq}
 
-Vous devez avoir un [compte {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et la configuration système suivante doit être respectée :
+Vous devez avoir un [compte {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et la configuration suivante doit être respectée :
 
-* Sous Windows 10 Pro, certaines fonctions ne sont pas prises en charge (contrairement aux autres versions de Windows).
+* Sous Windows, certaines fonctions ne sont pas prises en charge si vous n'exécutez pas Windows 10 Pro.
 * Vous devez utiliser le canal stable pour Docker, avec la version 1.13.1 au minimum.
 
 ## Etape 1. Lancez la commande d'installation
@@ -60,14 +62,14 @@ Vous devez avoir un [compte {{site.data.keyword.cloud_notm}}](https://console.bl
   Cliquez avec le bouton droit de la souris sur l'icône Windows PowerShell et sélectionnez **Exécuter en tant qu'administrateur**.
   {: tip}
 
-  Vous pouvez également télécharger le script du programme d'installation à partir de ce [référentiel GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
+  Vous pouvez également télécharger le script du programme d'installation à partir de notre [référentiel GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools).
 
   Pour savoir comment installer manuellement ces outils, voir [Installation des outils](/docs/cli/ts_createapps.html#appendix).
 
 ## Etape 2. Vérifier l'installation
 {: #step2}
 
-Pour vérifier que l'installation de l'interface CLI et de Developer Tools a abouti, exécutez la commande `help` :
+Pour vérifier que l'installation de l'interface de ligne de commande et des outils de développeur a abouti, exécutez la commande `help` :
 
 ```
 ibmcloud dev help
@@ -79,14 +81,14 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
 ## Etape 3. Configurer votre environnement
 {: #step3}
 
-1. Connectez-vous à un noeud final d'API sur votre emplacement {{site.data.keyword.cloud_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à l'emplacement {{site.data.keyword.cloud_notm}}, Dallas :
+1. Connectez-vous à un noeud final d'API sur votre emplacement {{site.data.keyword.Bluemix_notm}}. Entrez, par exemple, la commande suivante pour vous connecter à l'emplacement {{site.data.keyword.Bluemix_notm}}, Dallas :
 
 	```
 	ibmcloud api https://api.ng.bluemix.net
 	```
 	{: codeblock}
 
-2. Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de votre IBMid.
+2. Connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'aide de votre IBMid.
 
 	```
 	ibmcloud login
