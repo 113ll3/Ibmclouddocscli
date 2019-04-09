@@ -282,7 +282,7 @@ ibmcloud sl block snapshot-enable VOLUME_ID [OPTIONS]
 <dt>-c, --retention-count</dt>
 <dd>Obligatorio. Número de instantáneas que se deben retener.</dd>
 <dt>-m, --minute</dt>
-<dd>Minuto de la hora en el que deben tomarse las instantáneas, entero entre 0 y 59-</dd>
+<dd>Minuto de la hora en el que deben tomarse las instantáneas, entero entre 0 y 59.</dd>
 <dt>-r, --hour</dt>
 <dd>Hora del día en la que deben tomarse las instantáneas, número entero entre 0 y 23.</dd>
 <dt>-d, --day-of-week</dt>

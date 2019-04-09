@@ -140,7 +140,7 @@ ibmcloud config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/
    <dt>--color true|false</dt>
    <dd>Habilitar o inhabilitar la salida de color. La salida de color está habilitada de forma predeterminada.</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
-   <dd>Establecer un entorno local predeterminado. Si LOCALE es <i>CLEAR</i>, el entorno local anterior se elimina.</dd>
+   <dd>Establecer un entorno local predeterminado. Si LOCALE es <i>CLEAR</i>, el entorno local anterior se suprime.</dd>
    <dt>--check-version true|false</dt>
    <dd>Habilitar o inhabilitar la comprobación de la versión de la CLI.</dd>
    </dl>
