@@ -37,7 +37,7 @@ Con está instalación, obtendrá la CLI de {{site.data.keyword.Bluemix_notm}} a
 ## Antes de empezar
 {: #prereq}
 
-Necesita una [cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y los siguientes requisitos del sistema:
+Necesita una [cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y los siguientes requisitos del sistema: 
 
 * Si ejecuta Windows, es posible que algunas funciones no reciban soporte si no utiliza Windows 10 Pro.
 * Debe utilizar el canal estable para Docker con una versión mínima de 1.13.1.
