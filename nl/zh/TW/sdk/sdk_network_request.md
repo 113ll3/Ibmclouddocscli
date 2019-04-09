@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-30"
+  years: 2016, 2019
+lastupdated: "2019-02-21"
+
+keywords: bmscore, bmscore sdk, network request, ios, android, cordova
+
+subcollection: cloud-cli
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -18,7 +23,7 @@ lastupdated: "2018-11-30"
 ## Android
 {: #request-android}
 
-1. 確定您已在 Android 應用程式中[匯入用戶端 SDK 並起始設定它](sdk_BMSClient.html#init-BMSClient-android)。
+1. 確定您已在 Android 應用程式中[匯入並起始設定用戶端 SDK](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-android)。
 
 2. 提出網路要求。
 
@@ -54,7 +59,7 @@ lastupdated: "2018-11-30"
 ## iOS
 {: #request-ios}
 
-1. 確定您已在 iOS 應用程式中[匯入用戶端 SDK 並起始設定它](sdk_BMSClient.html#init-BMSClient-ios)。
+1. 確定您已在 iOS 應用程式中[匯入並起始設定用戶端 SDK](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios)。
 
 2. 建立網路要求。
 
@@ -102,13 +107,13 @@ lastupdated: "2018-11-30"
 
 `BMSURLSession` 類別僅適用於 iOS。
 
-如需完整的用法範例，請參閱 `BMSCore` GitHub [README ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}。
+如需完整的用法範例，請參閱 `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 
 ## Cordova
 {: #request-cordova}
 
-1. 確定您已在 Cordova 應用程式中[匯入用戶端 SDK 並起始設定它](sdk_BMSClient.html#init-BMSClient-cordova)。
+1. 確定您已在 Cordova 應用程式中[匯入並起始設定用戶端 SDK](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova)。
 
 2. 建立網路要求。
 

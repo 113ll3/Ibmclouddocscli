@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # {{site.data.keyword.cloud_notm}} Developer Tools CLI プラグイン・コンポーネントの手動インストール
 {: #install-devtools-manually}
 
-Developer Tools コンポーネントのインストールでより細かい制御が必要な場合には、以下の手順を使用して、それらを手動でインストールすることができます。 それ以外の場合は、ほとんどのユーザー向けにすべての前提条件が[プラットフォーム・インストーラー](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt)を使用して自動的にインストールされます。
+Developer Tools コンポーネントのインストールでより細かい制御が必要な場合には、以下の手順を使用して、それらを手動でインストールすることができます。それ以外の場合は、ほとんどのユーザー向けにすべての前提条件が[プラットフォーム・インストーラー](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt)を使用して自動的にインストールされます。
 {: shortdesc}
 
 ## 始める前に

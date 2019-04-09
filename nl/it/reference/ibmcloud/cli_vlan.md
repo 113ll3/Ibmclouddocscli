@@ -1,41 +1,29 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, vlan, classic vlan, ibmcloud sl vlan, ibmcloud sl
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # Gestione delle VLAN dell'infrastruttura classica
+{: #manage-classic-vlans}
 
 Le VLAN (Virtual Local Area Network) vengono utilizzate da {{site.data.keyword.cloud}} per isolare il traffico broadcast sulle reti pubbliche e private. Le VLAN vengono assegnate come necessario per soddisfare altre offerte.
 
 Utilizza i seguenti comandi per gestire le VLAN dell'infrastruttura classica.
 {: shortdesc}
 
-<table summary="Comandi delle VLAN dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}} ordinati alfabeticamente che presentano dei link che ti portano a ulteriori informazioni per il comando">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl vlan create](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_create)</td>
- <td>[ibmcloud sl vlan cancel](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_cancel)</td>
- <td>[ibmcloud sl vlan detail](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_detail)</td>
- <td>[ibmcloud sl vlan edit](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_edit)</td>
- <td>[ibmcloud sl vlan list](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_list)</td>
- <td>[ibmcloud sl vlan options
-](/docs/cli/reference/ibmcloud/cli_vlan.html#sl_vlan_options)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl vlan create
+## ibmcloud sl vlan create
 {: #sl_vlan_create}
 
 Crea una nuova VLAN.
@@ -61,12 +49,14 @@ ibmcloud sl vlan create [OPZIONI]
 ```
 ibmcloud sl vlan create -t public -d dal09 -s 16 -n myvlan
 ```
-Questo comando crea una vlan pubblica ubicata nel datacenter dal09 con 16 indirizzi IP e con il nome myvlan.
+{: codeblock}
+
+Questo comando crea una vlan pubblica ubicata nel datacenter `dal09` con 16 indirizzi IP e con il nome `myvlan`.
 
 ## ibmcloud sl vlan cancel
 {: #sl_vlan_cancel}
 
-Annulla una VLAN.
+Annulla una VLAN:
 ```
 ibmcloud sl vlan cancel IDENTIFICATIVO [OPZIONI]
 ```
@@ -81,7 +71,9 @@ ibmcloud sl vlan cancel IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vlan cancel 12345678 -f
 ```
-Questo comando annulla la vlan con ID 12345678 senza richiedere conferma.
+{: codeblock}
+
+Questo comando annulla la vlan con ID `12345678` senza richiedere conferma.
 
 ## ibmcloud sl vlan detail
 {: #sl_vlan_detail}
@@ -103,7 +95,9 @@ ibmcloud sl vlan detail IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 ```
-Questo comando mostra i dettagli della vlan con ID 12345678 e non elenca il server virtuale o il server hardware.
+{: codeblock}
+
+Questo comando mostra i dettagli della vlan con ID `12345678` e non elenca il server virtuale o il server hardware.
 
 ## ibmcloud sl vlan edit
 {: #sl_vlan_edit}
@@ -123,7 +117,9 @@ ibmcloud sl vlan edit IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl vlan edit 12345678 -n myvlan-rename
 ```
-Questo comando aggiorna la vlan con ID 12345678 e le fornisce un nuovo nome "myvlan-rename".
+{: codeblock}
+
+Questo comando aggiorna la vlan con `ID 12345678` e le fornisce un nuovo nome `myvlan-rename`.
 
 ## ibmcloud sl vlan list
 {: #sl_vlan_list}
@@ -151,7 +147,7 @@ ibmcloud sl vlan list [OPZIONI]
 ```
 ibmcloud sl vlan list -d dal09 --sortby number
 ```
-Questo comando elenca tutte le vlan sull'account corrente eseguendo il filtro per un datacenter uguale a dal09 e le ordina per numero di vlan.
+Questo comando elenca tutte le vlan sull'account corrente eseguendo il filtro per un datacenter uguale a `dal09` e le ordina per numero di vlan.
 
 ## ibmcloud sl vlan options
 {: #sl_vlan_options}
@@ -160,10 +156,12 @@ Elenca tutte le opzioni per la creazione della VLAN.
 ```
 ibmcloud sl vlan options
 ```
-
+{: codeblock}
 
 **Esempi**:
 ```
 ibmcloud sl vlan options
 ```
+{: codeblock}
+
 Questo comando elenca tutte le opzioni per la creazione di una vlan, ad es. il tipo di vlan, i datacenter, la dimensione della sottorete, i router, ecc

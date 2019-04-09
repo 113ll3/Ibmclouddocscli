@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-21"
+
+keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
+
+subcollection: cloud-cli
 
 ---
 
@@ -20,15 +24,14 @@ lastupdated: "2019-01-30"
 # {{site.data.keyword.cloud_notm}} Developer Tools CLI 外掛程式的疑難排解
 {: #troubleshoot}
 
-使用 {{site.data.keyword.dev_cli_short}} 指令行介面 (CLI) 建立應用程式的一般問題可能包括部署失敗或無法擷取程式碼。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
+使用 {{site.data.keyword.dev_cli_short}} 指令行介面 (CLI) 建立應用程式的一般問題可能包括部署失敗或無法擷取程式碼。在許多情況下，您可以遵循一些簡單的步驟，從這些問題回復。
 {: shortdesc}
 
 ## 當我使用非行動模式建立應用程式時，為何會收到主機名稱錯誤？
-{: #hostname-error}
+{: #ts-cli-hostname-error}
 {: troubleshoot}
 
 如果您使用 {{site.data.keyword.dev_cli_short}} CLI 將應用程式部署至 Cloud Foundry，可能會顯示下列錯誤。如果您輸入唯一的主機名稱，仍可能會看到此訊息。
-
 ```
 The hostname <myHostname> is taken.
 ```
@@ -46,11 +49,10 @@ ibmcloud login
 {: tsResolve}
 
 ## 為何會收到一般指令失敗？
-{: #general}
+{: #ts-cli-general-failures}
 {: troubleshoot}
 
 如果您使用 `create`、`delete`、`list` 或 `code` 指令，則可能會顯示下列錯誤：
-
 ```
 Failed to <command> application.
 ```
@@ -68,11 +70,10 @@ ibmcloud login
 {: tsResolve}
 
 ## 為何無法辨識新應用程式的映像檔？
-{: #nosuchimage}
+{: #ts-cli-nosuchimage}
 {: troubleshoot}
 
 當您嘗試 `ibmcloud dev run` 某個應用程式而未先進行建置時，可能會顯示下列錯誤。
-
 ```
 The run-cmd option was not specified
 Stopping the 'testProject' container...
@@ -101,7 +102,7 @@ ibmcloud dev run
 {: tsResolve}
 
 ## 為何在新增 {{site.data.keyword.objectstorageshort}} 功能時收到服務分配管理系統錯誤？
-{: #os}
+{: #ts-cli-object-storage}
 {: troubleshoot}
 
 如果您使用 CLI 來建立兩個具有 {{site.data.keyword.objectstorageshort}} 功能的應用程式，則可能會顯示下列錯誤：
@@ -120,11 +121,10 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 {: tsResolve}
 
 ## 為何在建立應用程式時未擷取我的程式碼？
-{: #code}
+{: #retrieve-code-error}
 {: troubleshoot}
 
 如果您使用 CLI 來建立應用程式，則可能會顯示下列錯誤：
-
 ```
 FAILED
 Application created, but could not get code
@@ -149,13 +149,13 @@ https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/co
 
 * 使用 {{site.data.keyword.dev_console}}。
 
-	1. 在 {{site.data.keyword.dev_console}} 中選取[應用程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/appservice/apps)。
+	1. 在 {{site.data.keyword.dev_console}} 中選取[應用程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/resources)。
 
 	2. 按一下**下載程式碼**。
 {: tsResolve}
 
 ## 為何無法對 Node.js 應用程式執行 `ibmcloud dev run` 指令？
-{: #node}
+{: #ts-cli-node}
 {: troubleshoot}
 
 如果您對 Node.js Web 或 BFF 應用程式執行 `ibmcloud dev run` 指令，則可能會顯示下列錯誤：
@@ -188,6 +188,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: tsResolve}
 
 ## 為何無法部署至 {{site.data.keyword.cloud_notm}}？
+{: #ts-cli-deploy-issues}
 {: troubleshoot}
 
 當您嘗試部署至 {{site.data.keyword.cloud_notm}} 時失敗，但未顯示任何錯誤。
@@ -203,6 +204,7 @@ ibmcloud login
 {: tsResolve}
 
 ## 為何無法部署至 {{site.data.keyword.cloud_notm}} 上的 Kubernetes？
+{: #ts-cli-kube-deploy}
 {: troubleshoot}
 
 系統提示您輸入叢集名稱之後，可能會顯示下列失敗：
@@ -231,6 +233,7 @@ ibmcloud cs cluster-config <cluster-name>
 {: tsResolve}
 
 ## 為何無法部署映像檔目標？
+{: #ts-deploy-image-target}
 {: troubleshoot}
 
 系統提示您輸入部署映像檔目標之後，可能會顯示下列失敗：
@@ -256,6 +259,7 @@ ibmcloud cr namespaces
 {: tsResolve}
 
 ## 為何無法判定應用程式的語言？
+{: #ts-cli-determine-language}
 {: troubleshoot}
 
 系統嘗試啟動您的應用程式之後，可能會顯示下列失敗：
@@ -270,77 +274,34 @@ directly.
 {: tsSymptoms}
 
 此錯誤可能是由下列其中一個原因所造成：
-- 從不是應用程式來源目錄的目錄中執行 [enable](/docs/cli/idt/commands.html#enable) 指令。
-- 針對無法辨識其語言的應用程式執行 [enable](/docs/cli/idt/commands.html#enable) 指令。
+- 從不是應用程式來源目錄的目錄中執行 [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 指令。
+- 針對無法辨識其語言的應用程式執行 [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 指令。
 {: tsCauses}
 
-請務必從包含應用程式原始碼的應用程式目錄中執行這個指令。如果這無法解決問題，且語言是其中一種[支援的語言](/docs/cli/idt/commands.html#enable-language-options)，請使用 `--language` 參數來指定語言。
+請務必從包含應用程式原始碼的應用程式目錄中執行這個指令。如果這無法解決問題，且語言是其中一種[支援的語言](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options)，請使用 `--language` 參數來指定語言。
 {: tsResolve}
 
 ## 為何無法建置或執行已針對雲端部署啟用的應用程式？
+{: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-您在嘗試 [build](/docs/cli/idt/commands.html#build)（建置）或 [run](/docs/cli/idt/commands.html#run)（執行）已啟用的應用程式時，可能會遇到各種失敗問題。
+您在嘗試 [build](/docs/cli/idt?topic=cloud-cli-idt-cli#build)（建置）或 [run](/docs/cli/idt?topic=cloud-cli-idt-cli#run)（執行）已啟用的應用程式時，可能會遇到各種失敗問題。
 {: tsSymptoms}
-
 
 您可以在下列每個鏈結中找到許多不同的原因。
 {: tsCauses}
 
-- 如需解決 Spring 應用程式這類問題的相關資訊，請參閱[啟用現有的 Spring Boot 應用程式以進行雲端部署](/docs/java-spring/enable_existing.html#enable_existing)。
-- 如需解決 `Node.js` 應用程式這類問題的相關資訊，請參閱[啟用現有的 Node.js 應用程式以進行雲端部署](/docs/node/enable_existing.html#enable_existing)。
+- 如需解決 Spring 應用程式這類問題的相關資訊，請參閱[啟用現有的 Spring Boot 應用程式以進行雲端部署](/docs/java-spring?topic=java-spring-enable_existing#enable_existing)。
+- 如需解決 `Node.js` 應用程式這類問題的相關資訊，請參閱[啟用現有的 Node.js 應用程式以進行雲端部署](/docs/node?topic=nodejs-enable_existing#enable_existing)。
 {: tsResolve}
 
-## 如何手動安裝 {{site.data.keyword.Bluemix_notm}} Developer Tools？
-{: #appendix}
-全部必要條件會使用平台安裝程式針對大部分使用者安裝。如果您需要手動安裝任何元件，這裡提供各元件的指示。若要安裝 dev 外掛程式，您必須先安裝 [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)。若要使用 dev 外掛程式本身，您必須執行下列指令來安裝它： 
-```
-ibmcloud plugin install dev
-```
-{: codeblock}
- 
-若要在本端執行和除錯應用程式，您也必須安裝 [Docker](https://www.docker.com/get-docker)。
- 
-若要將應用程式部署為容器，您還必須安裝 Kubernetes、Helm 及下列 IBM Cloud CLI 外掛程式。
- 
-### 若要安裝 Kubernetes：
-Mac 使用者：
-```
-curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
-```
-{: codeblock}
+<!--
+## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
+{: #ts-cli-install-devtools-manually}
+{: troubleshoot}
 
-Linux 使用者：
-```
-curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-```
-{: codeblock}
+To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
-Windows 使用者：
-```
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
-```
-{: codeblock}
 
-### 若要安裝 Helm：
-Mac 和 Linux 使用者：
-```
-export DESIRED_VERSION=v2.7.2
-curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
-```
-{: codeblock}
 
-Windows 使用者：
-下載並安裝[二進位檔](https://github.com/kubernetes/helm/releases/tag/v2.7.2)。
-
-### 若要安裝 container-registry 外掛程式：
-```
-ibmcloud plugin install container-registry
-```
-{: codeblock}
-
-### 若要安裝 container-service 外掛程式：
-```
-ibmcloud plugin install container-service
-```
-{: codeblock}

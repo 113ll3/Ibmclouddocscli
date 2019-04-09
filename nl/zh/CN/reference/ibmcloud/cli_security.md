@@ -1,48 +1,31 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage security, ssh keys, ssl certificates, ibmcloud sl security, certificate, ibmcloud sl, sshkey-add
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 管理安全性 SSH 密钥和 SSL 证书
+{: #sl-manage-security-keys}
 
 利用 SSH 密钥，无需使用密码即可从在设备上实现的每个公用密钥所对应的客户机来访问设备。通过向设备添加 SSH 密钥，随 SSH 密钥一起提供的设备无需使用密码即可访问该设备以获取相应的密钥。
 
 SSL 证书是 Web 站点启用的一种安全措施，用来保护用户。需要将机密信息传输到 Web 站点时，通常会使用 SSL 证书。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix}} 经典基础架构 SSH 密钥和证书。
+使用以下命令可管理 {{site.data.keyword.cloud}} 经典基础架构 SSH 密钥和证书。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构安全性命令（带有可获取命令的更多信息的链接）">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl security sshkey-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_add)</td>
-  <td>[ibmcloud sl security sshkey-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_edit)</td>
-  <td>[ibmcloud sl security sshkey-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_list)</td>
-  <td>[ibmcloud sl security sshkey-print](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_print)</td>
-  <td>[ibmcloud sl security sshkey-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_sshkey_remove)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl security cert-add](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_add)</td>
-  <td>[ibmcloud sl security cert-edit](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_edit)</td>
-  <td>[ibmcloud sl security cert-download](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_download)</td>
-  <td>[ibmcloud sl security cert-list](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_list)</td>
-  <td>[ibmcloud sl security cert-remove](/docs/cli/reference/ibmcloud/cli_security.html#sl_security_cert_remove)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl security sshkey-add
+## ibmcloud sl security sshkey-add
 {: #sl_security_sshkey_add}
 
 添加新的 SSH 密钥。
@@ -64,6 +47,8 @@ ibmcloud sl security sshkey-add LABEL [OPTIONS]
 ```
 ibmcloud sl security sshkey-add -f ~/.ssh/id_rsa.pub --note mykey
 ```
+{: codeblock}
+
 此命令从 ~/.ssh/id_rsa.pub 文件添加 SSH 密钥，注释为“mykey”。
 
 
@@ -88,7 +73,9 @@ ibmcloud sl security sshkey-edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-edit 12345678 --label ibmcloud --note testing
 ```
-此命令更新标识为 12345678 的 SSH 密钥，并将标签设置为“ibmcloud”，注释设置为“testing”。
+{: codeblock}
+
+此命令更新标识为 `12345678` 的 SSH 密钥，并将标签设置为 `ibmcloud`，将注释设置为 `testing`。
 
 ## ibmcloud sl security sshkey-list
 {: #sl_security_sshkey_list}
@@ -108,6 +95,8 @@ ibmcloud sl security sshkey-list [OPTIONS]
 ```
 ibmcloud sl security sshkey-list --sortby label
 ```
+{: codeblock}
+
 此命令列出当前帐户的所有 SSH 密钥，并按标签对其排序。
 
 
@@ -130,6 +119,8 @@ ibmcloud sl security sshkey-print IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-print 12345678 -f ~/mykey.pub
 ```
+{: codeblock}
+
 此命令显示标识为 12345678 的 SSH 密钥的标识、标签和注释，并将公用密钥写入 ~/mykey.pub 文件。
 
 
@@ -152,9 +143,9 @@ ibmcloud sl security sshkey-remove IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl security sshkey-remove 12345678 -f
 ```
-此命令除去标识为 12345678 的 SSH 密钥，而不要求确认。
+{: codeblock}
 
-
+此命令除去标识为 `12345678` 的 SSH 密钥，而不要求确认。
 
 ## ibmcloud sl security cert-add
 {: #sl_security_cert_add}

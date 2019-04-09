@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,47 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # Trabalhando com o serviço Load Balancer
+{: #sl-load-balancer-service}
 
-O serviço {{site.data.keyword.Bluemix}} Load Balancer ajuda a melhorar a disponibilidade dos aplicativos críticos para os negócios, distribuindo o tráfego entre as múltiplas instâncias do servidor de aplicativos e encaminhando-o somente para as instâncias funcionais.
+O serviço {{site.data.keyword.cloud}} Load Balancer ajuda a melhorar a disponibilidade dos aplicativos críticos para os negócios, distribuindo o tráfego entre as múltiplas instâncias do servidor de aplicativos e encaminhando-o somente para as instâncias funcionais.
 
-Use os comandos a seguir para gerenciar os balanceadores de carga no serviço Load Balancer da infraestrutura clássica do {{site.data.keyword.Bluemix_notm}}.
+Use os comandos a seguir para gerenciar os balanceadores de carga no serviço Load Balancer da infraestrutura clássica do {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-<table summary="Comandos do Load Balancer do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[Sl loadbal cancel ibmcloud](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_cancel)</td>
- <td>[ibmcloud sl loadbal create](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_create)</td>
- <td>[ibmcloud sl loadbal create-options
-](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_create_options)</td>
- <td>[Sl loadbal detail ibmcloud](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_detail)</td>
- <td>[Ibmcloud sl loadbal group-add](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_add)</td>
- <td>[Ibmcloud sl loadbal group-delete](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_delete)</td>
- </tr>
- <tr>
- <td>[Ibmcloud sl loadbal group-edit](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_edit)</td>
- <td>[Ibmcloud sl loadbal group-reset](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_group_reset)</td>
- <td>[ibmcloud sl loadbal health-checks
-](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_health_checks)</td>
- <td>[ibmcloud sl loadbal list
-](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_list)</td>
- <td>[ibmcloud sl loadbal routing-methods
-](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_routing_methods)</td>
- <td>[ibmcloud sl loadbal routing-types
-](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_routing_types)</td>
- </tr>
- <tr>
- <td>[Ibmcloud sl loadbal service-add](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_add)</td>
- <td>[Ibmcloud sl loadbal service-delete](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_delete)</td>
- <td>[Ibmcloud sl loadbal service-edit](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_edit)</td>
- <td>[Ibmcloud sl loadbal service-toggle](/docs/cli/reference/ibmcloud/cli_load_balancer.html#sl_loadbal_service_toggle)</td>
- </tr>
-</tbody>
- </table>
-
- ## Sl loadbal cancel ibmcloud
+## Sl loadbal cancel ibmcloud
 {: #sl_loadbal_cancel}
 
 Cancelar um balanceador de carga existente.

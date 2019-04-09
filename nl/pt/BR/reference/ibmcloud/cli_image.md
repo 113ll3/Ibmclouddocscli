@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, ibmcloud sl image, manage compute images, ibmcloud sl
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -13,32 +15,24 @@ lastupdated: "2018-11-29"
 {:tip: .tip}
 
 # Criando, editando e excluindo imagens de cálculo
+{: #sl-manage-compute-images}
 
-Use os comandos a seguir para gerenciar as imagens de cálculo do {{site.data.keyword.Bluemix}}.
+Use os comandos a seguir para gerenciar as imagens de cálculo do {{site.data.keyword.cloud}}.
 {: shortdesc}
 
-<table summary="Comandos de imagem de infraestrutura do {{site.data.keyword.Bluemix_notm}} ordenados alfabeticamente com os links para as informações adicionais do comando">
- <tbody>
- <tr>
- <td>[Sl image delete ibmcloud](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_delete)</td>
- <td>[Sl image detail ibmcloud](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_detail)</td>
- <td>[Sl image edit ibmcloud](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_edit)</td>
- <td>[Sl image list ibmcloud](/docs/cli/reference/ibmcloud/cli_image.html#sl_image_list)</td>
- </tr>
-   </tbody>
- </table>
-
- ## Sl image delete ibmcloud
+## Sl image delete ibmcloud
 {: #sl_image_delete}
 
 Excluir uma imagem.
 ```
 Sl image delete IDENTIFIER ibmcloud
 ```
+
 **Exemplos**:
 ```
-   Ibmcloud sl image delete 12345678
+Ibmcloud sl image delete 12345678
 ```
+
 Esse comando exclui a imagem com ID `12345678`.
 
 ## Sl image detail ibmcloud
@@ -48,11 +42,13 @@ Obter detalhes para uma imagem.
 ```
 Sl image detail IDENTIFIER ibmcloud
 ```
+
 **Exemplos**:
 ```
  Ibmcloud sl image detail 12345678
 ```
-Esse comando obtém detalhes para a imagem com ID 12345678.
+
+Esse comando obtém detalhes para a imagem com ID `12345678`.
 
 ## Sl image edit ibmcloud
 {: #sl_image_edit}
@@ -76,6 +72,7 @@ ibmcloud sl image edit IDENTIFIER [OPTIONS]
 ```  
 ibmcloud sl image edit 12345678 --name ubuntu16 --note testing --tag staging
 ```
+
 Esse comando edita a imagem com o ID `12345678` e configura seu nome para `ubuntu16`, a nota para `testing` e a tag para `staging`.
 
 ## Sl image list ibmcloud

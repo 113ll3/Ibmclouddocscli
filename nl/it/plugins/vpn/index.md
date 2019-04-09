@@ -1,84 +1,97 @@
 ---
 
 copyright:
+  years: 2015, 2019
+lastupdated: "2019-02-27"
 
-  years: 2015, 2017
+keywords: vpn cli plug-in, vpn plugin, cloud foundry vpn, vpn cli, install vpn plugin, vpn parameters
 
-lastupdated: "2017-01-12"
+subcollection: cloud-cli
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-
+{:codeblock: .codeblock}
+{:note: .note}
 
 # Plug-in CLI VPN per la CLI cf
 {: #vpn_cli_for_cf}
 
-
-Puoi utilizzare la CLI (command line interface) per configurare e gestire il tuo servizio {{site.data.keyword.vpn_full}}. Il plug-in della CLI {{site.data.keyword.vpn_short}} è disponibile in due versioni: una per l'utilizzo del plug-in con la CLI Cloud Foundry e l'altra per l'utilizzo del plug-in con la CLI {{site.data.keyword.Bluemix}}. Entrambe le versioni del plug-in forniscono la stessa funzionalità.
+Puoi utilizzare la CLI (command line interface) per configurare e gestire il tuo servizio {{site.data.keyword.vpn_full}}. Il plug-in della CLI {{site.data.keyword.vpn_short}} è disponibile in due versioni: una per l'utilizzo del plug-in con la CLI Cloud Foundry e l'altra per l'utilizzo del plug-in con la CLI {{site.data.keyword.cloud}}. Entrambe le versioni del plug-in forniscono la stessa funzionalità.
 {:shortdesc}
 
 Il plug-in {{site.data.keyword.vpn_short}} è disponibile per i sistemi operativi Windows, MAC e Linux. Assicurati di utilizzare il plug-in adatto a te.
 
-Le seguenti istruzioni servono a gestire il plug-in della CLI Cloud Foundry (cf). Per utilizzare il plug-in con il plug-in della CLI {{site.data.keyword.Bluemix_notm}}, vedi [Plug-in {{site.data.keyword.vpn_short}} per la CLI {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html){: new_window}.
-
 ## Installa il plug-in della CLI cf
-Prima di iniziare, installa la CLI cf. Per i dettagli, vedi [Interfaccia riga di comando Cloud Foundry ![Icona link esterno](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}.
+{: #install-cf-cli-plugin}
+
+Prima di iniziare, installa la CLI cf. Per i dettagli, vedi [Interfaccia riga di comando Cloud Foundry](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli).
 
 ## Installa il plug-in della CLI VPN
-**Nota:** se hai installato una versione precedente del plug-in della CLI {{site.data.keyword.vpn_short}}, devi prima disinstallarlo. Utilizza il comando:
+{: #install-vpn-cli-plugin}
+
+Se hai installato una versione precedente del plug-in della CLI {{site.data.keyword.vpn_short}}, devi prima disinstallarla. Utilizza il comando:
+{: note}
 
 ```
 cf uninstall-plugin vpn
 ```
+{: codeblock}
 
 ### Installa in locale
 
-1. Scarica il plug-in {{site.data.keyword.vpn_short}} per la tua piattaforma dal [ Repository di plug-in CLI {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}.
-2. Installa il plug-in {{site.data.keyword.vpn_short}} utilizzando il seguente comando:
-**Nota:** puoi passare alla posizione del plug-in {{site.data.keyword.vpn_short}} o specificarne il percorso.
+1. Scarica il plugin {{site.data.keyword.vpn_short}} per la tua piattaforma dal [Repository di plugin CLI {{site.data.keyword.cloud_notm}}](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
+
+2. Installa il plugin {{site.data.keyword.vpn_short}} utilizzando il seguente comando:
+
+	Passa all'ubicazione del plugin {{site.data.keyword.vpn_short}} oppure specifica il percorso all'ubicazione del plugin.
+	{: note}
 
 	- Per sistemi operativi MS Windows:
-
 	```
 	cf install-plugin vpn_windows64.exe
 	```
+	{: codeblock}
 
 	- Per sistemi operativi Apple MAC:
-
 	```
 	cf install-plugin vpn_mac_os_amd64
 	```
+	{: codeblock}
 
 	- Per sistemi operativi Linux:
-
 	```
 	cf install-plugin vpn_linuxamd64
 	```
+	{: codeblock}
 
+### Installa dal repository {{site.data.keyword.cloud_notm}}
+{: #install-from-ibm-repo}
 
-### Installa dal repository {{site.data.keyword.Bluemix_notm}}
-
-1. Aggiungi il repository {{site.data.keyword.Bluemix_notm}} nei repository della CLI Cloud Foundry. Utilizza il seguente comando:
-
+1. Aggiungi il repository {{site.data.keyword.cloud_notm}} nei repository della CLI Cloud Foundry. Utilizza il seguente comando:
 	```
-	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
+	cf add-plugin-repo "IBM Cloud" http://plugins.cloud.ibm.com
 	```
+	{: codeblock}
+
 2. Immetti il seguente comando:
+	```
+	cf install-plugin vpn -r IBM Cloud
+	```
+	{: codeblock}
 
-	```
-	cf install-plugin vpn -r bluemix
-	```
 ##Elenco di comandi del servizio VPN
+{: #list-vpn-cli-commands}
 
 ### cf vpn-create connection
+{: #cli-vpn-create-connection}
 
 Crea una connessione VPN.
-
 ```
 cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> -subnets ["<subnet/mask>"] -cip <customer gateway IP address> -d <description> -peer_id <peer ID> -admin_state <admin state> -dpd-action <action> -gateway_ip <IP address> -i <initiator state> -dpd-timeout <value> -dpd-interval <value> -ike <name> -ipsec <name>
 ```
+
 #### Parametri
 {: #p1}
 
@@ -112,22 +125,23 @@ Indirizzo IP endpoint remoto del tunnel VPN.
 
 **-i:** Stato dell'iniziatore. Valore predefinito: bi-directional.
 
-**-dpd-timeout:** Valore di timeout in secondi dopo il quale la sessione viene terminata.  Intervallo: 6 - 86400 secondi. Valore predefinito: 120 secondi. Il valore di timeout keepalive deve essere maggiore del valore dell'intervallo keepalive.
+**-dpd-timeout:** Valore di timeout, espresso in secondi, dopo il quale la sessione viene terminata. Intervallo: 6 - 86400 secondi. Valore predefinito: 120 secondi. Il valore di timeout keepalive deve essere maggiore del valore di intervallo keepalive.
 
 **-dpd-interval:** Intervallo keepalive in secondi. Invia dei messaggi keepalive all'intervallo configurato per verificare lo stato di attività del peer. Intervallo: 5-86399 secondi. Valore predefinito: 15 secondi
 
 **-ike:** Nome della politica IKE.
 
-**-ipsec:** Nome della politica IPsec.
+**-ipsec:** Nome della politica IPSec.
 
 
 ### cf vpn-create ike
+{: #cf-vpn-create}
 
 Crea una politica IKE.
-
 ```
 cf vpn-create ike <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
 ```
+
 #### Parametri
 {: #p2}
 
@@ -150,19 +164,19 @@ Nome del gateway.
 
 **-auth:** Algoritmo di autorizzazione. Valori: sha1 o sha256
 
-
 ### cf vpn-create ipsec
+{: #cf-vpn-create-ipsec}
 
-Crea una politica IPsec.
-
+Crea una politica IPSec.
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
 ```
+
 #### Parametri
 {: #p3}
 
 **policy name:**
-Nome della politica IPsec.
+Nome della politica IPSec.
 
 **gateway name:**
 Nome del gateway.
@@ -205,101 +219,119 @@ Indirizzo IP del gateway.
 Indirizzo di sottorete in formato CIDR.
 
 ### cf vpn-show gateways
+{: #cf-vpn-show-gateways}
 
 Visualizza le informazioni sui gateway correnti.
-
 ```
 cf vpn-show gateways
 ```
+{: codeblock}
+
 ### cf vpn-show ikes
+{: #cf-vpn-show-ikes}
 
 Visualizza le informazioni sulle connessioni IKE correnti.
-
 ```
 cf vpn-show ikes
 ```
+{: codeblock}
+
 ### cf vpn-show ipsecs
+{: #cf-vpn-show-ipsecs}
 
-Visualizza le informazioni sulle connessioni IPsec correnti.
-
+Visualizza le informazioni sulle connessioni IPSec correnti.
 ```
 cf vpn-show ipsecs
 ```
+{: codeblock}
+
 ### cf vpn-show connections
+{: #cf-vpn-show-connections}
 
 Visualizza le informazioni su tutte le connessioni correnti.
-
 ```
 cf vpn-show connections
 ```
+{: codeblock}
+
 ### cf vpn-show ike
+{: #cf-vpn-show-ike}
 
 Visualizza le informazioni su una connessione IKE.
-
 ```
 cf vpn-show ike <policy name>
 ```
+{: codeblock}
+
 ### cf vpn-show ipsec
+{: #cf-vpn-show-ipsec}
 
-Visualizza le informazioni su una connessione IPsec.
-
+Visualizza le informazioni su una connessione IPSec.
 ```
 cf vpn-show ipsec <policy name>
 ```
+{: codeblock}
+
 ### cf vpn-show gateway
+{: #cf-vpn-show-gateway}
 
 Visualizza le informazioni di connessione relative a un gateway.
-
 ```
 cf vpn-show gateway <gateway name>
 ```
+{: codeblock}
+
 ### cf vpn-show connection
+{: #cf-vpn-show-connection}
 
 Visualizza tutte le informazioni su una specifica connessione.
-
 ```
 cf vpn-show connection <connection name>
 ```
+{: codeblock}
+
 ### cf vpn-delete
+{: #cf-vpn-delete}
 
 Elimina un gateway, una politica o una connessione esistenti.
-
 ```
 cf vpn-delete ike <policy name>
 ```
+{: codeblock}
 
 ```
 cf vpn-delete ipsec <policy name>
 ```
+{: codeblock}
 
 ```
 cf vpn-delete connection <connection name>
 ```
+{: codeblock}
 
 ```
 cf vpn-delete gateway <gateway name>
 ```
-
+{: codeblock}
 
 ### cf vpn-update connection
+{: #cf-vpn-update-connection}
 
 Aggiorna una connessione VPN esistente.
-
 ```
 cf vpn-update connection <connection name> -g <gateway name> -cip <customer gateway IP address> -subnets ["<subnet/mask>"] -k <preshared key> -d <description> -peer_id <peer ID> -admin_state <admin state> -dpd-action <action> -gateway_ip <IP address> -i <initiator state> -dpd-timeout <value> -dpd-interval <value> -ike <name> -ipsec <name>
 ```
+
 #### Parametri
 {: #p5}
 
 **connection name:**
 Nome della connessione.
 
-
 ##### Parametri facoltativi:
 {: #op5}
 
-**gateway name:**
-Nome del gateway.
+**gateway name:** Nome del gateway.
 
 **customer gateway IP address:**
 Indirizzo IP endpoint remoto del tunnel VPN.
@@ -322,22 +354,22 @@ Chiave precondivisa.
 
 **-i:** Stato dell'iniziatore. Valore predefinito: bi-directional.
 
-**-dpd-timeout:** Valore di timeout in secondi dopo il quale la sessione viene terminata. Intervallo: 6 - 86400 secondi. Valore predefinito: 120 secondi
+**-dpd-timeout:** Valore di timeout, espresso in secondi, dopo il quale la sessione viene terminata. Intervallo: 6 - 86400 secondi. Valore predefinito: 120 secondi
 
 **-dpd-interval:** Intervallo keepalive in secondi. Invia dei messaggi keepalive all'intervallo configurato per verificare lo stato di attività del peer. Intervallo: 5-86399 secondi. Valore predefinito: 15 secondi
 
 **-ike:** Nome della politica IKE.
 
-**-ipsec:** Nome della politica IPsec.
-
+**-ipsec:** Nome della politica IPSec.
 
 ### cf vpn-update ike
+{: #cf-vpn-update-ike}
 
 Aggiorna una politica IKE.
-
 ```
 cf vpn-update ike <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
 ```
+
 #### Parametri
 {: #p6}
 
@@ -359,20 +391,19 @@ Nome della politica IKE.
 
 **-auth:** Algoritmo di autorizzazione. Valori: sha1 o sha256
 
-
 ### cf vpn-update ipsec
+{: #cf-vpn-update-ipsec}
 
-Aggiorna una politica IPsec.
-
+Aggiorna una politica IPSec.
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
 ```
+
 #### Parametri
 {: #p7}
 
 **policy name:**
-Nome della politica IPsec.
-
+Nome della politica IPSec.
 
 ##### Parametri facoltativi:
 {: #op7}
@@ -391,9 +422,9 @@ Nome del gateway.
 **-auth:** Algoritmo di autorizzazione. Valori: sha1 o sha256
 
 ### cf vpn-update gateway
+{: #cf-vpn-update-gateway}
 
 Aggiorna un gateway VPN esistente.
-
 ```
 cf vpn-update gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets <subnet address>
 ```
@@ -414,8 +445,3 @@ Indirizzo IP del gateway.
 **-subnets:**
 Indirizzo di sottorete in formato CIDR.
 
-# rellinks
-## generale
-{: #general}
-* [Servizio IBM VPN](/docs/services/vpn/index.html)
-* [CLI Cloud Foundry ![Icona link esterno](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

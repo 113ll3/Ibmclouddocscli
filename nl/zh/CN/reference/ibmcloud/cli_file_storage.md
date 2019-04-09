@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,57 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # 使用 File Storage 服务
+{: #sl-file-storage-service}
 
-{{site.data.keyword.filestorage_full}} 是一种网络连接的基于 NFS 的 {{site.data.keyword.filestorage_short}}，具有持久、快速、灵活的特点。在此网络连接的存储器 (NAS) 环境中，您对文件共享功能和性能具有完全控制权。
+{{site.data.keyword.filestorage_full}} 是一种网络连接的基于 NFS 的 {{site.data.keyword.filestorage_short}}，具有持久、快速、灵活的特点。在此网络连接存储器 (NAS) 环境中，您对文件共享功能和性能具有完全控制权。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构文件存储器服务中的给定卷。
+使用以下命令可管理 {{site.data.keyword.cloud_notm}} 经典基础架构 File Storage 服务中的给定卷。
 {: shortdesc}
-
-<table summary="按字母顺序排序的常规 {{site.data.keyword.BluSoftlayer_notm}} 经典基础架构命令（带有可获取命令的更多信息的链接）">
-<caption>表 1. {{site.data.keyword.BluSoftlayer_notm}} 经典基础架构文件存储器</caption>
- <thead>
- <th colspan="6">{{site.data.keyword.BluSoftlayer_notm}} 经典基础架构文件存储器</th>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl file access-authorize](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_authorize)</td>
-  <td>[ibmcloud sl file access-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_list)</td>
-  <td>[ibmcloud sl file access-revoke](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_access_revoke)</td>
-  <td>[ibmcloud sl file replica-failback](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_failback)</td>
-  <td>[ibmcloud sl file replica-failover](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_failover)</td>
-  <td>[ibmcloud sl file replica-locations](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_locations)</td>
-   </tr>
- <tr>
-  <td>[ibmcloud sl file replica-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_order)</td>
-  <td>[ibmcloud sl file replica-partners](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_replica_partners)</td>
-  <td>[ibmcloud sl file snapshot-cancel](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_cancel)</td>
-  <td>[ibmcloud sl file snapshot-create](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_create)</td>
-  <td>[ibmcloud sl file snapshot-disable](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_disable)</td>
-  <td>[ibmcloud sl file snapshot-enable](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_enable)</td>
-  </tr>
- <tr>
-  <td>[ibmcloud sl file snapshot-delete](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_delete)</td>
-  <td>[ibmcloud sl file snapshot-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_list)</td>
-  <td>[ibmcloud sl file snapshot-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_order)</td>
-  <td>[ibmcloud sl file snapshot-restore](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_restore)</td>
-  <td>[ibmcloud sl file snapshot-schedule-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_snapshot_schedule_list)</td>
-  <td>[ibmcloud sl file volume-cancel](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_cancel)</td>  
-   </tr>
- <tr>
-  <td>[ibmcloud sl file volume-count](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_count)</td>
-  <td>[ibmcloud sl file volume-detail](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_detail)</td>
-  <td>[ibmcloud sl file volume-duplicate](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_duplicate)</td>
-  <td>[ibmcloud sl file volume-list](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_list)</td>
-  <td>[ibmcloud sl file volume-modify](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_modify)</td>
-  <td>[ibmcloud sl file volume-order](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_order)</td>
- </tr>
- <tr>
-  <td>[ibmcloud sl file volume-options](/docs/cli/reference/ibmcloud/cli_file_storage.html#sl_file_volume_options)</td>
- </tr>
-   </tbody>
- </table>
  
- ## ibmcloud sl file access-authorize
+## ibmcloud sl file access-authorize
 {: #sl_file_access_authorize}
 
 授权主机访问给定卷。
@@ -89,9 +48,8 @@ ibmcloud sl file access-authorize VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
-此命令授权标识为 87654321 的虚拟服务器访问标识为 12345678 的卷。
 
-
+此命令授权标识为 `87654321` 的虚拟服务器访问标识为 `12345678` 的卷。
 
 ## ibmcloud sl file access-list
 {: #sl_file_access_list}
@@ -113,9 +71,8 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file access-list 12345678 --sortby id
 ```
-此命令列出有权访问标识为 12345678 的卷的所有主机，并按标识对其排序。
 
-
+此命令列出有权访问标识为 `12345678` 的卷的所有主机，并按标识对其排序。
 
 ## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
@@ -143,9 +100,8 @@ ibmcloud sl file access-revoke VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ```
-此命令撤销标识为 87654321 的虚拟服务器对标识为 12345678 的卷的访问权。
 
-
+此命令撤销标识为 `87654321` 的虚拟服务器对标识为 `12345678` 的卷的访问权。
 
 ## ibmcloud sl file replica-failback
 {: #sl_file_replica_failback}
@@ -155,14 +111,11 @@ ibmcloud sl file access-revoke 12345678 --virtual-id 87654321
 ibmcloud sl file replica-failback VOLUME_ID
 ```
 
-
 **示例**：
 ```
 ibmcloud sl file replica-failback 12345678
 ```
-此命令对标识为 12345678 的卷执行故障恢复操作。
-
-
+此命令对标识为 `12345678` 的卷执行故障恢复操作。
 
 ## ibmcloud sl file replica-failover
 {: #sl_file_replica_failover}
@@ -177,9 +130,7 @@ ibmcloud sl file replica-failover VOLUME_ID REPLICA_ID
 ```
 ibmcloud sl file replica-failover 12345678 87654321
 ```
-此命令对标识为 12345678 的卷执行到标识为 87654321 的副本卷的故障转移操作。
-
-
+此命令对标识为 `12345678` 的卷执行到标识为 `87654321` 的副本卷的故障转移操作。
 
 ## ibmcloud sl file replica-locations
 {: #sl_file_replica_locations}
@@ -194,9 +145,7 @@ ibmcloud sl file replica-locations VOLUME_ID
 ```
 ibmcloud sl file replica-locations 12345678
 ```
-此命令列出标识为 12345678 的文件卷的适用复制数据中心。
-
-
+此命令列出标识为 `12345678` 的文件卷的适用复制数据中心。
 
 ## ibmcloud sl file replica-order
 {: #sl_file_replica_order}
@@ -224,9 +173,8 @@ ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file replica-order 12345678 -s DAILY -d dal09 --tier 4
 ```
-此命令为标识为 12345678 的卷订购副本，此副本执行 DAILY 复制，位于 dal09，层级为 4。
 
-
+此命令为标识为 `12345678` 的卷订购副本，此副本执行 DAILY 复制，位于 `dal09`，层级为 4。
 
 ## ibmcloud sl file replica-partners
 {: #sl_file_replica_partners}
@@ -241,9 +189,8 @@ ibmcloud sl file replica-partners VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file replica-partners 12345678
 ```
-此命令列出标识为 12345678 的文件卷的现有复制卷。
 
-
+此命令列出标识为 `12345678` 的文件卷的现有副本卷。
 
 ## ibmcloud sl file snapshot-cancel
 {: #sl_file_snapshot_cancel}
@@ -267,9 +214,8 @@ ibmcloud sl file snapshot-cancel SNAPSHOT_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-cancel 12345678 --immediate -f
 ```
-此命令立即取消标识为 12345678 的快照，而不要求确认。
 
-
+此命令立即取消标识为 `12345678` 的快照，而不要求确认。
 
 ## ibmcloud sl file snapshot-create
 {: #sl_file_snapshot_create}
@@ -289,7 +235,7 @@ ibmcloud sl file snapshot-create VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-create 12345678 --note snapshotforibmcloud
 ```
-此命令创建标识为 12345678 的卷的快照，并添加注释 snapshotforibmcloud。
+此命令创建标识为 `12345678` 的卷的快照，并添加注释 `snapshotforibmcloud`。
 
 ## ibmcloud sl file snapshot-disable
 {: #sl_file_snapshot_disable}
@@ -309,9 +255,8 @@ ibmcloud sl file snapshot-disable VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-disable 12345678 -s DAILY
 ```
-此命令禁止为标识为 12345678 的卷生成每日快照。
 
-
+此命令禁止为标识为 `12345678` 的卷生成每日快照。
 
 ## ibmcloud sl file snapshot-enable
 {: #sl_file_snapshot_enable}
@@ -339,9 +284,8 @@ ibmcloud sl file snapshot-enable VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
-此命令允许为标识为 12345678 的卷生成快照。快照将在每周日 2:00 生成，最多保留 5 个快照。
 
-
+此命令允许为标识为 `12345678` 的卷生成快照。快照将在每周日 2:00 生成，最多保留 5 个快照。
 
 ## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
@@ -351,14 +295,12 @@ ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ibmcloud sl file snapshot-delete SNAPSHOT_ID
 ```
 
-
 **示例**：
 ```
 ibmcloud sl file snapshot-delete 12345678
 ```
-此命令删除标识为 12345678 的快照。
 
-
+此命令删除标识为 `12345678` 的快照。
 
 ## ibmcloud sl file snapshot-list
 {: #sl_file_snapshot_list}
@@ -378,9 +320,8 @@ ibmcloud sl file snapshot-list VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
-此命令列出标识为 12345678 的卷的所有快照，并按标识对其排序。
 
-
+此命令列出标识为 `12345678` 的卷的所有快照，并按标识对它们排序。
 
 ## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
@@ -408,9 +349,7 @@ ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ```
-此命令为标识为 12345678 的卷订购快照空间，大小为 1000 GB，层级为 4 IOPS/GB。
-
-
+此命令为标识为 `12345678` 的卷订购快照空间，大小为 1000 GB，层级为 4 IOPS/GB。
 
 ## ibmcloud sl file snapshot-restore
 {: #sl_file_snapshot_restore}
@@ -420,14 +359,12 @@ ibmcloud sl file snapshot-order 12345678 -s 1000 -t 4
 ibmcloud sl file snapshot-restore VOLUME_ID SNAPSHOT_ID
 ```
 
-
 **示例**：
 ```
 ibmcloud sl file snapshot-restore 12345678 87654321
 ```
-此命令通过标识为 87654321 的快照复原标识为 12345678 的卷。
 
-
+此命令通过标识为 `87654321` 的快照复原标识为 `12345678` 的卷。
 
 ## ibmcloud sl snapshot-schedule-list
 {: #sl_snapshot_schedule_list}
@@ -441,7 +378,8 @@ ibmcloud sl snapshot-schedule-list VOLUME_ID
 ```
 ibmcloud sl file snapshot-schedule-list 12345678
 ```
-此命令列出标识为 12345678 的卷的快照安排
+
+此命令列出标识为 `12345678` 的卷的快照安排。
 
 ## ibmcloud sl file volume-cancel
 {: #sl_file_volume_cancel}
@@ -465,9 +403,8 @@ ibmcloud sl file volume-cancel VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file volume-cancel 12345678 --immediate -f
 ```
-此命令立即取消标识为 12345678 的卷，而不要求确认。
 
-
+此命令立即取消标识为 `12345678` 的卷，而不要求确认。
 
 ## ibmcloud sl file volume-count
 {: #sl_file_volume_count}
@@ -511,10 +448,8 @@ ibmcloud sl file volume-list [OPTIONS]
 ```
 ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
-此命令列出当前帐户中位于 dal09 的所有耐久性卷，并按容量对其排序。
 
-
-
+此命令列出当前帐户中位于 `dal09` 的所有耐久性卷，并按容量对它们排序。
 
 ## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
@@ -529,9 +464,8 @@ ibmcloud sl file volume-detail VOLUME_ID
 ```
 ibmcloud sl file volume-detail 12345678
 ```
-此命令显示标识为 12345678 的卷的详细信息。
 
-
+此命令显示标识为 `12345678` 的卷的详细信息。
 
 ## ibmcloud sl file volume-duplicate
 {: #sl_file_volume_duplicate}
@@ -561,9 +495,8 @@ ibmcloud sl file volume-duplicate VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file volume-duplicate 12345678
 ```
-此命令显示通过复制标识为 12345678 的卷来订购新卷。
 
-
+此命令显示通过复制标识为 `12345678` 的卷来订购新卷。
 
 ## ibmcloud sl file volume-order
 {: #sl_file_volume_order}
@@ -597,9 +530,8 @@ ibmcloud sl file volume-order [OPTIONS]
 ```
 ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
-此命令订购性能卷，大小为 1000 GB，IOPS 为 4000，位于 dal09。
 
-
+此命令订购性能卷，大小为 1000 GB，IOPS 为 4000，位于 `dal09`。
 
 ## ibmcloud sl file volume-modify
 {: #sl_file_volume_modify}
@@ -627,12 +559,14 @@ ibmcloud sl file volume-modify VOLUME_ID [OPTIONS]
 ```
 ibmcloud sl file volume-modify 12345678 --new-size 1000 --new-iops 4000
 ```
-此命令将卷 12345678 的大小修改为 1000GB，IOPS 修改为 4000。
+
+此命令将卷 `12345678` 的大小修改为 1000 GB，将 IOPS 修改为 4000。
 
 ```
 ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
 ```
-此命令将卷 12345678 的大小修改为 500GB，层级修改为 4 IOPS/GB。
+
+此命令将卷 `12345678` 的大小修改为 500 GB，将层级修改为 4 IOPS/GB。
 
 
 ## ibmcloud sl file volume-options
@@ -642,7 +576,6 @@ ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4
 ```
 ibmcloud sl file volume-options
 ```
-
 
 **示例**：
 ```

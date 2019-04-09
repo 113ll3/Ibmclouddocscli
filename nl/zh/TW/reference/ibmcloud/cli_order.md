@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, orders, quotes, ibmcloud sl order, item-list, package-locations
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,23 +15,9 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # 管理標準基礎架構訂單和報價
+{: #sl-manage-classic-orders}
 
-<table summary="按字母順序排序的一般 {{site.data.keyword.BluSoftlayer_notm}} 基礎架構指令，其鏈結提供指令的相關資訊">
-<caption>表 1. 標準基礎架構訂單</caption>
- <thead>
- <th colspan="6">標準基礎架構訂單</th>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_category_list)</td>
-  <td>[ibmcloud sl order item-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_item_list)</td>
-  <td>[ibmcloud sl order package-locations](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_package_locations)</td>
-  <td>[ibmcloud sl order place](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place)</td>
-  <td>[ibmcloud sl order place-quote](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_place_quote)</td>
-  <td>[ibmcloud sl order preset-list](/docs/cli/reference/ibmcloud/cli_order.html#sl_order_preset_list)</td>
- </tr>
- </tbody>
-</table>
+請使用下列指令來管理標準基礎架構中的訂單及報價。
 
 ## ibmcloud sl order package-locations
 {: #sl_order_category_list}
@@ -54,7 +42,7 @@ ibmcloud sl order package-locations BARE_METAL_SERVER
 ## ibmcloud sl order item-list
 {: #sl_order_item_list}
 
-列出用於訂購的套件項目
+列出用於訂購的套件項目。
 ```
 ibmcloud sl order item-list [OPTIONS] PACKAGE_KEYNAME
 ```
@@ -76,7 +64,7 @@ ibmcloud sl order item-list CLOUD_SERVER
 ## ibmcloud sl order package-locations
 {: #sl_order_package_locations}
 
-列出可在其中訂購套件的資料中心
+列出可在其中訂購套件的資料中心。
 ```
 ibmcloud sl order package-locations PACKAGE_KEYNAME
 ```
@@ -84,7 +72,7 @@ ibmcloud sl order package-locations PACKAGE_KEYNAME
 ## ibmcloud sl order place
 {: #sl_order_place}
 
-下訂單或驗證訂單
+下訂單或驗證訂單。
 ```
 ibmcloud sl order place PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,ORDER_ITEM3,ORDER_ITEM4... [OPTIONS]
 ```
@@ -96,11 +84,11 @@ ibmcloud sl order place PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,ORDER_I
 <dt>--verify</dt>
 <dd>表示是否只要驗證訂單，而不下訂單的旗標</dd>
 <dt>--billing</dt>
-<dd>計費頻率 [每小時|每月]，[預設值：每小時]</dd>
+<dd>計費頻率 [hourly|monthly]，[預設值：hourly]</dd>
 <dt>--complex-type</dt>
 <dd>訂單的複式類型。這通常是以 'SoftLayer_Container_Product_Order_' 開頭</dd>
 <dt>--extras</dt>
-<dd>表示需要與訂單一起傳送之額外資料的 JSON 字串</dd>
+<dd>JSON 字串，表示需要與訂單一起傳送的額外資料</dd>
 <dt>-f, --force</dt>
 <dd>強制執行作業，而不進行確認</dd>
 </dl>
@@ -114,7 +102,7 @@ ibmcloud sl order place CLOUD_SERVER DALLAS13 GUEST_CORES_4,RAM_16_GB,REBOOT_REM
 ## ibmcloud sl order place-quote
 {: #sl_order_place_quote}
 
-報價
+報價。
 ```
 ibmcloud sl order place-quote PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,ORDER_ITEM3,ORDER_ITEM4... [OPTIONS]
 ```
@@ -126,11 +114,11 @@ ibmcloud sl order place-quote PACKAGE_KEYNAME LOCATION ORDER_ITEM1,ORDER_ITEM2,O
 <dt>--verify</dt>
 <dd>表示是否只要驗證訂單，而不下訂單的旗標</dd>
 <dt>--billing</dt>
-<dd>計費頻率 [每小時|每月]，[預設值：每小時]</dd>
+<dd>計費頻率 [hourly|monthly]，[預設值：hourly]</dd>
 <dt>--complex-type</dt>
 <dd>訂單的複式類型。這通常是以 'SoftLayer_Container_Product_Order_' 開頭</dd>
 <dt>--extras</dt>
-<dd>表示需要與訂單一起傳送之額外資料的 JSON 字串</dd>
+<dd>JSON 字串，表示需要與訂單一起傳送的額外資料</dd>
 <dt>-f, --force</dt>
 <dd>強制執行作業，而不進行確認</dd>
 </dl>
@@ -144,7 +132,7 @@ sl order place-quote CLOUD_SERVER DALLAS13 GUEST_CORES_4,RAM_16_GB,REBOOT_REMOTE
 ## ibmcloud sl order preset-list
 {: #sl_order_preset_list}
 
-列出套件預設值
+列出套件預設值。
 ```
 ibmcloud sl order preset-list [OPTIONS] PACKAGE_KEYNAME
 ```

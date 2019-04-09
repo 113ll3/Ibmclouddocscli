@@ -1,11 +1,13 @@
 ---
 
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-02-26"
 
+keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
-lastupdated: "2019-01-03"
+subcollection: cloud-cli
+
 ---
 
 {:new_window: target="_blank"}
@@ -17,26 +19,11 @@ lastupdated: "2019-01-03"
 
 請使用下列指令擷取資源用量及計費資訊。
 {: shortdesc}
-
-<table summary="您可以用來管理 {{site.data.keyword.Bluemix_notm}} 計費及用量的 ibmcloud 指令。">
- <thead>
- </thead>
- <tbody>
-<tr>
-  <td>[ibmcloud billing account-usage](cli_billing.html#ibmcloud_billing_account_usage)</td>
-  <td>[ibmcloud billing org-usage](cli_billing.html#ibmcloud_billing_org_usage)</td>
-  <td>[ibmcloud billing resource-group-usage](cli_billing.html#ibmcloud_billing_resource_group_usage)</td>
-  <td>[ibmcloud billing resource-instances-usage](cli_billing.html#ibmcloud_billing_resource_instances_usage)</td>
- </tr>
- </tbody>
- </table>
- 
  
 ## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
-顯示現行帳戶的每月用量（僅限帳戶管理者）
-
+顯示現行帳戶的每月用量（僅限帳戶管理者）：
 ```
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
@@ -63,8 +50,7 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-顯示組織的每月用量（僅限帳戶管理者或組織帳單管理員）
-
+顯示組織的每月用量（僅限帳戶管理者或組織計費管理員）：
 ```
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -85,8 +71,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
-顯示資源群組的每月用量（僅帳戶管理者或資源群組管理者）
-
+顯示資源群組的每月用量（僅帳戶管理者或資源群組管理者）：
 ```
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -107,8 +92,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
-顯示現行帳戶下的每月資源實例用量。
-
+顯示現行帳戶下的每月資源實例用量：
 ```
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```

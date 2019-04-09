@@ -1,16 +1,14 @@
 ---
 
-
-
 copyright:
+  years: 2016, 2019
+lastupdated: "2019-02-26"
 
-  years: 2016, 2018
+keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
-lastupdated: "2018-11-30"
-
+subcollection: cloud-cli
 
 ---
-
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -23,13 +21,12 @@ lastupdated: "2018-11-30"
 Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令。下列資訊列出最常用來管理應用程式的 cf 指令，並且包括其名稱、選項、用法、必要條件、說明及範例。若要列出所有 cf 指令及關聯的說明資訊，請使用 `cf help`。使用 `cf command_name -h` 可檢視特定指令的詳細說明資訊。
 {: shortdesc}
 
-如需開始使用 Cloud Foundry CLI 的詳細資訊，請參閱[開始使用 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli#getting-started){: new_window}。
+如需開始使用 Cloud Foundry CLI 的詳細資料，請參閱[開始使用](https://github.com/cloudfoundry/cli#getting-started){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 
-如需 `cf CLI` 指令的更詳細清單，請參閱社群 [Cloud Foundry CLI Reference Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window}。
+如需更詳細的 `cf CLI` 指令清單，請參閱社群 [Cloud Foundry CLI 參考手冊](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 
-如果您的網路在執行 cf 指令的主機與 Cloud Foundry API 端點之間包含 HTTP Proxy 伺服器，則必須藉由設定 `HTTP_PROXY` 環境變數來指定 Proxy 伺服器的主機名稱或 IP 位址。如需詳細資訊，請參閱[搭配使用 cf CLI 與 Proxy 伺服器 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
+如果您的網路在執行 cf 指令的主機與 Cloud Foundry API 端點之間包含 HTTP Proxy 伺服器，則必須藉由設定 `HTTP_PROXY` 環境變數來指定 Proxy 伺服器的主機名稱或 IP 位址。如需詳細資料，請參閱[搭配使用 cf CLI 與 Proxy 伺服器](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 {: note}
-
 
 ## Cloud Foundry CLI 指令索引
 {: #CLIname_commands_index}
@@ -43,16 +40,15 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
  </thead>
  <tbody>
  <tr>
- <td>[api](/docs/cli/reference/ibmcloud/cf_index.html#cf_api)</td>
- <td>[help](/docs/cli/reference/ibmcloud/cf_index.html#cf_help)</td>
- <td>[login](/docs/cli/reference/ibmcloud/cf_index.html#cf_login)</td>
- <td>[stacks](/docs/cli/reference/ibmcloud/cf_index.html#cf_stacks)</td>
- <td>[target](/docs/cli/reference/ibmcloud/cf_index.html#cf_target)</td>
- <td>[-v ](/docs/cli/reference/ibmcloud/cf_index.html#cf_v)</td>
+ <td>[api](#cf_api)</td>
+ <td>[help](#cf_help)</td>
+ <td>[login](#cf_login)</td>
+ <td>[stacks](#cf_stacks)</td>
+ <td>[target](#cf_target)</td>
+ <td>[-v ](#cf_v)</td>
  </tr>
    </tbody>
  </table>
-
 
 <table summary="按字母順序排序的指令，用於管理應用程式、空間及服務。每一個指令都有鏈結可提供指令的相關資訊。">
  <caption>表 2. 用來管理應用程式、空間及服務的指令</caption>
@@ -61,24 +57,24 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
  </thead>
  <tbody>
  <tr>
- <td>[apps](/docs/cli/reference/ibmcloud/cf_index.html#cf_apps)</td>
- <td>[bind-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_bind-service)</td>
- <td>[create-service](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-service)</td>
- <td>[create-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_create-space)</td>
- <td>[delete](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete)</td>
+ <td>[apps](#cf_apps)</td>
+ <td>[bind-service](#cf_bind-service)</td>
+ <td>[create-service](#cf_create-service)</td>
+ <td>[create-space](#cf_create-space)</td>
+ <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/docs/cli/reference/ibmcloud/cf_index.html#cf_delete-space)</td>
- <td>[events](/docs/cli/reference/ibmcloud/cf_index.html#cf_events)</td>
- <td>[logs](/docs/cli/reference/ibmcloud/cf_index.html#cf_logs)</td>
- <td>[marketplace](/docs/cli/reference/ibmcloud/cf_index.html#cf_marketplace)</td>
- <td>[push](/docs/cli/reference/ibmcloud/cf_index.html#cf_push)</td>
+ <td>[delete-space](/#cf_delete-space)</td>
+ <td>[events](#cf_events)</td>
+ <td>[logs](#cf_logs)</td>
+ <td>[marketplace](#cf_marketplace)</td>
+ <td>[push](#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](/docs/cli/reference/ibmcloud/cf_index.html#cf_scale)</td>
- <td>[services](/docs/cli/reference/ibmcloud/cf_index.html#cf_services)	<td>[set-env](/docs/cli/reference/ibmcloud/cf_index.html#cf_set-env)</td>
- <td>[ssh](/docs/cli/reference/ibmcloud/cf_index.html#cf_ssh)</td>
- <td>[stop](/docs/cli/reference/ibmcloud/cf_index.html#cf_stop)</td>
+ <td>[scale](#cf_scale)</td>
+ <td>[services](#cf_services)	<td>[set-env](#cf_set-env)</td>
+ <td>[ssh](#cf_ssh)</td>
+ <td>[stop](#cf_stop)</td>
  </tr>
  </tbody>
  </table>
@@ -86,8 +82,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
 ## cf api
 {: #cf_api}
 
-您可以使用這個指令來顯示或指定 {{site.data.keyword.Bluemix}} API 端點的 URL。
-
+您可以使用這個指令來顯示或指定 {{site.data.keyword.cloud}} API 端點的 URL。
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
@@ -98,13 +93,13 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL（選用）</dt>
-   <dd>{{site.data.keyword.Bluemix_notm}} API 端點的 URL，在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。這個 URL 通常是 `https://api.{DomainName}`。
+   <dd>{{site.data.keyword.cloud_notm}} API 端點的 URL，在連接至 {{site.data.keyword.cloud_notm}} 時必須予以指定。這個 URL 通常是 `https://api.{DomainName}`。
    如果您要顯示目前所使用 API 端點的 URL，則不需要針對 cf api 指令指定此參數。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
    <dt>* --unset</dt>
    <dd>移除所有 API 端點的連線資訊。</dd>
-    </dl>
+   </dl>
 
 <strong>範例</strong>：
 
@@ -114,18 +109,17 @@ cf api
 ```
 {: codeblock}
 
-移除與 api.ng.bluemix.net 之所有 API 端點的連線
+移除與 api.us-south.cf.cloud.ibm.com 之所有 API 端點的連線：
 ```
-cf api api.ng.bluemix.net --unset
-```
-{: codeblock}
-
-停用 api.ng.bluemix.network 的 SSL 驗證處理程序
-```
-cf api api.ng.bluemix.net --skip-ssl-validation
+cf api api.us-south.cf.cloud.ibm.com --unset
 ```
 {: codeblock}
 
+停用 api.us-south.cf.cloud.ibm.com 的 SSL 驗證處理程序：
+```
+cf api api.us-south.cf.cloud.ibm.com --skip-ssl-validation
+```
+{: codeblock}
 
 ## cf apps
 {: #cf_apps}
@@ -137,9 +131,9 @@ cf api api.ng.bluemix.net --skip-ssl-validation
 ```
 cf apps
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：`cf api`、`cf login`、`cf target`
-
 
 ## cf bind-service
 {: #cf_bind-service}
@@ -150,6 +144,7 @@ cf apps
 ```
 cf bind-service appname service_instance
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：`cf api`、`cf login`、`cf target`
 
@@ -179,6 +174,7 @@ cf bind-service my_app my_dataworks
 ```
 cf create-service service_name service_plan service_instance
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：`cf api`、`cf login`、`cf target`
 
@@ -227,7 +223,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>範例</strong>：
 
-建立 new_space 空間
+建立 new_space 空間。
 ```
 cf create-space new_space
 ```
@@ -238,7 +234,6 @@ cf create-space new_space
 {: #cf_delete}
 
 刪除現有應用程式。
-
 
 ```
 cf delete appname [-f] [-r]
@@ -259,7 +254,7 @@ cf delete appname [-f] [-r]
 
 <strong>範例</strong>：
 
-刪除 `my_app` 應用程式（將需要確認）。
+刪除名為 `my_app` 的應用程式（需要確認）。
 ```
 cf delete my_app
 ```
@@ -288,8 +283,6 @@ cf delete my_app -f -r
 {: #cf_delete-space}
 
 刪除空間。
-
-
 ```
 cf delete-space space_name [-f]
 ```
@@ -308,7 +301,7 @@ cf delete-space space_name [-f]
 
 <strong>範例</strong>：
 
-刪除 `my_app` 應用程式（將需要確認）。
+刪除名為 `my_app` 的應用程式（需要確認）。
 ```
 cf delete my_app
 ```
@@ -326,7 +319,7 @@ cf delete my_app -r
 ```
 {: codeblock}
 
-刪除 `my_app` 應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
+刪除名為 `my_app` 的應用程式以及與 `my_app` 相關聯的所有網域名稱，不需要進行確認。
 ```
 cf delete my_app -f -r
 ```
@@ -341,6 +334,7 @@ cf delete my_app -f -r
 ```
 cf events [appname]
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：`cf api`、`cf login`、`cf target`
 
@@ -368,6 +362,7 @@ cf events my_app
 ```
 cf help [command_name]
 ```
+{: codeblock}
 
 <strong>必要條件</strong>：無。
 
@@ -396,10 +391,10 @@ cf help events
 ## cf login
 {: #cf_login}
 
-讓您登入 {{site.data.keyword.Bluemix_notm}}。
-如果您是使用聯合 ID 登入，則必須使用單一登入 (SSO) 參數來登入。
+讓您登入 {{site.data.keyword.cloud_notm}}。
+如果您使用聯合 ID 登入，則必須使用單一登入 (SSO) 參數來登入。
 
-您也可以使用 {{site.data.keyword.Bluemix_notm}} 平台 API 金鑰來登入。以使用者名稱 `apikey` 及 API 金鑰值作為密碼。如需建立 API 金鑰的相關資訊，請參閱[瞭解 API 金鑰](/docs/iam/apikeys.html)。
+您也可以使用 {{site.data.keyword.cloud_notm}} 平台 API 金鑰來登入。以使用者名稱 `apikey` 及 API 金鑰值作為密碼。如需建立 API 金鑰的相關資訊，請參閱[瞭解 API 金鑰](/docs/iam?topic=iam-manapikey#manapikey)。
 {: note}
 
 ```
@@ -412,14 +407,14 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <dl>
 <dt>*-a* https://api.{DomainName}（選用）</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} API 端點的 URL。</dd>
+<dd>{{site.data.keyword.cloud_notm}} API 端點的 URL。</dd>
 <dt>*-u* user_name（選用）</dt>
 <dd>您的使用者名稱。</dd>
 <dt>*-p* password（選用）</dt>
 <dd>您的密碼。</dd>
 <dd>*重要事項：*如果您在指令行介面上使用 *-p* 參數提供密碼，密碼可能會記錄在指令行歷程中。為了安全因素，請避免使用 -p 參數提供密碼。請改為在指令行介面提示您時再輸入密碼。</dd>
 <dt>*-sso*</dt>
-<dd>以聯合 ID 進行登入時，必須使用單一登入選項 (SSO)。以 IBM ID 進行登入時，則不需要這麼做。如果您嘗試使用聯合 ID 來登入，而沒有指定 SSO 參數，系統會提示您將其包含在內。使用 SSO 參數時，系統會提示您在登入時輸入一次性密碼。</dd>
+<dd>以聯合 ID 進行登入時，必須使用單一登入選項 (SSO)。以 IBM ID 進行登入時，則不需要這麼做。如果您嘗試使用聯合 ID 來登入，而未指定 SSO 參數，系統會提示您將其包含在內。使用 SSO 參數時，系統會提示您在登入時輸入一次性密碼。</dd>
 <dt>*-o* organization_name</dt>
 <dd>您要登入的組織名稱。</dd>
 <dt>*-s* space_name</dt>
@@ -432,33 +427,33 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>範例</strong>：
 
-登入 {{site.data.keyword.Bluemix_notm}}。
+登入 {{site.data.keyword.cloud_notm}}。
 ```
 cf login
 ```
 {: codeblock}
 
-登入 {{site.data.keyword.Bluemix_notm}}，並使用已定義端點 `https://api.ng.bluemix.net`。
+登入 {{site.data.keyword.cloud_notm}}，並使用已定義端點 `https://api.us-south.cf.cloud.ibm.com`。
 ```
-cf login -a https://api.ng.bluemix.net
-```
-{: codeblock}
-
-登入 {{site.data.keyword.Bluemix_notm}}，並使用已定義端點 `https://api.ng.bluemix.net`、使用者名稱 `user_name` 且不指定密碼（這是基於安全原因）。
-```
-cf login -a https://api.ng.bluemix.net -u user_name
+cf login -a https://api.us-south.cf.cloud.ibm.com
 ```
 {: codeblock}
 
-登入 {{site.data.keyword.Bluemix_notm}}，並使用已定義端點 `https://api.ng.bluemix.net`、使用者名稱 `user_name`、不指定密碼（這是基於安全原因）、組織名稱 `org_name`，以及空間名稱 `space_name`。
+登入 {{site.data.keyword.cloud_notm}}，並使用已定義端點 `https://api.us-south.cf.cloud.ibm.com`、使用者名稱 `user_name`，且不指定密碼（這是基於安全原因）。
 ```
-cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name
 ```
 {: codeblock}
 
-登入 {{site.data.keyword.Bluemix_notm}}，並搭配使用已定義端點 `https://api.ng.bluemix.net` 與 API 金鑰。使用 `apikey` 作為使用者名稱，並使用實際 API 金鑰作為密碼。
+登入 {{site.data.keyword.cloud_notm}}，並使用已定義端點 `https://api.us-south.cf.cloud.ibm.com`、使用者名稱 `user_name`、不指定密碼（這是基於安全原因）、組織名稱 `org_name`，以及空間名稱 `space_name`。
 ```
-cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
+cf login -a https://api.us-south.cf.cloud.ibm.com -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+登入 {{site.data.keyword.cloud_notm}}，並搭配使用已定義端點 `https://api.us-south.cf.cloud.ibm.com` 與 API 金鑰。使用 `apikey` 作為使用者名稱，並使用實際 API 金鑰作為密碼。
+```
+cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 
@@ -501,7 +496,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-列出 Marketplace 中可用的所有服務。這個指令所列出的服務也會顯示在 {{site.data.keyword.Bluemix_notm}}「型錄」中。
+列出 Marketplace 中可用的所有服務。這個指令所列出的服務也會顯示在 {{site.data.keyword.cloud_notm}}「型錄」中。
 
 
 ```
@@ -513,7 +508,7 @@ cf marketplace
 
 <strong>範例</strong>：
 
-列出 marketplace 中的所有服務
+列出 marketplace 中的所有服務。
 ```
 cf marketplace
 ```
@@ -523,7 +518,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-將新的應用程式部署至 {{site.data.keyword.Bluemix_notm}}，或更新 {{site.data.keyword.Bluemix_notm}} 中的現有應用程式。
+將新的應用程式部署至 {{site.data.keyword.cloud_notm}}，或更新 {{site.data.keyword.cloud_notm}} 中的現有應用程式。
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
@@ -557,7 +552,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-t* timeout（選用）</dt>
 <dd>應用程式啟動的時間上限（秒）。其他伺服器端的逾時可能會置換此值。</dd>
 <dt>*--no-hostname*（選用）</dt>
-<dd>將 {{site.data.keyword.Bluemix_notm}} 系統網域對映到此應用程式。</dd>
+<dd>將 {{site.data.keyword.cloud_notm}} 系統網域對映到此應用程式。</dd>
 <dt>*--no-manifest*（選用）</dt>
 <dd>忽略預設資訊清單檔。</dd>
 <dt>*--no-route*（選用）</dt>
@@ -703,7 +698,7 @@ cf ssh
 <dd>啟用本端埠轉遞，這會將機器上的輸出埠連結至應用程式 VM 上的輸入埠。</dd>
 <dt>-N</dt>
 <dd>不要執行遠端指令。</dd>
-<dt>-t, -tt 或 -T</dt>
+<dt>-t、-tt 或 -T</dt>
 <dd>可讓您在 pseudo-tty 模式下執行 SSH 階段作業，而不是產生終端機行輸出。<dd>
 </dl>
 
@@ -829,9 +824,7 @@ cf -v
 
 
 ## 相關鏈結
-{: #general}
+{: #cf-related}
 
-* [下載 Cloud Foundry CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
-{: new_window}
-* [快速參照卡 - cf 指令 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{: new_window}
+* [下載 Cloud Foundry CLI](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")
+* [快速參照卡 - cf 指令](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")

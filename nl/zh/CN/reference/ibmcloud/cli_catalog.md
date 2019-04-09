@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -15,41 +17,13 @@ lastupdated: "2018-11-29"
 # 搜索和管理目录产品
 {: #ibmcloud_catalog}
 
-使用以下命令可管理 {{site.data.keyword.Bluemix}}“目录”条目、查询模板、运行时和数据中心的地理位置。
+使用以下命令可管理 {{site.data.keyword.cloud}}“目录”条目、查询模板、运行时和数据中心的地理位置。
 {: shortdesc}
-
-<table summary="可用于管理 {{site.data.keyword.Bluemix_notm}}“目录”的 ibmcloud 命令。">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud catalog search](cli_catalog.html#ibmcloud_catalog_search)</td>
-  <td>[ibmcloud catalog entry](cli_catalog.html#ibmcloud_catalog_entry)</td>
-  <td>[ibmcloud catalog entry-create](cli_catalog.html#ibmcloud_catalog_entry_create)</td>
-  <td>[ibmcloud catalog entry-update](cli_catalog.html#ibmcloud_catalog_entry_update)</td>
-  <td>[ibmcloud catalog entry-delete](cli_catalog.html#ibmcloud_catalog_entry_delete)</td>
- </tr>
- <tr>
-  <td>[ibmcloud catalog entry-visibility](cli_catalog.html#ibmcloud_catalog_entry_visibility)</td>
-  <td>[ibmcloud catalog service-marketplace](cli_catalog.html#ibmcloud_catalog_service_marketplace)</td>
-  <td>[ibmcloud catalog entry-visibility-set](cli_catalog.html#ibmcloud_catalog_entry_visibility_set)</td>
-  <td>[ibmcloud catalog templates](cli_catalog.html#ibmcloud_catalog_templates)</td>
-  <td>[ibmcloud catalog template](cli_catalog.html#ibmcloud_catalog_template)</td>
- </tr>
- <tr>
-  <td>[ibmcloud catalog template-run](cli_catalog.html#ibmcloud_catalog_template_run)</td>
-  <td>[ibmcloud catalog locations](cli_catalog.html#ibmcloud_catalog_locations)</td>
-  <td>[ibmcloud catalog runtime](cli_catalog.html#ibmcloud_catalog_runtime)</td>
-  <td>[ibmcloud catalog runtimes](cli_catalog.html#ibmcloud_catalog_runtimes)</td>
-</tr>
- </tbody>
- </table>
   
-  ## ibmcloud catalog search
+## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
-搜索目录条目
-
+搜索目录条目：
 ```
 ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
@@ -112,15 +86,14 @@ ibmcloud catalog entry ID [--children] [--output TYPE] [--global]
 <strong>示例</strong>：
 
 获取标识为 `a0ef1-d3b4j0` 的条目：
-
 ```
 ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
-创建新的目录条目（仅限帐户的目录管理员）
 
+创建新的目录条目（仅限帐户的目录管理员）：
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -140,15 +113,14 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 <strong>示例</strong>：
 
 通过 JSON 文件创建父标识为 `a0ef1-d3b4j0` 资源：
-
 ```
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
 ## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
-更新现有目录条目（仅限帐户的目录管理员或编辑者）
 
+更新现有目录条目（仅限帐户的目录管理员或编辑者）：
 ```
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
@@ -166,7 +138,6 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 <strong>示例</strong>：
 
 通过 JSON 文件更新资源 `j402-dnf1i`：
-
 ```
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
@@ -189,15 +160,14 @@ ibmcloud catalog entry-delete ID [--global]
 <strong>示例</strong>：
 
 删除资源 `j402 - dnf1i`：
-
 ```
 ibmcloud catalog delete 'j402-dnf1i'
 ```
 
 ## ibmcloud catalog entry-visibility
 {: #ibmcloud_catalog_entry_visibility}
-获取目录条目的可视性（仅限帐户的目录管理员）
 
+获取目录条目的可视性（仅限帐户的目录管理员）
 ```
 ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 ```
@@ -224,8 +194,8 @@ ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 
 ## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
-更新现有目录条目的可视性（仅限帐户的目录管理员）
 
+更新现有目录条目的可视性（仅限帐户的目录管理员）：
 ```
 ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
@@ -258,15 +228,14 @@ ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remov
 <strong>示例</strong>：
 
 通过 JSON 文件设置资源 `j402-dnf1i` 的可视性：
-
 ```
 ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
 ## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
-列出市场中的服务产品
 
+列出市场中的服务产品：
 ```
 ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
@@ -286,7 +255,6 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 <strong>示例</strong>：
 
 显示全球范围的服务产品：
-
 ```
 ibmcloud catalog service-marketplace --global
 ```
@@ -294,8 +262,7 @@ ibmcloud catalog service-marketplace --global
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
-查看 {{site.data.keyword.Bluemix_notm}} 上的样板模板。
-
+查看 {{site.data.keyword.cloud_notm}} 上的样板模板。
 ```
 ibmcloud catalog templates [-d]
 ```
@@ -313,7 +280,6 @@ ibmcloud catalog templates [-d]
 {: #ibmcloud_catalog_template}
 
 查看指定样板模板的详细信息。
-
 ```
 ibmcloud catalog template TEMPLATE_ID
 ```
@@ -330,7 +296,6 @@ ibmcloud catalog template TEMPLATE_ID
 <strong>示例</strong>：
 
 查看模板 `mobileBackendStarter` 的详细信息：
-
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
@@ -349,7 +314,7 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] 
 <strong>命令选项</strong>：
    <dl>
    <dt>TEMPLATE_ID（必需）</dt>
-   <dd>创建应用程序时将基于的模板。使用 <i>ibmcloud templates</i> 可查看所有模板的标识。</dd>
+   <dd>应用程序在创建时所基于的模板。使用 <i>ibmcloud templates</i> 可查看所有模板的标识。</dd>
    <dt>CF_APP_NAME（必需）</dt>
    <dd>要创建的 cf 应用程序的名称。</dd>
    <dt>-u <i>URL</i>（可选）</dt>
@@ -357,26 +322,23 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] 
    <dt>-d <i>DESCRIPTION</i>（可选）</dt>
    <dd>应用程序的描述。</dd>
    <dt>--no-start（可选）</dt>
-   <dd>应用程序创建后不自动启动。如果未指定，应用程序创建后将自动启动。</dd>
+   <dd>创建应用程序后，不自动启动应用程序。如果未指定，应用程序在创建后将自动启动。</dd>
    </dl>
 
 
 <strong>示例</strong>：
 
 基于 `javaHelloWorld` 模板创建 cf 应用程序 `my-app`：
-
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
 基于 `rubyHelloWorld` 模板创建应用程序 `my-ruby-app`，路径为 `myrubyapp.chinabluemix.net`，描述为 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`：
-
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
 ```
 
 基于 `pythonHelloWorld` 模板创建应用程序 `my-python-app`，不带自动启动：
-
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
@@ -411,7 +373,6 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--ou
 {: #ibmcloud_catalog_runtime}
 
 查看运行时的详细信息。此命令仅可用于公共云。
-
 ```
 ibmcloud catalog runtime RUNTIME_ID
 ```
@@ -419,7 +380,6 @@ ibmcloud catalog runtime RUNTIME_ID
 <strong>示例</strong>：
 
 显示运行时“nodejsHelloWorld”的详细信息：
-
 ```
 catalog runtime nodejsHelloWorld
 ```
@@ -428,7 +388,6 @@ catalog runtime nodejsHelloWorld
 {: #ibmcloud_catalog_runtimes}
 
 列出所有运行时。此命令仅可用于公共云。
-
 ```
 ibmcloud catalog runtimes [-d]
 ```
@@ -443,7 +402,6 @@ ibmcloud catalog runtimes [-d]
 <strong>示例</strong>：
 
 列出所有运行时及其描述：
-
 ```
 ibmcloud catalog runtimes -d
 ```

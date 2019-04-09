@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, ibmcloud sl globalip, globalip, global ip addresses, assign global ip
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,25 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # Gestione degli IP globali
+{: #sl-manage-global-ip}
 
 Un indirizzo IP globale è una sottorete secondaria statica specializzata. Ti viene fornito come una sottorete /32 (in altre parole, un singolo indirizzo IP) che può essere instradato a qualsiasi altro indirizzo IP sul tuo account.
 
 Utilizza i seguenti comandi per gestire un IP globale nel servizio IP globale dell'infrastruttura classica {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-<table summary="Comandi degli IP globali dell'infrastruttura classica {{site.data.keyword.Bluemix_notm}} ordinati alfabeticamente che presentano dei link che ti portano a ulteriori informazioni per il comando">
- <tbody>
- <tr>
-  <td>[ibmcloud sl globalip assign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_assign)</td>
-  <td>[ibmcloud sl globalip cancel](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_cancel)</td>
-  <td>[ibmcloud sl globalip create](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_create)</td>
- <td>[ibmcloud sl globalip list](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_list)</td>
- <td>[ibmcloud sl globalip unassign](/docs/cli/reference/ibmcloud/cli_global_ip.html#sl_globalip_unassign)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl globalip assign
+## ibmcloud sl globalip assign
 {: #sl_globalip_assign}
 
 Assegna un IP globale a un dispositivo o a un router di destinazione.
@@ -39,12 +30,12 @@ Assegna un IP globale a un dispositivo o a un router di destinazione.
 ibmcloud sl globalip assign IDENTIFICATIVO DESTINAZIONE
 ```
 
-
 **Esempi**:
 ```
 ibmcloud sl globalip assign 12345678 9.111.123.456
 ```
-Questo comando assegna l'indirizzo IP con ID 12345678 a un dispositivo di destinazione il cui indirizzo IP è 9.111.123.456.
+
+Questo comando assegna l'indirizzo IP con ID `12345678` su un dispositivo di destinazione il cui indirizzo IP è `9.111.123.456`.
 
 ## ibmcloud sl globalip cancel
 {: #sl_globalip_cancel}
@@ -64,7 +55,8 @@ ibmcloud sl globalip cancel IDENTIFICATIVO [OPZIONI]
 ```
 ibmcloud sl globalip cancel 12345678
 ```
-Questo comando annulla l'indirizzo IP con ID 12345678.
+
+Questo comando annulla l'indirizzo IP con ID `12345678`.
 
  ## ibmcloud sl globalip create
 {: #sl_globalip_create}
@@ -88,6 +80,7 @@ ibmcloud sl globalip create [OPZIONI]
 ```
 ibmcloud sl globalip create --v6
 ```
+
 Questo comando crea un indirizzo IP V6.
 
 ## ibmcloud sl globalip list
@@ -112,6 +105,7 @@ ibmcloud sl globalip list [OPZIONI]
 ```
 ibmcloud sl globalip list --v4
 ```
+
 Questo comando elenca tutti gli indirizzi IP V4 sull'account corrente.
 
 ## ibmcloud sl globalip unassign
@@ -127,4 +121,5 @@ ibmcloud sl globalip unassign IDENTIFICATIVO
 ```
 ibmcloud sl globalip unassign 12345678
 ```
-Questo comando annulla l'assegnazione dell'indirizzo IP con ID 12345678 dal dispositivo di destinazione.
+
+Questo comando annulla l'assegnazione dell'indirizzo IP con ID `12345678` dal dispositivo di destinazione.

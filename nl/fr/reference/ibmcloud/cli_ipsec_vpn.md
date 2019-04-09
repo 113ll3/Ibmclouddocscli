@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: classic infrastructure, ipsec, vpn, ibmcloud sl ipsec, tunnel, vpn access, datacenter, encryption
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,35 +15,14 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # Gestion des tunnels VPN IPSec
+{: #sl-manage-ipsec-vpn-tunnels}
 
-L'accès VPN {{site.data.keyword.Bluemix}} permet aux utilisateurs de gérer tous les serveurs à distance et en toute sécurité sur le réseau privé {{site.data.keyword.Bluemix_notm}}. Une connexion VPN de votre site vers le réseau privé permet une gestion externe et la récupération de serveurs via un tunnel VPN chiffré.
+L'accès VPN {{site.data.keyword.cloud}} permet aux utilisateurs de gérer tous les serveurs à distance et en toute sécurité sur le réseau privé {{site.data.keyword.cloud_notm}}. Une connexion VPN de votre site vers le réseau privé permet une gestion externe et la récupération de serveurs via un tunnel VPN chiffré.
 
-Les commandes suivantes permettent de gérer les tunnels VPN IPSec dans le service correspondant de l'infrastructure classique {{site.data.keyword.Bluemix_notm}}.
+Les commandes suivantes permettent de gérer les tunnels VPN IPSec dans le service correspondant de l'infrastructure classique {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-<table summary="Commandes VPN IPSec {{site.data.keyword.Bluemix_notm}} classées par ordre alphabétique avec des liens vers des informations supplémentaires sur la commande">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl ipsec cancel](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_cancel)</td>
- <td>[ibmcloud sl ipsec config](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_config)</td>
- <td>[ibmcloud sl ipsec detail](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_detail)</td>
- <td>[ibmcloud sl ipsec list](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_list)</td>
- <td>[ibmcloud sl ipsec order](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_order)</td>
- <td>[ibmcloud sl ipsec subnet-add](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_subnet_add)</td>
- </tr>
- <tr>
- <td>[ibmcloud sl ipsec subnet-remove](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_subnet_remove)</td>
- <td>[ibmcloud sl ipsec translation-add](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_add)</td>
- <td>[ibmcloud sl ipsec translation-remove](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_remove)</td>
- <td>[ibmcloud sl ipsec translation-update](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_translation_update)</td>
- <td>[ibmcloud sl ipsec update](/docs/cli/reference/ibmcloud/cli_ipsec_vpn.html#sl_ipsec_update)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl ipsec cancel
+## ibmcloud sl ipsec cancel
 {: #sl_ipsec_cancel}
 
 Permet d'annuler un contexte de tunnel VPN IPSec.

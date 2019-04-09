@@ -1,11 +1,13 @@
 ---
 
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-02-26"
 
+keywords: iam, iam access, api keys, service ids, access groups, authorization policy, ibmcloud iam, cli, manage keys, manage service ids
 
-lastupdated: "2019-01-03"
+subcollection: cloud-cli
+
 ---
 
 {:new_window: target="_blank"}
@@ -15,94 +17,8 @@ lastupdated: "2019-01-03"
 # 管理 IAM 存取、API 金鑰、服務 ID 及存取群組
 {: #ibmcloud_commands_iam}
 
-請使用下列指令管理使用者、服務及存取群組的 API 金鑰、服務 ID、存取群組及存取/授權原則。
+請使用下列指令管理使用者、服務及存取群組的 API 金鑰、服務 ID、存取群組及授權原則。
 {: shortdesc}
-
-<table summary="您可以用來管理 API 金鑰及原則的 ibmcloud 指令。">
- <thead>
-  </thead>
-  <tbody>
-  <tr>
-   <td>[ibmcloud iam service-ids](cli_api_policy.html#ibmcloud_iam_service_ids)</td>
-   <td>[ibmcloud iam service-id](cli_api_policy.html#ibmcloud_iam_service_id)</td>
-   <td>[ibmcloud iam service-id-create](cli_api_policy.html#ibmcloud_iam_service_id_create)</td>
-   <td>[ibmcloud iam service-id-update](cli_api_policy.html#ibmcloud_iam_service_id_update)</td>
-   <td>[ibmcloud iam service-id-delete](cli_api_policy.html#ibmcloud_iam_service_id_delete)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam service-id-lock](cli_api_policy.html#ibmcloud_iam_service_id_lock)</td>
-   <td>[ibmcloud iam service-id-unlock](cli_api_policy.html#ibmcloud_iam_service_id_unlock)</td>
-   <td>[ibmcloud iam api-keys
-](cli_api_policy.html#ibmcloud_iam_api_keys)</td>
-   <td>[ibmcloud iam api-key-create](cli_api_policy.html#ibmcloud_iam_api_key_create)</td>
-   <td>[ibmcloud iam api-key-delete](cli_api_policy.html#ibmcloud_iam_api_key_delete)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam api-key-update](cli_api_policy.html#ibmcloud_iam_api_key_update)</td>
-   <td>[ibmcloud iam api-key-lock](cli_api_policy.html#ibmcloud_iam_api_key_lock)</td>
-   <td>[ibmcloud iam api-key-unlock](cli_api_policy.html#ibmcloud_iam_api_key_unlock)</td>
-   <td>[ibmcloud iam service-api-keys](cli_api_policy.html#ibmcloud_iam_service_api_keys)</td>
-   <td>[ibmcloud iam service-api-key](cli_api_policy.html#ibmcloud_iam_service_api_key)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam service-api-key-create](cli_api_policy.html#ibmcloud_iam_service_api_key_create)</td>
-   <td>[ibmcloud iam service-api-key-update](cli_api_policy.html#ibmcloud_iam_service_api_key_update)</td>
-   <td>[ibmcloud iam service-api-key-delete](cli_api_policy.html#ibmcloud_iam_service_api_key_delete)</td>
-   <td>[ibmcloud iam service-api-key-lock](cli_api_policy.html#ibmcloud_iam_service_api_key_lock)</td>
-   <td>[ibmcloud iam service-api-key-unlock](cli_api_policy.html#ibmcloud_iam_service_api_key_unlock)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam service-policies](cli_api_policy.html#ibmcloud_iam_service_policies)</td>
-   <td>[ibmcloud iam service-policy](cli_api_policy.html#ibmcloud_iam_service_policy)</td>
-   <td>[ibmcloud iam service-policy-create](cli_api_policy.html#ibmcloud_iam_service_policy_create)</td>
-   <td>[ibmcloud iam service-policy-update](cli_api_policy.html#ibmcloud_iam_service_policy_update)</td>
-   <td>[ibmcloud iam service-policy-delete](cli_api_policy.html#ibmcloud_iam_service_policy_delete)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam user-policies](cli_api_policy.html#ibmcloud_iam_user_policies)</td>
-   <td>[ibmcloud iam user-policy](cli_api_policy.html#ibmcloud_iam_user_policy)</td>
-   <td>[ibmcloud iam user-policy-create](cli_api_policy.html#ibmcloud_iam_user_policy_create)</td>
-   <td>[ibmcloud iam user-policy-update](cli_api_policy.html#ibmcloud_iam_user_policy_update)</td>
-   <td>[ibmcloud iam user-policy-delete](cli_api_policy.html#ibmcloud_iam_user_policy_delete)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam oauth-tokens
-](cli_api_policy.html#ibmcloud_iam_oauth_tokens)</td>
-   <td>[ibmcloud iam dedicated-id-disconnect](cli_api_policy.html#ibmcloud_iam_dedicated_id_disconnect)</td>
-   <td>[ibmcloud iam authorization-policy-create](cli_api_policy.html#ibmcloud_iam_authorization_policy_create)</td>
-   <td>[ibmcloud iam authorization-policy-delete](cli_api_policy.html#ibmcloud_iam_authorization_policy_delete)</td>
-   <td>[ibmcloud iam authorization-policy](cli_api_policy.html#ibmcloud_iam_authorization_policy)</td>
-  </tr>
-  <tr>
-   <td>[ibmcloud iam authorization-policies
-](cli_api_policy.html#ibmcloud_iam_authorization_policies)</td>
-   <td>[ibmcloud iam access-groups](cli_api_policy.html#ibmcloud_iam_access_groups)</td>
-   <td>[ibmcloud iam access-group](cli_api_policy.html#ibmcloud_iam_access_group)</td>
-   <td>[ibmcloud iam access-group-create](cli_api_policy.html#ibmcloud_iam_access_group_create)</td>
-   <td>[ibmcloud iam access-group-update](cli_api_policy.html#ibmcloud_iam_access_group_update)</td>
-</tr>
-<tr>
-   <td>[ibmcloud iam access-group-delete](cli_api_policy.html#ibmcloud_iam_access_group_delete)</td>
-   <td>[ibmcloud iam access-group-users](cli_api_policy.html#ibmcloud_iam_access_group_users)</td>
-   <td>[ibmcloud iam access-group-user-add](cli_api_policy.html#ibmcloud_iam_access_group_user_add)</td>
-   <td>[ibmcloud iam access-group-user-remove](cli_api_policy.html#ibmcloud_iam_access_group_user_remove)</td>
-   <td>[ibmcloud iam access-group-user-purge](cli_api_policy.html#ibmcloud_iam_access_group_user_purge)</td>
-</tr>
-<tr>
-   <td>[ibmcloud iam access-group-service-ids](cli_api_policy.html#ibmcloud_iam_access_group_service_ids)</td>
-   <td>[ibmcloud iam access-group-service-id-add](cli_api_policy.html#ibmcloud_iam_access_group_service_id_add)</td>
-   <td>[ibmcloud iam access-group-service-id-remove](cli_api_policy.html#ibmcloud_iam_access_group_service_id_remove)</td>
-   <td>[ibmcloud iam access-group-service-id-purge](cli_api_policy.html#ibmcloud_iam_access_group_service_id_purge)</td>
-   <td>[ibmcloud iam access-group-policies](cli_api_policy.html#ibmcloud_iam_access_group_policies)</td>
-</tr>
-<tr>
-   <td>[ibmcloud iam access-group-policy](cli_api_policy.html#ibmcloud_iam_access_group_policy)</td>
-   <td>[ibmcloud iam access-group-policy-create](cli_api_policy.html#ibmcloud_iam_access_group_policy_create)</td>
-   <td>[ibmcloud iam access-group-policy-update](cli_api_policy.html#ibmcloud_iam_access_group_policy_update)</td>
-   <td>[ibmcloud iam access-group-policy-delete](cli_api_policy.html#ibmcloud_iam_access_group_policy_delete)</td>
-  </tr>
-  </tbody>
-  </table>
 
 ## ibmcloud iam service-ids
 {: #ibmcloud_iam_service_ids}
@@ -1056,7 +972,7 @@ ibmcloud iam service-policies ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140
 建立服務原則。
 
 ```
-ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1083,6 +999,8 @@ ibmcloud iam service-policy-create SERVICE_ID {--file JSON_FILE | -r, --roles RO
   <dd>資源群組的名稱。此選項與 '--file' 及 '--resource-group-id' 不能同時使用。</dd>
   <dt>--resource-group-id </dt>
   <dd>資源群組的 ID。此選項與 '--file' 及 '--resource-group-name' 不能同時使用。</dd>
+  <dt>--account-management（選用）</dt>
+  <dd>提供對所有帳戶管理服務的存取權</dd>
   <dt>-f, --force</dt>
   <dd>建立服務原則，而不進行確認</dd>
 </dl>
@@ -1100,13 +1018,25 @@ ibmcloud iam service-policy-create test --file @policy.json
 ibmcloud iam service-policy-create ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 --file @policy.json
 ```
 
+將所有帳戶管理服務的 `Administrator` 角色授與服務 `test`：
+
+```
+ibmcloud iam service-policy-create test --roles Administrator --account-management
+```
+
+將帳戶中所有資源的 `Viewer` 角色授與服務 `test`：
+
+```
+ibmcloud iam service-policy-create test --roles Viewer
+```
+
 ## ibmcloud iam service-policy-update
 {: #ibmcloud_iam_service_policy_update}
 
 更新服務原則。
 
 ```
-ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
+ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE_GUID] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID] [--account-management]} [-f, --force]",
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -1135,6 +1065,8 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
   <dd>資源群組的名稱。此選項與 '--file' 及 '--resource-group-id' 不能同時使用。</dd>
   <dt>--resource-group-id </dt>
   <dd>資源群組的 ID。此選項與 '--file' 及 '--resource-group-name' 不能同時使用。</dd>
+  <dt>--account-management（選用）</dt>
+  <dd>提供對所有帳戶管理服務的存取權</dd>
   <dt>-f, --force</dt>
   <dd>更新服務原則，而不進行確認</dd>
 </dl>
@@ -1146,10 +1078,23 @@ ibmcloud iam service-policy-update SERVICE_ID POLICY_ID {--file JSON_FILE | [-r,
 ```
 ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
 ```
-從 JSON 檔案，更新服務 `ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976` 的服務原則 `140798e2-8ea7db3`：
+
+從 JSON 檔案，更新服務 `test` 的服務原則 `140798e2-8ea7db3`：
 
 ```
-ibmcloud iam service-policy-update ServiceId-cb258cb9-8de3-4ac0-9aec-b2b2d27ac976 140798e2-8ea7db3 --file @policy.json
+ibmcloud iam service-policy-update test 140798e2-8ea7db3 --file @policy.json
+```
+
+更新服務原則 `140798e2-8ea7db3`，以將所有帳戶管理服務的 `Administrator` 角色授與服務 `test`：
+
+```
+ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Administrator --account-management
+```
+
+更新服務原則 `140798e2-8ea7db3`，以將帳戶中所有資源的 `Viewer` 角色授與服務 `test`：
+
+```
+ibmcloud iam service-policy-update test 140798e2-8ea7db3 --roles Viewer
 ```
 
 ## ibmcloud iam service-policy-delete
@@ -1232,7 +1177,7 @@ ibmcloud iam dedicated-id-disconnect [-f, --force]
 建立授權原則以容許某個服務實例存取另一個服務實例。
 
 ```
-ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME] [—-target-service-instance TARGET_SERVICE_INSTANCE_NAME]
+ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME ROLE_NAME1,ROLE_NAME2... [—-source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--source-resource-type RESOURCE_TYPE] [—-target-service-instance-name TARGET_SERVICE_INSTANCE_NAME] [--target-resource-type RESOURCE_TYPE | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：登入、目標
@@ -1245,10 +1190,18 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dd>可授與來源服務存取權的目標服務。</dd>
   <dt>ROLE_NAME1,ROLE_NAME2...</dt>
   <dd>提供來源服務存取權的角色。</dd>  
-  <dt>—-source-service-instance SOURCE_SERVICE_INSTANCE_NAME</dt>
-  <dd>來源服務實例名稱，如果未指定的話，將會授與所有來源服務實例的存取權。</dd>
-  <dt>—-target-service-instance TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>目標服務實例名稱，如果未指定的話，將會授與所有目標服務實例的存取權。</dd>
+  <dt>--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME</dt>
+  <dd>來源服務實例名稱，與 `--source-service-instance-id` 互斥。如果未指定，則會授與所有來源服務實例的存取權。</dd>
+  <dt>--source-service-instance-id SOURCE_SERVICE_INSTANCE_ID</dt>
+  <dd>來源服務實例 ID，與 `--source-service-instance-name` 互斥。如果未指定，則會授與所有來源服務實例的存取權。</dd>
+  <dt>--source-resource-type</dt>
+  <dd>來源服務的資源類型</dd>
+  <dt>--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME</dt>
+  <dd>目標服務實例名稱，與 `--target-service-instance-id` 互斥。如果未指定，則會授與所有目標服務實例的存取權。</dd>
+  <dt>--target-service-instance-id TARGET_SERVICE_INSTANCE_ID</dt>
+  <dd>目標服務實例 ID，與 `--target-service-instance-name` 互斥。如果未指定，則會授與所有目標服務實例的存取權。</dd>
+  <dt>--target-resource-type</dt>
+  <dd>目標服務的資源類型</dd>
 </dl>
 
 ## ibmcloud iam authorization-policy-delete

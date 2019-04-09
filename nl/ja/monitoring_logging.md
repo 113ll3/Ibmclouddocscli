@@ -30,7 +30,7 @@ subcollection: cloud-cli
 ## ロギング
 {: #cloud-logging}
 
-{{site.data.keyword.cloud_notm}} は、デフォルトで、アプリ、アプリ・ランタイム、およびそれらのアプリの実行場所であるコンピュート・ランタイムについて、ログの収集と表示を行います。 {{site.data.keyword.cloud_notm}} ロギング機能はプラットフォームに統合されており、クラウド・リソースに関するデータ収集は自動的に有効になります。 
+{{site.data.keyword.cloud_notm}} は、デフォルトで、アプリ、アプリ・ランタイム、およびそれらのアプリの実行場所である計算ランタイムについて、ログの収集と表示を行います。 {{site.data.keyword.cloud_notm}} ロギング機能はプラットフォームに統合されており、クラウド・リソースに関するデータ収集は自動的に有効になります。 
 
 {{site.data.keyword.loganalysisfull_notm}} サービスは、{{site.data.keyword.cloud_notm}} プラットフォーム用のログ収集サービスとログ検索サービスを提供し、アプリケーションおよび {{site.data.keyword.cloud_notm}} サービスのデータを、選択したサービスから自動的に収集します。 {{site.data.keyword.loganalysisshort}} サービスを使用して、ログを処理する際のログ収集、ログ保存、およびログ検索の機能を拡張します。
 

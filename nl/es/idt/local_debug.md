@@ -1,11 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2019
+lastupdated: "2019-02-27"
 
+keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+
+subcollection: cloud-cli
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -23,45 +27,46 @@ Existen herramientas para ayudarle a depurar la aplicación en Java y Node.js en
 
 Pasos para habilitar la herramienta de depuración para una aplicación Java:
 
-1. Desde el directorio raíz del proyecto de su aplicación ejecute el mandato siguiente:
+1. Desde el directorio raíz del proyecto de su aplicación, ejecute el mandato siguiente:
 
-```
-ibmcloud dev debug
-```
+  ```
+  ibmcloud dev debug
+  ```
+  {: codeblock}
 
 2. Conexión del depurador a su aplicación:
 
 	* Eclipse
       1. Importe el **Proyecto maven existente** en Eclipse.
-      2. Cree una configuración de depuración de [aplicación remota Java ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm).
+      2. Cree una configuración de depuración de [aplicación remota Java](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
       		1. Escriba la dirección IP o `localhost:<port>`  
       		2. Escriba `7777` como número de puerto.
-      		3. Especifique el nombre del proyecto java que ha importado.
+      		3. Especifique el nombre del proyecto Java que ha importado.
       6. Defina un punto de interrupción en el IDE.
       7. Ejecute la configuración de depuración.
-      8. Acceda al punto final con un navegador para recrear el problema.  
+      8. Acceda al punto final con un navegador para volver a crear el problema.  
 	   
 	   El puerto predeterminado es 9080 para el punto final de Java Basic Microservices.
 	   {: note}
 
-	* [IntelliJ ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger)
+	* [IntelliJ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+	* [VSCode](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 	* Línea de mandatos JDK: `jdb -attach <host:port>`
 
 ## Depuración de aplicaciones Node.js
-{: #node}
+{: #idt-node-debug}
 
 Pasos para habilitar la herramienta de depuración para una aplicación Node.js:
 
 1. Desde el directorio raíz del proyecto de aplicación, ejecute el mandato siguiente:
-
-```
-ibmcloud dev debug
-```
+  ```
+  ibmcloud dev debug
+  ```
+  {: codeblock}
 
 2. Conexión del depurador a su aplicación:
-	* [VSCode ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+	* [WebStorm](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
 
 <!--

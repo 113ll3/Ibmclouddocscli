@@ -1,37 +1,27 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
 # 创建、取消和查看子网
+{: #sl-manage-subnets}
 
-子网是将 IP 网络分成多个较小网段的一种逻辑分区。使用以下命令可管理 {{site.data.keyword.Bluemix}} 经典基础架构子网。
+子网是将 IP 网络分成多个较小网段的一种逻辑分区。使用以下命令可管理 {{site.data.keyword.cloud}} 经典基础架构子网。
 {: shortdesc}
 
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 经典基础架构子网命令（带有可获取命令的更多信息的链接）">
- <thead>
- </thead>
- <tbody>
- <tr>
- <td>[ibmcloud sl subnet cancel](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_cancel)</td>
- <td>[ibmcloud sl subnet create](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_create)</td>
- <td>[ibmcloud sl subnet detail](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_detail)</td>
- <td>[ibmcloud sl subnet list](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_list)</td>
- <td>[ibmcloud sl subnet lookup](/docs/cli/reference/ibmcloud/cli_subnet.html#sl_subnet_lookup)</td>
- </tr>
-   </tbody>
- </table>
-
- ## ibmcloud sl subnet cancel
+## ibmcloud sl subnet cancel
 {: #sl_subnet_cancel}
 
 取消子网。
@@ -49,9 +39,7 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-此命令取消标识为 12345678 的子网，而不要求确认。
-
-
+此命令取消标识为 `12345678` 的子网，而不要求确认。
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -75,10 +63,9 @@ ibmcloud sl subnet create NETWORK QUANTITY VLAN_ID [OPTIONS]
 ```
 ibmcloud sl subnet create public 16 567
 ```
-此命令创建具有 16 个 IP v4 地址的公共子网，并会将其放在标识为 567 的 VLAN 上。
+{: codeblock}
 
-
-
+此命令创建具有 16 个 IP V4 地址的公共子网，并会将其放在标识为 `567` 的 VLAN 上。
 
 ## ibmcloud sl subnet detail
 {: #sl_subnet_detail}
@@ -100,10 +87,9 @@ ibmcloud sl subnet detail IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl subnet detail 12345678
 ```
-此命令显示有关标识为 12345678 的子网的详细信息，包括虚拟服务器和硬件服务器信息。
+{: codeblock}
 
-
-
+此命令显示有关标识为 `12345678` 的子网的详细信息，包括虚拟服务器和硬件服务器信息。
 
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
@@ -137,11 +123,9 @@ ibmcloud sl subnet list [OPTIONS]
 ```
 ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ```
-此命令列出当前帐户的 IP V4 子网，依据以下条件进行过滤：数据中心为 dal09，子网类型为 PRIMARY，网络空间为 PUBLIC。
+{: codeblock}
 
-
-
-
+此命令列出当前帐户的 IP V4 子网，依据以下条件进行过滤：数据中心为 `dal09`，子网类型为 `PRIMARY`，网络空间为 `PUBLIC`。
 
 ## ibmcloud sl subnet lookup
 {: #sl_subnet_lookup}
@@ -151,9 +135,10 @@ ibmcloud sl subnet list -d dal09 -t PRIMARY --network-space PUBLIC --v4
 ibmcloud sl subnet lookup IP_ADDRESS
 ```
 
-
 **示例**：
 ```
 ibmcloud sl subnet lookup 9.125.235.255
 ```
-此命令查找地址为 9.125.235.255 的 IP 地址记录，并显示其子网和设备信息。
+{: codeblock}
+
+此命令查找 IP 地址为 `9.125.235.255` 的 IP 地址记录，并显示其子网和设备信息。

@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: domain management, dns service, ibmcloud sl dns, classic infrastructure, management interface, dns, dns cli
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,34 +15,17 @@ lastupdated: "2018-11-30"
 {:tip: .tip}
 
 # 使用 DNS 服务管理域
+{: #sl-manage-domains}
 
-{{site.data.keyword.Bluemix}} 域名服务 (DNS) 为客户提供了一个中心位置，可通过基本 DNS 管理界面来查看和管理自己的域，此外还为用户提供了用于免费管理同一位置中的逆向和辅助 DNS 的选项。
+{{site.data.keyword.cloud}} 域名服务 (DNS) 为客户提供了一个中心位置，可通过基本 DNS 管理界面来查看和管理自己的域，此外还为用户提供了用于免费管理同一位置中的逆向和辅助 DNS 的选项。
 
-使用以下命令可管理 {{site.data.keyword.Bluemix_notm}} 经典基础架构 DNS 服务。
+使用以下命令可管理 {{site.data.keyword.cloud_notm}} 经典基础架构 DNS 服务。
 {: shortdesc}
-
-<table summary="按字母顺序排序的 {{site.data.keyword.Bluemix_notm}} 基础架构 DNS 命令（带有可获取命令的更多信息的链接）">
- <tbody>
- <tr>
- <td>[ibmcloud sl dns import](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_import)</td>
- <td>[ibmcloud sl dns record-add](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_add)</td>
- <td>[ibmcloud sl dns record-edit](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_edit)</td>
- <td>[ibmcloud sl dns record-list](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_list)</td>
- <td>[ibmcloud sl dns record-remove](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_record_remove)</td>
- <td>[ibmcloud sl dns zone-create](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_create)</td>
- </tr>
- <tr>
-   <td>[ibmcloud sl dns zone-delete](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_delete)</td>
-   <td>[ibmcloud sl dns zone-list](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_list)</td>
-   <td>[ibmcloud sl dns zone-print](/docs/cli/reference/ibmcloud/cli_dns.html#sl_dns_zone_print)</td>
- </tr>
-   </tbody>
- </table>
 
 ## ibmcloud sl dns import
 {: #sl_dns_import}
 
-导入基于 BIND 区域文件的区域。
+基于 BIND 专区文件导入专区。
 ```
 ibmcloud sl dns import ZONEFILE [OPTIONS]
 ```
@@ -55,12 +40,13 @@ ibmcloud sl dns import ZONEFILE [OPTIONS]
 ```
 ibmcloud sl dns import ~/ibm.com.txt
 ```
-此命令从 ~/ibm.com.txt 文件导入区域及其资源记录。
+此命令从 ~/ibm.com.txt 文件导入专区及其资源记录。
+
 
 ## ibmcloud sl dns record-add
 {: #sl_dns_record_add}
 
-将资源记录添加到区域中。
+将资源记录添加到专区中。
 ```
 ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
@@ -75,12 +61,13 @@ ibmcloud sl dns record-add ZONE RECORD TYPE DATA [OPTIONS]
 ```
 ibmcloud sl dns record-add ibm.com ftp A 127.0.0.1 --ttl 86400
 ```
-此命令将 A 记录添加到区域 ibm.com，其主机为“ftp”，数据为“127.0.0.1”，ttl 为 86400 秒。
+此命令将 A 记录添加到专区 ibm.com，其主机为“ftp”，数据为“127.0.0.1”，ttl 为 86400 秒。
+
 
 ## ibmcloud sl dns record-edit
 {: #sl_dns_record_edit}
 
-更新区域中的资源记录。
+更新专区中的资源记录。
 ```
 ibmcloud sl dns record-edit ZONE [OPTIONS]
 ```
@@ -101,12 +88,13 @@ ibmcloud sl dns record-edit ZONE [OPTIONS]
 ```
 ibmcloud sl dns record-edit ibm.com --by-id 12345678 --data 127.0.0.2 --ttl 3600
 ```
-此命令编辑区域 ibm.com 下标识为 12345678 的记录，并将其数据设置为“127.0.0.2”，ttl 设置为 3600。
+此命令编辑专区 ibm.com 下标识为 12345678 的记录，并将其数据设置为“127.0.0.2”，ttl 设置为 3600。
+
 
 ## ibmcloud sl dns record-list
 {: #sl_dns_record_list}
 
-列出区域中的所有资源记录。
+列出专区中的所有资源记录。
 ```
 ibmcloud sl dns record-list ZONE [OPTIONS]
 ```
@@ -127,16 +115,16 @@ ibmcloud sl dns record-list ZONE [OPTIONS]
 ```
 ibmcloud sl dns record-list ibm.com --record elasticsearch --type A --ttl 900
 ```
-此命令列出区域 ibm.com 下的所有 A 记录，要作为过滤依据的主机为 elasticsearch，ttl 为 900 秒。
+此命令列出专区 ibm.com 下的所有 A 记录，要作为过滤依据的主机为 elasticsearch，ttl 为 900 秒。
+
 
 ## ibmcloud sl dns record-remove
 {: #sl_dns_record_remove}
 
-除去区域中的资源记录。
+除去专区中的资源记录。
 ```
 ibmcloud sl dns record-remove RECORD_ID
 ```
-
 
 **示例**：
 ```
@@ -146,64 +134,64 @@ ibmcloud sl dns record-remove 12345678
 
 
 
+
 ## ibmcloud sl dns zone-create
 {: #sl_dns_zone_create}
 
-创建区域。
+创建专区。
 ```
 ibmcloud sl dns zone-create ZONE
 ```
-
 
 **示例**：
 ```
 ibmcloud sl dns zone-create ibm.com
 ```
-此命令创建名为 ibm.com 的区域。
+此命令创建名为 ibm.com 的专区。
+
 
 ## ibmcloud sl dns zone-delete
 {: #sl_dns_zone_delete}
 
-删除区域。
+删除专区。
 ```
 ibmcloud sl dns zone-delete ZONE
 ```
-
 
 **示例**：
 ```
 ibmcloud sl dns zone-delete ibm.com
 ```
-此命令删除名为 ibm.com 的区域。
+此命令删除名为 ibm.com 的专区。
+
 
 ## ibmcloud sl dns zone-list
 {: #sl_dns_zone_list}
 
-列出帐户的所有区域。
+列出帐户的所有专区。
 ```
 ibmcloud sl dns zone-list
 ```
-
 
 **示例**：
 ```
 ibmcloud sl dns zone-list
 ```
-此命令列出当前帐户下的所有区域。
+此命令列出当前帐户下的所有专区。
+
 
 
 
 ## ibmcloud sl dns zone-print
 {: #sl_dns_zone_print}
 
-以 BIND 格式打印区域和资源记录。
+以 BIND 格式打印专区和资源记录。
 ```
 ibmcloud sl dns zone-print ZONE
 ```
-
 
 **示例**：
 ```
 ibmcloud sl dns zone-print ibm.com
 ```
-此命令以 BIND 格式显示名为 ibm.com 的区域。
+此命令以 BIND 格式显示名为 ibm.com 的专区。

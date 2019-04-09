@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2019
+lastupdated: "2019-02-26"
+
+keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+
+subcollection: cloud-cli
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -15,22 +20,22 @@ lastupdated: "2018-11-30"
 # Contribution au plug-in SDK
 {: #contribute}
 
-Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'interface de ligne de commande {{site.data.keyword.Bluemix}}.
+Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'interface de ligne de commande {{site.data.keyword.cloud}}.
 
 ## Configuration de votre environnement de développement
 {: #dev-env}
 
-* [Interface de ligne de commande Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry/cli/releases).
+* [Interface de ligne de commande Cloud Foundry ](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
 
-   L'interface de ligne de commande Cloud Foundry n'est pas requise, mais elle facilite l'accès à {{site.data.keyword.Bluemix_notm}} à partir du terminal.
+   L'interface de ligne de commande Cloud Foundry n'est pas requise, mais elle facilite l'accès à {{site.data.keyword.cloud_notm}} à partir du terminal.
 
-   Pour plus d'informations sur l'interface de ligne de commande Cloud Foundry, voir la [documentation](/docs/cli/reference/cfcommands/index.html).
+   Pour plus d'informations sur l'interface de ligne de commande Cloud Foundry, voir la [documentation](/docs/cli?topic=cloud-cli-cf#cf).
 
-* Interface de ligne de commande (CLI) {{site.data.keyword.Bluemix_notm}} [](/docs/cli/index.html#overview).
+* [Interface de ligne de commande](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) {{site.data.keyword.cloud_notm}}.
 
-   Ce plug-in s'installe dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit également des ressources utiles pour accéder à {{site.data.keyword.Bluemix_notm}} à partir du terminal.
+   Ce plug-in s'installe dans l'interface de ligne de commande {{site.data.keyword.cloud_notm}}. L'interface de ligne de commande {{site.data.keyword.cloud_notm}} fournit également des ressources utiles pour accéder à {{site.data.keyword.cloud_notm}} à partir du terminal.
 
-* [Environnement de développement de Go ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://golang.org/doc/code.html)
+* [Environnement de développement de Go ](https://golang.org/doc/code.html){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
    Go est strict en ce qui concerne les emplacements des packages, par conséquent, votre source doit être définie dans la structure de répertoire `$GOPATH`. Prenez soin de définir vos variables `$GOPATH` et `$GOROOT` et d'inclure `$GOPATH/bin` dans votre variable d'environnement `$PATH` en éditant votre fichier de configuration `~/.bash_profile` (sur Mac OS).
 
@@ -42,7 +47,7 @@ Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'int
    ```
    {: codeblock}
 
-* Gestionnaire de dépendances : [govendor ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/kardianos/govendor)
+* Gestionnaire de dépendances : [govendor ](https://github.com/kardianos/govendor){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
    L'outil `govendor` crée et gère les dépendances Go. Vous n'en avez pas besoin sauf si vous prévoyez de mettre à jour le répertoire vendor.
 
@@ -67,9 +72,9 @@ Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'int
       ```
       {: codeblock}
 
-* Structure de test de BDD : [Ginkgo ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://onsi.github.io/ginkgo/)
+* Structure de test de BDD : [Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
-La structure de test repose sur Ginkgo, une structure de test BDD pour Go. Elle est utilisée avec [Gomega ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://onsi.github.io/gomega/), qui est une bibliothèque d'assertion et de comparateur pour Ginkgo.
+La structure de test repose sur Ginkgo, une structure de test BDD pour Go. Elle est utilisée avec [Gomega](http://onsi.github.io/gomega/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"), qui est une bibliothèque d'assertion et de comparateur pour Ginkgo.
 
    * Installez `ginkgo` à l'aide de la commande suivante :
 
@@ -103,9 +108,9 @@ La structure de test repose sur Ginkgo, une structure de test BDD pour Go. Elle 
 
       * Vous accédez au répertoire dans lequel se trouve le fichier `.coverprofile`.
 
-* Internationalisation : [go-i18n ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/nicksnyder/go-i18n) et [go-bindata ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/jteeuwen/go-bindata)
+* Internationalisation : [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
-L'internationalisation est basée sur go-i18n. Il s'agit d'un outil de ligne de commande et de package qui fournit le support nécessaire pour traduire une application Go en plusieurs langues. Les groupements de traduction sont prétraités par go-bindata. Il s'agit d'une commande qui convertit un fichier d'entrée en code source Go gérable.
+L'internationalisation est basée sur `go-i18n`. Il s'agit d'un outil de ligne de commande et de package qui fournit le support nécessaire pour traduire une application Go en plusieurs langues. Les groupements de traduction sont prétraités par `go-bindata`. Il s'agit d'une commande qui convertit un fichier d'entrée en code source Go gérable.
 
    * Installez `go-i18n` à l'aide de la commande suivante :
 
@@ -121,9 +126,9 @@ L'internationalisation est basée sur go-i18n. Il s'agit d'un outil de ligne de 
       ```
       {: codeblock}
 
-* Débogage : [delve ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/derekparker/delve)
+* Débogage : [delve ](https://github.com/derekparker/delve){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
-Delve est un débogueur pour le langage de programmation Go et il est utilisé par [Visual Studio Code ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://code.visualstudio.com/).
+Delve est un débogueur pour le langage de programmation Go et il est utilisé par [Visual Studio Code ](https://code.visualstudio.com/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
 
    * Installez `delve` à l'aide de la commande suivante :
 
@@ -132,7 +137,7 @@ Delve est un débogueur pour le langage de programmation Go et il est utilisé p
       ```
       {: codeblock}
 
-      * Pour Mac OS, suivez les [instructions ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://blog.ralch.com/tutorial/golang-debug-with-delve/) pour créer le certificat autosigné requis.
+      * Pour Mac OS, suivez les [instructions ](http://blog.ralch.com/tutorial/golang-debug-with-delve/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") pour créer le certificat autosigné requis.
 
 
 ## Bibliothèques d'exécution requises
@@ -145,34 +150,34 @@ Les bibliothèques d'exécution requises sont gérées sous le répertoire `vend
 
 Les dépendances imbriquées ne sont pas répertoriées.
 
-* [github.ibm.com/Bluemix/bluemix-cli-sdk ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.ibm.com/Bluemix/bluemix-cli-sdk)
+* [github.ibm.com/Bluemix/bluemix-cli-sdk ](https://github.ibm.com/Bluemix/bluemix-cli-sdk){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
-   SDK de plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} qui fournit l'infrastructure pour développer les plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
+   SDK de plug-in d'interface de ligne de commande {{site.data.keyword.cloud_notm}} qui fournit l'infrastructure pour développer les plug-in d'interface de ligne de commande {{site.data.keyword.cloud_notm}}.
 
-* [github.com/urfave/cli ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/urfave/cli)
+* [github.com/urfave/cli ](https://github.com/urfave/cli){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
-   Ce package fournit l'infrastructure permettant de générer des applications de ligne de commande dans Go. Le plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} repose sur une ancienne version de cette bibliothèque (github.com/codegangsta/cli).
+   Ce package fournit l'infrastructure permettant de générer des applications de ligne de commande dans Go. Le plug-in d'interface de ligne de commande {{site.data.keyword.cloud_notm}} repose sur une ancienne version de cette bibliothèque (github.com/codegangsta/cli).
 
-* [github.com/asaskevich/govalidator ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/asaskevich/govalidator)
+* [github.com/asaskevich/govalidator ](https://github.com/asaskevich/govalidator){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
    Ce package fournit un certain nombre de valideurs et de nettoyeurs pour des chaînes, des structs et des collections. Utilisez ce package au lieu d'implémenter vos propres valideurs.
 
-* [github.com/parnurzeal/gorequest ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/parnurzeal/gorequest)
+* [github.com/parnurzeal/gorequest ](https://github.com/parnurzeal/gorequest){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
    Ce package implémente un client HTTP simplifié pour vous aider à gérer les demandes et les réponses HTTP.
 
-* [github.com/briandowns/spinner ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/briandowns/spinner)
+* [github.com/briandowns/spinner ](https://github.com/briandowns/spinner){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
    Ce package implémente une bouton fléché d'interface de ligne de commande permettant de fournir des commentaires en retour d'utilisateur durant le traitement d'opérations de longue durée, par exemple, une génération de SDK.
 
-* [github.com/cloudfoundry-attic/jibber_jabber ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry-attic/jibber_jabber)
+* [github.com/cloudfoundry-attic/jibber_jabber ](https://github.com/cloudfoundry-attic/jibber_jabber){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
    Ce package est utilisé pour détecter la langue en cours du système d'exploitation.
 
 ## Clonage du référentiel
 {: #clone-repo}
 
-Le référentiel doit être cloné dans la [structure de répertoire ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://golang.org/doc/code.html) de Go en raison de la façon dont `govendor` fonctionne (application des meilleures pratiques de Go). 
+Le référentiel doit être cloné dans la [structure de répertoire ](https://golang.org/doc/code.html){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") de Go en raison de la façon dont `govendor` fonctionne (application des meilleures pratiques de Go).
 
 * Importez les dépendances internes via un nom de package qualifié complet.
 
@@ -198,7 +203,6 @@ Le référentiel doit être cloné dans la [structure de répertoire ![Icône de
 {: #build-plug-in}
 
 Générez le plug-in en choisissant l'une des commandes suivantes :
-
 ```
 cd $GOPATH/src/github.ibm.com/bluemix-mobile-services/bmd-codegen-sdkgen-cli-plugin
 go build main.go
@@ -215,7 +219,6 @@ Le script de génération installe également le plug-in dans l'interface de lig
 {: note}
 
 Testez le plug-in en choisissant l'une des commandes suivantes :
-
 ```
 ginkgo -r
 ```
@@ -227,21 +230,18 @@ go test ./plugin/...
 {: codeblock}
 
 Exécutez des tests d'intégration avec des unités de test et une couverture.
-
 ```
 sh bin/testAll.sh
 ```
 {: codeblock}
 
 Exécutez le plug-in en tant qu'interface de ligne de commande autonome.
-
 ```
 ./main
 ```
 {: codeblock}
 
-Installez et appelez le plug-in en tant qu'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} en choisissant l'une des commandes suivantes :
-
+Installez et appelez le plug-in en tant qu'interface de ligne de commande {{site.data.keyword.cloud_notm}} en choisissant l'une des commandes suivantes :
 ```
 ibmcloud plugin install main
 ibmcloud help sdk

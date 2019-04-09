@@ -1,10 +1,12 @@
 ---
 
 copyright:
+  years: 2015, 2019
+lastupdated: "2019-02-27"
 
-  years: 2015, 2018
+keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
-lastupdated: "2018-01-08"
+subcollection: cloud-cli
 
 ---
 
@@ -12,76 +14,77 @@ lastupdated: "2018-01-08"
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:note: .note}
+{:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} 管理 CLI
+# {{site.data.keyword.cloud_notm}} 管理 CLI
 {: #bluemixadmincli}
 
+您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.cloud_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.cloud_notm}} Local 或 {{site.data.keyword.cloud_notm}} Dedicated 环境。例如，可以从 LDAP 注册表添加用户。有关管理 {{site.data.keyword.cloud_notm}} Public 帐户的信息，请参阅[管理](/docs/account?topic=account-accounts#accounts)。
 
-您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 环境。例如，可以从 LDAP 注册表添加用户。如果要查看有关管理 {{site.data.keyword.Bluemix_notm}} Public 帐户的信息，请参阅[管理](/docs/admin/adminpublic.html#administer)。
-
-开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面 ![外部链接图标](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
+开始之前，请安装 Cloud Foundry 命令行界面。{{site.data.keyword.cloud_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")
 
 **限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
 
-**注**：{{site.data.keyword.Bluemix_notm}} 管理 CLI 仅用于 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 环境。{{site.data.keyword.Bluemix_notm}} Public 不支持该管理 CLI。
+{{site.data.keyword.cloud_notm}} 管理 CLI 仅用于 {{site.data.keyword.cloud_notm}} Local 和 {{site.data.keyword.cloud_notm}} Dedicated 环境。{{site.data.keyword.cloud_notm}} Public 不支持该管理 CLI。
+{: note}
 
-## 添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
+## 添加 {{site.data.keyword.cloud_notm}} 管理 CLI 插件
 
-安装了 cf 命令行界面后，可以添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件。
+安装了 Cloud Foundry 命令行界面后，可以添加 {{site.data.keyword.cloud_notm}} 管理 CLI 插件。
 
-**注**：如果先前安装了 {{site.data.keyword.Bluemix_notm}} 管理插件，那么可能需要卸载此插件，删除存储库，然后重新安装以获取最新更新。
+如果先前安装了 {{site.data.keyword.cloud_notm}} 管理插件，那么可能需要卸载此插件，删除存储库，然后重新安装以获取最新更新。
+{: tip}
 
 完成以下步骤来添加存储库并安装该插件：
 
 <ol>
-<li>要添加 {{site.data.keyword.Bluemix_notm}} 管理插件存储库，请运行以下命令：<br/><br/>
+<li>要添加 {{site.data.keyword.cloud_notm}} 管理插件存储库，请运行以下命令：<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
 </code><br/><br/>
 </li>
-<li>要安装 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>
+<li>要安装 {{site.data.keyword.cloud_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>
 <code>
-cf install-plugin BluemixAdminCLI -r BluemixAdmin
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
 </code>
 </li>
 </ol>
 
 如果需要卸载插件，那么可以使用以下命令，然后可以添加更新的存储库并安装最新的插件：
 
-* 卸载插件：`cf uninstall-plugin BluemixAdminCLI`
-* 除去插件存储库：`cf remove-plugin-repo BluemixAdmin`
+* 卸载插件：`cf uninstall-plugin IBMCloudAdminCLI`
+* 除去插件存储库：`cf remove-plugin-repo IBMCloudAdmin`
 
+## 使用 {{site.data.keyword.cloud_notm}} 管理 CLI 插件
 
-## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
-
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。
+您可以使用 {{site.data.keyword.cloud_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。
 
 要查看命令的列表，请运行以下命令：
-
 ```
 cf plugins
 ```
 {: codeblock}
 
-有关命令的其他帮助，请使用 `-help` 选项。
+有关命令的更多帮助，请使用 `-help` 选项。
 
-### 连接并登录到 {{site.data.keyword.Bluemix_notm}}
+### 连接并登录到 {{site.data.keyword.cloud_notm}}
 
-您必须进行连接并登录（如果尚未这样做）后，才能使用管理 CLI 插件。
+如果尚未连接并登录，那么必须这样做才能使用管理 CLI 插件。
 
 <ol>
-<li>要连接到 {{site.data.keyword.Bluemix_notm}} API 端点，请运行以下命令：<br/><br/>
+<li>要连接到 {{site.data.keyword.cloud_notm}} API 端点，请运行以下命令：<br/><br/>
 <code>
-cf ba api https://console.&lt;subdomain&gt;.bluemix.net
+cf api api.ng.bluemix.net
 </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 实例的 URL 的子域。<br />
+<dd class="pd">{{site.data.keyword.cloud_notm}} 实例的 URL 的子域。<br />
 </dd>
 </dl>
 <p>您可以查看管理控制台的“资源和信息”页面，以获取正确的 URL。此 URL 显示在“API 信息”部分的 **API URL** 字段中。</p>
 </li>
-<li>使用以下命令登录到 {{site.data.keyword.Bluemix_notm}}：<br/><br/>
+<li>使用以下命令登录到 {{site.data.keyword.cloud_notm}}：<br/><br/>
 <code>
 cf login
 </code>
@@ -94,20 +97,19 @@ cf login
 ### 添加用户
 {: #admin_add_user}
 
-要将用户从环境的用户注册表添加到 {{site.data.keyword.Bluemix_notm}} 环境，请使用以下命令：
-
+要将用户从环境的用户注册表添加到 {{site.data.keyword.cloud_notm}} 环境，请使用以下命令：
 ```
 cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-**注**：要向特定组织添加用户，您必须是拥有 **users.write** 许可权（或 **Superuser** 许可权）的**管理员**。如果您是组织管理员，那么您还能够通过 Superuser 来运行 **enable-managers-add-users** 命令，以向组织添加用户。有关更多信息，请参阅[允许管理员添加用户](index.html#clius_emau)。
+要向特定组织添加用户，您必须是拥有 **users.write** 许可权（或 **Superuser** 许可权）的**管理员**。如果您是组织管理者，那么还可以通过 Superuser 来运行 **enable-managers-add-users** 命令，以向组织添加用户。有关更多信息，请参阅[允许管理者添加用户](index.html#clius_emau)。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">LDAP 注册表中用户的名称。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其添加用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
+<dd class="pd">要向其添加用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;first_name&gt;</dt>
 <dd class="pd">要添加到组织的用户的名字。</dd>
 <dt class="pt dlterm">&lt;last_name&gt;</dt>
@@ -119,14 +121,13 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ### 邀请 {{site.data.keyword.Bluemix_dedicated_notm}} 中的用户
 {: #admin_dedicated_invite_public}
 
-每个 {{site.data.keyword.Bluemix_dedicated_notm}} 环境在 {{site.data.keyword.Bluemix_notm}} 中都有一个客户机拥有的公共企业帐户。为了使 Dedicated 环境中的用户可使用 {{site.data.keyword.containershort}} 创建集群，管理员必须将这些用户添加到此公共企业帐户。将用户添加到公共企业帐户后，其 Dedicated 帐户和公共帐户会链接在一起。然后，用户可以使用其 IBM 标识同时登录到 Dedicated 帐户和公共帐户，并且可以通过 Dedicated 界面在公共帐户中创建资源。有关更多信息，请参阅[在 Dedicated 上设置 IBM Cloud Container Service](/docs/containers/cs_dedicated.html#dedicated_setup)。要邀请 Dedicated 用户加入公共帐户，请运行以下命令：
-
+每个 {{site.data.keyword.Bluemix_dedicated_notm}} 环境在 {{site.data.keyword.cloud_notm}} 中都有一个客户机拥有的公共企业帐户。为了使 Dedicated 环境中的用户可使用 {{site.data.keyword.containershort}} 创建集群，管理员必须将这些用户添加到此公共企业帐户。将用户添加到公共企业帐户后，其 Dedicated 帐户和公共帐户会链接在一起。然后，用户可以使用其 IBM 标识同时登录到 Dedicated 帐户和公共帐户，并且可以通过 Dedicated 界面在公共帐户中创建资源。有关更多信息，请参阅[在 Dedicated 上设置 IBM Cloud Container Service](/docs/containers?topic=containers-dedicated#dedicated_setup)。要邀请 Dedicated 用户加入公共帐户，请运行以下命令：
 ```
 cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_id> -apikey=<public_api_key> -public_org_id=<public_org_id>
 ```
 {: pre}
 
-**注**：要将 Dedicated 环境用户添加到 {{site.data.keyword.Bluemix_notm}} 公共帐户，您必须是 Dedicated 帐户的**管理员**。
+要将 Dedicated 环境用户添加到 {{site.data.keyword.cloud_notm}} 公共帐户，您必须是 Dedicated 帐户的**管理员**。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_email&gt;</dt>
@@ -142,14 +143,14 @@ cf ba invite-users-to-public -userid=<user_email> -organization=<dedicated_org_i
 ### 列出邀请的 {{site.data.keyword.Bluemix_dedicated_notm}} 用户
 {: #admin_dedicated_list}
 
-如果已使用 [`invite-users-to-public` 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以列出帐户中的用户以查看其邀请状态。具有现有 IBM 标识的受邀用户的状态将为`活动`。没有现有 IBM 标识的受邀用户的状态将为`暂挂`或`活动`，具体取决于他们是否已接受加入该帐户的邀请。要列出 {{site.data.keyword.Bluemix_notm}} 帐户中的用户，请运行以下命令：
+如果已使用 [`invite-users-to-public` 命令](#admin_dedicated_invite_public)邀请 Dedicated 环境用户加入 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以列出帐户中的用户以查看他们的邀请状态。具有现有 IBM 标识的受邀用户的状态为`活动`。没有现有 IBM 标识的受邀用户的状态为`暂挂`或`活动`，具体取决于他们是否已接受加入帐户的邀请。要列出 {{site.data.keyword.Bluemix_notm}} 帐户中的用户，请运行以下命令：
 
 ```
 cf ba invite-users-status -apikey=<public_api_key>
 ```
 {: pre}
 
-**注**：要将 Dedicated 环境用户添加到 {{site.data.keyword.Bluemix_notm}} 公共帐户，您必须是 Dedicated 帐户的**管理员**。
+要将 Dedicated 环境用户添加到 {{site.data.keyword.Bluemix_notm}} 公共帐户，您必须是 Dedicated 帐户的**管理员**。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;public_api_key&gt;</dt>
@@ -161,7 +162,7 @@ cf ba invite-users-status -apikey=<public_api_key>
 ### 搜索用户
 {: #admin_search_user}
 
-要搜索用户，请使用以下命令搭配可选的搜索过滤参数（name、permission、organization 和 role）：
+要搜索用户，请将以下命令与可选的搜索过滤参数（name、permission、organization 和 role）配合使用：
 
 ```
 cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
@@ -173,7 +174,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">分配给用户的许可权。可用的许可权为：admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。有关分配的用户许可权的更多信息，请参阅[许可权](/docs/admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dd class="pd">分配给用户的许可权。可用的许可权为：admin（或 superuser）、login（或 basic）、catalog.read、catalog.write、reports.read、reports.write、users.read 或 users.write。不能将此参数与 organization 参数用于同一查询中。</dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">用户所属的组织名称。不能将此参数与 permission 参数用于同一查询中。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
@@ -187,13 +188,12 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 {: #admin_setperm_user}
 
 要为指定用户设置许可权，请使用以下命令：
-
 ```
 cf ba set-permissions <user_name> <permission> <access>
 ```
 {: codeblock}
 
-**注**：一次只能设置一个许可权。
+一次只能设置一个许可权。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -227,10 +227,10 @@ cf ba remove-user <user_name>
 
 **提示：****ba remove-user** 命令名较长，您还可以使用 **ba ru** 作为其别名。
 
-### 允许管理员添加用户
+### 允许管理者添加用户
 {: #clius_emau}
 
-如果您在 {{site.data.keyword.Bluemix_notm}} 环境中有 **Superuser** 许可权，那么可以允许组织管理员向其管理的组织添加用户。要使管理员能够添加用户，请使用以下命令：
+如果您在 {{site.data.keyword.Bluemix_notm}} 环境中有 **Superuser** 许可权，那么可以允许组织管理者向其管理的组织添加用户。要使管理者能够添加用户，请使用以下命令：
 
 ```
 cf ba enable-managers-add-users
@@ -239,10 +239,10 @@ cf ba enable-managers-add-users
 
 **提示：****ba enable-managers-add-users** 命令名较长，您还可以使用 **ba emau** 作为其别名。
 
-### 禁止管理员添加用户
+### 禁止管理者添加用户
 {: #clius_dmau}
 
-如果在 {{site.data.keyword.Bluemix_notm}} 环境中已允许组织管理员通过 **enable-managers-add-users** 命令向其管理的组织添加用户，并且您有 **Superuser** 许可权，那么可以除去此设置。要禁止管理员添加用户，请使用以下命令：
+如果在 {{site.data.keyword.Bluemix_notm}} 环境中已允许组织管理者通过 **enable-managers-add-users** 命令向其管理的组织添加用户，并且您有 **Superuser** 许可权，那么可以除去此设置。要禁止管理者添加用户，请使用以下命令：
 
 ```
 cf ba disable-managers-add-users
@@ -268,16 +268,24 @@ cf ba create-org <organization> <manager>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要添加的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;manager&gt;</dt>
-<dd class="pd">组织的管理员的用户名。</dd>
+<dd class="pd">组织的管理者的用户名。</dd>
 </dl>
 
 **提示：****ba create-org** 命令名较长，您还可以使用 **ba co** 作为其别名。
 
+### 删除组织
+{: #admin_delete_org}
+
+要删除组织，请使用以下命令：
+
+```
+cf ba delete-org <organization>
+```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要删除的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
+<dd class="pd">要删除的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
 </dl>
 
 **提示：****ba delete-org** 命令名较长，您还可以使用 **ba do** 作为其别名。
@@ -285,7 +293,7 @@ cf ba create-org <organization> <manager>
 ### 向组织分配用户
 {: #admin_ass_user_org}
 
-要将 {{site.data.keyword.Bluemix_notm}} 环境中的用户分配给特定组织，请使用以下命令：
+要将 {{site.data.keyword.cloud_notm}} 环境中的用户分配给特定组织，请使用以下命令：
 
 ```
 cf ba set-org <user_name> <organization> [<role>]
@@ -294,11 +302,11 @@ cf ba set-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
+<dd class="pd">{{site.data.keyword.cloud_notm}} 中用户的名称。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其分配用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
+<dd class="pd">要向其分配用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](/docs/admin/users_roles.html)。</dd>
+<dd class="pd">有关 {{site.data.keyword.cloud_notm}} 用户角色和描述的信息，请参阅[角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
 </dl>
 
 **提示：****ba set-org** 命令名较长，您还可以使用 **ba so** 作为其别名。
@@ -306,7 +314,7 @@ cf ba set-org <user_name> <organization> [<role>]
 ### 从组织中取消分配用户
 {: #admin_unass_user_org}
 
-要将 {{site.data.keyword.Bluemix_notm}} 环境中的用户取消分配给特定组织，请使用以下命令：
+要将 {{site.data.keyword.cloud_notm}} 环境中的用户取消分配给特定组织，请使用以下命令：
 
 ```
 cf ba unset-org <user_name> <organization> [<role>]
@@ -315,11 +323,11 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
+<dd class="pd">{{site.data.keyword.cloud_notm}} 中用户的名称。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要向其分配用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
+<dd class="pd">要向其分配用户的 {{site.data.keyword.cloud_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/admin/users_roles.html)。</dd>
+<dd class="pd">有关 {{site.data.keyword.cloud_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
 </dl>
 
 **提示：****ba unset-org** 命令名较长，您还可以使用 **ba uo** 作为其别名。
@@ -328,14 +336,14 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
-<dd class="pd">组织管理员。组织管理员有权执行以下操作：<ul>
+<dd class="pd">组织管理者。组织管理者有权执行以下操作：<ul>
 <li>在组织内创建或删除空间。</li>
 <li>邀请用户加入组织并管理用户。</li>
 <li>管理组织的域。</li>
 </ul>
 </dd>
 <dt class="pt dlterm">BillingManager</dt>
-<dd class="pd">记帐管理员。记帐管理员可以查看组织的运行时和服务使用情况信息。</dd>
+<dd class="pd">记帐管理者。记帐管理者可以查看组织的运行时和服务使用情况信息。</dd>
 <dt class="pt dlterm">OrgAuditor</dt>
 <dd class="pd">组织审计员。组织审计员可以查看空间中的应用程序和服务内容。</dd>
 </dl>
@@ -366,16 +374,16 @@ cf ba set-quota <organization> <plan>
 要查找组织的容器配额，请使用以下命令：
 
 ```
-cf bluemix-admin containers-quota <organization>
+cf ibmcloud-admin containers-quota <organization>
 ```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 中组织的名称或标识。此参数是必需的。</dd>
+<dd class="pd">IBM Cloud 中组织的名称或标识。此参数是必需的。</dd>
 </dl>
 
-**提示：****bluemix-admin containers-quota** 命令名较长，您还可以使用 **ba cq** 作为其别名。
+**提示：****ibmcloud-admin containers-quota** 命令名较长，您还可以使用 **ba cq** 作为其别名。
 
 ### 设置组织的容器配额
 {: #admin_set_containquotas}
@@ -383,7 +391,7 @@ cf bluemix-admin containers-quota <organization>
 要设置组织中容器的配额，请使用以下命令并至少包含其中一个选项：
 
 ```
-cf bluemix-admin set-containers-quota <organization> <options>
+cf ibmcloud-admin set-containers-quota <organization> <options>
 ```
 {: codeblock}
 
@@ -391,7 +399,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">Bluemix 中组织的名称或标识。此参数是必需的。</dd>
+<dd class="pd">IBM Cloud 中组织的名称或标识。此参数是必需的。</dd>
 <dt class="pt dlterm">&lt;options&gt;</dt>
 <dd class="pd">包含以下一个或多个选项，其中值必须为整数：<ul>
 <li>floating-ips-max &lt;value&gt;</li>
@@ -420,7 +428,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 （可选）可以提供一个在有效 JSON 对象中包含特定配置参数的文件。如果使用 **-file** 选项，那么会优先使用此选项并忽略其他选项。要提供文件，而不设置选项，请使用以下命令：
 
 ```
-cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+cf ibmcloud-admin set-containers-quota <organization> <-file path_to_JSON_file>
 ```
 {: codeblock}
 
@@ -437,7 +445,7 @@ JSON 文件的格式应该如以下示例中所示：
 ```
 {: codeblock}
 
-**提示：****bluemix-admin set-containers-quota** 命令名较长，您还可以使用 **ba scq** 作为其别名。
+**提示：****ibmcloud-admin set-containers-quota** 命令名较长，您还可以使用 **ba scq** 作为其别名。
 
 ## 管理空间
 {: #admin_spaces}
@@ -447,7 +455,7 @@ JSON 文件的格式应该如以下示例中所示：
 要在组织中添加空间，请使用以下命令：
 
 ```
-cf bluemix-admin create-space <organization> <space_name>
+cf ibmcloud-admin create-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -466,7 +474,7 @@ cf bluemix-admin create-space <organization> <space_name>
 要从组织中除去空间，请使用以下命令：
 
 ```
-cf bluemix-admin delete-space <organization> <space_name>
+cf ibmcloud-admin delete-space <organization> <space_name>
 ```
 
 {: codeblock}
@@ -485,7 +493,7 @@ cf bluemix-admin delete-space <organization> <space_name>
 要在空间中创建具有指定角色的用户，请使用以下命令：
 
 ```
-cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin set-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -498,7 +506,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 <dt class="pt dlterm">&lt;user_anme&gt;</dt>
 <dd class="pd">要添加的用户的名称。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">要分配的用户角色。值可以为 Manager（管理员）、Developer（开发者）或 Auditor（审计员）。有关空间中的 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/admin/users_roles.html)。</dd>
+<dd class="pd">要分配的用户角色。值可以为 Manager（管理者）、Developer（开发者）或 Auditor（审计员）。有关空间中的 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
 </dl>
 
 **提示：****ba set-space** 命令名较长，您还可以使用 **ba ss** 作为其别名。
@@ -509,7 +517,7 @@ cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
 要除去空间中用户的角色，请使用以下命令：
 
 ```
-cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+cf ibmcloud-admin unset-space <organization> <space_name> <user_name> <role>
 ```
 
 {: codeblock}
@@ -522,7 +530,7 @@ cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 <dt class="pt dlterm">&lt;user_anme&gt;</dt>
 <dd class="pd">要添加的用户的名称。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">要分配的用户角色。值可以为 Manager（管理员）、Developer（开发者）或 Auditor（审计员）。有关空间中的 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/admin/users_roles.html)。</dd>
+<dd class="pd">要分配的用户角色。值可以为 Manager（管理者）、Developer（开发者）或 Auditor（审计员）。有关空间中的 {{site.data.keyword.cloud_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/iam?topic=iam-userroles#userroles)。</dd>
 </dl>
 
 **提示：****ba unset-space** 命令名较长，您还可以使用 **ba us** 作为其别名。
@@ -533,7 +541,7 @@ cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 ### 对所有组织启用服务
 {: #admin_ena_service_org}
 
-要针对所有组织启用在 {{site.data.keyword.Bluemix_notm}}“目录”中显示的某个服务，请使用以下命令：
+要允许某个服务在所有组织的 {{site.data.keyword.cloud_notm}}“目录”中显示，请使用以下命令：
 
 ```
 cf ba enable-service-plan <plan_identifier>
@@ -550,7 +558,7 @@ cf ba enable-service-plan <plan_identifier>
 ### 对所有组织禁用服务
 {: #admin_dis_service_org}
 
-要针对所有组织禁用在 {{site.data.keyword.Bluemix_notm}}“目录”中显示的某个服务，请使用以下命令：
+要禁止某个服务在所有组织的 {{site.data.keyword.Bluemix_notm}}“目录”中显示，请使用以下命令：
 
 ```
 cf ba disable-service-plan <plan_identifier>
@@ -567,7 +575,7 @@ cf ba disable-service-plan <plan_identifier>
 ### 添加组织的服务可视性
 {: #admin_addvis_service_org}
 
-对于能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表，可以在其中添加组织。要允许某个组织在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务，请使用以下命令：
+可以在能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表中添加组织。要允许某个组织在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务，请使用以下命令：
 
 ```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
@@ -586,7 +594,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 ### 除去组织的服务可视性
 {: #admin_remvis_service_org}
 
-对于能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表，可以在其中除去组织。要在 {{site.data.keyword.Bluemix_notm}}“目录”中对组织除去某个服务的可视性，请使用以下命令：
+可以从能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表中除去组织。要在某个组织的 {{site.data.keyword.Bluemix_notm}}“目录”中除去某个服务的可视性，请使用以下命令：
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -605,14 +613,14 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 ### 编辑组织的服务可视性
 {: #admin_editvis_service_org}
 
-您可以编辑和替换特定组织可以在 {{site.data.keyword.Bluemix_notm}}“目录”中查看的服务列表。要替换一个组织或多个组织的所有现有可视服务，请使用以下命令：
+您可以编辑和替换特定组织可以在 {{site.data.keyword.Bluemix_notm}}“目录”中查看的服务的列表。要替换一个组织或多个组织的所有现有可视服务，请使用以下命令：
 
 ```
 cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
 ```
 {: codeblock}
 
-**注：**此命令会将指定组织的现有可视服务替换为在命令中指定的服务。
+此命令会将指定组织的现有可视服务替换为在命令中指定的服务。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
@@ -636,7 +644,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-**注**：如果您具有报告许可权的写访问权，那么您可以使用用户接受的任何格式，创建新类别并添加报告。输入 `category` 参数的新类别名称，或者添加新报告到现有类别。
+如果您拥有报告的写访问权，那么可以使用用户接受的任何格式，创建新类别并添加报告。输入 `category` 参数的新类别名称，或者添加新报告到现有类别。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
@@ -692,7 +700,7 @@ cf ba retrieve-report <search>
 ## 查看资源度量值信息
 {: #cliresourceusage}
 
-您可以查看资源度量值信息，包括内存、磁盘和 CPU 使用情况。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 和单元（Diego 体系结构）使用情况数据。要查看资源度量值信息，请使用以下命令：
+您可以查看资源度量值信息，包括内存、磁盘和 CPU 使用率。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 和单元（Diego 体系结构）使用情况数据。要查看资源度量值信息，请使用以下命令：
 
 ```
 cf ba resource-metrics
@@ -703,7 +711,7 @@ cf ba resource-metrics
 ## 查看资源度量值历史记录
 {: #cliresourceusagehistory}
 
-您可以检索内存和磁盘使用情况的资源度量值历史记录。返回的度量值包括使用的资源量占可用总量的比例，包括物理资源和预留资源。内存和磁盘使用情况的历史记录数据可以按小时、按天或按月显示。您可以指定开始和结束日期，以便在某个特定的日期范围内检索数据。在未指定日期的情况下，缺省的历史记录数据是最近 48 小时内的每小时内存数据。数据按降序排列，较新的日期显示在前边。要查看资源度量值历史记录信息，请使用以下命令：
+您可以检索内存和磁盘使用情况的资源度量值历史记录。返回的度量值包括使用的资源量占可用总量的比例，包括物理资源和预留资源。内存和磁盘使用情况的历史记录数据可以按小时、按天或按月显示。您可以指定开始和结束日期，以便在某个特定的日期范围内检索数据。在未指定日期的情况下，缺省的历史记录数据是最近 48 小时内的每小时内存数据。数据按降序显示，较新的日期显示在前边。要查看资源度量值历史记录信息，请使用以下命令：
 
 ```
 cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|end>
@@ -722,19 +730,19 @@ cf ba resource-metrics-history <hourly|daily|monthly>  <memory|disk >  <start|en
 <dt class="pt dlterm">&lt;--disk&gt;</dt>
 <dd class="pd">查看预留磁盘和物理磁盘的已使用量和总量。</dd>
 <dt class="pt dlterm">&lt;--start&gt;</dt>
-<dd class="pd">指定按天或按月的开始日期（格式必须为 mm-dd-yyyy），或者按小时的开始日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss 时区）</dd>
+<dd class="pd">指定按天或按月的开始日期（格式必须为 mm-dd-yyyy），或者按小时的开始日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss time zone）</dd>
 <dt class="pt dlterm">&lt;--end&gt;</dt>
-<dd class="pd">指定按天或按月的结束日期（格式必须为 mm-dd-yyyy），或者按小时的结束日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss 时区）</dd>
+<dd class="pd">指定按天或按月的结束日期（格式必须为 mm-dd-yyyy），或者按小时的结束日期和时间（格式必须为 mm-dd-yyyy hh:mm:ss time zone）</dd>
 </dl>
 
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;示例&gt;</dt>
-<dd class="pd">cf bluemix-admin resource-metrics-history</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --monthly --memory</dd>
-<dd class="pd">cf bluemix-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --daily --disk --start=07-04-2017</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --monthly --memory</dd>
+<dd class="pd">cf ibmcloud-admin resource-metrics-history --hourly --start="06-01-2017 00:00:00 EDT" --end="06-30-2017 23:59:00 EDT</dd>
 </dl>
 
 
@@ -759,7 +767,7 @@ cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-**注**：要列出所有服务代理程序，请输入不带 `broker_name` 参数的命令。
+要列出所有服务代理程序，请输入不带 `broker_name` 参数的命令。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>
@@ -831,20 +839,19 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 
 **提示：****ba update-service-broker** 命令名较长，您还可以使用 **ba usb** 作为其别名。
 
-
 ## 管理应用程序安全组
 {: #admin_secgro}
 
-要使用应用程序安全组 (ASG)，您必须是具有本地或专用环境完全访问权的管理员。对于命令的目标组织，环境的所有用户都可以列出可用的 ASG。但是，要创建、更新或绑定 AGS，您必须是 {{site.data.keyword.Bluemix_notm}} 环境的管理员。
+要使用应用程序安全组 (ASG)，您必须是具有本地或专用环境完全访问权的管理员。对于命令的目标组织，环境的所有用户都可以列出可用的 ASG。但是，要创建、更新或绑定 ASG，您必须是 {{site.data.keyword.Bluemix_notm}} 环境的管理员。
 
 ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.Bluemix_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集（例如，用于应用全局访问的组集），或者绑定到 {{site.data.keyword.Bluemix_notm}} 环境中某个组织内的空间。
 
-{{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+{{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
-**警告**：如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
+**警告**：如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
 
-
-**注**：以下可使您使用安全组的命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 信息。
+您可以使用以下命令来处理安全组，这些命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 的 Cloud Foundry 信息。
+{: note}
 
 ### 列出安全组
 {: #clilissecgro}
@@ -872,14 +879,12 @@ cf ba security-groups <security-group>
 
 **提示：**具有 `security-group` 参数的 **ba security-groups** 命令名较长，您还可以使用 **ba sg** 作为其别名。
 
-
 ### 创建安全组
 {: #clicreasecgro}
 
-有关创建安全组和用于定义出局流量的规则的更多信息，请参阅[创建应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}。
+有关创建安全组和规则来定义传出流量的更多信息，请参阅[创建应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 要创建安全组，请使用以下命令：
-
 ```
 cf ba create-security-group <security-group> <path-to-rules-file>
 ```
@@ -919,7 +924,6 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 {: #clidelsecgro}
 
 要删除安全组，请使用以下命令：
-
 ```
 cf ba delete-security-group <security-group>
 ```
@@ -932,11 +936,10 @@ cf ba delete-security-group <security-group>
 
 **提示：****ba delete-security-group** 命令名较长，您还可以使用 **ba dsg** 作为其别名。
 
-
 ### 绑定安全组
 {: #clibindsecgro}
 
-有关绑定安全组的更多信息，请参阅[绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+有关绑定安全组的更多信息，请参阅[绑定应用程序安全组 ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 * 要绑定 Default Staging 安全组集，请使用以下命令：
 
@@ -987,7 +990,7 @@ cf ba bind-security-group <security-group> <org> <space>
 ### 取消绑定安全组
 {: #cliunbindsecgro}
 
-有关取消绑定安全组的更多信息，请参阅[取消绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}。
+有关取消绑定安全组的更多信息，请参阅[取消绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 * 要取消绑定 Default Staging 安全组集，请使用以下命令：
 
@@ -1001,7 +1004,7 @@ cf ba unbind-staging-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**警告**：如果取消**缺省编译打包**组集与两个 IBM 创建的安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解环境中所有编译打包的应用程序上的分支。
+**警告**：如果取消**缺省编译打包**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解这样对环境中所有正在编译打包的应用程序的可能影响。
 
 **提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba ussg** 作为其别名。
 
@@ -1017,7 +1020,7 @@ cf ba unbind-running-security-group <security-group>
 <dd class="pd">安全组的名称</dd>
 </dl>
 
-**警告**：如果取消**缺省运行**组集与两个 IBM 创建的安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解环境中所有运行的应用程序上的分支。
+**警告**：如果取消**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问，因此必须慎用，还要了解这样对环境中所有正在运行的应用程序的可能影响。
 
 **提示：****ba unbind-running-security-group** 命令名较长，也可以使用 **ba brsg** 作为其别名。
 
@@ -1084,7 +1087,6 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 {: #cliupdabuildpack}
 
 如果您有应用程序目录写许可权，那么可以更新现有 buildpack。要更新 buildpack，请使用以下命令：
-
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 ```
@@ -1107,7 +1109,6 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 {: #clidelbuildpack}
 
 如果您有应用程序目录写许可权，那么可以删除现有 buildpack。要删除 buildpack，请使用以下命令：
-
 ```
 cf ba delete-buildpack <buildpack_name>
 ```

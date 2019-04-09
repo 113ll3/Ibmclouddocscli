@@ -1,11 +1,13 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-29"
 ---
 
 {:new_window: target="_blank"}
@@ -15,41 +17,13 @@ lastupdated: "2018-11-29"
 # Ricerca e gestione delle offerte di catalogo
 {: #ibmcloud_catalog}
 
-Utilizza i seguenti comandi per gestire le voci del catalogo {{site.data.keyword.Bluemix}}, i template di query, i runtime e le geolocalizzazioni dei data center.
+Utilizza i seguenti comandi per gestire le voci del catalogo {{site.data.keyword.cloud}}, i template di query, i runtime e le geolocalizzazioni dei data center.
 {: shortdesc}
-
-<table summary="Comandi ibmcloud che puoi utilizzare per gestire il catalogo {{site.data.keyword.Bluemix_notm}}.">
- <thead>
- </thead>
- <tbody>
- <tr>
-  <td>[ibmcloud catalog search](cli_catalog.html#ibmcloud_catalog_search)</td>
-  <td>[ibmcloud catalog entry](cli_catalog.html#ibmcloud_catalog_entry)</td>
-  <td>[ibmcloud catalog entry-create](cli_catalog.html#ibmcloud_catalog_entry_create)</td>
-  <td>[ibmcloud catalog entry-update](cli_catalog.html#ibmcloud_catalog_entry_update)</td>
-  <td>[ibmcloud catalog entry-delete](cli_catalog.html#ibmcloud_catalog_entry_delete)</td>
- </tr>
- <tr>
-  <td>[ibmcloud catalog entry-visibility](cli_catalog.html#ibmcloud_catalog_entry_visibility)</td>
-  <td>[ibmcloud catalog service-marketplace](cli_catalog.html#ibmcloud_catalog_service_marketplace)</td>
-  <td>[ibmcloud catalog entry-visibility-set](cli_catalog.html#ibmcloud_catalog_entry_visibility_set)</td>
-  <td>[ibmcloud catalog templates](cli_catalog.html#ibmcloud_catalog_templates)</td>
-  <td>[ibmcloud catalog template](cli_catalog.html#ibmcloud_catalog_template)</td>
- </tr>
- <tr>
-  <td>[ibmcloud catalog template-run](cli_catalog.html#ibmcloud_catalog_template_run)</td>
-  <td>[ibmcloud catalog locations](cli_catalog.html#ibmcloud_catalog_locations)</td>
-  <td>[ibmcloud catalog runtime](cli_catalog.html#ibmcloud_catalog_runtime)</td>
-  <td>[ibmcloud catalog runtimes](cli_catalog.html#ibmcloud_catalog_runtimes)</td>
-</tr>
- </tbody>
- </table>
   
-  ## ibmcloud catalog search
+## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
-Cerca voci del catalogo
-
+Cerca voci del catalogo:
 ```
 ibmcloud catalog search <QUERY> [-r, --region REGIONE] [-k, --kind TIPO] [-p, --price PREZZO] [-t, --tag TAG] [--sort-by PROPRIETÀ] [--col COLONNE] [--reverse] [--output TIPO] [--csv] [--global]
 ```
@@ -73,7 +47,7 @@ ibmcloud catalog search <QUERY> [-r, --region REGIONE] [-k, --kind TIPO] [-p, --
   <dt>--reverse</dt>
   <dd>Indica se invertire la sequenza di ordinamento</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
+  <dd>--output valore  Specifica il TIPO di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
   <dt>--csv</dt>
   <dd>File CSV di output</dd>
   <dt>--global</dt>
@@ -104,7 +78,7 @@ ibmcloud catalog entry ID [--children] [--output TIPO] [--global]
   <dt>--children</dt>
   <dd>Ottieni tutti gli elementi secondari per la voce di catalogo</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
   <dt>--global</dt>
   <dd>Opera in ambito globale</dd>
 </dl>
@@ -112,15 +86,14 @@ ibmcloud catalog entry ID [--children] [--output TIPO] [--global]
 <strong>Esempi</strong>:
 
 Ottieni la voce con ID `a0ef1-d3b4j0`:
-
 ```
 ibmcloud catalog entry 'a0ef1-d3b4j0'
 ```
 
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
-Crea una nuova voce di catalogo (solo amministratore catalogo di un account)
 
+Crea una nuova voce di catalogo (solo amministratore catalogo di un account):
 ```
 ibmcloud catalog entry-create [-c PARAMETERI_COME_JSON] [-p, --parent ELEMENTO_PRINCIPALE] [--global]
 ```
@@ -140,15 +113,14 @@ ibmcloud catalog entry-create [-c PARAMETERI_COME_JSON] [-p, --parent ELEMENTO_P
 <strong>Esempi</strong>:
 
 Crea risorsa dal file JSON con l'ID di elemento principale `a0ef1-d3b4j0`:
-
 ```
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
 
 ## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
-Aggiorna una voce di catalogo esistente (solo editor o amministratore di catalogo di un account)
 
+Aggiorna una voce di catalogo esistente (solo editor o amministratore di catalogo di un account):
 ```
 ibmcloud catalog entry-update ID [-c PARAMETRI_COME_JSON] [--global]
 ```
@@ -166,7 +138,6 @@ ibmcloud catalog entry-update ID [-c PARAMETRI_COME_JSON] [--global]
 <strong>Esempi</strong>:
 
 Aggiorna la risorsa `j402-dnf1i` dal file JSON:
-
 ```
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
@@ -189,15 +160,14 @@ ibmcloud catalog entry-delete ID [--global]
 <strong>Esempi</strong>:
 
 Elimina risorsa `j402-dnf1i`:
-
 ```
 ibmcloud catalog delete 'j402-dnf1i'
 ```
 
 ## ibmcloud catalog entry-visibility
 {: #ibmcloud_catalog_entry_visibility}
-Ottieni la visibilità per una voce di catalogo (solo amministratore di catalogo di un account)
 
+Ottieni la visibilità per una voce di catalogo (solo amministratore di catalogo di un account)
 ```
 ibmcloud catalog entry-visibility ID  [--output TIPO] [--global]
 ```
@@ -209,7 +179,7 @@ ibmcloud catalog entry-visibility ID  [--output TIPO] [--global]
   <dt>-json</dt>
   <dd>Genera in output la risposta JSON originale</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
+  <dd>--output valore  Specifica il TIPO di output, al momento è supportato solo JSON.</dd>
   <dt>-global</dt>
   <dd>Opera in ambito globale</dd>
 </dl>
@@ -224,8 +194,8 @@ ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 
 ## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
-Aggiorna la visibilità di una voce di catalogo esistente (solo amministratore di catalogo di un account)
 
+Aggiorna la visibilità di una voce di catalogo esistente (solo amministratore di catalogo di un account):
 ```
 ibmcloud catalog entry-visibility-set ID [--includes-add ELENCO] [--includes-remove ELENCO] [--excludes-add ELENCO] [--excludes-remove ELENCO] [--owner ID o Email] [--restrict] [--unrestrict] [-c PARAMETRI_COME_JSON] [--global]
 ```
@@ -258,15 +228,14 @@ ibmcloud catalog entry-visibility-set ID [--includes-add ELENCO] [--includes-rem
 <strong>Esempi</strong>:
 
 Imposta la visibilità della risorsa `j402-dnf1i` dal file JSON:
-
 ```
 ibmcloud catalog entry-visibility-set 'j402-dnf1i' -c @visibility.json
 ```
 
 ## ibmcloud catalog service-marketplace
 {: #ibmcloud_catalog_service_marketplace}
-Elenca le offerte di servizio nel marketplace
 
+Elenca le offerte di servizio nel marketplace:
 ```
 ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 ```
@@ -286,7 +255,6 @@ ibmcloud catalog service-marketplace [--cf] [--rc] [--global]
 <strong>Esempi</strong>:
 
 Mostra le offerte del servizio in ambito globale:
-
 ```
 ibmcloud catalog service-marketplace --global
 ```
@@ -294,8 +262,7 @@ ibmcloud catalog service-marketplace --global
 ## ibmcloud catalog templates
 {: #ibmcloud_catalog_templates}
 
-Visualizza i modelli di contenitore tipo su {{site.data.keyword.Bluemix_notm}}.
-
+Visualizza i template di contenitore tipo su {{site.data.keyword.cloud_notm}}.
 ```
 ibmcloud catalog templates [-d]
 ```
@@ -306,31 +273,29 @@ ibmcloud catalog templates [-d]
 
    <dl>
    <dt>-d (facoltativo)</dt>
-   <dd>Se viene specificata l'opzione <i>-d</i>, viene visualizzata anche la descrizione di ciascun modello. Altrimenti, vengono visualizzati solo l'ID e il nome di ciascun modello.</dd>
+   <dd>Se viene specificata l'opzione <i>-d</i>, viene visualizzata anche la descrizione di ciascun template. Altrimenti, vengono visualizzati solo l'ID e il nome di ciascun template.</dd>
    </dl>
 
 ## ibmcloud catalog template
 {: #ibmcloud_catalog_template}
 
-Visualizza le informazioni dettagliate di un modello contenitore tipo specificato.
-
+Visualizza le informazioni dettagliate di un template di contenitore tipo specificato.
 ```
-ibmcloud catalog template ID_MODELLO
+ibmcloud catalog template ID_TEMPLATE
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>ID_MODELLO (obbligatorio)</dt>
-   <dd>L'ID del modello contenitore tipo. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i modelli.</dd>
+   <dt>ID_TEMPLATE (obbligatorio)</dt>
+   <dd>L'ID del template di contenitore tipo. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i template.</dd>
    </dl>
 
 
 <strong>Esempi</strong>:
 
-Visualizza i dettagli del modello `mobileBackendStarter`:
-
+Visualizza i dettagli del template `mobileBackendStarter`:
 ```
 ibmcloud catalog template mobileBackendStarter
 ```
@@ -338,18 +303,18 @@ ibmcloud catalog template mobileBackendStarter
 ## ibmcloud catalog template-run
 {: #ibmcloud_catalog_template_run}
 
-Crea un'applicazione cf basata sul modello specificato con l'URL e la descrizione specificati. Per impostazione predefinita, la nuova applicazione viene avviata automaticamente.
+Crea un'applicazione cf basata sul template specificato con l'URL e la descrizione specificati. Per impostazione predefinita, la nuova applicazione viene avviata automaticamente.
 
 ```
-ibmcloud catalog template-run ID_MODELLO NOME_APPLICAZIONE_CF [-u URL] [-d DESCRIZIONE] [--no-start]
+ibmcloud catalog template-run ID_TEMPLATE NOME_APPLICAZIONE_CF [-u URL] [-d DESCRIZIONE] [--no-start]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>ID_MODELLO (obbligatorio)</dt>
-   <dd>Il modello su cui verrà basata l'applicazione quando verrà creata. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i modelli.</dd>
+   <dt>ID_TEMPLATE (obbligatorio)</dt>
+   <dd>Il template su cui è basata l'applicazione quando viene creata. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i template.</dd>
    <dt>NOME_APPLICAZIONE_CF (obbligatorio)</dt>
    <dd>Il nome dell'applicazione cf da creare.</dd>
    <dt>-u <i>URL</i> (facoltativo)</dt>
@@ -357,26 +322,23 @@ ibmcloud catalog template-run ID_MODELLO NOME_APPLICAZIONE_CF [-u URL] [-d DESCR
    <dt>-d <i>DESCRIZIONE</i> (facoltativo)</dt>
    <dd>Descrizione dell'applicazione.</dd>
    <dt>--no-start (facoltativo)</dt>
-   <dd>Non avviare l'applicazione automaticamente una volta creata. Se non viene specificata, l'applicazione viene avviata automaticamente dopo la sua creazione.</dd>
+   <dd>Non avviare l'applicazione automaticamente dopo la sua creazione. Se non viene specificata, l'applicazione viene avviata automaticamente dopo la sua creazione.</dd>
    </dl>
 
 
 <strong>Esempi</strong>:
 
-Crea un'applicazione `my-app` basata sul modello `javaHelloWorld`:
-
+Crea un'applicazione `my-app` basata sul template `javaHelloWorld`:
 ```
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
-Crea un'applicazione `my-ruby-app` basata sul modello `rubyHelloWorld` con la rotta `myrubyapp.chinabluemix.net` e la descrizione `La mia prima applicazione ruby su {{site.data.keyword.Bluemix_notm}}.`:
-
+Crea un'applicazione `my-ruby-app` basata sul template `rubyHelloWorld` con la rotta `myrubyapp.chinabluemix.net` e la descrizione `La mia prima applicazione ruby su {{site.data.keyword.Bluemix_notm}}.`:
 ```
 ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
 ```
 
-Crea un'applicazione `my-python-app` basata sul modello `pythonHelloWorld` senza l'avvio automatico:
-
+Crea un'applicazione `my-python-app` basata sul template `pythonHelloWorld` senza l'avvio automatico:
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 ```
@@ -400,7 +362,7 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind TIPO] [--col COLONNE] [--ou
   <dt>--col</dt>
   <dd>Specifica colonne aggiuntive per la tabella. Attualmente "group", "provider" e "tags".</dd>
   <dt>--output TIPO (facoltativo)</dt>
-  <dd>--output value  Specifica il TIPO di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
+  <dd>--output valore  Specifica il TIPO di output, al momento è supportato solo JSON. Questa opzione è esclusiva con '--id'.</dd>
   <dt>--global</dt>
   <dd>Opera in un ambito globale.</dd>
   <dt>--csv</dt>
@@ -411,7 +373,6 @@ ibmcloud catalog locations [-i, --id ID] [-k, --kind TIPO] [--col COLONNE] [--ou
 {: #ibmcloud_catalog_runtime}
 
 Visualizza i dettagli di un runtime. Questo comando è disponibile solo per il cloud pubblico.
-
 ```
 ibmcloud catalog runtime ID_RUNTIME
 ```
@@ -419,7 +380,6 @@ ibmcloud catalog runtime ID_RUNTIME
 <strong>Esempi</strong>:
 
 Mostra i dettagli del runtime "nodejsHelloWorld":
-
 ```
 catalog runtime nodejsHelloWorld
 ```
@@ -428,7 +388,6 @@ catalog runtime nodejsHelloWorld
 {: #ibmcloud_catalog_runtimes}
 
 Elenca tutti i runtime. Questo comando è disponibile solo per il cloud pubblico.
-
 ```
 ibmcloud catalog runtimes [-d]
 ```
@@ -443,7 +402,6 @@ ibmcloud catalog runtimes [-d]
 <strong>Esempi</strong>:
 
 Elenca tutti i runtime con le loro descrizioni:
-
 ```
 ibmcloud catalog runtimes -d
 ```

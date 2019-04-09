@@ -1,63 +1,41 @@
 ---
 
 copyright:
+  years: 2018, 2019
+lastupdated: "2019-02-26"
 
-  years: 2018
+keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
+subcollection: cloud-cli
 
-lastupdated: "2018-11-30"
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}} CLI 플러그인 추가 및 제거
+# {{site.data.keyword.cloud_notm}} CLI 플러그인 추가 및 제거
 {: #ibmcloud_commands_settings}
 
-{{site.data.keyword.Bluemix}}는 해당 기능을 확장하도록 플러그인 프레임워크를 지원합니다. 다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 관리하십시오.
+{{site.data.keyword.cloud}}는 해당 기능을 확장하도록 플러그인 프레임워크를 지원합니다. 다음 명령을 사용하여 {{site.data.keyword.cloud_notm}} CLI 플러그인을 관리하십시오.
 {: shortdesc}
 
-<table summary="{{site.data.keyword.Bluemix_notm}} CLI 플러그인을 관리하는 데 사용할 수 있는 ibmcloud 명령.">
- <thead>
- </thead>
- <tbody>
-<tr>
-  <td>[ibmcloud plugin repo-add](cli_plugin.html#ibmcloud_plugin_repo_add)</td>
-  <td>[ibmcloud plugin repo-remove](cli_plugin.html#ibmcloud_plugin_repo_remove)</td>
-  <td>[ibmcloud plugin repo-plugins](cli_plugin.html#ibmcloud_plugin_repo_plugins)</td>
-  <td>[ibmcloud plugin repo-plugin](cli_plugin.html#ibmcloud_plugin_repo_plugin)</td>
-  <td>[ibmcloud plugin list
-](cli_plugin.html#ibmcloud_plugin_list)</td>
-</tr>
-<tr>
-  <td>[ibmcloud plugin show](cli_plugin.html#ibmcloud_plugin_show)</td>
-  <td>[ibmcloud plugin install](cli_plugin.html#ibmcloud_plugin_install)</td>
-  <td>[ibmcloud plugin uninstall](cli_plugin.html#ibmcloud_plugin_uninstall)</td>
-  <td>[ibmcloud plugin update
-](cli_plugin.html#ibmcloud_plugin_update)</td>
-  <td>[ibmcloud plugin repos](cli_plugin.html#ibmcloud_plugin_repos)</td>
-</tr>
- </tbody>
- </table>
- 
- 
- ## ibmcloud plugin repos
+## ibmcloud plugin repos
 {: #ibmcloud_plugin_repos}
 
-{{site.data.keyword.Bluemix_notm}} CLI에 등록된 모든 플러그인 저장소를 나열합니다.
-
+{{site.data.keyword.cloud_notm}} CLI에 등록된 모든 플러그인 저장소를 나열합니다.
 ```
 ibmcloud plugin repos
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: 없음
 
 ## ibmcloud plugin repo-add
 {: #ibmcloud_plugin_repo_add}
 
-{{site.data.keyword.Bluemix_notm}} CLI에 새 플러그인 저장소를 추가합니다.
-
+{{site.data.keyword.cloud_notm}} CLI에 새 플러그인 저장소를 추가합니다.
 ```
 ibmcloud plugin repo-add REPO_NAME REPO_URL
 ```
@@ -70,26 +48,26 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME(필수)</dt>
    <dd>추가되는 저장소의 이름입니다. 각 저장소의 고유 이름을 정의할 수 있습니다.</dd>
    <dt>REPO_URL(필수)</dt>
-   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). 다음이 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소입니다. http://plugins.ng.bluemix.net</dd>
+   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). 다음이 {{site.data.keyword.cloud_notm}} CLI의 공식 플러그인 저장소입니다. http://plugins.ng.bluemix.net</dd>
     </dl>
 
 
 <strong>예제</strong>:
 
 `bluemix-repo`로서 {{site.data.keyword.Bluemix_notm}} CLI의 공식 플러그인 저장소 추가:
-
 ```
 ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
+{: codeblock}
 
 ## ibmcloud plugin repo-remove
 {: #ibmcloud_plugin_repo_remove}
 
-{{site.data.keyword.Bluemix_notm}} CLI에서 플러그인 저장소를 제거합니다.
-
+{{site.data.keyword.cloud_notm}} CLI에서 플러그인 저장소를 제거합니다.
 ```
 ibmcloud plugin repo-remove REPO_NAME
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: 없음
 
@@ -101,17 +79,16 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>예제</strong>:
 
-{{site.data.keyword.Bluemix_notm}} CLI에서 `bluemix-repo` 저장소를 제거합니다.
-
+{{site.data.keyword.cloud_notm}} CLI에서 `bluemix-repo` 저장소를 제거합니다.
 ```
 ibmcloud plugin repo-remove bluemix-repo
 ```
+{: codeblock}
 
 ## ibmcloud plugin repo-plugins
 {: #ibmcloud_plugin_repo_plugins}
 
 추가된 모든 저장소 또는 특정 저장소에서 사용 가능한 모든 플러그인을 나열합니다.
-
 ```
 ibmcloud plugin repo-plugins [-r REPO_NAME]
 ```
@@ -175,10 +152,10 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 {: #ibmcloud_plugin_list}
 
 {{site.data.keyword.Bluemix_notm}} CLI의 설치된 모든 플러그인을 나열합니다.
-
 ```
 ibmcloud plugin list
 ```
+{: codeblock}
 
 <strong>전제조건</strong>: 없음
 
@@ -186,7 +163,6 @@ ibmcloud plugin list
 {: #ibmcloud_plugin_show}
 
 설치된 플러그인의 세부사항을 표시합니다.
-
 ```
 ibmcloud plugin show PLUGIN-NAME
 ```
@@ -197,7 +173,6 @@ ibmcloud plugin show PLUGIN-NAME
 {: #ibmcloud_plugin_install}
 
 지정된 경로 또는 저장소의 {{site.data.keyword.Bluemix_notm}} CLI에 특정 버전의 플러그인을 설치합니다.
-
 ```
 ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```

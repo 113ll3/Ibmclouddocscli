@@ -1,11 +1,13 @@
 ---
 
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-02-26"
 
+keywords: ibmcloud billing, view account, view usage, account usage, resource groups, resources, org-usage
 
-lastupdated: "2019-01-03"
+subcollection: cloud-cli
+
 ---
 
 {:new_window: target="_blank"}
@@ -17,26 +19,11 @@ lastupdated: "2019-01-03"
 
 Use os comandos a seguir para recuperar as informações de uso de recurso e de faturamento.
 {: shortdesc}
-
-<table summary="Comandos ibmcloud que podem ser usados para gerenciar o faturamento e o uso do {{site.data.keyword.Bluemix_notm}}.">
- <thead>
- </thead>
- <tbody>
-<tr>
-  <td>[ibmcloud billing account-usage](cli_billing.html#ibmcloud_billing_account_usage)</td>
-  <td>[ibmcloud billing org-usage](cli_billing.html#ibmcloud_billing_org_usage)</td>
-  <td>[ibmcloud billing resource-group-usage](cli_billing.html#ibmcloud_billing_resource_group_usage)</td>
-  <td>[ibmcloud billing resource-instances-usage](cli_billing.html#ibmcloud_billing_resource_instances_usage)</td>
- </tr>
- </tbody>
- </table>
- 
  
 ## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
-Mostrar o uso mensal da conta atual (somente administrador de conta)
-
+Mostre o uso mensal da conta atual (somente administrador de conta):
 ```
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
@@ -63,9 +50,7 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-Mostrar o uso mensal para uma organização (somente administrador da conta ou gerenciador de faturamento da
-organização)
-
+Mostre o uso mensal para uma organização (somente administrador de conta ou gerenciador de faturamento de organização):
 ```
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -86,9 +71,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
-Mostrar o uso mensal para um grupo de recursos (somente administrador de conta ou administrador de
-grupo de recursos)
-
+Mostre o uso mensal para um grupo de recursos (somente administrador de conta ou administrador de grupo de recursos):
 ```
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -109,8 +92,7 @@ ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-instances-usage
 {: #ibmcloud_billing_resource_instances_usage}
 
-Mostrar o uso mensal das instâncias de recursos sob a conta atual.
-
+Mostre o uso mensal de instâncias de recurso sob a conta atual:
 ```
 ibmcloud billing resource-instances-usage [-o ORG] [-g RESOURCE_GROUP] [-d YYYY-MM] [--output FORMAT]
 ```
