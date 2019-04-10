@@ -300,7 +300,7 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ## ibmcloud account org-user-remove
 {: #ibmcloud_account_org_user_remove}
 
-조직에서 사용자(조직 관리자 또는 사용자 자신만)를 제거합니다.
+조직에서 사용자를 제거합니다(조직 관리자 또는 사용자 자신만 가능).
 
 ```
    ibmcloud account org-user-remove USER_NAME ORG [-f, --force]

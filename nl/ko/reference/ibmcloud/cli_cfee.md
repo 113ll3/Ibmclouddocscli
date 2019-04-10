@@ -303,7 +303,7 @@ ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_
 ## ibmcloud cfee org-role-unset
 {: #ibmcloud_cfee_org_role_unset}
 
-사용자에서 조직 역할 제거(조직 관리자 또는 사용자만):
+사용자에서 조직 역할 제거(조직 관리자 또는 사용자 전용):
 ```
 ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 ```

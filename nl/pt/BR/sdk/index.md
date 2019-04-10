@@ -19,7 +19,7 @@ subcollection: cloud-cli
 # SDK Generator
 {: #sdk-cli}
 
-O plug-in do {{site.data.keyword.IBM}} SDK Generator pode ser instalado na [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+O plug-in do {{site.data.keyword.IBM}} SDK Generator pode ser instalado na [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) do {{site.data.keyword.cloud_notm}}.
 
 Como um desenvolvedor no {{site.data.keyword.cloud_notm}}, é possível usar esse plug-in para gerar os SDKs de sua definição de API de REST compatível com a [Especificação da Open API ](https://www.openapis.org/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"). À medida que você faz mudanças na definição de API de REST, é possível usar esse plug-in para gerar novamente apenas o SDK, em vez de gerar novamente o projeto inteiro.
 

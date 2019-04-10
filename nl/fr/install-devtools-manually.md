@@ -89,7 +89,7 @@ Pour gérer les déploiements Kubernetes à partir de la ligne de commande, inst
 
 Pour plus d'informations, voir [Configuration de l'interface CLI et de l'API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
 
-## Etape 5. Installation de Helm 
+## Etape 5. Installation de Helm
 {: #idt-install-helm}
 
 Installez [Helm](https://helm.sh/docs/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), qui est un gestionnaire de packages Kubernetes.

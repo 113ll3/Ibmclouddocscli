@@ -97,7 +97,7 @@ ibmcloud sl cdn options
 ## ibmcloud sl cdn origin-add
 {: #sl_cdn_origin_add}
 
-원본 가져오기 맵핑을 작성합니다.
+원본 가져오기(pull) 맵핑을 작성합니다.
 ```
 ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ```
@@ -113,7 +113,7 @@ ibmcloud sl cdn origin-add ACCOUNT_ID CONTENT_URL [OPTIONS]
 ## ibmcloud sl cdn origin-list
 {: #sl_cdn_origin_list}
 
-원본 가져오기 맵핑을 나열합니다.
+원본 가져오기(pull) 맵핑을 나열합니다.
 ```
 ibmcloud sl cdn origin-list ACCOUNT_ID
 ```
@@ -121,7 +121,7 @@ ibmcloud sl cdn origin-list ACCOUNT_ID
 ## ibmcloud sl cdn origin-remove
 {: #sl_cdn_origin_remove}
 
-원본 가져오기 맵핑을 제거합니다.
+원본 가져오기(pull) 맵핑을 제거합니다.
 ```
 ibmcloud sl cdn origin-remove ACCOUNT_ID ORIGIN_ID [OPTIONS]
 ```

@@ -27,7 +27,7 @@ Depuis la version `0.7.0`, les programmes d'installation de l'interface CLI {{si
 {: #shell-autocomplete-linux}
 
 * Si vous utilisez `Bash`, ajoutez
-`source /usr/local/ibmcloud/autocomplete/bash_autocomplete` dans un des fichiers suivants. 
+`source /usr/local/ibmcloud/autocomplete/bash_autocomplete` dans un des fichiers suivants.
 
   * Pour un shell de connexion : `~/.bash_profile`
   * Pour les autres types de shell : `~/.bash_rc`

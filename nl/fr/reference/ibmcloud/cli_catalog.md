@@ -161,7 +161,7 @@ ibmcloud catalog entry-delete ID [--global]
 
 Supprimer la ressource `j402-dnf1i`:
 ```
-ibmcloud catalog delete 'j402-dnf1i'
+ibmcloud catalog delete `j402-dnf1i`
 ```
 
 ## ibmcloud catalog entry-visibility
@@ -187,7 +187,6 @@ ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 <strong>Exemples</strong> :
 
 Obtenir la visibilité de la ressource `j402-dnf1i` dans une portée globale :
-
 ```
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
@@ -306,7 +305,7 @@ ibmcloud catalog template mobileBackendStarter
 Créez une application cf reposant sur le modèle spécifié avec l'adresse URL et la description indiquées. Par défaut, la nouvelle application est démarrée automatiquement.
 
 ```
-ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
+ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNAME] [-desc DESCRIPTION] [--no-start]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion, Cible
@@ -317,9 +316,11 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] 
    <dd>Modèle utilisé pour la création de l'application. Utilisez <i>ibmcloud templates</i> pour afficher tous les ID de modèles.</dd>
    <dt>CF_APP_NAME (obligatoire)</dt>
    <dd>Nom de l'application cf à créer.</dd>
-   <dt>-u <i>URL</i> (facultatif)</dt>
-   <dd>Route de l'application. Si elle n'est pas spécifiée, la route est définie automatiquement par {{site.data.keyword.Bluemix_notm}} d'après le nom de votre application et le domaine par défaut.</dd>
-   <dt>-d <i>DESCRIPTION</i> (facultatif)</dt>
+   <dt>-n<i>HOSTNAME</i></dt>
+   <dd>Nom d'hôte de l'application CF. Si elle n'est pas spécifiée, la route est définie automatiquement par {{site.data.keyword.cloud_notm}} d'après le nom de votre application et le domaine par défaut.</dd>
+   <dt>-d<i>DOMAINNAME</i></dt>
+   <dd>Domaine de l'application CF. Si elle n'est pas spécifiée, la route est définie automatiquement par {{site.data.keyword.cloud_notm}} d'après le nom de votre application et le domaine par défaut.</dd>
+   <dt>--desc <i>DESCRIPTION</i> (facultatif)</dt>
    <dd>Description de l'application.</dd>
    <dt>--no-start (facultatif)</dt>
    <dd>Ne démarre pas automatiquement l'application après sa création. Si cette option n'est pas spécifiée, l'application est démarrée automatiquement après sa création.</dd>
@@ -333,10 +334,9 @@ Créez l'application cf `mon-app` d'après le modèle `javaHelloWorld` :
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
-Créez une application `my-ruby-app` d'après le modèle `rubyHelloWorld` avec la route
-`myrubyapp.chinabluemix.net` et la description `Ma première application Ruby dans {{site.data.keyword.Bluemix_notm}}.`:
+Créez une application `my-ruby-app` d'après le modèle `rubyHelloWorld` avec une description:
 ```
-ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
 
 Créez l'application `mon-app-python` d'après le modèle `pythonHelloWorld` sans démarrage automatique :
@@ -348,7 +348,6 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 {: #ibmcloud_catalog_locations}
 
 Obtenir un sous-ensemble de choix de régions dans le format de votre choix.
-
 ```
 ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```

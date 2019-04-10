@@ -78,7 +78,7 @@ Vous pouvez utiliser [CocoaPods ](https://cocoapods.org){: new_window} ![Icône 
 
       Pour les applications générées avec Swift 2.3, utilisez la commande `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Sinon, utilisez la commande `carthage update`.
 
-3. Importez le module `BMSCore`. 
+3. Importez le module `BMSCore`.
 
   ```swift
   import BMSCore

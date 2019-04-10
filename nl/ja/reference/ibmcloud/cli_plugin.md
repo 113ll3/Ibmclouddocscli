@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-15"
 
 keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -48,15 +48,15 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (必須)</dt>
    <dd>追加するリポジトリーの名前。 各リポジトリーに対して任意の名前を定義できます。</dd>
    <dt>REPO_URL (必須)</dt>
-   <dd>追加するリポジトリーの URL。 リポジトリー URL にはプロトコルが含まれている必要があります (例えば、plugins.ng.bluemix.net ではなく、http://plugins.ng.bluemix.net)。 {{site.data.keyword.cloud_notm}} CLI の公式プラグイン・リポジトリーは http://plugins.ng.bluemix.net です。</dd>
+   <dd>追加するリポジトリーの URL。 リポジトリー URL にはプロトコルが含まれている必要があります (例えば、plugins.cloud.ibm.com ではなく、https://plugins.cloud.ibm.com)。{{site.data.keyword.cloud_notm}} CLI の公式プラグイン・リポジトリーは https://plugins.cloud.ibm.com です。</dd>
     </dl>
 
 
 <strong>例</strong>:
 
-{{site.data.keyword.Bluemix_notm}} CLI の公式プラグイン・リポジトリーを `bluemix-repo` として追加します。
+{{site.data.keyword.cloud_notm}} CLI の公式プラグイン・リポジトリーを `ibmcloud-repo` として追加します。
 ```
-ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
+ibmcloud plugin repo-add ibmcloud-repo https://plugins.cloud.ibm.com
 ```
 {: codeblock}
 
@@ -79,9 +79,9 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>例</strong>:
 
-{{site.data.keyword.cloud_notm}} CLI から `bluemix-repo` リポジトリーを削除します。
+{{site.data.keyword.cloud_notm}} CLI から `ibmcloud-repo` リポジトリーを削除します。
 ```
-ibmcloud plugin repo-remove bluemix-repo
+ibmcloud plugin repo-remove ibmcloud-repo
 ```
 {: codeblock}
 
@@ -110,10 +110,10 @@ ibmcloud plugin repo-plugins [-r REPO_NAME]
 ibmcloud plugin repo-plugins
 ```
 
-`bluemix-repo` リポジトリー内のすべてのプラグインをリストします。
+`ibmcloud-repo` リポジトリー内のすべてのプラグインをリストします。
 
 ```
-ibmcloud plugin repo-plugins -r bluemix-repo
+ibmcloud plugin repo-plugins -r ibmcloud-repo
 ```
 
 ## ibmcloud plugin repo-plugin
@@ -151,7 +151,7 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
 
-{{site.data.keyword.Bluemix_notm}} CLI 内のインストールされたプラグインをすべてリストします。
+{{site.data.keyword.cloud_notm}} CLI 内のインストールされたプラグインをすべてリストします。
 ```
 ibmcloud plugin list
 ```
@@ -172,7 +172,7 @@ ibmcloud plugin show PLUGIN-NAME
 ## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
-指定したパスまたはリポジトリーから、特定のバージョンのプラグインを {{site.data.keyword.Bluemix_notm}} CLI にインストールします。
+指定したパスまたはリポジトリーから、特定のバージョンのプラグインを {{site.data.keyword.cloud_notm}} CLI にインストールします。
 ```
 ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
@@ -200,7 +200,7 @@ ibmcloud plugin install LOCAL-PATH/TO/PLUGIN | URL [-f]
     </dl>
 
 
-{{site.data.keyword.Bluemix_notm}} CLI の公式リポジトリー名は、`Bluemix` です。
+{{site.data.keyword.cloud_notm}} CLI の公式リポジトリー名は、`Bluemix` です。
 
 <strong>例</strong>:
 
@@ -213,7 +213,7 @@ ibmcloud plugin install /downloads/new_plugin
 リモート URL からプラグインをインストールします。
 
 ```
-ibmcloud plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
+ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/new_plugin
 ```
 
 最新バージョンの「container-service」プラグインを「Bluemix」リポジトリーからインストールするには、以下のように指定します。
@@ -289,7 +289,7 @@ ibmcloud plugin update container-service -v 0.1.440
 ## ibmcloud plugin uninstall
 {: #ibmcloud_plugin_uninstall}
 
-指定されたプラグインを {{site.data.keyword.Bluemix_notm}} CLI からアンインストールします。
+指定されたプラグインを {{site.data.keyword.cloud_notm}} CLI からアンインストールします。
 
 ```
 ibmcloud plugin uninstall PLUGIN_NAME

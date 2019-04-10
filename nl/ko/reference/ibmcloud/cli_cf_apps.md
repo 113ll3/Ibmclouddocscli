@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-26"
 
 keywords: cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
@@ -230,13 +230,13 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 
 <strong>예제</strong>:
 
-라우트를 지정된 도메인이 있는 `my-app`으로 맵핑합니다.
+지정된 도메인을 사용하여 라우트를 `my-app`에 맵핑합니다.
 
 ```
 ibmcloud app route-map my-app mychinabluemix.net
 ```
 
-라우트를 지정된 도메인과 호스트 이름이 있는 'my-container-group'으로 맵핑합니다.
+지정된 도메인과 호스트 이름을 사용하여 라우트를 'my-container-group'에 맵핑합니다.
 
 ```
 ibmcloud app route-map my-container-group chinabluemix.net -n abc
@@ -245,7 +245,7 @@ ibmcloud app route-map my-container-group chinabluemix.net -n abc
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
-기존의 cf 애플리케이션이나 컨테이너 그룹과 지정된 라우트의 맵핑을 해제합니다.
+기존의 cf 애플리케이션이나 컨테이너 그룹에서 지정된 라우트의 맵핑을 해제합니다.
 
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
@@ -269,7 +269,7 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
 `my-app`에서 `my-app.mychinabluemix.net`을 맵핑 해제합니다.
 
 ```
-ibmcloud app route-unmap my-app mychianbluemix.net
+ibmcloud app route-unmap my-app mychinabluemix.net
 ```
 
 `my-container-group`에서 `abc.chinabluexmix.net`을 맵핑 해제합니다.

@@ -64,7 +64,7 @@ Ensuite, entrez ou sélectionnez la commande que vous souhaitez lancer. Vous pou
 
 Vous pouvez commencer à utiliser les flux de travaux `ibmcloud dev` en quelques étapes seulement :
 * Créez un projet en utilisant l'une des deux méthodes suivantes :
-  * Utilisez la console Web [{{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et téléchargez le code généré. 
+  * Utilisez la console Web [{{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et téléchargez le code généré.
   * Utilisez le plug-in d'interface de ligne de commande {{site.data.keyword.cloud_notm}} Developer Tools et générez un projet en utilisant la commande [ibmcloud dev create](/docs/cli/idt?topic=cloud-cli-idt-cli#create).
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `ibmcloud dev build` pour générer l'application dans une image Docker.
@@ -80,11 +80,11 @@ Pour les utilisateurs qui déploient actuellement des applications dans des envi
 
 Vous pouvez démarrer les flux de travail Cloud Foundry en quelques étapes seulement :
 * Créez une nouvelle application Cloud Foundry.
-  * Utilisez la console Web [{{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et téléchargez le code de démarrage. 
+  * Utilisez la console Web [{{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et téléchargez le code de démarrage.
   * Créez manuellement une application Cloud Foundry
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `ibmcloud cf apps` pour répertorier toutes vos applications.
 * Utilisez la commande `ibmcloud cf push` pour envoyer votre application à l'environnement d'exécution Cloud Foundry.
-* Utilisez ibmcloud `cf <start/stop/restage/restart>` pour modifier le statut de votre application.
+* Utilisez la commande ibmcloud `cf <start/stop/restage/restart>` pour modifier le statut de votre application.
 * Utilisez la commande `ibmcloud cf logs` pour afficher le flux de journalisation opérationnel pour votre application.
   * Utilisez la commande `ibmcloud cf logs` pour arrêter le flux de journalisation.

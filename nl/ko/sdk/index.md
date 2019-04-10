@@ -77,7 +77,7 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 * `--unzip` (선택적) - 생성된 SKD 추출(기존 SDK 아티팩트가 있을 경우 겹쳐쓰기)
 
 
-#### 사용
+####  사용법
 {: #gen-usage}
 
 {{site.data.keyword.cloud_notm}}에서 실행 중인 Cloud Foundry 앱에서 SDK를 생성하기 위해 CLI의 매개변수로 앱 이름을 사용할 수 있습니다. 다음 명령은 `SDK_Name`으로 앱의 이름을 사용합니다.
@@ -108,7 +108,7 @@ ibmcloud sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 * `OPENAPI_DOC_LOCATION` - 원시 REST API 정의 JSON 또는 Yaml에 대한 상대 파일 경로 또는 URL
 
 
-#### 사용
+####  사용법
 {: #val-usage}
 
 {{site.data.keyword.cloud_notm}}에서 실행 중인 Cloud Foundry 앱의 API 스펙을 유효성 검증하기 위해 CLI의 매개변수로 앱 이름을 사용할 수 있습니다.
@@ -145,7 +145,7 @@ ibmcloud sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 * `--url` (선택적) - 목록에 있는 각 앱에 대해 Open API 정의의 완전히 형식화된 URL을 표시합니다.
 
 
-#### 사용
+####  사용법
 {: #list-usage}
 
 현재 영역에 있는 앱을 나열하려면 다음 명령을 사용하십시오.

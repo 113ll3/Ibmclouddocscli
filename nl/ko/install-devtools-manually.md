@@ -45,7 +45,7 @@ ibmcloud plugin install dev
 
 앱을 로컬로 실행하고 디버깅하려면 [Docker ](https://www.docker.com/get-docker){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")도 설치해야 합니다.
 
-## 3단계. Kubernetes 설치:
+## 3단계. Kubernetes 설치
 {: #idt-install-kube}
 
 Kubernetes는 컨테이너화된 애플리케이션의 개발, 스케일링 및 관리를 자동화하기 위한 오픈 소스 컨테이너 오케스트레이션 엔진입니다.
@@ -89,7 +89,7 @@ ibmcloud plugin install container-service
 
 자세한 정보는 [CLI 및 API 설치](/docs/containers?topic=containers-cs_cli_install#cs_cli_install)를 참조하십시오.
 
-## 5단계. Helm 설치:
+## 5단계. Helm 설치
 {: #idt-install-helm}
 
 Kubernetes 기반의 패키지 관리자인 [Helm](https://helm.sh/docs/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 설치하십시오.

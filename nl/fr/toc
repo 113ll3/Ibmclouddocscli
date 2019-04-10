@@ -23,6 +23,7 @@ Interface de ligne de commande IBM Cloud et Developer Tools
 	{: topicgroup}
 	Débogage
 		idt/local_debug.md
+		enable_existing_python.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -58,12 +59,13 @@ Interface de ligne de commande IBM Cloud et Developer Tools
 	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
-	Plug-in d'interface de ligne de commande IBM Cloud
+	IBM Cloud CLI plug-ins
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
 		/auto-scaling-cli-plugin/auto-scaling-cli-plugin-autoscalingcli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
 		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
+		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference

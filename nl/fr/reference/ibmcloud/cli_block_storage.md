@@ -330,7 +330,7 @@ ibmcloud sl block snapshot-list VOLUME_ID [OPTIONS]
 ibmcloud sl block snapshot-list 12345678 --sortby id
 ```
 
-Cette commande répertorie toutes les images instantanées du volume portant l'ID `12345678` et les trie par ID. 
+Cette commande répertorie toutes les images instantanées du volume portant l'ID `12345678` et les trie par ID.
 
 ## ibmcloud sl block snapshot-order
 {: #sl_block_snapshot_order}

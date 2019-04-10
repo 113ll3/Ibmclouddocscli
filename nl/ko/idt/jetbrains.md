@@ -34,7 +34,7 @@ Jetbrains 기반 IDE용 {{site.data.keyword.cloud_notm}} 개발자 도구 확장
 
 Jetbrains IDE용 {{site.data.keyword.cloud_notm}} 개발자 도구 확장을 설치하는 가장 좋은 방법은 [{{site.data.keyword.cloud_notm}} 개발자 도구 Github 저장소의 Jetbrains](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 페이지로 이동하여 다음 지시사항을 따르는 것입니다.
 
-## 사용
+##  사용법
 {: #jetbrains-usage}
 
 기존 서버 측 앱을 사용하여 이를 {{site.data.keyword.cloud_notm}}에서 사용할 수 있도록 설정하거나, {{site.data.keyword.dev_cli_notm}} CLI를 사용하여 스타터 킷으로부터 새 앱을 작성할 수 있습니다(ibmcloud dev create). 앱의 프로젝트가 확보되면 이를 JetBrains IDE에서 여십시오.

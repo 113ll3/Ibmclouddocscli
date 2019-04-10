@@ -55,7 +55,7 @@ Vous pouvez générer votre application en utilisant la commande `build`. Les co
 
 L'élément de configuration `build-cmd-debug` est utilisé afin de générer l'application pour toutes les utilisations, à l'exception de`run`. Vous générez votre application à des fins d débogage en spécifiant l'option de ligne de commande `--debug`. L'élément de configuration `build-cmd-run` est utilisé lors de la génération de l'application afin de l'utiliser avec la commande `run`.
 
-Pour une génération avec plusieurs conteneurs, votre application doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"), qui est indiqué dans le fichier `cli-config.yml` ou vous pouvez utiliser le paramètre de commande `dockerfile-tools` pour en indiquer un. 
+Pour une génération avec plusieurs conteneurs, votre application doit contenir un fichier [Compose](https://docs.docker.com/compose/overview/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"), qui est indiqué dans le fichier `cli-config.yml` ou vous pouvez utiliser le paramètre de commande `dockerfile-tools` pour en indiquer un.
 
 Exécutez la commande suivante dans votre répertoire d'application en cours pour générer votre application :  
 ```

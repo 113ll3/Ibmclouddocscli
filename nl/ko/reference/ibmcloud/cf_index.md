@@ -67,13 +67,13 @@ Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기](https://
   </tr>
  <tr>
  <td>[delete-space](/#cf_delete-space)</td>
- <td>[ 이벤트](#cf_events)</td>
+ <td>[events](#cf_events)</td>
  <td>[logs](#cf_logs)</td>
  <td>[marketplace](#cf_marketplace)</td>
- <td>[푸시(push)](#cf_push)</td>
+ <td>[push](#cf_push)</td>
   </tr>
  <tr>
- <td>[스케일링(scale)](#cf_scale)</td>
+ <td>[scale](#cf_scale)</td>
  <td>[services](#cf_services)
  <td>[set-env](#cf_set-env)</td>
  <td>[ssh](#cf_ssh)</td>
@@ -96,9 +96,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>BluemixServerURL(선택사항)</dt>
-   <dd>{{site.data.keyword.cloud_notm}}에 연결할 때
-지정해야 하는 {{site.data.keyword.cloud_notm}} API 엔드포인트의
-URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
+   <dd>{{site.data.keyword.cloud_notm}}에 연결할 때 지정해야 하는 {{site.data.keyword.cloud_notm}} API 엔드포인트의 URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
    현재 사용 중인 API 엔드포인트의 URL을 표시하려는 경우 cf api 명령에 이 매개변수를 지정할 필요가 없습니다.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다.</dd>
@@ -429,7 +427,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>예제</strong>:
 
-{{site.data.keyword.cloud_notm}}에 로그인하십시오.
+{{site.data.keyword.cloud_notm}}에 로그인합니다.
 ```
 cf login
 ```
@@ -437,7 +435,7 @@ cf login
 
 `https://api.us-south.cf.cloud.ibm.com`의 정의된 엔드포인트를 사용하여 {{site.data.keyword.cloud_notm}}에 로그인합니다.
 ```
-    cf login -a https://api.us-south.cf.cloud.ibm.com
+cf login -a https://api.us-south.cf.cloud.ibm.com
 ```
 {: codeblock}
 
@@ -613,7 +611,7 @@ cf scale my_app
 ```
 {: codeblock}
 
-`my_app`이라는 앱에 대한 인스턴스 번호를 `1234`로, 디스크 영역 한계를 `1G`로, 메모리 한계를 `1G`로 수정하십시오.
+`my_app`이라는 앱에 대한 인스턴스 번호를 `1234`로, 디스크 영역 한계를 `1G`로, 메모리 한계를 `1G`로 수정합니다.
 ```
 cf scale appname -i 1234 -k 1G -m 1G
 ```

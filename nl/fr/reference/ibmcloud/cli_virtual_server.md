@@ -267,7 +267,7 @@ ibmcloud sl vs edit IDENTIFIER [OPTIONS]
 ```
 ibmcloud sl vs edit 12345678 -D ibm.com -H myapp --tag testcli --public-speed 1000
 ```
-Cette commande met à jour l'instance de serveur virtuel portant l'ID `12345678` et lui affecte la valeur "ibm.com" comme domaine, la valeur "myapp" comme nom d'hôte et l'étiquette "testcli". 
+Cette commande met à jour l'instance de serveur virtuel portant l'ID `12345678` et lui affecte la valeur "ibm.com" comme domaine, la valeur "myapp" comme nom d'hôte et l'étiquette "testcli".
 
 ## ibmcloud sl vs host-create
 {: #sl_vs_host_create}

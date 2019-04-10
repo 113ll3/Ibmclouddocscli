@@ -23,7 +23,7 @@ subcollection: cloud-cli
 ## ibmcloud billing account-usage
 {: #ibmcloud_billing_account_usage}
 
-현재 계정의 월별 사용량 표시(계정 관리자만):
+현재 계정의 월별 사용량 표시(계정 관리자 전용):
 ```
 ibmcloud billing account-usage [-d YYYY-MM] [--output FORMAT]
 ```
@@ -50,7 +50,7 @@ ibmcloud billing account-usage -d 2016-06
 ## ibmcloud billing org-usage
 {: #ibmcloud_billing_org_usage}
 
-조직의 월별 사용량 표시(계정 관리자 또는 조직 청구 관리자만):
+조직의 월별 사용량 표시(계정 관리자 또는 조직 청구 관리자 전용):
 ```
 ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ```
@@ -71,7 +71,7 @@ ibmcloud billing org-usage ORG_NAME [-d YYYY-MM] [--output FORMAT]
 ## ibmcloud billing resource-group-usage
 {: #ibmcloud_billing_resource_group_usage}
 
-리소스 그룹의 월별 사용량 표시(계정 관리자 또는 리소스 그룹 관리자만):
+리소스 그룹의 월별 사용량 표시(계정 관리자 또는 리소스 그룹 관리자 전용):
 ```
 ibmcloud billing resource-group-usage GROUP_NAME [-d YYYY-MM] [--output FORMAT]
 ```

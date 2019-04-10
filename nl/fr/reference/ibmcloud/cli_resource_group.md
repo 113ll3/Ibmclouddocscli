@@ -251,7 +251,7 @@ ibmcloud resource service-instances --service-name test-service
 ## ibmcloud resource service-instance
 {: #ibmcloud_resource_service_instance}
 
-Afficher les détails d'une instance de service. 
+Afficher les détails d'une instance de service.
 
 ```
 ibmcloud resource service-instance (NAME|ID) [--location LOCATION] [--id] [--output FORMAT]
@@ -845,7 +845,7 @@ Vous pouvez rechercher les attributs suivants :
   <dt>creation_date</dt>
   <dd>Date de création de la ressource.</dd>
   <dt>modification_date</dt>
-  <dd>Date de dernière modification de la ressource au format aaaa-mm-jjThh:mm:ssZ </dd>
+  <dd>Date de dernière modification de la ressource. Elle est au format aaaa-mm-jjThh:mm:ssZ </dd>
   <dt>_objectType</dt>
   <dd>Type de la ressource d'infrastructure classique. Les valeurs autorisées sont les suivantes : SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall et SoftLayer_Virtual_Guest. </dd>
   <dt>tags, tagReferences.tag.name</dt>

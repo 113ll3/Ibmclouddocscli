@@ -19,7 +19,10 @@
    enable-background="new -127.9 -17 271.9 50"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="btn_starter-code.svg"><metadata
+   sodipodi:docname="btn_starter-code.svg"
+   inkscape:export-filename="X:\PUB\ABD229\ART\WORK\ship1\eng_ref\cli\images\btn_starter-code.png"
+   inkscape:export-xdpi="93.2603"
+   inkscape:export-ydpi="93.2603"><metadata
      id="metadata17"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
@@ -36,7 +39,7 @@
      inkscape:window-height="1015"
      id="namedview13"
      showgrid="false"
-     inkscape:zoom="1.7579993"
+     inkscape:zoom="4.7627805"
      inkscape:cx="135.95"
      inkscape:cy="25"
      inkscape:window-x="-8"
@@ -49,12 +52,13 @@
      width="271.9"
      height="50"
      id="rect3" /><text
+     transform="matrix(1 0 0 1 -110.9658 13.2998)"
+     fill="#FFFFFF"
+     font-family="'HelvNeueBoldforIBM'"
      font-size="14.583"
-     id="text5"
-     x="-78.965797"
-     y="13.2998"
-     style="font-size:14.58250046px;font-family:Gulim;fill:#ffffff;-inkscape-font-specification:'Gulim, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
-     sodipodi:linespacing="125%">스타터 코드 다운로드</text>
+     id="text5"><tspan
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;stroke:#ffffff;stroke-opacity:1"
+       id="tspan4145">스타터 코드 다운로드</tspan></text>
 <g
      id="g7"><polygon
        fill="#FFFFFF"

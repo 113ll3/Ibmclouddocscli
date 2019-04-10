@@ -34,7 +34,7 @@ ibmcloud dev debug
   ```
   {: codeblock}
 
-2. 디버거를 애플리케이션에 연결:
+2. 디버거를 애플리케이션에 연결하십시오.
 
 	* Eclipse
       1. **기본 maven 프로젝트**를 Eclipse로 가져오십시오.
@@ -64,7 +64,7 @@ ibmcloud dev debug
   ```
   {: codeblock}
 
-2. 디버거를 애플리케이션에 연결:
+2. 디버거를 애플리케이션에 연결하십시오.
 	* [VSCode ](https://blog.docker.com/2016/07/live-debugging-docker/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 	* [WebStorm ](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 

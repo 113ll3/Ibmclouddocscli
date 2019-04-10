@@ -187,4 +187,3 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 問題を報告したり新しいフィーチャーの要求を送信したりするには、以下のオプションを使用してください。
 * [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") で問題を作成する。
 * [{{site.data.keyword.cloud_notm}} Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") にメッセージを残す。- [ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") でチーム・アクセスを要求。
-

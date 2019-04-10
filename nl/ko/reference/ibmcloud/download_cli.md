@@ -139,7 +139,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 {: #step3-custom-dir}
 
    * `{YOUR_DIRECTORY}/IBM_CLOUD_CLI`를 `PATH` 환경 변수에 추가하십시오.
-   * 쉘 자동 완성 지원(MacOS 및 Linux&trade; 전용)에 대해서는 [이 안내서](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)를 참조하십시오. 
+   * 쉘 자동 완성 지원(MacOS 및 Linux&trade; 전용)에 대해서는 [이 안내서](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)를 참조하십시오.
 
 ## 독립형 {{site.data.keyword.cloud_notm}} CLI 설치 제거
 {: #uninstall-ibmcloud-cli}

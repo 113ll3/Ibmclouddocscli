@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-15"
 
 keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -188,13 +188,13 @@ ibmcloud config --locale CLEAR
 ## ibmcloud info
 {: #ibmcloud_info}
 
-`ibmcloud info` 명령이 CLI 버전 `0.14`에서 더 이상 사용 가능하지 않습니다. 최신 CLI 버전을 설치하려면 [독립형 {{site.data.keyword.cloud_notm}} CLI 설치](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)를 참조하십시오.
+`ibmcloud info` 명령은 CLI 버전 `0.14`부터 더 이상 사용할 수 없습니다. 최신 CLI 버전을 설치하려면 [독립형 {{site.data.keyword.cloud_notm}} CLI 설치](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)를 참조하십시오.
 {: note}
 
 ## ibmcloud cf
 {: #ibmcloud_cf}
 
-임베디드 CF CLI 호출
+임베디드 CF CLI를 호출합니다.
 ```
 ibmcloud [-q, --quiet] cf COMMAND...
 ```
@@ -204,7 +204,7 @@ ibmcloud [-q, --quiet] cf COMMAND...
 <strong>명령 옵션</strong>:
 <dl>
   <dt>-q, --quiet</dt>
-  <dd>메시지 "cf 명령 호출 중..." 끄기</dd>
+  <dd>메시지 "cf 명령 호출 중..."을 표시하지 않음</dd>
 </dl>
 
 <strong>예제</strong>:
@@ -240,7 +240,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> --apikey <i>API_KEY 또는 @API_KEY_FILE_PATH</i>
   <dd> API 키 컨텐츠 또는 @로 표시되는 API 키 파일의 경로</dd>
   <dt> --sso(선택사항) </dt>
-  <dd> 일회성 패스코드를 사용하여 로그인</dd>
+  <dd> 일회성 패스코드를 사용하여 로그인 </dd>
   <dt> -u <i>USERNAME</i>(선택사항)</dt>
   <dd> 사용자 이름</dd>
   <dt> -p <i>PASSWORD</i>(선택사항)</dt>
@@ -346,7 +346,7 @@ ibmcloud regions
 {: #ibmcloud_target}
 
 
-대상 계정, 지역, 조직 또는 영역을 설정하거나 보십시오.
+대상 계정, 지역, 조직 또는 영역을 설정하거나 봅니다.
 ```
 ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
@@ -417,7 +417,7 @@ ibmcloud update [-f]
 사용 가능한 명령의 목록을 보려면 `ibmcloud sl` 명령을 실행하십시오.
 ```
 USAGE:
-   bx sl command [arguments...] [options...]
+   ibmcloud sl command [arguments...] [options...]
 
 COMMANDS:
    block           Gen1 infrastructure Block Storage
@@ -447,7 +447,7 @@ COMMANDS:
 ibmcloud sl [command] -h
 ```
 
-`ibmcloud sl init` 명령이 CLI 버전 `0.14`에서 더 이상 사용 가능하지 않습니다. 최신 CLI 버전을 설치하려면 [독립형 {{site.data.keyword.cloud_notm}} CLI 설치](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)를 참조하십시오.
+`ibmcloud sl init` 명령은 CLI 버전 `0.14`부터 더 이상 사용할 수 없습니다. 최신 CLI 버전을 설치하려면 [독립형 {{site.data.keyword.cloud_notm}} CLI 설치](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli)를 참조하십시오.
 {: note}
 
 ## ibmcloud sl help

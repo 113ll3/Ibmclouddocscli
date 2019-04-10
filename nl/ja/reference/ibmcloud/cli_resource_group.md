@@ -845,11 +845,11 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
   <dt>creation_date</dt>
   <dd>リソースが作成された日付。</dd>
   <dt>modification_date</dt>
-  <dd>リソースの最終変更日。 形式は、yyyy-mm-ddThh:mm:ssZ です。</dd>
+  <dd>リソースの最終変更日。 形式は、yyyy-mm-ddThh:mm:ssZ です。 </dd>
   <dt>_objectType</dt>
-  <dd>クラシック・インフラストラクチャー・リソースのタイプ。 許可される値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。</dd>
+  <dd>クラシック・インフラストラクチャー・リソースのタイプ。 許可される値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。 </dd>
   <dt>tags, tagReferences.tag.name</dt>
-  <dd>リソースにアタッチされているタグ。 クラシック・インフラストラクチャー・リソースにアタッチされているタグを検索する場合は、tagReferences.tag.name を使用します。</dd> 
+  <dd>リソースにアタッチされているタグ。 クラシック・インフラストラクチャー・リソースにアタッチされているタグを検索する場合は、tagReferences.tag.name を使用します。 </dd> 
 </dl>
 
 <strong>例</strong>:
@@ -961,7 +961,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--resource-id</dt>
   <dd>タグをアタッチするリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。</dd>
   <dt>--resource-type</dt>
-  <dd>タグをアタッチするクラシック・インフラストラクチャー・リソースのリソース・タイプ。クラシック・インフラストラクチャー・リソースにタグをアタッチする場合、このパラメーターは必須です。--resource-type に指定できる値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。</dd>
+  <dd>タグをアタッチするクラシック・インフラストラクチャー・リソースのリソース・タイプ。クラシック・インフラストラクチャー・リソースにタグをアタッチする場合、このパラメーターは必須です。 --resource-type に指定できる値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。 </dd>
 </dl>
 
 ## ibmcloud resource tag-detach
@@ -981,7 +981,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--resource-id</dt>
   <dd>タグを切り離すリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。</dd>
   <dt>--resource-type</dt>
-  <dd>タグを切り離すクラシック・インフラストラクチャー・リソースのリソース・タイプ。クラシック・インフラストラクチャー・リソースからタグを切り離す場合、このパラメーターは必須です。--resource-type に指定できる値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。</dd>
+  <dd>タグを切り離すクラシック・インフラストラクチャー・リソースのリソース・タイプ。クラシック・インフラストラクチャー・リソースからタグを切り離す場合、このパラメーターは必須です。 --resource-type に指定できる値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。 </dd>
 </dl>
 
 

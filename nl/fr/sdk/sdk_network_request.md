@@ -108,7 +108,7 @@ Pour accéder à des exemples d'utilisation complets, consultez le fichier [READ
 ## Cordova
 {: #request-cordova}
 
-1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) dans votre application Cordova. 
+1. Vérifiez que vous avez bien [importé et initialisé le kit SDK client](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) dans votre application Cordova.
 
 2. Créez une demande de réseau.
 

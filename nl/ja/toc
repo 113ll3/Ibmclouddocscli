@@ -23,6 +23,7 @@ IBM Cloud CLI および Developer Tools
 	{: topicgroup}
 	デバッグ
 		idt/local_debug.md
+		enable_existing_python.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -64,6 +65,7 @@ IBM Cloud CLI および Developer Tools
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
 		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
+		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference

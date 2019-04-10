@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-15"
 
 keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -416,8 +416,8 @@ Use os comandos de infraestrutura clássica na interface da linha de comandos (C
 
 Execute o comando `ibmcloud sl` para ver a lista de comandos disponíveis:
 ```
-USAGE:
-   bx sl command [arguments...] [ opções ...]
+USO:
+   ibmcloud sl command [arguments...] [ opções ...]
 
 COMMANDS:
    block           Gen1 infrastructure Block Storage

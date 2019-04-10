@@ -34,7 +34,7 @@ Le conteneur Docker {{site.data.keyword.dev_cli_notm}} vous permet d'obtenir l'i
 ## Avant de commencer
 {: #idt-docker-prereq}
 
-Vous devez avoir un compte [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") et vous devez installer la dernière version Docker stable avant de suivre la procédure décrite ci-après. 
+Vous devez avoir un compte [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") et vous devez installer la dernière version Docker stable avant de suivre la procédure décrite ci-après.
 
 ## Etape 1. Extraire l'image Docker du concentrateur Docker
 {: #step1-pull-docker-image}

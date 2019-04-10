@@ -56,7 +56,7 @@ ibmcloud resource groups --default
 ## ibmcloud resource group
 {: #ibmcloud_resource_group}
 
-리소스 그룹의 세부사항 표시
+리소스 그룹의 세부사항을 표시합니다.
 ```
 ibmcloud resource group NAME [--id] [--output FORMAT]
 ```
@@ -90,7 +90,7 @@ ibmcloud resource group example-group --id
 ## ibmcloud resource group-create
 {: #ibmcloud_resource_group_create}
 
-리소스 그룹 작성:
+리소스 그룹을 작성합니다.
 ```
 ibmcloud resource group-create NAME
 ```
@@ -115,7 +115,7 @@ ibmcloud resource group-create example-group
 ## ibmcloud resource group-update
 {: #ibmcloud_resource_group_update}
 
-기존 리소스 그룹 업데이트
+기존 리소스 그룹을 업데이트합니다.
 ```
 ibmcloud resource group-update NAME [-n, --name NEW_NAME] [-q, --quota NEW_QUOTA_NAME]
 ```
@@ -199,7 +199,7 @@ ibmcloud resource quota free
 ## ibmcloud resource cf-service-instance-migrate
 {: #ibmcloud_resource_cf_service_instance_migrate}
 
-Cloud foundry 서비스 인스턴스를 리소스 그룹으로 마이그레이션
+Cloud foundry 서비스 인스턴스를 리소스 그룹으로 마이그레이션합니다.
 ```
 ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force]
 ```
@@ -487,7 +487,7 @@ ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
   <dd>확인 없이 삭제 강제 실행</dd>
 </dl>
 
-<strong>예</strong>:
+<strong>예제</strong>:
 서비스 별명 `my-service-alias` 및 앱 `my-app` 간의 서비스 바인딩 삭제:
 ```
 ibmcloud resource service-binding-delete my-service-alias my-app
@@ -803,7 +803,7 @@ ibmcloud resource service-alias-delete my-service-alias
 ## ibmcloud resource search
 {: #ibmcloud_resource_search}
 
-Lucene 조회 구문을 사용하여 리소스 검색:
+Lucene 조회 구문을 사용하여 리소스를 검색합니다.
 ```
 ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER]
 ```
@@ -845,11 +845,11 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
   <dt>creation_date</dt>
   <dd>리소스가 작성된 날짜입니다.</dd>
   <dt>modification_date</dt>
-  <dd>마지막으로 리소스가 수정된 날짜입니다. yyyy-mm-ddThh:mm:ssZ 형식입니다.</dd>
+  <dd>마지막으로 리소스가 수정된 날짜입니다. yyyy-mm-ddThh:mm:ssZ 형식입니다. </dd>
   <dt>_objectType</dt>
-  <dd>클래식 인프라 리소스의 유형입니다. 허용되는 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다.</dd>
+  <dd>클래식 인프라 리소스의 유형입니다. 허용되는 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다. </dd>
   <dt>tags, tagReferences.tag.name</dt>
-  <dd>리소스에 연결되는 태그입니다. 클래식 인프라 리소스에 연결되는 태그를 검색하는 경우에는 tagReferences.tag.name을 사용하십시오.</dd> 
+  <dd>리소스에 연결되는 태그입니다. 클래식 인프라 리소스에 연결되는 태그를 검색하는 경우에는 tagReferences.tag.name을 사용하십시오. </dd> 
 </dl>
 
 <strong>예제</strong>:
@@ -910,13 +910,13 @@ ibmcloud resource search "tags:\"mykey:myvalue\""
 ```
 {: codeblock}
 
-지정된 ID를 사용하여 클래식 인프라 가상 게스트 리소스를 검색합니다(-p classic-infrastructure만 해당됨):
+지정된 ID를 사용하여 클래식 인프라 가상 게스트 리소스 검색(-p classic-infrastructure만 해당됨):
 ```
 ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
 ```
 {: codeblock}
 
-지정된 태그 이름을 사용하여 클래식 인프라 하드웨어 리소스를 검색합니다(-p classic-infrastructure만 해당됨):
+지정된 태그 이름을 사용하여 클래식 인프라 하드웨어 리소스 검색(-p classic-infrastructure만 해당됨):
 ```
 ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
 ```
@@ -925,7 +925,7 @@ ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hard
 ## ibmcloud resource tags
 {: #ibmcloud_resource_tags}
 
-청구 계정의 모든 태그 나열
+청구 계정의 모든 태그를 나열합니다.
 
 ```
 ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider classic-infrastructure] [-d, --details true]
@@ -961,7 +961,7 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--resource-id</dt>
   <dd>태그를 연결해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다.</dd>
   <dt>--resource-type</dt>
-  <dd>태그를 연결해야 하는 클래식 인프라 리소스의 리소스 유형이며 클래식 인프라 리소스에 태그를 연결하는 경우, 이 매개변수는 필수입니다. --resource-type에 대해 가능한 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다.</dd>
+  <dd>태그를 연결해야 하는 클래식 인프라 리소스의 리소스 유형이며 클래식 인프라 리소스에 태그를 연결하는 경우, 이 매개변수는 필수입니다. --resource-type에 대해 가능한 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다. </dd>
 </dl>
 
 ## ibmcloud resource tag-detach
@@ -981,14 +981,14 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--resource-id</dt>
   <dd>태그를 분리해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다.</dd>
   <dt>--resource-type</dt>
-  <dd>태그를 분리해야 하는 클래식 인프라 리소스의 리소스 유형이며 클래식 인프라 리소스에 태그를 연결하는 경우, 이 매개변수는 필수입니다. --resource-type에 대해 가능한 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다.</dd>
+  <dd>태그를 분리해야 하는 클래식 인프라 리소스의 리소스 유형이며 클래식 인프라 리소스에 태그를 연결하는 경우, 이 매개변수는 필수입니다. --resource-type에 대해 가능한 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다. </dd>
 </dl>
 
 
 ## ibmcloud resource tag-delete
 {: #ibmcloud_resource_tag_delete}
 
-태그 삭제:
+태그를 삭제합니다.
 ```
 ibmcloud resource tag-delete --tag-name TAG_NAME [-p, --provider PROVIDER]
 ```

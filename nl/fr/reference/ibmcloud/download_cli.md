@@ -104,7 +104,7 @@ Lorsque vous utilisez des programmes d'installation ou un script shell pour inst
 ### Etape 2 : Extraction du package dans un répertoire défini.
 {: #step2-custom-dir}
 
-   Une fois le package extrait, vous pouvez voir le contenu présenté ci-dessous. 
+   Une fois le package extrait, vous pouvez voir le contenu présenté ci-dessous.
 
    Pour Linux et macOS :
 

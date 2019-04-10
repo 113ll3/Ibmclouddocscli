@@ -47,7 +47,7 @@ Visual Studio Code용 IBM Cloud Developer Tools 확장을 사용하려면 [{{sit
 
 [Visual Studio Code Marketplace 내에서 직접 IBM Cloud Developer Tools 확장](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에 액세스할 수도 있습니다.
 
-## 사용
+##  사용법
 {: #vscode-usage}
 
 Visual Studio Code의 명령 팔레트를 사용하여 확장 명령을 시작합니다.

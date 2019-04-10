@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-26"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -80,12 +80,18 @@ Use o comando `ibmcloud plugin install LOCAL_FILE_NAME` para instalar um binári
 
 Use o comando `ibmcloud plugin install URL` para instalar um plug-in diretamente de uma URL da web. Por exemplo:
 
-  ```
-  ~$ ibmcloud plugin install https://plugins.ng.bluemix.net/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
-  Attempting to download the binary file...
-  9857792 bytes downloaded
-  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
-  OK
+```
+ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
+```
+{: codeblock}
+
+Saída:
+```
+Tentando fazer download do arquivo binário...
+9857792 bytes transferidos por download
+Instalando o plug-in '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+OK
   Plugin 'auto-scaling 0.2.2' was successfully installed.
-  ~$
-  ```
+~$
+```
+{: screen}
