@@ -184,8 +184,8 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>Filter by ID of the owner.</dd>
 <dt>--sortby</dt>
 <dd>Column to sort by, default:hostname, option:id,guid,hostname,domain,public_ip,private_ip,datacenter,status,ipmi_ip,created,created_by.</dd>
-<dt>--columns</dt>
-<dd>Columns to display, default:id,hostname,domain,public_ip,private_ip,datacenter,status, options:guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
+<dt>--column</dt>
+<dd>Column to display, default:id,hostname,domain,public_ip,private_ip,datacenter,status, options:guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
 </dl>
 
 ## ibmcloud sl hardware power-cycle

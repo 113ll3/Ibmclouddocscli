@@ -126,8 +126,8 @@ ibmcloud sl user list [OPTIONS]
 
 <strong>Command options</strong>:
 <dl>
-<dt>--columns</dt>
-<dd>Columns to display. [options: id,username,email,displayName,status,hardwareCount,virtualGuestCount]  [default: id,username,email,displayName].</dd>
+<dt>--column</dt>
+<dd>Column to display. [options: id,username,email,displayName,status,hardwareCount,virtualGuestCount]  [default: id,username,email,displayName].</dd>
 </dl>
 
 ## ibmcloud sl user permissions 

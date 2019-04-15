@@ -354,8 +354,8 @@ ibmcloud sl vs list [OPTIONS]
 <dd>Filtered by Id of user who owns the instances.</dd>
 <dt>--sortby</dt>
 <dd>Column to sort by, default is:hostname, options are:id,hostname,domain,datacenter,cpu,memory,public_ip,private_ip.</dd>
-<dt>--columns</dt>
-<dd>Columns to display, default is:id,hostname,public_ip,private_ip,datacenter,action, options are: guid,power_state,created_by,tags.</dd>
+<dt>--column</dt>
+<dd>Column to display, default is:id,hostname,public_ip,private_ip,datacenter,action, options are: guid,power_state,created_by,tags.</dd>
 </dl>
 
 **Examples**:

@@ -61,8 +61,8 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>Column to sort by, options are: id,name,type,private_ip_address,host_iqn,username,password.</dd>
-<dt>--columns</dt>
-<dd>Columns to display, options are: id,name,type,private_ip_address,host_iqn,username,password.</dd>
+<dt>--column</dt>
+<dd>Column to display, options are: id,name,type,private_ip_address,host_iqn,username,password.</dd>
 </dl>
 
 **Examples**:
@@ -450,8 +450,8 @@ ibmcloud sl block volume-list [OPTIONS]
 <dd>Filter by ID of the order that purchased the block storage.</dd>
 <dt>--sortby</dt>
 <dd>Column to sort by, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,created_by.</dd>
-<dt>--columns</dt>
-<dd>Columns to display, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
+<dt>--column</dt>
+<dd>Column to display, options are: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 
 **Examples**:
@@ -488,13 +488,13 @@ Requirements: [If original IOPS/GB for the volume is 0.25, new IOPS/GB for the v
 ibmcloud sl block volume-modify 12345678 --new-size 1000 --new-iops 4000
 ```
 
-This command modifies the volume of `12345678` to 1000GB, and the IOPS is changed to 4000.
+This command modify a volume `12345678` with size is 1000GB, IOPS is 4000.
 
 ```
 ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4
 ```
 
-This command modifies the volume of `12345678` to 500GB, and the tier level is 4 IOPS per GB.
+This command modify a volume `12345678` with size is 500GB, tier level is 4 IOPS per GB.
 
 ## ibmcloud sl block volume-set-lun-id
 {: #sl_block_volume_set_lun_id}
