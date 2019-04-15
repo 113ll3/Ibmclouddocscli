@@ -21,8 +21,8 @@ subcollection: cloud-cli
 # {{site.data.keyword.dev_cli_notm}} CLI plug-in (ibmcloud dev) commands
 {: #idt-cli}
 
-Version: 2.1.4
-Released: 31 August 2018
+Version: 2.1.18
+Released: 28 March 2019
 
 As of May 2018, the {{site.data.keyword.cloud}} CLI commands `bluemix` and `bx` are now `ibmcloud`. However, you can still use the `bluemix` and `bx` CLI commands until they're removed later.
 {: tip}
@@ -176,13 +176,13 @@ To deploy your application on Kubernetes, you must either specify the `deploy-ta
 Other parameters needed to configure Kubernetes deployment can also be specified in the `cli-config.yml` by using command line arguments. If you don't define these parameters in the `cli-config.yml`, you must deploy with the parameter `-t container`. Then, you're prompted for all of the other values.
 
 ```yaml
-    chart-path: "chart/myapplication"
+chart-path: "chart/myapplication"
 
-    deploy-target: "container"
+deploy-target: "container"
 
-    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
+deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
 
-    ibm-cluster: "mycluster"
+ibm-cluster: "mycluster"
 ```
 
 In the `cli-config.yml`, you can choose to define the location of a Helm chart in the `chart-path` property and configure the `deploy-image-target` as shown in the example. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.cloud_notm}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster that you created in {{site.data.keyword.cloud_notm}}.
