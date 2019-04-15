@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-10"
 
 keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
@@ -85,7 +85,7 @@ Use the index in the following table to refer to the frequently used Cloud Found
 
 Use this command to display or specify the URL of the API endpoint of {{site.data.keyword.cloud}}.
 ```
-cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
+cf api [URL] [--skip-ssl-validation] [--unset]
 ```
 
 <strong>Prerequisites</strong>: None.
@@ -93,7 +93,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 <strong>Command options</strong>:
 
    <dl>
-   <dt>BluemixServerURL (optional)</dt>
+   <dt>URL (optional)</dt>
    <dd>The URL of the {{site.data.keyword.cloud_notm}} API endpoint that you must specify when you connect to {{site.data.keyword.cloud_notm}}. Typically, this URL is `https://api.<REGION>.cf.{DomainName}`.
    If you want to display the URL of the API endpoint that you're currently using, you don't need to specify this parameter for the cf api command.</dd>
    <dt>* --skip-ssl-validation</dt>
