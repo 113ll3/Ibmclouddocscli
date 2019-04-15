@@ -223,7 +223,7 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (required)</dt>
    <dd>The name of the cf application or container group to be mapped with a route.</dd>
    <dt>DOMAIN (required)</dt>
-   <dd>The domain of the route. For example, mychinabluemix.net or chinabluemix.net. </dd>
+   <dd>The domain of the route. For example, mybluemix.net.</dd>
    <dt>-n <i>HOST_NAME</i> (optional)</dt>
    <dd>The host name of the route. If not provided, the host name is set to the app name or container group name by default.</dd>
    </dl>
@@ -231,22 +231,22 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 <strong>Examples</strong>:
 
 Map a route to `my-app` with specified domain:
-
 ```
-ibmcloud app route-map my-app mychinabluemix.net
+ibmcloud app route-map my-app mybluemix.net
 ```
 
 Map a route to 'my-container-group' with specified domain and host name:
+```
+ibmcloud app route-map my-container-group bluemix.net -n abc
+```
 
-```
-ibmcloud app route-map my-container-group chinabluemix.net -n abc
-```
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+{: tip}
 
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 Unmap the specified route from an existing cf application or container group.
-
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
@@ -259,24 +259,25 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (required)</dt>
    <dd>The name of the cf application or container group.</dd>
    <dt>DOMAIN (required)</dt>
-   <dd>The domain of the route (for example, mychinabluemix.net or chinabluemix.net).</dd>
+   <dd>The domain of the route. For example, mybluemix.net.</dd>
    <dt>-n <i>HOST_NAME</i> (optional)</dt>
    <dd>The host name of the route. If not provided, the host name is set to app name or container group name by default.</dd>
    </dl>
 
 <strong>Examples</strong>:
 
-Unmap `my-app.mychinabluemix.net` from `my-app`:
+Unmap `my-app.mybluemix.net` from `my-app`:
+```
+ibmcloud app route-unmap my-app mybluemix.net
+```
 
+Unmap `abc.bluexmix.net` from `my-container-group`:
 ```
-ibmcloud app route-unmap my-app mychinabluemix.net
+ibmcloud app route-unmap my-container-group bluemix.net -n abc
 ```
 
-Unmap `abc.chinabluexmix.net` from `my-container-group`:
-
-```
-ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
-```
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+{: tip}
 
 ## ibmcloud app route-create
 {: #ibmcloud_app_route_create}
