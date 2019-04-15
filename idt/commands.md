@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-15"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -230,7 +230,7 @@ The following parameters can be used with the `deploy` command or by updating th
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Parameter optionally used to define the name of the Kubernetes cluster for a container deployment to {{site.data.keyword.Bluemix_notm}}
+* Parameter optionally used to define the name of the Kubernetes cluster for a container deployment to {{site.data.keyword.cloud_notm}}
 * Usage `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
@@ -334,7 +334,7 @@ The following parameters can be used with the `enable` command or by updating th
 #### `no-create`
 {: #enable-no-create}
 
-* Parameter to prevent creating an app in {{site.data.keyword.Bluemix_notm}} while creating the enablement files locally.
+* Parameter to prevent creating an app in {{site.data.keyword.cloud_notm}} while creating the enablement files locally.
 * Usage `ibmcloud dev enable --no-create`
 
 ## get-credentials
