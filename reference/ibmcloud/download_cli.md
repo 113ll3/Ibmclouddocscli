@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-27"
+lastupdated: "2019-04-15"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -87,7 +87,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 ## Install to a custom directory
 {: #install-custom-dir}
 
-When you use installers or a shell script to install the {{site.data.keyword.Bluemix_notm}} CLI, the binaries go to your system directories. If you want to specify a different directory, use the following steps.
+When you use installers or a shell script to install the {{site.data.keyword.cloud_notm}} CLI, the binaries go to your system directories. If you want to specify a different directory, use the following steps.
 
 ### Step 1: Download the binary package based on your OS by using the following links.
 {: #step1-custom-dir}
