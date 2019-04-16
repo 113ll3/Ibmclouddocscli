@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-16"
 
 keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
@@ -23,48 +23,57 @@ subcollection: cloud-cli
 You can manage your {{site.data.keyword.cloud_notm}} Local or {{site.data.keyword.cloud_notm}} Dedicated environment by using the Cloud Foundry command line interface with the {{site.data.keyword.cloud_notm}} Admin CLI plug-in. For example, you can add users from an LDAP registry. For information about managing your {{site.data.keyword.cloud_notm}} Public account, see [administering](/docs/account?topic=account-accounts#accounts).
 
 Before you begin, install the Cloud Foundry command line interface. The {{site.data.keyword.cloud_notm}} Admin CLI plug-in
-requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon")
+requires `cf` version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon")
 
-**Restriction:** The Cloud Foundry command line interface is not supported by
-Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin command line window.
+**Restriction:** The Cloud Foundry command line interface is not supported by Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin command line window.
 
 {{site.data.keyword.cloud_notm}} admin CLI is only used for {{site.data.keyword.cloud_notm}} Local and {{site.data.keyword.cloud_notm}} Dedicated environment. It is not supported by {{site.data.keyword.cloud_notm}} Public.
 {: note}
 
-## Adding the {{site.data.keyword.cloud_notm}} Admin CLI Plug-in
+## Adding the {{site.data.keyword.cloud_notm}} Admin CLI plug-in
+{: #add-admin-cli}
 
 After the Cloud Foundry command line interface is installed, you can add the {{site.data.keyword.cloud_notm}} admin CLI plug-in.
 
-If you've previously installed the {{site.data.keyword.cloud_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
+If you previously installed the {{site.data.keyword.cloud_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then reinstall to get the latest updates.
 {: tip}
 
 Complete the following steps to add the repository and install the plug-in:
 
-<ol>
-<li>To add the {{site.data.keyword.cloud_notm}} admin plug-in repository, run the following command:<br/><br/>
+1. To add the {{site.data.keyword.cloud_notm}} admin plug-in repository, run the following command:
+  ```
+  cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
+  ```
+  {: codeblock}
 
-```
-cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
-```
-{: codeblock}
-<br/>
-**Note:** You can find the same command with the actual endpoint in your Admin Console CLI page (https://<customer_console_endpoint>.bluemix.net/cli)
-<br/>
-</li>
-<li>To install the {{site.data.keyword.cloud_notm}} Admin CLI plug-in, run the following command:<br/><br/>
-<code>
-cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
-</code>
-</li>
-</ol>
+  You can find the same command with the actual endpoint in your Admin Console CLI page: `https://<customer_console_endpoint>.bluemix.net/cli`.
+  {: note}
+
+2. To install the {{site.data.keyword.cloud_notm}} Admin CLI plug-in, run the following command:
+  ```
+  cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+  ```
+  {: codeblock}
+
+## Uninstalling the {{site.data.keyword.cloud_notm}} Admin CLI plug-in
+{: #remove-admin-cli}
 
 If you need to uninstall the plug-in, you can use the following commands, then you can add the updated repository and install the latest plug-in:
 
-* Uninstall the plug-in: `cf uninstall-plugin IBMCloudAdminCLI`
-* Remove the plug-in repository: `cf remove-plugin-repo IBMCloudAdmin`
+1. Uninstall the plug-in:
+  ```
+  cf uninstall-plugin IBMCloudAdminCLI
+  ```
+  {: codeblock}
 
+2. Remove the plug-in repository:
+  ```
+  cf remove-plugin-repo IBMCloudAdmin
+  ```
+  {: codeblock}
 
 ## Using the {{site.data.keyword.cloud_notm}} Admin CLI Plug-in
+{: #using-admin-cli}
 
 You can use the {{site.data.keyword.cloud_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks.
 
@@ -77,40 +86,33 @@ cf plugins
 For more help for a command, use the `-help` option.
 
 ### Connecting and logging in to {{site.data.keyword.cloud_notm}}
+{: #connecting-ibm-cloud}
 
-Before you can use the Admin CLI plug-in, you must connect and log in, if
-you aren't already.
+Before you can use the Admin CLI plug-in, you must connect and log in.
 
-<ol>
-<li>To connect to the {{site.data.keyword.cloud_notm}} API endpoint, run the following command:<br/><br/>
-<code>
-cf api api.us-south.cf.cloud.ibm.com
-</code>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomain of the URL for your {{site.data.keyword.cloud_notm}} instance.<br />
-</dd>
-</dl>
-<p>You can check the Admin Console Resources and information page for the
-correct URL. The URL is shown in the API information section in the **API URL**
-field.</p>
-</li>
-<li>Log in to {{site.data.keyword.cloud_notm}} with the following command:<br/><br/>
-<code>
-cf login
-</code>
-</li>
-</ol>
+1. To connect to the {{site.data.keyword.cloud_notm}} API endpoint, run the following command:
+  ```
+  cf api api.us-south.cf.cloud.ibm.com
+  ```
+  {: codeblock}
 
-You can log in to the following regional Cloud Foundry API endpoints:
-* api.us-south.cf.cloud.ibm.com  (previously api.ng.bluemix.net)
-* api.eu-gb.cf.cloud.ibm.com     (previously api.eu-gb.bluemix.net)
-* api.us-east.cf.cloud.ibm.com   (previously api.us-east.bluemix.net)
-* api.eu-de.cf.cloud.ibm.com     (previously api.eu-de.bluemix.net)
-* api.au-syd.cf.cloud.ibm.com    (previously api.au-syd.bluemix.net)
+  You can check the Admin Console Resources and information page for the correct URL. The URL is shown in the API information section in the **API URL** field.
 
-The legacy "api.<region>.bluemix.net" Cloud Foundry API endpoints are still valid but are soon to be deprecated.
-{: note}
+2. Log in to {{site.data.keyword.cloud_notm}} with the following command:
+  ```
+  cf login
+  ```
+  {: codeblock}
+
+**Using legacy Cloud Foundry endpoints**:
+
+While the legacy `api.*.bluemix.net` Cloud Foundry API endpoints are still available, you can update scripts and infrastructure automation to use the following updated Cloud Foundry API endpoints for your region:
+
+* api.us-south.cf.cloud.ibm.com (previously api.ng.bluemix.net)
+* api.eu-gb.cf.cloud.ibm.com (previously api.eu-gb.bluemix.net)
+* api.us-east.cf.cloud.ibm.com (previously api.us-east.bluemix.net)
+* api.eu-de.cf.cloud.ibm.com (previously api.eu-de.bluemix.net)
+* api.au-syd.cf.cloud.ibm.com (previously api.au-syd.bluemix.net)
 
 ## Administering users
 {: #admin_users}
@@ -265,7 +267,7 @@ cf ba enable-managers-add-users
 ### Disabling Managers from adding users
 {: #clius_dmau}
 
-If organization managers have been enabled to add users to the organizations they manage in your {{site.data.keyword.Bluemix_notm}} environment with the **enable-managers-add-users** command, and if you have the **Superuser** permission, you can remove this setting. To disable managers from adding users, use the following command:
+If organization managers are enabled to add users to the organizations they manage in your {{site.data.keyword.Bluemix_notm}} environment with the **enable-managers-add-users** command, and if you have the **Superuser** permission, you can remove this setting. To disable managers from adding users, use the following command:
 
 ```
 cf ba disable-managers-add-users
