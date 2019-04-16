@@ -42,9 +42,14 @@ Complete the following steps to add the repository and install the plug-in:
 
 <ol>
 <li>To add the {{site.data.keyword.cloud_notm}} admin plug-in repository, run the following command:<br/><br/>
-<code>
-cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
-</code><br/><br/>
+
+```
+cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
+```
+{: codeblock}
+<br/>
+**Note:** You can find the same command with the actual endpoint in your Admin Console CLI page (https://<customer_console_endpoint>.bluemix.net/cli)
+<br/>
 </li>
 <li>To install the {{site.data.keyword.cloud_notm}} Admin CLI plug-in, run the following command:<br/><br/>
 <code>
@@ -57,6 +62,7 @@ If you need to uninstall the plug-in, you can use the following commands, then y
 
 * Uninstall the plug-in: `cf uninstall-plugin IBMCloudAdminCLI`
 * Remove the plug-in repository: `cf remove-plugin-repo IBMCloudAdmin`
+
 
 ## Using the {{site.data.keyword.cloud_notm}} Admin CLI Plug-in
 
