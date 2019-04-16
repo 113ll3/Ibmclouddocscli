@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-26"
 
 keywords: cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
@@ -269,7 +269,7 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
 從 `my-app` 取消對映 `my-app.mychinabluemix.net`：
 
 ```
-ibmcloud app route-unmap my-app mychianbluemix.net
+ibmcloud app route-unmap my-app mychinabluemix.net
 ```
 
 從 `my-container-group` 取消對映 `abc.chinabluexmix.net`：
