@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-10"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -15,6 +15,7 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:note: .note}
 
 # Getting started with the {{site.data.keyword.cloud_notm}} CLI
 {: #ibmcloud-cli}
@@ -22,7 +23,10 @@ subcollection: cloud-cli
 In this tutorial, you install a set of {{site.data.keyword.cloud}} Developer tools, verify the installation, and configure the environment. {{site.data.keyword.cloud_notm}} Developer tools offer a command line approach to creating, developing, and deploying web, mobile, and microservice applications.
 {: shortdesc}
 
-With this installation, you get the stand-alone {{site.data.keyword.cloud_notm}} CLI, plus the following tools:
+Make sure that you are always using the latest version of the stand-alone {{site.data.keyword.cloud_notm}} CLI for {{site.data.keyword.cloud_notm}} public. If you need to use a 32-bit version, or a previous version other than the latest for {{site.data.keyword.cloud_notm}} dedicated environments, see [{{site.data.keyword.cloud_notm}} CLI releases](/docs/cli?topic=cloud-cli-cli-releases).
+{: note}
+
+The installation command in this tutorial installs the latest stand-alone {{site.data.keyword.cloud_notm}} CLI version available, plus the following tools:
 
 * `Homebrew` (Mac only)
 * `Git`
@@ -62,9 +66,9 @@ You need an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){:
   Right-click the Windows PowerShell icon, and select **Run as administrator**.
   {: tip}
 
-  You can also download the installer script from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+You can also download the installer script from this [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
-  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 
 ## Step 2. Verify the installation
 {: #step2-verify-idt}
@@ -89,13 +93,13 @@ The output lists the usage instructions, the current version, and the supported 
   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam/federated_id?topic=iam-federated_id#federated_id) for more details.
   {: tip}
 
-2. To use Cloud Foundry services, target an org and space.
+2. To access Cloud Foundry services, you must specify a Cloud Foundry org and space. You can run the following command to interactively identify the org and space:
   ```
   ibmcloud target --cf
   ```
   {: codeblock}
 
-  Optionally, you can use the output from the previous command to manually set your org and space with the following command:
+  Or, if you know which org and space that the service belongs to, you can use the following command:
   ```
   ibmcloud target -o <value> -s <value>
   ```
