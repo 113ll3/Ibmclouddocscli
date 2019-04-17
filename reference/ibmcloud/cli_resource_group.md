@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-17"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -919,7 +919,7 @@ ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-bi
 
 Search for a resource with the specified Cloud Resource Name (CRN):
 ```
-ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
+ibmcloud resource search "crn:\"crn:v1:bluemix:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 Search for a resource with the specified tag:
@@ -955,7 +955,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
   <dt>-o, -offset</dt>
   <dd>Starting tag position number</dd>
   <dt>-l, -limit</dt>
-  <dd>Number of tags to return (maximum 10000)</dd>
+  <dd>Number of tags to return (maximum 1000, deafult 100 )</dd>
   <dt>-p; --provider</dt> 
   <dd>Specify classic-infrastructure when searching for classic infrastructure tags</dd>
   <dt>-d, --details</dt>
@@ -977,10 +977,44 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names(required)</dt>
   <dd>Comma separated list of tag names</dd>
   <dt>--resource-id</dt>
-  <dd>The CRN of the resource to which the tags are going to be attached; for classic infrastructure resources, it is the ID of the resource</dd>
+  <dd>The CRN of the resource to which the tags are going to be attached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource using 'ibmcloud resource search' command.</dd>
   <dt>--resource-type</dt>
   <dd>The resource type of the classic infrastructure resource to which the tags are going to be attached; this parameter is required if attaching a tag to a classic infrastructure resource. ossible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
 </dl>
+
+<strong>Examples</strong>:
+
+* To attach the tag `MyTag` to a Kubernetes cluster named `MyCluster`, first look for the CRN of the cluster you would like to tag:
+  ```
+  ibmcloud resource search 'type:k8\-cluster AND name:MyCluster'
+  ```
+  {: codeblock}
+
+  Take note of the CRN, which is a string similar to the following example: 
+  ```
+  crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
+  ```
+  {: screen}
+
+  To attach the tag, run the following command:
+  ```
+  ibmcloud resource tag-attach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
+  ```
+  {: codeblock}
+
+* To attach the tag `MyTag` to a classic infrastructure virtual guest named `MyVM`, first look for the ID of the virtual guest you would like to tag:
+  ```
+  ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
+  ```
+  {: codeblock}
+
+  Take a note of the ID, which is a a string similar to `48373549`.
+
+  To attach the tag, run the following command:
+  ```
+  ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
+  ```
+  {: codeblock}
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
@@ -997,7 +1031,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names(required)</dt>
   <dd>Comma separated list of tag names</dd>
   <dt>--resource-id</dt>
-  <dd>The CRN of the resource from which the tags are going to be detached; for classic infrastructure resources, it is the ID of the resource</dd>
+  <dd>The CRN of the resource from which the tags are going to be detached; for classic infrastructure resources, it is the ID of the resource. You can obtain the CRN or the ID of the resource using 'ibmcloud resource search' command.</dd>
   <dt>--resource-type</dt>
   <dd>The resource type of the classic infrastructure resource from which the tags are going to be detached; this parameter is required if attaching a tag to a classic infrastructure resource. Possible values for --resource-type are: SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
 </dl>
