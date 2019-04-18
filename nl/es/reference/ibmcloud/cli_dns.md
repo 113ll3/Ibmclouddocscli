@@ -40,7 +40,7 @@ ibmcloud sl dns import ZONEFILE [OPTIONS]
 ```
 ibmcloud sl dns import ~/ibm.com.txt
 ```
-Este mandato importa la zona y los registros de recursos del archivo : ~/ibm.com.txt.
+Este mandato importa la zona y los registros de recursos del archivo: ~/ibm.com.txt.
 
 
 ## ibmcloud sl dns record-add

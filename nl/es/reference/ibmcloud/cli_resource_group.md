@@ -880,7 +880,7 @@ Buscar recursos cuyo nombre contenga la palabra dev en el espacio de Cloud Found
 ibmcloud resource search 'name:*dev* AND doc.space_guid:a07181ca-f917-4ee6-af22-b2c0c2a2d5d7'
 ```
 
-Buscar recursos de Resource Controller en la ubicación especificada (p.ej. en la región del sur de EE.UU.):
+Buscar recursos de Resource Controller en la ubicación especificada (p.ej. en la región EE.UU. sur):
 ```
 ibmcloud resource search 'region:us-south AND family:resource_controller'
 ```

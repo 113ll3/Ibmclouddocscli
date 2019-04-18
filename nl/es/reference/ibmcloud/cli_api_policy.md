@@ -456,7 +456,7 @@ ibmcloud iam service-api-keys (SERVICE_ID_NAME|SERVICE_ID_UUID) [-f, --force]
 
 <strong>Ejemplos</strong>:
 
-Listar todas las claves de API de un servicio `sample-service` :
+Listar todas las claves de API de un servicio `sample-service`:
 
 ```
 ibmcloud iam service-api-keys sample-service
@@ -491,7 +491,7 @@ ibmcloud iam service-api-key (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|SERVICE_
 
 <strong>Ejemplos</strong>:
 
-Mostrar los detalles de una clave de API de servicio `sample-key` del servicio `sample-service` :
+Mostrar los detalles de una clave de API de servicio `sample-key` del servicio `sample-service`:
 
 ```
 ibmcloud iam service-api-key sample-key sample-service
@@ -741,7 +741,7 @@ ibmcloud iam user-policy-create USER_NAME {--file JSON_FILE | --roles ROLE_NAME1
 <dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opción y el distintivo '--file' son mutuamente excluyentes.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (opcional)</dt>
 <dd>Nombre de servicio de la definición de política. Es exclusivo con el distintivo '--file'.</dd>
-<dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (opcional)</dt>
+<dt>--service-instance <i>SERVICE_INSTANCE_GUID</i> (opcional)</dt>
 <dd>GUID de la instancia de servicio de la definición de política. Esto es exclusivo con el distintivo '--file'.</dd>
 <dt>--region <i>REGION</i> (opcional)</dt>
 <dd>Región de la definición de política. Es exclusivo con el distintivo '--file'.</dd>
@@ -815,7 +815,7 @@ ibmcloud iam user-policy-update USER_NAME POLICY_ID {--file JSON_FILE | [--roles
 <dd>Nombres de rol de la definición de política. Para los roles soportados de un servicio específico, ejecute 'ibmcloud iam roles --service SERVICE_NAME'. Esta opción y el distintivo '--file' son mutuamente excluyentes.</dd>
 <dt>--service-name <i>SERVICE_NAME</i> (opcional)</dt>
 <dd>Nombre de servicio de la definición de política. Es exclusivo con el distintivo '--file'.</dd>
-<dt>--serivce-instance <i>SERVICE_INSTANCE_GUID</i> (opcional)</dt>
+<dt>--service-instance <i>SERVICE_INSTANCE_GUID</i> (opcional)</dt>
 <dd>GUID de la instancia de servicio de la definición de política. Esto es exclusivo con el distintivo '--file'.</dd>
 <dt>--region <i>REGION</i> (opcional)</dt>
 <dd>Región de la definición de política. Es exclusivo con el distintivo '--file'.</dd>

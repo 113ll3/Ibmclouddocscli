@@ -390,7 +390,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Hiermit melden Sie sich bei {{site.data.keyword.cloud_notm}} an. Wenn Sie sich mit einer föderierten ID anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden. 
+Hiermit melden Sie sich bei {{site.data.keyword.cloud_notm}} an. Wenn Sie sich mit einer föderierten ID anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden.
 
 Sie können für die Anmeldung auch einen API-Schlüssel für die {{site.data.keyword.cloud_notm}}-Plattform verwenden. Verwenden Sie den Benutzernamen `apikey` und Ihren API-Schlüsselwert als Kennwort. Weitere Informationen zum Erstellen eines API-Schlüssels finden Sie im Abschnitt mit [Informationen zu API-Schlüsseln](/docs/iam?topic=iam-manapikey#manapikey).
 {: note}

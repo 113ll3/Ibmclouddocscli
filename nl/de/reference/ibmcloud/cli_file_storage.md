@@ -49,7 +49,7 @@ ibmcloud sl file access-authorize VOLUME_ID [OPTIONEN]
 ibmcloud sl file access-authorize 12345678 --virtual-id 87654321
 ```
 
-Dieser Befehl autorisiert den virtuellen Server mit der ID `87654321` für den Zugriff auf den Datenträger mit der ID `12345678`. 
+Dieser Befehl autorisiert den virtuellen Server mit der ID `87654321` für den Zugriff auf den Datenträger mit der ID `12345678`.
 
 ## ibmcloud sl file access-list
 {: #sl_file_access_list}
@@ -72,7 +72,7 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONEN]
 ibmcloud sl file access-list 12345678 --sortby id
 ```
 
-Dieser Befehl listet alle Hosts auf, die für den Zugriff auf den Datenträger mit der ID `12345678` autorisiert sind, und sortiert diese nach ID. 
+Dieser Befehl listet alle Hosts auf, die für den Zugriff auf den Datenträger mit der ID `12345678` autorisiert sind, und sortiert diese nach ID.
 
 ## ibmcloud sl file access-revoke
 {: #sl_file_access_revoke}
@@ -285,7 +285,7 @@ ibmcloud sl file snapshot-enable VOLUME_ID [OPTIONEN]
 ibmcloud sl file snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
 
-Dieser Befehl aktiviert den Snapshot für den Datenträger mit der ID `12345678`; der Snapshot wird wöchentlich jeden Sonntag um 2:00 ausgeführt und bis zu 5 Snapshots werden beibehalten. 
+Dieser Befehl aktiviert den Snapshot für den Datenträger mit der ID `12345678`; der Snapshot wird wöchentlich jeden Sonntag um 2:00 ausgeführt und bis zu 5 Snapshots werden beibehalten.
 
 ## ibmcloud sl file snapshot-delete
 {: #sl_file_snapshot_delete}
@@ -321,7 +321,7 @@ ibmcloud sl file snapshot-list VOLUME_ID [OPTIONEN]
 ibmcloud sl file snapshot-list 12345678 --sortby id
 ```
 
-Dieser Befehl listet alle Snapshots für den Datenträger mit der ID `12345678` auf und sortiert diese nach ID. 
+Dieser Befehl listet alle Snapshots für den Datenträger mit der ID `12345678` auf und sortiert diese nach ID.
 
 ## ibmcloud sl file snapshot-order
 {: #sl_file_snapshot_order}
@@ -449,7 +449,7 @@ ibmcloud sl file volume-list [OPTIONEN]
 ibmcloud sl file volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 
-Dieser Befehl listet alle Endurance-Datenträger für das aktuelle Konto mit dem Ort `dal09` auf und sortiert sie nach Kapazität. 
+Dieser Befehl listet alle Endurance-Datenträger für das aktuelle Konto mit dem Ort `dal09` auf und sortiert sie nach Kapazität.
 
 ## ibmcloud sl file volume-detail
 {: #sl_file_volume_detail}
@@ -531,7 +531,7 @@ ibmcloud sl file volume-order [OPTIONEN]
 ibmcloud sl file volume-order --storage-type performance --size 1000 --iops 4000  -d dal09
 ```
 
-Dieser Befehl bestellt einen Leistungsdatenträger mit einer Größe von 1000 GB. Der Wert für die E/A-Operationen pro Sekunde beträgt 4000, der Ort ist `dal09`. 
+Dieser Befehl bestellt einen Leistungsdatenträger mit einer Größe von 1000 GB. Der Wert für die E/A-Operationen pro Sekunde beträgt 4000, der Ort ist `dal09`.
 
 ## ibmcloud sl file volume-modify
 {: #sl_file_volume_modify}
@@ -560,7 +560,7 @@ Anforderungen: [Beträgt der ursprüngliche IOPS/GB-Wert für den Datenträger 0
 ibmcloud sl file volume-modify 12345678 --new-size 1000 --new-iops 4000
 ```
 
-Mit diesem Befehl wird der Datenträger `12345678` geändert. Neue Größe: 1000 GB. Neuer Wert für E/A-Operationen pro Sekunde (IOPS): 4000. 
+Mit diesem Befehl wird der Datenträger `12345678` geändert. Neue Größe: 1000 GB. Neuer Wert für E/A-Operationen pro Sekunde (IOPS): 4000.
 
 ```
 ibmcloud sl file volume-modify 12345678 --new-size 500 --new-tier 4

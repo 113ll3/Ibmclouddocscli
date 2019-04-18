@@ -27,7 +27,7 @@ Ab Version `0.7.0` wird die automatische Vervollständigung von den Installation
 {: #shell-autocomplete-linux}
 
 * Wenn Sie `Bash` verwenden, fügen Sie
-`source /usr/local/ibmcloud/autocomplete/bash_autocomplete` zu einer der folgenden Dateien hinzu: 
+`source /usr/local/ibmcloud/autocomplete/bash_autocomplete` zu einer der folgenden Dateien hinzu:
 
   * Anmeldeshell: `~/.bash_profile`
   * Keine Anmeldeshell: `~/.bash_rc`

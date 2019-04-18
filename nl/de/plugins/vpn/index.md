@@ -43,7 +43,7 @@ cf uninstall-plugin vpn
 
 1. Laden Sie das {{site.data.keyword.vpn_short}}-Plug-in für Ihre Plattform aus dem [{{site.data.keyword.cloud_notm}} CLI-Plug-in-Repository](https://plugins.cloud.ibm.com/ui/repository.html#cf-plugins){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link") herunter.
 
-2. Installieren Sie das {{site.data.keyword.vpn_short}}-Plug-in mit dem folgenden Befehl: 
+2. Installieren Sie das {{site.data.keyword.vpn_short}}-Plug-in mit dem folgenden Befehl:
 
 	Wechseln Sie entweder zur Position des {{site.data.keyword.vpn_short}}-Plug-ins oder geben Sie ein Verzeichnis an.
 	{: note}

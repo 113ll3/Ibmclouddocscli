@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-15"
 
 keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -416,7 +416,7 @@ ibmcloud update [-f]
 运行 `ibmcloud sl` 命令可查看可用命令的列表：
 ```
 用法：
-   bx sl command [arguments...] [options...]
+   ibmcloud sl command [arguments...] [options...]
 
 命令：
    block           Gen1 基础架构块存储器

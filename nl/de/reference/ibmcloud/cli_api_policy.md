@@ -1025,7 +1025,7 @@ Service `test` die Rolle `Administrator` für alle Kontoverwaltungsservices zuwe
 ibmcloud iam service-policy-create test --roles Administrator --account-management
 ```
 
-Service `test` die Rolle `Viewer` für alle Ressourcen im Konto zuweisen: 
+Service `test` die Rolle `Viewer` für alle Ressourcen im Konto zuweisen:
 
 ```
 ibmcloud iam service-policy-create test --roles Viewer
@@ -1196,11 +1196,11 @@ ibmcloud iam authorization-policy-create SOURCE_SERVICE_NAME TARGET_SERVICE_NAME
   <dt>--source-service-instance-id SOURCE_SERVICE_INSTANCE_ID</dt>
   <dd>Die ID der Quellenserviceinstanz, die sich mit `--source-service-instance-name` gegenseitig ausschließt. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Quellenservice Zugriffsberechtigung.</dd>
   <dt>--source-resource-type</dt>
-  <dd>Der Ressourcentyp des Quellenservice. </dd>
+  <dd>Der Ressourcentyp des Quellenservice.</dd>
   <dt>--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME</dt>
-  <dd>Der Name der Zielserviceinstanz, die sich mit `--target-service-instance-id` gegenseitig ausschließt. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Zielservice Zugriffsberechtigung. </dd>
+  <dd>Der Name der Zielserviceinstanz, die sich mit `--target-service-instance-id` gegenseitig ausschließt. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Zielservice Zugriffsberechtigung.</dd>
   <dt>--target-service-instance-id TARGET_SERVICE_INSTANCE_ID</dt>
-  <dd>Die ID der Zielserviceinstanz, die sich mit `--target-service-instance-name` gegenseitig ausschließt. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Zielservice Zugriffsberechtigung. </dd>
+  <dd>Die ID der Zielserviceinstanz, die sich mit `--target-service-instance-name` gegenseitig ausschließt. Wenn keine Angabe gemacht wird, erhalten alle Instanzen des Zielservice Zugriffsberechtigung.</dd>
   <dt>--target-resource-type</dt>
   <dd>Der Ressourcentyp des Zielservice.</dd>
 </dl>

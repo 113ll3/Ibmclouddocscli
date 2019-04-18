@@ -73,7 +73,7 @@ ibmcloud sl vlan cancel 12345678 -f
 ```
 {: codeblock}
 
-Dieser Befehl bricht das VLAN mit der ID `12345678` ab, ohne zu einer Bestätigung aufzufordern. 
+Dieser Befehl bricht das VLAN mit der ID `12345678` ab, ohne zu einer Bestätigung aufzufordern.
 
 ## ibmcloud sl vlan detail
 {: #sl_vlan_detail}
@@ -97,7 +97,7 @@ ibmcloud sl vlan detail 12345678  --no-vs --no-hardware
 ```
 {: codeblock}
 
-Dieser Befehl zeigt Details zum VLAN mit der ID `12345678` an, ohne virtuelle Server oder Hardware-Server aufzulisten. 
+Dieser Befehl zeigt Details zum VLAN mit der ID `12345678` an, ohne virtuelle Server oder Hardware-Server aufzulisten.
 
 ## ibmcloud sl vlan edit
 {: #sl_vlan_edit}

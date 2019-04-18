@@ -293,7 +293,7 @@ ibmcloud sl block snapshot-enable VOLUME_ID [OPTIONEN]
 ```
 ibmcloud sl block snapshot-enable 12345678 -s WEEKLY -c 5 -m 0 --hour 2 -d 0
 ```
-Dieser Befehl aktiviert den Snapshot für den Datenträger mit der ID `12345678`; der Snapshot wird wöchentlich jeden Sonntag um 2:00 ausgeführt und bis zu 5 Snapshots werden beibehalten. 
+Dieser Befehl aktiviert den Snapshot für den Datenträger mit der ID `12345678`; der Snapshot wird wöchentlich jeden Sonntag um 2:00 ausgeführt und bis zu 5 Snapshots werden beibehalten.
 
 ## ibmcloud sl block snapshot-delete
 {: #sl_block_snapshot_delete}
@@ -330,7 +330,7 @@ ibmcloud sl block snapshot-list VOLUME_ID [OPTIONEN]
 ibmcloud sl block snapshot-list 12345678 --sortby id
 ```
 
-Dieser Befehl listet alle Snapshots für den Datenträger mit der ID `12345678` auf und sortiert diese nach ID. 
+Dieser Befehl listet alle Snapshots für den Datenträger mit der ID `12345678` auf und sortiert diese nach ID.
 
 ## ibmcloud sl block snapshot-order
 {: #sl_block_snapshot_order}
@@ -459,7 +459,7 @@ ibmcloud sl block volume-list [OPTIONEN]
 ibmcloud sl block volume-list -d dal09 -t endurance --sortby capacity_gb
 ```
 
-Dieser Befehl listet alle Endurance-Datenträger für das aktuelle Konto mit dem Ort `dal09` auf und sortiert sie nach Kapazität. 
+Dieser Befehl listet alle Endurance-Datenträger für das aktuelle Konto mit dem Ort `dal09` auf und sortiert sie nach Kapazität.
 
 ## ibmcloud sl block volume-modify
 {: #sl_block_volume_modify}
@@ -488,7 +488,7 @@ Anforderungen: [Beträgt der ursprüngliche IOPS/GB-Wert für den Datenträger 0
 ibmcloud sl block volume-modify 12345678 --new-size 1000 --new-iops 4000
 ```
 
-Mit diesem Befehl wird der Datenträger `12345678` geändert. Neue Größe: 1000 GB. Neuer Wert für E/A-Operationen pro Sekunde (IOPS): 4000. 
+Mit diesem Befehl wird der Datenträger `12345678` geändert. Neue Größe: 1000 GB. Neuer Wert für E/A-Operationen pro Sekunde (IOPS): 4000.
 
 ```
 ibmcloud sl block volume-modify 12345678 --new-size 500 --new-tier 4

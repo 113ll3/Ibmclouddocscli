@@ -23,7 +23,7 @@ Freigegeben: 31. August 2018
 Ab Mai 2018 wird an Stelle der {{site.data.keyword.cloud}}-CLI-Befehle `bluemix` und `bx` der Befehl `ibmcloud` verwendet. Sie können die CLI-Befehle `bluemix` und `bx` jedoch weiterhin verwenden, bis sie zu einem späteren Zeitpunkt entfernt werden.
 {: tip}
 
-Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-Befehlszeilenschnittstelle (`ibmcloud dev`), um eine Anwendung zu erstellen, zu verwalten, bereitzustellen, zu debuggen und zu testen. 
+Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-Befehlszeilenschnittstelle (`ibmcloud dev`), um eine Anwendung zu erstellen, zu verwalten, bereitzustellen, zu debuggen und zu testen.
 
 - [build](#build): Erstellt die Anwendung in einem lokalen Container.
 - [code](#code): Lädt den Code für eine Anwendung herunter.
@@ -36,10 +36,10 @@ Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-Befeh
 - [edit](#edit): Fügt Services in einer vorhandenen Anwendung hinzu oder entfernt Services.
 - [enable](#enable): Aktualisiert eine vorhandene Anwendung für die Verwendung mit {{site.data.keyword.cloud_notm}} Developer Tools.
 - [get-credentials](#get-credentials): Ruft Berechtigungsnachweise ab, die die Anwendung benötigt, um die Verwendung verbundener {{site.data.keyword.cloud_notm}}-Services zu ermöglichen.
-- [help](#help): Zeigt Hilfe für die Syntax und die Argumente der Befehlszeilenschnittstelle an. 
+- [help](#help): Zeigt Hilfe für die Syntax und die Argumente der Befehlszeilenschnittstelle an.
 - [list](#list): Listet alle {{site.data.keyword.cloud_notm}}-Anwendungen in einer Ressourcengruppe auf.
 - [run](#run): Führt die Anwendung in einem lokalen Container aus.
-- [shell](#shell): Öffnet eine Shell in einen lokalen Container. 
+- [shell](#shell): Öffnet eine Shell in einen lokalen Container.
 - [status](#status): Überprüft den Status der von der Befehlszeilenschnittstelle verwendeten Container.
 - [stop](#stop): Stoppt einen Container.
 - [test](#test): Testet die Anwendung in einem lokalen Container.
@@ -49,11 +49,11 @@ Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-Befeh
 ## build
 {: #build}
 
-Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen. 
+Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
 Sie können Ihre Anwendung mithilfe des Befehls `build` erstellen. Die Befehle `test`, `debug` und `run` setzen eine kompilierte Anwendung voraus, daher müssen Sie zuvor eine `build`-Operation durchführen.
 
-Das Konfigurationselement `build-cmd-debug` wird zum Erstellen der Anwendung für alle Verwendungszwecke, mit Ausnahme von `run`, verwendet. Sie erstellen Ihre Anwendung für das Debuggen, indem Sie die Befehlszeilenoption `--debug` angeben. Das Konfigurationselement `build-cmd-run` wird beim Erstellen der Anwendung für den Einsatz mit dem Befehl `run` verwendet. 
+Das Konfigurationselement `build-cmd-debug` wird zum Erstellen der Anwendung für alle Verwendungszwecke, mit Ausnahme von `run`, verwendet. Sie erstellen Ihre Anwendung für das Debuggen, indem Sie die Befehlszeilenoption `--debug` angeben. Das Konfigurationselement `build-cmd-run` wird beim Erstellen der Anwendung für den Einsatz mit dem Befehl `run` verwendet.
 
 Für den Build mit mehreren Containern muss die Anwendung entweder eine [Compose-Datei](https://docs.docker.com/compose/overview/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") enthalten, die in der Datei `cli-config.yml` angegeben ist, oder Sie können mithilfe des Befehlsparameters `dockerfile-tools` eine solche Datei angeben.
 
@@ -66,7 +66,7 @@ ibmcloud dev build [--debug]
 ## code
 {: #code}
 
-Verwenden Sie den Befehl `code`, um eine zuvor erstellte Anwendung mit Anwendungsvorlagencode und Konfigurationsdateien für {{site.data.keyword.cloud_notm}} herunterzuladen. Sie können diesen Befehl verwenden, wenn Sie eine zweite Kopie einer Anwendung extrahieren müssen. 
+Verwenden Sie den Befehl `code`, um eine zuvor erstellte Anwendung mit Anwendungsvorlagencode und Konfigurationsdateien für {{site.data.keyword.cloud_notm}} herunterzuladen. Sie können diesen Befehl verwenden, wenn Sie eine zweite Kopie einer Anwendung extrahieren müssen.
 
 Führen Sie den folgenden Befehl aus, um den Code aus einer angegebenen Anwendung herunterzuladen.
 ```
@@ -79,8 +79,7 @@ ibmcloud dev code <applicationName>
 
 Verwenden Sie den Befehl `console`, um in einem Web-Browser die Webkonsole Ihrer Anwendung unter {{site.data.keyword.cloud_notm}} zu öffnen. Sie können den Befehl `ibmcloud dev console` vom Ordner Ihrer Anwendung aus ausführen. Die Befehlszeilenschnittstelle versucht dann, eine entsprechende Anwendung in {{site.data.keyword.cloud_notm}} zu finden, deren Anwendungs-ID mit dem aktuellen Verzeichnis übereinstimmt. Falls das System keinen übereinstimmenden Namen findet, wird anstelle der spezifischen Anwendung das Dashboard für Webanwendungen und mobile Anwendungen in {{site.data.keyword.cloud_notm}} geöffnet.
 
-Wenn Sie einen Anwendungsnamen angeben, überspringt die Befehlszeilenschnittstelle den Abgleich des Ordner- oder Anwendungsnamens.
-In diesem Fall öffnet die Befehlszeilenschnittstelle die Konsole der angegebenen Anwendung in einem Web-Browser.  
+Wenn Sie einen Anwendungsnamen angeben, überspringt die Befehlszeilenschnittstelle den Abgleich des Ordner- oder Anwendungsnamens. In diesem Fall öffnet die Befehlszeilenschnittstelle die Konsole der angegebenen Anwendung in einem Web-Browser.  
 
 Führen Sie den folgenden Befehl aus, um einen Web-Browser in der Webkonsole Ihrer Anwendung zu öffnen.
 ```
@@ -150,7 +149,7 @@ unterstützen Sie beim Debugging einer Anwendung. Es gibt [zusätzliche Paramete
 ## delete
 {: #delete}
 
-Mit dem Befehl `delete` können Sie Anwendungen aus Ihrem {{site.data.keyword.cloud_notm}}-Bereich entfernen. Sie können den Befehl ohne Parameter ausführen, um verfügbare Anwendungen aufzulisten, und die zu löschende Anwendung in der nummerierten Liste auswählen. Der Anwendungscode und die Anwendungsverzeichnisse werden nicht aus dem lokalen Plattenspeicher entfernt. 
+Mit dem Befehl `delete` können Sie Anwendungen aus Ihrem {{site.data.keyword.cloud_notm}}-Bereich entfernen. Sie können den Befehl ohne Parameter ausführen, um verfügbare Anwendungen aufzulisten, und die zu löschende Anwendung in der nummerierten Liste auswählen. Der Anwendungscode und die Anwendungsverzeichnisse werden nicht aus dem lokalen Plattenspeicher entfernt.
 
 Führen Sie den folgenden Befehl aus, um die Anwendung aus {{site.data.keyword.cloud_notm}} zu löschen:
 ```
@@ -166,13 +165,13 @@ ibmcloud dev delete <applicationName>
 
 Sie können eine Anwendung als Cloud Foundry-Anwendung oder als Container bereitstellen.
 
-Bevor Sie eine Anwendung als Cloud Foundry-Anwendung in {{site.data.keyword.cloud_notm}} bereitstellen, muss eine Datei `manifest.yml` im Stammverzeichnis Ihrer Anwendung vorhanden sein. 
+Bevor Sie eine Anwendung als Cloud Foundry-Anwendung in {{site.data.keyword.cloud_notm}} bereitstellen, muss eine Datei `manifest.yml` im Stammverzeichnis Ihrer Anwendung vorhanden sein.
 
-Bevor Sie eine Anwendung als Container bereitstellen, müssen Sie [Kubernetes](https://kubernetes.io/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [Helm](https://github.com/kubernetes/helm){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") lokal installieren. Die Version des Helm-Clients darf nicht neuer als die Version des Helms-Servers sein. Beide Angaben erhalten Sie, indem Sie `helm version` ausführen. Für die Clientversion wird Version 2.4.2 empfohlen. 
+Bevor Sie eine Anwendung als Container bereitstellen, müssen Sie [Kubernetes](https://kubernetes.io/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [Helm](https://github.com/kubernetes/helm){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") lokal installieren. Die Version des Helm-Clients darf nicht neuer als die Version des Helms-Servers sein. Beide Angaben erhalten Sie, indem Sie `helm version` ausführen. Für die Clientversion wird Version 2.4.2 empfohlen.
 
 Für die Bereitstellung der Anwendung in Kubernetes müssen Sie entweder für `deploy-target` den Wert `container` in `cli-config.yml` angeben oder den Parameter `-t container` verwenden.
 
-Weitere Parameter, die für die Konfiguration der Kubernetes-Bereitstellung erforderlich sind, können ebenfalls in der Datei `cli-config.yml` mithilfe von Befehlszeilenargumenten angegeben werden. Wenn Sie diese Parameter nicht in der Datei `cli-config.yml` definieren, müssen Sie die Bereitstellung mit dem Parameter `-t container` durchführen und werden zur Eingabe aller anderen Werte aufgefordert. 
+Weitere Parameter, die für die Konfiguration der Kubernetes-Bereitstellung erforderlich sind, können ebenfalls in der Datei `cli-config.yml` mithilfe von Befehlszeilenargumenten angegeben werden. Wenn Sie diese Parameter nicht in der Datei `cli-config.yml` definieren, müssen Sie die Bereitstellung mit dem Parameter `-t container` durchführen und werden zur Eingabe aller anderen Werte aufgefordert.
 
 ```yaml
     chart-path: "chart/myapplication"
@@ -247,7 +246,7 @@ Die folgenden Parameter können mit dem Befehl `deploy` oder unmittelbar durch d
 ## diag
 {: #diag}
 
-Dieser Befehl wird zu Diagnosezwecken verwendet und dient zur Anzeige der Versionsinformationen installierter Abhängigkeiten für die {{site.data.keyword.dev_cli_notm}}-CLI. Dies ist hilfreich, wenn Sie feststellen möchten, ob Abhängigkeiten fehlen oder um Fehler zu beheben. 
+Dieser Befehl wird zu Diagnosezwecken verwendet und dient zur Anzeige der Versionsinformationen installierter Abhängigkeiten für die {{site.data.keyword.dev_cli_notm}}-CLI. Dies ist hilfreich, wenn Sie feststellen möchten, ob Abhängigkeiten fehlen oder um Fehler zu beheben.
 
 Führen Sie den folgenden Befehl aus, um die Versionen der installierten Abhängigkeiten anzuzeigen:
 ```
@@ -264,15 +263,15 @@ ibmcloud dev edit
 ```
 {: codeblock}
 
-Wenn Ihr Konto keine vorhandenen Services enthält, wird mit diesem Befehl eine Liste mit Servicegruppen angezeigt, in der Sie einen Service auswählen können, der mit Ihrer Anwendung verbunden werden soll. 
+Wenn Ihr Konto keine vorhandenen Services enthält, wird mit diesem Befehl eine Liste mit Servicegruppen angezeigt, in der Sie einen Service auswählen können, der mit Ihrer Anwendung verbunden werden soll.
 
-Wenn Ihr Konto jedoch vorhandene Services enthält, wird mit diesem Befehl eine Liste dieser Services angezeigt und angegeben, ob die einzelnen Services mit der Anwendung verbunden sind. 
+Wenn Ihr Konto jedoch vorhandene Services enthält, wird mit diesem Befehl eine Liste dieser Services angezeigt und angegeben, ob die einzelnen Services mit der Anwendung verbunden sind.
 
-* Wenn Sie einen verbundenen Service auswählen, können Sie entweder die Verbindung dieses Service zu Ihrer Anwendung trennen oder den Service aus Ihrem Konto löschen, wodurch die Verbindungen des betreffenden Service zu allen Anwendungen, mit denen er verbunden ist, getrennt werden. 
+* Wenn Sie einen verbundenen Service auswählen, können Sie entweder die Verbindung dieses Service zu Ihrer Anwendung trennen oder den Service aus Ihrem Konto löschen, wodurch die Verbindungen des betreffenden Service zu allen Anwendungen, mit denen er verbunden ist, getrennt werden.
 
-* Wenn Sie einen nicht verbundenen Service auswählen, können Sie entweder diesen Service mit Ihrer Anwendung verbinden oder den Service aus Ihrem Konto löschen. Durch das Verbinden eines vorhandenen Service werden auch Dateien (z. B. Berechtigungsnachweise oder Quellcode) heruntergeladen, damit mit der Verwendung dieses Service begonnen werden kann. 
+* Wenn Sie einen nicht verbundenen Service auswählen, können Sie entweder diesen Service mit Ihrer Anwendung verbinden oder den Service aus Ihrem Konto löschen. Durch das Verbinden eines vorhandenen Service werden auch Dateien (z. B. Berechtigungsnachweise oder Quellcode) heruntergeladen, damit mit der Verwendung dieses Service begonnen werden kann.
 
-Wenn Sie einen neuen Service zu Ihrer Anwendung hinzufügen, wird eine Abfolge von Eingabeaufforderungen für die Serviceauswahl angezeigt und es werden zusätzliche Dateien (z. B. Berechtigungsnachweisdateien oder Quellcode) heruntergeladen, damit mit der Verwendung des neuen Service begonnen werden kann. 
+Wenn Sie einen neuen Service zu Ihrer Anwendung hinzufügen, wird eine Abfolge von Eingabeaufforderungen für die Serviceauswahl angezeigt und es werden zusätzliche Dateien (z. B. Berechtigungsnachweisdateien oder Quellcode) heruntergeladen, damit mit der Verwendung des neuen Service begonnen werden kann.
 
 ## enable
 {: #enable}
@@ -281,7 +280,7 @@ Vorhandene Anwendung für die {{site.data.keyword.cloud_notm}}-Bereitstellung ak
 
 Wenn Sie bei {{site.data.keyword.cloud_notm}} angemeldet sind, können Sie die lokale Anwendung mit einer bereits in {{site.data.keyword.cloud_notm}} vorhandenen Anwendung verbinden oder eine neue {{site.data.keyword.cloud_notm}}-Anwendung erstellen. Die Vorteile von {{site.data.keyword.cloud_notm}}-Features wie Services und DevOps-Toolchains können Sie nur mit einer Anwendung in {{site.data.keyword.cloud_notm}} nutzen. Wird eine {{site.data.keyword.cloud_notm}}-App für eine vom Git-Repository geklonte App erstellt, enthält die {{site.data.keyword.cloud_notm}}-App das Repository in der zugehörigen Konfiguration. 
 
-`Enable` ist ein Beta-Feature. Ziehen Sie bei Problemen beim Aktivieren Ihrer Anwendung die [Fehlerbehebungsseite](/docs/cli/ts_createapps.html#troubleshoot) zu Rate. Insbesondere ist zu beachten, dass `enable` nicht für mobile Anwendungen oder Frameworks konzipiert ist. Bei komplexeren Anwendungen, die mehrere bereitstellbare Assets erzeugen, muss jede Komponente der Anwendung einzeln aktiviert werden.  
+`Enable` ist ein Beta-Feature. Ziehen Sie bei Problemen beim Aktivieren Ihrer Anwendung die [Fehlerbehebungsseite](/docs/cli/ts_createapps.html#troubleshoot) zu Rate. Insbesondere ist zu beachten, dass `enable` nicht für mobile Anwendungen oder Frameworks konzipiert ist. Bei komplexeren Anwendungen, die mehrere bereitstellbare Assets erzeugen, muss jede Komponente der Anwendung einzeln aktiviert werden. 
 
 Führen Sie den folgenden Befehl aus, um eine vorhandene Anwendung im aktuellen Verzeichnis zu aktivieren:
 ```
@@ -298,7 +297,7 @@ Das Vorhandensein erforderlicher Dateien macht eine Erkennung der Anwendungsspra
 	* Das Vorhandensein der Datei `pom.xml` gibt eine Maven-Anwendung an.
 	* Das Vorhandensein der Datei `build.gradle` gibt eine Gradle-Anwendung an.
 
-Optional können Sie die erkannte Anwendungssprache mithilfe des Arguments `--language` überschreiben. Allerdings werden nur gültige und abgeschlossene Anwendungen unterstützt. Der Befehl 'enable' ändert Ihren Quellcode nicht. 
+Optional können Sie die erkannte Anwendungssprache mithilfe des Arguments `--language` überschreiben. Allerdings werden nur gültige und abgeschlossene Anwendungen unterstützt. Der Befehl 'enable' ändert Ihren Quellcode nicht.
 
 ### enable language options
 {: #enable-language-options}
@@ -344,7 +343,7 @@ Für das Projekt erforderliche Berechtigungsnachweise zum Aktivieren der Verwend
 ## help
 {: #help}
 
-Wenn keine Aktion oder keine Argumente übergeben werden oder wenn die Aktion 'help' angegeben wird, zeigt dieser Befehl standardmäßig einen allgemeinen Hilfetext an. Allgemeine Hilfetexte enthalten eine Beschreibung der Basisargumente sowie eine Liste der verfügbaren Aktionen.   
+Wenn keine Aktion oder keine Argumente übergeben werden oder wenn die Aktion 'help' angegeben wird, zeigt dieser Befehl standardmäßig einen allgemeinen Hilfetext an. Allgemeine Hilfetexte enthalten eine Beschreibung der Basisargumente sowie eine Liste der verfügbaren Aktionen.  
 
 Führen Sie den folgenden Befehl aus, um allgemeine Hilfeinformationen anzuzeigen:
 ```
@@ -368,9 +367,9 @@ ibmcloud dev list
 
 Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
-Sie können Ihre Anwendung mithilfe des Befehls `run` ausführen. Zuerst muss für die Anwendung ein Build durchgeführt werden, indem der Befehl `build` verwendet wird. Wenn Sie den Befehl `run` ausführen, wird der Ausführungscontainer gestartet und stellt die Ports bereit, wie durch den Parameter `container-port-map` definiert werden. Der Parameter `run-cmd` kann verwendet werden, um die Anwendung aufzurufen, falls die `Dockerfile` des Containers 'run' keinen Eingangspunkt umfasst, um diesen Schritt abzuschließen. 
+Sie können Ihre Anwendung mithilfe des Befehls `run` ausführen. Zuerst muss für die Anwendung ein Build durchgeführt werden, indem der Befehl `build` verwendet wird. Wenn Sie den Befehl `run` ausführen, wird der Ausführungscontainer gestartet und stellt die Ports bereit, wie durch den Parameter `container-port-map` definiert werden. Der Parameter `run-cmd` kann verwendet werden, um die Anwendung aufzurufen, falls die `Dockerfile` des Containers 'run' keinen Eingangspunkt umfasst, um diesen Schritt abzuschließen.
 
-Für die Ausführung mit mehreren Containern muss die Anwendung entweder eine [Compose-Datei](https://docs.docker.com/compose/overview/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") enthalten, die in der Datei `cli-config.yml` angegeben ist, oder Sie können mithilfe des Befehlsparameters `dockerfile-run` eine solche Datei angeben. 
+Für die Ausführung mit mehreren Containern muss die Anwendung entweder eine [Compose-Datei](https://docs.docker.com/compose/overview/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") enthalten, die in der Datei `cli-config.yml` angegeben ist, oder Sie können mithilfe des Befehlsparameters `dockerfile-run` eine solche Datei angeben.
 
 Kompilieren Sie zuerst Ihre Anwendung:
 ```
@@ -435,11 +434,11 @@ Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen 
 ## shell
 {: #shell}
 
-Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen. 
+Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
 Sie können die Shell innerhalb des Containers 'run' oder 'tools' mit dem Befehl `shell` öffnen.
 
-Führen Sie dazu den folgenden Befehl aus: 
+Führen Sie dazu den folgenden Befehl aus:
 ```
 ibmcloud dev shell
 ```
@@ -453,7 +452,7 @@ Falls der Zielcontainer `run` oder `tools` noch nicht ausgeführt wird, wenn Sie
 
 Sie können auch die ausführbare Shelldatei angeben, die Sie öffnen möchten, indem Sie den Parameter `container-shell` verwenden. Standardmäßig wird `/bin/sh` verwendet. Wenn Sie lieber die Bash-Shell verwenden möchten, geben Sie als Wert für `container-shell` `/bin/bash` an. Beachten Sie jedoch, dass Bash nicht automatisch in allen Linux&trade;-Varianten verfügbar ist.
 
-Alle zusätzlichen Argumente, die Sie neben Flags an den Befehl übergeben, werden für den auszuführenden Befehl analysiert, wenn die Shell geöffnet wird. Wenn Sie einen Befehl angeben, wird die Shell innerhalb des Containers bei Ausführung des Befehls beendet und an das Terminal zurückgegeben. 
+Alle zusätzlichen Argumente, die Sie neben Flags an den Befehl übergeben, werden für den auszuführenden Befehl analysiert, wenn die Shell geöffnet wird. Wenn Sie einen Befehl angeben, wird die Shell innerhalb des Containers bei Ausführung des Befehls beendet und an das Terminal zurückgegeben.
 
 Sie können beispielsweise den Linux-Befehl &trade; `ls` innerhalb der Containershell 'tools' ausführen, indem Sie `ibmcloud dev shell tools ls` aufrufen. Sie können auch zusätzliche Flags angeben, die an die Shellbefehlsausführung übergeben werden sollen, indem Sie die Argumente in Anführungszeichen einschließen, z. B. `ibmcloud dev shell "ls -la"`.
 
@@ -475,7 +474,7 @@ Sie können beispielsweise den Linux-Befehl &trade; `ls` innerhalb der Container
 ## status
 {: #status}
 
-Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen. 
+Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
 Sie können den Status der Container abfragen, die von der {{site.data.keyword.dev_cli_short}}-CLI verwendet werden, wie durch `container-name-run` und `container-name-tools` definiert.
 
@@ -490,7 +489,7 @@ ibmcloud dev status
 ## stop
 {: #stop}
 
-Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen. 
+Wenn Sie mit Windows&trade; arbeiten, müssen Sie Windows&trade; 10 Pro oder höher ausführen.
 
 Sie können Ihre Container mithilfe des Befehls `stop` stoppen.
 
@@ -552,9 +551,9 @@ Der folgende Parameter wird ausschließlich mit dem Befehl `test` verwendet. Es 
 ## view
 {: #view}
 
-Mit dem Befehl `view` können Sie die URL anzeigen, unter der Ihre Anwendung bereitgestellt wird. Führen Sie diesen Befehl im Stammverzeichnis der Anwendung aus, die Sie anzeigen möchten. Der Befehl `view` öffnet die URL auch in Ihrem Standardbrowser. 
+Mit dem Befehl `view` können Sie die URL anzeigen, unter der Ihre Anwendung bereitgestellt wird. Führen Sie diesen Befehl im Stammverzeichnis der Anwendung aus, die Sie anzeigen möchten. Der Befehl `view` öffnet die URL auch in Ihrem Standardbrowser.
 
-Bei Anwendungen, die in Cloud Foundry bereitgestellt werden, besteht die URL aus dem Hostnamen und der Domäne der Anwendung. 
+Bei Anwendungen, die in Cloud Foundry bereitgestellt werden, besteht die URL aus dem Hostnamen und der Domäne der Anwendung.
 
 Bei Anwendungen, die in Kubernetes bereitgestellt werden, besteht die URL aus der IP-Adresse des Knotens, unter dem sie bereitgestellt wird, und dem öffentlichen Port. Wenn der Befehl feststellt, dass die Anwendung in Kubernetes bereitgestellt wurde, fordert das CLI-Tool eine Bestätigung an. Wenn Sie angeben, dass die Anwendung nicht in Kubernetes bereitgestellt wurde, wird die Cloud Foundry-URL angezeigt. Falls Sie erwartet haben, dass der Befehl die URL für eine in Kubernetes bereitgestellte Anwendung anzeigt, dies aber nicht der Fall ist, müssen Sie entweder sicherstellen, dass die Datei `cli-config.yml` einen Eingangspunkt für `chart-path` enthält, oder Sie müssen diesen über die Befehlszeile angeben, wie [hier](#chart-path) gezeigt.
 
@@ -571,7 +570,7 @@ Die folgenden Parameter werden ausschließlich mit dem Befehl `view` verwendet.
 
 #### `deploy-target`
 
-* Optionaler Parameter zum Angeben des Typs von Bereitstellung, um die Eingabeaufforderung zu umgehen. 
+* Optionaler Parameter zum Angeben des Typs von Bereitstellung, um die Eingabeaufforderung zu umgehen.
 * Syntax: `ibmcloud dev view -t|--target buildpack|container`
 
 #### `no-open`
@@ -583,13 +582,13 @@ Die folgenden Parameter werden ausschließlich mit dem Befehl `view` verwendet.
 #### `web-app-root`
 {: #web-app-root}
 
-* Stammverzeichnis des Projekts, das an die URL der Cloud Foundry- und Kubernetes-Anwendung angehängt werden soll. 
+* Stammverzeichnis des Projekts, das an die URL der Cloud Foundry- und Kubernetes-Anwendung angehängt werden soll.
 * Syntax: `ibmcloud dev view --web-app-root [root]`
 
 #### `ibm-cluster`
 {: #ibm-cluster2}
 
-* Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung. 
+* Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung.
 * Syntax: `ibmcloud dev view --ibm-cluster [cluster-name]`
 
 ## Zusammengesetzte Befehle
@@ -609,9 +608,9 @@ Alle Flags müssen auf den finalen Befehl folgen und werden auf alle Befehle ang
 Dies sind die Befehle, die mit diesem Feature verwendet werden können:
 `build, debug, deploy, get-credentials, run, stop, test, view`
 
-Falls ein Befehl fehlschlägt, werden die nachfolgenden Befehle nicht ausgeführt. 
+Falls ein Befehl fehlschlägt, werden die nachfolgenden Befehle nicht ausgeführt.
 
-Falls Befehle auf `debug` oder `run` folgen, wird die Ausführung nur fortgesetzt, wenn `debug` oder `run` auf andere Weise als durch Beenden des Prozesses im aktuellen Terminalfenster abgebrochen wird. `CTRL+C` beendet den Prozess, ohne die nachfolgenden Befehle auszuführen.. Sie können `ibmcloud dev stop` beispielsweise in einem anderen Terminalfenster ausführen, um den laufenden Container zu stoppen und die Ausführung des nachfolgenden Befehls fortzusetzen. 
+Falls Befehle auf `debug` oder `run` folgen, wird die Ausführung nur fortgesetzt, wenn `debug` oder `run` auf andere Weise als durch Beenden des Prozesses im aktuellen Terminalfenster abgebrochen wird. `CTRL+C` beendet den Prozess, ohne die nachfolgenden Befehle auszuführen.. Sie können `ibmcloud dev stop` beispielsweise in einem anderen Terminalfenster ausführen, um den laufenden Container zu stoppen und die Ausführung des nachfolgenden Befehls fortzusetzen.
 
 ## Parameter für 'build', 'debug', 'run' und 'test'
 {: #command-parameters}
@@ -674,7 +673,7 @@ Befehlsparameter, die in der Befehlszeile eingegeben werden, haben Vorrang vor d
 
 * Verwenden Sie diese Option, um Mounts zwischen dem Hostsystem und dem Container 'run' zu definieren.
 * Die Werte `host-path-run` und `container-path-run` werden am Anfang dieser Liste eingefügt.
-* Eine Best Practice, um unerwartete Ergebnisse zu vermeiden, ist die Verwendung derselben Mounteinstellungen für 'build' und 'run'. 
+* Eine Best Practice, um unerwartete Ergebnisse zu vermeiden, ist die Verwendung derselben Mounteinstellungen für 'build' und 'run'.
 * Syntax: `ibmcloud dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
 #### `container-mounts-tools`

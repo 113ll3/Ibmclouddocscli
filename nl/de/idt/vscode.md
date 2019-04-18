@@ -42,8 +42,8 @@ Die einfachste Methode zum Installieren der {{site.data.keyword.dev_cli_notm}}-E
 
 Alternativ können Sie die {{site.data.keyword.dev_cli_notm}}-Erweiterung über das Verwaltungsfenster "Erweiterungen" installieren.
 
-1. Öffnen Sie die Seitenleiste **Erweiterungen** im Visual Studio Code-Editor und suchen Sie dann nach der Zeichenfolge `publisher:IBM Developer`. Die {{site.data.keyword.dev_cli_notm}}-Erweiterung wird in den Suchergebnissen angezeigt.   
-2. Klicken Sie auf **Installieren**, um die Installation zu starten. 
+1. Öffnen Sie die Seitenleiste **Erweiterungen** im Visual Studio Code-Editor und suchen Sie dann nach der Zeichenfolge `publisher:IBM Developer`. Die {{site.data.keyword.dev_cli_notm}}-Erweiterung wird in den Suchergebnissen angezeigt.  
+2. Klicken Sie auf **Installieren**, um die Installation zu starten.
 
 Sie können auf die [IBM Cloud Developer Tools-Erweiterung auch direkt in Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.ibm-developer){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") zugreifen.
 
@@ -78,7 +78,7 @@ Der Einstieg in die `ibmcloud dev`-Workflows umfasst nur wenige Schritte:
 
 Für Benutzer, die zurzeit Apps für Cloud Foundry-Laufzeitumgebungen in {{site.data.keyword.cloud_notm}} bereitstellen, ist auch Unterstützung für `cf`-Operationen verfügbar.
 
-Der Einstieg in Cloud Foundry-Workflows umfasst nur wenige Schritte: 
+Der Einstieg in Cloud Foundry-Workflows umfasst nur wenige Schritte:
 * Erstellen Sie eine neue Cloud Foundry-Anwendung.
   * Verwenden Sie die [{{site.data.keyword.cloud_notm}}-Webkonsole ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und laden Sie den Startercode herunter.
   * Erstellen Sie manuell eine neue Cloud Foundry-Anwendung.

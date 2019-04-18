@@ -522,7 +522,7 @@ ibmcloud sl vs rescue IDENTIFIER [OPTIONEN
 ```
 ibmcloud sl vs rescue 12345678
 ```
-Dieser Befehl startet die virtuelle Serverinstanz mit der ID `12345678` neu in ein Wiederherstellungsimage. 
+Dieser Befehl startet die virtuelle Serverinstanz mit der ID `12345678` neu in ein Wiederherstellungsimage.
 
 ## ibmcloud sl vs resume
 {: #sl_vs_resume}

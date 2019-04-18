@@ -27,7 +27,7 @@ Es gibt Tools zur Unterstützung des Debugging Ihrer Anwendung in Java und Node.
 
 Schritte zum Aktivieren des Debugging-Tools für eine Java-Anwendung:
 
-1. Führen Sie den folgenden Befehl im Stammverzeichnis Ihres Anwendungsprojekts aus: 
+1. Führen Sie den folgenden Befehl im Stammverzeichnis Ihres Anwendungsprojekts aus:
 
   ```
   ibmcloud dev debug
@@ -58,7 +58,7 @@ Schritte zum Aktivieren des Debugging-Tools für eine Java-Anwendung:
 
 Schritte zum Aktivieren des Debugging-Tools für eine Node.js-Anwendung:
 
-1. Führen Sie den folgenden Befehl im Stammverzeichnis Ihres Anwendungsprojekts aus: 
+1. Führen Sie den folgenden Befehl im Stammverzeichnis Ihres Anwendungsprojekts aus:
   ```
   ibmcloud dev debug
   ```

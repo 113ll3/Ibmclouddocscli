@@ -49,7 +49,7 @@ Befolgen Sie diese Richtlinien, um das SDK-Plug-in für die {{site.data.keyword.
 
 * Abhängigkeitsmanager: [govendor ](https://github.com/kardianos/govendor){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
-   Das Tool `govendor` erstellt und verwaltet die Go-Abhängigkeiten. Es wird nur benötigt, wenn Sie beabsichtigen, das Anbieterverzeichnis zu aktualisieren. 
+   Das Tool `govendor` erstellt und verwaltet die Go-Abhängigkeiten. Es wird nur benötigt, wenn Sie beabsichtigen, das Anbieterverzeichnis zu aktualisieren.
 
    * Installieren Sie das Tool mithilfe des folgenden Befehls.
 
@@ -74,7 +74,7 @@ Befolgen Sie diese Richtlinien, um das SDK-Plug-in für die {{site.data.keyword.
 
 * BDD-Testframework: [Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
-Das Testframework basiert auf Ginkgo, einem BDD-Testframework für Go. Es wird zusammen mit [Gomega](http://onsi.github.io/gomega/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link"), einer Abgleichs- und Zusicherungsbibliothek für Gingko, verwendet. 
+Das Testframework basiert auf Ginkgo, einem BDD-Testframework für Go. Es wird zusammen mit [Gomega](http://onsi.github.io/gomega/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link"), einer Abgleichs- und Zusicherungsbibliothek für Gingko, verwendet.
 
    * Installieren Sie `ginkgo` mithilfe des folgenden Befehls.
 
@@ -110,7 +110,7 @@ Das Testframework basiert auf Ginkgo, einem BDD-Testframework für Go. Es wird z
 
 * Internationalisierung: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
-Die Internationalisierung basiert auf `go-i18n`, einem Paket- und Befehlszeilentool, das Unterstützung für die Übersetzung einer Go-Anwendung in mehrere Sprachen bereitstellt. Übersetzungspakete werden von `go-bindata` vorverarbeitet. Dies ist ein Befehl, der alle Eingabedateien in verwaltbaren Go-Quellcode konvertiert. 
+Die Internationalisierung basiert auf `go-i18n`, einem Paket- und Befehlszeilentool, das Unterstützung für die Übersetzung einer Go-Anwendung in mehrere Sprachen bereitstellt. Übersetzungspakete werden von `go-bindata` vorverarbeitet. Dies ist ein Befehl, der alle Eingabedateien in verwaltbaren Go-Quellcode konvertiert.
 
    * Installieren Sie `go-i18n` mithilfe des folgenden Befehls.
 
@@ -143,12 +143,12 @@ Delve ist ein Debugger für die Go-Programmiersprache und wird von [Visual Studi
 ## Erforderliche Laufzeitbibliotheken
 {: #runtime-libs}
 
-Die erforderlichen Laufzeitbibliotheken werden im Verzeichnis `vendor` verwaltet und im Git-Repository festgeschrieben, um Stabilität sicherzustellen, da Go keinen leistungsfähigen Abhängigkeitsmanager umfasst. 
+Die erforderlichen Laufzeitbibliotheken werden im Verzeichnis `vendor` verwaltet und im Git-Repository festgeschrieben, um Stabilität sicherzustellen, da Go keinen leistungsfähigen Abhängigkeitsmanager umfasst.
 
 ### Laufzeitabhängigkeiten
 {: #runtime-dependencies}
 
-Verschachtelte Abhängigkeiten sind nicht aufgeführt. 
+Verschachtelte Abhängigkeiten sind nicht aufgeführt.
 
 * [github.ibm.com/Bluemix/bluemix-cli-sdk ](https://github.ibm.com/Bluemix/bluemix-cli-sdk){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 

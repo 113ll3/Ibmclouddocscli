@@ -46,7 +46,7 @@ Wenn Sie das {{site.data.keyword.cloud_notm}}-Administrator-Plug-in zuvor instal
 Führen Sie die folgenden Schritte aus, um das Repository hinzuzufügen und das Plug-in zu installieren:
 
 <ol>
-<li>Führen Sie den folgenden Befehl aus, um das {{site.data.keyword.cloud_notm}}-Administrator-Plug-in hinzuzufügen: <br/><br/>
+<li>Führen Sie den folgenden Befehl aus, um das {{site.data.keyword.cloud_notm}}-Administrator-Plug-in hinzuzufügen:<br/><br/>
 <code>
 cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
 </code><br/><br/>
@@ -79,7 +79,7 @@ Wenn Sie weitere Hilfe zu einem Befehl benötigen, verwenden Sie die Option `-he
 ### Verbindung zu {{site.data.keyword.cloud_notm}} herstellen und Anmeldung durchführen
 
 Bevor Sie das Administrator-CLI-Plug-in verwenden können, müssen Sie eine Verbindung herstellen
-und sich anmelden, falls dies noch nicht erfolgt ist. 
+und sich anmelden, falls dies noch nicht erfolgt ist.
 
 <ol>
 <li>Führen Sie zum Herstellen einer Verbindung zum {{site.data.keyword.cloud_notm}}-API-Endpunkt den folgenden Befehl aus:<br/><br/>
@@ -184,9 +184,9 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">Die dem Benutzer zugeordnete Berechtigung. Verfügbare Berechtigungen: admin (oder superuser), login (oder basic), catalog.read, catalog.write, reports.read, reports.write, users.read oder users.write. Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'organization' verwendet werden.</dd>
+<dd class="pd">Die dem Benutzer zugeordnete Berechtigung. Verfügbare Berechtigungen: admin (oder superuser), login (oder basic), catalog.read, catalog.write, reports.read, reports.write, users.read oder users.write. Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'organization' verwendet werden. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">Der Name der Organisation, zu der der Benutzer gehört. Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'permission' verwendet werden. </dd>
+<dd class="pd">Der Name der Organisation, zu der der Benutzer gehört. Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'permission' verwendet werden.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
 <dd class="pd">Die dem Benutzer zugeordnete Organisationsrolle. Verfügbare Rollen: 'auditors', 'managers' und 'billing_managers'. Sie müssen mit diesem Parameter die Organisation angeben.</dd>
 
@@ -203,7 +203,7 @@ cf ba set-permissions <user_name> <permission> <access>
 ```
 {: codeblock}
 
-Sie können jeweils nur eine Berechtigung gleichzeitig festlegen. 
+Sie können jeweils nur eine Berechtigung gleichzeitig festlegen.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -287,7 +287,7 @@ Befehlsnamen **ba create-org** verwenden.
 ### Organisation löschen
 {: #admin_delete_org}
 
-Verwenden Sie den folgenden Befehl, um eine Organisation zu löschen: 
+Verwenden Sie den folgenden Befehl, um eine Organisation zu löschen:
 
 ```
 cf ba delete-org <organization>
@@ -682,7 +682,7 @@ Wenn Sie für die Berichtsberechtigung über Schreibzugriff verfügen, können S
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">Die Kategorie für den Bericht. Wenn ein Leerzeichen im Namen enthalten ist, setzen Sie den Namen in Anführungszeichen. </dd>
+<dd class="pd">Die Kategorie für den Bericht. Wenn ein Leerzeichen im Namen enthalten ist, setzen Sie den Namen in Anführungszeichen.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd">Das Berichtsdatum im Format <samp class="ph codeph">JJJJMMTT</samp>.</dd>
 <dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
@@ -706,7 +706,7 @@ cf ba delete-report <category> <date> <name>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">Die Kategorie für den Bericht. Wenn ein Leerzeichen im Namen enthalten ist, setzen Sie den Namen in Anführungszeichen. </dd>
+<dd class="pd">Die Kategorie für den Bericht. Wenn ein Leerzeichen im Namen enthalten ist, setzen Sie den Namen in Anführungszeichen.</dd>
 <dt class="pt dlterm">&lt;date&gt;</dt>
 <dd class="pd">Das Berichtsdatum im Format <samp class="ph codeph">JJJJMMTT</samp>.</dd>
 <dt class="pt dlterm">&lt;name&gt;</dt>

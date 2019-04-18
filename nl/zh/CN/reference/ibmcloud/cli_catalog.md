@@ -161,7 +161,7 @@ ibmcloud catalog entry-delete ID [--global]
 
 删除资源 `j402 - dnf1i`：
 ```
-ibmcloud catalog delete 'j402-dnf1i'
+ibmcloud catalog delete `j402-dnf1i`
 ```
 
 ## ibmcloud catalog entry-visibility
@@ -187,7 +187,6 @@ ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 <strong>示例</strong>：
 
 获取资源 `j402-dnf1i` 在全球范围的可视性：
-
 ```
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
@@ -306,7 +305,7 @@ ibmcloud catalog template mobileBackendStarter
 使用指定 URL 和描述基于指定模板创建 cf 应用程序。缺省情况下，新应用程序将自动启动。
 
 ```
-ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
+ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNAME] [-desc DESCRIPTION] [--no-start]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
@@ -317,9 +316,11 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] 
    <dd>应用程序在创建时所基于的模板。使用 <i>ibmcloud templates</i> 可查看所有模板的标识。</dd>
    <dt>CF_APP_NAME（必需）</dt>
    <dd>要创建的 cf 应用程序的名称。</dd>
-   <dt>-u <i>URL</i>（可选）</dt>
-   <dd>应用程序的路径。如果未指定，路径将由 {{site.data.keyword.Bluemix_notm}} 根据您的应用程序名称和缺省域自动设置。</dd>
-   <dt>-d <i>DESCRIPTION</i>（可选）</dt>
+   <dt>-n<i>HOSTNAME</i></dt>
+   <dd>CF 应用程序的主机名。如果未指定，路径将由 {{site.data.keyword.cloud_notm}} 根据您的应用程序名称和缺省域自动设置。</dd>
+   <dt>-d<i>DOMAINNAME</i></dt>
+   <dd>CF 应用程序的域。如果未指定，路径将由 {{site.data.keyword.cloud_notm}} 根据您的应用程序名称和缺省域自动设置。</dd>
+   <dt>--desc <i>DESCRIPTION</i>（可选）</dt>
    <dd>应用程序的描述。</dd>
    <dt>--no-start（可选）</dt>
    <dd>创建应用程序后，不自动启动应用程序。如果未指定，应用程序在创建后将自动启动。</dd>
@@ -333,9 +334,9 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] 
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
-基于 `rubyHelloWorld` 模板创建应用程序 `my-ruby-app`，路径为 `myrubyapp.chinabluemix.net`，描述为 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`：
+基于 `rubyHelloWorld` 模板，创建具有以下描述的应用程序 `my-ruby-app`：
 ```
-ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
 
 基于 `pythonHelloWorld` 模板创建应用程序 `my-python-app`，不带自动启动：
@@ -347,7 +348,6 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 {: #ibmcloud_catalog_locations}
 
 以您选择的格式获取区域选项子集。
-
 ```
 ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```

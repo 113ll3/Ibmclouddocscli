@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Mit dem CFEE-Service arbeiten
 {: #ibmcloud_commands_cfee}
 
-Mit {{site.data.keyword.cfee_full}} (CFEE) können Sie mehrere isolierte und auf Unternehmen abgestimmte Cloud Foundry-Plattformen bedarfsgesteuert instanziieren. Instanzen des IBM Cloud Foundry Enterprise-Service werden in Ihrem eigenen Konto in der {{site.data.keyword.cloud_notm}}-Umgebung ausgeführt. Die Umgebung wird auf isolierter Hardware (Kubernetes-Cluster) bereitgestellt. Sie haben volle Kontrolle über die Umgebung, einschließlich Zugriffssteuerung, Kapazitätsmanagement, Versionsaktualisierungen, Ressourcennutzung und Überwachung. 
+Mit {{site.data.keyword.cfee_full}} (CFEE) können Sie mehrere isolierte und auf Unternehmen abgestimmte Cloud Foundry-Plattformen bedarfsgesteuert instanziieren. Instanzen des IBM Cloud Foundry Enterprise-Service werden in Ihrem eigenen Konto in der {{site.data.keyword.cloud_notm}}-Umgebung ausgeführt. Die Umgebung wird auf isolierter Hardware (Kubernetes-Cluster) bereitgestellt. Sie haben volle Kontrolle über die Umgebung, einschließlich Zugriffssteuerung, Kapazitätsmanagement, Versionsaktualisierungen, Ressourcennutzung und Überwachung.
 
 Verwenden Sie die folgenden Befehle, um CFEE-Umgebungen, -Organisationen, -Bereiche, -Benutzer und -Rollen zu verwalten.
 {: shortdesc}
@@ -26,7 +26,7 @@ Verwenden Sie die folgenden Befehle, um CFEE-Umgebungen, -Organisationen, -Berei
 ## ibmcloud cfee environments
 {: #ibmcloud_cfee_environments}
 
-CFEE-Umgebungen auflisten: 
+CFEE-Umgebungen auflisten:
 ```
 ibmcloud cfee environments
 ```
@@ -101,7 +101,7 @@ ibmcloud cfee orgs --env env_example
 ## ibmcloud cfee org
 {: #ibmcloud_cfee_org}
 
-Details zu einer Organisation anzeigen: 
+Details zu einer Organisation anzeigen:
 ```
 ibmcloud cfee org ORG [--guid] [--env ENV]
 ```
@@ -181,7 +181,7 @@ ibmcloud cfee org org-create org_example --quota quota_example
 ## ibmcloud cfee org-delete
 {: #ibmcloud_cfee_org_delete}
 
-Organisation löschen: 
+Organisation löschen:
 ```
 ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 ```
@@ -221,7 +221,7 @@ ibmcloud cfee org org-delete org_example -f
 ## ibmcloud cfee org-users
 {: #ibmcloud_cfee_org_users}
 
-Benutzer in angegebener Organisation nach Rolle anzeigen: 
+Benutzer in angegebener Organisation nach Rolle anzeigen:
 ```
 ibmcloud cfee org-users ORG [-a, --all] [--env ENV]
 ```
@@ -303,7 +303,7 @@ ibmcloud cfee org-role-set tes@example.com org_example BillingManager --env env_
 ## ibmcloud cfee org-role-unset
 {: #ibmcloud_cfee_org_role_unset}
 
-Organisationsrolle eines Benutzers entfernen (nur Organisationsmanager oder Benutzer selbst): 
+Organisationsrolle eines Benutzers entfernen (nur Organisationsmanager oder Benutzer selbst):
 ```
 ibmcloud cfee org-role-unset USER_EMAIL ORG ROLE [--env ENV]
 ```
@@ -461,7 +461,7 @@ ibmcloud cfee space-create space_example -o org_example --env env_example
 ## ibmcloud cfee space-rename
 {: #ibmcloud_cfee_space_rename}
 
-Bereich umbenennen: 
+Bereich umbenennen:
 ```
 ibmcloud cfee space-rename OLD_NAME NEW_NAME [-o, --org ORG] [--env ENV]
 ```
@@ -497,7 +497,7 @@ ibmcloud cfee space-rename space_example new_pace_example -o org_example --env e
 ## ibmcloud cfee space-delete
 {: #ibmcloud_cfee_space_delete}
 
-Bereich löschen: 
+Bereich löschen:
 ```
 ibmcloud cfee space-delete SPACE [-f, --force] [-o, --org ORG] [--env ENV]
 ```
@@ -700,7 +700,7 @@ ibmcloud cfee create NAME LOCATION [--cells CELLS] [--isolation ISOLATION] [--pr
    <dt>LOCATION (erforderlich)</dt>
    <dd>Die Position, an der die Instanz erstellt werden soll.</dd>
    <dt>--cells CELLS</dt>
-   <dd>Geben Sie die Anzahl der Zellen für dieses CFEE an. Der Standardwert ist 2 und der Mindestwert ist 1. In einer CFEE mit einer Zelle kann es keine hohe Verfügbarkeit geben. </dd>
+   <dd>Geben Sie die Anzahl der Zellen für dieses CFEE an. Der Standardwert ist 2 und der Mindestwert ist 1. In einer CFEE mit einer Zelle kann es keine hohe Verfügbarkeit geben.</dd>
    <dt>--isolation ISOLATION</dt>
    <dd>Geben Sie die Isolation des IBM Kubernetes-Clusters an. Optionen sind "dediziert" und "freigegeben". Der Standardwert ist "freigegeben". Für einen "dedizierten" Cluster werden mehr Gebühren berechnet.</dd>
    <dt>--private-vlan ID</dt>

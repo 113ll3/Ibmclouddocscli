@@ -318,7 +318,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 ## ibmcloud resource service-instance-update
 {: #ibmcloud_resource_service_instance_update}
 
-Serviceinstanz aktualisieren: 
+Serviceinstanz aktualisieren:
 ```
 ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
 ```
@@ -351,7 +351,7 @@ ibmcloud resource service-instance-update my-service-instance -n new-service-ins
 ## ibmcloud resource service-instance-delete
 {: #ibmcloud_resource_service_instance_delete}
 
-Serviceinstanz löschen: 
+Serviceinstanz löschen:
 ```
 ibmcloud resource service-instance-delete (NAME|ID) [-f, --force] [--recursive]
 ```
@@ -381,7 +381,7 @@ ibmcloud resource service-instance-delete my-service-instance
 ## ibmcloud resource service-bindings
 {: #ibmcloud_resource_service_bindings}
 
-Bindungen an Servicealias anzeigen: 
+Bindungen an Servicealias anzeigen:
 ```
 ibmcloud resource service-bindings SERVICE_ALIAS [--output FORMAT]
 ```
@@ -406,7 +406,7 @@ ibmcloud resource bindings my-service-alias
 ## ibmcloud resource service-binding
 {: #ibmcloud_resource_service_binding}
 
-Details einer Servicebindung anzeigen: 
+Details einer Servicebindung anzeigen:
 ```
 ibmcloud resource service-binding ALIAS_NAME APP_NAME [--id] [--output FORMAT]
 ```
@@ -470,7 +470,7 @@ ibmcloud resource service-binding-create my-service-alias my-app Administrator
 ## ibmcloud resource service-binding-delete
 {: #ibmcloud_resource_service_binding_delete}
 
-Servicebindung löschen: 
+Servicebindung löschen:
 ```
 ibmcloud resource service-binding-delete SERVICE_ALIAS APP_NAME [-f, --force]
 ```
@@ -567,7 +567,7 @@ ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/5
 ## ibmcloud resource service-key-create
 {: #ibmcloud_resource_service_key_create}
 
-Serviceschlüssel erstellen: 
+Serviceschlüssel erstellen:
 ```
 ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
 ```
@@ -606,7 +606,7 @@ ibmcloud resource service-key-create my-service-key Administrator --instance-nam
 ## ibmcloud resource service-key-update
 {: #ibmcloud_resource_service_key_update}
 
-Serviceschlüssel aktualisieren: 
+Serviceschlüssel aktualisieren:
 ```
 ibmcloud resource service-key-update ( NAME | ID ) [-n, --name NEW_NAME] [-g RESOURCE_GROUP] [-f, --force]
 ```
@@ -660,7 +660,7 @@ ibmcloud resource service-key-delete my-service-key
 ## ibmcloud resource service-aliases
 {: #ibmcloud_resource_service_aliases}
 
-Aliasnamen für eine Serviceinstanz auflisten: 
+Aliasnamen für eine Serviceinstanz auflisten:
 ```
 ibmcloud resource service-aliases [ --instance-id ID | --instance-name NAME ] [--output FORMAT]
 ```
@@ -687,7 +687,7 @@ ibmcloud resource service-aliases my-service-instance
 ## ibmcloud resource service-alias
 {: #ibmcloud_resource_service_alias}
 
-Details eines Servicealias anzeigen: 
+Details eines Servicealias anzeigen:
 ```
 ibmcloud resource service-alias ALIAS_NAME [--id] [--output FORMAT]
 ```
@@ -714,7 +714,7 @@ ibmcloud resource service-alias  my-service-alias
 ## ibmcloud resource service-alias-create
 {: #ibmcloud_resource_service_alias_create}
 
-Alias einer Serviceinstanz erstellen: 
+Alias einer Serviceinstanz erstellen:
 ```
 ibmcloud resource service-alias-create ALIAS_NAME ( --instance-id ID | --instance-name NAME ) [-s SPACE_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_TEXT]
 ```
@@ -747,7 +747,7 @@ ibmcloud resource service-alias-create my-service-alias --instance-name my-servi
 ## ibmcloud resource service-alias-update
 {: #ibmcloud_resource_service_alias_update}
 
-Servicealias aktualisieren: 
+Servicealias aktualisieren:
 ```
 ibmcloud resource service-alias-update ALIAS_NAME [-n, --name NEW_NAME] [-t, --tags TAGS] [-p, --parameters @JSON_FILE | JSON_STRING ][-f, --force]
 ```
@@ -803,7 +803,7 @@ ibmcloud resource service-alias-delete my-service-alias
 ## ibmcloud resource search
 {: #ibmcloud_resource_search}
 
-Mit der Lucene-Abfragesyntax nach Ressourcen suchen: 
+Mit der Lucene-Abfragesyntax nach Ressourcen suchen:
 ```
 ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --sort-by (name, family, region, type, crn)] [-p, --provider PROVIDER]
 ```
@@ -823,11 +823,11 @@ ibmcloud search LUCENE_QUERY [-o, --offset OFFSET] [-l, --limit LIMIT] [-s, --so
 </dl>
 
 <strong>Durchsuchbare Attribute</strong>:
-Sie können nach den folgenden Attributen suchen: 
+Sie können nach den folgenden Attributen suchen:
 
 <dl>
   <dt>name</dt>
-  <dd>Der benutzerdefinierte Name der Ressource. </dd>
+  <dd>Der benutzerdefinierte Name der Ressource.</dd>
   <dt>region</dt>
   <dd>Der geographische Bereich, in dem die Ressource bereitgestellt wird. Beispiele: us-south, us-east, au-syd, eu-gb, eu-de und jp-tok.</dd>
   <dt>service_name</dt>
@@ -849,12 +849,12 @@ Sie können nach den folgenden Attributen suchen:
   <dt>_objectType</dt>
   <dd>Der Typ der klassischen Infrastrukturressource. Zulässige Werte sind 'SoftLayer_Virtual_DedicatedHost', 'SoftLayer_Hardware', 'SoftLayer_Network_Application_Delivery_Controller', 'SoftLayer_Network_Subnet_IpAddress', 'SoftLayer_Network_Vlan', 'SoftLayer_Network_Vlan_Firewall' und 'SoftLayer_Virtual_Guest'. </dd>
   <dt>tags, tagReferences.tag.name</dt>
-  <dd>Der an eine Ressource angehängte Tag. Verwenden Sie 'tagReferences.tag.name' zum Suchen nach Tags, die an klassische Inftrastrukturressourcen angehängt sind.</dd> 
+  <dd>Der an eine Ressource angehängte Tag. Verwenden Sie 'tagReferences.tag.name' zum Suchen nach Tags, die an klassische Inftrastrukturressourcen angehängt sind. </dd> 
 </dl>
 
 <strong>Beispiele</strong>:
 
-Nach Cloud Foundry-Anwendungen suchen, deren Name mit einem angegebenen Text beginnt: 
+Nach Cloud Foundry-Anwendungen suchen, deren Name mit einem angegebenen Text beginnt:
 ```
 ibmcloud resource search 'name:my* AND type:cf-application'
 ```

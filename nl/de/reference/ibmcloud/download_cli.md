@@ -32,7 +32,7 @@ Führen Sie zum Einrichten der eigenständigen {{site.data.keyword.cloud_notm}}-
    Linux X86 64 Bit: [Installationsprogramm](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
    Linux LE 64 Bit (ppc64le): [Installationsprogramm](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
 
-   Rufen Sie für 32-Bit-Versionen und ältere Versionen zum Herunterladen die Seite [Releases der {{site.data.keyword.cloud_notm}}-CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-cli-releases#cli-releases) auf. 
+   Rufen Sie für 32-Bit-Versionen und ältere Versionen zum Herunterladen die Seite [Releases der {{site.data.keyword.cloud_notm}}-CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-cli-releases#cli-releases) auf.
 
 2. Führen Sie das Installationsprogramm aus.
    * Führen Sie für MacOS und Windows&trade; einfach das Installationsprogramm aus.
@@ -46,7 +46,7 @@ Führen Sie zum Einrichten der eigenständigen {{site.data.keyword.cloud_notm}}-
    
 Jetzt können Sie {{site.data.keyword.cloud_notm}}-Ressourcen verwalten. Geben Sie `ibmcloud help` ein, damit Beschreibungen der einzelnen Befehle angezeigt werden.
 
-Wenn Sie eine föderierte ID verwenden, folgen Sie den [hier](/docs/iam?topic=iam-federated_id#federated_id) angegebenen Anweisungen zum Anmelden mit einem einmaligen Kenncode oder einem API-Schlüssel.   
+Wenn Sie eine föderierte ID verwenden, folgen Sie den [hier](/docs/iam?topic=iam-federated_id#federated_id) angegebenen Anweisungen zum Anmelden mit einem einmaligen Kenncode oder einem API-Schlüssel.  
 {: tip}
 
 Zusätzlich zu den Installationsprogrammen stehen weitere Optionen für die Installation der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle zur Verfügung:
@@ -104,7 +104,7 @@ Wenn Installationsprogramme oder ein Shell-Script für die Installation der {{si
 ### Schritt 2: Paket in ein Verzeichnis extrahieren, das Sie angeben.
 {: #step2-custom-dir}
 
-   Nach dem Extrahieren des Pakets sieht der Inhalt wie folgt aus: 
+   Nach dem Extrahieren des Pakets sieht der Inhalt wie folgt aus:
 
    Für Linux&trade; und MacOS:
 

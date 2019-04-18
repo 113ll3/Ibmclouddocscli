@@ -27,14 +27,14 @@ Wenn Sie eine differenziertere Steuerung bei der Installation von Komponenten de
 {: cli-before-you-begin}
 
 * Installieren Sie die eigenständige [{{site.data.keyword.cloud}}-Befehlszeilenschnittstelle (CLI)](/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli), damit Sie die Installation von Befehlszeilen-Plug-ins für `ibmcloud` unterstützen können.
-* Installieren Sie den Befehl [curl](https://curl.haxx.se/download.html){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") zum Herunterladen von Paketen über die Befehlszeile. 
+* Installieren Sie den Befehl [curl](https://curl.haxx.se/download.html){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") zum Herunterladen von Paketen über die Befehlszeile.
 
 ## Schritt 1. CLI-Plug-in für {{site.data.keyword.cloud_notm}}-Entwicklertools installieren
 {: #install-devtools-idt}
 
 Sie können die Befehle der CLI für {{site.data.keyword.cloud_notm}}-Entwicklertools (ibmcloud dev) verwenden, um eine Anwendung zu erstellen, zu verwalten, bereitzustellen, zu debuggen und zu testen.
 
-Installieren Sie das Plug-in `dev`, indem Sie den folgenden Befehl ausführen:  
+Installieren Sie das Plug-in `dev`, indem Sie den folgenden Befehl ausführen: 
 ```
 ibmcloud plugin install dev
 ```
@@ -94,7 +94,7 @@ Weitere Informationen finden Sie in [CLI und API einrichten](/docs/containers?to
 
 Installieren Sie den auf Kubernetes basierenden Paketmanager [Helm](https://helm.sh/docs/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
-* Benutzer von MacOS und Linux&trade; können die folgenden Befehle ausführen: 
+* Benutzer von MacOS und Linux&trade; können die folgenden Befehle ausführen:
   ```
   export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
@@ -106,7 +106,7 @@ curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | 
 ## Schritt 6. {{site.data.keyword.openwhisk_short}}-CLI-Plug-in installieren
 {: #idt-install-functions}
 
-Mit dem {{site.data.keyword.openwhisk}}-CLI-Plug-in können Sie Ihre Code-Snippets in Aktionen verwalten sowie Auslöser und Regeln erstellen, damit Ihre Aktionen auf Ereignisse reagieren können, und Aktionen in Paketen bündeln. 
+Mit dem {{site.data.keyword.openwhisk}}-CLI-Plug-in können Sie Ihre Code-Snippets in Aktionen verwalten sowie Auslöser und Regeln erstellen, damit Ihre Aktionen auf Ereignisse reagieren können, und Aktionen in Paketen bündeln.
 
 Führen Sie den folgenden Befehl aus, um das Plug-in für die {{site.data.keyword.openwhisk_short}}-CLI zu installieren:
 ```

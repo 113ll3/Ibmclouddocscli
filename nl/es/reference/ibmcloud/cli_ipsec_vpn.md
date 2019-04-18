@@ -87,7 +87,7 @@ ibmcloud sl ipsec order [OPTIONS]
 <strong>Opciones de mandato</strong>:
 <dl>
 <dt>-d, --datacenter</dt>
-<dd>Obligatorio. Nombre abreviado del centro de datos para la IPSEC, por ejemplo dal09 .</dd>
+<dd>Obligatorio. Nombre abreviado del centro de datos para la IPSEC, por ejemplo dal09.</dd>
 </dl>
 
 ## ibmcloud sl ipsec subnet-add

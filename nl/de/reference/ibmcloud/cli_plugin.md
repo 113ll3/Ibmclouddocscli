@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-15"
 
 keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
@@ -48,15 +48,15 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (erforderlich)</dt>
    <dd>Der Name des Repositorys, das hinzugefügt werden soll. Sie können einen eigenen Namen für jedes Repository definieren.</dd>
    <dt>REPO_URL (erforderlich)</dt>
-   <dd>Die URL des Repositorys, das hinzugefügt werden soll. Die URL des Repositorys muss das Protokoll (zum Beispiel 'http://plugins.ng.bluemix.net' anstatt 'plugins.ng.bluemix.net') enthalten. http://plugins.ng.bluemix.net ist das offizielle Plug-in-Repository der {{site.data.keyword.cloud_notm}}-CLI.</dd>
+   <dd>Die URL des Repositorys, das hinzugefügt werden soll. Die Repository-URL muss das Protokoll (zum Beispiel https://plugins.cloud.ibm.com statt https://plugins.cloud.ibm.com) enthalten. https://plugins.cloud.ibm.com ist das offizielle Plug-in-Repository der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle.</dd>
     </dl>
 
 
 <strong>Beispiele</strong>:
 
-Offizielles Plug-in-Repository der {{site.data.keyword.Bluemix_notm}}-CLI als `bluemix-repo` hinzufügen:
+Offizielles Plug-in-Repository der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle als `ibmcloud-repo` hinzufügen:
 ```
-ibmcloud plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
+ibmcloud plugin repo-add ibmcloud-repo https://plugins.cloud.ibm.com
 ```
 {: codeblock}
 
@@ -79,9 +79,9 @@ ibmcloud plugin repo-remove REPO_NAME
 
 <strong>Beispiele</strong>:
 
-Repository `bluemix-repo` aus der Befehlszeilenschnittstelle von {{site.data.keyword.cloud_notm}} entfernen:
+Repository `ibmcloud-repo` aus der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle entfernen:
 ```
-ibmcloud plugin repo-remove bluemix-repo
+ibmcloud plugin repo-remove ibmcloud-repo
 ```
 {: codeblock}
 
@@ -110,10 +110,10 @@ Alle Plug-ins in allen hinzugefügten Repositorys auflisten:
 ibmcloud plugin repo-plugins
 ```
 
-Alle Plug-ins im Repository `bluemix-repo` auflisten:
+Alle Plug-ins im Repository `ibmcloud-repo` auflisten:
 
 ```
-ibmcloud plugin repo-plugins -r bluemix-repo
+ibmcloud plugin repo-plugins -r ibmcloud-repo
 ```
 
 ## ibmcloud plugin repo-plugin
@@ -151,7 +151,7 @@ ibmcloud plugin repo-plugin IBM-Containers -r sample-repo
 ## ibmcloud plugin list
 {: #ibmcloud_plugin_list}
 
-Alle installierten Plug-ins in der {{site.data.keyword.Bluemix_notm}}-CLI auflisten.
+Alle installierten Plug-ins in der {{site.data.keyword.cloud_notm}}-CLI auflisten.
 ```
 ibmcloud plugin list
 ```
@@ -172,7 +172,7 @@ ibmcloud plugin show PLUGIN-NAME
 ## ibmcloud plugin install
 {: #ibmcloud_plugin_install}
 
-Angegebene Version des Plug-ins aus dem angegebenen Pfad oder Repository in der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle installieren.
+Angegebene Version des Plug-ins aus dem angegebenen Pfad oder Repository in der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle installieren.
 ```
 ibmcloud plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
@@ -200,7 +200,7 @@ Wenn keine Version angegeben wird, wählt der Befehl die neueste verfügbare Ver
     </dl>
 
 
-Die {{site.data.keyword.Bluemix_notm}}-CLI trägt den offiziellen Repository-Namen `Bluemix`.
+Die {{site.data.keyword.cloud_notm}}-CLI trägt den offiziellen Repository-Namen `Bluemix`.
 
 <strong>Beispiele</strong>:
 
@@ -213,7 +213,7 @@ ibmcloud plugin install /downloads/new_plugin
 Plug-in von der Remote URL installieren:
 
 ```
-ibmcloud plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
+ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/new_plugin
 ```
 
 Plug-in 'container-service' der neuesten Version aus dem Repository 'Bluemix' installieren:
@@ -289,7 +289,7 @@ ibmcloud plugin update container-service -v 0.1.440
 ## ibmcloud plugin uninstall
 {: #ibmcloud_plugin_uninstall}
 
-Angegebenes Plug-in in der {{site.data.keyword.Bluemix_notm}}-CLI deinstallieren.
+Angegebenes Plug-in in der {{site.data.keyword.cloud_notm}}-CLI deinstallieren.
 
 ```
 ibmcloud plugin uninstall PLUGIN_NAME

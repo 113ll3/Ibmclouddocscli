@@ -122,4 +122,4 @@ ibmcloud sl globalip unassign IDENTIFIER
 ibmcloud sl globalip unassign 12345678
 ```
 
-Dieser Befehl hebt die Zuordnung einer IP-Adresse mit der ID `12345678` zu einem Zielgerät auf. 
+Dieser Befehl hebt die Zuordnung einer IP-Adresse mit der ID `12345678` zu einem Zielgerät auf.

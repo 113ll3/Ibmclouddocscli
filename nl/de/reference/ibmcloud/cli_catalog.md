@@ -23,7 +23,7 @@ Verwenden Sie die folgenden Befehle, um die {{site.data.keyword.cloud}}-Kataloge
 ## ibmcloud catalog search
 {: #ibmcloud_catalog_search}
 
-Katalogeinträge durchsuchen: 
+Katalogeinträge durchsuchen:
 ```
 ibmcloud catalog search <QUERY> [-r, --region REGION] [-k, --kind KIND] [-p, --price PRICE] [-t, --tag TAG] [--sort-by PROPERTY] [--col COLUMNS] [--reverse] [--output TYPE] [--csv] [--global]
 ```
@@ -93,7 +93,7 @@ ibmcloud catalog entry 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-create
 {: #ibmcloud_catalog_entry_create}
 
-Neuen Katalogeintrag erstellen (nur Katalogadministrator eines Kontos): 
+Neuen Katalogeintrag erstellen (nur Katalogadministrator eines Kontos):
 ```
 ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--global]
 ```
@@ -120,7 +120,7 @@ ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ## ibmcloud catalog entry-update
 {: #ibmcloud_catalog_entry_update}
 
-Vorhandenen Katalogeintrag aktualisieren (nur Katalogadministrator oder Editor eines Kontos): 
+Vorhandenen Katalogeintrag aktualisieren (nur Katalogadministrator oder Editor eines Kontos):
 ```
 ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 ```
@@ -161,7 +161,7 @@ ibmcloud catalog entry-delete ID [--global]
 
 Ressource `j402-dnf1i` löschen:
 ```
-ibmcloud catalog delete 'j402-dnf1i'
+ibmcloud catalog delete `j402-dnf1i`
 ```
 
 ## ibmcloud catalog entry-visibility
@@ -187,7 +187,6 @@ ibmcloud catalog entry-visibility ID  [--output TYPE] [--global]
 <strong>Beispiele</strong>:
 
 Sichtbarkeit der Ressource `j402-dnf1i` im globalen Bereich abrufen:
-
 ```
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
@@ -195,7 +194,7 @@ ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ## ibmcloud catalog entry-visibility-set
 {: #ibmcloud_catalog_entry_visibility_set}
 
-Sichtbarkeit eines vorhandenen Katalogeintrags aktualisieren (nur Katalogadministrator eines Kontos): 
+Sichtbarkeit eines vorhandenen Katalogeintrags aktualisieren (nur Katalogadministrator eines Kontos):
 ```
 ibmcloud catalog entry-visibility-set ID [--includes-add LIST] [--includes-remove LIST] [--excludes-add LIST] [--excludes-remove LIST] [--owner ID or Email] [--restrict] [--unrestrict] [-c PARAMETERS_AS_JSON] [--global]
 ```
@@ -306,7 +305,7 @@ ibmcloud catalog template mobileBackendStarter
 Erstellt eine cf-Anwendung, die auf der angegebenen Vorlage mit der angegebenen URL und Beschreibung basiert. Die neue App wird standardmäßig automatisch gestartet.
 
 ```
-ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
+ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNAME] [-desc DESCRIPTION] [--no-start]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -317,12 +316,14 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] 
    <dd>Die Vorlage, auf der die Anwendung basiert, wenn sie erstellt wird. Verwenden Sie <i>ibmcloud templates</i>, um die IDs aller Vorlagen anzuzeigen.</dd>
    <dt>CF_APP_NAME (erforderlich)</dt>
    <dd>Der Name der cf-Anwendung, die erstellt werden soll.</dd>
-   <dt>-u <i>URL</i> (optional)</dt>
-   <dd>Die Route der Anwendung. Wenn sie nicht angegeben ist, wird die Route von {{site.data.keyword.Bluemix_notm}} automatisch auf der Grundlage des App-Namens und der Standarddomäne festgelegt.</dd>
-   <dt>-d <i>DESCRIPTION</i> (optional)</dt>
+   <dt>-n<i>HOSTNAME</i></dt>
+   <dd>Der Hostname der CF-Anwendung. Wenn sie nicht angegeben ist, wird die Route von {{site.data.keyword.cloud_notm}} automatisch auf der Grundlage des App-Namens und der Standarddomäne festgelegt.</dd>
+   <dt>-d<i>DOMAINNAME</i></dt>
+   <dd>Die Domäne der CF-Anwendung. Wenn sie nicht angegeben ist, wird die Route von {{site.data.keyword.cloud_notm}} automatisch auf der Grundlage des App-Namens und der Standarddomäne festgelegt.</dd>
+   <dt>--desc <i>DESCRIPTION</i> (optional)</dt>
    <dd>Die Beschreibung für die Anwendung.</dd>
    <dt>--no-start (optional)</dt>
-   <dd>Nach der Erstellung wird die Anwendung nicht automatisch gestartet: Wenn diese Option nicht angegeben ist, wird die Anwendung nach ihrer Erstellung automatisch gestartet. </dd>
+   <dd>Nach der Erstellung wird die Anwendung nicht automatisch gestartet: Wenn diese Option nicht angegeben ist, wird die Anwendung nach ihrer Erstellung automatisch gestartet.</dd>
    </dl>
 
 
@@ -333,9 +334,9 @@ cf-Anwendung `my-app` auf der Basis der Vorlage `javaHelloWorld` erstellen:
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
-Anwendung `my-ruby-app` auf der Basis der Vorlage `rubyHelloWorld` mit der Route `myrubyapp.chinabluemix.net` und der Beschreibung `My first ruby app on {{site.data.keyword.Bluemix_notm}}.` erstellen:
+Anwendung `my-ruby-app` auf der Basis der Vorlage `rubyHelloWorld` mit einer Beschreibung erstellen:
 ```
-ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
 
 Anwendung `my-python-app` auf Basis der Vorlage `pythonHelloWorld` ohne automatischen Start erstellen:
@@ -347,7 +348,6 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 {: #ibmcloud_catalog_locations}
 
 Ausgewähltes Subset von Regionen in von Ihnen ausgewähltem Format abrufen.
-
 ```
 ibmcloud catalog locations [-i, --id ID] [-k, --kind KIND] [--col COLUMNS] [--output TYPE] [--global] [--csv]
 ```

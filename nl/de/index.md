@@ -82,14 +82,14 @@ Die Ausgabe listet die Verwendungsanweisungen, die aktuelle Version und die unte
 ## Schritt 3. Umgebung konfigurieren
 {: #step3-configure-idt-env}
 
-1. Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit Ihrer IBMid an. Wenn Sie über mehrere Konten verfügen, werden Sie aufgefordert, das Konto auszuwählen, das verwendet werden soll. Wenn Sie keine Region mit dem Flag `-r` angeben, müssen Sie auch eine Region auswählen. 
+1. Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit Ihrer IBMid an. Wenn Sie über mehrere Konten verfügen, werden Sie aufgefordert, das Konto auszuwählen, das verwendet werden soll. Wenn Sie keine Region mit dem Flag `-r` angeben, müssen Sie auch eine Region auswählen.
   ```
   ibmcloud login
   ```
   {: codeblock}
   
   Wenn Ihre Berechtigungsnachweise zurückgewiesen werden, verwenden Sie möglicherweise eine föderierte ID. Verwenden Sie für die Anmeldung mit einer föderierten ID das Flag `--sso`. Weitere Informationen finden Sie unter [Mit föderierter ID anmelden](/docs/iam/federated_id?topic=iam-federated_id#federated_id).
-	{: tip}
+  {: tip}
 
 2. Geben Sie für die Verwendung von Cloud Foundry-Services eine Organisation und einen Bereich als Ziel an.
   ```

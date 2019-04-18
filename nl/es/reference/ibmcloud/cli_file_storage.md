@@ -164,7 +164,7 @@ ibmcloud sl file replica-order VOLUME_ID [OPTIONS]
 <dt>-t, --tier</dt>
 <dd>Opcional. Nivel de almacenamiento resistente (IOPS por GB) del volumen primario para el cual se solicita una réplica. Las opciones son: 0,25, 2, 4, 10. Si no se especifica el nivel, se utilizará el nivel del volumen original.</dd>
 <dt>-i, --iops</dt>
-<dd>IOP de almacenamiento de rendimiento, entre 100 y 6000 en múltiplos de 100. Si no se especifica IOPS, se utilizará el IOPS del volumen original.</dd>
+<dd>IOPS de almacenamiento de rendimiento, entre 100 y 6000 en múltiplos de 100. Si no se especifica IOPS, se utilizará el IOPS del volumen original.</dd>
 <dt>-f, --force</dt>
 <dd>Forzar la operación sin confirmación.</dd>
 </dl>
@@ -338,7 +338,7 @@ ibmcloud sl file snapshot-order VOLUME_ID [OPTIONS]
 <dt>-t, --tier</dt>
 <dd>Opcional. Nivel de almacenamiento resistente (IOPS por GB) del volumen de archivo para el cual se solicita el espacio. Las opciones son: 0,25, 2, 4, 10.</dd>
 <dt>-i, --iops</dt>
-<dd>IOP de almacenamiento de rendimiento, entre 100 y 6000 en múltiplos de 100.</dd>
+<dd>IOPS de almacenamiento de rendimiento, entre 100 y 6000 en múltiplos de 100.</dd>
 <dt>-u, --upgrade</dt>
 <dd>Distintivo para indicar que el pedido es una actualización.</dd>
 <dt>-f, --force</dt>
@@ -513,7 +513,7 @@ ibmcloud sl file volume-order [OPTIONS]
 <dt>-s, --size</dt>
 <dd>Obligatorio. Tamaño de volumen de almacenamiento en GB.</dd>
 <dt>-i, --iops</dt>
-<dd>IOP de almacenamiento de rendimiento, entre 100 y 6000 en múltiplos de 100 [obligatorio para el rendimiento de tipo de almacenamiento].</dd>
+<dd>IOPS de almacenamiento de rendimiento, entre 100 y 6000 en múltiplos de 100 [obligatorio para el rendimiento de tipo de almacenamiento].</dd>
 <dt>-e, --tier</dt>
 <dd>Nivel de almacenamiento resistente (IOP por GB) [obligatorio para la resistencia de tipo de almacenamiento]. Las opciones son: 0,25, 2, 4, 10.</dd>
 <dt>-d, --datacenter</dt>

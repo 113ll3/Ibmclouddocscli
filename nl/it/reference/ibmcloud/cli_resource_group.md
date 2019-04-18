@@ -849,7 +849,7 @@ Puoi cercare i seguenti attributi:
   <dt>_objectType</dt>
   <dd>Il tipo della risorsa dell'infrastruttura classica. I valori consentiti sono SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall and SoftLayer_Virtual_Guest. </dd>
   <dt>tags, tagReferences.tag.name</dt>
-  <dd>La tag collegata a una risorsa. Utilizza tagReferences.tag.name quando cerchi le tag collegate alle risorse dell'infrastruttura classica</dd> 
+  <dd>La tag collegata a una risorsa. Utilizza tagReferences.tag.name quando cerchi le tag collegate alle risorse dell'infrastruttura classica </dd> 
 </dl>
 
 <strong>Esempi</strong>:

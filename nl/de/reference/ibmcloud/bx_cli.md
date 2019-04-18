@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-15"
 
 keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -89,7 +89,7 @@ ibmcloud api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
 <strong>Befehlsoptionen</strong>:
    <dl>
    <dt>API_ENDPOINT (optional)</dt>
-   <dd>Der API-Endpunkt, der als Ziel verwendet wird, zum Beispiel `https://cloud.ibm.com`. Wenn weder die Option *API_ENDPOINT* noch die Option `--unset`  angegeben wird, wird der aktuelle API-Endpunkt angezeigt. </dd>
+   <dd>Der API-Endpunkt, der als Ziel verwendet wird, zum Beispiel `https://cloud.ibm.com`. Wenn weder die Option *API_ENDPOINT* noch die Option `--unset`  angegeben wird, wird der aktuelle API-Endpunkt angezeigt.</dd>
    <dt>--unset (optional)</dt>
    <dd>Entfernt die Einstellung für den API-Endpunkt.</dd>
    <dt>--skip-ssl-validation (optional)</dt>
@@ -240,7 +240,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> --apikey <i>API_KEY oder @API_KEY_FILE_PATH</i>
   <dd> API-Schlüsselinhalt oder der Pfad einer API-Schlüsseldatei, der durch @ angegeben wird.</dd>
   <dt> --sso (optional) </dt>
-  <dd> Verwenden Sie einen einmaligen Kenncode für die Anmeldung.</dd>
+  <dd> Verwenden Sie einen einmaligen Kenncode für die Anmeldung. </dd>
   <dt> -u <i>USERNAME</i> (optional)</dt>
   <dd> Der Benutzername.</dd>
   <dt> -p <i>PASSWORD</i> (optional)</dt>
@@ -262,7 +262,7 @@ ibmcloud login [-a API_ENDPOINT] [--sso] [-u USERNAME] [-p PASSWORD] [--apikey K
   <dt> --no-iam </dt>
   <dd> Authentifizierung beim Anmeldeserver anstatt beim öffentlichen IAM erzwingen</dd>
   <dt> --skip-ssl-validation (optional) </dt>
-  <dd> Umgeht die SSL-Validierung von HTTP-Anforderungen. Diese Option wird nicht empfohlen. </dd>
+  <dd> Umgeht die SSL-Validierung von HTTP-Anforderungen. Diese Option wird nicht empfohlen.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -304,7 +304,7 @@ ibmcloud login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
-<strong>Hinweis:</strong> Wenn der API-Schlüssel ein zugeordnetes Konto hat, ist ein Wechsel zu einem anderen Konto nicht zulässig. 
+<strong>Hinweis:</strong> Wenn der API-Schlüssel ein zugeordnetes Konto hat, ist ein Wechsel zu einem anderen Konto nicht zulässig.
 
 ### Einmaligen Kenncode verwenden
 ```
@@ -417,7 +417,7 @@ Verwenden Sie Befehle der klassischen Infrastruktur in der {{site.data.keyword.c
 Den Befehl `ibmcloud sl` ausführen, um die Liste der verfügbaren Befehle anzuzeigen:
 ```
 USAGE:
-   bx sl command [argumente...] [optionen...]
+   ibmcloud sl command [argumente...] [optionen...]
 
 COMMANDS:
    block           Gen1-Infrastruktur - Blockspeicher
@@ -442,7 +442,7 @@ COMMANDS:
 ```
 {: screen}
 
-Gehen Sie wie folgt vor, um Hilfeinformationen zu einem Befehl anzuzeigen: 
+Gehen Sie wie folgt vor, um Hilfeinformationen zu einem Befehl anzuzeigen:
 ```
 ibmcloud sl [command] -h
 ```

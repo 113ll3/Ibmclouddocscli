@@ -77,7 +77,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-Utilizza il comando `console` per aprire un browser web per la console web della tua applicazione su {{site.data.keyword.cloud_notm}}.  Puoi eseguire il comando `ibmcloud dev console` dall'interno della cartella della tua applicazione. La CLI prova a trovare un'applicazione corrispondente in {{site.data.keyword.cloud_notm}} che abbia lo stesso ID applicazione della directory corrente. Se non è in grado di trovare un nome corrispondente, il sistema apre il dashboard Web e mobile su {{site.data.keyword.cloud_notm}} invece dell'applicazione specifica.
+Utilizza il comando `console` per aprire un browser web per la console web della tua applicazione su {{site.data.keyword.cloud_notm}}. Puoi eseguire il comando `ibmcloud dev console` dall'interno della cartella della tua applicazione. La CLI prova a trovare un'applicazione corrispondente in {{site.data.keyword.cloud_notm}} che abbia lo stesso ID applicazione della directory corrente. Se non è in grado di trovare un nome corrispondente, il sistema apre il dashboard Web e mobile su {{site.data.keyword.cloud_notm}} invece dell'applicazione specifica.
 
 Puoi fornire un nome applicazione e la CLI ignora la messa in corrispondenza basata sul nome della cartella o dell'applicazione. In questo caso, la CLI apre la console dell'applicazione denominata in un browser web.  
 
@@ -296,7 +296,7 @@ La presenza dei file necessari fornisce il rilevamento del linguaggio dell'appli
 	* La presenza di un `pom.xml` identifica un'applicazione Maven.
 	* La presenza di un `build.gradle` identifica un'applicazione Gradle.
 
-Facoltativamente, puoi anche sovrascrivere il linguaggio dell'applicazione rilevato utilizzando l'argomento `--language`.  Sono supportate solo le applicazioni complete e valide. Il comando enable non modifica il tuo codice sorgente.
+Facoltativamente, puoi anche sovrascrivere il linguaggio dell'applicazione rilevato utilizzando l'argomento `--language`. Sono supportate solo le applicazioni complete e valide. Il comando enable non modifica il tuo codice sorgente.
 
 ### Opzioni di linguaggio di enable
 {: #enable-language-options}
@@ -593,7 +593,7 @@ I seguenti parametri sono esclusivi per il comando `view`.
 ## comandi composti
 {: #compound}
 
-Puoi eseguire diversi comandi in una istruzione della riga di comando separando i comandi di {{site.data.keyword.cloud_notm}} Developer Tools con il delimitatore `/`. Possono essere utilizzati ulteriori indicatori della riga di comando dopo aver specificato i comandi composti.  I seguenti comandi sono esempi di come puoi utilizzare i comandi composti:
+Puoi eseguire diversi comandi in una istruzione della riga di comando separando i comandi di {{site.data.keyword.cloud_notm}} Developer Tools con il delimitatore `/`. Possono essere utilizzati ulteriori indicatori della riga di comando dopo aver specificato i comandi composti. I seguenti comandi sono esempi di come puoi utilizzare i comandi composti:
 ```
 ibmcloud dev build/run
 ibmcloud dev build/deploy --trace -t buildpack

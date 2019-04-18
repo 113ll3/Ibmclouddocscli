@@ -161,7 +161,7 @@ ibmcloud catalog entry-delete ID [--global]
 
 Elimina risorsa `j402-dnf1i`:
 ```
-ibmcloud catalog delete 'j402-dnf1i'
+ibmcloud catalog delete `j402-dnf1i`
 ```
 
 ## ibmcloud catalog entry-visibility
@@ -187,7 +187,6 @@ ibmcloud catalog entry-visibility ID  [--output TIPO] [--global]
 <strong>Esempi</strong>:
 
 Ottiene la visibilità della risorsa `j402-dnf1i` in ambito globale:
-
 ```
 ibmcloud catalog entry-visibility 'j402-dnf1i' --global
 ```
@@ -281,14 +280,14 @@ ibmcloud catalog templates [-d]
 
 Visualizza le informazioni dettagliate di un template di contenitore tipo specificato.
 ```
-ibmcloud catalog template ID_TEMPLATE
+ibmcloud catalog template TEMPLATE_ID
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>ID_TEMPLATE (obbligatorio)</dt>
+   <dt>TEMPLATE_ID (obbligatorio)</dt>
    <dd>L'ID del template di contenitore tipo. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i template.</dd>
    </dl>
 
@@ -306,20 +305,22 @@ ibmcloud catalog template mobileBackendStarter
 Crea un'applicazione cf basata sul template specificato con l'URL e la descrizione specificati. Per impostazione predefinita, la nuova applicazione viene avviata automaticamente.
 
 ```
-ibmcloud catalog template-run ID_TEMPLATE NOME_APPLICAZIONE_CF [-u URL] [-d DESCRIZIONE] [--no-start]
+ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNAME] [-desc DESCRIPTION] [--no-start]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>ID_TEMPLATE (obbligatorio)</dt>
+   <dt>TEMPLATE_ID (obbligatorio)</dt>
    <dd>Il template su cui è basata l'applicazione quando viene creata. Utilizza <i>ibmcloud templates</i> per visualizzare l'ID di tutti i template.</dd>
-   <dt>NOME_APPLICAZIONE_CF (obbligatorio)</dt>
+   <dt>CF_APP_NAME (obbligatorio)</dt>
    <dd>Il nome dell'applicazione cf da creare.</dd>
-   <dt>-u <i>URL</i> (facoltativo)</dt>
-   <dd>La rotta dell'applicazione. Se non specificata, la rotta viene impostata automaticamente da {{site.data.keyword.Bluemix_notm}} in base al nome della tua applicazione e al dominio predefinito.</dd>
-   <dt>-d <i>DESCRIZIONE</i> (facoltativo)</dt>
+   <dt>-n<i>HOSTNAME</i></dt>
+   <dd>Il nome host dell'applicazione CF. Se non specificata, la rotta viene impostata automaticamente da {{site.data.keyword.cloud_notm}} in base al nome della tua applicazione e al dominio predefinito.</dd>
+   <dt>-d<i>DOMAINNAME</i></dt>
+   <dd>Il dominio dell'applicazione CF. Se non specificata, la rotta viene impostata automaticamente da {{site.data.keyword.cloud_notm}} in base al nome della tua applicazione e al dominio predefinito.</dd>
+   <dt>--desc <i>DESCRIPTION</i> (facoltativo)</dt>
    <dd>Descrizione dell'applicazione.</dd>
    <dt>--no-start (facoltativo)</dt>
    <dd>Non avviare l'applicazione automaticamente dopo la sua creazione. Se non viene specificata, l'applicazione viene avviata automaticamente dopo la sua creazione.</dd>
@@ -333,9 +334,9 @@ Crea un'applicazione `my-app` basata sul template `javaHelloWorld`:
 ibmcloud catalog template-run javaHelloWorld my-app
 ```
 
-Crea un'applicazione `my-ruby-app` basata sul template `rubyHelloWorld` con la rotta `myrubyapp.chinabluemix.net` e la descrizione `La mia prima applicazione ruby su {{site.data.keyword.Bluemix_notm}}.`:
+Crea un'applicazione `my-ruby-app` basata sul template `rubyHelloWorld` con una descrizione:
 ```
-ibmcloud catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud."
 ```
 
 Crea un'applicazione `my-python-app` basata sul template `pythonHelloWorld` senza l'avvio automatico:
@@ -347,7 +348,6 @@ ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start
 {: #ibmcloud_catalog_locations}
 
 Ottieni un sottoinsieme scelto di regioni nel formato di tua scelta.
-
 ```
 ibmcloud catalog locations [-i, --id ID] [-k, --kind TIPO] [--col COLONNE] [--output TIPO] [--global] [--csv]
 ```

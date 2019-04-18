@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015，2018
 
-lastupdated: "2016-06-20"
+lastupdated: "2018-06-21"
 
 
 ---
@@ -19,8 +19,7 @@ lastupdated: "2016-06-20"
 
 *Versión:* 1.4.0
 
-Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestionar su servicio de
-{{site.data.keyword.vpn_full}}. El plugin de interfaz de línea de mandatos de VPN está disponible en dos versiones: una para su uso con el plugin de CLI de Cloud Foundry y la otra para su uso con el plugin de CLI de {{site.data.keyword.Bluemix}}. Ambas versiones del plugin proporcionan las mismas funciones.
+Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestionar su servicio {{site.data.keyword.vpn_full}}. El plugin de CLI de VPN está disponible en dos versiones: una para su uso con el plugin de CLI de Cloud Foundry y la otra para su uso con el plugin de CLI de {{site.data.keyword.Bluemix}}. Ambas versiones del plugin proporcionan las mismas funciones.
 {:shortdesc}
 
 El plugin de VPN está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el aplicable a su caso.
@@ -29,27 +28,27 @@ A continuación se muestran instrucciones para trabajar con el plugin de CLI de
 {{site.data.keyword.Bluemix_notm}}. Para utilizar el plugin con el plugin de la interfaz de línea de mandatos de Cloud Foundry (cf), consulte [Plugin de interfaz de línea de mandatos de VPN para la interfaz de línea de mandatos de cf](../vpn/index.html).
 
 
-La información que se indica a continuación muestra todos los mandatos soportados por el plugin de VPN para la interfaz de línea de mandatos de Bluemix e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Consulte [Amplíe su interfaz de línea de mandatos de Bluemix](../../index.html#cli_bluemix_ext) para ver cómo instalar el plugin vpn.
+La información que se indica a continuación muestra todos los mandatos soportados por el plugin de VPN para la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Consulte [Amplíe su interfaz de línea de mandatos de IBM Cloud](../../index.html#cli_bluemix_ext) para ver cómo instalar el plug-in vpn.
 
 **Nota:** *Requisitos previos* lista las acciones que son necesarias antes de utilizar el mandato. Los requisitos previos pueden incluir una o varias de las acciones siguientes:
 <dl>
 <dt>**Punto final**</dt>
-<dd>Un punto final de API se debe establecer por medio de la `bluemix api` antes de utilizar el mandato.</dd>
+<dd>Un punto final de API se debe establecer por medio de la `ibmcloud api` antes de utilizar el mandato.</dd>
 <dt>**Login**</dt>
-<dd>El inicio de sesión que utiliza el mandato `bluemix login` es necesario antes de utilizar este mandato.</dd>
+<dd>El inicio de sesión que utiliza el mandato `ibmcloud login` es necesario antes de utilizar este mandato.</dd>
 <dt>**Target**</dt>
-<dd>El mandato `bluemix target` debe utilizarse para establecer un punto de extensión org y un espacio antes de utilizar este mandato.</dd>
+<dd>El mandato `ibmcloud target` debe utilizarse para establecer un punto de extensión org y un espacio antes de utilizar este mandato.</dd>
 </dl>
 
 
-## bluemix vpn connection-create
+## ibmcloud vpn connection-create
 Crea una conexión VPN.
 
 ```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+ibmcloud vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -89,18 +88,18 @@ en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-
 
 Crea una nueva conexión VPN llamada `my_connection`:
 ```
-bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
+ibmcloud vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
 
 
-## bluemix vpn ike-create
+## ibmcloud vpn ike-create
 Crea una política IKE.
 
 ```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -120,18 +119,18 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP]
 
 Crear una nueva política IKE llamada `my_ike`:
 ```
-bluemix vpn ike-create my_ike -g my_gateway
+ibmcloud vpn ike-create my_ike -g my_gateway
 ```
 
 
-## bluemix vpn ipsec-create
+## ibmcloud vpn ipsec-create
 Crea una política IPSec.
 
 ```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -151,18 +150,18 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROU
 
 Crear una política IPSec llamada `my_policy`:
 ```
-bluemix vpn ipsec-create my_policy -g my_gateway
+ibmcloud vpn ipsec-create my_policy -g my_gateway
 ```
 
 
-## bluemix vpn gateway-create
+## ibmcloud vpn gateway-create
 Crea una pasarela VPN.
 
 ```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+ibmcloud vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -178,170 +177,170 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subne
 
 Crear una pasarela llamada `my_gateway` de tipo `allContainerGroups`:
 ```
-bluemix vpn gateway-create my_gateway -t allContainerGroups
+ibmcloud vpn gateway-create my_gateway -t allContainerGroups
 ```
 
 
-## bluemix vpn connections
+## ibmcloud vpn connections
 Muestra información sobre todas las conexiones actuales.
 
 ```
-bluemix vpn connections
+ibmcloud vpn connections
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 
-## bluemix vpn ikes
+## ibmcloud vpn ikes
 Muestra información sobre las conexiones IKE actuales.
 
 ```
-bluemix vpn ikes
+ibmcloud vpn ikes
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 
-## bluemix vpn ipsecs
+## ibmcloud vpn ipsecs
 Muestra información sobre las conexiones IPSec actuales.
 
 ```
-bluemix vpn ipsecs
+ibmcloud vpn ipsecs
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 
-## bluemix vpn gateways
+## ibmcloud vpn gateways
 Muestra información sobre las pasarelas actuales.
 
 ```
-bluemix vpn gateways
+ibmcloud vpn gateways
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 
-## bluemix vpn connection
+## ibmcloud vpn connection
 Muestra toda la información sobre una conexión particular.
 
 ```
-bluemix vpn connection CONNECTION_NAME
+ibmcloud vpn connection CONNECTION_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *CONNECTION_NAME*  (obligatorio): nombre de la conexión a mostrar.
 
 
-## bluemix vpn ike
+## ibmcloud vpn ike
 Muestra información sobre una conexión IKE.
 
 ```
-bluemix vpn ike POLICY_NAME
+ibmcloud vpn ike POLICY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *POLICY_NAME*  (obligatorio): nombre de la política IKE a mostrar.
 
 
-## bluemix vpn ipsec
+## ibmcloud vpn ipsec
 Muestra información sobre una conexión IPSec.
 
 ```
-bluemix vpn ipsec POLICY_NAME
+ibmcloud vpn ipsec POLICY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *POLICY_NAME*  (obligatorio): nombre de la política IPSec a mostrar.
 
 
-## bluemix vpn gateway
+## ibmcloud vpn gateway
 Muestra información de conexión sobre una pasarela.
 
 ```
-bluemix vpn gateway GATEWAY_NAME
+ibmcloud vpn gateway GATEWAY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *GATEWAY_NAME*  (obligatorio): nombre de la pasarela a mostrar.
 
 
-## bluemix vpn connection-delete
+## ibmcloud vpn connection-delete
 Suprima una conexión existente.
 
 ```
-bluemix vpn connection-delete CONNECTION_NAME
+ibmcloud vpn connection-delete CONNECTION_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *CONNECTION_NAME*  (obligatorio): nombre de la conexión a suprimir.
 
 
-## bluemix vpn ike-delete
+## ibmcloud vpn ike-delete
 Suprime una política IKE existente.
 
 ```
-bluemix vpn ike-delete POLICY_NAME
+ibmcloud vpn ike-delete POLICY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *POLICY_NAME*  (obligatorio): nombre de la política IKE a suprimir.
 
 
-## bluemix vpn ipsec-delete
+## ibmcloud vpn ipsec-delete
 Suprime una política IPSec existente.
 
 ```
-bluemix vpn ipsec-delete POLICY_NAME
+ibmcloud vpn ipsec-delete POLICY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *POLICY_NAME*  (obligatorio): nombre de la política IPSec a suprimir.
 
 
-## bluemix vpn gateway-delete
+## ibmcloud vpn gateway-delete
 Suprime una pasarela existente.
 
 ```
-bluemix vpn gateway-delete GATEWAY_NAME
+ibmcloud vpn gateway-delete GATEWAY_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *GATEWAY_NAME*  (obligatorio): nombre de la pasarela a suprimir.
 
 
-## bluemix vpn connection-update
+## ibmcloud vpn connection-update
 Actualiza una conexión VPN existente.
 
 ```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+ibmcloud vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -377,14 +376,14 @@ en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-
 -ipsec *NAME*  (opcional):  nombre de la política IPSec.
 
 
-## bluemix vpn ike-update
+## ibmcloud vpn ike-update
 Actualiza una política IKE.
 
 ```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -401,14 +400,14 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROU
 -lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad IKE. Rango: 60 - 86400 segundos.
 
 
-## bluemix vpn ipsec-update
+## ibmcloud vpn ipsec-update
 Actualiza una política IPSec.
 
 ```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+ibmcloud vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -425,14 +424,14 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GR
 -lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad. Rango: 60 - 86400 segundos.
 
 
-## bluemix vpn gateway-update
+## ibmcloud vpn gateway-update
 Actualiza una pasarela VPN existente.
 
 ```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+ibmcloud vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**: Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 

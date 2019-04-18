@@ -39,7 +39,7 @@ ibmcloud sl subnet cancel IDENTIFIER [OPTIONEN]
 ```
 ibmcloud sl subnet cancel 12345678 -f
 ```
-Dieser Befehl bricht das Teilnetz mit der ID `12345678` ab, ohne zu einer Bestätigung aufzufordern. 
+Dieser Befehl bricht das Teilnetz mit der ID `12345678` ab, ohne zu einer Bestätigung aufzufordern.
 
 ## ibmcloud sl subnet create
 {: #sl_subnet_create}
@@ -89,7 +89,7 @@ ibmcloud sl subnet detail 12345678
 ```
 {: codeblock}
 
-Dieser Befehl zeigt detaillierte Informationen zum Teilnetz mit der ID `12345678` an, einschließlich Informationen zu virtuellen Servern und Hardware-Servern. 
+Dieser Befehl zeigt detaillierte Informationen zum Teilnetz mit der ID `12345678` an, einschließlich Informationen zu virtuellen Servern und Hardware-Servern.
 
 ## ibmcloud sl subnet list
 {: #sl_subnet_list}
@@ -141,4 +141,4 @@ ibmcloud sl subnet lookup 9.125.235.255
 ```
 {: codeblock}
 
-Dieser Befehl sucht nach dem IP-Adressdatensatz mit der Adresse `9.125.235.255` und zeigt sein Teilnetz und die Gerätedaten an. 
+Dieser Befehl sucht nach dem IP-Adressdatensatz mit der Adresse `9.125.235.255` und zeigt sein Teilnetz und die Gerätedaten an.
