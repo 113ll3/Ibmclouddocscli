@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-19"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -172,7 +172,7 @@ The following sections provide details on how to uninstall the stand-alone {{sit
 #### Version `0.9.0` and later
 
 1. Open a terminal, and run the following command:
-  * `/usr/local/ibmcloud/bin/uninstall`
+  * `/usr/local/ibmcloud/uninstall`
 2. Clean up any custom autocompletion scripts. For more details, see [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux and macOS only)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 ## Other links to further explore {{site.data.keyword.cloud_notm}} CLI
