@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-22"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -39,7 +39,7 @@ Use the following {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) comman
 - [diag](#diag): Displays version information about installed dependencies.
 - [edit](#edit): Add or remove services from an existing application.
 - [enable](#enable): Update an existing application for use with {{site.data.keyword.cloud_notm}} Developer Tools.
-- [get-credentials](#get-credentials): Gets credentials that are required by the application. to enable use of connected {{site.data.keyword.cloud_notm}} services.
+- [get-credentials](#get-credentials): Gets credentials that are required by the application to enable the use of connected {{site.data.keyword.cloud_notm}} services.
 - [help](#help): Help on the CLI syntax and arguments.
 - [list](#list): List all {{site.data.keyword.cloud_notm}} applications in a resource group.
 - [run](#run): Run your application in a local container.
@@ -48,7 +48,9 @@ Use the following {{site.data.keyword.dev_cli_notm}} CLI (`ibmcloud dev`) comman
 - [stop](#stop): Stop a container.
 - [test](#test): Test your application in a local container.
 - [view](#view): View the deployed URL of the application for testing and viewing.
-- [compound commands](#compound): Run multiple commands in a single command line statement.
+
+Run multiple commands in a single command line statement by using [compound commands](#compound).
+{: tip}
 
 ## build
 {: #build}
