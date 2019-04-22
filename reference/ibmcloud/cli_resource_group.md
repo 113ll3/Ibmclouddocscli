@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-17"
+lastupdated: "2019-04-22"
 
 keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
@@ -343,7 +343,7 @@ ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE
   <dd>New service instance name</dd>
   <dt>--service-plan-id <i>SERVICE_PLAN_ID</i></dt>
   <dd>New Service Plan ID</dd>
-  <dt>-p, --parameters <i>@JSON_FILE | JSON_STRING<i></dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_STRING</i></dt>
   <dd>JSON file or JSON string of parameters to create service instance</dd>
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>Resource group name</dd>
