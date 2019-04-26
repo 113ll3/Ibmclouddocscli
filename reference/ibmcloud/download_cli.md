@@ -129,15 +129,16 @@ When you use installers or a shell script to install the {{site.data.keyword.clo
 ## Updating the {{site.data.keyword.cloud_notm}} CLI
 {: #update-ibmcloud-cli}
 
-To determine your {{site.data.keyword.cloud_notm}} CLI version, run the following command:
+You must be using the latest version of the CLI. If you aren't using the latest version, run the following command to update your CLI:
+
 ```
-ibmcloud -v
+ibmcloud update
 ```
 {: codeblock}
 
-To update your {{site.data.keyword.cloud_notm}} CLI to the current release, run the following command:
+To determine your {{site.data.keyword.cloud_notm}} CLI version, run the following command:
 ```
-ibmcloud update
+ibmcloud -v
 ```
 {: codeblock}
 
