@@ -14,6 +14,7 @@ IBM Cloud CLI and Developer Tools
 	reference/ibmcloud/extend_cli.md
 	reference/ibmcloud/cli_docker.md
 	reference/ibmcloud/enable_cli_autocompletion.md
+	reference/ibmcloud/uninstall_cli.md
 	idt/index.md
 
 	{: .topicgroup}
@@ -58,8 +59,7 @@ IBM Cloud CLI and Developer Tools
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
 	idt/commands.md
-	reference/ibmcloud/all_versions.md
-
+	
 	{: .topicgroup}
 	IBM Cloud CLI plug-ins
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
