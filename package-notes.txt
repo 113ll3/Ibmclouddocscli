@@ -1,1 +1,0 @@
-The contents of docs/monitor_log and docs/debug have moved to docs/cli/debug.md and docs/cli/monitoring_logging.md
