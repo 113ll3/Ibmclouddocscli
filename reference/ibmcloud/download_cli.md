@@ -129,7 +129,7 @@ When you use installers or a shell script to install the {{site.data.keyword.clo
 ## Updating the {{site.data.keyword.cloud_notm}} CLI
 {: #update-ibmcloud-cli}
 
-You must be using the latest version of the CLI. If you aren't using the latest version, run the following command to update your CLI:
+You must use the latest version of the CLI. If you aren't using the latest version, run the following command to update your CLI:
 
 ```
 ibmcloud update
