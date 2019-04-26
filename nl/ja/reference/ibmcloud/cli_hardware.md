@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
 subcollection: cloud-cli
 
@@ -119,7 +119,7 @@ ibmcloud sl hardware detail IDENTIFIER [OPTIONS]
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>-p, --passwords</dt>
-<dd>パスワードを表示します (他人に見られないように注意してください)。</dd>
+<dd>パスワードを表示します (背後に注意してください).</dd>
 <dt>-c, --price</dt>
 <dd>関連付けられた価格を表示します。</dd>
 </dl>
@@ -184,7 +184,7 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>所有者の ID を基準にフィルター操作します。</dd>
 <dt>--sortby</dt>
 <dd>ソートの基準にする列。デフォルト: hostname、オプション: id、guid、hostname、domain、public_ip、private_ip、datacenter、status、ipmi_ip、created、created_by。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>表示する列。デフォルト: id、hostname、domain、public_ip、private_ip、datacenter、status、オプション: guid、cpu、memory、os、ipmi_ip、created、created_by、tags。</dd>
 </dl>
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-22"
 
-keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas
+keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
 subcollection: cloud-cli
 
@@ -223,21 +223,25 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 
 サービス・インスタンスをリストします。
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP] [--long] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>--service-name</dt>
+  <dt>--service-name <i>SERVICE_NAME</i></dt>
   <dd>従属サービスの名前</dd>
-  <dt>--location</dt>
+  <dt>--location <i>LOCATION</i></dt>
   <dd>場所を基準にフィルター操作します</dd>
+  <dt>--type <i>INSTANCE_TYPE</i></dt>
+  <dd>インスタンスのタイプ。 指定されない場合は、`service_instance` タイプが使用されます。すべてのタイプのインスタンスをリストするには、all を使用します。</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>リソース・グループ名</dd>
   <dt>--long</dt>
   <dd>出力に追加フィールドを表示します</dd>
-  <dt>--output FORMAT (オプション)</dt>
-  <dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。 </dd>
+  <dt>--output <i>FORMAT</i></dt>
+  <dd>出力形式を指定します。現在、JSON のみがサポートされています。 </dd>
 </dl>
 
 <strong>例</strong>:
@@ -286,7 +290,7 @@ ibmcloud resource service-instance my-service-instance
 
 サービス・インスタンスを作成します。
 ```
-ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVICE_PLAN_NAME LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -299,12 +303,16 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dd>サービスの名前または ID。 サービス・オファリングをリストするには、`ibmcloud catalog service-marketplace`[コマンド](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)を使用します。</dd>
   <dt>SERVICE_PLAN_NAME または SERVICE_PLAN_ID (必須)</dt>
   <dd>サービス・プランの名前または ID</dd>
-  <dt>LOCATION</dt>
+  <dt>LOCATION (必須)</dt>
   <dd>サービス・インスタンスを作成するターゲットの場所または環境</dd>
-  <dt>-p, --parameters</dt>
-  <dd>サービス・インスタンスを作成するパラメーターの JSON ファイルまたは JSON 文字列</dd>
-  <dt>-d, --deployment</dt>
+  <dt>-d, --deployment <i>DEPLOYMENT_NAME</i></dt>
   <dd>デプロイメントの名前</dd>
+  <dt>-p, --parameters <i>@JSONFILE または JSON_STRING</i></dt>
+  <dd>サービス・インスタンスを作成するパラメーターの JSON ファイルまたは JSON 文字列</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>リソース・グループ名</dd>
+  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
+  <dd>サービス・エンドポイントのタイプ</dd>
 </dl>
 
 <strong>例</strong>:
@@ -320,7 +328,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 
 サービス・インスタンスを更新します。
 ```
-ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
+ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -331,12 +339,16 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
   <dd>サービス・インスタンスの名前。ID と同時に指定することはできません。</dd>
   <dt>ID (必須)</dt>
   <dd>サービス・インスタンスの ID。NAME と同時に指定することはできません。</dd>
-  <dt>-n, --name</dt>
+  <dt>-n, --name <i>NEW_NAME</i></dt>
   <dd>新規サービス・インスタンス名</dd>
-  <dt>--service-plan-id</dt>
+  <dt>--service-plan-id <i>SERVICE_PLAN_ID</i></dt>
   <dd>新規サービス・プラン ID</dd>
-  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_STRING</i></dt>
   <dd>サービス・インスタンスを作成するパラメーターの JSON ファイルまたは JSON 文字列</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>リソース・グループ名</dd>
+  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
+  <dd>サービス・エンドポイントのタイプ</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに更新を強制します</dd>
 </dl>
@@ -438,7 +450,7 @@ ibmcloud resource bindings my-service-alias my-app
 
 サービス・バインディングを作成します。
 ```
-ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
+ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-n BINDING_NAME] [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
@@ -447,14 +459,16 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 <dl>
   <dt>SERVICE_ALIAS_NAME (必須)</dt>
   <dd>サービス別名</dd>
-  <dt>APP_NAME</dt>
+  <dt>APP_NAME (必須)</dt>
   <dd>CloudFoundry アプリケーション名</dd>
-  <dt>ROLE_NAME</dt>
+  <dt>ROLE_NAME (必須)</dt>
   <dd>ユーザー役割の名前</dd>
-  <dt>--service-id</dt>
+  <dt>--service-id <i>SERVICE_ID</i></dt>
   <dd>役割が属しているサービス ID の名前または UUID</dd>
-  <dt>-p, --parameter</dt>
+  <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>パラメーター JSON ファイルまたは JSON 文字列</dd>
+  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
+  <dd>サービス・エンドポイントのタイプ</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに作成を強制します</dd>
 </dl>
@@ -569,29 +583,33 @@ ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/5
 
 サービス・キーを作成します。
 ```
-ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
+ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 <strong>コマンド・オプション</strong>:
 <dl>
-  <dt>NAME</dt>
+  <dt>NAME (必須)</dt>
   <dd>キーの名前</dd>
-  <dt>ROLE_NAME</dt>
+  <dt>ROLE_NAME (必須)</dt>
   <dd>ユーザー役割の名前</dd>
-  <dt>--instance-id</dt>
+  <dt>--instance-id <i>SERVICE_INSTANCE_ID</i></dt>
   <dd>サービス・インスタンス ID</dd>
-  <dt>--instance-name</dt>
+  <dt>--instance-name <i>SERVICE_INSTANCE_NAME</i></dt>
   <dd>サービス・インスタンス名</dd>
-  <dt>--alias-id</dt>
+  <dt>--alias-id <i>SERVICE_ALIAS_ID</i></dt>
   <dd>サービス別名 ID</dd>
-  <dt>--alias-name</dt>
+  <dt>--alias-name <i>SERVICE_ALIAS_NAME</i></dt>
   <dd>サービス別名</dd>
-  <dt>--service-id</dt>
+  <dt>--service-id <i>SERVICE_ID</i></dt>
   <dd>役割が属しているサービス ID の名前または UUID</dd>
-  <dt>-p, --parameters</dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>パラメーター JSON ファイルまたは JSON 文字列</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>リソース・グループ名</dd>
+  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
+  <dd>サービス・エンドポイントのタイプ</dd>
   <dt>-f, --force</dt>
   <dd>確認を求めずに作成を強制します</dd>
 </dl>
@@ -901,7 +919,7 @@ ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-bi
 
 指定したクラウド・リソース名 (CRN) を持つリソースを検索します。
 ```
-ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
+ibmcloud resource search "crn:\"crn:v1:bluemix:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 指定したタグを持つリソースを検索します。
@@ -937,7 +955,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
   <dt>-o, -offset</dt>
   <dd>開始タグ位置番号</dd>
   <dt>-l, -limit</dt>
-  <dd>返されるタグの数 (最大 10000)</dd>
+  <dd>返されるタグの数 (最大 1000、デフォルト 100 )</dd>
   <dt>-p; --provider</dt> 
   <dd>クラシック・インフラストラクチャーのタグを検索する場合は、classic-infrastructure を指定します</dd>
   <dt>-d, --details</dt>
@@ -959,10 +977,44 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names(必須)</dt>
   <dd>タグ名のコンマ区切りリスト</dd>
   <dt>--resource-id</dt>
-  <dd>タグをアタッチするリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。</dd>
+  <dd>タグをアタッチするリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。 「ibmcloud resource search」コマンドを使用して、リソースの CRN または ID を入手できます。</dd>
   <dt>--resource-type</dt>
   <dd>タグをアタッチするクラシック・インフラストラクチャー・リソースのリソース・タイプ。クラシック・インフラストラクチャー・リソースにタグをアタッチする場合、このパラメーターは必須です。 --resource-type に指定できる値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。 </dd>
 </dl>
+
+<strong>例</strong>:
+
+* タグ `MyTag` を `MyCluster` という名前の Kubernetes クラスターにアタッチするには、最初に以下のようにして、タグをアタッチしようとしているクラスターの CRN を検索します。
+  ```
+  ibmcloud resource search 'type:k8\-cluster AND name:MyCluster'
+  ```
+  {: codeblock}
+
+  CRN をメモします。CRN は以下の例のようなストリングです。 
+  ```
+  crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
+  ```
+  {: screen}
+
+  タグをアタッチするには、以下のコマンドを実行します。
+  ```
+  ibmcloud resource tag-attach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
+  ```
+  {: codeblock}
+
+* タグ `MyTag` を `MyVM` という名前のクラシック・インフラストラクチャー仮想ゲストにアタッチするには、最初に以下のようにして、タグをアタッチしようとしている仮想ゲストの ID を検索します。
+  ```
+  ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
+  ```
+  {: codeblock}
+
+  ID をメモします。ID は `48373549` のようなストリングです。
+
+  タグをアタッチするには、以下のコマンドを実行します。
+  ```
+  ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
+  ```
+  {: codeblock}
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
@@ -979,7 +1031,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names(必須)</dt>
   <dd>タグ名のコンマ区切りリスト</dd>
   <dt>--resource-id</dt>
-  <dd>タグを切り離すリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。</dd>
+  <dd>タグを切り離すリソースの CRN。クラシック・インフラストラクチャー・リソースの場合は、リソースの ID です。 「ibmcloud resource search」コマンドを使用して、リソースの CRN または ID を入手できます。</dd>
   <dt>--resource-type</dt>
   <dd>タグを切り離すクラシック・インフラストラクチャー・リソースのリソース・タイプ。クラシック・インフラストラクチャー・リソースからタグを切り離す場合、このパラメーターは必須です。 --resource-type に指定できる値は、SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall、SoftLayer_Virtual_Guest です。 </dd>
 </dl>

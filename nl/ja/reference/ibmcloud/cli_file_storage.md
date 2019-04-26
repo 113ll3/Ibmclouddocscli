@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter
+keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # ファイル・ストレージ・サービスの操作
 {: #sl-file-storage-service}
@@ -63,8 +64,8 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
-<dt>--columns</dt>
-<dd>表示する列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
+<dt>--column</dt>
+<dd>　表示する列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
 </dl>
 
 **例**:
@@ -440,7 +441,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dd>ファイル・ストレージを購入した注文の ID を基準にしてフィルター操作します。</dd>
 <dt>--sortby</dt>
 <dd>ソートの基準にする列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions、mount_addr。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>表示する列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr、notes。</dd>
 </dl>
 
