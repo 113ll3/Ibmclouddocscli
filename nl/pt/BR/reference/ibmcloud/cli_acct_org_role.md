@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
+keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
 subcollection: cloud-cli
 
@@ -40,7 +40,7 @@ ibmcloud account orgs [-r REGION_NAME] [--guid | --output FORMAT] [-c ACCOUNT_ID
 como 'all', lista as organizações em todas as regiões.</dd>
    <dt>-- guid</dt>
    <dd>Exiba o guid das organizações. Essa opção é exclusiva com '-- output'.</dd>
-   <dt>-- FORMATO de saída</dt>
+   <dt>--output FORMAT</dt>
    <dd>Especifica o formato de saída. Apenas JSON é suportado agora. Esta opção é exclusiva com '-- guid'.</dd>
    <dt>-c ACCOUNT_ID</dt>
    <dd>ID da conta. Lista as organizações na conta fornecida. Usa como padrão a conta atual, se não especificado. Se configurado como 'all', lista as organizações em todas as contas. Essa opção é exclusiva com '-u'.</dd>
@@ -184,7 +184,7 @@ ibmcloud account spaces [-o ORG_NAME] [-r REGION-NAME] [--output FORMAT]
    <dd>Nome da organização. Listar os espaços sob a organização especificada. Padrão para a organização atual, se não especificada.</dd>
    <dt>-r REGION-NAM</dt>
    <dd>Nome da região. Listar os espaços sob a região especificada. Padrão para região atual, se não especificado.</dd>
-   <dt>-- FORMATO de saída</dt>
+   <dt>--output FORMAT</dt>
    <dd>Especifica o formato de saída. Apenas JSON é suportado agora.</dd>
    </dl>
 
@@ -221,7 +221,7 @@ ibmcloud account space SPACE_NAME [-o ORG_NAME] [--guid | --output FORMAT] [--se
    <dd>Nome da organização. Padrão para a organização atual, se não especificada.</dd>
    <dt>-- guid</dt>
    <dd>Recupera e exibe o GUID do espaço fornecido. Todas as outras saídas para o espaço são suprimidas. Essa opção é exclusiva com '-- output'.</dd>
-   <dt>-- FORMATO de saída</dt>
+   <dt>--output FORMAT</dt>
    <dd>Especifica o formato de saída. Apenas JSON é suportado agora. Todas as outras saídas para o espaço são suprimidas. Esta opção é exclusiva com '-- guid'.</dd>
    <dt>---segurança-grupo-regras</dt>
    <dd>Recupera as regras para todos os grupos de segurança associados ao espaço.</dd>
@@ -276,7 +276,7 @@ Esse comando tem a mesma função e as opções que o comando [cf delete-space](
 Exiba usuários na organização especificada por função.
 
 ```
-ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
+ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
@@ -285,10 +285,10 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 <dl>
 <dt>ORG_NAME (necessário)</dt>
 <dd>O nome da organização.</dd>
-<dt>-a (opcional)</dt>
+<dt>-a, -all (opcional)</dt>
 <dd>Liste todos os usuários na organização especificada, não agrupados por função.</dd>
-<dt>-- output FORMAT (opcional)</dt>
-<dd>--output value  Especificar o formato de saída, somente JSON é suportado agora.</dd>
+<dt>-r, --region REGION (opcional)</dt>
+<dd>Nome da região. Padrão para região atual, se não especificado.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -537,7 +537,7 @@ Mostrar detalhes da conta
 ibmcloud account show
 ```
 
-<strong>Pré-requisitos</strong>: Terminal, Login
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
@@ -560,7 +560,7 @@ Atualizar uma conta específica.
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>Pré-requisitos</strong>: Terminal, Login
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
 
 <strong>Opções de comando</strong>:
 <dl>
@@ -574,6 +574,41 @@ Ative a conectividade do terminal em serviço para a conta atual:
 
 ```
 ibmcloud account update--service-endpoint-enable true
+```
+
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
+
+Listar logs de auditoria da conta do Softlayer
+
+```
+account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
+```
+
+<strong>Pré-requisitos</strong>: Terminal, Login, Destino
+
+<strong>Opções de comando</strong>:
+<dl>
+  <dt>-a, --action <i>ACTION</i></dt>
+  <dd>Ação. Listar logs de auditoria com a ação fornecida.</dd>
+  <dt>-e, --end-date <i>END_DATE</i></dt>
+  <dd>Data de encerramento. Listar logs de auditoria antes da data de encerramento. Os formatos suportados são aaaa-MM-ddTHH:mm:ss.</dd>
+  <dt>-o, --object <i>OBJECT</i></dt>
+  <dd>Objeto. Listar logs de auditoria com o objeto fornecido.</dd>
+  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
+  <dd>Tipo de objeto. Listar logs de auditoria com o tipo de objeto fornecido.</dd>
+  <dt>-s, --start-date <i>START_DATE</i></dt>
+  <dd>Data de início. Listar os logs de auditoria após a data de início. Os formatos suportados são aaaa-MM-ddTHH:mm:ss.</dd>
+  <dt>-u, --user-name <i>USER_NAME</i></dt>
+  <dd>Nome do usuário. Listar os logs de auditoria com o nome de usuário fornecido.</dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Listar logs de auditoria
+
+```
+ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users

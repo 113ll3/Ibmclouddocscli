@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
+keywords: cli, cloud foundry enterprise environment, cfee, ibmcloud cfee, cfee environment, cfee instance, target user, list cfee
 
 subcollection: cloud-cli
 
@@ -200,7 +200,7 @@ ibmcloud cfee org-delete ORG [-f, --force] [--env ENV]
 
 <strong>Exemplos</strong>:
 
-Exclua um org. CFEE  ` org_exemplo `:
+Excluir um org. CFEE  ` org_exemplo `:
 ```
 ibmcloud cfee org-delete org_exemplo
 ```
@@ -768,7 +768,7 @@ ibmcloud cfee create-permission-get USER_NAME [-ag, --access-group GROUP_NAME] [
    <dd>O nome do usuário.</dd>
    <dt>--access-group GROUP_NAME</dt>
    <dd>O nome do grupo de acesso no qual verificar as permissões. O grupo de acesso padrão é "cfee-provision-access-group".</dd>
-   <dt>-- FORMATO de saída</dt>
+   <dt>--output FORMAT</dt>
    <dd>Especifique o formato de saída das permissões, somente JSON é suportado no momento.</dd>
   </dl>
   
@@ -836,6 +836,6 @@ ibmcloud cfee create-status NAME or ID [--poll] [--output FORMAT]
    <dd>O nome ou o ID da instância do CFEE.</dd>
    <dt>--poll</dt>
    <dd>Especifique se você gostaria de tornar essa chamada recorrente para pesquisar até estar no estado estável</dd>
-   <dt>-- FORMATO de saída</dt>
+   <dt>--output FORMAT</dt>
    <dd>Especifique o formato de saída de status. No momento, somente JSON é suportado.</dd>
   </dl>
