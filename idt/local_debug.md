@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -20,12 +20,12 @@ subcollection: cloud-cli
 # Local application debugging for the {{site.data.keyword.dev_cli_notm}} CLI
 {: #local-debug}
 
-There are tools to help you debug your application in Java and Node.js in {{site.data.keyword.cloud_notm}}.
+There are tools to help you debug your application in Java&trade; and Node.js in {{site.data.keyword.cloud_notm}}.
 
 ## Java application debugging
 {: #java}
 
-Steps to enable the debugging tool for a Java application:
+Steps to enable the debugging tool for a Java&trade; application:
 
 1. From the root directory of your application project, run the following command:
 
@@ -38,15 +38,15 @@ Steps to enable the debugging tool for a Java application:
 
 	* Eclipse
       1. Import the **Existing maven project** into Eclipse.
-      2. Create a [Java remote application](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") debug configuration.
+      2. Create a [Java&trade; remote application](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") debug configuration.
       		1. Enter the IP address or `localhost:<port>`  
       		2. Enter `7777` for port number.
-      		3. Specify the name of the Java project that you imported.
+      		3. Specify the name of the project that you imported.
       6. Set a breakpoint in the IDE.
       7. Run the debug configuration.
       8. Access the endpoint with a browser to re-create the issue.  
 	   
-	   The default port is 9080 for the Java basic Microservices endpoint.
+	   The default port is `9080` for the Java&trade; basic Microservices endpoint.
 	   {: note}
 
 	* [IntelliJ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")

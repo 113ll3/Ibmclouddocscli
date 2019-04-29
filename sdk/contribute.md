@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -27,17 +27,17 @@ Follow these guidelines to contribute to the {{site.data.keyword.cloud}} CLI SDK
 
 * Cloud Foundry [CLI](https://github.com/cloudfoundry/cli/releases){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
-   The Cloud Foundry CLI isn't required, but it helps to access {{site.data.keyword.cloud_notm}} from the Terminal.
+   The Cloud Foundry CLI isn't required, but it helps to access {{site.data.keyword.cloud_notm}} from a terminal.
 
    For more information about the Cloud Foundry CLI, see the [documentation](/docs/cli?topic=cloud-cli-cf#cf).
 
 * {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
-   This plug-in installs into the {{site.data.keyword.cloud_notm}} CLI. The {{site.data.keyword.cloud_notm}} CLI also provides useful resources to access {{site.data.keyword.cloud_notm}} from the Terminal.
+   This plug-in is added to the {{site.data.keyword.cloud_notm}} CLI and provides useful resources to access {{site.data.keyword.cloud_notm}} from the command line.
 
 * Go's [development environment](https://golang.org/doc/code.html){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-   Go is strict with regards to package locations, so your source must be defined within the `$GOPATH` directory structure. Ensure that you define your `$GOPATH` and `$GOROOT` variables and that you include `$GOPATH/bin` in your `$PATH` environment variable, which can be done by editing your `~/.bash_profile` configuration file (on Mac OS).
+   Go is strict with package locations, so your source must be defined within the `$GOPATH` directory structure. You must define your `$GOPATH` and `$GOROOT` variables, and include `$GOPATH/bin` in your `$PATH` environment variable. You can edit the `~/.bash_profile` configuration file (on Mac) to make these changes.
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -47,7 +47,7 @@ Follow these guidelines to contribute to the {{site.data.keyword.cloud}} CLI SDK
    ```
    {: codeblock}
 
-* Dependency manager: [govendor](https://github.com/kardianos/govendor){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* Dependency manager: [`govendor`](https://github.com/kardianos/govendor){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
    The `govendor` tool creates and manages the Go dependencies. You don't need it unless you plan to update the vendor directory.
 
@@ -74,7 +74,7 @@ Follow these guidelines to contribute to the {{site.data.keyword.cloud}} CLI SDK
 
 * BDD test framework: [Ginkgo](http://onsi.github.io/ginkgo/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-The test framework is based on Ginkgo, a BDD testing framework for Go. It's used with [Gomega](http://onsi.github.io/gomega/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), which is a matcher and assertion library for Ginkgo.
+The test framework is based on Ginkgo, a BDD testing framework for Go, and is used with [`gomega`](http://onsi.github.io/gomega/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), which is a matcher and assertion library for Ginkgo.
 
    * Install `ginkgo` by using the following command.
 
@@ -99,18 +99,18 @@ The test framework is based on Ginkgo, a BDD testing framework for Go. It's used
 
       * To add code coverage, append `-cover` to the command.
 
-   * Obtain a friendly HTML form of the code coverage, use the following command.
+   * To obtain a friendly HTML form of the code coverage, use the following command.
 
       ```
       go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
-      * You'll go to the directory where the `.coverprofile` file is located.
+      * You are taken to the directory where the `.coverprofile` file is located.
 
-* Internationalization: [go-i18n](https://github.com/nicksnyder/go-i18n){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and [go-bindata](https://github.com/jteeuwen/go-bindata){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* Globalization: [go-i18n](https://github.com/nicksnyder/go-i18n){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and [go-bindata](https://github.com/jteeuwen/go-bindata){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-Internationalization is based on `go-i18n`, which is a package and command-line tool that provides support to translate a Go application into multiple languages. Translation bundles are pre-processed by `go-bindata`, which is a command that converts any input file into manageable Go source code.
+Globalization is based on `go-i18n`, which is a package and command line tool that provides support to translate a Go application into multiple languages. Translation bundles are pre-processed by the `go-bindata` command that converts any input file into manageable Go source code.
 
    * Install `go-i18n` by using the following command.
 
@@ -156,11 +156,11 @@ Nested dependencies aren't listed.
 
 * [github.com/urfave/cli](https://github.com/urfave/cli){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-   This package provides infrastructure to build command-line apps in Go. The {{site.data.keyword.cloud_notm}} CLI plugin relies on an older version of this library (github.com/codegangsta/cli).
+   This package provides infrastructure to build command line apps in Go. The {{site.data.keyword.cloud_notm}} CLI plug-in relies on an older version of this library (github.com/codegangsta/cli).
 
 * [github.com/asaskevich/govalidator](https://github.com/asaskevich/govalidator){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-   This package provides a number of validators and sanitizers for strings, structs, and collections. Use this package instead of implementing our own validators.
+   This package provides a number of validators and sanitizers for strings, structs, and collections. Use this package instead of implementing your own validators.
 
 * [github.com/parnurzeal/gorequest](https://github.com/parnurzeal/gorequest){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 

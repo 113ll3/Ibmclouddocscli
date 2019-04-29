@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-04-29"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -83,7 +83,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-Use the `console` command to open a web browser to your application's web console on {{site.data.keyword.cloud_notm}}. You can run the `ibmcloud dev console` command from inside your application's folder. The CLI attempts to find a matching application on the {{site.data.keyword.cloud_notm}} that has the same application ID as the current directory. If the system isn't able to find a matching name, it opens the Web and Mobile dashboard on {{site.data.keyword.cloud_notm}} instead of the specific application.
+Use the `console` command to open a web browser to your application's web console on {{site.data.keyword.cloud_notm}}. You can run the `ibmcloud dev console` command from inside your application's folder. The CLI attempts to find a matching application on the {{site.data.keyword.cloud_notm}} that has the same application ID as the current directory. If the system isn't able to find a matching name, it opens the **Web and Mobile** dashboard on {{site.data.keyword.cloud_notm}} instead of the specific application.
 
 You can provide an application name and the CLI skips matching based on the folder or application name. In this case, the CLI opens the named application's console in a web browser.  
 
@@ -96,7 +96,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-Create an application, prompting for all information, including resource type, language, starter kit, and DevOps Toolchain options including IBM Cloud Foundry or Cloud Foundry Enterprise Environment, and Kubernetes. The application is created in the current directory.
+Create an application that prompts for all information, including resource type, language, starter kit, and DevOps Toolchain options. Including IBM Cloud Foundry or Cloud Foundry Enterprise Environment, and Kubernetes. The application is created in the current directory.
 
 To create an application in the current directory and to associate services with it, run the following command:
 ```
@@ -130,12 +130,12 @@ To exit the debug session, use `CTRL-C`.
 ### debug command parameters
 {: #debug-parameters}
 
-The following parameters are exclusive to the `debug` command and assist with debugging an application. There are [additional parameters](#command-parameters) that are shared with other commands.
+The following parameters are exclusive to the `debug` command and assist with debugging an application. There are [more parameters](#command-parameters) that are shared with other commands.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* Port mappings for the debug port. The first value is the port to use in the host OS, the second is the port in the container [host-port:container-port].
+* Port mappings for the debug port. The first value is the port to use in the host OS, the second is the port in the container [`host-port:container-port`].
 * Usage: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -614,7 +614,7 @@ The following commands can be used with this feature:
 
 If one command fails for any reason, the subsequent commands are not run.
 
-If any commands follow `debug` or `run`, execution continues if `debug` or `run` is terminated by means other than killing the process from the current terminal window. `CTRL+C` kills the process and not run the subsequent commands. For example, you can run `ibmcloud dev stop` from another terminal window to stop the running container and continue execution to the next command.
+If any commands follow `debug` or `run`, execution continues if `debug` or `run` is terminated by means other than killing the process from the current terminal window. Enter `CTRL+C` to kill the process and not run the subsequent commands. For example, you can run `ibmcloud dev stop` from another terminal window to stop the running container and continue execution to the next command.
 
 ## Parameters for build, debug, run, and test
 {: #command-parameters}
