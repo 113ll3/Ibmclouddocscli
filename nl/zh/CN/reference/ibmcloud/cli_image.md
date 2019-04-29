@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, ibmcloud sl image, manage compute images, ibmcloud sl
+keywords: cli, classic infrastructure, ibmcloud sl image, manage compute images, create compute image cli, compute image cli
 
 subcollection: cloud-cli
 

@@ -61,8 +61,8 @@ ibmcloud sl block access-list ID_VOLUME [OPZIONI]
 <dl>
 <dt>--sortby</dt>
 <dd>Colonna in base a cui ordinare; le opzioni sono: id,name,type,private_ip_address,host_iqn,username,password.</dd>
-<dt>--columns</dt>
-<dd>Colonne da visualizzare; le opzioni sono: id,name,type,private_ip_address,host_iqn,username,password.</dd>
+<dt>--column</dt>
+<dd>Colonna da visualizzare; le opzioni sono: id,name,type,private_ip_address,host_iqn,username,password.</dd>
 </dl>
 
 **Esempi**:
@@ -450,8 +450,8 @@ ibmcloud sl block volume-list [OPZIONI]
 <dd>Filtra in base all'ID dell'ordine che ha acquistato l'archiviazione blocchi.</dd>
 <dt>--sortby</dt>
 <dd>Colonna da ordinare, le opzioni sono: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
-<dt>--columns</dt>
-<dd>Colonne da visualizzare; le opzioni sono: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
+<dt>--column</dt>
+<dd>Colonna da visualizzare; le opzioni sono: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 
 **Esempi**:
@@ -466,7 +466,7 @@ Questo comando elenca i volumi di durata sull'account corrente ubicati in `dal09
 
 Modifica un volume di archiviazione blocchi esistente
 ```
-ibmcloud sl block volume-modify VOLUME_ID [OPTIONS]
+ibmcloud sl block volume-modify ID_VOLUME [OPZIONI]
 ```
 
 <strong>Opzioni del comando</strong>:

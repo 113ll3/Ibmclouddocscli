@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-03"
 
-keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -284,6 +284,20 @@ ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
+### Cloud Foundry 서비스 사용
+
+Cloud Foundry 서비스를 사용하려면 Cloud Foundry 조직과 영역을 대상으로 지정해야 합니다. 다음 명령을 실행하여 조직 및 영역을 대화식으로 선택할 수 있습니다.
+```
+  ibmcloud target --cf
+```
+{: codeblock}
+
+선택적으로 이전 명령의 출력을 사용하여, 다음 명령을 통해 조직 및 영역을 수동으로 설정할 수 있습니다.
+```
+ibmcloud target -o <value> -s <value>
+```
+{: codeblock}
+
 ### API 키에 계정이 연관되어 있음
 
 ```
@@ -348,28 +362,34 @@ ibmcloud regions
 
 대상 계정, 지역, 조직 또는 영역을 설정하거나 봅니다.
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
-   <dl>
-   <dt>-r <i>REGION_NAME</i>(선택사항)</dt>
-   <dd>전환할 지역의 이름입니다(예: 'us-south' 또는 'eu-gb').</dd>
-   <dt>--unset-region</dt>
-   <dd>대상 지역 설정 취소</dd>
+<dl>
    <dt>-c <i>ACCOUNT_ID</i>(선택사항)</dt>
    <dd>대상으로 지정된 계정의 ID입니다.</dd>
+   <dt>-r <i>REGION_NAME</i>(선택사항)</dt>
+   <dd>전환할 지역의 이름입니다(예: 'us-south' 또는 'eu-gb').</dd>
    <dt>-g <i>RESOURCE_GROUP</i>(선택사항)</dt>
    <dd>리소스 그룹의 이름</dd>
    <dt>--cf</dt>
    <dd>대상 조직 및 영역을 대화식으로 선택합니다.</dd>
+   <dt>--cf-api</dt>
+   <dd>Cloud Foundry API 엔드포인트</dd>
    <dt>-o <i>ORG_NAME</i>(선택사항)</dt>
    <dd>대상으로 지정된 조직의 이름입니다.</dd>
    <dt>-s <i>SPACE_NAME</i>(선택사항)</dt>
    <dd>대상으로 지정된 영역의 이름입니다.</dd>
-   </dl>
+   <dt>--unset-region</dt>
+   <dd>대상 지역 설정 취소</dd>
+   <dt>--unset-resource-group</dt>
+   <dd>대상 리소스 그룹 설정 해제</dd>
+   <dt>--output <i>FORMAT</i></dt>
+   <dd>출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
+</dl>
 옵션이 지정되지 않은 경우, 현재 계정, 영역, 조직 및 영역이 표시됩니다.
 
 <strong>예제</strong>:

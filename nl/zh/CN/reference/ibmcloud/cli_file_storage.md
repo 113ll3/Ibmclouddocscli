@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter
+keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
 
 subcollection: cloud-cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:codeblock: .codeblock}
 
 # 使用 File Storage 服务
 {: #sl-file-storage-service}
@@ -63,7 +64,7 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>要作为排序依据的列，选项为：id、name、type、private_ip_address、host_iqn、username 或 password。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>要显示的列，选项为：id、name、type、private_ip_address、host_iqn、username 或 password。</dd>
 </dl>
 
@@ -440,7 +441,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dd>按购买了文件存储器的订单的标识过滤。</dd>
 <dt>--sortby</dt>
 <dd>要作为排序依据的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions 或 mount_addr。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>要显示的列，选项为：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr 或 notes。</dd>
 </dl>
 

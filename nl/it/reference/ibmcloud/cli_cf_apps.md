@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-04-15"
 
-keywords: cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
+keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
 subcollection: cloud-cli
 
@@ -223,7 +223,7 @@ ibmcloud app route-map NOME_APPLICAZIONE_CF|NOME_GRUPPO_CONTENITORE  DOMINIO  [-
    <dt>NOME_APPLICAZIONE_CF|NOME_GRUPPO_CONTENITORI (obbligatorio)</dt>
    <dd>Il nome dell'applicazione cf o del gruppo di contenitori da associare a una rotta.</dd>
    <dt>DOMINIO (obbligatorio)</dt>
-   <dd>Il dominio della rotta. Ad esempio, mychinabluemix.net o chinabluemix.net. </dd>
+   <dd>Il dominio della rotta. Ad esempio, mybluemix.net.</dd>
    <dt>-n <i>NOME_HOST</i> (facoltativo)</dt>
    <dd>Il nome host della rotta. Se non viene fornito, il nome host è impostato sul nome applicazione o sul nome gruppo di contenitori per impostazione predefinita.</dd>
    </dl>
@@ -231,22 +231,22 @@ ibmcloud app route-map NOME_APPLICAZIONE_CF|NOME_GRUPPO_CONTENITORE  DOMINIO  [-
 <strong>Esempi</strong>:
 
 Associa una rotta `my-app` con il dominio specificato:
-
 ```
-ibmcloud app route-map my-app mychinabluemix.net
+ibmcloud app route-map my-app mybluemix.net
 ```
 
 Associa una rotta a 'my-container-group' con il dominio e il nome host specificati:
+```
+ibmcloud app route-map my-container-group bluemix.net -n abc
+```
 
-```
-ibmcloud app route-map my-container-group chinabluemix.net -n abc
-```
+Il dominio condiviso predefinito è `mybluemix.net`, ma `appdomain.cloud` è un'altra opzione di dominio che puoi utilizzare. Per ulteriori informazioni sulla migrazione a `appdomain.cloud`, vedi [Aggiornamento del tuo dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+{: tip}
 
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 Annulla l'associazione della rotta specificata a un'applicazione cf o a un gruppo di contenitori esistenti.
-
 ```
 ibmcloud app route-unmap NOME_APPLICAZIONE_CF|NOME_GRUPPO_CONTENITORE  DOMINIO  [-n NOME_HOST]
 ```
@@ -259,24 +259,25 @@ ibmcloud app route-unmap NOME_APPLICAZIONE_CF|NOME_GRUPPO_CONTENITORE  DOMINIO  
    <dt>NOME_APPLICAZIONE_CF|NOME_GRUPPO_CONTENITORI (obbligatorio)</dt>
    <dd>Il nome dell'applicazione cf o del gruppo di contenitori.</dd>
    <dt>DOMINIO (obbligatorio)</dt>
-   <dd>Il dominio della rotta (ad esempio, mychinabluemix.net o chinabluemix.net).</dd>
+   <dd>Il dominio della rotta. Ad esempio, mybluemix.net.</dd>
    <dt>-n <i>NOME_HOST</i> (facoltativo)</dt>
    <dd>Il nome host della rotta. Se non viene fornito, il nome host è impostato sul nome applicazione o sul nome gruppo di contenitori per impostazione predefinita.</dd>
    </dl>
 
 <strong>Esempi</strong>:
 
-Annulla l'associazione di `my-app.mychinabluemix.net` da `my-app`:
+Annullare l'associazione di `my-app.mybluemix.net` da `my-app`:
+```
+ibmcloud app route-unmap my-app mybluemix.net
+```
 
+Annulla l'associazione di `abc.bluexmix.net` da `my-container-group`:
 ```
-ibmcloud app route-unmap my-app mychinabluemix.net
+ibmcloud app route-unmap my-container-group bluemix.net -n abc
 ```
 
-Annulla l'associazione di `abc.chinabluexmix.net` da `my-container-group`:
-
-```
-ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
-```
+Il dominio condiviso predefinito è `mybluemix.net`, ma `appdomain.cloud` è un'altra opzione di dominio che puoi utilizzare. Per ulteriori informazioni sulla migrazione a `appdomain.cloud`, vedi [Aggiornamento del tuo dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+{: tip}
 
 ## ibmcloud app route-create
 {: #ibmcloud_app_route_create}

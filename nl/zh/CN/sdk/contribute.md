@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
 subcollection: cloud-cli
 
@@ -126,7 +126,7 @@ subcollection: cloud-cli
       ```
       {: codeblock}
 
-* 调试：[delve ](https://github.com/derekparker/delve){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
+* 调试：[delve ](https://github.com/go-delve/delve){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")
 
 Delve 是用于 Go 编程语言的调试器，并由 [Visual Studio Code ](https://code.visualstudio.com/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 使用。
 
