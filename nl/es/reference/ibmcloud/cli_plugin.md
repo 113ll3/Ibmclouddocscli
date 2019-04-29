@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-04"
 
-keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
+keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
 subcollection: cloud-cli
 
@@ -48,7 +48,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (necesario)</dt>
    <dd>Nombre del repositorio que se debe añadir. Puede volver a definir su propio nombre para cada repositorio.</dd>
    <dt>REPO_URL (necesario)</dt>
-   <dd>URL del repositorio que se debe añadir. El URL de repositorio debe contener el protocolo (por ejemplo, https://plugins.cloud.ibm.com en lugar de https://plugins.cloud.ibm.com). https://plugins.cloud.ibm.com es el repositorio de plugins oficial de la CLI de {{site.data.keyword.cloud_notm}}.</dd>
+   <dd>URL del repositorio que se debe añadir. El URL de repositorio debe contener el protocolo (por ejemplo, https://plugins.cloud.ibm.com en lugar de plugins.cloud.ibm.com). https://plugins.cloud.ibm.com es el repositorio de plugins oficial de la CLI de {{site.data.keyword.cloud_notm}}.</dd>
     </dl>
 
 

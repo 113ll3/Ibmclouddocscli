@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-03"
 
-keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -284,6 +284,20 @@ Connectez-vous avec un code d'accès unique et définissez un compte, une organi
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
+### Utilisation des services Cloud Foundry
+
+Pour utiliser les services Cloud Foundry, vous devez cibler un espace et une organisation Cloud Foundry. Vous pouvez exécuter la commande suivante pour choisir de manière interactive l'organisation et l'espace :
+```
+ibmcloud target --cf
+```
+{: codeblock}
+
+Vous pouvez, si vous le souhaitez, utiliser la sortie de la commande précédente pour définir manuellement votre organisation et votre espace à l'aide de la commande suivante :
+```
+ibmcloud target -o <value> -s <value>
+```
+{: codeblock}
+
 ### Un compte est associé à une clé d'API
 
 ```
@@ -348,28 +362,34 @@ ibmcloud regions
 
 Définir ou afficher le compte, la région, l'organisation ou l'espace cible :
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion
 
 <strong>Options de commande</strong> :
-   <dl>
-   <dt>-r <i>REGION_NAME</i> (facultatif)</dt>
-   <dd>Nom de la région vers laquelle commuter, par exemple 'us-south' ou 'eu-gb'.</dd>
-   <dt>--unset-region</dt>
-   <dd>Annuler la définition de la région ciblée</dd>
+<dl>
    <dt>-c <i>ACCOUNT_ID</i> (facultatif)</dt>
    <dd>ID du compte à cibler.</dd>
+   <dt>-r <i>REGION_NAME</i> (facultatif)</dt>
+   <dd>Nom de la région vers laquelle commuter, par exemple 'us-south' ou 'eu-gb'.</dd>
    <dt>-g <i>RESOURCE_GROUP</i> (facultatif)</dt>
    <dd>Nom du groupe de ressources</dd>
    <dt>--cf</dt>
    <dd>Sélectionner l'organisation et l'espace cible de manière interactive</dd>
+   <dt>--cf-api</dt>
+   <dd>Noeud final d'API Cloud Foundry</dd>
    <dt>-o <i>ORG_NAME</i> (facultatif)</dt>
    <dd>Nom de l'organisation à cibler.</dd>
    <dt>-s <i>SPACE_NAME</i> (facultatif)</dt>
    <dd>Nom de l'espace à cibler.</dd>
-   </dl>
+   <dt>--unset-region</dt>
+   <dd>Annuler la définition de la région ciblée</dd>
+   <dt>--unset-resource-group</dt>
+   <dd>Annuler la définition du groupe de ressources ciblé</dd>
+   <dt>--output <i>FORMAT</i></dt>
+   <dd>Indiquez un format de sortie. Seul JSON est pris en charge pour l'instant.</dd>
+</dl>
 Si aucune de ces options n'est spécifiée, le compte, la région, l'organisation et l'espace en cours s'affichent.
 
 <strong>Exemples</strong> :

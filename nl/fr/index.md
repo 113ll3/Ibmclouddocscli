@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-04-10"
 
-keywords: IBM Cloud Developer Tools CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
+keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
 subcollection: cloud-cli
 
@@ -15,6 +15,7 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:note: .note}
 
 # Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}
 {: #ibmcloud-cli}
@@ -22,7 +23,10 @@ subcollection: cloud-cli
 En suivant ce tutoriel, vous allez installer un ensemble d'outils {{site.data.keyword.cloud}} Developer Tools, vérifier l'installation et configurer l'environnement. {{site.data.keyword.cloud_notm}} Developer Tools propose une approche de ligne de commande permettant de créer, de développer et de déployer des applications Web, mobiles et de microservice.
 {: shortdesc}
 
-Avec cette installation, vous disposez de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} autonome et des outils suivants :
+Assurez-vous de toujours utiliser la dernière version de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} autonome pour la version {{site.data.keyword.cloud_notm}} Public. Si vous avez besoin d'utiliser une version 32 bits ou une version antérieure autre que la dernière version pour les environnements dédiés {{site.data.keyword.cloud_notm}}, voir [Editions de l'interface CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-cli-releases).
+{: note}
+
+La commande d'installation présentée dans ce tutoriel installe la dernière version d'interface de ligne de commande {{site.data.keyword.cloud_notm}} autonome ainsi que les outils suivants :
 
 * `Homebrew` (Mac uniquement)
 * `Git`
@@ -62,11 +66,9 @@ Vous devez avoir un compte [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.
   Cliquez avec le bouton droit de la souris sur l'icône Windows PowerShell et sélectionnez **Exécuter en tant qu'administrateur**.
   {: tip}
 
-  Vous pouvez également télécharger le script du programme d'installation à partir de ce [référentiel GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+Vous pouvez également télécharger le script du programme d'installation à partir de ce [référentiel GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
-<!--Uncomment when this linked topic goes to prod.
-  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
+Pour savoir comment installer ces outils manuellement, voir [Installation manuelle des composants du plug-in d'interface de ligne de commande {{site.data.keyword.cloud_notm}} Developer Tools](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
 
 ## Etape 2. Vérifier l'installation
 {: #step2-verify-idt}
@@ -91,13 +93,13 @@ La sortie inclut les instructions d'utilisation, la version actuelle et les comm
   Si vos données d'identification sont rejetées, vous pouvez utiliser un ID fédéré. Pour vous connecter avec un ID fédéré, utilisez l'option `--sso`. Pour plus de détails, voir [Connexion à l'aide d'un ID fédéré](/docs/iam/federated_id?topic=iam-federated_id#federated_id).
   {: tip}
 
-2. Pour utiliser les services Cloud Foundry, ciblez une organisation et un espace.
+2. Pour accéder aux services Cloud Foundry, vous devez spécifier un espace et une organisation Cloud Foundry. Vous pouvez exécuter la commande suivante pour identifier de manière interactive l'organisation et l'espace :
   ```
   ibmcloud target --cf
   ```
   {: codeblock}
 
-  Vous pouvez, si vous le souhaitez, utiliser la sortie de la commande précédente pour définir manuellement votre organisation et votre espace à l'aide de la commande suivante :
+  Si vous savez à quelle organisation et à quel espace le service appartient, vous pouvez utiliser la commande suivante :
   ```
   ibmcloud target -o <value> -s <value>
   ```

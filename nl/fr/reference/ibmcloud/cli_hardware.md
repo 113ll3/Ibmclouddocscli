@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
 subcollection: cloud-cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 # Création et utilisation de serveurs bare metal
 {: #sl-manage-bare-metal}
 
-Les serveurs bare metal sont des serveurs physiques à service exclusif offrant performances et contrôle avec un accès de bas niveau aux ressources matériel. Les serveurs bare metal fournissent la puissance brute dont vous avez besoin pour vos charges de travail exigeantes en termes de processeur et d'entrée-sortie de disque. Ces serveurs sont fournis avec le package le plus complet de services et fonctions standard.
+Les serveurs de type {{site.data.keyword.baremetal_long}} sont des serveurs physiques à service exclusif offrant performances et contrôle avec un accès de bas niveau aux ressources matérielles. Les serveurs bare metal fournissent la puissance brute dont vous avez besoin pour vos charges de travail exigeantes en termes de processeur et d'entrée-sortie de disque. Ces serveurs sont fournis avec le package le plus complet de services et fonctions standard.
 
 Les commandes suivantes permettent de gérer les serveurs matériels bare metal de l'infrastructure classique {{site.data.keyword.cloud}}.
 {: shortdesc}
@@ -183,9 +183,9 @@ ibmcloud sl hardware list [OPTIONS]
 <dt>--owner</dt>
 <dd>Filtrer par ID de propriétaire.</dd>
 <dt>--sortby</dt>
-<dd>Colonne à utiliser pour le tri : default:hostname, option:id, guid,hostname, domain, public_ip, private_ip, datacenter, status, ipmi_ip, created, created_by.</dd>
-<dt>--columns</dt>
-<dd>Colonnes à afficher : default:id, hostname, domain, public_ip, private_ip, datacenter, status, options:guid, cpu, memory, os, ipmi_ip, created, created_by, tags.</dd>
+<dd>Colonne à utiliser pour le tri, valeur par défaut : hostname - Options : id, guid, hostname, domain, public_ip, private_ip, datacenter, status, ipmi_ip, created, created_by.</dd>
+<dt>--column</dt>
+<dd>Colonnes à afficher, valeurs par défaut : id, hostname, domain, public_ip, private_ip, datacenter, status - Options : guid, cpu, memory, os, ipmi_ip, created, created_by, tags.</dd>
 </dl>
 
 ## ibmcloud sl hardware power-cycle
