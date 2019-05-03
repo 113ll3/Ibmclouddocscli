@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-03-01"
 
-keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
+keywords: IBM Cloud Developer Tools CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
 
 subcollection: cloud-cli
 
@@ -15,7 +15,6 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
-{:note: .note}
 
 # {{site.data.keyword.cloud_notm}} CLI 入门
 {: #ibmcloud-cli}
@@ -23,10 +22,7 @@ subcollection: cloud-cli
 在本教程中，您将安装一组 {{site.data.keyword.cloud}} Developer Tools，验证安装，并配置环境。{{site.data.keyword.cloud_notm}} Developer Tools 提供了一种命令行方法，用于创建、开发和部署 Web、移动和微服务应用程序。
 {: shortdesc}
 
-确保针对 {{site.data.keyword.cloud_notm}} Public 始终使用最新版本的独立 {{site.data.keyword.cloud_notm}} CLI。如果需要使用 32 位版本或 {{site.data.keyword.cloud_notm}} 专用环境的最新版本之外的先前版本，请参阅 [{{site.data.keyword.cloud_notm}} CLI 发行版](/docs/cli?topic=cloud-cli-cli-releases)。
-{: note}
-
-本教程中的安装命令会安装最新可用的独立 {{site.data.keyword.cloud_notm}} CLI 版本以及以下工具：
+通过此安装，您将获得独立 {{site.data.keyword.cloud_notm}} CLI 以及以下工具：
 
 * `Homebrew`（仅限 Mac）
 * `Git`
@@ -66,9 +62,11 @@ curl -sL https://ibm.biz/idt-installer | bash
     右键单击 Windows PowerShell 图标，并选择**以管理员身份运行**。
   {: tip}
 
-您还可以从此 [GitHub 存储库](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中下载安装程序脚本。
+  您还可以从此 [GitHub 存储库](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中下载安装程序脚本。
 
-有关手动安装这些工具的步骤，请参阅[手动安装 {{site.data.keyword.cloud_notm}} Developer Tools CLI 插件组件](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)。
+<!--Uncomment when this linked topic goes to prod.
+  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
 ## 步骤 2. 验证安装
 {: #step2-verify-idt}
@@ -93,13 +91,13 @@ ibmcloud login
   如果凭证被拒绝，说明您可能使用的是联合标识。要使用联合标识登录，请使用 `--sso` 标志。有关更多详细信息，请参阅[使用联合标识进行登录](/docs/iam/federated_id?topic=iam-federated_id#federated_id)。
   {: tip}
 
-2. 要访问 Cloud Foundry 服务，必须指定 Cloud Foundry 组织和空间。您可以运行以下命令，通过交互方式确定组织和空间：
+2. 要使用 Cloud Foundry 服务，请设置目标组织和空间。
   ```
   ibmcloud target --cf
   ```
   {: codeblock}
 
-  或者，如果您知道服务所属的组织和空间，可以使用以下命令：
+  （可选）可以使用先前命令的输出，通过以下命令来手动设置组织和空间：
   ```
 ibmcloud target -o <value> -s <value>
 	```

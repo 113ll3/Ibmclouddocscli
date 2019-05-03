@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-02-21"
 
-keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
+keywords: bmscore, bmscore sdk, network request, ios, android, cordova
 
 subcollection: cloud-cli
 
@@ -47,15 +47,17 @@ Também é possível usar o SDK `BMSCore` para fazer solicitações de rede para
 	```
 	{: codeblock}
 
-A classe `Request` é uma maneira simples de fazer uma solicitação de HTTP e de obter a resposta após a solicitação ser concluída. Se você estiver fazendo download ou fazendo upload de arquivos grandes ou de grandes corpos de dados, será possível usar os métodos `Request`, `download` ou `upload`. Para monitorar o progresso do download ou do upload, crie um `ProgressListener` customizado e passe-o para os métodos `download` ou `upload`.
+A classe `Request` é uma maneira simples de fazer uma solicitação de HTTP e
+de obter a resposta após a solicitação ser concluída. Se você estiver fazendo download ou fazendo upload de arquivos grandes ou de grandes corpos de dados, será possível usar os métodos `Request`, `download` ou `upload`. Para monitorar o progresso do download ou do upload, crie um `ProgressListener` customizado e passe-o para os métodos `download` ou `upload`.
 
-Para obter exemplos de uso completos, consulte no `BMSCore` GitHub [LEIA-ME](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
+<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
 
 
 ## iOS
 {: #request-ios}
 
-1. Certifique-se de que você tenha [importado o SDK do Client e o inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) em seu aplicativo iOS.
+1. Certifique-se de que você tenha [importado o SDK
+do Client e o inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) em seu aplicativo iOS.
 
 2. Crie uma solicitação de rede.
 
@@ -63,17 +65,13 @@ Para obter exemplos de uso completos, consulte no `BMSCore` GitHub [LEIA-ME](htt
 	{: #ios-swift3 notoc}
 
 	```Swift
-	let customResourceURL = "<your resource URL>"
-	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>" 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
-			print ("Response: \(response?.responseText), no error")
-		} else {
-			print ("Error: \(error)")
-		}
-	}
-	request.send(completionHandler: callBack)
+			print ("Response: \(response?.responseText), no error") 		} else {
+			print ("Error: \(error)") 		}
+	} 	request.send(completionHandler: callBack)
 	```
 	{: codeblock}
 
@@ -81,30 +79,32 @@ Para obter exemplos de uso completos, consulte no `BMSCore` GitHub [LEIA-ME](htt
 	{: #ios-swift22 notoc}
 
 	```Swift
-	let customResourceURL = "<your resource URL>"
-	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>" 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
-		if error == nil {
-			print ("Response: \(response?.responseText), no error")
-		} else {
-			print ("Error: \(error)")
-		}
-	}
-	request.send(completionHandler: callBack)
+  if error == nil {
+			print ("Response: \(response?.responseText), no error") 		} else {
+			print ("Error: \(error)") 		}
+	} 	request.send(completionHandler: callBack)
 	```
 	{: codeblock}
 
-A classe `Request` é uma maneira simples de fazer uma solicitação de HTTP e de obter a resposta após a solicitação ser concluída. Se deseja mais flexibilidade e controle do que é possível obter com a classe `Request`, a classe `BMSURLSession` pode ser usada. Alguns recursos da classe `BMSURLSession` incluem monitoramento do progresso de uploads e pausa ou cancelamento de solicitações. Para obter as respostas, é possível escolher manipuladores de conclusão ou delegados.
+A classe `Request` é uma maneira simples de fazer uma solicitação de HTTP e
+de obter a resposta após a solicitação ser concluída. Se deseja mais flexibilidade e controle do que é
+possível obter com a classe `Request`, a classe `BMSURLSession`
+pode ser usada. Alguns recursos da classe `BMSURLSession` incluem monitoramento do
+progresso de uploads e pausa ou cancelamento de solicitações. Para obter as respostas, é possível escolher manipuladores de conclusão ou delegados.
 
 A classe `BMSURLSession` está disponível somente para iOS.
 
-Para obter exemplos de uso completos, consulte o [LEIA-ME](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} do `BMSCore` GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
+Para obter exemplos de uso completos, consulte o GitHub `BMSCore` [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
+
 
 ## Cordova
 {: #request-cordova}
 
-1. Certifique-se de que você tenha [importado o SDK do Client e o inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) em seu aplicativo Cordova.
+1. Certifique-se de que você tenha [importado o
+SDK do Client e o inicializado](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) em seu aplicativo Cordova.
 
 2. Crie uma solicitação de rede.
 

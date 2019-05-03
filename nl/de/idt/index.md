@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-27"
 
-keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
+keywords: developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
 subcollection: cloud-cli
 
@@ -73,7 +73,7 @@ Sobald Ihr Projekt erstellt ist, können Sie es für Ihre Zwecke anpassen. Der g
 Sie können eine beliebige IDE oder einen beliebigen Editor verwenden, um Ihre Anwendung zu codieren. Wir bieten
 eine Erweiterung für den Microsoft VisualStudio Code-Editor (VSCode) an, mit der Sie direkt auf alle IDE-Befehle zugreifen können.
 
-Wenn das Projekt erstellt ist, führen Sie Ihre App mit dem Befehl [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) oder [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug) aus. Dadurch wird die App in dem entsprechenden Container ausgeführt. Manche App-Muster unterstützen mehrere externe Container außerhalb Ihrer Apps. Diese Container werden während der Ausführung oder beim Debugging automatisch gestartet und konfiguriert. Außerdem gibt es einen Befehl [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test), der alle zugeordneten Testfälle für die App ausführt.
+Wenn das Projekt erstellt ist, führen Sie Ihre App mit dem Befehl [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) oder [`ibmcloud dev debug`](/docs/cli/iddt/commands.html#debug) aus. Dadurch wird die App in dem entsprechenden Container ausgeführt. Manche App-Muster unterstützen mehrere externe Container außerhalb Ihrer Apps. Diese Container werden während der Ausführung oder beim Debugging automatisch gestartet und konfiguriert. Außerdem gibt es einen Befehl [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test), der alle zugeordneten Testfälle für die App ausführt.
 
 ### Vorgehensweise zur Verwendung lokaler Container
 {: #local-containers}

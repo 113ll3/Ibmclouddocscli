@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
+keywords: sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
 subcollection: cloud-cli
 
@@ -34,7 +34,7 @@ Die REST-API-Definition muss gültig sein und entweder an einem Live-Serverendpu
 
 Stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen.
 
-* Sie verfügen über ein [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") Konto.
+* Sie verfügen über ein [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window}-Konto ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link").
 * Eine gültige API-Definition, die der [Open API-Spezifikation ](https://www.openapis.org/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") entspricht.
 
 ## Installation

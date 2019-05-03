@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
 subcollection: cloud-cli
 
@@ -186,8 +186,9 @@ ibmcloud sl hardware list [OPTIONS]
 <dt>--sortby</dt>
 <dd>Coluna pela qual classificar, padrão: hostname,
 opção: id, guid, hostname, domain, public_ip, private_ip, datacenter, status, ipmi_ip, created, created_by.</dd>
-<dt>--column</dt>
-<dd>Coluna a exibir, default:id,hostname,domain,public_ip,private_ip,datacenter,status, options:guid,cpu,memory,os,ipmi_ip,created,created_by,tags.</dd>
+<dt>--columns</dt>
+<dd>Colunas para exibição, padrão: id, hostname, domain, public_ip, private_ip, datacenter, status; opções: guid, cpu, memory,
+os, ipmi_ip, created, created_by, tags.</dd>
 </dl>
 
 ## ibmcloud sl hardware power-cycle

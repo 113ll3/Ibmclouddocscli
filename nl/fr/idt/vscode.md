@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
+keywords: ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
 subcollection: cloud-cli
 
@@ -69,7 +69,7 @@ Vous pouvez commencer à utiliser les flux de travaux `ibmcloud dev` en quelques
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `ibmcloud dev build` pour générer l'application dans une image Docker.
 * Utilisez la commande `ibmcloud dev debug` pour exécuter l'application dans un conteneur Docker local à des fins de développement.
-> Remarque : pour déboguer une application Node.js qui s'exécute dans le conteneur Docker local, vous devez [ajouter une configuration de débogage pour le conteneur local](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
+> Remarque : pour déboguer une application Node.js qui s'exécute dans le conteneur Docker local, vous devez [ajouter une configuration de débogage pour le conteneur local](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
 * Utilisez la commande `ibmcloud dev run` pour exécuter l'application dans un conteneur Docker local en mode édition.
 * Utilisez la commande `ibmcloud dev deploy` pour déployer l'application dans un environnement d'exécution Cloud Foundry sur {{site.data.keyword.cloud_notm}}.
 
@@ -85,6 +85,6 @@ Vous pouvez démarrer les flux de travail Cloud Foundry en quelques étapes seul
 * Ouvrez le dossier du projet localement dans l'éditeur Visual Studio Code.
 * Utilisez la commande `ibmcloud cf apps` pour répertorier toutes vos applications.
 * Utilisez la commande `ibmcloud cf push` pour envoyer votre application à l'environnement d'exécution Cloud Foundry.
-* Utilisez ibmcloud `cf <start/stop/restage/restart>` pour modifier le statut de votre application.
+* Utilisez la commande ibmcloud `cf <start/stop/restage/restart>` pour modifier le statut de votre application.
 * Utilisez la commande `ibmcloud cf logs` pour afficher le flux de journalisation opérationnel pour votre application.
   * Utilisez la commande `ibmcloud cf logs` pour arrêter le flux de journalisation.

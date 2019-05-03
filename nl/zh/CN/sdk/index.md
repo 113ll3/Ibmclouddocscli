@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
+keywords: sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
 subcollection: cloud-cli
 
@@ -34,7 +34,7 @@ REST API 定义必须有效，并且在实时服务器端点上或在系统上�
 
 确保满足以下需求。
 
-* 您具有 [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 帐户。
+* 您具有 [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 帐户。
 * 符合 [Open API ](https://www.openapis.org/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 规范的有效 API 定义。
 
 ## 安装

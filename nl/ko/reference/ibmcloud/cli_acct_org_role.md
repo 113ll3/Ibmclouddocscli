@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
+keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
 
 subcollection: cloud-cli
 
@@ -273,7 +273,7 @@ ibmcloud account space space_example --security-group-rules
 역할별로 지정된 조직의 사용자를 표시합니다.
 
 ```
-ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
+ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -282,10 +282,10 @@ ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 <dl>
 <dt>ORG_NAME(필수)</dt>
 <dd>조직의 이름입니다.</dd>
-<dt>-a, -all(선택사항)</dt>
+<dt>-a(선택사항)</dt>
 <dd>지정된 조직의 모든 사용자를 나열하지만, 역할별로 그룹화하지는 않습니다.</dd>
-<dt>-r, --region REGION(선택사항)</dt>
-<dd>지역 이름입니다. 지정되지 않은 경우 현재 지역으로 기본값이 지정됩니다.</dd>
+<dt>--output FORMAT(선택사항)</dt>
+<dd>--output value  출력 형식을 지정합니다. 이제 JSON만 지원됩니다.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -534,7 +534,7 @@ ibmcloud account org-account ORG_NAME [--guid]
 ibmcloud account show
 ```
 
-<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -557,7 +557,7 @@ ibmcloud account show
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
+<strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
 <dl>
@@ -571,41 +571,6 @@ ibmcloud account update (--service-endpoint-enable true | false)
 
 ```
 ibmcloud account update --service-endpoint-enable true
-```
-
-## ibmcloud account audit-logs
-{: #ibmcloud_account_audit_logs}
-
-Softlayer 계정 감사 로그 나열
-
-```
-account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
-```
-
-<strong>전제조건</strong>: 엔드포인트, 로그인, 대상
-
-<strong>명령 옵션</strong>:
-<dl>
-  <dt>-a, --action <i>ACTION</i></dt>
-  <dd>조치. 지정된 조치와 함께 감사 로그를 나열합니다.</dd>
-  <dt>-e, --end-date <i>END_DATE</i></dt>
-  <dd>종료 날짜. 종료 날짜 이전의 감사 로그를 나열합니다. 지원되는 형식은 yyyy-MM-ddTHH:mm:ss입니다.</dd>
-  <dt>-o, --object <i>OBJECT</i></dt>
-  <dd>오브젝트. 지정된 오브젝트와 함께 감사 로그를 나열합니다.</dd>
-  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
-  <dd>오브젝트 유형. 지정된 오브젝트 유형과 함께 감사 로그를 나열합니다.</dd>
-  <dt>-s, --start-date <i>START_DATE</i></dt>
-  <dd>시작 날짜. 시작 날자 이후의 감사 로그를 나열합니다. 지원되는 형식은 yyyy-MM-ddTHH:mm:ss입니다.</dd>
-  <dt>-u, --user-name <i>USER_NAME</i></dt>
-  <dd>사용자 이름. 지정된 사용자 이름과 함께 감사 로그를 나열합니다.</dd>
-</dl>
-
-<strong>예제</strong>:
-
-감사 로그 나열
-
-```
-ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users

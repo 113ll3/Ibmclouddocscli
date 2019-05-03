@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
 subcollection: cloud-cli
 
@@ -23,7 +23,7 @@ subcollection: cloud-cli
 {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인에 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.cloud_notm}} 로컬 또는 {{site.data.keyword.cloud_notm}} 데디케이티드 환경을 관리할 수 있습니다. 예를 들어, LDAP 레지스트리에서 사용자를 추가할 수 있습니다. {{site.data.keyword.cloud_notm}} 퍼블릭의 계정 관리에 대한 정보는 [관리](/docs/account?topic=account-accounts#accounts)를 참조하십시오.
 
 시작하기 전에 Cloud Foundry 명령행 인터페이스를 설치하십시오. {{site.data.keyword.cloud_notm}} 관리
-CLI 플러그인에는 `cf` 버전 6.11.2 이상이 필요합니다. [Cloud Foundry 명령행 인터페이스 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")
+CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다. [Cloud Foundry 명령행 인터페이스 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")
 
 **제한사항:** Cloud Foundry 명령행 인터페이스는
 Cygwin에서는 지원되지 않습니다. Cygwin 명령행 창 외의
@@ -33,7 +33,6 @@ Cygwin에서는 지원되지 않습니다. Cygwin 명령행 창 외의
 {: note}
 
 ## {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인 추가
-{: #add-admin-cli}
 
 Cloud Foundry 명령행 인터페이스가 설치된 후에 {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인을 추가할 수 있습니다.
 
@@ -42,40 +41,25 @@ Cloud Foundry 명령행 인터페이스가 설치된 후에 {{site.data.keyword.
 
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.cloud_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.
-  ```
-  cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
-  ```
-  {: codeblock}
-
-  관리 콘솔 CLI 페이지(`https://<customer_console_endpoint>.bluemix.net/cli`)에서 실제 엔드포인트가 있는 동일한 명령을 찾을 수 있습니다.
-{: note}
-
-2. {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.
-  ```
+<ol>
+<li>{{site.data.keyword.cloud_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.<br/><br/>
+<code>
+cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
+</code><br/><br/>
+</li>
+<li>{{site.data.keyword.cloud_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.<br/><br/>
+<code>
 cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
-```
-  {: codeblock}
-
-## {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인 설치 제거
-{: #remove-admin-cli}
+</code>
+</li>
+</ol>
 
 플러그인을 설치 제거해야 하는 경우 다음 명령을 사용한 후 업데이트된 저장소를 추가하고 최신 플러그인을 설치할 수 있습니다.
 
-1. 플러그인 설치 제거:
-  ```
-  cf uninstall-plugin IBMCloudAdminCLI
-  ```
-  {: codeblock}
-
-2. 플러그인 저장소 제거:
-  ```
-  cf remove-plugin-repo IBMCloudAdmin
-  ```
-  {: codeblock}
+* 플러그인 설치 제거: `cf uninstall-plugin IBMCloudAdminCLI`
+* 플러그인 저장소 제거: `cf remove-plugin-repo IBMCloudAdmin`
 
 ## {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인 사용
-{: #using-admin-cli}
 
 {{site.data.keyword.cloud_notm}} 관리 CLI 플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다.
 
@@ -89,36 +73,30 @@ cf plugins
 명령에 대한 도움말을 보려면 `-help` 옵션을 사용하십시오.
 
 ### {{site.data.keyword.cloud_notm}}에 연결 및 로그인
-{: #connecting-ibm-cloud}
 
-관리 CLI 플러그인을 사용하려면 먼저 연결하여
+관리 CLI 플러그인을 사용하려면 (아직 그렇게 하지 않은 경우) 먼저 연결하여
 로그인해야 합니다.
 
-1. {{site.data.keyword.cloud_notm}} API 엔드포인트에 연결하려면 다음 명령을 실행하십시오.
-  ```
-  cf api api.us-south.cf.cloud.ibm.com
-  ```
-  {: codeblock}
-
-  관리 콘솔의 리소스 및 정보 페이지에서 올바른 URL을 확인할 수
+<ol>
+<li>{{site.data.keyword.cloud_notm}} API 엔드포인트에 연결하려면 다음 명령을 실행하십시오.<br/><br/>
+<code>
+cf api api.ng.bluemix.net
+</code>
+<dl class="parml">
+<dt class="pt dlterm">&lt;subdomain&gt;</dt>
+<dd class="pd">{{site.data.keyword.cloud_notm}} 인스턴스 URL의 하위 도메인입니다.<br />
+</dd>
+</dl>
+<p>관리 콘솔의 리소스 및 정보 페이지에서 올바른 URL을 확인할 수
 있습니다. URL은 **API URL** 필드의 API 정보 섹션에
-표시됩니다.
-
-2. 다음 명령으로 {{site.data.keyword.cloud_notm}}에 로그인하십시오.
-  ```
+표시됩니다.</p>
+</li>
+<li>다음 명령으로 {{site.data.keyword.cloud_notm}}에 로그인하십시오.<br/><br/>
+<code>
 cf login
-  ```
-  {: codeblock}
-
-**레거시 Cloud Foundry 엔드포인트 사용**:
-
-기존 `api.*.bluemix.net` Cloud Foundry API 엔드포인트를 여전히 사용할 수 있지만, 스크립트와 인프라 자동화를 업데이트하여 해당 지역에 대해 다음과 같은 업데이트된 Cloud Foundry API 엔드포인트를 사용할 수 있습니다. 
-
-* api.us-south.cf.cloud.ibm.com(이전의 api.ng.bluemix.net)
-* api.eu-gb.cf.cloud.ibm.com(이전의 api.eu-gb.bluemix.net)
-* api.us-east.cf.cloud.ibm.com(이전의 api.us-east.bluemix.net)
-* api.eu-de.cf.cloud.ibm.com(이전의 api.eu-de.bluemix.net)
-* api.au-syd.cf.cloud.ibm.com(이전의 api.au-syd.bluemix.net)
+</code>
+</li>
+</ol>
 
 ## 사용자 관리
 {: #admin_users}
@@ -133,7 +111,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다. 자세한 정보는 [관리자가 사용자를 추가하도록 설정](#clius_emau)을 참조하십시오.
+특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다. 자세한 정보는 [관리자가 사용자를 추가하도록 설정](index.html#clius_emau)을 참조하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -935,11 +913,11 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 
 ASG는 {{site.data.keyword.Bluemix_notm}} 환경에서 애플리케이션의 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다. 각 ASG는 네트워크 안팎으로 특정 트래픽과 통신을 허용하는 규칙의 목록으로 구성됩니다. 하나 이상의 ASG를 특정 보안 그룹 세트(예: 글로벌 액세스를 적용하는 데 사용되는 그룹 세트)에 바인딩하거나 {{site.data.keyword.Bluemix_notm}} 환경에서 조직 내의 영역에 바인딩할 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 
 **경고**: IBM에서 작성한 두 개의 보안 그룹에서 **기본 스테이징** 또는 **기본 실행** 그룹 세트의 바인드를 해제하면, `public_networks` 및 `dns`에서 외부 네트워크에 대한 글로벌 액세스를 사용 안함으로 설정합니다. 바인드 해제를 사용할 때는 환경에 있는 실행 및 스테이징 애플리케이션에 대한 잠재적 영향을 이해하고 주의를 기울이십시오.
 
-보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 필수 필드 및 선택 필드를 포함하여 자세한 정보는 [애플리케이션 보안 그룹 작성 ](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 Cloud Foundry 정보를 참조하십시오.
+보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 필수 필드 및 선택 필드를 포함하여 자세한 정보는 [애플리케이션 보안 그룹 작성 ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 Cloud Foundry 정보를 참조하십시오.
 {: note}
 
 ### 보안 그룹 나열
@@ -973,7 +951,7 @@ cf ba security-groups <security-group>
 ### 보안 그룹 작성
 {: #clicreasecgro}
 
-보안 그룹 및 출력 트래픽을 정의하는 규칙 작성에 대한 자세한 정보는 [애플리케이션 보안 그룹 작성](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+보안 그룹 및 출력 트래픽을 정의하는 규칙 작성에 대한 자세한 정보는 [애플리케이션 보안 그룹 작성](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 
 보안 그룹을 작성하려면 다음 명령을 사용하십시오.
 ```
@@ -1033,7 +1011,7 @@ cf ba delete-security-group <security-group>
 ### 보안 그룹 바인딩
 {: #clibindsecgro}
 
-보안 그룹 바인딩에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+보안 그룹 바인딩에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 
 * 기본 스테이징 보안 그룹 세트를 바인드하려면 다음 명령을 사용하십시오.
 
@@ -1087,7 +1065,7 @@ cf ba bind-security-group <security-group> <org> <space>
 ### 보안 그룹 바인드 해제
 {: #cliunbindsecgro}
 
-보안 그룹 바인딩 해제에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 해제](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+보안 그룹 바인딩 해제에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩 해제](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 
 * 기본 스테이징 보안 그룹 세트에서 바인드 해제하려면 다음 명령을 사용하십시오.
 

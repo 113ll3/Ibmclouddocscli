@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-03-26"
 
 keywords: extend cli, ibmcloud repo-plugins, repo-plugins, plug-in, plugin, ibmcloud cli, ibmcloud, ibmcloud dev, cli, command line, command-line, developer tools, plugin install
 
@@ -36,76 +36,62 @@ Pour explorer d'autres commandes de gestion de plug-in, exécutez `ibmcloud plug
 
 1. Utilisez la commande `ibmcloud plugin repo-plugins -r REPO_NAME` pour rechercher un plug-in dans le référentiel.
 2. Le référentiel officiel de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} est nommé IBM Cloud ; vous pouvez rechercher les plug-in officiels comme indiqué dans l'exemple suivant :
-```
-ibmcloud plugin repo-plugins -r "IBM Cloud"
-```
-{: codeblock}
 
-```
-Status             Name                                   Versions                       Description   
-Update Available   container-service/kubernetes-service   0.2.99, 0.2.95, 0.2.80...      IBM Cloud Kubernetes Service for management of Kubernetes clusters   
-Update Available   cloud-functions                        1.0.30, 1.0.29, 1.0.28...      IBM Cloud CLI plug-in for IBM Cloud Functions   
-...
-```
-{: screen}
+  ```
+  $ ibmcloud plugin repo-plugins
+  Getting plug-ins from repository 'IBM Cloud'...
+
+  Repository: IBM Cloud
+  Name           Description                                    Versions
+  auto-scaling   IBM Cloud CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
+  nsg            IBM Cloud Network Security Group plugin          0.1.1
+
+  ```
 
 ### Etape 2 : Installer le plug-in
 {: step2-install-plugin}
 
 Utilisez la commande `ibmcloud plugin install PLUGIN_NAME -r REPO_NAME` pour installer le plug-in. Par exemple, utilisez la commande suivante pour installer un plug-in à partir du référentiel de plug-in IBM officiel 'IBM Cloud' :
 
-```
-ibmcloud plugin install auto-scaling
-```
-{: codeblock}
-
-```
-Looking up 'auto-scaling' from repository 'IBM Cloud'...
-Plug-in 'auto-scaling 0.2.7' found in repository 'IBM Cloud'
-Attempting to download the binary file...
- 7.28 MiB / 7.28 MiB [============================================] 100.00% 1s
-7636608 bytes downloaded
-Installing binary...
-OK
-Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
-```
-{: screen}
+  ```
+  $ ibmcloud plugin install auto-scaling 
+  Looking up 'auto-scaling' from repository 'IBM Cloud'...
+  9857792 bytes downloaded
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
+  OK
+  Plugin 'auto-scaling 0.2.2' was successfully installed.
+  ```
 
 ## Installation locale d'un plug-in
 {: #install-plugin-locally}
 
 Utilisez la commande `ibmcloud plugin install LOCAL_FILE_NAME` pour installer un fichier binaire de plug-in sur votre poste local. Par exemple :
 
-```
-ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.7
-```
-{: codeblock}
-
-```
-Installing plugin './auto-scaling-darwin-amd64-0.2.7'...
-OK
-Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
-$
-```
-{: screen}
+  ```
+  $ ibmcloud plugin install ./auto-scaling-darwin-amd64-0.2.2
+  Installing plugin './auto-scaling-darwin-amd64-0.2.2'...
+  OK
+  Plugin 'auto-scaling 0.2.2' was successfully installed.
+  $
+  ```
 
 ## Installation d'un plug-in à partir d'une URL Web
 {: install-plugin-from-url}
 
 Utilisez la commande `ibmcloud plugin install URL` pour installer un plug-in directement à partir d'une URL Web. Par exemple :
+
 ```
-ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/auto-scaling/0.2.7/auto-scaling-darwin-amd64-0.2.7
+ibmcloud plugin install https://plugins.cloud.ibm.com/downloads/bluemix-plugins/auto-scaling/auto-scaling-darwin-amd64-0.2.2
 ```
 {: codeblock}
 
 Sortie :
 ```
 Attempting to download the binary file...
- 7.28 MiB / 7.28 MiB [===========================================] 100.00% 0s
-7636608 bytes downloaded
-Installing binary...
+9857792 bytes downloaded
+Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
 OK
-Plug-in 'auto-scaling 0.2.7' was successfully installed into /Users/username/.bluemix/plugins/auto-scaling. Use 'ibmcloud plugin show auto-scaling' to show its details.
-$
+  Plugin 'auto-scaling 0.2.2' was successfully installed.
+~$
 ```
 {: screen}

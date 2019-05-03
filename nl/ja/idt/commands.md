@@ -2,11 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
-
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
-
-subcollection: cloud-cli
+lastupdated: "2019-02-14"
 
 ---
 
@@ -21,8 +17,8 @@ subcollection: cloud-cli
 # {{site.data.keyword.dev_cli_notm}} CLI プラグイン (ibmcloud dev) コマンド
 {: #idt-cli}
 
-バージョン: 2.1.18
-リリース: 2019 年 3 月 28 日
+バージョン: 2.1.4
+リリース: 2018 年 8 月 31 日
 
 2018 年 5 月、{{site.data.keyword.cloud}} CLI コマンドの `bluemix` および `bx` は、`ibmcloud` になりました。 ただし、後に削除されるまで、`bluemix` および `bx` の CLI コマンドを引き続き使用できます。
 {: tip}
@@ -169,20 +165,20 @@ ibmcloud dev delete <applicationName>
 
 Cloud Foundry アプリケーションを {{site.data.keyword.cloud_notm}} にデプロイする前に、`manifest.yml` ファイルがアプリケーションのルート・ディレクトリーに存在する必要があります。
 
-アプリケーションをコンテナーとしてデプロイする前に、[Kubernetes](https://kubernetes.io/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") と [Helm](https://github.com/helm/helm){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") をローカルにインストールする必要があります。 Helm サーバー・バージョンよりも新しい Helm クライアント・バージョンを使用することはできません。 `helm version` を実行することで、両方のバージョンを確認できます。 クライアント・バージョンには、v2.4.2 を使用することをお勧めします。
+アプリケーションをコンテナーとしてデプロイする前に、[Kubernetes](https://kubernetes.io/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") と [Helm](https://github.com/kubernetes/helm){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") をローカルにインストールする必要があります。 Helm サーバー・バージョンよりも新しい Helm クライアント・バージョンを使用することはできません。 `helm version` を実行することで、両方のバージョンを確認できます。 クライアント・バージョンには、v2.4.2 を使用することをお勧めします。
 
 アプリケーションを Kubernetes にデプロイするには、 `cli-config.yml` 内で `deploy-target` に `container` を指定するか、パラメーター `-t container` を使用する必要があります。
 
 Kubernetes デプロイメントの構成に必要なその他パラメーターは、コマンド・ライン引数を使用して `cli-config.yml` 内に指定することもできます。 これらを `cli-config.yml` 内に定義しない場合、パラメーター `-t container` を指定してデプロイする必要があります。 その後、その他のすべての値のためのプロンプトが出されます。
 
 ```yaml
-chart-path: "chart/myapplication"
+    chart-path: "chart/myapplication"
 
-deploy-target: "container"
+    deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
 
-ibm-cluster: "mycluster"
+    ibm-cluster: "mycluster"
 ```
 
 以下の例に示すように、`cli-config.yml` 内で、Helm チャートの場所を `chart-path` プロパティーに定義し、`deploy-image-target` を構成するように選択できます。 `cli-config.yml` 内の `deploy-image-target` エレメントが、`chart/values.yml` ファイル内の `repository` エレメントおよび `tag` エレメントの代わりに使用されます。 具体的にデプロイ先を {{site.data.keyword.cloud_notm}} にするには、構成エレメント `ibm-cluster` に、{{site.data.keyword.cloud_notm}} 内に作成した Kubernetes クラスターの名前を設定します。
@@ -230,7 +226,7 @@ ibmcloud dev deploy
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* {{site.data.keyword.cloud_notm}} へのコンテナー・デプロイメントの場合に、Kubernetes クラスターの名前を定義するために使用されるオプションのパラメーター。
+* {{site.data.keyword.Bluemix_notm}} へのコンテナー・デプロイメントの場合に、Kubernetes クラスターの名前を定義するために使用されるオプションのパラメーター。
 * 使用法 `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
@@ -334,7 +330,7 @@ ibmcloud dev enable
 #### `no-create`
 {: #enable-no-create}
 
-* 有効化ファイルをローカルに作成しながら、{{site.data.keyword.cloud_notm}} でアプリを作成しないようにするパラメーター。
+* 有効化ファイルをローカルに作成しながら、{{site.data.keyword.Bluemix_notm}} でアプリを作成しないようにするパラメーター。
 * 使用法 `ibmcloud dev enable --no-create`
 
 ## get-credentials

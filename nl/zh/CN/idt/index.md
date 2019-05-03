@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-27"
 
-keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
+keywords: developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
 subcollection: cloud-cli
 
@@ -72,7 +72,7 @@ subcollection: cloud-cli
 
 您可以自由地使用自己喜爱的任何 IDE 或编辑器来对应用程序进行编码。我们提供了针对 Microsoft Visual Studio Code (VSCode) 编辑器的扩展，支持直接在编辑器中访问所有 IDE 命令。
 
-构建项目后，使用 [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 或 [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug) 来运行应用程序。这将在相应的容器内运行应用程序。某些应用程序的模式支持使用应用程序外部的多个容器。这些容器将在运行或调试期间自动启动和配置。还有一个 [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) 命令，用于运行与应用程序相关联的任何测试用例。
+构建项目后，使用 [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 或 [`ibmcloud dev debug`](/docs/cli/iddt/commands.html#debug) 来运行应用程序。这将在相应的容器内运行应用程序。某些应用程序的模式支持使用应用程序外部的多个容器。这些容器将在运行或调试期间自动启动和配置。还有一个 [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) 命令，用于运行与应用程序相关联的任何测试用例。
 
 ### 如何使用本地容器
 {: #local-containers}

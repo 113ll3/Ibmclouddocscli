@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
+keywords: classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter
 
 subcollection: cloud-cli
 
@@ -13,7 +13,6 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:codeblock: .codeblock}
 
 # Mit dem Dateispeicherservice arbeiten
 {: #sl-file-storage-service}
@@ -64,8 +63,8 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONEN]
 <dl>
 <dt>--sortby</dt>
 <dd>Spalte, nach der sortiert werden soll. Optionen: id,name,type,private_ip_address,host_iqn,username,password.</dd>
-<dt>--column</dt>
-<dd>Anzuzeigende Spalte. Optionen: id,name,type,private_ip_address,host_iqn,username,password.</dd>
+<dt>--columns</dt>
+<dd>Anzuzeigende Spalten. Optionen: id,name,type,private_ip_address,host_iqn,username,password.</dd>
 </dl>
 
 **Beispiele**:
@@ -441,8 +440,8 @@ ibmcloud sl file volume-list [OPTIONEN]
 <dd>Nach ID der Bestellung filtern, mit der der Dateispeicher gekauft wurde.</dd>
 <dt>--sortby</dt>
 <dd>Spalte, nach der sortiert werden soll. Optionen: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,active_transactions,mount_addr.</dd>
-<dt>--column</dt>
-<dd>Anzuzeigende Spalte. Optionen: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr,notes.</dd>
+<dt>--columns</dt>
+<dd>Anzuzeigende Spalten. Optionen: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,mount_addr,notes.</dd>
 </dl>
 
 **Beispiele**:

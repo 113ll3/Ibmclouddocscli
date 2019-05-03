@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-21"
 
-keywords: cli, mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
+keywords: mobile sdk, server sdk, client sdk, add sdk, android sdk, cordova
 
 subcollection: cloud-cli
 

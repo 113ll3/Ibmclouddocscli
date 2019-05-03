@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-27"
 
-keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
 subcollection: cloud-cli
 

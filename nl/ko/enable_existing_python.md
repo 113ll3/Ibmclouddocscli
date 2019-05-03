@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-08"
 
-keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -130,7 +130,7 @@ ibmcloud dev deploy
 ```
 {: screen}
 
-`<projectname>.wsgi` 파일 이름은 사용으로 설정되는 프로젝트의 이름입니다.
+`<projectname>.wsgi` 파일 이름은 사용으로 설정된 프로젝트의 이름입니다.
 
 `ibmcloud dev enable`을 실행한 후 애플리케이션이 빌드되거나 배치되지 않는 경우 생성된 파일을 수정하여 클라우드 사용 설정을 완료할 수 있습니다.
 

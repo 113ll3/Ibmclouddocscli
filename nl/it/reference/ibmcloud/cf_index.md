@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-02-26"
 
-keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
 subcollection: cloud-cli
 
@@ -27,7 +27,7 @@ Per un elenco più dettagliato di comandi `cf CLI`, consulta la [Cloud Foundry C
 
 se la tua rete contiene un server proxy HTTP tra l'host
 che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome
-host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli, vedi [Using the cf CLI with a Proxy Server](https://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
+host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli, vedi [Using the cf CLI with a Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 {: note}
 
 ## Indice dei comandi della CLI Cloud Foundry
@@ -66,7 +66,7 @@ Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud F
  <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](#cf_delete-space)</td>
+ <td>[delete-space](/#cf_delete-space)</td>
  <td>[events](#cf_events)</td>
  <td>[logs](#cf_logs)</td>
  <td>[marketplace](#cf_marketplace)</td>
@@ -87,7 +87,7 @@ Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud F
 
 Utilizza questo comando per visualizzare o specificare l'URL dell'endpoint API di {{site.data.keyword.cloud}}.
 ```
-cf api [URL] [--skip-ssl-validation] [--unset]
+cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
 
 <strong>Prerequisiti</strong>: Nessuno.
@@ -95,9 +95,9 @@ cf api [URL] [--skip-ssl-validation] [--unset]
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>URL (facoltativo)</dt>
+   <dt>BluemixServerURL (facoltativo)</dt>
    <dd>L'URL dell'endpoint API {{site.data.keyword.cloud_notm}}
-che devi specificare quando stabilisci una connessione a {{site.data.keyword.cloud_notm}}. In genere, questo URL è `https://api.<REGION>.cf.{DomainName}`.
+che devi specificare quando stabilisci una connessione a {{site.data.keyword.cloud_notm}}. Solitamente, questo URL è `https://api.{DomainName}`.
    Se vuoi visualizzare l'URL dell'endpoint API che stai attualmente utilizzando, non hai bisogno di specificare questo parametro per il comando cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
@@ -107,7 +107,7 @@ che devi specificare quando stabilisci una connessione a {{site.data.keyword.clo
 
 <strong>Esempi</strong>:
 
-Per visualizzare l'endpoint API corrente:
+Visualizza l'endpoint API corrente
 ```
 cf api
 ```
@@ -413,7 +413,7 @@ cf login [-a url] [-u nome_utente] [-p password] [-sso] [-o nome_organizzazione]
 <strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>*-a* https://api.<REGION>.cf.{DomainName} (facoltativo)</dt>
+<dt>*-a* https://api.{DomainName} (facoltativo)</dt>
 <dd>L'URL dell'endpoint API di {{site.data.keyword.cloud_notm}}.</dd>
 <dt>*-u* nome_utente (facoltativo)</dt>
 <dd>Il tuo nome utente.</dd>
@@ -464,15 +464,6 @@ cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAP
 ```
 {: codeblock}
 
-Puoi accedere ai seguenti endpoint API regionali di Cloud Foundry:
-* api.us-south.cf.cloud.ibm.com  (in precedenza api.ng.bluemix.net)
-* api.eu-gb.cf.cloud.ibm.com     (in precedenza api.eu-gb.bluemix.net)
-* api.us-east.cf.cloud.ibm.com   (in precedenza api.us-east.bluemix.net)
-* api.eu-de.cf.cloud.ibm.com     (in precedenza api.eu-de.bluemix.net)
-* api.au-syd.cf.cloud.ibm.com    (in precedenza api.au-syd.bluemix.net)
-
-Gli endpoint API Cloud Foundry legacy "api.<REGION>.bluemix.net" sono ancora validi ma saranno presto obsoleti.
-{: note}
 
 ## cf logs
 {: #cf_logs}
@@ -546,7 +537,7 @@ cf push appname [-b nome_pacchettodibuild] [-c start_command] [-f percorso_manif
 <dt>nome_applicazione (obbligatorio)</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*-b* nome_pacchettodibuild (facoltativo)</dt>
-<dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome (ad esempio, liberty-for-java), un URL Git (ad esempio, https://github.com/cloudfoundry/java-buildpack) o un URL Git con un ramo o una tag (ad esempio, https://github.com/cloudfoundry/java-buildpack#v3.3.0 per la tag v3.3.0).</dd>
+<dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome (ad esempio liberty-for-java) oppure un URL Git (ad esempio https://github.com/cloudfoundry/java-buildpack.git) oppure un URL Git con un ramo o tag (ad esempio, https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 per la tag v3.3.0).</dd>
 <dt>*-c* comando_di_avvio (facoltativo)</dt>
 <dd>Il comando di avvio della tua applicazione. Per utilizzare il comando di avvio predefinito, specifica un valore null per questa opzione. </dd>
 <dt>*-f* percorso_manifest (facoltativo)</dt>

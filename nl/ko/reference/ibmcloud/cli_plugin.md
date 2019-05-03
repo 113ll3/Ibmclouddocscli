@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
+keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
 subcollection: cloud-cli
 
@@ -48,7 +48,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME(필수)</dt>
    <dd>추가되는 저장소의 이름입니다. 각 저장소의 고유 이름을 정의할 수 있습니다.</dd>
    <dt>REPO_URL(필수)</dt>
-   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: https://plugins.cloud.ibm.com instead of plugins.cloud.ibm.com). https://plugins.cloud.ibm.com이 {{site.data.keyword.cloud_notm}} CLI의 공식 플러그인 저장소입니다.</dd>
+   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어야 합니다(예: https://plugins.cloud.ibm.com이 아닌 https://plugins.cloud.ibm.com). https://plugins.cloud.ibm.com이 {{site.data.keyword.cloud_notm}} CLI의 공식 플러그인 저장소입니다.</dd>
     </dl>
 
 

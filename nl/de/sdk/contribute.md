@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
 subcollection: cloud-cli
 
@@ -126,7 +126,7 @@ Die Internationalisierung basiert auf `go-i18n`, einem Paket- und Befehlszeilent
       ```
       {: codeblock}
 
-* Debugging: [delve ](https://github.com/go-delve/delve){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
+* Debugging: [delve ](https://github.com/derekparker/delve){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
 Delve ist ein Debugger für die Go-Programmiersprache und wird von [Visual Studio Code ](https://code.visualstudio.com/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") verwendet.
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-15"
 
-keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -284,20 +284,6 @@ Melden Sie sich mit einem einmaligen Kenncode an und legen Sie Zielkonto, Organi
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-### Cloud Foundry-Services verwenden
-
-Zur Verwendung der Cloud Foundry-Services müssen Sie eine Cloud-Foundry-Organisation und einen Cloud Foundry-Bereich als Ziel festlegen. Sie können den folgenden Befehl ausführen, um die Organisation und den Bereich interaktiv auszuwählen:
-```
-ibmcloud target --cf
-```
-{: codeblock}
-
-Optional können Sie die Ausgabe des vorigen Befehls verwenden, um Ihre Organisation und Ihren Bereich manuell mit dem folgenden Befehl festzulegen:
-```
-ibmcloud target -o <wert> -s <wert>
-```
-{: codeblock}
-
 ### API-Schlüssel hat zugeordnetes Konto
 
 ```
@@ -362,34 +348,28 @@ ibmcloud regions
 
 Zielkonto, Region, Organisation oder Bereich festlegen oder anzeigen.
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung
 
 <strong>Befehlsoptionen</strong>:
-<dl>
-   <dt>-c <i>ACCOUNT_ID</i> (optional)</dt>
-   <dd>Die ID des Zielkontos.</dd>
+   <dl>
    <dt>-r <i>REGION_NAME</i> (optional)</dt>
    <dd>Der Name der Region, in die gewechselt werden soll, z. B. 'us-south' oder 'eu-gb'.</dd>
+   <dt>--unset-region</dt>
+   <dd>Die Festlegung der Zielregion aufheben.</dd>
+   <dt>-c <i>ACCOUNT_ID</i> (optional)</dt>
+   <dd>Die ID des Zielkontos.</dd>
    <dt>-g <i>RESOURCE_GROUP</i> (optional)</dt>
    <dd>Der Name der Ressourcengruppe.</dd>
    <dt>--cf</dt>
    <dd>Interaktive Auswahl der Zielorganisation und des Zielbereichs</dd>
-   <dt>--cf-api</dt>
-   <dd>Cloud Foundry-API-Endpunkt</dd>
    <dt>-o <i>ORG_NAME</i> (optional)</dt>
    <dd>Der Name der Zielorganisation.</dd>
    <dt>-s <i>SPACE_NAME</i> (optional)</dt>
    <dd>Der Name des Zielbereichs.</dd>
-   <dt>--unset-region</dt>
-   <dd>Die Festlegung der Zielregion aufheben.</dd>
-   <dt>--unset-resource-group</dt>
-   <dd>Festlegung der ausgewählten Ressourcengruppe als Ziel aufheben</dd>
-   <dt>--output <i>FORMAT</i></dt>
-   <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt.</dd>
-</dl>
+   </dl>
 Wenn keine der Optionen angegeben wird, werden das aktuelle Konto, die aktuelle Region, die aktuelle Organisation und der aktuelle Bereich angezeigt.
 
 <strong>Beispiele</strong>:

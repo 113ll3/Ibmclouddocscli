@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter, file storage cli
+keywords: classic infrastructure, file storage service, ibmcloud sl file, snapshot, file storage, storage, nfs, nas, iops, volume, datacenter
 
 subcollection: cloud-cli
 
@@ -13,7 +13,6 @@ subcollection: cloud-cli
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:codeblock: .codeblock}
 
 # 使用 File Storage 服務
 {: #sl-file-storage-service}
@@ -64,7 +63,7 @@ ibmcloud sl file access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>直欄排序方式，選項包含：id、name、type、private_ip_address、host_iqn、username、password。</dd>
-<dt>--column</dt>
+<dt>--columns</dt>
 <dd>要顯示的直欄，選項包含：id、name、type、private_ip_address、host_iqn、username、password。</dd>
 </dl>
 
@@ -441,7 +440,7 @@ ibmcloud sl file volume-list [OPTIONS]
 <dd>依購買檔案儲存空間的訂單 ID 進行過濾。</dd>
 <dt>--sortby</dt>
 <dd>直欄排序方式，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions、mount_addr。</dd>
-<dt>--column</dt>
+<dt>--columns</dt>
 <dd>要顯示的直欄，選項包含：id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、mount_addr、notes。</dd>
 </dl>
 

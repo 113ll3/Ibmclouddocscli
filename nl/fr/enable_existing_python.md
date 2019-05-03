@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-08"
 
-keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -130,7 +130,7 @@ ImportError: No module named <projectname>.wsgi
 ```
 {: screen}
 
-Le nom de fichier `<projectname>.wsgi` correspond au nom du projet en cours d'activation. 
+Le nom de fichier `<projectname>.wsgi` est le nom du projet qui est activé.
 
 Si votre application n'est pas générée ou déployée après exécution d'`ibmcloud dev enable`, vous pouvez modifier les fichiers générés pour terminer l'activation de cloud.
 

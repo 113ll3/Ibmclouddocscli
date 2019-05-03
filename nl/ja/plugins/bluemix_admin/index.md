@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
 subcollection: cloud-cli
 
@@ -22,7 +22,7 @@ subcollection: cloud-cli
 
 Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.cloud_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.cloud_notm}} Local 環境または {{site.data.keyword.cloud_notm}} Dedicated 環境を管理できます。 例えば、LDAP レジストリーからユーザーを追加できます。 {{site.data.keyword.cloud_notm}} パブリック・アカウントの管理に関する情報は、『[管理](/docs/account?topic=account-accounts#accounts)』を参照してください。
 
-最初に、Cloud Foundry コマンド・ライン・インターフェースをインストールします。 {{site.data.keyword.cloud_notm}} 管理 CLI プラグインを使用する場合、`CF` バージョン 6.11.2 以降が必要です。 [Cloud Foundry コマンド・ライン・インターフェースのダウンロード ](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を行ってください。
+最初に、Cloud Foundry コマンド・ライン・インターフェースをインストールします。 {{site.data.keyword.cloud_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。 [Cloud Foundry コマンド・ライン・インターフェースのダウンロード ](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を行ってください。
 
 **制限:** Cloud Foundry コマンド・ライン・インターフェースは、Cygwin ではサポートされていません。 Cloud Foundry コマンド・ライン・インターフェースは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
 
@@ -30,7 +30,6 @@ Cloud Foundry コマンド・ライン・インターフェースを {{site.data
 {: note}
 
 ## {{site.data.keyword.cloud_notm}} 管理 CLI プラグインの追加
-{: #add-admin-cli}
 
 Cloud Foundry コマンド・ライン・インターフェースのインストール後に、{{site.data.keyword.cloud_notm}} 管理 CLI プラグインを追加できます。
 
@@ -39,41 +38,26 @@ Cloud Foundry コマンド・ライン・インターフェースのインスト
 
 以下のステップを実行して、リポジトリーを追加し、プラグインをインストールします。
 
-1. {{site.data.keyword.cloud_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。
-  ```
-  cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
-  ```
-  {: codeblock}
-
-  管理コンソール CLI ページ (`https://<customer_console_endpoint>.bluemix.net/cli`) 内の実際のエンドポイントを使用して、同じコマンドを見つけることができます。
-  {: note}
-
-2. {{site.data.keyword.cloud_notm}} 管理
-CLI プラグインをインストールするには、以下のコマンドを実行します。
-  ```
-  cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
-```
-  {: codeblock}
-
-## {{site.data.keyword.cloud_notm}} 管理 CLI プラグインのアンインストール
-{: #remove-admin-cli}
+<ol>
+<li>{{site.data.keyword.cloud_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。<br/><br/>
+<code>
+cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
+</code><br/><br/>
+</li>
+<li>{{site.data.keyword.cloud_notm}} 管理
+CLI プラグインをインストールするには、以下のコマンドを実行します。<br/><br/>
+<code>
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+</code>
+</li>
+</ol>
 
 プラグインをアンインストールする必要がある場合は、以下のコマンドを使用できます。その後、更新されたリポジトリーを追加して、最新のプラグインをインストールできます。
 
-1. プラグインをアンインストールするには、次のようにします。
-  ```
-  cf uninstall-plugin IBMCloudAdminCLI
-  ```
-  {: codeblock}
-
-2. プラグイン・リポジトリーを削除するには、次のようにします。
-  ```
-  cf remove-plugin-repo IBMCloudAdmin
-  ```
-  {: codeblock}
+* プラグインのアンインストール: `cf uninstall-plugin IBMCloudAdminCLI`
+* プラグイン・リポジトリーの削除: `cf remove-plugin-repo IBMCloudAdmin`
 
 ## {{site.data.keyword.cloud_notm}} 管理 CLI プラグインの使用
-{: #using-admin-cli}
 
 {{site.data.keyword.cloud_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。
 
@@ -86,33 +70,27 @@ cf plugins
 追加でコマンドのヘルプを表示するには、`-help` オプションを使用します。
 
 ### {{site.data.keyword.cloud_notm}} への接続とログイン
-{: #connecting-ibm-cloud}
 
-管理 CLI プラグインを使用する場合、まず接続とログインを行います。
+管理 CLI プラグインを使用する場合、まず接続とログインを行います (まだ行っていない場合)。
 
-1. {{site.data.keyword.cloud_notm}} API エンドポイントに接続するには、次のコマンドを実行します。
-  ```
-  cf api api.us-south.cf.cloud.ibm.com
-  ```
-  {: codeblock}
-
-  正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。 URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。
-
-2. 次のコマンドを使用して、{{site.data.keyword.cloud_notm}} にログインします。
-  ```
-  cf login
-  ```
-  {: codeblock}
-
-**旧 Cloud Foundry エンドポイントの使用**:
-
-従来の `api.*.bluemix.net` Cloud Foundry API エンドポイントも引き続き使用できますが、スクリプトとインフラストラクチャーの自動化を更新して、地域に応じた以下の更新済みの Cloud Foundry API エンドポイントを使用できます。
-
-* api.us-south.cf.cloud.ibm.com (以前の api.ng.bluemix.net)
-* api.eu-gb.cf.cloud.ibm.com (以前の api.eu-gb.bluemix.net)
-* api.us-east.cf.cloud.ibm.com (以前の api.us-east.bluemix.net)
-* api.eu-de.cf.cloud.ibm.com (以前の api.eu-de.bluemix.net)
-* api.au-syd.cf.cloud.ibm.com (以前の api.au-syd.bluemix.net)
+<ol>
+<li>{{site.data.keyword.cloud_notm}} API エンドポイントに接続するには、次のコマンドを実行します。<br/><br/>
+<code>
+cf api api.ng.bluemix.net
+</code>
+<dl class="parml">
+<dt class="pt dlterm">&lt;subdomain&gt;</dt>
+<dd class="pd">ご使用の {{site.data.keyword.cloud_notm}} インスタンス用 URL のサブドメインです。<br />
+</dd>
+</dl>
+<p>正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。 URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。</p>
+</li>
+<li>次のコマンドを使用して、{{site.data.keyword.cloud_notm}} にログインします。<br/><br/>
+<code>
+cf login
+</code>
+</li>
+</ol>
 
 ## ユーザーの管理
 {: #admin_users}
@@ -126,7 +104,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-ユーザーを特定の組織に追加するには、**users.write** (または **Superuser**) 許可を備えた**管理者**でなければなりません。 組織管理者の場合、**enable-managers-add-users** コマンドを実行する Superuser から、組織にユーザーを追加する権限を付与してもらうこともできます。 詳しくは、[管理者へのユーザー追加権限の付与](#clius_emau)を参照してください。
+ユーザーを特定の組織に追加するには、**users.write** (または **Superuser**) 許可を備えた**管理者**でなければなりません。 組織管理者の場合、**enable-managers-add-users** コマンドを実行する Superuser から、組織にユーザーを追加する権限を付与してもらうこともできます。 詳しくは、[管理者へのユーザー追加権限の付与](index.html#clius_emau)を参照してください。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -871,11 +849,11 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 
 ASG は、{{site.data.keyword.Bluemix_notm}} 環境内のアプリケーションからのアウトバウンド・トラフィックを制御する仮想ファイアウォールとして機能します。 各 ASG は、外部ネットワークに対する特定のトラフィックおよび通信を許可するルールのリストから構成されます。 1 つ以上の ASG を特定のセキュリティー・グループ・セット (例えば、グローバル・アクセスの適用に使用されるグループ・セットなど) にバインドすることや、{{site.data.keyword.Bluemix_notm}} 環境の組織内のスペースにバインドすることができます。
 
-{{site.data.keyword.Bluemix_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。 IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。 グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。 これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。 これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。 詳しくは、[アプリケーション・セキュリティー・グループのバインド ](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+{{site.data.keyword.Bluemix_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。 IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。 グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。 これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。 これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。 詳しくは、[アプリケーション・セキュリティー・グループのバインド ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 **警告**: IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` から**デフォルト・ステージング**または**デフォルト実行**のグループ・セットをアンバインドすると、外部ネットワークへのグローバル・アクセスが無効になります。 アンバインドは、環境内で実行中およびステージング中のアプリケーションへの影響の可能性を認識して、十分注意して使用してください。
 
-セキュリティー・グループに関する作業を可能にする以下のコマンドは、Cloud Foundry 1.6 バージョンをベースとしています。 必須フィールドやオプション・フィールドなどの詳細については、[アプリケーション・セキュリティー・グループの作成 ](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") に関する Cloud Foundry 資料を参照してください。
+セキュリティー・グループに関する作業を可能にする以下のコマンドは、Cloud Foundry 1.6 バージョンをベースとしています。 必須フィールドやオプション・フィールドなどの詳細については、[アプリケーション・セキュリティー・グループの作成 ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") に関する Cloud Foundry 資料を参照してください。
 {: note}
 
 ### セキュリティー・グループのリスト
@@ -907,7 +885,7 @@ cf ba security-groups <security-group>
 ### セキュリティー・グループの作成
 {: #clicreasecgro}
 
-セキュリティー・グループの作成と、発信トラフィックを定義するルールについて詳しくは、[アプリケーション・セキュリティー・グループの作成 ](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+セキュリティー・グループの作成と、発信トラフィックを定義するルールについて詳しくは、[アプリケーション・セキュリティー・グループの作成 ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 セキュリティー・グループを作成するには、以下のコマンドを使用します。
 ```
@@ -964,7 +942,7 @@ cf ba delete-security-group <security-group>
 ### セキュリティー・グループのバインド
 {: #clibindsecgro}
 
-セキュリティー・グループのバインドについて詳しくは、[アプリケーション・セキュリティー・グループのバインド ](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+セキュリティー・グループのバインドについて詳しくは、[アプリケーション・セキュリティー・グループのバインド ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 * デフォルト・ステージングのセキュリティー・グループ・セットにバインドするには、以下のコマンドを使用します。
 
@@ -1015,7 +993,7 @@ cf ba bind-security-group <security-group> <org> <space>
 ### セキュリティー・グループのアンバインド
 {: #cliunbindsecgro}
 
-セキュリティー・グループのアンバインドについて詳しくは、[アプリケーション・セキュリティー・グループのアンバインド ](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+セキュリティー・グループのアンバインドについて詳しくは、[アプリケーション・セキュリティー・グループのアンバインド ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 * デフォルト・ステージングのセキュリティー・グループ・セットからアンバインドするには、以下のコマンドを使用します。
 

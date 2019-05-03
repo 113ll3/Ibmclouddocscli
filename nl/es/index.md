@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-03-01"
 
-keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
+keywords: IBM Cloud Developer Tools CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
 
 subcollection: cloud-cli
 
@@ -15,7 +15,6 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
-{:note: .note}
 
 # Iniciación a la CLI de {{site.data.keyword.cloud_notm}}
 {: #ibmcloud-cli}
@@ -23,12 +22,7 @@ subcollection: cloud-cli
 En esta guía de aprendizaje, instalará un conjunto de herramientas de desarrollador de {{site.data.keyword.cloud}}, verificará la instalación y configurará el entorno. Las herramientas de desarrollador de {{site.data.keyword.cloud_notm}} incluyen una interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones web, móviles y de microservicios.
 {: shortdesc}
 
-Asegúrese de utilizar siempre la versión más reciente de la CLI autónoma de {{site.data.keyword.cloud_notm}} para
-{{site.data.keyword.cloud_notm}} público. Si necesita utilizar una versión de 32 bits o una versión anterior a la más reciente para los entornos dedicados de {{site.data.keyword.cloud_notm}}, consulte [Releases de CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-cli-releases).
-{: note}
-
-El mandato de instalación de esta guía de aprendizaje instala la versión más reciente de la CLI autónoma de
-{{site.data.keyword.cloud_notm}} que esté disponible, además de las herramientas siguientes:
+Con está instalación, obtendrá la CLI de {{site.data.keyword.cloud_notm}} autónoma:
 
 * `Homebrew` (solo Mac)
 * `Git`
@@ -68,10 +62,11 @@ Necesita una [cuenta de {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/
   Pulse con el botón derecho del ratón el icono de Windows PowerShell y seleccione **Ejecutar como administrador**.
   {: tip}
 
-También puede descargar el script del instalador desde este [repositorio de GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+  También puede descargar el script del instalador desde este [repositorio de GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
-Para ver los pasos para instalar estas herramientas de manera manual, consulte
-[Instalación manual de componentes de plugin de CLI de las herramientas de desarrollador de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+<!--Uncomment when this linked topic goes to prod.
+  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
 ## Paso 2. Verificar la instalación
 {: #step2-verify-idt}
@@ -97,13 +92,13 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 `--sso`. Consulte [Inicio de sesión con un ID federado](/docs/iam/federated_id?topic=iam-federated_id#federated_id) para obtener más detalles.
   {: tip}
 
-2. Para acceder a los servicios de Cloud Foundry, debe especificar una organización y un espacio de Cloud Foundry. Puede ejecutar el mandato siguiente para identificar la organización y el espacio de forma interactiva:
+2. Para utilizar servicios de Cloud Foundry, defina una organización y un espacio como objetivo.
   ```
   ibmcloud target --cf
   ```
   {: codeblock}
 
-  O bien, si conoce a qué organización y espacio pertenece el servicio, puede utilizar el mandato siguiente:
+  Si lo desea, también puede utilizar la salida del mandato anterior para establecer manualmente su organización y espacio con el siguiente mandato:
   ```
   ibmcloud target -o <value> -s <value>
   ```

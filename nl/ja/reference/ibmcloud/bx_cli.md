@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-15"
 
-keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -284,20 +284,6 @@ ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-### Cloud Foundry サービスを使用するには
-
-Cloud Foundry サービスを使用するには、Cloud Foundry 組織およびスペースをターゲットにする必要があります。 以下のコマンドを実行して、組織とスペースを対話式に選択できます。
-```
-ibmcloud target --cf
-```
-{: codeblock}
-
-オプションで、上記のコマンドの出力を使用して、次のコマンドで組織とスペースを手動で設定することができます。
-```
-ibmcloud target -o <value> -s <value>
-```
-{: codeblock}
-
 ### API キーに関連付けられているアカウントがある
 
 ```
@@ -362,34 +348,28 @@ ibmcloud regions
 
 ターゲット・アカウント、地域、組織、またはスペースを設定するか表示します。
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
-<dl>
-   <dt>-c <i>ACCOUNT_ID</i> (オプション)</dt>
-   <dd>ターゲットとなるアカウントの ID。</dd>
+   <dl>
    <dt>-r <i>REGION_NAME</i> (オプション)</dt>
    <dd>切り替え先の地域の名前。例えば、「us-south」または「eu-gb」など。</dd>
+   <dt>--unset-region</dt>
+   <dd>ターゲットの地域を設定解除します</dd>
+   <dt>-c <i>ACCOUNT_ID</i> (オプション)</dt>
+   <dd>ターゲットとなるアカウントの ID。</dd>
    <dt>-g <i>RESOURCE_GROUP</i> (オプション)</dt>
    <dd>リソース・グループの名前。</dd>
    <dt>--cf</dt>
    <dd>ターゲットの組織およびスペースを対話式に選択します</dd>
-   <dt>--cf-api</dt>
-   <dd>Cloud Foundry API エンドポイント</dd>
    <dt>-o <i>ORG_NAME</i> (オプション)</dt>
    <dd>ターゲットとなる組織の名前。</dd>
    <dt>-s <i>SPACE_NAME</i> (オプション)</dt>
    <dd>ターゲットとなるスペースの名前。</dd>
-   <dt>--unset-region</dt>
-   <dd>ターゲットの地域を設定解除します</dd>
-   <dt>--unset-resource-group</dt>
-   <dd>ターゲットのリソース・グループを設定解除します</dd>
-   <dt>--output <i>FORMAT</i></dt>
-   <dd>出力形式を指定します。現在、JSON のみがサポートされています。</dd>
-</dl>
+   </dl>
 どのオプションも指定されていない場合、現行のアカウント、地域、組織、およびスペースが表示されます。
 
 <strong>例</strong>:

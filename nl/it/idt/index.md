@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-27"
 
-keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
+keywords: developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
 subcollection: cloud-cli
 
@@ -72,7 +72,7 @@ Una volta che il tuo progetto è stato creato, tocca a te farlo diventare qualco
 
 Sei libero di utilizzare qualsiasi IDE o editor preferisci per codificare la tua applicazione. Offriamo un'estensione per l'editor Microsoft Visual Studio Code (VSCode) che ti consente di accedere a tutti i comandi IDE direttamente nell'editor.
 
-Dopo che il progetto è stato creato, esegui la tua applicazione utilizzando [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) o [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug). Questo esegue l'applicazione nel contenitore corretto. Alcuni modelli delle applicazioni supportano più contenitori esterni alle tue applicazioni. Questi vengono avviati e configurati automaticamente durante l'esecuzione o il debug. Esiste anche un comando [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) che esegue gli eventuali scenari di test associati all'applicazione.
+Dopo che il progetto è stato creato, esegui la tua applicazione utilizzando [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) o [`ibmcloud dev debug`](/docs/cli/iddt/commands.html#debug). Questo esegue l'applicazione nel contenitore corretto. Alcuni modelli delle applicazioni supportano più contenitori esterni alle tue applicazioni. Questi vengono avviati e configurati automaticamente durante l'esecuzione o il debug. Esiste anche un comando [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) che esegue gli eventuali scenari di test associati all'applicazione.
 
 ### Come vengono utilizzati i contenitori locali
 {: #local-containers}

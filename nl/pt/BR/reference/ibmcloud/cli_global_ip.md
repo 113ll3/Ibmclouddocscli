@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure, ibmcloud sl globalip, globalip, global ip addresses, assign global ip
+keywords: classic infrastructure, ibmcloud sl globalip, globalip, global ip addresses, assign global ip
 
 subcollection: cloud-cli
 

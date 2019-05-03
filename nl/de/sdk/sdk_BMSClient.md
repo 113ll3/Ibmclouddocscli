@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
+keywords: bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
 subcollection: cloud-cli
 

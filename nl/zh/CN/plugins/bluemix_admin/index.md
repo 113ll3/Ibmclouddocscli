@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
 subcollection: cloud-cli
 
@@ -22,7 +22,7 @@ subcollection: cloud-cli
 
 您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.cloud_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.cloud_notm}} Local 或 {{site.data.keyword.cloud_notm}} Dedicated 环境。例如，可以从 LDAP 注册表添加用户。有关管理 {{site.data.keyword.cloud_notm}} Public 帐户的信息，请参阅[管理](/docs/account?topic=account-accounts#accounts)。
 
-开始之前，请安装 Cloud Foundry 命令行界面。{{site.data.keyword.cloud_notm}} 管理 CLI 插件需要 `cf` V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")
+开始之前，请安装 Cloud Foundry 命令行界面。{{site.data.keyword.cloud_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")
 
 **限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
 
@@ -30,7 +30,6 @@ subcollection: cloud-cli
 {: note}
 
 ## 添加 {{site.data.keyword.cloud_notm}} 管理 CLI 插件
-{: #add-admin-cli}
 
 安装了 Cloud Foundry 命令行界面后，可以添加 {{site.data.keyword.cloud_notm}} 管理 CLI 插件。
 
@@ -39,40 +38,25 @@ subcollection: cloud-cli
 
 完成以下步骤来添加存储库并安装该插件：
 
-1. 要添加 {{site.data.keyword.cloud_notm}} 管理插件存储库，请运行以下命令：
-  ```
-  cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
-  ```
-  {: codeblock}
-
-  您可以在管理控制台 CLI 页面中查找与实际端点相同的命令：`https://<customer_console_endpoint>.bluemix.net/cli`。
-  {: note}
-
-2. 要安装 {{site.data.keyword.cloud_notm}} 管理 CLI 插件，请运行以下命令：
-  ```
-  cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
-  ```
-  {: codeblock}
-
-## 卸载 {{site.data.keyword.cloud_notm}} 管理 CLI 插件
-{: #remove-admin-cli}
+<ol>
+<li>要添加 {{site.data.keyword.cloud_notm}} 管理插件存储库，请运行以下命令：<br/><br/>
+<code>
+cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
+</code><br/><br/>
+</li>
+<li>要安装 {{site.data.keyword.cloud_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>
+<code>
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+</code>
+</li>
+</ol>
 
 如果需要卸载插件，那么可以使用以下命令，然后可以添加更新的存储库并安装最新的插件：
 
-1. 卸载插件：
-  ```
-  cf uninstall-plugin IBMCloudAdminCLI
-  ```
-  {: codeblock}
-
-2. 除去插件存储库：
-  ```
-  cf remove-plugin-repo IBMCloudAdmin
-  ```
-  {: codeblock}
+* 卸载插件：`cf uninstall-plugin IBMCloudAdminCLI`
+* 除去插件存储库：`cf remove-plugin-repo IBMCloudAdmin`
 
 ## 使用 {{site.data.keyword.cloud_notm}} 管理 CLI 插件
-{: #using-admin-cli}
 
 您可以使用 {{site.data.keyword.cloud_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。
 
@@ -85,33 +69,27 @@ cf plugins
 有关命令的更多帮助，请使用 `-help` 选项。
 
 ### 连接并登录到 {{site.data.keyword.cloud_notm}}
-{: #connecting-ibm-cloud}
 
-必须先连接并登录，才能使用管理 CLI 插件。
+如果尚未连接并登录，那么必须这样做才能使用管理 CLI 插件。
 
-1. 要连接到 {{site.data.keyword.cloud_notm}} API 端点，请运行以下命令：
-  ```
-  cf api api.us-south.cf.cloud.ibm.com
-  ```
-  {: codeblock}
-
-  您可以查看管理控制台的“资源和信息”页面，以获取正确的 URL。此 URL 显示在“API 信息”部分的 **API URL** 字段中。
-
-2. 使用以下命令登录到 {{site.data.keyword.cloud_notm}}：
-  ```
+<ol>
+<li>要连接到 {{site.data.keyword.cloud_notm}} API 端点，请运行以下命令：<br/><br/>
+<code>
+cf api api.ng.bluemix.net
+</code>
+<dl class="parml">
+<dt class="pt dlterm">&lt;subdomain&gt;</dt>
+<dd class="pd">{{site.data.keyword.cloud_notm}} 实例的 URL 的子域。<br />
+</dd>
+</dl>
+<p>您可以查看管理控制台的“资源和信息”页面，以获取正确的 URL。此 URL 显示在“API 信息”部分的 **API URL** 字段中。</p>
+</li>
+<li>使用以下命令登录到 {{site.data.keyword.cloud_notm}}：<br/><br/>
+<code>
 cf login
-```
-  {: codeblock}
-
-**使用旧 Cloud Foundry 端点**：
-
-虽然旧的 `api..bluemix.net` Cloud Foundry API 端点仍可用，但您也可以更新脚本和基础架构自动化，以针对您的区域使用以下更新的 Cloud Foundry API 端点：
-
-* api.us-south.cf.cloud.ibm.com（先前为 api.ng.bluemix.net）
-* api.eu-gb.cf.cloud.ibm.com（先前为 api.eu-gb.bluemix.net）
-* api.us-east.cf.cloud.ibm.com（先前为 api.us-east.bluemix.net）
-* api.eu-de.cf.cloud.ibm.com（先前为 api.eu-de.bluemix.net）
-* api.au-syd.cf.cloud.ibm.com（先前为 api.au-syd.bluemix.net）
+</code>
+</li>
+</ol>
 
 ## 管理用户
 {: #admin_users}
@@ -125,7 +103,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-要向特定组织添加用户，您必须是拥有 **users.write** 许可权（或 **Superuser** 许可权）的**管理员**。如果您是组织管理者，那么还可以通过 Superuser 来运行 **enable-managers-add-users** 命令，以向组织添加用户。有关更多信息，请参阅[允许管理者添加用户](#clius_emau)。
+要向特定组织添加用户，您必须是拥有 **users.write** 许可权（或 **Superuser** 许可权）的**管理员**。如果您是组织管理者，那么还可以通过 Superuser 来运行 **enable-managers-add-users** 命令，以向组织添加用户。有关更多信息，请参阅[允许管理者添加用户](index.html#clius_emau)。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -868,11 +846,11 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 
 ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.Bluemix_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集（例如，用于应用全局访问的组集），或者绑定到 {{site.data.keyword.Bluemix_notm}} 环境中某个组织内的空间。
 
-{{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
+{{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 **警告**：如果取消**缺省编译打包**或**缺省运行**组集与 IBM 创建的两个安全组 `public_networks` 和 `dns` 之间的绑定，那么将禁用对外部网络的全局访问。请慎用取消绑定，应了解取消绑定对环境中正在运行和编译打包的应用程序的潜在影响。
 
-您可以使用以下命令来处理安全组，这些命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 的 Cloud Foundry 信息。
+您可以使用以下命令来处理安全组，这些命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标") 的 Cloud Foundry 信息。
 {: note}
 
 ### 列出安全组
@@ -904,7 +882,7 @@ cf ba security-groups <security-group>
 ### 创建安全组
 {: #clicreasecgro}
 
-有关创建安全组和规则来定义传出流量的更多信息，请参阅[创建应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
+有关创建安全组和规则来定义传出流量的更多信息，请参阅[创建应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 要创建安全组，请使用以下命令：
 ```
@@ -961,7 +939,7 @@ cf ba delete-security-group <security-group>
 ### 绑定安全组
 {: #clibindsecgro}
 
-有关绑定安全组的更多信息，请参阅[绑定应用程序安全组 ](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
+有关绑定安全组的更多信息，请参阅[绑定应用程序安全组 ](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 * 要绑定 Default Staging 安全组集，请使用以下命令：
 
@@ -1012,7 +990,7 @@ cf ba bind-security-group <security-group> <org> <space>
 ### 取消绑定安全组
 {: #cliunbindsecgro}
 
-有关取消绑定安全组的更多信息，请参阅[取消绑定应用程序安全组](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
+有关取消绑定安全组的更多信息，请参阅[取消绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 * 要取消绑定 Default Staging 安全组集，请使用以下命令：
 

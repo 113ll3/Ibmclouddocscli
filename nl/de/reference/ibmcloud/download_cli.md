@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-02-26"
 
-keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
+keywords: stand-alone cli, install cli, uninstall cli, cli, plugin, plug-in, command line, command-line, windows powershell, linux, macos, installer
 
 subcollection: cloud-cli
 
@@ -87,7 +87,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 ## Installation in einem benutzerdefinierten Verzeichnis
 {: #install-custom-dir}
 
-Wenn Installationsprogramme oder ein Shell-Script für die Installation der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle verwendet werden, werden die Binärdateien in den Systemverzeichnissen gespeichert. Wenn Sie ein anderes Verzeichnis angeben möchten, führen Sie die folgenden Schritte aus.
+Wenn Installationsprogramme oder ein Shell-Script für die Installation der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwendet werden, werden die Binärdateien in den Systemverzeichnissen gespeichert. Wenn Sie ein anderes Verzeichnis angeben möchten, führen Sie die folgenden Schritte aus.
 
 ### Schritt 1: Binärpaket auf der Basis des jeweiligen Betriebssystems über die folgenden Links herunterladen.
 {: #step1-custom-dir}
@@ -172,7 +172,7 @@ Die folgenden Abschnitte enthalten detaillierte Informationen dazu, wie Sie die 
 #### Ab Version `0.9.0`
 
 1. Öffnen Sie ein Terminal und führen Sie den folgenden Befehl aus:
-  * `/usr/local/ibmcloud/uninstall`
+  * `/usr/local/ibmcloud/bin/uninstall`
 2. Bereinigen Sie alle angepassten Scripts für automatische Vervollständigung. Ausführliche Informationen finden Sie in [Automatische Vervollständigung für die Shell der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle aktivieren (nur Linux und MacOS)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 ## Links mit weiterführenden Informationen zur {{site.data.keyword.cloud_notm}}-CLI

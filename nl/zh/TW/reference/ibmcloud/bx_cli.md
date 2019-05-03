@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-15"
 
-keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -282,20 +282,6 @@ ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-### 使用 Cloud Foundry 服務
-
-若要使用 Cloud Foundry 服務，您必須以 Cloud Foundry 組織及空間為目標。您可以執行下列指令，以互動方式選擇組織及空間：
-```
-  ibmcloud target --cf
-  ```
-{: codeblock}
-
-您可以選擇使用前一個指令的輸出，以下列指令手動設定您的組織及空間：
-```
-ibmcloud target -o <value> -s <value>
-	```
-{: codeblock}
-
 ### API 金鑰具有關聯的帳戶
 
 ```
@@ -360,34 +346,28 @@ ibmcloud regions
 
 設定或檢視目標帳戶、地區、組織或空間。
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
 ```
 
 <strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
-<dl>
-   <dt>-c <i>ACCOUNT_ID</i>（選用）</dt>
-   <dd>要設為目標的帳戶 ID。</dd>
+   <dl>
    <dt>-r <i>REGION_NAME</i>（選用）</dt>
    <dd>要切換至的地區名稱，例如 'us-south' 或 'eu-gb'。</dd>
+   <dt>--unset-region</dt>
+   <dd>取消設定已設定目標的地區</dd>
+   <dt>-c <i>ACCOUNT_ID</i>（選用）</dt>
+   <dd>要設為目標的帳戶 ID。</dd>
    <dt>-g <i>RESOURCE_GROUP</i>（選用）</dt>
    <dd>資源群組的名稱。</dd>
    <dt>--cf</dt>
    <dd>以互動方式選取目標組織及空間</dd>
-   <dt>--cf-api</dt>
-   <dd>Cloud Foundry API 端點</dd>
    <dt>-o <i>ORG_NAME</i>（選用）</dt>
    <dd>要設為目標的組織名稱。</dd>
    <dt>-s <i>SPACE_NAME</i>（選用）</dt>
    <dd>要設為目標的空間名稱。</dd>
-   <dt>--unset-region</dt>
-   <dd>取消設定已設定目標的地區</dd>
-   <dt>--unset-resource-group</dt>
-   <dd>取消設定目標資源群組</dd>
-   <dt>--output <i>FORMAT</i></dt>
-   <dd>指定輸出格式，目前只支援 JSON。</dd>
-</dl>
+   </dl>
 如果未指定選項，則會顯示現行帳戶、地區、組織及空間。
 
 <strong>範例</strong>：

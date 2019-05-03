@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-03-26"
 
-keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
+keywords: cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
 subcollection: cloud-cli
 
@@ -223,7 +223,7 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME(필수)</dt>
    <dd>라우트로 맵핑되는 cf 애플리케이션 또는 컨테이너 그룹의 이름입니다.</dd>
    <dt>DOMAIN(필수)</dt>
-   <dd>라우트의 도메인입니다. (예: mybluemix.net). </dd>
+   <dd>라우트의 도메인입니다. 예: mychinabluemix.net 또는 chinabluemix.net. </dd>
    <dt>-n <i>HOST_NAME</i>(선택사항)</dt>
    <dd>라우트의 호스트 이름입니다. 값을 제공하지 않으면 호스트 이름이 기본적으로 앱 이름 또는 컨테이너 그룹 이름으로 설정됩니다.</dd>
    </dl>
@@ -231,22 +231,22 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 <strong>예제</strong>:
 
 지정된 도메인을 사용하여 라우트를 `my-app`에 맵핑합니다.
+
 ```
-ibmcloud app route-map my-app mybluemix.net
+ibmcloud app route-map my-app mychinabluemix.net
 ```
 
 지정된 도메인과 호스트 이름을 사용하여 라우트를 'my-container-group'에 맵핑합니다.
-```
-ibmcloud app route-map my-container-group bluemix.net -n abc
-```
 
-기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)를 참조하십시오.
-{: tip}
+```
+ibmcloud app route-map my-container-group chinabluemix.net -n abc
+```
 
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 기존의 cf 애플리케이션이나 컨테이너 그룹에서 지정된 라우트의 맵핑을 해제합니다.
+
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
@@ -259,25 +259,24 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME(필수)</dt>
    <dd>cf 애플리케이션 또는 컨테이너 그룹의 이름입니다.</dd>
    <dt>DOMAIN(필수)</dt>
-   <dd>라우트의 도메인입니다. (예: mybluemix.net). </dd>
+   <dd>라우트의 도메인입니다(예: mychinabluemix.net 또는 chinabluemix.net).</dd>
    <dt>-n <i>HOST_NAME</i>(선택사항)</dt>
    <dd>라우트의 호스트 이름입니다. 값을 제공하지 않으면 호스트 이름이 기본적으로 앱 이름 또는 컨테이너 그룹 이름으로 설정됩니다.</dd>
    </dl>
 
 <strong>예제</strong>:
 
-`my-app`에서 `my-app.mybluemix.net`을 맵핑 해제합니다.
+`my-app`에서 `my-app.mychinabluemix.net`을 맵핑 해제합니다.
+
 ```
-ibmcloud app route-unmap my-app mybluemix.net
+ibmcloud app route-unmap my-app mychinabluemix.net
 ```
 
-`my-container-group`에서 `abc.bluexmix.net`을 맵핑 해제합니다.
-```
-ibmcloud app route-unmap my-container-group bluemix.net -n abc
-```
+`my-container-group`에서 `abc.chinabluexmix.net`을 맵핑 해제합니다.
 
-기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)를 참조하십시오.
-{: tip}
+```
+ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
+```
 
 ## ibmcloud app route-create
 {: #ibmcloud_app_route_create}

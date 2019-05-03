@@ -2,11 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
-
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
-
-subcollection: cloud-cli
+lastupdated: "2019-02-14"
 
 ---
 
@@ -21,8 +17,8 @@ subcollection: cloud-cli
 # Comandi del plugin CLI {{site.data.keyword.dev_cli_notm}} (ibmcloud dev)
 {: #idt-cli}
 
-Versione: 2.1.18
-Rilasciata: 28 marzo 2019
+Versione: 2.1.4
+Rilasciata: 31 agosto 2018
 
 A partire da maggio 2018, i comandi della CLI {{site.data.keyword.cloud}} `bluemix` e `bx` sono ora `ibmcloud`. Tuttavia, puoi ancora utilizzare i comandi della CLI `bluemix` e `bx` finché non vengono successivamente rimossi.
 {: tip}
@@ -170,20 +166,20 @@ Puoi distribuire un'applicazione come applicazione Cloud Foundry o come un conte
 
 Prima di distribuire un'applicazione Cloud Foundry a {{site.data.keyword.cloud_notm}}, un file `manifest.yml` deve essere presente nella directory root della tua applicazione.
 
-Prima di distribuire un'applicazione come un contenitore, devi installare localmente [Kubernetes](https://kubernetes.io/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") e [Helm](https://github.com/helm/helm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"). La versione del client Helm non deve essere più recente della versione del server Helm. Puoi trovare entrambe eseguendo `helm version`. Si consiglia l'utilizzo della v2.4.2 per la versione client.
+Prima di distribuire un'applicazione come un contenitore, devi installare localmente [Kubernetes](https://kubernetes.io/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") e [Helm](https://github.com/kubernetes/helm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"). La versione del client Helm non deve essere più recente della versione del server Helm. Puoi trovare entrambe eseguendo `helm version`. Si consiglia l'utilizzo della v2.4.2 per la versione client.
 
 Per distribuire la tua applicazione su Kubernetes, devi specificare `deploy-target` come `container` in `cli-config.yml` oppure utilizzare il parametro `-t container`.
 
 In `cli-config.yml` è anche possibile specificare altri parametri necessari per configurare la distribuzione Kubernetes utilizzando gli argomenti della riga di comando. Se non definisci questi parametri in `cli-config.yml`, devi eseguire la distribuzione con il parametro `-t container`. Ti vengono quindi richiesti tutti gli altri valori.
 
 ```yaml
-chart-path: "chart/myapplication"
+    chart-path: "chart/myapplication"
 
-deploy-target: "container"
+    deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
 
-ibm-cluster: "mycluster"
+    ibm-cluster: "mycluster"
 ```
 
 In `cli-config.yml`, puoi scegliere di definire la posizione di un grafico Helm nella proprietà `chart-path` e configurare `deploy-image-target` come illustrato nell'esempio. L'elemento `deploy-image-target` in `cli-config.yml` viene utilizzato al posto degli elementi `repository` e `tag` nel file `chart/values.yml`. Per eseguire la distribuzione specificamente a {{site.data.keyword.cloud_notm}}, imposta l'elemento di configurazione `ibm-cluster` sul nome del cluster Kubernetes che hai creato in {{site.data.keyword.cloud_notm}}.
@@ -231,7 +227,7 @@ I seguenti parametri possono essere utilizzati con il comando `deploy` o aggiorn
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Parametro facoltativo utilizzato per definire il nome del cluster Kubernetes per una distribuzione del contenitore a {{site.data.keyword.cloud_notm}}
+* Parametro facoltativo utilizzato per definire il nome del cluster Kubernetes per una distribuzione del contenitore a {{site.data.keyword.Bluemix_notm}}
 * Utilizzo `ibmcloud dev deploy --ibm-cluster [nome-cluster]`
 
 #### `host`
@@ -335,7 +331,7 @@ I seguenti parametri possono essere utilizzati con il comando `enable` o aggiorn
 #### `no-create`
 {: #enable-no-create}
 
-* Parametro per impedire la creazione di un'applicazione in {{site.data.keyword.cloud_notm}} durante la creazione dei file di abilitazione localmente.
+* Parametro per impedire la creazione di un'applicazione in {{site.data.keyword.Bluemix_notm}} durante la creazione dei file di abilitazione localmente.
 * Utilizzo: `ibmcloud dev enable --no-create`
 
 ## get-credentials
@@ -645,13 +641,13 @@ I parametri di comando immessi sulla riga di comando hanno la precedenza sulla c
 {: #host-path-tools}
 
 * Ubicazione sull'host da condividere per la creazione, il debug e la verifica.
-* Utilizzo: `ibmcloud dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
+* Utilizzo: `ibmcloud dev <build|debug|run|test> --host-path-tools [/percorso/per/strumenti/build]`
 
 #### `container-path-tools`
 {: #container-path-tools}
 
 * Ubicazione nel contenitore da condividere per la creazione, il debug e la verifica.
-* Utilizzo: `ibmcloud dev <build|debug|run|test> --container-path-tools [/path/for/build]`
+* Utilizzo: `ibmcloud dev <build|debug|run|test> --container-path-tools [/percorso/per/build]`
 
 #### `container-port-map`
 {: #container-port-map}
@@ -663,13 +659,13 @@ I parametri di comando immessi sulla riga di comando hanno la precedenza sulla c
 {: #dockerfile-tools}
 
 * Dockerfile del contenitore degli strumenti.
-* Utilizzo: `ibmcloud dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
+* Utilizzo: `ibmcloud dev <build|debug|run|test> --dockerfile-tools [percorso/al/filedocker]`
 
 #### `image-name-tools`
 {: #image-name-tools}
 
 * Immagine da creare da `dockerfile-tools`.
-* Utilizzo: `ibmcloud dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
+* Utilizzo: `ibmcloud dev <build|debug|run|test> --image-name-tools [percorso/al/nome-immagine]`
 
 #### `container-mounts-run`
 {: #container-mounts-run}
@@ -677,14 +673,14 @@ I parametri di comando immessi sulla riga di comando hanno la precedenza sulla c
 * Utilizza questa opzione per definire i montaggi tra il sistema host e il contenitore di esecuzione.
 * I valori `host-path-run` e `container-path-run` vengono inseriti all'inizio di questo elenco.
 * Come procedura ottimale e per evitare risultati imprevisti, puoi creare ed eseguire utilizzando le stesse impostazioni di montaggio.
-* Utilizzo: `ibmcloud dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* Utilizzo: `ibmcloud dev <build|run|test> --container-mounts-run [/percorso/relativo/a/dir/host:/percorso/assoluto/a/dir/contenitore ecc.]`
 
 #### `container-mounts-tools`
 {: #container-mounts-tools}
 
 * Utilizza questa opzione per definire i montaggi tra il sistema host e il contenitore degli strumenti.
 * I valori `host-path-tools` e `container-path-tools` vengono inseriti all'inizio di questo elenco * Come procedura ottimale e per evitare risultati imprevisti, puoi creare ed eseguire il debug utilizzando le stesse impostazioni di montaggio.
-* Utilizzo: `ibmcloud dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
+* Utilizzo: `ibmcloud dev <build|debug|test> --container-mounts-tools [/percorso/relativo/a/dir/host:/percorso/assoluto/a/dir/contenitore ecc.]`
 
 #### `build-cmd-run`
 {: #build-cmd-run}

@@ -2,11 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
-
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
-
-subcollection: cloud-cli
+lastupdated: "2019-02-14"
 
 ---
 
@@ -21,8 +17,8 @@ subcollection: cloud-cli
 # {{site.data.keyword.dev_cli_notm}} CLI 外掛程式 (ibmcloud dev) 指令
 {: #idt-cli}
 
-版本：2.1.18
-發行日期：2019 年 3 月 28 日
+版本：2.1.4
+發行日期：2018 年 8 月 31 日
 
 自 2018 年 5 月開始，{{site.data.keyword.cloud}} CLI 指令 `bluemix` 及 `bx` 現在是 `ibmcloud`。不過，您仍然可以使用 `bluemix` 及 `bx` CLI 指令，直到未來移除它們為止。
 {: tip}
@@ -169,20 +165,20 @@ ibmcloud dev delete <applicationName>
 
 在您將 Cloud Foundry 應用程式部署至 {{site.data.keyword.cloud_notm}} 之前，`manifest.yml` 檔案必須存在於應用程式的根目錄中。
 
-在您將應用程式部署為容器之前，必須在本端安裝 [Kubernetes](https://kubernetes.io/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 及 [Helm](https://github.com/helm/helm){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。Helm 用戶端版本不得比 Helm 伺服器版本還要新。您可以執行 `helm version` 來尋找這兩者。建議使用 2.4.2 版作為用戶端版本。
+在您將應用程式部署為容器之前，必須在本端安裝 [Kubernetes](https://kubernetes.io/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 及 [Helm](https://github.com/kubernetes/helm){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。Helm 用戶端版本不得比 Helm 伺服器版本還要新。您可以執行 `helm version` 來尋找這兩者。建議使用 2.4.2 版作為用戶端版本。
 
 若要在 Kubernetes 上部署應用程式，您必須在 `cli-config.yml` 中指定 `deploy-target` 作為 `container`，或使用參數 `-t container`。
 
 使用指令行引數，也可以將配置 Kubernetes 部署所需的其他參數指定於 `cli-config.yml` 中。如果您未在 `cli-config.yml` 中定義這些參數，則必須使用 `-t container` 參數進行部署。然後，系統會提示您輸入所有其他值。
 
 ```yaml
-chart-path: "chart/myapplication"
+    chart-path: "chart/myapplication"
 
-deploy-target: "container"
+    deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
 
-ibm-cluster: "mycluster"
+    ibm-cluster: "mycluster"
 ```
 
 在 `cli-config.yml` 中，您可以選擇在 `chart-path` 內容中定義 Helm 圖表位置，並配置 `deploy-image-target`（如範例中所示）。使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 檔案中的 `repository` 及 `tag` 元素。若要特別部署至 {{site.data.keyword.cloud_notm}}，請將配置元素 `ibm-cluster` 設為您在 {{site.data.keyword.cloud_notm}} 中建立的 Kubernetes 叢集名稱。
@@ -230,7 +226,7 @@ ibmcloud dev deploy
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* 這是對 {{site.data.keyword.cloud_notm}} 進行容器部署時選擇性使用之參數，用來定義 Kubernetes 叢集名稱
+* 這是對 {{site.data.keyword.Bluemix_notm}} 進行容器部署時選擇性使用之參數，用來定義 Kubernetes 叢集名稱
 * 用法：`ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
@@ -334,7 +330,7 @@ ibmcloud dev enable
 #### `no-create`
 {: #enable-no-create}
 
-* 在本端建立啟用檔案時，此參數可防止在 {{site.data.keyword.cloud_notm}} 中建立應用程式。
+* 在本端建立啟用檔案時，此參數可防止在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。
 * 用法：`ibmcloud dev enable --no-create`
 
 ## get-credentials
@@ -446,7 +442,7 @@ ibmcloud dev shell
 
 {{site.data.keyword.dev_cli_short}} CLI 會開啟互動式 Shell，以連接至應用程式的 Docker 容器。Shell 指令的預設目標容器是由 `cli-config.yml` 檔案中的 `container-shell-target` 值所定義，而有效值是 `run` 或 `tools`。如果未定義此值，或指定無效值，則依預設 `shell` 指令會以 `tools` 容器為目標。shell 指令會將容器開啟到對應 Dockerfile 中 `WORKDIR` 指示所指定的目錄。如果 Dockerfile 中未列出 `WORKDIR`，則會使用容器根目錄作為工作目錄。如需相關資訊，請參閱[此參考資料](https://docs.docker.com/engine/reference/builder/#workdir){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
-或者，您可以決定要傳遞 `run` 或 `tools` 作為指令的引數，以便啟動該容器和開啟 Shell 來連接該容器。同樣地，您可以使用 `container-name` 參數，傳遞您要以 Shell 方式連接的容器名稱。不過，此旗標應該保留用於沒有容器在執行中的情況。`run` 和 `tools` 引數更有彈性，而且可讓您在執行中的容器之間切換。例如，如果 tools 容器正在執行，且您執行 `ibmcloud dev shell run`，則會停止 `tools` 容器，並啟動 `run` 容器，反之亦然。
+或者，您可以決定傳遞 `run` 或 `tools` 作為指令的引數，如此即會啟動該容器，且會開啟 Shell 以連接該容器。同樣地，您可以使用 `container-name` 參數，傳遞您要以 Shell 方式連接的容器名稱。不過，此旗標應該保留用於沒有容器在執行中的情況。`run` 和 `tools` 引數更有彈性，而且可讓您在執行中的容器之間切換。例如，如果 tools 容器正在執行，且您執行 `ibmcloud dev shell run`，則會停止 `tools` 容器，並啟動 `run` 容器，反之亦然。
 
 如果在您執行 `shell` 指令時，目標 `run` 或 `tools` 容器尚未執行，則會啟動目標容器。不過，會置換 Dockerfile 中的預設 `Cmd` 或 `Entrypoint` 以直接啟動到 Shell，而不是啟動伺服器處理程序。這可讓您啟動 `run` 或 `tools` 容器，並使用您自己的任意或自訂指令手動啟動伺服器。
 

@@ -2,11 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
-
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
-
-subcollection: cloud-cli
+lastupdated: "2019-02-14"
 
 ---
 
@@ -21,8 +17,8 @@ subcollection: cloud-cli
 # Befehle des CLI-Plug-ins von {{site.data.keyword.dev_cli_notm}} (ibmcloud dev)
 {: #idt-cli}
 
-Version: 2.1.18
-Freigegeben: 28. März 2019
+Version: 2.1.4
+Freigegeben: 31. August 2018
 
 Ab Mai 2018 wird an Stelle der {{site.data.keyword.cloud}}-CLI-Befehle `bluemix` und `bx` der Befehl `ibmcloud` verwendet. Sie können die CLI-Befehle `bluemix` und `bx` jedoch weiterhin verwenden, bis sie zu einem späteren Zeitpunkt entfernt werden.
 {: tip}
@@ -171,20 +167,20 @@ Sie können eine Anwendung als Cloud Foundry-Anwendung oder als Container bereit
 
 Bevor Sie eine Anwendung als Cloud Foundry-Anwendung in {{site.data.keyword.cloud_notm}} bereitstellen, muss eine Datei `manifest.yml` im Stammverzeichnis Ihrer Anwendung vorhanden sein.
 
-Bevor Sie eine Anwendung als Container bereitstellen, müssen Sie [Kubernetes](https://kubernetes.io/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [Helm](https://github.com/helm/helm){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") lokal installieren. Die Version des Helm-Clients darf nicht neuer als die Version des Helms-Servers sein. Beide Angaben erhalten Sie, indem Sie `helm version` ausführen. Für die Clientversion wird Version 2.4.2 empfohlen.
+Bevor Sie eine Anwendung als Container bereitstellen, müssen Sie [Kubernetes](https://kubernetes.io/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [Helm](https://github.com/kubernetes/helm){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") lokal installieren. Die Version des Helm-Clients darf nicht neuer als die Version des Helms-Servers sein. Beide Angaben erhalten Sie, indem Sie `helm version` ausführen. Für die Clientversion wird Version 2.4.2 empfohlen.
 
 Für die Bereitstellung der Anwendung in Kubernetes müssen Sie entweder für `deploy-target` den Wert `container` in `cli-config.yml` angeben oder den Parameter `-t container` verwenden.
 
 Weitere Parameter, die für die Konfiguration der Kubernetes-Bereitstellung erforderlich sind, können ebenfalls in der Datei `cli-config.yml` mithilfe von Befehlszeilenargumenten angegeben werden. Wenn Sie diese Parameter nicht in der Datei `cli-config.yml` definieren, müssen Sie die Bereitstellung mit dem Parameter `-t container` durchführen und werden zur Eingabe aller anderen Werte aufgefordert.
 
 ```yaml
-chart-path: "chart/myapplication"
+    chart-path: "chart/myapplication"
 
-deploy-target: "container"
+    deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud-Region>.bluemix.net/<Containerregistry-Namensbereich>/<App-Name>"
 
-ibm-cluster: "mycluster"
+    ibm-cluster: "mycluster"
 ```
 
 In `cli-config.yml` können Sie die Position eines Helm-Diagramms in der Eigenschaft `chart-path` definieren und `deploy-image-target` konfigurieren, wie im Beispiel dargestellt. Das Element `deploy-image-target` in der `cli-config.yml` wird statt der Elemente `repository` und `tag` in der Datei `chart/values.yml` verwendet. Um gezielt in {{site.data.keyword.cloud_notm}} bereitzustellen, legen Sie das Konfigurationselement `ibm-cluster` auf den Namen des Kubernetes-Clusters fest, den Sie in {{site.data.keyword.cloud_notm}} erstellt haben.
@@ -232,7 +228,7 @@ Die folgenden Parameter können mit dem Befehl `deploy` oder unmittelbar durch d
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung in {{site.data.keyword.cloud_notm}}.
+* Optionaler Parameter zum Definieren des Namens des Kubernetes-Clusters für eine Containerbereitstellung in {{site.data.keyword.Bluemix_notm}}.
 * Syntax: `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
@@ -336,7 +332,7 @@ Die folgenden Parameter können mit dem Befehl `enable` oder unmittelbar durch d
 #### `no-create`
 {: #enable-no-create}
 
-* Parameter zum Verhindern des Erstellens einer App in {{site.data.keyword.cloud_notm}}, während Aktivierungsdateien lokal erstellt werden.
+* Parameter zum Verhindern des Erstellens einer App in {{site.data.keyword.Bluemix_notm}}, während Aktivierungsdateien lokal erstellt werden.
 * Syntax: `ibmcloud dev enable --no-create`
 
 ## get-credentials

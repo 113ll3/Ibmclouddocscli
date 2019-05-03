@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-27"
 
-keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
 subcollection: cloud-cli
 
@@ -39,7 +39,7 @@ Pasos para habilitar la herramienta de depuración para una aplicación Java:
 	* Eclipse
       1. Importe el **Proyecto maven existente** en Eclipse.
       2. Cree una configuración de depuración de [aplicación remota Java](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
-      		1. Especifique la dirección IP o `localhost:<port>`  
+      		1. Escriba la dirección IP o `localhost:<port>`  
       		2. Escriba `7777` como número de puerto.
       		3. Especifique el nombre del proyecto Java que ha importado.
       6. Defina un punto de interrupción en el IDE.
@@ -51,7 +51,7 @@ Pasos para habilitar la herramienta de depuración para una aplicación Java:
 
 	* [IntelliJ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 	* [VSCode](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugger){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
-	* Línea de mandatos de JDK: `jdb -attach <host:port>`
+	* Línea de mandatos JDK: `jdb -attach <host:port>`
 
 ## Depuración de aplicaciones Node.js
 {: #idt-node-debug}

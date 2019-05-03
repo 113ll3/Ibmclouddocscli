@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-26"
 
-keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
+keywords: docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
 subcollection: cloud-cli
 
@@ -34,7 +34,7 @@ subcollection: cloud-cli
 ## 始める前に
 {: #idt-docker-prereq}
 
-[{{site.data.keyword.cloud_notm}} アカウント](https://{DomainName}/login){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") が必要であり、以下の手順を実行する前に、最新の安定した Docker バージョンをインストールする必要があります。
+[{{site.data.keyword.cloud_notm}} アカウント](https://{DomainName}){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") が必要であり、以下の手順を実行する前に、最新の安定した Docker バージョンをインストールする必要があります。
 
 ## ステップ 1. Docker Hub から Docker イメージをプルします。
 {: #step1-pull-docker-image}
