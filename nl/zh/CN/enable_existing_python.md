@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-08"
 
-keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 

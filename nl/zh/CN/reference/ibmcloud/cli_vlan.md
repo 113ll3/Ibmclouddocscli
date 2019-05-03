@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure cli, vlan cli, classic vlan cli, ibmcloud sl vlan, manage virtual network cli
+keywords: classic infrastructure, vlan, classic vlan, ibmcloud sl vlan, ibmcloud sl
 
 subcollection: cloud-cli
 

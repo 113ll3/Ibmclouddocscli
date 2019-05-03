@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
+keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
 
 subcollection: cloud-cli
 
@@ -274,7 +274,7 @@ ibmcloud account space space_example --security-group-rules
 指定された組織内のユーザーを役割別に表示します
 
 ```
-ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
+ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ```
 
 <strong>前提条件</strong>: エンドポイント、ログイン
@@ -283,10 +283,10 @@ ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 <dl>
 <dt>ORG_NAME (必須)</dt>
 <dd>組織の名前。</dd>
-<dt>-a, -all (オプション)</dt>
+<dt>-a (オプション)</dt>
 <dd>指定された組織内のすべてのユーザーを、役割別にグループ化せずにリストします。</dd>
-<dt>-r, --region REGION (オプション)</dt>
-<dd>地域名。 未指定の場合、デフォルトは現行地域です。</dd>
+<dt>--output FORMAT (オプション)</dt>
+<dd>--output value  出力形式を指定します。現在、JSON のみがサポートされています。</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -535,7 +535,7 @@ ibmcloud account org-account ORG_NAME [--guid]
 ibmcloud account show
 ```
 
-<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+<strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
@@ -558,7 +558,7 @@ ibmcloud account show
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
+<strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
 <dl>
@@ -572,41 +572,6 @@ ibmcloud account update (--service-endpoint-enable true | false)
 
 ```
 ibmcloud account update --service-endpoint-enable true
-```
-
-## ibmcloud account audit-logs
-{: #ibmcloud_account_audit_logs}
-
-Softlayer アカウント監査ログをリストします
-
-```
-account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
-
-<strong>コマンド・オプション</strong>:
-<dl>
-  <dt>-a, --action <i>ACTION</i></dt>
-  <dd>アクション。 指定されたアクションの監査ログをリストします。</dd>
-  <dt>-e, --end-date <i>END_DATE</i></dt>
-  <dd>終了日。 終了日より前の監査ログをリストします。 サポートされる形式は、yyyy-MM-ddTHH:mm:ss です。</dd>
-  <dt>-o, --object <i>OBJECT</i></dt>
-  <dd>オブジェクト。 指定されたオブジェクトの監査ログをリストします。</dd>
-  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
-  <dd>オブジェクト・タイプ。 指定されたオブジェクト・タイプの監査ログをリストします。</dd>
-  <dt>-s, --start-date <i>START_DATE</i></dt>
-  <dd>開始日。 開始日より後の監査ログをリストします。 サポートされる形式は、yyyy-MM-ddTHH:mm:ss です。</dd>
-  <dt>-u, --user-name <i>USER_NAME</i></dt>
-  <dd>ユーザー名。 指定されたユーザー名の監査ログをリストします。</dd>
-</dl>
-
-<strong>例</strong>:
-
-監査ログをリストします
-
-```
-ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users

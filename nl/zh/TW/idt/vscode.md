@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
+keywords: ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
 subcollection: cloud-cli
 
@@ -69,7 +69,7 @@ Visual Studio Code 的 IBM Cloud Developer Tools 延伸規格可以直接存取 
 * 在 Visual Studio Code 編輯器中本端開啟專案的資料夾
 * 使用 `ibmcloud dev build` 指令，將應用程式建置至 Docker 映像檔
 * 使用 `ibmcloud dev debug` 指令，在本端 Docker 中執行應用程式以進行開發
-> 附註：若要針對在本端 Docker 容器內執行的 Node.js 應用程式進行除錯，您需要[為本端容器新增除錯配置](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
+> 附註：若要針對在本端 Docker 容器內執行的 Node.js 應用程式進行除錯，您需要[為本端容器新增除錯配置](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 * 使用 `ibmcloud dev run` 指令，以發行模式在本端 Docker 中執行應用程式
 * 使用 `ibmcloud dev deploy` 指令，以在 {{site.data.keyword.cloud_notm}} 上將應用程式部署至 Cloud Foundry 運行環境
 
@@ -85,6 +85,6 @@ Visual Studio Code 的 IBM Cloud Developer Tools 延伸規格可以直接存取 
 * 在 Visual Studio Code 編輯器中本端開啟專案資料夾
 * 使用 `ibmcloud cf apps`，以列出您的所有應用程式
 * 使用 `ibmcloud cf push`，以將您應用程式的建置推送至 Cloud Foundry 運行環境
-* 使用 ibmcloud `cf <start/stop/restage/restart>` 來變更應用程式的狀態
+* 使用 `ibmcloud cf <start/stop/restage/restart>`，以變更您應用程式的狀態
 * 使用 `ibmcloud cf logs`，以檢視您應用程式的即時日誌串流
   * 使用 `ibmcloud cf logs`，以停止日誌串流

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-03-26"
 
-keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
+keywords: cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
 subcollection: cloud-cli
 
@@ -223,7 +223,7 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME（必要）</dt>
    <dd>要與路徑對映之 cf 應用程式或容器群組的名稱。</dd>
    <dt>DOMAIN（必要）</dt>
-   <dd>路徑的網域。例如，mybluemix.net。</dd>
+   <dd>路徑的網域。例如，mychinabluemix.net 或 chinabluemix.net。</dd>
    <dt>-n <i>HOST_NAME</i>（選用）</dt>
    <dd>路徑的主機名稱。如果未提供，則依預設會將主機名稱設為應用程式名稱或容器群組名稱。</dd>
    </dl>
@@ -231,22 +231,22 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 <strong>範例</strong>：
 
 將路徑對映到具有指定網域的 `my-app`：
+
 ```
-ibmcloud app route-map my-app mybluemix.net
+ibmcloud app route-map my-app mychinabluemix.net
 ```
 
 將路徑對映到具有指定網域及主機名稱的 'my-container-group'：
-```
-ibmcloud app route-map my-container-group bluemix.net -n abc
-```
 
-預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
-{: tip}
+```
+ibmcloud app route-map my-container-group chinabluemix.net -n abc
+```
 
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 從現有的 cf 應用程式或容器群組中取消對映指定的路徑。
+
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
@@ -259,25 +259,24 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME（必要）</dt>
    <dd>cf 應用程式或容器群組的名稱。</dd>
    <dt>DOMAIN（必要）</dt>
-   <dd>路徑的網域。例如，mybluemix.net。</dd>
+   <dd>路徑的網域（例如 mychinabluemix.net 或 chinabluemix.net）。</dd>
    <dt>-n <i>HOST_NAME</i>（選用）</dt>
    <dd>路徑的主機名稱。如果未提供，則依預設會將主機名稱設為應用程式名稱或容器群組名稱。</dd>
    </dl>
 
 <strong>範例</strong>：
 
-從 `my-app` 取消對映 `my-app.mybluemix.net`：
+從 `my-app` 取消對映 `my-app.mychinabluemix.net`：
+
 ```
-ibmcloud app route-unmap my-app mybluemix.net
+ibmcloud app route-unmap my-app mychinabluemix.net
 ```
 
-從 `my-container-group` 取消對映 `abc.bluexmix.net`：
-```
-ibmcloud app route-unmap my-container-group bluemix.net -n abc
-```
+從 `my-container-group` 取消對映 `abc.chinabluexmix.net`：
 
-預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
-{: tip}
+```
+ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
+```
 
 ## ibmcloud app route-create
 {: #ibmcloud_app_route_create}

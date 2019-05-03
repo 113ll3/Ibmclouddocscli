@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-02-26"
 
-keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
 subcollection: cloud-cli
 
@@ -25,7 +25,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
 
 如需更詳細的 `cf CLI` 指令清單，請參閱社群 [Cloud Foundry CLI 參考手冊](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 
-如果您的網路在執行 cf 指令的主機與 Cloud Foundry API 端點之間包含 HTTP Proxy 伺服器，則必須藉由設定 `HTTP_PROXY` 環境變數來指定 Proxy 伺服器的主機名稱或 IP 位址。如需詳細資料，請參閱[搭配使用 cf CLI 與 Proxy 伺服器](https://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
+如果您的網路在執行 cf 指令的主機與 Cloud Foundry API 端點之間包含 HTTP Proxy 伺服器，則必須藉由設定 `HTTP_PROXY` 環境變數來指定 Proxy 伺服器的主機名稱或 IP 位址。如需詳細資料，請參閱[搭配使用 cf CLI 與 Proxy 伺服器](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 {: note}
 
 ## Cloud Foundry CLI 指令索引
@@ -64,7 +64,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
  <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](#cf_delete-space)</td>
+ <td>[delete-space](/#cf_delete-space)</td>
  <td>[events](#cf_events)</td>
  <td>[logs](#cf_logs)</td>
  <td>[marketplace](#cf_marketplace)</td>
@@ -84,7 +84,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
 
 您可以使用這個指令來顯示或指定 {{site.data.keyword.cloud}} API 端點的 URL。
 ```
-cf api [URL] [--skip-ssl-validation] [--unset]
+cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
 
 <strong>必要條件</strong>：無。
@@ -92,8 +92,8 @@ cf api [URL] [--skip-ssl-validation] [--unset]
 <strong>指令選項</strong>：
 
    <dl>
-   <dt>URL（選用）</dt>
-   <dd>{{site.data.keyword.cloud_notm}} API 端點的 URL，在連接至 {{site.data.keyword.cloud_notm}} 時必須予以指定。一般而言，這個 URL 是 `https://api.<REGION>.cf.{DomainName}`。
+   <dt>BluemixServerURL（選用）</dt>
+   <dd>{{site.data.keyword.cloud_notm}} API 端點的 URL，在連接至 {{site.data.keyword.cloud_notm}} 時必須予以指定。這個 URL 通常是 `https://api.{DomainName}`。
    如果您要顯示目前所使用 API 端點的 URL，則不需要針對 cf api 指令指定此參數。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
@@ -103,7 +103,7 @@ cf api [URL] [--skip-ssl-validation] [--unset]
 
 <strong>範例</strong>：
 
-若要檢視現行 API 端點，請執行：
+檢視現行 API 端點
 ```
 cf api
 ```
@@ -406,7 +406,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <strong>指令選項</strong>：
 
 <dl>
-<dt>*-a* https://api.<REGION>.cf.{DomainName}（選用）</dt>
+<dt>*-a* https://api.{DomainName}（選用）</dt>
 <dd>{{site.data.keyword.cloud_notm}} API 端點的 URL。</dd>
 <dt>*-u* user_name（選用）</dt>
 <dd>您的使用者名稱。</dd>
@@ -457,15 +457,6 @@ cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAP
 ```
 {: codeblock}
 
-您可以登入下列地區的 Cloud Foundry API 端點：
-* api.us-south.cf.cloud.ibm.com  （之前是 api.ng.bluemix.net）
-* api.eu-gb.cf.cloud.ibm.com     （之前是 api.eu-gb.bluemix.net）
-* api.us-east.cf.cloud.ibm.com   （之前是 api.us-east.bluemix.net）
-* api.eu-de.cf.cloud.ibm.com     （之前是 api.eu-de.bluemix.net）
-* api.au-syd.cf.cloud.ibm.com    （之前是 api.au-syd.bluemix.net）
-
-舊式 "api.<REGION>.bluemix.net" Cloud Foundry API 端點仍然有效，但很快就會淘汰。
-{: note}
 
 ## cf logs
 {: #cf_logs}
@@ -541,7 +532,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname（必要）</dt>
 <dd>應用程式的名稱。</dd>
 <dt>*-b* buildpack_name（選用）</dt>
-<dd>建置套件的名稱。buildpack_name 可以是依下列來命名的自訂建置套件：名稱（例如 liberty-for-java）、Git URL（例如，https://github.com/cloudfoundry/java-buildpack）或含分支或標籤之 Git URL（例如，適用於 3.3.0 版標籤的 https://github.com/cloudfoundry/java-buildpack#v3.3.0）。</dd>
+<dd>建置套件的名稱。buildpack_name 可以是依名稱（例如 liberty-for-java）、Git URL（例如 https://github.com/cloudfoundry/java-buildpack.git）或含分支或標籤之 Git URL（例如，https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 適用於 3.3.0 版標籤）的自訂建置套件。</dd>
 <dt>*-c* start_command（選用）</dt>
 <dd>應用程式的啟動指令。若要使用預設的啟動指令，請針對這個選項指定空值。</dd>
 <dt>*-f* manifest_path（選用）</dt>

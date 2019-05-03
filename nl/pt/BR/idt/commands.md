@@ -2,11 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
-
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
-
-subcollection: cloud-cli
+lastupdated: "2019-02-14"
 
 ---
 
@@ -18,11 +14,10 @@ subcollection: cloud-cli
 {:tip: .tip}
 {:note: .note}
 
-# Comandos de plug-in da CLI do {{site.data.keyword.dev_cli_notm}} (ibmcloud dev)
+# Comandos de plug-in da CLI do {{site.data.keyword.dev_cli_notm}}  (ibmcloud dev)
 {: #idt-cli}
 
-Versão: 2.1.18
-Liberado: 28 de março de 2019
+Versão: 2.1.4 Liberada: 31 de agosto de 2018
 
 Desde maio de 2018, os comandos da CLI do {{site.data.keyword.cloud}} `bluemix` e `bx` agora são `ibmcloud`. No entanto, ainda é possível usar os comandos da CLI `bluemix` e `bx` até que eles sejam removidos posteriormente.
 {: tip}
@@ -172,20 +167,20 @@ Os serviços do {{site.data.keyword.cloud_notm}}  não são removidos.
 
 Antes de implementar um aplicativo do Cloud Foundry no {{site.data.keyword.cloud_notm}}, um arquivo `manifest.yml` deve estar presente no diretório raiz do seu aplicativo.
 
-Antes de implementar um aplicativo como um contêiner, deve-se instalar localmente o [Kubernetes](https://kubernetes.io/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") e o [Helm](https://github.com/helm/helm){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"). A versão cliente do Helm não deve ser mais recente do que a versão do servidor do Helm. É possível localizar ambos executando `helm version`. Recomenda-se usar a v2.4.2 para a versão cliente.
+Antes de implementar um aplicativo como um contêiner, deve-se instalar localmente o [Kubernetes](https://kubernetes.io/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") e o [Helm](https://github.com/kubernetes/helm){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"). A versão cliente do Helm não deve ser mais recente do que a versão do servidor do Helm. É possível localizar ambos executando `helm version`. Recomenda-se usar a v2.4.2 para a versão cliente.
 
 Para implementar seu aplicativo no Kubernetes, deve-se especificar o `deploy-target` como `container` no `cli-config.yml` ou usar o parâmetro `-t container`.
 
 Outros parâmetros necessários para configurar a implementação do Kubernetes também podem ser especificados no `cli-config.yml` usando os argumentos da linha de comandos. Se você não definir esses parâmetros no `cli-config.yml`, deverá implementar com o parâmetro `-t container`. Em seguida, você será solicitado a fornecer todos os outros valores.
 
 ```yaml
-chart-path: "chart/myapplication"
+    chart-path: "chart/myapplication"
 
-deploy-target: "container"
+    deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
 
-ibm-cluster: "mycluster"
+    ibm-cluster: "mycluster"
 ```
 
 No `cli-config.yml`, é possível escolher definir o local de um gráfico Helm na propriedade `chart-path` e configurar o `deploy-image-target` conforme mostrado no exemplo. O elemento `deploy-image-target` no `cli-config.yml` é usado em vez dos elementos `repository` e `tag` no arquivo `chart/values.yml`. Para implementar no {{site.data.keyword.cloud_notm}} especificamente, configure o elemento de configuração `ibm-cluster` para o nome do cluster Kubernetes que você criou no {{site.data.keyword.cloud_notm}}.
@@ -233,7 +228,7 @@ Os parâmetros a seguir podem ser usados com o comando `deploy` ou atualizando o
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Parâmetro usado opcionalmente para definir o nome do cluster do Kubernetes para uma implementação de contêiner no {{site.data.keyword.cloud_notm}}
+* Parâmetro usado opcionalmente para definir o nome do cluster do Kubernetes para uma implementação de contêiner no {{site.data.keyword.Bluemix_notm}}
 * Uso `ibmcloud dev deploy -- ibm-cluster [ cluster-name ]`
 
 #### `host `
@@ -337,7 +332,7 @@ Os parâmetros a seguir podem ser usados com o comando `enable` ou atualizando o
 #### `no-create`
 {: #enable-no-create}
 
-* Parâmetro para evitar a criação de um app no {{site.data.keyword.cloud_notm}} ao criar os arquivos de ativação localmente.
+* Parâmetro para evitar a criação de um app no {{site.data.keyword.Bluemix_notm}} ao criar os arquivos de ativação localmente.
 * Uso `ibmcloud dev enable --no-create`
 
 ## get-credentials
@@ -401,7 +396,7 @@ Há [parâmetros adicionais](#command-parameters) que são compartilhados com ou
 {: #container-name-run2}
 
 * Nome do contêiner para o contêiner de execução.
-* Uso: `ibmcloud dev run --container-name-run [<applicationName>]`
+* Uso: `ibmcloud dev run--container-name-run [<applicationName>]`
 
 #### `container-path-run`
 {: #container-path-run}
@@ -468,7 +463,7 @@ Por exemplo, é possível executar o comando &trade; `ls` do Linux dentro do she
 {: #container-name}
 
 * Nome do contêiner no qual você deseja efetuar shell.
-* Uso: `ibmcloud dev shell --container-name [<container-name>]`
+* Uso: `ibmcloud dev shell -- container-name [<container-name>]`
 
 #### `container-shell`
 {: #container-shell}
@@ -517,13 +512,13 @@ Os parâmetros a seguir são usados para o comando `stop`. Há [parâmetros adic
 {: #container-name-run}
 
 * Nome do contêiner para o contêiner de execução.
-* Uso: `ibmcloud dev stop --container-name-run [<applicationName>]`
+* Uso: `ibmcloud dev stop--container-name-run [<applicationName>]`
 
 #### `container-name-tools`
 {: #container-name-tools}
 
 * O nome do contêiner para o contêiner de ferramentas.
-* Uso: `ibmcloud dev stop --container-name-tools [<applicationName>]`
+* Uso: `ibmcloud dev stop--container-name-tools [<applicationName>]`
 
 ## test
 {: #test}

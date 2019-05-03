@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -112,7 +112,7 @@ ibmcloud catalog entry-create [-c PARAMETERS_AS_JSON] [-p, --parent PARENT] [--g
 
 <strong>Exemplos</strong>:
 
-Criar o recurso do arquivo JSON com o ID pai `a0ef1-d3b4j0`:
+Crie o recurso do arquivo JSON com o ID pai `a0ef1-d3b4j0`:
 ```
 ibmcloud catalog entry-create -c @entry.json -p 'a0ef1-d3b4j0'
 ```
@@ -137,7 +137,7 @@ ibmcloud catalog entry-update ID [-c PARAMETERS_AS_JSON] [--global]
 
 <strong>Exemplos</strong>:
 
-Atualizar o recurso `j402-dnf1i` do arquivo JSON:
+Atualize o recurso `j402-dnf1i` do arquivo JSON:
 ```
 ibmcloud catalog entry-update 'j402-dnf1i' -c @update.json
 ```
@@ -159,7 +159,7 @@ ibmcloud catalog entry-delete ID [--global]
 
 <strong>Exemplos</strong>:
 
-Excluir o recurso `j402-dnf1i`:
+Exclua o recurso `j402-dnf1i`:
 ```
 ibmcloud catalog delete `j402-dnf1i`
 ```

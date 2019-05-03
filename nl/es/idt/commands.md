@@ -2,11 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
-
-keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
-
-subcollection: cloud-cli
+lastupdated: "2019-02-14"
 
 ---
 
@@ -21,8 +17,8 @@ subcollection: cloud-cli
 # Mandatos del plugin de CLI de {{site.data.keyword.dev_cli_notm}} (ibmcloud dev)
 {: #idt-cli}
 
-Versión: 2.1.18
-Publicación: 28 de marzo de 2019
+Versión: 2.1.4
+Publicación: 31 de agosto de 2018
 
 A partir de mayo de 2018, los mandatos de CLI de {{site.data.keyword.cloud}} `bluemix` y
 `bx` ahora son `ibmcloud`. Sin embargo, puede seguir utilizando los mandatos de CLI `bluemix` y `bx` hasta que se eliminen más adelante.
@@ -170,7 +166,7 @@ Una aplicación se puede desplegar como un contenedor o una aplicación de Cloud
 
 Antes de desplegar una aplicación Cloud Foundry en {{site.data.keyword.cloud_notm}}, el archivo `manifest.yml` debe estar presente en su directorio raíz de la aplicación.
 
-Antes de desplegar una aplicación como un contenedor, debe instalar localmente [Kubernetes](https://kubernetes.io/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") y [Helm](https://github.com/helm/helm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"). La versión del cliente de Helm no debe ser más reciente que la versión del servidor de Helm. Puede encontrar ambas versiones ejecutando `helm version`. Se recomienda que utilice v2.4.2 para la versión del cliente.
+Antes de desplegar una aplicación como un contenedor, debe instalar localmente [Kubernetes](https://kubernetes.io/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") y [Helm](https://github.com/kubernetes/helm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"). La versión del cliente de Helm no debe ser más reciente que la versión del servidor de Helm. Puede encontrar ambas versiones ejecutando `helm version`. Se recomienda que utilice v2.4.2 para la versión del cliente.
 
 Para desplegar la aplicación en Kubernetes, debe especificar `deploy-target` como `container` en `cli-config.yml` o utilizar el parámetro `-t container`.
 
@@ -178,13 +174,13 @@ Otros parámetros necesarios para configurar el despliegue de Kubernetes tambié
 `-t container`. A continuación, se le solicitarán los demás valores.
 
 ```yaml
-chart-path: "chart/myapplication"
+    chart-path: "chart/myapplication"
 
-deploy-target: "container"
+    deploy-target: "container"
 
-deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
 
-ibm-cluster: "mycluster"
+    ibm-cluster: "mycluster"
 ```
 
 En `cli-config.yml`, puede elegir definir la ubicación de un diagrama de Helm en la propiedad `chart-path` y configurar `deploy-image-target` tal como se muestra en el ejemplo. En `cli-config.yml` se utiliza el elemento `deploy-image-target` en lugar de los elementos `repository` y `tag` en el archivo `chart/values.yml`. Para desplegar en {{site.data.keyword.cloud_notm}} concretamente, establezca el elemento de configuración `ibm-cluster` en el nombre del clúster de Kubernetes que ha creado en {{site.data.keyword.cloud_notm}}.
@@ -232,7 +228,7 @@ Los siguientes parámetros se pueden utilizar con el mandato `deploy` o actualiz
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* Parámetro opcional que define el nombre del clúster Kubernetes para una despliegue de contenedor en {{site.data.keyword.cloud_notm}}.
+* Parámetro opcional que define el nombre del clúster Kubernetes para una despliegue de contenedor en {{site.data.keyword.Bluemix_notm}}.
 * Uso `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
@@ -337,7 +333,7 @@ Los siguientes parámetros se pueden utilizar con el mandato `enable` o actualiz
 #### `no-create`
 {: #enable-no-create}
 
-* Parámetro para evitar que se cree una app en {{site.data.keyword.cloud_notm}} mientras se crean los archivos de habilitación localmente.
+* Parámetro para evitar que se cree una app en {{site.data.keyword.Bluemix_notm}} mientras se crean los archivos de habilitación localmente.
 * Uso: `ibmcloud dev enable --no-create`
 
 ## get-credentials

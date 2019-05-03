@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-02-26"
 
-keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
+keywords: stand-alone cli, install cli, uninstall cli, cli, plugin, plug-in, command line, command-line, windows powershell, linux, macos, installer
 
 subcollection: cloud-cli
 
@@ -87,7 +87,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 ## 安装到定制目录
 {: #install-custom-dir}
 
-使用安装程序或 shell 脚本安装 {{site.data.keyword.cloud_notm}} CLI 时，二进制文件会转至系统目录。如果要指定其他目录，请使用以下步骤。
+使用安装程序或 shell 脚本安装 {{site.data.keyword.Bluemix_notm}} CLI 时，二进制文件会转至系统目录。如果要指定其他目录，请使用以下步骤。
 
 ### 步骤 1：使用以下链接，根据您的操作系统下载二进制文件包。
 {: #step1-custom-dir}
@@ -172,7 +172,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 #### V`0.9.0` 和更高版本
 
 1. 打开终端，然后运行以下命令：
-  * `/usr/local/ibmcloud/uninstall`
+  * `/usr/local/ibmcloud/bin/uninstall`
 2. 清除所有定制自动完成脚本。有关更多详细信息，请参阅[启用 {{site.data.keyword.cloud_notm}} CLI 的 shell 自动完成（仅限 Linux 和 MacOS）](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)。
 
 ## 用于进一步探索 {{site.data.keyword.cloud_notm}} CLI 的其他链接

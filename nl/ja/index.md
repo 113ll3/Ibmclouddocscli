@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-03-01"
 
-keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
+keywords: IBM Cloud Developer Tools CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
 
 subcollection: cloud-cli
 
@@ -15,7 +15,6 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
-{:note: .note}
 
 # {{site.data.keyword.cloud_notm}} CLI の概説
 {: #ibmcloud-cli}
@@ -23,10 +22,7 @@ subcollection: cloud-cli
 このチュートリアルでは、一連の {{site.data.keyword.cloud}} 開発者ツールをインストールし、インストールを検証して、環境を構成します。 {{site.data.keyword.cloud_notm}} 開発者ツールは、Web アプリケーション、モバイル・アプリケーション、およびマイクロサービス・アプリケーションを作成、開発、およびデプロイするためのコマンド・ライン・アプローチを提供します。
 {: shortdesc}
 
-必ず最新バージョンの {{site.data.keyword.cloud_notm}} パブリック用スタンドアロン {{site.data.keyword.cloud_notm}} CLI を使用してください。32 ビット・バージョン、または {{site.data.keyword.cloud_notm}} 専用環境用の最新バージョン以外の旧バージョンを使用する必要がある場合は、[{{site.data.keyword.cloud_notm}} CLI リリース](/docs/cli?topic=cloud-cli-cli-releases)を参照してください。
-{: note}
-
-このチュートリアルのインストール・コマンドにより、入手可能な最新のスタンドアロン {{site.data.keyword.cloud_notm}} CLI バージョンと、以下のツールがインストールされます。
+このインストールによって、スタンドアロン {{site.data.keyword.cloud_notm}} CLI および以下のツールを取得できます。
 
 * `Homebrew` (Mac のみ)
 * `Git`
@@ -66,9 +62,11 @@ subcollection: cloud-cli
   Windows PowerShell アイコンを右クリックして、**「管理者として実行」**を選択します。
   {: tip}
 
-この [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") からインストーラー・スクリプトをダウンロードすることもできます。
+  この [GitHub repo](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") からインストーラー・スクリプトをダウンロードすることもできます。
 
-これらのツールを手動でインストールする手順については、[{{site.data.keyword.cloud_notm}} 開発者用ツール CLI プラグイン・コンポーネントの手動によるインストール](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)を参照してください。
+<!--Uncomment when this linked topic goes to prod.
+  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
 ## ステップ 2. インストールの検証
 {: #step2-verify-idt}
@@ -93,13 +91,13 @@ ibmcloud dev help
   資格情報が拒否された場合、統合 ID を使用している可能性があります。 フェデレーテッド ID を使用してログインするには、`--sso` フラグを使用します。 詳しくは、[フェデレーテッド ID を使用したログイン](/docs/iam/federated_id?topic=iam-federated_id#federated_id)を参照してください。
   {: tip}
 
-2. Cloud Foundry サービスにアクセスするには、Cloud Foundry 組織およびスペースを指定する必要があります。 以下のコマンドを実行して、対話式に組織とスペースを特定できます。
+2. Cloud Foundry サービスを使用するには、組織とスペースをターゲットにします。
   ```
   ibmcloud target --cf
   ```
   {: codeblock}
 
-  あるいは、サービスが所属する組織とスペースが分かる場合は、以下のコマンドを使用できます。
+  オプションで、上記のコマンドの出力を使用して、次のコマンドで組織とスペースを手動で設定することができます。
   ```
   ibmcloud target -o <value> -s <value>
   ```

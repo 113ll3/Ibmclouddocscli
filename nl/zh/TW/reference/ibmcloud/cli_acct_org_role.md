@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
+keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
 
 subcollection: cloud-cli
 
@@ -273,7 +273,7 @@ ibmcloud account space space_example --security-group-rules
 依角色顯示指定組織中的使用者。
 
 ```
-ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
+ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入
@@ -282,10 +282,10 @@ ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 <dl>
 <dt>ORG_NAME（必要）</dt>
 <dd>組織的名稱。</dd>
-<dt>-a, -all（選用）</dt>
+<dt>-a（選用）</dt>
 <dd>列出指定組織中的所有使用者，而不依角色分組。</dd>
-<dt>-r, --region REGION（選用）</dt>
-<dd>地區名稱。如果未指定，則預設為現行地區。</dd>
+<dt>--output FORMAT（選用）</dt>
+<dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -534,7 +534,7 @@ ibmcloud account org-account ORG_NAME [--guid]
 ibmcloud account show
 ```
 
-<strong>必要條件</strong>：端點、登入、目標
+<strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
@@ -557,7 +557,7 @@ ibmcloud account show
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>必要條件</strong>：端點、登入、目標
+<strong>必要條件</strong>：端點、登入
 
 <strong>指令選項</strong>：
 <dl>
@@ -571,41 +571,6 @@ ibmcloud account update (--service-endpoint-enable true | false)
 
 ```
 ibmcloud account update --service-endpoint-enable true
-```
-
-## ibmcloud account audit-logs
-{: #ibmcloud_account_audit_logs}
-
-列出 Softlayer 帳戶審核日誌
-
-```
-account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
-```
-
-<strong>必要條件</strong>：端點、登入、目標
-
-<strong>指令選項</strong>：
-<dl>
-  <dt>-a, --action <i>ACTION</i></dt>
-  <dd>動作。列出含有給定動作的審核日誌。</dd>
-  <dt>-e, --end-date <i>END_DATE</i></dt>
-  <dd>結束日期。列出結束日期之前的審核日誌。支援的格式為 yyyy-MM-ddTHH:mm:ss。</dd>
-  <dt>-o, --object <i>OBJECT</i></dt>
-  <dd>物件。列出含有給定物件的審核日誌。</dd>
-  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
-  <dd>物件類型。列出含有給定物件類型的審核日誌。</dd>
-  <dt>-s, --start-date <i>START_DATE</i></dt>
-  <dd>開始日期。列出開始日期之後的審核日誌。支援的格式為 yyyy-MM-ddTHH:mm:ss。</dd>
-  <dt>-u, --user-name <i>USER_NAME</i></dt>
-  <dd>使用者名稱。列出含有給定使用者名稱的審核日誌。</dd>
-</dl>
-
-<strong>範例</strong>：
-
-列出審核日誌
-
-```
-ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users

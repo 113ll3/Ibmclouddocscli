@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
 subcollection: cloud-cli
 
@@ -22,7 +22,7 @@ subcollection: cloud-cli
 
 您可以搭配使用 Cloud Foundry 指令行介面與 {{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式，來管理 {{site.data.keyword.cloud_notm}} Local 或 {{site.data.keyword.cloud_notm}} Dedicated 環境。例如，您可以從 LDAP 登錄新增使用者。如需管理 {{site.data.keyword.cloud_notm}} Public 帳戶的相關資訊，請參閱[管理](/docs/account?topic=account-accounts#accounts)。
 
-開始之前，請先安裝 Cloud Foundry 指令行介面。「{{site.data.keyword.cloud_notm}} 管理 CLI」外掛程式需要 `cf` 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")
+開始之前，請先安裝 Cloud Foundry 指令行介面。{{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")
 
 **限制：**Cygwin 不支援 Cloud Foundry 指令行介面。請在非 Cygwin 指令行視窗的指令行視窗中使用 Cloud Foundry 指令行介面。
 
@@ -30,48 +30,33 @@ subcollection: cloud-cli
 {: note}
 
 ## 新增 {{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式
-{: #add-admin-cli}
 
 安裝 Cloud Foundry 指令行介面之後，您可以新增 {{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式。
 
-如果您先前已安裝「{{site.data.keyword.cloud_notm}} 管理」外掛程式，則可能需要解除安裝外掛程式、刪除儲存庫，然後重新安裝以取得最新更新項目。
+如果您先前已安裝 {{site.data.keyword.cloud_notm}} 管理外掛程式，則可能需要解除安裝外掛程式、刪除儲存庫，然後重新安裝以取得最新更新。
 {: tip}
 
 完成下列步驟以新增儲存庫並安裝外掛程式：
 
-1. 若要新增 {{site.data.keyword.cloud_notm}} 管理外掛程式儲存庫，請執行下列指令：
-  ```
-  cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
-  ```
-  {: codeblock}
-
-  您可以在「管理主控台 CLI」頁面中找到與實際端點相同的指令：`https://<customer_console_endpoint>.bluemix.net/cli`。{: note}
-
-2. 若要安裝 {{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式，請執行下列指令：
-  ```
-  cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
-  ```
-  {: codeblock}
-
-## 解除安裝 {{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式
-{: #remove-admin-cli}
+<ol>
+<li>若要新增 {{site.data.keyword.cloud_notm}} 管理外掛程式儲存庫，請執行下列指令：<br/><br/>
+<code>
+cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
+</code><br/><br/>
+</li>
+<li>若要安裝 {{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式，請執行下列指令：<br/><br/>
+<code>
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+</code>
+</li>
+</ol>
 
 如果您需要解除安裝外掛程式，則可以使用下列指令，然後新增已更新的儲存庫以及安裝最新外掛程式：
 
-1. 解除安裝外掛程式：
-  ```
-  cf uninstall-plugin IBMCloudAdminCLI
-  ```
-  {: codeblock}
-
-2. 移除外掛程式儲存庫：
-  ```
-  cf remove-plugin-repo IBMCloudAdmin
-  ```
-  {: codeblock}
+* 解除安裝外掛程式：`cf uninstall-plugin IBMCloudAdminCLI`
+* 移除外掛程式儲存庫：`cf remove-plugin-repo IBMCloudAdmin`
 
 ## 使用 {{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式
-{: #using-admin-cli}
 
 您可以使用 {{site.data.keyword.cloud_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。
 
@@ -85,33 +70,27 @@ cf plugins
 如需指令的其他說明，請使用 `-help` 選項。
 
 ### 連接並登入 {{site.data.keyword.cloud_notm}}
-{: #connecting-ibm-cloud}
 
-您必須先連接並登入，才能使用「管理 CLI」外掛程式。
+如果尚未連接並登入，您必須先完成此作業，才能使用管理 CLI 外掛程式。
 
-1. 若要連接至 {{site.data.keyword.cloud_notm}} API 端點，請執行下列指令：
-  ```
-  cf api api.us-south.cf.cloud.ibm.com
-  ```
-  {: codeblock}
-
-  您可以查看「管理主控台」的「資源及資訊」頁面，以取得正確的 URL。URL 顯示在「API 資訊」區段的 **API URL** 欄位中。
-
-2. 使用下列指令登入 {{site.data.keyword.cloud_notm}}：
-  ```
-  cf login
-  ```
-  {: codeblock}
-
-**使用舊式 Cloud Foundry 端點**：
-
-當舊式 `api.*.bluemix.net` Cloud Foundry API 端點仍然可用時，您可以更新 Script 和基礎架構自動化，以使用您地區的下列更新 Cloud Foundry API 端點：
-
-* api.us-south.cf.cloud.ibm.com（之前是 api.ng.bluemix.net）
-* api.eu-gb.cf.cloud.ibm.com（之前是 api.eu-gb.bluemix.net）
-* api.us-east.cf.cloud.ibm.com（之前是 api.us-east.bluemix.net）
-* api.eu-de.cf.cloud.ibm.com（之前是 api.eu-de.bluemix.net）
-* api.au-syd.cf.cloud.ibm.com（之前是 api.au-syd.bluemix.net）
+<ol>
+<li>若要連接至 {{site.data.keyword.cloud_notm}} API 端點，請執行下列指令：<br/><br/>
+<code>
+cf api api.ng.bluemix.net
+</code>
+<dl class="parml">
+<dt class="pt dlterm">&lt;subdomain&gt;</dt>
+<dd class="pd">您的 {{site.data.keyword.cloud_notm}} 實例 URL 的子網域。<br />
+</dd>
+</dl>
+<p>您可以查看「管理主控台」的「資源及資訊」頁面，以取得正確的 URL。URL 顯示在「API 資訊」區段的 **API URL** 欄位中。</p>
+</li>
+<li>使用下列指令登入 {{site.data.keyword.cloud_notm}}：<br/><br/>
+<code>
+cf login
+</code>
+</li>
+</ol>
 
 ## 管理使用者
 {: #admin_users}
@@ -125,7 +104,7 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
-若要將使用者新增至特定組織，您必須是具有 **users.write**（或**超級使用者**）許可權的**管理者**。如果您是組織管理員，則透過「超級使用者」執行 **enable-managers-add-users** 指令，您也可以具有將使用者新增至組織的功能。如需相關資訊，請參閱[允許管理員新增使用者](#clius_emau)。
+若要將使用者新增至特定組織，您必須是具有 **users.write**（或**超級使用者**）許可權的**管理者**。如果您是組織管理員，則透過「超級使用者」執行 **enable-managers-add-users** 指令，您也可以具有將使用者新增至組織的功能。如需相關資訊，請參閱[允許管理員新增使用者](index.html#clius_emau)。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -869,11 +848,11 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 
 ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}} 環境中應用程式的出埠資料流量。每一個 ASG 都包含一份規則清單，可容許與外部網路之間的特定資料流量和通訊。您可以將一個以上的 ASG 連結至特定安全群組集（例如，用於套用廣域存取權的群組集），也可以連結至 {{site.data.keyword.Bluemix_notm}} 環境中組織內的空間。
 
-{{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
+{{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 **警告**：取消連結 **Default Staging** 或 **Default Running** 群組集與兩個 IBM 建立的安全群組 `public_networks` 及 `dns`，會停用對外部網路的廣域存取。請小心使用取消連結，並了解它對您環境中執行中及編譯打包中的應用程式可能造成的影響。
 
-下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。如需相關資訊（包括必要及選用欄位），請參閱有關[建立應用程式安全群組](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 的 Cloud Foundry 資訊。
+下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。如需相關資訊（包括必要及選用欄位），請參閱有關[建立應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示") 的 Cloud Foundry 資訊。
 {: note}
 
 ### 列出安全群組
@@ -905,7 +884,7 @@ cf ba security-groups <security-group>
 ### 建立安全群組
 {: #clicreasecgro}
 
-如需建立安全群組以及定義送出資料流量之規則的相關資訊，請參閱[建立應用程式安全群組](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
+如需建立安全群組以及定義送出資料流量之規則的相關資訊，請參閱[建立應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 若要建立安全群組，請使用下列指令：
 ```
@@ -962,7 +941,7 @@ cf ba delete-security-group <security-group>
 ### 連結安全群組
 {: #clibindsecgro}
 
-如需連結安全群組的相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
+如需連結安全群組的相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 * 若要連結至 Default Staging 安全群組集，請使用下列指令：
 
@@ -1013,7 +992,7 @@ cf ba bind-security-group <security-group> <org> <space>
 ### 取消連結安全群組
 {: #cliunbindsecgro}
 
-如需取消連結安全群組的相關資訊，請參閱[取消連結應用程式安全群組](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
+如需取消連結安全群組的相關資訊，請參閱[取消連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 * 若要從 Default Staging 安全群組集取消連結，請使用下列指令：
 

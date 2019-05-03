@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-03-01"
 
-keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
+keywords: IBM Cloud Developer Tools CLI, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools
 
 subcollection: cloud-cli
 
@@ -15,7 +15,6 @@ subcollection: cloud-cli
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
-{:note: .note}
 
 # Introdução à CLI do {{site.data.keyword.cloud_notm}}
 {: #ibmcloud-cli}
@@ -23,10 +22,7 @@ subcollection: cloud-cli
 Neste tutorial, você instala um conjunto de ferramentas do Desenvolvedor do {{site.data.keyword.cloud}}, verifica a instalação e configura o ambiente. As ferramentas do Desenvolvedor do {{site.data.keyword.cloud_notm}} oferecem uma abordagem de linha de comandos para criar, desenvolver e implementar aplicativos da web, de dispositivo móvel e de microsserviço.
 {: shortdesc}
 
-Certifique-se de que você esteja sempre usando a versão mais recente da CLI do {{site.data.keyword.cloud_notm}} independente para o {{site.data.keyword.cloud_notm}} público. Se você precisar usar uma versão de 32 bits ou uma versão anterior diferente da mais recente para ambientes dedicados do {{site.data.keyword.cloud_notm}}, consulte [Liberações da CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-cli-releases).
-{: note}
-
-O comando de instalação neste tutorial instala a versão mais recente da CLI do {{site.data.keyword.cloud_notm}} independente disponível, além das ferramentas a seguir:
+Com essa instalação, você obterá a CLI do {{site.data.keyword.cloud_notm}} independente, mais as seguintes ferramentas:
 
 * `Homebrew` (somente Mac)
 * `Git`
@@ -67,9 +63,11 @@ O comando de instalação neste tutorial instala a versão mais recente da CLI d
 administrador**.
   {: tip}
 
-Também é possível fazer download do script do instalador por meio desse [repositório do GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+  Também é possível fazer download do script do instalador por meio desse [repositório do GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
-Para obter as etapas para instalar essas ferramentas manualmente, consulte [Instalando os componentes de plug-in da CLI do {{site.data.keyword.cloud_notm}} developer tools manualmente](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+<!--Uncomment when this linked topic goes to prod.
+  For the steps to install these tools manually, see [Installing the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in components manually](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+-->
 
 ## Etapa 2. Verificar a instalação
 {: #step2-verify-idt}
@@ -95,13 +93,14 @@ A saída lista as instruções de uso, a versão atual e os comandos suportados.
 [Efetuando login com um ID federado](/docs/iam/federated_id?topic=iam-federated_id#federated_id) para obter mais detalhes.
   {: tip}
 
-2. Para acessar os serviços do Cloud Foundry, deve-se especificar uma organização e um espaço do Cloud Foundry. É possível executar o comando a seguir para identificar interativamente a organização e o espaço:
+2. Para usar os serviços do Cloud Foundry, destine uma organização e um espaço.
   ```
   ibmcloud target --cf
   ```
   {: codeblock}
 
-  Ou, se você souber a qual organização e a qual espaço o serviço pertence, será possível usar o comando a seguir:
+  Opcionalmente, é possível usar a saída do comando anterior para configurar manualmente a organização e o espaço
+com o comando a seguir:
   ```
   ibmcloud target -o <value> -s <value>
   ```

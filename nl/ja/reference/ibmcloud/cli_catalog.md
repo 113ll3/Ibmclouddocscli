@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
+keywords: catalog offerings, search catalog, ibmcloud catalog, ibmcloud catalog search, catalog entry, query templates, runtimes, geolocations, datacenter, catalog template, catalog locations
 
 subcollection: cloud-cli
 
@@ -321,7 +321,7 @@ ibmcloud catalog template-run TEMPLATE_ID CF_APP_NAME [-n HOSTNAME] [-d DOMAINNA
    <dt>-n<i>HOSTNAME</i></dt>
    <dd>CF アプリケーションのホスト名。 指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
    <dt>-d<i>DOMAINNAME</i></dt>
-   <dd>CF アプリケーションのドメイン。 指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
+   <dd>CF アプリケーションのドメイン。指定されない場合、経路は、アプリケーション名およびデフォルト・ドメインに基づいて {{site.data.keyword.cloud_notm}} によって自動的に設定されます。</dd>
    <dt>--desc <i>DESCRIPTION</i> (オプション)</dt>
    <dd>アプリケーションの説明。</dd>
    <dt>--no-start (オプション)</dt>
@@ -339,7 +339,6 @@ ibmcloud catalog template-run javaHelloWorld my-app
 `rubyHelloWorld` テンプレートに基づき、
 ```ibmcloud catalog template-run rubyHelloWorld my-ruby-app --desc "My first ruby app on IBM Cloud"
 ``` という記述を使用して、アプリケーション `my-ruby-app` を作成します。
-
 `pythonHelloWorld` テンプレートをベースにして、自動開始なしでアプリケーション `my-python-app` を作成します。
 ```
 ibmcloud catalog template-run pythonHelloWorld my-python-app --no-start

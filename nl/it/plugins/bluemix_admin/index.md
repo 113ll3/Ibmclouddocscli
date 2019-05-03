@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
+keywords: ibmcloud admin cli, admin cli plugin, admin plugin, cloud foundry admin cli plugin, adding users, buildpack, security groups, cf ba
 
 subcollection: cloud-cli
 
@@ -23,8 +23,8 @@ subcollection: cloud-cli
 Puoi gestire gli ambienti {{site.data.keyword.cloud_notm}} locale o {{site.data.keyword.cloud_notm}} dedicato utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in {{site.data.keyword.cloud_notm}} Admin CLI. Ad
 esempio, puoi aggiungere utenti da un registro LDAP. Per informazioni sulla gestione del tuo account {{site.data.keyword.cloud_notm}} pubblico, vedi [Amministrazione](/docs/account?topic=account-accounts#accounts).
 
-Prima di iniziare, l'installa l'interfaccia riga di comando Cloud Foundry. Il plugin {{site.data.keyword.cloud_notm}} Admin CLI
-richiede `cf` versione 6.11.2 o successive. [Scarica interfaccia riga di comando Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")
+Prima di iniziare, l'installa l'interfaccia riga di comando Cloud Foundry. Il plug-in {{site.data.keyword.cloud_notm}} Admin
+CLI richiede cf versione 6.11.2 o successive. [Scarica interfaccia riga di comando Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")
 
 **Limitazione:** l'interfaccia riga di comando Cloud Foundry non
 è supportata da Cygwin. Utilizza l'interfaccia riga di comando Cloud Foundry
@@ -33,9 +33,7 @@ in una finestra riga di comando diversa da quella di Cygwin.
 {{site.data.keyword.cloud_notm}} Admin CLI è utilizzato solo per gli ambienti {{site.data.keyword.cloud_notm}} locale e {{site.data.keyword.cloud_notm}} dedicato. Non è supportato in {{site.data.keyword.cloud_notm}} pubblico.
 {: note}
 
-## Aggiunta del plug-in {{site.data.keyword.cloud_notm}} Admin
-CLI
-{: #add-admin-cli}
+## Aggiunta del plug-in {{site.data.keyword.cloud_notm}} Admin CLI
 
 Dopo aver installato l'interfaccia riga di comandi Cloud Foundry, puoi aggiungere il plug-in {{site.data.keyword.cloud_notm}} Admin CLI.
 
@@ -44,42 +42,27 @@ Se hai precedentemente installato il plugin {{site.data.keyword.cloud_notm}} Adm
 
 Completa la seguente procedura per aggiungere il repository e installare il plug-in:
 
-1. Per aggiungere il repository del plug-in Gestione {{site.data.keyword.cloud_notm}}, immetti il seguente comando:
-  ```
-  cf add-plugin-repo IBMCloudAdmin https://<customer_console_endpoint>.bluemix.net/cli
-  ```
-  {: codeblock}
+<ol>
+<li>Per aggiungere il repository del plug-in Gestione {{site.data.keyword.cloud_notm}}, immetti il seguente comando:<br/><br/>
+<code>
+cf add-plugin-repo IBMCloudAdmin https://plugins.cloud.ibm.com
+</code><br/><br/>
+</li>
+<li>Per installare il plug-in {{site.data.keyword.cloud_notm}} Admin CLI, immetti il seguente comando:<br/><br/>
+<code>
+cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
+</code>
+</li>
+</ol>
 
-  Puoi trovare lo stesso comando con l'endpoint effettivo nella pagina della CLI della console di gestione: `https://<customer_console_endpoint>.bluemix.net/cli`.
-  {: note}
+Se devi disinstallare il plug-in, puoi utilizzare i seguenti comandi e quindi aggiungere il repository aggiornato e installare l'ultimo plug-in:
 
-2. Per installare il plug-in {{site.data.keyword.cloud_notm}} Admin CLI, immetti il seguente comando:
-  ```
-  cf install-plugin IBMCloudAdminCLI -r IBMCloudAdmin
-```
-  {: codeblock}
+* Disinstalla il plug-in: `cf uninstall-plugin IBMCloudAdminCLI`
+* Rimuovi il repository di plug-in: `cf remove-plugin-repo IBMCloudAdmin`
 
-## Disinstallazione del plugin {{site.data.keyword.cloud_notm}} Admin CLI
-{: #remove-admin-cli}
+## Utilizzo del plug-in {{site.data.keyword.cloud_notm}} Admin CLI
 
-Se devi disinstallare il plugin, puoi utilizzare i seguenti comandi e quindi aggiungere il repository aggiornato e installare l'ultimo plugin:
-
-1. Disinstalla il plugin:
-  ```
-  cf uninstall-plugin IBMCloudAdminCLI
-  ```
-  {: codeblock}
-
-2. Rimuovi il repository di plugin:
-  ```
-  cf remove-plugin-repo IBMCloudAdmin
-  ```
-  {: codeblock}
-
-## Utilizzo del plugin {{site.data.keyword.cloud_notm}} Admin CLI
-{: #using-admin-cli}
-
-Puoi utilizzare il plugin {{site.data.keyword.cloud_notm}} Admin CLI per aggiungere o rimuovere utenti, assegnare o annullare l'assegnazione degli utenti dalle organizzazioni ed
+Puoi utilizzare il plug-in {{site.data.keyword.cloud_notm}} Admin CLI per aggiungere o rimuovere utenti, assegnare o annullare l'assegnazione degli utenti dalle organizzazioni ed
 effettuare altre attività di gestione.
 
 Per visualizzare un elenco di comandi, immetti il seguente
@@ -92,35 +75,29 @@ cf plugins
 Per ulteriore assistenza per un comando, utilizza l'opzione `-help`.
 
 ### Connessione e accesso a {{site.data.keyword.cloud_notm}}
-{: #connecting-ibm-cloud}
 
-Prima di poter utilizzare il plugin Admin CLI, devi connetterti ed eseguire l'accesso.
+Prima di poter utilizzare il plugin Admin CLI, devi connetterti ed eseguire l'accesso, se non l'hai già fatto.
 
-1. Per connetterti all'endpoint dell'API {{site.data.keyword.cloud_notm}}, immetti il seguente comando:
-  ```
-  cf api api.us-south.cf.cloud.ibm.com
-  ```
-  {: codeblock}
-
-  Puoi controllare l'URL corretto nella pagina delle informazioni e delle risorse della console di
+<ol>
+<li>Per connetterti all'endpoint dell'API {{site.data.keyword.cloud_notm}}, immetti il seguente comando:<br/><br/>
+<code>
+cf api api.ng.bluemix.net
+</code>
+<dl class="parml">
+<dt class="pt dlterm">&lt;dominiosecondario&gt;</dt>
+<dd class="pd">Dominio secondario dell'URL per la tua istanza {{site.data.keyword.cloud_notm}}.<br />
+</dd>
+</dl>
+<p>Puoi controllare l'URL corretto nella pagina delle informazioni e delle risorse della console di
 gestione. L'URL viene mostrato nella sezione delle informazioni API nel campo
-**URL API**.
-
-2. Accedi a {{site.data.keyword.cloud_notm}} con il seguente comando:
-  ```
-  cf login
-  ```
-  {: codeblock}
-
-**Utilizzo di endpoint Cloud Foundry legacy**:
-
-Mentre gli endpoint API Cloud Foundry legacy `api.*.bluemix.net` sono ancora disponibili, puoi aggiornare gli script e l'automazione dell'infrastruttura per utilizzare i seguenti endpoint API Cloud Foundry aggiornati per la tua regione:
-
-* api.us-south.cf.cloud.ibm.com (in precedenza api.ng.bluemix.net)
-* api.eu-gb.cf.cloud.ibm.com (in precedenza api.eu-gb.bluemix.net)
-* api.us-east.cf.cloud.ibm.com (in precedenza api.us-east.bluemix.net)
-* api.eu-de.cf.cloud.ibm.com (in precedenza api.eu-de.bluemix.net)
-* api.au-syd.cf.cloud.ibm.com (in precedenza api.au-syd.bluemix.net)
+**URL API**.</p>
+</li>
+<li>Accedi a {{site.data.keyword.cloud_notm}} con il seguente comando:<br/><br/>
+<code>
+cf login
+</code>
+</li>
+</ol>
 
 ## Gestione degli utenti
 {: #admin_users}
@@ -135,7 +112,7 @@ cf ba add-user <nome_utente> <organizzazione> <nome> <cognome>
 ```
 {: codeblock}
 
-Per aggiungere un utente a un'organizzazione specifica, devi essere un **Amministratore** con autorizzazione **users.write** (o **Superuser**). Se sei un gestore organizzazione, ti può essere data la possibilità di aggiungere utenti alla tua organizzazione da un Superuser che esegue il comando **enable-managers-add-users**. Per ulteriori informazioni, vedi [Abilitazione dei gestori all'aggiunta di utenti](#clius_emau).
+Per aggiungere un utente a un'organizzazione specifica, devi essere un **Amministratore** con autorizzazione **users.write** (o **Superuser**). Se sei un gestore organizzazione, ti può essere data la possibilità di aggiungere utenti alla tua organizzazione da un Superuser che esegue il comando **enable-managers-add-users**. Per ulteriori informazioni, vedi [Abilitazione dei gestori all'aggiunta di utenti](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nome_utente&gt;</dt>
@@ -256,7 +233,7 @@ cf ba remove-user <nome_utente>
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dt class="pt dlterm">&lt;nome_utente&gt;</dt>
 <dd class="pd">Il nome dell'utente in {{site.data.keyword.Bluemix_notm}}.</dd>
 
 </dl>
@@ -280,7 +257,7 @@ nome comando **ba enable-managers-add-users**.
 ### Disabilitazione dei gestori all'aggiunta di utenti
 {: #clius_dmau}
 
-Se i gestori dell'organizzazione sono abilitati ad aggiungere utenti alle organizzazioni che gestiscono nel tuo ambiente {{site.data.keyword.Bluemix_notm}} con il comando **enable-managers-add-users** e disponi dell'autorizzazione **Superuser**, puoi rimuovere questa impostazione. Per disabilitare i gestori all'aggiunta di utenti, utilizza il seguente comando:
+Se i gestori organizzazione sono stati abilitati ad aggiungere utenti alle organizzazioni che essi gestiscono nel tuo ambiente {{site.data.keyword.Bluemix_notm}} con il comando **enable-managers-add-users** e disponi dell'autorizzazione **Superuser**, puoi rimuovere questa impostazione. Per disabilitare i gestori all'aggiunta di utenti, utilizza il seguente comando:
 
 ```
 cf ba disable-managers-add-users
@@ -324,7 +301,7 @@ cf ba delete-org <organizzazione>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.cloud_notm}} da eliminare.</dd>
 </dl>
 
@@ -345,7 +322,7 @@ cf ba set-org <nome_utente> <organizzazione> [<ruolo>]
 <dl class="parml">
 <dt class="pt dlterm">&lt;nome_utente&gt;</dt>
 <dd class="pd">Il nome dell'utente in {{site.data.keyword.cloud_notm}}.</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione {{site.data.keyword.cloud_notm}} a cui assegnare l'utente.</dd>
 <dt class="pt dlterm">&lt;ruolo&gt;</dt>
 <dd class="pd">Vedi [Ruoli](/docs/iam?topic=iam-userroles#userroles) per i ruoli utente di {{site.data.keyword.cloud_notm}} e le relative
@@ -431,7 +408,7 @@ cf ibmcloud-admin containers-quota <organizzazione>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o l'ID dell'organizzazione in IBM Cloud. Questo parametro è obbligatorio.</dd>
 </dl>
 
@@ -519,7 +496,7 @@ cf ibmcloud-admin create-space <organizzazione> <nome_spazio>
 <dl class="parml">
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione a cui aggiungere lo spazio.</dd>
-<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dt class="pt dlterm">&lt;nome_spazio&gt;</dt>
 <dd class="pd">Il nome dello spazio da creare nell'organizzazione.</dd>
 </dl>
 
@@ -584,7 +561,7 @@ cf ibmcloud-admin unset-space <organizzazione> <nome_spazio> <nome_utente> <ruol
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione a cui aggiungere l'utente.</dd>
 <dt class="pt dlterm">&lt;nome_spazio&gt;</dt>
 <dd class="pd">Il nome dello spazio a cui aggiungere l'utente.</dd>
@@ -940,11 +917,11 @@ Per gestire i gruppi di sicurezza dell'applicazione (ASG), devi essere un ammini
 
 I gruppi ASG funzionano come firewall virtuali che controllano il traffico dall'applicazione presente nel tuo ambiente {{site.data.keyword.Bluemix_notm}}. Ogni ASG è costituito da un elenco di regole che consentono un traffico specifico e la comunicazione da e verso la rete esterna. Puoi associare uno o più ASG a una specifica serie di gruppi di sicurezza, ad esempio a una serie di gruppi utilizzata per applicare l'accesso globale, oppure associarli agli spazi all'interno di un'organizzazione nel tuo ambiente {{site.data.keyword.Bluemix_notm}}.
 
-{{site.data.keyword.Bluemix_notm}} è inizialmente impostato con limitazioni a tutti gli accessi alla rete esterna. Due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, abilitano l'accesso globale alla rete esterna quando esegui il bind di tali gruppi alla serie di gruppi di sicurezza Cloud Foundry predefinita. Le due serie di gruppi di sicurezza in Cloud Foundry utilizzate per applicare l'accesso globale sono **Preparazione predefinita** ed **Esecuzione predefinita**. Queste serie di gruppi applicano le regole per consentire il traffico a tutte le applicazioni in esecuzione o a tutte le applicazioni in fase di preparazione. Se non vuoi eseguire il bind a queste due serie di gruppi di sicurezza, puoi annullare il bind alle serie di gruppi Cloud Foundry e quindi associare il gruppo a uno specifico spazio. Per ulteriori informazioni, vedi il documento relativo all'[associazione mediante bind dei gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
+{{site.data.keyword.Bluemix_notm}} è inizialmente impostato con limitazioni a tutti gli accessi alla rete esterna. Due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, abilitano l'accesso globale alla rete esterna quando esegui il bind di tali gruppi alla serie di gruppi di sicurezza Cloud Foundry predefinita. Le due serie di gruppi di sicurezza in Cloud Foundry utilizzate per applicare l'accesso globale sono **Preparazione predefinita** ed **Esecuzione predefinita**. Queste serie di gruppi applicano le regole per consentire il traffico a tutte le applicazioni in esecuzione o a tutte le applicazioni in fase di preparazione. Se non vuoi eseguire il bind a queste due serie di gruppi di sicurezza, puoi annullare il bind alle serie di gruppi Cloud Foundry e quindi associare il gruppo a uno specifico spazio. Per ulteriori informazioni, vedi il documento relativo all'[associazione mediante bind dei gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 
 **AVVERTENZA**: l'annullamento del bind delle serie di gruppi **Preparazione predefinita** o **Esecuzione predefinita** dai due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, disabilita l'accesso globale alla rete esterna. Utilizza l'annullamento del bind con cautela e consapevolezza del suo potenziale impatto sulle applicazioni in esecuzione e in fase di preparazione nel tuo ambiente.
 
-I seguenti comandi che consentono di gestire i gruppi di sicurezza si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, compresi i campi obbligatori e facoltativi, vedi le informazioni di Cloud Foundry relative alla [creazione di gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
+I seguenti comandi che consentono di gestire i gruppi di sicurezza si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, compresi i campi obbligatori e facoltativi, vedi le informazioni di Cloud Foundry relative alla [creazione di gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 {: note}
 
 ### Elenco dei gruppi di sicurezza
@@ -978,7 +955,7 @@ cf ba security-groups <gruppo-di-sicurezza>
 ### Creazione di un gruppo di sicurezza
 {: #clicreasecgro}
 
-Per ulteriori informazioni sulla creazione di gruppi di sicurezza e le regole che definiscono il traffico in uscita, vedi il documento relativo alla [creazione di gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/concepts/asg.html#creating-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
+Per ulteriori informazioni sulla creazione di gruppi di sicurezza e le regole che definiscono il traffico in uscita, vedi il documento relativo alla [creazione di gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 
 Per creare un gruppo di sicurezza, utilizza il seguente comando:
 ```
@@ -1038,7 +1015,7 @@ cf ba delete-security-group <gruppo-di-sicurezza>
 ### Esecuzione del bind dei gruppi di sicurezza
 {: #clibindsecgro}
 
-Per ulteriori informazioni sull'associazione mediante bind dei gruppi di sicurezza, vedi il documento relativo all'[associazione mediante bind dei gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/concepts/asg.html#binding-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
+Per ulteriori informazioni sull'associazione mediante bind dei gruppi di sicurezza, vedi il documento relativo all'[associazione mediante bind dei gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 
 * Per eseguire il bind alla serie di gruppi di sicurezza Preparazione predefinita, utilizza il seguente comando:
 
@@ -1092,7 +1069,7 @@ cf ba bind-security-group <gruppo-di-sicurezza> <organizzazione> <spazio>
 ### Annullamento del bind dei gruppi di sicurezza
 {: #cliunbindsecgro}
 
-Per ulteriori informazioni sull'annullamento dell'associazione mediante bind di gruppi di sicurezza, vedi il documento relativo all'[annullamento dell'associazione mediante bind di gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/concepts/asg.html#unbinding-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
+Per ulteriori informazioni sull'annullamento dell'associazione mediante bind di gruppi di sicurezza, vedi il documento relativo all'[annullamento dell'associazione mediante bind di gruppi di sicurezza dell'applicazione](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 
 * Per annullare il bind dalla serie di gruppi di sicurezza Preparazione predefinita, utilizza il seguente comando:
 

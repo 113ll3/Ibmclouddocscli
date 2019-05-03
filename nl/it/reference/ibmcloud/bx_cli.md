@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-15"
 
-keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -284,20 +284,6 @@ Accedi con il passcode monouso e imposta l'account, l'organizzazione e lo spazio
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-### Per utilizzare i servizi Cloud Foundry
-
-Per utilizzare i servizi Cloud Foundry, devi specificare un'organizzazione e uno spazio Cloud Foundry. Puoi immettere il seguente comando per scegliere in modo interattivo l'organizzazione e lo spazio:
-```
-ibmcloud target --cf
-```
-{: codeblock}
-
-Facoltativamente, puoi utilizzare l'output del precedente comando per impostare manualmente la tua organizzazione e il tuo spazio con il seguente comando:
-```
-ibmcloud target -o <value> -s <value>
-```
-{: codeblock}
-
 ### La chiave API ha un account associato
 
 ```
@@ -362,34 +348,28 @@ ibmcloud regions
 
 Imposta o visualizza l'account, la regione, l'organizzazione o lo spazio di destinazione.
 ```
-ibmcloud target [-r NOME_REGIONE | --unset-region] [-c ID_ACCOUNT] [-g GRUPPO_RISORSE | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORGANIZZAZIONE] [-s SPAZIO] [--output FORMATO]
+ibmcloud target [-r NOME_REGIONE] | --unset-region] [-c ID_ACCOUNT] [-g GRUPPO_RISORSE] [--cf] [-o ORGANIZZAZIONE] [-s SPAZIO]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
 <strong>Opzioni del comando</strong>:
-<dl>
-   <dt>-c <i>ID_ACCOUNT</i> (facoltativo)</dt>
-   <dd>L'ID dell'account di destinazione.</dd>
+   <dl>
    <dt>-r <i>NOME_REGIONE</i> (facoltativo)</dt>
    <dd>Nome della regione a cui essere passati, come 'us-south' o 'eu-gb'.</dd>
+   <dt>--unset-region</dt>
+   <dd>Annulla l'impostazione della regione indicata come destinazione</dd>
+   <dt>-c <i>ID_ACCOUNT</i> (facoltativo)</dt>
+   <dd>L'ID dell'account di destinazione.</dd>
    <dt>-g <i>GRUPPO_RISORSE</i> (facoltativo)</dt>
    <dd>Nome del gruppo di risorse</dd>
    <dt>--cf</dt>
    <dd>Seleziona interattivamente l'organizzazione e lo spazio di destinazione</dd>
-   <dt>--cf-api</dt>
-   <dd>Endpoint API Cloud Foundry</dd>
    <dt>-o <i>NOME_ORGANIZZAZIONE</i> (facoltativo)</dt>
    <dd>Il nome dell'organizzazione di destinazione.</dd>
    <dt>-s <i>NOME_SPAZIO</i> (facoltativo)</dt>
    <dd>Il nome dello spazio di destinazione.</dd>
-   <dt>--unset-region</dt>
-   <dd>Annulla l'impostazione della regione indicata come destinazione</dd>
-   <dt>--unset-resource-group</dt>
-   <dd>Annulla l'impostazione del gruppo di risorse indicato come destinazione</dd>
-   <dt>--output <i>FORMATO</i></dt>
-   <dd>Specifica il formato di output, al momento è supportato solo JSON.</dd>
-</dl>
+   </dl>
 Se nessuna delle opzioni viene specificata, vengono visualizzati l'account, la regione, l'organizzazione e lo spazio correnti.
 
 <strong>Esempi</strong>:

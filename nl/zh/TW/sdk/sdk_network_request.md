@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-02-21"
 
-keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
+keywords: bmscore, bmscore sdk, network request, ios, android, cordova
 
 subcollection: cloud-cli
 
@@ -53,7 +53,7 @@ subcollection: cloud-cli
 
 `Request` 類別是提出 HTTP 要求並在要求完成後取得回應的簡單方法。如果您要下載或上傳大型檔案或大型資料主體，則可以使用 `Request` `download` 或 `upload` 方法。若要監視下載或上傳進度，請建立自訂 `ProgressListener`，並將它傳遞給 `download` 或 `upload` 方法。
 
-如需完整的用法範例，請參閱 `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
+<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
 
 
 ## iOS
@@ -108,6 +108,7 @@ subcollection: cloud-cli
 `BMSURLSession` 類別僅適用於 iOS。
 
 如需完整的用法範例，請參閱 `BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
+
 
 ## Cordova
 {: #request-cordova}

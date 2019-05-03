@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-27"
 
-keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
+keywords: developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
 subcollection: cloud-cli
 
@@ -57,7 +57,7 @@ subcollection: cloud-cli
 ### 앱의 프로젝트 구조 탐색
 {: #exploring-project}
 
-도구와 함께 사용하도록 설정되거나 작성된 프로젝트는 `cli-config.yml` 파일에서 캡슐화된 사전 구성 설정과 함께 제공됩니다. `cli-config.yml`은 도구의 명령에서 사용하는 기본 항목을 포함하며, 이러한 항목은 명령행을 통해 전달되는 값으로 대체될 수 있습니다.
+도구와 함께 사용하도록 설정되거나 작성된 프로젝트는 `cli-config.yml` 파일에서 캡슐화된 사전 구성 설정과 함께 제공됩니다. `cli-config.yml`은 도구의 명령에서 사용하는 기본 항목을 포함하며, 이러한 항목은 명령행을 통해 전달된 값으로 대체될 수 있습니다.
 
 ### 참조 블로그 및 동영상
 {: #ref1}
@@ -72,7 +72,7 @@ subcollection: cloud-cli
 
 선호하는 편집기나 IDE가 무엇이든 자유롭게 사용하여 애플리케이션을 코딩할 수 있습니다. 편집기 내에서 직접 모든 IDE 명령에 액세스할 수 있는 Microsoft Visual Studio Code(VSCode) 편집기 확장을 제공합니다.
 
-프로젝트가 빌드되면 [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 또는 [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug)를 사용하여 앱을 실행하십시오. 앱은 적절한 컨테이너에서 실행됩니다. 일부 앱 패턴은 앱의 여러 외부 컨테이너를 지원합니다. 이는 실행 또는 디버그 동안 자동으로 시작되고 구성됩니다. 또한 앱과 연관된 테스트 케이스를 실행하는 [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) 명령이 있습니다.
+프로젝트가 빌드되면 [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 또는 [`ibmcloud dev debug`](/docs/cli/iddt/commands.html#debug)를 사용하여 앱을 실행하십시오. 앱은 적절한 컨테이너에서 실행됩니다. 일부 앱 패턴은 앱의 여러 외부 컨테이너를 지원합니다. 이는 실행 또는 디버그 동안 자동으로 시작되고 구성됩니다. 또한 앱과 연관된 테스트 케이스를 실행하는 [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) 명령이 있습니다.
 
 ### 로컬 컨테이너 사용 방법
 {: #local-containers}

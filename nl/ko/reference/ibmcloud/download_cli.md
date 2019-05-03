@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-02-26"
 
-keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
+keywords: stand-alone cli, install cli, uninstall cli, cli, plugin, plug-in, command line, command-line, windows powershell, linux, macos, installer
 
 subcollection: cloud-cli
 
@@ -87,7 +87,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 ## 사용자 정의 디렉토리에 설치
 {: #install-custom-dir}
 
-설치 프로그램 또는 쉘 스크립트를 사용하여 {{site.data.keyword.cloud_notm}} CLI를 설치하는 경우, 바이너리는 시스템 디렉토리에 배치됩니다. 다른 디렉토리를 지정하려는 경우에는 다음 단계를 사용하십시오.
+설치 프로그램 또는 쉘 스크립트를 사용하여 {{site.data.keyword.Bluemix_notm}} CLI를 설치하는 경우, 바이너리는 시스템 디렉토리에 배치됩니다. 다른 디렉토리를 지정하려는 경우에는 다음 단계를 사용하십시오.
 
 ### 1단계: 다음 링크를 사용하여 OS에 따라 2진 패키지를 다운로드하십시오.
 {: #step1-custom-dir}
@@ -172,7 +172,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 #### `0.9.0` 이상
 
 1. 터미널을 열고 다음 명령을 실행하십시오.
-  * `/usr/local/ibmcloud/uninstall`
+  * `/usr/local/ibmcloud/bin/uninstall`
 2. 모든 사용자 정의 자동 완료 스크립트를 정리하십시오. 세부사항은 [{{site.data.keyword.cloud_notm}} CLI의 쉘 자동 완성 사용 설정(Linux 및 macOS 전용)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)을 참조하십시오.
 
 ## {{site.data.keyword.cloud_notm}} CLI를 자세히 살펴보기 위한 기타 링크

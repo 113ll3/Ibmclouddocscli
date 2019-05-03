@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli?topic=cloud-cli-ibmcloud-cli" path="cli"}
+{: .toc subcollection="cloud-cli" audience="platform" href="/docs/cli/index.html" path="cli"}
 IBM Cloud CLI および Developer Tools
 
 	{: .navgroup id="learn"}
@@ -10,7 +10,6 @@ IBM Cloud CLI および Developer Tools
 
 	{: .navgroup id="howto"}
 	reference/ibmcloud/download_cli.md
-	install-devtools-manually.md
 	reference/ibmcloud/extend_cli.md
 	reference/ibmcloud/cli_docker.md
 	reference/ibmcloud/enable_cli_autocompletion.md
@@ -54,8 +53,6 @@ IBM Cloud CLI および Developer Tools
 		reference/ibmcloud/cli_security.md
 		reference/ibmcloud/cli_securitygroup.md
 		reference/ibmcloud/cli_subnet.md
-		reference/ibmcloud/cli_ticket.md
-		reference/ibmcloud/cli_user.md
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
 	idt/commands.md
@@ -64,13 +61,13 @@ IBM Cloud CLI および Developer Tools
 	{: .topicgroup}
 	IBM Cloud CLI プラグイン
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
-		/auto-scaling-cli-plugin/auto-scaling-cli-autoscalingcli
+		/auto-scaling-cli-plugin/auto-scaling-cli-plugin-autoscalingcli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
 		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
-		/dbaas-cli-plugin/hyper-protect-dbaas-dbaas_cli_plugin
+		/dbaas-cli-plugin/dbaas-cli-plugin-dbaas_cli_plugin
 		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
 
 	{: .topicgroup}

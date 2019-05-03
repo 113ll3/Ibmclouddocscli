@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic cli, orders, quotes, ibmcloud sl order, item-list, package-locations, manage orders cli, manage quotes cli
+keywords: classic infrastructure, orders, quotes, ibmcloud sl order, item-list, package-locations
 
 subcollection: cloud-cli
 

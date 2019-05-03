@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
 subcollection: cloud-cli
 
@@ -126,7 +126,7 @@ subcollection: cloud-cli
       ```
       {: codeblock}
 
-* 除錯：[delve ](https://github.com/go-delve/delve){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* 除錯：[delve ](https://github.com/derekparker/delve){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
 Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ](https://code.visualstudio.com/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 使用。
 

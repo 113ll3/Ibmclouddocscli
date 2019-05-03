@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-08"
 
-keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -17,7 +17,7 @@ subcollection: cloud-cli
 {:pre: .pre}
 {:tip: .tip}
 
-# Abilitazione delle applicazioni Python esistenti per la distribuzione cloud
+# Abilitazione delle applicazioni Python esistenti per la distribuzione cloud 
 {: #enable-existing-python}
 
 Puoi generare i file necessari per abilitare la tua applicazione Python all'esecuzione su {{site.data.keyword.cloud}} utilizzando il [comando enable della CLI {{site.data.keyword.dev_cli_long}}](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
@@ -115,7 +115,7 @@ ibmcloud dev build
 ```
 {: codeblock}
 
-Se la creazione viene completata correttamente, puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} con il seguente comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy):
+Se la creazione viene completata correttamente, puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} con il seguente comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy): 
 ```
 ibmcloud dev deploy
 ```

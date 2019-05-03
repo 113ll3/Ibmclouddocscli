@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-27"
 
-keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
+keywords: ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
 subcollection: cloud-cli
 
@@ -69,7 +69,7 @@ Puede empezar con flujos de trabajo de `ibmcloud dev` en unos cuantos pasos:
 * Abra la carpeta del proyecto localmente en la ventana del editor de Visual Studio Code
 * Utilice el mandato `ibmcloud dev build` para crear la app en una imagen de Docker
 * Utilice el mandato `ibmcloud dev debug` para ejecutar la app en el Docker local para desarrollo
-> Nota: para depurar una aplicación Node.js que se ejecuta dentro del contenedor local de Docker, deberá [añadir una configuración de depuración para el contenedor local](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
+> Nota: para depurar una aplicación Node.js que se ejecuta dentro del contenedor local de Docker, deberá [añadir una configuración de depuración para el contenedor local](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
 * Utilice el mandato `ibmcloud dev run` para ejecutar la app en el Docker local en modo de publicación
 * Utilice el mandato `ibmcloud dev deploy` para desplegar la aplicación en un tiempo de ejecución de Cloud Foundry en {{site.data.keyword.cloud_notm}}
 
@@ -85,6 +85,6 @@ Puede empezar con flujos de trabajo de Cloud Foundry en unos cuantos pasos:
 * Abra la carpeta del proyecto localmente en el editor de Visual Studio Code
 * Utilice `ibmcloud cf apps` para mostrar una lista de todas sus aplicaciones
 * Utilice `ibmcloud cf push` para enviar una compilación de su aplicación al tiempo de ejecución de Cloud Foundry
-* Utilice ibmcloud `cf <start/stop/restage/restart>` para cambiar el estado de la aplicación
+* Utilice `ibmcloud cf <start/stop/restage/restart>` para cambiar el estado de su aplicación
 * Utilice `ibmcloud cf logs` para ver la corriente de anotaciones cronológicas en directo de su aplicación
   * Utilice `ibmcloud cf logs` para detener la corriente de anotaciones cronológicas

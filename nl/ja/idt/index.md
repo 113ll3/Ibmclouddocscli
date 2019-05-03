@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-02-27"
 
-keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
+keywords: developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
 subcollection: cloud-cli
 
@@ -72,7 +72,7 @@ subcollection: cloud-cli
 
 アプリケーションをコーディングするときは、好みの IDE またはエディターを任意に使用できます。 IBM は、Microsoft Visual Studio Code (VSCode) エディターの拡張を提供しており、これを使用すると、エディター内から直接すべての IDE のコマンドを利用できます。
 
-プロジェクトがビルドされたら、[`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) または [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug) を使用して、アプリを実行します。 これにより、適切なコンテナー内でアプリが実行されます。 一部のアプリ・パターンでは、アプリの外部にある複数のコンテナーがサポートされます。 これらは、実行時またはデバッグ時に自動的に開始され、構成されます。 アプリに関連付けられた任意のテスト・ケースを実行する、[`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) コマンドも存在します。
+プロジェクトがビルドされたら、[`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) または [`ibmcloud dev debug`](/docs/cli/iddt/commands.html#debug) を使用して、アプリを実行します。 これにより、適切なコンテナー内でアプリが実行されます。 一部のアプリ・パターンでは、アプリの外部にある複数のコンテナーがサポートされます。 これらは、実行時またはデバッグ時に自動的に開始され、構成されます。 アプリに関連付けられた任意のテスト・ケースを実行する、[`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) コマンドも存在します。
 
 ### ローカル・コンテナーが使用される方法
 {: #local-containers}

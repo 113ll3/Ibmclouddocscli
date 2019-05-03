@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
+keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
 
 subcollection: cloud-cli
 
@@ -358,7 +358,7 @@ ibmcloud sl vs list [OPTIONS]
 <dd>按拥有实例的用户的标识过滤。</dd>
 <dt>--sortby</dt>
 <dd>要作为排序依据的列，缺省值为：hostname，选项为：id、hostname、domain、datacenter、cpu、memory、public_ip 或 private_ip。</dd>
-<dt>--column</dt>
+<dt>--columns</dt>
 <dd>要显示的列，缺省值为：id、hostname、public_ip、private_ip、datacenter 和 action，选项为：guid、power_state、created_by 或 tags。</dd>
 </dl>
 

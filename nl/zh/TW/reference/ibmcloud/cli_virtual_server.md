@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-02-26"
 
-keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
+keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
 
 subcollection: cloud-cli
 
@@ -354,7 +354,7 @@ ibmcloud sl vs list [OPTIONS]
 <dd>依擁有實例的使用者 ID 進行過濾。</dd>
 <dt>--sortby</dt>
 <dd>直欄排序方式，預設值為：hostname，選項包含：id、hostname、domain、datacenter、cpu、memory、public_ip、private_ip。</dd>
-<dt>--column</dt>
+<dt>--columns</dt>
 <dd>要顯示的直欄，預設值為：id、hostname、public_ip、private_ip、datacenter、action，選項包含：guid、power_state、created_by、tags。</dd>
 </dl>
 

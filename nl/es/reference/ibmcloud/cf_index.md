@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-02-26"
 
-keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
 subcollection: cloud-cli
 
@@ -27,7 +27,7 @@ Para obtener más detalles sobre cómo iniciarse en la CLI de Cloud Foundry, con
 Para obtener una lista más detallada de mandatos `cf CLI`, consulte la [Guía de referencia de CLI de Cloud Foundry](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") de la comunidad.
 
 Si la red contiene un servidor proxy HTTP entre el host que ejecuta los mandatos cf y el punto final de la API de
-Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para obtener detalles, consulte [Utilización de la CLI cf con un servidor proxy](https://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
+Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para obtener detalles, consulte [Utilización de la CLI cf con un servidor proxy](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo").
 {: note}
 
 ## Índice de mandatos de CLI de Cloud Foundry
@@ -66,7 +66,7 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
  <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](#cf_delete-space)</td>
+ <td>[delete-space](/#cf_delete-space)</td>
  <td>[events](#cf_events)</td>
  <td>[logs](#cf_logs)</td>
  <td>[marketplace](#cf_marketplace)</td>
@@ -87,7 +87,7 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
 
 Utilice este mandato para visualizar o especificar el URL del punto final de la API de {{site.data.keyword.cloud}}.
 ```
-cf api [URL] [--skip-ssl-validation] [--unset]
+cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
 
 <strong>Requisitos previos</strong>: Ninguno.
@@ -95,9 +95,9 @@ cf api [URL] [--skip-ssl-validation] [--unset]
 <strong>Opciones de mandato</strong>:
 
    <dl>
-   <dt>URL (opcional)</dt>
+   <dt>BluemixServerURL (opcional)</dt>
    <dd>El URL del punto final API de {{site.data.keyword.cloud_notm}}
-que debe especificar al conectarse a {{site.data.keyword.cloud_notm}}. Normalmente, este URL es `https://api.<REGION>.cf.{DomainName}`.
+que debe especificar al conectarse a {{site.data.keyword.cloud_notm}}. Normalmente, este URL es `https://api.{DomainName}`.
    Si desea visualizar el URL del punto final API que está utilizando actualmente no tiene que especificar este parámetro para el mandato cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Inhabilita el proceso de validación de SSL. El uso de este parámetro puede ocasionar problemas de seguridad.</dd>
@@ -107,7 +107,7 @@ que debe especificar al conectarse a {{site.data.keyword.cloud_notm}}. Normalmen
 
 <strong>Ejemplos</strong>:
 
-Para ver el punto final de API actual:
+Visualizar el punto final de la API actual
 ```
 cf api
 ```
@@ -408,7 +408,7 @@ cf login [-a url] [-u nombre_usuario] [-p contraseña] [-sso] [-o nombre_organiz
 <strong>Opciones de mandato</strong>:
 
 <dl>
-<dt>*-a* https://api.<REGION>.cf.{NombreDominio} (opcional)</dt>
+<dt>*-a* https://api.{NombreDominio} (opcional)</dt>
 <dd>El URL del punto final API de {{site.data.keyword.cloud_notm}}.</dd>
 <dt>*-u* nombre_usuario (opcional)</dt>
 <dd>Su nombre de usuario.</dd>
@@ -460,15 +460,6 @@ cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAP
 ```
 {: codeblock}
 
-Puede iniciar sesión en los puntos finales de API de Cloud Foundry regionales siguientes:
-* api.us-south.cf.cloud.ibm.com  (anteriormente api.ng.bluemix.net)
-* api.eu-gb.cf.cloud.ibm.com     (anteriormente api.eu-gb.bluemix.net)
-* api.us-east.cf.cloud.ibm.com   (anteriormente api.us-east.bluemix.net)
-* api.eu-de.cf.cloud.ibm.com     (anteriormente api.eu-de.bluemix.net)
-* api.au-syd.cf.cloud.ibm.com    (anteriormente api.au-syd.bluemix.net)
-
-Los puntos finales de API de Cloud Foundry "api.<REGION>.bluemix.net" heredados siguen siendo válidos pero pronto quedarán en desuso.
-{: note}
 
 ## cf logs
 {: #cf_logs}
@@ -546,7 +537,7 @@ cf push appname [-b nombre_paquete_compilación] [-c mandato_inicio] [-f vía_ac
 <dt>appname (necesario)</dt>
 <dd>El nombre de la aplicación.</dd>
 <dt>*-b* nombre_paquete_compilación (opcional)</dt>
-<dd>El nombre del paquete de compilación. El nombre_paquete_compilación puede ser un paquete de compilación personalizado por nombre (por ejemplo liberty-for-java), un URL de Git (por ejemplo https://github.com/cloudfoundry/java-buildpack) o un URL de Git con una ramificación o etiqueta (por ejemplo https://github.com/cloudfoundry/java-buildpack#v3.3.0 para la etiqueta v3.3.0).</dd>
+<dd>El nombre del paquete de compilación. El nombre_paquete_compilación puede ser un paquete de compilación personalizado por nombre (por ejemplo liberty-for-java), un URL de Git (por ejemplo https://github.com/cloudfoundry/java-buildpack.git) o un URL de Git con una ramificación o etiqueta (por ejemplo https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 para la etiqueta v3.3.0).</dd>
 <dt>*-c* mandato_inicio (opcional)</dt>
 <dd>El mandato de inicio de la aplicación. Para utilizar el mandato de inicio predeterminado
 debe especificar un valor null para esta opción. </dd>

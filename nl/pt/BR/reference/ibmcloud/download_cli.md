@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-02-26"
 
-keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
+keywords: stand-alone cli, install cli, uninstall cli, cli, plugin, plug-in, command line, command-line, windows powershell, linux, macos, installer
 
 subcollection: cloud-cli
 
@@ -93,7 +93,7 @@ iex (New-Object Net.WebClient). DownloadString ('https://clis.cloud.ibm.com/inst
 ## Instalar em um diretório customizado
 {: #install-custom-dir}
 
-Ao usar os instaladores ou um shell script para instalar a CLI do {{site.data.keyword.cloud_notm}}, os binários vão para os diretórios do sistema. Se você desejar especificar um diretório diferente, use as etapas a seguir.
+Ao usar os instaladores ou um shell script para instalar a CLI do {{site.data.keyword.Bluemix_notm}}, os binários vão para os diretórios do sistema. Se você desejar especificar um diretório diferente, use as etapas a seguir.
 
 ### Etapa 1: faça download do pacote binário com base em seu OS usando os links a seguir.
 {: #step1-custom-dir}
@@ -178,7 +178,7 @@ As seções a seguir fornecem detalhes sobre como desinstalar a CLI independente
 #### Versão `0.9.0` e mais recente
 
 1. Abra um terminal e execute o comando a seguir:
-  * ` /usr/local/ibmcloud/uninstall `
+  * `/usr/local/ibmcloud/bin/uninstall`
 2. Limpe qualquer script de conclusão automática customizada. Para obter mais detalhes, consulte [Ativando a conclusão automática do shell para a CLI do {{site.data.keyword.cloud_notm}} (apenas Linux e macOS)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 ## Outros links para explorar ainda mais a CLI do {{site.data.keyword.cloud_notm}}
