@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-15"
 
-keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
+keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
 subcollection: cloud-cli
 
@@ -54,7 +54,7 @@ ibmcloud login
 
 `create`, `delete`, `list` 또는 `code` 명령을 사용하는 경우 다음 오류가 표시될 수 있습니다.
 ```
-Failed to <command> application.
+Failed to <command> app.
 ```
 {: screen}
 {: tsSymptoms}
@@ -127,7 +127,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 CLI를 사용하여 앱을 작성할 때 다음 오류가 표시될 수 있습니다.
 ```
 FAILED                            
-Application created, but could not get code
+App created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: screen}
@@ -149,7 +149,7 @@ https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/co
 
 * {{site.data.keyword.dev_console}}을 사용하십시오.
 
-	1. {{site.data.keyword.dev_console}}에서 [앱 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/resources)을 선택하십시오.
+	1. {{site.data.keyword.dev_console}}에서 [앱 ](https://cloud.ibm.com/resources){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 선택하십시오.
 
 	2. **코드 다운로드**를 클릭하십시오.
 {: tsResolve}
@@ -243,7 +243,7 @@ Failed to execute the action:  exit status 1:denied: requested access to the res
 
 
 FAILED
-Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
+Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
 {: screen}
 {: tsSymptoms}
@@ -265,9 +265,9 @@ ibmcloud cr namespaces
 앱을 시작하려고 하면 다음 실패가 표시될 수 있습니다.
 ```
 FAILED
-Could not determine the language of your application.
+Could not determine the language of your app.
 
-Try using the --language flag to specify the language of your application 
+Try using the --language flag to specify the language of your app 
 directly. 
 ```
 {: screen}
@@ -295,13 +295,95 @@ directly.
 - `Node.js` 앱에서 해당 문제점을 해결하는 데 관한 자세한 정보는 [클라우드 배치를 위해 기존 Node.js 애플리케이션 사용](/docs/node?topic=nodejs-enable_existing#enable_existing)을 참조하십시오.
 {: tsResolve}
 
-<!--
-## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
+## {{site.data.keyword.dev_cli_notm}} CLI 컴포넌트를 개별적으로 수동으로 설치하는 방법
 {: #ts-cli-install-devtools-manually}
 {: troubleshoot}
 
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
+{{site.data.keyword.dev_cli_notm}} CLI 컴포넌트를 개별적으로 수동으로 설치하려면 다음 [단계](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)를 따르십시오. 
 
+## 왜 Docker 이미지를 빌드할 수 없습니까?
+{: $ts-cli-docker}
+{: troubleshoot}
 
+다음과 같은 오류가 표시되는 경우: 
+```
+FAILED
+An error exit status 1 was encountered while building the Docker 
+image.
+```
+{: screen}
 
+이 오류의 원인은 다음 중 하나일 수 있습니다.
+- Docker가 설치되어 있지 않습니다.
+- Docker 디먼이 실행 중이 아닙니다.
+{: tsCauses}
+
+Docker가 설치되어 실행 중인지 확인하십시오.
+- [Mac용 Docker](https://docs.docker.com/docker-for-mac/install/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 설치하거나 시작하기
+- [Windows용 Docker](https://docs.docker.com/docker-for-windows/install/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 설치하거나 시작하기
+- [Linux용 Docker](https://docs.docker.com/v17.12/install/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 설치하거나 시작하기
+{: tsResolve}
+
+## 호환되지 않는 helm 버전을 해결하는 방법
+{: ts-cli-helm}
+{: troubleshoot}
+
+클라이언트 및 서버 helm 버전이 동기화되지 않은 경우 다음 오류가 표시될 수 있습니다.
+```
+FAILED
+Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
+configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
+cannot list resource "configmaps" in API group "" in the namespace 
+"kube-system"
+```
+{: screen}
+
+```
+FAILED
+The 'helm upgrade ' command failed to complete due to: exit status 1
+```
+{: screen}
+
+이 문제를 해결하려면 클라이언트의 버전을 클러스터의 버전과 동일하게 설정하십시오. 예를 들어, 2.8.1 helm 버전을 설치하려면 다음 명령을 실행하십시오.
+{: tsResolve}
+
+* Mac 및 Linux의 경우 다음 명령을 실행하십시오.
+  ```
+  export DESIRED_VERSION=v2.8.1
+
+  curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+  export HELM_HOME=~/.helm
+  ```
+
+* Windows의 경우 관리자로 다음을 수행하십시오.
+  `helm` 2진을 [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 다운로드하여 설치하십시오. 
+  
+  PowerShell 터미널에서 다음 명령을 실행하십시오.
+  ```
+  Set-Location Env:
+  Set-Item HELM_HOME C:\.helm\
+  ```
+
+## ibmcloud dev 빌드가 "@"를 포함하는 사용자 이름 때문에 실패하는 이유
+{: ts-cli-username}
+{: troubleshoot}
+이미지 빌드 프로세스 중에 사용자 이름이 Docker 도구 이미지의 사용자에 대해 사용됩니다. 사용자 이름에 '@' 또는 '-'와 같은 특수 문자가 포함되어 있는 경우, Docker 이미지 빌드 프로세스가 실패하고 다음 오류가 발생할 수 있습니다.
+```
+Image will have user johnsmith@acme.com with id 501 added
+
+Executing docker image build  --file Dockerfile-tools --tag pythonmicroservicewithflaskfnzat-flask-tools --rm --pull --build-arg bx_dev_userid=501 --build-arg bx_dev_user=johnsmith@acme.com .
+
+FAILED
+An error exit status 1 was encountered while building the Docker image.
+
+Dumping output from the command:
+```
+{: screen}
+
+이 문제를 해결하려면 특수 문자를 포함하지 않도록 사용자 이름을 변경하거나 다음 플래그를 지정하여 루트 사용자를 대신 사용하십시오. 
+```
+ibmcloud dev build --use-root-user-tools
+```
+{: codeblock}
+{: tsResolve}

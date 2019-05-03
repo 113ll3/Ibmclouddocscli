@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-03"
 
-keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -283,6 +283,20 @@ ibmcloud login -u username -p password -c MyAccountID -o MyOrg -s MySpace
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
+### 使用 Cloud Foundry 服务
+
+要使用 Cloud Foundry 服务，必须指定目标 Cloud Foundry 组织和空间。您可以运行以下命令，通过交互方式选择组织和空间：
+```
+  ibmcloud target --cf
+  ```
+{: codeblock}
+
+（可选）可以使用先前命令的输出，通过以下命令来手动设置组织和空间：
+```
+ibmcloud target -o <value> -s <value>
+	```
+{: codeblock}
+
 ### API 密钥具有关联的帐户
 
 ```
@@ -347,28 +361,34 @@ ibmcloud regions
 
 设置或查看目标帐户、区域、组织或空间。
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
 ```
 
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
-   <dl>
-   <dt>-r <i>REGION_NAME</i>（可选）</dt>
-   <dd>要切换到的区域的名称，例如“us-south”或“eu-gb”。</dd>
-   <dt>--unset-region</dt>
-   <dd>取消设置目标区域</dd>
+<dl>
    <dt>-c <i>ACCOUNT_ID</i>（可选）</dt>
    <dd>要作为目标的帐户的标识。</dd>
+   <dt>-r <i>REGION_NAME</i>（可选）</dt>
+   <dd>要切换到的区域的名称，例如“us-south”或“eu-gb”。</dd>
    <dt>-g <i>RESOURCE_GROUP</i>（可选）</dt>
    <dd>资源组的名称</dd>
    <dt>--cf</dt>
    <dd>以交互方式选择目标组织和空间</dd>
+   <dt>--cf-api</dt>
+   <dd>Cloud Foundry API 端点</dd>
    <dt>-o <i>ORG_NAME</i>（可选）</dt>
    <dd>要作为目标的组织的名称。</dd>
    <dt>-s <i>SPACE_NAME</i>（可选）</dt>
    <dd>要作为目标的空间的名称。</dd>
-   </dl>
+   <dt>--unset-region</dt>
+   <dd>取消设置目标区域</dd>
+   <dt>--unset-resource-group</dt>
+   <dd>取消设置目标资源组</dd>
+   <dt>--output <i>FORMAT</i></dt>
+   <dd>指定输出格式，目前仅支持 JSON。</dd>
+</dl>
 如果未指定任何选项，那么将显示当前帐户、区域、组织和空间。
 
 <strong>示例</strong>：

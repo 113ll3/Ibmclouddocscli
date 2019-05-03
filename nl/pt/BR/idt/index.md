@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-04"
 
-keywords: developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
+keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
 subcollection: cloud-cli
 
@@ -78,7 +78,7 @@ construção e execução localmente. Normalmente, há um contêiner de "ferrame
 
 Você está livre para usar qualquer IDE ou editor que preferir para codificar o seu aplicativo. Oferecemos uma extensão para o editor do Microsoft Visual Studio Code (VSCode) que permite acessar todos os comandos do IDE diretamente de dentro do editor.
 
-Quando o projeto for construído, execute o seu app usando [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) ou [`ibmcloud dev debug`](/docs/cli/iddt/commands.html#debug). Isso executa o app dentro do contêiner adequado. Alguns padrões de apps suportam múltiplos contêineres externos para os seus apps. Eles são iniciados e configurados automaticamente durante a execução ou depuração. Há também um comando [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) que executa quaisquer casos de teste que estão associados ao app.
+Quando o projeto for construído, execute o seu app usando [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) ou [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug). Isso executa o app dentro do contêiner adequado. Alguns padrões de apps suportam múltiplos contêineres externos para os seus apps. Eles são iniciados e configurados automaticamente durante a execução ou depuração. Há também um comando [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) que executa quaisquer casos de teste que estão associados ao app.
 
 ### Como os contêineres locais são usados
 {: #local-containers}

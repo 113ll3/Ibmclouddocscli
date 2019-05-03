@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-15"
 
-keywords: bmscore, bmscore sdk, network request, ios, android, cordova
+keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
 subcollection: cloud-cli
 
@@ -49,7 +49,7 @@ También puede utilizar el SDK `BMSCore` para realizar solicitudes de red a cual
 
 La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y obtener la respuesta una vez completada la solicitud. Si va a descargar o a cargar archivos grandes o grandes cantidades de datos, puede utilizar los métodos `Request` `download` o `upload`. Para supervisar el progreso de la descarga o de la carga, cree un `ProgressListener` personalizado y páselo a los métodos `download` o `upload`.
 
-<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
+Para ver ejemplos de uso completos, consulte el archivo [README de `BMSCore` GitHub](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
 
 
 ## iOS
@@ -100,7 +100,6 @@ La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y
 La clase `BMSURLSession` solo está disponible para iOS.
 
 Para ver ejemplos de uso completos, consulte el archivo [README de `BMSCore` GitHub](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
-
 
 ## Cordova
 {: #request-cordova}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-10"
 
-keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
 subcollection: cloud-cli
 
@@ -27,7 +27,7 @@ Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기](https://
 
 네트워크에서 cf 명령을 실행하는 호스트와 Cloud Foundry API
 엔드포인트 사이에 HTTP 프록시 서버가 있으면 `HTTP_PROXY` 환경 변수를 설정하여
-프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 세부사항은 [Using the cf CLI with a Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
+프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 세부사항은 [Using the cf CLI with a Proxy Server](https://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 {: note}
 
 ## Cloud Foundry CLI 명령 색인
@@ -66,7 +66,7 @@ Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기](https://
  <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/#cf_delete-space)</td>
+ <td>[delete-space](#cf_delete-space)</td>
  <td>[events](#cf_events)</td>
  <td>[logs](#cf_logs)</td>
  <td>[marketplace](#cf_marketplace)</td>
@@ -87,7 +87,7 @@ Cloud Foundry CLI 시작하기에 대한 세부사항은 [시작하기](https://
 
 이 명령을 사용하여 {{site.data.keyword.cloud}}의 API 엔드포인트에 대한 URL을 표시하거나 지정합니다.
 ```
-cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
+cf api [URL] [--skip-ssl-validation] [--unset]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -95,8 +95,8 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 <strong>명령 옵션</strong>:
 
    <dl>
-   <dt>BluemixServerURL(선택사항)</dt>
-   <dd>{{site.data.keyword.cloud_notm}}에 연결할 때 지정해야 하는 {{site.data.keyword.cloud_notm}} API 엔드포인트의 URL입니다. 일반적으로 이 URL은 `https://api.{DomainName}`입니다.
+   <dt>URL(선택사항)</dt>
+   <dd>{{site.data.keyword.cloud_notm}}에 연결할 때 지정해야 하는 {{site.data.keyword.cloud_notm}} API 엔드포인트의 URL입니다. 일반적으로 이 URL은 `https://api.<REGION>.cf.{DomainName}`입니다.
    현재 사용 중인 API 엔드포인트의 URL을 표시하려는 경우 cf api 명령에 이 매개변수를 지정할 필요가 없습니다.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다.</dd>
@@ -106,7 +106,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>예제</strong>:
 
-현재 API 엔드포인트를 확인합니다.
+현재 API 엔드포인트 보기: 
 ```
 cf api
 ```
@@ -406,7 +406,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <strong>명령 옵션</strong>:
 
 <dl>
-<dt>*-a* https://api.{DomainName}(선택사항)</dt>
+<dt>*-a* https://api.<REGION>.cf.{DomainName}(선택사항)</dt>
 <dd>{{site.data.keyword.cloud_notm}} API 엔드포인트의 URL입니다.</dd>
 <dt>*-u* user_name(선택사항)</dt>
 <dd>사용자 이름입니다.</dd>
@@ -457,6 +457,15 @@ cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAP
 ```
 {: codeblock}
 
+다음 지역 Cloud Foundry API 엔드포인트에 로그인할 수 있습니다.
+* api.us-south.cf.cloud.ibm.com(이전의 api.ng.bluemix.net)
+* api.eu-gb.cf.cloud.ibm.com(이전의 api.eu-gb.bluemix.net)
+* api.us-east.cf.cloud.ibm.com(이전의 api.us-east.bluemix.net)
+* api.eu-de.cf.cloud.ibm.com(이전의 api.eu-de.bluemix.net)
+* api.au-syd.cf.cloud.ibm.com(이전의 api.au-syd.bluemix.net)
+
+레거시 "api.<REGION>.bluemix.net" Cloud Foundry API 엔드포인트는 여전히 유효하지만 곧 더 이상 사용되지 않습니다.
+{: note}
 
 ## cf logs
 {: #cf_logs}
@@ -530,7 +539,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname(필수)</dt>
 <dd>애플리케이션 이름입니다.</dd>
 <dt>*-b* buildpack_name(선택사항)</dt>
-<dd>빌드팩 이름입니다. buildpack_name은 이름(예: liberty-for-java)별 사용자 정의 빌드팩이거나 Git URL(예: https://github.com/cloudfoundry/java-buildpack.git) 또는 분기나 태그가 포함된 Git URL(예: v3.3.0 태그의 경우 https://github.com/cloudfoundry/java-buildpack.git#v3.3.0) 중 하나입니다.</dd>
+<dd>빌드팩 이름입니다. buildpack_name은 이름(예: liberty-for-java)별 사용자 정의 빌드팩이거나 Git URL(예: https://github.com/cloudfoundry/java-buildpack) 또는 분기나 태그가 포함된 Git URL(예: v3.3.0 태그의 경우 https://github.com/cloudfoundry/java-buildpack#v3.3.0) 중 하나입니다.</dd>
 <dt>*-c* start_command(선택사항)</dt>
 <dd>애플리케이션의 시작 명령입니다. 기본 시작 명령을 사용하려면 이 옵션에 대해 null 값을 지정하십시오. </dd>
 <dt>*-f* manifest_path(선택사항)</dt>

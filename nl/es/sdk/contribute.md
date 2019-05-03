@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
 subcollection: cloud-cli
 
@@ -127,7 +127,7 @@ La internacionalización se basa en `go-i18n`, un paquete y una herramienta de l
       ```
       {: codeblock}
 
-* Depuración: [delve](https://github.com/derekparker/delve){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* Depuración: [delve](https://github.com/go-delve/delve){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
 Delve es un depurador para el lenguaje de programación Go que [Visual Studio Code](https://code.visualstudio.com/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") utiliza.
 

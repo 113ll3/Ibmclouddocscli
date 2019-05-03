@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-04"
 
-keywords: developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
+keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
 subcollection: cloud-cli
 
@@ -72,7 +72,7 @@ Une fois votre projet créé, il vous appartient d'en faire quelque chose d'util
 
 Vous êtes libre d'utiliser n'importe quelle interface IDE ou n'importe quel éditeur de votre choix pour coder votre application. Nous offrons une extension pour l'éditeur Microsoft Visual Studio Code (VSCode) qui vous permet d'accéder à toutes les commandes IDE directement depuis l'éditeur.
 
-Une fois que le projet est généré, exécutez votre application en utilisant [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) ou [`ibmcloud dev debug`](/docs/cli/iddt/commands.html#debug). Cette commande exécutera l'application dans le conteneur approprié. Certains modèles d'application prennent en charge plusieurs conteneurs externes à vos applications. Ils sont automatiquement démarrés et configurés lors de l'exécution ou du débogage. Il existe également une commande [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) qui exécute les scénarios de test associés à l'application.
+Une fois que le projet est généré, exécutez votre application en utilisant [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) ou [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug). Cette commande exécutera l'application dans le conteneur approprié. Certains modèles d'application prennent en charge plusieurs conteneurs externes à vos applications. Ils sont automatiquement démarrés et configurés lors de l'exécution ou du débogage. Il existe également une commande [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) qui exécute les scénarios de test associés à l'application.
 
 ### Utilisation des conteneurs locaux
 {: #local-containers}

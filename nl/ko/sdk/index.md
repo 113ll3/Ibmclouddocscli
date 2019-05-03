@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
+keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
 subcollection: cloud-cli
 
@@ -34,7 +34,7 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 
 다음 요구사항을 충족하는지 확인하십시오.
 
-* [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 계정이 있습니다.
+* [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 계정이 있습니다.
 * [Open API ](https://www.openapis.org/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 스펙에 부합하는 올바른 API 정의가 있습니다.
 
 ## 설치

@@ -61,8 +61,8 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONEN]
 <dl>
 <dt>--sortby</dt>
 <dd>Spalte, nach der sortiert werden soll. Optionen: id,name,type,private_ip_address,host_iqn,username,password.</dd>
-<dt>--columns</dt>
-<dd>Anzuzeigende Spalten. Optionen: id,name,type,private_ip_address,host_iqn,username,password.</dd>
+<dt>--column</dt>
+<dd>Anzuzeigende Spalte. Optionen: id,name,type,private_ip_address,host_iqn,username,password.</dd>
 </dl>
 
 **Beispiele**:
@@ -450,8 +450,8 @@ ibmcloud sl block volume-list [OPTIONEN]
 <dd>Nach ID der Bestellung filtern, mit der der Blockspeicher gekauft wurde.</dd>
 <dt>--sortby</dt>
 <dd>Spalte, nach der sortiert werden soll. Optionen: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
-<dt>--columns</dt>
-<dd>Anzuzeigende Spalten. Optionen: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
+<dt>--column</dt>
+<dd>Anzuzeigende Spalte. Optionen: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 
 **Beispiele**:

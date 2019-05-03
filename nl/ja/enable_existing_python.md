@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-03"
 
-keywords: ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
+keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
 subcollection: cloud-cli
 
@@ -32,8 +32,8 @@ ibmcloud dev enable
 {: codeblock}
 
 * プロジェクトの検出されたフレームワークである **Python - Flask** または **Python - Django** を検証するようプロンプトが表示されたら、「`y`」と応答します。 
-* 次に、**IBM Cloud アプリに接続**するよう、プロンプトが表示されます。アプリケーションに対して**「アセットを生成し、新規 IBM Cloud アプリを作成し、それに接続する (Generate assets, create a new IBM Cloud app and connect to it)」**オプション、または**「IBM Cloud アプリに接続しないでアセットを生成する (Generate assets without connecting to an IBM Cloud app)」**オプションのいずれかを選択します。
-* `enable` コマンドは、サービスを作成して、それをアプリケーションにバインドすることもできます。この基本的な例では、「`n`」と応答します。
+* 次に、**IBM Cloud アプリに接続**するよう、プロンプトが表示されます。 アプリケーションに対して**「アセットを生成し、新規 IBM Cloud アプリを作成し、それに接続する (Generate assets, create a new IBM Cloud app and connect to it)」**オプション、または**「IBM Cloud アプリに接続しないでアセットを生成する (Generate assets without connecting to an IBM Cloud app)」**オプションのいずれかを選択します。
+* `enable` コマンドは、サービスを作成して、それをアプリケーションにバインドすることもできます。 この基本的な例では、「`n`」と応答します。
 
 次の出力例を参照してください。
 ```

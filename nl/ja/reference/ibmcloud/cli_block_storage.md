@@ -61,8 +61,8 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>ソートの基準となる列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
-<dt>--columns</dt>
-<dd>表示する列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
+<dt>--column</dt>
+<dd>　表示する列。オプション: id、name、type、private_ip_address、host_iqn、username、password。</dd>
 </dl>
 
 **例**:
@@ -450,7 +450,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dd>ブロック・ストレージを購入した注文の ID を基準にフィルター操作します。</dd>
 <dt>--sortby</dt>
 <dd>ソートの基準にする列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、active_transactions、created_by。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>表示する列。オプション: id、username、datacenter、storage_type、capacity_gb、bytes_used、ip_addr、created_by、notes。</dd>
 </dl>
 

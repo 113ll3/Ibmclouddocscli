@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal
+keywords: cli, classic infrastructure, load balancer service, ibmcloud sl loadbal, sl loadbal, load balancer cli
 
 subcollection: cloud-cli
 
@@ -19,7 +19,7 @@ subcollection: cloud-cli
 
 Il servizio Load Balancer (Programma di bilanciamento del carico) di {{site.data.keyword.cloud}} aiuta a migliorare la disponibilità delle tue applicazioni business-critical distribuendo il traffico tra più istanze del server delle applicazioni oppure inoltrando il traffico solo a istanze integre.
 
-Utilizza i seguente comandi per gestire i programmi di bilanciamento del carico nel servizio Load Balancer dell'infrastruttura classica {{site.data.keyword.cloud_notm}}.
+Utilizza i seguenti comandi per gestire i programmi di bilanciamento del carico nel servizio Load Balancer dell'infrastruttura classica {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 ## ibmcloud sl loadbal cancel

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-10"
 
-keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
 subcollection: cloud-cli
 
@@ -25,7 +25,7 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
 
 有关 `cf CLI` 命令的更详细列表，请参阅社区的 [Cloud Foundry CLI Reference Guide](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
-如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须指定该代理服务器的主机名或 IP 地址，方法是设置 `HTTP_PROXY` 环境变量。有关详细信息，请参阅 [Using the cf CLI with a Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
+如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须指定该代理服务器的主机名或 IP 地址，方法是设置 `HTTP_PROXY` 环境变量。有关详细信息，请参阅 [Using the cf CLI with a Proxy Server](https://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 {: note}
 
 ## Cloud Foundry CLI 命令索引
@@ -64,7 +64,7 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
  <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/#cf_delete-space)</td>
+ <td>[delete-space](#cf_delete-space)</td>
  <td>[events](#cf_events)</td>
  <td>[logs](#cf_logs)</td>
  <td>[marketplace](#cf_marketplace)</td>
@@ -84,7 +84,7 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
 
 使用此命令可显示或指定 {{site.data.keyword.cloud}} API 端点的 URL。
 ```
-cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
+cf api [URL] [--skip-ssl-validation] [--unset]
 ```
 
 <strong>先决条件</strong>：无。
@@ -92,8 +92,8 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>BluemixServerURL（可选）</dt>
-   <dd>连接到 {{site.data.keyword.cloud_notm}} 时必须指定的 {{site.data.keyword.cloud_notm}} API 端点的 URL。通常，此 URL 为 `https://api.{DomainName}`。
+   <dt>URL（可选）</dt>
+   <dd>连接到 {{site.data.keyword.cloud_notm}} 时必须指定的 {{site.data.keyword.cloud_notm}} API 端点的 URL。通常，此 URL 为 `https://api.<REGION>.cf.{DomainName}`。
    如果想要显示当前正在使用的 API 端点的 URL，那么不需要为 cf api 命令指定此参数。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>禁用 SSL 验证过程。使用此参数可能会导致安全性问题。</dd>
@@ -103,7 +103,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>示例</strong>：
 
-查看当前 API 端点
+要查看当前 API 端点：
 ```
 cf api
 ```
@@ -408,7 +408,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <strong>命令选项</strong>：
 
 <dl>
-<dt>*-a* https://api.{DomainName}（可选）</dt>
+<dt>*-a* https://api.<REGION>.cf.{DomainName}（可选）</dt>
 <dd>{{site.data.keyword.cloud_notm}} API 端点的 URL。</dd>
 <dt>*-u* user_name（可选）</dt>
 <dd>您的用户名。</dd>
@@ -459,6 +459,15 @@ cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAP
 ```
 {: codeblock}
 
+您可以登录到以下区域 Cloud Foundry API 端点：
+* api.us-south.cf.cloud.ibm.com（先前为 api.ng.bluemix.net）
+* api.eu-gb.cf.cloud.ibm.com（先前为 api.eu-gb.bluemix.net）
+* api.us-east.cf.cloud.ibm.com（先前为 api.us-east.bluemix.net）
+* api.eu-de.cf.cloud.ibm.com（先前为 api.eu-de.bluemix.net）
+* api.au-syd.cf.cloud.ibm.com（先前为 api.au-syd.bluemix.net）
+
+旧“api.<REGION>.bluemix.net”Cloud Foundry API 端点仍然有效，但即将不再推荐使用。
+{: note}
 
 ## cf logs
 {: #cf_logs}
@@ -534,7 +543,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname（必需）</dt>
 <dd>应用程序的名称。</dd>
 <dt>*-b* buildpack_name（可选）</dt>
-<dd>buildpack 的名称。buildpack_name 可以是定制 buildpack 的名称（例如，liberty-for-java），也可以是 Git URL（例如，https://github.com/cloudfoundry/java-buildpack.git）或者带有分支或标记的 Git URL（例如，对于 v3.3.0 标记，URL 为 https://github.com/cloudfoundry/java-buildpack.git#v3.3.0）。</dd>
+<dd>buildpack 的名称。buildpack_name 可以是定制 buildpack 的名称（例如，liberty-for-java），也可以是 Git URL（例如，https://github.com/cloudfoundry/java-buildpack）或者带有分支或标记的 Git URL（例如，对于 v3.3.0 标记，URL 为 https://github.com/cloudfoundry/java-buildpack#v3.3.0）。</dd>
 <dt>*-c* start_command（可选）</dt>
 <dd>应用程序的启动命令。要使用缺省启动命令，请为此选项指定 null 值。</dd>
 <dt>*-f* manifest_path（可选）</dt>

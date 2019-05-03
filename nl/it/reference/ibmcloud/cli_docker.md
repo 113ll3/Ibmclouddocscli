@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-04"
 
-keywords: docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
+keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
 subcollection: cloud-cli
 
@@ -34,7 +34,7 @@ Con il contenitore Docker di {{site.data.keyword.dev_cli_notm}}, ottieni la CLI 
 ## Prima di iniziare
 {: #idt-docker-prereq}
 
-Hai bisogno di un [account {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno") e devi installare la versione Docker stabile più recente prima di eseguire la seguente procedura.
+Hai bisogno di un [account {{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno") e devi installare l'ultima versione stabile di Docker prima di completare la seguente procedura.
 
 ## Passo 1. Estrai l'immagine Docker dall'hub Docker.
 {: #step1-pull-docker-image}

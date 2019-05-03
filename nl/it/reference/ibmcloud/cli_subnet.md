@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: manage subnets, classic infrastructure, subnets, ibmcloud sl subnet
+keywords: cli, manage subnet cli, classic infrastructure cli, subnet cli, ibmcloud sl subnet, subnet cli, newtork cli
 
 subcollection: cloud-cli
 
@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Creazione, annullamento e visualizzazione di sottorete
 {: #sl-manage-subnets}
 
-Una sottorete è una partizione logica di una rete IP in più segmenti di rete più piccoli. Utilizza i seguente comandi per gestire le sottoreti dell'infrastruttura classica {{site.data.keyword.cloud}}.
+Una sottorete è una partizione logica di una rete IP in più segmenti di rete più piccoli. Utilizza i seguenti comandi per gestire le sottoreti dell'infrastruttura classica {{site.data.keyword.cloud}}.
 {: shortdesc}
 
 ## ibmcloud sl subnet cancel

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-03"
 
-keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
 subcollection: cloud-cli
 
@@ -39,7 +39,7 @@ Java アプリケーション用のデバッグ・ツールを使用可能にす
 	* Eclipse
       1. **既存の maven プロジェクト**を Eclipse にインポートします。
       2. [Java リモート・アプリケーション](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") のデバッグ構成を作成します。
-      		1. IP アドレスまたは `localhost:<port> を入力します。`  
+      		1. IP アドレスまたは `localhost:<port>` を入力します。  
       		2. ポート番号に `7777` を入力します。
       		3. インポートした Java プロジェクトの名前を指定します。
       6. IDE 内でブレークポイントを設定します。

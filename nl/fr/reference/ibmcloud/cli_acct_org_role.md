@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
+keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
 subcollection: cloud-cli
 
@@ -273,7 +273,7 @@ Cette commande a la même fonction et les mêmes options que la commande [cf del
 Affiche les utilisateurs dans l'organisation spécifiée, par rôle.
 
 ```
-ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
+ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 ```
 
 <strong>Prérequis</strong> : Noeud final, Connexion
@@ -282,10 +282,10 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 <dl>
 <dt>ORG_NAME (obligatoire)</dt>
 <dd>Nom de l'organisation.</dd>
-<dt>-a (facultatif)</dt>
+<dt>-a, -all (facultatif)</dt>
 <dd>Recense tous les utilisateurs de l'organisation spécifiés, sans les regrouper par rôle.</dd>
-<dt>--output FORMAT (facultatif)</dt>
-<dd>--output value  Indiquez un format de sortie. Seul JSON est pris en charge pour l'instant.</dd>
+<dt>-r, --region REGION (facultatif)</dt>
+<dd>Nom de région. La région actuelle constitue la valeur par défaut si aucune valeur n'est indiquée.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -534,7 +534,7 @@ Afficher les détails du compte
 ibmcloud account show
 ```
 
-<strong>Prérequis</strong> : Noeud final, Connexion
+<strong>Prérequis</strong> : Noeud final, Connexion, Cible
 
 <strong>Options de commande</strong> :
 <dl>
@@ -557,7 +557,7 @@ Mettre à jour un compte spécifique
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>Prérequis</strong> : Noeud final, Connexion
+<strong>Prérequis</strong> : Noeud final, Connexion, Cible
 
 <strong>Options de commande</strong> :
 <dl>
@@ -571,6 +571,41 @@ Activer la connectivité de noeud final de service pour le compte actuel :
 
 ```
 ibmcloud account update --service-endpoint-enable true
+```
+
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
+
+Répertorier les journaux d'audit de compte Softlayer
+
+```
+account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
+```
+
+<strong>Prérequis</strong> : Noeud final, Connexion, Cible
+
+<strong>Options de commande</strong> :
+<dl>
+  <dt>-a, --action <i>ACTION</i></dt>
+  <dd>Action. Répertoriez les journaux d'audit contenant l'action spécifiée.</dd>
+  <dt>-e, --end-date <i>END_DATE</i></dt>
+  <dd>Date de fin. Répertoriez les journaux d'audit qui se situent avant la date de fin. Le format pris en charge est aaaa-MM-jjTHH:mm:ss.</dd>
+  <dt>-o, --object <i>OBJECT</i></dt>
+  <dd>Objet. Répertoriez les journaux d'audit contenant l'objet spécifié.</dd>
+  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
+  <dd>Type d'objet. Répertoriez les journaux d'audit contenant le type d'objet spécifié.</dd>
+  <dt>-s, --start-date <i>START_DATE</i></dt>
+  <dd>Date de début. Répertoriez les journaux d'audit qui se situent après la date de début. Le format pris en charge est aaaa-MM-jjTHH:mm:ss.</dd>
+  <dt>-u, --user-name <i>USER_NAME</i></dt>
+  <dd>Nom d'utilisateur. Répertoriez les journaux d'audit contenant le nom d'utilisateur spécifié.</dd>
+</dl>
+
+<strong>Exemples</strong> :
+
+Répertorier les journaux d'audit
+
+```
+ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users

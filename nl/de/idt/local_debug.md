@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-03"
 
-keywords: local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
+keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
 subcollection: cloud-cli
 
@@ -39,7 +39,7 @@ Schritte zum Aktivieren des Debugging-Tools für eine Java-Anwendung:
 	* Eclipse
       1. Importieren Sie das **vorhandene Maven-Projekt** in Eclipse.
       2. Erstellen Sie eine Debugkonfiguration für die [ferne Java-Anwendung ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link").
-      		1. Geben Sie die IP-Adresse oder `localhost:<port>`  
+      		1. Geben Sie die IP-Adresse oder `localhost:<port>` ein.  
       		2. Geben Sie als Portnummer `7777` ein.
       		3. Geben Sie den Namen des Java-Projekts an, das Sie importiert haben.
       6. Legen Sie einen Unterbrechungspunkt in der IDE fest.

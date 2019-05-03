@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-10"
 
-keywords: cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
+keywords: cli, cf commands, cloud foundry commands, cloud foundry cli, cf apps, cf help, cf logs, cf api
 
 subcollection: cloud-cli
 
@@ -25,7 +25,7 @@ Cloud Foundry CLI の開始について詳しくは、[Getting Started ](https:/
 
 `cf CLI` コマンドのより詳細なリストについては、コミュニティー内の[Cloud Foundry CLI リファレンス・ガイド](https://docs.cloudfoundry.org/cf-cli/cf-help.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
-ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、『[Using the cf CLI with a Proxy Server ](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")』を参照してください。
+ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。 詳しくは、『[Using the cf CLI with a Proxy Server ](https://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")』を参照してください。
 {: note}
 
 ## Cloud Foundry CLI コマンドの索引
@@ -64,7 +64,7 @@ Cloud Foundry CLI の開始について詳しくは、[Getting Started ](https:/
  <td>[delete](#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](/#cf_delete-space)</td>
+ <td>[delete-space](#cf_delete-space)</td>
  <td>[events](#cf_events)</td>
  <td>[logs](#cf_logs)</td>
  <td>[marketplace](#cf_marketplace)</td>
@@ -85,7 +85,7 @@ Cloud Foundry CLI の開始について詳しくは、[Getting Started ](https:/
 
 このコマンドを使用して、{{site.data.keyword.cloud}} の API エンドポイントの URL を表示または指定します。
 ```
-cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
+cf api [URL] [--skip-ssl-validation] [--unset]
 ```
 
 <strong>前提条件</strong>: なし。
@@ -93,8 +93,8 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 <strong>コマンド・オプション</strong>:
 
    <dl>
-   <dt>BluemixServerURL (オプション)</dt>
-   <dd>{{site.data.keyword.cloud_notm}} に接続するときに指定する必要のある {{site.data.keyword.cloud_notm}} API エンドポイントの URL。 通常、この URL は `https://api.{DomainName}` です。
+   <dt>URL (オプション)</dt>
+   <dd>{{site.data.keyword.cloud_notm}} に接続するときに指定する必要のある {{site.data.keyword.cloud_notm}} API エンドポイントの URL。 通常、この URL は `https://api.<REGION>.cf.{DomainName}` です。
    現在使用している API エンドポイントの URL を表示したい場合、cf api コマンドにこのパラメーターを指定する必要はありません。</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>SSL 検証プロセスを使用不可にします。 このパラメーターを使用すると、セキュリティーの問題が起きる可能性があります。</dd>
@@ -104,7 +104,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>例</strong>:
 
-現行 API エンドポイントを表示します。
+現行 API エンドポイントを表示するには、次のようにします。
 ```
 cf api
 ```
@@ -404,7 +404,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <strong>コマンド・オプション</strong>:
 
 <dl>
-<dt>*-a* https://api.{DomainName} (オプション)</dt>
+<dt>*-a* https://api.<REGION>.cf.{DomainName} (オプション)</dt>
 <dd>{{site.data.keyword.cloud_notm}} の API エンドポイントの URL。</dd>
 <dt>*-u* user_name (オプション)</dt>
 <dd>自分のユーザー名。</dd>
@@ -455,6 +455,15 @@ cf login -a https://api.us-south.cf.cloud.ibm.com -u apikey -p ThisValueIsYourAP
 ```
 {: codeblock}
 
+以下の地域 Cloud Foundry API エンドポイントにログインできます。
+* api.us-south.cf.cloud.ibm.com (以前の api.ng.bluemix.net)
+* api.eu-gb.cf.cloud.ibm.com (以前の api.eu-gb.bluemix.net)
+* api.us-east.cf.cloud.ibm.com (以前の api.us-east.bluemix.net)
+* api.eu-de.cf.cloud.ibm.com (以前の api.eu-de.bluemix.net)
+* api.au-syd.cf.cloud.ibm.com (以前の api.au-syd.bluemix.net)
+
+従来の「api.<REGION>.bluemix.net」Cloud Foundry API エンドポイントも引き続き有効ですが、まもなく非推奨になります。
+{: note}
 
 ## cf logs
 {: #cf_logs}
@@ -529,7 +538,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname (必須)</dt>
 <dd>アプリケーションの名前。</dd>
 <dt>*-b* buildpack_name (オプション)</dt>
-<dd>ビルドパックの名前。 buildpack_name には、カスタム・ビルドパックを、名前 (例: liberty-for-java) または Git URL (例: https://github.com/cloudfoundry/java-buildpack.git) で指定するか、または、ブランチまたはタグを伴う Git URL (例えば、v3.3.0 タグの場合は https://github.com/cloudfoundry/java-buildpack.git#v3.3.0) で指定できます。</dd>
+<dd>ビルドパックの名前。 buildpack_name には、カスタム・ビルドパックを、名前 (例: liberty-for-java) または Git URL (例: https://github.com/cloudfoundry/java-buildpack) で指定するか、または、ブランチまたはタグを伴う Git URL (例えば、v3.3.0 タグの場合は https://github.com/cloudfoundry/java-buildpack#v3.3.0) で指定できます。</dd>
 <dt>*-c* start_command (オプション)</dt>
 <dd>アプリケーションの開始コマンド。 デフォルトの開始コマンドを使用するには、このオプションに値 null を指定します。 </dd>
 <dt>*-f* manifest_path (オプション)</dt>

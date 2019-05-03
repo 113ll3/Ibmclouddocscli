@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-04"
 
-keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
+keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
 subcollection: cloud-cli
 
@@ -48,7 +48,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (obligatoire)</dt>
    <dd>Nom du référentiel à ajouter. Vous pouvez définir votre propre nom pour chaque référentiel.</dd>
    <dt>REPO_URL (obligatoire)</dt>
-   <dd>URL du référentiel à ajouter. Elle doit contenir le protocole (https://plugins.cloud.ibm.com  au lieu de https://plugins.cloud.ibm.com, par exemple). https://plugins.cloud.ibm.com est le référentiel de plug-in officiel de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}.</dd>
+   <dd>URL du référentiel à ajouter. Elle doit contenir le protocole (par exemple https://plugins.cloud.ibm.com et non plugins.cloud.ibm.com). https://plugins.cloud.ibm.com est le référentiel de plug-in officiel de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}.</dd>
     </dl>
 
 

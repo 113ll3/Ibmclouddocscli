@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-15"
 
-keywords: bmscore, bmscore sdk, network request, ios, android, cordova
+keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
 subcollection: cloud-cli
 
@@ -49,7 +49,7 @@ subcollection: cloud-cli
 
 `Request` クラスは、HTTP 要求を発行し、要求が完了した後に応答を取得するための簡単な方法です。 大きなファイルまたは大量のデータをダウンロードまたはアップロードする場合は、`Request` `download` または `upload` のメソッドを使用できます。 ダウンロードまたはアップロードの進行をモニターするには、カスタムの `ProgressListener` を作成して、`download` または `upload` のメソッドに渡します。
 
-<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
+使用法の完全な例については、`BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 
 ## iOS
@@ -100,7 +100,6 @@ subcollection: cloud-cli
 `BMSURLSession` クラスは、iOS のみで使用可能です。
 
 使用法の完全な例については、`BMSCore` GitHub [README ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
-
 
 ## Cordova
 {: #request-cordova}
