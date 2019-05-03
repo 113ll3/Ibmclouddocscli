@@ -2,7 +2,11 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-15"
+
+keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
+
+subcollection: cloud-cli
 
 ---
 
@@ -17,8 +21,8 @@ lastupdated: "2019-02-14"
 # {{site.data.keyword.dev_cli_notm}} CLI 插件 (ibmcloud dev) 命令
 {: #idt-cli}
 
-版本：2.1.4
-发布时间：2018 年 8 月 31 日
+版本：2.1.18
+发布时间：2019 年 3 月 28 日
 
 从 2018 年 5 月起，{{site.data.keyword.cloud}} CLI 命令 `bluemix` 和 `bx` 都变为 `ibmcloud`。但是，您仍然可以使用 `bluemix` 和 `bx` CLI 命令，直到稍后这些命令被除去为止。
 {: tip}
@@ -165,20 +169,20 @@ ibmcloud dev delete <applicationName>
 
 在将 Cloud Foundry 应用程序部署到 {{site.data.keyword.cloud_notm}} 之前，`manifest.yml` 文件必须存在于应用程序的根目录中。
 
-在将应用程序部署为容器之前，必须在本地安装 [Kubernetes](https://kubernetes.io/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 和 [Helm](https://github.com/kubernetes/helm){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。Helm 客户机版本不得高于 Helm 服务器版本。可以运行 `helm version` 来查看这两个版本。建议使用客户机版本 V2.4.2。
+在将应用程序部署为容器之前，必须在本地安装 [Kubernetes](https://kubernetes.io/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 和 [Helm](https://github.com/helm/helm){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。Helm 客户机版本不得高于 Helm 服务器版本。可以运行 `helm version` 来查看这两个版本。建议使用客户机版本 V2.4.2。
 
 要在 Kubernetes 上部署应用程序，必须在 `cli-config.yml` 中将 `deploy-target` 指定为 `container`，或者使用 `-t container` 参数。
 
 此外，还可以使用命令行自变量在 `cli-config.yml` 中指定配置 Kubernetes 部署所需的其他参数。如果未在 `cli-config.yml` 中定义这些参数，那么必须使用 `-t container` 参数进行部署。然后，系统会提示您输入所有其他值。
 
 ```yaml
-    chart-path: "chart/myapplication"
+chart-path: "chart/myapplication"
 
-    deploy-target: "container"
+deploy-target: "container"
 
-    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
+deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
 
-    ibm-cluster: "mycluster"
+ibm-cluster: "mycluster"
 ```
 
 在 `cli-config.yml` 中，可以选择在 `chart-path` 属性中定义 Helm chart 的位置，然后配置 `deploy-image-target`，如示例所示。这将使用 `cli-config.yml` 中的 `deploy-image-target` 元素，而不是 `chart/values.yml` 文件中的 `repository` 和 `tag` 元素。具体来说，要部署到 {{site.data.keyword.cloud_notm}}，请将配置元素 `ibm-cluster` 设置为您在 {{site.data.keyword.cloud_notm}} 中创建的 Kubernetes 集群的名称。
@@ -226,7 +230,7 @@ ibmcloud dev deploy
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* 参数（可选），用于定义将容器部署到 {{site.data.keyword.Bluemix_notm}} 的 Kubernetes 集群的名称
+* 参数（可选），用于定义将容器部署到 {{site.data.keyword.cloud_notm}} 的 Kubernetes 集群的名称
 * 用法：`ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `主机 (host)`
@@ -330,7 +334,7 @@ ibmcloud dev enable
 #### `no-create`
 {: #enable-no-create}
 
-* 用于阻止在本地创建启用文件时在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序的参数。
+* 用于阻止在本地创建启用文件时在 {{site.data.keyword.cloud_notm}} 中创建应用程序的参数。
 * 用法：`ibmcloud dev enable --no-create`
 
 ## get-credentials

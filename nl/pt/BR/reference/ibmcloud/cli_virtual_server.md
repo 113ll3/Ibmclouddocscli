@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, ibmcloud sl, virtual server, virtual server commands
+keywords: cli, classic infrastructure cli, ibmcloud sl vs, virtual server cli, virtual server commands
 
 subcollection: cloud-cli
 
@@ -354,9 +354,8 @@ Sl vs list ibmcloud [ OPTIONS ]
 <dd>Filtrado pelo ID do usuário que possui as instâncias.</dd>
 <dt>--sortby</dt>
 <dd>Coluna pela qual classificar; o padrão é: hostname, as opções são: id, hostname, domain, datacenter, cpu, memory, public_ip, private_ip.</dd>
-<dt>--columns</dt>
-<dd>Colunas para exibição; o padrão é: id, hostname, public_ip, private_ip, datacenter, action, as opções são:
-guid, power_state, created_by, tags.</dd>
+<dt>--column</dt>
+<dd>Coluna a exibir, default is:id,hostname,public_ip,private_ip,datacenter,action, opções são: guid,power_state,created_by,tags.</dd>
 </dl>
 
 **Exemplos**:

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-04-15"
 
-keywords: cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
+keywords: cli, cloud foundry app, ibmcloud app, app list, app push, app show, app delete, app rename, app start, app stop, app routes, manage cloud foundry apps, manage apps, app domains, manage routes
 
 subcollection: cloud-cli
 
@@ -223,7 +223,7 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (erforderlich)</dt>
    <dd>Der Name der cf-Anwendung oder -Containergruppe für die Zuordnung der Route.</dd>
    <dt>DOMAIN (erforderlich)</dt>
-   <dd>Die Domäne der Route. Beispiele: mychinabluemix.net oder chinabluemix.net. </dd>
+   <dd>Die Domäne der Route. Beispiel: mybluemix.net.</dd>
    <dt>-n <i>HOST_NAME</i> (optional)</dt>
    <dd>Der Hostname der Route. Wenn der Hostname nicht angegeben wird, wird standardmäßig der Anwendungsname oder der Containergruppenname festgelegt.</dd>
    </dl>
@@ -231,22 +231,22 @@ ibmcloud app route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 <strong>Beispiele</strong>:
 
 Route zu `my-app` mit angegebener Domäne zuordnen:
-
 ```
-ibmcloud app route-map my-app mychinabluemix.net
+ibmcloud app route-map my-app mybluemix.net
 ```
 
 Route zu 'my-container-group' mit angegebener Domäne und angegebenem Hostnamen zuordnen:
+```
+ibmcloud app route-map my-container-group bluemix.net -n abc
+```
 
-```
-ibmcloud app route-map my-container-group chinabluemix.net -n abc
-```
+Die gemeinsam genutzte Standarddomäne ist `mybluemix.net`, aber `appdomain.cloud` ist eine weitere Domänenoption, die Sie verwenden können. Weitere Informationen zur Migration auf `appdomain.cloud` finden Sie im Abschnitt zum [Aktualisieren Ihrer Domäne](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+{: tip}
 
 ## ibmcloud app route-unmap
 {: #ibmcloud_app_route_unmap}
 
 Zuordnung der angegebenen Route zu einer vorhandenen cf-Anwendung oder -Containergruppe aufheben.
-
 ```
 ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
@@ -259,24 +259,25 @@ ibmcloud app route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (erforderlich)</dt>
    <dd>Der Name der cf-Anwendung oder -Containergruppe.</dd>
    <dt>DOMAIN (erforderlich)</dt>
-   <dd>Die Domäne der Route (Beispiele: mychinabluemix.net oder chinabluemix.net).</dd>
+   <dd>Die Domäne der Route. Beispiel: mybluemix.net.</dd>
    <dt>-n <i>HOST_NAME</i> (optional)</dt>
    <dd>Der Hostname der Route. Wenn der Hostname nicht angegeben wird, wird standardmäßig der Anwendungsname oder der Containergruppenname festgelegt.</dd>
    </dl>
 
 <strong>Beispiele</strong>:
 
-Zuordnung von `my-app.mychinabluemix.net` zu `my-app` aufheben:
+Zuordnung von `my-app.mybluemix.net` zu `my-app` aufheben:
+```
+ibmcloud app route-unmap my-app mybluemix.net
+```
 
+Zuordnung von `abc.bluexmix.net` zu `my-container-group` aufheben:
 ```
-ibmcloud app route-unmap my-app mychinabluemix.net
+ibmcloud app route-unmap my-container-group bluemix.net -n abc
 ```
 
-Zuordnung von `abc.chinabluexmix.net` zu `my-container-group` aufheben:
-
-```
-ibmcloud app route-unmap my-container-group chinabluemix.net -n abc
-```
+Die gemeinsam genutzte Standarddomäne ist `mybluemix.net`, aber `appdomain.cloud` ist eine weitere Domänenoption, die Sie verwenden können. Weitere Informationen zur Migration auf `appdomain.cloud` finden Sie im Abschnitt zum [Aktualisieren Ihrer Domäne](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+{: tip}
 
 ## ibmcloud app route-create
 {: #ibmcloud_app_route_create}

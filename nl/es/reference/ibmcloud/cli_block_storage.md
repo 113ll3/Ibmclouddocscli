@@ -61,8 +61,8 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>Columna por la que ordenar. Las opciones son: id,name,type,private_ip_address,host_iqn,username,password.</dd>
-<dt>--columns</dt>
-<dd>Columnas a visualizar. Las opciones son: id,name,type,private_ip_address,host_iqn,username,password.</dd>
+<dt>--column</dt>
+<dd>Columna a visualizar. Las opciones son: id,name,type,private_ip_address,host_iqn,username,password.</dd>
 </dl>
 
 **Ejemplos**:
@@ -450,8 +450,8 @@ ibmcloud sl block volume-list [OPTIONS]
 <dd>Filtrar por ID del pedido que ha comprado el almacenamiento en bloque.</dd>
 <dt>--sortby</dt>
 <dd>Columna para ordenar por las siguientes opciones: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
-<dt>--columns</dt>
-<dd>Columnas que se deben visualizar. Las opciones son: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
+<dt>--column</dt>
+<dd>Columna a visualizar. Las opciones son: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 
 **Ejemplos**:

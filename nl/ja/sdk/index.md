@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
+keywords: cli, sdk generator, open api, ibmcloud sdk, ibmcloud sdk generate, generate, sdk validate, sdk list, cloud foundry, rest api 
 
 subcollection: cloud-cli
 
@@ -34,7 +34,7 @@ REST API 定義は有効であり、かつ稼働中のサーバー・エンド�
 
 以下の要件を満たしていることを確認します。
 
-* [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") アカウントを持っている。
+* [{{site.data.keyword.cloud_notm}}](https://{DomainName}/login){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") アカウントを持っている。
 * [Open API ](https://www.openapis.org/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") 仕様に準拠した有効な API 定義。
 
 ## インストール

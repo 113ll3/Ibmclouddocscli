@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-04"
 
-keywords: docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
+keywords: cli, docker, docker container, ibmcloud docker, docker run, docker pull, ibmcloud cli, dockerfile, ibmcloud login
 
 subcollection: cloud-cli
 
@@ -34,7 +34,7 @@ subcollection: cloud-cli
 ## 开始之前
 {: #idt-docker-prereq}
 
-您需要 [{{site.data.keyword.cloud_notm}} 帐户](https://{DomainName}){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")，并且必须安装最新的稳定 Docker 版本，才能执行以下步骤。
+您需要 [{{site.data.keyword.cloud_notm}} 帐户](https://{DomainName}/login){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")，并且必须安装最新的稳定 Docker 版本，才能执行以下步骤。
 
 ## 步骤 1.从 Docker Hub 中拉出 Docker 镜像。
 {: #step1-pull-docker-image}

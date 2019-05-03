@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
+keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
 subcollection: cloud-cli
 
@@ -110,7 +110,7 @@ Il framework di test si basa su Ginkgo, un framework di test BDD per Go. Viene u
 
 * Internazionalizzazione: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") e [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
-L'internazionalizzazione si basa su `go-i18n`, che è un pacchetto e uno strumento della riga di comando che fornisce il supporto per tradurre un'applicazione Go in più linguaggi. I bundle di traduzione sono rielaborati da `go-bindata`, che è un comando che converte tutti i file di input in codice sorgente Go gestibile.
+L'internazionalizzazione si basa su `go-i18n`, che è un pacchetto e uno strumento della riga di comando che fornisce il supporto per tradurre un'applicazione Go in più linguaggi. I bundle di traduzione sono pre-elaborati da `go-bindata`, che è un comando che converte tutti i file di input in codice sorgente Go gestibile.
 
    * Installa `go-i18n` utilizzando il seguente comando.
 
@@ -126,7 +126,7 @@ L'internazionalizzazione si basa su `go-i18n`, che è un pacchetto e uno strumen
       ```
       {: codeblock}
 
-* Debug: [delve ](https://github.com/derekparker/delve){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
+* Debug: [delve ](https://github.com/go-delve/delve){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
 Delve è un programma di debug per il linguaggio di programmazione Go e viene utilizzato da [Visual Studio Code ](https://code.visualstudio.com/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
 

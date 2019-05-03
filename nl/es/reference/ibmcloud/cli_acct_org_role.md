@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
+keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
 subcollection: cloud-cli
 
@@ -273,7 +273,7 @@ Este mandato tiene la misma función y opciones que el mandato [cf delete-space]
 Visualice usuarios en el archivo de organización según el rol.
 
 ```
-ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
+ibmcloud account org-users ORG_NAME [-r, --region REGION] [-a, --all]
 ```
 
 <strong>Requisitos previos</strong>: Punto final, Inicio de sesión
@@ -282,10 +282,10 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 <dl>
 <dt>ORG_NAME (necesario)</dt>
 <dd>Nombre de la organización.</dd>
-<dt>-a (opcional)</dt>
+<dt>-a, -all (opcional)</dt>
 <dd>Lista todos los usuarios de la organización especificada, no agrupada por rol.</dd>
-<dt>--output FORMAT (opcional)</dt>
-<dd>--output value  Especifique el formato de salida, ahora solo se da soporte a JSON.</dd>
+<dt>-r, --region REGION (opcional)</dt>
+<dd>Nombre de región. Si no se especifica, el valor predeterminado es la región actual.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -534,7 +534,7 @@ Mostrar detalles de la cuenta
 ibmcloud account show
 ```
 
-<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -557,7 +557,7 @@ Actualizar una cuenta específica.
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>Requisitos previos</strong>: Punto final, Inicio de sesión
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
 
 <strong>Opciones de mandato</strong>:
 <dl>
@@ -571,6 +571,41 @@ Habilitar la conectividad de punto final de servicio para la cuenta actual:
 
 ```
 ibmcloud account update --service-endpoint-enable true
+```
+
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
+
+Mostrar una lista de registros de auditoría de cuentas de Softlayer
+
+```
+account audit-logs [-u, --user-name USER_NAME] [-t, --object-type OBJECT_TYPE] [-o, --object OBJECT] [-a, --action ACTION] [-s, --start-date START_DATE] [-e, --end-date END_DATE]
+```
+
+<strong>Requisitos previos</strong>: Punto final, inicio de sesión, destino
+
+<strong>Opciones de mandato</strong>:
+<dl>
+  <dt>-a, --action <i>ACTION</i></dt>
+  <dd>Acción. Obtener una lista de registros de auditoría con la acción especificada.</dd>
+  <dt>-e, --end-date <i>END_DATE</i></dt>
+  <dd>Fecha de finalización. Obtener una lista de registros de auditoría anteriores a la fecha de finalización. Los formatos admitidos son aaaa-MM-ddTHH:mm:ss.</dd>
+  <dt>-o, --object <i>OBJECT</i></dt>
+  <dd>Objeto. Obtener una lista de registros de auditoría con el objeto especificado.</dd>
+  <dt>-t, --object-type <i>OBJECT_TYPE</i></dt>
+  <dd>Tipo de objeto. Obtener una lista de registros de auditoría con el tipo de objeto especificado.</dd>
+  <dt>-s, --start-date <i>START_DATE</i></dt>
+  <dd>Fecha de inicio. Obtener una lista de registros de auditoría posteriores a la fecha de inicio. Los formatos admitidos son aaaa-MM-ddTHH:mm:ss.</dd>
+  <dt>-u, --user-name <i>USER_NAME</i></dt>
+  <dd>Nombre de usuario. Obtener una lista de registros de auditoría con el nombre de usuario especificado.</dd>
+</dl>
+
+<strong>Ejemplos</strong>:
+
+Mostrar una lista de registros de auditoría
+
+```
+ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users

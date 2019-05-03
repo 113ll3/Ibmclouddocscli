@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-04"
 
-keywords: add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
+keywords: cli, add cli plug-in, remove cli plug-in, cli plug-in, ibmcloud plugin, repo-add, repo-remove, plugin uninstall, plugin update
 
 subcollection: cloud-cli
 
@@ -48,7 +48,7 @@ ibmcloud plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME (必須)</dt>
    <dd>追加するリポジトリーの名前。 各リポジトリーに対して任意の名前を定義できます。</dd>
    <dt>REPO_URL (必須)</dt>
-   <dd>追加するリポジトリーの URL。 リポジトリー URL にはプロトコルが含まれている必要があります (例えば、plugins.cloud.ibm.com ではなく、https://plugins.cloud.ibm.com)。{{site.data.keyword.cloud_notm}} CLI の公式プラグイン・リポジトリーは https://plugins.cloud.ibm.com です。</dd>
+   <dd>追加するリポジトリーの URL。 リポジトリー URL にはプロトコルが含まれている必要があります (例えば、https://plugins.cloud.ibm.com ではなく、plugins.cloud.ibm.com)。 {{site.data.keyword.cloud_notm}} CLI の公式プラグイン・リポジトリーは https://plugins.cloud.ibm.com です。</dd>
     </dl>
 
 

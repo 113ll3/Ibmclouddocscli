@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-15"
 
-keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
+keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
 subcollection: cloud-cli
 
@@ -128,7 +128,7 @@ ibmcloud dev run
 如果使用 CLI 来创建应用程序，那么可能会显示以下错误：
 ```
 FAILED                            
-Application created, but could not get code
+App created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: screen}
@@ -150,7 +150,7 @@ https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/co
 
 * 使用 {{site.data.keyword.dev_console}}。
 
-	1. 在 {{site.data.keyword.dev_console}} 中选择您的[应用程序 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/resources)。
+	1. 在 {{site.data.keyword.dev_console}} 中选择您的[应用程序 ](https://cloud.ibm.com/resources){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 	2. 单击**下载代码**。
 {: tsResolve}
@@ -243,8 +243,8 @@ ibmcloud cs cluster-config <cluster-name>
 无法执行操作：退出状态 1：已拒绝：请求对资源的访问被拒绝
 
 
-失败
-将标记为“registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1”的 Run 映像推送到 Docker 注册表时失败，原因：退出状态 1
+FAILED
+Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
 {: screen}
 {: tsSymptoms}
@@ -265,11 +265,11 @@ ibmcloud cr namespaces
 
 在尝试启动应用程序时，可能会显示以下故障：
 ```
-失败
-无法确定应用程序的语言。
+FAILED
+Could not determine the language of your app.
 
-请尝试使用 --language 标志直接指定应用程序的语言。
-
+Try using the --language flag to specify the language of your app 
+directly. 
 ```
 {: screen}
 {: tsSymptoms}
@@ -296,13 +296,95 @@ ibmcloud cr namespaces
 - 有关如何使用 `Node.js` 应用程序解决此类问题的更多信息，请参阅[针对云部署启用现有 Node.js 应用程序](/docs/node?topic=nodejs-enable_existing#enable_existing)。
 {: tsResolve}
 
-<!--
-## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
+## 如何单独手动安装 {{site.data.keyword.dev_cli_notm}} CLI 组件
 {: #ts-cli-install-devtools-manually}
 {: troubleshoot}
 
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
+要单独手动安装 {{site.data.keyword.dev_cli_notm}} CLI 组件，可以执行以下[步骤](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)。
 
+## 为什么我无法构建 Docker 映像？
+{: $ts-cli-docker}
+{: troubleshoot}
 
+如果看到以下错误： 
+```
+FAILED
+An error exit status 1 was encountered while building the Docker 
+image.
+```
+{: screen}
 
+此错误可能是以下某个原因导致的：
+- Docker 未安装。
+- Docker 守护程序未在运行。
+{: tsCauses}
+
+确保 Docker 已安装并正在运行：
+- 要安装或启动 [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
+- 要安装或启动 [Docker for Windows](https://docs.docker.com/docker-for-windows/install/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
+- 要安装或启动 [Docker for Linux](https://docs.docker.com/v17.12/install/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
+{: tsResolve}
+
+## 如何解决 helm 版本不兼容的问题？
+{: ts-cli-helm}
+{: troubleshoot}
+
+如果客户机和服务器的 helm 版本不同步，那么可能会看到以下错误：
+```
+FAILED
+Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
+configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
+cannot list resource "configmaps" in API group "" in the namespace 
+"kube-system"
+```
+{: screen}
+
+```
+FAILED
+The 'helm upgrade ' command failed to complete due to: exit status 1
+```
+{: screen}
+
+要解决此问题，请将客户机版本设置为与集群版本相同。例如，要安装 2.8.1 helm 版本，请运行以下命令：
+{: tsResolve}
+
+* 对于 Mac 和 Linux，请运行以下命令：
+  ```
+  export DESIRED_VERSION=v2.8.1
+
+  curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+  export HELM_HOME=~/.helm
+  ```
+
+* 对于 Windows，以管理员身份执行以下操作：
+  下载并安装 `helm` 二进制文件：[https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+  
+  在 PowerShell 终端中，使用以下命令：
+  ```
+  Set-Location Env:
+  Set-Item HELM_HOME C:\.helm\
+  ```
+
+## 为什么使用包含“@”的用户名时 ibmcloud dev 构建会失败？
+{: ts-cli-username}
+{: troubleshoot}
+在映像构建过程中，您的用户名用于 Docker 工具映像中的用户。如果用户名包含诸如“@”或“-”的任何特殊字符，那么 Docker 映像构建过程会失败，并且可能会发生以下错误：
+```
+Image will have user johnsmith@acme.com with id 501 added
+
+Executing docker image build  --file Dockerfile-tools --tag pythonmicroservicewithflaskfnzat-flask-tools --rm --pull --build-arg bx_dev_userid=501 --build-arg bx_dev_user=johnsmith@acme.com .
+
+FAILED
+An error exit status 1 was encountered while building the Docker image.
+
+Dumping output from the command:
+```
+{: screen}
+
+要解决此问题，请将您的用户名更改为不包含任何特殊字符，或者指定以下标志以改为使用 root 用户：
+```
+ibmcloud dev build --use-root-user-tools
+```
+{: codeblock}
+{: tsResolve}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: shell autocompletion, bash, linux shell, macos shell, autocompletion, autocompletion support, shell
+keywords: cli, shell autocompletion, bash, linux shell, macos shell, autocompletion, autocompletion support, shell
 
 subcollection: cloud-cli
 

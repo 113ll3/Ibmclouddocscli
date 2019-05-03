@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: ibmcloud account, managing accounts, managing users, managing orgs, cloud foundry, account space, account, commands, account update, add certificate, remove certificate
+keywords: cli, ibmcloud account cli, managing accounts cli, managing users cli, managing orgs, cloud foundry user cli, account space cli, account, account orgs, account update command, add certificate cli, remove certificate command, manage cf users cli
 
 subcollection: cloud-cli
 
@@ -273,7 +273,7 @@ Questo comando ha la stessa funzione e le stesse opzioni del comando [cf delete-
 Visualizza gli utenti nell'organizzazione specificata per il ruolo.
 
 ```
-ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
+ibmcloud account org-users NOME_ORGANIZZAZIONE [-r, --region REGIONE] [-a, --all]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
@@ -282,10 +282,10 @@ ibmcloud account org-users ORG_NAME [-a] [--output FORMAT]
 <dl>
 <dt>NOME_ORGANIZZAZIONE (obbligatorio)</dt>
 <dd>Il nome dell'organizzazione.</dd>
-<dt>-a (facoltativo)</dt>
+<dt>-a, -all (facoltativo)</dt>
 <dd>Elenca tutti gli utenti dell'organizzazione specificata, non raggruppati per ruolo.</dd>
-<dt>--output FORMATO (facoltativo)</dt>
-<dd>--output valore  Specifica il formato di output, al momento è supportato solo JSON.</dd>
+<dt>-r, --region REGIONE (facoltativo)</dt>
+<dd>Nome della regione. Se non specificato, il valore predefinito è la regione corrente.</dd>
 </dl>
 
 ## ibmcloud account org-user-add
@@ -534,7 +534,7 @@ Mostra i dettagli dell'account
 ibmcloud account show
 ```
 
-<strong>Prerequisiti</strong>:  Endpoint, Accesso
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
 <strong>Opzioni del comando</strong>:
 <dl>
@@ -557,7 +557,7 @@ Aggiorna uno specifico account.
 ibmcloud account update (--service-endpoint-enable true | false)
 ```
 
-<strong>Prerequisiti</strong>:  Endpoint, Accesso
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
 <strong>Opzioni del comando</strong>:
 <dl>
@@ -571,6 +571,41 @@ Abilita la connettività agli endpoint del servizio per l'account corrente:
 
 ```
 ibmcloud account update --service-endpoint-enable true
+```
+
+## ibmcloud account audit-logs
+{: #ibmcloud_account_audit_logs}
+
+Elenca i log di controllo dell'account Softlayer
+
+```
+account audit-logs [-u, --user-name NOME_UTENTE] [-t, --object-type TIPO_OGGETTO] [-o, --object OGGETTO] [-a, --action AZIONE] [-s, --start-date DATA_INIZIO] [-e, --end-date DATA_FINE]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+<dl>
+  <dt>-a, --action <i>AZIONE</i></dt>
+  <dd>Azione. Elenca i log di controllo con l'azione fornita.</dd>
+  <dt>-e, --end-date <i>DATA_FINE</i></dt>
+  <dd>Data di fine. Elenca i log di controllo prima della data di fine. I formati supportati sono yyyy-MM-ddTHH:mm:ss.</dd>
+  <dt>-o, --object <i>OGGETTO</i></dt>
+  <dd>Oggetto. Elenca i log di controllo con l'oggetto fornito.</dd>
+  <dt>-t, --object-type <i>TIPO_OGGETTO</i></dt>
+  <dd>Tipo di oggetto. Elenca i log di controllo con il tipo di oggetto fornito.</dd>
+  <dt>-s, --start-date <i>DATA_INIZIO</i></dt>
+  <dd>Data di inizio. Elenca i log di controllo dopo la data di inizio. I formati supportati sono yyyy-MM-ddTHH:mm:ss.</dd>
+  <dt>-u, --user-name <i>NOME_UTENTE</i></dt>
+  <dd>Nome utente. Elenca i log di controllo con il nome utente fornito.</dd>
+</dl>
+
+<strong>Esempi</strong>:
+
+Elenca i log di controllo
+
+```
+ibmcloud account audit-logs
 ```
 
 ## ibmcloud account users

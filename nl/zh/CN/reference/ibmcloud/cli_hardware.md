@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-03"
 
-keywords: classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
+keywords: cli, classic infrastructure, bare metal, ibmcloud sl hardware, hardware, power-cycle, firmware
 
 subcollection: cloud-cli
 
@@ -184,7 +184,7 @@ ibmcloud sl hardware list [OPTIONS]
 <dd>按所有者标识过滤。</dd>
 <dt>--sortby</dt>
 <dd>要作为排序依据的列，缺省值：hostname，选项：id、guid、hostname、domain、public_ip、private_ip、datacenter、status、ipmi_ip、created 或 created_by。</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>要显示的列，缺省值：id、hostname、domain、public_ip、private_ip、datacenter 和 status，选项：guid、cpu、memory、os、ipmi_ip、created、created_by 或 tags。</dd>
 </dl>
 

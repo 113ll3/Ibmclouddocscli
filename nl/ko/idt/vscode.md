@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-04"
 
-keywords: ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
+keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
 subcollection: cloud-cli
 
@@ -69,7 +69,7 @@ Visual Studio Code의 명령 팔레트를 사용하여 확장 명령을 시작�
 * Visual Studio Code 편집기에서 프로젝트의 폴더를 로컬로 열기
 * `ibmcloud dev build` 명령을 사용하여 앱을 Docker 이미지에 빌드
 * `ibmcloud dev debug` 명령을 사용하여 개발을 위해 로컬 Docker의 앱 실행
-> 참고: 로컬 Docker 컨테이너 내부에서 실행 중인 Node.js 애플리케이션을 디버그하려면 [로컬 컨테이너에 대한 디버그 구성 추가](https://github.com/IBM-Bluemix/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 수행해야 합니다.
+> 참고: 로컬 Docker 컨테이너 내부에서 실행 중인 Node.js 애플리케이션을 디버그하려면 [로컬 컨테이너에 대한 디버그 구성 추가](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 수행해야 합니다.
 * `ibmcloud dev run` 명령을 사용하여 릴리스 모드로 로컬 Docker의 앱 실행
 * `ibmcloud dev deploy` 명령을 사용하여 {{site.data.keyword.cloud_notm}}에서 Cloud Foundry 런타임에 애플리케이션 배치
 

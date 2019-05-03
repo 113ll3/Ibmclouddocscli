@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-15"
 
-keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
+keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
 subcollection: cloud-cli
 
@@ -54,7 +54,7 @@ ibmcloud login
 
 如果您使用 `create`、`delete`、`list` 或 `code` 指令，則可能會顯示下列錯誤：
 ```
-Failed to <command> application.
+Failed to <command> app.
 ```
 {: screen}
 {: tsSymptoms}
@@ -126,8 +126,8 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 
 如果您使用 CLI 來建立應用程式，則可能會顯示下列錯誤：
 ```
-FAILED
-Application created, but could not get code
+FAILED                            
+App created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: screen}
@@ -149,7 +149,7 @@ https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/co
 
 * 使用 {{site.data.keyword.dev_console}}。
 
-	1. 在 {{site.data.keyword.dev_console}} 中選取[應用程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/resources)。
+	1. 在 {{site.data.keyword.dev_console}} 中選取[應用程式 ](https://cloud.ibm.com/resources){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 	2. 按一下**下載程式碼**。
 {: tsResolve}
@@ -243,7 +243,7 @@ Failed to execute the action:  exit status 1:denied: requested access to the res
 
 
 FAILED
-Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
+Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
 {: screen}
 {: tsSymptoms}
@@ -265,9 +265,9 @@ ibmcloud cr namespaces
 系統嘗試啟動您的應用程式之後，可能會顯示下列失敗：
 ```
 FAILED
-Could not determine the language of your application.
+Could not determine the language of your app.
 
-Try using the --language flag to specify the language of your application 
+Try using the --language flag to specify the language of your app 
 directly. 
 ```
 {: screen}
@@ -295,13 +295,95 @@ directly.
 - 如需解決 `Node.js` 應用程式這類問題的相關資訊，請參閱[啟用現有的 Node.js 應用程式以進行雲端部署](/docs/node?topic=nodejs-enable_existing#enable_existing)。
 {: tsResolve}
 
-<!--
-## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
+## 如何以手動方式個別安裝 {{site.data.keyword.dev_cli_notm}} CLI 元件
 {: #ts-cli-install-devtools-manually}
 {: troubleshoot}
 
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
+若要以手動方式個別安裝 {{site.data.keyword.dev_cli_notm}} CLI 元件，您可以遵循下列[步驟](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)。
 
+## 為何無法建置 Docker 映像檔？
+{: $ts-cli-docker}
+{: troubleshoot}
 
+如果您看到下列錯誤： 
+```
+FAILED
+An error exit status 1 was encountered while building the Docker 
+image.
+```
+{: screen}
 
+此錯誤可能是由下列其中一個原因所造成：
+- 未安裝 Docker。
+- Docker 常駐程式不在執行中。
+{: tsCauses}
+
+請確定您已安裝並執行 Docker：
+- 安裝或啟動 [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
+- 安裝或啟動 [Docker for Windows](https://docs.docker.com/docker-for-windows/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
+- 安裝或啟動 [Docker for Linux](https://docs.docker.com/v17.12/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
+{: tsResolve}
+
+## 如何解決不相容的 helm 版本？
+{: ts-cli-helm}
+{: troubleshoot}
+
+如果用戶端和伺服器的 helm 版本不同步，您可能會看到下列錯誤：
+```
+FAILED
+Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
+configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
+cannot list resource "configmaps" in API group "" in the namespace 
+"kube-system"
+```
+{: screen}
+
+```
+FAILED
+The 'helm upgrade ' command failed to complete due to: exit status 1
+```
+{: screen}
+
+若要解決此問題，請將用戶端的版本設為與叢集版本相同的版本。例如，若要安裝 2.8.1 helm 版，請執行下列指令：
+{: tsResolve}
+
+* 若為 Mac 及 Linux，請執行下列指令：
+  ```
+  export DESIRED_VERSION=v2.8.1
+
+  curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+  export HELM_HOME=~/.helm
+  ```
+
+* 若為 Windows，請以管理者身分執行下列動作：
+  下載並安裝 `helm` 二進位檔，網址為 [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window}![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+  
+  從 PowerShell 終端機，使用下列指令：
+  ```
+  Set-Location Env:
+  Set-Item HELM_HOME C:\.helm\
+  ```
+
+## 使用者名稱包含 "@" 時，為何 ibmcloud dev build 會失敗？
+{: ts-cli-username}
+{: troubleshoot}
+在映像檔建置程序期間，使用者名稱用於 Docker 工具映像檔中的使用者。如果使用者名稱包含任何特殊字元，例如 '@' 或 '-'，則 Docker 映像檔建置程序會失敗，且可能會發生下列錯誤：
+```
+Image will have user johnsmith@acme.com with id 501 added
+
+Executing docker image build  --file Dockerfile-tools --tag pythonmicroservicewithflaskfnzat-flask-tools --rm --pull --build-arg bx_dev_userid=501 --build-arg bx_dev_user=johnsmith@acme.com .
+
+FAILED
+An error exit status 1 was encountered while building the Docker image.
+
+Dumping output from the command:
+```
+{: screen}
+
+若要解決此問題，請將您的使用者名稱變更為不包含任何特殊字元，或指定下列旗標以改用 root 使用者：
+```
+ibmcloud dev build --use-root-user-tools
+```
+{: codeblock}
+{: tsResolve}

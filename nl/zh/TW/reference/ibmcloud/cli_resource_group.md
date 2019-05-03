@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-22"
 
-keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas
+keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
 subcollection: cloud-cli
 
@@ -223,21 +223,25 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 
 列出服務實例。
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP] [--long] [--output FORMAT]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>--service-name</dt>
+  <dt>--service-name <i>SERVICE_NAME</i></dt>
   <dd>隸屬服務的名稱</dd>
-  <dt>--location</dt>
+  <dt>--location <i>LOCATION</i></dt>
   <dd>依位置進行過濾</dd>
+  <dt>--type <i>INSTANCE_TYPE</i></dt>
+  <dd>實例的類型。若未指定，則會使用 `service_instance` 類型，使用 all 可列出實例的所有類型。</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>資源群組名稱</dd>
   <dt>--long</dt>
   <dd>在輸出中顯示其他欄位</dd>
-  <dt>--output FORMAT（選用）</dt>
-  <dd>--output value  指定輸出格式，目前只支援 JSON。</dd>
+  <dt>--output <i>FORMAT</i></dt>
+  <dd>指定輸出格式，目前只支援 JSON。</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -286,7 +290,7 @@ ibmcloud resource service-instance my-service-instance
 
 建立服務實例。
 ```
-ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVICE_PLAN_NAME LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -299,12 +303,16 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dd>服務的名稱或 ID。若要列出服務供應項目，請使用 `ibmcloud catalog service-marketplace` [指令](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace)。</dd>
   <dt>SERVICE_PLAN_NAME 或 SERVICE_PLAN_ID（必要）</dt>
   <dd>服務方案的名稱或 ID</dd>
-  <dt>LOCATION</dt>
+  <dt>LOCATION（必要）</dt>
   <dd>用於建立服務實例的目標位置或環境</dd>
-  <dt>-p, --parameters</dt>
-  <dd>要建立服務實例之參數的 JSON 檔案或 JSON 字串</dd>
-  <dt>-d, --deployment</dt>
+  <dt>-d, --deployment <i>DEPLOYMENT_NAME</i></dt>
   <dd>部署的名稱</dd>
+  <dt>-p, --parameters <i>@JSONFILE 或 JSON_STRING</i></dt>
+  <dd>要建立服務實例之參數的 JSON 檔案或 JSON 字串</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>資源群組名稱</dd>
+  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
+  <dd>服務端點的類型</dd>
 </dl>
 
 <strong>範例</strong>：
@@ -320,7 +328,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 
 更新服務實例。
 ```
-ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
+ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -331,12 +339,16 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
   <dd>服務實例的名稱，與 ID 不能同時使用</dd>
   <dt>ID（必要）</dt>
   <dd>服務實例的 ID，與 NAME 不能同時使用</dd>
-  <dt>-n, --name</dt>
+  <dt>-n, --name <i>NEW_NAME</i></dt>
   <dd>新的服務實例名稱</dd>
-  <dt>--service-plan-id</dt>
+  <dt>--service-plan-id <i>SERVICE_PLAN_ID</i></dt>
   <dd>新的服務方案 ID</dd>
-  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_STRING</i></dt>
   <dd>要建立服務實例之參數的 JSON 檔案或 JSON 字串</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>資源群組名稱</dd>
+  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
+  <dd>服務端點的類型</dd>
   <dt>-f, --force</dt>
   <dd>強制更新，而不進行確認</dd>
 </dl>
@@ -438,7 +450,7 @@ ibmcloud resource bindings my-service-alias my-app
 
 建立服務連結。
 ```
-ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
+ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-n BINDING_NAME] [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
@@ -447,14 +459,16 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 <dl>
   <dt>SERVICE_ALIAS_NAME（必要）</dt>
   <dd>服務別名</dd>
-  <dt>APP_NAME</dt>
+  <dt>APP_NAME（必要）</dt>
   <dd>CloudFoundry 應用程式名稱</dd>
-  <dt>ROLE_NAME</dt>
+  <dt>ROLE_NAME（必要）</dt>
   <dd>使用者角色的名稱</dd>
-  <dt>--service-id</dt>
+  <dt>--service-id <i>SERVICE_ID</i></dt>
   <dd>角色所屬服務 ID 的名稱或 UUID</dd>
-  <dt>-p, --parameter</dt>
+  <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>參數 JSON 檔案或 JSON 字串</dd>
+  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
+  <dd>服務端點的類型</dd>
   <dt>-f, --force</dt>
   <dd>強制建立，而不進行確認</dd>
 </dl>
@@ -569,29 +583,33 @@ ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/5
 
 建立服務金鑰。
 ```
-ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
+ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>必要條件</strong>：端點、登入、目標
 
 <strong>指令選項</strong>：
 <dl>
-  <dt>NAME</dt>
+  <dt>NAME（必要）</dt>
   <dd>金鑰的名稱</dd>
-  <dt>ROLE_NAME</dt>
+  <dt>ROLE_NAME（必要）</dt>
   <dd>使用者角色的名稱</dd>
-  <dt>--instance-id</dt>
+  <dt>--instance-id <i>SERVICE_INSTANCE_ID</i></dt>
   <dd>服務實例 ID</dd>
-  <dt>--instance-name</dt>
+  <dt>--instance-name <i>SERVICE_INSTANCE_NAME</i></dt>
   <dd>服務實例名稱</dd>
-  <dt>--alias-id</dt>
+  <dt>--alias-id <i>SERVICE_ALIAS_ID</i></dt>
   <dd>服務別名 ID</dd>
-  <dt>--alias-name</dt>
+  <dt>--alias-name <i>SERVICE_ALIAS_NAME</i></dt>
   <dd>服務別名</dd>
-  <dt>--service-id</dt>
+  <dt>--service-id <i>SERVICE_ID</i></dt>
   <dd>角色所屬服務 ID 的名稱或 UUID</dd>
-  <dt>-p, --parameters</dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>參數 JSON 檔案或 JSON 字串</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>資源群組名稱</dd>
+  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
+  <dd>服務端點的類型</dd>
   <dt>-f, --force</dt>
   <dd>強制建立，而不進行確認</dd>
 </dl>
@@ -900,7 +918,7 @@ ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-bi
 
 搜尋具有指定「雲端資源名稱 (CRN)」的資源：
 ```
-ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
+ibmcloud resource search "crn:\"crn:v1:bluemix:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 搜尋具有指定標籤的資源：
@@ -936,7 +954,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
   <dt>-o, -offset</dt>
   <dd>開始的標籤位置號碼</dd>
   <dt>-l, -limit</dt>
-  <dd>要傳回的標籤數目（上限為 10000）</dd>
+  <dd>要傳回的標籤數（上限為 1000，預設為 100）</dd>
   <dt>-p; --provider</dt> 
   <dd>搜尋標準基礎架構標籤時，請指定 classic-infrastructure</dd>
   <dt>-d, --details</dt>
@@ -958,10 +976,44 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names（必要）</dt>
   <dd>以逗點區隔的標籤名稱清單</dd>
   <dt>--resource-id</dt>
-  <dd>將連接標籤之資源的 CRN；針對標準基礎架構資源，它是資源的 ID</dd>
+  <dd>將連接標籤之資源的 CRN；對於標準基礎架構資源，它是資源的 ID。您可以使用 'ibmcloud resourcesearch' 指令，來取得資源的 CRN 或 ID。</dd>
   <dt>--resource-type</dt>
   <dd>將連接標籤之標準基礎架構資源的資源類型；如果將標籤連接至標準基礎架構資源，則此為必要參數。--resource-type 的可能值為：SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall 及 SoftLayer_Virtual_Guest。</dd>
 </dl>
+
+<strong>範例</strong>：
+
+* 若要將標籤 `MyTag` 連接至名稱為 `MyCluster` 的 Kubernetes 叢集，請先尋找您要標示之叢集的 CRN：
+  ```
+  ibmcloud resource search 'type:k8\-cluster AND name:MyCluster'
+  ```
+  {: codeblock}
+
+  請記下 CRN，這是類似於下列範例的字串： 
+  ```
+  crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
+  ```
+  {: screen}
+
+  若要連接標籤，請執行下列指令：
+  ```
+  ibmcloud resource tag-attach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
+  ```
+  {: codeblock}
+
+* 若要將標籤 `MyTag` 連接至名稱為 `MyVM` 的標準基礎架構虛擬來賓，請先尋找您要標示之虛擬來賓的 ID：
+  ```
+  ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
+  ```
+  {: codeblock}
+
+  請記下 ID，這是類似於 `48373549` 的字串。
+
+  若要連接標籤，請執行下列指令：
+  ```
+  ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
+  ```
+  {: codeblock}
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
@@ -978,7 +1030,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names（必要）</dt>
   <dd>以逗點區隔的標籤名稱清單</dd>
   <dt>--resource-id</dt>
-  <dd>將分離標籤之資源的 CRN；針對標準基礎架構資源，它是資源的 ID</dd>
+  <dd>將從中分離標籤之資源的 CRN；若為標準基礎架構資源，其為資源的 ID。您可以使用 'ibmcloud resource search' 指令，來取得資源的 CRN 或 ID。</dd>
   <dt>--resource-type</dt>
   <dd>將分離標籤之標準基礎架構資源的資源類型；如果將標籤連接至標準基礎架構資源，則此為必要參數。--resource-type 的可能值為：SoftLayer_Virtual_DedicatedHost、SoftLayer_Hardware、SoftLayer_Network_Application_Delivery_Controller、SoftLayer_Network_Subnet_IpAddress、SoftLayer_Network_Vlan、SoftLayer_Network_Vlan_Firewall 及 SoftLayer_Virtual_Guest。</dd>
 </dl>

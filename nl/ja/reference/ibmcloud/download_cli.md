@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-19"
 
-keywords: stand-alone cli, install cli, uninstall cli, cli, plugin, plug-in, command line, command-line, windows powershell, linux, macos, installer
+keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
 subcollection: cloud-cli
 
@@ -87,7 +87,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 ## カスタム・ディレクトリーへのインストール
 {: #install-custom-dir}
 
-インストーラーまたは shell スクリプトを使用して {{site.data.keyword.Bluemix_notm}} CLI をインストールすると、バイナリーがシステム・ディレクトリーに移動します。 別のディレクトリーを指定する場合は、以下の手順を実行します。
+インストーラーまたは shell スクリプトを使用して {{site.data.keyword.cloud_notm}} CLI をインストールすると、バイナリーがシステム・ディレクトリーに移動します。 別のディレクトリーを指定する場合は、以下の手順を実行します。
 
 ### ステップ 1: 使用している OS に基づいたバイナリー・パッケージを、以下のリンクを使用してダウンロードします。
 {: #step1-custom-dir}
@@ -172,7 +172,7 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
 #### バージョン `0.9.0` 以降
 
 1. 端末を開き、次のコマンドを実行します。
-  * `/usr/local/ibmcloud/bin/uninstall`
+  * `/usr/local/ibmcloud/uninstall`
 2. カスタム・オートコンプリート機能スクリプトがあれば、それをクリーンアップします。 詳しくは、『[{{site.data.keyword.cloud_notm}} CLI の shell オートコンプリート機能の有効化 (Linux および MacOS のみ)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)』を参照してください。
 
 ## {{site.data.keyword.cloud_notm}} CLI をさらに探索するためのその他のリンク

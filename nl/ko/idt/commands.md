@@ -2,7 +2,11 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-15"
+
+keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
+
+subcollection: cloud-cli
 
 ---
 
@@ -17,8 +21,8 @@ lastupdated: "2019-02-14"
 # {{site.data.keyword.dev_cli_notm}} CLI 플러그인(ibmcloud dev) 명령
 {: #idt-cli}
 
-버전: 2.1.4
-릴리스 날짜: 2018년 8월 31일
+버전: 2.1.18
+릴리스 날짜: 2019년 3월 28일
 
 2018년 5월 현재, {{site.data.keyword.cloud}} CLI 명령인 `bluemix` 및 `bx`는 이제 `ibmcloud`입니다. 그러나 나중에 제거되기 전까지는 여전히 `bluemix` 및 `bx` CLI 명령을 사용할 수 있습니다.
 {: tip}
@@ -165,20 +169,20 @@ ibmcloud dev delete <applicationName>
 
 애플리케이션을 {{site.data.keyword.cloud_notm}}에 Cloud Foundry 애플리케이션으로 배치하려면 애플리케이션의 루트 디렉토리에 `manifest.yml` 파일이 있어야 합니다.
 
-애플리케이션을 컨테이너로 배치하기 전에 [Kubernetes](https://kubernetes.io/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 및 [Helm](https://github.com/kubernetes/helm){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")을 로컬에 설치해야 합니다. Helm 클라이언트 버전이 Helm 서버 버전보다 높지 않도록 하십시오. `helm version`을 실행하여 두 버전 모두 확인할 수 있습니다. 클라이언트로는 v2.4.2 버전을 사용하는 것이 좋습니다.
+애플리케이션을 컨테이너로 배치하기 전에 [Kubernetes](https://kubernetes.io/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 및 [Helm](https://github.com/helm/helm){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")을 로컬에 설치해야 합니다. Helm 클라이언트 버전이 Helm 서버 버전보다 높지 않도록 하십시오. `helm version`을 실행하여 두 버전 모두 확인할 수 있습니다. 클라이언트로는 v2.4.2 버전을 사용하는 것이 좋습니다.
 
 애플리케이션을 Kubernetes에 배치하려면 `cli-config.yml`에서 `deploy-target`을 `container`로 지정하거나 매개변수 `-t container`를 사용해야 합니다.
 
 Kubernetes 배치를 구성하는 데 필요한 다른 매개변수 또한 `cli-config.yml`에 지정하거나 명령행 인수를 사용하여 지정할 수 있습니다. `cli-config.yml`에서 이러한 항목을 정의하지 않은 경우에는 `-t container` 매개변수를 사용하여 배치해야 합니다. 그러면 모든 기타 값에 대한 프롬프트가 표시됩니다.
 
 ```yaml
-    chart-path: "chart/myapplication"
+chart-path: "chart/myapplication"
 
-    deploy-target: "container"
+deploy-target: "container"
 
-    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
+deploy-image-target: "registry.<IBM Cloud Region>.icr.io/<Container Registry Namespace>/<App-Name>"
 
-    ibm-cluster: "mycluster"
+ibm-cluster: "mycluster"
 ```
 
 `cli-config.yml`에서는 예에 표시되어 있는 바와 같이 `chart-path` 특성에 Helm 차트의 위치를 정의하고 `deploy-image-target`을 구성하도록 선택할 수 있습니다. `cli-config.yml`의 `deploy-image-target` 요소는 `chart/values.yml` 파일의 `repository` 및 `tag` 요소 대신 사용됩니다. 구체적으로 {{site.data.keyword.cloud_notm}}에 배치하려면 구성 요소 `ibm-cluster`를 {{site.data.keyword.cloud_notm}}에서 작성한 Kubernetes 클러스터의 이름으로 설정하십시오.
@@ -226,7 +230,7 @@ ibmcloud dev deploy
 #### `ibm-cluster`
 {: #ibm-cluster}
 
-* {{site.data.keyword.Bluemix_notm}}로의 컨테이너 배치에서 Kubernetes 클러스터의 이름을 정의하기 위해 선택적으로 사용되는 매개변수입니다.
+* {{site.data.keyword.cloud_notm}}로의 컨테이너 배치에서 Kubernetes 클러스터의 이름을 정의하기 위해 선택적으로 사용되는 매개변수입니다.
 * 사용법: `ibmcloud dev deploy --ibm-cluster [cluster-name]`
 
 #### `host`
@@ -330,7 +334,7 @@ ibmcloud dev enable
 #### `no-create`
 {: #enable-no-create}
 
-* 로컬로 인에이블먼트 파일을 작성하는 동안 {{site.data.keyword.Bluemix_notm}}에 앱을 작성하지 못하도록 하는 매개변수입니다.
+* 로컬로 인에이블먼트 파일을 작성하는 동안 {{site.data.keyword.cloud_notm}}에 앱을 작성하지 못하도록 하는 매개변수입니다.
 * 사용법: `ibmcloud dev enable --no-create`
 
 ## get-credentials

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-22"
 
-keywords: manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas
+keywords: cli, manage resources, resource group, ibmcloud resource group, ibmcloud resource, service-instance, quotas, resource group cli, resource cli
 
 subcollection: cloud-cli
 
@@ -223,21 +223,25 @@ ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_I
 
 Serviceinstanzen auflisten
 ```
-ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--long] [--output FORMAT]
+ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LOCATION] [--type INSTANCE_TYPE] [-g RESOURCE_GROUP] [--long] [--output FORMAT]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>--service-name</dt>
+  <dt>--service-name <i>SERVICE_NAME</i></dt>
   <dd>Der Name des zugehörigen Service</dd>
-  <dt>--location</dt>
+  <dt>--location <i>LOCATION</i></dt>
   <dd>Nach Position filtern</dd>
+  <dt>--type <i>INSTANCE_TYPE</i></dt>
+  <dd>Instanztypen. Der Typ `service_instance` wird verwendet, wenn keine Angabe gemacht wird; mit 'all' können alle Instanztypen aufgelistet werden.</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Name der Ressourcengruppe</dd>
   <dt>--long</dt>
   <dd>Weitere Felder in Ausgabe anzeigen</dd>
-  <dt>--output FORMAT (optional)</dt>
-  <dd>--output value  Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. </dd>
+  <dt>--output <i>FORMAT</i></dt>
+  <dd>Ausgabeformat angeben. Zum gegenwärtigen Zeitpunkt wird nur JSON unterstützt. </dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -286,7 +290,7 @@ ibmcloud resource service-instance my-service-instance
 
 Serviceinstanz erstellen
 ```
-ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_PLAN_NAME|SERVICE_PLAN_ID LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ]
+ibmcloud resource service-instance-create NAME (SERVICE_NAME | SERVICE_ID) SERVICE_PLAN_NAME LOCATION [-d, --deployment DEPLOYMENT_NAME] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -299,12 +303,16 @@ ibmcloud resource service-instance-create NAME SERVICE_NAME|SERVICE_ID SERVICE_P
   <dd>Der Name oder die ID des Service. Verwenden Sie zum Auflisten von Serviceangeboten den Befehl `ibmcloud catalog service-marketplace`[](/docs/cli/reference/ibmcloud/cli_catalog.html#ibmcloud_catalog_service_marketplace).</dd>
   <dt>SERVICE_PLAN_NAME oder SERVICE_PLAN_ID (erforderlich)</dt>
   <dd>Der Name oder die ID des Serviceplans</dd>
-  <dt>LOCATION</dt>
+  <dt>LOCATION (erforderlich)</dt>
   <dd>Zielposition oder -umgebung zum Erstellen der Serviceinstanz</dd>
-  <dt>-p, --parameters</dt>
-  <dd>Die JSON-Datei oder JSON-Zeichenfolge von Parametern zum Erstellen einer Serviceinstanz</dd>
-  <dt>-d, --deployment</dt>
+  <dt>-d, --deployment <i>DEPLOYMENT_NAME</i></dt>
   <dd>Name der Bereitstellung</dd>
+  <dt>-p, --parameters <i>@JSONFILE or JSON_STRING</i></dt>
+  <dd>Die JSON-Datei oder JSON-Zeichenfolge von Parametern zum Erstellen einer Serviceinstanz</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Name der Ressourcengruppe</dd>
+  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
+  <dd>Typen der Serviceendpunkte</dd>
 </dl>
 
 <strong>Beispiele</strong>:
@@ -320,7 +328,7 @@ ibmcloud resource service-instance-create my-service-instance test-service test-
 
 Serviceinstanz aktualisieren:
 ```
-ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [--parameters @JSON_FILE | JSON_STRING] [-f, --force]
+ibmcloud resource ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -331,12 +339,16 @@ ibmcloud resource service-instance-update (NAME|ID) [-n, --name NEW_NAME] [--ser
   <dd>Name der Serviceinstanz, gegenseitig ausschließend mit ID</dd>
   <dt>ID (erforderlich)</dt>
   <dd>ID der Serviceinstanz, gegenseitig ausschließend mit NAME</dd>
-  <dt>-n, --name</dt>
+  <dt>-n, --name <i>NEW_NAME</i></dt>
   <dd>Der neue Name der Serviceinstanz</dd>
-  <dt>--service-plan-id</dt>
+  <dt>--service-plan-id <i>SERVICE_PLAN_ID</i></dt>
   <dd>Die neue ID des Serviceplans</dd>
-  <dt>--parameters @JSON_FILE | JSON_STRING</dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_STRING</i></dt>
   <dd>Die JSON-Datei oder JSON-Zeichenfolge von Parametern zum Erstellen einer Serviceinstanz</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Name der Ressourcengruppe</dd>
+  <dt>--service-endpoints <i>SERVICE_ENDPOINTS_TYPE</i></dt>
+  <dd>Typen der Serviceendpunkte</dd>
   <dt>-f, --force</dt>
   <dd>Aktualisierung ohne Bestätigung erzwingen</dd>
 </dl>
@@ -438,7 +450,7 @@ ibmcloud resource bindings my-service-alias my-app
 
 Servicebindung erstellen:
 ```
-ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]
+ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [-n BINDING_NAME] [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
@@ -447,14 +459,16 @@ ibmcloud resource service-binding-create SERVICE_ALIAS_NAME APP_NAME ROLE_NAME [
 <dl>
   <dt>SERVICE_ALIAS_NAME (erforderlich)</dt>
   <dd>Der Servicealiasname</dd>
-  <dt>APP_NAME</dt>
+  <dt>APP_NAME (erforderlich)</dt>
   <dd>Der Cloud Foundry-Anwendungsname</dd>
-  <dt>ROLE_NAME</dt>
+  <dt>ROLE_NAME (erforderlich)</dt>
   <dd>Der Name der Benutzerrolle</dd>
-  <dt>--service-id</dt>
+  <dt>--service-id <i>SERVICE_ID</i></dt>
   <dd>Der Name oder die UUID der Service-ID, zu der die Rolle gehört</dd>
-  <dt>-p, --parameter</dt>
+  <dt>-p, --parameter <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>JSON-Datei oder JSON-Zeichenfolge als Parameter</dd>
+  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
+  <dd>Typ des Serviceendpunkts</dd>
   <dt>-f, --force</dt>
   <dd>Erstellung ohne Bestätigung erzwingen</dd>
 </dl>
@@ -569,29 +583,33 @@ ibmcloud resource service-key crn:v1:bluemix:public:cloudantnosqldb:us-south:a/5
 
 Serviceschlüssel erstellen:
 ```
-ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME ) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-f, --force]]
+ibmcloud resource service-key-create NAME ROLE_NAME ( --instance-id SERVICE_INSTANCE_ID | --instance-name SERVICE_INSTANCE_NAME | --alias-id SERVICE_ALIAS_ID | --alias-name SERVICE_ALIAS_NAME) [--service-id SERVICE_ID] [-p, --parameters @JSON_FILE | JSON_TEXT] [-g RESOURCE_GROUP] [--service-endpoint SERVICE_ENDPOINT_TYPE] [-f, --force]
 ```
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel
 
 <strong>Befehlsoptionen</strong>:
 <dl>
-  <dt>NAME</dt>
+  <dt>NAME (erforderlich)</dt>
   <dd>Der Name des Schlüssels</dd>
-  <dt>ROLE_NAME</dt>
+  <dt>ROLE_NAME (erforderlich)</dt>
   <dd>Der Name der Benutzerrolle</dd>
-  <dt>--instance-id</dt>
+  <dt>--instance-id <i>SERVICE_INSTANCE_ID</i></dt>
   <dd>Die Serviceinstanz-ID</dd>
-  <dt>--instance-name</dt>
+  <dt>--instance-name <i>SERVICE_INSTANCE_NAME</i></dt>
   <dd>Der Serviceinstanzname</dd>
-  <dt>--alias-id</dt>
+  <dt>--alias-id <i>SERVICE_ALIAS_ID</i></dt>
   <dd>Die Servicealias-ID</dd>
-  <dt>--alias-name</dt>
+  <dt>--alias-name <i>SERVICE_ALIAS_NAME</i></dt>
   <dd>Der Servicealiasname</dd>
-  <dt>--service-id</dt>
+  <dt>--service-id <i>SERVICE_ID</i></dt>
   <dd>Der Name oder die UUID der Service-ID, zu der die Rolle gehört</dd>
-  <dt>-p, --parameters</dt>
+  <dt>-p, --parameters <i>@JSON_FILE | JSON_TEXT</i></dt>
   <dd>JSON-Datei oder JSON-Zeichenfolge als Parameter</dd>
+  <dt>-g <i>RESOURCE_GROUP</i></dt>
+  <dd>Name der Ressourcengruppe</dd>
+  <dt>--service-endpoint <i>SERVICE_ENDPOINT_TYPE</i></dt>
+  <dd>Typ des Serviceendpunkts</dd>
   <dt>-f, --force</dt>
   <dd>Erstellung ohne Bestätigung erzwingen</dd>
 </dl>
@@ -901,7 +919,7 @@ ibmcloud resource search 'service_name:cloud-object-storage AND type:resource-bi
 
 Nach einer Ressource mit dem angegebenen CRN (Cloud Resource Name) suchen:
 ```
-ibmcloud resource search "crn:\"crn:v1:staging:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
+ibmcloud resource search "crn:\"crn:v1:bluemix:public:cloudantnosqldb:us-south:s/4948af7e-cc78-4321-998a-e549dd5e9210:41a031cd-e9e5-4c46-975d-9e4a6391322e:cf-service-instance:\""
 ```
 
 Nach einer Ressource mit dem angegebenen Tag suchen:
@@ -937,7 +955,7 @@ ibmcloud resource tags [-o, --offset OFFSET] [-l, --limit LIMIT] [-p, --provider
   <dt>-o, -offset</dt>
   <dd>Anfangspositionsnummer des Tags</dd>
   <dt>-l, -limit</dt>
-  <dd>Anzahl zurückzugebender Tags (maximal 10000)</dd>
+  <dd>Anzahl zurückzugebender Tags (maximal 1000, standardmäßig 100)</dd>
   <dt>-p; --provider</dt> 
   <dd>'classic-infrastructure' angeben, um nach Tags für die klassische Infrastruktur zu suchen</dd>
   <dt>-d, --details</dt>
@@ -959,10 +977,44 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names (erforderlich)</dt>
   <dd>Durch Kommas getrennte Liste der Tagnamen</dd>
   <dt>--resource-id</dt>
-  <dd>Die CRN der Ressource, der die Tags zugeordnet werden sollen; bei Ressourcen der klassischen Infrastruktur die ID der Ressource</dd>
+  <dd>Die CRN der Ressource, der die Tags zugeordnet werden sollen; bei Ressourcen der klassischen Infrastruktur die ID der Ressource. Sie können die CRN oder die ID der Ressource mit dem Befehl 'ibmcloud resource search' abrufen.</dd>
   <dt>--resource-type</dt>
   <dd>Der Ressourcentyp der klassischen Infrastrukturressource, der die Tags zugeordnet werden sollen. Dieser Parameter ist erforderlich, wenn ein Tag für eine klassische Infrastrukturressource zugeordnet wird. Mögliche Werte für '--resource-type' sind 'SoftLayer_Virtual_DedicatedHost', 'SoftLayer_Hardware', 'SoftLayer_Network_Application_Delivery_Controller', 'SoftLayer_Network_Subnet_IpAddress', 'SoftLayer_Network_Vlan', 'SoftLayer_Network_Vlan_Firewall' und 'SoftLayer_Virtual_Guest'. </dd>
 </dl>
+
+<strong>Beispiele</strong>:
+
+* Wenn Sie den Tag `MyTag` an einen Kubernetes-Cluster mit dem Namen `MyCluster` anhängen möchten, suchen Sie zuerst nach der CRN des Clusters, den Sie mit Tags versehen möchten:
+  ```
+  ibmcloud resource search 'type:k8\-cluster AND name:MyCluster'
+  ```
+  {: codeblock}
+
+  Notieren Sie die CRN, bei der es sich um eine Zeichenfolge ähnlich diesem Beispiel handelt: 
+  ```
+  crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
+  ```
+  {: screen}
+
+  Führen Sie den folgenden Befehl aus, um den Tag zuzuordnen:
+  ```
+  ibmcloud resource tag-attach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
+  ```
+  {: codeblock}
+
+* Wenn Sie den Tag `MyTag` an eine virtuelle Gastmaschine der klassischen Infrastruktur mit dem Namen `MyVM` anhängen möchten, suchen Sie zuerst nach der ID der virtuellen Gastmaschine, die Sie mit Tags versehen möchten:
+  ```
+  ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
+  ```
+  {: codeblock}
+
+  Notieren Sie die ID, bei der es sich um eine Zeichenfolge ähnlich `48373549` handelt.
+
+  Führen Sie den folgenden Befehl aus, um den Tag zuzuordnen:
+  ```
+  ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
+  ```
+  {: codeblock}
 
 ## ibmcloud resource tag-detach
 {: #ibmcloud_resource_tag_detach}
@@ -979,7 +1031,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names (erforderlich)</dt>
   <dd>Durch Kommas getrennte Liste der Tagnamen</dd>
   <dt>--resource-id</dt>
-  <dd>Die CRN der Ressource, für die die Tagzuordnung aufgehoben werden soll; bei Ressourcen der klassischen Infrastruktur die ID der Ressource</dd>
+  <dd>Die CRN der Ressource, für die die Tagzuordnung aufgehoben werden soll; bei Ressourcen der klassischen Infrastruktur die ID der Ressource. Sie können die CRN oder die ID der Ressource mit dem Befehl 'ibmcloud resource search' abrufen.</dd>
   <dt>--resource-type</dt>
   <dd>Der Typ der klassischen Infrastrukturressource, für die die Tagzuordnung aufgehoben werden soll. Dieser Parameter ist erforderlich, wenn ein Tag für eine klassische Infrastrukturressource zugeordnet wird. Mögliche Werte für '--resource-type' sind 'SoftLayer_Virtual_DedicatedHost', 'SoftLayer_Hardware', 'SoftLayer_Network_Application_Delivery_Controller', 'SoftLayer_Network_Subnet_IpAddress', 'SoftLayer_Network_Vlan', 'SoftLayer_Network_Vlan_Firewall' und 'SoftLayer_Virtual_Guest'. </dd>
 </dl>

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-15"
 
-keywords: troubleshoot cli, debug app cli, developer tools, ibmcloud cli, ibmcloud help, ibmcloud dev, cli, plugin, debug splug-in, command line, command-line, developer tools
+keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
 subcollection: cloud-cli
 
@@ -54,7 +54,7 @@ ibmcloud login
 
 Wenn Sie den Befehl `create`, `delete`, `list` oder `code` verwenden, wird möglicherweise der folgende Fehler angezeigt:
 ```
-Failed to <befehl> application.
+Failed to <command> app.
 ```
 {: screen}
 {: tsSymptoms}
@@ -127,7 +127,7 @@ Wählen Sie einen anderen Plan aus.
 Wenn Sie die Befehlszeilenschnittstelle (CLI) zum Erstellen einer App verwenden, wird möglicherweise der folgende Fehler angezeigt:
 ```
 FAILED                            
-Application created, but could not get code
+App created, but could not get code
 https://cloud.ibm.com/developer/projects/b22165f3-cbc6-4f73-876f-e33cbec199d4/code
 ```
 {: screen}
@@ -145,11 +145,11 @@ Rufen Sie den Code auf eine der folgenden Arten ab:
    ```
    {: codeblock}
 
-   Ersetzen Sie `<your-app-name>` durch den Namen der App, die Sie während der App-Erstellung angegeben haben.
+   Ersetzen Sie `<your-app-name>` durch den App-Namen, den Sie bei der App-Erstellung angegeben haben.
 
 * Öffnen Sie die {{site.data.keyword.dev_console}}.
 
-	1. Wählen Sie Ihre [App ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/resources) in der {{site.data.keyword.dev_console}} aus.
+	1. Wählen Sie Ihre [App ](https://cloud.ibm.com/resources){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") in der {{site.data.keyword.dev_console}} aus.
 
 	2. Klicken Sie auf **Code herunterladen**.
 {: tsResolve}
@@ -243,7 +243,7 @@ Failed to execute the action:  exit status 1:denied: requested access to the res
 
 
 FAILED
-Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
+Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to the Docker registry due to: exit status 1
 ```
 {: screen}
 {: tsSymptoms}
@@ -265,9 +265,9 @@ ibmcloud cr namespaces
 Bei dem Versuch, Ihre App zu starten, wird möglicherweise der folgende Fehler angezeigt:
 ```
 FAILED
-Could not determine the language of your application.
+Could not determine the language of your app.
 
-Try using the --language flag to specify the language of your application 
+Try using the --language flag to specify the language of your app 
 directly. 
 ```
 {: screen}
@@ -295,13 +295,95 @@ Die vielfältigen verschiedenen möglichen Ursachen sind jeweils unter den folge
 - Weitere Informationen zum Beheben derartiger Probleme bei einer `Node.js`-App finden Sie in [Vorhandene Node.js-Anwendungen für die Cloudbereitstellung aktivieren](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
-<!--
-## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately
+## Vorgehensweise zur manuellen separaten Installation der Komponenten der {{site.data.keyword.dev_cli_notm}}-CLI
 {: #ts-cli-install-devtools-manually}
 {: troubleshoot}
 
-To manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately, you can follow these [steps](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
--->
+Zur manuellen, separaten Installation der Komponenten der {{site.data.keyword.dev_cli_notm}}-CLI können Sie diesen [Schritten](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually) folgen.
 
+## Warum kann ich das Docker-Image nicht erstellen?
+{: $ts-cli-docker}
+{: troubleshoot}
 
+Möglicherweise wird der folgende Fehler angezeigt: 
+```
+FAILED
+An error exit status 1 was encountered while building the Docker 
+image.
+```
+{: screen}
 
+Dieser Fehler kann eine der folgenden Ursachen haben:
+- Docker ist nicht installiert.
+- Der Docker-Dämon wird nicht ausgeführt.
+{: tsCauses}
+
+Überprüfen Sie, ob Docker installiert und aktiv ist:
+- Installation oder Starten von [Docker für Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
+- Installation oder Starten von [Docker für Windows](https://docs.docker.com/docker-for-windows/install/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
+- Installation oder Starten von [Docker für Linux](https://docs.docker.com/v17.12/install/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
+{: tsResolve}
+
+## Wie lassen sich inkompatible Helm-Versionen auflösen?
+{: ts-cli-helm}
+{: troubleshoot}
+
+Wenn die Client- und die Server-Helm-Version nicht synchronisiert sind, werden möglicherweise die folgenden Fehler angezeigt:
+```
+FAILED
+Failed to execute the action:  exit status 1: Error: UPGRADE FAILED: 
+configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
+cannot list resource "configmaps" in API group "" in the namespace 
+"kube-system"
+```
+{: screen}
+
+```
+FAILED
+The 'helm upgrade ' command failed to complete due to: exit status 1
+```
+{: screen}
+
+Zur Behebung des Problems müssen Sie die Version des Clients auf die der Clusterversion setzen. Um beispielsweise die Helm-Version 2.8.1 zu installieren, führen Sie folgende Befehle aus:
+{: tsResolve}
+
+* Unter Mac oder Linux führen Sie folgende Befehle aus:
+  ```
+  export DESIRED_VERSION=v2.8.1
+
+  curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+  export HELM_HOME=~/.helm
+  ```
+
+* Unter Windows führen Sie folgende Schritte als Administrator aus:
+  Laden Sie die `helm`-Binärdatei von [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") herunter und installieren Sie sie.
+  
+  Führen Sie über das PowerShell-Terminal die folgenden Befehle aus:
+  ```
+  Set-Location Env:
+  Set-Item HELM_HOME C:\.helm\
+  ```
+
+## Warum schlägt 'ibmcloud dev build' bei Verwendung eines Benutzernamens, der "@" enthält, fehl?
+{: ts-cli-username}
+{: troubleshoot}
+Während des Image-Erstellungsprozesses wird Ihr Benutzername für den Benutzer im Docker-Tool-Image verwendet. Wenn der Benutzername Sonderzeichen wie '@' oder '-' enthält, schlägt der Erstellungsprozess des Docker-Images fehl und es kann der folgende Fehler auftreten:
+```
+Image will have user johnsmith@acme.com with id 501 added
+
+Executing docker image build  --file Dockerfile-tools --tag pythonmicroservicewithflaskfnzat-flask-tools --rm --pull --build-arg bx_dev_userid=501 --build-arg bx_dev_user=johnsmith@acme.com .
+
+FAILED
+An error exit status 1 was encountered while building the Docker image.
+
+Speicherauszug aus dem Befehl:
+```
+{: screen}
+
+Zur Behebung des Problems entfernen Sie eventuell vorhandene Sonderzeichen aus Ihrem Benutzernamen oder geben Sie das folgende Flag an, um stattdessen den Rootbenutzer zu verwenden:
+```
+ibmcloud dev build --use-root-user-tools
+```
+{: codeblock}
+{: tsResolve}

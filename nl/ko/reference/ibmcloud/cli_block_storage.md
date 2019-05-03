@@ -61,7 +61,7 @@ ibmcloud sl block access-list VOLUME_ID [OPTIONS]
 <dl>
 <dt>--sortby</dt>
 <dd>정렬 기준 열, 옵션: id,name,type,private_ip_address,host_iqn,username,password.</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>표시할 열, 옵션: id,name,type,private_ip_address,host_iqn,username,password.</dd>
 </dl>
 
@@ -450,7 +450,7 @@ ibmcloud sl block volume-list [OPTIONS]
 <dd>블록 스토리지를 구매한 주문 ID별 필터링.</dd>
 <dt>--sortby</dt>
 <dd>정렬 기준 열, 옵션: id, username, datacenter, storage_type, capacity_gb, bytes_used, ip_addr, active_transactions, created_by.</dd>
-<dt>--columns</dt>
+<dt>--column</dt>
 <dd>표시할 열, 옵션: id,username,datacenter,storage_type,capacity_gb,bytes_used,ip_addr,created_by,notes.</dd>
 </dl>
 

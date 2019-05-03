@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-03"
 
-keywords: general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
+keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
 subcollection: cloud-cli
 
@@ -284,6 +284,21 @@ Efetue login com uma senha descartável e configure a conta de destino, a organi
 ibmcloud login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
+### Para usar os serviços do Cloud Foundry
+
+Para usar os serviços do Cloud Foundry, deve-se destinar uma organização e um espaço do Cloud Foundry. É possível executar o comando a seguir para escolher interativamente a organização e o espaço:
+```
+ibmcloud target --cf
+```
+{: codeblock}
+
+Opcionalmente, é possível usar a saída do comando anterior para configurar manualmente a organização e o espaço
+com o comando a seguir:
+```
+ibmcloud target -o <value> -s <value>
+```
+{: codeblock}
+
 ### A chave de API tem a conta que está associada
 
 ```
@@ -348,28 +363,34 @@ ibmcloud regions
 
 Configure ou visualize a conta de destino, a região, a organização ou o espaço.
 ```
-ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP] [--cf] [-o ORG] [-s SPACE]
+ibmcloud target [-r REGION_NAME | --unset-region] [-c ACCOUNT_ID] [-g RESOURCE_GROUP | --unset-resource-group] [--cf] [--cf-api ENDPOINT] [-o ORG] [-s SPACE] [--output FORMAT]
 ```
 
 <strong>Pré-requisitos</strong>: Terminal, Login
 
 <strong>Opções de comando</strong>:
-   <dl>
-   <dt>-r <i>REGION_NAME</i> (opcional)</dt>
-   <dd>Nome da região a ser alternada, como 'us-south' ou 'eu-gb'.</dd>
-   <dt>-- unset-region</dt>
-   <dd>Desconfigurar região destinada</dd>
+<dl>
    <dt>-c <i>ACCOUNT_ID</i> (opcional)</dt>
    <dd>O ID da conta que será o destino.</dd>
+   <dt>-r <i>REGION_NAME</i> (opcional)</dt>
+   <dd>Nome da região a ser alternada, como 'us-south' ou 'eu-gb'.</dd>
    <dt>-g <i>RESOURCE_GROUP</i> (opcional)</dt>
    <dd>Nome do grupo de recursos</dd>
    <dt>--cf</dt>
    <dd>Selecione de forma interativa o espaço e a organização de destino</dd>
+   <dt>--cf-api</dt>
+   <dd>Terminal de API do Cloud Foundry</dd>
    <dt>-o <i>ORG_NAME</i> (opcional)</dt>
    <dd>O nome da organização que será o destino.</dd>
    <dt>-s <i>SPACE_NAME</i> (opcional)</dt>
    <dd>O nome do espaço que será o destino.</dd>
-   </dl>
+   <dt>-- unset-region</dt>
+   <dd>Desconfigurar região destinada</dd>
+   <dt>--unset-resource-group</dt>
+   <dd>Remover configuração do grupo de recursos de destino</dd>
+   <dt>--output <i>FORMAT</i></dt>
+   <dd>Especifica o formato de saída. Apenas JSON é suportado agora.</dd>
+</dl>
 Se nenhuma das opções estiver especificada, a conta, a região, a organização e o espaço atuais serão exibidos.
 
 <strong>Exemplos</strong>:
