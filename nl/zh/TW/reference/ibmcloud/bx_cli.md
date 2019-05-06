@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-26"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -68,9 +68,9 @@ ibmcloud help
 ```
 {: codeblock}
 
-顯示 `info` 指令的說明：
+顯示 `dev` 指令的說明：
 ```
-ibmcloud help info
+ibmcloud help dev
 ```
 {: codeblock}
 

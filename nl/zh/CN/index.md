@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-29"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -20,11 +20,8 @@ subcollection: cloud-cli
 # {{site.data.keyword.cloud_notm}} CLI 入门
 {: #ibmcloud-cli}
 
-在本教程中，您将安装一组 {{site.data.keyword.cloud}} Developer Tools，验证安装，并配置环境。{{site.data.keyword.cloud_notm}} Developer Tools 提供了一种命令行方法，用于创建、开发和部署 Web、移动和微服务应用程序。
+在本教程中，您将安装一组 {{site.data.keyword.cloud}} Developer Tools，验证安装，并配置环境。{{site.data.keyword.dev_cli_notm}} 提供了一种命令行方法，用于创建、开发和部署云应用程序。
 {: shortdesc}
-
-确保针对 {{site.data.keyword.cloud_notm}} Public 始终使用最新版本的独立 {{site.data.keyword.cloud_notm}} CLI。如果需要使用 32 位版本或 {{site.data.keyword.cloud_notm}} 专用环境的最新版本之外的先前版本，请参阅 [{{site.data.keyword.cloud_notm}} CLI 发行版](/docs/cli?topic=cloud-cli-cli-releases)。
-{: note}
 
 本教程中的安装命令会安装最新可用的独立 {{site.data.keyword.cloud_notm}} CLI 版本以及以下工具：
 
@@ -45,30 +42,33 @@ subcollection: cloud-cli
 
 您需要 [{{site.data.keyword.cloud_notm}} 帐户 ](https://cloud.ibm.com/){: new_window}![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 并满足以下系统需求：
 
-* 如果您运行的是 Windows，但并不是 Windows 10 专业版，那么某些功能将不受支持。
+* 如果您运行的是 Windows&trade;，但并不是 Windows&trade; 10 专业版，那么某些功能将不受支持。
 * 您必须使用 Docker 的稳定通道，最低版本为 1.13.1。
 
 ## 步骤 1. 运行安装命令
 {: #step1-install-idt}
 
-* 对于 Mac 和 Linux，请运行以下命令：
+运行命令时，将安装 {{site.data.keyword.cloud_notm}} CLI 的最新版本。
+
+* 对于 Mac 和 Linux&trade;，请运行以下命令：
   ```
 curl -sL https://ibm.biz/idt-installer | bash
 ```
   {: codeblock}
 
-* 对于 Windows 10 专业版，请以管理员身份运行以下命令：
+* 对于 Windows&trade; 10 专业版，请以管理员身份运行以下命令：
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 
-    右键单击 Windows PowerShell 图标，并选择**以管理员身份运行**。
+  右键单击 Windows&trade; PowerShell 图标，并选择**以管理员身份运行**。
   {: tip}
 
 您还可以从此 [GitHub 存储库](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中下载安装程序脚本。
 
-有关手动安装这些工具的步骤，请参阅[手动安装 {{site.data.keyword.cloud_notm}} Developer Tools CLI 插件组件](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually)。
+如果需要使用 32 位版本的 CLI 或 {{site.data.keyword.cloud_notm}} Dedicated 环境的最新版本之外的先前版本，请参阅 [{{site.data.keyword.cloud_notm}} CLI 发行版](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+{: note}
 
 ## 步骤 2. 验证安装
 {: #step2-verify-idt}
@@ -108,4 +108,6 @@ ibmcloud target -o <value> -s <value>
 ## 后续步骤
 {: #next-steps}
 
-现在，您已准备好开发和部署您的首个应用程序！有关更多信息，请参阅[使用 CLI 创建和部署应用程序](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli)。
+* 现在，您已准备好开发和部署您的首个应用程序。有关更多信息，请参阅[使用 CLI 创建和部署应用程序](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli)。
+
+* 您可以接收有关新 {{site.data.keyword.cloud_notm}} CLI 发行版的通知。请预订 [{{site.data.keyword.cloud_notm}} CLI 发行版存储库](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。

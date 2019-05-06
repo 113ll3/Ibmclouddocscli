@@ -14,6 +14,7 @@ IBM Cloud CLI 及 Developer Tools
 	reference/ibmcloud/extend_cli.md
 	reference/ibmcloud/cli_docker.md
 	reference/ibmcloud/enable_cli_autocompletion.md
+	reference/ibmcloud/uninstall_cli.md
 	idt/index.md
 
 	{: .topicgroup}
@@ -36,7 +37,6 @@ IBM Cloud CLI 及 Developer Tools
 		reference/ibmcloud/cli_block_storage.md
 		reference/ibmcloud/cli_catalog.md
 		reference/ibmcloud/cli_cdn.md
-		reference/ibmcloud/cf_index.md
 		reference/ibmcloud/cli_cf_apps.md
 		reference/ibmcloud/cli_cf_services.md
 		reference/ibmcloud/cli_cfee.md
@@ -59,7 +59,6 @@ IBM Cloud CLI 及 Developer Tools
 		reference/ibmcloud/cli_virtual_server.md
 		reference/ibmcloud/cli_vlan.md
 	idt/commands.md
-	reference/ibmcloud/all_versions.md
 
 	{: .topicgroup}
 	IBM Cloud CLI 外掛程式
@@ -75,6 +74,7 @@ IBM Cloud CLI 及 Developer Tools
 
 	{: .topicgroup}
 	Cloud Foundry CLI 外掛程式
+		/cf-cli-plugin/cf-cli-plugin-cf-cli-plugin
 		plugins/bluemix_admin/index.md
 		plugins/vpn/index.md
 
@@ -90,5 +90,6 @@ IBM Cloud CLI 及 Developer Tools
 	{: .navgroup-end}
 
     {: .navgroup id="help"}
-	ts_createapps.md
+    faq.md
+    ts_createapps.md
     {: .navgroup-end}

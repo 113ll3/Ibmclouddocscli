@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -48,7 +48,9 @@ subcollection: cloud-cli
 - [stop](#stop)：停止容器。
 - [test](#test)：在本端容器中測試應用程式。
 - [view](#view): 檢視應用程式的已部署 URL，以進行測試和檢視。
-- [複合指令](#compound)：在單一指令行陳述式中執行多個指令。
+
+使用[複合指令](#compound)，在單一指令行陳述式中執行多個指令。
+{: tip}
 
 ## build
 {: #build}
@@ -81,7 +83,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-使用 `console` 指令，以在 {{site.data.keyword.cloud_notm}} 上將 Web 瀏覽器開啟到應用程式的 Web 主控台。您可以從應用程式資料夾內執行 `ibmcloud dev console` 指令。CLI 會嘗試在 {{site.data.keyword.cloud_notm}} 上尋找應用程式 ID 與現行目錄相同的相符應用程式。如果系統找不到相符名稱，則會在 {{site.data.keyword.cloud_notm}} 上開啟 Web 及「行動」儀表板，而非特定應用程式。
+使用 `console` 指令，以在 {{site.data.keyword.cloud_notm}} 上將 Web 瀏覽器開啟到應用程式的 Web 主控台。您可以從應用程式資料夾內執行 `ibmcloud dev console` 指令。CLI 會嘗試在 {{site.data.keyword.cloud_notm}} 上尋找應用程式 ID 與現行目錄相同的相符應用程式。如果系統找不到相符名稱，則會在 {{site.data.keyword.cloud_notm}} 上開啟 **Web 及行動**儀表板，而非特定應用程式。
 
 您可以提供應用程式名稱，CLI 即會跳過根據資料夾或應用程式名稱進行比對。在此情況下，CLI 會在 Web 瀏覽器中開啟具名應用程式的主控台。  
 
@@ -94,7 +96,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-建立應用程式，系統會提示您輸入所有資訊，包括資源類型、語言、入門範本套件及「DevOps 工具鏈」選項（包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment 及 Kubernetes）。應用程式會在現行目錄中建立。
+建立應用程式，其會提示您輸入所有資訊，包括資源類型、語言、入門範本套件及「DevOps 工具鏈」選項。這些選項包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment，以及 Kubernetes。應用程式會在現行目錄中建立。
 
 若要在現行目錄中建立應用程式，並讓服務與其相關聯，請執行下列指令：
 ```
@@ -133,7 +135,7 @@ ibmcloud dev debug
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* 除錯埠的埠對映。第一個值是要在主機 OS 中使用的埠，第二個值是容器中的埠 [host-port:container-port]。
+* 除錯埠的埠對映。第一個值是要在主機 OS 中使用的埠，第二個值是容器中的埠 [`host-port:container-port`]。
 * 用法：`ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -610,7 +612,7 @@ ibmcloud dev build/deploy/view -t container --trace
 
 如果有一個指令因任何原因而失敗，則不會執行後續指令。
 
-如果 `debug` 或 `run` 後面有任何指令，則會在透過從現行終端機視窗結束處理程序以外的方式終止 `debug` 或 `run` 時繼續執行。`CTRL+C` 會結束處理程序，而不會執行後續指令。例如，您可以從另一個終端機視窗執行 `ibmcloud dev stop`，以停止執行中容器並繼續執行到下一個指令。
+如果 `debug` 或 `run` 後面有任何指令，則會在透過從現行終端機視窗結束處理程序以外的方式終止 `debug` 或 `run` 時繼續執行。輸入 `CTRL+C` 即會結束處理程序，而不會執行後續指令。例如，您可以從另一個終端機視窗執行 `ibmcloud dev stop`，以停止執行中容器並繼續執行到下一個指令。
 
 ## build、debug、run 及 test 的參數
 {: #command-parameters}

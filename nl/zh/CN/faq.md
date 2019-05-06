@@ -10,8 +10,33 @@ subcollection: cloud-cli
 
 ---
 
-# 常见问题及解答 (FAQ)
+# 常见问题
 {: #ibm-cli-faq}
+
+## 我必须使用 {{site.data.keyword.cloud_notm}} CLI 的最新版本吗？
+{: #cli-latest-version}
+
+是的，您必须使用最新版本。您可以通过运行以下命令来检查使用的版本：
+
+```
+ibmcloud -v
+```
+{: codeblock}
+
+## 如何更新 CLI？
+{: #cli-update-version}
+
+运行以下命令来更新到 CLI 的最新版本：
+
+```
+ibmcloud update
+```
+{: codeblock}
+
+## 我可以获得有关 CLI 新发行版的通知吗？
+{: #cli-get-notified}
+
+可以，您可以在 CLI 的新发行版可用时掌握最新情况。请预订 [{{site.data.keyword.cloud_notm}} CLI 发行版存储库](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 ## {{site.data.keyword.cloud_notm}} 应用程序的文件结构是什么?
 {: #cli-file-structure}
@@ -27,30 +52,7 @@ subcollection: cloud-cli
 
 另一个容器是运行容器，它密切模拟应用程序在部署到云中以后的实际运行时环境。此容器的形式适合部署以供在 {{site.data.keyword.cloud_notm}} 等中使用。因此，将定义用于启动应用程序的入口点。选择通过 {{site.data.keyword.dev_cli_long}} CLI 插件来运行应用程序时，它将使用此容器。此容器的 `Dockerfile` 由 [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 参数定义。
 
-# 如何部署现有代码?
-要部署现有代码库，请执行以下步骤来[启用应用程序](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli)。
+## 如何部署现有代码?
 
-## 参考博客、视频和文档
-{: #cli-faq-reference}
+要部署现有代码库，请参阅[生成部署和云支持资产](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli)。
 
-### 博客
-{: #cli-blogs}
-
-- [使用 {{site.data.keyword.dev_cli_long}} CLI 插件部署到 {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/blogs/bluemix/2018/05/deploying-to-ibm-cloud-private-2-1-0-2-with-ibm-cloud-developer-tools-cli/)
-- [使用 {{site.data.keyword.dev_cli_long}} CLI 插件部署到 Kubernetes on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
-- [使用 {{site.data.keyword.dev_cli_long}} CLI 插件启用 {{site.data.keyword.cloud_notm}} 的现有项目](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
-
-### 视频
-{: #cli-videos}
-
-- [如何使用 {{site.data.keyword.dev_cli_long}} CLI 插件部署到 Kubernetes on {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=mh_XBn_eV_8&feature=youtu.be)
-- [如何使用 {{site.data.keyword.dev_cli_long}} CLI 插件将现有项目部署到 {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=-NP5ZEZE1dY&feature=youtu.be)
-- [使用 {{site.data.keyword.dev_cli_long}} CLI 插件和 VSCode 创建、调试和部署 Node.js 应用程序](https://www.youtube.com/watch?v=z-ByHuI41dU&feature=youtu.be)
-
-### 文档和教程
-- [持续部署到 Kubernetes](/docs/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes)
-- [{{site.data.keyword.dev_cli_long}} CLI 插件的故障诊断](/docs/cli?topic=cloud-cli-troubleshoot)
-- [{{site.data.keyword.dev_cli_long}} CLI 插件 (ibmcloud dev) 命令](/docs/cli/idt?topic=cloud-cli-idt-cli)
-- [{{site.data.keyword.dev_cli_long}} CLI 插件的本地应用程序调试](/docs/cli/idt?topic=cloud-cli-local-debug)
-
-**要报告问题或提供反馈，可使用 [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - [在此处](https://slack-invite-ibm-cloud-tech.mybluemix.net/)请求团队访问。**

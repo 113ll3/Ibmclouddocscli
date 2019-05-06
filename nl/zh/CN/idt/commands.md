@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -39,7 +39,7 @@ subcollection: cloud-cli
 - [diag](#diag)：显示有关已安装依赖项的版本信息。
 - [edit](#edit)：在现有应用程序中添加或除去服务。
 - [enable](#enable)：更新现有应用程序以用于 {{site.data.keyword.cloud_notm}} Developer Tools。
-- [get-credentials](#get-credentials)：获取所需的凭证，以便在应用程序中可以使用连接的 {{site.data.keyword.cloud_notm}} 服务。
+- [get-credentials](#get-credentials)：获取使应用程序支持使用连接的 {{site.data.keyword.cloud_notm}} 服务所需的凭证。
 - [help](#help)：有关 CLI 语法和自变量的帮助。
 - [list](#list)：列出资源组中的所有 {{site.data.keyword.cloud_notm}} 应用程序。
 - [run](#run)：在本地容器中运行应用程序。
@@ -48,7 +48,9 @@ subcollection: cloud-cli
 - [stop](#stop)：停止容器。
 - [test](#test)：在本地容器中测试应用程序。
 - [view](#view)：查看应用程序的已部署 URL 以进行测试和查看。
-- [compound commands](#compound)：在一个命令行语句中运行多个命令。
+
+使用[复合命令](#compound)在一个命令行语句中运行多个命令。
+{: tip}
 
 ## build
 {: #build}
@@ -81,7 +83,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-使用 `console` 命令可打开 Web 浏览器并转至 {{site.data.keyword.cloud_notm}} 上的应用程序 Web 控制台。可以从应用程序的文件夹内运行 `ibmcloud dev console` 命令。CLI 会尝试在 {{site.data.keyword.cloud_notm}} 上查找与当前目录具有相同应用程序标识的匹配应用程序。如果系统找不到匹配的名称，将会在 {{site.data.keyword.cloud_notm}} 上打开“Web 和移动”仪表板，而不是打开特定的应用程序。
+使用 `console` 命令可打开 Web 浏览器并转至 {{site.data.keyword.cloud_notm}} 上的应用程序 Web 控制台。可以从应用程序的文件夹内运行 `ibmcloud dev console` 命令。CLI 会尝试在 {{site.data.keyword.cloud_notm}} 上查找与当前目录具有相同应用程序标识的匹配应用程序。如果系统找不到匹配的名称，将会在 {{site.data.keyword.cloud_notm}} 上打开 **Web 和移动**仪表板，而不是打开特定的应用程序。
 
 您可以提供应用程序名称，这样 CLI 会跳过基于文件夹或应用程序名称进行匹配。在这种情况下，CLI 会在 Web 浏览器中打开指定应用程序的控制台。  
 
@@ -94,7 +96,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-创建应用程序，并根据提示输入所有信息，包括资源类型、语言、入门模板工具包和 DevOps 工具链选项，包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment，以及 Kubernetes。这将在当前目录中创建应用程序。
+创建应用程序，这将提示输入所有信息，包括资源类型、语言、入门模板工具包和 DevOps 工具链选项，包括 IBM Cloud Foundry 或 Cloud Foundry Enterprise Environment 以及 Kubernetes。这将在当前目录中创建应用程序。
 
 要在当前目录中创建应用程序并使服务与其相关联，请运行以下命令：
 ```
@@ -128,12 +130,12 @@ ibmcloud dev debug
 ### debug 命令参数
 {: #debug-parameters}
 
-以下参数是 `debug` 命令独有的，可帮助调试应用程序。有一些[其他参数](#command-parameters)是与其他命令共享的。
+以下参数是 `debug` 命令独有的，可帮助调试应用程序。还有与其他命令共享的[更多参数](#command-parameters)。
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* 调试端口的端口映射。第一个值是要在主机操作系统中使用的端口，第二个值是容器中的端口：[host-port:container-port]。
+* 调试端口的端口映射。第一个值是要在主机操作系统中使用的端口，第二个值是容器中的端口：[`host-port:container-port`]。
 * 用法：`ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -610,7 +612,7 @@ ibmcloud dev build/deploy/view -t container --trace
 
 如果某个命令出于任何原因而失败，那么不会执行后续命令。
 
-如果 `debug` 或 `run` 后跟任何命令，那么仅当 `debug` 或 `run` 以不同于在当前终端窗口中终止进程的方式终止时，执行才会继续。`CTRL+C` 会终止进程，而不会运行后续命令。例如，可以在其他终端窗口中运行 `ibmcloud dev stop` 来停止正在运行的容器，然后继续执行到下一个命令。
+如果 `debug` 或 `run` 后跟任何命令，那么仅当 `debug` 或 `run` 以不同于在当前终端窗口中终止进程的方式终止时，执行才会继续。输入 `CTRL+C` 可终止该进程，而不会运行后续命令。例如，可以在其他终端窗口中运行 `ibmcloud dev stop` 来停止正在运行的容器，然后继续执行到下一个命令。
 
 ## 用于 build、debug、run 和 test 的参数
 {: #command-parameters}

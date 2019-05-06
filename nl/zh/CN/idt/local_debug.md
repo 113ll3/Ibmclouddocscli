@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -20,12 +20,12 @@ subcollection: cloud-cli
 # {{site.data.keyword.dev_cli_notm}} CLI 的本地应用程序调试
 {: #local-debug}
 
-有多种工具可以帮助您在 {{site.data.keyword.cloud_notm}} 中调试用 Java 和 Node.js 编写的应用程序。
+有多种工具可以帮助您在 {{site.data.keyword.cloud_notm}} 中调试用 Java&trade; 和 Node.js 编写的应用程序。
 
 ## Java 应用程序调试
 {: #java}
 
-为 Java 应用程序启用调试工具的步骤：
+为 Java&trade; 应用程序启用调试工具的步骤：
 
 1. 从应用程序项目的根目录中，运行以下命令：
 
@@ -38,15 +38,15 @@ ibmcloud dev debug
 
 	* Eclipse
       1. 将**现有 Maven 项目**导入到 Eclipse 中。
-      2. 创建 [Java 远程应用程序 ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 调试配置。
+      2. 创建 [Java&trade; 远程应用程序](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 调试配置。
       		1. 输入 IP 地址或 `localhost:<port>`  
       		2. 输入 `7777` 作为端口号。
-      		3. 指定已导入的 Java 项目的名称。
+      		3. 指定已导入的项目的名称。
       6. 在 IDE 中设置断点。
       7. 运行调试配置。
       8. 使用浏览器来访问端点以重现问题。  
 	   
-	   对于 Java 基本微服务端点，缺省端口是 9080。
+	   对于 Java&trade; 基本微服务端点，缺省端口是 `9080`。
 	   {: note}
 
 	* [IntelliJ ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")

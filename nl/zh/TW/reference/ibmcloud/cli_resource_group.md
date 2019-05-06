@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # 使用資源和資源群組
 {: #ibmcloud_commands_resource}
 
-資源群組可讓您用可自訂的分組來組織帳戶資源。請使用下列指令來管理資源群組中的一或數個 {{site.data.keyword.cloud}} 資源。
+資源群組可讓您用可自訂的分組來組織帳戶資源。請使用下列指令來管理資源群組中的 {{site.data.keyword.cloud}} 資源。
 {: shortdesc}
 
 ## ibmcloud resource groups

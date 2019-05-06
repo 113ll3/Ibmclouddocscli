@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-29"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -50,7 +50,7 @@ Pour l'exécution et le débogage d'applications localement, installez [Docker](
 
 Pour afficher une version locale du tableau de bord Kubernetes et pour déployer des applications dans vos clusters, installez l'[outil de ligne de commande Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") pour votre plateforme :
 
-* MacOS :
+* Mac :
   ```
   curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
   ```
@@ -70,10 +70,10 @@ Pour afficher une version locale du tableau de bord Kubernetes et pour déployer
 
 Le préfixe pour l'exécution des commandes lors de l'utilisation de l'outil de ligne de commande Kubernetes est `kubectl`. Pour plus d'informations, voir [Configuration de l'interface CLI et de l'API](/docs/containers?topic=containers-cs_cli_install#cs_cli_install).
 
-## Installation du plug-in d'interface de ligne de commande de {{site.data.keyword.registrylong_notm}} 
+## Installation du plug-in d'interface de ligne de commande de {{site.data.keyword.registrylong_notm}}
 {: #idt-install-container-registry-cli-plugin}
 
-Vous pouvez utiliser le plug-in d'interface de ligne de commande `container-registry` pour configurer votre propre espace de nom d'image dans un registre privé géré et hébergé par IBM où vous pouvez stocker et partager des images Docker avec tous les utilisateurs de votre compte {{site.data.keyword.cloud_notm}}.
+Vous pouvez utiliser le plug-in d'interface de ligne de commande `container-registry` pour configurer votre propre espace de nom d'image dans un registre privé géré et hébergé par IBM. Vous pourrez y stocker et partager des images Docker avec tous les utilisateurs de votre compte {{site.data.keyword.cloud_notm}}. 
 
 * Pour installer le plug-in {{site.data.keyword.registrylong}}, exécutez la commande suivante :
   ```
@@ -86,7 +86,7 @@ Pour plus d'informations, voir la référence de commande [{{site.data.keyword.r
 ## Installation du plug-in d'interface de ligne de commande de {{site.data.keyword.containerlong_notm}}
 {: #idt-install-kubernetes-cli-plugin}
 
-Création et gestion de clusters Kubernetes dans {{site.data.keyword.containerlong}} 
+Création et gestion de clusters Kubernetes dans {{site.data.keyword.containerlong}}
 
 * Pour installer le plug-in {{site.data.keyword.registryshort_notm}}, exécutez la commande suivante :
   ```
@@ -101,7 +101,7 @@ Pour plus d'informations, voir la référence de commande [{{site.data.keyword.r
 
 Installez [Helm](https://helm.sh/docs/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), qui est un gestionnaire de packages Kubernetes.
 
-* Utilisateurs MacOS et Linux, exécutez les commandes suivantes :
+* Utilisateurs Mac et Linux, exécutez les commandes suivantes :
   ```
   export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
@@ -126,7 +126,7 @@ Pour plus d'informations, voir [Configuration de l'interface de ligne de command
 ## Installation du plug-in d'interface de ligne de commande SDK Generator
 {: #idt-install-sdk-gen}
 
-En tant que développeur sous {{site.data.keyword.cloud_notm}}, vous pouvez utiliser ce plug-in pour générer des kits SDK depuis votre définition d'API REST conforme à la [spécification d'API Open](https://www.openapis.org/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Lorsque vous apportez des modifications à votre définition d'API REST, vous pouvez utiliser ce plug-in pour ne régénérer que le SDK au lieu de régénérer l'ensemble du projet.
+En tant que développeur {{site.data.keyword.cloud_notm}}, vous pouvez utiliser le plug-in pour générer des kits SDK depuis votre définition d'API REST conforme à la [spécification d'API Open](https://www.openapis.org/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). A mesure que la définition d'API REST évolue, vous pouvez utiliser ce plug-in pour ne régénérer que le SDK au lieu de régénérer l'ensemble du projet.
 
 Pour installer le plug-in de l'interface de ligne de commande SDK Generator, exécutez la commande suivante :
 ```

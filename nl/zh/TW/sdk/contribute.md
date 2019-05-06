@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -27,17 +27,17 @@ subcollection: cloud-cli
 
 * Cloud Foundry [CLI ](https://github.com/cloudfoundry/cli/releases){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
-   Cloud Foundry CLI 不是必要項目，但它有助於從「終端機」存取 {{site.data.keyword.cloud_notm}}。
+   Cloud Foundry CLI 不是必要項目，但它有助於從終端機存取 {{site.data.keyword.cloud_notm}}。
 
    如需 Cloud Foundry CLI 的相關資訊，請參閱[文件](/docs/cli?topic=cloud-cli-cf#cf)。
 
 * {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
 
-   此外掛程式會安裝至 {{site.data.keyword.cloud_notm}} CLI。{{site.data.keyword.cloud_notm}} CLI 也會提供有用的資源，以從「終端機」存取 {{site.data.keyword.cloud_notm}}。
+   此外掛程式會新增至 {{site.data.keyword.cloud_notm}} CLI，並提供有用的資源，以從終端機存取 {{site.data.keyword.cloud_notm}}。
 
 * Go 的[開發環境 ](https://golang.org/doc/code.html){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
-   Go 嚴格遵守包裝位置，因此您的來源必須定義在 `$GOPATH` 目錄結構內。請確定已定義 `$GOPATH` 及 `$GOROOT` 變數，而且您在 `$PATH` 環境變數中包含 `$GOPATH/bin`，這只要編輯 `~/.bash_profile` 配置檔就能做到（在 Mac OS 上）。
+   Go 嚴格遵守套件位置，因此您的原始碼必須定義在 `$GOPATH` 目錄結構內。您必須定義 `$GOPATH` 及 `$GOROOT` 變數，並將 `$GOPATH/bin` 包含在 `$PATH` 環境變數中。您可以編輯 `~/.bash_profile` 配置檔（在 Mac 上），以進行這些變更。
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -47,7 +47,7 @@ subcollection: cloud-cli
    ```
    {: codeblock}
 
-* 相依關係管理員：[govendor ](https://github.com/kardianos/govendor){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* 相依關係管理員：[`govendor `](https://github.com/kardianos/govendor){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
    `govendor` 工具會建立及管理 Go 相依關係。除非您計劃更新供應商目錄，否則不需要它。
 
@@ -74,7 +74,7 @@ subcollection: cloud-cli
 
 * BDD 測試架構：[Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
-測試架構是以 Ginkgo 為基礎（Go 的 BDD 測試架構）。它是與 [Gomega ](http://onsi.github.io/gomega/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 搭配使用，後者是 Ginkgo 的配對器及主張程式庫。
+測試架構是以 Ginkgo 為基礎（Go 的 BDD 測試架構），並與 [`gomega`](http://onsi.github.io/gomega/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 搭配使用，gomega 是 Ginkgo 的配對器及主張程式庫。
 
    * 使用下列指令，安裝 `ginkgo`。
 
@@ -99,18 +99,18 @@ subcollection: cloud-cli
 
       * 若要新增程式碼涵蓋面，請將 `-cover` 附加至指令。
 
-   * 使用下列指令，取得程式碼涵蓋面的易記 HTML 表單。
+   * 若要取得程式碼涵蓋面的易記 HTML 表單，請使用下列指令。
 
       ```
       go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
-      * 您將移至 `.coverprofile` 檔案所在的目錄。
+      * 您會被帶至 `.coverprofile` 檔案所在的目錄。
 
-* 國際化：[go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 及 [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
+* 全球化：[go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 及 [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
-國際化是以 `go-i18n` 為基礎，它是一個套件及指令行工具，支援將 Go 應用程式翻譯為多種語言。翻譯軟體組是由 `go-bindata` 預先處理，它是將任何輸入檔轉換成可管理 Go 原始碼的指令。
+全球是以 `go-i18n` 為基礎，它是一個套件及指令行工具，支援將 Go 應用程式翻譯為多種語言。翻譯軟體組是由 `go-bindata` 指令預先處理，此指令會將任何輸入檔轉換成可管理的 Go 原始碼。
 
    * 使用下列指令，安裝 `go-i18n`。
 
@@ -160,7 +160,7 @@ Delve 是 Go 程式設計語言的除錯器，並供 [Visual Studio Code ](https
 
 * [github.com/asaskevich/govalidator ](https://github.com/asaskevich/govalidator){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
-   此套件提供一些用於字串、結構及集合的驗證器和消毒器。請使用此套件，而不要實作我們自己的驗證器。
+   此套件提供一些用於字串、結構及集合的驗證器和消毒器。請使用此套件，而不要實作您自己的驗證器。
 
 * [github.com/parnurzeal/gorequest ](https://github.com/parnurzeal/gorequest){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 

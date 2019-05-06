@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -24,7 +24,7 @@ subcollection: cloud-cli
 # Traitement des incidents liés au plug-in d'interface de ligne de commande {{site.data.keyword.cloud_notm}} Developer Tools
 {: #troubleshoot}
 
-Les problèmes d'ordre général liés à l'utilisation de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} pour créer des applications peuvent inclure des échecs de déploiement ou l'échec de l'extraction du code. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
+Consultez les solutions aux problèmes courants à l'aide de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}}. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
 {: shortdesc}
 
 ## Pour quelle raison une erreur de nom d'hôte s'affiche-t-elle lors de la création d'une application avec un modèle non mobile ?
@@ -145,7 +145,7 @@ Procédez de l'une des façons suivantes pour obtenir le code :
    ```
    {: codeblock}
 
-   Remplacez `<your-app-name>` par le nom d'application spécifié lors de la création de l'application. 
+   Remplacez `<your-app-name>` par le nom d'application spécifié lors de la création de l'application.
 
 * Utilisez la console {{site.data.keyword.dev_console}}.
 
@@ -218,7 +218,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 {: screen}
 {: tsSymptoms}
 
-Cela est très probablement dû à un nom de cluster non valide. Vous pouvez confirmer la cause de cette erreur en exécutant la même commande avec l'option `--trace`, qui permet d'afficher les détails suivants dans la sortie d'erreur :
+Le problème est très probablement dû à un nom de cluster non valide. Vous pouvez confirmer la cause de cette erreur en exécutant la même commande avec l'option `--trace`, qui permet d'afficher les détails suivants dans la sortie d'erreur :
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
@@ -248,10 +248,10 @@ Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to 
 {: screen}
 {: tsSymptoms}
 
-Cela est très probablement dû à une cible d'image de déploiement non valide. Plus spécifiquement, l'espace de nom, qui est la valeur du milieu dans la cible d'image de déploiement, n'est peut-être pas valide.
+Le problème est très probablement dû à une cible d'image de déploiement non valide. Plus spécifiquement, l'espace de nom, qui est la valeur du milieu dans la cible d'image de déploiement, n'est peut-être pas valide.
 {: tsCauses}
 
-Assurez-vous que l'espace de nom de l'image de déploiement correspond à l'un des espaces de nom affichés lorsque vous exécutez la commande suivante :
+Assurez-vous que l'espace de nom de la cible d'image de déploiement correspond à l'un des espaces de nom affichés lorsque vous exécutez la commande suivante :
 ```
 ibmcloud cr namespaces
 ```
@@ -262,7 +262,7 @@ ibmcloud cr namespaces
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
-L'erreur suivante peut s'afficher lorsque vous tentez de démarrer votre application :
+L'erreur suivante peut s'afficher lorsque vous démarrez votre application :
 ```
 FAILED
 Could not determine the language of your app.
@@ -278,14 +278,14 @@ Cette erreur peut être due à l'une des causes suivantes :
 - Exécution de la commande [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) pour une application utilisant un langage qui n'est pas reconnu.
 {: tsCauses}
 
-Prenez soin d'exécuter la commande à partir du répertoire d'application qui contient le code source pour l'application. Si cela ne résout pas le problème et que le langage figure parmi les [langages pris en charge](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilisez le paramètre `--language` pour spécifier ce langage.
+Prenez soin d'exécuter la commande à partir du répertoire d'application qui contient le code source pour l'application. Si le problème n'est pas résolu et que le langage figure parmi les [langages pris en charge](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilisez le paramètre `--language` pour spécifier ce langage.
 {: tsResolve}
 
-## Pour quelle raison ne puis-je pas générer ou exécuter une application qui a été activée pour le déploiement en cloud ?
+## Pour quelle raison ne puis-je pas générer ou exécuter une application qui est activée pour le déploiement en cloud ?
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-Vous risquez de rencontrer des erreurs lorsque vous tentez de [générer](/docs/cli/idt?topic=cloud-cli-idt-cli#build) ou d'[exécuter](/docs/cli/idt?topic=cloud-cli-idt-cli#run) une application qui a été activée.
+Vous risquez de rencontrer des erreurs lorsque vous [générez](/docs/cli/idt?topic=cloud-cli-idt-cli#build) ou [exécutez](/docs/cli/idt?topic=cloud-cli-idt-cli#run) une application qui est activée pour le déploiement en cloud.
 {: tsSymptoms}
 
 Les nombreuses causes possibles sont décrites dans chacun des liens suivants :
@@ -320,8 +320,8 @@ elle peut être due à l'une des causes suivantes :
 
 Assurez-vous que Docker est installé et en cours d'exécution :
 - Pour installer ou démarrer [Docker pour Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
-- Pour installer ou démarrer [Docker pour Windows](https://docs.docker.com/docker-for-windows/install/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
-- Pour installer ou démarrer [Docker pour Linux](https://docs.docker.com/v17.12/install/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
+- Pour installer ou démarrer [Docker pour Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
+- Pour installer ou démarrer [Docker pour Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
 {: tsResolve}
 
 ## Comment résoudre le problème lié aux versions Helm incompatibles ?
@@ -347,7 +347,7 @@ The 'helm upgrade ' command failed to complete due to: exit status 1
 Pour résoudre ce problème, indiquez une version de client identique à la version du cluster. Par exemple, pour installer la version Helm 2.8.1, exécutez les commandes suivantes :
 {: tsResolve}
 
-* Pour Mac et Linux, exécutez les commandes suivantes :
+* Pour Mac et Linux&trade;, exécutez les commandes suivantes :
   ```
   export DESIRED_VERSION=v2.8.1
 
@@ -356,19 +356,19 @@ Pour résoudre ce problème, indiquez une version de client identique à la vers
   export HELM_HOME=~/.helm
   ```
 
-* Pour Windows, effectuez les actions suivantes en tant qu'administrateur :
-  Téléchargez et installez le fichier binaire `helm` à partir de la page [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+* Pour Windows&trade; : En tant qu'administrateur, téléchargez et installer le fichier binaire `helm` à partir de la page [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icône de lien exerne](../icons/launch-glyph.svg "Icône de lien externe").
   
   Sur le terminal PowerShell, utilisez les commandes suivantes :
   ```
   Set-Location Env:
   Set-Item HELM_HOME C:\.helm\
   ```
+  {: codeblock}
 
 ## Pourquoi la génération ibmcloud dev échoue-t-elle lorsqu'un nom d'utilisateur inclut le caractère "@" ?
 {: ts-cli-username}
 {: troubleshoot}
-Lors du processus de génération d'image, votre nom d'utilisateur est employé pour l'utilisateur dans l'image des outils Docker. Si le nom d'utilisateur contient des caractères spéciaux, tels '@' ou '-', le processus de génération d'image Docker échoue et l'erreur suivante peut être générée :
+Lors du processus de génération d'image, votre nom d'utilisateur est employé pour l'utilisateur dans l'image des outils Docker. Si le nom d'utilisateur contient des caractères spéciaux tels que '@' ou '-', le processus de génération d'image Docker échoue et l'erreur suivante est générée : 
 ```
 Image will have user johnsmith@acme.com with id 501 added
 

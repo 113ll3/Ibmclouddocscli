@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-29"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -50,7 +50,7 @@ ibmcloud plugin install dev
 
 若要檢視本端版本的 Kubernetes 儀表板，以及將應用程式部署至叢集，請針對您的平台安裝 [Kubernetes 指令行工具](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")：
 
-* MacOS：
+* Mac：
   ```
 curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
 ```
@@ -101,7 +101,7 @@ ibmcloud plugin install container-service
 
 安裝 [Helm](https://helm.sh/docs/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，這是 Kubernetes 型套件管理程式。
 
-* MacOS 及 Linux&trade; 使用者，請執行下列指令：
+* Mac 及 Linux&trade; 使用者，請執行下列指令：
   ```
 export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
@@ -126,7 +126,7 @@ ibmcloud plugin install cloud-functions
 ## 安裝 SDK 產生器 CLI 外掛程式
 {: #idt-install-sdk-gen}
 
-作為 {{site.data.keyword.cloud_notm}} 的開發人員，您可以使用此外掛程式，從[開放式 API 規格](https://www.openapis.org/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖") 相容的 REST API 定義來產生 SDK。當您變更 REST API 定義時，可以使用此外掛程式只重新產生 SDK，而不必重新產生整個專案。
+作為 {{site.data.keyword.cloud_notm}} 開發人員，您可以使用外掛程式，從遵循 [OpenAPI 規格](https://www.openapis.org/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖") 的 REST API 定義來產生 SDK。隨著 REST API 定義逐步發展，您可以使用外掛程式，只重新產生 SDK，而不必重新產生整個專案。
 
 若要安裝「SDK 產生器 CLI」外掛程式，請執行下列指令：
 ```

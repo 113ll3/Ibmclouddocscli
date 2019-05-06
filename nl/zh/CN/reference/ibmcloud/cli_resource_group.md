@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # 使用资源和资源组
 {: #ibmcloud_commands_resource}
 
-资源组是一种使用可定制的分组来组织帐户资源的方法。使用以下命令可管理 {{site.data.keyword.cloud}} 资源及资源组中的资源。
+资源组是一种使用可定制的分组来组织帐户资源的方法。使用以下命令可管理资源组中的 {{site.data.keyword.cloud}} 资源。
 {: shortdesc}
 
 ## ibmcloud resource groups

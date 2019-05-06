@@ -10,8 +10,33 @@ subcollection: cloud-cli
 
 ---
 
-# Foire aux questions (FAQ)
+# Foire aux questions
 {: #ibm-cli-faq}
+
+## Suis-je obligé d'utiliser la dernière version de l'interface de ligne de commande {{site.data.keyword.cloud_notm}} ?
+{: #cli-latest-version}
+
+Oui, vous devez utiliser la dernière version. Vous pouvez déterminer la version que vous utilisez en exécutant la commande suivante :
+
+```
+ibmcloud -v
+```
+{: codeblock}
+
+## Comment mettre à jour une interface de ligne de commande ?
+{: #cli-update-version}
+
+Exécutez la commande suivante pour effectuer une mise à jour vers la dernière version de l'interface de ligne de commande :
+
+```
+ibmcloud update
+```
+{: codeblock}
+
+## Puis-je recevoir des notifications relatives aux nouvelles éditions de l'interface de ligne de commande ?
+{: #cli-get-notified}
+
+Oui, vous recevez des notifications relatives aux nouvelles éditions de l'interface de ligne de commande dès qu'elles sont disponibles. Abonnez-vous au [{{site.data.keyword.cloud_notm}}référentiel d'éditions CLI](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
 
 ## Quelle est la structure de fichier pour les applications {{site.data.keyword.cloud_notm}} ?
 {: #cli-file-structure}
@@ -28,30 +53,7 @@ Le plug-in d'interface de ligne de commande {{site.data.keyword.dev_cli_long}} u
 Le second conteneur est le conteneur "run" qui reproduit fidèlement l'environnement d'exécution réel de votre application une fois cette dernière déployée sur le cloud. Il peut être déployé pour être utilisé dans {{site.data.keyword.cloud_notm}}, par exemple. Par conséquent, un point
 d'entrée démarrant votre application est défini. Lorsque vous choisissez d'exécuter votre application via le plug-in d'interface de ligne de commande {{site.data.keyword.dev_cli_long}}, ce conteneur est utilisé. Le fichier `Dockerfile` pour ce conteneur est défini par le paramètre [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run).
 
-# Comment déployer le code existant ?
-Pour déployer un codebase existant, procédez comme suit pour activer votre application[activer votre application](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
+## Comment déployer le code existant ?
 
-## Documentation, vidéos et blogues de référence
-{: #cli-faq-reference}
+Pour déployer une base de code existante, voir [Génération d'actifs de déploiement et d'activation de cloud](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
 
-### Blogues
-{: #cli-blogs}
-
-- [Deploying to {{site.data.keyword.cloud_notm}} Private with {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://www.ibm.com/blogs/bluemix/2018/05/deploying-to-ibm-cloud-private-2-1-0-2-with-ibm-cloud-developer-tools-cli/)
-- [Deploying to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
-- [Enable existing projects for {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
-
-### Vidéos
-{: #cli-videos}
-
-- [How to deploy to Kubernetes on {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://www.youtube.com/watch?v=mh_XBn_eV_8&feature=youtu.be)
-- [How to deploy existing projects to {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.dev_cli_long}} CLI Plug-in](https://www.youtube.com/watch?v=-NP5ZEZE1dY&feature=youtu.be)
-- [Create, debug, and deploy a Node.js app with the {{site.data.keyword.dev_cli_long}} CLI Plug-in and VSCode](https://www.youtube.com/watch?v=z-ByHuI41dU&feature=youtu.be)
-
-### Documentation et tutoriels
-- [Continuous Deployment to Kubernetes](/docs/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes)
-- [Traitement des incidents liés au plug-in d'interface de ligne de commande {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-troubleshoot)
-- [{{site.data.keyword.dev_cli_long}} Commandes du plug-in d'interface de ligne de commande (CLI) IBM Cloud Developer Tools (ibmcloud dev)](/docs/cli/idt?topic=cloud-cli-idt-cli)
-- [Débogage d'application locale pour l'interface de ligne de commande {{site.data.keyword.dev_cli_long}}](/docs/cli/idt?topic=cloud-cli-local-debug)
-
-**Pour signaler des problèmes ou donner votre avis, vous pouvez utiliser le [canal {{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com) - Pour demander l'accès à l'équipe, cliquez [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/).**

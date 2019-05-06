@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-29"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -50,7 +50,7 @@ ibmcloud plugin install dev
 
 要查看 Kubernetes 仪表板的本地版本并将应用程序部署到集群，请安装适用于您平台的 [Kubernetes 命令行工具 ](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")：
 
-* MacOS：
+* Mac：
   ```
 curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
 ```
@@ -73,7 +73,7 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/wi
 ## 安装 {{site.data.keyword.registrylong_notm}} CLI 插件
 {: #idt-install-container-registry-cli-plugin}
 
-您可以使用 `container-registry` CLI 插件，在 IBM 托管和管理的专用注册表中设置您自己的映像名称空间，在此注册表中，可存储 Docker 映像并与 {{site.data.keyword.cloud_notm}} 帐户中所有用户共享。
+您可以使用 `container-registry` CLI 插件，在 IBM 托管和管理的专用注册表中设置您自己的映像名称空间。在此注册表中，可存储 Docker 映像并与 {{site.data.keyword.cloud_notm}} 帐户中的所有用户共享。
 
 * 要安装 {{site.data.keyword.registrylong}} 插件，请运行以下命令：
   ```
@@ -101,7 +101,7 @@ ibmcloud plugin install container-service
 
 安装 [Helm](https://helm.sh/docs/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")，Helm 是一个基于 Kubernetes 的软件包管理器。
 
-* 对于 MacOS 和 Linux&trade; 用户，运行以下命令：
+* 对于 Mac 和 Linux&trade; 用户，运行以下命令：
   ```
 export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
@@ -126,7 +126,7 @@ ibmcloud plugin install cloud-functions
 ## 安装 SDK Generator CLI 插件
 {: #idt-install-sdk-gen}
 
-作为 {{site.data.keyword.cloud_notm}} 上的开发者，您可以使用此插件通过符合 [Open API 规范](https://www.openapis.org/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 的 REST API 定义来生成 SDK。对 REST API 定义进行更改后，可以使用此插件来仅重新生成 SDK，而不重新生成整个项目。
+作为 {{site.data.keyword.cloud_notm}} 开发者，您可以使用此插件通过符合 [Open API 规范](https://www.openapis.org/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 的 REST API 定义来生成 SDK。随着 REST API 定义的发展，可以使用此插件来仅重新生成 SDK，而不重新生成整个项目。
 
 要安装 SDK Generator CLI 插件，请运行以下命令：
 ```

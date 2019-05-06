@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -27,17 +27,17 @@ Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'int
 
 * [Interface de ligne de commande Cloud Foundry ](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
 
-   L'interface de ligne de commande Cloud Foundry n'est pas requise, mais elle facilite l'accès à {{site.data.keyword.cloud_notm}} à partir du terminal.
+   L'interface de ligne de commande Cloud Foundry n'est pas requise, mais elle facilite l'accès à {{site.data.keyword.cloud_notm}} à partir d'un terminal.
 
    Pour plus d'informations sur l'interface de ligne de commande Cloud Foundry, voir la [documentation](/docs/cli?topic=cloud-cli-cf#cf).
 
 * [Interface de ligne de commande](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli) {{site.data.keyword.cloud_notm}}.
 
-   Ce plug-in s'installe dans l'interface de ligne de commande {{site.data.keyword.cloud_notm}}. L'interface de ligne de commande {{site.data.keyword.cloud_notm}} fournit également des ressources utiles pour accéder à {{site.data.keyword.cloud_notm}} à partir du terminal.
+   Ce plug-in est ajouté à l'interface de ligne de commande {{site.data.keyword.cloud_notm}} et fournit des ressources utiles pour accéder à {{site.data.keyword.cloud_notm}} à partir de la ligne de commande. 
 
 * [Environnement de développement de Go ](https://golang.org/doc/code.html){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
-   Go est strict en ce qui concerne les emplacements des packages, par conséquent, votre source doit être définie dans la structure de répertoire `$GOPATH`. Prenez soin de définir vos variables `$GOPATH` et `$GOROOT` et d'inclure `$GOPATH/bin` dans votre variable d'environnement `$PATH` en éditant votre fichier de configuration `~/.bash_profile` (sur Mac OS).
+   Go est strict en ce qui concerne les emplacements des packages, par conséquent, votre source doit être définie dans la structure de répertoire `$GOPATH`. Vous devez définir vos variables `$GOPATH` et `$GOROOT` et inclure `$GOPATH/bin` dans votre variable d'environnement `$PATH`. Vous pouvez éditer le fichier de configuration `~/.bash_profile` (sur Mac) pour effectuer ces modifications. 
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -47,7 +47,7 @@ Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'int
    ```
    {: codeblock}
 
-* Gestionnaire de dépendances : [govendor ](https://github.com/kardianos/govendor){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
+* Gestionnaire de dépendances : [`govendor `](https://github.com/kardianos/govendor){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
    L'outil `govendor` crée et gère les dépendances Go. Vous n'en avez pas besoin sauf si vous prévoyez de mettre à jour le répertoire vendor.
 
@@ -74,7 +74,7 @@ Suivez les instructions décrites ci-après pour contribuer au plug-in SDK d'int
 
 * Structure de test de BDD : [Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
-La structure de test repose sur Ginkgo, une structure de test BDD pour Go. Elle est utilisée avec [Gomega](http://onsi.github.io/gomega/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"), qui est une bibliothèque d'assertion et de comparateur pour Ginkgo.
+La structure de test repose sur Ginkgo, une structure de test BDD pour Go. Elle est utilisée avec [`gomega`](http://onsi.github.io/gomega/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"), qui est une bibliothèque d'assertion et de comparateur pour Ginkgo.
 
    * Installez `ginkgo` à l'aide de la commande suivante :
 
@@ -99,7 +99,7 @@ La structure de test repose sur Ginkgo, une structure de test BDD pour Go. Elle 
 
       * Pour ajouter une couverture de code, ajoutez `-cover` à la commande.
 
-   * Procurez-vous une forme HTML conviviale de la couverture de code ; pour cela, exécutez la commande suivante :
+   * Pour vous procurer une forme HTML conviviale de la couverture de code, exécutez la commande suivante :
 
       ```
       go tool -html={package}.coverprofile
@@ -108,9 +108,9 @@ La structure de test repose sur Ginkgo, une structure de test BDD pour Go. Elle 
 
       * Vous accédez au répertoire dans lequel se trouve le fichier `.coverprofile`.
 
-* Internationalisation : [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
+* Globalisation : [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") et [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
-L'internationalisation est basée sur `go-i18n`. Il s'agit d'un outil de ligne de commande et de package qui fournit le support nécessaire pour traduire une application Go en plusieurs langues. Les groupements de traduction sont prétraités par `go-bindata`. Il s'agit d'une commande qui convertit un fichier d'entrée en code source Go gérable.
+La globalisation est basée sur `go-i18n`. Il s'agit d'un outil de ligne de commande et de package qui fournit le support nécessaire pour traduire une application Go dans plusieurs langues. Les groupements de traduction sont prétraités par la commande `go-bindata` qui convertit un fichier d'entrée en code source Go gérable.
 
    * Installez `go-i18n` à l'aide de la commande suivante :
 
@@ -143,7 +143,7 @@ Delve est un débogueur pour le langage de programmation Go et il est utilisé p
 ## Bibliothèques d'exécution requises
 {: #runtime-libs}
 
-Les bibliothèques d'exécution requises sont gérées sous le répertoire `vendor` et sont validées dans le référentiel Git pour garantir la stabilité, dans la mesure où  Go ne fournit pas un gestionnaire de dépendances robuste.
+Les bibliothèques d'exécution requises sont gérées sous le répertoire `vendor` et sont validées dans le référentiel Git pour garantir la stabilité, dans la mesure où Go ne fournit pas un gestionnaire de dépendances robuste.
 
 ### Dépendances d'exécution
 {: #runtime-dependencies}

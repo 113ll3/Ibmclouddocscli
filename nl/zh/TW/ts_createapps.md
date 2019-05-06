@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -24,7 +24,7 @@ subcollection: cloud-cli
 # {{site.data.keyword.cloud_notm}} Developer Tools CLI 外掛程式的疑難排解
 {: #troubleshoot}
 
-使用 {{site.data.keyword.dev_cli_short}} 指令行介面 (CLI) 建立應用程式的一般問題可能包括部署失敗或無法擷取程式碼。在許多情況下，您可以遵循一些簡單的步驟，從這些問題回復。
+請參閱 {{site.data.keyword.dev_cli_short}} 指令行介面 (CLI) 一般問題的解決方案。在許多情況下，您可以遵循一些簡單的步驟，從這些問題回復。
 {: shortdesc}
 
 ## 當我使用非行動模式建立應用程式時，為何會收到主機名稱錯誤？
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-`appmetrics` 模組安裝在不同的架構上時，會發生此錯誤。安裝在某個架構上的原生 mpm 模組無法在另一個架構上運作。所包括的 Docker 映像檔是以 Linux Kernel 為基礎。
+`appmetrics` 模組安裝在不同的架構上時，會發生此錯誤。安裝在某個架構上的原生 mpm 模組無法在另一個架構上運作。所包括的 Docker 映像檔是以 Linux&trade; Kernel 為基礎。
 {: tsCauses}
 
 刪除 `node_modules` 資料夾，並重新執行 `ibmcloud dev run` 指令。
@@ -218,7 +218,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 {: screen}
 {: tsSymptoms}
 
-這最可能是叢集名稱無效所造成。您可以執行與 `--trace` 相同的指令來確認原因，而錯誤輸出中可能會包含下列詳細資料：
+此問題最可能是叢集名稱無效所造成。您可以執行與 `--trace` 相同的指令來確認原因，而錯誤輸出中可能會包含下列詳細資料：
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
@@ -248,10 +248,10 @@ Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to 
 {: screen}
 {: tsSymptoms}
 
-這最可能是部署映像檔目標無效所造成。更具體來說，名稱空間（即部署映像檔目標中的中間值）可能無效。
+此問題最可能是部署映像檔目標無效所造成。更具體來說，名稱空間（即部署映像檔目標中的中間值）可能無效。
 {: tsCauses}
 
-請確定部署映像檔目標中的名稱空間符合執行下列指令時所顯示的其中一個名稱空間：
+請確定部署映像檔目標中的名稱空間，符合執行下列指令時顯示的其中一個名稱空間：
 ```
 ibmcloud cr namespaces
 ```
@@ -262,7 +262,7 @@ ibmcloud cr namespaces
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
-系統嘗試啟動您的應用程式之後，可能會顯示下列失敗：
+啟動您的應用程式時，可能會顯示下列失敗：
 ```
 FAILED
 Could not determine the language of your app.
@@ -278,14 +278,14 @@ directly.
 - 針對無法辨識其語言的應用程式執行 [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 指令。
 {: tsCauses}
 
-請務必從包含應用程式原始碼的應用程式目錄中執行這個指令。如果這無法解決問題，且語言是其中一種[支援的語言](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options)，請使用 `--language` 參數來指定語言。
+請務必從包含應用程式原始碼的應用程式目錄中執行這個指令。如果未解決此問題，且語言是其中一種[支援的語言](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options)，請使用 `--language` 參數來指定語言。
 {: tsResolve}
 
-## 為何無法建置或執行已針對雲端部署啟用的應用程式？
+## 為何無法建置或執行針對雲端部署啟用的應用程式？
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-您在嘗試 [build](/docs/cli/idt?topic=cloud-cli-idt-cli#build)（建置）或 [run](/docs/cli/idt?topic=cloud-cli-idt-cli#run)（執行）已啟用的應用程式時，可能會遇到各種失敗問題。
+您在[建置](/docs/cli/idt?topic=cloud-cli-idt-cli#build)或[執行](/docs/cli/idt?topic=cloud-cli-idt-cli#run)針對雲端部署啟用的應用程式時，可能會遇到各種失敗。
 {: tsSymptoms}
 
 您可以在下列每個鏈結中找到許多不同的原因。
@@ -320,8 +320,8 @@ image.
 
 請確定您已安裝並執行 Docker：
 - 安裝或啟動 [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
-- 安裝或啟動 [Docker for Windows](https://docs.docker.com/docker-for-windows/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
-- 安裝或啟動 [Docker for Linux](https://docs.docker.com/v17.12/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
+- 安裝或啟動 [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
+- 安裝或啟動 [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
 {: tsResolve}
 
 ## 如何解決不相容的 helm 版本？
@@ -347,7 +347,7 @@ The 'helm upgrade ' command failed to complete due to: exit status 1
 若要解決此問題，請將用戶端的版本設為與叢集版本相同的版本。例如，若要安裝 2.8.1 helm 版，請執行下列指令：
 {: tsResolve}
 
-* 若為 Mac 及 Linux，請執行下列指令：
+* 若為 Mac 和 Linux&trade;，請執行下列指令：
   ```
   export DESIRED_VERSION=v2.8.1
 
@@ -356,19 +356,19 @@ The 'helm upgrade ' command failed to complete due to: exit status 1
   export HELM_HOME=~/.helm
   ```
 
-* 若為 Windows，請以管理者身分執行下列動作：
-  下載並安裝 `helm` 二進位檔，網址為 [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window}![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+* 若為 Windows&trade;：請以管理者身分下載並安裝 `helm` 二進位檔，網址為 [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
   
   從 PowerShell 終端機，使用下列指令：
   ```
   Set-Location Env:
   Set-Item HELM_HOME C:\.helm\
   ```
+  {: codeblock}
 
 ## 使用者名稱包含 "@" 時，為何 ibmcloud dev build 會失敗？
 {: ts-cli-username}
 {: troubleshoot}
-在映像檔建置程序期間，使用者名稱用於 Docker 工具映像檔中的使用者。如果使用者名稱包含任何特殊字元，例如 '@' 或 '-'，則 Docker 映像檔建置程序會失敗，且可能會發生下列錯誤：
+在映像檔建置程序期間，使用者名稱用於 Docker 工具映像檔中的使用者。如果使用者名稱包含任何特殊字元，例如 '@' 或 '-'，則 Docker 映像檔建置程序會失敗，且發生下列錯誤：
 ```
 Image will have user johnsmith@acme.com with id 501 added
 
