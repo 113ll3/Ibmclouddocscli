@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-07"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -34,7 +34,7 @@ ibmcloud sl user create [OPTIONS] USERNAME
 <dt>--email</dt>
 <dd>Email address for this user. Required for creation.</dd>
 <dt>--password</dt>
-<dd>Password to set for this user. If no password is provided, the user is sent an email to generate one, which expires in 24 hours. Specify the '-p generate' option to generate a password for you. Passwords require 8+ characters, upper and lowercase, a number and a symbol.</dd>
+<dd>Password to set for this user. If no password is provided, the user is sent an email to generate one, which expires in 24 hours. Specify the '-p generate' option to generate a password for you. Passwords require 8+ characters, uppercase and lowercase, a number and a symbol.</dd>
 <dt>--from-user</dt>
 <dd>Base user to use as a template for creating this user. The default is to use the user that is running this command. Information provided in --template supersedes this template.</dd>
 <dt>--template</dt>
