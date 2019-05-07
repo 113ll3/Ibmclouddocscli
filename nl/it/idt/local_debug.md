@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -20,12 +20,12 @@ subcollection: cloud-cli
 # Debug dell'applicazione locale per la CLI {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
-Esistono degli strumenti per aiutarti ad eseguire il debug della tua applicazione in Java e Node.js in {{site.data.keyword.cloud_notm}}.
+Esistono degli strumenti per aiutarti ad eseguire il debug della tua applicazione in Java&trade; e Node.js in {{site.data.keyword.cloud_notm}}.
 
 ## Debug dell'applicazione Java
 {: #java}
 
-Procedura per abilitare lo strumento di debug per un'applicazione Java:
+Procedura per abilitare lo strumento di debug per un'applicazione Java&trade;:
 
 1. Dalla directory root del tuo progetto dell'applicazione, esegui il seguente comando:
 
@@ -38,15 +38,15 @@ Procedura per abilitare lo strumento di debug per un'applicazione Java:
 
 	* Eclipse
       1. Importa il progetto **Existing maven project** in Eclipse.
-      2. Crea una configurazione di debug dell'[applicazione remota Java ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
+      2. Crea una configurazione di debug dell'[applicazione remota Java&trade; ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
       		1. Immetti l'indirizzo IP o `localhost:<port>`  
       		2. Immetti `7777` per il numero di porta.
-      		3. Specifica il nome del progetto Java che hai importato.
+      		3. Specifica il nome del progetto che hai importato.
       6. Imposta un punto di interruzione nell'IDE.
       7. Esegui la configurazione di debug.
       8. Accedi all'endpoint con un browser per ricreare il problema.  
 	   
-	   La porta predefinita è 9080 per l'endpoint dei microservizi di base Java.
+	   La porta predefinita è `9080` per l'endpoint dei microservizi di base Java&trade;.
 	   {: note}
 
 	* [IntelliJ ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")

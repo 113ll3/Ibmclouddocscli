@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -39,7 +39,7 @@ Use os comandos da CLI do {{site.data.keyword.dev_cli_notm}} (`ibmcloud dev`) a 
 - [diag](#diag): exibe informações de versão sobre dependências instaladas.
 - [edit](#edit): inclua ou remova serviços de um aplicativo existente.
 - [enable](#enable): atualize um aplicativo existente para uso com o {{site.data.keyword.cloud_notm}} Developer Tools.
-- [get-credentials](#get-credentials): obtém credenciais que são requeridas pelo aplicativo. para ativar o uso de serviços  {{site.data.keyword.cloud_notm}}  conectados.
+- [get-credentials](#get-credentials): obtém as credenciais que são requeridas pelo aplicativo para ativar o uso dos serviços {{site.data.keyword.cloud_notm}} conectados.
 - [help](#help): ajuda na sintaxe e nos argumentos da CLI.
 - [list](#list): liste todos os aplicativos do {{site.data.keyword.cloud_notm}} em um grupo de recursos.
 - [run](#run): execute o seu aplicativo em um contêiner local.
@@ -48,7 +48,9 @@ Use os comandos da CLI do {{site.data.keyword.dev_cli_notm}} (`ibmcloud dev`) a 
 - [ stop ](#stop): pare um contêiner.
 - [test](#test): teste o seu aplicativo em um contêiner local.
 - [view](#view): visualize a URL implementada do aplicativo para teste e visualização.
-- [compound commands](#compound): execute múltiplos comandos em uma única instrução de linha de comandos.
+
+Execute múltiplos comandos em uma única instrução de linha de comandos usando [comandos compostos](#compound).
+{: tip}
 
 ## compilação
 {: #build}
@@ -81,7 +83,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-Use o comando `console` para abrir um navegador da web para o console da web do seu aplicativo no {{site.data.keyword.cloud_notm}}. É possível executar o comando `ibmcloud dev console` de dentro de sua pasta do aplicativo. A CLI tenta localizar um aplicativo correspondente no {{site.data.keyword.cloud_notm}} que tem o mesmo ID do aplicativo que o diretório atual. Se o sistema não for capaz de localizar um nome correspondente, ele abrirá o painel da web e Móvel no {{site.data.keyword.cloud_notm}} em vez do aplicativo específico.
+Use o comando `console` para abrir um navegador da web para o console da web do seu aplicativo no {{site.data.keyword.cloud_notm}}. É possível executar o comando `ibmcloud dev console` de dentro de sua pasta do aplicativo. A CLI tenta localizar um aplicativo correspondente no {{site.data.keyword.cloud_notm}} que tem o mesmo ID do aplicativo que o diretório atual. Se o sistema não for capaz de localizar um nome correspondente, ele abrirá o painel **Web e móvel** no {{site.data.keyword.cloud_notm}} em vez do aplicativo específico.
 
 É possível fornecer um nome do aplicativo e a CLI ignora a correspondência com base no nome da pasta ou do aplicativo. Nesse caso, a CLI abre o console do aplicativo nomeado em um navegador da web.  
 
@@ -94,7 +96,7 @@ ibmcloud dev console [ applicationName ]
 ## create
 {: #create}
 
-Crie um aplicativo, enviando prompt para todas as informações, incluindo tipo de recurso, linguagem, kit do iniciador e opções da Cadeia de ferramentas do DevOps incluindo o IBM Cloud Foundry ou o Cloud Foundry Enterprise Environment e o Kubernetes. O aplicativo é criado no diretório atual.
+Crie um aplicativo que solicite todas as informações, incluindo tipo de recurso, linguagem, kit do iniciador e opções da Cadeia de ferramentas do DevOps. Incluindo o IBM Cloud Foundry ou o Cloud Foundry Enterprise Environment e o Kubernetes. O aplicativo é criado no diretório atual.
 
 Para criar um aplicativo no diretório atual e para associar serviços a ele, execute o comando a seguir:
 ```
@@ -131,12 +133,12 @@ Para sair da sessão de depuração, use `CTRL-C`.
 {: #debug-parameters}
 
 Os parâmetros a seguir são exclusivos para o comando `debug` e
-ajudam na depuração de um aplicativo. Há [parâmetros adicionais](#command-parameters) que são compartilhados com outros comandos.
+ajudam na depuração de um aplicativo. Há [mais parâmetros](#command-parameters) que são compartilhados com outros comandos.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* Mapeamentos de porta para a porta de depuração. O primeiro valor é a porta para usar no S.O. do host, o segundo é a porta no contêiner [host-port:container-port].
+* Mapeamentos de porta para a porta de depuração. O primeiro valor é a porta a ser usada no S.O. do host, o segundo é a porta no contêiner [`host-port:container-port`].
 * Uso: `ibmcloud dev debug--container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -151,7 +153,7 @@ ajudam na depuração de um aplicativo. Há [parâmetros adicionais](#command-pa
 * Parâmetro que é usado para especificar um comando para iniciar a depuração no contêiner de ferramentas. Use esse parâmetro se o `build-cmd-debug` iniciar seu aplicativo em depuração.
 * Uso: `ibmcloud dev debug --debug-cmd /the/debug/command`
 
-## excluir
+## delete
 {: #delete}
 
 Use o comando `delete` para remover aplicativos de seu espaço do {{site.data.keyword.cloud_notm}}. É possível executar o comando sem parâmetros para listar os aplicativos disponíveis e selecionar o aplicativo na lista numerada para excluir. O código do aplicativo e os diretórios não são removidos de seu espaço em disco local.
@@ -617,7 +619,7 @@ Os comandos a seguir podem ser usados com esse recurso:
 
 Se um comando falhar por qualquer motivo, os comandos subsequentes não serão executados.
 
-Se algum comando seguir `debug` ou `run`, a execução continuará se `debug` ou `run` for finalizado por meio de outros meios além de eliminar o processo por meio da janela do terminal atual. `CTRL+C` elimina o processo e não executa os comandos subsequentes. Por exemplo, é possível executar `ibmcloud dev stop` de outra janela do terminal para parar o contêiner em execução e continuar a execução para o próximo comando.
+Se algum comando seguir `debug` ou `run`, a execução continuará se `debug` ou `run` for finalizado por meio de outros meios além de eliminar o processo por meio da janela do terminal atual. Insira `CTRL+C` para encerrar o processo e não executar os comandos subsequentes. Por exemplo, é possível executar `ibmcloud dev stop` de outra janela do terminal para parar o contêiner em execução e continuar a execução para o próximo comando.
 
 ## Parâmetros para construir, depurar, executar e testar
 {: #command-parameters}

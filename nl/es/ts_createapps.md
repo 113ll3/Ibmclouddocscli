@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -24,7 +24,7 @@ subcollection: cloud-cli
 # Resolución de problemas del plugin de CLI de herramientas del desarrollador de {{site.data.keyword.cloud_notm}}
 {: #troubleshoot}
 
-Los problemas más habituales al utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_short}} para crear apps pueden incluir anomalías en el despliegue o en el código que no es posible recuperar. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
+Consulte las soluciones a problemas comunes con la interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_short}}. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
 {: shortdesc}
 
 ## ¿Por qué recibo un error de nombre de host cuando creo una app con un patrón no móvil?
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux.
+Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux&trade;.
 {: tsCauses}
 
 Suprima la carpeta `node_modules` y ejecute de nuevo el mandato `ibmcloud dev run`.
@@ -218,7 +218,7 @@ Failed to configure deployment with cluster '<cluster-name>' due to: exit status
 {: screen}
 {: tsSymptoms}
 
-La causa más probable es que el nombre del clúster no sea válido. Lo puede confirmar ejecutando el mismo mandato con `--trace`. Los siguientes detalles podría incluirse en la salida del error:
+La causa más probable del problema es que el nombre del clúster no sea válido. Lo puede confirmar ejecutando el mismo mandato con `--trace`. Los siguientes detalles podría incluirse en la salida del error:
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
@@ -236,7 +236,7 @@ ibmcloud cs cluster-config <cluster-name>
 {: #ts-deploy-image-target}
 {: troubleshoot}
 
-Se podría visualizar la siguiente anomalía después de que se le solicitase el destino de imagen de despliegue:
+Se podría visualizar la siguiente anomalía después de que se le solicite el destino de imagen de despliegue:
 ```
 FAILED
 Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
@@ -248,10 +248,10 @@ Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to 
 {: screen}
 {: tsSymptoms}
 
-La causa más probable es que la imagen de destino de despliegue no sea válida. Más concretamente, el espacio de nombres, que se encuentra en medio en el destino de imagen de despliegue, podría no ser válido.
+La causa más probable del problema es que el destino de la imagen del despliegue no sea válido. Más concretamente, el espacio de nombres, que es el valor de en medio del destino de imagen de despliegue, podría no ser válido.
 {: tsCauses}
 
-Asegúrese de que el espacio de nombres en el destino de la imagen de despliegue coincide con uno de los espacios de nombres que se muestran cuando ejecuta el siguiente mandato:
+Asegúrese de que el espacio de nombres en el destino de la imagen de despliegue coincida con uno de los espacios de nombres que se muestran cuando ejecuta el siguiente mandato:
 ```
 ibmcloud cr namespaces
 ```
@@ -262,7 +262,7 @@ ibmcloud cr namespaces
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
-Es posible que se muestre el siguiente error al intentar iniciar la app:
+Es posible que se muestre el siguiente error al iniciar la app:
 ```
 FAILED
 Could not determine the language of your app.
@@ -278,14 +278,14 @@ Este error puede deberse a una de las causas siguientes:
 - Se ha ejecutado el mandato [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para una app de un idioma que no se reconoce.
 {: tsCauses}
 
-Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si esto no resuelve el problema y el idioma es uno de los [idiomas soportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilice el parámetro `--language` para especificar el idioma.
+Asegúrese de ejecutar el mandato desde el directorio de la app que contiene el código fuente de la app. Si el problema no se soluciona y el idioma es uno de los [idiomas soportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), utilice el parámetro `--language` para especificar el idioma.
 {: tsResolve}
 
-## ¿Por qué no puedo crear o ejecutar una app que se ha habilitado para el despliegue en la nube?
+## ¿Por qué no puedo crear o ejecutar una app que está habilitada para el despliegue en la nube?
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-Es posible que se produzcan varias anomalías al intentar [crear](/docs/cli/idt?topic=cloud-cli-idt-cli#build) o [ejecutar](/docs/cli/idt?topic=cloud-cli-idt-cli#run) una app que se ha habilitado.
+Es posible que se produzcan varias anomalías al [crear](/docs/cli/idt?topic=cloud-cli-idt-cli#build) o [ejecutar](/docs/cli/idt?topic=cloud-cli-idt-cli#run) una app que se ha habilitado para el despliegue en la nube.
 {: tsSymptoms}
 
 En los siguientes enlaces encontrará muchas de las posibles causas.
@@ -321,8 +321,8 @@ Este error puede deberse a una de las causas siguientes:
 
 Asegúrese de que Docker está instalado y en ejecución:
 - Para instalar o iniciar [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-- Para instalar o iniciar [Docker for Windows](https://docs.docker.com/docker-for-windows/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-- Para instalar o iniciar [Docker for Linux](https://docs.docker.com/v17.12/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+- Para instalar o iniciar [Docker for Windows&trade;](https://docs.docker.com/docker-for-windows/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+- Para instalar o iniciar [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
 {: tsResolve}
 
 ## ¿Cómo resolver la incompatibilidad de versiones de Helm?
@@ -348,7 +348,7 @@ The 'helm upgrade ' command failed to complete due to: exit status 1
 Para resolver el problema, establezca la versión del cliente en la misma que la versión del clúster. Por ejemplo, para instalar la versión de Helm 2.8.1, ejecute los mandatos siguientes:
 {: tsResolve}
 
-* Para Mac y Linux, ejecute los mandatos siguientes:
+* Para Mac y Linux&trade;, ejecute los mandatos siguientes:
   ```
   export DESIRED_VERSION=v2.8.1
 
@@ -357,20 +357,19 @@ Para resolver el problema, establezca la versión del cliente en la misma que la
   export HELM_HOME=~/.helm
   ```
 
-* Para Windows, haga lo siguiente como administrador:
-  Descargue e instale el binario de `helm` en
-[https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+* Para Windows&trade;: como administrador, descargue e instale el binario de `helm` de [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
   
   Desde el terminal PowerShell, utilice los mandatos siguientes:
   ```
   Set-Location Env:
   Set-Item HELM_HOME C:\.helm\
   ```
+  {: codeblock}
 
 ## ¿Por qué falla ibmcloud dev build con un nombre de usuario que incluye "@"?
 {: ts-cli-username}
 {: troubleshoot}
-Durante el proceso de creación de la imagen, se utiliza su nombre de usuario para el usuario de la imagen de las herramientas de Docker. Si el nombre de usuario contiene caracteres especiales como '@' o '-', el proceso de creación de la imagen de Docker fallará y se puede producir el error siguiente:
+Durante el proceso de creación de la imagen, se utiliza su nombre de usuario para el usuario de la imagen de las herramientas de Docker. Si el nombre de usuario contiene caracteres especiales como '@' o '-', el proceso de creación de la imagen de Docker falla y con el error siguiente:
 ```
 Image will have user johnsmith@acme.com with id 501 added
 

@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -48,7 +48,9 @@ Utilizza i seguenti comandi della CLI {{site.data.keyword.dev_cli_notm}} (`ibmcl
 - [stop](#stop): arresta un contenitore.
 - [test](#test): verifica la tua applicazione in un contenitore locale.
 - [view](#view): visualizza l'URL distribuito dell'applicazione per la verifica e la visualizzazione.
-- [comandi composti](#compound): esegui più comandi in una singola istruzione della riga di comando.
+
+Esegui più comandi in una singola istruzione della riga di comando utilizzando i [comandi compound](#compound).
+{: tip}
 
 ## build
 {: #build}
@@ -81,7 +83,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-Utilizza il comando `console` per aprire un browser web per la console web della tua applicazione su {{site.data.keyword.cloud_notm}}. Puoi eseguire il comando `ibmcloud dev console` dall'interno della cartella della tua applicazione. La CLI prova a trovare un'applicazione corrispondente in {{site.data.keyword.cloud_notm}} che abbia lo stesso ID applicazione della directory corrente. Se non è in grado di trovare un nome corrispondente, il sistema apre il dashboard Web e mobile su {{site.data.keyword.cloud_notm}} invece dell'applicazione specifica.
+Utilizza il comando `console` per aprire un browser web per la console web della tua applicazione su {{site.data.keyword.cloud_notm}}. Puoi eseguire il comando `ibmcloud dev console` dall'interno della cartella della tua applicazione. La CLI prova a trovare un'applicazione corrispondente in {{site.data.keyword.cloud_notm}} che abbia lo stesso ID applicazione della directory corrente. Se il sistema non è in grado di trovare un nome corrispondente, apre il dashboard **Web e mobile** su {{site.data.keyword.cloud_notm}} invece dell'applicazione specifica.
 
 Puoi fornire un nome applicazione e la CLI ignora la messa in corrispondenza basata sul nome della cartella o dell'applicazione. In questo caso, la CLI apre la console dell'applicazione denominata in un browser web.  
 
@@ -94,7 +96,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-Crea un'applicazione richiedendo tutte le informazioni, compresi il tipo di risorsa, il linguaggio, il kit starter e le opzioni della toolchain DevOps, compresi IBM Cloud Foundry o Cloud Foundry Enterprise Environment e Kubernetes. L'applicazione viene creata nella directory corrente.
+Crea un'applicazione che richiede tutte le informazioni, compresi tipo di risorsa, linguaggio, kit starter e le opzioni della toolchain DevOps. Compresi IBM Cloud Foundry o Cloud Foundry Enterprise Environment e Kubernetes. L'applicazione viene creata nella directory corrente.
 
 Per creare un'applicazione nella directory corrente e associare dei servizi ad essa, immetti il seguente comando:
 ```
@@ -129,12 +131,12 @@ Per uscire dalla sessione di debug, utilizza `CTRL-C`.
 {: #debug-parameters}
 
 I seguenti parametri sono esclusivi per il comando `debug` e
-a assistono con il debug di un'applicazione. Ci sono dei [parametri aggiuntivi](#command-parameters) che sono condivisi con altri comandi.
+a assistono con il debug di un'applicazione. Ci sono degli [ulteriori parametri](#command-parameters) che sono condivisi con altri comandi.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* Associazioni di porta per la porta di debug. Il primo valore è la porta da utilizzare nel SO host, il secondo è la porta nel contenitore [porta-host:porta-contenitore].
+* Associazioni di porta per la porta di debug. Il primo valore è la porta da utilizzare nel SO host, il secondo è la porta nel contenitore [`host-port:container-port`].
 * Utilizzo: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -613,7 +615,7 @@ Con questa funzione possono essere utilizzati i seguenti comandi:
 
 Se un comando ha esito negativo per un qualsiasi motivo, i comandi successivi non vengono eseguiti.
 
-Se qualche comando segue a `debug` o `run`, l'esecuzione continua se `debug` o `run` vengono terminati utilizzando un metodo diverso dal terminare il processo dalla finestra di terminale corrente. `CTRL+C` termina il processo e non esegue i comandi successivi. Ad esempio, puoi eseguire `ibmcloud dev stop` da un'altra finestra di terminale per arrestare il contenitore in esecuzione e continuare l'esecuzione al comando successivo.
+Se qualche comando segue a `debug` o `run`, l'esecuzione continua se `debug` o `run` vengono terminati utilizzando un metodo diverso dal terminare il processo dalla finestra di terminale corrente. Immetti `CTRL+C` per terminare il processo e non eseguire i comandi successivi. Ad esempio, puoi eseguire `ibmcloud dev stop` da un'altra finestra di terminale per arrestare il contenitore in esecuzione e continuare l'esecuzione al comando successivo.
 
 ## Parametri per build, debug, run e test
 {: #command-parameters}

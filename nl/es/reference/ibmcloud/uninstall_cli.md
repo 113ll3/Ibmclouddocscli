@@ -1,45 +1,64 @@
 ---
 
-
-
 copyright:
+  years: 2019
+lastupdated: "2019-04-26"
 
-  years: 2018
-lastupdated: "2018-07-24"
+keywords: uninstall, stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
+
+subcollection: cloud-cli
 
 ---
 
-{:codeblock: .codeblock} 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:note: .note}
 {:tip: .tip}
 
-# Desinstalar la CLI de {{site.data.keyword.Bluemix_notm}}
+# Desinstalación de la CLI de {{site.data.keyword.cloud_notm}} autónoma
+{: #uninstall-ibmcloud-cli}
 
-Consulte las secciones siguientes para obtener instrucciones sobre cómo desinstalar {{site.data.keyword.Bluemix_notm}} en plataformas específicas.
+Siga los pasos siguientes para desinstalar la CLI de {{site.data.keyword.cloud_notm}} autónoma en determinadas plataformas.
+{: shortdesc}
 
-## Desinstalar en Windows
+## Desinstalación en Windows
+{: #uninstall-cli-windows}
 
-* Pulse el botón `Inicio` y, a continuación, seleccione `Panel de control`
-* En la ventana emergente, pulse `Desinstalar un programa`
-* En la lista de aplicaciones emergente, localice `Interfaz de línea de mandatos de IBM Cloud`
-* Pulse con el botón derecho del ratón `Interfaz de línea de mandatos de IBM Cloud`, y seleccione `Desinstalar`
-* Se iniciará el desinstalador. Siga las instrucciones para finalizar la desinstalación.
+1. Pulse el botón **Inicio** y luego seleccione **Panel de control**.
+2. En la ventana emergente, pulse **Desinstalar un programa**.
+3. En la lista de aplicaciones emergente, localice **Interfaz de línea de mandatos de IBM Cloud**.
+4. Pulse con el botón derecho del ratón **Interfaz de línea de mandatos de IBM Cloud**, y seleccione **Desinstalar**.
+5. Se inicia el desinstalador. Siga las instrucciones para finalizar la desinstalación.
 
-## Desinstalar en Linux/macOS
+## Desinstalación en Linux y macOS
+{: #uninstall-cli-linux-macos}
 
-### Antes de la versión `0.9.0`
+Los pasos de desinstalación son distintos en función de la versión de la CLI que se ha instalado.
 
-* Abra un terminal, y ejecute los mandatos siguientes
-  * `rm -rf /usr/local/ibmcloud`
-  * `rm -f /usr/local/bin/ibmcloud`
-  * `rm -f /usr/local/bin/bluemix`
-  * `rm -f /usr/local/bin/bx`
-  * `rm -f /usr/local/bin/ibmcloud-analytics`
-* Limpie los scripts de rellenado automático, si los ha configurado. Para obtener más detalles, consulte [Habilitar el rellenado automático de la CLI](enable_cli_autocompletion.html).
+Para determinar la versión de la CLI de {{site.data.keyword.cloud_notm}}, ejecute:
+```
+ibmcloud -v
+```
+{: codeblock}
 
-### Versión `0.9.0` y posterior
+Para desinstalar versiones anteriores a `0.9.0`, ejecute los siguientes mandatos:
+  ```
+  rm -rf /usr/local/ibmcloud
+  rm -f /usr/local/bin/ibmcloud
+  rm -f /usr/local/bin/bluemix
+  rm -f /usr/local/bin/bx
+  rm -f /usr/local/bin/ibmcloud-analytics
+  ```
+  {: codeblock}
 
-* Abra un terminal, y ejecute el mandato siguiente
-  * `/usr/local/ibmcloud/uninstall`
-* Limpie los scripts de rellenado automático, si los ha configurado. Para obtener más detalles, consulte [Habilitar el rellenado automático de la CLI](enable_cli_autocompletion.html).
+Limpie los scripts de rellenado automático, si los ha configurado. Para obtener más información, consulte [Habilitación del rellenado automático de shell para la CLI de {{site.data.keyword.cloud_notm}} (solo Linux y Mac)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+
+Para desinstalar versiones `0.9.0` y posteriores, ejecute el siguiente mandato:
+  ```
+  /usr/local/ibmcloud/uninstall
+  ```
+  {: codeblock}
+
+Limpie los scripts de rellenado automático personalizados. Para obtener más información, consulte [Habilitación del rellenado automático de shell para la CLI de {{site.data.keyword.cloud_notm}} (solo Linux y Mac)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).

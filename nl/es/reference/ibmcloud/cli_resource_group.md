@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Cómo trabajar con recursos y grupos de recursos
 {: #ibmcloud_commands_resource}
 
-Un grupo de recursos es una manera de organizar sus recursos de cuenta en agrupaciones personalizables. Utilice los mandatos siguientes para gestionar los recursos y el recurso de {{site.data.keyword.cloud}} en un grupo de recursos.
+Un grupo de recursos es una manera de organizar sus recursos de cuenta en agrupaciones personalizables. Utilice los mandatos siguientes para gestionar los recursos de {{site.data.keyword.cloud}} de un grupo de recursos.
 {: shortdesc}
 
 ## ibmcloud resource groups

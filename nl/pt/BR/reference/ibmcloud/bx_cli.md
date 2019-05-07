@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-26"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -32,13 +32,13 @@ A seguir são listados os comandos detalhados que são suportados pelo {{site.da
 Os *Pré-requisitos* listam quais ações são necessárias antes de usar o comando. Os comandos que não têm ações de pré-requisito listam **Nenhum**. Caso contrário, os pré-requisitos podem incluir uma ou mais das ações a seguir:
 
 <dl>
-<dt>Nó de Extremidade</dt>
+<dt>Endpoint</dt>
 <dd>Um terminal de API deve ser configurado por meio de <code>ibmcloud api</code> antes de usar o comando.</dd>
 <dt>Login</dt>
 <dd>O login usando o comando <code>ibmcloud login</code> é necessário antes de usar esse comando.
 Se estiver efetuando login com o ID federado, use a opção '--sso' para se autenticar com uma senha única ou use '--apikey' para se autenticar com a chave API.
 </dd>
-<dt>Destino</dt>
+<dt>Target</dt>
 <dd>O comando <code>ibmcloud target</code> deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
 <dt>Docker</dt>
 <dd>A CLI do Docker (docker) deve estar instalada para executar esse comando.</dd>
@@ -70,9 +70,9 @@ ibmcloud help
 ```
 {: codeblock}
 
-Exiba a ajuda para o comando `info`:
+Exiba a ajuda para o comando `dev`:
 ```
-Informações de ajuda ibmcloud
+ibmcloud help dev
 ```
 {: codeblock}
 

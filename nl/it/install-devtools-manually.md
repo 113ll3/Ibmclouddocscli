@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-29"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Installazione manuale del plugin della CLI {{site.data.keyword.cloud_notm}} Developer Tools
 {: #install-devtools-manually}
 
-Puoi installare manualmente il plugin della CLI (command-line interface) {{site.data.keyword.cloud}} Developer Tools se preferisci un controllo più granulare per l'installazione dei componenti. Altrimenti, tutti i prerequisiti vengono installati automaticamente per la maggior parte degli utenti utilizzando i [programmi di installazione della piattaforma](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
+Puoi installare manualmente il plugin della CLI (command line interface) {{site.data.keyword.cloud}} Developer Tools se preferisci un controllo più granulare per l'installazione dei componenti. Altrimenti, tutti i prerequisiti vengono installati automaticamente per la maggior parte degli utenti utilizzando i [programmi di installazione della piattaforma](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
 {: shortdesc}
 
 ## Prima di iniziare
@@ -50,7 +50,7 @@ Per l'esecuzione e il debug in locale delle applicazioni, installa [Docker](http
 
 Per visualizzare una versione locale del dashboard Kubernetes e per distribuire le applicazioni nei tuoi cluster, installa lo [strumento della riga di comando Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") per la tua piattaforma:
 
-* MacOS:
+* Mac:
   ```
   curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
   ```
@@ -73,7 +73,7 @@ Il prefisso per l'esecuzione di comandi utilizzando lo strumento della riga di c
 ## Installazione del plugin della CLI {{site.data.keyword.registrylong_notm}}
 {: #idt-install-container-registry-cli-plugin}
 
-Puoi utilizzare il plugin della CLI `container-registry` per configurare il tuo proprio spazio dei nomi di immagini in un registro privato gestito e ospitato da IBM in cui puoi memorizzare e condividere le immagini Docker con tutti gli utenti nel tuo account {{site.data.keyword.cloud_notm}}.
+Puoi utilizzare il plugin della CLI `container-registry` per configurare il tuo spazio dei nomi di immagini in un registro privato, gestito e ospitato da IBM. In cui puoi memorizzare e condividere le immagini Docker con tutti gli utenti nel tuo account {{site.data.keyword.cloud_notm}}. 
 
 * Per installare il plugin {{site.data.keyword.registrylong}}, immetti il seguente comando:
   ```
@@ -101,7 +101,7 @@ Per ulteriori informazioni, vedi il [riferimento ai comandi {{site.data.keyword.
 
 Installa [Helm](https://helm.sh/docs/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"), che è un gestore pacchetti basato su Kubernetes.
 
-* Gli utenti MacOS e Linux&trade; eseguono i seguenti comandi:
+* Gli utenti Mac e Linux&trade; eseguono i seguenti comandi:
   ```
   export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
@@ -126,7 +126,7 @@ Per ulteriori informazioni, vedi [Configurazione del plugin CLI {{site.data.keyw
 ## Installazione del plugin della CLI SDK Generator
 {: #idt-install-sdk-gen}
 
-Come sviluppatore su {{site.data.keyword.cloud_notm}}, puoi utilizzare questo plugin per generare SDK dalla tua definizione dell'API REST conforme alla [Open API Specification](https://www.openapis.org/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Quando apporti le modifiche alla tua definizione API REST, puoi utilizzare questo plugin per rigenerare solo il SDK anziché rigenerare l'intero progetto.
+Come sviluppatore di {{site.data.keyword.cloud_notm}}, puoi utilizzare il plugin per generare SDK dalla tua definizione dell'API REST conforme alla [Open API Specification](https://www.openapis.org/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Quando è coinvolta la tua definizione API REST, puoi utilizzare il plugin per rigenerare solo il SDK anziché rigenerare l'intero progetto.
 
 Per installare il plugin della CLI SDK Generator, immetti il seguente comando:
 ```

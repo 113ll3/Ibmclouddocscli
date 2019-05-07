@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-29"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Instalando o plug-in da CLI do {{site.data.keyword.cloud_notm}} developer tools manualmente
 {: #install-devtools-manually}
 
-É possível instalar manualmente o plug-in da interface da linha de comandos (CLI) do {{site.data.keyword.cloud}} developer tools se você preferir controle mais granular para instalar os componentes. Caso contrário, todos os pré-requisitos serão instalados automaticamente para a maioria dos usuários usando os [instaladores de plataforma](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
+É possível instalar manualmente o plug-in da interface da linha de comandos (CLI) das ferramentas do desenvolvedor do {{site.data.keyword.cloud}} se você preferir um controle mais granular para instalar os componentes. Caso contrário, todos os pré-requisitos serão instalados automaticamente para a maioria dos usuários usando os [instaladores de plataforma](/docs/cli?topic=cloud-cli-ibmcloud-cli#step1-install-idt).
 {: shortdesc}
 
 ## Antes de começar
@@ -48,9 +48,9 @@ Para executar e depurar apps localmente, instale o [Docker](https://www.docker.c
 ## Instalando a ferramenta de linha de comandos do Kubernetes
 {: #idt-install-kube}
 
-Para visualizar uma versão local do painel do Kubernetes e para implementar apps em seus clusters, instale a [ferramenta de linha de comandos do Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para a sua plataforma:
+Para visualizar uma versão local do painel do Kubernetes e para implementar apps em seus clusters, instale a [ferramenta de linha de comandos do Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para a sua plataforma:
 
-* MacOS:
+* Mac:
   ```
   curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
   ```
@@ -73,7 +73,7 @@ O prefixo para executar comandos usando a ferramenta de linha de comandos do Kub
 ## Instalando o plug-in da CLI do {{site.data.keyword.registrylong_notm}}
 {: #idt-install-container-registry-cli-plugin}
 
-É possível usar o plug-in da CLI `container-registry` para configurar seu próprio namespace de imagem em um registro privado gerenciado e hospedado pela IBM, no qual é possível armazenar e compartilhar imagens do Docker com todos os usuários em sua conta do {{site.data.keyword.cloud_notm}}.
+É possível usar o plug-in da CLI `container-registry` para configurar seu próprio namespace de imagem em um registro privado hospedado e gerenciado pela IBM. Onde é possível armazenar e compartilhar imagens do Docker com todos os usuários em sua conta do {{site.data.keyword.cloud_notm}}.
 
 * Para instalar o plug-in do {{site.data.keyword.registrylong}}, execute o comando a seguir:
   ```
@@ -101,14 +101,14 @@ Para obter mais informações, consulte a [referência de comando do {{site.data
 
 Instale o [Helm](https://helm.sh/docs/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), que é um gerenciador de pacote baseado em Kubernetes.
 
-* Usuários do MacOS e Linux&trade;, executem os comandos a seguir:
+* Usuários do Mac e Linux &trade;, executem os comandos a seguir:
   ```
   export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
   ```
   {: codeblock}
 
-* Os usuários do Windows&trade; podem fazer download e instalar o [binário](https://github.com/helm/helm/releases/tag/v2.7.2){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") do Helm.
+* Os usuários do Windows&trade; podem fazer download e instalar o [binário](https://github.com/helm/helm/releases/tag/v2.7.2){: new_window} do Helm ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Instalando o plug-in da CLI do {{site.data.keyword.openwhisk_short}}
 {: #idt-install-functions}
@@ -127,7 +127,7 @@ Para obter mais informações, consulte [Configurando o plug-in da CLI do {{site
 ## Instalando o plug-in da CLI do SDK Generator
 {: #idt-install-sdk-gen}
 
-Como um desenvolvedor no {{site.data.keyword.cloud_notm}}, é possível usar esse plug-in para gerar SDKs por meio de sua definição de API de REST compatível com a ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")[Especificação de API aberta](https://www.openapis.org/){: new_window}. À medida que você faz mudanças na definição de API de REST, é possível usar esse plug-in para gerar novamente apenas o SDK, em vez de gerar novamente o projeto inteiro.
+Como um desenvolvedor do {{site.data.keyword.cloud_notm}}, é possível usar o plug-in para gerar SDKs em sua definição de API de REST compatível com [Open API Specification](https://www.openapis.org/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Conforme a definição da API de REST evolui, é possível usar o plug-in para gerar novamente somente o SDK, em vez de gerar novamente o projeto inteiro.
 
 Para instalar o plug-in da CLI do SDK Generator, execute o comando a seguir:
 ```

@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -39,7 +39,7 @@ subcollection: cloud-cli
 - [diag](#diag): 설치된 종속 항목에 대한 버전 정보를 표시합니다.
 - [edit](#edit): 기존 애플리케이션에서 서비스를 추가하거나 제거합니다.
 - [enable](#enable): {{site.data.keyword.cloud_notm}}와 함께 사용할 수 있도록 기존 애플리케이션을 업데이트합니다.
-- [get-credentials](#get-credentials): 연결된 {{site.data.keyword.cloud_notm}} 서비스를 사용할 수 있도록 애플리케이션에서 필요로 하는 인증 정보를 가져옵니다.
+- [get-credentials](#get-credentials): 연결된 {{site.data.keyword.cloud_notm}} 서비스를 사용할 수 있도록 애플리케이션에 필요한 인증 정보를 가져옵니다.
 - [help](#help): CLI 구문 및 인수에 대한 도움말입니다.
 - [list](#list): 리소스 그룹 내의 모든 {{site.data.keyword.cloud_notm}} 애플리케이션을 나열합니다.
 - [run](#run): 로컬 컨테이너에 있는 애플리케이션을 실행합니다.
@@ -48,7 +48,9 @@ subcollection: cloud-cli
 - [stop](#stop): 컨테이너를 중지합니다.
 - [test](#test): 로컬 컨테이너에 있는 애플리케이션을 테스트합니다.
 - [view](#view): 테스트 및 보기를 위해 애플리케이션의 배치된 URL을 봅니다.
-- [compound commands](#compound): 하나의 명령행 명령문에서 여러 명령을 실행합니다.
+
+[compound commands](#compound)를 사용하여 하나의 명령행 명령문에서 여러 개의 명령을 실행합니다.
+{: tip}
 
 ## build
 {: #build}
@@ -81,7 +83,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-웹 브라우저에서 {{site.data.keyword.cloud_notm}}에 있는 애플리케이션의 웹 콘솔을 열려면 `console` 명령을 사용하십시오. 사용자는 애플리케이션 폴더 내에서 `ibmcloud dev console` 명령을 실행할 수 있습니다. CLI는 {{site.data.keyword.cloud_notm}}에서 현재 디렉토리와 동일한 애플리케이션 ID를 가진 일치하는 애플리케이션을 찾으려 시도합니다. 시스템은 일치하는 이름을 찾을 수 없는 경우 특정 애플리케이션 대신 {{site.data.keyword.cloud_notm}}의 웹 및 모바일 대시보드를 엽니다.
+웹 브라우저에서 {{site.data.keyword.cloud_notm}}에 있는 애플리케이션의 웹 콘솔을 열려면 `console` 명령을 사용하십시오. 사용자는 애플리케이션 폴더 내에서 `ibmcloud dev console` 명령을 실행할 수 있습니다. CLI는 {{site.data.keyword.cloud_notm}}에서 현재 디렉토리와 동일한 애플리케이션 ID를 가진 일치하는 애플리케이션을 찾으려 시도합니다. 시스템은 일치하는 이름을 찾을 수 없는 경우 특정 애플리케이션 대신 {{site.data.keyword.cloud_notm}}의 **웹 및 모바일** 대시보드를 엽니다.
 
 사용자는 애플리케이션 이름을 제공할 수 있으며, 이렇게 하면 CLI가 폴더 또는 애플리케이션 이름을 기반으로 하는 일치 여부 판정을 건너뜁니다. 이 경우 CLI는 이름 지정된 애플리케이션의 콘솔을 웹 브라우저에서 엽니다.  
 
@@ -94,7 +96,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-IBM Cloud Foundry 또는 Cloud Foundry Enterprise Environment 및 Kubernetes를 비롯하여 리소스 유형, 언어, 스타터 킷 및 DevOps 도구 체인 옵션을 포함한 모든 정보에 대한 프롬프트를 표시하며 애플리케이션을 작성합니다. 애플리케이션은 현재 디렉토리에 작성됩니다.
+리소스 유형, 언어, 스타터 킷 및 DevOps 도구 체인 옵션을 포함한 모든 정보에 대한 프롬프트를 표시하는 애플리케이션을 작성합니다(IBM Cloud Foundry 또는 Cloud Foundry Enterprise Environment 및 Kubernetes를 포함). 애플리케이션은 현재 디렉토리에 작성됩니다.
 
 현재 디렉토리에 애플리케이션을 작성하고 이를 서비스와 연관시키려면 다음 명령을 실행하십시오.
 ```
@@ -115,25 +117,25 @@ ibmcloud dev build --debug
 ```
 {: codeblock}
 
-시작하려면, 다음 명령을 현재 애플리케이션 디렉토리에서 실행하여 애플리케이션을 디버그하십시오.
+시작하려면, 다음 명령을 현재 애플리케이션 디렉토리에서 실행하여 애플리케이션을 디버깅하십시오.
 ```
 ibmcloud dev debug
 ```
 {: codeblock}
 
-디버그하려면 지정된 포트에 디버그 도구를 연결하십시오.
+디버깅하려면 지정된 포트에 디버그 도구를 연결하십시오.
 
 디버그 세션을 종료하려면 `CTRL-C`를 사용하십시오.
 
 ### debug 명령 매개변수
 {: #debug-parameters}
 
-다음 매개변수는 `debug` 명령 전용이며 애플리케이션 디버깅에 도움을 줍니다. 다른 명령과 공유하는 [추가 매개변수](#command-parameters)도 있습니다.
+다음 매개변수는 `debug` 명령 전용이며 애플리케이션 디버깅에 도움을 줍니다. 다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* 디버그 포트의 포트 맵핑입니다. 첫 번째 값은 호스트 OS에서 사용하는 포트이며 두 번째 값은 컨테이너의 포트입니다[host-port:container-port].
+* 디버그 포트의 포트 맵핑입니다. 첫 번째 값은 호스트 OS에서 사용하는 포트이며 두 번째 값은 컨테이너의 포트입니다[`host-port:container-port`].
 * 사용법: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -207,7 +209,7 @@ ibmcloud dev deploy
 ### deploy 명령 매개변수
 {: #deploy-parameters}
 
-다음 매개변수는 `deploy` 명령과 함께 사용하거나 애플리케이션의 `cli-config.yml` 파일을 직접 업데이트하여 사용할 수 있습니다. 다른 명령과 공유하는 [추가 매개변수](#command-parameters)도 있습니다.
+다음 매개변수는 `deploy` 명령과 함께 사용하거나 애플리케이션의 `cli-config.yml` 파일을 직접 업데이트하여 사용할 수 있습니다. 다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
 
 #### `chart-path`
 {: #chart-path}
@@ -317,7 +319,7 @@ ibmcloud dev enable
 ### enable 명령 매개변수
 {: #enable-parameters}
 
-다음 매개변수는 `enable` 명령과 함께 사용하거나 애플리케이션의 `cli-config.yml` 파일을 직접 업데이트하여 사용할 수 있습니다. 다른 명령과 공유하는 [추가 매개변수](#command-parameters)도 있습니다.
+다음 매개변수는 `enable` 명령과 함께 사용하거나 애플리케이션의 `cli-config.yml` 파일을 직접 업데이트하여 사용할 수 있습니다. 다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
 
 #### `language`
 {: #enable-language}
@@ -391,7 +393,7 @@ ibmcloud dev run
 {: #run-parameters}
 
 다음 매개변수는 `run` 명령 전용이며 run 컨테이너 내에서 애플리케이션을 관리하는 데 도움을 줍니다.
-다른 명령과 공유하는 [추가 매개변수](#command-parameters)도 있습니다.
+다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
 
 #### `container-name-run`
 {: #container-name-run2}
@@ -505,7 +507,7 @@ ibmcloud dev stop
 ### stop 명령 매개변수
 {: #stop-parameters}
 
-다음 매개변수는 `stop` 명령에 사용됩니다. 다른 명령과 공유하는 [추가 매개변수](#command-parameters)도 있습니다.
+다음 매개변수는 `stop` 명령에 사용됩니다. 다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
 
 #### `container-name-run`
 {: #container-name-run}
@@ -541,7 +543,7 @@ ibmcloud dev test
 ### test 명령 매개변수
 {: #test-parameters}
 
-다음 매개변수는 `test` 명령 전용입니다. 다른 명령과 공유하는 [추가 매개변수](#command-parameters)도 있습니다.
+다음 매개변수는 `test` 명령 전용입니다. 다른 명령과 공유되는 [추가 매개변수](#command-parameters)가 있습니다.
 
 #### `test-cmd`
 {: #test-cmd}
@@ -611,7 +613,7 @@ ibmcloud dev build/deploy/view -t container --trace
 
 어떤 이유에서든 한 명령이 실패하면 후속 명령은 실행되지 않습니다.
 
-`debug` 또는 `run` 뒤에 명령이 있는 경우에는 `debug` 또는 `run`이 현재 터미널 창에서 프로세스를 강제 종료하는 것 외의 방법으로 종료된 경우에만 실행이 계속됩니다. `CTRL+C`는 프로세스를 강제 종료하며 후속 명령을 실행하지 않습니다. 예를 들면, 실행 중인 컨테이너를 중지하고 다음 명령 실행을 계속하기 위해 다른 터미널 창에서 `ibmcloud dev stop`을 실행할 수 있습니다.
+`debug` 또는 `run` 뒤에 명령이 있는 경우에는 `debug` 또는 `run`이 현재 터미널 창에서 프로세스를 강제 종료하는 것 외의 방법으로 종료된 경우에만 실행이 계속됩니다. `CTRL+C`를 입력하여 프로세스를 강제 종료하고 후속 명령을 실행하지 마십시오. 예를 들면, 실행 중인 컨테이너를 중지하고 다음 명령 실행을 계속하기 위해 다른 터미널 창에서 `ibmcloud dev stop`을 실행할 수 있습니다.
 
 ## build, debug, run 및 test용 매개변수
 {: #command-parameters}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -33,11 +33,11 @@ subcollection: cloud-cli
 
 * {{site.data.keyword.cloud_notm}} [CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
-   이 플러그인은 {{site.data.keyword.cloud_notm}} CLI에 설치됩니다. {{site.data.keyword.cloud_notm}} CLI는 또한 터미널에서 {{site.data.keyword.cloud_notm}}에 액세스하기 위한 유용한 리소스를 제공합니다.
+   이 플러그인은 {{site.data.keyword.cloud_notm}} CLI에 추가되며 명령행에서 {{site.data.keyword.cloud_notm}}에 액세스하기 위한 유용한 리소스를 제공합니다.
 
 * [개발 환경 ](https://golang.org/doc/code.html){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")으로 이동하십시오.
 
-   Go는 패키지 위치와 관련하여 엄격하게 처리되므로 소스를 `$GOPATH` 디렉토리 구조에 정의해야 합니다. `$GOPATH` 및 `$GOROOT` 변수를 정의하고 `$GOPATH/bin`을 `$PATH` 환경에 포함하십시오. Mac OS에서 `~/.bash_profile` 구성 파일을 편집하여 이를 수행할 수 있습니다.
+   Go는 패키지 위치에 엄격하게 처리되므로 소스를 `$GOPATH` 디렉토리 구조 내에 정의해야 합니다. `$GOPATH` 및 `$GOROOT` 변수를 정의하고 `$GOPATH/bin`을 `$PATH` 환경 변수에 포함해야 합니다. `~/.bash_profile` 구성 파일(Mac)을 편집하여 이러한 변경을 수행할 수 있습니다.
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -47,7 +47,7 @@ subcollection: cloud-cli
    ```
    {: codeblock}
 
-* 종속성 관리자: [govendor ](https://github.com/kardianos/govendor){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
+* 종속성 관리자: [`govendor `](https://github.com/kardianos/govendor){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
    `govendor` 도구는 Go 종속 항목을 작성하고 관리합니다. 공급업체 디렉토리를 업데이트할 계획이 아니라면 이 도구가 필요하지 않습니다.
 
@@ -74,7 +74,7 @@ subcollection: cloud-cli
 
 * BDD 테스트 프레임워크: [Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-테스트 프레임워크는 Go를 위한 BDD 테스트 프레임워크인 Ginkgo를 기반으로 합니다. 이는 Ginkgo를 위한 매처(matcher) 및 어설션 라이브러리인 [Gomega ](http://onsi.github.io/gomega/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")와 함께 사용됩니다.
+테스트 프레임워크는 Go의 BDD 테스트 프레임워크인 Ginkgo를 기반으로 하며 Ginkgo의 매처(matcher) 및 어설션 라이브러리인 [`gomega`](http://onsi.github.io/gomega/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")와 함께 사용됩니다.
 
    * 다음 명령을 사용하여 `ginkgo`를 설치하십시오.
 
@@ -108,9 +108,9 @@ ginkgo -r
 
       * `.coverprofile` 파일이 있는 디렉토리로 이동합니다.
 
-* 국제화: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 및 [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
+* 다국어 지원: [go-i18n](https://github.com/nicksnyder/go-i18n){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 및 [go-bindata](https://github.com/jteeuwen/go-bindata){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-국제화는 Go 애플리케이션을 여러 언어로 번역하도록 지원하는 명령행 도구이자 패키지인 `go-i18n`을 기반으로 합니다. 번역 번들은 입력 파일을 관리 가능한 Go 소스 코드로 변환하는 명령인 `go-bindata`로 사전 처리됩니다.
+다국어 지원은 Go 애플리케이션을 여러 언어로 번역하도록 지원하는 명령행 도구이자 패키지인 `go-i18n`을 기반으로 합니다. 번역 번들은 입력 파일을 관리 가능한 Go 소스 코드로 변환하는 `go-bindata` 명령으로 사전 처리됩니다.
 
    * 다음 명령을 사용하여 `go-i18n`을 설치하십시오.
 
@@ -156,11 +156,11 @@ Delve는 Go 프로그래밍 언어를 위한 디버거로 [Visual Studio 코드 
 
 * [github.com/urfave/cli ](https://github.com/urfave/cli){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-   이 패키지는 Go에서 명령행 앱을 빌드하기 위한 인프라를 제공합니다. {{site.data.keyword.cloud_notm}} CLI 플러그인은 이 라이브러리의 이전 버전(github.com/codegangsta/cli)에 의존합니다.
+   이 패키지는 Go에서 명령행 앱을 빌드하기 위한 인프라를 제공합니다. {{site.data.keyword.cloud_notm}} CLI 플러그인은 이 라이브러리의 이전 버전(github.com/codegangsta/cli)에 종속적입니다.
 
 * [github.com/asaskevich/govalidator ](https://github.com/asaskevich/govalidator){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 
-   이 패키지는 문자열, 구조체 및 콜렉션을 위한 다수의 유효성 검증기 및 무결 처리기를 제공합니다. 고유 유효성 검증기를 구현하는 대신 이 패키지를 사용하십시오.
+   이 패키지는 문자열, 구조체 및 콜렉션을 위한 다수의 유효성 검증기 및 무결 처리기를 제공합니다. 사용자 고유 유효성 검증기를 구현하는 대신 이 패키지를 사용하십시오.
 
 * [github.com/parnurzeal/gorequest ](https://github.com/parnurzeal/gorequest){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")
 

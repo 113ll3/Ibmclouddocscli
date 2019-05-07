@@ -10,8 +10,34 @@ subcollection: cloud-cli
 
 ---
 
-# Perguntas mais frequentes (FAQ)
+# FAQ
 {: #ibm-cli-faq}
+
+## É obrigatório usar a versão mais recente da CLI do {{site.data.keyword.cloud_notm}}?
+{: #cli-latest-version}
+
+Sim, deve-se usar a versão mais recente. É possível verificar qual versão você está usando
+ao executar o comando a seguir:
+
+```
+ibmcloud -v
+```
+{: codeblock}
+
+## Como atualizar minha CLI?
+{: #cli-update-version}
+
+Execute o comando a seguir para atualizar para a versão mais recente da CLI:
+
+```
+Atualizar ibmcloud
+```
+{: codeblock}
+
+## Posso ser notificado sobre novas liberações da CLI?
+{: #cli-get-notified}
+
+Sim, você é atualizado sobre novas liberações da CLI à medida que elas se tornam disponíveis. Assine o [repositório de liberações da CLI do {{site.data.keyword.cloud_notm}}](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")
 
 ## Qual é a estrutura de arquivo para os aplicativos {{site.data.keyword.cloud_notm}}?
 {: #cli-file-structure}
@@ -28,30 +54,8 @@ O plug-in da CLI do {{site.data.keyword.dev_cli_long}} usa dois contêineres par
 O segundo contêiner é o contêiner de execução, que imita de perto o ambiente de tempo de execução real do aplicativo, uma vez que ele é implementado para a nuvem. Esse contêiner está em um formato que é adequado para ser implementado para o uso no {{site.data.keyword.cloud_notm}}, por exemplo. Como resultado, um ponto de entrada que inicia seu aplicativo é definido. Ao selecionar a execução do aplicativo por meio do plug-in da CLI do {{site.data.keyword.dev_cli_long}}, ele usa esse contêiner. O `Dockerfile` para esse contêiner é definido pelo parâmetro
 [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run).
 
-# Como implementar o código existente?
-Para implementar um código base existente, siga estas etapas para [ativar seu app](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
+## Como implementar o código existente?
 
-## Blogs de referência, vídeos e documentação
-{: #cli-faq-reference}
+Para implementar um código base existente, veja [Gerando ativos de
+implementação e ativação de nuvem](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
 
-### Blogs
-{: #cli-blogs}
-
-- [Implementando no {{site.data.keyword.cloud_notm}} Private com o plug-in da CLI do {{site.data.keyword.dev_cli_long}}](https://www.ibm.com/blogs/bluemix/2018/05/deploying-to-ibm-cloud-private-2-1-0-2-with-ibm-cloud-developer-tools-cli/)
-- [Implementando no Kubernetes no {{site.data.keyword.cloud_notm}} com o plug-in da CLI do {{site.data.keyword.dev_cli_long}}](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
-- [Ativar projetos existentes para o {{site.data.keyword.cloud_notm}} com o plug-in da CLI do {{site.data.keyword.dev_cli_long}}](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
-
-### Vídeos
-{: #cli-videos}
-
-- [Como implementar no Kubernetes no {{site.data.keyword.cloud_notm}} com o plug-in da CLI do {{site.data.keyword.dev_cli_long}}](https://www.youtube.com/watch?v=mh_XBn_eV_8&feature=youtu.be)
-- [Como implementar projetos existentes no {{site.data.keyword.cloud_notm}} com o plug-in da CLI do {{site.data.keyword.dev_cli_long}}](https://www.youtube.com/watch?v=-NP5ZEZE1dY&feature=youtu.be)
-- [Criar, depurar e implementar um app Node.js com o plug-in da CLI do {{site.data.keyword.dev_cli_long}} e VSCode](https://www.youtube.com/watch?v=z-ByHuI41dU&feature=youtu.be)
-
-### Documentação e tutoriais
-- [Implementação contínua para o Kubernetes](/docs/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes)
-- [Resolução de problemas para o plug-in da CLI do {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-troubleshoot)
-- [Comandos de plug-in da CLI do {{site.data.keyword.dev_cli_long}} (ibmcloud dev)](/docs/cli/idt?topic=cloud-cli-idt-cli)
-- [Depuração de aplicativo local para o plug-in da CLI do {{site.data.keyword.dev_cli_long}}](/docs/cli/idt?topic=cloud-cli-local-debug)
-
-**Para relatar problemas ou fornecer feedback, é possível usar o [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Solicitar acesso de equipe [aqui](https://slack-invite-ibm-cloud-tech.mybluemix.net/).**

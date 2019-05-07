@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -49,7 +49,9 @@ Utilice los siguientes mandatos de CLI de {{site.data.keyword.dev_cli_notm}} (`i
 - [stop](#stop): Detiene un contenedor.
 - [test](#test): Prueba la aplicación en un contenedor local.
 - [view](#view): Ver el URL desplegado de la aplicación para pruebas y visualización.
-- [mandatos compuestos](#compound): Ejecutar varios mandatos en una única sentencia de línea de mandatos.
+
+Ejecute varios mandatos en una única sentencia de línea de mandatos mediante [mandatos compuestos](#compound).
+{: tip}
 
 ## build
 {: #build}
@@ -82,7 +84,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-El mandato `console` abre en un navegador web la consola web de su aplicación en {{site.data.keyword.cloud_notm}}. Puede ejecutar el mandato `ibmcloud dev console` desde la carpeta de su aplicación. La CLI intenta encontrar una aplicación coincidente en {{site.data.keyword.cloud_notm}} con el mismo ID de aplicación que el directorio actual. Si el sistema no puede encontrar un nombre coincidente, en su lugar, abre el panel de control Web y móvil en {{site.data.keyword.cloud_notm}} en lugar de la aplicación específica.
+El mandato `console` abre en un navegador web la consola web de su aplicación en {{site.data.keyword.cloud_notm}}. Puede ejecutar el mandato `ibmcloud dev console` desde la carpeta de su aplicación. La CLI intenta encontrar una aplicación coincidente en {{site.data.keyword.cloud_notm}} con el mismo ID de aplicación que el directorio actual. Si el sistema no puede encontrar un nombre coincidente, en su lugar, abre el panel de control **Web y móvil** en {{site.data.keyword.cloud_notm}} en lugar de la aplicación específica.
 
 Puede proporcionar un nombre de aplicación y, de esta forma, la CLI omitirá la coincidencia basada en el nombre de carpeta o aplicación. En este caso, la CLI abrirá la consola de la aplicación con el nombre que ha indicado en un navegador web.  
 
@@ -95,7 +97,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-Cree una aplicación, solicitando toda la información, incluido el tipo de recurso, el idioma, el kit de inicio y las opciones de la cadena de herramientas de DevOps, incluyendo IBM Cloud Foundry o Cloud Foundry Enterprise Environment y Kubernetes. La aplicación se crea en el directorio actual.
+Cree una aplicación que solicite toda la información, incluido el tipo de recurso, el idioma, el kit de inicio y las opciones de la cadena de herramientas de DevOps. Esto incluye IBM Cloud Foundry o Cloud Foundry Enterprise Environment y Kubernetes. La aplicación se crea en el directorio actual.
 
 Para crear una aplicación en el directorio actual y para asociar servicios con ella, ejecute el mandato siguiente:
 ```
@@ -129,12 +131,12 @@ Para salir de la sesión de depuración, utilice `Control-C`.
 ### Parámetros del mandato debug
 {: #debug-parameters}
 
-Los siguientes parámetros son exclusivos del mandato `debug` y ayudan a depurar una aplicación. Hay [parámetros adicionales](#command-parameters) compartidos con otros mandatos.
+Los siguientes parámetros son exclusivos del mandato `debug` y ayudan a depurar una aplicación. Hay [más parámetros](#command-parameters) compartidos con otros mandatos.
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* Correlaciones de puertos para el puerto de depuración. El primer valor es el puerto que se utilizará en el sistema operativo del host, el segundo es el puerto del contenedor [host-port:container-port].
+* Correlaciones de puertos para el puerto de depuración. El primer valor es el puerto que se utilizará en el sistema operativo del host, el segundo es el puerto del contenedor [`host-port:container-port`].
 * Uso: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -616,7 +618,7 @@ Los mandatos siguientes se pueden utilizar con esta característica:
 
 Si un mandato falla por algún motivo, los mandatos subsiguientes no se ejecutan.
 
-Si hay más mandatos que sigan a `debug` o `run`, la ejecución continúa si `debug` o `run` son interrumpidos por cualquier forma que no sea interrumpir el proceso desde la ventana de terminal actual. `Control+C` interrumpe el proceso y los mandatos subsiguientes no se ejecutan. Por ejemplo, puede ejecutar `ibmcloud dev stop` desde otra ventana de terminal para detener el contenedor en ejecución y continuar la ejecución del siguiente mandato.
+Si hay más mandatos que sigan a `debug` o `run`, la ejecución continúa si `debug` o `run` son interrumpidos por cualquier forma que no sea interrumpir el proceso desde la ventana de terminal actual. Especifique `Control+C` para interrumpir el proceso y no ejecutar los mandatos siguientes. Por ejemplo, puede ejecutar `ibmcloud dev stop` desde otra ventana de terminal para detener el contenedor en ejecución y continuar la ejecución del siguiente mandato.
 
 ## Parámetros para build, debug, run y test
 {: #command-parameters}

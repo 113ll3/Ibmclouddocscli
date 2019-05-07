@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -20,12 +20,12 @@ subcollection: cloud-cli
 # Depuração de aplicativo local para a CLI do {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
-Há ferramentas para ajudá-lo a depurar seu aplicativo em Java e Node.js no {{site.data.keyword.cloud_notm}}.
+Há ferramentas para ajudá-lo a depurar seu aplicativo no Java&trade; e Node.js no {{site.data.keyword.cloud_notm}}.
 
 ## Depuração do aplicativo Java
 {: #java}
 
-Etapas para ativar a ferramenta de depuração para um aplicativo Java:
+Etapas para ativar a ferramenta de depuração para um aplicativo Java&trade;:
 
 1. No diretório raiz de seu projeto do aplicativo, execute o comando a seguir:
 
@@ -38,16 +38,15 @@ Etapas para ativar a ferramenta de depuração para um aplicativo Java:
 
 	* Eclipse
       1. Importe o **Projeto maven existente** no Eclipse.
-      2. Crie uma configuração de depuração do [aplicativo
-remoto Java ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
+      2. Crie uma configuração de depuração do [aplicativo remoto Java&trade;](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
       		1. Insira o endereço IP ou `localhost:<port>`  
       		2. Insira `7777` para o número da porta.
-      		3. Especifique o nome do projeto Java que você importou.
+      		3. Especifique o nome do projeto importado.
       6. Configure um ponto de interrupção no IDE.
       7. Execute a configuração de depuração.
       8. Acesse o terminal com um navegador para recriar o problema.  
 	   
-	   A porta padrão é 9080 para o terminal de microsserviços básicos Java.
+	   A porta padrão é `9080` para o terminal Microsserviços básico do Java&trade;.
 	   {: note}
 
 	* [IntelliJ ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")

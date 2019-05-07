@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -27,17 +27,17 @@ Segui queste linee guida per contribuire al plugin SDK della CLI {{site.data.key
 
 * [CLI Cloud Foundry ](https://github.com/cloudfoundry/cli/releases){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
 
-   La CLI Cloud Foundry non è obbligatoria, ma aiuta ad accedere a {{site.data.keyword.cloud_notm}} dal terminale.
+   La CLI Cloud Foundry non è obbligatoria, ma aiuta ad accedere a {{site.data.keyword.cloud_notm}} da un terminale.
 
    Per ulteriori informazioni sulla CLI Cloud Foundry, consulta la [documentazione](/docs/cli?topic=cloud-cli-cf#cf).
 
 * {{site.data.keyword.cloud_notm}}CLI [](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
-   Questo plugin installa la CLI {{site.data.keyword.cloud_notm}}. La CLI {{site.data.keyword.cloud_notm}} fornisce anche risorse utili per accedere a {{site.data.keyword.cloud_notm}} dal terminale.
+   Questo plug-in viene aggiunto alla CLI {{site.data.keyword.cloud_notm}} e fornisce delle risorse utili per accedere a {{site.data.keyword.cloud_notm}} dalla riga di comando.
 
 * Ambiente di sviluppo di [Go ](https://golang.org/doc/code.html){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
-   Go è rigoroso riguardo le ubicazioni del pacchetto, per cui la tua origine deve essere definita all'interno della struttura di directory `$GOPATH`. Assicurati di definire le tue variabili `$GOPATH` e `$GOROOT` per includere `$GOPATH/bin` nella tua variabile di ambiente `$PATH`, il che può essere effettuato modificando il tuo file di configurazione `~/.bash_profile` (su Mac OS).
+   Go è rigoroso riguardo le ubicazioni del pacchetto, per cui la tua origine deve essere definita all'interno della struttura di directory `$GOPATH`. Devi definire le tue variabili `$GOPATH` e `$GOROOT` e includere `$GOPATH/bin` nella tua variabile di ambiente `$PATH`. Puoi modificare il file di configurazione `~/.bash_profile` (su Mac) per apportare queste modifiche.
 
    ```
    ### SET Go's GOPATH and GOROOT                                                                                                                   
@@ -47,7 +47,7 @@ Segui queste linee guida per contribuire al plugin SDK della CLI {{site.data.key
    ```
    {: codeblock}
 
-* Gestore dipendenza: [govendor ](https://github.com/kardianos/govendor){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
+* Gestore dipendenza: [`govendor `](https://github.com/kardianos/govendor){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
    Lo strumento `govendor` crea e gestisce le dipendenze Go. Non ti serve a meno che non intendi aggiornare la directory del fornitore.
 
@@ -74,7 +74,7 @@ Segui queste linee guida per contribuire al plugin SDK della CLI {{site.data.key
 
 * Framework di test BDD: [Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
-Il framework di test si basa su Ginkgo, un framework di test BDD per Go. Viene utilizzato con [Gomega ](http://onsi.github.io/gomega/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"), che è una libreria di matcher e asserzione per Ginkgo.
+Il framework di test si basa su Ginkgo, un framework di test BDD per Go e viene utilizzato con [`gomega`](http://onsi.github.io/gomega/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"), che è una libreria di confronto e asserzione per Ginkgo.
 
    * Installa `ginkgo` utilizzando il seguente comando.
 
@@ -99,18 +99,18 @@ Il framework di test si basa su Ginkgo, un framework di test BDD per Go. Viene u
 
       * Per aggiungere la copertura del codice, accoda `-cover` al comando.
 
-   * Ottieni un modulo HTML facile da utilizzare della copertura del codice, utilizzando il seguente comando.
+   * Per ottenere un modulo HTML facile da utilizzare della copertura del codice, utilizza il seguente comando.
 
       ```
       go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
-      * Passerai alla directory in cui si trova il file `.coverprofile`.
+      * Vieni indirizzato alla directory in cui si trova il file `.coverprofile`.
 
-* Internazionalizzazione: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") e [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
+* Globalizzazione: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") e [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
-L'internazionalizzazione si basa su `go-i18n`, che è un pacchetto e uno strumento della riga di comando che fornisce il supporto per tradurre un'applicazione Go in più linguaggi. I bundle di traduzione sono pre-elaborati da `go-bindata`, che è un comando che converte tutti i file di input in codice sorgente Go gestibile.
+La globalizzazione si basa su `go-i18n`, che è un pacchetto e uno strumento della riga di comando che fornisce il supporto per tradurre un'applicazione Go in più linguaggi. I bundle di traduzione sono pre-elaborati dal comando `go-bindata` che converte tutti i file di input in codice sorgente Go gestibile.
 
    * Installa `go-i18n` utilizzando il seguente comando.
 
@@ -156,11 +156,11 @@ Le dipendenze nidificate non sono elencate.
 
 * [github.com/urfave/cli ](https://github.com/urfave/cli){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
-   Questo pacchetto fornisce l'infrastruttura per creare applicazioni della riga di comando in Go. Il plugin CLI {{site.data.keyword.cloud_notm}} si basa su una precedente versione di questa libreria (github.com/codegangsta/cli).
+   Questo pacchetto fornisce l'infrastruttura per creare applicazioni della riga di comando in Go. Il plug-in CLI {{site.data.keyword.cloud_notm}} si basa su una precedente versione di questa libreria (github.com/codegangsta/cli).
 
 * [github.com/asaskevich/govalidator ](https://github.com/asaskevich/govalidator){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
-   Questo pacchetto fornisce vari validatori e strumenti di pulizia per le stringhe, strutture e raccolte. Utilizza questo pacchetto invece di implementare i nostri validatori.
+   Questo pacchetto fornisce vari validatori e strumenti di pulizia per le stringhe, strutture e raccolte. Utilizza questo pacchetto invece di implementare i tuoi validatori.
 
 * [github.com/parnurzeal/gorequest ](https://github.com/parnurzeal/gorequest){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 

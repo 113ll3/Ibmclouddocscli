@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-29"
 
 keywords: cli, IBM Cloud Developer Tools CLI, ibmcloud cli, download cli, ibmcloud dev, cloud cli, dev plugin, dev plug-in, cloud command line, developer tools, dev tools, install cloud cli, getting started cli
 
@@ -20,12 +20,8 @@ subcollection: cloud-cli
 # Iniciación a la CLI de {{site.data.keyword.cloud_notm}}
 {: #ibmcloud-cli}
 
-En esta guía de aprendizaje, instalará un conjunto de herramientas de desarrollador de {{site.data.keyword.cloud}}, verificará la instalación y configurará el entorno. Las herramientas de desarrollador de {{site.data.keyword.cloud_notm}} incluyen una interfaz de línea de mandatos para crear, desarrollar y desplegar aplicaciones web, móviles y de microservicios.
+En esta guía de aprendizaje, instalará un conjunto de herramientas de desarrollador de {{site.data.keyword.cloud}}, verificará la instalación y configurará el entorno. La {{site.data.keyword.dev_cli_notm}} ofrece un enfoque de línea de mandatos para crear, desarrollar y desplegar aplicaciones de nube.
 {: shortdesc}
-
-Asegúrese de utilizar siempre la versión más reciente de la CLI autónoma de {{site.data.keyword.cloud_notm}} para
-{{site.data.keyword.cloud_notm}} público. Si necesita utilizar una versión de 32 bits o una versión anterior a la más reciente para los entornos dedicados de {{site.data.keyword.cloud_notm}}, consulte [Releases de CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-cli-releases).
-{: note}
 
 El mandato de instalación de esta guía de aprendizaje instala la versión más reciente de la CLI autónoma de
 {{site.data.keyword.cloud_notm}} que esté disponible, además de las herramientas siguientes:
@@ -47,31 +43,33 @@ El mandato de instalación de esta guía de aprendizaje instala la versión más
 
 Necesita una [cuenta de {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y los siguientes requisitos del sistema:
 
-* Si ejecuta Windows, algunas funciones no reciben soporte a menos que utilice Windows 10 Pro.
+* Si está ejecutando Windows&trade;, algunas funciones no reciben soporte a menos que ejecute Windows&trade; 10 Pro.
 * Debe utilizar el canal estable para Docker con una versión mínima de 1.13.1.
 
 ## Paso 1. Ejecutar el mandato de instalación
 {: #step1-install-idt}
 
-* Para Mac y Linux, ejecute el mandato siguiente:
+La versión más reciente de la CLI {{site.data.keyword.cloud_notm}} está instalada cuando ejecuta el mandato.
+
+* Para Mac y Linux&trade;, ejecute el mandato siguiente:
   ```
   curl -sL https://ibm.biz/idt-installer | bash
   ```
   {: codeblock}
 
-* Para Windows 10 Pro, ejecute el mandato siguiente como administrador:
+* Para Windows&trade; 10 Pro, ejecute el mandato siguiente como administrador:
   ```
   Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
   ```
   {: codeblock}
 
-  Pulse con el botón derecho del ratón el icono de Windows PowerShell y seleccione **Ejecutar como administrador**.
+  Pulse con el botón derecho del ratón el icono de Windows&trade; PowerShell y seleccione **Ejecutar como administrador**.
   {: tip}
 
 También puede descargar el script del instalador desde este [repositorio de GitHub](https://github.com/IBM-Cloud/ibm-cloud-developer-tools){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
-Para ver los pasos para instalar estas herramientas de manera manual, consulte
-[Instalación manual de componentes de plugin de CLI de las herramientas de desarrollador de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-install-devtools-manually#install-devtools-manually).
+Si tiene que utilizar una versión de 32 bits de la CLI, o una versión anterior que no sea la versión más reciente para entornos {{site.data.keyword.cloud_notm}} dedicados, consulte [Releases de la CLI de {{site.data.keyword.cloud_notm}}](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+{: note}
 
 ## Paso 2. Verificar la instalación
 {: #step2-verify-idt}
@@ -112,4 +110,6 @@ La salida lista las instrucciones de uso, la versión actual y los mandatos admi
 ## Pasos siguientes
 {: #next-steps}
 
-Ahora está listo para desarrollar y desplegar su primera aplicación. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli) para obtener más información.
+* Ahora está listo para desarrollar y desplegar su primera aplicación. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#create-deploy-app-cli) para obtener más información.
+
+* Puede recibir notificaciones sobre los nuevos releases de la CLI de {{site.data.keyword.cloud_notm}}. Suscríbase al [Repositorio de releases de la CLI de {{site.data.keyword.cloud_notm}}](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").

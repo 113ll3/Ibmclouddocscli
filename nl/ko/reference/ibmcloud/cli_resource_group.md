@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # 리소스 및 리소스 그룹에 대한 작업
 {: #ibmcloud_commands_resource}
 
-리소스 그룹은 사용자 정의할 수 있는 그룹화에서 계정 리소스를 구성하기 위한 방법입니다. 다음 명령을 사용하여 {{site.data.keyword.cloud}} 리소스 및 리소스 그룹의 리소스를 관리하십시오.
+리소스 그룹은 사용자 정의할 수 있는 그룹화에서 계정 리소스를 구성하기 위한 방법입니다. 다음 명령을 사용하여 리소스 그룹의 {{site.data.keyword.cloud}} 리소스를 관리하십시오.
 {: shortdesc}
 
 ## ibmcloud resource groups
@@ -235,7 +235,7 @@ ibmcloud resource service-instances [--service-name SERVICE_NAME] [--location LO
   <dt>--location <i>LOCATION</i></dt>
   <dd>위치별 필터링</dd>
   <dt>--type <i>INSTANCE_TYPE</i></dt>
-  <dd>인스턴스 유형. 지정하지 않으면 `service_instance` 유형이 사용됩니다. 모든 인스턴스 유형을 나열하려면 all을 사용하십시오. </dd>
+  <dd>인스턴스 유형. 지정하지 않으면 `service_instance` 유형이 사용됩니다. 모든 인스턴스 유형을 나열하려면 all을 사용하십시오.</dd>
   <dt>-g <i>RESOURCE_GROUP</i></dt>
   <dd>리소스 그룹 이름</dd>
   <dt>--long</dt>
@@ -977,40 +977,40 @@ ibmcloud resource tag-attach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names(필수)</dt>
   <dd>쉼표로 구분된 태그 이름 목록</dd>
   <dt>--resource-id</dt>
-  <dd>태그를 연결해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다. 'ibmcloud resource search' 명령을 사용하여 리소스 ID 또는 CRN을 얻을 수 있습니다. </dd>
+  <dd>태그를 연결해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다. 'ibmcloud resource search' 명령을 사용하여 리소스 ID 또는 CRN을 얻을 수 있습니다.</dd>
   <dt>--resource-type</dt>
   <dd>태그를 연결해야 하는 클래식 인프라 리소스의 리소스 유형이며 클래식 인프라 리소스에 태그를 연결하는 경우, 이 매개변수는 필수입니다. --resource-type에 대해 가능한 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다. </dd>
 </dl>
 
 <strong>예제</strong>:
 
-* `MyTag` 태그를 `MyCluster`라는 Kubernetes 클러스터에 연결하려면 먼저 태그 지정하려는 클러스터의 CRN을 찾으십시오. 
+* `MyTag` 태그를 `MyCluster`라는 Kubernetes 클러스터에 연결하려면 먼저 태그 지정하려는 클러스터의 CRN을 찾으십시오.
   ```
   ibmcloud resource search 'type:k8\-cluster AND name:MyCluster'
   ```
   {: codeblock}
 
-  다음 예제와 유사한 문자열인 CRN을 적어 두십시오.  
+  다음 예제와 유사한 문자열인 CRN을 적어 두십시오. 
   ```
   crn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a::
   ```
   {: screen}
 
-  태그를 연결하려면 다음 명령을 실행하십시오. 
+  태그를 연결하려면 다음 명령을 실행하십시오.
   ```
   ibmcloud resource tag-attach --tag-names MyTag --resource-id rn:v1:bluemix:public:containers-kubernetes:us-south:a/a27a4741a57dcf5c965939adb66fe1c7:a46242e638ca47b09f10e9a3cbe5687a:: 
   ```
   {: codeblock}
 
-* `MyTag` 태그를 `MyVM`이라는 클래식 인프라 가상 게스트에 연결하려면 먼저 태그 지정하려는 가상 게스트의 ID를 찾으십시오. 
+* `MyTag` 태그를 `MyVM`이라는 클래식 인프라 가상 게스트에 연결하려면 먼저 태그 지정하려는 가상 게스트의 ID를 찾으십시오.
   ```
   ibmcloud resource search 'fullyQualifiedDomainName:MyVM  _objectType:SoftLayer_Virtual_Guest' -p classic-infrastructure
   ```
   {: codeblock}
 
-  `48373549`와 유사한 문자열인 ID을 적어 두십시오. 
+  `48373549`와 유사한 문자열인 ID을 적어 두십시오.
 
-  태그를 연결하려면 다음 명령을 실행하십시오. 
+  태그를 연결하려면 다음 명령을 실행하십시오.
   ```
   ibmcloud resource tag-attach --tag-names MyTag --resource-id 48373549 --resource-type SoftLayer_Virtual_Guest  
   ```
@@ -1031,7 +1031,7 @@ ibmcloud resource tag-detach --tag-names TAG_NAMES --resource-id RESOURCE_ID [--
   <dt>--tag-names(필수)</dt>
   <dd>쉼표로 구분된 태그 이름 목록</dd>
   <dt>--resource-id</dt>
-  <dd>태그를 분리해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다. 'ibmcloud resource search' 명령을 사용하여 리소스 ID 또는 CRN을 얻을 수 있습니다. </dd>
+  <dd>태그를 분리해야 하는 리소스의 CRN이며 클래식 인프라 리소스의 경우 리소스의 ID입니다. 'ibmcloud resource search' 명령을 사용하여 리소스 ID 또는 CRN을 얻을 수 있습니다.</dd>
   <dt>--resource-type</dt>
   <dd>태그를 분리해야 하는 클래식 인프라 리소스의 리소스 유형이며 클래식 인프라 리소스에 태그를 연결하는 경우, 이 매개변수는 필수입니다. --resource-type에 대해 가능한 값은 SoftLayer_Virtual_DedicatedHost, SoftLayer_Hardware, SoftLayer_Network_Application_Delivery_Controller, SoftLayer_Network_Subnet_IpAddress, SoftLayer_Network_Vlan, SoftLayer_Network_Vlan_Firewall 및 SoftLayer_Virtual_Guest입니다. </dd>
 </dl>

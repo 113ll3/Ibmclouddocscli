@@ -10,8 +10,33 @@ subcollection: cloud-cli
 
 ---
 
-# Preguntas más frecuentes (FAQ)
+# Preguntas más frecuentes
 {: #ibm-cli-faq}
+
+## ¿Estoy obligado a utilizar la última versión de la CLI de {{site.data.keyword.cloud_notm}}?
+{: #cli-latest-version}
+
+Sí, debe utilizar la versión más reciente. Puede comprobar la versión que está utilizando con el mandato siguiente:
+
+```
+ibmcloud -v
+```
+{: codeblock}
+
+## ¿Cómo se actualiza la CLI?
+{: #cli-update-version}
+
+Ejecute el mandato siguiente para actualizar a la versión más reciente de la CLI:
+
+```
+ibmcloud update
+```
+{: codeblock}
+
+## ¿Puedo recibir una notificación sobre los nuevos releases de la CLI?
+{: #cli-get-notified}
+
+Sí, se le pone al día sobre los nuevos releases de la CLI a medida que se encuentran disponibles. Suscríbase al [repositorio de releases de la CLI de {{site.data.keyword.cloud_notm}}](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")
 
 ## ¿Cuál es la estructura de archivos de las aplicaciones de {{site.data.keyword.cloud_notm}}?
 {: #cli-file-structure}
@@ -27,30 +52,7 @@ El plugin de CLI de {{site.data.keyword.dev_cli_long}} utiliza dos contenedores 
 
 El segundo contenedor es el contenedor de ejecución, que imita casi exactamente el entorno de tiempo de ejecución real de la app cuando se ha desplegado en la nube. El formato de este contenedor es adecuado para desplegarlo y utilizarlo en, por ejemplo, {{site.data.keyword.cloud_notm}}. Como resultado, se define un punto de entrada que inicia su aplicación. Al seleccionar ejecutar la aplicación a través del plugin de CLI de {{site.data.keyword.dev_cli_long}}, utiliza este contenedor. El `Dockerfile` correspondiente a este contenedor se define mediante el parámetro [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run).
 
-# ¿Cómo despliego código existente?
-Para desplegar un código base existente, siga estos pasos para [habilitar la app](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
+## ¿Cómo despliego código existente?
 
-## Blogs, vídeos y documentación de referencia
-{: #cli-faq-reference}
+Para desplegar una base de código existente, consulte [Generación de activos de habilitación de despliegue y de habilitación de la nube](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
 
-### Blogs
-{: #cli-blogs}
-
-- [Despliegue en {{site.data.keyword.cloud_notm}} privado con el plugin de CLI de {{site.data.keyword.dev_cli_long}}](https://www.ibm.com/blogs/bluemix/2018/05/deploying-to-ibm-cloud-private-2-1-0-2-with-ibm-cloud-developer-tools-cli/)
-- [Despliegue en Kubernetes en {{site.data.keyword.cloud_notm}} con el plugin de CLI de {{site.data.keyword.dev_cli_long}}](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
-- [Habilitar proyectos existentes para {{site.data.keyword.cloud_notm}} con el plugin de CLI de {{site.data.keyword.dev_cli_long}}](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
-
-### Vídeos
-{: #cli-videos}
-
-- [Cómo desplegar en Kubernetes en {{site.data.keyword.cloud_notm}} con el plugin de CLI de {{site.data.keyword.dev_cli_long}}](https://www.youtube.com/watch?v=mh_XBn_eV_8&feature=youtu.be)
-- [Cómo desplegar proyectos existentes en {{site.data.keyword.cloud_notm}} con el plugin de CLI de {{site.data.keyword.dev_cli_long}}](https://www.youtube.com/watch?v=-NP5ZEZE1dY&feature=youtu.be)
-- [Crear, depurar y desplegar una app Node.js con el plugin de CLI de {{site.data.keyword.dev_cli_long}} y VSCode](https://www.youtube.com/watch?v=z-ByHuI41dU&feature=youtu.be)
-
-### Documentación y guías de aprendizaje
-- [Despliegue continuo en Kubernetes](/docs/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes)
-- [Resolución de problemas del plugin de CLI de {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-troubleshoot)
-- [Mandatos del plugin de CLI de {{site.data.keyword.dev_cli_long}} (ibmcloud dev)](/docs/cli/idt?topic=cloud-cli-idt-cli)
-- [Depuración de aplicaciones locales para el plugin de CLI de {{site.data.keyword.dev_cli_long}}](/docs/cli/idt?topic=cloud-cli-local-debug)
-
-**Para notificar problemas o enviar comentarios, puede utilizar [el canal #developer-tools de Slack de {{site.data.keyword.cloud_notm}} Tech](https://ibm-cloud-tech.slack.com) - Solicite acceso al equipo [aquí](https://slack-invite-ibm-cloud-tech.mybluemix.net/).**

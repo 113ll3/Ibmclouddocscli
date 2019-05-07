@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -24,7 +24,7 @@ subcollection: cloud-cli
 # Resolução de problemas para o plug-in da CLI do {{site.data.keyword.cloud_notm}} Developer Tools
 {: #troubleshoot}
 
-Os problemas gerais com o uso da interface da linha de comandos (CLI) do {{site.data.keyword.dev_cli_short}} para criação de apps podem incluir falhas de implementação ou código que não pode ser recuperado. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
+Veja as soluções para problemas comuns com a interface de linha de comandos (CLI) do {{site.data.keyword.dev_cli_short}}. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
 {: shortdesc}
 
 ## Por que obtenho um erro de nome do host ao criar um app com um padrão não móvel?
@@ -181,7 +181,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 {: screen}
 {: tsSymptoms}
 
-Esse erro ocorre quando o módulo `appmetrics` é instalado em uma arquitetura diferente. Módulos npm nativos que estão instalados em uma arquitetura não funcionam em outra. As imagens incluídas do Docker baseiam-se no kernel Linux.
+Esse erro ocorre quando o módulo `appmetrics` é instalado em uma arquitetura diferente. Módulos npm nativos que estão instalados em uma arquitetura não funcionam em outra. As imagens incluídas do Docker são baseadas no kernel do Linux&trade;.
 {: tsCauses}
 
 Exclua a pasta `node_modules` e execute o comando `ibmcloud dev run` novamente.
@@ -218,7 +218,7 @@ Falha ao configurar a implementação com o cluster '<cluster-name>' devido a: s
 {: screen}
 {: tsSymptoms}
 
-Isso é mais provável devido a um nome de cluster que não é válido. É possível confirmar a causa executando o mesmo comando com `--trace` e os detalhes a seguir podem ser incluídos na saída de erro:
+O problema é mais provável devido a um nome de cluster que não é válido. É possível confirmar a causa executando o mesmo comando com `--trace` e os detalhes a seguir podem ser incluídos na saída de erro:
 ```
 Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'ibmcloud cs clusters' to list all clusters you have access to.","type":"Provisioning"}
 ```
@@ -236,7 +236,8 @@ ibmcloud cs cluster-config <cluster-name>
 {: #ts-deploy-image-target}
 {: troubleshoot}
 
-A falha a seguir pode ser exibida após o destino de imagem de implementação ser solicitado:
+A falha a seguir pode ser exibida depois que você for solicitado a fornecer o destino da
+imagem de implementação:
 ```
 FAILED
 Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
@@ -248,10 +249,10 @@ Failed to push the Run image tagged 'us.icr.io/<namespace>/<app-name>:0.0.1' to 
 {: screen}
 {: tsSymptoms}
 
-Isso é mais provável devido a um destino de imagem de implementação que não é válido. Mais especificamente, o namespace, que é o valor médio no destino de imagem de implementação, pode não ser válido.
+O problema é mais provável devido a um destino de imagem de implementação que não é válido. Mais especificamente, o namespace, que é o valor do meio no destino da imagem de implementação, pode não ser válido.
 {: tsCauses}
 
-Certifique-se de que o namespace no destino da imagem de implementação corresponda a um dos namespaces que são exibidos ao executar o comando a seguir:
+Certifique-se de que o namespace no destino da imagem de implementação corresponda a um dos namespaces que são exibidos quando você executa o comando a seguir:
 ```
 ibmcloud cr namespaces
 ```
@@ -262,7 +263,7 @@ ibmcloud cr namespaces
 {: #ts-cli-determine-language}
 {: troubleshoot}
 
-A falha a seguir poderá ser exibida ao tentar iniciar seu app:
+A falha a seguir poderá ser exibida ao iniciar seu app:
 ```
 FAILED
 Could not determine the language of your app.
@@ -278,14 +279,15 @@ Esse erro pode ser devido a uma das causas a seguir:
 - Executar o comando [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) para um app de um idioma que não é reconhecido.
 {: tsCauses}
 
-Certifique-se de executar o comando no diretório do app que contém o código-fonte para o app. Se isso não resolver o problema e o idioma for um dos [idiomas suportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), use o parâmetro `--language` para especificar o idioma.
+Certifique-se de executar o comando no diretório do app que contém o código-fonte para o app. Se o problema não for resolvido e o idioma for um dos [idiomas suportados](/docs/cli/idt?topic=cloud-cli-idt-cli#enable-language-options), use o parâmetro `--language` para especificar o idioma.
 {: tsResolve}
 
-## Por que não posso construir ou executar um app que tenha sido ativado para implementação na nuvem?
+## Por que não posso construir ou executar um app que está ativado para implementação na nuvem?
 {: #ts-cli-cloud-enabled-apps}
 {: troubleshoot}
 
-Várias falhas poderão ser encontradas ao tentar [construir](/docs/cli/idt?topic=cloud-cli-idt-cli#build) ou [executar](/docs/cli/idt?topic=cloud-cli-idt-cli#run) um app que tenha sido ativado.
+É possível encontrar várias falhas para [construir](/docs/cli/idt?topic=cloud-cli-idt-cli#build) ou [executar](/docs/cli/idt?topic=cloud-cli-idt-cli#run) um app que está ativado
+para implementação na nuvem.
 {: tsSymptoms}
 
 As diferentes causas possíveis podem ser localizadas em cada um dos links a seguir.
@@ -320,8 +322,8 @@ Esse erro pode ser devido a uma das causas a seguir:
 
 Certifique-se de que o Docker esteja instalado e em execução:
 - Para instalar ou iniciar o [Docker for Mac](https://docs.docker.com/docker-for-mac/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-- Para instalar ou iniciar o [Docker for Windows](https://docs.docker.com/docker-for-windows/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-- Para instalar ou iniciar o [Docker para Linux](https://docs.docker.com/v17.12/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+- Para instalar ou iniciar o [Docker for Windows &trade;](https://docs.docker.com/docker-for-windows/install/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+- Para instalar ou iniciar o [Docker for Linux&trade;](https://docs.docker.com/v17.12/install/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
 {: tsResolve}
 
 ## Como resolver versões do Helm incompatíveis?
@@ -347,7 +349,7 @@ The 'helm upgrade ' command failed to complete due to: exit status 1
 Para resolver o problema, configure a versão do cliente para a mesma que a versão do cluster. Por exemplo, para instalar a versão do Helm 2.8.1, execute os comandos a seguir:
 {: tsResolve}
 
-* Para Mac e Linux, execute os comandos a seguir:
+* Para Mac e Linux&trade;, execute os comandos a seguir:
   ```
   export DESIRED_VERSION=v2.8.1
 
@@ -356,18 +358,20 @@ Para resolver o problema, configure a versão do cliente para a mesma que a vers
   export HELM_HOME=~/.helm
   ```
 
-* Para o Windows, faça o seguinte como administrador: faça download e instale o binário `helm` em [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+* Para o Windows&trade;: como um administrador, faça download e instale o binário do `helm` em [https://github.com/helm/helm/releases/tag/v2.9.1](https://github.com/helm/helm/releases/tag/v2.9.1){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
   
   No terminal PowerShell, use os comandos a seguir:
   ```
   Set-Location Env:
   Set-Item HELM_HOME C:\.helm\
   ```
+  {: codeblock}
 
 ## Por que o ibmcloud dev build falha com um nome de usuário que inclui "@"?
 {: ts-cli-username}
 {: troubleshoot}
-Durante o processo de construção de imagem, seu nome de usuário é usado para o usuário na imagem de ferramentas do Docker. Se o nome de usuário contiver quaisquer caracteres especiais como '@' ou '-', o processo de construção da imagem do Docker falhará e o erro a seguir poderá ocorrer:
+Durante o processo de construção de imagem, seu nome de usuário é usado para o usuário na imagem de ferramentas do Docker. Se o nome do usuário contiver algum caractere especial como '@' ou '-', o
+processo de construção da imagem do Docker falhará com o erro a seguir:
 ```
 Image will have user johnsmith@acme.com with id 501 added
 
@@ -380,7 +384,8 @@ Dumping output from the command:
 ```
 {: screen}
 
-Para resolver o problema, mude seu nome de usuário para não incluir nenhum caractere especial ou especifique a sinalização a seguir para usar o usuário raiz em vez de:
+Para resolver o problema, mude seu nome do usuário para não incluir nenhum caractere especial
+ou especifique o sinalizador a seguir para usar o usuário raiz em vez de:
 ```
 ibmcloud dev build --use-root-user-tools
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-26"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -70,9 +70,9 @@ ibmcloud help
 ```
 {: codeblock}
 
-`info` 명령의 도움말을 표시합니다.
+`dev` 명령의 도움말을 표시합니다.
 ```
-ibmcloud help info
+ibmcloud help dev
 ```
 {: codeblock}
 

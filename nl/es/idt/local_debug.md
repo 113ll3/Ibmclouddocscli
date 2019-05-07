@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -20,12 +20,12 @@ subcollection: cloud-cli
 # Depuración de aplicaciones locales para la CLI de {{site.data.keyword.dev_cli_notm}}
 {: #local-debug}
 
-Existen herramientas para ayudarle a depurar la aplicación en Java y Node.js en {{site.data.keyword.cloud_notm}}.
+Existen herramientas para ayudarle a depurar la aplicación en Java&trade; y Node.js en {{site.data.keyword.cloud_notm}}.
 
 ## Depuración de aplicaciones Java
 {: #java}
 
-Pasos para habilitar la herramienta de depuración para una aplicación Java:
+Pasos para habilitar la herramienta de depuración para una aplicación Java&trade;:
 
 1. Desde el directorio raíz del proyecto de su aplicación, ejecute el mandato siguiente:
 
@@ -38,15 +38,15 @@ Pasos para habilitar la herramienta de depuración para una aplicación Java:
 
 	* Eclipse
       1. Importe el **Proyecto maven existente** en Eclipse.
-      2. Cree una configuración de depuración de [aplicación remota Java](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
+      2. Cree una configuración de depuración de [aplicación Java&trade; remota](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
       		1. Especifique la dirección IP o `localhost:<port>`  
       		2. Escriba `7777` como número de puerto.
-      		3. Especifique el nombre del proyecto Java que ha importado.
+      		3. Especifique el nombre del proyecto que ha importado.
       6. Defina un punto de interrupción en el IDE.
       7. Ejecute la configuración de depuración.
       8. Acceda al punto final con un navegador para volver a crear el problema.  
 	   
-	   El puerto predeterminado es 9080 para el punto final de Java Basic Microservices.
+	   El puerto predeterminado es `9080` para el punto final de microservicios básicos de Java&trade;.
 	   {: note}
 
 	* [IntelliJ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
