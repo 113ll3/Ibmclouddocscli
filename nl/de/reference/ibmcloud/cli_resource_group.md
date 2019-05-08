@@ -18,7 +18,7 @@ subcollection: cloud-cli
 # Mit Ressourcen und Ressourcengruppen arbeiten
 {: #ibmcloud_commands_resource}
 
-Eine Ressourcengruppe bietet Ihnen die Möglichkeit, Ihre Kontoressourcen in anpassbaren Gruppierungen zu organisieren. Verwenden Sie die folgenden Befehle, um {{site.data.keyword.cloud}}-Ressourcen und Ressourcen in einer Ressourcengruppe zu verwalten.
+Eine Ressourcengruppe bietet Ihnen die Möglichkeit, Ihre Kontoressourcen in anpassbaren Gruppierungen zu organisieren. Verwenden Sie die folgenden Befehle, um {{site.data.keyword.cloud}}-Ressourcen in einer Ressourcengruppe zu verwalten.
 {: shortdesc}
 
 ## ibmcloud resource groups
@@ -867,7 +867,7 @@ Sie können nach den folgenden Attributen suchen:
   <dt>_objectType</dt>
   <dd>Der Typ der klassischen Infrastrukturressource. Zulässige Werte sind 'SoftLayer_Virtual_DedicatedHost', 'SoftLayer_Hardware', 'SoftLayer_Network_Application_Delivery_Controller', 'SoftLayer_Network_Subnet_IpAddress', 'SoftLayer_Network_Vlan', 'SoftLayer_Network_Vlan_Firewall' und 'SoftLayer_Virtual_Guest'. </dd>
   <dt>tags, tagReferences.tag.name</dt>
-  <dd>Der an eine Ressource angehängte Tag. Verwenden Sie 'tagReferences.tag.name' zum Suchen nach Tags, die an klassische Inftrastrukturressourcen angehängt sind. </dd> 
+  <dd>Der an eine Ressource angehängte Tag. Verwenden Sie 'tagReferences.tag.name' zum Suchen nach Tags, die an klassische Infrastrukturressourcen angehängt sind. </dd> 
 </dl>
 
 <strong>Beispiele</strong>:
@@ -934,7 +934,7 @@ ibmcloud resource search 'id:12345678 _objectType:SoftLayer_Virtual_Guest'
 ```
 {: codeblock}
 
-Nach einer klassischen Infrastrukturressources des Typs 'Hardware' mit dem angegebenen Tagnamen suchen (nur mit '-p classic-infrastructure'):
+Nach einer klassischen Infrastrukturressource des Typs 'Hardware' mit dem angegebenen Tagnamen suchen (nur mit '-p classic-infrastructure'):
 ```
 ibmcloud resource search 'tagReferences.tag.name:name _objectType:SoftLayer_Hardware'
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-29"
 
 keywords: IBM Cloud Developer Tools CLI, manual, manual install, tools, components, developer tools, ibmcloud cli, ibmcloud, ibmcloud dev, cli, plugin, plug-in, command line, command-line, developer tools, kubernetes, kubectl
 
@@ -50,7 +50,7 @@ Installieren Sie zum lokalen Ausführen und Debuggen von Apps die Komponente [Do
 
 Zur Anzeige einer lokalen Version des Kubernetes-Dashboards und zur Bereitstellung von Anwendungen in Ihren Clustern installieren Sie das [Kubernetes-Befehlszeilentool](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window}![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") für Ihre Plattform:
 
-* MacOS:
+* Mac:
   ```
   curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
   ```
@@ -73,7 +73,7 @@ Das Präfix für die Ausführung von Befehlen über das Kubernetes-Befehlszeilen
 ## CLI-Plug-in für {{site.data.keyword.registrylong_notm}} installieren
 {: #idt-install-container-registry-cli-plugin}
 
-Sie können das CLI-Plug-in `container-registry` verwenden, um Ihren eigenen Image-Namensbereich in einer von IBM gehosteten und verwalteten privaten Registry zu konfigurieren, in der Sie Docker-Images speichern und mit allen Benutzern in Ihrem {{site.data.keyword.cloud_notm}}-Konto gemeinsam nutzen können.
+Sie können das CLI-Plug-in `container-registry` verwenden, um Ihren eigenen Image-Namensbereich in einer von IBM gehosteten und verwalteten privaten Registry zu konfigurieren. Dort können Sie Docker-Images speichern und mit allen Benutzern in Ihrem {{site.data.keyword.cloud_notm}}-Konto gemeinsam nutzen. 
 
 * Führen Sie den folgenden Befehl aus, um das {{site.data.keyword.registrylong}}-Plug-in zu installieren:
   ```
@@ -101,7 +101,7 @@ Weitere Informationen finden Sie in der [{{site.data.keyword.registryshort_notm}
 
 Installieren Sie den auf Kubernetes basierenden Paketmanager [Helm](https://helm.sh/docs/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
-* Benutzer von MacOS und Linux&trade; können die folgenden Befehle ausführen:
+* Benutzer von Mac und Linux&trade; können die folgenden Befehle ausführen:
   ```
   export DESIRED_VERSION=v2.7.2
 curl -sL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
@@ -126,7 +126,7 @@ Weitere Informationen finden Sie in [{{site.data.keyword.openwhisk_short}}-CLI-P
 ## CLI-Plug-in für SDK Generator installieren
 {: #idt-install-sdk-gen}
 
-Als Entwickler in {{site.data.keyword.cloud_notm}} können Sie dieses Plug-in dazu verwenden, SDKs aus Ihrer [Open API Specification](https://www.openapis.org/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")-konformen REST-API-Definition heraus zu generieren. Wenn Sie Änderungen an Ihrer REST-API-Definition vornehmen, können Sie dieses Plug-in verwenden, um nur das SDK und nicht das gesamte Projekt neu zu erstellen.
+Als {{site.data.keyword.cloud_notm}}-Entwickler können Sie dieses Plug-in dazu verwenden, SDKs aus Ihrer [Open API Specification](https://www.openapis.org/){: new_window}-konformen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")REST-API-Definition heraus zu generieren. Wenn die REST-API-Definition entsteht, können Sie das Plug-in verwenden, um nur das SDK und nicht das gesamte Projekt neu zu erstellen.
 
 Führen Sie den folgenden Befehl aus, um das CLI-Plug-in für den SDK Generator zu installieren:
 ```

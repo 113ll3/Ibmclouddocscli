@@ -1,45 +1,63 @@
 ---
 
-
-
 copyright:
+  years: 2019
+lastupdated: "2019-04-26"
 
-  years: 2018
-lastupdated: "2018-07-24"
+keywords: uninstall, stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
+
+subcollection: cloud-cli
 
 ---
 
-{:codeblock: .codeblock} 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:note: .note}
 {:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle deinstallieren
+# Eigenständige {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle deinstallieren
+{: #uninstall-ibmcloud-cli}
 
-Die folgenden Abschnitte enthalten Anweisungen zur Deinstallation von {{site.data.keyword.Bluemix_notm}} für bestimmte Plattformen.
+Führen Sie zur Deinstallation der eigenständigen {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle auf bestimmten Plattformen die folgenden Schritte aus:{: shortdesc}
 
 ## Deinstallation unter Windows
+{: #uninstall-cli-windows}
 
-* Klicken Sie auf die Schaltfläche `Start` und wählen Sie dann die `Systemsteuerung` aus.
-* Klicken Sie im Popup-Fenster auf `Programme und Funktionen - Programm deinstallieren oder ändern`.
-* Suche Sie in der Pop-up-Liste der Anwendungen die `IBM Cloud-Befehlszeilenschnittstelle`.
-* Klicken Sie mit der rechten Maustaste auf die `IBM Cloud-Befehlszeilenschnittstelle` und wählen Sie `Deinstallieren` aus.
-* Das Deinstallationsprogramm wird gestartet. Führen Sie die entsprechenden Anweisungen aus, um die Deinstallation fertigzustellen.
+1. Klicken Sie auf die Schaltfläche **Start** und wählen Sie dann die **Systemsteuerung** aus.
+2. Klicken Sie im Popup-Fenster auf **Programme und Funktionen - Programm deinstallieren oder ändern**.
+3. Suchen Sie in der Popup-Liste der Anwendungen die **IBM Cloud-Befehlszeilenschnittstelle**.
+4. Klicken Sie mit der rechten Maustaste auf die **IBM Cloud-Befehlszeilenschnittstelle** und wählen Sie **Deinstallieren** aus.
+5. Das Deinstallationsprogramm wird gestartet. Führen Sie die entsprechenden Anweisungen aus, um die Deinstallation fertigzustellen.
 
-## Deinstallation unter Linux/macOS
+## Deinstallation unter Linux und MacOS
+{: #uninstall-cli-linux-macos}
 
-### Vor Version `0.9.0`
+Die Deinstallationsschritte unterscheiden sich abhängig von der installierten Version der CLI.
 
-* Öffnen Sie ein Terminal und führen Sie die folgenden Befehle aus:
-  * `rm -rf /usr/local/ibmcloud`
-  * `rm -f /usr/local/bin/ibmcloud`
-  * `rm -f /usr/local/bin/bluemix`
-  * `rm -f /usr/local/bin/bx`
-  * `rm -f /usr/local/bin/ibmcloud-analytics`
-* Bereinigen Sie die Scripts für automatische Vervollständigung, falls diese konfiguriert sind. Weitere Details finden Sie in [Automatische Vervollständigung für die Befehlszeilenschnittstelle aktivieren](enable_cli_autocompletion.html).
+Führen Sie folgende Schritte aus, um Ihre {{site.data.keyword.cloud_notm}}-CLI-Version zu ermitteln:
+```
+ibmcloud -v
+```
+{: codeblock}
 
-### Ab Version `0.9.0`
+Um Versionen vor Version `0.9.0` zu deinstallieren, führen Sie die folgenden Befehle aus: 
+  ```
+  rm -rf /usr/local/ibmcloud
+  rm -f /usr/local/bin/ibmcloud
+  rm -f /usr/local/bin/bluemix
+  rm -f /usr/local/bin/bx
+  rm -f /usr/local/bin/ibmcloud-analytics
+  ```
+  {: codeblock}
 
-* Öffnen Sie ein Terminal und führen Sie den folgenden Befehl aus:
-  * `/usr/local/ibmcloud/uninstall`
-* Bereinigen Sie die Scripts für automatische Vervollständigung, falls diese konfiguriert sind. Weitere Details finden Sie in [Automatische Vervollständigung für die Befehlszeilenschnittstelle aktivieren](enable_cli_autocompletion.html).
+Bereinigen Sie die Scripts für automatische Vervollständigung, sofern Sie diese konfiguriert haben. Weitere Details finden Sie in [Automatische Vervollständigung für die Shell für die {{site.data.keyword.cloud_notm}}-CLI (nur Linux und Mac)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
+
+Um die Version `0.9.0` und nachfolgende Versionen zu deinstallieren, führen Sie den folgenden Befehl aus: 
+  ```
+  /usr/local/ibmcloud/uninstall
+  ```
+  {: codeblock}
+
+Bereinigen Sie alle angepassten Scripts für automatische Vervollständigung. Weitere Details finden Sie in [Automatische Vervollständigung für die Shell für die {{site.data.keyword.cloud_notm}}-CLI (nur Linux und Mac)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).

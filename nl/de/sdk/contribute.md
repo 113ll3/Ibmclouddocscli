@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-29"
 
 keywords: cli, contribute plug-in, sdk plug-in, cloud foundry cli, go environment, internationalization, ginkgo, govendor
 
@@ -33,11 +33,11 @@ Befolgen Sie diese Richtlinien, um das SDK-Plug-in für die {{site.data.keyword.
 
 * {{site.data.keyword.cloud_notm}}-[CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
-   Dieses Plug-in wird in der {{site.data.keyword.cloud_notm}}-CLI installiert. Die {{site.data.keyword.cloud_notm}}-CLI stellt außerdem nützliche Ressourcen für den Zugriff auf {{site.data.keyword.cloud_notm}} über das Terminal bereit.
+   Dieses Plug-in wird der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle (CLI) hinzugefügt und stellt außerdem nützliche Ressourcen für den Zugriff auf {{site.data.keyword.cloud_notm}} über die Befehlszeile bereit.
 
 * Go-[Entwicklungsumgebung ](https://golang.org/doc/code.html){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
-   Go hat strenge Vorgaben für Paketpositionen, deshalb muss Ihre Quelle in der `$GOPATH`-Verzeichnisstruktur definiert sein. Stellen Sie sicher, dass Sie die Variablen `$GOPATH` und `$GOROOT` definieren und `$GOPATH/bin` in Ihre `$PATH`-Umgebungsvariable einschließen. Bearbeiten Sie dafür Ihre Konfigurationsdatei `~/.bash_profile` (unter Mac OS) entsprechend.
+   Go hat strenge Vorgaben für Paketpositionen, deshalb muss Ihre Quelle in der `$GOPATH`-Verzeichnisstruktur definiert sein. Sie müssen die Variablen `$GOPATH` und `$GOROOT` definieren und `$GOPATH/bin` in die Umgebungsvariable `$PATH` einschließen. Sie können die Konfigurationsdatei `~/.bash_profile` (unter Mac) bearbeiten, um diese Änderungen vorzunehmen.
 
    ```
    ### SET GOPATH und GOROOT von Go
@@ -47,7 +47,7 @@ Befolgen Sie diese Richtlinien, um das SDK-Plug-in für die {{site.data.keyword.
    ```
    {: codeblock}
 
-* Abhängigkeitsmanager: [govendor ](https://github.com/kardianos/govendor){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
+* Abhängigkeitsmanager: [`govendor `](https://github.com/kardianos/govendor){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
    Das Tool `govendor` erstellt und verwaltet die Go-Abhängigkeiten. Es wird nur benötigt, wenn Sie beabsichtigen, das Anbieterverzeichnis zu aktualisieren.
 
@@ -74,7 +74,7 @@ Befolgen Sie diese Richtlinien, um das SDK-Plug-in für die {{site.data.keyword.
 
 * BDD-Testframework: [Ginkgo ](http://onsi.github.io/ginkgo/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
-Das Testframework basiert auf Ginkgo, einem BDD-Testframework für Go. Es wird zusammen mit [Gomega](http://onsi.github.io/gomega/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link"), einer Abgleichs- und Zusicherungsbibliothek für Gingko, verwendet.
+Das Testframework basiert auf Ginko, einem BDD-Testframework für Go, und wird zusammen mit [`gomega`](http://onsi.github.io/gomega/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link"), einer Abgleichs- und Zusicherungsbibliothek für Gingko, verwendet. 
 
    * Installieren Sie `ginkgo` mithilfe des folgenden Befehls.
 
@@ -99,18 +99,18 @@ Das Testframework basiert auf Ginkgo, einem BDD-Testframework für Go. Es wird z
 
       * Hängen Sie für mehr Codeabdeckung `-cover` an den Befehl an.
 
-   * Rufen Sie mithilfe des folgenden Befehls ein lesbares HTML-Formular der Codeabdeckung ab.
+   * Um ein benutzerfreundliches HTML-Formular der Codeabdeckung zu erhalten, verwenden Sie den folgenden Befehl: 
 
       ```
       go tool -html={package}.coverprofile
       ```
       {: codeblock}
 
-      * Wechseln Sie in das Verzeichnis, in dem sich die Datei `.coverprofile` befindet.
+      * Sie werden in das Verzeichnis geleitet, in dem sich die Datei `.coverprofile` befindet.
 
-* Internationalisierung: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
+* Globalisierung: [go-i18n ](https://github.com/nicksnyder/go-i18n){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") und [go-bindata ](https://github.com/jteeuwen/go-bindata){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
-Die Internationalisierung basiert auf `go-i18n`, einem Paket- und Befehlszeilentool, das Unterstützung für die Übersetzung einer Go-Anwendung in mehrere Sprachen bereitstellt. Übersetzungspakete werden von `go-bindata` vorverarbeitet. Dies ist ein Befehl, der alle Eingabedateien in verwaltbaren Go-Quellcode konvertiert.
+Die Globalisierung basiert auf `go-i18n`, einem Paket- und Befehlszeilentool, das Unterstützung für die Übersetzung einer Go-Anwendung in mehrere Sprachen bereitstellt. Übersetzungspakete werden von dem Befehl `go-bindata` vorverarbeitet, der alle Eingabedateien in verwaltbaren Go-Quellcode konvertiert. 
 
    * Installieren Sie `go-i18n` mithilfe des folgenden Befehls.
 

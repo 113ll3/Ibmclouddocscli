@@ -2,7 +2,7 @@
 
 copyright:
    years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-29"
 
 keywords: cli, ibmcloud dev commands, ibmcloud dev build, ibmcloud dev run, ibmcloud dev debug, developer plugin cli, dev plugin commands
 
@@ -39,7 +39,7 @@ Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-Befeh
 - [diag](#diag): Zeigt Versionsinformationen zu installierten Abhängigkeiten an.
 - [edit](#edit): Fügt Services in einer vorhandenen Anwendung hinzu oder entfernt Services.
 - [enable](#enable): Aktualisiert eine vorhandene Anwendung für die Verwendung mit {{site.data.keyword.cloud_notm}} Developer Tools.
-- [get-credentials](#get-credentials): Ruft Berechtigungsnachweise ab, die die Anwendung benötigt, um die Verwendung verbundener {{site.data.keyword.cloud_notm}}-Services zu ermöglichen.
+- [get-credentials](#get-credentials): Ruft Berechtigungsnachweise ab, die die Anwendung benötigt, um die Verwendung gebundener{{site.data.keyword.cloud_notm}}-Services zu aktivieren. 
 - [help](#help): Zeigt Hilfe für die Syntax und die Argumente der Befehlszeilenschnittstelle an.
 - [list](#list): Listet alle {{site.data.keyword.cloud_notm}}-Anwendungen in einer Ressourcengruppe auf.
 - [run](#run): Führt die Anwendung in einem lokalen Container aus.
@@ -48,7 +48,8 @@ Verwenden Sie die folgenden Befehle der {{site.data.keyword.dev_cli_notm}}-Befeh
 - [stop](#stop): Stoppt einen Container.
 - [test](#test): Testet die Anwendung in einem lokalen Container.
 - [view](#view): Zeigt die bereitgestellte URL der Anwendung zum Testen und Anzeigen an.
-- [compound commands](#compound): Führt mehrere Befehle in einer einzigen Befehlszeilenanweisung aus.
+
+Führen Sie mehrere Befehle in einer einzigen Befehlszeilenanweisung mit [zusammengesetzten Befehlen](#compound) aus.{: tip}
 
 ## build
 {: #build}
@@ -81,7 +82,7 @@ ibmcloud dev code <applicationName>
 ## console
 {: #console}
 
-Verwenden Sie den Befehl `console`, um in einem Web-Browser die Webkonsole Ihrer Anwendung unter {{site.data.keyword.cloud_notm}} zu öffnen. Sie können den Befehl `ibmcloud dev console` vom Ordner Ihrer Anwendung aus ausführen. Die Befehlszeilenschnittstelle versucht dann, eine entsprechende Anwendung in {{site.data.keyword.cloud_notm}} zu finden, deren Anwendungs-ID mit dem aktuellen Verzeichnis übereinstimmt. Falls das System keinen übereinstimmenden Namen findet, wird anstelle der spezifischen Anwendung das Dashboard für Webanwendungen und mobile Anwendungen in {{site.data.keyword.cloud_notm}} geöffnet.
+Verwenden Sie den Befehl `console`, um in einem Web-Browser die Webkonsole Ihrer Anwendung unter {{site.data.keyword.cloud_notm}} zu öffnen. Sie können den Befehl `ibmcloud dev console` vom Ordner Ihrer Anwendung aus ausführen. Die Befehlszeilenschnittstelle versucht dann, eine entsprechende Anwendung in {{site.data.keyword.cloud_notm}} zu finden, deren Anwendungs-ID mit dem aktuellen Verzeichnis übereinstimmt. Falls das System keinen übereinstimmenden Namen findet, wird anstelle der spezifischen Anwendung das Dashboard für **Webanwendungen und mobile Anwendungen** in {{site.data.keyword.cloud_notm}} geöffnet. 
 
 Wenn Sie einen Anwendungsnamen angeben, überspringt die Befehlszeilenschnittstelle den Abgleich des Ordner- oder Anwendungsnamens. In diesem Fall öffnet die Befehlszeilenschnittstelle die Konsole der angegebenen Anwendung in einem Web-Browser.  
 
@@ -94,8 +95,7 @@ ibmcloud dev console [applicationName]
 ## create
 {: #create}
 
-Mit diesem Befehl wird eine Anwendung erstellt, wobei zur Eingabe aller Informationen aufgefordert wird (z. B. Ressourcentyp, Sprache, Starter-Kit und DevOps-Toolchain-Optionen, einschließlich
-IBM Cloud Foundry oder Cloud Foundry Enterprise Environment und Kubernetes). Die Anwendung wird im aktuellen Verzeichnis erstellt.
+Mit diesem Befehl wird eine Anwendung erstellt, wobei zur Eingabe aller Informationen aufgefordert wird (z. B. Ressourcentyp, Sprache, Starter-Kit und DevOps-Toolchain-Optionen). Dies schließt IBM Cloud Foundry oder Cloud Foundry Enterprise Environment und Kubernetes ein. Die Anwendung wird im aktuellen Verzeichnis erstellt.
 
 Führen Sie den folgenden Befehl aus, um eine Anwendung im aktuellen Verzeichnis zu erstellen und ihr Services zuzuordnen:
 ```
@@ -130,12 +130,12 @@ Geben Sie `STRG-C` ein, um die Debugsitzung zu beenden.
 {: #debug-parameters}
 
 Die folgenden Parameter stehen ausschließlich dem Befehl `debug` zur Verfügung und
-unterstützen Sie beim Debugging einer Anwendung. Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden.
+unterstützen Sie beim Debugging einer Anwendung. Es gibt [zusätzliche Parameter](#command-parameters), die mit anderen Befehlen gemeinsam genutzt werden. 
 
 #### `container-port-map-debug`
 {: #port-map-debug}
 
-* Portzuordnungen für den Debugport. Der erste Wert ist der Port, der im Hostbetriebssystem verwendet werden soll, der zweite Wert ist der Port im Container [host-port:container-port].
+* Portzuordnungen für den Debugport. Der erste Wert ist der Port, der im Hostbetriebssystem verwendet werden soll, der zweite Wert ist der Port im Container [`host-port:container-port`].
 * Syntax: `ibmcloud dev debug --container-port-map-debug 7777:7777`
 
 #### `build-cmd-debug`
@@ -614,7 +614,7 @@ Dies sind die Befehle, die mit diesem Feature verwendet werden können:
 
 Falls ein Befehl fehlschlägt, werden die nachfolgenden Befehle nicht ausgeführt.
 
-Falls Befehle auf `debug` oder `run` folgen, wird die Ausführung nur fortgesetzt, wenn `debug` oder `run` auf andere Weise als durch Beenden des Prozesses im aktuellen Terminalfenster abgebrochen wird. `CTRL+C` beendet den Prozess, ohne die nachfolgenden Befehle auszuführen.. Sie können `ibmcloud dev stop` beispielsweise in einem anderen Terminalfenster ausführen, um den laufenden Container zu stoppen und die Ausführung des nachfolgenden Befehls fortzusetzen.
+Falls Befehle auf `debug` oder `run` folgen, wird die Ausführung nur fortgesetzt, wenn `debug` oder `run` auf andere Weise als durch Beenden des Prozesses im aktuellen Terminalfenster abgebrochen wird. Geben Sie `STRG+C` ein, um den Prozess zu beenden, und führen Sie die nachfolgenden Befehle nicht aus. Sie können `ibmcloud dev stop` beispielsweise in einem anderen Terminalfenster ausführen, um den laufenden Container zu stoppen und die Ausführung des nachfolgenden Befehls fortzusetzen.
 
 ## Parameter für 'build', 'debug', 'run' und 'test'
 {: #command-parameters}

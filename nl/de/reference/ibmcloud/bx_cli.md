@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-26"
 
 keywords: cli, general commands, ibmcloud commands, ibmcloud api, ibmcloud, cli commands, regions, target, update, ibmcloud sl
 
@@ -70,9 +70,9 @@ ibmcloud help
 ```
 {: codeblock}
 
-Hilfe für den Befehl `info` anzeigen:
+Hilfe für den Befehl `dev` anzeigen:
 ```
-ibmcloud help info
+ibmcloud help dev
 ```
 {: codeblock}
 
@@ -443,7 +443,7 @@ COMMANDS:
    block           Gen1-Infrastruktur - Blockspeicher
    cdn             Gen1-Infrastruktur - Netz zur Bereitstellung von Inhalten
    file            Gen1-Infrastruktur - Dateispeicher
-   dns             Gen1-Infrastruktur - Domin Name System
+   dns             Gen1-Infrastruktur - Domain Name System
    globalip        Gen1-Infrastruktur - Globale IP-Adressen
    hardware        Gen1-Infrastruktur - Hardware-Server
    image           Gen1-Infrastruktur - Datenverarbeitungsimages
