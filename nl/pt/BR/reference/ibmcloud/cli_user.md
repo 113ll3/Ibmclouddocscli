@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-07"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -34,7 +34,7 @@ ibmcloud sl user create [OPTIONS] USERNAME
 <dt>--email</dt>
 <dd>Endereço de e-mail para este usuário. Necessário para criação.</dd>
 <dt>--password</dt>
-<dd>Senha a ser configurada para esse usuário. Se nenhuma senha for fornecida, será enviado a um e-mail ao usuário para gerar uma, que expirará em 24 horas. Especifique a opção '-p generate' para gerar uma senha para você. As senhas requerem 8 ou mais caracteres, caracteres maiúsculos e minúsculos, um número e um símbolo.</dd>
+<dd>Senha a ser configurada para esse usuário. Se nenhuma senha for fornecida, será enviado a um e-mail ao usuário para gerar uma, que expirará em 24 horas. Especifique a opção '-p generate' para gerar uma senha para você. As senhas requerem mais de oito caracteres, letras maiúsculas e minúsculas, um número e um símbolo.</dd>
 <dt>--from-user</dt>
 <dd>Usuário base a ser usado como um modelo para criar esse usuário. O padrão é usar o usuário que está executando esse comando. As informações fornecidas em --template substituem esse modelo.</dd>
 <dt>--template</dt>
