@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-08"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -39,9 +39,9 @@ Pasos para habilitar la herramienta de depuración para una aplicación Java&tra
 	* Eclipse
       1. Importe el **Proyecto maven existente** en Eclipse.
       2. Cree una configuración de depuración de [aplicación Java&trade; remota](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
-      		1. Especifique la dirección IP o `localhost:<port>`  
-      		2. Escriba `7777` como número de puerto.
-      		3. Especifique el nombre del proyecto que ha importado.
+         1. Especifique la dirección IP o `localhost:<port>`  
+         2. Escriba `7777` como número de puerto.
+         3. Especifique el nombre del proyecto que ha importado.
       6. Defina un punto de interrupción en el IDE.
       7. Ejecute la configuración de depuración.
       8. Acceda al punto final con un navegador para volver a crear el problema.  
