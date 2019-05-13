@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-07"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -127,7 +127,7 @@ ibmcloud sl user list [OPTIONS]
 <strong>Options de commande</strong> :
 <dl>
 <dt>--column</dt>
-<dd>Colonne à afficher. [Options : id,username,email,displayName,status,hardwareCount,virtualGuestCount]  [Valeur par défaut : id,username,email,displayName].</dd>
+<dd>Colonne à afficher. [Options : id,username,email,displayName,status,hardwareCount,virtualGuestCount]  [default: id,username,email,displayName].</dd>
 </dl>
 
 ## ibmcloud sl user permissions 

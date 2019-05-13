@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-08"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -39,9 +39,9 @@ Etapes permettant d'activer l'outil de débogage pour une application Java :
 	* Eclipse
       1. Importez le **projet maven existant** dans Eclipse.
       2. Créez une configuration de débogage d'[application distante Java ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
-      		1. Entrez l'adresse IP ou `localhost:<port>`  
-      		2. Entrez `7777` comme numéro de port.
-      		3. Spécifiez le nom du projet que vous avez importé.
+         1. Entrez l'adresse IP ou `localhost:<port>`  
+         2. Entrez `7777` comme numéro de port.
+         3. Spécifiez le nom du projet que vous avez importé.
       6. Définissez un point d'arrêt dans l'environnement de développement intégré.
       7. Exécutez la configuration de débogage.
       8. Accédez au noeud final avec un navigateur pour recréer le problème.  
