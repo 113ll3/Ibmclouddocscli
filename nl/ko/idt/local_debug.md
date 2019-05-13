@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-08"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # {{site.data.keyword.dev_cli_notm}} CLI용 로컬 애플리케이션 디버깅
 {: #local-debug}
 
-{{site.data.keyword.cloud_notm}}에서 Java&trade; 및 Node.js의 애플리케이션을 디버깅하도록 도와주는 도구가 있습니다. 
+{{site.data.keyword.cloud_notm}}에서 Java&trade; 및 Node.js의 애플리케이션을 디버깅하도록 도와주는 도구가 있습니다.
 
 ## Java 애플리케이션 디버깅
 {: #java}
@@ -39,9 +39,9 @@ ibmcloud dev debug
 	* Eclipse
       1. **기본 maven 프로젝트**를 Eclipse로 가져오십시오.
       2. [Java&trade; 원격 애플리케이션 ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 디버그 구성을 작성하십시오.
-      		1. IP 주소 또는 다음을 입력하십시오. `localhost:<port>`  
-      		2. 포트 번호에 `7777`을 입력하십시오.
-      		3. 가져온 프로젝트의 이름을 지정하십시오.
+         1. IP 주소 또는 다음을 입력하십시오. `localhost:<port>`  
+         2. 포트 번호에 `7777`을 입력하십시오.
+         3. 가져온 프로젝트의 이름을 지정하십시오.
       6. IDE에 중단점을 설정하십시오.
       7. 디버그 구성을 실행하십시오.
       8. 브라우저에서 엔드포인트에 액세스하여 문제를 다시 작성하십시오.  

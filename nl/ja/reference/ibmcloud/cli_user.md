@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-07"
 
 keywords: cli, manage softlayer users, softlayer, classic infrastructure, user management, ibmcloud sl user
 
@@ -34,9 +34,9 @@ ibmcloud sl user create [OPTIONS] USERNAME
 <dt>--email</dt>
 <dd>このユーザーの E メール・アドレス。 作成に必要です。</dd>
 <dt>--password</dt>
-<dd>このユーザーに設定するパスワード。 パスワードが指定されていない場合は、パスワード生成の E メールがユーザーに送信されます。このパスワードは 24 時間で有効期限が切れます。 自分用のパスワードを生成するには '-p generate' オプションを指定します。パスワードは、8 文字以上の英字の大小文字、数字、記号で構成する必要があります。</dd>
+<dd>このユーザーに設定するパスワード。 パスワードが指定されていない場合は、パスワード生成の E メールがユーザーに送信されます。このパスワードは 24 時間で有効期限が切れます。 自分用のパスワードを生成するには '-p generate' オプションを指定します。 パスワードは、8 文字以上の英字の大文字小文字、数字、記号で構成する必要があります。</dd>
 <dt>--from-user</dt>
-<dd>このユーザーを作成するためのテンプレートとして使用する基本ユーザー。 デフォルトは、このコマンドを実行しているユーザーを使用することです。--template に指定された情報で、このテンプレートの情報が置き換えられます。</dd>
+<dd>このユーザーを作成するためのテンプレートとして使用する基本ユーザー。 デフォルトは、このコマンドを実行しているユーザーを使用することです。 --template に指定された情報で、このテンプレートの情報が置き換えられます。</dd>
 <dt>--template</dt>
 <dd>https://sldn.softlayer.com/reference/datatypes/SoftLayer_User_Customer/ を記述する JSON ストリング。</dd>
 <dt>--api-key</dt>
@@ -111,7 +111,7 @@ ibmcloud sl user edit-permissions [OPTIONS] IDENTIFIER
 <dt>--enable</dt>
 <dd>選択した許可を有効または無効にします。 受け入れられる入力は 'true' と 'false' です。 デフォルトは 'true' です。</dd>
 <dt>--permission</dt>
-<dd>設定する許可 `keyName` (複数インスタンスが許可されます)。すべての許可を選択するには、キーワード ALL を使用します。</dd>
+<dd>設定する許可 `keyName` (複数インスタンスが許可されます)。 すべての許可を選択するには、キーワード ALL を使用します。</dd>
 <dt>--from-user</dt>
 <dd>このユーザーの許可に一致する許可を設定します。 該当する許可を追加したり削除したりします。</dd>
 </dl>
@@ -127,7 +127,7 @@ ibmcloud sl user list [OPTIONS]
 <strong>コマンド・オプション</strong>:
 <dl>
 <dt>--column</dt>
-<dd>表示する列。[options: id,username,email,displayName,status,hardwareCount,virtualGuestCount][default: id,username,email,displayName].</dd>
+<dd>表示する列。 [オプション: id、username、email、displayName、status、hardwareCount、virtualGuestCount][default: id,username,email,displayName]。</dd>
 </dl>
 
 ## ibmcloud sl user permissions 

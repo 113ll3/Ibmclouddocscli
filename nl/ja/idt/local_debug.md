@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -20,12 +20,12 @@ subcollection: cloud-cli
 # {{site.data.keyword.dev_cli_notm}} CLI のローカル・アプリケーションのデバッグ
 {: #local-debug}
 
-{{site.data.keyword.cloud_notm}} 内で Java や Node.js のアプリケーションをデバッグするのを支援するツールがあります。
+{{site.data.keyword.cloud_notm}} 内で Java&trade; や Node.js のアプリケーションをデバッグするのを支援するツールがあります。
 
 ## Java アプリケーションのデバッグ
 {: #java}
 
-Java アプリケーション用のデバッグ・ツールを使用可能にするためのステップは以下のとおりです。
+Java&trade; アプリケーション用のデバッグ・ツールを使用可能にするためのステップは以下のとおりです。
 
 1. アプリケーション・プロジェクトのルート・ディレクトリーから、以下のコマンドを実行します。
 
@@ -38,15 +38,15 @@ Java アプリケーション用のデバッグ・ツールを使用可能にす
 
 	* Eclipse
       1. **既存の maven プロジェクト**を Eclipse にインポートします。
-      2. [Java リモート・アプリケーション](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") のデバッグ構成を作成します。
-      		1. IP アドレスまたは `localhost:<port>` を入力します。  
-      		2. ポート番号に `7777` を入力します。
-      		3. インポートした Java プロジェクトの名前を指定します。
+      2. [&trade; リモート・アプリケーション ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![外部リンクのアイコン](../../icons/launch-glyph.svg "外部リンクのアイコン") のデバッグ構成を作成します。
+         1. IP アドレスまたは `localhost:<port>` を入力します。  
+         2. ポート番号に `7777` を入力します。
+         3. インポートしたプロジェクトの名前を指定します。
       6. IDE 内でブレークポイントを設定します。
       7. デバッグ構成を実行します。
       8. ブラウザーでエンドポイントにアクセスし、問題を再現します。  
 	   
-	   Java 基本マイクロサービス・エンドポイントのデフォルト・ポートは、9080 です。
+	   Java&trade; 基本マイクロサービス・エンドポイントのデフォルト・ポートは、`9080` です。
 	   {: note}
 
 	* [IntelliJ ](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")

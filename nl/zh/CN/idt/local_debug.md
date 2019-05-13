@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-08"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -39,9 +39,9 @@ ibmcloud dev debug
 	* Eclipse
       1. 将**现有 Maven 项目**导入到 Eclipse 中。
       2. 创建 [Java&trade; 远程应用程序](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 调试配置。
-      		1. 输入 IP 地址或 `localhost:<port>`  
-      		2. 输入 `7777` 作为端口号。
-      		3. 指定已导入的项目的名称。
+         1. 输入 IP 地址或 `localhost:<port>`  
+         2. 输入 `7777` 作为端口号。
+         3. 指定已导入的项目的名称。
       6. 在 IDE 中设置断点。
       7. 运行调试配置。
       8. 使用浏览器来访问端点以重现问题。  
