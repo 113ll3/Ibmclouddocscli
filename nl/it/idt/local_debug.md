@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-08"
 
 keywords: cli, local app debug, java debug, node debug, debug, cli debug, local cli, ibmcloud dev, dev debug
 
@@ -39,9 +39,9 @@ Procedura per abilitare lo strumento di debug per un'applicazione Java&trade;:
 	* Eclipse
       1. Importa il progetto **Existing maven project** in Eclipse.
       2. Crea una configurazione di debug dell'[applicazione remota Java&trade; ](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno").
-      		1. Immetti l'indirizzo IP o `localhost:<port>`  
-      		2. Immetti `7777` per il numero di porta.
-      		3. Specifica il nome del progetto che hai importato.
+         1. Immetti l'indirizzo IP o `localhost:<port>`  
+         2. Immetti `7777` per il numero di porta.
+         3. Specifica il nome del progetto che hai importato.
       6. Imposta un punto di interruzione nell'IDE.
       7. Esegui la configurazione di debug.
       8. Accedi all'endpoint con un browser per ricreare il problema.  
