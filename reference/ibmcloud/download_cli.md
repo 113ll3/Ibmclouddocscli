@@ -52,7 +52,7 @@ Use the following steps to install the latest stand-alone {{site.data.keyword.cl
    
   Now, you're ready to manage {{site.data.keyword.cloud_notm}} resources. Enter `ibmcloud help` to view the command descriptions.
 
-  If you're using a federated ID, [log in with a one-time passcode or an API key]((/docs/iam?topic=iam-federated_id#federated_id).
+  If you're using a federated ID, [log in with a one-time passcode or an API key](/docs/iam?topic=iam-federated_id).
   {: tip}
 
 ## Installing from the shell
