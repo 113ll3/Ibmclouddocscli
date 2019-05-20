@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-20"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
@@ -60,9 +60,9 @@ You can use [CocoaPods](https://cocoapods.org){: new_window} ![External link ico
 
   Then run the `pod install` command, and open the generated `.xcworkspace` file. To update to a newer release of `BMSCore`, use `pod update BMSCore`.
 
-  For more information about using CocoaPods, see the [CocoaPods Guides](https://guides.cocoapods.org/using/index.html){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+  For more information about using CocoaPods, see the [CocoaPods Guides](https://guides.cocoapods.org/using/index.html){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
-2. To install `BMSCore` by using Carthage, follow these [instructions](https://github.com/Carthage/Carthage#getting-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+2. To install `BMSCore` by using Carthage, follow these [instructions](https://github.com/Carthage/Carthage#getting-started){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
   1. Add the following line to your Cartfile:
 
@@ -73,7 +73,7 @@ You can use [CocoaPods](https://cocoapods.org){: new_window} ![External link ico
 
   2. Run the `carthage update` command.
 
-  3. After the build is finished, add `BMSCore.framework` to your project by following [Step 3](https://github.com/Carthage/Carthage#getting-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") in the Carthage instructions.
+  3. After the build is finished, add `BMSCore.framework` to your project by following [Step 3](https://github.com/Carthage/Carthage#getting-started){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") in the Carthage instructions.
 
       For applications that are built with Swift 2.3, use the `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` command. Otherwise, use the `carthage update` command.
 
@@ -117,6 +117,6 @@ You can use [CocoaPods](https://cocoapods.org){: new_window} ![External link ico
 ## Related Links
 {: #BMSClient-rellinks notoc}
 
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
-* [BMSCore Cordova Plugin](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [BMSCore Cordova Plugin](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
