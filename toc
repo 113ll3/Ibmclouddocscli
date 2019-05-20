@@ -71,6 +71,7 @@ IBM Cloud CLI and Developer Tools
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/hyper-protect-dbaas-dbaas_cli_plugin
 		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
+		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
 
 	{: .topicgroup}
 	Cloud Foundry CLI plug-ins
