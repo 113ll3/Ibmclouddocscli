@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-26"
 
 keywords: stand-alone cli, install cli, uninstall cli, cli, command line, command-line, windows powershell, linux, macos, installer, standalone cli
 
@@ -13,6 +13,7 @@ subcollection: cloud-cli
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:screen: .screen}
 {:tip: .tip}
 
 # スタンドアロン {{site.data.keyword.cloud_notm}} CLI のインストール
@@ -20,94 +21,81 @@ subcollection: cloud-cli
 
 {{site.data.keyword.cloud}} CLI は、{{site.data.keyword.cloud_notm}} のリソースを管理するためのコマンド・ライン・インターフェースを提供します。 引き続き `cf` CLI を使用して {{site.data.keyword.cloud_notm}} にログインすることもできますが、それは {{site.data.keyword.cloud_notm}} 内の Cloud Foundry サービスで動作します。 
 
-{{site.data.keyword.cloud}} CLI と、{{site.data.keyword.cloud_notm}} 用のアプリケーションを開発するための推奨されるその他のプラグインおよびツールの両方をインストールする場合は、[{{site.data.keyword.cloud_notm}} CLI の概説](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)を参照してください。
+最新の {{site.data.keyword.cloud}} CLI と、{{site.data.keyword.cloud_notm}} 用のアプリケーションを開発するための推奨されるその他のプラグインおよびツールの両方をインストールする場合は、[{{site.data.keyword.cloud_notm}} CLI の概説](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)を参照してください。
 {: tip}
 
-スタンドアロン {{site.data.keyword.cloud_notm}} CLI をインストールするには、次の手順を実行します。
+## 始める前に
+{: #before-download-cli}
 
-1. ダウンロードするための、ご使用の OS のインストーラーを選択します。
+32 ビット・バージョン、または {{site.data.keyword.cloud_notm}} 専用環境用の最新バージョン以外の旧バージョンを使用する必要がある場合は、[{{site.data.keyword.cloud_notm}} CLI リリース](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")を参照してください。
 
-   Mac OS X 64 ビット: [インストーラー](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/checksum){: new_window} <br>
-   Windows 64 ビット: [インストーラー](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/checksum){: new_window} <br>
-   Linux X86 64 ビット: [インストーラー](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/checksum){: new_window} <br>
-   Linux LE 64 ビット (ppc64le): [インストーラー](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le){: new_window} / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/checksum){: new_window} <br>
+## インストーラーを使用したインストール
+{: #ibmcloud-cli-installer}
 
-   32 ビットのバージョンおよび古いバージョンの場合、[{{site.data.keyword.cloud_notm}} CLI リリース](/docs/cli/reference/ibmcloud?topic=cloud-cli-cli-releases#cli-releases)のページに移動してダウンロードしてください。
+最新のスタンドアロン {{site.data.keyword.cloud_notm}} CLI をインストールするには、以下の手順を実行します。
 
-2. インストーラーを実行します。
-   * MacOS および Windows&trade; の場合は、インストーラーを実行します。
-   * Linux&trade; の場合は、パッケージを解凍し、`install` スクリプトを実行します。
+1. 以下のように、ダウンロードするための、ご使用の OS のインストーラーを選択します。
+  *  macOS X 64 ビット: [インストーラー](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
+  * Windows 64 ビット: [インストーラー](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
+  * Linux x86 64 ビット: [インストーラー](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
+  * Linux LE 64 ビット (ppc64le): [インストーラー](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
 
-3. API エンドポイントをターゲットに指定し、{{site.data.keyword.cloud_notm}} にログインします。
-   ```
-   ibmcloud login
-   ```
-   {: codeblock}
+2. インストーラーを次のように実行します。
+  * Mac および Windows&trade; の場合、インストーラーを実行します。
+  * Linux&trade; の場合、パッケージを解凍し、`install` スクリプトを実行します。
+
+3. {{site.data.keyword.cloud_notm}} にログインします。
+  ```
+  ibmcloud login
+  ```
+  {: codeblock}
    
-これで、{{site.data.keyword.cloud_notm}} リソースを管理する準備ができました。 コマンド説明を表示するには、`ibmcloud help` と入力します。
+  これで、{{site.data.keyword.cloud_notm}} リソースを管理する準備ができました。 `ibmcloud help` を実行し、コマンド説明を表示します。
 
-フェデレーテッド ID を使用する場合は、[ここ](/docs/iam?topic=iam-federated_id#federated_id)で説明する手順に従って、ワンタイム・パスコードまたは API キーを使用してログインします。  
-{: tip}
+  フェデレーテッド ID を使用している場合には、[ワンタイム・パスコードまたは API キーを使用してログイン](/docs/iam?topic=iam-federated_id)します。
+  {: tip}
 
-インストーラー以外にも、{{site.data.keyword.cloud_notm}} CLI をインストールするためのオプションがあります。
-
-* shell からのインストール
-* バイナリー・パッケージをダウンロードしてカスタム・ディレクトリーへインストール
-
-## shell からのインストール
+## シェルからのインストール
 {: #shell_install}
 
-### macOS
-{: #shell-install-macos}
+ご使用の OS 用の最新の CLI をシェルから手動でインストールするには、対象 OS 向けの以下のコマンドを使用します。
 
-以下のコマンドを Mac OS の端末にコピー・アンド・ペーストし、実行します。
-```
-curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
-```
-{: codeblock}
+* **Mac** の場合、以下のコマンドを端末にコピー・アンド・ペーストして実行します。
+  ```
+  curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
+  ```
+  {: codeblock}
 
-### Linux
-{: #shell-install-linux}
+* **Linux&trade;** の場合、以下のコマンドを端末にコピー・アンド・ペーストして実行します。
+  ```
+  curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+  ```
+  {: codeblock}
 
-以下のコマンドを Linux&trade; OS の端末にコピー・アンド・ペーストし、実行します。
-```
-curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-```
-{: codeblock}
-
-### Windows PowerShell
-{: #shell-install-windows}
-
-以下のコマンドを [Windows PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") 端末コンソールにコピー・アンド・ペーストし、実行します。
-```
-iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
-```
-{: codeblock}
+* **Windows&trade;** の場合は、以下のコマンドを [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") 端末コンソールにコピー・アンド・ペーストして実行します。
+  ```
+  iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
+  ```
+  {: codeblock}
 
 ## カスタム・ディレクトリーへのインストール
 {: #install-custom-dir}
 
-インストーラーまたは shell スクリプトを使用して {{site.data.keyword.cloud_notm}} CLI をインストールすると、バイナリーがシステム・ディレクトリーに移動します。 別のディレクトリーを指定する場合は、以下の手順を実行します。
+インストーラーまたはシェル・スクリプトを使用して {{site.data.keyword.cloud_notm}} CLI をインストールする場合、システム・ディレクトリーにインストールされます。 別のディレクトリーを指定する場合は、以下の手順を実行します。
 
-### ステップ 1: 使用している OS に基づいたバイナリー・パッケージを、以下のリンクを使用してダウンロードします。
-{: #step1-custom-dir}
+1. 以下のリンクを使用して、ご使用の OS 用のバイナリー・パッケージをダウンロードします。
+  * macOS: [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
+  * linux32: [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
+  * linux64: [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
+  * ppc64le: [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
+  * win32: [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") /[sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
+  * win64: [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive/checksum){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")
 
-| プラットフォーム | ダウンロード | チェックサム |
-|---------|----------|---------|
-| macOS | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/osx/archive/checksum) |
-| linux32 | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux32/archive/checksum) |
-| linux64 | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/linux64/archive/checksum) |
-| ppc64le | [tgz](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/archive/checksum) |
-| win32 | [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive/checksum) |
-| win64 | [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive) | [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive/checksum) |
+2. 指定したディレクトリーにパッケージを解凍します。
 
-### ステップ 2: 指定したディレクトリーにパッケージを解凍します。
-{: #step2-custom-dir}
+   以下の解凍済みコンテンツを確認できます。
 
-   パッケージを解凍すると、以下のコンテンツを確認できます。
-
-   Linux&trade; および MacOS の場合:
-
+   Linux&trade; および Mac の場合:
    ```
    IBM_Cloud_CLI
    ├── LICENSE
@@ -120,10 +108,9 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
    ├── ibmcloud
    └── ibmcloud-analytics
    ```
-   {: codeblock}
+   {: screen}
 
-   Windows
-
+   Windows の場合:
    ```
    IBM_Cloud_CLI
    ├── LICENSE
@@ -133,57 +120,33 @@ iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install
    ├── ibmcloud-analytics.exe
    └── ibmcloud.exe
    ```
-   {: codeblock}
+   {: screen}
 
-### ステップ 3: `PATH` 環境変数に追加し、shell オートコンプリート機能を有効にします。
-{: #step3-custom-dir}
+3. `PATH` 環境変数に追加し、shell オートコンプリート機能を有効にします。
+  * `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` を `PATH` 環境変数に追加します。
+  * shell オートコンプリート機能サポート (Mac および Linux&trade; のみ) については、[こちらのガイド](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)を参照してください。
 
-   * `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` を `PATH` 環境変数に追加します。
-   * shell オートコンプリート機能サポート (MacOS および Linux&trade; のみ) については、[このガイド](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)を参照してください。
+## {{site.data.keyword.cloud_notm}} CLI の更新
+{: #update-ibmcloud-cli}
 
-## スタンドアロン {{site.data.keyword.cloud_notm}} CLI のアンインストール
-{: #uninstall-ibmcloud-cli}
+最新バージョンの CLI を使用する必要があります。 最新バージョンを使用していない場合、以下のコマンドを実行して CLI を更新します。
 
-以下のセクションでは、特定のプラットフォームでスタンドアロンの {{site.data.keyword.cloud_notm}} CLI をアンインストールする方法を詳しく説明します。
+```
+ibmcloud update
+```
+{: codeblock}
 
-### Windows でのアンインストール
-{: #uninstall-cli-windows}
+使用している {{site.data.keyword.cloud_notm}} CLI バージョンを判別するには、以下のコマンドを実行します。
+```
+ibmcloud -v
+```
+{: codeblock}
 
-1. `「スタート」`ボタンをクリックし、`「コントロール パネル」`を選択します。
-2. ポップアップ・ウィンドウで、`「プログラムのアンインストール」`をクリックします。
-3. ポップアップしたアプリケーション・リストで、`「IBM Cloud コマンド・ライン・インターフェース」`を見つけます。
-4. `「IBM Cloud コマンド・ライン・インターフェース」`を右クリックして、`「アンインストール」`を選択します。
-5. アンインストーラーが開始します。 指示に従ってアンインストールを完了します。
+現行リリースを実行している場合には、以下の出力が表示されます。
+```
+更新を確認しています...
+更新は不要です。 CLI は既に最新です。
+```
+{: screen}
 
-### Linux および MacOS でのアンインストール
-{: #uninstall-cli-linux-macos}
-
-#### `0.9.0` よりも前のバージョン
-
-1. 端末を開き、以下のコマンドを実行します。
-  * `rm -rf /usr/local/ibmcloud`
-  * `rm -f /usr/local/bin/ibmcloud`
-  * `rm -f /usr/local/bin/bluemix`
-  * `rm -f /usr/local/bin/bx`
-  * `rm -f /usr/local/bin/ibmcloud-analytics`
-
-2. オートコンプリート機能スクリプトを構成した場合は、それをクリーンアップします。 詳しくは、『[{{site.data.keyword.cloud_notm}} CLI の shell オートコンプリート機能の有効化 (Linux および MacOS のみ)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)』を参照してください。
-
-#### バージョン `0.9.0` 以降
-
-1. 端末を開き、次のコマンドを実行します。
-  * `/usr/local/ibmcloud/uninstall`
-2. カスタム・オートコンプリート機能スクリプトがあれば、それをクリーンアップします。 詳しくは、『[{{site.data.keyword.cloud_notm}} CLI の shell オートコンプリート機能の有効化 (Linux および MacOS のみ)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete)』を参照してください。
-
-## {{site.data.keyword.cloud_notm}} CLI をさらに探索するためのその他のリンク
-{: #other-cli-links}
-
-* [プラグインによる {{site.data.keyword.cloud_notm}} CLI の拡張](/docs/cli/reference/ibmcloud?topic=cloud-cli-plug-ins#plug-ins)
-* [汎用 CLI (ibmcloud) コマンド](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_cli)
-
-## 問題の報告とフィードバックの送信
-{: #issues}
-
-問題を報告したり新しいフィーチャーの要求を送信したりするには、以下のオプションを使用してください。
-* [GitHub](https://github.com/IBM-Bluemix/bluemix-cli-release/issues){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") で問題を作成する。
-* [{{site.data.keyword.cloud_notm}} Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") にメッセージを残す。- [ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") でチーム・アクセスを要求。
+新しい {{site.data.keyword.cloud_notm}} CLI リリースについての通知を受け取るには、[{{site.data.keyword.cloud_notm}} CLI リリース・リポジトリー](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/){: new_window} ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン") にサブスクライブします。

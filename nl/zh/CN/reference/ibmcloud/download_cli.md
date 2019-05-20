@@ -47,13 +47,13 @@ subcollection: cloud-cli
 
 3. 登录到 {{site.data.keyword.cloud_notm}}：
   ```
-ibmcloud login
-```
+    ibmcloud login
+    ```
   {: codeblock}
    
   现在，您可以开始管理 {{site.data.keyword.cloud_notm}} 资源。输入 `ibmcloud help` 以查看命令描述。
 
-  如果使用的是联合标识，请[使用一次性密码或 API 密钥进行登录]((/docs/iam?topic=iam-federated_id#federated_id)。
+  如果使用的是联合标识，请[使用一次性密码或 API 密钥进行登录](/docs/iam?topic=iam-federated_id)。
   {: tip}
 
 ## 通过 shell 进行安装
