@@ -52,7 +52,7 @@ Utilizza la seguente procedura per installare la CLI {{site.data.keyword.cloud_n
    
   Ora sei pronto a gestire le risorse {{site.data.keyword.cloud_notm}}. Immetti `ibmcloud help` per visualizzare le descrizioni dei comandi.
 
-  Se stai utilizzando un ID federato, [accedi con un passcode monouso o una chiave API]((/docs/iam?topic=iam-federated_id#federated_id).
+  Se stai utilizzando un ID federato, [accedi con un passcode monouso o una chiave API](/docs/iam?topic=iam-federated_id).
   {: tip}
 
 ## Installazione dalla shell
@@ -126,7 +126,7 @@ Quando utilizzi i programmi di installazione o uno script di shell per installar
   * Aggiungi la `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` alla variabile di ambiente `PATH`.
   * Per il supporto del completamento automatico della shell (solo Mac e Linux&trade;), fai riferimento a [questa guida](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
-## Aggiornamento della CLI {{site.data.keyword.cloud_notm}} 
+## Aggiornamento della CLI {{site.data.keyword.cloud_notm}}
 {: #update-ibmcloud-cli}
 
 Devi utilizzare l'ultima versione della CLI. Se non utilizzi l'ultima versione, immetti il seguente comando per aggiornare la tua CLI:

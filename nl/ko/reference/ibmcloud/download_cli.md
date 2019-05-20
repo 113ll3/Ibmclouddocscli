@@ -52,7 +52,7 @@ subcollection: cloud-cli
    
   이제 {{site.data.keyword.cloud_notm}} 리소스를 관리할 준비가 되었습니다. 명령 설명을 보려면 `ibmcloud help`를 입력하십시오.
 
-  연합 ID를 사용하는 경우 [일회성 패스코드 또는 API 키로 로그인]((/docs/iam?topic=iam-federated_id#federated_id)하십시오.
+  연합 ID를 사용하는 경우 [일회성 패스코드 또는 API 키로 로그인](/docs/iam?topic=iam-federated_id)하십시오.
   {: tip}
 
 ## 쉘에서 설치
@@ -110,7 +110,7 @@ subcollection: cloud-cli
    ```
    {: screen}
 
-   Windows의 경우: 
+   Windows의 경우:
    ```
    IBM_Cloud_CLI
    ├── LICENSE

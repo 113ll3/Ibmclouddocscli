@@ -52,7 +52,7 @@ subcollection: cloud-cli
    
   現在，您已準備好管理 {{site.data.keyword.cloud_notm}} 資源。輸入 `ibmcloud help` 以檢視指令說明。
 
-  如果您是使用聯合 ID，請[使用一次性密碼或 API 金鑰進行登入]((/docs/iam?topic=iam-federated_id#federated_id)。
+  如果您是使用聯合 ID，請[使用一次性密碼或 API 金鑰進行登入](/docs/iam?topic=iam-federated_id)。
   {: tip}
 
 ## 從 Shell 安裝
