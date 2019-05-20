@@ -65,7 +65,7 @@ IBM Cloud CLI and Developer Tools
 		/analytics-engine-cli-plugin/analytics-engine-cli-plugin-CLI_analytics_engine
 		/auto-scaling-cli-plugin/auto-scaling-cli-autoscalingcli
 		/devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
-		/cloud-functions-cli-plugin/cloud-functions-cloudfunctions_cli
+		/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli
 		/container-registry-cli-plugin/container-registry-cli-plugin-containerregcli
 		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
