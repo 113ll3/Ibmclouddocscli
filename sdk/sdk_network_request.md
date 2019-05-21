@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-05-21"
 
 keywords: cli, bmscore, bmscore sdk, network request, ios network cli, android network cli, cordova network cli, mobile network request, mobile cli
 
@@ -55,7 +55,7 @@ For complete usage examples, see the `BMSCore` GitHub [README](https://github.co
 ## iOS
 {: #request-ios}
 
-1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) in your iOS application.
+1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-ios) in your iOS app.
 
 2. Create a network request.
 
@@ -104,7 +104,7 @@ For complete usage examples, see the `BMSCore` GitHub [README](https://github.co
 ## Cordova
 {: #request-cordova}
 
-1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) in your Cordova application.
+1. Make sure that you have [imported the Client SDK and initialized it](/docs/cli/sdk?topic=cloud-cli-sdk_BMSClient#init-BMSClient-cordova) in your Cordova app.
 
 2. Create a network request.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, troubleshoot cli, debug app cli, developer tools debug, ibmcloud cli debug, ibmcloud help, ibmcloud dev help, cli debug, plugin debug, debug plug-in, command line, command-line, developer tools troubleshoot
 
@@ -27,11 +27,11 @@ subcollection: cloud-cli
 See solutions to common problems with the {{site.data.keyword.dev_cli_short}} command line interface (CLI). In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
-## Why do I get a host name error when I create an app with a non-mobile pattern?
+## Why do I get a host name error when I create an application with a non-mobile pattern?
 {: #ts-cli-hostname-error}
 {: troubleshoot}
 
-The following error might be displayed if you use the {{site.data.keyword.dev_cli_short}} CLI to deploy an app to Cloud Foundry. If you enter a unique host name, you might still see this message.
+The following error might be displayed if you use the {{site.data.keyword.dev_cli_short}} CLI to deploy an application to Cloud Foundry. If you enter a unique host name, you might still see this message.
 ```
 The hostname <myHostname> is taken.
 ```
@@ -274,7 +274,7 @@ directly.
 {: tsSymptoms}
 
 This error might be due to one of the following causes:
-- Running the [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command from a directory that is not the source directory of your application.
+- Running the [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command from a directory that is not the source directory of your app.
 - Running the [enable](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command for an app of a language that is not recognized.
 {: tsCauses}
 
@@ -291,8 +291,8 @@ You might encounter various failures to [build](/docs/cli/idt?topic=cloud-cli-id
 The many different possible causes can be found in each of the following links.
 {: tsCauses}
 
-- For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot applications for cloud deployment](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
-- For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js applications for cloud deployment](/docs/node?topic=nodejs-enable_existing#enable_existing).
+- For more information about resolving such problems with a Spring app, see [Enabling existing Spring Boot apps for cloud deployment](/docs/java-spring?topic=java-spring-enable_existing#enable_existing).
+- For more information about resolving such problems with a `Node.js` app, see [Enabling existing Node.js apps for cloud deployment](/docs/node?topic=nodejs-enable_existing#enable_existing).
 {: tsResolve}
 
 ## How to manually install the {{site.data.keyword.dev_cli_notm}} CLI components separately

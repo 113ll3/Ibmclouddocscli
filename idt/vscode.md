@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibm cloud developer tools, visual studio code, install developer tools, developer extension, vscode cli, vscode plugin, cloud foundry vscode
 
@@ -71,7 +71,7 @@ You can get started with `ibmcloud dev` workflows in just a few steps:
 * Use the `ibmcloud dev debug` command to run the app in local Docker for development
 > Note: To debug a Node.js application that is running inside the local Docker container, you need to [add a debug configuration for the local container](https://github.com/IBM-Cloud/ibm-developer-extension-vscode#debugging-nodejs-apps-within-the-local-docker-container){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 * Use the `ibmcloud dev run` command to run the app in local Docker in release mode
-* Use the `ibmcloud dev deploy` command to deploy the application to a Cloud Foundry runtime on {{site.data.keyword.cloud_notm}}
+* Use the `ibmcloud dev deploy` command to deploy the app to a Cloud Foundry runtime on {{site.data.keyword.cloud_notm}}
 
 ### Using the IBM Developer Extension for Cloud Foundry workflows
 {: #usage-cloud-foundry}
@@ -79,12 +79,12 @@ You can get started with `ibmcloud dev` workflows in just a few steps:
 For users that are currently deploying apps to Cloud Foundry runtimes on {{site.data.keyword.cloud_notm}}, there's also support for the `cf` set of operations.
 
 You can get started with Cloud Foundry workflows in just a few steps:
-* Create a new Cloud Foundry application
+* Create a new Cloud Foundry app
   * Use the [{{site.data.keyword.cloud_notm}} web console](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and download the starter code
-  * Create a new Cloud Foundry application manually
+  * Create a new Cloud Foundry app manually
 * Open the project folder locally in the Visual Studio Code editor
-* Use `ibmcloud cf apps` to list all of your applications
-* Use `ibmcloud cf push` to push a build of your application to the Cloud Foundry runtime
-* Use ibmcloud `cf <start/stop/restage/restart>` to change the status of your application
-* Use `ibmcloud cf logs` to view the live log stream for your application
+* Use `ibmcloud cf apps` to list all of your apps
+* Use `ibmcloud cf push` to push a build of your app to the Cloud Foundry runtime
+* Use ibmcloud `cf <start/stop/restage/restart>` to change the status of your app
+* Use `ibmcloud cf logs` to view the live log stream for your app
   * Use `ibmcloud cf logs` to stop the log stream

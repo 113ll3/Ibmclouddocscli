@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-21"
 
 keywords: cli, developing apps, deploying apps, create apps, ibmcloud dev enable, ibmcloud dev create, local containers, ibmcloud dev run, ibmcloud dev, cli blog, cli video, cli reference
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 # Developing and deploying your apps
 {: #developing}
 
-Developing cloud-native apps with the {{site.data.keyword.dev_cli_notm}} CLI follows a fairly simple flow:
+Developing cloud-native applications with the {{site.data.keyword.dev_cli_notm}} CLI follows a fairly simple flow:
 
 1. [Create or enable an app for deployment](#idt-create).
 2. [Code, build, and run](#code-build-run) your app locally by using containers.
@@ -70,16 +70,16 @@ Projects that are created or enabled for use with the developer tools come with 
 
 Once your project is created, it's up to you to craft it into something useful. The general flow consists of editing the source code, then running [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) to compile the app within a local container specific to your app's language and configuration. Depending on your apps language and generator that is used, there are one or more containers that default to support building and running locally. Typically, there's a "tools" container for builds and local debugging. This container has extra tools and capabilities to aid you in development. There's also a "run" container that mimics the runtime environment of your app when its deployed to the cloud, either in Cloud Foundry or IBM's Kubernetes based container environment.
 
-You're free to use whatever IDE or editor you prefer to code your application. {{site.data.keyword.IBM_notm}} offers an extension for the Microsoft&trade; Visual Studio Code (VSCode) editor that enables you to access all the IDE commands from directly within the editor.
+You're free to use whatever IDE or editor you prefer to code your app. {{site.data.keyword.IBM_notm}} offers an extension for the Microsoft&trade; Visual Studio Code (VSCode) editor that enables you to access all the IDE commands from directly within the editor.
 
 When the project is built, run your app by using [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) or [`ibmcloud dev debug`](/docs/cli/idt?topic=cloud-cli-idt-cli#debug). The app is run within the proper container. Some apps' patterns support multiple containers external to your apps. The apps automatically start and configure during run or debug. There's also a [`ibmcloud dev test`](/docs/cli/idt?topic=cloud-cli-idt-cli#test) command that runs any test cases that are associated with the app.
 
 ### How local containers are used
 {: #local-containers}
 
-The {{site.data.keyword.dev_cli_long}} CLI uses two containers for building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your application. The Dockerfile for this container is defined by the [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) parameter. You might think of it as a development container as it contains the tools that are normally used for development of a particular runtime.
+The {{site.data.keyword.dev_cli_long}} CLI uses two containers for building and testing your app. The first is the tools container, which contains the necessary utilities to build and test your app. The Dockerfile for this container is defined by the [`dockerfile-tools`](/docs/cli/idt?topic=cloud-cli-idt-cli#command-parameters) parameter. You might think of it as a development container as it contains the tools that are normally used for development of a particular runtime.
 
-The second container is the run container. This container is of a form suitable to be deployed for use, for example, in {{site.data.keyword.cloud}}. As a result, an entry point is defined that starts your application. When you select to run your application through the {{site.data.keyword.dev_cli_short}} CLI, it uses this container. The Dockerfile for this container is defined by the [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) parameter.
+The second container is the run container. This container is of a form suitable to be deployed for use, for example, in {{site.data.keyword.cloud}}. As a result, an entry point is defined that starts your app. When you select to run your app through the {{site.data.keyword.dev_cli_short}} CLI, it uses this container. The Dockerfile for this container is defined by the [`dockerfile-run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run-parameters) parameter.
 
 ### Helpful CLI commands
 {: #helpful2}

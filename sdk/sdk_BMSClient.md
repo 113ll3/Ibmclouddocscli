@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-20"
+lastupdated: "2019-05-21"
 
 keywords: cli, bmscclient, bmscore sdk, network request, ios, android, studio, cordova, client sdk, sdk, 
 
@@ -20,7 +20,7 @@ subcollection: cloud-cli
 
 `BMSCore` provides the HTTP infrastructure that the other {{site.data.keyword.cloud}} Web and Mobile services client SDKs use to communicate with their corresponding {{site.data.keyword.cloud_notm}} services.
 
-## Initializing your Android application
+## Initializing your Android app
 {: #init-BMSClient-android}
 
 You can either download and import the `BMSCore` package to your Android Studio project, or use Gradle.
@@ -32,7 +32,7 @@ You can either download and import the `BMSCore` package to your Android Studio 
   ```
   {: codeblock}
 
-2. Initialize the `BMSClient` SDK in your Android application by adding the initialization code in the `onCreate` method of the main activity in your Android application, or in a location that works best for your project.
+2. Initialize the `BMSClient` SDK in your Android application by adding the initialization code in the `onCreate` method of the main activity in your Android app, or in a location that works best for your project.
 
   ```java
   BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
@@ -42,7 +42,7 @@ You can either download and import the `BMSCore` package to your Android Studio 
   You must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
 
 
-## Initializing your iOS application
+## Initializing your iOS app
 {: #init-BMSClient-ios}
 
 You can use [CocoaPods](https://cocoapods.org){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") or [Carthage](https://github.com/Carthage/Carthage){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") to get the `BMSCore` package.
@@ -75,7 +75,7 @@ You can use [CocoaPods](https://cocoapods.org){: new_window} ![External link ico
 
   3. After the build is finished, add `BMSCore.framework` to your project by following [Step 3](https://github.com/Carthage/Carthage#getting-started){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") in the Carthage instructions.
 
-      For applications that are built with Swift 2.3, use the `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` command. Otherwise, use the `carthage update` command.
+      For apps that are built with Swift 2.3, use the `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` command. Otherwise, use the `carthage update` command.
 
 3. Import the `BMSCore` module.
 
@@ -86,7 +86,7 @@ You can use [CocoaPods](https://cocoapods.org){: new_window} ![External link ico
 
 4. Initialize the `BMSClient` class by using the following code.
 
-  Place the initialization code in the `application(_:didFinishLaunchingWithOptions:)` method of your application delegate, or in a location that works best for your project.
+  Place the initialization code in the `application(_:didFinishLaunchingWithOptions:)` method of your app delegate, or in a location that works best for your project.
 
   ```swift
   BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
@@ -95,17 +95,17 @@ You can use [CocoaPods](https://cocoapods.org){: new_window} ![External link ico
 
   You must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you're using, for example, `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
 
-## Initializing your Cordova application
+## Initializing your Cordova app
 {: #init-BMSClient-cordova}
 
-1. Add the Cordova plugin by running the following command from your Cordova application root directory:
+1. Add the Cordova plugin by running the following command from your Cordova app root directory:
 
   ```
   cordova plugin add bms-core
   ```
   {: codeblock}
 
-2. Initialize the `BMSClient` class in your Cordova application by adding the initialization code in the main JavaScript file, or in a location that works best for your project.
+2. Initialize the `BMSClient` class in your Cordova app by adding the initialization code in the main JavaScript file, or in a location that works best for your project.
 
   ```
   BMSClient.initialize(BMSClient.REGION_US_SOUTH);

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-21"
 
 keywords: cli, ibmcloud dev enable, python, cloud enable python, django, deploy python, build python, python debug, python troubleshoot, python cloud help
 
@@ -22,7 +22,7 @@ subcollection: cloud-cli
 
 You can generate the files that are needed to enable your Python application to run on {{site.data.keyword.cloud}} by using the [{{site.data.keyword.dev_cli_long}} CLI enable command](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
 
-## Enabling your Python application
+## Enabling your Python app
 {: #enable-app-python}
 
 Enter the following command from the root directory of your Python project:
@@ -32,17 +32,17 @@ ibmcloud dev enable
 {: codeblock}
 
 * When you're prompted to verify the detected framework for the project, **Python - Flask** or **Python - Django**, reply `y`. 
-* You are then prompted to **Connect to an IBM Cloud app**. Select either the **Generate assets, create a new IBM Cloud app and connect to it** or **Generate assets without connecting to an IBM Cloud app** options to your application.
-* The `enable` command can also create services and bind them to your application. For this basic example, reply `n`.
+* You are then prompted to **Connect to an IBM Cloud app**. Select either the **Generate assets, create a new IBM Cloud app and connect to it** or **Generate assets without connecting to an IBM Cloud app** options to your app.
+* The `enable` command can also create services and bind them to your app. For this basic example, reply `n`.
 
 See the following sample output:
 ```
 > ibmcloud dev enable
 The enable feature is currently in Beta.
 Please provide your experience and feedback at: https://ibm-cloud-tech.slack.com/messages/developer-tools/
-Only server-side applications are supported by the enable feature
+Only server-side apps are supported by the enable feature
 
-? Python - Flask application discovered. Do you want to proceed with this
+? Python - Flask app discovered. Do you want to proceed with this
 language choice? [y/n]> y
 
 
@@ -105,26 +105,27 @@ LICENSE
 The application, <appname>, has been successfully saved
 into the current directory.
 ```
+{: screen}
 
-## Build and deploy a cloud-enabled Python application
+## Build and deploy a cloud-enabled Python app
 {: #build-deploy-python}
 
-Next, build your application with the [`build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) command:
+Next, build your app with the [`build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) command:
 ```
 ibmcloud dev build
 ```
 {: codeblock}
 
-If the build completes successfully, you can deploy your application to {{site.data.keyword.cloud_notm}} with the following [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command:
+If the build completes successfully, you can deploy your app to {{site.data.keyword.cloud_notm}} with the following [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command:
 ```
 ibmcloud dev deploy
 ```
 {: codeblock}
 
-## What to do if your enabled application does not build or deploy
+## What to do if your enabled app does not build or deploy
 {: #build-failure-python}
 
-Not all applications are successfully enabled by the `enable` command. For example, the following error might occur when the project name is different from the directory name that contains the `wsgi.py` and `settings.py` files:
+Not all apps are successfully enabled by the `enable` command. For example, the following error might occur when the project name is different from the directory name that contains the `wsgi.py` and `settings.py` files:
 ```
 ImportError: No module named <projectname>.wsgi
 ```
@@ -132,7 +133,7 @@ ImportError: No module named <projectname>.wsgi
 
 The `<projectname>.wsgi` file name is the name of the project that is being enabled.
 
-If your application does not build or deploy after you run `ibmcloud dev enable`, you can modify the generated files to complete cloud enablement.
+If your app does not build or deploy after you run `ibmcloud dev enable`, you can modify the generated files to complete cloud enablement.
 
 ### Manually configuring the generated cloud enablement files
 {: #manual-enable-python}
