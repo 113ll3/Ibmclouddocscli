@@ -719,7 +719,7 @@ Crear una instancia denominada `test-cfee` en `dal10`:
 ibmcloud cfee create test-cfee dal10
 ```
 
-Crear una instancia `dedicate` denominada `test-cfee` en `dal10` con `4` células:
+Crear una instancia `dedicated` denominada `test-cfee` en `dal10` con `4` células:
 
 ```
 ibmcloud cfee create test-cfee dal10 --cells 4 --isolation dedicated

@@ -40,6 +40,6 @@ La mejor manera de instalar la extensión de herramientas del desarrollador de {
 
 Puede empezar con una app existente del lado de servidor y habilitarla para la nube, o bien utilizar la CLI de {{site.data.keyword.dev_cli_notm}} para crear una nueva app a partir de un kit de inicio (`ibmcloud dev create`). Cuando haya creado su proyecto de app, ábralo en su IDE de JetBrains.
 
-Para habilitar para la nube una app genérica del lado del servidor, seleccione **Herramientas**>**Herramientas de desarrollador de IBM Cloud** > **Habilitar app para {{site.data.keyword.cloud_notm}}**. Se comprueban todos los archivos necesarios y se añaden (si es necesario) para el despliegue a {{site.data.keyword.cloud_notm}} utilizando una app de Cloud Foundry o dentro de un clúster Kubernetes.
+Para habilitar para la nube una app genérica del lado del servidor, seleccione **Herramientas** > **Herramientas de desarrollador de IBM Cloud** > **Habilitar app para {{site.data.keyword.cloud_notm}}**. Se comprueban todos los archivos necesarios y se añaden (si es necesario) para el despliegue a {{site.data.keyword.cloud_notm}} utilizando una app de Cloud Foundry o dentro de un clúster Kubernetes.
 
 Desarrolle su app nativa de nube utilizando las acciones básicas de compilar, ejecutar y desplegar desde el menú de herramientas de desarrollador de {{site.data.keyword.cloud_notm}}. Si necesita realizar acciones que no están en el menú, simplemente abra el separador de terminal y especifique los mandatos deseados de forma manual.

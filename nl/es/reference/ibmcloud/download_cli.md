@@ -53,7 +53,7 @@ Siga los pasos siguientes para instalar la CLI de {{site.data.keyword.cloud_notm
    
   Ahora, está listo para gestionar recursos de {{site.data.keyword.cloud_notm}}. Escriba `ibmcloud help` para ver las descripciones de mandatos.
 
-  Si utiliza un ID federado, [inicie una sesión con un código de acceso de uso único o con una clave de API]((/docs/iam?topic=iam-federated_id#federated_id).
+  Si utiliza un ID federado, [inicie una sesión con un código de acceso de uso único o con una clave de API](/docs/iam?topic=iam-federated_id).
   {: tip}
 
 ## Instalación desde el shell

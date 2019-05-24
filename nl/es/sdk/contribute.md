@@ -77,7 +77,7 @@ Siga estas directrices para contribuir al plugin de SDK de CLI de {{site.data.ke
 
 La infraestructura de prueba se basa en Ginkgo, una infraestructura de pruebas BDD para Go, y se utiliza con [`gomega`](http://onsi.github.io/gomega/){: new_window}![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"), que es una biblioteca de buscador y de aserciones para Ginkgo.
 
-   * Instale `gingko` utilizando el mandato siguiente.
+   * Instale `ginkgo` utilizando el mandato siguiente.
 
       ```
       go get -u github.com/onsi/ginkgo/ginkgo

@@ -41,8 +41,8 @@ Procédez comme suit pour installer la dernière version autonome de l'interface
   * Linux LE 64 bits (ppc64le) : [installer](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/ppc64le/checksum){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")
 
 2. Exécutez le programme d'installation :
-  * Pour Mac et Windows&trade;, exécutez le programme d'installation. 
-  * Pour Linux&trade;, extrayez le package et exécutez le script `install`. 
+  * Pour Mac et Windows&trade;, exécutez le programme d'installation.
+  * Pour Linux&trade;, extrayez le package et exécutez le script `install`.
 
 3. Connectez-vous à {{site.data.keyword.cloud_notm}} :
   ```
@@ -50,9 +50,9 @@ Procédez comme suit pour installer la dernière version autonome de l'interface
   ```
   {: codeblock}
    
-  Vous êtes maintenant prêt à gérer les ressources {{site.data.keyword.cloud_notm}}. Entrez `ibmcloud help` pour visualiser les descriptions de commande. 
+  Vous êtes maintenant prêt à gérer les ressources {{site.data.keyword.cloud_notm}}. Entrez `ibmcloud help` pour visualiser les descriptions de commande.
 
-  Si vous utilisez un ID fédéré, [connectez-vous avec un code d'accès unique ou une clé d'API]((/docs/iam?topic=iam-federated_id#federated_id).
+  Si vous utilisez un ID fédéré, [connectez-vous avec un code d'accès unique ou une clé d'API](/docs/iam?topic=iam-federated_id).
   {: tip}
 
 ## Installation à partir du shell
@@ -122,14 +122,14 @@ Lorsque vous utilisez des programmes d'installation ou un script shell pour inst
    ```
    {: screen}
 
-3. Ajoutez la variable d'environnement `PATH` et activez l'exécution automatique de shell. 
+3. Ajoutez la variable d'environnement `PATH` et activez l'exécution automatique de shell.
   * Ajoutez `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` à la variable d'environnement `PATH`.
   * Pour obtenir des informations de support sur l'exécution automatique de shell (Mac et Linux uniquement), consultez [ce guide](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
 ## Mise à jour de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}
 {: #update-ibmcloud-cli}
 
-Vous devez utiliser la dernière version de l'interface de ligne de commande. Si vous n'utilisez pas la dernière version, exécutez la commande suivante pour mettre à jour votre interface de ligne de commande : 
+Vous devez utiliser la dernière version de l'interface de ligne de commande. Si vous n'utilisez pas la dernière version, exécutez la commande suivante pour mettre à jour votre interface de ligne de commande :
 
 ```
 ibmcloud update
@@ -145,8 +145,7 @@ ibmcloud -v
 Si vous exécutez l'édition en cours, le résultat suivant s'affiche :
 ```
 Recherche des mises à jour...
-Aucune mise à jour n'est requise.
-Votre interface de ligne de commande est déjà à jour.
+Aucune mise à jour n'est requise. Votre interface de ligne de commande est déjà à jour.
 ```
 {: screen}
 

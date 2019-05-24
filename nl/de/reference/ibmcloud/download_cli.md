@@ -52,26 +52,27 @@ Führen Sie zum Einrichten der aktuellsten, eigenständigen {{site.data.keyword.
    
   Jetzt können Sie {{site.data.keyword.cloud_notm}}-Ressourcen verwalten. Geben Sie `ibmcloud help` ein, damit Beschreibungen der einzelnen Befehle angezeigt werden.
 
-  Wenn Sie eine föderierte ID verwenden, [melden Sie sich mit einem einmaligen Kenncode oder einem API-Schlüssel an]((/docs/iam?topic=iam-federated_id#federated_id). {: tip}
+  Wenn Sie eine föderierte ID verwenden, [melden Sie sich mit einem einmaligen Kenncode oder einem API-Schlüssel an](/docs/iam?topic=iam-federated_id).
+  {: tip}
 
 ## Installation über die Shell
 {: #shell_install}
 
 Wenn Sie die neueste CLI für Ihr Betriebssystem manuell aus der Shell installieren möchten, verwenden Sie den folgenden Befehl für Ihr Betriebssystem:
 
-* Für **Mac** kopieren Sie den folgenden Befehl, fügen ihn in einem Terminal ein und führen ihn aus. 
+* Für **Mac** kopieren Sie den folgenden Befehl, fügen ihn in einem Terminal ein und führen ihn aus.
   ```
   curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
   ```
   {: codeblock}
 
-* Für **Linux&trade;** kopieren Sie den folgenden Befehl, fügen ihn in einem Terminal ein und führen ihn aus: 
+* Für **Linux&trade;** kopieren Sie den folgenden Befehl, fügen ihn in einem Terminal ein und führen ihn aus:
   ```
   curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
   ```
   {: codeblock}
 
-* Für **Windows&trade;** kopieren Sie den folgenden Befehl, geben ihn in die Terminalkonsole einer [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link") ein und führen ihn aus: 
+* Für **Windows&trade;** kopieren Sie den folgenden Befehl, geben ihn in die Terminalkonsole einer [Windows&trade; PowerShell](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link") ein und führen ihn aus:
   ```
   iex(New-Object Net.WebClient).DownloadString('https://clis.cloud.ibm.com/install/powershell')
   ```
@@ -90,7 +91,7 @@ Wenn Sie Installationsprogramme oder ein Shell-Script für die Installation der 
   * win32: [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win32/archive/checksum){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")
   * win64: [zip](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link") / [sha1sums](https://clis.cloud.ibm.com/download/bluemix-cli/latest/win64/archive/checksum){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")
 
-2. Paket in ein Verzeichnis extrahieren, das Sie angeben. 
+2. Paket in ein Verzeichnis extrahieren, das Sie angeben.
 
    Sie können den folgenden extrahierten Inhalt sehen:
 
@@ -121,7 +122,7 @@ Wenn Sie Installationsprogramme oder ein Shell-Script für die Installation der 
    ```
    {: screen}
 
-3. Angabe zur Umgebungsvariablen `PATH` hinzufügen und automatische Vervollständigung für die Shell aktivieren. 
+3. Angabe zur Umgebungsvariablen `PATH` hinzufügen und automatische Vervollständigung für die Shell aktivieren.
   * Fügen Sie die Angabe `{YOUR_DIRECTORY}/IBM_CLOUD_CLI` zur Umgebungsvariablen `PATH` hinzu.
   * Informationen zur Unterstützung der automatischen Vervollständigung für die Shell (nur Mac und Linux&trade;) finden Sie in [diesem Handbuch](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete).
 
