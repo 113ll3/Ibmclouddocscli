@@ -70,7 +70,7 @@ IBM Cloud CLI and Developer Tools
 		/containers-cli-plugin/containers-cli-plugin-cs_cli_reference
 		/machine-learning-cli-plugin/machine-learning-cli-ibm-watson-machine-learning-cli
 		/dbaas-cli-plugin/hyper-protect-dbaas-dbaas_cli_plugin
-		/infrastructure-service-cli-plugin/infrastructure-service-cli-vpc-reference
+		/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference
 		/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
 		/hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
 
