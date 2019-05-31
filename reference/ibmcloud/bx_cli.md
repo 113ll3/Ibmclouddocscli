@@ -231,11 +231,11 @@ None.
 ### Examples
 {: #info-examples}
 
-List the Cloud Foundry applications:
+List the Cloud Foundry apps:
+
 ```
 ibmcloud cf apps
 ```
-{: codeblock}
 
 List the Cloud Foundry services without displaying the `Invoking cf command...` message:
 ```
@@ -389,7 +389,7 @@ ibmcloud login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
 If the API Key has an associated account, switching to another account isn't supported.
-{ :note}
+{: note}
 
 Use a one time passcode:
 
